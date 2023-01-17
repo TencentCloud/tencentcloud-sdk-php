@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RateLimit配置
+ * 速率限制规则
  *
  * @method string getSwitch() 获取开关，取值有：
 <li>on：开启；</li>
@@ -35,6 +35,10 @@ use TencentCloud\Common\AbstractModel;
  * @method RateLimitIntelligence getRateLimitIntelligence() 获取智能客户端过滤。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRateLimitIntelligence(RateLimitIntelligence $RateLimitIntelligence) 设置智能客户端过滤。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRateLimitCustomizes() 获取速率限制-托管定制规则。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRateLimitCustomizes(array $RateLimitCustomizes) 设置速率限制-托管定制规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitConfig extends AbstractModel
@@ -64,6 +68,12 @@ class RateLimitConfig extends AbstractModel
     public $RateLimitIntelligence;
 
     /**
+     * @var array 速率限制-托管定制规则。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RateLimitCustomizes;
+
+    /**
      * @param string $Switch 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
@@ -71,6 +81,8 @@ class RateLimitConfig extends AbstractModel
      * @param RateLimitTemplate $RateLimitTemplate 速率限制模板功能。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitIntelligence $RateLimitIntelligence 智能客户端过滤。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RateLimitCustomizes 速率限制-托管定制规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -107,6 +119,15 @@ class RateLimitConfig extends AbstractModel
         if (array_key_exists("RateLimitIntelligence",$param) and $param["RateLimitIntelligence"] !== null) {
             $this->RateLimitIntelligence = new RateLimitIntelligence();
             $this->RateLimitIntelligence->deserialize($param["RateLimitIntelligence"]);
+        }
+
+        if (array_key_exists("RateLimitCustomizes",$param) and $param["RateLimitCustomizes"] !== null) {
+            $this->RateLimitCustomizes = [];
+            foreach ($param["RateLimitCustomizes"] as $key => $value){
+                $obj = new RateLimitUserRule();
+                $obj->deserialize($value);
+                array_push($this->RateLimitCustomizes, $obj);
+            }
         }
     }
 }

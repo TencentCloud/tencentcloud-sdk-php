@@ -37,6 +37,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 创建应用
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建集群
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建配置项
+ * @method Models\CreateConfigTemplateResponse CreateConfigTemplate(Models\CreateConfigTemplateRequest $req) 创建参数模板
  * @method Models\CreateContainGroupResponse CreateContainGroup(Models\CreateContainGroupRequest $req) 创建容器部署组
  * @method Models\CreateFileConfigResponse CreateFileConfig(Models\CreateFileConfigRequest $req) 创建文件配置项
  * @method Models\CreateGatewayApiResponse CreateGatewayApi(Models\CreateGatewayApiRequest $req) 批量导入API至api分组(也支持新建API到分组)
@@ -44,6 +45,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateLaneResponse CreateLane(Models\CreateLaneRequest $req) 创建泳道
  * @method Models\CreateLaneRuleResponse CreateLaneRule(Models\CreateLaneRuleRequest $req) 创建泳道规则
  * @method Models\CreateMicroserviceResponse CreateMicroservice(Models\CreateMicroserviceRequest $req) 新增微服务
+ * @method Models\CreateMicroserviceWithDetailRespResponse CreateMicroserviceWithDetailResp(Models\CreateMicroserviceWithDetailRespRequest $req) 新增微服务返回id
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
  * @method Models\CreatePathRewritesResponse CreatePathRewrites(Models\CreatePathRewritesRequest $req) 创建路径重写
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
@@ -53,7 +55,9 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateUnitRuleResponse CreateUnitRule(Models\CreateUnitRuleRequest $req) 创建单元化规则
  * @method Models\DeleteApiGroupResponse DeleteApiGroup(Models\DeleteApiGroupRequest $req) 删除Api分组
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 删除应用
+ * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除集群
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除配置项
+ * @method Models\DeleteConfigTemplateResponse DeleteConfigTemplate(Models\DeleteConfigTemplateRequest $req) 删除模板
  * @method Models\DeleteContainerGroupResponse DeleteContainerGroup(Models\DeleteContainerGroupRequest $req) 删除容器部署组
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除容器部署组
  * @method Models\DeleteImageTagsResponse DeleteImageTags(Models\DeleteImageTagsRequest $req) 批量删除镜像版本
@@ -86,10 +90,12 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeBusinessLogConfigResponse DescribeBusinessLogConfig(Models\DescribeBusinessLogConfigRequest $req) 查询业务日志配置项信息
  * @method Models\DescribeBusinessLogConfigsResponse DescribeBusinessLogConfigs(Models\DescribeBusinessLogConfigsRequest $req) 查询日志配置项列表
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群实例
+ * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 获取集群列表
  * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 查询配置
  * @method Models\DescribeConfigReleaseLogsResponse DescribeConfigReleaseLogs(Models\DescribeConfigReleaseLogsRequest $req) 查询配置发布历史
  * @method Models\DescribeConfigReleasesResponse DescribeConfigReleases(Models\DescribeConfigReleasesRequest $req) 查询配置发布信息
  * @method Models\DescribeConfigSummaryResponse DescribeConfigSummary(Models\DescribeConfigSummaryRequest $req) 查询配置汇总列表
+ * @method Models\DescribeConfigTemplateResponse DescribeConfigTemplate(Models\DescribeConfigTemplateRequest $req) 导入配置
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 查询配置项列表
  * @method Models\DescribeContainerEventsResponse DescribeContainerEvents(Models\DescribeContainerEventsRequest $req) 获取容器事件列表
  * @method Models\DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfo(Models\DescribeContainerGroupDeployInfoRequest $req)  获取部署组详情
@@ -102,6 +108,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(Models\DescribeEnabledUnitRuleRequest $req) 查询生效的单元化规则
+ * @method Models\DescribeFileConfigReleasesResponse DescribeFileConfigReleases(Models\DescribeFileConfigReleasesRequest $req) 查询文件配置项发布信息
  * @method Models\DescribeFileConfigsResponse DescribeFileConfigs(Models\DescribeFileConfigsRequest $req) 查询文件配置项列表
  * @method Models\DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(Models\DescribeFlowLastBatchStateRequest $req) 查询工作流最新一个批次的状态信息
  * @method Models\DescribeGatewayAllGroupApisResponse DescribeGatewayAllGroupApis(Models\DescribeGatewayAllGroupApisRequest $req) 查询网关所有分组下Api列表
@@ -175,11 +182,15 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 手动执行一次任务。
  * @method Models\ExecuteTaskFlowResponse ExecuteTaskFlow(Models\ExecuteTaskFlowRequest $req) 执行一次工作流
  * @method Models\ExpandGroupResponse ExpandGroup(Models\ExpandGroupRequest $req) 虚拟机部署组添加实例
+ * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 修改应用
+ * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 修改集群信息
  * @method Models\ModifyContainerGroupResponse ModifyContainerGroup(Models\ModifyContainerGroupRequest $req) 修改容器部署组
  * @method Models\ModifyContainerReplicasResponse ModifyContainerReplicas(Models\ModifyContainerReplicasRequest $req) 修改容器部署组实例数
+ * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 更新部署组信息
  * @method Models\ModifyLaneResponse ModifyLane(Models\ModifyLaneRequest $req) 更新泳道信息
  * @method Models\ModifyLaneRuleResponse ModifyLaneRule(Models\ModifyLaneRuleRequest $req) 更新泳道规则
  * @method Models\ModifyMicroserviceResponse ModifyMicroservice(Models\ModifyMicroserviceRequest $req) 修改微服务详情
+ * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 修改命名空间
  * @method Models\ModifyPathRewriteResponse ModifyPathRewrite(Models\ModifyPathRewriteRequest $req) 修改路径重写
  * @method Models\ModifyTaskResponse ModifyTask(Models\ModifyTaskRequest $req) 修改任务
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
@@ -197,6 +208,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) 从 TSF 集群中批量移除云主机节点
  * @method Models\RevocationConfigResponse RevocationConfig(Models\RevocationConfigRequest $req) 撤回已发布的配置
  * @method Models\RevocationPublicConfigResponse RevocationPublicConfig(Models\RevocationPublicConfigRequest $req) 撤回已发布的公共配置
+ * @method Models\RevokeFileConfigResponse RevokeFileConfig(Models\RevokeFileConfigRequest $req) 撤回已发布的文件配置
  * @method Models\RollbackConfigResponse RollbackConfig(Models\RollbackConfigRequest $req) 回滚配置
  * @method Models\SearchBusinessLogResponse SearchBusinessLog(Models\SearchBusinessLogRequest $req) 业务日志搜索
  * @method Models\SearchStdoutLogResponse SearchStdoutLog(Models\SearchStdoutLogRequest $req) 标准输出日志搜索
@@ -214,6 +226,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\UpdateApiRateLimitRuleResponse UpdateApiRateLimitRule(Models\UpdateApiRateLimitRuleRequest $req) 更新API限流规则
  * @method Models\UpdateApiRateLimitRulesResponse UpdateApiRateLimitRules(Models\UpdateApiRateLimitRulesRequest $req) 批量更新API限流规则
  * @method Models\UpdateApiTimeoutsResponse UpdateApiTimeouts(Models\UpdateApiTimeoutsRequest $req) 批量更新API超时
+ * @method Models\UpdateConfigTemplateResponse UpdateConfigTemplate(Models\UpdateConfigTemplateRequest $req) 更新参数模板
  * @method Models\UpdateGatewayApiResponse UpdateGatewayApi(Models\UpdateGatewayApiRequest $req) 更新API
  * @method Models\UpdateHealthCheckSettingsResponse UpdateHealthCheckSettings(Models\UpdateHealthCheckSettingsRequest $req) 更新健康检查配置
  * @method Models\UpdateRepositoryResponse UpdateRepository(Models\UpdateRepositoryRequest $req) 更新仓库信息

@@ -88,9 +88,9 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置暂做保留，一般用户无需关注。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConfigId() 获取负载均衡维度的个性化配置ID。
+ * @method string getConfigId() 获取负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigId(string $ConfigId) 设置负载均衡维度的个性化配置ID。
+ * @method void setConfigId(string $ConfigId) 设置负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取负载均衡实例的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -274,7 +274,7 @@ Public：公网属性， Private：内网属性。
     public $ExtraInfo;
 
     /**
-     * @var string 负载均衡维度的个性化配置ID。
+     * @var string 负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigId;
@@ -428,7 +428,7 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo $ExtraInfo 暂做保留，一般用户无需关注。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConfigId 负载均衡维度的个性化配置ID。
+     * @param string $ConfigId 负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 负载均衡实例的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。

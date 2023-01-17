@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplierId(string $ApplierId) 设置申请人ID，用于存证和取证
  * @method string getApplierName() 获取申请人姓名，用于存证和取证
  * @method void setApplierName(string $ApplierName) 设置申请人姓名，用于存证和取证
+ * @method string getIsAutoRenew() 获取是否自动续期
+ * @method void setIsAutoRenew(string $IsAutoRenew) 设置是否自动续期
  */
 class CreateCRWorkRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class CreateCRWorkRequest extends AbstractModel
     public $ApplierName;
 
     /**
+     * @var string 是否自动续期
+     */
+    public $IsAutoRenew;
+
+    /**
      * @param string $WorkName 作品名称
      * @param string $WorkCategory 作品分类
      * @param string $WorkType 作品内容类型
@@ -272,6 +279,7 @@ class CreateCRWorkRequest extends AbstractModel
      * @param string $MonitorEndTime 监测结束时间
      * @param string $ApplierId 申请人ID，用于存证和取证
      * @param string $ApplierName 申请人姓名，用于存证和取证
+     * @param string $IsAutoRenew 是否自动续期
      */
     function __construct()
     {
@@ -408,6 +416,10 @@ class CreateCRWorkRequest extends AbstractModel
 
         if (array_key_exists("ApplierName",$param) and $param["ApplierName"] !== null) {
             $this->ApplierName = $param["ApplierName"];
+        }
+
+        if (array_key_exists("IsAutoRenew",$param) and $param["IsAutoRenew"] !== null) {
+            $this->IsAutoRenew = $param["IsAutoRenew"];
         }
     }
 }

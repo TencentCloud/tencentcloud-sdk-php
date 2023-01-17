@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvidenceNote(string $EvidenceNote) 设置存证状态说明
  * @method integer getTortSiteNum() 获取侵权站点数量
  * @method void setTortSiteNum(integer $TortSiteNum) 设置侵权站点数量
+ * @method string getMonitorEndTime() 获取监测截止时间
+ * @method void setMonitorEndTime(string $MonitorEndTime) 设置监测截止时间
+ * @method integer getAutoRenew() 获取是否自动续费
+ * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费
  */
 class Monitor extends AbstractModel
 {
@@ -122,6 +126,16 @@ class Monitor extends AbstractModel
     public $TortSiteNum;
 
     /**
+     * @var string 监测截止时间
+     */
+    public $MonitorEndTime;
+
+    /**
+     * @var integer 是否自动续费
+     */
+    public $AutoRenew;
+
+    /**
      * @param integer $WorkId 作品ID
      * @param string $WorkName 作品名称
      * @param string $WorkType 作品内容类型 01-视频 02-音频 03-文本 04-图片
@@ -136,6 +150,8 @@ class Monitor extends AbstractModel
      * @param integer $EvidenceStatus 存证状态
      * @param string $EvidenceNote 存证状态说明
      * @param integer $TortSiteNum 侵权站点数量
+     * @param string $MonitorEndTime 监测截止时间
+     * @param integer $AutoRenew 是否自动续费
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class Monitor extends AbstractModel
 
         if (array_key_exists("TortSiteNum",$param) and $param["TortSiteNum"] !== null) {
             $this->TortSiteNum = $param["TortSiteNum"];
+        }
+
+        if (array_key_exists("MonitorEndTime",$param) and $param["MonitorEndTime"] !== null) {
+            $this->MonitorEndTime = $param["MonitorEndTime"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
     }
 }

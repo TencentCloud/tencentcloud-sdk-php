@@ -18,47 +18,43 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ACL配置
+ * 慢速攻击的首段包配置。
  *
  * @method string getSwitch() 获取开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li>
- * @method void setSwitch(string $Switch) 设置开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li>
- * @method array getAclUserRules() 获取用户自定义规则。
- * @method void setAclUserRules(array $AclUserRules) 设置用户自定义规则。
- * @method array getCustomizes() 获取托管定制规则
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomizes(array $Customizes) 设置托管定制规则
+ * @method void setSwitch(string $Switch) 设置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatTime() 获取首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatTime(integer $StatTime) 设置首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AclConfig extends AbstractModel
+class FirstPartConfig extends AbstractModel
 {
     /**
      * @var string 开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li>
+<li>on：开启；</li>
+<li>off：关闭。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @var array 用户自定义规则。
-     */
-    public $AclUserRules;
-
-    /**
-     * @var array 托管定制规则
+     * @var integer 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Customizes;
+    public $StatTime;
 
     /**
      * @param string $Switch 开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li>
-     * @param array $AclUserRules 用户自定义规则。
-     * @param array $Customizes 托管定制规则
+<li>on：开启；</li>
+<li>off：关闭。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StatTime 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -78,22 +74,8 @@ class AclConfig extends AbstractModel
             $this->Switch = $param["Switch"];
         }
 
-        if (array_key_exists("AclUserRules",$param) and $param["AclUserRules"] !== null) {
-            $this->AclUserRules = [];
-            foreach ($param["AclUserRules"] as $key => $value){
-                $obj = new AclUserRule();
-                $obj->deserialize($value);
-                array_push($this->AclUserRules, $obj);
-            }
-        }
-
-        if (array_key_exists("Customizes",$param) and $param["Customizes"] !== null) {
-            $this->Customizes = [];
-            foreach ($param["Customizes"] as $key => $value){
-                $obj = new AclUserRule();
-                $obj->deserialize($value);
-                array_push($this->Customizes, $obj);
-            }
+        if (array_key_exists("StatTime",$param) and $param["StatTime"] !== null) {
+            $this->StatTime = $param["StatTime"];
         }
     }
 }

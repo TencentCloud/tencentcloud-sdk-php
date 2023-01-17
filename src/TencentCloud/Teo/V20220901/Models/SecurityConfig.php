@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateConfig(TemplateConfig $TemplateConfig) 设置模板配置。此处仅出参数使用。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SlowPostConfig getSlowPostConfig() 获取慢速攻击配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSlowPostConfig(SlowPostConfig $SlowPostConfig) 设置慢速攻击配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityConfig extends AbstractModel
 {
@@ -114,6 +118,12 @@ class SecurityConfig extends AbstractModel
     public $TemplateConfig;
 
     /**
+     * @var SlowPostConfig 慢速攻击配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SlowPostConfig;
+
+    /**
      * @param WafConfig $WafConfig 托管规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitConfig $RateLimitConfig 速率限制。如果为null，默认使用历史配置。
@@ -131,6 +141,8 @@ class SecurityConfig extends AbstractModel
      * @param DropPageConfig $DropPageConfig 自定义拦截页面配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateConfig $TemplateConfig 模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlowPostConfig $SlowPostConfig 慢速攻击配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,11 @@ class SecurityConfig extends AbstractModel
         if (array_key_exists("TemplateConfig",$param) and $param["TemplateConfig"] !== null) {
             $this->TemplateConfig = new TemplateConfig();
             $this->TemplateConfig->deserialize($param["TemplateConfig"]);
+        }
+
+        if (array_key_exists("SlowPostConfig",$param) and $param["SlowPostConfig"] !== null) {
+            $this->SlowPostConfig = new SlowPostConfig();
+            $this->SlowPostConfig->deserialize($param["SlowPostConfig"]);
         }
     }
 }

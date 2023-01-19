@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoadBalancerSla请求参数结构体
  *
- * @method array getLoadBalancerSla() 获取负载均衡实例信息
- * @method void setLoadBalancerSla(array $LoadBalancerSla) 设置负载均衡实例信息
+ * @method array getLoadBalancerSla() 获取负载均衡实例信息。
+ * @method void setLoadBalancerSla(array $LoadBalancerSla) 设置负载均衡实例信息。
  */
 class ModifyLoadBalancerSlaRequest extends AbstractModel
 {
     /**
-     * @var array 负载均衡实例信息
+     * @var array 负载均衡实例信息。
      */
     public $LoadBalancerSla;
 
     /**
-     * @param array $LoadBalancerSla 负载均衡实例信息
+     * @param array $LoadBalancerSla 负载均衡实例信息。
      */
     function __construct()
     {

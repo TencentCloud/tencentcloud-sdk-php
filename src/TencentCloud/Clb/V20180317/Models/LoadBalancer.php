@@ -178,9 +178,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnatIps(array $SnatIps) 设置开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSlaType() 获取性能保障规格
+ * @method string getSlaType() 获取性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSlaType(string $SlaType) 设置性能保障规格
+ * @method void setSlaType(string $SlaType) 设置性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsBlock() 获取vip是否被封堵
 注意：此字段可能返回 null，表示取不到有效值。
@@ -218,9 +218,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthLogTopicId(string $HealthLogTopicId) 设置负载均衡日志服务(CLS)的健康检查日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getClusterIds() 获取集群ID.
+ * @method array getClusterIds() 获取集群ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterIds(array $ClusterIds) 设置集群ID.
+ * @method void setClusterIds(array $ClusterIds) 设置集群ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAttributeFlags() 获取负载均衡的属性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -473,7 +473,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $SnatIps;
 
     /**
-     * @var string 性能保障规格
+     * @var string 性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaType;
@@ -533,7 +533,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $HealthLogTopicId;
 
     /**
-     * @var array 集群ID.
+     * @var array 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterIds;
@@ -624,7 +624,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SnatIps 开启SnatPro负载均衡后，SnatIp列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SlaType 性能保障规格
+     * @param string $SlaType 性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsBlock vip是否被封堵
 注意：此字段可能返回 null，表示取不到有效值。
@@ -644,7 +644,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthLogTopicId 负载均衡日志服务(CLS)的健康检查日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ClusterIds 集群ID.
+     * @param array $ClusterIds 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AttributeFlags 负载均衡的属性
 注意：此字段可能返回 null，表示取不到有效值。

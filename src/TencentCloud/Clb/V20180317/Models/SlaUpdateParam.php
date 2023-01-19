@@ -18,12 +18,16 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 性能容量型变配参数
+ * 升级为性能容量型参数
  *
  * @method string getLoadBalancerId() 获取lb的字符串ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置lb的字符串ID
- * @method string getSlaType() 获取变更为性能容量型，固定为SLA
- * @method void setSlaType(string $SlaType) 设置变更为性能容量型，固定为SLA
+ * @method string getSlaType() 获取升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul>
+ * @method void setSlaType(string $SlaType) 设置升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul>
  */
 class SlaUpdateParam extends AbstractModel
 {
@@ -33,13 +37,17 @@ class SlaUpdateParam extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string 变更为性能容量型，固定为SLA
+     * @var string 升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul>
      */
     public $SlaType;
 
     /**
      * @param string $LoadBalancerId lb的字符串ID
-     * @param string $SlaType 变更为性能容量型，固定为SLA
+     * @param string $SlaType 升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul>
      */
     function __construct()
     {

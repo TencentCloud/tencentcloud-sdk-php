@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnatIps(array $SnatIps) 设置开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
  * @method array getClusterIds() 获取公网独占集群ID或者CDCId。
  * @method void setClusterIds(array $ClusterIds) 设置公网独占集群ID或者CDCId。
- * @method string getSlaType() 获取性能保障规格。
- * @method void setSlaType(string $SlaType) 设置性能保障规格。
+ * @method string getSlaType() 获取性能容量型规格。
+ * @method void setSlaType(string $SlaType) 设置性能容量型规格。
  * @method string getClusterTag() 获取Stgw独占集群的标签。
  * @method void setClusterTag(string $ClusterTag) 设置Stgw独占集群的标签。
  * @method array getZones() 获取仅适用于私有网络内网负载均衡。内网就近接入时，选择可用区下发。
@@ -146,7 +146,7 @@ class CloneLoadBalancerRequest extends AbstractModel
     public $ClusterIds;
 
     /**
-     * @var string 性能保障规格。
+     * @var string 性能容量型规格。
      */
     public $SlaType;
 
@@ -184,7 +184,7 @@ class CloneLoadBalancerRequest extends AbstractModel
      * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
      * @param array $SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
      * @param array $ClusterIds 公网独占集群ID或者CDCId。
-     * @param string $SlaType 性能保障规格。
+     * @param string $SlaType 性能容量型规格。
      * @param string $ClusterTag Stgw独占集群的标签。
      * @param array $Zones 仅适用于私有网络内网负载均衡。内网就近接入时，选择可用区下发。
      * @param string $EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。

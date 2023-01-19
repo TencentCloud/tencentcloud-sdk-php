@@ -71,7 +71,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
 本接口用于获取日志下载任务列表
 
 默认接口请求频率限制：20次/秒
- * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
+ * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) (已下线，请用DescribeRumLogList)
  * @method Models\DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(Models\DescribeOfflineLogConfigsRequest $req) 获取设置的离线日志监听配置 - 返回设置的用户唯一标识
  * @method Models\DescribeOfflineLogRecordsResponse DescribeOfflineLogRecords(Models\DescribeOfflineLogRecordsRequest $req) 获取所有离线日志记录(最多100条)
  * @method Models\DescribeOfflineLogsResponse DescribeOfflineLogs(Models\DescribeOfflineLogsRequest $req) 获取对应离线日志

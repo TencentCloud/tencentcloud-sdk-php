@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaEnvironments请求参数结构体
+ * DescribeDBFeatures请求参数结构体
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  */
-class DescribeGrafanaEnvironmentsRequest extends AbstractModel
+class DescribeDBFeaturesRequest extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     function __construct()
     {

@@ -14,43 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Trp\V20210515\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAccessIndex返回参数结构体
+ * DescribeScanLogs返回参数结构体
  *
- * @method boolean getStatus() 获取是否生效，true表示生效，false表示未生效
- * @method void setStatus(boolean $Status) 设置是否生效，true表示生效，false表示未生效
- * @method AccessRuleInfo getRule() 获取索引配置信息
+ * @method array getProducts() 获取【弃用】
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProducts(array $Products) 设置【弃用】
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRule(AccessRuleInfo $Rule) 设置索引配置信息
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModifyTime() 获取索引修改时间，初始值为索引创建时间。
- * @method void setModifyTime(string $ModifyTime) 设置索引修改时间，初始值为索引创建时间。
+ * @method integer getTotalCount() 获取条数
+ * @method void setTotalCount(integer $TotalCount) 设置条数
+ * @method array getScanLogs() 获取扫描记录
+ * @method void setScanLogs(array $ScanLogs) 设置扫描记录
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAccessIndexResponse extends AbstractModel
+class DescribeScanLogsResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否生效，true表示生效，false表示未生效
-     */
-    public $Status;
-
-    /**
-     * @var AccessRuleInfo 索引配置信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 【弃用】
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Rule;
+    public $Products;
 
     /**
-     * @var string 索引修改时间，初始值为索引创建时间。
+     * @var integer 条数
      */
-    public $ModifyTime;
+    public $TotalCount;
+
+    /**
+     * @var array 扫描记录
+     */
+    public $ScanLogs;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -58,11 +55,10 @@ class DescribeAccessIndexResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Status 是否生效，true表示生效，false表示未生效
-     * @param AccessRuleInfo $Rule 索引配置信息
+     * @param array $Products 【弃用】
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModifyTime 索引修改时间，初始值为索引创建时间。
+     * @param integer $TotalCount 条数
+     * @param array $ScanLogs 扫描记录
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,17 +74,26 @@ class DescribeAccessIndexResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Products",$param) and $param["Products"] !== null) {
+            $this->Products = [];
+            foreach ($param["Products"] as $key => $value){
+                $obj = new ScanLog();
+                $obj->deserialize($value);
+                array_push($this->Products, $obj);
+            }
         }
 
-        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
-            $this->Rule = new AccessRuleInfo();
-            $this->Rule->deserialize($param["Rule"]);
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
+        if (array_key_exists("ScanLogs",$param) and $param["ScanLogs"] !== null) {
+            $this->ScanLogs = [];
+            foreach ($param["ScanLogs"] as $key => $value){
+                $obj = new ScanLog();
+                $obj->deserialize($value);
+                array_push($this->ScanLogs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

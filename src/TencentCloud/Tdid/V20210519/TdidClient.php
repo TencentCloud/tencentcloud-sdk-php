@@ -77,9 +77,6 @@ use TencentCloud\Tdid\V20210519\Models as Models;
  * @method Models\RemoveHashResponse RemoveHash(Models\RemoveHashRequest $req) 删除合约
  * @method Models\SetCredentialStatusResponse SetCredentialStatus(Models\SetCredentialStatusRequest $req) 设置凭证链上状态
  * @method Models\VerifyCredentialResponse VerifyCredential(Models\VerifyCredentialRequest $req) 验证凭证
- * @method Models\VerifyPurchaseResponse VerifyPurchase(Models\VerifyPurchaseRequest $req) 该接口已废弃
-
-验证购买
  */
 
 class TdidClient extends AbstractClient

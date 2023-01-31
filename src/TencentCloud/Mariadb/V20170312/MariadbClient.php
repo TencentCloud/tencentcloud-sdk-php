@@ -40,6 +40,7 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
 注意：注意：相同用户名，不同Host是不同的账号。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
  * @method Models\DescribeBackupTimeResponse DescribeBackupTime(Models\DescribeBackupTimeRequest $req) 本接口（DescribeBackupTime）用于获取云数据库的备份时间。后台系统将根据此配置定期进行实例备份。
+ * @method Models\DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(Models\DescribeDBEncryptAttributesRequest $req) 本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
  * @method Models\DescribeDBInstanceSpecsResponse DescribeDBInstanceSpecs(Models\DescribeDBInstanceSpecsRequest $req) 本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
 如果不指定任何筛选条件，则默认返回20条实例记录，单次请求最多支持返回100条实例记录。

@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Waf\V20180125\Models as Models;
 
 /**
- * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) 增加自定义策略
+ * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) 增加访问控制（自定义策略）
  * @method Models\AddDomainWhiteRuleResponse AddDomainWhiteRule(Models\AddDomainWhiteRuleRequest $req) 增加域名规则白名单
  * @method Models\AddSpartaProtectionResponse AddSpartaProtection(Models\AddSpartaProtectionRequest $req) 添加Spart防护域名
  * @method Models\CreateAccessExportResponse CreateAccessExport(Models\CreateAccessExportRequest $req) 本接口用于创建访问日志导出
@@ -55,7 +55,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeWafThreatenIntelligenceResponse DescribeWafThreatenIntelligence(Models\DescribeWafThreatenIntelligenceRequest $req) 描述WAF威胁情报封禁模块配置详情
  * @method Models\GetAttackDownloadRecordsResponse GetAttackDownloadRecords(Models\GetAttackDownloadRecordsRequest $req) 查询下载攻击日志任务记录列表
  * @method Models\ModifyAccessPeriodResponse ModifyAccessPeriod(Models\ModifyAccessPeriodRequest $req) 本接口用于修改访问日志保存期限
- * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 开启或禁用自定义策略
+ * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 开启或禁用访问控制（自定义策略）
  * @method Models\ModifyDomainWhiteRuleResponse ModifyDomainWhiteRule(Models\ModifyDomainWhiteRuleRequest $req) 更改某一条规则
  * @method Models\ModifyWafAutoDenyRulesResponse ModifyWafAutoDenyRules(Models\ModifyWafAutoDenyRulesRequest $req) 修改ip惩罚规则
  * @method Models\ModifyWafAutoDenyStatusResponse ModifyWafAutoDenyStatus(Models\ModifyWafAutoDenyStatusRequest $req) 配置WAF自动封禁模块状态

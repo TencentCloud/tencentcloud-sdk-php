@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdid\V20210519\Models;
+namespace TencentCloud\Trp\V20210515\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VerifyPurchase返回参数结构体
+ * DescribeScanStats返回参数结构体
  *
+ * @method array getScanStats() 获取统计记录
+ * @method void setScanStats(array $ScanStats) 设置统计记录
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class VerifyPurchaseResponse extends AbstractModel
+class DescribeScanStatsResponse extends AbstractModel
 {
+    /**
+     * @var array 统计记录
+     */
+    public $ScanStats;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $ScanStats 统计记录
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,15 @@ class VerifyPurchaseResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ScanStats",$param) and $param["ScanStats"] !== null) {
+            $this->ScanStats = [];
+            foreach ($param["ScanStats"] as $key => $value){
+                $obj = new ScanStat();
+                $obj->deserialize($value);
+                array_push($this->ScanStats, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

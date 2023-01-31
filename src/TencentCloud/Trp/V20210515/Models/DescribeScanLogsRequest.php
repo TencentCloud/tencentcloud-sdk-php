@@ -14,20 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdid\V20210519\Models;
+namespace TencentCloud\Trp\V20210515\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VerifyPurchase请求参数结构体
+ * DescribeScanLogs请求参数结构体
  *
-
+ * @method string getCode() 获取码
+ * @method void setCode(string $Code) 设置码
+ * @method integer getCorpId() 获取企业ID
+ * @method void setCorpId(integer $CorpId) 设置企业ID
  */
-class VerifyPurchaseRequest extends AbstractModel
+class DescribeScanLogsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 码
+     */
+    public $Code;
 
     /**
+     * @var integer 企业ID
+     */
+    public $CorpId;
 
+    /**
+     * @param string $Code 码
+     * @param integer $CorpId 企业ID
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class VerifyPurchaseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
+        }
 
+        if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
+            $this->CorpId = $param["CorpId"];
+        }
     }
 }

@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lcic\V20220817\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAppDetail返回参数结构体
+ * ChannelCreateFlowReminds返回参数结构体
  *
- * @method string getSdkAppId() 获取SDK 对应的AppId 
- * @method void setSdkAppId(string $SdkAppId) 设置SDK 对应的AppId 
- * @method AppConfig getAppConfig() 获取应用配置
- * @method void setAppConfig(AppConfig $AppConfig) 设置应用配置
- * @method array getSceneConfig() 获取场景配置
- * @method void setSceneConfig(array $SceneConfig) 设置场景配置
+ * @method array getRemindFlowRecords() 获取合同催办详情信息
+ * @method void setRemindFlowRecords(array $RemindFlowRecords) 设置合同催办详情信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAppDetailResponse extends AbstractModel
+class ChannelCreateFlowRemindsResponse extends AbstractModel
 {
     /**
-     * @var string SDK 对应的AppId 
+     * @var array 合同催办详情信息
      */
-    public $SdkAppId;
-
-    /**
-     * @var AppConfig 应用配置
-     */
-    public $AppConfig;
-
-    /**
-     * @var array 场景配置
-     */
-    public $SceneConfig;
+    public $RemindFlowRecords;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeAppDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SdkAppId SDK 对应的AppId 
-     * @param AppConfig $AppConfig 应用配置
-     * @param array $SceneConfig 场景配置
+     * @param array $RemindFlowRecords 合同催办详情信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +54,12 @@ class DescribeAppDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
-        }
-
-        if (array_key_exists("AppConfig",$param) and $param["AppConfig"] !== null) {
-            $this->AppConfig = new AppConfig();
-            $this->AppConfig->deserialize($param["AppConfig"]);
-        }
-
-        if (array_key_exists("SceneConfig",$param) and $param["SceneConfig"] !== null) {
-            $this->SceneConfig = [];
-            foreach ($param["SceneConfig"] as $key => $value){
-                $obj = new SceneItem();
+        if (array_key_exists("RemindFlowRecords",$param) and $param["RemindFlowRecords"] !== null) {
+            $this->RemindFlowRecords = [];
+            foreach ($param["RemindFlowRecords"] as $key => $value){
+                $obj = new RemindFlowRecords();
                 $obj->deserialize($value);
-                array_push($this->SceneConfig, $obj);
+                array_push($this->RemindFlowRecords, $obj);
             }
         }
 

@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method integer getCount() 获取计数标识
  * @method void setCount(integer $Count) 设置计数标识
- * @method integer getActionType() 获取动作
- * @method void setActionType(integer $ActionType) 设置动作
- * @method integer getVtsMin() 获取有效时间最小时间戳
- * @method void setVtsMin(integer $VtsMin) 设置有效时间最小时间戳
- * @method integer getVtsMax() 获取有效时间最大时间戳
- * @method void setVtsMax(integer $VtsMax) 设置有效时间最大时间戳
- * @method integer getCtsMin() 获取创建时间最小时间戳
- * @method void setCtsMin(integer $CtsMin) 设置创建时间最小时间戳
- * @method integer getCtsMax() 获取创建时间最大时间戳
- * @method void setCtsMax(integer $CtsMax) 设置创建时间最大时间戳
- * @method integer getOffSet() 获取偏移
- * @method void setOffSet(integer $OffSet) 设置偏移
- * @method integer getLimit() 获取限制
- * @method void setLimit(integer $Limit) 设置限制
+ * @method integer getActionType() 获取动作，40表示查询白名单，42表示查询黑名单
+ * @method void setActionType(integer $ActionType) 设置动作，40表示查询白名单，42表示查询黑名单
+ * @method integer getVtsMin() 获取最小有效时间的时间戳
+ * @method void setVtsMin(integer $VtsMin) 设置最小有效时间的时间戳
+ * @method integer getVtsMax() 获取最大有效时间的时间戳
+ * @method void setVtsMax(integer $VtsMax) 设置最大有效时间的时间戳
+ * @method integer getCtsMin() 获取最小创建时间的时间戳
+ * @method void setCtsMin(integer $CtsMin) 设置最小创建时间的时间戳
+ * @method integer getCtsMax() 获取最大创建时间的时间戳
+ * @method void setCtsMax(integer $CtsMax) 设置最大创建时间的时间戳
+ * @method integer getOffSet() 获取分页开始条数
+ * @method void setOffSet(integer $OffSet) 设置分页开始条数
+ * @method integer getLimit() 获取每页的条数
+ * @method void setLimit(integer $Limit) 设置每页的条数
  * @method string getSource() 获取来源
  * @method void setSource(string $Source) 设置来源
  * @method string getSort() 获取排序参数
@@ -58,37 +58,37 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $Count;
 
     /**
-     * @var integer 动作
+     * @var integer 动作，40表示查询白名单，42表示查询黑名单
      */
     public $ActionType;
 
     /**
-     * @var integer 有效时间最小时间戳
+     * @var integer 最小有效时间的时间戳
      */
     public $VtsMin;
 
     /**
-     * @var integer 有效时间最大时间戳
+     * @var integer 最大有效时间的时间戳
      */
     public $VtsMax;
 
     /**
-     * @var integer 创建时间最小时间戳
+     * @var integer 最小创建时间的时间戳
      */
     public $CtsMin;
 
     /**
-     * @var integer 创建时间最大时间戳
+     * @var integer 最大创建时间的时间戳
      */
     public $CtsMax;
 
     /**
-     * @var integer 偏移
+     * @var integer 分页开始条数
      */
     public $OffSet;
 
     /**
-     * @var integer 限制
+     * @var integer 每页的条数
      */
     public $Limit;
 
@@ -110,13 +110,13 @@ class DescribeIpAccessControlRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param integer $Count 计数标识
-     * @param integer $ActionType 动作
-     * @param integer $VtsMin 有效时间最小时间戳
-     * @param integer $VtsMax 有效时间最大时间戳
-     * @param integer $CtsMin 创建时间最小时间戳
-     * @param integer $CtsMax 创建时间最大时间戳
-     * @param integer $OffSet 偏移
-     * @param integer $Limit 限制
+     * @param integer $ActionType 动作，40表示查询白名单，42表示查询黑名单
+     * @param integer $VtsMin 最小有效时间的时间戳
+     * @param integer $VtsMax 最大有效时间的时间戳
+     * @param integer $CtsMin 最小创建时间的时间戳
+     * @param integer $CtsMax 最大创建时间的时间戳
+     * @param integer $OffSet 分页开始条数
+     * @param integer $Limit 每页的条数
      * @param string $Source 来源
      * @param string $Sort 排序参数
      * @param string $Ip ip

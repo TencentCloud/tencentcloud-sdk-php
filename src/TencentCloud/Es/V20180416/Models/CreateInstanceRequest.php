@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置是否开启存算分离
  * @method integer getDiskEnhance() 获取是否开启essd 增强型云盘
  * @method void setDiskEnhance(integer $DiskEnhance) 设置是否开启essd 增强型云盘
+ * @method boolean getEnableDiagnose() 获取是否开启智能巡检
+ * @method void setEnableDiagnose(boolean $EnableDiagnose) 设置是否开启智能巡检
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -279,6 +281,11 @@ class CreateInstanceRequest extends AbstractModel
     public $DiskEnhance;
 
     /**
+     * @var boolean 是否开启智能巡检
+     */
+    public $EnableDiagnose;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -320,6 +327,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param OperationDuration $OperationDuration 可维护时间段
      * @param boolean $EnableHybridStorage 是否开启存算分离
      * @param integer $DiskEnhance 是否开启essd 增强型云盘
+     * @param boolean $EnableDiagnose 是否开启智能巡检
      */
     function __construct()
     {
@@ -481,6 +489,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("DiskEnhance",$param) and $param["DiskEnhance"] !== null) {
             $this->DiskEnhance = $param["DiskEnhance"];
+        }
+
+        if (array_key_exists("EnableDiagnose",$param) and $param["EnableDiagnose"] !== null) {
+            $this->EnableDiagnose = $param["EnableDiagnose"];
         }
     }
 }

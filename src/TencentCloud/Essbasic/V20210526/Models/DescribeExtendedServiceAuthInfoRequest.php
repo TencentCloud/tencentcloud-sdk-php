@@ -21,17 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * DescribeExtendedServiceAuthInfo请求参数结构体
  *
  * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
+
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
  */
 class DescribeExtendedServiceAuthInfoRequest extends AbstractModel
 {
     /**
      * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
+
      */
     public $Agent;
 
     /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
      */
     function __construct()
     {

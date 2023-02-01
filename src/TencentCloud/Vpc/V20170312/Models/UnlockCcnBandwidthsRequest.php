@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnlockCcnBandwidths请求参数结构体
  *
-
+ * @method array getInstances() 获取带宽实例对象数组。
+ * @method void setInstances(array $Instances) 设置带宽实例对象数组。
  */
 class UnlockCcnBandwidthsRequest extends AbstractModel
 {
-
+    /**
+     * @var array 带宽实例对象数组。
+     */
+    public $Instances;
 
     /**
-
+     * @param array $Instances 带宽实例对象数组。
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class UnlockCcnBandwidthsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
+            $this->Instances = [];
+            foreach ($param["Instances"] as $key => $value){
+                $obj = new CcnFlowLock();
+                $obj->deserialize($value);
+                array_push($this->Instances, $obj);
+            }
+        }
     }
 }

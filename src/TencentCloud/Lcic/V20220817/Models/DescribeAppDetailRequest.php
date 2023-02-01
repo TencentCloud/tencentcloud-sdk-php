@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAppDetail请求参数结构体
  *
- * @method string getApplicationId() 获取应用ID
- * @method void setApplicationId(string $ApplicationId) 设置应用ID
+ * @method string getApplicationId() 获取应用ID。低代码互动课堂的SdkAppId。
+
+ * @method void setApplicationId(string $ApplicationId) 设置应用ID。低代码互动课堂的SdkAppId。
+
  * @method string getDeveloperId() 获取开发商ID
  * @method void setDeveloperId(string $DeveloperId) 设置开发商ID
  */
 class DescribeAppDetailRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID。低代码互动课堂的SdkAppId。
+
      */
     public $ApplicationId;
 
@@ -38,7 +41,8 @@ class DescribeAppDetailRequest extends AbstractModel
     public $DeveloperId;
 
     /**
-     * @param string $ApplicationId 应用ID
+     * @param string $ApplicationId 应用ID。低代码互动课堂的SdkAppId。
+
      * @param string $DeveloperId 开发商ID
      */
     function __construct()

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method array getItems() 获取删除的ip数组
  * @method void setItems(array $Items) 设置删除的ip数组
- * @method boolean getDeleteAll() 获取删除对应的域名下的所有黑/白IP名额单
- * @method void setDeleteAll(boolean $DeleteAll) 设置删除对应的域名下的所有黑/白IP名额单
+ * @method boolean getDeleteAll() 获取是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+ * @method void setDeleteAll(boolean $DeleteAll) 设置是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
  * @method string getSourceType() 获取是否为多域名黑白名单
  * @method void setSourceType(string $SourceType) 设置是否为多域名黑白名单
  */
@@ -42,7 +42,7 @@ class DeleteIpAccessControlRequest extends AbstractModel
     public $Items;
 
     /**
-     * @var boolean 删除对应的域名下的所有黑/白IP名额单
+     * @var boolean 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
      */
     public $DeleteAll;
 
@@ -54,7 +54,7 @@ class DeleteIpAccessControlRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param array $Items 删除的ip数组
-     * @param boolean $DeleteAll 删除对应的域名下的所有黑/白IP名额单
+     * @param boolean $DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
      * @param string $SourceType 是否为多域名黑白名单
      */
     function __construct()

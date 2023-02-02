@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupList(array $GroupList) 设置GroupList
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGroupCountQuota() 获取消费分组配额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupCountQuota(integer $GroupCountQuota) 设置消费分组配额
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupResponse extends AbstractModel
 {
@@ -44,9 +48,17 @@ class GroupResponse extends AbstractModel
     public $GroupList;
 
     /**
+     * @var integer 消费分组配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupCountQuota;
+
+    /**
      * @param integer $TotalCount 计数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GroupList GroupList
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GroupCountQuota 消费分组配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -73,6 +85,10 @@ class GroupResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GroupList, $obj);
             }
+        }
+
+        if (array_key_exists("GroupCountQuota",$param) and $param["GroupCountQuota"] !== null) {
+            $this->GroupCountQuota = $param["GroupCountQuota"];
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputGroup(array $OutputGroup) 设置输出组。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEventId() 获取该Flow关联的媒体传输事件EventId。
+ * @method void setEventId(string $EventId) 设置该Flow关联的媒体传输事件EventId。
+ * @method string getRegion() 获取媒体传输输入流所属的区域，取值和InputRegion相同。
+ * @method void setRegion(string $Region) 设置媒体传输输入流所属的区域，取值和InputRegion相同。
  */
 class DescribeFlow extends AbstractModel
 {
@@ -69,6 +73,16 @@ class DescribeFlow extends AbstractModel
     public $OutputGroup;
 
     /**
+     * @var string 该Flow关联的媒体传输事件EventId。
+     */
+    public $EventId;
+
+    /**
+     * @var string 媒体传输输入流所属的区域，取值和InputRegion相同。
+     */
+    public $Region;
+
+    /**
      * @param string $FlowId 流Id。
      * @param string $FlowName 流名称。
      * @param string $State 流状态，目前有IDLE/RUNNING。
@@ -76,6 +90,8 @@ class DescribeFlow extends AbstractModel
      * @param array $InputGroup 输入组。
      * @param array $OutputGroup 输出组。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventId 该Flow关联的媒体传输事件EventId。
+     * @param string $Region 媒体传输输入流所属的区域，取值和InputRegion相同。
      */
     function __construct()
     {
@@ -122,6 +138,14 @@ class DescribeFlow extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OutputGroup, $obj);
             }
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

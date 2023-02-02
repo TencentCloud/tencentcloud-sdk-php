@@ -14,26 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EstablishCloudBaseRunServer返回参数结构体
+ * DescribePrometheusGlobalNotification返回参数结构体
  *
- * @method string getResult() 获取创建服务是否成功
+ * @method PrometheusNotificationItem getNotification() 获取全局告警通知渠道
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置创建服务是否成功
+ * @method void setNotification(PrometheusNotificationItem $Notification) 设置全局告警通知渠道
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class EstablishCloudBaseRunServerResponse extends AbstractModel
+class DescribePrometheusGlobalNotificationResponse extends AbstractModel
 {
     /**
-     * @var string 创建服务是否成功
+     * @var PrometheusNotificationItem 全局告警通知渠道
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $Notification;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +41,7 @@ class EstablishCloudBaseRunServerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 创建服务是否成功
+     * @param PrometheusNotificationItem $Notification 全局告警通知渠道
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +58,9 @@ class EstablishCloudBaseRunServerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Notification",$param) and $param["Notification"] !== null) {
+            $this->Notification = new PrometheusNotificationItem();
+            $this->Notification->deserialize($param["Notification"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

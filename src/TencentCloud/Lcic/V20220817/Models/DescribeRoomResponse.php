@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置预定的房间开始时间，unix时间戳。
  * @method integer getEndTime() 获取预定的房间结束时间，unix时间戳。
  * @method void setEndTime(integer $EndTime) 设置预定的房间结束时间，unix时间戳。
- * @method string getTeacherId() 获取老师ID。
- * @method void setTeacherId(string $TeacherId) 设置老师ID。
+ * @method string getTeacherId() 获取老师的UserId。
+ * @method void setTeacherId(string $TeacherId) 设置老师的UserId。
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
  * @method integer getResolution() 获取分辨率。可以有如下取值：
@@ -68,9 +68,9 @@ coteaching 双师
 0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
- * @method array getAssistants() 获取助教Id列表。
+ * @method array getAssistants() 获取助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAssistants(array $Assistants) 设置助教Id列表。
+ * @method void setAssistants(array $Assistants) 设置助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordUrl() 获取录制地址。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,7 +97,7 @@ class DescribeRoomResponse extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 老师ID。
+     * @var string 老师的UserId。
      */
     public $TeacherId;
 
@@ -150,7 +150,7 @@ coteaching 双师
     public $DisableRecord;
 
     /**
-     * @var array 助教Id列表。
+     * @var array 助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Assistants;
@@ -170,7 +170,7 @@ coteaching 双师
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳。
-     * @param string $TeacherId 老师ID。
+     * @param string $TeacherId 老师的UserId。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $Resolution 分辨率。可以有如下取值：
 1 标清
@@ -191,7 +191,7 @@ coteaching 双师
 0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-     * @param array $Assistants 助教Id列表。
+     * @param array $Assistants 助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 录制地址。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。

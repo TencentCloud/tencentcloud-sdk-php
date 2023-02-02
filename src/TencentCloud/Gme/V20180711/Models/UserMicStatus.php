@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户麦克风状态
  *
- * @method integer getUid() 获取客户端用于标识用户的Openid。
- * @method void setUid(integer $Uid) 设置客户端用于标识用户的Openid。
  * @method integer getEnableMic() 获取开麦状态。1表示关闭麦克风，2表示打开麦克风。
  * @method void setEnableMic(integer $EnableMic) 设置开麦状态。1表示关闭麦克风，2表示打开麦克风。
+ * @method integer getUid() 获取客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+ * @method void setUid(integer $Uid) 设置客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+ * @method string getStrUid() 获取客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStrUid(string $StrUid) 设置客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserMicStatus extends AbstractModel
 {
-    /**
-     * @var integer 客户端用于标识用户的Openid。
-     */
-    public $Uid;
-
     /**
      * @var integer 开麦状态。1表示关闭麦克风，2表示打开麦克风。
      */
     public $EnableMic;
 
     /**
-     * @param integer $Uid 客户端用于标识用户的Openid。
+     * @var integer 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+     */
+    public $Uid;
+
+    /**
+     * @var string 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StrUid;
+
+    /**
      * @param integer $EnableMic 开麦状态。1表示关闭麦克风，2表示打开麦克风。
+     * @param integer $Uid 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+     * @param string $StrUid 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -54,12 +66,16 @@ class UserMicStatus extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnableMic",$param) and $param["EnableMic"] !== null) {
+            $this->EnableMic = $param["EnableMic"];
+        }
+
         if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
             $this->Uid = $param["Uid"];
         }
 
-        if (array_key_exists("EnableMic",$param) and $param["EnableMic"] !== null) {
-            $this->EnableMic = $param["EnableMic"];
+        if (array_key_exists("StrUid",$param) and $param["StrUid"] !== null) {
+            $this->StrUid = $param["StrUid"];
         }
     }
 }

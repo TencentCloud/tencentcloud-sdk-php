@@ -126,6 +126,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemSize(float $MemSize) 设置MEM 大小
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPolicyDetail() 获取扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyDetail(array $PolicyDetail) 设置扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCpu() 获取Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpu(float $Cpu) 设置Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getMem() 获取Mem的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMem(float $Mem) 设置Mem的Request值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -305,6 +317,24 @@ class DescribeCloudBaseRunVersionResponse extends AbstractModel
     public $MemSize;
 
     /**
+     * @var array 扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyDetail;
+
+    /**
+     * @var float Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cpu;
+
+    /**
+     * @var float Mem的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Mem;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -362,6 +392,12 @@ class DescribeCloudBaseRunVersionResponse extends AbstractModel
      * @param float $CpuSize CPU 大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MemSize MEM 大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PolicyDetail 扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Cpu Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Mem Mem的Request值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -496,6 +532,23 @@ class DescribeCloudBaseRunVersionResponse extends AbstractModel
 
         if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
             $this->MemSize = $param["MemSize"];
+        }
+
+        if (array_key_exists("PolicyDetail",$param) and $param["PolicyDetail"] !== null) {
+            $this->PolicyDetail = [];
+            foreach ($param["PolicyDetail"] as $key => $value){
+                $obj = new HpaPolicy();
+                $obj->deserialize($value);
+                array_push($this->PolicyDetail, $obj);
+            }
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
+            $this->Mem = $param["Mem"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

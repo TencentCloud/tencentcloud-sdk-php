@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EstablishCloudBaseRunServer返回参数结构体
+ * DescribePrometheusTargetsTMP返回参数结构体
  *
- * @method string getResult() 获取创建服务是否成功
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置创建服务是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getJobs() 获取所有Job的targets信息
+ * @method void setJobs(array $Jobs) 设置所有Job的targets信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class EstablishCloudBaseRunServerResponse extends AbstractModel
+class DescribePrometheusTargetsTMPResponse extends AbstractModel
 {
     /**
-     * @var string 创建服务是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 所有Job的targets信息
      */
-    public $Result;
+    public $Jobs;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class EstablishCloudBaseRunServerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 创建服务是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Jobs 所有Job的targets信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,13 @@ class EstablishCloudBaseRunServerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Jobs",$param) and $param["Jobs"] !== null) {
+            $this->Jobs = [];
+            foreach ($param["Jobs"] as $key => $value){
+                $obj = new PrometheusJobTargets();
+                $obj->deserialize($value);
+                array_push($this->Jobs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

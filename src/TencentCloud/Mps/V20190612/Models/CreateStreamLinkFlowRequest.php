@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBandwidth(integer $MaxBandwidth) 设置最大带宽，单位bps，可选[10000000, 20000000, 50000000]。
  * @method array getInputGroup() 获取流的输入组。
  * @method void setInputGroup(array $InputGroup) 设置流的输入组。
+ * @method string getEventId() 获取该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
+ * @method void setEventId(string $EventId) 设置该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
  */
 class CreateStreamLinkFlowRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateStreamLinkFlowRequest extends AbstractModel
     public $InputGroup;
 
     /**
+     * @var string 该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
+     */
+    public $EventId;
+
+    /**
      * @param string $FlowName 流名称。
      * @param integer $MaxBandwidth 最大带宽，单位bps，可选[10000000, 20000000, 50000000]。
      * @param array $InputGroup 流的输入组。
+     * @param string $EventId 该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class CreateStreamLinkFlowRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InputGroup, $obj);
             }
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
     }
 }

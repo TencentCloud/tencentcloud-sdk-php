@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Goosefs\V20220519\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeEnvs返回参数结构体
+ * DescribeDataRepositoryTaskStatus返回参数结构体
  *
- * @method array getEnvList() 获取环境信息列表
- * @method void setEnvList(array $EnvList) 设置环境信息列表
- * @method integer getTotal() 获取环境个数
- * @method void setTotal(integer $Total) 设置环境个数
+ * @method string getTaskId() 获取任务id
+ * @method void setTaskId(string $TaskId) 设置任务id
+ * @method integer getStatus() 获取任务状态 0(初始化中), 1(运行中), 2(已完成), 3(任务失败)
+ * @method void setStatus(integer $Status) 设置任务状态 0(初始化中), 1(运行中), 2(已完成), 3(任务失败)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeEnvsResponse extends AbstractModel
+class DescribeDataRepositoryTaskStatusResponse extends AbstractModel
 {
     /**
-     * @var array 环境信息列表
+     * @var string 任务id
      */
-    public $EnvList;
+    public $TaskId;
 
     /**
-     * @var integer 环境个数
+     * @var integer 任务状态 0(初始化中), 1(运行中), 2(已完成), 3(任务失败)
      */
-    public $Total;
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeEnvsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $EnvList 环境信息列表
-     * @param integer $Total 环境个数
+     * @param string $TaskId 任务id
+     * @param integer $Status 任务状态 0(初始化中), 1(运行中), 2(已完成), 3(任务失败)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class DescribeEnvsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvList",$param) and $param["EnvList"] !== null) {
-            $this->EnvList = [];
-            foreach ($param["EnvList"] as $key => $value){
-                $obj = new EnvInfo();
-                $obj->deserialize($value);
-                array_push($this->EnvList, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

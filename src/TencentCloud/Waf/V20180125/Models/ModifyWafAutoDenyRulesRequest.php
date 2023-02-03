@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getAttackThreshold() 获取攻击次数阈值
- * @method void setAttackThreshold(integer $AttackThreshold) 设置攻击次数阈值
- * @method integer getTimeThreshold() 获取攻击时间阈值
- * @method void setTimeThreshold(integer $TimeThreshold) 设置攻击时间阈值
- * @method integer getDenyTimeThreshold() 获取自动封禁时间
- * @method void setDenyTimeThreshold(integer $DenyTimeThreshold) 设置自动封禁时间
+ * @method integer getAttackThreshold() 获取触发IP封禁的攻击次数阈值，范围为2~100次
+ * @method void setAttackThreshold(integer $AttackThreshold) 设置触发IP封禁的攻击次数阈值，范围为2~100次
+ * @method integer getTimeThreshold() 获取IP封禁统计时间，范围为1-60分钟
+ * @method void setTimeThreshold(integer $TimeThreshold) 设置IP封禁统计时间，范围为1-60分钟
+ * @method integer getDenyTimeThreshold() 获取触发IP封禁后的封禁时间，范围为5~360分钟
+ * @method void setDenyTimeThreshold(integer $DenyTimeThreshold) 设置触发IP封禁后的封禁时间，范围为5~360分钟
  * @method integer getDefenseStatus() 获取自动封禁状态
  * @method void setDefenseStatus(integer $DefenseStatus) 设置自动封禁状态
  */
@@ -39,17 +39,17 @@ class ModifyWafAutoDenyRulesRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 攻击次数阈值
+     * @var integer 触发IP封禁的攻击次数阈值，范围为2~100次
      */
     public $AttackThreshold;
 
     /**
-     * @var integer 攻击时间阈值
+     * @var integer IP封禁统计时间，范围为1-60分钟
      */
     public $TimeThreshold;
 
     /**
-     * @var integer 自动封禁时间
+     * @var integer 触发IP封禁后的封禁时间，范围为5~360分钟
      */
     public $DenyTimeThreshold;
 
@@ -60,9 +60,9 @@ class ModifyWafAutoDenyRulesRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param integer $AttackThreshold 攻击次数阈值
-     * @param integer $TimeThreshold 攻击时间阈值
-     * @param integer $DenyTimeThreshold 自动封禁时间
+     * @param integer $AttackThreshold 触发IP封禁的攻击次数阈值，范围为2~100次
+     * @param integer $TimeThreshold IP封禁统计时间，范围为1-60分钟
+     * @param integer $DenyTimeThreshold 触发IP封禁后的封禁时间，范围为5~360分钟
      * @param integer $DefenseStatus 自动封禁状态
      */
     function __construct()

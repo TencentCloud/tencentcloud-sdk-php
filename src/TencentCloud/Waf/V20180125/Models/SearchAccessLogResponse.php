@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContext() 获取加载后续内容的Context
  * @method void setContext(string $Context) 设置加载后续内容的Context
- * @method boolean getListOver() 获取日志查询结果是否全部返回
- * @method void setListOver(boolean $ListOver) 设置日志查询结果是否全部返回
- * @method boolean getAnalysis() 获取返回的是否为分析结果
- * @method void setAnalysis(boolean $Analysis) 设置返回的是否为分析结果
+ * @method boolean getListOver() 获取日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
+ * @method void setListOver(boolean $ListOver) 设置日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
+ * @method boolean getAnalysis() 获取返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
+ * @method void setAnalysis(boolean $Analysis) 设置返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
  * @method array getColNames() 获取如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,12 +55,12 @@ class SearchAccessLogResponse extends AbstractModel
     public $Context;
 
     /**
-     * @var boolean 日志查询结果是否全部返回
+     * @var boolean 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
      */
     public $ListOver;
 
     /**
-     * @var boolean 返回的是否为分析结果
+     * @var boolean 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
      */
     public $Analysis;
 
@@ -92,8 +92,8 @@ class SearchAccessLogResponse extends AbstractModel
 
     /**
      * @param string $Context 加载后续内容的Context
-     * @param boolean $ListOver 日志查询结果是否全部返回
-     * @param boolean $Analysis 返回的是否为分析结果
+     * @param boolean $ListOver 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
+     * @param boolean $Analysis 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
      * @param array $ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。

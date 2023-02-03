@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置翻到多少页
  * @method integer getCount() 获取每页展示的条数
  * @method void setCount(integer $Count) 设置每页展示的条数
- * @method string getSort() 获取排序方式
- * @method void setSort(string $Sort) 设置排序方式
+ * @method string getSort() 获取排序方式,desc表示降序，asc表示升序
+ * @method void setSort(string $Sort) 设置排序方式,desc表示降序，asc表示升序
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
  */
@@ -56,7 +56,7 @@ class DescribeDomainWhiteRulesRequest extends AbstractModel
     public $Count;
 
     /**
-     * @var string 排序方式
+     * @var string 排序方式,desc表示降序，asc表示升序
      */
     public $Sort;
 
@@ -70,7 +70,7 @@ class DescribeDomainWhiteRulesRequest extends AbstractModel
      * @param string $Url 请求的白名单匹配路径
      * @param integer $Page 翻到多少页
      * @param integer $Count 每页展示的条数
-     * @param string $Sort 排序方式
+     * @param string $Sort 排序方式,desc表示降序，asc表示升序
      * @param string $RuleId 规则ID
      */
     function __construct()

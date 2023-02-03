@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategies(array $Strategies) 设置策略详情
  * @method string getDomain() 获取需要添加策略的域名
  * @method void setDomain(string $Domain) 设置需要添加策略的域名
- * @method string getActionType() 获取动作类型
- * @method void setActionType(string $ActionType) 设置动作类型
+ * @method string getActionType() 获取动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+ * @method void setActionType(string $ActionType) 设置动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
  * @method string getRedirect() 获取如果动作是重定向，则表示重定向的地址；其他情况可以为空
  * @method void setRedirect(string $Redirect) 设置如果动作是重定向，则表示重定向的地址；其他情况可以为空
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
@@ -69,7 +69,7 @@ class AddCustomRuleRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 动作类型
+     * @var string 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
      */
     public $ActionType;
 
@@ -99,7 +99,7 @@ class AddCustomRuleRequest extends AbstractModel
      * @param string $ExpireTime 过期时间
      * @param array $Strategies 策略详情
      * @param string $Domain 需要添加策略的域名
-     * @param string $ActionType 动作类型
+     * @param string $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
      * @param string $Redirect 如果动作是重定向，则表示重定向的地址；其他情况可以为空
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      * @param string $Bypass 放行的详情

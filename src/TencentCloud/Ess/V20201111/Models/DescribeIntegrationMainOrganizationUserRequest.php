@@ -18,28 +18,20 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateFlowReminds请求参数结构体
+ * DescribeIntegrationMainOrganizationUser请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method array getFlowIds() 获取需要执行催办的签署流程id数组，最多100个
- * @method void setFlowIds(array $FlowIds) 设置需要执行催办的签署流程id数组，最多100个
+ * @method UserInfo getOperator() 获取操作人信息，userId必填
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
  */
-class CreateFlowRemindsRequest extends AbstractModel
+class DescribeIntegrationMainOrganizationUserRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 操作人信息，userId必填
      */
     public $Operator;
 
     /**
-     * @var array 需要执行催办的签署流程id数组，最多100个
-     */
-    public $FlowIds;
-
-    /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param array $FlowIds 需要执行催办的签署流程id数组，最多100个
+     * @param UserInfo $Operator 操作人信息，userId必填
      */
     function __construct()
     {
@@ -57,10 +49,6 @@ class CreateFlowRemindsRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
-            $this->FlowIds = $param["FlowIds"];
         }
     }
 }

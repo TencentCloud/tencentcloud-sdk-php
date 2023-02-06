@@ -28,6 +28,8 @@ DISABLE：不启用该路由
  * @method void setStatus(string $Status) 设置路由信息是否启用
 ENABLE：启用该路由
 DISABLE：不启用该路由
+ * @method string getDestinationCidrBlock() 获取路由CIDR
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置路由CIDR
  */
 class VpngwCcnRoutes extends AbstractModel
 {
@@ -44,10 +46,16 @@ DISABLE：不启用该路由
     public $Status;
 
     /**
+     * @var string 路由CIDR
+     */
+    public $DestinationCidrBlock;
+
+    /**
      * @param string $RouteId 路由信息ID
      * @param string $Status 路由信息是否启用
 ENABLE：启用该路由
 DISABLE：不启用该路由
+     * @param string $DestinationCidrBlock 路由CIDR
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ DISABLE：不启用该路由
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("DestinationCidrBlock",$param) and $param["DestinationCidrBlock"] !== null) {
+            $this->DestinationCidrBlock = $param["DestinationCidrBlock"];
         }
     }
 }

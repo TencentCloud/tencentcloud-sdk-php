@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置已开通云存的设备名称
  * @method string getToDeviceName() 获取未开通云存的设备名称
  * @method void setToDeviceName(string $ToDeviceName) 设置未开通云存的设备名称
+ * @method string getToProductId() 获取未开通云存的设备产品ID
+ * @method void setToProductId(string $ToProductId) 设置未开通云存的设备产品ID
  */
 class TransferCloudStorageRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class TransferCloudStorageRequest extends AbstractModel
     public $ToDeviceName;
 
     /**
+     * @var string 未开通云存的设备产品ID
+     */
+    public $ToProductId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 已开通云存的设备名称
      * @param string $ToDeviceName 未开通云存的设备名称
+     * @param string $ToProductId 未开通云存的设备产品ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class TransferCloudStorageRequest extends AbstractModel
 
         if (array_key_exists("ToDeviceName",$param) and $param["ToDeviceName"] !== null) {
             $this->ToDeviceName = $param["ToDeviceName"];
+        }
+
+        if (array_key_exists("ToProductId",$param) and $param["ToProductId"] !== null) {
+            $this->ToProductId = $param["ToProductId"];
         }
     }
 }

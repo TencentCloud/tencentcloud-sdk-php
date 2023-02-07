@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartment(Department $Department) 设置所属部门信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCount() 获取个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCount(integer $Count) 设置个数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Group extends AbstractModel
 {
@@ -48,9 +52,17 @@ class Group extends AbstractModel
     public $Department;
 
     /**
+     * @var integer 个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Count;
+
+    /**
      * @param integer $Id 组ID
      * @param string $Name 组名称
      * @param Department $Department 所属部门信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Count 个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -77,6 +89,10 @@ class Group extends AbstractModel
         if (array_key_exists("Department",$param) and $param["Department"] !== null) {
             $this->Department = new Department();
             $this->Department->deserialize($param["Department"]);
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

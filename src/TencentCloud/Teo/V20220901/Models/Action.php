@@ -44,7 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li> TlsVersion；</li>
 <li> OcspStapling；</li>
 <li> HTTP/2 访问（Http2）；</li>
-<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)；</li>
+<li> 修改源站(Origin)。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormalAction(NormalAction $NormalAction) 设置常规功能操作，选择该类型的功能项有：
 <li> 访问URL 重写（AccessUrlRedirect）；</li>
@@ -70,7 +71,8 @@ use TencentCloud\Common\AbstractModel;
 <li> TlsVersion；</li>
 <li> OcspStapling；</li>
 <li> HTTP/2 访问（Http2）；</li>
-<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)；</li>
+<li> 修改源站(Origin)。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method RewriteAction getRewriteAction() 获取带有请求头/响应头的功能操作，选择该类型的功能项有：
 <li> 修改 HTTP 请求头（RequestHeader）；</li>
@@ -116,7 +118,8 @@ class Action extends AbstractModel
 <li> TlsVersion；</li>
 <li> OcspStapling；</li>
 <li> HTTP/2 访问（Http2）；</li>
-<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)；</li>
+<li> 修改源站(Origin)。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormalAction;
@@ -162,7 +165,8 @@ class Action extends AbstractModel
 <li> TlsVersion；</li>
 <li> OcspStapling；</li>
 <li> HTTP/2 访问（Http2）；</li>
-<li> 回源跟随重定向(UpstreamFollowRedirect)。</li>
+<li> 回源跟随重定向(UpstreamFollowRedirect)；</li>
+<li> 修改源站(Origin)。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RewriteAction $RewriteAction 带有请求头/响应头的功能操作，选择该类型的功能项有：
 <li> 修改 HTTP 请求头（RequestHeader）；</li>

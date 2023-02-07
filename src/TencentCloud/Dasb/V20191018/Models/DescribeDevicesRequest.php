@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDepartmentId(string $DepartmentId) 设置过滤条件，可按照部门ID进行过滤
  * @method array getTagFilters() 获取过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
  * @method void setTagFilters(array $TagFilters) 设置过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+ * @method array getFilters() 获取过滤数组。支持的Name：
+BindingStatus 绑定状态
+ * @method void setFilters(array $Filters) 设置过滤数组。支持的Name：
+BindingStatus 绑定状态
  */
 class DescribeDevicesRequest extends AbstractModel
 {
@@ -108,6 +112,12 @@ class DescribeDevicesRequest extends AbstractModel
     public $TagFilters;
 
     /**
+     * @var array 过滤数组。支持的Name：
+BindingStatus 绑定状态
+     */
+    public $Filters;
+
+    /**
      * @param array $IdSet 资产ID集合
      * @param string $Name 资产名或资产IP，模糊查询
      * @param string $Ip 暂未使用
@@ -120,6 +130,8 @@ class DescribeDevicesRequest extends AbstractModel
      * @param array $KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      * @param string $DepartmentId 过滤条件，可按照部门ID进行过滤
      * @param array $TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+     * @param array $Filters 过滤数组。支持的Name：
+BindingStatus 绑定状态
      */
     function __construct()
     {
@@ -184,6 +196,15 @@ class DescribeDevicesRequest extends AbstractModel
                 $obj = new TagFilter();
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
             }
         }
     }

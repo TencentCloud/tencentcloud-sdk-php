@@ -130,9 +130,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMonitorVersion() 获取监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+ * @method string getMonitorVersion() 获取监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+ * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClientLimitMin() 获取客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -409,7 +409,7 @@ class InstanceSet extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var string 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+     * @var string 监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorVersion;
@@ -530,7 +530,7 @@ class InstanceSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MonitorVersion 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+     * @param string $MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。

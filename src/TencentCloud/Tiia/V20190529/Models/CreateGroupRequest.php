@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置图库ID，不可重复，仅支持字母、数字和下划线。
  * @method string getGroupName() 获取图库名称描述。
  * @method void setGroupName(string $GroupName) 设置图库名称描述。
- * @method integer getMaxCapacity() 获取图库可容纳的最大图片特征数量，一张图片对应一条图片特征数据。
-达到最大容量后无法在图库中继续创建图片，否则将会报错。
-MaxCapacity不支持修改，请合理评估容量上限，按需创建。
- * @method void setMaxCapacity(integer $MaxCapacity) 设置图库可容纳的最大图片特征数量，一张图片对应一条图片特征数据。
-达到最大容量后无法在图库中继续创建图片，否则将会报错。
-MaxCapacity不支持修改，请合理评估容量上限，按需创建。
+ * @method integer getMaxCapacity() 获取图片库可容纳的最大图片特征条数，一张图片对应一条图片特征数据，不支持修改。
+单个图片库容量最大可达亿级，达到容量限制后继续创建图片将会报错。
+注意，包月计费下支持绑定的最小库容量为500万。
+ * @method void setMaxCapacity(integer $MaxCapacity) 设置图片库可容纳的最大图片特征条数，一张图片对应一条图片特征数据，不支持修改。
+单个图片库容量最大可达亿级，达到容量限制后继续创建图片将会报错。
+注意，包月计费下支持绑定的最小库容量为500万。
  * @method string getBrief() 获取图库简介。
  * @method void setBrief(string $Brief) 设置图库简介。
  * @method integer getMaxQps() 获取访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
@@ -64,9 +64,9 @@ class CreateGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var integer 图库可容纳的最大图片特征数量，一张图片对应一条图片特征数据。
-达到最大容量后无法在图库中继续创建图片，否则将会报错。
-MaxCapacity不支持修改，请合理评估容量上限，按需创建。
+     * @var integer 图片库可容纳的最大图片特征条数，一张图片对应一条图片特征数据，不支持修改。
+单个图片库容量最大可达亿级，达到容量限制后继续创建图片将会报错。
+注意，包月计费下支持绑定的最小库容量为500万。
      */
     public $MaxCapacity;
 
@@ -95,9 +95,9 @@ GroupType不支持修改，若不确定适用的服务类型，建议先对不�
     /**
      * @param string $GroupId 图库ID，不可重复，仅支持字母、数字和下划线。
      * @param string $GroupName 图库名称描述。
-     * @param integer $MaxCapacity 图库可容纳的最大图片特征数量，一张图片对应一条图片特征数据。
-达到最大容量后无法在图库中继续创建图片，否则将会报错。
-MaxCapacity不支持修改，请合理评估容量上限，按需创建。
+     * @param integer $MaxCapacity 图片库可容纳的最大图片特征条数，一张图片对应一条图片特征数据，不支持修改。
+单个图片库容量最大可达亿级，达到容量限制后继续创建图片将会报错。
+注意，包月计费下支持绑定的最小库容量为500万。
      * @param string $Brief 图库简介。
      * @param integer $MaxQps 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
      * @param integer $GroupType 图库类型，用于决定图像搜索的服务类型和算法版本，默认为4。

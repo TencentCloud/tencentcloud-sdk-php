@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
 新增扩容节点将加入到已选择的v_cluster分组中，提交同步VIP生效.
  * @method integer getUserSubnetIPNum() 获取子网剩余ip数量，用于判断当前实例子网剩余ip数是否能扩容。需要根据实际填写
  * @method void setUserSubnetIPNum(integer $UserSubnetIPNum) 设置子网剩余ip数量，用于判断当前实例子网剩余ip数是否能扩容。需要根据实际填写
- * @method string getScaleOutNodeIp() 获取节点同步ip
- * @method void setScaleOutNodeIp(string $ScaleOutNodeIp) 设置节点同步ip
+ * @method string getScaleOutNodeIp() 获取同步元数据节点IP （uip）
+ * @method void setScaleOutNodeIp(string $ScaleOutNodeIp) 设置同步元数据节点IP （uip）
+ * @method array getReduceShardInfo() 获取缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+ * @method void setReduceShardInfo(array $ReduceShardInfo) 设置缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -64,9 +66,14 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $UserSubnetIPNum;
 
     /**
-     * @var string 节点同步ip
+     * @var string 同步元数据节点IP （uip）
      */
     public $ScaleOutNodeIp;
+
+    /**
+     * @var array 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+     */
+    public $ReduceShardInfo;
 
     /**
      * @param string $InstanceId 实例唯一ID
@@ -75,7 +82,8 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param string $ScaleOutCluster v_cluster分组，	
 新增扩容节点将加入到已选择的v_cluster分组中，提交同步VIP生效.
      * @param integer $UserSubnetIPNum 子网剩余ip数量，用于判断当前实例子网剩余ip数是否能扩容。需要根据实际填写
-     * @param string $ScaleOutNodeIp 节点同步ip
+     * @param string $ScaleOutNodeIp 同步元数据节点IP （uip）
+     * @param array $ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("ScaleOutNodeIp",$param) and $param["ScaleOutNodeIp"] !== null) {
             $this->ScaleOutNodeIp = $param["ScaleOutNodeIp"];
+        }
+
+        if (array_key_exists("ReduceShardInfo",$param) and $param["ReduceShardInfo"] !== null) {
+            $this->ReduceShardInfo = $param["ReduceShardInfo"];
         }
     }
 }

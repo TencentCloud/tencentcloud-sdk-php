@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlacement(Placement $Placement) 设置集群中实例所在的位置。
  * @method string getClusterId() 获取集群ID。
  * @method void setClusterId(string $ClusterId) 设置集群ID。
- * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
- * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
  * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置。
  * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置私有网络相关信息配置。
  * @method integer getCount() 获取添加节点数量。
  * @method void setCount(integer $Count) 设置添加节点数量。
+ * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和特定自定义镜像。
+ * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和特定自定义镜像。
  * @method string getInstanceChargeType() 获取节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月节点的购买时长、是否设置自动续费等属性。若指定节点的付费模式为预付费则该参数必传。
@@ -54,8 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
- * @method string getQueueName() 获取队列名称。
- * @method void setQueueName(string $QueueName) 设置队列名称。
+ * @method string getQueueName() 获取队列名称。不指定则为默认队列。<br><li>SLURM默认队列为：compute。<br>
+<li>SGE默认队列为：all.q。<br>
+
+ * @method void setQueueName(string $QueueName) 设置队列名称。不指定则为默认队列。<br><li>SLURM默认队列为：compute。<br>
+<li>SGE默认队列为：all.q。<br>
+
  * @method string getNodeRole() 获取添加节点类型。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
  * @method void setNodeRole(string $NodeRole) 设置添加节点类型。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
  * @method boolean getDryRun() 获取是否只预检此次请求。
@@ -82,11 +86,6 @@ class AddNodesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
-     */
-    public $ImageId;
-
-    /**
      * @var VirtualPrivateCloud 私有网络相关信息配置。
      */
     public $VirtualPrivateCloud;
@@ -95,6 +94,11 @@ class AddNodesRequest extends AbstractModel
      * @var integer 添加节点数量。
      */
     public $Count;
+
+    /**
+     * @var string 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和特定自定义镜像。
+     */
+    public $ImageId;
 
     /**
      * @var string 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
@@ -149,7 +153,9 @@ class AddNodesRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var string 队列名称。
+     * @var string 队列名称。不指定则为默认队列。<br><li>SLURM默认队列为：compute。<br>
+<li>SGE默认队列为：all.q。<br>
+
      */
     public $QueueName;
 
@@ -170,9 +176,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     /**
      * @param Placement $Placement 集群中实例所在的位置。
      * @param string $ClusterId 集群ID。
-     * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
      * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置。
      * @param integer $Count 添加节点数量。
+     * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和特定自定义镜像。
      * @param string $InstanceChargeType 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月节点的购买时长、是否设置自动续费等属性。若指定节点的付费模式为预付费则该参数必传。
      * @param string $InstanceType 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。
@@ -185,7 +191,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param LoginSettings $LoginSettings 集群登录设置。
      * @param array $SecurityGroupIds 集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-     * @param string $QueueName 队列名称。
+     * @param string $QueueName 队列名称。不指定则为默认队列。<br><li>SLURM默认队列为：compute。<br>
+<li>SGE默认队列为：all.q。<br>
+
      * @param string $NodeRole 添加节点类型。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
      * @param boolean $DryRun 是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
@@ -215,10 +223,6 @@ false（默认）：发送正常请求，通过检查后直接创建实例
             $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
-        }
-
         if (array_key_exists("VirtualPrivateCloud",$param) and $param["VirtualPrivateCloud"] !== null) {
             $this->VirtualPrivateCloud = new VirtualPrivateCloud();
             $this->VirtualPrivateCloud->deserialize($param["VirtualPrivateCloud"]);
@@ -226,6 +230,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {

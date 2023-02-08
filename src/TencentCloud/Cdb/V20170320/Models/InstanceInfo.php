@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemory() 获取内存容量，单位为 MB
  * @method void setMemory(integer $Memory) 设置内存容量，单位为 MB
- * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
- * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
+ * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
+ * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
  * @method integer getVpcId() 获取私有网络 ID，例如：51102
  * @method void setVpcId(integer $VpcId) 设置私有网络 ID，例如：51102
  * @method SlaveInfo getSlaveInfo() 获取备机信息
@@ -162,7 +162,7 @@ class InstanceInfo extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
+     * @var integer 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
      */
     public $Status;
 
@@ -378,7 +378,7 @@ class InstanceInfo extends AbstractModel
      * @param RoVipInfo $RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory 内存容量，单位为 MB
-     * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
+     * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-正在进行隔离操作；5-已隔离
      * @param integer $VpcId 私有网络 ID，例如：51102
      * @param SlaveInfo $SlaveInfo 备机信息
 注意：此字段可能返回 null，表示取不到有效值。

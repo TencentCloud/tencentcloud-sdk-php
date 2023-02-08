@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpecName() 获取实例配置ID
  * @method void setSpecName(string $SpecName) 设置实例配置ID
+ * @method string getExceptionInformation() 获取集群异常。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -128,6 +132,12 @@ class RabbitMQVipInstance extends AbstractModel
     public $SpecName;
 
     /**
+     * @var string 集群异常。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExceptionInformation;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -144,6 +154,8 @@ class RabbitMQVipInstance extends AbstractModel
      * @param string $Remark 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName 实例配置ID
+     * @param string $ExceptionInformation 集群异常。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -212,6 +224,10 @@ class RabbitMQVipInstance extends AbstractModel
 
         if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
             $this->SpecName = $param["SpecName"];
+        }
+
+        if (array_key_exists("ExceptionInformation",$param) and $param["ExceptionInformation"] !== null) {
+            $this->ExceptionInformation = $param["ExceptionInformation"];
         }
     }
 }

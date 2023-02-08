@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargets(array $Targets) 设置后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFunctionTargets() 获取后端云函数的信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFunctionTargets(array $FunctionTargets) 设置后端云函数的信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleTargets extends AbstractModel
 {
@@ -55,10 +59,18 @@ class RuleTargets extends AbstractModel
     public $Targets;
 
     /**
+     * @var array 后端云函数的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FunctionTargets;
+
+    /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名
      * @param string $Url 转发规则的路径。
      * @param array $Targets 后端服务的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FunctionTargets 后端云函数的信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -92,6 +104,15 @@ class RuleTargets extends AbstractModel
                 $obj = new Backend();
                 $obj->deserialize($value);
                 array_push($this->Targets, $obj);
+            }
+        }
+
+        if (array_key_exists("FunctionTargets",$param) and $param["FunctionTargets"] !== null) {
+            $this->FunctionTargets = [];
+            foreach ($param["FunctionTargets"] as $key => $value){
+                $obj = new FunctionTarget();
+                $obj->deserialize($value);
+                array_push($this->FunctionTargets, $obj);
             }
         }
     }

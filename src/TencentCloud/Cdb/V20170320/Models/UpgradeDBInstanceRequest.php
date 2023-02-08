@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。
  * @method integer getCpu() 获取升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
  * @method void setCpu(integer $Cpu) 设置升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
- * @method integer getFastUpgrade() 获取是否极速变配。0-普通升级，1-极速变配。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
- * @method void setFastUpgrade(integer $FastUpgrade) 设置是否极速变配。0-普通升级，1-极速变配。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+ * @method integer getFastUpgrade() 获取是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+ * @method void setFastUpgrade(integer $FastUpgrade) 设置是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
  * @method integer getMaxDelayTime() 获取延迟阈值。取值范围1~10，默认值为10。
  * @method void setMaxDelayTime(integer $MaxDelayTime) 设置延迟阈值。取值范围1~10，默认值为10。
  * @method integer getCrossCluster() 获取是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
@@ -116,7 +116,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer 是否极速变配。0-普通升级，1-极速变配。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+     * @var integer 是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
      */
     public $FastUpgrade;
 
@@ -148,7 +148,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
      * @param string $DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。
      * @param integer $Cpu 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
-     * @param integer $FastUpgrade 是否极速变配。0-普通升级，1-极速变配。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+     * @param integer $FastUpgrade 是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
      * @param integer $MaxDelayTime 延迟阈值。取值范围1~10，默认值为10。
      * @param integer $CrossCluster 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
      * @param string $ZoneId 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。

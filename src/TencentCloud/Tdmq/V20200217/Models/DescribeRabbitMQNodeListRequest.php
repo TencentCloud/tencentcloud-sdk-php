@@ -26,6 +26,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取一页限制
  * @method void setLimit(integer $Limit) 设置一页限制
+ * @method string getNodeName() 获取模糊搜索节点名字
+ * @method void setNodeName(string $NodeName) 设置模糊搜索节点名字
+ * @method array getFilters() 获取过滤参数的名字和数值
+现在只有一个nodeStatus
+running/down
+数组类型，兼容后续添加过滤参数
+
+ * @method void setFilters(array $Filters) 设置过滤参数的名字和数值
+现在只有一个nodeStatus
+running/down
+数组类型，兼容后续添加过滤参数
+
+ * @method string getSortElement() 获取按指定元素排序，现在只有2个
+cpuUsage/diskUsage
+ * @method void setSortElement(string $SortElement) 设置按指定元素排序，现在只有2个
+cpuUsage/diskUsage
+ * @method string getSortOrder() 获取升序/降序
+ascend/descend
+ * @method void setSortOrder(string $SortOrder) 设置升序/降序
+ascend/descend
  */
 class DescribeRabbitMQNodeListRequest extends AbstractModel
 {
@@ -45,9 +65,45 @@ class DescribeRabbitMQNodeListRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 模糊搜索节点名字
+     */
+    public $NodeName;
+
+    /**
+     * @var array 过滤参数的名字和数值
+现在只有一个nodeStatus
+running/down
+数组类型，兼容后续添加过滤参数
+
+     */
+    public $Filters;
+
+    /**
+     * @var string 按指定元素排序，现在只有2个
+cpuUsage/diskUsage
+     */
+    public $SortElement;
+
+    /**
+     * @var string 升序/降序
+ascend/descend
+     */
+    public $SortOrder;
+
+    /**
      * @param string $InstanceId rabbitmq集群ID
      * @param integer $Offset 偏移量
      * @param integer $Limit 一页限制
+     * @param string $NodeName 模糊搜索节点名字
+     * @param array $Filters 过滤参数的名字和数值
+现在只有一个nodeStatus
+running/down
+数组类型，兼容后续添加过滤参数
+
+     * @param string $SortElement 按指定元素排序，现在只有2个
+cpuUsage/diskUsage
+     * @param string $SortOrder 升序/降序
+ascend/descend
      */
     function __construct()
     {
@@ -72,6 +128,27 @@ class DescribeRabbitMQNodeListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("SortElement",$param) and $param["SortElement"] !== null) {
+            $this->SortElement = $param["SortElement"];
+        }
+
+        if (array_key_exists("SortOrder",$param) and $param["SortOrder"] !== null) {
+            $this->SortOrder = $param["SortOrder"];
         }
     }
 }

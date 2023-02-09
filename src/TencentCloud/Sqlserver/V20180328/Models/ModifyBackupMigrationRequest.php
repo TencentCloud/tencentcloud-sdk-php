@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUploadType(string $UploadType) 设置COS_URL-备份放在用户的对象存储上，提供URL。COS_UPLOAD-备份放在业务的对象存储上，用户上传
  * @method array getBackupFiles() 获取UploadType是COS_URL时这里时URL，COS_UPLOAD这里填备份文件的名字；只支持1个备份文件，但1个备份文件内可包含多个库
  * @method void setBackupFiles(array $BackupFiles) 设置UploadType是COS_URL时这里时URL，COS_UPLOAD这里填备份文件的名字；只支持1个备份文件，但1个备份文件内可包含多个库
+ * @method array getDBRename() 获取需要重命名的数据库名称集合
+ * @method void setDBRename(array $DBRename) 设置需要重命名的数据库名称集合
  */
 class ModifyBackupMigrationRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyBackupMigrationRequest extends AbstractModel
     public $BackupFiles;
 
     /**
+     * @var array 需要重命名的数据库名称集合
+     */
+    public $DBRename;
+
+    /**
      * @param string $InstanceId 导入目标实例ID
      * @param string $BackupMigrationId 备份导入任务ID，由CreateBackupMigration接口返回
      * @param string $MigrationName 任务名称
      * @param string $RecoveryType 迁移任务恢复类型，FULL,FULL_LOG,FULL_DIFF
      * @param string $UploadType COS_URL-备份放在用户的对象存储上，提供URL。COS_UPLOAD-备份放在业务的对象存储上，用户上传
      * @param array $BackupFiles UploadType是COS_URL时这里时URL，COS_UPLOAD这里填备份文件的名字；只支持1个备份文件，但1个备份文件内可包含多个库
+     * @param array $DBRename 需要重命名的数据库名称集合
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class ModifyBackupMigrationRequest extends AbstractModel
 
         if (array_key_exists("BackupFiles",$param) and $param["BackupFiles"] !== null) {
             $this->BackupFiles = $param["BackupFiles"];
+        }
+
+        if (array_key_exists("DBRename",$param) and $param["DBRename"] !== null) {
+            $this->DBRename = [];
+            foreach ($param["DBRename"] as $key => $value){
+                $obj = new RenameRestoreDatabase();
+                $obj->deserialize($value);
+                array_push($this->DBRename, $obj);
+            }
         }
     }
 }

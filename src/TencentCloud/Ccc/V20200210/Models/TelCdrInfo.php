@@ -214,6 +214,10 @@ notInService       不在服务区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueuedSkillGroupName(string $QueuedSkillGroupName) 设置排队技能组名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVoicemailRecordURL() 获取通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVoicemailRecordURL(array $VoicemailRecordURL) 设置通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -443,6 +447,12 @@ notInService       不在服务区
     public $QueuedSkillGroupName;
 
     /**
+     * @var array 通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VoicemailRecordURL;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -539,6 +549,8 @@ notInService       不在服务区
      * @param string $Remark 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QueuedSkillGroupName 排队技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VoicemailRecordURL 通话中语音留言录音URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -696,6 +708,10 @@ notInService       不在服务区
 
         if (array_key_exists("QueuedSkillGroupName",$param) and $param["QueuedSkillGroupName"] !== null) {
             $this->QueuedSkillGroupName = $param["QueuedSkillGroupName"];
+        }
+
+        if (array_key_exists("VoicemailRecordURL",$param) and $param["VoicemailRecordURL"] !== null) {
+            $this->VoicemailRecordURL = $param["VoicemailRecordURL"];
         }
     }
 }

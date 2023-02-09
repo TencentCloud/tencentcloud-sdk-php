@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBName() 获取数据库名
  * @method void setDBName(string $DBName) 设置数据库名
- * @method string getPrivilege() 获取权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
- * @method void setPrivilege(string $Privilege) 设置权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
+ * @method string getPrivilege() 获取权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者
+ * @method void setPrivilege(string $Privilege) 设置权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者
  */
 class DBPrivilegeModifyInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DBPrivilegeModifyInfo extends AbstractModel
     public $DBName;
 
     /**
-     * @var string 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
+     * @var string 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者
      */
     public $Privilege;
 
     /**
      * @param string $DBName 数据库名
-     * @param string $Privilege 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
+     * @param string $Privilege 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者
      */
     function __construct()
     {

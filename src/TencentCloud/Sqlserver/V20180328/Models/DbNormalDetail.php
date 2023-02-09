@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStateDesc(string $StateDesc) 设置数据库状态
  * @method string getUserAccessDesc() 获取用户类型
  * @method void setUserAccessDesc(string $UserAccessDesc) 设置用户类型
+ * @method string getCreateTime() 获取数据库创建时间
+ * @method void setCreateTime(string $CreateTime) 设置数据库创建时间
  */
 class DbNormalDetail extends AbstractModel
 {
@@ -150,6 +152,11 @@ class DbNormalDetail extends AbstractModel
     public $UserAccessDesc;
 
     /**
+     * @var string 数据库创建时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $IsSubscribed 是否已订阅 0：否 1：是
      * @param string $CollationName 数据库排序规则
      * @param string $IsAutoCleanupOn 开启CT之后是否自动清理 0：否 1：是
@@ -168,6 +175,7 @@ class DbNormalDetail extends AbstractModel
      * @param string $RetentionPeriod 保留天数
      * @param string $StateDesc 数据库状态
      * @param string $UserAccessDesc 用户类型
+     * @param string $CreateTime 数据库创建时间
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class DbNormalDetail extends AbstractModel
 
         if (array_key_exists("UserAccessDesc",$param) and $param["UserAccessDesc"] !== null) {
             $this->UserAccessDesc = $param["UserAccessDesc"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

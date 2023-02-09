@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRecovery(string $IsRecovery) 设置是否是最终恢复，全量导入任务该字段为空
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDBRename() 获取重命名的数据库名称集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDBRename(array $DBRename) 设置重命名的数据库名称集合
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Migration extends AbstractModel
 {
@@ -142,6 +146,12 @@ class Migration extends AbstractModel
     public $IsRecovery;
 
     /**
+     * @var array 重命名的数据库名称集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DBRename;
+
+    /**
      * @param string $MigrationId 备份导入任务ID 或 增量导入任务ID
      * @param string $MigrationName 备份导入名称，增量导入任务该字段为空
 注意：此字段可能返回 null，表示取不到有效值。
@@ -159,6 +169,8 @@ class Migration extends AbstractModel
      * @param MigrationDetail $Detail 迁移细节
      * @param MigrationAction $Action 当前状态允许的操作
      * @param string $IsRecovery 是否是最终恢复，全量导入任务该字段为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DBRename 重命名的数据库名称集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -238,6 +250,15 @@ class Migration extends AbstractModel
 
         if (array_key_exists("IsRecovery",$param) and $param["IsRecovery"] !== null) {
             $this->IsRecovery = $param["IsRecovery"];
+        }
+
+        if (array_key_exists("DBRename",$param) and $param["DBRename"] !== null) {
+            $this->DBRename = [];
+            foreach ($param["DBRename"] as $key => $value){
+                $obj = new DBRenameRes();
+                $obj->deserialize($value);
+                array_push($this->DBRename, $obj);
+            }
         }
     }
 }

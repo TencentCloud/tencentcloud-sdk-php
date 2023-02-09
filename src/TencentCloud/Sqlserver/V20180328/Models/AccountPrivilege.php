@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserName() 获取数据库用户名
  * @method void setUserName(string $UserName) 设置数据库用户名
- * @method string getPrivilege() 获取数据库权限。ReadWrite表示可读写，ReadOnly表示只读
- * @method void setPrivilege(string $Privilege) 设置数据库权限。ReadWrite表示可读写，ReadOnly表示只读
+ * @method string getPrivilege() 获取数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
+ * @method void setPrivilege(string $Privilege) 设置数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
+ * @method string getAccountType() 获取账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+ * @method void setAccountType(string $AccountType) 设置账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
  */
 class AccountPrivilege extends AbstractModel
 {
@@ -33,13 +35,19 @@ class AccountPrivilege extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
+     * @var string 数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
      */
     public $Privilege;
 
     /**
+     * @var string 账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserName 数据库用户名
-     * @param string $Privilege 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
+     * @param string $Privilege 数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
+     * @param string $AccountType 账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AccountPrivilege extends AbstractModel
 
         if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
             $this->Privilege = $param["Privilege"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

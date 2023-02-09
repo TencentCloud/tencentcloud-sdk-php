@@ -118,6 +118,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置云硬盘的创建时间。
  * @method integer getDeleteSnapshot() 获取销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
  * @method void setDeleteSnapshot(integer $DeleteSnapshot) 设置销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+ * @method integer getDiskBackupQuota() 获取云硬盘备份点配额。表示最大可以保留的备份点数量。
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置云硬盘备份点配额。表示最大可以保留的备份点数量。
  * @method integer getDiskBackupCount() 获取云硬盘备份点已使用的数量。
  * @method void setDiskBackupCount(integer $DiskBackupCount) 设置云硬盘备份点已使用的数量。
  * @method string getInstanceType() 获取云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
@@ -319,6 +321,11 @@ class Disk extends AbstractModel
     public $DeleteSnapshot;
 
     /**
+     * @var integer 云硬盘备份点配额。表示最大可以保留的备份点数量。
+     */
+    public $DiskBackupQuota;
+
+    /**
      * @var integer 云硬盘备份点已使用的数量。
      */
     public $DiskBackupCount;
@@ -378,6 +385,7 @@ class Disk extends AbstractModel
      * @param boolean $Shareable 云盘是否为共享型云盘。
      * @param string $CreateTime 云硬盘的创建时间。
      * @param integer $DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     * @param integer $DiskBackupQuota 云硬盘备份点配额。表示最大可以保留的备份点数量。
      * @param integer $DiskBackupCount 云硬盘备份点已使用的数量。
      * @param string $InstanceType 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
      */
@@ -542,6 +550,10 @@ class Disk extends AbstractModel
 
         if (array_key_exists("DeleteSnapshot",$param) and $param["DeleteSnapshot"] !== null) {
             $this->DeleteSnapshot = $param["DeleteSnapshot"];
+        }
+
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
         }
 
         if (array_key_exists("DiskBackupCount",$param) and $param["DiskBackupCount"] !== null) {

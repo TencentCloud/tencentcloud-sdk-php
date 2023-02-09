@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBName() 获取数据库名
  * @method void setDBName(string $DBName) 设置数据库名
- * @method string getPrivilege() 获取数据库权限，ReadWrite表示可读写，ReadOnly表示只读
- * @method void setPrivilege(string $Privilege) 设置数据库权限，ReadWrite表示可读写，ReadOnly表示只读
+ * @method string getPrivilege() 获取数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
+ * @method void setPrivilege(string $Privilege) 设置数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
  */
 class DBPrivilege extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DBPrivilege extends AbstractModel
     public $DBName;
 
     /**
-     * @var string 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
+     * @var string 数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
      */
     public $Privilege;
 
     /**
      * @param string $DBName 数据库名
-     * @param string $Privilege 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
+     * @param string $Privilege 数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
      */
     function __construct()
     {

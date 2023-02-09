@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSilenceTime(integer $SilenceTime) 设置本句与上一句之间的静音时长
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEmotionType() 获取情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmotionType(array $EmotionType) 设置情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SentenceDetail extends AbstractModel
 {
@@ -124,6 +128,12 @@ class SentenceDetail extends AbstractModel
     public $SilenceTime;
 
     /**
+     * @var array 情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmotionType;
+
+    /**
      * @param string $FinalSentence 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SliceSentence 单句中间识别结果，使用空格拆分为多个词
@@ -143,6 +153,8 @@ class SentenceDetail extends AbstractModel
      * @param float $EmotionalEnergy 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SilenceTime 本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $EmotionType 情绪类型（可能为空）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +213,10 @@ class SentenceDetail extends AbstractModel
 
         if (array_key_exists("SilenceTime",$param) and $param["SilenceTime"] !== null) {
             $this->SilenceTime = $param["SilenceTime"];
+        }
+
+        if (array_key_exists("EmotionType",$param) and $param["EmotionType"] !== null) {
+            $this->EmotionType = $param["EmotionType"];
         }
     }
 }

@@ -23,22 +23,32 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Lcic\V20220817\Models as Models;
 
 /**
+ * @method Models\BatchCreateRoomResponse BatchCreateRoom(Models\BatchCreateRoomRequest $req) 批量创建房间接口
+ * @method Models\BatchDeleteRecordResponse BatchDeleteRecord(Models\BatchDeleteRecordRequest $req) 批量删除多个房间的录制文件
  * @method Models\BatchRegisterResponse BatchRegister(Models\BatchRegisterRequest $req) 如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
  * @method Models\BindDocumentToRoomResponse BindDocumentToRoom(Models\BindDocumentToRoomRequest $req) 绑定文档到房间
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建房间内可以使用的文档。
  * @method Models\CreateRoomResponse CreateRoom(Models\CreateRoomRequest $req) 创建房间
  * @method Models\CreateSupervisorResponse CreateSupervisor(Models\CreateSupervisorRequest $req) 创建巡课
+ * @method Models\DeleteDocumentResponse DeleteDocument(Models\DeleteDocumentRequest $req) 删除文档
+ * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除指定房间的录制文件
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) 删除房间
  * @method Models\DescribeAppDetailResponse DescribeAppDetail(Models\DescribeAppDetailRequest $req) 获取应用详情
+ * @method Models\DescribeDocumentResponse DescribeDocument(Models\DescribeDocumentRequest $req) 获取文档信息
+ * @method Models\DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(Models\DescribeDocumentsByRoomRequest $req) 此接口获取指定房间下课件列表
  * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间信息
  * @method Models\DescribeRoomStatisticsResponse DescribeRoomStatistics(Models\DescribeRoomStatisticsRequest $req) 获取房间统计信息，仅可在房间结束后调用。
+ * @method Models\DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(Models\DescribeSdkAppIdUsersRequest $req) 此接口用于获取指定应用ID下用户列表
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 获取用户信息
+ * @method Models\GetWatermarkResponse GetWatermark(Models\GetWatermarkRequest $req) 获取水印设置
  * @method Models\LoginOriginIdResponse LoginOriginId(Models\LoginOriginIdRequest $req) 使用源账号登录，源账号为注册时填入的originId
  * @method Models\LoginUserResponse LoginUser(Models\LoginUserRequest $req) 登录
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\ModifyRoomResponse ModifyRoom(Models\ModifyRoomRequest $req) 修改房间
+ * @method Models\ModifyUserProfileResponse ModifyUserProfile(Models\ModifyUserProfileRequest $req) 此接口用于修改用户配置，如头像，昵称/用户名等。
  * @method Models\RegisterUserResponse RegisterUser(Models\RegisterUserRequest $req) 注册用户
  * @method Models\SetAppCustomContentResponse SetAppCustomContent(Models\SetAppCustomContentRequest $req) 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
+ * @method Models\SetWatermarkResponse SetWatermark(Models\SetWatermarkRequest $req) 设置水印
  * @method Models\UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(Models\UnbindDocumentFromRoomRequest $req) 文档从房间解绑
  */
 

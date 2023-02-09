@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthentication(string $Authentication) 设置win-windows鉴权,sql-sqlserver鉴权
  * @method string getHost() 获取win-windows鉴权账户需要host
  * @method void setHost(string $Host) 设置win-windows鉴权账户需要host
+ * @method string getAccountType() 获取账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+ * @method void setAccountType(string $AccountType) 设置账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
  */
 class AccountDetail extends AbstractModel
 {
@@ -101,6 +103,11 @@ class AccountDetail extends AbstractModel
     public $Host;
 
     /**
+     * @var string 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+     */
+    public $AccountType;
+
+    /**
      * @param string $Name 账户名
      * @param string $Remark 账户备注
      * @param string $CreateTime 账户创建时间
@@ -112,6 +119,7 @@ class AccountDetail extends AbstractModel
      * @param boolean $IsAdmin 是否为管理员账户
      * @param string $Authentication win-windows鉴权,sql-sqlserver鉴权
      * @param string $Host win-windows鉴权账户需要host
+     * @param string $AccountType 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class AccountDetail extends AbstractModel
 
         if (array_key_exists("Host",$param) and $param["Host"] !== null) {
             $this->Host = $param["Host"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

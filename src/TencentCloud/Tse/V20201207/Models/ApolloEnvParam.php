@@ -23,7 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取环境名称
  * @method void setName(string $Name) 设置环境名称
  * @method string getEngineResourceSpec() 获取环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID
  * @method void setEngineResourceSpec(string $EngineResourceSpec) 设置环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID
  * @method integer getEngineNodeNum() 获取环境内引擎的节点数量
  * @method void setEngineNodeNum(integer $EngineNodeNum) 设置环境内引擎的节点数量
  * @method integer getStorageCapacity() 获取配置存储空间大小，以GB为单位
@@ -32,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC ID。在 VPC 的子网内分配一个 IP 作为 ConfigServer 的访问地址
  * @method string getSubnetId() 获取子网 ID。在 VPC 的子网内分配一个 IP 作为 ConfigServer 的访问地址
  * @method void setSubnetId(string $SubnetId) 设置子网 ID。在 VPC 的子网内分配一个 IP 作为 ConfigServer 的访问地址
+ * @method string getEnvDesc() 获取环境描述
+ * @method void setEnvDesc(string $EnvDesc) 设置环境描述
  */
 class ApolloEnvParam extends AbstractModel
 {
@@ -42,6 +50,9 @@ class ApolloEnvParam extends AbstractModel
 
     /**
      * @var string 环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID
      */
     public $EngineResourceSpec;
 
@@ -66,12 +77,21 @@ class ApolloEnvParam extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 环境描述
+     */
+    public $EnvDesc;
+
+    /**
      * @param string $Name 环境名称
      * @param string $EngineResourceSpec 环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID
      * @param integer $EngineNodeNum 环境内引擎的节点数量
      * @param integer $StorageCapacity 配置存储空间大小，以GB为单位
      * @param string $VpcId VPC ID。在 VPC 的子网内分配一个 IP 作为 ConfigServer 的访问地址
      * @param string $SubnetId 子网 ID。在 VPC 的子网内分配一个 IP 作为 ConfigServer 的访问地址
+     * @param string $EnvDesc 环境描述
      */
     function __construct()
     {
@@ -108,6 +128,10 @@ class ApolloEnvParam extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("EnvDesc",$param) and $param["EnvDesc"] !== null) {
+            $this->EnvDesc = $param["EnvDesc"];
         }
     }
 }

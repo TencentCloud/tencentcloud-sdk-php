@@ -59,6 +59,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除配置项
  * @method Models\DeleteConfigTemplateResponse DeleteConfigTemplate(Models\DeleteConfigTemplateRequest $req) 删除模板
  * @method Models\DeleteContainerGroupResponse DeleteContainerGroup(Models\DeleteContainerGroupRequest $req) 删除容器部署组
+ * @method Models\DeleteFileConfigResponse DeleteFileConfig(Models\DeleteFileConfigRequest $req) 删除文件配置项
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除容器部署组
  * @method Models\DeleteImageTagsResponse DeleteImageTags(Models\DeleteImageTagsRequest $req) 批量删除镜像版本
  * @method Models\DeleteLaneResponse DeleteLane(Models\DeleteLaneRequest $req) 删除泳道

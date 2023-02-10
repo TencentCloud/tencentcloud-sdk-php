@@ -81,6 +81,8 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeReleaseFileSignResponse DescribeReleaseFileSign(Models\DescribeReleaseFileSignRequest $req) 获取上传文件存储的临时密钥
  * @method Models\DescribeReleaseFilesResponse DescribeReleaseFiles(Models\DescribeReleaseFilesRequest $req) 获取应用对应sourcemap文件列表
  * @method Models\DescribeRumGroupLogResponse DescribeRumGroupLog(Models\DescribeRumGroupLogRequest $req) 获取项目下的日志聚合信息
+ * @method Models\DescribeRumLogExportResponse DescribeRumLogExport(Models\DescribeRumLogExportRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
+ * @method Models\DescribeRumLogExportsResponse DescribeRumLogExports(Models\DescribeRumLogExportsRequest $req) 获取项目下的日志导出列表
  * @method Models\DescribeRumLogListResponse DescribeRumLogList(Models\DescribeRumLogListRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
  * @method Models\DescribeRumStatsLogListResponse DescribeRumStatsLogList(Models\DescribeRumStatsLogListRequest $req) 获取项目下的日志列表，分钟级
  * @method Models\DescribeScoresResponse DescribeScores(Models\DescribeScoresRequest $req) 获取首页分数列表
@@ -92,6 +94,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改 RUM 应用信息
  * @method Models\ModifyProjectLimitResponse ModifyProjectLimit(Models\ModifyProjectLimitRequest $req) 新增修改限流
  * @method Models\ResumeInstanceResponse ResumeInstance(Models\ResumeInstanceRequest $req) 恢复 RUM 业务系统，恢复后，用户可以正常使用和上报数据
+ * @method Models\ResumeProjectResponse ResumeProject(Models\ResumeProjectRequest $req) 恢复应用使用与上报数据
  * @method Models\StopInstanceResponse StopInstance(Models\StopInstanceRequest $req) 停止实例
  * @method Models\StopProjectResponse StopProject(Models\StopProjectRequest $req) 停止项目使用与上报数据
  */

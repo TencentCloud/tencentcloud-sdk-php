@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetentionTime(integer $MaxRetentionTime) 设置消息最大保留时间，以毫秒为单位
  * @method integer getMaxLatencyTime() 获取消息最长延时，以毫秒为单位
  * @method void setMaxLatencyTime(integer $MaxLatencyTime) 设置消息最长延时，以毫秒为单位
+ * @method integer getMaxQueuesPerTopic() 获取单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) 设置单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterConfig extends AbstractModel
 {
@@ -87,6 +91,12 @@ class RocketMQClusterConfig extends AbstractModel
     public $MaxLatencyTime;
 
     /**
+     * @var integer 单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxQueuesPerTopic;
+
+    /**
      * @param integer $MaxTpsPerNamespace 单命名空间TPS上线
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $UsedNamespaceNum 已使用命名空间数量
@@ -96,6 +106,8 @@ class RocketMQClusterConfig extends AbstractModel
      * @param integer $UsedGroupNum 已使用Group数量
      * @param integer $MaxRetentionTime 消息最大保留时间，以毫秒为单位
      * @param integer $MaxLatencyTime 消息最长延时，以毫秒为单位
+     * @param integer $MaxQueuesPerTopic 单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class RocketMQClusterConfig extends AbstractModel
 
         if (array_key_exists("MaxLatencyTime",$param) and $param["MaxLatencyTime"] !== null) {
             $this->MaxLatencyTime = $param["MaxLatencyTime"];
+        }
+
+        if (array_key_exists("MaxQueuesPerTopic",$param) and $param["MaxQueuesPerTopic"] !== null) {
+            $this->MaxQueuesPerTopic = $param["MaxQueuesPerTopic"];
         }
     }
 }

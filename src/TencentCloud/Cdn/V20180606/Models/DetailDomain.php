@@ -33,11 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取加速服务状态
 rejected：域名审核未通过，域名备案过期/被注销导致
 processing：部署中
+closing：关闭中
 online：已启动
 offline：已关闭
  * @method void setStatus(string $Status) 设置加速服务状态
 rejected：域名审核未通过，域名备案过期/被注销导致
 processing：部署中
+closing：关闭中
 online：已启动
 offline：已关闭
  * @method integer getProjectId() 获取项目 ID，可前往腾讯云项目管理页面查看
@@ -342,6 +344,7 @@ class DetailDomain extends AbstractModel
      * @var string 加速服务状态
 rejected：域名审核未通过，域名备案过期/被注销导致
 processing：部署中
+closing：关闭中
 online：已启动
 offline：已关闭
      */
@@ -733,6 +736,7 @@ off：不支持
      * @param string $Status 加速服务状态
 rejected：域名审核未通过，域名备案过期/被注销导致
 processing：部署中
+closing：关闭中
 online：已启动
 offline：已关闭
      * @param integer $ProjectId 项目 ID，可前往腾讯云项目管理页面查看

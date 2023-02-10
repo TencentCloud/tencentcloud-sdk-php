@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceDetails(array $InstanceDetails) 设置资源实例
  * @method array getInstanceDetailRule() 获取规则所属的资源实例
  * @method void setInstanceDetailRule(array $InstanceDetailRule) 设置规则所属的资源实例
+ * @method string getProtocol() 获取协议
+ * @method void setProtocol(string $Protocol) 设置协议
+ * @method integer getVport() 获取端口号
+ * @method void setVport(integer $Vport) 设置端口号
  */
 class Layer7Rule extends AbstractModel
 {
@@ -59,11 +63,23 @@ class Layer7Rule extends AbstractModel
     public $InstanceDetailRule;
 
     /**
+     * @var string 协议
+     */
+    public $Protocol;
+
+    /**
+     * @var integer 端口号
+     */
+    public $Vport;
+
+    /**
      * @param string $Domain 域名
      * @param array $ProxyTypeList 转发类型列表
      * @param array $RealServers 源站列表
      * @param array $InstanceDetails 资源实例
      * @param array $InstanceDetailRule 规则所属的资源实例
+     * @param string $Protocol 协议
+     * @param integer $Vport 端口号
      */
     function __construct()
     {
@@ -116,6 +132,14 @@ class Layer7Rule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceDetailRule, $obj);
             }
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
+            $this->Vport = $param["Vport"];
         }
     }
 }

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCcnRoutes请求参数结构体
  *
- * @method string getCcnId() 获取CCN实例ID，形如：ccn-gree226l。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID，形如：ccn-gree226l。
- * @method array getRouteIds() 获取CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
- * @method void setRouteIds(array $RouteIds) 设置CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+ * @method string getCcnId() 获取CCN实例ID，形如：`ccn-gree226l`。
+ * @method void setCcnId(string $CcnId) 设置CCN实例ID，形如：`ccn-gree226l`。
+ * @method array getRouteIds() 获取CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
+ * @method void setRouteIds(array $RouteIds) 设置CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定RouteIds和Filters。
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID，形如：ccn-gree226l。
+     * @var string CCN实例ID，形如：`ccn-gree226l`。
      */
     public $CcnId;
 
     /**
-     * @var array CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * @var array CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
      */
     public $RouteIds;
 
@@ -77,8 +77,8 @@ class DescribeCcnRoutesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $CcnId CCN实例ID，形如：ccn-gree226l。
-     * @param array $RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * @param string $CcnId CCN实例ID，形如：`ccn-gree226l`。
+     * @param array $RouteIds CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
      * @param array $Filters 过滤条件，参数不支持同时指定RouteIds和Filters。
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>

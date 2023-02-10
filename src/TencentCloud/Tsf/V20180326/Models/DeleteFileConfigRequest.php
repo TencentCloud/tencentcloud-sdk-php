@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OnlineDDL类型
+ * DeleteFileConfig请求参数结构体
  *
- * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConfigId() 获取文件配置项ID
+ * @method void setConfigId(string $ConfigId) 设置文件配置项ID
  */
-class OnlineDDL extends AbstractModel
+class DeleteFileConfigRequest extends AbstractModel
 {
     /**
-     * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 文件配置项ID
      */
-    public $Status;
+    public $ConfigId;
 
     /**
-     * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConfigId 文件配置项ID
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ class OnlineDDL extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
+            $this->ConfigId = $param["ConfigId"];
         }
     }
 }

@@ -124,14 +124,20 @@ use TencentCloud\Iai\V20180301\Models as Models;
  * @method Models\GetPersonGroupInfoResponse GetPersonGroupInfo(Models\GetPersonGroupInfoRequest $req) 获取指定人员的信息，包括加入的人员库、描述内容等。
  * @method Models\GetPersonListResponse GetPersonList(Models\GetPersonListRequest $req) 获取指定人员库中的人员列表。
  * @method Models\GetPersonListNumResponse GetPersonListNum(Models\GetPersonListNumRequest $req) 获取指定人员库中人员数量。
- * @method Models\GetUpgradeGroupFaceModelVersionJobListResponse GetUpgradeGroupFaceModelVersionJobList(Models\GetUpgradeGroupFaceModelVersionJobListRequest $req) 获取人员库升级任务列表
+ * @method Models\GetUpgradeGroupFaceModelVersionJobListResponse GetUpgradeGroupFaceModelVersionJobList(Models\GetUpgradeGroupFaceModelVersionJobListRequest $req) 避免官网歧义
 
- * @method Models\GetUpgradeGroupFaceModelVersionResultResponse GetUpgradeGroupFaceModelVersionResult(Models\GetUpgradeGroupFaceModelVersionResultRequest $req) 人员库升级结果查询
+获取人员库升级任务列表
+
+ * @method Models\GetUpgradeGroupFaceModelVersionResultResponse GetUpgradeGroupFaceModelVersionResult(Models\GetUpgradeGroupFaceModelVersionResultRequest $req) 避免官网歧义
+
+人员库升级结果查询
 
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 修改人员库名称、备注、自定义描述字段名称。
  * @method Models\ModifyPersonBaseInfoResponse ModifyPersonBaseInfo(Models\ModifyPersonBaseInfoRequest $req) 修改人员信息，包括名称、性别等。人员名称和性别修改会同步到包含该人员的所有人员库。
  * @method Models\ModifyPersonGroupInfoResponse ModifyPersonGroupInfo(Models\ModifyPersonGroupInfoRequest $req) 修改指定人员库人员描述内容。
- * @method Models\RevertGroupFaceModelVersionResponse RevertGroupFaceModelVersion(Models\RevertGroupFaceModelVersionRequest $req) 本接口用于回滚人员库的人脸识别算法模型版本。单个人员库有且仅有一次回滚机会。
+ * @method Models\RevertGroupFaceModelVersionResponse RevertGroupFaceModelVersion(Models\RevertGroupFaceModelVersionRequest $req) 此接口文档早已废弃，为了避免官网18版本存留歧义，需要下线
+
+本接口用于回滚人员库的人脸识别算法模型版本。单个人员库有且仅有一次回滚机会。
 
 回滚操作会在10s内生效，回滚操作中，您对人员库的操作可能会失效。
  * @method Models\SearchFacesResponse SearchFaces(Models\SearchFacesRequest $req) 用于对一张待识别的人脸图片，在一个或多个人员库中识别出最相似的 TopK 人员，识别结果按照相似度从大到小排序。
@@ -182,7 +188,9 @@ use TencentCloud\Iai\V20180301\Models as Models;
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
 - 仅支持算法模型版本（FaceModelVersion）为3.0的人员库。
- * @method Models\UpgradeGroupFaceModelVersionResponse UpgradeGroupFaceModelVersion(Models\UpgradeGroupFaceModelVersionRequest $req) 升级人员库。升级过程中，人员库仍然为原算法版本，人员库相关操作仍然支持。升级完成后，人员库为新算法版本。
+ * @method Models\UpgradeGroupFaceModelVersionResponse UpgradeGroupFaceModelVersion(Models\UpgradeGroupFaceModelVersionRequest $req) 接口已经不使用了，需要下线掉，以免留在官网产生歧义
+
+升级人员库。升级过程中，人员库仍然为原算法版本，人员库相关操作仍然支持。升级完成后，人员库为新算法版本。
 单个人员库有且仅支持一次回滚操作。
 注：此处QPS限制为10。
  * @method Models\VerifyFaceResponse VerifyFace(Models\VerifyFaceRequest $req) 给定一张人脸图片和一个 PersonId，判断图片中的人和 PersonId 对应的人是否为同一人。PersonId 请参考[人员库管理相关接口](https://cloud.tencent.com/document/product/867/32794)。 

@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Rum\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OnlineDDL类型
+ * ResumeProject请求参数结构体
  *
- * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProjectId() 获取项目 id
+ * @method void setProjectId(integer $ProjectId) 设置项目 id
  */
-class OnlineDDL extends AbstractModel
+class ResumeProjectRequest extends AbstractModel
 {
     /**
-     * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 项目 id
      */
-    public $Status;
+    public $ProjectId;
 
     /**
-     * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProjectId 项目 id
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ class OnlineDDL extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

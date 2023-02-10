@@ -18,7 +18,7 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  容器部署组详情
+ * 容器部署组详情
  *
  * @method string getGroupId() 获取部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,6 +167,22 @@ use TencentCloud\Common\AbstractModel;
  * @method HealthCheckSettings getHealthCheckSettings() 获取部署组健康检查设置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAllowPlainYamlDeploy() 获取允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllowPlainYamlDeploy(boolean $AllowPlainYamlDeploy) 设置允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsNotEqualServiceConfig() 获取是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsNotEqualServiceConfig(boolean $IsNotEqualServiceConfig) 设置是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepoName() 获取仓库名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepoName(string $RepoName) 设置仓库名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlias() 获取别名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlias(string $Alias) 设置别名
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDetail extends AbstractModel
@@ -394,6 +410,30 @@ class ContainerGroupDetail extends AbstractModel
     public $HealthCheckSettings;
 
     /**
+     * @var boolean 允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllowPlainYamlDeploy;
+
+    /**
+     * @var boolean 是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsNotEqualServiceConfig;
+
+    /**
+     * @var string 仓库名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RepoName;
+
+    /**
+     * @var string 别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Alias;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -467,6 +507,14 @@ class ContainerGroupDetail extends AbstractModel
      * @param string $MaxUnavailable kubernetes滚动更新策略的MaxUnavailable参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckSettings $HealthCheckSettings 部署组健康检查设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AllowPlainYamlDeploy 允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsNotEqualServiceConfig 是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepoName 仓库名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alias 别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -639,6 +687,22 @@ class ContainerGroupDetail extends AbstractModel
         if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
             $this->HealthCheckSettings = new HealthCheckSettings();
             $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
+        }
+
+        if (array_key_exists("AllowPlainYamlDeploy",$param) and $param["AllowPlainYamlDeploy"] !== null) {
+            $this->AllowPlainYamlDeploy = $param["AllowPlainYamlDeploy"];
+        }
+
+        if (array_key_exists("IsNotEqualServiceConfig",$param) and $param["IsNotEqualServiceConfig"] !== null) {
+            $this->IsNotEqualServiceConfig = $param["IsNotEqualServiceConfig"];
+        }
+
+        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
+            $this->RepoName = $param["RepoName"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

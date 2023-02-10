@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 跨境带宽监控数据
  *
- * @method array getInBandwidth() 获取入带宽
- * @method void setInBandwidth(array $InBandwidth) 设置入带宽
- * @method array getOutBandwidth() 获取出带宽
- * @method void setOutBandwidth(array $OutBandwidth) 设置出带宽
- * @method array getInPkg() 获取入包
- * @method void setInPkg(array $InPkg) 设置入包
- * @method array getOutPkg() 获取出包
- * @method void setOutPkg(array $OutPkg) 设置出包
+ * @method array getInBandwidth() 获取入带宽，单位：`bps`。
+ * @method void setInBandwidth(array $InBandwidth) 设置入带宽，单位：`bps`。
+ * @method array getOutBandwidth() 获取出带宽，单位：`bps`。
+ * @method void setOutBandwidth(array $OutBandwidth) 设置出带宽，单位：`bps`。
+ * @method array getInPkg() 获取入包，单位：`pps`。
+ * @method void setInPkg(array $InPkg) 设置入包，单位：`pps`。
+ * @method array getOutPkg() 获取出包，单位：`pps`。
+ * @method void setOutPkg(array $OutPkg) 设置出包，单位：`pps`。
  */
 class CrossBorderFlowMonitorData extends AbstractModel
 {
     /**
-     * @var array 入带宽
+     * @var array 入带宽，单位：`bps`。
      */
     public $InBandwidth;
 
     /**
-     * @var array 出带宽
+     * @var array 出带宽，单位：`bps`。
      */
     public $OutBandwidth;
 
     /**
-     * @var array 入包
+     * @var array 入包，单位：`pps`。
      */
     public $InPkg;
 
     /**
-     * @var array 出包
+     * @var array 出包，单位：`pps`。
      */
     public $OutPkg;
 
     /**
-     * @param array $InBandwidth 入带宽
-     * @param array $OutBandwidth 出带宽
-     * @param array $InPkg 入包
-     * @param array $OutPkg 出包
+     * @param array $InBandwidth 入带宽，单位：`bps`。
+     * @param array $OutBandwidth 出带宽，单位：`bps`。
+     * @param array $InPkg 入包，单位：`pps`。
+     * @param array $OutPkg 出包，单位：`pps`。
      */
     function __construct()
     {

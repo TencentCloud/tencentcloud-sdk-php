@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigIntranetAddress(string $ConfigIntranetAddress) 设置config内网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableConfigIntranet() 获取是否开启config内网clb
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableConfigIntranet(boolean $EnableConfigIntranet) 设置是否开启config内网clb
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvAddressInfo extends AbstractModel
 {
@@ -55,10 +59,18 @@ class EnvAddressInfo extends AbstractModel
     public $ConfigIntranetAddress;
 
     /**
+     * @var boolean 是否开启config内网clb
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableConfigIntranet;
+
+    /**
      * @param string $EnvName 环境名
      * @param boolean $EnableConfigInternet 是否开启config公网
      * @param string $ConfigInternetServiceIp config公网ip
      * @param string $ConfigIntranetAddress config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableConfigIntranet 是否开启config内网clb
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -88,6 +100,10 @@ class EnvAddressInfo extends AbstractModel
 
         if (array_key_exists("ConfigIntranetAddress",$param) and $param["ConfigIntranetAddress"] !== null) {
             $this->ConfigIntranetAddress = $param["ConfigIntranetAddress"];
+        }
+
+        if (array_key_exists("EnableConfigIntranet",$param) and $param["EnableConfigIntranet"] !== null) {
+            $this->EnableConfigIntranet = $param["EnableConfigIntranet"];
         }
     }
 }

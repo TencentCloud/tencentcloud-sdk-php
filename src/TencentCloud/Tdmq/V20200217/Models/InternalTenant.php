@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRetentionSizeInMB(integer $MaxRetentionSizeInMB) 设置消息最大保留空间，MB为单位
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPublicAccessEnabled() 获取public Access Enabled
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置public Access Enabled
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalTenant extends AbstractModel
 {
@@ -180,6 +184,12 @@ class InternalTenant extends AbstractModel
     public $MaxRetentionSizeInMB;
 
     /**
+     * @var boolean public Access Enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicAccessEnabled;
+
+    /**
      * @param string $TenantId 虚拟集群ID
      * @param string $TenantName 虚拟集群名称
      * @param string $CustomerUin 客户UIN
@@ -203,6 +213,8 @@ class InternalTenant extends AbstractModel
      * @param integer $MaxPublishRateInBytes 命名空间最大生产带宽，byte为单位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRetentionSizeInMB 消息最大保留空间，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $PublicAccessEnabled public Access Enabled
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -300,6 +312,10 @@ class InternalTenant extends AbstractModel
 
         if (array_key_exists("MaxRetentionSizeInMB",$param) and $param["MaxRetentionSizeInMB"] !== null) {
             $this->MaxRetentionSizeInMB = $param["MaxRetentionSizeInMB"];
+        }
+
+        if (array_key_exists("PublicAccessEnabled",$param) and $param["PublicAccessEnabled"] !== null) {
+            $this->PublicAccessEnabled = $param["PublicAccessEnabled"];
         }
     }
 }

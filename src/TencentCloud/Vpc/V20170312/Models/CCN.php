@@ -38,21 +38,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费类型，PREPAID为预付费，POSTPAID为后付费。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBandwidthLimitType() 获取限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+ * @method string getBandwidthLimitType() 获取限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+ * @method void setBandwidthLimitType(string $BandwidthLimitType) 设置限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
- * @method boolean getRoutePriorityFlag() 获取是否支持云联网路由优先级的功能。False：不支持，True：支持。
- * @method void setRoutePriorityFlag(boolean $RoutePriorityFlag) 设置是否支持云联网路由优先级的功能。False：不支持，True：支持。
+ * @method boolean getRoutePriorityFlag() 获取是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
+ * @method void setRoutePriorityFlag(boolean $RoutePriorityFlag) 设置是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
  * @method integer getRouteTableCount() 获取实例关联的路由表个数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableCount(integer $RouteTableCount) 设置实例关联的路由表个数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getRouteTableFlag() 获取是否开启云联网多路由表特性。False：未开启，True：开启。
+ * @method boolean getRouteTableFlag() 获取是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRouteTableFlag(boolean $RouteTableFlag) 设置是否开启云联网多路由表特性。False：未开启，True：开启。
+ * @method void setRouteTableFlag(boolean $RouteTableFlag) 设置是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSecurityLock() 获取`true`：实例已被封禁，流量不通，`false`:解封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSecurityLock(boolean $IsSecurityLock) 设置`true`：实例已被封禁，流量不通，`false`:解封禁。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRouteBroadcastPolicyFlag() 获取是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,7 +107,7 @@ class CCN extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var string 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * @var string 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandwidthLimitType;
@@ -114,7 +118,7 @@ class CCN extends AbstractModel
     public $TagSet;
 
     /**
-     * @var boolean 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     * @var boolean 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
      */
     public $RoutePriorityFlag;
 
@@ -125,10 +129,16 @@ class CCN extends AbstractModel
     public $RouteTableCount;
 
     /**
-     * @var boolean 是否开启云联网多路由表特性。False：未开启，True：开启。
+     * @var boolean 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableFlag;
+
+    /**
+     * @var boolean `true`：实例已被封禁，流量不通，`false`:解封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSecurityLock;
 
     /**
      * @var boolean 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
@@ -146,13 +156,15 @@ class CCN extends AbstractModel
      * @param string $QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      * @param string $InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * @param string $BandwidthLimitType 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。
-     * @param boolean $RoutePriorityFlag 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     * @param boolean $RoutePriorityFlag 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
      * @param integer $RouteTableCount 实例关联的路由表个数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $RouteTableFlag 是否开启云联网多路由表特性。False：未开启，True：开启。
+     * @param boolean $RouteTableFlag 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSecurityLock `true`：实例已被封禁，流量不通，`false`:解封禁。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RouteBroadcastPolicyFlag 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -225,6 +237,10 @@ class CCN extends AbstractModel
 
         if (array_key_exists("RouteTableFlag",$param) and $param["RouteTableFlag"] !== null) {
             $this->RouteTableFlag = $param["RouteTableFlag"];
+        }
+
+        if (array_key_exists("IsSecurityLock",$param) and $param["IsSecurityLock"] !== null) {
+            $this->IsSecurityLock = $param["IsSecurityLock"];
         }
 
         if (array_key_exists("RouteBroadcastPolicyFlag",$param) and $param["RouteBroadcastPolicyFlag"] !== null) {

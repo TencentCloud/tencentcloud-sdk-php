@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getBackupMethod() 获取目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
- * @method void setBackupMethod(string $BackupMethod) 设置目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+ * @method string getBackupMethod() 获取目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。
+ * @method void setBackupMethod(string $BackupMethod) 设置目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。
  * @method array getBackupDBTableList() 获取需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
 例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
  * @method void setBackupDBTableList(array $BackupDBTableList) 设置需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
@@ -39,7 +39,7 @@ class CreateBackupRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * @var string 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。
      */
     public $BackupMethod;
 
@@ -56,7 +56,7 @@ class CreateBackupRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * @param string $BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。
      * @param array $BackupDBTableList 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
 例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
      * @param string $ManualBackupName 手动备份别名

@@ -27,11 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMetric() 获取Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
+默认值为Traffic。
  * @method void setMetric(string $Metric) 设置Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+默认值为Traffic。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  */
 class DescribeDailyMostPlayedStatRequest extends AbstractModel
 {
@@ -49,11 +51,12 @@ class DescribeDailyMostPlayedStatRequest extends AbstractModel
      * @var string Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
+默认值为Traffic。
      */
     public $Metric;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public $SubAppId;
 
@@ -63,7 +66,8 @@ class DescribeDailyMostPlayedStatRequest extends AbstractModel
      * @param string $Metric Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+默认值为Traffic。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     function __construct()
     {

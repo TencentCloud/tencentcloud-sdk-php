@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Rum\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GenerateCreateMangedTableSql返回参数结构体
+ * DescribeRumLogExport返回参数结构体
  *
- * @method Execution getExecution() 获取创建托管存储内表sql语句描述
- * @method void setExecution(Execution $Execution) 设置创建托管存储内表sql语句描述
+ * @method string getResult() 获取返回字符串
+ * @method void setResult(string $Result) 设置返回字符串
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GenerateCreateMangedTableSqlResponse extends AbstractModel
+class DescribeRumLogExportResponse extends AbstractModel
 {
     /**
-     * @var Execution 创建托管存储内表sql语句描述
+     * @var string 返回字符串
      */
-    public $Execution;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class GenerateCreateMangedTableSqlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Execution $Execution 创建托管存储内表sql语句描述
+     * @param string $Result 返回字符串
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,8 @@ class GenerateCreateMangedTableSqlResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Execution",$param) and $param["Execution"] !== null) {
-            $this->Execution = new Execution();
-            $this->Execution->deserialize($param["Execution"]);
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

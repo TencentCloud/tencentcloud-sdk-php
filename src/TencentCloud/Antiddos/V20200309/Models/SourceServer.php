@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 ]
  * @method integer getWeight() 获取源站的回源权重，取值1~100
  * @method void setWeight(integer $Weight) 设置源站的回源权重，取值1~100
+ * @method integer getPort() 获取端口号：0~65535
+ * @method void setPort(integer $Port) 设置端口号：0~65535
  */
 class SourceServer extends AbstractModel
 {
@@ -54,12 +56,18 @@ class SourceServer extends AbstractModel
     public $Weight;
 
     /**
+     * @var integer 端口号：0~65535
+     */
+    public $Port;
+
+    /**
      * @param string $RealServer 源站的地址（IP或者域名）
      * @param integer $RsType 源站的地址类型，取值[
 1(域名地址)
 2(IP地址)
 ]
      * @param integer $Weight 源站的回源权重，取值1~100
+     * @param integer $Port 端口号：0~65535
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SourceServer extends AbstractModel
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
     }
 }

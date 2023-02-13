@@ -14,32 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAttackLogs请求参数结构体
+ * 命名空间漏洞白名单列表
  *
- * @method array getIds() 获取日志ID数组，最大100条。
- * @method void setIds(array $Ids) 设置日志ID数组，最大100条。
- * @method boolean getIsAll() 获取是否全部删除
- * @method void setIsAll(boolean $IsAll) 设置是否全部删除
+ * @method string getCVEID() 获取漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCVEID(string $CVEID) 设置漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DeleteAttackLogsRequest extends AbstractModel
+class CVEWhitelistItem extends AbstractModel
 {
     /**
-     * @var array 日志ID数组，最大100条。
+     * @var string 漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Ids;
+    public $CVEID;
 
     /**
-     * @var boolean 是否全部删除
-     */
-    public $IsAll;
-
-    /**
-     * @param array $Ids 日志ID数组，最大100条。
-     * @param boolean $IsAll 是否全部删除
+     * @param string $CVEID 漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -54,12 +50,8 @@ class DeleteAttackLogsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
-            $this->Ids = $param["Ids"];
-        }
-
-        if (array_key_exists("IsAll",$param) and $param["IsAll"] !== null) {
-            $this->IsAll = $param["IsAll"];
+        if (array_key_exists("CVEID",$param) and $param["CVEID"] !== null) {
+            $this->CVEID = $param["CVEID"];
         }
     }
 }

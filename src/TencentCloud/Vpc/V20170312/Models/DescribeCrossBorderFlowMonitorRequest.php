@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCrossBorderFlowMonitor请求参数结构体
  *
- * @method string getSourceRegion() 获取源地域
- * @method void setSourceRegion(string $SourceRegion) 设置源地域
- * @method string getDestinationRegion() 获取目的地域
- * @method void setDestinationRegion(string $DestinationRegion) 设置目的地域
- * @method string getCcnId() 获取云联网Id
- * @method void setCcnId(string $CcnId) 设置云联网Id
- * @method string getCcnUin() 获取云联网所属账号
- * @method void setCcnUin(string $CcnUin) 设置云联网所属账号
- * @method integer getPeriod() 获取时间粒度
- * @method void setPeriod(integer $Period) 设置时间粒度
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getSourceRegion() 获取源地域。
+ * @method void setSourceRegion(string $SourceRegion) 设置源地域。
+ * @method string getDestinationRegion() 获取目的地域。
+ * @method void setDestinationRegion(string $DestinationRegion) 设置目的地域。
+ * @method string getCcnId() 获取云联网ID。
+ * @method void setCcnId(string $CcnId) 设置云联网ID。
+ * @method string getCcnUin() 获取云联网所属账号。
+ * @method void setCcnUin(string $CcnUin) 设置云联网所属账号。
+ * @method integer getPeriod() 获取时间粒度。
+ * @method void setPeriod(integer $Period) 设置时间粒度。
+ * @method string getStartTime() 获取开始时间。
+ * @method void setStartTime(string $StartTime) 设置开始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
  */
 class DescribeCrossBorderFlowMonitorRequest extends AbstractModel
 {
     /**
-     * @var string 源地域
+     * @var string 源地域。
      */
     public $SourceRegion;
 
     /**
-     * @var string 目的地域
+     * @var string 目的地域。
      */
     public $DestinationRegion;
 
     /**
-     * @var string 云联网Id
+     * @var string 云联网ID。
      */
     public $CcnId;
 
     /**
-     * @var string 云联网所属账号
+     * @var string 云联网所属账号。
      */
     public $CcnUin;
 
     /**
-     * @var integer 时间粒度
+     * @var integer 时间粒度。
      */
     public $Period;
 
     /**
-     * @var string 开始时间
+     * @var string 开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。
      */
     public $EndTime;
 
     /**
-     * @param string $SourceRegion 源地域
-     * @param string $DestinationRegion 目的地域
-     * @param string $CcnId 云联网Id
-     * @param string $CcnUin 云联网所属账号
-     * @param integer $Period 时间粒度
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param string $SourceRegion 源地域。
+     * @param string $DestinationRegion 目的地域。
+     * @param string $CcnId 云联网ID。
+     * @param string $CcnUin 云联网所属账号。
+     * @param integer $Period 时间粒度。
+     * @param string $StartTime 开始时间。
+     * @param string $EndTime 结束时间。
      */
     function __construct()
     {

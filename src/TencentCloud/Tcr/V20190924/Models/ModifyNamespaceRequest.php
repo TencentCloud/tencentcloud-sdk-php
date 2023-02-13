@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
  * @method boolean getIsPublic() 获取访问级别，True为公开，False为私有
  * @method void setIsPublic(boolean $IsPublic) 设置访问级别，True为公开，False为私有
+ * @method boolean getIsAutoScan() 获取扫描级别，True为自动，False为手动
+ * @method void setIsAutoScan(boolean $IsAutoScan) 设置扫描级别，True为自动，False为手动
+ * @method boolean getIsPreventVUL() 获取阻断开关，True为开放，False为关闭
+ * @method void setIsPreventVUL(boolean $IsPreventVUL) 设置阻断开关，True为开放，False为关闭
+ * @method string getSeverity() 获取阻断漏洞等级，目前仅支持 low、medium、high
+ * @method void setSeverity(string $Severity) 设置阻断漏洞等级，目前仅支持 low、medium、high
+ * @method array getCVEWhitelistItems() 获取漏洞白名单列表
+ * @method void setCVEWhitelistItems(array $CVEWhitelistItems) 设置漏洞白名单列表
  */
 class ModifyNamespaceRequest extends AbstractModel
 {
@@ -45,9 +53,33 @@ class ModifyNamespaceRequest extends AbstractModel
     public $IsPublic;
 
     /**
+     * @var boolean 扫描级别，True为自动，False为手动
+     */
+    public $IsAutoScan;
+
+    /**
+     * @var boolean 阻断开关，True为开放，False为关闭
+     */
+    public $IsPreventVUL;
+
+    /**
+     * @var string 阻断漏洞等级，目前仅支持 low、medium、high
+     */
+    public $Severity;
+
+    /**
+     * @var array 漏洞白名单列表
+     */
+    public $CVEWhitelistItems;
+
+    /**
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 命名空间名称
      * @param boolean $IsPublic 访问级别，True为公开，False为私有
+     * @param boolean $IsAutoScan 扫描级别，True为自动，False为手动
+     * @param boolean $IsPreventVUL 阻断开关，True为开放，False为关闭
+     * @param string $Severity 阻断漏洞等级，目前仅支持 low、medium、high
+     * @param array $CVEWhitelistItems 漏洞白名单列表
      */
     function __construct()
     {
@@ -72,6 +104,27 @@ class ModifyNamespaceRequest extends AbstractModel
 
         if (array_key_exists("IsPublic",$param) and $param["IsPublic"] !== null) {
             $this->IsPublic = $param["IsPublic"];
+        }
+
+        if (array_key_exists("IsAutoScan",$param) and $param["IsAutoScan"] !== null) {
+            $this->IsAutoScan = $param["IsAutoScan"];
+        }
+
+        if (array_key_exists("IsPreventVUL",$param) and $param["IsPreventVUL"] !== null) {
+            $this->IsPreventVUL = $param["IsPreventVUL"];
+        }
+
+        if (array_key_exists("Severity",$param) and $param["Severity"] !== null) {
+            $this->Severity = $param["Severity"];
+        }
+
+        if (array_key_exists("CVEWhitelistItems",$param) and $param["CVEWhitelistItems"] !== null) {
+            $this->CVEWhitelistItems = [];
+            foreach ($param["CVEWhitelistItems"] as $key => $value){
+                $obj = new CVEWhitelistItem();
+                $obj->deserialize($value);
+                array_push($this->CVEWhitelistItems, $obj);
+            }
         }
     }
 }

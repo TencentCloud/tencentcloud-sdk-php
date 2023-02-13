@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsValidTemplate(integer $IsValidTemplate) 设置模板是否符合规范， 1是 0 否
  * @method string getInvalidReason() 获取不符合规范原因
  * @method void setInvalidReason(string $InvalidReason) 设置不符合规范原因
+ * @method boolean getIsBlack() 获取是包含黑名单手机或邮箱
+ * @method void setIsBlack(boolean $IsBlack) 设置是包含黑名单手机或邮箱
  */
 class TemplateInfo extends AbstractModel
 {
@@ -101,6 +103,11 @@ class TemplateInfo extends AbstractModel
     public $InvalidReason;
 
     /**
+     * @var boolean 是包含黑名单手机或邮箱
+     */
+    public $IsBlack;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $AuditStatus 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
      * @param string $CreatedOn 创建时间
@@ -112,6 +119,7 @@ class TemplateInfo extends AbstractModel
      * @param ContactInfo $ContactInfo 联系人信息
      * @param integer $IsValidTemplate 模板是否符合规范， 1是 0 否
      * @param string $InvalidReason 不符合规范原因
+     * @param boolean $IsBlack 是包含黑名单手机或邮箱
      */
     function __construct()
     {
@@ -170,6 +178,10 @@ class TemplateInfo extends AbstractModel
 
         if (array_key_exists("InvalidReason",$param) and $param["InvalidReason"] !== null) {
             $this->InvalidReason = $param["InvalidReason"];
+        }
+
+        if (array_key_exists("IsBlack",$param) and $param["IsBlack"] !== null) {
+            $this->IsBlack = $param["IsBlack"];
         }
     }
 }

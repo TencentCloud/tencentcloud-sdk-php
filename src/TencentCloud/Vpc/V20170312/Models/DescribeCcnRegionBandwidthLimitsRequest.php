@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCcnRegionBandwidthLimits请求参数结构体
  *
- * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
- * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
+ * @method string getCcnId() 获取CCN实例ID，形如：ccn-f49l6u0z。
+ * @method void setCcnId(string $CcnId) 设置CCN实例ID，形如：ccn-f49l6u0z。
  */
 class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel
 {
     /**
-     * @var string CCN实例ID。形如：ccn-f49l6u0z。
+     * @var string CCN实例ID，形如：ccn-f49l6u0z。
      */
     public $CcnId;
 
     /**
-     * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * @param string $CcnId CCN实例ID，形如：ccn-f49l6u0z。
      */
     function __construct()
     {

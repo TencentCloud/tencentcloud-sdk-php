@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusZones请求参数结构体
  *
- * @method integer getRegionId() 获取地域 ID
- * @method void setRegionId(integer $RegionId) 设置地域 ID
+ * @method integer getRegionId() 获取地域 ID（RegionId 和 RegionName 只需要填一个）
+ * @method void setRegionId(integer $RegionId) 设置地域 ID（RegionId 和 RegionName 只需要填一个）
+ * @method string getRegionName() 获取地域名（RegionId 和 RegionName 只需要填一个）
+ * @method void setRegionName(string $RegionName) 设置地域名（RegionId 和 RegionName 只需要填一个）
  */
 class DescribePrometheusZonesRequest extends AbstractModel
 {
     /**
-     * @var integer 地域 ID
+     * @var integer 地域 ID（RegionId 和 RegionName 只需要填一个）
      */
     public $RegionId;
 
     /**
-     * @param integer $RegionId 地域 ID
+     * @var string 地域名（RegionId 和 RegionName 只需要填一个）
+     */
+    public $RegionName;
+
+    /**
+     * @param integer $RegionId 地域 ID（RegionId 和 RegionName 只需要填一个）
+     * @param string $RegionName 地域名（RegionId 和 RegionName 只需要填一个）
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribePrometheusZonesRequest extends AbstractModel
         }
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
         }
     }
 }

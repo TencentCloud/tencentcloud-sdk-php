@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页，页大小，范围是1-100
  * @method string getInstanceId() 获取按照实例ID筛选
  * @method void setInstanceId(string $InstanceId) 设置按照实例ID筛选
- * @method integer getStatus() 获取按照状态筛选 1-互通ip prot打开中；2-互通ip prot已经打开；3-加入到互通组中；4-已加入到互通组；5-互通ip prot回收中；6-互通ip prot已回收；7-从互通组移除中；8-已从互通组中移除
- * @method void setStatus(integer $Status) 设置按照状态筛选 1-互通ip prot打开中；2-互通ip prot已经打开；3-加入到互通组中；4-已加入到互通组；5-互通ip prot回收中；6-互通ip prot已回收；7-从互通组移除中；8-已从互通组中移除
+ * @method integer getStatus() 获取按照状态筛选 1-互通IP打开中；2-互通IP已经打开；3-加入到互通组中；4-已加入到互通组；5-互通IP回收中；6-互通IP已回收；7-从互通组移除中；8-已从互通组中移除
+ * @method void setStatus(integer $Status) 设置按照状态筛选 1-互通IP打开中；2-互通IP已经打开；3-加入到互通组中；4-已加入到互通组；5-互通IP回收中；6-互通IP已回收；7-从互通组移除中；8-已从互通组中移除
  * @method array getVersionSet() 获取实例版本代号列表
  * @method void setVersionSet(array $VersionSet) 设置实例版本代号列表
  * @method string getZone() 获取实例所在可用区，格式如：ap-guangzhou-2
@@ -46,7 +46,7 @@ class DescribeDBInstanceInterRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 按照状态筛选 1-互通ip prot打开中；2-互通ip prot已经打开；3-加入到互通组中；4-已加入到互通组；5-互通ip prot回收中；6-互通ip prot已回收；7-从互通组移除中；8-已从互通组中移除
+     * @var integer 按照状态筛选 1-互通IP打开中；2-互通IP已经打开；3-加入到互通组中；4-已加入到互通组；5-互通IP回收中；6-互通IP已回收；7-从互通组移除中；8-已从互通组中移除
      */
     public $Status;
 
@@ -68,7 +68,7 @@ class DescribeDBInstanceInterRequest extends AbstractModel
     /**
      * @param integer $Limit 分页，页大小，范围是1-100
      * @param string $InstanceId 按照实例ID筛选
-     * @param integer $Status 按照状态筛选 1-互通ip prot打开中；2-互通ip prot已经打开；3-加入到互通组中；4-已加入到互通组；5-互通ip prot回收中；6-互通ip prot已回收；7-从互通组移除中；8-已从互通组中移除
+     * @param integer $Status 按照状态筛选 1-互通IP打开中；2-互通IP已经打开；3-加入到互通组中；4-已加入到互通组；5-互通IP回收中；6-互通IP已回收；7-从互通组移除中；8-已从互通组中移除
      * @param array $VersionSet 实例版本代号列表
      * @param string $Zone 实例所在可用区，格式如：ap-guangzhou-2
      * @param integer $Offset 分页，页数，默认是0

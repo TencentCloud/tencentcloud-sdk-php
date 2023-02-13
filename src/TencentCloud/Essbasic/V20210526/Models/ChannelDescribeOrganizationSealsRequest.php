@@ -30,6 +30,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfoType(integer $InfoType) 设置查询信息类型，为1时返回授权用户，为其他值时不返回
  * @method string getSealId() 获取印章id（没有输入返回所有）
  * @method void setSealId(string $SealId) 设置印章id（没有输入返回所有）
+ * @method array getSealTypes() 获取印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章
+ * @method void setSealTypes(array $SealTypes) 设置印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章
  */
 class ChannelDescribeOrganizationSealsRequest extends AbstractModel
 {
@@ -59,11 +73,29 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
     public $SealId;
 
     /**
+     * @var array 印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章
+     */
+    public $SealTypes;
+
+    /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param integer $Limit 返回最大数量，最大为100
      * @param integer $Offset 偏移量，默认为0，最大为20000
      * @param integer $InfoType 查询信息类型，为1时返回授权用户，为其他值时不返回
      * @param string $SealId 印章id（没有输入返回所有）
+     * @param array $SealTypes 印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章
      */
     function __construct()
     {
@@ -97,6 +129,10 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
 
         if (array_key_exists("SealId",$param) and $param["SealId"] !== null) {
             $this->SealId = $param["SealId"];
+        }
+
+        if (array_key_exists("SealTypes",$param) and $param["SealTypes"] !== null) {
+            $this->SealTypes = $param["SealTypes"];
         }
     }
 }

@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAttackLogs请求参数结构体
+ * 云联网实例对象，该对象特用于运营端使用，不建议给租户的接口中提供该复杂类型。
  *
- * @method array getIds() 获取日志ID数组，最大100条。
- * @method void setIds(array $Ids) 设置日志ID数组，最大100条。
- * @method boolean getIsAll() 获取是否全部删除
- * @method void setIsAll(boolean $IsAll) 设置是否全部删除
+
  */
-class DeleteAttackLogsRequest extends AbstractModel
+class CcnInstanceInfo extends AbstractModel
 {
-    /**
-     * @var array 日志ID数组，最大100条。
-     */
-    public $Ids;
+
 
     /**
-     * @var boolean 是否全部删除
-     */
-    public $IsAll;
 
-    /**
-     * @param array $Ids 日志ID数组，最大100条。
-     * @param boolean $IsAll 是否全部删除
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class DeleteAttackLogsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
-            $this->Ids = $param["Ids"];
-        }
 
-        if (array_key_exists("IsAll",$param) and $param["IsAll"] !== null) {
-            $this->IsAll = $param["IsAll"];
-        }
     }
 }

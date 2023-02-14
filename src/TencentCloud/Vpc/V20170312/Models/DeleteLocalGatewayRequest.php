@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLocalGateway请求参数结构体
  *
- * @method string getLocalGatewayId() 获取本地网关实例ID
- * @method void setLocalGatewayId(string $LocalGatewayId) 设置本地网关实例ID
- * @method string getCdcId() 获取CDC实例ID
- * @method void setCdcId(string $CdcId) 设置CDC实例ID
- * @method string getVpcId() 获取VPC实例ID
- * @method void setVpcId(string $VpcId) 设置VPC实例ID
+ * @method string getLocalGatewayId() 获取本地网关实例ID。
+ * @method void setLocalGatewayId(string $LocalGatewayId) 设置本地网关实例ID。
+ * @method string getCdcId() 获取CDC实例ID。
+ * @method void setCdcId(string $CdcId) 设置CDC实例ID。
+ * @method string getVpcId() 获取VPC实例ID。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  */
 class DeleteLocalGatewayRequest extends AbstractModel
 {
     /**
-     * @var string 本地网关实例ID
+     * @var string 本地网关实例ID。
      */
     public $LocalGatewayId;
 
     /**
-     * @var string CDC实例ID
+     * @var string CDC实例ID。
      */
     public $CdcId;
 
     /**
-     * @var string VPC实例ID
+     * @var string VPC实例ID。
      */
     public $VpcId;
 
     /**
-     * @param string $LocalGatewayId 本地网关实例ID
-     * @param string $CdcId CDC实例ID
-     * @param string $VpcId VPC实例ID
+     * @param string $LocalGatewayId 本地网关实例ID。
+     * @param string $CdcId CDC实例ID。
+     * @param string $VpcId VPC实例ID。
      */
     function __construct()
     {

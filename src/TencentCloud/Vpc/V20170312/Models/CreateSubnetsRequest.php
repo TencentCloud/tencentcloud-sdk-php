@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSubnets请求参数结构体
  *
- * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+ * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
+ * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
  * @method array getSubnets() 获取子网对象列表。
  * @method void setSubnets(array $Subnets) 设置子网对象列表。
- * @method array getTags() 获取指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method void setTags(array $Tags) 设置指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method array getTags() 获取指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method string getCdcId() 获取需要增加到的CDC实例ID。
  * @method void setCdcId(string $CdcId) 设置需要增加到的CDC实例ID。
  */
 class CreateSubnetsRequest extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * @var string `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      */
     public $VpcId;
 
@@ -42,7 +42,7 @@ class CreateSubnetsRequest extends AbstractModel
     public $Subnets;
 
     /**
-     * @var array 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @var array 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public $Tags;
 
@@ -52,9 +52,9 @@ class CreateSubnetsRequest extends AbstractModel
     public $CdcId;
 
     /**
-     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      * @param array $Subnets 子网对象列表。
-     * @param array $Tags 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param array $Tags 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
      * @param string $CdcId 需要增加到的CDC实例ID。
      */
     function __construct()

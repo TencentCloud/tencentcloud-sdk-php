@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
  * @method array getIpv6Addresses() 获取`IP`地址列表，批量查询单次请求最多支持`10`个。
  * @method void setIpv6Addresses(array $Ipv6Addresses) 设置`IP`地址列表，批量查询单次请求最多支持`10`个。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取返回数量。
- * @method void setLimit(integer $Limit) 设置返回数量。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method string getSubnetId() 获取VPC下的子网ID。
+ * @method void setSubnetId(string $SubnetId) 设置VPC下的子网ID。
  */
 class DescribeVpcIpv6AddressesRequest extends AbstractModel
 {
@@ -42,20 +44,26 @@ class DescribeVpcIpv6AddressesRequest extends AbstractModel
     public $Ipv6Addresses;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量。
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
     /**
+     * @var string VPC下的子网ID。
+     */
+    public $SubnetId;
+
+    /**
      * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      * @param array $Ipv6Addresses `IP`地址列表，批量查询单次请求最多支持`10`个。
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 返回数量。
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param string $SubnetId VPC下的子网ID。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeVpcIpv6AddressesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

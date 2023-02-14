@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRule(string $CustomRule) 设置自定义分行规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKafkaAddress() 获取KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKafkaAddress(string $KafkaAddress) 设置KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaDeliveryConfig extends AbstractModel
 {
@@ -154,6 +158,12 @@ class KafkaDeliveryConfig extends AbstractModel
     public $CustomRule;
 
     /**
+     * @var string KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KafkaAddress;
+
+    /**
      * @param string $ConfigId 配置项id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigName 配置名称
@@ -179,6 +189,8 @@ class KafkaDeliveryConfig extends AbstractModel
      * @param boolean $EnableGlobalLineRule 是否应用单行规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomRule 自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KafkaAddress KafkaAddress
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -249,6 +261,10 @@ class KafkaDeliveryConfig extends AbstractModel
 
         if (array_key_exists("CustomRule",$param) and $param["CustomRule"] !== null) {
             $this->CustomRule = $param["CustomRule"];
+        }
+
+        if (array_key_exists("KafkaAddress",$param) and $param["KafkaAddress"] !== null) {
+            $this->KafkaAddress = $param["KafkaAddress"];
         }
     }
 }

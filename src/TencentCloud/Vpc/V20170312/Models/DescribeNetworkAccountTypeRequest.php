@@ -18,20 +18,16 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSecurityGroupReferences请求参数结构体
+ * DescribeNetworkAccountType请求参数结构体
  *
- * @method array getSecurityGroupIds() 获取安全组实例ID数组。格式如：['sg-12345678']。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID数组。格式如：['sg-12345678']。
+
  */
-class DescribeSecurityGroupReferencesRequest extends AbstractModel
+class DescribeNetworkAccountTypeRequest extends AbstractModel
 {
-    /**
-     * @var array 安全组实例ID数组。格式如：['sg-12345678']。
-     */
-    public $SecurityGroupIds;
+
 
     /**
-     * @param array $SecurityGroupIds 安全组实例ID数组。格式如：['sg-12345678']。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeSecurityGroupReferencesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
-        }
+
     }
 }

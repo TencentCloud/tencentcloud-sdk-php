@@ -238,6 +238,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) 设置是否是跨AZ集群
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsCvmReplace() 获取是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsCvmReplace(boolean $IsCvmReplace) 设置是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -515,6 +519,12 @@ class ClusterInstancesInfo extends AbstractModel
     public $IsMultiZoneCluster;
 
     /**
+     * @var boolean 是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsCvmReplace;
+
+    /**
      * @param integer $Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
@@ -623,6 +633,8 @@ class ClusterInstancesInfo extends AbstractModel
      * @param array $TopologyInfoList 节点信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsMultiZoneCluster 是否是跨AZ集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsCvmReplace 是否开通异常节点自动补偿
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -816,6 +828,10 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("IsMultiZoneCluster",$param) and $param["IsMultiZoneCluster"] !== null) {
             $this->IsMultiZoneCluster = $param["IsMultiZoneCluster"];
+        }
+
+        if (array_key_exists("IsCvmReplace",$param) and $param["IsCvmReplace"] !== null) {
+            $this->IsCvmReplace = $param["IsCvmReplace"];
         }
     }
 }

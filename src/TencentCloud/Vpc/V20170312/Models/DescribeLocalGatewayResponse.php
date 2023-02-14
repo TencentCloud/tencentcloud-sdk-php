@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLocalGateway返回参数结构体
  *
- * @method array getLocalGatewaySet() 获取本地网关信息集合
- * @method void setLocalGatewaySet(array $LocalGatewaySet) 设置本地网关信息集合
- * @method integer getTotalCount() 获取本地网关总数
- * @method void setTotalCount(integer $TotalCount) 设置本地网关总数
+ * @method array getLocalGatewaySet() 获取本地网关信息集合。
+ * @method void setLocalGatewaySet(array $LocalGatewaySet) 设置本地网关信息集合。
+ * @method integer getTotalCount() 获取本地网关总数。
+ * @method void setTotalCount(integer $TotalCount) 设置本地网关总数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLocalGatewayResponse extends AbstractModel
 {
     /**
-     * @var array 本地网关信息集合
+     * @var array 本地网关信息集合。
      */
     public $LocalGatewaySet;
 
     /**
-     * @var integer 本地网关总数
+     * @var integer 本地网关总数。
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeLocalGatewayResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LocalGatewaySet 本地网关信息集合
-     * @param integer $TotalCount 本地网关总数
+     * @param array $LocalGatewaySet 本地网关信息集合。
+     * @param integer $TotalCount 本地网关总数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

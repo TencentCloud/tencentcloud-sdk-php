@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateServiceTemplate请求参数结构体
  *
- * @method string getServiceTemplateName() 获取协议端口模板名称
- * @method void setServiceTemplateName(string $ServiceTemplateName) 设置协议端口模板名称
+ * @method string getServiceTemplateName() 获取协议端口模板名称。
+ * @method void setServiceTemplateName(string $ServiceTemplateName) 设置协议端口模板名称。
  * @method array getServices() 获取支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
  * @method void setServices(array $Services) 设置支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
  * @method array getServicesExtra() 获取支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 协议端口模板名称
+     * @var string 协议端口模板名称。
      */
     public $ServiceTemplateName;
 
@@ -45,7 +45,7 @@ class CreateServiceTemplateRequest extends AbstractModel
     public $ServicesExtra;
 
     /**
-     * @param string $ServiceTemplateName 协议端口模板名称
+     * @param string $ServiceTemplateName 协议端口模板名称。
      * @param array $Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
      * @param array $ServicesExtra 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
      */

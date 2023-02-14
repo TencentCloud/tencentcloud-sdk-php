@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationNameReal(string $ApplicationNameReal) 设置ApplicationName值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPublic() 获取是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublic(integer $Public) 设置是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageRepository extends AbstractModel
 {
@@ -184,6 +188,12 @@ class ImageRepository extends AbstractModel
     public $ApplicationNameReal;
 
     /**
+     * @var integer 是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Public;
+
+    /**
      * @param string $Reponame 仓库名,含命名空间,如tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Repotype 仓库类型
@@ -215,6 +225,8 @@ class ImageRepository extends AbstractModel
      * @param ScalableRule $ApplicationName ApplicationName值（废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationNameReal ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Public 是否公共,1:公有,0:私有
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -294,6 +306,10 @@ class ImageRepository extends AbstractModel
 
         if (array_key_exists("ApplicationNameReal",$param) and $param["ApplicationNameReal"] !== null) {
             $this->ApplicationNameReal = $param["ApplicationNameReal"];
+        }
+
+        if (array_key_exists("Public",$param) and $param["Public"] !== null) {
+            $this->Public = $param["Public"];
         }
     }
 }

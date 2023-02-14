@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDisableMetricAS() 获取是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisableMetricAS(integer $DisableMetricAS) 设置是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableCronAS() 获取开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableCronAS(integer $EnableCronAS) 设置开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScalableRule extends AbstractModel
 {
@@ -94,6 +102,18 @@ class ScalableRule extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisableMetricAS;
+
+    /**
+     * @var integer 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableCronAS;
+
+    /**
      * @param string $RuleId RuleId值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name Name值
@@ -107,6 +127,10 @@ class ScalableRule extends AbstractModel
      * @param string $Desc 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DisableMetricAS 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableCronAS 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +172,14 @@ class ScalableRule extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("DisableMetricAS",$param) and $param["DisableMetricAS"] !== null) {
+            $this->DisableMetricAS = $param["DisableMetricAS"];
+        }
+
+        if (array_key_exists("EnableCronAS",$param) and $param["EnableCronAS"] !== null) {
+            $this->EnableCronAS = $param["EnableCronAS"];
         }
     }
 }

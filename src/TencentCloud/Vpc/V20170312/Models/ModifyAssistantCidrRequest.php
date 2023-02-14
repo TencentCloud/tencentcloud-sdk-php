@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAssistantCidr请求参数结构体
  *
- * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+ * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
+ * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
  * @method array getNewCidrBlocks() 获取待添加的辅助CIDR。CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]，入参NewCidrBlocks和OldCidrBlocks至少需要其一。
  * @method void setNewCidrBlocks(array $NewCidrBlocks) 设置待添加的辅助CIDR。CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]，入参NewCidrBlocks和OldCidrBlocks至少需要其一。
  * @method array getOldCidrBlocks() 获取待删除的辅助CIDR。CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]，入参NewCidrBlocks和OldCidrBlocks至少需要其一。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAssistantCidrRequest extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * @var string `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      */
     public $VpcId;
 
@@ -45,7 +45,7 @@ class ModifyAssistantCidrRequest extends AbstractModel
     public $OldCidrBlocks;
 
     /**
-     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      * @param array $NewCidrBlocks 待添加的辅助CIDR。CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]，入参NewCidrBlocks和OldCidrBlocks至少需要其一。
      * @param array $OldCidrBlocks 待删除的辅助CIDR。CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]，入参NewCidrBlocks和OldCidrBlocks至少需要其一。
      */

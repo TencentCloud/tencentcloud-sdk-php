@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
- * @method array getDestinationCidrBlocks() 获取要检查的与之冲突的目的端列表
- * @method void setDestinationCidrBlocks(array $DestinationCidrBlocks) 设置要检查的与之冲突的目的端列表
+ * @method array getDestinationCidrBlocks() 获取要检查的与之冲突的目的端列表。
+ * @method void setDestinationCidrBlocks(array $DestinationCidrBlocks) 设置要检查的与之冲突的目的端列表。
  */
 class DescribeRouteConflictsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeRouteConflictsRequest extends AbstractModel
     public $RouteTableId;
 
     /**
-     * @var array 要检查的与之冲突的目的端列表
+     * @var array 要检查的与之冲突的目的端列表。
      */
     public $DestinationCidrBlocks;
 
     /**
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param array $DestinationCidrBlocks 要检查的与之冲突的目的端列表
+     * @param array $DestinationCidrBlocks 要检查的与之冲突的目的端列表。
      */
     function __construct()
     {

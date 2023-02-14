@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDhcpIp返回参数结构体
+ * ModifyBackupEncryptionStatus返回参数结构体
  *
- * @method array getDhcpIpSet() 获取新创建的`DhcpIp`信息。
- * @method void setDhcpIpSet(array $DhcpIpSet) 设置新创建的`DhcpIp`信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateDhcpIpResponse extends AbstractModel
+class ModifyBackupEncryptionStatusResponse extends AbstractModel
 {
-    /**
-     * @var array 新创建的`DhcpIp`信息。
-     */
-    public $DhcpIpSet;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $DhcpIpSet 新创建的`DhcpIp`信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class CreateDhcpIpResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DhcpIpSet",$param) and $param["DhcpIpSet"] !== null) {
-            $this->DhcpIpSet = [];
-            foreach ($param["DhcpIpSet"] as $key => $value){
-                $obj = new DhcpIp();
-                $obj->deserialize($value);
-                array_push($this->DhcpIpSet, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

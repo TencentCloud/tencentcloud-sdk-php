@@ -36,10 +36,13 @@ use TencentCloud\Common\AbstractModel;
 <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
 <li>vip - String - `HAVIP`的地址`VIP`。</li>
 <li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
+ * @method integer getOffset() 获取偏移量，默认为0。
+
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  */
 class DescribeHaVipsRequest extends AbstractModel
 {
@@ -60,12 +63,14 @@ class DescribeHaVipsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认为0。
+
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer 返回数量，默认为20，最大值为100。
+
      */
     public $Limit;
 
@@ -78,8 +83,9 @@ class DescribeHaVipsRequest extends AbstractModel
 <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
 <li>vip - String - `HAVIP`的地址`VIP`。</li>
 <li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
+     * @param integer $Offset 偏移量，默认为0。
+
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
      */
     function __construct()
     {

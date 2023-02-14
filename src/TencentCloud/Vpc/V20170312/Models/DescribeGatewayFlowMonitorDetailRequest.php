@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeeringConnectionId(string $PeeringConnectionId) 设置对等连接实例ID，形如：`pcx-ltjahce6`。
  * @method string getNatId() 获取NAT网关实例ID，形如：`nat-ltjahce6`。
  * @method void setNatId(string $NatId) 设置NAT网关实例ID，形如：`nat-ltjahce6`。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取返回数量。
- * @method void setLimit(integer $Limit) 设置返回数量。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method string getOrderField() 获取排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
  * @method void setOrderField(string $OrderField) 设置排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
  * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
@@ -67,12 +67,12 @@ class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
     public $NatId;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量。
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
@@ -92,8 +92,8 @@ class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
      * @param string $DirectConnectGatewayId 专线网关实例ID，形如：`dcg-ltjahce6`。
      * @param string $PeeringConnectionId 对等连接实例ID，形如：`pcx-ltjahce6`。
      * @param string $NatId NAT网关实例ID，形如：`nat-ltjahce6`。
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 返回数量。
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param string $OrderField 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
      * @param string $OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
      */

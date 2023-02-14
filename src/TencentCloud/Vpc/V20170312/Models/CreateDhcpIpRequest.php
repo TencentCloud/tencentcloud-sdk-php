@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网`ID`。
  * @method string getDhcpIpName() 获取`DhcpIp`名称。
  * @method void setDhcpIpName(string $DhcpIpName) 设置`DhcpIp`名称。
- * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数。总数不能超过64个。
- * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数。总数不能超过64个。
+ * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
+ * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
  */
 class CreateDhcpIpRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateDhcpIpRequest extends AbstractModel
     public $DhcpIpName;
 
     /**
-     * @var integer 新申请的内网IP地址个数。总数不能超过64个。
+     * @var integer 新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
      */
     public $SecondaryPrivateIpAddressCount;
 
@@ -55,7 +55,7 @@ class CreateDhcpIpRequest extends AbstractModel
      * @param string $VpcId 私有网络`ID`。
      * @param string $SubnetId 子网`ID`。
      * @param string $DhcpIpName `DhcpIp`名称。
-     * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。总数不能超过64个。
+     * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
      */
     function __construct()
     {

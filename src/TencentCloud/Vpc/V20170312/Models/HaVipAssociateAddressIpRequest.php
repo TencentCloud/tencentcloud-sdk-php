@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HaVipAssociateAddressIp请求参数结构体
  *
- * @method string getHaVipId() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
- * @method void setHaVipId(string $HaVipId) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
- * @method string getAddressIp() 获取弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
- * @method void setAddressIp(string $AddressIp) 设置弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+ * @method string getHaVipId() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
+ * @method void setHaVipId(string $HaVipId) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
+ * @method string getAddressIp() 获取弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
+ * @method void setAddressIp(string $AddressIp) 设置弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
  */
 class HaVipAssociateAddressIpRequest extends AbstractModel
 {
     /**
-     * @var string `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+     * @var string `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
      */
     public $HaVipId;
 
     /**
-     * @var string 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * @var string 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
      */
     public $AddressIp;
 
     /**
-     * @param string $HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
-     * @param string $AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * @param string $HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
+     * @param string $AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
      */
     function __construct()
     {

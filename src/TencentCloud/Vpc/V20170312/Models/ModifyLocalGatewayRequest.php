@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLocalGateway请求参数结构体
  *
- * @method string getLocalGatewayName() 获取本地网关名称
- * @method void setLocalGatewayName(string $LocalGatewayName) 设置本地网关名称
- * @method string getCdcId() 获取CDC实例ID
- * @method void setCdcId(string $CdcId) 设置CDC实例ID
- * @method string getLocalGatewayId() 获取本地网关实例ID
- * @method void setLocalGatewayId(string $LocalGatewayId) 设置本地网关实例ID
- * @method string getVpcId() 获取VPC实例ID
- * @method void setVpcId(string $VpcId) 设置VPC实例ID
+ * @method string getLocalGatewayName() 获取本地网关名称。
+ * @method void setLocalGatewayName(string $LocalGatewayName) 设置本地网关名称。
+ * @method string getCdcId() 获取CDC实例ID。
+ * @method void setCdcId(string $CdcId) 设置CDC实例ID。
+ * @method string getLocalGatewayId() 获取本地网关实例ID。
+ * @method void setLocalGatewayId(string $LocalGatewayId) 设置本地网关实例ID。
+ * @method string getVpcId() 获取VPC实例ID。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  */
 class ModifyLocalGatewayRequest extends AbstractModel
 {
     /**
-     * @var string 本地网关名称
+     * @var string 本地网关名称。
      */
     public $LocalGatewayName;
 
     /**
-     * @var string CDC实例ID
+     * @var string CDC实例ID。
      */
     public $CdcId;
 
     /**
-     * @var string 本地网关实例ID
+     * @var string 本地网关实例ID。
      */
     public $LocalGatewayId;
 
     /**
-     * @var string VPC实例ID
+     * @var string VPC实例ID。
      */
     public $VpcId;
 
     /**
-     * @param string $LocalGatewayName 本地网关名称
-     * @param string $CdcId CDC实例ID
-     * @param string $LocalGatewayId 本地网关实例ID
-     * @param string $VpcId VPC实例ID
+     * @param string $LocalGatewayName 本地网关名称。
+     * @param string $CdcId CDC实例ID。
+     * @param string $LocalGatewayId 本地网关实例ID。
+     * @param string $VpcId VPC实例ID。
      */
     function __construct()
     {

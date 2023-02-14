@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>instance-id - String - （过滤条件）云主机实例ID。</li>
 <li>instance-name - String - （过滤条件）云主机名称。</li>
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取请求对象个数。
- * @method void setLimit(integer $Limit) 设置请求对象个数。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  */
 class DescribeVpcInstancesRequest extends AbstractModel
 {
@@ -44,12 +44,12 @@ class DescribeVpcInstancesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 请求对象个数。
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
@@ -58,8 +58,8 @@ class DescribeVpcInstancesRequest extends AbstractModel
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>instance-id - String - （过滤条件）云主机实例ID。</li>
 <li>instance-name - String - （过滤条件）云主机名称。</li>
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 请求对象个数。
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
      */
     function __construct()
     {

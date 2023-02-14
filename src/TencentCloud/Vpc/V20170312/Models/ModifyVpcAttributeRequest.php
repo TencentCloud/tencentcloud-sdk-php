@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcName(string $VpcName) 设置私有网络名称，可任意命名，但不得超过60个字符。
  * @method string getEnableMulticast() 获取是否开启组播。true: 开启, false: 关闭。
  * @method void setEnableMulticast(string $EnableMulticast) 设置是否开启组播。true: 开启, false: 关闭。
- * @method array getDnsServers() 获取DNS地址，最多支持4个，第1个默认为主，其余为备
- * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个，第1个默认为主，其余为备
- * @method string getDomainName() 获取域名
- * @method void setDomainName(string $DomainName) 设置域名
+ * @method array getDnsServers() 获取DNS地址，最多支持4个，第1个默认为主，其余为备。
+ * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个，第1个默认为主，其余为备。
+ * @method string getDomainName() 获取域名。
+ * @method void setDomainName(string $DomainName) 设置域名。
  */
 class ModifyVpcAttributeRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $EnableMulticast;
 
     /**
-     * @var array DNS地址，最多支持4个，第1个默认为主，其余为备
+     * @var array DNS地址，最多支持4个，第1个默认为主，其余为备。
      */
     public $DnsServers;
 
     /**
-     * @var string 域名
+     * @var string 域名。
      */
     public $DomainName;
 
@@ -62,8 +62,8 @@ class ModifyVpcAttributeRequest extends AbstractModel
      * @param string $VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param string $VpcName 私有网络名称，可任意命名，但不得超过60个字符。
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 关闭。
-     * @param array $DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
-     * @param string $DomainName 域名
+     * @param array $DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备。
+     * @param string $DomainName 域名。
      */
     function __construct()
     {

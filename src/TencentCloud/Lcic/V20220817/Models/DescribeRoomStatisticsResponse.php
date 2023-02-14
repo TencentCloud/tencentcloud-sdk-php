@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(integer $Total) 设置记录总数。包含进入房间或者应到未到的。
  * @method array getMemberRecords() 获取成员记录列表。
  * @method void setMemberRecords(array $MemberRecords) 设置成员记录列表。
+ * @method integer getRealStartTime() 获取秒级unix时间戳，实际房间开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRealStartTime(integer $RealStartTime) 设置秒级unix时间戳，实际房间开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRealEndTime() 获取秒级unix时间戳，实际房间结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRealEndTime(integer $RealEndTime) 设置秒级unix时间戳，实际房间结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +62,18 @@ class DescribeRoomStatisticsResponse extends AbstractModel
     public $MemberRecords;
 
     /**
+     * @var integer 秒级unix时间戳，实际房间开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RealStartTime;
+
+    /**
+     * @var integer 秒级unix时间戳，实际房间结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RealEndTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +83,10 @@ class DescribeRoomStatisticsResponse extends AbstractModel
      * @param integer $MemberNumber 累计在线人数。
      * @param integer $Total 记录总数。包含进入房间或者应到未到的。
      * @param array $MemberRecords 成员记录列表。
+     * @param integer $RealStartTime 秒级unix时间戳，实际房间开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RealEndTime 秒级unix时间戳，实际房间结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +121,14 @@ class DescribeRoomStatisticsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MemberRecords, $obj);
             }
+        }
+
+        if (array_key_exists("RealStartTime",$param) and $param["RealStartTime"] !== null) {
+            $this->RealStartTime = $param["RealStartTime"];
+        }
+
+        if (array_key_exists("RealEndTime",$param) and $param["RealEndTime"] !== null) {
+            $this->RealEndTime = $param["RealEndTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

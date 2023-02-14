@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProductQuota返回参数结构体
  *
- * @method array getProductQuotaSet() 获取ProductQuota对象数组
- * @method void setProductQuotaSet(array $ProductQuotaSet) 设置ProductQuota对象数组
- * @method integer getTotalCount() 获取符合条件的产品类型个数
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的产品类型个数
+ * @method array getProductQuotaSet() 获取ProductQuota对象数组。
+ * @method void setProductQuotaSet(array $ProductQuotaSet) 设置ProductQuota对象数组。
+ * @method integer getTotalCount() 获取符合条件的产品类型个数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的产品类型个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProductQuotaResponse extends AbstractModel
 {
     /**
-     * @var array ProductQuota对象数组
+     * @var array ProductQuota对象数组。
      */
     public $ProductQuotaSet;
 
     /**
-     * @var integer 符合条件的产品类型个数
+     * @var integer 符合条件的产品类型个数。
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeProductQuotaResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ProductQuotaSet ProductQuota对象数组
-     * @param integer $TotalCount 符合条件的产品类型个数
+     * @param array $ProductQuotaSet ProductQuota对象数组。
+     * @param integer $TotalCount 符合条件的产品类型个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

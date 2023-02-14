@@ -44,6 +44,8 @@ OFFICIAL：企业公章；
 CONTRACT：合同专用章；
 ORGANIZATION_SEAL：企业印章(图片上传创建)；
 LEGAL_PERSON_SEAL：法定代表人章
+ * @method Agent getAgent() 获取主企业代子企业操作 或 渠道子客应用相关信息
+ * @method void setAgent(Agent $Agent) 设置主企业代子企业操作 或 渠道子客应用相关信息
  */
 class DescribeOrganizationSealsRequest extends AbstractModel
 {
@@ -84,6 +86,11 @@ LEGAL_PERSON_SEAL：法定代表人章
     public $SealTypes;
 
     /**
+     * @var Agent 主企业代子企业操作 或 渠道子客应用相关信息
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param integer $Limit 返回最大数量，最大为100
      * @param integer $Offset 偏移量，默认为0，最大为20000
@@ -96,6 +103,7 @@ OFFICIAL：企业公章；
 CONTRACT：合同专用章；
 ORGANIZATION_SEAL：企业印章(图片上传创建)；
 LEGAL_PERSON_SEAL：法定代表人章
+     * @param Agent $Agent 主企业代子企业操作 或 渠道子客应用相关信息
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ LEGAL_PERSON_SEAL：法定代表人章
 
         if (array_key_exists("SealTypes",$param) and $param["SealTypes"] !== null) {
             $this->SealTypes = $param["SealTypes"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

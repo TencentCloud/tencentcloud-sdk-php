@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImage(string $Image) 设置运行镜像
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSupportIntEightQuantization() 获取是否支持int8量化
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportIntEightQuantization(boolean $IsSupportIntEightQuantization) 设置是否支持int8量化
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EngineVersion extends AbstractModel
 {
@@ -44,9 +48,17 @@ class EngineVersion extends AbstractModel
     public $Image;
 
     /**
+     * @var boolean 是否支持int8量化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportIntEightQuantization;
+
+    /**
      * @param string $Version 引擎版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Image 运行镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSupportIntEightQuantization 是否支持int8量化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class EngineVersion extends AbstractModel
 
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = $param["Image"];
+        }
+
+        if (array_key_exists("IsSupportIntEightQuantization",$param) and $param["IsSupportIntEightQuantization"] !== null) {
+            $this->IsSupportIntEightQuantization = $param["IsSupportIntEightQuantization"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
- * @method string getIpv6CidrBlock() 获取`IPv6`网段。形如：`3402:4e00:20:1000::/56`
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置`IPv6`网段。形如：`3402:4e00:20:1000::/56`
+ * @method string getIpv6CidrBlock() 获取`IPv6`网段。形如：`3402:4e00:20:1000::/56`。
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置`IPv6`网段。形如：`3402:4e00:20:1000::/56`。
  */
 class UnassignIpv6CidrBlockRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UnassignIpv6CidrBlockRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * @var string `IPv6`网段。形如：`3402:4e00:20:1000::/56`。
      */
     public $Ipv6CidrBlock;
 
     /**
      * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param string $Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * @param string $Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`。
      */
     function __construct()
     {

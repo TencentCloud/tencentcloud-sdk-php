@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSecurityGroupReferences请求参数结构体
+ * DescribeBackupEncryptionStatus请求参数结构体
  *
- * @method array getSecurityGroupIds() 获取安全组实例ID数组。格式如：['sg-12345678']。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID数组。格式如：['sg-12345678']。
+ * @method string getInstanceId() 获取实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
  */
-class DescribeSecurityGroupReferencesRequest extends AbstractModel
+class DescribeBackupEncryptionStatusRequest extends AbstractModel
 {
     /**
-     * @var array 安全组实例ID数组。格式如：['sg-12345678']。
+     * @var string 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
      */
-    public $SecurityGroupIds;
+    public $InstanceId;
 
     /**
-     * @param array $SecurityGroupIds 安全组实例ID数组。格式如：['sg-12345678']。
+     * @param string $InstanceId 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeSecurityGroupReferencesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

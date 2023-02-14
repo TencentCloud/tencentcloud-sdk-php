@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLocalGateway返回参数结构体
  *
- * @method LocalGateway getLocalGateway() 获取本地网关信息
- * @method void setLocalGateway(LocalGateway $LocalGateway) 设置本地网关信息
+ * @method LocalGateway getLocalGateway() 获取本地网关信息。
+ * @method void setLocalGateway(LocalGateway $LocalGateway) 设置本地网关信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateLocalGatewayResponse extends AbstractModel
 {
     /**
-     * @var LocalGateway 本地网关信息
+     * @var LocalGateway 本地网关信息。
      */
     public $LocalGateway;
 
@@ -38,7 +38,7 @@ class CreateLocalGatewayResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param LocalGateway $LocalGateway 本地网关信息
+     * @param LocalGateway $LocalGateway 本地网关信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

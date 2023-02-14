@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMX(integer $MX) 设置MX值，只有MX记录有
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDefaultNS() 获取是否是默认的ns记录
+ * @method void setDefaultNS(boolean $DefaultNS) 设置是否是默认的ns记录
  */
 class RecordListItem extends AbstractModel
 {
@@ -121,6 +123,11 @@ class RecordListItem extends AbstractModel
     public $MX;
 
     /**
+     * @var boolean 是否是默认的ns记录
+     */
+    public $DefaultNS;
+
+    /**
      * @param integer $RecordId 记录Id
      * @param string $Value 记录值
      * @param string $Status 记录状态，启用：ENABLE，暂停：DISABLE
@@ -136,6 +143,7 @@ class RecordListItem extends AbstractModel
      * @param integer $TTL 记录缓存时间
      * @param integer $MX MX值，只有MX记录有
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DefaultNS 是否是默认的ns记录
      */
     function __construct()
     {
@@ -200,6 +208,10 @@ class RecordListItem extends AbstractModel
 
         if (array_key_exists("MX",$param) and $param["MX"] !== null) {
             $this->MX = $param["MX"];
+        }
+
+        if (array_key_exists("DefaultNS",$param) and $param["DefaultNS"] !== null) {
+            $this->DefaultNS = $param["DefaultNS"];
         }
     }
 }

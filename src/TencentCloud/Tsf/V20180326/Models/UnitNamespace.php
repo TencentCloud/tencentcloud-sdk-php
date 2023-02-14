@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置单元化命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayInstanceId() 获取网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayInstanceId(string $GatewayInstanceId) 设置网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdatedTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UnitNamespace extends AbstractModel
 {
@@ -48,9 +60,33 @@ class UnitNamespace extends AbstractModel
     public $Id;
 
     /**
+     * @var string 网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayInstanceId;
+
+    /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedTime;
+
+    /**
+     * @var string 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdatedTime;
+
+    /**
      * @param string $NamespaceId 命名空间ID
      * @param string $NamespaceName 命名空间Name
      * @param string $Id 单元化命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayInstanceId 网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdatedTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -76,6 +112,18 @@ class UnitNamespace extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("GatewayInstanceId",$param) and $param["GatewayInstanceId"] !== null) {
+            $this->GatewayInstanceId = $param["GatewayInstanceId"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

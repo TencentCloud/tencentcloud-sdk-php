@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNotEqualServiceConfig(boolean $IsNotEqualServiceConfig) 设置服务配置信息是否匹配
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HealthCheckSettings getHealthCheckSettings() 获取HealthCheckSettings
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置HealthCheckSettings
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroupOther extends AbstractModel
 {
@@ -114,6 +118,12 @@ class VmGroupOther extends AbstractModel
     public $IsNotEqualServiceConfig;
 
     /**
+     * @var HealthCheckSettings HealthCheckSettings
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCheckSettings;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageId 程序包ID
@@ -131,6 +141,8 @@ class VmGroupOther extends AbstractModel
      * @param string $GroupStatus 部署组状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsNotEqualServiceConfig 服务配置信息是否匹配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckSettings $HealthCheckSettings HealthCheckSettings
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,11 @@ class VmGroupOther extends AbstractModel
 
         if (array_key_exists("IsNotEqualServiceConfig",$param) and $param["IsNotEqualServiceConfig"] !== null) {
             $this->IsNotEqualServiceConfig = $param["IsNotEqualServiceConfig"];
+        }
+
+        if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
+            $this->HealthCheckSettings = new HealthCheckSettings();
+            $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(integer $ExpireTime) 设置资源包过期时间
  * @method integer getCreateTime() 获取资源包创建时间
  * @method void setCreateTime(integer $CreateTime) 设置资源包创建时间
+ * @method integer getStatus() 获取资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BonusInfo extends AbstractModel
 {
@@ -73,6 +77,12 @@ class BonusInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param integer $BonusId 资源包ID
      * @param string $UserId 用户ID
      * @param string $PackageId 资源包配置ID
@@ -80,6 +90,8 @@ class BonusInfo extends AbstractModel
      * @param integer $Used 资源消耗总数
      * @param integer $ExpireTime 资源包过期时间
      * @param integer $CreateTime 资源包创建时间
+     * @param integer $Status 资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class BonusInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

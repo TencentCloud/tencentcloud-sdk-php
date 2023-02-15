@@ -30,20 +30,18 @@ use TencentCloud\Common\AbstractModel;
 <li>block：建议封禁。</li>
  * @method string getLabel() 获取当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Moan：娇喘。</li>
  * @method void setLabel(string $Label) 设置当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Moan：娇喘。</li>
  * @method string getForm() 获取当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违禁的形式，取值范围：
@@ -82,11 +80,10 @@ class ReviewAudioVideoTaskOutput extends AbstractModel
     /**
      * @var string 当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Moan：娇喘。</li>
      */
@@ -130,11 +127,10 @@ class ReviewAudioVideoTaskOutput extends AbstractModel
 <li>block：建议封禁。</li>
      * @param string $Label 当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Moan：娇喘。</li>
      * @param string $Form 当 Suggestion 为 review 或 block 时有效，表示音视频最可能的违禁的形式，取值范围：

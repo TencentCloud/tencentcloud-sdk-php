@@ -34,6 +34,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除指定房间的录制文件
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) 删除房间
  * @method Models\DescribeAppDetailResponse DescribeAppDetail(Models\DescribeAppDetailRequest $req) 获取应用详情
+ * @method Models\DescribeCurrentMemberListResponse DescribeCurrentMemberList(Models\DescribeCurrentMemberListRequest $req) 获取当前房间的成员列表，房间结束或过期后无法使用。
  * @method Models\DescribeDocumentResponse DescribeDocument(Models\DescribeDocumentRequest $req) 获取文档信息
  * @method Models\DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(Models\DescribeDocumentsByRoomRequest $req) 此接口获取指定房间下课件列表
  * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间信息

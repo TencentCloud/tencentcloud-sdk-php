@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置开始时间。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
- * @method integer getMinQueryTime() 获取慢查询平均执行时间阈值（单位：微秒）。
- * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询平均执行时间阈值（单位：微秒）。
+ * @method integer getMinQueryTime() 获取慢查询平均执行时间阈值（单位：毫秒）。
+ * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询平均执行时间阈值（单位：毫秒）。
  * @method integer getLimit() 获取每个页面展示的慢查询条数，默认值为20。
  * @method void setLimit(integer $Limit) 设置每个页面展示的慢查询条数，默认值为20。
  * @method integer getOffset() 获取慢查询条数的偏移量，取Limit整数倍。
@@ -53,7 +53,7 @@ class DescribeSlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 慢查询平均执行时间阈值（单位：微秒）。
+     * @var integer 慢查询平均执行时间阈值（单位：毫秒）。
      */
     public $MinQueryTime;
 
@@ -76,7 +76,7 @@ class DescribeSlowLogRequest extends AbstractModel
      * @param string $InstanceId 实例Id。
      * @param string $BeginTime 开始时间。
      * @param string $EndTime 结束时间。
-     * @param integer $MinQueryTime 慢查询平均执行时间阈值（单位：微秒）。
+     * @param integer $MinQueryTime 慢查询平均执行时间阈值（单位：毫秒）。
      * @param integer $Limit 每个页面展示的慢查询条数，默认值为20。
      * @param integer $Offset 慢查询条数的偏移量，取Limit整数倍。
      * @param string $Role 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>

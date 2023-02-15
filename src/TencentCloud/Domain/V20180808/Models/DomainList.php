@@ -33,9 +33,11 @@ false 不是
  * @method integer getAutoRenew() 获取是否已设置自动续费 。
 0：未设置 
 1：已设置
+2：设置后，关闭
  * @method void setAutoRenew(integer $AutoRenew) 设置是否已设置自动续费 。
 0：未设置 
 1：已设置
+2：设置后，关闭
  * @method string getCreationDate() 获取注册时间。
  * @method void setCreationDate(string $CreationDate) 设置注册时间。
  * @method string getExpirationDate() 获取到期时间。
@@ -94,6 +96,7 @@ false 不是
      * @var integer 是否已设置自动续费 。
 0：未设置 
 1：已设置
+2：设置后，关闭
      */
     public $AutoRenew;
 
@@ -143,6 +146,7 @@ false 不是
      * @param integer $AutoRenew 是否已设置自动续费 。
 0：未设置 
 1：已设置
+2：设置后，关闭
      * @param string $CreationDate 注册时间。
      * @param string $ExpirationDate 到期时间。
      * @param string $Tld 域名后缀

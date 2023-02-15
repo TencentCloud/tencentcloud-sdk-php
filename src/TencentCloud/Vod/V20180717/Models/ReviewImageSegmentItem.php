@@ -30,19 +30,17 @@ use TencentCloud\Common\AbstractModel;
 <li>block：确认违规，建议封禁。</li>
  * @method string getLabel() 获取嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li>
  * @method void setLabel(string $Label) 设置嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li>
  * @method string getSubLabel() 获取违规子标签。
  * @method void setSubLabel(string $SubLabel) 设置违规子标签。
@@ -76,11 +74,10 @@ class ReviewImageSegmentItem extends AbstractModel
     /**
      * @var string 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li>
      */
     public $Label;
@@ -119,11 +116,10 @@ class ReviewImageSegmentItem extends AbstractModel
 <li>block：确认违规，建议封禁。</li>
      * @param string $Label 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li>
      * @param string $SubLabel 违规子标签。
      * @param string $Form 嫌疑片段违禁的形式，取值范围：

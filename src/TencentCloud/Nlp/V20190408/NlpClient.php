@@ -83,11 +83,6 @@ use TencentCloud\Nlp\V20190408\Models as Models;
 
 该词向量服务由腾讯知文自然语言处理团队联合腾讯AI Lab共同打造。使用的词向量基于千亿级大规模互联网语料并采用AI Lab自研的DSG算法训练而成，开源的词向量包含800多万中文词汇，在覆盖率、新鲜度及准确性等三方面性能突出。
 
-腾讯AI Lab词向量相关资料：
-
-https://ai.tencent.com/ailab/zh/news/detial?id=22
-
-https://ai.tencent.com/ailab/nlp/zh/embedding.html
  * @method Models\WordSimilarityResponse WordSimilarity(Models\WordSimilarityRequest $req) 词相似度接口能够基于词向量技术来计算两个输入词语的余弦相似度，相似度数值越大的两个词语在语义上越相似。
  */
 

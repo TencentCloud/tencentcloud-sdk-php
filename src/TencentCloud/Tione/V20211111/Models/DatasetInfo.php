@@ -108,6 +108,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasetScope(string $DatasetScope) 设置数据集范围
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOcrScene() 获取数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOcrScene(string $OcrScene) 设置数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAnnotationKeyStatus() 获取数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnnotationKeyStatus(string $AnnotationKeyStatus) 设置数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasetInfo extends AbstractModel
 {
@@ -244,6 +252,18 @@ class DatasetInfo extends AbstractModel
     public $DatasetScope;
 
     /**
+     * @var string 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OcrScene;
+
+    /**
+     * @var string 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnnotationKeyStatus;
+
+    /**
      * @param string $DatasetId 数据集id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasetName 数据集名称
@@ -287,6 +307,10 @@ class DatasetInfo extends AbstractModel
      * @param string $AnnotationFormat 数据集标注格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasetScope 数据集范围
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OcrScene 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AnnotationKeyStatus 数据集字典修改状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -395,6 +419,14 @@ class DatasetInfo extends AbstractModel
 
         if (array_key_exists("DatasetScope",$param) and $param["DatasetScope"] !== null) {
             $this->DatasetScope = $param["DatasetScope"];
+        }
+
+        if (array_key_exists("OcrScene",$param) and $param["OcrScene"] !== null) {
+            $this->OcrScene = $param["OcrScene"];
+        }
+
+        if (array_key_exists("AnnotationKeyStatus",$param) and $param["AnnotationKeyStatus"] !== null) {
+            $this->AnnotationKeyStatus = $param["AnnotationKeyStatus"];
         }
     }
 }

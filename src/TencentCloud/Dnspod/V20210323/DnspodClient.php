@@ -36,6 +36,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) 创建快照
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 删除域名
  * @method Models\DeleteDomainAliasResponse DeleteDomainAlias(Models\DeleteDomainAliasRequest $req) 删除域名别名
+ * @method Models\DeleteDomainBatchResponse DeleteDomainBatch(Models\DeleteDomainBatchRequest $req) 批量删除域名
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除记录
  * @method Models\DeleteRecordGroupResponse DeleteRecordGroup(Models\DeleteRecordGroupRequest $req) 删除记录分组
  * @method Models\DeleteShareDomainResponse DeleteShareDomain(Models\DeleteShareDomainRequest $req) 删除域名共享
@@ -47,9 +48,13 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainGroupListResponse DescribeDomainGroupList(Models\DescribeDomainGroupListRequest $req) 获取域名分组列表
  * @method Models\DescribeDomainListResponse DescribeDomainList(Models\DescribeDomainListRequest $req) 获取域名列表
  * @method Models\DescribeDomainLogListResponse DescribeDomainLogList(Models\DescribeDomainLogListRequest $req) 获取域名日志
+ * @method Models\DescribeDomainPreviewResponse DescribeDomainPreview(Models\DescribeDomainPreviewRequest $req) 获取域名概览信息
  * @method Models\DescribeDomainPurviewResponse DescribeDomainPurview(Models\DescribeDomainPurviewRequest $req) 获取域名权限
  * @method Models\DescribeDomainShareInfoResponse DescribeDomainShareInfo(Models\DescribeDomainShareInfoRequest $req) 获取域名共享信息
+ * @method Models\DescribeDomainWhoisResponse DescribeDomainWhois(Models\DescribeDomainWhoisRequest $req) 获取域名Whois信息
+ * @method Models\DescribePackageDetailResponse DescribePackageDetail(Models\DescribePackageDetailRequest $req) 获取各套餐配置详情
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 获取记录信息
+ * @method Models\DescribeRecordExistExceptDefaultNSResponse DescribeRecordExistExceptDefaultNS(Models\DescribeRecordExistExceptDefaultNSRequest $req) 判断是否有除系统默认的@-NS记录之外的记录存在
  * @method Models\DescribeRecordGroupListResponse DescribeRecordGroupList(Models\DescribeRecordGroupListRequest $req) 查询解析记录分组列表
  * @method Models\DescribeRecordLineListResponse DescribeRecordLineList(Models\DescribeRecordLineListRequest $req) 获取等级允许的线路
  * @method Models\DescribeRecordListResponse DescribeRecordList(Models\DescribeRecordListRequest $req) 获取某个域名下的解析记录列表
@@ -61,6 +66,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeSnapshotRollbackTaskResponse DescribeSnapshotRollbackTask(Models\DescribeSnapshotRollbackTaskRequest $req) 查询最近一次回滚
  * @method Models\DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalytics(Models\DescribeSubdomainAnalyticsRequest $req) 统计子域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况。仅付费套餐域名可用。
  * @method Models\DescribeUserDetailResponse DescribeUserDetail(Models\DescribeUserDetailRequest $req) 获取帐户信息
+ * @method Models\DescribeVASStatisticResponse DescribeVASStatistic(Models\DescribeVASStatisticRequest $req) 获取域名增值服务用量
  * @method Models\DownloadSnapshotResponse DownloadSnapshot(Models\DownloadSnapshotRequest $req) 下载快照
  * @method Models\ModifyDomainLockResponse ModifyDomainLock(Models\ModifyDomainLockRequest $req) 锁定域名
  * @method Models\ModifyDomainOwnerResponse ModifyDomainOwner(Models\ModifyDomainOwnerRequest $req) 域名过户

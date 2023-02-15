@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCost(integer $TotalCost) 设置原价，单位：分。最大值42亿，超过则返回0
  * @method integer getRealTotalCost() 获取优惠后的价格，单位：分
  * @method void setRealTotalCost(integer $RealTotalCost) 设置优惠后的价格，单位：分
+ * @method integer getSpecCount() 获取计费项数量
+ * @method void setSpecCount(integer $SpecCount) 设置计费项数量
  */
 class SpecPrice extends AbstractModel
 {
@@ -45,9 +47,15 @@ class SpecPrice extends AbstractModel
     public $RealTotalCost;
 
     /**
+     * @var integer 计费项数量
+     */
+    public $SpecCount;
+
+    /**
      * @param string $SpecName 计费项名称
      * @param integer $TotalCost 原价，单位：分。最大值42亿，超过则返回0
      * @param integer $RealTotalCost 优惠后的价格，单位：分
+     * @param integer $SpecCount 计费项数量
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SpecPrice extends AbstractModel
 
         if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
             $this->RealTotalCost = $param["RealTotalCost"];
+        }
+
+        if (array_key_exists("SpecCount",$param) and $param["SpecCount"] !== null) {
+            $this->SpecCount = $param["SpecCount"];
         }
     }
 }

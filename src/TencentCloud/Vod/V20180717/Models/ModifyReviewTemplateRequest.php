@@ -30,10 +30,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) 设置审核模板描述信息，长度限制：256 个字符。
  * @method array getLabels() 获取需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>
@@ -41,10 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：不填表示不更新。
  * @method void setLabels(array $Labels) 设置需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>
@@ -76,10 +74,9 @@ class ModifyReviewTemplateRequest extends AbstractModel
     /**
      * @var array 需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>
@@ -95,10 +92,9 @@ class ModifyReviewTemplateRequest extends AbstractModel
      * @param string $Comment 审核模板描述信息，长度限制：256 个字符。
      * @param array $Labels 需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>

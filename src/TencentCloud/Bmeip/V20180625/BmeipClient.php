@@ -26,9 +26,9 @@ use TencentCloud\Bmeip\V20180625\Models as Models;
  * @method Models\BindEipAclsResponse BindEipAcls(Models\BindEipAclsRequest $req) 此接口用于为某个 EIP 关联 ACL。
  * @method Models\BindHostedResponse BindHosted(Models\BindHostedRequest $req) BindHosted接口用于绑定黑石弹性公网IP到黑石托管机器上
  * @method Models\BindRsResponse BindRs(Models\BindRsRequest $req) 绑定黑石EIP
- * @method Models\BindVpcIpResponse BindVpcIp(Models\BindVpcIpRequest $req) 黑石EIP绑定VPCIP
+ * @method Models\BindVpcIpResponse BindVpcIp(Models\BindVpcIpRequest $req) 黑石EIP绑定VPC IP
  * @method Models\CreateEipResponse CreateEip(Models\CreateEipRequest $req) 创建黑石弹性公网IP
- * @method Models\CreateEipAclResponse CreateEipAcl(Models\CreateEipAclRequest $req) 创建黑石弹性公网 EIPACL
+ * @method Models\CreateEipAclResponse CreateEipAcl(Models\CreateEipAclRequest $req) 创建黑石弹性公网 EIP ACL
  * @method Models\DeleteEipResponse DeleteEip(Models\DeleteEipRequest $req) 释放黑石弹性公网IP
  * @method Models\DeleteEipAclResponse DeleteEipAcl(Models\DeleteEipAclRequest $req) 删除弹性公网IP ACL
  * @method Models\DescribeEipAclsResponse DescribeEipAcls(Models\DescribeEipAclsRequest $req) 查询弹性公网IP ACL

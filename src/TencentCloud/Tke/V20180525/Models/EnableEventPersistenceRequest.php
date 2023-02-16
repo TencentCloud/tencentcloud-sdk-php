@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置cls服务的logsetID
  * @method string getTopicId() 获取cls服务的topicID
  * @method void setTopicId(string $TopicId) 设置cls服务的topicID
+ * @method string getTopicRegion() 获取topic所在地域，默认为集群所在地域
+ * @method void setTopicRegion(string $TopicRegion) 设置topic所在地域，默认为集群所在地域
  */
 class EnableEventPersistenceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class EnableEventPersistenceRequest extends AbstractModel
     public $TopicId;
 
     /**
+     * @var string topic所在地域，默认为集群所在地域
+     */
+    public $TopicRegion;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $LogsetId cls服务的logsetID
      * @param string $TopicId cls服务的topicID
+     * @param string $TopicRegion topic所在地域，默认为集群所在地域
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class EnableEventPersistenceRequest extends AbstractModel
 
         if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
             $this->TopicId = $param["TopicId"];
+        }
+
+        if (array_key_exists("TopicRegion",$param) and $param["TopicRegion"] !== null) {
+            $this->TopicRegion = $param["TopicRegion"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBusName(string $EventBusName) 设置事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
  * @method string getDescription() 获取事件集描述，不限字符类型，200字符描述以内
  * @method void setDescription(string $Description) 设置事件集描述，不限字符类型，200字符描述以内
+ * @method integer getSaveDays() 获取EB存储时长
+ * @method void setSaveDays(integer $SaveDays) 设置EB存储时长
  */
 class CreateEventBusRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateEventBusRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer EB存储时长
+     */
+    public $SaveDays;
+
+    /**
      * @param string $EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
      * @param string $Description 事件集描述，不限字符类型，200字符描述以内
+     * @param integer $SaveDays EB存储时长
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateEventBusRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("SaveDays",$param) and $param["SaveDays"] !== null) {
+            $this->SaveDays = $param["SaveDays"];
         }
     }
 }

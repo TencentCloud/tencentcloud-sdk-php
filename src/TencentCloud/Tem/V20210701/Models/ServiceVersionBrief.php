@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateDate(string $CreateDate) 设置创建日期
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionId() 获取地域id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionId(string $RegionId) 设置地域id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceVersionBrief extends AbstractModel
 {
@@ -209,6 +213,12 @@ class ServiceVersionBrief extends AbstractModel
     public $CreateDate;
 
     /**
+     * @var string 地域id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionId;
+
+    /**
      * @param string $VersionName 版本名称
      * @param string $Status 状态
      * @param integer $EnableEs 是否启动弹性 -- 已废弃
@@ -243,6 +253,8 @@ class ServiceVersionBrief extends AbstractModel
      * @param WorkloadInfo $WorkloadInfo 工作负载信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateDate 创建日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionId 地域id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -344,6 +356,10 @@ class ServiceVersionBrief extends AbstractModel
 
         if (array_key_exists("CreateDate",$param) and $param["CreateDate"] !== null) {
             $this->CreateDate = $param["CreateDate"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置需要关联的标签列表。
  * @method string getProtocol() 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
  * @method void setProtocol(string $Protocol) 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+ * @method integer getTimeSpan() 获取预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+ * @method void setTimeSpan(integer $TimeSpan) 设置预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
  */
 class CreateBandwidthPackageRequest extends AbstractModel
 {
@@ -88,6 +90,11 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $Protocol;
 
     /**
+     * @var integer 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+     */
+    public $TimeSpan;
+
+    /**
      * @param string $NetworkType 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
@@ -100,6 +107,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
      * @param array $Tags 需要关联的标签列表。
      * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+     * @param integer $TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class CreateBandwidthPackageRequest extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
         }
     }
 }

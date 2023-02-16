@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartedApplicationNum(integer $StartedApplicationNum) 设置已经启动的应用数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStartFailedApplicationNum() 获取启动失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartFailedApplicationNum(integer $StartFailedApplicationNum) 设置启动失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemEnvironmentStartingStatus extends AbstractModel
 {
@@ -44,9 +48,17 @@ class TemEnvironmentStartingStatus extends AbstractModel
     public $StartedApplicationNum;
 
     /**
+     * @var integer 启动失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartFailedApplicationNum;
+
+    /**
      * @param integer $ApplicationNumNeedToStart 需要启动的应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartedApplicationNum 已经启动的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StartFailedApplicationNum 启动失败的应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class TemEnvironmentStartingStatus extends AbstractModel
 
         if (array_key_exists("StartedApplicationNum",$param) and $param["StartedApplicationNum"] !== null) {
             $this->StartedApplicationNum = $param["StartedApplicationNum"];
+        }
+
+        if (array_key_exists("StartFailedApplicationNum",$param) and $param["StartFailedApplicationNum"] !== null) {
+            $this->StartFailedApplicationNum = $param["StartFailedApplicationNum"];
         }
     }
 }

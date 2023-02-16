@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnMatchedKey(string $UnMatchedKey) 设置解析失败日志的键名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBacktracking() 获取tracking
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBacktracking(string $Backtracking) 设置tracking
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDelimiter() 获取分隔符
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDelimiter(string $Delimiter) 设置分隔符
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogConfigExtractRule extends AbstractModel
 {
@@ -114,6 +122,18 @@ class LogConfigExtractRule extends AbstractModel
     public $UnMatchedKey;
 
     /**
+     * @var string tracking
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Backtracking;
+
+    /**
+     * @var string 分隔符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Delimiter;
+
+    /**
      * @param string $BeginningRegex 首行正则表达式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keys 提取结果
@@ -131,6 +151,10 @@ class LogConfigExtractRule extends AbstractModel
      * @param string $UnMatchUpload 是否上传解析失败日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnMatchedKey 解析失败日志的键名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Backtracking tracking
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Delimiter 分隔符
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +204,14 @@ class LogConfigExtractRule extends AbstractModel
 
         if (array_key_exists("UnMatchedKey",$param) and $param["UnMatchedKey"] !== null) {
             $this->UnMatchedKey = $param["UnMatchedKey"];
+        }
+
+        if (array_key_exists("Backtracking",$param) and $param["Backtracking"] !== null) {
+            $this->Backtracking = $param["Backtracking"];
+        }
+
+        if (array_key_exists("Delimiter",$param) and $param["Delimiter"] !== null) {
+            $this->Delimiter = $param["Delimiter"];
         }
     }
 }

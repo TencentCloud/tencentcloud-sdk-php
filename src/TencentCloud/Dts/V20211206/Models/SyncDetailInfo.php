@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepInfos(array $StepInfos) 设置详细步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCauseOfCompareDisable() 获取不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) 设置不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SyncDetailInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ class SyncDetailInfo extends AbstractModel
     public $StepInfos;
 
     /**
+     * @var string 不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CauseOfCompareDisable;
+
+    /**
      * @param integer $StepAll 总步骤数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepNow 当前步骤
@@ -119,6 +129,8 @@ class SyncDetailInfo extends AbstractModel
      * @param string $Message 总体描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepInfos 详细步骤信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CauseOfCompareDisable 不能发起一致性校验的原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -169,6 +181,10 @@ class SyncDetailInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StepInfos, $obj);
             }
+        }
+
+        if (array_key_exists("CauseOfCompareDisable",$param) and $param["CauseOfCompareDisable"] !== null) {
+            $this->CauseOfCompareDisable = $param["CauseOfCompareDisable"];
         }
     }
 }

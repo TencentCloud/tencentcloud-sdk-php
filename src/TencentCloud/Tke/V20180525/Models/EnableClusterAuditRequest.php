@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置CLS日志集ID
  * @method string getTopicId() 获取CLS日志主题ID
  * @method void setTopicId(string $TopicId) 设置CLS日志主题ID
+ * @method string getTopicRegion() 获取topic所在region，默认为集群当前region
+ * @method void setTopicRegion(string $TopicRegion) 设置topic所在region，默认为集群当前region
  */
 class EnableClusterAuditRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class EnableClusterAuditRequest extends AbstractModel
     public $TopicId;
 
     /**
+     * @var string topic所在region，默认为集群当前region
+     */
+    public $TopicRegion;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $LogsetId CLS日志集ID
      * @param string $TopicId CLS日志主题ID
+     * @param string $TopicRegion topic所在region，默认为集群当前region
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class EnableClusterAuditRequest extends AbstractModel
 
         if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
             $this->TopicId = $param["TopicId"];
+        }
+
+        if (array_key_exists("TopicRegion",$param) and $param["TopicRegion"] !== null) {
+            $this->TopicRegion = $param["TopicRegion"];
         }
     }
 }

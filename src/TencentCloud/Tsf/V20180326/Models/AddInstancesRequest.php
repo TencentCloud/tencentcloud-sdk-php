@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSgId(string $SgId) 设置安全组设置
  * @method string getInstanceImportMode() 获取云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
  * @method void setInstanceImportMode(string $InstanceImportMode) 设置云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
+ * @method string getSecurityGroupIds() 获取安全组id
+ * @method void setSecurityGroupIds(string $SecurityGroupIds) 设置安全组id
  */
 class AddInstancesRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class AddInstancesRequest extends AbstractModel
     public $InstanceImportMode;
 
     /**
+     * @var string 安全组id
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIdList 云主机ID列表
      * @param string $OsName 操作系统名称
@@ -88,6 +95,7 @@ class AddInstancesRequest extends AbstractModel
      * @param string $KeyId 重装系统，关联密钥设置
      * @param string $SgId 安全组设置
      * @param string $InstanceImportMode 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
+     * @param string $SecurityGroupIds 安全组id
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class AddInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceImportMode",$param) and $param["InstanceImportMode"] !== null) {
             $this->InstanceImportMode = $param["InstanceImportMode"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

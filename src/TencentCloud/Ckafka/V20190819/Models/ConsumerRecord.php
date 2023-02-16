@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置消息时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHeaders() 获取消息headers
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeaders(string $Headers) 设置消息headers
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumerRecord extends AbstractModel
 {
@@ -75,6 +79,12 @@ class ConsumerRecord extends AbstractModel
     public $Timestamp;
 
     /**
+     * @var string 消息headers
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Headers;
+
+    /**
      * @param string $Topic 主题名
      * @param integer $Partition 分区id
      * @param integer $Offset 位点
@@ -83,6 +93,8 @@ class ConsumerRecord extends AbstractModel
      * @param string $Value 消息value
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp 消息时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Headers 消息headers
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -120,6 +132,10 @@ class ConsumerRecord extends AbstractModel
 
         if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
             $this->Timestamp = $param["Timestamp"];
+        }
+
+        if (array_key_exists("Headers",$param) and $param["Headers"] !== null) {
+            $this->Headers = $param["Headers"];
         }
     }
 }

@@ -23,10 +23,17 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Bma\V20221115\Models as Models;
 
 /**
+ * @method Models\CreateBPBrandResponse CreateBPBrand(Models\CreateBPBrandRequest $req) 添加品牌
  * @method Models\CreateBPFakeAPPResponse CreateBPFakeAPP(Models\CreateBPFakeAPPRequest $req) 仿冒应用举报
  * @method Models\CreateBPFakeAPPListResponse CreateBPFakeAPPList(Models\CreateBPFakeAPPListRequest $req) 批量仿冒应用举报
  * @method Models\CreateBPFakeURLResponse CreateBPFakeURL(Models\CreateBPFakeURLRequest $req) 仿冒网址举报
  * @method Models\CreateBPFakeURLsResponse CreateBPFakeURLs(Models\CreateBPFakeURLsRequest $req) 批量仿冒网址举报
+ * @method Models\CreateBPWhiteListResponse CreateBPWhiteList(Models\CreateBPWhiteListRequest $req) 添加白名单
+ * @method Models\DeleteBPWhiteListResponse DeleteBPWhiteList(Models\DeleteBPWhiteListRequest $req) 删除白名单
+ * @method Models\DescribeBPBrandsResponse DescribeBPBrands(Models\DescribeBPBrandsRequest $req) 查询品牌列表
+ * @method Models\DescribeBPFakeAPPListResponse DescribeBPFakeAPPList(Models\DescribeBPFakeAPPListRequest $req) 查询仿冒应用列表
+ * @method Models\DescribeBPFakeURLsResponse DescribeBPFakeURLs(Models\DescribeBPFakeURLsRequest $req) 查询仿冒网址列表
+ * @method Models\DescribeBPWhiteListsResponse DescribeBPWhiteLists(Models\DescribeBPWhiteListsRequest $req) 查询白名单列表
  */
 
 class BmaClient extends AbstractClient

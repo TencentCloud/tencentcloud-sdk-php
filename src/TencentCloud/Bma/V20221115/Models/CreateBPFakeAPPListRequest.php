@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBPFakeAPPList请求参数结构体
  *
- * @method string getFakeAPPs() 获取仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx
- * @method void setFakeAPPs(string $FakeAPPs) 设置仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx
+ * @method string getFakeAPPs() 获取批量模版
+ * @method void setFakeAPPs(string $FakeAPPs) 设置批量模版
  */
 class CreateBPFakeAPPListRequest extends AbstractModel
 {
     /**
-     * @var string 仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx
+     * @var string 批量模版
      */
     public $FakeAPPs;
 
     /**
-     * @param string $FakeAPPs 仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx
+     * @param string $FakeAPPs 批量模版
      */
     function __construct()
     {

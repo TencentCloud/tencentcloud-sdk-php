@@ -328,6 +328,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreStopEncoded() 获取是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreStopEncoded(string $PreStopEncoded) 设置是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPostStartEncoded() 获取是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPostStartEncoded(string $PostStartEncoded) 设置是否编码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemServiceVersionInfo extends AbstractModel
 {
@@ -830,6 +838,18 @@ class TemServiceVersionInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreStopEncoded;
+
+    /**
+     * @var string 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PostStartEncoded;
+
+    /**
      * @param string $VersionId 主键
      * @param string $ApplicationId 服务id
      * @param string $DeployMode 部署方式
@@ -983,6 +1003,10 @@ class TemServiceVersionInfo extends AbstractModel
      * @param boolean $ConfEdited 发布时配置是否有修改
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreStopEncoded 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PostStartEncoded 是否编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1395,6 +1419,14 @@ class TemServiceVersionInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PreStopEncoded",$param) and $param["PreStopEncoded"] !== null) {
+            $this->PreStopEncoded = $param["PreStopEncoded"];
+        }
+
+        if (array_key_exists("PostStartEncoded",$param) and $param["PostStartEncoded"] !== null) {
+            $this->PostStartEncoded = $param["PostStartEncoded"];
         }
     }
 }

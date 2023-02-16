@@ -38,6 +38,10 @@ Activity：活动来源
  * @method void setSubNetIds(array $SubNetIds) 设置子网列表
  * @method boolean getIsOpenCloudInvoke() 获取是否打开云调用
  * @method void setIsOpenCloudInvoke(boolean $IsOpenCloudInvoke) 设置是否打开云调用
+ * @method string getSource() 获取创建来源：wechat | cloud
+ * @method void setSource(string $Source) 设置创建来源：wechat | cloud
+ * @method string getChannel() 获取渠道：wechat | cloud
+ * @method void setChannel(string $Channel) 设置渠道：wechat | cloud
  */
 class CreateWxCloudBaseRunEnvRequest extends AbstractModel
 {
@@ -79,6 +83,16 @@ Activity：活动来源
     public $IsOpenCloudInvoke;
 
     /**
+     * @var string 创建来源：wechat | cloud
+     */
+    public $Source;
+
+    /**
+     * @var string 渠道：wechat | cloud
+     */
+    public $Channel;
+
+    /**
      * @param string $WxAppId wx应用Id
      * @param string $Alias 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
      * @param string $FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
@@ -88,6 +102,8 @@ Activity：活动来源
      * @param string $VpcId 私有网络Id
      * @param array $SubNetIds 子网列表
      * @param boolean $IsOpenCloudInvoke 是否打开云调用
+     * @param string $Source 创建来源：wechat | cloud
+     * @param string $Channel 渠道：wechat | cloud
      */
     function __construct()
     {
@@ -128,6 +144,14 @@ Activity：活动来源
 
         if (array_key_exists("IsOpenCloudInvoke",$param) and $param["IsOpenCloudInvoke"] !== null) {
             $this->IsOpenCloudInvoke = $param["IsOpenCloudInvoke"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
+            $this->Channel = $param["Channel"];
         }
     }
 }

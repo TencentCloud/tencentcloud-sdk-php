@@ -122,6 +122,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUiURL(string $UiURL) 设置ui的跳转地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceType() 获取引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceType(string $ResourceType) 设置引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getImageVersionId() 获取集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageVersionId(string $ImageVersionId) 设置集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChildImageVersionId() 获取集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChildImageVersionId(string $ChildImageVersionId) 设置集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getImageVersionName() 获取集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageVersionName(string $ImageVersionName) 设置集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -305,6 +321,30 @@ class DataEngineInfo extends AbstractModel
     public $UiURL;
 
     /**
+     * @var string 引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceType;
+
+    /**
+     * @var string 集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageVersionId;
+
+    /**
+     * @var string 集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChildImageVersionId;
+
+    /**
+     * @var string 集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageVersionName;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -355,6 +395,14 @@ class DataEngineInfo extends AbstractModel
      * @param array $NetworkConnectionSet 网络连接配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UiURL ui的跳转地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceType 引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ImageVersionId 集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChildImageVersionId 集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ImageVersionName 集群镜像版本名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -507,6 +555,22 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("UiURL",$param) and $param["UiURL"] !== null) {
             $this->UiURL = $param["UiURL"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("ImageVersionId",$param) and $param["ImageVersionId"] !== null) {
+            $this->ImageVersionId = $param["ImageVersionId"];
+        }
+
+        if (array_key_exists("ChildImageVersionId",$param) and $param["ChildImageVersionId"] !== null) {
+            $this->ChildImageVersionId = $param["ChildImageVersionId"];
+        }
+
+        if (array_key_exists("ImageVersionName",$param) and $param["ImageVersionName"] !== null) {
+            $this->ImageVersionName = $param["ImageVersionName"];
         }
     }
 }

@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastQuitTimestamp(integer $LastQuitTimestamp) 设置最后一次退出房间的unix时间戳。
  * @method integer getRewords() 获取奖励次数。
  * @method void setRewords(integer $Rewords) 设置奖励次数。
+ * @method string getIPAddress() 获取用户IP。
+ * @method void setIPAddress(string $IPAddress) 设置用户IP。
+ * @method string getLocation() 获取用户位置信息。
+ * @method void setLocation(string $Location) 设置用户位置信息。
+ * @method integer getDevice() 获取用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+ * @method void setDevice(integer $Device) 设置用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
  */
 class MemberRecord extends AbstractModel
 {
@@ -101,6 +107,21 @@ class MemberRecord extends AbstractModel
     public $Rewords;
 
     /**
+     * @var string 用户IP。
+     */
+    public $IPAddress;
+
+    /**
+     * @var string 用户位置信息。
+     */
+    public $Location;
+
+    /**
+     * @var integer 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+     */
+    public $Device;
+
+    /**
      * @param string $UserId 用户ID。
      * @param string $UserName 用户名称。
      * @param integer $PresentTime 在线时长，单位秒。
@@ -112,6 +133,9 @@ class MemberRecord extends AbstractModel
      * @param integer $FirstJoinTimestamp 首次进入房间的unix时间戳。
      * @param integer $LastQuitTimestamp 最后一次退出房间的unix时间戳。
      * @param integer $Rewords 奖励次数。
+     * @param string $IPAddress 用户IP。
+     * @param string $Location 用户位置信息。
+     * @param integer $Device 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
      */
     function __construct()
     {
@@ -168,6 +192,18 @@ class MemberRecord extends AbstractModel
 
         if (array_key_exists("Rewords",$param) and $param["Rewords"] !== null) {
             $this->Rewords = $param["Rewords"];
+        }
+
+        if (array_key_exists("IPAddress",$param) and $param["IPAddress"] !== null) {
+            $this->IPAddress = $param["IPAddress"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
+        }
+
+        if (array_key_exists("Device",$param) and $param["Device"] !== null) {
+            $this->Device = $param["Device"];
         }
     }
 }

@@ -26,13 +26,14 @@ use TencentCloud\Common\AbstractModel;
 <li>NewFileUpload：视频上传完成；</li>
 <li>ProcedureStateChanged：任务流状态变更；</li>
 <li>FileDeleted：视频删除完成；</li>
+<li>RestoreMediaComplete：视频取回完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
 <li>SplitMediaComplete：视频拆分完成；</li>
-<li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>RemoveWatermark：智能去除水印完成。</li>
+<li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
@@ -46,13 +47,14 @@ use TencentCloud\Common\AbstractModel;
 <li>NewFileUpload：视频上传完成；</li>
 <li>ProcedureStateChanged：任务流状态变更；</li>
 <li>FileDeleted：视频删除完成；</li>
+<li>RestoreMediaComplete：视频取回完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
 <li>SplitMediaComplete：视频拆分完成；</li>
-<li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>RemoveWatermark：智能去除水印完成。</li>
+<li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
@@ -82,9 +84,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditMediaCompleteEvent(EditMediaTask $EditMediaCompleteEvent) 设置视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SplitMediaTask getSplitMediaCompleteEvent() 获取视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
+ * @method SplitMediaTask getSplitMediaCompleteEvent() 获取视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSplitMediaCompleteEvent(SplitMediaTask $SplitMediaCompleteEvent) 设置视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
+ * @method void setSplitMediaCompleteEvent(SplitMediaTask $SplitMediaCompleteEvent) 设置视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ComposeMediaTask getComposeMediaCompleteEvent() 获取制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,17 +120,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) 设置微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RemoveWatermarkTask getRemoveWatermarkCompleteEvent() 获取智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+ * @method RemoveWatermarkTask getRemoveWatermarkCompleteEvent() 获取智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask $RemoveWatermarkCompleteEvent) 设置智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+ * @method void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask $RemoveWatermarkCompleteEvent) 设置智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RestoreMediaTask getRestoreMediaCompleteEvent() 获取视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+ * @method RestoreMediaTask getRestoreMediaCompleteEvent() 获取视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) 设置视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+ * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) 设置视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() 获取溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+ * @method RebuildMediaTask getRebuildMediaCompleteEvent() 获取音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent) 设置溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+ * @method void setRebuildMediaCompleteEvent(RebuildMediaTask $RebuildMediaCompleteEvent) 设置音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() 获取溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent) 设置溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() 获取音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,13 +161,14 @@ class EventContent extends AbstractModel
 <li>NewFileUpload：视频上传完成；</li>
 <li>ProcedureStateChanged：任务流状态变更；</li>
 <li>FileDeleted：视频删除完成；</li>
+<li>RestoreMediaComplete：视频取回完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
 <li>SplitMediaComplete：视频拆分完成；</li>
-<li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>RemoveWatermark：智能去除水印完成。</li>
+<li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
@@ -205,7 +212,7 @@ class EventContent extends AbstractModel
     public $EditMediaCompleteEvent;
 
     /**
-     * @var SplitMediaTask 视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
+     * @var SplitMediaTask 视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SplitMediaCompleteEvent;
@@ -259,19 +266,25 @@ class EventContent extends AbstractModel
     public $WechatMiniProgramPublishCompleteEvent;
 
     /**
-     * @var RemoveWatermarkTask 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+     * @var RemoveWatermarkTask 智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoveWatermarkCompleteEvent;
 
     /**
-     * @var RestoreMediaTask 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+     * @var RestoreMediaTask 视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RestoreMediaCompleteEvent;
 
     /**
-     * @var ExtractTraceWatermarkTask 溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+     * @var RebuildMediaTask 音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RebuildMediaCompleteEvent;
+
+    /**
+     * @var ExtractTraceWatermarkTask 溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtractTraceWatermarkCompleteEvent;
@@ -300,13 +313,14 @@ class EventContent extends AbstractModel
 <li>NewFileUpload：视频上传完成；</li>
 <li>ProcedureStateChanged：任务流状态变更；</li>
 <li>FileDeleted：视频删除完成；</li>
+<li>RestoreMediaComplete：视频取回完成；</li>
 <li>PullComplete：视频转拉完成；</li>
 <li>EditMediaComplete：视频编辑完成；</li>
 <li>SplitMediaComplete：视频拆分完成；</li>
-<li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>RemoveWatermark：智能去除水印完成。</li>
+<li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
@@ -326,7 +340,7 @@ class EventContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTask $EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SplitMediaTask $SplitMediaCompleteEvent 视频拆条完成事件，当事件类型为 SplitMediaComplete 时有效。
+     * @param SplitMediaTask $SplitMediaCompleteEvent 视频拆分完成事件，当事件类型为 SplitMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaTask $ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -344,11 +358,13 @@ class EventContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+     * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent 智能去除水印完成事件，当事件类型为 RemoveWatermark 有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RestoreMediaTask $RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+     * @param RestoreMediaTask $RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为 RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent 溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+     * @param RebuildMediaTask $RebuildMediaCompleteEvent 音画质重生完成事件，当事件类型为 RebuildMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent 溯源水印提取完成事件，当事件类型为 ExtractTraceWatermarkComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -456,6 +472,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("RestoreMediaCompleteEvent",$param) and $param["RestoreMediaCompleteEvent"] !== null) {
             $this->RestoreMediaCompleteEvent = new RestoreMediaTask();
             $this->RestoreMediaCompleteEvent->deserialize($param["RestoreMediaCompleteEvent"]);
+        }
+
+        if (array_key_exists("RebuildMediaCompleteEvent",$param) and $param["RebuildMediaCompleteEvent"] !== null) {
+            $this->RebuildMediaCompleteEvent = new RebuildMediaTask();
+            $this->RebuildMediaCompleteEvent->deserialize($param["RebuildMediaCompleteEvent"]);
         }
 
         if (array_key_exists("ExtractTraceWatermarkCompleteEvent",$param) and $param["ExtractTraceWatermarkCompleteEvent"] !== null) {

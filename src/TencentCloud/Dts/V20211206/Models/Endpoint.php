@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptConn(string $EncryptConn) 设置是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseNetEnv() 获取数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseNetEnv(string $DatabaseNetEnv) 设置数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Endpoint extends AbstractModel
 {
@@ -274,6 +278,12 @@ class Endpoint extends AbstractModel
     public $EncryptConn;
 
     /**
+     * @var string 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseNetEnv;
+
+    /**
      * @param string $Region 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Role tdsql mysql版的节点类型，枚举值为proxy、set
@@ -323,6 +333,8 @@ class Endpoint extends AbstractModel
      * @param string $TmpToken 临时Token，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -436,6 +448,10 @@ class Endpoint extends AbstractModel
 
         if (array_key_exists("EncryptConn",$param) and $param["EncryptConn"] !== null) {
             $this->EncryptConn = $param["EncryptConn"];
+        }
+
+        if (array_key_exists("DatabaseNetEnv",$param) and $param["DatabaseNetEnv"] !== null) {
+            $this->DatabaseNetEnv = $param["DatabaseNetEnv"];
         }
     }
 }

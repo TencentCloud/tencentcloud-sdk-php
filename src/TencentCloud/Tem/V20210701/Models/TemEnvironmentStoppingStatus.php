@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStoppedApplicationNum(integer $StoppedApplicationNum) 设置已经停止的应用数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStopFailedApplicationNum() 获取停止失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStopFailedApplicationNum(integer $StopFailedApplicationNum) 设置停止失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemEnvironmentStoppingStatus extends AbstractModel
 {
@@ -44,9 +48,17 @@ class TemEnvironmentStoppingStatus extends AbstractModel
     public $StoppedApplicationNum;
 
     /**
+     * @var integer 停止失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StopFailedApplicationNum;
+
+    /**
      * @param integer $ApplicationNumNeedToStop 需要停止的应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StoppedApplicationNum 已经停止的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StopFailedApplicationNum 停止失败的应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class TemEnvironmentStoppingStatus extends AbstractModel
 
         if (array_key_exists("StoppedApplicationNum",$param) and $param["StoppedApplicationNum"] !== null) {
             $this->StoppedApplicationNum = $param["StoppedApplicationNum"];
+        }
+
+        if (array_key_exists("StopFailedApplicationNum",$param) and $param["StopFailedApplicationNum"] !== null) {
+            $this->StopFailedApplicationNum = $param["StopFailedApplicationNum"];
         }
     }
 }

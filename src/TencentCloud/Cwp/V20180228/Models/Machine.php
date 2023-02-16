@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getRemark() 获取备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置备注信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Machine extends AbstractModel
 {
@@ -282,6 +286,12 @@ class Machine extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。
@@ -328,6 +338,8 @@ class Machine extends AbstractModel
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
+     * @param string $Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -472,6 +484,10 @@ class Machine extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

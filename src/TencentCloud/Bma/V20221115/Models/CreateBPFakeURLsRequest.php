@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBPFakeURLs请求参数结构体
  *
- * @method string getFakeURLs() 获取仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
- * @method void setFakeURLs(string $FakeURLs) 设置仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
+ * @method string getFakeURLs() 获取批量模版
+ * @method void setFakeURLs(string $FakeURLs) 设置批量模版
  */
 class CreateBPFakeURLsRequest extends AbstractModel
 {
     /**
-     * @var string 仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
+     * @var string 批量模版
      */
     public $FakeURLs;
 
     /**
-     * @param string $FakeURLs 仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
+     * @param string $FakeURLs 批量模版
      */
     function __construct()
     {

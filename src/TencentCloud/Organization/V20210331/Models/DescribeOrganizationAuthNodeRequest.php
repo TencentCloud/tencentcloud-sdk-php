@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。
  * @method integer getLimit() 获取限制数目。最大50
  * @method void setLimit(integer $Limit) 设置限制数目。最大50
+ * @method string getAuthName() 获取互信主体名称。
+ * @method void setAuthName(string $AuthName) 设置互信主体名称。
  */
 class DescribeOrganizationAuthNodeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeOrganizationAuthNodeRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 互信主体名称。
+     */
+    public $AuthName;
+
+    /**
      * @param integer $Offset 偏移量。
      * @param integer $Limit 限制数目。最大50
+     * @param string $AuthName 互信主体名称。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeOrganizationAuthNodeRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("AuthName",$param) and $param["AuthName"] !== null) {
+            $this->AuthName = $param["AuthName"];
         }
     }
 }

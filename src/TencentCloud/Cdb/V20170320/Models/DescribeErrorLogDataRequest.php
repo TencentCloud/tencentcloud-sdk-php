@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method integer getStartTime() 获取开始时间戳。
- * @method void setStartTime(integer $StartTime) 设置开始时间戳。
- * @method integer getEndTime() 获取结束时间戳。
- * @method void setEndTime(integer $EndTime) 设置结束时间戳。
+ * @method integer getStartTime() 获取开始时间戳。例如 1585142640 。
+ * @method void setStartTime(integer $StartTime) 设置开始时间戳。例如 1585142640 。
+ * @method integer getEndTime() 获取结束时间戳。例如 1585142640 。
+ * @method void setEndTime(integer $EndTime) 设置结束时间戳。例如 1585142640 。
  * @method array getKeyWords() 获取要匹配的关键字列表，最多支持15个关键字。
  * @method void setKeyWords(array $KeyWords) 设置要匹配的关键字列表，最多支持15个关键字。
  * @method integer getLimit() 获取分页的返回数量，默认为100，最大为400。
@@ -43,12 +43,12 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 开始时间戳。
+     * @var integer 开始时间戳。例如 1585142640 。
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间戳。
+     * @var integer 结束时间戳。例如 1585142640 。
      */
     public $EndTime;
 
@@ -74,8 +74,8 @@ class DescribeErrorLogDataRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID 。
-     * @param integer $StartTime 开始时间戳。
-     * @param integer $EndTime 结束时间戳。
+     * @param integer $StartTime 开始时间戳。例如 1585142640 。
+     * @param integer $EndTime 结束时间戳。例如 1585142640 。
      * @param array $KeyWords 要匹配的关键字列表，最多支持15个关键字。
      * @param integer $Limit 分页的返回数量，默认为100，最大为400。
      * @param integer $Offset 偏移量，默认为0。

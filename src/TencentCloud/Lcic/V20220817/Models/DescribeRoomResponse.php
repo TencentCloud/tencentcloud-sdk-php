@@ -76,9 +76,13 @@ coteaching 双师
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordUrl(string $RecordUrl) 设置录制地址。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+ * @method integer getStatus() 获取课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+ * @method void setStatus(integer $Status) 设置课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupId() 获取房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -166,10 +170,16 @@ coteaching 双师
     public $RecordUrl;
 
     /**
-     * @var integer 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+     * @var integer 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
+
+    /**
+     * @var string 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -205,7 +215,9 @@ coteaching 双师
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 录制地址。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+     * @param integer $Status 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupId 房间绑定的群组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -276,6 +288,10 @@ coteaching 双师
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

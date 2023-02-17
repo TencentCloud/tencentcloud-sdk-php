@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIgnoreCreateImageRepository() 获取IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIgnoreCreateImageRepository(boolean $IgnoreCreateImageRepository) 设置IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationForPage extends AbstractModel
 {
@@ -154,6 +158,12 @@ class ApplicationForPage extends AbstractModel
     public $ServiceConfigList;
 
     /**
+     * @var boolean IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IgnoreCreateImageRepository;
+
+    /**
      * @param string $ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
@@ -179,6 +189,8 @@ class ApplicationForPage extends AbstractModel
      * @param string $ApplicationRemarkName 应用备注名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServiceConfigList 服务配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IgnoreCreateImageRepository IgnoreCreateImageRepository
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -249,6 +261,10 @@ class ApplicationForPage extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ServiceConfigList, $obj);
             }
+        }
+
+        if (array_key_exists("IgnoreCreateImageRepository",$param) and $param["IgnoreCreateImageRepository"] !== null) {
+            $this->IgnoreCreateImageRepository = $param["IgnoreCreateImageRepository"];
         }
     }
 }

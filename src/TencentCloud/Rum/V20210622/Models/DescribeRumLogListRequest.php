@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOrderBy() 获取排序方式  desc  asc（必填）
  * @method void setOrderBy(string $OrderBy) 设置排序方式  desc  asc（必填）
- * @method string getStartTime() 获取开始时间（必填）
- * @method void setStartTime(string $StartTime) 设置开始时间（必填）
+ * @method string getStartTime() 获取开始时间（必填）格式为时间戳 毫秒
+ * @method void setStartTime(string $StartTime) 设置开始时间（必填）格式为时间戳 毫秒
  * @method integer getLimit() 获取单次查询返回的原始日志条数，最大值为100（必填）
  * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100（必填）
  * @method integer getPage() 获取页数，第几页
  * @method void setPage(integer $Page) 设置页数，第几页
  * @method string getQuery() 获取查询语句，参考控制台请求参数，语句长度最大为4096（必填）
  * @method void setQuery(string $Query) 设置查询语句，参考控制台请求参数，语句长度最大为4096（必填）
- * @method string getEndTime() 获取结束时间（必填）
- * @method void setEndTime(string $EndTime) 设置结束时间（必填）
+ * @method string getEndTime() 获取结束时间（必填）格式为时间戳 毫秒
+ * @method void setEndTime(string $EndTime) 设置结束时间（必填）格式为时间戳 毫秒
  * @method integer getID() 获取项目ID（必填）
  * @method void setID(integer $ID) 设置项目ID（必填）
  */
@@ -43,7 +43,7 @@ class DescribeRumLogListRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string 开始时间（必填）
+     * @var string 开始时间（必填）格式为时间戳 毫秒
      */
     public $StartTime;
 
@@ -63,7 +63,7 @@ class DescribeRumLogListRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var string 结束时间（必填）
+     * @var string 结束时间（必填）格式为时间戳 毫秒
      */
     public $EndTime;
 
@@ -74,11 +74,11 @@ class DescribeRumLogListRequest extends AbstractModel
 
     /**
      * @param string $OrderBy 排序方式  desc  asc（必填）
-     * @param string $StartTime 开始时间（必填）
+     * @param string $StartTime 开始时间（必填）格式为时间戳 毫秒
      * @param integer $Limit 单次查询返回的原始日志条数，最大值为100（必填）
      * @param integer $Page 页数，第几页
      * @param string $Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
-     * @param string $EndTime 结束时间（必填）
+     * @param string $EndTime 结束时间（必填）格式为时间戳 毫秒
      * @param integer $ID 项目ID（必填）
      */
     function __construct()

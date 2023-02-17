@@ -64,9 +64,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineWanIp(string $MachineWanIp) 设置外网ip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMachineStatus() 获取主机在线状态 OFFLINE  ONLINE
+ * @method string getMachineStatus() 获取主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMachineStatus(string $MachineStatus) 设置主机在线状态 OFFLINE  ONLINE
+ * @method void setMachineStatus(string $MachineStatus) 设置主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskDnsList extends AbstractModel
@@ -178,7 +178,7 @@ class RiskDnsList extends AbstractModel
     public $MachineWanIp;
 
     /**
-     * @var string 主机在线状态 OFFLINE  ONLINE
+     * @var string 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineStatus;
@@ -206,7 +206,7 @@ class RiskDnsList extends AbstractModel
      * @param array $Tags 标签特性
      * @param string $MachineWanIp 外网ip
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MachineStatus 主机在线状态 OFFLINE  ONLINE
+     * @param string $MachineStatus 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

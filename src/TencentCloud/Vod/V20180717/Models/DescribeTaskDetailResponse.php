@@ -31,7 +31,8 @@ use TencentCloud\Common\AbstractModel;
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li>
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li>
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -43,7 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li>
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -110,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) 设置智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RebuildMediaTask getRebuildMediaTask() 获取音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRebuildMediaTask(RebuildMediaTask $RebuildMediaTask) 设置音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ExtractTraceWatermarkTask getExtractTraceWatermarkTask() 获取提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) 设置提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
@@ -143,7 +149,8 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li>
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li>
      */
     public $TaskType;
 
@@ -249,6 +256,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $RemoveWatermarkTask;
 
     /**
+     * @var RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RebuildMediaTask;
+
+    /**
      * @var ExtractTraceWatermarkTask 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -289,7 +302,8 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li>
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -322,6 +336,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoveWatermarkTask $RemoveWatermarkTask 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RebuildMediaTask $RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -429,6 +445,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("RemoveWatermarkTask",$param) and $param["RemoveWatermarkTask"] !== null) {
             $this->RemoveWatermarkTask = new RemoveWatermarkTask();
             $this->RemoveWatermarkTask->deserialize($param["RemoveWatermarkTask"]);
+        }
+
+        if (array_key_exists("RebuildMediaTask",$param) and $param["RebuildMediaTask"] !== null) {
+            $this->RebuildMediaTask = new RebuildMediaTask();
+            $this->RebuildMediaTask->deserialize($param["RebuildMediaTask"]);
         }
 
         if (array_key_exists("ExtractTraceWatermarkTask",$param) and $param["ExtractTraceWatermarkTask"] !== null) {

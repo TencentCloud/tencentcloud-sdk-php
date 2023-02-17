@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneIdSet(array $SceneIdSet) 设置镜像关联使用场景Id列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDockerVersion() 获取Docker版本号。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDockerVersion(string $DockerVersion) 设置Docker版本号。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Blueprint extends AbstractModel
 {
@@ -169,6 +173,12 @@ class Blueprint extends AbstractModel
     public $SceneIdSet;
 
     /**
+     * @var string Docker版本号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DockerVersion;
+
+    /**
      * @param string $BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      * @param string $DisplayTitle 镜像对外展示标题。
      * @param string $DisplayVersion 镜像对外展示版本。
@@ -191,6 +201,8 @@ class Blueprint extends AbstractModel
      * @param string $CommunityUrl 官方网站Url。
      * @param string $GuideUrl 指导文章Url。
      * @param array $SceneIdSet 镜像关联使用场景Id列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DockerVersion Docker版本号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -280,6 +292,10 @@ class Blueprint extends AbstractModel
 
         if (array_key_exists("SceneIdSet",$param) and $param["SceneIdSet"] !== null) {
             $this->SceneIdSet = $param["SceneIdSet"];
+        }
+
+        if (array_key_exists("DockerVersion",$param) and $param["DockerVersion"] !== null) {
+            $this->DockerVersion = $param["DockerVersion"];
         }
     }
 }

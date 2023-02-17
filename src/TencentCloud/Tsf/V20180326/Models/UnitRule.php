@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitRuleItemList(array $UnitRuleItemList) 设置规则项列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedTime() 获取CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedTime(string $CreatedTime) 设置CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdatedTime() 获取UpdatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置UpdatedTime
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UnitRule extends AbstractModel
 {
@@ -81,6 +89,18 @@ class UnitRule extends AbstractModel
     public $UnitRuleItemList;
 
     /**
+     * @var string CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedTime;
+
+    /**
+     * @var string UpdatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdatedTime;
+
+    /**
      * @param string $Name 规则名称
      * @param string $Id 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,6 +111,10 @@ class UnitRule extends AbstractModel
      * @param string $Status 使用状态：enabled/disabled
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UnitRuleItemList 规则项列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedTime CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdatedTime UpdatedTime
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -133,6 +157,14 @@ class UnitRule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->UnitRuleItemList, $obj);
             }
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

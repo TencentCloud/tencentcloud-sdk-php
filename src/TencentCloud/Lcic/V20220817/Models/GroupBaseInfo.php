@@ -14,36 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpgradeCDBProxy返回参数结构体
+ * 批量创建群组基础信息
  *
- * @method string getAsyncRequestId() 获取异步处理ID
+ * @method string getGroupName() 获取待创建群组名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步处理ID
+ * @method void setGroupName(string $GroupName) 设置待创建群组名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getTeacherId() 获取群组主讲人ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTeacherId(string $TeacherId) 设置群组主讲人ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class UpgradeCDBProxyResponse extends AbstractModel
+class GroupBaseInfo extends AbstractModel
 {
     /**
-     * @var string 异步处理ID
+     * @var string 待创建群组名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AsyncRequestId;
+    public $GroupName;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public $RequestId;
-
-    /**
-     * @param string $AsyncRequestId 异步处理ID
+     * @var string 群组主讲人ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $TeacherId;
+
+    /**
+     * @param string $GroupName 待创建群组名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TeacherId 群组主讲人ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -58,12 +62,12 @@ class UpgradeCDBProxyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("TeacherId",$param) and $param["TeacherId"] !== null) {
+            $this->TeacherId = $param["TeacherId"];
         }
     }
 }

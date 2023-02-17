@@ -82,6 +82,8 @@ coteaching 双师
 直播开始后不允许修改。
  * @method array getAssistants() 获取助教Id列表。直播开始后不允许修改。
  * @method void setAssistants(array $Assistants) 设置助教Id列表。直播开始后不允许修改。
+ * @method string getGroupId() 获取房间绑定的群组ID
+ * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
  */
 class ModifyRoomRequest extends AbstractModel
 {
@@ -169,6 +171,11 @@ coteaching 双师
     public $Assistants;
 
     /**
+     * @var string 房间绑定的群组ID
+     */
+    public $GroupId;
+
+    /**
      * @param integer $RoomId 房间ID。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。直播开始后不允许修改。
@@ -200,6 +207,7 @@ coteaching 双师
 1 禁止录制
 直播开始后不允许修改。
      * @param array $Assistants 助教Id列表。直播开始后不允许修改。
+     * @param string $GroupId 房间绑定的群组ID
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ coteaching 双师
 
         if (array_key_exists("Assistants",$param) and $param["Assistants"] !== null) {
             $this->Assistants = $param["Assistants"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

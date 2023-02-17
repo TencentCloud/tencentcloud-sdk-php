@@ -368,6 +368,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 2. URL 的域名必须已在云点播中注册。
 3. 单次请求最多指定20个 URL。
 4. 默认预热配额为每天10000个 URL。
+ * @method Models\RebuildMediaResponse RebuildMedia(Models\RebuildMediaRequest $req) 发起音画质重生
  * @method Models\RefreshUrlCacheResponse RefreshUrlCache(Models\RefreshUrlCacheRequest $req) 1. 刷新指定的 URL 列表。
 2. URL 的域名必须已在云点播中注册。
 3. 单次请求最多指定20个 URL。

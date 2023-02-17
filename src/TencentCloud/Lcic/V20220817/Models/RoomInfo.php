@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupId() 获取房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomInfo extends AbstractModel
 {
@@ -174,6 +178,12 @@ class RoomInfo extends AbstractModel
     public $RecordLayout;
 
     /**
+     * @var string 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
+
+    /**
      * @param string $Name 房间名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
@@ -203,6 +213,8 @@ class RoomInfo extends AbstractModel
      * @param integer $AudienceType 观看类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordLayout 录制布局。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupId 房间绑定的群组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,10 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("RecordLayout",$param) and $param["RecordLayout"] !== null) {
             $this->RecordLayout = $param["RecordLayout"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

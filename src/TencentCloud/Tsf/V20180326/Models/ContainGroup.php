@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeInjectEnable(boolean $KubeInjectEnable) 设置KubeInjectEnable值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdatedTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainGroup extends AbstractModel
 {
@@ -184,6 +188,12 @@ class ContainGroup extends AbstractModel
     public $KubeInjectEnable;
 
     /**
+     * @var string 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdatedTime;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -215,6 +225,8 @@ class ContainGroup extends AbstractModel
      * @param string $Alias 部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $KubeInjectEnable KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdatedTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +304,10 @@ class ContainGroup extends AbstractModel
 
         if (array_key_exists("KubeInjectEnable",$param) and $param["KubeInjectEnable"] !== null) {
             $this->KubeInjectEnable = $param["KubeInjectEnable"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

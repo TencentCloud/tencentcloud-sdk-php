@@ -37,6 +37,8 @@ use TencentCloud\Common\AbstractModel;
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
 <li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li>
  * @method void setCodec(string $Codec) 设置音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -54,16 +56,20 @@ use TencentCloud\Common\AbstractModel;
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
 <li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li>
  * @method integer getBitrate() 获取音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
  * @method void setBitrate(integer $Bitrate) 设置音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
  * @method integer getSampleRate() 获取音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
 单位：Hz。
  * @method void setSampleRate(integer $SampleRate) 设置音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -101,6 +107,8 @@ class AudioTemplateInfo extends AbstractModel
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
 <li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li>
      */
     public $Codec;
 
@@ -112,6 +120,7 @@ class AudioTemplateInfo extends AbstractModel
 
     /**
      * @var integer 音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -147,9 +156,12 @@ class AudioTemplateInfo extends AbstractModel
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
 <li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li>
      * @param integer $Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
      * @param integer $SampleRate 音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>

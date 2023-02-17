@@ -45,6 +45,7 @@ use TencentCloud\Ssa\V20180608\Models as Models;
  * @method Models\DescribeVulDetailResponse DescribeVulDetail(Models\DescribeVulDetailRequest $req) 漏洞列表页，获取漏洞详情信息
  * @method Models\DescribeVulListResponse DescribeVulList(Models\DescribeVulListRequest $req) 漏洞管理页，获取漏洞列表
  * @method Models\SaDivulgeDataQueryPubResponse SaDivulgeDataQueryPub(Models\SaDivulgeDataQueryPubRequest $req) 查询【通用字段】【泄露监测数据列表】
+ * @method Models\SaEventPubResponse SaEventPub(Models\SaEventPubRequest $req) 安全事件通用字段
  */
 
 class SsaClient extends AbstractClient

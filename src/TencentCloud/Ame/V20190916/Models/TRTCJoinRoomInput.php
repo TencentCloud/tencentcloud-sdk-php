@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(string $SdkAppId) 设置推流应用ID。
  * @method string getUserId() 获取用户唯一标识。
  * @method void setUserId(string $UserId) 设置用户唯一标识。
+ * @method string getPrivateMapKey() 获取进房钥匙，若需要权限控制请携带该参数。
+ [privateMapKey 权限设置](/document/product/647/32240) 
+ * @method void setPrivateMapKey(string $PrivateMapKey) 设置进房钥匙，若需要权限控制请携带该参数。
+ [privateMapKey 权限设置](/document/product/647/32240) 
+ * @method string getRole() 获取用户角色，目前支持两种角色：
+<li>anchor：主播</li>
+<li>audience：观众</li>
+ * @method void setRole(string $Role) 设置用户角色，目前支持两种角色：
+<li>anchor：主播</li>
+<li>audience：观众</li>
  */
 class TRTCJoinRoomInput extends AbstractModel
 {
@@ -52,10 +62,28 @@ class TRTCJoinRoomInput extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 进房钥匙，若需要权限控制请携带该参数。
+ [privateMapKey 权限设置](/document/product/647/32240) 
+     */
+    public $PrivateMapKey;
+
+    /**
+     * @var string 用户角色，目前支持两种角色：
+<li>anchor：主播</li>
+<li>audience：观众</li>
+     */
+    public $Role;
+
+    /**
      * @param string $Sign 签名。
      * @param string $RoomId 房间号。
      * @param string $SdkAppId 推流应用ID。
      * @param string $UserId 用户唯一标识。
+     * @param string $PrivateMapKey 进房钥匙，若需要权限控制请携带该参数。
+ [privateMapKey 权限设置](/document/product/647/32240) 
+     * @param string $Role 用户角色，目前支持两种角色：
+<li>anchor：主播</li>
+<li>audience：观众</li>
      */
     function __construct()
     {
@@ -84,6 +112,14 @@ class TRTCJoinRoomInput extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("PrivateMapKey",$param) and $param["PrivateMapKey"] !== null) {
+            $this->PrivateMapKey = $param["PrivateMapKey"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

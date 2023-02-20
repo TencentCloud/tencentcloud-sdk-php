@@ -25,10 +25,10 @@ use TencentCloud\Partners\V20180321\Models as Models;
 /**
  * @method Models\AgentPayDealsResponse AgentPayDeals(Models\AgentPayDealsRequest $req) 代理商支付订单接口，支持自付/代付
  * @method Models\AgentTransferMoneyResponse AgentTransferMoney(Models\AgentTransferMoneyRequest $req) 为合作伙伴提供转账给客户能力。仅支持合作伙伴为自己名下客户转账。
- * @method Models\AssignClientsToSalesResponse AssignClientsToSales(Models\AssignClientsToSalesRequest $req) 为代客or申请中代客分派跟进人（业务员）
+ * @method Models\AssignClientsToSalesResponse AssignClientsToSales(Models\AssignClientsToSalesRequest $req) 为代客or申请中代客分派跟进人（业务员），入参可从以下API获取
 - 代客列表获取API： [DescribeAgentAuditedClients](https://cloud.tencent.com/document/product/563/19184)
 - 申请中代客列表获取API：[DescribeAgentClients](https://cloud.tencent.com/document/product/563/16046)
-- 业务员列表获取API：[DescribeSalesmans](https://cloud.tencent.com/document/product/563/35196)
+- 业务员列表获取API：[DescribeSalesmans](https://cloud.tencent.com/document/product/563/35196) <br><br>
  * @method Models\AuditApplyClientResponse AuditApplyClient(Models\AuditApplyClientRequest $req) 代理商可以审核其名下申请中代客
  * @method Models\CreatePayRelationForClientResponse CreatePayRelationForClient(Models\CreatePayRelationForClientRequest $req) 合作伙伴为客户创建强代付关系
  * @method Models\DescribeAgentAuditedClientsResponse DescribeAgentAuditedClients(Models\DescribeAgentAuditedClientsRequest $req) 查询已审核客户列表

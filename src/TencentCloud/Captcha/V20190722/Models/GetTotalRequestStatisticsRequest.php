@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTotalRequestStatistics请求参数结构体
  *
-
+ * @method string getStartTimeStr() 获取开始时间字符串
+ * @method void setStartTimeStr(string $StartTimeStr) 设置开始时间字符串
+ * @method string getEndTimeStr() 获取结束时间字符串
+ * @method void setEndTimeStr(string $EndTimeStr) 设置结束时间字符串
+ * @method string getDimension() 获取查询粒度
+ * @method void setDimension(string $Dimension) 设置查询粒度
  */
 class GetTotalRequestStatisticsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 开始时间字符串
+     */
+    public $StartTimeStr;
 
     /**
+     * @var string 结束时间字符串
+     */
+    public $EndTimeStr;
 
+    /**
+     * @var string 查询粒度
+     */
+    public $Dimension;
+
+    /**
+     * @param string $StartTimeStr 开始时间字符串
+     * @param string $EndTimeStr 结束时间字符串
+     * @param string $Dimension 查询粒度
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class GetTotalRequestStatisticsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("StartTimeStr",$param) and $param["StartTimeStr"] !== null) {
+            $this->StartTimeStr = $param["StartTimeStr"];
+        }
 
+        if (array_key_exists("EndTimeStr",$param) and $param["EndTimeStr"] !== null) {
+            $this->EndTimeStr = $param["EndTimeStr"];
+        }
+
+        if (array_key_exists("Dimension",$param) and $param["Dimension"] !== null) {
+            $this->Dimension = $param["Dimension"];
+        }
     }
 }

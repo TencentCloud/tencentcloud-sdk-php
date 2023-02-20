@@ -40,8 +40,12 @@ use TencentCloud\Common\AbstractModel;
 当 Type 取 Move 时，表示待调整歌曲的位置。
  * @method integer getChangedIndex() 获取当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
  * @method void setChangedIndex(integer $ChangedIndex) 设置当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
- * @method array getMusicIds() 获取歌曲 ID 列表，当 Type 取 Add 时，必填。
- * @method void setMusicIds(array $MusicIds) 设置歌曲 ID 列表，当 Type 取 Add 时，必填。
+ * @method array getMusicIds() 获取歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
+ * @method void setMusicIds(array $MusicIds) 设置歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
+ * @method array getMusicURLs() 获取歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。
+ * @method void setMusicURLs(array $MusicURLs) 设置歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。
  */
 class SetPlaylistCommandInput extends AbstractModel
 {
@@ -68,9 +72,15 @@ class SetPlaylistCommandInput extends AbstractModel
     public $ChangedIndex;
 
     /**
-     * @var array 歌曲 ID 列表，当 Type 取 Add 时，必填。
+     * @var array 歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
      */
     public $MusicIds;
+
+    /**
+     * @var array 歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。
+     */
+    public $MusicURLs;
 
     /**
      * @param string $Type 变更类型，取值有：
@@ -83,7 +93,9 @@ class SetPlaylistCommandInput extends AbstractModel
 当 Type 取 Delete 时，表示待删除歌曲的位置；
 当 Type 取 Move 时，表示待调整歌曲的位置。
      * @param integer $ChangedIndex 当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
-     * @param array $MusicIds 歌曲 ID 列表，当 Type 取 Add 时，必填。
+     * @param array $MusicIds 歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
+     * @param array $MusicURLs 歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。
      */
     function __construct()
     {
@@ -112,6 +124,10 @@ class SetPlaylistCommandInput extends AbstractModel
 
         if (array_key_exists("MusicIds",$param) and $param["MusicIds"] !== null) {
             $this->MusicIds = $param["MusicIds"];
+        }
+
+        if (array_key_exists("MusicURLs",$param) and $param["MusicURLs"] !== null) {
+            $this->MusicURLs = $param["MusicURLs"];
         }
     }
 }

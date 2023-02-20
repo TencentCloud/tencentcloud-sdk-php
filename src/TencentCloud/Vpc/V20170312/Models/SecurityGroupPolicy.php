@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。
  * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
- * @method AddressTemplateSpecification getAddressTemplate() 获取IP地址ID或者ID地址组ID。
- * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) 设置IP地址ID或者ID地址组ID。
+ * @method AddressTemplateSpecification getAddressTemplate() 获取IP地址ID或者IP地址组ID。
+ * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) 设置IP地址ID或者IP地址组ID。
  * @method string getAction() 获取ACCEPT 或 DROP。
  * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
  * @method string getPolicyDescription() 获取安全组规则描述。
@@ -84,7 +84,7 @@ class SecurityGroupPolicy extends AbstractModel
     public $SecurityGroupId;
 
     /**
-     * @var AddressTemplateSpecification IP地址ID或者ID地址组ID。
+     * @var AddressTemplateSpecification IP地址ID或者IP地址组ID。
      */
     public $AddressTemplate;
 
@@ -112,7 +112,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @param string $CidrBlock 网段或IP(互斥)。
      * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
-     * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者ID地址组ID。
+     * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者IP地址组ID。
      * @param string $Action ACCEPT 或 DROP。
      * @param string $PolicyDescription 安全组规则描述。
      * @param string $ModifyTime 安全组最近修改时间。

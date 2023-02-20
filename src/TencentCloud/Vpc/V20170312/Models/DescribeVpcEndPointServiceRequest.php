@@ -21,13 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVpcEndPointService请求参数结构体
  *
  * @method array getFilters() 获取过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取单页返回数量，默认为20，最大值为100。
@@ -39,9 +41,10 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
 {
     /**
      * @var array 过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
      */
     public $Filters;
 
@@ -62,9 +65,10 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
 
     /**
      * @param array $Filters 过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 单页返回数量，默认为20，最大值为100。
      * @param array $EndPointServiceIds 终端节点服务ID。

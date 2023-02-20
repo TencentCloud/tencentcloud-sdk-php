@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironment(string $Environment) 设置Agent运行环境，取值范围：
 <li> Linux：Linux实例
 <li> Windows：Windows实例
+ * @method array getSupportFeatures() 获取Agent 支持的功能列表。
+ * @method void setSupportFeatures(array $SupportFeatures) 设置Agent 支持的功能列表。
  */
 class AutomationAgentInfo extends AbstractModel
 {
@@ -71,6 +73,11 @@ class AutomationAgentInfo extends AbstractModel
     public $Environment;
 
     /**
+     * @var array Agent 支持的功能列表。
+     */
+    public $SupportFeatures;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $Version Agent 版本号。
      * @param string $LastHeartbeatTime 上次心跳时间
@@ -80,6 +87,7 @@ class AutomationAgentInfo extends AbstractModel
      * @param string $Environment Agent运行环境，取值范围：
 <li> Linux：Linux实例
 <li> Windows：Windows实例
+     * @param array $SupportFeatures Agent 支持的功能列表。
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class AutomationAgentInfo extends AbstractModel
 
         if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
             $this->Environment = $param["Environment"];
+        }
+
+        if (array_key_exists("SupportFeatures",$param) and $param["SupportFeatures"] !== null) {
+            $this->SupportFeatures = $param["SupportFeatures"];
         }
     }
 }

@@ -48,13 +48,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(string $StorageType) 设置消费端类型：cls、ckafka。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method FlowLogStorage getFlowLogStorage() 获取消费端信息，当消费端类型为ckafka时返回
+ * @method FlowLogStorage getFlowLogStorage() 获取消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置消费端信息，当消费端类型为ckafka时返回
+ * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCloudLogRegion() 获取流日志存储ID对应的地域信息
+ * @method string getCloudLogRegion() 获取流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCloudLogRegion(string $CloudLogRegion) 设置流日志存储ID对应的地域信息
+ * @method void setCloudLogRegion(string $CloudLogRegion) 设置流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowLog extends AbstractModel
@@ -126,13 +126,13 @@ class FlowLog extends AbstractModel
     public $StorageType;
 
     /**
-     * @var FlowLogStorage 消费端信息，当消费端类型为ckafka时返回
+     * @var FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowLogStorage;
 
     /**
-     * @var string 流日志存储ID对应的地域信息
+     * @var string 流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudLogRegion;
@@ -152,9 +152,9 @@ class FlowLog extends AbstractModel
      * @param boolean $Enable 是否启用，true-启用，false-停用。
      * @param string $StorageType 消费端类型：cls、ckafka。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowLogStorage $FlowLogStorage 消费端信息，当消费端类型为ckafka时返回
+     * @param FlowLogStorage $FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CloudLogRegion 流日志存储ID对应的地域信息
+     * @param string $CloudLogRegion 流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

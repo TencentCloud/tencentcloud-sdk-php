@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DataSaEventPub
  *
- * @method string getTime() 获取受影响资产
- * @method void setTime(string $Time) 设置受影响资产
- * @method integer getEventType1() 获取安全事件名称
- * @method void setEventType1(integer $EventType1) 设置安全事件名称
- * @method integer getEventType2() 获取安全事件1级分类
- * @method void setEventType2(integer $EventType2) 设置安全事件1级分类
- * @method string getEventName() 获取安全事件2级分类
- * @method void setEventName(string $EventName) 设置安全事件2级分类
+ * @method string getTime() 获取时间
+ * @method void setTime(string $Time) 设置时间
+ * @method integer getEventType1() 获取安全事件1级分类
+ * @method void setEventType1(integer $EventType1) 设置安全事件1级分类
+ * @method integer getEventType2() 获取安全事件2级分类
+ * @method void setEventType2(integer $EventType2) 设置安全事件2级分类
+ * @method string getEventName() 获取安全事件名称
+ * @method void setEventName(string $EventName) 设置安全事件名称
  * @method integer getLevel() 获取风险等级
  * @method void setLevel(integer $Level) 设置风险等级
  * @method integer getStatus() 获取安全事件状态
@@ -46,22 +46,22 @@ use TencentCloud\Common\AbstractModel;
 class ListDataSaEventPub extends AbstractModel
 {
     /**
-     * @var string 受影响资产
+     * @var string 时间
      */
     public $Time;
 
     /**
-     * @var integer 安全事件名称
+     * @var integer 安全事件1级分类
      */
     public $EventType1;
 
     /**
-     * @var integer 安全事件1级分类
+     * @var integer 安全事件2级分类
      */
     public $EventType2;
 
     /**
-     * @var string 安全事件2级分类
+     * @var string 安全事件名称
      */
     public $EventName;
 
@@ -101,10 +101,10 @@ class ListDataSaEventPub extends AbstractModel
     public $OldIdMd5;
 
     /**
-     * @param string $Time 受影响资产
-     * @param integer $EventType1 安全事件名称
-     * @param integer $EventType2 安全事件1级分类
-     * @param string $EventName 安全事件2级分类
+     * @param string $Time 时间
+     * @param integer $EventType1 安全事件1级分类
+     * @param integer $EventType2 安全事件2级分类
+     * @param string $EventName 安全事件名称
      * @param integer $Level 风险等级
      * @param integer $Status 安全事件状态
      * @param string $SrcIp 攻击源ip

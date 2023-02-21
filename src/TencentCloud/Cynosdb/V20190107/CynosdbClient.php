@@ -85,6 +85,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口(ModifyInstanceName)用于修改实例名称。
  * @method Models\ModifyMaintainPeriodConfigResponse ModifyMaintainPeriodConfig(Models\ModifyMaintainPeriodConfigRequest $req) 修改维护时间配置
+ * @method Models\ModifyVipVportResponse ModifyVipVport(Models\ModifyVipVportRequest $req) 修改实例组ip，端口
  * @method Models\OfflineClusterResponse OfflineCluster(Models\OfflineClusterRequest $req) 下线集群
  * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) 下线实例
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) TDSQL-C for MySQL实例开通审计服务

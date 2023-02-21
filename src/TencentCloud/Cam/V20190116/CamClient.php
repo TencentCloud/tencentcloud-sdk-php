@@ -54,7 +54,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DescribeOIDCConfigResponse DescribeOIDCConfig(Models\DescribeOIDCConfigRequest $req) 查询角色OIDC配置
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 本接口（DescribeRoleList）用于获取账号下的角色列表。
  * @method Models\DescribeSafeAuthFlagResponse DescribeSafeAuthFlag(Models\DescribeSafeAuthFlagRequest $req) 查询用户安全设置
- * @method Models\DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(Models\DescribeSafeAuthFlagCollRequest $req) 查询安全设置
+ * @method Models\DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(Models\DescribeSafeAuthFlagCollRequest $req) 获取子账号安全设置
  * @method Models\DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(Models\DescribeSafeAuthFlagIntlRequest $req) 查询安全设置(国际站)
  * @method Models\DescribeSubAccountsResponse DescribeSubAccounts(Models\DescribeSubAccountsRequest $req) 通过子用户UIN列表查询子用户
  * @method Models\DescribeUserOIDCConfigResponse DescribeUserOIDCConfig(Models\DescribeUserOIDCConfigRequest $req) 查询用户OIDC配置

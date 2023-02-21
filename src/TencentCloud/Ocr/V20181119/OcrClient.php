@@ -40,6 +40,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\CarInvoiceOCRResponse CarInvoiceOCR(Models\CarInvoiceOCRRequest $req) 本接口支持机动车销售统一发票和二手车销售统一发票的识别，包括发票号码、发票代码、合计金额、合计税额等二十多个字段。
  * @method Models\ClassifyDetectOCRResponse ClassifyDetectOCR(Models\ClassifyDetectOCRRequest $req) 支持身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照的智能分类。
 
+ * @method Models\CreateAIFormTaskResponse CreateAIFormTask(Models\CreateAIFormTaskRequest $req) 本接口可创建智能表单录入任务，支持多个识别图片和PDF的URL上传，返回含有识别内容的操作页面URL。
+
+智能表单录入产品提供高准确率的表单识别技术和人工核对工具，支持自定义字段，将识别结果自动填入到自定义条目中，并提供人工操作工具，完成整个表单识别过程。适用性强，可对票据、合同、货单等文件的识别，适用于金融、货代、保险、档案等领域。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
  * @method Models\DriverLicenseOCRResponse DriverLicenseOCR(Models\DriverLicenseOCRRequest $req) 本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
 
 驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限、发证单位
@@ -260,6 +263,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\GeneralHandwritingOCRResponse GeneralHandwritingOCR(Models\GeneralHandwritingOCRRequest $req) 本接口支持图片内手写体文字的检测和识别，针对手写字体无规则、字迹潦草、模糊等特点进行了识别能力的增强。
 
 默认接口请求频率限制：10次/秒。
+ * @method Models\GetTaskStateResponse GetTaskState(Models\GetTaskStateRequest $req) 支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
  * @method Models\HKIDCardOCRResponse HKIDCardOCR(Models\HKIDCardOCRRequest $req) 本接口支持中国香港身份证人像面中关键字段的识别，包括中文姓名、英文姓名、姓名电码、出生日期、性别、证件符号、首次签发日期、最近领用日期、身份证号、是否是永久性居民身份证；具备防伪识别、人像照片裁剪等扩展功能。
 
 默认接口请求频率限制：5次/秒。
@@ -352,10 +356,12 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(Models\RecognizeOnlineTaxiItineraryOCRRequest $req) 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
  * @method Models\RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(Models\RecognizePhilippinesDrivingLicenseOCRRequest $req) 菲律宾驾驶证识别
  * @method Models\RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(Models\RecognizePhilippinesVoteIDOCRRequest $req) 菲律宾VoteID识别
+ * @method Models\RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(Models\RecognizeTableAccurateOCRRequest $req) 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
+
+默认接口请求频率限制：2次/秒。
  * @method Models\RecognizeTableOCRResponse RecognizeTableOCR(Models\RecognizeTableOCRRequest $req) 本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
  * @method Models\RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(Models\RecognizeThaiIDCardOCRRequest $req) 本接口支持泰国身份证识别，识别字段包括泰文姓名、英文姓名、地址、出生日期、身份证号码。
 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
-
  * @method Models\RecognizeTravelCardOCRResponse RecognizeTravelCardOCR(Models\RecognizeTravelCardOCRRequest $req) 本接口支持通信大数据行程卡识别，包括行程卡颜色、更新时间、途经地、存在中高风险地区的城市、电话号码，五个字段的识别结果输出。
 
 默认接口请求频率限制：20次/秒。

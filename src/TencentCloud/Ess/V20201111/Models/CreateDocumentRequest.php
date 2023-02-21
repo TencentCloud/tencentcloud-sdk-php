@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDocument请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
  * @method string getFlowId() 获取签署流程编号,由CreateFlow接口返回
  * @method void setFlowId(string $FlowId) 设置签署流程编号,由CreateFlow接口返回
  * @method string getTemplateId() 获取用户上传的模板ID
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDocumentRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      */
     public $Operator;
 
@@ -90,7 +90,7 @@ class CreateDocumentRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      * @param string $FlowId 签署流程编号,由CreateFlow接口返回
      * @param string $TemplateId 用户上传的模板ID
      * @param array $FileNames 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起

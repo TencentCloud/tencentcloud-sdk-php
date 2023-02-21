@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最大连麦人数（不包括老师）。取值范围[0, 16]
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubType() 获取房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+ * @method string getSubType() 获取房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubType(string $SubType) 设置房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+ * @method void setSubType(string $SubType) 设置房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTeacherId() 获取老师ID。通过[注册用户]接口获取的UserId。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,7 +118,7 @@ class RoomInfo extends AbstractModel
     public $MaxMicNumber;
 
     /**
-     * @var string 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+     * @var string 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubType;
@@ -194,7 +194,7 @@ class RoomInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+     * @param string $SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TeacherId 老师ID。通过[注册用户]接口获取的UserId。
 注意：此字段可能返回 null，表示取不到有效值。

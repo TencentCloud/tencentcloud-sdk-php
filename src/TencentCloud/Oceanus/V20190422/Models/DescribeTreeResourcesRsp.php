@@ -18,63 +18,52 @@ namespace TencentCloud\Oceanus\V20190422\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTreeResources返回参数结构体
+ * 树状结构资源列表对象
  *
  * @method string getParentId() 获取父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentId(string $ParentId) 设置父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取文件夹ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置文件夹ID
+ * @method string getName() 获取文件夹名称
+ * @method void setName(string $Name) 设置文件夹名称
+ * @method array getItems() 获取文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取文件夹名
+ * @method void setItems(array $Items) 设置文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置文件夹名
+ * @method array getChildren() 获取子节点
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getItems() 获取文件列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(array $Items) 设置文件列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getChildren() 获取子目录列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChildren(array $Children) 设置子目录列表
+ * @method void setChildren(array $Children) 设置子节点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取资源总数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置资源总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTreeResourcesResponse extends AbstractModel
+class DescribeTreeResourcesRsp extends AbstractModel
 {
     /**
      * @var string 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentId;
 
     /**
      * @var string 文件夹ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 文件夹名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 文件夹名称
      */
     public $Name;
 
     /**
-     * @var array 文件列表
+     * @var array 文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
-     * @var array 子目录列表
+     * @var array 子节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Children;
@@ -86,24 +75,15 @@ class DescribeTreeResourcesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public $RequestId;
-
-    /**
      * @param string $ParentId 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 文件夹ID
+     * @param string $Name 文件夹名称
+     * @param array $Items 文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 文件夹名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Items 文件列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Children 子目录列表
+     * @param array $Children 子节点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 资源总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -150,10 +130,6 @@ class DescribeTreeResourcesResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
         }
     }
 }

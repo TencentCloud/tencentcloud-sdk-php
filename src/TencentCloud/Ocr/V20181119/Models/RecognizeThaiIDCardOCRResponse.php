@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpirationDate(string $ExpirationDate) 设置签发日期
  * @method string getEnLastName() 获取英文姓名
  * @method void setEnLastName(string $EnLastName) 设置英文姓名
+ * @method string getPortraitImage() 获取证件人像照片抠取
+ * @method void setPortraitImage(string $PortraitImage) 设置证件人像照片抠取
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -82,6 +84,11 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $EnLastName;
 
     /**
+     * @var string 证件人像照片抠取
+     */
+    public $PortraitImage;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +102,7 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
      * @param string $IssueDate 首次领用日期
      * @param string $ExpirationDate 签发日期
      * @param string $EnLastName 英文姓名
+     * @param string $PortraitImage 证件人像照片抠取
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +148,10 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("EnLastName",$param) and $param["EnLastName"] !== null) {
             $this->EnLastName = $param["EnLastName"];
+        }
+
+        if (array_key_exists("PortraitImage",$param) and $param["PortraitImage"] !== null) {
+            $this->PortraitImage = $param["PortraitImage"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

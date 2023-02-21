@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestVersion(string $LatestVersion) 设置当前版本的最新小版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuntimeVersion() 获取RuntimeVersion
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置RuntimeVersion
+ * @method string getRuntimeLatestVersion() 获取RuntimeLatestVersion
+ * @method void setRuntimeLatestVersion(string $RuntimeLatestVersion) 设置RuntimeLatestVersion
  */
 class UpgradeAbleInstancesItem extends AbstractModel
 {
@@ -48,10 +52,22 @@ class UpgradeAbleInstancesItem extends AbstractModel
     public $LatestVersion;
 
     /**
+     * @var string RuntimeVersion
+     */
+    public $RuntimeVersion;
+
+    /**
+     * @var string RuntimeLatestVersion
+     */
+    public $RuntimeLatestVersion;
+
+    /**
      * @param string $InstanceId 节点Id
      * @param string $Version 节点的当前版本
      * @param string $LatestVersion 当前版本的最新小版本
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuntimeVersion RuntimeVersion
+     * @param string $RuntimeLatestVersion RuntimeLatestVersion
      */
     function __construct()
     {
@@ -76,6 +92,14 @@ class UpgradeAbleInstancesItem extends AbstractModel
 
         if (array_key_exists("LatestVersion",$param) and $param["LatestVersion"] !== null) {
             $this->LatestVersion = $param["LatestVersion"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
+        }
+
+        if (array_key_exists("RuntimeLatestVersion",$param) and $param["RuntimeLatestVersion"] !== null) {
+            $this->RuntimeLatestVersion = $param["RuntimeLatestVersion"];
         }
     }
 }

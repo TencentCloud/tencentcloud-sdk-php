@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlow请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
  * @method string getFlowName() 获取签署流程名称,最大长度200个字符
  * @method void setFlowName(string $FlowName) 设置签署流程名称,最大长度200个字符
  * @method array getApprovers() 获取签署流程参与者信息，最大限制50方
@@ -70,7 +70,7 @@ false：有序签
 class CreateFlowRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      */
     public $Operator;
 
@@ -153,7 +153,7 @@ false：有序签
     public $CcInfos;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署流程参与者信息，最大限制50方
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符

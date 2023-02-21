@@ -55,11 +55,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubType() 获取房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
  * @method void setSubType(string $SubType) 设置房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
  * @method integer getDisableRecord() 获取上课后是否禁止自动录制。可以有以下取值：
 0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
@@ -145,7 +143,6 @@ class DescribeRoomResponse extends AbstractModel
      * @var string 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
      */
     public $SubType;
 
@@ -206,7 +203,6 @@ coteaching 双师
      * @param string $SubType 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
      * @param integer $DisableRecord 上课后是否禁止自动录制。可以有以下取值：
 0 不禁止录制（自动开启录制，默认值）
 1 禁止录制

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartFlow请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
  * @method string getFlowId() 获取签署流程编号，由CreateFlow接口返回
  * @method void setFlowId(string $FlowId) 设置签署流程编号，由CreateFlow接口返回
  * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class StartFlowRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      */
     public $Operator;
 
@@ -52,7 +52,7 @@ class StartFlowRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      * @param string $FlowId 签署流程编号，由CreateFlow接口返回
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      * @param Agent $Agent 应用相关信息

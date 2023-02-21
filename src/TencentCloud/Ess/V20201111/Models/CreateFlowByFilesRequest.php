@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowByFiles请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
  * @method string getFlowName() 获取签署流程名称,最大长度200个字符
  * @method void setFlowName(string $FlowName) 设置签署流程名称,最大长度200个字符
  * @method array getApprovers() 获取签署参与者信息，最大限制50方
@@ -88,7 +88,7 @@ MobileCheck：手机号验证
 class CreateFlowByFilesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
      */
     public $Operator;
 
@@ -192,7 +192,7 @@ MobileCheck：手机号验证
     public $SignBeanTag;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署参与者信息，最大限制50方
      * @param array $FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起

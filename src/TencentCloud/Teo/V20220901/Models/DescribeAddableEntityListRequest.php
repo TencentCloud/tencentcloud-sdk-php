@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
 <li>web-attack：web攻击防护日志；</li>
 <li>web-rule：自定义规则日志；</li>
 <li>web-bot：Bot管理日志。</li>
+ * @method string getArea() 获取服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
+ * @method void setArea(string $Area) 设置服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
  */
 class DescribeAddableEntityListRequest extends AbstractModel
 {
@@ -56,6 +62,13 @@ class DescribeAddableEntityListRequest extends AbstractModel
     public $EntityType;
 
     /**
+     * @var string 服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
+     */
+    public $Area;
+
+    /**
      * @param string $ZoneId 站点ID。
      * @param string $EntityType 推送数据类型，取值有:
 <li>domain：七层加速日志；</li>
@@ -64,6 +77,9 @@ class DescribeAddableEntityListRequest extends AbstractModel
 <li>web-attack：web攻击防护日志；</li>
 <li>web-rule：自定义规则日志；</li>
 <li>web-bot：Bot管理日志。</li>
+     * @param string $Area 服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
      */
     function __construct()
     {
@@ -84,6 +100,10 @@ class DescribeAddableEntityListRequest extends AbstractModel
 
         if (array_key_exists("EntityType",$param) and $param["EntityType"] !== null) {
             $this->EntityType = $param["EntityType"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

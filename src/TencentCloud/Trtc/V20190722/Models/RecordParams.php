@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 Hls 格式录制此参数不生效。
  * @method void setMaxMediaFileDuration(integer $MaxMediaFileDuration) 设置如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
 Hls 格式录制此参数不生效。
+ * @method integer getMediaId() 获取指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMediaId(integer $MediaId) 设置指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordParams extends AbstractModel
 {
@@ -91,6 +95,12 @@ Hls 格式录制此参数不生效。
     public $MaxMediaFileDuration;
 
     /**
+     * @var integer 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MediaId;
+
+    /**
      * @param integer $RecordMode 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
 2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储；
@@ -104,6 +114,8 @@ Hls 格式录制此参数不生效。
      * @param integer $AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
      * @param integer $MaxMediaFileDuration 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
 Hls 格式录制此参数不生效。
+     * @param integer $MediaId 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -145,6 +157,10 @@ Hls 格式录制此参数不生效。
 
         if (array_key_exists("MaxMediaFileDuration",$param) and $param["MaxMediaFileDuration"] !== null) {
             $this->MaxMediaFileDuration = $param["MaxMediaFileDuration"];
+        }
+
+        if (array_key_exists("MediaId",$param) and $param["MediaId"] !== null) {
+            $this->MediaId = $param["MediaId"];
         }
     }
 }

@@ -30,7 +30,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\AddVpcCniSubnetsResponse AddVpcCniSubnets(Models\AddVpcCniSubnetsRequest $req) 针对VPC-CNI模式的集群，增加集群容器网络可使用的子网
  * @method Models\CancelClusterReleaseResponse CancelClusterRelease(Models\CancelClusterReleaseRequest $req) 在应用市场中取消安装失败的应用
  * @method Models\CheckEdgeClusterCIDRResponse CheckEdgeClusterCIDR(Models\CheckEdgeClusterCIDRRequest $req) 检查边缘计算集群的CIDR是否冲突
- * @method Models\CheckInstancesUpgradeAbleResponse CheckInstancesUpgradeAble(Models\CheckInstancesUpgradeAbleRequest $req) 检查给定节点列表中哪些是可升级的 
+ * @method Models\CheckInstancesUpgradeAbleResponse CheckInstancesUpgradeAble(Models\CheckInstancesUpgradeAbleRequest $req) 检查给定节点列表中哪些是可升级的
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建集群
  * @method Models\CreateClusterEndpointResponse CreateClusterEndpoint(Models\CreateClusterEndpointRequest $req) 创建集群访问端口
  * @method Models\CreateClusterEndpointVipResponse CreateClusterEndpointVip(Models\CreateClusterEndpointVipRequest $req) 创建托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
@@ -93,7 +93,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterEndpointStatusResponse DescribeClusterEndpointStatus(Models\DescribeClusterEndpointStatusRequest $req) 查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
  * @method Models\DescribeClusterEndpointVipStatusResponse DescribeClusterEndpointVipStatus(Models\DescribeClusterEndpointVipStatusRequest $req) 查询集群开启端口流程状态(仅支持托管集群外网端口)
  * @method Models\DescribeClusterEndpointsResponse DescribeClusterEndpoints(Models\DescribeClusterEndpointsRequest $req) 获取集群的访问地址，包括内网地址，外网地址，外网域名，外网访问安全策略
- * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req)  查询集群下节点实例信息 
+ * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群下节点实例信息
  * @method Models\DescribeClusterKubeconfigResponse DescribeClusterKubeconfig(Models\DescribeClusterKubeconfigRequest $req) 获取集群的kubeconfig文件，不同子账户获取自己的kubeconfig文件，该文件中有每个子账户自己的kube-apiserver的客户端证书，默认首次调此接口时候创建客户端证书，时效20年，未授予任何权限，如果是集群所有者或者主账户，则默认是cluster-admin权限。
  * @method Models\DescribeClusterLevelAttributeResponse DescribeClusterLevelAttribute(Models\DescribeClusterLevelAttributeRequest $req) 获取集群规模
  * @method Models\DescribeClusterLevelChangeRecordsResponse DescribeClusterLevelChangeRecords(Models\DescribeClusterLevelChangeRecordsRequest $req) 查询集群变配记录

@@ -41,11 +41,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubType() 获取房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
  * @method void setSubType(string $SubType) 设置房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
  * @method string getTeacherId() 获取老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
  * @method void setTeacherId(string $TeacherId) 设置老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
  * @method integer getAutoMic() 获取进入课堂时是否自动连麦。可以有以下取值：
@@ -114,7 +112,6 @@ class CreateRoomRequest extends AbstractModel
      * @var string 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
      */
     public $SubType;
 
@@ -173,7 +170,6 @@ coteaching 双师
      * @param string $SubType 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
      * @param string $TeacherId 老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
      * @param integer $AutoMic 进入课堂时是否自动连麦。可以有以下取值：
 0 不自动连麦（需要手动申请上麦，默认值）

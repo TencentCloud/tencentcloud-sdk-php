@@ -20,92 +20,124 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详情
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method string getInstanceId() 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceName() 获取实例名称。
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。
  * @method integer getPayMode() 获取付费类型，可能的返回值：1-包年包月；0-按量计费
  * @method void setPayMode(integer $PayMode) 设置付费类型，可能的返回值：1-包年包月；0-按量计费
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method integer getClusterType() 获取集群类型，可能的返回值：0-副本集实例，1-分片实例，
- * @method void setClusterType(integer $ClusterType) 设置集群类型，可能的返回值：0-副本集实例，1-分片实例，
- * @method string getRegion() 获取地域信息
- * @method void setRegion(string $Region) 设置地域信息
- * @method string getZone() 获取可用区信息
- * @method void setZone(string $Zone) 设置可用区信息
+ * @method integer getProjectId() 获取项目ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID。
+ * @method integer getClusterType() 获取集群类型，可能的返回值：0-副本集实例，1-分片实例。
+ * @method void setClusterType(integer $ClusterType) 设置集群类型，可能的返回值：0-副本集实例，1-分片实例。
+ * @method string getRegion() 获取地域信息。
+ * @method void setRegion(string $Region) 设置地域信息。
+ * @method string getZone() 获取可用区信息。
+ * @method void setZone(string $Zone) 设置可用区信息。
  * @method integer getNetType() 获取网络类型，可能的返回值：0-基础网络，1-私有网络
  * @method void setNetType(integer $NetType) 设置网络类型，可能的返回值：0-基础网络，1-私有网络
- * @method string getVpcId() 获取私有网络的ID
- * @method void setVpcId(string $VpcId) 设置私有网络的ID
- * @method string getSubnetId() 获取私有网络的子网ID
- * @method void setSubnetId(string $SubnetId) 设置私有网络的子网ID
- * @method integer getStatus() 获取实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
- * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
- * @method string getVip() 获取实例IP
- * @method void setVip(string $Vip) 设置实例IP
- * @method integer getVport() 获取端口号
- * @method void setVport(integer $Vport) 设置端口号
- * @method string getCreateTime() 获取实例创建时间
- * @method void setCreateTime(string $CreateTime) 设置实例创建时间
- * @method string getDeadLine() 获取实例到期时间
- * @method void setDeadLine(string $DeadLine) 设置实例到期时间
- * @method string getMongoVersion() 获取实例版本信息
- * @method void setMongoVersion(string $MongoVersion) 设置实例版本信息
- * @method integer getMemory() 获取实例内存规格，单位为MB
- * @method void setMemory(integer $Memory) 设置实例内存规格，单位为MB
- * @method integer getVolume() 获取实例磁盘规格，单位为MB
- * @method void setVolume(integer $Volume) 设置实例磁盘规格，单位为MB
- * @method integer getCpuNum() 获取实例CPU核心数
- * @method void setCpuNum(integer $CpuNum) 设置实例CPU核心数
- * @method string getMachineType() 获取实例机器类型
- * @method void setMachineType(string $MachineType) 设置实例机器类型
- * @method integer getSecondaryNum() 获取实例从节点数
- * @method void setSecondaryNum(integer $SecondaryNum) 设置实例从节点数
- * @method integer getReplicationSetNum() 获取实例分片数
- * @method void setReplicationSetNum(integer $ReplicationSetNum) 设置实例分片数
- * @method integer getAutoRenewFlag() 获取实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
- * @method integer getUsedVolume() 获取已用容量，单位MB
- * @method void setUsedVolume(integer $UsedVolume) 设置已用容量，单位MB
- * @method string getMaintenanceStart() 获取维护窗口起始时间
- * @method void setMaintenanceStart(string $MaintenanceStart) 设置维护窗口起始时间
- * @method string getMaintenanceEnd() 获取维护窗口结束时间
- * @method void setMaintenanceEnd(string $MaintenanceEnd) 设置维护窗口结束时间
- * @method array getReplicaSets() 获取分片信息
- * @method void setReplicaSets(array $ReplicaSets) 设置分片信息
- * @method array getReadonlyInstances() 获取只读实例信息
- * @method void setReadonlyInstances(array $ReadonlyInstances) 设置只读实例信息
- * @method array getStandbyInstances() 获取灾备实例信息
- * @method void setStandbyInstances(array $StandbyInstances) 设置灾备实例信息
- * @method array getCloneInstances() 获取临时实例信息
- * @method void setCloneInstances(array $CloneInstances) 设置临时实例信息
- * @method DBInstanceInfo getRelatedInstance() 获取关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
- * @method void setRelatedInstance(DBInstanceInfo $RelatedInstance) 设置关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
- * @method array getTags() 获取实例标签信息集合
- * @method void setTags(array $Tags) 设置实例标签信息集合
- * @method integer getInstanceVer() 获取实例版本标记
- * @method void setInstanceVer(integer $InstanceVer) 设置实例版本标记
- * @method integer getClusterVer() 获取实例版本标记
- * @method void setClusterVer(integer $ClusterVer) 设置实例版本标记
- * @method integer getProtocol() 获取协议信息，可能的返回值：1-mongodb，2-dynamodb
- * @method void setProtocol(integer $Protocol) 设置协议信息，可能的返回值：1-mongodb，2-dynamodb
+ * @method string getVpcId() 获取私有网络的ID。
+ * @method void setVpcId(string $VpcId) 设置私有网络的ID。
+ * @method string getSubnetId() 获取私有网络的子网ID。
+ * @method void setSubnetId(string $SubnetId) 设置私有网络的子网ID。
+ * @method integer getStatus() 获取实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+ * @method void setStatus(integer $Status) 设置实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+ * @method string getVip() 获取实例IP。
+ * @method void setVip(string $Vip) 设置实例IP。
+ * @method integer getVport() 获取端口号。
+ * @method void setVport(integer $Vport) 设置端口号。
+ * @method string getCreateTime() 获取实例创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置实例创建时间。
+ * @method string getDeadLine() 获取实例到期时间。
+ * @method void setDeadLine(string $DeadLine) 设置实例到期时间。
+ * @method string getMongoVersion() 获取实例版本信息。
+ * @method void setMongoVersion(string $MongoVersion) 设置实例版本信息。
+ * @method integer getMemory() 获取实例内存规格，单位为MB。
+ * @method void setMemory(integer $Memory) 设置实例内存规格，单位为MB。
+ * @method integer getVolume() 获取实例磁盘规格，单位为MB。
+ * @method void setVolume(integer $Volume) 设置实例磁盘规格，单位为MB。
+ * @method integer getCpuNum() 获取实例CPU核心数。
+ * @method void setCpuNum(integer $CpuNum) 设置实例CPU核心数。
+ * @method string getMachineType() 获取实例机器类型。
+ * @method void setMachineType(string $MachineType) 设置实例机器类型。
+ * @method integer getSecondaryNum() 获取实例从节点数。
+ * @method void setSecondaryNum(integer $SecondaryNum) 设置实例从节点数。
+ * @method integer getReplicationSetNum() 获取实例分片数。
+ * @method void setReplicationSetNum(integer $ReplicationSetNum) 设置实例分片数。
+ * @method integer getAutoRenewFlag() 获取实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+ * @method integer getUsedVolume() 获取已用容量，单位MB。
+ * @method void setUsedVolume(integer $UsedVolume) 设置已用容量，单位MB。
+ * @method string getMaintenanceStart() 获取维护窗口起始时间。
+ * @method void setMaintenanceStart(string $MaintenanceStart) 设置维护窗口起始时间。
+ * @method string getMaintenanceEnd() 获取维护窗口结束时间。
+ * @method void setMaintenanceEnd(string $MaintenanceEnd) 设置维护窗口结束时间。
+ * @method array getReplicaSets() 获取分片信息。
+ * @method void setReplicaSets(array $ReplicaSets) 设置分片信息。
+ * @method array getReadonlyInstances() 获取只读实例信息。
+ * @method void setReadonlyInstances(array $ReadonlyInstances) 设置只读实例信息。
+ * @method array getStandbyInstances() 获取灾备实例信息。
+ * @method void setStandbyInstances(array $StandbyInstances) 设置灾备实例信息。
+ * @method array getCloneInstances() 获取临时实例信息。
+ * @method void setCloneInstances(array $CloneInstances) 设置临时实例信息。
+ * @method DBInstanceInfo getRelatedInstance() 获取关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。
+ * @method void setRelatedInstance(DBInstanceInfo $RelatedInstance) 设置关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。
+ * @method array getTags() 获取实例标签信息集合。
+ * @method void setTags(array $Tags) 设置实例标签信息集合。
+ * @method integer getInstanceVer() 获取实例版本标记。
+ * @method void setInstanceVer(integer $InstanceVer) 设置实例版本标记。
+ * @method integer getClusterVer() 获取实例版本标记。
+ * @method void setClusterVer(integer $ClusterVer) 设置实例版本标记。
+ * @method integer getProtocol() 获取协议信息，可能的返回值：1-mongodb，2-dynamodb。
+ * @method void setProtocol(integer $Protocol) 设置协议信息，可能的返回值：1-mongodb，2-dynamodb。
  * @method integer getInstanceType() 获取实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
  * @method void setInstanceType(integer $InstanceType) 设置实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
  * @method string getInstanceStatusDesc() 获取实例状态描述
  * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述
  * @method string getRealInstanceId() 获取实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
  * @method void setRealInstanceId(string $RealInstanceId) 设置实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+ * @method integer getMongosNodeNum() 获取mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMongosNodeNum(integer $MongosNodeNum) 设置mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMongosMemory() 获取mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMongosMemory(integer $MongosMemory) 设置mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMongosCpuNum() 获取mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMongosCpuNum(integer $MongosCpuNum) 设置mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConfigServerNodeNum() 获取Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigServerNodeNum(integer $ConfigServerNodeNum) 设置Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConfigServerMemory() 获取Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigServerMemory(integer $ConfigServerMemory) 设置Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConfigServerVolume() 获取Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigServerVolume(integer $ConfigServerVolume) 设置Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConfigServerCpuNum() 获取Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigServerCpuNum(integer $ConfigServerCpuNum) 设置Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReadonlyNodeNum() 获取readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) 设置readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string 实例名称。
      */
     public $InstanceName;
 
@@ -115,22 +147,22 @@ class InstanceDetail extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer 项目ID
+     * @var integer 项目ID。
      */
     public $ProjectId;
 
     /**
-     * @var integer 集群类型，可能的返回值：0-副本集实例，1-分片实例，
+     * @var integer 集群类型，可能的返回值：0-副本集实例，1-分片实例。
      */
     public $ClusterType;
 
     /**
-     * @var string 地域信息
+     * @var string 地域信息。
      */
     public $Region;
 
     /**
-     * @var string 可用区信息
+     * @var string 可用区信息。
      */
     public $Zone;
 
@@ -140,137 +172,137 @@ class InstanceDetail extends AbstractModel
     public $NetType;
 
     /**
-     * @var string 私有网络的ID
+     * @var string 私有网络的ID。
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络的子网ID
+     * @var string 私有网络的子网ID。
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
+     * @var integer 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
      */
     public $Status;
 
     /**
-     * @var string 实例IP
+     * @var string 实例IP。
      */
     public $Vip;
 
     /**
-     * @var integer 端口号
+     * @var integer 端口号。
      */
     public $Vport;
 
     /**
-     * @var string 实例创建时间
+     * @var string 实例创建时间。
      */
     public $CreateTime;
 
     /**
-     * @var string 实例到期时间
+     * @var string 实例到期时间。
      */
     public $DeadLine;
 
     /**
-     * @var string 实例版本信息
+     * @var string 实例版本信息。
      */
     public $MongoVersion;
 
     /**
-     * @var integer 实例内存规格，单位为MB
+     * @var integer 实例内存规格，单位为MB。
      */
     public $Memory;
 
     /**
-     * @var integer 实例磁盘规格，单位为MB
+     * @var integer 实例磁盘规格，单位为MB。
      */
     public $Volume;
 
     /**
-     * @var integer 实例CPU核心数
+     * @var integer 实例CPU核心数。
      */
     public $CpuNum;
 
     /**
-     * @var string 实例机器类型
+     * @var string 实例机器类型。
      */
     public $MachineType;
 
     /**
-     * @var integer 实例从节点数
+     * @var integer 实例从节点数。
      */
     public $SecondaryNum;
 
     /**
-     * @var integer 实例分片数
+     * @var integer 实例分片数。
      */
     public $ReplicationSetNum;
 
     /**
-     * @var integer 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
+     * @var integer 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 已用容量，单位MB
+     * @var integer 已用容量，单位MB。
      */
     public $UsedVolume;
 
     /**
-     * @var string 维护窗口起始时间
+     * @var string 维护窗口起始时间。
      */
     public $MaintenanceStart;
 
     /**
-     * @var string 维护窗口结束时间
+     * @var string 维护窗口结束时间。
      */
     public $MaintenanceEnd;
 
     /**
-     * @var array 分片信息
+     * @var array 分片信息。
      */
     public $ReplicaSets;
 
     /**
-     * @var array 只读实例信息
+     * @var array 只读实例信息。
      */
     public $ReadonlyInstances;
 
     /**
-     * @var array 灾备实例信息
+     * @var array 灾备实例信息。
      */
     public $StandbyInstances;
 
     /**
-     * @var array 临时实例信息
+     * @var array 临时实例信息。
      */
     public $CloneInstances;
 
     /**
-     * @var DBInstanceInfo 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
+     * @var DBInstanceInfo 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。
      */
     public $RelatedInstance;
 
     /**
-     * @var array 实例标签信息集合
+     * @var array 实例标签信息集合。
      */
     public $Tags;
 
     /**
-     * @var integer 实例版本标记
+     * @var integer 实例版本标记。
      */
     public $InstanceVer;
 
     /**
-     * @var integer 实例版本标记
+     * @var integer 实例版本标记。
      */
     public $ClusterVer;
 
     /**
-     * @var integer 协议信息，可能的返回值：1-mongodb，2-dynamodb
+     * @var integer 协议信息，可能的返回值：1-mongodb，2-dynamodb。
      */
     public $Protocol;
 
@@ -290,44 +322,108 @@ class InstanceDetail extends AbstractModel
     public $RealInstanceId;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
+     * @var integer mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MongosNodeNum;
+
+    /**
+     * @var integer mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MongosMemory;
+
+    /**
+     * @var integer mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MongosCpuNum;
+
+    /**
+     * @var integer Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigServerNodeNum;
+
+    /**
+     * @var integer Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigServerMemory;
+
+    /**
+     * @var integer Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigServerVolume;
+
+    /**
+     * @var integer Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigServerCpuNum;
+
+    /**
+     * @var integer readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReadonlyNodeNum;
+
+    /**
+     * @param string $InstanceId 实例ID。
+     * @param string $InstanceName 实例名称。
      * @param integer $PayMode 付费类型，可能的返回值：1-包年包月；0-按量计费
-     * @param integer $ProjectId 项目ID
-     * @param integer $ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例，
-     * @param string $Region 地域信息
-     * @param string $Zone 可用区信息
+     * @param integer $ProjectId 项目ID。
+     * @param integer $ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例。
+     * @param string $Region 地域信息。
+     * @param string $Zone 可用区信息。
      * @param integer $NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
-     * @param string $VpcId 私有网络的ID
-     * @param string $SubnetId 私有网络的子网ID
-     * @param integer $Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
-     * @param string $Vip 实例IP
-     * @param integer $Vport 端口号
-     * @param string $CreateTime 实例创建时间
-     * @param string $DeadLine 实例到期时间
-     * @param string $MongoVersion 实例版本信息
-     * @param integer $Memory 实例内存规格，单位为MB
-     * @param integer $Volume 实例磁盘规格，单位为MB
-     * @param integer $CpuNum 实例CPU核心数
-     * @param string $MachineType 实例机器类型
-     * @param integer $SecondaryNum 实例从节点数
-     * @param integer $ReplicationSetNum 实例分片数
-     * @param integer $AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
-     * @param integer $UsedVolume 已用容量，单位MB
-     * @param string $MaintenanceStart 维护窗口起始时间
-     * @param string $MaintenanceEnd 维护窗口结束时间
-     * @param array $ReplicaSets 分片信息
-     * @param array $ReadonlyInstances 只读实例信息
-     * @param array $StandbyInstances 灾备实例信息
-     * @param array $CloneInstances 临时实例信息
-     * @param DBInstanceInfo $RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-     * @param array $Tags 实例标签信息集合
-     * @param integer $InstanceVer 实例版本标记
-     * @param integer $ClusterVer 实例版本标记
-     * @param integer $Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb
+     * @param string $VpcId 私有网络的ID。
+     * @param string $SubnetId 私有网络的子网ID。
+     * @param integer $Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+     * @param string $Vip 实例IP。
+     * @param integer $Vport 端口号。
+     * @param string $CreateTime 实例创建时间。
+     * @param string $DeadLine 实例到期时间。
+     * @param string $MongoVersion 实例版本信息。
+     * @param integer $Memory 实例内存规格，单位为MB。
+     * @param integer $Volume 实例磁盘规格，单位为MB。
+     * @param integer $CpuNum 实例CPU核心数。
+     * @param string $MachineType 实例机器类型。
+     * @param integer $SecondaryNum 实例从节点数。
+     * @param integer $ReplicationSetNum 实例分片数。
+     * @param integer $AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+     * @param integer $UsedVolume 已用容量，单位MB。
+     * @param string $MaintenanceStart 维护窗口起始时间。
+     * @param string $MaintenanceEnd 维护窗口结束时间。
+     * @param array $ReplicaSets 分片信息。
+     * @param array $ReadonlyInstances 只读实例信息。
+     * @param array $StandbyInstances 灾备实例信息。
+     * @param array $CloneInstances 临时实例信息。
+     * @param DBInstanceInfo $RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。
+     * @param array $Tags 实例标签信息集合。
+     * @param integer $InstanceVer 实例版本标记。
+     * @param integer $ClusterVer 实例版本标记。
+     * @param integer $Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb。
      * @param integer $InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      * @param string $InstanceStatusDesc 实例状态描述
      * @param string $RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * @param integer $MongosNodeNum mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MongosMemory mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MongosCpuNum mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConfigServerNodeNum Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConfigServerMemory Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConfigServerVolume Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConfigServerCpuNum Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReadonlyNodeNum readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -518,6 +614,38 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("RealInstanceId",$param) and $param["RealInstanceId"] !== null) {
             $this->RealInstanceId = $param["RealInstanceId"];
+        }
+
+        if (array_key_exists("MongosNodeNum",$param) and $param["MongosNodeNum"] !== null) {
+            $this->MongosNodeNum = $param["MongosNodeNum"];
+        }
+
+        if (array_key_exists("MongosMemory",$param) and $param["MongosMemory"] !== null) {
+            $this->MongosMemory = $param["MongosMemory"];
+        }
+
+        if (array_key_exists("MongosCpuNum",$param) and $param["MongosCpuNum"] !== null) {
+            $this->MongosCpuNum = $param["MongosCpuNum"];
+        }
+
+        if (array_key_exists("ConfigServerNodeNum",$param) and $param["ConfigServerNodeNum"] !== null) {
+            $this->ConfigServerNodeNum = $param["ConfigServerNodeNum"];
+        }
+
+        if (array_key_exists("ConfigServerMemory",$param) and $param["ConfigServerMemory"] !== null) {
+            $this->ConfigServerMemory = $param["ConfigServerMemory"];
+        }
+
+        if (array_key_exists("ConfigServerVolume",$param) and $param["ConfigServerVolume"] !== null) {
+            $this->ConfigServerVolume = $param["ConfigServerVolume"];
+        }
+
+        if (array_key_exists("ConfigServerCpuNum",$param) and $param["ConfigServerCpuNum"] !== null) {
+            $this->ConfigServerCpuNum = $param["ConfigServerCpuNum"];
+        }
+
+        if (array_key_exists("ReadonlyNodeNum",$param) and $param["ReadonlyNodeNum"] !== null) {
+            $this->ReadonlyNodeNum = $param["ReadonlyNodeNum"];
         }
     }
 }

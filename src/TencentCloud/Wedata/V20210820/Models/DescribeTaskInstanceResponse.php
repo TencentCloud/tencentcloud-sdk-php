@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method TaskInstanceDetail getTaskInstanceDetail() 获取任务实例详情
  * @method void setTaskInstanceDetail(TaskInstanceDetail $TaskInstanceDetail) 设置任务实例详情
+ * @method TaskInstanceDetail getData() 获取任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(TaskInstanceDetail $Data) 设置任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class DescribeTaskInstanceResponse extends AbstractModel
     public $TaskInstanceDetail;
 
     /**
+     * @var TaskInstanceDetail 任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param TaskInstanceDetail $TaskInstanceDetail 任务实例详情
+     * @param TaskInstanceDetail $Data 任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +69,11 @@ class DescribeTaskInstanceResponse extends AbstractModel
         if (array_key_exists("TaskInstanceDetail",$param) and $param["TaskInstanceDetail"] !== null) {
             $this->TaskInstanceDetail = new TaskInstanceDetail();
             $this->TaskInstanceDetail->deserialize($param["TaskInstanceDetail"]);
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new TaskInstanceDetail();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

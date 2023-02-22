@@ -118,6 +118,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (for后付费)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPodList() 获取运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodList(array $PodList) 设置运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchTaskDetail extends AbstractModel
 {
@@ -295,6 +299,12 @@ class BatchTaskDetail extends AbstractModel
     public $BillingInfo;
 
     /**
+     * @var array 运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodList;
+
+    /**
      * @param string $BatchTaskId 跑批任务ID
      * @param string $BatchTaskName 跑批任务名称
      * @param string $Uin 主账号uin
@@ -343,6 +353,8 @@ class BatchTaskDetail extends AbstractModel
      * @param string $FailureReason 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PodList 运行中的Pod的名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -500,6 +512,10 @@ class BatchTaskDetail extends AbstractModel
 
         if (array_key_exists("BillingInfo",$param) and $param["BillingInfo"] !== null) {
             $this->BillingInfo = $param["BillingInfo"];
+        }
+
+        if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
+            $this->PodList = $param["PodList"];
         }
     }
 }

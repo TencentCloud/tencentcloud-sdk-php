@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticServiceBandwidth() 获取弹性业务带宽开关
  * @method void setElasticServiceBandwidth(integer $ElasticServiceBandwidth) 设置弹性业务带宽开关
+ * @method integer getGiftServiceBandWidth() 获取赠送的业务带宽
+ * @method void setGiftServiceBandWidth(integer $GiftServiceBandWidth) 设置赠送的业务带宽
  */
 class BGPInstance extends AbstractModel
 {
@@ -189,6 +191,11 @@ class BGPInstance extends AbstractModel
     public $ElasticServiceBandwidth;
 
     /**
+     * @var integer 赠送的业务带宽
+     */
+    public $GiftServiceBandWidth;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPInstanceUsages $Usage 资产实例的使用统计信息
@@ -220,6 +227,7 @@ class BGPInstance extends AbstractModel
      * @param integer $Line 网络线路
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticServiceBandwidth 弹性业务带宽开关
+     * @param integer $GiftServiceBandWidth 赠送的业务带宽
      */
     function __construct()
     {
@@ -319,6 +327,10 @@ class BGPInstance extends AbstractModel
 
         if (array_key_exists("ElasticServiceBandwidth",$param) and $param["ElasticServiceBandwidth"] !== null) {
             $this->ElasticServiceBandwidth = $param["ElasticServiceBandwidth"];
+        }
+
+        if (array_key_exists("GiftServiceBandWidth",$param) and $param["GiftServiceBandWidth"] !== null) {
+            $this->GiftServiceBandWidth = $param["GiftServiceBandWidth"];
         }
     }
 }

@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIdSet(array $InstanceIdSet) 设置已绑定当前定期快照策略的实例ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetentionMonths() 获取该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetentionMonths(integer $RetentionMonths) 设置该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetentionAmount() 获取该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetentionAmount(integer $RetentionAmount) 设置该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AdvancedRetentionPolicy getAdvancedRetentionPolicy() 获取定期快照高级保留策略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) 设置定期快照高级保留策略。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoSnapshotPolicy extends AbstractModel
 {
@@ -124,6 +136,24 @@ class AutoSnapshotPolicy extends AbstractModel
     public $InstanceIdSet;
 
     /**
+     * @var integer 该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetentionMonths;
+
+    /**
+     * @var integer 该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetentionAmount;
+
+    /**
+     * @var AdvancedRetentionPolicy 定期快照高级保留策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancedRetentionPolicy;
+
+    /**
      * @param array $DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
      * @param boolean $IsActivated 定期快照策略是否激活。
      * @param string $AutoSnapshotPolicyState 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
@@ -139,6 +169,12 @@ class AutoSnapshotPolicy extends AbstractModel
      * @param string $CopyToAccountUin 复制的目标账户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceIdSet 已绑定当前定期快照策略的实例ID列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetentionMonths 该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetentionAmount 该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy 定期快照高级保留策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -209,6 +245,19 @@ class AutoSnapshotPolicy extends AbstractModel
 
         if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
             $this->InstanceIdSet = $param["InstanceIdSet"];
+        }
+
+        if (array_key_exists("RetentionMonths",$param) and $param["RetentionMonths"] !== null) {
+            $this->RetentionMonths = $param["RetentionMonths"];
+        }
+
+        if (array_key_exists("RetentionAmount",$param) and $param["RetentionAmount"] !== null) {
+            $this->RetentionAmount = $param["RetentionAmount"];
+        }
+
+        if (array_key_exists("AdvancedRetentionPolicy",$param) and $param["AdvancedRetentionPolicy"] !== null) {
+            $this->AdvancedRetentionPolicy = new AdvancedRetentionPolicy();
+            $this->AdvancedRetentionPolicy->deserialize($param["AdvancedRetentionPolicy"]);
         }
     }
 }

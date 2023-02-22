@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtraAttr(array $ExtraAttr) 设置MongoDB可定义如下的参数: 	['AuthDatabase':'admin', 
 'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseNetEnv() 获取数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseNetEnv(string $DatabaseNetEnv) 设置数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBEndpointInfo extends AbstractModel
 {
@@ -97,6 +101,12 @@ class DBEndpointInfo extends AbstractModel
     public $ExtraAttr;
 
     /**
+     * @var string 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseNetEnv;
+
+    /**
      * @param string $Region 实例所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessType 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
@@ -111,6 +121,8 @@ class DBEndpointInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExtraAttr MongoDB可定义如下的参数: 	['AuthDatabase':'admin', 
 'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -162,6 +174,10 @@ class DBEndpointInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExtraAttr, $obj);
             }
+        }
+
+        if (array_key_exists("DatabaseNetEnv",$param) and $param["DatabaseNetEnv"] !== null) {
+            $this->DatabaseNetEnv = $param["DatabaseNetEnv"];
         }
     }
 }

@@ -18,18 +18,14 @@ namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRealTimeTaskSpeed返回参数结构体
+ * 实时任务同步速度趋势
  *
  * @method array getRecordsSpeedList() 获取同步速度条/s列表
  * @method void setRecordsSpeedList(array $RecordsSpeedList) 设置同步速度条/s列表
  * @method array getBytesSpeedList() 获取同步速度字节/s列表
  * @method void setBytesSpeedList(array $BytesSpeedList) 设置同步速度字节/s列表
- * @method RealTimeTaskSpeed getData() 获取同步速度，包括了RecordsSpeedList和BytesSpeedList
- * @method void setData(RealTimeTaskSpeed $Data) 设置同步速度，包括了RecordsSpeedList和BytesSpeedList
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRealTimeTaskSpeedResponse extends AbstractModel
+class RealTimeTaskSpeed extends AbstractModel
 {
     /**
      * @var array 同步速度条/s列表
@@ -42,20 +38,8 @@ class DescribeRealTimeTaskSpeedResponse extends AbstractModel
     public $BytesSpeedList;
 
     /**
-     * @var RealTimeTaskSpeed 同步速度，包括了RecordsSpeedList和BytesSpeedList
-     */
-    public $Data;
-
-    /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public $RequestId;
-
-    /**
      * @param array $RecordsSpeedList 同步速度条/s列表
      * @param array $BytesSpeedList 同步速度字节/s列表
-     * @param RealTimeTaskSpeed $Data 同步速度，包括了RecordsSpeedList和BytesSpeedList
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -86,15 +70,6 @@ class DescribeRealTimeTaskSpeedResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BytesSpeedList, $obj);
             }
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new RealTimeTaskSpeed();
-            $this->Data->deserialize($param["Data"]);
-        }
-
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
         }
     }
 }

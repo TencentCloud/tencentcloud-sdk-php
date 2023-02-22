@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneZhBak(string $ZoneZhBak) 设置实例所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleUsed() 获取已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleUsed(integer $RuleUsed) 设置已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleMax() 获取实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleMax(integer $RuleMax) 设置实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatInstanceInfo extends AbstractModel
 {
@@ -150,6 +158,18 @@ class NatInstanceInfo extends AbstractModel
     public $ZoneZhBak;
 
     /**
+     * @var integer 已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleUsed;
+
+    /**
+     * @var integer 实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleMax;
+
+    /**
      * @param string $NatinsId nat实例id
      * @param string $NatinsName nat实例名称
      * @param string $Region 实例所在地域
@@ -171,6 +191,10 @@ class NatInstanceInfo extends AbstractModel
      * @param string $ZoneZh 实例所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneZhBak 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleUsed 已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleMax 实例的规则限制最大规格数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +268,14 @@ class NatInstanceInfo extends AbstractModel
 
         if (array_key_exists("ZoneZhBak",$param) and $param["ZoneZhBak"] !== null) {
             $this->ZoneZhBak = $param["ZoneZhBak"];
+        }
+
+        if (array_key_exists("RuleUsed",$param) and $param["RuleUsed"] !== null) {
+            $this->RuleUsed = $param["RuleUsed"];
+        }
+
+        if (array_key_exists("RuleMax",$param) and $param["RuleMax"] !== null) {
+            $this->RuleMax = $param["RuleMax"];
         }
     }
 }

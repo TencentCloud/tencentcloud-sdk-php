@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateProhibition(integer $UpdateProhibition) 设置是否开启更新锁：0=默认不开启，1=开启
  * @method integer getTransferProhibition() 获取是否开启转移锁：0=默认不开启，1=开启
  * @method void setTransferProhibition(integer $TransferProhibition) 设置是否开启转移锁：0=默认不开启，1=开启
+ * @method string getChannelFrom() 获取渠道来源，pc/miniprogram/h5等
+ * @method void setChannelFrom(string $ChannelFrom) 设置渠道来源，pc/miniprogram/h5等
+ * @method string getOrderFrom() 获取订单来源，common正常/dianshi_active点石活动等
+ * @method void setOrderFrom(string $OrderFrom) 设置订单来源，common正常/dianshi_active点石活动等
+ * @method string getActivityId() 获取活动id
+ * @method void setActivityId(string $ActivityId) 设置活动id
  */
 class CreateDomainBatchRequest extends AbstractModel
 {
@@ -86,6 +92,21 @@ class CreateDomainBatchRequest extends AbstractModel
     public $TransferProhibition;
 
     /**
+     * @var string 渠道来源，pc/miniprogram/h5等
+     */
+    public $ChannelFrom;
+
+    /**
+     * @var string 订单来源，common正常/dianshi_active点石活动等
+     */
+    public $OrderFrom;
+
+    /**
+     * @var string 活动id
+     */
+    public $ActivityId;
+
+    /**
      * @param string $TemplateId 模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940)
      * @param integer $Period 购买域名的年限，可选值：[1-10]
      * @param array $Domains 批量购买的域名,最多为4000个
@@ -96,6 +117,9 @@ class CreateDomainBatchRequest extends AbstractModel
      * @param string $PackageResourceId 使用的特惠包ID，PayMode为2时必填
      * @param integer $UpdateProhibition 是否开启更新锁：0=默认不开启，1=开启
      * @param integer $TransferProhibition 是否开启转移锁：0=默认不开启，1=开启
+     * @param string $ChannelFrom 渠道来源，pc/miniprogram/h5等
+     * @param string $OrderFrom 订单来源，common正常/dianshi_active点石活动等
+     * @param string $ActivityId 活动id
      */
     function __construct()
     {
@@ -140,6 +164,18 @@ class CreateDomainBatchRequest extends AbstractModel
 
         if (array_key_exists("TransferProhibition",$param) and $param["TransferProhibition"] !== null) {
             $this->TransferProhibition = $param["TransferProhibition"];
+        }
+
+        if (array_key_exists("ChannelFrom",$param) and $param["ChannelFrom"] !== null) {
+            $this->ChannelFrom = $param["ChannelFrom"];
+        }
+
+        if (array_key_exists("OrderFrom",$param) and $param["OrderFrom"] !== null) {
+            $this->OrderFrom = $param["OrderFrom"];
+        }
+
+        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
+            $this->ActivityId = $param["ActivityId"];
         }
     }
 }

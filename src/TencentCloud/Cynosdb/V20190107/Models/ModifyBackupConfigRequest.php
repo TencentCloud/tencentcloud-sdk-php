@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method integer getReserveDuration() 获取表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+ * @method void setReserveDuration(integer $ReserveDuration) 设置表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
  * @method integer getBackupTimeBeg() 获取表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
  * @method void setBackupTimeBeg(integer $BackupTimeBeg) 设置表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
  * @method integer getBackupTimeEnd() 获取表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
  * @method void setBackupTimeEnd(integer $BackupTimeEnd) 设置表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
- * @method integer getReserveDuration() 获取表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
- * @method void setReserveDuration(integer $ReserveDuration) 设置表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
  * @method array getBackupFreq() 获取该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
  * @method void setBackupFreq(array $BackupFreq) 设置该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
  * @method string getBackupType() 获取该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
@@ -41,6 +41,11 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var integer 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+     */
+    public $ReserveDuration;
+
+    /**
      * @var integer 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
      */
     public $BackupTimeBeg;
@@ -49,11 +54,6 @@ class ModifyBackupConfigRequest extends AbstractModel
      * @var integer 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
      */
     public $BackupTimeEnd;
-
-    /**
-     * @var integer 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
-     */
-    public $ReserveDuration;
 
     /**
      * @var array 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
@@ -67,9 +67,9 @@ class ModifyBackupConfigRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
+     * @param integer $ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
      * @param integer $BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
      * @param integer $BackupTimeEnd 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
-     * @param integer $ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
      * @param array $BackupFreq 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
      * @param string $BackupType 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
      */
@@ -90,16 +90,16 @@ class ModifyBackupConfigRequest extends AbstractModel
             $this->ClusterId = $param["ClusterId"];
         }
 
+        if (array_key_exists("ReserveDuration",$param) and $param["ReserveDuration"] !== null) {
+            $this->ReserveDuration = $param["ReserveDuration"];
+        }
+
         if (array_key_exists("BackupTimeBeg",$param) and $param["BackupTimeBeg"] !== null) {
             $this->BackupTimeBeg = $param["BackupTimeBeg"];
         }
 
         if (array_key_exists("BackupTimeEnd",$param) and $param["BackupTimeEnd"] !== null) {
             $this->BackupTimeEnd = $param["BackupTimeEnd"];
-        }
-
-        if (array_key_exists("ReserveDuration",$param) and $param["ReserveDuration"] !== null) {
-            $this->ReserveDuration = $param["ReserveDuration"];
         }
 
         if (array_key_exists("BackupFreq",$param) and $param["BackupFreq"] !== null) {

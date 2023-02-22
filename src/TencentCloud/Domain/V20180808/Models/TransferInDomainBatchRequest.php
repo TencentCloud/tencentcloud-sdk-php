@@ -44,6 +44,12 @@ false：关闭60天内禁止转移注册商锁定
  * @method void setUpdateProhibition(integer $UpdateProhibition) 设置是否开启更新锁：0=默认不开启，1=开启
  * @method integer getTransferProhibition() 获取是否开启转移锁：0=默认不开启，1=开启
  * @method void setTransferProhibition(integer $TransferProhibition) 设置是否开启转移锁：0=默认不开启，1=开启
+ * @method string getChannelFrom() 获取渠道来源，pc/miniprogram/h5等
+ * @method void setChannelFrom(string $ChannelFrom) 设置渠道来源，pc/miniprogram/h5等
+ * @method string getOrderFrom() 获取订单来源，common正常/dianshi_active点石活动等
+ * @method void setOrderFrom(string $OrderFrom) 设置订单来源，common正常/dianshi_active点石活动等
+ * @method string getActivityId() 获取活动id
+ * @method void setActivityId(string $ActivityId) 设置活动id
  */
 class TransferInDomainBatchRequest extends AbstractModel
 {
@@ -92,6 +98,21 @@ false：关闭60天内禁止转移注册商锁定
     public $TransferProhibition;
 
     /**
+     * @var string 渠道来源，pc/miniprogram/h5等
+     */
+    public $ChannelFrom;
+
+    /**
+     * @var string 订单来源，common正常/dianshi_active点石活动等
+     */
+    public $OrderFrom;
+
+    /**
+     * @var string 活动id
+     */
+    public $ActivityId;
+
+    /**
      * @param array $Domains 转入的域名名称数组。
      * @param array $PassWords 域名转移码数组。
      * @param string $TemplateId 模板ID。
@@ -104,6 +125,9 @@ false：关闭60天内禁止转移注册商锁定
 默认 true
      * @param integer $UpdateProhibition 是否开启更新锁：0=默认不开启，1=开启
      * @param integer $TransferProhibition 是否开启转移锁：0=默认不开启，1=开启
+     * @param string $ChannelFrom 渠道来源，pc/miniprogram/h5等
+     * @param string $OrderFrom 订单来源，common正常/dianshi_active点石活动等
+     * @param string $ActivityId 活动id
      */
     function __construct()
     {
@@ -148,6 +172,18 @@ false：关闭60天内禁止转移注册商锁定
 
         if (array_key_exists("TransferProhibition",$param) and $param["TransferProhibition"] !== null) {
             $this->TransferProhibition = $param["TransferProhibition"];
+        }
+
+        if (array_key_exists("ChannelFrom",$param) and $param["ChannelFrom"] !== null) {
+            $this->ChannelFrom = $param["ChannelFrom"];
+        }
+
+        if (array_key_exists("OrderFrom",$param) and $param["OrderFrom"] !== null) {
+            $this->OrderFrom = $param["OrderFrom"];
+        }
+
+        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
+            $this->ActivityId = $param["ActivityId"];
         }
     }
 }

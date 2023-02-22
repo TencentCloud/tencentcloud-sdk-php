@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunTime(string $RunTime) 设置运行时间
  * @method string getExpireTime() 获取到期时间
  * @method void setExpireTime(string $ExpireTime) 设置到期时间
+ * @method string getHostId() 获取宿主机id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostId(string $HostId) 设置宿主机id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class HostInfo extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string 宿主机id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostId;
+
+    /**
      * @param string $HostIp 宿主机IP
      * @param string $ServiceType 云服务类型
      * @param string $HostStatus 宿主机运行状态
@@ -104,6 +114,8 @@ class HostInfo extends AbstractModel
      * @param integer $MemTotal 内存总数
      * @param string $RunTime 运行时间
      * @param string $ExpireTime 到期时间
+     * @param string $HostId 宿主机id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +168,10 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("HostId",$param) and $param["HostId"] !== null) {
+            $this->HostId = $param["HostId"];
         }
     }
 }

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDDLSql() 获取生成的ddl语句
  * @method void setDDLSql(string $DDLSql) 设置生成的ddl语句
+ * @method string getData() 获取生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(string $Data) 设置生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class GenHiveTableDDLSqlResponse extends AbstractModel
     public $DDLSql;
 
     /**
+     * @var string 生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $DDLSql 生成的ddl语句
+     * @param string $Data 生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,10 @@ class GenHiveTableDDLSqlResponse extends AbstractModel
         }
         if (array_key_exists("DDLSql",$param) and $param["DDLSql"] !== null) {
             $this->DDLSql = $param["DDLSql"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

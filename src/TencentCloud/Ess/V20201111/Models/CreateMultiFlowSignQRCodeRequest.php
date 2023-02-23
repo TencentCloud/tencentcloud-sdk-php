@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码有效天数 默认7天 最高设置不超过90天
  * @method array getRestrictions() 获取限制二维码用户条件
  * @method void setRestrictions(array $Restrictions) 设置限制二维码用户条件
+ * @method string getUserData() 获取用户自定义字段，回调的时候会进行透传，长度需要小于20480
+ * @method void setUserData(string $UserData) 设置用户自定义字段，回调的时候会进行透传，长度需要小于20480
  * @method string getCallbackUrl() 获取回调地址,最大长度1000字符串
 回调时机：
 用户通过签署二维码发起签署流程时，企业额度不足导致失败
@@ -86,6 +88,11 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $Restrictions;
 
     /**
+     * @var string 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     */
+    public $UserData;
+
+    /**
      * @var string 回调地址,最大长度1000字符串
 回调时机：
 用户通过签署二维码发起签署流程时，企业额度不足导致失败
@@ -111,6 +118,7 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @param integer $FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
      * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
      * @param array $Restrictions 限制二维码用户条件
+     * @param string $UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
      * @param string $CallbackUrl 回调地址,最大长度1000字符串
 回调时机：
 用户通过签署二维码发起签署流程时，企业额度不足导致失败
@@ -162,6 +170,10 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Restrictions, $obj);
             }
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {

@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrlDecode(UrlDecodeParam $UrlDecode) 设置Url解析
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LowercaseParam getLowercase() 获取小写字符解析
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLowercase(LowercaseParam $Lowercase) 设置小写字符解析
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ValueParam extends AbstractModel
 {
@@ -121,6 +125,12 @@ class ValueParam extends AbstractModel
     public $UrlDecode;
 
     /**
+     * @var LowercaseParam 小写字符解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Lowercase;
+
+    /**
      * @param string $Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
      * @param ReplaceParam $Replace 替换，TYPE=REPLACE时必传
 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,6 +149,8 @@ class ValueParam extends AbstractModel
      * @param JsonPathReplaceParam $JsonPathReplace JsonPath替换，TYPE=JSON_PATH_REPLACE时必传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UrlDecodeParam $UrlDecode Url解析
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LowercaseParam $Lowercase 小写字符解析
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -200,6 +212,11 @@ class ValueParam extends AbstractModel
         if (array_key_exists("UrlDecode",$param) and $param["UrlDecode"] !== null) {
             $this->UrlDecode = new UrlDecodeParam();
             $this->UrlDecode->deserialize($param["UrlDecode"]);
+        }
+
+        if (array_key_exists("Lowercase",$param) and $param["Lowercase"] !== null) {
+            $this->Lowercase = new LowercaseParam();
+            $this->Lowercase->deserialize($param["Lowercase"]);
         }
     }
 }

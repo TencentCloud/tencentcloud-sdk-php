@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFlowStatistic请求参数结构体
  *
- * @method string getDeviceId() 获取设备ID，ID="-1"时默认查找所有设备
- * @method void setDeviceId(string $DeviceId) 设置设备ID，ID="-1"时默认查找所有设备
+ * @method string getDeviceId() 获取设备ID
+ * @method void setDeviceId(string $DeviceId) 设置设备ID
  * @method integer getBeginTime() 获取开始查找时间
  * @method void setBeginTime(integer $BeginTime) 设置开始查找时间
  * @method integer getEndTime() 获取截止时间
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class GetFlowStatisticRequest extends AbstractModel
 {
     /**
-     * @var string 设备ID，ID="-1"时默认查找所有设备
+     * @var string 设备ID
      */
     public $DeviceId;
 
@@ -59,7 +59,7 @@ class GetFlowStatisticRequest extends AbstractModel
     public $TimeGranularity;
 
     /**
-     * @param string $DeviceId 设备ID，ID="-1"时默认查找所有设备
+     * @param string $DeviceId 设备ID
      * @param integer $BeginTime 开始查找时间
      * @param integer $EndTime 截止时间
      * @param integer $Type 流量种类（1：上行流量，2：下行流量）

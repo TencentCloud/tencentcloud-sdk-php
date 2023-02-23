@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDosageBeginTime(string $DosageBeginTime) 设置用量开始时间
  * @method string getDosageEndTime() 获取用量结束时间
  * @method void setDosageEndTime(string $DosageEndTime) 设置用量结束时间
- * @method string getSubProductCodeName() 获取一级产品类型名称
- * @method void setSubProductCodeName(string $SubProductCodeName) 设置一级产品类型名称
- * @method string getBillingItemCodeName() 获取二级产品类型名称
- * @method void setBillingItemCodeName(string $BillingItemCodeName) 设置二级产品类型名称
+ * @method string getSubProductCodeName() 获取子产品名称
+ * @method void setSubProductCodeName(string $SubProductCodeName) 设置子产品名称
+ * @method string getBillingItemCodeName() 获取计费项名称
+ * @method void setBillingItemCodeName(string $BillingItemCodeName) 设置计费项名称
  * @method string getDosageValue() 获取用量
  * @method void setDosageValue(string $DosageValue) 设置用量
  * @method string getUnit() 获取单位
@@ -53,12 +53,12 @@ class CosDetailSets extends AbstractModel
     public $DosageEndTime;
 
     /**
-     * @var string 一级产品类型名称
+     * @var string 子产品名称
      */
     public $SubProductCodeName;
 
     /**
-     * @var string 二级产品类型名称
+     * @var string 计费项名称
      */
     public $BillingItemCodeName;
 
@@ -76,8 +76,8 @@ class CosDetailSets extends AbstractModel
      * @param string $BucketName 存储桶名称
      * @param string $DosageBeginTime 用量开始时间
      * @param string $DosageEndTime 用量结束时间
-     * @param string $SubProductCodeName 一级产品类型名称
-     * @param string $BillingItemCodeName 二级产品类型名称
+     * @param string $SubProductCodeName 子产品名称
+     * @param string $BillingItemCodeName 计费项名称
      * @param string $DosageValue 用量
      * @param string $Unit 单位
      */

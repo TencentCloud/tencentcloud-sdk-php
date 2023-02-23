@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例名字
  * @method string getLoadBalancerVip() 获取负载均衡实例 VIP
  * @method void setLoadBalancerVip(string $LoadBalancerVip) 设置负载均衡实例 VIP
+ * @method string getLoadBalancerHostname() 获取负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancerHostname(string $LoadBalancerHostname) 设置负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancerStatus extends AbstractModel
 {
@@ -45,9 +49,17 @@ class LoadBalancerStatus extends AbstractModel
     public $LoadBalancerVip;
 
     /**
+     * @var string 负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancerHostname;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param string $LoadBalancerName 负载均衡实例名字
      * @param string $LoadBalancerVip 负载均衡实例 VIP
+     * @param string $LoadBalancerHostname 负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class LoadBalancerStatus extends AbstractModel
 
         if (array_key_exists("LoadBalancerVip",$param) and $param["LoadBalancerVip"] !== null) {
             $this->LoadBalancerVip = $param["LoadBalancerVip"];
+        }
+
+        if (array_key_exists("LoadBalancerHostname",$param) and $param["LoadBalancerHostname"] !== null) {
+            $this->LoadBalancerHostname = $param["LoadBalancerHostname"];
         }
     }
 }

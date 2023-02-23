@@ -54,8 +54,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
- * @method SetVolumeCommandInput getSetVolumeInput() 获取音量，范围 0~100，默认为 50。
- * @method void setSetVolumeInput(SetVolumeCommandInput $SetVolumeInput) 设置音量，范围 0~100，默认为 50。
+ * @method SetVolumeCommandInput getSetVolumeInput() 获取<del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
+ * @method void setSetVolumeInput(SetVolumeCommandInput $SetVolumeInput) 设置<del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
+ * @method SetRealVolumeCommandInput getSetRealVolumeInput() 获取真实音量，范围 0~100，默认为 50。
+ * @method void setSetRealVolumeInput(SetRealVolumeCommandInput $SetRealVolumeInput) 设置真实音量，范围 0~100，默认为 50。
  */
 class KTVRobotInfo extends AbstractModel
 {
@@ -113,9 +115,14 @@ class KTVRobotInfo extends AbstractModel
     public $SetPlayModeInput;
 
     /**
-     * @var SetVolumeCommandInput 音量，范围 0~100，默认为 50。
+     * @var SetVolumeCommandInput <del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
      */
     public $SetVolumeInput;
+
+    /**
+     * @var SetRealVolumeCommandInput 真实音量，范围 0~100，默认为 50。
+     */
+    public $SetRealVolumeInput;
 
     /**
      * @param string $RobotId 机器人Id。
@@ -135,7 +142,8 @@ class KTVRobotInfo extends AbstractModel
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
-     * @param SetVolumeCommandInput $SetVolumeInput 音量，范围 0~100，默认为 50。
+     * @param SetVolumeCommandInput $SetVolumeInput <del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
+     * @param SetRealVolumeCommandInput $SetRealVolumeInput 真实音量，范围 0~100，默认为 50。
      */
     function __construct()
     {
@@ -192,6 +200,11 @@ class KTVRobotInfo extends AbstractModel
         if (array_key_exists("SetVolumeInput",$param) and $param["SetVolumeInput"] !== null) {
             $this->SetVolumeInput = new SetVolumeCommandInput();
             $this->SetVolumeInput->deserialize($param["SetVolumeInput"]);
+        }
+
+        if (array_key_exists("SetRealVolumeInput",$param) and $param["SetRealVolumeInput"] !== null) {
+            $this->SetRealVolumeInput = new SetRealVolumeCommandInput();
+            $this->SetRealVolumeInput->deserialize($param["SetRealVolumeInput"]);
         }
     }
 }

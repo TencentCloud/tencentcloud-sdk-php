@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceBackups返回参数结构体
  *
- * @method integer getTotalCount() 获取备份总数
- * @method void setTotalCount(integer $TotalCount) 设置备份总数
- * @method array getBackupSet() 获取实例的备份数组
- * @method void setBackupSet(array $BackupSet) 设置实例的备份数组
+ * @method integer getTotalCount() 获取备份总数。
+ * @method void setTotalCount(integer $TotalCount) 设置备份总数。
+ * @method array getBackupSet() 获取实例的备份数组。
+ * @method void setBackupSet(array $BackupSet) 设置实例的备份数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceBackupsResponse extends AbstractModel
 {
     /**
-     * @var integer 备份总数
+     * @var integer 备份总数。
      */
     public $TotalCount;
 
     /**
-     * @var array 实例的备份数组
+     * @var array 实例的备份数组。
      */
     public $BackupSet;
 
@@ -45,8 +45,8 @@ class DescribeInstanceBackupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 备份总数
-     * @param array $BackupSet 实例的备份数组
+     * @param integer $TotalCount 备份总数。
+     * @param array $BackupSet 实例的备份数组。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

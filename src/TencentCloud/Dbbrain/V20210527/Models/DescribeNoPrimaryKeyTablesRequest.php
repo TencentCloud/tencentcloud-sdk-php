@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置查询数目，默认为20，最大为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+ * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL，默认为"mysql"。
  */
 class DescribeNoPrimaryKeyTablesRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeNoPrimaryKeyTablesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL，默认为"mysql"。
      */
     public $Product;
 
@@ -63,7 +63,7 @@ class DescribeNoPrimaryKeyTablesRequest extends AbstractModel
      * @param string $Date 查询日期，如2021-05-27，最早为30天前的日期。
      * @param integer $Limit 查询数目，默认为20，最大为100。
      * @param integer $Offset 偏移量，默认为0。
-     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL，默认为"mysql"。
      */
     function __construct()
     {

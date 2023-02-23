@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetStatisticData请求参数结构体
  *
- * @method string getDeviceId() 获取设备ID，设备ID="-1"获取所有设备流量统计
- * @method void setDeviceId(string $DeviceId) 设置设备ID，设备ID="-1"获取所有设备流量统计
+ * @method string getDeviceId() 获取设备ID
+ * @method void setDeviceId(string $DeviceId) 设置设备ID
  * @method integer getBeginTime() 获取统计开始时间，单位：s
  * @method void setBeginTime(integer $BeginTime) 设置统计开始时间，单位：s
  * @method integer getEndTime() 获取统计结束时间，单位：s
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class GetStatisticDataRequest extends AbstractModel
 {
     /**
-     * @var string 设备ID，设备ID="-1"获取所有设备流量统计
+     * @var string 设备ID
      */
     public $DeviceId;
 
@@ -58,7 +58,7 @@ class GetStatisticDataRequest extends AbstractModel
     public $TimeGranularity;
 
     /**
-     * @param string $DeviceId 设备ID，设备ID="-1"获取所有设备流量统计
+     * @param string $DeviceId 设备ID
      * @param integer $BeginTime 统计开始时间，单位：s
      * @param integer $EndTime 统计结束时间，单位：s
      * @param integer $TimeGranularity 聚合粒度：

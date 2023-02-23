@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mna\V20210119\Models;
+namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 网络详细信息
+ * 设置真实音量。
  *
- * @method float getCurrent() 获取流量值（bit）
- * @method void setCurrent(float $Current) 设置流量值（bit）
- * @method string getTime() 获取时间点，单位：s
- * @method void setTime(string $Time) 设置时间点，单位：s
+ * @method integer getRealVolume() 获取真实音量大小，取值范围为 0~100，默认值为 50。
+ * @method void setRealVolume(integer $RealVolume) 设置真实音量大小，取值范围为 0~100，默认值为 50。
  */
-class NetDetails extends AbstractModel
+class SetRealVolumeCommandInput extends AbstractModel
 {
     /**
-     * @var float 流量值（bit）
+     * @var integer 真实音量大小，取值范围为 0~100，默认值为 50。
      */
-    public $Current;
+    public $RealVolume;
 
     /**
-     * @var string 时间点，单位：s
-     */
-    public $Time;
-
-    /**
-     * @param float $Current 流量值（bit）
-     * @param string $Time 时间点，单位：s
+     * @param integer $RealVolume 真实音量大小，取值范围为 0~100，默认值为 50。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class NetDetails extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Current",$param) and $param["Current"] !== null) {
-            $this->Current = $param["Current"];
-        }
-
-        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
-            $this->Time = $param["Time"];
+        if (array_key_exists("RealVolume",$param) and $param["RealVolume"] !== null) {
+            $this->RealVolume = $param["RealVolume"];
         }
     }
 }

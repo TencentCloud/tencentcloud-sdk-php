@@ -20,38 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetworkConfig返回参数结构体
  *
- * @method boolean getStatus() 获取执行状态：true|false
- * @method void setStatus(boolean $Status) 设置执行状态：true|false
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getVpcId() 获取私有网络ID
- * @method void setVpcId(string $VpcId) 设置私有网络ID
- * @method string getVip() 获取VIP地址
- * @method void setVip(string $Vip) 设置VIP地址
+ * @method boolean getStatus() 获取执行状态，请忽略该参数。
+ * @method void setStatus(boolean $Status) 设置执行状态，请忽略该参数。
+ * @method string getSubnetId() 获取指实例新私有网络所属子网 ID。
+ * @method void setSubnetId(string $SubnetId) 设置指实例新私有网络所属子网 ID。
+ * @method string getVpcId() 获取指实例新的私有网络ID。
+ * @method void setVpcId(string $VpcId) 设置指实例新的私有网络ID。
+ * @method string getVip() 获取指实例新的内网 IPv4 地址。
+ * @method void setVip(string $Vip) 设置指实例新的内网 IPv4 地址。
+ * @method integer getTaskId() 获取任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+ * @method void setTaskId(integer $TaskId) 设置任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyNetworkConfigResponse extends AbstractModel
 {
     /**
-     * @var boolean 执行状态：true|false
+     * @var boolean 执行状态，请忽略该参数。
      */
     public $Status;
 
     /**
-     * @var string 子网ID
+     * @var string 指实例新私有网络所属子网 ID。
      */
     public $SubnetId;
 
     /**
-     * @var string 私有网络ID
+     * @var string 指实例新的私有网络ID。
      */
     public $VpcId;
 
     /**
-     * @var string VIP地址
+     * @var string 指实例新的内网 IPv4 地址。
      */
     public $Vip;
+
+    /**
+     * @var integer 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+     */
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +66,11 @@ class ModifyNetworkConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Status 执行状态：true|false
-     * @param string $SubnetId 子网ID
-     * @param string $VpcId 私有网络ID
-     * @param string $Vip VIP地址
+     * @param boolean $Status 执行状态，请忽略该参数。
+     * @param string $SubnetId 指实例新私有网络所属子网 ID。
+     * @param string $VpcId 指实例新的私有网络ID。
+     * @param string $Vip 指实例新的内网 IPv4 地址。
+     * @param integer $TaskId 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,10 @@ class ModifyNetworkConfigResponse extends AbstractModel
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

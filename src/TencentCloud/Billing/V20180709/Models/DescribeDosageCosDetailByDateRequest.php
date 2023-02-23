@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDosageCosDetailByDate请求参数结构体
  *
- * @method string getStartDate() 获取查询用量开始时间
- * @method void setStartDate(string $StartDate) 设置查询用量开始时间
- * @method string getEndDate() 获取查询用量结束时间（与开始时间同月，不支持跨月查询）
- * @method void setEndDate(string $EndDate) 设置查询用量结束时间（与开始时间同月，不支持跨月查询）
+ * @method string getStartDate() 获取查询用量开始时间，例如：2020-09-01
+ * @method void setStartDate(string $StartDate) 设置查询用量开始时间，例如：2020-09-01
+ * @method string getEndDate() 获取查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
+ * @method void setEndDate(string $EndDate) 设置查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
  * @method string getBucketName() 获取COS 存储桶名称，可通过Get Service 接口是用来获取请求者名下的所有存储空间列表（Bucket list）https://cloud.tencent.com/document/product/436/8291
  * @method void setBucketName(string $BucketName) 设置COS 存储桶名称，可通过Get Service 接口是用来获取请求者名下的所有存储空间列表（Bucket list）https://cloud.tencent.com/document/product/436/8291
  */
 class DescribeDosageCosDetailByDateRequest extends AbstractModel
 {
     /**
-     * @var string 查询用量开始时间
+     * @var string 查询用量开始时间，例如：2020-09-01
      */
     public $StartDate;
 
     /**
-     * @var string 查询用量结束时间（与开始时间同月，不支持跨月查询）
+     * @var string 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
      */
     public $EndDate;
 
@@ -45,8 +45,8 @@ class DescribeDosageCosDetailByDateRequest extends AbstractModel
     public $BucketName;
 
     /**
-     * @param string $StartDate 查询用量开始时间
-     * @param string $EndDate 查询用量结束时间（与开始时间同月，不支持跨月查询）
+     * @param string $StartDate 查询用量开始时间，例如：2020-09-01
+     * @param string $EndDate 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
      * @param string $BucketName COS 存储桶名称，可通过Get Service 接口是用来获取请求者名下的所有存储空间列表（Bucket list）https://cloud.tencent.com/document/product/436/8291
      */
     function __construct()

@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置监听器协议类型。
  * @method integer getPort() 获取监听器端口。
  * @method void setPort(integer $Port) 设置监听器端口。
+ * @method array getFilters() 获取查询负载均衡绑定的后端服务列表，过滤条件如下：
+<li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
+<li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+ * @method void setFilters(array $Filters) 设置查询负载均衡绑定的后端服务列表，过滤条件如下：
+<li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
+<li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
  */
 class DescribeTargetsRequest extends AbstractModel
 {
@@ -52,10 +58,20 @@ class DescribeTargetsRequest extends AbstractModel
     public $Port;
 
     /**
+     * @var array 查询负载均衡绑定的后端服务列表，过滤条件如下：
+<li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
+<li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+     */
+    public $Filters;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param array $ListenerIds 监听器 ID 列表。ID 数量上限为20个。
      * @param string $Protocol 监听器协议类型。
      * @param integer $Port 监听器端口。
+     * @param array $Filters 查询负载均衡绑定的后端服务列表，过滤条件如下：
+<li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
+<li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
      */
     function __construct()
     {
@@ -84,6 +100,15 @@ class DescribeTargetsRequest extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

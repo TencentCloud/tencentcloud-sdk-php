@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(string $InstanceIds) 设置已经废弃， 使用InstanceIdList
  * @method array getInstanceIdList() 获取按照实例ID过滤
  * @method void setInstanceIdList(array $InstanceIdList) 设置按照实例ID过滤
+ * @method array getTagList() 获取根据标签列表过滤实例（取交集）
+ * @method void setTagList(array $TagList) 设置根据标签列表过滤实例（取交集）
  */
 class DescribeInstancesDetailRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $InstanceIdList;
 
     /**
+     * @var array 根据标签列表过滤实例（取交集）
+     */
+    public $TagList;
+
+    /**
      * @param string $InstanceId （过滤条件）按照实例ID过滤
      * @param string $SearchWord （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
      * @param array $Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
@@ -96,6 +103,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
      * @param array $Filters 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
      * @param string $InstanceIds 已经废弃， 使用InstanceIdList
      * @param array $InstanceIdList 按照实例ID过滤
+     * @param array $TagList 根据标签列表过滤实例（取交集）
      */
     function __construct()
     {
@@ -149,6 +157,15 @@ class DescribeInstancesDetailRequest extends AbstractModel
 
         if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
             $this->InstanceIdList = $param["InstanceIdList"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

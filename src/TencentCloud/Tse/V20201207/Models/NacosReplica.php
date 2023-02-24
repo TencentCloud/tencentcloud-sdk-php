@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(string $ZoneId) 设置可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcId() 获取VPC ID	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcId(string $VpcId) 设置VPC ID	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NacosReplica extends AbstractModel
 {
@@ -75,6 +79,12 @@ class NacosReplica extends AbstractModel
     public $ZoneId;
 
     /**
+     * @var string VPC ID	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcId;
+
+    /**
      * @param string $Name 名称
      * @param string $Role 角色
      * @param string $Status 状态
@@ -83,6 +93,8 @@ class NacosReplica extends AbstractModel
      * @param string $Zone 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneId 可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcId VPC ID	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -120,6 +132,10 @@ class NacosReplica extends AbstractModel
 
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

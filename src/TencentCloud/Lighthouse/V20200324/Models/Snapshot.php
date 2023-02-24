@@ -63,7 +63,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Snapshot extends AbstractModel
 {
@@ -130,6 +132,7 @@ class Snapshot extends AbstractModel
 
     /**
      * @var string 快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
@@ -156,6 +159,7 @@ class Snapshot extends AbstractModel
      * @param string $LatestOperationRequestId 快照最新操作的唯一请求 ID，只有创建、回滚快照时记录。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡的唯一ID
  * @method string getLoadBalancerName() 获取负载均衡实例名称
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例名称
- * @method TargetRegionInfo getTargetRegionInfo() 获取负载均衡绑定的后端服务的地域信息
- * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置负载均衡绑定的后端服务的地域信息
+ * @method TargetRegionInfo getTargetRegionInfo() 获取设置负载均衡跨地域绑定1.0的后端服务信息
+ * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置设置负载均衡跨地域绑定1.0的后端服务信息
  * @method InternetAccessible getInternetChargeInfo() 获取网络计费相关参数
  * @method void setInternetChargeInfo(InternetAccessible $InternetChargeInfo) 设置网络计费相关参数
  * @method boolean getLoadBalancerPassToTarget() 获取Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
- * @method boolean getSnatPro() 获取是否开启SnatPro
- * @method void setSnatPro(boolean $SnatPro) 设置是否开启SnatPro
+ * @method boolean getSnatPro() 获取是否开启跨地域绑定2.0功能
+ * @method void setSnatPro(boolean $SnatPro) 设置是否开启跨地域绑定2.0功能
  * @method boolean getDeleteProtect() 获取是否开启删除保护
  * @method void setDeleteProtect(boolean $DeleteProtect) 设置是否开启删除保护
  */
@@ -48,7 +48,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $LoadBalancerName;
 
     /**
-     * @var TargetRegionInfo 负载均衡绑定的后端服务的地域信息
+     * @var TargetRegionInfo 设置负载均衡跨地域绑定1.0的后端服务信息
      */
     public $TargetRegionInfo;
 
@@ -63,7 +63,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $LoadBalancerPassToTarget;
 
     /**
-     * @var boolean 是否开启SnatPro
+     * @var boolean 是否开启跨地域绑定2.0功能
      */
     public $SnatPro;
 
@@ -75,10 +75,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId 负载均衡的唯一ID
      * @param string $LoadBalancerName 负载均衡实例名称
-     * @param TargetRegionInfo $TargetRegionInfo 负载均衡绑定的后端服务的地域信息
+     * @param TargetRegionInfo $TargetRegionInfo 设置负载均衡跨地域绑定1.0的后端服务信息
      * @param InternetAccessible $InternetChargeInfo 网络计费相关参数
      * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
-     * @param boolean $SnatPro 是否开启SnatPro
+     * @param boolean $SnatPro 是否开启跨地域绑定2.0功能
      * @param boolean $DeleteProtect 是否开启删除保护
      */
     function __construct()

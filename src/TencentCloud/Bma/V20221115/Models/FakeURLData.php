@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFakeURL(string $FakeURL) 设置仿冒网址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFakeDomain() 获取仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFakeDomain(string $FakeDomain) 设置仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeat() 获取热度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeat(integer $Heat) 设置热度
@@ -122,6 +126,12 @@ class FakeURLData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FakeURL;
+
+    /**
+     * @var string 仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FakeDomain;
 
     /**
      * @var integer 热度
@@ -222,6 +232,8 @@ class FakeURLData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FakeURL 仿冒网址
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FakeDomain 仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Heat 热度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BlockStatus 协助处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
@@ -280,6 +292,10 @@ class FakeURLData extends AbstractModel
 
         if (array_key_exists("FakeURL",$param) and $param["FakeURL"] !== null) {
             $this->FakeURL = $param["FakeURL"];
+        }
+
+        if (array_key_exists("FakeDomain",$param) and $param["FakeDomain"] !== null) {
+            $this->FakeDomain = $param["FakeDomain"];
         }
 
         if (array_key_exists("Heat",$param) and $param["Heat"] !== null) {

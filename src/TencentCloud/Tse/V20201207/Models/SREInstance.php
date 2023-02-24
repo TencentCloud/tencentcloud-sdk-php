@@ -124,6 +124,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionInfos(array $RegionInfos) 设置实例地域相关的描述信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEKSType() 获取所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEKSType(string $EKSType) 设置所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFeatureVersion() 获取引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeatureVersion(string $FeatureVersion) 设置引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableClientIntranet() 获取引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableClientIntranet(boolean $EnableClientIntranet) 设置引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -300,6 +312,24 @@ class SREInstance extends AbstractModel
     public $RegionInfos;
 
     /**
+     * @var string 所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EKSType;
+
+    /**
+     * @var string 引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeatureVersion;
+
+    /**
+     * @var boolean 引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableClientIntranet;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -351,6 +381,12 @@ class SREInstance extends AbstractModel
      * @param string $IsolateTime 隔离开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RegionInfos 实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EKSType 所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FeatureVersion 引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableClientIntranet 引擎实例是否开启客户端内网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -509,6 +545,18 @@ class SREInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RegionInfos, $obj);
             }
+        }
+
+        if (array_key_exists("EKSType",$param) and $param["EKSType"] !== null) {
+            $this->EKSType = $param["EKSType"];
+        }
+
+        if (array_key_exists("FeatureVersion",$param) and $param["FeatureVersion"] !== null) {
+            $this->FeatureVersion = $param["FeatureVersion"];
+        }
+
+        if (array_key_exists("EnableClientIntranet",$param) and $param["EnableClientIntranet"] !== null) {
+            $this->EnableClientIntranet = $param["EnableClientIntranet"];
         }
     }
 }

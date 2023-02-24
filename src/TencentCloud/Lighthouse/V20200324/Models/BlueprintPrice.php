@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalBlueprintPrice(float $OriginalBlueprintPrice) 设置镜像单价，原价。单位元。
  * @method float getOriginalPrice() 获取镜像总价，原价。单位元。
  * @method void setOriginalPrice(float $OriginalPrice) 设置镜像总价，原价。单位元。
- * @method integer getDiscount() 获取折扣。
- * @method void setDiscount(integer $Discount) 设置折扣。
+ * @method float getDiscount() 获取折扣。
+ * @method void setDiscount(float $Discount) 设置折扣。
  * @method float getDiscountPrice() 获取镜像折扣后总价。单位元。
  * @method void setDiscountPrice(float $DiscountPrice) 设置镜像折扣后总价。单位元。
  */
@@ -42,7 +42,7 @@ class BlueprintPrice extends AbstractModel
     public $OriginalPrice;
 
     /**
-     * @var integer 折扣。
+     * @var float 折扣。
      */
     public $Discount;
 
@@ -54,7 +54,7 @@ class BlueprintPrice extends AbstractModel
     /**
      * @param float $OriginalBlueprintPrice 镜像单价，原价。单位元。
      * @param float $OriginalPrice 镜像总价，原价。单位元。
-     * @param integer $Discount 折扣。
+     * @param float $Discount 折扣。
      * @param float $DiscountPrice 镜像折扣后总价。单位元。
      */
     function __construct()

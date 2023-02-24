@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllIpDone(boolean $AllIpDone) 设置所有服务IP是否已经ready
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExternalDomain() 获取clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExternalDomain(string $ExternalDomain) 设置clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EksService extends AbstractModel
 {
@@ -184,6 +188,12 @@ class EksService extends AbstractModel
     public $AllIpDone;
 
     /**
+     * @var string clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExternalDomain;
+
+    /**
      * @param string $Name service name
      * @param array $Ports 可用端口
      * @param string $Yaml yaml 内容
@@ -215,6 +225,8 @@ class EksService extends AbstractModel
      * @param string $ApplicationId 返回应用id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllIpDone 所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExternalDomain clb 域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -302,6 +314,10 @@ class EksService extends AbstractModel
 
         if (array_key_exists("AllIpDone",$param) and $param["AllIpDone"] !== null) {
             $this->AllIpDone = $param["AllIpDone"];
+        }
+
+        if (array_key_exists("ExternalDomain",$param) and $param["ExternalDomain"] !== null) {
+            $this->ExternalDomain = $param["ExternalDomain"];
         }
     }
 }

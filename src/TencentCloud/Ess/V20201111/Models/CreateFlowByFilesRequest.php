@@ -70,8 +70,6 @@ false：有序签
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
  * @method string getUserData() 获取用户自定义字段，回调的时候会进行透传，长度需要小于20480
  * @method void setUserData(string $UserData) 设置用户自定义字段，回调的时候会进行透传，长度需要小于20480
- * @method Agent getAgent() 获取应用号信息
- * @method void setAgent(Agent $Agent) 设置应用号信息
  * @method string getApproverVerifyType() 获取签署人校验方式
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
@@ -84,6 +82,8 @@ MobileCheck：手机号验证
  * @method void setFlowDescription(string $FlowDescription) 设置签署流程描述,最大长度1000个字符
  * @method integer getSignBeanTag() 获取标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
  * @method void setSignBeanTag(integer $SignBeanTag) 设置标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class CreateFlowByFilesRequest extends AbstractModel
 {
@@ -169,11 +169,6 @@ false：有序签
     public $UserData;
 
     /**
-     * @var Agent 应用号信息
-     */
-    public $Agent;
-
-    /**
      * @var string 签署人校验方式
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
@@ -190,6 +185,11 @@ MobileCheck：手机号验证
      * @var integer 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
      */
     public $SignBeanTag;
+
+    /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
 
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
@@ -217,13 +217,13 @@ false：有序签
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      * @param string $UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
-     * @param Agent $Agent 应用号信息
      * @param string $ApproverVerifyType 签署人校验方式
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      * @param string $FlowDescription 签署流程描述,最大长度1000个字符
      * @param integer $SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -310,11 +310,6 @@ MobileCheck：手机号验证
             $this->UserData = $param["UserData"];
         }
 
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
-        }
-
         if (array_key_exists("ApproverVerifyType",$param) and $param["ApproverVerifyType"] !== null) {
             $this->ApproverVerifyType = $param["ApproverVerifyType"];
         }
@@ -325,6 +320,11 @@ MobileCheck：手机号验证
 
         if (array_key_exists("SignBeanTag",$param) and $param["SignBeanTag"] !== null) {
             $this->SignBeanTag = $param["SignBeanTag"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

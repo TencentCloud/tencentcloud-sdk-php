@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 预览链接有效期300秒；
  * @method integer getPreviewType() 获取预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
  * @method void setPreviewType(integer $PreviewType) 设置预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
  */
@@ -80,7 +80,7 @@ class CreateDocumentRequest extends AbstractModel
     public $PreviewType;
 
     /**
-     * @var Agent 应用相关信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
@@ -98,7 +98,7 @@ class CreateDocumentRequest extends AbstractModel
      * @param boolean $NeedPreview 是否需要生成预览文件 默认不生成；
 预览链接有效期300秒；
      * @param integer $PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
-     * @param Agent $Agent 应用相关信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
     function __construct()

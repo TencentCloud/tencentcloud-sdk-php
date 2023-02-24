@@ -63,6 +63,8 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeDatahubGroupOffsetsResponse DescribeDatahubGroupOffsets(Models\DescribeDatahubGroupOffsetsRequest $req) 获取Datahub消费分组offset
  * @method Models\DescribeDatahubTaskResponse DescribeDatahubTask(Models\DescribeDatahubTaskRequest $req) 查询Datahub任务信息
  * @method Models\DescribeDatahubTasksResponse DescribeDatahubTasks(Models\DescribeDatahubTasksRequest $req) 查询Datahub任务列表 
+ * @method Models\DescribeDatahubTopicResponse DescribeDatahubTopic(Models\DescribeDatahubTopicRequest $req) 获取Datahub主题属性
+ * @method Models\DescribeDatahubTopicsResponse DescribeDatahubTopics(Models\DescribeDatahubTopicsRequest $req) 查询DIP主题列表
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 枚举消费分组(精简版)
  * @method Models\DescribeGroupInfoResponse DescribeGroupInfo(Models\DescribeGroupInfoRequest $req) 获取消费分组信息
  * @method Models\DescribeGroupOffsetsResponse DescribeGroupOffsets(Models\DescribeGroupOffsetsRequest $req) 获取消费分组offset

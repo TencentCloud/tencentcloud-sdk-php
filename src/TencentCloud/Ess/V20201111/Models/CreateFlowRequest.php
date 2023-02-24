@@ -60,8 +60,8 @@ false：有序签
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
  * @method string getCallbackUrl() 获取暂未开放
  * @method void setCallbackUrl(string $CallbackUrl) 设置暂未开放
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method array getCcInfos() 获取被抄送人的信息列表。
 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
  * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表。
@@ -142,7 +142,7 @@ false：有序签
     public $CallbackUrl;
 
     /**
-     * @var Agent 应用相关信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
@@ -173,7 +173,7 @@ false：有序签
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      * @param string $CallbackUrl 暂未开放
-     * @param Agent $Agent 应用相关信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param array $CcInfos 被抄送人的信息列表。
 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
      */

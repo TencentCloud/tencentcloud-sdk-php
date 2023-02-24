@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasName(string $AliasName) 设置别名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcId() 获取VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcId(string $VpcId) 设置VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZookeeperReplica extends AbstractModel
 {
@@ -85,6 +89,12 @@ class ZookeeperReplica extends AbstractModel
     public $AliasName;
 
     /**
+     * @var string VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcId;
+
+    /**
      * @param string $Name 名称
      * @param string $Role 角色
      * @param string $Status 状态
@@ -95,6 +105,8 @@ class ZookeeperReplica extends AbstractModel
      * @param string $ZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AliasName 别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcId VPC ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +148,10 @@ class ZookeeperReplica extends AbstractModel
 
         if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
             $this->AliasName = $param["AliasName"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

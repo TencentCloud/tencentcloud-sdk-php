@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) 设置签署流程编号，由CreateFlow接口返回
  * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class StartFlowRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class StartFlowRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var Agent 应用相关信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
@@ -55,7 +55,7 @@ class StartFlowRequest extends AbstractModel
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      * @param string $FlowId 签署流程编号，由CreateFlow接口返回
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
-     * @param Agent $Agent 应用相关信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {

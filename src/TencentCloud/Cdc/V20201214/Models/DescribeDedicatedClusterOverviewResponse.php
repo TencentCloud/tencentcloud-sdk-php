@@ -24,6 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCvmCount(integer $CvmCount) 设置云服务器数量
  * @method integer getHostCount() 获取宿主机数量
  * @method void setHostCount(integer $HostCount) 设置宿主机数量
+ * @method string getVpnConnectionState() 获取vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpnConnectionState(string $VpnConnectionState) 设置vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method VpngwBandwidthData getVpngwBandwidthData() 获取vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpngwBandwidthData(VpngwBandwidthData $VpngwBandwidthData) 设置vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method LocalNetInfo getLocalNetInfo() 获取本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalNetInfo(LocalNetInfo $LocalNetInfo) 设置本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVpnConnectionBandwidthData() 获取vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpnConnectionBandwidthData(array $VpnConnectionBandwidthData) 设置vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +56,30 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
     public $HostCount;
 
     /**
+     * @var string vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpnConnectionState;
+
+    /**
+     * @var VpngwBandwidthData vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpngwBandwidthData;
+
+    /**
+     * @var LocalNetInfo 本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalNetInfo;
+
+    /**
+     * @var array vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpnConnectionBandwidthData;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +87,14 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
     /**
      * @param integer $CvmCount 云服务器数量
      * @param integer $HostCount 宿主机数量
+     * @param string $VpnConnectionState vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpngwBandwidthData $VpngwBandwidthData vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalNetInfo $LocalNetInfo 本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VpnConnectionBandwidthData vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +116,29 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("VpnConnectionState",$param) and $param["VpnConnectionState"] !== null) {
+            $this->VpnConnectionState = $param["VpnConnectionState"];
+        }
+
+        if (array_key_exists("VpngwBandwidthData",$param) and $param["VpngwBandwidthData"] !== null) {
+            $this->VpngwBandwidthData = new VpngwBandwidthData();
+            $this->VpngwBandwidthData->deserialize($param["VpngwBandwidthData"]);
+        }
+
+        if (array_key_exists("LocalNetInfo",$param) and $param["LocalNetInfo"] !== null) {
+            $this->LocalNetInfo = new LocalNetInfo();
+            $this->LocalNetInfo->deserialize($param["LocalNetInfo"]);
+        }
+
+        if (array_key_exists("VpnConnectionBandwidthData",$param) and $param["VpnConnectionBandwidthData"] !== null) {
+            $this->VpnConnectionBandwidthData = [];
+            foreach ($param["VpnConnectionBandwidthData"] as $key => $value){
+                $obj = new VpngwBandwidthData();
+                $obj->deserialize($value);
+                array_push($this->VpnConnectionBandwidthData, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

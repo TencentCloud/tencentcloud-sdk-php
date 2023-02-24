@@ -42,8 +42,8 @@ APP：第三方APP或小程序跳转电子签小程序的path。
  * @method void setPathType(integer $PathType) 设置跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
  * @method boolean getAutoJumpBack() 获取是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
  * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class CreateSchemeUrlRequest extends AbstractModel
 {
@@ -91,7 +91,7 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     public $AutoJumpBack;
 
     /**
-     * @var Agent 应用相关信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
@@ -107,7 +107,7 @@ APP：第三方APP或小程序跳转电子签小程序的path。
      * @param string $FlowId 签署流程编号 (PathType=1时必传)
      * @param integer $PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
      * @param boolean $AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
-     * @param Agent $Agent 应用相关信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {

@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomain() 获取clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IngressInfo extends AbstractModel
 {
@@ -135,6 +139,12 @@ class IngressInfo extends AbstractModel
     public $RewriteType;
 
     /**
+     * @var string clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
      * @param string $EnvironmentId 环境ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterNamespace 环境namespace
@@ -155,6 +165,8 @@ class IngressInfo extends AbstractModel
      * @param string $RewriteType 重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Domain clb 域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -226,6 +238,10 @@ class IngressInfo extends AbstractModel
 
         if (array_key_exists("RewriteType",$param) and $param["RewriteType"] !== null) {
             $this->RewriteType = $param["RewriteType"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

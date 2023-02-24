@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDisplayVersion() 获取镜像对外展示版本。
  * @method void setDisplayVersion(string $DisplayVersion) 设置镜像对外展示版本。
  * @method string getDescription() 获取镜像描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置镜像描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOsName() 获取操作系统名称。
  * @method void setOsName(string $OsName) 设置操作系统名称。
  * @method string getPlatform() 获取操作系统平台。
@@ -90,6 +92,7 @@ class Blueprint extends AbstractModel
 
     /**
      * @var string 镜像描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -183,6 +186,7 @@ class Blueprint extends AbstractModel
      * @param string $DisplayTitle 镜像对外展示标题。
      * @param string $DisplayVersion 镜像对外展示版本。
      * @param string $Description 镜像描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsName 操作系统名称。
      * @param string $Platform 操作系统平台。
      * @param string $PlatformType 操作系统平台类型，如 LINUX_UNIX、WINDOWS。

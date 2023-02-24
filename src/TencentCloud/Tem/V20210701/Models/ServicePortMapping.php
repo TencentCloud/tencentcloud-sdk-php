@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPortMappingItemList(array $PortMappingItemList) 设置端口映射数组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExternalDomain() 获取clb domain
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExternalDomain(string $ExternalDomain) 设置clb domain
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServicePortMapping extends AbstractModel
 {
@@ -124,6 +128,12 @@ class ServicePortMapping extends AbstractModel
     public $PortMappingItemList;
 
     /**
+     * @var string clb domain
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExternalDomain;
+
+    /**
      * @param string $Type 服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName 服务名称
@@ -143,6 +153,8 @@ class ServicePortMapping extends AbstractModel
      * @param array $Ports 暴露端口列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PortMappingItemList 端口映射数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExternalDomain clb domain
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +213,10 @@ class ServicePortMapping extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PortMappingItemList, $obj);
             }
+        }
+
+        if (array_key_exists("ExternalDomain",$param) and $param["ExternalDomain"] !== null) {
+            $this->ExternalDomain = $param["ExternalDomain"];
         }
     }
 }

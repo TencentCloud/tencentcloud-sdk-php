@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCost(float $TotalCost) 设置总价。
  * @method float getRealTotalCost() 获取折后总价。
  * @method void setRealTotalCost(float $RealTotalCost) 设置折后总价。
- * @method integer getDiscount() 获取折扣。
- * @method void setDiscount(integer $Discount) 设置折扣。
+ * @method float getDiscount() 获取折扣。
+ * @method void setDiscount(float $Discount) 设置折扣。
  * @method PolicyDetail getPolicyDetail() 获取具体折扣详情。
  * @method void setPolicyDetail(PolicyDetail $PolicyDetail) 设置具体折扣详情。
  */
@@ -56,7 +56,7 @@ class DiscountDetail extends AbstractModel
     public $RealTotalCost;
 
     /**
-     * @var integer 折扣。
+     * @var float 折扣。
      */
     public $Discount;
 
@@ -70,7 +70,7 @@ class DiscountDetail extends AbstractModel
      * @param string $TimeUnit 计费单元。
      * @param float $TotalCost 总价。
      * @param float $RealTotalCost 折后总价。
-     * @param integer $Discount 折扣。
+     * @param float $Discount 折扣。
      * @param PolicyDetail $PolicyDetail 具体折扣详情。
      */
     function __construct()

@@ -44,8 +44,8 @@ OFFICIAL：企业公章；
 CONTRACT：合同专用章；
 ORGANIZATION_SEAL：企业印章(图片上传创建)；
 LEGAL_PERSON_SEAL：法定代表人章
- * @method Agent getAgent() 获取主企业代子企业操作 或 渠道子客应用相关信息
- * @method void setAgent(Agent $Agent) 设置主企业代子企业操作 或 渠道子客应用相关信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class DescribeOrganizationSealsRequest extends AbstractModel
 {
@@ -86,7 +86,7 @@ LEGAL_PERSON_SEAL：法定代表人章
     public $SealTypes;
 
     /**
-     * @var Agent 主企业代子企业操作 或 渠道子客应用相关信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
@@ -103,7 +103,7 @@ OFFICIAL：企业公章；
 CONTRACT：合同专用章；
 ORGANIZATION_SEAL：企业印章(图片上传创建)；
 LEGAL_PERSON_SEAL：法定代表人章
-     * @param Agent $Agent 主企业代子企业操作 或 渠道子客应用相关信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {

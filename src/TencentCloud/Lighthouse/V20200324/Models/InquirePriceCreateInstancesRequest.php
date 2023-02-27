@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBundleId() 获取实例的套餐 ID。
  * @method void setBundleId(string $BundleId) 设置实例的套餐 ID。
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
  * @method integer getInstanceCount() 获取创建数量，默认为 1。
  * @method void setInstanceCount(integer $InstanceCount) 设置创建数量，默认为 1。
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method string getBlueprintId() 获取应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
  * @method void setBlueprintId(string $BlueprintId) 设置应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
  */
@@ -37,14 +37,14 @@ class InquirePriceCreateInstancesRequest extends AbstractModel
     public $BundleId;
 
     /**
+     * @var InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     */
+    public $InstanceChargePrepaid;
+
+    /**
      * @var integer 创建数量，默认为 1。
      */
     public $InstanceCount;
-
-    /**
-     * @var InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     */
-    public $InstanceChargePrepaid;
 
     /**
      * @var string 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
@@ -53,8 +53,8 @@ class InquirePriceCreateInstancesRequest extends AbstractModel
 
     /**
      * @param string $BundleId 实例的套餐 ID。
+     * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
      * @param integer $InstanceCount 创建数量，默认为 1。
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param string $BlueprintId 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
      */
     function __construct()
@@ -74,13 +74,13 @@ class InquirePriceCreateInstancesRequest extends AbstractModel
             $this->BundleId = $param["BundleId"];
         }
 
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
-        }
-
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
             $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
+            $this->InstanceCount = $param["InstanceCount"];
         }
 
         if (array_key_exists("BlueprintId",$param) and $param["BlueprintId"] !== null) {

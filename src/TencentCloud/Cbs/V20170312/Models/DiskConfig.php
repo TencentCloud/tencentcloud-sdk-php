@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinDiskSize(integer $MinDiskSize) 设置最小可配置云盘大小，单位GB。
  * @method integer getMaxDiskSize() 获取最大可配置云盘大小，单位GB。
  * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大可配置云盘大小，单位GB。
+ * @method Price getPrice() 获取描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrice(Price $Price) 设置描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiskConfig extends AbstractModel
 {
@@ -113,6 +117,12 @@ class DiskConfig extends AbstractModel
     public $MaxDiskSize;
 
     /**
+     * @var Price 描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Price;
+
+    /**
      * @param boolean $Available 配置是否可用。
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
      * @param string $Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
@@ -128,6 +138,8 @@ class DiskConfig extends AbstractModel
      * @param string $DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      * @param integer $MinDiskSize 最小可配置云盘大小，单位GB。
      * @param integer $MaxDiskSize 最大可配置云盘大小，单位GB。
+     * @param Price $Price 描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -184,6 +196,11 @@ class DiskConfig extends AbstractModel
 
         if (array_key_exists("MaxDiskSize",$param) and $param["MaxDiskSize"] !== null) {
             $this->MaxDiskSize = $param["MaxDiskSize"];
+        }
+
+        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+            $this->Price = new Price();
+            $this->Price->deserialize($param["Price"]);
         }
     }
 }

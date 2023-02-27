@@ -124,6 +124,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskBackupCount(integer $DiskBackupCount) 设置云硬盘备份点已使用的数量。
  * @method string getInstanceType() 获取云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
  * @method void setInstanceType(string $InstanceType) 设置云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+ * @method string getLastAttachInsId() 获取云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastAttachInsId(string $LastAttachInsId) 设置云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorPrompt() 获取云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorPrompt(string $ErrorPrompt) 设置云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Disk extends AbstractModel
 {
@@ -336,6 +344,18 @@ class Disk extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var string 云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastAttachInsId;
+
+    /**
+     * @var string 云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorPrompt;
+
+    /**
      * @param boolean $DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
@@ -388,6 +408,10 @@ class Disk extends AbstractModel
      * @param integer $DiskBackupQuota 云硬盘备份点配额。表示最大可以保留的备份点数量。
      * @param integer $DiskBackupCount 云硬盘备份点已使用的数量。
      * @param string $InstanceType 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+     * @param string $LastAttachInsId 云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorPrompt 云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -562,6 +586,14 @@ class Disk extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("LastAttachInsId",$param) and $param["LastAttachInsId"] !== null) {
+            $this->LastAttachInsId = $param["LastAttachInsId"];
+        }
+
+        if (array_key_exists("ErrorPrompt",$param) and $param["ErrorPrompt"] !== null) {
+            $this->ErrorPrompt = $param["ErrorPrompt"];
         }
     }
 }

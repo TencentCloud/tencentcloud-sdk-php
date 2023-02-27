@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPrice(float $UnitPrice) 设置后付费云盘原单价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDetailPrices() 获取计费项目明细列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetailPrices(array $DetailPrices) 设置计费项目明细列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrepayPrice extends AbstractModel
 {
@@ -114,6 +118,12 @@ class PrepayPrice extends AbstractModel
     public $UnitPrice;
 
     /**
+     * @var array 计费项目明细列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DetailPrices;
+
+    /**
      * @param float $DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
@@ -131,6 +141,8 @@ class PrepayPrice extends AbstractModel
      * @param string $DiscountPriceHigh 高精度预付费云盘或快照预支费用的折扣价，单位：元
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $UnitPrice 后付费云盘原单价，单位：元。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DetailPrices 计费项目明细列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,15 @@ class PrepayPrice extends AbstractModel
 
         if (array_key_exists("UnitPrice",$param) and $param["UnitPrice"] !== null) {
             $this->UnitPrice = $param["UnitPrice"];
+        }
+
+        if (array_key_exists("DetailPrices",$param) and $param["DetailPrices"] !== null) {
+            $this->DetailPrices = [];
+            foreach ($param["DetailPrices"] as $key => $value){
+                $obj = new DetailPrice();
+                $obj->deserialize($value);
+                array_push($this->DetailPrices, $obj);
+            }
         }
     }
 }

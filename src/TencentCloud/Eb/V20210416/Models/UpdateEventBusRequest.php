@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaveDays(integer $SaveDays) 设置EB日志存储时长
  * @method string getLogTopicId() 获取EB日志主题ID
  * @method void setLogTopicId(string $LogTopicId) 设置EB日志主题ID
+ * @method boolean getEnableStore() 获取是否开启存储
+ * @method void setEnableStore(boolean $EnableStore) 设置是否开启存储
  */
 class UpdateEventBusRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpdateEventBusRequest extends AbstractModel
     public $LogTopicId;
 
     /**
+     * @var boolean 是否开启存储
+     */
+    public $EnableStore;
+
+    /**
      * @param string $EventBusId 事件集ID
      * @param string $Description 事件集描述，不限字符类型，200字符描述以内
      * @param string $EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
      * @param integer $SaveDays EB日志存储时长
      * @param string $LogTopicId EB日志主题ID
+     * @param boolean $EnableStore 是否开启存储
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpdateEventBusRequest extends AbstractModel
 
         if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
             $this->LogTopicId = $param["LogTopicId"];
+        }
+
+        if (array_key_exists("EnableStore",$param) and $param["EnableStore"] !== null) {
+            $this->EnableStore = $param["EnableStore"];
         }
     }
 }

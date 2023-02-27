@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBPFakeAPPList请求参数结构体
  *
- * @method string getFakeAPPs() 获取批量模版
- * @method void setFakeAPPs(string $FakeAPPs) 设置批量模版
+ * @method string getFakeAPPs() 获取批量模板
+ * @method void setFakeAPPs(string $FakeAPPs) 设置批量模板
  */
 class CreateBPFakeAPPListRequest extends AbstractModel
 {
     /**
-     * @var string 批量模版
+     * @var string 批量模板
      */
     public $FakeAPPs;
 
     /**
-     * @param string $FakeAPPs 批量模版
+     * @param string $FakeAPPs 批量模板
      */
     function __construct()
     {

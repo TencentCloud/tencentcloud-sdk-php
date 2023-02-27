@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceModifyDiskExtraPerformance请求参数结构体
  *
- * @method string getDiskId() 获取云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
- * @method void setDiskId(string $DiskId) 设置云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method integer getThroughputPerformance() 获取额外购买的云硬盘性能值，单位MB/s。
  * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置额外购买的云硬盘性能值，单位MB/s。
+ * @method string getDiskId() 获取云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+ * @method void setDiskId(string $DiskId) 设置云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
  */
 class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
 {
-    /**
-     * @var string 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     */
-    public $DiskId;
-
     /**
      * @var integer 额外购买的云硬盘性能值，单位MB/s。
      */
     public $ThroughputPerformance;
 
     /**
-     * @param string $DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @var string 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     */
+    public $DiskId;
+
+    /**
      * @param integer $ThroughputPerformance 额外购买的云硬盘性能值，单位MB/s。
+     * @param string $DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
-        }
-
         if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
             $this->ThroughputPerformance = $param["ThroughputPerformance"];
+        }
+
+        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
+            $this->DiskId = $param["DiskId"];
         }
     }
 }

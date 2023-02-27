@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
  * @method string getExpiredTime() 获取独享集群到期时间。
  * @method void setExpiredTime(string $ExpiredTime) 设置独享集群到期时间。
+ * @method string getCreatedTime() 获取存储池创建时间。
+ * @method void setCreatedTime(string $CreatedTime) 设置存储池创建时间。
+ * @method integer getDiskNumber() 获取当前集群中已创建的云盘数量。
+ * @method void setDiskNumber(integer $DiskNumber) 设置当前集群中已创建的云盘数量。
  */
 class Cdc extends AbstractModel
 {
@@ -89,6 +93,16 @@ class Cdc extends AbstractModel
     public $ExpiredTime;
 
     /**
+     * @var string 存储池创建时间。
+     */
+    public $CreatedTime;
+
+    /**
+     * @var integer 当前集群中已创建的云盘数量。
+     */
+    public $DiskNumber;
+
+    /**
      * @param string $CageId 独享集群围笼ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcState 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
@@ -100,6 +114,8 @@ class Cdc extends AbstractModel
      * @param string $CdcId 独享集群实例id。
      * @param string $DiskType 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
      * @param string $ExpiredTime 独享集群到期时间。
+     * @param string $CreatedTime 存储池创建时间。
+     * @param integer $DiskNumber 当前集群中已创建的云盘数量。
      */
     function __construct()
     {
@@ -145,6 +161,14 @@ class Cdc extends AbstractModel
 
         if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
             $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("DiskNumber",$param) and $param["DiskNumber"] !== null) {
+            $this->DiskNumber = $param["DiskNumber"];
         }
     }
 }

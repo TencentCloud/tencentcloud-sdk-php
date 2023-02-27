@@ -72,17 +72,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcedures(array $Procedures) 设置ProcedureMode取值为Partial时需要填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTriggerMode() 获取触发器迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+ * @method string getTriggerMode() 获取触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMode(string $TriggerMode) 设置触发器迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+ * @method void setTriggerMode(string $TriggerMode) 设置触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTriggers() 获取当TriggerMode为partial，指定要迁移的触发器名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggers(array $Triggers) 设置当TriggerMode为partial，指定要迁移的触发器名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEventMode() 获取事件迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+ * @method string getEventMode() 获取事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventMode(string $EventMode) 设置事件迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+ * @method void setEventMode(string $EventMode) 设置事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEvents() 获取当EventMode为partial，指定要迁移的事件名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,7 +170,7 @@ class Database extends AbstractModel
     public $Procedures;
 
     /**
-     * @var string 触发器迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+     * @var string 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMode;
@@ -182,7 +182,7 @@ class Database extends AbstractModel
     public $Triggers;
 
     /**
-     * @var string 事件迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+     * @var string 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventMode;
@@ -220,11 +220,11 @@ class Database extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Procedures ProcedureMode取值为Partial时需要填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TriggerMode 触发器迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+     * @param string $TriggerMode 触发器迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Triggers 当TriggerMode为partial，指定要迁移的触发器名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EventMode 事件迁移模式，All(为当前对象下的所有对象)，partial(部分对象)，如果整库同步此处应该为All。
+     * @param string $EventMode 事件迁移模式，All(为当前对象下的所有对象)，Partial(部分对象)，如果整库同步此处应该为All。数据同步暂不支持此高级对象。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Events 当EventMode为partial，指定要迁移的事件名称
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSession请求参数结构体
  *
- * @method string getClientSession() 获取客户端session信息，从JSSDK请求中获得
- * @method void setClientSession(string $ClientSession) 设置客户端session信息，从JSSDK请求中获得
  * @method string getUserId() 获取唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
  * @method void setUserId(string $UserId) 设置唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
  * @method string getGameId() 获取游戏ID
@@ -30,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGameRegion(string $GameRegion) 设置【已废弃】只在TrylockWorker时生效
  * @method string getGameParas() 获取游戏参数
  * @method void setGameParas(string $GameParas) 设置游戏参数
+ * @method string getClientSession() 获取客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+ * @method void setClientSession(string $ClientSession) 设置客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
  * @method string getResolution() 获取分辨率,，可设置为1080p或720p或1920x1080格式
  * @method void setResolution(string $Resolution) 设置分辨率,，可设置为1080p或720p或1920x1080格式
  * @method string getImageUrl() 获取背景图url，格式为png或jpeg，宽高1920*1080
@@ -64,11 +64,6 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
 class CreateSessionRequest extends AbstractModel
 {
     /**
-     * @var string 客户端session信息，从JSSDK请求中获得
-     */
-    public $ClientSession;
-
-    /**
      * @var string 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      */
     public $UserId;
@@ -87,6 +82,11 @@ class CreateSessionRequest extends AbstractModel
      * @var string 游戏参数
      */
     public $GameParas;
+
+    /**
+     * @var string 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+     */
+    public $ClientSession;
 
     /**
      * @var string 分辨率,，可设置为1080p或720p或1920x1080格式
@@ -156,11 +156,11 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
     public $RunMode;
 
     /**
-     * @param string $ClientSession 客户端session信息，从JSSDK请求中获得
      * @param string $UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      * @param string $GameId 游戏ID
      * @param string $GameRegion 【已废弃】只在TrylockWorker时生效
      * @param string $GameParas 游戏参数
+     * @param string $ClientSession 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
      * @param string $Resolution 分辨率,，可设置为1080p或720p或1920x1080格式
      * @param string $ImageUrl 背景图url，格式为png或jpeg，宽高1920*1080
      * @param integer $SetNo 【已废弃】
@@ -190,10 +190,6 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientSession",$param) and $param["ClientSession"] !== null) {
-            $this->ClientSession = $param["ClientSession"];
-        }
-
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
         }
@@ -208,6 +204,10 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
 
         if (array_key_exists("GameParas",$param) and $param["GameParas"] !== null) {
             $this->GameParas = $param["GameParas"];
+        }
+
+        if (array_key_exists("ClientSession",$param) and $param["ClientSession"] !== null) {
+            $this->ClientSession = $param["ClientSession"];
         }
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {

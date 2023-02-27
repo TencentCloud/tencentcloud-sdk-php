@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bma\V20221115\Models;
+namespace TencentCloud\Thpc\V20220401\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBPFakeURLs请求参数结构体
+ * AddQueue返回参数结构体
  *
- * @method string getFakeURLs() 获取批量模板
- * @method void setFakeURLs(string $FakeURLs) 设置批量模板
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBPFakeURLsRequest extends AbstractModel
+class AddQueueResponse extends AbstractModel
 {
     /**
-     * @var string 批量模板
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $FakeURLs;
+    public $RequestId;
 
     /**
-     * @param string $FakeURLs 批量模板
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class CreateBPFakeURLsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FakeURLs",$param) and $param["FakeURLs"] !== null) {
-            $this->FakeURLs = $param["FakeURLs"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

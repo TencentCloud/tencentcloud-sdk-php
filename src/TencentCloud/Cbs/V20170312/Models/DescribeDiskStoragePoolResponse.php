@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合条件的独享集群的数量
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的独享集群的数量
+ * @method array getCdcSet() 获取独享集群的详细信息列表
+ * @method void setCdcSet(array $CdcSet) 设置独享集群的详细信息列表
  * @method array getDiskStoragePoolSet() 获取独享集群的详细信息列表
  * @method void setDiskStoragePoolSet(array $DiskStoragePoolSet) 设置独享集群的详细信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,6 +39,11 @@ class DescribeDiskStoragePoolResponse extends AbstractModel
     /**
      * @var array 独享集群的详细信息列表
      */
+    public $CdcSet;
+
+    /**
+     * @var array 独享集群的详细信息列表
+     */
     public $DiskStoragePoolSet;
 
     /**
@@ -46,6 +53,7 @@ class DescribeDiskStoragePoolResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合条件的独享集群的数量
+     * @param array $CdcSet 独享集群的详细信息列表
      * @param array $DiskStoragePoolSet 独享集群的详细信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -64,6 +72,15 @@ class DescribeDiskStoragePoolResponse extends AbstractModel
         }
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("CdcSet",$param) and $param["CdcSet"] !== null) {
+            $this->CdcSet = [];
+            foreach ($param["CdcSet"] as $key => $value){
+                $obj = new Cdc();
+                $obj->deserialize($value);
+                array_push($this->CdcSet, $obj);
+            }
         }
 
         if (array_key_exists("DiskStoragePoolSet",$param) and $param["DiskStoragePoolSet"] !== null) {

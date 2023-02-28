@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBusId(string $EventBusId) 设置事件集ID
  * @method string getType() 获取事件集类型
  * @method void setType(string $Type) 设置事件集类型
+ * @method string getPayMode() 获取计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMode(string $PayMode) 设置计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getConnectionBriefs() 获取连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConnectionBriefs(array $ConnectionBriefs) 设置连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTargetBriefs() 获取目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetBriefs(array $TargetBriefs) 设置目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventBus extends AbstractModel
 {
@@ -66,12 +78,36 @@ class EventBus extends AbstractModel
     public $Type;
 
     /**
+     * @var string 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMode;
+
+    /**
+     * @var array 连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConnectionBriefs;
+
+    /**
+     * @var array 目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetBriefs;
+
+    /**
      * @param string $ModTime 更新时间
      * @param string $Description 事件集描述，不限字符类型，200字符描述以内
      * @param string $AddTime 创建时间
      * @param string $EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
      * @param string $EventBusId 事件集ID
      * @param string $Type 事件集类型
+     * @param string $PayMode 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ConnectionBriefs 连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TargetBriefs 目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +144,28 @@ class EventBus extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ConnectionBriefs",$param) and $param["ConnectionBriefs"] !== null) {
+            $this->ConnectionBriefs = [];
+            foreach ($param["ConnectionBriefs"] as $key => $value){
+                $obj = new ConnectionBrief();
+                $obj->deserialize($value);
+                array_push($this->ConnectionBriefs, $obj);
+            }
+        }
+
+        if (array_key_exists("TargetBriefs",$param) and $param["TargetBriefs"] !== null) {
+            $this->TargetBriefs = [];
+            foreach ($param["TargetBriefs"] as $key => $value){
+                $obj = new TargetBrief();
+                $obj->deserialize($value);
+                array_push($this->TargetBriefs, $obj);
+            }
         }
     }
 }

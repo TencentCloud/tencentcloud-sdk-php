@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDiskId() 获取云硬盘ID，可通过[DescribeDisks](https://cloud.tencent.com/document/api/1207/66093)接口查询。
  * @method void setDiskId(string $DiskId) 设置云硬盘ID，可通过[DescribeDisks](https://cloud.tencent.com/document/api/1207/66093)接口查询。
- * @method string getDiskBackupId() 获取云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。
- * @method void setDiskBackupId(string $DiskBackupId) 设置云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。
+ * @method string getDiskBackupId() 获取云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
+ * @method void setDiskBackupId(string $DiskBackupId) 设置云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
  */
 class ApplyDiskBackupRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ApplyDiskBackupRequest extends AbstractModel
     public $DiskId;
 
     /**
-     * @var string 云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。
+     * @var string 云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
      */
     public $DiskBackupId;
 
     /**
      * @param string $DiskId 云硬盘ID，可通过[DescribeDisks](https://cloud.tencent.com/document/api/1207/66093)接口查询。
-     * @param string $DiskBackupId 云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。
+     * @param string $DiskBackupId 云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
      */
     function __construct()
     {

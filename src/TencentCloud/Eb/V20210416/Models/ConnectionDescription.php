@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCkafkaParams(CkafkaParams $CkafkaParams) 设置ckafka参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DTSParams getDTSParams() 获取data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDTSParams(DTSParams $DTSParams) 设置data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConnectionDescription extends AbstractModel
 {
@@ -51,10 +55,18 @@ class ConnectionDescription extends AbstractModel
     public $CkafkaParams;
 
     /**
+     * @var DTSParams data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DTSParams;
+
+    /**
      * @param string $ResourceDescription 资源qcs六段式，更多参考 [资源六段式](https://cloud.tencent.com/document/product/598/10606)
      * @param APIGWParams $APIGWParams apigw参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CkafkaParams $CkafkaParams ckafka参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DTSParams $DTSParams data transfer service (DTS)参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -82,6 +94,11 @@ class ConnectionDescription extends AbstractModel
         if (array_key_exists("CkafkaParams",$param) and $param["CkafkaParams"] !== null) {
             $this->CkafkaParams = new CkafkaParams();
             $this->CkafkaParams->deserialize($param["CkafkaParams"]);
+        }
+
+        if (array_key_exists("DTSParams",$param) and $param["DTSParams"] !== null) {
+            $this->DTSParams = new DTSParams();
+            $this->DTSParams->deserialize($param["DTSParams"]);
         }
     }
 }

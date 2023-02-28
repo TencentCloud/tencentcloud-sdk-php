@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 地址信息
  *
- * @method string getFrom() 获取起始地址。
- * @method void setFrom(string $From) 设置起始地址。
- * @method string getTo() 获取结束地址。
- * @method void setTo(string $To) 设置结束地址。
+ * @method string getAddressTemplateId() 获取ipm-xxxxxxxx
+ * @method void setAddressTemplateId(string $AddressTemplateId) 设置ipm-xxxxxxxx
+ * @method string getAddressTemplateName() 获取IP模板名称
+ * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP模板名称
+ * @method string getFrom() 获取废弃字段
+ * @method void setFrom(string $From) 设置废弃字段
+ * @method string getTo() 获取废弃字段
+ * @method void setTo(string $To) 设置废弃字段
  */
 class AddressTemplateItem extends AbstractModel
 {
     /**
-     * @var string 起始地址。
+     * @var string ipm-xxxxxxxx
+     */
+    public $AddressTemplateId;
+
+    /**
+     * @var string IP模板名称
+     */
+    public $AddressTemplateName;
+
+    /**
+     * @var string 废弃字段
      */
     public $From;
 
     /**
-     * @var string 结束地址。
+     * @var string 废弃字段
      */
     public $To;
 
     /**
-     * @param string $From 起始地址。
-     * @param string $To 结束地址。
+     * @param string $AddressTemplateId ipm-xxxxxxxx
+     * @param string $AddressTemplateName IP模板名称
+     * @param string $From 废弃字段
+     * @param string $To 废弃字段
      */
     function __construct()
     {
@@ -54,6 +70,14 @@ class AddressTemplateItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AddressTemplateId",$param) and $param["AddressTemplateId"] !== null) {
+            $this->AddressTemplateId = $param["AddressTemplateId"];
+        }
+
+        if (array_key_exists("AddressTemplateName",$param) and $param["AddressTemplateName"] !== null) {
+            $this->AddressTemplateName = $param["AddressTemplateName"];
+        }
+
         if (array_key_exists("From",$param) and $param["From"] !== null) {
             $this->From = $param["From"];
         }

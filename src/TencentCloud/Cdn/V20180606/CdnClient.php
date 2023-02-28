@@ -63,6 +63,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) DescribeDomainsConfig 用于查询内容分发网络加速域名（含境内、境外）的所有配置信息。
  * @method Models\DescribeEdgePackTaskStatusResponse DescribeEdgePackTaskStatus(Models\DescribeEdgePackTaskStatusRequest $req) DescribeEdgePackTaskStatus 用于查询动态打包任务状态列表
  * @method Models\DescribeEventLogDataResponse DescribeEventLogData(Models\DescribeEventLogDataRequest $req) DescribeEventLogData 用于查询事件日志统计曲线
+ * @method Models\DescribeHttpsPackagesResponse DescribeHttpsPackages(Models\DescribeHttpsPackagesRequest $req) DescribeHttpsPackages 用于查询 CDN HTTPS请求包详情。
  * @method Models\DescribeImageConfigResponse DescribeImageConfig(Models\DescribeImageConfigRequest $req) DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。 
  * @method Models\DescribeIpStatusResponse DescribeIpStatus(Models\DescribeIpStatusRequest $req) DescribeIpStatus 用于查询域名所在加速平台的边缘节点、回源节点明细。注意事项：暂不支持查询边缘节点信息并且数据会存在一定延迟。
 

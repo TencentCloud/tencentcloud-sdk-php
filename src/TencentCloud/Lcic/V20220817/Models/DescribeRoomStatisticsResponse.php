@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealEndTime(integer $RealEndTime) 设置秒级unix时间戳，实际房间结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMessageCount() 获取房间消息总数。
+ * @method void setMessageCount(integer $MessageCount) 设置房间消息总数。
+ * @method integer getMicCount() 获取房间连麦总数。
+ * @method void setMicCount(integer $MicCount) 设置房间连麦总数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -74,6 +78,16 @@ class DescribeRoomStatisticsResponse extends AbstractModel
     public $RealEndTime;
 
     /**
+     * @var integer 房间消息总数。
+     */
+    public $MessageCount;
+
+    /**
+     * @var integer 房间连麦总数。
+     */
+    public $MicCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +101,8 @@ class DescribeRoomStatisticsResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealEndTime 秒级unix时间戳，实际房间结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MessageCount 房间消息总数。
+     * @param integer $MicCount 房间连麦总数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -129,6 +145,14 @@ class DescribeRoomStatisticsResponse extends AbstractModel
 
         if (array_key_exists("RealEndTime",$param) and $param["RealEndTime"] !== null) {
             $this->RealEndTime = $param["RealEndTime"];
+        }
+
+        if (array_key_exists("MessageCount",$param) and $param["MessageCount"] !== null) {
+            $this->MessageCount = $param["MessageCount"];
+        }
+
+        if (array_key_exists("MicCount",$param) and $param["MicCount"] !== null) {
+            $this->MicCount = $param["MicCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

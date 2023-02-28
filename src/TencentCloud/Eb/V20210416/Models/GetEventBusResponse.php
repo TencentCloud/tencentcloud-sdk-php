@@ -36,6 +36,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBusId(string $EventBusId) 设置事件集ID
  * @method string getType() 获取（已废弃）事件集类型
  * @method void setType(string $Type) 设置（已废弃）事件集类型
+ * @method string getPayMode() 获取计费模式
+ * @method void setPayMode(string $PayMode) 设置计费模式
+ * @method integer getSaveDays() 获取EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSaveDays(integer $SaveDays) 设置EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogTopicId() 获取EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogTopicId(string $LogTopicId) 设置EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableStore() 获取是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableStore(boolean $EnableStore) 设置是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLinkMode() 获取消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLinkMode(string $LinkMode) 设置消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -82,6 +100,35 @@ class GetEventBusResponse extends AbstractModel
     public $Type;
 
     /**
+     * @var string 计费模式
+     */
+    public $PayMode;
+
+    /**
+     * @var integer EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SaveDays;
+
+    /**
+     * @var string EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogTopicId;
+
+    /**
+     * @var boolean 是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableStore;
+
+    /**
+     * @var string 消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LinkMode;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +142,15 @@ class GetEventBusResponse extends AbstractModel
      * @param string $EventBusName 事件集名称
      * @param string $EventBusId 事件集ID
      * @param string $Type （已废弃）事件集类型
+     * @param string $PayMode 计费模式
+     * @param integer $SaveDays EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogTopicId EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableStore 是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LinkMode 消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +196,26 @@ class GetEventBusResponse extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("SaveDays",$param) and $param["SaveDays"] !== null) {
+            $this->SaveDays = $param["SaveDays"];
+        }
+
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
+        }
+
+        if (array_key_exists("EnableStore",$param) and $param["EnableStore"] !== null) {
+            $this->EnableStore = $param["EnableStore"];
+        }
+
+        if (array_key_exists("LinkMode",$param) and $param["LinkMode"] !== null) {
+            $this->LinkMode = $param["LinkMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

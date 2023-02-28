@@ -48,6 +48,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(string $Location) 设置用户位置信息。
  * @method integer getDevice() 获取用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
  * @method void setDevice(integer $Device) 设置用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+ * @method integer getPerMemberMicCount() 获取每个成员上麦次数。
+ * @method void setPerMemberMicCount(integer $PerMemberMicCount) 设置每个成员上麦次数。
+ * @method integer getPerMemberMessageCount() 获取每个成员发送消息数量。
+
+ * @method void setPerMemberMessageCount(integer $PerMemberMessageCount) 设置每个成员发送消息数量。
  */
 class MemberRecord extends AbstractModel
 {
@@ -122,6 +127,17 @@ class MemberRecord extends AbstractModel
     public $Device;
 
     /**
+     * @var integer 每个成员上麦次数。
+     */
+    public $PerMemberMicCount;
+
+    /**
+     * @var integer 每个成员发送消息数量。
+
+     */
+    public $PerMemberMessageCount;
+
+    /**
      * @param string $UserId 用户ID。
      * @param string $UserName 用户名称。
      * @param integer $PresentTime 在线时长，单位秒。
@@ -136,6 +152,8 @@ class MemberRecord extends AbstractModel
      * @param string $IPAddress 用户IP。
      * @param string $Location 用户位置信息。
      * @param integer $Device 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+     * @param integer $PerMemberMicCount 每个成员上麦次数。
+     * @param integer $PerMemberMessageCount 每个成员发送消息数量。
      */
     function __construct()
     {
@@ -204,6 +222,14 @@ class MemberRecord extends AbstractModel
 
         if (array_key_exists("Device",$param) and $param["Device"] !== null) {
             $this->Device = $param["Device"];
+        }
+
+        if (array_key_exists("PerMemberMicCount",$param) and $param["PerMemberMicCount"] !== null) {
+            $this->PerMemberMicCount = $param["PerMemberMicCount"];
+        }
+
+        if (array_key_exists("PerMemberMessageCount",$param) and $param["PerMemberMessageCount"] !== null) {
+            $this->PerMemberMessageCount = $param["PerMemberMessageCount"];
         }
     }
 }

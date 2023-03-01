@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataId(string $DataId) 设置数据ID，可以由英文字母、数字、下划线、-、@#组成，不超过64个字符
  * @method string getFileContent() 获取数据Base64编码，图片检测接口为图片文件内容，大小不能超过5M
  * @method void setFileContent(string $FileContent) 设置数据Base64编码，图片检测接口为图片文件内容，大小不能超过5M
- * @method string getFileUrl() 获取图片资源访问链接，__与FileContent参数必须二选一输入__
- * @method void setFileUrl(string $FileUrl) 设置图片资源访问链接，__与FileContent参数必须二选一输入__
+ * @method string getFileUrl() 获取图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError
+ * @method void setFileUrl(string $FileUrl) 设置图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError
  * @method integer getInterval() 获取截帧频率，GIF图/长图检测专用，默认值为0，表示只会检测GIF图/长图的第一帧
  * @method void setInterval(integer $Interval) 设置截帧频率，GIF图/长图检测专用，默认值为0，表示只会检测GIF图/长图的第一帧
  * @method integer getMaxFrames() 获取GIF图/长图检测专用，代表均匀最大截帧数量，默认值为1（即只取GIF第一张，或长图不做切分处理（可能会造成处理超时））。
@@ -55,7 +55,7 @@ class ImageModerationRequest extends AbstractModel
     public $FileContent;
 
     /**
-     * @var string 图片资源访问链接，__与FileContent参数必须二选一输入__
+     * @var string 图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError
      */
     public $FileUrl;
 
@@ -83,7 +83,7 @@ class ImageModerationRequest extends AbstractModel
      * @param string $BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
      * @param string $DataId 数据ID，可以由英文字母、数字、下划线、-、@#组成，不超过64个字符
      * @param string $FileContent 数据Base64编码，图片检测接口为图片文件内容，大小不能超过5M
-     * @param string $FileUrl 图片资源访问链接，__与FileContent参数必须二选一输入__
+     * @param string $FileUrl 图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError
      * @param integer $Interval 截帧频率，GIF图/长图检测专用，默认值为0，表示只会检测GIF图/长图的第一帧
      * @param integer $MaxFrames GIF图/长图检测专用，代表均匀最大截帧数量，默认值为1（即只取GIF第一张，或长图不做切分处理（可能会造成处理超时））。
      * @param User $User 账号相关信息字段，填入后可识别违规风险账号。

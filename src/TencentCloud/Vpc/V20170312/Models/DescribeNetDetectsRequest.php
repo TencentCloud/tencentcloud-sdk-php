@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetDetects请求参数结构体
  *
- * @method array getNetDetectIds() 获取网络探测实例`ID`数组。形如：[`netd-12345678`]
- * @method void setNetDetectIds(array $NetDetectIds) 设置网络探测实例`ID`数组。形如：[`netd-12345678`]
+ * @method array getNetDetectIds() 获取网络探测实例`ID`数组。形如：[`netd-12345678`]。
+ * @method void setNetDetectIds(array $NetDetectIds) 设置网络探测实例`ID`数组。形如：[`netd-12345678`]。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定NetDetectIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678</li>
 <li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNetDetectsRequest extends AbstractModel
 {
     /**
-     * @var array 网络探测实例`ID`数组。形如：[`netd-12345678`]
+     * @var array 网络探测实例`ID`数组。形如：[`netd-12345678`]。
      */
     public $NetDetectIds;
 
@@ -64,7 +64,7 @@ class DescribeNetDetectsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]
+     * @param array $NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]。
      * @param array $Filters 过滤条件，参数不支持同时指定NetDetectIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678</li>
 <li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>

@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndpoint(string $Endpoint) 设置链接跳转类型："PC"-PC控制台，“CHANNEL”-H5跳转到电子签小程序；“APP”-第三方APP或小程序跳转电子签小程序，默认为PC控制台
  * @method string getAutoJumpBackEvent() 获取触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序
  * @method void setAutoJumpBackEvent(string $AutoJumpBackEvent) 设置触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method array getAuthorizationTypes() 获取支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
  * @method void setAuthorizationTypes(array $AuthorizationTypes) 设置支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
+ * @method UserInfo getOperator() 获取暂未开放
+ * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
@@ -94,14 +94,14 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $AutoJumpBackEvent;
 
     /**
-     * @var UserInfo 操作者的信息
-     */
-    public $Operator;
-
-    /**
      * @var array 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
      */
     public $AuthorizationTypes;
+
+    /**
+     * @var UserInfo 暂未开放
+     */
+    public $Operator;
 
     /**
      * @param Agent $Agent 应用信息
@@ -114,8 +114,8 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $MenuStatus 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
      * @param string $Endpoint 链接跳转类型："PC"-PC控制台，“CHANNEL”-H5跳转到电子签小程序；“APP”-第三方APP或小程序跳转电子签小程序，默认为PC控制台
      * @param string $AutoJumpBackEvent 触发自动跳转事件，仅对App类型有效，"VERIFIED":企业认证完成/员工认证完成后跳回原App/小程序
-     * @param UserInfo $Operator 操作者的信息
      * @param array $AuthorizationTypes 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
+     * @param UserInfo $Operator 暂未开放
      */
     function __construct()
     {
@@ -167,13 +167,13 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
             $this->AutoJumpBackEvent = $param["AutoJumpBackEvent"];
         }
 
+        if (array_key_exists("AuthorizationTypes",$param) and $param["AuthorizationTypes"] !== null) {
+            $this->AuthorizationTypes = $param["AuthorizationTypes"];
+        }
+
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("AuthorizationTypes",$param) and $param["AuthorizationTypes"] !== null) {
-            $this->AuthorizationTypes = $param["AuthorizationTypes"];
         }
     }
 }

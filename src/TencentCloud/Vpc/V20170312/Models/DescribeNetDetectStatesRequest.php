@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetDetectStates请求参数结构体
  *
- * @method array getNetDetectIds() 获取网络探测实例`ID`数组。形如：[`netd-12345678`]
- * @method void setNetDetectIds(array $NetDetectIds) 设置网络探测实例`ID`数组。形如：[`netd-12345678`]
+ * @method array getNetDetectIds() 获取网络探测实例`ID`数组。形如：[`netd-12345678`]。
+ * @method void setNetDetectIds(array $NetDetectIds) 设置网络探测实例`ID`数组。形如：[`netd-12345678`]。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNetDetectStatesRequest extends AbstractModel
 {
     /**
-     * @var array 网络探测实例`ID`数组。形如：[`netd-12345678`]
+     * @var array 网络探测实例`ID`数组。形如：[`netd-12345678`]。
      */
     public $NetDetectIds;
 
     /**
      * @var array 过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
      */
     public $Filters;
 
@@ -55,9 +55,9 @@ class DescribeNetDetectStatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]
+     * @param array $NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]。
      * @param array $Filters 过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      */

@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDownloadFlowUrl请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method array getDownLoadFlows() 获取文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
  * @method void setDownLoadFlows(array $DownLoadFlows) 设置文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method UserInfo getOperator() 获取操作者的信息，不用传
+ * @method void setOperator(UserInfo $Operator) 设置操作者的信息，不用传
  */
 class GetDownloadFlowUrlRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
@@ -40,14 +40,14 @@ class GetDownloadFlowUrlRequest extends AbstractModel
     public $DownLoadFlows;
 
     /**
-     * @var UserInfo 操作者的信息
+     * @var UserInfo 操作者的信息，不用传
      */
     public $Operator;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param array $DownLoadFlows 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
-     * @param UserInfo $Operator 操作者的信息
+     * @param UserInfo $Operator 操作者的信息，不用传
      */
     function __construct()
     {

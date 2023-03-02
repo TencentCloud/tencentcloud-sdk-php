@@ -22,12 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowId() 获取签署流程编号
  * @method void setFlowId(string $FlowId) 设置签署流程编号
- * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method string getCancelMessage() 获取撤回原因，最大不超过200字符
  * @method void setCancelMessage(string $CancelMessage) 设置撤回原因，最大不超过200字符
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method integer getCancelMessageFormat() 获取撤销理由自定义格式；选项：
 0 默认格式
 1 只保留身份信息：展示为【发起方】
@@ -38,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 1 只保留身份信息：展示为【发起方】
 2 保留身份信息+企业名称：展示为【发起方xxx公司】
 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+ * @method UserInfo getOperator() 获取暂未开放
+ * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class ChannelCancelFlowRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ChannelCancelFlowRequest extends AbstractModel
     public $FlowId;
 
     /**
-     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
@@ -55,11 +55,6 @@ class ChannelCancelFlowRequest extends AbstractModel
      * @var string 撤回原因，最大不超过200字符
      */
     public $CancelMessage;
-
-    /**
-     * @var UserInfo 操作者的信息
-     */
-    public $Operator;
 
     /**
      * @var integer 撤销理由自定义格式；选项：
@@ -71,15 +66,20 @@ class ChannelCancelFlowRequest extends AbstractModel
     public $CancelMessageFormat;
 
     /**
+     * @var UserInfo 暂未开放
+     */
+    public $Operator;
+
+    /**
      * @param string $FlowId 签署流程编号
-     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $CancelMessage 撤回原因，最大不超过200字符
-     * @param UserInfo $Operator 操作者的信息
      * @param integer $CancelMessageFormat 撤销理由自定义格式；选项：
 0 默认格式
 1 只保留身份信息：展示为【发起方】
 2 保留身份信息+企业名称：展示为【发起方xxx公司】
 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+     * @param UserInfo $Operator 暂未开放
      */
     function __construct()
     {
@@ -107,13 +107,13 @@ class ChannelCancelFlowRequest extends AbstractModel
             $this->CancelMessage = $param["CancelMessage"];
         }
 
+        if (array_key_exists("CancelMessageFormat",$param) and $param["CancelMessageFormat"] !== null) {
+            $this->CancelMessageFormat = $param["CancelMessageFormat"];
+        }
+
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("CancelMessageFormat",$param) and $param["CancelMessageFormat"] !== null) {
-            $this->CancelMessageFormat = $param["CancelMessageFormat"];
         }
     }
 }

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTuber(array $Tuber) 设置结节
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCoords() 获取坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoords(array $Coords) 设置坐标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Desc extends AbstractModel
 {
@@ -54,11 +58,19 @@ class Desc extends AbstractModel
     public $Tuber;
 
     /**
+     * @var array 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Coords;
+
+    /**
      * @param string $Text 描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Organ 器官
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tuber 结节
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Coords 坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -93,6 +105,15 @@ class Desc extends AbstractModel
                 $obj = new TuberInfo();
                 $obj->deserialize($value);
                 array_push($this->Tuber, $obj);
+            }
+        }
+
+        if (array_key_exists("Coords",$param) and $param["Coords"] !== null) {
+            $this->Coords = [];
+            foreach ($param["Coords"] as $key => $value){
+                $obj = new Coord();
+                $obj->deserialize($value);
+                array_push($this->Coords, $obj);
             }
         }
     }

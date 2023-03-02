@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgeryHistory(SurgeryHistory $SurgeryHistory) 设置手术史
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OtherInfo getOtherInfo() 获取其他信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOtherInfo(OtherInfo $OtherInfo) 设置其他信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Surgery extends AbstractModel
 {
@@ -34,7 +38,15 @@ class Surgery extends AbstractModel
     public $SurgeryHistory;
 
     /**
+     * @var OtherInfo 其他信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OtherInfo;
+
+    /**
      * @param SurgeryHistory $SurgeryHistory 手术史
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OtherInfo $OtherInfo 其他信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -53,6 +65,11 @@ class Surgery extends AbstractModel
         if (array_key_exists("SurgeryHistory",$param) and $param["SurgeryHistory"] !== null) {
             $this->SurgeryHistory = new SurgeryHistory();
             $this->SurgeryHistory->deserialize($param["SurgeryHistory"]);
+        }
+
+        if (array_key_exists("OtherInfo",$param) and $param["OtherInfo"] !== null) {
+            $this->OtherInfo = new OtherInfo();
+            $this->OtherInfo->deserialize($param["OtherInfo"]);
         }
     }
 }

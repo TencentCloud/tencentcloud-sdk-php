@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Size extends AbstractModel
 {
@@ -64,6 +68,12 @@ class Size extends AbstractModel
     public $Value;
 
     /**
+     * @var string 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
+
+    /**
      * @param array $Index 原文位置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NormSize $NormSize 标准大小
@@ -71,6 +81,8 @@ class Size extends AbstractModel
      * @param string $Src 原文
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -101,6 +113,10 @@ class Size extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

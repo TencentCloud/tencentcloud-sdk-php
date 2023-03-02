@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNetDetect请求参数结构体
  *
- * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-12345678`
- * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-12345678`
+ * @method string getVpcId() 获取`VPC`实例`ID`。形如：`vpc-12345678`。
+ * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`。形如：`vpc-12345678`。
  * @method string getSubnetId() 获取子网实例ID。形如：subnet-12345678。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID。形如：subnet-12345678。
  * @method string getNetDetectName() 获取网络探测名称，最大长度不能超过60个字节。
@@ -35,6 +35,7 @@ PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
 CCN：云联网网关；
+NONEXTHOP：无下一跳；
  * @method void setNextHopType(string $NextHopType) 设置下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
@@ -42,27 +43,30 @@ PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
 CCN：云联网网关；
+NONEXTHOP：无下一跳；
  * @method string getNextHopDestination() 获取下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
  * @method void setNextHopDestination(string $NextHopDestination) 设置下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
  * @method string getNetDetectDescription() 获取网络探测描述。
  * @method void setNetDetectDescription(string $NetDetectDescription) 设置网络探测描述。
  */
 class CreateNetDetectRequest extends AbstractModel
 {
     /**
-     * @var string `VPC`实例`ID`。形如：`vpc-12345678`
+     * @var string `VPC`实例`ID`。形如：`vpc-12345678`。
      */
     public $VpcId;
 
@@ -89,6 +93,7 @@ PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
 CCN：云联网网关；
+NONEXTHOP：无下一跳；
      */
     public $NextHopType;
 
@@ -99,7 +104,8 @@ CCN：云联网网关；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      */
     public $NextHopDestination;
 
@@ -109,7 +115,7 @@ CCN：云联网网关；
     public $NetDetectDescription;
 
     /**
-     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`
+     * @param string $VpcId `VPC`实例`ID`。形如：`vpc-12345678`。
      * @param string $SubnetId 子网实例ID。形如：subnet-12345678。
      * @param string $NetDetectName 网络探测名称，最大长度不能超过60个字节。
      * @param array $DetectDestinationIp 探测目的IPv4地址数组。最多两个。
@@ -120,13 +126,15 @@ PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
 CCN：云联网网关；
+NONEXTHOP：无下一跳；
      * @param string $NextHopDestination 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      * @param string $NetDetectDescription 网络探测描述。
      */
     function __construct()

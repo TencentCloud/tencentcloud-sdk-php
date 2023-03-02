@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCoords() 获取坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoords(array $Coords) 设置坐标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Summary extends AbstractModel
 {
@@ -44,9 +48,17 @@ class Summary extends AbstractModel
     public $Text;
 
     /**
+     * @var array 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Coords;
+
+    /**
      * @param array $Symptom 症状
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Coords 坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -73,6 +85,15 @@ class Summary extends AbstractModel
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("Coords",$param) and $param["Coords"] !== null) {
+            $this->Coords = [];
+            foreach ($param["Coords"] as $key => $value){
+                $obj = new Coord();
+                $obj->deserialize($value);
+                array_push($this->Coords, $obj);
+            }
         }
     }
 }

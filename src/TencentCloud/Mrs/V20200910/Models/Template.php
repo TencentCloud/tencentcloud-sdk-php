@@ -80,9 +80,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrescription(Prescription $Prescription) 设置处方单
 注意：此字段可能返回 null，表示取不到有效值。
- * @method VaccineCertificate getVaccineCertificate() 获取免疫接种证明
+ * @method VaccineCertificate getVaccineCertificate() 获取疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVaccineCertificate(VaccineCertificate $VaccineCertificate) 设置免疫接种证明
+ * @method void setVaccineCertificate(VaccineCertificate $VaccineCertificate) 设置疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOcrText() 获取OCR文本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,6 +91,50 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOcrResult() 获取OCR拼接后文本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrResult(string $OcrResult) 设置OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReportTypeDesc() 获取报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReportTypeDesc(string $ReportTypeDesc) 设置报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PathologyV2 getPathologyV2() 获取病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPathologyV2(PathologyV2 $PathologyV2) 设置病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Indicator getC14() 获取碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setC14(Indicator $C14) 设置碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Exame getExame() 获取体检结论
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExame(Exame $Exame) 设置体检结论
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DischargeInfoBlock getMedDocV2() 获取出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMedDocV2(DischargeInfoBlock $MedDocV2) 设置出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method IndicatorV3 getIndicatorV3() 获取检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndicatorV3(IndicatorV3 $IndicatorV3) 设置检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CovidItemsInfo getCovid() 获取核酸报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCovid(CovidItemsInfo $Covid) 设置核酸报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Maternity getMaternity() 获取孕产报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaternity(Maternity $Maternity) 设置孕产报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method EyeItemsInfo getEye() 获取眼科报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEye(EyeItemsInfo $Eye) 设置眼科报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BirthCert getBirthCert() 获取出生证明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBirthCert(BirthCert $BirthCert) 设置出生证明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TimelineInformation getTimeline() 获取时间轴
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeline(TimelineInformation $Timeline) 设置时间轴
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
@@ -186,7 +230,7 @@ class Template extends AbstractModel
     public $Prescription;
 
     /**
-     * @var VaccineCertificate 免疫接种证明
+     * @var VaccineCertificate 疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VaccineCertificate;
@@ -202,6 +246,72 @@ class Template extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrResult;
+
+    /**
+     * @var string 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReportTypeDesc;
+
+    /**
+     * @var PathologyV2 病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PathologyV2;
+
+    /**
+     * @var Indicator 碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $C14;
+
+    /**
+     * @var Exame 体检结论
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Exame;
+
+    /**
+     * @var DischargeInfoBlock 出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MedDocV2;
+
+    /**
+     * @var IndicatorV3 检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndicatorV3;
+
+    /**
+     * @var CovidItemsInfo 核酸报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Covid;
+
+    /**
+     * @var Maternity 孕产报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Maternity;
+
+    /**
+     * @var EyeItemsInfo 眼科报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Eye;
+
+    /**
+     * @var BirthCert 出生证明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BirthCert;
+
+    /**
+     * @var TimelineInformation 时间轴
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Timeline;
 
     /**
      * @param PatientInfo $PatientInfo 患者信息
@@ -234,11 +344,33 @@ class Template extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Prescription $Prescription 处方单
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VaccineCertificate $VaccineCertificate 免疫接种证明
+     * @param VaccineCertificate $VaccineCertificate 疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcrText OCR文本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcrResult OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReportTypeDesc 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PathologyV2 $PathologyV2 病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Indicator $C14 碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Exame $Exame 体检结论
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DischargeInfoBlock $MedDocV2 出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndicatorV3 $IndicatorV3 检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CovidItemsInfo $Covid 核酸报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Maternity $Maternity 孕产报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EyeItemsInfo $Eye 眼科报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BirthCert $BirthCert 出生证明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimelineInformation $Timeline 时间轴
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -339,6 +471,60 @@ class Template extends AbstractModel
 
         if (array_key_exists("OcrResult",$param) and $param["OcrResult"] !== null) {
             $this->OcrResult = $param["OcrResult"];
+        }
+
+        if (array_key_exists("ReportTypeDesc",$param) and $param["ReportTypeDesc"] !== null) {
+            $this->ReportTypeDesc = $param["ReportTypeDesc"];
+        }
+
+        if (array_key_exists("PathologyV2",$param) and $param["PathologyV2"] !== null) {
+            $this->PathologyV2 = new PathologyV2();
+            $this->PathologyV2->deserialize($param["PathologyV2"]);
+        }
+
+        if (array_key_exists("C14",$param) and $param["C14"] !== null) {
+            $this->C14 = new Indicator();
+            $this->C14->deserialize($param["C14"]);
+        }
+
+        if (array_key_exists("Exame",$param) and $param["Exame"] !== null) {
+            $this->Exame = new Exame();
+            $this->Exame->deserialize($param["Exame"]);
+        }
+
+        if (array_key_exists("MedDocV2",$param) and $param["MedDocV2"] !== null) {
+            $this->MedDocV2 = new DischargeInfoBlock();
+            $this->MedDocV2->deserialize($param["MedDocV2"]);
+        }
+
+        if (array_key_exists("IndicatorV3",$param) and $param["IndicatorV3"] !== null) {
+            $this->IndicatorV3 = new IndicatorV3();
+            $this->IndicatorV3->deserialize($param["IndicatorV3"]);
+        }
+
+        if (array_key_exists("Covid",$param) and $param["Covid"] !== null) {
+            $this->Covid = new CovidItemsInfo();
+            $this->Covid->deserialize($param["Covid"]);
+        }
+
+        if (array_key_exists("Maternity",$param) and $param["Maternity"] !== null) {
+            $this->Maternity = new Maternity();
+            $this->Maternity->deserialize($param["Maternity"]);
+        }
+
+        if (array_key_exists("Eye",$param) and $param["Eye"] !== null) {
+            $this->Eye = new EyeItemsInfo();
+            $this->Eye->deserialize($param["Eye"]);
+        }
+
+        if (array_key_exists("BirthCert",$param) and $param["BirthCert"] !== null) {
+            $this->BirthCert = new BirthCert();
+            $this->BirthCert->deserialize($param["BirthCert"]);
+        }
+
+        if (array_key_exists("Timeline",$param) and $param["Timeline"] !== null) {
+            $this->Timeline = new TimelineInformation();
+            $this->Timeline->deserialize($param["Timeline"]);
         }
     }
 }

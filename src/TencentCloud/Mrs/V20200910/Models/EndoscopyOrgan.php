@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSymDescList(array $SymDescList) 设置症状描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCoords() 获取坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoords(array $Coords) 设置坐标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EndoscopyOrgan extends AbstractModel
 {
@@ -74,6 +78,12 @@ class EndoscopyOrgan extends AbstractModel
     public $SymDescList;
 
     /**
+     * @var array 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Coords;
+
+    /**
      * @param Part $Part 部位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
@@ -83,6 +93,8 @@ class EndoscopyOrgan extends AbstractModel
      * @param string $PartAlias 部位别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SymDescList 症状描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Coords 坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -121,6 +133,15 @@ class EndoscopyOrgan extends AbstractModel
                 $obj = new BlockInfo();
                 $obj->deserialize($value);
                 array_push($this->SymDescList, $obj);
+            }
+        }
+
+        if (array_key_exists("Coords",$param) and $param["Coords"] !== null) {
+            $this->Coords = [];
+            foreach ($param["Coords"] as $key => $value){
+                $obj = new Coord();
+                $obj->deserialize($value);
+                array_push($this->Coords, $obj);
             }
         }
     }

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSize() 获取大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSize(array $Size) 设置大小
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BlockInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ class BlockInfo extends AbstractModel
     public $Name;
 
     /**
+     * @var array 大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Size;
+
+    /**
      * @param array $Index 原文位置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Positive 阳性
@@ -95,6 +105,8 @@ class BlockInfo extends AbstractModel
      * @param string $Type 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Size 大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,15 @@ class BlockInfo extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = [];
+            foreach ($param["Size"] as $key => $value){
+                $obj = new Size();
+                $obj->deserialize($value);
+                array_push($this->Size, $obj);
+            }
         }
     }
 }

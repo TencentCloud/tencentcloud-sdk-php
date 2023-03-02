@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置单位
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getImpl() 获取归一化值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImpl(string $Impl) 设置归一化值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NormSize extends AbstractModel
 {
@@ -54,11 +58,19 @@ class NormSize extends AbstractModel
     public $Unit;
 
     /**
+     * @var string 归一化值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Impl;
+
+    /**
      * @param array $Number 数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Impl 归一化值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class NormSize extends AbstractModel
 
         if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
             $this->Unit = $param["Unit"];
+        }
+
+        if (array_key_exists("Impl",$param) and $param["Impl"] !== null) {
+            $this->Impl = $param["Impl"];
         }
     }
 }

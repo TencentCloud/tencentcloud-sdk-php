@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowFileInfos(array $FlowFileInfos) 设置每个子合同的发起所需的信息，数量限制2-100
  * @method string getFlowGroupName() 获取合同组名称，长度不超过200个字符
  * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称，长度不超过200个字符
- * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method string getApproverVerifyType() 获取签署人校验方式
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
@@ -34,8 +34,8 @@ MobileCheck：手机号验证
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
 参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method UserInfo getOperator() 获取操作者的信息，此参数不用传
+ * @method void setOperator(UserInfo $Operator) 设置操作者的信息，此参数不用传
  */
 class ChannelCreateFlowGroupByFilesRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class ChannelCreateFlowGroupByFilesRequest extends AbstractModel
     public $FlowGroupName;
 
     /**
-     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
@@ -63,19 +63,19 @@ MobileCheck：手机号验证
     public $ApproverVerifyType;
 
     /**
-     * @var UserInfo 操作者的信息
+     * @var UserInfo 操作者的信息，此参数不用传
      */
     public $Operator;
 
     /**
      * @param array $FlowFileInfos 每个子合同的发起所需的信息，数量限制2-100
      * @param string $FlowGroupName 合同组名称，长度不超过200个字符
-     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $ApproverVerifyType 签署人校验方式
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
 参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
-     * @param UserInfo $Operator 操作者的信息
+     * @param UserInfo $Operator 操作者的信息，此参数不用传
      */
     function __construct()
     {

@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 录制的混流布局参数。
-
  *
  * @method integer getMixLayoutMode() 获取布局模式:
 1：悬浮布局；
@@ -61,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 0：主流（默认）；
 1：辅流（屏幕分享）；
 这个位置的MediaId代表的是对应MaxResolutionUserId的主辅路，MixLayoutList内代表的是自定义用户的主辅路。
- * @method string getBackgroundImageUrl() 获取下载的url地址， 只支持jpg， png，大小限制不超过5M。
- * @method void setBackgroundImageUrl(string $BackgroundImageUrl) 设置下载的url地址， 只支持jpg， png，大小限制不超过5M。
+ * @method string getBackgroundImageUrl() 获取图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
+ * @method void setBackgroundImageUrl(string $BackgroundImageUrl) 设置图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
  * @method integer getPlaceHolderMode() 获取设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
  * @method void setPlaceHolderMode(integer $PlaceHolderMode) 设置设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
  * @method integer getBackgroundImageRenderMode() 获取背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
@@ -119,7 +118,7 @@ class MixLayoutParams extends AbstractModel
     public $MediaId;
 
     /**
-     * @var string 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+     * @var string 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
      */
     public $BackgroundImageUrl;
 
@@ -174,7 +173,7 @@ class MixLayoutParams extends AbstractModel
 0：主流（默认）；
 1：辅流（屏幕分享）；
 这个位置的MediaId代表的是对应MaxResolutionUserId的主辅路，MixLayoutList内代表的是自定义用户的主辅路。
-     * @param string $BackgroundImageUrl 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+     * @param string $BackgroundImageUrl 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
      * @param integer $PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
      * @param integer $BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
      * @param string $DefaultSubBackgroundImage 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。

@@ -108,6 +108,66 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getTransparent() 获取透声度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTransparent(BlockInfo $Transparent) 设置透声度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getMriAdc() 获取MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMriAdc(BlockInfo $MriAdc) 设置MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getMriDwi() 获取MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMriDwi(BlockInfo $MriDwi) 设置MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getMriT1() 获取MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMriT1(BlockInfo $MriT1) 设置MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getMriT2() 获取MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMriT2(BlockInfo $MriT2) 设置MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getCtHu() 获取CT HU值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCtHu(BlockInfo $CtHu) 设置CT HU值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getSuvmax() 获取SUmax值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSuvmax(BlockInfo $Suvmax) 设置SUmax值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getMetabolism() 获取代谢情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetabolism(BlockInfo $Metabolism) 设置代谢情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getRadioactiveUptake() 获取放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRadioactiveUptake(BlockInfo $RadioactiveUptake) 设置放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getLymphEnlargement() 获取淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLymphEnlargement(BlockInfo $LymphEnlargement) 设置淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getImageFeature() 获取影像特征
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageFeature(BlockInfo $ImageFeature) 设置影像特征
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getDuct() 获取导管
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDuct(BlockInfo $Duct) 设置导管
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getTrend() 获取趋势
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrend(BlockInfo $Trend) 设置趋势
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfo getOperation() 获取手术情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperation(BlockInfo $Operation) 设置手术情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCoords() 获取器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoords(array $Coords) 设置器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Organ extends AbstractModel
 {
@@ -244,6 +304,96 @@ class Organ extends AbstractModel
     public $Index;
 
     /**
+     * @var BlockInfo 透声度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Transparent;
+
+    /**
+     * @var BlockInfo MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MriAdc;
+
+    /**
+     * @var BlockInfo MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MriDwi;
+
+    /**
+     * @var BlockInfo MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MriT1;
+
+    /**
+     * @var BlockInfo MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MriT2;
+
+    /**
+     * @var BlockInfo CT HU值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CtHu;
+
+    /**
+     * @var BlockInfo SUmax值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Suvmax;
+
+    /**
+     * @var BlockInfo 代谢情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metabolism;
+
+    /**
+     * @var BlockInfo 放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RadioactiveUptake;
+
+    /**
+     * @var BlockInfo 淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LymphEnlargement;
+
+    /**
+     * @var BlockInfo 影像特征
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageFeature;
+
+    /**
+     * @var BlockInfo 导管
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Duct;
+
+    /**
+     * @var BlockInfo 趋势
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Trend;
+
+    /**
+     * @var BlockInfo 手术情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Operation;
+
+    /**
+     * @var array 器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Coords;
+
+    /**
      * @param Part $Part 部位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Size 大小
@@ -287,6 +437,36 @@ class Organ extends AbstractModel
      * @param string $Src 原文
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $Transparent 透声度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $MriAdc MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $MriDwi MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $MriT1 MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $MriT2 MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $CtHu CT HU值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $Suvmax SUmax值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $Metabolism 代谢情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $RadioactiveUptake 放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $LymphEnlargement 淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $ImageFeature 影像特征
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $Duct 导管
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $Trend 趋势
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfo $Operation 手术情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Coords 器官在报告图片中的坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -412,6 +592,85 @@ class Organ extends AbstractModel
 
         if (array_key_exists("Index",$param) and $param["Index"] !== null) {
             $this->Index = $param["Index"];
+        }
+
+        if (array_key_exists("Transparent",$param) and $param["Transparent"] !== null) {
+            $this->Transparent = new BlockInfo();
+            $this->Transparent->deserialize($param["Transparent"]);
+        }
+
+        if (array_key_exists("MriAdc",$param) and $param["MriAdc"] !== null) {
+            $this->MriAdc = new BlockInfo();
+            $this->MriAdc->deserialize($param["MriAdc"]);
+        }
+
+        if (array_key_exists("MriDwi",$param) and $param["MriDwi"] !== null) {
+            $this->MriDwi = new BlockInfo();
+            $this->MriDwi->deserialize($param["MriDwi"]);
+        }
+
+        if (array_key_exists("MriT1",$param) and $param["MriT1"] !== null) {
+            $this->MriT1 = new BlockInfo();
+            $this->MriT1->deserialize($param["MriT1"]);
+        }
+
+        if (array_key_exists("MriT2",$param) and $param["MriT2"] !== null) {
+            $this->MriT2 = new BlockInfo();
+            $this->MriT2->deserialize($param["MriT2"]);
+        }
+
+        if (array_key_exists("CtHu",$param) and $param["CtHu"] !== null) {
+            $this->CtHu = new BlockInfo();
+            $this->CtHu->deserialize($param["CtHu"]);
+        }
+
+        if (array_key_exists("Suvmax",$param) and $param["Suvmax"] !== null) {
+            $this->Suvmax = new BlockInfo();
+            $this->Suvmax->deserialize($param["Suvmax"]);
+        }
+
+        if (array_key_exists("Metabolism",$param) and $param["Metabolism"] !== null) {
+            $this->Metabolism = new BlockInfo();
+            $this->Metabolism->deserialize($param["Metabolism"]);
+        }
+
+        if (array_key_exists("RadioactiveUptake",$param) and $param["RadioactiveUptake"] !== null) {
+            $this->RadioactiveUptake = new BlockInfo();
+            $this->RadioactiveUptake->deserialize($param["RadioactiveUptake"]);
+        }
+
+        if (array_key_exists("LymphEnlargement",$param) and $param["LymphEnlargement"] !== null) {
+            $this->LymphEnlargement = new BlockInfo();
+            $this->LymphEnlargement->deserialize($param["LymphEnlargement"]);
+        }
+
+        if (array_key_exists("ImageFeature",$param) and $param["ImageFeature"] !== null) {
+            $this->ImageFeature = new BlockInfo();
+            $this->ImageFeature->deserialize($param["ImageFeature"]);
+        }
+
+        if (array_key_exists("Duct",$param) and $param["Duct"] !== null) {
+            $this->Duct = new BlockInfo();
+            $this->Duct->deserialize($param["Duct"]);
+        }
+
+        if (array_key_exists("Trend",$param) and $param["Trend"] !== null) {
+            $this->Trend = new BlockInfo();
+            $this->Trend->deserialize($param["Trend"]);
+        }
+
+        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
+            $this->Operation = new BlockInfo();
+            $this->Operation->deserialize($param["Operation"]);
+        }
+
+        if (array_key_exists("Coords",$param) and $param["Coords"] !== null) {
+            $this->Coords = [];
+            foreach ($param["Coords"] as $key => $value){
+                $obj = new Coord();
+                $obj->deserialize($value);
+                array_push($this->Coords, $obj);
+            }
         }
     }
 }

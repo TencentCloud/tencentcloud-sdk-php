@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncProxyOrganizationOperators请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
  * @method string getOperatorType() 获取操作类型，新增:"CREATE"，修改:"UPDATE"，离职:"RESIGN"
  * @method void setOperatorType(string $OperatorType) 设置操作类型，新增:"CREATE"，修改:"UPDATE"，离职:"RESIGN"
  * @method array getProxyOrganizationOperators() 获取经办人信息列表，最大长度200
  * @method void setProxyOrganizationOperators(array $ProxyOrganizationOperators) 设置经办人信息列表，最大长度200
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method UserInfo getOperator() 获取暂未开放
+ * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class SyncProxyOrganizationOperatorsRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+     * @var Agent 应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
      */
     public $Agent;
 
@@ -47,15 +47,15 @@ class SyncProxyOrganizationOperatorsRequest extends AbstractModel
     public $ProxyOrganizationOperators;
 
     /**
-     * @var UserInfo 操作者的信息
+     * @var UserInfo 暂未开放
      */
     public $Operator;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.AppId 和 Agent.ProxyOrganizationOpenId必填。
      * @param string $OperatorType 操作类型，新增:"CREATE"，修改:"UPDATE"，离职:"RESIGN"
      * @param array $ProxyOrganizationOperators 经办人信息列表，最大长度200
-     * @param UserInfo $Operator 操作者的信息
+     * @param UserInfo $Operator 暂未开放
      */
     function __construct()
     {

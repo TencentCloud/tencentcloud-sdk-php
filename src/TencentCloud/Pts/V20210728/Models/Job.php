@@ -188,6 +188,14 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置任务状态描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取test-project
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置test-project
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScenarioName() 获取test-scenario
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScenarioName(string $ScenarioName) 设置test-scenario
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Job extends AbstractModel
 {
@@ -440,6 +448,18 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     public $Message;
 
     /**
+     * @var string test-project
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
+
+    /**
+     * @var string test-scenario
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScenarioName;
+
+    /**
      * @param string $JobId 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioId 任务的场景ID
@@ -523,6 +543,10 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
      * @param float $NetworkSendRate 每秒发送字节数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName test-project
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScenarioName test-scenario
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -738,6 +762,14 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("ScenarioName",$param) and $param["ScenarioName"] !== null) {
+            $this->ScenarioName = $param["ScenarioName"];
         }
     }
 }

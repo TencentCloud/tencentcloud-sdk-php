@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCoords() 获取坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoords(array $Coords) 设置坐标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SymptomInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ class SymptomInfo extends AbstractModel
     public $Src;
 
     /**
+     * @var array 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Coords;
+
+    /**
      * @param BlockInfo $Grade 等级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Part $Part 部位
@@ -95,6 +105,8 @@ class SymptomInfo extends AbstractModel
      * @param array $Attrs 属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Coords 坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +152,15 @@ class SymptomInfo extends AbstractModel
 
         if (array_key_exists("Src",$param) and $param["Src"] !== null) {
             $this->Src = $param["Src"];
+        }
+
+        if (array_key_exists("Coords",$param) and $param["Coords"] !== null) {
+            $this->Coords = [];
+            foreach ($param["Coords"] as $key => $value){
+                $obj = new Coord();
+                $obj->deserialize($value);
+                array_push($this->Coords, $obj);
+            }
         }
     }
 }

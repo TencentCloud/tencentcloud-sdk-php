@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClinicalDiagnosis(BlockInfo $ClinicalDiagnosis) 设置临床诊断
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlockInfoV2 getDamagePoi() 获取受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDamagePoi(BlockInfoV2 $DamagePoi) 设置受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFp2NdItems() 获取病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFp2NdItems(array $Fp2NdItems) 设置病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FirstPage extends AbstractModel
 {
@@ -54,11 +62,27 @@ class FirstPage extends AbstractModel
     public $ClinicalDiagnosis;
 
     /**
+     * @var BlockInfoV2 受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DamagePoi;
+
+    /**
+     * @var array 病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Fp2NdItems;
+
+    /**
      * @param array $DischargeDiagnosis 出入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $PathologicalDiagnosis 病理诊断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $ClinicalDiagnosis 临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlockInfoV2 $DamagePoi 受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Fp2NdItems 病案首页第二页
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -91,6 +115,20 @@ class FirstPage extends AbstractModel
         if (array_key_exists("ClinicalDiagnosis",$param) and $param["ClinicalDiagnosis"] !== null) {
             $this->ClinicalDiagnosis = new BlockInfo();
             $this->ClinicalDiagnosis->deserialize($param["ClinicalDiagnosis"]);
+        }
+
+        if (array_key_exists("DamagePoi",$param) and $param["DamagePoi"] !== null) {
+            $this->DamagePoi = new BlockInfoV2();
+            $this->DamagePoi->deserialize($param["DamagePoi"]);
+        }
+
+        if (array_key_exists("Fp2NdItems",$param) and $param["Fp2NdItems"] !== null) {
+            $this->Fp2NdItems = [];
+            foreach ($param["Fp2NdItems"] as $key => $value){
+                $obj = new Fp2NdItem();
+                $obj->deserialize($value);
+                array_push($this->Fp2NdItems, $obj);
+            }
         }
     }
 }

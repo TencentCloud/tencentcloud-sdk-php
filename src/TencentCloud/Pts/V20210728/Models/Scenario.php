@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwner(string $Owner) 设置创建人员
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取场景所在的项目的名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置场景所在的项目的名字
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Scenario extends AbstractModel
 {
@@ -272,6 +276,12 @@ class Scenario extends AbstractModel
     public $Owner;
 
     /**
+     * @var string 场景所在的项目的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
+
+    /**
      * @param string $ScenarioId 场景ID
      * @param string $Name 场景名
      * @param string $Description 场景描述
@@ -319,6 +329,8 @@ class Scenario extends AbstractModel
      * @param array $NotificationHooks 通知事件回调
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Owner 创建人员
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName 场景所在的项目的名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -469,6 +481,10 @@ class Scenario extends AbstractModel
 
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = $param["Owner"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
         }
     }
 }

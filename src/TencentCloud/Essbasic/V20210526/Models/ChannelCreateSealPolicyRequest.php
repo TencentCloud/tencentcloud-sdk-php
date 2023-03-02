@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateSealPolicy请求参数结构体
  *
- * @method Agent getAgent() 获取用户渠道信息
- * @method void setAgent(Agent $Agent) 设置用户渠道信息
- * @method string getSealId() 获取指定印章
- * @method void setSealId(string $SealId) 设置指定印章
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method string getSealId() 获取指定印章ID
+ * @method void setSealId(string $SealId) 设置指定印章ID
  * @method array getUserIds() 获取指定待授权的用户ID数组
  * @method void setUserIds(array $UserIds) 设置指定待授权的用户ID数组
- * @method OrganizationInfo getOrganization() 获取企业机构信息
- * @method void setOrganization(OrganizationInfo $Organization) 设置企业机构信息
- * @method UserInfo getOperator() 获取操作人（用户）信息
- * @method void setOperator(UserInfo $Operator) 设置操作人（用户）信息
+ * @method OrganizationInfo getOrganization() 获取企业机构信息，不用传
+ * @method void setOrganization(OrganizationInfo $Organization) 设置企业机构信息，不用传
+ * @method UserInfo getOperator() 获取操作人（用户）信息，不用传
+ * @method void setOperator(UserInfo $Operator) 设置操作人（用户）信息，不用传
  */
 class ChannelCreateSealPolicyRequest extends AbstractModel
 {
     /**
-     * @var Agent 用户渠道信息
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
     /**
-     * @var string 指定印章
+     * @var string 指定印章ID
      */
     public $SealId;
 
@@ -49,21 +49,21 @@ class ChannelCreateSealPolicyRequest extends AbstractModel
     public $UserIds;
 
     /**
-     * @var OrganizationInfo 企业机构信息
+     * @var OrganizationInfo 企业机构信息，不用传
      */
     public $Organization;
 
     /**
-     * @var UserInfo 操作人（用户）信息
+     * @var UserInfo 操作人（用户）信息，不用传
      */
     public $Operator;
 
     /**
-     * @param Agent $Agent 用户渠道信息
-     * @param string $SealId 指定印章
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param string $SealId 指定印章ID
      * @param array $UserIds 指定待授权的用户ID数组
-     * @param OrganizationInfo $Organization 企业机构信息
-     * @param UserInfo $Operator 操作人（用户）信息
+     * @param OrganizationInfo $Organization 企业机构信息，不用传
+     * @param UserInfo $Operator 操作人（用户）信息，不用传
      */
     function __construct()
     {

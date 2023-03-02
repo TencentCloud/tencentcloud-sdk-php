@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpper(string $Upper) 设置上级部位
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PartDesc getPartDetail() 获取部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPartDetail(PartDesc $PartDetail) 设置部位详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NormPart extends AbstractModel
 {
@@ -74,6 +78,12 @@ class NormPart extends AbstractModel
     public $Upper;
 
     /**
+     * @var PartDesc 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PartDetail;
+
+    /**
      * @param string $Part 部位值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PartDirection 部位方向
@@ -83,6 +93,8 @@ class NormPart extends AbstractModel
      * @param string $TissueDirection 组织方向
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Upper 上级部位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PartDesc $PartDetail 部位详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,11 @@ class NormPart extends AbstractModel
 
         if (array_key_exists("Upper",$param) and $param["Upper"] !== null) {
             $this->Upper = $param["Upper"];
+        }
+
+        if (array_key_exists("PartDetail",$param) and $param["PartDetail"] !== null) {
+            $this->PartDetail = new PartDesc();
+            $this->PartDetail->deserialize($param["PartDetail"]);
         }
     }
 }

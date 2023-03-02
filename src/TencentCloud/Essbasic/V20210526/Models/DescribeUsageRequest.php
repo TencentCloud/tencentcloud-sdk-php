@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单次返回的最多条目数量。默认为1000，且不能超过1000。
  * @method integer getOffset() 获取偏移量，默认是0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认是0。
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method UserInfo getOperator() 获取暂未开放
+ * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class DescribeUsageRequest extends AbstractModel
 {
@@ -77,7 +77,7 @@ class DescribeUsageRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var UserInfo 操作者的信息
+     * @var UserInfo 暂未开放
      */
     public $Operator;
 
@@ -91,7 +91,7 @@ class DescribeUsageRequest extends AbstractModel
 汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
      * @param integer $Limit 单次返回的最多条目数量。默认为1000，且不能超过1000。
      * @param integer $Offset 偏移量，默认是0。
-     * @param UserInfo $Operator 操作者的信息
+     * @param UserInfo $Operator 暂未开放
      */
     function __construct()
     {

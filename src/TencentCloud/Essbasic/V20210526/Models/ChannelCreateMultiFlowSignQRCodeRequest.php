@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateMultiFlowSignQRCode请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息。
+ * @method Agent getAgent() 获取应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
  * @method string getTemplateId() 获取模版ID
  * @method void setTemplateId(string $TemplateId) 设置模版ID
@@ -42,15 +42,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，最大长度1000个字符
 不传默认使用渠道应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
- * @method UserInfo getOperator() 获取用户信息
- * @method void setOperator(UserInfo $Operator) 设置用户信息
  * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件（已弃用）
  * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
+ * @method UserInfo getOperator() 获取暂未开放
+ * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息。
+     * @var Agent 应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      */
     public $Agent;
@@ -93,17 +93,17 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @var UserInfo 用户信息
-     */
-    public $Operator;
-
-    /**
      * @var ApproverRestriction 限制二维码用户条件（已弃用）
      */
     public $ApproverRestrictions;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息。
+     * @var UserInfo 暂未开放
+     */
+    public $Operator;
+
+    /**
+     * @param Agent $Agent 应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      * @param string $TemplateId 模版ID
      * @param string $FlowName 签署流程名称，最大长度200个字符。
@@ -114,8 +114,8 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @param string $CallbackUrl 回调地址，最大长度1000个字符
 不传默认使用渠道应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
-     * @param UserInfo $Operator 用户信息
      * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
+     * @param UserInfo $Operator 暂未开放
      */
     function __construct()
     {
@@ -168,14 +168,14 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
             $this->CallbackUrl = $param["CallbackUrl"];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
         if (array_key_exists("ApproverRestrictions",$param) and $param["ApproverRestrictions"] !== null) {
             $this->ApproverRestrictions = new ApproverRestriction();
             $this->ApproverRestrictions->deserialize($param["ApproverRestrictions"]);
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

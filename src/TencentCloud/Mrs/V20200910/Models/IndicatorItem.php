@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(Coordinate $Coords) 设置指标项坐标位置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInferNormal() 获取推测结果是否异常
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInferNormal(string $InferNormal) 设置推测结果是否异常
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndicatorItem extends AbstractModel
 {
@@ -144,6 +148,12 @@ class IndicatorItem extends AbstractModel
     public $Coords;
 
     /**
+     * @var string 推测结果是否异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InferNormal;
+
+    /**
      * @param string $Code 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scode 标准缩写
@@ -167,6 +177,8 @@ class IndicatorItem extends AbstractModel
      * @param integer $Id 指标项ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Coordinate $Coords 指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InferNormal 推测结果是否异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -229,6 +241,10 @@ class IndicatorItem extends AbstractModel
         if (array_key_exists("Coords",$param) and $param["Coords"] !== null) {
             $this->Coords = new Coordinate();
             $this->Coords->deserialize($param["Coords"]);
+        }
+
+        if (array_key_exists("InferNormal",$param) and $param["InferNormal"] !== null) {
+            $this->InferNormal = $param["InferNormal"];
         }
     }
 }

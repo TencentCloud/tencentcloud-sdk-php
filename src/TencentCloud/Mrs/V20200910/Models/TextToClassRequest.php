@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取报告文本
  * @method void setText(string $Text) 设置报告文本
- * @method integer getUserType() 获取用户类型，新客户传1，老客户可不传
- * @method void setUserType(integer $UserType) 设置用户类型，新客户传1，老客户可不传
+ * @method integer getUserType() 获取后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
+ * @method void setUserType(integer $UserType) 设置后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
  */
 class TextToClassRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TextToClassRequest extends AbstractModel
     public $Text;
 
     /**
-     * @var integer 用户类型，新客户传1，老客户可不传
+     * @var integer 后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
      */
     public $UserType;
 
     /**
      * @param string $Text 报告文本
-     * @param integer $UserType 用户类型，新客户传1，老客户可不传
+     * @param integer $UserType 后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
      */
     function __construct()
     {

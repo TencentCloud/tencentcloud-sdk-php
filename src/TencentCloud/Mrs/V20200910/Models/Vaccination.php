@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvider(string $Provider) 设置接种者
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLot() 获取疫苗批号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLot(string $Lot) 设置疫苗批号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Vaccination extends AbstractModel
 {
@@ -114,6 +118,12 @@ class Vaccination extends AbstractModel
     public $Provider;
 
     /**
+     * @var string 疫苗批号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Lot;
+
+    /**
      * @param string $Id 序号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vaccine 疫苗名称
@@ -131,6 +141,8 @@ class Vaccination extends AbstractModel
      * @param string $Site 接种部位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Provider 接种者
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Lot 疫苗批号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class Vaccination extends AbstractModel
 
         if (array_key_exists("Provider",$param) and $param["Provider"] !== null) {
             $this->Provider = $param["Provider"];
+        }
+
+        if (array_key_exists("Lot",$param) and $param["Lot"] !== null) {
+            $this->Lot = $param["Lot"];
         }
     }
 }

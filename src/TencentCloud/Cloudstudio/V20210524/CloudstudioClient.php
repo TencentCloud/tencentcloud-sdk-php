@@ -27,6 +27,7 @@ use TencentCloud\Cloudstudio\V20210524\Models as Models;
  * @method Models\CreateWorkspaceByAgentResponse CreateWorkspaceByAgent(Models\CreateWorkspaceByAgentRequest $req) 云服务器方式创建工作空间
  * @method Models\CreateWorkspaceByTemplateResponse CreateWorkspaceByTemplate(Models\CreateWorkspaceByTemplateRequest $req) 快速开始, 基于模板创建工作空间
  * @method Models\CreateWorkspaceByVersionControlResponse CreateWorkspaceByVersionControl(Models\CreateWorkspaceByVersionControlRequest $req) 根据模板创建工作空间
+ * @method Models\CreateWorkspaceTemporaryTokenResponse CreateWorkspaceTemporaryToken(Models\CreateWorkspaceTemporaryTokenRequest $req) 为工作空间创建临时访问凭证，重复调用会创建新的 Token，旧的 Token 将会自动失效
  * @method Models\DeleteCustomizeTemplatesByIdResponse DeleteCustomizeTemplatesById(Models\DeleteCustomizeTemplatesByIdRequest $req) 删除自定义模板
  * @method Models\DescribeCustomizeTemplatesResponse DescribeCustomizeTemplates(Models\DescribeCustomizeTemplatesRequest $req) 获取所有模板列表
  * @method Models\DescribeCustomizeTemplatesByIdResponse DescribeCustomizeTemplatesById(Models\DescribeCustomizeTemplatesByIdRequest $req) 获取特定模板信息

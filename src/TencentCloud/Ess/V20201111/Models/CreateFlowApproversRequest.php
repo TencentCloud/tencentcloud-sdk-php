@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) 设置签署流程编号
  * @method array getApprovers() 获取补充签署人信息
  * @method void setApprovers(array $Approvers) 设置补充签署人信息
+ * @method string getInitiator() 获取企微消息中的发起人
+ * @method void setInitiator(string $Initiator) 设置企微消息中的发起人
  */
 class CreateFlowApproversRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateFlowApproversRequest extends AbstractModel
     public $Approvers;
 
     /**
+     * @var string 企微消息中的发起人
+     */
+    public $Initiator;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowId 签署流程编号
      * @param array $Approvers 补充签署人信息
+     * @param string $Initiator 企微消息中的发起人
      */
     function __construct()
     {
@@ -78,6 +86,10 @@ class CreateFlowApproversRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Approvers, $obj);
             }
+        }
+
+        if (array_key_exists("Initiator",$param) and $param["Initiator"] !== null) {
+            $this->Initiator = $param["Initiator"];
         }
     }
 }

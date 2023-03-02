@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道侧合作企业统一社会信用代码，最大长度200个字符
  * @method string getProxyLegalName() 获取渠道侧合作企业法人/负责人姓名
  * @method void setProxyLegalName(string $ProxyLegalName) 设置渠道侧合作企业法人/负责人姓名
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method UserInfo getOperator() 获取暂未开放
+ * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class SyncProxyOrganizationRequest extends AbstractModel
 {
@@ -64,7 +64,7 @@ class SyncProxyOrganizationRequest extends AbstractModel
     public $ProxyLegalName;
 
     /**
-     * @var UserInfo 操作者的信息
+     * @var UserInfo 暂未开放
      */
     public $Operator;
 
@@ -75,7 +75,7 @@ class SyncProxyOrganizationRequest extends AbstractModel
      * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
      * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
      * @param string $ProxyLegalName 渠道侧合作企业法人/负责人姓名
-     * @param UserInfo $Operator 操作者的信息
+     * @param UserInfo $Operator 暂未开放
      */
     function __construct()
     {

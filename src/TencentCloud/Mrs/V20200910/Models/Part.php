@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValueBrief() 获取值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValueBrief(string $ValueBrief) 设置值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Part extends AbstractModel
 {
@@ -74,6 +78,12 @@ class Part extends AbstractModel
     public $Name;
 
     /**
+     * @var string 值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValueBrief;
+
+    /**
      * @param array $Index 原文位置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NormPart $NormPart 部位
@@ -83,6 +93,8 @@ class Part extends AbstractModel
      * @param string $Value 值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ValueBrief 值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -117,6 +129,10 @@ class Part extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("ValueBrief",$param) and $param["ValueBrief"] !== null) {
+            $this->ValueBrief = $param["ValueBrief"];
         }
     }
 }

@@ -48,16 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置虚拟私有网络 ID，不传或传空表示创建为基础网络
  * @method string getSubnetId() 获取虚拟私有网络子网 ID，VpcId不为空时必填
  * @method void setSubnetId(string $SubnetId) 设置虚拟私有网络子网 ID，VpcId不为空时必填
- * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。
- * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。
+ * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+ * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
  * @method boolean getAutoVoucher() 获取是否自动使用代金券进行支付，默认不使用。
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
@@ -138,11 +130,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。
+     * @var string 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      */
     public $DbVersionId;
 
@@ -216,11 +204,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @param integer $ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      * @param string $VpcId 虚拟私有网络 ID，不传或传空表示创建为基础网络
      * @param string $SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
-     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。
+     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      * @param boolean $AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param string $SecurityGroupId 安全组id

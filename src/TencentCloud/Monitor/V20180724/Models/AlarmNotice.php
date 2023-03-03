@@ -68,9 +68,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLSNotices(array $CLSNotices) 设置推送cls渠道
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取通知模版绑定的标签
+ * @method array getTags() 获取通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置通知模版绑定的标签
+ * @method void setTags(array $Tags) 设置通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmNotice extends AbstractModel
@@ -148,7 +148,7 @@ class AlarmNotice extends AbstractModel
     public $CLSNotices;
 
     /**
-     * @var array 通知模版绑定的标签
+     * @var array 通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
@@ -178,7 +178,7 @@ class AlarmNotice extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CLSNotices 推送cls渠道
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 通知模版绑定的标签
+     * @param array $Tags 通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

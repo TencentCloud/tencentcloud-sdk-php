@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilter(AlarmPolicyFilter $Filter) 设置全局过滤条件
  * @method array getGroupBy() 获取聚合维度列表，指定按哪些维度 key 来做 group by
  * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
- * @method array getTags() 获取模版绑定的标签
- * @method void setTags(array $Tags) 设置模版绑定的标签
+ * @method array getTags() 获取模板绑定的标签
+ * @method void setTags(array $Tags) 设置模板绑定的标签
  * @method LogAlarmReq getLogAlarmReqInfo() 获取日志告警信息
  * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置日志告警信息
  * @method array getHierarchicalNotices() 获取告警分级通知规则配置
@@ -132,7 +132,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $GroupBy;
 
     /**
-     * @var array 模版绑定的标签
+     * @var array 模板绑定的标签
      */
     public $Tags;
 
@@ -171,7 +171,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param array $TriggerTasks 触发任务列表
      * @param AlarmPolicyFilter $Filter 全局过滤条件
      * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
-     * @param array $Tags 模版绑定的标签
+     * @param array $Tags 模板绑定的标签
      * @param LogAlarmReq $LogAlarmReqInfo 日志告警信息
      * @param array $HierarchicalNotices 告警分级通知规则配置
      * @param integer $MigrateFlag 迁移策略专用字段，0-走鉴权逻辑，1-跳过鉴权逻辑

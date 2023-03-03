@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置虚拟私有网络子网 ID，VpcId 不为空时必填
  * @method integer getProjectId() 获取项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
- * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
- * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
+ * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+ * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
  * @method string getInstanceName() 获取实例名称， 可以通过该字段自主的设置实例的名字
  * @method void setInstanceName(string $InstanceName) 设置实例名称， 可以通过该字段自主的设置实例的名字
  * @method array getSecurityGroupIds() 获取安全组ID列表
@@ -128,7 +128,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
+     * @var string 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      */
     public $DbVersionId;
 
@@ -187,7 +187,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $VpcId 虚拟私有网络 ID，不传表示创建为基础网络
      * @param string $SubnetId 虚拟私有网络子网 ID，VpcId 不为空时必填
      * @param integer $ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
-     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
+     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
      * @param array $SecurityGroupIds 安全组ID列表
      * @param integer $AutoRenewFlag 自动续费标志，1:自动续费，2:不自动续费

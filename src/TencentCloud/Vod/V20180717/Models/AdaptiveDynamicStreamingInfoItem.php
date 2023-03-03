@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取转自适应码流规格。
  * @method void setDefinition(integer $Definition) 设置转自适应码流规格。
- * @method string getPackage() 获取打包格式，只能为 HLS。
- * @method void setPackage(string $Package) 设置打包格式，只能为 HLS。
+ * @method string getPackage() 获取打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li>
+ * @method void setPackage(string $Package) 设置打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li>
  * @method string getDrmType() 获取加密类型。
  * @method void setDrmType(string $DrmType) 设置加密类型。
  * @method string getUrl() 获取播放地址。
@@ -42,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDigitalWatermarkType(string $DigitalWatermarkType) 设置数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
+ * @method array getSubStreamSet() 获取子流信息列表。
+ * @method void setSubStreamSet(array $SubStreamSet) 设置子流信息列表。
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -51,7 +57,9 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Definition;
 
     /**
-     * @var string 打包格式，只能为 HLS。
+     * @var string 打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li>
      */
     public $Package;
 
@@ -81,8 +89,15 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $DigitalWatermarkType;
 
     /**
+     * @var array 子流信息列表。
+     */
+    public $SubStreamSet;
+
+    /**
      * @param integer $Definition 转自适应码流规格。
-     * @param string $Package 打包格式，只能为 HLS。
+     * @param string $Package 打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li>
      * @param string $DrmType 加密类型。
      * @param string $Url 播放地址。
      * @param integer $Size 媒体文件大小，单位：字节。
@@ -92,6 +107,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
      * @param string $DigitalWatermarkType 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
+     * @param array $SubStreamSet 子流信息列表。
      */
     function __construct()
     {
@@ -128,6 +144,15 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 
         if (array_key_exists("DigitalWatermarkType",$param) and $param["DigitalWatermarkType"] !== null) {
             $this->DigitalWatermarkType = $param["DigitalWatermarkType"];
+        }
+
+        if (array_key_exists("SubStreamSet",$param) and $param["SubStreamSet"] !== null) {
+            $this->SubStreamSet = [];
+            foreach ($param["SubStreamSet"] as $key => $value){
+                $obj = new MediaSubStreamInfoItem();
+                $obj->deserialize($value);
+                array_push($this->SubStreamSet, $obj);
+            }
         }
     }
 }

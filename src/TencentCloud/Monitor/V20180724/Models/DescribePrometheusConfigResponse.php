@@ -20,17 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusConfig返回参数结构体
  *
+ * @method string getConfig() 获取全局配置
+ * @method void setConfig(string $Config) 设置全局配置
+ * @method array getServiceMonitors() 获取ServiceMonitor配置
+ * @method void setServiceMonitors(array $ServiceMonitors) 设置ServiceMonitor配置
+ * @method array getPodMonitors() 获取PodMonitor配置
+ * @method void setPodMonitors(array $PodMonitors) 设置PodMonitor配置
+ * @method array getRawJobs() 获取原生Job
+ * @method void setRawJobs(array $RawJobs) 设置原生Job
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePrometheusConfigResponse extends AbstractModel
 {
     /**
+     * @var string 全局配置
+     */
+    public $Config;
+
+    /**
+     * @var array ServiceMonitor配置
+     */
+    public $ServiceMonitors;
+
+    /**
+     * @var array PodMonitor配置
+     */
+    public $PodMonitors;
+
+    /**
+     * @var array 原生Job
+     */
+    public $RawJobs;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $Config 全局配置
+     * @param array $ServiceMonitors ServiceMonitor配置
+     * @param array $PodMonitors PodMonitor配置
+     * @param array $RawJobs 原生Job
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +78,37 @@ class DescribePrometheusConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = $param["Config"];
+        }
+
+        if (array_key_exists("ServiceMonitors",$param) and $param["ServiceMonitors"] !== null) {
+            $this->ServiceMonitors = [];
+            foreach ($param["ServiceMonitors"] as $key => $value){
+                $obj = new PrometheusConfigItem();
+                $obj->deserialize($value);
+                array_push($this->ServiceMonitors, $obj);
+            }
+        }
+
+        if (array_key_exists("PodMonitors",$param) and $param["PodMonitors"] !== null) {
+            $this->PodMonitors = [];
+            foreach ($param["PodMonitors"] as $key => $value){
+                $obj = new PrometheusConfigItem();
+                $obj->deserialize($value);
+                array_push($this->PodMonitors, $obj);
+            }
+        }
+
+        if (array_key_exists("RawJobs",$param) and $param["RawJobs"] !== null) {
+            $this->RawJobs = [];
+            foreach ($param["RawJobs"] as $key => $value){
+                $obj = new PrometheusConfigItem();
+                $obj->deserialize($value);
+                array_push($this->RawJobs, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

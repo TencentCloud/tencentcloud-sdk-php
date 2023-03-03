@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setURLNotices(array $URLNotices) 设置回调通知 最多3个
  * @method array getCLSNotices() 获取推送CLS日志服务的操作 最多1个
  * @method void setCLSNotices(array $CLSNotices) 设置推送CLS日志服务的操作 最多1个
- * @method array getTags() 获取模版绑定的标签
- * @method void setTags(array $Tags) 设置模版绑定的标签
+ * @method array getTags() 获取模板绑定的标签
+ * @method void setTags(array $Tags) 设置模板绑定的标签
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $CLSNotices;
 
     /**
-     * @var array 模版绑定的标签
+     * @var array 模板绑定的标签
      */
     public $Tags;
 
@@ -87,7 +87,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
      * @param array $UserNotices 用户通知 最多5个
      * @param array $URLNotices 回调通知 最多3个
      * @param array $CLSNotices 推送CLS日志服务的操作 最多1个
-     * @param array $Tags 模版绑定的标签
+     * @param array $Tags 模板绑定的标签
      */
     function __construct()
     {

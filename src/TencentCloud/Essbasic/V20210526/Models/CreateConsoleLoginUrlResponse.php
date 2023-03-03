@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsoleLoginUrl返回参数结构体
  *
- * @method string getConsoleUrl() 获取子客Web控制台url注意事项：
+ * @method string getConsoleUrl() 获取子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
 4. 此链接仅单次有效，使用后需要再次创建新的链接（部分聊天软件，如企业微信默认会对链接进行解析，此时需要使用类似“代码片段”的方式或者放到txt文件里发送链接）
 5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
- * @method void setConsoleUrl(string $ConsoleUrl) 设置子客Web控制台url注意事项：
+ * @method void setConsoleUrl(string $ConsoleUrl) 设置子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
 4. 此链接仅单次有效，使用后需要再次创建新的链接（部分聊天软件，如企业微信默认会对链接进行解析，此时需要使用类似“代码片段”的方式或者放到txt文件里发送链接）
 5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
- * @method boolean getIsActivated() 获取渠道子客企业是否已开通腾讯电子签
- * @method void setIsActivated(boolean $IsActivated) 设置渠道子客企业是否已开通腾讯电子签
+ * @method boolean getIsActivated() 获取子客企业是否已开通腾讯电子签
+ * @method void setIsActivated(boolean $IsActivated) 设置子客企业是否已开通腾讯电子签
  * @method boolean getProxyOperatorIsVerified() 获取当前经办人是否已认证（false:未认证 true:已认证）
  * @method void setProxyOperatorIsVerified(boolean $ProxyOperatorIsVerified) 设置当前经办人是否已认证（false:未认证 true:已认证）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateConsoleLoginUrlResponse extends AbstractModel
 {
     /**
-     * @var string 子客Web控制台url注意事项：
+     * @var string 子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
@@ -52,7 +52,7 @@ class CreateConsoleLoginUrlResponse extends AbstractModel
     public $ConsoleUrl;
 
     /**
-     * @var boolean 渠道子客企业是否已开通腾讯电子签
+     * @var boolean 子客企业是否已开通腾讯电子签
      */
     public $IsActivated;
 
@@ -67,13 +67,13 @@ class CreateConsoleLoginUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ConsoleUrl 子客Web控制台url注意事项：
+     * @param string $ConsoleUrl 子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
 4. 此链接仅单次有效，使用后需要再次创建新的链接（部分聊天软件，如企业微信默认会对链接进行解析，此时需要使用类似“代码片段”的方式或者放到txt文件里发送链接）
 5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
-     * @param boolean $IsActivated 渠道子客企业是否已开通腾讯电子签
+     * @param boolean $IsActivated 子客企业是否已开通腾讯电子签
      * @param boolean $ProxyOperatorIsVerified 当前经办人是否已认证（false:未认证 true:已认证）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

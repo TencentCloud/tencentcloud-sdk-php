@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCheckSyncJobResult请求参数结构体
+ * DescribeBackupDownloadRestriction请求参数结构体
  *
- * @method string getJobId() 获取同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
- * @method void setJobId(string $JobId) 设置同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
+
  */
-class DescribeCheckSyncJobResultRequest extends AbstractModel
+class DescribeBackupDownloadRestrictionRequest extends AbstractModel
 {
-    /**
-     * @var string 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
-     */
-    public $JobId;
+
 
     /**
-     * @param string $JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeCheckSyncJobResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
-        }
+
     }
 }

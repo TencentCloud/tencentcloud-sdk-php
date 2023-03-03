@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() 获取接口模块名，固定值"monitor"
  * @method void setModule(string $Module) 设置接口模块名，固定值"monitor"
- * @method array getProductName() 获取产品类型过滤，比如"cvm"表示云服务器
- * @method void setProductName(array $ProductName) 设置产品类型过滤，比如"cvm"表示云服务器
- * @method array getEventName() 获取事件名称过滤，比如"guest_reboot"表示机器重启
- * @method void setEventName(array $EventName) 设置事件名称过滤，比如"guest_reboot"表示机器重启
- * @method array getInstanceId() 获取影响对象，比如"ins-19708ino"
- * @method void setInstanceId(array $InstanceId) 设置影响对象，比如"ins-19708ino"
- * @method array getDimensions() 获取维度过滤，比如外网IP:10.0.0.1
- * @method void setDimensions(array $Dimensions) 设置维度过滤，比如外网IP:10.0.0.1
- * @method array getRegionList() 获取产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
- * @method void setRegionList(array $RegionList) 设置产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+ * @method array getProductName() 获取产品类型过滤，例如"cvm"表示云服务器
+ * @method void setProductName(array $ProductName) 设置产品类型过滤，例如"cvm"表示云服务器
+ * @method array getEventName() 获取事件名称过滤，例如"guest_reboot"表示机器重启
+ * @method void setEventName(array $EventName) 设置事件名称过滤，例如"guest_reboot"表示机器重启
+ * @method array getInstanceId() 获取影响对象，例如"ins-19708ino"
+ * @method void setInstanceId(array $InstanceId) 设置影响对象，例如"ins-19708ino"
+ * @method array getDimensions() 获取维度过滤，例如外网IP:10.0.0.1
+ * @method void setDimensions(array $Dimensions) 设置维度过滤，例如外网IP:10.0.0.1
+ * @method array getRegionList() 获取产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+ * @method void setRegionList(array $RegionList) 设置产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
  * @method array getType() 获取事件类型过滤，取值范围["status_change","abnormal"]，分别表示状态变更、异常事件
  * @method void setType(array $Type) 设置事件类型过滤，取值范围["status_change","abnormal"]，分别表示状态变更、异常事件
  * @method array getStatus() 获取事件状态过滤，取值范围["recover","alarm","-"]，分别表示已恢复、未恢复、无状态
@@ -59,27 +59,27 @@ class DescribeProductEventListRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var array 产品类型过滤，比如"cvm"表示云服务器
+     * @var array 产品类型过滤，例如"cvm"表示云服务器
      */
     public $ProductName;
 
     /**
-     * @var array 事件名称过滤，比如"guest_reboot"表示机器重启
+     * @var array 事件名称过滤，例如"guest_reboot"表示机器重启
      */
     public $EventName;
 
     /**
-     * @var array 影响对象，比如"ins-19708ino"
+     * @var array 影响对象，例如"ins-19708ino"
      */
     public $InstanceId;
 
     /**
-     * @var array 维度过滤，比如外网IP:10.0.0.1
+     * @var array 维度过滤，例如外网IP:10.0.0.1
      */
     public $Dimensions;
 
     /**
-     * @var array 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+     * @var array 产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
      */
     public $RegionList;
 
@@ -130,11 +130,11 @@ class DescribeProductEventListRequest extends AbstractModel
 
     /**
      * @param string $Module 接口模块名，固定值"monitor"
-     * @param array $ProductName 产品类型过滤，比如"cvm"表示云服务器
-     * @param array $EventName 事件名称过滤，比如"guest_reboot"表示机器重启
-     * @param array $InstanceId 影响对象，比如"ins-19708ino"
-     * @param array $Dimensions 维度过滤，比如外网IP:10.0.0.1
-     * @param array $RegionList 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+     * @param array $ProductName 产品类型过滤，例如"cvm"表示云服务器
+     * @param array $EventName 事件名称过滤，例如"guest_reboot"表示机器重启
+     * @param array $InstanceId 影响对象，例如"ins-19708ino"
+     * @param array $Dimensions 维度过滤，例如外网IP:10.0.0.1
+     * @param array $RegionList 产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
      * @param array $Type 事件类型过滤，取值范围["status_change","abnormal"]，分别表示状态变更、异常事件
      * @param array $Status 事件状态过滤，取值范围["recover","alarm","-"]，分别表示已恢复、未恢复、无状态
      * @param array $Project 项目ID过滤

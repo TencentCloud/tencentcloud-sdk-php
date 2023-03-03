@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 通知模版与策略绑定关系
+ * 通知模板与策略绑定关系
  *
  * @method string getNoticeId() 获取告警通知模板 ID
  * @method void setNoticeId(string $NoticeId) 设置告警通知模板 ID

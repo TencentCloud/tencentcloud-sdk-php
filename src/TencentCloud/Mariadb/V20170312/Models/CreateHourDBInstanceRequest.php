@@ -36,10 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置统一网络ID，不传表示基础网络
  * @method string getSubnetId() 获取统一子网ID，VpcId有值时需填写
  * @method void setSubnetId(string $SubnetId) 设置统一子网ID，VpcId有值时需填写
- * @method string getDbVersionId() 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
- * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+ * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+ * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
  * @method string getInstanceName() 获取自定义实例名称
  * @method void setInstanceName(string $InstanceName) 设置自定义实例名称
  * @method array getSecurityGroupIds() 获取安全组ID，不传表示不绑定安全组
@@ -106,8 +104,7 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+     * @var string 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      */
     public $DbVersionId;
 
@@ -167,8 +164,7 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
      * @param integer $ProjectId 项目ID，不传表示默认项目
      * @param string $VpcId 统一网络ID，不传表示基础网络
      * @param string $SubnetId 统一子网ID，VpcId有值时需填写
-     * @param string $DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      * @param string $InstanceName 自定义实例名称
      * @param array $SecurityGroupIds 安全组ID，不传表示不绑定安全组
      * @param integer $Ipv6Flag 是否支持IPv6

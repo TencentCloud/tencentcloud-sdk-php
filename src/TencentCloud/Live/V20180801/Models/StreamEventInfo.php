@@ -39,7 +39,9 @@ UTC 格式时间，例如：2019-01-07T15:00:00Z。
  * @method integer getDuration() 获取推流持续时长，单位：秒。
  * @method void setDuration(integer $Duration) 设置推流持续时长，单位：秒。
  * @method string getClientIp() 获取主播 IP。
+当客户端为内网推流时，展示为: - 。
  * @method void setClientIp(string $ClientIp) 设置主播 IP。
+当客户端为内网推流时，展示为: - 。
  * @method string getResolution() 获取分辨率。
  * @method void setResolution(string $Resolution) 设置分辨率。
  */
@@ -84,6 +86,7 @@ UTC 格式时间，例如：2019-01-07T15:00:00Z。
 
     /**
      * @var string 主播 IP。
+当客户端为内网推流时，展示为: - 。
      */
     public $ClientIp;
 
@@ -103,6 +106,7 @@ UTC 格式时间，例如：2019-01-07T15:00:00Z。
      * @param string $StopReason 停止原因。
      * @param integer $Duration 推流持续时长，单位：秒。
      * @param string $ClientIp 主播 IP。
+当客户端为内网推流时，展示为: - 。
      * @param string $Resolution 分辨率。
      */
     function __construct()

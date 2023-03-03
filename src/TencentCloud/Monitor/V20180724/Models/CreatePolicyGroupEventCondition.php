@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmNotifyType(integer $AlarmNotifyType) 设置告警发送收敛类型。0连续告警，1指数告警
  * @method integer getAlarmNotifyPeriod() 获取告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
  * @method void setAlarmNotifyPeriod(integer $AlarmNotifyPeriod) 设置告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
- * @method integer getRuleId() 获取如果通过模版创建，需要传入模版中该指标的对应RuleId
- * @method void setRuleId(integer $RuleId) 设置如果通过模版创建，需要传入模版中该指标的对应RuleId
+ * @method integer getRuleId() 获取如果通过模板创建，需要传入模板中该指标的对应RuleId
+ * @method void setRuleId(integer $RuleId) 设置如果通过模板创建，需要传入模板中该指标的对应RuleId
  */
 class CreatePolicyGroupEventCondition extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreatePolicyGroupEventCondition extends AbstractModel
     public $AlarmNotifyPeriod;
 
     /**
-     * @var integer 如果通过模版创建，需要传入模版中该指标的对应RuleId
+     * @var integer 如果通过模板创建，需要传入模板中该指标的对应RuleId
      */
     public $RuleId;
 
@@ -55,7 +55,7 @@ class CreatePolicyGroupEventCondition extends AbstractModel
      * @param integer $EventId 告警事件的Id
      * @param integer $AlarmNotifyType 告警发送收敛类型。0连续告警，1指数告警
      * @param integer $AlarmNotifyPeriod 告警发送周期单位秒。<0 不触发, 0 只触发一次, >0 每隔triggerTime秒触发一次
-     * @param integer $RuleId 如果通过模版创建，需要传入模版中该指标的对应RuleId
+     * @param integer $RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
      */
     function __construct()
     {

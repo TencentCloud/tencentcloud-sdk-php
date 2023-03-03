@@ -32,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li>
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li>
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -45,7 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li>
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -150,7 +152,8 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li>
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li>
      */
     public $TaskType;
 
@@ -303,7 +306,8 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li>
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>

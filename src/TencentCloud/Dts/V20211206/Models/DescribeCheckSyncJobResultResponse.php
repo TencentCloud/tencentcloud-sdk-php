@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCheckSyncJobResult返回参数结构体
  *
- * @method string getStatus() 获取校验结果
+ * @method string getStatus() 获取校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置校验结果
+ * @method void setStatus(string $Status) 设置校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStepCount() 获取步骤总数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepCur(integer $StepCur) 设置当前所在步骤
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProgress() 获取总体进度
+ * @method integer getProgress() 获取总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProgress(integer $Progress) 设置总体进度
+ * @method void setProgress(integer $Progress) 设置总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStepInfos() 获取步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCheckSyncJobResultResponse extends AbstractModel
 {
     /**
-     * @var string 校验结果
+     * @var string 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -64,7 +64,7 @@ class DescribeCheckSyncJobResultResponse extends AbstractModel
     public $StepCur;
 
     /**
-     * @var integer 总体进度
+     * @var integer 总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
@@ -81,13 +81,13 @@ class DescribeCheckSyncJobResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 校验结果
+     * @param string $Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepCount 步骤总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepCur 当前所在步骤
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Progress 总体进度
+     * @param integer $Progress 总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepInfos 步骤信息
 注意：此字段可能返回 null，表示取不到有效值。

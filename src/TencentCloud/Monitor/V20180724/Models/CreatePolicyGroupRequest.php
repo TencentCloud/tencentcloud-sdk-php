@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置组策略名称
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
- * @method string getViewName() 获取策略组所属视图的名称，若通过模版创建，可不传入
- * @method void setViewName(string $ViewName) 设置策略组所属视图的名称，若通过模版创建，可不传入
+ * @method string getViewName() 获取策略组所属视图的名称，若通过模板创建，可不传入
+ * @method void setViewName(string $ViewName) 设置策略组所属视图的名称，若通过模板创建，可不传入
  * @method integer getProjectId() 获取策略组所属项目Id，会进行鉴权操作
  * @method void setProjectId(integer $ProjectId) 设置策略组所属项目Id，会进行鉴权操作
- * @method integer getConditionTempGroupId() 获取模版策略组Id, 通过模版创建时才需要传
- * @method void setConditionTempGroupId(integer $ConditionTempGroupId) 设置模版策略组Id, 通过模版创建时才需要传
+ * @method integer getConditionTempGroupId() 获取模板策略组Id, 通过模板创建时才需要传
+ * @method void setConditionTempGroupId(integer $ConditionTempGroupId) 设置模板策略组Id, 通过模板创建时才需要传
  * @method integer getIsShielded() 获取是否屏蔽策略组，0表示不屏蔽，1表示屏蔽。不填默认为0
  * @method void setIsShielded(integer $IsShielded) 设置是否屏蔽策略组，0表示不屏蔽，1表示屏蔽。不填默认为0
  * @method string getRemark() 获取策略组的备注信息
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConditions(array $Conditions) 设置策略组中的阈值告警规则
  * @method array getEventConditions() 获取策略组中的事件告警规则
  * @method void setEventConditions(array $EventConditions) 设置策略组中的事件告警规则
- * @method integer getBackEndCall() 获取是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
- * @method void setBackEndCall(integer $BackEndCall) 设置是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+ * @method integer getBackEndCall() 获取是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
+ * @method void setBackEndCall(integer $BackEndCall) 设置是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
  * @method integer getIsUnionRule() 获取指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
  * @method void setIsUnionRule(integer $IsUnionRule) 设置指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
  */
@@ -58,7 +58,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string 策略组所属视图的名称，若通过模版创建，可不传入
+     * @var string 策略组所属视图的名称，若通过模板创建，可不传入
      */
     public $ViewName;
 
@@ -68,7 +68,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 模版策略组Id, 通过模版创建时才需要传
+     * @var integer 模板策略组Id, 通过模板创建时才需要传
      */
     public $ConditionTempGroupId;
 
@@ -98,7 +98,7 @@ class CreatePolicyGroupRequest extends AbstractModel
     public $EventConditions;
 
     /**
-     * @var integer 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+     * @var integer 是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
      */
     public $BackEndCall;
 
@@ -110,15 +110,15 @@ class CreatePolicyGroupRequest extends AbstractModel
     /**
      * @param string $GroupName 组策略名称
      * @param string $Module 固定值，为"monitor"
-     * @param string $ViewName 策略组所属视图的名称，若通过模版创建，可不传入
+     * @param string $ViewName 策略组所属视图的名称，若通过模板创建，可不传入
      * @param integer $ProjectId 策略组所属项目Id，会进行鉴权操作
-     * @param integer $ConditionTempGroupId 模版策略组Id, 通过模版创建时才需要传
+     * @param integer $ConditionTempGroupId 模板策略组Id, 通过模板创建时才需要传
      * @param integer $IsShielded 是否屏蔽策略组，0表示不屏蔽，1表示屏蔽。不填默认为0
      * @param string $Remark 策略组的备注信息
      * @param integer $InsertTime 插入时间，戳格式为Unix时间戳，不填则按后台处理时间填充
      * @param array $Conditions 策略组中的阈值告警规则
      * @param array $EventConditions 策略组中的事件告警规则
-     * @param integer $BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+     * @param integer $BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
      * @param integer $IsUnionRule 指标告警规则的且或关系，0表示或规则(满足任意规则就告警)，1表示且规则(满足所有规则才告警)
      */
     function __construct()

@@ -46,16 +46,8 @@ use TencentCloud\Common\AbstractModel;
  查询实例规格获得。
  * @method void setShardCpu(integer $ShardCpu) 设置分片cpu大小，单位：核，可以通过 DescribeShardSpec
  查询实例规格获得。
- * @method string getDbVersionId() 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
- * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+ * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+ * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
  * @method array getZones() 获取分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
  * @method void setZones(array $Zones) 设置分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
  * @method string getSecurityGroupId() 获取安全组id
@@ -131,11 +123,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
     public $ShardCpu;
 
     /**
-     * @var string 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+     * @var string 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      */
     public $DbVersionId;
 
@@ -208,11 +196,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
      * @param string $SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
      * @param integer $ShardCpu 分片cpu大小，单位：核，可以通过 DescribeShardSpec
  查询实例规格获得。
-     * @param string $DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param string $SecurityGroupId 安全组id
      * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字

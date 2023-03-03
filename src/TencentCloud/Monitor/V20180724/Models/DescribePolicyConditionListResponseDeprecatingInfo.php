@@ -18,35 +18,47 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 通知模板ID及通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+ * DescribePolicyConditionListResponseDeprecatingInfo
  *
- * @method string getNoticeId() 获取通知模板ID
+ * @method boolean getHidden() 获取是否隐藏
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeId(string $NoticeId) 设置通知模板ID
+ * @method void setHidden(boolean $Hidden) 设置是否隐藏
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getClassification() 获取通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+ * @method array getNewViewNames() 获取新视图名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClassification(array $Classification) 设置通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+ * @method void setNewViewNames(array $NewViewNames) 设置新视图名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置描述
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AlarmHierarchicalNotice extends AbstractModel
+class DescribePolicyConditionListResponseDeprecatingInfo extends AbstractModel
 {
     /**
-     * @var string 通知模板ID
+     * @var boolean 是否隐藏
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $NoticeId;
+    public $Hidden;
 
     /**
-     * @var array 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+     * @var array 新视图名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Classification;
+    public $NewViewNames;
 
     /**
-     * @param string $NoticeId 通知模板ID
+     * @var string 描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Classification 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+     */
+    public $Description;
+
+    /**
+     * @param boolean $Hidden 是否隐藏
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NewViewNames 新视图名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +74,16 @@ class AlarmHierarchicalNotice extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NoticeId",$param) and $param["NoticeId"] !== null) {
-            $this->NoticeId = $param["NoticeId"];
+        if (array_key_exists("Hidden",$param) and $param["Hidden"] !== null) {
+            $this->Hidden = $param["Hidden"];
         }
 
-        if (array_key_exists("Classification",$param) and $param["Classification"] !== null) {
-            $this->Classification = $param["Classification"];
+        if (array_key_exists("NewViewNames",$param) and $param["NewViewNames"] !== null) {
+            $this->NewViewNames = $param["NewViewNames"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

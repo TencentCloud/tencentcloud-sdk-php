@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayloadType(integer $PayloadType) 设置SEI消息的payload_type，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
  * @method string getPayloadUuid() 获取PayloadType为5，PayloadUuid必须填写。PayloadType不是5时，不需要填写，填写会被后台忽略。该值必须是32长度的十六进制。
  * @method void setPayloadUuid(string $PayloadUuid) 设置PayloadType为5，PayloadUuid必须填写。PayloadType不是5时，不需要填写，填写会被后台忽略。该值必须是32长度的十六进制。
+ * @method integer getInterval() 获取SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInterval(integer $Interval) 设置SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFollowIdr() 获取取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFollowIdr(integer $FollowIdr) 设置取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class McuPassThrough extends AbstractModel
 {
@@ -45,9 +53,25 @@ class McuPassThrough extends AbstractModel
     public $PayloadUuid;
 
     /**
+     * @var integer SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Interval;
+
+    /**
+     * @var integer 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FollowIdr;
+
+    /**
      * @param string $PayloadContent 透传SEI的payload内容。
      * @param integer $PayloadType SEI消息的payload_type，取值范围5、100-254（244除外，244为我们内部自定义的时间戳SEI）。
      * @param string $PayloadUuid PayloadType为5，PayloadUuid必须填写。PayloadType不是5时，不需要填写，填写会被后台忽略。该值必须是32长度的十六进制。
+     * @param integer $Interval SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FollowIdr 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +96,14 @@ class McuPassThrough extends AbstractModel
 
         if (array_key_exists("PayloadUuid",$param) and $param["PayloadUuid"] !== null) {
             $this->PayloadUuid = $param["PayloadUuid"];
+        }
+
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("FollowIdr",$param) and $param["FollowIdr"] !== null) {
+            $this->FollowIdr = $param["FollowIdr"];
         }
     }
 }

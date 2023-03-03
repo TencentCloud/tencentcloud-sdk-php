@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportRegions(array $SupportRegions) 设置支持该策略类型的地域列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribePolicyConditionListResponseDeprecatingInfo getDeprecatingInfo() 获取弃用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeprecatingInfo(DescribePolicyConditionListResponseDeprecatingInfo $DeprecatingInfo) 设置弃用信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePolicyConditionListCondition extends AbstractModel
 {
@@ -89,6 +93,12 @@ class DescribePolicyConditionListCondition extends AbstractModel
     public $SupportRegions;
 
     /**
+     * @var DescribePolicyConditionListResponseDeprecatingInfo 弃用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeprecatingInfo;
+
+    /**
      * @param string $PolicyViewName 策略视图名称
      * @param array $EventMetrics 事件告警条件
 注意：此字段可能返回 null，表示取不到有效值。
@@ -99,6 +109,8 @@ class DescribePolicyConditionListCondition extends AbstractModel
      * @param integer $SortId 排序id
      * @param boolean $SupportDefault 是否支持默认策略
      * @param array $SupportRegions 支持该策略类型的地域列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescribePolicyConditionListResponseDeprecatingInfo $DeprecatingInfo 弃用信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -154,6 +166,11 @@ class DescribePolicyConditionListCondition extends AbstractModel
 
         if (array_key_exists("SupportRegions",$param) and $param["SupportRegions"] !== null) {
             $this->SupportRegions = $param["SupportRegions"];
+        }
+
+        if (array_key_exists("DeprecatingInfo",$param) and $param["DeprecatingInfo"] !== null) {
+            $this->DeprecatingInfo = new DescribePolicyConditionListResponseDeprecatingInfo();
+            $this->DeprecatingInfo->deserialize($param["DeprecatingInfo"]);
         }
     }
 }

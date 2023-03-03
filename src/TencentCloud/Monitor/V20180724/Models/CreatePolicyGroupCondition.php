@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCalcPeriod(integer $CalcPeriod) 设置数据聚合周期(单位秒)，若指标有默认值可不填
  * @method integer getContinuePeriod() 获取持续几个检测周期触发规则会告警
  * @method void setContinuePeriod(integer $ContinuePeriod) 设置持续几个检测周期触发规则会告警
- * @method integer getRuleId() 获取如果通过模版创建，需要传入模版中该指标的对应RuleId
- * @method void setRuleId(integer $RuleId) 设置如果通过模版创建，需要传入模版中该指标的对应RuleId
+ * @method integer getRuleId() 获取如果通过模板创建，需要传入模板中该指标的对应RuleId
+ * @method void setRuleId(integer $RuleId) 设置如果通过模板创建，需要传入模板中该指标的对应RuleId
  */
 class CreatePolicyGroupCondition extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreatePolicyGroupCondition extends AbstractModel
     public $ContinuePeriod;
 
     /**
-     * @var integer 如果通过模版创建，需要传入模版中该指标的对应RuleId
+     * @var integer 如果通过模板创建，需要传入模板中该指标的对应RuleId
      */
     public $RuleId;
 
@@ -87,7 +87,7 @@ class CreatePolicyGroupCondition extends AbstractModel
      * @param float $CalcValue 比较的值，如果指标不必须CalcValue可不填
      * @param integer $CalcPeriod 数据聚合周期(单位秒)，若指标有默认值可不填
      * @param integer $ContinuePeriod 持续几个检测周期触发规则会告警
-     * @param integer $RuleId 如果通过模版创建，需要传入模版中该指标的对应RuleId
+     * @param integer $RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
      */
     function __construct()
     {

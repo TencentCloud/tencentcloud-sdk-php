@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
  * @method void setAgent(Agent $Agent) 设置应用信息
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
- * @method string getProxyOrganizationName() 获取渠道侧合作企业名称，最大长度64个字符
- * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名称，最大长度64个字符
+ * @method string getProxyOrganizationName() 获取第三方平台子客企业名称，最大长度64个字符
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置第三方平台子客企业名称，最大长度64个字符
  * @method string getBusinessLicense() 获取营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
- * @method string getUniformSocialCreditCode() 获取渠道侧合作企业统一社会信用代码，最大长度200个字符
- * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道侧合作企业统一社会信用代码，最大长度200个字符
- * @method string getProxyLegalName() 获取渠道侧合作企业法人/负责人姓名
- * @method void setProxyLegalName(string $ProxyLegalName) 设置渠道侧合作企业法人/负责人姓名
+ * @method string getUniformSocialCreditCode() 获取第三方平台子客企业统一社会信用代码，最大长度200个字符
+ * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置第三方平台子客企业统一社会信用代码，最大长度200个字符
+ * @method string getProxyLegalName() 获取第三方平台子客企业法人/负责人姓名
+ * @method void setProxyLegalName(string $ProxyLegalName) 设置第三方平台子客企业法人/负责人姓名
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
@@ -44,7 +44,7 @@ class SyncProxyOrganizationRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 渠道侧合作企业名称，最大长度64个字符
+     * @var string 第三方平台子客企业名称，最大长度64个字符
      */
     public $ProxyOrganizationName;
 
@@ -54,12 +54,12 @@ class SyncProxyOrganizationRequest extends AbstractModel
     public $BusinessLicense;
 
     /**
-     * @var string 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * @var string 第三方平台子客企业统一社会信用代码，最大长度200个字符
      */
     public $UniformSocialCreditCode;
 
     /**
-     * @var string 渠道侧合作企业法人/负责人姓名
+     * @var string 第三方平台子客企业法人/负责人姓名
      */
     public $ProxyLegalName;
 
@@ -71,10 +71,10 @@ class SyncProxyOrganizationRequest extends AbstractModel
     /**
      * @param Agent $Agent 应用信息
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
-     * @param string $ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
+     * @param string $ProxyOrganizationName 第三方平台子客企业名称，最大长度64个字符
      * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
-     * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
-     * @param string $ProxyLegalName 渠道侧合作企业法人/负责人姓名
+     * @param string $UniformSocialCreditCode 第三方平台子客企业统一社会信用代码，最大长度200个字符
+     * @param string $ProxyLegalName 第三方平台子客企业法人/负责人姓名
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

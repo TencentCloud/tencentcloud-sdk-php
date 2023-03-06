@@ -18,7 +18,7 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 渠道版员工部门信息
+ * 第三方应用集成员工部门信息
  *
  * @method string getDepartmentId() 获取部门id
 注意：此字段可能返回 null，表示取不到有效值。

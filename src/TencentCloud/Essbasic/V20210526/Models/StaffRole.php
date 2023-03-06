@@ -18,7 +18,7 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 渠道版员工角色信息
+ * 第三方应用集成员工角色信息
  *
  * @method string getRoleId() 获取角色id
 注意：此字段可能返回 null，表示取不到有效值。

@@ -44,19 +44,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPdfUrl() 获取渠道版-模板PDF文件链接
+ * @method string getPdfUrl() 获取第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPdfUrl(string $PdfUrl) 设置渠道版-模板PDF文件链接
+ * @method void setPdfUrl(string $PdfUrl) 设置第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChannelTemplateId() 获取关联的渠道模板ID
- * @method void setChannelTemplateId(string $ChannelTemplateId) 设置关联的渠道模板ID
- * @method string getChannelTemplateName() 获取关联的渠道模板名称
+ * @method string getChannelTemplateId() 获取关联的平台企业模板ID
+ * @method void setChannelTemplateId(string $ChannelTemplateId) 设置关联的平台企业模板ID
+ * @method string getChannelTemplateName() 获取关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChannelTemplateName(string $ChannelTemplateName) 设置关联的渠道模板名称
+ * @method void setChannelTemplateName(string $ChannelTemplateName) 设置关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getChannelAutoSave() 获取0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+ * @method integer getChannelAutoSave() 获取0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChannelAutoSave(integer $ChannelAutoSave) 设置0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+ * @method void setChannelAutoSave(integer $ChannelAutoSave) 设置0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateVersion() 获取模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,24 +122,24 @@ class TemplateInfo extends AbstractModel
     public $PreviewUrl;
 
     /**
-     * @var string 渠道版-模板PDF文件链接
+     * @var string 第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PdfUrl;
 
     /**
-     * @var string 关联的渠道模板ID
+     * @var string 关联的平台企业模板ID
      */
     public $ChannelTemplateId;
 
     /**
-     * @var string 关联的渠道模板名称
+     * @var string 关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelTemplateName;
 
     /**
-     * @var integer 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+     * @var integer 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelAutoSave;
@@ -163,12 +163,12 @@ class TemplateInfo extends AbstractModel
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
      * @param string $PreviewUrl 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PdfUrl 渠道版-模板PDF文件链接
+     * @param string $PdfUrl 第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChannelTemplateId 关联的渠道模板ID
-     * @param string $ChannelTemplateName 关联的渠道模板名称
+     * @param string $ChannelTemplateId 关联的平台企业模板ID
+     * @param string $ChannelTemplateName 关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ChannelAutoSave 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+     * @param integer $ChannelAutoSave 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateVersion 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
 注意：此字段可能返回 null，表示取不到有效值。

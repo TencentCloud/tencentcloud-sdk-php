@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReceiptId() 获取模板配置时候的签署人id,与控件绑定
  * @method void setReceiptId(string $ReceiptId) 设置模板配置时候的签署人id,与控件绑定
- * @method string getProxyOrganizationOpenId() 获取渠道侧企业的第三方id
+ * @method string getProxyOrganizationOpenId() 获取平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置渠道侧企业的第三方id
+ * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProxyOperatorOpenId() 获取渠道侧企业操作人的第三方id
- * @method void setProxyOperatorOpenId(string $ProxyOperatorOpenId) 设置渠道侧企业操作人的第三方id
- * @method string getProxyOrganizationName() 获取渠道侧企业名称
- * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧企业名称
+ * @method string getProxyOperatorOpenId() 获取平台企业操作人的第三方id
+ * @method void setProxyOperatorOpenId(string $ProxyOperatorOpenId) 设置平台企业操作人的第三方id
+ * @method string getProxyOrganizationName() 获取平台企业名称
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置平台企业名称
  * @method string getMobile() 获取签署人手机号
  * @method void setMobile(string $Mobile) 设置签署人手机号
  * @method integer getSignOrder() 获取签署人签署顺序
@@ -61,18 +61,18 @@ class FlowApproverDetail extends AbstractModel
     public $ReceiptId;
 
     /**
-     * @var string 渠道侧企业的第三方id
+     * @var string 平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyOrganizationOpenId;
 
     /**
-     * @var string 渠道侧企业操作人的第三方id
+     * @var string 平台企业操作人的第三方id
      */
     public $ProxyOperatorOpenId;
 
     /**
-     * @var string 渠道侧企业名称
+     * @var string 平台企业名称
      */
     public $ProxyOrganizationName;
 
@@ -117,10 +117,10 @@ class FlowApproverDetail extends AbstractModel
 
     /**
      * @param string $ReceiptId 模板配置时候的签署人id,与控件绑定
-     * @param string $ProxyOrganizationOpenId 渠道侧企业的第三方id
+     * @param string $ProxyOrganizationOpenId 平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProxyOperatorOpenId 渠道侧企业操作人的第三方id
-     * @param string $ProxyOrganizationName 渠道侧企业名称
+     * @param string $ProxyOperatorOpenId 平台企业操作人的第三方id
+     * @param string $ProxyOrganizationName 平台企业名称
      * @param string $Mobile 签署人手机号
      * @param integer $SignOrder 签署人签署顺序
      * @param string $ApproveName 签署人姓名

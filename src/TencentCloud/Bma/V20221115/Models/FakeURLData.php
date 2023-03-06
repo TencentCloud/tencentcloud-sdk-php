@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificationStatus(integer $CertificationStatus) 设置资质证明状态：0-不可用 1-可用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSnapshot() 获取网址截图
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshot(string $Snapshot) 设置网址截图
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FakeURLData extends AbstractModel
 {
@@ -224,6 +228,12 @@ class FakeURLData extends AbstractModel
     public $CertificationStatus;
 
     /**
+     * @var string 网址截图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Snapshot;
+
+    /**
      * @param integer $FakeURLId 仿冒网址id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BrandName 品牌名称
@@ -263,6 +273,8 @@ class FakeURLData extends AbstractModel
      * @param string $InsertTime 新增时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CertificationStatus 资质证明状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Snapshot 网址截图
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -356,6 +368,10 @@ class FakeURLData extends AbstractModel
 
         if (array_key_exists("CertificationStatus",$param) and $param["CertificationStatus"] !== null) {
             $this->CertificationStatus = $param["CertificationStatus"];
+        }
+
+        if (array_key_exists("Snapshot",$param) and $param["Snapshot"] !== null) {
+            $this->Snapshot = $param["Snapshot"];
         }
     }
 }

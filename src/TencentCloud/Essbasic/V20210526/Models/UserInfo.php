@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 接口调用者信息
  *
- * @method string getOpenId() 获取渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
- * @method void setOpenId(string $OpenId) 设置渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+ * @method string getOpenId() 获取第三方应用平台自定义，对应第三方平台子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
+ * @method void setOpenId(string $OpenId) 设置第三方应用平台自定义，对应第三方平台子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
  * @method string getChannel() 获取内部参数，暂未开放使用
  * @method void setChannel(string $Channel) 设置内部参数，暂未开放使用
  * @method string getCustomUserId() 获取内部参数，暂未开放使用
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class UserInfo extends AbstractModel
 {
     /**
-     * @var string 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+     * @var string 第三方应用平台自定义，对应第三方平台子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
      */
     public $OpenId;
 
@@ -59,7 +59,7 @@ class UserInfo extends AbstractModel
     public $ProxyIp;
 
     /**
-     * @param string $OpenId 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+     * @param string $OpenId 第三方应用平台自定义，对应第三方平台子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
      * @param string $Channel 内部参数，暂未开放使用
      * @param string $CustomUserId 内部参数，暂未开放使用
      * @param string $ClientIp 内部参数，暂未开放使用

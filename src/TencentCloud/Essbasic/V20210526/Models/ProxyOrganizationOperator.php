@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合作企业经办人列表信息
  *
- * @method string getId() 获取对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
- * @method void setId(string $Id) 设置对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+ * @method string getId() 获取对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
+ * @method void setId(string $Id) 设置对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
  * @method string getName() 获取经办人姓名，最大长度50个字符
  * @method void setName(string $Name) 设置经办人姓名，最大长度50个字符
  * @method string getIdCardType() 获取经办人身份证件类型
@@ -36,11 +36,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdCardNumber(string $IdCardNumber) 设置经办人证件号
  * @method string getMobile() 获取经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
  * @method void setMobile(string $Mobile) 设置经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
+ * @method string getDefaultRole() 获取默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultRole(string $DefaultRole) 设置默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyOrganizationOperator extends AbstractModel
 {
     /**
-     * @var string 对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+     * @var string 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
      */
     public $Id;
 
@@ -68,7 +78,16 @@ class ProxyOrganizationOperator extends AbstractModel
     public $Mobile;
 
     /**
-     * @param string $Id 对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+     * @var string 默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultRole;
+
+    /**
+     * @param string $Id 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
      * @param string $Name 经办人姓名，最大长度50个字符
      * @param string $IdCardType 经办人身份证件类型
 1.ID_CARD 居民身份证
@@ -76,6 +95,11 @@ class ProxyOrganizationOperator extends AbstractModel
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
      * @param string $IdCardNumber 经办人证件号
      * @param string $Mobile 经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
+     * @param string $DefaultRole 默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +132,10 @@ class ProxyOrganizationOperator extends AbstractModel
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("DefaultRole",$param) and $param["DefaultRole"] !== null) {
+            $this->DefaultRole = $param["DefaultRole"];
         }
     }
 }

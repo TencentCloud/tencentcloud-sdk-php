@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowType(string $FlowType) 设置签署流程的类型，长度不超过255个字符
  * @method string getCallbackUrl() 获取签署流程回调地址，长度不超过255个字符
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署流程回调地址，长度不超过255个字符
- * @method string getCustomerData() 获取渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
- * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method string getCustomerData() 获取第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method void setCustomerData(string $CustomerData) 设置第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  * @method boolean getUnordered() 获取合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
  * @method void setUnordered(boolean $Unordered) 设置合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
  * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
@@ -81,7 +81,7 @@ class FlowFileInfo extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @var string 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @var string 第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     public $CustomerData;
 
@@ -108,7 +108,7 @@ class FlowFileInfo extends AbstractModel
      * @param string $FlowDescription 签署流程的描述，长度不超过1000个字符
      * @param string $FlowType 签署流程的类型，长度不超过255个字符
      * @param string $CallbackUrl 签署流程回调地址，长度不超过255个字符
-     * @param string $CustomerData 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param string $CustomerData 第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      * @param boolean $Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      * @param boolean $NeedSignReview 本企业(发起方企业)是否需要签署审批

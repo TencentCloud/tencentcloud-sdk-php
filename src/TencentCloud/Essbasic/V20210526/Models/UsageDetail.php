@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用量明细
  *
- * @method string getProxyOrganizationOpenId() 获取渠道侧合作企业唯一标识
- * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置渠道侧合作企业唯一标识
- * @method string getProxyOrganizationName() 获取渠道侧合作企业名
+ * @method string getProxyOrganizationOpenId() 获取子客企业唯一标识
+ * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置子客企业唯一标识
+ * @method string getProxyOrganizationName() 获取子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDate() 获取日期，当需要汇总数据时日期为空
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
 class UsageDetail extends AbstractModel
 {
     /**
-     * @var string 渠道侧合作企业唯一标识
+     * @var string 子客企业唯一标识
      */
     public $ProxyOrganizationOpenId;
 
     /**
-     * @var string 渠道侧合作企业名
+     * @var string 子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyOrganizationName;
@@ -78,8 +78,8 @@ class UsageDetail extends AbstractModel
     public $FlowChannel;
 
     /**
-     * @param string $ProxyOrganizationOpenId 渠道侧合作企业唯一标识
-     * @param string $ProxyOrganizationName 渠道侧合作企业名
+     * @param string $ProxyOrganizationOpenId 子客企业唯一标识
+     * @param string $ProxyOrganizationName 子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Date 日期，当需要汇总数据时日期为空
 注意：此字段可能返回 null，表示取不到有效值。

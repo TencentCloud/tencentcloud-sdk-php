@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OperateChannelTemplate返回参数结构体
  *
- * @method string getAppId() 获取腾讯电子签颁发给渠道的应用ID
+ * @method string getAppId() 获取腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(string $AppId) 设置腾讯电子签颁发给渠道的应用ID
+ * @method void setAppId(string $AppId) 设置腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateId() 获取渠道方模板库模板唯一标识
+ * @method string getTemplateId() 获取第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateId(string $TemplateId) 设置渠道方模板库模板唯一标识
+ * @method void setTemplateId(string $TemplateId) 设置第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperateResult() 获取全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
 class OperateChannelTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 腾讯电子签颁发给渠道的应用ID
+     * @var string 腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var string 渠道方模板库模板唯一标识
+     * @var string 第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
@@ -91,9 +91,9 @@ class OperateChannelTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AppId 腾讯电子签颁发给渠道的应用ID
+     * @param string $AppId 腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateId 渠道方模板库模板唯一标识
+     * @param string $TemplateId 第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateResult 全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示
 注意：此字段可能返回 null，表示取不到有效值。

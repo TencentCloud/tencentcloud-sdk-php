@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadFiles请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息，若是渠道版调用 appid 和proxyappid 必填
- * @method void setAgent(Agent $Agent) 设置应用相关信息，若是渠道版调用 appid 和proxyappid 必填
+ * @method Agent getAgent() 获取应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
+ * @method void setAgent(Agent $Agent) 设置应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
  * @method string getBusinessType() 获取文件对应业务类型
 1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class UploadFilesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
+     * @var Agent 应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
      */
     public $Agent;
 
@@ -58,7 +58,7 @@ class UploadFilesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
+     * @param Agent $Agent 应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
      * @param string $BusinessType 文件对应业务类型
 1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html

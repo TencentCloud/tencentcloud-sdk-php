@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowDetailInfo返回参数结构体
  *
- * @method string getApplicationId() 获取渠道侧应用号Id
- * @method void setApplicationId(string $ApplicationId) 设置渠道侧应用号Id
- * @method string getProxyOrganizationOpenId() 获取渠道侧企业第三方Id
- * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置渠道侧企业第三方Id
+ * @method string getApplicationId() 获取第三方平台应用号Id
+ * @method void setApplicationId(string $ApplicationId) 设置第三方平台应用号Id
+ * @method string getProxyOrganizationOpenId() 获取第三方平台子客企业OpenId
+ * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置第三方平台子客企业OpenId
  * @method array getFlowInfo() 获取合同(签署流程)的具体详细描述信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowInfo(array $FlowInfo) 设置合同(签署流程)的具体详细描述信息
@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFlowDetailInfoResponse extends AbstractModel
 {
     /**
-     * @var string 渠道侧应用号Id
+     * @var string 第三方平台应用号Id
      */
     public $ApplicationId;
 
     /**
-     * @var string 渠道侧企业第三方Id
+     * @var string 第三方平台子客企业OpenId
      */
     public $ProxyOrganizationOpenId;
 
@@ -75,8 +75,8 @@ class DescribeFlowDetailInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ApplicationId 渠道侧应用号Id
-     * @param string $ProxyOrganizationOpenId 渠道侧企业第三方Id
+     * @param string $ApplicationId 第三方平台应用号Id
+     * @param string $ProxyOrganizationOpenId 第三方平台子客企业OpenId
      * @param array $FlowInfo 合同(签署流程)的具体详细描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowGroupId 合同组编号

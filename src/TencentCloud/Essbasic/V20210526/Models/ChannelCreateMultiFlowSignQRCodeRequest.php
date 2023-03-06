@@ -37,10 +37,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRestrictions() 获取限制二维码用户条件
  * @method void setRestrictions(array $Restrictions) 设置限制二维码用户条件
  * @method string getCallbackUrl() 获取回调地址，最大长度1000个字符
-不传默认使用渠道应用号配置的回调地址
+不传默认使用第三方应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，最大长度1000个字符
-不传默认使用渠道应用号配置的回调地址
+不传默认使用第三方应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
  * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件（已弃用）
  * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
@@ -87,7 +87,7 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 
     /**
      * @var string 回调地址，最大长度1000个字符
-不传默认使用渠道应用号配置的回调地址
+不传默认使用第三方应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
      */
     public $CallbackUrl;
@@ -112,7 +112,7 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
      * @param array $Restrictions 限制二维码用户条件
      * @param string $CallbackUrl 回调地址，最大长度1000个字符
-不传默认使用渠道应用号配置的回调地址
+不传默认使用第三方应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
      * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      * @param UserInfo $Operator 暂未开放

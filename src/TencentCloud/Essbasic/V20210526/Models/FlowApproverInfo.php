@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
 其中签署方FlowApproverInfo需要传递的参数
 非单C、单B、B2C合同，ApproverType、RecipientId（模板发起合同时）必传，建议都传。其他身份标识
 1-个人：Name、Mobile必传
-2-渠道子客企业指定经办人：OpenId必传，OrgName必传、OrgOpenId必传；
-3-渠道合作企业不指定经办人：OrgName必传、OrgOpenId必传；
-4-非渠道合作企业：Name、Mobile必传，OrgName必传，且NotChannelOrganization=True。
+2-第三方平台子客企业指定经办人：OpenId必传，OrgName必传、OrgOpenId必传；
+3-第三方平台子客企业不指定经办人：OrgName必传、OrgOpenId必传；
+4-非第三方平台子客企业：Name、Mobile必传，OrgName必传，且NotChannelOrganization=True。
 
 RecipientId参数：
 从DescribeTemplates接口中，可以得到模板下的签署方Recipient列表，根据模板自定义的Rolename在此结构体中确定其RecipientId
@@ -46,16 +46,16 @@ RecipientId参数：
  * @method void setMobile(string $Mobile) 设置签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
  * @method string getOrganizationName() 获取企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
  * @method void setOrganizationName(string $OrganizationName) 设置企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
- * @method boolean getNotChannelOrganization() 获取指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下；
- * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下；
+ * @method boolean getNotChannelOrganization() 获取指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
+ * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
  * @method string getOpenId() 获取用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
  * @method void setOpenId(string $OpenId) 设置用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
- * @method string getOrganizationOpenId() 获取企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
- * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+ * @method string getOrganizationOpenId() 获取企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+ * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
  * @method string getApproverType() 获取签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；
@@ -118,19 +118,19 @@ class FlowApproverInfo extends AbstractModel
     public $OrganizationName;
 
     /**
-     * @var boolean 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下；
+     * @var boolean 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
      */
     public $NotChannelOrganization;
 
     /**
      * @var string 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
      */
     public $OpenId;
 
     /**
-     * @var string 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+     * @var string 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
      */
     public $OrganizationOpenId;
 
@@ -198,11 +198,11 @@ HANDWRITE -手写签名
      * @param string $IdCardNumber 签署人证件号
      * @param string $Mobile 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
      * @param string $OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
-     * @param boolean $NotChannelOrganization 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下；
+     * @param boolean $NotChannelOrganization 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
      * @param string $OpenId 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
-     * @param string $OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+     * @param string $OrganizationOpenId 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
      * @param string $ApproverType 签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；

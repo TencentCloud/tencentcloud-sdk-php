@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接
  * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接
- * @method boolean getWithPdfUrl() 获取是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
- * @method void setWithPdfUrl(boolean $WithPdfUrl) 设置是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
- * @method string getChannelTemplateId() 获取渠道模板ID
- * @method void setChannelTemplateId(string $ChannelTemplateId) 设置渠道模板ID
+ * @method boolean getWithPdfUrl() 获取是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
+ * @method void setWithPdfUrl(boolean $WithPdfUrl) 设置是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
+ * @method string getChannelTemplateId() 获取模板ID
+ * @method void setChannelTemplateId(string $ChannelTemplateId) 设置模板ID
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -91,12 +91,12 @@ class DescribeTemplatesRequest extends AbstractModel
     public $WithPreviewUrl;
 
     /**
-     * @var boolean 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+     * @var boolean 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
      */
     public $WithPdfUrl;
 
     /**
-     * @var string 渠道模板ID
+     * @var string 模板ID
      */
     public $ChannelTemplateId;
 
@@ -110,8 +110,8 @@ class DescribeTemplatesRequest extends AbstractModel
      * @param string $TemplateName 模糊搜索模板名称，最大长度200
      * @param UserInfo $Operator 操作者的信息
      * @param boolean $WithPreviewUrl 是否获取模板预览链接
-     * @param boolean $WithPdfUrl 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
-     * @param string $ChannelTemplateId 渠道模板ID
+     * @param boolean $WithPdfUrl 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
+     * @param string $ChannelTemplateId 模板ID
      */
     function __construct()
     {

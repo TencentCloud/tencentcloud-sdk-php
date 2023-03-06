@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPeriod() 获取预付费购买时长，例如 "1m",就是一个月
  * @method void setPeriod(string $Period) 设置预付费购买时长，例如 "1m",就是一个月
  * @method integer getInstanceType() 获取实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
+标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶性2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
  * @method void setInstanceType(integer $InstanceType) 设置实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
+标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶性2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
  * @method string getVpcId() 获取vpcId，不填默认基础网络
  * @method void setVpcId(string $VpcId) 设置vpcId，不填默认基础网络
  * @method string getSubnetId() 获取子网id，vpc网络需要传该参数，基础网络可以不传
@@ -78,7 +78,7 @@ class CreateInstancePreRequest extends AbstractModel
 
     /**
      * @var integer 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
+标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶性2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
      */
     public $InstanceType;
 
@@ -157,7 +157,7 @@ class CreateInstancePreRequest extends AbstractModel
      * @param integer $ZoneId 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
      * @param integer $InstanceType 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
+标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶性2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
      * @param string $VpcId vpcId，不填默认基础网络
      * @param string $SubnetId 子网id，vpc网络需要传该参数，基础网络可以不传
      * @param integer $MsgRetentionTime 可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略

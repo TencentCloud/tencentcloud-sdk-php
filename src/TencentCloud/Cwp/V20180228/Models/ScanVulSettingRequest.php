@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置扫描结束时间，如：08:00
  * @method integer getEnableScan() 获取是否开启扫描 1开启 0不开启
  * @method void setEnableScan(integer $EnableScan) 设置是否开启扫描 1开启 0不开启
+ * @method array getUuids() 获取为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+ * @method void setUuids(array $Uuids) 设置为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
  */
 class ScanVulSettingRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ScanVulSettingRequest extends AbstractModel
     public $EnableScan;
 
     /**
+     * @var array 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     */
+    public $Uuids;
+
+    /**
      * @param integer $TimerInterval 定期检测间隔时间（天）
      * @param array $VulCategories 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞, 以数组方式传参[1,2]
      * @param array $VulLevels 危害等级：1-低危；2-中危；3-高危；4-严重,以数组方式传参[1,2,3]
@@ -88,6 +95,7 @@ class ScanVulSettingRequest extends AbstractModel
      * @param string $StartTime 扫描开始时间，如：00:00
      * @param string $EndTime 扫描结束时间，如：08:00
      * @param integer $EnableScan 是否开启扫描 1开启 0不开启
+     * @param array $Uuids 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ScanVulSettingRequest extends AbstractModel
 
         if (array_key_exists("EnableScan",$param) and $param["EnableScan"] !== null) {
             $this->EnableScan = $param["EnableScan"];
+        }
+
+        if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
+            $this->Uuids = $param["Uuids"];
         }
     }
 }

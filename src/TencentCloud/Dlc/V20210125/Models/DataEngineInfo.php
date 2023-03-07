@@ -138,6 +138,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageVersionName(string $ImageVersionName) 设置集群镜像版本名字
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getStartStandbyCluster() 获取是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartStandbyCluster(boolean $StartStandbyCluster) 设置是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -345,6 +349,12 @@ class DataEngineInfo extends AbstractModel
     public $ImageVersionName;
 
     /**
+     * @var boolean 是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartStandbyCluster;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -403,6 +413,8 @@ class DataEngineInfo extends AbstractModel
      * @param string $ChildImageVersionId 集群镜像小版本ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageVersionName 集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $StartStandbyCluster 是否开启备集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -571,6 +583,10 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("ImageVersionName",$param) and $param["ImageVersionName"] !== null) {
             $this->ImageVersionName = $param["ImageVersionName"];
+        }
+
+        if (array_key_exists("StartStandbyCluster",$param) and $param["StartStandbyCluster"] !== null) {
+            $this->StartStandbyCluster = $param["StartStandbyCluster"];
         }
     }
 }

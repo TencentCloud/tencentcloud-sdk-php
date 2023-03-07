@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceVersion(string $InstanceVersion) 设置实例版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
- * @method void setStatus(integer $Status) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+ * @method integer getStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+ * @method void setStatus(integer $Status) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
  * @method integer getNodeCount() 获取节点数量
  * @method void setNodeCount(integer $NodeCount) 设置节点数量
  * @method string getConfigDisplay() 获取实例配置规格名称
@@ -72,7 +72,7 @@ class RocketMQVipInstance extends AbstractModel
     public $InstanceVersion;
 
     /**
-     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
      */
     public $Status;
 
@@ -132,7 +132,7 @@ class RocketMQVipInstance extends AbstractModel
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+     * @param integer $Status 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
      * @param integer $NodeCount 节点数量
      * @param string $ConfigDisplay 实例配置规格名称
      * @param integer $MaxTps 峰值TPS

@@ -38,7 +38,10 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CreateSearchTemplateResponse CreateSearchTemplate(Models\CreateSearchTemplateRequest $req) 添加检索模板
  * @method Models\DeleteAttackLogsResponse DeleteAttackLogs(Models\DeleteAttackLogsRequest $req) 删除网络攻击日志
  * @method Models\DeleteBaselinePolicyResponse DeleteBaselinePolicy(Models\DeleteBaselinePolicyRequest $req) 删除基线策略配置
+ * @method Models\DeleteBaselineRuleResponse DeleteBaselineRule(Models\DeleteBaselineRuleRequest $req) 删除基线规则
+ * @method Models\DeleteBaselineRuleIgnoreResponse DeleteBaselineRuleIgnore(Models\DeleteBaselineRuleIgnoreRequest $req) 删除基线忽略规则
  * @method Models\DeleteBaselineStrategyResponse DeleteBaselineStrategy(Models\DeleteBaselineStrategyRequest $req) 根据基线策略id删除策略
+ * @method Models\DeleteBaselineWeakPasswordResponse DeleteBaselineWeakPassword(Models\DeleteBaselineWeakPasswordRequest $req) 删除基线弱口令
  * @method Models\DeleteBashEventsResponse DeleteBashEvents(Models\DeleteBashEventsRequest $req) 根据Ids删除高危命令事件
  * @method Models\DeleteBashRulesResponse DeleteBashRules(Models\DeleteBashRulesRequest $req) 删除高危命令规则
  * @method Models\DeleteBruteAttacksResponse DeleteBruteAttacks(Models\DeleteBruteAttacksRequest $req) 本接口 (DeleteBruteAttacks) 用于删除暴力破解记录。
@@ -99,18 +102,32 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeBaselineAnalysisDataResponse DescribeBaselineAnalysisData(Models\DescribeBaselineAnalysisDataRequest $req) 根据基线策略id查询基线策略数据概览统计
  * @method Models\DescribeBaselineBasicInfoResponse DescribeBaselineBasicInfo(Models\DescribeBaselineBasicInfoRequest $req) 查询基线基础信息列表
  * @method Models\DescribeBaselineDetailResponse DescribeBaselineDetail(Models\DescribeBaselineDetailRequest $req) 根据基线id查询基线详情接口
+ * @method Models\DescribeBaselineDetectListResponse DescribeBaselineDetectList(Models\DescribeBaselineDetectListRequest $req) 获取基线检测详情记录
+ * @method Models\DescribeBaselineDetectOverviewResponse DescribeBaselineDetectOverview(Models\DescribeBaselineDetectOverviewRequest $req) 获取基线检测概览
+ * @method Models\DescribeBaselineDownloadListResponse DescribeBaselineDownloadList(Models\DescribeBaselineDownloadListRequest $req) 获取基线下载列表
  * @method Models\DescribeBaselineEffectHostListResponse DescribeBaselineEffectHostList(Models\DescribeBaselineEffectHostListRequest $req) 根据基线id查询基线影响主机列表
+ * @method Models\DescribeBaselineFixListResponse DescribeBaselineFixList(Models\DescribeBaselineFixListRequest $req) 获取基线修复列表
  * @method Models\DescribeBaselineHostDetectListResponse DescribeBaselineHostDetectList(Models\DescribeBaselineHostDetectListRequest $req) 获取基线检测主机列表
+ * @method Models\DescribeBaselineHostIgnoreListResponse DescribeBaselineHostIgnoreList(Models\DescribeBaselineHostIgnoreListRequest $req) 获取忽略规则主机列表
+ * @method Models\DescribeBaselineHostRiskTopResponse DescribeBaselineHostRiskTop(Models\DescribeBaselineHostRiskTopRequest $req) 获取基线服务器风险TOP5
  * @method Models\DescribeBaselineHostTopResponse DescribeBaselineHostTop(Models\DescribeBaselineHostTopRequest $req) 接口返回TopN的风险服务器
  * @method Models\DescribeBaselineItemDetectListResponse DescribeBaselineItemDetectList(Models\DescribeBaselineItemDetectListRequest $req) 获取基线检测项的列表
+ * @method Models\DescribeBaselineItemIgnoreListResponse DescribeBaselineItemIgnoreList(Models\DescribeBaselineItemIgnoreListRequest $req) 获取忽略规则项列表
+ * @method Models\DescribeBaselineItemInfoResponse DescribeBaselineItemInfo(Models\DescribeBaselineItemInfoRequest $req) 获取基线检测项信息
  * @method Models\DescribeBaselineItemListResponse DescribeBaselineItemList(Models\DescribeBaselineItemListRequest $req) 获取基线项检测结果列表
+ * @method Models\DescribeBaselineItemRiskTopResponse DescribeBaselineItemRiskTop(Models\DescribeBaselineItemRiskTopRequest $req) 获取基线检测项TOP5
  * @method Models\DescribeBaselineListResponse DescribeBaselineList(Models\DescribeBaselineListRequest $req) 查询基线列表信息
  * @method Models\DescribeBaselinePolicyListResponse DescribeBaselinePolicyList(Models\DescribeBaselinePolicyListRequest $req) 获取基线策略列表
  * @method Models\DescribeBaselineRuleResponse DescribeBaselineRule(Models\DescribeBaselineRuleRequest $req) 根据基线id查询下属检测项信息
+ * @method Models\DescribeBaselineRuleCategoryListResponse DescribeBaselineRuleCategoryList(Models\DescribeBaselineRuleCategoryListRequest $req) 获取基线分类列表
+ * @method Models\DescribeBaselineRuleDetectListResponse DescribeBaselineRuleDetectList(Models\DescribeBaselineRuleDetectListRequest $req) 获取基线规则检测列表
+ * @method Models\DescribeBaselineRuleIgnoreListResponse DescribeBaselineRuleIgnoreList(Models\DescribeBaselineRuleIgnoreListRequest $req) 获取基线忽略规则列表
+ * @method Models\DescribeBaselineRuleListResponse DescribeBaselineRuleList(Models\DescribeBaselineRuleListRequest $req) 获取基线规则列表
  * @method Models\DescribeBaselineScanScheduleResponse DescribeBaselineScanSchedule(Models\DescribeBaselineScanScheduleRequest $req) 根据任务id查询基线检测进度
  * @method Models\DescribeBaselineStrategyDetailResponse DescribeBaselineStrategyDetail(Models\DescribeBaselineStrategyDetailRequest $req) 根据基线策略id查询策略详情
  * @method Models\DescribeBaselineStrategyListResponse DescribeBaselineStrategyList(Models\DescribeBaselineStrategyListRequest $req) 查询一个用户下的基线策略信息
  * @method Models\DescribeBaselineTopResponse DescribeBaselineTop(Models\DescribeBaselineTopRequest $req) 根据策略id查询基线检测项TOP
+ * @method Models\DescribeBaselineWeakPasswordListResponse DescribeBaselineWeakPasswordList(Models\DescribeBaselineWeakPasswordListRequest $req) 获取基线弱口令列表
  * @method Models\DescribeBashEventsResponse DescribeBashEvents(Models\DescribeBashEventsRequest $req) 获取高危命令列表
  * @method Models\DescribeBashEventsNewResponse DescribeBashEventsNew(Models\DescribeBashEventsNewRequest $req) 获取高危命令列表(新)
  * @method Models\DescribeBashRulesResponse DescribeBashRules(Models\DescribeBashRulesRequest $req) 获取高危命令规则列表
@@ -129,6 +146,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeHistoryServiceResponse DescribeHistoryService(Models\DescribeHistoryServiceRequest $req) 查询日志检索服务信息
  * @method Models\DescribeHostLoginListResponse DescribeHostLoginList(Models\DescribeHostLoginListRequest $req) 获取登录审计列表
  * @method Models\DescribeIgnoreBaselineRuleResponse DescribeIgnoreBaselineRule(Models\DescribeIgnoreBaselineRuleRequest $req) 查询已经忽略的检测项信息
+ * @method Models\DescribeIgnoreHostAndItemConfigResponse DescribeIgnoreHostAndItemConfig(Models\DescribeIgnoreHostAndItemConfigRequest $req) 获取一键忽略受影响的检测项和主机信息
  * @method Models\DescribeIgnoreRuleEffectHostListResponse DescribeIgnoreRuleEffectHostList(Models\DescribeIgnoreRuleEffectHostListRequest $req) 根据检测项id与筛选条件查询忽略检测项影响主机列表信息
  * @method Models\DescribeImportMachineInfoResponse DescribeImportMachineInfo(Models\DescribeImportMachineInfoRequest $req) 查询批量导入机器信息
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
@@ -207,7 +225,13 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportAssetWebServiceInfoListResponse ExportAssetWebServiceInfoList(Models\ExportAssetWebServiceInfoListRequest $req) 导出资产管理Web服务列表
  * @method Models\ExportAttackLogsResponse ExportAttackLogs(Models\ExportAttackLogsRequest $req) 导出网络攻击日志
  * @method Models\ExportBaselineEffectHostListResponse ExportBaselineEffectHostList(Models\ExportBaselineEffectHostListRequest $req) 导出基线影响主机列表
+ * @method Models\ExportBaselineFixListResponse ExportBaselineFixList(Models\ExportBaselineFixListRequest $req) 导出修复列表
+ * @method Models\ExportBaselineHostDetectListResponse ExportBaselineHostDetectList(Models\ExportBaselineHostDetectListRequest $req) 导出基线主机检测
+ * @method Models\ExportBaselineItemDetectListResponse ExportBaselineItemDetectList(Models\ExportBaselineItemDetectListRequest $req) 导出基线检测项
+ * @method Models\ExportBaselineItemListResponse ExportBaselineItemList(Models\ExportBaselineItemListRequest $req) 导出检测项结果列表
  * @method Models\ExportBaselineListResponse ExportBaselineList(Models\ExportBaselineListRequest $req) 导出基线列表
+ * @method Models\ExportBaselineRuleDetectListResponse ExportBaselineRuleDetectList(Models\ExportBaselineRuleDetectListRequest $req) 导出基线检测规则
+ * @method Models\ExportBaselineWeakPasswordListResponse ExportBaselineWeakPasswordList(Models\ExportBaselineWeakPasswordListRequest $req) 导出弱口令配置列表
  * @method Models\ExportBashEventsResponse ExportBashEvents(Models\ExportBashEventsRequest $req) 导出高危命令事件
  * @method Models\ExportBruteAttacksResponse ExportBruteAttacks(Models\ExportBruteAttacksRequest $req) 本接口 (ExportBruteAttacks) 用于导出密码破解记录成CSV文件。
  * @method Models\ExportIgnoreBaselineRuleResponse ExportIgnoreBaselineRule(Models\ExportIgnoreBaselineRuleRequest $req) 导出已忽略基线检测项信息
@@ -227,11 +251,16 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportVulEffectHostListResponse ExportVulEffectHostList(Models\ExportVulEffectHostListRequest $req) 导出漏洞影响主机列表
  * @method Models\ExportVulListResponse ExportVulList(Models\ExportVulListRequest $req) 漏洞管理-导出漏洞列表
  * @method Models\ExportWebPageEventListResponse ExportWebPageEventList(Models\ExportWebPageEventListRequest $req) 导出篡改事件列表
+ * @method Models\FixBaselineDetectResponse FixBaselineDetect(Models\FixBaselineDetectRequest $req) 修复基线检测
  * @method Models\IgnoreImpactedHostsResponse IgnoreImpactedHosts(Models\IgnoreImpactedHostsRequest $req) 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
  * @method Models\ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(Models\ModifyAutoOpenProVersionConfigRequest $req)  用于设置新增主机自动开通专业防护配置。
  * @method Models\ModifyBanModeResponse ModifyBanMode(Models\ModifyBanModeRequest $req) 修改爆破阻断模式
  * @method Models\ModifyBanStatusResponse ModifyBanStatus(Models\ModifyBanStatusRequest $req) 设置阻断开关状态
  * @method Models\ModifyBaselinePolicyResponse ModifyBaselinePolicy(Models\ModifyBaselinePolicyRequest $req) 更改基线策略设置
+ * @method Models\ModifyBaselinePolicyStateResponse ModifyBaselinePolicyState(Models\ModifyBaselinePolicyStateRequest $req) 更改基线策略状态
+ * @method Models\ModifyBaselineRuleResponse ModifyBaselineRule(Models\ModifyBaselineRuleRequest $req) 更改基线检测规则
+ * @method Models\ModifyBaselineRuleIgnoreResponse ModifyBaselineRuleIgnore(Models\ModifyBaselineRuleIgnoreRequest $req) 更改基线忽略规则
+ * @method Models\ModifyBaselineWeakPasswordResponse ModifyBaselineWeakPassword(Models\ModifyBaselineWeakPasswordRequest $req) 更改或新增弱口令
  * @method Models\ModifyBruteAttackRulesResponse ModifyBruteAttackRules(Models\ModifyBruteAttackRulesRequest $req) 修改暴力破解规则
  * @method Models\ModifyLicenseBindsResponse ModifyLicenseBinds(Models\ModifyLicenseBindsRequest $req) 设置中心-授权管理 对某个授权批量绑定机器
  * @method Models\ModifyLicenseUnBindsResponse ModifyLicenseUnBinds(Models\ModifyLicenseUnBindsRequest $req) 设置中心-授权管理 对某个授权批量解绑机器

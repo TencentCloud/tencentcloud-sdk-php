@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 如果需要指定B端（机构身份类型）签署人，其中ReleasedApprover需要传递的参数如下：
 ApproverNumber, OrganizationName, ApproverType必传。
 对于其他身份标识
-- 渠道子客企业指定经办人：OpenId必传，OrganizationOpenId必传；
-- 非渠道合作企业：Name、Mobile必传。
+- 子客企业指定经办人：OpenId必传，OrganizationOpenId必传；
+- 非子客企业：Name、Mobile必传。
  *
  * @method string getOrganizationName() 获取企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
  * @method void setOrganizationName(string $OrganizationName) 设置企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
@@ -49,12 +49,12 @@ ORGANIZATION-企业
  * @method void setIdCardNumber(string $IdCardNumber) 设置签署人证件号
  * @method string getMobile() 获取签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号
  * @method void setMobile(string $Mobile) 设置签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号
- * @method string getOrganizationOpenId() 获取企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
- * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+ * @method string getOrganizationOpenId() 获取企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+ * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
  * @method string getOpenId() 获取用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传
+当签署方为同一第三方应用下的员工时，该字必传
  * @method void setOpenId(string $OpenId) 设置用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传
+当签署方为同一第三方应用下的员工时，该字必传
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -98,13 +98,13 @@ ORGANIZATION-企业
     public $Mobile;
 
     /**
-     * @var string 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+     * @var string 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
      */
     public $OrganizationOpenId;
 
     /**
      * @var string 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传
+当签署方为同一第三方应用下的员工时，该字必传
      */
     public $OpenId;
 
@@ -120,9 +120,9 @@ ORGANIZATION-企业
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
      * @param string $IdCardNumber 签署人证件号
      * @param string $Mobile 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号
-     * @param string $OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+     * @param string $OrganizationOpenId 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
      * @param string $OpenId 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传
+当签署方为同一第三方应用下的员工时，该字必传
      */
     function __construct()
     {

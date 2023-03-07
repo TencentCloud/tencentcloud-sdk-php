@@ -43,11 +43,13 @@ use TencentCloud\Common\AbstractModel;
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
 <li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li>
  * @method void setSecurityLevel(string $SecurityLevel) 设置安全事件等级。
 <li>RISK: 严重</li>
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
 <li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li>
  */
 class SecurityDynamic extends AbstractModel
 {
@@ -82,6 +84,7 @@ class SecurityDynamic extends AbstractModel
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
 <li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li>
      */
     public $SecurityLevel;
 
@@ -100,6 +103,7 @@ class SecurityDynamic extends AbstractModel
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
 <li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li>
      */
     function __construct()
     {

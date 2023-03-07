@@ -162,6 +162,8 @@ polarismesh - STANDARD版本
  * @method void setPrepaidRenewFlag(integer $PrepaidRenewFlag) 设置自动续费标记，仅预付费使用。参考值：
 - 0：不自动续费
 - 1：自动续费
+ * @method array getEngineRegionInfos() 获取跨地域部署的引擎地域配置详情
+ * @method void setEngineRegionInfos(array $EngineRegionInfos) 设置跨地域部署的引擎地域配置详情
  */
 class CreateEngineRequest extends AbstractModel
 {
@@ -297,6 +299,11 @@ polarismesh - STANDARD版本
     public $PrepaidRenewFlag;
 
     /**
+     * @var array 跨地域部署的引擎地域配置详情
+     */
+    public $EngineRegionInfos;
+
+    /**
      * @param string $EngineType 引擎类型。参考值：
 - zookeeper
 - nacos
@@ -368,6 +375,7 @@ polarismesh - STANDARD版本
      * @param integer $PrepaidRenewFlag 自动续费标记，仅预付费使用。参考值：
 - 0：不自动续费
 - 1：自动续费
+     * @param array $EngineRegionInfos 跨地域部署的引擎地域配置详情
      */
     function __construct()
     {
@@ -451,6 +459,15 @@ polarismesh - STANDARD版本
 
         if (array_key_exists("PrepaidRenewFlag",$param) and $param["PrepaidRenewFlag"] !== null) {
             $this->PrepaidRenewFlag = $param["PrepaidRenewFlag"];
+        }
+
+        if (array_key_exists("EngineRegionInfos",$param) and $param["EngineRegionInfos"] !== null) {
+            $this->EngineRegionInfos = [];
+            foreach ($param["EngineRegionInfos"] as $key => $value){
+                $obj = new EngineRegionInfo();
+                $obj->deserialize($value);
+                array_push($this->EngineRegionInfos, $obj);
+            }
         }
     }
 }

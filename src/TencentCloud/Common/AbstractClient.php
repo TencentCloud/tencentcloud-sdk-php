@@ -176,6 +176,43 @@ abstract class AbstractClient
     }
 
     /**
+     * @param string $action
+     * @param array  $headers
+     * @param string $body json content
+     * @return mixed
+     * @throws TencentCloudSDKException
+     */
+    public function callJson($action, $body, $headers=null) {
+        try {
+            $responseData = null;
+            $options = array(
+                "IsCommonJson" => true,
+            );
+            if ($this->profile->getHttpProfile()->getReqMethod() == HttpProfile::$REQ_GET) {
+                throw new TencentCloudSDKException("ClientError", "Common client call doesn't support GET method");
+            }
+            if ($this->profile->getSignMethod() != ClientProfile::$SIGN_TC3_SHA256) {
+                throw new TencentCloudSDKException("ClientError", "Common client call must use TC3-HMAC-SHA256");
+            }
+            $responseData = $this->doRequestWithTC3($action, $body, $options, $headers, null);
+            if ($responseData->getStatusCode() !== AbstractClient::$HTTP_RSP_OK) {
+                throw new TencentCloudSDKException($responseData->getReasonPhrase(), $responseData->getBody());
+            }
+            $resp = json_decode($responseData->getBody(), true)["Response"];
+            if (array_key_exists("Error", $resp)) {
+                throw new TencentCloudSDKException($resp["Error"]["Code"], $resp["Error"]["Message"], $resp["RequestId"]);
+            }
+            return $resp;
+        } catch (\Exception $e) {
+            if (!($e instanceof TencentCloudSDKException)) {
+                throw new TencentCloudSDKException("", $e->getMessage());
+            } else {
+                throw $e;
+            }
+        }
+    }
+
+    /**
      * @param string $action  方法名
      * @param array  $headers  自定义headers
      * @param string $body     content
@@ -308,6 +345,10 @@ abstract class AbstractClient
              } else if (isset($options["IsOctetStream"]) && $options["IsOctetStream"] === true) {
                  $headers["Content-Type"] = "application/octet-stream";
                  $canonicalQueryString = "";
+             } else if (isset($options["IsCommonJson"]) && $options["IsCommonJson"] === true) {
+                 $headers["Content-Type"] = "application/json";
+                 $canonicalQueryString = "";
+                 $payload = json_encode($request);
              } else {
                  $headers["Content-Type"] = "application/json";
                  $canonicalQueryString = "";

@@ -31,7 +31,7 @@ abstract class AbstractModel
     public function serialize()
     {
         $ret = $this->objSerialize($this);
-		return $ret;
+        return $ret;
     }
 
     private function objSerialize($obj) {

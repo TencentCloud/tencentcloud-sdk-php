@@ -28,26 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegularStatus(integer $RegularStatus) 设置规则状态(0表示关闭，1表示打开)
  * @method integer getAlarmLevel() 获取告警级别(0表示普通，1表示重要，2表示紧急)
  * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别(0表示普通，1表示重要，2表示紧急)
- * @method integer getAlarmIndicator() 获取告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-，4写入速度，5读取速度，6读取吞吐，7写入吞吐, 8脏数据字节数，9脏数据条数
- * @method void setAlarmIndicator(integer $AlarmIndicator) 设置告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-，4写入速度，5读取速度，6读取吞吐，7写入吞吐, 8脏数据字节数，9脏数据条数
  * @method string getAlarmWay() 获取告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
  * @method void setAlarmWay(string $AlarmWay) 设置告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
- * @method string getAlarmRecipientId() 获取告警接收人ID，多个用逗号隔开
- * @method void setAlarmRecipientId(string $AlarmRecipientId) 设置告警接收人ID，多个用逗号隔开
  * @method integer getTaskType() 获取任务类型(201表示实时，202表示离线)
  * @method void setTaskType(integer $TaskType) 设置任务类型(201表示实时，202表示离线)
- * @method string getAlarmRecipientName() 获取告警接收人昵称，多个用逗号隔开
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmRecipientName(string $AlarmRecipientName) 设置告警接收人昵称，多个用逗号隔开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取主键ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置主键ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegularId() 获取规则ID
  * @method void setRegularId(string $RegularId) 设置规则ID
+ * @method integer getAlarmIndicator() 获取告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+，4写入速度，5读取速度，6读取吞吐，7写入吞吐, 8脏数据字节数，9脏数据条数
+ * @method void setAlarmIndicator(integer $AlarmIndicator) 设置告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+，4写入速度，5读取速度，6读取吞吐，7写入吞吐, 8脏数据字节数，9脏数据条数
  * @method integer getTriggerType() 获取指标阈值(1表示离线任务第一次运行失败，2表示离线任务所有重试完成后失败)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerType(integer $TriggerType) 设置指标阈值(1表示离线任务第一次运行失败，2表示离线任务所有重试完成后失败)
@@ -56,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEstimatedTime(integer $EstimatedTime) 设置预计的超时时间(分钟级别)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlarmRecipientId() 获取告警接收人ID，多个用逗号隔开
+ * @method void setAlarmRecipientId(string $AlarmRecipientId) 设置告警接收人ID，多个用逗号隔开
  * @method string getProjectId() 获取项目ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目ID
@@ -63,6 +59,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreater() 获取创建人
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreater(string $Creater) 设置创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlarmRecipientName() 获取告警接收人昵称，多个用逗号隔开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmRecipientName(string $AlarmRecipientName) 设置告警接收人昵称，多个用逗号隔开
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlarmIndicatorDesc() 获取告警指标描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,6 +79,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNodeName() 获取节点名称，多个逗号分隔
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeName(string $NodeName) 设置节点名称，多个逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAlarmIndicatorInfos() 获取指标列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmIndicatorInfos(array $AlarmIndicatorInfos) 设置指标列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlarmRecipientType() 获取告警接收人类型，0指定人员；1任务责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmRecipientType(integer $AlarmRecipientType) 设置告警接收人类型，0指定人员；1任务责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWeComHook() 获取企业微信群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeComHook(string $WeComHook) 设置企业微信群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskAlarmInfo extends AbstractModel
@@ -104,31 +116,14 @@ class TaskAlarmInfo extends AbstractModel
     public $AlarmLevel;
 
     /**
-     * @var integer 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-，4写入速度，5读取速度，6读取吞吐，7写入吞吐, 8脏数据字节数，9脏数据条数
-     */
-    public $AlarmIndicator;
-
-    /**
      * @var string 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
      */
     public $AlarmWay;
 
     /**
-     * @var string 告警接收人ID，多个用逗号隔开
-     */
-    public $AlarmRecipientId;
-
-    /**
      * @var integer 任务类型(201表示实时，202表示离线)
      */
     public $TaskType;
-
-    /**
-     * @var string 告警接收人昵称，多个用逗号隔开
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AlarmRecipientName;
 
     /**
      * @var string 主键ID
@@ -140,6 +135,12 @@ class TaskAlarmInfo extends AbstractModel
      * @var string 规则ID
      */
     public $RegularId;
+
+    /**
+     * @var integer 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+，4写入速度，5读取速度，6读取吞吐，7写入吞吐, 8脏数据字节数，9脏数据条数
+     */
+    public $AlarmIndicator;
 
     /**
      * @var integer 指标阈值(1表示离线任务第一次运行失败，2表示离线任务所有重试完成后失败)
@@ -154,6 +155,11 @@ class TaskAlarmInfo extends AbstractModel
     public $EstimatedTime;
 
     /**
+     * @var string 告警接收人ID，多个用逗号隔开
+     */
+    public $AlarmRecipientId;
+
+    /**
      * @var string 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -164,6 +170,12 @@ class TaskAlarmInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creater;
+
+    /**
+     * @var string 告警接收人昵称，多个用逗号隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmRecipientName;
 
     /**
      * @var string 告警指标描述
@@ -190,27 +202,45 @@ class TaskAlarmInfo extends AbstractModel
     public $NodeName;
 
     /**
+     * @var array 指标列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmIndicatorInfos;
+
+    /**
+     * @var integer 告警接收人类型，0指定人员；1任务责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmRecipientType;
+
+    /**
+     * @var string 企业微信群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WeComHook;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $RegularName 规则名称
      * @param integer $RegularStatus 规则状态(0表示关闭，1表示打开)
      * @param integer $AlarmLevel 告警级别(0表示普通，1表示重要，2表示紧急)
-     * @param integer $AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-，4写入速度，5读取速度，6读取吞吐，7写入吞吐, 8脏数据字节数，9脏数据条数
      * @param string $AlarmWay 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
-     * @param string $AlarmRecipientId 告警接收人ID，多个用逗号隔开
      * @param integer $TaskType 任务类型(201表示实时，202表示离线)
-     * @param string $AlarmRecipientName 告警接收人昵称，多个用逗号隔开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 主键ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegularId 规则ID
+     * @param integer $AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+，4写入速度，5读取速度，6读取吞吐，7写入吞吐, 8脏数据字节数，9脏数据条数
      * @param integer $TriggerType 指标阈值(1表示离线任务第一次运行失败，2表示离线任务所有重试完成后失败)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EstimatedTime 预计的超时时间(分钟级别)
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlarmRecipientId 告警接收人ID，多个用逗号隔开
      * @param string $ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creater 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlarmRecipientName 告警接收人昵称，多个用逗号隔开
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmIndicatorDesc 告警指标描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,6 +249,12 @@ class TaskAlarmInfo extends AbstractModel
      * @param string $NodeId 节点id，多个逗号分隔
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeName 节点名称，多个逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AlarmIndicatorInfos 指标列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlarmRecipientType 告警接收人类型，0指定人员；1任务责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WeComHook 企业微信群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -250,24 +286,12 @@ class TaskAlarmInfo extends AbstractModel
             $this->AlarmLevel = $param["AlarmLevel"];
         }
 
-        if (array_key_exists("AlarmIndicator",$param) and $param["AlarmIndicator"] !== null) {
-            $this->AlarmIndicator = $param["AlarmIndicator"];
-        }
-
         if (array_key_exists("AlarmWay",$param) and $param["AlarmWay"] !== null) {
             $this->AlarmWay = $param["AlarmWay"];
         }
 
-        if (array_key_exists("AlarmRecipientId",$param) and $param["AlarmRecipientId"] !== null) {
-            $this->AlarmRecipientId = $param["AlarmRecipientId"];
-        }
-
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
-        }
-
-        if (array_key_exists("AlarmRecipientName",$param) and $param["AlarmRecipientName"] !== null) {
-            $this->AlarmRecipientName = $param["AlarmRecipientName"];
         }
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
@@ -278,6 +302,10 @@ class TaskAlarmInfo extends AbstractModel
             $this->RegularId = $param["RegularId"];
         }
 
+        if (array_key_exists("AlarmIndicator",$param) and $param["AlarmIndicator"] !== null) {
+            $this->AlarmIndicator = $param["AlarmIndicator"];
+        }
+
         if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
             $this->TriggerType = $param["TriggerType"];
         }
@@ -286,12 +314,20 @@ class TaskAlarmInfo extends AbstractModel
             $this->EstimatedTime = $param["EstimatedTime"];
         }
 
+        if (array_key_exists("AlarmRecipientId",$param) and $param["AlarmRecipientId"] !== null) {
+            $this->AlarmRecipientId = $param["AlarmRecipientId"];
+        }
+
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("Creater",$param) and $param["Creater"] !== null) {
             $this->Creater = $param["Creater"];
+        }
+
+        if (array_key_exists("AlarmRecipientName",$param) and $param["AlarmRecipientName"] !== null) {
+            $this->AlarmRecipientName = $param["AlarmRecipientName"];
         }
 
         if (array_key_exists("AlarmIndicatorDesc",$param) and $param["AlarmIndicatorDesc"] !== null) {
@@ -308,6 +344,23 @@ class TaskAlarmInfo extends AbstractModel
 
         if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
             $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("AlarmIndicatorInfos",$param) and $param["AlarmIndicatorInfos"] !== null) {
+            $this->AlarmIndicatorInfos = [];
+            foreach ($param["AlarmIndicatorInfos"] as $key => $value){
+                $obj = new AlarmIndicatorInfo();
+                $obj->deserialize($value);
+                array_push($this->AlarmIndicatorInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("AlarmRecipientType",$param) and $param["AlarmRecipientType"] !== null) {
+            $this->AlarmRecipientType = $param["AlarmRecipientType"];
+        }
+
+        if (array_key_exists("WeComHook",$param) and $param["WeComHook"] !== null) {
+            $this->WeComHook = $param["WeComHook"];
         }
     }
 }

@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginDatabaseName() 获取表databaseName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginDatabaseName(string $OriginDatabaseName) 设置表databaseName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginSchemaName() 获取表schemaName
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginSchemaName(string $OriginSchemaName) 设置表schemaName
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableInfo extends AbstractModel
 {
@@ -44,9 +52,25 @@ class TableInfo extends AbstractModel
     public $TableName;
 
     /**
+     * @var string 表databaseName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginDatabaseName;
+
+    /**
+     * @var string 表schemaName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginSchemaName;
+
+    /**
      * @param string $TableId 表Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginDatabaseName 表databaseName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginSchemaName 表schemaName
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +92,14 @@ class TableInfo extends AbstractModel
 
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("OriginDatabaseName",$param) and $param["OriginDatabaseName"] !== null) {
+            $this->OriginDatabaseName = $param["OriginDatabaseName"];
+        }
+
+        if (array_key_exists("OriginSchemaName",$param) and $param["OriginSchemaName"] !== null) {
+            $this->OriginSchemaName = $param["OriginSchemaName"];
         }
     }
 }

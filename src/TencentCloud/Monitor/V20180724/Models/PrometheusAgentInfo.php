@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 托管Prometheus agent信息
  *
-
+ * @method string getClusterType() 获取集群类型
+ * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getClusterId() 获取集群id
+ * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getDescribe() 获取备注
+ * @method void setDescribe(string $Describe) 设置备注
  */
 class PrometheusAgentInfo extends AbstractModel
 {
-
+    /**
+     * @var string 集群类型
+     */
+    public $ClusterType;
 
     /**
+     * @var string 集群id
+     */
+    public $ClusterId;
 
+    /**
+     * @var string 备注
+     */
+    public $Describe;
+
+    /**
+     * @param string $ClusterType 集群类型
+     * @param string $ClusterId 集群id
+     * @param string $Describe 备注
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class PrometheusAgentInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Describe",$param) and $param["Describe"] !== null) {
+            $this->Describe = $param["Describe"];
+        }
     }
 }

@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcbr\V20220217\Models as Models;
 
 /**
- * @method Models\CreateCloudRunEnvResponse CreateCloudRunEnv(Models\CreateCloudRunEnvRequest $req) 创建云托管环境，并开通资源。	
+ * @method Models\CreateCloudRunEnvResponse CreateCloudRunEnv(Models\CreateCloudRunEnvRequest $req) 创建云托管环境，并开通资源。
  * @method Models\CreateCloudRunServerResponse CreateCloudRunServer(Models\CreateCloudRunServerRequest $req) 创建云托管服务接口
  * @method Models\DescribeCloudRunEnvsResponse DescribeCloudRunEnvs(Models\DescribeCloudRunEnvsRequest $req) 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
  * @method Models\DescribeCloudRunServerDetailResponse DescribeCloudRunServerDetail(Models\DescribeCloudRunServerDetailRequest $req) 查询云托管服务详情

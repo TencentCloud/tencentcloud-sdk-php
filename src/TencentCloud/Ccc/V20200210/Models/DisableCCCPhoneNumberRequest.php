@@ -20,20 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableCCCPhoneNumber请求参数结构体
  *
- * @method integer getSdkAppId() 获取TCCC 实例应用 ID
- * @method void setSdkAppId(integer $SdkAppId) 设置TCCC 实例应用 ID
  * @method array getPhoneNumbers() 获取号码列表，0086开头
  * @method void setPhoneNumbers(array $PhoneNumbers) 设置号码列表，0086开头
  * @method integer getDisabled() 获取停用开关，0启用 1停用
  * @method void setDisabled(integer $Disabled) 设置停用开关，0启用 1停用
+ * @method integer getSdkAppId() 获取TCCC 实例应用 ID
+ * @method void setSdkAppId(integer $SdkAppId) 设置TCCC 实例应用 ID
  */
 class DisableCCCPhoneNumberRequest extends AbstractModel
 {
-    /**
-     * @var integer TCCC 实例应用 ID
-     */
-    public $SdkAppId;
-
     /**
      * @var array 号码列表，0086开头
      */
@@ -45,9 +40,14 @@ class DisableCCCPhoneNumberRequest extends AbstractModel
     public $Disabled;
 
     /**
-     * @param integer $SdkAppId TCCC 实例应用 ID
+     * @var integer TCCC 实例应用 ID
+     */
+    public $SdkAppId;
+
+    /**
      * @param array $PhoneNumbers 号码列表，0086开头
      * @param integer $Disabled 停用开关，0启用 1停用
+     * @param integer $SdkAppId TCCC 实例应用 ID
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class DisableCCCPhoneNumberRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
-        }
-
         if (array_key_exists("PhoneNumbers",$param) and $param["PhoneNumbers"] !== null) {
             $this->PhoneNumbers = $param["PhoneNumbers"];
         }
 
         if (array_key_exists("Disabled",$param) and $param["Disabled"] !== null) {
             $this->Disabled = $param["Disabled"];
+        }
+
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
         }
     }
 }

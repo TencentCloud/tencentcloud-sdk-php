@@ -20,15 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 水印参数。
  *
- * @method integer getWaterMarkType() 获取水印类型，0为图片（默认）。
- * @method void setWaterMarkType(integer $WaterMarkType) 设置水印类型，0为图片（默认）。
+ * @method integer getWaterMarkType() 获取水印类型，0为图片（默认），1为文字。
+ * @method void setWaterMarkType(integer $WaterMarkType) 设置水印类型，0为图片（默认），1为文字。
  * @method McuWaterMarkImage getWaterMarkImage() 获取图片水印参数。WaterMarkType为0指定。
  * @method void setWaterMarkImage(McuWaterMarkImage $WaterMarkImage) 设置图片水印参数。WaterMarkType为0指定。
+ * @method McuWaterMarkText getWaterMarkText() 获取文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaterMarkText(McuWaterMarkText $WaterMarkText) 设置文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class McuWaterMarkParams extends AbstractModel
 {
     /**
-     * @var integer 水印类型，0为图片（默认）。
+     * @var integer 水印类型，0为图片（默认），1为文字。
      */
     public $WaterMarkType;
 
@@ -38,8 +42,16 @@ class McuWaterMarkParams extends AbstractModel
     public $WaterMarkImage;
 
     /**
-     * @param integer $WaterMarkType 水印类型，0为图片（默认）。
+     * @var McuWaterMarkText 文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WaterMarkText;
+
+    /**
+     * @param integer $WaterMarkType 水印类型，0为图片（默认），1为文字。
      * @param McuWaterMarkImage $WaterMarkImage 图片水印参数。WaterMarkType为0指定。
+     * @param McuWaterMarkText $WaterMarkText 文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -61,6 +73,11 @@ class McuWaterMarkParams extends AbstractModel
         if (array_key_exists("WaterMarkImage",$param) and $param["WaterMarkImage"] !== null) {
             $this->WaterMarkImage = new McuWaterMarkImage();
             $this->WaterMarkImage->deserialize($param["WaterMarkImage"]);
+        }
+
+        if (array_key_exists("WaterMarkText",$param) and $param["WaterMarkText"] !== null) {
+            $this->WaterMarkText = new McuWaterMarkText();
+            $this->WaterMarkText->deserialize($param["WaterMarkText"]);
         }
     }
 }

@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegularName(string $RegularName) 设置规则名称
  * @method integer getAlarmLevel() 获取告警级别,0表示普通，1表示重要，2表示紧急
  * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别,0表示普通，1表示重要，2表示紧急
- * @method integer getAlarmIndicator() 获取告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
- * @method void setAlarmIndicator(integer $AlarmIndicator) 设置告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
  * @method integer getAlarmWay() 获取告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
  * @method void setAlarmWay(integer $AlarmWay) 设置告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
  * @method string getAlarmRecipientId() 获取告警接收人Id，多个用逗号隔开
  * @method void setAlarmRecipientId(string $AlarmRecipientId) 设置告警接收人Id，多个用逗号隔开
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method integer getAlarmIndicator() 获取告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+ * @method void setAlarmIndicator(integer $AlarmIndicator) 设置告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
  * @method string getAlarmIndicatorDesc() 获取告警指标描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmIndicatorDesc(string $AlarmIndicatorDesc) 设置告警指标描述
@@ -99,11 +99,6 @@ class AlarmEventInfo extends AbstractModel
     public $AlarmLevel;
 
     /**
-     * @var integer 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-     */
-    public $AlarmIndicator;
-
-    /**
      * @var integer 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
      */
     public $AlarmWay;
@@ -117,6 +112,11 @@ class AlarmEventInfo extends AbstractModel
      * @var string 项目ID
      */
     public $ProjectId;
+
+    /**
+     * @var integer 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+     */
+    public $AlarmIndicator;
 
     /**
      * @var string 告警指标描述
@@ -172,10 +172,10 @@ class AlarmEventInfo extends AbstractModel
      * @param string $TaskId 任务ID
      * @param string $RegularName 规则名称
      * @param integer $AlarmLevel 告警级别,0表示普通，1表示重要，2表示紧急
-     * @param integer $AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
      * @param integer $AlarmWay 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
      * @param string $AlarmRecipientId 告警接收人Id，多个用逗号隔开
      * @param string $ProjectId 项目ID
+     * @param integer $AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
      * @param string $AlarmIndicatorDesc 告警指标描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TriggerType 指标阈值，1表示离线任务第一次运行失败，2表示离线任务所有重试完成后失败
@@ -226,10 +226,6 @@ class AlarmEventInfo extends AbstractModel
             $this->AlarmLevel = $param["AlarmLevel"];
         }
 
-        if (array_key_exists("AlarmIndicator",$param) and $param["AlarmIndicator"] !== null) {
-            $this->AlarmIndicator = $param["AlarmIndicator"];
-        }
-
         if (array_key_exists("AlarmWay",$param) and $param["AlarmWay"] !== null) {
             $this->AlarmWay = $param["AlarmWay"];
         }
@@ -240,6 +236,10 @@ class AlarmEventInfo extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("AlarmIndicator",$param) and $param["AlarmIndicator"] !== null) {
+            $this->AlarmIndicator = $param["AlarmIndicator"];
         }
 
         if (array_key_exists("AlarmIndicatorDesc",$param) and $param["AlarmIndicatorDesc"] !== null) {

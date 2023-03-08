@@ -14,20 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetCountryCodes请求参数结构体
+ * 签署人配置信息
  *
-
+ * @method boolean getCanEditApprover() 获取是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCanEditApprover(boolean $CanEditApprover) 设置是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class GetCountryCodesRequest extends AbstractModel
+class CommonApproverOption extends AbstractModel
 {
-
+    /**
+     * @var boolean 是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CanEditApprover;
 
     /**
-
+     * @param boolean $CanEditApprover 是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +50,8 @@ class GetCountryCodesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("CanEditApprover",$param) and $param["CanEditApprover"] !== null) {
+            $this->CanEditApprover = $param["CanEditApprover"];
+        }
     }
 }

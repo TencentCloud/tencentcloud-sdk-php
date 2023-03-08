@@ -42,6 +42,8 @@ Activity：活动来源
  * @method void setSource(string $Source) 设置来源：wechat | cloud
  * @method string getChannel() 获取渠道：wechat | cloud
  * @method void setChannel(string $Channel) 设置渠道：wechat | cloud
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  */
 class CreateCloudRunEnvRequest extends AbstractModel
 {
@@ -93,6 +95,11 @@ Activity：活动来源
     public $Channel;
 
     /**
+     * @var string 环境ID
+     */
+    public $EnvId;
+
+    /**
      * @param string $PackageType Trial,Standard,Professional,Enterprise
      * @param string $Alias 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
      * @param string $FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
@@ -104,6 +111,7 @@ Activity：活动来源
      * @param string $ReqKey 请求key 用于防重
      * @param string $Source 来源：wechat | cloud
      * @param string $Channel 渠道：wechat | cloud
+     * @param string $EnvId 环境ID
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ Activity：活动来源
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
         }
     }
 }

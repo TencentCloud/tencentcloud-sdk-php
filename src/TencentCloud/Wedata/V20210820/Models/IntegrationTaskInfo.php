@@ -122,6 +122,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInLongManagerVersion(string $InLongManagerVersion) 设置version
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDataProxyUrl() 获取dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataProxyUrl(array $DataProxyUrl) 设置dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSubmit() 获取任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubmit(boolean $Submit) 设置任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationTaskInfo extends AbstractModel
 {
@@ -285,6 +293,18 @@ class IntegrationTaskInfo extends AbstractModel
     public $InLongManagerVersion;
 
     /**
+     * @var array dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataProxyUrl;
+
+    /**
+     * @var boolean 任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Submit;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -335,6 +355,10 @@ class IntegrationTaskInfo extends AbstractModel
      * @param string $InLongStreamId stream id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InLongManagerVersion version
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DataProxyUrl dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Submit 任务版本是否已提交运维
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -482,6 +506,14 @@ class IntegrationTaskInfo extends AbstractModel
 
         if (array_key_exists("InLongManagerVersion",$param) and $param["InLongManagerVersion"] !== null) {
             $this->InLongManagerVersion = $param["InLongManagerVersion"];
+        }
+
+        if (array_key_exists("DataProxyUrl",$param) and $param["DataProxyUrl"] !== null) {
+            $this->DataProxyUrl = $param["DataProxyUrl"];
+        }
+
+        if (array_key_exists("Submit",$param) and $param["Submit"] !== null) {
+            $this->Submit = $param["Submit"];
         }
     }
 }

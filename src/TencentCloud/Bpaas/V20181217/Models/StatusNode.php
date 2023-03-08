@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalUrl(string $ExternalUrl) 设置外部审批Url
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParallelNodes() 获取并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParallelNodes(string $ParallelNodes) 设置并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatusNode extends AbstractModel
 {
@@ -212,6 +216,12 @@ class StatusNode extends AbstractModel
     public $ExternalUrl;
 
     /**
+     * @var string 并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParallelNodes;
+
+    /**
      * @param string $NodeId 节点id
      * @param string $NodeName 节点名称
      * @param integer $NodeType 节点类型 1:审批节点 2:执行节点 3:条件节点
@@ -247,6 +257,8 @@ class StatusNode extends AbstractModel
      * @param string $CKafkaRegion CKafka - 地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExternalUrl 外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParallelNodes 并行节点 3-4
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -342,6 +354,10 @@ class StatusNode extends AbstractModel
 
         if (array_key_exists("ExternalUrl",$param) and $param["ExternalUrl"] !== null) {
             $this->ExternalUrl = $param["ExternalUrl"];
+        }
+
+        if (array_key_exists("ParallelNodes",$param) and $param["ParallelNodes"] !== null) {
+            $this->ParallelNodes = $param["ParallelNodes"];
         }
     }
 }

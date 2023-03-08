@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * k8s中标签，一般以数组的方式存在
  *
-
+ * @method string getName() 获取map表中的Name
+ * @method void setName(string $Name) 设置map表中的Name
+ * @method string getValue() 获取map表中的Value
+ * @method void setValue(string $Value) 设置map表中的Value
  */
 class Label extends AbstractModel
 {
-
+    /**
+     * @var string map表中的Name
+     */
+    public $Name;
 
     /**
+     * @var string map表中的Value
+     */
+    public $Value;
 
+    /**
+     * @param string $Name map表中的Name
+     * @param string $Value map表中的Value
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class Label extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
 
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
+        }
     }
 }

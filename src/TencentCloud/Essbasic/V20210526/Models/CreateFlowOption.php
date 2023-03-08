@@ -14,20 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryDirectCustomersCredit请求参数结构体
+ * 创建合同配置信息
  *
-
+ * @method boolean getCanEditFlow() 获取是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCanEditFlow(boolean $CanEditFlow) 设置是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class QueryDirectCustomersCreditRequest extends AbstractModel
+class CreateFlowOption extends AbstractModel
 {
-
+    /**
+     * @var boolean 是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CanEditFlow;
 
     /**
-
+     * @param boolean $CanEditFlow 是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +50,8 @@ class QueryDirectCustomersCreditRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("CanEditFlow",$param) and $param["CanEditFlow"] !== null) {
+            $this->CanEditFlow = $param["CanEditFlow"];
+        }
     }
 }

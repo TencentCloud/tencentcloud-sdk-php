@@ -51,6 +51,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelCreateFlowSignUrlResponse ChannelCreateFlowSignUrl(Models\ChannelCreateFlowSignUrlRequest $req) 创建签署链接，需要联系运营人员开白后才可使用
  * @method Models\ChannelCreateMultiFlowSignQRCodeResponse ChannelCreateMultiFlowSignQRCode(Models\ChannelCreateMultiFlowSignQRCodeRequest $req) 此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫签署流程二维码。
 适用的模版仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模版，且模版中发起方没有填写控件。
+ * @method Models\ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlow(Models\ChannelCreatePrepareFlowRequest $req) 创建预发起合同
  * @method Models\ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlow(Models\ChannelCreateReleaseFlowRequest $req) 发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
 合同发起人必须在电子签已经进行实名。
  * @method Models\ChannelCreateSealPolicyResponse ChannelCreateSealPolicy(Models\ChannelCreateSealPolicyRequest $req) 将指定印章授权给第三方平台子客企业下的某些员工

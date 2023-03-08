@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWecom(integer $Wecom) 设置企业微信，0：未设置，1：成功，2：失败
  * @method integer getHttp() 获取http，0：未设置，1：成功，2：失败
  * @method void setHttp(integer $Http) 设置http，0：未设置，1：成功，2：失败
+ * @method integer getWecomGroup() 获取企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWecomGroup(integer $WecomGroup) 设置企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmReceiverInfo extends AbstractModel
 {
@@ -80,6 +84,12 @@ class AlarmReceiverInfo extends AbstractModel
     public $Http;
 
     /**
+     * @var integer 企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WecomGroup;
+
+    /**
      * @param string $AlarmId 告警ID
      * @param string $AlarmReceiver 告警接收人ID
      * @param integer $Email 邮件，0：未设置，1：成功，2：失败
@@ -88,6 +98,8 @@ class AlarmReceiverInfo extends AbstractModel
      * @param integer $Voice 电话，0：未设置，1：成功，2：失败
      * @param integer $Wecom 企业微信，0：未设置，1：成功，2：失败
      * @param integer $Http http，0：未设置，1：成功，2：失败
+     * @param integer $WecomGroup 企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ class AlarmReceiverInfo extends AbstractModel
 
         if (array_key_exists("Http",$param) and $param["Http"] !== null) {
             $this->Http = $param["Http"];
+        }
+
+        if (array_key_exists("WecomGroup",$param) and $param["WecomGroup"] !== null) {
+            $this->WecomGroup = $param["WecomGroup"];
         }
     }
 }

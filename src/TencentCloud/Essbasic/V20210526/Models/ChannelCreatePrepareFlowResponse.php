@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryVoucherAmountByUin返回参数结构体
+ * ChannelCreatePrepareFlow返回参数结构体
  *
- * @method array getData() 获取子客代金券额度数据
- * @method void setData(array $Data) 设置子客代金券额度数据
+ * @method string getPrepareFlowUrl() 获取预发起的合同链接
+ * @method void setPrepareFlowUrl(string $PrepareFlowUrl) 设置预发起的合同链接
+ * @method string getPreviewFlowUrl() 获取合同发起后预览链接
+ * @method void setPreviewFlowUrl(string $PreviewFlowUrl) 设置合同发起后预览链接
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class QueryVoucherAmountByUinResponse extends AbstractModel
+class ChannelCreatePrepareFlowResponse extends AbstractModel
 {
     /**
-     * @var array 子客代金券额度数据
+     * @var string 预发起的合同链接
      */
-    public $Data;
+    public $PrepareFlowUrl;
+
+    /**
+     * @var string 合同发起后预览链接
+     */
+    public $PreviewFlowUrl;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class QueryVoucherAmountByUinResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 子客代金券额度数据
+     * @param string $PrepareFlowUrl 预发起的合同链接
+     * @param string $PreviewFlowUrl 合同发起后预览链接
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +62,12 @@ class QueryVoucherAmountByUinResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new QueryVoucherAmountByUinItem();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("PrepareFlowUrl",$param) and $param["PrepareFlowUrl"] !== null) {
+            $this->PrepareFlowUrl = $param["PrepareFlowUrl"];
+        }
+
+        if (array_key_exists("PreviewFlowUrl",$param) and $param["PreviewFlowUrl"] !== null) {
+            $this->PreviewFlowUrl = $param["PreviewFlowUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

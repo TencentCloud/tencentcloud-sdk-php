@@ -20,17 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 输入规则，当上传视频命中该规则时，即触发工作流。
  *
- * @method string getType() 获取触发器的类型，目前仅支持 CosFileUpload。
- * @method void setType(string $Type) 设置触发器的类型，目前仅支持 CosFileUpload。
+ * @method string getType() 获取触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+
+ * @method void setType(string $Type) 设置触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+
  * @method CosFileUploadTrigger getCosFileUploadTrigger() 获取当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosFileUploadTrigger(CosFileUploadTrigger $CosFileUploadTrigger) 设置当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AwsS3FileUploadTrigger getAwsS3FileUploadTrigger() 获取当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAwsS3FileUploadTrigger(AwsS3FileUploadTrigger $AwsS3FileUploadTrigger) 设置当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTrigger extends AbstractModel
 {
     /**
-     * @var string 触发器的类型，目前仅支持 CosFileUpload。
+     * @var string 触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+
      */
     public $Type;
 
@@ -41,8 +61,24 @@ class WorkflowTrigger extends AbstractModel
     public $CosFileUploadTrigger;
 
     /**
-     * @param string $Type 触发器的类型，目前仅支持 CosFileUpload。
+     * @var AwsS3FileUploadTrigger 当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AwsS3FileUploadTrigger;
+
+    /**
+     * @param string $Type 触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+
      * @param CosFileUploadTrigger $CosFileUploadTrigger 当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AwsS3FileUploadTrigger $AwsS3FileUploadTrigger 当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -65,6 +101,11 @@ class WorkflowTrigger extends AbstractModel
         if (array_key_exists("CosFileUploadTrigger",$param) and $param["CosFileUploadTrigger"] !== null) {
             $this->CosFileUploadTrigger = new CosFileUploadTrigger();
             $this->CosFileUploadTrigger->deserialize($param["CosFileUploadTrigger"]);
+        }
+
+        if (array_key_exists("AwsS3FileUploadTrigger",$param) and $param["AwsS3FileUploadTrigger"] !== null) {
+            $this->AwsS3FileUploadTrigger = new AwsS3FileUploadTrigger();
+            $this->AwsS3FileUploadTrigger->deserialize($param["AwsS3FileUploadTrigger"]);
         }
     }
 }

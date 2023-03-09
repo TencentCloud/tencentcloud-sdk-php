@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulId(integer $VulId) 设置漏洞id
  * @method array getUuids() 获取自选服务器时生效，主机uuid的string数组
  * @method void setUuids(array $Uuids) 设置自选服务器时生效，主机uuid的string数组
+ * @method integer getTimeoutPeriod() 获取扫描超时时长 ，单位秒
+ * @method void setTimeoutPeriod(integer $TimeoutPeriod) 设置扫描超时时长 ，单位秒
  */
 class CreateEmergencyVulScanRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateEmergencyVulScanRequest extends AbstractModel
     public $Uuids;
 
     /**
+     * @var integer 扫描超时时长 ，单位秒
+     */
+    public $TimeoutPeriod;
+
+    /**
      * @param integer $VulId 漏洞id
      * @param array $Uuids 自选服务器时生效，主机uuid的string数组
+     * @param integer $TimeoutPeriod 扫描超时时长 ，单位秒
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateEmergencyVulScanRequest extends AbstractModel
 
         if (array_key_exists("Uuids",$param) and $param["Uuids"] !== null) {
             $this->Uuids = $param["Uuids"];
+        }
+
+        if (array_key_exists("TimeoutPeriod",$param) and $param["TimeoutPeriod"] !== null) {
+            $this->TimeoutPeriod = $param["TimeoutPeriod"];
         }
     }
 }

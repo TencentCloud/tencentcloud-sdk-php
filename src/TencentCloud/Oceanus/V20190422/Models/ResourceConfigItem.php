@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefJobCount(integer $RefJobCount) 设置关联作业个数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRefJobStatusCountSet() 获取分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRefJobStatusCountSet(array $RefJobStatusCountSet) 设置分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceConfigItem extends AbstractModel
 {
@@ -114,6 +118,12 @@ class ResourceConfigItem extends AbstractModel
     public $RefJobCount;
 
     /**
+     * @var array 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RefJobStatusCountSet;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param integer $ResourceType 资源类型
      * @param string $Region 资源所属地域
@@ -127,6 +137,8 @@ class ResourceConfigItem extends AbstractModel
      * @param integer $Status 资源状态：0: 资源同步中，1:资源已就绪
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RefJobCount 关联作业个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RefJobStatusCountSet 分状态统计关联作业数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,15 @@ class ResourceConfigItem extends AbstractModel
 
         if (array_key_exists("RefJobCount",$param) and $param["RefJobCount"] !== null) {
             $this->RefJobCount = $param["RefJobCount"];
+        }
+
+        if (array_key_exists("RefJobStatusCountSet",$param) and $param["RefJobStatusCountSet"] !== null) {
+            $this->RefJobStatusCountSet = [];
+            foreach ($param["RefJobStatusCountSet"] as $key => $value){
+                $obj = new RefJobStatusCountItem();
+                $obj->deserialize($value);
+                array_push($this->RefJobStatusCountSet, $obj);
+            }
         }
     }
 }

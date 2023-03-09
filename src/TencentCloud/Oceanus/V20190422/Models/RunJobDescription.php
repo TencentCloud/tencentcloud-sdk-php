@@ -24,14 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置作业Id
  * @method integer getRunType() 获取运行类型，1：启动，2：恢复
  * @method void setRunType(integer $RunType) 设置运行类型，1：启动，2：恢复
- * @method string getStartMode() 获取已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
- * @method void setStartMode(string $StartMode) 设置已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+ * @method string getStartMode() 获取兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+ * @method void setStartMode(string $StartMode) 设置兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
  * @method integer getJobConfigVersion() 获取当前作业的某个版本
  * @method void setJobConfigVersion(integer $JobConfigVersion) 设置当前作业的某个版本
  * @method string getSavepointPath() 获取Savepoint路径
  * @method void setSavepointPath(string $SavepointPath) 设置Savepoint路径
  * @method string getSavepointId() 获取Savepoint的Id
  * @method void setSavepointId(string $SavepointId) 设置Savepoint的Id
+ * @method boolean getUseOldSystemConnector() 获取使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseOldSystemConnector(boolean $UseOldSystemConnector) 设置使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunJobDescription extends AbstractModel
 {
@@ -46,7 +50,7 @@ class RunJobDescription extends AbstractModel
     public $RunType;
 
     /**
-     * @var string 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+     * @var string 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
      */
     public $StartMode;
 
@@ -66,12 +70,20 @@ class RunJobDescription extends AbstractModel
     public $SavepointId;
 
     /**
+     * @var boolean 使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseOldSystemConnector;
+
+    /**
      * @param string $JobId 作业Id
      * @param integer $RunType 运行类型，1：启动，2：恢复
-     * @param string $StartMode 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+     * @param string $StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
      * @param integer $JobConfigVersion 当前作业的某个版本
      * @param string $SavepointPath Savepoint路径
      * @param string $SavepointId Savepoint的Id
+     * @param boolean $UseOldSystemConnector 使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class RunJobDescription extends AbstractModel
 
         if (array_key_exists("SavepointId",$param) and $param["SavepointId"] !== null) {
             $this->SavepointId = $param["SavepointId"];
+        }
+
+        if (array_key_exists("UseOldSystemConnector",$param) and $param["UseOldSystemConnector"] !== null) {
+            $this->UseOldSystemConnector = $param["UseOldSystemConnector"];
         }
     }
 }

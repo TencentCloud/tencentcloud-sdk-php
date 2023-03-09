@@ -54,6 +54,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefJobCount(integer $RefJobCount) 设置关联作业数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsJobRun() 获取作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsJobRun(integer $IsJobRun) 设置作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileName() 获取文件名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileName(string $FileName) 设置文件名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWorkSpaceId() 获取工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkSpaceId(integer $WorkSpaceId) 设置工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRefJobStatusCountSet() 获取分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRefJobStatusCountSet(array $RefJobStatusCountSet) 设置分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceItem extends AbstractModel
 {
@@ -131,6 +147,30 @@ class ResourceItem extends AbstractModel
     public $RefJobCount;
 
     /**
+     * @var integer 作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsJobRun;
+
+    /**
+     * @var string 文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileName;
+
+    /**
+     * @var integer 工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkSpaceId;
+
+    /**
+     * @var array 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RefJobStatusCountSet;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param string $Name 资源名称
      * @param integer $ResourceType 资源类型
@@ -147,6 +187,14 @@ class ResourceItem extends AbstractModel
      * @param integer $VersionCount 版本个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RefJobCount 关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsJobRun 作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileName 文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WorkSpaceId 工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RefJobStatusCountSet 分状态统计关联作业数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -217,6 +265,27 @@ class ResourceItem extends AbstractModel
 
         if (array_key_exists("RefJobCount",$param) and $param["RefJobCount"] !== null) {
             $this->RefJobCount = $param["RefJobCount"];
+        }
+
+        if (array_key_exists("IsJobRun",$param) and $param["IsJobRun"] !== null) {
+            $this->IsJobRun = $param["IsJobRun"];
+        }
+
+        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
+            $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("RefJobStatusCountSet",$param) and $param["RefJobStatusCountSet"] !== null) {
+            $this->RefJobStatusCountSet = [];
+            foreach ($param["RefJobStatusCountSet"] as $key => $value){
+                $obj = new RefJobStatusCountItem();
+                $obj->deserialize($value);
+                array_push($this->RefJobStatusCountSet, $obj);
+            }
         }
     }
 }

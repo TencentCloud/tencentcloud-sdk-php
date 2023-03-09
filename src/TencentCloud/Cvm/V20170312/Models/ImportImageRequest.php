@@ -46,6 +46,8 @@ BYOL: 自带许可（Bring Your Own License）
 可选项：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
+ * @method string getBootMode() 获取启动模式
+ * @method void setBootMode(string $BootMode) 设置启动模式
  */
 class ImportImageRequest extends AbstractModel
 {
@@ -103,6 +105,11 @@ BYOL: 自带许可（Bring Your Own License）
     public $LicenseType;
 
     /**
+     * @var string 启动模式
+     */
+    public $BootMode;
+
+    /**
      * @param string $Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      * @param string $OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
      * @param string $OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
@@ -116,6 +123,7 @@ BYOL: 自带许可（Bring Your Own License）
 可选项：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
+     * @param string $BootMode 启动模式
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ BYOL: 自带许可（Bring Your Own License）
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("BootMode",$param) and $param["BootMode"] !== null) {
+            $this->BootMode = $param["BootMode"];
         }
     }
 }

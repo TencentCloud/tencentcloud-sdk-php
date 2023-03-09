@@ -20,19 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体处理的输入对象信息。
  *
- * @method string getType() 获取输入来源对象的类型，支持 COS、URL 两种。
- * @method void setType(string $Type) 设置输入来源对象的类型，支持 COS、URL 两种。
+ * @method string getType() 获取输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
+ * @method void setType(string $Type) 设置输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
  * @method CosInputInfo getCosInputInfo() 获取当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) 设置当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
  * @method UrlInputInfo getUrlInputInfo() 获取当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrlInputInfo(UrlInputInfo $UrlInputInfo) 设置当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method S3InputInfo getS3InputInfo() 获取当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setS3InputInfo(S3InputInfo $S3InputInfo) 设置当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string 输入来源对象的类型，支持 COS、URL 两种。
+     * @var string 输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
      */
     public $Type;
 
@@ -48,9 +61,20 @@ class MediaInputInfo extends AbstractModel
     public $UrlInputInfo;
 
     /**
-     * @param string $Type 输入来源对象的类型，支持 COS、URL 两种。
+     * @var S3InputInfo 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $S3InputInfo;
+
+    /**
+     * @param string $Type 输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
      * @param CosInputInfo $CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
      * @param UrlInputInfo $UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param S3InputInfo $S3InputInfo 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -78,6 +102,11 @@ class MediaInputInfo extends AbstractModel
         if (array_key_exists("UrlInputInfo",$param) and $param["UrlInputInfo"] !== null) {
             $this->UrlInputInfo = new UrlInputInfo();
             $this->UrlInputInfo->deserialize($param["UrlInputInfo"]);
+        }
+
+        if (array_key_exists("S3InputInfo",$param) and $param["S3InputInfo"] !== null) {
+            $this->S3InputInfo = new S3InputInfo();
+            $this->S3InputInfo->deserialize($param["S3InputInfo"]);
         }
     }
 }

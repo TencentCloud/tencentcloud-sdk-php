@@ -35,15 +35,23 @@ use TencentCloud\Common\AbstractModel;
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
  * @method void setNotifyType(string $NotifyType) 设置通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
  * @method string getNotifyUrl() 获取HTTP回调地址，NotifyType为URL时必填。
  * @method void setNotifyUrl(string $NotifyUrl) 设置HTTP回调地址，NotifyType为URL时必填。
+ * @method AwsSQS getAwsSQS() 获取AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAwsSQS(AwsSQS $AwsSQS) 设置AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskNotifyConfig extends AbstractModel
 {
@@ -78,6 +86,7 @@ class TaskNotifyConfig extends AbstractModel
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
      */
     public $NotifyType;
@@ -86,6 +95,13 @@ class TaskNotifyConfig extends AbstractModel
      * @var string HTTP回调地址，NotifyType为URL时必填。
      */
     public $NotifyUrl;
+
+    /**
+     * @var AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AwsSQS;
 
     /**
      * @param string $CmqModel CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。
@@ -98,8 +114,12 @@ class TaskNotifyConfig extends AbstractModel
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
      * @param string $NotifyUrl HTTP回调地址，NotifyType为URL时必填。
+     * @param AwsSQS $AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -140,6 +160,11 @@ class TaskNotifyConfig extends AbstractModel
 
         if (array_key_exists("NotifyUrl",$param) and $param["NotifyUrl"] !== null) {
             $this->NotifyUrl = $param["NotifyUrl"];
+        }
+
+        if (array_key_exists("AwsSQS",$param) and $param["AwsSQS"] !== null) {
+            $this->AwsSQS = new AwsSQS();
+            $this->AwsSQS->deserialize($param["AwsSQS"]);
         }
     }
 }

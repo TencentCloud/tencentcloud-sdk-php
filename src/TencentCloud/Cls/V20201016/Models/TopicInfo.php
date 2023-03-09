@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescribes(string $Describes) 设置日志主题描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHotPeriod() 获取开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHotPeriod(integer $HotPeriod) 设置开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
 {
@@ -153,6 +159,13 @@ class TopicInfo extends AbstractModel
     public $Describes;
 
     /**
+     * @var integer 开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HotPeriod;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
@@ -175,6 +188,9 @@ class TopicInfo extends AbstractModel
      * @param string $SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Describes 日志主题描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HotPeriod 开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -253,6 +269,10 @@ class TopicInfo extends AbstractModel
 
         if (array_key_exists("Describes",$param) and $param["Describes"] !== null) {
             $this->Describes = $param["Describes"];
+        }
+
+        if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
+            $this->HotPeriod = $param["HotPeriod"];
         }
     }
 }

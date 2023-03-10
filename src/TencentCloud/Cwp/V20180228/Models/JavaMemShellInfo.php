@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUuid() 获取服务器uuid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUuid(string $Uuid) 设置服务器uuid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JavaMemShellInfo extends AbstractModel
 {
@@ -103,6 +107,12 @@ class JavaMemShellInfo extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var string 服务器uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uuid;
+
+    /**
      * @param integer $Id 事件ID
      * @param string $Alias 服务器名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,6 +125,8 @@ class JavaMemShellInfo extends AbstractModel
      * @param integer $Status 处理状态  0 -- 待处理 1 -- 已加白 2 -- 已删除 3 - 已忽略  4 - 已手动处理
      * @param string $Quuid 服务器quuid
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uuid 服务器uuid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -169,6 +181,10 @@ class JavaMemShellInfo extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
     }
 }

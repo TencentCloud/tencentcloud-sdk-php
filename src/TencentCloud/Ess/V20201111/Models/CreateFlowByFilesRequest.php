@@ -84,6 +84,8 @@ MobileCheck：手机号验证
  * @method void setSignBeanTag(integer $SignBeanTag) 设置标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+ * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
  */
 class CreateFlowByFilesRequest extends AbstractModel
 {
@@ -192,6 +194,11 @@ MobileCheck：手机号验证
     public $Agent;
 
     /**
+     * @var integer 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public $CcNotifyType;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署参与者信息，最大限制50方
@@ -224,6 +231,7 @@ MobileCheck：手机号验证
      * @param string $FlowDescription 签署流程描述,最大长度1000个字符
      * @param integer $SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param integer $CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
      */
     function __construct()
     {
@@ -325,6 +333,10 @@ MobileCheck：手机号验证
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("CcNotifyType",$param) and $param["CcNotifyType"] !== null) {
+            $this->CcNotifyType = $param["CcNotifyType"];
         }
     }
 }

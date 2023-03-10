@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置任务结束时间。
  * @method string getTaskStatus() 获取任务状态，包括以下状态：initial,running,wait_complete,success,failed
  * @method void setTaskStatus(string $TaskStatus) 设置任务状态，包括以下状态：initial,running,wait_complete,success,failed
+ * @method integer getNewRegionId() 获取克隆实例所在地域Id
+ * @method void setNewRegionId(integer $NewRegionId) 设置克隆实例所在地域Id
+ * @method integer getSrcRegionId() 获取源实例所在地域Id
+ * @method void setSrcRegionId(integer $SrcRegionId) 设置源实例所在地域Id
  */
 class CloneItem extends AbstractModel
 {
@@ -80,6 +84,16 @@ class CloneItem extends AbstractModel
     public $TaskStatus;
 
     /**
+     * @var integer 克隆实例所在地域Id
+     */
+    public $NewRegionId;
+
+    /**
+     * @var integer 源实例所在地域Id
+     */
+    public $SrcRegionId;
+
+    /**
      * @param string $SrcInstanceId 克隆任务的源实例Id。
      * @param string $DstInstanceId 克隆任务的新产生实例Id。
      * @param integer $CloneJobId 克隆任务对应的任务列表Id。
@@ -88,6 +102,8 @@ class CloneItem extends AbstractModel
      * @param string $StartTime 任务开始时间。
      * @param string $EndTime 任务结束时间。
      * @param string $TaskStatus 任务状态，包括以下状态：initial,running,wait_complete,success,failed
+     * @param integer $NewRegionId 克隆实例所在地域Id
+     * @param integer $SrcRegionId 源实例所在地域Id
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class CloneItem extends AbstractModel
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
             $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("NewRegionId",$param) and $param["NewRegionId"] !== null) {
+            $this->NewRegionId = $param["NewRegionId"];
+        }
+
+        if (array_key_exists("SrcRegionId",$param) and $param["SrcRegionId"] !== null) {
+            $this->SrcRegionId = $param["SrcRegionId"];
         }
     }
 }

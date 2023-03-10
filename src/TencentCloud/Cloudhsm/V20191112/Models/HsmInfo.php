@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModel(string $Model) 设置加密机型号
  * @method array getVsmTypes() 获取此类型的加密机所支持的VSM类型列表
  * @method void setVsmTypes(array $VsmTypes) 设置此类型的加密机所支持的VSM类型列表
+ * @method string getHsmType() 获取加密机母机类型：virtualization、GHSM、EHSM、SHSM
+ * @method void setHsmType(string $HsmType) 设置加密机母机类型：virtualization、GHSM、EHSM、SHSM
  */
 class HsmInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class HsmInfo extends AbstractModel
     public $VsmTypes;
 
     /**
+     * @var string 加密机母机类型：virtualization、GHSM、EHSM、SHSM
+     */
+    public $HsmType;
+
+    /**
      * @param string $Model 加密机型号
      * @param array $VsmTypes 此类型的加密机所支持的VSM类型列表
+     * @param string $HsmType 加密机母机类型：virtualization、GHSM、EHSM、SHSM
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class HsmInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VsmTypes, $obj);
             }
+        }
+
+        if (array_key_exists("HsmType",$param) and $param["HsmType"] !== null) {
+            $this->HsmType = $param["HsmType"];
         }
     }
 }

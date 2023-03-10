@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManufacturer(string $Manufacturer) 设置厂商
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlarmStatus() 获取告警状态，0：停用，1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmStatus(integer $AlarmStatus) 设置告警状态，0：停用，1：启用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceInfo extends AbstractModel
 {
@@ -244,6 +248,12 @@ class ResourceInfo extends AbstractModel
     public $Manufacturer;
 
     /**
+     * @var integer 告警状态，0：停用，1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmStatus;
+
+    /**
      * @param string $ResourceId 资源Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 资源名称
@@ -287,6 +297,8 @@ class ResourceInfo extends AbstractModel
      * @param array $Tags 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Manufacturer 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlarmStatus 告警状态，0：停用，1：启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -398,6 +410,10 @@ class ResourceInfo extends AbstractModel
 
         if (array_key_exists("Manufacturer",$param) and $param["Manufacturer"] !== null) {
             $this->Manufacturer = $param["Manufacturer"];
+        }
+
+        if (array_key_exists("AlarmStatus",$param) and $param["AlarmStatus"] !== null) {
+            $this->AlarmStatus = $param["AlarmStatus"];
         }
     }
 }

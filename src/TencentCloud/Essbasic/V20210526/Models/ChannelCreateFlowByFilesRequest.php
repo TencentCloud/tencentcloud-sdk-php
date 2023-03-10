@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method string getFlowName() 获取签署流程名称，长度不超过200个字符
  * @method void setFlowName(string $FlowName) 设置签署流程名称，长度不超过200个字符
- * @method array getFlowApprovers() 获取签署流程签约方列表，最多不超过5个参与方
- * @method void setFlowApprovers(array $FlowApprovers) 设置签署流程签约方列表，最多不超过5个参与方
+ * @method array getFlowApprovers() 获取签署流程签约方列表，最多不超过50个参与方
+ * @method void setFlowApprovers(array $FlowApprovers) 设置签署流程签约方列表，最多不超过50个参与方
  * @method array getFileIds() 获取签署文件资源Id列表，目前仅支持单个文件
  * @method void setFileIds(array $FileIds) 设置签署文件资源Id列表，目前仅支持单个文件
  * @method array getComponents() 获取签署文件中的发起方的填写控件，需要在发起的时候进行填充
@@ -58,6 +58,10 @@ MobileCheck：手机号验证
  * @method void setSignBeanTag(integer $SignBeanTag) 设置标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
  * @method UserInfo getOperator() 获取操作者的信息，不用传
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息，不用传
+ * @method array getCcInfos() 获取被抄送人信息列表
+ * @method void setCcInfos(array $CcInfos) 设置被抄送人信息列表
+ * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+ * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
  */
 class ChannelCreateFlowByFilesRequest extends AbstractModel
 {
@@ -72,7 +76,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
     public $FlowName;
 
     /**
-     * @var array 签署流程签约方列表，最多不超过5个参与方
+     * @var array 签署流程签约方列表，最多不超过50个参与方
      */
     public $FlowApprovers;
 
@@ -145,9 +149,19 @@ MobileCheck：手机号验证
     public $Operator;
 
     /**
+     * @var array 被抄送人信息列表
+     */
+    public $CcInfos;
+
+    /**
+     * @var integer 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public $CcNotifyType;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $FlowName 签署流程名称，长度不超过200个字符
-     * @param array $FlowApprovers 签署流程签约方列表，最多不超过5个参与方
+     * @param array $FlowApprovers 签署流程签约方列表，最多不超过50个参与方
      * @param array $FileIds 签署文件资源Id列表，目前仅支持单个文件
      * @param array $Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充
      * @param integer $Deadline 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
@@ -164,6 +178,8 @@ MobileCheck：手机号验证
 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      * @param integer $SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
      * @param UserInfo $Operator 操作者的信息，不用传
+     * @param array $CcInfos 被抄送人信息列表
+     * @param integer $CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
      */
     function __construct()
     {
@@ -252,6 +268,19 @@ MobileCheck：手机号验证
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {
+            $this->CcInfos = [];
+            foreach ($param["CcInfos"] as $key => $value){
+                $obj = new CcInfo();
+                $obj->deserialize($value);
+                array_push($this->CcInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("CcNotifyType",$param) and $param["CcNotifyType"] !== null) {
+            $this->CcNotifyType = $param["CcNotifyType"];
         }
     }
 }

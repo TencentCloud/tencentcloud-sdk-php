@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
  * @method void setInstanceIds(array $InstanceIds) 设置一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+ * @method boolean getReleasePrepaidDataDisks() 获取释放实例挂载的包年包月数据盘。
+ * @method void setReleasePrepaidDataDisks(boolean $ReleasePrepaidDataDisks) 设置释放实例挂载的包年包月数据盘。
  */
 class TerminateInstancesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TerminateInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var boolean 释放实例挂载的包年包月数据盘。
+     */
+    public $ReleasePrepaidDataDisks;
+
+    /**
      * @param array $InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+     * @param boolean $ReleasePrepaidDataDisks 释放实例挂载的包年包月数据盘。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TerminateInstancesRequest extends AbstractModel
         }
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ReleasePrepaidDataDisks",$param) and $param["ReleasePrepaidDataDisks"] !== null) {
+            $this->ReleasePrepaidDataDisks = $param["ReleasePrepaidDataDisks"];
         }
     }
 }

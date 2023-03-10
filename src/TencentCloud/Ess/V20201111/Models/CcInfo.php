@@ -22,6 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMobile() 获取被抄送人手机号
  * @method void setMobile(string $Mobile) 设置被抄送人手机号
+ * @method string getName() 获取被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCcType() 获取被抄送人类型,
+0--个人
+1--员工
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCcType(integer $CcType) 设置被抄送人类型,
+0--个人
+1--员工
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCcPermission() 获取被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCcPermission(integer $CcPermission) 设置被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcInfo extends AbstractModel
 {
@@ -31,7 +51,39 @@ class CcInfo extends AbstractModel
     public $Mobile;
 
     /**
+     * @var string 被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
+
+    /**
+     * @var integer 被抄送人类型,
+0--个人
+1--员工
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CcType;
+
+    /**
+     * @var integer 被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CcPermission;
+
+    /**
      * @param string $Mobile 被抄送人手机号
+     * @param string $Name 被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CcType 被抄送人类型,
+0--个人
+1--员工
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CcPermission 被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -48,6 +100,18 @@ class CcInfo extends AbstractModel
         }
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("CcType",$param) and $param["CcType"] !== null) {
+            $this->CcType = $param["CcType"];
+        }
+
+        if (array_key_exists("CcPermission",$param) and $param["CcPermission"] !== null) {
+            $this->CcPermission = $param["CcPermission"];
         }
     }
 }

@@ -38,6 +38,8 @@ Default-默认不修改
  * @method void setVpcId(string $VpcId) 设置虚拟专网Id
  * @method string getSubnetId() 获取子网Id
  * @method void setSubnetId(string $SubnetId) 设置子网Id
+ * @method integer getAlarmStatus() 获取告警开关，0表示关闭告警，1表示启用告警
+ * @method void setAlarmStatus(integer $AlarmStatus) 设置告警开关，0表示关闭告警，1表示启用告警
  */
 class ModifyVsmAttributesRequest extends AbstractModel
 {
@@ -75,6 +77,11 @@ Default-默认不修改
     public $SubnetId;
 
     /**
+     * @var integer 告警开关，0表示关闭告警，1表示启用告警
+     */
+    public $AlarmStatus;
+
+    /**
      * @param string $ResourceId 资源Id
      * @param array $Type UpdateResourceName-修改资源名称,
 UpdateSgIds-修改安全组名称,
@@ -84,6 +91,7 @@ Default-默认不修改
      * @param array $SgIds 安全组Id
      * @param string $VpcId 虚拟专网Id
      * @param string $SubnetId 子网Id
+     * @param integer $AlarmStatus 告警开关，0表示关闭告警，1表示启用告警
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ Default-默认不修改
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("AlarmStatus",$param) and $param["AlarmStatus"] !== null) {
+            $this->AlarmStatus = $param["AlarmStatus"];
         }
     }
 }

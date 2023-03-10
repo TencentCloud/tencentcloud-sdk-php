@@ -32,7 +32,10 @@ use TencentCloud\Cloudhsm\V20191112\Models as Models;
  * @method Models\DescribeVpcResponse DescribeVpc(Models\DescribeVpcRequest $req) 查询用户的私有网络列表
  * @method Models\DescribeVsmAttributesResponse DescribeVsmAttributes(Models\DescribeVsmAttributesRequest $req) 获取VSM属性
  * @method Models\DescribeVsmsResponse DescribeVsms(Models\DescribeVsmsRequest $req) 获取用户VSM列表
+ * @method Models\GetAlarmEventResponse GetAlarmEvent(Models\GetAlarmEventRequest $req) 获取告警事件
+ * @method Models\GetVsmMonitorInfoResponse GetVsmMonitorInfo(Models\GetVsmMonitorInfoRequest $req) 获取VSM监控信息
  * @method Models\InquiryPriceBuyVsmResponse InquiryPriceBuyVsm(Models\InquiryPriceBuyVsmRequest $req) 购买询价接口
+ * @method Models\ModifyAlarmEventResponse ModifyAlarmEvent(Models\ModifyAlarmEventRequest $req) 修改告警事件
  * @method Models\ModifyVsmAttributesResponse ModifyVsmAttributes(Models\ModifyVsmAttributesRequest $req) 修改VSM属性
  */
 

@@ -54,13 +54,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiAccessIpv6(string $ApiAccessIpv6) 设置TcaplusDB SDK连接参数，接入ipv6地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getClusterType() 获取集群类型
+ * @method integer getClusterType() 获取集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterType(integer $ClusterType) 设置集群类型
+ * @method void setClusterType(integer $ClusterType) 设置集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getClusterStatus() 获取集群状态
+ * @method integer getClusterStatus() 获取集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterStatus(integer $ClusterStatus) 设置集群状态
+ * @method void setClusterStatus(integer $ClusterStatus) 设置集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReadCapacityUnit() 获取读CU
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,6 +107,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsReadOnlyUlogBackupExpireDay() 获取集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsReadOnlyUlogBackupExpireDay(integer $IsReadOnlyUlogBackupExpireDay) 设置集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRestProxyStatus() 获取restproxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRestProxyStatus(integer $RestProxyStatus) 设置restproxy状态
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfo extends AbstractModel
@@ -189,13 +193,13 @@ class ClusterInfo extends AbstractModel
     public $ApiAccessIpv6;
 
     /**
-     * @var integer 集群类型
+     * @var integer 集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
 
     /**
-     * @var integer 集群状态
+     * @var integer 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterStatus;
@@ -272,6 +276,12 @@ class ClusterInfo extends AbstractModel
     public $IsReadOnlyUlogBackupExpireDay;
 
     /**
+     * @var integer restproxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RestProxyStatus;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
      * @param string $Region 集群所在地域
@@ -289,9 +299,9 @@ class ClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApiAccessIpv6 TcaplusDB SDK连接参数，接入ipv6地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ClusterType 集群类型
+     * @param integer $ClusterType 集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ClusterStatus 集群状态
+     * @param integer $ClusterStatus 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadCapacityUnit 读CU
 注意：此字段可能返回 null，表示取不到有效值。
@@ -315,6 +325,8 @@ class ClusterInfo extends AbstractModel
      * @param integer $UlogBackupExpireDay 集群Ulog备份文件多少天后过期删除
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsReadOnlyUlogBackupExpireDay 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RestProxyStatus restproxy状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -455,6 +467,10 @@ class ClusterInfo extends AbstractModel
 
         if (array_key_exists("IsReadOnlyUlogBackupExpireDay",$param) and $param["IsReadOnlyUlogBackupExpireDay"] !== null) {
             $this->IsReadOnlyUlogBackupExpireDay = $param["IsReadOnlyUlogBackupExpireDay"];
+        }
+
+        if (array_key_exists("RestProxyStatus",$param) and $param["RestProxyStatus"] !== null) {
+            $this->RestProxyStatus = $param["RestProxyStatus"];
         }
     }
 }

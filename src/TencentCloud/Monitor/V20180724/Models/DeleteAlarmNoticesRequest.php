@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置模块名，这里填“monitor”
  * @method array getNoticeIds() 获取告警通知模板id列表
  * @method void setNoticeIds(array $NoticeIds) 设置告警通知模板id列表
- * @method array getNoticeBindPolicys() 获取通知模版与策略绑定关系
- * @method void setNoticeBindPolicys(array $NoticeBindPolicys) 设置通知模版与策略绑定关系
+ * @method array getNoticeBindPolicys() 获取通知模板与策略绑定关系
+ * @method void setNoticeBindPolicys(array $NoticeBindPolicys) 设置通知模板与策略绑定关系
  */
 class DeleteAlarmNoticesRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteAlarmNoticesRequest extends AbstractModel
     public $NoticeIds;
 
     /**
-     * @var array 通知模版与策略绑定关系
+     * @var array 通知模板与策略绑定关系
      */
     public $NoticeBindPolicys;
 
     /**
      * @param string $Module 模块名，这里填“monitor”
      * @param array $NoticeIds 告警通知模板id列表
-     * @param array $NoticeBindPolicys 通知模版与策略绑定关系
+     * @param array $NoticeBindPolicys 通知模板与策略绑定关系
      */
     function __construct()
     {

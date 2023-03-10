@@ -70,9 +70,9 @@ video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssistants(array $Assistants) 设置助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecordUrl() 获取录制地址。仅在房间结束后存在。
+ * @method string getRecordUrl() 获取录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordUrl(string $RecordUrl) 设置录制地址。仅在房间结束后存在。
+ * @method void setRecordUrl(string $RecordUrl) 设置录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -161,7 +161,7 @@ video 纯视频
     public $Assistants;
 
     /**
-     * @var string 录制地址。仅在房间结束后存在。
+     * @var string 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordUrl;
@@ -209,7 +209,7 @@ video 纯视频
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      * @param array $Assistants 助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecordUrl 录制地址。仅在房间结束后存在。
+     * @param string $RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。

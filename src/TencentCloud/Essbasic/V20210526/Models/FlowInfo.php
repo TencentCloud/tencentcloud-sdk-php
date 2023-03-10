@@ -163,6 +163,8 @@ use TencentCloud\Common\AbstractModel;
 若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+ * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+ * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
  */
 class FlowInfo extends AbstractModel
 {
@@ -230,6 +232,11 @@ class FlowInfo extends AbstractModel
     public $NeedSignReview;
 
     /**
+     * @var integer 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public $CcNotifyType;
+
+    /**
      * @param string $FlowName 合同名字，最大长度200个字符
      * @param integer $Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
      * @param string $TemplateId 模板ID
@@ -245,6 +252,7 @@ class FlowInfo extends AbstractModel
 若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+     * @param integer $CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
      */
     function __construct()
     {
@@ -320,6 +328,10 @@ class FlowInfo extends AbstractModel
 
         if (array_key_exists("NeedSignReview",$param) and $param["NeedSignReview"] !== null) {
             $this->NeedSignReview = $param["NeedSignReview"];
+        }
+
+        if (array_key_exists("CcNotifyType",$param) and $param["CcNotifyType"] !== null) {
+            $this->CcNotifyType = $param["CcNotifyType"];
         }
     }
 }

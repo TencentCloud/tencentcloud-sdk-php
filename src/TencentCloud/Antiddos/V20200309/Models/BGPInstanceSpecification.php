@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticLimit(integer $ElasticLimit) 设置高防包企业版弹性阈值，0表示未开启；大于0为弹性防护阈值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDownGradeProtect() 获取降配后的防护能力，单位Gbps
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDownGradeProtect(integer $DownGradeProtect) 设置降配后的防护能力，单位Gbps
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstanceSpecification extends AbstractModel
 {
@@ -121,6 +125,12 @@ class BGPInstanceSpecification extends AbstractModel
     public $ElasticLimit;
 
     /**
+     * @var integer 降配后的防护能力，单位Gbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DownGradeProtect;
+
+    /**
      * @param integer $ProtectBandwidth 保底防护峰值，单位Gbps
      * @param integer $ProtectCountLimit 防护次数，单位次
      * @param integer $ProtectIPNumberLimit 防护IP数，单位个
@@ -139,6 +149,8 @@ class BGPInstanceSpecification extends AbstractModel
      * @param integer $EnterpriseFlag 高防包企业版标记，0表示普通高防包；1表示企业版高防包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticLimit 高防包企业版弹性阈值，0表示未开启；大于0为弹性防护阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DownGradeProtect 降配后的防护能力，单位Gbps
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +204,10 @@ class BGPInstanceSpecification extends AbstractModel
 
         if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
             $this->ElasticLimit = $param["ElasticLimit"];
+        }
+
+        if (array_key_exists("DownGradeProtect",$param) and $param["DownGradeProtect"] !== null) {
+            $this->DownGradeProtect = $param["DownGradeProtect"];
         }
     }
 }

@@ -92,10 +92,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`。
  * @method array getAliases() 获取按照一个或者多个实例名称查询。
  * @method void setAliases(array $Aliases) 设置按照一个或者多个实例名称查询。
- * @method string getStartDate() 获取时间查询区间的起始位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当天`00:00:00`。
- * @method void setStartDate(string $StartDate) 设置时间查询区间的起始位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当天`00:00:00`。
- * @method string getEndDate() 获取时间查询区间的终止位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当前时刻。
- * @method void setEndDate(string $EndDate) 设置时间查询区间的终止位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当前时刻。
+ * @method string getStartDate() 获取时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
+ * @method void setStartDate(string $StartDate) 设置时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
+ * @method string getEndDate() 获取时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
+ * @method void setEndDate(string $EndDate) 设置时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
  * @method string getOrderField() 获取指定返回维修任务列表的排序字段，目前支持：
 
 - `CreateTime`：任务创建时间
@@ -195,12 +195,12 @@ class DescribeTaskInfoRequest extends AbstractModel
     public $Aliases;
 
     /**
-     * @var string 时间查询区间的起始位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当天`00:00:00`。
+     * @var string 时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
      */
     public $StartDate;
 
     /**
-     * @var string 时间查询区间的终止位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当前时刻。
+     * @var string 时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
      */
     public $EndDate;
 
@@ -263,8 +263,8 @@ class DescribeTaskInfoRequest extends AbstractModel
      * @param array $TaskIds 按照一个或者多个任务ID查询。任务ID形如：`rep-xxxxxxxx`。
      * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`。
      * @param array $Aliases 按照一个或者多个实例名称查询。
-     * @param string $StartDate 时间查询区间的起始位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当天`00:00:00`。
-     * @param string $EndDate 时间查询区间的终止位置，会根据`OrderField`中指定的字段进行过滤。未传入时默认为当前时刻。
+     * @param string $StartDate 时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
+     * @param string $EndDate 时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
      * @param string $OrderField 指定返回维修任务列表的排序字段，目前支持：
 
 - `CreateTime`：任务创建时间

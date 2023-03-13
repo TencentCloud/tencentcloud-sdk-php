@@ -36,6 +36,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\CreateGroupWithSubGroupResponse CreateGroupWithSubGroup(Models\CreateGroupWithSubGroupRequest $req) 此接口会聚合子群组创建联合群组
  * @method Models\CreateRoomResponse CreateRoom(Models\CreateRoomRequest $req) 创建房间
  * @method Models\CreateSupervisorResponse CreateSupervisor(Models\CreateSupervisorRequest $req) 创建巡课
+ * @method Models\DeleteAppCustomContentResponse DeleteAppCustomContent(Models\DeleteAppCustomContentRequest $req) 删除设置自定义元素。如果参数scenes为空则删除所有自定义元素，否则删除指定的scene自定义元素。
  * @method Models\DeleteDocumentResponse DeleteDocument(Models\DeleteDocumentRequest $req) 删除文档
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 此接口用于删除指定群组，支持批量操作。
  * @method Models\DeleteGroupMemberResponse DeleteGroupMember(Models\DeleteGroupMemberRequest $req) 此接口用于删除群组中指定成员

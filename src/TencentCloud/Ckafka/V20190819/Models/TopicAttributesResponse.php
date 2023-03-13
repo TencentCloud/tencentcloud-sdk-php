@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuotaConfig(InstanceQuotaConfigResp $QuotaConfig) 设置topic 限流策略
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReplicaNum() 获取副本数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplicaNum(integer $ReplicaNum) 设置副本数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -113,6 +117,12 @@ class TopicAttributesResponse extends AbstractModel
     public $QuotaConfig;
 
     /**
+     * @var integer 副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplicaNum;
+
+    /**
      * @param string $TopicId 主题 ID
      * @param integer $CreateTime 创建时间
      * @param string $Note 主题备注
@@ -127,6 +137,8 @@ class TopicAttributesResponse extends AbstractModel
      * @param array $AclRuleList 预设策略列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceQuotaConfigResp $QuotaConfig topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReplicaNum 副本数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class TopicAttributesResponse extends AbstractModel
         if (array_key_exists("QuotaConfig",$param) and $param["QuotaConfig"] !== null) {
             $this->QuotaConfig = new InstanceQuotaConfigResp();
             $this->QuotaConfig->deserialize($param["QuotaConfig"]);
+        }
+
+        if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
+            $this->ReplicaNum = $param["ReplicaNum"];
         }
     }
 }

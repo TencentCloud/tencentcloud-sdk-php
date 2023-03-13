@@ -40,19 +40,28 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelCreateBoundFlowsResponse ChannelCreateBoundFlows(Models\ChannelCreateBoundFlowsRequest $req) 此接口（ChannelCreateBoundFlows）用于子客领取合同，经办人需要有相应的角色，合同不能重复领取。
  * @method Models\ChannelCreateConvertTaskApiResponse ChannelCreateConvertTaskApi(Models\ChannelCreateConvertTaskApiRequest $req) 创建文件转换任务
  * @method Models\ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(Models\ChannelCreateEmbedWebUrlRequest $req) 本接口（ChannelCreateEmbedWebUrl）用于创建嵌入web的链接
- * @method Models\ChannelCreateFlowByFilesResponse ChannelCreateFlowByFiles(Models\ChannelCreateFlowByFilesRequest $req) 接口（ChannelCreateFlowByFiles）用于通过文件创建签署流程。此接口静默签能力不可直接使用，需要运营申请
+本接口支持创建：创建印章，创建模版，修改模版，预览模版，预览合同流程的web链接
+进入web连接后与当前控制台操作保持一致
+ * @method Models\ChannelCreateFlowByFilesResponse ChannelCreateFlowByFiles(Models\ChannelCreateFlowByFilesRequest $req) 接口（ChannelCreateFlowByFiles）用于通过文件创建签署流程。此接口静默签能力不可直接使用，请联系客户经理申请使用
  * @method Models\ChannelCreateFlowGroupByFilesResponse ChannelCreateFlowGroupByFiles(Models\ChannelCreateFlowGroupByFilesRequest $req) 接口（ChannelCreateFlowGroupByFiles）用于通过多文件创建合同组签署流程。
  * @method Models\ChannelCreateFlowRemindsResponse ChannelCreateFlowReminds(Models\ChannelCreateFlowRemindsRequest $req) 指定需要批量催办的签署流程Id，批量催办合同，最多100个；接口失败后返回错误信息
 注意:
-该接口不可直接调用，请联系电子签运营开通后方可调用。
+该接口不可直接调用，请联系客户经理申请使用
  * @method Models\ChannelCreateFlowSignReviewResponse ChannelCreateFlowSignReview(Models\ChannelCreateFlowSignReviewRequest $req) 提交企业签署流程审批结果
 
 在通过接口(CreateFlowsByTemplates 或者ChannelCreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true,则可以调用此接口提交企业内部签署审批结果。
 若签署流程状态正常，且本企业存在签署方未签署，同一签署流程可以多次提交签署审批结果，签署时的最后一个“审批结果”有效。
- * @method Models\ChannelCreateFlowSignUrlResponse ChannelCreateFlowSignUrl(Models\ChannelCreateFlowSignUrlRequest $req) 创建签署链接，需要联系运营人员开白后才可使用
+ * @method Models\ChannelCreateFlowSignUrlResponse ChannelCreateFlowSignUrl(Models\ChannelCreateFlowSignUrlRequest $req) 创建签署链接，请联系客户经理申请使用
+该接口用于发起合同后，生成C端签署人的签署链接，点击跳转小程序完成签署
+注意：该接口目前签署人类型仅支持个人签署方（PERSON）
+注意：该接口可生成签署链接的C端签署人必须仅有手写签名和时间类型的签署控件
  * @method Models\ChannelCreateMultiFlowSignQRCodeResponse ChannelCreateMultiFlowSignQRCode(Models\ChannelCreateMultiFlowSignQRCodeRequest $req) 此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫签署流程二维码。
 适用的模版仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模版，且模版中发起方没有填写控件。
  * @method Models\ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlow(Models\ChannelCreatePrepareFlowRequest $req) 创建预发起合同
+通过此接口指定：合同，签署人，填写控件信息，生成预创建合同链接，点击后跳转到web页面完成合同创建并发起
+可指定合同信息不可更改，签署人信息不可更改
+合同发起后，填写及签署流程与现有操作流程一致
+注意：目前仅支持模版发起
  * @method Models\ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlow(Models\ChannelCreateReleaseFlowRequest $req) 发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
 合同发起人必须在电子签已经进行实名。
  * @method Models\ChannelCreateSealPolicyResponse ChannelCreateSealPolicy(Models\ChannelCreateSealPolicyRequest $req) 将指定印章授权给第三方平台子客企业下的某些员工
@@ -78,9 +87,17 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 跳转小程序的几种方式：主要是设置不同的EndPoint
 1. 通过链接Url直接跳转到小程序，不需要返回
 设置EndPoint为WEIXINAPP，得到链接打开即可。（与短信提醒用户签署形式一样）。
+
 2. 通过链接Url打开H5引导页-->点击跳转到小程序-->签署完退出小程序-->回到H5引导页-->跳转到指定JumpUrl
 设置EndPoint为CHANNEL，指定JumpUrl，得到链接打开即可。
+
 3. 客户App直接跳转到小程序-->小程序签署完成-->返回App
+跳转到小程序的实现，参考官方文档
+https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html
+其中小程序的原始Id，请联系<对接技术人员>获取，或者查看小程序信息自助获取。
+使用CreateSignUrls，设置EndPoint为APP，得到path。
+
+4. 客户小程序直接跳到电子签小程序-->签署完成退出电子签小程序-->回到客户小程序
 跳转到小程序的实现，参考官方文档（分为全屏、半屏两种方式）
 全屏方式：
 （https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html）
@@ -88,8 +105,6 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 （https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html）
 其中小程序的原始Id，请联系<对接技术人员>获取，或者查看小程序信息自助获取。
 使用CreateSignUrls，设置EndPoint为APP，得到path。
-4. 客户小程序直接跳到电子签小程序-->签署完成退出电子签小程序-->回到客户小程序
-实现方式同App跳小程序。
  * @method Models\DescribeChannelFlowEvidenceReportResponse DescribeChannelFlowEvidenceReport(Models\DescribeChannelFlowEvidenceReportRequest $req) 查询出证报告，返回报告 URL。
  * @method Models\DescribeExtendedServiceAuthInfoResponse DescribeExtendedServiceAuthInfo(Models\DescribeExtendedServiceAuthInfoRequest $req) 查询企业扩展服务授权信息，企业经办人需要是企业超管或者法人
  * @method Models\DescribeFlowDetailInfoResponse DescribeFlowDetailInfo(Models\DescribeFlowDetailInfoRequest $req) 此接口（DescribeFlowDetailInfo）用于查询合同(签署流程)的详细信息。
@@ -113,6 +128,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\SyncProxyOrganizationOperatorsResponse SyncProxyOrganizationOperators(Models\SyncProxyOrganizationOperatorsRequest $req) 此接口（SyncProxyOrganizationOperators）用于同步 第三方平台子客企业经办人列表，主要是同步经办人的离职状态。子客Web控制台的组织架构管理，是依赖于第三方应用平台的，无法针对员工做新增/更新/离职等操作。
 若经办人信息有误，或者需要修改，也可以先将之前的经办人做离职操作，然后重新使用控制台链接CreateConsoleLoginUrl让经办人重新实名。
  * @method Models\UploadFilesResponse UploadFiles(Models\UploadFilesRequest $req) 此接口（UploadFiles）用于文件上传。
+其中上传的文件，图片类型(png/jpg/jpeg)大小限制为5M，其他大小限制为60M。
 调用时需要设置Domain, 正式环境为 file.ess.tencent.cn。
 代码示例：
 HttpProfile httpProfile = new HttpProfile();

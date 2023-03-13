@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制条数,默认10,最大100
  * @method integer getOffset() 获取请求偏移默认0
  * @method void setOffset(integer $Offset) 设置请求偏移默认0
- * @method array getFilters() 获取<li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
- * @method void setFilters(array $Filters) 设置<li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
+ * @method array getFilters() 获取<li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
+ * @method void setFilters(array $Filters) 设置<li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
  * @method string getOrder() 获取排序方式 [ASC:升序|DESC:降序]
  * @method void setOrder(string $Order) 设置排序方式 [ASC:升序|DESC:降序]
  * @method string getBy() 获取可选排序列 [ID]
@@ -51,7 +51,7 @@ class DescribeBaselineItemIgnoreListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array <li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
+     * @var array <li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
      */
     public $Filters;
 
@@ -69,7 +69,7 @@ class DescribeBaselineItemIgnoreListRequest extends AbstractModel
      * @param integer $RuleID 忽略规则ID
      * @param integer $Limit 限制条数,默认10,最大100
      * @param integer $Offset 请求偏移默认0
-     * @param array $Filters <li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
+     * @param array $Filters <li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
      * @param string $Order 排序方式 [ASC:升序|DESC:降序]
      * @param string $By 可选排序列 [ID]
      */

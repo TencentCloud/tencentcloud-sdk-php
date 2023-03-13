@@ -55,7 +55,9 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DescribeDDosAttackEventDetailResponse DescribeDDosAttackEventDetail(Models\DescribeDDosAttackEventDetailRequest $req) 查询DDos攻击事件详情
  * @method Models\DescribeDDosAttackSourceEventResponse DescribeDDosAttackSourceEvent(Models\DescribeDDosAttackSourceEventRequest $req) 查询DDos攻击源信息
  * @method Models\DescribeDDosAttackTopDataResponse DescribeDDosAttackTopData(Models\DescribeDDosAttackTopDataRequest $req) 查询DDos攻击Top数据
- * @method Models\DescribeDDosMajorAttackEventResponse DescribeDDosMajorAttackEvent(Models\DescribeDDosMajorAttackEventRequest $req) 查询DDos主攻击事件
+ * @method Models\DescribeDDosMajorAttackEventResponse DescribeDDosMajorAttackEvent(Models\DescribeDDosMajorAttackEventRequest $req) 此接口已经做不兼容变更，所以此版本的接口已经无法调用，故作下线处理
+
+查询DDos主攻击事件
  * @method Models\DescribeDefaultCertificatesResponse DescribeDefaultCertificates(Models\DescribeDefaultCertificatesRequest $req) 查询默认证书列表
  * @method Models\DescribeDnsDataResponse DescribeDnsData(Models\DescribeDnsDataRequest $req) 获取DNS请求数统计曲线
  * @method Models\DescribeDnsRecordsResponse DescribeDnsRecords(Models\DescribeDnsRecordsRequest $req) 查询 DNS 记录列表，支持搜索、分页、排序、过滤。
@@ -67,7 +69,9 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DescribeLoadBalancingDetailResponse DescribeLoadBalancingDetail(Models\DescribeLoadBalancingDetailRequest $req) 获取负载均衡详细信息
  * @method Models\DescribeOriginGroupResponse DescribeOriginGroup(Models\DescribeOriginGroupRequest $req) 获取源站组信息列表
  * @method Models\DescribeOriginGroupDetailResponse DescribeOriginGroupDetail(Models\DescribeOriginGroupDetailRequest $req) 获取源站组详细信息
- * @method Models\DescribeOverviewL7DataResponse DescribeOverviewL7Data(Models\DescribeOverviewL7DataRequest $req) 本接口（DescribeOverviewL7Data）用于查询七层监控类时序流量数据。
+ * @method Models\DescribeOverviewL7DataResponse DescribeOverviewL7Data(Models\DescribeOverviewL7DataRequest $req) 接口已经不兼容升级，故作下线处理
+
+本接口（DescribeOverviewL7Data）用于查询七层监控类时序流量数据。
  * @method Models\DescribePrefetchTasksResponse DescribePrefetchTasks(Models\DescribePrefetchTasksRequest $req) 查询预热任务状态
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) 查询清除缓存历史记录
  * @method Models\DescribeRulesResponse DescribeRules(Models\DescribeRulesRequest $req) 查询规则引擎规则。
@@ -78,7 +82,9 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DescribeSecurityPolicyManagedRulesIdResponse DescribeSecurityPolicyManagedRulesId(Models\DescribeSecurityPolicyManagedRulesIdRequest $req) 规则id查询门神规则详情
  * @method Models\DescribeSecurityPolicyRegionsResponse DescribeSecurityPolicyRegions(Models\DescribeSecurityPolicyRegionsRequest $req) 查询所有地域信息
  * @method Models\DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRules(Models\DescribeSecurityPortraitRulesRequest $req) 查询Bot用户画像规则
- * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) 四层时序流量数据查询
+ * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) 旧版本的接口已经不兼容，故作下线处理
+
+四层时序流量数据查询
  * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) 查询七层数据分析类时序流量数据
  * @method Models\DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(Models\DescribeTimingL7CacheDataRequest $req) 七层查询缓存分析时序类流量数据
  * @method Models\DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(Models\DescribeTopL7AnalysisDataRequest $req) 查询top类流量数据
@@ -86,7 +92,9 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DescribeWebManagedRulesAttackEventsResponse DescribeWebManagedRulesAttackEvents(Models\DescribeWebManagedRulesAttackEventsRequest $req) 查询Web托管攻击事件
  * @method Models\DescribeWebManagedRulesDataResponse DescribeWebManagedRulesData(Models\DescribeWebManagedRulesDataRequest $req) 查询waf攻击时序数据
  * @method Models\DescribeWebManagedRulesLogResponse DescribeWebManagedRulesLog(Models\DescribeWebManagedRulesLogRequest $req) 查询waf攻击日志
- * @method Models\DescribeWebManagedRulesTopDataResponse DescribeWebManagedRulesTopData(Models\DescribeWebManagedRulesTopDataRequest $req) 查询waf攻击top数据
+ * @method Models\DescribeWebManagedRulesTopDataResponse DescribeWebManagedRulesTopData(Models\DescribeWebManagedRulesTopDataRequest $req) 此版本的接口已经废弃
+
+查询waf攻击top数据
  * @method Models\DescribeWebProtectionAttackEventsResponse DescribeWebProtectionAttackEvents(Models\DescribeWebProtectionAttackEventsRequest $req) 查询web防护攻击事件
  * @method Models\DescribeWebProtectionDataResponse DescribeWebProtectionData(Models\DescribeWebProtectionDataRequest $req) 查询CC防护时序数据
  * @method Models\DescribeWebProtectionLogResponse DescribeWebProtectionLog(Models\DescribeWebProtectionLogRequest $req) 查询CC防护日志

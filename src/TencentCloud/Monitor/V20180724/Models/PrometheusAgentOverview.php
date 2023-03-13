@@ -50,6 +50,10 @@ abnormal = 异常
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedReason(string $FailedReason) 设置记录关联等操作的失败信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取agent名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置agent名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusAgentOverview extends AbstractModel
 {
@@ -101,6 +105,12 @@ abnormal = 异常
     public $FailedReason;
 
     /**
+     * @var string agent名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
+
+    /**
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群id
      * @param string $Status agent状态
@@ -115,6 +125,8 @@ abnormal = 异常
      * @param string $VpcId 集群所在VPC ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailedReason 记录关联等操作的失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name agent名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -165,6 +177,10 @@ abnormal = 异常
 
         if (array_key_exists("FailedReason",$param) and $param["FailedReason"] !== null) {
             $this->FailedReason = $param["FailedReason"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

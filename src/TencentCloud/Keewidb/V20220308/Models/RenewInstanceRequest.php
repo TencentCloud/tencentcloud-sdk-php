@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method integer getPeriod() 获取购买时长，单位：月。取值范围为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
- * @method void setPeriod(integer $Period) 设置购买时长，单位：月。取值范围为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+ * @method integer getPeriod() 获取购买时长。单位：月。取值为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。
+ * @method void setPeriod(integer $Period) 设置购买时长。单位：月。取值为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。
  */
 class RenewInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RenewInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 购买时长，单位：月。取值范围为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @var integer 购买时长。单位：月。取值为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。
      */
     public $Period;
 
     /**
      * @param string $InstanceId 实例 ID。
-     * @param integer $Period 购买时长，单位：月。取值范围为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @param integer $Period 购买时长。单位：月。取值为 [1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。
      */
     function __construct()
     {

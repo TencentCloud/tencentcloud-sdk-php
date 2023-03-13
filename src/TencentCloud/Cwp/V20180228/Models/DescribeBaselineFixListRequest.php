@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBaselineFixList请求参数结构体
  *
- * @method array getFilters() 获取<li>ItemName- string - 是否必填：否 - 项名称</i>
- * @method void setFilters(array $Filters) 设置<li>ItemName- string - 是否必填：否 - 项名称</i>
+ * @method array getFilters() 获取<li>ItemName- string - 是否必填：否 - 项名称</li>
+ * @method void setFilters(array $Filters) 设置<li>ItemName- string - 是否必填：否 - 项名称</li>
  * @method integer getLimit() 获取限制条数,默认10,最大100
  * @method void setLimit(integer $Limit) 设置限制条数,默认10,最大100
  * @method integer getOffset() 获取偏移量,默认0
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBaselineFixListRequest extends AbstractModel
 {
     /**
-     * @var array <li>ItemName- string - 是否必填：否 - 项名称</i>
+     * @var array <li>ItemName- string - 是否必填：否 - 项名称</li>
      */
     public $Filters;
 
@@ -59,7 +59,7 @@ class DescribeBaselineFixListRequest extends AbstractModel
     public $By;
 
     /**
-     * @param array $Filters <li>ItemName- string - 是否必填：否 - 项名称</i>
+     * @param array $Filters <li>ItemName- string - 是否必填：否 - 项名称</li>
      * @param integer $Limit 限制条数,默认10,最大100
      * @param integer $Offset 偏移量,默认0
      * @param string $Order 排序方式: [ASC:升序|DESC:降序]

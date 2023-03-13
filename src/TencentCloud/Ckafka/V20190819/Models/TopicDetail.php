@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置0:正常，1：已删除，2：删除中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicDetail extends AbstractModel
 {
@@ -137,6 +141,12 @@ class TopicDetail extends AbstractModel
     public $Status;
 
     /**
+     * @var array 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $TopicName 主题名称
      * @param string $TopicId 主题ID
      * @param integer $PartitionNum 分区数
@@ -155,6 +165,8 @@ class TopicDetail extends AbstractModel
      * @param TopicRetentionTimeConfigRsp $RetentionTimeConfig 消息保留时间配置(用于动态配置变更记录)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 0:正常，1：已删除，2：删除中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -226,6 +238,15 @@ class TopicDetail extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

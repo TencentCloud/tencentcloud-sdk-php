@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodMonitors(array $PodMonitors) 设置PodMonitor配置
  * @method array getRawJobs() 获取原生Job
  * @method void setRawJobs(array $RawJobs) 设置原生Job
+ * @method array getProbes() 获取Probes
+ * @method void setProbes(array $Probes) 设置Probes
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribePrometheusConfigResponse extends AbstractModel
     public $RawJobs;
 
     /**
+     * @var array Probes
+     */
+    public $Probes;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribePrometheusConfigResponse extends AbstractModel
      * @param array $ServiceMonitors ServiceMonitor配置
      * @param array $PodMonitors PodMonitor配置
      * @param array $RawJobs 原生Job
+     * @param array $Probes Probes
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -106,6 +114,15 @@ class DescribePrometheusConfigResponse extends AbstractModel
                 $obj = new PrometheusConfigItem();
                 $obj->deserialize($value);
                 array_push($this->RawJobs, $obj);
+            }
+        }
+
+        if (array_key_exists("Probes",$param) and $param["Probes"] !== null) {
+            $this->Probes = [];
+            foreach ($param["Probes"] as $key => $value){
+                $obj = new PrometheusConfigItem();
+                $obj->deserialize($value);
+                array_push($this->Probes, $obj);
             }
         }
 

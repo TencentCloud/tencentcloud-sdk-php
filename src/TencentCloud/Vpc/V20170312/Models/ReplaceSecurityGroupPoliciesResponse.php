@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lcic\V20220817\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSupervisor请求参数结构体
+ * ReplaceSecurityGroupPolicies返回参数结构体
  *
- * @method integer getSdkAppId() 获取应用ID。
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID。
- * @method array getUsers() 获取用户ID列表。
- * @method void setUsers(array $Users) 设置用户ID列表。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSupervisorRequest extends AbstractModel
+class ReplaceSecurityGroupPoliciesResponse extends AbstractModel
 {
     /**
-     * @var integer 应用ID。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $SdkAppId;
+    public $RequestId;
 
     /**
-     * @var array 用户ID列表。
-     */
-    public $Users;
-
-    /**
-     * @param integer $SdkAppId 应用ID。
-     * @param array $Users 用户ID列表。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class CreateSupervisorRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
-        }
-
-        if (array_key_exists("Users",$param) and $param["Users"] !== null) {
-            $this->Users = $param["Users"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

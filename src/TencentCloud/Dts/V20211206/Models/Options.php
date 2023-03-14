@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDdlOptions(array $DdlOptions) 设置DDL同步选项，具体描述要同步那些DDL
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method KafkaOption getKafkaOption() 获取kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKafkaOption(KafkaOption $KafkaOption) 设置kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Options extends AbstractModel
 {
@@ -94,6 +98,12 @@ class Options extends AbstractModel
     public $DdlOptions;
 
     /**
+     * @var KafkaOption kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KafkaOption;
+
+    /**
      * @param string $InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
@@ -107,6 +117,8 @@ class Options extends AbstractModel
      * @param ConflictHandleOption $ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DdlOptions DDL同步选项，具体描述要同步那些DDL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaOption $KafkaOption kafka同步选项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -154,6 +166,11 @@ class Options extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DdlOptions, $obj);
             }
+        }
+
+        if (array_key_exists("KafkaOption",$param) and $param["KafkaOption"] !== null) {
+            $this->KafkaOption = new KafkaOption();
+            $this->KafkaOption->deserialize($param["KafkaOption"]);
         }
     }
 }

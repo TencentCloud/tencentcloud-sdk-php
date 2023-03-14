@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneName() 获取站点名称。
  * @method void setZoneName(string $ZoneName) 设置站点名称。
+ * @method string getDomain() 获取验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取验证状态，取值有：
 <li> pending：验证中；</li>
 <li> finished：验证完成。</li>
@@ -43,6 +47,12 @@ class Identification extends AbstractModel
      * @var string 站点名称。
      */
     public $ZoneName;
+
+    /**
+     * @var string 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
 
     /**
      * @var string 验证状态，取值有：
@@ -69,6 +79,8 @@ class Identification extends AbstractModel
 
     /**
      * @param string $ZoneName 站点名称。
+     * @param string $Domain 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 验证状态，取值有：
 <li> pending：验证中；</li>
 <li> finished：验证完成。</li>
@@ -92,6 +104,10 @@ class Identification extends AbstractModel
         }
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

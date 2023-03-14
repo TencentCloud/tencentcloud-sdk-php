@@ -56,11 +56,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverMobile(string $ApproverMobile) 设置签署人手机号，saas企业签署人，个人签署人必传
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecipientId() 获取签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
-注意：模版发起时该字段必填
+ * @method string getRecipientId() 获取签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
+注意：模板发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecipientId(string $RecipientId) 设置签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
-注意：模版发起时该字段必填
+ * @method void setRecipientId(string $RecipientId) 设置签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
+注意：模板发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPreReadTime() 获取签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,8 +136,8 @@ class CommonFlowApprover extends AbstractModel
     public $ApproverMobile;
 
     /**
-     * @var string 签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
-注意：模版发起时该字段必填
+     * @var string 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
+注意：模板发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecipientId;
@@ -185,8 +185,8 @@ class CommonFlowApprover extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverMobile 签署人手机号，saas企业签署人，个人签署人必传
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecipientId 签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
-注意：模版发起时该字段必填
+     * @param string $RecipientId 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
+注意：模板发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PreReadTime 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
 注意：此字段可能返回 null，表示取不到有效值。

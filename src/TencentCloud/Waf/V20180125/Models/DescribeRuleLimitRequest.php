@@ -14,34 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IdentifyZone请求参数结构体
+ * DescribeRuleLimit请求参数结构体
  *
- * @method string getZoneName() 获取站点名称。
- * @method void setZoneName(string $ZoneName) 设置站点名称。
- * @method string getDomain() 获取站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
- * @method void setDomain(string $Domain) 设置站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
  */
-class IdentifyZoneRequest extends AbstractModel
+class DescribeRuleLimitRequest extends AbstractModel
 {
     /**
-     * @var string 站点名称。
-     */
-    public $ZoneName;
-
-    /**
-     * @var string 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
+     * @var string 域名
      */
     public $Domain;
 
     /**
-     * @param string $ZoneName 站点名称。
-     * @param string $Domain 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
+     * @param string $Domain 域名
      */
     function __construct()
     {
@@ -56,10 +46,6 @@ class IdentifyZoneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
-        }
-
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
         }

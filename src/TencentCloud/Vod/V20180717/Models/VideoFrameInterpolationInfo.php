@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置智能插帧控制开关，可选值：
 <li>ON：开启智能插帧；</li>
 <li>OFF：关闭智能插帧。</li>
- * @method integer getFps() 获取智能插帧帧率，帧率范围为 (0, 60]，仅当智能插帧控制开关为 ON 时有效。默认跟源文件帧率一致。
- * @method void setFps(integer $Fps) 设置智能插帧帧率，帧率范围为 (0, 60]，仅当智能插帧控制开关为 ON 时有效。默认跟源文件帧率一致。
+ * @method integer getFps() 获取智能插帧帧率，帧率范围为 (0, 100]，仅当智能插帧控制开关为 ON 时有效。默认跟源文件帧率一致。
+ * @method void setFps(integer $Fps) 设置智能插帧帧率，帧率范围为 (0, 100]，仅当智能插帧控制开关为 ON 时有效。默认跟源文件帧率一致。
  */
 class VideoFrameInterpolationInfo extends AbstractModel
 {
@@ -39,7 +39,7 @@ class VideoFrameInterpolationInfo extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer 智能插帧帧率，帧率范围为 (0, 60]，仅当智能插帧控制开关为 ON 时有效。默认跟源文件帧率一致。
+     * @var integer 智能插帧帧率，帧率范围为 (0, 100]，仅当智能插帧控制开关为 ON 时有效。默认跟源文件帧率一致。
      */
     public $Fps;
 
@@ -47,7 +47,7 @@ class VideoFrameInterpolationInfo extends AbstractModel
      * @param string $Switch 智能插帧控制开关，可选值：
 <li>ON：开启智能插帧；</li>
 <li>OFF：关闭智能插帧。</li>
-     * @param integer $Fps 智能插帧帧率，帧率范围为 (0, 60]，仅当智能插帧控制开关为 ON 时有效。默认跟源文件帧率一致。
+     * @param integer $Fps 智能插帧帧率，帧率范围为 (0, 100]，仅当智能插帧控制开关为 ON 时有效。默认跟源文件帧率一致。
      */
     function __construct()
     {

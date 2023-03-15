@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 <li> STANDARD_IA：低频存储。</li>
 <li> ARCHIVE：归档存储。</li>
 <li> DEEP_ARCHIVE：深度归档存储。</li>
+ * @method array getMediaTypes() 获取媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li>
+ * @method void setMediaTypes(array $MediaTypes) 设置媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li>
  * @method array getTrtcSdkAppIds() 获取TRTC 应用 ID 集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
  * @method void setTrtcSdkAppIds(array $TrtcSdkAppIds) 设置TRTC 应用 ID 集合。匹配集合中的任意元素。
@@ -310,6 +314,12 @@ class SearchMediaRequest extends AbstractModel
     public $StorageClasses;
 
     /**
+     * @var array 媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public $MediaTypes;
+
+    /**
      * @var array TRTC 应用 ID 集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      */
@@ -425,6 +435,8 @@ class SearchMediaRequest extends AbstractModel
 <li> STANDARD_IA：低频存储。</li>
 <li> ARCHIVE：归档存储。</li>
 <li> DEEP_ARCHIVE：深度归档存储。</li>
+     * @param array $MediaTypes 媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li>
      * @param array $TrtcSdkAppIds TRTC 应用 ID 集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      * @param array $TrtcRoomIds TRTC 房间 ID 集合。匹配集合中的任意元素。
@@ -535,6 +547,10 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {
             $this->StorageClasses = $param["StorageClasses"];
+        }
+
+        if (array_key_exists("MediaTypes",$param) and $param["MediaTypes"] !== null) {
+            $this->MediaTypes = $param["MediaTypes"];
         }
 
         if (array_key_exists("TrtcSdkAppIds",$param) and $param["TrtcSdkAppIds"] !== null) {

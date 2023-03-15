@@ -46,28 +46,28 @@ use TencentCloud\Common\AbstractModel;
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 
 默认值：open。
- * @method integer getWidth() 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+ * @method integer getWidth() 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 
 默认值：0。
- * @method void setWidth(integer $Width) 设置视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+ * @method void setWidth(integer $Width) 设置视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 
 默认值：0。
- * @method integer getHeight() 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+ * @method integer getHeight() 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 
 默认值：0。
- * @method void setHeight(integer $Height) 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+ * @method void setHeight(integer $Height) 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -121,7 +121,7 @@ class RebuildMediaTargetVideoStream extends AbstractModel
     public $ResolutionAdaptive;
 
     /**
-     * @var integer 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * @var integer 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -132,7 +132,7 @@ class RebuildMediaTargetVideoStream extends AbstractModel
     public $Width;
 
     /**
-     * @var integer 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * @var integer 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -171,14 +171,14 @@ class RebuildMediaTargetVideoStream extends AbstractModel
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 
 默认值：open。
-     * @param integer $Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * @param integer $Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 
 默认值：0。
-     * @param integer $Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * @param integer $Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>

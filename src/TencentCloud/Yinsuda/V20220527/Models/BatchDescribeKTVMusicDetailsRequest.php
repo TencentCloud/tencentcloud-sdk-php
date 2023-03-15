@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户标识。
  * @method array getMusicIds() 获取歌曲 Id 列表。
  * @method void setMusicIds(array $MusicIds) 设置歌曲 Id 列表。
+ * @method string getPlayScene() 获取播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+ * @method void setPlayScene(string $PlayScene) 设置播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
  */
 class BatchDescribeKTVMusicDetailsRequest extends AbstractModel
 {
@@ -45,9 +49,17 @@ class BatchDescribeKTVMusicDetailsRequest extends AbstractModel
     public $MusicIds;
 
     /**
+     * @var string 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public $PlayScene;
+
+    /**
      * @param string $AppName 应用名称。
      * @param string $UserId 用户标识。
      * @param array $MusicIds 歌曲 Id 列表。
+     * @param string $PlayScene 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class BatchDescribeKTVMusicDetailsRequest extends AbstractModel
 
         if (array_key_exists("MusicIds",$param) and $param["MusicIds"] !== null) {
             $this->MusicIds = $param["MusicIds"];
+        }
+
+        if (array_key_exists("PlayScene",$param) and $param["PlayScene"] !== null) {
+            $this->PlayScene = $param["PlayScene"];
         }
     }
 }

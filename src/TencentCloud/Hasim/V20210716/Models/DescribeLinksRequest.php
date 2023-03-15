@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLinkedState(integer $LinkedState) 设置设备在线状态 0 未激活 1 在线 2 离线
  * @method array getTagIDs() 获取标签ID 集合
  * @method void setTagIDs(array $TagIDs) 设置标签ID 集合
+ * @method integer getLimit() 获取翻页大小, 默认翻页大小为10，最大数量为500
+ * @method void setLimit(integer $Limit) 设置翻页大小, 默认翻页大小为10，最大数量为500
+ * @method integer getOffset() 获取翻页起始
+ * @method void setOffset(integer $Offset) 设置翻页起始
  */
 class DescribeLinksRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class DescribeLinksRequest extends AbstractModel
     public $TagIDs;
 
     /**
+     * @var integer 翻页大小, 默认翻页大小为10，最大数量为500
+     */
+    public $Limit;
+
+    /**
+     * @var integer 翻页起始
+     */
+    public $Offset;
+
+    /**
      * @param integer $LinkID 云兔卡ID
      * @param string $ICCID 运营商ICCID
      * @param string $IMEI 设备码
@@ -96,6 +110,8 @@ class DescribeLinksRequest extends AbstractModel
      * @param integer $TacticID 策略ID
      * @param integer $LinkedState 设备在线状态 0 未激活 1 在线 2 离线
      * @param array $TagIDs 标签ID 集合
+     * @param integer $Limit 翻页大小, 默认翻页大小为10，最大数量为500
+     * @param integer $Offset 翻页起始
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class DescribeLinksRequest extends AbstractModel
 
         if (array_key_exists("TagIDs",$param) and $param["TagIDs"] !== null) {
             $this->TagIDs = $param["TagIDs"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

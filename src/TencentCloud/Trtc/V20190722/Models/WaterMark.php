@@ -20,15 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 水印布局参数
  *
- * @method integer getWaterMarkType() 获取水印类型，0为图片（默认），1为文字（暂不支持）。
- * @method void setWaterMarkType(integer $WaterMarkType) 设置水印类型，0为图片（默认），1为文字（暂不支持）。
+ * @method integer getWaterMarkType() 获取水印类型，0为图片（默认），1为文字，2为时间戳。
+ * @method void setWaterMarkType(integer $WaterMarkType) 设置水印类型，0为图片（默认），1为文字，2为时间戳。
  * @method WaterMarkImage getWaterMarkImage() 获取水印为图片时的参数列表，水印为图片时校验必填。
  * @method void setWaterMarkImage(WaterMarkImage $WaterMarkImage) 设置水印为图片时的参数列表，水印为图片时校验必填。
+ * @method WaterMarkChar getWaterMarkChar() 获取水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaterMarkChar(WaterMarkChar $WaterMarkChar) 设置水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method WaterMarkTimestamp getWaterMarkTimestamp() 获取水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaterMarkTimestamp(WaterMarkTimestamp $WaterMarkTimestamp) 设置水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WaterMark extends AbstractModel
 {
     /**
-     * @var integer 水印类型，0为图片（默认），1为文字（暂不支持）。
+     * @var integer 水印类型，0为图片（默认），1为文字，2为时间戳。
      */
     public $WaterMarkType;
 
@@ -38,8 +46,24 @@ class WaterMark extends AbstractModel
     public $WaterMarkImage;
 
     /**
-     * @param integer $WaterMarkType 水印类型，0为图片（默认），1为文字（暂不支持）。
+     * @var WaterMarkChar 水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WaterMarkChar;
+
+    /**
+     * @var WaterMarkTimestamp 水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WaterMarkTimestamp;
+
+    /**
+     * @param integer $WaterMarkType 水印类型，0为图片（默认），1为文字，2为时间戳。
      * @param WaterMarkImage $WaterMarkImage 水印为图片时的参数列表，水印为图片时校验必填。
+     * @param WaterMarkChar $WaterMarkChar 水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaterMarkTimestamp $WaterMarkTimestamp 水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -61,6 +85,16 @@ class WaterMark extends AbstractModel
         if (array_key_exists("WaterMarkImage",$param) and $param["WaterMarkImage"] !== null) {
             $this->WaterMarkImage = new WaterMarkImage();
             $this->WaterMarkImage->deserialize($param["WaterMarkImage"]);
+        }
+
+        if (array_key_exists("WaterMarkChar",$param) and $param["WaterMarkChar"] !== null) {
+            $this->WaterMarkChar = new WaterMarkChar();
+            $this->WaterMarkChar->deserialize($param["WaterMarkChar"]);
+        }
+
+        if (array_key_exists("WaterMarkTimestamp",$param) and $param["WaterMarkTimestamp"] !== null) {
+            $this->WaterMarkTimestamp = new WaterMarkTimestamp();
+            $this->WaterMarkTimestamp->deserialize($param["WaterMarkTimestamp"]);
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 录制音频转码参数。
  *
- * @method integer getSampleRate() 获取音频采样率:
+ * @method integer getSampleRate() 获取音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率:
+ * @method void setSampleRate(integer $SampleRate) 设置音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。
- * @method integer getChannel() 获取声道数:
+ * @method integer getChannel() 获取声道数枚举值:
 1：单声道;
 2：双声道（默认）。
- * @method void setChannel(integer $Channel) 设置声道数:
+ * @method void setChannel(integer $Channel) 设置声道数枚举值:
 1：单声道;
 2：双声道（默认）。
  * @method integer getBitRate() 获取音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class AudioParams extends AbstractModel
 {
     /**
-     * @var integer 音频采样率:
+     * @var integer 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。
@@ -48,7 +48,7 @@ class AudioParams extends AbstractModel
     public $SampleRate;
 
     /**
-     * @var integer 声道数:
+     * @var integer 声道数枚举值:
 1：单声道;
 2：双声道（默认）。
      */
@@ -60,11 +60,11 @@ class AudioParams extends AbstractModel
     public $BitRate;
 
     /**
-     * @param integer $SampleRate 音频采样率:
+     * @param integer $SampleRate 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。
-     * @param integer $Channel 声道数:
+     * @param integer $Channel 声道数枚举值:
 1：单声道;
 2：双声道（默认）。
      * @param integer $BitRate 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。

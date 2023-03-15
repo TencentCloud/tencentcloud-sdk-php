@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
 新增扩容节点将加入到已选择的v_cluster分组中，提交同步VIP生效.
  * @method integer getUserSubnetIPNum() 获取子网剩余ip数量，用于判断当前实例子网剩余ip数是否能扩容。需要根据实际填写
  * @method void setUserSubnetIPNum(integer $UserSubnetIPNum) 设置子网剩余ip数量，用于判断当前实例子网剩余ip数是否能扩容。需要根据实际填写
- * @method string getScaleOutNodeIp() 获取同步元数据节点IP （uip）
- * @method void setScaleOutNodeIp(string $ScaleOutNodeIp) 设置同步元数据节点IP （uip）
- * @method array getReduceShardInfo() 获取缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
- * @method void setReduceShardInfo(array $ReduceShardInfo) 设置缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+ * @method string getScaleOutNodeIp() 获取同步元数据节点IP （uip），扩容的时候必填
+ * @method void setScaleOutNodeIp(string $ScaleOutNodeIp) 设置同步元数据节点IP （uip），扩容的时候必填
+ * @method array getReduceShardInfo() 获取缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
+ * @method void setReduceShardInfo(array $ReduceShardInfo) 设置缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -66,12 +66,12 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $UserSubnetIPNum;
 
     /**
-     * @var string 同步元数据节点IP （uip）
+     * @var string 同步元数据节点IP （uip），扩容的时候必填
      */
     public $ScaleOutNodeIp;
 
     /**
-     * @var array 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+     * @var array 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
      */
     public $ReduceShardInfo;
 
@@ -82,8 +82,8 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param string $ScaleOutCluster v_cluster分组，	
 新增扩容节点将加入到已选择的v_cluster分组中，提交同步VIP生效.
      * @param integer $UserSubnetIPNum 子网剩余ip数量，用于判断当前实例子网剩余ip数是否能扩容。需要根据实际填写
-     * @param string $ScaleOutNodeIp 同步元数据节点IP （uip）
-     * @param array $ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+     * @param string $ScaleOutNodeIp 同步元数据节点IP （uip），扩容的时候必填
+     * @param array $ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
      */
     function __construct()
     {

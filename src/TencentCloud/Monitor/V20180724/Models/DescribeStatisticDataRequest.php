@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() 获取所属模块，固定值，为monitor
  * @method void setModule(string $Module) 设置所属模块，固定值，为monitor
- * @method string getNamespace() 获取命名空间，目前只支持QCE/TKE
- * @method void setNamespace(string $Namespace) 设置命名空间，目前只支持QCE/TKE
+ * @method string getNamespace() 获取命名空间，目前只支持QCE/TKE2
+ * @method void setNamespace(string $Namespace) 设置命名空间，目前只支持QCE/TKE2
  * @method array getMetricNames() 获取指标名列表
  * @method void setMetricNames(array $MetricNames) 设置指标名列表
  * @method array getConditions() 获取维度条件，操作符支持=、in
@@ -55,7 +55,7 @@ class DescribeStatisticDataRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string 命名空间，目前只支持QCE/TKE
+     * @var string 命名空间，目前只支持QCE/TKE2
      */
     public $Namespace;
 
@@ -96,7 +96,7 @@ class DescribeStatisticDataRequest extends AbstractModel
 
     /**
      * @param string $Module 所属模块，固定值，为monitor
-     * @param string $Namespace 命名空间，目前只支持QCE/TKE
+     * @param string $Namespace 命名空间，目前只支持QCE/TKE2
      * @param array $MetricNames 指标名列表
      * @param array $Conditions 维度条件，操作符支持=、in
      * @param integer $Period 统计粒度。默认取值为300，单位为s；可选的值为60、300、3600、86400

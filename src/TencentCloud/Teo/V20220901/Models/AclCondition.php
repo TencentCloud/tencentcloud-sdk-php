@@ -32,7 +32,12 @@ use TencentCloud\Common\AbstractModel;
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
 <li>app_proto：应用层协议；</li>
-<li>sip_proto：网络层协议。</li>
+<li>sip_proto：网络层协议；</li>
+<li>uabot：UA 特征规则，仅bot自定义规则可用；</li>
+<li>idcid：IDC 规则，仅bot自定义规则可用；</li>
+<li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
+<li>portrait：画像分析，仅bot自定义规则可用；</li>
+<li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
  * @method void setMatchFrom(string $MatchFrom) 设置匹配字段，取值有：
 <li>host：请求域名；</li>
 <li>sip：客户端IP；</li>
@@ -45,7 +50,12 @@ use TencentCloud\Common\AbstractModel;
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
 <li>app_proto：应用层协议；</li>
-<li>sip_proto：网络层协议。</li>
+<li>sip_proto：网络层协议；</li>
+<li>uabot：UA 特征规则，仅bot自定义规则可用；</li>
+<li>idcid：IDC 规则，仅bot自定义规则可用；</li>
+<li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
+<li>portrait：画像分析，仅bot自定义规则可用；</li>
+<li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
  * @method string getMatchParam() 获取匹配字符串。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。
  * @method void setMatchParam(string $MatchParam) 设置匹配字符串。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。
  * @method string getOperator() 获取匹配关系，取值有：
@@ -100,7 +110,12 @@ class AclCondition extends AbstractModel
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
 <li>app_proto：应用层协议；</li>
-<li>sip_proto：网络层协议。</li>
+<li>sip_proto：网络层协议；</li>
+<li>uabot：UA 特征规则，仅bot自定义规则可用；</li>
+<li>idcid：IDC 规则，仅bot自定义规则可用；</li>
+<li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
+<li>portrait：画像分析，仅bot自定义规则可用；</li>
+<li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
      */
     public $MatchFrom;
 
@@ -148,7 +163,12 @@ class AclCondition extends AbstractModel
 <li>method：请求方式；</li>
 <li>header：请求头部；</li>
 <li>app_proto：应用层协议；</li>
-<li>sip_proto：网络层协议。</li>
+<li>sip_proto：网络层协议；</li>
+<li>uabot：UA 特征规则，仅bot自定义规则可用；</li>
+<li>idcid：IDC 规则，仅bot自定义规则可用；</li>
+<li>sipbot：搜索引擎规则，仅bot自定义规则可用；</li>
+<li>portrait：画像分析，仅bot自定义规则可用；</li>
+<li>header_seq：请求头顺序，仅bot自定义规则可用。</li>
      * @param string $MatchParam 匹配字符串。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。
      * @param string $Operator 匹配关系，取值有：
 <li>equal：字符串等于；</li>

@@ -136,6 +136,14 @@ use TencentCloud\Common\AbstractModel;
 3：静默活体
 4：一闪活体（动作+光线）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNFCRequestIds() 获取nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNFCRequestIds(array $NFCRequestIds) 设置nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNFCBillingCounts() 获取nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNFCBillingCounts(integer $NFCBillingCounts) 设置nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoText extends AbstractModel
 {
@@ -294,6 +302,18 @@ class DetectInfoText extends AbstractModel
     public $LivenessMode;
 
     /**
+     * @var array nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NFCRequestIds;
+
+    /**
+     * @var integer nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NFCBillingCounts;
+
+    /**
      * @param integer $ErrCode 本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
@@ -351,6 +371,10 @@ class DetectInfoText extends AbstractModel
 2：动作活体
 3：静默活体
 4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NFCRequestIds nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NFCBillingCounts nfc重复计费计数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -465,6 +489,14 @@ class DetectInfoText extends AbstractModel
 
         if (array_key_exists("LivenessMode",$param) and $param["LivenessMode"] !== null) {
             $this->LivenessMode = $param["LivenessMode"];
+        }
+
+        if (array_key_exists("NFCRequestIds",$param) and $param["NFCRequestIds"] !== null) {
+            $this->NFCRequestIds = $param["NFCRequestIds"];
+        }
+
+        if (array_key_exists("NFCBillingCounts",$param) and $param["NFCBillingCounts"] !== null) {
+            $this->NFCBillingCounts = $param["NFCBillingCounts"];
         }
     }
 }

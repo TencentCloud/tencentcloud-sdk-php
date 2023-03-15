@@ -18,26 +18,21 @@ namespace TencentCloud\Wav\V20210129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryClueInfoList请求参数结构体
+ * QueryCustomerProfileList请求参数结构体
  *
- * @method string getCursor() 获取用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
- * @method void setCursor(string $Cursor) 设置用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
- * @method integer getLimit() 获取返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
- * @method void setLimit(integer $Limit) 设置返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
+ * @method integer getLimit() 获取分页，预期请求的数据量，取值范围 1 ~ 1000
+ * @method void setLimit(integer $Limit) 设置分页，预期请求的数据量，取值范围 1 ~ 1000
  * @method integer getBeginTime() 获取查询开始时间， 单位秒
  * @method void setBeginTime(integer $BeginTime) 设置查询开始时间， 单位秒
  * @method integer getEndTime() 获取查询结束时间， 单位秒
  * @method void setEndTime(integer $EndTime) 设置查询结束时间， 单位秒
+ * @method string getCursor() 获取用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
+ * @method void setCursor(string $Cursor) 设置用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
  */
-class QueryClueInfoListRequest extends AbstractModel
+class QueryCustomerProfileListRequest extends AbstractModel
 {
     /**
-     * @var string 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
-     */
-    public $Cursor;
-
-    /**
-     * @var integer 返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
+     * @var integer 分页，预期请求的数据量，取值范围 1 ~ 1000
      */
     public $Limit;
 
@@ -52,10 +47,15 @@ class QueryClueInfoListRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $Cursor 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
-     * @param integer $Limit 返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
+     * @var string 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
+     */
+    public $Cursor;
+
+    /**
+     * @param integer $Limit 分页，预期请求的数据量，取值范围 1 ~ 1000
      * @param integer $BeginTime 查询开始时间， 单位秒
      * @param integer $EndTime 查询结束时间， 单位秒
+     * @param string $Cursor 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
      */
     function __construct()
     {
@@ -70,10 +70,6 @@ class QueryClueInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cursor",$param) and $param["Cursor"] !== null) {
-            $this->Cursor = $param["Cursor"];
-        }
-
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }
@@ -84,6 +80,10 @@ class QueryClueInfoListRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Cursor",$param) and $param["Cursor"] !== null) {
+            $this->Cursor = $param["Cursor"];
         }
     }
 }

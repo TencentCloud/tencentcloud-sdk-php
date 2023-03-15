@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) 设置Bot智能分析。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBotUserRules() 获取Bot自定义规则。如果为null，默认使用历史配置。
+ * @method void setBotUserRules(array $BotUserRules) 设置Bot自定义规则。如果为null，默认使用历史配置。
+ * @method array getCustomizes() 获取Bot托管定制策略，入参可不填，仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomizes(array $Customizes) 设置Bot托管定制策略，入参可不填，仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotConfig extends AbstractModel
 {
@@ -61,12 +67,26 @@ class BotConfig extends AbstractModel
     public $IntelligenceRule;
 
     /**
+     * @var array Bot自定义规则。如果为null，默认使用历史配置。
+     */
+    public $BotUserRules;
+
+    /**
+     * @var array Bot托管定制策略，入参可不填，仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Customizes;
+
+    /**
      * @param string $Switch bot开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param BotManagedRule $BotManagedRule 通用详细基础规则。如果为null，默认使用历史配置。
      * @param BotPortraitRule $BotPortraitRule 用户画像规则。如果为null，默认使用历史配置。
      * @param IntelligenceRule $IntelligenceRule Bot智能分析。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BotUserRules Bot自定义规则。如果为null，默认使用历史配置。
+     * @param array $Customizes Bot托管定制策略，入参可不填，仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -99,6 +119,24 @@ class BotConfig extends AbstractModel
         if (array_key_exists("IntelligenceRule",$param) and $param["IntelligenceRule"] !== null) {
             $this->IntelligenceRule = new IntelligenceRule();
             $this->IntelligenceRule->deserialize($param["IntelligenceRule"]);
+        }
+
+        if (array_key_exists("BotUserRules",$param) and $param["BotUserRules"] !== null) {
+            $this->BotUserRules = [];
+            foreach ($param["BotUserRules"] as $key => $value){
+                $obj = new BotUserRule();
+                $obj->deserialize($value);
+                array_push($this->BotUserRules, $obj);
+            }
+        }
+
+        if (array_key_exists("Customizes",$param) and $param["Customizes"] !== null) {
+            $this->Customizes = [];
+            foreach ($param["Customizes"] as $key => $value){
+                $obj = new BotUserRule();
+                $obj->deserialize($value);
+                array_push($this->Customizes, $obj);
+            }
         }
     }
 }

@@ -146,6 +146,54 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosMoveFactor(integer $CosMoveFactor) 设置冷热分层系数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKind() 获取external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKind(string $Kind) 设置external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsElastic() 获取是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsElastic(boolean $IsElastic) 设置是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceStateInfo getInstanceStateInfo() 获取集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceStateInfo(InstanceStateInfo $InstanceStateInfo) 设置集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHAZk() 获取ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHAZk(boolean $HAZk) 设置ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMountDiskType() 获取挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMountDiskType(integer $MountDiskType) 设置挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCHProxyVip() 获取无
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCHProxyVip(string $CHProxyVip) 设置无
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCosBucketName() 获取cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCosBucketName(string $CosBucketName) 设置cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getCanAttachCbs() 获取是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCanAttachCbs(boolean $CanAttachCbs) 设置是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getCanAttachCbsLvm() 获取是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCanAttachCbsLvm(boolean $CanAttachCbsLvm) 设置是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getCanAttachCos() 获取是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCanAttachCos(boolean $CanAttachCos) 设置是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getComponents() 获取服务信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComponents(array $Components) 设置服务信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpgradeVersions() 获取可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpgradeVersions(string $UpgradeVersions) 设置可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -333,6 +381,78 @@ Modify 集群变更中；
     public $CosMoveFactor;
 
     /**
+     * @var string external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Kind;
+
+    /**
+     * @var boolean 是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsElastic;
+
+    /**
+     * @var InstanceStateInfo 集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceStateInfo;
+
+    /**
+     * @var boolean ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HAZk;
+
+    /**
+     * @var integer 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MountDiskType;
+
+    /**
+     * @var string 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CHProxyVip;
+
+    /**
+     * @var string cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CosBucketName;
+
+    /**
+     * @var boolean 是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CanAttachCbs;
+
+    /**
+     * @var boolean 是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CanAttachCbsLvm;
+
+    /**
+     * @var boolean 是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CanAttachCos;
+
+    /**
+     * @var array 服务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Components;
+
+    /**
+     * @var string 可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpgradeVersions;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -395,6 +515,30 @@ Modify 集群变更中；
      * @param string $Eip 弹性网卡地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CosMoveFactor 冷热分层系数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Kind external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsElastic 是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceStateInfo $InstanceStateInfo 集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HAZk ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MountDiskType 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CHProxyVip 无
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CosBucketName cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $CanAttachCbs 是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $CanAttachCbsLvm 是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $CanAttachCos 是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Components 服务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpgradeVersions 可升级的内核版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -535,6 +679,60 @@ Modify 集群变更中；
 
         if (array_key_exists("CosMoveFactor",$param) and $param["CosMoveFactor"] !== null) {
             $this->CosMoveFactor = $param["CosMoveFactor"];
+        }
+
+        if (array_key_exists("Kind",$param) and $param["Kind"] !== null) {
+            $this->Kind = $param["Kind"];
+        }
+
+        if (array_key_exists("IsElastic",$param) and $param["IsElastic"] !== null) {
+            $this->IsElastic = $param["IsElastic"];
+        }
+
+        if (array_key_exists("InstanceStateInfo",$param) and $param["InstanceStateInfo"] !== null) {
+            $this->InstanceStateInfo = new InstanceStateInfo();
+            $this->InstanceStateInfo->deserialize($param["InstanceStateInfo"]);
+        }
+
+        if (array_key_exists("HAZk",$param) and $param["HAZk"] !== null) {
+            $this->HAZk = $param["HAZk"];
+        }
+
+        if (array_key_exists("MountDiskType",$param) and $param["MountDiskType"] !== null) {
+            $this->MountDiskType = $param["MountDiskType"];
+        }
+
+        if (array_key_exists("CHProxyVip",$param) and $param["CHProxyVip"] !== null) {
+            $this->CHProxyVip = $param["CHProxyVip"];
+        }
+
+        if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
+            $this->CosBucketName = $param["CosBucketName"];
+        }
+
+        if (array_key_exists("CanAttachCbs",$param) and $param["CanAttachCbs"] !== null) {
+            $this->CanAttachCbs = $param["CanAttachCbs"];
+        }
+
+        if (array_key_exists("CanAttachCbsLvm",$param) and $param["CanAttachCbsLvm"] !== null) {
+            $this->CanAttachCbsLvm = $param["CanAttachCbsLvm"];
+        }
+
+        if (array_key_exists("CanAttachCos",$param) and $param["CanAttachCos"] !== null) {
+            $this->CanAttachCos = $param["CanAttachCos"];
+        }
+
+        if (array_key_exists("Components",$param) and $param["Components"] !== null) {
+            $this->Components = [];
+            foreach ($param["Components"] as $key => $value){
+                $obj = new ServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->Components, $obj);
+            }
+        }
+
+        if (array_key_exists("UpgradeVersions",$param) and $param["UpgradeVersions"] !== null) {
+            $this->UpgradeVersions = $param["UpgradeVersions"];
         }
     }
 }

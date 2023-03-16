@@ -132,6 +132,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhereFlag(boolean $WhereFlag) 设置是否where参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTemplateSql() 获取模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateSql(string $TemplateSql) 设置模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubQualityDim() 获取模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubQualityDim(integer $SubQualityDim) 设置模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTargetObjectType() 获取规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetObjectType(integer $TargetObjectType) 设置规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTargetObjectDataType() 获取规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetObjectDataType(integer $TargetObjectDataType) 设置规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetObjectDataTypeName() 获取目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetObjectDataTypeName(string $TargetObjectDataTypeName) 设置目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetObjectValue() 获取目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetObjectValue(string $TargetObjectValue) 设置目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -304,6 +328,42 @@ class Rule extends AbstractModel
     public $WhereFlag;
 
     /**
+     * @var string 模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateSql;
+
+    /**
+     * @var integer 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubQualityDim;
+
+    /**
+     * @var integer 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetObjectType;
+
+    /**
+     * @var integer 规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetObjectDataType;
+
+    /**
+     * @var string 目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetObjectDataTypeName;
+
+    /**
+     * @var string 目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetObjectValue;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -359,6 +419,18 @@ class Rule extends AbstractModel
      * @param boolean $MultiSourceFlag 是否关联多表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $WhereFlag 是否where参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TemplateSql 模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubQualityDim 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TargetObjectType 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TargetObjectDataType 规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetObjectDataTypeName 目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetObjectValue 目标字段名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -486,6 +558,30 @@ class Rule extends AbstractModel
 
         if (array_key_exists("WhereFlag",$param) and $param["WhereFlag"] !== null) {
             $this->WhereFlag = $param["WhereFlag"];
+        }
+
+        if (array_key_exists("TemplateSql",$param) and $param["TemplateSql"] !== null) {
+            $this->TemplateSql = $param["TemplateSql"];
+        }
+
+        if (array_key_exists("SubQualityDim",$param) and $param["SubQualityDim"] !== null) {
+            $this->SubQualityDim = $param["SubQualityDim"];
+        }
+
+        if (array_key_exists("TargetObjectType",$param) and $param["TargetObjectType"] !== null) {
+            $this->TargetObjectType = $param["TargetObjectType"];
+        }
+
+        if (array_key_exists("TargetObjectDataType",$param) and $param["TargetObjectDataType"] !== null) {
+            $this->TargetObjectDataType = $param["TargetObjectDataType"];
+        }
+
+        if (array_key_exists("TargetObjectDataTypeName",$param) and $param["TargetObjectDataTypeName"] !== null) {
+            $this->TargetObjectDataTypeName = $param["TargetObjectDataTypeName"];
+        }
+
+        if (array_key_exists("TargetObjectValue",$param) and $param["TargetObjectValue"] !== null) {
+            $this->TargetObjectValue = $param["TargetObjectValue"];
         }
     }
 }

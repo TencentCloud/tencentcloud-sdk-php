@@ -36,16 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayerVersion(integer $LayerVersion) 设置版本号
  * @method string getLayerName() 获取层名称
  * @method void setLayerName(string $LayerName) 设置层名称
- * @method string getStatus() 获取层的具体版本当前状态，可能取值：
-Active 正常
-Publishing  发布中
-PublishFailed  发布失败
-Deleted 已删除
- * @method void setStatus(string $Status) 设置层的具体版本当前状态，可能取值：
-Active 正常
-Publishing  发布中
-PublishFailed  发布失败
-Deleted 已删除
+ * @method string getStatus() 获取层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+ * @method void setStatus(string $Status) 设置层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -92,11 +84,7 @@ class GetLayerVersionResponse extends AbstractModel
     public $LayerName;
 
     /**
-     * @var string 层的具体版本当前状态，可能取值：
-Active 正常
-Publishing  发布中
-PublishFailed  发布失败
-Deleted 已删除
+     * @var string 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
      */
     public $Status;
 
@@ -114,11 +102,7 @@ Deleted 已删除
      * @param string $LicenseInfo 许可证信息
      * @param integer $LayerVersion 版本号
      * @param string $LayerName 层名称
-     * @param string $Status 层的具体版本当前状态，可能取值：
-Active 正常
-Publishing  发布中
-PublishFailed  发布失败
-Deleted 已删除
+     * @param string $Status 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

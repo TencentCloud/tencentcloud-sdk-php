@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMemberAuthIdentities返回参数结构体
  *
- * @method array getItems() 获取列表。
+ * @method array getItems() 获取授权身份列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(array $Items) 设置列表。
+ * @method void setItems(array $Items) 设置授权身份列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取总数目。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractModel
 {
     /**
-     * @var array 列表。
+     * @var array 授权身份列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
@@ -51,7 +51,7 @@ class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Items 列表。
+     * @param array $Items 授权身份列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 总数目。
 注意：此字段可能返回 null，表示取不到有效值。

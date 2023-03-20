@@ -246,6 +246,14 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 4: 异常行为
 5: 威胁情报
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileAccessTime() 获取文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileAccessTime(string $FileAccessTime) 设置文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileModifyTime() 获取文件修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileModifyTime(string $FileModifyTime) 设置文件修改时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -553,6 +561,18 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     public $CheckPlatform;
 
     /**
+     * @var string 文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileAccessTime;
+
+    /**
+     * @var string 文件修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileModifyTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -670,6 +690,10 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 3: binaryAi
 4: 异常行为
 5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileAccessTime 文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileModifyTime 文件修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -872,6 +896,14 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
         if (array_key_exists("CheckPlatform",$param) and $param["CheckPlatform"] !== null) {
             $this->CheckPlatform = $param["CheckPlatform"];
+        }
+
+        if (array_key_exists("FileAccessTime",$param) and $param["FileAccessTime"] !== null) {
+            $this->FileAccessTime = $param["FileAccessTime"];
+        }
+
+        if (array_key_exists("FileModifyTime",$param) and $param["FileModifyTime"] !== null) {
+            $this->FileModifyTime = $param["FileModifyTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

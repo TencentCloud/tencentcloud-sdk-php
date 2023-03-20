@@ -40,6 +40,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanIds(array $ScanIds) 设置自选扫描范围的容器id或者主机id 根据ScanRangeType决定
  * @method array getScanPath() 获取扫描路径
  * @method void setScanPath(array $ScanPath) 设置扫描路径
+ * @method string getScanPathMode() 获取扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+ * @method void setScanPathMode(string $ScanPathMode) 设置扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
  */
 class ModifyVirusScanSettingRequest extends AbstractModel
 {
@@ -94,6 +103,15 @@ class ModifyVirusScanSettingRequest extends AbstractModel
     public $ScanPath;
 
     /**
+     * @var string 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     */
+    public $ScanPathMode;
+
+    /**
      * @param boolean $EnableScan 是否开启定期扫描
      * @param integer $Cycle 检测周期每隔多少天(1|3|7)
      * @param string $BeginScanAt 扫描开始时间
@@ -104,6 +122,10 @@ class ModifyVirusScanSettingRequest extends AbstractModel
      * @param boolean $ScanRangeAll true 全选，false 自选
      * @param array $ScanIds 自选扫描范围的容器id或者主机id 根据ScanRangeType决定
      * @param array $ScanPath 扫描路径
+     * @param string $ScanPathMode 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
      */
     function __construct()
     {
@@ -156,6 +178,10 @@ class ModifyVirusScanSettingRequest extends AbstractModel
 
         if (array_key_exists("ScanPath",$param) and $param["ScanPath"] !== null) {
             $this->ScanPath = $param["ScanPath"];
+        }
+
+        if (array_key_exists("ScanPathMode",$param) and $param["ScanPathMode"] !== null) {
+            $this->ScanPathMode = $param["ScanPathMode"];
         }
     }
 }

@@ -28,6 +28,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanPathType(integer $ScanPathType) 设置当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
  * @method array getScanPath() 获取自选排除或扫描的地址
  * @method void setScanPath(array $ScanPath) 设置自选排除或扫描的地址
+ * @method string getScanPathMode() 获取扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+ * @method void setScanPathMode(string $ScanPathMode) 设置扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
  */
 class ModifyVirusMonitorSettingRequest extends AbstractModel
 {
@@ -52,10 +61,23 @@ class ModifyVirusMonitorSettingRequest extends AbstractModel
     public $ScanPath;
 
     /**
+     * @var string 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     */
+    public $ScanPathMode;
+
+    /**
      * @param boolean $EnableScan 是否开启定期扫描
      * @param boolean $ScanPathAll 扫描全部路径
      * @param integer $ScanPathType 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
      * @param array $ScanPath 自选排除或扫描的地址
+     * @param string $ScanPathMode 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
      */
     function __construct()
     {
@@ -84,6 +106,10 @@ class ModifyVirusMonitorSettingRequest extends AbstractModel
 
         if (array_key_exists("ScanPath",$param) and $param["ScanPath"] !== null) {
             $this->ScanPath = $param["ScanPath"];
+        }
+
+        if (array_key_exists("ScanPathMode",$param) and $param["ScanPathMode"] !== null) {
+            $this->ScanPathMode = $param["ScanPathMode"];
         }
     }
 }

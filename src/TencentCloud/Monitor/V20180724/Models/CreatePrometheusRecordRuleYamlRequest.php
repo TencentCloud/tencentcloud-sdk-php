@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method string getContent() 获取yaml的内容
  * @method void setContent(string $Content) 设置yaml的内容
+ * @method string getName() 获取规则名称
+ * @method void setName(string $Name) 设置规则名称
  */
 class CreatePrometheusRecordRuleYamlRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreatePrometheusRecordRuleYamlRequest extends AbstractModel
     public $Content;
 
     /**
+     * @var string 规则名称
+     */
+    public $Name;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $Content yaml的内容
+     * @param string $Name 规则名称
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreatePrometheusRecordRuleYamlRequest extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

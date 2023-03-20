@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityId(integer $IdentityId) 设置身份ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdentityRoleName() 获取身份角色名。
+ * @method string getIdentityRoleName() 获取身份的角色名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentityRoleName(string $IdentityRoleName) 设置身份角色名。
+ * @method void setIdentityRoleName(string $IdentityRoleName) 设置身份的角色名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdentityRoleAliasName() 获取身份角色别名。
+ * @method string getIdentityRoleAliasName() 获取身份的角色别名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) 设置身份角色别名。
+ * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) 设置身份的角色别名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取描述
+ * @method string getDescription() 获取描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述
+ * @method void setDescription(string $Description) 设置描述。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -43,6 +43,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpdateTime() 获取更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIdentityType() 获取身份类型。取值： 1-预设  2-自定义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIdentityType(integer $IdentityType) 设置身份类型。取值： 1-预设  2-自定义
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMemberAuthIdentity extends AbstractModel
@@ -54,19 +58,19 @@ class OrgMemberAuthIdentity extends AbstractModel
     public $IdentityId;
 
     /**
-     * @var string 身份角色名。
+     * @var string 身份的角色名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityRoleName;
 
     /**
-     * @var string 身份角色别名。
+     * @var string 身份的角色别名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityRoleAliasName;
 
     /**
-     * @var string 描述
+     * @var string 描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
@@ -84,17 +88,25 @@ class OrgMemberAuthIdentity extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer 身份类型。取值： 1-预设  2-自定义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IdentityType;
+
+    /**
      * @param integer $IdentityId 身份ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdentityRoleName 身份角色名。
+     * @param string $IdentityRoleName 身份的角色名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdentityRoleAliasName 身份角色别名。
+     * @param string $IdentityRoleAliasName 身份的角色别名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 描述
+     * @param string $Description 描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IdentityType 身份类型。取值： 1-预设  2-自定义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class OrgMemberAuthIdentity extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("IdentityType",$param) and $param["IdentityType"] !== null) {
+            $this->IdentityType = $param["IdentityType"];
         }
     }
 }

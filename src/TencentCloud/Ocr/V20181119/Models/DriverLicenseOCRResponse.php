@@ -36,8 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClass(string $Class) 设置准驾车型
  * @method string getStartDate() 获取有效期开始时间（YYYY-MM-DD）
  * @method void setStartDate(string $StartDate) 设置有效期开始时间（YYYY-MM-DD）
- * @method string getEndDate() 获取有效期截止时间（YYYY-MM-DD）
- * @method void setEndDate(string $EndDate) 设置有效期截止时间（YYYY-MM-DD）
+ * @method string getEndDate() 获取有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年）
+ * @method void setEndDate(string $EndDate) 设置有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年）
  * @method string getCardCode() 获取证号
  * @method void setCardCode(string $CardCode) 设置证号
  * @method string getArchivesCode() 获取档案编号
@@ -116,7 +118,8 @@ class DriverLicenseOCRResponse extends AbstractModel
     public $StartDate;
 
     /**
-     * @var string 有效期截止时间（YYYY-MM-DD）
+     * @var string 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年）
      */
     public $EndDate;
 
@@ -182,7 +185,8 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
      * @param string $DateOfFirstIssue 初次领证日期（YYYY-MM-DD）
      * @param string $Class 准驾车型
      * @param string $StartDate 有效期开始时间（YYYY-MM-DD）
-     * @param string $EndDate 有效期截止时间（YYYY-MM-DD）
+     * @param string $EndDate 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年）
      * @param string $CardCode 证号
      * @param string $ArchivesCode 档案编号
      * @param string $Record 记录

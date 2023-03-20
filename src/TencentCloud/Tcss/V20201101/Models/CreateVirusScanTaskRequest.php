@@ -34,6 +34,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanIds(array $ScanIds) 设置自选扫描范围的容器id或者主机id 根据ScanRangeType决定
  * @method array getScanPath() 获取自选排除或扫描的地址
  * @method void setScanPath(array $ScanPath) 设置自选排除或扫描的地址
+ * @method string getScanPathMode() 获取扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+ * @method void setScanPathMode(string $ScanPathMode) 设置扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
  */
 class CreateVirusScanTaskRequest extends AbstractModel
 {
@@ -73,6 +82,15 @@ class CreateVirusScanTaskRequest extends AbstractModel
     public $ScanPath;
 
     /**
+     * @var string 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     */
+    public $ScanPathMode;
+
+    /**
      * @param boolean $ScanPathAll 是否扫描所有路径
      * @param integer $ScanRangeType 扫描范围0容器1主机节点
      * @param boolean $ScanRangeAll true 全选，false 自选
@@ -80,6 +98,10 @@ class CreateVirusScanTaskRequest extends AbstractModel
      * @param integer $ScanPathType 当ScanPathAll为false生效 0扫描以下路径 1、扫描除以下路径
      * @param array $ScanIds 自选扫描范围的容器id或者主机id 根据ScanRangeType决定
      * @param array $ScanPath 自选排除或扫描的地址
+     * @param string $ScanPathMode 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
      */
     function __construct()
     {
@@ -120,6 +142,10 @@ class CreateVirusScanTaskRequest extends AbstractModel
 
         if (array_key_exists("ScanPath",$param) and $param["ScanPath"] !== null) {
             $this->ScanPath = $param["ScanPath"];
+        }
+
+        if (array_key_exists("ScanPathMode",$param) and $param["ScanPathMode"] !== null) {
+            $this->ScanPathMode = $param["ScanPathMode"];
         }
     }
 }

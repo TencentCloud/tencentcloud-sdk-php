@@ -60,6 +60,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapacity(integer $Capacity) 设置文件系统总容量
  * @method array getTags() 获取文件系统标签列表
  * @method void setTags(array $Tags) 设置文件系统标签列表
+ * @method string getTieringState() 获取文件系统声明周期管理状态
+ * @method void setTieringState(string $TieringState) 设置文件系统声明周期管理状态
+ * @method TieringDetailInfo getTieringDetail() 获取分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTieringDetail(TieringDetailInfo $TieringDetail) 设置分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -164,6 +170,17 @@ class FileSystemInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 文件系统声明周期管理状态
+     */
+    public $TieringState;
+
+    /**
+     * @var TieringDetailInfo 分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TieringDetail;
+
+    /**
      * @param string $CreationTime 创建时间
      * @param string $CreationToken 用户自定义名称
      * @param string $FileSystemId 文件系统 ID
@@ -184,6 +201,9 @@ class FileSystemInfo extends AbstractModel
      * @param float $BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
      * @param integer $Capacity 文件系统总容量
      * @param array $Tags 文件系统标签列表
+     * @param string $TieringState 文件系统声明周期管理状态
+     * @param TieringDetailInfo $TieringDetail 分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -282,6 +302,15 @@ class FileSystemInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("TieringState",$param) and $param["TieringState"] !== null) {
+            $this->TieringState = $param["TieringState"];
+        }
+
+        if (array_key_exists("TieringDetail",$param) and $param["TieringDetail"] !== null) {
+            $this->TieringDetail = new TieringDetailInfo();
+            $this->TieringDetail->deserialize($param["TieringDetail"]);
         }
     }
 }

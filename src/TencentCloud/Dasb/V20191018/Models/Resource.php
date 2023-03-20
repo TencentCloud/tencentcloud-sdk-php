@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageBandwidth(integer $PackageBandwidth) 设置带宽扩展包个数(4M)
  * @method integer getPackageNode() 获取授权点数扩展包个数(50点)
  * @method void setPackageNode(integer $PackageNode) 设置授权点数扩展包个数(50点)
+ * @method string getLogDeliveryArgs() 获取日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogDeliveryArgs(string $LogDeliveryArgs) 设置日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
@@ -220,6 +224,12 @@ class Resource extends AbstractModel
     public $PackageNode;
 
     /**
+     * @var string 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogDeliveryArgs;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -248,6 +258,8 @@ class Resource extends AbstractModel
      * @param integer $ExtendPoints 扩展点数
      * @param integer $PackageBandwidth 带宽扩展包个数(4M)
      * @param integer $PackageNode 授权点数扩展包个数(50点)
+     * @param string $LogDeliveryArgs 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -372,6 +384,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("PackageNode",$param) and $param["PackageNode"] !== null) {
             $this->PackageNode = $param["PackageNode"];
+        }
+
+        if (array_key_exists("LogDeliveryArgs",$param) and $param["LogDeliveryArgs"] !== null) {
+            $this->LogDeliveryArgs = $param["LogDeliveryArgs"];
         }
     }
 }

@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssl\V20191205\Models;
+namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UploadCertificate返回参数结构体
+ * DescribeBackupFiles返回参数结构体
  *
- * @method string getCertificateId() 获取证书 ID。
- * @method void setCertificateId(string $CertificateId) 设置证书 ID。
- * @method string getRepeatCertId() 获取重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRepeatCertId(string $RepeatCertId) 设置重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFiles() 获取备份文件列表
+ * @method void setFiles(array $Files) 设置备份文件列表
+ * @method integer getTotalCount() 获取总条目数
+ * @method void setTotalCount(integer $TotalCount) 设置总条目数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class UploadCertificateResponse extends AbstractModel
+class DescribeBackupFilesResponse extends AbstractModel
 {
     /**
-     * @var string 证书 ID。
+     * @var array 备份文件列表
      */
-    public $CertificateId;
+    public $Files;
 
     /**
-     * @var string 重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 总条目数
      */
-    public $RepeatCertId;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +45,8 @@ class UploadCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CertificateId 证书 ID。
-     * @param string $RepeatCertId 重复证书的ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Files 备份文件列表
+     * @param integer $TotalCount 总条目数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +62,17 @@ class UploadCertificateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
+        if (array_key_exists("Files",$param) and $param["Files"] !== null) {
+            $this->Files = [];
+            foreach ($param["Files"] as $key => $value){
+                $obj = new InstanceBackupFileItem();
+                $obj->deserialize($value);
+                array_push($this->Files, $obj);
+            }
         }
 
-        if (array_key_exists("RepeatCertId",$param) and $param["RepeatCertId"] !== null) {
-            $this->RepeatCertId = $param["RepeatCertId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

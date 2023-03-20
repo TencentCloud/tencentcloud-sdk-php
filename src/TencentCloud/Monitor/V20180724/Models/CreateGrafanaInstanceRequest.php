@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC ID
  * @method array getSubnetIds() 获取子网 ID 数组
  * @method void setSubnetIds(array $SubnetIds) 设置子网 ID 数组
- * @method string getGrafanaInitPassword() 获取Grafana 初始密码
- * @method void setGrafanaInitPassword(string $GrafanaInitPassword) 设置Grafana 初始密码
  * @method boolean getEnableInternet() 获取是否启用外网
  * @method void setEnableInternet(boolean $EnableInternet) 设置是否启用外网
+ * @method string getGrafanaInitPassword() 获取Grafana 初始密码
+ * @method void setGrafanaInitPassword(string $GrafanaInitPassword) 设置Grafana 初始密码
  * @method array getTagSpecification() 获取标签
  * @method void setTagSpecification(array $TagSpecification) 设置标签
  */
@@ -51,14 +51,14 @@ class CreateGrafanaInstanceRequest extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var string Grafana 初始密码
-     */
-    public $GrafanaInitPassword;
-
-    /**
      * @var boolean 是否启用外网
      */
     public $EnableInternet;
+
+    /**
+     * @var string Grafana 初始密码
+     */
+    public $GrafanaInitPassword;
 
     /**
      * @var array 标签
@@ -69,8 +69,8 @@ class CreateGrafanaInstanceRequest extends AbstractModel
      * @param string $InstanceName 实例名
      * @param string $VpcId VPC ID
      * @param array $SubnetIds 子网 ID 数组
-     * @param string $GrafanaInitPassword Grafana 初始密码
      * @param boolean $EnableInternet 是否启用外网
+     * @param string $GrafanaInitPassword Grafana 初始密码
      * @param array $TagSpecification 标签
      */
     function __construct()
@@ -98,12 +98,12 @@ class CreateGrafanaInstanceRequest extends AbstractModel
             $this->SubnetIds = $param["SubnetIds"];
         }
 
-        if (array_key_exists("GrafanaInitPassword",$param) and $param["GrafanaInitPassword"] !== null) {
-            $this->GrafanaInitPassword = $param["GrafanaInitPassword"];
-        }
-
         if (array_key_exists("EnableInternet",$param) and $param["EnableInternet"] !== null) {
             $this->EnableInternet = $param["EnableInternet"];
+        }
+
+        if (array_key_exists("GrafanaInitPassword",$param) and $param["GrafanaInitPassword"] !== null) {
+            $this->GrafanaInitPassword = $param["GrafanaInitPassword"];
         }
 
         if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {

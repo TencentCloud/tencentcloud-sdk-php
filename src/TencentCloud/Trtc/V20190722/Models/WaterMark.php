@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method WaterMarkImage getWaterMarkImage() 获取水印为图片时的参数列表，水印为图片时校验必填。
  * @method void setWaterMarkImage(WaterMarkImage $WaterMarkImage) 设置水印为图片时的参数列表，水印为图片时校验必填。
  * @method WaterMarkChar getWaterMarkChar() 获取水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaterMarkChar(WaterMarkChar $WaterMarkChar) 设置水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WaterMarkTimestamp getWaterMarkTimestamp() 获取水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaterMarkTimestamp(WaterMarkTimestamp $WaterMarkTimestamp) 设置水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WaterMark extends AbstractModel
 {
@@ -47,13 +43,11 @@ class WaterMark extends AbstractModel
 
     /**
      * @var WaterMarkChar 水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaterMarkChar;
 
     /**
      * @var WaterMarkTimestamp 水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaterMarkTimestamp;
 
@@ -61,9 +55,7 @@ class WaterMark extends AbstractModel
      * @param integer $WaterMarkType 水印类型，0为图片（默认），1为文字，2为时间戳。
      * @param WaterMarkImage $WaterMarkImage 水印为图片时的参数列表，水印为图片时校验必填。
      * @param WaterMarkChar $WaterMarkChar 水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WaterMarkTimestamp $WaterMarkTimestamp 水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

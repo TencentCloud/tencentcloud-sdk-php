@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 批量创建群组基础信息
  *
  * @method string getGroupName() 获取待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTeacherId() 获取群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTeacherId(string $TeacherId) 设置群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupBaseInfo extends AbstractModel
 {
     /**
      * @var string 待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TeacherId;
 
     /**
      * @param string $GroupName 待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TeacherId 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

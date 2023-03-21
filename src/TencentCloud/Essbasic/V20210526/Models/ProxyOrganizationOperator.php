@@ -40,12 +40,10 @@ use TencentCloud\Common\AbstractModel;
 业务管理员：admin
 经办人：channel-normal-operator
 业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultRole(string $DefaultRole) 设置默认角色，值为以下三个对应的英文：
 业务管理员：admin
 经办人：channel-normal-operator
 业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyOrganizationOperator extends AbstractModel
 {
@@ -82,7 +80,6 @@ class ProxyOrganizationOperator extends AbstractModel
 业务管理员：admin
 经办人：channel-normal-operator
 业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultRole;
 
@@ -99,7 +96,6 @@ class ProxyOrganizationOperator extends AbstractModel
 业务管理员：admin
 经办人：channel-normal-operator
 业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

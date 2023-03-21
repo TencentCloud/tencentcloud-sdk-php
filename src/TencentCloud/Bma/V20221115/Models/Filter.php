@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 过滤参数
  *
  * @method string getName() 获取过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Filter extends AbstractModel
 {
     /**
      * @var string 过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

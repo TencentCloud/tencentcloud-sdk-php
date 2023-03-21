@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 云联网限速实例锁对象，该对象特用于运营端使用，用于封禁实例流量。
  *
  * @method string getCcnId() 获取带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnId(string $CcnId) 设置带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserAccountID() 获取实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAccountID(string $UserAccountID) 设置实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionFlowControlId() 获取带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionFlowControlId(string $RegionFlowControlId) 设置带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnFlowLock extends AbstractModel
 {
     /**
      * @var string 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnId;
 
     /**
      * @var string 实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAccountID;
 
     /**
      * @var string 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionFlowControlId;
 
     /**
      * @param string $CcnId 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAccountID 实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionFlowControlId 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

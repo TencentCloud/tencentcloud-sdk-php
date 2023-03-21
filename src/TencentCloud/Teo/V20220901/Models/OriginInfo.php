@@ -25,33 +25,23 @@ use TencentCloud\Common\AbstractModel;
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginType(string $OriginType) 设置源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6或域名类型源站；</li>
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrigin() 获取源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrigin(string $Origin) 设置源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupOrigin() 获取备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupOrigin(string $BackupOrigin) 设置备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateAccess() 获取指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateAccess(string $PrivateAccess) 设置指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivateParameters() 获取私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateParameters(array $PrivateParameters) 设置私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OriginInfo extends AbstractModel
 {
@@ -61,19 +51,16 @@ class OriginInfo extends AbstractModel
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginType;
 
     /**
      * @var string 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Origin;
 
     /**
      * @var string 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupOrigin;
 
@@ -81,13 +68,11 @@ class OriginInfo extends AbstractModel
      * @var string 指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateAccess;
 
     /**
      * @var array 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateParameters;
 
@@ -97,17 +82,12 @@ class OriginInfo extends AbstractModel
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Origin 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupOrigin 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateAccess 指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateParameters 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

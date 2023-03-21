@@ -25,37 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSecondClassName() 获取二级分类名称
  * @method void setSecondClassName(string $SecondClassName) 设置二级分类名称
  * @method float getFirstClassProbability() 获取一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstClassProbability(float $FirstClassProbability) 设置一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getSecondClassProbability() 获取二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondClassProbability(float $SecondClassProbability) 设置二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getThirdClassName() 获取三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThirdClassName(string $ThirdClassName) 设置三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getThirdClassProbability() 获取三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThirdClassProbability(float $ThirdClassProbability) 设置三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFourthClassName() 获取四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFourthClassName(string $FourthClassName) 设置四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFourthClassProbability() 获取四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFourthClassProbability(float $FourthClassProbability) 设置四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFifthClassName() 获取五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFifthClassName(string $FifthClassName) 设置五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFifthClassProbability() 获取五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFifthClassProbability(float $FifthClassProbability) 设置五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClassificationResult extends AbstractModel
 {
@@ -71,49 +55,41 @@ class ClassificationResult extends AbstractModel
 
     /**
      * @var float 一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstClassProbability;
 
     /**
      * @var float 二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondClassProbability;
 
     /**
      * @var string 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThirdClassName;
 
     /**
      * @var float 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThirdClassProbability;
 
     /**
      * @var string 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FourthClassName;
 
     /**
      * @var float 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FourthClassProbability;
 
     /**
      * @var string 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FifthClassName;
 
     /**
      * @var float 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FifthClassProbability;
 
@@ -121,21 +97,13 @@ class ClassificationResult extends AbstractModel
      * @param string $FirstClassName 一级分类名称
      * @param string $SecondClassName 二级分类名称
      * @param float $FirstClassProbability 一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $SecondClassProbability 二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ThirdClassName 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ThirdClassProbability 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FourthClassName 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FourthClassProbability 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FifthClassName 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FifthClassProbability 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

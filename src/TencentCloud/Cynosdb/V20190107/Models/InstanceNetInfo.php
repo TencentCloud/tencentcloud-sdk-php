@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceGroupType(string $InstanceGroupType) 设置网络类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceGroupId() 获取接入组ID
+ * @method string getInstanceGroupId() 获取实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceGroupId(string $InstanceGroupId) 设置接入组ID
+ * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ class InstanceNetInfo extends AbstractModel
     public $InstanceGroupType;
 
     /**
-     * @var string 接入组ID
+     * @var string 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceGroupId;
@@ -136,7 +136,7 @@ class InstanceNetInfo extends AbstractModel
     /**
      * @param string $InstanceGroupType 网络类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceGroupId 接入组ID
+     * @param string $InstanceGroupId 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。

@@ -31,17 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLocationY() 获取水印在输出时的Y偏移。单位为像素值。
  * @method void setLocationY(integer $LocationY) 设置水印在输出时的Y偏移。单位为像素值。
  * @method integer getFontSize() 获取字体大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFontSize(integer $FontSize) 设置字体大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFontColor() 获取字体颜色，默认为白色。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFontColor(string $FontColor) 设置字体颜色，默认为白色。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackGroundColor() 获取字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackGroundColor(string $BackGroundColor) 设置字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class McuWaterMarkText extends AbstractModel
 {
@@ -72,19 +66,16 @@ class McuWaterMarkText extends AbstractModel
 
     /**
      * @var integer 字体大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FontSize;
 
     /**
      * @var string 字体颜色，默认为白色。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FontColor;
 
     /**
      * @var string 字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackGroundColor;
 
@@ -95,11 +86,8 @@ class McuWaterMarkText extends AbstractModel
      * @param integer $LocationX 水印在输出时的X偏移。单位为像素值。
      * @param integer $LocationY 水印在输出时的Y偏移。单位为像素值。
      * @param integer $FontSize 字体大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FontColor 字体颜色，默认为白色。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackGroundColor 字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

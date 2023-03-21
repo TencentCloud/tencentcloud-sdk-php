@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsExist() 获取0表示词条不存在，1表示存在。
  * @method void setIsExist(integer $IsExist) 设置0表示词条不存在，1表示存在。
  * @method string getMatchText() 获取匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMatchText(string $MatchText) 设置匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPos() 获取词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPos(string $Pos) 设置词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchResult extends AbstractModel
 {
@@ -47,13 +43,11 @@ class SearchResult extends AbstractModel
 
     /**
      * @var string 匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MatchText;
 
     /**
      * @var string 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pos;
 
@@ -61,9 +55,7 @@ class SearchResult extends AbstractModel
      * @param string $Text 被搜索的词条文本。
      * @param integer $IsExist 0表示词条不存在，1表示存在。
      * @param string $MatchText 匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pos 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUid() 获取客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
  * @method void setUid(integer $Uid) 设置客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
  * @method string getStrUid() 获取客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrUid(string $StrUid) 设置客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserMicStatus extends AbstractModel
 {
@@ -43,7 +41,6 @@ class UserMicStatus extends AbstractModel
 
     /**
      * @var string 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrUid;
 
@@ -51,7 +48,6 @@ class UserMicStatus extends AbstractModel
      * @param integer $EnableMic 开麦状态。1表示关闭麦克风，2表示打开麦克风。
      * @param integer $Uid 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
      * @param string $StrUid 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

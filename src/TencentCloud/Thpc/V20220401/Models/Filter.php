@@ -23,33 +23,25 @@ use TencentCloud\Common\AbstractModel;
 > * 若同一个`Filter`存在多个`Values`，同一`Filter`下`Values`间的关系为逻辑或（`OR`）关系。
  *
  * @method string getName() 获取需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Filter extends AbstractModel
 {
     /**
      * @var string 需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
      * @param string $Name 需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

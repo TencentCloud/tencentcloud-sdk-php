@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRecordLineId() 获取解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
  * @method void setRecordLineId(string $RecordLineId) 设置解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
  * @method integer getWeight() 获取记录权重值(暂未支持)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置记录权重值(暂未支持)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMX() 获取记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
  * @method void setMX(integer $MX) 设置记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
  * @method integer getTTL() 获取记录的 TTL 值，默认600。
@@ -72,7 +70,6 @@ class AddRecordBatch extends AbstractModel
 
     /**
      * @var integer 记录权重值(暂未支持)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
@@ -103,7 +100,6 @@ class AddRecordBatch extends AbstractModel
      * @param string $RecordLine 解析记录的线路，详见 DescribeRecordLineList 接口，RecordLine和RecordLineId都未填时，默认为「默认」线路。
      * @param string $RecordLineId 解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
      * @param integer $Weight 记录权重值(暂未支持)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MX 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
      * @param integer $TTL 记录的 TTL 值，默认600。
      * @param integer $Enabled 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。

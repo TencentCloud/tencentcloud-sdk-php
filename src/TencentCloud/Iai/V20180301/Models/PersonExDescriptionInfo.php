@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 需要修改的人员描述字段内容，key-value
  *
  * @method integer getPersonExDescriptionIndex() 获取人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPersonExDescriptionIndex(integer $PersonExDescriptionIndex) 设置人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPersonExDescription() 获取需要更新的人员描述字段内容
  * @method void setPersonExDescription(string $PersonExDescription) 设置需要更新的人员描述字段内容
  */
@@ -31,7 +29,6 @@ class PersonExDescriptionInfo extends AbstractModel
 {
     /**
      * @var integer 人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PersonExDescriptionIndex;
 
@@ -42,7 +39,6 @@ class PersonExDescriptionInfo extends AbstractModel
 
     /**
      * @param integer $PersonExDescriptionIndex 人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PersonExDescription 需要更新的人员描述字段内容
      */
     function __construct()

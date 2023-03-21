@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 创建NAT ACL规则参数结构
  *
  * @method string getSourceContent() 获取访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceContent(string $SourceContent) 设置访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceType() 获取访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(string $SourceType) 设置访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetContent() 获取访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetContent(string $TargetContent) 设置访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetType() 获取访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetType(string $TargetType) 设置访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleAction() 获取访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleAction(string $RuleAction) 设置访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPort() 获取访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(string $Port) 设置访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDirection() 获取规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirection(integer $Direction) 设置规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOrderIndex() 获取规则序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderIndex(integer $OrderIndex) 设置规则序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnable() 获取规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnable(string $Enable) 设置规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUuid() 获取规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(integer $Uuid) 设置规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateNatRuleItem extends AbstractModel
 {
     /**
      * @var string 访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceContent;
 
     /**
      * @var string 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceType;
 
     /**
      * @var string 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetContent;
 
     /**
      * @var string 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
 
     /**
      * @var string 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleAction;
 
     /**
      * @var string 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var integer 规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Direction;
 
     /**
      * @var integer 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderIndex;
 
     /**
      * @var string 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
     /**
      * @var integer 规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Port 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Direction 规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OrderIndex 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Enable 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Uuid 规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

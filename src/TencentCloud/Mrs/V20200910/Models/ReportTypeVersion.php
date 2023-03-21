@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 指定报告类型选用其结构化版本
  *
  * @method integer getReportType() 获取检验报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportType(integer $ReportType) 设置检验报告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVersion() 获取版本2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(integer $Version) 设置版本2
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportTypeVersion extends AbstractModel
 {
     /**
      * @var integer 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportType;
 
     /**
      * @var integer 版本2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @param integer $ReportType 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Version 版本2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

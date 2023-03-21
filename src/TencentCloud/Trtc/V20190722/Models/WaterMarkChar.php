@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 自定义文字水印数据结构
  *
  * @method integer getTop() 获取文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTop(integer $Top) 设置文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLeft() 获取文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLeft(integer $Left) 设置文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChars() 获取水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChars(string $Chars) 设置水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFontSize() 获取水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFontSize(integer $FontSize) 设置水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFontColor() 获取水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFontColor(string $FontColor) 设置水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackGroundColor() 获取水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackGroundColor(string $BackGroundColor) 设置水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WaterMarkChar extends AbstractModel
 {
     /**
      * @var integer 文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Top;
 
     /**
      * @var integer 文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Left;
 
     /**
      * @var integer 文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @var string 水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Chars;
 
     /**
      * @var integer 水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FontSize;
 
     /**
      * @var string 水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FontColor;
 
     /**
      * @var string 水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackGroundColor;
 
     /**
      * @param integer $Top 文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Left 文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Chars 水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FontSize 水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FontColor 水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackGroundColor 水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

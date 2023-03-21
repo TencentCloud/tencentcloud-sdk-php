@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 时间戳水印数据结构
  *
  * @method integer getPos() 获取时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPos(integer $Pos) 设置时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeZone() 获取显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeZone(integer $TimeZone) 设置显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WaterMarkTimestamp extends AbstractModel
 {
     /**
      * @var integer 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pos;
 
     /**
      * @var integer 显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeZone;
 
     /**
      * @param integer $Pos 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeZone 显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

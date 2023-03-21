@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 创建临时工作空间凭证 DTO
  *
  * @method string getSpaceKey() 获取工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceKey(string $SpaceKey) 设置工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTokenExpiredLimitSec() 获取token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTokenExpiredLimitSec(integer $TokenExpiredLimitSec) 设置token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkspaceTokenDTO extends AbstractModel
 {
     /**
      * @var string 工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceKey;
 
     /**
      * @var integer token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TokenExpiredLimitSec;
 
     /**
      * @param string $SpaceKey 工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TokenExpiredLimitSec token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 筛选条件
  *
  * @method string getName() 获取筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Filter extends AbstractModel
 {
     /**
      * @var string 筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
      * @param string $Name 筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

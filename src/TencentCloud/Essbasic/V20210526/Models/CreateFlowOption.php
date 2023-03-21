@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 创建合同配置信息
  *
  * @method boolean getCanEditFlow() 获取是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanEditFlow(boolean $CanEditFlow) 设置是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateFlowOption extends AbstractModel
 {
     /**
      * @var boolean 是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanEditFlow;
 
     /**
      * @param boolean $CanEditFlow 是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

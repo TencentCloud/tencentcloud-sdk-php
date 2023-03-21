@@ -21,181 +21,125 @@ use TencentCloud\Common\AbstractModel;
  * 通用签署人信息
  *
  * @method boolean getNotChannelOrganization() 获取指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApproverType() 获取签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverType(integer $ApproverType) 设置签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrganizationId() 获取企业id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationId(string $OrganizationId) 设置企业id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrganizationOpenId() 获取企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrganizationName() 获取企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationName(string $OrganizationName) 设置企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserId() 获取用户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOpenId() 获取用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenId(string $OpenId) 设置用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproverName() 获取签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverName(string $ApproverName) 设置签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproverMobile() 获取签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverMobile(string $ApproverMobile) 设置签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecipientId() 获取签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
 注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecipientId(string $RecipientId) 设置签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
 注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPreReadTime() 获取签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreReadTime(integer $PreReadTime) 设置签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsFullText() 获取签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFullText(boolean $IsFullText) 设置签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNotifyType() 获取通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotifyType(string $NotifyType) 设置通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CommonApproverOption getApproverOption() 获取签署人配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverOption(CommonApproverOption $ApproverOption) 设置签署人配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommonFlowApprover extends AbstractModel
 {
     /**
      * @var boolean 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotChannelOrganization;
 
     /**
      * @var integer 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverType;
 
     /**
      * @var string 企业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationId;
 
     /**
      * @var string 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationOpenId;
 
     /**
      * @var string 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationName;
 
     /**
      * @var string 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var string 用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
 
     /**
      * @var string 签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverName;
 
     /**
      * @var string 签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverMobile;
 
     /**
      * @var string 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
 注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecipientId;
 
     /**
      * @var integer 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreReadTime;
 
     /**
      * @var boolean 签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFullText;
 
     /**
      * @var string 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotifyType;
 
     /**
      * @var CommonApproverOption 签署人配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverOption;
 
     /**
      * @param boolean $NotChannelOrganization 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApproverType 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationId 企业id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationName 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OpenId 用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverName 签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverMobile 签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecipientId 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
 注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PreReadTime 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsFullText 签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommonApproverOption $ApproverOption 签署人配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

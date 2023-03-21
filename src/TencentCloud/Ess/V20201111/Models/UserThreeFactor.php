@@ -21,29 +21,22 @@ use TencentCloud\Common\AbstractModel;
  * 用户的三要素：姓名，证件号，证件类型
  *
  * @method string getName() 获取姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdCardType() 获取证件类型: 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdCardType(string $IdCardType) 设置证件类型: 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdCardNumber() 获取证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdCardNumber(string $IdCardNumber) 设置证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserThreeFactor extends AbstractModel
 {
     /**
      * @var string 姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -52,26 +45,21 @@ class UserThreeFactor extends AbstractModel
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdCardType;
 
     /**
      * @var string 证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdCardNumber;
 
     /**
      * @param string $Name 姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdCardType 证件类型: 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdCardNumber 证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

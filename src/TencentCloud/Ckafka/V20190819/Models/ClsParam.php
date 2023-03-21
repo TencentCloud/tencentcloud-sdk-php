@@ -21,19 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * Cls类型入参
  *
  * @method boolean getDecodeJson() 获取生产的信息是否为json格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDecodeJson(boolean $DecodeJson) 设置生产的信息是否为json格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResource() 获取cls日志主题id
  * @method void setResource(string $Resource) 设置cls日志主题id
  * @method string getLogSet() 获取cls日志集id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSet(string $LogSet) 设置cls日志集id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContentKey() 获取当DecodeJson为false时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContentKey(string $ContentKey) 设置当DecodeJson为false时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeField() 获取指定消息中的某字段内容作为cls日志的时间。
 字段内容格式需要是秒级时间戳
  * @method void setTimeField(string $TimeField) 设置指定消息中的某字段内容作为cls日志的时间。
@@ -43,7 +37,6 @@ class ClsParam extends AbstractModel
 {
     /**
      * @var boolean 生产的信息是否为json格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DecodeJson;
 
@@ -54,13 +47,11 @@ class ClsParam extends AbstractModel
 
     /**
      * @var string cls日志集id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSet;
 
     /**
      * @var string 当DecodeJson为false时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContentKey;
 
@@ -72,12 +63,9 @@ class ClsParam extends AbstractModel
 
     /**
      * @param boolean $DecodeJson 生产的信息是否为json格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource cls日志主题id
      * @param string $LogSet cls日志集id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContentKey 当DecodeJson为false时必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeField 指定消息中的某字段内容作为cls日志的时间。
 字段内容格式需要是秒级时间戳
      */

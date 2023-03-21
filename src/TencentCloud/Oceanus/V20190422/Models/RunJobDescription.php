@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSavepointId() 获取Savepoint的Id
  * @method void setSavepointId(string $SavepointId) 设置Savepoint的Id
  * @method boolean getUseOldSystemConnector() 获取使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseOldSystemConnector(boolean $UseOldSystemConnector) 设置使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunJobDescription extends AbstractModel
 {
@@ -71,7 +69,6 @@ class RunJobDescription extends AbstractModel
 
     /**
      * @var boolean 使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseOldSystemConnector;
 
@@ -83,7 +80,6 @@ class RunJobDescription extends AbstractModel
      * @param string $SavepointPath Savepoint路径
      * @param string $SavepointId Savepoint的Id
      * @param boolean $UseOldSystemConnector 使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

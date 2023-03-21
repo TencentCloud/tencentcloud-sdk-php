@@ -23,48 +23,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取签署人姓名，最大长度50个字符
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字符
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMobile() 获取签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobile(string $Mobile) 设置签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRelievedApproverReceiptId() 获取要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelievedApproverReceiptId(string $RelievedApproverReceiptId) 设置要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReleasedApprover extends AbstractModel
 {
     /**
      * @var string 签署人姓名，最大长度50个字符
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mobile;
 
     /**
      * @var string 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelievedApproverReceiptId;
 
     /**
      * @param string $Name 签署人姓名，最大长度50个字符
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mobile 签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RelievedApproverReceiptId 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

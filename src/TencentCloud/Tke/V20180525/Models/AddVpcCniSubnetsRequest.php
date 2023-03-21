@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) 设置为集群容器网络增加的子网列表
  * @method string getVpcId() 获取集群所属的VPC的ID
  * @method void setVpcId(string $VpcId) 设置集群所属的VPC的ID
+ * @method boolean getSkipAddingNonMasqueradeCIDRs() 获取是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+ * @method void setSkipAddingNonMasqueradeCIDRs(boolean $SkipAddingNonMasqueradeCIDRs) 设置是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
  */
 class AddVpcCniSubnetsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddVpcCniSubnetsRequest extends AbstractModel
     public $VpcId;
 
     /**
+     * @var boolean 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+     */
+    public $SkipAddingNonMasqueradeCIDRs;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $SubnetIds 为集群容器网络增加的子网列表
      * @param string $VpcId 集群所属的VPC的ID
+     * @param boolean $SkipAddingNonMasqueradeCIDRs 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AddVpcCniSubnetsRequest extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SkipAddingNonMasqueradeCIDRs",$param) and $param["SkipAddingNonMasqueradeCIDRs"] !== null) {
+            $this->SkipAddingNonMasqueradeCIDRs = $param["SkipAddingNonMasqueradeCIDRs"];
         }
     }
 }

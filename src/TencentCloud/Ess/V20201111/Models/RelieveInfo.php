@@ -21,85 +21,63 @@ use TencentCloud\Common\AbstractModel;
  * 解除协议文档中内容信息，包括但不限于：解除理由、解除后仍然有效的条款-保留条款、原合同事项处理-费用结算、原合同事项处理-其他事项、其他约定等。
  *
  * @method string getReason() 获取解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemainInForceItem() 获取解除后仍然有效的条款，保留条款，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainInForceItem(string $RemainInForceItem) 设置解除后仍然有效的条款，保留条款，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginalExpenseSettlement() 获取原合同事项处理-费用结算，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalExpenseSettlement(string $OriginalExpenseSettlement) 设置原合同事项处理-费用结算，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginalOtherSettlement() 获取原合同事项处理-其他事项，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalOtherSettlement(string $OriginalOtherSettlement) 设置原合同事项处理-其他事项，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOtherDeals() 获取其他约定，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtherDeals(string $OtherDeals) 设置其他约定，最大支持200个字
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RelieveInfo extends AbstractModel
 {
     /**
      * @var string 解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @var string 解除后仍然有效的条款，保留条款，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainInForceItem;
 
     /**
      * @var string 原合同事项处理-费用结算，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalExpenseSettlement;
 
     /**
      * @var string 原合同事项处理-其他事项，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalOtherSettlement;
 
     /**
      * @var string 其他约定，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherDeals;
 
     /**
      * @param string $Reason 解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemainInForceItem 解除后仍然有效的条款，保留条款，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalExpenseSettlement 原合同事项处理-费用结算，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalOtherSettlement 原合同事项处理-其他事项，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OtherDeals 其他约定，最大支持200个字
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

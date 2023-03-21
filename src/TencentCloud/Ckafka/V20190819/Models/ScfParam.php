@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * Scf类型入参
  *
  * @method string getFunctionName() 获取SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFunctionName(string $FunctionName) 设置SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQualifier() 获取SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualifier(string $Qualifier) 设置SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBatchSize() 获取每批最大发送消息数, 默认为1000
  * @method void setBatchSize(integer $BatchSize) 设置每批最大发送消息数, 默认为1000
  * @method integer getMaxRetries() 获取SCF调用失败后重试次数, 默认为5
@@ -41,19 +35,16 @@ class ScfParam extends AbstractModel
 {
     /**
      * @var string SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FunctionName;
 
     /**
      * @var string SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qualifier;
 
@@ -69,11 +60,8 @@ class ScfParam extends AbstractModel
 
     /**
      * @param string $FunctionName SCF云函数函数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace SCF云函数命名空间, 默认为default
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Qualifier SCF云函数版本及别名, 默认为$DEFAULT
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BatchSize 每批最大发送消息数, 默认为1000
      * @param integer $MaxRetries SCF调用失败后重试次数, 默认为5
      */

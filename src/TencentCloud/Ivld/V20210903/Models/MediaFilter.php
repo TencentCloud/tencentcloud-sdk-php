@@ -23,69 +23,49 @@ use TencentCloud\Common\AbstractModel;
 
  *
  * @method array getMediaNameSet() 获取媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaNameSet(array $MediaNameSet) 设置媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStatusSet() 获取媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusSet(array $StatusSet) 设置媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMediaIdSet() 获取媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaIdSet(array $MediaIdSet) 设置媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabelSet() 获取媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelSet(array $LabelSet) 设置媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMediaType() 获取媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaType(integer $MediaType) 设置媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaFilter extends AbstractModel
 {
     /**
      * @var array 媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaNameSet;
 
     /**
      * @var array 媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusSet;
 
     /**
      * @var array 媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaIdSet;
 
     /**
      * @var array 媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelSet;
 
     /**
      * @var integer 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaType;
 
     /**
      * @param array $MediaNameSet 媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StatusSet 媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MediaIdSet 媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelSet 媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MediaType 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

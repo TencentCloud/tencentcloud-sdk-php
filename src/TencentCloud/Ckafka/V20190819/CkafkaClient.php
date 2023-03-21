@@ -34,6 +34,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateConnectResourceResponse CreateConnectResource(Models\CreateConnectResourceRequest $req) 创建Datahub连接源
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 创建消费者组
  * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建DIP转储任务
+ * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) 创建Datahub主题
  * @method Models\CreateInstancePostResponse CreateInstancePost(Models\CreateInstancePostRequest $req) 创建按量计费实例
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月)
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区

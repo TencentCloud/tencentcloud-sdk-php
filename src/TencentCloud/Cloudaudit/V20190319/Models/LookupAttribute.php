@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 检索条件
  *
  * @method string getAttributeKey() 获取AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttributeKey(string $AttributeKey) 设置AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAttributeValue() 获取AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttributeValue(string $AttributeValue) 设置AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LookupAttribute extends AbstractModel
 {
     /**
      * @var string AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttributeKey;
 
     /**
      * @var string AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttributeValue;
 
     /**
      * @param string $AttributeKey AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AttributeValue AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

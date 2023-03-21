@@ -30,6 +30,8 @@ use TencentCloud\Apm\V20210622\Models as Models;
 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
  * @method Models\DescribeMetricRecordsResponse DescribeMetricRecords(Models\DescribeMetricRecordsRequest $req) 拉取通用指标列表
  * @method Models\DescribeServiceOverviewResponse DescribeServiceOverview(Models\DescribeServiceOverviewRequest $req) 服务概览数据拉取
+ * @method Models\ModifyApmInstanceResponse ModifyApmInstance(Models\ModifyApmInstanceRequest $req) 修改Apm实例接口
+ * @method Models\TerminateApmInstanceResponse TerminateApmInstance(Models\TerminateApmInstanceRequest $req) apm销毁实例
  */
 
 class ApmClient extends AbstractClient

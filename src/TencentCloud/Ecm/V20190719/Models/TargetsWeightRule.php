@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 目标和权重的描述信息
  *
  * @method string getListenerId() 获取负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTargets() 获取要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargets(array $Targets) 设置要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TargetsWeightRule extends AbstractModel
 {
     /**
      * @var string 负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerId;
 
     /**
      * @var array 要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Targets;
 
     /**
      * @var integer 后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @param string $ListenerId 负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Targets 要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

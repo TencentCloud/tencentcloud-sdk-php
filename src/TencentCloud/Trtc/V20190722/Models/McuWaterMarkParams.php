@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method McuWaterMarkImage getWaterMarkImage() 获取图片水印参数。WaterMarkType为0指定。
  * @method void setWaterMarkImage(McuWaterMarkImage $WaterMarkImage) 设置图片水印参数。WaterMarkType为0指定。
  * @method McuWaterMarkText getWaterMarkText() 获取文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWaterMarkText(McuWaterMarkText $WaterMarkText) 设置文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class McuWaterMarkParams extends AbstractModel
 {
@@ -43,7 +41,6 @@ class McuWaterMarkParams extends AbstractModel
 
     /**
      * @var McuWaterMarkText 文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WaterMarkText;
 
@@ -51,7 +48,6 @@ class McuWaterMarkParams extends AbstractModel
      * @param integer $WaterMarkType 水印类型，0为图片（默认），1为文字。
      * @param McuWaterMarkImage $WaterMarkImage 图片水印参数。WaterMarkType为0指定。
      * @param McuWaterMarkText $WaterMarkText 文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

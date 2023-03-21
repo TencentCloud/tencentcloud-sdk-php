@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getMerchantName() 获取商户名称
+ * @method void setMerchantName(string $MerchantName) 设置商户名称
+ * @method string getProductName() 获取产品名称
+ * @method void setProductName(string $ProductName) 设置产品名称
  */
 class ScanStat extends AbstractModel
 {
@@ -87,6 +91,16 @@ class ScanStat extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 商户名称
+     */
+    public $MerchantName;
+
+    /**
+     * @var string 产品名称
+     */
+    public $ProductName;
+
+    /**
      * @param string $Code 安心码
      * @param integer $CorpId 企业ID
      * @param string $MerchantId 商户ID
@@ -96,6 +110,8 @@ class ScanStat extends AbstractModel
      * @param integer $Uv 扫码人数
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
+     * @param string $MerchantName 商户名称
+     * @param string $ProductName 产品名称
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ScanStat extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("MerchantName",$param) and $param["MerchantName"] !== null) {
+            $this->MerchantName = $param["MerchantName"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

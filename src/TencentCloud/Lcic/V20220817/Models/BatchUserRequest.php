@@ -22,72 +22,54 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取用户名称。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置用户名称。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginId() 获取用户在客户系统的Id，需要在同一应用下唯一。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginId(string $OriginId) 设置用户在客户系统的Id，需要在同一应用下唯一。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAvatar() 获取用户头像。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvatar(string $Avatar) 设置用户头像。
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchUserRequest extends AbstractModel
 {
     /**
      * @var integer 低代码互动课堂的SdkAppId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SdkAppId;
 
     /**
      * @var string 用户名称。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 用户在客户系统的Id，需要在同一应用下唯一。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginId;
 
     /**
      * @var string 用户头像。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Avatar;
 
     /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 用户名称。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginId 用户在客户系统的Id，需要在同一应用下唯一。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Avatar 用户头像。
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

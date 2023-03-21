@@ -22,40 +22,32 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUnfreezeRule() 获取ONCE：仅单次解冻（默认）
 MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnfreezeRule(string $UnfreezeRule) 设置ONCE：仅单次解冻（默认）
 MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRefundRule() 获取ONCE：仅单次退款（默认）
 MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefundRule(string $RefundRule) 设置ONCE：仅单次退款（默认）
 MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OpenBankSettlementRulesInfo extends AbstractModel
 {
     /**
      * @var string ONCE：仅单次解冻（默认）
 MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnfreezeRule;
 
     /**
      * @var string ONCE：仅单次退款（默认）
 MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RefundRule;
 
     /**
      * @param string $UnfreezeRule ONCE：仅单次解冻（默认）
 MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RefundRule ONCE：仅单次退款（默认）
 MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

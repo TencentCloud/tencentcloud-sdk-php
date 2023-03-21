@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述集群文件系统选项
  *
- * @method array getCFSOptions() 获取集群挂载CFS文件系统选项
- * @method void setCFSOptions(array $CFSOptions) 设置集群挂载CFS文件系统选项
- * @method array getGooseFSOptions() 获取集群挂在GooseFS文件系统选项
- * @method void setGooseFSOptions(array $GooseFSOptions) 设置集群挂在GooseFS文件系统选项
+ * @method array getCFSOptions() 获取集群挂载CFS文件系统选项。
+ * @method void setCFSOptions(array $CFSOptions) 设置集群挂载CFS文件系统选项。
+ * @method array getGooseFSOptions() 获取集群挂载GooseFS文件系统选项。
+ * @method void setGooseFSOptions(array $GooseFSOptions) 设置集群挂载GooseFS文件系统选项。
  */
 class StorageOption extends AbstractModel
 {
     /**
-     * @var array 集群挂载CFS文件系统选项
+     * @var array 集群挂载CFS文件系统选项。
      */
     public $CFSOptions;
 
     /**
-     * @var array 集群挂在GooseFS文件系统选项
+     * @var array 集群挂载GooseFS文件系统选项。
      */
     public $GooseFSOptions;
 
     /**
-     * @param array $CFSOptions 集群挂载CFS文件系统选项
-     * @param array $GooseFSOptions 集群挂在GooseFS文件系统选项
+     * @param array $CFSOptions 集群挂载CFS文件系统选项。
+     * @param array $GooseFSOptions 集群挂载GooseFS文件系统选项。
      */
     function __construct()
     {

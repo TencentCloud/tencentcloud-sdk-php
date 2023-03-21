@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 签署人配置信息
  *
  * @method boolean getCanEditApprover() 获取是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanEditApprover(boolean $CanEditApprover) 设置是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommonApproverOption extends AbstractModel
 {
     /**
      * @var boolean 是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanEditApprover;
 
     /**
      * @param boolean $CanEditApprover 是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

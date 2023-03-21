@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getExecutionSpace() 获取执行空间 "DRY_RUN"
  * @method void setExecutionSpace(integer $ExecutionSpace) 设置执行空间 "DRY_RUN"
  * @method integer getProductName() 获取产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(integer $ProductName) 设置产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResourceGroup() 获取资源组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroup(integer $ResourceGroup) 设置资源组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchConditionInstance extends AbstractModel
 {
@@ -40,22 +36,18 @@ class SearchConditionInstance extends AbstractModel
 
     /**
      * @var integer 产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var integer 资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroup;
 
     /**
      * @param integer $ExecutionSpace 执行空间 "DRY_RUN"
      * @param integer $ProductName 产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceGroup 资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

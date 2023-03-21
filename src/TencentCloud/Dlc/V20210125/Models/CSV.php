@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method CSVSerde getCSVSerde() 获取CSV序列化及反序列化数据结构。
  * @method void setCSVSerde(CSVSerde $CSVSerde) 设置CSV序列化及反序列化数据结构。
  * @method integer getHeadLines() 获取标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadLines(integer $HeadLines) 设置标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormat() 获取格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CSV extends AbstractModel
 {
@@ -47,13 +43,11 @@ class CSV extends AbstractModel
 
     /**
      * @var integer 标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadLines;
 
     /**
      * @var string 格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
@@ -61,9 +55,7 @@ class CSV extends AbstractModel
      * @param string $CodeCompress 压缩格式，["Snappy", "Gzip", "None"选一]。
      * @param CSVSerde $CSVSerde CSV序列化及反序列化数据结构。
      * @param integer $HeadLines 标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Format 格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

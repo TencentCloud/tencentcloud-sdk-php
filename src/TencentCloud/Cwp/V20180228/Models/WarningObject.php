@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getControlBits() 获取漏洞等级控制位二进制，每一位对应页面漏洞等级的开启关闭：低中高（0:关闭；1：开启），例如：101 → 同时勾选低+高；01→(登录审计)疑似不告警，高危告警
  * @method void setControlBits(string $ControlBits) 设置漏洞等级控制位二进制，每一位对应页面漏洞等级的开启关闭：低中高（0:关闭；1：开启），例如：101 → 同时勾选低+高；01→(登录审计)疑似不告警，高危告警
  * @method integer getHostRange() 获取告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostRange(integer $HostRange) 设置告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WarningObject extends AbstractModel
 {
@@ -64,7 +62,6 @@ class WarningObject extends AbstractModel
 
     /**
      * @var integer 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostRange;
 
@@ -75,7 +72,6 @@ class WarningObject extends AbstractModel
      * @param string $EndTime 结束时间，格式: HH:mm
      * @param string $ControlBits 漏洞等级控制位二进制，每一位对应页面漏洞等级的开启关闭：低中高（0:关闭；1：开启），例如：101 → 同时勾选低+高；01→(登录审计)疑似不告警，高危告警
      * @param integer $HostRange 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

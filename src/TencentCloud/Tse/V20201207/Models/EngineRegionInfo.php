@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 引擎地域配置详情
  *
  * @method string getEngineRegion() 获取引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineRegion(string $EngineRegion) 设置引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReplica() 获取此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplica(integer $Replica) 设置此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcInfos() 获取集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcInfos(array $VpcInfos) 设置集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EngineRegionInfo extends AbstractModel
 {
     /**
      * @var string 引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineRegion;
 
     /**
      * @var integer 此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Replica;
 
     /**
      * @var array 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcInfos;
 
     /**
      * @param string $EngineRegion 引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Replica 此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VpcInfos 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

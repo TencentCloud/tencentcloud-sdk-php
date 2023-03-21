@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCmemId() 获取实例内置ID
  * @method void setCmemId(integer $CmemId) 设置实例内置ID
  * @method array getTags() 获取实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getRegionId() 获取地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
@@ -105,7 +103,6 @@ class InstanceListInfo extends AbstractModel
 
     /**
      * @var array 实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -202,7 +199,6 @@ class InstanceListInfo extends AbstractModel
      * @param integer $Status 实例当前状态，0：发货中；1：运行中；2：创建失败；4：销毁中；5：隔离中；6：下线中
      * @param integer $CmemId 实例内置ID
      * @param array $Tags 实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
      * @param integer $RegionId 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      * @param string $InstanceDesc 实例描述信息

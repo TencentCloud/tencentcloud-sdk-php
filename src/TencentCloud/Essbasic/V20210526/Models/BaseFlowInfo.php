@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 基础流程信息
  *
  * @method string getFlowName() 获取合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowName(string $FlowName) 设置合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowType() 获取合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowType(string $FlowType) 设置合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowDescription() 获取合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowDescription(string $FlowDescription) 设置合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeadline() 获取合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadline(integer $Deadline) 设置合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUnordered() 获取是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnordered(boolean $Unordered) 设置是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIntelligentStatus() 获取打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntelligentStatus(string $IntelligentStatus) 设置打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFormFields() 获取填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormFields(array $FormFields) 设置填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNeedSignReview() 获取本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeedSignReview(boolean $NeedSignReview) 设置本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaseFlowInfo extends AbstractModel
 {
     /**
      * @var string 合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowName;
 
     /**
      * @var string 合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowType;
 
     /**
      * @var string 合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowDescription;
 
     /**
      * @var integer 合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deadline;
 
     /**
      * @var boolean 是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unordered;
 
     /**
      * @var string 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntelligentStatus;
 
     /**
      * @var array 填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FormFields;
 
     /**
      * @var boolean 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeedSignReview;
 
     /**
      * @param string $FlowName 合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowType 合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowDescription 合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deadline 合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Unordered 是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FormFields 填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

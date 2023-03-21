@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取自定义词库ID。
  * @method void setId(string $Id) 设置自定义词库ID。
  * @method string getDescription() 获取自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DictInfo extends AbstractModel
 {
@@ -51,19 +45,16 @@ class DictInfo extends AbstractModel
 
     /**
      * @var string 自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -71,11 +62,8 @@ class DictInfo extends AbstractModel
      * @param string $Name 自定义词库名称。
      * @param string $Id 自定义词库ID。
      * @param string $Description 自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * Dts修改连接源参数
  *
  * @method string getResource() 获取Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUpdate() 获取是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopic() 获取Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopic(string $Topic) 设置Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DtsModifyConnectParam extends AbstractModel
 {
     /**
      * @var string Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var integer Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var boolean 是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
     /**
      * @var string Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topic;
 
     /**
      * @param string $Resource Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Topic Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

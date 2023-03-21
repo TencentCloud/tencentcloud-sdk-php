@@ -21,201 +21,137 @@ use TencentCloud\Common\AbstractModel;
  * 批量创建房间的房间信息
  *
  * @method string getName() 获取房间名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置房间名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResolution() 获取分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResolution(integer $Resolution) 设置分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMicNumber() 获取最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubType() 获取房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubType(string $SubType) 设置房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTeacherId() 获取老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTeacherId(string $TeacherId) 设置老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoMic() 获取进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoMic(integer $AutoMic) 设置进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTurnOffMic() 获取释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTurnOffMic(integer $TurnOffMic) 设置释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAudioQuality() 获取高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioQuality(integer $AudioQuality) 设置高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDisableRecord() 获取上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisableRecord(integer $DisableRecord) 设置上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAssistants() 获取助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssistants(array $Assistants) 设置助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRTCAudienceNumber() 获取rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRTCAudienceNumber(integer $RTCAudienceNumber) 设置rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAudienceType() 获取观看类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudienceType(integer $AudienceType) 设置观看类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordLayout() 获取录制布局。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomInfo extends AbstractModel
 {
     /**
      * @var string 房间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resolution;
 
     /**
      * @var integer 最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMicNumber;
 
     /**
      * @var string 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubType;
 
     /**
      * @var string 老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TeacherId;
 
     /**
      * @var integer 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoMic;
 
     /**
      * @var integer 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TurnOffMic;
 
     /**
      * @var integer 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioQuality;
 
     /**
      * @var integer 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisableRecord;
 
     /**
      * @var array 助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Assistants;
 
     /**
      * @var integer rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RTCAudienceNumber;
 
     /**
      * @var integer 观看类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudienceType;
 
     /**
      * @var integer 录制布局。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordLayout;
 
     /**
      * @var string 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @param string $Name 房间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Resolution 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TeacherId 老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoMic 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TurnOffMic 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AudioQuality 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DisableRecord 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RTCAudienceNumber rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AudienceType 观看类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordLayout 录制布局。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

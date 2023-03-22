@@ -42,6 +42,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlTypes(array $SqlTypes) 设置SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
  * @method array getSqls() 获取SQL 语句。支持传递多个sql语句。
  * @method void setSqls(array $Sqls) 设置SQL 语句。支持传递多个sql语句。
+ * @method string getAffectRowsSection() 获取影响行数，格式为M-N，例如：10-200
+ * @method void setAffectRowsSection(string $AffectRowsSection) 设置影响行数，格式为M-N，例如：10-200
+ * @method string getSentRowsSection() 获取返回行数，格式为M-N，例如：10-200
+ * @method void setSentRowsSection(string $SentRowsSection) 设置返回行数，格式为M-N，例如：10-200
+ * @method string getExecTimeSection() 获取执行时间，格式为M-N，例如：10-200
+ * @method void setExecTimeSection(string $ExecTimeSection) 设置执行时间，格式为M-N，例如：10-200
+ * @method string getLockWaitTimeSection() 获取锁等待时间，格式为M-N，例如：10-200
+ * @method void setLockWaitTimeSection(string $LockWaitTimeSection) 设置锁等待时间，格式为M-N，例如：10-200
+ * @method string getIoWaitTimeSection() 获取IO等待时间，格式为M-N，例如：10-200
+ * @method void setIoWaitTimeSection(string $IoWaitTimeSection) 设置IO等待时间，格式为M-N，例如：10-200
+ * @method string getTransactionLivingTimeSection() 获取事务持续时间，格式为M-N，例如：10-200
+ * @method void setTransactionLivingTimeSection(string $TransactionLivingTimeSection) 设置事务持续时间，格式为M-N，例如：10-200
  */
 class AuditLogFilter extends AbstractModel
 {
@@ -101,6 +113,36 @@ class AuditLogFilter extends AbstractModel
     public $Sqls;
 
     /**
+     * @var string 影响行数，格式为M-N，例如：10-200
+     */
+    public $AffectRowsSection;
+
+    /**
+     * @var string 返回行数，格式为M-N，例如：10-200
+     */
+    public $SentRowsSection;
+
+    /**
+     * @var string 执行时间，格式为M-N，例如：10-200
+     */
+    public $ExecTimeSection;
+
+    /**
+     * @var string 锁等待时间，格式为M-N，例如：10-200
+     */
+    public $LockWaitTimeSection;
+
+    /**
+     * @var string IO等待时间，格式为M-N，例如：10-200
+     */
+    public $IoWaitTimeSection;
+
+    /**
+     * @var string 事务持续时间，格式为M-N，例如：10-200
+     */
+    public $TransactionLivingTimeSection;
+
+    /**
      * @param array $Host 客户端地址。
      * @param array $User 用户名。
      * @param array $DBName 数据库名称。
@@ -112,6 +154,12 @@ class AuditLogFilter extends AbstractModel
      * @param integer $AffectRows 影响行数。表示筛选影响行数大于该值的审计日志。
      * @param array $SqlTypes SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
      * @param array $Sqls SQL 语句。支持传递多个sql语句。
+     * @param string $AffectRowsSection 影响行数，格式为M-N，例如：10-200
+     * @param string $SentRowsSection 返回行数，格式为M-N，例如：10-200
+     * @param string $ExecTimeSection 执行时间，格式为M-N，例如：10-200
+     * @param string $LockWaitTimeSection 锁等待时间，格式为M-N，例如：10-200
+     * @param string $IoWaitTimeSection IO等待时间，格式为M-N，例如：10-200
+     * @param string $TransactionLivingTimeSection 事务持续时间，格式为M-N，例如：10-200
      */
     function __construct()
     {
@@ -168,6 +216,30 @@ class AuditLogFilter extends AbstractModel
 
         if (array_key_exists("Sqls",$param) and $param["Sqls"] !== null) {
             $this->Sqls = $param["Sqls"];
+        }
+
+        if (array_key_exists("AffectRowsSection",$param) and $param["AffectRowsSection"] !== null) {
+            $this->AffectRowsSection = $param["AffectRowsSection"];
+        }
+
+        if (array_key_exists("SentRowsSection",$param) and $param["SentRowsSection"] !== null) {
+            $this->SentRowsSection = $param["SentRowsSection"];
+        }
+
+        if (array_key_exists("ExecTimeSection",$param) and $param["ExecTimeSection"] !== null) {
+            $this->ExecTimeSection = $param["ExecTimeSection"];
+        }
+
+        if (array_key_exists("LockWaitTimeSection",$param) and $param["LockWaitTimeSection"] !== null) {
+            $this->LockWaitTimeSection = $param["LockWaitTimeSection"];
+        }
+
+        if (array_key_exists("IoWaitTimeSection",$param) and $param["IoWaitTimeSection"] !== null) {
+            $this->IoWaitTimeSection = $param["IoWaitTimeSection"];
+        }
+
+        if (array_key_exists("TransactionLivingTimeSection",$param) and $param["TransactionLivingTimeSection"] !== null) {
+            $this->TransactionLivingTimeSection = $param["TransactionLivingTimeSection"];
         }
     }
 }

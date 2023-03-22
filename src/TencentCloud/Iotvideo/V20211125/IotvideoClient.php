@@ -28,6 +28,7 @@ use TencentCloud\Iotvideo\V20211125\Models as Models;
  * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户
  * @method Models\CallDeviceActionAsyncResponse CallDeviceActionAsync(Models\CallDeviceActionAsyncRequest $req) 异步调用设备行为
  * @method Models\CallDeviceActionSyncResponse CallDeviceActionSync(Models\CallDeviceActionSyncRequest $req) 同步调用设备行为
+ * @method Models\CallTRTCDeviceResponse CallTRTCDevice(Models\CallTRTCDeviceRequest $req) 呼叫TRTC设备
  * @method Models\CancelAIModelApplicationResponse CancelAIModelApplication(Models\CancelAIModelApplicationRequest $req) 取消AI模型申请
  * @method Models\CancelDeviceFirmwareTaskResponse CancelDeviceFirmwareTask(Models\CancelDeviceFirmwareTaskRequest $req) 本接口用于取消设备升级任务
  * @method Models\CheckForwardAuthResponse CheckForwardAuth(Models\CheckForwardAuthRequest $req) 判断是否开启的转发的权限

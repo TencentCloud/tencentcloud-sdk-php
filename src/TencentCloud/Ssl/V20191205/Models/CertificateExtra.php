@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewOrder(string $RenewOrder) 设置新订单证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSMCert() 获取是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSMCert(integer $SMCert) 设置是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CertificateExtra extends AbstractModel
 {
@@ -74,6 +78,12 @@ class CertificateExtra extends AbstractModel
     public $RenewOrder;
 
     /**
+     * @var integer 是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SMCert;
+
+    /**
      * @param string $DomainNumber 证书可配置域名数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginCertificateId 原始证书 ID。
@@ -83,6 +93,8 @@ class CertificateExtra extends AbstractModel
      * @param string $ReplacedFor 重颁发证书新 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewOrder 新订单证书 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SMCert 是否是国密证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class CertificateExtra extends AbstractModel
 
         if (array_key_exists("RenewOrder",$param) and $param["RenewOrder"] !== null) {
             $this->RenewOrder = $param["RenewOrder"];
+        }
+
+        if (array_key_exists("SMCert",$param) and $param["SMCert"] !== null) {
+            $this->SMCert = $param["SMCert"];
         }
     }
 }

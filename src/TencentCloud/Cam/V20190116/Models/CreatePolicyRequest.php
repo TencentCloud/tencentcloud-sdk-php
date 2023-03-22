@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePolicy请求参数结构体
  *
- * @method string getPolicyName() 获取策略名
- * @method void setPolicyName(string $PolicyName) 设置策略名
+ * @method string getPolicyName() 获取策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
+ * @method void setPolicyName(string $PolicyName) 设置策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
  * @method string getPolicyDocument() 获取策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
  * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
  * @method string getDescription() 获取策略描述
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePolicyRequest extends AbstractModel
 {
     /**
-     * @var string 策略名
+     * @var string 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
      */
     public $PolicyName;
 
@@ -45,7 +45,7 @@ class CreatePolicyRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $PolicyName 策略名
+     * @param string $PolicyName 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
      * @param string $PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      * @param string $Description 策略描述
      */

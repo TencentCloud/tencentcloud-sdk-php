@@ -78,6 +78,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgMultiple(integer $MsgMultiple) 设置源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConnectorSyncType() 获取数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConnectorSyncType(string $ConnectorSyncType) 设置数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getKeepPartition() 获取数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeepPartition(boolean $KeepPartition) 设置数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaParam extends AbstractModel
 {
@@ -175,6 +183,18 @@ class KafkaParam extends AbstractModel
     public $MsgMultiple;
 
     /**
+     * @var string 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConnectorSyncType;
+
+    /**
+     * @var boolean 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeepPartition;
+
+    /**
      * @param boolean $SelfBuilt 是否为自建集群
      * @param string $Resource 实例资源
      * @param string $Topic Topic名称，多个以“,”分隔
@@ -203,6 +223,10 @@ class KafkaParam extends AbstractModel
      * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConnectorSyncType 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $KeepPartition 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -285,6 +309,14 @@ class KafkaParam extends AbstractModel
 
         if (array_key_exists("MsgMultiple",$param) and $param["MsgMultiple"] !== null) {
             $this->MsgMultiple = $param["MsgMultiple"];
+        }
+
+        if (array_key_exists("ConnectorSyncType",$param) and $param["ConnectorSyncType"] !== null) {
+            $this->ConnectorSyncType = $param["ConnectorSyncType"];
+        }
+
+        if (array_key_exists("KeepPartition",$param) and $param["KeepPartition"] !== null) {
+            $this->KeepPartition = $param["KeepPartition"];
         }
     }
 }

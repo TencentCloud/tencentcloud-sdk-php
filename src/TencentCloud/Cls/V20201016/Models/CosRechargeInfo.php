@@ -32,26 +32,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取cos导入任务名称
+ * @method string getName() 获取COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置cos导入任务名称
+ * @method void setName(string $Name) 设置COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBucket() 获取cos存储桶
+ * @method string getBucket() 获取COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBucket(string $Bucket) 设置cos存储桶
+ * @method void setBucket(string $Bucket) 设置COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBucketRegion() 获取cos存储桶地域
+ * @method string getBucketRegion() 获取COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBucketRegion(string $BucketRegion) 设置cos存储桶地域
+ * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPrefix() 获取cos存储桶前缀地址
+ * @method string getPrefix() 获取COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrefix(string $Prefix) 设置cos存储桶前缀地址
+ * @method void setPrefix(string $Prefix) 设置COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+ * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogType(string $LogType) 设置采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+ * @method void setLogType(string $LogType) 设置采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
@@ -104,31 +104,31 @@ class CosRechargeInfo extends AbstractModel
     public $LogsetId;
 
     /**
-     * @var string cos导入任务名称
+     * @var string COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string cos存储桶
+     * @var string COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
     /**
-     * @var string cos存储桶地域
+     * @var string COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketRegion;
 
     /**
-     * @var string cos存储桶前缀地址
+     * @var string COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Prefix;
 
     /**
-     * @var string 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+     * @var string 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -183,15 +183,15 @@ class CosRechargeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogsetId 日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name cos导入任务名称
+     * @param string $Name COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Bucket cos存储桶
+     * @param string $Bucket COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BucketRegion cos存储桶地域
+     * @param string $BucketRegion COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Prefix cos存储桶前缀地址
+     * @param string $Prefix COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+     * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。

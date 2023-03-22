@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20210820\Models;
+namespace TencentCloud\Omics\V20221128\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateOfflineTask返回参数结构体
+ * DescribeRunGroups返回参数结构体
  *
- * @method string getTaskId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getData() 获取结果
- * @method void setData(string $Data) 设置结果
+ * @method integer getTotalCount() 获取符合条件的数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的数量。
+ * @method array getRunGroups() 获取任务批次列表。
+ * @method void setRunGroups(array $RunGroups) 设置任务批次列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateOfflineTaskResponse extends AbstractModel
+class DescribeRunGroupsResponse extends AbstractModel
 {
     /**
-     * @var string 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 符合条件的数量。
      */
-    public $TaskId;
+    public $TotalCount;
 
     /**
-     * @var string 结果
+     * @var array 任务批次列表。
      */
-    public $Data;
+    public $RunGroups;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +45,8 @@ class CreateOfflineTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Data 结果
+     * @param integer $TotalCount 符合条件的数量。
+     * @param array $RunGroups 任务批次列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +62,17 @@ class CreateOfflineTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists("RunGroups",$param) and $param["RunGroups"] !== null) {
+            $this->RunGroups = [];
+            foreach ($param["RunGroups"] as $key => $value){
+                $obj = new RunGroup();
+                $obj->deserialize($value);
+                array_push($this->RunGroups, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

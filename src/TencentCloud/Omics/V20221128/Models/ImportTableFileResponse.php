@@ -14,33 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20210820\Models;
+namespace TencentCloud\Omics\V20221128\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateOfflineTask返回参数结构体
+ * ImportTableFile返回参数结构体
  *
- * @method string getTaskId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getData() 获取结果
- * @method void setData(string $Data) 设置结果
+ * @method string getTableId() 获取表格ID。
+ * @method void setTableId(string $TableId) 设置表格ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateOfflineTaskResponse extends AbstractModel
+class ImportTableFileResponse extends AbstractModel
 {
     /**
-     * @var string 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 表格ID。
      */
-    public $TaskId;
-
-    /**
-     * @var string 结果
-     */
-    public $Data;
+    public $TableId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +38,7 @@ class CreateOfflineTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Data 结果
+     * @param string $TableId 表格ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +54,8 @@ class CreateOfflineTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
+            $this->TableId = $param["TableId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

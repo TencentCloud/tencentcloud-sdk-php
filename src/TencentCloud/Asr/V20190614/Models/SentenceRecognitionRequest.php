@@ -35,6 +35,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ja：16k 日语；
 • 16k_vi：16k 越南语；
 • 16k_ms：16k 马来语；
+• 16k_id：16k 印度尼西亚语；
 • 16k_zh_medical：16k 医疗；
 • 16k_zh-PY 中英粤;
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
@@ -49,6 +50,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ja：16k 日语；
 • 16k_vi：16k 越南语；
 • 16k_ms：16k 马来语；
+• 16k_id：16k 印度尼西亚语；
 • 16k_zh_medical：16k 医疗；
 • 16k_zh-PY 中英粤;
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
@@ -105,6 +107,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ja：16k 日语；
 • 16k_vi：16k 越南语；
 • 16k_ms：16k 马来语；
+• 16k_id：16k 印度尼西亚语；
 • 16k_zh_medical：16k 医疗；
 • 16k_zh-PY 中英粤;
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
@@ -195,6 +198,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ja：16k 日语；
 • 16k_vi：16k 越南语；
 • 16k_ms：16k 马来语；
+• 16k_id：16k 印度尼西亚语；
 • 16k_zh_medical：16k 医疗；
 • 16k_zh-PY 中英粤;
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；

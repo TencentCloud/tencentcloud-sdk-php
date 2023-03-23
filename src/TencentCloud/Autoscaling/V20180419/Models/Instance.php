@@ -84,6 +84,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionNumber(integer $VersionNumber) 设置版本号
  * @method string getAutoScalingGroupName() 获取伸缩组名称
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称
+ * @method string getWarmupStatus() 获取预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热
+ * @method void setWarmupStatus(string $WarmupStatus) 设置预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热
  */
 class Instance extends AbstractModel
 {
@@ -172,6 +182,15 @@ class Instance extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
+     * @var string 预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热
+     */
+    public $WarmupStatus;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $LaunchConfigurationId 启动配置ID
@@ -204,6 +223,11 @@ class Instance extends AbstractModel
      * @param string $InstanceType 实例类型
      * @param integer $VersionNumber 版本号
      * @param string $AutoScalingGroupName 伸缩组名称
+     * @param string $WarmupStatus 预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热
      */
     function __construct()
     {
@@ -268,6 +292,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("AutoScalingGroupName",$param) and $param["AutoScalingGroupName"] !== null) {
             $this->AutoScalingGroupName = $param["AutoScalingGroupName"];
+        }
+
+        if (array_key_exists("WarmupStatus",$param) and $param["WarmupStatus"] !== null) {
+            $this->WarmupStatus = $param["WarmupStatus"];
         }
     }
 }

@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) 设置输出的HLS拉流配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxConcurrent() 获取最大拉流并发数，最大为4，默认4。
+ * @method void setMaxConcurrent(integer $MaxConcurrent) 设置最大拉流并发数，最大为4，默认4。
  */
 class DescribeOutput extends AbstractModel
 {
@@ -152,6 +154,11 @@ class DescribeOutput extends AbstractModel
     public $HLSPullSettings;
 
     /**
+     * @var integer 最大拉流并发数，最大为4，默认4。
+     */
+    public $MaxConcurrent;
+
+    /**
      * @param string $OutputId 输出Id。
      * @param string $OutputName 输出名称。
      * @param string $OutputType 输出类型。
@@ -176,6 +183,7 @@ class DescribeOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeOutputHLSPullSettings $HLSPullSettings 输出的HLS拉流配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxConcurrent 最大拉流并发数，最大为4，默认4。
      */
     function __construct()
     {
@@ -255,6 +263,10 @@ class DescribeOutput extends AbstractModel
         if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
             $this->HLSPullSettings = new DescribeOutputHLSPullSettings();
             $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
+        }
+
+        if (array_key_exists("MaxConcurrent",$param) and $param["MaxConcurrent"] !== null) {
+            $this->MaxConcurrent = $param["MaxConcurrent"];
         }
     }
 }

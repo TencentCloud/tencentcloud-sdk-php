@@ -20,22 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoSnapshotPolicy请求参数结构体
  *
- * @method string getDayOfWeek() 获取快照重复日期，星期一到星期日
- * @method void setDayOfWeek(string $DayOfWeek) 设置快照重复日期，星期一到星期日
  * @method string getHour() 获取快照重复时间点
  * @method void setHour(string $Hour) 设置快照重复时间点
  * @method string getPolicyName() 获取策略名称
  * @method void setPolicyName(string $PolicyName) 设置策略名称
+ * @method string getDayOfWeek() 获取快照重复日期，星期一到星期日
+ * @method void setDayOfWeek(string $DayOfWeek) 设置快照重复日期，星期一到星期日
  * @method integer getAliveDays() 获取快照保留时长
  * @method void setAliveDays(integer $AliveDays) 设置快照保留时长
+ * @method string getDayOfMonth() 获取快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+ * @method void setDayOfMonth(string $DayOfMonth) 设置快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+ * @method integer getIntervalDays() 获取间隔天数
+ * @method void setIntervalDays(integer $IntervalDays) 设置间隔天数
  */
 class CreateAutoSnapshotPolicyRequest extends AbstractModel
 {
-    /**
-     * @var string 快照重复日期，星期一到星期日
-     */
-    public $DayOfWeek;
-
     /**
      * @var string 快照重复时间点
      */
@@ -47,15 +46,32 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
     public $PolicyName;
 
     /**
+     * @var string 快照重复日期，星期一到星期日
+     */
+    public $DayOfWeek;
+
+    /**
      * @var integer 快照保留时长
      */
     public $AliveDays;
 
     /**
-     * @param string $DayOfWeek 快照重复日期，星期一到星期日
+     * @var string 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+     */
+    public $DayOfMonth;
+
+    /**
+     * @var integer 间隔天数
+     */
+    public $IntervalDays;
+
+    /**
      * @param string $Hour 快照重复时间点
      * @param string $PolicyName 策略名称
+     * @param string $DayOfWeek 快照重复日期，星期一到星期日
      * @param integer $AliveDays 快照保留时长
+     * @param string $DayOfMonth 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+     * @param integer $IntervalDays 间隔天数
      */
     function __construct()
     {
@@ -70,10 +86,6 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DayOfWeek",$param) and $param["DayOfWeek"] !== null) {
-            $this->DayOfWeek = $param["DayOfWeek"];
-        }
-
         if (array_key_exists("Hour",$param) and $param["Hour"] !== null) {
             $this->Hour = $param["Hour"];
         }
@@ -82,8 +94,20 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
             $this->PolicyName = $param["PolicyName"];
         }
 
+        if (array_key_exists("DayOfWeek",$param) and $param["DayOfWeek"] !== null) {
+            $this->DayOfWeek = $param["DayOfWeek"];
+        }
+
         if (array_key_exists("AliveDays",$param) and $param["AliveDays"] !== null) {
             $this->AliveDays = $param["AliveDays"];
+        }
+
+        if (array_key_exists("DayOfMonth",$param) and $param["DayOfMonth"] !== null) {
+            $this->DayOfMonth = $param["DayOfMonth"];
+        }
+
+        if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
+            $this->IntervalDays = $param["IntervalDays"];
         }
     }
 }

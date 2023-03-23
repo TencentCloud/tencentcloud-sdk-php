@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationTime(string $CreationTime) 设置快照策略创建时间
  * @method integer getFileSystemNums() 获取关联的文件系统个数
  * @method void setFileSystemNums(integer $FileSystemNums) 设置关联的文件系统个数
- * @method string getDayOfWeek() 获取快照定期备份在一星期哪一天
- * @method void setDayOfWeek(string $DayOfWeek) 设置快照定期备份在一星期哪一天
+ * @method string getDayOfWeek() 获取快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
+ * @method void setDayOfWeek(string $DayOfWeek) 设置快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
  * @method string getHour() 获取快照定期备份在一天的哪一小时
  * @method void setHour(string $Hour) 设置快照定期备份在一天的哪一小时
  * @method integer getIsActivated() 获取是否激活定期快照功能
@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionName(string $RegionName) 设置地域
  * @method array getFileSystems() 获取文件系统信息
  * @method void setFileSystems(array $FileSystems) 设置文件系统信息
+ * @method string getDayOfMonth() 获取快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDayOfMonth(string $DayOfMonth) 设置快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIntervalDays() 获取快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntervalDays(integer $IntervalDays) 设置快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoSnapshotPolicyInfo extends AbstractModel
 {
@@ -70,7 +78,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $FileSystemNums;
 
     /**
-     * @var string 快照定期备份在一星期哪一天
+     * @var string 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
      */
     public $DayOfWeek;
 
@@ -115,11 +123,23 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $FileSystems;
 
     /**
+     * @var string 快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DayOfMonth;
+
+    /**
+     * @var integer 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntervalDays;
+
+    /**
      * @param string $AutoSnapshotPolicyId 快照策略ID
      * @param string $PolicyName 快照策略ID
      * @param string $CreationTime 快照策略创建时间
      * @param integer $FileSystemNums 关联的文件系统个数
-     * @param string $DayOfWeek 快照定期备份在一星期哪一天
+     * @param string $DayOfWeek 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
      * @param string $Hour 快照定期备份在一天的哪一小时
      * @param integer $IsActivated 是否激活定期快照功能
      * @param string $NextActiveTime 下一次触发快照时间
@@ -128,6 +148,10 @@ class AutoSnapshotPolicyInfo extends AbstractModel
      * @param integer $AliveDays 保留时间
      * @param string $RegionName 地域
      * @param array $FileSystems 文件系统信息
+     * @param string $DayOfMonth 快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IntervalDays 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -197,6 +221,14 @@ class AutoSnapshotPolicyInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FileSystems, $obj);
             }
+        }
+
+        if (array_key_exists("DayOfMonth",$param) and $param["DayOfMonth"] !== null) {
+            $this->DayOfMonth = $param["DayOfMonth"];
+        }
+
+        if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
+            $this->IntervalDays = $param["IntervalDays"];
         }
     }
 }

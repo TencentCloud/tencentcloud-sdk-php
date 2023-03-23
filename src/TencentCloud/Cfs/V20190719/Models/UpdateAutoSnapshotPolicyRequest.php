@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAliveDays(integer $AliveDays) 设置快照保留日期
  * @method integer getIsActivated() 获取是否激活定期快照功能
  * @method void setIsActivated(integer $IsActivated) 设置是否激活定期快照功能
+ * @method string getDayOfMonth() 获取定期快照在月的某几天天，该参数与DayOfWeek互斥
+ * @method void setDayOfMonth(string $DayOfMonth) 设置定期快照在月的某几天天，该参数与DayOfWeek互斥
+ * @method integer getIntervalDays() 获取间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+ * @method void setIntervalDays(integer $IntervalDays) 设置间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
  */
 class UpdateAutoSnapshotPolicyRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
     public $IsActivated;
 
     /**
+     * @var string 定期快照在月的某几天天，该参数与DayOfWeek互斥
+     */
+    public $DayOfMonth;
+
+    /**
+     * @var integer 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+     */
+    public $IntervalDays;
+
+    /**
      * @param string $AutoSnapshotPolicyId 快照策略ID
      * @param string $PolicyName 快照策略名称
      * @param string $DayOfWeek 快照定期备份在一星期哪一天
      * @param string $Hour 快照定期备份在一天的哪一小时
      * @param integer $AliveDays 快照保留日期
      * @param integer $IsActivated 是否激活定期快照功能
+     * @param string $DayOfMonth 定期快照在月的某几天天，该参数与DayOfWeek互斥
+     * @param integer $IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
 
         if (array_key_exists("IsActivated",$param) and $param["IsActivated"] !== null) {
             $this->IsActivated = $param["IsActivated"];
+        }
+
+        if (array_key_exists("DayOfMonth",$param) and $param["DayOfMonth"] !== null) {
+            $this->DayOfMonth = $param["DayOfMonth"];
+        }
+
+        if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
+            $this->IntervalDays = $param["IntervalDays"];
         }
     }
 }

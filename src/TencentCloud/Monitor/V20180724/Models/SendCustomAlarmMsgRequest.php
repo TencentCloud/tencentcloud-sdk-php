@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() 获取接口模块名，当前取值monitor
  * @method void setModule(string $Module) 设置接口模块名，当前取值monitor
- * @method string getPolicyId() 获取消息策略ID，在云监控自定义消息页面配置
- * @method void setPolicyId(string $PolicyId) 设置消息策略ID，在云监控自定义消息页面配置
+ * @method string getPolicyId() 获取消息策略ID，在自定义消息页面配置
+ * @method void setPolicyId(string $PolicyId) 设置消息策略ID，在自定义消息页面配置
  * @method string getMsg() 获取用户想要发送的自定义消息内容
  * @method void setMsg(string $Msg) 设置用户想要发送的自定义消息内容
  */
@@ -35,7 +35,7 @@ class SendCustomAlarmMsgRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var string 消息策略ID，在云监控自定义消息页面配置
+     * @var string 消息策略ID，在自定义消息页面配置
      */
     public $PolicyId;
 
@@ -46,7 +46,7 @@ class SendCustomAlarmMsgRequest extends AbstractModel
 
     /**
      * @param string $Module 接口模块名，当前取值monitor
-     * @param string $PolicyId 消息策略ID，在云监控自定义消息页面配置
+     * @param string $PolicyId 消息策略ID，在自定义消息页面配置
      * @param string $Msg 用户想要发送的自定义消息内容
      */
     function __construct()

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomData(string $CustomData) 设置用户自定义数据
  * @method array getFlowApproverInfos() 获取合同(流程)的签署人数组
  * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置合同(流程)的签署人数组
+ * @method array getCcInfos() 获取合同(流程)关注方信息列表
+ * @method void setCcInfos(array $CcInfos) 设置合同(流程)关注方信息列表
  */
 class FlowDetailInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class FlowDetailInfo extends AbstractModel
     public $FlowApproverInfos;
 
     /**
+     * @var array 合同(流程)关注方信息列表
+     */
+    public $CcInfos;
+
+    /**
      * @param string $FlowId 合同(流程)的Id
      * @param string $FlowName 合同(流程)的名字
      * @param string $FlowType 合同(流程)的类型
@@ -96,6 +103,7 @@ class FlowDetailInfo extends AbstractModel
      * @param integer $DeadLine 合同(流程)的签署截止时间戳
      * @param string $CustomData 用户自定义数据
      * @param array $FlowApproverInfos 合同(流程)的签署人数组
+     * @param array $CcInfos 合同(流程)关注方信息列表
      */
     function __construct()
     {
@@ -148,6 +156,15 @@ class FlowDetailInfo extends AbstractModel
                 $obj = new FlowApproverDetail();
                 $obj->deserialize($value);
                 array_push($this->FlowApproverInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {
+            $this->CcInfos = [];
+            foreach ($param["CcInfos"] as $key => $value){
+                $obj = new FlowApproverDetail();
+                $obj->deserialize($value);
+                array_push($this->CcInfos, $obj);
             }
         }
     }

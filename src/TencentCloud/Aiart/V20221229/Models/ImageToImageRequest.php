@@ -73,9 +73,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
  * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method float getStrength() 获取生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.6。
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
  * @method void setStrength(float $Strength) 设置生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.6。
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
  */
 class ImageToImageRequest extends AbstractModel
 {
@@ -139,7 +139,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
      * @var float 生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.6。
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
      */
     public $Strength;
 
@@ -171,7 +171,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
      * @param LogoParam $LogoParam 标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
      * @param float $Strength 生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.6。
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
      */
     function __construct()
     {

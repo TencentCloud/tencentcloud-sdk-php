@@ -86,6 +86,14 @@ HANDWRITE -手写签名
  * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值
  * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要
  * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+ * @method array getApproverVerifyTypes() 获取签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的
+ * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的
+ * @method array getApproverSignTypes() 获取签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+ * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -190,6 +198,18 @@ HANDWRITE -手写签名
     public $ApproverNeedSignReview;
 
     /**
+     * @var array 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的
+     */
+    public $ApproverVerifyTypes;
+
+    /**
+     * @var array 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+     */
+    public $ApproverSignTypes;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字符
      * @param string $IdCardType 签署人身份证件类型
 1.ID_CARD 居民身份证
@@ -218,6 +238,10 @@ HANDWRITE -手写签名
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用
      * @param ApproverOption $ApproverOption 签署人个性化能力值
      * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     * @param array $ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的
+     * @param array $ApproverSignTypes 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
      */
     function __construct()
     {
@@ -308,6 +332,14 @@ HANDWRITE -手写签名
 
         if (array_key_exists("ApproverNeedSignReview",$param) and $param["ApproverNeedSignReview"] !== null) {
             $this->ApproverNeedSignReview = $param["ApproverNeedSignReview"];
+        }
+
+        if (array_key_exists("ApproverVerifyTypes",$param) and $param["ApproverVerifyTypes"] !== null) {
+            $this->ApproverVerifyTypes = $param["ApproverVerifyTypes"];
+        }
+
+        if (array_key_exists("ApproverSignTypes",$param) and $param["ApproverSignTypes"] !== null) {
+            $this->ApproverSignTypes = $param["ApproverSignTypes"];
         }
     }
 }

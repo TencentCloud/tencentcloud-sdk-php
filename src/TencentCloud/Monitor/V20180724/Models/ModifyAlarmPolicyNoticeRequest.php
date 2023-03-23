@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeIds(array $NoticeIds) 设置告警通知模板 ID 列表。
  * @method array getPolicyIds() 获取告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
  * @method void setPolicyIds(array $PolicyIds) 设置告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+ * @method array getHierarchicalNotices() 获取告警分级通知规则配置
+ * @method void setHierarchicalNotices(array $HierarchicalNotices) 设置告警分级通知规则配置
  */
 class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyAlarmPolicyNoticeRequest extends AbstractModel
     public $PolicyIds;
 
     /**
+     * @var array 告警分级通知规则配置
+     */
+    public $HierarchicalNotices;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”。
      * @param string $PolicyId 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
      * @param array $NoticeIds 告警通知模板 ID 列表。
      * @param array $PolicyIds 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+     * @param array $HierarchicalNotices 告警分级通知规则配置
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("HierarchicalNotices",$param) and $param["HierarchicalNotices"] !== null) {
+            $this->HierarchicalNotices = [];
+            foreach ($param["HierarchicalNotices"] as $key => $value){
+                $obj = new AlarmHierarchicalNotice();
+                $obj->deserialize($value);
+                array_push($this->HierarchicalNotices, $obj);
+            }
         }
     }
 }

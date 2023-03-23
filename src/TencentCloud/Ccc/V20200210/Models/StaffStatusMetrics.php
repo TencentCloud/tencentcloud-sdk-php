@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseMobileAccept(integer $UseMobileAccept) 设置手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
  * @method boolean getUseMobileCallOut() 获取手机外呼开关
  * @method void setUseMobileCallOut(boolean $UseMobileCallOut) 设置手机外呼开关
+ * @method integer getLastOnlineTimestamp() 获取最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastOnlineTimestamp(integer $LastOnlineTimestamp) 设置最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLastStatusTimestamp() 获取最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastStatusTimestamp(integer $LastStatusTimestamp) 设置最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StaffStatusMetrics extends AbstractModel
 {
@@ -122,6 +130,18 @@ class StaffStatusMetrics extends AbstractModel
     public $UseMobileCallOut;
 
     /**
+     * @var integer 最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastOnlineTimestamp;
+
+    /**
+     * @var integer 最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastStatusTimestamp;
+
+    /**
      * @param string $Email 坐席邮箱
      * @param string $Status 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
      * @param StaffStatusExtra $StatusExtra 坐席状态补充信息
@@ -136,6 +156,10 @@ class StaffStatusMetrics extends AbstractModel
      * @param boolean $ReserveNotReady 是否预约示忙
      * @param integer $UseMobileAccept 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
      * @param boolean $UseMobileCallOut 手机外呼开关
+     * @param integer $LastOnlineTimestamp 最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LastStatusTimestamp 最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -205,6 +229,14 @@ class StaffStatusMetrics extends AbstractModel
 
         if (array_key_exists("UseMobileCallOut",$param) and $param["UseMobileCallOut"] !== null) {
             $this->UseMobileCallOut = $param["UseMobileCallOut"];
+        }
+
+        if (array_key_exists("LastOnlineTimestamp",$param) and $param["LastOnlineTimestamp"] !== null) {
+            $this->LastOnlineTimestamp = $param["LastOnlineTimestamp"];
+        }
+
+        if (array_key_exists("LastStatusTimestamp",$param) and $param["LastStatusTimestamp"] !== null) {
+            $this->LastStatusTimestamp = $param["LastStatusTimestamp"];
         }
     }
 }

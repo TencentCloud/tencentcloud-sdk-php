@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置环境id
  * @method string getGatewayId() 获取网关id
  * @method void setGatewayId(string $GatewayId) 设置网关id
- * @method string getMetricName() 获取监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
- * @method void setMetricName(string $MetricName) 设置监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
+ * @method string getMetricName() 获取监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
+ * @method void setMetricName(string $MetricName) 设置监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
  * @method string getStartTime() 获取监控起始时间
  * @method void setStartTime(string $StartTime) 设置监控起始时间
  * @method string getEndTime() 获取监控结束时间
@@ -48,7 +48,7 @@ class DescribeGatewayCurveDataRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var string 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
+     * @var string 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
      */
     public $MetricName;
 
@@ -75,7 +75,7 @@ class DescribeGatewayCurveDataRequest extends AbstractModel
     /**
      * @param string $EnvId 环境id
      * @param string $GatewayId 网关id
-     * @param string $MetricName 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
+     * @param string $MetricName 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
      * @param string $StartTime 监控起始时间
      * @param string $EndTime 监控结束时间
      * @param string $GatewayVersion 网关版本

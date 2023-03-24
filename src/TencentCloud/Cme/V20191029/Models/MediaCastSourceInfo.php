@@ -20,21 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 点播转直播输入源信息。
  *
+ * @method string getId() 获取输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
  * @method void setType(string $Type) 设置输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
- * @method string getMaterialId() 获取多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
- * @method void setMaterialId(string $MaterialId) 设置多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
  * @method string getFileId() 获取云点播媒体文件 ID。当 Type = VOD 时必填。
  * @method void setFileId(string $FileId) 设置云点播媒体文件 ID。当 Type = VOD 时必填。
- * @method integer getIndex() 获取序号，位于输入源列表中的序号，由系统分配。
- * @method void setIndex(integer $Index) 设置序号，位于输入源列表中的序号，由系统分配。
+ * @method string getMaterialId() 获取多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
+ * @method void setMaterialId(string $MaterialId) 设置多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
  */
 class MediaCastSourceInfo extends AbstractModel
 {
+    /**
+     * @var string 输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
     /**
      * @var string 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
@@ -43,27 +51,23 @@ class MediaCastSourceInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
-     */
-    public $MaterialId;
-
-    /**
      * @var string 云点播媒体文件 ID。当 Type = VOD 时必填。
      */
     public $FileId;
 
     /**
-     * @var integer 序号，位于输入源列表中的序号，由系统分配。
+     * @var string 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
      */
-    public $Index;
+    public $MaterialId;
 
     /**
+     * @param string $Id 输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
-     * @param string $MaterialId 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
      * @param string $FileId 云点播媒体文件 ID。当 Type = VOD 时必填。
-     * @param integer $Index 序号，位于输入源列表中的序号，由系统分配。
+     * @param string $MaterialId 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
      */
     function __construct()
     {
@@ -78,20 +82,20 @@ class MediaCastSourceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
-            $this->MaterialId = $param["MaterialId"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
         }
 
-        if (array_key_exists("Index",$param) and $param["Index"] !== null) {
-            $this->Index = $param["Index"];
+        if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
+            $this->MaterialId = $param["MaterialId"];
         }
     }
 }

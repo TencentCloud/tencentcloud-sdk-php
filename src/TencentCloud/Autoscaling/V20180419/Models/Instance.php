@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
 <li>NO_NEED_WARMUP：无需预热
 <li>IN_WARMUP：预热中
 <li>AFTER_WARMUP：完成预热
+ * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -191,6 +195,12 @@ class Instance extends AbstractModel
     public $WarmupStatus;
 
     /**
+     * @var array 置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisasterRecoverGroupIds;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $LaunchConfigurationId 启动配置ID
@@ -228,6 +238,8 @@ class Instance extends AbstractModel
 <li>NO_NEED_WARMUP：无需预热
 <li>IN_WARMUP：预热中
 <li>AFTER_WARMUP：完成预热
+     * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -296,6 +308,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("WarmupStatus",$param) and $param["WarmupStatus"] !== null) {
             $this->WarmupStatus = $param["WarmupStatus"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
+            $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
         }
     }
 }

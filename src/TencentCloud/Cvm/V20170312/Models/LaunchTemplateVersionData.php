@@ -112,6 +112,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的云服务器、云硬盘实例。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDisableApiTermination() 获取实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) 设置实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LaunchTemplateVersionData extends AbstractModel
 {
@@ -254,6 +268,17 @@ class LaunchTemplateVersionData extends AbstractModel
     public $TagSpecification;
 
     /**
+     * @var boolean 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisableApiTermination;
+
+    /**
      * @param Placement $Placement 实例所在的位置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例机型。
@@ -299,6 +324,13 @@ class LaunchTemplateVersionData extends AbstractModel
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的云服务器、云硬盘实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -423,6 +455,10 @@ class LaunchTemplateVersionData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
+        }
+
+        if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
+            $this->DisableApiTermination = $param["DisableApiTermination"];
         }
     }
 }

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 资源信息，包含资源以及归属信息
  *
  * @method Resource getResource() 获取媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(Resource $Resource) 设置媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Entity getOwner() 获取资源归属，个人或团队。
  * @method void setOwner(Entity $Owner) 设置资源归属，个人或团队。
  */
@@ -31,7 +29,6 @@ class ResourceInfo extends AbstractModel
 {
     /**
      * @var Resource 媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
@@ -42,7 +39,6 @@ class ResourceInfo extends AbstractModel
 
     /**
      * @param Resource $Resource 媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Entity $Owner 资源归属，个人或团队。
      */
     function __construct()

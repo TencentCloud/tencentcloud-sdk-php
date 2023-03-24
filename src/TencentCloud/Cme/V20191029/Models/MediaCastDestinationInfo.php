@@ -20,24 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 点播转直播输出信息。
  *
- * @method integer getIndex() 获取输出源序号。由系统进行分配。
- * @method void setIndex(integer $Index) 设置输出源序号。由系统进行分配。
- * @method string getName() 获取输出源的名称。
- * @method void setName(string $Name) 设置输出源的名称。
+ * @method string getId() 获取输出源 Id。由系统进行分配。
+ * @method void setId(string $Id) 设置输出源 Id。由系统进行分配。
  * @method string getPushUrl() 获取输出直播流地址。支持的直播流类型为 RTMP 和 SRT。
  * @method void setPushUrl(string $PushUrl) 设置输出直播流地址。支持的直播流类型为 RTMP 和 SRT。
+ * @method string getName() 获取输出源的名称。
+ * @method void setName(string $Name) 设置输出源的名称。
  */
 class MediaCastDestinationInfo extends AbstractModel
 {
     /**
-     * @var integer 输出源序号。由系统进行分配。
+     * @var string 输出源 Id。由系统进行分配。
      */
-    public $Index;
-
-    /**
-     * @var string 输出源的名称。
-     */
-    public $Name;
+    public $Id;
 
     /**
      * @var string 输出直播流地址。支持的直播流类型为 RTMP 和 SRT。
@@ -45,9 +40,14 @@ class MediaCastDestinationInfo extends AbstractModel
     public $PushUrl;
 
     /**
-     * @param integer $Index 输出源序号。由系统进行分配。
-     * @param string $Name 输出源的名称。
+     * @var string 输出源的名称。
+     */
+    public $Name;
+
+    /**
+     * @param string $Id 输出源 Id。由系统进行分配。
      * @param string $PushUrl 输出直播流地址。支持的直播流类型为 RTMP 和 SRT。
+     * @param string $Name 输出源的名称。
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class MediaCastDestinationInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Index",$param) and $param["Index"] !== null) {
-            $this->Index = $param["Index"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("PushUrl",$param) and $param["PushUrl"] !== null) {
             $this->PushUrl = $param["PushUrl"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

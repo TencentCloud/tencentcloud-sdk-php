@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotInstallBasicScrape(boolean $NotInstallBasicScrape) 设置是否安装默认采集配置
  * @method boolean getNotScrape() 获取是否采集指标，true代表drop所有指标，false代表采集默认指标
  * @method void setNotScrape(boolean $NotScrape) 设置是否采集指标，true代表drop所有指标，false代表采集默认指标
+ * @method boolean getOpenDefaultRecord() 获取是否开启默认预聚合规则
+ * @method void setOpenDefaultRecord(boolean $OpenDefaultRecord) 设置是否开启默认预聚合规则
  */
 class PrometheusClusterAgentBasic extends AbstractModel
 {
@@ -80,6 +82,11 @@ class PrometheusClusterAgentBasic extends AbstractModel
     public $NotScrape;
 
     /**
+     * @var boolean 是否开启默认预聚合规则
+     */
+    public $OpenDefaultRecord;
+
+    /**
      * @param string $Region 集群ID
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群ID
@@ -88,6 +95,7 @@ class PrometheusClusterAgentBasic extends AbstractModel
      * @param array $ExternalLabels 该集群采集的所有指标都会带上这些labels
      * @param boolean $NotInstallBasicScrape 是否安装默认采集配置
      * @param boolean $NotScrape 是否采集指标，true代表drop所有指标，false代表采集默认指标
+     * @param boolean $OpenDefaultRecord 是否开启默认预聚合规则
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class PrometheusClusterAgentBasic extends AbstractModel
 
         if (array_key_exists("NotScrape",$param) and $param["NotScrape"] !== null) {
             $this->NotScrape = $param["NotScrape"];
+        }
+
+        if (array_key_exists("OpenDefaultRecord",$param) and $param["OpenDefaultRecord"] !== null) {
+            $this->OpenDefaultRecord = $param["OpenDefaultRecord"];
         }
     }
 }

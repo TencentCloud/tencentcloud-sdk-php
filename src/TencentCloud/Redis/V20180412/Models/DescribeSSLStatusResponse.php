@@ -20,43 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSSLStatus返回参数结构体
  *
- * @method string getCertDownloadUrl() 获取证书下载地址
- * @method void setCertDownloadUrl(string $CertDownloadUrl) 设置证书下载地址
- * @method string getUrlExpiredTime() 获取证书下载链接到期时间
- * @method void setUrlExpiredTime(string $UrlExpiredTime) 设置证书下载链接到期时间
- * @method boolean getSSLConfig() 获取实例SSL配置状态， true：开启 false：关闭
- * @method void setSSLConfig(boolean $SSLConfig) 设置实例SSL配置状态， true：开启 false：关闭
- * @method boolean getFeatureSupport() 获取实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
- * @method void setFeatureSupport(boolean $FeatureSupport) 设置实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
- * @method integer getStatus() 获取SSL配置状态，1: 配置中 2：配置成功
- * @method void setStatus(integer $Status) 设置SSL配置状态，1: 配置中 2：配置成功
+ * @method string getCertDownloadUrl() 获取SSL 证书下载地址。
+ * @method void setCertDownloadUrl(string $CertDownloadUrl) 设置SSL 证书下载地址。
+ * @method string getUrlExpiredTime() 获取证书下载链接到期时间。
+ * @method void setUrlExpiredTime(string $UrlExpiredTime) 设置证书下载链接到期时间。
+ * @method boolean getSSLConfig() 获取标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。
+ * @method void setSSLConfig(boolean $SSLConfig) 设置标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。
+ * @method boolean getFeatureSupport() 获取标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。
+ * @method void setFeatureSupport(boolean $FeatureSupport) 设置标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。
+ * @method integer getStatus() 获取说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。
+ * @method void setStatus(integer $Status) 设置说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSSLStatusResponse extends AbstractModel
 {
     /**
-     * @var string 证书下载地址
+     * @var string SSL 证书下载地址。
      */
     public $CertDownloadUrl;
 
     /**
-     * @var string 证书下载链接到期时间
+     * @var string 证书下载链接到期时间。
      */
     public $UrlExpiredTime;
 
     /**
-     * @var boolean 实例SSL配置状态， true：开启 false：关闭
+     * @var boolean 标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。
      */
     public $SSLConfig;
 
     /**
-     * @var boolean 实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
+     * @var boolean 标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。
      */
     public $FeatureSupport;
 
     /**
-     * @var integer SSL配置状态，1: 配置中 2：配置成功
+     * @var integer 说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。
      */
     public $Status;
 
@@ -66,11 +84,17 @@ class DescribeSSLStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CertDownloadUrl 证书下载地址
-     * @param string $UrlExpiredTime 证书下载链接到期时间
-     * @param boolean $SSLConfig 实例SSL配置状态， true：开启 false：关闭
-     * @param boolean $FeatureSupport 实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
-     * @param integer $Status SSL配置状态，1: 配置中 2：配置成功
+     * @param string $CertDownloadUrl SSL 证书下载地址。
+     * @param string $UrlExpiredTime 证书下载链接到期时间。
+     * @param boolean $SSLConfig 标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。
+     * @param boolean $FeatureSupport 标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。
+     * @param integer $Status 说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

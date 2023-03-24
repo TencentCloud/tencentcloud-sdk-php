@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModfiyInstancePassword返回参数结构体
  *
- * @method integer getTaskId() 获取任务ID
- * @method void setTaskId(integer $TaskId) 设置任务ID
+ * @method integer getTaskId() 获取任务 ID。
+ * @method void setTaskId(integer $TaskId) 设置任务 ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModfiyInstancePasswordResponse extends AbstractModel
 {
     /**
-     * @var integer 任务ID
+     * @var integer 任务 ID。
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class ModfiyInstancePasswordResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 任务ID
+     * @param integer $TaskId 任务 ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

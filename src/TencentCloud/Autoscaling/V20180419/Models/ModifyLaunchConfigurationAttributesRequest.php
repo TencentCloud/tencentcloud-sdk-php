@@ -112,6 +112,8 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 注意：此字段默认为空。
  * @method IPv6InternetAccessible getIPv6InternetAccessible() 获取IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) 设置IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+ * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -242,6 +244,11 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $IPv6InternetAccessible;
 
     /**
+     * @var array 置放群组id，仅支持指定一个。
+     */
+    public $DisasterRecoverGroupIds;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
@@ -288,6 +295,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
      * @param string $HpcClusterId 高性能计算集群ID。<br>
 注意：此字段默认为空。
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
+     * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
      */
     function __construct()
     {
@@ -393,6 +401,10 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (array_key_exists("IPv6InternetAccessible",$param) and $param["IPv6InternetAccessible"] !== null) {
             $this->IPv6InternetAccessible = new IPv6InternetAccessible();
             $this->IPv6InternetAccessible->deserialize($param["IPv6InternetAccessible"]);
+        }
+
+        if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
+            $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
         }
     }
 }

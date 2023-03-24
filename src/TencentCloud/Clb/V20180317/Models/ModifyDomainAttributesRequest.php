@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
  * @method boolean getDefaultServer() 获取是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
  * @method void setDefaultServer(boolean $DefaultServer) 设置是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+ * @method boolean getQuic() 获取是否开启Quic，注意，只有HTTPS域名才能开启Quic
+ * @method void setQuic(boolean $Quic) 设置是否开启Quic，注意，只有HTTPS域名才能开启Quic
  * @method string getNewDefaultServerDomain() 获取监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
  * @method array getNewDomains() 获取要修改的新域名列表。NewDomain和NewDomains只能传一个。
@@ -79,6 +81,11 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $DefaultServer;
 
     /**
+     * @var boolean 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+     */
+    public $Quic;
+
+    /**
      * @var string 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      */
     public $NewDefaultServerDomain;
@@ -101,6 +108,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @param CertificateInput $Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
      * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param boolean $DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * @param boolean $Quic 是否开启Quic，注意，只有HTTPS域名才能开启Quic
      * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      * @param array $NewDomains 要修改的新域名列表。NewDomain和NewDomains只能传一个。
      * @param MultiCertInfo $MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
@@ -145,6 +153,10 @@ class ModifyDomainAttributesRequest extends AbstractModel
 
         if (array_key_exists("DefaultServer",$param) and $param["DefaultServer"] !== null) {
             $this->DefaultServer = $param["DefaultServer"];
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = $param["Quic"];
         }
 
         if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {

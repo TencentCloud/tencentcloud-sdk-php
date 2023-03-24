@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerImageAccelerate(boolean $ContainerImageAccelerate) 设置镜像加速开关，默认False
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getImagePort() 获取镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImagePort(integer $ImagePort) 设置镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageConfig extends AbstractModel
 {
@@ -88,6 +98,15 @@ class ImageConfig extends AbstractModel
     public $ContainerImageAccelerate;
 
     /**
+     * @var integer 镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImagePort;
+
+    /**
      * @param string $ImageType 镜像仓库类型，个人版或者企业版：personal/enterprise
      * @param string $ImageUri {domain}/{namespace}/{imageName}:{tag}@{digest}
      * @param string $RegistryId 用于企业版TCR获取镜像拉取临时凭证，ImageType为"enterprise"时必填
@@ -99,6 +118,11 @@ class ImageConfig extends AbstractModel
      * @param string $Args 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ContainerImageAccelerate 镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ImagePort 镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +164,10 @@ class ImageConfig extends AbstractModel
 
         if (array_key_exists("ContainerImageAccelerate",$param) and $param["ContainerImageAccelerate"] !== null) {
             $this->ContainerImageAccelerate = $param["ContainerImageAccelerate"];
+        }
+
+        if (array_key_exists("ImagePort",$param) and $param["ImagePort"] !== null) {
+            $this->ImagePort = $param["ImagePort"];
         }
     }
 }

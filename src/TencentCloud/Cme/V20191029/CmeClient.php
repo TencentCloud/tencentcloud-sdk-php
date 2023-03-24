@@ -26,7 +26,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\AddTeamMemberResponse AddTeamMember(Models\AddTeamMemberRequest $req) 向一个团队中添加团队成员，并且指定成员的角色。
  * @method Models\CopyProjectResponse CopyProject(Models\CopyProjectRequest $req) 复制一个项目，包括项目素材及轨道数据。目前仅普通剪辑及模板制作项目可复制，其它类型的项目不支持复制。
  * @method Models\CreateClassResponse CreateClass(Models\CreateClassRequest $req) 新增分类，用于管理素材。分类层数不能超过20。
- * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req)  创建媒体链接或分类路径链接，将源资源信息链接到目标。
+ * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req) 创建媒体链接或分类路径链接，将源资源信息链接到目标。
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建多媒体创作引擎项目，目前支持的项目类型有：
 <li>视频剪辑项目：用于普通视频剪辑；</li>
 <li>直播剪辑项目：用于直播流剪辑；</li>
@@ -34,6 +34,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>视频拆条：用于视频拆条；</li>
 <li>录制回放项目：用于直播录制回放；</li>
 <li>云转推项目：用于直播云转推。</li>
+<li>点播转直播项目：用于点播文件转直播输出。</li>
  * @method Models\CreateTeamResponse CreateTeam(Models\CreateTeamRequest $req) 创建一个团队。
  * @method Models\CreateVideoEncodingPresetResponse CreateVideoEncodingPreset(Models\CreateVideoEncodingPresetRequest $req) 指定导出的参数，创建一个视频编码配置
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) 删除分类信息，删除时检验下述限制：
@@ -41,7 +42,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>分类下没有绑定素材。</li>
  * @method Models\DeleteLoginStatusResponse DeleteLoginStatus(Models\DeleteLoginStatusRequest $req) 删除用户登录态，使用户登出多媒体创作引擎平台。
  * @method Models\DeleteMaterialResponse DeleteMaterial(Models\DeleteMaterialRequest $req) 根据媒体 Id 删除媒体。
- * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除项目。
+ * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除项目。处于推流状态的云转推和点播转直播项目不允许删除，若强行调用删除项目接口会返回失败。
  * @method Models\DeleteTeamResponse DeleteTeam(Models\DeleteTeamRequest $req) 删除一个团队。要删除团队，必须满足以下条件：
 <li>要删除的团队必须没有归属的素材；</li>
 <li>要删除的团队必须没有归属的分类。</li>
@@ -77,6 +78,21 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>和平精英集锦和王者荣耀集锦根据击杀场景进行拆条，足球集锦和篮球集锦根据进球场景进行拆条，人物集锦根据人物人脸特征进行拆条，新闻拆条根据导播进行拆条。</li>
 <li>【本接口内测中，暂不建议使用】</li>
  * @method Models\GrantResourceAuthorizationResponse GrantResourceAuthorization(Models\GrantResourceAuthorizationRequest $req) 资源归属者对个人或团队授予目标资源的相应权限。
+ * @method Models\HandleMediaCastProjectResponse HandleMediaCastProject(Models\HandleMediaCastProjectRequest $req) 对点播转直播项目进行操作。
+### 操作类型<a id="Operation"></a>
+- `AddSource`（添加输入源），项目状态为 Idle、Working 时均可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B12-.E6.B7.BB.E5.8A.A0.E8.BE.93.E5.85.A5.E6.BA.90)；
+- `DeleteSource`（删除输入源），项目状态为 Idle、Working 时均可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B7-.E5.88.A0.E9.99.A4.E8.BE.93.E5.85.A5.E6.BA.90)；
+- `SwitchSource`（切换当前播放的输入源），项目状态为 Working 时可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B6-.E5.88.87.E6.8D.A2.E5.BD.93.E5.89.8D.E6.92.AD.E6.94.BE.E7.9A.84.E8.BE.93.E5.85.A5.E6.BA.90)
+- `AddDestination`（ 添加输出源），项目状态为 Idle、Working 时均可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B13-.E6.B7.BB.E5.8A.A0.E8.BE.93.E5.87.BA.E6.BA.90)；
+- `DeleteDestination`（删除输出源），项目状态为 Idle、Working 时均可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B8-.E5.88.A0.E9.99.A4.E8.BE.93.E5.87.BA.E6.BA.90)；
+- `EnableDestination`（启动输出源），项目状态为 Working 时可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B10-.E5.90.AF.E5.8A.A8.E8.BE.93.E5.87.BA.E6.BA.90)；
+- `DisableDestination`（停止输出源），项目状态为 Working 时可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B5-.E5.81.9C.E6.AD.A2.E8.BE.93.E5.87.BA.E6.BA.90)；
+- `ModifyDestination`（修改输出源），项目状态为 Idle、Working 时均可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B2-.E4.BF.AE.E6.94.B9.E8.BE.93.E5.87.BA.E6.BA.90)；
+- `Start`（启动点播转直播），项目状态为 Idle 时可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B9-.E5.90.AF.E5.8A.A8.E7.82.B9.E6.92.AD.E8.BD.AC.E7.9B.B4.E6.92.AD)；
+- `Stop`（停止点播转直播），项目状态为 Working 时可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B4-.E5.81.9C.E6.AD.A2.E7.82.B9.E6.92.AD.E8.BD.AC.E7.9B.B4.E6.92.AD)；
+- `ModifyOutputMediaSetting`（修改媒体输出配置），项目状态为 Idle 时可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B3-.E4.BF.AE.E6.94.B9.E8.BE.93.E5.87.BA.E7.9A.84.E5.AA.92.E4.BD.93.E9.85.8D.E7.BD.AE)；
+- `ModifyPlaySetting`（修改播放结束时间），项目状态为 Idle、Working 时均可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B1-.E4.BF.AE.E6.94.B9.E7.BB.93.E6.9D.9F.E6.97.B6.E9.97.B4);
+- `DescribePlayInfo`（查询播放信息），项目状态为 Idle、Working 时均可以操作。参见 [示例](#.E7.A4.BA.E4.BE.8B11-.E6.9F.A5.E8.AF.A2.E7.82.B9.E6.92.AD.E8.BD.AC.E7.9B.B4.E6.92.AD.E9.A1.B9.E7.9B.AE.E7.9A.84.E6.92.AD.E6.94.BE.E4.BF.A1.E6.81.AF)。
  * @method Models\HandleStreamConnectProjectResponse HandleStreamConnectProject(Models\HandleStreamConnectProjectRequest $req) 对云转推项目进行操作。
 ### 操作类型<a id="Operation"></a>
 - `AddInput`（添加输入源），包括：
@@ -95,7 +111,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 - `DescribeInputPlayInfo`（查询播放进度），参见 [示例14](#.E7.A4.BA.E4.BE.8B14-.E6.9F.A5.E8.AF.A2.E7.82.B9.E6.92.AD.E8.BE.93.E5.85.A5.E6.BA.90.E6.92.AD.E6.94.BE.E8.BF.9B.E5.BA.A6)。
  * @method Models\ImportMaterialResponse ImportMaterial(Models\ImportMaterialRequest $req) 将云点播媒资文件导入到多媒体创作引擎媒体资源库。支持导入媒体归属团队或者个人。
  * @method Models\ImportMediaToProjectResponse ImportMediaToProject(Models\ImportMediaToProjectRequest $req) 将云点播中的媒资或者用户自有媒资文件添加到项目中与项目关联，供后续视频编辑使用。目前仅视频编辑项目和智能视频拆条项目有效。
- * @method Models\ListMediaResponse ListMedia(Models\ListMediaRequest $req)  浏览当前分类路径下的资源，包括媒体文件和子分类，返回媒资基础信息和分类信息。
+ * @method Models\ListMediaResponse ListMedia(Models\ListMediaRequest $req) 浏览当前分类路径下的资源，包括媒体文件和子分类，返回媒资基础信息和分类信息。
  * @method Models\ModifyMaterialResponse ModifyMaterial(Models\ModifyMaterialRequest $req) 修改媒体信息，支持修改媒体名称、分类路径、标签等信息。
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目信息。
  * @method Models\ModifyTeamResponse ModifyTeam(Models\ModifyTeamRequest $req) 修改团队信息，目前支持修改的操作有：
@@ -112,8 +128,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  如果 SourceResource.Resource.Id = /素材/视频/NBA，DestinationResource.Resource.Id= /素材/视频/篮球 
 <li>当 DestinationResource.Resource.Id 不存在时候且原始资源与目标资源归属相同，操作结果为重命名原始分类；</li>
 <li>当 DestinationResource.Resource.Id 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA</li>
-
- * @method Models\ParseEventResponse ParseEvent(Models\ParseEventRequest $req) 该接口接受制作云回调给客户的事件内容，将其转化为对应的 EventContent 结构，请不要实际调用该接口，只需要将接收到的事件内容直接使用 JSON 解析到 EventContent  即可使用。
+ * @method Models\ParseEventResponse ParseEvent(Models\ParseEventRequest $req) 该接口接受多媒体创作引擎回调给业务的事件内容，将其转化为对应的 EventContent 结构。请不要实际调用该接口，只需要将接收到的事件内容直接使用 JSON 解析到 EventContent  结构即可使用。
  * @method Models\RevokeResourceAuthorizationResponse RevokeResourceAuthorization(Models\RevokeResourceAuthorizationRequest $req)  资源所属实体对目标实体撤销目标资源的相应权限，若原本没有相应权限则不产生变更。
  * @method Models\SearchMaterialResponse SearchMaterial(Models\SearchMaterialRequest $req) 根据检索条件搜索媒体，返回媒体的基本信息。
  */

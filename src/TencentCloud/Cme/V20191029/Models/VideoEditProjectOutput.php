@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCoverURL() 获取导出视频的封面图片 URL。
+ * @method void setCoverURL(string $CoverURL) 设置导出视频的封面图片 URL。
  */
 class VideoEditProjectOutput extends AbstractModel
 {
@@ -55,11 +57,17 @@ class VideoEditProjectOutput extends AbstractModel
     public $MetaData;
 
     /**
+     * @var string 导出视频的封面图片 URL。
+     */
+    public $CoverURL;
+
+    /**
      * @param string $MaterialId 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
      * @param string $VodFileId 云点播媒资 FileId。
      * @param string $URL 导出的媒资 URL。
      * @param MediaMetaData $MetaData 元信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CoverURL 导出视频的封面图片 URL。
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class VideoEditProjectOutput extends AbstractModel
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
             $this->MetaData = new MediaMetaData();
             $this->MetaData->deserialize($param["MetaData"]);
+        }
+
+        if (array_key_exists("CoverURL",$param) and $param["CoverURL"] !== null) {
+            $this->CoverURL = $param["CoverURL"];
         }
     }
 }

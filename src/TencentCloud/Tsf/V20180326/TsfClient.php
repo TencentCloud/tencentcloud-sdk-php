@@ -34,10 +34,12 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateAllGatewayApiAsyncResponse CreateAllGatewayApiAsync(Models\CreateAllGatewayApiAsyncRequest $req) 一键导入API分组
  * @method Models\CreateApiGroupResponse CreateApiGroup(Models\CreateApiGroupRequest $req) 创建API分组
  * @method Models\CreateApiRateLimitRuleResponse CreateApiRateLimitRule(Models\CreateApiRateLimitRuleRequest $req) 创建API限流规则
+ * @method Models\CreateApiRateLimitRuleWithDetailRespResponse CreateApiRateLimitRuleWithDetailResp(Models\CreateApiRateLimitRuleWithDetailRespRequest $req) 创建API限流规则,并返回规则信息
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 创建应用
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建集群
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建配置项
  * @method Models\CreateConfigTemplateResponse CreateConfigTemplate(Models\CreateConfigTemplateRequest $req) 创建参数模板
+ * @method Models\CreateConfigTemplateWithDetailRespResponse CreateConfigTemplateWithDetailResp(Models\CreateConfigTemplateWithDetailRespRequest $req) 创建参数模板,并返回模版详细信息
  * @method Models\CreateContainGroupResponse CreateContainGroup(Models\CreateContainGroupRequest $req) （已废弃，请使用 CreateGroup 和 DeployContainerGroup 创建和部署容器部署组）创建容器部署组
  * @method Models\CreateFileConfigResponse CreateFileConfig(Models\CreateFileConfigRequest $req) 创建文件配置项
  * @method Models\CreateGatewayApiResponse CreateGatewayApi(Models\CreateGatewayApiRequest $req) 批量导入API至api分组(也支持新建API到分组)
@@ -48,12 +50,16 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateMicroserviceWithDetailRespResponse CreateMicroserviceWithDetailResp(Models\CreateMicroserviceWithDetailRespRequest $req) 新增微服务返回id
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
  * @method Models\CreatePathRewritesResponse CreatePathRewrites(Models\CreatePathRewritesRequest $req) 创建路径重写
+ * @method Models\CreatePathRewritesWithDetailRespResponse CreatePathRewritesWithDetailResp(Models\CreatePathRewritesWithDetailRespRequest $req) 创建路径重写，并返回路径重写规则信息
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
+ * @method Models\CreatePublicConfigWithDetailRespResponse CreatePublicConfigWithDetailResp(Models\CreatePublicConfigWithDetailRespRequest $req) 创建公共配置项，并返回配置项详细信息
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
  * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 创建工作流
  * @method Models\CreateUnitRuleResponse CreateUnitRule(Models\CreateUnitRuleRequest $req) 创建单元化规则
+ * @method Models\CreateUnitRuleWithDetailRespResponse CreateUnitRuleWithDetailResp(Models\CreateUnitRuleWithDetailRespRequest $req) 创建单元化规则, 并返回详细信息
  * @method Models\DeleteApiGroupResponse DeleteApiGroup(Models\DeleteApiGroupRequest $req) 删除Api分组
+ * @method Models\DeleteApiRateLimitRuleResponse DeleteApiRateLimitRule(Models\DeleteApiRateLimitRuleRequest $req) 删除API限流规则
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 删除应用
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除集群
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除配置项
@@ -154,6 +160,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeReleasedConfigResponse DescribeReleasedConfig(Models\DescribeReleasedConfigRequest $req) 查询group发布的配置
  * @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询仓库列表
  * @method Models\DescribeRepositoryResponse DescribeRepository(Models\DescribeRepositoryRequest $req) 查询仓库信息
+ * @method Models\DescribeResourceTaskStatusResponse DescribeResourceTaskStatus(Models\DescribeResourceTaskStatusRequest $req) 资源任务的执行状态描述接口
  * @method Models\DescribeSimpleApplicationsResponse DescribeSimpleApplications(Models\DescribeSimpleApplicationsRequest $req) 查询简单应用列表
  * @method Models\DescribeSimpleClustersResponse DescribeSimpleClusters(Models\DescribeSimpleClustersRequest $req) 查询简单集群列表
  * @method Models\DescribeSimpleGroupsResponse DescribeSimpleGroups(Models\DescribeSimpleGroupsRequest $req) 查询简单部署组列表
@@ -204,6 +211,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\RedoTaskFlowBatchResponse RedoTaskFlowBatch(Models\RedoTaskFlowBatchRequest $req) 重新执行工作流批次
  * @method Models\ReleaseApiGroupResponse ReleaseApiGroup(Models\ReleaseApiGroupRequest $req) 发布Api分组
  * @method Models\ReleaseConfigResponse ReleaseConfig(Models\ReleaseConfigRequest $req) 发布配置
+ * @method Models\ReleaseConfigWithDetailRespResponse ReleaseConfigWithDetailResp(Models\ReleaseConfigWithDetailRespRequest $req) 发布配置,并且返回配置 ID
  * @method Models\ReleaseFileConfigResponse ReleaseFileConfig(Models\ReleaseFileConfigRequest $req) 发布文件配置
  * @method Models\ReleasePublicConfigResponse ReleasePublicConfig(Models\ReleasePublicConfigRequest $req) 发布公共配置
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) 从 TSF 集群中批量移除云主机节点

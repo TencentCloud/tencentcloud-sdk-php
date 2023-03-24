@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 竞价请求相关选项
  *
  * @method SpotMarketOptions getSpotOptions() 获取竞价相关选项
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpotOptions(SpotMarketOptions $SpotOptions) 设置竞价相关选项
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMarketType() 获取市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarketType(string $MarketType) 设置市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceMarketOptionsRequest extends AbstractModel
 {
     /**
      * @var SpotMarketOptions 竞价相关选项
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpotOptions;
 
     /**
      * @var string 市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarketType;
 
     /**
      * @param SpotMarketOptions $SpotOptions 竞价相关选项
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MarketType 市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

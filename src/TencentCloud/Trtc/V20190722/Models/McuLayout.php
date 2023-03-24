@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZOrder(integer $ZOrder) 设置子画面在输出时的层级，不填默认为0。
  * @method integer getRenderMode() 获取子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
  * @method void setRenderMode(integer $RenderMode) 设置子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
- * @method string getBackGroundColor() 获取子画面的背景颜色，常用的颜色有：
+ * @method string getBackGroundColor() 获取【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 黑色：0x000000。
 白色：0xFFFFFF。
 灰色：0x999999。
- * @method void setBackGroundColor(string $BackGroundColor) 设置子画面的背景颜色，常用的颜色有：
+ * @method void setBackGroundColor(string $BackGroundColor) 设置【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。
@@ -93,7 +93,7 @@ class McuLayout extends AbstractModel
     public $RenderMode;
 
     /**
-     * @var string 子画面的背景颜色，常用的颜色有：
+     * @var string 【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。
@@ -122,7 +122,7 @@ class McuLayout extends AbstractModel
      * @param integer $LocationY 子画面在输出时的Y偏移，单位为像素值，LocationY与ImageHeight之和不能超过混流输出的总高度，不填默认为0。
      * @param integer $ZOrder 子画面在输出时的层级，不填默认为0。
      * @param integer $RenderMode 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
-     * @param string $BackGroundColor 子画面的背景颜色，常用的颜色有：
+     * @param string $BackGroundColor 【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。

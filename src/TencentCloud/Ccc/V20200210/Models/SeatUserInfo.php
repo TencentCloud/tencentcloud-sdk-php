@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置坐席名称
  * @method string getMail() 获取坐席邮箱
  * @method void setMail(string $Mail) 设置坐席邮箱
+ * @method string getStaffNumber() 获取工号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStaffNumber(string $StaffNumber) 设置工号
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhone() 获取坐席电话号码（带0086前缀）
  * @method void setPhone(string $Phone) 设置坐席电话号码（带0086前缀）
  * @method string getNick() 获取坐席昵称
@@ -33,10 +37,6 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSkillGroupNameList() 获取坐席关联的技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupNameList(array $SkillGroupNameList) 设置坐席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStaffNumber() 获取工号
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStaffNumber(string $StaffNumber) 设置工号
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SeatUserInfo extends AbstractModel
@@ -50,6 +50,12 @@ class SeatUserInfo extends AbstractModel
      * @var string 坐席邮箱
      */
     public $Mail;
+
+    /**
+     * @var string 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StaffNumber;
 
     /**
      * @var string 坐席电话号码（带0086前缀）
@@ -73,20 +79,14 @@ class SeatUserInfo extends AbstractModel
     public $SkillGroupNameList;
 
     /**
-     * @var string 工号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $StaffNumber;
-
-    /**
      * @param string $Name 坐席名称
      * @param string $Mail 坐席邮箱
+     * @param string $StaffNumber 工号
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 坐席电话号码（带0086前缀）
      * @param string $Nick 坐席昵称
      * @param string $UserId 用户ID
      * @param array $SkillGroupNameList 坐席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StaffNumber 工号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -110,6 +110,10 @@ class SeatUserInfo extends AbstractModel
             $this->Mail = $param["Mail"];
         }
 
+        if (array_key_exists("StaffNumber",$param) and $param["StaffNumber"] !== null) {
+            $this->StaffNumber = $param["StaffNumber"];
+        }
+
         if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
             $this->Phone = $param["Phone"];
         }
@@ -124,10 +128,6 @@ class SeatUserInfo extends AbstractModel
 
         if (array_key_exists("SkillGroupNameList",$param) and $param["SkillGroupNameList"] !== null) {
             $this->SkillGroupNameList = $param["SkillGroupNameList"];
-        }
-
-        if (array_key_exists("StaffNumber",$param) and $param["StaffNumber"] !== null) {
-            $this->StaffNumber = $param["StaffNumber"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceDealDetail返回参数结构体
  *
- * @method array getDealDetails() 获取订单详细信息
- * @method void setDealDetails(array $DealDetails) 设置订单详细信息
+ * @method array getDealDetails() 获取订单详细信息。
+ * @method void setDealDetails(array $DealDetails) 设置订单详细信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceDealDetailResponse extends AbstractModel
 {
     /**
-     * @var array 订单详细信息
+     * @var array 订单详细信息。
      */
     public $DealDetails;
 
@@ -38,7 +38,7 @@ class DescribeInstanceDealDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DealDetails 订单详细信息
+     * @param array $DealDetails 订单详细信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

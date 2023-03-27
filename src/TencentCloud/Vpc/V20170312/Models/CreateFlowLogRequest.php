@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowLog请求参数结构体
  *
- * @method string getFlowLogName() 获取流日志实例名字
- * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字
- * @method string getResourceType() 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
- * @method string getResourceId() 获取资源唯一ID
- * @method void setResourceId(string $ResourceId) 设置资源唯一ID
- * @method string getTrafficType() 获取流日志采集类型，ACCEPT|REJECT|ALL
- * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT|REJECT|ALL
+ * @method string getFlowLogName() 获取流日志实例名字。
+ * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字。
+ * @method string getResourceType() 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+ * @method string getResourceId() 获取资源唯一ID。
+ * @method void setResourceId(string $ResourceId) 设置资源唯一ID。
+ * @method string getTrafficType() 获取流日志采集类型，ACCEPT|REJECT|ALL。
+ * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT|REJECT|ALL。
  * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
  * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
- * @method string getFlowLogDescription() 获取流日志实例描述
- * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述
- * @method string getCloudLogId() 获取流日志存储ID
- * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID
- * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method string getStorageType() 获取消费端类型：cls、ckafka
- * @method void setStorageType(string $StorageType) 设置消费端类型：cls、ckafka
+ * @method string getFlowLogDescription() 获取流日志实例描述。
+ * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述。
+ * @method string getCloudLogId() 获取流日志存储ID。
+ * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method string getStorageType() 获取消费端类型：cls、ckafka。默认值cls。
+ * @method void setStorageType(string $StorageType) 设置消费端类型：cls、ckafka。默认值cls。
  * @method FlowLogStorage getFlowLogStorage() 获取流日志消费端信息，当消费端类型为ckafka时，必填。
  * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置流日志消费端信息，当消费端类型为ckafka时，必填。
  * @method string getCloudLogRegion() 获取流日志存储ID对应的地域，不传递默认为本地域。
@@ -46,22 +46,22 @@ use TencentCloud\Common\AbstractModel;
 class CreateFlowLogRequest extends AbstractModel
 {
     /**
-     * @var string 流日志实例名字
+     * @var string 流日志实例名字。
      */
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
+     * @var string 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
      */
     public $ResourceType;
 
     /**
-     * @var string 资源唯一ID
+     * @var string 资源唯一ID。
      */
     public $ResourceId;
 
     /**
-     * @var string 流日志采集类型，ACCEPT|REJECT|ALL
+     * @var string 流日志采集类型，ACCEPT|REJECT|ALL。
      */
     public $TrafficType;
 
@@ -71,22 +71,22 @@ class CreateFlowLogRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 流日志实例描述
+     * @var string 流日志实例描述。
      */
     public $FlowLogDescription;
 
     /**
-     * @var string 流日志存储ID
+     * @var string 流日志存储ID。
      */
     public $CloudLogId;
 
     /**
-     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public $Tags;
 
     /**
-     * @var string 消费端类型：cls、ckafka
+     * @var string 消费端类型：cls、ckafka。默认值cls。
      */
     public $StorageType;
 
@@ -101,15 +101,15 @@ class CreateFlowLogRequest extends AbstractModel
     public $CloudLogRegion;
 
     /**
-     * @param string $FlowLogName 流日志实例名字
-     * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
-     * @param string $ResourceId 资源唯一ID
-     * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
+     * @param string $FlowLogName 流日志实例名字。
+     * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+     * @param string $ResourceId 资源唯一ID。
+     * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
-     * @param string $FlowLogDescription 流日志实例描述
-     * @param string $CloudLogId 流日志存储ID
-     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
-     * @param string $StorageType 消费端类型：cls、ckafka
+     * @param string $FlowLogDescription 流日志实例描述。
+     * @param string $CloudLogId 流日志存储ID。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param string $StorageType 消费端类型：cls、ckafka。默认值cls。
      * @param FlowLogStorage $FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。
      * @param string $CloudLogRegion 流日志存储ID对应的地域，不传递默认为本地域。
      */

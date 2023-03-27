@@ -32,6 +32,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ChangeReplicaToMasterResponse ChangeReplicaToMaster(Models\ChangeReplicaToMasterRequest $req) 该接口仅支持多AZ实例副本组提主和单AZ副本提主
  * @method Models\CleanUpInstanceResponse CleanUpInstance(Models\CleanUpInstanceRequest $req) 回收站实例立即下线
  * @method Models\ClearInstanceResponse ClearInstance(Models\ClearInstanceRequest $req) 清空Redis实例的实例数据。
+ * @method Models\CloneInstancesResponse CloneInstances(Models\CloneInstancesRequest $req) 本接口（CloneInstances）可基于当前实例的备份文件克隆一个完整的新实例。
  * @method Models\CloseSSLResponse CloseSSL(Models\CloseSSLRequest $req) 关闭SSL
  * @method Models\CreateInstanceAccountResponse CreateInstanceAccount(Models\CreateInstanceAccountRequest $req) 创建实例子账号
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 本接口(CreateInstances)用于创建redis实例。

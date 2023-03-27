@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNetworkAcl请求参数结构体
  *
- * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+ * @method string getVpcId() 获取VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
  * @method string getNetworkAclName() 获取网络ACL名称，最大长度不能超过60个字节。
  * @method void setNetworkAclName(string $NetworkAclName) 设置网络ACL名称，最大长度不能超过60个字节。
- * @method string getNetworkAclType() 获取网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
- * @method void setNetworkAclType(string $NetworkAclType) 设置网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
+ * @method string getNetworkAclType() 获取网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
+ * @method void setNetworkAclType(string $NetworkAclType) 设置网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateNetworkAclRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
      */
     public $VpcId;
 
@@ -42,7 +42,7 @@ class CreateNetworkAclRequest extends AbstractModel
     public $NetworkAclName;
 
     /**
-     * @var string 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
+     * @var string 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
      */
     public $NetworkAclType;
 
@@ -52,9 +52,9 @@ class CreateNetworkAclRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @param string $VpcId VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
      * @param string $NetworkAclName 网络ACL名称，最大长度不能超过60个字节。
-     * @param string $NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
+     * @param string $NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()

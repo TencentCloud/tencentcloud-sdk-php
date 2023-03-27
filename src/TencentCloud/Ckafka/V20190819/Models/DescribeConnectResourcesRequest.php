@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
+ * @method string getResourceRegion() 获取连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+ * @method void setResourceRegion(string $ResourceRegion) 设置连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
  */
 class DescribeConnectResourcesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeConnectResourcesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+     */
+    public $ResourceRegion;
+
+    /**
      * @param string $Type 连接源类型
      * @param string $SearchWord 连接源名称的关键字查询
      * @param integer $Offset 分页偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值为100
+     * @param string $ResourceRegion 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeConnectResourcesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
+            $this->ResourceRegion = $param["ResourceRegion"];
         }
     }
 }

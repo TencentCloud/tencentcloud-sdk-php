@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getEndPointId() 获取终端节点ID。
  * @method void setEndPointId(array $EndPointId) 设置终端节点ID。
  * @method boolean getAcceptFlag() 获取是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li>
  * @method void setAcceptFlag(boolean $AcceptFlag) 设置是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li>
  */
 class EnableVpcEndPointConnectRequest extends AbstractModel
 {
@@ -41,6 +43,7 @@ class EnableVpcEndPointConnectRequest extends AbstractModel
 
     /**
      * @var boolean 是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li>
      */
     public $AcceptFlag;
 
@@ -48,6 +51,7 @@ class EnableVpcEndPointConnectRequest extends AbstractModel
      * @param string $EndPointServiceId 终端节点服务ID。
      * @param array $EndPointId 终端节点ID。
      * @param boolean $AcceptFlag 是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li>
      */
     function __construct()
     {

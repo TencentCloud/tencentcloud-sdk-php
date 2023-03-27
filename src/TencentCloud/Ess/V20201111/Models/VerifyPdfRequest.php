@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyPdf请求参数结构体
  *
- * @method string getFlowId() 获取合同Id，流程Id
- * @method void setFlowId(string $FlowId) 设置合同Id，流程Id
+ * @method string getFlowId() 获取流程ID
+ * @method void setFlowId(string $FlowId) 设置流程ID
  * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  */
 class VerifyPdfRequest extends AbstractModel
 {
     /**
-     * @var string 合同Id，流程Id
+     * @var string 流程ID
      */
     public $FlowId;
 
@@ -38,7 +38,7 @@ class VerifyPdfRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param string $FlowId 合同Id，流程Id
+     * @param string $FlowId 流程ID
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      */
     function __construct()

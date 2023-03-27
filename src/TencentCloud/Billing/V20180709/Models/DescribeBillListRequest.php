@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillList请求参数结构体
  *
- * @method string getStartTime() 获取查询范围的起始时间（包含）
- * @method void setStartTime(string $StartTime) 设置查询范围的起始时间（包含）
- * @method string getEndTime() 获取查询范围的结束时间（包含）
- * @method void setEndTime(string $EndTime) 设置查询范围的结束时间（包含）
+ * @method string getStartTime() 获取查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月
+ * @method void setStartTime(string $StartTime) 设置查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月
+ * @method string getEndTime() 获取查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月
+ * @method void setEndTime(string $EndTime) 设置查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月
  * @method integer getOffset() 获取翻页偏移量，初始值为0
  * @method void setOffset(integer $Offset) 设置翻页偏移量，初始值为0
  * @method integer getLimit() 获取每页的限制数量
@@ -84,12 +84,12 @@ other 第三方解冻;hour 按量解冻;month 按月解冻
 class DescribeBillListRequest extends AbstractModel
 {
     /**
-     * @var string 查询范围的起始时间（包含）
+     * @var string 查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月
      */
     public $StartTime;
 
     /**
-     * @var string 查询范围的结束时间（包含）
+     * @var string 查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月
      */
     public $EndTime;
 
@@ -142,8 +142,8 @@ other 第三方解冻;hour 按量解冻;month 按月解冻
     public $WithZeroAmount;
 
     /**
-     * @param string $StartTime 查询范围的起始时间（包含）
-     * @param string $EndTime 查询范围的结束时间（包含）
+     * @param string $StartTime 查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月
+     * @param string $EndTime 查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月
      * @param integer $Offset 翻页偏移量，初始值为0
      * @param integer $Limit 每页的限制数量
      * @param array $PayType 交易类型： all所有交易类型，recharge充值，return退款，unblock解冻，agentin资金转入，advanced垫付，cash提现，deduct扣费，block冻结，agentout资金转出，repay垫付回款，repayment还款(仅国际信用账户)，adj_refund调增(仅国际信用账户)，adj_deduct调减(仅国际信用账户)

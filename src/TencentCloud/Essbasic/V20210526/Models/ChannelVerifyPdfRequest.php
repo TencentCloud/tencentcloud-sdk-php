@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelVerifyPdf请求参数结构体
  *
- * @method string getFlowId() 获取合同Id，流程Id
- * @method void setFlowId(string $FlowId) 设置合同Id，流程Id
+ * @method string getFlowId() 获取流程ID
+ * @method void setFlowId(string $FlowId) 设置流程ID
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method UserInfo getOperator() 获取暂未开放
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ChannelVerifyPdfRequest extends AbstractModel
 {
     /**
-     * @var string 合同Id，流程Id
+     * @var string 流程ID
      */
     public $FlowId;
 
@@ -45,7 +45,7 @@ class ChannelVerifyPdfRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param string $FlowId 合同Id，流程Id
+     * @param string $FlowId 流程ID
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param UserInfo $Operator 暂未开放
      */

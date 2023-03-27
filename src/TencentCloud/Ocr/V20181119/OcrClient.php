@@ -389,19 +389,28 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：5次/秒。
  * @method Models\RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(Models\RecognizeOnlineTaxiItineraryOCRRequest $req) 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
+
+默认接口请求频率限制：20次/秒。
  * @method Models\RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(Models\RecognizePhilippinesDrivingLicenseOCRRequest $req) 菲律宾驾驶证识别
  * @method Models\RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(Models\RecognizePhilippinesVoteIDOCRRequest $req) 菲律宾VoteID识别
  * @method Models\RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(Models\RecognizeTableAccurateOCRRequest $req) 本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
  * @method Models\RecognizeTableOCRResponse RecognizeTableOCR(Models\RecognizeTableOCRRequest $req) 本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
+
+默认接口请求频率限制：10次/秒。
  * @method Models\RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(Models\RecognizeThaiIDCardOCRRequest $req) 本接口支持泰国身份证识别，识别字段包括泰文姓名、英文姓名、地址、出生日期、身份证号码。
 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
  * @method Models\RecognizeTravelCardOCRResponse RecognizeTravelCardOCR(Models\RecognizeTravelCardOCRRequest $req) 本接口支持通信大数据行程卡识别，包括行程卡颜色、更新时间、途经地、存在中高风险地区的城市、电话号码，五个字段的识别结果输出。
 
 默认接口请求频率限制：20次/秒。
  * @method Models\ResidenceBookletOCRResponse ResidenceBookletOCR(Models\ResidenceBookletOCRRequest $req) 本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
+
+默认接口请求频率限制：5次/秒。
  * @method Models\RideHailingDriverLicenseOCRResponse RideHailingDriverLicenseOCR(Models\RideHailingDriverLicenseOCRRequest $req) 本接口支持网约车驾驶证关键字段的识别，包括姓名、证号、起始日期、截止日期、发证日期。
+
+默认接口请求频率限制：5次/秒。
  * @method Models\RideHailingTransportLicenseOCRResponse RideHailingTransportLicenseOCR(Models\RideHailingTransportLicenseOCRRequest $req) 本接口支持网约车运输证关键字段的识别，包括交运管许可字号、车辆所有人、车辆号牌、起始日期、截止日期、发证日期。
-           
+
+默认接口请求频率限制：5次/秒。
  * @method Models\SealOCRResponse SealOCR(Models\SealOCRRequest $req) 本接口支持各类印章识别，包括发票章，财务章等，适用于公文，票据等场景。
 
 默认接口请求频率限制：5次/秒。
@@ -415,7 +424,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
 
-
+默认接口请求频率限制：10次/秒。
  * @method Models\TaxiInvoiceOCRResponse TaxiInvoiceOCR(Models\TaxiInvoiceOCRRequest $req) 本接口支持出租车发票关键字段的识别，包括发票号码、发票代码、金额、日期、上下车时间、里程、车牌号、发票类型及所属地区等字段。
 
 默认接口请求频率限制：5次/秒。
@@ -448,6 +457,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：10次/秒。
  * @method Models\VehicleRegCertOCRResponse VehicleRegCertOCR(Models\VehicleRegCertOCRRequest $req) 本接口支持国内机动车登记证书主要字段的结构化识别，包括机动车所有人、身份证明名称、号码、车辆型号、车辆识别代号、发动机号、制造厂名称等。
+
+默认接口请求频率限制：5次/秒。
  * @method Models\VerifyBasicBizLicenseResponse VerifyBasicBizLicense(Models\VerifyBasicBizLicenseRequest $req) 库源服务调整，该接口在2023年6月1日将正式下线。
 
 本接口支持营业执照信息的识别与准确性核验。

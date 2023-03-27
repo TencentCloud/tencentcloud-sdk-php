@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineVersion(string $EngineVersion) 设置mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
  * @method string getTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
  * @method void setTemplateType(string $TemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+ * @method string getEngineType() 获取参数模板引擎，默认值：InnoDB
+ * @method void setEngineType(string $EngineType) 设置参数模板引擎，默认值：InnoDB
  */
 class DescribeDefaultParamsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDefaultParamsRequest extends AbstractModel
     public $TemplateType;
 
     /**
+     * @var string 参数模板引擎，默认值：InnoDB
+     */
+    public $EngineType;
+
+    /**
      * @param string $EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      * @param string $TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * @param string $EngineType 参数模板引擎，默认值：InnoDB
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDefaultParamsRequest extends AbstractModel
 
         if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
             $this->TemplateType = $param["TemplateType"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

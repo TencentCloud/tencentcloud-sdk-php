@@ -42,6 +42,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
  * @method Models\DescribeDBSlowLogsResponse DescribeDBSlowLogs(Models\DescribeDBSlowLogsRequest $req) 本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
  * @method Models\DescribeDBSyncModeResponse DescribeDBSyncMode(Models\DescribeDBSyncModeRequest $req) 本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
+ * @method Models\DescribeDCDBInstanceDetailResponse DescribeDCDBInstanceDetail(Models\DescribeDCDBInstanceDetailRequest $req) 本接口（DescribeDCDBInstanceDetail）用于获取DCDB实例详情
  * @method Models\DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfo(Models\DescribeDCDBInstanceNodeInfoRequest $req) 本接口（DescribeDCDBInstanceNodeInfo）用于获取实例节点信息
  * @method Models\DescribeDCDBInstancesResponse DescribeDCDBInstances(Models\DescribeDCDBInstancesRequest $req) 查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
 如果不指定任何筛选条件，则默认返回10条实例记录，单次请求最多支持返回100条实例记录。

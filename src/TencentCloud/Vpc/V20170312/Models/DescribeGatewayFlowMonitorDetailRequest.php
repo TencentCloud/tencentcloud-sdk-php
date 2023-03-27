@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
- * @method string getOrderField() 获取排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
- * @method void setOrderField(string $OrderField) 设置排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
- * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+ * @method string getOrderField() 获取排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。默认值`OutTraffic`。
+ * @method void setOrderField(string $OrderField) 设置排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。默认值`OutTraffic`。
+ * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。默认值`DESC`。
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。默认值`DESC`。
  */
 class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
 {
@@ -77,12 +77,12 @@ class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
+     * @var string 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。默认值`OutTraffic`。
      */
     public $OrderField;
 
     /**
-     * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。默认值`DESC`。
      */
     public $OrderDirection;
 
@@ -94,8 +94,8 @@ class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel
      * @param string $NatId NAT网关实例ID，形如：`nat-ltjahce6`。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
-     * @param string $OrderField 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
-     * @param string $OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @param string $OrderField 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。默认值`OutTraffic`。
+     * @param string $OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。默认值`DESC`。
      */
     function __construct()
     {

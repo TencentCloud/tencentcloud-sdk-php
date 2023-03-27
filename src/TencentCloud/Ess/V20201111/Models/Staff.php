@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmail(string $Email) 设置用户邮箱
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOpenId() 获取用户在第三方平台id
+ * @method string getOpenId() 获取用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOpenId(string $OpenId) 设置用户在第三方平台id
+ * @method void setOpenId(string $OpenId) 设置用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRoles() 获取员工角色
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuiteJob(integer $QuiteJob) 设置员工是否离职：0-未离职，1-离职
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReceiveUserId() 获取员工离职交接人用户id
+ * @method void setReceiveUserId(string $ReceiveUserId) 设置员工离职交接人用户id
+ * @method string getReceiveOpenId() 获取员工离职交接人用户OpenId
+ * @method void setReceiveOpenId(string $ReceiveOpenId) 设置员工离职交接人用户OpenId
  */
 class Staff extends AbstractModel
 {
@@ -79,7 +83,7 @@ class Staff extends AbstractModel
     public $Email;
 
     /**
-     * @var string 用户在第三方平台id
+     * @var string 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
@@ -119,12 +123,22 @@ class Staff extends AbstractModel
     public $QuiteJob;
 
     /**
+     * @var string 员工离职交接人用户id
+     */
+    public $ReceiveUserId;
+
+    /**
+     * @var string 员工离职交接人用户OpenId
+     */
+    public $ReceiveOpenId;
+
+    /**
      * @param string $UserId 用户在电子签平台的id
      * @param string $DisplayName 显示的用户名/昵称
      * @param string $Mobile 用户手机号
      * @param string $Email 用户邮箱
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OpenId 用户在第三方平台id
+     * @param string $OpenId 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Roles 员工角色
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,6 +150,8 @@ class Staff extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QuiteJob 员工是否离职：0-未离职，1-离职
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReceiveUserId 员工离职交接人用户id
+     * @param string $ReceiveOpenId 员工离职交接人用户OpenId
      */
     function __construct()
     {
@@ -198,6 +214,14 @@ class Staff extends AbstractModel
 
         if (array_key_exists("QuiteJob",$param) and $param["QuiteJob"] !== null) {
             $this->QuiteJob = $param["QuiteJob"];
+        }
+
+        if (array_key_exists("ReceiveUserId",$param) and $param["ReceiveUserId"] !== null) {
+            $this->ReceiveUserId = $param["ReceiveUserId"];
+        }
+
+        if (array_key_exists("ReceiveOpenId",$param) and $param["ReceiveOpenId"] !== null) {
+            $this->ReceiveOpenId = $param["ReceiveOpenId"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
  * @method array getEmployees() 获取待移除员工的信息，userId和openId二选一，必填一个
  * @method void setEmployees(array $Employees) 设置待移除员工的信息，userId和openId二选一，必填一个
+ * @method Agent getAgent() 获取代理信息
+ * @method void setAgent(Agent $Agent) 设置代理信息
  */
 class DeleteIntegrationEmployeesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteIntegrationEmployeesRequest extends AbstractModel
     public $Employees;
 
     /**
+     * @var Agent 代理信息
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 操作人信息，userId必填
      * @param array $Employees 待移除员工的信息，userId和openId二选一，必填一个
+     * @param Agent $Agent 代理信息
      */
     function __construct()
     {
@@ -66,6 +74,11 @@ class DeleteIntegrationEmployeesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Employees, $obj);
             }
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

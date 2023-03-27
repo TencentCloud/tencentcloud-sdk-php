@@ -121,7 +121,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 <li>可以根据实例ID、实例名称或者实例状态等信息来查询实例的详细信息</li>
 <li>如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的实例。</li>
 </ul>
- * @method Models\DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(Models\DescribePrometheusInstancesOverviewRequest $req) 获取与云监控融合实例列表
+ * @method Models\DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(Models\DescribePrometheusInstancesOverviewRequest $req) 获取与 Prometheus 监控融合实例列表
  * @method Models\DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYaml(Models\DescribePrometheusRecordRuleYamlRequest $req) 拉取Prometheus聚合规则yaml列表
  * @method Models\DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(Models\DescribePrometheusRecordRulesRequest $req) 获取聚合规则列表，包含关联集群内crd资源创建的record rule
  * @method Models\DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobs(Models\DescribePrometheusScrapeJobsRequest $req) 列出 Prometheus 抓取任务
@@ -148,7 +148,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 >- 2022年9月1日起，云监控开始对GetMonitorData接口计费。每个主账号每月可获得100万次免费请求额度，超过免费额度后如需继续调用接口需要开通 [API请求按量付费](https://buy.cloud.tencent.com/APIRequestBuy)。计费规则可查看[API计费文档](https://cloud.tencent.com/document/product/248/77914)。
  * @method Models\GetPrometheusAgentManagementCommandResponse GetPrometheusAgentManagementCommand(Models\GetPrometheusAgentManagementCommandRequest $req) 获取 Prometheus Agent 管理相关的命令行
  * @method Models\InstallPluginsResponse InstallPlugins(Models\InstallPluginsRequest $req) 安装 Grafana Plugin
- * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 云监控告警编辑告警通知模板
+ * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 编辑告警通知模板
  * @method Models\ModifyAlarmPolicyConditionResponse ModifyAlarmPolicyCondition(Models\ModifyAlarmPolicyConditionRequest $req) 修改告警策略触发条件
  * @method Models\ModifyAlarmPolicyInfoResponse ModifyAlarmPolicyInfo(Models\ModifyAlarmPolicyInfoRequest $req) 告警2.0编辑告警策略基本信息，包括策略名、备注
  * @method Models\ModifyAlarmPolicyNoticeResponse ModifyAlarmPolicyNotice(Models\ModifyAlarmPolicyNoticeRequest $req) 告警修改告警策略绑定的告警通知模板

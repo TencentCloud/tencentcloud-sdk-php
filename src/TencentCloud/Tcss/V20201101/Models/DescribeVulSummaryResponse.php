@@ -32,6 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoteExpLevelVulCount(integer $RemoteExpLevelVulCount) 设置有远程Exp的漏洞数量
  * @method integer getSeriousVulNewestImageCount() 获取受严重或高危漏洞影响的最新版本镜像数
  * @method void setSeriousVulNewestImageCount(integer $SeriousVulNewestImageCount) 设置受严重或高危漏洞影响的最新版本镜像数
+ * @method integer getSystemVulnerabilityFocusCount() 获取系统漏洞重点关注数
+ * @method void setSystemVulnerabilityFocusCount(integer $SystemVulnerabilityFocusCount) 设置系统漏洞重点关注数
+ * @method integer getWebVulnerabilityFocusCount() 获取web漏洞重点关注数
+ * @method void setWebVulnerabilityFocusCount(integer $WebVulnerabilityFocusCount) 设置web漏洞重点关注数
+ * @method integer getSeriousVulnerabilityLocalImageCount() 获取受影响本地镜像数
+ * @method void setSeriousVulnerabilityLocalImageCount(integer $SeriousVulnerabilityLocalImageCount) 设置受影响本地镜像数
+ * @method integer getSeriousVulnerabilityRegistryImageCount() 获取受影响仓库镜像数
+ * @method void setSeriousVulnerabilityRegistryImageCount(integer $SeriousVulnerabilityRegistryImageCount) 设置受影响仓库镜像数
+ * @method integer getEmergencyVulnerabilityCount() 获取应急漏洞数量
+ * @method void setEmergencyVulnerabilityCount(integer $EmergencyVulnerabilityCount) 设置应急漏洞数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +78,31 @@ class DescribeVulSummaryResponse extends AbstractModel
     public $SeriousVulNewestImageCount;
 
     /**
+     * @var integer 系统漏洞重点关注数
+     */
+    public $SystemVulnerabilityFocusCount;
+
+    /**
+     * @var integer web漏洞重点关注数
+     */
+    public $WebVulnerabilityFocusCount;
+
+    /**
+     * @var integer 受影响本地镜像数
+     */
+    public $SeriousVulnerabilityLocalImageCount;
+
+    /**
+     * @var integer 受影响仓库镜像数
+     */
+    public $SeriousVulnerabilityRegistryImageCount;
+
+    /**
+     * @var integer 应急漏洞数量
+     */
+    public $EmergencyVulnerabilityCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +114,11 @@ class DescribeVulSummaryResponse extends AbstractModel
      * @param integer $PocExpLevelVulCount 有Poc或者Exp的漏洞数量
      * @param integer $RemoteExpLevelVulCount 有远程Exp的漏洞数量
      * @param integer $SeriousVulNewestImageCount 受严重或高危漏洞影响的最新版本镜像数
+     * @param integer $SystemVulnerabilityFocusCount 系统漏洞重点关注数
+     * @param integer $WebVulnerabilityFocusCount web漏洞重点关注数
+     * @param integer $SeriousVulnerabilityLocalImageCount 受影响本地镜像数
+     * @param integer $SeriousVulnerabilityRegistryImageCount 受影响仓库镜像数
+     * @param integer $EmergencyVulnerabilityCount 应急漏洞数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +156,26 @@ class DescribeVulSummaryResponse extends AbstractModel
 
         if (array_key_exists("SeriousVulNewestImageCount",$param) and $param["SeriousVulNewestImageCount"] !== null) {
             $this->SeriousVulNewestImageCount = $param["SeriousVulNewestImageCount"];
+        }
+
+        if (array_key_exists("SystemVulnerabilityFocusCount",$param) and $param["SystemVulnerabilityFocusCount"] !== null) {
+            $this->SystemVulnerabilityFocusCount = $param["SystemVulnerabilityFocusCount"];
+        }
+
+        if (array_key_exists("WebVulnerabilityFocusCount",$param) and $param["WebVulnerabilityFocusCount"] !== null) {
+            $this->WebVulnerabilityFocusCount = $param["WebVulnerabilityFocusCount"];
+        }
+
+        if (array_key_exists("SeriousVulnerabilityLocalImageCount",$param) and $param["SeriousVulnerabilityLocalImageCount"] !== null) {
+            $this->SeriousVulnerabilityLocalImageCount = $param["SeriousVulnerabilityLocalImageCount"];
+        }
+
+        if (array_key_exists("SeriousVulnerabilityRegistryImageCount",$param) and $param["SeriousVulnerabilityRegistryImageCount"] !== null) {
+            $this->SeriousVulnerabilityRegistryImageCount = $param["SeriousVulnerabilityRegistryImageCount"];
+        }
+
+        if (array_key_exists("EmergencyVulnerabilityCount",$param) and $param["EmergencyVulnerabilityCount"] !== null) {
+            $this->EmergencyVulnerabilityCount = $param["EmergencyVulnerabilityCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

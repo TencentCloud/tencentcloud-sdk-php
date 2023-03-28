@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMixLayoutList(array $MixLayoutList) 设置自定义模板中有效，指定用户视频在混合画面中的位置。
  * @method MaxVideoUser getMaxVideoUser() 获取指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
  * @method void setMaxVideoUser(MaxVideoUser $MaxVideoUser) 设置指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
+ * @method integer getRenderMode() 获取屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+ * @method void setRenderMode(integer $RenderMode) 设置屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
  */
 class McuLayoutParams extends AbstractModel
 {
@@ -52,10 +54,16 @@ class McuLayoutParams extends AbstractModel
     public $MaxVideoUser;
 
     /**
+     * @var integer 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+     */
+    public $RenderMode;
+
+    /**
      * @param integer $MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
      * @param integer $PureAudioHoldPlaceMode 纯音频上行是否占布局位置，只在动态布局中有效。0表示纯音频不占布局位置，1表示纯音频占布局位置，不填默认为0。
      * @param array $MixLayoutList 自定义模板中有效，指定用户视频在混合画面中的位置。
      * @param MaxVideoUser $MaxVideoUser 指定动态布局中悬浮布局和屏幕分享布局的大画面信息，只在悬浮布局和屏幕分享布局有效。
+     * @param integer $RenderMode 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
      */
     function __construct()
     {
@@ -90,6 +98,10 @@ class McuLayoutParams extends AbstractModel
         if (array_key_exists("MaxVideoUser",$param) and $param["MaxVideoUser"] !== null) {
             $this->MaxVideoUser = new MaxVideoUser();
             $this->MaxVideoUser->deserialize($param["MaxVideoUser"]);
+        }
+
+        if (array_key_exists("RenderMode",$param) and $param["RenderMode"] !== null) {
+            $this->RenderMode = $param["RenderMode"];
         }
     }
 }

@@ -274,14 +274,14 @@ FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
  * @method integer getComponentDateFontSize() 获取日期签署控件的字号，默认为 12
  * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置日期签署控件的字号，默认为 12
- * @method string getChannelComponentId() 获取渠道版控件 id 标识
- * @method void setChannelComponentId(string $ChannelComponentId) 设置渠道版控件 id 标识
+ * @method string getChannelComponentId() 获取平台模板控件 id 标识
+ * @method void setChannelComponentId(string $ChannelComponentId) 设置平台模板控件 id 标识
  * @method float getOffsetX() 获取指定关键字时横坐标偏移量，单位pt
  * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量，单位pt
  * @method float getOffsetY() 获取指定关键字时纵坐标偏移量，单位pt
  * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量，单位pt
- * @method integer getChannelComponentSource() 获取//渠道子客控件来源。0-渠道指定；1-用户自定义
- * @method void setChannelComponentSource(integer $ChannelComponentSource) 设置//渠道子客控件来源。0-渠道指定；1-用户自定义
+ * @method integer getChannelComponentSource() 获取//子客控件来源。0-平台指定；1-用户自定义
+ * @method void setChannelComponentSource(integer $ChannelComponentSource) 设置//子客控件来源。0-平台指定；1-用户自定义
  * @method string getKeywordOrder() 获取指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
  * @method void setKeywordOrder(string $KeywordOrder) 设置指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
@@ -487,7 +487,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $ComponentDateFontSize;
 
     /**
-     * @var string 渠道版控件 id 标识
+     * @var string 平台模板控件 id 标识
      */
     public $ChannelComponentId;
 
@@ -502,7 +502,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $OffsetY;
 
     /**
-     * @var integer //渠道子客控件来源。0-渠道指定；1-用户自定义
+     * @var integer //子客控件来源。0-平台指定；1-用户自定义
      */
     public $ChannelComponentSource;
 
@@ -655,10 +655,10 @@ SIGN_PAGING_SEAL - 可以指定印章ID，于控制台查询获取
 FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
      * @param integer $ComponentDateFontSize 日期签署控件的字号，默认为 12
-     * @param string $ChannelComponentId 渠道版控件 id 标识
+     * @param string $ChannelComponentId 平台模板控件 id 标识
      * @param float $OffsetX 指定关键字时横坐标偏移量，单位pt
      * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
-     * @param integer $ChannelComponentSource //渠道子客控件来源。0-渠道指定；1-用户自定义
+     * @param integer $ChannelComponentSource //子客控件来源。0-平台指定；1-用户自定义
      * @param string $KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
      * @param integer $KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来

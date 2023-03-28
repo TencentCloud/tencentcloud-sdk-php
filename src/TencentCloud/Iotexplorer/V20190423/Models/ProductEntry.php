@@ -26,24 +26,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductName(string $ProductName) 设置产品名称
  * @method integer getCategoryId() 获取产品分组模板ID
  * @method void setCategoryId(integer $CategoryId) 设置产品分组模板ID
- * @method string getEncryptionType() 获取加密类型
- * @method void setEncryptionType(string $EncryptionType) 设置加密类型
- * @method string getNetType() 获取连接类型
- * @method void setNetType(string $NetType) 设置连接类型
- * @method integer getDataProtocol() 获取数据协议
- * @method void setDataProtocol(integer $DataProtocol) 设置数据协议
+ * @method string getEncryptionType() 获取加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+ * @method void setEncryptionType(string $EncryptionType) 设置加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+ * @method string getNetType() 获取连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+ * @method void setNetType(string $NetType) 设置连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+ * @method integer getDataProtocol() 获取数据协议 (1 使用物模型 2 为自定义类型)
+ * @method void setDataProtocol(integer $DataProtocol) 设置数据协议 (1 使用物模型 2 为自定义类型)
  * @method string getProductDesc() 获取产品描述
  * @method void setProductDesc(string $ProductDesc) 设置产品描述
- * @method string getDevStatus() 获取状态
- * @method void setDevStatus(string $DevStatus) 设置状态
+ * @method string getDevStatus() 获取状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
+ * @method void setDevStatus(string $DevStatus) 设置状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getUpdateTime() 获取更新时间
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
  * @method string getRegion() 获取区域
  * @method void setRegion(string $Region) 设置区域
- * @method integer getProductType() 获取产品类型
- * @method void setProductType(integer $ProductType) 设置产品类型
+ * @method integer getProductType() 获取产品类型。如： 0 普通产品 ， 5 网关产品
+ * @method void setProductType(integer $ProductType) 设置产品类型。如： 0 普通产品 ， 5 网关产品
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method integer getModuleId() 获取产品ModuleId
@@ -59,6 +61,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatorNickName() 获取创建者昵称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorNickName(string $CreatorNickName) 设置创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBindStrategy() 获取绑定策略（1：强踢；2：非强踢；0：表示无意义）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBindStrategy(integer $BindStrategy) 设置绑定策略（1：强踢；2：非强踢；0：表示无意义）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductEntry extends AbstractModel
@@ -79,17 +85,18 @@ class ProductEntry extends AbstractModel
     public $CategoryId;
 
     /**
-     * @var string 加密类型
+     * @var string 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      */
     public $EncryptionType;
 
     /**
-     * @var string 连接类型
+     * @var string 连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
      */
     public $NetType;
 
     /**
-     * @var integer 数据协议
+     * @var integer 数据协议 (1 使用物模型 2 为自定义类型)
      */
     public $DataProtocol;
 
@@ -99,7 +106,7 @@ class ProductEntry extends AbstractModel
     public $ProductDesc;
 
     /**
-     * @var string 状态
+     * @var string 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
      */
     public $DevStatus;
 
@@ -119,7 +126,7 @@ class ProductEntry extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 产品类型
+     * @var integer 产品类型。如： 0 普通产品 ， 5 网关产品
      */
     public $ProductType;
 
@@ -152,18 +159,25 @@ class ProductEntry extends AbstractModel
     public $CreatorNickName;
 
     /**
+     * @var integer 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BindStrategy;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param integer $CategoryId 产品分组模板ID
-     * @param string $EncryptionType 加密类型
-     * @param string $NetType 连接类型
-     * @param integer $DataProtocol 数据协议
+     * @param string $EncryptionType 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * @param string $NetType 连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+     * @param integer $DataProtocol 数据协议 (1 使用物模型 2 为自定义类型)
      * @param string $ProductDesc 产品描述
-     * @param string $DevStatus 状态
+     * @param string $DevStatus 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
      * @param integer $CreateTime 创建时间
      * @param integer $UpdateTime 更新时间
      * @param string $Region 区域
-     * @param integer $ProductType 产品类型
+     * @param integer $ProductType 产品类型。如： 0 普通产品 ， 5 网关产品
      * @param string $ProjectId 项目ID
      * @param integer $ModuleId 产品ModuleId
      * @param string $EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
@@ -171,6 +185,8 @@ class ProductEntry extends AbstractModel
      * @param integer $CreateUserId 创建人 UinId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorNickName 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -252,6 +268,10 @@ class ProductEntry extends AbstractModel
 
         if (array_key_exists("CreatorNickName",$param) and $param["CreatorNickName"] !== null) {
             $this->CreatorNickName = $param["CreatorNickName"];
+        }
+
+        if (array_key_exists("BindStrategy",$param) and $param["BindStrategy"] !== null) {
+            $this->BindStrategy = $param["BindStrategy"];
         }
     }
 }

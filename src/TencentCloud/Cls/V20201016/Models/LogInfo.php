@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置日志来源主机名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRawLog() 获取原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRawLog(string $RawLog) 设置原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexStatus() 获取日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexStatus(string $IndexStatus) 设置日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogInfo extends AbstractModel
 {
@@ -93,6 +101,18 @@ class LogInfo extends AbstractModel
     public $HostName;
 
     /**
+     * @var string 原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RawLog;
+
+    /**
+     * @var string 日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexStatus;
+
+    /**
      * @param integer $Time 日志时间，单位ms
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
@@ -103,6 +123,10 @@ class LogInfo extends AbstractModel
      * @param string $LogJson 日志内容的Json序列化字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostName 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RawLog 原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -152,6 +176,14 @@ class LogInfo extends AbstractModel
 
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
             $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("RawLog",$param) and $param["RawLog"] !== null) {
+            $this->RawLog = $param["RawLog"];
+        }
+
+        if (array_key_exists("IndexStatus",$param) and $param["IndexStatus"] !== null) {
+            $this->IndexStatus = $param["IndexStatus"];
         }
     }
 }

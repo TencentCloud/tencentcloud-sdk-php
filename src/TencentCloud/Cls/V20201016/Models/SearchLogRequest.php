@@ -74,6 +74,12 @@ use TencentCloud\Common\AbstractModel;
 0～1：按指定采样率采样，例如0.02;
 1：不采样，即精确分析
 默认值为1
+ * @method integer getSyntaxRule() 获取检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
+ * @method void setSyntaxRule(integer $SyntaxRule) 设置检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -141,6 +147,13 @@ class SearchLogRequest extends AbstractModel
     public $SamplingRate;
 
     /**
+     * @var integer 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
+     */
+    public $SyntaxRule;
+
+    /**
      * @param integer $From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
      * @param integer $To 要检索分析的日志的结束时间，Unix时间戳（毫秒）
      * @param string $Query 检索分析语句，最大长度为12KB
@@ -168,6 +181,9 @@ class SearchLogRequest extends AbstractModel
 0～1：按指定采样率采样，例如0.02;
 1：不采样，即精确分析
 默认值为1
+     * @param integer $SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
      */
     function __construct()
     {
@@ -216,6 +232,10 @@ class SearchLogRequest extends AbstractModel
 
         if (array_key_exists("SamplingRate",$param) and $param["SamplingRate"] !== null) {
             $this->SamplingRate = $param["SamplingRate"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

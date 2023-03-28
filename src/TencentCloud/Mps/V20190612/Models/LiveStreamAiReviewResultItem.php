@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li>
+<li>VoicePorn：声音违规</li>
  * @method void setType(string $Type) 设置审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li>
+<li>VoicePorn：声音违规</li>
  * @method array getImagePornResultSet() 获取图片鉴黄的结果，当 Type 为 ImagePorn 时有效。
  * @method void setImagePornResultSet(array $ImagePornResultSet) 设置图片鉴黄的结果，当 Type 为 ImagePorn 时有效。
  * @method array getImageTerrorismResultSet() 获取图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。
  * @method void setImageTerrorismResultSet(array $ImageTerrorismResultSet) 设置图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。
  * @method array getImagePoliticalResultSet() 获取图片涉敏的结果，当 Type 为 ImagePolitical 时有效。
  * @method void setImagePoliticalResultSet(array $ImagePoliticalResultSet) 设置图片涉敏的结果，当 Type 为 ImagePolitical 时有效。
- * @method array getVoicePornResultSet() 获取声音鉴黄的结果，当 Type 为 PornVoice 时有效。
- * @method void setVoicePornResultSet(array $VoicePornResultSet) 设置声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+ * @method array getVoicePornResultSet() 获取声音违规的结果，当 Type 为 VoicePorn 时有效。
+ * @method void setVoicePornResultSet(array $VoicePornResultSet) 设置声音违规的结果，当 Type 为 VoicePorn 时有效。
  */
 class LiveStreamAiReviewResultItem extends AbstractModel
 {
@@ -46,7 +46,7 @@ class LiveStreamAiReviewResultItem extends AbstractModel
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li>
+<li>VoicePorn：声音违规</li>
      */
     public $Type;
 
@@ -66,7 +66,7 @@ class LiveStreamAiReviewResultItem extends AbstractModel
     public $ImagePoliticalResultSet;
 
     /**
-     * @var array 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+     * @var array 声音违规的结果，当 Type 为 VoicePorn 时有效。
      */
     public $VoicePornResultSet;
 
@@ -75,11 +75,11 @@ class LiveStreamAiReviewResultItem extends AbstractModel
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li>
+<li>VoicePorn：声音违规</li>
      * @param array $ImagePornResultSet 图片鉴黄的结果，当 Type 为 ImagePorn 时有效。
      * @param array $ImageTerrorismResultSet 图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。
      * @param array $ImagePoliticalResultSet 图片涉敏的结果，当 Type 为 ImagePolitical 时有效。
-     * @param array $VoicePornResultSet 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+     * @param array $VoicePornResultSet 声音违规的结果，当 Type 为 VoicePorn 时有效。
      */
     function __construct()
     {

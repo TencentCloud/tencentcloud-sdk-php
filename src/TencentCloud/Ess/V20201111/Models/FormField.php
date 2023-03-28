@@ -21,7 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 电子文档的控件填充信息。按照控件类型进行相应的填充。
 
 【数据表格传参说明】
-当模板的 ComponentType='DYNAMIC_TABLE'时（渠道版或集成版），FormField.ComponentValue需要传递json格式的字符串参数，用于确定表头&填充数据表格（支持内容的单元格合并）
+当模板的 ComponentType='DYNAMIC_TABLE'时，FormField.ComponentValue需要传递json格式的字符串参数，用于确定表头&填充数据表格（支持内容的单元格合并）
 输入示例1：
 
 ```

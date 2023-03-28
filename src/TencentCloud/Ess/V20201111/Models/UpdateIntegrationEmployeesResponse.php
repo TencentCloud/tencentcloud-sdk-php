@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribePrometheusClusterAgents返回参数结构体
+ * UpdateIntegrationEmployees返回参数结构体
  *
- * @method array getAgents() 获取被关联集群信息
- * @method void setAgents(array $Agents) 设置被关联集群信息
- * @method integer getTotal() 获取被关联集群总量
- * @method void setTotal(integer $Total) 设置被关联集群总量
- * @method boolean getIsFirstBind() 获取是否为首次绑定，需要安装预聚合规则
- * @method void setIsFirstBind(boolean $IsFirstBind) 设置是否为首次绑定，需要安装预聚合规则
+ * @method array getSuccessEmployeeData() 获取更新成功的用户列表
+ * @method void setSuccessEmployeeData(array $SuccessEmployeeData) 设置更新成功的用户列表
+ * @method array getFailedEmployeeData() 获取更新失败的用户列表
+ * @method void setFailedEmployeeData(array $FailedEmployeeData) 设置更新失败的用户列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribePrometheusClusterAgentsResponse extends AbstractModel
+class UpdateIntegrationEmployeesResponse extends AbstractModel
 {
     /**
-     * @var array 被关联集群信息
+     * @var array 更新成功的用户列表
      */
-    public $Agents;
+    public $SuccessEmployeeData;
 
     /**
-     * @var integer 被关联集群总量
+     * @var array 更新失败的用户列表
      */
-    public $Total;
-
-    /**
-     * @var boolean 是否为首次绑定，需要安装预聚合规则
-     */
-    public $IsFirstBind;
+    public $FailedEmployeeData;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Agents 被关联集群信息
-     * @param integer $Total 被关联集群总量
-     * @param boolean $IsFirstBind 是否为首次绑定，需要安装预聚合规则
+     * @param array $SuccessEmployeeData 更新成功的用户列表
+     * @param array $FailedEmployeeData 更新失败的用户列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +62,22 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Agents",$param) and $param["Agents"] !== null) {
-            $this->Agents = [];
-            foreach ($param["Agents"] as $key => $value){
-                $obj = new PrometheusAgentOverview();
+        if (array_key_exists("SuccessEmployeeData",$param) and $param["SuccessEmployeeData"] !== null) {
+            $this->SuccessEmployeeData = [];
+            foreach ($param["SuccessEmployeeData"] as $key => $value){
+                $obj = new SuccessUpdateStaffData();
                 $obj->deserialize($value);
-                array_push($this->Agents, $obj);
+                array_push($this->SuccessEmployeeData, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("IsFirstBind",$param) and $param["IsFirstBind"] !== null) {
-            $this->IsFirstBind = $param["IsFirstBind"];
+        if (array_key_exists("FailedEmployeeData",$param) and $param["FailedEmployeeData"] !== null) {
+            $this->FailedEmployeeData = [];
+            foreach ($param["FailedEmployeeData"] as $key => $value){
+                $obj = new FailedUpdateStaffData();
+                $obj->deserialize($value);
+                array_push($this->FailedEmployeeData, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTrtcRoomUsage请求参数结构体
  *
-
+ * @method integer getSdkAppid() 获取TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+ * @method void setSdkAppid(integer $SdkAppid) 设置TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+ * @method string getStartTime() 获取查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+ * @method void setStartTime(string $StartTime) 设置查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+ * @method string getEndTime() 获取查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
+ * @method void setEndTime(string $EndTime) 设置查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
  */
 class DescribeTrtcRoomUsageRequest extends AbstractModel
 {
-
+    /**
+     * @var integer TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+     */
+    public $SdkAppid;
 
     /**
+     * @var string 查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+     */
+    public $StartTime;
 
+    /**
+     * @var string 查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
+     */
+    public $EndTime;
+
+    /**
+     * @param integer $SdkAppid TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+     * @param string $StartTime 查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+     * @param string $EndTime 查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DescribeTrtcRoomUsageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SdkAppid",$param) and $param["SdkAppid"] !== null) {
+            $this->SdkAppid = $param["SdkAppid"];
+        }
 
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
     }
 }

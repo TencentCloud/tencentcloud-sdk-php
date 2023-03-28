@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(string $ActivityId) 设置活动id
  * @method string getVoucherName() 获取代金券名称
  * @method void setVoucherName(string $VoucherName) 设置代金券名称
- * @method string getTimeFrom() 获取发放开始时间
- * @method void setTimeFrom(string $TimeFrom) 设置发放开始时间
- * @method string getTimeTo() 获取发放结束时间
- * @method void setTimeTo(string $TimeTo) 设置发放结束时间
+ * @method string getTimeFrom() 获取发放开始时间,例：2021-01-01
+ * @method void setTimeFrom(string $TimeFrom) 设置发放开始时间,例：2021-01-01
+ * @method string getTimeTo() 获取发放结束时间，例：2021-01-01
+ * @method void setTimeTo(string $TimeTo) 设置发放结束时间，例：2021-01-01
  * @method string getSortField() 获取指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间
  * @method void setSortField(string $SortField) 设置指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间
  * @method string getSortOrder() 获取指定升序降序：desc、asc
@@ -94,12 +94,12 @@ class DescribeVoucherInfoRequest extends AbstractModel
     public $VoucherName;
 
     /**
-     * @var string 发放开始时间
+     * @var string 发放开始时间,例：2021-01-01
      */
     public $TimeFrom;
 
     /**
-     * @var string 发放结束时间
+     * @var string 发放结束时间，例：2021-01-01
      */
     public $TimeTo;
 
@@ -137,8 +137,8 @@ class DescribeVoucherInfoRequest extends AbstractModel
      * @param string $ProductCode 商品码
      * @param string $ActivityId 活动id
      * @param string $VoucherName 代金券名称
-     * @param string $TimeFrom 发放开始时间
-     * @param string $TimeTo 发放结束时间
+     * @param string $TimeFrom 发放开始时间,例：2021-01-01
+     * @param string $TimeTo 发放结束时间，例：2021-01-01
      * @param string $SortField 指定排序字段：BeginTime开始时间、EndTime到期时间、CreateTime创建时间
      * @param string $SortOrder 指定升序降序：desc、asc
      * @param string $PayMode 付费模式，postPay后付费/prePay预付费/riPay预留实例/""或者"*"表示全部模式，如果payMode为""或"*"，那么productCode与subProductCode必须传空

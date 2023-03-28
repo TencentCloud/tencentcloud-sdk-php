@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModuleId(integer $ModuleId) 设置模型ID
  * @method string getEnableProductScript() 获取是否打开二进制转Json功能, 取值为字符串 true/false
  * @method void setEnableProductScript(string $EnableProductScript) 设置是否打开二进制转Json功能, 取值为字符串 true/false
+ * @method integer getBindStrategy() 获取传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
+ * @method void setBindStrategy(integer $BindStrategy) 设置传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
  */
 class ModifyStudioProductRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyStudioProductRequest extends AbstractModel
     public $EnableProductScript;
 
     /**
+     * @var integer 传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
+     */
+    public $BindStrategy;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param string $ProductDesc 产品描述
      * @param integer $ModuleId 模型ID
      * @param string $EnableProductScript 是否打开二进制转Json功能, 取值为字符串 true/false
+     * @param integer $BindStrategy 传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyStudioProductRequest extends AbstractModel
 
         if (array_key_exists("EnableProductScript",$param) and $param["EnableProductScript"] !== null) {
             $this->EnableProductScript = $param["EnableProductScript"];
+        }
+
+        if (array_key_exists("BindStrategy",$param) and $param["BindStrategy"] !== null) {
+            $this->BindStrategy = $param["BindStrategy"];
         }
     }
 }

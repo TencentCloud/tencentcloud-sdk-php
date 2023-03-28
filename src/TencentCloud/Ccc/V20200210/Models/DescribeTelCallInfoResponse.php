@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeatUsedCount(integer $SeatUsedCount) 设置坐席使用统计个数
  * @method integer getVoipCallInCount() 获取音频套餐包消耗分钟数
  * @method void setVoipCallInCount(integer $VoipCallInCount) 设置音频套餐包消耗分钟数
+ * @method integer getAsrOfflineCount() 获取离线语音转文字套餐包消耗分钟数
+ * @method void setAsrOfflineCount(integer $AsrOfflineCount) 设置离线语音转文字套餐包消耗分钟数
+ * @method integer getAsrRealtimeCount() 获取实时语音转文字套餐包消耗分钟数
+ * @method void setAsrRealtimeCount(integer $AsrRealtimeCount) 设置实时语音转文字套餐包消耗分钟数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +58,16 @@ class DescribeTelCallInfoResponse extends AbstractModel
     public $VoipCallInCount;
 
     /**
+     * @var integer 离线语音转文字套餐包消耗分钟数
+     */
+    public $AsrOfflineCount;
+
+    /**
+     * @var integer 实时语音转文字套餐包消耗分钟数
+     */
+    public $AsrRealtimeCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +77,8 @@ class DescribeTelCallInfoResponse extends AbstractModel
      * @param integer $TelCallInCount 呼入套餐包消耗分钟数
      * @param integer $SeatUsedCount 坐席使用统计个数
      * @param integer $VoipCallInCount 音频套餐包消耗分钟数
+     * @param integer $AsrOfflineCount 离线语音转文字套餐包消耗分钟数
+     * @param integer $AsrRealtimeCount 实时语音转文字套餐包消耗分钟数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +108,14 @@ class DescribeTelCallInfoResponse extends AbstractModel
 
         if (array_key_exists("VoipCallInCount",$param) and $param["VoipCallInCount"] !== null) {
             $this->VoipCallInCount = $param["VoipCallInCount"];
+        }
+
+        if (array_key_exists("AsrOfflineCount",$param) and $param["AsrOfflineCount"] !== null) {
+            $this->AsrOfflineCount = $param["AsrOfflineCount"];
+        }
+
+        if (array_key_exists("AsrRealtimeCount",$param) and $param["AsrRealtimeCount"] !== null) {
+            $this->AsrRealtimeCount = $param["AsrRealtimeCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

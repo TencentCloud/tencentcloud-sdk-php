@@ -37,6 +37,7 @@ use TencentCloud\Common\AbstractModel;
 <li> RemoveWatermark: 去除水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
+<li> RebuildMedia: 音画质重生</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
  * @method void setType(string $Type) 设置查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
@@ -49,6 +50,7 @@ use TencentCloud\Common\AbstractModel;
 <li> RemoveWatermark: 去除水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
+<li> RebuildMedia: 音画质重生</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
  */
 class DescribeMediaProcessUsageDataRequest extends AbstractModel
@@ -80,6 +82,7 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 <li> RemoveWatermark: 去除水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
+<li> RebuildMedia: 音画质重生</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public $Type;
@@ -99,6 +102,7 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 <li> RemoveWatermark: 去除水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
+<li> RebuildMedia: 音画质重生</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     function __construct()

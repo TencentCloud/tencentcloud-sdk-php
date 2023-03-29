@@ -40,6 +40,7 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\DescribeOnlineRecordCallbackResponse DescribeOnlineRecordCallback(Models\DescribeOnlineRecordCallbackRequest $req) 查询实时录制回调地址
  * @method Models\DescribePostpaidUsageResponse DescribePostpaidUsage(Models\DescribePostpaidUsageRequest $req) 查询用户后付费用量
  * @method Models\DescribeQualityMetricsResponse DescribeQualityMetrics(Models\DescribeQualityMetricsRequest $req) 查询互动白板质量数据
+ * @method Models\DescribeRecordSearchResponse DescribeRecordSearch(Models\DescribeRecordSearchRequest $req) 根据房间号搜索实时录制任务
  * @method Models\DescribeRoomListResponse DescribeRoomList(Models\DescribeRoomListRequest $req) 查询白板房间列表
  * @method Models\DescribeSnapshotTaskResponse DescribeSnapshotTask(Models\DescribeSnapshotTaskRequest $req) 获取指定白板板书生成任务信息
  * @method Models\DescribeTIWDailyUsageResponse DescribeTIWDailyUsage(Models\DescribeTIWDailyUsageRequest $req) 查询互动白板天维度计费用量。

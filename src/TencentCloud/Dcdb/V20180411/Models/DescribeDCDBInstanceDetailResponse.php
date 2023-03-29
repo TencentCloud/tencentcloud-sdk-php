@@ -150,6 +150,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusterType(integer $ExclusterType) 设置独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRsAccessStrategy() 获取VPC就近访问
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRsAccessStrategy(integer $RsAccessStrategy) 设置VPC就近访问
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -417,6 +421,12 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
     public $ExclusterType;
 
     /**
+     * @var integer VPC就近访问
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RsAccessStrategy;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -486,6 +496,8 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
      * @param integer $EncryptStatus 加密状态, 0-未开启，1-已开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExclusterType 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RsAccessStrategy VPC就近访问
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -706,6 +718,10 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
 
         if (array_key_exists("ExclusterType",$param) and $param["ExclusterType"] !== null) {
             $this->ExclusterType = $param["ExclusterType"];
+        }
+
+        if (array_key_exists("RsAccessStrategy",$param) and $param["RsAccessStrategy"] !== null) {
+            $this->RsAccessStrategy = $param["RsAccessStrategy"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

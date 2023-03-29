@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量
  * @method integer getLimit() 获取分页每页数量
  * @method void setLimit(integer $Limit) 设置分页每页数量
- * @method string getManagerName() 获取管理人姓名
- * @method void setManagerName(string $ManagerName) 设置管理人姓名
- * @method string getManagerMail() 获取模糊查询管理人邮箱
- * @method void setManagerMail(string $ManagerMail) 设置模糊查询管理人邮箱
+ * @method string getManagerName() 获取管理人姓名（将废弃），请使用SearchKey
+ * @method void setManagerName(string $ManagerName) 设置管理人姓名（将废弃），请使用SearchKey
+ * @method string getManagerMail() 获取模糊查询管理人邮箱（将废弃），请使用SearchKey
+ * @method void setManagerMail(string $ManagerMail) 设置模糊查询管理人邮箱（将废弃），请使用SearchKey
  * @method string getStatus() 获取根据管理人状态进行筛选，取值有
 'none' 未提交审核
 'audit', 亚信审核中
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 'invalid'  审核失败
 'expiring'  即将过期
 'expired' 已过期
- * @method string getSearchKey() 获取管理人姓名/邮箱/部门精准匹配
- * @method void setSearchKey(string $SearchKey) 设置管理人姓名/邮箱/部门精准匹配
+ * @method string getSearchKey() 获取管理人姓/管理人名/邮箱/部门精准匹配
+ * @method void setSearchKey(string $SearchKey) 设置管理人姓/管理人名/邮箱/部门精准匹配
  */
 class DescribeManagersRequest extends AbstractModel
 {
@@ -67,12 +67,12 @@ class DescribeManagersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 管理人姓名
+     * @var string 管理人姓名（将废弃），请使用SearchKey
      */
     public $ManagerName;
 
     /**
-     * @var string 模糊查询管理人邮箱
+     * @var string 模糊查询管理人邮箱（将废弃），请使用SearchKey
      */
     public $ManagerMail;
 
@@ -89,7 +89,7 @@ class DescribeManagersRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 管理人姓名/邮箱/部门精准匹配
+     * @var string 管理人姓/管理人名/邮箱/部门精准匹配
      */
     public $SearchKey;
 
@@ -97,8 +97,8 @@ class DescribeManagersRequest extends AbstractModel
      * @param integer $CompanyId 公司ID
      * @param integer $Offset 分页偏移量
      * @param integer $Limit 分页每页数量
-     * @param string $ManagerName 管理人姓名
-     * @param string $ManagerMail 模糊查询管理人邮箱
+     * @param string $ManagerName 管理人姓名（将废弃），请使用SearchKey
+     * @param string $ManagerMail 模糊查询管理人邮箱（将废弃），请使用SearchKey
      * @param string $Status 根据管理人状态进行筛选，取值有
 'none' 未提交审核
 'audit', 亚信审核中
@@ -107,7 +107,7 @@ class DescribeManagersRequest extends AbstractModel
 'invalid'  审核失败
 'expiring'  即将过期
 'expired' 已过期
-     * @param string $SearchKey 管理人姓名/邮箱/部门精准匹配
+     * @param string $SearchKey 管理人姓/管理人名/邮箱/部门精准匹配
      */
     function __construct()
     {

@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportBaselineEffectHostList返回参数结构体
  *
- * @method string getDownloadUrl() 获取下载地址
+ * @method string getDownloadUrl() 获取该参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDownloadUrl(string $DownloadUrl) 设置下载地址
+ * @method void setDownloadUrl(string $DownloadUrl) 设置该参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取导出任务id 可通过 ExportTasks接口下载
- * @method void setTaskId(string $TaskId) 设置导出任务id 可通过 ExportTasks接口下载
+ * @method string getTaskId() 获取任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+ * @method void setTaskId(string $TaskId) 设置任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ExportBaselineEffectHostListResponse extends AbstractModel
 {
     /**
-     * @var string 下载地址
+     * @var string 该参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadUrl;
 
     /**
-     * @var string 导出任务id 可通过 ExportTasks接口下载
+     * @var string 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public $TaskId;
 
@@ -48,9 +48,9 @@ class ExportBaselineEffectHostListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl 下载地址
+     * @param string $DownloadUrl 该参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 导出任务id 可通过 ExportTasks接口下载
+     * @param string $TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompanyId(integer $CompanyId) 设置管理人公司ID
  * @method integer getManagerId() 获取管理人ID
  * @method void setManagerId(integer $ManagerId) 设置管理人ID
+ * @method array getStatusInfo() 获取审核状态详细信息
+ * @method void setStatusInfo(array $StatusInfo) 设置审核状态详细信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -158,6 +160,11 @@ class DescribeManagerDetailResponse extends AbstractModel
     public $ManagerId;
 
     /**
+     * @var array 审核状态详细信息
+     */
+    public $StatusInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -183,6 +190,7 @@ class DescribeManagerDetailResponse extends AbstractModel
      * @param CompanyInfo $CompanyInfo 管理人所属公司信息
      * @param integer $CompanyId 管理人公司ID
      * @param integer $ManagerId 管理人ID
+     * @param array $StatusInfo 审核状态详细信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -269,6 +277,15 @@ class DescribeManagerDetailResponse extends AbstractModel
 
         if (array_key_exists("ManagerId",$param) and $param["ManagerId"] !== null) {
             $this->ManagerId = $param["ManagerId"];
+        }
+
+        if (array_key_exists("StatusInfo",$param) and $param["StatusInfo"] !== null) {
+            $this->StatusInfo = [];
+            foreach ($param["StatusInfo"] as $key => $value){
+                $obj = new ManagerStatusInfo();
+                $obj->deserialize($value);
+                array_push($this->StatusInfo, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

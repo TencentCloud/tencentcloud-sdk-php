@@ -164,7 +164,9 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\ModifyPrometheusInstanceAttributesResponse ModifyPrometheusInstanceAttributes(Models\ModifyPrometheusInstanceAttributesRequest $req) 修改 Prometheus 实例相关属性
  * @method Models\ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(Models\ModifyPrometheusRecordRuleYamlRequest $req) 通过yaml的方式修改Prometheus聚合实例
  * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) 修改模板内容
- * @method Models\PutMonitorDataResponse PutMonitorData(Models\PutMonitorDataRequest $req) 默认接口请求频率限制：50次/秒。
+ * @method Models\PutMonitorDataResponse PutMonitorData(Models\PutMonitorDataRequest $req) 对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
+
+默认接口请求频率限制：50次/秒。
 默认单租户指标上限：100个。
 单次上报最多 30 个指标/值对，请求返回错误时，请求中所有的指标/值均不会被保存。
 

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQuuid() 获取机器 Quuid
  * @method void setQuuid(string $Quuid) 设置机器 Quuid
+ * @method array getTagIds() 获取标签ID，该操作会覆盖原有的标签列表
+ * @method void setTagIds(array $TagIds) 设置标签ID，该操作会覆盖原有的标签列表
  * @method string getMachineRegion() 获取服务器地区 如: ap-guangzhou
  * @method void setMachineRegion(string $MachineRegion) 设置服务器地区 如: ap-guangzhou
  * @method string getMachineArea() 获取服务器类型(CVM|BM|ECM|LH|Other)
  * @method void setMachineArea(string $MachineArea) 设置服务器类型(CVM|BM|ECM|LH|Other)
- * @method array getTagIds() 获取标签ID，该操作会覆盖原有的标签列表
- * @method void setTagIds(array $TagIds) 设置标签ID，该操作会覆盖原有的标签列表
  */
 class UpdateMachineTagsRequest extends AbstractModel
 {
@@ -35,6 +35,11 @@ class UpdateMachineTagsRequest extends AbstractModel
      * @var string 机器 Quuid
      */
     public $Quuid;
+
+    /**
+     * @var array 标签ID，该操作会覆盖原有的标签列表
+     */
+    public $TagIds;
 
     /**
      * @var string 服务器地区 如: ap-guangzhou
@@ -47,15 +52,10 @@ class UpdateMachineTagsRequest extends AbstractModel
     public $MachineArea;
 
     /**
-     * @var array 标签ID，该操作会覆盖原有的标签列表
-     */
-    public $TagIds;
-
-    /**
      * @param string $Quuid 机器 Quuid
+     * @param array $TagIds 标签ID，该操作会覆盖原有的标签列表
      * @param string $MachineRegion 服务器地区 如: ap-guangzhou
      * @param string $MachineArea 服务器类型(CVM|BM|ECM|LH|Other)
-     * @param array $TagIds 标签ID，该操作会覆盖原有的标签列表
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class UpdateMachineTagsRequest extends AbstractModel
             $this->Quuid = $param["Quuid"];
         }
 
+        if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
+            $this->TagIds = $param["TagIds"];
+        }
+
         if (array_key_exists("MachineRegion",$param) and $param["MachineRegion"] !== null) {
             $this->MachineRegion = $param["MachineRegion"];
         }
 
         if (array_key_exists("MachineArea",$param) and $param["MachineArea"] !== null) {
             $this->MachineArea = $param["MachineArea"];
-        }
-
-        if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
-            $this->TagIds = $param["TagIds"];
         }
     }
 }

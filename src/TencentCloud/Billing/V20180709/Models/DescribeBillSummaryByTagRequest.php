@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
  * @method string getEndTime() 获取目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
  * @method void setEndTime(string $EndTime) 设置目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method string getTagKey() 获取分账标签键
- * @method void setTagKey(string $TagKey) 设置分账标签键
+ * @method string getTagKey() 获取分账标签键，用户自定义
+ * @method void setTagKey(string $TagKey) 设置分账标签键，用户自定义
  * @method string getPayerUin() 获取查询账单数据的用户UIN
  * @method void setPayerUin(string $PayerUin) 设置查询账单数据的用户UIN
  * @method string getTagValue() 获取分账标签值
@@ -44,7 +44,7 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 分账标签键
+     * @var string 分账标签键，用户自定义
      */
     public $TagKey;
 
@@ -61,7 +61,7 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
     /**
      * @param string $BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      * @param string $EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
-     * @param string $TagKey 分账标签键
+     * @param string $TagKey 分账标签键，用户自定义
      * @param string $PayerUin 查询账单数据的用户UIN
      * @param string $TagValue 分账标签值
      */

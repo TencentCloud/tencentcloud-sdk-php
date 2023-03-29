@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportReverseShellEvents返回参数结构体
  *
- * @method string getDownloadUrl() 获取导出文件下载链接地址。
- * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载链接地址。
- * @method string getTaskId() 获取任务id
- * @method void setTaskId(string $TaskId) 设置任务id
+ * @method string getDownloadUrl() 获取该参数已废弃
+ * @method void setDownloadUrl(string $DownloadUrl) 设置该参数已废弃
+ * @method string getTaskId() 获取任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+ * @method void setTaskId(string $TaskId) 设置任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ExportReverseShellEventsResponse extends AbstractModel
 {
     /**
-     * @var string 导出文件下载链接地址。
+     * @var string 该参数已废弃
      */
     public $DownloadUrl;
 
     /**
-     * @var string 任务id
+     * @var string 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public $TaskId;
 
@@ -45,8 +45,8 @@ class ExportReverseShellEventsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl 导出文件下载链接地址。
-     * @param string $TaskId 任务id
+     * @param string $DownloadUrl 该参数已废弃
+     * @param string $TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

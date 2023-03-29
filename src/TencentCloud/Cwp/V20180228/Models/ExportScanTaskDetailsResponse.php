@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportScanTaskDetails返回参数结构体
  *
- * @method string getTaskId() 获取导出本次检测Excel的任务Id（不同于入参的本次检测任务id）
- * @method void setTaskId(string $TaskId) 设置导出本次检测Excel的任务Id（不同于入参的本次检测任务id）
+ * @method string getTaskId() 获取任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
+ * @method void setTaskId(string $TaskId) 设置任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ExportScanTaskDetailsResponse extends AbstractModel
 {
     /**
-     * @var string 导出本次检测Excel的任务Id（不同于入参的本次检测任务id）
+     * @var string 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class ExportScanTaskDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 导出本次检测Excel的任务Id（不同于入参的本次检测任务id）
+     * @param string $TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

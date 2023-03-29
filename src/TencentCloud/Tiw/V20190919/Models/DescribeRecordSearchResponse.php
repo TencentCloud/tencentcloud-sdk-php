@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportPrivilegeEvents返回参数结构体
+ * DescribeRecordSearch返回参数结构体
  *
- * @method string getDownloadUrl() 获取该参数已废弃
- * @method void setDownloadUrl(string $DownloadUrl) 设置该参数已废弃
- * @method string getTaskId() 获取任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
- * @method void setTaskId(string $TaskId) 设置任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+ * @method array getRecordTaskSet() 获取录制任务搜索结果集合
+ * @method void setRecordTaskSet(array $RecordTaskSet) 设置录制任务搜索结果集合
+ * @method integer getTotalCount() 获取录制总任务数
+ * @method void setTotalCount(integer $TotalCount) 设置录制总任务数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ExportPrivilegeEventsResponse extends AbstractModel
+class DescribeRecordSearchResponse extends AbstractModel
 {
     /**
-     * @var string 该参数已废弃
+     * @var array 录制任务搜索结果集合
      */
-    public $DownloadUrl;
+    public $RecordTaskSet;
 
     /**
-     * @var string 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * @var integer 录制总任务数
      */
-    public $TaskId;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class ExportPrivilegeEventsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl 该参数已废弃
-     * @param string $TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * @param array $RecordTaskSet 录制任务搜索结果集合
+     * @param integer $TotalCount 录制总任务数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class ExportPrivilegeEventsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists("RecordTaskSet",$param) and $param["RecordTaskSet"] !== null) {
+            $this->RecordTaskSet = [];
+            foreach ($param["RecordTaskSet"] as $key => $value){
+                $obj = new RecordTaskSearchResult();
+                $obj->deserialize($value);
+                array_push($this->RecordTaskSet, $obj);
+            }
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

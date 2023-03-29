@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportProtectDirList返回参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getTaskId() 获取任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+ * @method void setTaskId(string $TaskId) 设置任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ExportProtectDirListResponse extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class ExportProtectDirListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 任务ID
+     * @param string $TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

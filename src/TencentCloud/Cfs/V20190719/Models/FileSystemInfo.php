@@ -26,8 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationToken(string $CreationToken) 设置用户自定义名称
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method string getLifeCycleState() 获取文件系统状态
- * @method void setLifeCycleState(string $LifeCycleState) 设置文件系统状态
+ * @method string getLifeCycleState() 获取文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中
+ * @method void setLifeCycleState(string $LifeCycleState) 设置文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中
  * @method integer getSizeByte() 获取文件系统已使用容量
  * @method void setSizeByte(integer $SizeByte) 设置文件系统已使用容量
  * @method integer getSizeLimit() 获取文件系统最大空间限制
@@ -60,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapacity(integer $Capacity) 设置文件系统总容量
  * @method array getTags() 获取文件系统标签列表
  * @method void setTags(array $Tags) 设置文件系统标签列表
- * @method string getTieringState() 获取文件系统声明周期管理状态
- * @method void setTieringState(string $TieringState) 设置文件系统声明周期管理状态
+ * @method string getTieringState() 获取文件系统生命周期管理状态
+ * @method void setTieringState(string $TieringState) 设置文件系统生命周期管理状态
  * @method TieringDetailInfo getTieringDetail() 获取分层存储详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTieringDetail(TieringDetailInfo $TieringDetail) 设置分层存储详情
@@ -85,7 +97,13 @@ class FileSystemInfo extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string 文件系统状态
+     * @var string 文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中
      */
     public $LifeCycleState;
 
@@ -170,7 +188,7 @@ class FileSystemInfo extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 文件系统声明周期管理状态
+     * @var string 文件系统生命周期管理状态
      */
     public $TieringState;
 
@@ -184,7 +202,13 @@ class FileSystemInfo extends AbstractModel
      * @param string $CreationTime 创建时间
      * @param string $CreationToken 用户自定义名称
      * @param string $FileSystemId 文件系统 ID
-     * @param string $LifeCycleState 文件系统状态
+     * @param string $LifeCycleState 文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中
      * @param integer $SizeByte 文件系统已使用容量
      * @param integer $SizeLimit 文件系统最大空间限制
      * @param integer $ZoneId 区域 ID
@@ -201,7 +225,7 @@ class FileSystemInfo extends AbstractModel
      * @param float $BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
      * @param integer $Capacity 文件系统总容量
      * @param array $Tags 文件系统标签列表
-     * @param string $TieringState 文件系统声明周期管理状态
+     * @param string $TieringState 文件系统生命周期管理状态
      * @param TieringDetailInfo $TieringDetail 分层存储详情
 注意：此字段可能返回 null，表示取不到有效值。
      */

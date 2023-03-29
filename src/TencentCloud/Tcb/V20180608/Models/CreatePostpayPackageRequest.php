@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlag(string $Flag) 设置订单标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
+ * @method string getEnvAlias() 获取环境别名，无字符类型限制
+ * @method void setEnvAlias(string $EnvAlias) 设置环境别名，无字符类型限制
+ * @method string getExtra() 获取附加字段，用于透传额外的自定义信息
+ * @method void setExtra(string $Extra) 设置附加字段，用于透传额外的自定义信息
  */
 class CreatePostpayPackageRequest extends AbstractModel
 {
@@ -117,6 +121,16 @@ class CreatePostpayPackageRequest extends AbstractModel
     public $Flag;
 
     /**
+     * @var string 环境别名，无字符类型限制
+     */
+    public $EnvAlias;
+
+    /**
+     * @var string 附加字段，用于透传额外的自定义信息
+     */
+    public $Extra;
+
+    /**
      * @param string $EnvId 环境ID，需要系统自动创建环境时，此字段不传
      * @param string $WxAppId 微信 AppId，微信必传
      * @param string $Source 付费来源
@@ -136,6 +150,8 @@ class CreatePostpayPackageRequest extends AbstractModel
      * @param string $Flag 订单标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
+     * @param string $EnvAlias 环境别名，无字符类型限制
+     * @param string $Extra 附加字段，用于透传额外的自定义信息
      */
     function __construct()
     {
@@ -184,6 +200,14 @@ class CreatePostpayPackageRequest extends AbstractModel
 
         if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
             $this->Flag = $param["Flag"];
+        }
+
+        if (array_key_exists("EnvAlias",$param) and $param["EnvAlias"] !== null) {
+            $this->EnvAlias = $param["EnvAlias"];
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
     }
 }

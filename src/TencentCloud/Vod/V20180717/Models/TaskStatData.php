@@ -31,6 +31,7 @@ use TencentCloud\Common\AbstractModel;
 <li> RemoveWatermark: 去水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
+<li> RebuildMedia: 音画质重生</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
  * @method void setTaskType(string $TaskType) 设置任务类型。
 <li> Transcoding: 普通转码</li>
@@ -43,6 +44,7 @@ use TencentCloud\Common\AbstractModel;
 <li> RemoveWatermark: 去水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
+<li> RebuildMedia: 音画质重生</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
  * @method array getSummary() 获取任务数统计数据概览，用量单位为秒。
  * @method void setSummary(array $Summary) 设置任务数统计数据概览，用量单位为秒。
@@ -91,13 +93,14 @@ use TencentCloud\Common\AbstractModel;
 <li>Edit.TESHD-10.H265.FHD: H.265编码方式全高清极速高清视频编辑</li>
 <li>Edit.TESHD-10.H265.2K: H.265编码方式2K极速高清视频编辑</li>
 <li>Edit.TESHD-10.H265.4K: H.265编码方式4K极速高清视频编辑</li>
-去水印规格：
+去水印、音画质重生规格：
 <li>480P: 短边 ≤ 480px</li>
 <li>720P: 短边 ≤ 720px</li>
 <li>1080P: 短边 ≤ 1080px</li>
 <li>2K: 短边 ≤ 1440px</li>
 <li>4K: 短边 ≤ 2160px</li>
 <li>8K: 短边 ≤ 4320px</li>
+<li>Audio: 音频</li>
  * @method void setDetails(array $Details) 设置不同规格任务统计数据详情。
 转码规格：
 <li>Remuxing: 转封装</li>
@@ -143,13 +146,14 @@ use TencentCloud\Common\AbstractModel;
 <li>Edit.TESHD-10.H265.FHD: H.265编码方式全高清极速高清视频编辑</li>
 <li>Edit.TESHD-10.H265.2K: H.265编码方式2K极速高清视频编辑</li>
 <li>Edit.TESHD-10.H265.4K: H.265编码方式4K极速高清视频编辑</li>
-去水印规格：
+去水印、音画质重生规格：
 <li>480P: 短边 ≤ 480px</li>
 <li>720P: 短边 ≤ 720px</li>
 <li>1080P: 短边 ≤ 1080px</li>
 <li>2K: 短边 ≤ 1440px</li>
 <li>4K: 短边 ≤ 2160px</li>
 <li>8K: 短边 ≤ 4320px</li>
+<li>Audio: 音频</li>
  */
 class TaskStatData extends AbstractModel
 {
@@ -165,6 +169,7 @@ class TaskStatData extends AbstractModel
 <li> RemoveWatermark: 去水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
+<li> RebuildMedia: 音画质重生</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public $TaskType;
@@ -220,13 +225,14 @@ class TaskStatData extends AbstractModel
 <li>Edit.TESHD-10.H265.FHD: H.265编码方式全高清极速高清视频编辑</li>
 <li>Edit.TESHD-10.H265.2K: H.265编码方式2K极速高清视频编辑</li>
 <li>Edit.TESHD-10.H265.4K: H.265编码方式4K极速高清视频编辑</li>
-去水印规格：
+去水印、音画质重生规格：
 <li>480P: 短边 ≤ 480px</li>
 <li>720P: 短边 ≤ 720px</li>
 <li>1080P: 短边 ≤ 1080px</li>
 <li>2K: 短边 ≤ 1440px</li>
 <li>4K: 短边 ≤ 2160px</li>
 <li>8K: 短边 ≤ 4320px</li>
+<li>Audio: 音频</li>
      */
     public $Details;
 
@@ -242,6 +248,7 @@ class TaskStatData extends AbstractModel
 <li> RemoveWatermark: 去水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
 <li> AddTraceWatermark: 添加水印</li>
+<li> RebuildMedia: 音画质重生</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      * @param array $Summary 任务数统计数据概览，用量单位为秒。
      * @param array $Details 不同规格任务统计数据详情。
@@ -289,13 +296,14 @@ class TaskStatData extends AbstractModel
 <li>Edit.TESHD-10.H265.FHD: H.265编码方式全高清极速高清视频编辑</li>
 <li>Edit.TESHD-10.H265.2K: H.265编码方式2K极速高清视频编辑</li>
 <li>Edit.TESHD-10.H265.4K: H.265编码方式4K极速高清视频编辑</li>
-去水印规格：
+去水印、音画质重生规格：
 <li>480P: 短边 ≤ 480px</li>
 <li>720P: 短边 ≤ 720px</li>
 <li>1080P: 短边 ≤ 1080px</li>
 <li>2K: 短边 ≤ 1440px</li>
 <li>4K: 短边 ≤ 2160px</li>
 <li>8K: 短边 ≤ 4320px</li>
+<li>Audio: 音频</li>
      */
     function __construct()
     {

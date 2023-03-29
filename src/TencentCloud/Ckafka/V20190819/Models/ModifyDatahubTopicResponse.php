@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExportPrivilegeEvents返回参数结构体
+ * ModifyDatahubTopic返回参数结构体
  *
- * @method string getDownloadUrl() 获取该参数已废弃
- * @method void setDownloadUrl(string $DownloadUrl) 设置该参数已废弃
- * @method string getTaskId() 获取任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
- * @method void setTaskId(string $TaskId) 设置任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+ * @method JgwOperateResponse getResult() 获取返回结果集
+ * @method void setResult(JgwOperateResponse $Result) 设置返回结果集
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ExportPrivilegeEventsResponse extends AbstractModel
+class ModifyDatahubTopicResponse extends AbstractModel
 {
     /**
-     * @var string 该参数已废弃
+     * @var JgwOperateResponse 返回结果集
      */
-    public $DownloadUrl;
-
-    /**
-     * @var string 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-     */
-    public $TaskId;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class ExportPrivilegeEventsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl 该参数已废弃
-     * @param string $TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * @param JgwOperateResponse $Result 返回结果集
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,9 @@ class ExportPrivilegeEventsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
-        }
-
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new JgwOperateResponse();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

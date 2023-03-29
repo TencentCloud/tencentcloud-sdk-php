@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
  * @method void setProduct(string $Product) 设置待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
+ * @method integer getScene() 获取不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
+ * @method void setScene(integer $Scene) 设置不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
  */
 class DescribeRegionsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeRegionsRequest extends AbstractModel
     public $Product;
 
     /**
+     * @var integer 不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
+     */
+    public $Scene;
+
+    /**
      * @param string $Product 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
+     * @param integer $Scene 不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeRegionsRequest extends AbstractModel
         }
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
         }
     }
 }

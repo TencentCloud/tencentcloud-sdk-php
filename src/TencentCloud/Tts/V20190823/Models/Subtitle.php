@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginIndex(integer $BeginIndex) 设置该字在整句中的开始位置，从0开始。
  * @method integer getEndIndex() 获取该字在整句中的结束位置，从0开始。
  * @method void setEndIndex(integer $EndIndex) 设置该字在整句中的结束位置，从0开始。
+ * @method string getPhoneme() 获取该字的音素
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPhoneme(string $Phoneme) 设置该字的音素
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subtitle extends AbstractModel
 {
@@ -59,11 +63,19 @@ class Subtitle extends AbstractModel
     public $EndIndex;
 
     /**
+     * @var string 该字的音素
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Phoneme;
+
+    /**
      * @param string $Text ⽂本信息。
      * @param integer $BeginTime ⽂本对应tts语⾳开始时间戳，单位ms。
      * @param integer $EndTime ⽂本对应tts语⾳结束时间戳，单位ms。
      * @param integer $BeginIndex 该字在整句中的开始位置，从0开始。
      * @param integer $EndIndex 该字在整句中的结束位置，从0开始。
+     * @param string $Phoneme 该字的音素
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class Subtitle extends AbstractModel
 
         if (array_key_exists("EndIndex",$param) and $param["EndIndex"] !== null) {
             $this->EndIndex = $param["EndIndex"];
+        }
+
+        if (array_key_exists("Phoneme",$param) and $param["Phoneme"] !== null) {
+            $this->Phoneme = $param["Phoneme"];
         }
     }
 }

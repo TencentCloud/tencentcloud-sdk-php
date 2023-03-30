@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，最小值为0，最大值为10000，默认值为0。
  * @method integer getLimit() 获取分页大小，最小值为1，最大值为100，默认值为20。
  * @method void setLimit(integer $Limit) 设置分页大小，最小值为1，最大值为100，默认值为20。
- * @method string getFormat() 获取慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
- * @method void setFormat(string $Format) 设置慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+ * @method string getFormat() 获取慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
+ * @method void setFormat(string $Format) 设置慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
  */
 class DescribeSlowLogsRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+     * @var string 慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
      */
     public $Format;
 
@@ -79,7 +79,7 @@ class DescribeSlowLogsRequest extends AbstractModel
      * @param integer $SlowMS 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
      * @param integer $Offset 偏移量，最小值为0，最大值为10000，默认值为0。
      * @param integer $Limit 分页大小，最小值为1，最大值为100，默认值为20。
-     * @param string $Format 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+     * @param string $Format 慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
      */
     function __construct()
     {

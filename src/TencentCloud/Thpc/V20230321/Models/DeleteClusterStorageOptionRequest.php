@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Thpc\V20230321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智慧表单上传文件信息
+ * DeleteClusterStorageOption请求参数结构体
  *
- * @method string getFileUrl() 获取文件url地址
- * @method void setFileUrl(string $FileUrl) 设置文件url地址
- * @method integer getFileOrderNumber() 获取文件的顺序，顺序从1开始
- * @method void setFileOrderNumber(integer $FileOrderNumber) 设置文件的顺序，顺序从1开始
+ * @method string getClusterId() 获取集群ID。
+ * @method void setClusterId(string $ClusterId) 设置集群ID。
+ * @method string getLocalPath() 获取本地挂载路径。
+ * @method void setLocalPath(string $LocalPath) 设置本地挂载路径。
  */
-class SmartFormFileUrl extends AbstractModel
+class DeleteClusterStorageOptionRequest extends AbstractModel
 {
     /**
-     * @var string 文件url地址
+     * @var string 集群ID。
      */
-    public $FileUrl;
+    public $ClusterId;
 
     /**
-     * @var integer 文件的顺序，顺序从1开始
+     * @var string 本地挂载路径。
      */
-    public $FileOrderNumber;
+    public $LocalPath;
 
     /**
-     * @param string $FileUrl 文件url地址
-     * @param integer $FileOrderNumber 文件的顺序，顺序从1开始
+     * @param string $ClusterId 集群ID。
+     * @param string $LocalPath 本地挂载路径。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class SmartFormFileUrl extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("FileOrderNumber",$param) and $param["FileOrderNumber"] !== null) {
-            $this->FileOrderNumber = $param["FileOrderNumber"];
+        if (array_key_exists("LocalPath",$param) and $param["LocalPath"] !== null) {
+            $this->LocalPath = $param["LocalPath"];
         }
     }
 }

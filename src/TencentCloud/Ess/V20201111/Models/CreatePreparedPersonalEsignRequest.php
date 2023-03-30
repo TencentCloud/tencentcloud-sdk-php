@@ -33,15 +33,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIdCardType() 获取身份证件类型:
 ID_CARD 身份证
 PASSPORT 护照
-HONGKONG_AND_MACAO 香港身份
-FOREIGN_ID_CARD 国外身份
-HONGKONG_MACAO_AND_TAIWAN 港台身份
+HONGKONG_AND_MACAO 中国香港
+FOREIGN_ID_CARD 境外身份
+HONGKONG_MACAO_AND_TAIWAN 中国台湾
  * @method void setIdCardType(string $IdCardType) 设置身份证件类型:
 ID_CARD 身份证
 PASSPORT 护照
-HONGKONG_AND_MACAO 香港身份
-FOREIGN_ID_CARD 国外身份
-HONGKONG_MACAO_AND_TAIWAN 港台身份
+HONGKONG_AND_MACAO 中国香港
+FOREIGN_ID_CARD 境外身份
+HONGKONG_MACAO_AND_TAIWAN 中国台湾
  * @method string getMobile() 获取手机号码
  * @method void setMobile(string $Mobile) 设置手机号码
  * @method boolean getEnableAutoSign() 获取是否需开通自动签
@@ -78,9 +78,9 @@ class CreatePreparedPersonalEsignRequest extends AbstractModel
      * @var string 身份证件类型:
 ID_CARD 身份证
 PASSPORT 护照
-HONGKONG_AND_MACAO 香港身份
-FOREIGN_ID_CARD 国外身份
-HONGKONG_MACAO_AND_TAIWAN 港台身份
+HONGKONG_AND_MACAO 中国香港
+FOREIGN_ID_CARD 境外身份
+HONGKONG_MACAO_AND_TAIWAN 中国台湾
      */
     public $IdCardType;
 
@@ -103,9 +103,9 @@ HONGKONG_MACAO_AND_TAIWAN 港台身份
      * @param string $IdCardType 身份证件类型:
 ID_CARD 身份证
 PASSPORT 护照
-HONGKONG_AND_MACAO 香港身份
-FOREIGN_ID_CARD 国外身份
-HONGKONG_MACAO_AND_TAIWAN 港台身份
+HONGKONG_AND_MACAO 中国香港
+FOREIGN_ID_CARD 境外身份
+HONGKONG_MACAO_AND_TAIWAN 中国台湾
      * @param string $Mobile 手机号码
      * @param boolean $EnableAutoSign 是否需开通自动签
      */

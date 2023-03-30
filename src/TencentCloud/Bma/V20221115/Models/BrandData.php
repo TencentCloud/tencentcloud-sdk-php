@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsertTime(string $InsertTime) 设置新增时间
  * @method ServiceData getServices() 获取服务信息
  * @method void setServices(ServiceData $Services) 设置服务信息
+ * @method string getUin() 获取账号id
+ * @method void setUin(string $Uin) 设置账号id
  */
 class BrandData extends AbstractModel
 {
@@ -115,6 +117,11 @@ class BrandData extends AbstractModel
     public $Services;
 
     /**
+     * @var string 账号id
+     */
+    public $Uin;
+
+    /**
      * @param integer $CompanyId 品牌Id
      * @param string $CompanyName 企业名称
      * @param string $BrandName 品牌名称
@@ -128,6 +135,7 @@ class BrandData extends AbstractModel
      * @param array $Trademarks 商标信息
      * @param string $InsertTime 新增时间
      * @param ServiceData $Services 服务信息
+     * @param string $Uin 账号id
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class BrandData extends AbstractModel
         if (array_key_exists("Services",$param) and $param["Services"] !== null) {
             $this->Services = new ServiceData();
             $this->Services->deserialize($param["Services"]);
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
         }
     }
 }

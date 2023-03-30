@@ -24,6 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeId(string $NodeId) 设置云原生网关节点 id
  * @method string getNodeIp() 获取节点 ip
  * @method void setNodeIp(string $NodeIp) 设置节点 ip
+ * @method string getZoneId() 获取Zone id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneId(string $ZoneId) 设置Zone id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取Zone
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置Zone
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupId() 获取分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupName() 获取分组名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupName(string $GroupName) 设置分组名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayNode extends AbstractModel
 {
@@ -38,8 +58,48 @@ class CloudNativeAPIGatewayNode extends AbstractModel
     public $NodeIp;
 
     /**
+     * @var string Zone id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneId;
+
+    /**
+     * @var string Zone
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
+     * @var string 分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
+
+    /**
+     * @var string 分组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupName;
+
+    /**
+     * @var string 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $NodeId 云原生网关节点 id
      * @param string $NodeIp 节点 ip
+     * @param string $ZoneId Zone id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone Zone
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupId 分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupName 分组名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +120,26 @@ class CloudNativeAPIGatewayNode extends AbstractModel
 
         if (array_key_exists("NodeIp",$param) and $param["NodeIp"] !== null) {
             $this->NodeIp = $param["NodeIp"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

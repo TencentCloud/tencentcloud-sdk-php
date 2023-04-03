@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCrossBorderCcnRegionBandwidthLimits返回参数结构体
  *
+ * @method integer getTotalCount() 获取符合条件的对象总数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的对象总数。
+ * @method array getCcnBandwidthSet() 获取云联网地域间限速带宽实例的信息。
+ * @method void setCcnBandwidthSet(array $CcnBandwidthSet) 设置云联网地域间限速带宽实例的信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCrossBorderCcnRegionBandwidthLimitsResponse extends AbstractModel
 {
     /**
+     * @var integer 符合条件的对象总数。
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 云联网地域间限速带宽实例的信息。
+     */
+    public $CcnBandwidthSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 符合条件的对象总数。
+     * @param array $CcnBandwidthSet 云联网地域间限速带宽实例的信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeCrossBorderCcnRegionBandwidthLimitsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("CcnBandwidthSet",$param) and $param["CcnBandwidthSet"] !== null) {
+            $this->CcnBandwidthSet = [];
+            foreach ($param["CcnBandwidthSet"] as $key => $value){
+                $obj = new CcnBandwidth();
+                $obj->deserialize($value);
+                array_push($this->CcnBandwidthSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

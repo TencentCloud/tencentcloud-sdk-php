@@ -400,6 +400,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：10次/秒。
  * @method Models\RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(Models\RecognizeIndonesiaIDCardOCRRequest $req) 印尼身份证识别
+
+默认接口请求频率限制：20次/秒。
  * @method Models\RecognizeMedicalInvoiceOCRResponse RecognizeMedicalInvoiceOCR(Models\RecognizeMedicalInvoiceOCRRequest $req) 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
 
 默认接口请求频率限制：5次/秒。

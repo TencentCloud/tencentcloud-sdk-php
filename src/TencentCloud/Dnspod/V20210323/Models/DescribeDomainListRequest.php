@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainList请求参数结构体
  *
- * @method string getType() 获取域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
- * @method void setType(string $Type) 设置域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
+ * @method string getType() 获取域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT，FREE。
+ * @method void setType(string $Type) 设置域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT，FREE。
  * @method integer getOffset() 获取记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。
  * @method void setOffset(integer $Offset) 设置记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。
  * @method integer getLimit() 获取要获取的域名数量, 比如获取20个, 则为20。默认值为3000。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDomainListRequest extends AbstractModel
 {
     /**
-     * @var string 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
+     * @var string 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT，FREE。
      */
     public $Type;
 
@@ -59,7 +59,7 @@ class DescribeDomainListRequest extends AbstractModel
     public $Keyword;
 
     /**
-     * @param string $Type 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
+     * @param string $Type 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT，FREE。
      * @param integer $Offset 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。
      * @param integer $Limit 要获取的域名数量, 比如获取20个, 则为20。默认值为3000。
      * @param integer $GroupId 分组ID, 获取指定分组的域名

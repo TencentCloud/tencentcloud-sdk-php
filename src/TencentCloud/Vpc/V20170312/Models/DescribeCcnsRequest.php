@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
  * @method void setLimit(integer $Limit) 设置返回数量
- * @method string getOrderField() 获取排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
- * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
- * @method string getOrderDirection() 获取排序方法。升序：`ASC`，倒序：`DESC`。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。升序：`ASC`，倒序：`DESC`。
+ * @method string getOrderField() 获取排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`。默认值: `CreateTime`
+ * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`。默认值: `CreateTime`
+ * @method string getOrderDirection() 获取排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
  */
 class DescribeCcnsRequest extends AbstractModel
 {
@@ -74,12 +74,12 @@ class DescribeCcnsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+     * @var string 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`。默认值: `CreateTime`
      */
     public $OrderField;
 
     /**
-     * @var string 排序方法。升序：`ASC`，倒序：`DESC`。
+     * @var string 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
      */
     public $OrderDirection;
 
@@ -94,8 +94,8 @@ class DescribeCcnsRequest extends AbstractModel
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例：查询绑定了标签的CCN列表。</li>
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
-     * @param string $OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
-     * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。
+     * @param string $OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`。默认值: `CreateTime`
+     * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpnGatewayRoutes请求参数结构体
  *
- * @method string getVpnGatewayId() 获取VPN网关的ID
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关的ID
- * @method array getFilters() 获取过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
- * @method void setFilters(array $Filters) 设置过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
- * @method integer getOffset() 获取偏移量, 默认0
- * @method void setOffset(integer $Offset) 设置偏移量, 默认0
- * @method integer getLimit() 获取单页个数, 默认20, 最大值100
- * @method void setLimit(integer $Limit) 设置单页个数, 默认20, 最大值100
+ * @method string getVpnGatewayId() 获取VPN网关实例ID。
+ * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
+ * @method array getFilters() 获取过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
+ * @method void setFilters(array $Filters) 设置过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
+ * @method integer getOffset() 获取偏移量, 默认0。
+ * @method void setOffset(integer $Offset) 设置偏移量, 默认0。
+ * @method integer getLimit() 获取单页个数, 默认20, 最大值100。
+ * @method void setLimit(integer $Limit) 设置单页个数, 默认20, 最大值100。
  */
 class DescribeVpnGatewayRoutesRequest extends AbstractModel
 {
     /**
-     * @var string VPN网关的ID
+     * @var string VPN网关实例ID。
      */
     public $VpnGatewayId;
 
     /**
-     * @var array 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
+     * @var array 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量, 默认0
+     * @var integer 偏移量, 默认0。
      */
     public $Offset;
 
     /**
-     * @var integer 单页个数, 默认20, 最大值100
+     * @var integer 单页个数, 默认20, 最大值100。
      */
     public $Limit;
 
     /**
-     * @param string $VpnGatewayId VPN网关的ID
-     * @param array $Filters 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
-     * @param integer $Offset 偏移量, 默认0
-     * @param integer $Limit 单页个数, 默认20, 最大值100
+     * @param string $VpnGatewayId VPN网关实例ID。
+     * @param array $Filters 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
+     * @param integer $Offset 偏移量, 默认0。
+     * @param integer $Limit 单页个数, 默认20, 最大值100。
      */
     function __construct()
     {

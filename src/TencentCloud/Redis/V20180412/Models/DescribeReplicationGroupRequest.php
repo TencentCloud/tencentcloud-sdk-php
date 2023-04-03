@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method string getGroupId() 获取复制组ID。
  * @method void setGroupId(string $GroupId) 设置复制组ID。
- * @method string getSearchKey() 获取设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
- * @method void setSearchKey(string $SearchKey) 设置设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
+ * @method string getSearchKey() 获取模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+ * @method void setSearchKey(string $SearchKey) 设置模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
  */
 class DescribeReplicationGroupRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeReplicationGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
+     * @var string 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
      */
     public $SearchKey;
 
@@ -55,7 +55,7 @@ class DescribeReplicationGroupRequest extends AbstractModel
      * @param integer $Limit 每页输出实例列表的大小，参数默认值20。
      * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      * @param string $GroupId 复制组ID。
-     * @param string $SearchKey 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
+     * @param string $SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpnGatewayCcnRoutes请求参数结构体
  *
- * @method string getVpnGatewayId() 获取VPN网关实例ID
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID
- * @method array getRoutes() 获取云联网路由（IDC网段）列表
- * @method void setRoutes(array $Routes) 设置云联网路由（IDC网段）列表
+ * @method string getVpnGatewayId() 获取VPN网关实例ID。
+ * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
+ * @method array getRoutes() 获取云联网路由（IDC网段）列表。
+ * @method void setRoutes(array $Routes) 设置云联网路由（IDC网段）列表。
  */
 class ModifyVpnGatewayCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string VPN网关实例ID
+     * @var string VPN网关实例ID。
      */
     public $VpnGatewayId;
 
     /**
-     * @var array 云联网路由（IDC网段）列表
+     * @var array 云联网路由（IDC网段）列表。
      */
     public $Routes;
 
     /**
-     * @param string $VpnGatewayId VPN网关实例ID
-     * @param array $Routes 云联网路由（IDC网段）列表
+     * @param string $VpnGatewayId VPN网关实例ID。
+     * @param array $Routes 云联网路由（IDC网段）列表。
      */
     function __construct()
     {

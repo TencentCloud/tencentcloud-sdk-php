@@ -26,6 +26,8 @@ use TencentCloud\Car\V20220110\Models as Models;
  * @method Models\ApplyConcurrentResponse ApplyConcurrent(Models\ApplyConcurrentRequest $req) 申请并发
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
  * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) 销毁会话
+ * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) 开始云端推流
+ * @method Models\StopPublishStreamResponse StopPublishStream(Models\StopPublishStreamRequest $req) 停止云端推流
  */
 
 class CarClient extends AbstractClient

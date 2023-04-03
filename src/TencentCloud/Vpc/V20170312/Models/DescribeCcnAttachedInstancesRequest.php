@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 <li>instance-id - String -（过滤条件）关联实例实例ID。</li>
  * @method string getCcnId() 获取云联网实例ID
  * @method void setCcnId(string $CcnId) 设置云联网实例ID
- * @method string getOrderField() 获取排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
- * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
- * @method string getOrderDirection() 获取排序方法。升序：`ASC`，倒序：`DESC`。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。升序：`ASC`，倒序：`DESC`。
+ * @method string getOrderField() 获取排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。默认值：`AttachedTime`
+ * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。默认值：`AttachedTime`
+ * @method string getOrderDirection() 获取排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
  */
 class DescribeCcnAttachedInstancesRequest extends AbstractModel
 {
@@ -68,12 +68,12 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
     public $CcnId;
 
     /**
-     * @var string 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     * @var string 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。默认值：`AttachedTime`
      */
     public $OrderField;
 
     /**
-     * @var string 排序方法。升序：`ASC`，倒序：`DESC`。
+     * @var string 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
      */
     public $OrderDirection;
 
@@ -86,8 +86,8 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
 <li>instance-id - String -（过滤条件）关联实例实例ID。</li>
      * @param string $CcnId 云联网实例ID
-     * @param string $OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
-     * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。
+     * @param string $OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。默认值：`AttachedTime`
+     * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
      */
     function __construct()
     {

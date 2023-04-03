@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormFields(array $FormFields) 设置填写控件内容
  * @method boolean getNeedSignReview() 获取本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
  * @method void setNeedSignReview(boolean $NeedSignReview) 设置本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
+ * @method string getUserData() 获取用户流程自定义数据参数
+ * @method void setUserData(string $UserData) 设置用户流程自定义数据参数
  */
 class BaseFlowInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class BaseFlowInfo extends AbstractModel
     public $NeedSignReview;
 
     /**
+     * @var string 用户流程自定义数据参数
+     */
+    public $UserData;
+
+    /**
      * @param string $FlowName 合同流程名称
      * @param string $FlowType 合同流程类型
      * @param string $FlowDescription 合同流程描述信息
@@ -88,6 +95,7 @@ class BaseFlowInfo extends AbstractModel
      * @param string $IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
      * @param array $FormFields 填写控件内容
      * @param boolean $NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
+     * @param string $UserData 用户流程自定义数据参数
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class BaseFlowInfo extends AbstractModel
 
         if (array_key_exists("NeedSignReview",$param) and $param["NeedSignReview"] !== null) {
             $this->NeedSignReview = $param["NeedSignReview"];
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
     }
 }

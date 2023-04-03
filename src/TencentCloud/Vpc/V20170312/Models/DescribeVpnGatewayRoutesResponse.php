@@ -20,17 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpnGatewayRoutes返回参数结构体
  *
- * @method array getRoutes() 获取VPN网关目的路由
- * @method void setRoutes(array $Routes) 设置VPN网关目的路由
+ * @method array getRoutes() 获取VPN网关目的路由。
+ * @method void setRoutes(array $Routes) 设置VPN网关目的路由。
+ * @method integer getTotalCount() 获取路由条数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置路由条数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVpnGatewayRoutesResponse extends AbstractModel
 {
     /**
-     * @var array VPN网关目的路由
+     * @var array VPN网关目的路由。
      */
     public $Routes;
+
+    /**
+     * @var integer 路由条数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class DescribeVpnGatewayRoutesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Routes VPN网关目的路由
+     * @param array $Routes VPN网关目的路由。
+     * @param integer $TotalCount 路由条数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +73,10 @@ class DescribeVpnGatewayRoutesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Routes, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

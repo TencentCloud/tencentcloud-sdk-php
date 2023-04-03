@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 修改VPN状态参数
  *
- * @method string getRouteId() 获取Vpn网关路由ID
- * @method void setRouteId(string $RouteId) 设置Vpn网关路由ID
- * @method string getStatus() 获取Vpn网关状态, ENABEL 启用, DISABLE禁用
- * @method void setStatus(string $Status) 设置Vpn网关状态, ENABEL 启用, DISABLE禁用
+ * @method string getRouteId() 获取VPN网关路由ID。
+ * @method void setRouteId(string $RouteId) 设置VPN网关路由ID。
+ * @method string getStatus() 获取VPN网关状态, ENABLE 启用, DISABLE禁用。
+ * @method void setStatus(string $Status) 设置VPN网关状态, ENABLE 启用, DISABLE禁用。
  */
 class VpnGatewayRouteModify extends AbstractModel
 {
     /**
-     * @var string Vpn网关路由ID
+     * @var string VPN网关路由ID。
      */
     public $RouteId;
 
     /**
-     * @var string Vpn网关状态, ENABEL 启用, DISABLE禁用
+     * @var string VPN网关状态, ENABLE 启用, DISABLE禁用。
      */
     public $Status;
 
     /**
-     * @param string $RouteId Vpn网关路由ID
-     * @param string $Status Vpn网关状态, ENABEL 启用, DISABLE禁用
+     * @param string $RouteId VPN网关路由ID。
+     * @param string $Status VPN网关状态, ENABLE 启用, DISABLE禁用。
      */
     function __construct()
     {

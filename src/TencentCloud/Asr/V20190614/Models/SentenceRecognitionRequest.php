@@ -26,35 +26,39 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubServiceType(integer $SubServiceType) 设置子服务类型。2： 一句话识别。
  * @method string getEngSerViceType() 获取引擎模型类型。
 电话场景：
-• 8k_en：电话 8k 英语；
-• 8k_zh：电话 8k 中文普通话通用；
+• 8k_zh：中文电话通用；
+• 8k_en：英文电话通用；
+
 非电话场景：
-• 16k_zh：16k 中文普通话通用；
-• 16k_en：16k 英语；
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
-• 16k_vi：16k 越南语；
-• 16k_ms：16k 马来语；
-• 16k_id：16k 印度尼西亚语；
-• 16k_fil：16k 菲律宾语；
-• 16k_zh_medical：16k 医疗；
+• 16k_zh：中文通用；
 • 16k_zh-PY 中英粤;
+• 16k_zh_medical：中文医疗；
+• 16k_en：英语；
+• 16k_ca：粤语；
+• 16k_ja：日语；
+• 16k_ko：韩语；
+• 16k_vi：越南语；
+• 16k_ms：马来语；
+• 16k_id：印度尼西亚语；
+• 16k_fil：菲律宾语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method void setEngSerViceType(string $EngSerViceType) 设置引擎模型类型。
 电话场景：
-• 8k_en：电话 8k 英语；
-• 8k_zh：电话 8k 中文普通话通用；
+• 8k_zh：中文电话通用；
+• 8k_en：英文电话通用；
+
 非电话场景：
-• 16k_zh：16k 中文普通话通用；
-• 16k_en：16k 英语；
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
-• 16k_vi：16k 越南语；
-• 16k_ms：16k 马来语；
-• 16k_id：16k 印度尼西亚语；
-• 16k_fil：16k 菲律宾语；
-• 16k_zh_medical：16k 医疗；
+• 16k_zh：中文通用；
 • 16k_zh-PY 中英粤;
+• 16k_zh_medical：中文医疗；
+• 16k_en：英语；
+• 16k_ca：粤语；
+• 16k_ja：日语；
+• 16k_ko：韩语；
+• 16k_vi：越南语；
+• 16k_ms：马来语；
+• 16k_id：印度尼西亚语；
+• 16k_fil：菲律宾语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
@@ -100,19 +104,21 @@ class SentenceRecognitionRequest extends AbstractModel
     /**
      * @var string 引擎模型类型。
 电话场景：
-• 8k_en：电话 8k 英语；
-• 8k_zh：电话 8k 中文普通话通用；
+• 8k_zh：中文电话通用；
+• 8k_en：英文电话通用；
+
 非电话场景：
-• 16k_zh：16k 中文普通话通用；
-• 16k_en：16k 英语；
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
-• 16k_vi：16k 越南语；
-• 16k_ms：16k 马来语；
-• 16k_id：16k 印度尼西亚语；
-• 16k_fil：16k 菲律宾语；
-• 16k_zh_medical：16k 医疗；
+• 16k_zh：中文通用；
 • 16k_zh-PY 中英粤;
+• 16k_zh_medical：中文医疗；
+• 16k_en：英语；
+• 16k_ca：粤语；
+• 16k_ja：日语；
+• 16k_ko：韩语；
+• 16k_vi：越南语；
+• 16k_ms：马来语；
+• 16k_id：印度尼西亚语；
+• 16k_fil：菲律宾语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      */
     public $EngSerViceType;
@@ -192,19 +198,21 @@ class SentenceRecognitionRequest extends AbstractModel
      * @param integer $SubServiceType 子服务类型。2： 一句话识别。
      * @param string $EngSerViceType 引擎模型类型。
 电话场景：
-• 8k_en：电话 8k 英语；
-• 8k_zh：电话 8k 中文普通话通用；
+• 8k_zh：中文电话通用；
+• 8k_en：英文电话通用；
+
 非电话场景：
-• 16k_zh：16k 中文普通话通用；
-• 16k_en：16k 英语；
-• 16k_ca：16k 粤语；
-• 16k_ja：16k 日语；
-• 16k_vi：16k 越南语；
-• 16k_ms：16k 马来语；
-• 16k_id：16k 印度尼西亚语；
-• 16k_fil：16k 菲律宾语；
-• 16k_zh_medical：16k 医疗；
+• 16k_zh：中文通用；
 • 16k_zh-PY 中英粤;
+• 16k_zh_medical：中文医疗；
+• 16k_en：英语；
+• 16k_ca：粤语；
+• 16k_ja：日语；
+• 16k_ko：韩语；
+• 16k_vi：越南语；
+• 16k_ms：马来语；
+• 16k_id：印度尼西亚语；
+• 16k_fil：菲律宾语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。

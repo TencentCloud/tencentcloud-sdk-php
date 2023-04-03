@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentTotal(integer $AgentTotal) 设置agent数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLifeDays() 获取生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLifeDays(integer $LifeDays) 设置生命周期
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InLongAgentDetail extends AbstractModel
 {
@@ -127,6 +131,12 @@ class InLongAgentDetail extends AbstractModel
     public $AgentTotal;
 
     /**
+     * @var integer 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LifeDays;
+
+    /**
      * @param string $AgentId Agent ID
      * @param string $AgentName Agent Name
      * @param string $Status Agent状态(running运行中，initializing 操作中，failed心跳异常)
@@ -143,6 +153,8 @@ class InLongAgentDetail extends AbstractModel
      * @param array $CvmAgentStatusList agent状态统计
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AgentTotal agent数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LifeDays 生命周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +225,10 @@ class InLongAgentDetail extends AbstractModel
 
         if (array_key_exists("AgentTotal",$param) and $param["AgentTotal"] !== null) {
             $this->AgentTotal = $param["AgentTotal"];
+        }
+
+        if (array_key_exists("LifeDays",$param) and $param["LifeDays"] !== null) {
+            $this->LifeDays = $param["LifeDays"];
         }
     }
 }

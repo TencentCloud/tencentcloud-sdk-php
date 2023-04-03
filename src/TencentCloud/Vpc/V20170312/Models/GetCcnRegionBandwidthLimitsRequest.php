@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>sregion - String - （过滤条件）源地域，形如：ap-guangzhou。</li>
 <li>dregion - String - （过滤条件）目的地域，形如：ap-shanghai-bm</li>
- * @method string getSortedBy() 获取排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
- * @method void setSortedBy(string $SortedBy) 设置排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
- * @method string getOrderBy() 获取排序方式，'ASC':升序,'DESC':降序。
- * @method void setOrderBy(string $OrderBy) 设置排序方式，'ASC':升序,'DESC':降序。
+ * @method string getSortedBy() 获取排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
+ * @method void setSortedBy(string $SortedBy) 设置排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
+ * @method integer getOffset() 获取偏移量。
+ * @method void setOffset(integer $Offset) 设置偏移量。
+ * @method integer getLimit() 获取返回数量。
+ * @method void setLimit(integer $Limit) 设置返回数量。
+ * @method string getOrderBy() 获取排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
+ * @method void setOrderBy(string $OrderBy) 设置排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
  */
 class GetCcnRegionBandwidthLimitsRequest extends AbstractModel
 {
@@ -52,22 +52,22 @@ class GetCcnRegionBandwidthLimitsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
+     * @var string 排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
      */
     public $SortedBy;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer 返回数量。
      */
     public $Limit;
 
     /**
-     * @var string 排序方式，'ASC':升序,'DESC':降序。
+     * @var string 排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
      */
     public $OrderBy;
 
@@ -76,10 +76,10 @@ class GetCcnRegionBandwidthLimitsRequest extends AbstractModel
      * @param array $Filters 过滤条件。
 <li>sregion - String - （过滤条件）源地域，形如：ap-guangzhou。</li>
 <li>dregion - String - （过滤条件）目的地域，形如：ap-shanghai-bm</li>
-     * @param string $SortedBy 排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
-     * @param string $OrderBy 排序方式，'ASC':升序,'DESC':降序。
+     * @param string $SortedBy 排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
+     * @param integer $Offset 偏移量。
+     * @param integer $Limit 返回数量。
+     * @param string $OrderBy 排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
      */
     function __construct()
     {

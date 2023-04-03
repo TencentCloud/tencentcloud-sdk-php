@@ -22,25 +22,71 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getAppId() 获取用户AppID
  * @method void setAppId(integer $AppId) 设置用户AppID
- * @method integer getRegionId() 获取地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
- * @method void setRegionId(integer $RegionId) 设置地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
- * @method string getGroupId() 获取复制组信息
- * @method void setGroupId(string $GroupId) 设置复制组信息
- * @method string getGroupName() 获取复制组名称
+ * @method integer getRegionId() 获取地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本
+ * @method void setRegionId(integer $RegionId) 设置地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本
+ * @method string getGroupId() 获取复制组 ID。
+ * @method void setGroupId(string $GroupId) 设置复制组 ID。
+ * @method string getGroupName() 获取复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupName(string $GroupName) 设置复制组名称
+ * @method void setGroupName(string $GroupName) 设置复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
- * @method void setStatus(integer $Status) 设置复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
- * @method integer getInstanceCount() 获取复制组数量
- * @method void setInstanceCount(integer $InstanceCount) 设置复制组数量
- * @method array getInstances() 获取复制组实例
+ * @method integer getStatus() 获取复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。
+ * @method void setStatus(integer $Status) 设置复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。
+ * @method integer getInstanceCount() 获取复制组数量。
+ * @method void setInstanceCount(integer $InstanceCount) 设置复制组数量。
+ * @method array getInstances() 获取复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstances(array $Instances) 设置复制组实例
+ * @method void setInstances(array $Instances) 设置复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemark() 获取备注信息
+ * @method string getRemark() 获取备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置备注信息
+ * @method void setRemark(string $Remark) 设置备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Groups extends AbstractModel
@@ -51,54 +97,100 @@ class Groups extends AbstractModel
     public $AppId;
 
     /**
-     * @var integer 地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @var integer 地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本
      */
     public $RegionId;
 
     /**
-     * @var string 复制组信息
+     * @var string 复制组 ID。
      */
     public $GroupId;
 
     /**
-     * @var string 复制组名称
+     * @var string 复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
-     * @var integer 复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
+     * @var integer 复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。
      */
     public $Status;
 
     /**
-     * @var integer 复制组数量
+     * @var integer 复制组数量。
      */
     public $InstanceCount;
 
     /**
-     * @var array 复制组实例
+     * @var array 复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Instances;
 
     /**
-     * @var string 备注信息
+     * @var string 备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @param integer $AppId 用户AppID
-     * @param integer $RegionId 地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
-     * @param string $GroupId 复制组信息
-     * @param string $GroupName 复制组名称
+     * @param integer $RegionId 地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本
+     * @param string $GroupId 复制组 ID。
+     * @param string $GroupName 复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
-     * @param integer $InstanceCount 复制组数量
-     * @param array $Instances 复制组实例
+     * @param integer $Status 复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。
+     * @param integer $InstanceCount 复制组数量。
+     * @param array $Instances 复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Remark 备注信息
+     * @param string $Remark 备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

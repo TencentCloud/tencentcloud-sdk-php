@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetCcnRegionBandwidthLimits返回参数结构体
  *
- * @method array getCcnBandwidthSet() 获取云联网（CCN）各地域出带宽带宽详情。
+ * @method array getCcnBandwidthSet() 获取云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCcnBandwidthSet(array $CcnBandwidthSet) 设置云联网（CCN）各地域出带宽带宽详情。
+ * @method void setCcnBandwidthSet(array $CcnBandwidthSet) 设置云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取符合条件的对象数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class GetCcnRegionBandwidthLimitsResponse extends AbstractModel
 {
     /**
-     * @var array 云联网（CCN）各地域出带宽带宽详情。
+     * @var array 云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnBandwidthSet;
@@ -51,7 +51,7 @@ class GetCcnRegionBandwidthLimitsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CcnBandwidthSet 云联网（CCN）各地域出带宽带宽详情。
+     * @param array $CcnBandwidthSet 云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 符合条件的对象数。
 注意：此字段可能返回 null，表示取不到有效值。

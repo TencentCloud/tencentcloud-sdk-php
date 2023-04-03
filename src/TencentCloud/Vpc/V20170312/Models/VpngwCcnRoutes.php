@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPN网关云联网路由信息
  *
- * @method string getRouteId() 获取路由信息ID
- * @method void setRouteId(string $RouteId) 设置路由信息ID
- * @method string getStatus() 获取路由信息是否启用
+ * @method string getRouteId() 获取路由信息ID。
+ * @method void setRouteId(string $RouteId) 设置路由信息ID。
+ * @method string getStatus() 获取路由信息是否启用。
 ENABLE：启用该路由
 DISABLE：不启用该路由
- * @method void setStatus(string $Status) 设置路由信息是否启用
+ * @method void setStatus(string $Status) 设置路由信息是否启用。
 ENABLE：启用该路由
 DISABLE：不启用该路由
- * @method string getDestinationCidrBlock() 获取路由CIDR
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置路由CIDR
+ * @method string getDestinationCidrBlock() 获取路由CIDR。
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置路由CIDR。
  */
 class VpngwCcnRoutes extends AbstractModel
 {
     /**
-     * @var string 路由信息ID
+     * @var string 路由信息ID。
      */
     public $RouteId;
 
     /**
-     * @var string 路由信息是否启用
+     * @var string 路由信息是否启用。
 ENABLE：启用该路由
 DISABLE：不启用该路由
      */
     public $Status;
 
     /**
-     * @var string 路由CIDR
+     * @var string 路由CIDR。
      */
     public $DestinationCidrBlock;
 
     /**
-     * @param string $RouteId 路由信息ID
-     * @param string $Status 路由信息是否启用
+     * @param string $RouteId 路由信息ID。
+     * @param string $Status 路由信息是否启用。
 ENABLE：启用该路由
 DISABLE：不启用该路由
-     * @param string $DestinationCidrBlock 路由CIDR
+     * @param string $DestinationCidrBlock 路由CIDR。
      */
     function __construct()
     {

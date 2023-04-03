@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssuedDate(string $IssuedDate) 设置发证日期
  * @method string getPhoto() 获取人像截图
  * @method void setPhoto(string $Photo) 设置人像截图
+ * @method string getProvinsi() 获取省份，Scene为V2时支持识别
+ * @method void setProvinsi(string $Provinsi) 设置省份，Scene为V2时支持识别
+ * @method string getKota() 获取城市，Scene为V2时支持识别
+ * @method void setKota(string $Kota) 设置城市，Scene为V2时支持识别
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -138,6 +142,16 @@ class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel
     public $Photo;
 
     /**
+     * @var string 省份，Scene为V2时支持识别
+     */
+    public $Provinsi;
+
+    /**
+     * @var string 城市，Scene为V2时支持识别
+     */
+    public $Kota;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -159,6 +173,8 @@ class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel
      * @param string $BerlakuHingga 身份证有效期限
      * @param string $IssuedDate 发证日期
      * @param string $Photo 人像截图
+     * @param string $Provinsi 省份，Scene为V2时支持识别
+     * @param string $Kota 城市，Scene为V2时支持识别
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -236,6 +252,14 @@ class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("Photo",$param) and $param["Photo"] !== null) {
             $this->Photo = $param["Photo"];
+        }
+
+        if (array_key_exists("Provinsi",$param) and $param["Provinsi"] !== null) {
+            $this->Provinsi = $param["Provinsi"];
+        }
+
+        if (array_key_exists("Kota",$param) and $param["Kota"] !== null) {
+            $this->Kota = $param["Kota"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

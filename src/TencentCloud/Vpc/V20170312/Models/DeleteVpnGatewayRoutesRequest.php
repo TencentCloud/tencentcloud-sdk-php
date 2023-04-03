@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpnGatewayId() 获取VPN网关实例ID
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID
- * @method array getRouteIds() 获取路由ID信息列表
- * @method void setRouteIds(array $RouteIds) 设置路由ID信息列表
+ * @method array getRouteIds() 获取路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
+ * @method void setRouteIds(array $RouteIds) 设置路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
  */
 class DeleteVpnGatewayRoutesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteVpnGatewayRoutesRequest extends AbstractModel
     public $VpnGatewayId;
 
     /**
-     * @var array 路由ID信息列表
+     * @var array 路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
      */
     public $RouteIds;
 
     /**
      * @param string $VpnGatewayId VPN网关实例ID
-     * @param array $RouteIds 路由ID信息列表
+     * @param array $RouteIds 路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
      */
     function __construct()
     {

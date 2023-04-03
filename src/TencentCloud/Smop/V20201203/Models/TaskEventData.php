@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskType(integer $TaskType) 设置任务类型后台代码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCoin() 获取当前积分/成长值
+ * @method integer getTotalCoin() 获取当前积分
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCoin(integer $TotalCoin) 设置当前积分/成长值
+ * @method void setTotalCoin(integer $TotalCoin) 设置当前积分
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAttach() 获取用户透传的代码块
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,6 +67,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskName() 获取任务名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGrowScore() 获取当前成长值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGrowScore(integer $GrowScore) 设置当前成长值
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskEventData extends AbstractModel
@@ -114,7 +118,7 @@ class TaskEventData extends AbstractModel
     public $TaskType;
 
     /**
-     * @var integer 当前积分/成长值
+     * @var integer 当前积分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCoin;
@@ -144,6 +148,12 @@ class TaskEventData extends AbstractModel
     public $TaskName;
 
     /**
+     * @var integer 当前成长值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GrowScore;
+
+    /**
      * @param integer $Code 状态码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 提示信息
@@ -158,7 +168,7 @@ class TaskEventData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskType 任务类型后台代码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCoin 当前积分/成长值
+     * @param integer $TotalCoin 当前积分
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Attach 用户透传的代码块
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,6 +177,8 @@ class TaskEventData extends AbstractModel
      * @param integer $TotalTimes 计次任务当前所需完成次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GrowScore 当前成长值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +240,10 @@ class TaskEventData extends AbstractModel
 
         if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
             $this->TaskName = $param["TaskName"];
+        }
+
+        if (array_key_exists("GrowScore",$param) and $param["GrowScore"] !== null) {
+            $this->GrowScore = $param["GrowScore"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderId(string $OrderId) 设置订单ID
  * @method string getCode() 获取任务事件Code
  * @method void setCode(string $Code) 设置任务事件Code
- * @method integer getAsync() 获取同步异步方式
- * @method void setAsync(integer $Async) 设置同步异步方式
+ * @method integer getAsync() 获取同步异步方式：0为同步、1位异步
+ * @method void setAsync(integer $Async) 设置同步异步方式：0为同步、1位异步
  * @method integer getProductId() 获取产品ID
  * @method void setProductId(integer $ProductId) 设置产品ID
  * @method string getNotifyURL() 获取回调地址
@@ -58,7 +58,7 @@ class SubmitTaskEventRequest extends AbstractModel
     public $Code;
 
     /**
-     * @var integer 同步异步方式
+     * @var integer 同步异步方式：0为同步、1位异步
      */
     public $Async;
 
@@ -77,7 +77,7 @@ class SubmitTaskEventRequest extends AbstractModel
      * @param string $DeviceId 设备ID
      * @param string $OrderId 订单ID
      * @param string $Code 任务事件Code
-     * @param integer $Async 同步异步方式
+     * @param integer $Async 同步异步方式：0为同步、1位异步
      * @param integer $ProductId 产品ID
      * @param string $NotifyURL 回调地址
      */

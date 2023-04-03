@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置起始偏移时间，单位：秒，不填表示从视频开始截取。
  * @method float getEndTimeOffset() 获取结束偏移时间，单位：秒，不填表示截取到视频末尾。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置结束偏移时间，单位：秒，不填表示截取到视频末尾。
+ * @method integer getDefinition() 获取音画质重生模版号。
+ * @method void setDefinition(integer $Definition) 设置音画质重生模版号。
  * @method RepairInfo getRepairInfo() 获取画质修复控制参数。
  * @method void setRepairInfo(RepairInfo $RepairInfo) 设置画质修复控制参数。
  * @method VideoFrameInterpolationInfo getVideoFrameInterpolationInfo() 获取智能插帧控制参数。
@@ -69,6 +71,11 @@ class RebuildMediaTaskInput extends AbstractModel
      * @var float 结束偏移时间，单位：秒，不填表示截取到视频末尾。
      */
     public $EndTimeOffset;
+
+    /**
+     * @var integer 音画质重生模版号。
+     */
+    public $Definition;
 
     /**
      * @var RepairInfo 画质修复控制参数。
@@ -139,6 +146,7 @@ class RebuildMediaTaskInput extends AbstractModel
      * @param string $FileId 媒体文件 ID。
      * @param float $StartTimeOffset 起始偏移时间，单位：秒，不填表示从视频开始截取。
      * @param float $EndTimeOffset 结束偏移时间，单位：秒，不填表示截取到视频末尾。
+     * @param integer $Definition 音画质重生模版号。
      * @param RepairInfo $RepairInfo 画质修复控制参数。
      * @param VideoFrameInterpolationInfo $VideoFrameInterpolationInfo 智能插帧控制参数。
      * @param SuperResolutionInfo $SuperResolutionInfo 画面超分控制参数。
@@ -176,6 +184,10 @@ class RebuildMediaTaskInput extends AbstractModel
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
 
         if (array_key_exists("RepairInfo",$param) and $param["RepairInfo"] !== null) {

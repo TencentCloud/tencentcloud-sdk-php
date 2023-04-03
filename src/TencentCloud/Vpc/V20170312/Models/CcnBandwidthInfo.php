@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarketId(string $MarketId) 设置云市场实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取资源绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置资源绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnBandwidthInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class CcnBandwidthInfo extends AbstractModel
     public $MarketId;
 
     /**
+     * @var array 资源绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
      * @param string $CcnId 带宽所属的云联网ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 实例的创建时间。
@@ -107,6 +117,8 @@ class CcnBandwidthInfo extends AbstractModel
      * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MarketId 云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 资源绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -149,6 +161,15 @@ class CcnBandwidthInfo extends AbstractModel
 
         if (array_key_exists("MarketId",$param) and $param["MarketId"] !== null) {
             $this->MarketId = $param["MarketId"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

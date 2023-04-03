@@ -18,84 +18,84 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Vpn网关目的路由
+ * VPN网关目的路由
  *
- * @method string getDestinationCidrBlock() 获取目的端IDC网段
- * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的端IDC网段
- * @method string getInstanceType() 获取下一跳类型（关联实例类型）可选值:"VPNCONN"(VPN通道), "CCN"(CCN实例)
- * @method void setInstanceType(string $InstanceType) 设置下一跳类型（关联实例类型）可选值:"VPNCONN"(VPN通道), "CCN"(CCN实例)
- * @method string getInstanceId() 获取下一跳实例ID
- * @method void setInstanceId(string $InstanceId) 设置下一跳实例ID
- * @method integer getPriority() 获取优先级, 可选值: 0, 100
- * @method void setPriority(integer $Priority) 设置优先级, 可选值: 0, 100
- * @method string getStatus() 获取启用状态, 可选值: "ENABLE"(启用), "DISABLE"(禁用)
- * @method void setStatus(string $Status) 设置启用状态, 可选值: "ENABLE"(启用), "DISABLE"(禁用)
- * @method string getRouteId() 获取路由条目ID
- * @method void setRouteId(string $RouteId) 设置路由条目ID
- * @method string getType() 获取路由类型, 可选值: "VPC"(VPC路由), "CCN"(云联网传播路由), "Static"(静态路由), "BGP"(BGP路由)
- * @method void setType(string $Type) 设置路由类型, 可选值: "VPC"(VPC路由), "CCN"(云联网传播路由), "Static"(静态路由), "BGP"(BGP路由)
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getDestinationCidrBlock() 获取目的端IDC网段。
+ * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置目的端IDC网段。
+ * @method string getInstanceType() 获取下一跳类型（关联实例类型）可选值："VPNCONN"（VPN通道）， "CCN"（CCN实例）。
+ * @method void setInstanceType(string $InstanceType) 设置下一跳类型（关联实例类型）可选值："VPNCONN"（VPN通道）， "CCN"（CCN实例）。
+ * @method string getInstanceId() 获取下一跳实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置下一跳实例ID。
+ * @method integer getPriority() 获取优先级，可选值：0，100。
+ * @method void setPriority(integer $Priority) 设置优先级，可选值：0，100。
+ * @method string getStatus() 获取启用状态，可选值："ENABLE"（启用），"DISABLE"  (禁用)。
+ * @method void setStatus(string $Status) 设置启用状态，可选值："ENABLE"（启用），"DISABLE"  (禁用)。
+ * @method string getRouteId() 获取路由条目ID。
+ * @method void setRouteId(string $RouteId) 设置路由条目ID。
+ * @method string getType() 获取路由类型，可选值："VPC"（VPC路由），"CCN"（云联网传播路由），"Static"（静态路由），"BGP"（BGP路由）。
+ * @method void setType(string $Type) 设置路由类型，可选值："VPC"（VPC路由），"CCN"（云联网传播路由），"Static"（静态路由），"BGP"（BGP路由）。
+ * @method string getCreateTime() 获取创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。
+ * @method string getUpdateTime() 获取更新时间。
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
  */
 class VpnGatewayRoute extends AbstractModel
 {
     /**
-     * @var string 目的端IDC网段
+     * @var string 目的端IDC网段。
      */
     public $DestinationCidrBlock;
 
     /**
-     * @var string 下一跳类型（关联实例类型）可选值:"VPNCONN"(VPN通道), "CCN"(CCN实例)
+     * @var string 下一跳类型（关联实例类型）可选值："VPNCONN"（VPN通道）， "CCN"（CCN实例）。
      */
     public $InstanceType;
 
     /**
-     * @var string 下一跳实例ID
+     * @var string 下一跳实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 优先级, 可选值: 0, 100
+     * @var integer 优先级，可选值：0，100。
      */
     public $Priority;
 
     /**
-     * @var string 启用状态, 可选值: "ENABLE"(启用), "DISABLE"(禁用)
+     * @var string 启用状态，可选值："ENABLE"（启用），"DISABLE"  (禁用)。
      */
     public $Status;
 
     /**
-     * @var string 路由条目ID
+     * @var string 路由条目ID。
      */
     public $RouteId;
 
     /**
-     * @var string 路由类型, 可选值: "VPC"(VPC路由), "CCN"(云联网传播路由), "Static"(静态路由), "BGP"(BGP路由)
+     * @var string 路由类型，可选值："VPC"（VPC路由），"CCN"（云联网传播路由），"Static"（静态路由），"BGP"（BGP路由）。
      */
     public $Type;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间。
      */
     public $UpdateTime;
 
     /**
-     * @param string $DestinationCidrBlock 目的端IDC网段
-     * @param string $InstanceType 下一跳类型（关联实例类型）可选值:"VPNCONN"(VPN通道), "CCN"(CCN实例)
-     * @param string $InstanceId 下一跳实例ID
-     * @param integer $Priority 优先级, 可选值: 0, 100
-     * @param string $Status 启用状态, 可选值: "ENABLE"(启用), "DISABLE"(禁用)
-     * @param string $RouteId 路由条目ID
-     * @param string $Type 路由类型, 可选值: "VPC"(VPC路由), "CCN"(云联网传播路由), "Static"(静态路由), "BGP"(BGP路由)
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新时间
+     * @param string $DestinationCidrBlock 目的端IDC网段。
+     * @param string $InstanceType 下一跳类型（关联实例类型）可选值："VPNCONN"（VPN通道）， "CCN"（CCN实例）。
+     * @param string $InstanceId 下一跳实例ID。
+     * @param integer $Priority 优先级，可选值：0，100。
+     * @param string $Status 启用状态，可选值："ENABLE"（启用），"DISABLE"  (禁用)。
+     * @param string $RouteId 路由条目ID。
+     * @param string $Type 路由类型，可选值："VPC"（VPC路由），"CCN"（云联网传播路由），"Static"（静态路由），"BGP"（BGP路由）。
+     * @param string $CreateTime 创建时间。
+     * @param string $UpdateTime 更新时间。
      */
     function __construct()
     {

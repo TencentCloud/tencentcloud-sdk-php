@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefaultParams请求参数结构体
  *
- * @method string getEngineVersion() 获取mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
- * @method void setEngineVersion(string $EngineVersion) 设置mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+ * @method string getEngineVersion() 获取引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
+ * @method void setEngineVersion(string $EngineVersion) 设置引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
  * @method string getTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
  * @method void setTemplateType(string $TemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
  * @method string getEngineType() 获取参数模板引擎，默认值：InnoDB
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDefaultParamsRequest extends AbstractModel
 {
     /**
-     * @var string mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+     * @var string 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
      */
     public $EngineVersion;
 
@@ -45,7 +45,7 @@ class DescribeDefaultParamsRequest extends AbstractModel
     public $EngineType;
 
     /**
-     * @param string $EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+     * @param string $EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
      * @param string $TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
      * @param string $EngineType 参数模板引擎，默认值：InnoDB
      */

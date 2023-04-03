@@ -129,6 +129,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeBaselineTopResponse DescribeBaselineTop(Models\DescribeBaselineTopRequest $req) 根据策略id查询基线检测项TOP
  * @method Models\DescribeBaselineWeakPasswordListResponse DescribeBaselineWeakPasswordList(Models\DescribeBaselineWeakPasswordListRequest $req) 获取基线弱口令列表
  * @method Models\DescribeBashEventsResponse DescribeBashEvents(Models\DescribeBashEventsRequest $req) 获取高危命令列表
+ * @method Models\DescribeBashEventsInfoNewResponse DescribeBashEventsInfoNew(Models\DescribeBashEventsInfoNewRequest $req) 查询高危命令事件详情(新)
  * @method Models\DescribeBashEventsNewResponse DescribeBashEventsNew(Models\DescribeBashEventsNewRequest $req) 获取高危命令列表(新)
  * @method Models\DescribeBashRulesResponse DescribeBashRules(Models\DescribeBashRulesRequest $req) 获取高危命令规则列表
  * @method Models\DescribeBruteAttackListResponse DescribeBruteAttackList(Models\DescribeBruteAttackListRequest $req) 获取密码破解列表

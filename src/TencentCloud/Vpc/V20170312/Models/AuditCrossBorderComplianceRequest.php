@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceProvider() 获取服务商, 可选值：`UNICOM`。
  * @method void setServiceProvider(string $ServiceProvider) 设置服务商, 可选值：`UNICOM`。
- * @method integer getComplianceId() 获取表单唯一`ID`。
- * @method void setComplianceId(integer $ComplianceId) 设置表单唯一`ID`。
+ * @method integer getComplianceId() 获取表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
+ * @method void setComplianceId(integer $ComplianceId) 设置表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
  * @method string getAuditBehavior() 获取通过：`APPROVED `，拒绝：`DENY`。
  * @method void setAuditBehavior(string $AuditBehavior) 设置通过：`APPROVED `，拒绝：`DENY`。
  */
@@ -35,7 +35,7 @@ class AuditCrossBorderComplianceRequest extends AbstractModel
     public $ServiceProvider;
 
     /**
-     * @var integer 表单唯一`ID`。
+     * @var integer 表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
      */
     public $ComplianceId;
 
@@ -46,7 +46,7 @@ class AuditCrossBorderComplianceRequest extends AbstractModel
 
     /**
      * @param string $ServiceProvider 服务商, 可选值：`UNICOM`。
-     * @param integer $ComplianceId 表单唯一`ID`。
+     * @param integer $ComplianceId 表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
      * @param string $AuditBehavior 通过：`APPROVED `，拒绝：`DENY`。
      */
     function __construct()

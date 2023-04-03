@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetVpnGatewaysRenewFlag请求参数结构体
  *
- * @method array getVpnGatewayIds() 获取VPNGW字符型ID列表
- * @method void setVpnGatewayIds(array $VpnGatewayIds) 设置VPNGW字符型ID列表
- * @method integer getAutoRenewFlag() 获取自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
- * @method string getType() 获取VPNGW类型['IPSEC', 'SSL']
- * @method void setType(string $Type) 设置VPNGW类型['IPSEC', 'SSL']
+ * @method array getVpnGatewayIds() 获取VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
+ * @method void setVpnGatewayIds(array $VpnGatewayIds) 设置VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
+ * @method integer getAutoRenewFlag() 获取自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
+ * @method string getType() 获取VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
+ * @method void setType(string $Type) 设置VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
  */
 class SetVpnGatewaysRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array VPNGW字符型ID列表
+     * @var array VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
      */
     public $VpnGatewayIds;
 
     /**
-     * @var integer 自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
+     * @var integer 自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string VPNGW类型['IPSEC', 'SSL']
+     * @var string VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
      */
     public $Type;
 
     /**
-     * @param array $VpnGatewayIds VPNGW字符型ID列表
-     * @param integer $AutoRenewFlag 自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
-     * @param string $Type VPNGW类型['IPSEC', 'SSL']
+     * @param array $VpnGatewayIds VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
+     * @param integer $AutoRenewFlag 自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
+     * @param string $Type VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
      */
     function __construct()
     {

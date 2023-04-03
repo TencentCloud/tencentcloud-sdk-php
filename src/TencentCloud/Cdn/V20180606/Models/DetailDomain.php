@@ -316,6 +316,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpsBilling(HttpsBilling $HttpsBilling) 设置HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OthersPrivateAccess getOthersPrivateAccess() 获取其他厂商对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOthersPrivateAccess(OthersPrivateAccess $OthersPrivateAccess) 设置其他厂商对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -728,6 +732,12 @@ off：不支持
     public $HttpsBilling;
 
     /**
+     * @var OthersPrivateAccess 其他厂商对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OthersPrivateAccess;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -875,6 +885,8 @@ off：不支持
      * @param QnPrivateAccess $QnPrivateAccess 七牛云对象存储回源鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpsBilling $HttpsBilling HTTPS服务，缺省时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OthersPrivateAccess $OthersPrivateAccess 其他厂商对象存储回源鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1206,6 +1218,11 @@ off：不支持
         if (array_key_exists("HttpsBilling",$param) and $param["HttpsBilling"] !== null) {
             $this->HttpsBilling = new HttpsBilling();
             $this->HttpsBilling->deserialize($param["HttpsBilling"]);
+        }
+
+        if (array_key_exists("OthersPrivateAccess",$param) and $param["OthersPrivateAccess"] !== null) {
+            $this->OthersPrivateAccess = new OthersPrivateAccess();
+            $this->OthersPrivateAccess->deserialize($param["OthersPrivateAccess"]);
         }
     }
 }

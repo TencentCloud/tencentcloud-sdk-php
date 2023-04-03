@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpnGatewayCcnRoutes请求参数结构体
  *
- * @method string getVpnGatewayId() 获取VPN网关实例ID
- * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
+ * @method string getVpnGatewayId() 获取VPN网关实例ID。
+ * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
+ * @method integer getOffset() 获取偏移量。默认值：0
+ * @method void setOffset(integer $Offset) 设置偏移量。默认值：0
+ * @method integer getLimit() 获取返回数量。默认值：20
+ * @method void setLimit(integer $Limit) 设置返回数量。默认值：20
  */
 class DescribeVpnGatewayCcnRoutesRequest extends AbstractModel
 {
     /**
-     * @var string VPN网关实例ID
+     * @var string VPN网关实例ID。
      */
     public $VpnGatewayId;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量。默认值：0
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer 返回数量。默认值：20
      */
     public $Limit;
 
     /**
-     * @param string $VpnGatewayId VPN网关实例ID
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
+     * @param string $VpnGatewayId VPN网关实例ID。
+     * @param integer $Offset 偏移量。默认值：0
+     * @param integer $Limit 返回数量。默认值：20
      */
     function __construct()
     {

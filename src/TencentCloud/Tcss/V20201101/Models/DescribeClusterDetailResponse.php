@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceCount(integer $ServiceCount) 设置Service数量
  * @method integer getIngressCount() 获取Ingress数量
  * @method void setIngressCount(integer $IngressCount) 设置Ingress数量
+ * @method string getMasterIps() 获取主节点的ip列表
+ * @method void setMasterIps(string $MasterIps) 设置主节点的ip列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -194,6 +196,11 @@ class DescribeClusterDetailResponse extends AbstractModel
     public $IngressCount;
 
     /**
+     * @var string 主节点的ip列表
+     */
+    public $MasterIps;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -223,6 +230,7 @@ class DescribeClusterDetailResponse extends AbstractModel
      * @param integer $PodCount Pod数量
      * @param integer $ServiceCount Service数量
      * @param integer $IngressCount Ingress数量
+     * @param string $MasterIps 主节点的ip列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -332,6 +340,10 @@ class DescribeClusterDetailResponse extends AbstractModel
 
         if (array_key_exists("IngressCount",$param) and $param["IngressCount"] !== null) {
             $this->IngressCount = $param["IngressCount"];
+        }
+
+        if (array_key_exists("MasterIps",$param) and $param["MasterIps"] !== null) {
+            $this->MasterIps = $param["MasterIps"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

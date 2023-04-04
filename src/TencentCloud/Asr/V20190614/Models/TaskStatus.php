@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 获取录音识别结果的返回参数
  *
- * @method integer getTaskId() 获取任务标识。
- * @method void setTaskId(integer $TaskId) 设置任务标识。
+ * @method integer getTaskId() 获取任务标识。注意：TaskId数据类型为uint64。
+ * @method void setTaskId(integer $TaskId) 设置任务标识。注意：TaskId数据类型为uint64。
  * @method integer getStatus() 获取任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
  * @method void setStatus(integer $Status) 设置任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
  * @method string getStatusStr() 获取任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class TaskStatus extends AbstractModel
 {
     /**
-     * @var integer 任务标识。
+     * @var integer 任务标识。注意：TaskId数据类型为uint64。
      */
     public $TaskId;
 
@@ -79,7 +79,7 @@ class TaskStatus extends AbstractModel
     public $AudioDuration;
 
     /**
-     * @param integer $TaskId 任务标识。
+     * @param integer $TaskId 任务标识。注意：TaskId数据类型为uint64。
      * @param integer $Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
      * @param string $StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
      * @param string $Result 识别结果。

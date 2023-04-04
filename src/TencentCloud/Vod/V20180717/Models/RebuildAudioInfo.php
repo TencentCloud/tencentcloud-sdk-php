@@ -14,36 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 聚合桶的信息
+ * 音画质重生音频控制控制信息。
  *
- * @method string getKey() 获取无
+ * @method AudioDenoiseInfo getAudioDenoiseInfo() 获取音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置无
+ * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) 设置音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCount() 获取key值出现的次数。
- * @method void setCount(integer $Count) 设置key值出现的次数。
  */
-class Bucket extends AbstractModel
+class RebuildAudioInfo extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var AudioDenoiseInfo 音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Key;
+    public $AudioDenoiseInfo;
 
     /**
-     * @var integer key值出现的次数。
-     */
-    public $Count;
-
-    /**
-     * @param string $Key 无
+     * @param AudioDenoiseInfo $AudioDenoiseInfo 音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Count key值出现的次数。
      */
     function __construct()
     {
@@ -58,12 +50,9 @@ class Bucket extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists("AudioDenoiseInfo",$param) and $param["AudioDenoiseInfo"] !== null) {
+            $this->AudioDenoiseInfo = new AudioDenoiseInfo();
+            $this->AudioDenoiseInfo->deserialize($param["AudioDenoiseInfo"]);
         }
     }
 }

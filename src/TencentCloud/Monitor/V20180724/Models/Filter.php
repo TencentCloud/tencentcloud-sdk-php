@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(string $Key) 设置过滤维度名
  * @method string getValue() 获取过滤值，in过滤方式用逗号分割多个值
  * @method void setValue(string $Value) 设置过滤值，in过滤方式用逗号分割多个值
+ * @method string getName() 获取过滤条件名称
+ * @method void setName(string $Name) 设置过滤条件名称
+ * @method array getValues() 获取过滤条件取值范围
+ * @method void setValues(array $Values) 设置过滤条件取值范围
  */
 class Filter extends AbstractModel
 {
@@ -45,9 +49,21 @@ class Filter extends AbstractModel
     public $Value;
 
     /**
+     * @var string 过滤条件名称
+     */
+    public $Name;
+
+    /**
+     * @var array 过滤条件取值范围
+     */
+    public $Values;
+
+    /**
      * @param string $Type 过滤方式（=, !=, in）
      * @param string $Key 过滤维度名
      * @param string $Value 过滤值，in过滤方式用逗号分割多个值
+     * @param string $Name 过滤条件名称
+     * @param array $Values 过滤条件取值范围
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class Filter extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

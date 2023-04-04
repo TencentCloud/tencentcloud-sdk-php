@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
  * @method void setMediaUrl(string $MediaUrl) 设置要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
+ * @method string getMediaType() 获取媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
+如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
+ * @method void setMediaType(string $MediaType) 设置媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
+如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getMediaName() 获取媒体名称。
@@ -58,6 +62,12 @@ class PullUploadRequest extends AbstractModel
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
      */
     public $MediaUrl;
+
+    /**
+     * @var string 媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
+如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
+     */
+    public $MediaType;
 
     /**
      * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
@@ -119,6 +129,8 @@ class PullUploadRequest extends AbstractModel
     /**
      * @param string $MediaUrl 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
+     * @param string $MediaType 媒体文件类型（扩展名），支持的类型详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
+如果 MediaType 不填或取值为空字符串，将根据 MediaUrl 自动获取文件类型。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $MediaName 媒体名称。
      * @param string $CoverUrl 要拉取的视频封面 URL。支持的文件格式：gif、jpeg（jpg）、png。
@@ -148,6 +160,10 @@ class PullUploadRequest extends AbstractModel
         }
         if (array_key_exists("MediaUrl",$param) and $param["MediaUrl"] !== null) {
             $this->MediaUrl = $param["MediaUrl"];
+        }
+
+        if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
+            $this->MediaType = $param["MediaType"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

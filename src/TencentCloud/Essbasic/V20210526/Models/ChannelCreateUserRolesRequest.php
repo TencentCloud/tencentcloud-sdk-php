@@ -20,22 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateUserRoles请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作者信息
- * @method void setOperator(UserInfo $Operator) 设置操作者信息
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
  * @method array getUserIds() 获取绑定角色的员工id列表
  * @method void setUserIds(array $UserIds) 设置绑定角色的员工id列表
  * @method array getRoleIds() 获取绑定角色的角色id列表
  * @method void setRoleIds(array $RoleIds) 设置绑定角色的角色id列表
+ * @method UserInfo getOperator() 获取操作者信息
+ * @method void setOperator(UserInfo $Operator) 设置操作者信息
  */
 class ChannelCreateUserRolesRequest extends AbstractModel
 {
-    /**
-     * @var UserInfo 操作者信息
-     */
-    public $Operator;
-
     /**
      * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      */
@@ -52,10 +47,15 @@ class ChannelCreateUserRolesRequest extends AbstractModel
     public $RoleIds;
 
     /**
-     * @param UserInfo $Operator 操作者信息
+     * @var UserInfo 操作者信息
+     */
+    public $Operator;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      * @param array $UserIds 绑定角色的员工id列表
      * @param array $RoleIds 绑定角色的角色id列表
+     * @param UserInfo $Operator 操作者信息
      */
     function __construct()
     {
@@ -70,11 +70,6 @@ class ChannelCreateUserRolesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
@@ -86,6 +81,11 @@ class ChannelCreateUserRolesRequest extends AbstractModel
 
         if (array_key_exists("RoleIds",$param) and $param["RoleIds"] !== null) {
             $this->RoleIds = $param["RoleIds"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

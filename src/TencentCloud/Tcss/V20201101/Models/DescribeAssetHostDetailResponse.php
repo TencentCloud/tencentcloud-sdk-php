@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetHostDetail返回参数结构体
  *
- * @method string getUUID() 获取云镜uuid
- * @method void setUUID(string $UUID) 设置云镜uuid
+ * @method string getUUID() 获取容器安全uuid
+ * @method void setUUID(string $UUID) 设置容器安全uuid
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getHostName() 获取主机名
@@ -78,7 +78,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAssetHostDetailResponse extends AbstractModel
 {
     /**
-     * @var string 云镜uuid
+     * @var string 容器安全uuid
      */
     public $UUID;
 
@@ -213,7 +213,7 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $UUID 云镜uuid
+     * @param string $UUID 容器安全uuid
      * @param string $UpdateTime 更新时间
      * @param string $HostName 主机名
      * @param string $Group 主机分组

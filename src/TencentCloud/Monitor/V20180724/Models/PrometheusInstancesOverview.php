@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBoundTotal(integer $BoundTotal) 设置绑定集群总数
  * @method integer getBoundNormal() 获取绑定集群正常状态总数
  * @method void setBoundNormal(integer $BoundNormal) 设置绑定集群正常状态总数
+ * @method integer getResourcePackageStatus() 获取资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourcePackageStatus(integer $ResourcePackageStatus) 设置资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourcePackageSpecName() 获取资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourcePackageSpecName(string $ResourcePackageSpecName) 设置资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusInstancesOverview extends AbstractModel
 {
@@ -147,6 +155,18 @@ class PrometheusInstancesOverview extends AbstractModel
     public $BoundNormal;
 
     /**
+     * @var integer 资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourcePackageStatus;
+
+    /**
+     * @var string 资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourcePackageSpecName;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名
      * @param string $VpcId VPC ID
@@ -168,6 +188,10 @@ class PrometheusInstancesOverview extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BoundTotal 绑定集群总数
      * @param integer $BoundNormal 绑定集群正常状态总数
+     * @param integer $ResourcePackageStatus 资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourcePackageSpecName 资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -240,6 +264,14 @@ class PrometheusInstancesOverview extends AbstractModel
 
         if (array_key_exists("BoundNormal",$param) and $param["BoundNormal"] !== null) {
             $this->BoundNormal = $param["BoundNormal"];
+        }
+
+        if (array_key_exists("ResourcePackageStatus",$param) and $param["ResourcePackageStatus"] !== null) {
+            $this->ResourcePackageStatus = $param["ResourcePackageStatus"];
+        }
+
+        if (array_key_exists("ResourcePackageSpecName",$param) and $param["ResourcePackageSpecName"] !== null) {
+            $this->ResourcePackageSpecName = $param["ResourcePackageSpecName"];
         }
     }
 }

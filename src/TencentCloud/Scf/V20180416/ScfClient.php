@@ -74,6 +74,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) 该接口根据传入参数更新函数配置。
  * @method Models\UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(Models\UpdateFunctionEventInvokeConfigRequest $req) 更新函数的异步重试配置，包括重试次数和消息保留时间
  * @method Models\UpdateNamespaceResponse UpdateNamespace(Models\UpdateNamespaceRequest $req) 更新命名空间
+ * @method Models\UpdateTriggerStatusResponse UpdateTriggerStatus(Models\UpdateTriggerStatusRequest $req) 更新触发器状态的值
  */
 
 class ScfClient extends AbstractClient

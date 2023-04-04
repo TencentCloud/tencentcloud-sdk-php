@@ -14,36 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 聚合桶的信息
+ * Vip信息
  *
- * @method string getKey() 获取无
+ * @method string getVip() 获取Virtual IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置无
+ * @method void setVip(string $Vip) 设置Virtual IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCount() 获取key值出现的次数。
- * @method void setCount(integer $Count) 设置key值出现的次数。
+ * @method string getInstanceId() 获取waf实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置waf实例id
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class Bucket extends AbstractModel
+class VipInfo extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string Virtual IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Key;
+    public $Vip;
 
     /**
-     * @var integer key值出现的次数。
-     */
-    public $Count;
-
-    /**
-     * @param string $Key 无
+     * @var string waf实例id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Count key值出现的次数。
+     */
+    public $InstanceId;
+
+    /**
+     * @param string $Vip Virtual IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId waf实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -58,12 +62,12 @@ class Bucket extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

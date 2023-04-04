@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ServiceAccount认证相关配置
  *
+ * @method boolean getUseTKEDefault() 获取使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseTKEDefault(boolean $UseTKEDefault) 设置使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIssuer() 获取service-account-issuer
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIssuer(string $Issuer) 设置service-account-issuer
@@ -35,6 +39,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class ServiceAccountAuthenticationOptions extends AbstractModel
 {
+    /**
+     * @var boolean 使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseTKEDefault;
+
     /**
      * @var string service-account-issuer
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,6 +64,8 @@ class ServiceAccountAuthenticationOptions extends AbstractModel
     public $AutoCreateDiscoveryAnonymousAuth;
 
     /**
+     * @param boolean $UseTKEDefault 使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Issuer service-account-issuer
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JWKSURI service-account-jwks-uri
@@ -74,6 +86,10 @@ class ServiceAccountAuthenticationOptions extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("UseTKEDefault",$param) and $param["UseTKEDefault"] !== null) {
+            $this->UseTKEDefault = $param["UseTKEDefault"];
+        }
+
         if (array_key_exists("Issuer",$param) and $param["Issuer"] !== null) {
             $this->Issuer = $param["Issuer"];
         }

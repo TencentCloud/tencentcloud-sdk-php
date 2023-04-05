@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
  * @method integer getRoomId() 获取房间Id。	
  * @method void setRoomId(integer $RoomId) 设置房间Id。	
- * @method integer getSeq() 获取消息序列。获取该序列以前前的消息(不包含该seq消息)
- * @method void setSeq(integer $Seq) 设置消息序列。获取该序列以前前的消息(不包含该seq消息)
+ * @method integer getSeq() 获取消息序列。获取该序列以前的消息(不包含该seq消息)
+ * @method void setSeq(integer $Seq) 设置消息序列。获取该序列以前的消息(不包含该seq消息)
  * @method integer getLimit() 获取消息拉取的条数。最大数量不能超过套餐包限制。
  * @method void setLimit(integer $Limit) 设置消息拉取的条数。最大数量不能超过套餐包限制。
  */
@@ -42,7 +42,7 @@ class GetRoomMessageRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var integer 消息序列。获取该序列以前前的消息(不包含该seq消息)
+     * @var integer 消息序列。获取该序列以前的消息(不包含该seq消息)
      */
     public $Seq;
 
@@ -54,7 +54,7 @@ class GetRoomMessageRequest extends AbstractModel
     /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $RoomId 房间Id。	
-     * @param integer $Seq 消息序列。获取该序列以前前的消息(不包含该seq消息)
+     * @param integer $Seq 消息序列。获取该序列以前的消息(不包含该seq消息)
      * @param integer $Limit 消息拉取的条数。最大数量不能超过套餐包限制。
      */
     function __construct()

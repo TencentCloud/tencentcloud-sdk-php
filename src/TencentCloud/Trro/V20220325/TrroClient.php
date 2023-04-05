@@ -25,6 +25,7 @@ use TencentCloud\Trro\V20220325\Models as Models;
 /**
  * @method Models\BatchDeleteDevicesResponse BatchDeleteDevices(Models\BatchDeleteDevicesRequest $req) 用于批量删除设备
  * @method Models\BatchDeletePolicyResponse BatchDeletePolicy(Models\BatchDeletePolicyRequest $req) 用于批量删除修改权限配置
+ * @method Models\BoundLicensesResponse BoundLicenses(Models\BoundLicensesRequest $req) 为推流设备绑定license，优先绑定到期时间最近的，到期时间相同优先绑定月包
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 用于创建设备
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 用于创建项目
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 用于删除项目
@@ -35,8 +36,13 @@ use TencentCloud\Trro\V20220325\Models as Models;
  * @method Models\DescribePolicyResponse DescribePolicy(Models\DescribePolicyRequest $req) 用于查看权限配置
  * @method Models\DescribeProjectInfoResponse DescribeProjectInfo(Models\DescribeProjectInfoRequest $req) 用于获取项目信息
  * @method Models\DescribeProjectListResponse DescribeProjectList(Models\DescribeProjectListRequest $req) 用于获取项目列表
+ * @method Models\DescribeRecentSessionListResponse DescribeRecentSessionList(Models\DescribeRecentSessionListRequest $req) 获取最新设备会话列表
  * @method Models\DescribeSessionStatisticsResponse DescribeSessionStatistics(Models\DescribeSessionStatisticsRequest $req) 获取会话统计值
  * @method Models\DescribeSessionStatisticsByIntervalResponse DescribeSessionStatisticsByInterval(Models\DescribeSessionStatisticsByIntervalRequest $req) 获取各时间段的会话统计值
+ * @method Models\GetDeviceLicenseResponse GetDeviceLicense(Models\GetDeviceLicenseRequest $req) 获取设备已经绑定的可用授权数量
+ * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 查询用户设备的授权绑定情况
+ * @method Models\GetLicenseStatResponse GetLicenseStat(Models\GetLicenseStatRequest $req) 统计license类型数量
+ * @method Models\GetLicensesResponse GetLicenses(Models\GetLicensesRequest $req) 按授权查看license列表
  * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 用于修改设备信息
  * @method Models\ModifyPolicyResponse ModifyPolicy(Models\ModifyPolicyRequest $req) 用于修改权限配置
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 用于修改项目信息

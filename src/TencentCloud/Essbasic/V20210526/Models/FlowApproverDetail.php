@@ -38,9 +38,37 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveName(string $ApproveName) 设置签署人姓名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproveStatus() 获取当前签署人的状态
+ * @method string getApproveStatus() 获取当前签署人的状态, 状态如下
+
+PENDING 流程等待中 
+FILLPENDING 待填写状态
+FILLACCEPT 参与人已经填写
+FILLREJECT 参与人解决填写
+WAITPICKUP 待签收
+ACCEPT 签收 
+REJECT 拒签 
+DEADLINE 过期没有处理 
+CANCEL 取消
+FORWARD 已经转他人处理
+STOP 流程因为其他原因终止
+RELIEVED 已经解除
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveStatus(string $ApproveStatus) 设置当前签署人的状态
+ * @method void setApproveStatus(string $ApproveStatus) 设置当前签署人的状态, 状态如下
+
+PENDING 流程等待中 
+FILLPENDING 待填写状态
+FILLACCEPT 参与人已经填写
+FILLREJECT 参与人解决填写
+WAITPICKUP 待签收
+ACCEPT 签收 
+REJECT 拒签 
+DEADLINE 过期没有处理 
+CANCEL 取消
+FORWARD 已经转他人处理
+STOP 流程因为其他原因终止
+RELIEVED 已经解除
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproveMessage() 获取签署人信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,7 +121,21 @@ class FlowApproverDetail extends AbstractModel
     public $ApproveName;
 
     /**
-     * @var string 当前签署人的状态
+     * @var string 当前签署人的状态, 状态如下
+
+PENDING 流程等待中 
+FILLPENDING 待填写状态
+FILLACCEPT 参与人已经填写
+FILLREJECT 参与人解决填写
+WAITPICKUP 待签收
+ACCEPT 签收 
+REJECT 拒签 
+DEADLINE 过期没有处理 
+CANCEL 取消
+FORWARD 已经转他人处理
+STOP 流程因为其他原因终止
+RELIEVED 已经解除
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveStatus;
@@ -125,7 +167,21 @@ class FlowApproverDetail extends AbstractModel
      * @param integer $SignOrder 签署人签署顺序
      * @param string $ApproveName 签署人姓名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproveStatus 当前签署人的状态
+     * @param string $ApproveStatus 当前签署人的状态, 状态如下
+
+PENDING 流程等待中 
+FILLPENDING 待填写状态
+FILLACCEPT 参与人已经填写
+FILLREJECT 参与人解决填写
+WAITPICKUP 待签收
+ACCEPT 签收 
+REJECT 拒签 
+DEADLINE 过期没有处理 
+CANCEL 取消
+FORWARD 已经转他人处理
+STOP 流程因为其他原因终止
+RELIEVED 已经解除
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveMessage 签署人信息
 注意：此字段可能返回 null，表示取不到有效值。

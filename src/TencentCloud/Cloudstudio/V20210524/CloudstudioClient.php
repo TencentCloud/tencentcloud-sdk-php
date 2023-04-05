@@ -33,6 +33,7 @@ use TencentCloud\Cloudstudio\V20210524\Models as Models;
  * @method Models\DescribeCustomizeTemplatesByIdResponse DescribeCustomizeTemplatesById(Models\DescribeCustomizeTemplatesByIdRequest $req) 获取特定模板信息
  * @method Models\DescribeCustomizeTemplatesPresetsResponse DescribeCustomizeTemplatesPresets(Models\DescribeCustomizeTemplatesPresetsRequest $req) 获取创建模板的预置参数
  * @method Models\DescribeWorkspaceEnvListResponse DescribeWorkspaceEnvList(Models\DescribeWorkspaceEnvListRequest $req) 环境列表接口返回信息
+ * @method Models\DescribeWorkspaceIsReadyResponse DescribeWorkspaceIsReady(Models\DescribeWorkspaceIsReadyRequest $req) 获取工作空间是否已经启动就绪
  * @method Models\DescribeWorkspaceNameExistResponse DescribeWorkspaceNameExist(Models\DescribeWorkspaceNameExistRequest $req) 检查工作空间是否存在
  * @method Models\DescribeWorkspaceStatusResponse DescribeWorkspaceStatus(Models\DescribeWorkspaceStatusRequest $req) 获取工作空间元信息
  * @method Models\DescribeWorkspaceStatusListResponse DescribeWorkspaceStatusList(Models\DescribeWorkspaceStatusListRequest $req) 获取用户工作空间列表

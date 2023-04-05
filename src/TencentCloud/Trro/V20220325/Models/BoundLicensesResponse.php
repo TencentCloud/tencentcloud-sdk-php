@@ -14,51 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Trro\V20220325\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTLogInfo返回参数结构体
+ * BoundLicenses返回参数结构体
  *
- * @method TLogInfo getData() 获取"NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
- * @method void setData(TLogInfo $Data) 设置"NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTLogInfoResponse extends AbstractModel
+class BoundLicensesResponse extends AbstractModel
 {
-    /**
-     * @var TLogInfo "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
-     */
-    public $Data;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param TLogInfo $Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,11 +46,6 @@ class DescribeTLogInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new TLogInfo();
-            $this->Data->deserialize($param["Data"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

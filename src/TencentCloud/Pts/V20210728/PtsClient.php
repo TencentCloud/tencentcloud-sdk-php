@@ -43,6 +43,7 @@ use TencentCloud\Pts\V20210728\Models as Models;
  * @method Models\DescribeAvailableMetricsResponse DescribeAvailableMetrics(Models\DescribeAvailableMetricsRequest $req) 查询系统支持的指标
  * @method Models\DescribeCheckSummaryResponse DescribeCheckSummary(Models\DescribeCheckSummaryRequest $req) 查询检查点汇总信息
  * @method Models\DescribeCronJobsResponse DescribeCronJobs(Models\DescribeCronJobsRequest $req) 列出定时任务，非必填数组为空就默认全选
+ * @method Models\DescribeErrorSummaryResponse DescribeErrorSummary(Models\DescribeErrorSummaryRequest $req) 查询错误详情汇总信息
  * @method Models\DescribeFilesResponse DescribeFiles(Models\DescribeFilesRequest $req) 查询文件列表
  * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 查询任务列表
  * @method Models\DescribeLabelValuesResponse DescribeLabelValues(Models\DescribeLabelValuesRequest $req) 查询标签内容

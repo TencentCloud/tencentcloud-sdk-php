@@ -20,10 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SentenceRecognition请求参数结构体
  *
- * @method integer getProjectId() 获取腾讯云项目 ID，废弃参数，填写0即可。
- * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，废弃参数，填写0即可。
- * @method integer getSubServiceType() 获取子服务类型。2： 一句话识别。
- * @method void setSubServiceType(integer $SubServiceType) 设置子服务类型。2： 一句话识别。
  * @method string getEngSerViceType() 获取引擎模型类型。
 电话场景：
 • 8k_zh：中文电话通用；
@@ -41,6 +37,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ms：马来语；
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
+• 16k_th：泰语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method void setEngSerViceType(string $EngSerViceType) 设置引擎模型类型。
 电话场景：
@@ -59,15 +56,20 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ms：马来语；
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
+• 16k_th：泰语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method string getVoiceFormat() 获取识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
  * @method void setVoiceFormat(string $VoiceFormat) 设置识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
- * @method string getUsrAudioKey() 获取废弃参数，填写任意字符串即可。
- * @method void setUsrAudioKey(string $UsrAudioKey) 设置废弃参数，填写任意字符串即可。
+ * @method integer getProjectId() 获取腾讯云项目 ID，废弃参数，填写0即可。
+ * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，废弃参数，填写0即可。
+ * @method integer getSubServiceType() 获取子服务类型。2： 一句话识别。
+ * @method void setSubServiceType(integer $SubServiceType) 设置子服务类型。2： 一句话识别。
  * @method string getUrl() 获取语音的URL地址，需要公网环境浏览器可下载。当 SourceType 值为 0时须填写该字段，为 1 时不填。音频时长不能超过60s，音频文件大小不能超过3MB。
  * @method void setUrl(string $Url) 设置语音的URL地址，需要公网环境浏览器可下载。当 SourceType 值为 0时须填写该字段，为 1 时不填。音频时长不能超过60s，音频文件大小不能超过3MB。
+ * @method string getUsrAudioKey() 获取废弃参数，填写任意字符串即可。
+ * @method void setUsrAudioKey(string $UsrAudioKey) 设置废弃参数，填写任意字符串即可。
  * @method string getData() 获取语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。
  * @method void setData(string $Data) 设置语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。
  * @method integer getDataLen() 获取数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
@@ -92,16 +94,6 @@ use TencentCloud\Common\AbstractModel;
 class SentenceRecognitionRequest extends AbstractModel
 {
     /**
-     * @var integer 腾讯云项目 ID，废弃参数，填写0即可。
-     */
-    public $ProjectId;
-
-    /**
-     * @var integer 子服务类型。2： 一句话识别。
-     */
-    public $SubServiceType;
-
-    /**
      * @var string 引擎模型类型。
 电话场景：
 • 8k_zh：中文电话通用；
@@ -119,6 +111,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ms：马来语；
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
+• 16k_th：泰语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      */
     public $EngSerViceType;
@@ -134,14 +127,24 @@ class SentenceRecognitionRequest extends AbstractModel
     public $VoiceFormat;
 
     /**
-     * @var string 废弃参数，填写任意字符串即可。
+     * @var integer 腾讯云项目 ID，废弃参数，填写0即可。
      */
-    public $UsrAudioKey;
+    public $ProjectId;
+
+    /**
+     * @var integer 子服务类型。2： 一句话识别。
+     */
+    public $SubServiceType;
 
     /**
      * @var string 语音的URL地址，需要公网环境浏览器可下载。当 SourceType 值为 0时须填写该字段，为 1 时不填。音频时长不能超过60s，音频文件大小不能超过3MB。
      */
     public $Url;
+
+    /**
+     * @var string 废弃参数，填写任意字符串即可。
+     */
+    public $UsrAudioKey;
 
     /**
      * @var string 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。
@@ -194,8 +197,6 @@ class SentenceRecognitionRequest extends AbstractModel
     public $ReinforceHotword;
 
     /**
-     * @param integer $ProjectId 腾讯云项目 ID，废弃参数，填写0即可。
-     * @param integer $SubServiceType 子服务类型。2： 一句话识别。
      * @param string $EngSerViceType 引擎模型类型。
 电话场景：
 • 8k_zh：中文电话通用；
@@ -213,11 +214,14 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ms：马来语；
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
+• 16k_th：泰语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
-     * @param string $UsrAudioKey 废弃参数，填写任意字符串即可。
+     * @param integer $ProjectId 腾讯云项目 ID，废弃参数，填写0即可。
+     * @param integer $SubServiceType 子服务类型。2： 一句话识别。
      * @param string $Url 语音的URL地址，需要公网环境浏览器可下载。当 SourceType 值为 0时须填写该字段，为 1 时不填。音频时长不能超过60s，音频文件大小不能超过3MB。
+     * @param string $UsrAudioKey 废弃参数，填写任意字符串即可。
      * @param string $Data 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。
      * @param integer $DataLen 数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
      * @param integer $WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
@@ -242,14 +246,6 @@ class SentenceRecognitionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("SubServiceType",$param) and $param["SubServiceType"] !== null) {
-            $this->SubServiceType = $param["SubServiceType"];
-        }
-
         if (array_key_exists("EngSerViceType",$param) and $param["EngSerViceType"] !== null) {
             $this->EngSerViceType = $param["EngSerViceType"];
         }
@@ -262,12 +258,20 @@ class SentenceRecognitionRequest extends AbstractModel
             $this->VoiceFormat = $param["VoiceFormat"];
         }
 
-        if (array_key_exists("UsrAudioKey",$param) and $param["UsrAudioKey"] !== null) {
-            $this->UsrAudioKey = $param["UsrAudioKey"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("SubServiceType",$param) and $param["SubServiceType"] !== null) {
+            $this->SubServiceType = $param["SubServiceType"];
         }
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("UsrAudioKey",$param) and $param["UsrAudioKey"] !== null) {
+            $this->UsrAudioKey = $param["UsrAudioKey"];
         }
 
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {

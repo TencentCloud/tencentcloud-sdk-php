@@ -14,38 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Trro\V20220325\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTLogInfo返回参数结构体
+ * DescribeRecentSessionList返回参数结构体
  *
- * @method TLogInfo getData() 获取"NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
- * @method void setData(TLogInfo $Data) 设置"NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+ * @method integer getTotal() 获取总个数
+ * @method void setTotal(integer $Total) 设置总个数
+ * @method array getRecentSessionList() 获取会话列表
+ * @method void setRecentSessionList(array $RecentSessionList) 设置会话列表
+ * @method integer getNum() 获取本页数量
+ * @method void setNum(integer $Num) 设置本页数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTLogInfoResponse extends AbstractModel
+class DescribeRecentSessionListResponse extends AbstractModel
 {
     /**
-     * @var TLogInfo "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * @var integer 总个数
      */
-    public $Data;
+    public $Total;
+
+    /**
+     * @var array 会话列表
+     */
+    public $RecentSessionList;
+
+    /**
+     * @var integer 本页数量
+     */
+    public $Num;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,12 +52,9 @@ class DescribeTLogInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TLogInfo $Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * @param integer $Total 总个数
+     * @param array $RecentSessionList 会话列表
+     * @param integer $Num 本页数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,9 +70,21 @@ class DescribeTLogInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new TLogInfo();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("RecentSessionList",$param) and $param["RecentSessionList"] !== null) {
+            $this->RecentSessionList = [];
+            foreach ($param["RecentSessionList"] as $key => $value){
+                $obj = new RecentSessionInfo();
+                $obj->deserialize($value);
+                array_push($this->RecentSessionList, $obj);
+            }
+        }
+
+        if (array_key_exists("Num",$param) and $param["Num"] !== null) {
+            $this->Num = $param["Num"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

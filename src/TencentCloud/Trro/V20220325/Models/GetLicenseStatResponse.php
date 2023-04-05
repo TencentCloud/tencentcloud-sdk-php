@@ -14,38 +14,44 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Trro\V20220325\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTLogInfo返回参数结构体
+ * GetLicenseStat返回参数结构体
  *
- * @method TLogInfo getData() 获取"NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
- * @method void setData(TLogInfo $Data) 设置"NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+ * @method integer getValid() 获取有效授权
+ * @method void setValid(integer $Valid) 设置有效授权
+ * @method integer getBound() 获取已绑定授权
+ * @method void setBound(integer $Bound) 设置已绑定授权
+ * @method integer getUnBound() 获取未绑定授权
+ * @method void setUnBound(integer $UnBound) 设置未绑定授权
+ * @method integer getExpire() 获取过期授权
+ * @method void setExpire(integer $Expire) 设置过期授权
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTLogInfoResponse extends AbstractModel
+class GetLicenseStatResponse extends AbstractModel
 {
     /**
-     * @var TLogInfo "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * @var integer 有效授权
      */
-    public $Data;
+    public $Valid;
+
+    /**
+     * @var integer 已绑定授权
+     */
+    public $Bound;
+
+    /**
+     * @var integer 未绑定授权
+     */
+    public $UnBound;
+
+    /**
+     * @var integer 过期授权
+     */
+    public $Expire;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,12 +59,10 @@ class DescribeTLogInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TLogInfo $Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * @param integer $Valid 有效授权
+     * @param integer $Bound 已绑定授权
+     * @param integer $UnBound 未绑定授权
+     * @param integer $Expire 过期授权
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,9 +78,20 @@ class DescribeTLogInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new TLogInfo();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("Valid",$param) and $param["Valid"] !== null) {
+            $this->Valid = $param["Valid"];
+        }
+
+        if (array_key_exists("Bound",$param) and $param["Bound"] !== null) {
+            $this->Bound = $param["Bound"];
+        }
+
+        if (array_key_exists("UnBound",$param) and $param["UnBound"] !== null) {
+            $this->UnBound = $param["UnBound"];
+        }
+
+        if (array_key_exists("Expire",$param) and $param["Expire"] !== null) {
+            $this->Expire = $param["Expire"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

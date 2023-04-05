@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDealsByCond请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取开始时间 2016-01-01 00:00:00
+ * @method void setStartTime(string $StartTime) 设置开始时间 2016-01-01 00:00:00
+ * @method string getEndTime() 获取结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
+ * @method void setEndTime(string $EndTime) 设置结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
  * @method integer getLimit() 获取一页多少条数据，默认是20条，最大不超过1000
  * @method void setLimit(integer $Limit) 设置一页多少条数据，默认是20条，最大不超过1000
  * @method integer getOffset() 获取第多少页，从0开始，默认是0
@@ -64,12 +64,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDealsByCondRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间 2016-01-01 00:00:00
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
      */
     public $EndTime;
 
@@ -116,8 +116,8 @@ class DescribeDealsByCondRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param string $StartTime 开始时间 2016-01-01 00:00:00
+     * @param string $EndTime 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
      * @param integer $Limit 一页多少条数据，默认是20条，最大不超过1000
      * @param integer $Offset 第多少页，从0开始，默认是0
      * @param integer $Status 订单状态,默认为4（成功的订单）

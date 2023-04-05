@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页数量限制
  * @method integer getOffset() 获取页偏移量
  * @method void setOffset(integer $Offset) 设置页偏移量
+ * @method string getClusterType() 获取集群类型, 目前支持传入 tke, eks, tkeedge, external 
+ * @method void setClusterType(string $ClusterType) 设置集群类型, 目前支持传入 tke, eks, tkeedge, external 
  * @method string getNamespace() 获取helm Release 安装的namespace
  * @method void setNamespace(string $Namespace) 设置helm Release 安装的namespace
  * @method string getReleaseName() 获取helm Release 的名字
@@ -51,6 +53,11 @@ class DescribeClusterReleasesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+     */
+    public $ClusterType;
+
+    /**
      * @var string helm Release 安装的namespace
      */
     public $Namespace;
@@ -69,6 +76,7 @@ class DescribeClusterReleasesRequest extends AbstractModel
      * @param string $ClusterId 集群id
      * @param integer $Limit 每页数量限制
      * @param integer $Offset 页偏移量
+     * @param string $ClusterType 集群类型, 目前支持传入 tke, eks, tkeedge, external 
      * @param string $Namespace helm Release 安装的namespace
      * @param string $ReleaseName helm Release 的名字
      * @param string $ChartName helm Chart 的名字
@@ -96,6 +104,10 @@ class DescribeClusterReleasesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {

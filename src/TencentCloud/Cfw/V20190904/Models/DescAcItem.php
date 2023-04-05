@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBetaList() 获取关联任务详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBetaList(array $BetaList) 设置关联任务详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescAcItem extends AbstractModel
 {
@@ -258,6 +262,12 @@ class DescAcItem extends AbstractModel
     public $Status;
 
     /**
+     * @var array 关联任务详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BetaList;
+
+    /**
      * @param string $SourceContent 访问源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetContent 访问目的
@@ -303,6 +313,8 @@ class DescAcItem extends AbstractModel
      * @param integer $InternalUuid 内部使用的uuid，一般情况下不会使用到该字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BetaList 关联任务详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -412,6 +424,15 @@ class DescAcItem extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BetaList",$param) and $param["BetaList"] !== null) {
+            $this->BetaList = [];
+            foreach ($param["BetaList"] as $key => $value){
+                $obj = new BetaInfoByACL();
+                $obj->deserialize($value);
+                array_push($this->BetaList, $obj);
+            }
         }
     }
 }

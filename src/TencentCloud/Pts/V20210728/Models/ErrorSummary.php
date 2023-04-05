@@ -18,71 +18,83 @@ namespace TencentCloud\Pts\V20210728\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 并发模式的施压配置
+ * 错误信息汇总
  *
- * @method array getStages() 获取多阶段配置数组
+ * @method string getStatus() 获取状态码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStages(array $Stages) 设置多阶段配置数组
+ * @method void setStatus(string $Status) 设置状态码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIterationCount() 获取运行次数
+ * @method string getResult() 获取结果码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIterationCount(integer $IterationCount) 设置运行次数
+ * @method void setResult(string $Result) 设置结果码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxRequestsPerSecond() 获取最大RPS
+ * @method integer getCount() 获取错误出现次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxRequestsPerSecond(integer $MaxRequestsPerSecond) 设置最大RPS
+ * @method void setCount(integer $Count) 设置错误出现次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGracefulStopSeconds() 获取优雅终止任务的等待时间
+ * @method float getRate() 获取错误率
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGracefulStopSeconds(integer $GracefulStopSeconds) 设置优雅终止任务的等待时间
+ * @method void setRate(float $Rate) 设置错误率
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResources() 获取资源数
+ * @method string getMessage() 获取错误信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResources(integer $Resources) 设置资源数
+ * @method void setMessage(string $Message) 设置错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProto() 获取请求协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProto(string $Proto) 设置请求协议类型
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Concurrency extends AbstractModel
+class ErrorSummary extends AbstractModel
 {
     /**
-     * @var array 多阶段配置数组
+     * @var string 状态码
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Stages;
+    public $Status;
 
     /**
-     * @var integer 运行次数
+     * @var string 结果码
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $IterationCount;
+    public $Result;
 
     /**
-     * @var integer 最大RPS
+     * @var integer 错误出现次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $MaxRequestsPerSecond;
+    public $Count;
 
     /**
-     * @var integer 优雅终止任务的等待时间
+     * @var float 错误率
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $GracefulStopSeconds;
+    public $Rate;
 
     /**
-     * @var integer 资源数
+     * @var string 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Resources;
+    public $Message;
 
     /**
-     * @param array $Stages 多阶段配置数组
+     * @var string 请求协议类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IterationCount 运行次数
+     */
+    public $Proto;
+
+    /**
+     * @param string $Status 状态码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxRequestsPerSecond 最大RPS
+     * @param string $Result 结果码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $GracefulStopSeconds 优雅终止任务的等待时间
+     * @param integer $Count 错误出现次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Resources 资源数
+     * @param float $Rate 错误率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Message 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Proto 请求协议类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -98,29 +110,28 @@ class Concurrency extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Stages",$param) and $param["Stages"] !== null) {
-            $this->Stages = [];
-            foreach ($param["Stages"] as $key => $value){
-                $obj = new Stage();
-                $obj->deserialize($value);
-                array_push($this->Stages, $obj);
-            }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("IterationCount",$param) and $param["IterationCount"] !== null) {
-            $this->IterationCount = $param["IterationCount"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
-        if (array_key_exists("MaxRequestsPerSecond",$param) and $param["MaxRequestsPerSecond"] !== null) {
-            $this->MaxRequestsPerSecond = $param["MaxRequestsPerSecond"];
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
 
-        if (array_key_exists("GracefulStopSeconds",$param) and $param["GracefulStopSeconds"] !== null) {
-            $this->GracefulStopSeconds = $param["GracefulStopSeconds"];
+        if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
+            $this->Rate = $param["Rate"];
         }
 
-        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
-            $this->Resources = $param["Resources"];
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("Proto",$param) and $param["Proto"] !== null) {
+            $this->Proto = $param["Proto"];
         }
     }
 }

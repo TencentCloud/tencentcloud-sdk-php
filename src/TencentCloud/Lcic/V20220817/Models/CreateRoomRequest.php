@@ -68,8 +68,8 @@ video 纯视频
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
  * @method array getAssistants() 获取助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
  * @method void setAssistants(array $Assistants) 设置助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
- * @method integer getRecordLayout() 获取录制布局。
- * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。
+ * @method integer getRecordLayout() 获取录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+ * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method string getGroupId() 获取房间绑定的群组ID,非空时限制组成员进入
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID,非空时限制组成员进入
  */
@@ -148,7 +148,7 @@ video 纯视频
     public $Assistants;
 
     /**
-     * @var integer 录制布局。
+     * @var integer 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      */
     public $RecordLayout;
 
@@ -182,7 +182,7 @@ video 纯视频
 1 禁止录制
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      * @param array $Assistants 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
-     * @param integer $RecordLayout 录制布局。
+     * @param integer $RecordLayout 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      * @param string $GroupId 房间绑定的群组ID,非空时限制组成员进入
      */
     function __construct()

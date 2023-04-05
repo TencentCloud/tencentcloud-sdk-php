@@ -14,38 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTLogInfo返回参数结构体
+ * CreateHost返回参数结构体
  *
- * @method TLogInfo getData() 获取"NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
- * @method void setData(TLogInfo $Data) 设置"NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+ * @method string getDomainId() 获取新增防护域名ID
+ * @method void setDomainId(string $DomainId) 设置新增防护域名ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTLogInfoResponse extends AbstractModel
+class CreateHostResponse extends AbstractModel
 {
     /**
-     * @var TLogInfo "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * @var string 新增防护域名ID
      */
-    public $Data;
+    public $DomainId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,12 +38,7 @@ class DescribeTLogInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TLogInfo $Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * @param string $DomainId 新增防护域名ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,9 +54,8 @@ class DescribeTLogInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new TLogInfo();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
+            $this->DomainId = $param["DomainId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

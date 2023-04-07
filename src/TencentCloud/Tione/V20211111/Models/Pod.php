@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainers(Container $Containers) 设置容器列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getContainerInfos() 获取容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerInfos(array $ContainerInfos) 设置容器列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Pod extends AbstractModel
 {
@@ -94,6 +98,12 @@ class Pod extends AbstractModel
     public $Containers;
 
     /**
+     * @var array 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerInfos;
+
+    /**
      * @param string $Name pod名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uid pod的唯一id
@@ -107,6 +117,8 @@ class Pod extends AbstractModel
      * @param string $CreateTime pod的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Container $Containers 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ContainerInfos 容器列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -149,6 +161,15 @@ class Pod extends AbstractModel
         if (array_key_exists("Containers",$param) and $param["Containers"] !== null) {
             $this->Containers = new Container();
             $this->Containers->deserialize($param["Containers"]);
+        }
+
+        if (array_key_exists("ContainerInfos",$param) and $param["ContainerInfos"] !== null) {
+            $this->ContainerInfos = [];
+            foreach ($param["ContainerInfos"] as $key => $value){
+                $obj = new Container();
+                $obj->deserialize($value);
+                array_push($this->ContainerInfos, $obj);
+            }
         }
     }
 }

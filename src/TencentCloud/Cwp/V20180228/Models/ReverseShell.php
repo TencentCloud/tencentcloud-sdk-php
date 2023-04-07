@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPid() 获取进程id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPid(integer $Pid) 设置进程id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReverseShell extends AbstractModel
 {
@@ -174,6 +178,12 @@ class ReverseShell extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var integer 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Pid;
+
+    /**
      * @param integer $Id ID 主键
      * @param string $Uuid 云镜UUID
      * @param string $Quuid 主机ID
@@ -195,6 +205,8 @@ class ReverseShell extends AbstractModel
      * @param string $ProcTree 进程树
      * @param integer $DetectBy 检测方法
      * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Pid 进程id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +305,10 @@ class ReverseShell extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
+            $this->Pid = $param["Pid"];
         }
     }
 }

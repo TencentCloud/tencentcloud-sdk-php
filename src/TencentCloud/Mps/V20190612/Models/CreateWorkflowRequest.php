@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrigger(WorkflowTrigger $Trigger) 设置工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
  * @method TaskOutputStorage getOutputStorage() 获取媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
- * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
- * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+ * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
+ * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
  * @method MediaProcessTaskInput getMediaProcessTask() 获取媒体处理类型任务参数。
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置媒体处理类型任务参数。
  * @method AiContentReviewTaskInput getAiContentReviewTask() 获取视频内容审核类型任务参数。
@@ -59,7 +61,8 @@ class CreateWorkflowRequest extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * @var string 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
      */
     public $OutputDir;
 
@@ -97,7 +100,8 @@ class CreateWorkflowRequest extends AbstractModel
      * @param string $WorkflowName 工作流名称，最多128字符。同一个用户该名称唯一。
      * @param WorkflowTrigger $Trigger 工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
      * @param TaskOutputStorage $OutputStorage 媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
-     * @param string $OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * @param string $OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
      * @param MediaProcessTaskInput $MediaProcessTask 媒体处理类型任务参数。
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。

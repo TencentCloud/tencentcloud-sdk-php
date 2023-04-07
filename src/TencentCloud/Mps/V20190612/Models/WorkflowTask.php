@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) 设置视频内容分析任务的执行状态与结果。
  * @method array getAiRecognitionResultSet() 获取视频内容识别任务的执行状态与结果。
  * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置视频内容识别任务的执行状态与结果。
+ * @method ScheduleQualityControlTaskResult getAiQualityControlTaskResult() 获取视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult $AiQualityControlTaskResult) 设置视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTask extends AbstractModel
 {
@@ -106,6 +110,12 @@ class WorkflowTask extends AbstractModel
     public $AiRecognitionResultSet;
 
     /**
+     * @var ScheduleQualityControlTaskResult 视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AiQualityControlTaskResult;
+
+    /**
      * @param string $TaskId 媒体处理任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
@@ -120,6 +130,8 @@ class WorkflowTask extends AbstractModel
      * @param array $AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
      * @param array $AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
      * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+     * @param ScheduleQualityControlTaskResult $AiQualityControlTaskResult 视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -194,6 +206,11 @@ class WorkflowTask extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AiRecognitionResultSet, $obj);
             }
+        }
+
+        if (array_key_exists("AiQualityControlTaskResult",$param) and $param["AiQualityControlTaskResult"] !== null) {
+            $this->AiQualityControlTaskResult = new ScheduleQualityControlTaskResult();
+            $this->AiQualityControlTaskResult->deserialize($param["AiQualityControlTaskResult"]);
         }
     }
 }

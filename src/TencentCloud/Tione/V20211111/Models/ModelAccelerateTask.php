@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQATModel(boolean $QATModel) 设置是否是QAT模型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFrameworkVersion() 获取加速引擎对应的框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrameworkVersion(string $FrameworkVersion) 设置加速引擎对应的框架版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelAccelerateTask extends AbstractModel
 {
@@ -304,6 +308,12 @@ class ModelAccelerateTask extends AbstractModel
     public $QATModel;
 
     /**
+     * @var string 加速引擎对应的框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrameworkVersion;
+
+    /**
      * @param string $ModelAccTaskId 模型加速任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelAccTaskName 模型加速任务名称
@@ -359,6 +369,8 @@ class ModelAccelerateTask extends AbstractModel
      * @param string $ModelSignature SAVED_MODEL保存时配置的签名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $QATModel 是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FrameworkVersion 加速引擎对应的框架版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -497,6 +509,10 @@ class ModelAccelerateTask extends AbstractModel
 
         if (array_key_exists("QATModel",$param) and $param["QATModel"] !== null) {
             $this->QATModel = $param["QATModel"];
+        }
+
+        if (array_key_exists("FrameworkVersion",$param) and $param["FrameworkVersion"] !== null) {
+            $this->FrameworkVersion = $param["FrameworkVersion"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScale(ImageScale $Scale) 设置图片缩略处理，仅当 Type 为 Scale 时有效。
  * @method ImageCenterCut getCenterCut() 获取图片裁剪处理，仅当 Type 为 CenterCut 时有效。
  * @method void setCenterCut(ImageCenterCut $CenterCut) 设置图片裁剪处理，仅当 Type 为 CenterCut 时有效。
+ * @method ImageBlur getBlur() 获取图片模糊处理，仅当 Type 为 Blur 时有效。
+ * @method void setBlur(ImageBlur $Blur) 设置图片模糊处理，仅当 Type 为 Blur 时有效。
  */
 class ImageOperation extends AbstractModel
 {
@@ -51,11 +53,17 @@ class ImageOperation extends AbstractModel
     public $CenterCut;
 
     /**
+     * @var ImageBlur 图片模糊处理，仅当 Type 为 Blur 时有效。
+     */
+    public $Blur;
+
+    /**
      * @param string $Type 图片处理类型。可选类型有：
 <li>Scale : 图片缩略处理。</li>
 <li>CenterCut : 图片裁剪处理。</li>
      * @param ImageScale $Scale 图片缩略处理，仅当 Type 为 Scale 时有效。
      * @param ImageCenterCut $CenterCut 图片裁剪处理，仅当 Type 为 CenterCut 时有效。
+     * @param ImageBlur $Blur 图片模糊处理，仅当 Type 为 Blur 时有效。
      */
     function __construct()
     {
@@ -82,6 +90,11 @@ class ImageOperation extends AbstractModel
         if (array_key_exists("CenterCut",$param) and $param["CenterCut"] !== null) {
             $this->CenterCut = new ImageCenterCut();
             $this->CenterCut->deserialize($param["CenterCut"]);
+        }
+
+        if (array_key_exists("Blur",$param) and $param["Blur"] !== null) {
+            $this->Blur = new ImageBlur();
+            $this->Blur->deserialize($param["Blur"]);
         }
     }
 }

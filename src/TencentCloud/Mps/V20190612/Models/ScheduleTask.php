@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+ * @method integer getErrCode() 获取源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+ * @method void setErrCode(integer $ErrCode) 设置源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+ * @method string getMessage() 获取源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+ * @method void setMessage(string $Message) 设置源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
  * @method MediaInputInfo getInputInfo() 获取媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputInfo(MediaInputInfo $InputInfo) 设置媒体处理的目标文件信息。
@@ -56,6 +60,16 @@ class ScheduleTask extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     */
+    public $ErrCode;
+
+    /**
+     * @var string 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+     */
+    public $Message;
+
+    /**
      * @var MediaInputInfo 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -78,6 +92,8 @@ class ScheduleTask extends AbstractModel
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
+     * @param integer $ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     * @param string $Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
      * @param MediaInputInfo $InputInfo 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 原始视频的元信息。
@@ -104,6 +120,14 @@ class ScheduleTask extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
+            $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
         if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {

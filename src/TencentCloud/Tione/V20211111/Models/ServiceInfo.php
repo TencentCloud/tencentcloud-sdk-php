@@ -110,6 +110,10 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPods(Pod $Pods) 设置Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPodInfos() 获取Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodInfos(array $PodInfos) 设置Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceInfo extends AbstractModel
 {
@@ -235,6 +239,12 @@ HYBRID_PAID:
     public $Pods;
 
     /**
+     * @var array Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodInfos;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -279,6 +289,8 @@ HYBRID_PAID:
      * @param boolean $ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Pod $Pods Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PodInfos Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -381,6 +393,15 @@ HYBRID_PAID:
         if (array_key_exists("Pods",$param) and $param["Pods"] !== null) {
             $this->Pods = new Pod();
             $this->Pods->deserialize($param["Pods"]);
+        }
+
+        if (array_key_exists("PodInfos",$param) and $param["PodInfos"] !== null) {
+            $this->PodInfos = [];
+            foreach ($param["PodInfos"] as $key => $value){
+                $obj = new Pod();
+                $obj->deserialize($value);
+                array_push($this->PodInfos, $obj);
+            }
         }
     }
 }

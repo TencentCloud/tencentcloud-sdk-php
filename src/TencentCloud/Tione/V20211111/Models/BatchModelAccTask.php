@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelName(string $ModelName) 设置模型名称
  * @method string getModelSignature() 获取SavedModel保存时配置的签名
  * @method void setModelSignature(string $ModelSignature) 设置SavedModel保存时配置的签名
+ * @method string getFrameworkVersion() 获取加速引擎对应的框架版本
+ * @method void setFrameworkVersion(string $FrameworkVersion) 设置加速引擎对应的框架版本
  */
 class BatchModelAccTask extends AbstractModel
 {
@@ -87,6 +89,11 @@ class BatchModelAccTask extends AbstractModel
     public $ModelSignature;
 
     /**
+     * @var string 加速引擎对应的框架版本
+     */
+    public $FrameworkVersion;
+
+    /**
      * @param string $ModelId 模型ID
      * @param string $ModelVersion 模型版本
      * @param string $ModelSource 模型来源(JOB/COS)
@@ -96,6 +103,7 @@ class BatchModelAccTask extends AbstractModel
      * @param CosPathInfo $ModelInputPath 模型输入cos路径
      * @param string $ModelName 模型名称
      * @param string $ModelSignature SavedModel保存时配置的签名
+     * @param string $FrameworkVersion 加速引擎对应的框架版本
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class BatchModelAccTask extends AbstractModel
 
         if (array_key_exists("ModelSignature",$param) and $param["ModelSignature"] !== null) {
             $this->ModelSignature = $param["ModelSignature"];
+        }
+
+        if (array_key_exists("FrameworkVersion",$param) and $param["FrameworkVersion"] !== null) {
+            $this->FrameworkVersion = $param["FrameworkVersion"];
         }
     }
 }

@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：内部不允许部分更新，如果需要更新需全量提交编排任务列表。
  * @method TaskOutputStorage getOutputStorage() 获取媒体处理的文件输出存储位置。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置媒体处理的文件输出存储位置。
- * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录。
+ * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
- * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录。
+ * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知配置。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知配置。
@@ -68,7 +68,7 @@ class ModifyScheduleRequest extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string 媒体处理生成的文件输出的目标目录。
+     * @var string 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
      */
     public $OutputDir;
@@ -85,7 +85,7 @@ class ModifyScheduleRequest extends AbstractModel
      * @param array $Activities 编排任务列表。
 注意：内部不允许部分更新，如果需要更新需全量提交编排任务列表。
      * @param TaskOutputStorage $OutputStorage 媒体处理的文件输出存储位置。
-     * @param string $OutputDir 媒体处理生成的文件输出的目标目录。
+     * @param string $OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知配置。
      */

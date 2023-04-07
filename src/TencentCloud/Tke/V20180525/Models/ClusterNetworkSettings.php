@@ -58,6 +58,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6ServiceCIDR(string $Ipv6ServiceCIDR) 设置用于分配service的IP range，由系统自动分配
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCiliumMode() 获取集群Cilium Mode配置
+- clusterIP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCiliumMode(string $CiliumMode) 设置集群Cilium Mode配置
+- clusterIP
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -133,6 +139,13 @@ class ClusterNetworkSettings extends AbstractModel
     public $Ipv6ServiceCIDR;
 
     /**
+     * @var string 集群Cilium Mode配置
+- clusterIP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CiliumMode;
+
+    /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
@@ -151,6 +164,9 @@ class ClusterNetworkSettings extends AbstractModel
      * @param boolean $IsDualStack 集群VPC-CNI模式是否为非双栈集群，默认false，非双栈。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ipv6ServiceCIDR 用于分配service的IP range，由系统自动分配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CiliumMode 集群Cilium Mode配置
+- clusterIP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -216,6 +232,10 @@ class ClusterNetworkSettings extends AbstractModel
 
         if (array_key_exists("Ipv6ServiceCIDR",$param) and $param["Ipv6ServiceCIDR"] !== null) {
             $this->Ipv6ServiceCIDR = $param["Ipv6ServiceCIDR"];
+        }
+
+        if (array_key_exists("CiliumMode",$param) and $param["CiliumMode"] !== null) {
+            $this->CiliumMode = $param["CiliumMode"];
         }
     }
 }

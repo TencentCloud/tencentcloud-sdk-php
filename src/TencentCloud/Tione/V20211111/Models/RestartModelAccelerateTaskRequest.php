@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签
  * @method string getModelSignature() 获取SavedModel保存时配置的签名
  * @method void setModelSignature(string $ModelSignature) 设置SavedModel保存时配置的签名
+ * @method string getFrameworkVersion() 获取加速引擎对应的框架版本
+ * @method void setFrameworkVersion(string $FrameworkVersion) 设置加速引擎对应的框架版本
  */
 class RestartModelAccelerateTaskRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class RestartModelAccelerateTaskRequest extends AbstractModel
     public $ModelSignature;
 
     /**
+     * @var string 加速引擎对应的框架版本
+     */
+    public $FrameworkVersion;
+
+    /**
      * @param string $ModelAccTaskId 模型加速任务ID
      * @param string $ModelAccTaskName 模型加速任务名称
      * @param string $ModelSource 模型来源（JOB/COS）
@@ -176,6 +183,7 @@ class RestartModelAccelerateTaskRequest extends AbstractModel
      * @param string $AccEngineVersion 加速引擎版本
      * @param array $Tags 标签
      * @param string $ModelSignature SavedModel保存时配置的签名
+     * @param string $FrameworkVersion 加速引擎对应的框架版本
      */
     function __construct()
     {
@@ -277,6 +285,10 @@ class RestartModelAccelerateTaskRequest extends AbstractModel
 
         if (array_key_exists("ModelSignature",$param) and $param["ModelSignature"] !== null) {
             $this->ModelSignature = $param["ModelSignature"];
+        }
+
+        if (array_key_exists("FrameworkVersion",$param) and $param["FrameworkVersion"] !== null) {
+            $this->FrameworkVersion = $param["FrameworkVersion"];
         }
     }
 }

@@ -22,14 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getScheduleIds() 获取编排 ID 过滤条件，数组长度限制：100。
  * @method void setScheduleIds(array $ScheduleIds) 设置编排 ID 过滤条件，数组长度限制：100。
+ * @method string getTriggerType() 获取编排触发类型，可选值：
+<li>CosFileUpload： 腾讯云 COS 文件上传触发</li>
+<li>AwsS3FileUpload：Aws S3 文件上传触发。</li>
+不填或者为空表示全部。
+ * @method void setTriggerType(string $TriggerType) 设置编排触发类型，可选值：
+<li>CosFileUpload： 腾讯云 COS 文件上传触发</li>
+<li>AwsS3FileUpload：Aws S3 文件上传触发。</li>
+不填或者为空表示全部。
  * @method string getStatus() 获取状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+不填此参数，则不区编排状态。
  * @method void setStatus(string $Status) 设置状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+不填此参数，则不区编排状态。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
@@ -43,10 +51,18 @@ class DescribeSchedulesRequest extends AbstractModel
     public $ScheduleIds;
 
     /**
+     * @var string 编排触发类型，可选值：
+<li>CosFileUpload： 腾讯云 COS 文件上传触发</li>
+<li>AwsS3FileUpload：Aws S3 文件上传触发。</li>
+不填或者为空表示全部。
+     */
+    public $TriggerType;
+
+    /**
      * @var string 状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+不填此参数，则不区编排状态。
      */
     public $Status;
 
@@ -62,10 +78,14 @@ class DescribeSchedulesRequest extends AbstractModel
 
     /**
      * @param array $ScheduleIds 编排 ID 过滤条件，数组长度限制：100。
+     * @param string $TriggerType 编排触发类型，可选值：
+<li>CosFileUpload： 腾讯云 COS 文件上传触发</li>
+<li>AwsS3FileUpload：Aws S3 文件上传触发。</li>
+不填或者为空表示全部。
      * @param string $Status 状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+不填此参数，则不区编排状态。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      */
@@ -84,6 +104,10 @@ class DescribeSchedulesRequest extends AbstractModel
         }
         if (array_key_exists("ScheduleIds",$param) and $param["ScheduleIds"] !== null) {
             $this->ScheduleIds = $param["ScheduleIds"];
+        }
+
+        if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
+            $this->TriggerType = $param["TriggerType"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

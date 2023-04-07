@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 音画质重生模版详情。
+ * 音画质重生模板详情。
  *
- * @method integer getDefinition() 获取音画质重生模版号。
- * @method void setDefinition(integer $Definition) 设置音画质重生模版号。
+ * @method integer getDefinition() 获取音画质重生模板号。
+ * @method void setDefinition(integer $Definition) 设置音画质重生模板号。
  * @method string getType() 获取模板类型，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
  * @method void setType(string $Type) 设置模板类型，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
- * @method string getName() 获取音画质重生模版名称。
- * @method void setName(string $Name) 设置音画质重生模版名称。
- * @method string getComment() 获取音画质重生模版描述。
- * @method void setComment(string $Comment) 设置音画质重生模版描述。
+ * @method string getName() 获取音画质重生模板名称。
+ * @method void setName(string $Name) 设置音画质重生模板名称。
+ * @method string getComment() 获取音画质重生模板描述。
+ * @method void setComment(string $Comment) 设置音画质重生模板描述。
  * @method RebuildVideoInfo getRebuildVideoInfo() 获取音画质重生视频控制信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) 设置音画质重生视频控制信息。
@@ -74,7 +74,7 @@ use TencentCloud\Common\AbstractModel;
 class RebuildMediaTemplate extends AbstractModel
 {
     /**
-     * @var integer 音画质重生模版号。
+     * @var integer 音画质重生模板号。
      */
     public $Definition;
 
@@ -86,12 +86,12 @@ class RebuildMediaTemplate extends AbstractModel
     public $Type;
 
     /**
-     * @var string 音画质重生模版名称。
+     * @var string 音画质重生模板名称。
      */
     public $Name;
 
     /**
-     * @var string 音画质重生模版描述。
+     * @var string 音画质重生模板描述。
      */
     public $Comment;
 
@@ -151,12 +151,12 @@ class RebuildMediaTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 音画质重生模版号。
+     * @param integer $Definition 音画质重生模板号。
      * @param string $Type 模板类型，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
-     * @param string $Name 音画质重生模版名称。
-     * @param string $Comment 音画质重生模版描述。
+     * @param string $Name 音画质重生模板名称。
+     * @param string $Comment 音画质重生模板描述。
      * @param RebuildVideoInfo $RebuildVideoInfo 音画质重生视频控制信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RebuildAudioInfo $RebuildAudioInfo 音画质重生音频控制信息。

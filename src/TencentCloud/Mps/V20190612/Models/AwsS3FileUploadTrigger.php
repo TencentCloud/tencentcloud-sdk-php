@@ -20,80 +20,80 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AWS S3 文件是上传触发器。
  *
- * @method string getS3Bucket() 获取工作流绑定的 AWS S3 存储桶。
- * @method void setS3Bucket(string $S3Bucket) 设置工作流绑定的 AWS S3 存储桶。
- * @method string getS3Region() 获取工作流绑定的桶所在 AWS 区域。
- * @method void setS3Region(string $S3Region) 设置工作流绑定的桶所在 AWS 区域。
- * @method string getDir() 获取工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
- * @method void setDir(string $Dir) 设置工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
- * @method array getFormats() 获取工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
- * @method void setFormats(array $Formats) 设置工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
- * @method string getS3SecretId() 获取工作流绑定的 AWS S3 存储桶的秘钥ID。
+ * @method string getS3Bucket() 获取绑定的 AWS S3 存储桶。
+ * @method void setS3Bucket(string $S3Bucket) 设置绑定的 AWS S3 存储桶。
+ * @method string getS3Region() 获取绑定的桶所在 AWS 区域。
+ * @method void setS3Region(string $S3Region) 设置绑定的桶所在 AWS 区域。
+ * @method string getDir() 获取绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+ * @method void setDir(string $Dir) 设置绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+ * @method array getFormats() 获取允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+ * @method void setFormats(array $Formats) 设置允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+ * @method string getS3SecretId() 获取绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setS3SecretId(string $S3SecretId) 设置工作流绑定的 AWS S3 存储桶的秘钥ID。
+ * @method void setS3SecretId(string $S3SecretId) 设置绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getS3SecretKey() 获取工作流绑定的 AWS S3 存储桶的秘钥Key。
+ * @method string getS3SecretKey() 获取绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setS3SecretKey(string $S3SecretKey) 设置工作流绑定的 AWS S3 存储桶的秘钥Key。
+ * @method void setS3SecretKey(string $S3SecretKey) 设置绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AwsSQS getAwsSQS() 获取工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+ * @method AwsSQS getAwsSQS() 获取绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAwsSQS(AwsSQS $AwsSQS) 设置工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+ * @method void setAwsSQS(AwsSQS $AwsSQS) 设置绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AwsS3FileUploadTrigger extends AbstractModel
 {
     /**
-     * @var string 工作流绑定的 AWS S3 存储桶。
+     * @var string 绑定的 AWS S3 存储桶。
      */
     public $S3Bucket;
 
     /**
-     * @var string 工作流绑定的桶所在 AWS 区域。
+     * @var string 绑定的桶所在 AWS 区域。
      */
     public $S3Region;
 
     /**
-     * @var string 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+     * @var string 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
      */
     public $Dir;
 
     /**
-     * @var array 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+     * @var array 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
      */
     public $Formats;
 
     /**
-     * @var string 工作流绑定的 AWS S3 存储桶的秘钥ID。
+     * @var string 绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3SecretId;
 
     /**
-     * @var string 工作流绑定的 AWS S3 存储桶的秘钥Key。
+     * @var string 绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3SecretKey;
 
     /**
-     * @var AwsSQS 工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+     * @var AwsSQS 绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AwsSQS;
 
     /**
-     * @param string $S3Bucket 工作流绑定的 AWS S3 存储桶。
-     * @param string $S3Region 工作流绑定的桶所在 AWS 区域。
-     * @param string $Dir 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
-     * @param array $Formats 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
-     * @param string $S3SecretId 工作流绑定的 AWS S3 存储桶的秘钥ID。
+     * @param string $S3Bucket 绑定的 AWS S3 存储桶。
+     * @param string $S3Region 绑定的桶所在 AWS 区域。
+     * @param string $Dir 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+     * @param array $Formats 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+     * @param string $S3SecretId 绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $S3SecretKey 工作流绑定的 AWS S3 存储桶的秘钥Key。
+     * @param string $S3SecretKey 绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AwsSQS $AwsSQS 工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+     * @param AwsSQS $AwsSQS 绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。
      */

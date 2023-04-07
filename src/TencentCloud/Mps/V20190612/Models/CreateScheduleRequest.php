@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getScheduleName() 获取编排名称，最多128字符。同一个用户该名称唯一。
  * @method void setScheduleName(string $ScheduleName) 设置编排名称，最多128字符。同一个用户该名称唯一。
- * @method WorkflowTrigger getTrigger() 获取编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
- * @method void setTrigger(WorkflowTrigger $Trigger) 设置编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
+ * @method WorkflowTrigger getTrigger() 获取编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
+ * @method void setTrigger(WorkflowTrigger $Trigger) 设置编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
  * @method array getActivities() 获取编排任务列表。
  * @method void setActivities(array $Activities) 设置编排任务列表。
  * @method TaskOutputStorage getOutputStorage() 获取媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
- * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
- * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+ * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
+ * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知配置，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知配置，不填代表不获取事件通知。
  */
@@ -41,7 +43,7 @@ class CreateScheduleRequest extends AbstractModel
     public $ScheduleName;
 
     /**
-     * @var WorkflowTrigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
+     * @var WorkflowTrigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
      */
     public $Trigger;
 
@@ -56,7 +58,8 @@ class CreateScheduleRequest extends AbstractModel
     public $OutputStorage;
 
     /**
-     * @var string 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * @var string 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
      */
     public $OutputDir;
 
@@ -67,10 +70,11 @@ class CreateScheduleRequest extends AbstractModel
 
     /**
      * @param string $ScheduleName 编排名称，最多128字符。同一个用户该名称唯一。
-     * @param WorkflowTrigger $Trigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
+     * @param WorkflowTrigger $Trigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
      * @param array $Activities 编排任务列表。
      * @param TaskOutputStorage $OutputStorage 媒体处理的文件输出存储位置。不填则继承 Trigger 中的存储位置。
-     * @param string $OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * @param string $OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知配置，不填代表不获取事件通知。
      */
     function __construct()

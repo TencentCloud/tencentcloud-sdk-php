@@ -52,6 +52,12 @@ EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGetCaptchaTime(integer $GetCaptchaTime) 设置前端获取验证码时间，时间戳格式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEvilBitmap() 获取拦截类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEvilBitmap(integer $EvilBitmap) 设置拦截类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubmitCaptchaTime() 获取提交验证码时间
+ * @method void setSubmitCaptchaTime(integer $SubmitCaptchaTime) 设置提交验证码时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -90,6 +96,17 @@ EvilLevel=100 请求有恶意
     public $GetCaptchaTime;
 
     /**
+     * @var integer 拦截类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EvilBitmap;
+
+    /**
+     * @var integer 提交验证码时间
+     */
+    public $SubmitCaptchaTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +128,9 @@ EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GetCaptchaTime 前端获取验证码时间，时间戳格式
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EvilBitmap 拦截类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubmitCaptchaTime 提交验证码时间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +160,14 @@ EvilLevel=100 请求有恶意
 
         if (array_key_exists("GetCaptchaTime",$param) and $param["GetCaptchaTime"] !== null) {
             $this->GetCaptchaTime = $param["GetCaptchaTime"];
+        }
+
+        if (array_key_exists("EvilBitmap",$param) and $param["EvilBitmap"] !== null) {
+            $this->EvilBitmap = $param["EvilBitmap"];
+        }
+
+        if (array_key_exists("SubmitCaptchaTime",$param) and $param["SubmitCaptchaTime"] !== null) {
+            $this->SubmitCaptchaTime = $param["SubmitCaptchaTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

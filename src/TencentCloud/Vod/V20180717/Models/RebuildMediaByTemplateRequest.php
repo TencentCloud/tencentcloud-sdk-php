@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() 获取媒体文件 ID。
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
- * @method integer getDefinition() 获取音画质重生模版 ID。
- * @method void setDefinition(integer $Definition) 设置音画质重生模版 ID。
+ * @method integer getDefinition() 获取音画质重生模板 ID。
+ * @method void setDefinition(integer $Definition) 设置音画质重生模板 ID。
  * @method string getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(string $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method float getStartTimeOffset() 获取起始偏移时间，单位：秒，不填表示从视频开始截取。
@@ -49,7 +49,7 @@ class RebuildMediaByTemplateRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer 音画质重生模版 ID。
+     * @var integer 音画质重生模板 ID。
      */
     public $Definition;
 
@@ -95,7 +95,7 @@ class RebuildMediaByTemplateRequest extends AbstractModel
 
     /**
      * @param string $FileId 媒体文件 ID。
-     * @param integer $Definition 音画质重生模版 ID。
+     * @param integer $Definition 音画质重生模板 ID。
      * @param string $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param float $StartTimeOffset 起始偏移时间，单位：秒，不填表示从视频开始截取。
      * @param float $EndTimeOffset 结束偏移时间，单位：秒，不填表示截取到视频末尾。

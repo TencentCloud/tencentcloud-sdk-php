@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSecurityGroup请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method array getSecurityGroupIds() 获取目标安全组id
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置目标安全组id
+ * @method string getInstanceId() 获取实例 ID。例如：cmgo-7pje****。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。例如：cmgo-7pje****。
+ * @method array getSecurityGroupIds() 获取目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
  */
 class ModifyDBInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。例如：cmgo-7pje****。
      */
     public $InstanceId;
 
     /**
-     * @var array 目标安全组id
+     * @var array 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param array $SecurityGroupIds 目标安全组id
+     * @param string $InstanceId 实例 ID。例如：cmgo-7pje****。
+     * @param array $SecurityGroupIds 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
      */
     function __construct()
     {

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRebuildMediaTemplate请求参数结构体
  *
- * @method integer getDefinition() 获取音画质重生模版号。
- * @method void setDefinition(integer $Definition) 设置音画质重生模版号。
+ * @method integer getDefinition() 获取音画质重生模板号。
+ * @method void setDefinition(integer $Definition) 设置音画质重生模板号。
  * @method string getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(string $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method string getName() 获取音画质重生模版名称。
- * @method void setName(string $Name) 设置音画质重生模版名称。
- * @method string getComment() 获取音画质重生模版描述。
- * @method void setComment(string $Comment) 设置音画质重生模版描述。
+ * @method string getName() 获取音画质重生模板名称。
+ * @method void setName(string $Name) 设置音画质重生模板名称。
+ * @method string getComment() 获取音画质重生模板描述。
+ * @method void setComment(string $Comment) 设置音画质重生模板描述。
  * @method RebuildVideoInfo getRebuildVideoInfo() 获取音画质重生视频控制信息。
  * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) 设置音画质重生视频控制信息。
  * @method RebuildAudioInfo getRebuildAudioInfo() 获取音画质重生音频控制信息。
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRebuildMediaTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 音画质重生模版号。
+     * @var integer 音画质重生模板号。
      */
     public $Definition;
 
@@ -64,12 +64,12 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string 音画质重生模版名称。
+     * @var string 音画质重生模板名称。
      */
     public $Name;
 
     /**
-     * @var string 音画质重生模版描述。
+     * @var string 音画质重生模板描述。
      */
     public $Comment;
 
@@ -113,10 +113,10 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
     public $RemoveAudio;
 
     /**
-     * @param integer $Definition 音画质重生模版号。
+     * @param integer $Definition 音画质重生模板号。
      * @param string $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-     * @param string $Name 音画质重生模版名称。
-     * @param string $Comment 音画质重生模版描述。
+     * @param string $Name 音画质重生模板名称。
+     * @param string $Comment 音画质重生模板描述。
      * @param RebuildVideoInfo $RebuildVideoInfo 音画质重生视频控制信息。
      * @param RebuildAudioInfo $RebuildAudioInfo 音画质重生音频控制信息。
      * @param RebuildMediaTargetVideoStream $TargetVideoInfo 输出目标视频控制信息。

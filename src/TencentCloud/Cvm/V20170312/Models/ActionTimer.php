@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 定时任务
  *
- * @method string getTimerAction() 获取定时器名称，目前仅支持销毁一个值：TerminateInstances。
+ * @method string getTimerAction() 获取定时器动作，目前仅支持销毁一个值：TerminateInstances。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimerAction(string $TimerAction) 设置定时器名称，目前仅支持销毁一个值：TerminateInstances。
+ * @method void setTimerAction(string $TimerAction) 设置定时器动作，目前仅支持销毁一个值：TerminateInstances。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionTime() 获取执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ActionTimer extends AbstractModel
 {
     /**
-     * @var string 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+     * @var string 定时器动作，目前仅支持销毁一个值：TerminateInstances。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimerAction;
@@ -54,7 +54,7 @@ class ActionTimer extends AbstractModel
     public $Externals;
 
     /**
-     * @param string $TimerAction 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+     * @param string $TimerAction 定时器动作，目前仅支持销毁一个值：TerminateInstances。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionTime 执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。
 注意：此字段可能返回 null，表示取不到有效值。

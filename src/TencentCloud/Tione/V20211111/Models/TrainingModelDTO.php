@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置模型创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTrainingModelVersions() 获取模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrainingModelVersions(array $TrainingModelVersions) 设置模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingModelDTO extends AbstractModel
 {
@@ -58,11 +62,19 @@ class TrainingModelDTO extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var array 模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrainingModelVersions;
+
+    /**
      * @param string $TrainingModelId 模型id
      * @param string $TrainingModelName 模型名称
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 模型创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TrainingModelVersions 模型版本列表。默认不返回，仅在指定请求参数开启时返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -97,6 +109,15 @@ class TrainingModelDTO extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("TrainingModelVersions",$param) and $param["TrainingModelVersions"] !== null) {
+            $this->TrainingModelVersions = [];
+            foreach ($param["TrainingModelVersions"] as $key => $value){
+                $obj = new TrainingModelVersionDTO();
+                $obj->deserialize($value);
+                array_push($this->TrainingModelVersions, $obj);
+            }
         }
     }
 }

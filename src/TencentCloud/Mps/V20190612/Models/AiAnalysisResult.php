@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrameTagTask(AiAnalysisTaskFrameTagResult $FrameTagTask) 设置视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskHighlightResult getHighlightTask() 获取视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHighlightTask(AiAnalysisTaskHighlightResult $HighlightTask) 设置视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -86,6 +90,12 @@ class AiAnalysisResult extends AbstractModel
     public $FrameTagTask;
 
     /**
+     * @var AiAnalysisTaskHighlightResult 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HighlightTask;
+
+    /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -99,6 +109,8 @@ class AiAnalysisResult extends AbstractModel
      * @param AiAnalysisTaskTagResult $TagTask 视频内容分析智能标签任务的查询结果，当任务类型为 Tag 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskFrameTagResult $FrameTagTask 视频内容分析智能按帧标签任务的查询结果，当任务类型为 FrameTag 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskHighlightResult $HighlightTask 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +148,11 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("FrameTagTask",$param) and $param["FrameTagTask"] !== null) {
             $this->FrameTagTask = new AiAnalysisTaskFrameTagResult();
             $this->FrameTagTask->deserialize($param["FrameTagTask"]);
+        }
+
+        if (array_key_exists("HighlightTask",$param) and $param["HighlightTask"] !== null) {
+            $this->HighlightTask = new AiAnalysisTaskHighlightResult();
+            $this->HighlightTask->deserialize($param["HighlightTask"]);
         }
     }
 }

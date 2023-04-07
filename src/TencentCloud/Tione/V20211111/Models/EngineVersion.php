@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportIntEightQuantization(boolean $IsSupportIntEightQuantization) 设置是否支持int8量化
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFrameworkVersion() 获取框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrameworkVersion(string $FrameworkVersion) 设置框架版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EngineVersion extends AbstractModel
 {
@@ -54,11 +58,19 @@ class EngineVersion extends AbstractModel
     public $IsSupportIntEightQuantization;
 
     /**
+     * @var string 框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrameworkVersion;
+
+    /**
      * @param string $Version 引擎版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Image 运行镜像
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSupportIntEightQuantization 是否支持int8量化
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FrameworkVersion 框架版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class EngineVersion extends AbstractModel
 
         if (array_key_exists("IsSupportIntEightQuantization",$param) and $param["IsSupportIntEightQuantization"] !== null) {
             $this->IsSupportIntEightQuantization = $param["IsSupportIntEightQuantization"];
+        }
+
+        if (array_key_exists("FrameworkVersion",$param) and $param["FrameworkVersion"] !== null) {
+            $this->FrameworkVersion = $param["FrameworkVersion"];
         }
     }
 }

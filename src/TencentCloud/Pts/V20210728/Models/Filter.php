@@ -22,10 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOperator() 获取等于：0，不等于：1
  * @method void setOperator(integer $Operator) 设置等于：0，不等于：1
- * @method string getLabelName() 获取指标名
- * @method void setLabelName(string $LabelName) 设置指标名
- * @method string getLabelValue() 获取指标值
- * @method void setLabelValue(string $LabelValue) 设置指标值
+ * @method string getLabelName() 获取标签名，可选值包括：
+1. method，请求方法名；
+2. proto：协议名；
+3. service：服务名；
+4. status：响应状态码；
+5. result：响应详情；
+6. check：检查名。
+ * @method void setLabelName(string $LabelName) 设置标签名，可选值包括：
+1. method，请求方法名；
+2. proto：协议名；
+3. service：服务名；
+4. status：响应状态码；
+5. result：响应详情；
+6. check：检查名。
+ * @method string getLabelValue() 获取标签值：
+1. method：请求方法名，以 http 协议为例，method 为 GET、POST、PUT 等；
+2. proto：协议名，以 http 协议为例，proto 为 HTTP/1.1、HTTP/2 等；
+3. service：服务名，以 http 协议为例，service 为请求 url，如 http://httpbin.org/get 等；
+4. status：响应状态码，以 http 协议为例，状态码包括 200、404、500 等；
+5. result：响应详情，通过 result 判断请求成功或失败；请求正常，result 标签值为 ok；请求失败，result 标签携带错误码和描述；
+6. check：检查名，标签值为用户设置的检查点名称。
+ * @method void setLabelValue(string $LabelValue) 设置标签值：
+1. method：请求方法名，以 http 协议为例，method 为 GET、POST、PUT 等；
+2. proto：协议名，以 http 协议为例，proto 为 HTTP/1.1、HTTP/2 等；
+3. service：服务名，以 http 协议为例，service 为请求 url，如 http://httpbin.org/get 等；
+4. status：响应状态码，以 http 协议为例，状态码包括 200、404、500 等；
+5. result：响应详情，通过 result 判断请求成功或失败；请求正常，result 标签值为 ok；请求失败，result 标签携带错误码和描述；
+6. check：检查名，标签值为用户设置的检查点名称。
  */
 class Filter extends AbstractModel
 {
@@ -35,19 +59,43 @@ class Filter extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 指标名
+     * @var string 标签名，可选值包括：
+1. method，请求方法名；
+2. proto：协议名；
+3. service：服务名；
+4. status：响应状态码；
+5. result：响应详情；
+6. check：检查名。
      */
     public $LabelName;
 
     /**
-     * @var string 指标值
+     * @var string 标签值：
+1. method：请求方法名，以 http 协议为例，method 为 GET、POST、PUT 等；
+2. proto：协议名，以 http 协议为例，proto 为 HTTP/1.1、HTTP/2 等；
+3. service：服务名，以 http 协议为例，service 为请求 url，如 http://httpbin.org/get 等；
+4. status：响应状态码，以 http 协议为例，状态码包括 200、404、500 等；
+5. result：响应详情，通过 result 判断请求成功或失败；请求正常，result 标签值为 ok；请求失败，result 标签携带错误码和描述；
+6. check：检查名，标签值为用户设置的检查点名称。
      */
     public $LabelValue;
 
     /**
      * @param integer $Operator 等于：0，不等于：1
-     * @param string $LabelName 指标名
-     * @param string $LabelValue 指标值
+     * @param string $LabelName 标签名，可选值包括：
+1. method，请求方法名；
+2. proto：协议名；
+3. service：服务名；
+4. status：响应状态码；
+5. result：响应详情；
+6. check：检查名。
+     * @param string $LabelValue 标签值：
+1. method：请求方法名，以 http 协议为例，method 为 GET、POST、PUT 等；
+2. proto：协议名，以 http 协议为例，proto 为 HTTP/1.1、HTTP/2 等；
+3. service：服务名，以 http 协议为例，service 为请求 url，如 http://httpbin.org/get 等；
+4. status：响应状态码，以 http 协议为例，状态码包括 200、404、500 等；
+5. result：响应详情，通过 result 判断请求成功或失败；请求正常，result 标签值为 ok；请求失败，result 标签携带错误码和描述；
+6. check：检查名，标签值为用户设置的检查点名称。
      */
     function __construct()
     {

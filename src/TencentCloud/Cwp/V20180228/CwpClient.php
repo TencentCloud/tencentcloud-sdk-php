@@ -63,6 +63,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DeleteTagsResponse DeleteTags(Models\DeleteTagsRequest $req) 删除标签
  * @method Models\DeleteWebPageEventLogResponse DeleteWebPageEventLog(Models\DeleteWebPageEventLogRequest $req) 网站防篡改-删除事件记录
  * @method Models\DescribeAccountStatisticsResponse DescribeAccountStatistics(Models\DescribeAccountStatisticsRequest $req) 本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
+ * @method Models\DescribeAlarmIncidentNodesResponse DescribeAlarmIncidentNodes(Models\DescribeAlarmIncidentNodesRequest $req) 获取告警点所在事件的所有节点信息
+ * @method Models\DescribeAlarmVertexIdResponse DescribeAlarmVertexId(Models\DescribeAlarmVertexIdRequest $req) 查询告警点id列表
  * @method Models\DescribeAssetAppListResponse DescribeAssetAppList(Models\DescribeAssetAppListRequest $req) 查询应用列表
  * @method Models\DescribeAssetAppProcessListResponse DescribeAssetAppProcessList(Models\DescribeAssetAppProcessListRequest $req) 获取软件关联进程列表
  * @method Models\DescribeAssetCoreModuleInfoResponse DescribeAssetCoreModuleInfo(Models\DescribeAssetCoreModuleInfoRequest $req) 获取内核模块详情
@@ -139,6 +141,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) 获取ES字段聚合结果
  * @method Models\DescribeEmergencyResponseListResponse DescribeEmergencyResponseList(Models\DescribeEmergencyResponseListRequest $req) 专家服务-应急响应列表
  * @method Models\DescribeEmergencyVulListResponse DescribeEmergencyVulList(Models\DescribeEmergencyVulListRequest $req) 获取应急漏洞列表
+ * @method Models\DescribeEventByTableResponse DescribeEventByTable(Models\DescribeEventByTableRequest $req) 根据事件表名和id查询告警事件详情
  * @method Models\DescribeExpertServiceListResponse DescribeExpertServiceList(Models\DescribeExpertServiceListRequest $req) 专家服务-安全管家列表
  * @method Models\DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderList(Models\DescribeExpertServiceOrderListRequest $req) 专家服务-专家服务订单列表
  * @method Models\DescribeExportMachinesResponse DescribeExportMachines(Models\DescribeExportMachinesRequest $req) 本接口 (DescribeExportMachines) 用于导出区域主机列表。
@@ -173,6 +176,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeMonthInspectionReportResponse DescribeMonthInspectionReport(Models\DescribeMonthInspectionReportRequest $req) 专家服务-安全管家月巡检报告下载
  * @method Models\DescribeOpenPortStatisticsResponse DescribeOpenPortStatistics(Models\DescribeOpenPortStatisticsRequest $req) 本接口 (DescribeOpenPortStatistics) 用于获取端口统计列表。
  * @method Models\DescribeOverviewStatisticsResponse DescribeOverviewStatistics(Models\DescribeOverviewStatisticsRequest $req) 获取概览统计数据。
+ * @method Models\DescribePrivilegeEventInfoResponse DescribePrivilegeEventInfo(Models\DescribePrivilegeEventInfoRequest $req) 本地提权信息详情
  * @method Models\DescribePrivilegeEventsResponse DescribePrivilegeEvents(Models\DescribePrivilegeEventsRequest $req) 获取本地提权事件列表
  * @method Models\DescribePrivilegeRulesResponse DescribePrivilegeRules(Models\DescribePrivilegeRulesRequest $req) 获取本地提权规则列表
  * @method Models\DescribeProVersionInfoResponse DescribeProVersionInfo(Models\DescribeProVersionInfoRequest $req) 用于获取专业版概览信息。
@@ -181,8 +185,10 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeProtectDirListResponse DescribeProtectDirList(Models\DescribeProtectDirListRequest $req) 网页防篡改防护目录列表
  * @method Models\DescribeProtectDirRelatedServerResponse DescribeProtectDirRelatedServer(Models\DescribeProtectDirRelatedServerRequest $req) 查询防护目录关联服务器列表信息
  * @method Models\DescribeProtectNetListResponse DescribeProtectNetList(Models\DescribeProtectNetListRequest $req) 专家服务-旗舰重保列表
+ * @method Models\DescribeReverseShellEventInfoResponse DescribeReverseShellEventInfo(Models\DescribeReverseShellEventInfoRequest $req) 反弹shell信息详情
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) 获取反弹Shell列表
  * @method Models\DescribeReverseShellRulesResponse DescribeReverseShellRules(Models\DescribeReverseShellRulesRequest $req) 获取反弹Shell规则列表
+ * @method Models\DescribeRiskDnsEventInfoResponse DescribeRiskDnsEventInfo(Models\DescribeRiskDnsEventInfoRequest $req) 查询恶意请求事件详情
  * @method Models\DescribeRiskDnsEventListResponse DescribeRiskDnsEventList(Models\DescribeRiskDnsEventListRequest $req) 获取恶意请求事件列表
  * @method Models\DescribeRiskDnsListResponse DescribeRiskDnsList(Models\DescribeRiskDnsListRequest $req) 入侵检测，获取恶意请求列表
  * @method Models\DescribeSaveOrUpdateWarningsResponse DescribeSaveOrUpdateWarnings(Models\DescribeSaveOrUpdateWarningsRequest $req) 更新或者插入用户告警设置(该接口废弃,请调用 ModifyWarningSetting )
@@ -207,6 +213,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeUndoVulCountsResponse DescribeUndoVulCounts(Models\DescribeUndoVulCountsRequest $req) 获取漏洞管理模块指定类型的待处理漏洞数、主机数和非专业版主机数量
  * @method Models\DescribeUsualLoginPlacesResponse DescribeUsualLoginPlaces(Models\DescribeUsualLoginPlacesRequest $req) 此接口（DescribeUsualLoginPlaces）用于查询常用登录地。
  * @method Models\DescribeVersionStatisticsResponse DescribeVersionStatistics(Models\DescribeVersionStatisticsRequest $req) 用于统计专业版和基础版机器数。
+ * @method Models\DescribeVertexDetailResponse DescribeVertexDetail(Models\DescribeVertexDetailRequest $req) 获取指定点属性信息
  * @method Models\DescribeVulCountByDatesResponse DescribeVulCountByDates(Models\DescribeVulCountByDatesRequest $req) 漏洞管理模块，获取近日指定类型的漏洞数量和主机数量
  * @method Models\DescribeVulEffectHostListResponse DescribeVulEffectHostList(Models\DescribeVulEffectHostListRequest $req) 漏洞影响主机列表
  * @method Models\DescribeVulHostCountScanTimeResponse DescribeVulHostCountScanTime(Models\DescribeVulHostCountScanTimeRequest $req) 获取待处理漏洞数+影响主机数

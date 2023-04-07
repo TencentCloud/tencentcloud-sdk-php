@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
  * @method string getAppSecretKey() 获取验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
  * @method void setAppSecretKey(string $AppSecretKey) 设置验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
- * @method integer getBusinessId() 获取业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
- * @method void setBusinessId(integer $BusinessId) 设置业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
- * @method integer getSceneId() 获取场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
- * @method void setSceneId(integer $SceneId) 设置场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+ * @method integer getBusinessId() 获取预留字段
+ * @method void setBusinessId(integer $BusinessId) 设置预留字段
+ * @method integer getSceneId() 获取预留字段
+ * @method void setSceneId(integer $SceneId) 设置预留字段
  * @method string getMacAddress() 获取mac 地址或设备唯一标识
  * @method void setMacAddress(string $MacAddress) 设置mac 地址或设备唯一标识
  * @method string getImei() 获取手机设备号
@@ -76,12 +76,12 @@ class DescribeCaptchaResultRequest extends AbstractModel
     public $AppSecretKey;
 
     /**
-     * @var integer 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
+     * @var integer 预留字段
      */
     public $BusinessId;
 
     /**
-     * @var integer 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+     * @var integer 预留字段
      */
     public $SceneId;
 
@@ -107,8 +107,8 @@ class DescribeCaptchaResultRequest extends AbstractModel
      * @param string $Randstr 前端回调函数返回的随机字符串
      * @param integer $CaptchaAppId 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
      * @param string $AppSecretKey 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
-     * @param integer $BusinessId 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
-     * @param integer $SceneId 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+     * @param integer $BusinessId 预留字段
+     * @param integer $SceneId 预留字段
      * @param string $MacAddress mac 地址或设备唯一标识
      * @param string $Imei 手机设备号
      * @param integer $NeedGetCaptchaTime 是否返回前端获取验证码时间，取值1：需要返回

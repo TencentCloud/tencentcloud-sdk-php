@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterStatus() 获取集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
- * @method void setClusterStatus(string $ClusterStatus) 设置集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+ * @method string getClusterStatus() 获取集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
+ * @method void setClusterStatus(string $ClusterStatus) 设置集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
  * @method string getProperty() 获取集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperty(string $Property) 设置集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
@@ -89,6 +89,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRuntimeVersion() 获取运行时版本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClusterEtcdNodeNum() 获取集群当前etcd数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterEtcdNodeNum(integer $ClusterEtcdNodeNum) 设置集群当前etcd数量
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
@@ -145,7 +149,7 @@ class Cluster extends AbstractModel
     public $TagSpecification;
 
     /**
-     * @var string 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+     * @var string 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
      */
     public $ClusterStatus;
 
@@ -221,6 +225,12 @@ class Cluster extends AbstractModel
     public $RuntimeVersion;
 
     /**
+     * @var integer 集群当前etcd数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterEtcdNodeNum;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述
@@ -232,7 +242,7 @@ class Cluster extends AbstractModel
      * @param integer $ProjectId 集群所属的项目ID
      * @param array $TagSpecification 标签描述列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+     * @param string $ClusterStatus 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
      * @param string $Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterMaterNodeNum 集群当前master数量
@@ -255,6 +265,8 @@ class Cluster extends AbstractModel
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuntimeVersion 运行时版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClusterEtcdNodeNum 集群当前etcd数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -366,6 +378,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
             $this->RuntimeVersion = $param["RuntimeVersion"];
+        }
+
+        if (array_key_exists("ClusterEtcdNodeNum",$param) and $param["ClusterEtcdNodeNum"] !== null) {
+            $this->ClusterEtcdNodeNum = $param["ClusterEtcdNodeNum"];
         }
     }
 }

@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClientConnections返回参数结构体
+ * GetRooms返回参数结构体
  *
- * @method array getClients() 获取客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
- * @method void setClients(array $Clients) 设置客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
- * @method integer getTotalCount() 获取满足条件的记录总条数，可用于分页查询。
- * @method void setTotalCount(integer $TotalCount) 设置满足条件的记录总条数，可用于分页查询。
+ * @method integer getTotal() 获取总数
+ * @method void setTotal(integer $Total) 设置总数
+ * @method array getRooms() 获取房间列表
+ * @method void setRooms(array $Rooms) 设置房间列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeClientConnectionsResponse extends AbstractModel
+class GetRoomsResponse extends AbstractModel
 {
     /**
-     * @var array 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
+     * @var integer 总数
      */
-    public $Clients;
+    public $Total;
 
     /**
-     * @var integer 满足条件的记录总条数，可用于分页查询。
+     * @var array 房间列表
      */
-    public $TotalCount;
+    public $Rooms;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeClientConnectionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Clients 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
-     * @param integer $TotalCount 满足条件的记录总条数，可用于分页查询。
+     * @param integer $Total 总数
+     * @param array $Rooms 房间列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeClientConnectionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Clients",$param) and $param["Clients"] !== null) {
-            $this->Clients = [];
-            foreach ($param["Clients"] as $key => $value){
-                $obj = new ClientConnection();
-                $obj->deserialize($value);
-                array_push($this->Clients, $obj);
-            }
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Rooms",$param) and $param["Rooms"] !== null) {
+            $this->Rooms = [];
+            foreach ($param["Rooms"] as $key => $value){
+                $obj = new RoomItem();
+                $obj->deserialize($value);
+                array_push($this->Rooms, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

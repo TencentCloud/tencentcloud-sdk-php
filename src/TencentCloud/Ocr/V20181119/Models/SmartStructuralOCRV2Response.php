@@ -14,30 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClientConnections返回参数结构体
+ * SmartStructuralOCRV2返回参数结构体
  *
- * @method array getClients() 获取客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
- * @method void setClients(array $Clients) 设置客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
- * @method integer getTotalCount() 获取满足条件的记录总条数，可用于分页查询。
- * @method void setTotalCount(integer $TotalCount) 设置满足条件的记录总条数，可用于分页查询。
+ * @method float getAngle() 获取图片旋转角度(角度制)，文本的水平方向
+为 0；顺时针为正，逆时针为负
+ * @method void setAngle(float $Angle) 设置图片旋转角度(角度制)，文本的水平方向
+为 0；顺时针为正，逆时针为负
+ * @method array getStructuralList() 获取配置结构化文本信息
+ * @method void setStructuralList(array $StructuralList) 设置配置结构化文本信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeClientConnectionsResponse extends AbstractModel
+class SmartStructuralOCRV2Response extends AbstractModel
 {
     /**
-     * @var array 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
+     * @var float 图片旋转角度(角度制)，文本的水平方向
+为 0；顺时针为正，逆时针为负
      */
-    public $Clients;
+    public $Angle;
 
     /**
-     * @var integer 满足条件的记录总条数，可用于分页查询。
+     * @var array 配置结构化文本信息
      */
-    public $TotalCount;
+    public $StructuralList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class DescribeClientConnectionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Clients 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
-     * @param integer $TotalCount 满足条件的记录总条数，可用于分页查询。
+     * @param float $Angle 图片旋转角度(角度制)，文本的水平方向
+为 0；顺时针为正，逆时针为负
+     * @param array $StructuralList 配置结构化文本信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +66,17 @@ class DescribeClientConnectionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Clients",$param) and $param["Clients"] !== null) {
-            $this->Clients = [];
-            foreach ($param["Clients"] as $key => $value){
-                $obj = new ClientConnection();
-                $obj->deserialize($value);
-                array_push($this->Clients, $obj);
-            }
+        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
+            $this->Angle = $param["Angle"];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("StructuralList",$param) and $param["StructuralList"] !== null) {
+            $this->StructuralList = [];
+            foreach ($param["StructuralList"] as $key => $value){
+                $obj = new GroupInfo();
+                $obj->deserialize($value);
+                array_push($this->StructuralList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

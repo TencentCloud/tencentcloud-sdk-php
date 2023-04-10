@@ -14,35 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ckafka\V20190819\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Datahub Topic 响应
+ * 操作的进程范围
  *
- * @method string getTopicName() 获取Topic名称
- * @method void setTopicName(string $TopicName) 设置Topic名称
- * @method string getTopicId() 获取TopicId
+ * @method string getComponentName() 获取进程名，必填，如NameNode
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置TopicId
+ * @method void setComponentName(string $ComponentName) 设置进程名，必填，如NameNode
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIpList() 获取操作的IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpList(array $IpList) 设置操作的IP列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DatahubTopicResp extends AbstractModel
+class ComponentBasicRestartInfo extends AbstractModel
 {
     /**
-     * @var string Topic名称
-     */
-    public $TopicName;
-
-    /**
-     * @var string TopicId
+     * @var string 进程名，必填，如NameNode
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TopicId;
+    public $ComponentName;
 
     /**
-     * @param string $TopicName Topic名称
-     * @param string $TopicId TopicId
+     * @var array 操作的IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpList;
+
+    /**
+     * @param string $ComponentName 进程名，必填，如NameNode
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IpList 操作的IP列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -58,12 +62,12 @@ class DatahubTopicResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists("ComponentName",$param) and $param["ComponentName"] !== null) {
+            $this->ComponentName = $param["ComponentName"];
         }
 
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
+            $this->IpList = $param["IpList"];
         }
     }
 }

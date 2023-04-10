@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomIdType(integer $RoomIdType) 设置主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
  * @method AgentParams getAgentParams() 获取转推服务加入TRTC房间的机器人参数。
  * @method void setAgentParams(AgentParams $AgentParams) 设置转推服务加入TRTC房间的机器人参数。
- * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
- * @method void setWithTranscoding(integer $WithTranscoding) 设置是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
+ * @method integer getWithTranscoding() 获取是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
+ * @method void setWithTranscoding(integer $WithTranscoding) 设置是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
  * @method McuAudioParams getAudioParams() 获取转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
  * @method void setAudioParams(McuAudioParams $AudioParams) 设置转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
  * @method McuVideoParams getVideoParams() 获取转推流的视频编码参数，不填表示纯音频转推。
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishCdnParams(array $PublishCdnParams) 设置转推的CDN参数。和回推房间参数必须要有一个。
  * @method McuSeiParams getSeiParams() 获取混流SEI参数
  * @method void setSeiParams(McuSeiParams $SeiParams) 设置混流SEI参数
- * @method array getFeedBackRoomParams() 获取回推房间信息，和转推CDN参数必须要有一个。
- * @method void setFeedBackRoomParams(array $FeedBackRoomParams) 设置回推房间信息，和转推CDN参数必须要有一个。
+ * @method array getFeedBackRoomParams() 获取回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+ * @method void setFeedBackRoomParams(array $FeedBackRoomParams) 设置回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
  */
 class StartPublishCdnStreamRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class StartPublishCdnStreamRequest extends AbstractModel
     public $AgentParams;
 
     /**
-     * @var integer 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
+     * @var integer 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
      */
     public $WithTranscoding;
 
@@ -96,7 +96,7 @@ class StartPublishCdnStreamRequest extends AbstractModel
     public $SeiParams;
 
     /**
-     * @var array 回推房间信息，和转推CDN参数必须要有一个。
+     * @var array 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     public $FeedBackRoomParams;
 
@@ -105,13 +105,13 @@ class StartPublishCdnStreamRequest extends AbstractModel
      * @param string $RoomId 主房间信息RoomId，转推的TRTC房间所对应的RoomId。
      * @param integer $RoomIdType 主房间信息RoomType，必须和转推的房间所对应的RoomId类型相同，0为整形房间号，1为字符串房间号。
      * @param AgentParams $AgentParams 转推服务加入TRTC房间的机器人参数。
-     * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
+     * @param integer $WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
      * @param McuAudioParams $AudioParams 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
      * @param McuVideoParams $VideoParams 转推流的视频编码参数，不填表示纯音频转推。
      * @param SingleSubscribeParams $SingleSubscribeParams 需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。
      * @param array $PublishCdnParams 转推的CDN参数。和回推房间参数必须要有一个。
      * @param McuSeiParams $SeiParams 混流SEI参数
-     * @param array $FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。
+     * @param array $FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     function __construct()
     {

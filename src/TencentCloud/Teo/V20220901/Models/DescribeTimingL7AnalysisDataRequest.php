@@ -25,13 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
  * @method array getMetricNames() 获取指标列表，取值有:
-<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_outFlux: Edgeone响应流量；</li>
+<li>l7Flow_inFlux: Edgeone请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
-<li>l7Flow_outBandwidth: 访问带宽。</li>
+<li>l7Flow_flux: 访问请求上行+下行流量；</li>
+<li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
  * @method void setMetricNames(array $MetricNames) 设置指标列表，取值有:
-<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_outFlux: Edgeone响应流量；</li>
+<li>l7Flow_inFlux: Edgeone请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
-<li>l7Flow_outBandwidth: 访问带宽。</li>
+<li>l7Flow_flux: 访问请求上行+下行流量；</li>
+<li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
  * @method array getZoneIds() 获取站点集合。
 若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
  * @method void setZoneIds(array $ZoneIds) 设置站点集合。
@@ -105,9 +113,13 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
 
     /**
      * @var array 指标列表，取值有:
-<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_outFlux: Edgeone响应流量；</li>
+<li>l7Flow_inFlux: Edgeone请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
-<li>l7Flow_outBandwidth: 访问带宽。</li>
+<li>l7Flow_flux: 访问请求上行+下行流量；</li>
+<li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
      */
     public $MetricNames;
 
@@ -160,9 +172,13 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
      * @param array $MetricNames 指标列表，取值有:
-<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_outFlux: Edgeone响应流量；</li>
+<li>l7Flow_inFlux: Edgeone请求流量；</li>
+<li>l7Flow_outBandwidth: Edgeone响应带宽；</li>
+<li>l7Flow_inBandwidth：Edgeone请求带宽；</li>
 <li>l7Flow_request: 访问请求数；</li>
-<li>l7Flow_outBandwidth: 访问带宽。</li>
+<li>l7Flow_flux: 访问请求上行+下行流量；</li>
+<li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
      * @param array $ZoneIds 站点集合。
 若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
      * @param string $Interval 查询时间粒度，取值有：

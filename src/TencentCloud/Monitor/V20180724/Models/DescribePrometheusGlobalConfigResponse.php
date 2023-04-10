@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRawJobs(array $RawJobs) 设置RawJobs列表以及对应targets信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProbes() 获取Probes列表以及对应targets信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProbes(array $Probes) 设置Probes列表以及对应targets信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,6 +67,12 @@ class DescribePrometheusGlobalConfigResponse extends AbstractModel
     public $RawJobs;
 
     /**
+     * @var array Probes列表以及对应targets信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Probes;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -74,6 +84,8 @@ class DescribePrometheusGlobalConfigResponse extends AbstractModel
      * @param array $PodMonitors PodMonitors列表以及对应targets信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RawJobs RawJobs列表以及对应targets信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Probes Probes列表以及对应targets信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -118,6 +130,15 @@ class DescribePrometheusGlobalConfigResponse extends AbstractModel
                 $obj = new PrometheusConfigItem();
                 $obj->deserialize($value);
                 array_push($this->RawJobs, $obj);
+            }
+        }
+
+        if (array_key_exists("Probes",$param) and $param["Probes"] !== null) {
+            $this->Probes = [];
+            foreach ($param["Probes"] as $key => $value){
+                $obj = new PrometheusConfigItem();
+                $obj->deserialize($value);
+                array_push($this->Probes, $obj);
             }
         }
 

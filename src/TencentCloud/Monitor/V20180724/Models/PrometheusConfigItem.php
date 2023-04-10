@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置用于出参，如果该配置来至模板，则为模板id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Targets getTargets() 获取目标数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargets(Targets $Targets) 设置目标数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusConfigItem extends AbstractModel
 {
@@ -48,9 +52,17 @@ class PrometheusConfigItem extends AbstractModel
     public $TemplateId;
 
     /**
+     * @var Targets 目标数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Targets;
+
+    /**
      * @param string $Name 名称
      * @param string $Config 配置内容
      * @param string $TemplateId 用于出参，如果该配置来至模板，则为模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Targets $Targets 目标数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -76,6 +88,11 @@ class PrometheusConfigItem extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+            $this->Targets = new Targets();
+            $this->Targets->deserialize($param["Targets"]);
         }
     }
 }

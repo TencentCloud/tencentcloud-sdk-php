@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClientConnections请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method integer getLimit() 获取单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
- * @method integer getOffset() 获取偏移量，默认值为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
+ * @method string getInstanceId() 获取指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
+ * @method void setInstanceId(string $InstanceId) 设置指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
+ * @method integer getLimit() 获取单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
+ * @method integer getOffset() 获取偏移量，默认值为0。Offset=Limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。Offset=Limit*(页码-1)。
  */
 class DescribeClientConnectionsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @var string 指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
      */
     public $InstanceId;
 
     /**
-     * @var integer 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
+     * @var integer 单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认值为0。
+     * @var integer 偏移量，默认值为0。Offset=Limit*(页码-1)。
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param integer $Limit 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
-     * @param integer $Offset 偏移量，默认值为0。
+     * @param string $InstanceId 指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
+     * @param integer $Limit 单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
+     * @param integer $Offset 偏移量，默认值为0。Offset=Limit*(页码-1)。
      */
     function __construct()
     {

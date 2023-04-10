@@ -59,6 +59,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 获取用户信息
  * @method Models\GetRoomEventResponse GetRoomEvent(Models\GetRoomEventRequest $req) 获取房间事件,仅在课堂结束1小时内有效。
  * @method Models\GetRoomMessageResponse GetRoomMessage(Models\GetRoomMessageRequest $req) 获取房间历史消息(房间历史消息保存7天)
+ * @method Models\GetRoomsResponse GetRooms(Models\GetRoomsRequest $req) 获取房间列表
  * @method Models\GetWatermarkResponse GetWatermark(Models\GetWatermarkRequest $req) 获取水印设置
  * @method Models\LoginOriginIdResponse LoginOriginId(Models\LoginOriginIdRequest $req) 使用源账号登录，源账号为注册时填入的originId
  * @method Models\LoginUserResponse LoginUser(Models\LoginUserRequest $req) 登录

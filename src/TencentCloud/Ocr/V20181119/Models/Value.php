@@ -14,35 +14,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ckafka\V20190819\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Datahub Topic 响应
+ * value信息组
  *
- * @method string getTopicName() 获取Topic名称
- * @method void setTopicName(string $TopicName) 设置Topic名称
- * @method string getTopicId() 获取TopicId
+ * @method string getAutoContent() 获取自动识别的字段内容
+ * @method void setAutoContent(string $AutoContent) 设置自动识别的字段内容
+ * @method Polygon getCoord() 获取四点坐标
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置TopicId
+ * @method void setCoord(Polygon $Coord) 设置四点坐标
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DatahubTopicResp extends AbstractModel
+class Value extends AbstractModel
 {
     /**
-     * @var string Topic名称
+     * @var string 自动识别的字段内容
      */
-    public $TopicName;
+    public $AutoContent;
 
     /**
-     * @var string TopicId
+     * @var Polygon 四点坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TopicId;
+    public $Coord;
 
     /**
-     * @param string $TopicName Topic名称
-     * @param string $TopicId TopicId
+     * @param string $AutoContent 自动识别的字段内容
+     * @param Polygon $Coord 四点坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -58,12 +58,13 @@ class DatahubTopicResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists("AutoContent",$param) and $param["AutoContent"] !== null) {
+            $this->AutoContent = $param["AutoContent"];
         }
 
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("Coord",$param) and $param["Coord"] !== null) {
+            $this->Coord = new Polygon();
+            $this->Coord->deserialize($param["Coord"]);
         }
     }
 }

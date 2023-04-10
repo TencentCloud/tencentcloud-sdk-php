@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置若开启最大分裂，该主题能够能够允许的最大分区数
  * @method integer getPeriod() 获取生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
  * @method void setPeriod(integer $Period) 设置生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
+ * @method string getDescribes() 获取日志主题描述
+ * @method void setDescribes(string $Describes) 设置日志主题描述
+ * @method integer getHotPeriod() 获取0：关闭日志沉降。
+非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+ * @method void setHotPeriod(integer $HotPeriod) 设置0：关闭日志沉降。
+非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -73,6 +79,17 @@ class ModifyTopicRequest extends AbstractModel
     public $Period;
 
     /**
+     * @var string 日志主题描述
+     */
+    public $Describes;
+
+    /**
+     * @var integer 0：关闭日志沉降。
+非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+     */
+    public $HotPeriod;
+
+    /**
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
@@ -80,6 +97,9 @@ class ModifyTopicRequest extends AbstractModel
      * @param boolean $AutoSplit 是否开启自动分裂
      * @param integer $MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数
      * @param integer $Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
+     * @param string $Describes 日志主题描述
+     * @param integer $HotPeriod 0：关闭日志沉降。
+非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
      */
     function __construct()
     {
@@ -125,6 +145,14 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("Describes",$param) and $param["Describes"] !== null) {
+            $this->Describes = $param["Describes"];
+        }
+
+        if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
+            $this->HotPeriod = $param["HotPeriod"];
         }
     }
 }

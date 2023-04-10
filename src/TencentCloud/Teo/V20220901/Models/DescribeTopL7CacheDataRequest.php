@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li> l7Cache_outFlux_statusCode：状态码。</li>
  * @method array getZoneIds() 获取站点id集合，不填默认选择全部站点。
  * @method void setZoneIds(array $ZoneIds) 设置站点id集合，不填默认选择全部站点。
- * @method integer getLimit() 获取查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。
- * @method void setLimit(integer $Limit) 设置查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。
+ * @method integer getLimit() 获取查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
+ * @method void setLimit(integer $Limit) 设置查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
  * @method array getFilters() 获取过滤条件，详细的过滤条件如下：
 <li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
 <li>url<br>   按照【<strong>URL</strong>】进行过滤，此参数只支持30天的时间范围，URL形如：/content。<br>   类型：String<br>   必选：否</li>
@@ -100,7 +100,7 @@ class DescribeTopL7CacheDataRequest extends AbstractModel
     public $ZoneIds;
 
     /**
-     * @var integer 查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。
+     * @var integer 查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
      */
     public $Limit;
 
@@ -142,7 +142,7 @@ class DescribeTopL7CacheDataRequest extends AbstractModel
 <li> l7Cache_outFlux_resourceType：资源类型；</li>
 <li> l7Cache_outFlux_statusCode：状态码。</li>
      * @param array $ZoneIds 站点id集合，不填默认选择全部站点。
-     * @param integer $Limit 查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。
+     * @param integer $Limit 查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
      * @param array $Filters 过滤条件，详细的过滤条件如下：
 <li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
 <li>url<br>   按照【<strong>URL</strong>】进行过滤，此参数只支持30天的时间范围，URL形如：/content。<br>   类型：String<br>   必选：否</li>

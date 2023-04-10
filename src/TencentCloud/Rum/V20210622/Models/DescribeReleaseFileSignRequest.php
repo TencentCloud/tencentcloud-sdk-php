@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTimeout() 获取超时时间，不填默认是 5 分钟
  * @method void setTimeout(integer $Timeout) 设置超时时间，不填默认是 5 分钟
+ * @method integer getFileType() 获取bucket类型，不填默认web，2:app
+ * @method void setFileType(integer $FileType) 设置bucket类型，不填默认web，2:app
  */
 class DescribeReleaseFileSignRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeReleaseFileSignRequest extends AbstractModel
     public $Timeout;
 
     /**
+     * @var integer bucket类型，不填默认web，2:app
+     */
+    public $FileType;
+
+    /**
      * @param integer $Timeout 超时时间，不填默认是 5 分钟
+     * @param integer $FileType bucket类型，不填默认web，2:app
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeReleaseFileSignRequest extends AbstractModel
         }
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
         }
     }
 }

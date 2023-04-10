@@ -14,35 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ckafka\V20190819\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Datahub Topic 响应
+ * 操作范围
  *
- * @method string getTopicName() 获取Topic名称
- * @method void setTopicName(string $TopicName) 设置Topic名称
- * @method string getTopicId() 获取TopicId
+ * @method array getServiceInfoList() 获取操作范围，要操作的服务信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置TopicId
+ * @method void setServiceInfoList(array $ServiceInfoList) 设置操作范围，要操作的服务信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DatahubTopicResp extends AbstractModel
+class OpScope extends AbstractModel
 {
     /**
-     * @var string Topic名称
-     */
-    public $TopicName;
-
-    /**
-     * @var string TopicId
+     * @var array 操作范围，要操作的服务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TopicId;
+    public $ServiceInfoList;
 
     /**
-     * @param string $TopicName Topic名称
-     * @param string $TopicId TopicId
+     * @param array $ServiceInfoList 操作范围，要操作的服务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -58,12 +50,13 @@ class DatahubTopicResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
-        }
-
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("ServiceInfoList",$param) and $param["ServiceInfoList"] !== null) {
+            $this->ServiceInfoList = [];
+            foreach ($param["ServiceInfoList"] as $key => $value){
+                $obj = new ServiceBasicRestartInfo();
+                $obj->deserialize($value);
+                array_push($this->ServiceInfoList, $obj);
+            }
         }
     }
 }

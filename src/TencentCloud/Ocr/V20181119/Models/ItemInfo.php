@@ -14,35 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ckafka\V20190819\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Datahub Topic 响应
+ * 智能结构化元素组
  *
- * @method string getTopicName() 获取Topic名称
- * @method void setTopicName(string $TopicName) 设置Topic名称
- * @method string getTopicId() 获取TopicId
+ * @method Key getKey() 获取key信息组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置TopicId
+ * @method void setKey(Key $Key) 设置key信息组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Value getValue() 获取Value信息组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(Value $Value) 设置Value信息组
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DatahubTopicResp extends AbstractModel
+class ItemInfo extends AbstractModel
 {
     /**
-     * @var string Topic名称
-     */
-    public $TopicName;
-
-    /**
-     * @var string TopicId
+     * @var Key key信息组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TopicId;
+    public $Key;
 
     /**
-     * @param string $TopicName Topic名称
-     * @param string $TopicId TopicId
+     * @var Value Value信息组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Value;
+
+    /**
+     * @param Key $Key key信息组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value $Value Value信息组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -58,12 +62,14 @@ class DatahubTopicResp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = new Key();
+            $this->Key->deserialize($param["Key"]);
         }
 
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = new Value();
+            $this->Value->deserialize($param["Value"]);
         }
     }
 }

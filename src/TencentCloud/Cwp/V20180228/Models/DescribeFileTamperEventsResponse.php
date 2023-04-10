@@ -14,28 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClientConnections返回参数结构体
+ * DescribeFileTamperEvents返回参数结构体
  *
- * @method array getClients() 获取客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
- * @method void setClients(array $Clients) 设置客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
- * @method integer getTotalCount() 获取满足条件的记录总条数，可用于分页查询。
- * @method void setTotalCount(integer $TotalCount) 设置满足条件的记录总条数，可用于分页查询。
+ * @method array getList() 获取核心文件事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setList(array $List) 设置核心文件事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取数据总条数
+ * @method void setTotalCount(integer $TotalCount) 设置数据总条数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeClientConnectionsResponse extends AbstractModel
+class DescribeFileTamperEventsResponse extends AbstractModel
 {
     /**
-     * @var array 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
+     * @var array 核心文件事件列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Clients;
+    public $List;
 
     /**
-     * @var integer 满足条件的记录总条数，可用于分页查询。
+     * @var integer 数据总条数
      */
     public $TotalCount;
 
@@ -45,8 +48,9 @@ class DescribeClientConnectionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Clients 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
-     * @param integer $TotalCount 满足条件的记录总条数，可用于分页查询。
+     * @param array $List 核心文件事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 数据总条数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +66,12 @@ class DescribeClientConnectionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Clients",$param) and $param["Clients"] !== null) {
-            $this->Clients = [];
-            foreach ($param["Clients"] as $key => $value){
-                $obj = new ClientConnection();
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new FileTamperEvent();
                 $obj->deserialize($value);
-                array_push($this->Clients, $obj);
+                array_push($this->List, $obj);
             }
         }
 

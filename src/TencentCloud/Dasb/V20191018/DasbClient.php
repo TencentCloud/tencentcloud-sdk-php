@@ -53,6 +53,8 @@ use TencentCloud\Dasb\V20191018\Models as Models;
  * @method Models\DescribeDeviceGroupMembersResponse DescribeDeviceGroupMembers(Models\DescribeDeviceGroupMembersRequest $req) 查询资产组成员列表
  * @method Models\DescribeDeviceGroupsResponse DescribeDeviceGroups(Models\DescribeDeviceGroupsRequest $req) 查询资产组列表
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 查询资产列表
+ * @method Models\DescribeLoginEventResponse DescribeLoginEvent(Models\DescribeLoginEventRequest $req) 查询登录日志
+ * @method Models\DescribeOperationEventResponse DescribeOperationEvent(Models\DescribeOperationEventRequest $req) 查询操作日志
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。
  * @method Models\DescribeUserGroupMembersResponse DescribeUserGroupMembers(Models\DescribeUserGroupMembersRequest $req) 查询用户组成员列表
  * @method Models\DescribeUserGroupsResponse DescribeUserGroups(Models\DescribeUserGroupsRequest $req) 查询用户组列表
@@ -65,6 +67,13 @@ use TencentCloud\Dasb\V20191018\Models as Models;
  * @method Models\ResetDeviceAccountPasswordResponse ResetDeviceAccountPassword(Models\ResetDeviceAccountPasswordRequest $req) 清除设备账号绑定密码
  * @method Models\ResetDeviceAccountPrivateKeyResponse ResetDeviceAccountPrivateKey(Models\ResetDeviceAccountPrivateKeyRequest $req) 清除设备账号绑定的密钥
  * @method Models\ResetUserResponse ResetUser(Models\ResetUserRequest $req) 重置用户
+ * @method Models\SearchAuditLogResponse SearchAuditLog(Models\SearchAuditLogRequest $req) 搜索审计日志
+ * @method Models\SearchCommandResponse SearchCommand(Models\SearchCommandRequest $req) 命令执行检索
+ * @method Models\SearchCommandBySidResponse SearchCommandBySid(Models\SearchCommandBySidRequest $req) 根据会话Id搜索Command
+ * @method Models\SearchFileResponse SearchFile(Models\SearchFileRequest $req) 文件传输检索
+ * @method Models\SearchFileBySidResponse SearchFileBySid(Models\SearchFileBySidRequest $req) 搜索文件传输会话下文件操作列表
+ * @method Models\SearchSessionResponse SearchSession(Models\SearchSessionRequest $req) 搜索会话
+ * @method Models\SearchSessionCommandResponse SearchSessionCommand(Models\SearchSessionCommandRequest $req) 命令检索
  */
 
 class DasbClient extends AbstractClient

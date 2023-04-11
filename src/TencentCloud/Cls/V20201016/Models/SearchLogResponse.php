@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColumns(array $Columns) 设置日志统计分析结果的列属性
 当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getSamplingRate() 获取本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSamplingRate(float $SamplingRate) 设置本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -112,6 +116,12 @@ class SearchLogResponse extends AbstractModel
     public $Columns;
 
     /**
+     * @var float 本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SamplingRate;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -134,6 +144,8 @@ class SearchLogResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Columns 日志统计分析结果的列属性
 当UseNewAnalysis为true时生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $SamplingRate 本次统计分析使用的采样率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -195,6 +207,10 @@ class SearchLogResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Columns, $obj);
             }
+        }
+
+        if (array_key_exists("SamplingRate",$param) and $param["SamplingRate"] !== null) {
+            $this->SamplingRate = $param["SamplingRate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

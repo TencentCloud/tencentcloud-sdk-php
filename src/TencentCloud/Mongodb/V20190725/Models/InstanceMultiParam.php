@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例可修改参数Multi类型集合。
  *
- * @method string getCurrentValue() 获取当前值
- * @method void setCurrentValue(string $CurrentValue) 设置当前值
- * @method string getDefaultValue() 获取默认值
- * @method void setDefaultValue(string $DefaultValue) 设置默认值
- * @method array getEnumValue() 获取指导值范围
- * @method void setEnumValue(array $EnumValue) 设置指导值范围
- * @method string getNeedRestart() 获取是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
- * @method void setNeedRestart(string $NeedRestart) 设置是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
- * @method string getParamName() 获取参数名称
- * @method void setParamName(string $ParamName) 设置参数名称
- * @method integer getStatus() 获取是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
- * @method void setStatus(integer $Status) 设置是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
- * @method array getTips() 获取参数说明
- * @method void setTips(array $Tips) 设置参数说明
- * @method string getValueType() 获取当前值的类型描述，默认为multi
- * @method void setValueType(string $ValueType) 设置当前值的类型描述，默认为multi
+ * @method string getCurrentValue() 获取参数当前值。
+ * @method void setCurrentValue(string $CurrentValue) 设置参数当前值。
+ * @method string getDefaultValue() 获取参数默认值。
+ * @method void setDefaultValue(string $DefaultValue) 设置参数默认值。
+ * @method array getEnumValue() 获取参考值范围。
+ * @method void setEnumValue(array $EnumValue) 设置参考值范围。
+ * @method string getNeedRestart() 获取参数修改后是否需要重启才会生效。
+- 1：需要重启后生效。
+- 0：无需重启，设置成功即可生效。
+ * @method void setNeedRestart(string $NeedRestart) 设置参数修改后是否需要重启才会生效。
+- 1：需要重启后生效。
+- 0：无需重启，设置成功即可生效。
+ * @method string getParamName() 获取参数名称。
+ * @method void setParamName(string $ParamName) 设置参数名称。
+ * @method integer getStatus() 获取是否为运行中参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
+ * @method void setStatus(integer $Status) 设置是否为运行中参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
+ * @method array getTips() 获取参数说明。
+ * @method void setTips(array $Tips) 设置参数说明。
+ * @method string getValueType() 获取当前值的类型描述，默认为multi。
+ * @method void setValueType(string $ValueType) 设置当前值的类型描述，默认为multi。
  */
 class InstanceMultiParam extends AbstractModel
 {
     /**
-     * @var string 当前值
+     * @var string 参数当前值。
      */
     public $CurrentValue;
 
     /**
-     * @var string 默认值
+     * @var string 参数默认值。
      */
     public $DefaultValue;
 
     /**
-     * @var array 指导值范围
+     * @var array 参考值范围。
      */
     public $EnumValue;
 
     /**
-     * @var string 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
+     * @var string 参数修改后是否需要重启才会生效。
+- 1：需要重启后生效。
+- 0：无需重启，设置成功即可生效。
      */
     public $NeedRestart;
 
     /**
-     * @var string 参数名称
+     * @var string 参数名称。
      */
     public $ParamName;
 
     /**
-     * @var integer 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @var integer 是否为运行中参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
      */
     public $Status;
 
     /**
-     * @var array 参数说明
+     * @var array 参数说明。
      */
     public $Tips;
 
     /**
-     * @var string 当前值的类型描述，默认为multi
+     * @var string 当前值的类型描述，默认为multi。
      */
     public $ValueType;
 
     /**
-     * @param string $CurrentValue 当前值
-     * @param string $DefaultValue 默认值
-     * @param array $EnumValue 指导值范围
-     * @param string $NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
-     * @param string $ParamName 参数名称
-     * @param integer $Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
-     * @param array $Tips 参数说明
-     * @param string $ValueType 当前值的类型描述，默认为multi
+     * @param string $CurrentValue 参数当前值。
+     * @param string $DefaultValue 参数默认值。
+     * @param array $EnumValue 参考值范围。
+     * @param string $NeedRestart 参数修改后是否需要重启才会生效。
+- 1：需要重启后生效。
+- 0：无需重启，设置成功即可生效。
+     * @param string $ParamName 参数名称。
+     * @param integer $Status 是否为运行中参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
+     * @param array $Tips 参数说明。
+     * @param string $ValueType 当前值的类型描述，默认为multi。
      */
     function __construct()
     {

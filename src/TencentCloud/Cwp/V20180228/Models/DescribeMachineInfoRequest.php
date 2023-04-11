@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachineInfo请求参数结构体
  *
- * @method string getUuid() 获取云镜客户端唯一Uuid。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。
+ * @method string getUuid() 获取主机安全客户端唯一Uuid。
+ * @method void setUuid(string $Uuid) 设置主机安全客户端唯一Uuid。
  * @method string getQuuid() 获取Quuid , Uuid 必填一项
  * @method void setQuuid(string $Quuid) 设置Quuid , Uuid 必填一项
  */
 class DescribeMachineInfoRequest extends AbstractModel
 {
     /**
-     * @var string 云镜客户端唯一Uuid。
+     * @var string 主机安全客户端唯一Uuid。
      */
     public $Uuid;
 
@@ -38,7 +38,7 @@ class DescribeMachineInfoRequest extends AbstractModel
     public $Quuid;
 
     /**
-     * @param string $Uuid 云镜客户端唯一Uuid。
+     * @param string $Uuid 主机安全客户端唯一Uuid。
      * @param string $Quuid Quuid , Uuid 必填一项
      */
     function __construct()

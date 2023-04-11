@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 云监控支持的产品简要信息
+ * 云产品监控支持的产品简要信息
  *
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间

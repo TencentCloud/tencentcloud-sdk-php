@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsualLoginPlaces请求参数结构体
  *
- * @method string getUuid() 获取云镜客户端UUID
- * @method void setUuid(string $Uuid) 设置云镜客户端UUID
+ * @method string getUuid() 获取主机安全客户端UUID
+ * @method void setUuid(string $Uuid) 设置主机安全客户端UUID
  */
 class DescribeUsualLoginPlacesRequest extends AbstractModel
 {
     /**
-     * @var string 云镜客户端UUID
+     * @var string 主机安全客户端UUID
      */
     public $Uuid;
 
     /**
-     * @param string $Uuid 云镜客户端UUID
+     * @param string $Uuid 主机安全客户端UUID
      */
     function __construct()
     {

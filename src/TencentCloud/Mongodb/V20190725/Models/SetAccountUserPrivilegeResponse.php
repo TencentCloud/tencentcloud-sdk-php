@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetAccountUserPrivilege返回参数结构体
  *
- * @method integer getFlowId() 获取设置任务ID,用于查询是否设置完成
- * @method void setFlowId(integer $FlowId) 设置设置任务ID,用于查询是否设置完成
+ * @method integer getFlowId() 获取任务ID。
+ * @method void setFlowId(integer $FlowId) 设置任务ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class SetAccountUserPrivilegeResponse extends AbstractModel
 {
     /**
-     * @var integer 设置任务ID,用于查询是否设置完成
+     * @var integer 任务ID。
      */
     public $FlowId;
 
@@ -38,7 +38,7 @@ class SetAccountUserPrivilegeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 设置任务ID,用于查询是否设置完成
+     * @param integer $FlowId 任务ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

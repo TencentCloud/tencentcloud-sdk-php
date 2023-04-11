@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取数据ID
  * @method void setId(integer $Id) 设置数据ID
- * @method string getUuid() 获取云镜ID
- * @method void setUuid(string $Uuid) 设置云镜ID
+ * @method string getUuid() 获取主机安全ID
+ * @method void setUuid(string $Uuid) 设置主机安全ID
  * @method string getQuuid() 获取主机ID
  * @method void setQuuid(string $Quuid) 设置主机ID
  * @method string getHostIp() 获取主机内网IP
@@ -87,7 +87,7 @@ class BashEventNew extends AbstractModel
     public $Id;
 
     /**
-     * @var string 云镜ID
+     * @var string 主机安全ID
      */
     public $Uuid;
 
@@ -196,7 +196,7 @@ class BashEventNew extends AbstractModel
 
     /**
      * @param integer $Id 数据ID
-     * @param string $Uuid 云镜ID
+     * @param string $Uuid 主机安全ID
      * @param string $Quuid 主机ID
      * @param string $HostIp 主机内网IP
      * @param string $User 执行用户名

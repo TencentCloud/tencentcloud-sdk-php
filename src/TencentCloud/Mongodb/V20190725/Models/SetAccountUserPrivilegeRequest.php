@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetAccountUserPrivilege请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getUserName() 获取账号名称。
- * @method void setUserName(string $UserName) 设置账号名称。
- * @method array getAuthRole() 获取权限信息。
- * @method void setAuthRole(array $AuthRole) 设置权限信息。
+ * @method string getInstanceId() 获取指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method string getUserName() 获取设置账号名称。
+ * @method void setUserName(string $UserName) 设置设置账号名称。
+ * @method array getAuthRole() 获取设置权限信息。
+ * @method void setAuthRole(array $AuthRole) 设置设置权限信息。
  */
 class SetAccountUserPrivilegeRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 账号名称。
+     * @var string 设置账号名称。
      */
     public $UserName;
 
     /**
-     * @var array 权限信息。
+     * @var array 设置权限信息。
      */
     public $AuthRole;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param string $UserName 账号名称。
-     * @param array $AuthRole 权限信息。
+     * @param string $InstanceId 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param string $UserName 设置账号名称。
+     * @param array $AuthRole 设置权限信息。
      */
     function __construct()
     {

@@ -52,8 +52,8 @@ USING-使用中
 SYNCING-同步中
 IMPORTING-导入中
 IMPORTFAILED-导入失败
- * @method string getPlatform() 获取镜像来源平台
- * @method void setPlatform(string $Platform) 设置镜像来源平台
+ * @method string getPlatform() 获取镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
+ * @method void setPlatform(string $Platform) 设置镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
  * @method string getImageCreator() 获取镜像创建者
  * @method void setImageCreator(string $ImageCreator) 设置镜像创建者
  * @method string getImageSource() 获取镜像来源
@@ -132,7 +132,7 @@ IMPORTFAILED-导入失败
     public $ImageState;
 
     /**
-     * @var string 镜像来源平台
+     * @var string 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
      */
     public $Platform;
 
@@ -192,7 +192,7 @@ USING-使用中
 SYNCING-同步中
 IMPORTING-导入中
 IMPORTFAILED-导入失败
-     * @param string $Platform 镜像来源平台
+     * @param string $Platform 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
      * @param string $ImageCreator 镜像创建者
      * @param string $ImageSource 镜像来源
      * @param integer $SyncPercent 同步百分比

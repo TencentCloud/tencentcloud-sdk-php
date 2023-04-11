@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceParams返回参数结构体
  *
- * @method array getInstanceEnumParam() 获取值为枚举类型参数集合
- * @method void setInstanceEnumParam(array $InstanceEnumParam) 设置值为枚举类型参数集合
- * @method array getInstanceIntegerParam() 获取值为integer类型参数集合
- * @method void setInstanceIntegerParam(array $InstanceIntegerParam) 设置值为integer类型参数集合
- * @method array getInstanceTextParam() 获取值为text类型的参数集合
- * @method void setInstanceTextParam(array $InstanceTextParam) 设置值为text类型的参数集合
- * @method array getInstanceMultiParam() 获取值为混合类型的参数集合
- * @method void setInstanceMultiParam(array $InstanceMultiParam) 设置值为混合类型的参数集合
+ * @method array getInstanceEnumParam() 获取参数值为枚举类型参数集合。
+ * @method void setInstanceEnumParam(array $InstanceEnumParam) 设置参数值为枚举类型参数集合。
+ * @method array getInstanceIntegerParam() 获取参数值为 Integer 类型参数集合。
+ * @method void setInstanceIntegerParam(array $InstanceIntegerParam) 设置参数值为 Integer 类型参数集合。
+ * @method array getInstanceTextParam() 获取参数值为 Text 类型的参数集合。
+ * @method void setInstanceTextParam(array $InstanceTextParam) 设置参数值为 Text 类型的参数集合。
+ * @method array getInstanceMultiParam() 获取参数值为混合类型的参数集合。
+ * @method void setInstanceMultiParam(array $InstanceMultiParam) 设置参数值为混合类型的参数集合。
  * @method integer getTotalCount() 获取当前实例支持修改的参数个数统计 如0
  * @method void setTotalCount(integer $TotalCount) 设置当前实例支持修改的参数个数统计 如0
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +36,22 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceParamsResponse extends AbstractModel
 {
     /**
-     * @var array 值为枚举类型参数集合
+     * @var array 参数值为枚举类型参数集合。
      */
     public $InstanceEnumParam;
 
     /**
-     * @var array 值为integer类型参数集合
+     * @var array 参数值为 Integer 类型参数集合。
      */
     public $InstanceIntegerParam;
 
     /**
-     * @var array 值为text类型的参数集合
+     * @var array 参数值为 Text 类型的参数集合。
      */
     public $InstanceTextParam;
 
     /**
-     * @var array 值为混合类型的参数集合
+     * @var array 参数值为混合类型的参数集合。
      */
     public $InstanceMultiParam;
 
@@ -66,10 +66,10 @@ class DescribeInstanceParamsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceEnumParam 值为枚举类型参数集合
-     * @param array $InstanceIntegerParam 值为integer类型参数集合
-     * @param array $InstanceTextParam 值为text类型的参数集合
-     * @param array $InstanceMultiParam 值为混合类型的参数集合
+     * @param array $InstanceEnumParam 参数值为枚举类型参数集合。
+     * @param array $InstanceIntegerParam 参数值为 Integer 类型参数集合。
+     * @param array $InstanceTextParam 参数值为 Text 类型的参数集合。
+     * @param array $InstanceMultiParam 参数值为混合类型的参数集合。
      * @param integer $TotalCount 当前实例支持修改的参数个数统计 如0
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

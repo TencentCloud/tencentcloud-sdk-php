@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 与云监控融合托管prometheus实例，关联集群基础信息
+ * 与腾讯云可观测平台融合托管 Prometheus 实例，关联集群基础信息
  *
  * @method string getRegion() 获取集群ID
  * @method void setRegion(string $Region) 设置集群ID

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDayOfWeek(string $DayOfWeek) 设置快照重复日期，星期一到星期日
  * @method integer getAliveDays() 获取快照保留时长
  * @method void setAliveDays(integer $AliveDays) 设置快照保留时长
- * @method string getDayOfMonth() 获取快照按月重复，每月1-31号，选择一天，每月这一天打快照。
- * @method void setDayOfMonth(string $DayOfMonth) 设置快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+ * @method string getDayOfMonth() 获取快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
+ * @method void setDayOfMonth(string $DayOfMonth) 设置快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
  * @method integer getIntervalDays() 获取间隔天数
  * @method void setIntervalDays(integer $IntervalDays) 设置间隔天数
  */
@@ -56,7 +56,7 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
     public $AliveDays;
 
     /**
-     * @var string 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+     * @var string 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
      */
     public $DayOfMonth;
 
@@ -70,7 +70,7 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
      * @param string $PolicyName 策略名称
      * @param string $DayOfWeek 快照重复日期，星期一到星期日
      * @param integer $AliveDays 快照保留时长
-     * @param string $DayOfMonth 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+     * @param string $DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
      * @param integer $IntervalDays 间隔天数
      */
     function __construct()

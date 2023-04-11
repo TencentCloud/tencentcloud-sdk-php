@@ -18,92 +18,108 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例可修改参数integer类型集合。
+ * 实例可修改参数 Integer 类型集合。
  *
- * @method string getCurrentValue() 获取当前值
- * @method void setCurrentValue(string $CurrentValue) 设置当前值
- * @method string getDefaultValue() 获取默认值
- * @method void setDefaultValue(string $DefaultValue) 设置默认值
- * @method string getMax() 获取最大值
- * @method void setMax(string $Max) 设置最大值
- * @method string getMin() 获取最小值
- * @method void setMin(string $Min) 设置最小值
- * @method string getNeedRestart() 获取是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
- * @method void setNeedRestart(string $NeedRestart) 设置是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
- * @method string getParamName() 获取参数名称
- * @method void setParamName(string $ParamName) 设置参数名称
- * @method array getTips() 获取参数说明
- * @method void setTips(array $Tips) 设置参数说明
- * @method string getValueType() 获取参数类型
- * @method void setValueType(string $ValueType) 设置参数类型
- * @method integer getStatus() 获取是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
- * @method void setStatus(integer $Status) 设置是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
- * @method string getUnit() 获取冗余字段，可忽略
- * @method void setUnit(string $Unit) 设置冗余字段，可忽略
+ * @method string getCurrentValue() 获取参数当前值。
+ * @method void setCurrentValue(string $CurrentValue) 设置参数当前值。
+ * @method string getDefaultValue() 获取参数默认值。
+ * @method void setDefaultValue(string $DefaultValue) 设置参数默认值。
+ * @method string getMax() 获取参数最大值。
+ * @method void setMax(string $Max) 设置参数最大值。
+ * @method string getMin() 获取最小值。
+ * @method void setMin(string $Min) 设置最小值。
+ * @method string getNeedRestart() 获取参数修改之后是否需要重启生效。
+- 1:需要重启后生效。
+- 0：无需重启，设置成功即可生效。
+ * @method void setNeedRestart(string $NeedRestart) 设置参数修改之后是否需要重启生效。
+- 1:需要重启后生效。
+- 0：无需重启，设置成功即可生效。
+ * @method string getParamName() 获取参数名称。
+ * @method void setParamName(string $ParamName) 设置参数名称。
+ * @method array getTips() 获取参数说明。
+ * @method void setTips(array $Tips) 设置参数说明。
+ * @method string getValueType() 获取参数类型。
+ * @method void setValueType(string $ValueType) 设置参数类型。
+ * @method integer getStatus() 获取是否为运行中参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
+ * @method void setStatus(integer $Status) 设置是否为运行中参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
+ * @method string getUnit() 获取冗余字段，可忽略。
+ * @method void setUnit(string $Unit) 设置冗余字段，可忽略。
  */
 class InstanceIntegerParam extends AbstractModel
 {
     /**
-     * @var string 当前值
+     * @var string 参数当前值。
      */
     public $CurrentValue;
 
     /**
-     * @var string 默认值
+     * @var string 参数默认值。
      */
     public $DefaultValue;
 
     /**
-     * @var string 最大值
+     * @var string 参数最大值。
      */
     public $Max;
 
     /**
-     * @var string 最小值
+     * @var string 最小值。
      */
     public $Min;
 
     /**
-     * @var string 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
+     * @var string 参数修改之后是否需要重启生效。
+- 1:需要重启后生效。
+- 0：无需重启，设置成功即可生效。
      */
     public $NeedRestart;
 
     /**
-     * @var string 参数名称
+     * @var string 参数名称。
      */
     public $ParamName;
 
     /**
-     * @var array 参数说明
+     * @var array 参数说明。
      */
     public $Tips;
 
     /**
-     * @var string 参数类型
+     * @var string 参数类型。
      */
     public $ValueType;
 
     /**
-     * @var integer 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @var integer 是否为运行中参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
      */
     public $Status;
 
     /**
-     * @var string 冗余字段，可忽略
+     * @var string 冗余字段，可忽略。
      */
     public $Unit;
 
     /**
-     * @param string $CurrentValue 当前值
-     * @param string $DefaultValue 默认值
-     * @param string $Max 最大值
-     * @param string $Min 最小值
-     * @param string $NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
-     * @param string $ParamName 参数名称
-     * @param array $Tips 参数说明
-     * @param string $ValueType 参数类型
-     * @param integer $Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
-     * @param string $Unit 冗余字段，可忽略
+     * @param string $CurrentValue 参数当前值。
+     * @param string $DefaultValue 参数默认值。
+     * @param string $Max 参数最大值。
+     * @param string $Min 最小值。
+     * @param string $NeedRestart 参数修改之后是否需要重启生效。
+- 1:需要重启后生效。
+- 0：无需重启，设置成功即可生效。
+     * @param string $ParamName 参数名称。
+     * @param array $Tips 参数说明。
+     * @param string $ValueType 参数类型。
+     * @param integer $Status 是否为运行中参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
+     * @param string $Unit 冗余字段，可忽略。
      */
     function __construct()
     {

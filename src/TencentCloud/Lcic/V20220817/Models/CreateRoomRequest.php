@@ -52,6 +52,12 @@ video 纯视频
  * @method void setAutoMic(integer $AutoMic) 设置进入课堂时是否自动连麦。可以有以下取值：
 0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
+ * @method integer getTurnOffMic() 获取释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态
+ * @method void setTurnOffMic(integer $TurnOffMic) 设置释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态
  * @method integer getAudioQuality() 获取高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质
@@ -68,6 +74,10 @@ video 纯视频
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
  * @method array getAssistants() 获取助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
  * @method void setAssistants(array $Assistants) 设置助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
+ * @method integer getRTCAudienceNumber() 获取rtc人数。
+ * @method void setRTCAudienceNumber(integer $RTCAudienceNumber) 设置rtc人数。
+ * @method integer getAudienceType() 获取观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+ * @method void setAudienceType(integer $AudienceType) 设置观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
  * @method integer getRecordLayout() 获取录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method string getGroupId() 获取房间绑定的群组ID,非空时限制组成员进入
@@ -128,6 +138,13 @@ video 纯视频
     public $AutoMic;
 
     /**
+     * @var integer 释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态
+     */
+    public $TurnOffMic;
+
+    /**
      * @var integer 高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质
@@ -146,6 +163,16 @@ video 纯视频
      * @var array 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
      */
     public $Assistants;
+
+    /**
+     * @var integer rtc人数。
+     */
+    public $RTCAudienceNumber;
+
+    /**
+     * @var integer 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+     */
+    public $AudienceType;
 
     /**
      * @var integer 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
@@ -174,6 +201,9 @@ video 纯视频
      * @param integer $AutoMic 进入课堂时是否自动连麦。可以有以下取值：
 0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
+     * @param integer $TurnOffMic 释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态
      * @param integer $AudioQuality 高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质
@@ -182,6 +212,8 @@ video 纯视频
 1 禁止录制
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      * @param array $Assistants 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
+     * @param integer $RTCAudienceNumber rtc人数。
+     * @param integer $AudienceType 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
      * @param integer $RecordLayout 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      * @param string $GroupId 房间绑定的群组ID,非空时限制组成员进入
      */
@@ -234,6 +266,10 @@ video 纯视频
             $this->AutoMic = $param["AutoMic"];
         }
 
+        if (array_key_exists("TurnOffMic",$param) and $param["TurnOffMic"] !== null) {
+            $this->TurnOffMic = $param["TurnOffMic"];
+        }
+
         if (array_key_exists("AudioQuality",$param) and $param["AudioQuality"] !== null) {
             $this->AudioQuality = $param["AudioQuality"];
         }
@@ -244,6 +280,14 @@ video 纯视频
 
         if (array_key_exists("Assistants",$param) and $param["Assistants"] !== null) {
             $this->Assistants = $param["Assistants"];
+        }
+
+        if (array_key_exists("RTCAudienceNumber",$param) and $param["RTCAudienceNumber"] !== null) {
+            $this->RTCAudienceNumber = $param["RTCAudienceNumber"];
+        }
+
+        if (array_key_exists("AudienceType",$param) and $param["AudienceType"] !== null) {
+            $this->AudienceType = $param["AudienceType"];
         }
 
         if (array_key_exists("RecordLayout",$param) and $param["RecordLayout"] !== null) {

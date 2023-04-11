@@ -31,7 +31,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回
  * @method Models\CreateConvertTaskApiResponse CreateConvertTaskApi(Models\CreateConvertTaskApiRequest $req) 上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建签署流程电子文档
-适用场景：见创建签署流程接口。x0b
+适用场景：见创建签署流程接口。
 注：该接口需要给对应的流程指定一个模板id，并且填充该模板中需要补充的信息。是“发起流程”接口的前置接口。
  * @method Models\CreateFlowResponse CreateFlow(Models\CreateFlowRequest $req) 创建签署流程
 适用场景：在标准制式的合同场景中，可通过提前预制好模板文件，每次调用模板文件的id，补充合同内容信息及签署信息生成电子合同。
@@ -50,6 +50,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateFlowRemindsResponse CreateFlowReminds(Models\CreateFlowRemindsRequest $req) 指定需要批量催办的签署流程Id，批量催办合同，最多100个; 接口失败后返回错误信息
 注意:
 该接口不可直接调用，请联系客户经理申请使用
+仅能催办当前状态为“待签署”的签署人，且只能催办一次
+发起合同时，签署人的NotifyType需设置为sms，否则无法催办
  * @method Models\CreateFlowSignReviewResponse CreateFlowSignReview(Models\CreateFlowSignReviewRequest $req) 提交企业签署流程审批结果
 适用场景: 
 在通过接口(CreateFlow 或者CreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true，且发起方企业作为签署方参与了流程签署，则可以调用此接口提交企业内部签署审批结果。
@@ -64,7 +66,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreatePrepareFlowResponse CreatePrepareFlow(Models\CreatePrepareFlowRequest $req) 创建快速发起流程
 适用场景：用户通过API 合同文件及签署信息，并可通过我们返回的URL在页面完成签署控件等信息的编辑与确认，快速发起合同.
 注：该接口文件的resourceId 是通过上传文件之后获取的。
- * @method Models\CreatePreparedPersonalEsignResponse CreatePreparedPersonalEsign(Models\CreatePreparedPersonalEsignRequest $req) 本接口（CreatePreparedPersonalEsign）由于创建导入个人印章。
+ * @method Models\CreatePreparedPersonalEsignResponse CreatePreparedPersonalEsign(Models\CreatePreparedPersonalEsignRequest $req) 本接口（CreatePreparedPersonalEsign）用于创建导入个人印章。
  * @method Models\CreateReleaseFlowResponse CreateReleaseFlow(Models\CreateReleaseFlowRequest $req) 发起解除协议，主要应用场景为：基于一份已经签署的合同(签署流程)，进行解除操作。
  * @method Models\CreateSchemeUrlResponse CreateSchemeUrl(Models\CreateSchemeUrlRequest $req) 获取小程序跳转链接
 
@@ -100,7 +102,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\DescribeThirdPartyAuthCodeResponse DescribeThirdPartyAuthCode(Models\DescribeThirdPartyAuthCodeRequest $req) 通过AuthCode查询用户是否实名
  * @method Models\DescribeUserAutoSignStatusResponse DescribeUserAutoSignStatus(Models\DescribeUserAutoSignStatusRequest $req) 企业方可以通过此接口查询个人用户自动签开启状态
  * @method Models\DisableUserAutoSignResponse DisableUserAutoSign(Models\DisableUserAutoSignRequest $req) 企业方可以通过此接口关闭个人的自动签功能
- * @method Models\GetTaskResultApiResponse GetTaskResultApi(Models\GetTaskResultApiRequest $req) 查询转换任务状态
+ * @method Models\GetTaskResultApiResponse GetTaskResultApi(Models\GetTaskResultApiRequest $req) 通过发起转换任务接口（CreateConvertTaskApi）返回的任务Id查询转换任务状态，通过本接口确认转换任务是否完成。大文件转换所需的时间可能会比较长。
  * @method Models\ModifyApplicationCallbackInfoResponse ModifyApplicationCallbackInfo(Models\ModifyApplicationCallbackInfoRequest $req) 新增/删除应用callbackinfo
 callbackinfo包含： 回调地址和签名key
 操作：新增/删除
@@ -112,7 +114,7 @@ callbackinfo包含： 回调地址和签名key
 适用场景：用于生成pdf资源编号（FileIds）来配合“用PDF创建流程”接口使用，使用场景可详见“用PDF创建流程”接口说明。
 其中上传的文件，图片类型(png/jpg/jpeg)大小限制为5M，其他大小限制为60M。
 调用时需要设置Domain/接口请求域名为 file.ess.tencent.cn，并设置参数Version/版本号为2020-12-22
- * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 验证合同文件
+ * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 对流程的合同文件进行验证，判断文件是否合法。
  */
 
 class EssClient extends AbstractClient

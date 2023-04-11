@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMX(integer $MX) 设置记录的MX权重
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWeight() 获取记录的权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeight(integer $Weight) 设置记录的权重
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateRecordBatchRecord extends AbstractModel
 {
@@ -121,6 +125,12 @@ class CreateRecordBatchRecord extends AbstractModel
     public $MX;
 
     /**
+     * @var integer 记录的权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Weight;
+
+    /**
      * @param string $SubDomain 子域名(主机记录)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordType 记录类型, 详见 DescribeRecordType 接口
@@ -139,6 +149,8 @@ class CreateRecordBatchRecord extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 此条记录在列表中的ID
      * @param integer $MX 记录的MX权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Weight 记录的权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +204,10 @@ class CreateRecordBatchRecord extends AbstractModel
 
         if (array_key_exists("MX",$param) and $param["MX"] !== null) {
             $this->MX = $param["MX"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

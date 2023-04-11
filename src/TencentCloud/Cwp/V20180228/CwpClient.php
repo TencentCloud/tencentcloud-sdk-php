@@ -47,7 +47,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DeleteBruteAttacksResponse DeleteBruteAttacks(Models\DeleteBruteAttacksRequest $req) 本接口 (DeleteBruteAttacks) 用于删除暴力破解记录。
  * @method Models\DeleteLicenseRecordResponse DeleteLicenseRecord(Models\DeleteLicenseRecordRequest $req) 对授权管理-订单列表内已过期的订单进行删除.(删除后的订单不在统计范畴内)
  * @method Models\DeleteLoginWhiteListResponse DeleteLoginWhiteList(Models\DeleteLoginWhiteListRequest $req) 本接口用于删除异地登录白名单规则。
- * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) 本接口（DeleteMachine）用于卸载云镜客户端。
+ * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) 本接口（DeleteMachine）用于卸载主机安全客户端。
  * @method Models\DeleteMachineTagResponse DeleteMachineTag(Models\DeleteMachineTagRequest $req) 删除服务器关联的标签
  * @method Models\DeleteMaliciousRequestsResponse DeleteMaliciousRequests(Models\DeleteMaliciousRequestsRequest $req) 本接口 (DeleteMaliciousRequests) 用于删除恶意请求记录。
  * @method Models\DeleteMalwareScanTaskResponse DeleteMalwareScanTask(Models\DeleteMalwareScanTaskRequest $req) 入侵管理-终止扫描任务

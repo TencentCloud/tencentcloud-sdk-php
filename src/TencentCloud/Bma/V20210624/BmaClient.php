@@ -32,7 +32,9 @@ use TencentCloud\Bma\V20210624\Models as Models;
 
  * @method Models\CreateCRCompanyVerifyResponse CreateCRCompanyVerify(Models\CreateCRCompanyVerifyRequest $req) 本接口用于企业认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
  * @method Models\CreateCRDesktopCodeResponse CreateCRDesktopCode(Models\CreateCRDesktopCodeRequest $req) 新建过程取证码
- * @method Models\CreateCRObtainResponse CreateCRObtain(Models\CreateCRObtainRequest $req) 版权保护-新建取证接口
+ * @method Models\CreateCRObtainResponse CreateCRObtain(Models\CreateCRObtainRequest $req) 不对外提供接口能力了
+
+版权保护-新建取证接口
  * @method Models\CreateCRRightResponse CreateCRRight(Models\CreateCRRightRequest $req) 版权保护-新建发函接口
  * @method Models\CreateCRRightFileResponse CreateCRRightFile(Models\CreateCRRightFileRequest $req) 权属文件添加
  * @method Models\CreateCRTortResponse CreateCRTort(Models\CreateCRTortRequest $req) 举报侵权链接

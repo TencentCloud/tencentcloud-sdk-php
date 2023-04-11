@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrossCluster(integer $CrossCluster) 设置是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
  * @method string getZoneId() 获取主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
  * @method void setZoneId(string $ZoneId) 设置主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+ * @method string getRoTransType() 获取针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
+ * @method void setRoTransType(string $RoTransType) 设置针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $ZoneId;
 
     /**
+     * @var string 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
+     */
+    public $RoTransType;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param integer $Memory 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的内存规格。
      * @param integer $Volume 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的硬盘范围。
@@ -152,6 +159,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param integer $MaxDelayTime 延迟阈值。取值范围1~10，默认值为10。
      * @param integer $CrossCluster 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
      * @param string $ZoneId 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+     * @param string $RoTransType 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("RoTransType",$param) and $param["RoTransType"] !== null) {
+            $this->RoTransType = $param["RoTransType"];
         }
     }
 }

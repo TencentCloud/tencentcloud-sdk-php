@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBackupDBInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method integer getBackupMethod() 获取0-逻辑备份，1-物理备份
- * @method void setBackupMethod(integer $BackupMethod) 设置0-逻辑备份，1-物理备份
- * @method string getBackupRemark() 获取备份备注
- * @method void setBackupRemark(string $BackupRemark) 设置备份备注
+ * @method string getInstanceId() 获取实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ * @method integer getBackupMethod() 获取设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+ * @method void setBackupMethod(integer $BackupMethod) 设置设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+ * @method string getBackupRemark() 获取备份备注信息。
+ * @method void setBackupRemark(string $BackupRemark) 设置备份备注信息。
  */
 class CreateBackupDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 0-逻辑备份，1-物理备份
+     * @var integer 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
      */
     public $BackupMethod;
 
     /**
-     * @var string 备份备注
+     * @var string 备份备注信息。
      */
     public $BackupRemark;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param integer $BackupMethod 0-逻辑备份，1-物理备份
-     * @param string $BackupRemark 备份备注
+     * @param string $InstanceId 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param integer $BackupMethod 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+     * @param string $BackupRemark 备份备注信息。
      */
     function __construct()
     {

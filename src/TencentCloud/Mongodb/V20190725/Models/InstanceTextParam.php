@@ -18,76 +18,84 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例可修改参数text类型集合。
+ * 实例可修改参数为 Text 类型的参数集合。
  *
- * @method string getCurrentValue() 获取当前值
- * @method void setCurrentValue(string $CurrentValue) 设置当前值
- * @method string getDefaultValue() 获取默认值
- * @method void setDefaultValue(string $DefaultValue) 设置默认值
- * @method string getNeedRestart() 获取是否需要重启
- * @method void setNeedRestart(string $NeedRestart) 设置是否需要重启
- * @method string getParamName() 获取参数名称
- * @method void setParamName(string $ParamName) 设置参数名称
- * @method string getTextValue() 获取text类型值
- * @method void setTextValue(string $TextValue) 设置text类型值
- * @method array getTips() 获取参数说明
- * @method void setTips(array $Tips) 设置参数说明
- * @method string getValueType() 获取值类型说明
- * @method void setValueType(string $ValueType) 设置值类型说明
- * @method string getStatus() 获取是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
- * @method void setStatus(string $Status) 设置是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+ * @method string getCurrentValue() 获取参数当前值。
+ * @method void setCurrentValue(string $CurrentValue) 设置参数当前值。
+ * @method string getDefaultValue() 获取参数默认值。
+ * @method void setDefaultValue(string $DefaultValue) 设置参数默认值。
+ * @method string getNeedRestart() 获取修改参数值之后是否需要重启。
+ * @method void setNeedRestart(string $NeedRestart) 设置修改参数值之后是否需要重启。
+ * @method string getParamName() 获取参数名称。
+ * @method void setParamName(string $ParamName) 设置参数名称。
+ * @method string getTextValue() 获取Text 类型参数对应的值。
+ * @method void setTextValue(string $TextValue) 设置Text 类型参数对应的值。
+ * @method array getTips() 获取参数说明。
+ * @method void setTips(array $Tips) 设置参数说明。
+ * @method string getValueType() 获取参数值类型说明。
+ * @method void setValueType(string $ValueType) 设置参数值类型说明。
+ * @method string getStatus() 获取是否为运行中的参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
+ * @method void setStatus(string $Status) 设置是否为运行中的参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
  */
 class InstanceTextParam extends AbstractModel
 {
     /**
-     * @var string 当前值
+     * @var string 参数当前值。
      */
     public $CurrentValue;
 
     /**
-     * @var string 默认值
+     * @var string 参数默认值。
      */
     public $DefaultValue;
 
     /**
-     * @var string 是否需要重启
+     * @var string 修改参数值之后是否需要重启。
      */
     public $NeedRestart;
 
     /**
-     * @var string 参数名称
+     * @var string 参数名称。
      */
     public $ParamName;
 
     /**
-     * @var string text类型值
+     * @var string Text 类型参数对应的值。
      */
     public $TextValue;
 
     /**
-     * @var array 参数说明
+     * @var array 参数说明。
      */
     public $Tips;
 
     /**
-     * @var string 值类型说明
+     * @var string 参数值类型说明。
      */
     public $ValueType;
 
     /**
-     * @var string 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @var string 是否为运行中的参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
      */
     public $Status;
 
     /**
-     * @param string $CurrentValue 当前值
-     * @param string $DefaultValue 默认值
-     * @param string $NeedRestart 是否需要重启
-     * @param string $ParamName 参数名称
-     * @param string $TextValue text类型值
-     * @param array $Tips 参数说明
-     * @param string $ValueType 值类型说明
-     * @param string $Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @param string $CurrentValue 参数当前值。
+     * @param string $DefaultValue 参数默认值。
+     * @param string $NeedRestart 修改参数值之后是否需要重启。
+     * @param string $ParamName 参数名称。
+     * @param string $TextValue Text 类型参数对应的值。
+     * @param array $Tips 参数说明。
+     * @param string $ValueType 参数值类型说明。
+     * @param string $Status 是否为运行中的参数值。
+- 1：运行中参数值。
+- 0：非运行中参数值。
      */
     function __construct()
     {

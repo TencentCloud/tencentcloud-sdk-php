@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取唯一Id
  * @method void setId(integer $Id) 设置唯一Id
- * @method string getUuid() 获取云镜客户端唯一标识UUID
+ * @method string getUuid() 获取主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一标识UUID
+ * @method void setUuid(string $Uuid) 设置主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineIp() 获取主机ip
 注意：此字段可能返回 null，表示取不到有效值。
@@ -119,7 +119,7 @@ class BruteAttackInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var string 云镜客户端唯一标识UUID
+     * @var string 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
@@ -252,7 +252,7 @@ class BruteAttackInfo extends AbstractModel
 
     /**
      * @param integer $Id 唯一Id
-     * @param string $Uuid 云镜客户端唯一标识UUID
+     * @param string $Uuid 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineIp 主机ip
 注意：此字段可能返回 null，表示取不到有效值。

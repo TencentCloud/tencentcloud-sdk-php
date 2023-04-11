@@ -18,7 +18,7 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 云监控告警通知模板 - 用户通知详情
+ * 告警通知模板 - 用户通知详情
  *
  * @method string getReceiverType() 获取接收者类型 USER=用户 GROUP=用户组
 注意：此字段可能返回 null，表示取不到有效值。

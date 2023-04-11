@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMachineIp() 获取机器ip。
  * @method void setMachineIp(string $MachineIp) 设置机器ip。
- * @method integer getProtectDays() 获取受云镜保护天数。
- * @method void setProtectDays(integer $ProtectDays) 设置受云镜保护天数。
+ * @method integer getProtectDays() 获取受主机安全保护天数。
+ * @method void setProtectDays(integer $ProtectDays) 设置受主机安全保护天数。
  * @method string getMachineOs() 获取操作系统。
  * @method void setMachineOs(string $MachineOs) 设置操作系统。
  * @method string getMachineName() 获取主机名称。
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineWanIp(string $MachineWanIp) 设置主机外网IP。
  * @method string getQuuid() 获取CVM或BM主机唯一Uuid。
  * @method void setQuuid(string $Quuid) 设置CVM或BM主机唯一Uuid。
- * @method string getUuid() 获取云镜客户端唯一Uuid。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。
+ * @method string getUuid() 获取主机安全客户端唯一Uuid。
+ * @method void setUuid(string $Uuid) 设置主机安全客户端唯一Uuid。
  * @method boolean getIsProVersion() 获取是否开通专业版。
 <li>true：是</li>
 <li>false：否</li>
@@ -80,8 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProVersionDeadline(string $ProVersionDeadline) 设置专业版到期时间(仅预付费)
  * @method integer getHasAssetScan() 获取是否有资产扫描记录，0无，1有
  * @method void setHasAssetScan(integer $HasAssetScan) 设置是否有资产扫描记录，0无，1有
- * @method string getProtectType() 获取防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
- * @method void setProtectType(string $ProtectType) 设置防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+ * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+ * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -93,7 +93,7 @@ class DescribeMachineInfoResponse extends AbstractModel
     public $MachineIp;
 
     /**
-     * @var integer 受云镜保护天数。
+     * @var integer 受主机安全保护天数。
      */
     public $ProtectDays;
 
@@ -130,7 +130,7 @@ class DescribeMachineInfoResponse extends AbstractModel
     public $Quuid;
 
     /**
-     * @var string 云镜客户端唯一Uuid。
+     * @var string 主机安全客户端唯一Uuid。
      */
     public $Uuid;
 
@@ -194,7 +194,7 @@ class DescribeMachineInfoResponse extends AbstractModel
     public $HasAssetScan;
 
     /**
-     * @var string 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     * @var string 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
      */
     public $ProtectType;
 
@@ -205,7 +205,7 @@ class DescribeMachineInfoResponse extends AbstractModel
 
     /**
      * @param string $MachineIp 机器ip。
-     * @param integer $ProtectDays 受云镜保护天数。
+     * @param integer $ProtectDays 受主机安全保护天数。
      * @param string $MachineOs 操作系统。
      * @param string $MachineName 主机名称。
      * @param string $MachineStatus 在线状态。
@@ -214,7 +214,7 @@ class DescribeMachineInfoResponse extends AbstractModel
      * @param string $InstanceId CVM或BM主机唯一标识。
      * @param string $MachineWanIp 主机外网IP。
      * @param string $Quuid CVM或BM主机唯一Uuid。
-     * @param string $Uuid 云镜客户端唯一Uuid。
+     * @param string $Uuid 主机安全客户端唯一Uuid。
      * @param boolean $IsProVersion 是否开通专业版。
 <li>true：是</li>
 <li>false：否</li>
@@ -234,7 +234,7 @@ class DescribeMachineInfoResponse extends AbstractModel
      * @param string $AgentVersion agent版本号
      * @param string $ProVersionDeadline 专业版到期时间(仅预付费)
      * @param integer $HasAssetScan 是否有资产扫描记录，0无，1有
-     * @param string $ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取唯一ID。
  * @method void setId(integer $Id) 设置唯一ID。
- * @method string getUuid() 获取云镜客户端唯一Uuid。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。
+ * @method string getUuid() 获取主机安全客户端唯一Uuid。
+ * @method void setUuid(string $Uuid) 设置主机安全客户端唯一Uuid。
  * @method string getMachineIp() 获取主机内网IP。
  * @method void setMachineIp(string $MachineIp) 设置主机内网IP。
  * @method string getMachineName() 获取主机名。
@@ -49,7 +49,7 @@ class HistoryAccount extends AbstractModel
     public $Id;
 
     /**
-     * @var string 云镜客户端唯一Uuid。
+     * @var string 主机安全客户端唯一Uuid。
      */
     public $Uuid;
 
@@ -83,7 +83,7 @@ class HistoryAccount extends AbstractModel
 
     /**
      * @param integer $Id 唯一ID。
-     * @param string $Uuid 云镜客户端唯一Uuid。
+     * @param string $Uuid 主机安全客户端唯一Uuid。
      * @param string $MachineIp 主机内网IP。
      * @param string $MachineName 主机名。
      * @param string $Username 帐号名。

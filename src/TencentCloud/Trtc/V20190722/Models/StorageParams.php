@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 第三方存储参数。
  *
- * @method CloudStorage getCloudStorage() 获取第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
- * @method void setCloudStorage(CloudStorage $CloudStorage) 设置第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
- * @method CloudVod getCloudVod() 获取【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
- * @method void setCloudVod(CloudVod $CloudVod) 设置【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
+ * @method CloudStorage getCloudStorage() 获取第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
+ * @method void setCloudStorage(CloudStorage $CloudStorage) 设置第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
+ * @method CloudVod getCloudVod() 获取腾讯云云点播的账号信息。
+ * @method void setCloudVod(CloudVod $CloudVod) 设置腾讯云云点播的账号信息。
  */
 class StorageParams extends AbstractModel
 {
     /**
-     * @var CloudStorage 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
+     * @var CloudStorage 第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
      */
     public $CloudStorage;
 
     /**
-     * @var CloudVod 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
+     * @var CloudVod 腾讯云云点播的账号信息。
      */
     public $CloudVod;
 
     /**
-     * @param CloudStorage $CloudStorage 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
-     * @param CloudVod $CloudVod 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
+     * @param CloudStorage $CloudStorage 第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
+     * @param CloudVod $CloudVod 腾讯云云点播的账号信息。
      */
     function __construct()
     {

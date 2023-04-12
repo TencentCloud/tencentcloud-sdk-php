@@ -26,7 +26,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
@@ -64,7 +64,7 @@ class DescribeHostLoginListRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
@@ -90,7 +90,7 @@ class DescribeHostLoginListRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>

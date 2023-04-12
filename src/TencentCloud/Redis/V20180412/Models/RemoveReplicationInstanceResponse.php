@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bma\V20210624\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCRObtain返回参数结构体
+ * RemoveReplicationInstance返回参数结构体
  *
- * @method integer getTortId() 获取侵权ID
- * @method void setTortId(integer $TortId) 设置侵权ID
- * @method string getTortNum() 获取xxx
- * @method void setTortNum(string $TortNum) 设置xxx
+ * @method integer getTaskId() 获取异步任务ID
+ * @method void setTaskId(integer $TaskId) 设置异步任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateCRObtainResponse extends AbstractModel
+class RemoveReplicationInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 侵权ID
+     * @var integer 异步任务ID
      */
-    public $TortId;
-
-    /**
-     * @var string xxx
-     */
-    public $TortNum;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class CreateCRObtainResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TortId 侵权ID
-     * @param string $TortNum xxx
+     * @param integer $TaskId 异步任务ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,8 @@ class CreateCRObtainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TortId",$param) and $param["TortId"] !== null) {
-            $this->TortId = $param["TortId"];
-        }
-
-        if (array_key_exists("TortNum",$param) and $param["TortNum"] !== null) {
-            $this->TortNum = $param["TortNum"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProVersionStatus请求参数结构体
+ * DescribeBandwidthRange请求参数结构体
  *
- * @method string getUuid() 获取主机安全客户端UUID、填写"all"表示所有主机。
- * @method void setUuid(string $Uuid) 设置主机安全客户端UUID、填写"all"表示所有主机。
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  */
-class DescribeProVersionStatusRequest extends AbstractModel
+class DescribeBandwidthRangeRequest extends AbstractModel
 {
     /**
-     * @var string 主机安全客户端UUID、填写"all"表示所有主机。
+     * @var string 实例 ID。
      */
-    public $Uuid;
+    public $InstanceId;
 
     /**
-     * @param string $Uuid 主机安全客户端UUID、填写"all"表示所有主机。
+     * @param string $InstanceId 实例 ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeProVersionStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

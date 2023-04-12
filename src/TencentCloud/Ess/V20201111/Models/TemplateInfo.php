@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳（精确到秒）
  * @method Recipient getPromoter() 获取发起人角色信息
  * @method void setPromoter(Recipient $Promoter) 设置发起人角色信息
+ * @method integer getAvailable() 获取模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+ * @method void setAvailable(integer $Available) 设置模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
  * @method string getOrganizationId() 获取模板创建组织id
  * @method void setOrganizationId(string $OrganizationId) 设置模板创建组织id
  * @method string getPreviewUrl() 获取模板预览链接
@@ -136,6 +138,11 @@ class TemplateInfo extends AbstractModel
     public $Promoter;
 
     /**
+     * @var integer 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+     */
+    public $Available;
+
+    /**
      * @var string 模板创建组织id
      */
     public $OrganizationId;
@@ -173,6 +180,7 @@ class TemplateInfo extends AbstractModel
      * @param string $Creator 模板的创建人
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
      * @param Recipient $Promoter 发起人角色信息
+     * @param integer $Available 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
      * @param string $OrganizationId 模板创建组织id
      * @param string $PreviewUrl 模板预览链接
 注意：此字段可能返回 null，表示取不到有效值。
@@ -269,6 +277,10 @@ class TemplateInfo extends AbstractModel
         if (array_key_exists("Promoter",$param) and $param["Promoter"] !== null) {
             $this->Promoter = new Recipient();
             $this->Promoter->deserialize($param["Promoter"]);
+        }
+
+        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
+            $this->Available = $param["Available"];
         }
 
         if (array_key_exists("OrganizationId",$param) and $param["OrganizationId"] !== null) {

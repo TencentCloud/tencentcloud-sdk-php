@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取ID 主键
  * @method void setId(integer $Id) 设置ID 主键
- * @method string getUuid() 获取云镜UUID
- * @method void setUuid(string $Uuid) 设置云镜UUID
+ * @method string getUuid() 获取主机安全UUID
+ * @method void setUuid(string $Uuid) 设置主机安全UUID
  * @method string getQuuid() 获取主机ID
  * @method void setQuuid(string $Quuid) 设置主机ID
  * @method string getHostip() 获取主机内网IP
@@ -77,7 +77,7 @@ class ReverseShell extends AbstractModel
     public $Id;
 
     /**
-     * @var string 云镜UUID
+     * @var string 主机安全UUID
      */
     public $Uuid;
 
@@ -185,7 +185,7 @@ class ReverseShell extends AbstractModel
 
     /**
      * @param integer $Id ID 主键
-     * @param string $Uuid 云镜UUID
+     * @param string $Uuid 主机安全UUID
      * @param string $Quuid 主机ID
      * @param string $Hostip 主机内网IP
      * @param string $DstIp 目标IP

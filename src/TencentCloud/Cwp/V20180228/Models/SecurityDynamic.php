@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全事件消息数据。
  *
- * @method string getUuid() 获取云镜客户端UUID。
- * @method void setUuid(string $Uuid) 设置云镜客户端UUID。
+ * @method string getUuid() 获取主机安全客户端UUID。
+ * @method void setUuid(string $Uuid) 设置主机安全客户端UUID。
  * @method string getEventTime() 获取安全事件发生时间。
  * @method void setEventTime(string $EventTime) 设置安全事件发生时间。
  * @method string getEventType() 获取安全事件类型。
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class SecurityDynamic extends AbstractModel
 {
     /**
-     * @var string 云镜客户端UUID。
+     * @var string 主机安全客户端UUID。
      */
     public $Uuid;
 
@@ -89,7 +89,7 @@ class SecurityDynamic extends AbstractModel
     public $SecurityLevel;
 
     /**
-     * @param string $Uuid 云镜客户端UUID。
+     * @param string $Uuid 主机安全客户端UUID。
      * @param string $EventTime 安全事件发生时间。
      * @param string $EventType 安全事件类型。
 <li>MALWARE：木马事件</li>

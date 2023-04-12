@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。
  * @method string getEndTime() 获取截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
  * @method void setEndTime(string $EndTime) 设置截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
- * @method integer getOffset() 获取分页参数
- * @method void setOffset(integer $Offset) 设置分页参数
- * @method integer getLimit() 获取分页参数
- * @method void setLimit(integer $Limit) 设置分页参数
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取查询数目，默认为20，最大为100。
+ * @method void setLimit(integer $Limit) 设置查询数目，默认为20，最大为100。
  * @method array getDB() 获取数据库列表
  * @method void setDB(array $DB) 设置数据库列表
  * @method array getKey() 获取关键字
@@ -73,12 +73,12 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 分页参数
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 分页参数
+     * @var integer 查询数目，默认为20，最大为100。
      */
     public $Limit;
 
@@ -113,8 +113,8 @@ class DescribeSlowLogsRequest extends AbstractModel
      * @param string $Md5 sql模版的md5值
      * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
      * @param string $EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
-     * @param integer $Offset 分页参数
-     * @param integer $Limit 分页参数
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 查询数目，默认为20，最大为100。
      * @param array $DB 数据库列表
      * @param array $Key 关键字
      * @param array $User 用户

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMode() 获取SRT模式，可选[LISTENER|CALLER]，默认为LISTENER。
  * @method void setMode(string $Mode) 设置SRT模式，可选[LISTENER|CALLER]，默认为LISTENER。
- * @method string getStreamId() 获取流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
- * @method void setStreamId(string $StreamId) 设置流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
+ * @method string getStreamId() 获取流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
+ * @method void setStreamId(string $StreamId) 设置流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
  * @method integer getLatency() 获取延迟，默认0，单位ms，范围为[0, 3000]。
  * @method void setLatency(integer $Latency) 设置延迟，默认0，单位ms，范围为[0, 3000]。
  * @method integer getRecvLatency() 获取接收延迟，默认120，单位ms，范围为[0, 3000]。
@@ -47,7 +47,7 @@ class CreateInputSRTSettings extends AbstractModel
     public $Mode;
 
     /**
-     * @var string 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
+     * @var string 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
      */
     public $StreamId;
 
@@ -88,7 +88,7 @@ class CreateInputSRTSettings extends AbstractModel
 
     /**
      * @param string $Mode SRT模式，可选[LISTENER|CALLER]，默认为LISTENER。
-     * @param string $StreamId 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
+     * @param string $StreamId 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
      * @param integer $Latency 延迟，默认0，单位ms，范围为[0, 3000]。
      * @param integer $RecvLatency 接收延迟，默认120，单位ms，范围为[0, 3000]。
      * @param integer $PeerLatency 对端延迟，默认0，单位ms，范围为[0, 3000]。

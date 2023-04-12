@@ -32,7 +32,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ChangeReplicaToMasterResponse ChangeReplicaToMaster(Models\ChangeReplicaToMasterRequest $req) 该接口仅支持多AZ实例副本组提主和单AZ副本提主
  * @method Models\CleanUpInstanceResponse CleanUpInstance(Models\CleanUpInstanceRequest $req) 回收站实例立即下线
  * @method Models\ClearInstanceResponse ClearInstance(Models\ClearInstanceRequest $req) 清空Redis实例的实例数据。
- * @method Models\CloneInstancesResponse CloneInstances(Models\CloneInstancesRequest $req) 本接口（CloneInstances）可基于当前实例的备份文件克隆一个完整的新实例。
+ * @method Models\CloneInstancesResponse CloneInstances(Models\CloneInstancesRequest $req) 本接口（CloneInstances）用于基于当前实例的备份文件克隆一个完整的新实例。
  * @method Models\CloseSSLResponse CloseSSL(Models\CloseSSLRequest $req) 关闭SSL
  * @method Models\CreateInstanceAccountResponse CreateInstanceAccount(Models\CreateInstanceAccountRequest $req) 创建实例子账号
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 本接口(CreateInstances)用于创建redis实例。
@@ -44,6 +44,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(Models\DescribeAutoBackupConfigRequest $req) 获取备份配置
  * @method Models\DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(Models\DescribeBackupDownloadRestrictionRequest $req) 本接口（DescribeBackupDownloadRestriction）用于查询当前地域数据库备份文件的下载地址。
  * @method Models\DescribeBackupUrlResponse DescribeBackupUrl(Models\DescribeBackupUrlRequest $req) 本接口（DescribeBackupUrl）用于查询备份 Rdb 文件的下载地址。
+ * @method Models\DescribeBandwidthRangeResponse DescribeBandwidthRange(Models\DescribeBandwidthRangeRequest $req) 本接口（DescribeBandwidthRange）用于查询实例带宽信息。
  * @method Models\DescribeCommonDBInstancesResponse DescribeCommonDBInstances(Models\DescribeCommonDBInstancesRequest $req) 查询Redis实例列表信息。该接口已废弃。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
  * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) 查看实例子账号信息
@@ -102,6 +103,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) 修改参数模板
  * @method Models\OpenSSLResponse OpenSSL(Models\OpenSSLRequest $req) 开启SSL
  * @method Models\ReleaseWanAddressResponse ReleaseWanAddress(Models\ReleaseWanAddressRequest $req) 关闭外网
+ * @method Models\RemoveReplicationInstanceResponse RemoveReplicationInstance(Models\RemoveReplicationInstanceRequest $req) 移除复制组成员
  * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) 本接口（RenewInstance）可用于为实例续费。
  * @method Models\ResetPasswordResponse ResetPassword(Models\ResetPasswordRequest $req) 重置密码
  * @method Models\RestoreInstanceResponse RestoreInstance(Models\RestoreInstanceRequest $req) 恢复 CRS 实例

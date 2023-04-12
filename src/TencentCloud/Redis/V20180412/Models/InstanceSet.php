@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatetime(string $Createtime) 设置实例创建时间。
  * @method float getSize() 获取实例容量大小，单位：MB。
  * @method void setSize(float $Size) 设置实例容量大小，单位：MB。
- * @method float getSizeUsed() 获取该字段已废弃。可使用云监控 API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内容容量。
- * @method void setSizeUsed(float $SizeUsed) 设置该字段已废弃。可使用云监控 API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内容容量。
+ * @method float getSizeUsed() 获取该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
+ * @method void setSizeUsed(float $SizeUsed) 设置该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
  * @method integer getType() 获取实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
  * @method void setType(integer $Type) 设置实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
  * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
@@ -243,7 +243,7 @@ class InstanceSet extends AbstractModel
     public $Size;
 
     /**
-     * @var float 该字段已废弃。可使用云监控 API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内容容量。
+     * @var float 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
      */
     public $SizeUsed;
 
@@ -488,7 +488,7 @@ class InstanceSet extends AbstractModel
      * @param integer $Port 实例端口号。
      * @param string $Createtime 实例创建时间。
      * @param float $Size 实例容量大小，单位：MB。
-     * @param float $SizeUsed 该字段已废弃。可使用云监控 API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内容容量。
+     * @param float $SizeUsed 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
      * @param integer $Type 实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
      * @param string $DeadlineTime 实例到期时间。

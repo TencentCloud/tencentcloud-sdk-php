@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getBatchId() 获取批次ID
  * @method void setBatchId(string $BatchId) 设置批次ID
+ * @method string getCode() 获取安心码
+ * @method void setCode(string $Code) 设置安心码
  */
 class DescribeScanStatsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeScanStatsRequest extends AbstractModel
     public $BatchId;
 
     /**
+     * @var string 安心码
+     */
+    public $Code;
+
+    /**
      * @param integer $CorpId 企业ID
      * @param integer $PageSize 分页数量
      * @param integer $PageNumber 当前分页
      * @param string $MerchantId 商户ID
      * @param string $ProductId 产品ID
      * @param string $BatchId 批次ID
+     * @param string $Code 安心码
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeScanStatsRequest extends AbstractModel
 
         if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
             $this->BatchId = $param["BatchId"];
+        }
+
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
     }
 }

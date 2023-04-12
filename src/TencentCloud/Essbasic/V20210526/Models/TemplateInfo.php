@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAvailable() 获取模板可用状态，取值：1启用（默认），2停用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailable(integer $Available) 设置模板可用状态，取值：1启用（默认），2停用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -151,6 +155,12 @@ class TemplateInfo extends AbstractModel
     public $TemplateVersion;
 
     /**
+     * @var integer 模板可用状态，取值：1启用（默认），2停用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Available;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
@@ -171,6 +181,8 @@ class TemplateInfo extends AbstractModel
      * @param integer $ChannelAutoSave 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateVersion 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Available 模板可用状态，取值：1启用（默认），2停用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -263,6 +275,10 @@ class TemplateInfo extends AbstractModel
 
         if (array_key_exists("TemplateVersion",$param) and $param["TemplateVersion"] !== null) {
             $this->TemplateVersion = $param["TemplateVersion"];
+        }
+
+        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
+            $this->Available = $param["Available"];
         }
     }
 }

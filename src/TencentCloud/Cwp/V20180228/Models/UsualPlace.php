@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取ID。
  * @method void setId(integer $Id) 设置ID。
- * @method string getUuid() 获取云镜客户端唯一标识UUID。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一标识UUID。
+ * @method string getUuid() 获取主机安全客户端唯一标识UUID。
+ * @method void setUuid(string $Uuid) 设置主机安全客户端唯一标识UUID。
  * @method integer getCountryId() 获取国家 ID。
  * @method void setCountryId(integer $CountryId) 设置国家 ID。
  * @method integer getProvinceId() 获取省份 ID。
@@ -39,7 +39,7 @@ class UsualPlace extends AbstractModel
     public $Id;
 
     /**
-     * @var string 云镜客户端唯一标识UUID。
+     * @var string 主机安全客户端唯一标识UUID。
      */
     public $Uuid;
 
@@ -60,7 +60,7 @@ class UsualPlace extends AbstractModel
 
     /**
      * @param integer $Id ID。
-     * @param string $Uuid 云镜客户端唯一标识UUID。
+     * @param string $Uuid 主机安全客户端唯一标识UUID。
      * @param integer $CountryId 国家 ID。
      * @param integer $ProvinceId 省份 ID。
      * @param integer $CityId 城市 ID。

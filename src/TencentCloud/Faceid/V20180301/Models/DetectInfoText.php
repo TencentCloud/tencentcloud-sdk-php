@@ -144,6 +144,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNFCBillingCounts(integer $NFCBillingCounts) 设置nfc重复计费计数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPassNo() 获取港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPassNo(string $PassNo) 设置港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVisaNum() 获取港澳台居住证签发次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVisaNum(string $VisaNum) 设置港澳台居住证签发次数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoText extends AbstractModel
 {
@@ -314,6 +322,18 @@ class DetectInfoText extends AbstractModel
     public $NFCBillingCounts;
 
     /**
+     * @var string 港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PassNo;
+
+    /**
+     * @var string 港澳台居住证签发次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VisaNum;
+
+    /**
      * @param integer $ErrCode 本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
@@ -375,6 +395,10 @@ class DetectInfoText extends AbstractModel
      * @param array $NFCRequestIds nfc重复计费requestId列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NFCBillingCounts nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PassNo 港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VisaNum 港澳台居住证签发次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -497,6 +521,14 @@ class DetectInfoText extends AbstractModel
 
         if (array_key_exists("NFCBillingCounts",$param) and $param["NFCBillingCounts"] !== null) {
             $this->NFCBillingCounts = $param["NFCBillingCounts"];
+        }
+
+        if (array_key_exists("PassNo",$param) and $param["PassNo"] !== null) {
+            $this->PassNo = $param["PassNo"];
+        }
+
+        if (array_key_exists("VisaNum",$param) and $param["VisaNum"] !== null) {
+            $this->VisaNum = $param["VisaNum"];
         }
     }
 }

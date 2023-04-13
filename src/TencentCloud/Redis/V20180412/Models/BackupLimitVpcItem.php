@@ -18,28 +18,28 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 自定义的备份文件下载地址的 VPC 信息。
+ * 已配置的备份文件下载地址对应的 VPC 信息。
  *
- * @method string getRegion() 获取自定义下载备份文件的VPC 所属地域。
- * @method void setRegion(string $Region) 设置自定义下载备份文件的VPC 所属地域。
- * @method array getVpcList() 获取自定义下载备份文件的 VPC 列表。
- * @method void setVpcList(array $VpcList) 设置自定义下载备份文件的 VPC 列表。
+ * @method string getRegion() 获取备份文件的下载地址对应VPC 所属的地域。
+ * @method void setRegion(string $Region) 设置备份文件的下载地址对应VPC 所属的地域。
+ * @method array getVpcList() 获取备份文件下载地址的 VPC 列表。
+ * @method void setVpcList(array $VpcList) 设置备份文件下载地址的 VPC 列表。
  */
 class BackupLimitVpcItem extends AbstractModel
 {
     /**
-     * @var string 自定义下载备份文件的VPC 所属地域。
+     * @var string 备份文件的下载地址对应VPC 所属的地域。
      */
     public $Region;
 
     /**
-     * @var array 自定义下载备份文件的 VPC 列表。
+     * @var array 备份文件下载地址的 VPC 列表。
      */
     public $VpcList;
 
     /**
-     * @param string $Region 自定义下载备份文件的VPC 所属地域。
-     * @param array $VpcList 自定义下载备份文件的 VPC 列表。
+     * @param string $Region 备份文件的下载地址对应VPC 所属的地域。
+     * @param array $VpcList 备份文件下载地址的 VPC 列表。
      */
     function __construct()
     {

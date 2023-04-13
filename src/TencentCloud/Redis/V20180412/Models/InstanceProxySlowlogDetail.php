@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 代理慢查询详情
  *
- * @method integer getDuration() 获取慢查询耗时（单位：毫秒）。
- * @method void setDuration(integer $Duration) 设置慢查询耗时（单位：毫秒）。
+ * @method integer getDuration() 获取慢查询耗时时长。单位：毫秒。
+ * @method void setDuration(integer $Duration) 设置慢查询耗时时长。单位：毫秒。
  * @method string getClient() 获取客户端地址。
  * @method void setClient(string $Client) 设置客户端地址。
- * @method string getCommand() 获取命令。
- * @method void setCommand(string $Command) 设置命令。
- * @method string getCommandLine() 获取详细命令行信息。
- * @method void setCommandLine(string $CommandLine) 设置详细命令行信息。
+ * @method string getCommand() 获取慢查询的命令。
+ * @method void setCommand(string $Command) 设置慢查询的命令。
+ * @method string getCommandLine() 获取慢查询详细命令行信息。
+ * @method void setCommandLine(string $CommandLine) 设置慢查询详细命令行信息。
  * @method string getExecuteTime() 获取执行时间。
  * @method void setExecuteTime(string $ExecuteTime) 设置执行时间。
  */
 class InstanceProxySlowlogDetail extends AbstractModel
 {
     /**
-     * @var integer 慢查询耗时（单位：毫秒）。
+     * @var integer 慢查询耗时时长。单位：毫秒。
      */
     public $Duration;
 
@@ -44,12 +44,12 @@ class InstanceProxySlowlogDetail extends AbstractModel
     public $Client;
 
     /**
-     * @var string 命令。
+     * @var string 慢查询的命令。
      */
     public $Command;
 
     /**
-     * @var string 详细命令行信息。
+     * @var string 慢查询详细命令行信息。
      */
     public $CommandLine;
 
@@ -59,10 +59,10 @@ class InstanceProxySlowlogDetail extends AbstractModel
     public $ExecuteTime;
 
     /**
-     * @param integer $Duration 慢查询耗时（单位：毫秒）。
+     * @param integer $Duration 慢查询耗时时长。单位：毫秒。
      * @param string $Client 客户端地址。
-     * @param string $Command 命令。
-     * @param string $CommandLine 详细命令行信息。
+     * @param string $Command 慢查询的命令。
+     * @param string $CommandLine 慢查询详细命令行信息。
      * @param string $ExecuteTime 执行时间。
      */
     function __construct()

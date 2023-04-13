@@ -80,7 +80,7 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\SetOfflineRecordCallbackResponse SetOfflineRecordCallback(Models\SetOfflineRecordCallbackRequest $req) 设置课后录制回调地址
  * @method Models\SetOnlineRecordCallbackResponse SetOnlineRecordCallback(Models\SetOnlineRecordCallbackRequest $req) 设置实时录制回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40258
  * @method Models\SetOnlineRecordCallbackKeyResponse SetOnlineRecordCallbackKey(Models\SetOnlineRecordCallbackKeyRequest $req) 设置实时录制回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
- * @method Models\SetPPTCheckCallbackResponse SetPPTCheckCallback(Models\SetPPTCheckCallbackRequest $req) 设置PPT检测任务回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
+ * @method Models\SetPPTCheckCallbackResponse SetPPTCheckCallback(Models\SetPPTCheckCallbackRequest $req) 设置PPT检测任务回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260#c9cbe05f-fe1a-4410-b4dc-40cc301c7b81
  * @method Models\SetPPTCheckCallbackKeyResponse SetPPTCheckCallbackKey(Models\SetPPTCheckCallbackKeyRequest $req) 设置PPT检测任务回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
  * @method Models\SetTranscodeCallbackResponse SetTranscodeCallback(Models\SetTranscodeCallbackRequest $req) 设置文档转码回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260
  * @method Models\SetTranscodeCallbackKeyResponse SetTranscodeCallbackKey(Models\SetTranscodeCallbackKeyRequest $req) 设置文档转码回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257

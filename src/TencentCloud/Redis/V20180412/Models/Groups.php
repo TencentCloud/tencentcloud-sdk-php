@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 复制组信息
  *
- * @method integer getAppId() 获取用户AppID
- * @method void setAppId(integer $AppId) 设置用户AppID
+ * @method integer getAppId() 获取用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+ * @method void setAppId(integer $AppId) 设置用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
  * @method integer getRegionId() 获取地域ID 。
 - 1：广州 
 - 4：上海 
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 - 23：泰国 
 - 24：俄罗斯 
 - 25：日本
- * @method string getGroupId() 获取复制组 ID。
- * @method void setGroupId(string $GroupId) 设置复制组 ID。
+ * @method string getGroupId() 获取复制组 ID。格式如：crs-rpl-deind****。
+ * @method void setGroupId(string $GroupId) 设置复制组 ID。格式如：crs-rpl-deind****。
  * @method string getGroupName() 获取复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置复制组名称。
@@ -92,7 +92,7 @@ use TencentCloud\Common\AbstractModel;
 class Groups extends AbstractModel
 {
     /**
-     * @var integer 用户AppID
+     * @var integer 用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
      */
     public $AppId;
 
@@ -120,7 +120,7 @@ class Groups extends AbstractModel
     public $RegionId;
 
     /**
-     * @var string 复制组 ID。
+     * @var string 复制组 ID。格式如：crs-rpl-deind****。
      */
     public $GroupId;
 
@@ -158,7 +158,7 @@ class Groups extends AbstractModel
     public $Remark;
 
     /**
-     * @param integer $AppId 用户AppID
+     * @param integer $AppId 用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
      * @param integer $RegionId 地域ID 。
 - 1：广州 
 - 4：上海 
@@ -178,7 +178,7 @@ class Groups extends AbstractModel
 - 23：泰国 
 - 24：俄罗斯 
 - 25：日本
-     * @param string $GroupId 复制组 ID。
+     * @param string $GroupId 复制组 ID。格式如：crs-rpl-deind****。
      * @param string $GroupName 复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 复制组状态。

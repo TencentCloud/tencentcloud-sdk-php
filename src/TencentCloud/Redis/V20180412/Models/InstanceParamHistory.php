@@ -20,50 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例参数修改历史
  *
- * @method string getParamName() 获取参数名称
- * @method void setParamName(string $ParamName) 设置参数名称
- * @method string getPreValue() 获取修改前值
- * @method void setPreValue(string $PreValue) 设置修改前值
- * @method string getNewValue() 获取修改后值
- * @method void setNewValue(string $NewValue) 设置修改后值
- * @method integer getStatus() 获取状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
- * @method void setStatus(integer $Status) 设置状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
- * @method string getModifyTime() 获取修改时间
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
+ * @method string getParamName() 获取参数名称。
+ * @method void setParamName(string $ParamName) 设置参数名称。
+ * @method string getPreValue() 获取参数修改之前的值。
+ * @method void setPreValue(string $PreValue) 设置参数修改之前的值。
+ * @method string getNewValue() 获取参数修改之后的值。
+ * @method void setNewValue(string $NewValue) 设置参数修改之后的值。
+ * @method integer getStatus() 获取参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。
+ * @method void setStatus(integer $Status) 设置参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。
+ * @method string getModifyTime() 获取修改时间。
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间。
  */
 class InstanceParamHistory extends AbstractModel
 {
     /**
-     * @var string 参数名称
+     * @var string 参数名称。
      */
     public $ParamName;
 
     /**
-     * @var string 修改前值
+     * @var string 参数修改之前的值。
      */
     public $PreValue;
 
     /**
-     * @var string 修改后值
+     * @var string 参数修改之后的值。
      */
     public $NewValue;
 
     /**
-     * @var integer 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
+     * @var integer 参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。
      */
     public $Status;
 
     /**
-     * @var string 修改时间
+     * @var string 修改时间。
      */
     public $ModifyTime;
 
     /**
-     * @param string $ParamName 参数名称
-     * @param string $PreValue 修改前值
-     * @param string $NewValue 修改后值
-     * @param integer $Status 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
-     * @param string $ModifyTime 修改时间
+     * @param string $ParamName 参数名称。
+     * @param string $PreValue 参数修改之前的值。
+     * @param string $NewValue 参数修改之后的值。
+     * @param integer $Status 参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。
+     * @param string $ModifyTime 修改时间。
      */
     function __construct()
     {

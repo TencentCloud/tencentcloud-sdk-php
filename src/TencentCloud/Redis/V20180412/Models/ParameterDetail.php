@@ -20,93 +20,101 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Redis参数模板参数详情
  *
- * @method string getName() 获取参数名称
- * @method void setName(string $Name) 设置参数名称
- * @method string getParamType() 获取参数类型
- * @method void setParamType(string $ParamType) 设置参数类型
- * @method string getDefault() 获取参数默认值
- * @method void setDefault(string $Default) 设置参数默认值
- * @method string getDescription() 获取参数描述
- * @method void setDescription(string $Description) 设置参数描述
- * @method string getCurrentValue() 获取参数当前值
- * @method void setCurrentValue(string $CurrentValue) 设置参数当前值
- * @method integer getNeedReboot() 获取修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
- * @method void setNeedReboot(integer $NeedReboot) 设置修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
- * @method string getMax() 获取参数允许的最大值
+ * @method string getName() 获取参数名称。
+ * @method void setName(string $Name) 设置参数名称。
+ * @method string getParamType() 获取参数类型。
+ * @method void setParamType(string $ParamType) 设置参数类型。
+ * @method string getDefault() 获取参数默认值。
+ * @method void setDefault(string $Default) 设置参数默认值。
+ * @method string getDescription() 获取参数描述。
+ * @method void setDescription(string $Description) 设置参数描述。
+ * @method string getCurrentValue() 获取参数当前值。
+ * @method void setCurrentValue(string $CurrentValue) 设置参数当前值。
+ * @method integer getNeedReboot() 获取修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。
+ * @method void setNeedReboot(integer $NeedReboot) 设置修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。
+ * @method string getMax() 获取参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMax(string $Max) 设置参数允许的最大值
+ * @method void setMax(string $Max) 设置参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMin() 获取参数允许的最小值
+ * @method string getMin() 获取参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMin(string $Min) 设置参数允许的最小值
+ * @method void setMin(string $Min) 设置参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getEnumValue() 获取参数的可选枚举值。如果为非枚举参数，则为空
+ * @method array getEnumValue() 获取参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnumValue(array $EnumValue) 设置参数的可选枚举值。如果为非枚举参数，则为空
+ * @method void setEnumValue(array $EnumValue) 设置参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParameterDetail extends AbstractModel
 {
     /**
-     * @var string 参数名称
+     * @var string 参数名称。
      */
     public $Name;
 
     /**
-     * @var string 参数类型
+     * @var string 参数类型。
      */
     public $ParamType;
 
     /**
-     * @var string 参数默认值
+     * @var string 参数默认值。
      */
     public $Default;
 
     /**
-     * @var string 参数描述
+     * @var string 参数描述。
      */
     public $Description;
 
     /**
-     * @var string 参数当前值
+     * @var string 参数当前值。
      */
     public $CurrentValue;
 
     /**
-     * @var integer 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
+     * @var integer 修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。
      */
     public $NeedReboot;
 
     /**
-     * @var string 参数允许的最大值
+     * @var string 参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
-     * @var string 参数允许的最小值
+     * @var string 参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Min;
 
     /**
-     * @var array 参数的可选枚举值。如果为非枚举参数，则为空
+     * @var array 参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnumValue;
 
     /**
-     * @param string $Name 参数名称
-     * @param string $ParamType 参数类型
-     * @param string $Default 参数默认值
-     * @param string $Description 参数描述
-     * @param string $CurrentValue 参数当前值
-     * @param integer $NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
-     * @param string $Max 参数允许的最大值
+     * @param string $Name 参数名称。
+     * @param string $ParamType 参数类型。
+     * @param string $Default 参数默认值。
+     * @param string $Description 参数描述。
+     * @param string $CurrentValue 参数当前值。
+     * @param integer $NeedReboot 修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。
+     * @param string $Max 参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Min 参数允许的最小值
+     * @param string $Min 参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $EnumValue 参数的可选枚举值。如果为非枚举参数，则为空
+     * @param array $EnumValue 参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

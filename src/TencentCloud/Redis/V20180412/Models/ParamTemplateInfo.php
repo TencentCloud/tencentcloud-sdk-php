@@ -20,42 +20,76 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 参数模板信息
  *
- * @method string getTemplateId() 获取参数模板ID
- * @method void setTemplateId(string $TemplateId) 设置参数模板ID
- * @method string getName() 获取参数模板名称
- * @method void setName(string $Name) 设置参数模板名称
- * @method string getDescription() 获取参数模板描述
- * @method void setDescription(string $Description) 设置参数模板描述
- * @method integer getProductType() 获取产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
- * @method void setProductType(integer $ProductType) 设置产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+ * @method string getTemplateId() 获取参数模板 ID。
+ * @method void setTemplateId(string $TemplateId) 设置参数模板 ID。
+ * @method string getName() 获取参数模板名称。
+ * @method void setName(string $Name) 设置参数模板名称。
+ * @method string getDescription() 获取参数模板描述。
+ * @method void setDescription(string $Description) 设置参数模板描述。
+ * @method integer getProductType() 获取实例类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+
+ * @method void setProductType(integer $ProductType) 设置实例类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
  */
 class ParamTemplateInfo extends AbstractModel
 {
     /**
-     * @var string 参数模板ID
+     * @var string 参数模板 ID。
      */
     public $TemplateId;
 
     /**
-     * @var string 参数模板名称
+     * @var string 参数模板名称。
      */
     public $Name;
 
     /**
-     * @var string 参数模板描述
+     * @var string 参数模板描述。
      */
     public $Description;
 
     /**
-     * @var integer 产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * @var integer 实例类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+
      */
     public $ProductType;
 
     /**
-     * @param string $TemplateId 参数模板ID
-     * @param string $Name 参数模板名称
-     * @param string $Description 参数模板描述
-     * @param integer $ProductType 产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * @param string $TemplateId 参数模板 ID。
+     * @param string $Name 参数模板名称。
+     * @param string $Description 参数模板描述。
+     * @param integer $ProductType 实例类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
      */
     function __construct()
     {

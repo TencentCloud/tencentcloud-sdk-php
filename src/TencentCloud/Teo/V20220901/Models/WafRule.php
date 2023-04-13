@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置托管规则开关，取值有：
 <li> on：开启；</li>
 <li> off：关闭。</li>
- * @method array getBlockRuleIDs() 获取黑名单，ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
- * @method void setBlockRuleIDs(array $BlockRuleIDs) 设置黑名单，ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
- * @method array getObserveRuleIDs() 获取观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
- * @method void setObserveRuleIDs(array $ObserveRuleIDs) 设置观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
+ * @method array getBlockRuleIDs() 获取黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。
+ * @method void setBlockRuleIDs(array $BlockRuleIDs) 设置黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。
+ * @method array getObserveRuleIDs() 获取观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。
+ * @method void setObserveRuleIDs(array $ObserveRuleIDs) 设置观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。
  */
 class WafRule extends AbstractModel
 {
@@ -41,12 +41,12 @@ class WafRule extends AbstractModel
     public $Switch;
 
     /**
-     * @var array 黑名单，ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
+     * @var array 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。
      */
     public $BlockRuleIDs;
 
     /**
-     * @var array 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
+     * @var array 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。
      */
     public $ObserveRuleIDs;
 
@@ -54,8 +54,8 @@ class WafRule extends AbstractModel
      * @param string $Switch 托管规则开关，取值有：
 <li> on：开启；</li>
 <li> off：关闭。</li>
-     * @param array $BlockRuleIDs 黑名单，ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
-     * @param array $ObserveRuleIDs 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1)。
+     * @param array $BlockRuleIDs 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。
+     * @param array $ObserveRuleIDs 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。
      */
     function __construct()
     {

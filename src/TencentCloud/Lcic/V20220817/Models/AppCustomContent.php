@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getScene() 获取场景参数，一个应用下可以设置多个不同场景。
  * @method void setScene(string $Scene) 设置场景参数，一个应用下可以设置多个不同场景。
- * @method string getLogoUrl() 获取logo地址。
- * @method void setLogoUrl(string $LogoUrl) 设置logo地址。
- * @method string getHomeUrl() 获取主页地址，可设置用于跳转。
- * @method void setHomeUrl(string $HomeUrl) 设置主页地址，可设置用于跳转。
- * @method string getJsUrl() 获取自定义的js。
- * @method void setJsUrl(string $JsUrl) 设置自定义的js。
- * @method string getCssUrl() 获取自定义的css。
- * @method void setCssUrl(string $CssUrl) 设置自定义的css。
+ * @method string getLogoUrl() 获取logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
+ * @method void setLogoUrl(string $LogoUrl) 设置logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
+ * @method string getHomeUrl() 获取HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
+ * @method void setHomeUrl(string $HomeUrl) 设置HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
+ * @method string getJsUrl() 获取JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
+ * @method void setJsUrl(string $JsUrl) 设置JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
+ * @method string getCssUrl() 获取Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
+ * @method void setCssUrl(string $CssUrl) 设置Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
  */
 class AppCustomContent extends AbstractModel
 {
@@ -39,31 +39,31 @@ class AppCustomContent extends AbstractModel
     public $Scene;
 
     /**
-     * @var string logo地址。
+     * @var string logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
      */
     public $LogoUrl;
 
     /**
-     * @var string 主页地址，可设置用于跳转。
+     * @var string HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
      */
     public $HomeUrl;
 
     /**
-     * @var string 自定义的js。
+     * @var string JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
      */
     public $JsUrl;
 
     /**
-     * @var string 自定义的css。
+     * @var string Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
      */
     public $CssUrl;
 
     /**
      * @param string $Scene 场景参数，一个应用下可以设置多个不同场景。
-     * @param string $LogoUrl logo地址。
-     * @param string $HomeUrl 主页地址，可设置用于跳转。
-     * @param string $JsUrl 自定义的js。
-     * @param string $CssUrl 自定义的css。
+     * @param string $LogoUrl logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
+     * @param string $HomeUrl HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
+     * @param string $JsUrl JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
+     * @param string $CssUrl Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
      */
     function __construct()
     {

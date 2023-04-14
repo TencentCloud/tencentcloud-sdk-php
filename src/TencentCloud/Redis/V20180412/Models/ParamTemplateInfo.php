@@ -35,7 +35,8 @@ use TencentCloud\Common\AbstractModel;
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
-
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
  * @method void setProductType(integer $ProductType) 设置实例类型。
 - 2：Redis 2.8内存版（标准架构）。
 - 3：CKV 3.2内存版（标准架构）。
@@ -45,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
  */
 class ParamTemplateInfo extends AbstractModel
 {
@@ -73,7 +76,8 @@ class ParamTemplateInfo extends AbstractModel
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
-
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      */
     public $ProductType;
 
@@ -90,6 +94,8 @@ class ParamTemplateInfo extends AbstractModel
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      */
     function __construct()
     {

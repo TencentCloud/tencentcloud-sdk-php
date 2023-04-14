@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
  * @method string getCallback() 获取告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档：
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112
  * @method void setCallback(string $Callback) 设置告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档：
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112
  * @method string getCallbackKey() 获取设置告警回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
  * @method void setCallbackKey(string $CallbackKey) 设置设置告警回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
  */
@@ -38,7 +38,7 @@ class SetWarningCallbackRequest extends AbstractModel
 
     /**
      * @var string 告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档：
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112
      */
     public $Callback;
 
@@ -50,7 +50,7 @@ class SetWarningCallbackRequest extends AbstractModel
     /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $Callback 告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档：
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112
      * @param string $CallbackKey 设置告警回调鉴权密钥，最长64字符，如果传入空字符串，那么删除现有的鉴权回调密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
      */
     function __construct()

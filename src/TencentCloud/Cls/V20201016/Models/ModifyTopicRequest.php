@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
  * @method void setHotPeriod(integer $HotPeriod) 设置0：关闭日志沉降。
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+ * @method boolean getIsWebTracking() 获取webtracking开关； false: 关闭 true: 开启
+ * @method void setIsWebTracking(boolean $IsWebTracking) 设置webtracking开关； false: 关闭 true: 开启
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class ModifyTopicRequest extends AbstractModel
     public $HotPeriod;
 
     /**
+     * @var boolean webtracking开关； false: 关闭 true: 开启
+     */
+    public $IsWebTracking;
+
+    /**
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
@@ -100,6 +107,7 @@ class ModifyTopicRequest extends AbstractModel
      * @param string $Describes 日志主题描述
      * @param integer $HotPeriod 0：关闭日志沉降。
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+     * @param boolean $IsWebTracking webtracking开关； false: 关闭 true: 开启
      */
     function __construct()
     {
@@ -153,6 +161,10 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
             $this->HotPeriod = $param["HotPeriod"];
+        }
+
+        if (array_key_exists("IsWebTracking",$param) and $param["IsWebTracking"] !== null) {
+            $this->IsWebTracking = $param["IsWebTracking"];
         }
     }
 }

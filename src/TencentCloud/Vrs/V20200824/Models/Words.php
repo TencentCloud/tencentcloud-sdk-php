@@ -18,19 +18,33 @@ namespace TencentCloud\Vrs\V20200824\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Words
+ * 音频检测提示信息：
+1.检测字是否存在多读、 少读、 错读等
+2.检测准确度和流畅度
  *
- * @method float getPronAccuracy() 获取准确度
+ * @method float getPronAccuracy() 获取准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPronAccuracy(float $PronAccuracy) 设置准确度
+ * @method void setPronAccuracy(float $PronAccuracy) 设置准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getPronFluency() 获取流畅度
+ * @method float getPronFluency() 获取流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPronFluency(float $PronFluency) 设置流畅度
+ * @method void setPronFluency(float $PronFluency) 设置流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTag() 获取tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+ * @method integer getTag() 获取tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTag(integer $Tag) 设置tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+ * @method void setTag(integer $Tag) 设置tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWord() 获取字
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,19 +54,25 @@ use TencentCloud\Common\AbstractModel;
 class Words extends AbstractModel
 {
     /**
-     * @var float 准确度
+     * @var float 准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PronAccuracy;
 
     /**
-     * @var float 流畅度
+     * @var float 流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PronFluency;
 
     /**
-     * @var integer tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+     * @var integer tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
@@ -64,11 +84,17 @@ class Words extends AbstractModel
     public $Word;
 
     /**
-     * @param float $PronAccuracy 准确度
+     * @param float $PronAccuracy 准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $PronFluency 流畅度
+     * @param float $PronFluency 流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Tag tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+     * @param integer $Tag tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Word 字
 注意：此字段可能返回 null，表示取不到有效值。

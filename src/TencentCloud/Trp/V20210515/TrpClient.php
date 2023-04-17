@@ -58,6 +58,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeTmpTokenResponse DescribeTmpToken(Models\DescribeTmpTokenRequest $req) 查询临时Token，主要用于上传接口
  * @method Models\DescribeTraceCodeByIdResponse DescribeTraceCodeById(Models\DescribeTraceCodeByIdRequest $req) 查询二维码信息
  * @method Models\DescribeTraceCodesResponse DescribeTraceCodes(Models\DescribeTraceCodesRequest $req) 查询二维码列表
+ * @method Models\DescribeTraceDataByIdResponse DescribeTraceDataById(Models\DescribeTraceDataByIdRequest $req) 查询溯源ID查溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
  * @method Models\DescribeTraceDataListResponse DescribeTraceDataList(Models\DescribeTraceDataListRequest $req) 查询溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
  * @method Models\ModifyCodeBatchResponse ModifyCodeBatch(Models\ModifyCodeBatchRequest $req) 修改批次
  * @method Models\ModifyCustomRuleResponse ModifyCustomRule(Models\ModifyCustomRuleRequest $req) 修改自定义码规则

@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateFlowReminds返回参数结构体
+ * CreateMigrationTask返回参数结构体
  *
- * @method array getRemindFlowRecords() 获取催办合同详情列表
- * @method void setRemindFlowRecords(array $RemindFlowRecords) 设置催办合同详情列表
+ * @method string getTaskId() 获取迁移任务Id
+ * @method void setTaskId(string $TaskId) 设置迁移任务Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateFlowRemindsResponse extends AbstractModel
+class CreateMigrationTaskResponse extends AbstractModel
 {
     /**
-     * @var array 催办合同详情列表
+     * @var string 迁移任务Id
      */
-    public $RemindFlowRecords;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateFlowRemindsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RemindFlowRecords 催办合同详情列表
+     * @param string $TaskId 迁移任务Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,8 @@ class CreateFlowRemindsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RemindFlowRecords",$param) and $param["RemindFlowRecords"] !== null) {
-            $this->RemindFlowRecords = [];
-            foreach ($param["RemindFlowRecords"] as $key => $value){
-                $obj = new RemindFlowRecords();
-                $obj->deserialize($value);
-                array_push($this->RemindFlowRecords, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

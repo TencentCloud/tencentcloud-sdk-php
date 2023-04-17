@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateFlowReminds返回参数结构体
+ * DescribeMigrationTasks返回参数结构体
  *
- * @method array getRemindFlowRecords() 获取催办合同详情列表
- * @method void setRemindFlowRecords(array $RemindFlowRecords) 设置催办合同详情列表
+ * @method integer getTotalCount() 获取迁移任务的数量
+ * @method void setTotalCount(integer $TotalCount) 设置迁移任务的数量
+ * @method array getMigrationTasks() 获取迁移任务详情
+ * @method void setMigrationTasks(array $MigrationTasks) 设置迁移任务详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateFlowRemindsResponse extends AbstractModel
+class DescribeMigrationTasksResponse extends AbstractModel
 {
     /**
-     * @var array 催办合同详情列表
+     * @var integer 迁移任务的数量
      */
-    public $RemindFlowRecords;
+    public $TotalCount;
+
+    /**
+     * @var array 迁移任务详情
+     */
+    public $MigrationTasks;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateFlowRemindsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RemindFlowRecords 催办合同详情列表
+     * @param integer $TotalCount 迁移任务的数量
+     * @param array $MigrationTasks 迁移任务详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +62,16 @@ class CreateFlowRemindsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RemindFlowRecords",$param) and $param["RemindFlowRecords"] !== null) {
-            $this->RemindFlowRecords = [];
-            foreach ($param["RemindFlowRecords"] as $key => $value){
-                $obj = new RemindFlowRecords();
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("MigrationTasks",$param) and $param["MigrationTasks"] !== null) {
+            $this->MigrationTasks = [];
+            foreach ($param["MigrationTasks"] as $key => $value){
+                $obj = new MigrationTaskInfo();
                 $obj->deserialize($value);
-                array_push($this->RemindFlowRecords, $obj);
+                array_push($this->MigrationTasks, $obj);
             }
         }
 

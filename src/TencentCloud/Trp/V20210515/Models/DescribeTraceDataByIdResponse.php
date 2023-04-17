@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Trp\V20210515\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateFlowReminds返回参数结构体
+ * DescribeTraceDataById返回参数结构体
  *
- * @method array getRemindFlowRecords() 获取催办合同详情列表
- * @method void setRemindFlowRecords(array $RemindFlowRecords) 设置催办合同详情列表
+ * @method TraceData getTraceData() 获取无
+ * @method void setTraceData(TraceData $TraceData) 设置无
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateFlowRemindsResponse extends AbstractModel
+class DescribeTraceDataByIdResponse extends AbstractModel
 {
     /**
-     * @var array 催办合同详情列表
+     * @var TraceData 无
      */
-    public $RemindFlowRecords;
+    public $TraceData;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateFlowRemindsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RemindFlowRecords 催办合同详情列表
+     * @param TraceData $TraceData 无
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,9 @@ class CreateFlowRemindsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RemindFlowRecords",$param) and $param["RemindFlowRecords"] !== null) {
-            $this->RemindFlowRecords = [];
-            foreach ($param["RemindFlowRecords"] as $key => $value){
-                $obj = new RemindFlowRecords();
-                $obj->deserialize($value);
-                array_push($this->RemindFlowRecords, $obj);
-            }
+        if (array_key_exists("TraceData",$param) and $param["TraceData"] !== null) {
+            $this->TraceData = new TraceData();
+            $this->TraceData->deserialize($param["TraceData"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

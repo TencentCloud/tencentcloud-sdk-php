@@ -28,20 +28,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowType(string $FlowType) 设置合同(流程)的类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFlowStatus() 获取合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消
- * @method void setFlowStatus(integer $FlowStatus) 设置合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消
+ * @method integer getFlowStatus() 获取流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
+ * @method void setFlowStatus(integer $FlowStatus) 设置流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
  * @method string getFlowMessage() 获取合同(流程)的信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowMessage(string $FlowMessage) 设置合同(流程)的信息
@@ -76,13 +86,18 @@ class FlowDetailInfo extends AbstractModel
     public $FlowType;
 
     /**
-     * @var integer 合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消
+     * @var integer 流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
      */
     public $FlowStatus;
 
@@ -118,13 +133,18 @@ class FlowDetailInfo extends AbstractModel
      * @param string $FlowName 合同(流程)的名字
      * @param string $FlowType 合同(流程)的类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FlowStatus 合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消
+     * @param integer $FlowStatus 流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
      * @param string $FlowMessage 合同(流程)的信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowDescription 流程的描述

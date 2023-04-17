@@ -20,11 +20,51 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 意愿核身问答模式结果
  *
- * @method string getFinalResultCode() 获取意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+ * @method integer getFinalResultDetailCode() 获取意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFinalResultCode(string $FinalResultCode) 设置意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+ * @method void setFinalResultDetailCode(integer $FinalResultDetailCode) 设置意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFinalResultMessage() 获取意愿核身错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFinalResultMessage(string $FinalResultMessage) 设置意愿核身错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVideo() 获取视频base64（其中包含全程问题和回答音频，mp4格式）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,15 +88,45 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudios(array $Audios) 设置答案录音音频
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFinalResultCode() 获取意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFinalResultCode(string $FinalResultCode) 设置意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntentionQuestionResult extends AbstractModel
 {
     /**
-     * @var string 意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+     * @var integer 意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FinalResultCode;
+    public $FinalResultDetailCode;
+
+    /**
+     * @var string 意愿核身错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FinalResultMessage;
 
     /**
      * @var string 视频base64（其中包含全程问题和回答音频，mp4格式）
@@ -90,8 +160,35 @@ class IntentionQuestionResult extends AbstractModel
     public $Audios;
 
     /**
-     * @param string $FinalResultCode 意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+     * @var string 意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FinalResultCode;
+
+    /**
+     * @param integer $FinalResultDetailCode 意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FinalResultMessage 意愿核身错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Video 视频base64（其中包含全程问题和回答音频，mp4格式）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +200,9 @@ class IntentionQuestionResult extends AbstractModel
      * @param array $AsrResult 回答问题语音识别结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Audios 答案录音音频
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FinalResultCode 意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -118,8 +218,12 @@ class IntentionQuestionResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FinalResultCode",$param) and $param["FinalResultCode"] !== null) {
-            $this->FinalResultCode = $param["FinalResultCode"];
+        if (array_key_exists("FinalResultDetailCode",$param) and $param["FinalResultDetailCode"] !== null) {
+            $this->FinalResultDetailCode = $param["FinalResultDetailCode"];
+        }
+
+        if (array_key_exists("FinalResultMessage",$param) and $param["FinalResultMessage"] !== null) {
+            $this->FinalResultMessage = $param["FinalResultMessage"];
         }
 
         if (array_key_exists("Video",$param) and $param["Video"] !== null) {
@@ -140,6 +244,10 @@ class IntentionQuestionResult extends AbstractModel
 
         if (array_key_exists("Audios",$param) and $param["Audios"] !== null) {
             $this->Audios = $param["Audios"];
+        }
+
+        if (array_key_exists("FinalResultCode",$param) and $param["FinalResultCode"] !== null) {
+            $this->FinalResultCode = $param["FinalResultCode"];
         }
     }
 }

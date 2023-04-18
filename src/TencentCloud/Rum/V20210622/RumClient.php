@@ -46,6 +46,10 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DeleteReleaseFileResponse DeleteReleaseFile(Models\DeleteReleaseFileRequest $req) 将对应 sourcemap 文件删除
  * @method Models\DeleteStarProjectResponse DeleteStarProject(Models\DeleteStarProjectRequest $req) 删除用户名下的星标项目
  * @method Models\DeleteWhitelistResponse DeleteWhitelist(Models\DeleteWhitelistRequest $req) 删除白名单
+ * @method Models\DescribeAppDimensionMetricsResponse DescribeAppDimensionMetrics(Models\DescribeAppDimensionMetricsRequest $req) 用于查询 app 监控多维分析数据
+ * @method Models\DescribeAppMetricsDataResponse DescribeAppMetricsData(Models\DescribeAppMetricsDataRequest $req) 获取 app 监控指标数据
+ * @method Models\DescribeAppSingleCaseDetailListResponse DescribeAppSingleCaseDetailList(Models\DescribeAppSingleCaseDetailListRequest $req) 查询 app 监控个例样本详情列表
+ * @method Models\DescribeAppSingleCaseListResponse DescribeAppSingleCaseList(Models\DescribeAppSingleCaseListRequest $req) 查询 app 监控个例聚合列表
  * @method Models\DescribeDataResponse DescribeData(Models\DescribeDataRequest $req) 转发monitor查询
  * @method Models\DescribeDataCustomUrlResponse DescribeDataCustomUrl(Models\DescribeDataCustomUrlRequest $req) 获取DescribeDataCustomUrl信息
  * @method Models\DescribeDataEventUrlResponse DescribeDataEventUrl(Models\DescribeDataEventUrlRequest $req) 获取DescribeDataEventUrl信息

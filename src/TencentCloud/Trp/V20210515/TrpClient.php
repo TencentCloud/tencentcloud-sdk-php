@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trp\V20210515\Models as Models;
 
 /**
+ * @method Models\AuthorizedTransferResponse AuthorizedTransfer(Models\AuthorizedTransferRequest $req) 接收客户侧的用户已授权的号码。
  * @method Models\CreateCodeBatchResponse CreateCodeBatch(Models\CreateCodeBatchRequest $req) 新增批次
  * @method Models\CreateCodePackResponse CreateCodePack(Models\CreateCodePackRequest $req) 生成普通码包
  * @method Models\CreateCorporationOrderResponse CreateCorporationOrder(Models\CreateCorporationOrderRequest $req) 以订单方式新建企业信息/配额信息
@@ -60,6 +61,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeTraceCodesResponse DescribeTraceCodes(Models\DescribeTraceCodesRequest $req) 查询二维码列表
  * @method Models\DescribeTraceDataByIdResponse DescribeTraceDataById(Models\DescribeTraceDataByIdRequest $req) 查询溯源ID查溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
  * @method Models\DescribeTraceDataListResponse DescribeTraceDataList(Models\DescribeTraceDataListRequest $req) 查询溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
+ * @method Models\EffectFeedbackResponse EffectFeedback(Models\EffectFeedbackRequest $req) 接收客户反馈的各环节数据
  * @method Models\ModifyCodeBatchResponse ModifyCodeBatch(Models\ModifyCodeBatchRequest $req) 修改批次
  * @method Models\ModifyCustomRuleResponse ModifyCustomRule(Models\ModifyCustomRuleRequest $req) 修改自定义码规则
  * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 更新自定义码规则状态
@@ -70,6 +72,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
 注意：溯源码必须属于指定的批次才会解绑
  * @method Models\ModifyTraceDataResponse ModifyTraceData(Models\ModifyTraceDataRequest $req) 修改溯源信息
  * @method Models\ModifyTraceDataRanksResponse ModifyTraceDataRanks(Models\ModifyTraceDataRanksRequest $req) 修改溯源信息的排序
+ * @method Models\ReportBatchCallbackStatusResponse ReportBatchCallbackStatus(Models\ReportBatchCallbackStatusRequest $req) 接收离线筛选包回执，用于效果统计和分析。
  */
 
 class TrpClient extends AbstractClient

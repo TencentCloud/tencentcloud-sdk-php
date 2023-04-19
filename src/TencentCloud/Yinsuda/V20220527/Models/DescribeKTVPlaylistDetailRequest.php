@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRightFilters(array $RightFilters) 设置权益过滤，取值有：
 <li>Play：可播；</li>
 <li>Sing：可唱。</li>
+ * @method string getPlayScene() 获取播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+ * @method void setPlayScene(string $PlayScene) 设置播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
  */
 class DescribeKTVPlaylistDetailRequest extends AbstractModel
 {
@@ -72,6 +76,12 @@ class DescribeKTVPlaylistDetailRequest extends AbstractModel
     public $RightFilters;
 
     /**
+     * @var string 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public $PlayScene;
+
+    /**
      * @param string $AppName 应用名称。
      * @param string $UserId 用户标识。
      * @param string $PlaylistId 歌单 Id。
@@ -80,6 +90,8 @@ class DescribeKTVPlaylistDetailRequest extends AbstractModel
      * @param array $RightFilters 权益过滤，取值有：
 <li>Play：可播；</li>
 <li>Sing：可唱。</li>
+     * @param string $PlayScene 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ class DescribeKTVPlaylistDetailRequest extends AbstractModel
 
         if (array_key_exists("RightFilters",$param) and $param["RightFilters"] !== null) {
             $this->RightFilters = $param["RightFilters"];
+        }
+
+        if (array_key_exists("PlayScene",$param) and $param["PlayScene"] !== null) {
+            $this->PlayScene = $param["PlayScene"];
         }
     }
 }

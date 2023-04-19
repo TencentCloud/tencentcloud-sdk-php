@@ -76,6 +76,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置更新的UNIX时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPages() 获取课件页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPages(integer $Pages) 设置课件页数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWidth() 获取宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWidth(integer $Width) 设置宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHeight() 获取高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeight(integer $Height) 设置高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCover() 获取封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCover(string $Cover) 设置封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DocumentInfo extends AbstractModel
 {
@@ -164,6 +180,30 @@ class DocumentInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer 课件页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Pages;
+
+    /**
+     * @var integer 宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Width;
+
+    /**
+     * @var integer 高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Height;
+
+    /**
+     * @var string 封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cover;
+
+    /**
      * @param string $DocumentId 文档Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentUrl 文档原址url
@@ -191,6 +231,14 @@ class DocumentInfo extends AbstractModel
      * @param integer $DocumentSize 文档大小，单位：字节
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 更新的UNIX时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Pages 课件页数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Width 宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Height 高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Cover 封面，仅转码的课件会生成封面
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +308,22 @@ class DocumentInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Pages",$param) and $param["Pages"] !== null) {
+            $this->Pages = $param["Pages"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("Cover",$param) and $param["Cover"] !== null) {
+            $this->Cover = $param["Cover"];
         }
     }
 }

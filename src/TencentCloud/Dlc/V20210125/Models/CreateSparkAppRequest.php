@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSparkImageVersion(string $SparkImageVersion) 设置Spark Image 版本名称
  * @method integer getAppExecutorMaxNumbers() 获取指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
  * @method void setAppExecutorMaxNumbers(integer $AppExecutorMaxNumbers) 设置指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
+ * @method string getSessionId() 获取关联dlc查询脚本id
+ * @method void setSessionId(string $SessionId) 设置关联dlc查询脚本id
  */
 class CreateSparkAppRequest extends AbstractModel
 {
@@ -206,6 +208,11 @@ class CreateSparkAppRequest extends AbstractModel
     public $AppExecutorMaxNumbers;
 
     /**
+     * @var string 关联dlc查询脚本id
+     */
+    public $SessionId;
+
+    /**
      * @param string $AppName spark应用名
      * @param integer $AppType 1代表spark jar应用，2代表spark streaming应用
      * @param string $DataEngine 执行spark作业的数据引擎
@@ -232,6 +239,7 @@ class CreateSparkAppRequest extends AbstractModel
      * @param string $SparkImage Spark Image 版本
      * @param string $SparkImageVersion Spark Image 版本名称
      * @param integer $AppExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
+     * @param string $SessionId 关联dlc查询脚本id
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ class CreateSparkAppRequest extends AbstractModel
 
         if (array_key_exists("AppExecutorMaxNumbers",$param) and $param["AppExecutorMaxNumbers"] !== null) {
             $this->AppExecutorMaxNumbers = $param["AppExecutorMaxNumbers"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

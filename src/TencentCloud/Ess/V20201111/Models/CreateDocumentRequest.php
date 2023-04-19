@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) 设置签署流程编号,由CreateFlow接口返回
  * @method string getTemplateId() 获取用户上传的模板ID
  * @method void setTemplateId(string $TemplateId) 设置用户上传的模板ID
- * @method array getFileNames() 获取文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
- * @method void setFileNames(array $FileNames) 设置文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
+ * @method array getFileNames() 获取文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
+ * @method void setFileNames(array $FileNames) 设置文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
  * @method array getFormFields() 获取内容控件信息数组
  * @method void setFormFields(array $FormFields) 设置内容控件信息数组
  * @method boolean getNeedPreview() 获取是否需要生成预览文件 默认不生成；
@@ -59,7 +59,7 @@ class CreateDocumentRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var array 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
+     * @var array 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
      */
     public $FileNames;
 
@@ -93,7 +93,7 @@ class CreateDocumentRequest extends AbstractModel
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      * @param string $FlowId 签署流程编号,由CreateFlow接口返回
      * @param string $TemplateId 用户上传的模板ID
-     * @param array $FileNames 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
+     * @param array $FileNames 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
      * @param array $FormFields 内容控件信息数组
      * @param boolean $NeedPreview 是否需要生成预览文件 默认不生成；
 预览链接有效期300秒；

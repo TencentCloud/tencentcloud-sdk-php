@@ -82,6 +82,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxySendTimeout(integer $ProxySendTimeout) 设置300s
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSniType() 获取0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSniType(integer $SniType) 设置0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSniHost() 获取SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSniHost(string $SniHost) 设置SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWeights() 获取无
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeights(array $Weights) 设置无
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIpHeaders() 获取IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -217,6 +233,30 @@ class DomainsPartInfo extends AbstractModel
     public $ProxySendTimeout;
 
     /**
+     * @var integer 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SniType;
+
+    /**
+     * @var string SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SniHost;
+
+    /**
+     * @var array 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Weights;
+
+    /**
+     * @var array IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpHeaders;
+
+    /**
      * @param integer $HttpsRewrite 是否开启httpRewrite
      * @param string $HttpsUpstreamPort https回源端口
      * @param integer $IsCdn 是否是cdn
@@ -247,6 +287,14 @@ class DomainsPartInfo extends AbstractModel
      * @param integer $ProxyReadTimeout 300s
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxySendTimeout 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SniHost SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Weights 无
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IpHeaders IsCdn=3时，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -365,6 +413,22 @@ class DomainsPartInfo extends AbstractModel
 
         if (array_key_exists("ProxySendTimeout",$param) and $param["ProxySendTimeout"] !== null) {
             $this->ProxySendTimeout = $param["ProxySendTimeout"];
+        }
+
+        if (array_key_exists("SniType",$param) and $param["SniType"] !== null) {
+            $this->SniType = $param["SniType"];
+        }
+
+        if (array_key_exists("SniHost",$param) and $param["SniHost"] !== null) {
+            $this->SniHost = $param["SniHost"];
+        }
+
+        if (array_key_exists("Weights",$param) and $param["Weights"] !== null) {
+            $this->Weights = $param["Weights"];
+        }
+
+        if (array_key_exists("IpHeaders",$param) and $param["IpHeaders"] !== null) {
+            $this->IpHeaders = $param["IpHeaders"];
         }
     }
 }

@@ -203,6 +203,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\UninstallClusterReleaseResponse UninstallClusterRelease(Models\UninstallClusterReleaseRequest $req) 在应用市场中集群删除某个应用
  * @method Models\UninstallEdgeLogAgentResponse UninstallEdgeLogAgent(Models\UninstallEdgeLogAgentRequest $req) 从tke@edge集群边缘节点上卸载日志采集组件
  * @method Models\UninstallLogAgentResponse UninstallLogAgent(Models\UninstallLogAgentRequest $req) 从TKE集群中卸载CLS日志采集组件
+ * @method Models\UpdateClusterKubeconfigResponse UpdateClusterKubeconfig(Models\UpdateClusterKubeconfigRequest $req) 对集群的Kubeconfig信息进行更新
  * @method Models\UpdateClusterVersionResponse UpdateClusterVersion(Models\UpdateClusterVersionRequest $req) 升级集群 Master 组件到指定版本
  * @method Models\UpdateEKSClusterResponse UpdateEKSCluster(Models\UpdateEKSClusterRequest $req) 修改弹性集群名称等属性 
  * @method Models\UpdateEKSContainerInstanceResponse UpdateEKSContainerInstance(Models\UpdateEKSContainerInstanceRequest $req) 更新容器实例

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnbindEmployeeUserIdWithClientOpenId请求参数结构体
  *
- * @method UserInfo getOperator() 获取OpenId与UserId二选一必填一个，当传入客户系统openId，传入的openId需与电子签员工userId绑定，且渠道channel必填，channel值为INTEGRATE，否则传入userId
- * @method void setOperator(UserInfo $Operator) 设置OpenId与UserId二选一必填一个，当传入客户系统openId，传入的openId需与电子签员工userId绑定，且渠道channel必填，channel值为INTEGRATE，否则传入userId
+ * @method UserInfo getOperator() 获取用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为INTEGRATE；当传入参数UserId，Channel无需指定
+ * @method void setOperator(UserInfo $Operator) 设置用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为INTEGRATE；当传入参数UserId，Channel无需指定
  * @method string getUserId() 获取电子签系统员工UserId
  * @method void setUserId(string $UserId) 设置电子签系统员工UserId
  * @method string getOpenId() 获取客户系统OpenId
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel
 {
     /**
-     * @var UserInfo OpenId与UserId二选一必填一个，当传入客户系统openId，传入的openId需与电子签员工userId绑定，且渠道channel必填，channel值为INTEGRATE，否则传入userId
+     * @var UserInfo 用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为INTEGRATE；当传入参数UserId，Channel无需指定
      */
     public $Operator;
 
@@ -45,7 +45,7 @@ class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel
     public $OpenId;
 
     /**
-     * @param UserInfo $Operator OpenId与UserId二选一必填一个，当传入客户系统openId，传入的openId需与电子签员工userId绑定，且渠道channel必填，channel值为INTEGRATE，否则传入userId
+     * @param UserInfo $Operator 用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为INTEGRATE；当传入参数UserId，Channel无需指定
      * @param string $UserId 电子签系统员工UserId
      * @param string $OpenId 客户系统OpenId
      */

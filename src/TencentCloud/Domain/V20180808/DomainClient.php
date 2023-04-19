@@ -42,7 +42,6 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\DescribePhoneEmailListResponse DescribePhoneEmailList(Models\DescribePhoneEmailListRequest $req) 本接口用于获取已验证的手机邮箱列表
  * @method Models\DescribeTemplateResponse DescribeTemplate(Models\DescribeTemplateRequest $req) 本接口 (DescribeTemplate) 用于获取模板信息。
  * @method Models\DescribeTemplateListResponse DescribeTemplateList(Models\DescribeTemplateListRequest $req) 本接口 (DescribeTemplateList) 用于获取信息模板列表。
-
  * @method Models\ModifyDomainDNSBatchResponse ModifyDomainDNSBatch(Models\ModifyDomainDNSBatchRequest $req) 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
  * @method Models\ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(Models\ModifyDomainOwnerBatchRequest $req) 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
  * @method Models\RenewDomainBatchResponse RenewDomainBatch(Models\RenewDomainBatchRequest $req) 本接口 ( RenewDomainBatch ) 用于批量续费域名 。

@@ -34,6 +34,10 @@ mainland：境内
 overseas：境外
  * @method string getLogName() 获取日志包文件名
  * @method void setLogName(string $LogName) 设置日志包文件名
+ * @method integer getFileSize() 获取文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileSize(integer $FileSize) 设置文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainLog extends AbstractModel
 {
@@ -65,6 +69,12 @@ overseas：境外
     public $LogName;
 
     /**
+     * @var integer 文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileSize;
+
+    /**
      * @param string $StartTime 日志包起始时间
      * @param string $EndTime 日志包结束时间
      * @param string $LogPath 日志包下载链接
@@ -72,6 +82,8 @@ overseas：境外
 mainland：境内
 overseas：境外
      * @param string $LogName 日志包文件名
+     * @param integer $FileSize 文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -104,6 +116,10 @@ overseas：境外
 
         if (array_key_exists("LogName",$param) and $param["LogName"] !== null) {
             $this->LogName = $param["LogName"];
+        }
+
+        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
+            $this->FileSize = $param["FileSize"];
         }
     }
 }

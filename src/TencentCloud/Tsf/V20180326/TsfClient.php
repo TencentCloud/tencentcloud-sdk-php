@@ -40,8 +40,10 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建配置项
  * @method Models\CreateConfigTemplateResponse CreateConfigTemplate(Models\CreateConfigTemplateRequest $req) 创建参数模板
  * @method Models\CreateConfigTemplateWithDetailRespResponse CreateConfigTemplateWithDetailResp(Models\CreateConfigTemplateWithDetailRespRequest $req) 创建参数模板,并返回模版详细信息
+ * @method Models\CreateConfigWithDetailRespResponse CreateConfigWithDetailResp(Models\CreateConfigWithDetailRespRequest $req) 创建配置项，返回详细信息
  * @method Models\CreateContainGroupResponse CreateContainGroup(Models\CreateContainGroupRequest $req) （已废弃，请使用 CreateGroup 和 DeployContainerGroup 创建和部署容器部署组）创建容器部署组
  * @method Models\CreateFileConfigResponse CreateFileConfig(Models\CreateFileConfigRequest $req) 创建文件配置项
+ * @method Models\CreateFileConfigWithDetailRespResponse CreateFileConfigWithDetailResp(Models\CreateFileConfigWithDetailRespRequest $req) 创建文件配置项，返回详细信息
  * @method Models\CreateGatewayApiResponse CreateGatewayApi(Models\CreateGatewayApiRequest $req) 批量导入API至api分组(也支持新建API到分组)
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建虚拟机部署组
  * @method Models\CreateLaneResponse CreateLane(Models\CreateLaneRequest $req) 创建泳道

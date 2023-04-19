@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
- * @method void setFilters(array $Filters) 设置过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+ * @method array getFilters() 获取过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
+ * @method void setFilters(array $Filters) 设置过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
  * @method string getOrder() 获取升序降序,asc desc
  * @method void setOrder(string $Order) 设置升序降序,asc desc
  * @method string getBy() 获取排序字段
@@ -44,7 +46,8 @@ class DescribeReverseShellEventsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * @var array 过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
      */
     public $Filters;
 
@@ -61,7 +64,8 @@ class DescribeReverseShellEventsRequest extends AbstractModel
     /**
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * @param array $Filters 过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
      * @param string $Order 升序降序,asc desc
      * @param string $By 排序字段
      */

@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttpsRewrite(integer $HttpsRewrite) 设置表示是否强制跳转到HTTPS，1强制跳转Https，0不强制跳转
  * @method array getPorts() 获取服务有多端口需要设置此字段
  * @method void setPorts(array $Ports) 设置服务有多端口需要设置此字段
- * @method string getEdition() 获取版本：sparta-waf、clb-waf、cdn-waf
- * @method void setEdition(string $Edition) 设置版本：sparta-waf、clb-waf、cdn-waf
+ * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
+ * @method void setEdition(string $Edition) 设置WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
  * @method string getIsKeepAlive() 获取是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
  * @method void setIsKeepAlive(string $IsKeepAlive) 设置是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
  * @method string getInstanceID() 获取实例id，上线之后带上此字段
@@ -80,6 +80,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置300s
  * @method integer getProxySendTimeout() 获取300s
  * @method void setProxySendTimeout(integer $ProxySendTimeout) 设置300s
+ * @method integer getSniType() 获取0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+ * @method void setSniType(integer $SniType) 设置0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+ * @method string getSniHost() 获取SniType=3时，需要填此参数，表示自定义的host；
+ * @method void setSniHost(string $SniHost) 设置SniType=3时，需要填此参数，表示自定义的host；
+ * @method array getIpHeaders() 获取is_cdn=3时，需要填此参数，表示自定义header
+ * @method void setIpHeaders(array $IpHeaders) 设置is_cdn=3时，需要填此参数，表示自定义header
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -179,7 +185,7 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $Ports;
 
     /**
-     * @var string 版本：sparta-waf、clb-waf、cdn-waf
+     * @var string WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
      */
     public $Edition;
 
@@ -234,6 +240,21 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $ProxySendTimeout;
 
     /**
+     * @var integer 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     */
+    public $SniType;
+
+    /**
+     * @var string SniType=3时，需要填此参数，表示自定义的host；
+     */
+    public $SniHost;
+
+    /**
+     * @var array is_cdn=3时，需要填此参数，表示自定义header
+     */
+    public $IpHeaders;
+
+    /**
      * @param string $Domain 需要防御的域名
      * @param integer $CertType 证书类型，0表示没有证书，CertType=1表示自有证书,2 为托管证书
      * @param integer $IsCdn 表示是否开启了CDN代理，1：有部署CDN，0：未部署CDN
@@ -253,7 +274,7 @@ class AddSpartaProtectionRequest extends AbstractModel
      * @param integer $IsHttp2 是否开启HTTP2,开启HTTP2需要HTTPS支持
      * @param integer $HttpsRewrite 表示是否强制跳转到HTTPS，1强制跳转Https，0不强制跳转
      * @param array $Ports 服务有多端口需要设置此字段
-     * @param string $Edition 版本：sparta-waf、clb-waf、cdn-waf
+     * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
      * @param string $IsKeepAlive 是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
      * @param string $InstanceID 实例id，上线之后带上此字段
      * @param integer $Anycast anycast IP类型开关： 0 普通IP 1 Anycast IP
@@ -264,6 +285,9 @@ class AddSpartaProtectionRequest extends AbstractModel
      * @param integer $CipherTemplate 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
      * @param integer $ProxyReadTimeout 300s
      * @param integer $ProxySendTimeout 300s
+     * @param integer $SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     * @param string $SniHost SniType=3时，需要填此参数，表示自定义的host；
+     * @param array $IpHeaders is_cdn=3时，需要填此参数，表示自定义header
      */
     function __construct()
     {
@@ -401,6 +425,18 @@ class AddSpartaProtectionRequest extends AbstractModel
 
         if (array_key_exists("ProxySendTimeout",$param) and $param["ProxySendTimeout"] !== null) {
             $this->ProxySendTimeout = $param["ProxySendTimeout"];
+        }
+
+        if (array_key_exists("SniType",$param) and $param["SniType"] !== null) {
+            $this->SniType = $param["SniType"];
+        }
+
+        if (array_key_exists("SniHost",$param) and $param["SniHost"] !== null) {
+            $this->SniHost = $param["SniHost"];
+        }
+
+        if (array_key_exists("IpHeaders",$param) and $param["IpHeaders"] !== null) {
+            $this->IpHeaders = $param["IpHeaders"];
         }
     }
 }

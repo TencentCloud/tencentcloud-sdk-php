@@ -50,10 +50,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBundleSalesState(string $BundleSalesState) 设置套餐售卖状态,取值:‘AVAILABLE’(可用) , ‘SOLD_OUT’(售罄)
  * @method string getBundleType() 获取套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li>
  * @method void setBundleType(string $BundleType) 设置套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li>
+ * @method string getBundleTypeDescription() 获取套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleTypeDescription(string $BundleTypeDescription) 设置套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBundleDisplayLabel() 获取套餐展示标签.
 取值范围:
 "ACTIVITY": 活动套餐,
@@ -132,9 +150,22 @@ class Bundle extends AbstractModel
     /**
      * @var string 套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li>
      */
     public $BundleType;
+
+    /**
+     * @var string 套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleTypeDescription;
 
     /**
      * @var string 套餐展示标签.
@@ -162,7 +193,16 @@ class Bundle extends AbstractModel
      * @param string $BundleSalesState 套餐售卖状态,取值:‘AVAILABLE’(可用) , ‘SOLD_OUT’(售罄)
      * @param string $BundleType 套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li>
+     * @param string $BundleTypeDescription 套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BundleDisplayLabel 套餐展示标签.
 取值范围:
 "ACTIVITY": 活动套餐,
@@ -233,6 +273,10 @@ class Bundle extends AbstractModel
 
         if (array_key_exists("BundleType",$param) and $param["BundleType"] !== null) {
             $this->BundleType = $param["BundleType"];
+        }
+
+        if (array_key_exists("BundleTypeDescription",$param) and $param["BundleTypeDescription"] !== null) {
+            $this->BundleTypeDescription = $param["BundleTypeDescription"];
         }
 
         if (array_key_exists("BundleDisplayLabel",$param) and $param["BundleDisplayLabel"] !== null) {

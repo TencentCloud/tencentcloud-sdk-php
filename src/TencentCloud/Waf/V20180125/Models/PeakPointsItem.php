@@ -33,8 +33,34 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCc() 获取CC攻击次数
  * @method void setCc(integer $Cc) 设置CC攻击次数
  * @method integer getBotAccess() 获取Bot qps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotAccess(integer $BotAccess) 设置Bot qps
+ * @method integer getStatusServerError() 获取WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusServerError(integer $StatusServerError) 设置WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatusClientError() 获取WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusClientError(integer $StatusClientError) 设置WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatusRedirect() 获取WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusRedirect(integer $StatusRedirect) 设置WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatusOk() 获取WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusOk(integer $StatusOk) 设置WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpstreamServerError() 获取源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpstreamServerError(integer $UpstreamServerError) 设置源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpstreamClientError() 获取源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpstreamClientError(integer $UpstreamClientError) 设置源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpstreamRedirect() 获取源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpstreamRedirect(integer $UpstreamRedirect) 设置源站返回给WAF状态码次数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PeakPointsItem extends AbstractModel
@@ -71,9 +97,50 @@ class PeakPointsItem extends AbstractModel
 
     /**
      * @var integer Bot qps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotAccess;
+
+    /**
+     * @var integer WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusServerError;
+
+    /**
+     * @var integer WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusClientError;
+
+    /**
+     * @var integer WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusRedirect;
+
+    /**
+     * @var integer WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusOk;
+
+    /**
+     * @var integer 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpstreamServerError;
+
+    /**
+     * @var integer 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpstreamClientError;
+
+    /**
+     * @var integer 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpstreamRedirect;
 
     /**
      * @param integer $Time 秒级别时间戳
@@ -83,6 +150,19 @@ class PeakPointsItem extends AbstractModel
      * @param integer $Attack Web攻击次数
      * @param integer $Cc CC攻击次数
      * @param integer $BotAccess Bot qps
+     * @param integer $StatusServerError WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StatusClientError WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StatusRedirect WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StatusOk WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpstreamServerError 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpstreamClientError 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpstreamRedirect 源站返回给WAF状态码次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +204,34 @@ class PeakPointsItem extends AbstractModel
 
         if (array_key_exists("BotAccess",$param) and $param["BotAccess"] !== null) {
             $this->BotAccess = $param["BotAccess"];
+        }
+
+        if (array_key_exists("StatusServerError",$param) and $param["StatusServerError"] !== null) {
+            $this->StatusServerError = $param["StatusServerError"];
+        }
+
+        if (array_key_exists("StatusClientError",$param) and $param["StatusClientError"] !== null) {
+            $this->StatusClientError = $param["StatusClientError"];
+        }
+
+        if (array_key_exists("StatusRedirect",$param) and $param["StatusRedirect"] !== null) {
+            $this->StatusRedirect = $param["StatusRedirect"];
+        }
+
+        if (array_key_exists("StatusOk",$param) and $param["StatusOk"] !== null) {
+            $this->StatusOk = $param["StatusOk"];
+        }
+
+        if (array_key_exists("UpstreamServerError",$param) and $param["UpstreamServerError"] !== null) {
+            $this->UpstreamServerError = $param["UpstreamServerError"];
+        }
+
+        if (array_key_exists("UpstreamClientError",$param) and $param["UpstreamClientError"] !== null) {
+            $this->UpstreamClientError = $param["UpstreamClientError"];
+        }
+
+        if (array_key_exists("UpstreamRedirect",$param) and $param["UpstreamRedirect"] !== null) {
+            $this->UpstreamRedirect = $param["UpstreamRedirect"];
         }
     }
 }

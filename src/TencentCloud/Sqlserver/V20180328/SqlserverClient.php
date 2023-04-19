@@ -60,6 +60,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeDBCharsetsResponse DescribeDBCharsets(Models\DescribeDBCharsetsRequest $req) 本接口（DescribeDBCharsets）用于查询实例支持的数据库字符集。
  * @method Models\DescribeDBInstanceInterResponse DescribeDBInstanceInter(Models\DescribeDBInstanceInterRequest $req) 本接口（DescribeDBInstanceInter）用于查询互通实例的信息。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口(DescribeDBInstances)用于查询实例列表。
+ * @method Models\DescribeDBInstancesAttributeResponse DescribeDBInstancesAttribute(Models\DescribeDBInstancesAttributeRequest $req) 本接口（DescribeDBInstancesAttribute）用于查询实例附属属性
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
  * @method Models\DescribeDBsResponse DescribeDBs(Models\DescribeDBsRequest $req) 本接口（DescribeDBs）用于查询数据库列表。
  * @method Models\DescribeDBsNormalResponse DescribeDBsNormal(Models\DescribeDBsNormalRequest $req) 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
@@ -83,6 +84,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeSlowlogsResponse DescribeSlowlogs(Models\DescribeSlowlogsRequest $req) 本接口（DescribeSlowlogs）用于获取慢查询日志文件信息
  * @method Models\DescribeUploadBackupInfoResponse DescribeUploadBackupInfo(Models\DescribeUploadBackupInfoRequest $req) 本接口（DescribeUploadBackupInfo）用于查询备份上传权限。
  * @method Models\DescribeUploadIncrementalInfoResponse DescribeUploadIncrementalInfo(Models\DescribeUploadIncrementalInfoRequest $req) 本接口（DescribeUploadIncrementalInfo）用于查询增量备份上传权限。
+ * @method Models\DescribeXEventsResponse DescribeXEvents(Models\DescribeXEventsRequest $req) 本接口（DescribeXEvents）用于查询扩展事件列表。
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口 (DescribeZones) 用于查询当前可售卖的可用区信息。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
  * @method Models\InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(Models\InquiryPriceCreateDBInstancesRequest $req) 本接口（InquiryPriceCreateDBInstances）用于查询申请实例价格。
@@ -126,6 +128,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\RunMigrationResponse RunMigration(Models\RunMigrationRequest $req) 本接口（RunMigration）用于启动迁移任务，开始迁移
  * @method Models\StartBackupMigrationResponse StartBackupMigration(Models\StartBackupMigrationRequest $req) 本接口（StartBackupMigration）用于启动备份导入任务。
  * @method Models\StartIncrementalMigrationResponse StartIncrementalMigration(Models\StartIncrementalMigrationRequest $req) 本接口（StartIncrementalMigration）用于启动增量备份导入任务。
+ * @method Models\StartInstanceXEventResponse StartInstanceXEvent(Models\StartInstanceXEventRequest $req) 本接口（StartInstanceXEvent）用于开启、关闭扩展事件。
  * @method Models\StartMigrationCheckResponse StartMigrationCheck(Models\StartMigrationCheckRequest $req) 本接口（StartMigrationCheck）的作用是启动一个迁移前的校验任务，适用于迁移源的类型为TencentDB for SQLServer 的迁移方式
  * @method Models\StopMigrationResponse StopMigration(Models\StopMigrationRequest $req) 本接口（StopMigration）作用是中止一个迁移任务
  * @method Models\TerminateDBInstanceResponse TerminateDBInstance(Models\TerminateDBInstanceRequest $req) 本接口(TerminateDBInstance)用于主动隔离实例，使得实例进入回收站。

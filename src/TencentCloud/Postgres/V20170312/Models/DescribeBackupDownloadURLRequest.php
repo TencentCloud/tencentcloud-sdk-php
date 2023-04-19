@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupId(string $BackupId) 设置备份的唯一ID。
  * @method integer getURLExpireTime() 获取链接的有效时间，默认为12小时。
  * @method void setURLExpireTime(integer $URLExpireTime) 设置链接的有效时间，默认为12小时。
+ * @method BackupDownloadRestriction getBackupDownloadRestriction() 获取备份下载限制
+ * @method void setBackupDownloadRestriction(BackupDownloadRestriction $BackupDownloadRestriction) 设置备份下载限制
  */
 class DescribeBackupDownloadURLRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeBackupDownloadURLRequest extends AbstractModel
     public $URLExpireTime;
 
     /**
+     * @var BackupDownloadRestriction 备份下载限制
+     */
+    public $BackupDownloadRestriction;
+
+    /**
      * @param string $DBInstanceId 实例ID。
      * @param string $BackupType 备份类型，目前支持：LogBackup，BaseBackup。
      * @param string $BackupId 备份的唯一ID。
      * @param integer $URLExpireTime 链接的有效时间，默认为12小时。
+     * @param BackupDownloadRestriction $BackupDownloadRestriction 备份下载限制
      */
     function __construct()
     {
@@ -84,6 +92,11 @@ class DescribeBackupDownloadURLRequest extends AbstractModel
 
         if (array_key_exists("URLExpireTime",$param) and $param["URLExpireTime"] !== null) {
             $this->URLExpireTime = $param["URLExpireTime"];
+        }
+
+        if (array_key_exists("BackupDownloadRestriction",$param) and $param["BackupDownloadRestriction"] !== null) {
+            $this->BackupDownloadRestriction = new BackupDownloadRestriction();
+            $this->BackupDownloadRestriction->deserialize($param["BackupDownloadRestriction"]);
         }
     }
 }

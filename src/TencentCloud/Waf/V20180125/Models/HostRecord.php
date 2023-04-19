@@ -58,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlbType(string $AlbType) 设置应用型负载均衡类型: clb或者apisix，默认clb
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEngineType() 获取规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineType(integer $EngineType) 设置规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostRecord extends AbstractModel
 {
@@ -145,6 +153,18 @@ class HostRecord extends AbstractModel
     public $AlbType;
 
     /**
+     * @var array IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpHeaders;
+
+    /**
+     * @var integer 规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineType;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param string $MainDomain 主域名，入参时为空
@@ -163,6 +183,10 @@ class HostRecord extends AbstractModel
      * @param array $CdcClusters 域名需要下发到的cdc集群列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlbType 应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EngineType 规则引擎类型， 1: menshen,   2:tiga
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +269,14 @@ class HostRecord extends AbstractModel
 
         if (array_key_exists("AlbType",$param) and $param["AlbType"] !== null) {
             $this->AlbType = $param["AlbType"];
+        }
+
+        if (array_key_exists("IpHeaders",$param) and $param["IpHeaders"] !== null) {
+            $this->IpHeaders = $param["IpHeaders"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

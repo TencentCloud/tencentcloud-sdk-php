@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkImageVersion(string $SparkImageVersion) 设置镜像版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取查询脚本关联id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置查询脚本关联id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -312,6 +316,12 @@ class SparkJobInfo extends AbstractModel
     public $SparkImageVersion;
 
     /**
+     * @var string 查询脚本关联id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
+
+    /**
      * @param string $JobId spark作业ID
      * @param string $JobName spark作业名
      * @param integer $JobType spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
@@ -359,6 +369,8 @@ class SparkJobInfo extends AbstractModel
      * @param integer $JobExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SparkImageVersion 镜像版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId 查询脚本关联id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -517,6 +529,10 @@ class SparkJobInfo extends AbstractModel
 
         if (array_key_exists("SparkImageVersion",$param) and $param["SparkImageVersion"] !== null) {
             $this->SparkImageVersion = $param["SparkImageVersion"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

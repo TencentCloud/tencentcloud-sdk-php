@@ -76,6 +76,20 @@ use TencentCloud\Common\AbstractModel;
 3: 已冻结。
 4: 已耗尽。
 5: 已退款
+ * @method integer getWillRenew() 获取是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWillRenew(integer $WillRenew) 设置是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewalResult() 获取续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewalResult(integer $RenewalResult) 设置续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LivePackageInfo extends AbstractModel
 {
@@ -140,6 +154,21 @@ class LivePackageInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WillRenew;
+
+    /**
+     * @var integer 续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewalResult;
+
+    /**
      * @param string $Id 包 ID。
      * @param integer $Total 总量。
 注意：当为流量包时单位为字节。
@@ -168,6 +197,13 @@ class LivePackageInfo extends AbstractModel
 3: 已冻结。
 4: 已耗尽。
 5: 已退款
+     * @param integer $WillRenew 是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewalResult 续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -212,6 +248,14 @@ class LivePackageInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("WillRenew",$param) and $param["WillRenew"] !== null) {
+            $this->WillRenew = $param["WillRenew"];
+        }
+
+        if (array_key_exists("RenewalResult",$param) and $param["RenewalResult"] !== null) {
+            $this->RenewalResult = $param["RenewalResult"];
         }
     }
 }

@@ -53,6 +53,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 本接口用于删除日志主题。
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 该接口用于获取通知渠道组列表
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略列表。
+ * @method Models\DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(Models\DescribeAlertRecordHistoryRequest $req) 获取告警历史，例如今天未恢复的告警
  * @method Models\DescribeConfigExtrasResponse DescribeConfigExtras(Models\DescribeConfigExtrasRequest $req) 本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\DescribeConfigMachineGroupsResponse DescribeConfigMachineGroups(Models\DescribeConfigMachineGroupsRequest $req) 获取采集规则配置所绑定的机器组
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 获取采集规则配置

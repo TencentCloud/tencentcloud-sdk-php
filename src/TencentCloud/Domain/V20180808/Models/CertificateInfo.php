@@ -82,6 +82,18 @@ QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
  * @method string getImgUrl() 获取证件照片地址。
  * @method void setImgUrl(string $ImgUrl) 设置证件照片地址。
+ * @method string getRegistrantCertificateCode() 获取联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegistrantCertificateCode(string $RegistrantCertificateCode) 设置联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegistrantCertificateType() 获取联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegistrantCertificateType(string $RegistrantCertificateType) 设置联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegistrantImgUrl() 获取联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegistrantImgUrl(string $RegistrantImgUrl) 设置联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CertificateInfo extends AbstractModel
 {
@@ -129,6 +141,24 @@ GZJGZY: 公证机构执业证。
     public $ImgUrl;
 
     /**
+     * @var string 联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegistrantCertificateCode;
+
+    /**
+     * @var string 联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegistrantCertificateType;
+
+    /**
+     * @var string 联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegistrantImgUrl;
+
+    /**
      * @param string $CertificateCode 证件号码。
      * @param string $CertificateType 证件类型。
 SFZ: 身份证。
@@ -160,6 +190,12 @@ TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
      * @param string $ImgUrl 证件照片地址。
+     * @param string $RegistrantCertificateCode 联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegistrantCertificateType 联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegistrantImgUrl 联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -184,6 +220,18 @@ GZJGZY: 公证机构执业证。
 
         if (array_key_exists("ImgUrl",$param) and $param["ImgUrl"] !== null) {
             $this->ImgUrl = $param["ImgUrl"];
+        }
+
+        if (array_key_exists("RegistrantCertificateCode",$param) and $param["RegistrantCertificateCode"] !== null) {
+            $this->RegistrantCertificateCode = $param["RegistrantCertificateCode"];
+        }
+
+        if (array_key_exists("RegistrantCertificateType",$param) and $param["RegistrantCertificateType"] !== null) {
+            $this->RegistrantCertificateType = $param["RegistrantCertificateType"];
+        }
+
+        if (array_key_exists("RegistrantImgUrl",$param) and $param["RegistrantImgUrl"] !== null) {
+            $this->RegistrantImgUrl = $param["RegistrantImgUrl"];
         }
     }
 }

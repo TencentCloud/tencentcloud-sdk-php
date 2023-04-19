@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
  * @method array getEmployees() 获取待移除员工的信息，userId和openId二选一，必填一个
  * @method void setEmployees(array $Employees) 设置待移除员工的信息，userId和openId二选一，必填一个
- * @method Agent getAgent() 获取代理信息
- * @method void setAgent(Agent $Agent) 设置代理信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
  */
 class DeleteIntegrationEmployeesRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteIntegrationEmployeesRequest extends AbstractModel
     public $Employees;
 
     /**
-     * @var Agent 代理信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
      */
     public $Agent;
 
     /**
      * @param UserInfo $Operator 操作人信息，userId必填
      * @param array $Employees 待移除员工的信息，userId和openId二选一，必填一个
-     * @param Agent $Agent 代理信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
      */
     function __construct()
     {

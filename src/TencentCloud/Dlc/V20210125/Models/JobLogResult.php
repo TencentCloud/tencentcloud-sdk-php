@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogJson(string $LogJson) 设置日志内容，json字符串
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPkgLogId() 获取日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPkgLogId(string $PkgLogId) 设置日志ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobLogResult extends AbstractModel
 {
@@ -64,6 +68,12 @@ class JobLogResult extends AbstractModel
     public $LogJson;
 
     /**
+     * @var string 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PkgLogId;
+
+    /**
      * @param integer $Time 日志时间戳，毫秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志topic id
@@ -71,6 +81,8 @@ class JobLogResult extends AbstractModel
      * @param string $TopicName 日志topic name
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogJson 日志内容，json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PkgLogId 日志ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class JobLogResult extends AbstractModel
 
         if (array_key_exists("LogJson",$param) and $param["LogJson"] !== null) {
             $this->LogJson = $param["LogJson"];
+        }
+
+        if (array_key_exists("PkgLogId",$param) and $param["PkgLogId"] !== null) {
+            $this->PkgLogId = $param["PkgLogId"];
         }
     }
 }

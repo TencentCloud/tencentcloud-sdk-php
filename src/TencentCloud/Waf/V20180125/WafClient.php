@@ -60,7 +60,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeWafAutoDenyStatusResponse DescribeWafAutoDenyStatus(Models\DescribeWafAutoDenyStatusRequest $req) 描述WAF自动封禁模块详情
  * @method Models\DescribeWafThreatenIntelligenceResponse DescribeWafThreatenIntelligence(Models\DescribeWafThreatenIntelligenceRequest $req) 描述WAF威胁情报封禁模块配置详情
  * @method Models\GetAttackDownloadRecordsResponse GetAttackDownloadRecords(Models\GetAttackDownloadRecordsRequest $req) 查询下载攻击日志任务记录列表
- * @method Models\ModifyAccessPeriodResponse ModifyAccessPeriod(Models\ModifyAccessPeriodRequest $req) 本接口用于修改访问日志保存期限
+ * @method Models\ModifyAccessPeriodResponse ModifyAccessPeriod(Models\ModifyAccessPeriodRequest $req) 本接口用于修改访问日志保存期限及大字段是否存储
  * @method Models\ModifyAreaBanStatusResponse ModifyAreaBanStatus(Models\ModifyAreaBanStatusRequest $req) 修改防护域名的地域封禁状态
  * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 开启或禁用访问控制（自定义策略）
  * @method Models\ModifyDomainWhiteRuleResponse ModifyDomainWhiteRule(Models\ModifyDomainWhiteRuleRequest $req) 更改某一条规则

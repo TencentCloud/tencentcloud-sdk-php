@@ -142,6 +142,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartStandbyCluster(boolean $StartStandbyCluster) 设置是否开启备集群
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getElasticSwitch() 获取spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElasticSwitch(boolean $ElasticSwitch) 设置spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getElasticLimit() 获取spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElasticLimit(integer $ElasticLimit) 设置spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -355,6 +363,18 @@ class DataEngineInfo extends AbstractModel
     public $StartStandbyCluster;
 
     /**
+     * @var boolean spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElasticSwitch;
+
+    /**
+     * @var integer spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElasticLimit;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -415,6 +435,10 @@ class DataEngineInfo extends AbstractModel
      * @param string $ImageVersionName 集群镜像版本名字
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $StartStandbyCluster 是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ElasticSwitch spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ElasticLimit spark jar 包年包月集群弹性上限
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -587,6 +611,14 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("StartStandbyCluster",$param) and $param["StartStandbyCluster"] !== null) {
             $this->StartStandbyCluster = $param["StartStandbyCluster"];
+        }
+
+        if (array_key_exists("ElasticSwitch",$param) and $param["ElasticSwitch"] !== null) {
+            $this->ElasticSwitch = $param["ElasticSwitch"];
+        }
+
+        if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
+            $this->ElasticLimit = $param["ElasticLimit"];
         }
     }
 }

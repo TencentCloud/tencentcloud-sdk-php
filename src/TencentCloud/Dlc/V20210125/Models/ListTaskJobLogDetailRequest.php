@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsc(boolean $Asc) 设置最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
  * @method array getFilters() 获取预览日志的通用过滤条件
  * @method void setFilters(array $Filters) 设置预览日志的通用过滤条件
+ * @method string getBatchId() 获取SparkSQL任务唯一ID
+ * @method void setBatchId(string $BatchId) 设置SparkSQL任务唯一ID
  */
 class ListTaskJobLogDetailRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ListTaskJobLogDetailRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string SparkSQL任务唯一ID
+     */
+    public $BatchId;
+
+    /**
      * @param string $TaskId 列表返回的Id
      * @param integer $StartTime 开始运行时间，unix时间戳（毫秒）
      * @param integer $EndTime 结束运行时间，unix时间戳（毫秒）
@@ -80,6 +87,7 @@ class ListTaskJobLogDetailRequest extends AbstractModel
      * @param string $Context 下一次分页参数，第一次传空
      * @param boolean $Asc 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
      * @param array $Filters 预览日志的通用过滤条件
+     * @param string $BatchId SparkSQL任务唯一ID
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class ListTaskJobLogDetailRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
         }
     }
 }

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() 获取用户在平台的编号
  * @method void setUserId(string $UserId) 设置用户在平台的编号
- * @method string getChannel() 获取用户的来源渠道
- * @method void setChannel(string $Channel) 设置用户的来源渠道
- * @method string getOpenId() 获取用户在渠道的编号
- * @method void setOpenId(string $OpenId) 设置用户在渠道的编号
- * @method string getClientIp() 获取用户真实IP
- * @method void setClientIp(string $ClientIp) 设置用户真实IP
- * @method string getProxyIp() 获取用户代理IP
- * @method void setProxyIp(string $ProxyIp) 设置用户代理IP
+ * @method string getChannel() 获取用户的来源渠道，一般不用传，特定场景根据接口说明传值
+ * @method void setChannel(string $Channel) 设置用户的来源渠道，一般不用传，特定场景根据接口说明传值
+ * @method string getOpenId() 获取用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+ * @method void setOpenId(string $OpenId) 设置用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+ * @method string getClientIp() 获取用户真实IP，内部字段，暂未开放
+ * @method void setClientIp(string $ClientIp) 设置用户真实IP，内部字段，暂未开放
+ * @method string getProxyIp() 获取用户代理IP，内部字段，暂未开放
+ * @method void setProxyIp(string $ProxyIp) 设置用户代理IP，内部字段，暂未开放
  */
 class UserInfo extends AbstractModel
 {
@@ -39,31 +39,31 @@ class UserInfo extends AbstractModel
     public $UserId;
 
     /**
-     * @var string 用户的来源渠道
+     * @var string 用户的来源渠道，一般不用传，特定场景根据接口说明传值
      */
     public $Channel;
 
     /**
-     * @var string 用户在渠道的编号
+     * @var string 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
      */
     public $OpenId;
 
     /**
-     * @var string 用户真实IP
+     * @var string 用户真实IP，内部字段，暂未开放
      */
     public $ClientIp;
 
     /**
-     * @var string 用户代理IP
+     * @var string 用户代理IP，内部字段，暂未开放
      */
     public $ProxyIp;
 
     /**
      * @param string $UserId 用户在平台的编号
-     * @param string $Channel 用户的来源渠道
-     * @param string $OpenId 用户在渠道的编号
-     * @param string $ClientIp 用户真实IP
-     * @param string $ProxyIp 用户代理IP
+     * @param string $Channel 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+     * @param string $OpenId 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+     * @param string $ClientIp 用户真实IP，内部字段，暂未开放
+     * @param string $ProxyIp 用户代理IP，内部字段，暂未开放
      */
     function __construct()
     {

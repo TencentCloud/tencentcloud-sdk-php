@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRecipientId() 获取签署参与者ID
  * @method void setRecipientId(string $RecipientId) 设置签署参与者ID
- * @method string getRecipientType() 获取参与者类型（ENTERPRISE/INDIVIDUAL）
- * @method void setRecipientType(string $RecipientType) 设置参与者类型（ENTERPRISE/INDIVIDUAL）
+ * @method string getRecipientType() 获取参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+ * @method void setRecipientType(string $RecipientType) 设置参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
  * @method string getDescription() 获取描述信息
  * @method void setDescription(string $Description) 设置描述信息
  * @method string getRoleName() 获取角色名称
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMobile(string $Mobile) 设置电话号码
  * @method string getUserId() 获取关联的用户ID
  * @method void setUserId(string $UserId) 设置关联的用户ID
- * @method string getDeliveryMethod() 获取发送方式（EMAIL/MOBILE）
- * @method void setDeliveryMethod(string $DeliveryMethod) 设置发送方式（EMAIL/MOBILE）
+ * @method string getDeliveryMethod() 获取发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
+ * @method void setDeliveryMethod(string $DeliveryMethod) 设置发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
  * @method string getRecipientExtra() 获取附属信息
  * @method void setRecipientExtra(string $RecipientExtra) 设置附属信息
  */
@@ -55,7 +55,7 @@ class Recipient extends AbstractModel
     public $RecipientId;
 
     /**
-     * @var string 参与者类型（ENTERPRISE/INDIVIDUAL）
+     * @var string 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      */
     public $RecipientType;
 
@@ -105,7 +105,7 @@ class Recipient extends AbstractModel
     public $UserId;
 
     /**
-     * @var string 发送方式（EMAIL/MOBILE）
+     * @var string 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
      */
     public $DeliveryMethod;
 
@@ -116,7 +116,7 @@ class Recipient extends AbstractModel
 
     /**
      * @param string $RecipientId 签署参与者ID
-     * @param string $RecipientType 参与者类型（ENTERPRISE/INDIVIDUAL）
+     * @param string $RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      * @param string $Description 描述信息
      * @param string $RoleName 角色名称
      * @param boolean $RequireValidation 是否需要验证，默认为false
@@ -126,7 +126,7 @@ class Recipient extends AbstractModel
      * @param string $Email 邮箱地址
      * @param string $Mobile 电话号码
      * @param string $UserId 关联的用户ID
-     * @param string $DeliveryMethod 发送方式（EMAIL/MOBILE）
+     * @param string $DeliveryMethod 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
      * @param string $RecipientExtra 附属信息
      */
     function __construct()

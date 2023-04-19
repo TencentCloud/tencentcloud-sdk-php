@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置Session唯一标识
  * @method string getStatementId() 获取Session Statement唯一标识
  * @method void setStatementId(string $StatementId) 设置Session Statement唯一标识
+ * @method string getTaskId() 获取任务唯一标识
+ * @method void setTaskId(string $TaskId) 设置任务唯一标识
  */
 class DescribeNotebookSessionStatementRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeNotebookSessionStatementRequest extends AbstractModel
     public $StatementId;
 
     /**
+     * @var string 任务唯一标识
+     */
+    public $TaskId;
+
+    /**
      * @param string $SessionId Session唯一标识
      * @param string $StatementId Session Statement唯一标识
+     * @param string $TaskId 任务唯一标识
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeNotebookSessionStatementRequest extends AbstractModel
 
         if (array_key_exists("StatementId",$param) and $param["StatementId"] !== null) {
             $this->StatementId = $param["StatementId"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

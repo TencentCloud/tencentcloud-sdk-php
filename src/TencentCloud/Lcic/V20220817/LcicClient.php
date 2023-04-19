@@ -42,11 +42,13 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DeleteGroupMemberResponse DeleteGroupMember(Models\DeleteGroupMemberRequest $req) 此接口用于删除群组中指定成员
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除指定房间的录制文件
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) 删除房间
+ * @method Models\DeleteSupervisorResponse DeleteSupervisor(Models\DeleteSupervisorRequest $req) 删除巡课
  * @method Models\DescribeAnswerListResponse DescribeAnswerList(Models\DescribeAnswerListRequest $req) 获取房间答题详情
  * @method Models\DescribeAppDetailResponse DescribeAppDetail(Models\DescribeAppDetailRequest $req) 获取应用详情
  * @method Models\DescribeCurrentMemberListResponse DescribeCurrentMemberList(Models\DescribeCurrentMemberListRequest $req) 获取当前房间的成员列表，房间结束或过期后无法使用。
  * @method Models\DescribeDeveloperResponse DescribeDeveloper(Models\DescribeDeveloperRequest $req) 服务商信息获取
  * @method Models\DescribeDocumentResponse DescribeDocument(Models\DescribeDocumentRequest $req) 获取文档信息
+ * @method Models\DescribeDocumentsResponse DescribeDocuments(Models\DescribeDocumentsRequest $req) 批量获取文档信息
  * @method Models\DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(Models\DescribeDocumentsByRoomRequest $req) 此接口获取指定房间下课件列表
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 此接口用于获取群组详情
  * @method Models\DescribeGroupListResponse DescribeGroupList(Models\DescribeGroupListRequest $req) 获取群组列表
@@ -57,6 +59,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(Models\DescribeSdkAppIdUsersRequest $req) 此接口用于获取指定应用ID下用户列表
  * @method Models\DescribeSupervisorsResponse DescribeSupervisors(Models\DescribeSupervisorsRequest $req) 获取巡课列表
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 获取用户信息
+ * @method Models\EndRoomResponse EndRoom(Models\EndRoomRequest $req) 结束房间的直播
  * @method Models\GetRoomEventResponse GetRoomEvent(Models\GetRoomEventRequest $req) 获取房间事件,仅在课堂结束1小时内有效。
  * @method Models\GetRoomMessageResponse GetRoomMessage(Models\GetRoomMessageRequest $req) 获取房间历史消息(房间历史消息保存7天)
  * @method Models\GetRoomsResponse GetRooms(Models\GetRoomsRequest $req) 获取房间列表
@@ -70,6 +73,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\RegisterUserResponse RegisterUser(Models\RegisterUserRequest $req) 注册用户
  * @method Models\SetAppCustomContentResponse SetAppCustomContent(Models\SetAppCustomContentRequest $req) 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
  * @method Models\SetWatermarkResponse SetWatermark(Models\SetWatermarkRequest $req) 设置水印
+ * @method Models\StartRoomResponse StartRoom(Models\StartRoomRequest $req) 开始房间的直播
  * @method Models\UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(Models\UnbindDocumentFromRoomRequest $req) 文档从房间解绑
  */
 

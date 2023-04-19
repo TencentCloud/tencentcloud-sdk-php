@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置查询成员企业的企业名，模糊匹配
  * @method integer getStatus() 获取成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
  * @method void setStatus(integer $Status) 设置成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
- * @method boolean getExport() 获取是否到处当前成员企业数据
- * @method void setExport(boolean $Export) 设置是否到处当前成员企业数据
+ * @method boolean getExport() 获取是否导出当前成员企业数据
+ * @method void setExport(boolean $Export) 设置是否导出当前成员企业数据
  * @method string getId() 获取成员企业id
  * @method void setId(string $Id) 设置成员企业id
  */
@@ -63,7 +63,7 @@ class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var boolean 是否到处当前成员企业数据
+     * @var boolean 是否导出当前成员企业数据
      */
     public $Export;
 
@@ -78,7 +78,7 @@ class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
      * @param integer $Offset 页面偏移量
      * @param string $Name 查询成员企业的企业名，模糊匹配
      * @param integer $Status 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
-     * @param boolean $Export 是否到处当前成员企业数据
+     * @param boolean $Export 是否导出当前成员企业数据
      * @param string $Id 成员企业id
      */
     function __construct()

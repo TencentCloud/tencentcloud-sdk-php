@@ -20,82 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例分片列表信息
  *
- * @method string getShardName() 获取分片节点名称
- * @method void setShardName(string $ShardName) 设置分片节点名称
- * @method string getShardId() 获取分片节点Id
- * @method void setShardId(string $ShardId) 设置分片节点Id
- * @method integer getRole() 获取角色
- * @method void setRole(integer $Role) 设置角色
- * @method integer getKeys() 获取Key数量
- * @method void setKeys(integer $Keys) 设置Key数量
- * @method string getSlots() 获取slot信息
- * @method void setSlots(string $Slots) 设置slot信息
- * @method integer getStorage() 获取使用容量
- * @method void setStorage(integer $Storage) 设置使用容量
- * @method float getStorageSlope() 获取容量倾斜率
- * @method void setStorageSlope(float $StorageSlope) 设置容量倾斜率
- * @method string getRunid() 获取实例运行时节点Id
- * @method void setRunid(string $Runid) 设置实例运行时节点Id
- * @method integer getConnected() 获取服务状态：0-down；1-on
- * @method void setConnected(integer $Connected) 设置服务状态：0-down；1-on
+ * @method string getShardName() 获取分片节点名称。
+ * @method void setShardName(string $ShardName) 设置分片节点名称。
+ * @method string getShardId() 获取分片节点序号。
+ * @method void setShardId(string $ShardId) 设置分片节点序号。
+ * @method integer getRole() 获取分片节点的角色。
+- 0：主节点。
+- 1：副本节点。
+ * @method void setRole(integer $Role) 设置分片节点的角色。
+- 0：主节点。
+- 1：副本节点。
+ * @method integer getKeys() 获取Key数量。
+ * @method void setKeys(integer $Keys) 设置Key数量。
+ * @method string getSlots() 获取Slot信息。
+ * @method void setSlots(string $Slots) 设置Slot信息。
+ * @method integer getStorage() 获取已使用容量。
+ * @method void setStorage(integer $Storage) 设置已使用容量。
+ * @method float getStorageSlope() 获取容量倾斜率。
+ * @method void setStorageSlope(float $StorageSlope) 设置容量倾斜率。
+ * @method string getRunid() 获取实例运行时节点 ID。
+ * @method void setRunid(string $Runid) 设置实例运行时节点 ID。
+ * @method integer getConnected() 获取服务状态。
+- 0：down。
+- 1：on。
+ * @method void setConnected(integer $Connected) 设置服务状态。
+- 0：down。
+- 1：on。
  */
 class InstanceClusterShard extends AbstractModel
 {
     /**
-     * @var string 分片节点名称
+     * @var string 分片节点名称。
      */
     public $ShardName;
 
     /**
-     * @var string 分片节点Id
+     * @var string 分片节点序号。
      */
     public $ShardId;
 
     /**
-     * @var integer 角色
+     * @var integer 分片节点的角色。
+- 0：主节点。
+- 1：副本节点。
      */
     public $Role;
 
     /**
-     * @var integer Key数量
+     * @var integer Key数量。
      */
     public $Keys;
 
     /**
-     * @var string slot信息
+     * @var string Slot信息。
      */
     public $Slots;
 
     /**
-     * @var integer 使用容量
+     * @var integer 已使用容量。
      */
     public $Storage;
 
     /**
-     * @var float 容量倾斜率
+     * @var float 容量倾斜率。
      */
     public $StorageSlope;
 
     /**
-     * @var string 实例运行时节点Id
+     * @var string 实例运行时节点 ID。
      */
     public $Runid;
 
     /**
-     * @var integer 服务状态：0-down；1-on
+     * @var integer 服务状态。
+- 0：down。
+- 1：on。
      */
     public $Connected;
 
     /**
-     * @param string $ShardName 分片节点名称
-     * @param string $ShardId 分片节点Id
-     * @param integer $Role 角色
-     * @param integer $Keys Key数量
-     * @param string $Slots slot信息
-     * @param integer $Storage 使用容量
-     * @param float $StorageSlope 容量倾斜率
-     * @param string $Runid 实例运行时节点Id
-     * @param integer $Connected 服务状态：0-down；1-on
+     * @param string $ShardName 分片节点名称。
+     * @param string $ShardId 分片节点序号。
+     * @param integer $Role 分片节点的角色。
+- 0：主节点。
+- 1：副本节点。
+     * @param integer $Keys Key数量。
+     * @param string $Slots Slot信息。
+     * @param integer $Storage 已使用容量。
+     * @param float $StorageSlope 容量倾斜率。
+     * @param string $Runid 实例运行时节点 ID。
+     * @param integer $Connected 服务状态。
+- 0：down。
+- 1：on。
      */
     function __construct()
     {

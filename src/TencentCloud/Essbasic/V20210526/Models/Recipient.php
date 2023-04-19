@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRecipientId() 获取签署人唯一标识
  * @method void setRecipientId(string $RecipientId) 设置签署人唯一标识
- * @method string getRecipientType() 获取签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
- * @method void setRecipientType(string $RecipientType) 设置签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
+ * @method string getRecipientType() 获取参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+ * @method void setRecipientType(string $RecipientType) 设置参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  * @method string getRoleName() 获取签署方备注信息
@@ -47,7 +47,7 @@ class Recipient extends AbstractModel
     public $RecipientId;
 
     /**
-     * @var string 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
+     * @var string 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      */
     public $RecipientType;
 
@@ -88,7 +88,7 @@ class Recipient extends AbstractModel
 
     /**
      * @param string $RecipientId 签署人唯一标识
-     * @param string $RecipientType 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
+     * @param string $RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      * @param string $Description 描述
      * @param string $RoleName 签署方备注信息
      * @param boolean $RequireValidation 是否需要校验

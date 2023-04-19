@@ -102,6 +102,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileAction() 获取文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileAction(string $FileAction) 设置文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileTamperEvent extends AbstractModel
 {
@@ -295,6 +303,14 @@ class FileTamperEvent extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var string 文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileAction;
+
+    /**
      * @param string $HostName 机器名称
      * @param string $HostIp 机器IP
      * @param string $CreateTime 发生时间
@@ -335,6 +351,10 @@ class FileTamperEvent extends AbstractModel
      * @param string $ExeName 进程名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileAction 文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -497,6 +517,10 @@ class FileTamperEvent extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("FileAction",$param) and $param["FileAction"] !== null) {
+            $this->FileAction = $param["FileAction"];
         }
     }
 }

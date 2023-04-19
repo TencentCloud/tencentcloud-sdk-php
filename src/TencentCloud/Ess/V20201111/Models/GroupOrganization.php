@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取成员企业状态
+ * @method integer getStatus() 获取成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置成员企业状态
+ * @method void setStatus(integer $Status) 设置成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsMainOrganization() 获取是否为集团主企业
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,7 +96,7 @@ class GroupOrganization extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer 成员企业状态
+     * @var integer 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -152,7 +152,7 @@ class GroupOrganization extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 成员企业状态
+     * @param integer $Status 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsMainOrganization 是否为集团主企业
 注意：此字段可能返回 null，表示取不到有效值。

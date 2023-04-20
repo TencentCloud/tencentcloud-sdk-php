@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayName(string $DisplayName) 设置节点展示名称
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method array getTags() 获取腾讯云标签
+ * @method void setTags(array $Tags) 设置腾讯云标签
  */
 class VirtualNodeSpec extends AbstractModel
 {
@@ -38,8 +40,14 @@ class VirtualNodeSpec extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var array 腾讯云标签
+     */
+    public $Tags;
+
+    /**
      * @param string $DisplayName 节点展示名称
      * @param string $SubnetId 子网ID
+     * @param array $Tags 腾讯云标签
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class VirtualNodeSpec extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

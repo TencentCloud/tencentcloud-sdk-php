@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() 获取语音过滤服务开关，取值：open/close
  * @method void setStatus(string $Status) 设置语音过滤服务开关，取值：open/close
+ * @method array getSceneInfos() 获取场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSceneInfos(array $SceneInfos) 设置场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VoiceFilterConf extends AbstractModel
 {
@@ -31,7 +35,15 @@ class VoiceFilterConf extends AbstractModel
     public $Status;
 
     /**
+     * @var array 场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SceneInfos;
+
+    /**
      * @param string $Status 语音过滤服务开关，取值：open/close
+     * @param array $SceneInfos 场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -48,6 +60,15 @@ class VoiceFilterConf extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SceneInfos",$param) and $param["SceneInfos"] !== null) {
+            $this->SceneInfos = [];
+            foreach ($param["SceneInfos"] as $key => $value){
+                $obj = new SceneInfo();
+                $obj->deserialize($value);
+                array_push($this->SceneInfos, $obj);
+            }
         }
     }
 }

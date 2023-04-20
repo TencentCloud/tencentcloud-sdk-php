@@ -32,10 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置服务创建时间戳
  * @method RealtimeSpeechConf getRealtimeSpeechConf() 获取实时语音服务配置数据
  * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) 设置实时语音服务配置数据
- * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息及转文本服务配置数据
- * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息及转文本服务配置数据
+ * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息服务配置数据
+ * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息服务配置数据
  * @method VoiceFilterConf getVoiceFilterConf() 获取语音分析服务配置数据
  * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音分析服务配置数据
+ * @method AsrConf getAsrConf() 获取语音转文本服务配置数据
+ * @method void setAsrConf(AsrConf $AsrConf) 设置语音转文本服务配置数据
  */
 class CreateAppResp extends AbstractModel
 {
@@ -70,7 +72,7 @@ class CreateAppResp extends AbstractModel
     public $RealtimeSpeechConf;
 
     /**
-     * @var VoiceMessageConf 语音消息及转文本服务配置数据
+     * @var VoiceMessageConf 语音消息服务配置数据
      */
     public $VoiceMessageConf;
 
@@ -80,14 +82,20 @@ class CreateAppResp extends AbstractModel
     public $VoiceFilterConf;
 
     /**
+     * @var AsrConf 语音转文本服务配置数据
+     */
+    public $AsrConf;
+
+    /**
      * @param integer $BizId 应用ID，由后台自动生成。
      * @param string $AppName 应用名称，透传输入参数的AppName
      * @param integer $ProjectId 项目ID，透传输入的ProjectId
      * @param string $SecretKey 应用密钥，GME SDK初始化时使用
      * @param integer $CreateTime 服务创建时间戳
      * @param RealtimeSpeechConf $RealtimeSpeechConf 实时语音服务配置数据
-     * @param VoiceMessageConf $VoiceMessageConf 语音消息及转文本服务配置数据
+     * @param VoiceMessageConf $VoiceMessageConf 语音消息服务配置数据
      * @param VoiceFilterConf $VoiceFilterConf 语音分析服务配置数据
+     * @param AsrConf $AsrConf 语音转文本服务配置数据
      */
     function __construct()
     {
@@ -135,6 +143,11 @@ class CreateAppResp extends AbstractModel
         if (array_key_exists("VoiceFilterConf",$param) and $param["VoiceFilterConf"] !== null) {
             $this->VoiceFilterConf = new VoiceFilterConf();
             $this->VoiceFilterConf->deserialize($param["VoiceFilterConf"]);
+        }
+
+        if (array_key_exists("AsrConf",$param) and $param["AsrConf"] !== null) {
+            $this->AsrConf = new AsrConf();
+            $this->AsrConf->deserialize($param["AsrConf"]);
         }
     }
 }

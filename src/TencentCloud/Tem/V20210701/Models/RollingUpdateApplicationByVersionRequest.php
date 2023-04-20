@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBetaBatchNum(integer $BetaBatchNum) 设置小批量验证批次的实例数
  * @method integer getMinAvailable() 获取发布过程中保障的最小可用实例数
  * @method void setMinAvailable(integer $MinAvailable) 设置发布过程中保障的最小可用实例数
+ * @method boolean getForce() 获取是否强制发布
+ * @method void setForce(boolean $Force) 设置是否强制发布
  */
 class RollingUpdateApplicationByVersionRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
     public $MinAvailable;
 
     /**
+     * @var boolean 是否强制发布
+     */
+    public $Force;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param string $EnvironmentId 环境ID
      * @param string $DeployVersion 更新版本，IMAGE 部署为 tag 值；JAR/WAR 部署 为 Version
@@ -104,6 +111,7 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
      * @param integer $BatchInterval 批次间隔时间
      * @param integer $BetaBatchNum 小批量验证批次的实例数
      * @param integer $MinAvailable 发布过程中保障的最小可用实例数
+     * @param boolean $Force 是否强制发布
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
 
         if (array_key_exists("MinAvailable",$param) and $param["MinAvailable"] !== null) {
             $this->MinAvailable = $param["MinAvailable"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

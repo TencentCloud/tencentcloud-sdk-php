@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务id
  * @method integer getStatus() 获取任务状态 0(初始化中), 1(运行中), 2(已完成), 3(任务失败)
  * @method void setStatus(integer $Status) 设置任务状态 0(初始化中), 1(运行中), 2(已完成), 3(任务失败)
+ * @method integer getFinishedFileNumber() 获取已完成的文件数量
+ * @method void setFinishedFileNumber(integer $FinishedFileNumber) 设置已完成的文件数量
+ * @method integer getFinishedCapacity() 获取已完成的数据量
+ * @method void setFinishedCapacity(integer $FinishedCapacity) 设置已完成的数据量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,16 @@ class DescribeDataRepositoryTaskStatusResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 已完成的文件数量
+     */
+    public $FinishedFileNumber;
+
+    /**
+     * @var integer 已完成的数据量
+     */
+    public $FinishedCapacity;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +61,8 @@ class DescribeDataRepositoryTaskStatusResponse extends AbstractModel
     /**
      * @param string $TaskId 任务id
      * @param integer $Status 任务状态 0(初始化中), 1(运行中), 2(已完成), 3(任务失败)
+     * @param integer $FinishedFileNumber 已完成的文件数量
+     * @param integer $FinishedCapacity 已完成的数据量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +84,14 @@ class DescribeDataRepositoryTaskStatusResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("FinishedFileNumber",$param) and $param["FinishedFileNumber"] !== null) {
+            $this->FinishedFileNumber = $param["FinishedFileNumber"];
+        }
+
+        if (array_key_exists("FinishedCapacity",$param) and $param["FinishedCapacity"] !== null) {
+            $this->FinishedCapacity = $param["FinishedCapacity"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillDuration(integer $BillDuration) 设置表示函数的计费耗时，单位是毫秒，异步调用返回为空
  * @method string getFunctionRequestId() 获取此次函数执行的Id
  * @method void setFunctionRequestId(string $FunctionRequestId) 设置此次函数执行的Id
- * @method integer getInvokeResult() 获取0为正确，异步调用返回为空
- * @method void setInvokeResult(integer $InvokeResult) 设置0为正确，异步调用返回为空
+ * @method integer getInvokeResult() 获取请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
+ * @method void setInvokeResult(integer $InvokeResult) 设置请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
  */
 class Result extends AbstractModel
 {
@@ -75,7 +75,7 @@ class Result extends AbstractModel
     public $FunctionRequestId;
 
     /**
-     * @var integer 0为正确，异步调用返回为空
+     * @var integer 请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
      */
     public $InvokeResult;
 
@@ -87,7 +87,7 @@ class Result extends AbstractModel
      * @param float $Duration 表示执行函数的耗时，单位是毫秒，异步调用返回为空
      * @param integer $BillDuration 表示函数的计费耗时，单位是毫秒，异步调用返回为空
      * @param string $FunctionRequestId 此次函数执行的Id
-     * @param integer $InvokeResult 0为正确，异步调用返回为空
+     * @param integer $InvokeResult 请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
      */
     function __construct()
     {

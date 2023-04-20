@@ -409,6 +409,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：20次/秒。
  * @method Models\RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(Models\RecognizePhilippinesDrivingLicenseOCRRequest $req) 菲律宾驾驶证识别
+ * @method Models\RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(Models\RecognizePhilippinesSssIDOCRRequest $req) 菲律宾SSSID识别
+ * @method Models\RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(Models\RecognizePhilippinesTinIDOCRRequest $req) 菲律宾TinID识别
  * @method Models\RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(Models\RecognizePhilippinesVoteIDOCRRequest $req) 本接口支持菲律宾VoteID识别，识别字段包括姓名、姓氏、出生日期、婚姻状况、国籍、地址、地区、菲律宾VoteID的VIN等。
 
 默认接口请求频率限制：20次/秒。

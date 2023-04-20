@@ -18,7 +18,7 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 房间问答答案详情
+ * 房间问答问题详情
  *
  * @method string getQuestionId() 获取问题ID
  * @method void setQuestionId(string $QuestionId) 设置问题ID

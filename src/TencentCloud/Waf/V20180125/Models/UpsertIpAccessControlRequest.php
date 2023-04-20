@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) 设置ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method void setEdition(string $Edition) 设置WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
- * @method string getSourceType() 获取是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
- * @method void setSourceType(string $SourceType) 设置是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
+ * @method string getSourceType() 获取是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+ * @method void setSourceType(string $SourceType) 设置是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
  */
 class UpsertIpAccessControlRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class UpsertIpAccessControlRequest extends AbstractModel
     public $Edition;
 
     /**
-     * @var string 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
+     * @var string 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
      */
     public $SourceType;
 
@@ -55,7 +55,7 @@ class UpsertIpAccessControlRequest extends AbstractModel
      * @param string $Domain 域名
      * @param array $Items ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
-     * @param string $SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
+     * @param string $SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
      */
     function __construct()
     {

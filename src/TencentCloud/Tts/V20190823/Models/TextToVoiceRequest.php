@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableSubtitle(boolean $EnableSubtitle) 设置是否开启时间戳功能，默认为false。
  * @method integer getSegmentRate() 获取断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
  * @method void setSegmentRate(integer $SegmentRate) 设置断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
+ * @method string getEmotionCategory() 获取控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+ * @method void setEmotionCategory(string $EmotionCategory) 设置控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+ * @method integer getEmotionIntensity() 获取控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+ * @method void setEmotionIntensity(integer $EmotionIntensity) 设置控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -123,6 +127,16 @@ class TextToVoiceRequest extends AbstractModel
     public $SegmentRate;
 
     /**
+     * @var string 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+     */
+    public $EmotionCategory;
+
+    /**
+     * @var integer 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+     */
+    public $EmotionIntensity;
+
+    /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
@@ -140,6 +154,8 @@ class TextToVoiceRequest extends AbstractModel
      * @param string $Codec 返回音频格式，可取值：wav（默认），mp3，pcm
      * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
      * @param integer $SegmentRate 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
+     * @param string $EmotionCategory 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+     * @param integer $EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
      */
     function __construct()
     {
@@ -200,6 +216,14 @@ class TextToVoiceRequest extends AbstractModel
 
         if (array_key_exists("SegmentRate",$param) and $param["SegmentRate"] !== null) {
             $this->SegmentRate = $param["SegmentRate"];
+        }
+
+        if (array_key_exists("EmotionCategory",$param) and $param["EmotionCategory"] !== null) {
+            $this->EmotionCategory = $param["EmotionCategory"];
+        }
+
+        if (array_key_exists("EmotionIntensity",$param) and $param["EmotionIntensity"] !== null) {
+            $this->EmotionIntensity = $param["EmotionIntensity"];
         }
     }
 }

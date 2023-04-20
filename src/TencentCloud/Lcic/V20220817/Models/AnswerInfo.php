@@ -18,7 +18,7 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 房间问答问题详情
+ * 房间问答答案详情
  *
  * @method string getName() 获取用户名
  * @method void setName(string $Name) 设置用户名

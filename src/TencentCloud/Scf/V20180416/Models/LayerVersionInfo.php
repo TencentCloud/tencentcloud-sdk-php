@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLayerName(string $LayerName) 设置层名称
  * @method string getStatus() 获取层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
  * @method void setStatus(string $Status) 设置层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+ * @method string getStamp() 获取Stamp
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStamp(string $Stamp) 设置Stamp
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LayerVersionInfo extends AbstractModel
 {
@@ -82,6 +86,12 @@ class LayerVersionInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string Stamp
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Stamp;
+
+    /**
      * @param array $CompatibleRuntimes 版本适用的运行时
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 创建时间
@@ -92,6 +102,8 @@ class LayerVersionInfo extends AbstractModel
      * @param integer $LayerVersion 版本号
      * @param string $LayerName 层名称
      * @param string $Status 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+     * @param string $Stamp Stamp
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ class LayerVersionInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Stamp",$param) and $param["Stamp"] !== null) {
+            $this->Stamp = $param["Stamp"];
         }
     }
 }

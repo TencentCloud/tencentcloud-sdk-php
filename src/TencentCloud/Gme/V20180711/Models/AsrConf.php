@@ -18,28 +18,20 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实时语音配置数据
+ * 语音转文本配置数据
  *
- * @method string getStatus() 获取实时语音服务开关，取值：open/close
- * @method void setStatus(string $Status) 设置实时语音服务开关，取值：open/close
- * @method string getQuality() 获取实时语音音质类型，取值：high-高音质 ordinary-普通音质
- * @method void setQuality(string $Quality) 设置实时语音音质类型，取值：high-高音质 ordinary-普通音质
+ * @method string getStatus() 获取语音转文本服务开关，取值：open/close
+ * @method void setStatus(string $Status) 设置语音转文本服务开关，取值：open/close
  */
-class RealtimeSpeechConf extends AbstractModel
+class AsrConf extends AbstractModel
 {
     /**
-     * @var string 实时语音服务开关，取值：open/close
+     * @var string 语音转文本服务开关，取值：open/close
      */
     public $Status;
 
     /**
-     * @var string 实时语音音质类型，取值：high-高音质 ordinary-普通音质
-     */
-    public $Quality;
-
-    /**
-     * @param string $Status 实时语音服务开关，取值：open/close
-     * @param string $Quality 实时语音音质类型，取值：high-高音质 ordinary-普通音质
+     * @param string $Status 语音转文本服务开关，取值：open/close
      */
     function __construct()
     {
@@ -56,10 +48,6 @@ class RealtimeSpeechConf extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("Quality",$param) and $param["Quality"] !== null) {
-            $this->Quality = $param["Quality"];
         }
     }
 }

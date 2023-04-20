@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置镜像描述。最大长度60。
  * @method string getInstanceId() 获取需要制作镜像的实例ID。
  * @method void setInstanceId(string $InstanceId) 设置需要制作镜像的实例ID。
+ * @method boolean getForcePowerOff() 获取是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+ * @method void setForcePowerOff(boolean $ForcePowerOff) 设置是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
  */
 class CreateBlueprintRequest extends AbstractModel
 {
@@ -45,9 +57,25 @@ class CreateBlueprintRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean 是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+     */
+    public $ForcePowerOff;
+
+    /**
      * @param string $BlueprintName 镜像名称。最大长度60。
      * @param string $Description 镜像描述。最大长度60。
      * @param string $InstanceId 需要制作镜像的实例ID。
+     * @param boolean $ForcePowerOff 是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      */
     function __construct()
     {
@@ -72,6 +100,10 @@ class CreateBlueprintRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ForcePowerOff",$param) and $param["ForcePowerOff"] !== null) {
+            $this->ForcePowerOff = $param["ForcePowerOff"];
         }
     }
 }

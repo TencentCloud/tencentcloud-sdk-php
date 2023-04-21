@@ -20,17 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能去除水印任务的输出。
  *
- * @method string getFileId() 获取视频 ID。
- * @method void setFileId(string $FileId) 设置视频 ID。
+ * @method string getFileId() 获取媒体文件 ID。
+ * @method void setFileId(string $FileId) 设置媒体文件 ID。
+ * @method string getFileType() 获取文件类型，例如 mp4、mp3 等。
+ * @method void setFileType(string $FileType) 设置文件类型，例如 mp4、mp3 等。
+ * @method string getFileUrl() 获取媒体文件播放地址。
+ * @method void setFileUrl(string $FileUrl) 设置媒体文件播放地址。
+ * @method string getMediaName() 获取文件名称，最长 64 个字符。
+ * @method void setMediaName(string $MediaName) 设置文件名称，最长 64 个字符。
  * @method MediaMetaData getMetaData() 获取元信息。包括大小、时长、视频流信息、音频流信息等。
  * @method void setMetaData(MediaMetaData $MetaData) 设置元信息。包括大小、时长、视频流信息、音频流信息等。
  */
 class RemoveWaterMarkTaskOutput extends AbstractModel
 {
     /**
-     * @var string 视频 ID。
+     * @var string 媒体文件 ID。
      */
     public $FileId;
+
+    /**
+     * @var string 文件类型，例如 mp4、mp3 等。
+     */
+    public $FileType;
+
+    /**
+     * @var string 媒体文件播放地址。
+     */
+    public $FileUrl;
+
+    /**
+     * @var string 文件名称，最长 64 个字符。
+     */
+    public $MediaName;
 
     /**
      * @var MediaMetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
@@ -38,7 +59,10 @@ class RemoveWaterMarkTaskOutput extends AbstractModel
     public $MetaData;
 
     /**
-     * @param string $FileId 视频 ID。
+     * @param string $FileId 媒体文件 ID。
+     * @param string $FileType 文件类型，例如 mp4、mp3 等。
+     * @param string $FileUrl 媒体文件播放地址。
+     * @param string $MediaName 文件名称，最长 64 个字符。
      * @param MediaMetaData $MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
      */
     function __construct()
@@ -56,6 +80,18 @@ class RemoveWaterMarkTaskOutput extends AbstractModel
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
+            $this->FileUrl = $param["FileUrl"];
+        }
+
+        if (array_key_exists("MediaName",$param) and $param["MediaName"] !== null) {
+            $this->MediaName = $param["MediaName"];
         }
 
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {

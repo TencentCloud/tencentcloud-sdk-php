@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnets(array $Subnets) 设置使用的容器子网
  * @method integer getExpiredSeconds() 获取在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
  * @method void setExpiredSeconds(integer $ExpiredSeconds) 设置在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+ * @method boolean getSkipAddingNonMasqueradeCIDRs() 获取是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+ * @method void setSkipAddingNonMasqueradeCIDRs(boolean $SkipAddingNonMasqueradeCIDRs) 设置是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
  */
 class EnableVpcCniNetworkTypeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class EnableVpcCniNetworkTypeRequest extends AbstractModel
     public $ExpiredSeconds;
 
     /**
+     * @var boolean 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+     */
+    public $SkipAddingNonMasqueradeCIDRs;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $VpcCniType 开启vpc-cni的模式，tke-route-eni开启的是策略路由模式，tke-direct-eni开启的是独立网卡模式
      * @param boolean $EnableStaticIp 是否开启固定IP模式
      * @param array $Subnets 使用的容器子网
      * @param integer $ExpiredSeconds 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+     * @param boolean $SkipAddingNonMasqueradeCIDRs 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class EnableVpcCniNetworkTypeRequest extends AbstractModel
 
         if (array_key_exists("ExpiredSeconds",$param) and $param["ExpiredSeconds"] !== null) {
             $this->ExpiredSeconds = $param["ExpiredSeconds"];
+        }
+
+        if (array_key_exists("SkipAddingNonMasqueradeCIDRs",$param) and $param["SkipAddingNonMasqueradeCIDRs"] !== null) {
+            $this->SkipAddingNonMasqueradeCIDRs = $param["SkipAddingNonMasqueradeCIDRs"];
         }
     }
 }

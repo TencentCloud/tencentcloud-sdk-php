@@ -25,15 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() 获取腾讯云项目ID，默认为0，表示默认项目
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目ID，默认为0，表示默认项目
  * @method array getEngineList() 获取需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows
  * @method void setEngineList(array $EngineList) 设置需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows
  * @method array getRegionList() 获取服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
  * @method void setRegionList(array $RegionList) 设置服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
  * @method RealtimeSpeechConf getRealtimeSpeechConf() 获取实时语音服务配置数据
  * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) 设置实时语音服务配置数据
- * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息及转文本服务配置数据
- * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息及转文本服务配置数据
+ * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息服务配置数据
+ * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息服务配置数据
  * @method VoiceFilterConf getVoiceFilterConf() 获取语音分析服务配置数据
  * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音分析服务配置数据
+ * @method AsrConf getAsrConf() 获取语音转文本配置数据
+ * @method void setAsrConf(AsrConf $AsrConf) 设置语音转文本配置数据
  * @method array getTags() 获取需要添加的标签列表
  * @method void setTags(array $Tags) 设置需要添加的标签列表
  */
@@ -51,11 +57,13 @@ class CreateAppRequest extends AbstractModel
 
     /**
      * @var array 需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows
      */
     public $EngineList;
 
     /**
      * @var array 服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
      */
     public $RegionList;
 
@@ -65,7 +73,7 @@ class CreateAppRequest extends AbstractModel
     public $RealtimeSpeechConf;
 
     /**
-     * @var VoiceMessageConf 语音消息及转文本服务配置数据
+     * @var VoiceMessageConf 语音消息服务配置数据
      */
     public $VoiceMessageConf;
 
@@ -73,6 +81,11 @@ class CreateAppRequest extends AbstractModel
      * @var VoiceFilterConf 语音分析服务配置数据
      */
     public $VoiceFilterConf;
+
+    /**
+     * @var AsrConf 语音转文本配置数据
+     */
+    public $AsrConf;
 
     /**
      * @var array 需要添加的标签列表
@@ -83,10 +96,13 @@ class CreateAppRequest extends AbstractModel
      * @param string $AppName 应用名称
      * @param integer $ProjectId 腾讯云项目ID，默认为0，表示默认项目
      * @param array $EngineList 需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows
      * @param array $RegionList 服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
      * @param RealtimeSpeechConf $RealtimeSpeechConf 实时语音服务配置数据
-     * @param VoiceMessageConf $VoiceMessageConf 语音消息及转文本服务配置数据
+     * @param VoiceMessageConf $VoiceMessageConf 语音消息服务配置数据
      * @param VoiceFilterConf $VoiceFilterConf 语音分析服务配置数据
+     * @param AsrConf $AsrConf 语音转文本配置数据
      * @param array $Tags 需要添加的标签列表
      */
     function __construct()
@@ -131,6 +147,11 @@ class CreateAppRequest extends AbstractModel
         if (array_key_exists("VoiceFilterConf",$param) and $param["VoiceFilterConf"] !== null) {
             $this->VoiceFilterConf = new VoiceFilterConf();
             $this->VoiceFilterConf->deserialize($param["VoiceFilterConf"]);
+        }
+
+        if (array_key_exists("AsrConf",$param) and $param["AsrConf"] !== null) {
+            $this->AsrConf = new AsrConf();
+            $this->AsrConf->deserialize($param["AsrConf"]);
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

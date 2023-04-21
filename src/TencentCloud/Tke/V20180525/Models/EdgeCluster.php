@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeType(string $ChargeType) 设置集群付费模式，支持POSTPAID_BY_HOUR或者PREPAID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEdgeVersion() 获取边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEdgeVersion(string $EdgeVersion) 设置边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeCluster extends AbstractModel
 {
@@ -144,6 +148,12 @@ class EdgeCluster extends AbstractModel
     public $ChargeType;
 
     /**
+     * @var string 边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EdgeVersion;
+
+    /**
      * @param string $ClusterId 集群Id
      * @param string $ClusterName 集群名称
      * @param string $VpcId Vpc Id
@@ -163,6 +173,8 @@ class EdgeCluster extends AbstractModel
      * @param boolean $AutoUpgradeClusterLevel 是否支持自动提升集群配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeType 集群付费模式，支持POSTPAID_BY_HOUR或者PREPAID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EdgeVersion 边缘集群组件的版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -237,6 +249,10 @@ class EdgeCluster extends AbstractModel
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("EdgeVersion",$param) and $param["EdgeVersion"] !== null) {
+            $this->EdgeVersion = $param["EdgeVersion"];
         }
     }
 }

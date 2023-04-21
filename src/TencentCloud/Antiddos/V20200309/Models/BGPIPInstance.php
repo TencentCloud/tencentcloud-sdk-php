@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
 "creating"：创建中
 "deblocking"：解封中
 "isolate"：回收隔离中
- * @method string getExpiredTime() 获取购买时间
- * @method void setExpiredTime(string $ExpiredTime) 设置购买时间
- * @method string getCreatedTime() 获取到期时间
- * @method void setCreatedTime(string $CreatedTime) 设置到期时间
+ * @method string getExpiredTime() 获取到期时间
+ * @method void setExpiredTime(string $ExpiredTime) 设置到期时间
+ * @method string getCreatedTime() 获取购买时间
+ * @method void setCreatedTime(string $CreatedTime) 设置购买时间
  * @method string getName() 获取资产实例的名称
  * @method void setName(string $Name) 设置资产实例的名称
  * @method PackInfo getPackInfo() 获取资产实例所属的套餐包信息，
@@ -163,12 +163,12 @@ class BGPIPInstance extends AbstractModel
     public $Status;
 
     /**
-     * @var string 购买时间
+     * @var string 到期时间
      */
     public $ExpiredTime;
 
     /**
-     * @var string 到期时间
+     * @var string 购买时间
      */
     public $CreatedTime;
 
@@ -301,8 +301,8 @@ class BGPIPInstance extends AbstractModel
 "creating"：创建中
 "deblocking"：解封中
 "isolate"：回收隔离中
-     * @param string $ExpiredTime 购买时间
-     * @param string $CreatedTime 到期时间
+     * @param string $ExpiredTime 到期时间
+     * @param string $CreatedTime 购买时间
      * @param string $Name 资产实例的名称
      * @param PackInfo $PackInfo 资产实例所属的套餐包信息，
 注意：当资产实例不是套餐包的实例时，此字段为null

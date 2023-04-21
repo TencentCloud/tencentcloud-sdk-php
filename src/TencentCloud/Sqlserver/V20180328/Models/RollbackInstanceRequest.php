@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getType() 获取回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
  * @method void setType(integer $Type) 设置回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
- * @method array getDBs() 获取需要回档的数据库
- * @method void setDBs(array $DBs) 设置需要回档的数据库
  * @method string getTime() 获取回档目标时间点
  * @method void setTime(string $Time) 设置回档目标时间点
+ * @method array getDBs() 获取需要回档的数据库
+ * @method void setDBs(array $DBs) 设置需要回档的数据库
  * @method string getTargetInstanceId() 获取备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
  * @method void setTargetInstanceId(string $TargetInstanceId) 设置备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
  * @method array getRenameRestore() 获取按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
@@ -46,14 +46,14 @@ class RollbackInstanceRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var array 需要回档的数据库
-     */
-    public $DBs;
-
-    /**
      * @var string 回档目标时间点
      */
     public $Time;
+
+    /**
+     * @var array 需要回档的数据库
+     */
+    public $DBs;
 
     /**
      * @var string 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
@@ -68,8 +68,8 @@ class RollbackInstanceRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param integer $Type 回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
-     * @param array $DBs 需要回档的数据库
      * @param string $Time 回档目标时间点
+     * @param array $DBs 需要回档的数据库
      * @param string $TargetInstanceId 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
      * @param array $RenameRestore 按照ReNameRestoreDatabase中的库进行重命名，仅在Type = 1重命名回档方式有效；不填则按照默认方式命名库，DBs参数确定要恢复的库
      */
@@ -94,12 +94,12 @@ class RollbackInstanceRequest extends AbstractModel
             $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("DBs",$param) and $param["DBs"] !== null) {
-            $this->DBs = $param["DBs"];
-        }
-
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("DBs",$param) and $param["DBs"] !== null) {
+            $this->DBs = $param["DBs"];
         }
 
         if (array_key_exists("TargetInstanceId",$param) and $param["TargetInstanceId"] !== null) {

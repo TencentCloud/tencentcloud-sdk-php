@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRefererAuthPolicy(RefererAuthPolicy $RefererAuthPolicy) 设置[Referer 防盗链](/document/product/266/14046)规则。
  * @method UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() 获取[Key 防盗链](/document/product/266/14047)规则。
  * @method void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy $UrlSignatureAuthPolicy) 设置[Key 防盗链](/document/product/266/14047)规则。
+ * @method DomainQUICConfig getQUICConfig() 获取QUIC 配置。
+ * @method void setQUICConfig(DomainQUICConfig $QUICConfig) 设置QUIC 配置。
  */
 class ModifyVodDomainConfigRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyVodDomainConfigRequest extends AbstractModel
     public $UrlSignatureAuthPolicy;
 
     /**
+     * @var DomainQUICConfig QUIC 配置。
+     */
+    public $QUICConfig;
+
+    /**
      * @param string $Domain 域名。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param RefererAuthPolicy $RefererAuthPolicy [Referer 防盗链](/document/product/266/14046)规则。
      * @param UrlSignatureAuthPolicy $UrlSignatureAuthPolicy [Key 防盗链](/document/product/266/14047)规则。
+     * @param DomainQUICConfig $QUICConfig QUIC 配置。
      */
     function __construct()
     {
@@ -86,6 +94,11 @@ class ModifyVodDomainConfigRequest extends AbstractModel
         if (array_key_exists("UrlSignatureAuthPolicy",$param) and $param["UrlSignatureAuthPolicy"] !== null) {
             $this->UrlSignatureAuthPolicy = new UrlSignatureAuthPolicy();
             $this->UrlSignatureAuthPolicy->deserialize($param["UrlSignatureAuthPolicy"]);
+        }
+
+        if (array_key_exists("QUICConfig",$param) and $param["QUICConfig"] !== null) {
+            $this->QUICConfig = new DomainQUICConfig();
+            $this->QUICConfig->deserialize($param["QUICConfig"]);
         }
     }
 }

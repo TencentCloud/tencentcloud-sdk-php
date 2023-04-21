@@ -48,6 +48,10 @@ other(托管IP)
  * @method void setDeviceType(string $DeviceType) 设置云产品子类型，取值[cvm（CVM），lb（负载均衡器），eni（弹性网卡），vpngw（VPN），natgw（NAT），waf（WAF），fpc（金融），gaap（GAAP），other（托管IP），eip（黑石弹性IP）]
  * @method string getInstanceId() 获取IP所属的云产品实例ID，例如是弹性网卡的IP，InstanceId为弹性网卡的ID(eni-*); 如果是托管IP没有对应的资源实例ID,InstanceId为""
  * @method void setInstanceId(string $InstanceId) 设置IP所属的云产品实例ID，例如是弹性网卡的IP，InstanceId为弹性网卡的ID(eni-*); 如果是托管IP没有对应的资源实例ID,InstanceId为""
+ * @method string getDomain() 获取域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EipProductInfo extends AbstractModel
 {
@@ -82,6 +86,12 @@ other(托管IP)
     public $InstanceId;
 
     /**
+     * @var string 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
      * @param string $Ip IP地址
      * @param string $BizType 云产品类型，取值[
 public（CVM产品），
@@ -96,6 +106,8 @@ other(托管IP)
 ]
      * @param string $DeviceType 云产品子类型，取值[cvm（CVM），lb（负载均衡器），eni（弹性网卡），vpngw（VPN），natgw（NAT），waf（WAF），fpc（金融），gaap（GAAP），other（托管IP），eip（黑石弹性IP）]
      * @param string $InstanceId IP所属的云产品实例ID，例如是弹性网卡的IP，InstanceId为弹性网卡的ID(eni-*); 如果是托管IP没有对应的资源实例ID,InstanceId为""
+     * @param string $Domain 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ other(托管IP)
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

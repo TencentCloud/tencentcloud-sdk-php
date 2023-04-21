@@ -112,6 +112,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置该实例已上报的总应用数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogSet() 获取CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogSet(string $LogSet) 设置CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMetricDuration() 获取Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetricDuration(integer $MetricDuration) 设置Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -258,6 +266,18 @@ class ApmInstanceDetail extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var string CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogSet;
+
+    /**
+     * @var integer Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetricDuration;
+
+    /**
      * @param float $AmountOfUsedStorage 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例名
@@ -303,6 +323,10 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $ClientCount 该实例已上报的客户端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogSet CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MetricDuration Metric数据保存时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -417,6 +441,14 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("LogSet",$param) and $param["LogSet"] !== null) {
+            $this->LogSet = $param["LogSet"];
+        }
+
+        if (array_key_exists("MetricDuration",$param) and $param["MetricDuration"] !== null) {
+            $this->MetricDuration = $param["MetricDuration"];
         }
     }
 }

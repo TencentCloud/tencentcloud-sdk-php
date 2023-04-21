@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetInstanceId(string $TargetInstanceId) 设置备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
  * @method array getRenameRestore() 获取按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。
  * @method void setRenameRestore(array $RenameRestore) 设置按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。
- * @method string getGroupId() 获取备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
- * @method void setGroupId(string $GroupId) 设置备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+ * @method integer getType() 获取回档类型，0-覆盖方式；1-重命名方式，默认1
+ * @method void setType(integer $Type) 设置回档类型，0-覆盖方式；1-重命名方式，默认1
+ * @method array getDBList() 获取需要覆盖回档的数据库，只有覆盖回档时必填
+ * @method void setDBList(array $DBList) 设置需要覆盖回档的数据库，只有覆盖回档时必填
+ * @method string getGroupId() 获取备份任务组ID，在单库备份文件模式下
+ * @method void setGroupId(string $GroupId) 设置备份任务组ID，在单库备份文件模式下
  */
 class RestoreInstanceRequest extends AbstractModel
 {
@@ -54,7 +58,17 @@ class RestoreInstanceRequest extends AbstractModel
     public $RenameRestore;
 
     /**
-     * @var string 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+     * @var integer 回档类型，0-覆盖方式；1-重命名方式，默认1
+     */
+    public $Type;
+
+    /**
+     * @var array 需要覆盖回档的数据库，只有覆盖回档时必填
+     */
+    public $DBList;
+
+    /**
+     * @var string 备份任务组ID，在单库备份文件模式下
      */
     public $GroupId;
 
@@ -63,7 +77,9 @@ class RestoreInstanceRequest extends AbstractModel
      * @param integer $BackupId 备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
      * @param string $TargetInstanceId 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
      * @param array $RenameRestore 按照ReNameRestoreDatabase中的库进行恢复，并重命名，不填则按照默认方式命名恢复的库，且恢复所有的库。
-     * @param string $GroupId 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+     * @param integer $Type 回档类型，0-覆盖方式；1-重命名方式，默认1
+     * @param array $DBList 需要覆盖回档的数据库，只有覆盖回档时必填
+     * @param string $GroupId 备份任务组ID，在单库备份文件模式下
      */
     function __construct()
     {
@@ -97,6 +113,14 @@ class RestoreInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RenameRestore, $obj);
             }
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("DBList",$param) and $param["DBList"] !== null) {
+            $this->DBList = $param["DBList"];
         }
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {

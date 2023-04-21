@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置一页条数，当Limit=0时，默认一页条数为20;最大取值为100
  * @method string getFilterDomain() 获取调度域名搜索
  * @method void setFilterDomain(string $FilterDomain) 设置调度域名搜索
+ * @method string getStatus() 获取运行状态 0 代表未运行  1 正在运行  2 运行异常 
+ * @method void setStatus(string $Status) 设置运行状态 0 代表未运行  1 正在运行  2 运行异常 
  */
 class DescribeListSchedulingDomainRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeListSchedulingDomainRequest extends AbstractModel
     public $FilterDomain;
 
     /**
+     * @var string 运行状态 0 代表未运行  1 正在运行  2 运行异常 
+     */
+    public $Status;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterDomain 调度域名搜索
+     * @param string $Status 运行状态 0 代表未运行  1 正在运行  2 运行异常 
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeListSchedulingDomainRequest extends AbstractModel
 
         if (array_key_exists("FilterDomain",$param) and $param["FilterDomain"] !== null) {
             $this->FilterDomain = $param["FilterDomain"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

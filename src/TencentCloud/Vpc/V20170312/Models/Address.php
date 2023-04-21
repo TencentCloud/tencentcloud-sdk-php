@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置弹性公网IP关联的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeadlineDate() 获取到期时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeadlineDate(string $DeadlineDate) 设置到期时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceType() 获取EIP绑定的实例类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置EIP绑定的实例类型。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Address extends AbstractModel
 {
@@ -196,6 +204,18 @@ class Address extends AbstractModel
     public $TagSet;
 
     /**
+     * @var string 到期时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeadlineDate;
+
+    /**
+     * @var string EIP绑定的实例类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
      * @param string $AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
@@ -227,6 +247,10 @@ class Address extends AbstractModel
 <p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeadlineDate 到期时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceType EIP绑定的实例类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -322,6 +346,14 @@ class Address extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("DeadlineDate",$param) and $param["DeadlineDate"] !== null) {
+            $this->DeadlineDate = $param["DeadlineDate"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

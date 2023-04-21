@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取应用id
  * @method void setSdkAppId(integer $SdkAppId) 设置应用id
- * @method string getContent() 获取图片内容经base64编码后的string格式
- * @method void setContent(string $Content) 设置图片内容经base64编码后的string格式
+ * @method string getContent() 获取图片内容经base64编码后的string格式,最大长度为2M
+ * @method void setContent(string $Content) 设置图片内容经base64编码后的string格式,最大长度为2M
  * @method string getSuffix() 获取图片后缀名
  * @method void setSuffix(string $Suffix) 设置图片后缀名
  * @method integer getHeight() 获取图片长度
@@ -43,7 +43,7 @@ class CreatePictureRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string 图片内容经base64编码后的string格式
+     * @var string 图片内容经base64编码后的string格式,最大长度为2M
      */
     public $Content;
 
@@ -74,7 +74,7 @@ class CreatePictureRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId 应用id
-     * @param string $Content 图片内容经base64编码后的string格式
+     * @param string $Content 图片内容经base64编码后的string格式,最大长度为2M
      * @param string $Suffix 图片后缀名
      * @param integer $Height 图片长度
      * @param integer $Width 图片宽度

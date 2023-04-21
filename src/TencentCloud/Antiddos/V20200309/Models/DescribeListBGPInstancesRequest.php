@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterConvoy(integer $FilterConvoy) 设置重保护航搜索
  * @method boolean getExcludeAdvancedInfo() 获取默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
  * @method void setExcludeAdvancedInfo(boolean $ExcludeAdvancedInfo) 设置默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+ * @method array getFilterAssetIpList() 获取资产IP数组
+ * @method void setFilterAssetIpList(array $FilterAssetIpList) 设置资产IP数组
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $ExcludeAdvancedInfo;
 
     /**
+     * @var array 资产IP数组
+     */
+    public $FilterAssetIpList;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -160,6 +167,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param integer $FilterTrialFlag 试用资源搜索，1: 应急防护资源；2：PLG试用资源
      * @param integer $FilterConvoy 重保护航搜索
      * @param boolean $ExcludeAdvancedInfo 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+     * @param array $FilterAssetIpList 资产IP数组
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("ExcludeAdvancedInfo",$param) and $param["ExcludeAdvancedInfo"] !== null) {
             $this->ExcludeAdvancedInfo = $param["ExcludeAdvancedInfo"];
+        }
+
+        if (array_key_exists("FilterAssetIpList",$param) and $param["FilterAssetIpList"] !== null) {
+            $this->FilterAssetIpList = $param["FilterAssetIpList"];
         }
     }
 }

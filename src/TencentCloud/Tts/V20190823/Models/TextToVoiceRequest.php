@@ -39,11 +39,71 @@ use TencentCloud\Common\AbstractModel;
 <li>101054-智友，通用男声</li>
 <li>101055-智付，通用女声</li>
 <li>101056-智林，东北男声</li>
+<li>301000-爱小广，多情感通用男声</li>
+<li>301001-爱小栋，多情感通用男声</li>
+<li>301002-爱小海，多情感通用男声</li>
+<li>301003-爱小霞，多情感通用女声</li>
+<li>301004-爱小玲，多情感通用女声</li>
+<li>301005-爱小章，多情感通用男声</li>
+<li>301006-爱小峰，多情感通用男声</li>
+<li>301007-爱小亮，多情感通用男声</li>
+<li>301008-爱小博，多情感通用男声</li>
+<li>301009-爱小芸，多情感通用女声</li>
+<li>301010-爱小秋，多情感通用女声</li>
+<li>301011-爱小芳，多情感通用女声</li>
+<li>301012-爱小琴，多情感通用女声</li>
+<li>301013-爱小康，多情感通用男声</li>
+<li>301014-爱小辉，多情感通用男声</li>
+<li>301015-爱小璐，多情感通用女声</li>
+<li>301016-爱小阳，多情感通用男声</li>
+<li>301017-爱小泉，多情感通用男声</li>
+<li>301018-爱小昆，多情感通用男声</li>
+<li>301019-爱小诚，多情感通用男声</li>
+<li>301020-爱小岚，多情感通用女声</li>
+<li>301021-爱小茹，多情感通用女声</li>
+<li>301022-爱小蓉，多情感通用女声</li>
+<li>301023-爱小燕，多情感通用女声</li>
+<li>301024-爱小莲，多情感通用女声</li>
+<li>301025-爱小武，多情感通用男声</li>
+<li>301026-爱小雪，多情感通用女声</li>
+<li>301027-爱小媛，多情感通用女声</li>
+<li>301028-爱小娴，多情感通用女声</li>
+<li>301029-爱小涛，多情感通用男声</li>
  * @method void setVoiceType(integer $VoiceType) 设置标准音色<li>10510000-智逍遥，阅读男声</li><li>1001-智瑜，情感女声</li><li>1002-智聆，通用女声</li><li>1003-智美，客服女声</li><li>1004-智云，通用男声</li><li>1005-智莉，通用女声</li><li>1007-智娜，客服女声</li><li>1008-智琪，客服女声</li><li>1009-智芸，知性女声</li><li>1010-智华，通用男声</li><li>1017-智蓉，情感女声</li><li>1018-智靖，情感男声</li><li>1050-WeJack，英文男声</li><li>1051-WeRose，英文女声</li>精品音色<br>精品音色拟真度更高，价格不同于标准音色，查看[购买指南](https://cloud.tencent.com/document/product/1073/34112)<br><li>100510000-智逍遥，阅读男声</li><li>101001-智瑜，情感女声</li><li>101002-智聆，通用女声</li><li>101003-智美，客服女声</li><li>101004-智云，通用男声</li><li>101005-智莉，通用女声</li><li>101006-智言，助手女声</li><li>101007-智娜，客服女声</li><li>101008-智琪，客服女声</li><li>101009-智芸，知性女声</li><li>101010-智华，通用男声</li><li>101011-智燕，新闻女声</li><li>101012-智丹，新闻女声</li><li>101013-智辉，新闻男声</li><li>101014-智宁，新闻男声</li><li>101015-智萌，男童声</li><li>101016-智甜，女童声</li><li>101017-智蓉，情感女声</li><li>101018-智靖，情感男声</li><li>101019-智彤，粤语女声</li><li>101020-智刚，新闻男声</li><li>101021-智瑞，新闻男声</li><li>101022-智虹，新闻女声</li><li>101023-智萱，聊天女声</li><li>101024-智皓，聊天男声</li><li>101025-智薇，聊天女声</li><li>101026-智希，通用女声</li><li>101027-智梅，通用女声</li><li>101028-智洁，通用女声</li><li>101029-智凯，通用男声</li><li>101030-智柯，通用男声</li><li>101031-智奎，通用男声</li><li>101032-智芳，通用女声</li><li>101033-智蓓，客服女声</li><li>101034-智莲，通用女声</li><li>101035-智依，通用女声</li><li>101040-智川，四川女声</li><li>101050-WeJack，英文男声</li><li>101051-WeRose，英文女声</li><li>101052-智味，通用男声</li>
 <li>101053-智方，通用男声</li>
 <li>101054-智友，通用男声</li>
 <li>101055-智付，通用女声</li>
 <li>101056-智林，东北男声</li>
+<li>301000-爱小广，多情感通用男声</li>
+<li>301001-爱小栋，多情感通用男声</li>
+<li>301002-爱小海，多情感通用男声</li>
+<li>301003-爱小霞，多情感通用女声</li>
+<li>301004-爱小玲，多情感通用女声</li>
+<li>301005-爱小章，多情感通用男声</li>
+<li>301006-爱小峰，多情感通用男声</li>
+<li>301007-爱小亮，多情感通用男声</li>
+<li>301008-爱小博，多情感通用男声</li>
+<li>301009-爱小芸，多情感通用女声</li>
+<li>301010-爱小秋，多情感通用女声</li>
+<li>301011-爱小芳，多情感通用女声</li>
+<li>301012-爱小琴，多情感通用女声</li>
+<li>301013-爱小康，多情感通用男声</li>
+<li>301014-爱小辉，多情感通用男声</li>
+<li>301015-爱小璐，多情感通用女声</li>
+<li>301016-爱小阳，多情感通用男声</li>
+<li>301017-爱小泉，多情感通用男声</li>
+<li>301018-爱小昆，多情感通用男声</li>
+<li>301019-爱小诚，多情感通用男声</li>
+<li>301020-爱小岚，多情感通用女声</li>
+<li>301021-爱小茹，多情感通用女声</li>
+<li>301022-爱小蓉，多情感通用女声</li>
+<li>301023-爱小燕，多情感通用女声</li>
+<li>301024-爱小莲，多情感通用女声</li>
+<li>301025-爱小武，多情感通用男声</li>
+<li>301026-爱小雪，多情感通用女声</li>
+<li>301027-爱小媛，多情感通用女声</li>
+<li>301028-爱小娴，多情感通用女声</li>
+<li>301029-爱小涛，多情感通用男声</li>
  * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method integer getSampleRate() 获取音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
@@ -54,8 +114,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableSubtitle(boolean $EnableSubtitle) 设置是否开启时间戳功能，默认为false。
  * @method integer getSegmentRate() 获取断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
  * @method void setSegmentRate(integer $SegmentRate) 设置断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
- * @method string getEmotionCategory() 获取控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
- * @method void setEmotionCategory(string $EmotionCategory) 设置控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+ * @method string getEmotionCategory() 获取控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)
+ * @method void setEmotionCategory(string $EmotionCategory) 设置控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)
  * @method integer getEmotionIntensity() 获取控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
  * @method void setEmotionIntensity(integer $EmotionIntensity) 设置控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
  */
@@ -98,6 +158,36 @@ class TextToVoiceRequest extends AbstractModel
 <li>101054-智友，通用男声</li>
 <li>101055-智付，通用女声</li>
 <li>101056-智林，东北男声</li>
+<li>301000-爱小广，多情感通用男声</li>
+<li>301001-爱小栋，多情感通用男声</li>
+<li>301002-爱小海，多情感通用男声</li>
+<li>301003-爱小霞，多情感通用女声</li>
+<li>301004-爱小玲，多情感通用女声</li>
+<li>301005-爱小章，多情感通用男声</li>
+<li>301006-爱小峰，多情感通用男声</li>
+<li>301007-爱小亮，多情感通用男声</li>
+<li>301008-爱小博，多情感通用男声</li>
+<li>301009-爱小芸，多情感通用女声</li>
+<li>301010-爱小秋，多情感通用女声</li>
+<li>301011-爱小芳，多情感通用女声</li>
+<li>301012-爱小琴，多情感通用女声</li>
+<li>301013-爱小康，多情感通用男声</li>
+<li>301014-爱小辉，多情感通用男声</li>
+<li>301015-爱小璐，多情感通用女声</li>
+<li>301016-爱小阳，多情感通用男声</li>
+<li>301017-爱小泉，多情感通用男声</li>
+<li>301018-爱小昆，多情感通用男声</li>
+<li>301019-爱小诚，多情感通用男声</li>
+<li>301020-爱小岚，多情感通用女声</li>
+<li>301021-爱小茹，多情感通用女声</li>
+<li>301022-爱小蓉，多情感通用女声</li>
+<li>301023-爱小燕，多情感通用女声</li>
+<li>301024-爱小莲，多情感通用女声</li>
+<li>301025-爱小武，多情感通用男声</li>
+<li>301026-爱小雪，多情感通用女声</li>
+<li>301027-爱小媛，多情感通用女声</li>
+<li>301028-爱小娴，多情感通用女声</li>
+<li>301029-爱小涛，多情感通用男声</li>
      */
     public $VoiceType;
 
@@ -127,7 +217,7 @@ class TextToVoiceRequest extends AbstractModel
     public $SegmentRate;
 
     /**
-     * @var string 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+     * @var string 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)
      */
     public $EmotionCategory;
 
@@ -149,12 +239,42 @@ class TextToVoiceRequest extends AbstractModel
 <li>101054-智友，通用男声</li>
 <li>101055-智付，通用女声</li>
 <li>101056-智林，东北男声</li>
+<li>301000-爱小广，多情感通用男声</li>
+<li>301001-爱小栋，多情感通用男声</li>
+<li>301002-爱小海，多情感通用男声</li>
+<li>301003-爱小霞，多情感通用女声</li>
+<li>301004-爱小玲，多情感通用女声</li>
+<li>301005-爱小章，多情感通用男声</li>
+<li>301006-爱小峰，多情感通用男声</li>
+<li>301007-爱小亮，多情感通用男声</li>
+<li>301008-爱小博，多情感通用男声</li>
+<li>301009-爱小芸，多情感通用女声</li>
+<li>301010-爱小秋，多情感通用女声</li>
+<li>301011-爱小芳，多情感通用女声</li>
+<li>301012-爱小琴，多情感通用女声</li>
+<li>301013-爱小康，多情感通用男声</li>
+<li>301014-爱小辉，多情感通用男声</li>
+<li>301015-爱小璐，多情感通用女声</li>
+<li>301016-爱小阳，多情感通用男声</li>
+<li>301017-爱小泉，多情感通用男声</li>
+<li>301018-爱小昆，多情感通用男声</li>
+<li>301019-爱小诚，多情感通用男声</li>
+<li>301020-爱小岚，多情感通用女声</li>
+<li>301021-爱小茹，多情感通用女声</li>
+<li>301022-爱小蓉，多情感通用女声</li>
+<li>301023-爱小燕，多情感通用女声</li>
+<li>301024-爱小莲，多情感通用女声</li>
+<li>301025-爱小武，多情感通用男声</li>
+<li>301026-爱小雪，多情感通用女声</li>
+<li>301027-爱小媛，多情感通用女声</li>
+<li>301028-爱小娴，多情感通用女声</li>
+<li>301029-爱小涛，多情感通用男声</li>
      * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      * @param string $Codec 返回音频格式，可取值：wav（默认），mp3，pcm
      * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
      * @param integer $SegmentRate 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
-     * @param string $EmotionCategory 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+     * @param string $EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)
      * @param integer $EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
      */
     function __construct()

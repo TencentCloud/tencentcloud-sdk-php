@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataList(array $DataList) 设置曲线图各个时间点的值
  * @method string getMetricName() 获取统计纬度
  * @method void setMetricName(string $MetricName) 设置统计纬度
+ * @method integer getMaxData() 获取返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxData(integer $MaxData) 设置返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,12 @@ class DescribeBizTrendResponse extends AbstractModel
     public $MetricName;
 
     /**
+     * @var integer 返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxData;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class DescribeBizTrendResponse extends AbstractModel
     /**
      * @param array $DataList 曲线图各个时间点的值
      * @param string $MetricName 统计纬度
+     * @param integer $MaxData 返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,10 @@ class DescribeBizTrendResponse extends AbstractModel
 
         if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
             $this->MetricName = $param["MetricName"];
+        }
+
+        if (array_key_exists("MaxData",$param) and $param["MaxData"] !== null) {
+            $this->MaxData = $param["MaxData"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -123,8 +123,8 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\RenewPostpaidDBInstanceResponse RenewPostpaidDBInstance(Models\RenewPostpaidDBInstanceRequest $req) 本接口（RenewPostpaidDBInstance）用于将通过接口TerminateDBInstance手动隔离的按量计费实例从回收站中恢复。
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口（ResetAccountPassword）用于重置实例的账户密码。
  * @method Models\RestartDBInstanceResponse RestartDBInstance(Models\RestartDBInstanceRequest $req) 本接口（RestartDBInstance）用于重启数据库实例。
- * @method Models\RestoreInstanceResponse RestoreInstance(Models\RestoreInstanceRequest $req) 本接口（RestoreInstance）用于根据备份文件恢复实例。
- * @method Models\RollbackInstanceResponse RollbackInstance(Models\RollbackInstanceRequest $req) 本接口（RollbackInstance）用于回档实例
+ * @method Models\RestoreInstanceResponse RestoreInstance(Models\RestoreInstanceRequest $req) 本接口（RestoreInstance）用于按照备份集回档数据库。
+ * @method Models\RollbackInstanceResponse RollbackInstance(Models\RollbackInstanceRequest $req) 本接口（RollbackInstance）用于按照时间点回档实例
  * @method Models\RunMigrationResponse RunMigration(Models\RunMigrationRequest $req) 本接口（RunMigration）用于启动迁移任务，开始迁移
  * @method Models\StartBackupMigrationResponse StartBackupMigration(Models\StartBackupMigrationRequest $req) 本接口（StartBackupMigration）用于启动备份导入任务。
  * @method Models\StartIncrementalMigrationResponse StartIncrementalMigration(Models\StartIncrementalMigrationRequest $req) 本接口（StartIncrementalMigration）用于启动增量备份导入任务。

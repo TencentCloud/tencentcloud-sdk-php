@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合同文件验签单个结果结构体
  *
- * @method integer getVerifyResult() 获取验签结果
- * @method void setVerifyResult(integer $VerifyResult) 设置验签结果
- * @method string getSignPlatform() 获取签署平台
- * @method void setSignPlatform(string $SignPlatform) 设置签署平台
+ * @method integer getVerifyResult() 获取验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
+ * @method void setVerifyResult(integer $VerifyResult) 设置验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
+ * @method string getSignPlatform() 获取签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
+ * @method void setSignPlatform(string $SignPlatform) 设置签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
  * @method string getSignerName() 获取签署人名称
  * @method void setSignerName(string $SignerName) 设置签署人名称
  * @method integer getSignTime() 获取签署时间
@@ -52,12 +52,12 @@ use TencentCloud\Common\AbstractModel;
 class PdfVerifyResult extends AbstractModel
 {
     /**
-     * @var integer 验签结果
+     * @var integer 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
      */
     public $VerifyResult;
 
     /**
-     * @var string 签署平台
+     * @var string 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
      */
     public $SignPlatform;
 
@@ -122,8 +122,8 @@ class PdfVerifyResult extends AbstractModel
     public $ComponentPage;
 
     /**
-     * @param integer $VerifyResult 验签结果
-     * @param string $SignPlatform 签署平台
+     * @param integer $VerifyResult 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
+     * @param string $SignPlatform 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
      * @param string $SignerName 签署人名称
      * @param integer $SignTime 签署时间
      * @param string $SignAlgorithm 签名算法

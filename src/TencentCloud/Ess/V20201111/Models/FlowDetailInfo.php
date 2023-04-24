@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置合同(流程)的签署人数组
  * @method array getCcInfos() 获取合同(流程)的关注方信息列表
  * @method void setCcInfos(array $CcInfos) 设置合同(流程)的关注方信息列表
+ * @method string getCreator() 获取合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreator(string $Creator) 设置合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowDetailInfo extends AbstractModel
 {
@@ -129,6 +133,12 @@ class FlowDetailInfo extends AbstractModel
     public $CcInfos;
 
     /**
+     * @var string 合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Creator;
+
+    /**
      * @param string $FlowId 合同(流程)的Id
      * @param string $FlowName 合同(流程)的名字
      * @param string $FlowType 合同(流程)的类型
@@ -152,6 +162,8 @@ class FlowDetailInfo extends AbstractModel
      * @param integer $CreatedOn 合同(流程)的创建时间戳
      * @param array $FlowApproverInfos 合同(流程)的签署人数组
      * @param array $CcInfos 合同(流程)的关注方信息列表
+     * @param string $Creator 合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -210,6 +222,10 @@ class FlowDetailInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CcInfos, $obj);
             }
+        }
+
+        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
+            $this->Creator = $param["Creator"];
         }
     }
 }

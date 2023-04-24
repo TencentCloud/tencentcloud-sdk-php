@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnatPro(boolean $SnatPro) 设置是否开启跨地域绑定2.0功能
  * @method boolean getDeleteProtect() 获取是否开启删除保护
  * @method void setDeleteProtect(boolean $DeleteProtect) 设置是否开启删除保护
+ * @method boolean getModifyClassicDomain() 获取将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+ * @method void setModifyClassicDomain(boolean $ModifyClassicDomain) 设置将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
  */
 class ModifyLoadBalancerAttributesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $DeleteProtect;
 
     /**
+     * @var boolean 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+     */
+    public $ModifyClassicDomain;
+
+    /**
      * @param string $LoadBalancerId 负载均衡的唯一ID
      * @param string $LoadBalancerName 负载均衡实例名称
      * @param TargetRegionInfo $TargetRegionInfo 设置负载均衡跨地域绑定1.0的后端服务信息
@@ -80,6 +87,7 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
      * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
      * @param boolean $SnatPro 是否开启跨地域绑定2.0功能
      * @param boolean $DeleteProtect 是否开启删除保护
+     * @param boolean $ModifyClassicDomain 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
      */
     function __construct()
     {
@@ -122,6 +130,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
 
         if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
             $this->DeleteProtect = $param["DeleteProtect"];
+        }
+
+        if (array_key_exists("ModifyClassicDomain",$param) and $param["ModifyClassicDomain"] !== null) {
+            $this->ModifyClassicDomain = $param["ModifyClassicDomain"];
         }
     }
 }

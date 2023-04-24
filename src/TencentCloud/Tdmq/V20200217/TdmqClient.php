@@ -154,6 +154,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ModifyRabbitMQVipInstanceResponse ModifyRabbitMQVipInstance(Models\ModifyRabbitMQVipInstanceRequest $req) 修改RabbitMQ专享版实例
  * @method Models\ModifyRocketMQClusterResponse ModifyRocketMQCluster(Models\ModifyRocketMQClusterRequest $req) 更新RocketMQ集群信息
  * @method Models\ModifyRocketMQGroupResponse ModifyRocketMQGroup(Models\ModifyRocketMQGroupRequest $req) 更新RocketMQ消费组信息
+ * @method Models\ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpec(Models\ModifyRocketMQInstanceSpecRequest $req) 本API用于修改RocketMQ专享实例配置，可以支持实例规格、节点数和存储的升配和实例规格的降配。本API发起订单并成功支付后进入实例配置变更的流程，可通过DescribeRocketMQVipInstances查询实例是否已变更完成。
  * @method Models\ModifyRocketMQNamespaceResponse ModifyRocketMQNamespace(Models\ModifyRocketMQNamespaceRequest $req) 更新RocketMQ命名空间
  * @method Models\ModifyRocketMQTopicResponse ModifyRocketMQTopic(Models\ModifyRocketMQTopicRequest $req) 更新RocketMQ主题信息
  * @method Models\ModifyRoleResponse ModifyRole(Models\ModifyRoleRequest $req) 角色修改

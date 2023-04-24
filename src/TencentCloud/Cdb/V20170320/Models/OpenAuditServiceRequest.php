@@ -25,6 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLogExpireDay() 获取审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -32,6 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogExpireDay(integer $LogExpireDay) 设置审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -39,17 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHighLogExpireDay() 获取高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年；
  * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年；
+ * @method array getAuditRuleFilters() 获取审计规则。同RuleTemplateIds都不填是全审计。
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置审计规则。同RuleTemplateIds都不填是全审计。
+ * @method array getRuleTemplateIds() 获取规则模版ID。同AuditRuleFilters都不填是全审计。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模版ID。同AuditRuleFilters都不填是全审计。
  */
 class OpenAuditServiceRequest extends AbstractModel
 {
@@ -62,6 +60,7 @@ class OpenAuditServiceRequest extends AbstractModel
      * @var integer 审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -73,18 +72,25 @@ class OpenAuditServiceRequest extends AbstractModel
      * @var integer 高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年；
      */
     public $HighLogExpireDay;
+
+    /**
+     * @var array 审计规则。同RuleTemplateIds都不填是全审计。
+     */
+    public $AuditRuleFilters;
+
+    /**
+     * @var array 规则模版ID。同AuditRuleFilters都不填是全审计。
+     */
+    public $RuleTemplateIds;
 
     /**
      * @param string $InstanceId CDB实例ID
      * @param integer $LogExpireDay 审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -92,10 +98,8 @@ class OpenAuditServiceRequest extends AbstractModel
      * @param integer $HighLogExpireDay 高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年；
+     * @param array $AuditRuleFilters 审计规则。同RuleTemplateIds都不填是全审计。
+     * @param array $RuleTemplateIds 规则模版ID。同AuditRuleFilters都不填是全审计。
      */
     function __construct()
     {
@@ -120,6 +124,19 @@ class OpenAuditServiceRequest extends AbstractModel
 
         if (array_key_exists("HighLogExpireDay",$param) and $param["HighLogExpireDay"] !== null) {
             $this->HighLogExpireDay = $param["HighLogExpireDay"];
+        }
+
+        if (array_key_exists("AuditRuleFilters",$param) and $param["AuditRuleFilters"] !== null) {
+            $this->AuditRuleFilters = [];
+            foreach ($param["AuditRuleFilters"] as $key => $value){
+                $obj = new AuditRuleFilters();
+                $obj->deserialize($value);
+                array_push($this->AuditRuleFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("RuleTemplateIds",$param) and $param["RuleTemplateIds"] !== null) {
+            $this->RuleTemplateIds = $param["RuleTemplateIds"];
         }
     }
 }

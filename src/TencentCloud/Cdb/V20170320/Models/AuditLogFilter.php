@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIoWaitTimeSection(string $IoWaitTimeSection) 设置IO等待时间，格式为M-N，例如：10-200
  * @method string getTransactionLivingTimeSection() 获取事务持续时间，格式为M-N，例如：10-200
  * @method void setTransactionLivingTimeSection(string $TransactionLivingTimeSection) 设置事务持续时间，格式为M-N，例如：10-200
+ * @method array getThreadId() 获取线程ID
+ * @method void setThreadId(array $ThreadId) 设置线程ID
+ * @method integer getSentRows() 获取返回行数。表示筛选返回行数大于该值的审计日志。
+ * @method void setSentRows(integer $SentRows) 设置返回行数。表示筛选返回行数大于该值的审计日志。
+ * @method array getErrCode() 获取mysql错误码
+ * @method void setErrCode(array $ErrCode) 设置mysql错误码
  */
 class AuditLogFilter extends AbstractModel
 {
@@ -143,6 +149,21 @@ class AuditLogFilter extends AbstractModel
     public $TransactionLivingTimeSection;
 
     /**
+     * @var array 线程ID
+     */
+    public $ThreadId;
+
+    /**
+     * @var integer 返回行数。表示筛选返回行数大于该值的审计日志。
+     */
+    public $SentRows;
+
+    /**
+     * @var array mysql错误码
+     */
+    public $ErrCode;
+
+    /**
      * @param array $Host 客户端地址。
      * @param array $User 用户名。
      * @param array $DBName 数据库名称。
@@ -160,6 +181,9 @@ class AuditLogFilter extends AbstractModel
      * @param string $LockWaitTimeSection 锁等待时间，格式为M-N，例如：10-200
      * @param string $IoWaitTimeSection IO等待时间，格式为M-N，例如：10-200
      * @param string $TransactionLivingTimeSection 事务持续时间，格式为M-N，例如：10-200
+     * @param array $ThreadId 线程ID
+     * @param integer $SentRows 返回行数。表示筛选返回行数大于该值的审计日志。
+     * @param array $ErrCode mysql错误码
      */
     function __construct()
     {
@@ -240,6 +264,18 @@ class AuditLogFilter extends AbstractModel
 
         if (array_key_exists("TransactionLivingTimeSection",$param) and $param["TransactionLivingTimeSection"] !== null) {
             $this->TransactionLivingTimeSection = $param["TransactionLivingTimeSection"];
+        }
+
+        if (array_key_exists("ThreadId",$param) and $param["ThreadId"] !== null) {
+            $this->ThreadId = $param["ThreadId"];
+        }
+
+        if (array_key_exists("SentRows",$param) and $param["SentRows"] !== null) {
+            $this->SentRows = $param["SentRows"];
+        }
+
+        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
+            $this->ErrCode = $param["ErrCode"];
         }
     }
 }

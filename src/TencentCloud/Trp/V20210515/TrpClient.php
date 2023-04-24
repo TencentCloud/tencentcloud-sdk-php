@@ -32,7 +32,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 新建商户
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 新建商品
  * @method Models\CreateTraceChainResponse CreateTraceChain(Models\CreateTraceChainRequest $req) 上链溯源信息
- * @method Models\CreateTraceCodesResponse CreateTraceCodes(Models\CreateTraceCodesRequest $req) 批量导入二维码，只支持平台发的码
+ * @method Models\CreateTraceCodesResponse CreateTraceCodes(Models\CreateTraceCodesRequest $req) 批量绑定指定批次并激活二维码，只支持平台发的码，且只会激活没有使用过的码
  * @method Models\CreateTraceCodesAsyncResponse CreateTraceCodesAsync(Models\CreateTraceCodesAsyncRequest $req) 异步导入激活码包，如果是第三方码包，需要域名跟配置的匹配
  * @method Models\CreateTraceDataResponse CreateTraceData(Models\CreateTraceDataRequest $req) 新增溯源信息
  * @method Models\DeleteCodeBatchResponse DeleteCodeBatch(Models\DeleteCodeBatchRequest $req) 删除批次

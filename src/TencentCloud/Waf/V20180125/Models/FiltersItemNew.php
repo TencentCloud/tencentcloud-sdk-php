@@ -18,7 +18,7 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例入参过滤器
+ * 过滤数组
  *
  * @method string getName() 获取字段名
  * @method void setName(string $Name) 设置字段名

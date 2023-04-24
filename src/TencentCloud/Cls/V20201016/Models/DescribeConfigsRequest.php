@@ -20,50 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigs请求参数结构体
  *
- * @method array getFilters() 获取<br><li> configName
+ * @method array getFilters() 获取configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
- * @method void setFilters(array $Filters) 设置<br><li> configName
+ * @method void setFilters(array $Filters) 设置configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method integer getOffset() 获取分页的偏移量，默认值为0
@@ -74,27 +60,20 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConfigsRequest extends AbstractModel
 {
     /**
-     * @var array <br><li> configName
+     * @var array configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
@@ -111,27 +90,20 @@ class DescribeConfigsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters <br><li> configName
+     * @param array $Filters configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param integer $Offset 分页的偏移量，默认值为0

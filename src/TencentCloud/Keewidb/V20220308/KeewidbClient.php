@@ -30,6 +30,7 @@ use TencentCloud\Keewidb\V20220308\Models as Models;
  * @method Models\CreateBackupManuallyResponse CreateBackupManually(Models\CreateBackupManuallyRequest $req) 手动发起备份
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 创建数据库实例
  * @method Models\DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(Models\DescribeAutoBackupConfigRequest $req) 本接口（DescribeAutoBackupConfig）用于获取自动备份配置。
+ * @method Models\DescribeConnectionConfigResponse DescribeConnectionConfig(Models\DescribeConnectionConfigRequest $req) 本接口（DescribeConnectionConfig）用于查询实例连接配置，包括出流量和入流量带宽、最大连接数限制。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
  * @method Models\DescribeInstanceBackupsResponse DescribeInstanceBackups(Models\DescribeInstanceBackupsRequest $req) 本接口（DescribeInstanceBackups）用于查询实例全量备份列表。
  * @method Models\DescribeInstanceBinlogsResponse DescribeInstanceBinlogs(Models\DescribeInstanceBinlogsRequest $req) 本接口（DescribeInstanceBinlogs）用于查询增量备份列表。

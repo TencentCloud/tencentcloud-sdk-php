@@ -32,10 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
  * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC，默认DESC
  * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC 和 DESC，默认DESC
- * @method array getFilters() 获取* Qualifier:
-函数版本，别名
- * @method void setFilters(array $Filters) 设置* Qualifier:
-函数版本，别名
+ * @method array getFilters() 获取* Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述
+ * @method void setFilters(array $Filters) 设置* Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述
  */
 class ListTriggersRequest extends AbstractModel
 {
@@ -70,8 +72,9 @@ class ListTriggersRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var array * Qualifier:
-函数版本，别名
+     * @var array * Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述
      */
     public $Filters;
 
@@ -82,8 +85,9 @@ class ListTriggersRequest extends AbstractModel
      * @param integer $Limit 返回数据长度，默认值为 20
      * @param string $OrderBy 根据哪个字段进行返回结果排序,支持以下字段：add_time，mod_time，默认mod_time
      * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC，默认DESC
-     * @param array $Filters * Qualifier:
-函数版本，别名
+     * @param array $Filters * Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述
      */
     function __construct()
     {

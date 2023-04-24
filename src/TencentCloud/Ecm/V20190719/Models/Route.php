@@ -50,6 +50,8 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
  * @method integer getRouteId() 获取路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略
  * @method void setRouteId(integer $RouteId) 设置路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略
+ * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
+ * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
  */
 class Route extends AbstractModel
 {
@@ -101,6 +103,11 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     public $RouteId;
 
     /**
+     * @var string 路由表实例ID，例如：rtb-azd4dt1c。
+     */
+    public $RouteTableId;
+
+    /**
      * @param string $DestinationCidrBlock 目的IPv4网段
      * @param string $GatewayType 下一跳类型
 NORMAL_CVM：普通云服务器；
@@ -116,6 +123,7 @@ NETD：网络探测路由，创建网络探测实例时，系统默认下发，�
 CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
      * @param integer $RouteId 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略
+     * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
         if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
             $this->RouteId = $param["RouteId"];
+        }
+
+        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
+            $this->RouteTableId = $param["RouteTableId"];
         }
     }
 }

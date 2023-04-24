@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabledSkillGroup(boolean $EnabledSkillGroup) 设置是否返回技能组维度信息，默认“是”
  * @method boolean getEnabledNumber() 获取是否返回线路维度信息，默认“否”
  * @method void setEnabledNumber(boolean $EnabledNumber) 设置是否返回线路维度信息，默认“否”
+ * @method array getGroupIdList() 获取筛选技能组列表
+ * @method void setGroupIdList(array $GroupIdList) 设置筛选技能组列表
  */
 class DescribeCallInMetricsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeCallInMetricsRequest extends AbstractModel
     public $EnabledNumber;
 
     /**
+     * @var array 筛选技能组列表
+     */
+    public $GroupIdList;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param boolean $EnabledSkillGroup 是否返回技能组维度信息，默认“是”
      * @param boolean $EnabledNumber 是否返回线路维度信息，默认“否”
+     * @param array $GroupIdList 筛选技能组列表
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeCallInMetricsRequest extends AbstractModel
 
         if (array_key_exists("EnabledNumber",$param) and $param["EnabledNumber"] !== null) {
             $this->EnabledNumber = $param["EnabledNumber"];
+        }
+
+        if (array_key_exists("GroupIdList",$param) and $param["GroupIdList"] !== null) {
+            $this->GroupIdList = $param["GroupIdList"];
         }
     }
 }

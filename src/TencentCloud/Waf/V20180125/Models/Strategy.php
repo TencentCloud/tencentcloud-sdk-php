@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 自定义规则的匹配条件结构体
  *
  * @method string getField() 获取匹配字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setField(string $Field) 设置匹配字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompareFunc() 获取逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompareFunc(string $CompareFunc) 设置逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取匹配内容
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置匹配内容
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getArg() 获取匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArg(string $Arg) 设置匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Strategy extends AbstractModel
 {
     /**
      * @var string 匹配字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Field;
 
     /**
      * @var string 逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompareFunc;
 
     /**
      * @var string 匹配内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var string 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Arg;
 
     /**
      * @param string $Field 匹配字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompareFunc 逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 匹配内容
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Arg 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

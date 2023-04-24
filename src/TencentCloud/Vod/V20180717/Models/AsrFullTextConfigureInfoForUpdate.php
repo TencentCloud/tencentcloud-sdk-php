@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt：生成 WebVTT 字幕文件；</li>
 <li>srt：生成 SRT 字幕文件。</li>
 <font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
+ * @method string getSrcLanguage() 获取媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+ * @method void setSrcLanguage(string $SrcLanguage) 设置媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -60,6 +70,15 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     public $SubtitleFormat;
 
     /**
+     * @var string 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+     */
+    public $SrcLanguage;
+
+    /**
      * @param string $Switch 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
@@ -68,6 +87,11 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 <li>vtt：生成 WebVTT 字幕文件；</li>
 <li>srt：生成 SRT 字幕文件。</li>
 <font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
+     * @param string $SrcLanguage 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
      */
     function __construct()
     {
@@ -93,6 +117,10 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {
             $this->SubtitleFormat = $param["SubtitleFormat"];
+        }
+
+        if (array_key_exists("SrcLanguage",$param) and $param["SrcLanguage"] !== null) {
+            $this->SrcLanguage = $param["SrcLanguage"];
         }
     }
 }

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
  * @method LogAlarmReq getLogAlarmReqInfo() 获取日志告警创建请求参数信息
  * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置日志告警创建请求参数信息
- * @method array getNoticeIds() 获取模版id，专供prom使用
- * @method void setNoticeIds(array $NoticeIds) 设置模版id，专供prom使用
+ * @method array getNoticeIds() 获取模板id，专供prom使用
+ * @method void setNoticeIds(array $NoticeIds) 设置模板id，专供prom使用
  * @method integer getEnable() 获取启停状态，0=停用，1=启用
  * @method void setEnable(integer $Enable) 设置启停状态，0=停用，1=启用
  * @method string getPolicyName() 获取专供prom策略名称
@@ -88,7 +88,7 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $LogAlarmReqInfo;
 
     /**
-     * @var array 模版id，专供prom使用
+     * @var array 模板id，专供prom使用
      */
     public $NoticeIds;
 
@@ -116,7 +116,7 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
      * @param AlarmPolicyFilter $Filter 全局过滤条件
      * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
      * @param LogAlarmReq $LogAlarmReqInfo 日志告警创建请求参数信息
-     * @param array $NoticeIds 模版id，专供prom使用
+     * @param array $NoticeIds 模板id，专供prom使用
      * @param integer $Enable 启停状态，0=停用，1=启用
      * @param string $PolicyName 专供prom策略名称
      * @param string $EbSubject 事件配置的告警

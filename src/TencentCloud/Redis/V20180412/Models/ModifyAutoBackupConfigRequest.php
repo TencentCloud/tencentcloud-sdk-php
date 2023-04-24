@@ -20,19 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoBackupConfig请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
  * @method array getWeekDays() 获取设置自动备份周期。可设置为Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。该参数暂不支持修改。
  * @method void setWeekDays(array $WeekDays) 设置设置自动备份周期。可设置为Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。该参数暂不支持修改。
  * @method string getTimePeriod() 获取备份时间段。可设置为每个整点。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
  * @method void setTimePeriod(string $TimePeriod) 设置备份时间段。可设置为每个整点。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
- * @method integer getAutoBackupType() 获取自动备份类型： 1 “定时回档”。
- * @method void setAutoBackupType(integer $AutoBackupType) 设置自动备份类型： 1 “定时回档”。
+ * @method integer getAutoBackupType() 获取自动备份类型。目前仅能配置为：1 ，指定时备份。
+ * @method void setAutoBackupType(integer $AutoBackupType) 设置自动备份类型。目前仅能配置为：1 ，指定时备份。
  */
 class ModifyAutoBackupConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public $InstanceId;
 
@@ -47,15 +50,16 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     public $TimePeriod;
 
     /**
-     * @var integer 自动备份类型： 1 “定时回档”。
+     * @var integer 自动备份类型。目前仅能配置为：1 ，指定时备份。
      */
     public $AutoBackupType;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      * @param array $WeekDays 设置自动备份周期。可设置为Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。该参数暂不支持修改。
      * @param string $TimePeriod 备份时间段。可设置为每个整点。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
-     * @param integer $AutoBackupType 自动备份类型： 1 “定时回档”。
+     * @param integer $AutoBackupType 自动备份类型。目前仅能配置为：1 ，指定时备份。
      */
     function __construct()
     {

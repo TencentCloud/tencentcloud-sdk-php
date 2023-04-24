@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置状态
  * @method array getStrategies() 获取策略详情
  * @method void setStrategies(array $Strategies) 设置策略详情
+ * @method string getEventId() 获取事件id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventId(string $EventId) 设置事件id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeCustomRulesRspRuleListItem extends AbstractModel
 {
@@ -94,6 +98,12 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
     public $Strategies;
 
     /**
+     * @var string 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventId;
+
+    /**
      * @param string $ActionType 动作类型
      * @param string $Bypass 跳过的策略
      * @param string $CreateTime 创建时间
@@ -104,6 +114,8 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
      * @param string $SortId 优先级
      * @param string $Status 状态
      * @param array $Strategies 策略详情
+     * @param string $EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -161,6 +173,10 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Strategies, $obj);
             }
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
     }
 }

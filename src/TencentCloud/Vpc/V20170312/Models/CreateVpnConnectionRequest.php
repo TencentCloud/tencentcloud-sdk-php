@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpnGatewayId() 获取VPN网关实例ID。
  * @method void setVpnGatewayId(string $VpnGatewayId) 设置VPN网关实例ID。
- * @method string getCustomerGatewayId() 获取对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
- * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+ * @method string getCustomerGatewayId() 获取对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
+ * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
  * @method string getVpnConnectionName() 获取通道名称，可任意命名，但不得超过60个字符。
  * @method void setVpnConnectionName(string $VpnConnectionName) 设置通道名称，可任意命名，但不得超过60个字符。
  * @method string getPreShareKey() 获取预共享密钥。
@@ -40,12 +40,12 @@ CCN VPN 形的通道 可以不传VPCID
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) 设置IPSec配置，腾讯云提供IPSec安全会话设置
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
- * @method boolean getEnableHealthCheck() 获取是否支持隧道内健康检查
- * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否支持隧道内健康检查
- * @method string getHealthCheckLocalIp() 获取健康检查本端地址
- * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) 设置健康检查本端地址
- * @method string getHealthCheckRemoteIp() 获取健康检查对端地址
- * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置健康检查对端地址
+ * @method boolean getEnableHealthCheck() 获取是否支持隧道内健康检查，默认为False。
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否支持隧道内健康检查，默认为False。
+ * @method string getHealthCheckLocalIp() 获取健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) 设置健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
+ * @method string getHealthCheckRemoteIp() 获取健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
  * @method string getRouteType() 获取通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
  * @method void setRouteType(string $RouteType) 设置通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
  * @method string getNegotiationType() 获取协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
@@ -65,7 +65,7 @@ class CreateVpnConnectionRequest extends AbstractModel
     public $VpnGatewayId;
 
     /**
-     * @var string 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * @var string 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
      */
     public $CustomerGatewayId;
 
@@ -106,17 +106,17 @@ CCN VPN 形的通道 可以不传VPCID
     public $Tags;
 
     /**
-     * @var boolean 是否支持隧道内健康检查
+     * @var boolean 是否支持隧道内健康检查，默认为False。
      */
     public $EnableHealthCheck;
 
     /**
-     * @var string 健康检查本端地址
+     * @var string 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
      */
     public $HealthCheckLocalIp;
 
     /**
-     * @var string 健康检查对端地址
+     * @var string 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
      */
     public $HealthCheckRemoteIp;
 
@@ -147,7 +147,7 @@ CCN VPN 形的通道 可以不传VPCID
 
     /**
      * @param string $VpnGatewayId VPN网关实例ID。
-     * @param string $CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * @param string $CustomerGatewayId 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
      * @param string $VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
      * @param string $PreShareKey 预共享密钥。
      * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
@@ -156,9 +156,9 @@ CCN VPN 形的通道 可以不传VPCID
      * @param IKEOptionsSpecification $IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
-     * @param boolean $EnableHealthCheck 是否支持隧道内健康检查
-     * @param string $HealthCheckLocalIp 健康检查本端地址
-     * @param string $HealthCheckRemoteIp 健康检查对端地址
+     * @param boolean $EnableHealthCheck 是否支持隧道内健康检查，默认为False。
+     * @param string $HealthCheckLocalIp 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
+     * @param string $HealthCheckRemoteIp 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
      * @param string $RouteType 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
      * @param string $NegotiationType 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
      * @param integer $DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）

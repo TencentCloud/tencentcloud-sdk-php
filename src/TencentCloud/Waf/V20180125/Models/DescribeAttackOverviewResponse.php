@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCCCount(integer $CCCount) 设置CC攻击总数
  * @method integer getBotCount() 获取Bot攻击总数
  * @method void setBotCount(integer $BotCount) 设置Bot攻击总数
+ * @method integer getApiAssetsCount() 获取api资产总数
+ * @method void setApiAssetsCount(integer $ApiAssetsCount) 设置api资产总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeAttackOverviewResponse extends AbstractModel
     public $BotCount;
 
     /**
+     * @var integer api资产总数
+     */
+    public $ApiAssetsCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeAttackOverviewResponse extends AbstractModel
      * @param integer $ACLCount 访问控制总数
      * @param integer $CCCount CC攻击总数
      * @param integer $BotCount Bot攻击总数
+     * @param integer $ApiAssetsCount api资产总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +112,10 @@ class DescribeAttackOverviewResponse extends AbstractModel
 
         if (array_key_exists("BotCount",$param) and $param["BotCount"] !== null) {
             $this->BotCount = $param["BotCount"];
+        }
+
+        if (array_key_exists("ApiAssetsCount",$param) and $param["ApiAssetsCount"] !== null) {
+            $this->ApiAssetsCount = $param["ApiAssetsCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

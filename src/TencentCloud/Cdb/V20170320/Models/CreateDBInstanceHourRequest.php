@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterInstanceId(string $MasterInstanceId) 设置实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
  * @method string getInstanceRole() 获取实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
  * @method void setInstanceRole(string $InstanceRole) 设置实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
- * @method string getMasterRegion() 获取主实例的可用区信息，购买灾备、RO实例时必填。
- * @method void setMasterRegion(string $MasterRegion) 设置主实例的可用区信息，购买灾备、RO实例时必填。
+ * @method string getMasterRegion() 获取主实例地域信息，购买灾备、RO实例时，该字段必填。
+ * @method void setMasterRegion(string $MasterRegion) 设置主实例地域信息，购买灾备、RO实例时，该字段必填。
  * @method integer getPort() 获取自定义端口，端口支持范围：[ 1024-65535 ] 。
  * @method void setPort(integer $Port) 设置自定义端口，端口支持范围：[ 1024-65535 ] 。
  * @method string getPassword() 获取设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
@@ -148,7 +148,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $InstanceRole;
 
     /**
-     * @var string 主实例的可用区信息，购买灾备、RO实例时必填。
+     * @var string 主实例地域信息，购买灾备、RO实例时，该字段必填。
      */
     public $MasterRegion;
 
@@ -293,7 +293,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
      * @param string $MasterInstanceId 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      * @param string $InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-     * @param string $MasterRegion 主实例的可用区信息，购买灾备、RO实例时必填。
+     * @param string $MasterRegion 主实例地域信息，购买灾备、RO实例时，该字段必填。
      * @param integer $Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
      * @param string $Password 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param array $ParamList 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。

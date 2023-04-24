@@ -48,6 +48,8 @@ ItemNames=["姓名","性别"]
  * @method void setItemNames(array $ItemNames) 设置自定义结构化功能需返回的字段名称，例：
 若客户只想返回姓名、性别两个字段的识别结果，则输入
 ItemNames=["姓名","性别"]
+ * @method boolean getReturnFullText() 获取是否开启全文字段识别
+ * @method void setReturnFullText(boolean $ReturnFullText) 设置是否开启全文字段识别
  */
 class SmartStructuralOCRV2Request extends AbstractModel
 {
@@ -86,6 +88,11 @@ ItemNames=["姓名","性别"]
     public $ItemNames;
 
     /**
+     * @var boolean 是否开启全文字段识别
+     */
+    public $ReturnFullText;
+
+    /**
      * @param string $ImageUrl 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -100,6 +107,7 @@ ItemNames=["姓名","性别"]
      * @param array $ItemNames 自定义结构化功能需返回的字段名称，例：
 若客户只想返回姓名、性别两个字段的识别结果，则输入
 ItemNames=["姓名","性别"]
+     * @param boolean $ReturnFullText 是否开启全文字段识别
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ ItemNames=["姓名","性别"]
 
         if (array_key_exists("ItemNames",$param) and $param["ItemNames"] !== null) {
             $this->ItemNames = $param["ItemNames"];
+        }
+
+        if (array_key_exists("ReturnFullText",$param) and $param["ReturnFullText"] !== null) {
+            $this->ReturnFullText = $param["ReturnFullText"];
         }
     }
 }

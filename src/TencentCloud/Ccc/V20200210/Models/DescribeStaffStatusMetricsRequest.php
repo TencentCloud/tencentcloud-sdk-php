@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method array getStaffList() 获取筛选坐席列表，默认不传返回全部坐席信息
  * @method void setStaffList(array $StaffList) 设置筛选坐席列表，默认不传返回全部坐席信息
+ * @method array getGroupIdList() 获取筛选技能组ID列表
+ * @method void setGroupIdList(array $GroupIdList) 设置筛选技能组ID列表
+ * @method array getStatusList() 获取筛选坐席状态列表
+ * @method void setStatusList(array $StatusList) 设置筛选坐席状态列表
  */
 class DescribeStaffStatusMetricsRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DescribeStaffStatusMetricsRequest extends AbstractModel
     public $StaffList;
 
     /**
+     * @var array 筛选技能组ID列表
+     */
+    public $GroupIdList;
+
+    /**
+     * @var array 筛选坐席状态列表
+     */
+    public $StatusList;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param array $StaffList 筛选坐席列表，默认不传返回全部坐席信息
+     * @param array $GroupIdList 筛选技能组ID列表
+     * @param array $StatusList 筛选坐席状态列表
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DescribeStaffStatusMetricsRequest extends AbstractModel
 
         if (array_key_exists("StaffList",$param) and $param["StaffList"] !== null) {
             $this->StaffList = $param["StaffList"];
+        }
+
+        if (array_key_exists("GroupIdList",$param) and $param["GroupIdList"] !== null) {
+            $this->GroupIdList = $param["GroupIdList"];
+        }
+
+        if (array_key_exists("StatusList",$param) and $param["StatusList"] !== null) {
+            $this->StatusList = $param["StatusList"];
         }
     }
 }

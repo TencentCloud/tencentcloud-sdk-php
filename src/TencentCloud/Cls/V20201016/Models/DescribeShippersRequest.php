@@ -20,50 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeShippers请求参数结构体
  *
- * @method array getFilters() 获取<br><li> shipperName
-
-按照【投递规则名称】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> shipperId
-
-按照【投递规则ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+ * @method array getFilters() 获取- shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
+- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
+- topicId：按照【日志主题】进行过滤。类型：String。必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
- * @method void setFilters(array $Filters) 设置<br><li> shipperName
-
-按照【投递规则名称】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> shipperId
-
-按照【投递规则ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+ * @method void setFilters(array $Filters) 设置- shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
+- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
+- topicId：按照【日志主题】进行过滤。类型：String。必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method integer getOffset() 获取分页的偏移量，默认值为0
@@ -74,27 +38,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeShippersRequest extends AbstractModel
 {
     /**
-     * @var array <br><li> shipperName
-
-按照【投递规则名称】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> shipperId
-
-按照【投递规则ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+     * @var array - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
+- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
+- topicId：按照【日志主题】进行过滤。类型：String。必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
@@ -111,27 +57,9 @@ class DescribeShippersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters <br><li> shipperName
-
-按照【投递规则名称】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> shipperId
-
-按照【投递规则ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+     * @param array $Filters - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
+- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
+- topicId：按照【日志主题】进行过滤。类型：String。必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param integer $Offset 分页的偏移量，默认值为0

@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt：生成 WebVTT 字幕文件；</li>
 <li>srt：生成 SRT 字幕文件。</li>
 <font color='red'>注意：此字段已废弃，建议使用 SubtitleFormats。</font>
+ * @method string getSrcLanguage() 获取媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
+ * @method void setSrcLanguage(string $SrcLanguage) 设置媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
  */
 class AsrFullTextConfigureInfo extends AbstractModel
 {
@@ -66,6 +78,16 @@ class AsrFullTextConfigureInfo extends AbstractModel
     public $SubtitleFormat;
 
     /**
+     * @var string 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
+     */
+    public $SrcLanguage;
+
+    /**
      * @param string $Switch 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
@@ -76,6 +98,12 @@ class AsrFullTextConfigureInfo extends AbstractModel
 <li>vtt：生成 WebVTT 字幕文件；</li>
 <li>srt：生成 SRT 字幕文件。</li>
 <font color='red'>注意：此字段已废弃，建议使用 SubtitleFormats。</font>
+     * @param string $SrcLanguage 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
      */
     function __construct()
     {
@@ -100,6 +128,10 @@ class AsrFullTextConfigureInfo extends AbstractModel
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {
             $this->SubtitleFormat = $param["SubtitleFormat"];
+        }
+
+        if (array_key_exists("SrcLanguage",$param) and $param["SrcLanguage"] !== null) {
+            $this->SrcLanguage = $param["SrcLanguage"];
         }
     }
 }

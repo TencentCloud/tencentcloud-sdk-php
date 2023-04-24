@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCorpId(integer $CorpId) 设置企业ID
  * @method array getCodes() 获取码
  * @method void setCodes(array $Codes) 设置码
+ * @method integer getCodeType() 获取码绑定激活策略，默认  0
+0: 传什么码就激活什么码
+1: 层级码 + 层级子码
+ * @method void setCodeType(integer $CodeType) 设置码绑定激活策略，默认  0
+0: 传什么码就激活什么码
+1: 层级码 + 层级子码
+ * @method integer getCheckType() 获取错误检查类型，默认 0
+0: 没有新导入码时正常返回
+1: 没有新导入码时报错，并返回没有导入成功的原因
+ * @method void setCheckType(integer $CheckType) 设置错误检查类型，默认 0
+0: 没有新导入码时正常返回
+1: 没有新导入码时报错，并返回没有导入成功的原因
  */
 class CreateTraceCodesRequest extends AbstractModel
 {
@@ -45,9 +57,29 @@ class CreateTraceCodesRequest extends AbstractModel
     public $Codes;
 
     /**
+     * @var integer 码绑定激活策略，默认  0
+0: 传什么码就激活什么码
+1: 层级码 + 层级子码
+     */
+    public $CodeType;
+
+    /**
+     * @var integer 错误检查类型，默认 0
+0: 没有新导入码时正常返回
+1: 没有新导入码时报错，并返回没有导入成功的原因
+     */
+    public $CheckType;
+
+    /**
      * @param string $BatchId 批次ID
      * @param integer $CorpId 企业ID
      * @param array $Codes 码
+     * @param integer $CodeType 码绑定激活策略，默认  0
+0: 传什么码就激活什么码
+1: 层级码 + 层级子码
+     * @param integer $CheckType 错误检查类型，默认 0
+0: 没有新导入码时正常返回
+1: 没有新导入码时报错，并返回没有导入成功的原因
      */
     function __construct()
     {
@@ -77,6 +109,14 @@ class CreateTraceCodesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Codes, $obj);
             }
+        }
+
+        if (array_key_exists("CodeType",$param) and $param["CodeType"] !== null) {
+            $this->CodeType = $param["CodeType"];
+        }
+
+        if (array_key_exists("CheckType",$param) and $param["CheckType"] !== null) {
+            $this->CheckType = $param["CheckType"];
         }
     }
 }

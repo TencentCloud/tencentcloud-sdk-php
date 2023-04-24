@@ -30,12 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTraceItems(array $TraceItems) 设置溯源信息
  * @method string getPhaseName() 获取溯源阶段名称
  * @method void setPhaseName(string $PhaseName) 设置溯源阶段名称
+ * @method PhaseData getPhaseData() 获取环节数据
+ * @method void setPhaseData(PhaseData $PhaseData) 设置环节数据
+ * @method integer getStatus() 获取溯源状态 0: 无效, 1: 有效
+ * @method void setStatus(integer $Status) 设置溯源状态 0: 无效, 1: 有效
+ * @method integer getRank() 获取排序
+ * @method void setRank(integer $Rank) 设置排序
  * @method integer getType() 获取[无效] 类型
  * @method void setType(integer $Type) 设置[无效] 类型
  * @method string getCode() 获取[无效] 溯源码
  * @method void setCode(string $Code) 设置[无效] 溯源码
- * @method integer getRank() 获取[无效] 排序
- * @method void setRank(integer $Rank) 设置[无效] 排序
  * @method integer getPhase() 获取[无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
  * @method void setPhase(integer $Phase) 设置[无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
  * @method string getTraceTime() 获取[无效] 溯源时间
@@ -50,10 +54,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChainData(ChainData $ChainData) 设置[无效] 上链数据
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
- * @method integer getStatus() 获取溯源状态 0: 无效, 1: 有效
- * @method void setStatus(integer $Status) 设置溯源状态 0: 无效, 1: 有效
- * @method PhaseData getPhaseData() 获取环节数据
- * @method void setPhaseData(PhaseData $PhaseData) 设置环节数据
  */
 class ModifyTraceDataRequest extends AbstractModel
 {
@@ -83,6 +83,21 @@ class ModifyTraceDataRequest extends AbstractModel
     public $PhaseName;
 
     /**
+     * @var PhaseData 环节数据
+     */
+    public $PhaseData;
+
+    /**
+     * @var integer 溯源状态 0: 无效, 1: 有效
+     */
+    public $Status;
+
+    /**
+     * @var integer 排序
+     */
+    public $Rank;
+
+    /**
      * @var integer [无效] 类型
      */
     public $Type;
@@ -91,11 +106,6 @@ class ModifyTraceDataRequest extends AbstractModel
      * @var string [无效] 溯源码
      */
     public $Code;
-
-    /**
-     * @var integer [无效] 排序
-     */
-    public $Rank;
 
     /**
      * @var integer [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
@@ -133,24 +143,16 @@ class ModifyTraceDataRequest extends AbstractModel
     public $CorpId;
 
     /**
-     * @var integer 溯源状态 0: 无效, 1: 有效
-     */
-    public $Status;
-
-    /**
-     * @var PhaseData 环节数据
-     */
-    public $PhaseData;
-
-    /**
      * @param string $TraceId 溯源ID
      * @param string $BatchId 批次ID
      * @param string $TaskId 生产溯源任务ID
      * @param array $TraceItems 溯源信息
      * @param string $PhaseName 溯源阶段名称
+     * @param PhaseData $PhaseData 环节数据
+     * @param integer $Status 溯源状态 0: 无效, 1: 有效
+     * @param integer $Rank 排序
      * @param integer $Type [无效] 类型
      * @param string $Code [无效] 溯源码
-     * @param integer $Rank [无效] 排序
      * @param integer $Phase [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      * @param string $TraceTime [无效] 溯源时间
      * @param string $CreateTime [无效] 创建时间
@@ -158,8 +160,6 @@ class ModifyTraceDataRequest extends AbstractModel
      * @param string $ChainTime [无效] 上链时间
      * @param ChainData $ChainData [无效] 上链数据
      * @param integer $CorpId 企业ID
-     * @param integer $Status 溯源状态 0: 无效, 1: 有效
-     * @param PhaseData $PhaseData 环节数据
      */
     function __construct()
     {
@@ -199,16 +199,25 @@ class ModifyTraceDataRequest extends AbstractModel
             $this->PhaseName = $param["PhaseName"];
         }
 
+        if (array_key_exists("PhaseData",$param) and $param["PhaseData"] !== null) {
+            $this->PhaseData = new PhaseData();
+            $this->PhaseData->deserialize($param["PhaseData"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Rank",$param) and $param["Rank"] !== null) {
+            $this->Rank = $param["Rank"];
+        }
+
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Code",$param) and $param["Code"] !== null) {
             $this->Code = $param["Code"];
-        }
-
-        if (array_key_exists("Rank",$param) and $param["Rank"] !== null) {
-            $this->Rank = $param["Rank"];
         }
 
         if (array_key_exists("Phase",$param) and $param["Phase"] !== null) {
@@ -238,15 +247,6 @@ class ModifyTraceDataRequest extends AbstractModel
 
         if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
             $this->CorpId = $param["CorpId"];
-        }
-
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("PhaseData",$param) and $param["PhaseData"] !== null) {
-            $this->PhaseData = new PhaseData();
-            $this->PhaseData->deserialize($param["PhaseData"]);
         }
     }
 }

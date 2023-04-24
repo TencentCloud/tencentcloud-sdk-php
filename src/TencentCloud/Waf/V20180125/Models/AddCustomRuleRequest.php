@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置规则名称
  * @method string getSortId() 获取优先级
  * @method void setSortId(string $SortId) 设置优先级
- * @method string getExpireTime() 获取过期时间
- * @method void setExpireTime(string $ExpireTime) 设置过期时间
+ * @method string getExpireTime() 获取过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+ * @method void setExpireTime(string $ExpireTime) 设置过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
  * @method array getStrategies() 获取策略详情
  * @method void setStrategies(array $Strategies) 设置策略详情
  * @method string getDomain() 获取需要添加策略的域名
@@ -54,7 +54,7 @@ class AddCustomRuleRequest extends AbstractModel
     public $SortId;
 
     /**
-     * @var string 过期时间
+     * @var string 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
      */
     public $ExpireTime;
 
@@ -96,7 +96,7 @@ class AddCustomRuleRequest extends AbstractModel
     /**
      * @param string $Name 规则名称
      * @param string $SortId 优先级
-     * @param string $ExpireTime 过期时间
+     * @param string $ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
      * @param array $Strategies 策略详情
      * @param string $Domain 需要添加策略的域名
      * @param string $ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向

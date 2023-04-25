@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TextTranslate请求参数结构体
  *
- * @method string getSourceText() 获取待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于2000字符。
- * @method void setSourceText(string $SourceText) 设置待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于2000字符。
+ * @method string getSourceText() 获取待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于6000字符。
+ * @method void setSourceText(string $SourceText) 设置待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于6000字符。
  * @method string getSource() 获取源语言，支持：
 auto：自动识别（识别为一种语言）
 zh：简体中文
@@ -110,7 +110,7 @@ hi：印地语
 class TextTranslateRequest extends AbstractModel
 {
     /**
-     * @var string 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于2000字符。
+     * @var string 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于6000字符。
      */
     public $SourceText;
 
@@ -173,7 +173,7 @@ hi：印地语
     public $UntranslatedText;
 
     /**
-     * @param string $SourceText 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于2000字符。
+     * @param string $SourceText 待翻译的文本，文本统一使用utf-8格式编码，非utf-8格式编码字符会翻译失败，请传入有效文本，html标记等非常规翻译文本可能会翻译失败。单次请求的文本长度需要低于6000字符。
      * @param string $Source 源语言，支持：
 auto：自动识别（识别为一种语言）
 zh：简体中文

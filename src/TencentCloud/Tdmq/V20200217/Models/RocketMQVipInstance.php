@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpecName() 获取实例配置ID
  * @method void setSpecName(string $SpecName) 设置实例配置ID
+ * @method integer getMaxRetention() 获取最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxRetention(integer $MaxRetention) 设置最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMinRetention() 获取最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinRetention(integer $MinRetention) 设置最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetention() 获取实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetention(integer $Retention) 设置实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQVipInstance extends AbstractModel
 {
@@ -128,6 +140,24 @@ class RocketMQVipInstance extends AbstractModel
     public $SpecName;
 
     /**
+     * @var integer 最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxRetention;
+
+    /**
+     * @var integer 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MinRetention;
+
+    /**
+     * @var integer 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Retention;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -144,6 +174,12 @@ class RocketMQVipInstance extends AbstractModel
      * @param string $Remark 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName 实例配置ID
+     * @param integer $MaxRetention 最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MinRetention 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Retention 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -212,6 +248,18 @@ class RocketMQVipInstance extends AbstractModel
 
         if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
             $this->SpecName = $param["SpecName"];
+        }
+
+        if (array_key_exists("MaxRetention",$param) and $param["MaxRetention"] !== null) {
+            $this->MaxRetention = $param["MaxRetention"];
+        }
+
+        if (array_key_exists("MinRetention",$param) and $param["MinRetention"] !== null) {
+            $this->MinRetention = $param["MinRetention"];
+        }
+
+        if (array_key_exists("Retention",$param) and $param["Retention"] !== null) {
+            $this->Retention = $param["Retention"];
         }
     }
 }

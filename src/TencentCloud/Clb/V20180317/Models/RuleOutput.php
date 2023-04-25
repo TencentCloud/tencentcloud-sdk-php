@@ -70,13 +70,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWafDomainId(string $WafDomainId) 设置WAF实例ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时有效
+ * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时有效
+ * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时有效
+ * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时有效
+ * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuicStatus() 获取QUIC状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,13 +191,13 @@ class RuleOutput extends AbstractModel
     public $WafDomainId;
 
     /**
-     * @var string TRPC被调服务器路由，ForwardType为TRPC时有效
+     * @var string TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrpcCallee;
 
     /**
-     * @var string TRPC调用服务接口，ForwardType为TRPC时有效
+     * @var string TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrpcFunc;
@@ -246,9 +246,9 @@ class RuleOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WafDomainId WAF实例ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效
+     * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效
+     * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QuicStatus QUIC状态
 注意：此字段可能返回 null，表示取不到有效值。

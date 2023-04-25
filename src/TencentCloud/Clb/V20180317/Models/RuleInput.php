@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
  * @method string getTargetType() 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
  * @method void setTargetType(string $TargetType) 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
- * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时必填
- * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时必填
- * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时必填
- * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填
+ * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
+ * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
+ * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
+ * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
  * @method boolean getQuic() 获取是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
  * @method void setQuic(boolean $Quic) 设置是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
  * @method array getDomains() 获取转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
@@ -107,12 +107,12 @@ class RuleInput extends AbstractModel
     public $TargetType;
 
     /**
-     * @var string TRPC被调服务器路由，ForwardType为TRPC时必填
+     * @var string TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
      */
     public $TrpcCallee;
 
     /**
-     * @var string TRPC调用服务接口，ForwardType为TRPC时必填
+     * @var string TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
      */
     public $TrpcFunc;
 
@@ -143,8 +143,8 @@ class RuleInput extends AbstractModel
      * @param boolean $DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
      * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
-     * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
-     * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
+     * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
+     * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放
      * @param boolean $Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
      * @param array $Domains 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
      * @param MultiCertInfo $MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书；此参数和Certificate不能同时传入。

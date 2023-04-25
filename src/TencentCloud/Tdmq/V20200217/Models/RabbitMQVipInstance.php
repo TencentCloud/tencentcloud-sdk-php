@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClusterStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+为了和计费区分开，额外开启一个状态位，用于显示。
+ * @method void setClusterStatus(integer $ClusterStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+为了和计费区分开，额外开启一个状态位，用于显示。
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -138,6 +142,12 @@ class RabbitMQVipInstance extends AbstractModel
     public $ExceptionInformation;
 
     /**
+     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+为了和计费区分开，额外开启一个状态位，用于显示。
+     */
+    public $ClusterStatus;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -156,6 +166,8 @@ class RabbitMQVipInstance extends AbstractModel
      * @param string $SpecName 实例配置ID
      * @param string $ExceptionInformation 集群异常。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+为了和计费区分开，额外开启一个状态位，用于显示。
      */
     function __construct()
     {
@@ -228,6 +240,10 @@ class RabbitMQVipInstance extends AbstractModel
 
         if (array_key_exists("ExceptionInformation",$param) and $param["ExceptionInformation"] !== null) {
             $this->ExceptionInformation = $param["ExceptionInformation"];
+        }
+
+        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
+            $this->ClusterStatus = $param["ClusterStatus"];
         }
     }
 }

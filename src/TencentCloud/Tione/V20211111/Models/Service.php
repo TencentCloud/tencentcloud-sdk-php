@@ -46,9 +46,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeType(string $ChargeType) 设置付费类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupId() 获取后付费资源组id
+ * @method string getResourceGroupId() 获取包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置后付费资源组id
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedBy() 获取创建者
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,9 +142,9 @@ Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateFailedReason(string $CreateFailedReason) 设置服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取预付费服务对应的资源组名字
+ * @method string getResourceGroupName() 获取包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费服务对应的资源组名字
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取服务的标签
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,7 +199,7 @@ class Service extends AbstractModel
     public $ChargeType;
 
     /**
-     * @var string 后付费资源组id
+     * @var string 包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
@@ -323,7 +323,7 @@ Waiting 就绪中
     public $CreateFailedReason;
 
     /**
-     * @var string 预付费服务对应的资源组名字
+     * @var string 包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
@@ -348,7 +348,7 @@ Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeType 付费类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupId 后付费资源组id
+     * @param string $ResourceGroupId 包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedBy 创建者
 注意：此字段可能返回 null，表示取不到有效值。
@@ -396,7 +396,7 @@ Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 预付费服务对应的资源组名字
+     * @param string $ResourceGroupName 包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 服务的标签
 注意：此字段可能返回 null，表示取不到有效值。

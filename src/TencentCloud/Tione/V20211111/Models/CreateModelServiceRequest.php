@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateModelService请求参数结构体
  *
- * @method ImageInfo getImageInfo() 获取镜像信息，配置服务运行所需的镜像地址等信息
- * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息，配置服务运行所需的镜像地址等信息
  * @method string getServiceGroupId() 获取新增版本时需要填写
  * @method void setServiceGroupId(string $ServiceGroupId) 设置新增版本时需要填写
  * @method string getServiceGroupName() 获取不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
  * @method void setServiceGroupName(string $ServiceGroupName) 设置不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
  * @method string getServiceDescription() 获取模型服务的描述
  * @method void setServiceDescription(string $ServiceDescription) 设置模型服务的描述
- * @method string getChargeType() 获取付费模式,有 PREPAID 、 POSTPAID_BY_HOUR 和 HYBRID_PAID 三种
- * @method void setChargeType(string $ChargeType) 设置付费模式,有 PREPAID 、 POSTPAID_BY_HOUR 和 HYBRID_PAID 三种
+ * @method string getChargeType() 获取付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
+ * @method void setChargeType(string $ChargeType) 设置付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
  * @method string getResourceGroupId() 获取预付费模式下所属的资源组id，同服务组下唯一
  * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费模式下所属的资源组id，同服务组下唯一
  * @method ModelInfo getModelInfo() 获取模型信息，需要挂载模型时填写
  * @method void setModelInfo(ModelInfo $ModelInfo) 设置模型信息，需要挂载模型时填写
+ * @method ImageInfo getImageInfo() 获取镜像信息，配置服务运行所需的镜像地址等信息
+ * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息，配置服务运行所需的镜像地址等信息
  * @method array getEnv() 获取环境变量，可选参数，用于配置容器中的环境变量
  * @method void setEnv(array $Env) 设置环境变量，可选参数，用于配置容器中的环境变量
- * @method ResourceInfo getResources() 获取资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
- * @method void setResources(ResourceInfo $Resources) 设置资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
+ * @method ResourceInfo getResources() 获取资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
+ * @method void setResources(ResourceInfo $Resources) 设置资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
  * @method string getInstanceType() 获取使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
 TI.S.MEDIUM.POST	2C4G
 TI.S.LARGE.POST	4C8G
@@ -124,11 +124,6 @@ HYBRID_PAID:
 class CreateModelServiceRequest extends AbstractModel
 {
     /**
-     * @var ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
-     */
-    public $ImageInfo;
-
-    /**
      * @var string 新增版本时需要填写
      */
     public $ServiceGroupId;
@@ -144,7 +139,7 @@ class CreateModelServiceRequest extends AbstractModel
     public $ServiceDescription;
 
     /**
-     * @var string 付费模式,有 PREPAID 、 POSTPAID_BY_HOUR 和 HYBRID_PAID 三种
+     * @var string 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
      */
     public $ChargeType;
 
@@ -159,12 +154,17 @@ class CreateModelServiceRequest extends AbstractModel
     public $ModelInfo;
 
     /**
+     * @var ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
+     */
+    public $ImageInfo;
+
+    /**
      * @var array 环境变量，可选参数，用于配置容器中的环境变量
      */
     public $Env;
 
     /**
-     * @var ResourceInfo 资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
+     * @var ResourceInfo 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
      */
     public $Resources;
 
@@ -282,15 +282,15 @@ HYBRID_PAID:
     public $CallbackUrl;
 
     /**
-     * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
      * @param string $ServiceGroupId 新增版本时需要填写
      * @param string $ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
      * @param string $ServiceDescription 模型服务的描述
-     * @param string $ChargeType 付费模式,有 PREPAID 、 POSTPAID_BY_HOUR 和 HYBRID_PAID 三种
+     * @param string $ChargeType 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
      * @param string $ResourceGroupId 预付费模式下所属的资源组id，同服务组下唯一
      * @param ModelInfo $ModelInfo 模型信息，需要挂载模型时填写
+     * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
      * @param array $Env 环境变量，可选参数，用于配置容器中的环境变量
-     * @param ResourceInfo $Resources 资源描述，指定预付费模式下的cpu,mem,gpu等信息，后付费无需填写
+     * @param ResourceInfo $Resources 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
      * @param string $InstanceType 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
 TI.S.MEDIUM.POST	2C4G
 TI.S.LARGE.POST	4C8G
@@ -346,11 +346,6 @@ HYBRID_PAID:
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageInfo",$param) and $param["ImageInfo"] !== null) {
-            $this->ImageInfo = new ImageInfo();
-            $this->ImageInfo->deserialize($param["ImageInfo"]);
-        }
-
         if (array_key_exists("ServiceGroupId",$param) and $param["ServiceGroupId"] !== null) {
             $this->ServiceGroupId = $param["ServiceGroupId"];
         }
@@ -374,6 +369,11 @@ HYBRID_PAID:
         if (array_key_exists("ModelInfo",$param) and $param["ModelInfo"] !== null) {
             $this->ModelInfo = new ModelInfo();
             $this->ModelInfo->deserialize($param["ModelInfo"]);
+        }
+
+        if (array_key_exists("ImageInfo",$param) and $param["ImageInfo"] !== null) {
+            $this->ImageInfo = new ImageInfo();
+            $this->ImageInfo->deserialize($param["ImageInfo"]);
         }
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {

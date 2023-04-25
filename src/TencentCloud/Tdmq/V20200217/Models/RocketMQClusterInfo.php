@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) 设置HTTP协议VPC接入地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInternalEndpoint() 获取TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInternalEndpoint(string $InternalEndpoint) 设置TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHttpInternalEndpoint() 获取HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttpInternalEndpoint(string $HttpInternalEndpoint) 设置HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -156,6 +164,18 @@ class RocketMQClusterInfo extends AbstractModel
     public $HttpVpcEndpoint;
 
     /**
+     * @var string TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InternalEndpoint;
+
+    /**
+     * @var string HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HttpInternalEndpoint;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -179,6 +199,10 @@ class RocketMQClusterInfo extends AbstractModel
      * @param string $HttpPublicEndpoint HTTP协议公网接入地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpVpcEndpoint HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InternalEndpoint TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HttpInternalEndpoint HTTP协议内部接入地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -257,6 +281,14 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("HttpVpcEndpoint",$param) and $param["HttpVpcEndpoint"] !== null) {
             $this->HttpVpcEndpoint = $param["HttpVpcEndpoint"];
+        }
+
+        if (array_key_exists("InternalEndpoint",$param) and $param["InternalEndpoint"] !== null) {
+            $this->InternalEndpoint = $param["InternalEndpoint"];
+        }
+
+        if (array_key_exists("HttpInternalEndpoint",$param) and $param["HttpInternalEndpoint"] !== null) {
+            $this->HttpInternalEndpoint = $param["HttpInternalEndpoint"];
         }
     }
 }

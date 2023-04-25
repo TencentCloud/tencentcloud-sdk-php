@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>l7Flow_inFlux_hy: 源站响应流量；</li>
 <li>l7Flow_inBandwidth_hy: 源站响应带宽；</li>
 <li>l7Flow_request_hy: 回源请求数；</li>
- * @method array getZoneIds() 获取站点集合，不填默认选择全部站点。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合，不填默认选择全部站点。
+ * @method array getZoneIds() 获取待查询的站点列表，此参数必填。
+ * @method void setZoneIds(array $ZoneIds) 设置待查询的站点列表，此参数必填。
  * @method string getInterval() 获取查询时间粒度，取值有：
 <li>min: 1分钟；</li>
 <li>5min: 5分钟；</li>
@@ -90,7 +90,7 @@ class DescribeTimingL7SourceDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array 站点集合，不填默认选择全部站点。
+     * @var array 待查询的站点列表，此参数必填。
      */
     public $ZoneIds;
 
@@ -129,7 +129,7 @@ class DescribeTimingL7SourceDataRequest extends AbstractModel
 <li>l7Flow_inFlux_hy: 源站响应流量；</li>
 <li>l7Flow_inBandwidth_hy: 源站响应带宽；</li>
 <li>l7Flow_request_hy: 回源请求数；</li>
-     * @param array $ZoneIds 站点集合，不填默认选择全部站点。
+     * @param array $ZoneIds 待查询的站点列表，此参数必填。
      * @param string $Interval 查询时间粒度，取值有：
 <li>min: 1分钟；</li>
 <li>5min: 5分钟；</li>

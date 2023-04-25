@@ -26,11 +26,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleName(string $ScheduleName) 设置编排名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getStatus() 获取编排状态，取值范围：
+ * @method string getStatus() 获取编排状态，取值范围：
 Enabled：已启用，
 Disabled：已禁用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(array $Status) 设置编排状态，取值范围：
+ * @method void setStatus(string $Status) 设置编排状态，取值范围：
 Enabled：已启用，
 Disabled：已禁用。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -77,7 +77,7 @@ class SchedulesInfo extends AbstractModel
     public $ScheduleName;
 
     /**
-     * @var array 编排状态，取值范围：
+     * @var string 编排状态，取值范围：
 Enabled：已启用，
 Disabled：已禁用。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,7 +130,7 @@ Disabled：已禁用。
      * @param integer $ScheduleId 编排唯一标识。
      * @param string $ScheduleName 编排名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Status 编排状态，取值范围：
+     * @param string $Status 编排状态，取值范围：
 Enabled：已启用，
 Disabled：已禁用。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SupportFeature getSupportFeature() 获取接入区域支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportFeature(SupportFeature $SupportFeature) 设置接入区域支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegionDetail extends AbstractModel
 {
@@ -99,6 +103,12 @@ class RegionDetail extends AbstractModel
     public $FeatureBitmap;
 
     /**
+     * @var SupportFeature 接入区域支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportFeature;
+
+    /**
      * @param string $RegionId 区域ID
      * @param string $RegionName 区域英文名或中文名
      * @param string $RegionArea 机房所属大区
@@ -115,6 +125,8 @@ class RegionDetail extends AbstractModel
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportFeature $SupportFeature 接入区域支持的能力
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -152,6 +164,11 @@ class RegionDetail extends AbstractModel
 
         if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
             $this->FeatureBitmap = $param["FeatureBitmap"];
+        }
+
+        if (array_key_exists("SupportFeature",$param) and $param["SupportFeature"] !== null) {
+            $this->SupportFeature = new SupportFeature();
+            $this->SupportFeature->deserialize($param["SupportFeature"]);
         }
     }
 }

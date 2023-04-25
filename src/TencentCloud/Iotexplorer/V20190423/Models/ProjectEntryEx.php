@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCount(integer $DeviceCount) 设置设备注册总数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableOpenState() 获取是否开通物联使能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableOpenState(integer $EnableOpenState) 设置是否开通物联使能
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProjectEntryEx extends AbstractModel
 {
@@ -110,6 +114,12 @@ class ProjectEntryEx extends AbstractModel
     public $DeviceCount;
 
     /**
+     * @var integer 是否开通物联使能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableOpenState;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $ProjectName 项目名称
      * @param string $ProjectDesc 项目描述
@@ -123,6 +133,8 @@ class ProjectEntryEx extends AbstractModel
      * @param integer $ApplicationCount 应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceCount 设备注册总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableOpenState 是否开通物联使能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class ProjectEntryEx extends AbstractModel
 
         if (array_key_exists("DeviceCount",$param) and $param["DeviceCount"] !== null) {
             $this->DeviceCount = $param["DeviceCount"];
+        }
+
+        if (array_key_exists("EnableOpenState",$param) and $param["EnableOpenState"] !== null) {
+            $this->EnableOpenState = $param["EnableOpenState"];
         }
     }
 }

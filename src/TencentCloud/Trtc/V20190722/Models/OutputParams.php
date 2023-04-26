@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCU混流的输出参数
  *
- * @method string getStreamId() 获取直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
- * @method void setStreamId(string $StreamId) 设置直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
+ * @method string getStreamId() 获取直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同，限制64字节。
+ * @method void setStreamId(string $StreamId) 设置直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同，限制64字节。
  * @method integer getPureAudioStream() 获取取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
  * @method void setPureAudioStream(integer $PureAudioStream) 设置取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
  * @method string getRecordId() 获取自定义录制文件名称前缀。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class OutputParams extends AbstractModel
 {
     /**
-     * @var string 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
+     * @var string 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同，限制64字节。
      */
     public $StreamId;
 
@@ -55,7 +55,7 @@ class OutputParams extends AbstractModel
     public $RecordAudioOnly;
 
     /**
-     * @param string $StreamId 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同。
+     * @param string $StreamId 直播流 ID，由用户自定义设置，该流 ID 不能与用户旁路的流 ID 相同，限制64字节。
      * @param integer $PureAudioStream 取值范围[0,1]， 填0：直播流为音视频(默认); 填1：直播流为纯音频
      * @param string $RecordId 自定义录制文件名称前缀。请先在实时音视频控制台开通录制功能，https://cloud.tencent.com/document/product/647/50768。
 【注意】该方式仅对旧版云端录制功能的应用生效，新版云端录制功能的应用请用接口CreateCloudRecording发起录制。新、旧云端录制类型判断方式请见：https://cloud.tencent.com/document/product/647/50768#record

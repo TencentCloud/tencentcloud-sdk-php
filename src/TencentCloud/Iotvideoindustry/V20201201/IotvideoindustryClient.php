@@ -77,7 +77,7 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 获取指定设备详细信息
  * @method Models\DescribeDeviceEventResponse DescribeDeviceEvent(Models\DescribeDeviceEventRequest $req) 获取设备事件
  * @method Models\DescribeDeviceGroupResponse DescribeDeviceGroup(Models\DescribeDeviceGroupRequest $req) 本接口(DescribeDeviceGroup)用于根据设备ID查询设备所在分组信息，可批量查询。
- * @method Models\DescribeDeviceListResponse DescribeDeviceList(Models\DescribeDeviceListRequest $req) 本接口(DescribeDevicesList) 用于获取设备列表，支持模糊搜索
+ * @method Models\DescribeDeviceListResponse DescribeDeviceList(Models\DescribeDeviceListRequest $req) 本接口(DescribeDeviceList) 用于获取设备列表，支持模糊搜索
  * @method Models\DescribeDeviceMonitorDataResponse DescribeDeviceMonitorData(Models\DescribeDeviceMonitorDataRequest $req) 查询设备统计monitor信息
  * @method Models\DescribeDevicePassWordResponse DescribeDevicePassWord(Models\DescribeDevicePassWordRequest $req) 本接口(DescribeDevicePassWord)用于查询设备密码。
  * @method Models\DescribeDeviceStreamsResponse DescribeDeviceStreams(Models\DescribeDeviceStreamsRequest $req) 本接口(DescribeDeviceStreams)用于获取设备实时流地址。

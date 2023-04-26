@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMX(string $MX) 设置MX优先级
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWeight() 获取权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeight(string $Weight) 设置权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReason() 获取失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReason(string $Reason) 设置失败原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotRecord extends AbstractModel
 {
@@ -76,6 +84,18 @@ class SnapshotRecord extends AbstractModel
     public $MX;
 
     /**
+     * @var string 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Weight;
+
+    /**
+     * @var string 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Reason;
+
+    /**
      * @param string $SubDomain 子域名
      * @param string $RecordType 记录类型
      * @param string $RecordLine 解析线路
@@ -83,6 +103,10 @@ class SnapshotRecord extends AbstractModel
      * @param string $TTL TTL(秒)
      * @param string $RecordId 解析记录 ID
      * @param string $MX MX优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Reason 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +148,14 @@ class SnapshotRecord extends AbstractModel
 
         if (array_key_exists("MX",$param) and $param["MX"] !== null) {
             $this->MX = $param["MX"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

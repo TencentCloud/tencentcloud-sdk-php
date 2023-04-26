@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启；</li>
 <li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTlsVersion() 获取Tls版本设置，取值有：
+ * @method array getTlsVersion() 获取Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTlsVersion(array $TlsVersion) 设置Tls版本设置，取值有：
+ * @method void setTlsVersion(array $TlsVersion) 设置Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>
@@ -94,7 +94,7 @@ class Https extends AbstractModel
     public $OcspStapling;
 
     /**
-     * @var array Tls版本设置，取值有：
+     * @var array Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>
@@ -141,7 +141,7 @@ class Https extends AbstractModel
 <li>on：开启；</li>
 <li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TlsVersion Tls版本设置，取值有：
+     * @param array $TlsVersion Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>

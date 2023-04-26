@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置域名别名ID
  * @method string getDomainAlias() 获取域名别名
  * @method void setDomainAlias(string $DomainAlias) 设置域名别名
+ * @method integer getStatus() 获取别名状态：1-DNS不正确；2-正常；3-封禁。
+ * @method void setStatus(integer $Status) 设置别名状态：1-DNS不正确；2-正常；3-封禁。
  */
 class DomainAliasInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DomainAliasInfo extends AbstractModel
     public $DomainAlias;
 
     /**
+     * @var integer 别名状态：1-DNS不正确；2-正常；3-封禁。
+     */
+    public $Status;
+
+    /**
      * @param integer $Id 域名别名ID
      * @param string $DomainAlias 域名别名
+     * @param integer $Status 别名状态：1-DNS不正确；2-正常；3-封禁。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DomainAliasInfo extends AbstractModel
 
         if (array_key_exists("DomainAlias",$param) and $param["DomainAlias"] !== null) {
             $this->DomainAlias = $param["DomainAlias"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

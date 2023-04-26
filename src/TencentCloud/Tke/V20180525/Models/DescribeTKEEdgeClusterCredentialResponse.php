@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealth(string $Health) 设置集群的健康检查部署信息
  * @method string getGridDaemon() 获取是否部署GridDaemon以支持headless service
  * @method void setGridDaemon(string $GridDaemon) 设置是否部署GridDaemon以支持headless service
+ * @method string getUnitCluster() 获取公网访问kins集群
+ * @method void setUnitCluster(string $UnitCluster) 设置公网访问kins集群
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -85,6 +87,11 @@ class DescribeTKEEdgeClusterCredentialResponse extends AbstractModel
     public $GridDaemon;
 
     /**
+     * @var string 公网访问kins集群
+     */
+    public $UnitCluster;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -99,6 +106,7 @@ class DescribeTKEEdgeClusterCredentialResponse extends AbstractModel
      * @param string $HealthRegion 集群的健康检查多地域部署信息
      * @param string $Health 集群的健康检查部署信息
      * @param string $GridDaemon 是否部署GridDaemon以支持headless service
+     * @param string $UnitCluster 公网访问kins集群
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +160,10 @@ class DescribeTKEEdgeClusterCredentialResponse extends AbstractModel
 
         if (array_key_exists("GridDaemon",$param) and $param["GridDaemon"] !== null) {
             $this->GridDaemon = $param["GridDaemon"];
+        }
+
+        if (array_key_exists("UnitCluster",$param) and $param["UnitCluster"] !== null) {
+            $this->UnitCluster = $param["UnitCluster"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

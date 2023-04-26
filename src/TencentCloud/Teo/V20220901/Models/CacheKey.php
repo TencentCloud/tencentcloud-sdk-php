@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 <li>on：忽略；</li>
 <li>off：不忽略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method QueryString getQueryString() 获取CacheKey中包含请求参数。
+ * @method QueryString getQueryString() 获取CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQueryString(QueryString $QueryString) 设置CacheKey中包含请求参数。
+ * @method void setQueryString(QueryString $QueryString) 设置CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheKey extends AbstractModel
@@ -60,7 +60,7 @@ class CacheKey extends AbstractModel
     public $IgnoreCase;
 
     /**
-     * @var QueryString CacheKey中包含请求参数。
+     * @var QueryString CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueryString;
@@ -74,7 +74,7 @@ class CacheKey extends AbstractModel
 <li>on：忽略；</li>
 <li>off：不忽略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueryString $QueryString CacheKey中包含请求参数。
+     * @param QueryString $QueryString CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Ipv6访问配置
  *
- * @method string getSwitch() 获取Ipv6访问功能配置，取值有：
+ * @method string getSwitch() 获取Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li>
- * @method void setSwitch(string $Switch) 设置Ipv6访问功能配置，取值有：
+ * @method void setSwitch(string $Switch) 设置Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li>
  */
 class Ipv6 extends AbstractModel
 {
     /**
-     * @var string Ipv6访问功能配置，取值有：
+     * @var string Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch Ipv6访问功能配置，取值有：
+     * @param string $Switch Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li>
      */

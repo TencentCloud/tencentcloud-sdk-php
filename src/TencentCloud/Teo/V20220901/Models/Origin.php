@@ -38,11 +38,11 @@ use TencentCloud\Common\AbstractModel;
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCosPrivateAccess() 获取源站为腾讯云COS时，是否为私有访问bucket，取值有：
+ * @method string getCosPrivateAccess() 获取源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosPrivateAccess(string $CosPrivateAccess) 设置源站为腾讯云COS时，是否为私有访问bucket，取值有：
+ * @method void setCosPrivateAccess(string $CosPrivateAccess) 设置源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -71,7 +71,7 @@ class Origin extends AbstractModel
     public $OriginPullProtocol;
 
     /**
-     * @var string 源站为腾讯云COS时，是否为私有访问bucket，取值有：
+     * @var string 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,7 +88,7 @@ class Origin extends AbstractModel
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CosPrivateAccess 源站为腾讯云COS时，是否为私有访问bucket，取值有：
+     * @param string $CosPrivateAccess 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplicationProxy请求参数结构体
  *
- * @method string getZoneId() 获取站点ID。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
- * @method string getProxyName() 获取当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
- * @method void setProxyName(string $ProxyName) 设置当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method string getProxyName() 获取当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
+ * @method void setProxyName(string $ProxyName) 设置当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
  * @method string getPlatType() 获取调度模式，取值有：
 <li>ip：表示Anycast IP调度；</li>
 <li>domain：表示CNAME调度。</li>
@@ -54,25 +54,27 @@ use TencentCloud\Common\AbstractModel;
 不填写使用默认值600。
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，取值范围：30-3600，单位：秒。
 不填写使用默认值600。
- * @method Ipv6 getIpv6() 获取Ipv6访问配置。
-不填写表示关闭Ipv6访问。
- * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6访问配置。
-不填写表示关闭Ipv6访问。
+ * @method Ipv6 getIpv6() 获取Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。
+ * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。
  * @method array getApplicationProxyRules() 获取规则详细信息。
 不填写则不创建规则。
  * @method void setApplicationProxyRules(array $ApplicationProxyRules) 设置规则详细信息。
 不填写则不创建规则。
+ * @method AccelerateMainland getAccelerateMainland() 获取中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) 设置中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
  */
 class CreateApplicationProxyRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID。
+     * @var string 站点 ID。
      */
     public $ZoneId;
 
     /**
-     * @var string 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+     * @var string 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
      */
     public $ProxyName;
 
@@ -111,8 +113,8 @@ class CreateApplicationProxyRequest extends AbstractModel
     public $SessionPersistTime;
 
     /**
-     * @var Ipv6 Ipv6访问配置。
-不填写表示关闭Ipv6访问。
+     * @var Ipv6 Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。
      */
     public $Ipv6;
 
@@ -123,9 +125,14 @@ class CreateApplicationProxyRequest extends AbstractModel
     public $ApplicationProxyRules;
 
     /**
-     * @param string $ZoneId 站点ID。
-     * @param string $ProxyName 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+     * @var AccelerateMainland 中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
+     */
+    public $AccelerateMainland;
+
+    /**
+     * @param string $ZoneId 站点 ID。
+     * @param string $ProxyName 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
      * @param string $PlatType 调度模式，取值有：
 <li>ip：表示Anycast IP调度；</li>
 <li>domain：表示CNAME调度。</li>
@@ -140,10 +147,11 @@ class CreateApplicationProxyRequest extends AbstractModel
 <li>instance：表示实例模式。</li>不填写使用默认值instance。
      * @param integer $SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒。
 不填写使用默认值600。
-     * @param Ipv6 $Ipv6 Ipv6访问配置。
-不填写表示关闭Ipv6访问。
+     * @param Ipv6 $Ipv6 Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。
      * @param array $ApplicationProxyRules 规则详细信息。
 不填写则不创建规则。
+     * @param AccelerateMainland $AccelerateMainland 中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
      */
     function __construct()
     {
@@ -198,6 +206,11 @@ class CreateApplicationProxyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ApplicationProxyRules, $obj);
             }
+        }
+
+        if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
+            $this->AccelerateMainland = new AccelerateMainland();
+            $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
         }
     }
 }

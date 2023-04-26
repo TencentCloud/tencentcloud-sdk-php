@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method string getCreatedAt() 获取创建时间
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+ * @method integer getInstanceType() 获取实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RumInstanceInfo extends AbstractModel
 {
@@ -108,6 +112,12 @@ class RumInstanceInfo extends AbstractModel
     public $CreatedAt;
 
     /**
+     * @var integer 实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
      * @param integer $InstanceStatus 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=已删除)
      * @param integer $AreaId 片区Id
      * @param array $Tags 标签列表
@@ -120,6 +130,8 @@ class RumInstanceInfo extends AbstractModel
      * @param integer $DataRetentionDays 数据保留时间(天)
      * @param string $InstanceName 实例名称
      * @param string $CreatedAt 创建时间
+     * @param integer $InstanceType 实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -185,6 +197,10 @@ class RumInstanceInfo extends AbstractModel
 
         if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
             $this->CreatedAt = $param["CreatedAt"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

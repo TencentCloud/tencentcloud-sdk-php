@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * POST请求上传文件流式传输最大限制
  *
- * @method string getSwitch() 获取是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+ * @method string getSwitch() 获取是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
- * @method void setSwitch(string $Switch) 设置是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+ * @method void setSwitch(string $Switch) 设置是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
  * @method integer getMaxSize() 获取最大限制，取值在1MB和500MB之间。单位字节。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class PostMaxSize extends AbstractModel
 {
     /**
-     * @var string 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+     * @var string 是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
      */
@@ -47,7 +47,7 @@ class PostMaxSize extends AbstractModel
     public $MaxSize;
 
     /**
-     * @param string $Switch 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+     * @param string $Switch 是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
      * @param integer $MaxSize 最大限制，取值在1MB和500MB之间。单位字节。

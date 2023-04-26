@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotId(string $SnapshotId) 设置快照记录 ID
  * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+ * @method array getRecordList() 获取指定需要回滚的记录
+ * @method void setRecordList(array $RecordList) 设置指定需要回滚的记录
  */
 class RollbackSnapshotRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class RollbackSnapshotRequest extends AbstractModel
     public $DomainId;
 
     /**
+     * @var array 指定需要回滚的记录
+     */
+    public $RecordList;
+
+    /**
      * @param string $Domain 域名
      * @param string $SnapshotId 快照记录 ID
      * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @param array $RecordList 指定需要回滚的记录
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class RollbackSnapshotRequest extends AbstractModel
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("RecordList",$param) and $param["RecordList"] !== null) {
+            $this->RecordList = [];
+            foreach ($param["RecordList"] as $key => $value){
+                $obj = new SnapshotRecord();
+                $obj->deserialize($value);
+                array_push($this->RecordList, $obj);
+            }
         }
     }
 }

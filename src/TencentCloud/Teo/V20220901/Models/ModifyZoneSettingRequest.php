@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyZoneSetting请求参数结构体
  *
- * @method string getZoneId() 获取待变更的站点ID。
- * @method void setZoneId(string $ZoneId) 设置待变更的站点ID。
+ * @method string getZoneId() 获取待变更的站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置待变更的站点 ID。
  * @method CacheConfig getCacheConfig() 获取缓存过期时间配置。
 不填写表示保持原有配置。
  * @method void setCacheConfig(CacheConfig $CacheConfig) 设置缓存过期时间配置。
@@ -38,29 +38,29 @@ use TencentCloud\Common\AbstractModel;
 不填写表示保持原有配置。
  * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存配置。
 不填写表示保持原有配置。
- * @method Quic getQuic() 获取Quic访问配置。
+ * @method Quic getQuic() 获取Quic 访问配置。
 不填写表示保持原有配置。
- * @method void setQuic(Quic $Quic) 设置Quic访问配置。
+ * @method void setQuic(Quic $Quic) 设置Quic 访问配置。
 不填写表示保持原有配置。
- * @method PostMaxSize getPostMaxSize() 获取Post请求传输配置。
+ * @method PostMaxSize getPostMaxSize() 获取Post 请求传输配置。
 不填写表示保持原有配置。
- * @method void setPostMaxSize(PostMaxSize $PostMaxSize) 设置Post请求传输配置。
+ * @method void setPostMaxSize(PostMaxSize $PostMaxSize) 设置Post 请求传输配置。
 不填写表示保持原有配置。
  * @method Compression getCompression() 获取智能压缩配置。
 不填写表示保持原有配置。
  * @method void setCompression(Compression $Compression) 设置智能压缩配置。
 不填写表示保持原有配置。
- * @method UpstreamHttp2 getUpstreamHttp2() 获取Http2回源配置。
+ * @method UpstreamHttp2 getUpstreamHttp2() 获取Http2 回源配置。
 不填写表示保持原有配置。
- * @method void setUpstreamHttp2(UpstreamHttp2 $UpstreamHttp2) 设置Http2回源配置。
+ * @method void setUpstreamHttp2(UpstreamHttp2 $UpstreamHttp2) 设置Http2 回源配置。
 不填写表示保持原有配置。
- * @method ForceRedirect getForceRedirect() 获取访问协议强制Https跳转配置。
+ * @method ForceRedirect getForceRedirect() 获取访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。
- * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置访问协议强制Https跳转配置。
+ * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。
- * @method Https getHttps() 获取Https加速配置。
+ * @method Https getHttps() 获取Https 加速配置。
 不填写表示保持原有配置。
- * @method void setHttps(Https $Https) 设置Https加速配置。
+ * @method void setHttps(Https $Https) 设置Https 加速配置。
 不填写表示保持原有配置。
  * @method Origin getOrigin() 获取源站配置。
 不填写表示保持原有配置。
@@ -70,35 +70,39 @@ use TencentCloud\Common\AbstractModel;
 不填写表示保持原有配置。
  * @method void setSmartRouting(SmartRouting $SmartRouting) 设置智能加速配置。
 不填写表示保持原有配置。
- * @method WebSocket getWebSocket() 获取WebSocket配置。
+ * @method WebSocket getWebSocket() 获取WebSocket 配置。
 不填写表示保持原有配置。
- * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置。
+ * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket 配置。
 不填写表示保持原有配置。
- * @method ClientIpHeader getClientIpHeader() 获取客户端IP回源请求头配置。
+ * @method ClientIpHeader getClientIpHeader() 获取客户端 IP 回源请求头配置。
 不填写表示保持原有配置。
- * @method void setClientIpHeader(ClientIpHeader $ClientIpHeader) 设置客户端IP回源请求头配置。
+ * @method void setClientIpHeader(ClientIpHeader $ClientIpHeader) 设置客户端 IP 回源请求头配置。
 不填写表示保持原有配置。
  * @method CachePrefresh getCachePrefresh() 获取缓存预刷新配置。
 不填写表示保持原有配置。
  * @method void setCachePrefresh(CachePrefresh $CachePrefresh) 设置缓存预刷新配置。
 不填写表示保持原有配置。
- * @method Ipv6 getIpv6() 获取Ipv6访问配置。
+ * @method Ipv6 getIpv6() 获取Ipv6 访问配置。
 不填写表示保持原有配置。
- * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6访问配置。
+ * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 访问配置。
 不填写表示保持原有配置。
- * @method ClientIpCountry getClientIpCountry() 获取回源时是否携带客户端IP所属地域信息的配置。
+ * @method ClientIpCountry getClientIpCountry() 获取回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。
- * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) 设置回源时是否携带客户端IP所属地域信息的配置。
+ * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) 设置回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。
- * @method Grpc getGrpc() 获取Grpc协议支持配置。
+ * @method Grpc getGrpc() 获取Grpc 协议支持配置。
 不填写表示保持原有配置。
- * @method void setGrpc(Grpc $Grpc) 设置Grpc协议支持配置。
+ * @method void setGrpc(Grpc $Grpc) 设置Grpc 协议支持配置。
 不填写表示保持原有配置。
+ * @method ImageOptimize getImageOptimize() 获取图片优化配置。
+不填写表示关闭。
+ * @method void setImageOptimize(ImageOptimize $ImageOptimize) 设置图片优化配置。
+不填写表示关闭。
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
     /**
-     * @var string 待变更的站点ID。
+     * @var string 待变更的站点 ID。
      */
     public $ZoneId;
 
@@ -127,13 +131,13 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $OfflineCache;
 
     /**
-     * @var Quic Quic访问配置。
+     * @var Quic Quic 访问配置。
 不填写表示保持原有配置。
      */
     public $Quic;
 
     /**
-     * @var PostMaxSize Post请求传输配置。
+     * @var PostMaxSize Post 请求传输配置。
 不填写表示保持原有配置。
      */
     public $PostMaxSize;
@@ -145,19 +149,19 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $Compression;
 
     /**
-     * @var UpstreamHttp2 Http2回源配置。
+     * @var UpstreamHttp2 Http2 回源配置。
 不填写表示保持原有配置。
      */
     public $UpstreamHttp2;
 
     /**
-     * @var ForceRedirect 访问协议强制Https跳转配置。
+     * @var ForceRedirect 访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。
      */
     public $ForceRedirect;
 
     /**
-     * @var Https Https加速配置。
+     * @var Https Https 加速配置。
 不填写表示保持原有配置。
      */
     public $Https;
@@ -175,13 +179,13 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $SmartRouting;
 
     /**
-     * @var WebSocket WebSocket配置。
+     * @var WebSocket WebSocket 配置。
 不填写表示保持原有配置。
      */
     public $WebSocket;
 
     /**
-     * @var ClientIpHeader 客户端IP回源请求头配置。
+     * @var ClientIpHeader 客户端 IP 回源请求头配置。
 不填写表示保持原有配置。
      */
     public $ClientIpHeader;
@@ -193,25 +197,31 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $CachePrefresh;
 
     /**
-     * @var Ipv6 Ipv6访问配置。
+     * @var Ipv6 Ipv6 访问配置。
 不填写表示保持原有配置。
      */
     public $Ipv6;
 
     /**
-     * @var ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+     * @var ClientIpCountry 回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。
      */
     public $ClientIpCountry;
 
     /**
-     * @var Grpc Grpc协议支持配置。
+     * @var Grpc Grpc 协议支持配置。
 不填写表示保持原有配置。
      */
     public $Grpc;
 
     /**
-     * @param string $ZoneId 待变更的站点ID。
+     * @var ImageOptimize 图片优化配置。
+不填写表示关闭。
+     */
+    public $ImageOptimize;
+
+    /**
+     * @param string $ZoneId 待变更的站点 ID。
      * @param CacheConfig $CacheConfig 缓存过期时间配置。
 不填写表示保持原有配置。
      * @param CacheKey $CacheKey 节点缓存键配置。
@@ -220,34 +230,36 @@ class ModifyZoneSettingRequest extends AbstractModel
 不填写表示保持原有配置。
      * @param OfflineCache $OfflineCache 离线缓存配置。
 不填写表示保持原有配置。
-     * @param Quic $Quic Quic访问配置。
+     * @param Quic $Quic Quic 访问配置。
 不填写表示保持原有配置。
-     * @param PostMaxSize $PostMaxSize Post请求传输配置。
+     * @param PostMaxSize $PostMaxSize Post 请求传输配置。
 不填写表示保持原有配置。
      * @param Compression $Compression 智能压缩配置。
 不填写表示保持原有配置。
-     * @param UpstreamHttp2 $UpstreamHttp2 Http2回源配置。
+     * @param UpstreamHttp2 $UpstreamHttp2 Http2 回源配置。
 不填写表示保持原有配置。
-     * @param ForceRedirect $ForceRedirect 访问协议强制Https跳转配置。
+     * @param ForceRedirect $ForceRedirect 访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。
-     * @param Https $Https Https加速配置。
+     * @param Https $Https Https 加速配置。
 不填写表示保持原有配置。
      * @param Origin $Origin 源站配置。
 不填写表示保持原有配置。
      * @param SmartRouting $SmartRouting 智能加速配置。
 不填写表示保持原有配置。
-     * @param WebSocket $WebSocket WebSocket配置。
+     * @param WebSocket $WebSocket WebSocket 配置。
 不填写表示保持原有配置。
-     * @param ClientIpHeader $ClientIpHeader 客户端IP回源请求头配置。
+     * @param ClientIpHeader $ClientIpHeader 客户端 IP 回源请求头配置。
 不填写表示保持原有配置。
      * @param CachePrefresh $CachePrefresh 缓存预刷新配置。
 不填写表示保持原有配置。
-     * @param Ipv6 $Ipv6 Ipv6访问配置。
+     * @param Ipv6 $Ipv6 Ipv6 访问配置。
 不填写表示保持原有配置。
-     * @param ClientIpCountry $ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+     * @param ClientIpCountry $ClientIpCountry 回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。
-     * @param Grpc $Grpc Grpc协议支持配置。
+     * @param Grpc $Grpc Grpc 协议支持配置。
 不填写表示保持原有配置。
+     * @param ImageOptimize $ImageOptimize 图片优化配置。
+不填写表示关闭。
      */
     function __construct()
     {
@@ -354,6 +366,11 @@ class ModifyZoneSettingRequest extends AbstractModel
         if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
             $this->Grpc = new Grpc();
             $this->Grpc->deserialize($param["Grpc"]);
+        }
+
+        if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {
+            $this->ImageOptimize = new ImageOptimize();
+            $this->ImageOptimize->deserialize($param["ImageOptimize"]);
         }
     }
 }

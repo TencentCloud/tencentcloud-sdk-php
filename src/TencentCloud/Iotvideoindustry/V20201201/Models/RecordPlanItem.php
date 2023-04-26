@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevices(array $Devices) 设置绑定的设备列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRecordStorageTime() 获取录像存储天数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordStorageTime(integer $RecordStorageTime) 设置录像存储天数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordPlanItem extends AbstractModel
 {
@@ -84,6 +88,12 @@ class RecordPlanItem extends AbstractModel
     public $Devices;
 
     /**
+     * @var integer 录像存储天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordStorageTime;
+
+    /**
      * @param string $PlanId 计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 计划名称
@@ -95,6 +105,8 @@ class RecordPlanItem extends AbstractModel
      * @param integer $EventId 录制类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Devices 绑定的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RecordStorageTime 录像存储天数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +149,10 @@ class RecordPlanItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Devices, $obj);
             }
+        }
+
+        if (array_key_exists("RecordStorageTime",$param) and $param["RecordStorageTime"] !== null) {
+            $this->RecordStorageTime = $param["RecordStorageTime"];
         }
     }
 }

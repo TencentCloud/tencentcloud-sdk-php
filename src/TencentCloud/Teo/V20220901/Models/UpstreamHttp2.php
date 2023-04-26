@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Http2回源配置
  *
- * @method string getSwitch() 获取http2回源配置开关，取值有：
+ * @method string getSwitch() 获取http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
- * @method void setSwitch(string $Switch) 设置http2回源配置开关，取值有：
+ * @method void setSwitch(string $Switch) 设置http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
  */
 class UpstreamHttp2 extends AbstractModel
 {
     /**
-     * @var string http2回源配置开关，取值有：
+     * @var string http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch http2回源配置开关，取值有：
+     * @param string $Switch http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      */

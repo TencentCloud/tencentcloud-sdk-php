@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationProxy请求参数结构体
  *
- * @method string getZoneId() 获取站点ID。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
- * @method string getProxyId() 获取代理ID。
- * @method void setProxyId(string $ProxyId) 设置代理ID。
- * @method string getProxyName() 获取当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
- * @method void setProxyName(string $ProxyName) 设置当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method string getProxyId() 获取代理 ID。
+ * @method void setProxyId(string $ProxyId) 设置代理 ID。
+ * @method string getProxyName() 获取当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
+ * @method void setProxyName(string $ProxyName) 设置当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
  * @method integer getSessionPersistTime() 获取会话保持时间，取值范围：30-3600，单位：秒。
 不填写保持原有配置。
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，取值范围：30-3600，单位：秒。
@@ -38,24 +38,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyType(string $ProxyType) 设置四层代理模式，取值有：
 <li>hostname：表示子域名模式；</li>
 <li>instance：表示实例模式。</li>不填写保持原有配置。
- * @method Ipv6 getIpv6() 获取Ipv6访问配置，不填写保持原有配置。
- * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6访问配置，不填写保持原有配置。
+ * @method Ipv6 getIpv6() 获取Ipv6 访问配置，不填写保持原有配置。
+ * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 访问配置，不填写保持原有配置。
+ * @method AccelerateMainland getAccelerateMainland() 获取中国大陆加速优化配置。 不填写表示保持原有配置。
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) 设置中国大陆加速优化配置。 不填写表示保持原有配置。
  */
 class ModifyApplicationProxyRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID。
+     * @var string 站点 ID。
      */
     public $ZoneId;
 
     /**
-     * @var string 代理ID。
+     * @var string 代理 ID。
      */
     public $ProxyId;
 
     /**
-     * @var string 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+     * @var string 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
      */
     public $ProxyName;
 
@@ -73,21 +75,27 @@ class ModifyApplicationProxyRequest extends AbstractModel
     public $ProxyType;
 
     /**
-     * @var Ipv6 Ipv6访问配置，不填写保持原有配置。
+     * @var Ipv6 Ipv6 访问配置，不填写保持原有配置。
      */
     public $Ipv6;
 
     /**
-     * @param string $ZoneId 站点ID。
-     * @param string $ProxyId 代理ID。
-     * @param string $ProxyName 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+     * @var AccelerateMainland 中国大陆加速优化配置。 不填写表示保持原有配置。
+     */
+    public $AccelerateMainland;
+
+    /**
+     * @param string $ZoneId 站点 ID。
+     * @param string $ProxyId 代理 ID。
+     * @param string $ProxyName 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
      * @param integer $SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒。
 不填写保持原有配置。
      * @param string $ProxyType 四层代理模式，取值有：
 <li>hostname：表示子域名模式；</li>
 <li>instance：表示实例模式。</li>不填写保持原有配置。
-     * @param Ipv6 $Ipv6 Ipv6访问配置，不填写保持原有配置。
+     * @param Ipv6 $Ipv6 Ipv6 访问配置，不填写保持原有配置。
+     * @param AccelerateMainland $AccelerateMainland 中国大陆加速优化配置。 不填写表示保持原有配置。
      */
     function __construct()
     {
@@ -125,6 +133,11 @@ class ModifyApplicationProxyRequest extends AbstractModel
         if (array_key_exists("Ipv6",$param) and $param["Ipv6"] !== null) {
             $this->Ipv6 = new Ipv6();
             $this->Ipv6->deserialize($param["Ipv6"]);
+        }
+
+        if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
+            $this->AccelerateMainland = new AccelerateMainland();
+            $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
         }
     }
 }

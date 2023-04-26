@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskType() 获取枚举值：TRAIN、NOTEBOOK、INFERENCE
  * @method void setTaskType(string $TaskType) 设置枚举值：TRAIN、NOTEBOOK、INFERENCE
- * @method string getChargeType() 获取付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
- * @method void setChargeType(string $ChargeType) 设置付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
+ * @method string getChargeType() 获取付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
+ * @method void setChargeType(string $ChargeType) 设置付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
  * @method string getResourceType() 获取资源类型：CALC 计算资源、CPU CPU资源、GPU GPU资源、CBS云硬盘
  * @method void setResourceType(string $ResourceType) 设置资源类型：CALC 计算资源、CPU CPU资源、GPU GPU资源、CBS云硬盘
  */
@@ -35,7 +35,7 @@ class DescribeBillingSpecsRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var string 付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
+     * @var string 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
      */
     public $ChargeType;
 
@@ -46,7 +46,7 @@ class DescribeBillingSpecsRequest extends AbstractModel
 
     /**
      * @param string $TaskType 枚举值：TRAIN、NOTEBOOK、INFERENCE
-     * @param string $ChargeType 付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
+     * @param string $ChargeType 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
      * @param string $ResourceType 资源类型：CALC 计算资源、CPU CPU资源、GPU GPU资源、CBS云硬盘
      */
     function __construct()

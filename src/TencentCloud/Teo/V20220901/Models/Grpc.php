@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Grpc配置项
  *
- * @method string getSwitch() 获取是否开启Grpc配置，取值有：
+ * @method string getSwitch() 获取是否开启 Grpc 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
- * @method void setSwitch(string $Switch) 设置是否开启Grpc配置，取值有：
+ * @method void setSwitch(string $Switch) 设置是否开启 Grpc 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
  */
 class Grpc extends AbstractModel
 {
     /**
-     * @var string 是否开启Grpc配置，取值有：
+     * @var string 是否开启 Grpc 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 是否开启Grpc配置，取值有：
+     * @param string $Switch 是否开启 Grpc 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      */

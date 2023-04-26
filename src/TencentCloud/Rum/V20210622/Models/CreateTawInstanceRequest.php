@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePackageType(integer $ResourcePackageType) 设置预付费资源包类型(仅预付费需要)
  * @method integer getResourcePackageNum() 获取预付费资源包数量(仅预付费需要)
  * @method void setResourcePackageNum(integer $ResourcePackageNum) 设置预付费资源包数量(仅预付费需要)
+ * @method integer getInstanceType() 获取实例类型 1:原web相关类型 2:app端类型
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型 1:原web相关类型 2:app端类型
  */
 class CreateTawInstanceRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateTawInstanceRequest extends AbstractModel
     public $ResourcePackageNum;
 
     /**
+     * @var integer 实例类型 1:原web相关类型 2:app端类型
+     */
+    public $InstanceType;
+
+    /**
      * @param integer $AreaId 片区Id，(至少大于0)
      * @param integer $ChargeType 计费类型, (1=后付费)
      * @param integer $DataRetentionDays 数据保存时间，(至少大于0)
@@ -112,6 +119,7 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $BuyingChannel 实例购买渠道("cdn" 等)
      * @param integer $ResourcePackageType 预付费资源包类型(仅预付费需要)
      * @param integer $ResourcePackageNum 预付费资源包数量(仅预付费需要)
+     * @param integer $InstanceType 实例类型 1:原web相关类型 2:app端类型
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class CreateTawInstanceRequest extends AbstractModel
 
         if (array_key_exists("ResourcePackageNum",$param) and $param["ResourcePackageNum"] !== null) {
             $this->ResourcePackageNum = $param["ResourcePackageNum"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

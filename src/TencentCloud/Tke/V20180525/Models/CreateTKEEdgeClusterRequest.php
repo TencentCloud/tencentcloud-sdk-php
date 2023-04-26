@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEdgeVersion(string $EdgeVersion) 设置边缘集群版本，此版本区别于k8s版本，是整个集群各组件版本集合
  * @method string getRegistryPrefix() 获取边缘组件镜像仓库前缀
  * @method void setRegistryPrefix(string $RegistryPrefix) 设置边缘组件镜像仓库前缀
+ * @method TagSpecification getTagSpecification() 获取集群绑定的云标签
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置集群绑定的云标签
  */
 class CreateTKEEdgeClusterRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
     public $RegistryPrefix;
 
     /**
+     * @var TagSpecification 集群绑定的云标签
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $K8SVersion k8s版本号
      * @param string $VpcId vpc 的Id
      * @param string $ClusterName 集群名称
@@ -136,6 +143,7 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
      * @param string $ChargeType 集群计费方式
      * @param string $EdgeVersion 边缘集群版本，此版本区别于k8s版本，是整个集群各组件版本集合
      * @param string $RegistryPrefix 边缘组件镜像仓库前缀
+     * @param TagSpecification $TagSpecification 集群绑定的云标签
      */
     function __construct()
     {
@@ -206,6 +214,11 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
 
         if (array_key_exists("RegistryPrefix",$param) and $param["RegistryPrefix"] !== null) {
             $this->RegistryPrefix = $param["RegistryPrefix"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
         }
     }
 }

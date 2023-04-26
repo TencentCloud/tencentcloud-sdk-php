@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorPrompt(string $ErrorPrompt) 设置云硬盘最后一次操作错误提示
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getBurstPerformance() 获取云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBurstPerformance(boolean $BurstPerformance) 设置云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Disk extends AbstractModel
 {
@@ -356,6 +360,12 @@ class Disk extends AbstractModel
     public $ErrorPrompt;
 
     /**
+     * @var boolean 云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BurstPerformance;
+
+    /**
      * @param boolean $DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
@@ -411,6 +421,8 @@ class Disk extends AbstractModel
      * @param string $LastAttachInsId 云硬盘最后一次挂载的实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorPrompt 云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $BurstPerformance 云盘是否开启性能突发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -594,6 +606,10 @@ class Disk extends AbstractModel
 
         if (array_key_exists("ErrorPrompt",$param) and $param["ErrorPrompt"] !== null) {
             $this->ErrorPrompt = $param["ErrorPrompt"];
+        }
+
+        if (array_key_exists("BurstPerformance",$param) and $param["BurstPerformance"] !== null) {
+            $this->BurstPerformance = $param["BurstPerformance"];
         }
     }
 }

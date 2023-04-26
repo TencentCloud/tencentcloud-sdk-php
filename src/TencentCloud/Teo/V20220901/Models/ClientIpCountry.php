@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
- * @method string getHeaderName() 获取存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+ * @method string getHeaderName() 获取存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。
- * @method void setHeaderName(string $HeaderName) 设置存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+ * @method void setHeaderName(string $HeaderName) 设置存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。
  */
 class ClientIpCountry extends AbstractModel
@@ -41,7 +41,7 @@ class ClientIpCountry extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+     * @var string 存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。
      */
     public $HeaderName;
@@ -50,7 +50,7 @@ class ClientIpCountry extends AbstractModel
      * @param string $Switch 配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-     * @param string $HeaderName 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+     * @param string $HeaderName 存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。
      */
     function __construct()

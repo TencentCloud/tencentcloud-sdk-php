@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordUrl(string $RecordUrl) 设置录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxMicNumber() 获取最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomItem extends AbstractModel
 {
@@ -140,6 +148,18 @@ class RoomItem extends AbstractModel
     public $RecordUrl;
 
     /**
+     * @var integer 最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxMicNumber;
+
+    /**
+     * @var integer 打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableDirectControl;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomId 房间ID
@@ -163,6 +183,10 @@ class RoomItem extends AbstractModel
      * @param string $ReplayUrl 房间录制地址。已废弃，使用新字段 RecordUrl
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxMicNumber 最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -220,6 +244,14 @@ class RoomItem extends AbstractModel
 
         if (array_key_exists("RecordUrl",$param) and $param["RecordUrl"] !== null) {
             $this->RecordUrl = $param["RecordUrl"];
+        }
+
+        if (array_key_exists("MaxMicNumber",$param) and $param["MaxMicNumber"] !== null) {
+            $this->MaxMicNumber = $param["MaxMicNumber"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
     }
 }

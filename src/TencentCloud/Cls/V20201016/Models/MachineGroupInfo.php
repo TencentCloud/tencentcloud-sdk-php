@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceLogging(boolean $ServiceLogging) 设置是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMetaTags() 获取机器组元数据信息列表
+ * @method void setMetaTags(array $MetaTags) 设置机器组元数据信息列表
  */
 class MachineGroupInfo extends AbstractModel
 {
@@ -102,6 +104,11 @@ class MachineGroupInfo extends AbstractModel
     public $ServiceLogging;
 
     /**
+     * @var array 机器组元数据信息列表
+     */
+    public $MetaTags;
+
+    /**
      * @param string $GroupId 机器组ID
      * @param string $GroupName 机器组名称
      * @param MachineGroupTypeInfo $MachineGroupType 机器组类型
@@ -116,6 +123,7 @@ class MachineGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ServiceLogging 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MetaTags 机器组元数据信息列表
      */
     function __construct()
     {
@@ -170,6 +178,15 @@ class MachineGroupInfo extends AbstractModel
 
         if (array_key_exists("ServiceLogging",$param) and $param["ServiceLogging"] !== null) {
             $this->ServiceLogging = $param["ServiceLogging"];
+        }
+
+        if (array_key_exists("MetaTags",$param) and $param["MetaTags"] !== null) {
+            $this->MetaTags = [];
+            foreach ($param["MetaTags"] as $key => $value){
+                $obj = new MetaTagInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaTags, $obj);
+            }
         }
     }
 }

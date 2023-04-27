@@ -90,6 +90,14 @@ rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议
 该字段适用于：创建采集规则配置、修改采集规则配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMetadataType() 获取元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+ * @method void setMetadataType(integer $MetadataType) 设置元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+ * @method string getPathRegex() 获取采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPathRegex(string $PathRegex) 设置采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMetaTags() 获取用户自定义元数据信息，MetadataType为2时必填
+ * @method void setMetaTags(array $MetaTags) 设置用户自定义元数据信息，MetadataType为2时必填
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -189,6 +197,22 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     public $ParseProtocol;
 
     /**
+     * @var integer 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+     */
+    public $MetadataType;
+
+    /**
+     * @var string 采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PathRegex;
+
+    /**
+     * @var array 用户自定义元数据信息，MetadataType为2时必填
+     */
+    public $MetaTags;
+
+    /**
      * @param string $TimeKey 时间字段的key名字，time_key和time_format必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
@@ -224,6 +248,10 @@ rfc5424：指定系统日志采集使用RFC5424协议解析日志。
 auto：自动匹配rfc3164或者rfc5424其中一种协议
 该字段适用于：创建采集规则配置、修改采集规则配置
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MetadataType 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+     * @param string $PathRegex 采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MetaTags 用户自定义元数据信息，MetadataType为2时必填
      */
     function __construct()
     {
@@ -301,6 +329,23 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 
         if (array_key_exists("ParseProtocol",$param) and $param["ParseProtocol"] !== null) {
             $this->ParseProtocol = $param["ParseProtocol"];
+        }
+
+        if (array_key_exists("MetadataType",$param) and $param["MetadataType"] !== null) {
+            $this->MetadataType = $param["MetadataType"];
+        }
+
+        if (array_key_exists("PathRegex",$param) and $param["PathRegex"] !== null) {
+            $this->PathRegex = $param["PathRegex"];
+        }
+
+        if (array_key_exists("MetaTags",$param) and $param["MetaTags"] !== null) {
+            $this->MetaTags = [];
+            foreach ($param["MetaTags"] as $key => $value){
+                $obj = new MetaTagInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaTags, $obj);
+            }
         }
     }
 }

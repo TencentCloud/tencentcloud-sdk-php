@@ -74,6 +74,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetUin(integer $TargetUin) 设置当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRotationFrequency() 获取轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRotationFrequency(integer $RotationFrequency) 设置轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceID() 获取云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceID(string $ResourceID) 设置云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRotationBeginTime() 获取用户指定的轮转开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRotationBeginTime(string $RotationBeginTime) 设置用户指定的轮转开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecretMetadata extends AbstractModel
 {
@@ -169,6 +181,24 @@ class SecretMetadata extends AbstractModel
     public $TargetUin;
 
     /**
+     * @var integer 轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RotationFrequency;
+
+    /**
+     * @var string 云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceID;
+
+    /**
+     * @var string 用户指定的轮转开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RotationBeginTime;
+
+    /**
      * @param string $SecretName 凭据名称
      * @param string $Description 凭据的描述信息
      * @param string $KmsKeyId 用于加密凭据的KMS KeyId
@@ -195,6 +225,12 @@ class SecretMetadata extends AbstractModel
      * @param array $AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceID 云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RotationBeginTime 用户指定的轮转开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -272,6 +308,18 @@ class SecretMetadata extends AbstractModel
 
         if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
             $this->TargetUin = $param["TargetUin"];
+        }
+
+        if (array_key_exists("RotationFrequency",$param) and $param["RotationFrequency"] !== null) {
+            $this->RotationFrequency = $param["RotationFrequency"];
+        }
+
+        if (array_key_exists("ResourceID",$param) and $param["ResourceID"] !== null) {
+            $this->ResourceID = $param["ResourceID"];
+        }
+
+        if (array_key_exists("RotationBeginTime",$param) and $param["RotationBeginTime"] !== null) {
+            $this->RotationBeginTime = $param["RotationBeginTime"];
         }
     }
 }

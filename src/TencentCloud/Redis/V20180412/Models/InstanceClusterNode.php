@@ -20,114 +20,142 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例节点类型
  *
- * @method string getName() 获取节点名称
- * @method void setName(string $Name) 设置节点名称
- * @method string getRunId() 获取实例运行时节点Id
- * @method void setRunId(string $RunId) 设置实例运行时节点Id
- * @method integer getRole() 获取集群角色：0-master；1-slave
- * @method void setRole(integer $Role) 设置集群角色：0-master；1-slave
- * @method integer getStatus() 获取节点状态：0-readwrite, 1-read, 2-backup
- * @method void setStatus(integer $Status) 设置节点状态：0-readwrite, 1-read, 2-backup
- * @method integer getConnected() 获取服务状态：0-down；1-on
- * @method void setConnected(integer $Connected) 设置服务状态：0-down；1-on
- * @method string getCreateTime() 获取节点创建时间
- * @method void setCreateTime(string $CreateTime) 设置节点创建时间
- * @method string getDownTime() 获取节点下线时间
- * @method void setDownTime(string $DownTime) 设置节点下线时间
- * @method string getSlots() 获取节点slot分布
- * @method void setSlots(string $Slots) 设置节点slot分布
- * @method integer getKeys() 获取节点key分布
- * @method void setKeys(integer $Keys) 设置节点key分布
- * @method integer getQps() 获取节点qps
- * @method void setQps(integer $Qps) 设置节点qps
- * @method float getQpsSlope() 获取节点qps倾斜度
- * @method void setQpsSlope(float $QpsSlope) 设置节点qps倾斜度
- * @method integer getStorage() 获取节点存储
- * @method void setStorage(integer $Storage) 设置节点存储
- * @method float getStorageSlope() 获取节点存储倾斜度
- * @method void setStorageSlope(float $StorageSlope) 设置节点存储倾斜度
+ * @method string getName() 获取节点名称。
+ * @method void setName(string $Name) 设置节点名称。
+ * @method string getRunId() 获取实例运行时节点 ID。
+ * @method void setRunId(string $RunId) 设置实例运行时节点 ID。
+ * @method integer getRole() 获取集群角色。
+- 0：master。
+- 1：slave。
+ * @method void setRole(integer $Role) 设置集群角色。
+- 0：master。
+- 1：slave。
+ * @method integer getStatus() 获取节点状态。
+- 0：readwrite,。
+- 1：read。
+- 2：backup。
+ * @method void setStatus(integer $Status) 设置节点状态。
+- 0：readwrite,。
+- 1：read。
+- 2：backup。
+ * @method integer getConnected() 获取服务状态。
+0-down。
+1-on
+ * @method void setConnected(integer $Connected) 设置服务状态。
+0-down。
+1-on
+ * @method string getCreateTime() 获取节点创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置节点创建时间。
+ * @method string getDownTime() 获取节点下线时间。
+ * @method void setDownTime(string $DownTime) 设置节点下线时间。
+ * @method string getSlots() 获取节点 Slot 分布区间。
+ * @method void setSlots(string $Slots) 设置节点 Slot 分布区间。
+ * @method integer getKeys() 获取节点 Key分布。
+ * @method void setKeys(integer $Keys) 设置节点 Key分布。
+ * @method integer getQps() 获取节点 QPS。分片节点每秒执行次数。单位：次/秒。
+ * @method void setQps(integer $Qps) 设置节点 QPS。分片节点每秒执行次数。单位：次/秒。
+ * @method float getQpsSlope() 获取节点 QPS 倾斜度。
+ * @method void setQpsSlope(float $QpsSlope) 设置节点 QPS 倾斜度。
+ * @method integer getStorage() 获取节点存储。
+ * @method void setStorage(integer $Storage) 设置节点存储。
+ * @method float getStorageSlope() 获取节点存储倾斜度。
+ * @method void setStorageSlope(float $StorageSlope) 设置节点存储倾斜度。
  */
 class InstanceClusterNode extends AbstractModel
 {
     /**
-     * @var string 节点名称
+     * @var string 节点名称。
      */
     public $Name;
 
     /**
-     * @var string 实例运行时节点Id
+     * @var string 实例运行时节点 ID。
      */
     public $RunId;
 
     /**
-     * @var integer 集群角色：0-master；1-slave
+     * @var integer 集群角色。
+- 0：master。
+- 1：slave。
      */
     public $Role;
 
     /**
-     * @var integer 节点状态：0-readwrite, 1-read, 2-backup
+     * @var integer 节点状态。
+- 0：readwrite,。
+- 1：read。
+- 2：backup。
      */
     public $Status;
 
     /**
-     * @var integer 服务状态：0-down；1-on
+     * @var integer 服务状态。
+0-down。
+1-on
      */
     public $Connected;
 
     /**
-     * @var string 节点创建时间
+     * @var string 节点创建时间。
      */
     public $CreateTime;
 
     /**
-     * @var string 节点下线时间
+     * @var string 节点下线时间。
      */
     public $DownTime;
 
     /**
-     * @var string 节点slot分布
+     * @var string 节点 Slot 分布区间。
      */
     public $Slots;
 
     /**
-     * @var integer 节点key分布
+     * @var integer 节点 Key分布。
      */
     public $Keys;
 
     /**
-     * @var integer 节点qps
+     * @var integer 节点 QPS。分片节点每秒执行次数。单位：次/秒。
      */
     public $Qps;
 
     /**
-     * @var float 节点qps倾斜度
+     * @var float 节点 QPS 倾斜度。
      */
     public $QpsSlope;
 
     /**
-     * @var integer 节点存储
+     * @var integer 节点存储。
      */
     public $Storage;
 
     /**
-     * @var float 节点存储倾斜度
+     * @var float 节点存储倾斜度。
      */
     public $StorageSlope;
 
     /**
-     * @param string $Name 节点名称
-     * @param string $RunId 实例运行时节点Id
-     * @param integer $Role 集群角色：0-master；1-slave
-     * @param integer $Status 节点状态：0-readwrite, 1-read, 2-backup
-     * @param integer $Connected 服务状态：0-down；1-on
-     * @param string $CreateTime 节点创建时间
-     * @param string $DownTime 节点下线时间
-     * @param string $Slots 节点slot分布
-     * @param integer $Keys 节点key分布
-     * @param integer $Qps 节点qps
-     * @param float $QpsSlope 节点qps倾斜度
-     * @param integer $Storage 节点存储
-     * @param float $StorageSlope 节点存储倾斜度
+     * @param string $Name 节点名称。
+     * @param string $RunId 实例运行时节点 ID。
+     * @param integer $Role 集群角色。
+- 0：master。
+- 1：slave。
+     * @param integer $Status 节点状态。
+- 0：readwrite,。
+- 1：read。
+- 2：backup。
+     * @param integer $Connected 服务状态。
+0-down。
+1-on
+     * @param string $CreateTime 节点创建时间。
+     * @param string $DownTime 节点下线时间。
+     * @param string $Slots 节点 Slot 分布区间。
+     * @param integer $Keys 节点 Key分布。
+     * @param integer $Qps 节点 QPS。分片节点每秒执行次数。单位：次/秒。
+     * @param float $QpsSlope 节点 QPS 倾斜度。
+     * @param integer $Storage 节点存储。
+     * @param float $StorageSlope 节点存储倾斜度。
      */
     function __construct()
     {

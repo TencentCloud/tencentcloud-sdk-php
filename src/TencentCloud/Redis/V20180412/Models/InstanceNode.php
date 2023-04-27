@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例节点
  *
- * @method integer getId() 获取Id
- * @method void setId(integer $Id) 设置Id
- * @method array getInstanceClusterNode() 获取节点详细信息
- * @method void setInstanceClusterNode(array $InstanceClusterNode) 设置节点详细信息
+ * @method integer getId() 获取实例 ID。
+ * @method void setId(integer $Id) 设置实例 ID。
+ * @method array getInstanceClusterNode() 获取节点详细信息。
+ * @method void setInstanceClusterNode(array $InstanceClusterNode) 设置节点详细信息。
  */
 class InstanceNode extends AbstractModel
 {
     /**
-     * @var integer Id
+     * @var integer 实例 ID。
      */
     public $Id;
 
     /**
-     * @var array 节点详细信息
+     * @var array 节点详细信息。
      */
     public $InstanceClusterNode;
 
     /**
-     * @param integer $Id Id
-     * @param array $InstanceClusterNode 节点详细信息
+     * @param integer $Id 实例 ID。
+     * @param array $InstanceClusterNode 节点详细信息。
      */
     function __construct()
     {

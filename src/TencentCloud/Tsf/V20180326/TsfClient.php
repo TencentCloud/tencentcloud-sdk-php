@@ -175,6 +175,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeUnitNamespacesResponse DescribeUnitNamespaces(Models\DescribeUnitNamespacesRequest $req) 查询单元化命名空间列表
  * @method Models\DescribeUnitRuleResponse DescribeUnitRule(Models\DescribeUnitRuleRequest $req) 查询单元化规则详情
  * @method Models\DescribeUnitRulesResponse DescribeUnitRules(Models\DescribeUnitRulesRequest $req) 查询单元化规则列表
+ * @method Models\DescribeUnitRulesV2Response DescribeUnitRulesV2(Models\DescribeUnitRulesV2Request $req) 查询单元化规则列表V2
  * @method Models\DescribeUploadInfoResponse DescribeUploadInfo(Models\DescribeUploadInfoRequest $req) TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeUsableUnitNamespacesResponse DescribeUsableUnitNamespaces(Models\DescribeUsableUnitNamespacesRequest $req) 查询可用于被导入的命名空间列表

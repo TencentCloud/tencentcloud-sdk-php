@@ -81,7 +81,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) 查询结果下载任务
  * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于获取所有SQL查询。
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) 查询具体的spark应用
- * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) 获取spark应用列表
+ * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) 获取spark应用列表。
  * @method Models\DescribeSparkAppTasksResponse DescribeSparkAppTasks(Models\DescribeSparkAppTasksRequest $req) 查询spark应用的运行任务实例列表
  * @method Models\DescribeStoreLocationResponse DescribeStoreLocation(Models\DescribeStoreLocationRequest $req) 查询计算结果存储位置。
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 本接口（DescribeTable），用于查询单个表的详细信息。

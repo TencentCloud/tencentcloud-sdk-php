@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAccountQuota返回参数结构体
+ * DescribeAuthSignature返回参数结构体
  *
- * @method integer getAppId() 获取用户appid
- * @method void setAppId(integer $AppId) 设置用户appid
- * @method AccountQuotaOverview getAccountQuotaOverview() 获取配额数据
- * @method void setAccountQuotaOverview(AccountQuotaOverview $AccountQuotaOverview) 设置配额数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAccountQuotaResponse extends AbstractModel
+class DescribeAuthSignatureResponse extends AbstractModel
 {
-    /**
-     * @var integer 用户appid
-     */
-    public $AppId;
-
-    /**
-     * @var AccountQuotaOverview 配额数据
-     */
-    public $AccountQuotaOverview;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $AppId 用户appid
-     * @param AccountQuotaOverview $AccountQuotaOverview 配额数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,15 +46,6 @@ class DescribeAccountQuotaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
-        }
-
-        if (array_key_exists("AccountQuotaOverview",$param) and $param["AccountQuotaOverview"] !== null) {
-            $this->AccountQuotaOverview = new AccountQuotaOverview();
-            $this->AccountQuotaOverview->deserialize($param["AccountQuotaOverview"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

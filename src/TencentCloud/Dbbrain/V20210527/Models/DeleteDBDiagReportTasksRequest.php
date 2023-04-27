@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsyncRequestIds(array $AsyncRequestIds) 设置需要删除的任务id列表
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL， "mongodb" - 云数据库 CynosDB for MySQL，
-默认值为"mysql"。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL， "mongodb" - 云数据库 CynosDB for MySQL，
-默认值为"mysql"。
+ * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  */
 class DeleteDBDiagReportTasksRequest extends AbstractModel
 {
@@ -42,16 +40,14 @@ class DeleteDBDiagReportTasksRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL， "mongodb" - 云数据库 CynosDB for MySQL，
-默认值为"mysql"。
+     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
      */
     public $Product;
 
     /**
      * @param array $AsyncRequestIds 需要删除的任务id列表
      * @param string $InstanceId 实例ID
-     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL， "mongodb" - 云数据库 CynosDB for MySQL，
-默认值为"mysql"。
+     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
      */
     function __construct()
     {

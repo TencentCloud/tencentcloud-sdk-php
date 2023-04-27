@@ -82,6 +82,8 @@ video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关
+ * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -179,6 +181,11 @@ video 纯视频
     public $GroupId;
 
     /**
+     * @var integer 打开学生麦克风/摄像头的授权开关
+     */
+    public $EnableDirectControl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -215,6 +222,7 @@ video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 房间绑定的群组ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -288,6 +296,10 @@ video 纯视频
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

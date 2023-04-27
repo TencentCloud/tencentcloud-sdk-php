@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateEndTime(string $UpdateEndTime) 设置升级结束时间，建议业务低峰期升级LogListener
  * @method boolean getServiceLogging() 获取是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
  * @method void setServiceLogging(boolean $ServiceLogging) 设置是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
+ * @method array getMetaTags() 获取机器组元数据信息列表
+ * @method void setMetaTags(array $MetaTags) 设置机器组元数据信息列表
  */
 class CreateMachineGroupRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateMachineGroupRequest extends AbstractModel
     public $ServiceLogging;
 
     /**
+     * @var array 机器组元数据信息列表
+     */
+    public $MetaTags;
+
+    /**
      * @param string $GroupName 机器组名字，不能重复
      * @param MachineGroupTypeInfo $MachineGroupType 创建机器组类型，Type为ip，Values中为Ip字符串列表创建机器组，Type为label， Values中为标签字符串列表创建机器组
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的机器组。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
@@ -80,6 +87,7 @@ class CreateMachineGroupRequest extends AbstractModel
      * @param string $UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
      * @param string $UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
      * @param boolean $ServiceLogging 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
+     * @param array $MetaTags 机器组元数据信息列表
      */
     function __construct()
     {
@@ -126,6 +134,15 @@ class CreateMachineGroupRequest extends AbstractModel
 
         if (array_key_exists("ServiceLogging",$param) and $param["ServiceLogging"] !== null) {
             $this->ServiceLogging = $param["ServiceLogging"];
+        }
+
+        if (array_key_exists("MetaTags",$param) and $param["MetaTags"] !== null) {
+            $this->MetaTags = [];
+            foreach ($param["MetaTags"] as $key => $value){
+                $obj = new MetaTagInfo();
+                $obj->deserialize($value);
+                array_push($this->MetaTags, $obj);
+            }
         }
     }
 }

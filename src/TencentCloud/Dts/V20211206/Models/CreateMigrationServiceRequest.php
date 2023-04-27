@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMigrationService请求参数结构体
  *
- * @method string getSrcDatabaseType() 获取源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
- * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
- * @method string getDstDatabaseType() 获取目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
- * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+ * @method string getSrcDatabaseType() 获取源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+ * @method string getDstDatabaseType() 获取目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+ * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
  * @method string getSrcRegion() 获取源实例地域，如：ap-guangzhou
  * @method void setSrcRegion(string $SrcRegion) 设置源实例地域，如：ap-guangzhou
  * @method string getDstRegion() 获取目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateMigrationServiceRequest extends AbstractModel
 {
     /**
-     * @var string 源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * @var string 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
      */
     public $SrcDatabaseType;
 
     /**
-     * @var string 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * @var string 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
      */
     public $DstDatabaseType;
 
@@ -80,8 +80,8 @@ class CreateMigrationServiceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $SrcDatabaseType 源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
-     * @param string $DstDatabaseType 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * @param string $SrcDatabaseType 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+     * @param string $DstDatabaseType 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
      * @param string $SrcRegion 源实例地域，如：ap-guangzhou
      * @param string $DstRegion 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
      * @param string $InstanceClass 实例规格，包括：small、medium、large、xlarge、2xlarge

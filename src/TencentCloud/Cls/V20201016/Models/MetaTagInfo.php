@@ -14,40 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyEnterpriseSecurityDispatchStatus请求参数结构体
+ * 元数据信息
  *
- * @method integer getStatus() 获取0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关下，触发开始下发
- * @method void setStatus(integer $Status) 设置0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关下，触发开始下发
+ * @method string getKey() 获取元数据key
+ * @method void setKey(string $Key) 设置元数据key
+ * @method string getValue() 获取元数据value
+ * @method void setValue(string $Value) 设置元数据value
  */
-class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
+class MetaTagInfo extends AbstractModel
 {
     /**
-     * @var integer 0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关下，触发开始下发
+     * @var string 元数据key
      */
-    public $Status;
+    public $Key;
 
     /**
-     * @param integer $Status 0：打开立即下发开关；
+     * @var string 元数据value
+     */
+    public $Value;
 
-1：关闭立即下发开关；
-
-2：关闭立即下发开关下，触发开始下发
+    /**
+     * @param string $Key 元数据key
+     * @param string $Value 元数据value
      */
     function __construct()
     {
@@ -62,8 +54,12 @@ class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
  * @method integer getLimit() 获取最大输出条数，默认20
  * @method void setLimit(integer $Limit) 设置最大输出条数，默认20
- * @method array getFilters() 获取过滤条件,当前只支持按照单个条件ClusterName进行过滤
- * @method void setFilters(array $Filters) 设置过滤条件,当前只支持按照单个条件ClusterName进行过滤
+ * @method array getFilters() 获取过滤条件,当前只支持按照ClusterName和云标签进行过滤
+ * @method void setFilters(array $Filters) 设置过滤条件,当前只支持按照ClusterName和云标签进行过滤
  */
 class DescribeTKEEdgeClustersRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class DescribeTKEEdgeClustersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * @var array 过滤条件,当前只支持按照ClusterName和云标签进行过滤
      */
     public $Filters;
 
@@ -59,7 +59,7 @@ class DescribeTKEEdgeClustersRequest extends AbstractModel
 表示获取账号下所有集群)
      * @param integer $Offset 偏移量,默认0
      * @param integer $Limit 最大输出条数，默认20
-     * @param array $Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * @param array $Filters 过滤条件,当前只支持按照ClusterName和云标签进行过滤
      */
     function __construct()
     {

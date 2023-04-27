@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。
  * @method string getGroupId() 获取房间绑定的群组ID
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
+ * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关
+ * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关
  */
 class RoomInfo extends AbstractModel
 {
@@ -136,6 +138,11 @@ class RoomInfo extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer 打开学生麦克风/摄像头的授权开关
+     */
+    public $EnableDirectControl;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳。
@@ -152,6 +159,7 @@ class RoomInfo extends AbstractModel
      * @param integer $AudienceType 观看类型。
      * @param integer $RecordLayout 录制布局。
      * @param string $GroupId 房间绑定的群组ID
+     * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
     }
 }

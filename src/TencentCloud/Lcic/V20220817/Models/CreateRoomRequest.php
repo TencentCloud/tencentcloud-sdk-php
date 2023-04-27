@@ -82,6 +82,8 @@ video 纯视频
  * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method string getGroupId() 获取房间绑定的群组ID,非空时限制组成员进入
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID,非空时限制组成员进入
+ * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关
+ * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ video 纯视频
     public $GroupId;
 
     /**
+     * @var integer 打开学生麦克风/摄像头的授权开关
+     */
+    public $EnableDirectControl;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳。
@@ -216,6 +223,7 @@ video 纯视频
      * @param integer $AudienceType 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
      * @param integer $RecordLayout 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      * @param string $GroupId 房间绑定的群组ID,非空时限制组成员进入
+     * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关
      */
     function __construct()
     {
@@ -296,6 +304,10 @@ video 纯视频
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
+            $this->EnableDirectControl = $param["EnableDirectControl"];
         }
     }
 }

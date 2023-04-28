@@ -20,51 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePayType返回参数结构体
  *
- * @method string getPayType() 获取计费类型：
+ * @method string getPayType() 获取计费类型
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
 flux_sep：动静分离流量计费
 bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
- * @method void setPayType(string $PayType) 设置计费类型：
+ * @method void setPayType(string $PayType) 设置计费类型
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
 flux_sep：动静分离流量计费
 bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
- * @method string getBillingCycle() 获取计费周期：
+ * @method string getBillingCycle() 获取计费周期
 day：日结计费
 month：月结计费
 hour：小时结计费
- * @method void setBillingCycle(string $BillingCycle) 设置计费周期：
+ * @method void setBillingCycle(string $BillingCycle) 设置计费周期
 day：日结计费
 month：月结计费
 hour：小时结计费
- * @method string getStatType() 获取monthMax：日峰值月平均，月结模式
+ * @method string getStatType() 获取统计类型
+monthMax：日峰值月平均，月结模式
 day95：日 95 带宽，月结模式
 month95：月95带宽，月结模式
 sum：总流量/总请求数，日结或月结模式
 max：峰值带宽，日结模式
- * @method void setStatType(string $StatType) 设置monthMax：日峰值月平均，月结模式
+ * @method void setStatType(string $StatType) 设置统计类型
+monthMax：日峰值月平均，月结模式
 day95：日 95 带宽，月结模式
 month95：月95带宽，月结模式
 sum：总流量/总请求数，日结或月结模式
 max：峰值带宽，日结模式
- * @method string getRegionType() 获取境外计费类型：
+ * @method string getRegionType() 获取计费区域
 all：全地区统一计费
 multiple：分地区计费
- * @method void setRegionType(string $RegionType) 设置境外计费类型：
+ * @method void setRegionType(string $RegionType) 设置计费区域
 all：全地区统一计费
 multiple：分地区计费
- * @method string getCurrentPayType() 获取当前生效计费类型：
+ * @method string getCurrentPayType() 获取当前生效计费类型
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
 flux_sep：动静分离流量计费
 bandwidth_sep：动静分离带宽计费
- * @method void setCurrentPayType(string $CurrentPayType) 设置当前生效计费类型：
+ * @method void setCurrentPayType(string $CurrentPayType) 设置当前生效计费类型
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
@@ -76,7 +78,7 @@ bandwidth_sep：动静分离带宽计费
 class DescribePayTypeResponse extends AbstractModel
 {
     /**
-     * @var string 计费类型：
+     * @var string 计费类型
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
@@ -87,7 +89,7 @@ bandwidth_sep：动静分离带宽计费
     public $PayType;
 
     /**
-     * @var string 计费周期：
+     * @var string 计费周期
 day：日结计费
 month：月结计费
 hour：小时结计费
@@ -95,7 +97,8 @@ hour：小时结计费
     public $BillingCycle;
 
     /**
-     * @var string monthMax：日峰值月平均，月结模式
+     * @var string 统计类型
+monthMax：日峰值月平均，月结模式
 day95：日 95 带宽，月结模式
 month95：月95带宽，月结模式
 sum：总流量/总请求数，日结或月结模式
@@ -104,14 +107,14 @@ max：峰值带宽，日结模式
     public $StatType;
 
     /**
-     * @var string 境外计费类型：
+     * @var string 计费区域
 all：全地区统一计费
 multiple：分地区计费
      */
     public $RegionType;
 
     /**
-     * @var string 当前生效计费类型：
+     * @var string 当前生效计费类型
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
@@ -126,26 +129,27 @@ bandwidth_sep：动静分离带宽计费
     public $RequestId;
 
     /**
-     * @param string $PayType 计费类型：
+     * @param string $PayType 计费类型
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
 flux_sep：动静分离流量计费
 bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
-     * @param string $BillingCycle 计费周期：
+     * @param string $BillingCycle 计费周期
 day：日结计费
 month：月结计费
 hour：小时结计费
-     * @param string $StatType monthMax：日峰值月平均，月结模式
+     * @param string $StatType 统计类型
+monthMax：日峰值月平均，月结模式
 day95：日 95 带宽，月结模式
 month95：月95带宽，月结模式
 sum：总流量/总请求数，日结或月结模式
 max：峰值带宽，日结模式
-     * @param string $RegionType 境外计费类型：
+     * @param string $RegionType 计费区域
 all：全地区统一计费
 multiple：分地区计费
-     * @param string $CurrentPayType 当前生效计费类型：
+     * @param string $CurrentPayType 当前生效计费类型
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费

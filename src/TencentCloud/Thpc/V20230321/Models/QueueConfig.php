@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQueueName() 获取队列名称。
  * @method void setQueueName(string $QueueName) 设置队列名称。
- * @method integer getMinSize() 获取队列中弹性节点数量最小值。取值范围0～200。
- * @method void setMinSize(integer $MinSize) 设置队列中弹性节点数量最小值。取值范围0～200。
- * @method integer getMaxSize() 获取队列中弹性节点数量最大值。取值范围0～200。
- * @method void setMaxSize(integer $MaxSize) 设置队列中弹性节点数量最大值。取值范围0～200。
+ * @method integer getMinSize() 获取队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
+ * @method void setMinSize(integer $MinSize) 设置队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
+ * @method integer getMaxSize() 获取队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
+ * @method void setMaxSize(integer $MaxSize) 设置队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
  * @method boolean getEnableAutoExpansion() 获取是否开启自动扩容。
  * @method void setEnableAutoExpansion(boolean $EnableAutoExpansion) 设置是否开启自动扩容。
  * @method boolean getEnableAutoShrink() 获取是否开启自动缩容。
@@ -49,12 +49,12 @@ class QueueConfig extends AbstractModel
     public $QueueName;
 
     /**
-     * @var integer 队列中弹性节点数量最小值。取值范围0～200。
+     * @var integer 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
      */
     public $MinSize;
 
     /**
-     * @var integer 队列中弹性节点数量最大值。取值范围0～200。
+     * @var integer 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
      */
     public $MaxSize;
 
@@ -95,8 +95,8 @@ class QueueConfig extends AbstractModel
 
     /**
      * @param string $QueueName 队列名称。
-     * @param integer $MinSize 队列中弹性节点数量最小值。取值范围0～200。
-     * @param integer $MaxSize 队列中弹性节点数量最大值。取值范围0～200。
+     * @param integer $MinSize 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
+     * @param integer $MaxSize 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
      * @param boolean $EnableAutoExpansion 是否开启自动扩容。
      * @param boolean $EnableAutoShrink 是否开启自动缩容。
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜和特定自定义镜像。

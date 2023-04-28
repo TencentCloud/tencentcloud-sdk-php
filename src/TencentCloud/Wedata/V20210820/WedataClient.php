@@ -135,6 +135,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeKafkaTopicInfoResponse DescribeKafkaTopicInfo(Models\DescribeKafkaTopicInfoRequest $req) 获取kafka的topic信息
  * @method Models\DescribeMonitorsByPageResponse DescribeMonitorsByPage(Models\DescribeMonitorsByPageRequest $req) 分页查询质量监控组
  * @method Models\DescribeOfflineTaskTokenResponse DescribeOfflineTaskToken(Models\DescribeOfflineTaskTokenRequest $req) 获取离线任务长连接Token
+ * @method Models\DescribeOperateTasksResponse DescribeOperateTasks(Models\DescribeOperateTasksRequest $req) 任务运维列表组合条件查询
  * @method Models\DescribeOrganizationalFunctionsResponse DescribeOrganizationalFunctions(Models\DescribeOrganizationalFunctionsRequest $req) 查询全量函数
  * @method Models\DescribeProdTasksResponse DescribeProdTasks(Models\DescribeProdTasksRequest $req) 数据质量获取生产调度任务列表
  * @method Models\DescribeProjectResponse DescribeProject(Models\DescribeProjectRequest $req) 获取项目信息

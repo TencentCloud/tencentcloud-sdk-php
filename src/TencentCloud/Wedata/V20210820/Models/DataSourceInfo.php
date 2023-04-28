@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBizParamsString(string $BizParamsString) 设置BizParams json字符串
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getModifiedTime() 获取修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifiedTime(integer $ModifiedTime) 设置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -314,6 +318,12 @@ class DataSourceInfo extends AbstractModel
     public $BizParamsString;
 
     /**
+     * @var integer 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifiedTime;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -371,6 +381,8 @@ class DataSourceInfo extends AbstractModel
      * @param string $ParamsString Params json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BizParamsString BizParams json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ModifiedTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -500,6 +512,10 @@ class DataSourceInfo extends AbstractModel
 
         if (array_key_exists("BizParamsString",$param) and $param["BizParamsString"] !== null) {
             $this->BizParamsString = $param["BizParamsString"];
+        }
+
+        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
+            $this->ModifiedTime = $param["ModifiedTime"];
         }
     }
 }

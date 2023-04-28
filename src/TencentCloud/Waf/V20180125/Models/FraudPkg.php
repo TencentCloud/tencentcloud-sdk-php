@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedNum(integer $UsedNum) 设置使用数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FraudPkg extends AbstractModel
 {
@@ -94,6 +98,12 @@ class FraudPkg extends AbstractModel
     public $UsedNum;
 
     /**
+     * @var integer 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
      * @param string $ResourceIds 资源id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
@@ -107,6 +117,8 @@ class FraudPkg extends AbstractModel
      * @param integer $InquireNum 申请数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedNum 使用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 续费标志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class FraudPkg extends AbstractModel
 
         if (array_key_exists("UsedNum",$param) and $param["UsedNum"] !== null) {
             $this->UsedNum = $param["UsedNum"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

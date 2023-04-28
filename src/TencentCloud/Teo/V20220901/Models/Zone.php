@@ -97,11 +97,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsFake() 获取是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFake(integer $IsFake) 设置是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLockStatus() 获取锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+ * @method void setLockStatus(string $LockStatus) 设置锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
  */
 class Zone extends AbstractModel
 {
@@ -218,9 +218,13 @@ class Zone extends AbstractModel
      * @var integer 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFake;
+
+    /**
+     * @var string 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+     */
+    public $LockStatus;
 
     /**
      * @param string $ZoneId 站点ID。
@@ -263,7 +267,7 @@ class Zone extends AbstractModel
      * @param integer $IsFake 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
      */
     function __construct()
     {
@@ -368,6 +372,10 @@ class Zone extends AbstractModel
 
         if (array_key_exists("IsFake",$param) and $param["IsFake"] !== null) {
             $this->IsFake = $param["IsFake"];
+        }
+
+        if (array_key_exists("LockStatus",$param) and $param["LockStatus"] !== null) {
+            $this->LockStatus = $param["LockStatus"];
         }
     }
 }

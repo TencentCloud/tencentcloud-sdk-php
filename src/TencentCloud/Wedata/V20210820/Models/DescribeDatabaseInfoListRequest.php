@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabaseInfoList请求参数结构体
  *
+ * @method array getFilters() 获取过滤参数
+ * @method void setFilters(array $Filters) 设置过滤参数
  * @method string getConnectionType() 获取如果是hive这里写rpc，如果是其他类型不传
  * @method void setConnectionType(string $ConnectionType) 设置如果是hive这里写rpc，如果是其他类型不传
  */
 class DescribeDatabaseInfoListRequest extends AbstractModel
 {
     /**
+     * @var array 过滤参数
+     */
+    public $Filters;
+
+    /**
      * @var string 如果是hive这里写rpc，如果是其他类型不传
      */
     public $ConnectionType;
 
     /**
+     * @param array $Filters 过滤参数
      * @param string $ConnectionType 如果是hive这里写rpc，如果是其他类型不传
      */
     function __construct()
@@ -46,6 +54,15 @@ class DescribeDatabaseInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
         if (array_key_exists("ConnectionType",$param) and $param["ConnectionType"] !== null) {
             $this->ConnectionType = $param["ConnectionType"];
         }

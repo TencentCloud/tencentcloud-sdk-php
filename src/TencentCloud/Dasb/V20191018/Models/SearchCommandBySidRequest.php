@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSid(string $Sid) 设置会话Id
  * @method string getCmd() 获取命令，可模糊搜索
  * @method void setCmd(string $Cmd) 设置命令，可模糊搜索
+ * @method integer getEncoding() 获取Cmd字段是前端传值是否进行base64.
+0:否，1：是
+ * @method void setEncoding(integer $Encoding) 设置Cmd字段是前端传值是否进行base64.
+0:否，1：是
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取每页容量，默认20，最大200
@@ -44,6 +48,12 @@ class SearchCommandBySidRequest extends AbstractModel
     public $Cmd;
 
     /**
+     * @var integer Cmd字段是前端传值是否进行base64.
+0:否，1：是
+     */
+    public $Encoding;
+
+    /**
      * @var integer 偏移量
      */
     public $Offset;
@@ -61,6 +71,8 @@ class SearchCommandBySidRequest extends AbstractModel
     /**
      * @param string $Sid 会话Id
      * @param string $Cmd 命令，可模糊搜索
+     * @param integer $Encoding Cmd字段是前端传值是否进行base64.
+0:否，1：是
      * @param integer $Offset 偏移量
      * @param integer $Limit 每页容量，默认20，最大200
      * @param array $AuditAction 根据拦截状态进行过滤
@@ -84,6 +96,10 @@ class SearchCommandBySidRequest extends AbstractModel
 
         if (array_key_exists("Cmd",$param) and $param["Cmd"] !== null) {
             $this->Cmd = $param["Cmd"];
+        }
+
+        if (array_key_exists("Encoding",$param) and $param["Encoding"] !== null) {
+            $this->Encoding = $param["Encoding"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

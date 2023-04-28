@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirection(string $Direction) 设置方向：1互联网入站，0互联网出站，3内网，空 全部方向
  * @method integer getRuleType() 获取规则类型：1封禁，2放通
  * @method void setRuleType(integer $RuleType) 设置规则类型：1封禁，2放通
- * @method string getOrder() 获取排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
- * @method void setOrder(string $Order) 设置排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
- * @method string getBy() 获取排序类型：desc降序，asc正序
- * @method void setBy(string $By) 设置排序类型：desc降序，asc正序
+ * @method string getOrder() 获取排序类型：desc降序，asc正序
+ * @method void setOrder(string $Order) 设置排序类型：desc降序，asc正序
+ * @method string getBy() 获取排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
+ * @method void setBy(string $By) 设置排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
  * @method string getSearchValue() 获取搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
  * @method void setSearchValue(string $SearchValue) 设置搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
  */
@@ -58,12 +58,12 @@ class DescribeBlockIgnoreListRequest extends AbstractModel
     public $RuleType;
 
     /**
-     * @var string 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
+     * @var string 排序类型：desc降序，asc正序
      */
     public $Order;
 
     /**
-     * @var string 排序类型：desc降序，asc正序
+     * @var string 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
      */
     public $By;
 
@@ -77,8 +77,8 @@ class DescribeBlockIgnoreListRequest extends AbstractModel
      * @param integer $Offset 页偏移量
      * @param string $Direction 方向：1互联网入站，0互联网出站，3内网，空 全部方向
      * @param integer $RuleType 规则类型：1封禁，2放通
-     * @param string $Order 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
-     * @param string $By 排序类型：desc降序，asc正序
+     * @param string $Order 排序类型：desc降序，asc正序
+     * @param string $By 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
      * @param string $SearchValue 搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
      */
     function __construct()

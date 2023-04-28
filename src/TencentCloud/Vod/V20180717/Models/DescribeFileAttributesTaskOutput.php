@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMd5() 获取媒体文件的 Md5 值。
  * @method void setMd5(string $Md5) 设置媒体文件的 Md5 值。
+ * @method string getSha1() 获取媒体文件的 Sha1 值。
+ * @method void setSha1(string $Sha1) 设置媒体文件的 Sha1 值。
  */
 class DescribeFileAttributesTaskOutput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeFileAttributesTaskOutput extends AbstractModel
     public $Md5;
 
     /**
+     * @var string 媒体文件的 Sha1 值。
+     */
+    public $Sha1;
+
+    /**
      * @param string $Md5 媒体文件的 Md5 值。
+     * @param string $Sha1 媒体文件的 Sha1 值。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeFileAttributesTaskOutput extends AbstractModel
         }
         if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
             $this->Md5 = $param["Md5"];
+        }
+
+        if (array_key_exists("Sha1",$param) and $param["Sha1"] !== null) {
+            $this->Sha1 = $param["Sha1"];
         }
     }
 }

@@ -66,6 +66,10 @@ use TencentCloud\Kms\V20190118\Models as Models;
  * @method Models\ListKeyDetailResponse ListKeyDetail(Models\ListKeyDetailRequest $req) 根据指定Offset和Limit获取主密钥列表详情。
  * @method Models\ListKeysResponse ListKeys(Models\ListKeysRequest $req) 列出账号下面状态为Enabled， Disabled 和 PendingImport 的CMK KeyId 列表
  * @method Models\OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(Models\OverwriteWhiteBoxDeviceFingerprintsRequest $req) 覆盖指定密钥的设备指纹信息
+ * @method Models\PostQuantumCryptoDecryptResponse PostQuantumCryptoDecrypt(Models\PostQuantumCryptoDecryptRequest $req) 本接口使用后量子密码算法密钥，解密密文，并得到明文数据。
+ * @method Models\PostQuantumCryptoEncryptResponse PostQuantumCryptoEncrypt(Models\PostQuantumCryptoEncryptRequest $req) 本接口使用后量子密码算法密钥，可加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作。
+ * @method Models\PostQuantumCryptoSignResponse PostQuantumCryptoSign(Models\PostQuantumCryptoSignRequest $req) 使用后量子密码算法签名验签密钥进行签名。
+ * @method Models\PostQuantumCryptoVerifyResponse PostQuantumCryptoVerify(Models\PostQuantumCryptoVerifyRequest $req) 使用后量子密码算法密钥对签名进行验证。
  * @method Models\ReEncryptResponse ReEncrypt(Models\ReEncryptRequest $req) 使用指定CMK对密文重新加密。
  * @method Models\ScheduleKeyDeletionResponse ScheduleKeyDeletion(Models\ScheduleKeyDeletionRequest $req) CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
  * @method Models\SignByAsymmetricKeyResponse SignByAsymmetricKey(Models\SignByAsymmetricKeyRequest $req) 非对称密钥签名。

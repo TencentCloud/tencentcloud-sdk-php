@@ -23,13 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getArea() 获取指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+global：全球计费方式查询
+未填充时，默认为 mainland
  * @method void setArea(string $Area) 设置指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+global：全球计费方式查询
+未填充时，默认为 mainland
  * @method string getProduct() 获取指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
  * @method void setProduct(string $Product) 设置指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+ * @method string getType() 获取指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux
+ * @method void setType(string $Type) 设置指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux
  */
 class DescribePayTypeRequest extends AbstractModel
 {
@@ -37,7 +47,8 @@ class DescribePayTypeRequest extends AbstractModel
      * @var string 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+global：全球计费方式查询
+未填充时，默认为 mainland
      */
     public $Area;
 
@@ -47,11 +58,24 @@ overseas：境外计费方式查询
     public $Product;
 
     /**
+     * @var string 指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux
+     */
+    public $Type;
+
+    /**
      * @param string $Area 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+global：全球计费方式查询
+未填充时，默认为 mainland
      * @param string $Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     * @param string $Type 指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux
      */
     function __construct()
     {
@@ -72,6 +96,10 @@ overseas：境外计费方式查询
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

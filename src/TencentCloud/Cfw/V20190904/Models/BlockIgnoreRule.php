@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCountry(string $Country) 设置国家
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getComment() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComment(string $Comment) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BlockIgnoreRule extends AbstractModel
 {
@@ -174,6 +178,12 @@ class BlockIgnoreRule extends AbstractModel
     public $Country;
 
     /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Comment;
+
+    /**
      * @param string $Domain 域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ioc 规则ip
@@ -203,6 +213,8 @@ class BlockIgnoreRule extends AbstractModel
      * @param integer $MatchTimes 规则命中次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Country 国家
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Comment 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,10 @@ class BlockIgnoreRule extends AbstractModel
 
         if (array_key_exists("Country",$param) and $param["Country"] !== null) {
             $this->Country = $param["Country"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrandName(string $BrandName) 设置品牌名称
  * @method string getCompanyName() 获取企业名称
  * @method void setCompanyName(string $CompanyName) 设置企业名称
+ * @method string getBrandLogo() 获取品牌logo
+ * @method void setBrandLogo(string $BrandLogo) 设置品牌logo
  * @method string getPhone() 获取联系电话
  * @method void setPhone(string $Phone) 设置联系电话
  * @method string getLicense() 获取营业执照
@@ -58,6 +60,11 @@ class CreateBPBrandRequest extends AbstractModel
      * @var string 企业名称
      */
     public $CompanyName;
+
+    /**
+     * @var string 品牌logo
+     */
+    public $BrandLogo;
 
     /**
      * @var string 联系电话
@@ -117,6 +124,7 @@ class CreateBPBrandRequest extends AbstractModel
     /**
      * @param string $BrandName 品牌名称
      * @param string $CompanyName 企业名称
+     * @param string $BrandLogo 品牌logo
      * @param string $Phone 联系电话
      * @param string $License 营业执照
      * @param string $Authorization 授权书
@@ -148,6 +156,10 @@ class CreateBPBrandRequest extends AbstractModel
 
         if (array_key_exists("CompanyName",$param) and $param["CompanyName"] !== null) {
             $this->CompanyName = $param["CompanyName"];
+        }
+
+        if (array_key_exists("BrandLogo",$param) and $param["BrandLogo"] !== null) {
+            $this->BrandLogo = $param["BrandLogo"];
         }
 
         if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {

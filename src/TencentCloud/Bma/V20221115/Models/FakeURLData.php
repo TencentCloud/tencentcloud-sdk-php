@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshot(string $Snapshot) 设置网址截图
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAccountStatus() 获取账户资源状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccountStatus(integer $AccountStatus) 设置账户资源状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FakeURLData extends AbstractModel
 {
@@ -234,6 +238,12 @@ class FakeURLData extends AbstractModel
     public $Snapshot;
 
     /**
+     * @var integer 账户资源状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccountStatus;
+
+    /**
      * @param integer $FakeURLId 仿冒网址id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BrandName 品牌名称
@@ -275,6 +285,8 @@ class FakeURLData extends AbstractModel
      * @param integer $CertificationStatus 资质证明状态：0-不可用 1-可用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Snapshot 网址截图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AccountStatus 账户资源状态：0-不可用 1-可用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -372,6 +384,10 @@ class FakeURLData extends AbstractModel
 
         if (array_key_exists("Snapshot",$param) and $param["Snapshot"] !== null) {
             $this->Snapshot = $param["Snapshot"];
+        }
+
+        if (array_key_exists("AccountStatus",$param) and $param["AccountStatus"] !== null) {
+            $this->AccountStatus = $param["AccountStatus"];
         }
     }
 }

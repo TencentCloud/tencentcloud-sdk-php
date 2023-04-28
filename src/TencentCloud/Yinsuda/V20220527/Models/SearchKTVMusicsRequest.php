@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
 <li>Live：直播</li><li>Chat：语聊</li>
  * @method void setPlayScene(string $PlayScene) 设置播放场景。默认为Chat
 <li>Live：直播</li><li>Chat：语聊</li>
+ * @method array getMaterialFilters() 获取物料过滤，取值有：
+<li>Lyrics：含有歌词；</li>
+<li>Midi：含有音高线。</li>
+ * @method void setMaterialFilters(array $MaterialFilters) 设置物料过滤，取值有：
+<li>Lyrics：含有歌词；</li>
+<li>Midi：含有音高线。</li>
  */
 class SearchKTVMusicsRequest extends AbstractModel
 {
@@ -82,6 +88,13 @@ class SearchKTVMusicsRequest extends AbstractModel
     public $PlayScene;
 
     /**
+     * @var array 物料过滤，取值有：
+<li>Lyrics：含有歌词；</li>
+<li>Midi：含有音高线。</li>
+     */
+    public $MaterialFilters;
+
+    /**
      * @param string $AppName 应用名称。
      * @param string $UserId 用户标识。
      * @param string $KeyWord 关键词。
@@ -92,6 +105,9 @@ class SearchKTVMusicsRequest extends AbstractModel
 <li>Sing：可唱。</li>
      * @param string $PlayScene 播放场景。默认为Chat
 <li>Live：直播</li><li>Chat：语聊</li>
+     * @param array $MaterialFilters 物料过滤，取值有：
+<li>Lyrics：含有歌词；</li>
+<li>Midi：含有音高线。</li>
      */
     function __construct()
     {
@@ -132,6 +148,10 @@ class SearchKTVMusicsRequest extends AbstractModel
 
         if (array_key_exists("PlayScene",$param) and $param["PlayScene"] !== null) {
             $this->PlayScene = $param["PlayScene"];
+        }
+
+        if (array_key_exists("MaterialFilters",$param) and $param["MaterialFilters"] !== null) {
+            $this->MaterialFilters = $param["MaterialFilters"];
         }
     }
 }

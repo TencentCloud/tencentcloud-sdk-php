@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIp(string $PrivateIp) 设置资产的内网IP
  * @method string getCmd() 获取执行的命令
  * @method void setCmd(string $Cmd) 设置执行的命令
+ * @method integer getEncoding() 获取Cmd字段是前端传值是否进行base64.
+0:否，1：是
+ * @method void setEncoding(integer $Encoding) 设置Cmd字段是前端传值是否进行base64.
+0:否，1：是
  * @method array getAuditAction() 获取根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
  * @method void setAuditAction(array $AuditAction) 设置根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
  * @method integer getLimit() 获取每页容量，默认20，最大200
@@ -93,6 +97,12 @@ class SearchCommandRequest extends AbstractModel
     public $Cmd;
 
     /**
+     * @var integer Cmd字段是前端传值是否进行base64.
+0:否，1：是
+     */
+    public $Encoding;
+
+    /**
      * @var array 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
      */
     public $AuditAction;
@@ -117,6 +127,8 @@ class SearchCommandRequest extends AbstractModel
      * @param string $PublicIp 资产的公网IP
      * @param string $PrivateIp 资产的内网IP
      * @param string $Cmd 执行的命令
+     * @param integer $Encoding Cmd字段是前端传值是否进行base64.
+0:否，1：是
      * @param array $AuditAction 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
      * @param integer $Limit 每页容量，默认20，最大200
      * @param integer $Offset 分页偏移位置，默认值为0
@@ -168,6 +180,10 @@ class SearchCommandRequest extends AbstractModel
 
         if (array_key_exists("Cmd",$param) and $param["Cmd"] !== null) {
             $this->Cmd = $param["Cmd"];
+        }
+
+        if (array_key_exists("Encoding",$param) and $param["Encoding"] !== null) {
+            $this->Encoding = $param["Encoding"];
         }
 
         if (array_key_exists("AuditAction",$param) and $param["AuditAction"] !== null) {

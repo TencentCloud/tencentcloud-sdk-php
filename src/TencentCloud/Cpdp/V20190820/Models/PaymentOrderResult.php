@@ -90,6 +90,10 @@ FAILED:已失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置失败原因。当Status为FAILED时，改字段为失败的原因。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFundingAccountSubType() 获取资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFundingAccountSubType(string $FundingAccountSubType) 设置资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PaymentOrderResult extends AbstractModel
 {
@@ -205,6 +209,12 @@ FAILED:已失败
     public $FailReason;
 
     /**
+     * @var string 资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FundingAccountSubType;
+
+    /**
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得
@@ -239,6 +249,8 @@ FAILED:已失败
      * @param string $AdditionalTaxItem 附加税税项。格式为JSON格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailReason 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FundingAccountSubType 资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -328,6 +340,10 @@ FAILED:已失败
 
         if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
             $this->FailReason = $param["FailReason"];
+        }
+
+        if (array_key_exists("FundingAccountSubType",$param) and $param["FundingAccountSubType"] !== null) {
+            $this->FundingAccountSubType = $param["FundingAccountSubType"];
         }
     }
 }

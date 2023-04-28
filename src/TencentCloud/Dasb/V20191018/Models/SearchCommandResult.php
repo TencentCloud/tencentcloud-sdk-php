@@ -42,6 +42,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSid(string $Sid) 设置命令所属的会话ID
  * @method integer getTimeOffset() 获取命令执行时间相对于所属会话开始时间的偏移量，单位ms
  * @method void setTimeOffset(integer $TimeOffset) 设置命令执行时间相对于所属会话开始时间的偏移量，单位ms
+ * @method string getAccount() 获取账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccount(string $Account) 设置账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFromIp() 获取source ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFromIp(string $FromIp) 设置source ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessTime() 获取该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessTime(string $SessTime) 设置该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConfirmTime() 获取复核时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfirmTime(string $ConfirmTime) 设置复核时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserDepartmentId() 获取部门id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserDepartmentId(string $UserDepartmentId) 设置部门id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserDepartmentName() 获取用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserDepartmentName(string $UserDepartmentName) 设置用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceDepartmentId() 获取设备部门id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceDepartmentId(string $DeviceDepartmentId) 设置设备部门id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceDepartmentName() 获取设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchCommandResult extends AbstractModel
 {
@@ -101,6 +133,54 @@ class SearchCommandResult extends AbstractModel
     public $TimeOffset;
 
     /**
+     * @var string 账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Account;
+
+    /**
+     * @var string source ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FromIp;
+
+    /**
+     * @var string 该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessTime;
+
+    /**
+     * @var string 复核时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfirmTime;
+
+    /**
+     * @var string 部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserDepartmentId;
+
+    /**
+     * @var string 用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserDepartmentName;
+
+    /**
+     * @var string 设备部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceDepartmentId;
+
+    /**
+     * @var string 设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceDepartmentName;
+
+    /**
      * @param string $Time 命令输入的时间
      * @param string $UserName 用户名
      * @param string $RealName 姓名
@@ -112,6 +192,22 @@ class SearchCommandResult extends AbstractModel
      * @param integer $Action 命令执行情况，1--允许，2--拒绝
      * @param string $Sid 命令所属的会话ID
      * @param integer $TimeOffset 命令执行时间相对于所属会话开始时间的偏移量，单位ms
+     * @param string $Account 账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FromIp source ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessTime 该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConfirmTime 复核时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserDepartmentId 部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserDepartmentName 用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceDepartmentId 设备部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceDepartmentName 设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +264,38 @@ class SearchCommandResult extends AbstractModel
 
         if (array_key_exists("TimeOffset",$param) and $param["TimeOffset"] !== null) {
             $this->TimeOffset = $param["TimeOffset"];
+        }
+
+        if (array_key_exists("Account",$param) and $param["Account"] !== null) {
+            $this->Account = $param["Account"];
+        }
+
+        if (array_key_exists("FromIp",$param) and $param["FromIp"] !== null) {
+            $this->FromIp = $param["FromIp"];
+        }
+
+        if (array_key_exists("SessTime",$param) and $param["SessTime"] !== null) {
+            $this->SessTime = $param["SessTime"];
+        }
+
+        if (array_key_exists("ConfirmTime",$param) and $param["ConfirmTime"] !== null) {
+            $this->ConfirmTime = $param["ConfirmTime"];
+        }
+
+        if (array_key_exists("UserDepartmentId",$param) and $param["UserDepartmentId"] !== null) {
+            $this->UserDepartmentId = $param["UserDepartmentId"];
+        }
+
+        if (array_key_exists("UserDepartmentName",$param) and $param["UserDepartmentName"] !== null) {
+            $this->UserDepartmentName = $param["UserDepartmentName"];
+        }
+
+        if (array_key_exists("DeviceDepartmentId",$param) and $param["DeviceDepartmentId"] !== null) {
+            $this->DeviceDepartmentId = $param["DeviceDepartmentId"];
+        }
+
+        if (array_key_exists("DeviceDepartmentName",$param) and $param["DeviceDepartmentName"] !== null) {
+            $this->DeviceDepartmentName = $param["DeviceDepartmentName"];
         }
     }
 }

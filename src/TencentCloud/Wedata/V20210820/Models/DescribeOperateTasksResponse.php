@@ -14,33 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFileUrls返回参数结构体
+ * DescribeOperateTasks返回参数结构体
  *
- * @method array getFileUrls() 获取文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
- * @method void setFileUrls(array $FileUrls) 设置文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
- * @method integer getTotalCount() 获取URL数量
- * @method void setTotalCount(integer $TotalCount) 设置URL数量
+ * @method TaskInfoPage getData() 获取任务列表信息
+ * @method void setData(TaskInfoPage $Data) 设置任务列表信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFileUrlsResponse extends AbstractModel
+class DescribeOperateTasksResponse extends AbstractModel
 {
     /**
-     * @var array 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+     * @var TaskInfoPage 任务列表信息
      */
-    public $FileUrls;
-
-    /**
-     * @var integer URL数量
-     */
-    public $TotalCount;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +38,7 @@ class DescribeFileUrlsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FileUrls 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
-     * @param integer $TotalCount URL数量
+     * @param TaskInfoPage $Data 任务列表信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +54,9 @@ class DescribeFileUrlsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileUrls",$param) and $param["FileUrls"] !== null) {
-            $this->FileUrls = [];
-            foreach ($param["FileUrls"] as $key => $value){
-                $obj = new FileUrl();
-                $obj->deserialize($value);
-                array_push($this->FileUrls, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new TaskInfoPage();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

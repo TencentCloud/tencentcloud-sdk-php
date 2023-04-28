@@ -21,11 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 单个图片处理操作。
  *
  * @method string getType() 获取图片处理类型。可选类型有：
-<li>Scale : 图片缩略处理。</li>
-<li>CenterCut : 图片裁剪处理。</li>
+<li>Scale : 图片缩略处理；</li>
+<li>CenterCut : 图片裁剪处理；</li>
+<li>Blur : 图片模糊处理。</li>
  * @method void setType(string $Type) 设置图片处理类型。可选类型有：
-<li>Scale : 图片缩略处理。</li>
-<li>CenterCut : 图片裁剪处理。</li>
+<li>Scale : 图片缩略处理；</li>
+<li>CenterCut : 图片裁剪处理；</li>
+<li>Blur : 图片模糊处理。</li>
  * @method ImageScale getScale() 获取图片缩略处理，仅当 Type 为 Scale 时有效。
  * @method void setScale(ImageScale $Scale) 设置图片缩略处理，仅当 Type 为 Scale 时有效。
  * @method ImageCenterCut getCenterCut() 获取图片裁剪处理，仅当 Type 为 CenterCut 时有效。
@@ -37,8 +39,9 @@ class ImageOperation extends AbstractModel
 {
     /**
      * @var string 图片处理类型。可选类型有：
-<li>Scale : 图片缩略处理。</li>
-<li>CenterCut : 图片裁剪处理。</li>
+<li>Scale : 图片缩略处理；</li>
+<li>CenterCut : 图片裁剪处理；</li>
+<li>Blur : 图片模糊处理。</li>
      */
     public $Type;
 
@@ -59,8 +62,9 @@ class ImageOperation extends AbstractModel
 
     /**
      * @param string $Type 图片处理类型。可选类型有：
-<li>Scale : 图片缩略处理。</li>
-<li>CenterCut : 图片裁剪处理。</li>
+<li>Scale : 图片缩略处理；</li>
+<li>CenterCut : 图片裁剪处理；</li>
+<li>Blur : 图片模糊处理。</li>
      * @param ImageScale $Scale 图片缩略处理，仅当 Type 为 Scale 时有效。
      * @param ImageCenterCut $CenterCut 图片裁剪处理，仅当 Type 为 CenterCut 时有效。
      * @param ImageBlur $Blur 图片模糊处理，仅当 Type 为 Blur 时有效。

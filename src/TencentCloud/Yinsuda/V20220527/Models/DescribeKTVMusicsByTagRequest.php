@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRightFilters(array $RightFilters) 设置权益过滤，取值有：
 <li>Play：可播；</li>
 <li>Sing：可唱。</li>
+ * @method array getMaterialFilters() 获取物料过滤，取值有：
+<li>Lyrics：含有歌词；</li>
+<li>Midi：含有音高线。</li>
+ * @method void setMaterialFilters(array $MaterialFilters) 设置物料过滤，取值有：
+<li>Lyrics：含有歌词；</li>
+<li>Midi：含有音高线。</li>
  */
 class DescribeKTVMusicsByTagRequest extends AbstractModel
 {
@@ -72,6 +78,13 @@ class DescribeKTVMusicsByTagRequest extends AbstractModel
     public $RightFilters;
 
     /**
+     * @var array 物料过滤，取值有：
+<li>Lyrics：含有歌词；</li>
+<li>Midi：含有音高线。</li>
+     */
+    public $MaterialFilters;
+
+    /**
      * @param string $AppName 应用名称。
      * @param string $UserId 用户标识。
      * @param string $TagId 标签 Id。
@@ -80,6 +93,9 @@ class DescribeKTVMusicsByTagRequest extends AbstractModel
      * @param array $RightFilters 权益过滤，取值有：
 <li>Play：可播；</li>
 <li>Sing：可唱。</li>
+     * @param array $MaterialFilters 物料过滤，取值有：
+<li>Lyrics：含有歌词；</li>
+<li>Midi：含有音高线。</li>
      */
     function __construct()
     {
@@ -116,6 +132,10 @@ class DescribeKTVMusicsByTagRequest extends AbstractModel
 
         if (array_key_exists("RightFilters",$param) and $param["RightFilters"] !== null) {
             $this->RightFilters = $param["RightFilters"];
+        }
+
+        if (array_key_exists("MaterialFilters",$param) and $param["MaterialFilters"] !== null) {
+            $this->MaterialFilters = $param["MaterialFilters"];
         }
     }
 }

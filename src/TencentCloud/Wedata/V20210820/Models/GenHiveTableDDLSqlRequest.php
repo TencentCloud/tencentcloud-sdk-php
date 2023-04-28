@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddPositionDeletes(integer $AddPositionDeletes) 设置增加的Position delete数量阈值, 超过值将触发小文件合并
  * @method integer getAddDeleteFiles() 获取增加的delete file数量阈值
  * @method void setAddDeleteFiles(integer $AddDeleteFiles) 设置增加的delete file数量阈值
+ * @method string getTargetDatasourceId() 获取下游节点数据源ID
+ * @method void setTargetDatasourceId(string $TargetDatasourceId) 设置下游节点数据源ID
  */
 class GenHiveTableDDLSqlRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
     public $AddDeleteFiles;
 
     /**
+     * @var string 下游节点数据源ID
+     */
+    public $TargetDatasourceId;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $SinkDatabase 目标数据库
      * @param string $Id 节点id
@@ -184,6 +191,7 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
      * @param integer $AddEqualityDeletes 增加的Equality delete数量阈值, 超过值将触发小文件合并
      * @param integer $AddPositionDeletes 增加的Position delete数量阈值, 超过值将触发小文件合并
      * @param integer $AddDeleteFiles 增加的delete file数量阈值
+     * @param string $TargetDatasourceId 下游节点数据源ID
      */
     function __construct()
     {
@@ -291,6 +299,10 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
 
         if (array_key_exists("AddDeleteFiles",$param) and $param["AddDeleteFiles"] !== null) {
             $this->AddDeleteFiles = $param["AddDeleteFiles"];
+        }
+
+        if (array_key_exists("TargetDatasourceId",$param) and $param["TargetDatasourceId"] !== null) {
+            $this->TargetDatasourceId = $param["TargetDatasourceId"];
         }
     }
 }

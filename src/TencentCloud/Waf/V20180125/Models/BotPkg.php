@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置子产品code
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取续费标志	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(integer $RenewFlag) 设置续费标志	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotPkg extends AbstractModel
 {
@@ -104,6 +108,12 @@ class BotPkg extends AbstractModel
     public $Type;
 
     /**
+     * @var integer 续费标志	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
      * @param string $ResourceIds 资源id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
@@ -119,6 +129,8 @@ class BotPkg extends AbstractModel
      * @param integer $UsedNum 使用数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 子产品code
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 续费标志	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class BotPkg extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

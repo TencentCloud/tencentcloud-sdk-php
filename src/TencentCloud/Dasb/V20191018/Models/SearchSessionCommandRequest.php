@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取默认值为20，最大200
  * @method void setLimit(integer $Limit) 设置默认值为20，最大200
+ * @method integer getEncoding() 获取Cmd字段前端是否做base64加密
+0：否，1：是
+ * @method void setEncoding(integer $Encoding) 设置Cmd字段前端是否做base64加密
+0：否，1：是
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
  */
@@ -54,6 +58,12 @@ class SearchSessionCommandRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer Cmd字段前端是否做base64加密
+0：否，1：是
+     */
+    public $Encoding;
+
+    /**
      * @var string 结束时间
      */
     public $EndTime;
@@ -63,6 +73,8 @@ class SearchSessionCommandRequest extends AbstractModel
      * @param string $StartTime 开始时间，不得早于当前时间的180天前
      * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 默认值为20，最大200
+     * @param integer $Encoding Cmd字段前端是否做base64加密
+0：否，1：是
      * @param string $EndTime 结束时间
      */
     function __construct()
@@ -92,6 +104,10 @@ class SearchSessionCommandRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Encoding",$param) and $param["Encoding"] !== null) {
+            $this->Encoding = $param["Encoding"];
         }
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {

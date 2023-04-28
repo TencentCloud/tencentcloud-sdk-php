@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(integer $Operator) 设置实时任务告警需要的参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlarmIndicatorUnit() 获取告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmIndicatorUnit(string $AlarmIndicatorUnit) 设置告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmIndicatorInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ class AlarmIndicatorInfo extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmIndicatorUnit;
+
+    /**
      * @param string $Id 指标id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
@@ -95,6 +105,8 @@ class AlarmIndicatorInfo extends AbstractModel
      * @param integer $EstimatedTime 预计的超时时间，分钟级别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Operator 实时任务告警需要的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlarmIndicatorUnit 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class AlarmIndicatorInfo extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("AlarmIndicatorUnit",$param) and $param["AlarmIndicatorUnit"] !== null) {
+            $this->AlarmIndicatorUnit = $param["AlarmIndicatorUnit"];
         }
     }
 }

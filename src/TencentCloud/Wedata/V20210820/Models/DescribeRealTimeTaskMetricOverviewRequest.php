@@ -20,15 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRealTimeTaskMetricOverview请求参数结构体
  *
- * @method string getTaskId() 获取无
- * @method void setTaskId(string $TaskId) 设置无
+ * @method string getTaskId() 获取要查看的实时任务的任务Id
+ * @method void setTaskId(string $TaskId) 设置要查看的实时任务的任务Id
  * @method string getProjectId() 获取无
  * @method void setProjectId(string $ProjectId) 设置无
+ * @method integer getStartTime() 获取开始时间
+ * @method void setStartTime(integer $StartTime) 设置开始时间
+ * @method integer getEndTime() 获取结束时间
+ * @method void setEndTime(integer $EndTime) 设置结束时间
  */
 class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 要查看的实时任务的任务Id
      */
     public $TaskId;
 
@@ -38,8 +42,20 @@ class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param string $TaskId 无
+     * @var integer 开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 结束时间
+     */
+    public $EndTime;
+
+    /**
+     * @param string $TaskId 要查看的实时任务的任务Id
      * @param string $ProjectId 无
+     * @param integer $StartTime 开始时间
+     * @param integer $EndTime 结束时间
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

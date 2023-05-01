@@ -42,6 +42,8 @@ PENDING：生产中
 MIGRATING：迁移中
 DELETING：删除中
 AVAILABLE：可用的
+ * @method string getQosLevel() 获取IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+ * @method void setQosLevel(string $QosLevel) 设置IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
  */
 class PrivateIpAddressSpecification extends AbstractModel
 {
@@ -85,6 +87,11 @@ AVAILABLE：可用的
     public $State;
 
     /**
+     * @var string IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     */
+    public $QosLevel;
+
+    /**
      * @param string $PrivateIpAddress 内网IP地址。
      * @param boolean $Primary 是否是主IP。
      * @param string $PublicIpAddress 公网IP地址。
@@ -96,6 +103,7 @@ PENDING：生产中
 MIGRATING：迁移中
 DELETING：删除中
 AVAILABLE：可用的
+     * @param string $QosLevel IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ AVAILABLE：可用的
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
+            $this->QosLevel = $param["QosLevel"];
         }
     }
 }

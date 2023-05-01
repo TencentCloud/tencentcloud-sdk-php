@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Thpc\V20230321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceShards返回参数结构体
+ * ModifyInitNodeScripts返回参数结构体
  *
- * @method array getInstanceShards() 获取实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
- * @method void setInstanceShards(array $InstanceShards) 设置实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
- * @method integer getTotalCount() 获取实例分片节点数量。
- * @method void setTotalCount(integer $TotalCount) 设置实例分片节点数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeInstanceShardsResponse extends AbstractModel
+class ModifyInitNodeScriptsResponse extends AbstractModel
 {
-    /**
-     * @var array 实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
-     */
-    public $InstanceShards;
-
-    /**
-     * @var integer 实例分片节点数量。
-     */
-    public $TotalCount;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $InstanceShards 实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
-     * @param integer $TotalCount 实例分片节点数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeInstanceShardsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceShards",$param) and $param["InstanceShards"] !== null) {
-            $this->InstanceShards = [];
-            foreach ($param["InstanceShards"] as $key => $value){
-                $obj = new InstanceClusterShard();
-                $obj->deserialize($value);
-                array_push($this->InstanceShards, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

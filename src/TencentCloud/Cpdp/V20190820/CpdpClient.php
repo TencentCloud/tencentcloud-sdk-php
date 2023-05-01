@@ -32,6 +32,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\ApplyApplicationMaterialResponse ApplyApplicationMaterial(Models\ApplyApplicationMaterialRequest $req) 跨境-提交申报材料。申报材料的主体是付款人，需要提前调用【跨境-付款人申请】接口提交付款人信息且审核通过后调用。
  * @method Models\ApplyFlexPaymentResponse ApplyFlexPayment(Models\ApplyFlexPaymentRequest $req) 灵云V2-付款
  * @method Models\ApplyFlexSettlementResponse ApplyFlexSettlement(Models\ApplyFlexSettlementRequest $req) 灵云V2-结算
+ * @method Models\ApplyFlexWechatPreAuthResponse ApplyFlexWechatPreAuth(Models\ApplyFlexWechatPreAuthRequest $req) 微工卡开通预核身接口
  * @method Models\ApplyOpenBankOrderDetailReceiptResponse ApplyOpenBankOrderDetailReceipt(Models\ApplyOpenBankOrderDetailReceiptRequest $req) 云企付-申请单笔交易回单
  * @method Models\ApplyOpenBankSettleOrderResponse ApplyOpenBankSettleOrder(Models\ApplyOpenBankSettleOrderRequest $req) 云企付-结算申请接口
  * @method Models\ApplyOpenBankSubMerchantSignOnlineResponse ApplyOpenBankSubMerchantSignOnline(Models\ApplyOpenBankSubMerchantSignOnlineRequest $req) 子商户在线签约
@@ -168,6 +169,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryFlexPlatformAccountBalanceResponse QueryFlexPlatformAccountBalance(Models\QueryFlexPlatformAccountBalanceRequest $req) 灵云V2-平台账户余额查询
  * @method Models\QueryFlexServiceProviderAccountBalanceResponse QueryFlexServiceProviderAccountBalance(Models\QueryFlexServiceProviderAccountBalanceRequest $req) 灵云V2-查询服务商账户余额
  * @method Models\QueryFlexSettlementOrderListResponse QueryFlexSettlementOrderList(Models\QueryFlexSettlementOrderListRequest $req) 灵云V2-查询结算订单列表
+ * @method Models\QueryFlexWechatAuthResultResponse QueryFlexWechatAuthResult(Models\QueryFlexWechatAuthResultRequest $req) 查询微工卡核身结果
  * @method Models\QueryFundsTransactionDetailsResponse QueryFundsTransactionDetails(Models\QueryFundsTransactionDetailsRequest $req) 聚鑫-查询会员资金交易信息列表
  * @method Models\QueryInvoiceResponse QueryInvoice(Models\QueryInvoiceRequest $req) 智慧零售-发票查询
  * @method Models\QueryInvoiceV2Response QueryInvoiceV2(Models\QueryInvoiceV2Request $req) 智慧零售-发票查询V2

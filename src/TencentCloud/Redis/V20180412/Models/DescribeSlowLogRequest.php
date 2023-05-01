@@ -20,40 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLog请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id。
- * @method void setInstanceId(string $InstanceId) 设置实例Id。
- * @method string getBeginTime() 获取开始时间。
- * @method void setBeginTime(string $BeginTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
- * @method integer getMinQueryTime() 获取慢查询平均执行时间阈值（单位：毫秒）。
- * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询平均执行时间阈值（单位：毫秒）。
+ * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+ * @method string getBeginTime() 获取预查询慢日志的起始时间。
+ * @method void setBeginTime(string $BeginTime) 设置预查询慢日志的起始时间。
+ * @method string getEndTime() 获取预查询慢日志的结束时间。
+ * @method void setEndTime(string $EndTime) 设置预查询慢日志的结束时间。
+ * @method integer getMinQueryTime() 获取慢查询平均执行时间阈值，单位：毫秒。
+ * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询平均执行时间阈值，单位：毫秒。
  * @method integer getLimit() 获取每个页面展示的慢查询条数，默认值为20。
  * @method void setLimit(integer $Limit) 设置每个页面展示的慢查询条数，默认值为20。
- * @method integer getOffset() 获取慢查询条数的偏移量，取Limit整数倍。
- * @method void setOffset(integer $Offset) 设置慢查询条数的偏移量，取Limit整数倍。
+ * @method integer getOffset() 获取慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method string getRole() 获取节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
  * @method void setRole(string $Role) 设置节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id。
+     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间。
+     * @var string 预查询慢日志的起始时间。
      */
     public $BeginTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 预查询慢日志的结束时间。
      */
     public $EndTime;
 
     /**
-     * @var integer 慢查询平均执行时间阈值（单位：毫秒）。
+     * @var integer 慢查询平均执行时间阈值，单位：毫秒。
      */
     public $MinQueryTime;
 
@@ -63,7 +66,7 @@ class DescribeSlowLogRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 慢查询条数的偏移量，取Limit整数倍。
+     * @var integer 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public $Offset;
 
@@ -73,12 +76,13 @@ class DescribeSlowLogRequest extends AbstractModel
     public $Role;
 
     /**
-     * @param string $InstanceId 实例Id。
-     * @param string $BeginTime 开始时间。
-     * @param string $EndTime 结束时间。
-     * @param integer $MinQueryTime 慢查询平均执行时间阈值（单位：毫秒）。
+     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+     * @param string $BeginTime 预查询慢日志的起始时间。
+     * @param string $EndTime 预查询慢日志的结束时间。
+     * @param integer $MinQueryTime 慢查询平均执行时间阈值，单位：毫秒。
      * @param integer $Limit 每个页面展示的慢查询条数，默认值为20。
-     * @param integer $Offset 慢查询条数的偏移量，取Limit整数倍。
+     * @param integer $Offset 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      * @param string $Role 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
      */
     function __construct()

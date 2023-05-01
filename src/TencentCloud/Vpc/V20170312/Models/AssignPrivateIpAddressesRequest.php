@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。与SecondaryPrivateIpAddressCount至少提供一个。
  * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数，与PrivateIpAddresses至少提供一个。内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数，与PrivateIpAddresses至少提供一个。内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+ * @method string getQosLevel() 获取IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+ * @method void setQosLevel(string $QosLevel) 设置IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
  */
 class AssignPrivateIpAddressesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
     public $SecondaryPrivateIpAddressCount;
 
     /**
+     * @var string IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     */
+    public $QosLevel;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。与SecondaryPrivateIpAddressCount至少提供一个。
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，与PrivateIpAddresses至少提供一个。内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
+     * @param string $QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
 
         if (array_key_exists("SecondaryPrivateIpAddressCount",$param) and $param["SecondaryPrivateIpAddressCount"] !== null) {
             $this->SecondaryPrivateIpAddressCount = $param["SecondaryPrivateIpAddressCount"];
+        }
+
+        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
+            $this->QosLevel = $param["QosLevel"];
         }
     }
 }

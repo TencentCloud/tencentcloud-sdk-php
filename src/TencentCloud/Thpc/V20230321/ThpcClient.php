@@ -44,6 +44,7 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\DescribeNodesResponse DescribeNodes(Models\DescribeNodesRequest $req) 本接口 (DescribeNodes) 用于查询指定集群节点概览信息列表。
  * @method Models\DescribeQueuesResponse DescribeQueues(Models\DescribeQueuesRequest $req) 本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
+ * @method Models\ModifyInitNodeScriptsResponse ModifyInitNodeScripts(Models\ModifyInitNodeScriptsRequest $req) 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
  * @method Models\SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(Models\SetAutoScalingConfigurationRequest $req) 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
  */
 

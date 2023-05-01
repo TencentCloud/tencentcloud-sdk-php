@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
  * @method array getExpansionNodeConfigs() 获取扩容节点配置信息。
  * @method void setExpansionNodeConfigs(array $ExpansionNodeConfigs) 设置扩容节点配置信息。
+ * @method integer getDesiredIdleNodeCapacity() 获取队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+ * @method void setDesiredIdleNodeCapacity(integer $DesiredIdleNodeCapacity) 设置队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
  */
 class QueueConfig extends AbstractModel
 {
@@ -94,6 +96,11 @@ class QueueConfig extends AbstractModel
     public $ExpansionNodeConfigs;
 
     /**
+     * @var integer 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+     */
+    public $DesiredIdleNodeCapacity;
+
+    /**
      * @param string $QueueName 队列名称。
      * @param integer $MinSize 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
      * @param integer $MaxSize 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
@@ -104,6 +111,7 @@ class QueueConfig extends AbstractModel
      * @param array $DataDisks 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
      * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
      * @param array $ExpansionNodeConfigs 扩容节点配置信息。
+     * @param integer $DesiredIdleNodeCapacity 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class QueueConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExpansionNodeConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("DesiredIdleNodeCapacity",$param) and $param["DesiredIdleNodeCapacity"] !== null) {
+            $this->DesiredIdleNodeCapacity = $param["DesiredIdleNodeCapacity"];
         }
     }
 }

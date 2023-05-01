@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAutoShrink(boolean $EnableAutoShrink) 设置是否开启自动缩容。
  * @method array getExpansionNodeConfigs() 获取扩容节点配置信息。
  * @method void setExpansionNodeConfigs(array $ExpansionNodeConfigs) 设置扩容节点配置信息。
+ * @method integer getDesiredIdleNodeCapacity() 获取队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDesiredIdleNodeCapacity(integer $DesiredIdleNodeCapacity) 设置队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueueConfigOverview extends AbstractModel
 {
@@ -66,12 +70,20 @@ class QueueConfigOverview extends AbstractModel
     public $ExpansionNodeConfigs;
 
     /**
+     * @var integer 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DesiredIdleNodeCapacity;
+
+    /**
      * @param string $QueueName 队列名称。
      * @param integer $MinSize 队列中弹性节点数量最小值。取值范围0～200。
      * @param integer $MaxSize 队列中弹性节点数量最大值。取值范围0～200。
      * @param boolean $EnableAutoExpansion 是否开启自动扩容。
      * @param boolean $EnableAutoShrink 是否开启自动缩容。
      * @param array $ExpansionNodeConfigs 扩容节点配置信息。
+     * @param integer $DesiredIdleNodeCapacity 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -113,6 +125,10 @@ class QueueConfigOverview extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExpansionNodeConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("DesiredIdleNodeCapacity",$param) and $param["DesiredIdleNodeCapacity"] !== null) {
+            $this->DesiredIdleNodeCapacity = $param["DesiredIdleNodeCapacity"];
         }
     }
 }

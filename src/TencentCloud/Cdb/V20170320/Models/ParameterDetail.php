@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxFunc(string $MaxFunc) 设置参数是公式类型时，该字段有效，表示公式类型最大值
  * @method string getMinFunc() 获取参数是公式类型时，该字段有效，表示公式类型最小值
  * @method void setMinFunc(string $MinFunc) 设置参数是公式类型时，该字段有效，表示公式类型最小值
+ * @method boolean getIsNotSupportEdit() 获取参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsNotSupportEdit(boolean $IsNotSupportEdit) 设置参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParameterDetail extends AbstractModel
 {
@@ -101,6 +105,12 @@ class ParameterDetail extends AbstractModel
     public $MinFunc;
 
     /**
+     * @var boolean 参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsNotSupportEdit;
+
+    /**
      * @param string $Name 参数名称
      * @param string $ParamType 参数类型：integer，enum，float，string，func
      * @param string $Default 参数默认值
@@ -112,6 +122,8 @@ class ParameterDetail extends AbstractModel
      * @param array $EnumValue 参数的可选枚举值。如果为非枚举参数，则为空
      * @param string $MaxFunc 参数是公式类型时，该字段有效，表示公式类型最大值
      * @param string $MinFunc 参数是公式类型时，该字段有效，表示公式类型最小值
+     * @param boolean $IsNotSupportEdit 参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class ParameterDetail extends AbstractModel
 
         if (array_key_exists("MinFunc",$param) and $param["MinFunc"] !== null) {
             $this->MinFunc = $param["MinFunc"];
+        }
+
+        if (array_key_exists("IsNotSupportEdit",$param) and $param["IsNotSupportEdit"] !== null) {
+            $this->IsNotSupportEdit = $param["IsNotSupportEdit"];
         }
     }
 }

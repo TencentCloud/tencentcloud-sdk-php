@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRepurchaseSwitch(boolean $AutoRepurchaseSwitch) 设置自动加购开关, true 开启, false 关闭
  * @method boolean getAutoRepurchaseRenewSwitch() 获取自动加购订单是否自动续费 ,true 开启, false 关闭
  * @method void setAutoRepurchaseRenewSwitch(boolean $AutoRepurchaseRenewSwitch) 设置自动加购订单是否自动续费 ,true 开启, false 关闭
+ * @method integer getDestroyOrderNum() 获取已销毁订单数
+ * @method void setDestroyOrderNum(integer $DestroyOrderNum) 设置已销毁订单数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -145,6 +147,11 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $AutoRepurchaseRenewSwitch;
 
     /**
+     * @var integer 已销毁订单数
+     */
+    public $DestroyOrderNum;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -167,6 +174,7 @@ class DescribeLicenseGeneralResponse extends AbstractModel
      * @param integer $AvailableLHLicenseCnt 可用惠普版授权数
      * @param boolean $AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
      * @param boolean $AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
+     * @param integer $DestroyOrderNum 已销毁订单数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -248,6 +256,10 @@ class DescribeLicenseGeneralResponse extends AbstractModel
 
         if (array_key_exists("AutoRepurchaseRenewSwitch",$param) and $param["AutoRepurchaseRenewSwitch"] !== null) {
             $this->AutoRepurchaseRenewSwitch = $param["AutoRepurchaseRenewSwitch"];
+        }
+
+        if (array_key_exists("DestroyOrderNum",$param) and $param["DestroyOrderNum"] !== null) {
+            $this->DestroyOrderNum = $param["DestroyOrderNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

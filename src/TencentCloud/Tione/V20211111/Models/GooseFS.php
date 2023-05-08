@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ms\V20180408\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteScanInstances请求参数结构体
+ * 配置GooseFS参数
  *
- * @method array getAppSids() 获取删除一个或多个扫描的app，最大支持20个
- * @method void setAppSids(array $AppSids) 设置删除一个或多个扫描的app，最大支持20个
+ * @method string getId() 获取goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DeleteScanInstancesRequest extends AbstractModel
+class GooseFS extends AbstractModel
 {
     /**
-     * @var array 删除一个或多个扫描的app，最大支持20个
+     * @var string goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AppSids;
+    public $Id;
 
     /**
-     * @param array $AppSids 删除一个或多个扫描的app，最大支持20个
+     * @param string $Id goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class DeleteScanInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppSids",$param) and $param["AppSids"] !== null) {
-            $this->AppSids = $param["AppSids"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

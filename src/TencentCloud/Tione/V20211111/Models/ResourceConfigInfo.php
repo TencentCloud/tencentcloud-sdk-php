@@ -104,6 +104,10 @@ TI.GN7.20XLARGE320.POST: 80C32
 32C128G T4*1 
 40C160G T4*2 
 80C32
+ * @method RDMAConfig getRDMAConfig() 获取RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRDMAConfig(RDMAConfig $RDMAConfig) 设置RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceConfigInfo extends AbstractModel
 {
@@ -182,6 +186,12 @@ TI.GN7.20XLARGE320.POST: 80C32
     public $InstanceTypeAlias;
 
     /**
+     * @var RDMAConfig RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RDMAConfig;
+
+    /**
      * @param string $Role 角色，eg：PS、WORKER、DRIVER、EXECUTOR
      * @param integer $Cpu cpu核数，1000=1核
      * @param integer $Memory 内存，单位为MB
@@ -224,6 +234,8 @@ TI.GN7.20XLARGE320.POST: 80C32
 32C128G T4*1 
 40C160G T4*2 
 80C32
+     * @param RDMAConfig $RDMAConfig RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -268,6 +280,11 @@ TI.GN7.20XLARGE320.POST: 80C32
 
         if (array_key_exists("InstanceTypeAlias",$param) and $param["InstanceTypeAlias"] !== null) {
             $this->InstanceTypeAlias = $param["InstanceTypeAlias"];
+        }
+
+        if (array_key_exists("RDMAConfig",$param) and $param["RDMAConfig"] !== null) {
+            $this->RDMAConfig = new RDMAConfig();
+            $this->RDMAConfig->deserialize($param["RDMAConfig"]);
         }
     }
 }

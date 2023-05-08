@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferFrom(string $TransferFrom) 设置转接来源坐席信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTransferFromType() 获取转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTransferFromType(string $TransferFromType) 设置转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferTo() 获取转接去向坐席信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferTo(string $TransferTo) 设置转接去向坐席信息
@@ -140,6 +144,12 @@ class ServeParticipant extends AbstractModel
     public $TransferFrom;
 
     /**
+     * @var string 转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TransferFromType;
+
+    /**
      * @var string 转接去向坐席信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -210,6 +220,8 @@ class ServeParticipant extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferFrom 转接来源坐席信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TransferFromType 转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferTo 转接去向坐席信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferToType 转接去向参与者类型，取值与 Type 一致
@@ -272,6 +284,10 @@ class ServeParticipant extends AbstractModel
 
         if (array_key_exists("TransferFrom",$param) and $param["TransferFrom"] !== null) {
             $this->TransferFrom = $param["TransferFrom"];
+        }
+
+        if (array_key_exists("TransferFromType",$param) and $param["TransferFromType"] !== null) {
+            $this->TransferFromType = $param["TransferFromType"];
         }
 
         if (array_key_exists("TransferTo",$param) and $param["TransferTo"] !== null) {

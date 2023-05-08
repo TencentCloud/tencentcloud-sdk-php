@@ -92,6 +92,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityStatus(array $SecurityStatus) 设置安全防护状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDisposalRecommendation() 获取处置建议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisposalRecommendation(integer $DisposalRecommendation) 设置处置建议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMappingType() 获取测绘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMappingType(string $MappingType) 设置测绘类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MappingResult extends AbstractModel
 {
@@ -204,6 +212,18 @@ class MappingResult extends AbstractModel
     public $SecurityStatus;
 
     /**
+     * @var integer 处置建议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisposalRecommendation;
+
+    /**
+     * @var string 测绘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MappingType;
+
+    /**
      * @param string $AssetName 资产名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetIp 公网ip
@@ -239,6 +259,10 @@ class MappingResult extends AbstractModel
      * @param string $Region 区域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityStatus 安全防护状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DisposalRecommendation 处置建议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MappingType 测绘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -329,6 +353,14 @@ class MappingResult extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SecurityStatus, $obj);
             }
+        }
+
+        if (array_key_exists("DisposalRecommendation",$param) and $param["DisposalRecommendation"] !== null) {
+            $this->DisposalRecommendation = $param["DisposalRecommendation"];
+        }
+
+        if (array_key_exists("MappingType",$param) and $param["MappingType"] !== null) {
+            $this->MappingType = $param["MappingType"];
         }
     }
 }

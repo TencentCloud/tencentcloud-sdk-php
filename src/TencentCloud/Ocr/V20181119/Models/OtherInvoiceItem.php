@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ms\V20180408\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全扫描系统权限信息
+ * OtherInvoiceItem
  *
- * @method string getPermission() 获取系统权限
- * @method void setPermission(string $Permission) 设置系统权限
+ * @method string getName() 获取票面key值
+ * @method void setName(string $Name) 设置票面key值
+ * @method string getValue() 获取票面value值
+ * @method void setValue(string $Value) 设置票面value值
  */
-class ScanPermissionInfo extends AbstractModel
+class OtherInvoiceItem extends AbstractModel
 {
     /**
-     * @var string 系统权限
+     * @var string 票面key值
      */
-    public $Permission;
+    public $Name;
 
     /**
-     * @param string $Permission 系统权限
+     * @var string 票面value值
+     */
+    public $Value;
+
+    /**
+     * @param string $Name 票面key值
+     * @param string $Value 票面value值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class ScanPermissionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Permission",$param) and $param["Permission"] !== null) {
-            $this->Permission = $param["Permission"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

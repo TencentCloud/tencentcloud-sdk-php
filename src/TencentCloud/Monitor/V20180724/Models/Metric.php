@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(integer $ProductId) 设置集成中心产品ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOperators() 获取匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperators(array $Operators) 设置匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPeriods() 获取指标触发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPeriods(array $Periods) 设置指标触发
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Metric extends AbstractModel
 {
@@ -113,6 +121,18 @@ class Metric extends AbstractModel
     public $ProductId;
 
     /**
+     * @var array 匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Operators;
+
+    /**
+     * @var array 指标触发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Periods;
+
+    /**
      * @param string $Namespace 告警策略类型
      * @param string $MetricName 指标名
      * @param string $Description 指标展示名
@@ -127,6 +147,10 @@ class Metric extends AbstractModel
      * @param integer $IsOpen 高级指标是否开通。1是 0否
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProductId 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Operators 匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Periods 指标触发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -185,6 +209,19 @@ class Metric extends AbstractModel
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("Operators",$param) and $param["Operators"] !== null) {
+            $this->Operators = [];
+            foreach ($param["Operators"] as $key => $value){
+                $obj = new Operator();
+                $obj->deserialize($value);
+                array_push($this->Operators, $obj);
+            }
+        }
+
+        if (array_key_exists("Periods",$param) and $param["Periods"] !== null) {
+            $this->Periods = $param["Periods"];
         }
     }
 }

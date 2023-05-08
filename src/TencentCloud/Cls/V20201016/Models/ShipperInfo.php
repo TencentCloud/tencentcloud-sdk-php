@@ -56,6 +56,36 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStartTime() 获取投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(integer $StartTime) 设置投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEndTime() 获取投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndTime(integer $EndTime) 设置投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getProgress() 获取历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProgress(float $Progress) 设置历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRemainTime() 获取历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemainTime(integer $RemainTime) 设置历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHistoryStatus() 获取历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHistoryStatus(integer $HistoryStatus) 设置历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ShipperInfo extends AbstractModel
 {
@@ -134,6 +164,41 @@ class ShipperInfo extends AbstractModel
     public $FilenameMode;
 
     /**
+     * @var integer 投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndTime;
+
+    /**
+     * @var float 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Progress;
+
+    /**
+     * @var integer 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemainTime;
+
+    /**
+     * @var integer 历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HistoryStatus;
+
+    /**
      * @param string $ShipperId 投递规则ID
      * @param string $TopicId 日志主题ID
      * @param string $Bucket 投递的bucket地址
@@ -151,6 +216,21 @@ class ShipperInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 投递日志的创建时间
      * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StartTime 投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EndTime 投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HistoryStatus 历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -227,6 +307,26 @@ class ShipperInfo extends AbstractModel
 
         if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
             $this->FilenameMode = $param["FilenameMode"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("RemainTime",$param) and $param["RemainTime"] !== null) {
+            $this->RemainTime = $param["RemainTime"];
+        }
+
+        if (array_key_exists("HistoryStatus",$param) and $param["HistoryStatus"] !== null) {
+            $this->HistoryStatus = $param["HistoryStatus"];
         }
     }
 }

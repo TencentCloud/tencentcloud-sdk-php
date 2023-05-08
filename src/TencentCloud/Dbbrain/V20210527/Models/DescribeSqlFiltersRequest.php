@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  */
 class DescribeSqlFiltersRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeSqlFiltersRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param array $FilterIds 任务ID列表，用于筛选任务列表。
      * @param array $Statuses 任务状态列表，用于筛选任务列表，取值包括RUNNING - 运行中, FINISHED - 已完成, TERMINATED - 已终止。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeSqlFiltersRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

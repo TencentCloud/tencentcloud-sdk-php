@@ -66,6 +66,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置快速注册相关信息，目前暂未开放！
  * @method ApproverOption getApproverOption() 获取签署人个性化能力值
  * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值
+ * @method string getJumpUrl() 获取签署完前端跳转的url，暂未使用
+ * @method void setJumpUrl(string $JumpUrl) 设置签署完前端跳转的url，暂未使用
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -161,6 +163,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $ApproverOption;
 
     /**
+     * @var string 签署完前端跳转的url，暂未使用
+     */
+    public $JumpUrl;
+
+    /**
      * @param integer $ApproverType 参与者类型：
 0：企业
 1：个人
@@ -184,6 +191,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
      * @param RegisterInfo $RegisterInfo 快速注册相关信息，目前暂未开放！
      * @param ApproverOption $ApproverOption 签署人个性化能力值
+     * @param string $JumpUrl 签署完前端跳转的url，暂未使用
      */
     function __construct()
     {
@@ -266,6 +274,10 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (array_key_exists("ApproverOption",$param) and $param["ApproverOption"] !== null) {
             $this->ApproverOption = new ApproverOption();
             $this->ApproverOption->deserialize($param["ApproverOption"]);
+        }
+
+        if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
+            $this->JumpUrl = $param["JumpUrl"];
         }
     }
 }

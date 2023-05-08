@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHDFSSource(HDFSConfig $HDFSSource) 设置来自HDFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method GooseFS getGooseFSSource() 获取配饰GooseFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGooseFSSource(GooseFS $GooseFSSource) 设置配饰GooseFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataConfig extends AbstractModel
 {
@@ -81,6 +85,12 @@ class DataConfig extends AbstractModel
     public $HDFSSource;
 
     /**
+     * @var GooseFS 配饰GooseFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GooseFSSource;
+
+    /**
      * @param string $MappingPath 映射路径
      * @param string $DataSourceType DATASET、COS、CFS、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,6 +101,8 @@ class DataConfig extends AbstractModel
      * @param CFSConfig $CFSSource 来自CFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HDFSConfig $HDFSSource 来自HDFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GooseFS $GooseFSSource 配饰GooseFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,11 @@ class DataConfig extends AbstractModel
         if (array_key_exists("HDFSSource",$param) and $param["HDFSSource"] !== null) {
             $this->HDFSSource = new HDFSConfig();
             $this->HDFSSource->deserialize($param["HDFSSource"]);
+        }
+
+        if (array_key_exists("GooseFSSource",$param) and $param["GooseFSSource"] !== null) {
+            $this->GooseFSSource = new GooseFS();
+            $this->GooseFSSource->deserialize($param["GooseFSSource"]);
         }
     }
 }

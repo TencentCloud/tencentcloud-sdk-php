@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQuuid() 获取机器实例uuid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuuid(string $Quuid) 设置机器实例uuid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectEventLists extends AbstractModel
 {
@@ -97,6 +101,12 @@ class ProtectEventLists extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var string 机器实例uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Quuid;
+
+    /**
      * @param string $HostName 服务器名称
      * @param string $HostIp 服务器ip
      * @param string $EventDir 事件地址
@@ -107,6 +117,8 @@ class ProtectEventLists extends AbstractModel
      * @param integer $Id 唯一ID
      * @param integer $FileType 文件类型 0-常规文件；1-目录；2-软链
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Quuid 机器实例uuid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -161,6 +173,10 @@ class ProtectEventLists extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
         }
     }
 }

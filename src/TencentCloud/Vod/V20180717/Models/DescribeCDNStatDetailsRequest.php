@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li>
  * @method void setMetric(string $Metric) 设置查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li>
  * @method string getStartTime() 获取起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setStartTime(string $StartTime) 设置起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getEndTime() 获取结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -162,6 +164,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li>
      */
     public $Metric;
 
@@ -265,6 +268,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li>
      * @param string $StartTime 起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $EndTime 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>

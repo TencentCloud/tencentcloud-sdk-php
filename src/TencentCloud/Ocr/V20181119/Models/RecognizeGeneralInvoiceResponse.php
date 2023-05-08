@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ms\V20180408\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeScanResults返回参数结构体
+ * RecognizeGeneralInvoice返回参数结构体
  *
- * @method array getScanSet() 获取批量扫描的app结果集
- * @method void setScanSet(array $ScanSet) 设置批量扫描的app结果集
- * @method integer getTotalCount() 获取批量扫描结果的个数
- * @method void setTotalCount(integer $TotalCount) 设置批量扫描结果的个数
+ * @method array getMixedInvoiceItems() 获取混贴票据识别结果，具体内容请点击左侧链接。
+ * @method void setMixedInvoiceItems(array $MixedInvoiceItems) 设置混贴票据识别结果，具体内容请点击左侧链接。
+ * @method integer getTotalPDFCount() 获取PDF文件总页码
+ * @method void setTotalPDFCount(integer $TotalPDFCount) 设置PDF文件总页码
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeScanResultsResponse extends AbstractModel
+class RecognizeGeneralInvoiceResponse extends AbstractModel
 {
     /**
-     * @var array 批量扫描的app结果集
+     * @var array 混贴票据识别结果，具体内容请点击左侧链接。
      */
-    public $ScanSet;
+    public $MixedInvoiceItems;
 
     /**
-     * @var integer 批量扫描结果的个数
+     * @var integer PDF文件总页码
      */
-    public $TotalCount;
+    public $TotalPDFCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeScanResultsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ScanSet 批量扫描的app结果集
-     * @param integer $TotalCount 批量扫描结果的个数
+     * @param array $MixedInvoiceItems 混贴票据识别结果，具体内容请点击左侧链接。
+     * @param integer $TotalPDFCount PDF文件总页码
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeScanResultsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScanSet",$param) and $param["ScanSet"] !== null) {
-            $this->ScanSet = [];
-            foreach ($param["ScanSet"] as $key => $value){
-                $obj = new ScanSetInfo();
+        if (array_key_exists("MixedInvoiceItems",$param) and $param["MixedInvoiceItems"] !== null) {
+            $this->MixedInvoiceItems = [];
+            foreach ($param["MixedInvoiceItems"] as $key => $value){
+                $obj = new InvoiceItem();
                 $obj->deserialize($value);
-                array_push($this->ScanSet, $obj);
+                array_push($this->MixedInvoiceItems, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("TotalPDFCount",$param) and $param["TotalPDFCount"] !== null) {
+            $this->TotalPDFCount = $param["TotalPDFCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

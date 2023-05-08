@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ms\V20180408\Models;
+namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全扫描系统权限信息
+ * GetModelInfo请求参数结构体
  *
- * @method array getPermissionList() 获取系统权限信息
- * @method void setPermissionList(array $PermissionList) 设置系统权限信息
+ * @method string getModelId() 获取模型id
+ * @method void setModelId(string $ModelId) 设置模型id
  */
-class ScanPermissionList extends AbstractModel
+class GetModelInfoRequest extends AbstractModel
 {
     /**
-     * @var array 系统权限信息
+     * @var string 模型id
      */
-    public $PermissionList;
+    public $ModelId;
 
     /**
-     * @param array $PermissionList 系统权限信息
+     * @param string $ModelId 模型id
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class ScanPermissionList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PermissionList",$param) and $param["PermissionList"] !== null) {
-            $this->PermissionList = [];
-            foreach ($param["PermissionList"] as $key => $value){
-                $obj = new ScanPermissionInfo();
-                $obj->deserialize($value);
-                array_push($this->PermissionList, $obj);
-            }
+        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+            $this->ModelId = $param["ModelId"];
         }
     }
 }

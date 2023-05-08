@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置最近修改时间
  * @method string getUuid() 获取服务器Uuid
  * @method void setUuid(string $Uuid) 设置服务器Uuid
+ * @method string getLocations() 获取登陆地
+ * @method void setLocations(string $Locations) 设置登陆地
  */
 class LoginWhiteCombinedInfo extends AbstractModel
 {
@@ -125,6 +127,11 @@ class LoginWhiteCombinedInfo extends AbstractModel
     public $Uuid;
 
     /**
+     * @var string 登陆地
+     */
+    public $Locations;
+
+    /**
      * @param array $Places 白名单地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 白名单用户（多个用户逗号隔开）
@@ -140,6 +147,7 @@ class LoginWhiteCombinedInfo extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $ModifyTime 最近修改时间
      * @param string $Uuid 服务器Uuid
+     * @param string $Locations 登陆地
      */
     function __construct()
     {
@@ -213,6 +221,10 @@ class LoginWhiteCombinedInfo extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("Locations",$param) and $param["Locations"] !== null) {
+            $this->Locations = $param["Locations"];
         }
     }
 }

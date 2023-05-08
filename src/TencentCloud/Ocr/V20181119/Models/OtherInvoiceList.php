@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ms\V20180408\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 漏洞信息
+ * 其他票Table
  *
- * @method array getVulList() 获取漏洞列表
- * @method void setVulList(array $VulList) 设置漏洞列表
- * @method integer getVulFileScore() 获取漏洞文件评分
- * @method void setVulFileScore(integer $VulFileScore) 设置漏洞文件评分
+ * @method array getOtherInvoiceItemList() 获取列表
+ * @method void setOtherInvoiceItemList(array $OtherInvoiceItemList) 设置列表
  */
-class VulInfo extends AbstractModel
+class OtherInvoiceList extends AbstractModel
 {
     /**
-     * @var array 漏洞列表
+     * @var array 列表
      */
-    public $VulList;
+    public $OtherInvoiceItemList;
 
     /**
-     * @var integer 漏洞文件评分
-     */
-    public $VulFileScore;
-
-    /**
-     * @param array $VulList 漏洞列表
-     * @param integer $VulFileScore 漏洞文件评分
+     * @param array $OtherInvoiceItemList 列表
      */
     function __construct()
     {
@@ -54,17 +46,13 @@ class VulInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulList",$param) and $param["VulList"] !== null) {
-            $this->VulList = [];
-            foreach ($param["VulList"] as $key => $value){
-                $obj = new VulList();
+        if (array_key_exists("OtherInvoiceItemList",$param) and $param["OtherInvoiceItemList"] !== null) {
+            $this->OtherInvoiceItemList = [];
+            foreach ($param["OtherInvoiceItemList"] as $key => $value){
+                $obj = new OtherInvoiceItem();
                 $obj->deserialize($value);
-                array_push($this->VulList, $obj);
+                array_push($this->OtherInvoiceItemList, $obj);
             }
-        }
-
-        if (array_key_exists("VulFileScore",$param) and $param["VulFileScore"] !== null) {
-            $this->VulFileScore = $param["VulFileScore"];
         }
     }
 }

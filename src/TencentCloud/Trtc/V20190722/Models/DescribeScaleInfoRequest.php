@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
 注意：支持查询14天内的数据。
  * @method integer getEndTime() 获取查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
-注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
+注意：按天统计，结束时间大于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
  * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
-注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
+注意：按天统计，结束时间大于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
  */
 class DescribeScaleInfoRequest extends AbstractModel
 {
@@ -46,7 +46,7 @@ class DescribeScaleInfoRequest extends AbstractModel
 
     /**
      * @var integer 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
-注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
+注意：按天统计，结束时间大于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
      */
     public $EndTime;
 
@@ -55,7 +55,7 @@ class DescribeScaleInfoRequest extends AbstractModel
      * @param integer $StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
 注意：支持查询14天内的数据。
      * @param integer $EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
-注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
+注意：按天统计，结束时间大于前一天，否则查询数据为空（如：需查询20号数据，结束时间需晚于20号0点）。
      */
     function __construct()
     {

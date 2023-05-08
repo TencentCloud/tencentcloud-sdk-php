@@ -24,14 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
  * @method string getUserIp() 获取用户IP，用户客户端的公网IP，用于就近调度
  * @method void setUserIp(string $UserIp) 设置用户IP，用户客户端的公网IP，用于就近调度
- * @method string getClientSession() 获取客户端session信息，从SDK请求中获得
- * @method void setClientSession(string $ClientSession) 设置客户端session信息，从SDK请求中获得
+ * @method string getClientSession() 获取客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+ * @method void setClientSession(string $ClientSession) 设置客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
  * @method string getRunMode() 获取云端运行模式。
 RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
 默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
  * @method void setRunMode(string $RunMode) 设置云端运行模式。
 RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
 默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+ * @method string getHostUserId() 获取【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。
+ * @method void setHostUserId(string $HostUserId) 设置【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。
+ * @method string getRole() 获取【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作）
+ * @method void setRole(string $Role) 设置【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作）
  */
 class CreateSessionRequest extends AbstractModel
 {
@@ -46,7 +58,7 @@ class CreateSessionRequest extends AbstractModel
     public $UserIp;
 
     /**
-     * @var string 客户端session信息，从SDK请求中获得
+     * @var string 客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
      */
     public $ClientSession;
 
@@ -58,12 +70,32 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
     public $RunMode;
 
     /**
+     * @var string 【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。
+     */
+    public $HostUserId;
+
+    /**
+     * @var string 【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作）
+     */
+    public $Role;
+
+    /**
      * @param string $UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      * @param string $UserIp 用户IP，用户客户端的公网IP，用于就近调度
-     * @param string $ClientSession 客户端session信息，从SDK请求中获得
+     * @param string $ClientSession 客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
      * @param string $RunMode 云端运行模式。
 RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
 默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+     * @param string $HostUserId 【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。
+     * @param string $Role 【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作）
      */
     function __construct()
     {
@@ -92,6 +124,14 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
 
         if (array_key_exists("RunMode",$param) and $param["RunMode"] !== null) {
             $this->RunMode = $param["RunMode"];
+        }
+
+        if (array_key_exists("HostUserId",$param) and $param["HostUserId"] !== null) {
+            $this->HostUserId = $param["HostUserId"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

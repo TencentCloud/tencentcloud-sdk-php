@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getFid() 获取数据库标识
  * @method void setFid(integer $Fid) 设置数据库标识
- * @method string getFname() 获取标签名称
- * @method void setFname(string $Fname) 设置标签名称
+ * @method string getFname() 获取标签名称字段
+ * @method void setFname(string $Fname) 设置标签名称字段
  */
 class Tag extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Tag extends AbstractModel
     public $Fid;
 
     /**
-     * @var string 标签名称
+     * @var string 标签名称字段
      */
     public $Fname;
 
     /**
      * @param integer $Fid 数据库标识
-     * @param string $Fname 标签名称
+     * @param string $Fname 标签名称字段
      */
     function __construct()
     {

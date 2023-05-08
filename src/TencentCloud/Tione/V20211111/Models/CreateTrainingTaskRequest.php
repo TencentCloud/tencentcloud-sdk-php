@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
  * @method void setName(string $Name) 设置训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
- * @method string getChargeType() 获取计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
- * @method void setChargeType(string $ChargeType) 设置计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+ * @method string getChargeType() 获取计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费
+ * @method void setChargeType(string $ChargeType) 设置计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费
  * @method array getResourceConfigInfos() 获取资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
  * @method void setResourceConfigInfos(array $ResourceConfigInfos) 设置资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
  * @method CosPathInfo getCodePackagePath() 获取COS代码包路径
@@ -73,7 +75,8 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+     * @var string 计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费
      */
     public $ChargeType;
 
@@ -179,7 +182,8 @@ class CreateTrainingTaskRequest extends AbstractModel
 
     /**
      * @param string $Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
-     * @param string $ChargeType 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+     * @param string $ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费
      * @param array $ResourceConfigInfos 资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
      * @param CosPathInfo $CodePackagePath COS代码包路径
      * @param string $TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD

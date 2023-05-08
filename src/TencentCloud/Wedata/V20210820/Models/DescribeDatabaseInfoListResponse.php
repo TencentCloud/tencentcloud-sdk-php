@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabaseInfoList返回参数结构体
  *
+ * @method array getDatabaseInfo() 获取数据库列表
+ * @method void setDatabaseInfo(array $DatabaseInfo) 设置数据库列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDatabaseInfoListResponse extends AbstractModel
 {
     /**
+     * @var array 数据库列表
+     */
+    public $DatabaseInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $DatabaseInfo 数据库列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,15 @@ class DescribeDatabaseInfoListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DatabaseInfo",$param) and $param["DatabaseInfo"] !== null) {
+            $this->DatabaseInfo = [];
+            foreach ($param["DatabaseInfo"] as $key => $value){
+                $obj = new DatabaseInfo();
+                $obj->deserialize($value);
+                array_push($this->DatabaseInfo, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

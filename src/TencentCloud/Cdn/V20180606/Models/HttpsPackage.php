@@ -72,6 +72,10 @@ global：全球
 1：到期续订
 2：用完续订
 3：到期或用完续订
+ * @method boolean getAutoExtension() 获取HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoExtension(boolean $AutoExtension) 设置HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HttpsPackage extends AbstractModel
 {
@@ -174,6 +178,12 @@ global：全球
     public $ExtensionMode;
 
     /**
+     * @var boolean HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoExtension;
+
+    /**
      * @param integer $Id HTTPS请求包 Id
      * @param string $Type HTTPS请求包类型
      * @param integer $Size HTTPS请求包大小（单位为：次）
@@ -200,6 +210,8 @@ global：全球
 1：到期续订
 2：用完续订
 3：到期或用完续订
+     * @param boolean $AutoExtension HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -284,6 +296,10 @@ global：全球
 
         if (array_key_exists("ExtensionMode",$param) and $param["ExtensionMode"] !== null) {
             $this->ExtensionMode = $param["ExtensionMode"];
+        }
+
+        if (array_key_exists("AutoExtension",$param) and $param["AutoExtension"] !== null) {
+            $this->AutoExtension = $param["AutoExtension"];
         }
     }
 }

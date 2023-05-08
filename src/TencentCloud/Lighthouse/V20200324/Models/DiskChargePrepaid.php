@@ -22,8 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPeriod() 获取新购周期。
  * @method void setPeriod(integer $Period) 设置新购周期。
- * @method string getRenewFlag() 获取续费标识。
- * @method void setRenewFlag(string $RenewFlag) 设置续费标识。
+ * @method string getRenewFlag() 获取自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
  * @method string getTimeUnit() 获取新购单位. 默认值: "m"。
  * @method void setTimeUnit(string $TimeUnit) 设置新购单位. 默认值: "m"。
  */
@@ -35,7 +47,13 @@ class DiskChargePrepaid extends AbstractModel
     public $Period;
 
     /**
-     * @var string 续费标识。
+     * @var string 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
      */
     public $RenewFlag;
 
@@ -46,7 +64,13 @@ class DiskChargePrepaid extends AbstractModel
 
     /**
      * @param integer $Period 新购周期。
-     * @param string $RenewFlag 续费标识。
+     * @param string $RenewFlag 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
      * @param string $TimeUnit 新购单位. 默认值: "m"。
      */
     function __construct()

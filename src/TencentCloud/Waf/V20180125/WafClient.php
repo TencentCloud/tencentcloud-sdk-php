@@ -33,8 +33,6 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteAttackDownloadRecordResponse DeleteAttackDownloadRecord(Models\DeleteAttackDownloadRecordRequest $req) 删除攻击日志下载任务记录
  * @method Models\DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(Models\DeleteCustomWhiteRuleRequest $req) 删除精准白名单规则
  * @method Models\DeleteDomainWhiteRulesResponse DeleteDomainWhiteRules(Models\DeleteDomainWhiteRulesRequest $req) 删除域名规则白名单
-
-
  * @method Models\DeleteDownloadRecordResponse DeleteDownloadRecord(Models\DeleteDownloadRecordRequest $req) 删除访问日志下载记录
  * @method Models\DeleteIpAccessControlResponse DeleteIpAccessControl(Models\DeleteIpAccessControlRequest $req) Waf IP黑白名单Delete接口
  * @method Models\DeleteSessionResponse DeleteSession(Models\DeleteSessionRequest $req) 删除CC攻击的session设置

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlertList(array $AlertList) 设置返回列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AlertListAggregations getAggregations() 获取聚合参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAggregations(AlertListAggregations $Aggregations) 设置聚合参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertListData extends AbstractModel
 {
@@ -44,9 +48,17 @@ class AlertListData extends AbstractModel
     public $AlertList;
 
     /**
+     * @var AlertListAggregations 聚合参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Aggregations;
+
+    /**
      * @param integer $Total 总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlertList 返回列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlertListAggregations $Aggregations 聚合参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -73,6 +85,11 @@ class AlertListData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AlertList, $obj);
             }
+        }
+
+        if (array_key_exists("Aggregations",$param) and $param["Aggregations"] !== null) {
+            $this->Aggregations = new AlertListAggregations();
+            $this->Aggregations->deserialize($param["Aggregations"]);
         }
     }
 }

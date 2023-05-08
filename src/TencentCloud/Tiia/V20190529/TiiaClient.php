@@ -77,7 +77,6 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 
 >   
 - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
-
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取指定图片库中的图片列表。
 
 >   

@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getRenewFlag() 获取续费标识。
- * @method void setRenewFlag(string $RenewFlag) 设置续费标识。
+ * @method string getRenewFlag() 获取自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
  */
 class AttachDisksRequest extends AbstractModel
 {
@@ -40,14 +48,22 @@ class AttachDisksRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 续费标识。
+     * @var string 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
      */
     public $RenewFlag;
 
     /**
      * @param array $DiskIds 云硬盘ID列表。
      * @param string $InstanceId 实例ID。
-     * @param string $RenewFlag 续费标识。
+     * @param string $RenewFlag 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
      */
     function __construct()
     {

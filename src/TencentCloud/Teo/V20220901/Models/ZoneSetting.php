@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageOptimize(ImageOptimize $ImageOptimize) 设置图片优化相关配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AccelerateMainland getAccelerateMainland() 获取中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) 设置中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneSetting extends AbstractModel
 {
@@ -234,6 +238,12 @@ class ZoneSetting extends AbstractModel
     public $ImageOptimize;
 
     /**
+     * @var AccelerateMainland 中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccelerateMainland;
+
+    /**
      * @param string $ZoneName 站点名称。
      * @param string $Area 站点加速区域信息，取值有：
 <li> mainland：中国境内加速；</li>
@@ -275,6 +285,8 @@ class ZoneSetting extends AbstractModel
      * @param Grpc $Grpc Grpc协议支持配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageOptimize $ImageOptimize 图片优化相关配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccelerateMainland $AccelerateMainland 中国大陆加速优化配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -391,6 +403,11 @@ class ZoneSetting extends AbstractModel
         if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {
             $this->ImageOptimize = new ImageOptimize();
             $this->ImageOptimize->deserialize($param["ImageOptimize"]);
+        }
+
+        if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
+            $this->AccelerateMainland = new AccelerateMainland();
+            $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
         }
     }
 }

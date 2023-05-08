@@ -176,6 +176,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetVulNum(integer $AssetVulNum) 设置漏洞数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAssetEventNum() 获取资产事件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetEventNum(integer $AssetEventNum) 设置资产事件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAssetCspmRiskNum() 获取cspm风险
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetCspmRiskNum(integer $AssetCspmRiskNum) 设置cspm风险
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSsaAssetDeleteTime() 获取资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSsaAssetDeleteTime(string $SsaAssetDeleteTime) 设置资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChargeType() 获取费用类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChargeType(string $ChargeType) 设置费用类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAssetRegionName() 获取地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetRegionName(string $AssetRegionName) 设置地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAssetVpcid() 获取vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetVpcid(string $AssetVpcid) 设置vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetDetail extends AbstractModel
 {
@@ -438,6 +462,42 @@ class AssetDetail extends AbstractModel
     public $AssetVulNum;
 
     /**
+     * @var integer 资产事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetEventNum;
+
+    /**
+     * @var integer cspm风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetCspmRiskNum;
+
+    /**
+     * @var string 资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SsaAssetDeleteTime;
+
+    /**
+     * @var string 费用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChargeType;
+
+    /**
+     * @var string 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetRegionName;
+
+    /**
+     * @var string vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetVpcid;
+
+    /**
      * @param string $AssetType 资产类型
      * @param string $Name 名字
      * @param string $Region 区域
@@ -515,6 +575,18 @@ class AssetDetail extends AbstractModel
      * @param string $EventRisk 安全事件风险
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AssetVulNum 漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AssetEventNum 资产事件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AssetCspmRiskNum cspm风险
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SsaAssetDeleteTime 资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChargeType 费用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AssetRegionName 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AssetVpcid vpc信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -713,6 +785,30 @@ class AssetDetail extends AbstractModel
 
         if (array_key_exists("AssetVulNum",$param) and $param["AssetVulNum"] !== null) {
             $this->AssetVulNum = $param["AssetVulNum"];
+        }
+
+        if (array_key_exists("AssetEventNum",$param) and $param["AssetEventNum"] !== null) {
+            $this->AssetEventNum = $param["AssetEventNum"];
+        }
+
+        if (array_key_exists("AssetCspmRiskNum",$param) and $param["AssetCspmRiskNum"] !== null) {
+            $this->AssetCspmRiskNum = $param["AssetCspmRiskNum"];
+        }
+
+        if (array_key_exists("SsaAssetDeleteTime",$param) and $param["SsaAssetDeleteTime"] !== null) {
+            $this->SsaAssetDeleteTime = $param["SsaAssetDeleteTime"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("AssetRegionName",$param) and $param["AssetRegionName"] !== null) {
+            $this->AssetRegionName = $param["AssetRegionName"];
+        }
+
+        if (array_key_exists("AssetVpcid",$param) and $param["AssetVpcid"] !== null) {
+            $this->AssetVpcid = $param["AssetVpcid"];
         }
     }
 }

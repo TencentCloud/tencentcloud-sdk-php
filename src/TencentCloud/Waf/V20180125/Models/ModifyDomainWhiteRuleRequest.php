@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置规则匹配路径
  * @method string getFunction() 获取规则匹配方法
  * @method void setFunction(string $Function) 设置规则匹配方法
- * @method integer getStatus() 获取规则的开关状态
- * @method void setStatus(integer $Status) 设置规则的开关状态
+ * @method integer getStatus() 获取规则的开关状态，0表示关闭开关，1表示打开开关
+ * @method void setStatus(integer $Status) 设置规则的开关状态，0表示关闭开关，1表示打开开关
  */
 class ModifyDomainWhiteRuleRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ModifyDomainWhiteRuleRequest extends AbstractModel
     public $Function;
 
     /**
-     * @var integer 规则的开关状态
+     * @var integer 规则的开关状态，0表示关闭开关，1表示打开开关
      */
     public $Status;
 
@@ -71,7 +71,7 @@ class ModifyDomainWhiteRuleRequest extends AbstractModel
      * @param array $Rules 规则的id列表
      * @param string $Url 规则匹配路径
      * @param string $Function 规则匹配方法
-     * @param integer $Status 规则的开关状态
+     * @param integer $Status 规则的开关状态，0表示关闭开关，1表示打开开关
      */
     function __construct()
     {

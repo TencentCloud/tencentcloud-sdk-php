@@ -120,6 +120,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVictimAssetSub(string $VictimAssetSub) 设置资产子网
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVictimAssetVpc() 获取资产vpc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVictimAssetVpc(string $VictimAssetVpc) 设置资产vpc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTimestamp() 获取时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimestamp(string $Timestamp) 设置时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAssetGroupName() 获取资产组名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetGroupName(array $AssetGroupName) 设置资产组名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAssetProjectName() 获取资产项目名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetProjectName(string $AssetProjectName) 设置资产项目名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVictimAssetContent() 获取失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVictimAssetContent(array $VictimAssetContent) 设置失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWrongReportStatus() 获取错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWrongReportStatus(integer $WrongReportStatus) 设置错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWrongReportConditionId() 获取错误报告Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWrongReportConditionId(integer $WrongReportConditionId) 设置错误报告Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertType extends AbstractModel
 {
@@ -274,6 +302,48 @@ class AlertType extends AbstractModel
     public $VictimAssetSub;
 
     /**
+     * @var string 资产vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VictimAssetVpc;
+
+    /**
+     * @var string 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Timestamp;
+
+    /**
+     * @var array 资产组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetGroupName;
+
+    /**
+     * @var string 资产项目名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetProjectName;
+
+    /**
+     * @var array 失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VictimAssetContent;
+
+    /**
+     * @var integer 错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WrongReportStatus;
+
+    /**
+     * @var integer 错误报告Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WrongReportConditionId;
+
+    /**
      * @param string $AlertTime 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlertId 唯一id
@@ -323,6 +393,20 @@ class AlertType extends AbstractModel
      * @param string $AttackTactic 攻击战术名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VictimAssetSub 资产子网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VictimAssetVpc 资产vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Timestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AssetGroupName 资产组名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AssetProjectName 资产项目名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VictimAssetContent 失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WrongReportStatus 错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WrongReportConditionId 错误报告Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -441,6 +525,34 @@ class AlertType extends AbstractModel
 
         if (array_key_exists("VictimAssetSub",$param) and $param["VictimAssetSub"] !== null) {
             $this->VictimAssetSub = $param["VictimAssetSub"];
+        }
+
+        if (array_key_exists("VictimAssetVpc",$param) and $param["VictimAssetVpc"] !== null) {
+            $this->VictimAssetVpc = $param["VictimAssetVpc"];
+        }
+
+        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
+            $this->Timestamp = $param["Timestamp"];
+        }
+
+        if (array_key_exists("AssetGroupName",$param) and $param["AssetGroupName"] !== null) {
+            $this->AssetGroupName = $param["AssetGroupName"];
+        }
+
+        if (array_key_exists("AssetProjectName",$param) and $param["AssetProjectName"] !== null) {
+            $this->AssetProjectName = $param["AssetProjectName"];
+        }
+
+        if (array_key_exists("VictimAssetContent",$param) and $param["VictimAssetContent"] !== null) {
+            $this->VictimAssetContent = $param["VictimAssetContent"];
+        }
+
+        if (array_key_exists("WrongReportStatus",$param) and $param["WrongReportStatus"] !== null) {
+            $this->WrongReportStatus = $param["WrongReportStatus"];
+        }
+
+        if (array_key_exists("WrongReportConditionId",$param) and $param["WrongReportConditionId"] !== null) {
+            $this->WrongReportConditionId = $param["WrongReportConditionId"];
         }
     }
 }

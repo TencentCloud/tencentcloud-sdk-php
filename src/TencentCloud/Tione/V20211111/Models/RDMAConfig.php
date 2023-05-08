@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ms\V20180408\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全扫描敏感词列表
+ * RDMA配置
  *
- * @method array getSensitiveList() 获取敏感词列表
- * @method void setSensitiveList(array $SensitiveList) 设置敏感词列表
+ * @method boolean getEnable() 获取是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnable(boolean $Enable) 设置是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class ScanSensitiveList extends AbstractModel
+class RDMAConfig extends AbstractModel
 {
     /**
-     * @var array 敏感词列表
+     * @var boolean 是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SensitiveList;
+    public $Enable;
 
     /**
-     * @param array $SensitiveList 敏感词列表
+     * @param boolean $Enable 是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,13 +50,8 @@ class ScanSensitiveList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SensitiveList",$param) and $param["SensitiveList"] !== null) {
-            $this->SensitiveList = [];
-            foreach ($param["SensitiveList"] as $key => $value){
-                $obj = new ScanSensitiveInfo();
-                $obj->deserialize($value);
-                array_push($this->SensitiveList, $obj);
-            }
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
         }
     }
 }

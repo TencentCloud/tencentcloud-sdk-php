@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudStudioSessionTeam(string $CloudStudioSessionTeam) 设置用户所属组
  * @method integer getTemplateId() 获取模板ID
  * @method void setTemplateId(integer $TemplateId) 设置模板ID
+ * @method string getName() 获取工作空间名称
+ * @method void setName(string $Name) 设置工作空间名称
  */
 class CreateWorkspaceByTemplateRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateWorkspaceByTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
+     * @var string 工作空间名称
+     */
+    public $Name;
+
+    /**
      * @param string $CloudStudioSessionTeam 用户所属组
      * @param integer $TemplateId 模板ID
+     * @param string $Name 工作空间名称
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateWorkspaceByTemplateRequest extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

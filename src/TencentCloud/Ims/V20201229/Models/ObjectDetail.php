@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(Location $Location) 设置该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
  * @method string getSubLabel() 获取该参数用于返回命中的实体二级标签。
  * @method void setSubLabel(string $SubLabel) 设置该参数用于返回命中的实体二级标签。
+ * @method string getObjectId() 获取该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectId(string $ObjectId) 设置该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObjectDetail extends AbstractModel
 {
@@ -66,12 +70,20 @@ class ObjectDetail extends AbstractModel
     public $SubLabel;
 
     /**
+     * @var string 该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectId;
+
+    /**
      * @param integer $Id 该参数用于返回识别对象的ID以方便识别和区分。
      * @param string $Name 该参数用于返回命中的实体标签。
      * @param string $Value 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
      * @param integer $Score 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
      * @param Location $Location 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
      * @param string $SubLabel 该参数用于返回命中的实体二级标签。
+     * @param string $ObjectId 该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -109,6 +121,10 @@ class ObjectDetail extends AbstractModel
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("ObjectId",$param) and $param["ObjectId"] !== null) {
+            $this->ObjectId = $param["ObjectId"];
         }
     }
 }

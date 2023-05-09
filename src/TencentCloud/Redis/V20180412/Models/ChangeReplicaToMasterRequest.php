@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChangeReplicaToMaster请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method integer getGroupId() 获取副本组Id，多AZ实例必填
- * @method void setGroupId(integer $GroupId) 设置副本组Id，多AZ实例必填
+ * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+ * @method integer getGroupId() 获取副本节点组 ID，请通过接口[DescribeInstanceZoneInfo](https://cloud.tencent.com/document/product/239/50312)获取多 AZ备节点组的 ID 信息。单 AZ，则无需配置该参数。
+ * @method void setGroupId(integer $GroupId) 设置副本节点组 ID，请通过接口[DescribeInstanceZoneInfo](https://cloud.tencent.com/document/product/239/50312)获取多 AZ备节点组的 ID 信息。单 AZ，则无需配置该参数。
  */
 class ChangeReplicaToMasterRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public $InstanceId;
 
     /**
-     * @var integer 副本组Id，多AZ实例必填
+     * @var integer 副本节点组 ID，请通过接口[DescribeInstanceZoneInfo](https://cloud.tencent.com/document/product/239/50312)获取多 AZ备节点组的 ID 信息。单 AZ，则无需配置该参数。
      */
     public $GroupId;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param integer $GroupId 副本组Id，多AZ实例必填
+     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+     * @param integer $GroupId 副本节点组 ID，请通过接口[DescribeInstanceZoneInfo](https://cloud.tencent.com/document/product/239/50312)获取多 AZ备节点组的 ID 信息。单 AZ，则无需配置该参数。
      */
     function __construct()
     {

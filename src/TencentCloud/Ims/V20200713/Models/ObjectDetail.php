@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(Location $Location) 设置检测框坐标
  * @method string getSubLabel() 获取二级标签名称
  * @method void setSubLabel(string $SubLabel) 设置二级标签名称
+ * @method string getGroupId() 获取图库或人脸库id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置图库或人脸库id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getObjectId() 获取图或人脸id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectId(string $ObjectId) 设置图或人脸id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObjectDetail extends AbstractModel
 {
@@ -69,6 +77,18 @@ class ObjectDetail extends AbstractModel
     public $SubLabel;
 
     /**
+     * @var string 图库或人脸库id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
+
+    /**
+     * @var string 图或人脸id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectId;
+
+    /**
      * @param integer $Id 序号
      * @param string $Name 标签名称
      * @param string $Value 标签值，
@@ -76,6 +96,10 @@ class ObjectDetail extends AbstractModel
      * @param integer $Score 分数
      * @param Location $Location 检测框坐标
      * @param string $SubLabel 二级标签名称
+     * @param string $GroupId 图库或人脸库id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ObjectId 图或人脸id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -113,6 +137,14 @@ class ObjectDetail extends AbstractModel
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("ObjectId",$param) and $param["ObjectId"] !== null) {
+            $this->ObjectId = $param["ObjectId"];
         }
     }
 }

@@ -74,8 +74,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (for后付费)
- * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (for后付费)
+ * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (按量计费)
+ * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (按量计费)
  * @method string getResourceGroupName() 获取预付费专用资源组名称
  * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费专用资源组名称
  * @method ImageInfo getImageInfo() 获取自定义镜像信息
@@ -197,7 +197,7 @@ class TrainingTaskSetItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @var string 计费金额信息，eg：2.00元/小时 (按量计费)
      */
     public $BillingInfo;
 
@@ -258,7 +258,7 @@ class TrainingTaskSetItem extends AbstractModel
      * @param string $FailureReason 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
      * @param string $ResourceGroupName 预付费专用资源组名称
      * @param ImageInfo $ImageInfo 自定义镜像信息
 注意：此字段可能返回 null，表示取不到有效值。

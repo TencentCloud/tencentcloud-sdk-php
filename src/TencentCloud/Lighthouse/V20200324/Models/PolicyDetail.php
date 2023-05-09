@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 折扣详情信息。
  *
- * @method integer getUserDiscount() 获取用户折扣。
- * @method void setUserDiscount(integer $UserDiscount) 设置用户折扣。
- * @method integer getCommonDiscount() 获取公共折扣。
- * @method void setCommonDiscount(integer $CommonDiscount) 设置公共折扣。
- * @method integer getFinalDiscount() 获取最终折扣。
- * @method void setFinalDiscount(integer $FinalDiscount) 设置最终折扣。
+ * @method float getUserDiscount() 获取用户折扣。
+ * @method void setUserDiscount(float $UserDiscount) 设置用户折扣。
+ * @method float getCommonDiscount() 获取公共折扣。
+ * @method void setCommonDiscount(float $CommonDiscount) 设置公共折扣。
+ * @method float getFinalDiscount() 获取最终折扣。
+ * @method void setFinalDiscount(float $FinalDiscount) 设置最终折扣。
  * @method float getActivityDiscount() 获取活动折扣。取值为null，表示无有效值，即没有折扣。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityDiscount(float $ActivityDiscount) 设置活动折扣。取值为null，表示无有效值，即没有折扣。
@@ -40,17 +40,17 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
 class PolicyDetail extends AbstractModel
 {
     /**
-     * @var integer 用户折扣。
+     * @var float 用户折扣。
      */
     public $UserDiscount;
 
     /**
-     * @var integer 公共折扣。
+     * @var float 公共折扣。
      */
     public $CommonDiscount;
 
     /**
-     * @var integer 最终折扣。
+     * @var float 最终折扣。
      */
     public $FinalDiscount;
 
@@ -68,9 +68,9 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
     public $DiscountType;
 
     /**
-     * @param integer $UserDiscount 用户折扣。
-     * @param integer $CommonDiscount 公共折扣。
-     * @param integer $FinalDiscount 最终折扣。
+     * @param float $UserDiscount 用户折扣。
+     * @param float $CommonDiscount 公共折扣。
+     * @param float $FinalDiscount 最终折扣。
      * @param float $ActivityDiscount 活动折扣。取值为null，表示无有效值，即没有折扣。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiscountType 折扣类型。

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceKey(string $SpaceKey) 设置工作空间标识
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkspaceInfo extends AbstractModel
 {
@@ -44,9 +48,17 @@ class WorkspaceInfo extends AbstractModel
     public $SpaceKey;
 
     /**
+     * @var string 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
+
+    /**
      * @param integer $WorkspaceId 工作空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpaceKey 工作空间标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name 工作空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class WorkspaceInfo extends AbstractModel
 
         if (array_key_exists("SpaceKey",$param) and $param["SpaceKey"] !== null) {
             $this->SpaceKey = $param["SpaceKey"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

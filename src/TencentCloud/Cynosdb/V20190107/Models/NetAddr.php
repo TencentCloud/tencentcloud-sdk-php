@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanStatus(string $WanStatus) 设置外网状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceGroupId() 获取实例组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetAddr extends AbstractModel
 {
@@ -124,6 +128,12 @@ class NetAddr extends AbstractModel
     public $WanStatus;
 
     /**
+     * @var string 实例组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceGroupId;
+
+    /**
      * @param string $Vip 内网ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Vport 内网端口号
@@ -143,6 +153,8 @@ class NetAddr extends AbstractModel
      * @param string $WanIP 外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanStatus 外网状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceGroupId 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class NetAddr extends AbstractModel
 
         if (array_key_exists("WanStatus",$param) and $param["WanStatus"] !== null) {
             $this->WanStatus = $param["WanStatus"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
     }
 }

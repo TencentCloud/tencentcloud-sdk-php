@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeveloper返回参数结构体
  *
- * @method string getDeveloperId() 获取服务商ID
- * @method void setDeveloperId(string $DeveloperId) 设置服务商ID
+ * @method string getDeveloperId() 获取开发商ID
+ * @method void setDeveloperId(string $DeveloperId) 设置开发商ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDeveloperResponse extends AbstractModel
 {
     /**
-     * @var string 服务商ID
+     * @var string 开发商ID
      */
     public $DeveloperId;
 
@@ -38,7 +38,7 @@ class DescribeDeveloperResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DeveloperId 服务商ID
+     * @param string $DeveloperId 开发商ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

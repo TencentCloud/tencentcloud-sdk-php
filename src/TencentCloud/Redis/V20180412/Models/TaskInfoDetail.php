@@ -20,117 +20,213 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务信息详情
  *
- * @method integer getTaskId() 获取任务Id
+ * @method integer getTaskId() 获取任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(integer $TaskId) 设置任务Id
+ * @method void setTaskId(integer $TaskId) 设置任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取开始时间
+ * @method string getStartTime() 获取任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method void setStartTime(string $StartTime) 设置任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskType() 获取任务类型
+ * @method string getTaskType() 获取任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskType(string $TaskType) 设置任务类型
+ * @method void setTaskType(string $TaskType) 设置任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceName() 获取实例名称
+ * @method string getInstanceName() 获取实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例Id
+ * @method string getInstanceId() 获取实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProjectId() 获取项目Id
+ * @method integer getProjectId() 获取项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(integer $ProjectId) 设置项目Id
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getProgress() 获取任务进度
+ * @method float getProgress() 获取任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProgress(float $Progress) 设置任务进度
+ * @method void setProgress(float $Progress) 设置任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取结束时间
+ * @method string getEndTime() 获取任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method void setEndTime(string $EndTime) 设置任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResult() 获取任务状态
+ * @method integer getResult() 获取任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(integer $Result) 设置任务状态
+ * @method void setResult(integer $Result) 设置任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfoDetail extends AbstractModel
 {
     /**
-     * @var integer 任务Id
+     * @var integer 任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 开始时间
+     * @var string 任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 任务类型
+     * @var string 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
-     * @var string 实例名称
+     * @var string 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
-     * @var string 实例Id
+     * @var string 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var integer 项目Id
+     * @var integer 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
-     * @var float 任务进度
+     * @var float 任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
-     * @var string 结束时间
+     * @var string 任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var integer 任务状态
+     * @var integer 任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
-     * @param integer $TaskId 任务Id
+     * @param integer $TaskId 任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 开始时间
+     * @param string $StartTime 任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskType 任务类型
+     * @param string $TaskType 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceName 实例名称
+     * @param string $InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProjectId 项目Id
+     * @param integer $ProjectId 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Progress 任务进度
+     * @param float $Progress 任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 结束时间
+     * @param string $EndTime 任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Result 任务状态
+     * @param integer $Result 任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -76,14 +76,18 @@ video 纯视频
  * @method void setAssistants(array $Assistants) 设置助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
  * @method integer getRTCAudienceNumber() 获取rtc人数。
  * @method void setRTCAudienceNumber(integer $RTCAudienceNumber) 设置rtc人数。
- * @method integer getAudienceType() 获取观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
- * @method void setAudienceType(integer $AudienceType) 设置观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+ * @method integer getAudienceType() 获取观看类型，互动直播（默认）。
+ * @method void setAudienceType(integer $AudienceType) 设置观看类型，互动直播（默认）。
  * @method integer getRecordLayout() 获取录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  * @method string getGroupId() 获取房间绑定的群组ID,非空时限制组成员进入
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID,非空时限制组成员进入
- * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关
- * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关
+ * @method integer getEnableDirectControl() 获取是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意）
+ * @method void setEnableDirectControl(integer $EnableDirectControl) 设置是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意）
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -172,7 +176,7 @@ video 纯视频
     public $RTCAudienceNumber;
 
     /**
-     * @var integer 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+     * @var integer 观看类型，互动直播（默认）。
      */
     public $AudienceType;
 
@@ -187,7 +191,9 @@ video 纯视频
     public $GroupId;
 
     /**
-     * @var integer 打开学生麦克风/摄像头的授权开关
+     * @var integer 是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意）
      */
     public $EnableDirectControl;
 
@@ -220,10 +226,12 @@ video 纯视频
 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      * @param array $Assistants 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
      * @param integer $RTCAudienceNumber rtc人数。
-     * @param integer $AudienceType 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+     * @param integer $AudienceType 观看类型，互动直播（默认）。
      * @param integer $RecordLayout 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      * @param string $GroupId 房间绑定的群组ID,非空时限制组成员进入
-     * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     * @param integer $EnableDirectControl 是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意）
      */
     function __construct()
     {

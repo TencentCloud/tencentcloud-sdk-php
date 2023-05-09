@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmVid(string $AlarmVid) 设置告警vid
  * @method integer getAlarmTime() 获取告警时间
  * @method void setAlarmTime(integer $AlarmTime) 设置告警时间
+ * @method integer getTableId() 获取告警来源表ID
+ * @method void setTableId(integer $TableId) 设置告警来源表ID
  */
 class DescribeAlarmIncidentNodesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeAlarmIncidentNodesRequest extends AbstractModel
     public $AlarmTime;
 
     /**
+     * @var integer 告警来源表ID
+     */
+    public $TableId;
+
+    /**
      * @param string $Uuid 机器uuid
      * @param string $AlarmVid 告警vid
      * @param integer $AlarmTime 告警时间
+     * @param integer $TableId 告警来源表ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeAlarmIncidentNodesRequest extends AbstractModel
 
         if (array_key_exists("AlarmTime",$param) and $param["AlarmTime"] !== null) {
             $this->AlarmTime = $param["AlarmTime"];
+        }
+
+        if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
+            $this->TableId = $param["TableId"];
         }
     }
 }

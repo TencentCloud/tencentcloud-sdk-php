@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(array $Key) 设置关键字
  * @method array getUser() 获取用户
  * @method void setUser(array $User) 设置用户
- * @method array getIp() 获取ip
- * @method void setIp(array $Ip) 设置ip
+ * @method array getIp() 获取IP
+ * @method void setIp(array $Ip) 设置IP
  * @method array getTime() 获取耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素
  * @method void setTime(array $Time) 设置耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素
  */
@@ -98,7 +98,7 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $User;
 
     /**
-     * @var array ip
+     * @var array IP
      */
     public $Ip;
 
@@ -118,7 +118,7 @@ class DescribeSlowLogsRequest extends AbstractModel
      * @param array $DB 数据库列表
      * @param array $Key 关键字
      * @param array $User 用户
-     * @param array $Ip ip
+     * @param array $Ip IP
      * @param array $Time 耗时区间,耗时区间的左右边界分别对应数组的第0个元素和第一个元素
      */
     function __construct()

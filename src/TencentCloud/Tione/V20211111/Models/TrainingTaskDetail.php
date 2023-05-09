@@ -128,9 +128,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置训练结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (for后付费)
+ * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (for后付费)
+ * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroupName() 获取预付费专用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -340,7 +340,7 @@ class TrainingTaskDetail extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @var string 计费金额信息，eg：2.00元/小时 (按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingInfo;
@@ -423,7 +423,7 @@ class TrainingTaskDetail extends AbstractModel
      * @param string $UpdateTime 更新时间
      * @param string $EndTime 训练结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupName 预付费专用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。

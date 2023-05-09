@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCycleParam(CycleEmailParam $CycleParam) 设置周期发送任务的必要参数
  * @method TimedEmailParam getTimedParam() 获取定时发送任务的必要参数
  * @method void setTimedParam(TimedEmailParam $TimedParam) 设置定时发送任务的必要参数
- * @method string getUnsubscribe() 获取退订选项 1: 加入退订链接 0: 不加入退订链接
- * @method void setUnsubscribe(string $Unsubscribe) 设置退订选项 1: 加入退订链接 0: 不加入退订链接
+ * @method string getUnsubscribe() 获取退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语
+ * @method void setUnsubscribe(string $Unsubscribe) 设置退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语
  * @method integer getADLocation() 获取是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
  * @method void setADLocation(integer $ADLocation) 设置是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
  */
@@ -104,7 +104,7 @@ class BatchSendEmailRequest extends AbstractModel
     public $TimedParam;
 
     /**
-     * @var string 退订选项 1: 加入退订链接 0: 不加入退订链接
+     * @var string 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语
      */
     public $Unsubscribe;
 
@@ -126,7 +126,7 @@ class BatchSendEmailRequest extends AbstractModel
      * @param array $Attachments 需要发送附件时，填写附件相关参数（暂未支持）
      * @param CycleEmailParam $CycleParam 周期发送任务的必要参数
      * @param TimedEmailParam $TimedParam 定时发送任务的必要参数
-     * @param string $Unsubscribe 退订选项 1: 加入退订链接 0: 不加入退订链接
+     * @param string $Unsubscribe 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语
      * @param integer $ADLocation 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
      */
     function __construct()

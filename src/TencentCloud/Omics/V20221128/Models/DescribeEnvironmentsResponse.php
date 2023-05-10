@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Omics\V20221128\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFlowLog返回参数结构体
+ * DescribeEnvironments返回参数结构体
  *
- * @method array getFlowLog() 获取流日志信息。
- * @method void setFlowLog(array $FlowLog) 设置流日志信息。
+ * @method integer getTotalCount() 获取符合条件的数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的数量。
+ * @method array getEnvironments() 获取环境详情列表。
+ * @method void setEnvironments(array $Environments) 设置环境详情列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFlowLogResponse extends AbstractModel
+class DescribeEnvironmentsResponse extends AbstractModel
 {
     /**
-     * @var array 流日志信息。
+     * @var integer 符合条件的数量。
      */
-    public $FlowLog;
+    public $TotalCount;
+
+    /**
+     * @var array 环境详情列表。
+     */
+    public $Environments;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeFlowLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowLog 流日志信息。
+     * @param integer $TotalCount 符合条件的数量。
+     * @param array $Environments 环境详情列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +62,16 @@ class DescribeFlowLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowLog",$param) and $param["FlowLog"] !== null) {
-            $this->FlowLog = [];
-            foreach ($param["FlowLog"] as $key => $value){
-                $obj = new FlowLog();
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Environments",$param) and $param["Environments"] !== null) {
+            $this->Environments = [];
+            foreach ($param["Environments"] as $key => $value){
+                $obj = new Environment();
                 $obj->deserialize($value);
-                array_push($this->FlowLog, $obj);
+                array_push($this->Environments, $obj);
             }
         }
 

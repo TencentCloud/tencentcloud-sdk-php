@@ -23,6 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Omics\V20221128\Models as Models;
 
 /**
+ * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建组学平台计算环境。
+ * @method Models\DeleteEnvironmentResponse DeleteEnvironment(Models\DeleteEnvironmentRequest $req) 删除环境。
+ * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 查询环境列表。
  * @method Models\DescribeRunGroupsResponse DescribeRunGroups(Models\DescribeRunGroupsRequest $req) 查询任务批次列表。
  * @method Models\DescribeRunsResponse DescribeRuns(Models\DescribeRunsRequest $req) 查询任务列表。
  * @method Models\GetRunCallsResponse GetRunCalls(Models\GetRunCallsRequest $req) 查询作业详情。

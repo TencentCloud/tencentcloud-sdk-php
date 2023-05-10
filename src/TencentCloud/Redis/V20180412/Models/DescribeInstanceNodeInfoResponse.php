@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceNodeInfo返回参数结构体
  *
- * @method integer getProxyCount() 获取proxy节点数量
- * @method void setProxyCount(integer $ProxyCount) 设置proxy节点数量
- * @method array getProxy() 获取proxy节点信息
+ * @method integer getProxyCount() 获取Proxy节点数量。
+ * @method void setProxyCount(integer $ProxyCount) 设置Proxy节点数量。
+ * @method array getProxy() 获取Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxy(array $Proxy) 设置proxy节点信息
+ * @method void setProxy(array $Proxy) 设置Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRedisCount() 获取redis节点数量
- * @method void setRedisCount(integer $RedisCount) 设置redis节点数量
- * @method array getRedis() 获取redis节点信息
+ * @method integer getRedisCount() 获取Redis节点数量。
+ * @method void setRedisCount(integer $RedisCount) 设置Redis节点数量。
+ * @method array getRedis() 获取Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRedis(array $Redis) 设置redis节点信息
+ * @method void setRedis(array $Redis) 设置Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTendisCount() 获取tendis节点数量
- * @method void setTendisCount(integer $TendisCount) 设置tendis节点数量
- * @method array getTendis() 获取tendis节点信息
+ * @method integer getTendisCount() 获取该参数不再使用，请忽略。
+ * @method void setTendisCount(integer $TendisCount) 设置该参数不再使用，请忽略。
+ * @method array getTendis() 获取该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTendis(array $Tendis) 设置tendis节点信息
+ * @method void setTendis(array $Tendis) 设置该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,34 +44,34 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceNodeInfoResponse extends AbstractModel
 {
     /**
-     * @var integer proxy节点数量
+     * @var integer Proxy节点数量。
      */
     public $ProxyCount;
 
     /**
-     * @var array proxy节点信息
+     * @var array Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Proxy;
 
     /**
-     * @var integer redis节点数量
+     * @var integer Redis节点数量。
      */
     public $RedisCount;
 
     /**
-     * @var array redis节点信息
+     * @var array Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Redis;
 
     /**
-     * @var integer tendis节点数量
+     * @var integer 该参数不再使用，请忽略。
      */
     public $TendisCount;
 
     /**
-     * @var array tendis节点信息
+     * @var array 该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tendis;
@@ -82,14 +82,14 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ProxyCount proxy节点数量
-     * @param array $Proxy proxy节点信息
+     * @param integer $ProxyCount Proxy节点数量。
+     * @param array $Proxy Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RedisCount redis节点数量
-     * @param array $Redis redis节点信息
+     * @param integer $RedisCount Redis节点数量。
+     * @param array $Redis Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TendisCount tendis节点数量
-     * @param array $Tendis tendis节点信息
+     * @param integer $TendisCount 该参数不再使用，请忽略。
+     * @param array $Tendis 该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

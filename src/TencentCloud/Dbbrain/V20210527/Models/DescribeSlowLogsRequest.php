@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL，默认为"mysql"。
  * @method string getInstanceId() 获取实例id。
  * @method void setInstanceId(string $InstanceId) 设置实例id。
- * @method string getMd5() 获取sql模版的md5值
- * @method void setMd5(string $Md5) 设置sql模版的md5值
+ * @method string getMd5() 获取sql模板的md5值
+ * @method void setMd5(string $Md5) 设置sql模板的md5值
  * @method string getStartTime() 获取开始时间，如“2019-09-10 12:13:14”。
  * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。
  * @method string getEndTime() 获取截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
@@ -58,7 +58,7 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string sql模版的md5值
+     * @var string sql模板的md5值
      */
     public $Md5;
 
@@ -110,7 +110,7 @@ class DescribeSlowLogsRequest extends AbstractModel
     /**
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB for MySQL，默认为"mysql"。
      * @param string $InstanceId 实例id。
-     * @param string $Md5 sql模版的md5值
+     * @param string $Md5 sql模板的md5值
      * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
      * @param string $EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
      * @param integer $Offset 偏移量，默认为0。

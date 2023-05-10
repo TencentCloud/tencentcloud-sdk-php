@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutput(CoverBySnapshotTaskOutput $Output) 设置对视频截图做封面任务的输出。
  * @method integer getProgress() 获取对视频截图做封面任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置对视频截图做封面任务进度，取值范围 [0-100] 。
+ * @method string getBeginProcessTime() 获取截图做封面任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setBeginProcessTime(string $BeginProcessTime) 设置截图做封面任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getFinishTime() 获取截图做封面任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setFinishTime(string $FinishTime) 设置截图做封面任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 {
@@ -73,6 +77,16 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
     public $Progress;
 
     /**
+     * @var string 截图做封面任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string 截图做封面任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $FinishTime;
+
+    /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
@@ -80,6 +94,8 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
      * @param CoverBySnapshotTaskInput $Input 对视频截图做封面任务的输入。
      * @param CoverBySnapshotTaskOutput $Output 对视频截图做封面任务的输出。
      * @param integer $Progress 对视频截图做封面任务进度，取值范围 [0-100] 。
+     * @param string $BeginProcessTime 截图做封面任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $FinishTime 截图做封面任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -122,6 +138,14 @@ class MediaProcessTaskCoverBySnapshotResult extends AbstractModel
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Omics\V20221128\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFlowLog返回参数结构体
+ * CreateEnvironment返回参数结构体
  *
- * @method array getFlowLog() 获取流日志信息。
- * @method void setFlowLog(array $FlowLog) 设置流日志信息。
+ * @method string getEnvironmentId() 获取环境ID。
+ * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID。
+ * @method string getWorkflowUuid() 获取工作流UUID。
+ * @method void setWorkflowUuid(string $WorkflowUuid) 设置工作流UUID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFlowLogResponse extends AbstractModel
+class CreateEnvironmentResponse extends AbstractModel
 {
     /**
-     * @var array 流日志信息。
+     * @var string 环境ID。
      */
-    public $FlowLog;
+    public $EnvironmentId;
+
+    /**
+     * @var string 工作流UUID。
+     */
+    public $WorkflowUuid;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeFlowLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowLog 流日志信息。
+     * @param string $EnvironmentId 环境ID。
+     * @param string $WorkflowUuid 工作流UUID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +62,12 @@ class DescribeFlowLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowLog",$param) and $param["FlowLog"] !== null) {
-            $this->FlowLog = [];
-            foreach ($param["FlowLog"] as $key => $value){
-                $obj = new FlowLog();
-                $obj->deserialize($value);
-                array_push($this->FlowLog, $obj);
-            }
+        if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
+            $this->EnvironmentId = $param["EnvironmentId"];
+        }
+
+        if (array_key_exists("WorkflowUuid",$param) and $param["WorkflowUuid"] !== null) {
+            $this->WorkflowUuid = $param["WorkflowUuid"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

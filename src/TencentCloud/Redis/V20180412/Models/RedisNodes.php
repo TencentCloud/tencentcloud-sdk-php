@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Redis节点信息
  *
- * @method string getNodeId() 获取节点ID
- * @method void setNodeId(string $NodeId) 设置节点ID
- * @method string getNodeRole() 获取节点角色
- * @method void setNodeRole(string $NodeRole) 设置节点角色
- * @method integer getClusterId() 获取分片ID
- * @method void setClusterId(integer $ClusterId) 设置分片ID
- * @method integer getZoneId() 获取可用区ID
- * @method void setZoneId(integer $ZoneId) 设置可用区ID
+ * @method string getNodeId() 获取节点 ID。
+ * @method void setNodeId(string $NodeId) 设置节点 ID。
+ * @method string getNodeRole() 获取节点角色。
+ * @method void setNodeRole(string $NodeRole) 设置节点角色。
+ * @method integer getClusterId() 获取分片 ID。
+ * @method void setClusterId(integer $ClusterId) 设置分片 ID。
+ * @method integer getZoneId() 获取可用区 ID。
+ * @method void setZoneId(integer $ZoneId) 设置可用区 ID。
  */
 class RedisNodes extends AbstractModel
 {
     /**
-     * @var string 节点ID
+     * @var string 节点 ID。
      */
     public $NodeId;
 
     /**
-     * @var string 节点角色
+     * @var string 节点角色。
      */
     public $NodeRole;
 
     /**
-     * @var integer 分片ID
+     * @var integer 分片 ID。
      */
     public $ClusterId;
 
     /**
-     * @var integer 可用区ID
+     * @var integer 可用区 ID。
      */
     public $ZoneId;
 
     /**
-     * @param string $NodeId 节点ID
-     * @param string $NodeRole 节点角色
-     * @param integer $ClusterId 分片ID
-     * @param integer $ZoneId 可用区ID
+     * @param string $NodeId 节点 ID。
+     * @param string $NodeRole 节点角色。
+     * @param integer $ClusterId 分片 ID。
+     * @param integer $ZoneId 可用区 ID。
      */
     function __construct()
     {

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 <li> white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充；</li>
 <li> black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：stretch 。
+ * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class HeadTailTemplate extends AbstractModel
 {
@@ -81,6 +85,16 @@ class HeadTailTemplate extends AbstractModel
     public $FillType;
 
     /**
+     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $UpdateTime;
+
+    /**
      * @param integer $Definition 片头片尾模板号。
      * @param string $Name 模板名，最大支持 64 个字符。
      * @param string $Comment 模板描述，最大支持 256 个字符。
@@ -92,6 +106,8 @@ class HeadTailTemplate extends AbstractModel
 <li> white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充；</li>
 <li> black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：stretch 。
+     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -128,6 +144,14 @@ class HeadTailTemplate extends AbstractModel
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

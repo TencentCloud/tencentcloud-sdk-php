@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEdgeVersion(string $EdgeVersion) 设置边缘集群组件的版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TagSpecification getTagSpecification() 获取集群绑定的云标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置集群绑定的云标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeCluster extends AbstractModel
 {
@@ -154,6 +158,12 @@ class EdgeCluster extends AbstractModel
     public $EdgeVersion;
 
     /**
+     * @var TagSpecification 集群绑定的云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $ClusterId 集群Id
      * @param string $ClusterName 集群名称
      * @param string $VpcId Vpc Id
@@ -175,6 +185,8 @@ class EdgeCluster extends AbstractModel
      * @param string $ChargeType 集群付费模式，支持POSTPAID_BY_HOUR或者PREPAID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EdgeVersion 边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSpecification $TagSpecification 集群绑定的云标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -253,6 +265,11 @@ class EdgeCluster extends AbstractModel
 
         if (array_key_exists("EdgeVersion",$param) and $param["EdgeVersion"] !== null) {
             $this->EdgeVersion = $param["EdgeVersion"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
         }
     }
 }

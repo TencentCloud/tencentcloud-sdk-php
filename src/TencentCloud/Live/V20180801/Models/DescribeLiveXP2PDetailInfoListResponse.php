@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFlowLog返回参数结构体
+ * DescribeLiveXP2PDetailInfoList返回参数结构体
  *
- * @method array getFlowLog() 获取流日志信息。
- * @method void setFlowLog(array $FlowLog) 设置流日志信息。
+ * @method array getDataInfoList() 获取P2P流统计信息。
+ * @method void setDataInfoList(array $DataInfoList) 设置P2P流统计信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFlowLogResponse extends AbstractModel
+class DescribeLiveXP2PDetailInfoListResponse extends AbstractModel
 {
     /**
-     * @var array 流日志信息。
+     * @var array P2P流统计信息。
      */
-    public $FlowLog;
+    public $DataInfoList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeFlowLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowLog 流日志信息。
+     * @param array $DataInfoList P2P流统计信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +54,12 @@ class DescribeFlowLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowLog",$param) and $param["FlowLog"] !== null) {
-            $this->FlowLog = [];
-            foreach ($param["FlowLog"] as $key => $value){
-                $obj = new FlowLog();
+        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
+            $this->DataInfoList = [];
+            foreach ($param["DataInfoList"] as $key => $value){
+                $obj = new XP2PDetailInfo();
                 $obj->deserialize($value);
-                array_push($this->FlowLog, $obj);
+                array_push($this->DataInfoList, $obj);
             }
         }
 

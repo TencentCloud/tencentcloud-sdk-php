@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFlowLog返回参数结构体
+ * OpenReadOnlyInstanceExclusiveAccess返回参数结构体
  *
- * @method array getFlowLog() 获取流日志信息。
- * @method void setFlowLog(array $FlowLog) 设置流日志信息。
+ * @method integer getFlowId() 获取开通流程ID
+ * @method void setFlowId(integer $FlowId) 设置开通流程ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFlowLogResponse extends AbstractModel
+class OpenReadOnlyInstanceExclusiveAccessResponse extends AbstractModel
 {
     /**
-     * @var array 流日志信息。
+     * @var integer 开通流程ID
      */
-    public $FlowLog;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeFlowLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowLog 流日志信息。
+     * @param integer $FlowId 开通流程ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,8 @@ class DescribeFlowLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowLog",$param) and $param["FlowLog"] !== null) {
-            $this->FlowLog = [];
-            foreach ($param["FlowLog"] as $key => $value){
-                $obj = new FlowLog();
-                $obj->deserialize($value);
-                array_push($this->FlowLog, $obj);
-            }
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

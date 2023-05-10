@@ -52,8 +52,11 @@ use TencentCloud\Common\AbstractModel;
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。
  * @method void setTypes(array $Types) 设置需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -68,8 +71,11 @@ use TencentCloud\Common\AbstractModel;
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。
  * @method boolean getEnableOther() 获取是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
  * @method void setEnableOther(boolean $EnableOther) 设置是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
  * @method boolean getEnablePdf() 获取是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
@@ -115,8 +121,11 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。
      */
     public $Types;
 
@@ -169,8 +178,11 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。
      * @param boolean $EnableOther 是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
      * @param boolean $EnablePdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。

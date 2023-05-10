@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
  * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
  * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+ * @method integer getStartTime() 获取投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+ * @method void setStartTime(integer $StartTime) 设置投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+ * @method integer getEndTime() 获取投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+ * @method void setEndTime(integer $EndTime) 设置投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
  */
 class CreateShipperRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class CreateShipperRequest extends AbstractModel
     public $FilenameMode;
 
     /**
+     * @var integer 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+     */
+    public $EndTime;
+
+    /**
      * @param string $TopicId 创建的投递规则所属的日志主题ID
      * @param string $Bucket 创建的投递规则投递的bucket
      * @param string $Prefix 创建的投递规则投递目录的前缀
@@ -112,6 +126,8 @@ class CreateShipperRequest extends AbstractModel
      * @param CompressInfo $Compress 投递日志的压缩配置
      * @param ContentInfo $Content 投递日志的内容格式配置
      * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * @param integer $StartTime 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
+     * @param integer $EndTime 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
      */
     function __construct()
     {
@@ -175,6 +191,14 @@ class CreateShipperRequest extends AbstractModel
 
         if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
             $this->FilenameMode = $param["FilenameMode"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

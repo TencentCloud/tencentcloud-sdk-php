@@ -199,6 +199,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveWatermarkResponse DescribeLiveWatermark(Models\DescribeLiveWatermarkRequest $req) 获取单个水印信息。
  * @method Models\DescribeLiveWatermarkRulesResponse DescribeLiveWatermarkRules(Models\DescribeLiveWatermarkRulesRequest $req) 获取水印规则列表。
  * @method Models\DescribeLiveWatermarksResponse DescribeLiveWatermarks(Models\DescribeLiveWatermarksRequest $req) 查询水印列表。
+ * @method Models\DescribeLiveXP2PDetailInfoListResponse DescribeLiveXP2PDetailInfoList(Models\DescribeLiveXP2PDetailInfoListRequest $req) P2P流数据查询接口，用来获取流量、卡播和起播信息。
  * @method Models\DescribeLogDownloadListResponse DescribeLogDownloadList(Models\DescribeLogDownloadListRequest $req) 批量获取日志URL。
  * @method Models\DescribePlayErrorCodeDetailInfoListResponse DescribePlayErrorCodeDetailInfoList(Models\DescribePlayErrorCodeDetailInfoListRequest $req) 查询下行播放错误码信息，某段时间内1分钟粒度的各http错误码出现的次数，包括4xx，5xx。
 

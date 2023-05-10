@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFlowLogAttribute请求参数结构体
  *
- * @method string getFlowLogId() 获取流日志唯一ID
- * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID
+ * @method string getFlowLogId() 获取流日志唯一ID。
+ * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。
  * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
  * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
- * @method string getFlowLogName() 获取流日志实例名字
- * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字
- * @method string getFlowLogDescription() 获取流日志实例描述
- * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述
+ * @method string getFlowLogName() 获取流日志实例名字。
+ * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字。
+ * @method string getFlowLogDescription() 获取流日志实例描述。
+ * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述。
  */
 class ModifyFlowLogAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 流日志唯一ID
+     * @var string 流日志唯一ID。
      */
     public $FlowLogId;
 
@@ -42,20 +42,20 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 流日志实例名字
+     * @var string 流日志实例名字。
      */
     public $FlowLogName;
 
     /**
-     * @var string 流日志实例描述
+     * @var string 流日志实例描述。
      */
     public $FlowLogDescription;
 
     /**
-     * @param string $FlowLogId 流日志唯一ID
+     * @param string $FlowLogId 流日志唯一ID。
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
-     * @param string $FlowLogName 流日志实例名字
-     * @param string $FlowLogDescription 流日志实例描述
+     * @param string $FlowLogName 流日志实例名字。
+     * @param string $FlowLogDescription 流日志实例描述。
      */
     function __construct()
     {

@@ -234,7 +234,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 <li>删除专线网关后，系统会删除路由表中跟该专线网关相关的路由策略。</li>
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
  * @method Models\DeleteDirectConnectGatewayCcnRoutesResponse DeleteDirectConnectGatewayCcnRoutes(Models\DeleteDirectConnectGatewayCcnRoutesRequest $req) 本接口（DeleteDirectConnectGatewayCcnRoutes）用于删除专线网关的云联网路由（IDC网段）
- * @method Models\DeleteFlowLogResponse DeleteFlowLog(Models\DeleteFlowLogRequest $req) 本接口（DeleteFlowLog）用于删除流日志
+ * @method Models\DeleteFlowLogResponse DeleteFlowLog(Models\DeleteFlowLogRequest $req) 本接口（DeleteFlowLog）用于删除流日志。
  * @method Models\DeleteHaVipResponse DeleteHaVip(Models\DeleteHaVipRequest $req) 本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）。<br />
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
  * @method Models\DeleteIp6TranslatorsResponse DeleteIp6Translators(Models\DeleteIp6TranslatorsRequest $req) 1. 该接口用于释放IPV6转换实例，支持批量。
@@ -305,7 +305,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeDhcpIpsResponse DescribeDhcpIps(Models\DescribeDhcpIpsRequest $req) 本接口（DescribeDhcpIps）用于查询DhcpIp列表
  * @method Models\DescribeDirectConnectGatewayCcnRoutesResponse DescribeDirectConnectGatewayCcnRoutes(Models\DescribeDirectConnectGatewayCcnRoutesRequest $req) 本接口（DescribeDirectConnectGatewayCcnRoutes）用于查询专线网关的云联网路由（IDC网段）
  * @method Models\DescribeDirectConnectGatewaysResponse DescribeDirectConnectGateways(Models\DescribeDirectConnectGatewaysRequest $req) 本接口（DescribeDirectConnectGateways）用于查询专线网关。
- * @method Models\DescribeFlowLogResponse DescribeFlowLog(Models\DescribeFlowLogRequest $req) 本接口（DescribeFlowLog）用于查询流日志实例信息
+ * @method Models\DescribeFlowLogResponse DescribeFlowLog(Models\DescribeFlowLogRequest $req) 本接口（DescribeFlowLog）用于查询流日志实例信息。
  * @method Models\DescribeFlowLogsResponse DescribeFlowLogs(Models\DescribeFlowLogsRequest $req) 本接口（DescribeFlowLogs）用于查询获取流日志集合。
  * @method Models\DescribeGatewayFlowMonitorDetailResponse DescribeGatewayFlowMonitorDetail(Models\DescribeGatewayFlowMonitorDetailRequest $req) 本接口（DescribeGatewayFlowMonitorDetail）用于查询网关流量监控明细。
 * 只支持单个网关实例查询。即入参 `VpnId`、 `DirectConnectGatewayId`、 `PeeringConnectionId`、 `NatId` 最多只支持传一个，且必须传一个。
@@ -483,7 +483,7 @@ LimitTypes取值范围：
  * @method Models\ModifyDhcpIpAttributeResponse ModifyDhcpIpAttribute(Models\ModifyDhcpIpAttributeRequest $req) 本接口（ModifyDhcpIpAttribute）用于修改DhcpIp属性
  * @method Models\ModifyDirectConnectGatewayAttributeResponse ModifyDirectConnectGatewayAttribute(Models\ModifyDirectConnectGatewayAttributeRequest $req) 本接口（ModifyDirectConnectGatewayAttribute）用于修改专线网关属性
 
- * @method Models\ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(Models\ModifyFlowLogAttributeRequest $req) 本接口（ModifyFlowLogAttribute）用于修改流日志属性
+ * @method Models\ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(Models\ModifyFlowLogAttributeRequest $req) 本接口（ModifyFlowLogAttribute）用于修改流日志属性。
  * @method Models\ModifyGatewayFlowQosResponse ModifyGatewayFlowQos(Models\ModifyGatewayFlowQosRequest $req) 本接口（ModifyGatewayFlowQos）用于调整网关流控带宽。
  * @method Models\ModifyHaVipAttributeResponse ModifyHaVipAttribute(Models\ModifyHaVipAttributeRequest $req) 本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性。
  * @method Models\ModifyIp6AddressesBandwidthResponse ModifyIp6AddressesBandwidth(Models\ModifyIp6AddressesBandwidthRequest $req) 该接口用于修改IPV6地址访问internet的带宽

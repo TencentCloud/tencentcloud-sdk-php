@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 续费云硬盘包年包月相关参数设置
  *
- * @method integer getPeriod() 获取新购周期。
- * @method void setPeriod(integer $Period) 设置新购周期。
- * @method string getRenewFlag() 获取续费标识。
- * @method void setRenewFlag(string $RenewFlag) 设置续费标识。
- * @method string getTimeUnit() 获取周期单位. 默认值: "m"。
- * @method void setTimeUnit(string $TimeUnit) 设置周期单位. 默认值: "m"。
- * @method string getCurInstanceDeadline() 获取当前实例到期时间。
- * @method void setCurInstanceDeadline(string $CurInstanceDeadline) 设置当前实例到期时间。
+ * @method integer getPeriod() 获取续费周期。
+ * @method void setPeriod(integer $Period) 设置续费周期。
+ * @method string getRenewFlag() 获取续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
+ * @method void setRenewFlag(string $RenewFlag) 设置续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
+ * @method string getTimeUnit() 获取周期单位。取值范围：“m”(月)。默认值: "m"。
+ * @method void setTimeUnit(string $TimeUnit) 设置周期单位。取值范围：“m”(月)。默认值: "m"。
+ * @method string getCurInstanceDeadline() 获取当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。
+ * @method void setCurInstanceDeadline(string $CurInstanceDeadline) 设置当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。
  */
 class RenewDiskChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer 新购周期。
+     * @var integer 续费周期。
      */
     public $Period;
 
     /**
-     * @var string 续费标识。
+     * @var string 续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
      */
     public $RenewFlag;
 
     /**
-     * @var string 周期单位. 默认值: "m"。
+     * @var string 周期单位。取值范围：“m”(月)。默认值: "m"。
      */
     public $TimeUnit;
 
     /**
-     * @var string 当前实例到期时间。
+     * @var string 当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。
      */
     public $CurInstanceDeadline;
 
     /**
-     * @param integer $Period 新购周期。
-     * @param string $RenewFlag 续费标识。
-     * @param string $TimeUnit 周期单位. 默认值: "m"。
-     * @param string $CurInstanceDeadline 当前实例到期时间。
+     * @param integer $Period 续费周期。
+     * @param string $RenewFlag 续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
+     * @param string $TimeUnit 周期单位。取值范围：“m”(月)。默认值: "m"。
+     * @param string $CurInstanceDeadline 当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。
      */
     function __construct()
     {

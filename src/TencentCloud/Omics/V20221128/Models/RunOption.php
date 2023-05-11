@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseCallCache(boolean $UseCallCache) 设置是否使用Call-Caching功能。
  * @method boolean getUseErrorOnHold() 获取是否使用错误挂起功能。
  * @method void setUseErrorOnHold(boolean $UseErrorOnHold) 设置是否使用错误挂起功能。
+ * @method string getFinalWorkflowOutputsDir() 获取输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFinalWorkflowOutputsDir(string $FinalWorkflowOutputsDir) 设置输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUseRelativeOutputPaths() 获取是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseRelativeOutputPaths(boolean $UseRelativeOutputPaths) 设置是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunOption extends AbstractModel
 {
@@ -51,11 +59,27 @@ class RunOption extends AbstractModel
     public $UseErrorOnHold;
 
     /**
+     * @var string 输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FinalWorkflowOutputsDir;
+
+    /**
+     * @var boolean 是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseRelativeOutputPaths;
+
+    /**
      * @param string $FailureMode 运行失败模式，取值范围：
 - ContinueWhilePossible
 - NoNewCalls
      * @param boolean $UseCallCache 是否使用Call-Caching功能。
      * @param boolean $UseErrorOnHold 是否使用错误挂起功能。
+     * @param string $FinalWorkflowOutputsDir 输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UseRelativeOutputPaths 是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -80,6 +104,14 @@ class RunOption extends AbstractModel
 
         if (array_key_exists("UseErrorOnHold",$param) and $param["UseErrorOnHold"] !== null) {
             $this->UseErrorOnHold = $param["UseErrorOnHold"];
+        }
+
+        if (array_key_exists("FinalWorkflowOutputsDir",$param) and $param["FinalWorkflowOutputsDir"] !== null) {
+            $this->FinalWorkflowOutputsDir = $param["FinalWorkflowOutputsDir"];
+        }
+
+        if (array_key_exists("UseRelativeOutputPaths",$param) and $param["UseRelativeOutputPaths"] !== null) {
+            $this->UseRelativeOutputPaths = $param["UseRelativeOutputPaths"];
         }
     }
 }

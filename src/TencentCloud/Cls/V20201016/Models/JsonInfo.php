@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaFields(array $MetaFields) 设置元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__、__HOSTNAME__。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getJsonType() 获取投递Json格式，0：字符串方式投递；1:以结构化方式投递
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJsonType(integer $JsonType) 设置投递Json格式，0：字符串方式投递；1:以结构化方式投递
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JsonInfo extends AbstractModel
 {
@@ -41,8 +45,16 @@ class JsonInfo extends AbstractModel
     public $MetaFields;
 
     /**
+     * @var integer 投递Json格式，0：字符串方式投递；1:以结构化方式投递
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JsonType;
+
+    /**
      * @param boolean $EnableTag 启用标志
      * @param array $MetaFields 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__、__HOSTNAME__。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $JsonType 投递Json格式，0：字符串方式投递；1:以结构化方式投递
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -64,6 +76,10 @@ class JsonInfo extends AbstractModel
 
         if (array_key_exists("MetaFields",$param) and $param["MetaFields"] !== null) {
             $this->MetaFields = $param["MetaFields"];
+        }
+
+        if (array_key_exists("JsonType",$param) and $param["JsonType"] !== null) {
+            $this->JsonType = $param["JsonType"];
         }
     }
 }

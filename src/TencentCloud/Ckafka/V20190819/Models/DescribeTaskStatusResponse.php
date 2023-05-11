@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cbs\V20170312\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDisks返回参数结构体
+ * DescribeTaskStatus返回参数结构体
  *
- * @method array getDiskIdSet() 获取创建的云硬盘ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskIdSet(array $DiskIdSet) 设置创建的云硬盘ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method TaskStatusResponse getResult() 获取返回结果
+ * @method void setResult(TaskStatusResponse $Result) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateDisksResponse extends AbstractModel
+class DescribeTaskStatusResponse extends AbstractModel
 {
     /**
-     * @var array 创建的云硬盘ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var TaskStatusResponse 返回结果
      */
-    public $DiskIdSet;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class CreateDisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DiskIdSet 创建的云硬盘ID列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskStatusResponse $Result 返回结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,9 @@ class CreateDisksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIdSet",$param) and $param["DiskIdSet"] !== null) {
-            $this->DiskIdSet = $param["DiskIdSet"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new TaskStatusResponse();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

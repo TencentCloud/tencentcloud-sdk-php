@@ -14,26 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cbs\V20170312\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDisks返回参数结构体
+ * DescribeInstanceErrorLogs返回参数结构体
  *
- * @method array getDiskIdSet() 获取创建的云硬盘ID列表。
+ * @method integer getTotalCount() 获取日志条数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskIdSet(array $DiskIdSet) 设置创建的云硬盘ID列表。
+ * @method void setTotalCount(integer $TotalCount) 设置日志条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getErrorLogs() 获取错误日志列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorLogs(array $ErrorLogs) 设置错误日志列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateDisksResponse extends AbstractModel
+class DescribeInstanceErrorLogsResponse extends AbstractModel
 {
     /**
-     * @var array 创建的云硬盘ID列表。
+     * @var integer 日志条数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DiskIdSet;
+    public $TotalCount;
+
+    /**
+     * @var array 错误日志列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorLogs;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +51,9 @@ class CreateDisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DiskIdSet 创建的云硬盘ID列表。
+     * @param integer $TotalCount 日志条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ErrorLogs 错误日志列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +70,17 @@ class CreateDisksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIdSet",$param) and $param["DiskIdSet"] !== null) {
-            $this->DiskIdSet = $param["DiskIdSet"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ErrorLogs",$param) and $param["ErrorLogs"] !== null) {
+            $this->ErrorLogs = [];
+            foreach ($param["ErrorLogs"] as $key => $value){
+                $obj = new CynosdbErrorLogItem();
+                $obj->deserialize($value);
+                array_push($this->ErrorLogs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

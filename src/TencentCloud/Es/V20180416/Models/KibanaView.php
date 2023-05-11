@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuUsage(float $CpuUsage) 设置cpu使用率
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
+ * @method string getNodeId() 获取ts-0noqayxu-az6-hot-03222010-0
+ * @method void setNodeId(string $NodeId) 设置ts-0noqayxu-az6-hot-03222010-0
  */
 class KibanaView extends AbstractModel
 {
@@ -80,6 +82,11 @@ class KibanaView extends AbstractModel
     public $Zone;
 
     /**
+     * @var string ts-0noqayxu-az6-hot-03222010-0
+     */
+    public $NodeId;
+
+    /**
      * @param string $Ip Kibana节点IP
      * @param integer $DiskSize 节点总磁盘大小
      * @param float $DiskUsage 磁盘使用率
@@ -88,6 +95,7 @@ class KibanaView extends AbstractModel
      * @param integer $CpuNum 节点cpu个数
      * @param float $CpuUsage cpu使用率
      * @param string $Zone 可用区
+     * @param string $NodeId ts-0noqayxu-az6-hot-03222010-0
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class KibanaView extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

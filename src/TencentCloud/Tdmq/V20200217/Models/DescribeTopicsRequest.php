@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取环境（命名空间）名称。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method string getTopicName() 获取主题名模糊匹配。
  * @method void setTopicName(string $TopicName) 设置主题名模糊匹配。
  * @method integer getOffset() 获取起始下标，不填默认为0。
@@ -38,8 +40,6 @@ use TencentCloud\Common\AbstractModel;
 1：非持久分区主题类型；
 2：持久非分区主题类型；
 3：持久分区主题类型；
- * @method string getClusterId() 获取Pulsar 集群的ID
- * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method array getFilters() 获取* TopicName
 按照主题名字查询，精确查询。
 类型：String
@@ -61,6 +61,11 @@ class DescribeTopicsRequest extends AbstractModel
      * @var string 环境（命名空间）名称。
      */
     public $EnvironmentId;
+
+    /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
 
     /**
      * @var string 主题名模糊匹配。
@@ -87,11 +92,6 @@ class DescribeTopicsRequest extends AbstractModel
     public $TopicType;
 
     /**
-     * @var string Pulsar 集群的ID
-     */
-    public $ClusterId;
-
-    /**
      * @var array * TopicName
 按照主题名字查询，精确查询。
 类型：String
@@ -108,6 +108,7 @@ class DescribeTopicsRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId 环境（命名空间）名称。
+     * @param string $ClusterId Pulsar 集群的ID
      * @param string $TopicName 主题名模糊匹配。
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
@@ -116,7 +117,6 @@ class DescribeTopicsRequest extends AbstractModel
 1：非持久分区主题类型；
 2：持久非分区主题类型；
 3：持久分区主题类型；
-     * @param string $ClusterId Pulsar 集群的ID
      * @param array $Filters * TopicName
 按照主题名字查询，精确查询。
 类型：String
@@ -142,6 +142,10 @@ class DescribeTopicsRequest extends AbstractModel
             $this->EnvironmentId = $param["EnvironmentId"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
             $this->TopicName = $param["TopicName"];
         }
@@ -156,10 +160,6 @@ class DescribeTopicsRequest extends AbstractModel
 
         if (array_key_exists("TopicType",$param) and $param["TopicType"] !== null) {
             $this->TopicType = $param["TopicType"];
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

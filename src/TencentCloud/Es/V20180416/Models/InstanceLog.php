@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置集群节点ip
  * @method string getMessage() 获取日志内容
  * @method void setMessage(string $Message) 设置日志内容
+ * @method string getNodeID() 获取集群节点ID
+ * @method void setNodeID(string $NodeID) 设置集群节点ID
  */
 class InstanceLog extends AbstractModel
 {
@@ -52,10 +54,16 @@ class InstanceLog extends AbstractModel
     public $Message;
 
     /**
+     * @var string 集群节点ID
+     */
+    public $NodeID;
+
+    /**
      * @param string $Time 日志时间
      * @param string $Level 日志级别
      * @param string $Ip 集群节点ip
      * @param string $Message 日志内容
+     * @param string $NodeID 集群节点ID
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class InstanceLog extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
         }
     }
 }

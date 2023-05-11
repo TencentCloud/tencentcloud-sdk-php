@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() 获取唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
  * @method void setUserId(string $UserId) 设置唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
- * @method string getGameId() 获取游戏ID
- * @method void setGameId(string $GameId) 设置游戏ID
+ * @method string getGameId() 获取【已废弃】只在TrylockWorker时生效
+ * @method void setGameId(string $GameId) 设置【已废弃】只在TrylockWorker时生效
  * @method string getGameRegion() 获取【已废弃】只在TrylockWorker时生效
  * @method void setGameRegion(string $GameRegion) 设置【已废弃】只在TrylockWorker时生效
  * @method string getGameParas() 获取游戏参数
@@ -69,7 +69,7 @@ class CreateSessionRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var string 游戏ID
+     * @var string 【已废弃】只在TrylockWorker时生效
      */
     public $GameId;
 
@@ -157,7 +157,7 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
 
     /**
      * @param string $UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
-     * @param string $GameId 游戏ID
+     * @param string $GameId 【已废弃】只在TrylockWorker时生效
      * @param string $GameRegion 【已废弃】只在TrylockWorker时生效
      * @param string $GameParas 游戏参数
      * @param string $ClientSession 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空

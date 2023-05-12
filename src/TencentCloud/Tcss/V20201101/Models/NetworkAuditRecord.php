@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取操作人uin
  * @method void setUin(string $Uin) 设置操作人uin
+ * @method integer getPolicyId() 获取策略id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyId(integer $PolicyId) 设置策略id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkAuditRecord extends AbstractModel
 {
@@ -90,6 +94,12 @@ class NetworkAuditRecord extends AbstractModel
     public $Uin;
 
     /**
+     * @var integer 策略id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyId;
+
+    /**
      * @param string $ClusterId 集群id
      * @param string $ClusterName 集群名字
      * @param string $Region 集群区域
@@ -100,6 +110,8 @@ class NetworkAuditRecord extends AbstractModel
      * @param integer $AppId 操作人appid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 操作人uin
+     * @param integer $PolicyId 策略id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -148,6 +160,10 @@ class NetworkAuditRecord extends AbstractModel
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

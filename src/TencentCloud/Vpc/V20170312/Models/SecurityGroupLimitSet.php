@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupInstanceLimit(integer $SecurityGroupInstanceLimit) 设置单安全组关联实例数
  * @method integer getInstanceSecurityGroupLimit() 获取实例关联安全组数
  * @method void setInstanceSecurityGroupLimit(integer $InstanceSecurityGroupLimit) 设置实例关联安全组数
+ * @method integer getSecurityGroupExtendedPolicyLimit() 获取安全组展开后的规则数限制
+ * @method void setSecurityGroupExtendedPolicyLimit(integer $SecurityGroupExtendedPolicyLimit) 设置安全组展开后的规则数限制
+ * @method integer getSecurityGroupReferedCvmAndEniLimit() 获取被引用的安全组关联CVM、ENI的实例配额
+ * @method void setSecurityGroupReferedCvmAndEniLimit(integer $SecurityGroupReferedCvmAndEniLimit) 设置被引用的安全组关联CVM、ENI的实例配额
+ * @method integer getSecurityGroupReferedSvcLimit() 获取被引用的安全组关联数据库、LB等服务实例配额
+ * @method void setSecurityGroupReferedSvcLimit(integer $SecurityGroupReferedSvcLimit) 设置被引用的安全组关联数据库、LB等服务实例配额
  */
 class SecurityGroupLimitSet extends AbstractModel
 {
@@ -59,11 +65,29 @@ class SecurityGroupLimitSet extends AbstractModel
     public $InstanceSecurityGroupLimit;
 
     /**
+     * @var integer 安全组展开后的规则数限制
+     */
+    public $SecurityGroupExtendedPolicyLimit;
+
+    /**
+     * @var integer 被引用的安全组关联CVM、ENI的实例配额
+     */
+    public $SecurityGroupReferedCvmAndEniLimit;
+
+    /**
+     * @var integer 被引用的安全组关联数据库、LB等服务实例配额
+     */
+    public $SecurityGroupReferedSvcLimit;
+
+    /**
      * @param integer $SecurityGroupLimit 每个项目每个地域可创建安全组数
      * @param integer $SecurityGroupPolicyLimit 安全组下的最大规则数
      * @param integer $ReferedSecurityGroupLimit 安全组下嵌套安全组规则数
      * @param integer $SecurityGroupInstanceLimit 单安全组关联实例数
      * @param integer $InstanceSecurityGroupLimit 实例关联安全组数
+     * @param integer $SecurityGroupExtendedPolicyLimit 安全组展开后的规则数限制
+     * @param integer $SecurityGroupReferedCvmAndEniLimit 被引用的安全组关联CVM、ENI的实例配额
+     * @param integer $SecurityGroupReferedSvcLimit 被引用的安全组关联数据库、LB等服务实例配额
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class SecurityGroupLimitSet extends AbstractModel
 
         if (array_key_exists("InstanceSecurityGroupLimit",$param) and $param["InstanceSecurityGroupLimit"] !== null) {
             $this->InstanceSecurityGroupLimit = $param["InstanceSecurityGroupLimit"];
+        }
+
+        if (array_key_exists("SecurityGroupExtendedPolicyLimit",$param) and $param["SecurityGroupExtendedPolicyLimit"] !== null) {
+            $this->SecurityGroupExtendedPolicyLimit = $param["SecurityGroupExtendedPolicyLimit"];
+        }
+
+        if (array_key_exists("SecurityGroupReferedCvmAndEniLimit",$param) and $param["SecurityGroupReferedCvmAndEniLimit"] !== null) {
+            $this->SecurityGroupReferedCvmAndEniLimit = $param["SecurityGroupReferedCvmAndEniLimit"];
+        }
+
+        if (array_key_exists("SecurityGroupReferedSvcLimit",$param) and $param["SecurityGroupReferedSvcLimit"] !== null) {
+            $this->SecurityGroupReferedSvcLimit = $param["SecurityGroupReferedSvcLimit"];
         }
     }
 }

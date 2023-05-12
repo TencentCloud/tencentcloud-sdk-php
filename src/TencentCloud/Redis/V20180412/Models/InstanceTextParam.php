@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例字符型参数描述
  *
- * @method string getParamName() 获取参数名
- * @method void setParamName(string $ParamName) 设置参数名
- * @method string getValueType() 获取参数类型：text
- * @method void setValueType(string $ValueType) 设置参数类型：text
- * @method string getNeedRestart() 获取修改后是否需要重启：true，false
- * @method void setNeedRestart(string $NeedRestart) 设置修改后是否需要重启：true，false
- * @method string getDefaultValue() 获取参数默认值
- * @method void setDefaultValue(string $DefaultValue) 设置参数默认值
- * @method string getCurrentValue() 获取当前运行参数值
- * @method void setCurrentValue(string $CurrentValue) 设置当前运行参数值
- * @method string getTips() 获取参数说明
- * @method void setTips(string $Tips) 设置参数说明
- * @method array getTextValue() 获取参数可取值
- * @method void setTextValue(array $TextValue) 设置参数可取值
- * @method integer getStatus() 获取参数状态, 1: 修改中， 2：修改完成
- * @method void setStatus(integer $Status) 设置参数状态, 1: 修改中， 2：修改完成
+ * @method string getParamName() 获取参数名称。
+ * @method void setParamName(string $ParamName) 设置参数名称。
+ * @method string getValueType() 获取参数类型。例如：text。
+ * @method void setValueType(string $ValueType) 设置参数类型。例如：text。
+ * @method string getNeedRestart() 获取参数修改后是否需要重启。
+- true：需要。
+- false：不需要。
+ * @method void setNeedRestart(string $NeedRestart) 设置参数修改后是否需要重启。
+- true：需要。
+- false：不需要。
+ * @method string getDefaultValue() 获取参数默认值。
+ * @method void setDefaultValue(string $DefaultValue) 设置参数默认值。
+ * @method string getCurrentValue() 获取参数当前运行值。
+ * @method void setCurrentValue(string $CurrentValue) 设置参数当前运行值。
+ * @method string getTips() 获取参数说明。
+ * @method void setTips(string $Tips) 设置参数说明。
+ * @method array getTextValue() 获取参数可取值。
+ * @method void setTextValue(array $TextValue) 设置参数可取值。
+ * @method integer getStatus() 获取参数修改状态。
+- 1: 修改中。
+- 2：修改完成。
+ * @method void setStatus(integer $Status) 设置参数修改状态。
+- 1: 修改中。
+- 2：修改完成。
  */
 class InstanceTextParam extends AbstractModel
 {
     /**
-     * @var string 参数名
+     * @var string 参数名称。
      */
     public $ParamName;
 
     /**
-     * @var string 参数类型：text
+     * @var string 参数类型。例如：text。
      */
     public $ValueType;
 
     /**
-     * @var string 修改后是否需要重启：true，false
+     * @var string 参数修改后是否需要重启。
+- true：需要。
+- false：不需要。
      */
     public $NeedRestart;
 
     /**
-     * @var string 参数默认值
+     * @var string 参数默认值。
      */
     public $DefaultValue;
 
     /**
-     * @var string 当前运行参数值
+     * @var string 参数当前运行值。
      */
     public $CurrentValue;
 
     /**
-     * @var string 参数说明
+     * @var string 参数说明。
      */
     public $Tips;
 
     /**
-     * @var array 参数可取值
+     * @var array 参数可取值。
      */
     public $TextValue;
 
     /**
-     * @var integer 参数状态, 1: 修改中， 2：修改完成
+     * @var integer 参数修改状态。
+- 1: 修改中。
+- 2：修改完成。
      */
     public $Status;
 
     /**
-     * @param string $ParamName 参数名
-     * @param string $ValueType 参数类型：text
-     * @param string $NeedRestart 修改后是否需要重启：true，false
-     * @param string $DefaultValue 参数默认值
-     * @param string $CurrentValue 当前运行参数值
-     * @param string $Tips 参数说明
-     * @param array $TextValue 参数可取值
-     * @param integer $Status 参数状态, 1: 修改中， 2：修改完成
+     * @param string $ParamName 参数名称。
+     * @param string $ValueType 参数类型。例如：text。
+     * @param string $NeedRestart 参数修改后是否需要重启。
+- true：需要。
+- false：不需要。
+     * @param string $DefaultValue 参数默认值。
+     * @param string $CurrentValue 参数当前运行值。
+     * @param string $Tips 参数说明。
+     * @param array $TextValue 参数可取值。
+     * @param integer $Status 参数修改状态。
+- 1: 修改中。
+- 2：修改完成。
      */
     function __construct()
     {

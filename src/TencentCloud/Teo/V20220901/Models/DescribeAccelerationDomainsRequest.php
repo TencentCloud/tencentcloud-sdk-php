@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccelerationDomains请求参数结构体
  *
- * @method string getZoneId() 获取加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
- * @method void setZoneId(string $ZoneId) 设置加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
+ * @method string getZoneId() 获取加速域名所属站点ID。
+ * @method void setZoneId(string $ZoneId) 设置加速域名所属站点ID。
  * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>domain-name<br>   按照【<strong>加速域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否
 <li>origin-type<br>   按照【<strong>源站类型</strong>】进行过滤。<br>   类型：String<br>   必选：否
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccelerationDomainsRequest extends AbstractModel
 {
     /**
-     * @var string 加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
+     * @var string 加速域名所属站点ID。
      */
     public $ZoneId;
 
@@ -112,7 +112,7 @@ class DescribeAccelerationDomainsRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param string $ZoneId 加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
+     * @param string $ZoneId 加速域名所属站点ID。
      * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>domain-name<br>   按照【<strong>加速域名名称</strong>】进行过滤。<br>   类型：String<br>   必选：否
 <li>origin-type<br>   按照【<strong>源站类型</strong>】进行过滤。<br>   类型：String<br>   必选：否

@@ -21,33 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 安全组规则集合
  *
  * @method string getVersion() 获取安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEgress() 获取出站规则。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgress(array $Egress) 设置出站规则。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIngress() 获取入站规则。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIngress(array $Ingress) 设置入站规则。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityGroupPolicySet extends AbstractModel
 {
     /**
      * @var string 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var array 出站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Egress;
 
     /**
      * @var array 入站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ingress;
 
     /**
      * @param string $Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Egress 出站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Ingress 入站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

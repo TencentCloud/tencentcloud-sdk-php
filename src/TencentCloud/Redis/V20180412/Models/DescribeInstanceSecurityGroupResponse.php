@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSecurityGroup返回参数结构体
  *
- * @method array getInstanceSecurityGroupsDetail() 获取实例安全组信息
- * @method void setInstanceSecurityGroupsDetail(array $InstanceSecurityGroupsDetail) 设置实例安全组信息
+ * @method array getInstanceSecurityGroupsDetail() 获取实例安全组信息。
+ * @method void setInstanceSecurityGroupsDetail(array $InstanceSecurityGroupsDetail) 设置实例安全组信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceSecurityGroupResponse extends AbstractModel
 {
     /**
-     * @var array 实例安全组信息
+     * @var array 实例安全组信息。
      */
     public $InstanceSecurityGroupsDetail;
 
@@ -38,7 +38,7 @@ class DescribeInstanceSecurityGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceSecurityGroupsDetail 实例安全组信息
+     * @param array $InstanceSecurityGroupsDetail 实例安全组信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

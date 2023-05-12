@@ -20,58 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxySlowLog请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getBeginTime() 获取开始时间
- * @method void setBeginTime(string $BeginTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getMinQueryTime() 获取慢查询阈值（单位：毫秒）
- * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值（单位：毫秒）
- * @method integer getLimit() 获取页面大小
- * @method void setLimit(integer $Limit) 设置页面大小
- * @method integer getOffset() 获取偏移量，取Limit整数倍
- * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
+ * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+ * @method string getBeginTime() 获取慢查询的开始时间。
+ * @method void setBeginTime(string $BeginTime) 设置慢查询的开始时间。
+ * @method string getEndTime() 获取慢查询的结束时间。
+ * @method void setEndTime(string $EndTime) 设置慢查询的结束时间。
+ * @method integer getMinQueryTime() 获取慢查询阈值，单位：毫秒。
+ * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值，单位：毫秒。
+ * @method integer getLimit() 获取分页大小。默认为 20，取值范围[20,1000]。
+ * @method void setLimit(integer $Limit) 设置分页大小。默认为 20，取值范围[20,1000]。
+ * @method integer getOffset() 获取偏移量，取Limit整数倍。
+ * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍。
  */
 class DescribeProxySlowLogRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间
+     * @var string 慢查询的开始时间。
      */
     public $BeginTime;
 
     /**
-     * @var string 结束时间
+     * @var string 慢查询的结束时间。
      */
     public $EndTime;
 
     /**
-     * @var integer 慢查询阈值（单位：毫秒）
+     * @var integer 慢查询阈值，单位：毫秒。
      */
     public $MinQueryTime;
 
     /**
-     * @var integer 页面大小
+     * @var integer 分页大小。默认为 20，取值范围[20,1000]。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，取Limit整数倍
+     * @var integer 偏移量，取Limit整数倍。
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $BeginTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param integer $MinQueryTime 慢查询阈值（单位：毫秒）
-     * @param integer $Limit 页面大小
-     * @param integer $Offset 偏移量，取Limit整数倍
+     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+     * @param string $BeginTime 慢查询的开始时间。
+     * @param string $EndTime 慢查询的结束时间。
+     * @param integer $MinQueryTime 慢查询阈值，单位：毫秒。
+     * @param integer $Limit 分页大小。默认为 20，取值范围[20,1000]。
+     * @param integer $Offset 偏移量，取Limit整数倍。
      */
     function __construct()
     {

@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceParams返回参数结构体
  *
- * @method integer getTotalCount() 获取实例参数个数
- * @method void setTotalCount(integer $TotalCount) 设置实例参数个数
- * @method array getInstanceEnumParam() 获取实例枚举类型参数
- * @method void setInstanceEnumParam(array $InstanceEnumParam) 设置实例枚举类型参数
- * @method array getInstanceIntegerParam() 获取实例整型参数
- * @method void setInstanceIntegerParam(array $InstanceIntegerParam) 设置实例整型参数
- * @method array getInstanceTextParam() 获取实例字符型参数
- * @method void setInstanceTextParam(array $InstanceTextParam) 设置实例字符型参数
- * @method array getInstanceMultiParam() 获取实例多选项型参数
- * @method void setInstanceMultiParam(array $InstanceMultiParam) 设置实例多选项型参数
+ * @method integer getTotalCount() 获取参数列表总数量。
+ * @method void setTotalCount(integer $TotalCount) 设置参数列表总数量。
+ * @method array getInstanceEnumParam() 获取实例枚举类型参数。
+ * @method void setInstanceEnumParam(array $InstanceEnumParam) 设置实例枚举类型参数。
+ * @method array getInstanceIntegerParam() 获取实例整型参数。
+ * @method void setInstanceIntegerParam(array $InstanceIntegerParam) 设置实例整型参数。
+ * @method array getInstanceTextParam() 获取实例字符型参数。
+ * @method void setInstanceTextParam(array $InstanceTextParam) 设置实例字符型参数。
+ * @method array getInstanceMultiParam() 获取实例多选项型参数。
+ * @method void setInstanceMultiParam(array $InstanceMultiParam) 设置实例多选项型参数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceParamsResponse extends AbstractModel
 {
     /**
-     * @var integer 实例参数个数
+     * @var integer 参数列表总数量。
      */
     public $TotalCount;
 
     /**
-     * @var array 实例枚举类型参数
+     * @var array 实例枚举类型参数。
      */
     public $InstanceEnumParam;
 
     /**
-     * @var array 实例整型参数
+     * @var array 实例整型参数。
      */
     public $InstanceIntegerParam;
 
     /**
-     * @var array 实例字符型参数
+     * @var array 实例字符型参数。
      */
     public $InstanceTextParam;
 
     /**
-     * @var array 实例多选项型参数
+     * @var array 实例多选项型参数。
      */
     public $InstanceMultiParam;
 
@@ -66,11 +66,11 @@ class DescribeInstanceParamsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 实例参数个数
-     * @param array $InstanceEnumParam 实例枚举类型参数
-     * @param array $InstanceIntegerParam 实例整型参数
-     * @param array $InstanceTextParam 实例字符型参数
-     * @param array $InstanceMultiParam 实例多选项型参数
+     * @param integer $TotalCount 参数列表总数量。
+     * @param array $InstanceEnumParam 实例枚举类型参数。
+     * @param array $InstanceIntegerParam 实例整型参数。
+     * @param array $InstanceTextParam 实例字符型参数。
+     * @param array $InstanceMultiParam 实例多选项型参数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

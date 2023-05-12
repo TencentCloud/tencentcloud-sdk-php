@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ManualBackupInstance请求参数结构体
  *
- * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
- * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
- * @method string getRemark() 获取备份的备注信息
- * @method void setRemark(string $Remark) 设置备份的备注信息
- * @method integer getStorageDays() 获取保存天数。0代表指定默认保留时间
- * @method void setStorageDays(integer $StorageDays) 设置保存天数。0代表指定默认保留时间
+ * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method string getRemark() 获取手动备份任务的备注信息。
+ * @method void setRemark(string $Remark) 设置手动备份任务的备注信息。
+ * @method integer getStorageDays() 获取备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。
+ * @method void setStorageDays(integer $StorageDays) 设置备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。
  */
 class ManualBackupInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
+     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 备份的备注信息
+     * @var string 手动备份任务的备注信息。
      */
     public $Remark;
 
     /**
-     * @var integer 保存天数。0代表指定默认保留时间
+     * @var integer 备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。
      */
     public $StorageDays;
 
     /**
-     * @param string $InstanceId 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
-     * @param string $Remark 备份的备注信息
-     * @param integer $StorageDays 保存天数。0代表指定默认保留时间
+     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param string $Remark 手动备份任务的备注信息。
+     * @param integer $StorageDays 备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。
      */
     function __construct()
     {

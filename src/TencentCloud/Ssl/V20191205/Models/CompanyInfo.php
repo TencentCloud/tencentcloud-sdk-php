@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompanyAddress(string $CompanyAddress) 设置公司所在详细地址
  * @method string getCompanyPhone() 获取公司电话
  * @method void setCompanyPhone(string $CompanyPhone) 设置公司电话
+ * @method string getIdType() 获取类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIdType(string $IdType) 设置类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIdNumber() 获取ID号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIdNumber(string $IdNumber) 设置ID号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompanyInfo extends AbstractModel
 {
@@ -73,6 +81,18 @@ class CompanyInfo extends AbstractModel
     public $CompanyPhone;
 
     /**
+     * @var string 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IdType;
+
+    /**
+     * @var string ID号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IdNumber;
+
+    /**
      * @param string $CompanyName 公司名称
      * @param integer $CompanyId 公司ID
      * @param string $CompanyCountry 公司所在国家
@@ -80,6 +100,10 @@ class CompanyInfo extends AbstractModel
      * @param string $CompanyCity 公司所在城市
      * @param string $CompanyAddress 公司所在详细地址
      * @param string $CompanyPhone 公司电话
+     * @param string $IdType 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IdNumber ID号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +144,14 @@ class CompanyInfo extends AbstractModel
 
         if (array_key_exists("CompanyPhone",$param) and $param["CompanyPhone"] !== null) {
             $this->CompanyPhone = $param["CompanyPhone"];
+        }
+
+        if (array_key_exists("IdType",$param) and $param["IdType"] !== null) {
+            $this->IdType = $param["IdType"];
+        }
+
+        if (array_key_exists("IdNumber",$param) and $param["IdNumber"] !== null) {
+            $this->IdNumber = $param["IdNumber"];
         }
     }
 }

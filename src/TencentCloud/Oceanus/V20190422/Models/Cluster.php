@@ -126,6 +126,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNeedManageNode(integer $IsNeedManageNode) 设置前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClusterSessions() 获取session集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterSessions(array $ClusterSessions) 设置session集群信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -323,6 +327,12 @@ class Cluster extends AbstractModel
     public $IsNeedManageNode;
 
     /**
+     * @var array session集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterSessions;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -375,6 +385,8 @@ class Cluster extends AbstractModel
      * @param integer $PayMode 0 后付费,1 预付费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNeedManageNode 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClusterSessions session集群信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -544,6 +556,15 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("IsNeedManageNode",$param) and $param["IsNeedManageNode"] !== null) {
             $this->IsNeedManageNode = $param["IsNeedManageNode"];
+        }
+
+        if (array_key_exists("ClusterSessions",$param) and $param["ClusterSessions"] !== null) {
+            $this->ClusterSessions = [];
+            foreach ($param["ClusterSessions"] as $key => $value){
+                $obj = new ClusterSession();
+                $obj->deserialize($value);
+                array_push($this->ClusterSessions, $obj);
+            }
         }
     }
 }

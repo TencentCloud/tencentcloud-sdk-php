@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceAccount返回参数结构体
  *
- * @method array getAccounts() 获取账号详细信息
+ * @method array getAccounts() 获取账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccounts(array $Accounts) 设置账号详细信息
+ * @method void setAccounts(array $Accounts) 设置账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取账号个数
+ * @method integer getTotalCount() 获取账号个数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置账号个数
+ * @method void setTotalCount(integer $TotalCount) 设置账号个数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceAccountResponse extends AbstractModel
 {
     /**
-     * @var array 账号详细信息
+     * @var array 账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Accounts;
 
     /**
-     * @var integer 账号个数
+     * @var integer 账号个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
@@ -51,9 +51,9 @@ class DescribeInstanceAccountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Accounts 账号详细信息
+     * @param array $Accounts 账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 账号个数
+     * @param integer $TotalCount 账号个数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

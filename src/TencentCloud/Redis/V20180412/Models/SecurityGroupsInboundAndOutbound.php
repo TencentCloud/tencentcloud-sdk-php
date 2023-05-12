@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组出入规则
  *
- * @method string getAction() 获取执行动作
- * @method void setAction(string $Action) 设置执行动作
- * @method string getIp() 获取IP地址
- * @method void setIp(string $Ip) 设置IP地址
- * @method string getPort() 获取端口号
- * @method void setPort(string $Port) 设置端口号
- * @method string getProto() 获取协议类型
- * @method void setProto(string $Proto) 设置协议类型
+ * @method string getAction() 获取标识出入数据库的IP与端口是否被允许。
+ * @method void setAction(string $Action) 设置标识出入数据库的IP与端口是否被允许。
+ * @method string getIp() 获取出入数据库的IP地址
+ * @method void setIp(string $Ip) 设置出入数据库的IP地址
+ * @method string getPort() 获取端口号。
+ * @method void setPort(string $Port) 设置端口号。
+ * @method string getProto() 获取协议类型。
+ * @method void setProto(string $Proto) 设置协议类型。
  */
 class SecurityGroupsInboundAndOutbound extends AbstractModel
 {
     /**
-     * @var string 执行动作
+     * @var string 标识出入数据库的IP与端口是否被允许。
      */
     public $Action;
 
     /**
-     * @var string IP地址
+     * @var string 出入数据库的IP地址
      */
     public $Ip;
 
     /**
-     * @var string 端口号
+     * @var string 端口号。
      */
     public $Port;
 
     /**
-     * @var string 协议类型
+     * @var string 协议类型。
      */
     public $Proto;
 
     /**
-     * @param string $Action 执行动作
-     * @param string $Ip IP地址
-     * @param string $Port 端口号
-     * @param string $Proto 协议类型
+     * @param string $Action 标识出入数据库的IP与端口是否被允许。
+     * @param string $Ip 出入数据库的IP地址
+     * @param string $Port 端口号。
+     * @param string $Proto 协议类型。
      */
     function __construct()
     {

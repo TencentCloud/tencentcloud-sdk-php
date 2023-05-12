@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceAccount请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
- * @method integer getOffset() 获取分页偏移量
- * @method void setOffset(integer $Offset) 设置分页偏移量
+ * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ * @method integer getLimit() 获取分页大小。
+ * @method void setLimit(integer $Limit) 设置分页大小。
+ * @method integer getOffset() 获取分页偏移量。取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置分页偏移量。取Limit整数倍。计算公式：offset=limit*(页码-1)。
  */
 class DescribeInstanceAccountRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 分页大小
+     * @var integer 分页大小。
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量
+     * @var integer 分页偏移量。取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param integer $Limit 分页大小
-     * @param integer $Offset 分页偏移量
+     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param integer $Limit 分页大小。
+     * @param integer $Offset 分页偏移量。取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     function __construct()
     {

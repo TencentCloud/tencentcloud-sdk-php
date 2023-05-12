@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceZoneInfo返回参数结构体
  *
- * @method integer getTotalCount() 获取实例节点组的个数
- * @method void setTotalCount(integer $TotalCount) 设置实例节点组的个数
- * @method array getReplicaGroups() 获取实例节点组列表
- * @method void setReplicaGroups(array $ReplicaGroups) 设置实例节点组列表
+ * @method integer getTotalCount() 获取实例节点组的个数。
+ * @method void setTotalCount(integer $TotalCount) 设置实例节点组的个数。
+ * @method array getReplicaGroups() 获取实例节点组列表。
+ * @method void setReplicaGroups(array $ReplicaGroups) 设置实例节点组列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceZoneInfoResponse extends AbstractModel
 {
     /**
-     * @var integer 实例节点组的个数
+     * @var integer 实例节点组的个数。
      */
     public $TotalCount;
 
     /**
-     * @var array 实例节点组列表
+     * @var array 实例节点组列表。
      */
     public $ReplicaGroups;
 
@@ -45,8 +45,8 @@ class DescribeInstanceZoneInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 实例节点组的个数
-     * @param array $ReplicaGroups 实例节点组列表
+     * @param integer $TotalCount 实例节点组的个数。
+     * @param array $ReplicaGroups 实例节点组列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

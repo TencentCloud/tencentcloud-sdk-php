@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getGroups() 获取安全组规则。
  * @method void setGroups(array $Groups) 设置安全组规则。
- * @method string getVIP() 获取安全组生效内网地址。
- * @method void setVIP(string $VIP) 设置安全组生效内网地址。
- * @method string getVPort() 获取安全组生效内网端口。
- * @method void setVPort(string $VPort) 设置安全组生效内网端口。
+ * @method string getVIP() 获取实例内网IPv4地址。
+ * @method void setVIP(string $VIP) 设置实例内网IPv4地址。
+ * @method string getVPort() 获取内网端口。
+ * @method void setVPort(string $VPort) 设置内网端口。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -37,12 +37,12 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
     public $Groups;
 
     /**
-     * @var string 安全组生效内网地址。
+     * @var string 实例内网IPv4地址。
      */
     public $VIP;
 
     /**
-     * @var string 安全组生效内网端口。
+     * @var string 内网端口。
      */
     public $VPort;
 
@@ -53,8 +53,8 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
 
     /**
      * @param array $Groups 安全组规则。
-     * @param string $VIP 安全组生效内网地址。
-     * @param string $VPort 安全组生效内网端口。
+     * @param string $VIP 实例内网IPv4地址。
+     * @param string $VPort 内网端口。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

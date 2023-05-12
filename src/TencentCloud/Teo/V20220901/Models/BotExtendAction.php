@@ -22,7 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAction() 获取处置动作，取值有：
 <li>monitor：观察；</li>
-<li>trans：放行；</li>
 <li>alg：JavaScript挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机，按照ExtendActions分配处置动作和比例；</li>
@@ -31,7 +30,6 @@ use TencentCloud\Common\AbstractModel;
 <li>longdelay：长时响应。</li>
  * @method void setAction(string $Action) 设置处置动作，取值有：
 <li>monitor：观察；</li>
-<li>trans：放行；</li>
 <li>alg：JavaScript挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机，按照ExtendActions分配处置动作和比例；</li>
@@ -48,7 +46,6 @@ class BotExtendAction extends AbstractModel
     /**
      * @var string 处置动作，取值有：
 <li>monitor：观察；</li>
-<li>trans：放行；</li>
 <li>alg：JavaScript挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机，按照ExtendActions分配处置动作和比例；</li>
@@ -67,7 +64,6 @@ class BotExtendAction extends AbstractModel
     /**
      * @param string $Action 处置动作，取值有：
 <li>monitor：观察；</li>
-<li>trans：放行；</li>
 <li>alg：JavaScript挑战；</li>
 <li>captcha：托管挑战；</li>
 <li>random：随机，按照ExtendActions分配处置动作和比例；</li>

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 说明：如果Protocol设置为ALL，则Port也需要设置为all。
  * @method ServiceTemplateSpecification getServiceTemplate() 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
  * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
- * @method string getCidrBlock() 获取网段或IP(互斥)。
- * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。
+ * @method string getCidrBlock() 获取网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+ * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
  * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。
  * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
@@ -69,7 +69,7 @@ class SecurityGroupPolicy extends AbstractModel
     public $ServiceTemplate;
 
     /**
-     * @var string 网段或IP(互斥)。
+     * @var string 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
      */
     public $CidrBlock;
 
@@ -109,7 +109,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @param string $Port 端口(all, 离散port,  range)。
 说明：如果Protocol设置为ALL，则Port也需要设置为all。
      * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-     * @param string $CidrBlock 网段或IP(互斥)。
+     * @param string $CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
      * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者IP地址组ID。

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSecurityGroup请求参数结构体
  *
- * @method array getInstanceIds() 获取实例列表
- * @method void setInstanceIds(array $InstanceIds) 设置实例列表
+ * @method array getInstanceIds() 获取实例 ID 列表。例如;["crs-f2ho5rsz\n"]
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。例如;["crs-f2ho5rsz\n"]
  */
 class DescribeInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var array 实例列表
+     * @var array 实例 ID 列表。例如;["crs-f2ho5rsz\n"]
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds 实例列表
+     * @param array $InstanceIds 实例 ID 列表。例如;["crs-f2ho5rsz\n"]
      */
     function __construct()
     {

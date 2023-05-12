@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetUin(integer $TargetUin) 设置当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdditionalConfig() 获取凭据额外配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdditionalConfig(string $AdditionalConfig) 设置凭据额外配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -165,6 +169,12 @@ class DescribeSecretResponse extends AbstractModel
     public $TargetUin;
 
     /**
+     * @var string 凭据额外配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdditionalConfig;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -194,6 +204,8 @@ class DescribeSecretResponse extends AbstractModel
      * @param array $AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdditionalConfig 凭据额外配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -272,6 +284,10 @@ class DescribeSecretResponse extends AbstractModel
 
         if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
             $this->TargetUin = $param["TargetUin"];
+        }
+
+        if (array_key_exists("AdditionalConfig",$param) and $param["AdditionalConfig"] !== null) {
+            $this->AdditionalConfig = $param["AdditionalConfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

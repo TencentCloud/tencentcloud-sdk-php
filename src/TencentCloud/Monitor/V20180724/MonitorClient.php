@@ -88,6 +88,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeBaseMetricsResponse DescribeBaseMetrics(Models\DescribeBaseMetricsRequest $req) 获取基础指标属性
  * @method Models\DescribeBasicAlarmListResponse DescribeBasicAlarmList(Models\DescribeBasicAlarmListRequest $req) 获取基础告警列表
  * @method Models\DescribeBindingPolicyObjectListResponse DescribeBindingPolicyObjectList(Models\DescribeBindingPolicyObjectListRequest $req) 获取已绑定对象列表
+ * @method Models\DescribeClusterAgentCreatingProgressResponse DescribeClusterAgentCreatingProgress(Models\DescribeClusterAgentCreatingProgressRequest $req) 获取prom实例中集群详细的关联状态
  * @method Models\DescribeConditionsTemplateListResponse DescribeConditionsTemplateList(Models\DescribeConditionsTemplateListRequest $req) 获取条件模板列表
  * @method Models\DescribeDNSConfigResponse DescribeDNSConfig(Models\DescribeDNSConfigRequest $req) 列出 Grafana DNS 配置
  * @method Models\DescribeExporterIntegrationsResponse DescribeExporterIntegrations(Models\DescribeExporterIntegrationsRequest $req) 查询 exporter 集成列表

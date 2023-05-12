@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountSet(array $AccountSet) 设置关联的账号
  * @method array getCmdTemplateIdSet() 获取关联的高危命令模板ID
  * @method void setCmdTemplateIdSet(array $CmdTemplateIdSet) 设置关联的高危命令模板ID
+ * @method array getACTemplateIdSet() 获取关联高危DB模版ID
+ * @method void setACTemplateIdSet(array $ACTemplateIdSet) 设置关联高危DB模版ID
  * @method boolean getAllowDiskFileUp() 获取是否开启 RDP 磁盘映射文件上传
  * @method void setAllowDiskFileUp(boolean $AllowDiskFileUp) 设置是否开启 RDP 磁盘映射文件上传
  * @method boolean getAllowDiskFileDown() 获取是否开启 RDP 磁盘映射文件下载
@@ -170,6 +172,11 @@ class ModifyAclRequest extends AbstractModel
     public $CmdTemplateIdSet;
 
     /**
+     * @var array 关联高危DB模版ID
+     */
+    public $ACTemplateIdSet;
+
+    /**
      * @var boolean 是否开启 RDP 磁盘映射文件上传
      */
     public $AllowDiskFileUp;
@@ -230,6 +237,7 @@ class ModifyAclRequest extends AbstractModel
      * @param array $DeviceGroupIdSet 关联的资产组ID
      * @param array $AccountSet 关联的账号
      * @param array $CmdTemplateIdSet 关联的高危命令模板ID
+     * @param array $ACTemplateIdSet 关联高危DB模版ID
      * @param boolean $AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传
      * @param boolean $AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载
      * @param boolean $AllowShellFileUp 是否开启rz sz文件上传
@@ -324,6 +332,10 @@ class ModifyAclRequest extends AbstractModel
 
         if (array_key_exists("CmdTemplateIdSet",$param) and $param["CmdTemplateIdSet"] !== null) {
             $this->CmdTemplateIdSet = $param["CmdTemplateIdSet"];
+        }
+
+        if (array_key_exists("ACTemplateIdSet",$param) and $param["ACTemplateIdSet"] !== null) {
+            $this->ACTemplateIdSet = $param["ACTemplateIdSet"];
         }
 
         if (array_key_exists("AllowDiskFileUp",$param) and $param["AllowDiskFileUp"] !== null) {

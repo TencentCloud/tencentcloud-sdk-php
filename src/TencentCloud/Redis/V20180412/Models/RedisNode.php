@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Redis节点的运行信息
  *
- * @method integer getKeys() 获取节点key的个数
- * @method void setKeys(integer $Keys) 设置节点key的个数
- * @method string getSlot() 获取节点slot分布
- * @method void setSlot(string $Slot) 设置节点slot分布
- * @method string getNodeId() 获取节点的序列ID
- * @method void setNodeId(string $NodeId) 设置节点的序列ID
- * @method string getStatus() 获取节点的状态
- * @method void setStatus(string $Status) 设置节点的状态
- * @method string getRole() 获取节点角色
- * @method void setRole(string $Role) 设置节点角色
+ * @method integer getKeys() 获取Redis 节点上 Key 的个数。
+ * @method void setKeys(integer $Keys) 设置Redis 节点上 Key 的个数。
+ * @method string getSlot() 获取Redis 节点 Slot 分布范围。例如：0-5460。
+ * @method void setSlot(string $Slot) 设置Redis 节点 Slot 分布范围。例如：0-5460。
+ * @method string getNodeId() 获取节点的序列 ID。
+ * @method void setNodeId(string $NodeId) 设置节点的序列 ID。
+ * @method string getStatus() 获取节点的状态。
+ * @method void setStatus(string $Status) 设置节点的状态。
+ * @method string getRole() 获取节点角色。
+ * @method void setRole(string $Role) 设置节点角色。
  */
 class RedisNode extends AbstractModel
 {
     /**
-     * @var integer 节点key的个数
+     * @var integer Redis 节点上 Key 的个数。
      */
     public $Keys;
 
     /**
-     * @var string 节点slot分布
+     * @var string Redis 节点 Slot 分布范围。例如：0-5460。
      */
     public $Slot;
 
     /**
-     * @var string 节点的序列ID
+     * @var string 节点的序列 ID。
      */
     public $NodeId;
 
     /**
-     * @var string 节点的状态
+     * @var string 节点的状态。
      */
     public $Status;
 
     /**
-     * @var string 节点角色
+     * @var string 节点角色。
      */
     public $Role;
 
     /**
-     * @param integer $Keys 节点key的个数
-     * @param string $Slot 节点slot分布
-     * @param string $NodeId 节点的序列ID
-     * @param string $Status 节点的状态
-     * @param string $Role 节点角色
+     * @param integer $Keys Redis 节点上 Key 的个数。
+     * @param string $Slot Redis 节点 Slot 分布范围。例如：0-5460。
+     * @param string $NodeId 节点的序列 ID。
+     * @param string $Status 节点的状态。
+     * @param string $Role 节点角色。
      */
     function __construct()
     {

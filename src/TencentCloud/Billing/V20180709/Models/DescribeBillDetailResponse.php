@@ -22,9 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDetailSet() 获取详情列表
  * @method void setDetailSet(array $DetailSet) 设置详情列表
- * @method integer getTotal() 获取总记录数
+ * @method integer getTotal() 获取总记录数，24小时缓存一次，可能比实际总记录数少
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置总记录数
+ * @method void setTotal(integer $Total) 设置总记录数，24小时缓存一次，可能比实际总记录数少
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContext() 获取本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContext(string $Context) 设置本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,10 +41,16 @@ class DescribeBillDetailResponse extends AbstractModel
     public $DetailSet;
 
     /**
-     * @var integer 总记录数
+     * @var integer 总记录数，24小时缓存一次，可能比实际总记录数少
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
+
+    /**
+     * @var string 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Context;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,7 +59,9 @@ class DescribeBillDetailResponse extends AbstractModel
 
     /**
      * @param array $DetailSet 详情列表
-     * @param integer $Total 总记录数
+     * @param integer $Total 总记录数，24小时缓存一次，可能比实际总记录数少
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -77,6 +89,10 @@ class DescribeBillDetailResponse extends AbstractModel
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
+            $this->Context = $param["Context"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置排序方式 desc , asc
  * @method string getBy() 获取排序字段 PublishDate  LastScanTime HostCount
  * @method void setBy(string $By) 设置排序字段 PublishDate  LastScanTime HostCount
+ * @method boolean getHotspotAttack() 获取是否热点漏洞
+ * @method void setHotspotAttack(boolean $HotspotAttack) 设置是否热点漏洞
  */
 class DescribeEmergencyVulListRequest extends AbstractModel
 {
@@ -74,6 +76,11 @@ class DescribeEmergencyVulListRequest extends AbstractModel
     public $By;
 
     /**
+     * @var boolean 是否热点漏洞
+     */
+    public $HotspotAttack;
+
+    /**
      * @param integer $Limit 返回数量，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
@@ -84,6 +91,7 @@ class DescribeEmergencyVulListRequest extends AbstractModel
 <li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
      * @param string $Order 排序方式 desc , asc
      * @param string $By 排序字段 PublishDate  LastScanTime HostCount
+     * @param boolean $HotspotAttack 是否热点漏洞
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class DescribeEmergencyVulListRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("HotspotAttack",$param) and $param["HotspotAttack"] !== null) {
+            $this->HotspotAttack = $param["HotspotAttack"];
         }
     }
 }

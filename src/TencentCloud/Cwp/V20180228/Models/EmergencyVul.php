@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenseAttackCount(integer $DefenseAttackCount) 设置已防御的攻击次数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMethod() 获取检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMethod(integer $Method) 设置检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAttackLevel() 获取攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDefenseState() 获取是否有漏洞主机开启漏洞防御
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefenseState(boolean $DefenseState) 设置是否有漏洞主机开启漏洞防御
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmergencyVul extends AbstractModel
 {
@@ -140,6 +152,24 @@ class EmergencyVul extends AbstractModel
     public $DefenseAttackCount;
 
     /**
+     * @var integer 检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Method;
+
+    /**
+     * @var integer 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttackLevel;
+
+    /**
+     * @var boolean 是否有漏洞主机开启漏洞防御
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefenseState;
+
+    /**
      * @param integer $VulId 漏洞id
      * @param integer $Level 漏洞级别
      * @param string $VulName 漏洞名称
@@ -159,6 +189,12 @@ class EmergencyVul extends AbstractModel
      * @param integer $IsSupportDefense 是否支持防御， 0:不支持 1:支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Method 检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AttackLevel 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DefenseState 是否有漏洞主机开启漏洞防御
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +264,18 @@ class EmergencyVul extends AbstractModel
 
         if (array_key_exists("DefenseAttackCount",$param) and $param["DefenseAttackCount"] !== null) {
             $this->DefenseAttackCount = $param["DefenseAttackCount"];
+        }
+
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("AttackLevel",$param) and $param["AttackLevel"] !== null) {
+            $this->AttackLevel = $param["AttackLevel"];
+        }
+
+        if (array_key_exists("DefenseState",$param) and $param["DefenseState"] !== null) {
+            $this->DefenseState = $param["DefenseState"];
         }
     }
 }

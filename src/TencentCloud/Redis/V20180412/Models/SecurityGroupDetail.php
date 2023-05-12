@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组详情
  *
- * @method integer getProjectId() 获取项目Id
- * @method void setProjectId(integer $ProjectId) 设置项目Id
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getSecurityGroupId() 获取安全组Id
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组Id
- * @method string getSecurityGroupName() 获取安全组名称
- * @method void setSecurityGroupName(string $SecurityGroupName) 设置安全组名称
- * @method string getSecurityGroupRemark() 获取安全组标记
- * @method void setSecurityGroupRemark(string $SecurityGroupRemark) 设置安全组标记
- * @method array getInboundRule() 获取安全组入站规则
- * @method void setInboundRule(array $InboundRule) 设置安全组入站规则
- * @method array getOutboundRule() 获取安全组出站规则
- * @method void setOutboundRule(array $OutboundRule) 设置安全组出站规则
+ * @method integer getProjectId() 获取项目ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID。
+ * @method string getCreateTime() 获取创建安全组的时间。
+ * @method void setCreateTime(string $CreateTime) 设置创建安全组的时间。
+ * @method string getSecurityGroupId() 获取安全组 ID。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
+ * @method string getSecurityGroupName() 获取安全组名称。
+ * @method void setSecurityGroupName(string $SecurityGroupName) 设置安全组名称。
+ * @method string getSecurityGroupRemark() 获取安全组标记。
+ * @method void setSecurityGroupRemark(string $SecurityGroupRemark) 设置安全组标记。
+ * @method array getInboundRule() 获取安全组入站规则，即控制访问数据库的来源。
+ * @method void setInboundRule(array $InboundRule) 设置安全组入站规则，即控制访问数据库的来源。
+ * @method array getOutboundRule() 获取安全组出站规则。
+ * @method void setOutboundRule(array $OutboundRule) 设置安全组出站规则。
  */
 class SecurityGroupDetail extends AbstractModel
 {
     /**
-     * @var integer 项目Id
+     * @var integer 项目ID。
      */
     public $ProjectId;
 
     /**
-     * @var string 创建时间
+     * @var string 创建安全组的时间。
      */
     public $CreateTime;
 
     /**
-     * @var string 安全组Id
+     * @var string 安全组 ID。
      */
     public $SecurityGroupId;
 
     /**
-     * @var string 安全组名称
+     * @var string 安全组名称。
      */
     public $SecurityGroupName;
 
     /**
-     * @var string 安全组标记
+     * @var string 安全组标记。
      */
     public $SecurityGroupRemark;
 
     /**
-     * @var array 安全组入站规则
+     * @var array 安全组入站规则，即控制访问数据库的来源。
      */
     public $InboundRule;
 
     /**
-     * @var array 安全组出站规则
+     * @var array 安全组出站规则。
      */
     public $OutboundRule;
 
     /**
-     * @param integer $ProjectId 项目Id
-     * @param string $CreateTime 创建时间
-     * @param string $SecurityGroupId 安全组Id
-     * @param string $SecurityGroupName 安全组名称
-     * @param string $SecurityGroupRemark 安全组标记
-     * @param array $InboundRule 安全组入站规则
-     * @param array $OutboundRule 安全组出站规则
+     * @param integer $ProjectId 项目ID。
+     * @param string $CreateTime 创建安全组的时间。
+     * @param string $SecurityGroupId 安全组 ID。
+     * @param string $SecurityGroupName 安全组名称。
+     * @param string $SecurityGroupRemark 安全组标记。
+     * @param array $InboundRule 安全组入站规则，即控制访问数据库的来源。
+     * @param array $OutboundRule 安全组出站规则。
      */
     function __construct()
     {

@@ -20,81 +20,113 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 子账号信息
  *
- * @method string getInstanceId() 获取实例ID
+ * @method string getInstanceId() 获取实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountName() 获取账号名称（如果是主账号，名称为root）
+ * @method string getAccountName() 获取账号名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountName(string $AccountName) 设置账号名称（如果是主账号，名称为root）
+ * @method void setAccountName(string $AccountName) 设置账号名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemark() 获取账号描述信息
+ * @method string getRemark() 获取账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置账号描述信息
+ * @method void setRemark(string $Remark) 设置账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPrivilege() 获取读写策略：r-只读，w-只写，rw-读写
+ * @method string getPrivilege() 获取读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivilege(string $Privilege) 设置读写策略：r-只读，w-只写，rw-读写
+ * @method void setPrivilege(string $Privilege) 设置读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getReadonlyPolicy() 获取路由策略：master-主节点，replication-从节点
+ * @method array getReadonlyPolicy() 获取只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置路由策略：master-主节点，replication-从节点
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+ * @method integer getStatus() 获取子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+ * @method void setStatus(integer $Status) 设置子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Account extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var string 账号名称（如果是主账号，名称为root）
+     * @var string 账号名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountName;
 
     /**
-     * @var string 账号描述信息
+     * @var string 账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var string 读写策略：r-只读，w-只写，rw-读写
+     * @var string 读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Privilege;
 
     /**
-     * @var array 路由策略：master-主节点，replication-从节点
+     * @var array 只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var integer 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+     * @var integer 子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountName 账号名称（如果是主账号，名称为root）
+     * @param string $AccountName 账号名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Remark 账号描述信息
+     * @param string $Remark 账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Privilege 读写策略：r-只读，w-只写，rw-读写
+     * @param string $Privilege 读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ReadonlyPolicy 路由策略：master-主节点，replication-从节点
+     * @param array $ReadonlyPolicy 只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+     * @param integer $Status 子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

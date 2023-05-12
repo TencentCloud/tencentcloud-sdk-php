@@ -148,6 +148,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCAEncryptAlgorithms() 获取CA证书的所有加密方式	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCAEncryptAlgorithms(array $CAEncryptAlgorithms) 设置CA证书的所有加密方式	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCACommonNames() 获取CA证书的所有通用名称	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCACommonNames(array $CACommonNames) 设置CA证书的所有通用名称	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCAEndTimes() 获取CA证书所有的到期时间	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCAEndTimes(array $CAEndTimes) 设置CA证书所有的到期时间	
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -346,6 +358,24 @@ class DescribeCertificateResponse extends AbstractModel
     public $Tags;
 
     /**
+     * @var array CA证书的所有加密方式	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CAEncryptAlgorithms;
+
+    /**
+     * @var array CA证书的所有通用名称	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CACommonNames;
+
+    /**
+     * @var array CA证书所有的到期时间	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CAEndTimes;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -414,6 +444,12 @@ class DescribeCertificateResponse extends AbstractModel
      * @param boolean $Deployable 是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CAEncryptAlgorithms CA证书的所有加密方式	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CACommonNames CA证书的所有通用名称	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CAEndTimes CA证书所有的到期时间	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -564,6 +600,18 @@ class DescribeCertificateResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CAEncryptAlgorithms",$param) and $param["CAEncryptAlgorithms"] !== null) {
+            $this->CAEncryptAlgorithms = $param["CAEncryptAlgorithms"];
+        }
+
+        if (array_key_exists("CACommonNames",$param) and $param["CACommonNames"] !== null) {
+            $this->CACommonNames = $param["CACommonNames"];
+        }
+
+        if (array_key_exists("CAEndTimes",$param) and $param["CAEndTimes"] !== null) {
+            $this->CAEndTimes = $param["CAEndTimes"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

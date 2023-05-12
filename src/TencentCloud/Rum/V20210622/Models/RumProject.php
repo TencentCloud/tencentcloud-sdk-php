@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectStatus(integer $ProjectStatus) 设置项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessPoint() 获取日志接入点，用户忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessPoint(string $AccessPoint) 设置日志接入点，用户忽略。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RumProject extends AbstractModel
 {
@@ -151,6 +155,12 @@ class RumProject extends AbstractModel
     public $ProjectStatus;
 
     /**
+     * @var string 日志接入点，用户忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessPoint;
+
+    /**
      * @param string $Name 项目名
      * @param string $Creator 创建者 id
      * @param string $InstanceID 实例 id
@@ -171,6 +181,8 @@ class RumProject extends AbstractModel
      * @param integer $IsStar 是否星标  1:是 0:否
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectStatus 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessPoint 日志接入点，用户忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -248,6 +260,10 @@ class RumProject extends AbstractModel
 
         if (array_key_exists("ProjectStatus",$param) and $param["ProjectStatus"] !== null) {
             $this->ProjectStatus = $param["ProjectStatus"];
+        }
+
+        if (array_key_exists("AccessPoint",$param) and $param["AccessPoint"] !== null) {
+            $this->AccessPoint = $param["AccessPoint"];
         }
     }
 }

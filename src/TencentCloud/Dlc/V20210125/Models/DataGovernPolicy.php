@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据治理规则
  *
-
+ * @method string getRuleType() 获取治理规则类型，Customize: 自定义；Intelligence: 智能治理
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleType(string $RuleType) 设置治理规则类型，Customize: 自定义；Intelligence: 智能治理
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGovernEngine() 获取治理引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGovernEngine(string $GovernEngine) 设置治理引擎
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataGovernPolicy extends AbstractModel
 {
-
+    /**
+     * @var string 治理规则类型，Customize: 自定义；Intelligence: 智能治理
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleType;
 
     /**
+     * @var string 治理引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GovernEngine;
 
+    /**
+     * @param string $RuleType 治理规则类型，Customize: 自定义；Intelligence: 智能治理
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GovernEngine 治理引擎
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +62,12 @@ class DataGovernPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
 
+        if (array_key_exists("GovernEngine",$param) and $param["GovernEngine"] !== null) {
+            $this->GovernEngine = $param["GovernEngine"];
+        }
     }
 }

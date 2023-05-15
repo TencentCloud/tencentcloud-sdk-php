@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceName(string $VoiceName) 设置音色名称
  * @method integer getSampleRate() 获取音频采样率：
 
-16000：16k（默认）
+16000：16k
  * @method void setSampleRate(integer $SampleRate) 设置音频采样率：
 
-16000：16k（默认）
+16000：16k
  * @method integer getVoiceGender() 获取音色性别:
 
 1-male
@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
 2-female
  * @method integer getVoiceLanguage() 获取语言类型：
 
-1-中文（默认）
+1-中文
  * @method void setVoiceLanguage(integer $VoiceLanguage) 设置语言类型：
 
-1-中文（默认）
+1-中文
  * @method string getCodec() 获取音频格式，音频类型(wav,mp3,aac,m4a)
  * @method void setCodec(string $Codec) 设置音频格式，音频类型(wav,mp3,aac,m4a)
  * @method array getAudioIdList() 获取音频ID集合
@@ -70,7 +70,7 @@ class CreateVRSTaskRequest extends AbstractModel
     /**
      * @var integer 音频采样率：
 
-16000：16k（默认）
+16000：16k
      */
     public $SampleRate;
 
@@ -86,7 +86,7 @@ class CreateVRSTaskRequest extends AbstractModel
     /**
      * @var integer 语言类型：
 
-1-中文（默认）
+1-中文
      */
     public $VoiceLanguage;
 
@@ -111,7 +111,7 @@ class CreateVRSTaskRequest extends AbstractModel
      * @param string $VoiceName 音色名称
      * @param integer $SampleRate 音频采样率：
 
-16000：16k（默认）
+16000：16k
      * @param integer $VoiceGender 音色性别:
 
 1-male
@@ -119,7 +119,7 @@ class CreateVRSTaskRequest extends AbstractModel
 2-female
      * @param integer $VoiceLanguage 语言类型：
 
-1-中文（默认）
+1-中文
      * @param string $Codec 音频格式，音频类型(wav,mp3,aac,m4a)
      * @param array $AudioIdList 音频ID集合
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。

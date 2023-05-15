@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method string getChargeType() 获取计费模式
  * @method void setChargeType(string $ChargeType) 设置计费模式
- * @method string getResourceGroupId() 获取预付费专用资源组id
+ * @method string getResourceGroupId() 获取包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费专用资源组id
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取预付费专用资源组名称
+ * @method string getResourceGroupName() 获取包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费专用资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ResourceConfigInfo getResourceConfigInfo() 获取资源配置
  * @method void setResourceConfigInfo(ResourceConfigInfo $ResourceConfigInfo) 设置资源配置
@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodList(array $PodList) 设置运行中的Pod的名字
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CosPathInfo getModelInferenceCodeInfo() 获取模型推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelInferenceCodeInfo(CosPathInfo $ModelInferenceCodeInfo) 设置模型推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchTaskDetail extends AbstractModel
 {
@@ -156,13 +160,13 @@ class BatchTaskDetail extends AbstractModel
     public $ChargeType;
 
     /**
-     * @var string 预付费专用资源组id
+     * @var string 包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
-     * @var string 预付费专用资源组名称
+     * @var string 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
@@ -305,15 +309,21 @@ class BatchTaskDetail extends AbstractModel
     public $PodList;
 
     /**
+     * @var CosPathInfo 模型推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelInferenceCodeInfo;
+
+    /**
      * @param string $BatchTaskId 跑批任务ID
      * @param string $BatchTaskName 跑批任务名称
      * @param string $Uin 主账号uin
      * @param string $SubUin 子账号uin
      * @param string $Region 地域
      * @param string $ChargeType 计费模式
-     * @param string $ResourceGroupId 预付费专用资源组id
+     * @param string $ResourceGroupId 包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 预付费专用资源组名称
+     * @param string $ResourceGroupName 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceConfigInfo $ResourceConfigInfo 资源配置
      * @param array $Tags 标签
@@ -355,6 +365,8 @@ class BatchTaskDetail extends AbstractModel
      * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PodList 运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosPathInfo $ModelInferenceCodeInfo 模型推理代码信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -516,6 +528,11 @@ class BatchTaskDetail extends AbstractModel
 
         if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
             $this->PodList = $param["PodList"];
+        }
+
+        if (array_key_exists("ModelInferenceCodeInfo",$param) and $param["ModelInferenceCodeInfo"] !== null) {
+            $this->ModelInferenceCodeInfo = new CosPathInfo();
+            $this->ModelInferenceCodeInfo->deserialize($param["ModelInferenceCodeInfo"]);
         }
     }
 }

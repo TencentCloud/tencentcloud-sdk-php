@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedSignReview(boolean $NeedSignReview) 设置本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
  * @method string getUserData() 获取用户流程自定义数据参数
  * @method void setUserData(string $UserData) 设置用户流程自定义数据参数
+ * @method array getCcInfos() 获取抄送人信息
+ * @method void setCcInfos(array $CcInfos) 设置抄送人信息
  */
 class BaseFlowInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class BaseFlowInfo extends AbstractModel
     public $UserData;
 
     /**
+     * @var array 抄送人信息
+     */
+    public $CcInfos;
+
+    /**
      * @param string $FlowName 合同流程名称
      * @param string $FlowType 合同流程类型
      * @param string $FlowDescription 合同流程描述信息
@@ -96,6 +103,7 @@ class BaseFlowInfo extends AbstractModel
      * @param array $FormFields 填写控件内容
      * @param boolean $NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
      * @param string $UserData 用户流程自定义数据参数
+     * @param array $CcInfos 抄送人信息
      */
     function __construct()
     {
@@ -149,6 +157,15 @@ class BaseFlowInfo extends AbstractModel
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {
+            $this->CcInfos = [];
+            foreach ($param["CcInfos"] as $key => $value){
+                $obj = new CcInfo();
+                $obj->deserialize($value);
+                array_push($this->CcInfos, $obj);
+            }
         }
     }
 }

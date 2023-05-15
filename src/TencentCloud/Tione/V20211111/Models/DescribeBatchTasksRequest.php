@@ -26,7 +26,7 @@ use TencentCloud\Common\AbstractModel;
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
 Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
+ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
  * @method void setFilters(array $Filters) 设置过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
 
@@ -34,7 +34,7 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
 Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
+ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
  * @method array getTagFilters() 获取标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
  * @method void setTagFilters(array $TagFilters) 设置标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
@@ -56,7 +56,7 @@ class DescribeBatchTasksRequest extends AbstractModel
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
 Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
+ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
      */
     public $Filters;
@@ -93,7 +93,7 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
 Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
+ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
      * @param array $TagFilters 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
      * @param integer $Offset 偏移量，默认为0

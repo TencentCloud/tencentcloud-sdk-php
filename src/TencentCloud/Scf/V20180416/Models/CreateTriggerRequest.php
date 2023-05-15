@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(string $Enable) 设置触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
  * @method string getCustomArgument() 获取用户自定义参数，仅支持timer触发器
  * @method void setCustomArgument(string $CustomArgument) 设置用户自定义参数，仅支持timer触发器
+ * @method string getDescription() 获取触发器描述
+ * @method void setDescription(string $Description) 设置触发器描述
  */
 class CreateTriggerRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateTriggerRequest extends AbstractModel
     public $CustomArgument;
 
     /**
+     * @var string 触发器描述
+     */
+    public $Description;
+
+    /**
      * @param string $FunctionName 新建触发器绑定的函数名称
      * @param string $TriggerName 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
      * @param string $Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型。创建 cls 触发器请参考[CLS 创建投递 SCF 任务](https://cloud.tencent.com/document/product/614/61096)。
@@ -88,6 +95,7 @@ class CreateTriggerRequest extends AbstractModel
      * @param string $Qualifier 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
      * @param string $Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
      * @param string $CustomArgument 用户自定义参数，仅支持timer触发器
+     * @param string $Description 触发器描述
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateTriggerRequest extends AbstractModel
 
         if (array_key_exists("CustomArgument",$param) and $param["CustomArgument"] !== null) {
             $this->CustomArgument = $param["CustomArgument"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

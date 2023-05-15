@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChargeType(string $ChargeType) 设置计费模式
  * @method string getChargeStatus() 获取计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
  * @method void setChargeStatus(string $ChargeStatus) 设置计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
- * @method string getResourceGroupId() 获取预付费专用资源组
+ * @method string getResourceGroupId() 获取包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费专用资源组
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ResourceConfigInfo getResourceConfigInfo() 获取资源配置
  * @method void setResourceConfigInfo(ResourceConfigInfo $ResourceConfigInfo) 设置资源配置
@@ -66,14 +66,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOutputs() 获取输出
  * @method void setOutputs(array $Outputs) 设置输出
- * @method string getResourceGroupName() 获取预付费专用资源组名称
+ * @method string getResourceGroupName() 获取包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费专用资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailureReason() 获取失败原因
  * @method void setFailureReason(string $FailureReason) 设置失败原因
- * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (for后付费)
- * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (for后付费)
+ * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (for 按量计费)
+ * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (for 按量计费)
  */
 class BatchTaskSetItem extends AbstractModel
 {
@@ -109,7 +109,7 @@ class BatchTaskSetItem extends AbstractModel
     public $ChargeStatus;
 
     /**
-     * @var string 预付费专用资源组
+     * @var string 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
@@ -165,7 +165,7 @@ class BatchTaskSetItem extends AbstractModel
     public $Outputs;
 
     /**
-     * @var string 预付费专用资源组名称
+     * @var string 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
@@ -176,7 +176,7 @@ class BatchTaskSetItem extends AbstractModel
     public $FailureReason;
 
     /**
-     * @var string 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @var string 计费金额信息，eg：2.00元/小时 (for 按量计费)
      */
     public $BillingInfo;
 
@@ -188,7 +188,7 @@ class BatchTaskSetItem extends AbstractModel
      * @param ImageInfo $ImageInfo 镜像信息
      * @param string $ChargeType 计费模式
      * @param string $ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
-     * @param string $ResourceGroupId 预付费专用资源组
+     * @param string $ResourceGroupId 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceConfigInfo $ResourceConfigInfo 资源配置
      * @param array $Tags 标签配置
@@ -204,10 +204,10 @@ class BatchTaskSetItem extends AbstractModel
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Outputs 输出
-     * @param string $ResourceGroupName 预付费专用资源组名称
+     * @param string $ResourceGroupName 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailureReason 失败原因
-     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
      */
     function __construct()
     {

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置数据源所属的集群id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersion() 获取数据源版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersion(string $Version) 设置数据源版本信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceBaseInfo extends AbstractModel
 {
@@ -98,6 +102,12 @@ class DatasourceBaseInfo extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string 数据源版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Version;
+
+    /**
      * @param array $DatabaseNames 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -111,6 +121,8 @@ class DatasourceBaseInfo extends AbstractModel
      * @param string $Type 数据源类型:枚举值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 数据源所属的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Version 数据源版本信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,10 @@ class DatasourceBaseInfo extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

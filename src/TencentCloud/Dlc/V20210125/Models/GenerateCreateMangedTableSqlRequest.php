@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitions(array $Partitions) 设置表分区信息
  * @method array getProperties() 获取表属性信息
  * @method void setProperties(array $Properties) 设置表属性信息
+ * @method array getUpsertKeys() 获取V2 upsert表 upsert键
+ * @method void setUpsertKeys(array $UpsertKeys) 设置V2 upsert表 upsert键
  */
 class GenerateCreateMangedTableSqlRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class GenerateCreateMangedTableSqlRequest extends AbstractModel
     public $Properties;
 
     /**
+     * @var array V2 upsert表 upsert键
+     */
+    public $UpsertKeys;
+
+    /**
      * @param TableBaseInfo $TableBaseInfo 表基本信息
      * @param array $Columns 表字段信息
      * @param array $Partitions 表分区信息
      * @param array $Properties 表属性信息
+     * @param array $UpsertKeys V2 upsert表 upsert键
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class GenerateCreateMangedTableSqlRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Properties, $obj);
             }
+        }
+
+        if (array_key_exists("UpsertKeys",$param) and $param["UpsertKeys"] !== null) {
+            $this->UpsertKeys = $param["UpsertKeys"];
         }
     }
 }

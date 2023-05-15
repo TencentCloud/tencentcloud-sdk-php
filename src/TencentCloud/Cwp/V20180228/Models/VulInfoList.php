@@ -96,6 +96,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCategory(integer $VulCategory) 设置漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAttackLevel() 获取攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getFixNoNeedRestart() 获取漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFixNoNeedRestart(boolean $FixNoNeedRestart) 设置漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMethod() 获取检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMethod(integer $Method) 设置检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulInfoList extends AbstractModel
 {
@@ -230,6 +242,24 @@ class VulInfoList extends AbstractModel
     public $VulCategory;
 
     /**
+     * @var integer 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttackLevel;
+
+    /**
+     * @var boolean 漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FixNoNeedRestart;
+
+    /**
+     * @var integer 检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Method;
+
+    /**
      * @param string $Ids 漏洞包含的事件id串，多个用“,”分割
      * @param string $Name 漏洞名
      * @param integer $Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
@@ -267,6 +297,12 @@ class VulInfoList extends AbstractModel
      * @param string $FirstAppearTime 首次出现时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulCategory 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AttackLevel 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $FixNoNeedRestart 漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Method 检测方式0 - 版本比对, 1 - POC验证
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -372,6 +408,18 @@ class VulInfoList extends AbstractModel
 
         if (array_key_exists("VulCategory",$param) and $param["VulCategory"] !== null) {
             $this->VulCategory = $param["VulCategory"];
+        }
+
+        if (array_key_exists("AttackLevel",$param) and $param["AttackLevel"] !== null) {
+            $this->AttackLevel = $param["AttackLevel"];
+        }
+
+        if (array_key_exists("FixNoNeedRestart",$param) and $param["FixNoNeedRestart"] !== null) {
+            $this->FixNoNeedRestart = $param["FixNoNeedRestart"];
+        }
+
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
         }
     }
 }

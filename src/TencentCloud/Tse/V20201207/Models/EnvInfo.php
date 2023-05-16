@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvDesc(string $EnvDesc) 设置环境描述
  * @method integer getClientBandWidth() 获取客户端带宽
  * @method void setClientBandWidth(integer $ClientBandWidth) 设置客户端带宽
+ * @method boolean getEnableConfigIntranet() 获取客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableConfigIntranet(boolean $EnableConfigIntranet) 设置客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -122,6 +126,12 @@ class EnvInfo extends AbstractModel
     public $ClientBandWidth;
 
     /**
+     * @var boolean 客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableConfigIntranet;
+
+    /**
      * @param string $EnvName 环境名称
      * @param array $VpcInfos 环境对应的网络信息
      * @param integer $StorageCapacity 云硬盘容量
@@ -136,6 +146,8 @@ class EnvInfo extends AbstractModel
      * @param string $AliasEnvName 环境别名
      * @param string $EnvDesc 环境描述
      * @param integer $ClientBandWidth 客户端带宽
+     * @param boolean $EnableConfigIntranet 客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -209,6 +221,10 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("ClientBandWidth",$param) and $param["ClientBandWidth"] !== null) {
             $this->ClientBandWidth = $param["ClientBandWidth"];
+        }
+
+        if (array_key_exists("EnableConfigIntranet",$param) and $param["EnableConfigIntranet"] !== null) {
+            $this->EnableConfigIntranet = $param["EnableConfigIntranet"];
         }
     }
 }

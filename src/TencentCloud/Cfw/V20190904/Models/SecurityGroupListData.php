@@ -82,6 +82,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站，默认1
  * @method integer getProtocolPortType() 获取是否使用端口协议模板，0：否，1：是
  * @method void setProtocolPortType(integer $ProtocolPortType) 设置是否使用端口协议模板，0：否，1：是
+ * @method string getUuid() 获取Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUuid(string $Uuid) 设置Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAssetGroupNameIn() 获取资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetGroupNameIn(string $AssetGroupNameIn) 设置资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAssetGroupNameOut() 获取资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetGroupNameOut(string $AssetGroupNameOut) 设置资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParameterName() 获取模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParameterName(string $ParameterName) 设置模板名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityGroupListData extends AbstractModel
 {
@@ -209,6 +229,36 @@ class SecurityGroupListData extends AbstractModel
     public $ProtocolPortType;
 
     /**
+     * @var string Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uuid;
+
+    /**
+     * @var string 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
+     * @var string 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetGroupNameIn;
+
+    /**
+     * @var string 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetGroupNameOut;
+
+    /**
+     * @var string 模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParameterName;
+
+    /**
      * @param integer $OrderIndex 执行顺序
      * @param string $SourceId 访问源
      * @param integer $SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
@@ -240,6 +290,16 @@ class SecurityGroupListData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Direction 方向，0：出站，1：入站，默认1
      * @param integer $ProtocolPortType 是否使用端口协议模板，0：否，1：是
+     * @param string $Uuid Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AssetGroupNameIn 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AssetGroupNameOut 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParameterName 模板名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -349,6 +409,26 @@ class SecurityGroupListData extends AbstractModel
 
         if (array_key_exists("ProtocolPortType",$param) and $param["ProtocolPortType"] !== null) {
             $this->ProtocolPortType = $param["ProtocolPortType"];
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("AssetGroupNameIn",$param) and $param["AssetGroupNameIn"] !== null) {
+            $this->AssetGroupNameIn = $param["AssetGroupNameIn"];
+        }
+
+        if (array_key_exists("AssetGroupNameOut",$param) and $param["AssetGroupNameOut"] !== null) {
+            $this->AssetGroupNameOut = $param["AssetGroupNameOut"];
+        }
+
+        if (array_key_exists("ParameterName",$param) and $param["ParameterName"] !== null) {
+            $this->ParameterName = $param["ParameterName"];
         }
     }
 }

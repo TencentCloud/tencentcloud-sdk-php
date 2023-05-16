@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getS3Bucket() 获取S3 bucket。
  * @method void setS3Bucket(string $S3Bucket) 设置S3 bucket。
- * @method string getS3Region() 获取S3 bucket 对应的区域。
- * @method void setS3Region(string $S3Region) 设置S3 bucket 对应的区域。
+ * @method string getS3Region() 获取S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+
+ * @method void setS3Region(string $S3Region) 设置S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+
  * @method string getS3Object() 获取S3 bucket 中的媒体资源路径。
  * @method void setS3Object(string $S3Object) 设置S3 bucket 中的媒体资源路径。
  * @method string getS3SecretId() 获取AWS 内网访问 媒体资源的秘钥id。
@@ -39,7 +45,10 @@ class S3InputInfo extends AbstractModel
     public $S3Bucket;
 
     /**
-     * @var string S3 bucket 对应的区域。
+     * @var string S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+
      */
     public $S3Region;
 
@@ -60,7 +69,10 @@ class S3InputInfo extends AbstractModel
 
     /**
      * @param string $S3Bucket S3 bucket。
-     * @param string $S3Region S3 bucket 对应的区域。
+     * @param string $S3Region S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+
      * @param string $S3Object S3 bucket 中的媒体资源路径。
      * @param string $S3SecretId AWS 内网访问 媒体资源的秘钥id。
      * @param string $S3SecretKey AWS 内网访问 媒体资源的秘钥key。

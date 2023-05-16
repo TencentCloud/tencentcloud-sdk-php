@@ -151,7 +151,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateRouteTableResponse CreateRouteTable(Models\CreateRouteTableRequest $req) 本接口(CreateRouteTable)用于创建路由表。
 * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
 * 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
- * @method Models\CreateRoutesResponse CreateRoutes(Models\CreateRoutesRequest $req) 本接口(CreateRoutes)用于创建路由策略。
+ * @method Models\CreateRoutesResponse CreateRoutes(Models\CreateRoutesRequest $req) 本接口（CreateRoutes）用于创建路由策略。
 * 向指定路由表批量新增路由策略。
  * @method Models\CreateSecurityGroupResponse CreateSecurityGroup(Models\CreateSecurityGroupRequest $req) 本接口（CreateSecurityGroup）用于创建新的安全组（SecurityGroup）。
 * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/12453">安全组数量限制</a>。
@@ -353,6 +353,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（DescribeCrossBorderCcnRegionBandwidthLimits）
 如有需要, 可以封禁任意云联网实例, 可接入到内部运营系统
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) 本接口 (DescribeTrafficPackages)  用于查询共享流量包详细信息，包括共享流量包唯一标识ID，名称，流量使用信息等
+ * @method Models\DescribeUsedIpAddressResponse DescribeUsedIpAddress(Models\DescribeUsedIpAddressRequest $req) 本接口(DescribeUsedIpAddress)用于查询Subnet或者Vpc内的ip的使用情况，
+如被ip被占用，返回占用ip的资源类别与id；如未被占用，返回空值
  * @method Models\DescribeVpcEndPointResponse DescribeVpcEndPoint(Models\DescribeVpcEndPointRequest $req) 本接口（DescribeVpcEndPoint）用于查询终端节点列表。
  * @method Models\DescribeVpcEndPointServiceResponse DescribeVpcEndPointService(Models\DescribeVpcEndPointServiceRequest $req) 查询终端节点服务列表。
  * @method Models\DescribeVpcEndPointServiceWhiteListResponse DescribeVpcEndPointServiceWhiteList(Models\DescribeVpcEndPointServiceWhiteListRequest $req) 本接口（DescribeVpcEndPointServiceWhiteList）用于查询终端节点服务的服务白名单列表。

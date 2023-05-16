@@ -36,8 +36,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method integer getWhitening() 获取美白程度，取值范围[0,100]。0不美白，100代表最高程度。默认值30。
  * @method void setWhitening(integer $Whitening) 设置美白程度，取值范围[0,100]。0不美白，100代表最高程度。默认值30。
- * @method integer getSmoothing() 获取磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
- * @method void setSmoothing(integer $Smoothing) 设置磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
+ * @method integer getSmoothing() 获取磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
+ * @method void setSmoothing(integer $Smoothing) 设置磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
  * @method integer getFaceLifting() 获取瘦脸程度，取值范围[0,100]。0不瘦脸，100代表最高程度。默认值70。
  * @method void setFaceLifting(integer $FaceLifting) 设置瘦脸程度，取值范围[0,100]。0不瘦脸，100代表最高程度。默认值70。
  * @method integer getEyeEnlarging() 获取大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
@@ -68,7 +68,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $Whitening;
 
     /**
-     * @var integer 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
+     * @var integer 磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
      */
     public $Smoothing;
 
@@ -96,7 +96,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param integer $Whitening 美白程度，取值范围[0,100]。0不美白，100代表最高程度。默认值30。
-     * @param integer $Smoothing 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
+     * @param integer $Smoothing 磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
      * @param integer $FaceLifting 瘦脸程度，取值范围[0,100]。0不瘦脸，100代表最高程度。默认值70。
      * @param integer $EyeEnlarging 大眼程度，取值范围[0,100]。0不大眼，100代表最高程度。默认值70。
      * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。

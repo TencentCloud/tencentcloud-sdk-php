@@ -24,8 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimestamp(integer $Timestamp) 设置事件发生的秒级unix时间戳。
  * @method string getEventType() 获取事件类型,有以下值:
 RoomStart:房间开始 RoomEnd:房间结束 MemberJoin:成员加入 MemberQuit:成员退出 RecordFinish:录制结束
+Camera0n: 摄像头打开
+Camera0ff: 摄像头关闭
+MicOn: 麦克风打开
+MicOff: 麦克风关闭
+ScreenOn: 屏幕共享打开
+ScreenOff: 屏幕共享关闭
+VisibleOn: 页面可见
+VisibleOff: 页面不可见
  * @method void setEventType(string $EventType) 设置事件类型,有以下值:
 RoomStart:房间开始 RoomEnd:房间结束 MemberJoin:成员加入 MemberQuit:成员退出 RecordFinish:录制结束
+Camera0n: 摄像头打开
+Camera0ff: 摄像头关闭
+MicOn: 麦克风打开
+MicOff: 麦克风关闭
+ScreenOn: 屏幕共享打开
+ScreenOff: 屏幕共享关闭
+VisibleOn: 页面可见
+VisibleOff: 页面不可见
  * @method EventDataInfo getEventData() 获取事件详细内容，包含房间号,成员类型事件包含用户Id。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventData(EventDataInfo $EventData) 设置事件详细内容，包含房间号,成员类型事件包含用户Id。
@@ -41,6 +57,14 @@ class EventInfo extends AbstractModel
     /**
      * @var string 事件类型,有以下值:
 RoomStart:房间开始 RoomEnd:房间结束 MemberJoin:成员加入 MemberQuit:成员退出 RecordFinish:录制结束
+Camera0n: 摄像头打开
+Camera0ff: 摄像头关闭
+MicOn: 麦克风打开
+MicOff: 麦克风关闭
+ScreenOn: 屏幕共享打开
+ScreenOff: 屏幕共享关闭
+VisibleOn: 页面可见
+VisibleOff: 页面不可见
      */
     public $EventType;
 
@@ -54,6 +78,14 @@ RoomStart:房间开始 RoomEnd:房间结束 MemberJoin:成员加入 MemberQuit:�
      * @param integer $Timestamp 事件发生的秒级unix时间戳。
      * @param string $EventType 事件类型,有以下值:
 RoomStart:房间开始 RoomEnd:房间结束 MemberJoin:成员加入 MemberQuit:成员退出 RecordFinish:录制结束
+Camera0n: 摄像头打开
+Camera0ff: 摄像头关闭
+MicOn: 麦克风打开
+MicOff: 麦克风关闭
+ScreenOn: 屏幕共享打开
+ScreenOff: 屏幕共享关闭
+VisibleOn: 页面可见
+VisibleOff: 页面不可见
      * @param EventDataInfo $EventData 事件详细内容，包含房间号,成员类型事件包含用户Id。
 注意：此字段可能返回 null，表示取不到有效值。
      */

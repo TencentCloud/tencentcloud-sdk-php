@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method string getChargeType() 获取计费模式
  * @method void setChargeType(string $ChargeType) 设置计费模式
- * @method string getResourceGroupId() 获取包年包月资源组id
+ * @method string getResourceGroupId() 获取包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupId(string $ResourceGroupId) 设置包年包月资源组id
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroupName() 获取包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,9 +114,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailureReason(string $FailureReason) 设置失败原因
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (for后付费)
+ * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (for后付费)
+ * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPodList() 获取运行中的Pod的名字
 注意：此字段可能返回 null，表示取不到有效值。
@@ -160,7 +160,7 @@ class BatchTaskDetail extends AbstractModel
     public $ChargeType;
 
     /**
-     * @var string 包年包月资源组id
+     * @var string 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
@@ -297,7 +297,7 @@ class BatchTaskDetail extends AbstractModel
     public $FailureReason;
 
     /**
-     * @var string 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @var string 计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingInfo;
@@ -321,7 +321,7 @@ class BatchTaskDetail extends AbstractModel
      * @param string $SubUin 子账号uin
      * @param string $Region 地域
      * @param string $ChargeType 计费模式
-     * @param string $ResourceGroupId 包年包月资源组id
+     * @param string $ResourceGroupId 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupName 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -362,7 +362,7 @@ class BatchTaskDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailureReason 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PodList 运行中的Pod的名字
 注意：此字段可能返回 null，表示取不到有效值。

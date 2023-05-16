@@ -82,6 +82,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskPlanId() 获取关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskPlanId(integer $TaskPlanId) 设置关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskPlanTitle() 获取关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskPlanTitle(string $TaskPlanTitle) 设置关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Task extends AbstractModel
 {
@@ -201,6 +209,18 @@ class Task extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskPlanId;
+
+    /**
+     * @var string 关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskPlanTitle;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -231,6 +251,10 @@ class Task extends AbstractModel
      * @param DescribePolicy $TaskPolicy 保护策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskPlanId 关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskPlanTitle 关联的演练计划名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -344,6 +368,14 @@ class Task extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("TaskPlanId",$param) and $param["TaskPlanId"] !== null) {
+            $this->TaskPlanId = $param["TaskPlanId"];
+        }
+
+        if (array_key_exists("TaskPlanTitle",$param) and $param["TaskPlanTitle"] !== null) {
+            $this->TaskPlanTitle = $param["TaskPlanTitle"];
         }
     }
 }

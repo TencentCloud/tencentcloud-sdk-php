@@ -96,6 +96,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterEndpointStatusResponse DescribeClusterEndpointStatus(Models\DescribeClusterEndpointStatusRequest $req) 查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
  * @method Models\DescribeClusterEndpointVipStatusResponse DescribeClusterEndpointVipStatus(Models\DescribeClusterEndpointVipStatusRequest $req) 查询集群开启端口流程状态(仅支持托管集群外网端口)
  * @method Models\DescribeClusterEndpointsResponse DescribeClusterEndpoints(Models\DescribeClusterEndpointsRequest $req) 获取集群的访问地址，包括内网地址，外网地址，外网域名，外网访问安全策略
+ * @method Models\DescribeClusterInspectionResultsOverviewResponse DescribeClusterInspectionResultsOverview(Models\DescribeClusterInspectionResultsOverviewRequest $req) 查询用户单个Region下的所有集群巡检结果概览信息
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群下节点实例信息
  * @method Models\DescribeClusterKubeconfigResponse DescribeClusterKubeconfig(Models\DescribeClusterKubeconfigRequest $req) 获取集群的kubeconfig文件，不同子账户获取自己的kubeconfig文件，该文件中有每个子账户自己的kube-apiserver的客户端证书，默认首次调此接口时候创建客户端证书，时效20年，未授予任何权限，如果是集群所有者或者主账户，则默认是cluster-admin权限。
  * @method Models\DescribeClusterLevelAttributeResponse DescribeClusterLevelAttribute(Models\DescribeClusterLevelAttributeRequest $req) 获取集群规模
@@ -177,6 +178,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(Models\GetUpgradeInstanceProgressRequest $req) 获得节点升级当前的进度
  * @method Models\InstallEdgeLogAgentResponse InstallEdgeLogAgent(Models\InstallEdgeLogAgentRequest $req) 在tke@edge集群的边缘节点上安装日志采集组件
  * @method Models\InstallLogAgentResponse InstallLogAgent(Models\InstallLogAgentRequest $req) 在TKE集群中安装CLS日志采集组件
+ * @method Models\ListClusterInspectionResultsResponse ListClusterInspectionResults(Models\ListClusterInspectionResultsRequest $req) 查询指定集群的巡检结果信息
+ * @method Models\ListClusterInspectionResultsItemsResponse ListClusterInspectionResultsItems(Models\ListClusterInspectionResultsItemsRequest $req) 查询集群巡检结果历史列表
  * @method Models\ModifyClusterAsGroupAttributeResponse ModifyClusterAsGroupAttribute(Models\ModifyClusterAsGroupAttributeRequest $req) 修改集群伸缩组属性
  * @method Models\ModifyClusterAsGroupOptionAttributeResponse ModifyClusterAsGroupOptionAttribute(Models\ModifyClusterAsGroupOptionAttributeRequest $req) 修改集群弹性伸缩属性
  * @method Models\ModifyClusterAttributeResponse ModifyClusterAttribute(Models\ModifyClusterAttributeRequest $req) 修改集群属性

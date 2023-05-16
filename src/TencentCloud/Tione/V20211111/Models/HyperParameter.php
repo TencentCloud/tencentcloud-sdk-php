@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinBlockSizeTf(string $MinBlockSizeTf) 设置FROZEN_GRAPH、SAVED_MODEL格式在进行优化时切分子图的最小算子数目，一般无需进行改动，默认为10
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPipelineArgs() 获取Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPipelineArgs(string $PipelineArgs) 设置Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HyperParameter extends AbstractModel
 {
@@ -94,6 +98,12 @@ class HyperParameter extends AbstractModel
     public $MinBlockSizeTf;
 
     /**
+     * @var string Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PipelineArgs;
+
+    /**
      * @param string $MaxNNZ 最大nnz数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SlotNum slot数
@@ -107,6 +117,8 @@ class HyperParameter extends AbstractModel
      * @param string $MinBlockSizePt TORCH_SCRIPT、MMDETECTION、DETECTRON2、HUGGINGFACE格式在进行优化时切分子图的最小算子数目，一般无需进行改动，默认为3
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MinBlockSizeTf FROZEN_GRAPH、SAVED_MODEL格式在进行优化时切分子图的最小算子数目，一般无需进行改动，默认为10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PipelineArgs Stable Diffusion 模型优化参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class HyperParameter extends AbstractModel
 
         if (array_key_exists("MinBlockSizeTf",$param) and $param["MinBlockSizeTf"] !== null) {
             $this->MinBlockSizeTf = $param["MinBlockSizeTf"];
+        }
+
+        if (array_key_exists("PipelineArgs",$param) and $param["PipelineArgs"] !== null) {
+            $this->PipelineArgs = $param["PipelineArgs"];
         }
     }
 }

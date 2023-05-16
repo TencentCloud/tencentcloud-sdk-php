@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getS3Bucket() 获取绑定的 AWS S3 存储桶。
  * @method void setS3Bucket(string $S3Bucket) 设置绑定的 AWS S3 存储桶。
- * @method string getS3Region() 获取绑定的桶所在 AWS 区域。
- * @method void setS3Region(string $S3Region) 设置绑定的桶所在 AWS 区域。
+ * @method string getS3Region() 获取绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3
+ * @method void setS3Region(string $S3Region) 设置绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3
  * @method string getDir() 获取绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
  * @method void setDir(string $Dir) 设置绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
  * @method array getFormats() 获取允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
@@ -51,7 +55,9 @@ class AwsS3FileUploadTrigger extends AbstractModel
     public $S3Bucket;
 
     /**
-     * @var string 绑定的桶所在 AWS 区域。
+     * @var string 绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3
      */
     public $S3Region;
 
@@ -86,7 +92,9 @@ class AwsS3FileUploadTrigger extends AbstractModel
 
     /**
      * @param string $S3Bucket 绑定的 AWS S3 存储桶。
-     * @param string $S3Region 绑定的桶所在 AWS 区域。
+     * @param string $S3Region 绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3
      * @param string $Dir 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
      * @param array $Formats 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
      * @param string $S3SecretId 绑定的 AWS S3 存储桶的秘钥ID。

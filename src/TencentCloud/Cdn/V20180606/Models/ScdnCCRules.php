@@ -44,9 +44,13 @@ index：首页
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrequencyLimit(integer $FrequencyLimit) 设置限频阈值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPunishmentSwitch() 获取IP 惩罚开关，可选on|off
+ * @method string getPunishmentSwitch() 获取IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPunishmentSwitch(string $PunishmentSwitch) 设置IP 惩罚开关，可选on|off
+ * @method void setPunishmentSwitch(string $PunishmentSwitch) 设置IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPunishmentTime() 获取IP 惩罚时长
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,7 +100,9 @@ index：首页
     public $FrequencyLimit;
 
     /**
-     * @var string IP 惩罚开关，可选on|off
+     * @var string IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PunishmentSwitch;
@@ -132,7 +138,9 @@ index：首页
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FrequencyLimit 限频阈值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PunishmentSwitch IP 惩罚开关，可选on|off
+     * @param string $PunishmentSwitch IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PunishmentTime IP 惩罚时长
 注意：此字段可能返回 null，表示取不到有效值。

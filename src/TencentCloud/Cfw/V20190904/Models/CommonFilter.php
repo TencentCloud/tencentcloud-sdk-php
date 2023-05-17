@@ -22,12 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取检索的键值
  * @method void setName(string $Name) 设置检索的键值
- * @method array getValues() 获取检索的值
- * @method void setValues(array $Values) 设置检索的值
- * @method integer getOperatorType() 获取枚举类型，代表name与values之间的匹配关系
+ * @method array getValues() 获取检索的值，各检索值间为OR关系
+ * @method void setValues(array $Values) 设置检索的值，各检索值间为OR关系
+ * @method integer getOperatorType() 获取枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -40,23 +38,13 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
- * @method void setOperatorType(integer $OperatorType) 设置枚举类型，代表name与values之间的匹配关系
+ * @method void setOperatorType(integer $OperatorType) 设置枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -69,18 +57,10 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
  */
 class CommonFilter extends AbstractModel
@@ -91,15 +71,13 @@ class CommonFilter extends AbstractModel
     public $Name;
 
     /**
-     * @var array 检索的值
+     * @var array 检索的值，各检索值间为OR关系
      */
     public $Values;
 
     /**
-     * @var integer 枚举类型，代表name与values之间的匹配关系
+     * @var integer 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -112,29 +90,19 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
      */
     public $OperatorType;
 
     /**
      * @param string $Name 检索的键值
-     * @param array $Values 检索的值
-     * @param integer $OperatorType 枚举类型，代表name与values之间的匹配关系
+     * @param array $Values 检索的值，各检索值间为OR关系
+     * @param integer $OperatorType 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -147,18 +115,10 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
      */
     function __construct()

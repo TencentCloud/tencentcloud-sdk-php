@@ -65,10 +65,12 @@ use TencentCloud\Common\AbstractModel;
  OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskTransTextResult getTransTextTask() 获取翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransTextTask(AiRecognitionTaskTransTextResult $TransTextTask) 设置翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiRecognitionResult extends AbstractModel
@@ -121,7 +123,8 @@ class AiRecognitionResult extends AbstractModel
 
     /**
      * @var AiRecognitionTaskTransTextResult 翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransTextTask;
@@ -150,7 +153,8 @@ class AiRecognitionResult extends AbstractModel
  OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskTransTextResult $TransTextTask 翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

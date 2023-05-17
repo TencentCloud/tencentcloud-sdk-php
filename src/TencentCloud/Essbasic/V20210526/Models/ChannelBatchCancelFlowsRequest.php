@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method array getFlowIds() 获取签署流程Id数组，最多100个，超过100不处理
  * @method void setFlowIds(array $FlowIds) 设置签署流程Id数组，最多100个，超过100不处理
- * @method string getCancelMessage() 获取撤销理由
- * @method void setCancelMessage(string $CancelMessage) 设置撤销理由
+ * @method string getCancelMessage() 获取撤销理由,不超过200个字符
+ * @method void setCancelMessage(string $CancelMessage) 设置撤销理由,不超过200个字符
  * @method integer getCancelMessageFormat() 获取撤销理由自定义格式；选项：
 0 默认格式
 1 只保留身份信息：展示为【发起方】
@@ -52,7 +52,7 @@ class ChannelBatchCancelFlowsRequest extends AbstractModel
     public $FlowIds;
 
     /**
-     * @var string 撤销理由
+     * @var string 撤销理由,不超过200个字符
      */
     public $CancelMessage;
 
@@ -73,7 +73,7 @@ class ChannelBatchCancelFlowsRequest extends AbstractModel
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param array $FlowIds 签署流程Id数组，最多100个，超过100不处理
-     * @param string $CancelMessage 撤销理由
+     * @param string $CancelMessage 撤销理由,不超过200个字符
      * @param integer $CancelMessageFormat 撤销理由自定义格式；选项：
 0 默认格式
 1 只保留身份信息：展示为【发起方】

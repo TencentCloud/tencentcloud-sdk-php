@@ -20,9 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UserAgent黑白名单配置
  *
- * @method string getSwitch() 获取开关，on或off
+ * @method string getSwitch() 获取UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置开关，on或off
+ * @method void setSwitch(string $Switch) 设置UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFilterRules() 获取UA黑白名单生效规则列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +36,9 @@ use TencentCloud\Common\AbstractModel;
 class UserAgentFilter extends AbstractModel
 {
     /**
-     * @var string 开关，on或off
+     * @var string UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
@@ -44,7 +50,9 @@ class UserAgentFilter extends AbstractModel
     public $FilterRules;
 
     /**
-     * @param string $Switch 开关，on或off
+     * @param string $Switch UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FilterRules UA黑白名单生效规则列表
 注意：此字段可能返回 null，表示取不到有效值。

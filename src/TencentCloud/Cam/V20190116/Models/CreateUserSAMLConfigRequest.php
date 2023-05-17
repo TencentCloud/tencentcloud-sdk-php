@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSAMLMetadataDocument() 获取SAML元数据文档，需要base64 encode
  * @method void setSAMLMetadataDocument(string $SAMLMetadataDocument) 设置SAML元数据文档，需要base64 encode
+ * @method string getAuxiliaryDomain() 获取辅助域名
+ * @method void setAuxiliaryDomain(string $AuxiliaryDomain) 设置辅助域名
  */
 class CreateUserSAMLConfigRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateUserSAMLConfigRequest extends AbstractModel
     public $SAMLMetadataDocument;
 
     /**
+     * @var string 辅助域名
+     */
+    public $AuxiliaryDomain;
+
+    /**
      * @param string $SAMLMetadataDocument SAML元数据文档，需要base64 encode
+     * @param string $AuxiliaryDomain 辅助域名
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateUserSAMLConfigRequest extends AbstractModel
         }
         if (array_key_exists("SAMLMetadataDocument",$param) and $param["SAMLMetadataDocument"] !== null) {
             $this->SAMLMetadataDocument = $param["SAMLMetadataDocument"];
+        }
+
+        if (array_key_exists("AuxiliaryDomain",$param) and $param["AuxiliaryDomain"] !== null) {
+            $this->AuxiliaryDomain = $param["AuxiliaryDomain"];
         }
     }
 }

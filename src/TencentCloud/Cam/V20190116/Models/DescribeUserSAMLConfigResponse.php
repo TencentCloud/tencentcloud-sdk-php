@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSAMLMetadata(string $SAMLMetadata) 设置SAML元数据文档
  * @method integer getStatus() 获取状态：0:未设置，1:已开启，2:已禁用
  * @method void setStatus(integer $Status) 设置状态：0:未设置，1:已开启，2:已禁用
+ * @method string getAuxiliaryDomain() 获取辅助域名
+ * @method void setAuxiliaryDomain(string $AuxiliaryDomain) 设置辅助域名
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeUserSAMLConfigResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string 辅助域名
+     */
+    public $AuxiliaryDomain;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeUserSAMLConfigResponse extends AbstractModel
     /**
      * @param string $SAMLMetadata SAML元数据文档
      * @param integer $Status 状态：0:未设置，1:已开启，2:已禁用
+     * @param string $AuxiliaryDomain 辅助域名
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class DescribeUserSAMLConfigResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AuxiliaryDomain",$param) and $param["AuxiliaryDomain"] !== null) {
+            $this->AuxiliaryDomain = $param["AuxiliaryDomain"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

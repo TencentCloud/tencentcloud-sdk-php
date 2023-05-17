@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskTitle(string $TaskTitle) 设置演练名称
  * @method array getTaskTag() 获取标签键
  * @method void setTaskTag(array $TaskTag) 设置标签键
- * @method integer getTaskStatus() 获取状态
- * @method void setTaskStatus(integer $TaskStatus) 设置状态
+ * @method integer getTaskStatus() 获取任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
+ * @method void setTaskStatus(integer $TaskStatus) 设置任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
  * @method string getTaskStartTime() 获取开始时间，固定格式%Y-%m-%d %H:%M:%S
  * @method void setTaskStartTime(string $TaskStartTime) 设置开始时间，固定格式%Y-%m-%d %H:%M:%S
  * @method string getTaskEndTime() 获取结束时间，固定格式%Y-%m-%d %H:%M:%S
@@ -60,7 +60,7 @@ class DescribeTaskListRequest extends AbstractModel
     public $TaskTag;
 
     /**
-     * @var integer 状态
+     * @var integer 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
      */
     public $TaskStatus;
 
@@ -84,7 +84,7 @@ class DescribeTaskListRequest extends AbstractModel
      * @param integer $Offset 分页Offset
      * @param string $TaskTitle 演练名称
      * @param array $TaskTag 标签键
-     * @param integer $TaskStatus 状态
+     * @param integer $TaskStatus 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
      * @param string $TaskStartTime 开始时间，固定格式%Y-%m-%d %H:%M:%S
      * @param string $TaskEndTime 结束时间，固定格式%Y-%m-%d %H:%M:%S
      * @param array $Tags 标签对

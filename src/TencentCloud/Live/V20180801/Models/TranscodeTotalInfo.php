@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转码总量数据
  *
- * @method string getTime() 获取时间点，北京时间，
-示例：2019-03-01 00:00:00。
- * @method void setTime(string $Time) 设置时间点，北京时间，
-示例：2019-03-01 00:00:00。
+ * @method string getTime() 获取时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setTime(string $Time) 设置时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method integer getDuration() 获取转码时长，单位：分钟。
  * @method void setDuration(integer $Duration) 设置转码时长，单位：分钟。
  * @method string getModuleCodec() 获取编码方式，带模块，
@@ -46,8 +50,10 @@ topspeed_H265 =》极速高清-H265。
 class TranscodeTotalInfo extends AbstractModel
 {
     /**
-     * @var string 时间点，北京时间，
-示例：2019-03-01 00:00:00。
+     * @var string 时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $Time;
 
@@ -73,8 +79,10 @@ topspeed_H265 =》极速高清-H265。
     public $Resolution;
 
     /**
-     * @param string $Time 时间点，北京时间，
-示例：2019-03-01 00:00:00。
+     * @param string $Time 时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param integer $Duration 转码时长，单位：分钟。
      * @param string $ModuleCodec 编码方式，带模块，
 示例：

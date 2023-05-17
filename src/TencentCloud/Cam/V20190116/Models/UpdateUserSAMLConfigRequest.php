@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperate(string $Operate) 设置修改的操作类型:enable:启用,disable:禁用,updateSAML:修改元数据文档
  * @method string getSAMLMetadataDocument() 获取元数据文档，需要base64 encode，仅当Operate为updateSAML时需要此参数
  * @method void setSAMLMetadataDocument(string $SAMLMetadataDocument) 设置元数据文档，需要base64 encode，仅当Operate为updateSAML时需要此参数
+ * @method string getAuxiliaryDomain() 获取辅助域名
+ * @method void setAuxiliaryDomain(string $AuxiliaryDomain) 设置辅助域名
  */
 class UpdateUserSAMLConfigRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UpdateUserSAMLConfigRequest extends AbstractModel
     public $SAMLMetadataDocument;
 
     /**
+     * @var string 辅助域名
+     */
+    public $AuxiliaryDomain;
+
+    /**
      * @param string $Operate 修改的操作类型:enable:启用,disable:禁用,updateSAML:修改元数据文档
      * @param string $SAMLMetadataDocument 元数据文档，需要base64 encode，仅当Operate为updateSAML时需要此参数
+     * @param string $AuxiliaryDomain 辅助域名
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class UpdateUserSAMLConfigRequest extends AbstractModel
 
         if (array_key_exists("SAMLMetadataDocument",$param) and $param["SAMLMetadataDocument"] !== null) {
             $this->SAMLMetadataDocument = $param["SAMLMetadataDocument"];
+        }
+
+        if (array_key_exists("AuxiliaryDomain",$param) and $param["AuxiliaryDomain"] !== null) {
+            $this->AuxiliaryDomain = $param["AuxiliaryDomain"];
         }
     }
 }

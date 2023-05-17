@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -51,7 +51,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
- * @method string getVoiceFormat() 获取识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
- * @method void setVoiceFormat(string $VoiceFormat) 设置识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+ * @method string getVoiceFormat() 获取识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
+ * @method void setVoiceFormat(string $VoiceFormat) 设置识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
  * @method integer getProjectId() 获取腾讯云项目 ID，废弃参数，填写0即可。
  * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，废弃参数，填写0即可。
  * @method integer getSubServiceType() 获取子服务类型。2： 一句话识别。
@@ -112,7 +112,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -132,7 +132,7 @@ class SentenceRecognitionRequest extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+     * @var string 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
      */
     public $VoiceFormat;
 
@@ -223,7 +223,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -235,7 +235,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_tr：土耳其语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
-     * @param string $VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+     * @param string $VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
      * @param integer $ProjectId 腾讯云项目 ID，废弃参数，填写0即可。
      * @param integer $SubServiceType 子服务类型。2： 一句话识别。
      * @param string $Url 语音的URL地址，需要公网环境浏览器可下载。当 SourceType 值为 0时须填写该字段，为 1 时不填。音频时长不能超过60s，音频文件大小不能超过3MB。

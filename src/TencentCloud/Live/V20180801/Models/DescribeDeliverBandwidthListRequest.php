@@ -20,26 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeliverBandwidthList请求参数结构体
  *
- * @method string getStartTime() 获取起始时间，格式为%Y-%m-%d %H:%M:%S。
- * @method void setStartTime(string $StartTime) 设置起始时间，格式为%Y-%m-%d %H:%M:%S。
- * @method string getEndTime() 获取结束时间，格式为%Y-%m-%d %H:%M:%S，支持最近三个月的数据查询，时间跨度最大是1个月。
- * @method void setEndTime(string $EndTime) 设置结束时间，格式为%Y-%m-%d %H:%M:%S，支持最近三个月的数据查询，时间跨度最大是1个月。
+ * @method string getStartTime() 获取起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+ * @method void setStartTime(string $StartTime) 设置起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+ * @method string getEndTime() 获取结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三个月的数据查询，时间跨度最大是1个月。
+ * @method void setEndTime(string $EndTime) 设置结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三个月的数据查询，时间跨度最大是1个月。
  */
 class DescribeDeliverBandwidthListRequest extends AbstractModel
 {
     /**
-     * @var string 起始时间，格式为%Y-%m-%d %H:%M:%S。
+     * @var string 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，格式为%Y-%m-%d %H:%M:%S，支持最近三个月的数据查询，时间跨度最大是1个月。
+     * @var string 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三个月的数据查询，时间跨度最大是1个月。
      */
     public $EndTime;
 
     /**
-     * @param string $StartTime 起始时间，格式为%Y-%m-%d %H:%M:%S。
-     * @param string $EndTime 结束时间，格式为%Y-%m-%d %H:%M:%S，支持最近三个月的数据查询，时间跨度最大是1个月。
+     * @param string $StartTime 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * @param string $EndTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三个月的数据查询，时间跨度最大是1个月。
      */
     function __construct()
     {

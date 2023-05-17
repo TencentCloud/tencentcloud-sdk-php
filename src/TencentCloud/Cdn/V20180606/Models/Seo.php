@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SEO 搜索引擎优化配置，默认为关闭状态
  *
- * @method string getSwitch() 获取SEO 配置开关
+ * @method string getSwitch() 获取SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置SEO 配置开关
+ * @method void setSwitch(string $Switch) 设置SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +32,7 @@ off：关闭
 class Seo extends AbstractModel
 {
     /**
-     * @var string SEO 配置开关
+     * @var string SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,7 +40,7 @@ off：关闭
     public $Switch;
 
     /**
-     * @param string $Switch SEO 配置开关
+     * @param string $Switch SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

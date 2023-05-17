@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * waf配置类型
  *
- * @method string getSwitch() 获取on|off
- * @method void setSwitch(string $Switch) 设置on|off
+ * @method string getSwitch() 获取Scdn waf配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置Scdn waf配置开关，取值有：
+on：开启
+off：关闭
  * @method string getMode() 获取intercept|observe，默认intercept
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMode(string $Mode) 设置intercept|observe，默认intercept
@@ -30,9 +34,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorPage(ScdnErrorPage $ErrorPage) 设置重定向的错误页面
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWebShellSwitch() 获取webshell拦截开关，on|off，默认off
+ * @method string getWebShellSwitch() 获取webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebShellSwitch(string $WebShellSwitch) 设置webshell拦截开关，on|off，默认off
+ * @method void setWebShellSwitch(string $WebShellSwitch) 设置webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRules() 获取类型拦截规则
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,15 +50,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置waf规则等级，可取100|200|300
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSubRuleSwitch() 获取waf子规则开关
+ * @method array getSubRuleSwitch() 获取waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubRuleSwitch(array $SubRuleSwitch) 设置waf子规则开关
+ * @method void setSubRuleSwitch(array $SubRuleSwitch) 设置waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnWafConfig extends AbstractModel
 {
     /**
-     * @var string on|off
+     * @var string Scdn waf配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -67,7 +81,9 @@ class ScdnWafConfig extends AbstractModel
     public $ErrorPage;
 
     /**
-     * @var string webshell拦截开关，on|off，默认off
+     * @var string webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebShellSwitch;
@@ -85,24 +101,32 @@ class ScdnWafConfig extends AbstractModel
     public $Level;
 
     /**
-     * @var array waf子规则开关
+     * @var array waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubRuleSwitch;
 
     /**
-     * @param string $Switch on|off
+     * @param string $Switch Scdn waf配置开关，取值有：
+on：开启
+off：关闭
      * @param string $Mode intercept|observe，默认intercept
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScdnErrorPage $ErrorPage 重定向的错误页面
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WebShellSwitch webshell拦截开关，on|off，默认off
+     * @param string $WebShellSwitch webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Rules 类型拦截规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level waf规则等级，可取100|200|300
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SubRuleSwitch waf子规则开关
+     * @param array $SubRuleSwitch waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannel(integer $Channel) 设置音频声道数，例如 2。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCodecs() 获取音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCodecs(string $Codecs) 设置音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getLoudness() 获取音频响度。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoudness(float $Loudness) 设置音频响度。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaAudioStreamItem extends AbstractModel
 {
@@ -55,10 +63,26 @@ class MediaAudioStreamItem extends AbstractModel
     public $Channel;
 
     /**
+     * @var string 音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Codecs;
+
+    /**
+     * @var float 音频响度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Loudness;
+
+    /**
      * @param integer $Bitrate 音频流的码率，单位：bps。
      * @param integer $SamplingRate 音频流的采样率，单位：hz。
      * @param string $Codec 音频流的编码格式，例如 aac。
      * @param integer $Channel 音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Codecs 音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Loudness 音频响度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -88,6 +112,14 @@ class MediaAudioStreamItem extends AbstractModel
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("Codecs",$param) and $param["Codecs"] !== null) {
+            $this->Codecs = $param["Codecs"];
+        }
+
+        if (array_key_exists("Loudness",$param) and $param["Loudness"] !== null) {
+            $this->Loudness = $param["Loudness"];
         }
     }
 }

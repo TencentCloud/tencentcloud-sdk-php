@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTries(integer $Tries) 设置最大尝试次数
  * @method array getVariables() 获取自定义变量（仅高级版支持）
  * @method void setVariables(array $Variables) 设置自定义变量（仅高级版支持）
+ * @method string getUUI() 获取UUI
+ * @method void setUUI(string $UUI) 设置UUI
+ * @method array getCalleeAttributes() 获取被叫属性
+ * @method void setCalleeAttributes(array $CalleeAttributes) 设置被叫属性
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $Variables;
 
     /**
+     * @var string UUI
+     */
+    public $UUI;
+
+    /**
+     * @var array 被叫属性
+     */
+    public $CalleeAttributes;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $NotBefore 任务起始时间戳，Unix 秒级时间戳
      * @param array $Callees 被叫号码列表
@@ -104,6 +118,8 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param integer $NotAfter 任务停止时间戳，Unix 秒级时间戳
      * @param integer $Tries 最大尝试次数
      * @param array $Variables 自定义变量（仅高级版支持）
+     * @param string $UUI UUI
+     * @param array $CalleeAttributes 被叫属性
      */
     function __construct()
     {
@@ -160,6 +176,19 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
                 $obj = new Variable();
                 $obj->deserialize($value);
                 array_push($this->Variables, $obj);
+            }
+        }
+
+        if (array_key_exists("UUI",$param) and $param["UUI"] !== null) {
+            $this->UUI = $param["UUI"];
+        }
+
+        if (array_key_exists("CalleeAttributes",$param) and $param["CalleeAttributes"] !== null) {
+            $this->CalleeAttributes = [];
+            foreach ($param["CalleeAttributes"] as $key => $value){
+                $obj = new CalleeAttribute();
+                $obj->deserialize($value);
+                array_push($this->CalleeAttributes, $obj);
             }
         }
     }

@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频拖拽配置，默认为关闭状态
  *
- * @method string getSwitch() 获取视频拖拽开关
+ * @method string getSwitch() 获取视频拖拽配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置视频拖拽开关
+ * @method void setSwitch(string $Switch) 设置视频拖拽配置开关，取值有：
 on：开启
 off：关闭
  */
 class VideoSeek extends AbstractModel
 {
     /**
-     * @var string 视频拖拽开关
+     * @var string 视频拖拽配置开关，取值有：
 on：开启
 off：关闭
      */
     public $Switch;
 
     /**
-     * @param string $Switch 视频拖拽开关
+     * @param string $Switch 视频拖拽配置开关，取值有：
 on：开启
 off：关闭
      */

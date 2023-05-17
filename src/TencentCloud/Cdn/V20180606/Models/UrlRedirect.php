@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 访问URL重写配置
  *
- * @method string getSwitch() 获取访问URL重写配置开关
+ * @method string getSwitch() 获取访问URL重写配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置访问URL重写配置开关
+ * @method void setSwitch(string $Switch) 设置访问URL重写配置开关，取值有：
 on：开启
 off：关闭
  * @method array getPathRules() 获取访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
@@ -34,7 +34,7 @@ off：关闭
 class UrlRedirect extends AbstractModel
 {
     /**
-     * @var string 访问URL重写配置开关
+     * @var string 访问URL重写配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -47,7 +47,7 @@ off：关闭
     public $PathRules;
 
     /**
-     * @param string $Switch 访问URL重写配置开关
+     * @param string $Switch 访问URL重写配置开关，取值有：
 on：开启
 off：关闭
      * @param array $PathRules 访问URL重写规则，当Switch为on时必填，规则数量最大为10个。

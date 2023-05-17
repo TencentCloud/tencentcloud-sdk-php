@@ -20,14 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeTotalInfo请求参数结构体
  *
- * @method string getStartTime() 获取开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
- * @method void setStartTime(string $StartTime) 设置开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
- * @method string getEndTime() 获取结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
- * @method void setEndTime(string $EndTime) 设置结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+ * @method string getStartTime() 获取结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+ * @method void setStartTime(string $StartTime) 设置结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+ * @method string getEndTime() 获取结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setEndTime(string $EndTime) 设置结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method array getPushDomains() 获取推流域名列表，若不填，表示查询所有域名总体数据。
 指定域名时返回1小时粒度数据。
  * @method void setPushDomains(array $PushDomains) 设置推流域名列表，若不填，表示查询所有域名总体数据。
@@ -44,14 +50,17 @@ Oversea：则查询国际/港澳台（境外）数据，
 class DescribeLiveTranscodeTotalInfoRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+     * @var string 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+     * @var string 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $EndTime;
 
@@ -70,10 +79,13 @@ Oversea：则查询国际/港澳台（境外）数据，
     public $MainlandOrOversea;
 
     /**
-     * @param string $StartTime 开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
-     * @param string $EndTime 结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+     * @param string $StartTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * @param string $EndTime 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param array $PushDomains 推流域名列表，若不填，表示查询所有域名总体数据。
 指定域名时返回1小时粒度数据。
      * @param string $MainlandOrOversea 可选值：

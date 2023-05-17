@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * cc的配置类型
  *
- * @method string getSwitch() 获取on | off
- * @method void setSwitch(string $Switch) 设置on | off
+ * @method string getSwitch() 获取scdn cc配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置scdn cc配置开关，取值有：
+on：开启
+off：关闭
  * @method array getRules() 获取自定义 cc 防护规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(array $Rules) 设置自定义 cc 防护规则
@@ -38,7 +42,9 @@ use TencentCloud\Common\AbstractModel;
 class ScdnConfig extends AbstractModel
 {
     /**
-     * @var string on | off
+     * @var string scdn cc配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -61,7 +67,9 @@ class ScdnConfig extends AbstractModel
     public $GlobalAdvancedRules;
 
     /**
-     * @param string $Switch on | off
+     * @param string $Switch scdn cc配置开关，取值有：
+on：开启
+off：关闭
      * @param array $Rules 自定义 cc 防护规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdvancedRules 增强自定义 cc 防护规则

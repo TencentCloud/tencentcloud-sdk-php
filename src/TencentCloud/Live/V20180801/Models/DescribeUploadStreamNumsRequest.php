@@ -20,10 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUploadStreamNums请求参数结构体
  *
- * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
- * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
- * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近31天的数据查询
- * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近31天的数据查询
+ * @method string getStartTime() 获取起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+ * @method void setStartTime(string $StartTime) 设置起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+ * @method string getEndTime() 获取结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+起始和结束时间跨度不支持超过31天。支持最近31天的数据查询
+ * @method void setEndTime(string $EndTime) 设置结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+起始和结束时间跨度不支持超过31天。支持最近31天的数据查询
  * @method array getDomains() 获取直播域名，若不填，表示总体数据。
  * @method void setDomains(array $Domains) 设置直播域名，若不填，表示总体数据。
  * @method integer getGranularity() 获取数据粒度，支持如下粒度：
@@ -38,12 +48,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUploadStreamNumsRequest extends AbstractModel
 {
     /**
-     * @var string 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * @var string 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近31天的数据查询
+     * @var string 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+起始和结束时间跨度不支持超过31天。支持最近31天的数据查询
      */
     public $EndTime;
 
@@ -61,8 +76,13 @@ class DescribeUploadStreamNumsRequest extends AbstractModel
     public $Granularity;
 
     /**
-     * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近31天的数据查询
+     * @param string $StartTime 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * @param string $EndTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+起始和结束时间跨度不支持超过31天。支持最近31天的数据查询
      * @param array $Domains 直播域名，若不填，表示总体数据。
      * @param integer $Granularity 数据粒度，支持如下粒度：
 5：5分钟粒度，（跨度不支持超过1天），

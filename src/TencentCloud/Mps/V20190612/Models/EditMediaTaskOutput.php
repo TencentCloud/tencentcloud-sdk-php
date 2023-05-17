@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置编辑后文件的目标存储。
  * @method string getPath() 获取编辑后的视频文件路径。
  * @method void setPath(string $Path) 设置编辑后的视频文件路径。
+ * @method MediaMetaData getMetaData() 获取编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EditMediaTaskOutput extends AbstractModel
 {
@@ -38,8 +42,16 @@ class EditMediaTaskOutput extends AbstractModel
     public $Path;
 
     /**
+     * @var MediaMetaData 编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetaData;
+
+    /**
      * @param TaskOutputStorage $OutputStorage 编辑后文件的目标存储。
      * @param string $Path 编辑后的视频文件路径。
+     * @param MediaMetaData $MetaData 编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -61,6 +73,11 @@ class EditMediaTaskOutput extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
     }
 }

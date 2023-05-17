@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ddos配置类型
  *
- * @method string getSwitch() 获取on|off
- * @method void setSwitch(string $Switch) 设置on|off
+ * @method string getSwitch() 获取Scdn ddos配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置Scdn ddos配置开关，取值有：
+on：开启
+off：关闭
  */
 class ScdnDdosConfig extends AbstractModel
 {
     /**
-     * @var string on|off
+     * @var string Scdn ddos配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
     /**
-     * @param string $Switch on|off
+     * @param string $Switch Scdn ddos配置开关，取值有：
+on：开启
+off：关闭
      */
     function __construct()
     {

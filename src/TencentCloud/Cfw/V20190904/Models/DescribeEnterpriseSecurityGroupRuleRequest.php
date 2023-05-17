@@ -86,6 +86,8 @@ true为启用，false为不启用
  * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ANY
  * @method string getServiceTemplateId() 获取端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
+ * @method integer getRuleUuid() 获取规则的uuid
+ * @method void setRuleUuid(integer $RuleUuid) 设置规则的uuid
  */
 class DescribeEnterpriseSecurityGroupRuleRequest extends AbstractModel
 {
@@ -163,6 +165,11 @@ true为启用，false为不启用
     public $ServiceTemplateId;
 
     /**
+     * @var integer 规则的uuid
+     */
+    public $RuleUuid;
+
+    /**
      * @param string $PageNo 分页查询时，显示的当前页的页码。
 
 默认值为1。
@@ -196,6 +203,7 @@ true为启用，false为不启用
 80：80端口
      * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
      * @param string $ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
+     * @param integer $RuleUuid 规则的uuid
      */
     function __construct()
     {
@@ -248,6 +256,10 @@ true为启用，false为不启用
 
         if (array_key_exists("ServiceTemplateId",$param) and $param["ServiceTemplateId"] !== null) {
             $this->ServiceTemplateId = $param["ServiceTemplateId"];
+        }
+
+        if (array_key_exists("RuleUuid",$param) and $param["RuleUuid"] !== null) {
+            $this->RuleUuid = $param["RuleUuid"];
         }
     }
 }

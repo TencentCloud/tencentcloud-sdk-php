@@ -19,13 +19,16 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * ShareCname配置
+ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
  *
- * @method string getSwitch() 获取ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
+ * @method string getSwitch() 获取ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
 
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
- * @method void setSwitch(string $Switch) 设置ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
+ * @method void setSwitch(string $Switch) 设置ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
 
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
  * @method string getCname() 获取设置共享CNAME.
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCname(string $Cname) 设置设置共享CNAME.
@@ -34,9 +37,10 @@ use TencentCloud\Common\AbstractModel;
 class ShareCname extends AbstractModel
 {
     /**
-     * @var string ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
+     * @var string ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
 
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
      */
     public $Switch;
 
@@ -47,9 +51,10 @@ class ShareCname extends AbstractModel
     public $Cname;
 
     /**
-     * @param string $Switch ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
+     * @param string $Switch ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
 
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
      * @param string $Cname 设置共享CNAME.
 注意：此字段可能返回 null，表示取不到有效值。
      */

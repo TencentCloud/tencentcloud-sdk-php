@@ -24,13 +24,21 @@ use TencentCloud\Common\AbstractModel;
 NormalLive：普通直播。
  * @method void setLiveType(string $LiveType) 设置直播类型，SlowLive：慢直播。
 NormalLive：普通直播。
- * @method string getStartTime() 获取起始时间，格式：yyyy-mm-dd HH:MM:SS。
+ * @method string getStartTime() 获取起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。
- * @method void setStartTime(string $StartTime) 设置起始时间，格式：yyyy-mm-dd HH:MM:SS。
+ * @method void setStartTime(string $StartTime) 设置起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。
- * @method string getEndTime() 获取结束时间，格式：yyyy-mm-dd HH:MM:SS。
+ * @method string getEndTime() 获取结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。
- * @method void setEndTime(string $EndTime) 设置结束时间，格式：yyyy-mm-dd HH:MM:SS。
+ * @method void setEndTime(string $EndTime) 设置结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。
  * @method string getMainlandOrOversea() 获取如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
  * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
@@ -46,13 +54,17 @@ NormalLive：普通直播。
     public $LiveType;
 
     /**
-     * @var string 起始时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @var string 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @var string 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。
      */
     public $EndTime;
@@ -70,9 +82,13 @@ NormalLive：普通直播。
     /**
      * @param string $LiveType 直播类型，SlowLive：慢直播。
 NormalLive：普通直播。
-     * @param string $StartTime 起始时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @param string $StartTime 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。
-     * @param string $EndTime 结束时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @param string $EndTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。
      * @param string $MainlandOrOversea 如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
      * @param array $PushDomains 推流域名列表，不填表示总体数据。

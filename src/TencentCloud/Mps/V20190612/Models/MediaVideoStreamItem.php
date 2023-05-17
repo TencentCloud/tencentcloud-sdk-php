@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHdrType(string $HdrType) 设置HDR类型。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCodecs() 获取视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCodecs(string $Codecs) 设置视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -99,6 +103,12 @@ class MediaVideoStreamItem extends AbstractModel
     public $HdrType;
 
     /**
+     * @var string 视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Codecs;
+
+    /**
      * @param integer $Bitrate 视频流的码率，单位：bps。
      * @param integer $Height 视频流的高度，单位：px。
      * @param integer $Width 视频流的宽度，单位：px。
@@ -111,6 +121,8 @@ class MediaVideoStreamItem extends AbstractModel
      * @param string $ColorTransfer 色彩空间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HdrType HDR类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Codecs 视频Codecs。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +172,10 @@ class MediaVideoStreamItem extends AbstractModel
 
         if (array_key_exists("HdrType",$param) and $param["HdrType"] !== null) {
             $this->HdrType = $param["HdrType"];
+        }
+
+        if (array_key_exists("Codecs",$param) and $param["Codecs"] !== null) {
+            $this->Codecs = $param["Codecs"];
         }
     }
 }

@@ -40,9 +40,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlertPercentage(integer $AlertPercentage) 设置触发提醒阈值百分比
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlertSwitch() 获取提醒开关 on/off
+ * @method string getAlertSwitch() 获取累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlertSwitch(string $AlertSwitch) 设置提醒开关 on/off
+ * @method void setAlertSwitch(string $AlertSwitch) 设置累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetric() 获取指标类型，流量flux或带宽bandwidth
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,9 +56,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCycle(integer $Cycle) 设置检测周期，单位分钟，60或1440
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSwitch() 获取是否开启该选项，on/off
+ * @method string getSwitch() 获取累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置是否开启该选项，on/off
+ * @method void setSwitch(string $Switch) 设置累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatisticItem extends AbstractModel
@@ -90,7 +98,9 @@ class StatisticItem extends AbstractModel
     public $AlertPercentage;
 
     /**
-     * @var string 提醒开关 on/off
+     * @var string 累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlertSwitch;
@@ -108,7 +118,9 @@ class StatisticItem extends AbstractModel
     public $Cycle;
 
     /**
-     * @var string 是否开启该选项，on/off
+     * @var string 累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
@@ -124,13 +136,17 @@ class StatisticItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlertPercentage 触发提醒阈值百分比
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlertSwitch 提醒开关 on/off
+     * @param string $AlertSwitch 累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Metric 指标类型，流量flux或带宽bandwidth
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cycle 检测周期，单位分钟，60或1440
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Switch 是否开启该选项，on/off
+     * @param string $Switch 累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

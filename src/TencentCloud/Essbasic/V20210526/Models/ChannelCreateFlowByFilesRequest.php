@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowDescription(string $FlowDescription) 设置签署流程的描述，长度不超过1000个字符
  * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
- * @method string getCustomerData() 获取业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
- * @method void setCustomerData(string $CustomerData) 设置业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method string getCustomerData() 获取业务信息，最大长度1000个字符。
+ * @method void setCustomerData(string $CustomerData) 设置业务信息，最大长度1000个字符。
  * @method boolean getNeedSignReview() 获取发起方企业的签署人进行签署操作是否需要企业内部审批。 若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。  注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
  * @method void setNeedSignReview(boolean $NeedSignReview) 设置发起方企业的签署人进行签署操作是否需要企业内部审批。 若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。  注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
  * @method string getApproverVerifyType() 获取签署人校验方式
@@ -62,6 +62,8 @@ MobileCheck：手机号验证
  * @method void setCcInfos(array $CcInfos) 设置被抄送人信息列表
  * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
  * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+ * @method string getAutoSignScene() 获取个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method void setAutoSignScene(string $AutoSignScene) 设置个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  */
 class ChannelCreateFlowByFilesRequest extends AbstractModel
 {
@@ -121,7 +123,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
     public $CustomShowMap;
 
     /**
-     * @var string 业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @var string 业务信息，最大长度1000个字符。
      */
     public $CustomerData;
 
@@ -159,6 +161,11 @@ MobileCheck：手机号验证
     public $CcNotifyType;
 
     /**
+     * @var string 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public $AutoSignScene;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $FlowName 签署流程名称，长度不超过200个字符
      * @param array $FlowApprovers 签署流程签约方列表，最多不超过50个参与方
@@ -170,7 +177,7 @@ MobileCheck：手机号验证
      * @param string $FlowType 签署流程的类型，长度不超过255个字符
      * @param string $FlowDescription 签署流程的描述，长度不超过1000个字符
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
-     * @param string $CustomerData 业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param string $CustomerData 业务信息，最大长度1000个字符。
      * @param boolean $NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。 若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。  注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      * @param string $ApproverVerifyType 签署人校验方式
 VerifyCheck: 人脸识别（默认）
@@ -180,6 +187,7 @@ MobileCheck：手机号验证
      * @param UserInfo $Operator 操作者的信息，不用传
      * @param array $CcInfos 被抄送人信息列表
      * @param integer $CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * @param string $AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ MobileCheck：手机号验证
 
         if (array_key_exists("CcNotifyType",$param) and $param["CcNotifyType"] !== null) {
             $this->CcNotifyType = $param["CcNotifyType"];
+        }
+
+        if (array_key_exists("AutoSignScene",$param) and $param["AutoSignScene"] !== null) {
+            $this->AutoSignScene = $param["AutoSignScene"];
         }
     }
 }

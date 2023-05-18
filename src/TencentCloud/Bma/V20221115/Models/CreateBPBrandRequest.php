@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtectOfficialAccounts(array $ProtectOfficialAccounts) 设置保护公众号
  * @method array getProtectMiniPrograms() 获取保护小程序
  * @method void setProtectMiniPrograms(array $ProtectMiniPrograms) 设置保护小程序
+ * @method integer getAPISource() 获取请求来源：0-反钓鱼 2-反假冒
+ * @method void setAPISource(integer $APISource) 设置请求来源：0-反钓鱼 2-反假冒
  */
 class CreateBPBrandRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateBPBrandRequest extends AbstractModel
     public $ProtectMiniPrograms;
 
     /**
+     * @var integer 请求来源：0-反钓鱼 2-反假冒
+     */
+    public $APISource;
+
+    /**
      * @param string $BrandName 品牌名称
      * @param string $CompanyName 企业名称
      * @param string $BrandLogo 品牌logo
@@ -136,6 +143,7 @@ class CreateBPBrandRequest extends AbstractModel
      * @param array $ProtectAPPs 保护应用
      * @param array $ProtectOfficialAccounts 保护公众号
      * @param array $ProtectMiniPrograms 保护小程序
+     * @param integer $APISource 请求来源：0-反钓鱼 2-反假冒
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class CreateBPBrandRequest extends AbstractModel
 
         if (array_key_exists("ProtectMiniPrograms",$param) and $param["ProtectMiniPrograms"] !== null) {
             $this->ProtectMiniPrograms = $param["ProtectMiniPrograms"];
+        }
+
+        if (array_key_exists("APISource",$param) and $param["APISource"] !== null) {
+            $this->APISource = $param["APISource"];
         }
     }
 }

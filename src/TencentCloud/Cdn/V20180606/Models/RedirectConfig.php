@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自定义回源302 follow请求host配置
  *
- * @method string getSwitch() 获取配置开关
- * @method void setSwitch(string $Switch) 设置配置开关
+ * @method string getSwitch() 获取自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭
  * @method string getFollowRedirectHost() 获取主源站follow302请求时带的自定义的host头部
  * @method void setFollowRedirectHost(string $FollowRedirectHost) 设置主源站follow302请求时带的自定义的host头部
  * @method string getFollowRedirectBackupHost() 获取备份源站follow302请求时带的自定义的host头部
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class RedirectConfig extends AbstractModel
 {
     /**
-     * @var string 配置开关
+     * @var string 自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -45,7 +51,9 @@ class RedirectConfig extends AbstractModel
     public $FollowRedirectBackupHost;
 
     /**
-     * @param string $Switch 配置开关
+     * @param string $Switch 自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭
      * @param string $FollowRedirectHost 主源站follow302请求时带的自定义的host头部
      * @param string $FollowRedirectBackupHost 备份源站follow302请求时带的自定义的host头部
      */

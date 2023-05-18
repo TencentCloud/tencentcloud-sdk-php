@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAll(boolean $All) 设置是否扫描所有
  * @method array getId() 获取扫描镜像Id
  * @method void setId(array $Id) 设置扫描镜像Id
+ * @method boolean getLatest() 获取是否扫描最新版本
+ * @method void setLatest(boolean $Latest) 设置是否扫描最新版本
  */
 class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var boolean 是否扫描最新版本
+     */
+    public $Latest;
+
+    /**
      * @param integer $ScanPeriod 定时扫描周期
      * @param boolean $Enable 定时扫描开关
      * @param string $ScanTime 定时扫描的时间
@@ -80,6 +87,7 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
      * @param array $Images 扫描镜像
      * @param boolean $All 是否扫描所有
      * @param array $Id 扫描镜像Id
+     * @param boolean $Latest 是否扫描最新版本
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Latest",$param) and $param["Latest"] !== null) {
+            $this->Latest = $param["Latest"];
         }
     }
 }

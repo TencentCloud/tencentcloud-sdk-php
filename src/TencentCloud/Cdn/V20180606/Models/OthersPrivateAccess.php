@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 其他厂商对象存储回源鉴权
  *
- * @method string getSwitch() 获取开关， on/off。
- * @method void setSwitch(string $Switch) 设置开关， on/off。
+ * @method string getSwitch() 获取其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
  * @method string getAccessKey() 获取访问ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessKey(string $AccessKey) 设置访问ID。
@@ -42,7 +46,9 @@ use TencentCloud\Common\AbstractModel;
 class OthersPrivateAccess extends AbstractModel
 {
     /**
-     * @var string 开关， on/off。
+     * @var string 其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -71,7 +77,9 @@ class OthersPrivateAccess extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $Switch 开关， on/off。
+     * @param string $Switch 其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
      * @param string $AccessKey 访问ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretKey 密钥。

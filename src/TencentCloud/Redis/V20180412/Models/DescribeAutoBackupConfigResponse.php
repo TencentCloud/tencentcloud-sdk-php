@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoBackupConfig返回参数结构体
  *
- * @method integer getAutoBackupType() 获取备份类型。自动备份类型： 1 “定时回档”
- * @method void setAutoBackupType(integer $AutoBackupType) 设置备份类型。自动备份类型： 1 “定时回档”
- * @method array getWeekDays() 获取Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
- * @method void setWeekDays(array $WeekDays) 设置Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
- * @method string getTimePeriod() 获取时间段。
- * @method void setTimePeriod(string $TimePeriod) 设置时间段。
- * @method integer getBackupStorageDays() 获取全量备份文件保存天数
- * @method void setBackupStorageDays(integer $BackupStorageDays) 设置全量备份文件保存天数
- * @method integer getBinlogStorageDays() 获取tendis binlog备份文件保存天数
- * @method void setBinlogStorageDays(integer $BinlogStorageDays) 设置tendis binlog备份文件保存天数
+ * @method integer getAutoBackupType() 获取该参数因兼容性问题暂时保留，请忽略。
+ * @method void setAutoBackupType(integer $AutoBackupType) 设置该参数因兼容性问题暂时保留，请忽略。
+ * @method array getWeekDays() 获取备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+ * @method void setWeekDays(array $WeekDays) 设置备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+ * @method string getTimePeriod() 获取备份任务发起时间段。
+ * @method void setTimePeriod(string $TimePeriod) 设置备份任务发起时间段。
+ * @method integer getBackupStorageDays() 获取全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+ * @method void setBackupStorageDays(integer $BackupStorageDays) 设置全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+ * @method integer getBinlogStorageDays() 获取该参数不再使用，请忽略。
+ * @method void setBinlogStorageDays(integer $BinlogStorageDays) 设置该参数不再使用，请忽略。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAutoBackupConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 备份类型。自动备份类型： 1 “定时回档”
+     * @var integer 该参数因兼容性问题暂时保留，请忽略。
      */
     public $AutoBackupType;
 
     /**
-     * @var array Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * @var array 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      */
     public $WeekDays;
 
     /**
-     * @var string 时间段。
+     * @var string 备份任务发起时间段。
      */
     public $TimePeriod;
 
     /**
-     * @var integer 全量备份文件保存天数
+     * @var integer 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
      */
     public $BackupStorageDays;
 
     /**
-     * @var integer tendis binlog备份文件保存天数
+     * @var integer 该参数不再使用，请忽略。
      */
     public $BinlogStorageDays;
 
@@ -66,11 +66,11 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $AutoBackupType 备份类型。自动备份类型： 1 “定时回档”
-     * @param array $WeekDays Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
-     * @param string $TimePeriod 时间段。
-     * @param integer $BackupStorageDays 全量备份文件保存天数
-     * @param integer $BinlogStorageDays tendis binlog备份文件保存天数
+     * @param integer $AutoBackupType 该参数因兼容性问题暂时保留，请忽略。
+     * @param array $WeekDays 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * @param string $TimePeriod 备份任务发起时间段。
+     * @param integer $BackupStorageDays 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+     * @param integer $BinlogStorageDays 该参数不再使用，请忽略。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
 RemoteAuthenticationRules和Server 互斥，只需要配置其中一个。
 若只配置Server ，RemoteAuthenticationRules中详细规则参数将采用默认参数；默认参数值见各个配置项中说明；
  *
- * @method string getSwitch() 获取远程鉴权开关；
-on : 开启;
-off: 关闭；
+ * @method string getSwitch() 获取远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置远程鉴权开关；
-on : 开启;
-off: 关闭；
+ * @method void setSwitch(string $Switch) 设置远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRemoteAuthenticationRules() 获取远程鉴权规则配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,9 +42,9 @@ off: 关闭；
 class RemoteAuthentication extends AbstractModel
 {
     /**
-     * @var string 远程鉴权开关；
-on : 开启;
-off: 关闭；
+     * @var string 远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
@@ -62,9 +62,9 @@ off: 关闭；
     public $Server;
 
     /**
-     * @param string $Switch 远程鉴权开关；
-on : 开启;
-off: 关闭；
+     * @param string $Switch 远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoteAuthenticationRules 远程鉴权规则配置
 注意：此字段可能返回 null，表示取不到有效值。

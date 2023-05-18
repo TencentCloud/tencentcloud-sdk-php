@@ -18,12 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 单节点单 IP 访问限频配置，默认为关闭状态 
+ * 单节点单 IP 访问限频配置，默认为关闭状态
  *
- * @method string getSwitch() 获取IP 限频配置开关
+ * @method string getSwitch() 获取IP 限频配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置IP 限频配置开关
+ * @method void setSwitch(string $Switch) 设置IP 限频配置开关，取值有：
 on：开启
 off：关闭
  * @method integer getQps() 获取设置每秒请求数限制
@@ -36,7 +36,7 @@ off：关闭
 class IpFreqLimit extends AbstractModel
 {
     /**
-     * @var string IP 限频配置开关
+     * @var string IP 限频配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -50,7 +50,7 @@ off：关闭
     public $Qps;
 
     /**
-     * @param string $Switch IP 限频配置开关
+     * @param string $Switch IP 限频配置开关，取值有：
 on：开启
 off：关闭
      * @param integer $Qps 设置每秒请求数限制

@@ -82,6 +82,10 @@ QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
  * @method string getImgUrl() 获取证件照片地址。
  * @method void setImgUrl(string $ImgUrl) 设置证件照片地址。
+ * @method string getOriginImgUrl() 获取原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginImgUrl(string $OriginImgUrl) 设置原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegistrantCertificateCode() 获取联系人证件号码。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistrantCertificateCode(string $RegistrantCertificateCode) 设置联系人证件号码。
@@ -141,6 +145,12 @@ GZJGZY: 公证机构执业证。
     public $ImgUrl;
 
     /**
+     * @var string 原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginImgUrl;
+
+    /**
      * @var string 联系人证件号码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -190,6 +200,8 @@ TWJZZ: 中国台湾居住证。
 QTTYDM: 其他-统一社会信用代码证书。
 GZJGZY: 公证机构执业证。
      * @param string $ImgUrl 证件照片地址。
+     * @param string $OriginImgUrl 原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistrantCertificateCode 联系人证件号码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistrantCertificateType 联系人证件类型。
@@ -220,6 +232,10 @@ GZJGZY: 公证机构执业证。
 
         if (array_key_exists("ImgUrl",$param) and $param["ImgUrl"] !== null) {
             $this->ImgUrl = $param["ImgUrl"];
+        }
+
+        if (array_key_exists("OriginImgUrl",$param) and $param["OriginImgUrl"] !== null) {
+            $this->OriginImgUrl = $param["OriginImgUrl"];
         }
 
         if (array_key_exists("RegistrantCertificateCode",$param) and $param["RegistrantCertificateCode"] !== null) {

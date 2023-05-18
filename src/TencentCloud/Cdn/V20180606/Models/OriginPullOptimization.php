@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 跨国回源优化配置，默认为关闭状态 (已下线)
  *
- * @method string getSwitch() 获取跨国回源优化配置开关
+ * @method string getSwitch() 获取跨国回源优化配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置跨国回源优化配置开关
+ * @method void setSwitch(string $Switch) 设置跨国回源优化配置开关，取值有：
 on：开启
 off：关闭
  * @method string getOptimizationType() 获取跨国类型
@@ -38,7 +38,7 @@ CNToOV：境内回源境外
 class OriginPullOptimization extends AbstractModel
 {
     /**
-     * @var string 跨国回源优化配置开关
+     * @var string 跨国回源优化配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -53,7 +53,7 @@ CNToOV：境内回源境外
     public $OptimizationType;
 
     /**
-     * @param string $Switch 跨国回源优化配置开关
+     * @param string $Switch 跨国回源优化配置开关，取值有：
 on：开启
 off：关闭
      * @param string $OptimizationType 跨国类型

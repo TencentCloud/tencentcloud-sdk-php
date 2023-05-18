@@ -125,7 +125,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) 本接口（DescribeSnapshots）用于查询快照的详细信息。
  * @method Models\DescribeSnapshotsDeniedActionsResponse DescribeSnapshotsDeniedActions(Models\DescribeSnapshotsDeniedActionsRequest $req) 本接口（DescribeSnapshotsDeniedActions）用于查询一个或多个快照的操作限制列表信息。
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 查询地域下可用区
- * @method Models\DetachCcnResponse DetachCcn(Models\DetachCcnRequest $req) 本接口 (AttachCcn) 用于解除与云联网的关联。
+ * @method Models\DetachCcnResponse DetachCcn(Models\DetachCcnRequest $req) 本接口 (DetachCcn) 用于解除与云联网的关联。
  * @method Models\DetachDisksResponse DetachDisks(Models\DetachDisksRequest $req) 本接口（DetachDisks）用于卸载一个或多个云硬盘。
  * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) 本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
 

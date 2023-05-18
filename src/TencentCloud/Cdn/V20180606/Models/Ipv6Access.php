@@ -20,21 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Ipv6访问配置
  *
- * @method string getSwitch() 获取域名是否开启ipv6访问功能，on或off。
+ * @method string getSwitch() 获取域名开启ipv6访问配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置域名是否开启ipv6访问功能，on或off。
+ * @method void setSwitch(string $Switch) 设置域名开启ipv6访问配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Ipv6Access extends AbstractModel
 {
     /**
-     * @var string 域名是否开启ipv6访问功能，on或off。
+     * @var string 域名开启ipv6访问配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @param string $Switch 域名是否开启ipv6访问功能，on或off。
+     * @param string $Switch 域名开启ipv6访问配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

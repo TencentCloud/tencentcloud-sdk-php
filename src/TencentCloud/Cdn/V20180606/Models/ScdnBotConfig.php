@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * bot配置类型
  *
- * @method string getSwitch() 获取on|off
- * @method void setSwitch(string $Switch) 设置on|off
+ * @method string getSwitch() 获取Scdn bot配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置Scdn bot配置开关，取值有：
+on：开启
+off：关闭
  * @method array getBotCookie() 获取Bot cookie策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotCookie(array $BotCookie) 设置Bot cookie策略
@@ -34,7 +38,9 @@ use TencentCloud\Common\AbstractModel;
 class ScdnBotConfig extends AbstractModel
 {
     /**
-     * @var string on|off
+     * @var string Scdn bot配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -51,7 +57,9 @@ class ScdnBotConfig extends AbstractModel
     public $BotJavaScript;
 
     /**
-     * @param string $Switch on|off
+     * @param string $Switch Scdn bot配置开关，取值有：
+on：开启
+off：关闭
      * @param array $BotCookie Bot cookie策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BotJavaScript Bot Js策略

@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分路径分片回源配置
  *
- * @method string getSwitch() 获取分片回源配置开关
- * @method void setSwitch(string $Switch) 设置分片回源配置开关
+ * @method string getSwitch() 获取分片回源配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置分片回源配置开关，取值有：
+on：开启
+off：关闭
  * @method string getRuleType() 获取规则类型：
 file：指定文件后缀生效
 directory：指定路径生效
@@ -46,7 +50,9 @@ path 时填充绝对路径，如 /xxx/test.html
 class RangeOriginPullRule extends AbstractModel
 {
     /**
-     * @var string 分片回源配置开关
+     * @var string 分片回源配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -69,7 +75,9 @@ path 时填充绝对路径，如 /xxx/test.html
     public $RulePaths;
 
     /**
-     * @param string $Switch 分片回源配置开关
+     * @param string $Switch 分片回源配置开关，取值有：
+on：开启
+off：关闭
      * @param string $RuleType 规则类型：
 file：指定文件后缀生效
 directory：指定路径生效

@@ -58,6 +58,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
  * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 创建工作流
+ * @method Models\CreateUnitNamespacesResponse CreateUnitNamespaces(Models\CreateUnitNamespacesRequest $req) 批量创建单元化命名空间
  * @method Models\CreateUnitRuleResponse CreateUnitRule(Models\CreateUnitRuleRequest $req) 创建单元化规则
  * @method Models\CreateUnitRuleWithDetailRespResponse CreateUnitRuleWithDetailResp(Models\CreateUnitRuleWithDetailRespRequest $req) 创建单元化规则, 并返回详细信息
  * @method Models\DeleteApiGroupResponse DeleteApiGroup(Models\DeleteApiGroupRequest $req) 删除Api分组

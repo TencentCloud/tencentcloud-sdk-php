@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot cookie策略
  *
- * @method string getSwitch() 获取on|off
- * @method void setSwitch(string $Switch) 设置on|off
+ * @method string getSwitch() 获取Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭
  * @method string getRuleType() 获取规则类型，当前只有all
  * @method void setRuleType(string $RuleType) 设置规则类型，当前只有all
  * @method array getRuleValue() 获取规则值，['*']
@@ -40,7 +44,9 @@ use TencentCloud\Common\AbstractModel;
 class BotCookie extends AbstractModel
 {
     /**
-     * @var string on|off
+     * @var string Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -72,7 +78,9 @@ class BotCookie extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param string $Switch on|off
+     * @param string $Switch Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭
      * @param string $RuleType 规则类型，当前只有all
      * @param array $RuleValue 规则值，['*']
      * @param string $Action 执行动作，monitor|intercept|redirect|captcha

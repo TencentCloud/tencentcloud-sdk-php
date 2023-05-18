@@ -14,36 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ipv6源站启用配置，不可更改
+ * CreateUnitNamespaces返回参数结构体
  *
- * @method string getSwitch() 获取域名开启源站ipv6配置开关，取值有：
-on：开启
-off：关闭
+ * @method boolean getResult() 获取是否成功
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置域名开启源站ipv6配置开关，取值有：
-on：开启
-off：关闭
+ * @method void setResult(boolean $Result) 设置是否成功
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class Ipv6 extends AbstractModel
+class CreateUnitNamespacesResponse extends AbstractModel
 {
     /**
-     * @var string 域名开启源站ipv6配置开关，取值有：
-on：开启
-off：关闭
+     * @var boolean 是否成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Switch;
+    public $Result;
 
     /**
-     * @param string $Switch 域名开启源站ipv6配置开关，取值有：
-on：开启
-off：关闭
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $RequestId;
+
+    /**
+     * @param boolean $Result 是否成功
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -58,8 +58,12 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

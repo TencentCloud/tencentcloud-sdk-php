@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot js策略
  *
- * @method string getSwitch() 获取on|off
- * @method void setSwitch(string $Switch) 设置on|off
+ * @method string getSwitch() 获取Bot js策略配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置Bot js策略配置开关，取值有：
+on：开启
+off：关闭
  * @method string getRuleType() 获取规则类型，当前只有file
  * @method void setRuleType(string $RuleType) 设置规则类型，当前只有file
  * @method array getRuleValue() 获取规则值，['html', 'htm']
@@ -40,7 +44,9 @@ use TencentCloud\Common\AbstractModel;
 class BotJavaScript extends AbstractModel
 {
     /**
-     * @var string on|off
+     * @var string Bot js策略配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -72,7 +78,9 @@ class BotJavaScript extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param string $Switch on|off
+     * @param string $Switch Bot js策略配置开关，取值有：
+on：开启
+off：关闭
      * @param string $RuleType 规则类型，当前只有file
      * @param array $RuleValue 规则值，['html', 'htm']
      * @param string $Action 执行动作，monitor|intercept|redirect|captcha

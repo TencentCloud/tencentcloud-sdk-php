@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 离线缓存是否开启
  *
- * @method string getSwitch() 获取on | off, 离线缓存是否开启
- * @method void setSwitch(string $Switch) 设置on | off, 离线缓存是否开启
+ * @method string getSwitch() 获取离线缓存配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置离线缓存配置开关，取值有：
+on：开启
+off：关闭
  */
 class OfflineCache extends AbstractModel
 {
     /**
-     * @var string on | off, 离线缓存是否开启
+     * @var string 离线缓存配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
     /**
-     * @param string $Switch on | off, 离线缓存是否开启
+     * @param string $Switch 离线缓存配置开关，取值有：
+on：开启
+off：关闭
      */
     function __construct()
     {

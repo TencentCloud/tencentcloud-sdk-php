@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则引擎配置
  *
- * @method string getSwitch() 获取规则引擎配置开关
+ * @method string getSwitch() 获取规则引擎配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置规则引擎配置开关
+ * @method void setSwitch(string $Switch) 设置规则引擎配置开关，取值有：
 on：开启
 off：关闭
  * @method string getContent() 获取规则
@@ -34,7 +34,7 @@ off：关闭
 class RuleEngine extends AbstractModel
 {
     /**
-     * @var string 规则引擎配置开关
+     * @var string 规则引擎配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -47,7 +47,7 @@ off：关闭
     public $Content;
 
     /**
-     * @param string $Switch 规则引擎配置开关
+     * @param string $Switch 规则引擎配置开关，取值有：
 on：开启
 off：关闭
      * @param string $Content 规则

@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
  * @method array getApplicationProxyRules() 获取规则列表。
  * @method void setApplicationProxyRules(array $ApplicationProxyRules) 设置规则列表。
+ * @method AccelerateMainland getAccelerateMainland() 获取中国大陆加速优化配置。
+ * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) 设置中国大陆加速优化配置。
  */
 class ApplicationProxy extends AbstractModel
 {
@@ -209,6 +211,11 @@ class ApplicationProxy extends AbstractModel
     public $ApplicationProxyRules;
 
     /**
+     * @var AccelerateMainland 中国大陆加速优化配置。
+     */
+    public $AccelerateMainland;
+
+    /**
      * @param string $ZoneId 站点ID。
      * @param string $ZoneName 站点名称。
      * @param string $ProxyId 代理ID。
@@ -248,6 +255,7 @@ class ApplicationProxy extends AbstractModel
      * @param Ipv6 $Ipv6 Ipv6访问配置。
      * @param string $UpdateTime 更新时间。
      * @param array $ApplicationProxyRules 规则列表。
+     * @param AccelerateMainland $AccelerateMainland 中国大陆加速优化配置。
      */
     function __construct()
     {
@@ -334,6 +342,11 @@ class ApplicationProxy extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ApplicationProxyRules, $obj);
             }
+        }
+
+        if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
+            $this->AccelerateMainland = new AccelerateMainland();
+            $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
         }
     }
 }

@@ -20,9 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回源鉴权高级配置
  *
- * @method string getSwitch() 获取鉴权开关，on或off
+ * @method string getSwitch() 获取回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置鉴权开关，on或off
+ * @method void setSwitch(string $Switch) 设置回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method OriginAuthenticationTypeA getTypeA() 获取鉴权类型A配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +38,10 @@ use TencentCloud\Common\AbstractModel;
 class OriginAuthentication extends AbstractModel
 {
     /**
-     * @var string 鉴权开关，on或off
+     * @var string 回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
@@ -44,7 +53,10 @@ class OriginAuthentication extends AbstractModel
     public $TypeA;
 
     /**
-     * @param string $Switch 鉴权开关，on或off
+     * @param string $Switch 回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginAuthenticationTypeA $TypeA 鉴权类型A配置
 注意：此字段可能返回 null，表示取不到有效值。

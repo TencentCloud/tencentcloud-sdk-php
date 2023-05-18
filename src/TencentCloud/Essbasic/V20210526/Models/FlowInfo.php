@@ -149,8 +149,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowType(string $FlowType) 设置合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
  * @method string getFlowDescription() 获取合同描述，最大长度1000个字符
  * @method void setFlowDescription(string $FlowDescription) 设置合同描述，最大长度1000个字符
- * @method string getCustomerData() 获取 第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
- * @method void setCustomerData(string $CustomerData) 设置 第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method string getCustomerData() 获取 第三方应用平台的业务信息，最大长度1000个字符。
+ * @method void setCustomerData(string $CustomerData) 设置 第三方应用平台的业务信息，最大长度1000个字符。
  * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method array getCcInfos() 获取被抄送人的信息列表，抄送功能暂不开放
@@ -165,6 +165,8 @@ use TencentCloud\Common\AbstractModel;
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
  * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
  * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+ * @method string getAutoSignScene() 获取个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method void setAutoSignScene(string $AutoSignScene) 设置个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  */
 class FlowInfo extends AbstractModel
 {
@@ -209,7 +211,7 @@ class FlowInfo extends AbstractModel
     public $FlowDescription;
 
     /**
-     * @var string  第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @var string  第三方应用平台的业务信息，最大长度1000个字符。
      */
     public $CustomerData;
 
@@ -237,6 +239,11 @@ class FlowInfo extends AbstractModel
     public $CcNotifyType;
 
     /**
+     * @var string 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public $AutoSignScene;
+
+    /**
      * @param string $FlowName 合同名字，最大长度200个字符
      * @param integer $Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
      * @param string $TemplateId 模板ID
@@ -245,7 +252,7 @@ class FlowInfo extends AbstractModel
      * @param string $CallbackUrl 回调地址，最大长度1000个字符
      * @param string $FlowType 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
      * @param string $FlowDescription 合同描述，最大长度1000个字符
-     * @param string $CustomerData  第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param string $CustomerData  第三方应用平台的业务信息，最大长度1000个字符。
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      * @param array $CcInfos 被抄送人的信息列表，抄送功能暂不开放
      * @param boolean $NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。
@@ -253,6 +260,7 @@ class FlowInfo extends AbstractModel
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      * @param integer $CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * @param string $AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     function __construct()
     {
@@ -332,6 +340,10 @@ class FlowInfo extends AbstractModel
 
         if (array_key_exists("CcNotifyType",$param) and $param["CcNotifyType"] !== null) {
             $this->CcNotifyType = $param["CcNotifyType"];
+        }
+
+        if (array_key_exists("AutoSignScene",$param) and $param["AutoSignScene"] !== null) {
+            $this->AutoSignScene = $param["AutoSignScene"];
         }
     }
 }

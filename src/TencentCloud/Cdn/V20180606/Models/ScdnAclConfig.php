@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SCDN访问控制
  *
- * @method string getSwitch() 获取是否开启，on | off
- * @method void setSwitch(string $Switch) 设置是否开启，on | off
+ * @method string getSwitch() 获取SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭
  * @method array getScriptData() 获取新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScriptData(array $ScriptData) 设置新版本请使用AdvancedScriptData
@@ -38,7 +42,9 @@ use TencentCloud\Common\AbstractModel;
 class ScdnAclConfig extends AbstractModel
 {
     /**
-     * @var string 是否开启，on | off
+     * @var string SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -61,7 +67,9 @@ class ScdnAclConfig extends AbstractModel
     public $AdvancedScriptData;
 
     /**
-     * @param string $Switch 是否开启，on | off
+     * @param string $Switch SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭
      * @param array $ScriptData 新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScdnErrorPage $ErrorPage 错误页面配置

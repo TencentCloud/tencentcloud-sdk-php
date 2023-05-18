@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Quic配置项
  *
- * @method string getSwitch() 获取是否启动Quic配置
- * @method void setSwitch(string $Switch) 设置是否启动Quic配置
+ * @method string getSwitch() 获取Quic功能配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置Quic功能配置开关，取值有：
+on：开启
+off：关闭
  */
 class Quic extends AbstractModel
 {
     /**
-     * @var string 是否启动Quic配置
+     * @var string Quic功能配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
     /**
-     * @param string $Switch 是否启动Quic配置
+     * @param string $Switch Quic功能配置开关，取值有：
+on：开启
+off：关闭
      */
     function __construct()
     {

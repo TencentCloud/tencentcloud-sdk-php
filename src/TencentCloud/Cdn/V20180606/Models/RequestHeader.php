@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自定义请求头配置，默认为关闭状态
  *
- * @method string getSwitch() 获取自定义请求头配置开关
+ * @method string getSwitch() 获取自定义请求头配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置自定义请求头配置开关
+ * @method void setSwitch(string $Switch) 设置自定义请求头配置开关，取值有：
 on：开启
 off：关闭
  * @method array getHeaderRules() 获取自定义请求头配置规则
@@ -34,7 +34,7 @@ off：关闭
 class RequestHeader extends AbstractModel
 {
     /**
-     * @var string 自定义请求头配置开关
+     * @var string 自定义请求头配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -47,7 +47,7 @@ off：关闭
     public $HeaderRules;
 
     /**
-     * @param string $Switch 自定义请求头配置开关
+     * @param string $Switch 自定义请求头配置开关，取值有：
 on：开启
 off：关闭
      * @param array $HeaderRules 自定义请求头配置规则

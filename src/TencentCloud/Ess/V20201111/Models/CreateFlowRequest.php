@@ -66,6 +66,8 @@ false：有序签
 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
  * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表。
 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+ * @method string getAutoSignScene() 获取个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method void setAutoSignScene(string $AutoSignScene) 设置个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  */
 class CreateFlowRequest extends AbstractModel
 {
@@ -153,6 +155,11 @@ false：有序签
     public $CcInfos;
 
     /**
+     * @var string 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public $AutoSignScene;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署流程参与者信息，最大限制50方
@@ -176,6 +183,7 @@ false：有序签
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param array $CcInfos 被抄送人的信息列表。
 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+     * @param string $AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     function __construct()
     {
@@ -260,6 +268,10 @@ false：有序签
                 $obj->deserialize($value);
                 array_push($this->CcInfos, $obj);
             }
+        }
+
+        if (array_key_exists("AutoSignScene",$param) and $param["AutoSignScene"] !== null) {
+            $this->AutoSignScene = $param["AutoSignScene"];
         }
     }
 }

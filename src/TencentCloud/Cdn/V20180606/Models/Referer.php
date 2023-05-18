@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Referer 黑白名单配置，默认为关闭状态
  *
- * @method string getSwitch() 获取referer 黑白名单配置开关
+ * @method string getSwitch() 获取referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置referer 黑白名单配置开关
+ * @method void setSwitch(string $Switch) 设置referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭
  * @method array getRefererRules() 获取referer 黑白名单配置规则
@@ -34,7 +34,7 @@ off：关闭
 class Referer extends AbstractModel
 {
     /**
-     * @var string referer 黑白名单配置开关
+     * @var string referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -47,7 +47,7 @@ off：关闭
     public $RefererRules;
 
     /**
-     * @param string $Switch referer 黑白名单配置开关
+     * @param string $Switch referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭
      * @param array $RefererRules referer 黑白名单配置规则

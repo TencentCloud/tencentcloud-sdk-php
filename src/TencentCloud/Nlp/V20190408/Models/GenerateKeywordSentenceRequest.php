@@ -26,11 +26,11 @@ use TencentCloud\Common\AbstractModel;
 （注意实际结果可能小于指定个数）
  * @method void setNumber(integer $Number) 设置返回生成句子的个数。数量需>=1且<=5。
 （注意实际结果可能小于指定个数）
- * @method string getDomain() 获取指定生成句子的领域，支持领域列表
+ * @method string getDomain() 获取指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。
- * @method void setDomain(string $Domain) 设置指定生成句子的领域，支持领域列表
+ * @method void setDomain(string $Domain) 设置指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。
@@ -49,7 +49,7 @@ class GenerateKeywordSentenceRequest extends AbstractModel
     public $Number;
 
     /**
-     * @var string 指定生成句子的领域，支持领域列表
+     * @var string 指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。
@@ -60,7 +60,7 @@ academic：学术领域，仅支持英文
      * @param array $WordList 生成句子的关键词，关键词个数需不超过4个，中文关键词长度应不超过10字符，英文关键词长度不超过3个单词。关键词中不可包含标点符号。
      * @param integer $Number 返回生成句子的个数。数量需>=1且<=5。
 （注意实际结果可能小于指定个数）
-     * @param string $Domain 指定生成句子的领域，支持领域列表
+     * @param string $Domain 指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。

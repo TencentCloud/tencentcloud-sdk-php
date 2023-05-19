@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostID(string $HostID) 设置主机ID
  * @method string getPublicIP() 获取外网IP
  * @method void setPublicIP(string $PublicIP) 设置外网IP
+ * @method string getClusterID() 获取集群ID
+ * @method void setClusterID(string $ClusterID) 设置集群ID
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getNodeType() 获取节点类型[NORMAL:普通节点|SUPER:超级节点]
+ * @method void setNodeType(string $NodeType) 设置节点类型[NORMAL:普通节点|SUPER:超级节点]
+ * @method string getNodeUniqueID() 获取超级节点唯一ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置超级节点唯一ID
+ * @method string getNodeID() 获取超级节点ID
+ * @method void setNodeID(string $NodeID) 设置超级节点ID
+ * @method string getNodeName() 获取超级节点名称
+ * @method void setNodeName(string $NodeName) 设置超级节点名称
  */
 class VulAffectedContainerInfo extends AbstractModel
 {
@@ -80,6 +92,36 @@ class VulAffectedContainerInfo extends AbstractModel
     public $PublicIP;
 
     /**
+     * @var string 集群ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
+     * @var string 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public $NodeType;
+
+    /**
+     * @var string 超级节点唯一ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string 超级节点ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string 超级节点名称
+     */
+    public $NodeName;
+
+    /**
      * @param string $HostIP 内网IP
      * @param string $ContainerID 容器ID
      * @param string $ContainerName 容器名称
@@ -88,6 +130,12 @@ class VulAffectedContainerInfo extends AbstractModel
      * @param string $HostName 主机名称
      * @param string $HostID 主机ID
      * @param string $PublicIP 外网IP
+     * @param string $ClusterID 集群ID
+     * @param string $ClusterName 集群名称
+     * @param string $NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     * @param string $NodeUniqueID 超级节点唯一ID
+     * @param string $NodeID 超级节点ID
+     * @param string $NodeName 超级节点名称
      */
     function __construct()
     {
@@ -132,6 +180,30 @@ class VulAffectedContainerInfo extends AbstractModel
 
         if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
             $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
     }
 }

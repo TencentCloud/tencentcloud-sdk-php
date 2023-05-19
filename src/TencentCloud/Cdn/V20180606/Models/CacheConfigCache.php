@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路径缓存缓存配置
  *
- * @method string getSwitch() 获取缓存配置开关
+ * @method string getSwitch() 获取路径缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置缓存配置开关
+ * @method void setSwitch(string $Switch) 设置路径缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,7 +68,7 @@ off：关闭，遵循用户自定义的节点缓存规则
 class CacheConfigCache extends AbstractModel
 {
     /**
-     * @var string 缓存配置开关
+     * @var string 路径缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,7 +110,7 @@ off：关闭，遵循用户自定义的节点缓存规则
     public $IgnoreSetCookie;
 
     /**
-     * @param string $Switch 缓存配置开关
+     * @param string $Switch 路径缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

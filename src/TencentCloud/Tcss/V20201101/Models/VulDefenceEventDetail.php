@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourcePort(array $SourcePort) 设置攻击源端口
  * @method integer getEventID() 获取事件ID
  * @method void setEventID(integer $EventID) 设置事件ID
- * @method string getHostName() 获取主机名称
- * @method void setHostName(string $HostName) 设置主机名称
+ * @method string getHostName() 获取主机名称/超级节点名称
+ * @method void setHostName(string $HostName) 设置主机名称/超级节点名称
  * @method string getHostIP() 获取主机内网IP
  * @method void setHostIP(string $HostIP) 设置主机内网IP
  * @method string getPublicIP() 获取主机外网IP
@@ -90,9 +90,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerArg(string $ServerArg) 设置进程命令行参数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getQUUID() 获取主机QUUID
+ * @method string getQUUID() 获取主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQUUID(string $QUUID) 设置主机QUUID
+ * @method void setQUUID(string $QUUID) 设置主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetStatus() 获取隔离状态
 未隔离  	NORMAL
@@ -158,6 +158,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRaspDetail(array $RaspDetail) 设置rasp detail
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeSubNetName() 获取超级节点子网名称
+ * @method void setNodeSubNetName(string $NodeSubNetName) 设置超级节点子网名称
+ * @method string getNodeSubNetCIDR() 获取超级节点子网网段
+ * @method void setNodeSubNetCIDR(string $NodeSubNetCIDR) 设置超级节点子网网段
+ * @method string getPodIP() 获取pod ip
+ * @method void setPodIP(string $PodIP) 设置pod ip
+ * @method string getNodeType() 获取节点类型[NORMAL:普通节点|SUPER:超级节点]
+ * @method void setNodeType(string $NodeType) 设置节点类型[NORMAL:普通节点|SUPER:超级节点]
+ * @method string getNodeID() 获取超级节点ID
+ * @method void setNodeID(string $NodeID) 设置超级节点ID
+ * @method string getNodeUniqueID() 获取超级节点唯一ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置超级节点唯一ID
+ * @method string getNodeSubNetID() 获取超级节点子网ID
+ * @method void setNodeSubNetID(string $NodeSubNetID) 设置超级节点子网ID
+ * @method string getClusterID() 获取集群ID
+ * @method void setClusterID(string $ClusterID) 设置集群ID
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  */
 class VulDefenceEventDetail extends AbstractModel
 {
@@ -232,7 +250,7 @@ class VulDefenceEventDetail extends AbstractModel
     public $EventID;
 
     /**
-     * @var string 主机名称
+     * @var string 主机名称/超级节点名称
      */
     public $HostName;
 
@@ -309,7 +327,7 @@ class VulDefenceEventDetail extends AbstractModel
     public $ServerArg;
 
     /**
-     * @var string 主机QUUID
+     * @var string 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QUUID;
@@ -371,6 +389,51 @@ class VulDefenceEventDetail extends AbstractModel
     public $RaspDetail;
 
     /**
+     * @var string 超级节点子网名称
+     */
+    public $NodeSubNetName;
+
+    /**
+     * @var string 超级节点子网网段
+     */
+    public $NodeSubNetCIDR;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
+     * @var string 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public $NodeType;
+
+    /**
+     * @var string 超级节点ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string 超级节点唯一ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string 超级节点子网ID
+     */
+    public $NodeSubNetID;
+
+    /**
+     * @var string 集群ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
      * @param string $CVEID 漏洞CVEID
      * @param string $VulName 漏洞名称
      * @param string $PocID 漏洞PocID
@@ -385,7 +448,7 @@ class VulDefenceEventDetail extends AbstractModel
      * @param string $Status 处理状态
      * @param array $SourcePort 攻击源端口
      * @param integer $EventID 事件ID
-     * @param string $HostName 主机名称
+     * @param string $HostName 主机名称/超级节点名称
      * @param string $HostIP 主机内网IP
      * @param string $PublicIP 主机外网IP
      * @param string $PodName Pod名称
@@ -406,7 +469,7 @@ class VulDefenceEventDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerArg 进程命令行参数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $QUUID 主机QUUID
+     * @param string $QUUID 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetStatus 隔离状态
 未隔离  	NORMAL
@@ -440,6 +503,15 @@ class VulDefenceEventDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RaspDetail rasp detail
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeSubNetName 超级节点子网名称
+     * @param string $NodeSubNetCIDR 超级节点子网网段
+     * @param string $PodIP pod ip
+     * @param string $NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     * @param string $NodeID 超级节点ID
+     * @param string $NodeUniqueID 超级节点唯一ID
+     * @param string $NodeSubNetID 超级节点子网ID
+     * @param string $ClusterID 集群ID
+     * @param string $ClusterName 集群名称
      */
     function __construct()
     {
@@ -597,6 +669,42 @@ class VulDefenceEventDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RaspDetail, $obj);
             }
+        }
+
+        if (array_key_exists("NodeSubNetName",$param) and $param["NodeSubNetName"] !== null) {
+            $this->NodeSubNetName = $param["NodeSubNetName"];
+        }
+
+        if (array_key_exists("NodeSubNetCIDR",$param) and $param["NodeSubNetCIDR"] !== null) {
+            $this->NodeSubNetCIDR = $param["NodeSubNetCIDR"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("NodeSubNetID",$param) and $param["NodeSubNetID"] !== null) {
+            $this->NodeSubNetID = $param["NodeSubNetID"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

@@ -40,6 +40,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDefenseVulCount(integer $SupportDefenseVulCount) 设置支持防御的漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHostNodeCount() 获取普通节点个数
+ * @method void setHostNodeCount(integer $HostNodeCount) 设置普通节点个数
+ * @method integer getSuperScope() 获取超级节点范围
+ * @method void setSuperScope(integer $SuperScope) 设置超级节点范围
+ * @method integer getSuperNodeCount() 获取超级节点个数
+ * @method void setSuperNodeCount(integer $SuperNodeCount) 设置超级节点个数
+ * @method array getSuperNodeIds() 获取超级节点Id列表
+ * @method void setSuperNodeIds(array $SuperNodeIds) 设置超级节点Id列表
+ * @method integer getNodeTotalCount() 获取开通容器安全的超级结点总数
+ * @method void setNodeTotalCount(integer $NodeTotalCount) 设置开通容器安全的超级结点总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -84,6 +94,31 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
     public $SupportDefenseVulCount;
 
     /**
+     * @var integer 普通节点个数
+     */
+    public $HostNodeCount;
+
+    /**
+     * @var integer 超级节点范围
+     */
+    public $SuperScope;
+
+    /**
+     * @var integer 超级节点个数
+     */
+    public $SuperNodeCount;
+
+    /**
+     * @var array 超级节点Id列表
+     */
+    public $SuperNodeIds;
+
+    /**
+     * @var integer 开通容器安全的超级结点总数
+     */
+    public $NodeTotalCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -99,6 +134,11 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportDefenseVulCount 支持防御的漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HostNodeCount 普通节点个数
+     * @param integer $SuperScope 超级节点范围
+     * @param integer $SuperNodeCount 超级节点个数
+     * @param array $SuperNodeIds 超级节点Id列表
+     * @param integer $NodeTotalCount 开通容器安全的超级结点总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +180,26 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
 
         if (array_key_exists("SupportDefenseVulCount",$param) and $param["SupportDefenseVulCount"] !== null) {
             $this->SupportDefenseVulCount = $param["SupportDefenseVulCount"];
+        }
+
+        if (array_key_exists("HostNodeCount",$param) and $param["HostNodeCount"] !== null) {
+            $this->HostNodeCount = $param["HostNodeCount"];
+        }
+
+        if (array_key_exists("SuperScope",$param) and $param["SuperScope"] !== null) {
+            $this->SuperScope = $param["SuperScope"];
+        }
+
+        if (array_key_exists("SuperNodeCount",$param) and $param["SuperNodeCount"] !== null) {
+            $this->SuperNodeCount = $param["SuperNodeCount"];
+        }
+
+        if (array_key_exists("SuperNodeIds",$param) and $param["SuperNodeIds"] !== null) {
+            $this->SuperNodeIds = $param["SuperNodeIds"];
+        }
+
+        if (array_key_exists("NodeTotalCount",$param) and $param["NodeTotalCount"] !== null) {
+            $this->NodeTotalCount = $param["NodeTotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

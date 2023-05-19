@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUrl() 获取需要提取水印的媒体 URL。
  * @method void setUrl(string $Url) 设置需要提取水印的媒体 URL。
+ * @method string getFileId() 获取媒体文件 ID。Url 对应的原始媒体文件 ID。
+ * @method void setFileId(string $FileId) 设置媒体文件 ID。Url 对应的原始媒体文件 ID。
  */
 class ExtractTraceWatermarkTaskInput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ExtractTraceWatermarkTaskInput extends AbstractModel
     public $Url;
 
     /**
+     * @var string 媒体文件 ID。Url 对应的原始媒体文件 ID。
+     */
+    public $FileId;
+
+    /**
      * @param string $Url 需要提取水印的媒体 URL。
+     * @param string $FileId 媒体文件 ID。Url 对应的原始媒体文件 ID。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ExtractTraceWatermarkTaskInput extends AbstractModel
         }
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

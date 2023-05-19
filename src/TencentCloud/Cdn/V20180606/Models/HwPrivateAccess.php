@@ -18,10 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  华为云对象存储回源鉴权
+ * 华为云对象存储回源鉴权
  *
- * @method string getSwitch() 获取开关 on/off
- * @method void setSwitch(string $Switch) 设置开关 on/off
+ * @method string getSwitch() 获取 华为云对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置 华为云对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
  * @method string getAccessKey() 获取访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessKey(string $AccessKey) 设置访问 ID
@@ -38,7 +42,9 @@ use TencentCloud\Common\AbstractModel;
 class HwPrivateAccess extends AbstractModel
 {
     /**
-     * @var string 开关 on/off
+     * @var string  华为云对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -61,7 +67,9 @@ class HwPrivateAccess extends AbstractModel
     public $Bucket;
 
     /**
-     * @param string $Switch 开关 on/off
+     * @param string $Switch  华为云对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
      * @param string $AccessKey 访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretKey 密钥

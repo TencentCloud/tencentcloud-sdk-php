@@ -20,18 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 启发式缓存配置
  *
- * @method string getSwitch() 获取on 代表开启启发式缓存
-off 代表关闭启发式缓存
- * @method void setSwitch(string $Switch) 设置on 代表开启启发式缓存
-off 代表关闭启发式缓存
+ * @method string getSwitch() 获取启发式缓存配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置启发式缓存配置开关，取值有：
+on：开启
+off：关闭
  * @method CacheConfig getCacheConfig() 获取自定义启发式缓存时间配置
  * @method void setCacheConfig(CacheConfig $CacheConfig) 设置自定义启发式缓存时间配置
  */
 class HeuristicCache extends AbstractModel
 {
     /**
-     * @var string on 代表开启启发式缓存
-off 代表关闭启发式缓存
+     * @var string 启发式缓存配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -41,8 +44,9 @@ off 代表关闭启发式缓存
     public $CacheConfig;
 
     /**
-     * @param string $Switch on 代表开启启发式缓存
-off 代表关闭启发式缓存
+     * @param string $Switch 启发式缓存配置开关，取值有：
+on：开启
+off：关闭
      * @param CacheConfig $CacheConfig 自定义启发式缓存时间配置
      */
     function __construct()

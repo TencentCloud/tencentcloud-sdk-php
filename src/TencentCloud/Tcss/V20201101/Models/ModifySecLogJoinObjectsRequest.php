@@ -32,6 +32,13 @@ k8sApi: k8s_api
  * @method void setBindList(array $BindList) 设置绑定主机quuid列表
  * @method array getUnBindList() 获取待解绑主机quuid列表
  * @method void setUnBindList(array $UnBindList) 设置待解绑主机quuid列表
+ * @method string getNodeType() 获取节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
+
+ * @method void setNodeType(string $NodeType) 设置节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
  */
 class ModifySecLogJoinObjectsRequest extends AbstractModel
 {
@@ -54,12 +61,23 @@ k8sApi: k8s_api
     public $UnBindList;
 
     /**
+     * @var string 节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
+
+     */
+    public $NodeType;
+
+    /**
      * @param string $LogType 日志类型
 bash日志: container_bash
 容器启动: container_launch
 k8sApi: k8s_api
      * @param array $BindList 绑定主机quuid列表
      * @param array $UnBindList 待解绑主机quuid列表
+     * @param string $NodeType 节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
      */
     function __construct()
     {
@@ -84,6 +102,10 @@ k8sApi: k8s_api
 
         if (array_key_exists("UnBindList",$param) and $param["UnBindList"] !== null) {
             $this->UnBindList = $param["UnBindList"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
         }
     }
 }

@@ -34,8 +34,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) 设置语音全文识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProgress() 获取任务进度，取值范围 [0-100] 。
- * @method void setProgress(integer $Progress) 设置任务进度，取值范围 [0-100] 。
+ * @method integer getProgress() 获取语音全文识别任务进度，取值范围 [0-100] 。
+ * @method void setProgress(integer $Progress) 设置语音全文识别任务进度，取值范围 [0-100] 。
+ * @method string getBeginProcessTime() 获取语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setBeginProcessTime(string $BeginProcessTime) 设置语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getFinishTime() 获取语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setFinishTime(string $FinishTime) 设置语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class AiRecognitionTaskAsrFullTextResult extends AbstractModel
 {
@@ -71,9 +75,19 @@ class AiRecognitionTaskAsrFullTextResult extends AbstractModel
     public $Output;
 
     /**
-     * @var integer 任务进度，取值范围 [0-100] 。
+     * @var integer 语音全文识别任务进度，取值范围 [0-100] 。
      */
     public $Progress;
+
+    /**
+     * @var string 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $FinishTime;
 
     /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -83,7 +97,9 @@ class AiRecognitionTaskAsrFullTextResult extends AbstractModel
      * @param AiRecognitionTaskAsrFullTextResultInput $Input 语音全文识别任务输入信息。
      * @param AiRecognitionTaskAsrFullTextResultOutput $Output 语音全文识别任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Progress 任务进度，取值范围 [0-100] 。
+     * @param integer $Progress 语音全文识别任务进度，取值范围 [0-100] 。
+     * @param string $BeginProcessTime 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $FinishTime 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -126,6 +142,14 @@ class AiRecognitionTaskAsrFullTextResult extends AbstractModel
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

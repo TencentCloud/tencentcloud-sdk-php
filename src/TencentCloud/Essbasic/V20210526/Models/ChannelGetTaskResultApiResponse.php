@@ -52,9 +52,11 @@ ProcessFailed  - 转换失败
 ProcessTimeout - 转换文件超时
  * @method string getResourceId() 获取资源Id，也是FileId，用于文件发起使用
  * @method void setResourceId(string $ResourceId) 设置资源Id，也是FileId，用于文件发起使用
- * @method string getPreviewUrl() 获取预览文件Url，有效期30分钟
+ * @method string getPreviewUrl() 获取预览文件Url，有效期30分钟 
+当前字段返回为空，发起的时候，将ResourceId 放入发起即可
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewUrl(string $PreviewUrl) 设置预览文件Url，有效期30分钟
+ * @method void setPreviewUrl(string $PreviewUrl) 设置预览文件Url，有效期30分钟 
+当前字段返回为空，发起的时候，将ResourceId 放入发起即可
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -94,7 +96,8 @@ ProcessTimeout - 转换文件超时
     public $ResourceId;
 
     /**
-     * @var string 预览文件Url，有效期30分钟
+     * @var string 预览文件Url，有效期30分钟 
+当前字段返回为空，发起的时候，将ResourceId 放入发起即可
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
@@ -121,7 +124,8 @@ DownloadFailed - 下载失败
 ProcessFailed  - 转换失败
 ProcessTimeout - 转换文件超时
      * @param string $ResourceId 资源Id，也是FileId，用于文件发起使用
-     * @param string $PreviewUrl 预览文件Url，有效期30分钟
+     * @param string $PreviewUrl 预览文件Url，有效期30分钟 
+当前字段返回为空，发起的时候，将ResourceId 放入发起即可
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

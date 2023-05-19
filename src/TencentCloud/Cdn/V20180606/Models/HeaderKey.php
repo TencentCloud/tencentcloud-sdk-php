@@ -20,9 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 组成CacheKey
  *
- * @method string getSwitch() 获取是否组成Cachekey
+ * @method string getSwitch() 获取组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置是否组成Cachekey
+ * @method void setSwitch(string $Switch) 设置组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取组成CacheKey的header数组，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +36,9 @@ use TencentCloud\Common\AbstractModel;
 class HeaderKey extends AbstractModel
 {
     /**
-     * @var string 是否组成Cachekey
+     * @var string 组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
@@ -44,7 +50,9 @@ class HeaderKey extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Switch 是否组成Cachekey
+     * @param string $Switch 组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 组成CacheKey的header数组，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。

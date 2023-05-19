@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSslVpnServerId() 获取SSL-VPN-SERVER 实例ID。
  * @method void setSslVpnServerId(string $SslVpnServerId) 设置SSL-VPN-SERVER 实例ID。
- * @method string getSslVpnClientName() 获取name
- * @method void setSslVpnClientName(string $SslVpnClientName) 设置name
+ * @method string getSslVpnClientName() 获取SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+ * @method void setSslVpnClientName(string $SslVpnClientName) 设置SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+ * @method array getSslVpnClientNames() 获取SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+ * @method void setSslVpnClientNames(array $SslVpnClientNames) 设置SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
  */
 class CreateVpnGatewaySslClientRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class CreateVpnGatewaySslClientRequest extends AbstractModel
     public $SslVpnServerId;
 
     /**
-     * @var string name
+     * @var string SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
      */
     public $SslVpnClientName;
 
     /**
+     * @var array SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+     */
+    public $SslVpnClientNames;
+
+    /**
      * @param string $SslVpnServerId SSL-VPN-SERVER 实例ID。
-     * @param string $SslVpnClientName name
+     * @param string $SslVpnClientName SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+     * @param array $SslVpnClientNames SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateVpnGatewaySslClientRequest extends AbstractModel
 
         if (array_key_exists("SslVpnClientName",$param) and $param["SslVpnClientName"] !== null) {
             $this->SslVpnClientName = $param["SslVpnClientName"];
+        }
+
+        if (array_key_exists("SslVpnClientNames",$param) and $param["SslVpnClientNames"] !== null) {
+            $this->SslVpnClientNames = $param["SslVpnClientNames"];
         }
     }
 }

@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 时间戳防盗链配置
  *
- * @method string getSwitch() 获取防盗链配置开关
+ * @method string getSwitch() 获取防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null
- * @method void setSwitch(string $Switch) 设置防盗链配置开关
+ * @method void setSwitch(string $Switch) 设置防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null
@@ -48,7 +48,7 @@ off：关闭
 class Authentication extends AbstractModel
 {
     /**
-     * @var string 防盗链配置开关
+     * @var string 防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null
@@ -80,7 +80,7 @@ off：关闭
     public $TypeD;
 
     /**
-     * @param string $Switch 防盗链配置开关
+     * @param string $Switch 防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null

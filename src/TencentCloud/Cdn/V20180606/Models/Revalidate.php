@@ -20,9 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 是否回源站校验
  *
- * @method string getSwitch() 获取on | off 是否总是回源校验
+ * @method string getSwitch() 获取总是回源校验配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置on | off 是否总是回源校验
+ * @method void setSwitch(string $Switch) 设置总是回源校验配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPath() 获取只在特定请求路径回源站校验
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +38,10 @@ use TencentCloud\Common\AbstractModel;
 class Revalidate extends AbstractModel
 {
     /**
-     * @var string on | off 是否总是回源校验
+     * @var string 总是回源校验配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
@@ -44,7 +53,10 @@ class Revalidate extends AbstractModel
     public $Path;
 
     /**
-     * @param string $Switch on | off 是否总是回源校验
+     * @param string $Switch 总是回源校验配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path 只在特定请求路径回源站校验
 注意：此字段可能返回 null，表示取不到有效值。

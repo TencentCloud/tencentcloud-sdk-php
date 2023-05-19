@@ -20,18 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 启发式自定义时间缓存配置
  *
- * @method string getHeuristicCacheTimeSwitch() 获取on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间
- * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) 设置on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间
+ * @method string getHeuristicCacheTimeSwitch() 获取启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) 设置启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭
  * @method integer getHeuristicCacheTime() 获取单位 秒.
  * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) 设置单位 秒.
  */
 class CacheConfig extends AbstractModel
 {
     /**
-     * @var string on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间
+     * @var string 启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭
      */
     public $HeuristicCacheTimeSwitch;
 
@@ -41,8 +44,9 @@ off 代表关闭自定义启发式缓存时间
     public $HeuristicCacheTime;
 
     /**
-     * @param string $HeuristicCacheTimeSwitch on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间
+     * @param string $HeuristicCacheTimeSwitch 启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭
      * @param integer $HeuristicCacheTime 单位 秒.
      */
     function __construct()

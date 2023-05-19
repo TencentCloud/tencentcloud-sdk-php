@@ -20,21 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVulDefencePlugin请求参数结构体
  *
- * @method string getHostID() 获取主机HostID即quuid
- * @method void setHostID(string $HostID) 设置主机HostID即quuid
+ * @method string getHostID() 获取主机HostID或超级节点UniqueId
+ * @method void setHostID(string $HostID) 设置主机HostID或超级节点UniqueId
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li>
  */
 class DescribeVulDefencePluginRequest extends AbstractModel
 {
     /**
-     * @var string 主机HostID即quuid
+     * @var string 主机HostID或超级节点UniqueId
      */
     public $HostID;
 
@@ -50,16 +54,20 @@ class DescribeVulDefencePluginRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li>
      */
     public $Filters;
 
     /**
-     * @param string $HostID 主机HostID即quuid
+     * @param string $HostID 主机HostID或超级节点UniqueId
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li>
      */
     function __construct()
     {

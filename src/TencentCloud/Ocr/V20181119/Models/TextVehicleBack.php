@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalQuasiMass(string $TotalQuasiMass) 设置准牵引总质量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubPageCode() 获取副页编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubPageCode(string $SubPageCode) 设置副页编码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextVehicleBack extends AbstractModel
 {
@@ -124,6 +128,12 @@ class TextVehicleBack extends AbstractModel
     public $TotalQuasiMass;
 
     /**
+     * @var string 副页编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubPageCode;
+
+    /**
      * @param string $PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileNo 档案编号
@@ -143,6 +153,8 @@ class TextVehicleBack extends AbstractModel
      * @param string $Record 检验记录
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalQuasiMass 准牵引总质量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubPageCode 副页编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class TextVehicleBack extends AbstractModel
 
         if (array_key_exists("TotalQuasiMass",$param) and $param["TotalQuasiMass"] !== null) {
             $this->TotalQuasiMass = $param["TotalQuasiMass"];
+        }
+
+        if (array_key_exists("SubPageCode",$param) and $param["SubPageCode"] !== null) {
+            $this->SubPageCode = $param["SubPageCode"];
         }
     }
 }

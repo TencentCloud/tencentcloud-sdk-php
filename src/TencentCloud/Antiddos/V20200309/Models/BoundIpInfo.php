@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置产品分类下的子类型，绑定操作为必填项，解绑操作可不填。取值[cvm（CVM），lb（负载均衡器），eni（弹性网卡），vpngw（VPN），natgw（NAT），waf（WAF），fpc（金融），gaap（GAAP），other（托管IP），eip（弹性公网常规IP）]
  * @method integer getIspCode() 获取运营商，绑定操作为必填项，解绑操作可不填。0：电信；1：联通；2：移动；5：BGP
  * @method void setIspCode(integer $IspCode) 设置运营商，绑定操作为必填项，解绑操作可不填。0：电信；1：联通；2：移动；5：BGP
+ * @method string getDomain() 获取域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BoundIpInfo extends AbstractModel
 {
@@ -59,11 +63,19 @@ class BoundIpInfo extends AbstractModel
     public $IspCode;
 
     /**
+     * @var string 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
      * @param string $Ip IP地址
      * @param string $BizType 绑定的产品分类，绑定操作为必填项，解绑操作可不填。取值[public（CVM、CLB产品），bm（黑石产品），eni（弹性网卡），vpngw（VPN网关）， natgw（NAT网关），waf（Web应用安全产品），fpc（金融产品），gaap（GAAP产品）, other(托管IP)]
      * @param string $InstanceId IP所属的资源实例ID，绑定操作为必填项，解绑操作可不填。例如是弹性网卡的IP，则InstanceId填写弹性网卡的ID(eni-*); 如果绑定的是托管IP没有对应的资源实例ID，请填写"none";
      * @param string $DeviceType 产品分类下的子类型，绑定操作为必填项，解绑操作可不填。取值[cvm（CVM），lb（负载均衡器），eni（弹性网卡），vpngw（VPN），natgw（NAT），waf（WAF），fpc（金融），gaap（GAAP），other（托管IP），eip（弹性公网常规IP）]
      * @param integer $IspCode 运营商，绑定操作为必填项，解绑操作可不填。0：电信；1：联通；2：移动；5：BGP
+     * @param string $Domain 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class BoundIpInfo extends AbstractModel
 
         if (array_key_exists("IspCode",$param) and $param["IspCode"] !== null) {
             $this->IspCode = $param["IspCode"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

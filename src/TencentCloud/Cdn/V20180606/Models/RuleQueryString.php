@@ -20,9 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路径保留参数配置
  *
- * @method string getSwitch() 获取on | off CacheKey是否由QueryString组成
+ * @method string getSwitch() 获取路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置on | off CacheKey是否由QueryString组成
+ * @method void setSwitch(string $Switch) 设置路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAction() 获取includeCustom 包含部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +42,10 @@ use TencentCloud\Common\AbstractModel;
 class RuleQueryString extends AbstractModel
 {
     /**
-     * @var string on | off CacheKey是否由QueryString组成
+     * @var string 路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
@@ -54,7 +63,10 @@ class RuleQueryString extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Switch on | off CacheKey是否由QueryString组成
+     * @param string $Switch 路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Action includeCustom 包含部分url参数
 注意：此字段可能返回 null，表示取不到有效值。

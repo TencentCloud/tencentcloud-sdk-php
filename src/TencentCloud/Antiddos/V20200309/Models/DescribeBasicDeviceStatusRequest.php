@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getIpList() 获取IP 资源列表
  * @method void setIpList(array $IpList) 设置IP 资源列表
+ * @method array getIdList() 获取域名化资源传id
+ * @method void setIdList(array $IdList) 设置域名化资源传id
+ * @method integer getFilterRegion() 获取地域名称
+ * @method void setFilterRegion(integer $FilterRegion) 设置地域名称
  */
 class DescribeBasicDeviceStatusRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeBasicDeviceStatusRequest extends AbstractModel
     public $IpList;
 
     /**
+     * @var array 域名化资源传id
+     */
+    public $IdList;
+
+    /**
+     * @var integer 地域名称
+     */
+    public $FilterRegion;
+
+    /**
      * @param array $IpList IP 资源列表
+     * @param array $IdList 域名化资源传id
+     * @param integer $FilterRegion 地域名称
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeBasicDeviceStatusRequest extends AbstractModel
         }
         if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
             $this->IpList = $param["IpList"];
+        }
+
+        if (array_key_exists("IdList",$param) and $param["IdList"] !== null) {
+            $this->IdList = $param["IdList"];
+        }
+
+        if (array_key_exists("FilterRegion",$param) and $param["FilterRegion"] !== null) {
+            $this->FilterRegion = $param["FilterRegion"];
         }
     }
 }

@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 时间戳防盗链高级版配置，白名单功能
  *
- * @method string getSwitch() 获取防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。
- * @method void setSwitch(string $Switch) 设置防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。
+ * @method string getSwitch() 获取防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null
+ * @method void setSwitch(string $Switch) 设置防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null
  * @method AdvancedAuthenticationTypeA getTypeA() 获取时间戳防盗链高级版模式A配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTypeA(AdvancedAuthenticationTypeA $TypeA) 设置时间戳防盗链高级版模式A配置。
@@ -50,7 +56,10 @@ use TencentCloud\Common\AbstractModel;
 class AdvancedAuthentication extends AbstractModel
 {
     /**
-     * @var string 防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。
+     * @var string 防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null
      */
     public $Switch;
 
@@ -91,7 +100,10 @@ class AdvancedAuthentication extends AbstractModel
     public $TypeF;
 
     /**
-     * @param string $Switch 防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。
+     * @param string $Switch 防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null
      * @param AdvancedAuthenticationTypeA $TypeA 时间戳防盗链高级版模式A配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvancedAuthenticationTypeB $TypeB 时间戳防盗链高级版模式B配置。

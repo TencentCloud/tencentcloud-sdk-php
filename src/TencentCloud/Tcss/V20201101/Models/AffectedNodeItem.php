@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置区域
  * @method string getVerifyInfo() 获取检查结果的验证信息
  * @method void setVerifyInfo(string $VerifyInfo) 设置检查结果的验证信息
+ * @method string getNodeName() 获取节点名称
+ * @method void setNodeName(string $NodeName) 设置节点名称
  */
 class AffectedNodeItem extends AbstractModel
 {
@@ -87,6 +89,11 @@ class AffectedNodeItem extends AbstractModel
     public $VerifyInfo;
 
     /**
+     * @var string 节点名称
+     */
+    public $NodeName;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名字
      * @param string $InstanceId 实例id
@@ -96,6 +103,7 @@ class AffectedNodeItem extends AbstractModel
      * @param string $ContainerRuntime 运行时组件,docker或者containerd
      * @param string $Region 区域
      * @param string $VerifyInfo 检查结果的验证信息
+     * @param string $NodeName 节点名称
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class AffectedNodeItem extends AbstractModel
 
         if (array_key_exists("VerifyInfo",$param) and $param["VerifyInfo"] !== null) {
             $this->VerifyInfo = $param["VerifyInfo"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
     }
 }

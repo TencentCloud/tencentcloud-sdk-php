@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteVpnGatewaySslClient请求参数结构体
  *
- * @method string getSslVpnClientId() 获取SSL-VPN-CLIENT 实例ID。
- * @method void setSslVpnClientId(string $SslVpnClientId) 设置SSL-VPN-CLIENT 实例ID。
+ * @method string getSslVpnClientId() 获取SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
+ * @method void setSslVpnClientId(string $SslVpnClientId) 设置SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
+ * @method array getSslVpnClientIds() 获取SSL-VPN-CLIENT 实例ID列表。批量删除时使用。不可和SslVpnClientId同时使用。
+ * @method void setSslVpnClientIds(array $SslVpnClientIds) 设置SSL-VPN-CLIENT 实例ID列表。批量删除时使用。不可和SslVpnClientId同时使用。
  */
 class DeleteVpnGatewaySslClientRequest extends AbstractModel
 {
     /**
-     * @var string SSL-VPN-CLIENT 实例ID。
+     * @var string SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
      */
     public $SslVpnClientId;
 
     /**
-     * @param string $SslVpnClientId SSL-VPN-CLIENT 实例ID。
+     * @var array SSL-VPN-CLIENT 实例ID列表。批量删除时使用。不可和SslVpnClientId同时使用。
+     */
+    public $SslVpnClientIds;
+
+    /**
+     * @param string $SslVpnClientId SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
+     * @param array $SslVpnClientIds SSL-VPN-CLIENT 实例ID列表。批量删除时使用。不可和SslVpnClientId同时使用。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteVpnGatewaySslClientRequest extends AbstractModel
         }
         if (array_key_exists("SslVpnClientId",$param) and $param["SslVpnClientId"] !== null) {
             $this->SslVpnClientId = $param["SslVpnClientId"];
+        }
+
+        if (array_key_exists("SslVpnClientIds",$param) and $param["SslVpnClientIds"] !== null) {
+            $this->SslVpnClientIds = $param["SslVpnClientIds"];
         }
     }
 }

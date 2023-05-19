@@ -31,12 +31,30 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) 本接口（CreateCertificate）用于创建付费证书。
  * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) 本接口（DeleteCertificate）用于删除证书。
  * @method Models\DeleteManagerResponse DeleteManager(Models\DeleteManagerRequest $req) 删除管理人
+ * @method Models\DeployCertificateInstanceResponse DeployCertificateInstance(Models\DeployCertificateInstanceRequest $req) 证书部署到云资源实例列表
+ * @method Models\DeployCertificateRecordRetryResponse DeployCertificateRecordRetry(Models\DeployCertificateRecordRetryRequest $req) 云资源部署重试部署记录
+ * @method Models\DeployCertificateRecordRollbackResponse DeployCertificateRecordRollback(Models\DeployCertificateRecordRollbackRequest $req) 云资源部署一键回滚
  * @method Models\DescribeCertificateResponse DescribeCertificate(Models\DescribeCertificateRequest $req) 本接口（DescribeCertificate）用于获取证书信息。
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) 获取证书详情。
  * @method Models\DescribeCertificateOperateLogsResponse DescribeCertificateOperateLogs(Models\DescribeCertificateOperateLogsRequest $req) 获取用户账号下有关证书的操作日志。
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用于获取证书列表。
  * @method Models\DescribeCompaniesResponse DescribeCompanies(Models\DescribeCompaniesRequest $req) 查询公司列表
  * @method Models\DescribeDeployedResourcesResponse DescribeDeployedResources(Models\DescribeDeployedResourcesRequest $req) 证书查询关联资源
+ * @method Models\DescribeHostApiGatewayInstanceListResponse DescribeHostApiGatewayInstanceList(Models\DescribeHostApiGatewayInstanceListRequest $req) 查询证书apiGateway云资源部署实例列表
+ * @method Models\DescribeHostCdnInstanceListResponse DescribeHostCdnInstanceList(Models\DescribeHostCdnInstanceListRequest $req) 查询证书cdn云资源部署实例列表
+ * @method Models\DescribeHostClbInstanceListResponse DescribeHostClbInstanceList(Models\DescribeHostClbInstanceListRequest $req) 查询证书clb云资源部署实例列表
+ * @method Models\DescribeHostCosInstanceListResponse DescribeHostCosInstanceList(Models\DescribeHostCosInstanceListRequest $req) 查询证书cos云资源部署实例列表
+ * @method Models\DescribeHostDdosInstanceListResponse DescribeHostDdosInstanceList(Models\DescribeHostDdosInstanceListRequest $req) 查询证书ddos云资源部署实例列表
+ * @method Models\DescribeHostDeployRecordResponse DescribeHostDeployRecord(Models\DescribeHostDeployRecordRequest $req) 查询证书云资源部署记录列表
+ * @method Models\DescribeHostDeployRecordDetailResponse DescribeHostDeployRecordDetail(Models\DescribeHostDeployRecordDetailRequest $req) 查询证书云资源部署记录详情列表
+ * @method Models\DescribeHostLighthouseInstanceListResponse DescribeHostLighthouseInstanceList(Models\DescribeHostLighthouseInstanceListRequest $req) 查询证书Lighthouse云资源部署实例列表
+ * @method Models\DescribeHostLiveInstanceListResponse DescribeHostLiveInstanceList(Models\DescribeHostLiveInstanceListRequest $req) 查询证书live云资源部署实例列表
+ * @method Models\DescribeHostTeoInstanceListResponse DescribeHostTeoInstanceList(Models\DescribeHostTeoInstanceListRequest $req) 查询证书EdgeOne云资源部署实例列表
+ * @method Models\DescribeHostTkeInstanceListResponse DescribeHostTkeInstanceList(Models\DescribeHostTkeInstanceListRequest $req) 查询证书tke云资源部署实例列表
+ * @method Models\DescribeHostUpdateRecordResponse DescribeHostUpdateRecord(Models\DescribeHostUpdateRecordRequest $req) 查询证书云资源更新记录列表
+ * @method Models\DescribeHostUpdateRecordDetailResponse DescribeHostUpdateRecordDetail(Models\DescribeHostUpdateRecordDetailRequest $req) 查询证书云资源更新记录详情列表
+ * @method Models\DescribeHostVodInstanceListResponse DescribeHostVodInstanceList(Models\DescribeHostVodInstanceListRequest $req) 查询证书Vod云资源部署实例列表
+ * @method Models\DescribeHostWafInstanceListResponse DescribeHostWafInstanceList(Models\DescribeHostWafInstanceListRequest $req) 查询证书waf云资源部署实例列表
  * @method Models\DescribeManagerDetailResponse DescribeManagerDetail(Models\DescribeManagerDetailRequest $req) 查询管理人详情
  * @method Models\DescribeManagersResponse DescribeManagers(Models\DescribeManagersRequest $req) 查询管理人列表
  * @method Models\DescribePackagesResponse DescribePackages(Models\DescribePackagesRequest $req) 获得权益包列表
@@ -49,6 +67,9 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\RevokeCertificateResponse RevokeCertificate(Models\RevokeCertificateRequest $req) 本接口（RevokeCertificate）用于吊销证书。
  * @method Models\SubmitAuditManagerResponse SubmitAuditManager(Models\SubmitAuditManagerRequest $req) 重新提交审核管理人
  * @method Models\SubmitCertificateInformationResponse SubmitCertificateInformation(Models\SubmitCertificateInformationRequest $req) 提交证书资料。输入参数信息可以分多次提交，但提交的证书资料应最低限度保持完整。
+ * @method Models\UpdateCertificateInstanceResponse UpdateCertificateInstance(Models\UpdateCertificateInstanceRequest $req) 一键更新旧证书资源
+ * @method Models\UpdateCertificateRecordRetryResponse UpdateCertificateRecordRetry(Models\UpdateCertificateRecordRetryRequest $req) 云资源更新重试部署记录
+ * @method Models\UpdateCertificateRecordRollbackResponse UpdateCertificateRecordRollback(Models\UpdateCertificateRecordRollbackRequest $req) 云资源更新一键回滚
  * @method Models\UploadCertificateResponse UploadCertificate(Models\UploadCertificateRequest $req) 本接口（UploadCertificate）用于上传证书。
  * @method Models\UploadConfirmLetterResponse UploadConfirmLetter(Models\UploadConfirmLetterRequest $req) 本接口（UploadConfirmLetter）用于上传证书确认函。
  * @method Models\UploadRevokeLetterResponse UploadRevokeLetter(Models\UploadRevokeLetterRequest $req) 本接口（UploadRevokeLetter）用于上传证书吊销确认函。

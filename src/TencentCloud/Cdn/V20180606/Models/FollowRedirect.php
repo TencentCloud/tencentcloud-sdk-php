@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回源 301/302 状态码自动跟随配置，默认为关闭状态
  *
- * @method string getSwitch() 获取回源跟随开关
+ * @method string getSwitch() 获取回源跟随配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置回源跟随开关
+ * @method void setSwitch(string $Switch) 设置回源跟随配置开关，取值有：
 on：开启
 off：关闭
  * @method RedirectConfig getRedirectConfig() 获取自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
@@ -34,7 +34,7 @@ off：关闭
 class FollowRedirect extends AbstractModel
 {
     /**
-     * @var string 回源跟随开关
+     * @var string 回源跟随配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -47,7 +47,7 @@ off：关闭
     public $RedirectConfig;
 
     /**
-     * @param string $Switch 回源跟随开关
+     * @param string $Switch 回源跟随配置开关，取值有：
 on：开启
 off：关闭
      * @param RedirectConfig $RedirectConfig 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。

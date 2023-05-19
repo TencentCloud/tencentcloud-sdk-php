@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP 黑白名单配置，默认为关闭状态
  *
- * @method string getSwitch() 获取IP 黑白名单配置开关
+ * @method string getSwitch() 获取IP 黑白名单配置开关，取值有
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置IP 黑白名单配置开关
+ * @method void setSwitch(string $Switch) 设置IP 黑白名单配置开关，取值有
 on：开启
 off：关闭
  * @method string getFilterType() 获取IP 黑白名单类型
@@ -54,7 +54,7 @@ blacklist：黑名单
 class IpFilter extends AbstractModel
 {
     /**
-     * @var string IP 黑白名单配置开关
+     * @var string IP 黑白名单配置开关，取值有
 on：开启
 off：关闭
      */
@@ -89,7 +89,7 @@ blacklist：黑名单
     public $ReturnCode;
 
     /**
-     * @param string $Switch IP 黑白名单配置开关
+     * @param string $Switch IP 黑白名单配置开关，取值有
 on：开启
 off：关闭
      * @param string $FilterType IP 黑白名单类型

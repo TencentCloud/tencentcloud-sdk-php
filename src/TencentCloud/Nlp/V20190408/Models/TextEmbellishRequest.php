@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取待润色的文本。中文文本长度需<=50字符；英文文本长度需<=30个单词。
  * @method void setText(string $Text) 设置待润色的文本。中文文本长度需<=50字符；英文文本长度需<=30个单词。
- * @method string getSourceLang() 获取待润色文本的语言类型，支持语言列表
+ * @method string getSourceLang() 获取待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文
- * @method void setSourceLang(string $SourceLang) 设置待润色文本的语言类型，支持语言列表
+ * @method void setSourceLang(string $SourceLang) 设置待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文
  * @method integer getNumber() 获取返回润色结果的个数。数量需>=1且<=5。
 （注意实际结果可能小于指定个数）
  * @method void setNumber(integer $Number) 设置返回润色结果的个数。数量需>=1且<=5。
 （注意实际结果可能小于指定个数）
- * @method string getStyle() 获取控制润色类型，类型列表
+ * @method string getStyle() 获取控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写
 m2a：从现代文改写为古文
 a2m：从古文改写为现代文
 默认为both。
- * @method void setStyle(string $Style) 设置控制润色类型，类型列表
+ * @method void setStyle(string $Style) 设置控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写
@@ -55,7 +55,7 @@ class TextEmbellishRequest extends AbstractModel
     public $Text;
 
     /**
-     * @var string 待润色文本的语言类型，支持语言列表
+     * @var string 待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文
      */
@@ -68,7 +68,7 @@ en：英文
     public $Number;
 
     /**
-     * @var string 控制润色类型，类型列表
+     * @var string 控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写
@@ -80,12 +80,12 @@ a2m：从古文改写为现代文
 
     /**
      * @param string $Text 待润色的文本。中文文本长度需<=50字符；英文文本长度需<=30个单词。
-     * @param string $SourceLang 待润色文本的语言类型，支持语言列表
+     * @param string $SourceLang 待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文
      * @param integer $Number 返回润色结果的个数。数量需>=1且<=5。
 （注意实际结果可能小于指定个数）
-     * @param string $Style 控制润色类型，类型列表
+     * @param string $Style 控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写

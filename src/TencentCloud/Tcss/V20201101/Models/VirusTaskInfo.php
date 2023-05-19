@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) 设置镜像名称
  * @method string getImageId() 获取镜像Id
  * @method void setImageId(string $ImageId) 设置镜像Id
- * @method string getHostName() 获取主机名称
- * @method void setHostName(string $HostName) 设置主机名称
- * @method string getHostIp() 获取主机ip
- * @method void setHostIp(string $HostIp) 设置主机ip
+ * @method string getHostName() 获取节点名
+ * @method void setHostName(string $HostName) 设置节点名
+ * @method string getHostIp() 获取节点内网ip
+ * @method void setHostIp(string $HostIp) 设置节点内网ip
  * @method string getStatus() 获取扫描状态：
 WAIT: 等待扫描
 FAILED: 失败
@@ -84,6 +84,12 @@ INTERNAL: 服务内部错误
 MISC: 其他错误
 UNAUTH: 所在镜像未授权
 SEND_CANCEL_SUCCESSED:下发成功
+ * @method string getNodeType() 获取节点类型：NORMAL普通节点、SUPER超级节点
+ * @method void setNodeType(string $NodeType) 设置节点类型：NORMAL普通节点、SUPER超级节点
+ * @method string getPublicIP() 获取节点外网IP
+ * @method void setPublicIP(string $PublicIP) 设置节点外网IP
+ * @method string getNodeID() 获取节点ID
+ * @method void setNodeID(string $NodeID) 设置节点ID
  */
 class VirusTaskInfo extends AbstractModel
 {
@@ -108,12 +114,12 @@ class VirusTaskInfo extends AbstractModel
     public $ImageId;
 
     /**
-     * @var string 主机名称
+     * @var string 节点名
      */
     public $HostName;
 
     /**
-     * @var string 主机ip
+     * @var string 节点内网ip
      */
     public $HostIp;
 
@@ -168,12 +174,27 @@ SEND_CANCEL_SUCCESSED:下发成功
     public $ErrorMsg;
 
     /**
+     * @var string 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public $NodeType;
+
+    /**
+     * @var string 节点外网IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string 节点ID
+     */
+    public $NodeID;
+
+    /**
      * @param string $ContainerName 容器名称
      * @param string $ContainerId 容器id
      * @param string $ImageName 镜像名称
      * @param string $ImageId 镜像Id
-     * @param string $HostName 主机名称
-     * @param string $HostIp 主机ip
+     * @param string $HostName 节点名
+     * @param string $HostIp 节点内网ip
      * @param string $Status 扫描状态：
 WAIT: 等待扫描
 FAILED: 失败
@@ -200,6 +221,9 @@ INTERNAL: 服务内部错误
 MISC: 其他错误
 UNAUTH: 所在镜像未授权
 SEND_CANCEL_SUCCESSED:下发成功
+     * @param string $NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param string $PublicIP 节点外网IP
+     * @param string $NodeID 节点ID
      */
     function __construct()
     {
@@ -260,6 +284,18 @@ SEND_CANCEL_SUCCESSED:下发成功
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
             $this->ErrorMsg = $param["ErrorMsg"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
         }
     }
 }

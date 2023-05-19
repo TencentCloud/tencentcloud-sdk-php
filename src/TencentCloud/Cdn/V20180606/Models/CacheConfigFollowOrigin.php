@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路径缓存遵循源站配置
  *
- * @method string getSwitch() 获取遵循源站配置开关
+ * @method string getSwitch() 获取路径缓存遵循源站配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置遵循源站配置开关
+ * @method void setSwitch(string $Switch) 设置路径缓存遵循源站配置开关，取值有：
 on：开启
 off：关闭
  * @method HeuristicCache getHeuristicCache() 获取启发式缓存配置
@@ -34,7 +34,7 @@ off：关闭
 class CacheConfigFollowOrigin extends AbstractModel
 {
     /**
-     * @var string 遵循源站配置开关
+     * @var string 路径缓存遵循源站配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -47,7 +47,7 @@ off：关闭
     public $HeuristicCache;
 
     /**
-     * @param string $Switch 遵循源站配置开关
+     * @param string $Switch 路径缓存遵循源站配置开关，取值有：
 on：开启
 off：关闭
      * @param HeuristicCache $HeuristicCache 启发式缓存配置

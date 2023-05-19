@@ -132,6 +132,28 @@ RULE_MODE_HOLDUP 拦截
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
+ * @method string getNodeName() 获取节点名称：如果是超级节点，展示的实质上是它的node_id
+ * @method void setNodeName(string $NodeName) 设置节点名称：如果是超级节点，展示的实质上是它的node_id
+ * @method string getPodName() 获取pod名称
+ * @method void setPodName(string $PodName) 设置pod名称
+ * @method string getPodIP() 获取pod ip
+ * @method void setPodIP(string $PodIP) 设置pod ip
+ * @method string getNodeType() 获取节点类型：NORMAL普通节点、SUPER超级节点
+ * @method void setNodeType(string $NodeType) 设置节点类型：NORMAL普通节点、SUPER超级节点
+ * @method string getClusterID() 获取集群id
+ * @method void setClusterID(string $ClusterID) 设置集群id
+ * @method string getNodeUniqueID() 获取节点的唯一id，主要是超级节点使用
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置节点的唯一id，主要是超级节点使用
+ * @method string getPublicIP() 获取节点公网IP
+ * @method void setPublicIP(string $PublicIP) 设置节点公网IP
+ * @method string getNodeID() 获取节点id
+ * @method void setNodeID(string $NodeID) 设置节点id
+ * @method string getHostID() 获取uuid
+ * @method void setHostID(string $HostID) 设置uuid
+ * @method string getHostIP() 获取节点内网ip
+ * @method void setHostIP(string $HostIP) 设置节点内网ip
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  */
 class AccessControlEventInfo extends AbstractModel
 {
@@ -300,6 +322,61 @@ RULE_MODE_HOLDUP 拦截
     public $ContainerStatus;
 
     /**
+     * @var string 节点名称：如果是超级节点，展示的实质上是它的node_id
+     */
+    public $NodeName;
+
+    /**
+     * @var string pod名称
+     */
+    public $PodName;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
+     * @var string 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public $NodeType;
+
+    /**
+     * @var string 集群id
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 节点的唯一id，主要是超级节点使用
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string 节点公网IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string 节点id
+     */
+    public $NodeID;
+
+    /**
+     * @var string uuid
+     */
+    public $HostID;
+
+    /**
+     * @var string 节点内网ip
+     */
+    public $HostIP;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
      * @param string $ProcessName 进程名称
      * @param string $MatchRuleName 命中规则名称
      * @param string $FoundTime 生成时间
@@ -356,6 +433,17 @@ RULE_MODE_HOLDUP 拦截
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
+     * @param string $NodeName 节点名称：如果是超级节点，展示的实质上是它的node_id
+     * @param string $PodName pod名称
+     * @param string $PodIP pod ip
+     * @param string $NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param string $ClusterID 集群id
+     * @param string $NodeUniqueID 节点的唯一id，主要是超级节点使用
+     * @param string $PublicIP 节点公网IP
+     * @param string $NodeID 节点id
+     * @param string $HostID uuid
+     * @param string $HostIP 节点内网ip
+     * @param string $ClusterName 集群名称
      */
     function __construct()
     {
@@ -476,6 +564,50 @@ RULE_MODE_HOLDUP 拦截
 
         if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
             $this->ContainerStatus = $param["ContainerStatus"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

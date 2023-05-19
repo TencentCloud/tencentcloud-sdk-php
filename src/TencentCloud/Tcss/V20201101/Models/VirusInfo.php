@@ -156,6 +156,28 @@ VALIDATION: 参数非法
 4: 异常行为
 5: 威胁情报
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeID() 获取节点ID
+ * @method void setNodeID(string $NodeID) 设置节点ID
+ * @method string getNodeName() 获取节点名称
+ * @method void setNodeName(string $NodeName) 设置节点名称
+ * @method string getPodIP() 获取pod ip
+ * @method void setPodIP(string $PodIP) 设置pod ip
+ * @method string getPodName() 获取pod(实例)的名字
+ * @method void setPodName(string $PodName) 设置pod(实例)的名字
+ * @method string getClusterID() 获取节点所属集群ID
+ * @method void setClusterID(string $ClusterID) 设置节点所属集群ID
+ * @method string getNodeType() 获取节点类型：NORMAL普通节点、SUPER超级节点
+ * @method void setNodeType(string $NodeType) 设置节点类型：NORMAL普通节点、SUPER超级节点
+ * @method string getPublicIP() 获取节点外网IP
+ * @method void setPublicIP(string $PublicIP) 设置节点外网IP
+ * @method string getInnerIP() 获取节点内网IP
+ * @method void setInnerIP(string $InnerIP) 设置节点内网IP
+ * @method string getNodeUniqueID() 获取节点唯一ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置节点唯一ID
+ * @method string getHostID() 获取普通节点ID
+ * @method void setHostID(string $HostID) 设置普通节点ID
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  */
 class VirusInfo extends AbstractModel
 {
@@ -312,6 +334,61 @@ VALIDATION: 参数非法
     public $CheckPlatform;
 
     /**
+     * @var string 节点ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string 节点名称
+     */
+    public $NodeName;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
+     * @var string pod(实例)的名字
+     */
+    public $PodName;
+
+    /**
+     * @var string 节点所属集群ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public $NodeType;
+
+    /**
+     * @var string 节点外网IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string 节点内网IP
+     */
+    public $InnerIP;
+
+    /**
+     * @var string 节点唯一ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string 普通节点ID
+     */
+    public $HostID;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
      * @param string $FileName 文件名称
      * @param string $FilePath 文件路径
      * @param string $VirusName 病毒名称
@@ -380,6 +457,17 @@ VALIDATION: 参数非法
 4: 异常行为
 5: 威胁情报
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeID 节点ID
+     * @param string $NodeName 节点名称
+     * @param string $PodIP pod ip
+     * @param string $PodName pod(实例)的名字
+     * @param string $ClusterID 节点所属集群ID
+     * @param string $NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param string $PublicIP 节点外网IP
+     * @param string $InnerIP 节点内网IP
+     * @param string $NodeUniqueID 节点唯一ID
+     * @param string $HostID 普通节点ID
+     * @param string $ClusterName 集群名称
      */
     function __construct()
     {
@@ -476,6 +564,50 @@ VALIDATION: 参数非法
 
         if (array_key_exists("CheckPlatform",$param) and $param["CheckPlatform"] !== null) {
             $this->CheckPlatform = $param["CheckPlatform"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("InnerIP",$param) and $param["InnerIP"] !== null) {
+            $this->InnerIP = $param["InnerIP"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

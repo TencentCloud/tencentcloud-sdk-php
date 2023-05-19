@@ -21,19 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 容器逃逸事件列表
  *
  * @method string getEventType() 获取事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
  * @method void setEventType(string $EventType) 设置事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
  * @method string getContainerName() 获取容器名
  * @method void setContainerName(string $ContainerName) 设置容器名
  * @method string getImageName() 获取镜像名
@@ -136,17 +138,34 @@ MountNamespace逃逸、
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
+ * @method string getClusterID() 获取节点所属集群ID
+ * @method void setClusterID(string $ClusterID) 设置节点所属集群ID
+ * @method string getNodeType() 获取节点类型：NORMAL普通节点、SUPER超级节点
+ * @method void setNodeType(string $NodeType) 设置节点类型：NORMAL普通节点、SUPER超级节点
+ * @method string getPodIP() 获取pod ip
+ * @method void setPodIP(string $PodIP) 设置pod ip
+ * @method string getNodeUniqueID() 获取节点唯一id
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置节点唯一id
+ * @method string getPublicIP() 获取节点公网ip
+ * @method void setPublicIP(string $PublicIP) 设置节点公网ip
+ * @method string getNodeID() 获取节点id
+ * @method void setNodeID(string $NodeID) 设置节点id
+ * @method string getHostIP() 获取节点内网ip
+ * @method void setHostIP(string $HostIP) 设置节点内网ip
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  */
 class EscapeEventInfo extends AbstractModel
 {
     /**
      * @var string 事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
      */
     public $EventType;
 
@@ -282,13 +301,54 @@ MountNamespace逃逸、
     public $ContainerStatus;
 
     /**
+     * @var string 节点所属集群ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public $NodeType;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
+     * @var string 节点唯一id
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string 节点公网ip
+     */
+    public $PublicIP;
+
+    /**
+     * @var string 节点id
+     */
+    public $NodeID;
+
+    /**
+     * @var string 节点内网ip
+     */
+    public $HostIP;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
      * @param string $EventType 事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
      * @param string $ContainerName 容器名
      * @param string $ImageName 镜像名
      * @param string $Status 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
@@ -340,6 +400,14 @@ MountNamespace逃逸、
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
+     * @param string $ClusterID 节点所属集群ID
+     * @param string $NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param string $PodIP pod ip
+     * @param string $NodeUniqueID 节点唯一id
+     * @param string $PublicIP 节点公网ip
+     * @param string $NodeID 节点id
+     * @param string $HostIP 节点内网ip
+     * @param string $ClusterName 集群名称
      */
     function __construct()
     {
@@ -436,6 +504,38 @@ MountNamespace逃逸、
 
         if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
             $this->ContainerStatus = $param["ContainerStatus"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

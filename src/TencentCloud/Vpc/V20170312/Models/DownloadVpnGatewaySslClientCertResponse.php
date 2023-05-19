@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DownloadVpnGatewaySslClientCert返回参数结构体
  *
- * @method string getSslClientConfigsSet() 获取无
- * @method void setSslClientConfigsSet(string $SslClientConfigsSet) 设置无
- * @method array getSslClientConfig() 获取SSL-VPN client配置
- * @method void setSslClientConfig(array $SslClientConfig) 设置SSL-VPN client配置
- * @method integer getAuthenticated() 获取是否鉴权成功 只有传入SamlToken 才生效
- * @method void setAuthenticated(integer $Authenticated) 设置是否鉴权成功 只有传入SamlToken 才生效
+ * @method string getSslClientConfigsSet() 获取SSL-VPN 客户端配置。
+ * @method void setSslClientConfigsSet(string $SslClientConfigsSet) 设置SSL-VPN 客户端配置。
+ * @method array getSslClientConfig() 获取SSL-VPN 客户端配置。
+ * @method void setSslClientConfig(array $SslClientConfig) 设置SSL-VPN 客户端配置。
+ * @method integer getAuthenticated() 获取是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
+ * @method void setAuthenticated(integer $Authenticated) 设置是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string SSL-VPN 客户端配置。
      */
     public $SslClientConfigsSet;
 
     /**
-     * @var array SSL-VPN client配置
+     * @var array SSL-VPN 客户端配置。
      */
     public $SslClientConfig;
 
     /**
-     * @var integer 是否鉴权成功 只有传入SamlToken 才生效
+     * @var integer 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
      */
     public $Authenticated;
 
@@ -52,9 +52,9 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SslClientConfigsSet 无
-     * @param array $SslClientConfig SSL-VPN client配置
-     * @param integer $Authenticated 是否鉴权成功 只有传入SamlToken 才生效
+     * @param string $SslClientConfigsSet SSL-VPN 客户端配置。
+     * @param array $SslClientConfig SSL-VPN 客户端配置。
+     * @param integer $Authenticated 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

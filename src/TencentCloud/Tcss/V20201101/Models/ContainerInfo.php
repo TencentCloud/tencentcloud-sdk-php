@@ -76,6 +76,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateTime(string $IsolateTime) 设置隔离时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeID() 获取超级节点id
+ * @method void setNodeID(string $NodeID) 设置超级节点id
+ * @method string getPodIP() 获取podip
+ * @method void setPodIP(string $PodIP) 设置podip
+ * @method string getPodName() 获取pod名称
+ * @method void setPodName(string $PodName) 设置pod名称
+ * @method string getNodeType() 获取节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+ * @method void setNodeType(string $NodeType) 设置节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+ * @method string getNodeUniqueID() 获取超级节点唯一id
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置超级节点唯一id
+ * @method integer getPodCpu() 获取所属Pod的CPU
+ * @method void setPodCpu(integer $PodCpu) 设置所属Pod的CPU
+ * @method integer getPodMem() 获取所属Pod的内存
+ * @method void setPodMem(integer $PodMem) 设置所属Pod的内存
  */
 class ContainerInfo extends AbstractModel
 {
@@ -188,6 +202,41 @@ class ContainerInfo extends AbstractModel
     public $IsolateTime;
 
     /**
+     * @var string 超级节点id
+     */
+    public $NodeID;
+
+    /**
+     * @var string podip
+     */
+    public $PodIP;
+
+    /**
+     * @var string pod名称
+     */
+    public $PodName;
+
+    /**
+     * @var string 节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public $NodeType;
+
+    /**
+     * @var string 超级节点唯一id
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var integer 所属Pod的CPU
+     */
+    public $PodCpu;
+
+    /**
+     * @var integer 所属Pod的内存
+     */
+    public $PodMem;
+
+    /**
      * @param string $ContainerID 容器id
      * @param string $ContainerName 容器名称
      * @param string $Status 容器运行状态
@@ -216,6 +265,13 @@ class ContainerInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateTime 隔离时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeID 超级节点id
+     * @param string $PodIP podip
+     * @param string $PodName pod名称
+     * @param string $NodeType 节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+     * @param string $NodeUniqueID 超级节点唯一id
+     * @param integer $PodCpu 所属Pod的CPU
+     * @param integer $PodMem 所属Pod的内存
      */
     function __construct()
     {
@@ -308,6 +364,34 @@ class ContainerInfo extends AbstractModel
 
         if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
             $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("PodCpu",$param) and $param["PodCpu"] !== null) {
+            $this->PodCpu = $param["PodCpu"];
+        }
+
+        if (array_key_exists("PodMem",$param) and $param["PodMem"] !== null) {
+            $this->PodMem = $param["PodMem"];
         }
     }
 }

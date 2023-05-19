@@ -108,18 +108,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getQUUID() 获取主机QUUID
+ * @method string getQUUID() 获取主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQUUID(string $QUUID) 设置主机QUUID
+ * @method void setQUUID(string $QUUID) 设置主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIP() 获取主机内网IP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIP(string $HostIP) 设置主机内网IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHostName() 获取主机名称
+ * @method string getHostName() 获取主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostName(string $HostName) 设置主机名称
+ * @method void setHostName(string $HostName) 设置主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeType() 获取节点类型[NORMAL:普通节点|SUPER:超级节点]
+ * @method void setNodeType(string $NodeType) 设置节点类型[NORMAL:普通节点|SUPER:超级节点]
+ * @method string getPublicIP() 获取外网IP
+ * @method void setPublicIP(string $PublicIP) 设置外网IP
+ * @method string getNodeUniqueID() 获取超级节点唯一ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置超级节点唯一ID
+ * @method string getNodeID() 获取超级节点ID
+ * @method void setNodeID(string $NodeID) 设置超级节点ID
+ * @method string getClusterID() 获取集群ID
+ * @method void setClusterID(string $ClusterID) 设置集群ID
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  */
 class VulDefenceEvent extends AbstractModel
 {
@@ -244,7 +256,7 @@ class VulDefenceEvent extends AbstractModel
     public $ContainerIsolateOperationSrc;
 
     /**
-     * @var string 主机QUUID
+     * @var string 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QUUID;
@@ -256,10 +268,40 @@ class VulDefenceEvent extends AbstractModel
     public $HostIP;
 
     /**
-     * @var string 主机名称
+     * @var string 主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
+
+    /**
+     * @var string 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public $NodeType;
+
+    /**
+     * @var string 外网IP
+     */
+    public $PublicIP;
+
+    /**
+     * @var string 超级节点唯一ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string 超级节点ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string 集群ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
 
     /**
      * @param string $CVEID 漏洞CVEID
@@ -306,12 +348,18 @@ class VulDefenceEvent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $QUUID 主机QUUID
+     * @param string $QUUID 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIP 主机内网IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HostName 主机名称
+     * @param string $HostName 主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     * @param string $PublicIP 外网IP
+     * @param string $NodeUniqueID 超级节点唯一ID
+     * @param string $NodeID 超级节点ID
+     * @param string $ClusterID 集群ID
+     * @param string $ClusterName 集群名称
      */
     function __construct()
     {
@@ -412,6 +460,30 @@ class VulDefenceEvent extends AbstractModel
 
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
             $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

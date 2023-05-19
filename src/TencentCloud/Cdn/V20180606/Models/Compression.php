@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能压缩配置，默认对 js、html、css、xml、json、shtml、htm 后缀且大小为 256 ~ 2097152 字节的文件进行 GZIP 压缩
  *
- * @method string getSwitch() 获取智能压缩配置开关
+ * @method string getSwitch() 获取智能压缩配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置智能压缩配置开关
+ * @method void setSwitch(string $Switch) 设置智能压缩配置开关，取值有：
 on：开启
 off：关闭
  * @method array getCompressionRules() 获取压缩规则数组
@@ -34,7 +34,7 @@ off：关闭
 class Compression extends AbstractModel
 {
     /**
-     * @var string 智能压缩配置开关
+     * @var string 智能压缩配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -47,7 +47,7 @@ off：关闭
     public $CompressionRules;
 
     /**
-     * @param string $Switch 智能压缩配置开关
+     * @param string $Switch 智能压缩配置开关，取值有：
 on：开启
 off：关闭
      * @param array $CompressionRules 压缩规则数组

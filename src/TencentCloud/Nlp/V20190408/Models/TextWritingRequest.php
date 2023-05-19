@@ -22,31 +22,31 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取待续写的句子，文本统一使用utf-8格式编码，长度不超过200字符。
  * @method void setText(string $Text) 设置待续写的句子，文本统一使用utf-8格式编码，长度不超过200字符。
- * @method string getSourceLang() 获取待续写文本的语言类型，支持语言列表
+ * @method string getSourceLang() 获取待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文
- * @method void setSourceLang(string $SourceLang) 设置待续写文本的语言类型，支持语言列表
+ * @method void setSourceLang(string $SourceLang) 设置待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文
  * @method integer getNumber() 获取返回续写结果的个数。数量需>=1且<=5。
 （注意实际结果可能小于指定个数）
  * @method void setNumber(integer $Number) 设置返回续写结果的个数。数量需>=1且<=5。
 （注意实际结果可能小于指定个数）
- * @method string getDomain() 获取指定续写领域，支持领域列表
+ * @method string getDomain() 获取指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。
- * @method void setDomain(string $Domain) 设置指定续写领域，支持领域列表
+ * @method void setDomain(string $Domain) 设置指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。
- * @method string getStyle() 获取指定续写风格，支持风格列表
+ * @method string getStyle() 获取指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠
 urban_officialdom：职场
 默认为xuanhuan_wuxia（武侠）。
- * @method void setStyle(string $Style) 设置指定续写风格，支持风格列表
+ * @method void setStyle(string $Style) 设置指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠
@@ -61,7 +61,7 @@ class TextWritingRequest extends AbstractModel
     public $Text;
 
     /**
-     * @var string 待续写文本的语言类型，支持语言列表
+     * @var string 待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文
      */
@@ -74,7 +74,7 @@ en：英文
     public $Number;
 
     /**
-     * @var string 指定续写领域，支持领域列表
+     * @var string 指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。
@@ -82,7 +82,7 @@ academic：学术领域，仅支持英文补全
     public $Domain;
 
     /**
-     * @var string 指定续写风格，支持风格列表
+     * @var string 指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠
@@ -93,16 +93,16 @@ urban_officialdom：职场
 
     /**
      * @param string $Text 待续写的句子，文本统一使用utf-8格式编码，长度不超过200字符。
-     * @param string $SourceLang 待续写文本的语言类型，支持语言列表
+     * @param string $SourceLang 待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文
      * @param integer $Number 返回续写结果的个数。数量需>=1且<=5。
 （注意实际结果可能小于指定个数）
-     * @param string $Domain 指定续写领域，支持领域列表
+     * @param string $Domain 指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。
-     * @param string $Style 指定续写风格，支持风格列表
+     * @param string $Style 指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠

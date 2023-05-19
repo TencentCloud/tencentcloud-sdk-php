@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocolList(array $ProtocolList) 设置转发协议搜索，选填，取值[http, https, http/https]
  * @method string getCname() 获取高防IP实例的Cname
  * @method void setCname(string $Cname) 设置高防IP实例的Cname
+ * @method boolean getExport() 获取默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+ * @method void setExport(boolean $Export) 设置默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
  */
 class DescribeNewL7RulesRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeNewL7RulesRequest extends AbstractModel
     public $Cname;
 
     /**
+     * @var boolean 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+     */
+    public $Export;
+
+    /**
      * @param string $Business 大禹子产品代号（bgpip表示高防IP）
      * @param array $StatusList 状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      * @param string $Domain 域名搜索，选填，当需要搜索域名请填写
@@ -88,6 +95,7 @@ class DescribeNewL7RulesRequest extends AbstractModel
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param array $ProtocolList 转发协议搜索，选填，取值[http, https, http/https]
      * @param string $Cname 高防IP实例的Cname
+     * @param boolean $Export 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeNewL7RulesRequest extends AbstractModel
 
         if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
             $this->Cname = $param["Cname"];
+        }
+
+        if (array_key_exists("Export",$param) and $param["Export"] !== null) {
+            $this->Export = $param["Export"];
         }
     }
 }

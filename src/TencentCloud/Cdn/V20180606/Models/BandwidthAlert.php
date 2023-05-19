@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 带宽封顶配置，默认为关闭状态
  *
- * @method string getSwitch() 获取用量封顶配置开关
+ * @method string getSwitch() 获取用量封顶配置开关，取值有：
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置用量封顶配置开关
+ * @method void setSwitch(string $Switch) 设置用量封顶配置开关，取值有：
 on：开启
 off：关闭
  * @method integer getBpsThreshold() 获取用量封顶阈值，带宽单位为bps，流量单位byte
@@ -40,11 +40,11 @@ RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTriggerTime(string $LastTriggerTime) 设置境内区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlertSwitch() 获取用量封顶提醒开关
+ * @method string getAlertSwitch() 获取用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlertSwitch(string $AlertSwitch) 设置用量封顶提醒开关
+ * @method void setAlertSwitch(string $AlertSwitch) 设置用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,7 +72,7 @@ off：关闭
 class BandwidthAlert extends AbstractModel
 {
     /**
-     * @var string 用量封顶配置开关
+     * @var string 用量封顶配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -98,7 +98,7 @@ RETURN_404：全部请求返回 404
     public $LastTriggerTime;
 
     /**
-     * @var string 用量封顶提醒开关
+     * @var string 用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,7 +132,7 @@ off：关闭
     public $StatisticItems;
 
     /**
-     * @param string $Switch 用量封顶配置开关
+     * @param string $Switch 用量封顶配置开关，取值有：
 on：开启
 off：关闭
      * @param integer $BpsThreshold 用量封顶阈值，带宽单位为bps，流量单位byte
@@ -142,7 +142,7 @@ RETURN_404：全部请求返回 404
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastTriggerTime 境内区域上次触发用量封顶阈值的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlertSwitch 用量封顶提醒开关
+     * @param string $AlertSwitch 用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSslVpnKey(string $SslVpnKey) 设置客户端密钥
  * @method string getSslVpnCert() 获取客户端证书
  * @method void setSslVpnCert(string $SslVpnCert) 设置客户端证书
+ * @method string getSslVpnClientId() 获取SSL-VPN-CLIENT 实例ID。
+ * @method void setSslVpnClientId(string $SslVpnClientId) 设置SSL-VPN-CLIENT 实例ID。
  */
 class SslClientConfig extends AbstractModel
 {
@@ -52,10 +54,16 @@ class SslClientConfig extends AbstractModel
     public $SslVpnCert;
 
     /**
+     * @var string SSL-VPN-CLIENT 实例ID。
+     */
+    public $SslVpnClientId;
+
+    /**
      * @param string $SslVpnClientConfiguration 客户端配置
      * @param string $SslVpnRootCert 更证书
      * @param string $SslVpnKey 客户端密钥
      * @param string $SslVpnCert 客户端证书
+     * @param string $SslVpnClientId SSL-VPN-CLIENT 实例ID。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SslClientConfig extends AbstractModel
 
         if (array_key_exists("SslVpnCert",$param) and $param["SslVpnCert"] !== null) {
             $this->SslVpnCert = $param["SslVpnCert"];
+        }
+
+        if (array_key_exists("SslVpnClientId",$param) and $param["SslVpnClientId"] !== null) {
+            $this->SslVpnClientId = $param["SslVpnClientId"];
         }
     }
 }

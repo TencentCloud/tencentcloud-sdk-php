@@ -22,10 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -40,7 +48,11 @@ class DescribeVulDefenceHostRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
      */
     public $Filters;
 
@@ -67,7 +79,11 @@ class DescribeVulDefenceHostRequest extends AbstractModel
     /**
      * @param array $Filters 过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
      * @param string $Order 排序方式：asc/desc

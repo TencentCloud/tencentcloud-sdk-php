@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置查询数量限制
  * @method integer getOffset() 获取查询偏移位置
  * @method void setOffset(integer $Offset) 设置查询偏移位置
- * @method string getOrder() 获取需排序的字段
- * @method void setOrder(string $Order) 设置需排序的字段
- * @method string getBy() 获取排序采用升序还是降序 升:asc 降 desc
- * @method void setBy(string $By) 设置排序采用升序还是降序 升:asc 降 desc
+ * @method string getOrder() 获取排序采用升序还是降序 升:asc 降 desc
+ * @method void setOrder(string $Order) 设置排序采用升序还是降序 升:asc 降 desc
+ * @method string getBy() 获取需排序的字段
+ * @method void setBy(string $By) 设置需排序的字段
  * @method array getFilters() 获取过滤的列及内容
  * @method void setFilters(array $Filters) 设置过滤的列及内容
  * @method string getStartTime() 获取可填无， 日志使用查询时间
@@ -48,12 +48,12 @@ class Filter extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 需排序的字段
+     * @var string 排序采用升序还是降序 升:asc 降 desc
      */
     public $Order;
 
     /**
-     * @var string 排序采用升序还是降序 升:asc 降 desc
+     * @var string 需排序的字段
      */
     public $By;
 
@@ -75,8 +75,8 @@ class Filter extends AbstractModel
     /**
      * @param integer $Limit 查询数量限制
      * @param integer $Offset 查询偏移位置
-     * @param string $Order 需排序的字段
-     * @param string $By 排序采用升序还是降序 升:asc 降 desc
+     * @param string $Order 排序采用升序还是降序 升:asc 降 desc
+     * @param string $By 需排序的字段
      * @param array $Filters 过滤的列及内容
      * @param string $StartTime 可填无， 日志使用查询时间
      * @param string $EndTime 可填无， 日志使用查询时间

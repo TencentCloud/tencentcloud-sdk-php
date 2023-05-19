@@ -34,8 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) 设置镜像名称
  * @method string getNodeName() 获取节点名称
  * @method void setNodeName(string $NodeName) 设置节点名称
- * @method string getPodName() 获取Pod名称
- * @method void setPodName(string $PodName) 设置Pod名称
  * @method string getStatus() 获取状态， “EVENT_UNDEAL”:事件未处理
     "EVENT_DEALED":事件已经处理
     "EVENT_INGNORE"：事件已经忽略
@@ -124,6 +122,30 @@ MountNamespace逃逸、
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeID() 获取节点ID
+ * @method void setNodeID(string $NodeID) 设置节点ID
+ * @method string getNodeType() 获取节点类型:NORMAL:普通节点;SUPER:超级节点
+ * @method void setNodeType(string $NodeType) 设置节点类型:NORMAL:普通节点;SUPER:超级节点
+ * @method string getNodeSubNetID() 获取节点子网ID
+ * @method void setNodeSubNetID(string $NodeSubNetID) 设置节点子网ID
+ * @method string getNodeSubNetName() 获取节点子网名称
+ * @method void setNodeSubNetName(string $NodeSubNetName) 设置节点子网名称
+ * @method string getNodeSubNetCIDR() 获取节点子网网段
+ * @method void setNodeSubNetCIDR(string $NodeSubNetCIDR) 设置节点子网网段
+ * @method string getPodName() 获取pod名称
+ * @method void setPodName(string $PodName) 设置pod名称
+ * @method string getPodIP() 获取podIP
+ * @method void setPodIP(string $PodIP) 设置podIP
+ * @method string getPodStatus() 获取pod状态
+ * @method void setPodStatus(string $PodStatus) 设置pod状态
+ * @method string getClusterID() 获取集群id
+ * @method void setClusterID(string $ClusterID) 设置集群id
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getNodeUniqueID() 获取节点唯一id
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置节点唯一id
+ * @method string getHostID() 获取uuid
+ * @method void setHostID(string $HostID) 设置uuid
  */
 class RunTimeEventBaseInfo extends AbstractModel
 {
@@ -161,11 +183,6 @@ class RunTimeEventBaseInfo extends AbstractModel
      * @var string 节点名称
      */
     public $NodeName;
-
-    /**
-     * @var string Pod名称
-     */
-    public $PodName;
 
     /**
      * @var string 状态， “EVENT_UNDEAL”:事件未处理
@@ -252,6 +269,66 @@ MountNamespace逃逸、
     public $ContainerIsolateOperationSrc;
 
     /**
+     * @var string 节点ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string 节点类型:NORMAL:普通节点;SUPER:超级节点
+     */
+    public $NodeType;
+
+    /**
+     * @var string 节点子网ID
+     */
+    public $NodeSubNetID;
+
+    /**
+     * @var string 节点子网名称
+     */
+    public $NodeSubNetName;
+
+    /**
+     * @var string 节点子网网段
+     */
+    public $NodeSubNetCIDR;
+
+    /**
+     * @var string pod名称
+     */
+    public $PodName;
+
+    /**
+     * @var string podIP
+     */
+    public $PodIP;
+
+    /**
+     * @var string pod状态
+     */
+    public $PodStatus;
+
+    /**
+     * @var string 集群id
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
+     * @var string 节点唯一id
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string uuid
+     */
+    public $HostID;
+
+    /**
      * @param string $EventId 事件唯一ID
      * @param string $FoundTime 事件发现时间
      * @param string $ContainerId 容器id
@@ -259,7 +336,6 @@ MountNamespace逃逸、
      * @param string $ImageId 镜像id
      * @param string $ImageName 镜像名称
      * @param string $NodeName 节点名称
-     * @param string $PodName Pod名称
      * @param string $Status 状态， “EVENT_UNDEAL”:事件未处理
     "EVENT_DEALED":事件已经处理
     "EVENT_INGNORE"：事件已经忽略
@@ -304,6 +380,18 @@ MountNamespace逃逸、
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeID 节点ID
+     * @param string $NodeType 节点类型:NORMAL:普通节点;SUPER:超级节点
+     * @param string $NodeSubNetID 节点子网ID
+     * @param string $NodeSubNetName 节点子网名称
+     * @param string $NodeSubNetCIDR 节点子网网段
+     * @param string $PodName pod名称
+     * @param string $PodIP podIP
+     * @param string $PodStatus pod状态
+     * @param string $ClusterID 集群id
+     * @param string $ClusterName 集群名称
+     * @param string $NodeUniqueID 节点唯一id
+     * @param string $HostID uuid
      */
     function __construct()
     {
@@ -346,10 +434,6 @@ MountNamespace逃逸、
             $this->NodeName = $param["NodeName"];
         }
 
-        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
-            $this->PodName = $param["PodName"];
-        }
-
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
         }
@@ -388,6 +472,54 @@ MountNamespace逃逸、
 
         if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
             $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeSubNetID",$param) and $param["NodeSubNetID"] !== null) {
+            $this->NodeSubNetID = $param["NodeSubNetID"];
+        }
+
+        if (array_key_exists("NodeSubNetName",$param) and $param["NodeSubNetName"] !== null) {
+            $this->NodeSubNetName = $param["NodeSubNetName"];
+        }
+
+        if (array_key_exists("NodeSubNetCIDR",$param) and $param["NodeSubNetCIDR"] !== null) {
+            $this->NodeSubNetCIDR = $param["NodeSubNetCIDR"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodStatus",$param) and $param["PodStatus"] !== null) {
+            $this->PodStatus = $param["PodStatus"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
         }
     }
 }

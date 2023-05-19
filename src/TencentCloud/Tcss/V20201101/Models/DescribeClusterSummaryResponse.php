@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedClusterCount(integer $FailedClusterCount) 设置检查失败集群数
  * @method integer getNotImportedClusterCount() 获取未导入的集群数量
  * @method void setNotImportedClusterCount(integer $NotImportedClusterCount) 设置未导入的集群数量
+ * @method integer getServerlessClusterCount() 获取eks集群数量
+ * @method void setServerlessClusterCount(integer $ServerlessClusterCount) 设置eks集群数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,6 +105,11 @@ class DescribeClusterSummaryResponse extends AbstractModel
     public $NotImportedClusterCount;
 
     /**
+     * @var integer eks集群数量
+     */
+    public $ServerlessClusterCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -119,6 +126,7 @@ class DescribeClusterSummaryResponse extends AbstractModel
      * @param integer $ManualCheckClusterCount 手动检查集群数
      * @param integer $FailedClusterCount 检查失败集群数
      * @param integer $NotImportedClusterCount 未导入的集群数量
+     * @param integer $ServerlessClusterCount eks集群数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -176,6 +184,10 @@ class DescribeClusterSummaryResponse extends AbstractModel
 
         if (array_key_exists("NotImportedClusterCount",$param) and $param["NotImportedClusterCount"] !== null) {
             $this->NotImportedClusterCount = $param["NotImportedClusterCount"];
+        }
+
+        if (array_key_exists("ServerlessClusterCount",$param) and $param["ServerlessClusterCount"] !== null) {
+            $this->ServerlessClusterCount = $param["ServerlessClusterCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

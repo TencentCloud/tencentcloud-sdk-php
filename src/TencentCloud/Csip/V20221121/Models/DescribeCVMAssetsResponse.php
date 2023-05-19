@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneList(array $ZoneList) 设置可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOsList() 获取os列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOsList(array $OsList) 设置os列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -126,6 +130,12 @@ class DescribeCVMAssetsResponse extends AbstractModel
     public $ZoneList;
 
     /**
+     * @var array os列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OsList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -150,6 +160,8 @@ class DescribeCVMAssetsResponse extends AbstractModel
      * @param array $AppIdList appid列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ZoneList 可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OsList os列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -248,6 +260,15 @@ class DescribeCVMAssetsResponse extends AbstractModel
                 $obj = new FilterDataObject();
                 $obj->deserialize($value);
                 array_push($this->ZoneList, $obj);
+            }
+        }
+
+        if (array_key_exists("OsList",$param) and $param["OsList"] !== null) {
+            $this->OsList = [];
+            foreach ($param["OsList"] as $key => $value){
+                $obj = new FilterDataObject();
+                $obj->deserialize($value);
+                array_push($this->OsList, $obj);
             }
         }
 

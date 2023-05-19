@@ -35,11 +35,19 @@ CSR_DEL:已经删除
  * @method string getBindRuleName() 获取绑定规则名称
  * @method void setBindRuleName(string $BindRuleName) 设置绑定规则名称
  * @method string getClusterType() 获取集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群;
  * @method void setClusterType(string $ClusterType) 设置集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群;
+ * @method string getClusterVersion() 获取集群版本
+ * @method void setClusterVersion(string $ClusterVersion) 设置集群版本
+ * @method integer getMemLimit() 获取内存量
+ * @method void setMemLimit(integer $MemLimit) 设置内存量
+ * @method integer getCpuLimit() 获取cpu
+ * @method void setCpuLimit(integer $CpuLimit) 设置cpu
  */
 class AssetClusterListItem extends AbstractModel
 {
@@ -68,10 +76,26 @@ CSR_DEL:已经删除
 
     /**
      * @var string 集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群;
      */
     public $ClusterType;
+
+    /**
+     * @var string 集群版本
+     */
+    public $ClusterVersion;
+
+    /**
+     * @var integer 内存量
+     */
+    public $MemLimit;
+
+    /**
+     * @var integer cpu
+     */
+    public $CpuLimit;
 
     /**
      * @param string $ClusterID 集群ID
@@ -82,8 +106,12 @@ CSR_EXCEPTION:异常
 CSR_DEL:已经删除
      * @param string $BindRuleName 绑定规则名称
      * @param string $ClusterType 集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群;
+     * @param string $ClusterVersion 集群版本
+     * @param integer $MemLimit 内存量
+     * @param integer $CpuLimit cpu
      */
     function __construct()
     {
@@ -116,6 +144,18 @@ CT_USER_CREATE: 用户自建集群
 
         if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
             $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
+            $this->ClusterVersion = $param["ClusterVersion"];
+        }
+
+        if (array_key_exists("MemLimit",$param) and $param["MemLimit"] !== null) {
+            $this->MemLimit = $param["MemLimit"];
+        }
+
+        if (array_key_exists("CpuLimit",$param) and $param["CpuLimit"] !== null) {
+            $this->CpuLimit = $param["CpuLimit"];
         }
     }
 }

@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 请求头部及请求url访问控制
  *
- * @method string getSwitch() 获取on | off 是否启用请求头部及请求url访问控制
- * @method void setSwitch(string $Switch) 设置on | off 是否启用请求头部及请求url访问控制
+ * @method string getSwitch() 获取启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭
  * @method array getAccessControlRules() 获取请求头部及请求url访问规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessControlRules(array $AccessControlRules) 设置请求头部及请求url访问规则
@@ -34,7 +38,9 @@ use TencentCloud\Common\AbstractModel;
 class AccessControl extends AbstractModel
 {
     /**
-     * @var string on | off 是否启用请求头部及请求url访问控制
+     * @var string 启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -51,7 +57,9 @@ class AccessControl extends AbstractModel
     public $ReturnCode;
 
     /**
-     * @param string $Switch on | off 是否启用请求头部及请求url访问控制
+     * @param string $Switch 启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭
      * @param array $AccessControlRules 请求头部及请求url访问规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReturnCode 返回状态码

@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HSTS 配置。
  *
- * @method string getSwitch() 获取是否开启，on或off。
- * @method void setSwitch(string $Switch) 设置是否开启，on或off。
+ * @method string getSwitch() 获取HSTS 配置开关，取值有：
+on：开启
+off：关闭
+ * @method void setSwitch(string $Switch) 设置HSTS 配置开关，取值有：
+on：开启
+off：关闭
  * @method integer getMaxAge() 获取MaxAge数值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxAge(integer $MaxAge) 设置MaxAge数值。
@@ -34,7 +38,9 @@ use TencentCloud\Common\AbstractModel;
 class Hsts extends AbstractModel
 {
     /**
-     * @var string 是否开启，on或off。
+     * @var string HSTS 配置开关，取值有：
+on：开启
+off：关闭
      */
     public $Switch;
 
@@ -51,7 +57,9 @@ class Hsts extends AbstractModel
     public $IncludeSubDomains;
 
     /**
-     * @param string $Switch 是否开启，on或off。
+     * @param string $Switch HSTS 配置开关，取值有：
+on：开启
+off：关闭
      * @param integer $MaxAge MaxAge数值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IncludeSubDomains 是否包含子域名，on或off。

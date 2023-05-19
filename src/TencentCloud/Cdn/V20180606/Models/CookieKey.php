@@ -20,9 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 组成CacheKey的一部分
  *
- * @method string getSwitch() 获取on | off 是否使用Cookie作为Cache的一部分
+ * @method string getSwitch() 获取使用Cookie作为Cache的一部分配置开关，取值有：
+on：开启，使用Cookie作为Cache的一部分
+off：关闭，不使用Cookie作为Cache的一部分
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置on | off 是否使用Cookie作为Cache的一部分
+ * @method void setSwitch(string $Switch) 设置使用Cookie作为Cache的一部分配置开关，取值有：
+on：开启，使用Cookie作为Cache的一部分
+off：关闭，不使用Cookie作为Cache的一部分
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取使用的cookie，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +36,9 @@ use TencentCloud\Common\AbstractModel;
 class CookieKey extends AbstractModel
 {
     /**
-     * @var string on | off 是否使用Cookie作为Cache的一部分
+     * @var string 使用Cookie作为Cache的一部分配置开关，取值有：
+on：开启，使用Cookie作为Cache的一部分
+off：关闭，不使用Cookie作为Cache的一部分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
@@ -44,7 +50,9 @@ class CookieKey extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Switch on | off 是否使用Cookie作为Cache的一部分
+     * @param string $Switch 使用Cookie作为Cache的一部分配置开关，取值有：
+on：开启，使用Cookie作为Cache的一部分
+off：关闭，不使用Cookie作为Cache的一部分
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 使用的cookie，';' 分割
 注意：此字段可能返回 null，表示取不到有效值。

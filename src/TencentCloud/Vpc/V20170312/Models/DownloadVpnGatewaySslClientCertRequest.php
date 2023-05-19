@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DownloadVpnGatewaySslClientCert请求参数结构体
  *
- * @method string getSslVpnClientId() 获取SSL-VPN-CLIENT 实例ID。
- * @method void setSslVpnClientId(string $SslVpnClientId) 设置SSL-VPN-CLIENT 实例ID。
- * @method string getSamlToken() 获取SAML-TOKEN
- * @method void setSamlToken(string $SamlToken) 设置SAML-TOKEN
- * @method boolean getIsVpnPortal() 获取VPN门户网站使用。默认Flase
- * @method void setIsVpnPortal(boolean $IsVpnPortal) 设置VPN门户网站使用。默认Flase
+ * @method string getSslVpnClientId() 获取SSL-VPN-CLIENT 实例ID。不可以和SslVpnClientIds同时使用。
+ * @method void setSslVpnClientId(string $SslVpnClientId) 设置SSL-VPN-CLIENT 实例ID。不可以和SslVpnClientIds同时使用。
+ * @method string getSamlToken() 获取SAML Token（SAML令牌）。
+ * @method void setSamlToken(string $SamlToken) 设置SAML Token（SAML令牌）。
+ * @method boolean getIsVpnPortal() 获取VPN门户网站使用。默认False
+ * @method void setIsVpnPortal(boolean $IsVpnPortal) 设置VPN门户网站使用。默认False
+ * @method array getSslVpnClientIds() 获取SSL-VPN-CLIENT 实例ID列表。批量下载时使用。不可以和SslVpnClientId同时使用。
+ * @method void setSslVpnClientIds(array $SslVpnClientIds) 设置SSL-VPN-CLIENT 实例ID列表。批量下载时使用。不可以和SslVpnClientId同时使用。
  */
 class DownloadVpnGatewaySslClientCertRequest extends AbstractModel
 {
     /**
-     * @var string SSL-VPN-CLIENT 实例ID。
+     * @var string SSL-VPN-CLIENT 实例ID。不可以和SslVpnClientIds同时使用。
      */
     public $SslVpnClientId;
 
     /**
-     * @var string SAML-TOKEN
+     * @var string SAML Token（SAML令牌）。
      */
     public $SamlToken;
 
     /**
-     * @var boolean VPN门户网站使用。默认Flase
+     * @var boolean VPN门户网站使用。默认False
      */
     public $IsVpnPortal;
 
     /**
-     * @param string $SslVpnClientId SSL-VPN-CLIENT 实例ID。
-     * @param string $SamlToken SAML-TOKEN
-     * @param boolean $IsVpnPortal VPN门户网站使用。默认Flase
+     * @var array SSL-VPN-CLIENT 实例ID列表。批量下载时使用。不可以和SslVpnClientId同时使用。
+     */
+    public $SslVpnClientIds;
+
+    /**
+     * @param string $SslVpnClientId SSL-VPN-CLIENT 实例ID。不可以和SslVpnClientIds同时使用。
+     * @param string $SamlToken SAML Token（SAML令牌）。
+     * @param boolean $IsVpnPortal VPN门户网站使用。默认False
+     * @param array $SslVpnClientIds SSL-VPN-CLIENT 实例ID列表。批量下载时使用。不可以和SslVpnClientId同时使用。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DownloadVpnGatewaySslClientCertRequest extends AbstractModel
 
         if (array_key_exists("IsVpnPortal",$param) and $param["IsVpnPortal"] !== null) {
             $this->IsVpnPortal = $param["IsVpnPortal"];
+        }
+
+        if (array_key_exists("SslVpnClientIds",$param) and $param["SslVpnClientIds"] !== null) {
+            $this->SslVpnClientIds = $param["SslVpnClientIds"];
         }
     }
 }

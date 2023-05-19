@@ -108,10 +108,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(integer $SourceType) 设置来源：0：一键扫描， 1：定时扫描 2：实时监控
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPodName() 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodName(string $PodName) 设置集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
@@ -139,6 +135,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEventType() 获取事件类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventType(string $EventType) 设置事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPodName() 获取集群名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodName(string $PodName) 设置集群名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取DEAL_NONE:文件待处理
 DEAL_IGNORE:已经忽略
@@ -254,6 +254,26 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileModifyTime(string $FileModifyTime) 设置文件修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeSubNetID() 获取节点子网ID
+ * @method void setNodeSubNetID(string $NodeSubNetID) 设置节点子网ID
+ * @method string getNodeSubNetName() 获取节点子网名称
+ * @method void setNodeSubNetName(string $NodeSubNetName) 设置节点子网名称
+ * @method string getNodeSubNetCIDR() 获取节点子网网段
+ * @method void setNodeSubNetCIDR(string $NodeSubNetCIDR) 设置节点子网网段
+ * @method string getClusterID() 获取集群id
+ * @method void setClusterID(string $ClusterID) 设置集群id
+ * @method string getPodIP() 获取pod ip
+ * @method void setPodIP(string $PodIP) 设置pod ip
+ * @method string getPodStatus() 获取pod状态
+ * @method void setPodStatus(string $PodStatus) 设置pod状态
+ * @method string getNodeUniqueID() 获取节点唯一ID
+ * @method void setNodeUniqueID(string $NodeUniqueID) 设置节点唯一ID
+ * @method string getNodeType() 获取节点类型：NORMAL普通节点、SUPER超级节点
+ * @method void setNodeType(string $NodeType) 设置节点类型：NORMAL普通节点、SUPER超级节点
+ * @method string getNodeID() 获取节点ID
+ * @method void setNodeID(string $NodeID) 设置节点ID
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -392,12 +412,6 @@ class DescribeVirusDetailResponse extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PodName;
-
-    /**
      * @var array 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -438,6 +452,12 @@ class DescribeVirusDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventType;
+
+    /**
+     * @var string 集群名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodName;
 
     /**
      * @var string DEAL_NONE:文件待处理
@@ -573,6 +593,56 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     public $FileModifyTime;
 
     /**
+     * @var string 节点子网ID
+     */
+    public $NodeSubNetID;
+
+    /**
+     * @var string 节点子网名称
+     */
+    public $NodeSubNetName;
+
+    /**
+     * @var string 节点子网网段
+     */
+    public $NodeSubNetCIDR;
+
+    /**
+     * @var string 集群id
+     */
+    public $ClusterID;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
+     * @var string pod状态
+     */
+    public $PodStatus;
+
+    /**
+     * @var string 节点唯一ID
+     */
+    public $NodeUniqueID;
+
+    /**
+     * @var string 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public $NodeType;
+
+    /**
+     * @var string 节点ID
+     */
+    public $NodeID;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -622,8 +692,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SourceType 来源：0：一键扫描， 1：定时扫描 2：实时监控
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PodName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HarmDescribe 事件描述
@@ -637,6 +705,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
      * @param string $FileMd5 文件MD5
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventType 事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PodName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status DEAL_NONE:文件待处理
 DEAL_IGNORE:已经忽略
@@ -695,6 +765,16 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileModifyTime 文件修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeSubNetID 节点子网ID
+     * @param string $NodeSubNetName 节点子网名称
+     * @param string $NodeSubNetCIDR 节点子网网段
+     * @param string $ClusterID 集群id
+     * @param string $PodIP pod ip
+     * @param string $PodStatus pod状态
+     * @param string $NodeUniqueID 节点唯一ID
+     * @param string $NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param string $NodeID 节点ID
+     * @param string $ClusterName 集群名称
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -798,10 +878,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
             $this->SourceType = $param["SourceType"];
         }
 
-        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
-            $this->PodName = $param["PodName"];
-        }
-
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = $param["Tags"];
         }
@@ -828,6 +904,10 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
         if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
             $this->EventType = $param["EventType"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -904,6 +984,46 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
         if (array_key_exists("FileModifyTime",$param) and $param["FileModifyTime"] !== null) {
             $this->FileModifyTime = $param["FileModifyTime"];
+        }
+
+        if (array_key_exists("NodeSubNetID",$param) and $param["NodeSubNetID"] !== null) {
+            $this->NodeSubNetID = $param["NodeSubNetID"];
+        }
+
+        if (array_key_exists("NodeSubNetName",$param) and $param["NodeSubNetName"] !== null) {
+            $this->NodeSubNetName = $param["NodeSubNetName"];
+        }
+
+        if (array_key_exists("NodeSubNetCIDR",$param) and $param["NodeSubNetCIDR"] !== null) {
+            $this->NodeSubNetCIDR = $param["NodeSubNetCIDR"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
+        }
+
+        if (array_key_exists("PodStatus",$param) and $param["PodStatus"] !== null) {
+            $this->PodStatus = $param["PodStatus"];
+        }
+
+        if (array_key_exists("NodeUniqueID",$param) and $param["NodeUniqueID"] !== null) {
+            $this->NodeUniqueID = $param["NodeUniqueID"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
+        if (array_key_exists("NodeID",$param) and $param["NodeID"] !== null) {
+            $this->NodeID = $param["NodeID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 路径缓存不缓存配置
  *
- * @method string getSwitch() 获取不缓存配置开关
+ * @method string getSwitch() 获取路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置不缓存配置开关
+ * @method void setSwitch(string $Switch) 设置路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +42,7 @@ off：关闭
 class CacheConfigNoCache extends AbstractModel
 {
     /**
-     * @var string 不缓存配置开关
+     * @var string 路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,7 +59,7 @@ off：关闭
     public $Revalidate;
 
     /**
-     * @param string $Switch 不缓存配置开关
+     * @param string $Switch 路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

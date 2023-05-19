@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全日志接入详情
  *
- * @method integer getCount() 获取已接入数量
- * @method void setCount(integer $Count) 设置已接入数量
+ * @method integer getCount() 获取已接入普通主机数量
+ * @method void setCount(integer $Count) 设置已接入普通主机数量
+ * @method integer getSuperNodeCount() 获取已接入超级节点数量
+ * @method void setSuperNodeCount(integer $SuperNodeCount) 设置已接入超级节点数量
  * @method boolean getIsJoined() 获取是否已接入(true:已接入 false:未接入)
  * @method void setIsJoined(boolean $IsJoined) 设置是否已接入(true:已接入 false:未接入)
  * @method string getLogType() 获取日志类型(
@@ -38,9 +40,14 @@ k8sApi: "k8s_api"
 class SecLogJoinInfo extends AbstractModel
 {
     /**
-     * @var integer 已接入数量
+     * @var integer 已接入普通主机数量
      */
     public $Count;
+
+    /**
+     * @var integer 已接入超级节点数量
+     */
+    public $SuperNodeCount;
 
     /**
      * @var boolean 是否已接入(true:已接入 false:未接入)
@@ -57,7 +64,8 @@ k8sApi: "k8s_api"
     public $LogType;
 
     /**
-     * @param integer $Count 已接入数量
+     * @param integer $Count 已接入普通主机数量
+     * @param integer $SuperNodeCount 已接入超级节点数量
      * @param boolean $IsJoined 是否已接入(true:已接入 false:未接入)
      * @param string $LogType 日志类型(
 容器bash:  "container_bash"
@@ -80,6 +88,10 @@ k8sApi: "k8s_api"
         }
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("SuperNodeCount",$param) and $param["SuperNodeCount"] !== null) {
+            $this->SuperNodeCount = $param["SuperNodeCount"];
         }
 
         if (array_key_exists("IsJoined",$param) and $param["IsJoined"] !== null) {

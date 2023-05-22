@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Csxg\V20230303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 表名
+ * Describe5GInstances请求参数结构体
  *
- * @method string getTableName() 获取表名
- * @method void setTableName(string $TableName) 设置表名
+
  */
-class TableName extends AbstractModel
+class Describe5GInstancesRequest extends AbstractModel
 {
-    /**
-     * @var string 表名
-     */
-    public $TableName;
+
 
     /**
-     * @param string $TableName 表名
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class TableName extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
-        }
+
     }
 }

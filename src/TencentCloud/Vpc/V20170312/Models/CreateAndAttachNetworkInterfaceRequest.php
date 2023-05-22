@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
  * @method integer getSecondaryPrivateIpAddressCount() 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
- * @method string getQosLevel() 获取IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
- * @method void setQosLevel(string $QosLevel) 设置IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+ * @method string getQosLevel() 获取IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+ * @method void setQosLevel(string $QosLevel) 设置IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
  * @method array getSecurityGroupIds() 获取指定绑定的安全组，例如：['sg-1dd51d']。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置指定绑定的安全组，例如：['sg-1dd51d']。
  * @method string getNetworkInterfaceDescription() 获取弹性网卡描述，可任意命名，但不得超过60个字符。
@@ -76,7 +76,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $SecondaryPrivateIpAddressCount;
 
     /**
-     * @var string IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     * @var string IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
      */
     public $QosLevel;
 
@@ -107,7 +107,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
      * @param string $InstanceId 云服务器实例ID。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
-     * @param string $QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     * @param string $QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。

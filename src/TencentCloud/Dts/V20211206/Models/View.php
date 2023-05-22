@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewName(string $ViewName) 设置view名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNewViewName() 获取新view名
+ * @method string getNewViewName() 获取预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNewViewName(string $NewViewName) 设置新view名
+ * @method void setNewViewName(string $NewViewName) 设置预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class View extends AbstractModel
@@ -38,7 +38,7 @@ class View extends AbstractModel
     public $ViewName;
 
     /**
-     * @var string 新view名
+     * @var string 预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewViewName;
@@ -46,7 +46,7 @@ class View extends AbstractModel
     /**
      * @param string $ViewName view名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NewViewName 新view名
+     * @param string $NewViewName 预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

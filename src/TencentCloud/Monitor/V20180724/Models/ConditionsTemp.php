@@ -18,11 +18,11 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 告警条件模版
+ * 告警条件模板
  *
- * @method string getTemplateName() 获取模版名称
+ * @method string getTemplateName() 获取模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateName(string $TemplateName) 设置模版名称
+ * @method void setTemplateName(string $TemplateName) 设置模板名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AlarmPolicyCondition getCondition() 获取指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ConditionsTemp extends AbstractModel
 {
     /**
-     * @var string 模版名称
+     * @var string 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateName;
@@ -54,7 +54,7 @@ class ConditionsTemp extends AbstractModel
     public $EventCondition;
 
     /**
-     * @param string $TemplateName 模版名称
+     * @param string $TemplateName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmPolicyCondition $Condition 指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。

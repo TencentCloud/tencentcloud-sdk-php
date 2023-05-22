@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnings(array $Warnings) 设置警告信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProgress() 获取当前步骤进度，范围为[0-100]
+ * @method integer getProgress() 获取当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProgress(integer $Progress) 设置当前步骤进度，范围为[0-100]
+ * @method void setProgress(integer $Progress) 设置当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class StepInfo extends AbstractModel
@@ -98,7 +98,7 @@ class StepInfo extends AbstractModel
     public $Warnings;
 
     /**
-     * @var integer 当前步骤进度，范围为[0-100]
+     * @var integer 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
@@ -118,7 +118,7 @@ class StepInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Warnings 警告信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Progress 当前步骤进度，范围为[0-100]
+     * @param integer $Progress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

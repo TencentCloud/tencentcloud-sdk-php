@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeIds(array $NoticeIds) 设置根据通知模板 id 过滤，空数组/不传则不过滤
  * @method array getTags() 获取模板根据标签过滤
  * @method void setTags(array $Tags) 设置模板根据标签过滤
+ * @method array getOnCallFormIDs() 获取值班列表
+ * @method void setOnCallFormIDs(array $OnCallFormIDs) 设置值班列表
  */
 class DescribeAlarmNoticesRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeAlarmNoticesRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array 值班列表
+     */
+    public $OnCallFormIDs;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”
      * @param integer $PageNumber 页码 最小为1
      * @param integer $PageSize 分页大小 1～200
@@ -112,6 +119,7 @@ class DescribeAlarmNoticesRequest extends AbstractModel
      * @param array $GroupIds 接收组列表
      * @param array $NoticeIds 根据通知模板 id 过滤，空数组/不传则不过滤
      * @param array $Tags 模板根据标签过滤
+     * @param array $OnCallFormIDs 值班列表
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class DescribeAlarmNoticesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("OnCallFormIDs",$param) and $param["OnCallFormIDs"] !== null) {
+            $this->OnCallFormIDs = $param["OnCallFormIDs"];
         }
     }
 }

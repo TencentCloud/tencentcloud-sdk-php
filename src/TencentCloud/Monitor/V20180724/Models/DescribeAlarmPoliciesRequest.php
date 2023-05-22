@@ -62,9 +62,9 @@ use TencentCloud\Common\AbstractModel;
 [项目管理](https://console.cloud.tencent.com/project)
  * @method void setProjectIds(array $ProjectIds) 设置策略所属项目的id数组，可在此页面查看
 [项目管理](https://console.cloud.tencent.com/project)
- * @method array getNoticeIds() 获取通知模版的id列表，可查询通知模版列表获取。
+ * @method array getNoticeIds() 获取通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
- * @method void setNoticeIds(array $NoticeIds) 设置通知模版的id列表，可查询通知模版列表获取。
+ * @method void setNoticeIds(array $NoticeIds) 设置通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
  * @method array getRuleTypes() 获取根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
  * @method void setRuleTypes(array $RuleTypes) 设置根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
@@ -80,12 +80,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerTasks(array $TriggerTasks) 设置按照触发任务（例如弹性伸缩）过滤策略。最多10个
  * @method array getOneClickPolicyType() 获取根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
  * @method void setOneClickPolicyType(array $OneClickPolicyType) 设置根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
- * @method integer getNotBindAll() 获取根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
- * @method void setNotBindAll(integer $NotBindAll) 设置根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
- * @method integer getNotInstanceGroup() 获取根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
- * @method void setNotInstanceGroup(integer $NotInstanceGroup) 设置根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+ * @method integer getNotBindAll() 获取返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
+ * @method void setNotBindAll(integer $NotBindAll) 设置返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
+ * @method integer getNotInstanceGroup() 获取返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
+ * @method void setNotInstanceGroup(integer $NotInstanceGroup) 设置返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
  * @method array getTags() 获取策略根据标签过滤
  * @method void setTags(array $Tags) 设置策略根据标签过滤
+ * @method string getPromInsId() 获取prom实例id，自定义指标策略时会用到
+ * @method void setPromInsId(string $PromInsId) 设置prom实例id，自定义指标策略时会用到
+ * @method array getReceiverOnCallFormIDs() 获取根据排班表搜索
+ * @method void setReceiverOnCallFormIDs(array $ReceiverOnCallFormIDs) 设置根据排班表搜索
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -163,7 +167,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $ProjectIds;
 
     /**
-     * @var array 通知模版的id列表，可查询通知模版列表获取。
+     * @var array 通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
      */
     public $NoticeIds;
@@ -204,12 +208,12 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $OneClickPolicyType;
 
     /**
-     * @var integer 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+     * @var integer 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
      */
     public $NotBindAll;
 
     /**
-     * @var integer 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     * @var integer 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
      */
     public $NotInstanceGroup;
 
@@ -217,6 +221,16 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @var array 策略根据标签过滤
      */
     public $Tags;
+
+    /**
+     * @var string prom实例id，自定义指标策略时会用到
+     */
+    public $PromInsId;
+
+    /**
+     * @var array 根据排班表搜索
+     */
+    public $ReceiverOnCallFormIDs;
 
     /**
      * @param string $Module 固定值，为"monitor"
@@ -240,7 +254,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param string $Order 排序顺序：升序：ASC  降序：DESC
      * @param array $ProjectIds 策略所属项目的id数组，可在此页面查看
 [项目管理](https://console.cloud.tencent.com/project)
-     * @param array $NoticeIds 通知模版的id列表，可查询通知模版列表获取。
+     * @param array $NoticeIds 通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
      * @param array $RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
      * @param array $Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
@@ -249,9 +263,11 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param integer $NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
      * @param array $TriggerTasks 按照触发任务（例如弹性伸缩）过滤策略。最多10个
      * @param array $OneClickPolicyType 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
-     * @param integer $NotBindAll 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
-     * @param integer $NotInstanceGroup 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     * @param integer $NotBindAll 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
+     * @param integer $NotInstanceGroup 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
      * @param array $Tags 策略根据标签过滤
+     * @param string $PromInsId prom实例id，自定义指标策略时会用到
+     * @param array $ReceiverOnCallFormIDs 根据排班表搜索
      */
     function __construct()
     {
@@ -370,6 +386,14 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PromInsId",$param) and $param["PromInsId"] !== null) {
+            $this->PromInsId = $param["PromInsId"];
+        }
+
+        if (array_key_exists("ReceiverOnCallFormIDs",$param) and $param["ReceiverOnCallFormIDs"] !== null) {
+            $this->ReceiverOnCallFormIDs = $param["ReceiverOnCallFormIDs"];
         }
     }
 }

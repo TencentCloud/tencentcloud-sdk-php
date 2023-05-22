@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeekday(array $Weekday) 设置通知周期 1-7表示周一到周日
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOnCallFormIDs() 获取值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOnCallFormIDs(array $OnCallFormIDs) 设置值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserNotice extends AbstractModel
 {
@@ -154,6 +158,12 @@ class UserNotice extends AbstractModel
     public $Weekday;
 
     /**
+     * @var array 值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OnCallFormIDs;
+
+    /**
      * @param string $ReceiverType 接收者类型 USER=用户 GROUP=用户组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 通知开始时间 00:00:00 开始的秒数（取值范围0-86399）
@@ -179,6 +189,8 @@ class UserNotice extends AbstractModel
      * @param string $PhoneCallType 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Weekday 通知周期 1-7表示周一到周日
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OnCallFormIDs 值班表id列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class UserNotice extends AbstractModel
 
         if (array_key_exists("Weekday",$param) and $param["Weekday"] !== null) {
             $this->Weekday = $param["Weekday"];
+        }
+
+        if (array_key_exists("OnCallFormIDs",$param) and $param["OnCallFormIDs"] !== null) {
+            $this->OnCallFormIDs = $param["OnCallFormIDs"];
         }
     }
 }

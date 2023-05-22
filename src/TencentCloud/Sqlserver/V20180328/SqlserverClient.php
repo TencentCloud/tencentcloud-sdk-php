@@ -34,6 +34,8 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\CreateBasicDBInstancesResponse CreateBasicDBInstances(Models\CreateBasicDBInstancesRequest $req) 本接口（CreateBasicDBInstances）用于创建SQL server基础版实例。
  * @method Models\CreateBusinessDBInstancesResponse CreateBusinessDBInstances(Models\CreateBusinessDBInstancesRequest $req) 本接口（CreateBusinessDBInstances）用于创建商业智能服务实例。
  * @method Models\CreateBusinessIntelligenceFileResponse CreateBusinessIntelligenceFile(Models\CreateBusinessIntelligenceFileRequest $req) 本接口（CreateBusinessIntelligenceFile）用于添加商业智能服务文件。
+ * @method Models\CreateCloudDBInstancesResponse CreateCloudDBInstances(Models\CreateCloudDBInstancesRequest $req) 本接口（CreateCloudDBInstances）用于创建高可用实例(虚拟机版本)。
+ * @method Models\CreateCloudReadOnlyDBInstancesResponse CreateCloudReadOnlyDBInstances(Models\CreateCloudReadOnlyDBInstancesRequest $req) 本接口（CreateCloudReadOnlyDBInstances）用于添加只读副本实例(虚拟机版本)。
  * @method Models\CreateDBResponse CreateDB(Models\CreateDBRequest $req) 本接口（CreateDB）用于创建数据库。
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) 本接口（CreateDBInstances）用于创建实例。
  * @method Models\CreateIncrementalMigrationResponse CreateIncrementalMigration(Models\CreateIncrementalMigrationRequest $req) 本接口（CreateIncrementalMigration）用于创建增量备份导入任务。

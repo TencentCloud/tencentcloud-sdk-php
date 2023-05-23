@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置内存大小，单位 GB。
  * @method string getSystemDiskType() 获取系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
  * @method void setSystemDiskType(string $SystemDiskType) 设置系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
- * @method integer getSystemDiskSize() 获取系统盘大小。
- * @method void setSystemDiskSize(integer $SystemDiskSize) 设置系统盘大小。
- * @method integer getMonthlyTraffic() 获取每月网络流量，单位 Gb。
- * @method void setMonthlyTraffic(integer $MonthlyTraffic) 设置每月网络流量，单位 Gb。
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
+ * @method integer getSystemDiskSize() 获取系统盘大小。单位GB。
+ * @method void setSystemDiskSize(integer $SystemDiskSize) 设置系统盘大小。单位GB。
+ * @method integer getMonthlyTraffic() 获取每月网络流量，单位 GB。
+ * @method void setMonthlyTraffic(integer $MonthlyTraffic) 设置每月网络流量，单位 GB。
  * @method boolean getSupportLinuxUnixPlatform() 获取是否支持 Linux/Unix 平台。
  * @method void setSupportLinuxUnixPlatform(boolean $SupportLinuxUnixPlatform) 设置是否支持 Linux/Unix 平台。
  * @method boolean getSupportWindowsPlatform() 获取是否支持 Windows 平台。
@@ -98,17 +98,17 @@ class Bundle extends AbstractModel
     /**
      * @var string 系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
      */
     public $SystemDiskType;
 
     /**
-     * @var integer 系统盘大小。
+     * @var integer 系统盘大小。单位GB。
      */
     public $SystemDiskSize;
 
     /**
-     * @var integer 每月网络流量，单位 Gb。
+     * @var integer 每月网络流量，单位 GB。
      */
     public $MonthlyTraffic;
 
@@ -181,9 +181,9 @@ class Bundle extends AbstractModel
      * @param integer $Memory 内存大小，单位 GB。
      * @param string $SystemDiskType 系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
-     * @param integer $SystemDiskSize 系统盘大小。
-     * @param integer $MonthlyTraffic 每月网络流量，单位 Gb。
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
+     * @param integer $SystemDiskSize 系统盘大小。单位GB。
+     * @param integer $MonthlyTraffic 每月网络流量，单位 GB。
      * @param boolean $SupportLinuxUnixPlatform 是否支持 Linux/Unix 平台。
      * @param boolean $SupportWindowsPlatform 是否支持 Windows 平台。
      * @param Price $Price 套餐当前单位价格信息。

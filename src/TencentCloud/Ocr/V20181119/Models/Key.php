@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoName() 获取自动识别的字段名称
  * @method void setAutoName(string $AutoName) 设置自动识别的字段名称
+ * @method string getConfigName() 获取定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigName(string $ConfigName) 设置定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Key extends AbstractModel
 {
@@ -31,7 +35,15 @@ class Key extends AbstractModel
     public $AutoName;
 
     /**
+     * @var string 定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigName;
+
+    /**
      * @param string $AutoName 自动识别的字段名称
+     * @param string $ConfigName 定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -48,6 +60,10 @@ class Key extends AbstractModel
         }
         if (array_key_exists("AutoName",$param) and $param["AutoName"] !== null) {
             $this->AutoName = $param["AutoName"];
+        }
+
+        if (array_key_exists("ConfigName",$param) and $param["ConfigName"] !== null) {
+            $this->ConfigName = $param["ConfigName"];
         }
     }
 }

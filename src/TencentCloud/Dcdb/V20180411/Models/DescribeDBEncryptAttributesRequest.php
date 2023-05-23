@@ -14,34 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS服务，若关闭，下发配置拦截https请求，开启时会产生计费
+ * DescribeDBEncryptAttributes请求参数结构体
  *
- * @method string getSwitch() 获取HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
-
- * @method void setSwitch(string $Switch) 设置HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
+ * @method string getInstanceId() 获取实例Id，形如：tdsqlshard-ow728lmc。
+ * @method void setInstanceId(string $InstanceId) 设置实例Id，形如：tdsqlshard-ow728lmc。
  */
-class HttpsBilling extends AbstractModel
+class DescribeDBEncryptAttributesRequest extends AbstractModel
 {
     /**
-     * @var string HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
-
+     * @var string 实例Id，形如：tdsqlshard-ow728lmc。
      */
-    public $Switch;
+    public $InstanceId;
 
     /**
-     * @param string $Switch HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
+     * @param string $InstanceId 实例Id，形如：tdsqlshard-ow728lmc。
      */
     function __construct()
     {
@@ -56,8 +46,8 @@ off：关闭，拦截https请求
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

@@ -14,34 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS服务，若关闭，下发配置拦截https请求，开启时会产生计费
+ * CreateDedicatedClusterDCDBInstance返回参数结构体
  *
- * @method string getSwitch() 获取HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
-
- * @method void setSwitch(string $Switch) 设置HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class HttpsBilling extends AbstractModel
+class CreateDedicatedClusterDCDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var string HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
-
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Switch;
+    public $RequestId;
 
     /**
-     * @param string $Switch HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -56,8 +46,8 @@ off：关闭，拦截https请求
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

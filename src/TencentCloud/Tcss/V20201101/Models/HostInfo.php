@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterID() 获取集群id
+ * @method void setClusterID(string $ClusterID) 设置集群id
  */
 class HostInfo extends AbstractModel
 {
@@ -149,6 +151,11 @@ class HostInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 集群id
+     */
+    public $ClusterID;
+
+    /**
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip即内网ip
      * @param string $HostName 主机名称
@@ -168,6 +175,7 @@ class HostInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterID 集群id
      */
     function __construct()
     {
@@ -254,6 +262,10 @@ class HostInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
         }
     }
 }

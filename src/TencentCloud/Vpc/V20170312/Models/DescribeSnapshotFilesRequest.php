@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDate(string $EndDate) 设置结束日期，格式%Y-%m-%d %H:%M:%S。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为20，最大为200。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大为200。
+ * @method integer getLimit() 获取返回数量，默认为20，最大为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大为100。
  */
 class DescribeSnapshotFilesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeSnapshotFilesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大为200。
+     * @var integer 返回数量，默认为20，最大为100。
      */
     public $Limit;
 
@@ -71,7 +71,7 @@ class DescribeSnapshotFilesRequest extends AbstractModel
      * @param string $StartDate 开始日期，格式%Y-%m-%d %H:%M:%S。
      * @param string $EndDate 结束日期，格式%Y-%m-%d %H:%M:%S。
      * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为20，最大为200。
+     * @param integer $Limit 返回数量，默认为20，最大为100。
      */
     function __construct()
     {

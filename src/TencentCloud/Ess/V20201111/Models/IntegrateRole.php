@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleName(string $RoleName) 设置角色名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRoleStatus() 获取角色类型：1-系统角色，2-自定义角色
+ * @method integer getRoleStatus() 获取角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleStatus(integer $RoleStatus) 设置角色类型：1-系统角色，2-自定义角色
+ * @method void setRoleStatus(integer $RoleStatus) 设置角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsGroupRole() 获取是否是集团角色
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,7 +56,7 @@ class IntegrateRole extends AbstractModel
     public $RoleName;
 
     /**
-     * @var integer 角色类型：1-系统角色，2-自定义角色
+     * @var integer 角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleStatus;
@@ -78,7 +78,7 @@ class IntegrateRole extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName 角色名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RoleStatus 角色类型：1-系统角色，2-自定义角色
+     * @param integer $RoleStatus 角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsGroupRole 是否是集团角色
 注意：此字段可能返回 null，表示取不到有效值。

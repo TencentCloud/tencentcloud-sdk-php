@@ -156,6 +156,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetObjectValue(string $TargetObjectValue) 设置目标字段名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSourceEngineTypes() 获取源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -364,6 +368,12 @@ class Rule extends AbstractModel
     public $TargetObjectValue;
 
     /**
+     * @var array 源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceEngineTypes;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -431,6 +441,8 @@ class Rule extends AbstractModel
      * @param string $TargetObjectDataTypeName 目标字段详细类型，INT、STRING
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetObjectValue 目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SourceEngineTypes 源端对应的引擎类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -582,6 +594,10 @@ class Rule extends AbstractModel
 
         if (array_key_exists("TargetObjectValue",$param) and $param["TargetObjectValue"] !== null) {
             $this->TargetObjectValue = $param["TargetObjectValue"];
+        }
+
+        if (array_key_exists("SourceEngineTypes",$param) and $param["SourceEngineTypes"] !== null) {
+            $this->SourceEngineTypes = $param["SourceEngineTypes"];
         }
     }
 }

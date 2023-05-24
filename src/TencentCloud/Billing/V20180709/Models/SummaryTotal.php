@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 总数
  *
- * @method string getRealTotalCost() 获取总数
+ * @method string getRealTotalCost() 获取优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRealTotalCost(string $RealTotalCost) 设置总数
+ * @method void setRealTotalCost(string $RealTotalCost) 设置优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotalCost() 获取原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class SummaryTotal extends AbstractModel
 {
     /**
-     * @var string 总数
+     * @var string 优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTotalCost;
@@ -44,7 +44,7 @@ class SummaryTotal extends AbstractModel
     public $TotalCost;
 
     /**
-     * @param string $RealTotalCost 总数
+     * @param string $RealTotalCost 优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
 注意：此字段可能返回 null，表示取不到有效值。

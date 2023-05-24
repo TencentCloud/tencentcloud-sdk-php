@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnGatewaySslServer返回参数结构体
  *
- * @method integer getTaskId() 获取创建SSL-VPN server 异步任务ID
- * @method void setTaskId(integer $TaskId) 设置创建SSL-VPN server 异步任务ID
- * @method string getSslVpnServerId() 获取SSL-VPN server 唯一ID
- * @method void setSslVpnServerId(string $SslVpnServerId) 设置SSL-VPN server 唯一ID
+ * @method integer getTaskId() 获取创建SSL-VPN server 异步任务ID。
+ * @method void setTaskId(integer $TaskId) 设置创建SSL-VPN server 异步任务ID。
+ * @method string getSslVpnServerId() 获取SSL-VPN-SERVER 唯一ID。
+ * @method void setSslVpnServerId(string $SslVpnServerId) 设置SSL-VPN-SERVER 唯一ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateVpnGatewaySslServerResponse extends AbstractModel
 {
     /**
-     * @var integer 创建SSL-VPN server 异步任务ID
+     * @var integer 创建SSL-VPN server 异步任务ID。
      */
     public $TaskId;
 
     /**
-     * @var string SSL-VPN server 唯一ID
+     * @var string SSL-VPN-SERVER 唯一ID。
      */
     public $SslVpnServerId;
 
@@ -45,8 +45,8 @@ class CreateVpnGatewaySslServerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 创建SSL-VPN server 异步任务ID
-     * @param string $SslVpnServerId SSL-VPN server 唯一ID
+     * @param integer $TaskId 创建SSL-VPN server 异步任务ID。
+     * @param string $SslVpnServerId SSL-VPN-SERVER 唯一ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) 设置文件系统名称
  * @method array getTags() 获取快照标签
  * @method void setTags(array $Tags) 设置快照标签
+ * @method string getSnapshotType() 获取快照类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshotType(string $SnapshotType) 设置快照类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotInfo extends AbstractModel
 {
@@ -115,6 +119,12 @@ class SnapshotInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 快照类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnapshotType;
+
+    /**
      * @param string $CreationTime 创建快照时间
      * @param string $SnapshotName 快照名称
      * @param string $SnapshotId 快照ID
@@ -128,6 +138,8 @@ class SnapshotInfo extends AbstractModel
      * @param string $DeleteTime 快照删除时间
      * @param string $FsName 文件系统名称
      * @param array $Tags 快照标签
+     * @param string $SnapshotType 快照类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -197,6 +209,10 @@ class SnapshotInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SnapshotType",$param) and $param["SnapshotType"] !== null) {
+            $this->SnapshotType = $param["SnapshotType"];
         }
     }
 }

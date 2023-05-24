@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorGroupId(string $ExecutorGroupId) 设置执行资源组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineType() 获取运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineType(string $EngineType) 设置运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExecConfig extends AbstractModel
 {
@@ -44,9 +48,17 @@ class RuleExecConfig extends AbstractModel
     public $ExecutorGroupId;
 
     /**
+     * @var string 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineType;
+
+    /**
      * @param string $QueueName 计算队列名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorGroupId 执行资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class RuleExecConfig extends AbstractModel
 
         if (array_key_exists("ExecutorGroupId",$param) and $param["ExecutorGroupId"] !== null) {
             $this->ExecutorGroupId = $param["ExecutorGroupId"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

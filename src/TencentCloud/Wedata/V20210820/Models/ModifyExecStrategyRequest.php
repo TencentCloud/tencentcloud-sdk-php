@@ -62,6 +62,8 @@ MONTH_CYCLE:M
  * @method void setDatasourceId(string $DatasourceId) 设置数据源Id
  * @method string getTableId() 获取数据表Id
  * @method void setTableId(string $TableId) 设置数据表Id
+ * @method string getExecEngineType() 获取运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method void setExecEngineType(string $ExecEngineType) 设置运行的执行引擎，不传时会请求该数据源下默认的执行引擎
  */
 class ModifyExecStrategyRequest extends AbstractModel
 {
@@ -151,6 +153,11 @@ MONTH_CYCLE:M
     public $TableId;
 
     /**
+     * @var string 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public $ExecEngineType;
+
+    /**
      * @param integer $RuleGroupId 规则组ID
      * @param integer $MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
      * @param string $ExecQueue 计算队列
@@ -172,6 +179,7 @@ MONTH_CYCLE:M
      * @param string $DatabaseId 数据库Id
      * @param string $DatasourceId 数据源Id
      * @param string $TableId 数据表Id
+     * @param string $ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
      */
     function __construct()
     {
@@ -253,6 +261,10 @@ MONTH_CYCLE:M
 
         if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
             $this->TableId = $param["TableId"];
+        }
+
+        if (array_key_exists("ExecEngineType",$param) and $param["ExecEngineType"] !== null) {
+            $this->ExecEngineType = $param["ExecEngineType"];
         }
     }
 }

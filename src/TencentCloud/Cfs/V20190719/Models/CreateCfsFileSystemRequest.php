@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() 获取可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
  * @method void setZone(string $Zone) 设置可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
- * @method string getNetInterface() 获取网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。
- * @method void setNetInterface(string $NetInterface) 设置网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。
- * @method string getPGroupId() 获取权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic
- * @method void setPGroupId(string $PGroupId) 设置权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic
+ * @method string getNetInterface() 获取网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
+ * @method void setNetInterface(string $NetInterface) 设置网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
+ * @method string getPGroupId() 获取权限组 ID
+ * @method void setPGroupId(string $PGroupId) 设置权限组 ID
  * @method string getProtocol() 获取文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择turbo，不支持NFS、CIFS
  * @method void setProtocol(string $Protocol) 设置文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择turbo，不支持NFS、CIFS
- * @method string getStorageType() 获取文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
- * @method void setStorageType(string $StorageType) 设置文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+ * @method string getStorageType() 获取文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
+ * @method void setStorageType(string $StorageType) 设置文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
  * @method string getVpcId() 获取私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
  * @method void setVpcId(string $VpcId) 设置私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
  * @method string getSubnetId() 获取子网 ID，若网络类型选择的是VPC，该字段为必填。
@@ -57,12 +57,12 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。
+     * @var string 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
      */
     public $NetInterface;
 
     /**
-     * @var string 权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic
+     * @var string 权限组 ID
      */
     public $PGroupId;
 
@@ -72,7 +72,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+     * @var string 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
      */
     public $StorageType;
 
@@ -123,10 +123,10 @@ class CreateCfsFileSystemRequest extends AbstractModel
 
     /**
      * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
-     * @param string $NetInterface 网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。
-     * @param string $PGroupId 权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic
+     * @param string $NetInterface 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
+     * @param string $PGroupId 权限组 ID
      * @param string $Protocol 文件系统协议类型， 值为 NFS、CIFS、TURBO ; 若留空则默认为 NFS协议，turbo系列必须选择turbo，不支持NFS、CIFS
-     * @param string $StorageType 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+     * @param string $StorageType 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
      * @param string $VpcId 私有网络（VPC） ID，若网络类型选择的是VPC，该字段为必填。
      * @param string $SubnetId 子网 ID，若网络类型选择的是VPC，该字段为必填。
      * @param string $MountIP 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP，Turbo系列当前不支持指定

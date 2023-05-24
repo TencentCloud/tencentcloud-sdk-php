@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecConfig(RuleExecConfig $ExecConfig) 设置执行配置
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getEngineType() 获取该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method void setEngineType(string $EngineType) 设置该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
  */
 class CommitRuleGroupTaskRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CommitRuleGroupTaskRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public $EngineType;
+
+    /**
      * @param integer $RuleGroupId 规则组ID
      * @param integer $TriggerType 触发类型 1.手动触发 2.调度事中触发 3.周期调度触发
      * @param array $ExecRuleConfig 规则配置列表
      * @param RuleExecConfig $ExecConfig 执行配置
      * @param string $ProjectId 项目ID
+     * @param string $EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
      */
     function __construct()
     {
@@ -102,6 +110,10 @@ class CommitRuleGroupTaskRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

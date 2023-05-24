@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置生命周期规则状态（1：打开；2：关闭）
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method Summary getSummary() 获取生命周期规则当前路径具体存储量
+ * @method void setSummary(Summary $Summary) 设置生命周期规则当前路径具体存储量
+ * @method string getLastSummaryTime() 获取Summary更新时间
+ * @method void setLastSummaryTime(string $LastSummaryTime) 设置Summary更新时间
  */
 class LifeCycleRule extends AbstractModel
 {
@@ -66,12 +70,24 @@ class LifeCycleRule extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var Summary 生命周期规则当前路径具体存储量
+     */
+    public $Summary;
+
+    /**
+     * @var string Summary更新时间
+     */
+    public $LastSummaryTime;
+
+    /**
      * @param integer $LifeCycleRuleId 生命周期规则ID
      * @param string $LifeCycleRuleName 生命周期规则名称
      * @param string $Path 生命周期规则路径（目录或文件）
      * @param array $Transitions 生命周期规则转换列表
      * @param integer $Status 生命周期规则状态（1：打开；2：关闭）
      * @param string $CreateTime 创建时间
+     * @param Summary $Summary 生命周期规则当前路径具体存储量
+     * @param string $LastSummaryTime Summary更新时间
      */
     function __construct()
     {
@@ -113,6 +129,15 @@ class LifeCycleRule extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+            $this->Summary = new Summary();
+            $this->Summary->deserialize($param["Summary"]);
+        }
+
+        if (array_key_exists("LastSummaryTime",$param) and $param["LastSummaryTime"] !== null) {
+            $this->LastSummaryTime = $param["LastSummaryTime"];
         }
     }
 }

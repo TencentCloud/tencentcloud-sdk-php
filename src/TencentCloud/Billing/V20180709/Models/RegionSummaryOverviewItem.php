@@ -24,24 +24,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置地域ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegionName() 获取地域名称
- * @method void setRegionName(string $RegionName) 设置地域名称
- * @method string getRealTotalCost() 获取实际花费
- * @method void setRealTotalCost(string $RealTotalCost) 设置实际花费
+ * @method string getRegionName() 获取地域名称：资源所属地域，例如华南地区（广州）
+ * @method void setRegionName(string $RegionName) 设置地域名称：资源所属地域，例如华南地区（广州）
  * @method string getRealTotalCostRatio() 获取费用所占百分比，两位小数
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) 设置费用所占百分比，两位小数
- * @method string getCashPayAmount() 获取现金金额
- * @method void setCashPayAmount(string $CashPayAmount) 设置现金金额
- * @method string getIncentivePayAmount() 获取赠送金金额
- * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金金额
- * @method string getVoucherPayAmount() 获取代金券金额
- * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
+ * @method string getRealTotalCost() 获取优惠后总价
+ * @method void setRealTotalCost(string $RealTotalCost) 设置优惠后总价
+ * @method string getCashPayAmount() 获取现金账户支出：通过现金账户支付的金额
+ * @method void setCashPayAmount(string $CashPayAmount) 设置现金账户支出：通过现金账户支付的金额
+ * @method string getIncentivePayAmount() 获取赠送账户支出：使用赠送金支付的金额
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送账户支出：使用赠送金支付的金额
+ * @method string getVoucherPayAmount() 获取优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+ * @method string getTransferPayAmount() 获取分成金账户支出：通过分成金账户支付的金额
+ * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金账户支出：通过分成金账户支付的金额
  * @method string getBillMonth() 获取账单月份，格式2019-08
  * @method void setBillMonth(string $BillMonth) 设置账单月份，格式2019-08
  * @method string getTotalCost() 获取原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
  * @method void setTotalCost(string $TotalCost) 设置原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
- * @method string getTransferPayAmount() 获取分成金金额
- * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金金额
  */
 class RegionSummaryOverviewItem extends AbstractModel
 {
@@ -52,14 +52,9 @@ class RegionSummaryOverviewItem extends AbstractModel
     public $RegionId;
 
     /**
-     * @var string 地域名称
+     * @var string 地域名称：资源所属地域，例如华南地区（广州）
      */
     public $RegionName;
-
-    /**
-     * @var string 实际花费
-     */
-    public $RealTotalCost;
 
     /**
      * @var string 费用所占百分比，两位小数
@@ -67,19 +62,29 @@ class RegionSummaryOverviewItem extends AbstractModel
     public $RealTotalCostRatio;
 
     /**
-     * @var string 现金金额
+     * @var string 优惠后总价
+     */
+    public $RealTotalCost;
+
+    /**
+     * @var string 现金账户支出：通过现金账户支付的金额
      */
     public $CashPayAmount;
 
     /**
-     * @var string 赠送金金额
+     * @var string 赠送账户支出：使用赠送金支付的金额
      */
     public $IncentivePayAmount;
 
     /**
-     * @var string 代金券金额
+     * @var string 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public $VoucherPayAmount;
+
+    /**
+     * @var string 分成金账户支出：通过分成金账户支付的金额
+     */
+    public $TransferPayAmount;
 
     /**
      * @var string 账单月份，格式2019-08
@@ -92,22 +97,17 @@ class RegionSummaryOverviewItem extends AbstractModel
     public $TotalCost;
 
     /**
-     * @var string 分成金金额
-     */
-    public $TransferPayAmount;
-
-    /**
      * @param string $RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegionName 地域名称
-     * @param string $RealTotalCost 实际花费
+     * @param string $RegionName 地域名称：资源所属地域，例如华南地区（广州）
      * @param string $RealTotalCostRatio 费用所占百分比，两位小数
-     * @param string $CashPayAmount 现金金额
-     * @param string $IncentivePayAmount 赠送金金额
-     * @param string $VoucherPayAmount 代金券金额
+     * @param string $RealTotalCost 优惠后总价
+     * @param string $CashPayAmount 现金账户支出：通过现金账户支付的金额
+     * @param string $IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
+     * @param string $VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+     * @param string $TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
      * @param string $BillMonth 账单月份，格式2019-08
      * @param string $TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-     * @param string $TransferPayAmount 分成金金额
      */
     function __construct()
     {
@@ -130,12 +130,12 @@ class RegionSummaryOverviewItem extends AbstractModel
             $this->RegionName = $param["RegionName"];
         }
 
-        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
-            $this->RealTotalCost = $param["RealTotalCost"];
-        }
-
         if (array_key_exists("RealTotalCostRatio",$param) and $param["RealTotalCostRatio"] !== null) {
             $this->RealTotalCostRatio = $param["RealTotalCostRatio"];
+        }
+
+        if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
+            $this->RealTotalCost = $param["RealTotalCost"];
         }
 
         if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
@@ -150,16 +150,16 @@ class RegionSummaryOverviewItem extends AbstractModel
             $this->VoucherPayAmount = $param["VoucherPayAmount"];
         }
 
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
+        }
+
         if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
             $this->BillMonth = $param["BillMonth"];
         }
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
-        }
-
-        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
-            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

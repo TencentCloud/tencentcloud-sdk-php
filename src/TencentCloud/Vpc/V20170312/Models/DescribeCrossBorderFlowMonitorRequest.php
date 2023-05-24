@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnId(string $CcnId) 设置云联网ID。
  * @method string getCcnUin() 获取云联网所属账号。
  * @method void setCcnUin(string $CcnUin) 设置云联网所属账号。
- * @method integer getPeriod() 获取时间粒度。
- * @method void setPeriod(integer $Period) 设置时间粒度。
+ * @method integer getPeriod() 获取时间粒度。单位为:秒，如60为60s的时间粒度
+ * @method void setPeriod(integer $Period) 设置时间粒度。单位为:秒，如60为60s的时间粒度
  * @method string getStartTime() 获取开始时间。
  * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method string getEndTime() 获取结束时间。
@@ -58,7 +58,7 @@ class DescribeCrossBorderFlowMonitorRequest extends AbstractModel
     public $CcnUin;
 
     /**
-     * @var integer 时间粒度。
+     * @var integer 时间粒度。单位为:秒，如60为60s的时间粒度
      */
     public $Period;
 
@@ -77,7 +77,7 @@ class DescribeCrossBorderFlowMonitorRequest extends AbstractModel
      * @param string $DestinationRegion 目的地域。
      * @param string $CcnId 云联网ID。
      * @param string $CcnUin 云联网所属账号。
-     * @param integer $Period 时间粒度。
+     * @param integer $Period 时间粒度。单位为:秒，如60为60s的时间粒度
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
      */

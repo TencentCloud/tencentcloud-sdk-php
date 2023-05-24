@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method integer getRuleGroupId() 获取规则组id
  * @method void setRuleGroupId(integer $RuleGroupId) 设置规则组id
+ * @method string getEngineType() 获取该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+ * @method void setEngineType(string $EngineType) 设置该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
  */
 class DescribeRulesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeRulesRequest extends AbstractModel
     public $RuleGroupId;
 
     /**
+     * @var string 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public $EngineType;
+
+    /**
      * @param string $ProjectId 项目id
      * @param integer $RuleGroupId 规则组id
+     * @param string $EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeRulesRequest extends AbstractModel
 
         if (array_key_exists("RuleGroupId",$param) and $param["RuleGroupId"] !== null) {
             $this->RuleGroupId = $param["RuleGroupId"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

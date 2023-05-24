@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskAction(string $TaskAction) 设置时间指定
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecEngineType() 获取运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecEngineType(string $ExecEngineType) 设置运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecPlan() 获取执行计划
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecPlan(string $ExecPlan) 设置执行计划
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecStrategy extends AbstractModel
 {
@@ -144,6 +152,18 @@ class RuleGroupExecStrategy extends AbstractModel
     public $TaskAction;
 
     /**
+     * @var string 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecEngineType;
+
+    /**
+     * @var string 执行计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecPlan;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
@@ -167,6 +187,10 @@ class RuleGroupExecStrategy extends AbstractModel
      * @param integer $CycleStep 间隔
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskAction 时间指定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecPlan 执行计划
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +257,14 @@ class RuleGroupExecStrategy extends AbstractModel
 
         if (array_key_exists("TaskAction",$param) and $param["TaskAction"] !== null) {
             $this->TaskAction = $param["TaskAction"];
+        }
+
+        if (array_key_exists("ExecEngineType",$param) and $param["ExecEngineType"] !== null) {
+            $this->ExecEngineType = $param["ExecEngineType"];
+        }
+
+        if (array_key_exists("ExecPlan",$param) and $param["ExecPlan"] !== null) {
+            $this->ExecPlan = $param["ExecPlan"];
         }
     }
 }

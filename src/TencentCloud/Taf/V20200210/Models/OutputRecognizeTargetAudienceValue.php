@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(float $Score) 设置返回分值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getModelType() 获取模型类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelType(integer $ModelType) 设置模型类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUid() 获取入参Uid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUid(string $Uid) 设置入参Uid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputRecognizeTargetAudienceValue extends AbstractModel
 {
@@ -54,11 +62,27 @@ class OutputRecognizeTargetAudienceValue extends AbstractModel
     public $Score;
 
     /**
+     * @var integer 模型类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelType;
+
+    /**
+     * @var string 入参Uid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uid;
+
+    /**
      * @param integer $ModelId 模型ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsFound 是否正常返回结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Score 返回分值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ModelType 模型类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uid 入参Uid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +108,14 @@ class OutputRecognizeTargetAudienceValue extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("ModelType",$param) and $param["ModelType"] !== null) {
+            $this->ModelType = $param["ModelType"];
+        }
+
+        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
+            $this->Uid = $param["Uid"];
         }
     }
 }

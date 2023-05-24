@@ -20,72 +20,76 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillResourceSummary请求参数结构体
  *
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+ * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
  * @method integer getLimit() 获取数量，最大值为1000
  * @method void setLimit(integer $Limit) 设置数量，最大值为1000
- * @method string getMonth() 获取月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
- * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+ * @method string getMonth() 获取月份，格式为yyyy-mm。不能早于开通账单2.0的月份
+ * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm。不能早于开通账单2.0的月份
  * @method string getPeriodType() 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
  * @method void setPeriodType(string $PeriodType) 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
  * @method integer getNeedRecordNum() 获取是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
  * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
- * @method string getActionType() 获取查询交易类型，如下：
+ * @method string getActionType() 获取查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
-包年包月转按量
- * @method void setActionType(string $ActionType) 设置查询交易类型，如下：
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
+包年包月转按量 
+保底扣款 
+节省计划小时费用
+ * @method void setActionType(string $ActionType) 设置查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
-包年包月转按量
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
+包年包月转按量 
+保底扣款 
+节省计划小时费用
  * @method string getResourceId() 获取查询指定资源信息
  * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
  * @method string getPayMode() 获取付费模式 prePay/postPay
@@ -98,7 +102,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量
+     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
      */
     public $Offset;
 
@@ -108,7 +112,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @var string 月份，格式为yyyy-mm。不能早于开通账单2.0的月份
      */
     public $Month;
 
@@ -124,33 +128,35 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $NeedRecordNum;
 
     /**
-     * @var string 查询交易类型，如下：
+     * @var string 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
-包年包月转按量
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
+包年包月转按量 
+保底扣款 
+节省计划小时费用
      */
     public $ActionType;
 
@@ -171,39 +177,41 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $BusinessCode;
 
     /**
-     * @param integer $Offset 偏移量
+     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
      * @param integer $Limit 数量，最大值为1000
-     * @param string $Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * @param string $Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份
      * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
-     * @param string $ActionType 查询交易类型，如下：
+     * @param string $ActionType 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
-包年包月转按量
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
+包年包月转按量 
+保底扣款 
+节省计划小时费用
      * @param string $ResourceId 查询指定资源信息
      * @param string $PayMode 付费模式 prePay/postPay
      * @param string $BusinessCode 产品名称代码

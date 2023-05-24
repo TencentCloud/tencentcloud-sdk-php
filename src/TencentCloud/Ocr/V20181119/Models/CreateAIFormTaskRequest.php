@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstNotes(string $FirstNotes) 设置备注信息1
  * @method string getSecondNotes() 获取备注信息2
  * @method void setSecondNotes(string $SecondNotes) 设置备注信息2
+ * @method integer getFileType() 获取文件类型
+ * @method void setFileType(integer $FileType) 设置文件类型
  */
 class CreateAIFormTaskRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateAIFormTaskRequest extends AbstractModel
     public $SecondNotes;
 
     /**
+     * @var integer 文件类型
+     */
+    public $FileType;
+
+    /**
      * @param array $FileList 多个文件的URL列表
      * @param string $FirstNotes 备注信息1
      * @param string $SecondNotes 备注信息2
+     * @param integer $FileType 文件类型
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class CreateAIFormTaskRequest extends AbstractModel
 
         if (array_key_exists("SecondNotes",$param) and $param["SecondNotes"] !== null) {
             $this->SecondNotes = $param["SecondNotes"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
         }
     }
 }

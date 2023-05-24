@@ -45,6 +45,8 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：10次/秒。
  * @method Models\CarInvoiceOCRResponse CarInvoiceOCR(Models\CarInvoiceOCRRequest $req) 本接口支持机动车销售统一发票和二手车销售统一发票的识别，包括发票号码、发票代码、合计金额、合计税额等二十多个字段。
+
+默认接口请求频率限制：5次/秒。
  * @method Models\ClassifyDetectOCRResponse ClassifyDetectOCR(Models\ClassifyDetectOCRRequest $req) 支持身份证、护照、名片、银行卡、行驶证、驾驶证、港澳台通行证、户口本、港澳台来往内地通行证、港澳台居住证、不动产证、营业执照的智能分类。
 
 默认接口请求频率限制：20次/秒。
@@ -396,7 +398,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求频率限制：5次/秒。
  * @method Models\RecognizeContainerOCRResponse RecognizeContainerOCR(Models\RecognizeContainerOCRRequest $req) 本接口支持集装箱箱门信息识别，识别字段包括集装箱箱号、类型、总重量、有效承重、容量、自身重量，具备集装箱箱号、类型不完整或者不清晰的告警功能。
 默认接口请求频率限制：5次/秒。
- * @method Models\RecognizeGeneralInvoiceResponse RecognizeGeneralInvoice(Models\RecognizeGeneralInvoiceRequest $req) 本接口支持 PDF多页（最多30页）、一页中单张、多张、类型票据的混合识别，同时支持单选识别某类票据，已支持票种包括：增值税发票（专票、普票、卷票、区块链发票、通行费发票）、全电发票（专票、普票）、非税发票（通用票据、统一缴纳书）、定额发票、通用机打发票、购车发票（机动车销售发票、二手车发票）、火车票、出租车发票、机票行程单、汽车票、轮船票、过路过桥费发票共14种标准报销发票，并支持非上述类型的其他发票的智能识别。
+ * @method Models\RecognizeGeneralInvoiceResponse RecognizeGeneralInvoice(Models\RecognizeGeneralInvoiceRequest $req) 本接口支持 PDF多页（最多30页）、一页中单张、多张、类型票据的混合识别，同时支持单选识别某类票据，已支持票种包括：增值税发票（专票、普票、卷票、区块链发票、通行费发票）、全电发票（专票、普票）、非税发票（通用票据、统一缴纳书）、定额发票、通用机打发票、购车发票（机动车销售发票、二手车发票）、火车票、出租车发票、机票行程单、汽车票、轮船票、过路过桥费发票共14种标准报销发票，并支持非上述类型的其他发票的智能识别，点击[立即试用](https://cloud.tencent.com/product/ocr)。
 
 默认接口请求频率限制：5次/秒。
 
@@ -437,7 +439,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
           <td> 3 </td>
         </tr>
         <tr>
-          <td> VatElectronicSpecialInvoiceFull</td>
+          <td> VatElectronicInvoiceToll</td>
           <td> 增值税电子普通发票(通行费)</td>
           <td> 3 </td>
         </tr>

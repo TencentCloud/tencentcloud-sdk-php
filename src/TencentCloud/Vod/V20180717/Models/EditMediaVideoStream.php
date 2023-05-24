@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width 非 0，Height 为 0，则 Height 按基准分辨率比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+ * @method integer getFps() 获取视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。
+ * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。
  */
 class EditMediaVideoStream extends AbstractModel
 {
@@ -84,6 +90,13 @@ class EditMediaVideoStream extends AbstractModel
     public $Height;
 
     /**
+     * @var integer 视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。
+     */
+    public $Fps;
+
+    /**
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -100,6 +113,9 @@ class EditMediaVideoStream extends AbstractModel
 <li>当 Width 非 0，Height 为 0，则 Height 按基准分辨率比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
+     * @param integer $Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。
      */
     function __construct()
     {
@@ -124,6 +140,10 @@ class EditMediaVideoStream extends AbstractModel
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
+            $this->Fps = $param["Fps"];
         }
     }
 }

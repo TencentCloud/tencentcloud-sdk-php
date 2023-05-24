@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFieldConfig(RuleFieldConfig $FieldConfig) 设置自定义模版sql表达式字段替换参数
  * @method string getTargetObjectValue() 获取目标字段名称  CITY
  * @method void setTargetObjectValue(string $TargetObjectValue) 设置目标字段名称  CITY
+ * @method array getSourceEngineTypes() 获取该规则支持的执行引擎列表
+ * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置该规则支持的执行引擎列表
  */
 class CreateRuleRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ class CreateRuleRequest extends AbstractModel
     public $TargetObjectValue;
 
     /**
+     * @var array 该规则支持的执行引擎列表
+     */
+    public $SourceEngineTypes;
+
+    /**
      * @param string $ProjectId 项目id
      * @param integer $RuleGroupId 规则组Id
      * @param string $Name 规则名称
@@ -208,6 +215,7 @@ class CreateRuleRequest extends AbstractModel
      * @param string $RelConditionExpr 源字段与目标字段关联条件on表达式
      * @param RuleFieldConfig $FieldConfig 自定义模版sql表达式字段替换参数
      * @param string $TargetObjectValue 目标字段名称  CITY
+     * @param array $SourceEngineTypes 该规则支持的执行引擎列表
      */
     function __construct()
     {
@@ -314,6 +322,10 @@ class CreateRuleRequest extends AbstractModel
 
         if (array_key_exists("TargetObjectValue",$param) and $param["TargetObjectValue"] !== null) {
             $this->TargetObjectValue = $param["TargetObjectValue"];
+        }
+
+        if (array_key_exists("SourceEngineTypes",$param) and $param["SourceEngineTypes"] !== null) {
+            $this->SourceEngineTypes = $param["SourceEngineTypes"];
         }
     }
 }

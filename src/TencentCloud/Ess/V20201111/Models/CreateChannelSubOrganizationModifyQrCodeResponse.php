@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQrCodeUrl() 获取二维码下载链接
  * @method void setQrCodeUrl(string $QrCodeUrl) 设置二维码下载链接
- * @method integer getExpiredTime() 获取二维码失效时间 unix 时间戳 精确到秒
- * @method void setExpiredTime(integer $ExpiredTime) 设置二维码失效时间 unix 时间戳 精确到秒
+ * @method integer getExpiredTime() 获取二维码失效时间 UNIX 时间戳 精确到秒
+ * @method void setExpiredTime(integer $ExpiredTime) 设置二维码失效时间 UNIX 时间戳 精确到秒
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class CreateChannelSubOrganizationModifyQrCodeResponse extends AbstractModel
     public $QrCodeUrl;
 
     /**
-     * @var integer 二维码失效时间 unix 时间戳 精确到秒
+     * @var integer 二维码失效时间 UNIX 时间戳 精确到秒
      */
     public $ExpiredTime;
 
@@ -46,7 +46,7 @@ class CreateChannelSubOrganizationModifyQrCodeResponse extends AbstractModel
 
     /**
      * @param string $QrCodeUrl 二维码下载链接
-     * @param integer $ExpiredTime 二维码失效时间 unix 时间戳 精确到秒
+     * @param integer $ExpiredTime 二维码失效时间 UNIX 时间戳 精确到秒
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

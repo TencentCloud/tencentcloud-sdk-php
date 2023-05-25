@@ -23,21 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SslVpnClientIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
-<li>ssl-vpn-client-id - String - （过滤条件）SSL-VPN-CLIENT实例ID形如：vpngwSslClient-123456。</li>
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpns-1j2w6xpx。</li>
+<li>ssl-vpn-client-id - String - （过滤条件）SSL-VPN-CLIENT实例ID形如：vpnc-3rlxp4nd。</li>
 <li>ssl-vpn-client-name - String - （过滤条件）SSL-VPN-CLIENT实例名称。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定SslVpnClientIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
-<li>ssl-vpn-client-id - String - （过滤条件）SSL-VPN-CLIENT实例ID形如：vpngwSslClient-123456。</li>
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpns-1j2w6xpx。</li>
+<li>ssl-vpn-client-id - String - （过滤条件）SSL-VPN-CLIENT实例ID形如：vpnc-3rlxp4nd。</li>
 <li>ssl-vpn-client-name - String - （过滤条件）SSL-VPN-CLIENT实例名称。</li>
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取请求对象个数
- * @method void setLimit(integer $Limit) 设置请求对象个数
- * @method array getSslVpnClientIds() 获取SSL-VPN-CLIENT实例ID。形如：vpngwSslClient-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
- * @method void setSslVpnClientIds(array $SslVpnClientIds) 设置SSL-VPN-CLIENT实例ID。形如：vpngwSslClient-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
+ * @method integer getOffset() 获取偏移量，默认值0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值0。
+ * @method integer getLimit() 获取请求对象个数，默认值20。
+ * @method void setLimit(integer $Limit) 设置请求对象个数，默认值20。
+ * @method array getSslVpnClientIds() 获取SSL-VPN-CLIENT实例ID。形如：	
+vpns-1jww3xpx。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
+ * @method void setSslVpnClientIds(array $SslVpnClientIds) 设置SSL-VPN-CLIENT实例ID。形如：	
+vpns-1jww3xpx。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
  * @method boolean getIsVpnPortal() 获取VPN门户网站使用。默认是False。
  * @method void setIsVpnPortal(boolean $IsVpnPortal) 设置VPN门户网站使用。默认是False。
  */
@@ -47,24 +49,25 @@ class DescribeVpnGatewaySslClientsRequest extends AbstractModel
      * @var array 过滤条件，参数不支持同时指定SslVpnClientIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
-<li>ssl-vpn-client-id - String - （过滤条件）SSL-VPN-CLIENT实例ID形如：vpngwSslClient-123456。</li>
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpns-1j2w6xpx。</li>
+<li>ssl-vpn-client-id - String - （过滤条件）SSL-VPN-CLIENT实例ID形如：vpnc-3rlxp4nd。</li>
 <li>ssl-vpn-client-name - String - （过滤条件）SSL-VPN-CLIENT实例名称。</li>
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认值0。
      */
     public $Offset;
 
     /**
-     * @var integer 请求对象个数
+     * @var integer 请求对象个数，默认值20。
      */
     public $Limit;
 
     /**
-     * @var array SSL-VPN-CLIENT实例ID。形如：vpngwSslClient-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
+     * @var array SSL-VPN-CLIENT实例ID。形如：	
+vpns-1jww3xpx。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
      */
     public $SslVpnClientIds;
 
@@ -77,12 +80,13 @@ class DescribeVpnGatewaySslClientsRequest extends AbstractModel
      * @param array $Filters 过滤条件，参数不支持同时指定SslVpnClientIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
-<li>ssl-vpn-client-id - String - （过滤条件）SSL-VPN-CLIENT实例ID形如：vpngwSslClient-123456。</li>
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpns-1j2w6xpx。</li>
+<li>ssl-vpn-client-id - String - （过滤条件）SSL-VPN-CLIENT实例ID形如：vpnc-3rlxp4nd。</li>
 <li>ssl-vpn-client-name - String - （过滤条件）SSL-VPN-CLIENT实例名称。</li>
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 请求对象个数
-     * @param array $SslVpnClientIds SSL-VPN-CLIENT实例ID。形如：vpngwSslClient-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
+     * @param integer $Offset 偏移量，默认值0。
+     * @param integer $Limit 请求对象个数，默认值20。
+     * @param array $SslVpnClientIds SSL-VPN-CLIENT实例ID。形如：	
+vpns-1jww3xpx。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
      * @param boolean $IsVpnPortal VPN门户网站使用。默认是False。
      */
     function __construct()

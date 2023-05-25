@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询起始偏移，最大2000
  * @method string getLimit() 获取查询数量，最大200
  * @method void setLimit(string $Limit) 设置查询数量，最大200
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
  * @method array getFilters() 获取查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
  * @method void setFilters(array $Filters) 设置查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+ * @method UserInfo getOperator() 获取操作人信息
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息
  */
 class ChannelDescribeRolesRequest extends AbstractModel
 {
@@ -53,25 +53,25 @@ class ChannelDescribeRolesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var UserInfo 操作人信息
-     */
-    public $Operator;
-
-    /**
      * @var array 查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
      */
     public $Filters;
 
     /**
+     * @var UserInfo 操作人信息
+     */
+    public $Operator;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      * @param integer $Offset 查询起始偏移，最大2000
      * @param string $Limit 查询数量，最大200
-     * @param UserInfo $Operator 操作人信息
      * @param array $Filters 查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+     * @param UserInfo $Operator 操作人信息
      */
     function __construct()
     {
@@ -99,11 +99,6 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
             $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -111,6 +106,11 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

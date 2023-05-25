@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合条件的实例数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
- * @method array getSslVpnClientSet() 获取符合条件的实例个数。
- * @method void setSslVpnClientSet(array $SslVpnClientSet) 设置符合条件的实例个数。
+ * @method array getSslVpnClientSet() 获取SSL-VPN-CLIENT 实例列表。
+ * @method void setSslVpnClientSet(array $SslVpnClientSet) 设置SSL-VPN-CLIENT 实例列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeVpnGatewaySslClientsResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 符合条件的实例个数。
+     * @var array SSL-VPN-CLIENT 实例列表。
      */
     public $SslVpnClientSet;
 
@@ -46,7 +46,7 @@ class DescribeVpnGatewaySslClientsResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合条件的实例数量。
-     * @param array $SslVpnClientSet 符合条件的实例个数。
+     * @param array $SslVpnClientSet SSL-VPN-CLIENT 实例列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

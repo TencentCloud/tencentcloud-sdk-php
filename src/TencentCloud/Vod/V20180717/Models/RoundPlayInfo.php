@@ -30,6 +30,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置轮播播单名称，长度限制：64 个字符。
  * @method string getDesc() 获取轮播播单描述信息，长度限制：256 个字符。
  * @method void setDesc(string $Desc) 设置轮播播单描述信息，长度限制：256 个字符。
+ * @method string getStatus() 获取播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。
+ * @method void setStatus(string $Status) 设置播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。
+ * @method string getPlayBackMode() 获取播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+ * @method void setPlayBackMode(string $PlayBackMode) 设置播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+ * @method string getUrl() 获取轮播播放地址。
+ * @method void setUrl(string $Url) 设置轮播播放地址。
  */
 class RoundPlayInfo extends AbstractModel
 {
@@ -59,11 +77,41 @@ class RoundPlayInfo extends AbstractModel
     public $Desc;
 
     /**
+     * @var string 播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。
+     */
+    public $Status;
+
+    /**
+     * @var string 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+     */
+    public $PlayBackMode;
+
+    /**
+     * @var string 轮播播放地址。
+     */
+    public $Url;
+
+    /**
      * @param string $RoundPlayId 轮播播单标识。
      * @param string $StartTime 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param array $RoundPlaylist 轮播列表。
      * @param string $Name 轮播播单名称，长度限制：64 个字符。
      * @param string $Desc 轮播播单描述信息，长度限制：256 个字符。
+     * @param string $Status 播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。
+     * @param string $PlayBackMode 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+     * @param string $Url 轮播播放地址。
      */
     function __construct()
     {
@@ -101,6 +149,18 @@ class RoundPlayInfo extends AbstractModel
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("PlayBackMode",$param) and $param["PlayBackMode"] !== null) {
+            $this->PlayBackMode = $param["PlayBackMode"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

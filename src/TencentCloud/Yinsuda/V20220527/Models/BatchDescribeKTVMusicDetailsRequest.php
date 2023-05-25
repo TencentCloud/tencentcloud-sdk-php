@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Live：直播</li><li>Chat：语聊</li>
  * @method void setPlayScene(string $PlayScene) 设置播放场景。默认为Chat
 <li>Live：直播</li><li>Chat：语聊</li>
+ * @method string getGuestUserId() 获取玩家用户标识
+ * @method void setGuestUserId(string $GuestUserId) 设置玩家用户标识
+ * @method string getRoomId() 获取房间Id
+ * @method void setRoomId(string $RoomId) 设置房间Id
  */
 class BatchDescribeKTVMusicDetailsRequest extends AbstractModel
 {
@@ -55,11 +59,23 @@ class BatchDescribeKTVMusicDetailsRequest extends AbstractModel
     public $PlayScene;
 
     /**
+     * @var string 玩家用户标识
+     */
+    public $GuestUserId;
+
+    /**
+     * @var string 房间Id
+     */
+    public $RoomId;
+
+    /**
      * @param string $AppName 应用名称。
      * @param string $UserId 用户标识。
      * @param array $MusicIds 歌曲 Id 列表。
      * @param string $PlayScene 播放场景。默认为Chat
 <li>Live：直播</li><li>Chat：语聊</li>
+     * @param string $GuestUserId 玩家用户标识
+     * @param string $RoomId 房间Id
      */
     function __construct()
     {
@@ -88,6 +104,14 @@ class BatchDescribeKTVMusicDetailsRequest extends AbstractModel
 
         if (array_key_exists("PlayScene",$param) and $param["PlayScene"] !== null) {
             $this->PlayScene = $param["PlayScene"];
+        }
+
+        if (array_key_exists("GuestUserId",$param) and $param["GuestUserId"] !== null) {
+            $this->GuestUserId = $param["GuestUserId"];
+        }
+
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
         }
     }
 }

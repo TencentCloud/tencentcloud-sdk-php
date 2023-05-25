@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置内存容量，单位：`GB`。
  * @method integer getFPGA() 获取FPGA核数，单位：核。
  * @method void setFPGA(integer $FPGA) 设置FPGA核数，单位：核。
+ * @method float getGpuCount() 获取实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+ * @method void setGpuCount(float $GpuCount) 设置实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
  */
 class InstanceTypeConfig extends AbstractModel
 {
@@ -73,6 +75,11 @@ class InstanceTypeConfig extends AbstractModel
     public $FPGA;
 
     /**
+     * @var float 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     */
+    public $GpuCount;
+
+    /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
      * @param string $InstanceFamily 实例机型系列。
@@ -80,6 +87,7 @@ class InstanceTypeConfig extends AbstractModel
      * @param integer $CPU CPU核数，单位：核。
      * @param integer $Memory 内存容量，单位：`GB`。
      * @param integer $FPGA FPGA核数，单位：核。
+     * @param float $GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class InstanceTypeConfig extends AbstractModel
 
         if (array_key_exists("FPGA",$param) and $param["FPGA"] !== null) {
             $this->FPGA = $param["FPGA"];
+        }
+
+        if (array_key_exists("GpuCount",$param) and $param["GpuCount"] !== null) {
+            $this->GpuCount = $param["GpuCount"];
         }
     }
 }

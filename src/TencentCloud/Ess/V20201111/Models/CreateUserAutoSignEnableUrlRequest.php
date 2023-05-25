@@ -34,6 +34,8 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
  * @method void setNotifyType(string $NotifyType) 设置通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
  * @method string getNotifyAddress() 获取若上方填写为 SMS，则此处为手机号
  * @method void setNotifyAddress(string $NotifyAddress) 设置若上方填写为 SMS，则此处为手机号
+ * @method integer getExpiredTime() 获取链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+ * @method void setExpiredTime(integer $ExpiredTime) 设置链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
  */
 class CreateUserAutoSignEnableUrlRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     public $NotifyAddress;
 
     /**
+     * @var integer 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+     */
+    public $ExpiredTime;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param string $SceneKey 自动签场景:
 E_PRESCRIPTION_AUTO_SIGN 电子处方
@@ -76,6 +83,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
      * @param string $UrlType 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
      * @param string $NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
      * @param string $NotifyAddress 若上方填写为 SMS，则此处为手机号
+     * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
      */
     function __construct()
     {
@@ -114,6 +122,10 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
 
         if (array_key_exists("NotifyAddress",$param) and $param["NotifyAddress"] !== null) {
             $this->NotifyAddress = $param["NotifyAddress"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }

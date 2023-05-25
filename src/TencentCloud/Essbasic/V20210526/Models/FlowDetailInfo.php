@@ -58,6 +58,8 @@ RELIEVED 解除
  * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置合同(流程)的签署人数组
  * @method array getCcInfos() 获取合同(流程)关注方信息列表
  * @method void setCcInfos(array $CcInfos) 设置合同(流程)关注方信息列表
+ * @method boolean getNeedCreateReview() 获取是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+ * @method void setNeedCreateReview(boolean $NeedCreateReview) 设置是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
  */
 class FlowDetailInfo extends AbstractModel
 {
@@ -121,6 +123,11 @@ RELIEVED 解除
     public $CcInfos;
 
     /**
+     * @var boolean 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+     */
+    public $NeedCreateReview;
+
+    /**
      * @param string $FlowId 合同(流程)的Id
      * @param string $FlowName 合同(流程)的名字
      * @param string $FlowType 合同(流程)的类型
@@ -140,6 +147,7 @@ RELIEVED 解除
      * @param string $CustomData 用户自定义数据
      * @param array $FlowApproverInfos 合同(流程)的签署人数组
      * @param array $CcInfos 合同(流程)关注方信息列表
+     * @param boolean $NeedCreateReview 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
      */
     function __construct()
     {
@@ -202,6 +210,10 @@ RELIEVED 解除
                 $obj->deserialize($value);
                 array_push($this->CcInfos, $obj);
             }
+        }
+
+        if (array_key_exists("NeedCreateReview",$param) and $param["NeedCreateReview"] !== null) {
+            $this->NeedCreateReview = $param["NeedCreateReview"];
         }
     }
 }

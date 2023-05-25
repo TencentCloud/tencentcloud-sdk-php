@@ -39,7 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMemorySize() 获取函数的最大可用内存
  * @method void setMemorySize(integer $MemorySize) 设置函数的最大可用内存
  * @method string getRuntime() 获取函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntime(string $Runtime) 设置函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFunctionName() 获取函数的名称
  * @method void setFunctionName(string $FunctionName) 设置函数的名称
  * @method VpcConfig getVpcConfig() 获取函数的私有网络
@@ -180,6 +182,7 @@ class GetFunctionResponse extends AbstractModel
 
     /**
      * @var string 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Runtime;
 
@@ -379,6 +382,7 @@ class GetFunctionResponse extends AbstractModel
      * @param string $FunctionVersion 函数的版本
      * @param integer $MemorySize 函数的最大可用内存
      * @param string $Runtime 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FunctionName 函数的名称
      * @param VpcConfig $VpcConfig 函数的私有网络
      * @param string $UseGpu 是否使用GPU

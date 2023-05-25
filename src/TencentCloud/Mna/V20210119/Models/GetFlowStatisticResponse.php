@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNetDetails() 获取流量详细信息
  * @method void setNetDetails(array $NetDetails) 设置流量详细信息
- * @method float getMaxValue() 获取查找时间段流量使用最大值（单位：bit）
- * @method void setMaxValue(float $MaxValue) 设置查找时间段流量使用最大值（单位：bit）
- * @method float getAvgValue() 获取查找时间段流量使用平均值（单位：bit）
- * @method void setAvgValue(float $AvgValue) 设置查找时间段流量使用平均值（单位：bit）
- * @method float getTotalValue() 获取查找时间段流量使用总量（单位：bit）
- * @method void setTotalValue(float $TotalValue) 设置查找时间段流量使用总量（单位：bit）
+ * @method float getMaxValue() 获取查找时间段流量使用最大值（单位：byte）
+ * @method void setMaxValue(float $MaxValue) 设置查找时间段流量使用最大值（单位：byte）
+ * @method float getAvgValue() 获取查找时间段流量使用平均值（单位：byte）
+ * @method void setAvgValue(float $AvgValue) 设置查找时间段流量使用平均值（单位：byte）
+ * @method float getTotalValue() 获取查找时间段流量使用总量（单位：byte）
+ * @method void setTotalValue(float $TotalValue) 设置查找时间段流量使用总量（单位：byte）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,17 +39,17 @@ class GetFlowStatisticResponse extends AbstractModel
     public $NetDetails;
 
     /**
-     * @var float 查找时间段流量使用最大值（单位：bit）
+     * @var float 查找时间段流量使用最大值（单位：byte）
      */
     public $MaxValue;
 
     /**
-     * @var float 查找时间段流量使用平均值（单位：bit）
+     * @var float 查找时间段流量使用平均值（单位：byte）
      */
     public $AvgValue;
 
     /**
-     * @var float 查找时间段流量使用总量（单位：bit）
+     * @var float 查找时间段流量使用总量（单位：byte）
      */
     public $TotalValue;
 
@@ -60,9 +60,9 @@ class GetFlowStatisticResponse extends AbstractModel
 
     /**
      * @param array $NetDetails 流量详细信息
-     * @param float $MaxValue 查找时间段流量使用最大值（单位：bit）
-     * @param float $AvgValue 查找时间段流量使用平均值（单位：bit）
-     * @param float $TotalValue 查找时间段流量使用总量（单位：bit）
+     * @param float $MaxValue 查找时间段流量使用最大值（单位：byte）
+     * @param float $AvgValue 查找时间段流量使用平均值（单位：byte）
+     * @param float $TotalValue 查找时间段流量使用总量（单位：byte）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

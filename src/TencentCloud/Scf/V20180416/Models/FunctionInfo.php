@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAddTime() 获取创建时间
  * @method void setAddTime(string $AddTime) 设置创建时间
  * @method string getRuntime() 获取运行时
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntime(string $Runtime) 设置运行时
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFunctionName() 获取函数名称
  * @method void setFunctionName(string $FunctionName) 设置函数名称
  * @method string getFunctionId() 获取函数ID
@@ -71,6 +73,7 @@ class FunctionInfo extends AbstractModel
 
     /**
      * @var string 运行时
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Runtime;
 
@@ -145,6 +148,7 @@ class FunctionInfo extends AbstractModel
      * @param string $ModTime 修改时间
      * @param string $AddTime 创建时间
      * @param string $Runtime 运行时
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FunctionName 函数名称
      * @param string $FunctionId 函数ID
      * @param string $Namespace 命名空间

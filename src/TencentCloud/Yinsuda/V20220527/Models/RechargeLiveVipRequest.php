@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
 <li>93</li>
 <li>186</li>
 <li>372</li>
+ * @method string getGiveType() 获取充值分类。取值有：room_card-包月房卡; 其他-保留。
+ * @method void setGiveType(string $GiveType) 设置充值分类。取值有：room_card-包月房卡; 其他-保留。
+ * @method string getPlayScene() 获取播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li>
+ * @method void setPlayScene(string $PlayScene) 设置播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li>
  */
 class RechargeLiveVipRequest extends AbstractModel
 {
@@ -74,6 +80,17 @@ class RechargeLiveVipRequest extends AbstractModel
     public $VipDays;
 
     /**
+     * @var string 充值分类。取值有：room_card-包月房卡; 其他-保留。
+     */
+    public $GiveType;
+
+    /**
+     * @var string 播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public $PlayScene;
+
+    /**
      * @param string $AppName 应用名称。
      * @param string $UserId 用户标识。
      * @param string $TradeSerialNo 交易流水号，用于标记此次充值记录，多次充值记录传入相同的 TradeSerialNo 会判断为失败，可用于防止重提提交造成重复计费。
@@ -84,6 +101,9 @@ class RechargeLiveVipRequest extends AbstractModel
 <li>93</li>
 <li>186</li>
 <li>372</li>
+     * @param string $GiveType 充值分类。取值有：room_card-包月房卡; 其他-保留。
+     * @param string $PlayScene 播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li>
      */
     function __construct()
     {
@@ -116,6 +136,14 @@ class RechargeLiveVipRequest extends AbstractModel
 
         if (array_key_exists("VipDays",$param) and $param["VipDays"] !== null) {
             $this->VipDays = $param["VipDays"];
+        }
+
+        if (array_key_exists("GiveType",$param) and $param["GiveType"] !== null) {
+            $this->GiveType = $param["GiveType"];
+        }
+
+        if (array_key_exists("PlayScene",$param) and $param["PlayScene"] !== null) {
+            $this->PlayScene = $param["PlayScene"];
         }
     }
 }

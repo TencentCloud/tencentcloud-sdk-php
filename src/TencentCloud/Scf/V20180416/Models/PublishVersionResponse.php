@@ -33,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTimeout() 获取函数的超时时间
  * @method void setTimeout(integer $Timeout) 设置函数的超时时间
  * @method string getRuntime() 获取函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntime(string $Runtime) 设置函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取函数的命名空间
  * @method void setNamespace(string $Namespace) 设置函数的命名空间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -73,6 +75,7 @@ class PublishVersionResponse extends AbstractModel
 
     /**
      * @var string 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Runtime;
 
@@ -94,6 +97,7 @@ class PublishVersionResponse extends AbstractModel
      * @param string $Handler 函数的入口
      * @param integer $Timeout 函数的超时时间
      * @param string $Runtime 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 函数的命名空间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

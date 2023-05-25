@@ -40,6 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaxAmount(string $TaxAmount) 设置税额
  * @method string getTaxClassifyCode() 获取税收分类编码
  * @method void setTaxClassifyCode(string $TaxClassifyCode) 设置税收分类编码
+ * @method string getVehicleType() 获取运输工具类型
+ * @method void setVehicleType(string $VehicleType) 设置运输工具类型
+ * @method string getVehicleBrand() 获取运输工具牌号
+ * @method void setVehicleBrand(string $VehicleBrand) 设置运输工具牌号
+ * @method string getDeparturePlace() 获取起始地
+ * @method void setDeparturePlace(string $DeparturePlace) 设置起始地
+ * @method string getArrivalPlace() 获取到达地
+ * @method void setArrivalPlace(string $ArrivalPlace) 设置到达地
+ * @method string getTransportItemsName() 获取运输货物名称
+ * @method void setTransportItemsName(string $TransportItemsName) 设置运输货物名称
+ * @method string getConstructionPlace() 获取建筑服务发生地
+ * @method void setConstructionPlace(string $ConstructionPlace) 设置建筑服务发生地
+ * @method string getConstructionName() 获取建筑项目名称
+ * @method void setConstructionName(string $ConstructionName) 设置建筑项目名称
  */
 class VatInvoiceItem extends AbstractModel
 {
@@ -94,6 +108,41 @@ class VatInvoiceItem extends AbstractModel
     public $TaxClassifyCode;
 
     /**
+     * @var string 运输工具类型
+     */
+    public $VehicleType;
+
+    /**
+     * @var string 运输工具牌号
+     */
+    public $VehicleBrand;
+
+    /**
+     * @var string 起始地
+     */
+    public $DeparturePlace;
+
+    /**
+     * @var string 到达地
+     */
+    public $ArrivalPlace;
+
+    /**
+     * @var string 运输货物名称
+     */
+    public $TransportItemsName;
+
+    /**
+     * @var string 建筑服务发生地
+     */
+    public $ConstructionPlace;
+
+    /**
+     * @var string 建筑项目名称
+     */
+    public $ConstructionName;
+
+    /**
      * @param string $LineNo 行号
      * @param string $Name 名称
      * @param string $Spec 规格
@@ -104,6 +153,13 @@ class VatInvoiceItem extends AbstractModel
      * @param string $TaxRate 税率
      * @param string $TaxAmount 税额
      * @param string $TaxClassifyCode 税收分类编码
+     * @param string $VehicleType 运输工具类型
+     * @param string $VehicleBrand 运输工具牌号
+     * @param string $DeparturePlace 起始地
+     * @param string $ArrivalPlace 到达地
+     * @param string $TransportItemsName 运输货物名称
+     * @param string $ConstructionPlace 建筑服务发生地
+     * @param string $ConstructionName 建筑项目名称
      */
     function __construct()
     {
@@ -156,6 +212,34 @@ class VatInvoiceItem extends AbstractModel
 
         if (array_key_exists("TaxClassifyCode",$param) and $param["TaxClassifyCode"] !== null) {
             $this->TaxClassifyCode = $param["TaxClassifyCode"];
+        }
+
+        if (array_key_exists("VehicleType",$param) and $param["VehicleType"] !== null) {
+            $this->VehicleType = $param["VehicleType"];
+        }
+
+        if (array_key_exists("VehicleBrand",$param) and $param["VehicleBrand"] !== null) {
+            $this->VehicleBrand = $param["VehicleBrand"];
+        }
+
+        if (array_key_exists("DeparturePlace",$param) and $param["DeparturePlace"] !== null) {
+            $this->DeparturePlace = $param["DeparturePlace"];
+        }
+
+        if (array_key_exists("ArrivalPlace",$param) and $param["ArrivalPlace"] !== null) {
+            $this->ArrivalPlace = $param["ArrivalPlace"];
+        }
+
+        if (array_key_exists("TransportItemsName",$param) and $param["TransportItemsName"] !== null) {
+            $this->TransportItemsName = $param["TransportItemsName"];
+        }
+
+        if (array_key_exists("ConstructionPlace",$param) and $param["ConstructionPlace"] !== null) {
+            $this->ConstructionPlace = $param["ConstructionPlace"];
+        }
+
+        if (array_key_exists("ConstructionName",$param) and $param["ConstructionName"] !== null) {
+            $this->ConstructionName = $param["ConstructionName"];
         }
     }
 }

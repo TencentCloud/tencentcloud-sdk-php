@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageId() 获取镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
  * @method void setImageId(string $ImageId) 设置镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
- * @method string getImageName() 获取设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
- * @method void setImageName(string $ImageName) 设置设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
+ * @method string getImageName() 获取设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
+ * @method void setImageName(string $ImageName) 设置设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
  * @method string getImageDescription() 获取设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
  * @method void setImageDescription(string $ImageDescription) 设置设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
  */
@@ -35,7 +35,7 @@ class ModifyImageAttributeRequest extends AbstractModel
     public $ImageId;
 
     /**
-     * @var string 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
+     * @var string 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
      */
     public $ImageName;
 
@@ -46,7 +46,7 @@ class ModifyImageAttributeRequest extends AbstractModel
 
     /**
      * @param string $ImageId 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。
-     * @param string $ImageName 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
+     * @param string $ImageName 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
      * @param string $ImageDescription 设置新的镜像描述；必须满足下列限制：<br> <li> 不得超过60个字符。
      */
     function __construct()

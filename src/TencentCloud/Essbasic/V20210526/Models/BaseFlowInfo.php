@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserData(string $UserData) 设置用户流程自定义数据参数
  * @method array getCcInfos() 获取抄送人信息
  * @method void setCcInfos(array $CcInfos) 设置抄送人信息
+ * @method boolean getNeedCreateReview() 获取是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+ * @method void setNeedCreateReview(boolean $NeedCreateReview) 设置是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
  */
 class BaseFlowInfo extends AbstractModel
 {
@@ -94,6 +96,11 @@ class BaseFlowInfo extends AbstractModel
     public $CcInfos;
 
     /**
+     * @var boolean 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     */
+    public $NeedCreateReview;
+
+    /**
      * @param string $FlowName 合同流程名称
      * @param string $FlowType 合同流程类型
      * @param string $FlowDescription 合同流程描述信息
@@ -104,6 +111,7 @@ class BaseFlowInfo extends AbstractModel
      * @param boolean $NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
      * @param string $UserData 用户流程自定义数据参数
      * @param array $CcInfos 抄送人信息
+     * @param boolean $NeedCreateReview 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
      */
     function __construct()
     {
@@ -166,6 +174,10 @@ class BaseFlowInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CcInfos, $obj);
             }
+        }
+
+        if (array_key_exists("NeedCreateReview",$param) and $param["NeedCreateReview"] !== null) {
+            $this->NeedCreateReview = $param["NeedCreateReview"];
         }
     }
 }

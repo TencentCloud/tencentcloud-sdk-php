@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 同步的数据库对对象描述
  *
- * @method string getMode() 获取迁移对象类型 Partial(部分对象)
+ * @method string getMode() 获取同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMode(string $Mode) 设置迁移对象类型 Partial(部分对象)
+ * @method void setMode(string $Mode) 设置同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDatabases() 获取同步对象，当 Mode 为 Partial 时，不为空
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class Objects extends AbstractModel
 {
     /**
-     * @var string 迁移对象类型 Partial(部分对象)
+     * @var string 同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
@@ -64,7 +64,7 @@ class Objects extends AbstractModel
     public $OnlineDDL;
 
     /**
-     * @param string $Mode 迁移对象类型 Partial(部分对象)
+     * @param string $Mode 同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Databases 同步对象，当 Mode 为 Partial 时，不为空
 注意：此字段可能返回 null，表示取不到有效值。

@@ -48,7 +48,7 @@ use TencentCloud\Pts\V20210728\Models as Models;
  * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 查询任务列表
  * @method Models\DescribeLabelValuesResponse DescribeLabelValues(Models\DescribeLabelValuesRequest $req) 查询标签内容
  * @method Models\DescribeMetricLabelWithValuesResponse DescribeMetricLabelWithValues(Models\DescribeMetricLabelWithValuesRequest $req) 查询指标所有的label及values值
- * @method Models\DescribeNormalLogsResponse DescribeNormalLogs(Models\DescribeNormalLogsRequest $req) 压测过程日志日志包括引擎输出日志及用户输出日志
+ * @method Models\DescribeNormalLogsResponse DescribeNormalLogs(Models\DescribeNormalLogsRequest $req) 压测过程日志包括引擎输出日志及用户输出日志
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 查询项目列表
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 查询地域列表
  * @method Models\DescribeRequestSummaryResponse DescribeRequestSummary(Models\DescribeRequestSummaryRequest $req) 查询请求汇总信息

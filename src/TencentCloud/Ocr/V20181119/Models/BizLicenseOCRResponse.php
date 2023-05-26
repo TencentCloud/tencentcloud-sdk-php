@@ -56,6 +56,10 @@ WARN_COPY_CARD 黑白复印件告警
 OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
 注：告警信息可以同时存在多个
+ * @method integer getIsDuplication() 获取是否为副本。1为是，-1为不是。
+ * @method void setIsDuplication(integer $IsDuplication) 设置是否为副本。1为是，-1为不是。
+ * @method string getRegistrationDate() 获取登记日期
+ * @method void setRegistrationDate(string $RegistrationDate) 设置登记日期
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -128,6 +132,16 @@ WARN_COPY_CARD 黑白复印件告警
     public $RecognizeWarnMsg;
 
     /**
+     * @var integer 是否为副本。1为是，-1为不是。
+     */
+    public $IsDuplication;
+
+    /**
+     * @var string 登记日期
+     */
+    public $RegistrationDate;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +165,8 @@ WARN_COPY_CARD 黑白复印件告警
 OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
 注：告警信息可以同时存在多个
+     * @param integer $IsDuplication 是否为副本。1为是，-1为不是。
+     * @param string $RegistrationDate 登记日期
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -212,6 +228,14 @@ WARN_COPY_CARD 黑白复印件告警
 
         if (array_key_exists("RecognizeWarnMsg",$param) and $param["RecognizeWarnMsg"] !== null) {
             $this->RecognizeWarnMsg = $param["RecognizeWarnMsg"];
+        }
+
+        if (array_key_exists("IsDuplication",$param) and $param["IsDuplication"] !== null) {
+            $this->IsDuplication = $param["IsDuplication"];
+        }
+
+        if (array_key_exists("RegistrationDate",$param) and $param["RegistrationDate"] !== null) {
+            $this->RegistrationDate = $param["RegistrationDate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

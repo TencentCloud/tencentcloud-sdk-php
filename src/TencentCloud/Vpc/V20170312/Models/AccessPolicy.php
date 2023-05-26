@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserGroupIds(array $UserGroupIds) 设置用户组ID
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getRemark() 获取Remark
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置Remark
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessPolicy extends AbstractModel
 {
@@ -59,11 +63,19 @@ class AccessPolicy extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string Remark
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param string $TargetCidr 目的CIDR
      * @param string $VpnGatewayIdSslAccessPolicyId 策略ID
      * @param integer $ForAllClient 是否对所有用户都生效。1 生效 0不生效
      * @param array $UserGroupIds 用户组ID
      * @param string $UpdateTime 更新时间
+     * @param string $Remark Remark
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class AccessPolicy extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

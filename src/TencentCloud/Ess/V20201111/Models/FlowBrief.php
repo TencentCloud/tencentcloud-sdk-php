@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreator(string $Creator) 设置 合同发起人userId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeadline() 获取合同过期时间，时间戳，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeadline(integer $Deadline) 设置合同过期时间，时间戳，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowBrief extends AbstractModel
 {
@@ -128,6 +132,12 @@ class FlowBrief extends AbstractModel
     public $Creator;
 
     /**
+     * @var integer 合同过期时间，时间戳，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deadline;
+
+    /**
      * @param string $FlowId 流程的编号
      * @param string $FlowName 流程的名称
      * @param string $FlowDescription 流程的描述
@@ -151,6 +161,8 @@ class FlowBrief extends AbstractModel
      * @param string $FlowMessage 拒签或者取消的原因描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator  合同发起人userId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Deadline 合同过期时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class FlowBrief extends AbstractModel
 
         if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
             $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
     }
 }

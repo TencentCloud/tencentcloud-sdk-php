@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置域名
  * @method string getCertId() 获取证书ID
  * @method void setCertId(string $CertId) 设置证书ID
+ * @method string getZoneId() 获取区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneId(string $ZoneId) 设置区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取域名状态
+ * @method void setStatus(string $Status) 设置域名状态
  */
 class TeoInstanceDetail extends AbstractModel
 {
@@ -38,8 +44,22 @@ class TeoInstanceDetail extends AbstractModel
     public $CertId;
 
     /**
+     * @var string 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneId;
+
+    /**
+     * @var string 域名状态
+     */
+    public $Status;
+
+    /**
      * @param string $Host 域名
      * @param string $CertId 证书ID
+     * @param string $ZoneId 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 域名状态
      */
     function __construct()
     {
@@ -60,6 +80,14 @@ class TeoInstanceDetail extends AbstractModel
 
         if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
             $this->CertId = $param["CertId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

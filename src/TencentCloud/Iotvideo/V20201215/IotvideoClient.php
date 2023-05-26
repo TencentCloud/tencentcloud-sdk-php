@@ -28,7 +28,7 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户
  * @method Models\CancelAIModelApplicationResponse CancelAIModelApplication(Models\CancelAIModelApplicationRequest $req) 取消AI模型申请
  * @method Models\CancelDeviceFirmwareTaskResponse CancelDeviceFirmwareTask(Models\CancelDeviceFirmwareTaskRequest $req) 本接口用于取消设备升级任务
- * @method Models\CheckForwardAuthResponse CheckForwardAuth(Models\CheckForwardAuthRequest $req) 判断是否开启的转发的权限
+ * @method Models\CheckForwardAuthResponse CheckForwardAuth(Models\CheckForwardAuthRequest $req) 判断是否开启转发的权限
  * @method Models\ControlDeviceDataResponse ControlDeviceData(Models\ControlDeviceDataRequest $req) 根据设备产品ID、设备名称，设置控制设备的属性数据。
  * @method Models\CreateAIDetectionResponse CreateAIDetection(Models\CreateAIDetectionRequest $req) 发起AI推理请求
  * @method Models\CreateBatchResponse CreateBatch(Models\CreateBatchRequest $req) 创建批次

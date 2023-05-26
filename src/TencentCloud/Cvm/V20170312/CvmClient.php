@@ -87,7 +87,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 接口返回实例的所有带宽配置信息（包含历史的带宽配置信息）。
  * @method Models\DescribeInstanceTypeConfigsResponse DescribeInstanceTypeConfigs(Models\DescribeInstanceTypeConfigsRequest $req) 本接口 (DescribeInstanceTypeConfigs) 用于查询实例机型配置。
 
-* 可以根据`zone`、`instance-family`来查询实例机型配置。过滤条件详见过滤器[`Filter`](https://cloud.tencent.com/document/api/213/15753#Filter)。
+* 可以根据`zone`、`instance-family`、`instance-type`来查询实例机型配置。过滤条件详见过滤器[`Filter`](https://cloud.tencent.com/document/api/213/15753#Filter)。
 * 如果参数为空，返回指定地域的所有实例机型配置。
  * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
 

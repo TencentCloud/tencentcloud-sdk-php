@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置用户角色，目前支持两种角色：
 <li>anchor：主播</li>
 <li>audience：观众</li>
+ * @method string getRoomIdType() 获取TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。
+ * @method void setRoomIdType(string $RoomIdType) 设置TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。
  */
 class TRTCJoinRoomInput extends AbstractModel
 {
@@ -75,6 +83,14 @@ class TRTCJoinRoomInput extends AbstractModel
     public $Role;
 
     /**
+     * @var string TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。
+     */
+    public $RoomIdType;
+
+    /**
      * @param string $Sign 签名。
      * @param string $RoomId 房间号。
      * @param string $SdkAppId 推流应用ID。
@@ -84,6 +100,10 @@ class TRTCJoinRoomInput extends AbstractModel
      * @param string $Role 用户角色，目前支持两种角色：
 <li>anchor：主播</li>
 <li>audience：观众</li>
+     * @param string $RoomIdType TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。
      */
     function __construct()
     {
@@ -120,6 +140,10 @@ class TRTCJoinRoomInput extends AbstractModel
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("RoomIdType",$param) and $param["RoomIdType"] !== null) {
+            $this->RoomIdType = $param["RoomIdType"];
         }
     }
 }

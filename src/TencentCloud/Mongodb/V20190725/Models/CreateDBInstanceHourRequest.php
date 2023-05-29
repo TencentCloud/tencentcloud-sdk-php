@@ -62,16 +62,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterType(string $ClusterType) 设置实例架构类型。
 - REPLSET：副本集。
 - SHARD：分片集群。
- * @method string getVpcId() 获取私有网络ID，如果不设置该参数，则默认选择基础网络。
- * @method void setVpcId(string $VpcId) 设置私有网络ID，如果不设置该参数，则默认选择基础网络。
+ * @method string getVpcId() 获取私有网络ID。如果不设置该参数，则默认选择基础网络。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID。如果不设置该参数，则默认选择基础网络。
  * @method string getSubnetId() 获取私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
  * @method void setSubnetId(string $SubnetId) 设置私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
- * @method string getPassword() 获取实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
- * @method void setPassword(string $Password) 设置实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+ * @method string getPassword() 获取实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+ * @method void setPassword(string $Password) 设置实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
  * @method integer getProjectId() 获取项目ID。若不设置该参数，则为默认项目。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。若不设置该参数，则为默认项目。
  * @method array getTags() 获取实例标签信息。
@@ -191,7 +187,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var string 私有网络ID，如果不设置该参数，则默认选择基础网络。
+     * @var string 私有网络ID。如果不设置该参数，则默认选择基础网络。
      */
     public $VpcId;
 
@@ -201,9 +197,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+     * @var string 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
      */
     public $Password;
 
@@ -314,11 +308,9 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $ClusterType 实例架构类型。
 - REPLSET：副本集。
 - SHARD：分片集群。
-     * @param string $VpcId 私有网络ID，如果不设置该参数，则默认选择基础网络。
+     * @param string $VpcId 私有网络ID。如果不设置该参数，则默认选择基础网络。
      * @param string $SubnetId 私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
-     * @param string $Password 实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+     * @param string $Password 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
      * @param integer $ProjectId 项目ID。若不设置该参数，则为默认项目。
      * @param array $Tags 实例标签信息。
      * @param integer $Clone 实例类型。

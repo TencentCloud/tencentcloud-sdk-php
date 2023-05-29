@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表
  * @method integer getAutoRenewFlag() 获取自动续费标志，1:自动续费，2:不自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志，1:自动续费，2:不自动续费
- * @method integer getIpv6Flag() 获取是否支持IPv6
- * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6
+ * @method integer getIpv6Flag() 获取是否支持IPv6，0:不支持，1:支持
+ * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6，0:不支持，1:支持
  * @method array getResourceTags() 获取标签键值对数组
  * @method void setResourceTags(array $ResourceTags) 设置标签键值对数组
  * @method array getInitParams() 获取参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
@@ -148,7 +148,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var integer 是否支持IPv6
+     * @var integer 是否支持IPv6，0:不支持，1:支持
      */
     public $Ipv6Flag;
 
@@ -191,7 +191,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
      * @param array $SecurityGroupIds 安全组ID列表
      * @param integer $AutoRenewFlag 自动续费标志，1:自动续费，2:不自动续费
-     * @param integer $Ipv6Flag 是否支持IPv6
+     * @param integer $Ipv6Flag 是否支持IPv6，0:不支持，1:支持
      * @param array $ResourceTags 标签键值对数组
      * @param array $InitParams 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
      * @param string $DcnRegion DCN源地域

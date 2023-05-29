@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置要查询的日志主题ID
  * @method integer getInterval() 获取时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
  * @method void setInterval(integer $Interval) 设置时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
+ * @method integer getSyntaxRule() 获取检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ * @method void setSyntaxRule(integer $SyntaxRule) 设置检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
  */
 class DescribeLogHistogramRequest extends AbstractModel
 {
@@ -59,11 +65,21 @@ class DescribeLogHistogramRequest extends AbstractModel
     public $Interval;
 
     /**
+     * @var integer 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+     */
+    public $SyntaxRule;
+
+    /**
      * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
      * @param string $Query 查询语句
      * @param string $TopicId 要查询的日志主题ID
      * @param integer $Interval 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
+     * @param integer $SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
      */
     function __construct()
     {
@@ -96,6 +112,10 @@ class DescribeLogHistogramRequest extends AbstractModel
 
         if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
             $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

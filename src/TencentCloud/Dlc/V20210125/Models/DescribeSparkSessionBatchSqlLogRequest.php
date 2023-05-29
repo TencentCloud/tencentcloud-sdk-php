@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dcdb\V20180411\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateHourDCDBInstance请求参数结构体
+ * DescribeSparkSessionBatchSqlLog请求参数结构体
  *
- * @method array getInstanceIds() 获取待升级的实例ID列表。形如：["dcdbt-ow728lmc"]，可以通过 DescribeDCDBInstances 查询实例详情获得。
- * @method void setInstanceIds(array $InstanceIds) 设置待升级的实例ID列表。形如：["dcdbt-ow728lmc"]，可以通过 DescribeDCDBInstances 查询实例详情获得。
+ * @method string getBatchId() 获取SparkSQL唯一标识
+ * @method void setBatchId(string $BatchId) 设置SparkSQL唯一标识
  */
-class IsolateHourDCDBInstanceRequest extends AbstractModel
+class DescribeSparkSessionBatchSqlLogRequest extends AbstractModel
 {
     /**
-     * @var array 待升级的实例ID列表。形如：["dcdbt-ow728lmc"]，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * @var string SparkSQL唯一标识
      */
-    public $InstanceIds;
+    public $BatchId;
 
     /**
-     * @param array $InstanceIds 待升级的实例ID列表。形如：["dcdbt-ow728lmc"]，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * @param string $BatchId SparkSQL唯一标识
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class IsolateHourDCDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
         }
     }
 }

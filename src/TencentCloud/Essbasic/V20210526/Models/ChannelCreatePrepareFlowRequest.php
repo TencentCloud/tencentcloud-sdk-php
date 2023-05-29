@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
  * @method CreateFlowOption getFlowOption() 获取合同流程配置信息
  * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息
- * @method string getFlowId() 获取该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
- * @method void setFlowId(string $FlowId) 设置该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+ * @method string getFlowId() 获取通过flowid快速获得之前成功通过页面发起的合同生成链接
+ * @method void setFlowId(string $FlowId) 设置通过flowid快速获得之前成功通过页面发起的合同生成链接
  * @method boolean getNeedPreview() 获取该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
  * @method void setNeedPreview(boolean $NeedPreview) 设置该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
  * @method OrganizationInfo getOrganization() 获取企业机构信息，不用传
@@ -74,7 +74,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $FlowOption;
 
     /**
-     * @var string 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * @var string 通过flowid快速获得之前成功通过页面发起的合同生成链接
      */
     public $FlowId;
 
@@ -100,7 +100,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
      * @param array $FlowApproverList 合同签署人信息
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
      * @param CreateFlowOption $FlowOption 合同流程配置信息
-     * @param string $FlowId 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * @param string $FlowId 通过flowid快速获得之前成功通过页面发起的合同生成链接
      * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
      * @param OrganizationInfo $Organization 企业机构信息，不用传
      * @param UserInfo $Operator 操作人（用户）信息，不用传

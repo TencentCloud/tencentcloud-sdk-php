@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取代理信息
  * @method void setAgent(Agent $Agent) 设置代理信息
- * @method string getRoleId() 获取角色Id
- * @method void setRoleId(string $RoleId) 设置角色Id
+ * @method string getRoleId() 获取角色Id（非超管或法人角色Id）
+ * @method void setRoleId(string $RoleId) 设置角色Id（非超管或法人角色Id）
  * @method array getUserIds() 获取用户列表
  * @method void setUserIds(array $UserIds) 设置用户列表
  * @method UserInfo getOperator() 获取操作人信息
@@ -37,7 +37,7 @@ class ChannelDeleteRoleUsersRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 角色Id
+     * @var string 角色Id（非超管或法人角色Id）
      */
     public $RoleId;
 
@@ -53,7 +53,7 @@ class ChannelDeleteRoleUsersRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 代理信息
-     * @param string $RoleId 角色Id
+     * @param string $RoleId 角色Id（非超管或法人角色Id）
      * @param array $UserIds 用户列表
      * @param UserInfo $Operator 操作人信息
      */

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFolderId(string $FolderId) 设置目录ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRefJobStatusCountSet() 获取分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRefJobStatusCountSet(array $RefJobStatusCountSet) 设置分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TreeResourceItem extends AbstractModel
 {
@@ -78,6 +82,12 @@ class TreeResourceItem extends AbstractModel
     public $FolderId;
 
     /**
+     * @var array 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RefJobStatusCountSet;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param string $Name 资源名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,6 +97,8 @@ class TreeResourceItem extends AbstractModel
      * @param string $FileName 文件名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FolderId 目录ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RefJobStatusCountSet 分状态统计关联作业数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +136,15 @@ class TreeResourceItem extends AbstractModel
 
         if (array_key_exists("FolderId",$param) and $param["FolderId"] !== null) {
             $this->FolderId = $param["FolderId"];
+        }
+
+        if (array_key_exists("RefJobStatusCountSet",$param) and $param["RefJobStatusCountSet"] !== null) {
+            $this->RefJobStatusCountSet = [];
+            foreach ($param["RefJobStatusCountSet"] as $key => $value){
+                $obj = new RefJobStatusCountItem();
+                $obj->deserialize($value);
+                array_push($this->RefJobStatusCountSet, $obj);
+            }
         }
     }
 }

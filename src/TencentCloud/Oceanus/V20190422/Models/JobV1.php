@@ -144,6 +144,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkSpaceName(string $WorkSpaceName) 设置工作空间名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取作业标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置作业标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobV1 extends AbstractModel
 {
@@ -334,6 +338,12 @@ class JobV1 extends AbstractModel
     public $WorkSpaceName;
 
     /**
+     * @var array 作业标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -395,6 +405,8 @@ class JobV1 extends AbstractModel
      * @param string $WorkSpaceId 工作空间 SerialId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkSpaceName 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 作业标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -532,6 +544,15 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("WorkSpaceName",$param) and $param["WorkSpaceName"] !== null) {
             $this->WorkSpaceName = $param["WorkSpaceName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

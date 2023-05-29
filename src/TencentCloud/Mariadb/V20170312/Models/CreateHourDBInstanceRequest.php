@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置自定义实例名称
  * @method array getSecurityGroupIds() 获取安全组ID，不传表示不绑定安全组
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID，不传表示不绑定安全组
- * @method integer getIpv6Flag() 获取是否支持IPv6
- * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6
+ * @method integer getIpv6Flag() 获取是否支持IPv6，0:不支持，1:支持
+ * @method void setIpv6Flag(integer $Ipv6Flag) 设置是否支持IPv6，0:不支持，1:支持
  * @method array getResourceTags() 获取标签键值对数组
  * @method void setResourceTags(array $ResourceTags) 设置标签键值对数组
  * @method string getDcnRegion() 获取DCN源地域
@@ -56,8 +56,8 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
  * @method void setInitParams(array $InitParams) 设置参数列表。本接口的可选值为：
 character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
 innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
- * @method string getRollbackInstanceId() 获取回档源实例ID
- * @method void setRollbackInstanceId(string $RollbackInstanceId) 设置回档源实例ID
+ * @method string getRollbackInstanceId() 获取回档源实例ID，例如“2021-11-22 00:00:00”
+ * @method void setRollbackInstanceId(string $RollbackInstanceId) 设置回档源实例ID，例如“2021-11-22 00:00:00”
  * @method string getRollbackTime() 获取回档时间
  * @method void setRollbackTime(string $RollbackTime) 设置回档时间
  */
@@ -119,7 +119,7 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var integer 是否支持IPv6
+     * @var integer 是否支持IPv6，0:不支持，1:支持
      */
     public $Ipv6Flag;
 
@@ -146,7 +146,7 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
     public $InitParams;
 
     /**
-     * @var string 回档源实例ID
+     * @var string 回档源实例ID，例如“2021-11-22 00:00:00”
      */
     public $RollbackInstanceId;
 
@@ -167,14 +167,14 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
      * @param string $DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      * @param string $InstanceName 自定义实例名称
      * @param array $SecurityGroupIds 安全组ID，不传表示不绑定安全组
-     * @param integer $Ipv6Flag 是否支持IPv6
+     * @param integer $Ipv6Flag 是否支持IPv6，0:不支持，1:支持
      * @param array $ResourceTags 标签键值对数组
      * @param string $DcnRegion DCN源地域
      * @param string $DcnInstanceId DCN源实例ID
      * @param array $InitParams 参数列表。本接口的可选值为：
 character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
 innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
-     * @param string $RollbackInstanceId 回档源实例ID
+     * @param string $RollbackInstanceId 回档源实例ID，例如“2021-11-22 00:00:00”
      * @param string $RollbackTime 回档时间
      */
     function __construct()

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinRoInGroup(integer $MinRoInGroup) 设置最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
  * @method string getWeightMode() 获取读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
  * @method void setWeightMode(string $WeightMode) 设置读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
- * @method integer getWeight() 获取权重值。
- * @method void setWeight(integer $Weight) 设置权重值。
+ * @method integer getWeight() 获取该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
+ * @method void setWeight(integer $Weight) 设置该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
  * @method array getRoInstances() 获取只读组中的只读实例详情。
  * @method void setRoInstances(array $RoInstances) 设置只读组中的只读实例详情。
  * @method string getVip() 获取只读组的内网 IP。
@@ -101,7 +101,7 @@ class RoGroup extends AbstractModel
     public $WeightMode;
 
     /**
-     * @var integer 权重值。
+     * @var integer 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
      */
     public $Weight;
 
@@ -158,7 +158,7 @@ class RoGroup extends AbstractModel
      * @param integer $RoMaxDelayTime 延迟阈值。
      * @param integer $MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
      * @param string $WeightMode 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
-     * @param integer $Weight 权重值。
+     * @param integer $Weight 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
      * @param array $RoInstances 只读组中的只读实例详情。
      * @param string $Vip 只读组的内网 IP。
      * @param integer $Vport 只读组的内网端口号。

@@ -18,20 +18,28 @@ namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateHourDCDBInstance请求参数结构体
+ * CreateTmpDCDBInstance请求参数结构体
  *
- * @method array getInstanceIds() 获取待升级的实例ID列表。形如：["dcdbt-ow728lmc"]，可以通过 DescribeDCDBInstances 查询实例详情获得。
- * @method void setInstanceIds(array $InstanceIds) 设置待升级的实例ID列表。形如：["dcdbt-ow728lmc"]，可以通过 DescribeDCDBInstances 查询实例详情获得。
+ * @method string getInstanceId() 获取回档实例的ID
+ * @method void setInstanceId(string $InstanceId) 设置回档实例的ID
+ * @method string getRollbackTime() 获取回档时间点
+ * @method void setRollbackTime(string $RollbackTime) 设置回档时间点
  */
-class IsolateHourDCDBInstanceRequest extends AbstractModel
+class CreateTmpDCDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var array 待升级的实例ID列表。形如：["dcdbt-ow728lmc"]，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * @var string 回档实例的ID
      */
-    public $InstanceIds;
+    public $InstanceId;
 
     /**
-     * @param array $InstanceIds 待升级的实例ID列表。形如：["dcdbt-ow728lmc"]，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * @var string 回档时间点
+     */
+    public $RollbackTime;
+
+    /**
+     * @param string $InstanceId 回档实例的ID
+     * @param string $RollbackTime 回档时间点
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class IsolateHourDCDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
-            $this->InstanceIds = $param["InstanceIds"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("RollbackTime",$param) and $param["RollbackTime"] !== null) {
+            $this->RollbackTime = $param["RollbackTime"];
         }
     }
 }

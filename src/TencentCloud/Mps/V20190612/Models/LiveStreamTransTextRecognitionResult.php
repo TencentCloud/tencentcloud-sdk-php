@@ -30,6 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) 设置翻译片段置信度。取值：0~100。
  * @method string getTrans() 获取翻译文本。
  * @method void setTrans(string $Trans) 设置翻译文本。
+ * @method string getStartTime() 获取翻译开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(string $StartTime) 设置翻译开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndTime() 获取翻译结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndTime(string $EndTime) 设置翻译结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSteadyState() 获取稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSteadyState(boolean $SteadyState) 设置稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamTransTextRecognitionResult extends AbstractModel
 {
@@ -59,11 +71,35 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
     public $Trans;
 
     /**
+     * @var string 翻译开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTime;
+
+    /**
+     * @var string 翻译结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndTime;
+
+    /**
+     * @var boolean 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SteadyState;
+
+    /**
      * @param string $Text 识别文本。
      * @param float $StartPtsTime 翻译片段起始的 PTS 时间，单位：秒。
      * @param float $EndPtsTime 翻译片段终止的 PTS 时间，单位：秒。
      * @param float $Confidence 翻译片段置信度。取值：0~100。
      * @param string $Trans 翻译文本。
+     * @param string $StartTime 翻译开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EndTime 翻译结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SteadyState 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +132,18 @@ class LiveStreamTransTextRecognitionResult extends AbstractModel
 
         if (array_key_exists("Trans",$param) and $param["Trans"] !== null) {
             $this->Trans = $param["Trans"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("SteadyState",$param) and $param["SteadyState"] !== null) {
+            $this->SteadyState = $param["SteadyState"];
         }
     }
 }

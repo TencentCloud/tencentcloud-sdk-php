@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginNodeSet(array $LoginNodeSet) 设置登录节点概览。
  * @method integer getLoginNodeCount() 获取登录节点数量。
  * @method void setLoginNodeCount(integer $LoginNodeCount) 设置登录节点数量。
+ * @method string getAutoScalingType() 获取弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+ * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
  * @method string getVpcId() 获取集群所属私有网络ID。
  * @method void setVpcId(string $VpcId) 设置集群所属私有网络ID。
  */
@@ -110,6 +112,11 @@ class ClusterOverview extends AbstractModel
     public $LoginNodeCount;
 
     /**
+     * @var string 弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+     */
+    public $AutoScalingType;
+
+    /**
      * @var string 集群所属私有网络ID。
      */
     public $VpcId;
@@ -127,6 +134,7 @@ class ClusterOverview extends AbstractModel
      * @param array $ManagerNodeSet 管控节点概览。
      * @param array $LoginNodeSet 登录节点概览。
      * @param integer $LoginNodeCount 登录节点数量。
+     * @param string $AutoScalingType 弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
      * @param string $VpcId 集群所属私有网络ID。
      */
     function __construct()
@@ -204,6 +212,10 @@ class ClusterOverview extends AbstractModel
 
         if (array_key_exists("LoginNodeCount",$param) and $param["LoginNodeCount"] !== null) {
             $this->LoginNodeCount = $param["LoginNodeCount"];
+        }
+
+        if (array_key_exists("AutoScalingType",$param) and $param["AutoScalingType"] !== null) {
+            $this->AutoScalingType = $param["AutoScalingType"];
         }
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {

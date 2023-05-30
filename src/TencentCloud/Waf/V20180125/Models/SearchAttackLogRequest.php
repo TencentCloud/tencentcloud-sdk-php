@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置查询的数量，默认10条，最多100条
  * @method string getSort() 获取默认为desc，可以取值desc和asc
  * @method void setSort(string $Sort) 设置默认为desc，可以取值desc和asc
+ * @method integer getPage() 获取第几页，从0开始
+ * @method void setPage(integer $Page) 设置第几页，从0开始
  */
 class SearchAttackLogRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class SearchAttackLogRequest extends AbstractModel
     public $Sort;
 
     /**
+     * @var integer 第几页，从0开始
+     */
+    public $Page;
+
+    /**
      * @param string $Domain 查询的域名，所有域名使用all
      * @param string $StartTime 查询起始时间
      * @param string $EndTime 查询结束时间
@@ -80,6 +87,7 @@ class SearchAttackLogRequest extends AbstractModel
      * @param string $QueryString Lucene语法
      * @param integer $Count 查询的数量，默认10条，最多100条
      * @param string $Sort 默认为desc，可以取值desc和asc
+     * @param integer $Page 第几页，从0开始
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class SearchAttackLogRequest extends AbstractModel
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
             $this->Sort = $param["Sort"];
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

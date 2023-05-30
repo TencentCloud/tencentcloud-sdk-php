@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo) 设置内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LiveStreamAiAnalysisResultInfo getAiAnalysisResultInfo() 获取内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAiAnalysisResultInfo(LiveStreamAiAnalysisResultInfo $AiAnalysisResultInfo) 设置内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method LiveStreamAiQualityControlResultInfo getAiQualityControlResultInfo() 获取媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAiQualityControlResultInfo(LiveStreamAiQualityControlResultInfo $AiQualityControlResultInfo) 设置媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
@@ -83,6 +91,18 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
     public $AiRecognitionResultInfo;
 
     /**
+     * @var LiveStreamAiAnalysisResultInfo 内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AiAnalysisResultInfo;
+
+    /**
+     * @var LiveStreamAiQualityControlResultInfo 媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AiQualityControlResultInfo;
+
+    /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
@@ -108,6 +128,10 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
      * @param LiveStreamAiReviewResultInfo $AiReviewResultInfo 内容审核结果，当 NotificationType 为 AiReviewResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveStreamAiRecognitionResultInfo $AiRecognitionResultInfo 内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveStreamAiAnalysisResultInfo $AiAnalysisResultInfo 内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveStreamAiQualityControlResultInfo $AiQualityControlResultInfo 媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
@@ -147,6 +171,16 @@ class ParseLiveStreamProcessNotificationResponse extends AbstractModel
         if (array_key_exists("AiRecognitionResultInfo",$param) and $param["AiRecognitionResultInfo"] !== null) {
             $this->AiRecognitionResultInfo = new LiveStreamAiRecognitionResultInfo();
             $this->AiRecognitionResultInfo->deserialize($param["AiRecognitionResultInfo"]);
+        }
+
+        if (array_key_exists("AiAnalysisResultInfo",$param) and $param["AiAnalysisResultInfo"] !== null) {
+            $this->AiAnalysisResultInfo = new LiveStreamAiAnalysisResultInfo();
+            $this->AiAnalysisResultInfo->deserialize($param["AiAnalysisResultInfo"]);
+        }
+
+        if (array_key_exists("AiQualityControlResultInfo",$param) and $param["AiQualityControlResultInfo"] !== null) {
+            $this->AiQualityControlResultInfo = new LiveStreamAiQualityControlResultInfo();
+            $this->AiQualityControlResultInfo->deserialize($param["AiQualityControlResultInfo"]);
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

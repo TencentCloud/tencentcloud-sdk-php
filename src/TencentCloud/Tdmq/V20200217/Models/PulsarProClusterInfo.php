@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxStorage() 获取最大储存容量，单位：MB
  * @method void setMaxStorage(integer $MaxStorage) 设置最大储存容量，单位：MB
+ * @method boolean getCanEditRoute() 获取是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCanEditRoute(boolean $CanEditRoute) 设置是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -83,6 +87,12 @@ class PulsarProClusterInfo extends AbstractModel
     public $MaxStorage;
 
     /**
+     * @var boolean 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CanEditRoute;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -92,6 +102,8 @@ class PulsarProClusterInfo extends AbstractModel
      * @param array $NodeDistribution 节点分布情况
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxStorage 最大储存容量，单位：MB
+     * @param boolean $CanEditRoute 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -141,6 +153,10 @@ class PulsarProClusterInfo extends AbstractModel
 
         if (array_key_exists("MaxStorage",$param) and $param["MaxStorage"] !== null) {
             $this->MaxStorage = $param["MaxStorage"];
+        }
+
+        if (array_key_exists("CanEditRoute",$param) and $param["CanEditRoute"] !== null) {
+            $this->CanEditRoute = $param["CanEditRoute"];
         }
     }
 }

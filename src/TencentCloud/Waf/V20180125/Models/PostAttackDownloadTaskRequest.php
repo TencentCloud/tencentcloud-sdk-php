@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method string getSort() 获取默认为desc，可以取值desc和asc
  * @method void setSort(string $Sort) 设置默认为desc，可以取值desc和asc
+ * @method integer getCount() 获取下载的日志条数
+ * @method void setCount(integer $Count) 设置下载的日志条数
  */
 class PostAttackDownloadTaskRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class PostAttackDownloadTaskRequest extends AbstractModel
     public $Sort;
 
     /**
+     * @var integer 下载的日志条数
+     */
+    public $Count;
+
+    /**
      * @param string $Domain 查询的域名，所有域名使用all
      * @param string $StartTime 查询起始时间
      * @param string $EndTime 查询结束时间
      * @param string $QueryString Lucene语法
      * @param string $TaskName 任务名称
      * @param string $Sort 默认为desc，可以取值desc和asc
+     * @param integer $Count 下载的日志条数
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class PostAttackDownloadTaskRequest extends AbstractModel
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
             $this->Sort = $param["Sort"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

@@ -19,7 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 雪碧图参数信息
-注意：雪碧图大图整体的宽和高都不能大于 65000 像素。
+注意：雪碧图大图整体的宽和高都不能大于 15000 像素。
  *
  * @method integer getRowCount() 获取表示雪碧图行数，默认：10。
  * @method void setRowCount(integer $RowCount) 设置表示雪碧图行数，默认：10。

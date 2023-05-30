@@ -42,6 +42,10 @@ URL中禁止包含的字符：
  * @method void setWidth(integer $Width) 设置水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
  * @method integer getHeight() 获取水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
  * @method void setHeight(integer $Height) 设置水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+ * @method integer getBackgroundWidth() 获取背景水印宽度。默认宽度1920。
+ * @method void setBackgroundWidth(integer $BackgroundWidth) 设置背景水印宽度。默认宽度1920。
+ * @method integer getBackgroundHeight() 获取背景水印高度。默认高度1080。
+ * @method void setBackgroundHeight(integer $BackgroundHeight) 设置背景水印高度。默认高度1080。
  */
 class UpdateLiveWatermarkRequest extends AbstractModel
 {
@@ -85,6 +89,16 @@ URL中禁止包含的字符：
     public $Height;
 
     /**
+     * @var integer 背景水印宽度。默认宽度1920。
+     */
+    public $BackgroundWidth;
+
+    /**
+     * @var integer 背景水印高度。默认高度1080。
+     */
+    public $BackgroundHeight;
+
+    /**
      * @param integer $WatermarkId 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。
      * @param string $PictureUrl 水印图片 URL。
@@ -96,6 +110,8 @@ URL中禁止包含的字符：
 最长16字节。
      * @param integer $Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
      * @param integer $Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
+     * @param integer $BackgroundWidth 背景水印宽度。默认宽度1920。
+     * @param integer $BackgroundHeight 背景水印高度。默认高度1080。
      */
     function __construct()
     {
@@ -136,6 +152,14 @@ URL中禁止包含的字符：
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("BackgroundWidth",$param) and $param["BackgroundWidth"] !== null) {
+            $this->BackgroundWidth = $param["BackgroundWidth"];
+        }
+
+        if (array_key_exists("BackgroundHeight",$param) and $param["BackgroundHeight"] !== null) {
+            $this->BackgroundHeight = $param["BackgroundHeight"];
         }
     }
 }

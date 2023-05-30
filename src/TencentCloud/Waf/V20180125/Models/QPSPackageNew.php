@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置套餐购买个数
  * @method string getRegion() 获取套餐购买地域，clb-waf暂时没有用到
  * @method void setRegion(string $Region) 设置套餐购买地域，clb-waf暂时没有用到
+ * @method string getBillingItem() 获取计费项
+ * @method void setBillingItem(string $BillingItem) 设置计费项
  */
 class QPSPackageNew extends AbstractModel
 {
@@ -59,11 +61,17 @@ class QPSPackageNew extends AbstractModel
     public $Region;
 
     /**
+     * @var string 计费项
+     */
+    public $BillingItem;
+
+    /**
      * @param string $ResourceIds 资源ID
      * @param string $ValidTime 过期时间
      * @param integer $RenewFlag 是否自动续费，1：自动续费，0：不自动续费
      * @param integer $Count 套餐购买个数
      * @param string $Region 套餐购买地域，clb-waf暂时没有用到
+     * @param string $BillingItem 计费项
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class QPSPackageNew extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("BillingItem",$param) and $param["BillingItem"] !== null) {
+            $this->BillingItem = $param["BillingItem"];
         }
     }
 }

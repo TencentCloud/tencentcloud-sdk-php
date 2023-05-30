@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
+ * @method string getVerifyType() 获取域名验证方式
+ * @method void setVerifyType(string $VerifyType) 设置域名验证方式
  */
 class CommitCertificateInformationRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CommitCertificateInformationRequest extends AbstractModel
     public $CertificateId;
 
     /**
+     * @var string 域名验证方式
+     */
+    public $VerifyType;
+
+    /**
      * @param string $CertificateId 证书 ID。
+     * @param string $VerifyType 域名验证方式
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CommitCertificateInformationRequest extends AbstractModel
         }
         if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
             $this->CertificateId = $param["CertificateId"];
+        }
+
+        if (array_key_exists("VerifyType",$param) and $param["VerifyType"] !== null) {
+            $this->VerifyType = $param["VerifyType"];
         }
     }
 }

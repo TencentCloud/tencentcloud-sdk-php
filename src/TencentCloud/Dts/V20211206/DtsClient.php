@@ -37,6 +37,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
 校验成功后,迁移任务若有修改, 则必须重新校验并通过后, 才能开始迁移
 
  * @method Models\CreateMigrationServiceResponse CreateMigrationService(Models\CreateMigrationServiceRequest $req) 购买迁移任务。购买成功后会返回随机生成的迁移任务id列表，也可以通过查询迁移任务任务列表接口`DescribeMigrationJobs`看到购买成功的实例Id。注意，一旦购买成功后源及目标数据库类型，源及目标实例地域不可修改。
+ * @method Models\CreateModifyCheckSyncJobResponse CreateModifyCheckSyncJob(Models\CreateModifyCheckSyncJobRequest $req) 在修改同步任务的配置后、通过该接口校验当前任务是否支持修改对象操作
  * @method Models\CreateSyncJobResponse CreateSyncJob(Models\CreateSyncJobRequest $req) 创建一个同步任务
  * @method Models\DeleteCompareTaskResponse DeleteCompareTask(Models\DeleteCompareTaskRequest $req) 删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
  * @method Models\DescribeCheckSyncJobResultResponse DescribeCheckSyncJobResult(Models\DescribeCheckSyncJobResultRequest $req) 查询同步校验任务结果，检查必要参数和周边配置
@@ -48,6 +49,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
 若未通过校验, 则能查询到校验失败的原因. 请按照报错, 通过'ModifyMigrationJob'修改迁移配置或是调整源/目标实例的相关参数.
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) 查询某个迁移任务详情
  * @method Models\DescribeMigrationJobsResponse DescribeMigrationJobs(Models\DescribeMigrationJobsRequest $req) 查询数据迁移任务列表
+ * @method Models\DescribeModifyCheckSyncJobResultResponse DescribeModifyCheckSyncJobResult(Models\DescribeModifyCheckSyncJobResultRequest $req) 在创建修改对象的校验任务后、通过该接口查看校验任务的结果
  * @method Models\DescribeSyncJobsResponse DescribeSyncJobs(Models\DescribeSyncJobsRequest $req) 查询同步任务信息
  * @method Models\DestroyMigrateJobResponse DestroyMigrateJob(Models\DestroyMigrateJobRequest $req) 下线数据迁移任务。计费任务必须先调用隔离(IsolateMigrateJob)接口，且只有是**已隔离**状态下，才能调用此接口销毁任务。对于不计费任务，调用隔离(IsolateMigrateJob)接口删除任务操作。
  * @method Models\DestroySyncJobResponse DestroySyncJob(Models\DestroySyncJobRequest $req) 下线同步任务，任务在已隔离状态下可以通过此操作进行任务下线，即彻底删除任务。下线操作后可通过查询同步任务信息接口DescribeSyncJobs获取任务列表查看状态，此操作成功后无法看到此任务表示下线成功。
@@ -58,6 +60,8 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\ModifyMigrateJobSpecResponse ModifyMigrateJobSpec(Models\ModifyMigrateJobSpecRequest $req) 调整实例规格，此接口只支持按量计费任务的调整。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
  * @method Models\ModifyMigrateNameResponse ModifyMigrateName(Models\ModifyMigrateNameRequest $req) 修改迁移任务名
  * @method Models\ModifyMigrationJobResponse ModifyMigrationJob(Models\ModifyMigrationJobRequest $req) 配置迁移服务，配置成功后可通过`CreateMigrationCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
+ * @method Models\ModifySyncJobConfigResponse ModifySyncJobConfig(Models\ModifySyncJobConfigRequest $req) 该接口支持在同步任务启动后修改任务的配置
+修改同步配置的完整流程：修改同步任务配置->创建修改同步任务配置的校验任务->查询修改配置的校验任务的结果->启动修改配置任务
  * @method Models\PauseMigrateJobResponse PauseMigrateJob(Models\PauseMigrateJobRequest $req) 暂停一个迁移任务。
  * @method Models\PauseSyncJobResponse PauseSyncJob(Models\PauseSyncJobRequest $req) 暂停处于同步中的数据同步任务。
  * @method Models\RecoverMigrateJobResponse RecoverMigrateJob(Models\RecoverMigrateJobRequest $req) 解除隔离数据迁移任务，用户手动发起隔离后的手动解隔离，只有任务状态为已隔离(手动操作)状态下才能触发此操作。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
@@ -69,6 +73,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\SkipSyncCheckItemResponse SkipSyncCheckItem(Models\SkipSyncCheckItemRequest $req) 本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
  * @method Models\StartCompareResponse StartCompare(Models\StartCompareRequest $req) 启动一致性校验任务，启动之前需要先通过接口`CreateCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeCompareTasks` 查询一致性校验任务列表来获得启动后的状态
  * @method Models\StartMigrateJobResponse StartMigrateJob(Models\StartMigrateJobRequest $req) 本接口（StartMigrationJob）用于启动迁移任务。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
+ * @method Models\StartModifySyncJobResponse StartModifySyncJob(Models\StartModifySyncJobRequest $req) 在查询修改对象的校验任务的结果中的status为success后、通过该接口开始修改配置流程
  * @method Models\StartSyncJobResponse StartSyncJob(Models\StartSyncJobRequest $req) 启动同步任务
  * @method Models\StopCompareResponse StopCompare(Models\StopCompareRequest $req) 终止一致性校验任务
  * @method Models\StopMigrateJobResponse StopMigrateJob(Models\StopMigrateJobRequest $req) 本接口（StopMigrateJob）用于终止数据迁移任务。

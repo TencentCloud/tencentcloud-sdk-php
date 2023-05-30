@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchAccessLog请求参数结构体
  *
- * @method string getTopicId() 获取客户要查询的日志主题ID，每个客户都有对应的一个主题
- * @method void setTopicId(string $TopicId) 设置客户要查询的日志主题ID，每个客户都有对应的一个主题
+ * @method string getTopicId() 获取客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
+ * @method void setTopicId(string $TopicId) 设置客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
  * @method integer getFrom() 获取要查询的日志的起始时间，Unix时间戳，单位ms
  * @method void setFrom(integer $From) 设置要查询的日志的起始时间，Unix时间戳，单位ms
  * @method integer getTo() 获取要查询的日志的结束时间，Unix时间戳，单位ms
@@ -30,15 +30,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置查询语句，语句长度最大为4096
  * @method integer getLimit() 获取单次查询返回的日志条数，最大值为100
  * @method void setLimit(integer $Limit) 设置单次查询返回的日志条数，最大值为100
- * @method string getContext() 获取加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
- * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+ * @method string getContext() 获取加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填
+ * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填
  * @method string getSort() 获取日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
  * @method void setSort(string $Sort) 设置日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+ * @method integer getPage() 获取第几页，从0开始。新版本接口字段
+ * @method void setPage(integer $Page) 设置第几页，从0开始。新版本接口字段
  */
 class SearchAccessLogRequest extends AbstractModel
 {
     /**
-     * @var string 客户要查询的日志主题ID，每个客户都有对应的一个主题
+     * @var string 客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
      */
     public $TopicId;
 
@@ -63,7 +67,8 @@ class SearchAccessLogRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * @var string 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填
      */
     public $Context;
 
@@ -73,13 +78,20 @@ class SearchAccessLogRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @param string $TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
+     * @var integer 第几页，从0开始。新版本接口字段
+     */
+    public $Page;
+
+    /**
+     * @param string $TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
      * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
      * @param string $Query 查询语句，语句长度最大为4096
      * @param integer $Limit 单次查询返回的日志条数，最大值为100
-     * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填
      * @param string $Sort 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * @param integer $Page 第几页，从0开始。新版本接口字段
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class SearchAccessLogRequest extends AbstractModel
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
             $this->Sort = $param["Sort"];
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
         }
     }
 }

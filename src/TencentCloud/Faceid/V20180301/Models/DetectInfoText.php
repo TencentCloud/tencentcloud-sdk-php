@@ -32,6 +32,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdCard(string $IdCard) 设置本次验证使用的身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUseIDType() 获取用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseIDType(integer $UseIDType) 设置用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取本次验证使用的姓名。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置本次验证使用的姓名。
@@ -172,6 +182,15 @@ class DetectInfoText extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdCard;
+
+    /**
+     * @var integer 用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseIDType;
 
     /**
      * @var string 本次验证使用的姓名。
@@ -340,6 +359,11 @@ class DetectInfoText extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdCard 本次验证使用的身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UseIDType 用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 本次验证使用的姓名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcrNation 身份校验环节识别结果：民族。
@@ -424,6 +448,10 @@ class DetectInfoText extends AbstractModel
 
         if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
             $this->IdCard = $param["IdCard"];
+        }
+
+        if (array_key_exists("UseIDType",$param) and $param["UseIDType"] !== null) {
+            $this->UseIDType = $param["UseIDType"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

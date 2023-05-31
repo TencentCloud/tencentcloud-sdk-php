@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 生命周期规则当前路径具体存储量信息
  *
- * @method integer getCapacityUsed() 获取总存储量（单位byte）
+ * @method integer getCapacityUsed() 获取已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCapacityUsed(integer $CapacityUsed) 设置总存储量（单位byte）
+ * @method void setCapacityUsed(integer $CapacityUsed) 设置已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStandardCapacityUsed() 获取标准存储量（单位byte）
+ * @method integer getStandardCapacityUsed() 获取已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStandardCapacityUsed(integer $StandardCapacityUsed) 设置标准存储量（单位byte）
+ * @method void setStandardCapacityUsed(integer $StandardCapacityUsed) 设置已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDegradeCapacityUsed() 获取低频存储量（单位byte）
+ * @method integer getDegradeCapacityUsed() 获取已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDegradeCapacityUsed(integer $DegradeCapacityUsed) 设置低频存储量（单位byte）
+ * @method void setDegradeCapacityUsed(integer $DegradeCapacityUsed) 设置已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getArchiveCapacityUsed() 获取归档存储量（单位byte）
+ * @method integer getArchiveCapacityUsed() 获取已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArchiveCapacityUsed(integer $ArchiveCapacityUsed) 设置归档存储量（单位byte）
+ * @method void setArchiveCapacityUsed(integer $ArchiveCapacityUsed) 设置已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeepArchiveCapacityUsed() 获取深度归档存储量（单位byte）
+ * @method integer getDeepArchiveCapacityUsed() 获取已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeepArchiveCapacityUsed(integer $DeepArchiveCapacityUsed) 设置深度归档存储量（单位byte）
+ * @method void setDeepArchiveCapacityUsed(integer $DeepArchiveCapacityUsed) 设置已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIntelligentCapacityUsed() 获取智能分层存储量（单位byte）
+ * @method integer getIntelligentCapacityUsed() 获取已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntelligentCapacityUsed(integer $IntelligentCapacityUsed) 设置智能分层存储量（单位byte）
+ * @method void setIntelligentCapacityUsed(integer $IntelligentCapacityUsed) 设置已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Summary extends AbstractModel
 {
     /**
-     * @var integer 总存储量（单位byte）
+     * @var integer 已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CapacityUsed;
 
     /**
-     * @var integer 标准存储量（单位byte）
+     * @var integer 已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StandardCapacityUsed;
 
     /**
-     * @var integer 低频存储量（单位byte）
+     * @var integer 已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DegradeCapacityUsed;
 
     /**
-     * @var integer 归档存储量（单位byte）
+     * @var integer 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ArchiveCapacityUsed;
 
     /**
-     * @var integer 深度归档存储量（单位byte）
+     * @var integer 已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeepArchiveCapacityUsed;
 
     /**
-     * @var integer 智能分层存储量（单位byte）
+     * @var integer 已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntelligentCapacityUsed;
 
     /**
-     * @param integer $CapacityUsed 总存储量（单位byte）
+     * @param integer $CapacityUsed 已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StandardCapacityUsed 标准存储量（单位byte）
+     * @param integer $StandardCapacityUsed 已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DegradeCapacityUsed 低频存储量（单位byte）
+     * @param integer $DegradeCapacityUsed 已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ArchiveCapacityUsed 归档存储量（单位byte）
+     * @param integer $ArchiveCapacityUsed 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeepArchiveCapacityUsed 深度归档存储量（单位byte）
+     * @param integer $DeepArchiveCapacityUsed 已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IntelligentCapacityUsed 智能分层存储量（单位byte）
+     * @param integer $IntelligentCapacityUsed 已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 批量添加客服时，返回出错客服的像个信息
+ * 批量添加客服时，返回出错客服的信息
  *
  * @method string getStaffEmail() 获取坐席邮箱地址
  * @method void setStaffEmail(string $StaffEmail) 设置坐席邮箱地址

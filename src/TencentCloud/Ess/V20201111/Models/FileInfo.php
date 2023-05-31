@@ -18,7 +18,7 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 二期接口返回的模板中文件的信息结构
+ * 模板中文件的信息结构
  *
  * @method string getFileId() 获取文件Id
  * @method void setFileId(string $FileId) 设置文件Id

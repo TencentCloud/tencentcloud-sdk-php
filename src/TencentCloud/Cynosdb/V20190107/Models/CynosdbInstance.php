@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置实例状态
  * @method string getStatusDesc() 获取实例状态中文描述
  * @method void setStatusDesc(string $StatusDesc) 设置实例状态中文描述
+ * @method string getDbMode() 获取实例形态，是否为serverless实例
+ * @method void setDbMode(string $DbMode) 设置实例形态，是否为serverless实例
  * @method string getDbType() 获取数据库类型
  * @method void setDbType(string $DbType) 设置数据库类型
  * @method string getDbVersion() 获取数据库版本
@@ -140,6 +142,10 @@ pause
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceNetInfo(array $InstanceNetInfo) 设置实例网络信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourcePackages() 获取实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourcePackages(array $ResourcePackages) 设置实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -197,6 +203,11 @@ class CynosdbInstance extends AbstractModel
      * @var string 实例状态中文描述
      */
     public $StatusDesc;
+
+    /**
+     * @var string 实例形态，是否为serverless实例
+     */
+    public $DbMode;
 
     /**
      * @var string 数据库类型
@@ -404,6 +415,12 @@ pause
     public $InstanceNetInfo;
 
     /**
+     * @var array 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourcePackages;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -415,6 +432,7 @@ pause
      * @param string $Zone 可用区
      * @param string $Status 实例状态
      * @param string $StatusDesc 实例状态中文描述
+     * @param string $DbMode 实例形态，是否为serverless实例
      * @param string $DbType 数据库类型
      * @param string $DbVersion 数据库版本
      * @param integer $Cpu Cpu，单位：核
@@ -463,6 +481,8 @@ pause
      * @param array $SlaveZones 备可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceNetInfo 实例网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourcePackages 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -520,6 +540,10 @@ pause
 
         if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
             $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
         }
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
@@ -690,6 +714,15 @@ pause
                 $obj = new InstanceNetInfo();
                 $obj->deserialize($value);
                 array_push($this->InstanceNetInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourcePackages",$param) and $param["ResourcePackages"] !== null) {
+            $this->ResourcePackages = [];
+            foreach ($param["ResourcePackages"] as $key => $value){
+                $obj = new ResourcePackage();
+                $obj->deserialize($value);
+                array_push($this->ResourcePackages, $obj);
             }
         }
     }

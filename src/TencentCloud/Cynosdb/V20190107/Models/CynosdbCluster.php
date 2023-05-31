@@ -194,6 +194,10 @@ pause
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbility(Ability $Ability) 设置能力
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourcePackages() 获取实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourcePackages(array $ResourcePackages) 设置实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -453,6 +457,12 @@ pause
     public $Ability;
 
     /**
+     * @var array 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourcePackages;
+
+    /**
      * @param string $Status 集群状态， 可选值如下:
 creating: 创建中
 running:运行中
@@ -539,6 +549,8 @@ pause
      * @param string $OrderSource 订单来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ability $Ability 能力
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -736,6 +748,15 @@ pause
         if (array_key_exists("Ability",$param) and $param["Ability"] !== null) {
             $this->Ability = new Ability();
             $this->Ability->deserialize($param["Ability"]);
+        }
+
+        if (array_key_exists("ResourcePackages",$param) and $param["ResourcePackages"] !== null) {
+            $this->ResourcePackages = [];
+            foreach ($param["ResourcePackages"] as $key => $value){
+                $obj = new ResourcePackage();
+                $obj->deserialize($value);
+                array_push($this->ResourcePackages, $obj);
+            }
         }
     }
 }

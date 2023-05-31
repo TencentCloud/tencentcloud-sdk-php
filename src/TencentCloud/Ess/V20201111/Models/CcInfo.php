@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 抄送信息
  *
- * @method string getMobile() 获取被抄送人手机号
- * @method void setMobile(string $Mobile) 设置被抄送人手机号
+ * @method string getMobile() 获取被抄送人手机号，11位数字
+ * @method void setMobile(string $Mobile) 设置被抄送人手机号，11位数字
  * @method string getName() 获取被抄送人姓名
  * @method void setName(string $Name) 设置被抄送人姓名
  * @method integer getCcType() 获取被抄送人类型,
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CcInfo extends AbstractModel
 {
     /**
-     * @var string 被抄送人手机号
+     * @var string 被抄送人手机号，11位数字
      */
     public $Mobile;
 
@@ -64,7 +64,7 @@ class CcInfo extends AbstractModel
     public $CcPermission;
 
     /**
-     * @param string $Mobile 被抄送人手机号
+     * @param string $Mobile 被抄送人手机号，11位数字
      * @param string $Name 被抄送人姓名
      * @param integer $CcType 被抄送人类型,
 0--个人

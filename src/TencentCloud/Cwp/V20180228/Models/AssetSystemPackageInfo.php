@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
+ * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
+ * @method string getQuuid() 获取主机Id
+ * @method void setQuuid(string $Quuid) 设置主机Id
+ * @method string getUuid() 获取Agent Id
+ * @method void setUuid(string $Uuid) 设置Agent Id
  */
 class AssetSystemPackageInfo extends AbstractModel
 {
@@ -104,6 +110,21 @@ class AssetSystemPackageInfo extends AbstractModel
     public $IsNew;
 
     /**
+     * @var MachineExtraInfo 附加信息
+     */
+    public $MachineExtraInfo;
+
+    /**
+     * @var string 主机Id
+     */
+    public $Quuid;
+
+    /**
+     * @var string Agent Id
+     */
+    public $Uuid;
+
+    /**
      * @param string $Name 数据库名
      * @param string $Desc 描述
      * @param string $Version 版本
@@ -116,6 +137,9 @@ class AssetSystemPackageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
+     * @param MachineExtraInfo $MachineExtraInfo 附加信息
+     * @param string $Quuid 主机Id
+     * @param string $Uuid Agent Id
      */
     function __construct()
     {
@@ -172,6 +196,19 @@ class AssetSystemPackageInfo extends AbstractModel
 
         if (array_key_exists("IsNew",$param) and $param["IsNew"] !== null) {
             $this->IsNew = $param["IsNew"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
     }
 }

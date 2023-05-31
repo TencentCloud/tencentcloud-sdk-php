@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模板控件信息
  *
- * @method string getComponentType() 获取如果是Component控件类型，则可选的字段为：
+ * @method string getComponentType() 获取如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -31,7 +31,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -41,7 +41,7 @@ SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内�
 SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
 
 表单域的控件不能作为印章和签名控件
- * @method void setComponentType(string $ComponentType) 设置如果是Component控件类型，则可选的字段为：
+ * @method void setComponentType(string $ComponentType) 设置如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -52,7 +52,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -62,8 +62,8 @@ SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内�
 SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
 
 表单域的控件不能作为印章和签名控件
- * @method integer getFileIndex() 获取控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
- * @method void setFileIndex(integer $FileIndex) 设置控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
+ * @method integer getFileIndex() 获取控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
+ * @method void setFileIndex(integer $FileIndex) 设置控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
  * @method float getComponentHeight() 获取参数控件高度，单位pt
  * @method void setComponentHeight(float $ComponentHeight) 设置参数控件高度，单位pt
  * @method float getComponentWidth() 获取参数控件宽度，单位pt
@@ -74,10 +74,10 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
  * @method void setComponentPosX(float $ComponentPosX) 设置参数控件X位置，单位pt
  * @method float getComponentPosY() 获取参数控件Y位置，单位pt
  * @method void setComponentPosY(float $ComponentPosY) 设置参数控件Y位置，单位pt
- * @method string getComponentId() 获取GenerateMode==KEYWORD 指定关键字
- * @method void setComponentId(string $ComponentId) 设置GenerateMode==KEYWORD 指定关键字
- * @method string getComponentName() 获取GenerateMode==FIELD 指定表单域名称
- * @method void setComponentName(string $ComponentName) 设置GenerateMode==FIELD 指定表单域名称
+ * @method string getComponentId() 获取查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+ * @method void setComponentId(string $ComponentId) 设置查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+ * @method string getComponentName() 获取查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
+ * @method void setComponentName(string $ComponentName) 设置查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
  * @method boolean getComponentRequired() 获取是否必选，默认为false
  * @method void setComponentRequired(boolean $ComponentRequired) 设置是否必选，默认为false
  * @method string getComponentRecipientId() 获取控件关联的签署人ID
@@ -134,8 +134,8 @@ ComponentType为SIGN_DATE时，支持以下参数：
 如果extra参数为空，默认为”yyyy年m月d日”格式的居中日期
 特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
 参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}",
- * @method boolean getIsFormType() 获取是否是表单域类型，默认不存在
- * @method void setIsFormType(boolean $IsFormType) 设置是否是表单域类型，默认不存在
+ * @method boolean getIsFormType() 获取是否是表单域类型，默认不false-不是
+ * @method void setIsFormType(boolean $IsFormType) 设置是否是表单域类型，默认不false-不是
  * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
@@ -296,14 +296,14 @@ FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
  * @method integer getComponentDateFontSize() 获取日期签署控件的字号，默认为 12
  * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置日期签署控件的字号，默认为 12
- * @method string getChannelComponentId() 获取平台模板控件 id 标识
- * @method void setChannelComponentId(string $ChannelComponentId) 设置平台模板控件 id 标识
+ * @method string getChannelComponentId() 获取第三方应用集成平台模板控件 id 标识
+ * @method void setChannelComponentId(string $ChannelComponentId) 设置第三方应用集成平台模板控件 id 标识
  * @method float getOffsetX() 获取指定关键字时横坐标偏移量，单位pt
  * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量，单位pt
  * @method float getOffsetY() 获取指定关键字时纵坐标偏移量，单位pt
  * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量，单位pt
- * @method integer getChannelComponentSource() 获取//子客控件来源。0-平台指定；1-用户自定义
- * @method void setChannelComponentSource(integer $ChannelComponentSource) 设置//子客控件来源。0-平台指定；1-用户自定义
+ * @method integer getChannelComponentSource() 获取第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
+ * @method void setChannelComponentSource(integer $ChannelComponentSource) 设置第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
  * @method string getKeywordOrder() 获取指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
  * @method void setKeywordOrder(string $KeywordOrder) 设置指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
@@ -318,7 +318,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
 class Component extends AbstractModel
 {
     /**
-     * @var string 如果是Component控件类型，则可选的字段为：
+     * @var string 如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -329,7 +329,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -343,7 +343,7 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     public $ComponentType;
 
     /**
-     * @var integer 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
+     * @var integer 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
      */
     public $FileIndex;
 
@@ -373,12 +373,12 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     public $ComponentPosY;
 
     /**
-     * @var string GenerateMode==KEYWORD 指定关键字
+     * @var string 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
      */
     public $ComponentId;
 
     /**
-     * @var string GenerateMode==FIELD 指定表单域名称
+     * @var string 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
      */
     public $ComponentName;
 
@@ -423,7 +423,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
     public $ComponentExtra;
 
     /**
-     * @var boolean 是否是表单域类型，默认不存在
+     * @var boolean 是否是表单域类型，默认不false-不是
      */
     public $IsFormType;
 
@@ -520,7 +520,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $ComponentDateFontSize;
 
     /**
-     * @var string 平台模板控件 id 标识
+     * @var string 第三方应用集成平台模板控件 id 标识
      */
     public $ChannelComponentId;
 
@@ -535,7 +535,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $OffsetY;
 
     /**
-     * @var integer //子客控件来源。0-平台指定；1-用户自定义
+     * @var integer 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
      */
     public $ChannelComponentSource;
 
@@ -561,7 +561,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $KeywordIndexes;
 
     /**
-     * @param string $ComponentType 如果是Component控件类型，则可选的字段为：
+     * @param string $ComponentType 如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -572,7 +572,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -582,14 +582,14 @@ SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内�
 SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
 
 表单域的控件不能作为印章和签名控件
-     * @param integer $FileIndex 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
+     * @param integer $FileIndex 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
      * @param float $ComponentHeight 参数控件高度，单位pt
      * @param float $ComponentWidth 参数控件宽度，单位pt
      * @param integer $ComponentPage 参数控件所在页码，取值为：1-N
      * @param float $ComponentPosX 参数控件X位置，单位pt
      * @param float $ComponentPosY 参数控件Y位置，单位pt
-     * @param string $ComponentId GenerateMode==KEYWORD 指定关键字
-     * @param string $ComponentName GenerateMode==FIELD 指定表单域名称
+     * @param string $ComponentId 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+     * @param string $ComponentName 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
      * @param boolean $ComponentRequired 是否必选，默认为false
      * @param string $ComponentRecipientId 控件关联的签署人ID
      * @param string $ComponentExtra 扩展参数：
@@ -618,7 +618,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
 如果extra参数为空，默认为”yyyy年m月d日”格式的居中日期
 特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
 参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}",
-     * @param boolean $IsFormType 是否是表单域类型，默认不存在
+     * @param boolean $IsFormType 是否是表单域类型，默认不false-不是
      * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
@@ -699,10 +699,10 @@ SIGN_PAGING_SEAL - 可以指定印章ID，于控制台查询获取
 FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
      * @param integer $ComponentDateFontSize 日期签署控件的字号，默认为 12
-     * @param string $ChannelComponentId 平台模板控件 id 标识
+     * @param string $ChannelComponentId 第三方应用集成平台模板控件 id 标识
      * @param float $OffsetX 指定关键字时横坐标偏移量，单位pt
      * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
-     * @param integer $ChannelComponentSource //子客控件来源。0-平台指定；1-用户自定义
+     * @param integer $ChannelComponentSource 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
      * @param string $KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
      * @param integer $KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来

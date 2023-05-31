@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 授权用户
+ * UnbindClusterResourcePackages返回参数结构体
  *
- * @method string getUserId() 获取电子签系统中的用户id
- * @method void setUserId(string $UserId) 设置电子签系统中的用户id
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AuthorizedUser extends AbstractModel
+class UnbindClusterResourcePackagesResponse extends AbstractModel
 {
     /**
-     * @var string 电子签系统中的用户id
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $UserId;
+    public $RequestId;
 
     /**
-     * @param string $UserId 电子签系统中的用户id
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class AuthorizedUser extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaterialFaceList(array $MaterialFaceList) 设置人脸信息
  * @method string getMaterialName() 获取素材名
  * @method void setMaterialName(string $MaterialName) 设置素材名
+ * @method string getAuditResult() 获取审核原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAuditResult(string $AuditResult) 设置审核原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PublicMaterialInfos extends AbstractModel
 {
@@ -66,12 +70,20 @@ class PublicMaterialInfos extends AbstractModel
     public $MaterialName;
 
     /**
+     * @var string 审核原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AuditResult;
+
+    /**
      * @param string $MaterialId 素材Id
      * @param integer $MaterialStatus 素材状态
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 修改时间
      * @param array $MaterialFaceList 人脸信息
      * @param string $MaterialName 素材名
+     * @param string $AuditResult 审核原因
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -113,6 +125,10 @@ class PublicMaterialInfos extends AbstractModel
 
         if (array_key_exists("MaterialName",$param) and $param["MaterialName"] !== null) {
             $this->MaterialName = $param["MaterialName"];
+        }
+
+        if (array_key_exists("AuditResult",$param) and $param["AuditResult"] !== null) {
+            $this->AuditResult = $param["AuditResult"];
         }
     }
 }

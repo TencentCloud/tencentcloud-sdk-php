@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳（精确到秒）
  * @method Recipient getPromoter() 获取发起人角色信息
  * @method void setPromoter(Recipient $Promoter) 设置发起人角色信息
+ * @method integer getTemplateType() 获取模板类型
+取值：
+1  静默签,
+3  普通模板
+ * @method void setTemplateType(integer $TemplateType) 设置模板类型
+取值：
+1  静默签,
+3  普通模板
  * @method integer getAvailable() 获取模板可用状态，取值：1启用（默认），2停用
  * @method void setAvailable(integer $Available) 设置模板可用状态，取值：1启用（默认），2停用
  * @method string getOrganizationId() 获取模板创建组织id
@@ -138,6 +146,14 @@ class TemplateInfo extends AbstractModel
     public $Promoter;
 
     /**
+     * @var integer 模板类型
+取值：
+1  静默签,
+3  普通模板
+     */
+    public $TemplateType;
+
+    /**
      * @var integer 模板可用状态，取值：1启用（默认），2停用
      */
     public $Available;
@@ -180,6 +196,10 @@ class TemplateInfo extends AbstractModel
      * @param string $Creator 模板的创建人
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
      * @param Recipient $Promoter 发起人角色信息
+     * @param integer $TemplateType 模板类型
+取值：
+1  静默签,
+3  普通模板
      * @param integer $Available 模板可用状态，取值：1启用（默认），2停用
      * @param string $OrganizationId 模板创建组织id
      * @param string $PreviewUrl 模板预览链接
@@ -277,6 +297,10 @@ class TemplateInfo extends AbstractModel
         if (array_key_exists("Promoter",$param) and $param["Promoter"] !== null) {
             $this->Promoter = new Recipient();
             $this->Promoter->deserialize($param["Promoter"]);
+        }
+
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
         }
 
         if (array_key_exists("Available",$param) and $param["Available"] !== null) {

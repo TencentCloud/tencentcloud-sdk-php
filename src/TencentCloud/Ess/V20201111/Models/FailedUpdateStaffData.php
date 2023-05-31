@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReason(string $Reason) 设置失败原因
  * @method string getUserId() 获取用户Id
  * @method void setUserId(string $UserId) 设置用户Id
- * @method string getOpenId() 获取用户OpenId
- * @method void setOpenId(string $OpenId) 设置用户OpenId
+ * @method string getOpenId() 获取员工在第三方平台的openId
+ * @method void setOpenId(string $OpenId) 设置员工在第三方平台的openId
  */
 class FailedUpdateStaffData extends AbstractModel
 {
@@ -54,7 +54,7 @@ class FailedUpdateStaffData extends AbstractModel
     public $UserId;
 
     /**
-     * @var string 用户OpenId
+     * @var string 员工在第三方平台的openId
      */
     public $OpenId;
 
@@ -63,7 +63,7 @@ class FailedUpdateStaffData extends AbstractModel
      * @param string $Mobile 用户传入的手机号
      * @param string $Reason 失败原因
      * @param string $UserId 用户Id
-     * @param string $OpenId 用户OpenId
+     * @param string $OpenId 员工在第三方平台的openId
      */
     function __construct()
     {

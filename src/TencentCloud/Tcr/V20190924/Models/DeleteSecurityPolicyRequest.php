@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyIndex(integer $PolicyIndex) 设置白名单Id
  * @method string getPolicyVersion() 获取白名单版本
  * @method void setPolicyVersion(string $PolicyVersion) 设置白名单版本
+ * @method string getCidrBlock() 获取网段或IP(互斥)
+ * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)
  */
 class DeleteSecurityPolicyRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteSecurityPolicyRequest extends AbstractModel
     public $PolicyVersion;
 
     /**
+     * @var string 网段或IP(互斥)
+     */
+    public $CidrBlock;
+
+    /**
      * @param string $RegistryId 实例Id
      * @param integer $PolicyIndex 白名单Id
      * @param string $PolicyVersion 白名单版本
+     * @param string $CidrBlock 网段或IP(互斥)
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteSecurityPolicyRequest extends AbstractModel
 
         if (array_key_exists("PolicyVersion",$param) and $param["PolicyVersion"] !== null) {
             $this->PolicyVersion = $param["PolicyVersion"];
+        }
+
+        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
+            $this->CidrBlock = $param["CidrBlock"];
         }
     }
 }

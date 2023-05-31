@@ -29,9 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBucket() 获取第三方存储桶信息。
  * @method void setBucket(string $Bucket) 设置第三方存储桶信息。
  * @method string getAccessKey() 获取第三方存储的access_key账号信息。
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
  * @method void setAccessKey(string $AccessKey) 设置第三方存储的access_key账号信息。
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
  * @method string getSecretKey() 获取第三方存储的secret_key账号信息。
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
  * @method void setSecretKey(string $SecretKey) 设置第三方存储的secret_key账号信息。
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
  * @method array getFileNamePrefix() 获取第三方云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围a~z,A~Z,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
  * @method void setFileNamePrefix(array $FileNamePrefix) 设置第三方云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围a~z,A~Z,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
  */
@@ -55,11 +59,13 @@ class CloudStorage extends AbstractModel
 
     /**
      * @var string 第三方存储的access_key账号信息。
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
      */
     public $AccessKey;
 
     /**
      * @var string 第三方存储的secret_key账号信息。
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
      */
     public $SecretKey;
 
@@ -74,7 +80,9 @@ class CloudStorage extends AbstractModel
      * @param string $Region 第三方云存储的地域信息。
      * @param string $Bucket 第三方存储桶信息。
      * @param string $AccessKey 第三方存储的access_key账号信息。
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
      * @param string $SecretKey 第三方存储的secret_key账号信息。
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
      * @param array $FileNamePrefix 第三方云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围a~z,A~Z,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
      */
     function __construct()

@@ -50,6 +50,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskCycleUnitList(string $TaskCycleUnitList) 设置任务周期类型字符串，多个任务周期之间以英文字符逗号分隔
  * @method string getProductNameList() 获取任务所属产品类型
  * @method void setProductNameList(string $ProductNameList) 设置任务所属产品类型
+ * @method string getSourceServiceId() 获取数据源id或（仅针对离线同步任务）来源数据源id
+ * @method void setSourceServiceId(string $SourceServiceId) 设置数据源id或（仅针对离线同步任务）来源数据源id
+ * @method string getSourceServiceType() 获取数据源类型或（仅针对离线同步任务）来源数据源类型
+ * @method void setSourceServiceType(string $SourceServiceType) 设置数据源类型或（仅针对离线同步任务）来源数据源类型
+ * @method string getTargetServiceId() 获取（仅针对离线同步任务）目标数据源id
+ * @method void setTargetServiceId(string $TargetServiceId) 设置（仅针对离线同步任务）目标数据源id
+ * @method string getTargetServiceType() 获取（仅针对离线同步任务）目标数据源类型
+ * @method void setTargetServiceType(string $TargetServiceType) 设置（仅针对离线同步任务）目标数据源类型
+ * @method string getAlarmType() 获取告警类型，多个类型以逗号分隔
+ * @method void setAlarmType(string $AlarmType) 设置告警类型，多个类型以逗号分隔
  */
 class DescribeOperateTasksRequest extends AbstractModel
 {
@@ -129,6 +139,31 @@ class DescribeOperateTasksRequest extends AbstractModel
     public $ProductNameList;
 
     /**
+     * @var string 数据源id或（仅针对离线同步任务）来源数据源id
+     */
+    public $SourceServiceId;
+
+    /**
+     * @var string 数据源类型或（仅针对离线同步任务）来源数据源类型
+     */
+    public $SourceServiceType;
+
+    /**
+     * @var string （仅针对离线同步任务）目标数据源id
+     */
+    public $TargetServiceId;
+
+    /**
+     * @var string （仅针对离线同步任务）目标数据源类型
+     */
+    public $TargetServiceType;
+
+    /**
+     * @var string 告警类型，多个类型以逗号分隔
+     */
+    public $AlarmType;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -144,6 +179,11 @@ class DescribeOperateTasksRequest extends AbstractModel
      * @param string $StatusList 任务状态字符串，多个任务状态之间以英文字符逗号分隔
      * @param string $TaskCycleUnitList 任务周期类型字符串，多个任务周期之间以英文字符逗号分隔
      * @param string $ProductNameList 任务所属产品类型
+     * @param string $SourceServiceId 数据源id或（仅针对离线同步任务）来源数据源id
+     * @param string $SourceServiceType 数据源类型或（仅针对离线同步任务）来源数据源类型
+     * @param string $TargetServiceId （仅针对离线同步任务）目标数据源id
+     * @param string $TargetServiceType （仅针对离线同步任务）目标数据源类型
+     * @param string $AlarmType 告警类型，多个类型以逗号分隔
      */
     function __construct()
     {
@@ -216,6 +256,26 @@ class DescribeOperateTasksRequest extends AbstractModel
 
         if (array_key_exists("ProductNameList",$param) and $param["ProductNameList"] !== null) {
             $this->ProductNameList = $param["ProductNameList"];
+        }
+
+        if (array_key_exists("SourceServiceId",$param) and $param["SourceServiceId"] !== null) {
+            $this->SourceServiceId = $param["SourceServiceId"];
+        }
+
+        if (array_key_exists("SourceServiceType",$param) and $param["SourceServiceType"] !== null) {
+            $this->SourceServiceType = $param["SourceServiceType"];
+        }
+
+        if (array_key_exists("TargetServiceId",$param) and $param["TargetServiceId"] !== null) {
+            $this->TargetServiceId = $param["TargetServiceId"];
+        }
+
+        if (array_key_exists("TargetServiceType",$param) and $param["TargetServiceType"] !== null) {
+            $this->TargetServiceType = $param["TargetServiceType"];
+        }
+
+        if (array_key_exists("AlarmType",$param) and $param["AlarmType"] !== null) {
+            $this->AlarmType = $param["AlarmType"];
         }
     }
 }

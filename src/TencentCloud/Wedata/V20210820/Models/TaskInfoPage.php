@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) 设置工作流列表信息
  * @method integer getTotalPage() 获取总页数
  * @method void setTotalPage(integer $TotalPage) 设置总页数
+ * @method integer getPageCount() 获取页数
+ * @method void setPageCount(integer $PageCount) 设置页数
+ * @method integer getTotalCount() 获取总条数
+ * @method void setTotalCount(integer $TotalCount) 设置总条数
  */
 class TaskInfoPage extends AbstractModel
 {
@@ -52,10 +56,22 @@ class TaskInfoPage extends AbstractModel
     public $TotalPage;
 
     /**
+     * @var integer 页数
+     */
+    public $PageCount;
+
+    /**
+     * @var integer 总条数
+     */
+    public $TotalCount;
+
+    /**
      * @param integer $PageNumber 页号
      * @param integer $PageSize 页大小
      * @param array $Items 工作流列表信息
      * @param integer $TotalPage 总页数
+     * @param integer $PageCount 页数
+     * @param integer $TotalCount 总条数
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class TaskInfoPage extends AbstractModel
 
         if (array_key_exists("TotalPage",$param) and $param["TotalPage"] !== null) {
             $this->TotalPage = $param["TotalPage"];
+        }
+
+        if (array_key_exists("PageCount",$param) and $param["PageCount"] !== null) {
+            $this->PageCount = $param["PageCount"];
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
     }
 }

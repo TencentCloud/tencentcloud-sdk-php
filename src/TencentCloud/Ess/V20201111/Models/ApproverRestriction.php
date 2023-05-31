@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取指定签署人名字
  * @method void setName(string $Name) 设置指定签署人名字
- * @method string getMobile() 获取指定签署人手机号
- * @method void setMobile(string $Mobile) 设置指定签署人手机号
- * @method string getIdCardType() 获取指定签署人证件类型
- * @method void setIdCardType(string $IdCardType) 设置指定签署人证件类型
- * @method string getIdCardNumber() 获取指定签署人证件号码
- * @method void setIdCardNumber(string $IdCardNumber) 设置指定签署人证件号码
+ * @method string getMobile() 获取指定签署人手机号，11位数字
+ * @method void setMobile(string $Mobile) 设置指定签署人手机号，11位数字
+ * @method string getIdCardType() 获取指定签署人证件类型，ID_CARD-身份证
+ * @method void setIdCardType(string $IdCardType) 设置指定签署人证件类型，ID_CARD-身份证
+ * @method string getIdCardNumber() 获取指定签署人证件号码，字母大写
+ * @method void setIdCardNumber(string $IdCardNumber) 设置指定签署人证件号码，字母大写
  */
 class ApproverRestriction extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ApproverRestriction extends AbstractModel
     public $Name;
 
     /**
-     * @var string 指定签署人手机号
+     * @var string 指定签署人手机号，11位数字
      */
     public $Mobile;
 
     /**
-     * @var string 指定签署人证件类型
+     * @var string 指定签署人证件类型，ID_CARD-身份证
      */
     public $IdCardType;
 
     /**
-     * @var string 指定签署人证件号码
+     * @var string 指定签署人证件号码，字母大写
      */
     public $IdCardNumber;
 
     /**
      * @param string $Name 指定签署人名字
-     * @param string $Mobile 指定签署人手机号
-     * @param string $IdCardType 指定签署人证件类型
-     * @param string $IdCardNumber 指定签署人证件号码
+     * @param string $Mobile 指定签署人手机号，11位数字
+     * @param string $IdCardType 指定签署人证件类型，ID_CARD-身份证
+     * @param string $IdCardNumber 指定签署人证件号码，字母大写
      */
     function __construct()
     {

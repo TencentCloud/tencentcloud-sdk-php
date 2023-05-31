@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserThreeFactor getUserInfo() 获取自动签开通个人用户的三要素
  * @method void setUserInfo(UserThreeFactor $UserInfo) 设置自动签开通个人用户的三要素
- * @method string getCallbackUrl() 获取回调链接
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调链接
- * @method boolean getCertInfoCallback() 获取是否回调证书信息
- * @method void setCertInfoCallback(boolean $CertInfoCallback) 设置是否回调证书信息
- * @method boolean getUserDefineSeal() 获取是否支持用户自定义签名印章
- * @method void setUserDefineSeal(boolean $UserDefineSeal) 设置是否支持用户自定义签名印章
- * @method boolean getSealImgCallback() 获取是否需要回调的时候返回印章(签名) 图片的 base64
- * @method void setSealImgCallback(boolean $SealImgCallback) 设置是否需要回调的时候返回印章(签名) 图片的 base64
+ * @method string getCallbackUrl() 获取接受自动签开启的回调地址。需要保证post返回200
+ * @method void setCallbackUrl(string $CallbackUrl) 设置接受自动签开启的回调地址。需要保证post返回200
+ * @method boolean getCertInfoCallback() 获取是否回调证书信息，默认false-不需要
+ * @method void setCertInfoCallback(boolean $CertInfoCallback) 设置是否回调证书信息，默认false-不需要
+ * @method boolean getUserDefineSeal() 获取是否支持用户自定义签名印章，默认false-不需要
+ * @method void setUserDefineSeal(boolean $UserDefineSeal) 设置是否支持用户自定义签名印章，默认false-不需要
+ * @method boolean getSealImgCallback() 获取是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
+ * @method void setSealImgCallback(boolean $SealImgCallback) 设置是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
  * @method array getVerifyChannels() 获取开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
  * @method void setVerifyChannels(array $VerifyChannels) 设置开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
  */
@@ -41,22 +41,22 @@ class AutoSignConfig extends AbstractModel
     public $UserInfo;
 
     /**
-     * @var string 回调链接
+     * @var string 接受自动签开启的回调地址。需要保证post返回200
      */
     public $CallbackUrl;
 
     /**
-     * @var boolean 是否回调证书信息
+     * @var boolean 是否回调证书信息，默认false-不需要
      */
     public $CertInfoCallback;
 
     /**
-     * @var boolean 是否支持用户自定义签名印章
+     * @var boolean 是否支持用户自定义签名印章，默认false-不需要
      */
     public $UserDefineSeal;
 
     /**
-     * @var boolean 是否需要回调的时候返回印章(签名) 图片的 base64
+     * @var boolean 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
      */
     public $SealImgCallback;
 
@@ -67,10 +67,10 @@ class AutoSignConfig extends AbstractModel
 
     /**
      * @param UserThreeFactor $UserInfo 自动签开通个人用户的三要素
-     * @param string $CallbackUrl 回调链接
-     * @param boolean $CertInfoCallback 是否回调证书信息
-     * @param boolean $UserDefineSeal 是否支持用户自定义签名印章
-     * @param boolean $SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
+     * @param string $CallbackUrl 接受自动签开启的回调地址。需要保证post返回200
+     * @param boolean $CertInfoCallback 是否回调证书信息，默认false-不需要
+     * @param boolean $UserDefineSeal 是否支持用户自定义签名印章，默认false-不需要
+     * @param boolean $SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
      * @param array $VerifyChannels 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
      */
     function __construct()

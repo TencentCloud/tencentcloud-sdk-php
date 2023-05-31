@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 授权用户
+ * BindClusterResourcePackages请求参数结构体
  *
- * @method string getUserId() 获取电子签系统中的用户id
- * @method void setUserId(string $UserId) 设置电子签系统中的用户id
+ * @method array getPackageIds() 获取资源包唯一ID
+ * @method void setPackageIds(array $PackageIds) 设置资源包唯一ID
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  */
-class AuthorizedUser extends AbstractModel
+class BindClusterResourcePackagesRequest extends AbstractModel
 {
     /**
-     * @var string 电子签系统中的用户id
+     * @var array 资源包唯一ID
      */
-    public $UserId;
+    public $PackageIds;
 
     /**
-     * @param string $UserId 电子签系统中的用户id
+     * @var string 集群ID
+     */
+    public $ClusterId;
+
+    /**
+     * @param array $PackageIds 资源包唯一ID
+     * @param string $ClusterId 集群ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class AuthorizedUser extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists("PackageIds",$param) and $param["PackageIds"] !== null) {
+            $this->PackageIds = $param["PackageIds"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

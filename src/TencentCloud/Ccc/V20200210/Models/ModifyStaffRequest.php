@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取应用ID
  * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
- * @method string getEmail() 获取坐席账户
- * @method void setEmail(string $Email) 设置坐席账户
- * @method string getName() 获取坐席名称
- * @method void setName(string $Name) 设置坐席名称
- * @method string getPhone() 获取坐席手机号（带0086前缀,示例：008618011111111）
- * @method void setPhone(string $Phone) 设置坐席手机号（带0086前缀,示例：008618011111111）
- * @method string getNick() 获取坐席昵称
- * @method void setNick(string $Nick) 设置坐席昵称
+ * @method string getEmail() 获取座席账户
+ * @method void setEmail(string $Email) 设置座席账户
+ * @method string getName() 获取座席名称
+ * @method void setName(string $Name) 设置座席名称
+ * @method string getPhone() 获取座席手机号（带0086前缀,示例：008618011111111）
+ * @method void setPhone(string $Phone) 设置座席手机号（带0086前缀,示例：008618011111111）
+ * @method string getNick() 获取座席昵称
+ * @method void setNick(string $Nick) 设置座席昵称
  * @method array getSkillGroupIds() 获取绑定技能组ID列表
  * @method void setSkillGroupIds(array $SkillGroupIds) 设置绑定技能组ID列表
  * @method boolean getUseMobileCallOut() 获取是否开启手机外呼开关
@@ -45,22 +45,22 @@ class ModifyStaffRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string 坐席账户
+     * @var string 座席账户
      */
     public $Email;
 
     /**
-     * @var string 坐席名称
+     * @var string 座席名称
      */
     public $Name;
 
     /**
-     * @var string 坐席手机号（带0086前缀,示例：008618011111111）
+     * @var string 座席手机号（带0086前缀,示例：008618011111111）
      */
     public $Phone;
 
     /**
-     * @var string 坐席昵称
+     * @var string 座席昵称
      */
     public $Nick;
 
@@ -81,10 +81,10 @@ class ModifyStaffRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId 应用ID
-     * @param string $Email 坐席账户
-     * @param string $Name 坐席名称
-     * @param string $Phone 坐席手机号（带0086前缀,示例：008618011111111）
-     * @param string $Nick 坐席昵称
+     * @param string $Email 座席账户
+     * @param string $Name 座席名称
+     * @param string $Phone 座席手机号（带0086前缀,示例：008618011111111）
+     * @param string $Nick 座席昵称
      * @param array $SkillGroupIds 绑定技能组ID列表
      * @param boolean $UseMobileCallOut 是否开启手机外呼开关
      * @param integer $UseMobileAccept 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终

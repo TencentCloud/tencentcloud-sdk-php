@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 授权用户
+ * RefundResourcePackage请求参数结构体
  *
- * @method string getUserId() 获取电子签系统中的用户id
- * @method void setUserId(string $UserId) 设置电子签系统中的用户id
+ * @method string getPackageId() 获取资源包唯一ID
+ * @method void setPackageId(string $PackageId) 设置资源包唯一ID
  */
-class AuthorizedUser extends AbstractModel
+class RefundResourcePackageRequest extends AbstractModel
 {
     /**
-     * @var string 电子签系统中的用户id
+     * @var string 资源包唯一ID
      */
-    public $UserId;
+    public $PackageId;
 
     /**
-     * @param string $UserId 电子签系统中的用户id
+     * @param string $PackageId 资源包唯一ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class AuthorizedUser extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
+            $this->PackageId = $param["PackageId"];
         }
     }
 }

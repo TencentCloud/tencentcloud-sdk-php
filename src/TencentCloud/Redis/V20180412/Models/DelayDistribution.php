@@ -20,40 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 延时分布详情
  *
- * @method integer getLadder() 获取分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。
- * @method void setLadder(integer $Ladder) 设置分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。
- * @method integer getSize() 获取延时处于当前分布阶梯的命令数量，个。
- * @method void setSize(integer $Size) 设置延时处于当前分布阶梯的命令数量，个。
+ * @method integer getLadder() 获取指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。
+ * @method void setLadder(integer $Ladder) 设置指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。
+ * @method integer getSize() 获取延时处于当前分布阶梯的命令数量，单位：个。
+ * @method void setSize(integer $Size) 设置延时处于当前分布阶梯的命令数量，单位：个。
  * @method integer getUpdatetime() 获取修改时间。
  * @method void setUpdatetime(integer $Updatetime) 设置修改时间。
  */
 class DelayDistribution extends AbstractModel
 {
     /**
-     * @var integer 分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。
+     * @var integer 指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。
      */
     public $Ladder;
 
     /**
-     * @var integer 延时处于当前分布阶梯的命令数量，个。
+     * @var integer 延时处于当前分布阶梯的命令数量，单位：个。
      */
     public $Size;
 
@@ -63,14 +63,14 @@ class DelayDistribution extends AbstractModel
     public $Updatetime;
 
     /**
-     * @param integer $Ladder 分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。
-     * @param integer $Size 延时处于当前分布阶梯的命令数量，个。
+     * @param integer $Ladder 指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。
+     * @param integer $Size 延时处于当前分布阶梯的命令数量，单位：个。
      * @param integer $Updatetime 修改时间。
      */
     function __construct()

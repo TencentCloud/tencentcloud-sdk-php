@@ -117,13 +117,13 @@ baseline/main/high。默认baseline
  * @method integer getShortEdgeAsHeight() 获取是否以短边作为高度，0：否，1：是。默认0。
  * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) 设置是否以短边作为高度，0：否，1：是。默认0。
  * @method string getDRMType() 获取DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
  * @method void setDRMType(string $DRMType) 设置DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
  * @method string getDRMTracks() 获取DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
  * @method void setDRMTracks(string $DRMTracks) 设置DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -257,13 +257,13 @@ baseline/main/high。默认baseline
 
     /**
      * @var string DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      */
     public $DRMType;
 
     /**
      * @var string DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      */
     public $DRMTracks;
 
@@ -317,9 +317,9 @@ baseline/main/high。默认baseline
 取值范围：0.0到0.5
      * @param integer $ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
      * @param string $DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      * @param string $DRMTracks DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      */
     function __construct()
     {

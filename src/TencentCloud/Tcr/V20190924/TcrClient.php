@@ -71,6 +71,8 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DeleteRepositoryPersonalResponse DeleteRepositoryPersonal(Models\DeleteRepositoryPersonalRequest $req) 用于个人版镜像仓库中删除
  * @method Models\DeleteRepositoryTagsResponse DeleteRepositoryTags(Models\DeleteRepositoryTagsRequest $req) 用于企业版批量删除Repository Tag
  * @method Models\DeleteSecurityPolicyResponse DeleteSecurityPolicy(Models\DeleteSecurityPolicyRequest $req) 删除实例公网访问白名单策略
+
+注意：当PolicyIndex和CidrBlock同时存在时，CidrBlock优先级更高
  * @method Models\DeleteSignaturePolicyResponse DeleteSignaturePolicy(Models\DeleteSignaturePolicyRequest $req) 删除命名空间加签策略
  * @method Models\DeleteTagRetentionRuleResponse DeleteTagRetentionRule(Models\DeleteTagRetentionRuleRequest $req) 删除版本保留规则
  * @method Models\DeleteWebhookTriggerResponse DeleteWebhookTrigger(Models\DeleteWebhookTriggerRequest $req) 删除触发器

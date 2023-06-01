@@ -18,28 +18,28 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 人工审核接口返回结果，由ContentId和BatchId组成
+ * 入参过滤条件
  *
- * @method string getBatchId() 获取人审内容批次号
- * @method void setBatchId(string $BatchId) 设置人审内容批次号
- * @method string getContentId() 获取人审内容ID
- * @method void setContentId(string $ContentId) 设置人审内容ID
+ * @method string getName() 获取查询字段
+ * @method void setName(string $Name) 设置查询字段
+ * @method array getValues() 获取查询值
+ * @method void setValues(array $Values) 设置查询值
  */
-class ManualReviewData extends AbstractModel
+class Filters extends AbstractModel
 {
     /**
-     * @var string 人审内容批次号
+     * @var string 查询字段
      */
-    public $BatchId;
+    public $Name;
 
     /**
-     * @var string 人审内容ID
+     * @var array 查询值
      */
-    public $ContentId;
+    public $Values;
 
     /**
-     * @param string $BatchId 人审内容批次号
-     * @param string $ContentId 人审内容ID
+     * @param string $Name 查询字段
+     * @param array $Values 查询值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ManualReviewData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
-            $this->BatchId = $param["BatchId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("ContentId",$param) and $param["ContentId"] !== null) {
-            $this->ContentId = $param["ContentId"];
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

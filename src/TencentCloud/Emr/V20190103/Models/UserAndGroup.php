@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cms\V20190321\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 图片二维码详情
+ * 容器集群用户组信息
  *
- * @method integer getModerationCode() 获取检测是否成功，0：成功，-1：出错
+ * @method string getUserName() 获取用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModerationCode(integer $ModerationCode) 设置检测是否成功，0：成功，-1：出错
+ * @method void setUserName(string $UserName) 设置用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getModerationDetail() 获取从图片中检测到的二维码，可能为多个
+ * @method string getUserGroup() 获取用户组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModerationDetail(array $ModerationDetail) 设置从图片中检测到的二维码，可能为多个
+ * @method void setUserGroup(string $UserGroup) 设置用户组
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class CodeDetect extends AbstractModel
+class UserAndGroup extends AbstractModel
 {
     /**
-     * @var integer 检测是否成功，0：成功，-1：出错
+     * @var string 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ModerationCode;
+    public $UserName;
 
     /**
-     * @var array 从图片中检测到的二维码，可能为多个
+     * @var string 用户组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ModerationDetail;
+    public $UserGroup;
 
     /**
-     * @param integer $ModerationCode 检测是否成功，0：成功，-1：出错
+     * @param string $UserName 用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ModerationDetail 从图片中检测到的二维码，可能为多个
+     * @param string $UserGroup 用户组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,17 +62,12 @@ class CodeDetect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModerationCode",$param) and $param["ModerationCode"] !== null) {
-            $this->ModerationCode = $param["ModerationCode"];
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
 
-        if (array_key_exists("ModerationDetail",$param) and $param["ModerationDetail"] !== null) {
-            $this->ModerationDetail = [];
-            foreach ($param["ModerationDetail"] as $key => $value){
-                $obj = new CodeDetail();
-                $obj->deserialize($value);
-                array_push($this->ModerationDetail, $obj);
-            }
+        if (array_key_exists("UserGroup",$param) and $param["UserGroup"] !== null) {
+            $this->UserGroup = $param["UserGroup"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cms\V20190321\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteTextSample请求参数结构体
+ * ModifyAccountConfig返回参数结构体
  *
- * @method array getIds() 获取唯一标识数组，目前暂时只支持单个删除
- * @method void setIds(array $Ids) 设置唯一标识数组，目前暂时只支持单个删除
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteTextSampleRequest extends AbstractModel
+class ModifyAccountConfigResponse extends AbstractModel
 {
     /**
-     * @var array 唯一标识数组，目前暂时只支持单个删除
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Ids;
+    public $RequestId;
 
     /**
-     * @param array $Ids 唯一标识数组，目前暂时只支持单个删除
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteTextSampleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
-            $this->Ids = $param["Ids"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

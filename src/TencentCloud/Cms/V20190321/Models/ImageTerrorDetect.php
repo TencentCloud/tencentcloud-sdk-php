@@ -20,58 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片暴恐详情
  *
+ * @method array getKeywords() 获取关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeywords(array $Keywords) 设置关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEvilType() 获取恶意类型
 100：正常
 24001：暴恐
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常
 24001：暴恐
- * @method integer getHitFlag() 获取处置判定 0：正常 1：可疑
- * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：正常 1：可疑
- * @method array getKeywords() 获取关键词明细
- * @method void setKeywords(array $Keywords) 设置关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabels() 获取暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHitFlag() 获取处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageTerrorDetect extends AbstractModel
 {
     /**
-     * @var integer 恶意类型
-100：正常
-24001：暴恐
-     */
-    public $EvilType;
-
-    /**
-     * @var integer 处置判定 0：正常 1：可疑
-     */
-    public $HitFlag;
-
-    /**
      * @var array 关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keywords;
 
     /**
+     * @var integer 恶意类型
+100：正常
+24001：暴恐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EvilType;
+
+    /**
      * @var array 暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
      * @var integer 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
+     * @var integer 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HitFlag;
+
+    /**
+     * @param array $Keywords 关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EvilType 恶意类型
 100：正常
 24001：暴恐
-     * @param integer $HitFlag 处置判定 0：正常 1：可疑
-     * @param array $Keywords 关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HitFlag 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -86,16 +106,12 @@ class ImageTerrorDetect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
-        }
-
-        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
-            $this->HitFlag = $param["HitFlag"];
-        }
-
         if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
             $this->Keywords = $param["Keywords"];
+        }
+
+        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
+            $this->EvilType = $param["EvilType"];
         }
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
@@ -104,6 +120,10 @@ class ImageTerrorDetect extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
+            $this->HitFlag = $param["HitFlag"];
         }
     }
 }

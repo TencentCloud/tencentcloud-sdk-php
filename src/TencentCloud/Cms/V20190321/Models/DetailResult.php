@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文本返回的详细结果
  *
- * @method string getEvilLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
- * @method void setEvilLabel(string $EvilLabel) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+ * @method array getKeywords() 获取该标签下命中的关键词
+ * @method void setKeywords(array $Keywords) 设置该标签下命中的关键词
  * @method integer getEvilType() 获取恶意类型
 100：正常
 20001：政治
@@ -38,17 +38,17 @@ use TencentCloud\Common\AbstractModel;
 20007：谩骂
 20105：广告引流 
 24001：暴恐
- * @method array getKeywords() 获取该标签下命中的关键词
- * @method void setKeywords(array $Keywords) 设置该标签下命中的关键词
  * @method integer getScore() 获取该标签模型命中的分值
  * @method void setScore(integer $Score) 设置该标签模型命中的分值
+ * @method string getEvilLabel() 获取恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+ * @method void setEvilLabel(string $EvilLabel) 设置恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
  */
 class DetailResult extends AbstractModel
 {
     /**
-     * @var string 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @var array 该标签下命中的关键词
      */
-    public $EvilLabel;
+    public $Keywords;
 
     /**
      * @var integer 恶意类型
@@ -63,17 +63,17 @@ class DetailResult extends AbstractModel
     public $EvilType;
 
     /**
-     * @var array 该标签下命中的关键词
-     */
-    public $Keywords;
-
-    /**
      * @var integer 该标签模型命中的分值
      */
     public $Score;
 
     /**
-     * @param string $EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @var string 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     */
+    public $EvilLabel;
+
+    /**
+     * @param array $Keywords 该标签下命中的关键词
      * @param integer $EvilType 恶意类型
 100：正常
 20001：政治
@@ -82,8 +82,8 @@ class DetailResult extends AbstractModel
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-     * @param array $Keywords 该标签下命中的关键词
      * @param integer $Score 该标签模型命中的分值
+     * @param string $EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
      */
     function __construct()
     {
@@ -98,20 +98,20 @@ class DetailResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilLabel",$param) and $param["EvilLabel"] !== null) {
-            $this->EvilLabel = $param["EvilLabel"];
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
         }
 
         if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
             $this->EvilType = $param["EvilType"];
         }
 
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
-            $this->Keywords = $param["Keywords"];
-        }
-
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("EvilLabel",$param) and $param["EvilLabel"] !== null) {
+            $this->EvilLabel = $param["EvilLabel"];
         }
     }
 }

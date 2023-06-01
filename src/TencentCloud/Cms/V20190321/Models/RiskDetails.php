@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getKeywords() 获取预留字段，暂时不使用
  * @method void setKeywords(array $Keywords) 设置预留字段，暂时不使用
- * @method string getLabel() 获取风险类别，RiskAccount，RiskIP, RiskIMEI
- * @method void setLabel(string $Label) 设置风险类别，RiskAccount，RiskIP, RiskIMEI
  * @method string getLable() 获取预留字段，暂时不用
  * @method void setLable(string $Lable) 设置预留字段，暂时不用
+ * @method string getLabel() 获取风险类别，RiskAccount，RiskIP, RiskIMEI
+ * @method void setLabel(string $Label) 设置风险类别，RiskAccount，RiskIP, RiskIMEI
  * @method integer getLevel() 获取风险等级，1:疑似，2：恶意
  * @method void setLevel(integer $Level) 设置风险等级，1:疑似，2：恶意
  */
@@ -37,14 +37,14 @@ class RiskDetails extends AbstractModel
     public $Keywords;
 
     /**
-     * @var string 风险类别，RiskAccount，RiskIP, RiskIMEI
-     */
-    public $Label;
-
-    /**
      * @var string 预留字段，暂时不用
      */
     public $Lable;
+
+    /**
+     * @var string 风险类别，RiskAccount，RiskIP, RiskIMEI
+     */
+    public $Label;
 
     /**
      * @var integer 风险等级，1:疑似，2：恶意
@@ -53,8 +53,8 @@ class RiskDetails extends AbstractModel
 
     /**
      * @param array $Keywords 预留字段，暂时不使用
-     * @param string $Label 风险类别，RiskAccount，RiskIP, RiskIMEI
      * @param string $Lable 预留字段，暂时不用
+     * @param string $Label 风险类别，RiskAccount，RiskIP, RiskIMEI
      * @param integer $Level 风险等级，1:疑似，2：恶意
      */
     function __construct()
@@ -74,12 +74,12 @@ class RiskDetails extends AbstractModel
             $this->Keywords = $param["Keywords"];
         }
 
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
-        }
-
         if (array_key_exists("Lable",$param) and $param["Lable"] !== null) {
             $this->Lable = $param["Lable"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
         }
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {

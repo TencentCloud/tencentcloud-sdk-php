@@ -20,50 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * logo位置信息
  *
- * @method float getCx() 获取logo横坐标
- * @method void setCx(float $Cx) 设置logo横坐标
- * @method float getCy() 获取logo纵坐标
- * @method void setCy(float $Cy) 设置logo纵坐标
- * @method float getHeight() 获取logo图标高度
- * @method void setHeight(float $Height) 设置logo图标高度
- * @method float getRotate() 获取logo图标中心旋转度
- * @method void setRotate(float $Rotate) 设置logo图标中心旋转度
  * @method float getWidth() 获取logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(float $Width) 设置logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCy() 获取logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCy(float $Cy) 设置logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCx() 获取logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCx(float $Cx) 设置logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getRotate() 获取logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRotate(float $Rotate) 设置logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getHeight() 获取logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeight(float $Height) 设置logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RrectF extends AbstractModel
 {
     /**
-     * @var float logo横坐标
-     */
-    public $Cx;
-
-    /**
-     * @var float logo纵坐标
-     */
-    public $Cy;
-
-    /**
-     * @var float logo图标高度
-     */
-    public $Height;
-
-    /**
-     * @var float logo图标中心旋转度
-     */
-    public $Rotate;
-
-    /**
      * @var float logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @param float $Cx logo横坐标
-     * @param float $Cy logo纵坐标
-     * @param float $Height logo图标高度
-     * @param float $Rotate logo图标中心旋转度
+     * @var float logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cy;
+
+    /**
+     * @var float logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cx;
+
+    /**
+     * @var float logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Rotate;
+
+    /**
+     * @var float logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Height;
+
+    /**
      * @param float $Width logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Cy logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Cx logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Rotate logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Height logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -78,24 +98,24 @@ class RrectF extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cx",$param) and $param["Cx"] !== null) {
-            $this->Cx = $param["Cx"];
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
         }
 
         if (array_key_exists("Cy",$param) and $param["Cy"] !== null) {
             $this->Cy = $param["Cy"];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists("Cx",$param) and $param["Cx"] !== null) {
+            $this->Cx = $param["Cx"];
         }
 
         if (array_key_exists("Rotate",$param) and $param["Rotate"] !== null) {
             $this->Rotate = $param["Rotate"];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
         }
     }
 }

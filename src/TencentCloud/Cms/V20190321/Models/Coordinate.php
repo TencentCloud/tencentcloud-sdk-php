@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 坐标
  *
- * @method integer getCx() 获取左上角横坐标
- * @method void setCx(integer $Cx) 设置左上角横坐标
- * @method integer getCy() 获取左上角纵坐标
- * @method void setCy(integer $Cy) 设置左上角纵坐标
- * @method integer getHeight() 获取高度
- * @method void setHeight(integer $Height) 设置高度
  * @method integer getWidth() 获取宽度
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCy() 获取左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCy(integer $Cy) 设置左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCx() 获取左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCx(integer $Cx) 设置左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHeight() 获取高度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeight(integer $Height) 设置高度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Coordinate extends AbstractModel
 {
     /**
-     * @var integer 左上角横坐标
-     */
-    public $Cx;
-
-    /**
-     * @var integer 左上角纵坐标
-     */
-    public $Cy;
-
-    /**
-     * @var integer 高度
-     */
-    public $Height;
-
-    /**
      * @var integer 宽度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @param integer $Cx 左上角横坐标
-     * @param integer $Cy 左上角纵坐标
-     * @param integer $Height 高度
+     * @var integer 左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cy;
+
+    /**
+     * @var integer 左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cx;
+
+    /**
+     * @var integer 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Height;
+
+    /**
      * @param integer $Width 宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Cy 左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Cx 左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Height 高度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -70,20 +86,20 @@ class Coordinate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Cx",$param) and $param["Cx"] !== null) {
-            $this->Cx = $param["Cx"];
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
         }
 
         if (array_key_exists("Cy",$param) and $param["Cy"] !== null) {
             $this->Cy = $param["Cy"];
         }
 
-        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
-            $this->Height = $param["Height"];
+        if (array_key_exists("Cx",$param) and $param["Cx"] !== null) {
+            $this->Cx = $param["Cx"];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
         }
     }
 }

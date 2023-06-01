@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOperator() 获取操作人,信安处理人企业微信ID
  * @method void setOperator(string $Operator) 设置操作人,信安处理人企业微信ID
+ * @method integer getResultType() 获取恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
+ * @method void setResultType(integer $ResultType) 设置恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
  * @method integer getResultCode() 获取恶意操作码，
 删除（1）， 通过（2）， 先审后发（100012）
  * @method void setResultCode(integer $ResultCode) 设置恶意操作码，
 删除（1）， 通过（2）， 先审后发（100012）
  * @method string getResultMsg() 获取操作结果备注说明
  * @method void setResultMsg(string $ResultMsg) 设置操作结果备注说明
- * @method integer getResultType() 获取恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
- * @method void setResultType(integer $ResultType) 设置恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
  */
 class TextOutputRes extends AbstractModel
 {
@@ -37,6 +37,11 @@ class TextOutputRes extends AbstractModel
      * @var string 操作人,信安处理人企业微信ID
      */
     public $Operator;
+
+    /**
+     * @var integer 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
+     */
+    public $ResultType;
 
     /**
      * @var integer 恶意操作码，
@@ -50,16 +55,11 @@ class TextOutputRes extends AbstractModel
     public $ResultMsg;
 
     /**
-     * @var integer 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
-     */
-    public $ResultType;
-
-    /**
      * @param string $Operator 操作人,信安处理人企业微信ID
+     * @param integer $ResultType 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
      * @param integer $ResultCode 恶意操作码，
 删除（1）， 通过（2）， 先审后发（100012）
      * @param string $ResultMsg 操作结果备注说明
-     * @param integer $ResultType 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
      */
     function __construct()
     {
@@ -78,16 +78,16 @@ class TextOutputRes extends AbstractModel
             $this->Operator = $param["Operator"];
         }
 
+        if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
+            $this->ResultType = $param["ResultType"];
+        }
+
         if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
             $this->ResultCode = $param["ResultCode"];
         }
 
         if (array_key_exists("ResultMsg",$param) and $param["ResultMsg"] !== null) {
             $this->ResultMsg = $param["ResultMsg"];
-        }
-
-        if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
-            $this->ResultType = $param["ResultType"];
         }
     }
 }

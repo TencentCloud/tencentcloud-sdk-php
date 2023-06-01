@@ -138,11 +138,13 @@ class SentenceRecognitionRequest extends AbstractModel
 
     /**
      * @var integer 腾讯云项目 ID，废弃参数，填写0即可。
+     * @deprecated
      */
     public $ProjectId;
 
     /**
      * @var integer 子服务类型。2： 一句话识别。
+     * @deprecated
      */
     public $SubServiceType;
 
@@ -153,6 +155,7 @@ class SentenceRecognitionRequest extends AbstractModel
 
     /**
      * @var string 废弃参数，填写任意字符串即可。
+     * @deprecated
      */
     public $UsrAudioKey;
 

@@ -20,22 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 消息类输出公共参数
  *
- * @method integer getAppID() 获取接入业务的唯一ID
- * @method void setAppID(integer $AppID) 设置接入业务的唯一ID
  * @method integer getBUCtrlID() 获取接口唯一ID，旁路调用接口返回有该字段，标识唯一接口
  * @method void setBUCtrlID(integer $BUCtrlID) 设置接口唯一ID，旁路调用接口返回有该字段，标识唯一接口
  * @method integer getSendTime() 获取消息发送时间
  * @method void setSendTime(integer $SendTime) 设置消息发送时间
+ * @method integer getAppID() 获取接入业务的唯一ID
+ * @method void setAppID(integer $AppID) 设置接入业务的唯一ID
  * @method integer getUin() 获取请求字段里的Common.Uin
  * @method void setUin(integer $Uin) 设置请求字段里的Common.Uin
  */
 class TextOutputComm extends AbstractModel
 {
-    /**
-     * @var integer 接入业务的唯一ID
-     */
-    public $AppID;
-
     /**
      * @var integer 接口唯一ID，旁路调用接口返回有该字段，标识唯一接口
      */
@@ -47,14 +42,19 @@ class TextOutputComm extends AbstractModel
     public $SendTime;
 
     /**
+     * @var integer 接入业务的唯一ID
+     */
+    public $AppID;
+
+    /**
      * @var integer 请求字段里的Common.Uin
      */
     public $Uin;
 
     /**
-     * @param integer $AppID 接入业务的唯一ID
      * @param integer $BUCtrlID 接口唯一ID，旁路调用接口返回有该字段，标识唯一接口
      * @param integer $SendTime 消息发送时间
+     * @param integer $AppID 接入业务的唯一ID
      * @param integer $Uin 请求字段里的Common.Uin
      */
     function __construct()
@@ -70,16 +70,16 @@ class TextOutputComm extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppID",$param) and $param["AppID"] !== null) {
-            $this->AppID = $param["AppID"];
-        }
-
         if (array_key_exists("BUCtrlID",$param) and $param["BUCtrlID"] !== null) {
             $this->BUCtrlID = $param["BUCtrlID"];
         }
 
         if (array_key_exists("SendTime",$param) and $param["SendTime"] !== null) {
             $this->SendTime = $param["SendTime"];
+        }
+
+        if (array_key_exists("AppID",$param) and $param["AppID"] !== null) {
+            $this->AppID = $param["AppID"];
         }
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {

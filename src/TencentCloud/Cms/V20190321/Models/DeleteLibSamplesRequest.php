@@ -18,20 +18,28 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ManualReview请求参数结构体
+ * DeleteLibSamples请求参数结构体
  *
- * @method ManualReviewContent getReviewContent() 获取人工审核信息
- * @method void setReviewContent(ManualReviewContent $ReviewContent) 设置人工审核信息
+ * @method array getSampleIDs() 获取关键词ID
+ * @method void setSampleIDs(array $SampleIDs) 设置关键词ID
+ * @method string getLibID() 获取词库ID
+ * @method void setLibID(string $LibID) 设置词库ID
  */
-class ManualReviewRequest extends AbstractModel
+class DeleteLibSamplesRequest extends AbstractModel
 {
     /**
-     * @var ManualReviewContent 人工审核信息
+     * @var array 关键词ID
      */
-    public $ReviewContent;
+    public $SampleIDs;
 
     /**
-     * @param ManualReviewContent $ReviewContent 人工审核信息
+     * @var string 词库ID
+     */
+    public $LibID;
+
+    /**
+     * @param array $SampleIDs 关键词ID
+     * @param string $LibID 词库ID
      */
     function __construct()
     {
@@ -46,9 +54,12 @@ class ManualReviewRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReviewContent",$param) and $param["ReviewContent"] !== null) {
-            $this->ReviewContent = new ManualReviewContent();
-            $this->ReviewContent->deserialize($param["ReviewContent"]);
+        if (array_key_exists("SampleIDs",$param) and $param["SampleIDs"] !== null) {
+            $this->SampleIDs = $param["SampleIDs"];
+        }
+
+        if (array_key_exists("LibID",$param) and $param["LibID"] !== null) {
+            $this->LibID = $param["LibID"];
         }
     }
 }

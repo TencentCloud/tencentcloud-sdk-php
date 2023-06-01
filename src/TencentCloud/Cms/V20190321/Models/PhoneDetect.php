@@ -23,15 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEvilType() 获取恶意类型
 100：正常
 21000：综合
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常
 21000：综合
- * @method integer getHitFlag() 获取处置判定 0：正常 1：可疑
- * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabels() 获取特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHitFlag() 获取处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PhoneDetect extends AbstractModel
 {
@@ -39,31 +47,39 @@ class PhoneDetect extends AbstractModel
      * @var integer 恶意类型
 100：正常
 21000：综合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvilType;
 
     /**
-     * @var integer 处置判定 0：正常 1：可疑
-     */
-    public $HitFlag;
-
-    /**
      * @var array 特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
      * @var integer 分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
+
+    /**
+     * @var integer 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HitFlag;
 
     /**
      * @param integer $EvilType 恶意类型
 100：正常
 21000：综合
-     * @param integer $HitFlag 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HitFlag 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -82,16 +98,16 @@ class PhoneDetect extends AbstractModel
             $this->EvilType = $param["EvilType"];
         }
 
-        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
-            $this->HitFlag = $param["HitFlag"];
-        }
-
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
             $this->Labels = $param["Labels"];
         }
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
+            $this->HitFlag = $param["HitFlag"];
         }
     }
 }

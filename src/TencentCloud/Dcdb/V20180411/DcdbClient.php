@@ -79,6 +79,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstance(Models\IsolateDedicatedDBInstanceRequest $req) 本接口（IsolateDedicatedDBInstance）用于隔离独享云数据库实例。
  * @method Models\IsolateHourDCDBInstanceResponse IsolateHourDCDBInstance(Models\IsolateHourDCDBInstanceRequest $req) 隔离TDSQL按量计费实例
  * @method Models\KillSessionResponse KillSession(Models\KillSessionRequest $req) 本接口（KillSession）用于杀死指定会话。
+ * @method Models\ModifyAccountConfigResponse ModifyAccountConfig(Models\ModifyAccountConfigRequest $req) 修改账号的一些配置，比如 max_user_connections
  * @method Models\ModifyAccountDescriptionResponse ModifyAccountDescription(Models\ModifyAccountDescriptionRequest $req) 本接口（ModifyAccountDescription）用于修改云数据库账号备注。
 注意：相同用户名，不同Host是不同的账号。
  * @method Models\ModifyAccountPrivilegesResponse ModifyAccountPrivileges(Models\ModifyAccountPrivilegesRequest $req) 本接口(ModifyAccountPrivileges)用于修改云数据库的账户的权限信息。

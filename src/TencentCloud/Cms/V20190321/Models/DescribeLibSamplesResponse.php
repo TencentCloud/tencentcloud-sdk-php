@@ -18,26 +18,26 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTextSample返回参数结构体
+ * DescribeLibSamples返回参数结构体
  *
- * @method array getTextSampleSet() 获取符合要求的样本的信息
- * @method void setTextSampleSet(array $TextSampleSet) 设置符合要求的样本的信息
- * @method integer getTotalCount() 获取符合要求的样本的数量
- * @method void setTotalCount(integer $TotalCount) 设置符合要求的样本的数量
+ * @method integer getTotalCount() 获取词记录数
+ * @method void setTotalCount(integer $TotalCount) 设置词记录数
+ * @method array getInfos() 获取词详情
+ * @method void setInfos(array $Infos) 设置词详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTextSampleResponse extends AbstractModel
+class DescribeLibSamplesResponse extends AbstractModel
 {
     /**
-     * @var array 符合要求的样本的信息
-     */
-    public $TextSampleSet;
-
-    /**
-     * @var integer 符合要求的样本的数量
+     * @var integer 词记录数
      */
     public $TotalCount;
+
+    /**
+     * @var array 词详情
+     */
+    public $Infos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeTextSampleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TextSampleSet 符合要求的样本的信息
-     * @param integer $TotalCount 符合要求的样本的数量
+     * @param integer $TotalCount 词记录数
+     * @param array $Infos 词详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeTextSampleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TextSampleSet",$param) and $param["TextSampleSet"] !== null) {
-            $this->TextSampleSet = [];
-            foreach ($param["TextSampleSet"] as $key => $value){
-                $obj = new TextSample();
-                $obj->deserialize($value);
-                array_push($this->TextSampleSet, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Infos",$param) and $param["Infos"] !== null) {
+            $this->Infos = [];
+            foreach ($param["Infos"] as $key => $value){
+                $obj = new UserKeywordInfo();
+                $obj->deserialize($value);
+                array_push($this->Infos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

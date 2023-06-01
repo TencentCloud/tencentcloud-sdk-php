@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getKeywords() 获取命中的自定义关键词
  * @method void setKeywords(array $Keywords) 设置命中的自定义关键词
- * @method string getLibId() 获取自定义库id
- * @method void setLibId(string $LibId) 设置自定义库id
  * @method string getLibName() 获取自定义词库名称
  * @method void setLibName(string $LibName) 设置自定义词库名称
+ * @method string getLibId() 获取自定义库id
+ * @method void setLibId(string $LibId) 设置自定义库id
  * @method string getType() 获取命中的自定义关键词的类型
  * @method void setType(string $Type) 设置命中的自定义关键词的类型
  */
@@ -37,14 +37,14 @@ class CustomResult extends AbstractModel
     public $Keywords;
 
     /**
-     * @var string 自定义库id
-     */
-    public $LibId;
-
-    /**
      * @var string 自定义词库名称
      */
     public $LibName;
+
+    /**
+     * @var string 自定义库id
+     */
+    public $LibId;
 
     /**
      * @var string 命中的自定义关键词的类型
@@ -53,8 +53,8 @@ class CustomResult extends AbstractModel
 
     /**
      * @param array $Keywords 命中的自定义关键词
-     * @param string $LibId 自定义库id
      * @param string $LibName 自定义词库名称
+     * @param string $LibId 自定义库id
      * @param string $Type 命中的自定义关键词的类型
      */
     function __construct()
@@ -74,12 +74,12 @@ class CustomResult extends AbstractModel
             $this->Keywords = $param["Keywords"];
         }
 
-        if (array_key_exists("LibId",$param) and $param["LibId"] !== null) {
-            $this->LibId = $param["LibId"];
-        }
-
         if (array_key_exists("LibName",$param) and $param["LibName"] !== null) {
             $this->LibName = $param["LibName"];
+        }
+
+        if (array_key_exists("LibId",$param) and $param["LibId"] !== null) {
+            $this->LibId = $param["LibId"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {

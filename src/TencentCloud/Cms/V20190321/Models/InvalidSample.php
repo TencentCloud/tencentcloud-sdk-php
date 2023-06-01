@@ -18,47 +18,47 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Logo审核结果
+ * 无效关键词
  *
- * @method float getConfidence() 获取logo图标置信度
+ * @method string getContent() 获取关键词
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfidence(float $Confidence) 设置logo图标置信度
+ * @method void setContent(string $Content) 设置关键词
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RrectF getRrectF() 获取logo图标坐标信息
+ * @method integer getInvalidCode() 获取无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRrectF(RrectF $RrectF) 设置logo图标坐标信息
+ * @method void setInvalidCode(integer $InvalidCode) 设置无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取logo图标名称
+ * @method string getInvalidMessage() 获取无效描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置logo图标名称
+ * @method void setInvalidMessage(string $InvalidMessage) 设置无效描述
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Logo extends AbstractModel
+class InvalidSample extends AbstractModel
 {
     /**
-     * @var float logo图标置信度
+     * @var string 关键词
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Confidence;
+    public $Content;
 
     /**
-     * @var RrectF logo图标坐标信息
+     * @var integer 无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RrectF;
+    public $InvalidCode;
 
     /**
-     * @var string logo图标名称
+     * @var string 无效描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Name;
+    public $InvalidMessage;
 
     /**
-     * @param float $Confidence logo图标置信度
+     * @param string $Content 关键词
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RrectF $RrectF logo图标坐标信息
+     * @param integer $InvalidCode 无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name logo图标名称
+     * @param string $InvalidMessage 无效描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,17 +74,16 @@ class Logo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
 
-        if (array_key_exists("RrectF",$param) and $param["RrectF"] !== null) {
-            $this->RrectF = new RrectF();
-            $this->RrectF->deserialize($param["RrectF"]);
+        if (array_key_exists("InvalidCode",$param) and $param["InvalidCode"] !== null) {
+            $this->InvalidCode = $param["InvalidCode"];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("InvalidMessage",$param) and $param["InvalidMessage"] !== null) {
+            $this->InvalidMessage = $param["InvalidMessage"];
         }
     }
 }

@@ -101,16 +101,19 @@ class TriggerInfo extends AbstractModel
 
     /**
      * @var string 触发器最小资源ID
+     * @deprecated
      */
     public $ResourceId;
 
     /**
      * @var string 触发器和云函数绑定状态
+     * @deprecated
      */
     public $BindStatus;
 
     /**
      * @var string 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     * @deprecated
      */
     public $TriggerAttribute;
 

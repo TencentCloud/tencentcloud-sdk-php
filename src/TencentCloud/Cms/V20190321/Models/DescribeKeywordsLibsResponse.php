@@ -18,32 +18,26 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateTextSample返回参数结构体
+ * DescribeKeywordsLibs返回参数结构体
  *
- * @method string getErrMsg() 获取操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
- * @method void setErrMsg(string $ErrMsg) 设置操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
- * @method integer getProgress() 获取任务状态
-1：已完成
-2：处理中
- * @method void setProgress(integer $Progress) 设置任务状态
-1：已完成
-2：处理中
+ * @method integer getTotalCount() 获取词库记录数
+ * @method void setTotalCount(integer $TotalCount) 设置词库记录数
+ * @method array getInfos() 获取词库详情
+ * @method void setInfos(array $Infos) 设置词库详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateTextSampleResponse extends AbstractModel
+class DescribeKeywordsLibsResponse extends AbstractModel
 {
     /**
-     * @var string 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+     * @var integer 词库记录数
      */
-    public $ErrMsg;
+    public $TotalCount;
 
     /**
-     * @var integer 任务状态
-1：已完成
-2：处理中
+     * @var array 词库详情
      */
-    public $Progress;
+    public $Infos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +45,8 @@ class CreateTextSampleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrMsg 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
-     * @param integer $Progress 任务状态
-1：已完成
-2：处理中
+     * @param integer $TotalCount 词库记录数
+     * @param array $Infos 词库详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,12 +62,17 @@ class CreateTextSampleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = $param["ErrMsg"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists("Infos",$param) and $param["Infos"] !== null) {
+            $this->Infos = [];
+            foreach ($param["Infos"] as $key => $value){
+                $obj = new KeywordsLibInfo();
+                $obj->deserialize($value);
+                array_push($this->Infos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

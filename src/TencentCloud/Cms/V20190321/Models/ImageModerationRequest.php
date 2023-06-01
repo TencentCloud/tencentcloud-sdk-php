@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImageModeration请求参数结构体
  *
- * @method string getFileContent() 获取文件内容 Base64,与FileUrl必须二填一
- * @method void setFileContent(string $FileContent) 设置文件内容 Base64,与FileUrl必须二填一
- * @method string getFileMD5() 获取文件MD5值
- * @method void setFileMD5(string $FileMD5) 设置文件MD5值
  * @method string getFileUrl() 获取文件地址
  * @method void setFileUrl(string $FileUrl) 设置文件地址
+ * @method string getFileMD5() 获取文件MD5值
+ * @method void setFileMD5(string $FileMD5) 设置文件MD5值
+ * @method string getFileContent() 获取文件内容 Base64,与FileUrl必须二填一
+ * @method void setFileContent(string $FileContent) 设置文件内容 Base64,与FileUrl必须二填一
  */
 class ImageModerationRequest extends AbstractModel
 {
     /**
-     * @var string 文件内容 Base64,与FileUrl必须二填一
+     * @var string 文件地址
      */
-    public $FileContent;
+    public $FileUrl;
 
     /**
      * @var string 文件MD5值
@@ -40,14 +40,14 @@ class ImageModerationRequest extends AbstractModel
     public $FileMD5;
 
     /**
-     * @var string 文件地址
+     * @var string 文件内容 Base64,与FileUrl必须二填一
      */
-    public $FileUrl;
+    public $FileContent;
 
     /**
-     * @param string $FileContent 文件内容 Base64,与FileUrl必须二填一
-     * @param string $FileMD5 文件MD5值
      * @param string $FileUrl 文件地址
+     * @param string $FileMD5 文件MD5值
+     * @param string $FileContent 文件内容 Base64,与FileUrl必须二填一
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class ImageModerationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
-            $this->FileContent = $param["FileContent"];
+        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
+            $this->FileUrl = $param["FileUrl"];
         }
 
         if (array_key_exists("FileMD5",$param) and $param["FileMD5"] !== null) {
             $this->FileMD5 = $param["FileMD5"];
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists("FileContent",$param) and $param["FileContent"] !== null) {
+            $this->FileContent = $param["FileContent"];
         }
     }
 }

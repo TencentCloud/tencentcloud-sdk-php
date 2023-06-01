@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cms\V20190321\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 筛选数据结构
+ * 配置信息。包含配置项Config，配置值Value
  *
- * @method string getName() 获取需要过滤的字段
- * @method void setName(string $Name) 设置需要过滤的字段
- * @method string getValue() 获取需要过滤字段的值
- * @method void setValue(string $Value) 设置需要过滤字段的值
+ * @method string getConfig() 获取配置项的名称，支持填写max_user_connections
+ * @method void setConfig(string $Config) 设置配置项的名称，支持填写max_user_connections
+ * @method string getValue() 获取配置值
+ * @method void setValue(string $Value) 设置配置值
  */
-class Filter extends AbstractModel
+class ConfigValue extends AbstractModel
 {
     /**
-     * @var string 需要过滤的字段
+     * @var string 配置项的名称，支持填写max_user_connections
      */
-    public $Name;
+    public $Config;
 
     /**
-     * @var string 需要过滤字段的值
+     * @var string 配置值
      */
     public $Value;
 
     /**
-     * @param string $Name 需要过滤的字段
-     * @param string $Value 需要过滤字段的值
+     * @param string $Config 配置项的名称，支持填写max_user_connections
+     * @param string $Value 配置值
      */
     function __construct()
     {
@@ -54,8 +54,8 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = $param["Config"];
         }
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {

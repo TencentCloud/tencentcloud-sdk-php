@@ -37,7 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHitFlag() 获取处置判定 0：未匹配到 1：恶意 2：白样本
  * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：未匹配到 1：恶意 2：白样本
  * @method string getSeedUrl() 获取返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeedUrl(string $SeedUrl) 设置返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Similar extends AbstractModel
 {
@@ -59,6 +61,7 @@ class Similar extends AbstractModel
 
     /**
      * @var string 返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SeedUrl;
 
@@ -72,6 +75,7 @@ class Similar extends AbstractModel
 24001：暴恐
      * @param integer $HitFlag 处置判定 0：未匹配到 1：恶意 2：白样本
      * @param string $SeedUrl 返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

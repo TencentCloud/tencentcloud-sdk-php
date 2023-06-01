@@ -20,39 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片性感详情
  *
+ * @method array getKeywords() 获取关键词明细
+ * @method void setKeywords(array $Keywords) 设置关键词明细
  * @method integer getEvilType() 获取恶意类型
 100：正常
 20103：性感
  * @method void setEvilType(integer $EvilType) 设置恶意类型
 100：正常
 20103：性感
- * @method integer getHitFlag() 获取处置判定 0：正常 1：可疑
- * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：正常 1：可疑
- * @method array getKeywords() 获取关键词明细
- * @method void setKeywords(array $Keywords) 设置关键词明细
  * @method array getLabels() 获取性感标签：性感特征中文描述
  * @method void setLabels(array $Labels) 设置性感标签：性感特征中文描述
  * @method integer getScore() 获取性感分：分值范围 0-100，分数越高性感倾向越明显
  * @method void setScore(integer $Score) 设置性感分：分值范围 0-100，分数越高性感倾向越明显
+ * @method integer getHitFlag() 获取处置判定 0：正常 1：可疑
+ * @method void setHitFlag(integer $HitFlag) 设置处置判定 0：正常 1：可疑
  */
 class ImageHotDetect extends AbstractModel
 {
+    /**
+     * @var array 关键词明细
+     */
+    public $Keywords;
+
     /**
      * @var integer 恶意类型
 100：正常
 20103：性感
      */
     public $EvilType;
-
-    /**
-     * @var integer 处置判定 0：正常 1：可疑
-     */
-    public $HitFlag;
-
-    /**
-     * @var array 关键词明细
-     */
-    public $Keywords;
 
     /**
      * @var array 性感标签：性感特征中文描述
@@ -65,13 +60,18 @@ class ImageHotDetect extends AbstractModel
     public $Score;
 
     /**
+     * @var integer 处置判定 0：正常 1：可疑
+     */
+    public $HitFlag;
+
+    /**
+     * @param array $Keywords 关键词明细
      * @param integer $EvilType 恶意类型
 100：正常
 20103：性感
-     * @param integer $HitFlag 处置判定 0：正常 1：可疑
-     * @param array $Keywords 关键词明细
      * @param array $Labels 性感标签：性感特征中文描述
      * @param integer $Score 性感分：分值范围 0-100，分数越高性感倾向越明显
+     * @param integer $HitFlag 处置判定 0：正常 1：可疑
      */
     function __construct()
     {
@@ -86,16 +86,12 @@ class ImageHotDetect extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
-            $this->EvilType = $param["EvilType"];
-        }
-
-        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
-            $this->HitFlag = $param["HitFlag"];
-        }
-
         if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
             $this->Keywords = $param["Keywords"];
+        }
+
+        if (array_key_exists("EvilType",$param) and $param["EvilType"] !== null) {
+            $this->EvilType = $param["EvilType"];
         }
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
@@ -104,6 +100,10 @@ class ImageHotDetect extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
+            $this->HitFlag = $param["HitFlag"];
         }
     }
 }

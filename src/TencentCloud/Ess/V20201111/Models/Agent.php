@@ -33,11 +33,13 @@ class Agent extends AbstractModel
 {
     /**
      * @var string 代理机构的应用编号,32位字符串，一般不用传
+     * @deprecated
      */
     public $AppId;
 
     /**
      * @var string 被代理机构的应用号，一般不用传
+     * @deprecated
      */
     public $ProxyAppId;
 
@@ -48,6 +50,7 @@ class Agent extends AbstractModel
 
     /**
      * @var string 被代理机构的经办人，一般不用传
+     * @deprecated
      */
     public $ProxyOperator;
 

@@ -287,6 +287,7 @@ class BillResourceSummary extends AbstractModel
 
     /**
      * @var string 节省计划抵扣金额（已废弃）
+     * @deprecated
      */
     public $SPDeduction;
 

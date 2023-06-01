@@ -18,20 +18,24 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * LogoDetail
+ * Logo命中详情
  *
  * @method array getAppLogoDetail() 获取命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppLogoDetail(array $AppLogoDetail) 设置命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogoDetail extends AbstractModel
 {
     /**
      * @var array 命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppLogoDetail;
 
     /**
      * @param array $AppLogoDetail 命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

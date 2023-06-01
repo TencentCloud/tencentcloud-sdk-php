@@ -18,25 +18,26 @@ namespace TencentCloud\Cms\V20190321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateFileSample返回参数结构体
+ * DeleteLibSamples返回参数结构体
  *
- * @method integer getProgress() 获取任务状态
-1：已完成
-2：处理中
- * @method void setProgress(integer $Progress) 设置任务状态
-1：已完成
-2：处理中
+ * @method integer getCount() 获取删除成功的数量
+ * @method void setCount(integer $Count) 设置删除成功的数量
+ * @method array getDetails() 获取每个关键词删除的结果
+ * @method void setDetails(array $Details) 设置每个关键词删除的结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateFileSampleResponse extends AbstractModel
+class DeleteLibSamplesResponse extends AbstractModel
 {
     /**
-     * @var integer 任务状态
-1：已完成
-2：处理中
+     * @var integer 删除成功的数量
      */
-    public $Progress;
+    public $Count;
+
+    /**
+     * @var array 每个关键词删除的结果
+     */
+    public $Details;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,9 +45,8 @@ class CreateFileSampleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Progress 任务状态
-1：已完成
-2：处理中
+     * @param integer $Count 删除成功的数量
+     * @param array $Details 每个关键词删除的结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,8 +62,17 @@ class CreateFileSampleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
-            $this->Progress = $param["Progress"];
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+            $this->Details = [];
+            foreach ($param["Details"] as $key => $value){
+                $obj = new DeleteSampleDetails();
+                $obj->deserialize($value);
+                array_push($this->Details, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

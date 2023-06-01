@@ -23,26 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cms\V20190321\Models as Models;
 
 /**
- * @method Models\CreateFileSampleResponse CreateFileSample(Models\CreateFileSampleRequest $req) 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-<br>
-通过该接口可以将图片新增到样本库。
- * @method Models\CreateTextSampleResponse CreateTextSample(Models\CreateTextSampleRequest $req) 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-<br>
-通过该接口可以将文本新增到样本库。
- * @method Models\DeleteFileSampleResponse DeleteFileSample(Models\DeleteFileSampleRequest $req) 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-<br>
-删除图片样本库，支持批量删除，一次提交不超过20个。
- * @method Models\DeleteTextSampleResponse DeleteTextSample(Models\DeleteTextSampleRequest $req) 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-<br>
-删除文本样本库，暂时只支持单个删除。
- * @method Models\DescribeFileSampleResponse DescribeFileSample(Models\DescribeFileSampleRequest $req) 本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-<br>
-查询图片样本库，支持批量查询。
- * @method Models\DescribeTextSampleResponse DescribeTextSample(Models\DescribeTextSampleRequest $req) 本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-<br>
-支持批量查询文本样本库。
+ * @method Models\CreateKeywordsSamplesResponse CreateKeywordsSamples(Models\CreateKeywordsSamplesRequest $req) 创建关键词接口
+ * @method Models\DeleteLibSamplesResponse DeleteLibSamples(Models\DeleteLibSamplesRequest $req) 删除关键词接口
+ * @method Models\DescribeKeywordsLibsResponse DescribeKeywordsLibs(Models\DescribeKeywordsLibsRequest $req) 获取用户词库列表
+ * @method Models\DescribeLibSamplesResponse DescribeLibSamples(Models\DescribeLibSamplesRequest $req) 获取关键词接口
  * @method Models\ImageModerationResponse ImageModeration(Models\ImageModerationRequest $req) 图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别涉黄、涉恐、涉政、涉毒等有害内容，同时支持用户配置图片黑名单，打击自定义的违规图片。
- * @method Models\ManualReviewResponse ManualReview(Models\ManualReviewRequest $req) 人工审核对外接口
  * @method Models\TextModerationResponse TextModeration(Models\TextModerationRequest $req) 文本内容检测（Text Moderation）服务使用了深度学习技术，识别涉黄、涉政、涉恐等有害内容，同时支持用户配置词库，打击自定义的违规文本。
  */
 

@@ -116,6 +116,7 @@ class BillDetailComponent extends AbstractModel
 
     /**
      * @var string 组件指定价（已废弃）
+     * @deprecated
      */
     public $SpecifiedPrice;
 
@@ -230,6 +231,7 @@ class BillDetailComponent extends AbstractModel
     /**
      * @var string 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $SPDeduction;
 

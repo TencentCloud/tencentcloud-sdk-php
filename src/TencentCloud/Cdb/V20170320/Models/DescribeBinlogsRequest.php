@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，最小值为0。
  * @method integer getLimit() 获取分页大小，默认值为20，最小值为1，最大值为100。
  * @method void setLimit(integer $Limit) 设置分页大小，默认值为20，最小值为1，最大值为100。
+ * @method string getMinStartTime() 获取binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+ * @method void setMinStartTime(string $MinStartTime) 设置binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+ * @method string getMaxStartTime() 获取binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+ * @method void setMaxStartTime(string $MaxStartTime) 设置binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
  */
 class DescribeBinlogsRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeBinlogsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+     */
+    public $MinStartTime;
+
+    /**
+     * @var string binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+     */
+    public $MaxStartTime;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $Offset 偏移量，最小值为0。
      * @param integer $Limit 分页大小，默认值为20，最小值为1，最大值为100。
+     * @param string $MinStartTime binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+     * @param string $MaxStartTime binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeBinlogsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("MinStartTime",$param) and $param["MinStartTime"] !== null) {
+            $this->MinStartTime = $param["MinStartTime"];
+        }
+
+        if (array_key_exists("MaxStartTime",$param) and $param["MaxStartTime"] !== null) {
+            $this->MaxStartTime = $param["MaxStartTime"];
         }
     }
 }

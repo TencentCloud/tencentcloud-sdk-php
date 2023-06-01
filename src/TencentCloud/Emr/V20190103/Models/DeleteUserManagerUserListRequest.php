@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID
  * @method array getUserNameList() 获取集群用户名列表
  * @method void setUserNameList(array $UserNameList) 设置集群用户名列表
+ * @method string getTkeClusterId() 获取tke/eks集群id，容器集群传
+ * @method void setTkeClusterId(string $TkeClusterId) 设置tke/eks集群id，容器集群传
+ * @method string getDisplayStrategy() 获取默认空，容器版传"native"
+ * @method void setDisplayStrategy(string $DisplayStrategy) 设置默认空，容器版传"native"
+ * @method array getUserGroupList() 获取用户组
+ * @method void setUserGroupList(array $UserGroupList) 设置用户组
  */
 class DeleteUserManagerUserListRequest extends AbstractModel
 {
@@ -38,8 +44,26 @@ class DeleteUserManagerUserListRequest extends AbstractModel
     public $UserNameList;
 
     /**
+     * @var string tke/eks集群id，容器集群传
+     */
+    public $TkeClusterId;
+
+    /**
+     * @var string 默认空，容器版传"native"
+     */
+    public $DisplayStrategy;
+
+    /**
+     * @var array 用户组
+     */
+    public $UserGroupList;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param array $UserNameList 集群用户名列表
+     * @param string $TkeClusterId tke/eks集群id，容器集群传
+     * @param string $DisplayStrategy 默认空，容器版传"native"
+     * @param array $UserGroupList 用户组
      */
     function __construct()
     {
@@ -60,6 +84,23 @@ class DeleteUserManagerUserListRequest extends AbstractModel
 
         if (array_key_exists("UserNameList",$param) and $param["UserNameList"] !== null) {
             $this->UserNameList = $param["UserNameList"];
+        }
+
+        if (array_key_exists("TkeClusterId",$param) and $param["TkeClusterId"] !== null) {
+            $this->TkeClusterId = $param["TkeClusterId"];
+        }
+
+        if (array_key_exists("DisplayStrategy",$param) and $param["DisplayStrategy"] !== null) {
+            $this->DisplayStrategy = $param["DisplayStrategy"];
+        }
+
+        if (array_key_exists("UserGroupList",$param) and $param["UserGroupList"] !== null) {
+            $this->UserGroupList = [];
+            foreach ($param["UserGroupList"] as $key => $value){
+                $obj = new UserAndGroup();
+                $obj->deserialize($value);
+                array_push($this->UserGroupList, $obj);
+            }
         }
     }
 }

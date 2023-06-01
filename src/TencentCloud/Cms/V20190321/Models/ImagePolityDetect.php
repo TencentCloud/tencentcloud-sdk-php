@@ -28,16 +28,20 @@ use TencentCloud\Common\AbstractModel;
 20001：政治
  * @method integer getHitFlag() 获取处置判定  0：正常 1：可疑
  * @method void setHitFlag(integer $HitFlag) 设置处置判定  0：正常 1：可疑
- * @method array getPolityLogoDetail() 获取命中的logo标签信息
- * @method void setPolityLogoDetail(array $PolityLogoDetail) 设置命中的logo标签信息
  * @method array getFaceNames() 获取命中的人脸名称
  * @method void setFaceNames(array $FaceNames) 设置命中的人脸名称
- * @method array getKeywords() 获取关键词明细
- * @method void setKeywords(array $Keywords) 设置关键词明细
+ * @method array getPolityLogoDetail() 获取命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolityLogoDetail(array $PolityLogoDetail) 设置命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPolityItems() 获取命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolityItems(array $PolityItems) 设置命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
  * @method void setScore(integer $Score) 设置政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
+ * @method array getKeywords() 获取关键词明细
+ * @method void setKeywords(array $Keywords) 设置关键词明细
  */
 class ImagePolityDetect extends AbstractModel
 {
@@ -54,22 +58,19 @@ class ImagePolityDetect extends AbstractModel
     public $HitFlag;
 
     /**
-     * @var array 命中的logo标签信息
-     */
-    public $PolityLogoDetail;
-
-    /**
      * @var array 命中的人脸名称
      */
     public $FaceNames;
 
     /**
-     * @var array 关键词明细
+     * @var array 命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Keywords;
+    public $PolityLogoDetail;
 
     /**
      * @var array 命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolityItems;
 
@@ -79,15 +80,22 @@ class ImagePolityDetect extends AbstractModel
     public $Score;
 
     /**
+     * @var array 关键词明细
+     */
+    public $Keywords;
+
+    /**
      * @param integer $EvilType 恶意类型
 100：正常 
 20001：政治
      * @param integer $HitFlag 处置判定  0：正常 1：可疑
-     * @param array $PolityLogoDetail 命中的logo标签信息
      * @param array $FaceNames 命中的人脸名称
-     * @param array $Keywords 关键词明细
+     * @param array $PolityLogoDetail 命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolityItems 命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
+     * @param array $Keywords 关键词明细
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class ImagePolityDetect extends AbstractModel
             $this->HitFlag = $param["HitFlag"];
         }
 
+        if (array_key_exists("FaceNames",$param) and $param["FaceNames"] !== null) {
+            $this->FaceNames = $param["FaceNames"];
+        }
+
         if (array_key_exists("PolityLogoDetail",$param) and $param["PolityLogoDetail"] !== null) {
             $this->PolityLogoDetail = [];
             foreach ($param["PolityLogoDetail"] as $key => $value){
@@ -119,20 +131,16 @@ class ImagePolityDetect extends AbstractModel
             }
         }
 
-        if (array_key_exists("FaceNames",$param) and $param["FaceNames"] !== null) {
-            $this->FaceNames = $param["FaceNames"];
-        }
-
-        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
-            $this->Keywords = $param["Keywords"];
-        }
-
         if (array_key_exists("PolityItems",$param) and $param["PolityItems"] !== null) {
             $this->PolityItems = $param["PolityItems"];
         }
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
         }
     }
 }

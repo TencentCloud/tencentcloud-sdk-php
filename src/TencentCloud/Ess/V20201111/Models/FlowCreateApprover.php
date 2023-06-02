@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。
  * @method void setApproverType(integer $ApproverType) 设置参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。
  * @method string getOrganizationName() 获取如果签署方为企业，需要填入企业全称
  * @method void setOrganizationName(string $OrganizationName) 设置如果签署方为企业，需要填入企业全称
  * @method string getApproverName() 获取签署方经办人姓名
@@ -44,8 +44,8 @@ HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method string getApproverIdCardNumber() 获取签署方经办人证件号码
  * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署方经办人证件号码
- * @method string getRecipientId() 获取签署方经办人在模板中的角色ID
- * @method void setRecipientId(string $RecipientId) 设置签署方经办人在模板中的角色ID
+ * @method string getRecipientId() 获取签署方经办人在模板中的参与方ID
+ * @method void setRecipientId(string $RecipientId) 设置签署方经办人在模板中的参与方ID
  * @method array getVerifyChannel() 获取签署意愿确认渠道,WEIXINAPP:人脸识别
  * @method void setVerifyChannel(array $VerifyChannel) 设置签署意愿确认渠道,WEIXINAPP:人脸识别
  * @method string getNotifyType() 获取是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
@@ -76,7 +76,7 @@ class FlowCreateApprover extends AbstractModel
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。
      */
     public $ApproverType;
 
@@ -108,7 +108,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $ApproverIdCardNumber;
 
     /**
-     * @var string 签署方经办人在模板中的角色ID
+     * @var string 签署方经办人在模板中的参与方ID
      */
     public $RecipientId;
 
@@ -164,6 +164,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * @var string 签署完前端跳转的url，暂未使用
+     * @deprecated
      */
     public $JumpUrl;
 
@@ -172,7 +173,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。
      * @param string $OrganizationName 如果签署方为企业，需要填入企业全称
      * @param string $ApproverName 签署方经办人姓名
      * @param string $ApproverMobile 签署方经办人手机号码
@@ -180,7 +181,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $ApproverIdCardNumber 签署方经办人证件号码
-     * @param string $RecipientId 签署方经办人在模板中的角色ID
+     * @param string $RecipientId 签署方经办人在模板中的参与方ID
      * @param array $VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      * @param string $NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
      * @param boolean $IsFullText 合同强制需要阅读全文，无需传此参数

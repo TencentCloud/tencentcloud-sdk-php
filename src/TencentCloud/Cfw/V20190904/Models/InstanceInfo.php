@@ -37,7 +37,6 @@ type InstanceInfo struct {
 	ResourceGroupNum int    `json:"ResourceGroupNum"`
 	VPCName          string `json:"VPCName" gorm:"column:VPCName"`
 }
-
  *
  * @method string getAppId() 获取appid信息
  * @method void setAppId(string $AppId) 设置appid信息
@@ -70,6 +69,10 @@ type InstanceInfo struct {
  * @method array getResourcePath() 获取[a,b]
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourcePath(array $ResourcePath) 设置[a,b]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServer() 获取扫描结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServer(array $Server) 设置扫描结果
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
@@ -147,6 +150,12 @@ class InstanceInfo extends AbstractModel
     public $ResourcePath;
 
     /**
+     * @var array 扫描结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Server;
+
+    /**
      * @param string $AppId appid信息
      * @param string $Region 地域
      * @param string $VpcId vpcid信息
@@ -162,6 +171,8 @@ class InstanceInfo extends AbstractModel
      * @param string $LeakNum 漏洞数
      * @param string $InsSource 1，公网 2内网
      * @param array $ResourcePath [a,b]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Server 扫描结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -231,6 +242,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("ResourcePath",$param) and $param["ResourcePath"] !== null) {
             $this->ResourcePath = $param["ResourcePath"];
+        }
+
+        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
+            $this->Server = $param["Server"];
         }
     }
 }

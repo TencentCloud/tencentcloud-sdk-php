@@ -294,6 +294,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeVulImageSummaryResponse DescribeVulImageSummary(Models\DescribeVulImageSummaryRequest $req) 查询漏洞镜像统计
  * @method Models\DescribeVulLevelImageSummaryResponse DescribeVulLevelImageSummary(Models\DescribeVulLevelImageSummaryRequest $req) 查询应急漏洞各威胁等级统计镜像数
  * @method Models\DescribeVulLevelSummaryResponse DescribeVulLevelSummary(Models\DescribeVulLevelSummaryRequest $req) 查询漏洞各威胁等级统计数
+ * @method Models\DescribeVulRegistryImageListResponse DescribeVulRegistryImageList(Models\DescribeVulRegistryImageListRequest $req) 查询漏洞影响的仓库镜像列表
  * @method Models\DescribeVulScanAuthorizedImageSummaryResponse DescribeVulScanAuthorizedImageSummary(Models\DescribeVulScanAuthorizedImageSummaryRequest $req) 统计漏洞扫描页已授权和未扫描镜像数
  * @method Models\DescribeVulScanInfoResponse DescribeVulScanInfo(Models\DescribeVulScanInfoRequest $req) 查询漏洞扫描任务信息
  * @method Models\DescribeVulScanLocalImageListResponse DescribeVulScanLocalImageList(Models\DescribeVulScanLocalImageListRequest $req) 查询漏洞扫描任务的本地镜像列表

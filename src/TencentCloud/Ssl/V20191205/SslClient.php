@@ -29,6 +29,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\CommitCertificateInformationResponse CommitCertificateInformation(Models\CommitCertificateInformationRequest $req) 提交证书订单。
  * @method Models\CompleteCertificateResponse CompleteCertificate(Models\CompleteCertificateRequest $req) 本接口（CompleteCertificate）用于主动触发证书验证。仅非DNSPod和Wotrus品牌证书支持使用此接口。
  * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) 本接口（CreateCertificate）用于创建付费证书。
+ * @method Models\CreateCertificateByPackageResponse CreateCertificateByPackage(Models\CreateCertificateByPackageRequest $req) 使用权益点创建证书
  * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) 本接口（DeleteCertificate）用于删除证书。
  * @method Models\DeleteManagerResponse DeleteManager(Models\DeleteManagerRequest $req) 删除管理人
  * @method Models\DeployCertificateInstanceResponse DeployCertificateInstance(Models\DeployCertificateInstanceRequest $req) 证书部署到云资源实例列表

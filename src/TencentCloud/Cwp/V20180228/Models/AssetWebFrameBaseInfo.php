@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineName() 获取主机名称
  * @method void setMachineName(string $MachineName) 设置主机名称
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取首次采集时间
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
@@ -58,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 附加信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPath() 获取应用路径
+ * @method void setPath(string $Path) 设置应用路径
  */
 class AssetWebFrameBaseInfo extends AbstractModel
 {
@@ -124,7 +124,6 @@ class AssetWebFrameBaseInfo extends AbstractModel
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -145,6 +144,11 @@ class AssetWebFrameBaseInfo extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var string 应用路径
+     */
+    public $Path;
+
+    /**
      * @param string $MachineIp 主机内网IP
      * @param string $MachineWanIp 主机外网IP
      * @param string $Quuid 主机Quuid
@@ -159,11 +163,11 @@ class AssetWebFrameBaseInfo extends AbstractModel
      * @param string $ServiceType 服务类型
      * @param string $MachineName 主机名称
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param MachineExtraInfo $MachineExtraInfo  附加信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Path 应用路径
      */
     function __construct()
     {
@@ -246,6 +250,10 @@ class AssetWebFrameBaseInfo extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
     }
 }

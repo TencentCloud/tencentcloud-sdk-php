@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置应用号
  * @method string getOrganizationId() 获取主机构ID
  * @method void setOrganizationId(string $OrganizationId) 设置主机构ID
- * @method string getOperatorId() 获取经办人的用户ID
- * @method void setOperatorId(string $OperatorId) 设置经办人的用户ID
+ * @method string getOperatorId() 获取经办人的用户ID，同UserId
+ * @method void setOperatorId(string $OperatorId) 设置经办人的用户ID，同UserId
  * @method string getSubOrganizationId() 获取下属机构ID
  * @method void setSubOrganizationId(string $SubOrganizationId) 设置下属机构ID
  */
@@ -33,28 +33,31 @@ class Caller extends AbstractModel
 {
     /**
      * @var string 应用号
+     * @deprecated
      */
     public $ApplicationId;
 
     /**
      * @var string 主机构ID
+     * @deprecated
      */
     public $OrganizationId;
 
     /**
-     * @var string 经办人的用户ID
+     * @var string 经办人的用户ID，同UserId
      */
     public $OperatorId;
 
     /**
      * @var string 下属机构ID
+     * @deprecated
      */
     public $SubOrganizationId;
 
     /**
      * @param string $ApplicationId 应用号
      * @param string $OrganizationId 主机构ID
-     * @param string $OperatorId 经办人的用户ID
+     * @param string $OperatorId 经办人的用户ID，同UserId
      * @param string $SubOrganizationId 下属机构ID
      */
     function __construct()

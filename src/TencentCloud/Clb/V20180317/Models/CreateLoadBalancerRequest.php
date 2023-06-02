@@ -46,8 +46,8 @@ OPEN：公网属性， INTERNAL：内网属性。
 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主可用区的列表。
  * @method string getZoneId() 获取仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
  * @method void setZoneId(string $ZoneId) 设置仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
- * @method InternetAccessible getInternetAccessible() 获取仅适用于公网负载均衡。负载均衡的网络计费模式。
- * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置仅适用于公网负载均衡。负载均衡的网络计费模式。
+ * @method InternetAccessible getInternetAccessible() 获取仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+ * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置仅对内网属性的性能容量型实例和公网属性的所有实例生效。
  * @method string getVipIsp() 获取仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
  * @method void setVipIsp(string $VipIsp) 设置仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
  * @method array getTags() 获取购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
@@ -62,11 +62,11 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置独占型实例信息。若创建独占型的内网负载均衡实例，则此参数必填。
  * @method string getSlaType() 获取创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
  * @method void setSlaType(string $SlaType) 设置创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -84,6 +84,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setEipAddressId(string $EipAddressId) 设置EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
  * @method boolean getLoadBalancerPassToTarget() 获取Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+ * @method boolean getDynamicVip() 获取创建域名化负载均衡。
+ * @method void setDynamicVip(boolean $DynamicVip) 设置创建域名化负载均衡。
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -141,7 +143,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ZoneId;
 
     /**
-     * @var InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费模式。
+     * @var InternetAccessible 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
      */
     public $InternetAccessible;
 
@@ -174,7 +176,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     /**
      * @var string 创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
      */
     public $SlaType;
@@ -216,6 +218,11 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerPassToTarget;
 
     /**
+     * @var boolean 创建域名化负载均衡。
+     */
+    public $DynamicVip;
+
+    /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
@@ -229,7 +236,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $MasterZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主可用区的列表。
      * @param string $ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
-     * @param InternetAccessible $InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费模式。
+     * @param InternetAccessible $InternetAccessible 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
      * @param string $VipIsp 仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
      * @param array $Tags 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
      * @param string $Vip 指定VIP申请负载均衡。此参数选填，不填写此参数时自动分配VIP。IPv4和IPv6类型支持此参数，IPv6 NAT64类型不支持。
@@ -238,7 +245,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param ExclusiveCluster $ExclusiveCluster 独占型实例信息。若创建独占型的内网负载均衡实例，则此参数必填。
      * @param string $SlaType 创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
@@ -248,6 +255,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主/备可用区的列表。
      * @param string $EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
      * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     * @param boolean $DynamicVip 创建域名化负载均衡。
      */
     function __construct()
     {
@@ -368,6 +376,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
             $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("DynamicVip",$param) and $param["DynamicVip"] !== null) {
+            $this->DynamicVip = $param["DynamicVip"];
         }
     }
 }

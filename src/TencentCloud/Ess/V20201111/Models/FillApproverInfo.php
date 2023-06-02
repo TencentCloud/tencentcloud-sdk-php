@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 补充签署人信息
  *
- * @method string getRecipientId() 获取签署人签署Id
- * @method void setRecipientId(string $RecipientId) 设置签署人签署Id
+ * @method string getRecipientId() 获取对应模板中的参与方ID
+ * @method void setRecipientId(string $RecipientId) 设置对应模板中的参与方ID
  * @method string getApproverSource() 获取签署人来源
 WEWORKAPP: 企业微信
  * @method void setApproverSource(string $ApproverSource) 设置签署人来源
 WEWORKAPP: 企业微信
- * @method string getCustomUserId() 获取企业自定义账号Id
+ * @method string getCustomUserId() 获取企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
- * @method void setCustomUserId(string $CustomUserId) 设置企业自定义账号Id
+ * @method void setCustomUserId(string $CustomUserId) 设置企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
  */
 class FillApproverInfo extends AbstractModel
 {
     /**
-     * @var string 签署人签署Id
+     * @var string 对应模板中的参与方ID
      */
     public $RecipientId;
 
@@ -45,16 +45,16 @@ WEWORKAPP: 企业微信
     public $ApproverSource;
 
     /**
-     * @var string 企业自定义账号Id
+     * @var string 企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
      */
     public $CustomUserId;
 
     /**
-     * @param string $RecipientId 签署人签署Id
+     * @param string $RecipientId 对应模板中的参与方ID
      * @param string $ApproverSource 签署人来源
 WEWORKAPP: 企业微信
-     * @param string $CustomUserId 企业自定义账号Id
+     * @param string $CustomUserId 企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
      */
     function __construct()

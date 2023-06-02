@@ -41,7 +41,9 @@ use TencentCloud\Partners\V20180321\Models as Models;
  * @method Models\DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(Models\DescribeAgentPayDealsV2Request $req) 可以查询代理商代付的预付费订单
  * @method Models\DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDeals(Models\DescribeAgentSelfPayDealsRequest $req) 【该接口已下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
  * @method Models\DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(Models\DescribeAgentSelfPayDealsV2Request $req) 查询代理商名下指定代客的自付订单（预付费）
- * @method Models\DescribeClientBalanceResponse DescribeClientBalance(Models\DescribeClientBalanceRequest $req) 【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
+ * @method Models\DescribeClientBalanceResponse DescribeClientBalance(Models\DescribeClientBalanceRequest $req) 已提供新接口并推进切换，白名单禁用控制访问观察后无反馈，可以下线
+
+【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
  * @method Models\DescribeClientBalanceNewResponse DescribeClientBalanceNew(Models\DescribeClientBalanceNewRequest $req) 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
  * @method Models\DescribeRebateInfosResponse DescribeRebateInfos(Models\DescribeRebateInfosRequest $req) 【该接口已下线，请切换使用升级版本DescribeRebateInfosNew】代理商可查询自己名下全部返佣信息
  * @method Models\DescribeRebateInfosNewResponse DescribeRebateInfosNew(Models\DescribeRebateInfosNewRequest $req) 代理商可查询自己名下全部返佣信息

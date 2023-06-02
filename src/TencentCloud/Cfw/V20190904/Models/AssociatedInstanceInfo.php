@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupCount(integer $SecurityGroupCount) 设置关联安全组数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSecurityGroupRuleCount() 获取关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroupRuleCount(integer $SecurityGroupRuleCount) 设置关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCdbId() 获取关联数据库代理Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdbId(string $CdbId) 设置关联数据库代理Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssociatedInstanceInfo extends AbstractModel
 {
@@ -104,6 +112,18 @@ class AssociatedInstanceInfo extends AbstractModel
     public $SecurityGroupCount;
 
     /**
+     * @var integer 关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroupRuleCount;
+
+    /**
+     * @var string 关联数据库代理Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdbId;
+
+    /**
      * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
@@ -119,6 +139,10 @@ class AssociatedInstanceInfo extends AbstractModel
      * @param string $Ip 内网IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecurityGroupCount 关联安全组数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SecurityGroupRuleCount 关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CdbId 关联数据库代理Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +188,14 @@ class AssociatedInstanceInfo extends AbstractModel
 
         if (array_key_exists("SecurityGroupCount",$param) and $param["SecurityGroupCount"] !== null) {
             $this->SecurityGroupCount = $param["SecurityGroupCount"];
+        }
+
+        if (array_key_exists("SecurityGroupRuleCount",$param) and $param["SecurityGroupRuleCount"] !== null) {
+            $this->SecurityGroupRuleCount = $param["SecurityGroupRuleCount"];
+        }
+
+        if (array_key_exists("CdbId",$param) and $param["CdbId"] !== null) {
+            $this->CdbId = $param["CdbId"];
         }
     }
 }

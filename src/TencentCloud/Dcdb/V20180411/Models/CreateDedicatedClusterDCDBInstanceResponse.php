@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDedicatedClusterDCDBInstance返回参数结构体
  *
+ * @method array getInstanceIds() 获取分配资源ID数组
+ * @method void setInstanceIds(array $InstanceIds) 设置分配资源ID数组
+ * @method integer getFlowId() 获取流程ID
+ * @method void setFlowId(integer $FlowId) 设置流程ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDedicatedClusterDCDBInstanceResponse extends AbstractModel
 {
     /**
+     * @var array 分配资源ID数组
+     */
+    public $InstanceIds;
+
+    /**
+     * @var integer 流程ID
+     */
+    public $FlowId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $InstanceIds 分配资源ID数组
+     * @param integer $FlowId 流程ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class CreateDedicatedClusterDCDBInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

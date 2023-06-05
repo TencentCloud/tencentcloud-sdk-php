@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableUserAutoSign请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
+ * @method UserInfo getOperator() 获取操作人信息,UserId必填
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息,UserId必填
  * @method string getSceneKey() 获取自动签场景:
 E_PRESCRIPTION_AUTO_SIGN 电子处方
  * @method void setSceneKey(string $SceneKey) 设置自动签场景:
@@ -32,7 +32,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
 class DisableUserAutoSignRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 操作人信息,UserId必填
      */
     public $Operator;
 
@@ -48,7 +48,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     public $UserInfo;
 
     /**
-     * @param UserInfo $Operator 操作人信息
+     * @param UserInfo $Operator 操作人信息,UserId必填
      * @param string $SceneKey 自动签场景:
 E_PRESCRIPTION_AUTO_SIGN 电子处方
      * @param UserThreeFactor $UserInfo 关闭自动签的个人的三要素

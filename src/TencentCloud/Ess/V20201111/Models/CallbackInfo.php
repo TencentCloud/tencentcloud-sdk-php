@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCallbackUrl() 获取回调url
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调url
- * @method string getToken() 获取回调加密token
- * @method void setToken(string $Token) 设置回调加密token
+ * @method string getToken() 获取回调加密key，已废弃
+ * @method void setToken(string $Token) 设置回调加密key，已废弃
+ * @method string getCallbackKey() 获取回调加密key
+ * @method void setCallbackKey(string $CallbackKey) 设置回调加密key
+ * @method string getCallbackToken() 获取回调验签token
+ * @method void setCallbackToken(string $CallbackToken) 设置回调验签token
  */
 class CallbackInfo extends AbstractModel
 {
@@ -33,13 +37,26 @@ class CallbackInfo extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @var string 回调加密token
+     * @var string 回调加密key，已废弃
+     * @deprecated
      */
     public $Token;
 
     /**
+     * @var string 回调加密key
+     */
+    public $CallbackKey;
+
+    /**
+     * @var string 回调验签token
+     */
+    public $CallbackToken;
+
+    /**
      * @param string $CallbackUrl 回调url
-     * @param string $Token 回调加密token
+     * @param string $Token 回调加密key，已废弃
+     * @param string $CallbackKey 回调加密key
+     * @param string $CallbackToken 回调验签token
      */
     function __construct()
     {
@@ -60,6 +77,14 @@ class CallbackInfo extends AbstractModel
 
         if (array_key_exists("Token",$param) and $param["Token"] !== null) {
             $this->Token = $param["Token"];
+        }
+
+        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
+            $this->CallbackKey = $param["CallbackKey"];
+        }
+
+        if (array_key_exists("CallbackToken",$param) and $param["CallbackToken"] !== null) {
+            $this->CallbackToken = $param["CallbackToken"];
         }
     }
 }

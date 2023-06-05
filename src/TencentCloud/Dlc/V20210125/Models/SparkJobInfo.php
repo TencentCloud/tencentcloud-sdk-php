@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineImageVersion(string $DataEngineImageVersion) 设置Spark 3.2-EMR
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsInherit() 获取任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsInherit(integer $IsInherit) 设置任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -342,6 +346,12 @@ class SparkJobInfo extends AbstractModel
     public $DataEngineImageVersion;
 
     /**
+     * @var integer 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsInherit;
+
+    /**
      * @param string $JobId spark作业ID
      * @param string $JobName spark作业名
      * @param integer $JobType spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
@@ -395,6 +405,8 @@ class SparkJobInfo extends AbstractModel
      * @param string $DataEngineClusterType spark_emr_livy
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataEngineImageVersion Spark 3.2-EMR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsInherit 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -565,6 +577,10 @@ class SparkJobInfo extends AbstractModel
 
         if (array_key_exists("DataEngineImageVersion",$param) and $param["DataEngineImageVersion"] !== null) {
             $this->DataEngineImageVersion = $param["DataEngineImageVersion"];
+        }
+
+        if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
+            $this->IsInherit = $param["IsInherit"];
         }
     }
 }

@@ -151,6 +151,10 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathBasedOrigin(array $PathBasedOrigin) 设置分路径回源配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OriginSni getSni() 获取HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSni(OriginSni $Sni) 设置HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method AdvanceHttps getAdvanceHttps() 获取HTTPS回源高级配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvanceHttps(AdvanceHttps $AdvanceHttps) 设置HTTPS回源高级配置
@@ -279,6 +283,12 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     public $PathBasedOrigin;
 
     /**
+     * @var OriginSni HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Sni;
+
+    /**
      * @var AdvanceHttps HTTPS回源高级配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -358,6 +368,8 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PathBasedOrigin 分路径回源配置
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginSni $Sni HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvanceHttps $AdvanceHttps HTTPS回源高级配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginCompany 对象存储回源厂商，当源站类型为第三方存储源站(third_party)时必填，可选值包括以下:
@@ -433,6 +445,11 @@ others: 其它厂商对象存储,仅支持兼容以AWS签名算法的对象存�
                 $obj->deserialize($value);
                 array_push($this->PathBasedOrigin, $obj);
             }
+        }
+
+        if (array_key_exists("Sni",$param) and $param["Sni"] !== null) {
+            $this->Sni = new OriginSni();
+            $this->Sni->deserialize($param["Sni"]);
         }
 
         if (array_key_exists("AdvanceHttps",$param) and $param["AdvanceHttps"] !== null) {

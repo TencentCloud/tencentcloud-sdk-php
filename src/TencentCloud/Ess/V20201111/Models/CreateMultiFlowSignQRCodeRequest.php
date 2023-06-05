@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMultiFlowSignQRCode请求参数结构体
  *
- * @method UserInfo getOperator() 获取用户信息
- * @method void setOperator(UserInfo $Operator) 设置用户信息
+ * @method UserInfo getOperator() 获取用户信息，其中UserId为必填参数
+ * @method void setOperator(UserInfo $Operator) 设置用户信息，其中UserId为必填参数
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
  * @method string getFlowName() 获取签署流程名称，最大长度不超过200字符
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 用户信息
+     * @var UserInfo 用户信息，其中UserId为必填参数
      */
     public $Operator;
 
@@ -101,16 +101,18 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 
     /**
      * @var Agent 应用信息
+     * @deprecated
      */
     public $Agent;
 
     /**
      * @var ApproverRestriction 限制二维码用户条件（已弃用）
+     * @deprecated
      */
     public $ApproverRestrictions;
 
     /**
-     * @param UserInfo $Operator 用户信息
+     * @param UserInfo $Operator 用户信息，其中UserId为必填参数
      * @param string $TemplateId 模板ID
      * @param string $FlowName 签署流程名称，最大长度不超过200字符
      * @param integer $MaxFlowNum 最大可发起签署流程份数，默认5份 

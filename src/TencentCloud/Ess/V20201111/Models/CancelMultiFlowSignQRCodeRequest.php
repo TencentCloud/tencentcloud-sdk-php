@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelMultiFlowSignQRCode请求参数结构体
  *
- * @method UserInfo getOperator() 获取用户信息
- * @method void setOperator(UserInfo $Operator) 设置用户信息
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method string getQrCodeId() 获取二维码id
  * @method void setQrCodeId(string $QrCodeId) 设置二维码id
- * @method Agent getAgent() 获取应用信息
- * @method void setAgent(Agent $Agent) 设置应用信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class CancelMultiFlowSignQRCodeRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 用户信息
+     * @var UserInfo 调用方用户信息，userId 必填
      */
     public $Operator;
 
@@ -40,14 +40,14 @@ class CancelMultiFlowSignQRCodeRequest extends AbstractModel
     public $QrCodeId;
 
     /**
-     * @var Agent 应用信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 用户信息
+     * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $QrCodeId 二维码id
-     * @param Agent $Agent 应用信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {

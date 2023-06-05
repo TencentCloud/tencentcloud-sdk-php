@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElasticSwitch(boolean $ElasticSwitch) 设置spark jar 包年包月集群是否开启弹性
  * @method integer getElasticLimit() 获取spark jar 包年包月集群弹性上限
  * @method void setElasticLimit(integer $ElasticLimit) 设置spark jar 包年包月集群弹性上限
+ * @method SessionResourceTemplate getSessionResourceTemplate() 获取spark作业集群session资源配置模板
+ * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置spark作业集群session资源配置模板
  */
 class CreateDataEngineRequest extends AbstractModel
 {
@@ -227,6 +229,11 @@ class CreateDataEngineRequest extends AbstractModel
     public $ElasticLimit;
 
     /**
+     * @var SessionResourceTemplate spark作业集群session资源配置模板
+     */
+    public $SessionResourceTemplate;
+
+    /**
      * @param string $EngineType 引擎类型spark/presto
      * @param string $DataEngineName 虚拟集群名称
      * @param string $ClusterType 集群类型 spark_private/presto_private/presto_cu/spark_cu
@@ -256,6 +263,7 @@ class CreateDataEngineRequest extends AbstractModel
      * @param string $MainClusterName 主集群名称
      * @param boolean $ElasticSwitch spark jar 包年包月集群是否开启弹性
      * @param integer $ElasticLimit spark jar 包年包月集群弹性上限
+     * @param SessionResourceTemplate $SessionResourceTemplate spark作业集群session资源配置模板
      */
     function __construct()
     {
@@ -395,6 +403,11 @@ class CreateDataEngineRequest extends AbstractModel
 
         if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
             $this->ElasticLimit = $param["ElasticLimit"];
+        }
+
+        if (array_key_exists("SessionResourceTemplate",$param) and $param["SessionResourceTemplate"] !== null) {
+            $this->SessionResourceTemplate = new SessionResourceTemplate();
+            $this->SessionResourceTemplate->deserialize($param["SessionResourceTemplate"]);
         }
     }
 }

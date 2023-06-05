@@ -40,21 +40,25 @@ class UserInfo extends AbstractModel
 
     /**
      * @var string 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+     * @deprecated
      */
     public $Channel;
 
     /**
      * @var string 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+     * @deprecated
      */
     public $OpenId;
 
     /**
      * @var string 用户真实IP，内部字段，暂未开放
+     * @deprecated
      */
     public $ClientIp;
 
     /**
      * @var string 用户代理IP，内部字段，暂未开放
+     * @deprecated
      */
     public $ProxyIp;
 

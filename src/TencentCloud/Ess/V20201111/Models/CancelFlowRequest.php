@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) 设置签署流程id
  * @method string getCancelMessage() 获取撤销原因，最长200个字符；
  * @method void setCancelMessage(string $CancelMessage) 设置撤销原因，最长200个字符；
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class CancelFlowRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CancelFlowRequest extends AbstractModel
     public $CancelMessage;
 
     /**
-     * @var Agent 应用相关信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
@@ -55,7 +55,7 @@ class CancelFlowRequest extends AbstractModel
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowId 签署流程id
      * @param string $CancelMessage 撤销原因，最长200个字符；
-     * @param Agent $Agent 应用相关信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {

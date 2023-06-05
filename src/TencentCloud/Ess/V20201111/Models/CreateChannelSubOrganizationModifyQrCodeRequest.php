@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateChannelSubOrganizationModifyQrCode请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人
- * @method void setOperator(UserInfo $Operator) 设置操作人
+ * @method UserInfo getOperator() 获取操作人信息，userId必填
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
  * @method string getApplicationId() 获取应用编号
  * @method void setApplicationId(string $ApplicationId) 设置应用编号
  */
 class CreateChannelSubOrganizationModifyQrCodeRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人
+     * @var UserInfo 操作人信息，userId必填
      */
     public $Operator;
 
@@ -38,7 +38,7 @@ class CreateChannelSubOrganizationModifyQrCodeRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @param UserInfo $Operator 操作人
+     * @param UserInfo $Operator 操作人信息，userId必填
      * @param string $ApplicationId 应用编号
      */
     function __construct()

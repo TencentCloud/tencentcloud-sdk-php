@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSealPolicy请求参数结构体
  *
- * @method UserInfo getOperator() 获取授权发起人在平台信息，具体参考UserInfo结构体
- * @method void setOperator(UserInfo $Operator) 设置授权发起人在平台信息，具体参考UserInfo结构体
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method array getUsers() 获取用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用
  * @method void setUsers(array $Users) 设置用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用
  * @method string getSealId() 获取印章ID
  * @method void setSealId(string $SealId) 设置印章ID
  * @method integer getExpired() 获取授权有效期。时间戳秒级
  * @method void setExpired(integer $Expired) 设置授权有效期。时间戳秒级
- * @method string getPolicy() 获取印章授权内容
- * @method void setPolicy(string $Policy) 设置印章授权内容
- * @method Agent getAgent() 获取应用相关
- * @method void setAgent(Agent $Agent) 设置应用相关
  * @method array getUserIds() 获取需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
  * @method void setUserIds(array $UserIds) 设置需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
+ * @method string getPolicy() 获取印章授权内容
+ * @method void setPolicy(string $Policy) 设置印章授权内容
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class CreateSealPolicyRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 授权发起人在平台信息，具体参考UserInfo结构体
+     * @var UserInfo 调用方用户信息，userId 必填
      */
     public $Operator;
 
@@ -58,28 +58,28 @@ class CreateSealPolicyRequest extends AbstractModel
     public $Expired;
 
     /**
-     * @var string 印章授权内容
-     */
-    public $Policy;
-
-    /**
-     * @var Agent 应用相关
-     */
-    public $Agent;
-
-    /**
      * @var array 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
      */
     public $UserIds;
 
     /**
-     * @param UserInfo $Operator 授权发起人在平台信息，具体参考UserInfo结构体
+     * @var string 印章授权内容
+     */
+    public $Policy;
+
+    /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
+
+    /**
+     * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param array $Users 用户在电子文件签署平台标识信息，具体参考UserInfo结构体。可跟下面的UserIds可叠加起作用
      * @param string $SealId 印章ID
      * @param integer $Expired 授权有效期。时间戳秒级
-     * @param string $Policy 印章授权内容
-     * @param Agent $Agent 应用相关
      * @param array $UserIds 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
+     * @param string $Policy 印章授权内容
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -116,6 +116,10 @@ class CreateSealPolicyRequest extends AbstractModel
             $this->Expired = $param["Expired"];
         }
 
+        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
+            $this->UserIds = $param["UserIds"];
+        }
+
         if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
             $this->Policy = $param["Policy"];
         }
@@ -123,10 +127,6 @@ class CreateSealPolicyRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
-        }
-
-        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
-            $this->UserIds = $param["UserIds"];
         }
     }
 }

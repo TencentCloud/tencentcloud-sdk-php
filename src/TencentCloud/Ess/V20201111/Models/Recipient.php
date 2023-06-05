@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequireValidation(boolean $RequireValidation) 设置是否需要验证，默认为false
  * @method boolean getRequireSign() 获取是否需要签署，默认为true
  * @method void setRequireSign(boolean $RequireSign) 设置是否需要签署，默认为true
- * @method integer getRoutingOrder() 获取添加序列
- * @method void setRoutingOrder(integer $RoutingOrder) 设置添加序列
+ * @method integer getRoutingOrder() 获取添加序列，0～N
+ * @method void setRoutingOrder(integer $RoutingOrder) 设置添加序列，0～N
  * @method boolean getRequireDelivery() 获取是否需要发送，默认为true
  * @method void setRequireDelivery(boolean $RequireDelivery) 设置是否需要发送，默认为true
  * @method string getEmail() 获取邮箱地址
@@ -80,7 +80,7 @@ class Recipient extends AbstractModel
     public $RequireSign;
 
     /**
-     * @var integer 添加序列
+     * @var integer 添加序列，0～N
      */
     public $RoutingOrder;
 
@@ -121,7 +121,7 @@ class Recipient extends AbstractModel
      * @param string $RoleName 角色名称
      * @param boolean $RequireValidation 是否需要验证，默认为false
      * @param boolean $RequireSign 是否需要签署，默认为true
-     * @param integer $RoutingOrder 添加序列
+     * @param integer $RoutingOrder 添加序列，0～N
      * @param boolean $RequireDelivery 是否需要发送，默认为true
      * @param string $Email 邮箱地址
      * @param string $Mobile 电话号码

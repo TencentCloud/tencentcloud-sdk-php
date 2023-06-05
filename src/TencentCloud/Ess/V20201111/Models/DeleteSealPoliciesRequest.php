@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSealPolicies请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作撤销的用户信息
- * @method void setOperator(UserInfo $Operator) 设置操作撤销的用户信息
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method array getPolicyIds() 获取印章授权编码数组。这个参数跟下面的SealId其中一个必填，另外一个可选填
  * @method void setPolicyIds(array $PolicyIds) 设置印章授权编码数组。这个参数跟下面的SealId其中一个必填，另外一个可选填
- * @method Agent getAgent() 获取应用相关
- * @method void setAgent(Agent $Agent) 设置应用相关
  * @method string getSealId() 获取印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
  * @method void setSealId(string $SealId) 设置印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
  * @method array getUserIds() 获取待授权的员工ID
  * @method void setUserIds(array $UserIds) 设置待授权的员工ID
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class DeleteSealPoliciesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作撤销的用户信息
+     * @var UserInfo 调用方用户信息，userId 必填
      */
     public $Operator;
 
@@ -42,11 +42,6 @@ class DeleteSealPoliciesRequest extends AbstractModel
      * @var array 印章授权编码数组。这个参数跟下面的SealId其中一个必填，另外一个可选填
      */
     public $PolicyIds;
-
-    /**
-     * @var Agent 应用相关
-     */
-    public $Agent;
 
     /**
      * @var string 印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
@@ -59,11 +54,16 @@ class DeleteSealPoliciesRequest extends AbstractModel
     public $UserIds;
 
     /**
-     * @param UserInfo $Operator 操作撤销的用户信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
+
+    /**
+     * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param array $PolicyIds 印章授权编码数组。这个参数跟下面的SealId其中一个必填，另外一个可选填
-     * @param Agent $Agent 应用相关
      * @param string $SealId 印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
      * @param array $UserIds 待授权的员工ID
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -87,17 +87,17 @@ class DeleteSealPoliciesRequest extends AbstractModel
             $this->PolicyIds = $param["PolicyIds"];
         }
 
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
-        }
-
         if (array_key_exists("SealId",$param) and $param["SealId"] !== null) {
             $this->SealId = $param["SealId"];
         }
 
         if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
             $this->UserIds = $param["UserIds"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

@@ -102,16 +102,19 @@ class DescribeFileUrlsRequest extends AbstractModel
 
     /**
      * @var string 暂不开放
+     * @deprecated
      */
     public $CcToken;
 
     /**
      * @var string 暂不开放
+     * @deprecated
      */
     public $Scene;
 
     /**
      * @var Agent 应用相关信息
+     * @deprecated
      */
     public $Agent;
 

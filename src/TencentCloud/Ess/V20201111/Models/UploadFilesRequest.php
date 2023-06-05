@@ -87,6 +87,7 @@ true--是，处理置白
 
     /**
      * @var string 不再使用，上传文件链接数组，最多支持20个URL
+     * @deprecated
      */
     public $FileUrls;
 

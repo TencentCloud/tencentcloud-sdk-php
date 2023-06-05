@@ -54,9 +54,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGovernPolicy(DataGovernPolicy $GovernPolicy) 设置数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDatabaseId() 获取数据库ID
+ * @method string getDatabaseId() 获取数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDatabaseId(string $DatabaseId) 设置数据库ID
+ * @method void setDatabaseId(string $DatabaseId) 设置数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseResponseInfo extends AbstractModel
@@ -115,7 +115,7 @@ class DatabaseResponseInfo extends AbstractModel
     public $GovernPolicy;
 
     /**
-     * @var string 数据库ID
+     * @var string 数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseId;
@@ -138,7 +138,7 @@ class DatabaseResponseInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DataGovernPolicy $GovernPolicy 数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DatabaseId 数据库ID
+     * @param string $DatabaseId 数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

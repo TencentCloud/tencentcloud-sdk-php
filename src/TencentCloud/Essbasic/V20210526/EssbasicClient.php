@@ -44,7 +44,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
  * @method Models\ChannelCreateBoundFlowsResponse ChannelCreateBoundFlows(Models\ChannelCreateBoundFlowsRequest $req) 此接口（ChannelCreateBoundFlows）用于子客领取合同，经办人需要有相应的角色，合同不能重复领取。
  * @method Models\ChannelCreateConvertTaskApiResponse ChannelCreateConvertTaskApi(Models\ChannelCreateConvertTaskApiRequest $req) 上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
- * @method Models\ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(Models\ChannelCreateEmbedWebUrlRequest $req) 本接口（ChannelCreateEmbedWebUrl）用于创建嵌入web的链接
+ * @method Models\ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(Models\ChannelCreateEmbedWebUrlRequest $req) 本接口（ChannelCreateEmbedWebUrl）用于创建常规模块嵌入web的链接
 本接口支持创建：创建印章，创建模板，修改模板，预览模板，预览合同流程的web链接
 进入web连接后与当前控制台操作保持一致
  * @method Models\ChannelCreateFlowByFilesResponse ChannelCreateFlowByFiles(Models\ChannelCreateFlowByFilesRequest $req) 接口（ChannelCreateFlowByFiles）用于通过文件创建签署流程。此接口静默签能力不可直接使用，请联系客户经理申请使用
@@ -58,7 +58,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 签署审核：通过接口（CreateFlowsByTemplates或ChannelCreateFlowByFiles或ChannelCreatePrepareFlow）发起签署流程后，若指定了参数 NeedSignReview 为true,则可以调用此接口，指定operate=SignReview，提交企业内部签署审批结果；若签署流程状态正常，且本企业存在签署方未签署，同一签署流程可以多次提交签署审批结果，签署时的最后一个“审批结果”有效
 
 发起审核：通过接口ChannelCreatePrepareFlow指定发起后需要审核，则可以通过调用此接口，指定operate=CreateReview，提交企业内部审批结果，可多次提交，当通过后，后续提交结果无效
- * @method Models\ChannelCreateFlowSignUrlResponse ChannelCreateFlowSignUrl(Models\ChannelCreateFlowSignUrlRequest $req) 创建个人H5签署链接，请联系客户经理申请使用<br/>
+ * @method Models\ChannelCreateFlowSignUrlResponse ChannelCreateFlowSignUrl(Models\ChannelCreateFlowSignUrlRequest $req) 创建个人签署H5签署链接，请联系客户经理申请使用<br/>
 该接口用于发起合同后，生成C端签署人的签署链接<br/>
 注意：该接口目前签署人类型仅支持个人签署方（PERSON）<br/>
 注意：该接口可生成签署链接的C端签署人必须仅有手写签名和时间类型的签署控件<br/>

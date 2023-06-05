@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealId(string $SealId) 设置电子印章编号
  * @method string getSealName() 获取电子印章名称
  * @method void setSealName(string $SealName) 设置电子印章名称
- * @method integer getCreateOn() 获取电子印章授权时间戳
- * @method void setCreateOn(integer $CreateOn) 设置电子印章授权时间戳
- * @method string getCreator() 获取电子印章授权人
- * @method void setCreator(string $Creator) 设置电子印章授权人
+ * @method integer getCreateOn() 获取电子印章授权时间戳，单位秒
+ * @method void setCreateOn(integer $CreateOn) 设置电子印章授权时间戳，单位秒
+ * @method string getCreator() 获取电子印章授权人的UserId
+ * @method void setCreator(string $Creator) 设置电子印章授权人的UserId
  * @method string getSealPolicyId() 获取电子印章策略Id
  * @method void setSealPolicyId(string $SealPolicyId) 设置电子印章策略Id
  * @method string getSealStatus() 获取印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取印章图片url，5分钟内有效
  * @method void setUrl(string $Url) 设置印章图片url，5分钟内有效
- * @method string getSealType() 获取印章类型
- * @method void setSealType(string $SealType) 设置印章类型
- * @method boolean getIsAllTime() 获取用印申请是否为永久授权
- * @method void setIsAllTime(boolean $IsAllTime) 设置用印申请是否为永久授权
+ * @method string getSealType() 获取印章类型,OFFICIAL-企业公章, CONTRACT-合同专用章,ORGANIZATIONSEAL-企业印章(本地上传印章类型),LEGAL_PERSON_SEAL-法人印章
+ * @method void setSealType(string $SealType) 设置印章类型,OFFICIAL-企业公章, CONTRACT-合同专用章,ORGANIZATIONSEAL-企业印章(本地上传印章类型),LEGAL_PERSON_SEAL-法人印章
+ * @method boolean getIsAllTime() 获取用印申请是否为永久授权，true-是，false-否
+ * @method void setIsAllTime(boolean $IsAllTime) 设置用印申请是否为永久授权，true-是，false-否
  * @method array getAuthorizedUsers() 获取授权人列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizedUsers(array $AuthorizedUsers) 设置授权人列表
@@ -60,12 +60,12 @@ class OccupiedSeal extends AbstractModel
     public $SealName;
 
     /**
-     * @var integer 电子印章授权时间戳
+     * @var integer 电子印章授权时间戳，单位秒
      */
     public $CreateOn;
 
     /**
-     * @var string 电子印章授权人
+     * @var string 电子印章授权人的UserId
      */
     public $Creator;
 
@@ -91,12 +91,12 @@ class OccupiedSeal extends AbstractModel
     public $Url;
 
     /**
-     * @var string 印章类型
+     * @var string 印章类型,OFFICIAL-企业公章, CONTRACT-合同专用章,ORGANIZATIONSEAL-企业印章(本地上传印章类型),LEGAL_PERSON_SEAL-法人印章
      */
     public $SealType;
 
     /**
-     * @var boolean 用印申请是否为永久授权
+     * @var boolean 用印申请是否为永久授权，true-是，false-否
      */
     public $IsAllTime;
 
@@ -109,15 +109,15 @@ class OccupiedSeal extends AbstractModel
     /**
      * @param string $SealId 电子印章编号
      * @param string $SealName 电子印章名称
-     * @param integer $CreateOn 电子印章授权时间戳
-     * @param string $Creator 电子印章授权人
+     * @param integer $CreateOn 电子印章授权时间戳，单位秒
+     * @param string $Creator 电子印章授权人的UserId
      * @param string $SealPolicyId 电子印章策略Id
      * @param string $SealStatus 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
      * @param string $FailReason 审核失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 印章图片url，5分钟内有效
-     * @param string $SealType 印章类型
-     * @param boolean $IsAllTime 用印申请是否为永久授权
+     * @param string $SealType 印章类型,OFFICIAL-企业公章, CONTRACT-合同专用章,ORGANIZATIONSEAL-企业印章(本地上传印章类型),LEGAL_PERSON_SEAL-法人印章
+     * @param boolean $IsAllTime 用印申请是否为永久授权，true-是，false-否
      * @param array $AuthorizedUsers 授权人列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -98,6 +98,7 @@ class CreateFlowRequest extends AbstractModel
 
     /**
      * @var string 暂未开放
+     * @deprecated
      */
     public $RelatedFlowId;
 
@@ -140,6 +141,7 @@ false：有序签
 
     /**
      * @var string 暂未开放
+     * @deprecated
      */
     public $CallbackUrl;
 

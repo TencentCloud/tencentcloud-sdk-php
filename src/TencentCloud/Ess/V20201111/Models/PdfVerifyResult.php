@@ -26,26 +26,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignPlatform(string $SignPlatform) 设置签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
  * @method string getSignerName() 获取签署人名称
  * @method void setSignerName(string $SignerName) 设置签署人名称
- * @method integer getSignTime() 获取签署时间
- * @method void setSignTime(integer $SignTime) 设置签署时间
+ * @method integer getSignTime() 获取签署时间戳，单位秒
+ * @method void setSignTime(integer $SignTime) 设置签署时间戳，单位秒
  * @method string getSignAlgorithm() 获取签名算法
  * @method void setSignAlgorithm(string $SignAlgorithm) 设置签名算法
  * @method string getCertSn() 获取签名证书序列号
  * @method void setCertSn(string $CertSn) 设置签名证书序列号
- * @method integer getCertNotBefore() 获取证书起始时间
- * @method void setCertNotBefore(integer $CertNotBefore) 设置证书起始时间
- * @method integer getCertNotAfter() 获取证书过期时间
- * @method void setCertNotAfter(integer $CertNotAfter) 设置证书过期时间
- * @method float getComponentPosX() 获取签名域横坐标
- * @method void setComponentPosX(float $ComponentPosX) 设置签名域横坐标
- * @method float getComponentPosY() 获取签名域纵坐标
- * @method void setComponentPosY(float $ComponentPosY) 设置签名域纵坐标
- * @method float getComponentWidth() 获取签名域宽度
- * @method void setComponentWidth(float $ComponentWidth) 设置签名域宽度
- * @method float getComponentHeight() 获取签名域高度
- * @method void setComponentHeight(float $ComponentHeight) 设置签名域高度
- * @method integer getComponentPage() 获取签名域所在页码
- * @method void setComponentPage(integer $ComponentPage) 设置签名域所在页码
+ * @method integer getCertNotBefore() 获取证书起始时间戳，单位秒
+ * @method void setCertNotBefore(integer $CertNotBefore) 设置证书起始时间戳，单位秒
+ * @method integer getCertNotAfter() 获取证书过期时间戳，单位秒
+ * @method void setCertNotAfter(integer $CertNotAfter) 设置证书过期时间戳，单位秒
+ * @method float getComponentPosX() 获取签名域横坐标，单位pt
+ * @method void setComponentPosX(float $ComponentPosX) 设置签名域横坐标，单位pt
+ * @method float getComponentPosY() 获取签名域纵坐标，单位pt
+ * @method void setComponentPosY(float $ComponentPosY) 设置签名域纵坐标，单位pt
+ * @method float getComponentWidth() 获取签名域宽度，单位pt
+ * @method void setComponentWidth(float $ComponentWidth) 设置签名域宽度，单位pt
+ * @method float getComponentHeight() 获取签名域高度，单位pt
+ * @method void setComponentHeight(float $ComponentHeight) 设置签名域高度，单位pt
+ * @method integer getComponentPage() 获取签名域所在页码，1～N
+ * @method void setComponentPage(integer $ComponentPage) 设置签名域所在页码，1～N
  */
 class PdfVerifyResult extends AbstractModel
 {
@@ -65,7 +65,7 @@ class PdfVerifyResult extends AbstractModel
     public $SignerName;
 
     /**
-     * @var integer 签署时间
+     * @var integer 签署时间戳，单位秒
      */
     public $SignTime;
 
@@ -80,37 +80,37 @@ class PdfVerifyResult extends AbstractModel
     public $CertSn;
 
     /**
-     * @var integer 证书起始时间
+     * @var integer 证书起始时间戳，单位秒
      */
     public $CertNotBefore;
 
     /**
-     * @var integer 证书过期时间
+     * @var integer 证书过期时间戳，单位秒
      */
     public $CertNotAfter;
 
     /**
-     * @var float 签名域横坐标
+     * @var float 签名域横坐标，单位pt
      */
     public $ComponentPosX;
 
     /**
-     * @var float 签名域纵坐标
+     * @var float 签名域纵坐标，单位pt
      */
     public $ComponentPosY;
 
     /**
-     * @var float 签名域宽度
+     * @var float 签名域宽度，单位pt
      */
     public $ComponentWidth;
 
     /**
-     * @var float 签名域高度
+     * @var float 签名域高度，单位pt
      */
     public $ComponentHeight;
 
     /**
-     * @var integer 签名域所在页码
+     * @var integer 签名域所在页码，1～N
      */
     public $ComponentPage;
 
@@ -118,16 +118,16 @@ class PdfVerifyResult extends AbstractModel
      * @param integer $VerifyResult 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
      * @param string $SignPlatform 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
      * @param string $SignerName 签署人名称
-     * @param integer $SignTime 签署时间
+     * @param integer $SignTime 签署时间戳，单位秒
      * @param string $SignAlgorithm 签名算法
      * @param string $CertSn 签名证书序列号
-     * @param integer $CertNotBefore 证书起始时间
-     * @param integer $CertNotAfter 证书过期时间
-     * @param float $ComponentPosX 签名域横坐标
-     * @param float $ComponentPosY 签名域纵坐标
-     * @param float $ComponentWidth 签名域宽度
-     * @param float $ComponentHeight 签名域高度
-     * @param integer $ComponentPage 签名域所在页码
+     * @param integer $CertNotBefore 证书起始时间戳，单位秒
+     * @param integer $CertNotAfter 证书过期时间戳，单位秒
+     * @param float $ComponentPosX 签名域横坐标，单位pt
+     * @param float $ComponentPosY 签名域纵坐标，单位pt
+     * @param float $ComponentWidth 签名域宽度，单位pt
+     * @param float $ComponentHeight 签名域高度，单位pt
+     * @param integer $ComponentPage 签名域所在页码，1～N
      */
     function __construct()
     {

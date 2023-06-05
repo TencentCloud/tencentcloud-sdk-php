@@ -150,6 +150,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticLimit(integer $ElasticLimit) 设置spark jar 包年包月集群弹性上限
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDefaultHouse() 获取是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultHouse(boolean $DefaultHouse) 设置是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxConcurrency() 获取单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxConcurrency(integer $MaxConcurrency) 设置单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTolerableQueueTime() 获取任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTolerableQueueTime(integer $TolerableQueueTime) 设置任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUserAppId() 获取用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserAppId(integer $UserAppId) 设置用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserUin() 获取用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserUin(string $UserUin) 设置用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SessionResourceTemplate getSessionResourceTemplate() 获取SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -375,6 +399,42 @@ class DataEngineInfo extends AbstractModel
     public $ElasticLimit;
 
     /**
+     * @var boolean 是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultHouse;
+
+    /**
+     * @var integer 单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxConcurrency;
+
+    /**
+     * @var integer 任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TolerableQueueTime;
+
+    /**
+     * @var integer 用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserAppId;
+
+    /**
+     * @var string 用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserUin;
+
+    /**
+     * @var SessionResourceTemplate SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionResourceTemplate;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -439,6 +499,18 @@ class DataEngineInfo extends AbstractModel
      * @param boolean $ElasticSwitch spark jar 包年包月集群是否开启弹性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticLimit spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DefaultHouse 是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxConcurrency 单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TolerableQueueTime 任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UserAppId 用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserUin 用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionResourceTemplate $SessionResourceTemplate SessionResourceTemplate
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -619,6 +691,31 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
             $this->ElasticLimit = $param["ElasticLimit"];
+        }
+
+        if (array_key_exists("DefaultHouse",$param) and $param["DefaultHouse"] !== null) {
+            $this->DefaultHouse = $param["DefaultHouse"];
+        }
+
+        if (array_key_exists("MaxConcurrency",$param) and $param["MaxConcurrency"] !== null) {
+            $this->MaxConcurrency = $param["MaxConcurrency"];
+        }
+
+        if (array_key_exists("TolerableQueueTime",$param) and $param["TolerableQueueTime"] !== null) {
+            $this->TolerableQueueTime = $param["TolerableQueueTime"];
+        }
+
+        if (array_key_exists("UserAppId",$param) and $param["UserAppId"] !== null) {
+            $this->UserAppId = $param["UserAppId"];
+        }
+
+        if (array_key_exists("UserUin",$param) and $param["UserUin"] !== null) {
+            $this->UserUin = $param["UserUin"];
+        }
+
+        if (array_key_exists("SessionResourceTemplate",$param) and $param["SessionResourceTemplate"] !== null) {
+            $this->SessionResourceTemplate = new SessionResourceTemplate();
+            $this->SessionResourceTemplate->deserialize($param["SessionResourceTemplate"]);
         }
     }
 }

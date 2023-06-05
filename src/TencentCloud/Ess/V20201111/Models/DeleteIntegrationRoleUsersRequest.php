@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteIntegrationRoleUsers请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人
- * @method void setOperator(UserInfo $Operator) 设置操作人
+ * @method UserInfo getOperator() 获取操作人信息，userId必填
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
  * @method string getRoleId() 获取角色id
  * @method void setRoleId(string $RoleId) 设置角色id
  * @method array getUsers() 获取用户信息
  * @method void setUsers(array $Users) 设置用户信息
- * @method Agent getAgent() 获取代理信息
- * @method void setAgent(Agent $Agent) 设置代理信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class DeleteIntegrationRoleUsersRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人
+     * @var UserInfo 操作人信息，userId必填
      */
     public $Operator;
 
@@ -47,15 +47,15 @@ class DeleteIntegrationRoleUsersRequest extends AbstractModel
     public $Users;
 
     /**
-     * @var Agent 代理信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 操作人
+     * @param UserInfo $Operator 操作人信息，userId必填
      * @param string $RoleId 角色id
      * @param array $Users 用户信息
-     * @param Agent $Agent 代理信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {

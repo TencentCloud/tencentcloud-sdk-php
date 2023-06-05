@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordCount(integer $RecordCount) 设置数据表行数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMapMaterializedViewName() 获取xxxx
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMapMaterializedViewName(string $MapMaterializedViewName) 设置xxxx
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableResponseInfo extends AbstractModel
 {
@@ -121,6 +125,12 @@ class TableResponseInfo extends AbstractModel
     public $RecordCount;
 
     /**
+     * @var string xxxx
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MapMaterializedViewName;
+
+    /**
      * @param TableBaseInfo $TableBaseInfo 数据表基本信息。
      * @param array $Columns 数据表列信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,6 +149,8 @@ class TableResponseInfo extends AbstractModel
      * @param integer $StorageSize 数据表存储大小（单位：Byte）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordCount 数据表行数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MapMaterializedViewName xxxx
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +220,10 @@ class TableResponseInfo extends AbstractModel
 
         if (array_key_exists("RecordCount",$param) and $param["RecordCount"] !== null) {
             $this->RecordCount = $param["RecordCount"];
+        }
+
+        if (array_key_exists("MapMaterializedViewName",$param) and $param["MapMaterializedViewName"] !== null) {
+            $this->MapMaterializedViewName = $param["MapMaterializedViewName"];
         }
     }
 }

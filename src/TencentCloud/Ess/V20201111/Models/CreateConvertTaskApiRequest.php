@@ -57,11 +57,13 @@ class CreateConvertTaskApiRequest extends AbstractModel
 
     /**
      * @var Agent 应用号信息
+     * @deprecated
      */
     public $Agent;
 
     /**
      * @var OrganizationInfo 暂未开放
+     * @deprecated
      */
     public $Organization;
 

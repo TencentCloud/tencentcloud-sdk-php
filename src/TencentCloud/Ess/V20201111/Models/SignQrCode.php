@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQrCodeId(string $QrCodeId) 设置二维码id
  * @method string getQrCodeUrl() 获取二维码url
  * @method void setQrCodeUrl(string $QrCodeUrl) 设置二维码url
- * @method integer getExpiredTime() 获取二维码过期时间
- * @method void setExpiredTime(integer $ExpiredTime) 设置二维码过期时间
+ * @method integer getExpiredTime() 获取二维码过期时间戳，单位秒
+ * @method void setExpiredTime(integer $ExpiredTime) 设置二维码过期时间戳，单位秒
  */
 class SignQrCode extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SignQrCode extends AbstractModel
     public $QrCodeUrl;
 
     /**
-     * @var integer 二维码过期时间
+     * @var integer 二维码过期时间戳，单位秒
      */
     public $ExpiredTime;
 
     /**
      * @param string $QrCodeId 二维码id
      * @param string $QrCodeUrl 二维码url
-     * @param integer $ExpiredTime 二维码过期时间
+     * @param integer $ExpiredTime 二维码过期时间戳，单位秒
      */
     function __construct()
     {

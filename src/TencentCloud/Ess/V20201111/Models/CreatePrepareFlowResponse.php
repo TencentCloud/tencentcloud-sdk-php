@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrepareFlow返回参数结构体
  *
- * @method string getUrl() 获取快速发起预览链接
- * @method void setUrl(string $Url) 设置快速发起预览链接
+ * @method string getUrl() 获取快速发起预览链接，有效期5分钟
+ * @method void setUrl(string $Url) 设置快速发起预览链接，有效期5分钟
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreatePrepareFlowResponse extends AbstractModel
 {
     /**
-     * @var string 快速发起预览链接
+     * @var string 快速发起预览链接，有效期5分钟
      */
     public $Url;
 
@@ -38,7 +38,7 @@ class CreatePrepareFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Url 快速发起预览链接
+     * @param string $Url 快速发起预览链接，有效期5分钟
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

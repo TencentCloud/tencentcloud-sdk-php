@@ -35,26 +35,31 @@ class OrganizationInfo extends AbstractModel
 {
     /**
      * @var string 机构在平台的编号，内部字段，暂未开放
+     * @deprecated
      */
     public $OrganizationId;
 
     /**
      * @var string 用户渠道，内部字段，暂未开放
+     * @deprecated
      */
     public $Channel;
 
     /**
      * @var string 用户在渠道的机构编号，内部字段，暂未开放
+     * @deprecated
      */
     public $OrganizationOpenId;
 
     /**
      * @var string 用户真实的IP，内部字段，暂未开放
+     * @deprecated
      */
     public $ClientIp;
 
     /**
      * @var string 机构的代理IP，内部字段，暂未开放
+     * @deprecated
      */
     public $ProxyIp;
 

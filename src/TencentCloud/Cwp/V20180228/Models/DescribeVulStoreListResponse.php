@@ -14,30 +14,47 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFlowTemplates返回参数结构体
+ * DescribeVulStoreList返回参数结构体
  *
- * @method array getTemplates() 获取模板详情列表
- * @method void setTemplates(array $Templates) 设置模板详情列表
- * @method integer getTotalCount() 获取查询到的总数
- * @method void setTotalCount(integer $TotalCount) 设置查询到的总数
+ * @method array getList() 获取漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setList(array $List) 设置漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取总数
+ * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method integer getRemaining() 获取今日剩余搜索此时
+ * @method void setRemaining(integer $Remaining) 设置今日剩余搜索此时
+ * @method integer getFreeSearchTimes() 获取免费搜索次数
+ * @method void setFreeSearchTimes(integer $FreeSearchTimes) 设置免费搜索次数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFlowTemplatesResponse extends AbstractModel
+class DescribeVulStoreListResponse extends AbstractModel
 {
     /**
-     * @var array 模板详情列表
+     * @var array 漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Templates;
+    public $List;
 
     /**
-     * @var integer 查询到的总数
+     * @var integer 总数
      */
     public $TotalCount;
+
+    /**
+     * @var integer 今日剩余搜索此时
+     */
+    public $Remaining;
+
+    /**
+     * @var integer 免费搜索次数
+     */
+    public $FreeSearchTimes;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +62,11 @@ class DescribeFlowTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Templates 模板详情列表
-     * @param integer $TotalCount 查询到的总数
+     * @param array $List 漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 总数
+     * @param integer $Remaining 今日剩余搜索此时
+     * @param integer $FreeSearchTimes 免费搜索次数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +82,25 @@ class DescribeFlowTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Templates",$param) and $param["Templates"] !== null) {
-            $this->Templates = [];
-            foreach ($param["Templates"] as $key => $value){
-                $obj = new TemplateInfo();
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new VulStoreListInfo();
                 $obj->deserialize($value);
-                array_push($this->Templates, $obj);
+                array_push($this->List, $obj);
             }
         }
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Remaining",$param) and $param["Remaining"] !== null) {
+            $this->Remaining = $param["Remaining"];
+        }
+
+        if (array_key_exists("FreeSearchTimes",$param) and $param["FreeSearchTimes"] !== null) {
+            $this->FreeSearchTimes = $param["FreeSearchTimes"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

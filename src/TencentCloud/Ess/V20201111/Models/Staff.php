@@ -44,11 +44,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getVerified() 获取员工是否实名
  * @method void setVerified(boolean $Verified) 设置员工是否实名
- * @method integer getCreatedOn() 获取员工创建时间戳
- * @method void setCreatedOn(integer $CreatedOn) 设置员工创建时间戳
- * @method integer getVerifiedOn() 获取员工实名时间戳
+ * @method integer getCreatedOn() 获取员工创建时间戳，单位秒
+ * @method void setCreatedOn(integer $CreatedOn) 设置员工创建时间戳，单位秒
+ * @method integer getVerifiedOn() 获取员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVerifiedOn(integer $VerifiedOn) 设置员工实名时间戳
+ * @method void setVerifiedOn(integer $VerifiedOn) 设置员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQuiteJob() 获取员工是否离职：0-未离职，1-离职
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,12 +106,12 @@ class Staff extends AbstractModel
     public $Verified;
 
     /**
-     * @var integer 员工创建时间戳
+     * @var integer 员工创建时间戳，单位秒
      */
     public $CreatedOn;
 
     /**
-     * @var integer 员工实名时间戳
+     * @var integer 员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifiedOn;
@@ -145,8 +145,8 @@ class Staff extends AbstractModel
      * @param Department $Department 员工部门
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Verified 员工是否实名
-     * @param integer $CreatedOn 员工创建时间戳
-     * @param integer $VerifiedOn 员工实名时间戳
+     * @param integer $CreatedOn 员工创建时间戳，单位秒
+     * @param integer $VerifiedOn 员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QuiteJob 员工是否离职：0-未离职，1-离职
 注意：此字段可能返回 null，表示取不到有效值。

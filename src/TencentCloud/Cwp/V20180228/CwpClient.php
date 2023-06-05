@@ -194,9 +194,6 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeRiskDnsEventInfoResponse DescribeRiskDnsEventInfo(Models\DescribeRiskDnsEventInfoRequest $req) 查询恶意请求事件详情
  * @method Models\DescribeRiskDnsEventListResponse DescribeRiskDnsEventList(Models\DescribeRiskDnsEventListRequest $req) 获取恶意请求事件列表
  * @method Models\DescribeRiskDnsListResponse DescribeRiskDnsList(Models\DescribeRiskDnsListRequest $req) 入侵检测，获取恶意请求列表
- * @method Models\DescribeSaveOrUpdateWarningsResponse DescribeSaveOrUpdateWarnings(Models\DescribeSaveOrUpdateWarningsRequest $req) 下线
-
-更新或者插入用户告警设置(该接口废弃,请调用 ModifyWarningSetting )
  * @method Models\DescribeScanMalwareScheduleResponse DescribeScanMalwareSchedule(Models\DescribeScanMalwareScheduleRequest $req) 查询木马扫描进度
  * @method Models\DescribeScanScheduleResponse DescribeScanSchedule(Models\DescribeScanScheduleRequest $req) 根据taskid查询检测进度
  * @method Models\DescribeScanStateResponse DescribeScanState(Models\DescribeScanStateRequest $req) DescribeScanState 该接口能查询对应模块正在进行的扫描任务状态
@@ -228,6 +225,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeVulInfoCvssResponse DescribeVulInfoCvss(Models\DescribeVulInfoCvssRequest $req) 漏洞详情，带CVSS版本
  * @method Models\DescribeVulLevelCountResponse DescribeVulLevelCount(Models\DescribeVulLevelCountRequest $req) 漏洞数量等级分布统计
  * @method Models\DescribeVulListResponse DescribeVulList(Models\DescribeVulListRequest $req) 获取漏洞列表数据
+ * @method Models\DescribeVulStoreListResponse DescribeVulStoreList(Models\DescribeVulStoreListRequest $req) 获取漏洞库列表
  * @method Models\DescribeVulTopResponse DescribeVulTop(Models\DescribeVulTopRequest $req) 漏洞top统计
  * @method Models\DescribeWarningListResponse DescribeWarningList(Models\DescribeWarningListRequest $req) 获取当前用户告警列表
  * @method Models\DescribeWebPageEventListResponse DescribeWebPageEventList(Models\DescribeWebPageEventListRequest $req) 查询篡改事件列表

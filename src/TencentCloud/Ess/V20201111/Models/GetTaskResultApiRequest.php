@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务Id，通过CreateConvertTaskApi得到
  * @method void setTaskId(string $TaskId) 设置任务Id，通过CreateConvertTaskApi得到
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
+ * @method UserInfo getOperator() 获取操作人信息,UserId必填
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息,UserId必填
  * @method Agent getAgent() 获取应用号信息
  * @method void setAgent(Agent $Agent) 设置应用号信息
  * @method OrganizationInfo getOrganization() 获取暂未开放
@@ -37,23 +37,25 @@ class GetTaskResultApiRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 操作人信息,UserId必填
      */
     public $Operator;
 
     /**
      * @var Agent 应用号信息
+     * @deprecated
      */
     public $Agent;
 
     /**
      * @var OrganizationInfo 暂未开放
+     * @deprecated
      */
     public $Organization;
 
     /**
      * @param string $TaskId 任务Id，通过CreateConvertTaskApi得到
-     * @param UserInfo $Operator 操作人信息
+     * @param UserInfo $Operator 操作人信息,UserId必填
      * @param Agent $Agent 应用号信息
      * @param OrganizationInfo $Organization 暂未开放
      */

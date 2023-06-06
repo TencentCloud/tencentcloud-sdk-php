@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20210820\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceLogList返回参数结构体
+ * DescribeBillSummary返回参数结构体
  *
- * @method string getData() 获取日志列表
- * @method void setData(string $Data) 设置日志列表
- * @method array getInstanceLogList() 获取日志列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceLogList(array $InstanceLogList) 设置日志列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReady() 获取数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+ * @method void setReady(integer $Ready) 设置数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+ * @method array getSummaryDetail() 获取账单多维度汇总消费详情
+ * @method void setSummaryDetail(array $SummaryDetail) 设置账单多维度汇总消费详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeInstanceLogListResponse extends AbstractModel
+class DescribeBillSummaryResponse extends AbstractModel
 {
     /**
-     * @var string 日志列表
+     * @var integer 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
      */
-    public $Data;
+    public $Ready;
 
     /**
-     * @var array 日志列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 账单多维度汇总消费详情
      */
-    public $InstanceLogList;
+    public $SummaryDetail;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +45,8 @@ class DescribeInstanceLogListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Data 日志列表
-     * @param array $InstanceLogList 日志列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * @param array $SummaryDetail 账单多维度汇总消费详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,16 +62,16 @@ class DescribeInstanceLogListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists("Ready",$param) and $param["Ready"] !== null) {
+            $this->Ready = $param["Ready"];
         }
 
-        if (array_key_exists("InstanceLogList",$param) and $param["InstanceLogList"] !== null) {
-            $this->InstanceLogList = [];
-            foreach ($param["InstanceLogList"] as $key => $value){
-                $obj = new InstanceLogList();
+        if (array_key_exists("SummaryDetail",$param) and $param["SummaryDetail"] !== null) {
+            $this->SummaryDetail = [];
+            foreach ($param["SummaryDetail"] as $key => $value){
+                $obj = new SummaryDetail();
                 $obj->deserialize($value);
-                array_push($this->InstanceLogList, $obj);
+                array_push($this->SummaryDetail, $obj);
             }
         }
 

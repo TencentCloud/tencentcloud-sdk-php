@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExclusiveInstances返回参数结构体
  *
- * @method InstanceInfo getResult() 获取独享实例列表查询结果
- * @method void setResult(InstanceInfo $Result) 设置独享实例列表查询结果
+ * @method DescribeExclusiveInstancesResult getResult() 获取独享实例列表查询结果
+ * @method void setResult(DescribeExclusiveInstancesResult $Result) 设置独享实例列表查询结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeExclusiveInstancesResponse extends AbstractModel
 {
     /**
-     * @var InstanceInfo 独享实例列表查询结果
+     * @var DescribeExclusiveInstancesResult 独享实例列表查询结果
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeExclusiveInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param InstanceInfo $Result 独享实例列表查询结果
+     * @param DescribeExclusiveInstancesResult $Result 独享实例列表查询结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeExclusiveInstancesResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new InstanceInfo();
+            $this->Result = new DescribeExclusiveInstancesResult();
             $this->Result->deserialize($param["Result"]);
         }
 

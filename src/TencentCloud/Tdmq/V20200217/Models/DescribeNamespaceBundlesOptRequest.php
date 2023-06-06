@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置查询限制条数
  * @method integer getOffset() 获取查询偏移量
  * @method void setOffset(integer $Offset) 设置查询偏移量
+ * @method string getBundle() 获取过滤的 bundle
+ * @method void setBundle(string $Bundle) 设置过滤的 bundle
+ * @method string getOwnerBroker() 获取bundle 所属的 broker ip 地址，支持模糊查询
+ * @method void setOwnerBroker(string $OwnerBroker) 设置bundle 所属的 broker ip 地址，支持模糊查询
  */
 class DescribeNamespaceBundlesOptRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DescribeNamespaceBundlesOptRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 过滤的 bundle
+     */
+    public $Bundle;
+
+    /**
+     * @var string bundle 所属的 broker ip 地址，支持模糊查询
+     */
+    public $OwnerBroker;
+
+    /**
      * @param string $ClusterName 物理集群名
      * @param string $TenantId 虚拟集群（租户）ID
      * @param string $NamespaceName 命名空间名
      * @param boolean $NeedMetrics 是否需要监控指标，若传false，则不需要传Limit和Offset分页参数
      * @param integer $Limit 查询限制条数
      * @param integer $Offset 查询偏移量
+     * @param string $Bundle 过滤的 bundle
+     * @param string $OwnerBroker bundle 所属的 broker ip 地址，支持模糊查询
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeNamespaceBundlesOptRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Bundle",$param) and $param["Bundle"] !== null) {
+            $this->Bundle = $param["Bundle"];
+        }
+
+        if (array_key_exists("OwnerBroker",$param) and $param["OwnerBroker"] !== null) {
+            $this->OwnerBroker = $param["OwnerBroker"];
         }
     }
 }

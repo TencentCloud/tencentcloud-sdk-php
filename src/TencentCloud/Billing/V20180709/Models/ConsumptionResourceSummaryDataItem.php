@@ -46,6 +46,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
  * @method string getConsumptionTypeName() 获取消耗类型
  * @method void setConsumptionTypeName(string $ConsumptionTypeName) 设置消耗类型
+ * @method string getRealCost() 获取折前价
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRealCost(string $RealCost) 设置折前价
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFeeBeginTime() 获取费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeeBeginTime(string $FeeBeginTime) 设置费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFeeEndTime() 获取费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeeEndTime(string $FeeEndTime) 设置费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDayDiff() 获取天数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDayDiff(string $DayDiff) 设置天数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDailyTotalCost() 获取每日消耗
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDailyTotalCost(string $DailyTotalCost) 设置每日消耗
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrderId() 获取订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrderId(string $OrderId) 设置订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVoucherPayAmount() 获取代金券
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIncentivePayAmount() 获取赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTransferPayAmount() 获取分成金
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumptionResourceSummaryDataItem extends AbstractModel
 {
@@ -115,6 +151,60 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
     public $ConsumptionTypeName;
 
     /**
+     * @var string 折前价
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RealCost;
+
+    /**
+     * @var string 费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeeBeginTime;
+
+    /**
+     * @var string 费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeeEndTime;
+
+    /**
+     * @var string 天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DayDiff;
+
+    /**
+     * @var string 每日消耗
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DailyTotalCost;
+
+    /**
+     * @var string 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrderId;
+
+    /**
+     * @var string 代金券
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VoucherPayAmount;
+
+    /**
+     * @var string 赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IncentivePayAmount;
+
+    /**
+     * @var string 分成金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TransferPayAmount;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param string $ResourceName 资源名称
      * @param string $RealTotalCost 折后总价
@@ -128,6 +218,24 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
      * @param string $BusinessCode 产品名称代码
      * @param string $BusinessCodeName 产品名称
      * @param string $ConsumptionTypeName 消耗类型
+     * @param string $RealCost 折前价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FeeBeginTime 费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FeeEndTime 费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DayDiff 天数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DailyTotalCost 每日消耗
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrderId 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VoucherPayAmount 代金券
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IncentivePayAmount 赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TransferPayAmount 分成金
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +300,42 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
 
         if (array_key_exists("ConsumptionTypeName",$param) and $param["ConsumptionTypeName"] !== null) {
             $this->ConsumptionTypeName = $param["ConsumptionTypeName"];
+        }
+
+        if (array_key_exists("RealCost",$param) and $param["RealCost"] !== null) {
+            $this->RealCost = $param["RealCost"];
+        }
+
+        if (array_key_exists("FeeBeginTime",$param) and $param["FeeBeginTime"] !== null) {
+            $this->FeeBeginTime = $param["FeeBeginTime"];
+        }
+
+        if (array_key_exists("FeeEndTime",$param) and $param["FeeEndTime"] !== null) {
+            $this->FeeEndTime = $param["FeeEndTime"];
+        }
+
+        if (array_key_exists("DayDiff",$param) and $param["DayDiff"] !== null) {
+            $this->DayDiff = $param["DayDiff"];
+        }
+
+        if (array_key_exists("DailyTotalCost",$param) and $param["DailyTotalCost"] !== null) {
+            $this->DailyTotalCost = $param["DailyTotalCost"];
+        }
+
+        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
+            $this->OrderId = $param["OrderId"];
+        }
+
+        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
+            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        }
+
+        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
+            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

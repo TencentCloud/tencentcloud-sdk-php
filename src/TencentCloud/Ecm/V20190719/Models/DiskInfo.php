@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) 设置磁盘ID
  * @method integer getDiskSize() 获取磁盘大小（GB）
  * @method void setDiskSize(integer $DiskSize) 设置磁盘大小（GB）
+ * @method boolean getDeleteWithInstance() 获取是否随实例删除。
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置是否随实例删除。
+ * @method string getSnapshotId() 获取快照ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshotId(string $SnapshotId) 设置快照ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiskInfo extends AbstractModel
 {
@@ -45,9 +51,23 @@ class DiskInfo extends AbstractModel
     public $DiskSize;
 
     /**
+     * @var boolean 是否随实例删除。
+     */
+    public $DeleteWithInstance;
+
+    /**
+     * @var string 快照ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnapshotId;
+
+    /**
      * @param string $DiskType 磁盘类型：LOCAL_BASIC
      * @param string $DiskId 磁盘ID
      * @param integer $DiskSize 磁盘大小（GB）
+     * @param boolean $DeleteWithInstance 是否随实例删除。
+     * @param string $SnapshotId 快照ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +92,14 @@ class DiskInfo extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
+            $this->DeleteWithInstance = $param["DeleteWithInstance"];
+        }
+
+        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
+            $this->SnapshotId = $param["SnapshotId"];
         }
     }
 }

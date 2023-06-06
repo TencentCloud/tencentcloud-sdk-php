@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUsagePlanName() 获取使用计划名称。
  * @method void setUsagePlanName(string $UsagePlanName) 设置使用计划名称。
  * @method string getUsagePlanDesc() 获取使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsagePlanDesc(string $UsagePlanDesc) 设置使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxRequestNumPreSec() 获取使用计划qps，-1表示没有限制。
  * @method void setMaxRequestNumPreSec(integer $MaxRequestNumPreSec) 设置使用计划qps，-1表示没有限制。
  * @method string getCreatedTime() 获取使用计划时间。
@@ -54,6 +56,7 @@ class UsagePlan extends AbstractModel
 
     /**
      * @var string 使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsagePlanDesc;
 
@@ -77,6 +80,7 @@ class UsagePlan extends AbstractModel
      * @param string $UsagePlanId 使用计划唯一ID。
      * @param string $UsagePlanName 使用计划名称。
      * @param string $UsagePlanDesc 使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRequestNumPreSec 使用计划qps，-1表示没有限制。
      * @param string $CreatedTime 使用计划时间。
      * @param string $ModifiedTime 使用计划修改时间。

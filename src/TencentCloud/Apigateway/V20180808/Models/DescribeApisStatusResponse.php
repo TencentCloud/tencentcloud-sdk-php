@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApisStatus返回参数结构体
  *
- * @method ApisStatus getResult() 获取API 详情列表。
- * @method void setResult(ApisStatus $Result) 设置API 详情列表。
+ * @method DescribeApisStatusResultInfo getResult() 获取API 详情列表。
+ * @method void setResult(DescribeApisStatusResultInfo $Result) 设置API 详情列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeApisStatusResponse extends AbstractModel
 {
     /**
-     * @var ApisStatus API 详情列表。
+     * @var DescribeApisStatusResultInfo API 详情列表。
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeApisStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ApisStatus $Result API 详情列表。
+     * @param DescribeApisStatusResultInfo $Result API 详情列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeApisStatusResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ApisStatus();
+            $this->Result = new DescribeApisStatusResultInfo();
             $this->Result->deserialize($param["Result"]);
         }
 

@@ -762,7 +762,7 @@ class ApiInfo extends AbstractModel
         if (array_key_exists("ServiceParameters",$param) and $param["ServiceParameters"] !== null) {
             $this->ServiceParameters = [];
             foreach ($param["ServiceParameters"] as $key => $value){
-                $obj = new ServiceParameter();
+                $obj = new DescribeApiResultServiceParametersInfo();
                 $obj->deserialize($value);
                 array_push($this->ServiceParameters, $obj);
             }

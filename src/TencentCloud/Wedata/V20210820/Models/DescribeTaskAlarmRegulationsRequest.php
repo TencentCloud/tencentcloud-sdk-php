@@ -20,12 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskAlarmRegulations请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method integer getTaskType() 获取任务类型(201代表实时任务，202代表离线任务)
- * @method void setTaskType(integer $TaskType) 设置任务类型(201代表实时任务，202代表离线任务)
  * @method integer getPageNumber() 获取当前页
  * @method void setPageNumber(integer $PageNumber) 设置当前页
  * @method integer getPageSize() 获取每页记录数
@@ -34,23 +30,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤条件(name有RegularStatus、AlarmLevel、AlarmIndicator、RegularName)
  * @method array getOrderFields() 获取排序条件(RegularId)
  * @method void setOrderFields(array $OrderFields) 设置排序条件(RegularId)
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method integer getTaskType() 获取任务类型(201代表实时任务，202代表离线任务)
+ * @method void setTaskType(integer $TaskType) 设置任务类型(201代表实时任务，202代表离线任务)
  */
 class DescribeTaskAlarmRegulationsRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
-     */
-    public $TaskId;
-
-    /**
      * @var string 项目ID
      */
     public $ProjectId;
-
-    /**
-     * @var integer 任务类型(201代表实时任务，202代表离线任务)
-     */
-    public $TaskType;
 
     /**
      * @var integer 当前页
@@ -73,13 +63,23 @@ class DescribeTaskAlarmRegulationsRequest extends AbstractModel
     public $OrderFields;
 
     /**
-     * @param string $TaskId 任务ID
+     * @var string 任务ID
+     */
+    public $TaskId;
+
+    /**
+     * @var integer 任务类型(201代表实时任务，202代表离线任务)
+     */
+    public $TaskType;
+
+    /**
      * @param string $ProjectId 项目ID
-     * @param integer $TaskType 任务类型(201代表实时任务，202代表离线任务)
      * @param integer $PageNumber 当前页
      * @param integer $PageSize 每页记录数
      * @param array $Filters 过滤条件(name有RegularStatus、AlarmLevel、AlarmIndicator、RegularName)
      * @param array $OrderFields 排序条件(RegularId)
+     * @param string $TaskId 任务ID
+     * @param integer $TaskType 任务类型(201代表实时任务，202代表离线任务)
      */
     function __construct()
     {
@@ -94,16 +94,8 @@ class DescribeTaskAlarmRegulationsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
-        }
-
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
         }
 
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
@@ -130,6 +122,14 @@ class DescribeTaskAlarmRegulationsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OrderFields, $obj);
             }
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

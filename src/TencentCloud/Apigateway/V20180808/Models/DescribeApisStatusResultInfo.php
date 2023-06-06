@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合条件的 API 接口数量。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的 API 接口数量。
- * @method array getApiIdStatusSet() 获取API 接口列表。
- * @method void setApiIdStatusSet(array $ApiIdStatusSet) 设置API 接口列表。
  */
-class ApisStatus extends AbstractModel
+class DescribeApisStatusResultInfo extends AbstractModel
 {
     /**
      * @var integer 符合条件的 API 接口数量。
@@ -33,13 +31,7 @@ class ApisStatus extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array API 接口列表。
-     */
-    public $ApiIdStatusSet;
-
-    /**
      * @param integer $TotalCount 符合条件的 API 接口数量。
-     * @param array $ApiIdStatusSet API 接口列表。
      */
     function __construct()
     {
@@ -56,15 +48,6 @@ class ApisStatus extends AbstractModel
         }
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("ApiIdStatusSet",$param) and $param["ApiIdStatusSet"] !== null) {
-            $this->ApiIdStatusSet = [];
-            foreach ($param["ApiIdStatusSet"] as $key => $value){
-                $obj = new DesApisStatus();
-                $obj->deserialize($value);
-                array_push($this->ApiIdStatusSet, $obj);
-            }
         }
     }
 }

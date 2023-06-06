@@ -92,6 +92,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeComHook(string $WeComHook) 设置企业微信群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateTime() 获取最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperatorUin() 获取最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperatorUin(string $OperatorUin) 设置最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskCount() 获取关联任务数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskCount(integer $TaskCount) 设置关联任务数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMonitorType() 获取监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorType(integer $MonitorType) 设置监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMonitorObjectIds() 获取监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorObjectIds(array $MonitorObjectIds) 设置监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLatestAlarmInstanceId() 获取最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLatestAlarmInstanceId(string $LatestAlarmInstanceId) 设置最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLatestAlarmTime() 获取最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLatestAlarmTime(string $LatestAlarmTime) 设置最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskAlarmInfo extends AbstractModel
 {
@@ -220,6 +252,54 @@ class TaskAlarmInfo extends AbstractModel
     public $WeComHook;
 
     /**
+     * @var string 最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
+     * @var string 最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperatorUin;
+
+    /**
+     * @var integer 关联任务数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskCount;
+
+    /**
+     * @var integer 监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorType;
+
+    /**
+     * @var array 监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorObjectIds;
+
+    /**
+     * @var string 最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LatestAlarmInstanceId;
+
+    /**
+     * @var string 最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LatestAlarmTime;
+
+    /**
+     * @var string 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $RegularName 规则名称
      * @param integer $RegularStatus 规则状态(0表示关闭，1表示打开)
@@ -255,6 +335,22 @@ class TaskAlarmInfo extends AbstractModel
      * @param integer $AlarmRecipientType 告警接收人类型，0指定人员；1任务责任人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WeComHook 企业微信群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime 最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OperatorUin 最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskCount 关联任务数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MonitorType 监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MonitorObjectIds 监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LatestAlarmInstanceId 最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LatestAlarmTime 最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 告警规则描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -361,6 +457,38 @@ class TaskAlarmInfo extends AbstractModel
 
         if (array_key_exists("WeComHook",$param) and $param["WeComHook"] !== null) {
             $this->WeComHook = $param["WeComHook"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("OperatorUin",$param) and $param["OperatorUin"] !== null) {
+            $this->OperatorUin = $param["OperatorUin"];
+        }
+
+        if (array_key_exists("TaskCount",$param) and $param["TaskCount"] !== null) {
+            $this->TaskCount = $param["TaskCount"];
+        }
+
+        if (array_key_exists("MonitorType",$param) and $param["MonitorType"] !== null) {
+            $this->MonitorType = $param["MonitorType"];
+        }
+
+        if (array_key_exists("MonitorObjectIds",$param) and $param["MonitorObjectIds"] !== null) {
+            $this->MonitorObjectIds = $param["MonitorObjectIds"];
+        }
+
+        if (array_key_exists("LatestAlarmInstanceId",$param) and $param["LatestAlarmInstanceId"] !== null) {
+            $this->LatestAlarmInstanceId = $param["LatestAlarmInstanceId"];
+        }
+
+        if (array_key_exists("LatestAlarmTime",$param) and $param["LatestAlarmTime"] !== null) {
+            $this->LatestAlarmTime = $param["LatestAlarmTime"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

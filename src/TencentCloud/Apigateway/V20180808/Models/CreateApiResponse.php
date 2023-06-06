@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApi返回参数结构体
  *
- * @method CreateApiRsp getResult() 获取api信息
+ * @method CreateApiResultInfo getResult() 获取api信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(CreateApiRsp $Result) 设置api信息
+ * @method void setResult(CreateApiResultInfo $Result) 设置api信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateApiResponse extends AbstractModel
 {
     /**
-     * @var CreateApiRsp api信息
+     * @var CreateApiResultInfo api信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
@@ -41,7 +41,7 @@ class CreateApiResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CreateApiRsp $Result api信息
+     * @param CreateApiResultInfo $Result api信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -59,7 +59,7 @@ class CreateApiResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new CreateApiRsp();
+            $this->Result = new CreateApiResultInfo();
             $this->Result->deserialize($param["Result"]);
         }
 

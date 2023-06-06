@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目名称
  * @method void setProjectId(string $ProjectId) 设置项目名称
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getAlarmRegularName() 获取规则名称
  * @method void setAlarmRegularName(string $AlarmRegularName) 设置规则名称
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getId() 获取主键ID
  * @method void setId(string $Id) 设置主键ID
+ * @method integer getTaskType() 获取任务类型:201.实时,202.离线
+ * @method void setTaskType(integer $TaskType) 设置任务类型:201.实时,202.离线
  */
 class CheckAlarmRegularNameExistRequest extends AbstractModel
 {
@@ -37,14 +39,15 @@ class CheckAlarmRegularNameExistRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 任务ID
-     */
-    public $TaskId;
-
-    /**
      * @var string 规则名称
      */
     public $AlarmRegularName;
+
+    /**
+     * @var string 任务ID
+     * @deprecated
+     */
+    public $TaskId;
 
     /**
      * @var string 主键ID
@@ -52,10 +55,16 @@ class CheckAlarmRegularNameExistRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var integer 任务类型:201.实时,202.离线
+     */
+    public $TaskType;
+
+    /**
      * @param string $ProjectId 项目名称
-     * @param string $TaskId 任务ID
      * @param string $AlarmRegularName 规则名称
+     * @param string $TaskId 任务ID
      * @param string $Id 主键ID
+     * @param integer $TaskType 任务类型:201.实时,202.离线
      */
     function __construct()
     {
@@ -74,16 +83,20 @@ class CheckAlarmRegularNameExistRequest extends AbstractModel
             $this->ProjectId = $param["ProjectId"];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
-        }
-
         if (array_key_exists("AlarmRegularName",$param) and $param["AlarmRegularName"] !== null) {
             $this->AlarmRegularName = $param["AlarmRegularName"];
         }
 
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

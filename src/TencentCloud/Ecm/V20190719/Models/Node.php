@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setISPSet(array $ISPSet) 设置运营商列表。
  * @method integer getISPNum() 获取运营商数量。
  * @method void setISPNum(integer $ISPNum) 设置运营商数量。
+ * @method boolean getLBSupported() 获取节点是否支持LB
+ * @method void setLBSupported(boolean $LBSupported) 设置节点是否支持LB
  */
 class Node extends AbstractModel
 {
@@ -80,6 +82,11 @@ class Node extends AbstractModel
     public $ISPNum;
 
     /**
+     * @var boolean 节点是否支持LB
+     */
+    public $LBSupported;
+
+    /**
      * @param ZoneInfo $ZoneInfo zone信息。
      * @param Country $Country 国家信息。
      * @param Area $Area 区域信息。
@@ -88,6 +95,7 @@ class Node extends AbstractModel
      * @param RegionInfo $RegionInfo Region信息。
      * @param array $ISPSet 运营商列表。
      * @param integer $ISPNum 运营商数量。
+     * @param boolean $LBSupported 节点是否支持LB
      */
     function __construct()
     {
@@ -143,6 +151,10 @@ class Node extends AbstractModel
 
         if (array_key_exists("ISPNum",$param) and $param["ISPNum"] !== null) {
             $this->ISPNum = $param["ISPNum"];
+        }
+
+        if (array_key_exists("LBSupported",$param) and $param["LBSupported"] !== null) {
+            $this->LBSupported = $param["LBSupported"];
         }
     }
 }

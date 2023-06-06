@@ -28,6 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealTotalCost(string $RealTotalCost) 设置折后总价
  * @method ConsumptionSummaryTrend getTrend() 获取费用趋势
  * @method void setTrend(ConsumptionSummaryTrend $Trend) 设置费用趋势
+ * @method string getCashPayAmount() 获取现金
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCashPayAmount(string $CashPayAmount) 设置现金
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIncentivePayAmount() 获取赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVoucherPayAmount() 获取代金券
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTransferPayAmount() 获取分成金
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumptionBusinessSummaryDataItem extends AbstractModel
 {
@@ -52,10 +68,42 @@ class ConsumptionBusinessSummaryDataItem extends AbstractModel
     public $Trend;
 
     /**
+     * @var string 现金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CashPayAmount;
+
+    /**
+     * @var string 赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IncentivePayAmount;
+
+    /**
+     * @var string 代金券
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VoucherPayAmount;
+
+    /**
+     * @var string 分成金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TransferPayAmount;
+
+    /**
      * @param string $BusinessCode 产品名称代码
      * @param string $BusinessCodeName 产品名称
      * @param string $RealTotalCost 折后总价
      * @param ConsumptionSummaryTrend $Trend 费用趋势
+     * @param string $CashPayAmount 现金
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IncentivePayAmount 赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VoucherPayAmount 代金券
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TransferPayAmount 分成金
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -85,6 +133,22 @@ class ConsumptionBusinessSummaryDataItem extends AbstractModel
         if (array_key_exists("Trend",$param) and $param["Trend"] !== null) {
             $this->Trend = new ConsumptionSummaryTrend();
             $this->Trend->deserialize($param["Trend"]);
+        }
+
+        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
+            $this->CashPayAmount = $param["CashPayAmount"];
+        }
+
+        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
+            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
+            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        }
+
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

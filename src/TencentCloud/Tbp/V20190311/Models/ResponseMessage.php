@@ -14,27 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Tbp\V20190311\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 分层存储详细信息
+ * 从TBP-RTS服务v1.3版本起，机器人以消息组列表的形式响应，消息组列表GroupList包含多组消息，用户根据需要对部分或全部消息组进行组合使用。
  *
- * @method integer getTieringSizeInBytes() 获取低频存储容量
+ * @method Group getGroupList() 获取消息组列表。	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTieringSizeInBytes(integer $TieringSizeInBytes) 设置低频存储容量
+ * @method void setGroupList(Group $GroupList) 设置消息组列表。	
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class TieringDetailInfo extends AbstractModel
+class ResponseMessage extends AbstractModel
 {
     /**
-     * @var integer 低频存储容量
+     * @var Group 消息组列表。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TieringSizeInBytes;
+    public $GroupList;
 
     /**
-     * @param integer $TieringSizeInBytes 低频存储容量
+     * @param Group $GroupList 消息组列表。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -50,8 +50,9 @@ class TieringDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TieringSizeInBytes",$param) and $param["TieringSizeInBytes"] !== null) {
-            $this->TieringSizeInBytes = $param["TieringSizeInBytes"];
+        if (array_key_exists("GroupList",$param) and $param["GroupList"] !== null) {
+            $this->GroupList = new Group();
+            $this->GroupList->deserialize($param["GroupList"]);
         }
     }
 }

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getData() 获取返回结果
  * @method void setData(string $Data) 设置返回结果
+ * @method IntegrationInstanceLog getInstanceLogInfo() 获取返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceLogInfo(IntegrationInstanceLog $InstanceLogInfo) 设置返回结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class DescribeInstanceLogResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var IntegrationInstanceLog 返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceLogInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Data 返回结果
+     * @param IntegrationInstanceLog $InstanceLogInfo 返回结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,11 @@ class DescribeInstanceLogResponse extends AbstractModel
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("InstanceLogInfo",$param) and $param["InstanceLogInfo"] !== null) {
+            $this->InstanceLogInfo = new IntegrationInstanceLog();
+            $this->InstanceLogInfo->deserialize($param["InstanceLogInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,35 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOrUpdateResource请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method array getFiles() 获取文件名
- * @method void setFiles(array $Files) 设置文件名
- * @method string getFilePath() 获取文件所属路径，资源管理根路径为 /datastudio/resouce
- * @method void setFilePath(string $FilePath) 设置文件所属路径，资源管理根路径为 /datastudio/resouce
+ * @method string getProjectId() 获取项目ID，必填项
+ * @method void setProjectId(string $ProjectId) 设置项目ID，必填项
+ * @method array getFiles() 获取文件名，必填项
+ * @method void setFiles(array $Files) 设置文件名，必填项
+ * @method string getFilePath() 获取必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
+ * @method void setFilePath(string $FilePath) 设置必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
  * @method string getCosBucketName() 获取cos存储桶名字
  * @method void setCosBucketName(string $CosBucketName) 设置cos存储桶名字
  * @method string getCosRegion() 获取cos所属地域
  * @method void setCosRegion(string $CosRegion) 设置cos所属地域
  * @method boolean getNewFile() 获取是否为新文件，新增为 true，更新为 false
  * @method void setNewFile(boolean $NewFile) 设置是否为新文件，新增为 true，更新为 false
- * @method array getFilesSize() 获取文件大小
- * @method void setFilesSize(array $FilesSize) 设置文件大小
+ * @method array getFilesSize() 获取必填项，文件大小，与 Files 字段对应
+ * @method void setFilesSize(array $FilesSize) 设置必填项，文件大小，与 Files 字段对应
  */
 class CreateOrUpdateResourceRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var string 项目ID，必填项
      */
     public $ProjectId;
 
     /**
-     * @var array 文件名
+     * @var array 文件名，必填项
      */
     public $Files;
 
     /**
-     * @var string 文件所属路径，资源管理根路径为 /datastudio/resouce
+     * @var string 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
      */
     public $FilePath;
 
@@ -68,18 +68,18 @@ class CreateOrUpdateResourceRequest extends AbstractModel
     public $NewFile;
 
     /**
-     * @var array 文件大小
+     * @var array 必填项，文件大小，与 Files 字段对应
      */
     public $FilesSize;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param array $Files 文件名
-     * @param string $FilePath 文件所属路径，资源管理根路径为 /datastudio/resouce
+     * @param string $ProjectId 项目ID，必填项
+     * @param array $Files 文件名，必填项
+     * @param string $FilePath 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
      * @param string $CosBucketName cos存储桶名字
      * @param string $CosRegion cos所属地域
      * @param boolean $NewFile 是否为新文件，新增为 true，更新为 false
-     * @param array $FilesSize 文件大小
+     * @param array $FilesSize 必填项，文件大小，与 Files 字段对应
      */
     function __construct()
     {

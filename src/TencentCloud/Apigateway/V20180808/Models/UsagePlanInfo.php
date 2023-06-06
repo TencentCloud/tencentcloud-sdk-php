@@ -32,10 +32,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsagePlanDesc(string $UsagePlanDesc) 设置使用计划描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInitQuota() 获取初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInitQuota(integer $InitQuota) 设置初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxRequestNumPreSec() 获取每秒请求限制数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRequestNumPreSec(integer $MaxRequestNumPreSec) 设置每秒请求限制数。
@@ -43,10 +39,6 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxRequestNum() 获取最大调用次数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRequestNum(integer $MaxRequestNum) 设置最大调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsHide() 获取是否隐藏。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsHide(integer $IsHide) 设置是否隐藏。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,12 +86,6 @@ class UsagePlanInfo extends AbstractModel
     public $UsagePlanDesc;
 
     /**
-     * @var integer 初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $InitQuota;
-
-    /**
      * @var integer 每秒请求限制数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -110,12 +96,6 @@ class UsagePlanInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRequestNum;
-
-    /**
-     * @var integer 是否隐藏。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $IsHide;
 
     /**
      * @var string 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
@@ -160,13 +140,9 @@ class UsagePlanInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UsagePlanDesc 使用计划描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InitQuota 初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRequestNumPreSec 每秒请求限制数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRequestNum 最大调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsHide 是否隐藏。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -206,20 +182,12 @@ class UsagePlanInfo extends AbstractModel
             $this->UsagePlanDesc = $param["UsagePlanDesc"];
         }
 
-        if (array_key_exists("InitQuota",$param) and $param["InitQuota"] !== null) {
-            $this->InitQuota = $param["InitQuota"];
-        }
-
         if (array_key_exists("MaxRequestNumPreSec",$param) and $param["MaxRequestNumPreSec"] !== null) {
             $this->MaxRequestNumPreSec = $param["MaxRequestNumPreSec"];
         }
 
         if (array_key_exists("MaxRequestNum",$param) and $param["MaxRequestNum"] !== null) {
             $this->MaxRequestNum = $param["MaxRequestNum"];
-        }
-
-        if (array_key_exists("IsHide",$param) and $param["IsHide"] !== null) {
-            $this->IsHide = $param["IsHide"];
         }
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {

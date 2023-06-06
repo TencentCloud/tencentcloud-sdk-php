@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * BindSubDomain返回参数结构体
+ * 实例日志信息
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getLogInfo() 获取任务日志信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogInfo(string $LogInfo) 设置任务日志信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class BindSubDomainResponse extends AbstractModel
+class IntegrationInstanceLog extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 任务日志信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RequestId;
+    public $LogInfo;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $LogInfo 任务日志信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class BindSubDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("LogInfo",$param) and $param["LogInfo"] !== null) {
+            $this->LogInfo = $param["LogInfo"];
         }
     }
 }

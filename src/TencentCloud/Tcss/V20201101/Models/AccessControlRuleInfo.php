@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getIsEnable() 获取开关,true:开启，false:禁用
  * @method void setIsEnable(boolean $IsEnable) 设置开关,true:开启，false:禁用
- * @method array getImageIds() 获取生效惊现id，空数组代表全部镜像
- * @method void setImageIds(array $ImageIds) 设置生效惊现id，空数组代表全部镜像
+ * @method array getImageIds() 获取生效镜像id，空数组代表全部镜像
+ * @method void setImageIds(array $ImageIds) 设置生效镜像id，空数组代表全部镜像
  * @method array getChildRules() 获取用户策略的子策略数组
  * @method void setChildRules(array $ChildRules) 设置用户策略的子策略数组
  * @method string getRuleName() 获取策略名字
@@ -45,7 +45,7 @@ class AccessControlRuleInfo extends AbstractModel
     public $IsEnable;
 
     /**
-     * @var array 生效惊现id，空数组代表全部镜像
+     * @var array 生效镜像id，空数组代表全部镜像
      */
     public $ImageIds;
 
@@ -77,7 +77,7 @@ class AccessControlRuleInfo extends AbstractModel
 
     /**
      * @param boolean $IsEnable 开关,true:开启，false:禁用
-     * @param array $ImageIds 生效惊现id，空数组代表全部镜像
+     * @param array $ImageIds 生效镜像id，空数组代表全部镜像
      * @param array $ChildRules 用户策略的子策略数组
      * @param string $RuleName 策略名字
      * @param string $RuleId 策略id

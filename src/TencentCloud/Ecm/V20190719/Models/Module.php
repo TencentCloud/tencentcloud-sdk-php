@@ -60,6 +60,8 @@ DELETEFAILED：删除失败。
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置系统盘信息。
  * @method array getDataDisks() 获取数据盘信息。
  * @method void setDataDisks(array $DataDisks) 设置数据盘信息。
+ * @method integer getDisableWanIp() 获取是否禁止外网ip
+ * @method void setDisableWanIp(integer $DisableWanIp) 设置是否禁止外网ip
  */
 class Module extends AbstractModel
 {
@@ -148,6 +150,11 @@ DELETEFAILED：删除失败。
     public $DataDisks;
 
     /**
+     * @var integer 是否禁止外网ip
+     */
+    public $DisableWanIp;
+
+    /**
      * @param string $ModuleId 模块Id。
      * @param string $ModuleName 模块名称。
      * @param string $ModuleState 模块状态：
@@ -168,6 +175,7 @@ DELETEFAILED：删除失败。
      * @param string $UserData 自定义脚本数据
      * @param SystemDisk $SystemDisk 系统盘信息。
      * @param array $DataDisks 数据盘信息。
+     * @param integer $DisableWanIp 是否禁止外网ip
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ DELETEFAILED：删除失败。
                 $obj->deserialize($value);
                 array_push($this->DataDisks, $obj);
             }
+        }
+
+        if (array_key_exists("DisableWanIp",$param) and $param["DisableWanIp"] !== null) {
+            $this->DisableWanIp = $param["DisableWanIp"];
         }
     }
 }

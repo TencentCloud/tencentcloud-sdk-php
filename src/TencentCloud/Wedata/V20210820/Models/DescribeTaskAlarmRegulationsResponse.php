@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskAlarmRegulations返回参数结构体
  *
- * @method array getTaskAlarmInfos() 获取任务告警规则信息
+ * @method array getTaskAlarmInfos() 获取告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskAlarmInfos(array $TaskAlarmInfos) 设置任务告警规则信息
+ * @method void setTaskAlarmInfos(array $TaskAlarmInfos) 设置告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总记录数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskAlarmRegulationsResponse extends AbstractModel
 {
     /**
-     * @var array 任务告警规则信息
+     * @var array 告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskAlarmInfos;
@@ -51,7 +51,7 @@ class DescribeTaskAlarmRegulationsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TaskAlarmInfos 任务告警规则信息
+     * @param array $TaskAlarmInfos 告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总记录数
 注意：此字段可能返回 null，表示取不到有效值。

@@ -18,59 +18,59 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 健康检查配置，包括TsfHealthCheckConf和TargetServicesHealthCheckConf
+ * 创建api返回
  *
- * @method boolean getIsHealthCheck() 获取是否开启健康检查。
+ * @method string getApiId() 获取api id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsHealthCheck(boolean $IsHealthCheck) 设置是否开启健康检查。
+ * @method void setApiId(string $ApiId) 设置api id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRequestVolumeThreshold() 获取健康检查阈值。
+ * @method string getPath() 获取路径
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestVolumeThreshold(integer $RequestVolumeThreshold) 设置健康检查阈值。
+ * @method void setPath(string $Path) 设置路径
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSleepWindowInMilliseconds() 获取窗口大小。
+ * @method string getMethod() 获取请求方法
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSleepWindowInMilliseconds(integer $SleepWindowInMilliseconds) 设置窗口大小。
+ * @method void setMethod(string $Method) 设置请求方法
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getErrorThresholdPercentage() 获取阈值百分比。
+ * @method string getCreatedTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorThresholdPercentage(integer $ErrorThresholdPercentage) 设置阈值百分比。
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class HealthCheckConf extends AbstractModel
+class CreateApiResultInfo extends AbstractModel
 {
     /**
-     * @var boolean 是否开启健康检查。
+     * @var string api id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $IsHealthCheck;
+    public $ApiId;
 
     /**
-     * @var integer 健康检查阈值。
+     * @var string 路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RequestVolumeThreshold;
+    public $Path;
 
     /**
-     * @var integer 窗口大小。
+     * @var string 请求方法
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SleepWindowInMilliseconds;
+    public $Method;
 
     /**
-     * @var integer 阈值百分比。
+     * @var string 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ErrorThresholdPercentage;
+    public $CreatedTime;
 
     /**
-     * @param boolean $IsHealthCheck 是否开启健康检查。
+     * @param string $ApiId api id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RequestVolumeThreshold 健康检查阈值。
+     * @param string $Path 路径
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SleepWindowInMilliseconds 窗口大小。
+     * @param string $Method 请求方法
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ErrorThresholdPercentage 阈值百分比。
+     * @param string $CreatedTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,20 +86,20 @@ class HealthCheckConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsHealthCheck",$param) and $param["IsHealthCheck"] !== null) {
-            $this->IsHealthCheck = $param["IsHealthCheck"];
+        if (array_key_exists("ApiId",$param) and $param["ApiId"] !== null) {
+            $this->ApiId = $param["ApiId"];
         }
 
-        if (array_key_exists("RequestVolumeThreshold",$param) and $param["RequestVolumeThreshold"] !== null) {
-            $this->RequestVolumeThreshold = $param["RequestVolumeThreshold"];
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
 
-        if (array_key_exists("SleepWindowInMilliseconds",$param) and $param["SleepWindowInMilliseconds"] !== null) {
-            $this->SleepWindowInMilliseconds = $param["SleepWindowInMilliseconds"];
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
         }
 
-        if (array_key_exists("ErrorThresholdPercentage",$param) and $param["ErrorThresholdPercentage"] !== null) {
-            $this->ErrorThresholdPercentage = $param["ErrorThresholdPercentage"];
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
         }
     }
 }

@@ -130,6 +130,66 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmit(boolean $Submit) 设置任务版本是否已提交运维
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInputDatasourceType() 获取MYSQL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputDatasourceType(string $InputDatasourceType) 设置MYSQL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOutputDatasourceType() 获取DLC
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutputDatasourceType(string $OutputDatasourceType) 设置DLC
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNumRecordsIn() 获取读取条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNumRecordsIn(integer $NumRecordsIn) 设置读取条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNumRecordsOut() 获取写入条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNumRecordsOut(integer $NumRecordsOut) 设置写入条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getReaderDelay() 获取读取延迟
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReaderDelay(float $ReaderDelay) 设置读取延迟
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNumRestarts() 获取重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNumRestarts(integer $NumRestarts) 设置重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateTime() 获取任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastRunTime() 获取任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastRunTime(string $LastRunTime) 设置任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStopTime() 获取任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStopTime(string $StopTime) 设置任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHasVersion() 获取作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasVersion(boolean $HasVersion) 设置作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLocked() 获取任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocked(boolean $Locked) 设置任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLocker() 获取任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocker(string $Locker) 设置任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getRunningCu() 获取耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunningCu(float $RunningCu) 设置耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTaskAlarmRegularList() 获取该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskAlarmRegularList(array $TaskAlarmRegularList) 设置该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationTaskInfo extends AbstractModel
 {
@@ -305,6 +365,96 @@ class IntegrationTaskInfo extends AbstractModel
     public $Submit;
 
     /**
+     * @var string MYSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InputDatasourceType;
+
+    /**
+     * @var string DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutputDatasourceType;
+
+    /**
+     * @var integer 读取条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NumRecordsIn;
+
+    /**
+     * @var integer 写入条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NumRecordsOut;
+
+    /**
+     * @var float 读取延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReaderDelay;
+
+    /**
+     * @var integer 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NumRestarts;
+
+    /**
+     * @var string 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
+     * @var string 任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastRunTime;
+
+    /**
+     * @var string 任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StopTime;
+
+    /**
+     * @var boolean 作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasVersion;
+
+    /**
+     * @var boolean 任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Locked;
+
+    /**
+     * @var string 任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Locker;
+
+    /**
+     * @var float 耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunningCu;
+
+    /**
+     * @var array 该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskAlarmRegularList;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -359,6 +509,36 @@ class IntegrationTaskInfo extends AbstractModel
      * @param array $DataProxyUrl dataproxy url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Submit 任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InputDatasourceType MYSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OutputDatasourceType DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NumRecordsIn 读取条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NumRecordsOut 写入条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $ReaderDelay 读取延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NumRestarts 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime 任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastRunTime 任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StopTime 任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasVersion 作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Locked 任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Locker 任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $RunningCu 耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TaskAlarmRegularList 该任务关联的告警规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -514,6 +694,66 @@ class IntegrationTaskInfo extends AbstractModel
 
         if (array_key_exists("Submit",$param) and $param["Submit"] !== null) {
             $this->Submit = $param["Submit"];
+        }
+
+        if (array_key_exists("InputDatasourceType",$param) and $param["InputDatasourceType"] !== null) {
+            $this->InputDatasourceType = $param["InputDatasourceType"];
+        }
+
+        if (array_key_exists("OutputDatasourceType",$param) and $param["OutputDatasourceType"] !== null) {
+            $this->OutputDatasourceType = $param["OutputDatasourceType"];
+        }
+
+        if (array_key_exists("NumRecordsIn",$param) and $param["NumRecordsIn"] !== null) {
+            $this->NumRecordsIn = $param["NumRecordsIn"];
+        }
+
+        if (array_key_exists("NumRecordsOut",$param) and $param["NumRecordsOut"] !== null) {
+            $this->NumRecordsOut = $param["NumRecordsOut"];
+        }
+
+        if (array_key_exists("ReaderDelay",$param) and $param["ReaderDelay"] !== null) {
+            $this->ReaderDelay = $param["ReaderDelay"];
+        }
+
+        if (array_key_exists("NumRestarts",$param) and $param["NumRestarts"] !== null) {
+            $this->NumRestarts = $param["NumRestarts"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("LastRunTime",$param) and $param["LastRunTime"] !== null) {
+            $this->LastRunTime = $param["LastRunTime"];
+        }
+
+        if (array_key_exists("StopTime",$param) and $param["StopTime"] !== null) {
+            $this->StopTime = $param["StopTime"];
+        }
+
+        if (array_key_exists("HasVersion",$param) and $param["HasVersion"] !== null) {
+            $this->HasVersion = $param["HasVersion"];
+        }
+
+        if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
+            $this->Locked = $param["Locked"];
+        }
+
+        if (array_key_exists("Locker",$param) and $param["Locker"] !== null) {
+            $this->Locker = $param["Locker"];
+        }
+
+        if (array_key_exists("RunningCu",$param) and $param["RunningCu"] !== null) {
+            $this->RunningCu = $param["RunningCu"];
+        }
+
+        if (array_key_exists("TaskAlarmRegularList",$param) and $param["TaskAlarmRegularList"] !== null) {
+            $this->TaskAlarmRegularList = $param["TaskAlarmRegularList"];
         }
     }
 }

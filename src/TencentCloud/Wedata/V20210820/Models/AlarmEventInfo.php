@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(integer $Operator) 设置阈值计算算子，1 : 大于 2 ：小于
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegularId() 获取告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegularId(string $RegularId) 设置告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmEventInfo extends AbstractModel
 {
@@ -167,6 +171,12 @@ class AlarmEventInfo extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegularId;
+
+    /**
      * @param string $AlarmId 告警ID
      * @param string $AlarmTime 告警时间
      * @param string $TaskId 任务ID
@@ -191,6 +201,8 @@ class AlarmEventInfo extends AbstractModel
      * @param string $MessageId 消息ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Operator 阈值计算算子，1 : 大于 2 ：小于
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegularId 告警规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -272,6 +284,10 @@ class AlarmEventInfo extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("RegularId",$param) and $param["RegularId"] !== null) {
+            $this->RegularId = $param["RegularId"];
         }
     }
 }

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubject(string $Subject) 设置邮件主题
  * @method string getReplyToAddresses() 获取邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
  * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+ * @method array getCc() 获取抄送人邮箱地址，最多支持抄送20人。
+ * @method void setCc(array $Cc) 设置抄送人邮箱地址，最多支持抄送20人。
+ * @method array getBcc() 获取密送人邮箱地址，最多支持抄送20人。
+ * @method void setBcc(array $Bcc) 设置密送人邮箱地址，最多支持抄送20人。
  * @method Template getTemplate() 获取使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
  * @method void setTemplate(Template $Template) 设置使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
  * @method Simple getSimple() 获取已废弃
@@ -68,6 +72,16 @@ class SendEmailRequest extends AbstractModel
     public $ReplyToAddresses;
 
     /**
+     * @var array 抄送人邮箱地址，最多支持抄送20人。
+     */
+    public $Cc;
+
+    /**
+     * @var array 密送人邮箱地址，最多支持抄送20人。
+     */
+    public $Bcc;
+
+    /**
      * @var Template 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
      */
     public $Template;
@@ -99,6 +113,8 @@ class SendEmailRequest extends AbstractModel
      * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      * @param string $Subject 邮件主题
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+     * @param array $Cc 抄送人邮箱地址，最多支持抄送20人。
+     * @param array $Bcc 密送人邮箱地址，最多支持抄送20人。
      * @param Template $Template 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
      * @param Simple $Simple 已废弃
      * @param array $Attachments 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
@@ -132,6 +148,14 @@ class SendEmailRequest extends AbstractModel
 
         if (array_key_exists("ReplyToAddresses",$param) and $param["ReplyToAddresses"] !== null) {
             $this->ReplyToAddresses = $param["ReplyToAddresses"];
+        }
+
+        if (array_key_exists("Cc",$param) and $param["Cc"] !== null) {
+            $this->Cc = $param["Cc"];
+        }
+
+        if (array_key_exists("Bcc",$param) and $param["Bcc"] !== null) {
+            $this->Bcc = $param["Bcc"];
         }
 
         if (array_key_exists("Template",$param) and $param["Template"] !== null) {

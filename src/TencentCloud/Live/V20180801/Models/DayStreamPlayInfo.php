@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流播放信息
  *
- * @method string getTime() 获取数据时间点，格式：yyyy-mm-dd HH:MM:SS。
- * @method void setTime(string $Time) 设置数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+ * @method string getTime() 获取数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
+ * @method void setTime(string $Time) 设置数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
  * @method float getBandwidth() 获取带宽（单位Mbps）。
  * @method void setBandwidth(float $Bandwidth) 设置带宽（单位Mbps）。
  * @method float getFlux() 获取流量 （单位MB）。
@@ -34,7 +40,10 @@ use TencentCloud\Common\AbstractModel;
 class DayStreamPlayInfo extends AbstractModel
 {
     /**
-     * @var string 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+     * @var string 数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
      */
     public $Time;
 
@@ -59,7 +68,10 @@ class DayStreamPlayInfo extends AbstractModel
     public $Online;
 
     /**
-     * @param string $Time 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+     * @param string $Time 数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
      * @param float $Bandwidth 带宽（单位Mbps）。
      * @param float $Flux 流量 （单位MB）。
      * @param integer $Request 请求数。

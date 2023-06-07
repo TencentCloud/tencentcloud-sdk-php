@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKafkaVersion(string $KafkaVersion) 设置CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
  * @method string getSpecificationsType() 获取实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
  * @method void setSpecificationsType(string $SpecificationsType) 设置实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
- * @method integer getDiskSize() 获取磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
- * @method integer getBandWidth() 获取带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
- * @method void setBandWidth(integer $BandWidth) 设置带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
- * @method integer getPartition() 获取分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
- * @method void setPartition(integer $Partition) 设置分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+ * @method integer getDiskSize() 获取磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
+ * @method void setDiskSize(integer $DiskSize) 设置磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
+ * @method integer getBandWidth() 获取带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
+ * @method void setBandWidth(integer $BandWidth) 设置带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
+ * @method integer getPartition() 获取分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
+ * @method void setPartition(integer $Partition) 设置分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
  * @method string getDiskType() 获取磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
@@ -118,17 +118,17 @@ class CreateInstancePreRequest extends AbstractModel
     public $SpecificationsType;
 
     /**
-     * @var integer 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+     * @var integer 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
      */
     public $DiskSize;
 
     /**
-     * @var integer 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+     * @var integer 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
      */
     public $BandWidth;
 
     /**
-     * @var integer 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+     * @var integer 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
      */
     public $Partition;
 
@@ -165,9 +165,9 @@ class CreateInstancePreRequest extends AbstractModel
      * @param integer $RenewFlag 预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
      * @param string $KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
      * @param string $SpecificationsType 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
-     * @param integer $DiskSize 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
-     * @param integer $BandWidth 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
-     * @param integer $Partition 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+     * @param integer $DiskSize 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
+     * @param integer $BandWidth 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * @param integer $Partition 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
      * @param array $Tags 标签
      * @param string $DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
      * @param boolean $MultiZoneFlag 跨可用区，zoneIds必填

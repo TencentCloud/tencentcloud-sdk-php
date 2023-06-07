@@ -48,10 +48,10 @@ RELIEVED 解除
  
  * @method string getFlowMessage() 获取合同(流程)的信息
  * @method void setFlowMessage(string $FlowMessage) 设置合同(流程)的信息
- * @method integer getCreateOn() 获取合同(流程)的创建时间戳
- * @method void setCreateOn(integer $CreateOn) 设置合同(流程)的创建时间戳
- * @method integer getDeadLine() 获取合同(流程)的签署截止时间戳
- * @method void setDeadLine(integer $DeadLine) 设置合同(流程)的签署截止时间戳
+ * @method integer getCreateOn() 获取合同(流程)的创建时间戳，单位秒
+ * @method void setCreateOn(integer $CreateOn) 设置合同(流程)的创建时间戳，单位秒
+ * @method integer getDeadLine() 获取合同(流程)的签署截止时间戳，单位秒
+ * @method void setDeadLine(integer $DeadLine) 设置合同(流程)的签署截止时间戳，单位秒
  * @method string getCustomData() 获取用户自定义数据
  * @method void setCustomData(string $CustomData) 设置用户自定义数据
  * @method array getFlowApproverInfos() 获取合同(流程)的签署人数组
@@ -98,12 +98,12 @@ RELIEVED 解除
     public $FlowMessage;
 
     /**
-     * @var integer 合同(流程)的创建时间戳
+     * @var integer 合同(流程)的创建时间戳，单位秒
      */
     public $CreateOn;
 
     /**
-     * @var integer 合同(流程)的签署截止时间戳
+     * @var integer 合同(流程)的签署截止时间戳，单位秒
      */
     public $DeadLine;
 
@@ -142,8 +142,8 @@ CANCEL 取消
 RELIEVED 解除
  
      * @param string $FlowMessage 合同(流程)的信息
-     * @param integer $CreateOn 合同(流程)的创建时间戳
-     * @param integer $DeadLine 合同(流程)的签署截止时间戳
+     * @param integer $CreateOn 合同(流程)的创建时间戳，单位秒
+     * @param integer $DeadLine 合同(流程)的签署截止时间戳，单位秒
      * @param string $CustomData 用户自定义数据
      * @param array $FlowApproverInfos 合同(流程)的签署人数组
      * @param array $CcInfos 合同(流程)关注方信息列表

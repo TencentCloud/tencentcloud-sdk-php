@@ -25,13 +25,13 @@ use TencentCloud\Common\AbstractModel;
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同 
+  DOWNLOAD_FLOW         授权平台企业下载合同 
  * @method void setType(string $Type) 设置扩展服务类型
   AUTO_SIGN             企业静默签（自动签署）
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同 
+  DOWNLOAD_FLOW         授权平台企业下载合同 
  * @method string getName() 获取扩展服务名称 
  * @method void setName(string $Name) 设置扩展服务名称 
  * @method string getStatus() 获取服务状态 
@@ -40,13 +40,13 @@ DISABLE 关闭
  * @method void setStatus(string $Status) 设置服务状态 
 ENABLE 开启 
 DISABLE 关闭
- * @method string getOperatorOpenId() 获取最近操作人openid（经办人openid）
+ * @method string getOperatorOpenId() 获取最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperatorOpenId(string $OperatorOpenId) 设置最近操作人openid（经办人openid）
+ * @method void setOperatorOpenId(string $OperatorOpenId) 设置最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperateOn() 获取最近操作时间
+ * @method integer getOperateOn() 获取最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateOn(integer $OperateOn) 设置最近操作时间
+ * @method void setOperateOn(integer $OperateOn) 设置最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExtentServiceAuthInfo extends AbstractModel
@@ -57,7 +57,7 @@ class ExtentServiceAuthInfo extends AbstractModel
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同 
+  DOWNLOAD_FLOW         授权平台企业下载合同 
      */
     public $Type;
 
@@ -74,13 +74,13 @@ DISABLE 关闭
     public $Status;
 
     /**
-     * @var string 最近操作人openid（经办人openid）
+     * @var string 最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorOpenId;
 
     /**
-     * @var integer 最近操作时间
+     * @var integer 最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateOn;
@@ -91,14 +91,14 @@ DISABLE 关闭
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同 
+  DOWNLOAD_FLOW         授权平台企业下载合同 
      * @param string $Name 扩展服务名称 
      * @param string $Status 服务状态 
 ENABLE 开启 
 DISABLE 关闭
-     * @param string $OperatorOpenId 最近操作人openid（经办人openid）
+     * @param string $OperatorOpenId 最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperateOn 最近操作时间
+     * @param integer $OperateOn 最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

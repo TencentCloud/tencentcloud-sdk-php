@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 催办接口返回详细信息
  *
- * @method boolean getCanRemind() 获取是否能够催办
- * @method void setCanRemind(boolean $CanRemind) 设置是否能够催办
+ * @method boolean getCanRemind() 获取是否能够催办，true-是，false-否
+ * @method void setCanRemind(boolean $CanRemind) 设置是否能够催办，true-是，false-否
  * @method string getFlowId() 获取合同id
  * @method void setFlowId(string $FlowId) 设置合同id
- * @method string getRemindMessage() 获取催办详情
- * @method void setRemindMessage(string $RemindMessage) 设置催办详情
+ * @method string getRemindMessage() 获取催办详情信息
+ * @method void setRemindMessage(string $RemindMessage) 设置催办详情信息
  */
 class RemindFlowRecords extends AbstractModel
 {
     /**
-     * @var boolean 是否能够催办
+     * @var boolean 是否能够催办，true-是，false-否
      */
     public $CanRemind;
 
@@ -40,14 +40,14 @@ class RemindFlowRecords extends AbstractModel
     public $FlowId;
 
     /**
-     * @var string 催办详情
+     * @var string 催办详情信息
      */
     public $RemindMessage;
 
     /**
-     * @param boolean $CanRemind 是否能够催办
+     * @param boolean $CanRemind 是否能够催办，true-是，false-否
      * @param string $FlowId 合同id
-     * @param string $RemindMessage 催办详情
+     * @param string $RemindMessage 催办详情信息
      */
     function __construct()
     {

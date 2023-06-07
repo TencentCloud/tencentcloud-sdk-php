@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOrganizationOpenId() 获取用户在渠道的机构编号
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置用户在渠道的机构编号
- * @method string getClientIp() 获取用户真实的IP
- * @method void setClientIp(string $ClientIp) 设置用户真实的IP
- * @method string getProxyIp() 获取机构的代理IP
- * @method void setProxyIp(string $ProxyIp) 设置机构的代理IP
  * @method string getOrganizationId() 获取机构在平台的编号
  * @method void setOrganizationId(string $OrganizationId) 设置机构在平台的编号
  * @method string getChannel() 获取用户渠道
  * @method void setChannel(string $Channel) 设置用户渠道
+ * @method string getClientIp() 获取用户真实的IP
+ * @method void setClientIp(string $ClientIp) 设置用户真实的IP
+ * @method string getProxyIp() 获取机构的代理IP
+ * @method void setProxyIp(string $ProxyIp) 设置机构的代理IP
  */
 class OrganizationInfo extends AbstractModel
 {
@@ -37,16 +37,6 @@ class OrganizationInfo extends AbstractModel
      * @var string 用户在渠道的机构编号
      */
     public $OrganizationOpenId;
-
-    /**
-     * @var string 用户真实的IP
-     */
-    public $ClientIp;
-
-    /**
-     * @var string 机构的代理IP
-     */
-    public $ProxyIp;
 
     /**
      * @var string 机构在平台的编号
@@ -59,11 +49,23 @@ class OrganizationInfo extends AbstractModel
     public $Channel;
 
     /**
+     * @var string 用户真实的IP
+     * @deprecated
+     */
+    public $ClientIp;
+
+    /**
+     * @var string 机构的代理IP
+     * @deprecated
+     */
+    public $ProxyIp;
+
+    /**
      * @param string $OrganizationOpenId 用户在渠道的机构编号
-     * @param string $ClientIp 用户真实的IP
-     * @param string $ProxyIp 机构的代理IP
      * @param string $OrganizationId 机构在平台的编号
      * @param string $Channel 用户渠道
+     * @param string $ClientIp 用户真实的IP
+     * @param string $ProxyIp 机构的代理IP
      */
     function __construct()
     {
@@ -82,20 +84,20 @@ class OrganizationInfo extends AbstractModel
             $this->OrganizationOpenId = $param["OrganizationOpenId"];
         }
 
-        if (array_key_exists("ClientIp",$param) and $param["ClientIp"] !== null) {
-            $this->ClientIp = $param["ClientIp"];
-        }
-
-        if (array_key_exists("ProxyIp",$param) and $param["ProxyIp"] !== null) {
-            $this->ProxyIp = $param["ProxyIp"];
-        }
-
         if (array_key_exists("OrganizationId",$param) and $param["OrganizationId"] !== null) {
             $this->OrganizationId = $param["OrganizationId"];
         }
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("ClientIp",$param) and $param["ClientIp"] !== null) {
+            $this->ClientIp = $param["ClientIp"];
+        }
+
+        if (array_key_exists("ProxyIp",$param) and $param["ProxyIp"] !== null) {
+            $this->ProxyIp = $param["ProxyIp"];
         }
     }
 }

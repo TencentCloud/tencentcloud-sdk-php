@@ -33,8 +33,10 @@ ApproverNumber, OrganizationName, ApproverType必传。
  * @method void setApproverNumber(integer $ApproverNumber) 设置签署人在原流程中的签署人列表中的顺序序号（从0开始，按顺序依次递增），如果不清楚原流程中的签署人列表，可以通过DescribeFlows接口查看
  * @method string getApproverType() 获取签署人类型，目前仅支持
 ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
  * @method void setApproverType(string $ApproverType) 设置签署人类型，目前仅支持
 ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
  * @method string getName() 获取签署人姓名，最大长度50个字符
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字符
  * @method string getIdCardType() 获取签署人身份证件类型
@@ -71,6 +73,7 @@ class ReleasedApprover extends AbstractModel
     /**
      * @var string 签署人类型，目前仅支持
 ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
      */
     public $ApproverType;
 
@@ -113,6 +116,7 @@ ORGANIZATION-企业
      * @param integer $ApproverNumber 签署人在原流程中的签署人列表中的顺序序号（从0开始，按顺序依次递增），如果不清楚原流程中的签署人列表，可以通过DescribeFlows接口查看
      * @param string $ApproverType 签署人类型，目前仅支持
 ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
      * @param string $Name 签署人姓名，最大长度50个字符
      * @param string $IdCardType 签署人身份证件类型
 1.ID_CARD 居民身份证

@@ -26,33 +26,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateName(string $TemplateName) 设置模板名字
  * @method string getDescription() 获取模板描述信息
  * @method void setDescription(string $Description) 设置模板描述信息
- * @method array getComponents() 获取模板控件信息结构
- * @method void setComponents(array $Components) 设置模板控件信息结构
+ * @method array getComponents() 获取模板的填充控件信息结构
+ * @method void setComponents(array $Components) 设置模板的填充控件信息结构
  * @method array getRecipients() 获取模板中的流程参与人信息
  * @method void setRecipients(array $Recipients) 设置模板中的流程参与人信息
- * @method array getSignComponents() 获取签署区模板信息结构
- * @method void setSignComponents(array $SignComponents) 设置签署区模板信息结构
+ * @method array getSignComponents() 获取模板中的签署控件信息结构
+ * @method void setSignComponents(array $SignComponents) 设置模板中的签署控件信息结构
  * @method integer getTemplateType() 获取模板类型：1-静默签；3-普通模板
  * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；3-普通模板
  * @method boolean getIsPromoter() 获取是否是发起人 ,已弃用
  * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起人 ,已弃用
- * @method string getCreator() 获取模板的创建者信息
- * @method void setCreator(string $Creator) 设置模板的创建者信息
- * @method integer getCreatedOn() 获取模板创建的时间戳（精确到秒）
- * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳（精确到秒）
- * @method string getPreviewUrl() 获取模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+ * @method string getCreator() 获取模板的创建者信息，电子签系统用户ID
+ * @method void setCreator(string $Creator) 设置模板的创建者信息，电子签系统用户ID
+ * @method integer getCreatedOn() 获取模板创建的时间戳，单位秒
+ * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳，单位秒
+ * @method string getPreviewUrl() 获取模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。请求参数WithPreviewUrl=true时返回，有效期5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+ * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。请求参数WithPreviewUrl=true时返回，有效期5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPdfUrl() 获取第三方应用集成-模板PDF文件链接
+ * @method string getPdfUrl() 获取第三方应用集成-模板PDF文件链接。请求参数WithPdfUrl=true时返回（此功能开放需要联系客户经理），有效期5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPdfUrl(string $PdfUrl) 设置第三方应用集成-模板PDF文件链接
+ * @method void setPdfUrl(string $PdfUrl) 设置第三方应用集成-模板PDF文件链接。请求参数WithPdfUrl=true时返回（此功能开放需要联系客户经理），有效期5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChannelTemplateId() 获取关联的平台企业模板ID
- * @method void setChannelTemplateId(string $ChannelTemplateId) 设置关联的平台企业模板ID
- * @method string getChannelTemplateName() 获取关联的平台企业模板名称
+ * @method string getChannelTemplateId() 获取关联的第三方应用平台企业模板ID
+ * @method void setChannelTemplateId(string $ChannelTemplateId) 设置关联的第三方应用平台企业模板ID
+ * @method string getChannelTemplateName() 获取关联的三方应用平台平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChannelTemplateName(string $ChannelTemplateName) 设置关联的平台企业模板名称
+ * @method void setChannelTemplateName(string $ChannelTemplateName) 设置关联的三方应用平台平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelAutoSave() 获取0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
@@ -85,7 +85,7 @@ class TemplateInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var array 模板控件信息结构
+     * @var array 模板的填充控件信息结构
      */
     public $Components;
 
@@ -95,7 +95,7 @@ class TemplateInfo extends AbstractModel
     public $Recipients;
 
     /**
-     * @var array 签署区模板信息结构
+     * @var array 模板中的签署控件信息结构
      */
     public $SignComponents;
 
@@ -106,38 +106,39 @@ class TemplateInfo extends AbstractModel
 
     /**
      * @var boolean 是否是发起人 ,已弃用
+     * @deprecated
      */
     public $IsPromoter;
 
     /**
-     * @var string 模板的创建者信息
+     * @var string 模板的创建者信息，电子签系统用户ID
      */
     public $Creator;
 
     /**
-     * @var integer 模板创建的时间戳（精确到秒）
+     * @var integer 模板创建的时间戳，单位秒
      */
     public $CreatedOn;
 
     /**
-     * @var string 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+     * @var string 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。请求参数WithPreviewUrl=true时返回，有效期5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
 
     /**
-     * @var string 第三方应用集成-模板PDF文件链接
+     * @var string 第三方应用集成-模板PDF文件链接。请求参数WithPdfUrl=true时返回（此功能开放需要联系客户经理），有效期5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PdfUrl;
 
     /**
-     * @var string 关联的平台企业模板ID
+     * @var string 关联的第三方应用平台企业模板ID
      */
     public $ChannelTemplateId;
 
     /**
-     * @var string 关联的平台企业模板名称
+     * @var string 关联的三方应用平台平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelTemplateName;
@@ -164,19 +165,19 @@ class TemplateInfo extends AbstractModel
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
-     * @param array $Components 模板控件信息结构
+     * @param array $Components 模板的填充控件信息结构
      * @param array $Recipients 模板中的流程参与人信息
-     * @param array $SignComponents 签署区模板信息结构
+     * @param array $SignComponents 模板中的签署控件信息结构
      * @param integer $TemplateType 模板类型：1-静默签；3-普通模板
      * @param boolean $IsPromoter 是否是发起人 ,已弃用
-     * @param string $Creator 模板的创建者信息
-     * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
-     * @param string $PreviewUrl 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+     * @param string $Creator 模板的创建者信息，电子签系统用户ID
+     * @param integer $CreatedOn 模板创建的时间戳，单位秒
+     * @param string $PreviewUrl 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。请求参数WithPreviewUrl=true时返回，有效期5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PdfUrl 第三方应用集成-模板PDF文件链接
+     * @param string $PdfUrl 第三方应用集成-模板PDF文件链接。请求参数WithPdfUrl=true时返回（此功能开放需要联系客户经理），有效期5分钟。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChannelTemplateId 关联的平台企业模板ID
-     * @param string $ChannelTemplateName 关联的平台企业模板名称
+     * @param string $ChannelTemplateId 关联的第三方应用平台企业模板ID
+     * @param string $ChannelTemplateName 关联的三方应用平台平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelAutoSave 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。

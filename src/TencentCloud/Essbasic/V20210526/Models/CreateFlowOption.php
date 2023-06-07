@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建合同配置信息
  *
- * @method boolean getCanEditFlow() 获取是否允许修改合同信息
- * @method void setCanEditFlow(boolean $CanEditFlow) 设置是否允许修改合同信息
+ * @method boolean getCanEditFlow() 获取是否允许修改合同信息，true-是，false-否
+ * @method void setCanEditFlow(boolean $CanEditFlow) 设置是否允许修改合同信息，true-是，false-否
  */
 class CreateFlowOption extends AbstractModel
 {
     /**
-     * @var boolean 是否允许修改合同信息
+     * @var boolean 是否允许修改合同信息，true-是，false-否
      */
     public $CanEditFlow;
 
     /**
-     * @param boolean $CanEditFlow 是否允许修改合同信息
+     * @param boolean $CanEditFlow 是否允许修改合同信息，true-是，false-否
      */
     function __construct()
     {

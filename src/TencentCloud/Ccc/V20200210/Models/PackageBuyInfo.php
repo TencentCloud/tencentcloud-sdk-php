@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapacityRemain(integer $CapacityRemain) 设置套餐包剩余量
  * @method integer getBuyTime() 获取购买时间戳
  * @method void setBuyTime(integer $BuyTime) 设置购买时间戳
- * @method integer getEndTime() 获取截至时间戳
- * @method void setEndTime(integer $EndTime) 设置截至时间戳
+ * @method integer getEndTime() 获取截止时间戳
+ * @method void setEndTime(integer $EndTime) 设置截止时间戳
  */
 class PackageBuyInfo extends AbstractModel
 {
@@ -61,7 +61,7 @@ class PackageBuyInfo extends AbstractModel
     public $BuyTime;
 
     /**
-     * @var integer 截至时间戳
+     * @var integer 截止时间戳
      */
     public $EndTime;
 
@@ -71,7 +71,7 @@ class PackageBuyInfo extends AbstractModel
      * @param integer $CapacitySize 套餐包总量
      * @param integer $CapacityRemain 套餐包剩余量
      * @param integer $BuyTime 购买时间戳
-     * @param integer $EndTime 截至时间戳
+     * @param integer $EndTime 截止时间戳
      */
     function __construct()
     {

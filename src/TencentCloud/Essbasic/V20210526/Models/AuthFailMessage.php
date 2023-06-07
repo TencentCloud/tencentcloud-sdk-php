@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 授权出错信息
  *
- * @method string getProxyOrganizationOpenId() 获取合作企业Id
- * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置合作企业Id
- * @method string getMessage() 获取出错信息
- * @method void setMessage(string $Message) 设置出错信息
+ * @method string getProxyOrganizationOpenId() 获取第三方应用平台的子客企业OpenId
+ * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置第三方应用平台的子客企业OpenId
+ * @method string getMessage() 获取错误信息
+ * @method void setMessage(string $Message) 设置错误信息
  */
 class AuthFailMessage extends AbstractModel
 {
     /**
-     * @var string 合作企业Id
+     * @var string 第三方应用平台的子客企业OpenId
      */
     public $ProxyOrganizationOpenId;
 
     /**
-     * @var string 出错信息
+     * @var string 错误信息
      */
     public $Message;
 
     /**
-     * @param string $ProxyOrganizationOpenId 合作企业Id
-     * @param string $Message 出错信息
+     * @param string $ProxyOrganizationOpenId 第三方应用平台的子客企业OpenId
+     * @param string $Message 错误信息
      */
     function __construct()
     {

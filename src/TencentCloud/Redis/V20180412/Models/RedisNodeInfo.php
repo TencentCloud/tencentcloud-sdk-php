@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getNodeType() 获取节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>
  * @method void setNodeType(integer $NodeType) 设置节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>
- * @method integer getNodeId() 获取主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
- * @method void setNodeId(integer $NodeId) 设置主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
+ * @method integer getNodeId() 获取主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance]删除副本(https://cloud.tencent.com/document/product/239/20013) 时才需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
+ * @method void setNodeId(integer $NodeId) 设置主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance]删除副本(https://cloud.tencent.com/document/product/239/20013) 时才需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
  * @method integer getZoneId() 获取主节点或者副本节点的可用区 ID。
  * @method void setZoneId(integer $ZoneId) 设置主节点或者副本节点的可用区 ID。
  * @method string getZoneName() 获取主节点或者副本节点的可用区名称。
@@ -37,7 +37,7 @@ class RedisNodeInfo extends AbstractModel
     public $NodeType;
 
     /**
-     * @var integer 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
+     * @var integer 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance]删除副本(https://cloud.tencent.com/document/product/239/20013) 时才需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
      */
     public $NodeId;
 
@@ -53,7 +53,7 @@ class RedisNodeInfo extends AbstractModel
 
     /**
      * @param integer $NodeType 节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>
-     * @param integer $NodeId 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
+     * @param integer $NodeId 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance]删除副本(https://cloud.tencent.com/document/product/239/20013) 时才需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
      * @param integer $ZoneId 主节点或者副本节点的可用区 ID。
      * @param string $ZoneName 主节点或者副本节点的可用区名称。
      */

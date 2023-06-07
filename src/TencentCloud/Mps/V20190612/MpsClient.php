@@ -45,6 +45,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 注意：创建编排成功后是禁用状态，需要手动启用。
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) 创建用户自定义指定时间点截图模板，数量上限：16。
  * @method Models\CreateStreamLinkFlowResponse CreateStreamLinkFlow(Models\CreateStreamLinkFlowRequest $req) 创建媒体传输的传输流配置。
+ * @method Models\CreateStreamLinkInputResponse CreateStreamLinkInput(Models\CreateStreamLinkInputRequest $req) 创建媒体传输的输入配置。
  * @method Models\CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(Models\CreateStreamLinkOutputInfoRequest $req) 创建媒体传输流的输出信息。
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) 创建用户自定义转码模板，数量上限：1000。
  * @method Models\CreateWatermarkTemplateResponse CreateWatermarkTemplate(Models\CreateWatermarkTemplateRequest $req) 创建用户自定义水印模板，数量上限：1000。

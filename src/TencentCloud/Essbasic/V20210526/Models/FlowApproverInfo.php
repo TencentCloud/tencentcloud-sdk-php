@@ -68,8 +68,8 @@ ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
  * @method string getRecipientId() 获取签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
  * @method void setRecipientId(string $RecipientId) 设置签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
- * @method integer getDeadline() 获取签署截止时间，默认一年
- * @method void setDeadline(integer $Deadline) 设置签署截止时间，默认一年
+ * @method integer getDeadline() 获取签署截止时间戳，默认一年
+ * @method void setDeadline(integer $Deadline) 设置签署截止时间戳，默认一年
  * @method string getCallbackUrl() 获取签署完回调url，最大长度1000个字符
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署完回调url，最大长度1000个字符
  * @method array getSignComponents() 获取使用PDF文件直接发起合同时，签署人指定的签署控件
@@ -80,8 +80,8 @@ HANDWRITE -手写签名
 HANDWRITE -手写签名
  * @method integer getPreReadTime() 获取合同的强制预览时间：3~300s，未指定则按合同页数计算
  * @method void setPreReadTime(integer $PreReadTime) 设置合同的强制预览时间：3~300s，未指定则按合同页数计算
- * @method string getJumpUrl() 获取签署完前端跳转的url，暂未使用
- * @method void setJumpUrl(string $JumpUrl) 设置签署完前端跳转的url，暂未使用
+ * @method string getJumpUrl() 获取签署完前端跳转的url，此字段的用法场景请联系客户经理确认
+ * @method void setJumpUrl(string $JumpUrl) 设置签署完前端跳转的url，此字段的用法场景请联系客户经理确认
  * @method ApproverOption getApproverOption() 获取签署人个性化能力值
  * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值
  * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要
@@ -157,12 +157,13 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     public $RecipientId;
 
     /**
-     * @var integer 签署截止时间，默认一年
+     * @var integer 签署截止时间戳，默认一年
      */
     public $Deadline;
 
     /**
      * @var string 签署完回调url，最大长度1000个字符
+     * @deprecated
      */
     public $CallbackUrl;
 
@@ -183,7 +184,7 @@ HANDWRITE -手写签名
     public $PreReadTime;
 
     /**
-     * @var string 签署完前端跳转的url，暂未使用
+     * @var string 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
      */
     public $JumpUrl;
 
@@ -229,13 +230,13 @@ PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      * @param string $RecipientId 签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
-     * @param integer $Deadline 签署截止时间，默认一年
+     * @param integer $Deadline 签署截止时间戳，默认一年
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符
      * @param array $SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件
      * @param array $ComponentLimitType 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
 HANDWRITE -手写签名
      * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
-     * @param string $JumpUrl 签署完前端跳转的url，暂未使用
+     * @param string $JumpUrl 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
      * @param ApproverOption $ApproverOption 签署人个性化能力值
      * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
      * @param array $ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1

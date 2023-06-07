@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 响应体的返回码
  *
- * @method string getCode() 获取如果成功则返回Success，失败则返回yunapi定义的错误码
- * @method void setCode(string $Code) 设置如果成功则返回Success，失败则返回yunapi定义的错误码
+ * @method string getCode() 获取如果成功则返回Success，失败则返回云api定义的错误码
+ * @method void setCode(string $Code) 设置如果成功则返回Success，失败则返回云api定义的错误码
  * @method string getMessage() 获取如果成功则返回Success，失败则返回WAF定义的二级错误码
  * @method void setMessage(string $Message) 设置如果成功则返回Success，失败则返回WAF定义的二级错误码
  */
 class ResponseCode extends AbstractModel
 {
     /**
-     * @var string 如果成功则返回Success，失败则返回yunapi定义的错误码
+     * @var string 如果成功则返回Success，失败则返回云api定义的错误码
      */
     public $Code;
 
@@ -38,7 +38,7 @@ class ResponseCode extends AbstractModel
     public $Message;
 
     /**
-     * @param string $Code 如果成功则返回Success，失败则返回yunapi定义的错误码
+     * @param string $Code 如果成功则返回Success，失败则返回云api定义的错误码
      * @param string $Message 如果成功则返回Success，失败则返回WAF定义的二级错误码
      */
     function __construct()

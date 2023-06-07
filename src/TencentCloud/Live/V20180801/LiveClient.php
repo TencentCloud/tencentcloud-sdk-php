@@ -221,7 +221,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 2. 不能查询被 DeleteScreenshotTask接口删除以及已过期（平台侧保留3个月）的截图任务。
  * @method Models\DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(Models\DescribeStreamDayPlayInfoListRequest $req) 查询天维度每条流的播放数据，包括总流量等。
  * @method Models\DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(Models\DescribeStreamPlayInfoListRequest $req) 查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据，数据延迟4分钟左右。
-注意：按AppName查询请先联系工单申请，开通后配置生效预计需要5个工作日左右，具体时间以最终回复为准。
  * @method Models\DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(Models\DescribeStreamPushInfoListRequest $req) 查询流id的上行推流质量数据，包括音视频的帧率，码率，流逝时间，编码格式等。
  * @method Models\DescribeTimeShiftRecordDetailResponse DescribeTimeShiftRecordDetail(Models\DescribeTimeShiftRecordDetailRequest $req) 前提调用 DescribeTimeShiftStreamList 获得请求必要参数。查询指定范围内的时移流录制详情，最大支持24小时范围查询。
  * @method Models\DescribeTimeShiftStreamListResponse DescribeTimeShiftStreamList(Models\DescribeTimeShiftStreamListRequest $req) 查询某个时间范围内所有时移流列表。最大支持查询24小时内的数据。

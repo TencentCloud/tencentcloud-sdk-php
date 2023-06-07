@@ -36,10 +36,16 @@ use TencentCloud\Partners\V20180321\Models as Models;
  * @method Models\DescribeAgentClientGradeResponse DescribeAgentClientGrade(Models\DescribeAgentClientGradeRequest $req) 传入代客uin，查客户级别，客户审核状态，客户实名认证状态
  * @method Models\DescribeAgentClientsResponse DescribeAgentClients(Models\DescribeAgentClientsRequest $req) 代理商可查询自己名下待审核客户列表
  * @method Models\DescribeAgentDealsByCacheResponse DescribeAgentDealsByCache(Models\DescribeAgentDealsByCacheRequest $req) 供代理商拉取缓存的全量预付费客户订单
- * @method Models\DescribeAgentDealsCacheResponse DescribeAgentDealsCache(Models\DescribeAgentDealsCacheRequest $req) 【该接口已下线，请使用升级版本DescribeAgentDealsByCache】代理商拉取缓存的全量客户订单
- * @method Models\DescribeAgentPayDealsResponse DescribeAgentPayDeals(Models\DescribeAgentPayDealsRequest $req) 【该接口已下线，请切换使用升级版本DescribeAgentPayDealsV2】可以查询代理商代付的所有订单
+ * @method Models\DescribeAgentDealsCacheResponse DescribeAgentDealsCache(Models\DescribeAgentDealsCacheRequest $req) 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
+
+【该接口已下线，请使用升级版本DescribeAgentDealsByCache】代理商拉取缓存的全量客户订单
+ * @method Models\DescribeAgentPayDealsResponse DescribeAgentPayDeals(Models\DescribeAgentPayDealsRequest $req) 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
+
+【该接口已下线，请切换使用升级版本DescribeAgentPayDealsV2】可以查询代理商代付的所有订单
  * @method Models\DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(Models\DescribeAgentPayDealsV2Request $req) 可以查询代理商代付的预付费订单
- * @method Models\DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDeals(Models\DescribeAgentSelfPayDealsRequest $req) 【该接口已下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
+ * @method Models\DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDeals(Models\DescribeAgentSelfPayDealsRequest $req) 已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
+
+【该接口已下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
  * @method Models\DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(Models\DescribeAgentSelfPayDealsV2Request $req) 查询代理商名下指定代客的自付订单（预付费）
  * @method Models\DescribeClientBalanceResponse DescribeClientBalance(Models\DescribeClientBalanceRequest $req) 已提供新接口并推进切换，白名单禁用控制访问观察后无反馈，可以下线
 

@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 此结构 (FormField) 用于描述内容控件填充结构。
-
  *
  * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
@@ -27,14 +26,14 @@ MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
 FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
-DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
  * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
 FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
-DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
  * @method string getComponentId() 获取表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,7 +54,7 @@ MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
 FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
-DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
      */
     public $ComponentValue;
 
@@ -79,7 +78,7 @@ MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
 FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
-DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
      * @param string $ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。

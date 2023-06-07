@@ -40,21 +40,25 @@ class UserInfo extends AbstractModel
 
     /**
      * @var string 内部参数，暂未开放使用
+     * @deprecated
      */
     public $Channel;
 
     /**
      * @var string 内部参数，暂未开放使用
+     * @deprecated
      */
     public $CustomUserId;
 
     /**
      * @var string 内部参数，暂未开放使用
+     * @deprecated
      */
     public $ClientIp;
 
     /**
      * @var string 内部参数，暂未开放使用
+     * @deprecated
      */
     public $ProxyIp;
 

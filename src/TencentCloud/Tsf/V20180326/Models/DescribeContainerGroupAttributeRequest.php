@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 授权用户
+ * DescribeContainerGroupAttribute请求参数结构体
  *
- * @method string getOpenId() 获取第三方应用平台的用户openid
- * @method void setOpenId(string $OpenId) 设置第三方应用平台的用户openid
+ * @method string getGroupId() 获取部署组ID
+ * @method void setGroupId(string $GroupId) 设置部署组ID
  */
-class AuthorizedUser extends AbstractModel
+class DescribeContainerGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 第三方应用平台的用户openid
+     * @var string 部署组ID
      */
-    public $OpenId;
+    public $GroupId;
 
     /**
-     * @param string $OpenId 第三方应用平台的用户openid
+     * @param string $GroupId 部署组ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class AuthorizedUser extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
-            $this->OpenId = $param["OpenId"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

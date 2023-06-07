@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VpcId, NetType=direct时必填
  * @method string getExpireDate() 获取命令有效期，非腾讯云时必填
  * @method void setExpireDate(string $ExpireDate) 设置命令有效期，非腾讯云时必填
+ * @method array getClusterCustomParameters() 获取集群自定义参数
+ * @method void setClusterCustomParameters(array $ClusterCustomParameters) 设置集群自定义参数
  */
 class DescribeAgentDaemonSetCmdRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeAgentDaemonSetCmdRequest extends AbstractModel
     public $ExpireDate;
 
     /**
+     * @var array 集群自定义参数
+     */
+    public $ClusterCustomParameters;
+
+    /**
      * @param boolean $IsCloud 是否是腾讯云
      * @param string $NetType 网络类型：basic-基础网络，private-VPC, public-公网，direct-专线
      * @param string $RegionCode 地域标示, NetType=direct时必填
      * @param string $VpcId VpcId, NetType=direct时必填
      * @param string $ExpireDate 命令有效期，非腾讯云时必填
+     * @param array $ClusterCustomParameters 集群自定义参数
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class DescribeAgentDaemonSetCmdRequest extends AbstractModel
 
         if (array_key_exists("ExpireDate",$param) and $param["ExpireDate"] !== null) {
             $this->ExpireDate = $param["ExpireDate"];
+        }
+
+        if (array_key_exists("ClusterCustomParameters",$param) and $param["ClusterCustomParameters"] !== null) {
+            $this->ClusterCustomParameters = [];
+            foreach ($param["ClusterCustomParameters"] as $key => $value){
+                $obj = new ClusterCustomParameters();
+                $obj->deserialize($value);
+                array_push($this->ClusterCustomParameters, $obj);
+            }
         }
     }
 }

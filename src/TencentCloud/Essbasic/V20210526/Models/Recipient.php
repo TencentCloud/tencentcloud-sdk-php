@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 签署参与者信息
  *
- * @method string getRecipientId() 获取签署人唯一标识
- * @method void setRecipientId(string $RecipientId) 设置签署人唯一标识
+ * @method string getRecipientId() 获取签署人唯一标识，在通过模板发起合同的时候对应签署方Id
+ * @method void setRecipientId(string $RecipientId) 设置签署人唯一标识，在通过模板发起合同的时候对应签署方Id
  * @method string getRecipientType() 获取参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
  * @method void setRecipientType(string $RecipientType) 设置参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
- * @method string getRoleName() 获取签署方备注信息
- * @method void setRoleName(string $RoleName) 设置签署方备注信息
- * @method boolean getRequireValidation() 获取是否需要校验
- * @method void setRequireValidation(boolean $RequireValidation) 设置是否需要校验
- * @method boolean getRequireSign() 获取是否必须填写
- * @method void setRequireSign(boolean $RequireSign) 设置是否必须填写
+ * @method string getRoleName() 获取签署方备注角色名
+ * @method void setRoleName(string $RoleName) 设置签署方备注角色名
+ * @method boolean getRequireValidation() 获取是否需要校验，true-是，false-否
+ * @method void setRequireValidation(boolean $RequireValidation) 设置是否需要校验，true-是，false-否
+ * @method boolean getRequireSign() 获取是否必须填写，true-是，false-否
+ * @method void setRequireSign(boolean $RequireSign) 设置是否必须填写，true-是，false-否
  * @method integer getSignType() 获取签署类型
  * @method void setSignType(integer $SignType) 设置签署类型
  * @method integer getRoutingOrder() 获取签署顺序：数字越小优先级越高
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class Recipient extends AbstractModel
 {
     /**
-     * @var string 签署人唯一标识
+     * @var string 签署人唯一标识，在通过模板发起合同的时候对应签署方Id
      */
     public $RecipientId;
 
@@ -57,17 +57,17 @@ class Recipient extends AbstractModel
     public $Description;
 
     /**
-     * @var string 签署方备注信息
+     * @var string 签署方备注角色名
      */
     public $RoleName;
 
     /**
-     * @var boolean 是否需要校验
+     * @var boolean 是否需要校验，true-是，false-否
      */
     public $RequireValidation;
 
     /**
-     * @var boolean 是否必须填写
+     * @var boolean 是否必须填写，true-是，false-否
      */
     public $RequireSign;
 
@@ -87,12 +87,12 @@ class Recipient extends AbstractModel
     public $IsPromoter;
 
     /**
-     * @param string $RecipientId 签署人唯一标识
+     * @param string $RecipientId 签署人唯一标识，在通过模板发起合同的时候对应签署方Id
      * @param string $RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      * @param string $Description 描述
-     * @param string $RoleName 签署方备注信息
-     * @param boolean $RequireValidation 是否需要校验
-     * @param boolean $RequireSign 是否必须填写
+     * @param string $RoleName 签署方备注角色名
+     * @param boolean $RequireValidation 是否需要校验，true-是，false-否
+     * @param boolean $RequireSign 是否必须填写，true-是，false-否
      * @param integer $SignType 签署类型
      * @param integer $RoutingOrder 签署顺序：数字越小优先级越高
      * @param boolean $IsPromoter 是否是发起方

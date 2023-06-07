@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例唯一id
  * @method void setInstanceId(string $InstanceId) 设置实例唯一id
+ * @method integer getRouteId() 获取路由id
+ * @method void setRouteId(integer $RouteId) 设置路由id
  */
 class DescribeRouteRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeRouteRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 路由id
+     */
+    public $RouteId;
+
+    /**
      * @param string $InstanceId 实例唯一id
+     * @param integer $RouteId 路由id
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeRouteRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
+            $this->RouteId = $param["RouteId"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 企业员工信息
  *
- * @method string getUserId() 获取员工在电子签平台的id
- * @method void setUserId(string $UserId) 设置员工在电子签平台的id
+ * @method string getUserId() 获取员工在电子签平台的用户ID
+ * @method void setUserId(string $UserId) 设置员工在电子签平台的用户ID
  * @method string getDisplayName() 获取显示的员工名
  * @method void setDisplayName(string $DisplayName) 设置显示的员工名
  * @method string getMobile() 获取员工手机号
@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmail(string $Email) 设置员工邮箱
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOpenId() 获取员工在第三方平台id
+ * @method string getOpenId() 获取员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOpenId(string $OpenId) 设置员工在第三方平台id
+ * @method void setOpenId(string $OpenId) 设置员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRoles() 获取员工角色
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,17 +44,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getVerified() 获取员工是否实名
  * @method void setVerified(boolean $Verified) 设置员工是否实名
- * @method integer getCreatedOn() 获取员工创建时间戳
- * @method void setCreatedOn(integer $CreatedOn) 设置员工创建时间戳
- * @method integer getVerifiedOn() 获取员工实名时间戳
- * @method void setVerifiedOn(integer $VerifiedOn) 设置员工实名时间戳
+ * @method integer getCreatedOn() 获取员工创建时间戳，单位秒
+ * @method void setCreatedOn(integer $CreatedOn) 设置员工创建时间戳，单位秒
+ * @method integer getVerifiedOn() 获取员工实名时间戳，单位秒
+ * @method void setVerifiedOn(integer $VerifiedOn) 设置员工实名时间戳，单位秒
  * @method integer getQuiteJob() 获取员工是否离职：0-未离职，1-离职
  * @method void setQuiteJob(integer $QuiteJob) 设置员工是否离职：0-未离职，1-离职
  */
 class Staff extends AbstractModel
 {
     /**
-     * @var string 员工在电子签平台的id
+     * @var string 员工在电子签平台的用户ID
      */
     public $UserId;
 
@@ -75,7 +75,7 @@ class Staff extends AbstractModel
     public $Email;
 
     /**
-     * @var string 员工在第三方平台id
+     * @var string 员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
@@ -98,12 +98,12 @@ class Staff extends AbstractModel
     public $Verified;
 
     /**
-     * @var integer 员工创建时间戳
+     * @var integer 员工创建时间戳，单位秒
      */
     public $CreatedOn;
 
     /**
-     * @var integer 员工实名时间戳
+     * @var integer 员工实名时间戳，单位秒
      */
     public $VerifiedOn;
 
@@ -113,20 +113,20 @@ class Staff extends AbstractModel
     public $QuiteJob;
 
     /**
-     * @param string $UserId 员工在电子签平台的id
+     * @param string $UserId 员工在电子签平台的用户ID
      * @param string $DisplayName 显示的员工名
      * @param string $Mobile 员工手机号
      * @param string $Email 员工邮箱
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OpenId 员工在第三方平台id
+     * @param string $OpenId 员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Roles 员工角色
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Department $Department 员工部门
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Verified 员工是否实名
-     * @param integer $CreatedOn 员工创建时间戳
-     * @param integer $VerifiedOn 员工实名时间戳
+     * @param integer $CreatedOn 员工创建时间戳，单位秒
+     * @param integer $VerifiedOn 员工实名时间戳，单位秒
      * @param integer $QuiteJob 员工是否离职：0-未离职，1-离职
      */
     function __construct()

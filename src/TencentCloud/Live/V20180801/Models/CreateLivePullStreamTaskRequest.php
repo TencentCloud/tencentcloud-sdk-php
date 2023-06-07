@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSourceType() 获取拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。
  * @method void setSourceType(string $SourceType) 设置拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。
  * @method array getSourceUrls() 获取拉流源 url 列表。
 SourceType 为直播（PullLivePushLive）只可以填1个，
@@ -204,7 +204,7 @@ class CreateLivePullStreamTaskRequest extends AbstractModel
     /**
      * @var string 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。
      */
     public $SourceType;
@@ -373,7 +373,7 @@ PullVodPushLive -点播。
     /**
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。
      * @param array $SourceUrls 拉流源 url 列表。
 SourceType 为直播（PullLivePushLive）只可以填1个，

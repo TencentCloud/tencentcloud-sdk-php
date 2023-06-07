@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 授权用户
+ * ModifySparkAppBatch返回参数结构体
  *
- * @method string getOpenId() 获取第三方应用平台的用户openid
- * @method void setOpenId(string $OpenId) 设置第三方应用平台的用户openid
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AuthorizedUser extends AbstractModel
+class ModifySparkAppBatchResponse extends AbstractModel
 {
     /**
-     * @var string 第三方应用平台的用户openid
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $OpenId;
+    public $RequestId;
 
     /**
-     * @param string $OpenId 第三方应用平台的用户openid
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class AuthorizedUser extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
-            $this->OpenId = $param["OpenId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

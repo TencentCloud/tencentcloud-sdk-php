@@ -109,6 +109,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeConfigTemplateResponse DescribeConfigTemplate(Models\DescribeConfigTemplateRequest $req) 导入配置
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 查询配置项列表
  * @method Models\DescribeContainerEventsResponse DescribeContainerEvents(Models\DescribeContainerEventsRequest $req) 获取容器事件列表
+ * @method Models\DescribeContainerGroupAttributeResponse DescribeContainerGroupAttribute(Models\DescribeContainerGroupAttributeRequest $req) 获取部署组其他字段-用于前端并发调用
  * @method Models\DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfo(Models\DescribeContainerGroupDeployInfoRequest $req)  获取部署组详情
  * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req)  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表

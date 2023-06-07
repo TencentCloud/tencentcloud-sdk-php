@@ -29,6 +29,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMobile(string $Mobile) 设置签署人手机号
  * @method string getRelievedApproverReceiptId() 获取要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
  * @method void setRelievedApproverReceiptId(string $RelievedApproverReceiptId) 设置要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
+ * @method string getApproverType() 获取指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
+ * @method void setApproverType(string $ApproverType) 设置指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -49,10 +55,20 @@ class ReleasedApprover extends AbstractModel
     public $RelievedApproverReceiptId;
 
     /**
+     * @var string 指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
+     */
+    public $ApproverType;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字符
 
      * @param string $Mobile 签署人手机号
      * @param string $RelievedApproverReceiptId 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
+     * @param string $ApproverType 指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
      */
     function __construct()
     {
@@ -77,6 +93,10 @@ class ReleasedApprover extends AbstractModel
 
         if (array_key_exists("RelievedApproverReceiptId",$param) and $param["RelievedApproverReceiptId"] !== null) {
             $this->RelievedApproverReceiptId = $param["RelievedApproverReceiptId"];
+        }
+
+        if (array_key_exists("ApproverType",$param) and $param["ApproverType"] !== null) {
+            $this->ApproverType = $param["ApproverType"];
         }
     }
 }

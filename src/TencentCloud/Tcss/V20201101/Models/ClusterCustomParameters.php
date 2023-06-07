@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 授权用户
+ * 集群自定义参数
  *
- * @method string getOpenId() 获取第三方应用平台的用户openid
- * @method void setOpenId(string $OpenId) 设置第三方应用平台的用户openid
+ * @method string getName() 获取参数名
+ * @method void setName(string $Name) 设置参数名
+ * @method array getValues() 获取参数值
+ * @method void setValues(array $Values) 设置参数值
  */
-class AuthorizedUser extends AbstractModel
+class ClusterCustomParameters extends AbstractModel
 {
     /**
-     * @var string 第三方应用平台的用户openid
+     * @var string 参数名
      */
-    public $OpenId;
+    public $Name;
 
     /**
-     * @param string $OpenId 第三方应用平台的用户openid
+     * @var array 参数值
+     */
+    public $Values;
+
+    /**
+     * @param string $Name 参数名
+     * @param array $Values 参数值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class AuthorizedUser extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
-            $this->OpenId = $param["OpenId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

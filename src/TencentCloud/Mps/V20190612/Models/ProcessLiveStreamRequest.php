@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置视频内容识别类型任务参数。
  * @method AiAnalysisTaskInput getAiAnalysisTask() 获取视频内容分析类型任务参数。
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置视频内容分析类型任务参数。
+ * @method AiQualityControlTaskInput getAiQualityControlTask() 获取视频内容质检类型任务参数。
+ * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) 设置视频内容质检类型任务参数。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
@@ -77,6 +79,11 @@ class ProcessLiveStreamRequest extends AbstractModel
     public $AiAnalysisTask;
 
     /**
+     * @var AiQualityControlTaskInput 视频内容质检类型任务参数。
+     */
+    public $AiQualityControlTask;
+
+    /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
@@ -94,6 +101,7 @@ class ProcessLiveStreamRequest extends AbstractModel
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。
+     * @param AiQualityControlTaskInput $AiQualityControlTask 视频内容质检类型任务参数。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
@@ -141,6 +149,11 @@ class ProcessLiveStreamRequest extends AbstractModel
         if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
             $this->AiAnalysisTask = new AiAnalysisTaskInput();
             $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
+        }
+
+        if (array_key_exists("AiQualityControlTask",$param) and $param["AiQualityControlTask"] !== null) {
+            $this->AiQualityControlTask = new AiQualityControlTaskInput();
+            $this->AiQualityControlTask->deserialize($param["AiQualityControlTask"]);
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

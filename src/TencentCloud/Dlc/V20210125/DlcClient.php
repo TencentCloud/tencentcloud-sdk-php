@@ -104,6 +104,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\LockMetaDataResponse LockMetaData(Models\LockMetaDataRequest $req) 元数据锁
  * @method Models\ModifyGovernEventRuleResponse ModifyGovernEventRule(Models\ModifyGovernEventRuleRequest $req) 修改数据治理事件阈值
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) 更新spark应用
+ * @method Models\ModifySparkAppBatchResponse ModifySparkAppBatch(Models\ModifySparkAppBatchRequest $req) 本接口（ModifySparkAppBatch）用于批量修改Spark作业参数配置
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
  * @method Models\ReportHeartbeatMetaDataResponse ReportHeartbeatMetaData(Models\ReportHeartbeatMetaDataRequest $req) 上报元数据心跳

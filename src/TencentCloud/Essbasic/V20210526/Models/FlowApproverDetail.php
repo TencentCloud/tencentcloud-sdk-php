@@ -74,8 +74,8 @@ RELIEVED 已经解除
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveMessage(string $ApproveMessage) 设置签署人信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getApproveTime() 获取签署人签署时间
- * @method void setApproveTime(integer $ApproveTime) 设置签署人签署时间
+ * @method integer getApproveTime() 获取签署人签署时间戳，单位秒
+ * @method void setApproveTime(integer $ApproveTime) 设置签署人签署时间戳，单位秒
  * @method string getApproveType() 获取参与者类型 (ORGANIZATION企业/PERSON个人)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveType(string $ApproveType) 设置参与者类型 (ORGANIZATION企业/PERSON个人)
@@ -147,7 +147,7 @@ RELIEVED 已经解除
     public $ApproveMessage;
 
     /**
-     * @var integer 签署人签署时间
+     * @var integer 签署人签署时间戳，单位秒
      */
     public $ApproveTime;
 
@@ -185,7 +185,7 @@ RELIEVED 已经解除
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveMessage 签署人信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ApproveTime 签署人签署时间
+     * @param integer $ApproveTime 签署人签署时间戳，单位秒
      * @param string $ApproveType 参与者类型 (ORGANIZATION企业/PERSON个人)
 注意：此字段可能返回 null，表示取不到有效值。
      */

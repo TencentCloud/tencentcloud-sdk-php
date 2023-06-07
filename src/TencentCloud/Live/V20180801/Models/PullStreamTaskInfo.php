@@ -200,6 +200,10 @@ PullVodPushLive -点播。
 0 - 不启用。
 1 - 启用。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecordTemplateId() 获取录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordTemplateId(string $RecordTemplateId) 设置录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -402,6 +406,12 @@ PullVodPushLive -点播。
     public $VodLocalMode;
 
     /**
+     * @var string 录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordTemplateId;
+
+    /**
      * @param string $TaskId 拉流任务Id。
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
@@ -491,6 +501,8 @@ PullVodPushLive -点播。
      * @param integer $VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecordTemplateId 录制模板 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -618,6 +630,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
             $this->VodLocalMode = $param["VodLocalMode"];
+        }
+
+        if (array_key_exists("RecordTemplateId",$param) and $param["RecordTemplateId"] !== null) {
+            $this->RecordTemplateId = $param["RecordTemplateId"];
         }
     }
 }

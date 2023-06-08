@@ -68,6 +68,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值
  * @method string getJumpUrl() 获取签署完前端跳转的url，暂未使用
  * @method void setJumpUrl(string $JumpUrl) 设置签署完前端跳转的url，暂未使用
+ * @method string getSignId() 获取签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+ * @method void setSignId(string $SignId) 设置签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -169,6 +175,13 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $JumpUrl;
 
     /**
+     * @var string 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     */
+    public $SignId;
+
+    /**
      * @param integer $ApproverType 参与者类型：
 0：企业
 1：个人
@@ -193,6 +206,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param RegisterInfo $RegisterInfo 快速注册相关信息，目前暂未开放！
      * @param ApproverOption $ApproverOption 签署人个性化能力值
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用
+     * @param string $SignId 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
      */
     function __construct()
     {
@@ -279,6 +295,10 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
         if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
             $this->JumpUrl = $param["JumpUrl"];
+        }
+
+        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
+            $this->SignId = $param["SignId"];
         }
     }
 }

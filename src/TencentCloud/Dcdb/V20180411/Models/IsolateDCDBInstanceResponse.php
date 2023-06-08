@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelCreateSealPolicy返回参数结构体
+ * IsolateDCDBInstance返回参数结构体
  *
- * @method array getUserIds() 获取最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
- * @method void setUserIds(array $UserIds) 设置最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+ * @method array getSuccessInstanceIds() 获取隔离成功实例ID列表。
+ * @method void setSuccessInstanceIds(array $SuccessInstanceIds) 设置隔离成功实例ID列表。
+ * @method array getFailedInstanceIds() 获取隔离失败实例ID列表。
+ * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置隔离失败实例ID列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelCreateSealPolicyResponse extends AbstractModel
+class IsolateDCDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var array 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+     * @var array 隔离成功实例ID列表。
      */
-    public $UserIds;
+    public $SuccessInstanceIds;
+
+    /**
+     * @var array 隔离失败实例ID列表。
+     */
+    public $FailedInstanceIds;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+     * @param array $SuccessInstanceIds 隔离成功实例ID列表。
+     * @param array $FailedInstanceIds 隔离失败实例ID列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,12 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
-            $this->UserIds = $param["UserIds"];
+        if (array_key_exists("SuccessInstanceIds",$param) and $param["SuccessInstanceIds"] !== null) {
+            $this->SuccessInstanceIds = $param["SuccessInstanceIds"];
+        }
+
+        if (array_key_exists("FailedInstanceIds",$param) and $param["FailedInstanceIds"] !== null) {
+            $this->FailedInstanceIds = $param["FailedInstanceIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

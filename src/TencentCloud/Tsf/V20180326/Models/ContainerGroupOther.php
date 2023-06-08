@@ -42,9 +42,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getHealthCheckSettings() 获取健康检查相关字段
+ * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查相关字段
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHealthCheckSettings(array $HealthCheckSettings) 设置健康检查相关字段
+ * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查相关字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsNotEqualServiceConfig() 获取服务配置信息是否匹配
 注意：此字段可能返回 null，表示取不到有效值。
@@ -101,7 +101,7 @@ class ContainerGroupOther extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var array 健康检查相关字段
+     * @var HealthCheckSettings 健康检查相关字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheckSettings;
@@ -124,7 +124,7 @@ class ContainerGroupOther extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $HealthCheckSettings 健康检查相关字段
+     * @param HealthCheckSettings $HealthCheckSettings 健康检查相关字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsNotEqualServiceConfig 服务配置信息是否匹配
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,12 +184,8 @@ class ContainerGroupOther extends AbstractModel
         }
 
         if (array_key_exists("HealthCheckSettings",$param) and $param["HealthCheckSettings"] !== null) {
-            $this->HealthCheckSettings = [];
-            foreach ($param["HealthCheckSettings"] as $key => $value){
-                $obj = new HealthCheckSetting();
-                $obj->deserialize($value);
-                array_push($this->HealthCheckSettings, $obj);
-            }
+            $this->HealthCheckSettings = new HealthCheckSettings();
+            $this->HealthCheckSettings->deserialize($param["HealthCheckSettings"]);
         }
 
         if (array_key_exists("IsNotEqualServiceConfig",$param) and $param["IsNotEqualServiceConfig"] !== null) {

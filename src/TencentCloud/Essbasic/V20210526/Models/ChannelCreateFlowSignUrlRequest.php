@@ -50,11 +50,13 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
 
     /**
      * @var UserInfo 用户信息，暂未开放
+     * @deprecated
      */
     public $Operator;
 
     /**
      * @var OrganizationInfo 机构信息，暂未开放
+     * @deprecated
      */
     public $Organization;
 

@@ -41,6 +41,7 @@ class GetDownloadFlowUrlRequest extends AbstractModel
 
     /**
      * @var UserInfo 操作者的信息，不用传
+     * @deprecated
      */
     public $Operator;
 

@@ -44,6 +44,7 @@ class ChannelCreateBoundFlowsRequest extends AbstractModel
 
     /**
      * @var UserInfo 暂未开放
+     * @deprecated
      */
     public $Operator;
 

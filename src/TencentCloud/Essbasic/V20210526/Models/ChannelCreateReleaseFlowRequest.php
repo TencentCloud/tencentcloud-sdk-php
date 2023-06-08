@@ -64,11 +64,13 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
 
     /**
      * @var OrganizationInfo 暂未开放
+     * @deprecated
      */
     public $Organization;
 
     /**
      * @var UserInfo 暂未开放
+     * @deprecated
      */
     public $Operator;
 

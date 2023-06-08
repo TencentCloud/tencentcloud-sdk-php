@@ -129,6 +129,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 
     /**
      * @var UserInfo 暂未开放
+     * @deprecated
      */
     public $Operator;
 

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
- * @method array getUserIds() 获取绑定角色的员工id列表
- * @method void setUserIds(array $UserIds) 设置绑定角色的员工id列表
+ * @method array getUserIds() 获取绑定角色的员工id列表，电子签的UserId
+ * @method void setUserIds(array $UserIds) 设置绑定角色的员工id列表，电子签的UserId
  * @method array getRoleIds() 获取绑定角色的角色id列表
  * @method void setRoleIds(array $RoleIds) 设置绑定角色的角色id列表
  * @method UserInfo getOperator() 获取操作者信息
@@ -37,7 +37,7 @@ class ChannelCreateUserRolesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var array 绑定角色的员工id列表
+     * @var array 绑定角色的员工id列表，电子签的UserId
      */
     public $UserIds;
 
@@ -48,12 +48,13 @@ class ChannelCreateUserRolesRequest extends AbstractModel
 
     /**
      * @var UserInfo 操作者信息
+     * @deprecated
      */
     public $Operator;
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
-     * @param array $UserIds 绑定角色的员工id列表
+     * @param array $UserIds 绑定角色的员工id列表，电子签的UserId
      * @param array $RoleIds 绑定角色的角色id列表
      * @param UserInfo $Operator 操作者信息
      */

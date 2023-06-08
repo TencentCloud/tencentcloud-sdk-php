@@ -61,6 +61,7 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
 
     /**
      * @var UserInfo 操作人信息
+     * @deprecated
      */
     public $Operator;
 

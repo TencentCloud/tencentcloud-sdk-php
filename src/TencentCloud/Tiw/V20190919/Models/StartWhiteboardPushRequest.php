@@ -164,15 +164,11 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
 当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
 
 如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板推流的目标TRTC应用，否则使用公共参数中的SdkAppId作为白板推流的目标TRTC应用。
- * @method string getTRTCEnterRoomMode() 获取内测参数，需要提前申请白名单进行体验。
-
-指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
+ * @method string getTRTCEnterRoomMode() 获取指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
 
 TRTCAppSceneVideoCall - 视频通话场景，即绝大多数时间都是两人或两人以上视频通话的场景，内部编码器和网络协议优化侧重流畅性，降低通话延迟和卡顿率。
 TRTCAppSceneLIVE - 直播场景，即绝大多数时间都是一人直播，偶尔有多人视频互动的场景，内部编码器和网络协议优化侧重性能和兼容性，性能和清晰度表现更佳。
- * @method void setTRTCEnterRoomMode(string $TRTCEnterRoomMode) 设置内测参数，需要提前申请白名单进行体验。
-
-指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
+ * @method void setTRTCEnterRoomMode(string $TRTCEnterRoomMode) 设置指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
 
 TRTCAppSceneVideoCall - 视频通话场景，即绝大多数时间都是两人或两人以上视频通话的场景，内部编码器和网络协议优化侧重流畅性，降低通话延迟和卡顿率。
 TRTCAppSceneLIVE - 直播场景，即绝大多数时间都是一人直播，偶尔有多人视频互动的场景，内部编码器和网络协议优化侧重性能和兼容性，性能和清晰度表现更佳。
@@ -332,9 +328,7 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
     public $TRTCAuthParam;
 
     /**
-     * @var string 内测参数，需要提前申请白名单进行体验。
-
-指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
+     * @var string 指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
 
 TRTCAppSceneVideoCall - 视频通话场景，即绝大多数时间都是两人或两人以上视频通话的场景，内部编码器和网络协议优化侧重流畅性，降低通话延迟和卡顿率。
 TRTCAppSceneLIVE - 直播场景，即绝大多数时间都是一人直播，偶尔有多人视频互动的场景，内部编码器和网络协议优化侧重性能和兼容性，性能和清晰度表现更佳。
@@ -414,9 +408,7 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
 当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
 
 如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板推流的目标TRTC应用，否则使用公共参数中的SdkAppId作为白板推流的目标TRTC应用。
-     * @param string $TRTCEnterRoomMode 内测参数，需要提前申请白名单进行体验。
-
-指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
+     * @param string $TRTCEnterRoomMode 指定白板推流时推流用户进TRTC房间的进房模式。默认为 TRTCAppSceneVideoCall
 
 TRTCAppSceneVideoCall - 视频通话场景，即绝大多数时间都是两人或两人以上视频通话的场景，内部编码器和网络协议优化侧重流畅性，降低通话延迟和卡顿率。
 TRTCAppSceneLIVE - 直播场景，即绝大多数时间都是一人直播，偶尔有多人视频互动的场景，内部编码器和网络协议优化侧重性能和兼容性，性能和清晰度表现更佳。

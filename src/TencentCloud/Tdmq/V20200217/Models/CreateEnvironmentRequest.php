@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method RetentionPolicy getRetentionPolicy() 获取消息保留策略
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) 设置消息保留策略
+ * @method boolean getAutoSubscriptionCreation() 获取是否开启自动创建订阅
+ * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) 设置是否开启自动创建订阅
  */
 class CreateEnvironmentRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateEnvironmentRequest extends AbstractModel
     public $RetentionPolicy;
 
     /**
+     * @var boolean 是否开启自动创建订阅
+     */
+    public $AutoSubscriptionCreation;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
      * @param string $Remark 说明，128个字符以内。
      * @param string $ClusterId Pulsar 集群的ID
      * @param RetentionPolicy $RetentionPolicy 消息保留策略
+     * @param boolean $AutoSubscriptionCreation 是否开启自动创建订阅
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class CreateEnvironmentRequest extends AbstractModel
         if (array_key_exists("RetentionPolicy",$param) and $param["RetentionPolicy"] !== null) {
             $this->RetentionPolicy = new RetentionPolicy();
             $this->RetentionPolicy->deserialize($param["RetentionPolicy"]);
+        }
+
+        if (array_key_exists("AutoSubscriptionCreation",$param) and $param["AutoSubscriptionCreation"] !== null) {
+            $this->AutoSubscriptionCreation = $param["AutoSubscriptionCreation"];
         }
     }
 }

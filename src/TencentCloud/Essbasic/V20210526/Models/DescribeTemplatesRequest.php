@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryAllComponents(boolean $QueryAllComponents) 设置是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
  * @method string getTemplateName() 获取模糊搜索模板名称，最大长度200
  * @method void setTemplateName(string $TemplateName) 设置模糊搜索模板名称，最大长度200
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接
  * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接
  * @method boolean getWithPdfUrl() 获取是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
  * @method void setWithPdfUrl(boolean $WithPdfUrl) 设置是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
- * @method string getChannelTemplateId() 获取模板ID
- * @method void setChannelTemplateId(string $ChannelTemplateId) 设置模板ID
+ * @method string getChannelTemplateId() 获取对应第三方应用平台企业的模板ID
+ * @method void setChannelTemplateId(string $ChannelTemplateId) 设置对应第三方应用平台企业的模板ID
+ * @method UserInfo getOperator() 获取操作者的信息
+ * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -81,11 +81,6 @@ class DescribeTemplatesRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var UserInfo 操作者的信息
-     */
-    public $Operator;
-
-    /**
      * @var boolean 是否获取模板预览链接
      */
     public $WithPreviewUrl;
@@ -96,9 +91,15 @@ class DescribeTemplatesRequest extends AbstractModel
     public $WithPdfUrl;
 
     /**
-     * @var string 模板ID
+     * @var string 对应第三方应用平台企业的模板ID
      */
     public $ChannelTemplateId;
+
+    /**
+     * @var UserInfo 操作者的信息
+     * @deprecated
+     */
+    public $Operator;
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
@@ -108,10 +109,10 @@ class DescribeTemplatesRequest extends AbstractModel
      * @param integer $Offset 查询偏移位置，默认0；在查询列表的时候有效
      * @param boolean $QueryAllComponents 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
      * @param string $TemplateName 模糊搜索模板名称，最大长度200
-     * @param UserInfo $Operator 操作者的信息
      * @param boolean $WithPreviewUrl 是否获取模板预览链接
      * @param boolean $WithPdfUrl 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
-     * @param string $ChannelTemplateId 模板ID
+     * @param string $ChannelTemplateId 对应第三方应用平台企业的模板ID
+     * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
     {
@@ -155,11 +156,6 @@ class DescribeTemplatesRequest extends AbstractModel
             $this->TemplateName = $param["TemplateName"];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
         if (array_key_exists("WithPreviewUrl",$param) and $param["WithPreviewUrl"] !== null) {
             $this->WithPreviewUrl = $param["WithPreviewUrl"];
         }
@@ -170,6 +166,11 @@ class DescribeTemplatesRequest extends AbstractModel
 
         if (array_key_exists("ChannelTemplateId",$param) and $param["ChannelTemplateId"] !== null) {
             $this->ChannelTemplateId = $param["ChannelTemplateId"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

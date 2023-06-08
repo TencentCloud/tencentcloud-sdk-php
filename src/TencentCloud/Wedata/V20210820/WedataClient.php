@@ -267,6 +267,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 触发事件
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
  * @method Models\UpdateInLongAgentResponse UpdateInLongAgent(Models\UpdateInLongAgentRequest $req) 更新采集器
+ * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) 保存任务信息
  */
 
 class WedataClient extends AbstractClient

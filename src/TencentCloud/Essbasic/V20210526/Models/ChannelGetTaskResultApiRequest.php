@@ -43,11 +43,13 @@ class ChannelGetTaskResultApiRequest extends AbstractModel
 
     /**
      * @var UserInfo 操作者的信息，不用传
+     * @deprecated
      */
     public $Operator;
 
     /**
      * @var OrganizationInfo 暂未开放
+     * @deprecated
      */
     public $Organization;
 

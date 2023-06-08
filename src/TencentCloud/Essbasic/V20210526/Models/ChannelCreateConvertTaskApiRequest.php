@@ -57,11 +57,13 @@ class ChannelCreateConvertTaskApiRequest extends AbstractModel
 
     /**
      * @var UserInfo 调用方用户信息，不用传
+     * @deprecated
      */
     public $Operator;
 
     /**
      * @var OrganizationInfo 暂未开放
+     * @deprecated
      */
     public $Organization;
 

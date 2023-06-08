@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) 设置消息保留策略
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoSubscriptionCreation() 获取是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoSubscriptionCreation(boolean $AutoSubscriptionCreation) 设置是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Environment extends AbstractModel
 {
@@ -93,6 +97,12 @@ class Environment extends AbstractModel
     public $RetentionPolicy;
 
     /**
+     * @var boolean 是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoSubscriptionCreation;
+
+    /**
      * @param string $EnvironmentId 命名空间名称
      * @param string $Remark 说明
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000（15天）
@@ -103,6 +113,8 @@ class Environment extends AbstractModel
      * @param integer $TopicNum Topic数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RetentionPolicy $RetentionPolicy 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoSubscriptionCreation 是否自动创建订阅
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +165,10 @@ class Environment extends AbstractModel
         if (array_key_exists("RetentionPolicy",$param) and $param["RetentionPolicy"] !== null) {
             $this->RetentionPolicy = new RetentionPolicy();
             $this->RetentionPolicy->deserialize($param["RetentionPolicy"]);
+        }
+
+        if (array_key_exists("AutoSubscriptionCreation",$param) and $param["AutoSubscriptionCreation"] !== null) {
+            $this->AutoSubscriptionCreation = $param["AutoSubscriptionCreation"];
         }
     }
 }

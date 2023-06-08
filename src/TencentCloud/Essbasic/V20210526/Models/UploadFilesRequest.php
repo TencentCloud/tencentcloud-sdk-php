@@ -54,6 +54,7 @@ class UploadFilesRequest extends AbstractModel
 
     /**
      * @var UserInfo 操作者的信息
+     * @deprecated
      */
     public $Operator;
 

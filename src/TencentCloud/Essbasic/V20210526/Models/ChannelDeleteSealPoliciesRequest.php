@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method string getSealId() 获取指定印章ID
  * @method void setSealId(string $SealId) 设置指定印章ID
- * @method array getUserIds() 获取指定用户ID数组
- * @method void setUserIds(array $UserIds) 设置指定用户ID数组
+ * @method array getUserIds() 获取指定用户ID数组，电子签系统用户ID
+ * @method void setUserIds(array $UserIds) 设置指定用户ID数组，电子签系统用户ID
  * @method OrganizationInfo getOrganization() 获取组织机构信息，不用传
  * @method void setOrganization(OrganizationInfo $Organization) 设置组织机构信息，不用传
  * @method UserInfo getOperator() 获取操作人（用户）信息，不用传
@@ -44,24 +44,26 @@ class ChannelDeleteSealPoliciesRequest extends AbstractModel
     public $SealId;
 
     /**
-     * @var array 指定用户ID数组
+     * @var array 指定用户ID数组，电子签系统用户ID
      */
     public $UserIds;
 
     /**
      * @var OrganizationInfo 组织机构信息，不用传
+     * @deprecated
      */
     public $Organization;
 
     /**
      * @var UserInfo 操作人（用户）信息，不用传
+     * @deprecated
      */
     public $Operator;
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $SealId 指定印章ID
-     * @param array $UserIds 指定用户ID数组
+     * @param array $UserIds 指定用户ID数组，电子签系统用户ID
      * @param OrganizationInfo $Organization 组织机构信息，不用传
      * @param UserInfo $Operator 操作人（用户）信息，不用传
      */

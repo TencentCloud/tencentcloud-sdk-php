@@ -27,9 +27,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeOut(integer $TimeOut) 设置健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIntervalTime() 获取健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+ * @method integer getIntervalTime() 获取健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntervalTime(integer $IntervalTime) 设置健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+ * @method void setIntervalTime(integer $IntervalTime) 设置健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHealthNum() 获取健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +106,8 @@ class HealthCheck extends AbstractModel
     public $TimeOut;
 
     /**
-     * @var integer 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+     * @var integer 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntervalTime;
@@ -198,7 +201,8 @@ class HealthCheck extends AbstractModel
      * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      * @param integer $TimeOut 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+     * @param integer $IntervalTime 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HealthNum 健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2~10，单位：次。
 注意：此字段可能返回 null，表示取不到有效值。

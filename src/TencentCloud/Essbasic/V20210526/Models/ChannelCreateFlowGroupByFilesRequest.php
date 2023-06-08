@@ -64,6 +64,7 @@ MobileCheck：手机号验证
 
     /**
      * @var UserInfo 操作者的信息，此参数不用传
+     * @deprecated
      */
     public $Operator;
 

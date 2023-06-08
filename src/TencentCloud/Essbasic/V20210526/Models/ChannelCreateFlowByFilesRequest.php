@@ -56,14 +56,14 @@ MobileCheck：手机号验证
 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
  * @method integer getSignBeanTag() 获取标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
  * @method void setSignBeanTag(integer $SignBeanTag) 设置标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
- * @method UserInfo getOperator() 获取操作者的信息，不用传
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息，不用传
  * @method array getCcInfos() 获取被抄送人信息列表
  * @method void setCcInfos(array $CcInfos) 设置被抄送人信息列表
  * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
  * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
  * @method string getAutoSignScene() 获取个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  * @method void setAutoSignScene(string $AutoSignScene) 设置个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method UserInfo getOperator() 获取操作者的信息，不用传
+ * @method void setOperator(UserInfo $Operator) 设置操作者的信息，不用传
  */
 class ChannelCreateFlowByFilesRequest extends AbstractModel
 {
@@ -146,11 +146,6 @@ MobileCheck：手机号验证
     public $SignBeanTag;
 
     /**
-     * @var UserInfo 操作者的信息，不用传
-     */
-    public $Operator;
-
-    /**
      * @var array 被抄送人信息列表
      */
     public $CcInfos;
@@ -164,6 +159,12 @@ MobileCheck：手机号验证
      * @var string 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     public $AutoSignScene;
+
+    /**
+     * @var UserInfo 操作者的信息，不用传
+     * @deprecated
+     */
+    public $Operator;
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
@@ -184,10 +185,10 @@ VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      * @param integer $SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
-     * @param UserInfo $Operator 操作者的信息，不用传
      * @param array $CcInfos 被抄送人信息列表
      * @param integer $CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
      * @param string $AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param UserInfo $Operator 操作者的信息，不用传
      */
     function __construct()
     {
@@ -273,11 +274,6 @@ MobileCheck：手机号验证
             $this->SignBeanTag = $param["SignBeanTag"];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
         if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {
             $this->CcInfos = [];
             foreach ($param["CcInfos"] as $key => $value){
@@ -293,6 +289,11 @@ MobileCheck：手机号验证
 
         if (array_key_exists("AutoSignScene",$param) and $param["AutoSignScene"] !== null) {
             $this->AutoSignScene = $param["AutoSignScene"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

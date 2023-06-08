@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelCreateSealPolicy返回参数结构体
+ * UploadContent返回参数结构体
  *
- * @method array getUserIds() 获取最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
- * @method void setUserIds(array $UserIds) 设置最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+ * @method ScriptInfoResponse getScriptInfo() 获取脚本信息响应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScriptInfo(ScriptInfoResponse $ScriptInfo) 设置脚本信息响应
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelCreateSealPolicyResponse extends AbstractModel
+class UploadContentResponse extends AbstractModel
 {
     /**
-     * @var array 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+     * @var ScriptInfoResponse 脚本信息响应
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $UserIds;
+    public $ScriptInfo;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+     * @param ScriptInfoResponse $ScriptInfo 脚本信息响应
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +58,9 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
-            $this->UserIds = $param["UserIds"];
+        if (array_key_exists("ScriptInfo",$param) and $param["ScriptInfo"] !== null) {
+            $this->ScriptInfo = new ScriptInfoResponse();
+            $this->ScriptInfo->deserialize($param["ScriptInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

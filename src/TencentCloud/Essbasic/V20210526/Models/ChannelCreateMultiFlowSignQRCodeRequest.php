@@ -94,11 +94,13 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 
     /**
      * @var ApproverRestriction 限制二维码用户条件（已弃用）
+     * @deprecated
      */
     public $ApproverRestrictions;
 
     /**
      * @var UserInfo 暂未开放
+     * @deprecated
      */
     public $Operator;
 

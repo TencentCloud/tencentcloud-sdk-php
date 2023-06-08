@@ -55,6 +55,7 @@ class Agent extends AbstractModel
 
     /**
      * @var string 内部参数，暂未开放使用
+     * @deprecated
      */
     public $ProxyOrganizationId;
 

@@ -94,6 +94,12 @@ HANDWRITE -手写签名
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
  * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+ * @method string getSignId() 获取签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+ * @method void setSignId(string $SignId) 设置签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -211,6 +217,13 @@ HANDWRITE -手写签名
     public $ApproverSignTypes;
 
     /**
+     * @var string 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     */
+    public $SignId;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字符
      * @param string $IdCardType 签署人身份证件类型
 1.ID_CARD 居民身份证
@@ -243,6 +256,9 @@ HANDWRITE -手写签名
 查看合同的认证方式 Flow层级的优先于approver层级的
      * @param array $ApproverSignTypes 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+     * @param string $SignId 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
      */
     function __construct()
     {
@@ -341,6 +357,10 @@ HANDWRITE -手写签名
 
         if (array_key_exists("ApproverSignTypes",$param) and $param["ApproverSignTypes"] !== null) {
             $this->ApproverSignTypes = $param["ApproverSignTypes"];
+        }
+
+        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
+            $this->SignId = $param["SignId"];
         }
     }
 }

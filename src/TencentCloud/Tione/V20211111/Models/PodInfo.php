@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ckafka\V20190819\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 操作类型返回的Data结构
+ * 任务建模Pod信息
  *
- * @method integer getFlowId() 获取FlowId11
+ * @method string getName() 获取pod名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowId(integer $FlowId) 设置FlowId11
+ * @method void setName(string $Name) 设置pod名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RouteDTO getRouteDTO() 获取RouteIdDto
+ * @method string getIP() 获取pod的IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRouteDTO(RouteDTO $RouteDTO) 设置RouteIdDto
+ * @method void setIP(string $IP) 设置pod的IP
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class OperateResponseData extends AbstractModel
+class PodInfo extends AbstractModel
 {
     /**
-     * @var integer FlowId11
+     * @var string pod名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FlowId;
+    public $Name;
 
     /**
-     * @var RouteDTO RouteIdDto
+     * @var string pod的IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RouteDTO;
+    public $IP;
 
     /**
-     * @param integer $FlowId FlowId11
+     * @param string $Name pod名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RouteDTO $RouteDTO RouteIdDto
+     * @param string $IP pod的IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,13 +62,12 @@ class OperateResponseData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("RouteDTO",$param) and $param["RouteDTO"] !== null) {
-            $this->RouteDTO = new RouteDTO();
-            $this->RouteDTO->deserialize($param["RouteDTO"]);
+        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
+            $this->IP = $param["IP"];
         }
     }
 }

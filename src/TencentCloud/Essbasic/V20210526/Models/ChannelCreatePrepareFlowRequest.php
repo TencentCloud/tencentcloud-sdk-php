@@ -85,11 +85,13 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 
     /**
      * @var OrganizationInfo 企业机构信息，不用传
+     * @deprecated
      */
     public $Organization;
 
     /**
      * @var UserInfo 操作人（用户）信息，不用传
+     * @deprecated
      */
     public $Operator;
 

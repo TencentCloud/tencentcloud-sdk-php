@@ -18,35 +18,23 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 操作类型返回的Data结构
+ * RouteDTO
  *
- * @method integer getFlowId() 获取FlowId11
+ * @method integer getRouteId() 获取RouteId11
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowId(integer $FlowId) 设置FlowId11
-注意：此字段可能返回 null，表示取不到有效值。
- * @method RouteDTO getRouteDTO() 获取RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRouteDTO(RouteDTO $RouteDTO) 设置RouteIdDto
+ * @method void setRouteId(integer $RouteId) 设置RouteId11
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class OperateResponseData extends AbstractModel
+class RouteDTO extends AbstractModel
 {
     /**
-     * @var integer FlowId11
+     * @var integer RouteId11
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FlowId;
+    public $RouteId;
 
     /**
-     * @var RouteDTO RouteIdDto
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $RouteDTO;
-
-    /**
-     * @param integer $FlowId FlowId11
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RouteDTO $RouteDTO RouteIdDto
+     * @param integer $RouteId RouteId11
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,13 +50,8 @@ class OperateResponseData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
-        }
-
-        if (array_key_exists("RouteDTO",$param) and $param["RouteDTO"] !== null) {
-            $this->RouteDTO = new RouteDTO();
-            $this->RouteDTO->deserialize($param["RouteDTO"]);
+        if (array_key_exists("RouteId",$param) and $param["RouteId"] !== null) {
+            $this->RouteId = $param["RouteId"];
         }
     }
 }

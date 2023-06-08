@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Dnspod\V20210323\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelCreateSealPolicy返回参数结构体
+ * DescribeDomainFilterList返回参数结构体
  *
- * @method array getUserIds() 获取最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
- * @method void setUserIds(array $UserIds) 设置最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+ * @method DomainCountInfo getDomainCountInfo() 获取列表页统计信息
+ * @method void setDomainCountInfo(DomainCountInfo $DomainCountInfo) 设置列表页统计信息
+ * @method array getDomainList() 获取域名列表
+ * @method void setDomainList(array $DomainList) 设置域名列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelCreateSealPolicyResponse extends AbstractModel
+class DescribeDomainFilterListResponse extends AbstractModel
 {
     /**
-     * @var array 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+     * @var DomainCountInfo 列表页统计信息
      */
-    public $UserIds;
+    public $DomainCountInfo;
+
+    /**
+     * @var array 域名列表
+     */
+    public $DomainList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+     * @param DomainCountInfo $DomainCountInfo 列表页统计信息
+     * @param array $DomainList 域名列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,18 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
-            $this->UserIds = $param["UserIds"];
+        if (array_key_exists("DomainCountInfo",$param) and $param["DomainCountInfo"] !== null) {
+            $this->DomainCountInfo = new DomainCountInfo();
+            $this->DomainCountInfo->deserialize($param["DomainCountInfo"]);
+        }
+
+        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
+            $this->DomainList = [];
+            foreach ($param["DomainList"] as $key => $value){
+                $obj = new DomainListItem();
+                $obj->deserialize($value);
+                array_push($this->DomainList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

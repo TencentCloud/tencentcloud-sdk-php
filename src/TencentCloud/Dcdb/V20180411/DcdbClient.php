@@ -76,6 +76,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\GrantAccountPrivilegesResponse GrantAccountPrivileges(Models\GrantAccountPrivilegesRequest $req) 本接口（GrantAccountPrivileges）用于给云数据库账号赋权。
 注意：相同用户名，不同Host是不同的账号。
  * @method Models\InitDCDBInstancesResponse InitDCDBInstances(Models\InitDCDBInstancesRequest $req) 本接口(InitDCDBInstances)用于初始化云数据库实例，包括设置默认字符集、表名大小写敏感等。
+ * @method Models\IsolateDCDBInstanceResponse IsolateDCDBInstance(Models\IsolateDCDBInstanceRequest $req) 本接口(IsolateDCDBInstance)用于隔离分布式数据库TDSQL实例（包年包月），隔离后不能通过IP和端口访问数据库。隔离的实例可在回收站中进行开机。若为欠费隔离，请尽快进行充值。
  * @method Models\IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstance(Models\IsolateDedicatedDBInstanceRequest $req) 本接口（IsolateDedicatedDBInstance）用于隔离独享云数据库实例。
  * @method Models\IsolateHourDCDBInstanceResponse IsolateHourDCDBInstance(Models\IsolateHourDCDBInstanceRequest $req) 隔离TDSQL按量计费实例
  * @method Models\KillSessionResponse KillSession(Models\KillSessionRequest $req) 本接口（KillSession）用于杀死指定会话。

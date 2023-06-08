@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskGroupInstanceList(array $TaskGroupInstanceList) 设置实例列表
  * @method integer getTaskGroupMode() 获取执行模式。1 --- 顺序执行，2 --- 阶段执行
  * @method void setTaskGroupMode(integer $TaskGroupMode) 设置执行模式。1 --- 顺序执行，2 --- 阶段执行
+ * @method array getTaskGroupDiscardInstanceList() 获取不参演的实例列表
+ * @method void setTaskGroupDiscardInstanceList(array $TaskGroupDiscardInstanceList) 设置不参演的实例列表
+ * @method array getTaskGroupSelectedInstanceList() 获取参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskGroupSelectedInstanceList(array $TaskGroupSelectedInstanceList) 设置参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTaskGroupInstancesExecuteRule() 获取机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskGroupInstancesExecuteRule(array $TaskGroupInstancesExecuteRule) 设置机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskGroup extends AbstractModel
 {
@@ -97,6 +107,23 @@ class TaskGroup extends AbstractModel
     public $TaskGroupMode;
 
     /**
+     * @var array 不参演的实例列表
+     */
+    public $TaskGroupDiscardInstanceList;
+
+    /**
+     * @var array 参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskGroupSelectedInstanceList;
+
+    /**
+     * @var array 机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskGroupInstancesExecuteRule;
+
+    /**
      * @param integer $TaskGroupId 任务动作ID
      * @param string $TaskGroupTitle 分组标题
      * @param string $TaskGroupDescription 分组描述
@@ -108,6 +135,11 @@ class TaskGroup extends AbstractModel
      * @param array $TaskGroupActions 动作分组动作列表
      * @param array $TaskGroupInstanceList 实例列表
      * @param integer $TaskGroupMode 执行模式。1 --- 顺序执行，2 --- 阶段执行
+     * @param array $TaskGroupDiscardInstanceList 不参演的实例列表
+     * @param array $TaskGroupSelectedInstanceList 参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TaskGroupInstancesExecuteRule 机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -165,6 +197,23 @@ class TaskGroup extends AbstractModel
 
         if (array_key_exists("TaskGroupMode",$param) and $param["TaskGroupMode"] !== null) {
             $this->TaskGroupMode = $param["TaskGroupMode"];
+        }
+
+        if (array_key_exists("TaskGroupDiscardInstanceList",$param) and $param["TaskGroupDiscardInstanceList"] !== null) {
+            $this->TaskGroupDiscardInstanceList = $param["TaskGroupDiscardInstanceList"];
+        }
+
+        if (array_key_exists("TaskGroupSelectedInstanceList",$param) and $param["TaskGroupSelectedInstanceList"] !== null) {
+            $this->TaskGroupSelectedInstanceList = $param["TaskGroupSelectedInstanceList"];
+        }
+
+        if (array_key_exists("TaskGroupInstancesExecuteRule",$param) and $param["TaskGroupInstancesExecuteRule"] !== null) {
+            $this->TaskGroupInstancesExecuteRule = [];
+            foreach ($param["TaskGroupInstancesExecuteRule"] as $key => $value){
+                $obj = new TaskGroupInstancesExecuteRules();
+                $obj->deserialize($value);
+                array_push($this->TaskGroupInstancesExecuteRule, $obj);
+            }
         }
     }
 }

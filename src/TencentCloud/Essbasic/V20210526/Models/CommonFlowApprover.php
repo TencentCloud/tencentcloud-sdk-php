@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverType(integer $ApproverType) 设置签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
  * @method string getOrganizationId() 获取企业id
  * @method void setOrganizationId(string $OrganizationId) 设置企业id
- * @method string getOrganizationOpenId() 获取企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
- * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
+ * @method string getOrganizationOpenId() 获取企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
+ * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
  * @method string getOrganizationName() 获取企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
  * @method void setOrganizationName(string $OrganizationName) 设置企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
  * @method string getUserId() 获取用户id
@@ -69,7 +69,7 @@ class CommonFlowApprover extends AbstractModel
     public $OrganizationId;
 
     /**
-     * @var string 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
+     * @var string 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
      */
     public $OrganizationOpenId;
 
@@ -128,7 +128,7 @@ class CommonFlowApprover extends AbstractModel
      * @param boolean $NotChannelOrganization 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
      * @param integer $ApproverType 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
      * @param string $OrganizationId 企业id
-     * @param string $OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
+     * @param string $OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
      * @param string $OrganizationName 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
      * @param string $UserId 用户id
      * @param string $OpenId 用户openId，第三方应用集成非静默签子客企业签署人必传

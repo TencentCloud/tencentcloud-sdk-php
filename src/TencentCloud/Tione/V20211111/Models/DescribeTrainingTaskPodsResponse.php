@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodNames(array $PodNames) 设置pod名称列表
  * @method integer getTotalCount() 获取数量
  * @method void setTotalCount(integer $TotalCount) 设置数量
+ * @method PodInfo getPodInfoList() 获取pod详细信息
+ * @method void setPodInfoList(PodInfo $PodInfoList) 设置pod详细信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeTrainingTaskPodsResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var PodInfo pod详细信息
+     */
+    public $PodInfoList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeTrainingTaskPodsResponse extends AbstractModel
     /**
      * @param array $PodNames pod名称列表
      * @param integer $TotalCount 数量
+     * @param PodInfo $PodInfoList pod详细信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,11 @@ class DescribeTrainingTaskPodsResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("PodInfoList",$param) and $param["PodInfoList"] !== null) {
+            $this->PodInfoList = new PodInfo();
+            $this->PodInfoList->deserialize($param["PodInfoList"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

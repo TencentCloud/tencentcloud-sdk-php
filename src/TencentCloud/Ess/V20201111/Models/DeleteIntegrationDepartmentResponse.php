@@ -14,35 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelCreateSealPolicy返回参数结构体
+ * DeleteIntegrationDepartment返回参数结构体
  *
- * @method array getUserIds() 获取最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
- * @method void setUserIds(array $UserIds) 设置最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelCreateSealPolicyResponse extends AbstractModel
+class DeleteIntegrationDepartmentResponse extends AbstractModel
 {
-    /**
-     * @var array 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
-     */
-    public $UserIds;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,10 +46,6 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
-            $this->UserIds = $param["UserIds"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

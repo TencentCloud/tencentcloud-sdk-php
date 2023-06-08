@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OperateChannelTemplate请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.AppId必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.AppId必填。
  * @method string getOperateType() 获取操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
  * @method void setOperateType(string $OperateType) 设置操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
  * @method string getTemplateId() 获取第三方应用平台模板库模板唯一标识
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class OperateChannelTemplateRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.AppId必填。
      */
     public $Agent;
 
@@ -67,7 +67,7 @@ class OperateChannelTemplateRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.AppId必填。
      * @param string $OperateType 操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
      * @param string $TemplateId 第三方应用平台模板库模板唯一标识
      * @param string $ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔

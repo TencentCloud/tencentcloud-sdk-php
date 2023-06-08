@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelCreateSealPolicy返回参数结构体
+ * DescribeIntegrationDepartments返回参数结构体
  *
- * @method array getUserIds() 获取最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
- * @method void setUserIds(array $UserIds) 设置最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+ * @method array getDepartments() 获取部门列表
+ * @method void setDepartments(array $Departments) 设置部门列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelCreateSealPolicyResponse extends AbstractModel
+class DescribeIntegrationDepartmentsResponse extends AbstractModel
 {
     /**
-     * @var array 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+     * @var array 部门列表
      */
-    public $UserIds;
+    public $Departments;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+     * @param array $Departments 部门列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,13 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
-            $this->UserIds = $param["UserIds"];
+        if (array_key_exists("Departments",$param) and $param["Departments"] !== null) {
+            $this->Departments = [];
+            foreach ($param["Departments"] as $key => $value){
+                $obj = new IntegrationDepartment();
+                $obj->deserialize($value);
+                array_push($this->Departments, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

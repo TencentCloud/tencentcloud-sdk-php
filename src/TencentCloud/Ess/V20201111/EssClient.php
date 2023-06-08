@@ -65,6 +65,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注意：该接口目前签署人类型仅支持个人签署方（PERSON） <br/>
 注意：该接口可生成签署链接的C端签署人必须仅有手写签名和时间类型的签署控件<br/>
 注意：该接口返回的签署链接是用于APP集成的场景，支持APP打开或浏览器直接打开，不支持微信小程序嵌入。微信小程序请使用小程序跳转或半屏弹窗的方式<br/>
+ * @method Models\CreateIntegrationDepartmentResponse CreateIntegrationDepartment(Models\CreateIntegrationDepartmentRequest $req) 通过此接口，创建企业的部门，支持绑定客户系统部门ID。
  * @method Models\CreateIntegrationEmployeesResponse CreateIntegrationEmployees(Models\CreateIntegrationEmployeesRequest $req) 创建员工,如需在此接口提醒员工实名，入参Employees的OpenId不传
  * @method Models\CreateIntegrationUserRolesResponse CreateIntegrationUserRoles(Models\CreateIntegrationUserRolesRequest $req) 绑定员工与对应角色
  * @method Models\CreateMultiFlowSignQRCodeResponse CreateMultiFlowSignQRCode(Models\CreateMultiFlowSignQRCodeRequest $req) 此接口（CreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。
@@ -94,6 +95,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 如您需要自主配置小程序跳转链接，请参考: <a href="https://cloud.tencent.com/document/product/1323/74774">跳转小程序链接配置说明</a>
  * @method Models\CreateSealPolicyResponse CreateSealPolicy(Models\CreateSealPolicyRequest $req) 对企业员工进行印章授权
  * @method Models\CreateUserAutoSignEnableUrlResponse CreateUserAutoSignEnableUrl(Models\CreateUserAutoSignEnableUrlRequest $req) 企业方可以通过此接口获取个人用户开启自动签的跳转链接（处方单场景专用，使用此接口请与客户经理确认）
+ * @method Models\DeleteIntegrationDepartmentResponse DeleteIntegrationDepartment(Models\DeleteIntegrationDepartmentRequest $req) 通过此接口，删除企业的部门。
  * @method Models\DeleteIntegrationEmployeesResponse DeleteIntegrationEmployees(Models\DeleteIntegrationEmployeesRequest $req) 移除员工
  * @method Models\DeleteIntegrationRoleUsersResponse DeleteIntegrationRoleUsers(Models\DeleteIntegrationRoleUsersRequest $req) 解绑员工与对应角色关系
  * @method Models\DeleteSealPoliciesResponse DeleteSealPolicies(Models\DeleteSealPoliciesRequest $req) 撤销员工持有的印章权限
@@ -107,6 +109,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 适用场景：可用于主动查询某个合同详情信息。
  * @method Models\DescribeFlowTemplatesResponse DescribeFlowTemplates(Models\DescribeFlowTemplatesRequest $req) 当模板较多或模板中的控件较多时，可以通过查询模板接口更方便的获取模板列表，以及每个模板内的控件信息。<br/>
 该接口常用来配合“创建电子文档”接口作为前置的接口使用。<br/>
+ * @method Models\DescribeIntegrationDepartmentsResponse DescribeIntegrationDepartments(Models\DescribeIntegrationDepartmentsRequest $req) 通过此接口，查询企业的部门，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
  * @method Models\DescribeIntegrationEmployeesResponse DescribeIntegrationEmployees(Models\DescribeIntegrationEmployeesRequest $req) 查询企业员工列表，每次返回的数据量最大为20
  * @method Models\DescribeIntegrationMainOrganizationUserResponse DescribeIntegrationMainOrganizationUser(Models\DescribeIntegrationMainOrganizationUserRequest $req) 通过子企业影子账号查询主企业员工账号
  * @method Models\DescribeIntegrationRolesResponse DescribeIntegrationRoles(Models\DescribeIntegrationRolesRequest $req) 查询企业角色列表
@@ -121,6 +124,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\ModifyApplicationCallbackInfoResponse ModifyApplicationCallbackInfo(Models\ModifyApplicationCallbackInfoRequest $req) 新增/删除应用callbackinfo
 callbackinfo包含： 回调地址和签名key
 操作：新增/删除
+ * @method Models\ModifyIntegrationDepartmentResponse ModifyIntegrationDepartment(Models\ModifyIntegrationDepartmentRequest $req) 通过此接口，更新企业的部门信息，支持更新部门名、客户系统部门ID、部门序列号。
  * @method Models\StartFlowResponse StartFlow(Models\StartFlowRequest $req) 此接口用于发起流程
 适用场景：见创建签署流程接口。
 注：该接口是“创建电子文档”接口的后置接口，用于激活包含完整合同信息（模板及内容信息）的流程。激活后的流程就是一份待签署的电子合同。

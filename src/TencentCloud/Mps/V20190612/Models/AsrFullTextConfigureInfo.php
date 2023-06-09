@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt：生成 WebVTT 字幕文件。</li>
  * @method void setSubtitleFormat(string $SubtitleFormat) 设置生成的字幕文件格式，不填或者填空字符串表示不生成字幕文件，可选值：
 <li>vtt：生成 WebVTT 字幕文件。</li>
+ * @method string getSourceLanguage() 获取视频源语言。
+ * @method void setSourceLanguage(string $SourceLanguage) 设置视频源语言。
  */
 class AsrFullTextConfigureInfo extends AbstractModel
 {
@@ -47,11 +49,17 @@ class AsrFullTextConfigureInfo extends AbstractModel
     public $SubtitleFormat;
 
     /**
+     * @var string 视频源语言。
+     */
+    public $SourceLanguage;
+
+    /**
      * @param string $Switch 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
      * @param string $SubtitleFormat 生成的字幕文件格式，不填或者填空字符串表示不生成字幕文件，可选值：
 <li>vtt：生成 WebVTT 字幕文件。</li>
+     * @param string $SourceLanguage 视频源语言。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AsrFullTextConfigureInfo extends AbstractModel
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {
             $this->SubtitleFormat = $param["SubtitleFormat"];
+        }
+
+        if (array_key_exists("SourceLanguage",$param) and $param["SourceLanguage"] !== null) {
+            $this->SourceLanguage = $param["SourceLanguage"];
         }
     }
 }

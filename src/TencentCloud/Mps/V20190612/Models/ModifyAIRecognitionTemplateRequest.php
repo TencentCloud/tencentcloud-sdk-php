@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfoForUpdate $AsrFullTextConfigure) 设置语音全文识别控制参数。
  * @method AsrWordsConfigureInfoForUpdate getAsrWordsConfigure() 获取语音关键词识别控制参数。
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfoForUpdate $AsrWordsConfigure) 设置语音关键词识别控制参数。
+ * @method TranslateConfigureInfoForUpdate getTranslateConfigure() 获取语音翻译控制参数。
+ * @method void setTranslateConfigure(TranslateConfigureInfoForUpdate $TranslateConfigure) 设置语音翻译控制参数。
  */
 class ModifyAIRecognitionTemplateRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyAIRecognitionTemplateRequest extends AbstractModel
     public $AsrWordsConfigure;
 
     /**
+     * @var TranslateConfigureInfoForUpdate 语音翻译控制参数。
+     */
+    public $TranslateConfigure;
+
+    /**
      * @param integer $Definition 视频内容识别模板唯一标识。
      * @param string $Name 视频内容识别模板名称，长度限制：64 个字符。
      * @param string $Comment 视频内容识别模板描述信息，长度限制：256 个字符。
@@ -88,6 +95,7 @@ class ModifyAIRecognitionTemplateRequest extends AbstractModel
      * @param OcrWordsConfigureInfoForUpdate $OcrWordsConfigure 文本关键词识别控制参数。
      * @param AsrFullTextConfigureInfoForUpdate $AsrFullTextConfigure 语音全文识别控制参数。
      * @param AsrWordsConfigureInfoForUpdate $AsrWordsConfigure 语音关键词识别控制参数。
+     * @param TranslateConfigureInfoForUpdate $TranslateConfigure 语音翻译控制参数。
      */
     function __construct()
     {
@@ -137,6 +145,11 @@ class ModifyAIRecognitionTemplateRequest extends AbstractModel
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfoForUpdate();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("TranslateConfigure",$param) and $param["TranslateConfigure"] !== null) {
+            $this->TranslateConfigure = new TranslateConfigureInfoForUpdate();
+            $this->TranslateConfigure->deserialize($param["TranslateConfigure"]);
         }
     }
 }

@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReadOnlyGroups请求参数结构体
  *
- * @method array getFilters() 获取过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id
- * @method void setFilters(array $Filters) 设置过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id
+ * @method array getFilters() 获取按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。
+ * @method void setFilters(array $Filters) 设置按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。
  * @method integer getPageSize() 获取查询每一页的条数，默认为10
  * @method void setPageSize(integer $PageSize) 设置查询每一页的条数，默认为10
  * @method integer getPageNumber() 获取查询的页码，默认为1
@@ -34,7 +38,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeReadOnlyGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id
+     * @var array 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。
      */
     public $Filters;
 
@@ -59,7 +65,9 @@ class DescribeReadOnlyGroupsRequest extends AbstractModel
     public $OrderByType;
 
     /**
-     * @param array $Filters 过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id
+     * @param array $Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。
      * @param integer $PageSize 查询每一页的条数，默认为10
      * @param integer $PageNumber 查询的页码，默认为1
      * @param string $OrderBy 查询排序依据，目前支持:ROGroupId,CreateTime,Name

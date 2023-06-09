@@ -28,9 +28,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealNames(array $DealNames) 设置订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例Id
+ * @method string getInstanceId() 获取实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method void setInstanceId(string $InstanceId) 设置实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDealNameInstanceIdMapping() 获取订单和购买实例对应映射列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDealNameInstanceIdMapping(array $DealNameInstanceIdMapping) 设置订单和购买实例对应映射列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateInstancePreData extends AbstractModel
@@ -48,17 +52,25 @@ class CreateInstancePreData extends AbstractModel
     public $DealNames;
 
     /**
-     * @var string 实例Id
+     * @var string 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
+
+    /**
+     * @var array 订单和购买实例对应映射列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DealNameInstanceIdMapping;
 
     /**
      * @param integer $FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNames 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DealNameInstanceIdMapping 订单和购买实例对应映射列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,15 @@ class CreateInstancePreData extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("DealNameInstanceIdMapping",$param) and $param["DealNameInstanceIdMapping"] !== null) {
+            $this->DealNameInstanceIdMapping = [];
+            foreach ($param["DealNameInstanceIdMapping"] as $key => $value){
+                $obj = new DealInstanceDTO();
+                $obj->deserialize($value);
+                array_push($this->DealNameInstanceIdMapping, $obj);
+            }
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Organization\V20210331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeParamTemplateDetail请求参数结构体
+ * DescribeOrganizationMemberEmailBind请求参数结构体
  *
- * @method integer getTemplateId() 获取参数模板ID
- * @method void setTemplateId(integer $TemplateId) 设置参数模板ID
+ * @method integer getMemberUin() 获取成员Uin
+ * @method void setMemberUin(integer $MemberUin) 设置成员Uin
  */
-class DescribeParamTemplateDetailRequest extends AbstractModel
+class DescribeOrganizationMemberEmailBindRequest extends AbstractModel
 {
     /**
-     * @var integer 参数模板ID
+     * @var integer 成员Uin
      */
-    public $TemplateId;
+    public $MemberUin;
 
     /**
-     * @param integer $TemplateId 参数模板ID
+     * @param integer $MemberUin 成员Uin
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeParamTemplateDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
+            $this->MemberUin = $param["MemberUin"];
         }
     }
 }

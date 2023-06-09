@@ -18,7 +18,7 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 创建预付费实例返回结构
+ * 预付费实例相关接口返回结构
  *
  * @method string getReturnCode() 获取返回的code，0为正常，非0为错误
  * @method void setReturnCode(string $ReturnCode) 设置返回的code，0为正常，非0为错误
@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(CreateInstancePreData $Data) 设置操作型返回的Data数据
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeleteRouteTimestamp() 获取删除是时间
+ * @method string getDeleteRouteTimestamp() 获取删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置删除是时间
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateInstancePreResp extends AbstractModel
@@ -52,8 +52,9 @@ class CreateInstancePreResp extends AbstractModel
     public $Data;
 
     /**
-     * @var string 删除是时间
+     * @var string 删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DeleteRouteTimestamp;
 
@@ -62,7 +63,7 @@ class CreateInstancePreResp extends AbstractModel
      * @param string $ReturnMessage 成功消息
      * @param CreateInstancePreData $Data 操作型返回的Data数据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeleteRouteTimestamp 删除是时间
+     * @param string $DeleteRouteTimestamp 删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

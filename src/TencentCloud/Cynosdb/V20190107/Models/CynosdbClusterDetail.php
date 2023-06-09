@@ -168,6 +168,10 @@ pausing
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourcePackages(array $ResourcePackages) 设置集群绑定的资源包信息	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -434,6 +438,12 @@ pausing
     public $ResourcePackages;
 
     /**
+     * @var integer 自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenewFlag;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -507,6 +517,8 @@ pausing
      * @param string $NetworkStatus 网络类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourcePackages 集群绑定的资源包信息	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 自动续费标识，1为自动续费，0为到期不续
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -734,6 +746,10 @@ pausing
                 $obj->deserialize($value);
                 array_push($this->ResourcePackages, $obj);
             }
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
         }
     }
 }

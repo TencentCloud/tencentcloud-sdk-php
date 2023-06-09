@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Cdwch\V20200915\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBaseBackup返回参数结构体
+ * DescribeInstancesNew返回参数结构体
  *
- * @method string getBaseBackupId() 获取基础备份集ID
- * @method void setBaseBackupId(string $BaseBackupId) 设置基础备份集ID
+ * @method integer getTotalCount() 获取实例总数
+ * @method void setTotalCount(integer $TotalCount) 设置实例总数
+ * @method array getInstancesList() 获取实例数组
+ * @method void setInstancesList(array $InstancesList) 设置实例数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBaseBackupResponse extends AbstractModel
+class DescribeInstancesNewResponse extends AbstractModel
 {
     /**
-     * @var string 基础备份集ID
+     * @var integer 实例总数
      */
-    public $BaseBackupId;
+    public $TotalCount;
+
+    /**
+     * @var array 实例数组
+     */
+    public $InstancesList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateBaseBackupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BaseBackupId 基础备份集ID
+     * @param integer $TotalCount 实例总数
+     * @param array $InstancesList 实例数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateBaseBackupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BaseBackupId",$param) and $param["BaseBackupId"] !== null) {
-            $this->BaseBackupId = $param["BaseBackupId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("InstancesList",$param) and $param["InstancesList"] !== null) {
+            $this->InstancesList = [];
+            foreach ($param["InstancesList"] as $key => $value){
+                $obj = new InstanceInfo();
+                $obj->deserialize($value);
+                array_push($this->InstancesList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

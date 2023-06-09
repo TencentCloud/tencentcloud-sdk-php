@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method boolean getEnableCopyWarn() 获取是否返回黑白复印件告警码，默认为false
+ * @method void setEnableCopyWarn(boolean $EnableCopyWarn) 设置是否返回黑白复印件告警码，默认为false
  */
 class BizLicenseOCRRequest extends AbstractModel
 {
@@ -59,6 +61,11 @@ class BizLicenseOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var boolean 是否返回黑白复印件告警码，默认为false
+     */
+    public $EnableCopyWarn;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -68,6 +75,7 @@ class BizLicenseOCRRequest extends AbstractModel
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param boolean $EnableCopyWarn 是否返回黑白复印件告警码，默认为false
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class BizLicenseOCRRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("EnableCopyWarn",$param) and $param["EnableCopyWarn"] !== null) {
+            $this->EnableCopyWarn = $param["EnableCopyWarn"];
         }
     }
 }

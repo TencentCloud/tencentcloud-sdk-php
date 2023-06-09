@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) 设置语音全文识别控制参数。
  * @method AsrWordsConfigureInfo getAsrWordsConfigure() 获取语音关键词识别控制参数。
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) 设置语音关键词识别控制参数。
+ * @method TranslateConfigureInfo getTranslateConfigure() 获取语音翻译控制参数。
+ * @method void setTranslateConfigure(TranslateConfigureInfo $TranslateConfigure) 设置语音翻译控制参数。
  */
 class CreateAIRecognitionTemplateRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
     public $AsrWordsConfigure;
 
     /**
+     * @var TranslateConfigureInfo 语音翻译控制参数。
+     */
+    public $TranslateConfigure;
+
+    /**
      * @param string $Name 视频内容识别模板名称，长度限制：64 个字符。
      * @param string $Comment 视频内容识别模板描述信息，长度限制：256 个字符。
      * @param FaceConfigureInfo $FaceConfigure 人脸识别控制参数。
@@ -80,6 +87,7 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
      * @param OcrWordsConfigureInfo $OcrWordsConfigure 文本关键词识别控制参数。
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure 语音全文识别控制参数。
      * @param AsrWordsConfigureInfo $AsrWordsConfigure 语音关键词识别控制参数。
+     * @param TranslateConfigureInfo $TranslateConfigure 语音翻译控制参数。
      */
     function __construct()
     {
@@ -125,6 +133,11 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfo();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("TranslateConfigure",$param) and $param["TranslateConfigure"] !== null) {
+            $this->TranslateConfigure = new TranslateConfigureInfo();
+            $this->TranslateConfigure->deserialize($param["TranslateConfigure"]);
         }
     }
 }

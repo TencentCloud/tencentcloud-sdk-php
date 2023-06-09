@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLockTimeAvg(float $LockTimeAvg) 设置平均锁等待时间
  * @method float getRowsExaminedAvg() 获取平均扫描行数
  * @method void setRowsExaminedAvg(float $RowsExaminedAvg) 设置平均扫描行数
+ * @method string getMd5() 获取SOL模板的MD5值
+ * @method void setMd5(string $Md5) 设置SOL模板的MD5值
  */
 class SlowLogTopSqlItem extends AbstractModel
 {
@@ -192,6 +194,11 @@ class SlowLogTopSqlItem extends AbstractModel
     public $RowsExaminedAvg;
 
     /**
+     * @var string SOL模板的MD5值
+     */
+    public $Md5;
+
+    /**
      * @param float $LockTime sql总锁等待时间
      * @param float $LockTimeMax 最大锁等待时间
      * @param float $LockTimeMin 最小锁等待时间
@@ -216,6 +223,7 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param float $RowsSentAvg 平均返回行数
      * @param float $LockTimeAvg 平均锁等待时间
      * @param float $RowsExaminedAvg 平均扫描行数
+     * @param string $Md5 SOL模板的MD5值
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class SlowLogTopSqlItem extends AbstractModel
 
         if (array_key_exists("RowsExaminedAvg",$param) and $param["RowsExaminedAvg"] !== null) {
             $this->RowsExaminedAvg = $param["RowsExaminedAvg"];
+        }
+
+        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
+            $this->Md5 = $param["Md5"];
         }
     }
 }

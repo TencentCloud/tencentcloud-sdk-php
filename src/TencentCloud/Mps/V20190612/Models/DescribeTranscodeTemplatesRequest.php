@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerType(string $ContainerType) 设置封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式板；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式。</li>
- * @method string getTEHDType() 获取极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+ * @method string getTEHDType() 获取（建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
- * @method void setTEHDType(string $TEHDType) 设置极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+ * @method void setTEHDType(string $TEHDType) 设置（建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
  * @method integer getOffset() 获取分页偏移量，默认值：0。
@@ -46,12 +46,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method string getTranscodeType() 获取模板类型（替换旧版本 TEHDType），可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
+
  * @method void setTranscodeType(string $TranscodeType) 设置模板类型（替换旧版本 TEHDType），可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
  */
@@ -77,7 +82,7 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     public $ContainerType;
 
     /**
-     * @var string 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+     * @var string （建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
      */
@@ -96,9 +101,12 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     /**
      * @var string 模板类型（替换旧版本 TEHDType），可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
+
      */
     public $TranscodeType;
 
@@ -110,14 +118,16 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
      * @param string $ContainerType 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式板；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式。</li>
-     * @param string $TEHDType 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+     * @param string $TEHDType （建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param string $TranscodeType 模板类型（替换旧版本 TEHDType），可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
      */

@@ -41,21 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSetDate() 获取成立日期
  * @method void setSetDate(string $SetDate) 设置成立日期
  * @method array getRecognizeWarnCode() 获取Code 告警码列表和释义：
--20001 非营业执照
 -9102 黑白复印件告警
-注：告警码可以同时存在多个
  * @method void setRecognizeWarnCode(array $RecognizeWarnCode) 设置Code 告警码列表和释义：
--20001 非营业执照
 -9102 黑白复印件告警
-注：告警码可以同时存在多个
  * @method array getRecognizeWarnMsg() 获取告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个
  * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个
  * @method integer getIsDuplication() 获取是否为副本。1为是，-1为不是。
  * @method void setIsDuplication(integer $IsDuplication) 设置是否为副本。1为是，-1为不是。
  * @method string getRegistrationDate() 获取登记日期
@@ -117,17 +109,13 @@ class BizLicenseOCRResponse extends AbstractModel
 
     /**
      * @var array Code 告警码列表和释义：
--20001 非营业执照
 -9102 黑白复印件告警
-注：告警码可以同时存在多个
      */
     public $RecognizeWarnCode;
 
     /**
      * @var array 告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个
      */
     public $RecognizeWarnMsg;
 
@@ -158,13 +146,9 @@ WARN_COPY_CARD 黑白复印件告警
      * @param string $ComposingForm 组成形式
      * @param string $SetDate 成立日期
      * @param array $RecognizeWarnCode Code 告警码列表和释义：
--20001 非营业执照
 -9102 黑白复印件告警
-注：告警码可以同时存在多个
      * @param array $RecognizeWarnMsg 告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个
      * @param integer $IsDuplication 是否为副本。1为是，-1为不是。
      * @param string $RegistrationDate 登记日期
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

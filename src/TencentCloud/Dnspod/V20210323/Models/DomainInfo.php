@@ -72,6 +72,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerNick(string $OwnerNick) 设置域名所有者的账户昵称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsGracePeriod() 获取是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsGracePeriod(string $IsGracePeriod) 设置是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVipBuffered() 获取是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVipBuffered(string $VipBuffered) 设置是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVipStartAt() 获取VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVipStartAt(string $VipStartAt) 设置VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVipEndAt() 获取VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVipEndAt(string $VipEndAt) 设置VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVipAutoRenew() 获取VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVipAutoRenew(string $VipAutoRenew) 设置VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVipResourceId() 获取VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVipResourceId(string $VipResourceId) 设置VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSubDomain() 获取是否是子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSubDomain(boolean $IsSubDomain) 设置是否是子域名。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
 {
@@ -194,6 +222,48 @@ class DomainInfo extends AbstractModel
     public $OwnerNick;
 
     /**
+     * @var string 是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsGracePeriod;
+
+    /**
+     * @var string 是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VipBuffered;
+
+    /**
+     * @var string VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VipStartAt;
+
+    /**
+     * @var string VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VipEndAt;
+
+    /**
+     * @var string VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VipAutoRenew;
+
+    /**
+     * @var string VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VipResourceId;
+
+    /**
+     * @var boolean 是否是子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSubDomain;
+
+    /**
      * @param integer $DomainId 域名ID
      * @param string $Status 域名状态
      * @param string $Grade 域名套餐等级
@@ -219,6 +289,20 @@ class DomainInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordCount 域名的记录数量
      * @param string $OwnerNick 域名所有者的账户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsGracePeriod 是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VipBuffered 是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VipStartAt VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VipEndAt VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VipAutoRenew VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VipResourceId VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSubDomain 是否是子域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +408,34 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("OwnerNick",$param) and $param["OwnerNick"] !== null) {
             $this->OwnerNick = $param["OwnerNick"];
+        }
+
+        if (array_key_exists("IsGracePeriod",$param) and $param["IsGracePeriod"] !== null) {
+            $this->IsGracePeriod = $param["IsGracePeriod"];
+        }
+
+        if (array_key_exists("VipBuffered",$param) and $param["VipBuffered"] !== null) {
+            $this->VipBuffered = $param["VipBuffered"];
+        }
+
+        if (array_key_exists("VipStartAt",$param) and $param["VipStartAt"] !== null) {
+            $this->VipStartAt = $param["VipStartAt"];
+        }
+
+        if (array_key_exists("VipEndAt",$param) and $param["VipEndAt"] !== null) {
+            $this->VipEndAt = $param["VipEndAt"];
+        }
+
+        if (array_key_exists("VipAutoRenew",$param) and $param["VipAutoRenew"] !== null) {
+            $this->VipAutoRenew = $param["VipAutoRenew"];
+        }
+
+        if (array_key_exists("VipResourceId",$param) and $param["VipResourceId"] !== null) {
+            $this->VipResourceId = $param["VipResourceId"];
+        }
+
+        if (array_key_exists("IsSubDomain",$param) and $param["IsSubDomain"] !== null) {
+            $this->IsSubDomain = $param["IsSubDomain"];
         }
     }
 }

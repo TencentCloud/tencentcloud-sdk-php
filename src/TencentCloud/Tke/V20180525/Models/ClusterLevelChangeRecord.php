@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewLevel(string $NewLevel) 设置变配后规模
  * @method string getTriggerType() 获取变配触发类型：manual 手动,auto 自动
  * @method void setTriggerType(string $TriggerType) 设置变配触发类型：manual 手动,auto 自动
+ * @method string getCreatedAt() 获取创建时间
+ * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  * @method string getStartedAt() 获取开始时间
  * @method void setStartedAt(string $StartedAt) 设置开始时间
  * @method string getEndedAt() 获取结束时间
@@ -77,6 +79,11 @@ class ClusterLevelChangeRecord extends AbstractModel
     public $TriggerType;
 
     /**
+     * @var string 创建时间
+     */
+    public $CreatedAt;
+
+    /**
      * @var string 开始时间
      */
     public $StartedAt;
@@ -94,6 +101,7 @@ class ClusterLevelChangeRecord extends AbstractModel
      * @param string $OldLevel 变配前规模
      * @param string $NewLevel 变配后规模
      * @param string $TriggerType 变配触发类型：manual 手动,auto 自动
+     * @param string $CreatedAt 创建时间
      * @param string $StartedAt 开始时间
      * @param string $EndedAt 结束时间
      */
@@ -136,6 +144,10 @@ class ClusterLevelChangeRecord extends AbstractModel
 
         if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
             $this->TriggerType = $param["TriggerType"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
         }
 
         if (array_key_exists("StartedAt",$param) and $param["StartedAt"] !== null) {

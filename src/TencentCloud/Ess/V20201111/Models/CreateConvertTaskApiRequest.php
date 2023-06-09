@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConvertTaskApi请求参数结构体
  *
- * @method string getResourceType() 获取资源类型 取值范围doc,docx,html,xls,xlsx之一
- * @method void setResourceType(string $ResourceType) 设置资源类型 取值范围doc,docx,html,xls,xlsx之一
+ * @method string getResourceType() 获取资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
+ * @method void setResourceType(string $ResourceType) 设置资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
  * @method string getResourceName() 获取资源名称，长度限制为256字符
  * @method void setResourceName(string $ResourceName) 设置资源名称，长度限制为256字符
  * @method string getResourceId() 获取资源Id，通过UploadFiles获取
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateConvertTaskApiRequest extends AbstractModel
 {
     /**
-     * @var string 资源类型 取值范围doc,docx,html,xls,xlsx之一
+     * @var string 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
      */
     public $ResourceType;
 
@@ -68,7 +68,7 @@ class CreateConvertTaskApiRequest extends AbstractModel
     public $Organization;
 
     /**
-     * @param string $ResourceType 资源类型 取值范围doc,docx,html,xls,xlsx之一
+     * @param string $ResourceType 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
      * @param string $ResourceName 资源名称，长度限制为256字符
      * @param string $ResourceId 资源Id，通过UploadFiles获取
      * @param UserInfo $Operator 调用方用户信息，userId 必填

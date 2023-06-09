@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组ID
  * @method array getBatchTag() 获取批量绑定标签
  * @method void setBatchTag(array $BatchTag) 设置批量绑定标签
+ * @method integer getEbEventFlag() 获取是否同步eb
+ * @method void setEbEventFlag(integer $EbEventFlag) 设置是否同步eb
+ * @method string getEbSubject() 获取事件配置的告警
+ * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
  */
 class BindingPolicyTagRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class BindingPolicyTagRequest extends AbstractModel
     public $BatchTag;
 
     /**
+     * @var integer 是否同步eb
+     */
+    public $EbEventFlag;
+
+    /**
+     * @var string 事件配置的告警
+     */
+    public $EbSubject;
+
+    /**
      * @param string $Module 固定取值 monitor
      * @param string $PolicyId 策略ID
      * @param string $GroupId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
@@ -80,6 +94,8 @@ class BindingPolicyTagRequest extends AbstractModel
      * @param PolicyTag $Tag 策略标签
      * @param integer $InstanceGroupId 实例分组ID
      * @param array $BatchTag 批量绑定标签
+     * @param integer $EbEventFlag 是否同步eb
+     * @param string $EbSubject 事件配置的告警
      */
     function __construct()
     {
@@ -126,6 +142,14 @@ class BindingPolicyTagRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BatchTag, $obj);
             }
+        }
+
+        if (array_key_exists("EbEventFlag",$param) and $param["EbEventFlag"] !== null) {
+            $this->EbEventFlag = $param["EbEventFlag"];
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
         }
     }
 }

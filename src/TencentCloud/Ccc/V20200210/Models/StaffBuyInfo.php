@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNum(integer $Num) 设置购买坐席数量
  * @method integer getBuyTime() 获取购买时间戳
  * @method void setBuyTime(integer $BuyTime) 设置购买时间戳
- * @method integer getEndTime() 获取截至时间戳
- * @method void setEndTime(integer $EndTime) 设置截至时间戳
+ * @method integer getEndTime() 获取截止时间戳
+ * @method void setEndTime(integer $EndTime) 设置截止时间戳
  */
 class StaffBuyInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class StaffBuyInfo extends AbstractModel
     public $BuyTime;
 
     /**
-     * @var integer 截至时间戳
+     * @var integer 截止时间戳
      */
     public $EndTime;
 
     /**
      * @param integer $Num 购买坐席数量
      * @param integer $BuyTime 购买时间戳
-     * @param integer $EndTime 截至时间戳
+     * @param integer $EndTime 截止时间戳
      */
     function __construct()
     {

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置跨可用区，zoneIds必填
  * @method array getZoneIds() 获取可用区列表，购买多可用区实例时为必填项
  * @method void setZoneIds(array $ZoneIds) 设置可用区列表，购买多可用区实例时为必填项
+ * @method integer getPublicNetworkMonthly() 获取公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+ * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) 设置公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
  */
 class CreateInstancePreRequest extends AbstractModel
 {
@@ -153,6 +155,11 @@ class CreateInstancePreRequest extends AbstractModel
     public $ZoneIds;
 
     /**
+     * @var integer 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+     */
+    public $PublicNetworkMonthly;
+
+    /**
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $ZoneId 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
@@ -172,6 +179,7 @@ class CreateInstancePreRequest extends AbstractModel
      * @param string $DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
      * @param boolean $MultiZoneFlag 跨可用区，zoneIds必填
      * @param array $ZoneIds 可用区列表，购买多可用区实例时为必填项
+     * @param integer $PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
      */
     function __construct()
     {
@@ -261,6 +269,10 @@ class CreateInstancePreRequest extends AbstractModel
 
         if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
             $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("PublicNetworkMonthly",$param) and $param["PublicNetworkMonthly"] !== null) {
+            $this->PublicNetworkMonthly = $param["PublicNetworkMonthly"];
         }
     }
 }

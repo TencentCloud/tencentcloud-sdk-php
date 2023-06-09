@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplateDetail返回参数结构体
  *
- * @method integer getTemplateId() 获取参数模版ID
- * @method void setTemplateId(integer $TemplateId) 设置参数模版ID
- * @method string getTemplateName() 获取参数模版名称
- * @method void setTemplateName(string $TemplateName) 设置参数模版名称
- * @method string getTemplateDescription() 获取参数模版描述
- * @method void setTemplateDescription(string $TemplateDescription) 设置参数模版描述
+ * @method integer getTemplateId() 获取参数模板ID
+ * @method void setTemplateId(integer $TemplateId) 设置参数模板ID
+ * @method string getTemplateName() 获取参数模板名称
+ * @method void setTemplateName(string $TemplateName) 设置参数模板名称
+ * @method string getTemplateDescription() 获取参数模板描述
+ * @method void setTemplateDescription(string $TemplateDescription) 设置参数模板描述
  * @method string getEngineVersion() 获取引擎版本
  * @method void setEngineVersion(string $EngineVersion) 设置引擎版本
  * @method integer getTotalCount() 获取参数总条数
@@ -40,17 +40,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeParamTemplateDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 参数模版ID
+     * @var integer 参数模板ID
      */
     public $TemplateId;
 
     /**
-     * @var string 参数模版名称
+     * @var string 参数模板名称
      */
     public $TemplateName;
 
     /**
-     * @var string 参数模版描述
+     * @var string 参数模板描述
      */
     public $TemplateDescription;
 
@@ -80,9 +80,9 @@ class DescribeParamTemplateDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TemplateId 参数模版ID
-     * @param string $TemplateName 参数模版名称
-     * @param string $TemplateDescription 参数模版描述
+     * @param integer $TemplateId 参数模板ID
+     * @param string $TemplateName 参数模板名称
+     * @param string $TemplateDescription 参数模板描述
      * @param string $EngineVersion 引擎版本
      * @param integer $TotalCount 参数总条数
      * @param array $Items 参数列表

@@ -27,15 +27,17 @@ use TencentCloud\Common\AbstractModel;
 <li>StopService：停止服务</li>
 <li>StartMonitor：退出维护</li>
 <li>StopMonitor：进入维护</li>
-
+<li>RestartService：重启服务</li>
  * @method void setOpType(string $OpType) 设置操作类型，当前支持
 <li>StartService：启动服务</li>
 <li>StopService：停止服务</li>
 <li>StartMonitor：退出维护</li>
 <li>StopMonitor：进入维护</li>
-
+<li>RestartService：重启服务</li>
  * @method OpScope getOpScope() 获取操作范围
  * @method void setOpScope(OpScope $OpScope) 设置操作范围
+ * @method StrategyConfig getStrategyConfig() 获取操作策略
+ * @method void setStrategyConfig(StrategyConfig $StrategyConfig) 设置操作策略
  */
 class StartStopServiceOrMonitorRequest extends AbstractModel
 {
@@ -50,7 +52,7 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
 <li>StopService：停止服务</li>
 <li>StartMonitor：退出维护</li>
 <li>StopMonitor：进入维护</li>
-
+<li>RestartService：重启服务</li>
      */
     public $OpType;
 
@@ -60,14 +62,20 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
     public $OpScope;
 
     /**
+     * @var StrategyConfig 操作策略
+     */
+    public $StrategyConfig;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param string $OpType 操作类型，当前支持
 <li>StartService：启动服务</li>
 <li>StopService：停止服务</li>
 <li>StartMonitor：退出维护</li>
 <li>StopMonitor：进入维护</li>
-
+<li>RestartService：重启服务</li>
      * @param OpScope $OpScope 操作范围
+     * @param StrategyConfig $StrategyConfig 操作策略
      */
     function __construct()
     {
@@ -93,6 +101,11 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
         if (array_key_exists("OpScope",$param) and $param["OpScope"] !== null) {
             $this->OpScope = new OpScope();
             $this->OpScope->deserialize($param["OpScope"]);
+        }
+
+        if (array_key_exists("StrategyConfig",$param) and $param["StrategyConfig"] !== null) {
+            $this->StrategyConfig = new StrategyConfig();
+            $this->StrategyConfig->deserialize($param["StrategyConfig"]);
         }
     }
 }

@@ -23,6 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mps\V20190612\Models as Models;
 
 /**
+ * @method Models\BatchDeleteStreamLinkFlowResponse BatchDeleteStreamLinkFlow(Models\BatchDeleteStreamLinkFlowRequest $req) 批量删除媒体传输流。
+ * @method Models\BatchStartStreamLinkFlowResponse BatchStartStreamLinkFlow(Models\BatchStartStreamLinkFlowRequest $req) 批量启动媒体传输流。
+ * @method Models\BatchStopStreamLinkFlowResponse BatchStopStreamLinkFlow(Models\BatchStopStreamLinkFlowRequest $req) 批量停止媒体传输流。
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义内容分析模板，数量上限：50。
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义内容识别模板，数量上限：50。
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
@@ -44,6 +47,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 
 注意：创建编排成功后是禁用状态，需要手动启用。
  * @method Models\CreateSnapshotByTimeOffsetTemplateResponse CreateSnapshotByTimeOffsetTemplate(Models\CreateSnapshotByTimeOffsetTemplateRequest $req) 创建用户自定义指定时间点截图模板，数量上限：16。
+ * @method Models\CreateStreamLinkEventResponse CreateStreamLinkEvent(Models\CreateStreamLinkEventRequest $req) 创建媒体传输的事件Event。
  * @method Models\CreateStreamLinkFlowResponse CreateStreamLinkFlow(Models\CreateStreamLinkFlowRequest $req) 创建媒体传输的传输流配置。
  * @method Models\CreateStreamLinkInputResponse CreateStreamLinkInput(Models\CreateStreamLinkInputRequest $req) 创建媒体传输的输入配置。
  * @method Models\CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(Models\CreateStreamLinkOutputInfoRequest $req) 创建媒体传输流的输出信息。
@@ -74,6 +78,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DeleteSampleSnapshotTemplateResponse DeleteSampleSnapshotTemplate(Models\DeleteSampleSnapshotTemplateRequest $req) 删除用户自定义采样截图模板。
  * @method Models\DeleteScheduleResponse DeleteSchedule(Models\DeleteScheduleRequest $req) 删除编排
  * @method Models\DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(Models\DeleteSnapshotByTimeOffsetTemplateRequest $req) 删除用户自定义指定时间点截图模板。
+ * @method Models\DeleteStreamLinkEventResponse DeleteStreamLinkEvent(Models\DeleteStreamLinkEventRequest $req) 删除媒体传输的事件配置。
  * @method Models\DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(Models\DeleteStreamLinkFlowRequest $req) 删除媒体传输的传输流配置。
  * @method Models\DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(Models\DeleteStreamLinkOutputRequest $req) 删除媒体传输流的输出配置。
  * @method Models\DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(Models\DeleteTranscodeTemplateRequest $req) 删除用户自定义转码模板。
@@ -92,6 +97,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeSchedulesResponse DescribeSchedules(Models\DescribeSchedulesRequest $req) 查询编排。
  * @method Models\DescribeSnapshotByTimeOffsetTemplatesResponse DescribeSnapshotByTimeOffsetTemplates(Models\DescribeSnapshotByTimeOffsetTemplatesRequest $req) 查询指定时间点截图模板，支持根据条件，分页查询。
  * @method Models\DescribeStreamLinkActivateStateResponse DescribeStreamLinkActivateState(Models\DescribeStreamLinkActivateStateRequest $req) 查询媒体传输开通状态。
+ * @method Models\DescribeStreamLinkEventResponse DescribeStreamLinkEvent(Models\DescribeStreamLinkEventRequest $req) 查询媒体传输事件的配置信息。
+ * @method Models\DescribeStreamLinkEventAttachedFlowsResponse DescribeStreamLinkEventAttachedFlows(Models\DescribeStreamLinkEventAttachedFlowsRequest $req) 查询媒体传输事件关联的所有媒体输入流的配置信息。
+ * @method Models\DescribeStreamLinkEventsResponse DescribeStreamLinkEvents(Models\DescribeStreamLinkEventsRequest $req) 批量查询媒体传输事件的配置信息。
  * @method Models\DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(Models\DescribeStreamLinkFlowRequest $req) 查询媒体输入流的配置信息。
  * @method Models\DescribeStreamLinkFlowLogsResponse DescribeStreamLinkFlowLogs(Models\DescribeStreamLinkFlowLogsRequest $req) 查询媒体传输流的日志信息。
  * @method Models\DescribeStreamLinkFlowMediaStatisticsResponse DescribeStreamLinkFlowMediaStatistics(Models\DescribeStreamLinkFlowMediaStatisticsRequest $req) 查询媒体传输流的媒体质量数据。
@@ -133,6 +141,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) 修改用户自定义采样截图模板。
  * @method Models\ModifyScheduleResponse ModifySchedule(Models\ModifyScheduleRequest $req) 修改编排
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) 修改用户自定义指定时间点截图模板。
+ * @method Models\ModifyStreamLinkEventResponse ModifyStreamLinkEvent(Models\ModifyStreamLinkEventRequest $req) 修改媒体传输的事件配置信息。
  * @method Models\ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(Models\ModifyStreamLinkFlowRequest $req) 修改媒体传输的传输流配置信息。
  * @method Models\ModifyStreamLinkInputResponse ModifyStreamLinkInput(Models\ModifyStreamLinkInputRequest $req) 修改媒体传输流的输入信息。
  * @method Models\ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(Models\ModifyStreamLinkOutputInfoRequest $req) 修改媒体传输流的输出配置。

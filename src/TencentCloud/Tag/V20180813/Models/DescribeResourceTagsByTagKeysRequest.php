@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀
  * @method string getResourceRegion() 获取资源地域
  * @method void setResourceRegion(string $ResourceRegion) 设置资源地域
- * @method array getResourceIds() 获取资源唯一标识
- * @method void setResourceIds(array $ResourceIds) 设置资源唯一标识
- * @method array getTagKeys() 获取资源标签键
- * @method void setTagKeys(array $TagKeys) 设置资源标签键
+ * @method array getResourceIds() 获取资源唯一标识ID的列表，列表容量不超过20
+ * @method void setResourceIds(array $ResourceIds) 设置资源唯一标识ID的列表，列表容量不超过20
+ * @method array getTagKeys() 获取资源标签键列表，列表容量不超过20
+ * @method void setTagKeys(array $TagKeys) 设置资源标签键列表，列表容量不超过20
  * @method integer getLimit() 获取每页大小，默认为 400
  * @method void setLimit(integer $Limit) 设置每页大小，默认为 400
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
@@ -53,12 +53,12 @@ class DescribeResourceTagsByTagKeysRequest extends AbstractModel
     public $ResourceRegion;
 
     /**
-     * @var array 资源唯一标识
+     * @var array 资源唯一标识ID的列表，列表容量不超过20
      */
     public $ResourceIds;
 
     /**
-     * @var array 资源标签键
+     * @var array 资源标签键列表，列表容量不超过20
      */
     public $TagKeys;
 
@@ -76,8 +76,8 @@ class DescribeResourceTagsByTagKeysRequest extends AbstractModel
      * @param string $ServiceType 业务类型
      * @param string $ResourcePrefix 资源前缀
      * @param string $ResourceRegion 资源地域
-     * @param array $ResourceIds 资源唯一标识
-     * @param array $TagKeys 资源标签键
+     * @param array $ResourceIds 资源唯一标识ID的列表，列表容量不超过20
+     * @param array $TagKeys 资源标签键列表，列表容量不超过20
      * @param integer $Limit 每页大小，默认为 400
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      */

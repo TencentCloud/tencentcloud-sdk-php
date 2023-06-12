@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItemCount(integer $ItemCount) 设置元素个数。
  * @method integer getMaxElementSize() 获取最大元素长度。
  * @method void setMaxElementSize(integer $MaxElementSize) 设置最大元素长度。
+ * @method integer getAveElementSize() 获取平均元素长度。
+ * @method void setAveElementSize(integer $AveElementSize) 设置平均元素长度。
+ * @method string getShardId() 获取所属分片序号。
+ * @method void setShardId(string $ShardId) 设置所属分片序号。
  */
 class RedisKeySpaceData extends AbstractModel
 {
@@ -73,6 +77,16 @@ class RedisKeySpaceData extends AbstractModel
     public $MaxElementSize;
 
     /**
+     * @var integer 平均元素长度。
+     */
+    public $AveElementSize;
+
+    /**
+     * @var string 所属分片序号。
+     */
+    public $ShardId;
+
+    /**
      * @param string $Key key名。
      * @param string $Type key类型。
      * @param string $Encoding key编码方式。
@@ -80,6 +94,8 @@ class RedisKeySpaceData extends AbstractModel
      * @param integer $Length key内存大小，单位Byte。
      * @param integer $ItemCount 元素个数。
      * @param integer $MaxElementSize 最大元素长度。
+     * @param integer $AveElementSize 平均元素长度。
+     * @param string $ShardId 所属分片序号。
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class RedisKeySpaceData extends AbstractModel
 
         if (array_key_exists("MaxElementSize",$param) and $param["MaxElementSize"] !== null) {
             $this->MaxElementSize = $param["MaxElementSize"];
+        }
+
+        if (array_key_exists("AveElementSize",$param) and $param["AveElementSize"] !== null) {
+            $this->AveElementSize = $param["AveElementSize"];
+        }
+
+        if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
+            $this->ShardId = $param["ShardId"];
         }
     }
 }

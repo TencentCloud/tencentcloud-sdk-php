@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartition(integer $Partition) 设置实例最大分区数量，需要满足当前实例的计费规格
  * @method integer getTopicNum() 获取实例最大 topic 数量，需要满足当前实例的计费规格
  * @method void setTopicNum(integer $TopicNum) 设置实例最大 topic 数量，需要满足当前实例的计费规格
- * @method integer getZoneId() 获取实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
- * @method void setZoneId(integer $ZoneId) 设置实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
+ * @method integer getZoneId() 获取实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
+ * @method void setZoneId(integer $ZoneId) 设置实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
  * @method boolean getMultiZoneFlag() 获取当前实例是否为多可用区实例。
  * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置当前实例是否为多可用区实例。
  * @method array getZoneIds() 获取当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中
@@ -125,7 +125,7 @@ class CreateInstancePostRequest extends AbstractModel
     public $TopicNum;
 
     /**
-     * @var integer 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
+     * @var integer 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
      */
     public $ZoneId;
 
@@ -163,7 +163,7 @@ class CreateInstancePostRequest extends AbstractModel
      * @param integer $DiskSize 实例硬盘大小，需要满足当前实例的计费规格
      * @param integer $Partition 实例最大分区数量，需要满足当前实例的计费规格
      * @param integer $TopicNum 实例最大 topic 数量，需要满足当前实例的计费规格
-     * @param integer $ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
+     * @param integer $ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
      * @param boolean $MultiZoneFlag 当前实例是否为多可用区实例。
      * @param array $ZoneIds 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中
      * @param integer $InstanceNum 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例

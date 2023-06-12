@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCreationDate() 获取产品创建时间
  * @method void setCreationDate(integer $CreationDate) 设置产品创建时间
+ * @method integer getCreateUserId() 获取创建者 Uin
+ * @method void setCreateUserId(integer $CreateUserId) 设置创建者 Uin
+ * @method integer getUserId() 获取账号 Uin
+ * @method void setUserId(integer $UserId) 设置账号 Uin
  */
 class ProductMetadata extends AbstractModel
 {
@@ -31,7 +35,19 @@ class ProductMetadata extends AbstractModel
     public $CreationDate;
 
     /**
+     * @var integer 创建者 Uin
+     */
+    public $CreateUserId;
+
+    /**
+     * @var integer 账号 Uin
+     */
+    public $UserId;
+
+    /**
      * @param integer $CreationDate 产品创建时间
+     * @param integer $CreateUserId 创建者 Uin
+     * @param integer $UserId 账号 Uin
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class ProductMetadata extends AbstractModel
         }
         if (array_key_exists("CreationDate",$param) and $param["CreationDate"] !== null) {
             $this->CreationDate = $param["CreationDate"];
+        }
+
+        if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
+            $this->CreateUserId = $param["CreateUserId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

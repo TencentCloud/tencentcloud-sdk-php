@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置CDN域名总数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAsyncTotalNum() 获取异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsyncTotalNum(integer $AsyncTotalNum) 设置异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAsyncOffset() 获取异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsyncOffset(integer $AsyncOffset) 设置异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAsyncCacheTime() 获取当前缓存读取时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsyncCacheTime(string $AsyncCacheTime) 设置当前缓存读取时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +58,24 @@ class DescribeHostCdnInstanceListResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var integer 异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsyncTotalNum;
+
+    /**
+     * @var integer 异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsyncOffset;
+
+    /**
+     * @var string 当前缓存读取时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsyncCacheTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +84,12 @@ class DescribeHostCdnInstanceListResponse extends AbstractModel
      * @param array $InstanceList CDN实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount CDN域名总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AsyncTotalNum 异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AsyncOffset 异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsyncCacheTime 当前缓存读取时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -81,6 +117,18 @@ class DescribeHostCdnInstanceListResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("AsyncTotalNum",$param) and $param["AsyncTotalNum"] !== null) {
+            $this->AsyncTotalNum = $param["AsyncTotalNum"];
+        }
+
+        if (array_key_exists("AsyncOffset",$param) and $param["AsyncOffset"] !== null) {
+            $this->AsyncOffset = $param["AsyncOffset"];
+        }
+
+        if (array_key_exists("AsyncCacheTime",$param) and $param["AsyncCacheTime"] !== null) {
+            $this->AsyncCacheTime = $param["AsyncCacheTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() 获取负载均衡ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡ID
- * @method string getListenerId() 获取监听器ID
- * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getTargetGroupId() 获取目标组ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
+ * @method string getListenerId() 获取监听器ID
+ * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getLocationId() 获取转发规则ID
  * @method void setLocationId(string $LocationId) 设置转发规则ID
  */
@@ -37,14 +37,14 @@ class TargetGroupAssociation extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string 监听器ID
-     */
-    public $ListenerId;
-
-    /**
      * @var string 目标组ID
      */
     public $TargetGroupId;
+
+    /**
+     * @var string 监听器ID
+     */
+    public $ListenerId;
 
     /**
      * @var string 转发规则ID
@@ -53,8 +53,8 @@ class TargetGroupAssociation extends AbstractModel
 
     /**
      * @param string $LoadBalancerId 负载均衡ID
-     * @param string $ListenerId 监听器ID
      * @param string $TargetGroupId 目标组ID
+     * @param string $ListenerId 监听器ID
      * @param string $LocationId 转发规则ID
      */
     function __construct()
@@ -74,12 +74,12 @@ class TargetGroupAssociation extends AbstractModel
             $this->LoadBalancerId = $param["LoadBalancerId"];
         }
 
-        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
-            $this->ListenerId = $param["ListenerId"];
-        }
-
         if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
             $this->TargetGroupId = $param["TargetGroupId"];
+        }
+
+        if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
+            $this->ListenerId = $param["ListenerId"];
         }
 
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {

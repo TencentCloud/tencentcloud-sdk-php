@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 当作业负载需要扩容节点数量大于此值，当前扩容轮次按照ScaleOutRatio配置的的比例进行扩容。当作业负载需要扩容节点数量小于此值，当前扩容轮次扩容当前作业负载所需数量的节点。
 此参数配合ScaleOutRatio参数进行使用，用于比例扩容场景下，在作业负载所需节点数量较小时，加快收敛速度。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxNodesPerCycle() 获取每轮扩容最大节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxNodesPerCycle(integer $MaxNodesPerCycle) 设置每轮扩容最大节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueueConfigOverview extends AbstractModel
 {
@@ -105,6 +109,12 @@ class QueueConfigOverview extends AbstractModel
     public $ScaleOutNodeThreshold;
 
     /**
+     * @var integer 每轮扩容最大节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxNodesPerCycle;
+
+    /**
      * @param string $QueueName 队列名称。
      * @param integer $MinSize 队列中弹性节点数量最小值。取值范围0～200。
      * @param integer $MaxSize 队列中弹性节点数量最大值。取值范围0～200。
@@ -119,6 +129,8 @@ class QueueConfigOverview extends AbstractModel
      * @param integer $ScaleOutNodeThreshold 比例扩容阈值。默认值：0。取值范围：0～200。
 当作业负载需要扩容节点数量大于此值，当前扩容轮次按照ScaleOutRatio配置的的比例进行扩容。当作业负载需要扩容节点数量小于此值，当前扩容轮次扩容当前作业负载所需数量的节点。
 此参数配合ScaleOutRatio参数进行使用，用于比例扩容场景下，在作业负载所需节点数量较小时，加快收敛速度。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxNodesPerCycle 每轮扩容最大节点个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -173,6 +185,10 @@ class QueueConfigOverview extends AbstractModel
 
         if (array_key_exists("ScaleOutNodeThreshold",$param) and $param["ScaleOutNodeThreshold"] !== null) {
             $this->ScaleOutNodeThreshold = $param["ScaleOutNodeThreshold"];
+        }
+
+        if (array_key_exists("MaxNodesPerCycle",$param) and $param["MaxNodesPerCycle"] !== null) {
+            $this->MaxNodesPerCycle = $param["MaxNodesPerCycle"];
         }
     }
 }

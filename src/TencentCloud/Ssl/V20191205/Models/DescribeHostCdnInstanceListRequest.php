@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。	
  * @method integer getLimit() 获取每页数量，默认10。	
  * @method void setLimit(integer $Limit) 设置每页数量，默认10。	
+ * @method integer getAsyncCache() 获取是否异步
+ * @method void setAsyncCache(integer $AsyncCache) 设置是否异步
  */
 class DescribeHostCdnInstanceListRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeHostCdnInstanceListRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer 是否异步
+     */
+    public $AsyncCache;
+
+    /**
      * @param string $CertificateId 待部署的证书ID
      * @param string $ResourceType 部署资源类型
      * @param integer $IsCache 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
@@ -80,6 +87,7 @@ class DescribeHostCdnInstanceListRequest extends AbstractModel
      * @param string $OldCertificateId 原证书ID
      * @param integer $Offset 分页偏移量，从0开始。	
      * @param integer $Limit 每页数量，默认10。	
+     * @param integer $AsyncCache 是否异步
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DescribeHostCdnInstanceListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("AsyncCache",$param) and $param["AsyncCache"] !== null) {
+            $this->AsyncCache = $param["AsyncCache"];
         }
     }
 }

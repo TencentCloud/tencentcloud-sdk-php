@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductKey(string $ProductKey) 设置产品密钥，suite产品才会有
  * @method integer getRegisterType() 获取动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
  * @method void setRegisterType(integer $RegisterType) 设置动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
- * @method string getProductSecret() 获取动态注册产品秘钥
- * @method void setProductSecret(string $ProductSecret) 设置动态注册产品秘钥
+ * @method string getProductSecret() 获取动态注册产品密钥
+ * @method void setProductSecret(string $ProductSecret) 设置动态注册产品密钥
  * @method integer getRegisterLimit() 获取RegisterType为2时，设备动态创建的限制数量
  * @method void setRegisterLimit(integer $RegisterLimit) 设置RegisterType为2时，设备动态创建的限制数量
  * @method string getOriginProductId() 获取划归的产品，展示为源产品ID，其余为空
@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateCAName(string $PrivateCAName) 设置私有CA名称
  * @method integer getOriginUserId() 获取划归的产品，展示为源用户ID，其余为空
  * @method void setOriginUserId(integer $OriginUserId) 设置划归的产品，展示为源用户ID，其余为空
+ * @method integer getDeviceLimit() 获取设备限制
+ * @method void setDeviceLimit(integer $DeviceLimit) 设置设备限制
+ * @method integer getForbiddenStatus() 获取产品禁用状态
+ * @method void setForbiddenStatus(integer $ForbiddenStatus) 设置产品禁用状态
  */
 class ProductProperties extends AbstractModel
 {
@@ -114,7 +118,7 @@ class ProductProperties extends AbstractModel
     public $RegisterType;
 
     /**
-     * @var string 动态注册产品秘钥
+     * @var string 动态注册产品密钥
      */
     public $ProductSecret;
 
@@ -139,6 +143,16 @@ class ProductProperties extends AbstractModel
     public $OriginUserId;
 
     /**
+     * @var integer 设备限制
+     */
+    public $DeviceLimit;
+
+    /**
+     * @var integer 产品禁用状态
+     */
+    public $ForbiddenStatus;
+
+    /**
      * @param string $ProductDescription 产品描述
      * @param string $EncryptionType 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      * @param string $Region 产品所属区域，目前只支持广州（gz）
@@ -151,11 +165,13 @@ class ProductProperties extends AbstractModel
      * @param string $ModelName 产品绑定的物模型名称
      * @param string $ProductKey 产品密钥，suite产品才会有
      * @param integer $RegisterType 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
-     * @param string $ProductSecret 动态注册产品秘钥
+     * @param string $ProductSecret 动态注册产品密钥
      * @param integer $RegisterLimit RegisterType为2时，设备动态创建的限制数量
      * @param string $OriginProductId 划归的产品，展示为源产品ID，其余为空
      * @param string $PrivateCAName 私有CA名称
      * @param integer $OriginUserId 划归的产品，展示为源用户ID，其余为空
+     * @param integer $DeviceLimit 设备限制
+     * @param integer $ForbiddenStatus 产品禁用状态
      */
     function __construct()
     {
@@ -232,6 +248,14 @@ class ProductProperties extends AbstractModel
 
         if (array_key_exists("OriginUserId",$param) and $param["OriginUserId"] !== null) {
             $this->OriginUserId = $param["OriginUserId"];
+        }
+
+        if (array_key_exists("DeviceLimit",$param) and $param["DeviceLimit"] !== null) {
+            $this->DeviceLimit = $param["DeviceLimit"];
+        }
+
+        if (array_key_exists("ForbiddenStatus",$param) and $param["ForbiddenStatus"] !== null) {
+            $this->ForbiddenStatus = $param["ForbiddenStatus"];
         }
     }
 }

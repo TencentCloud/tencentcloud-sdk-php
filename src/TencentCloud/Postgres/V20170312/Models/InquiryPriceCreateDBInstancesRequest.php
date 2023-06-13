@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
  * @method void setZone(string $Zone) 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
- * @method string getSpecCode() 获取规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
- * @method void setSpecCode(string $SpecCode) 设置规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+ * @method string getSpecCode() 获取规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
+ * @method void setSpecCode(string $SpecCode) 设置规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
  * @method integer getStorage() 获取存储容量大小，单位：GB。
  * @method void setStorage(integer $Storage) 设置存储容量大小，单位：GB。
  * @method integer getInstanceCount() 获取实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
@@ -55,7 +55,7 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+     * @var string 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
      */
     public $SpecCode;
 
@@ -100,7 +100,7 @@ mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
 
     /**
      * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     * @param string $SpecCode 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+     * @param string $SpecCode 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
      * @param integer $Storage 存储容量大小，单位：GB。
      * @param integer $InstanceCount 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
      * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。

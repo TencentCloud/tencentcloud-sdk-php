@@ -54,25 +54,37 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置部署实例名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getListenerId() 获取部署监听器ID
+ * @method string getListenerId() 获取部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setListenerId(string $ListenerId) 设置部署监听器ID
+ * @method void setListenerId(string $ListenerId) 设置部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getListenerName() 获取部署监听器名称
+ * @method string getListenerName() 获取部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setListenerName(string $ListenerName) 设置部署监听器名称
+ * @method void setListenerName(string $ListenerName) 设置部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSniSwitch() 获取是否开启SNI
+ * @method integer getSniSwitch() 获取是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI
+ * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBucket() 获取bucket名称
+ * @method string getBucket() 获取bucket名称（COS专用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBucket(string $Bucket) 设置bucket名称
+ * @method void setBucket(string $Bucket) 设置bucket名称（COS专用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPort() 获取端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPort(integer $Port) 设置端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespace() 获取命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespace(string $Namespace) 设置命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSecretName() 获取secret名称（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecretName(string $SecretName) 设置secret名称（TKE专用）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpdateRecordDetail extends AbstractModel
@@ -143,13 +155,13 @@ class UpdateRecordDetail extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 部署监听器ID
+     * @var string 部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerId;
 
     /**
-     * @var string 部署监听器名称
+     * @var string 部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerName;
@@ -161,16 +173,34 @@ class UpdateRecordDetail extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 是否开启SNI
+     * @var integer 是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SniSwitch;
 
     /**
-     * @var string bucket名称
+     * @var string bucket名称（COS专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
+
+    /**
+     * @var integer 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Port;
+
+    /**
+     * @var string 命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Namespace;
+
+    /**
+     * @var string secret名称（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecretName;
 
     /**
      * @param integer $Id 详情记录id
@@ -190,15 +220,21 @@ class UpdateRecordDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 部署实例名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ListenerId 部署监听器ID
+     * @param string $ListenerId 部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ListenerName 部署监听器名称
+     * @param string $ListenerName 部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SniSwitch 是否开启SNI
+     * @param integer $SniSwitch 是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Bucket bucket名称
+     * @param string $Bucket bucket名称（COS专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Port 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Namespace 命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SecretName secret名称（TKE专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -280,6 +316,18 @@ class UpdateRecordDetail extends AbstractModel
 
         if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
             $this->Bucket = $param["Bucket"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
+            $this->SecretName = $param["SecretName"];
         }
     }
 }

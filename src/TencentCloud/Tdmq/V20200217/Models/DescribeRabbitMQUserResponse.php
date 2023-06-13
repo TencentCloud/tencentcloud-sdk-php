@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBErrlogs返回参数结构体
+ * DescribeRabbitMQUser返回参数结构体
  *
- * @method integer getTotalCount() 获取查询到的日志数量，最大值为10000条。
- * @method void setTotalCount(integer $TotalCount) 设置查询到的日志数量，最大值为10000条。
- * @method array getDetails() 获取错误日志详细信息集合。
- * @method void setDetails(array $Details) 设置错误日志详细信息集合。
+ * @method integer getTotalCount() 获取返回的User数量
+ * @method void setTotalCount(integer $TotalCount) 设置返回的User数量
+ * @method array getRabbitMQUserList() 获取当前已创建的RabbitMQ用户列表
+ * @method void setRabbitMQUserList(array $RabbitMQUserList) 设置当前已创建的RabbitMQ用户列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBErrlogsResponse extends AbstractModel
+class DescribeRabbitMQUserResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的日志数量，最大值为10000条。
+     * @var integer 返回的User数量
      */
     public $TotalCount;
 
     /**
-     * @var array 错误日志详细信息集合。
+     * @var array 当前已创建的RabbitMQ用户列表
      */
-    public $Details;
+    public $RabbitMQUserList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeDBErrlogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询到的日志数量，最大值为10000条。
-     * @param array $Details 错误日志详细信息集合。
+     * @param integer $TotalCount 返回的User数量
+     * @param array $RabbitMQUserList 当前已创建的RabbitMQ用户列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +66,12 @@ class DescribeDBErrlogsResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
-            $this->Details = [];
-            foreach ($param["Details"] as $key => $value){
-                $obj = new ErrLogDetail();
+        if (array_key_exists("RabbitMQUserList",$param) and $param["RabbitMQUserList"] !== null) {
+            $this->RabbitMQUserList = [];
+            foreach ($param["RabbitMQUserList"] as $key => $value){
+                $obj = new RabbitMQUser();
                 $obj->deserialize($value);
-                array_push($this->Details, $obj);
+                array_push($this->RabbitMQUserList, $obj);
             }
         }
 

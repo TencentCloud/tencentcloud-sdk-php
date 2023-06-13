@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetail(string $Detail) 设置问题详情。
  * @method string getSolution() 获取建议解决方案。
  * @method void setSolution(string $Solution) 设置建议解决方案。
+ * @method string getLevel() 获取伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+ * @method void setLevel(string $Level) 设置伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
  */
 class Advice extends AbstractModel
 {
@@ -45,9 +51,19 @@ class Advice extends AbstractModel
     public $Solution;
 
     /**
+     * @var string 伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+     */
+    public $Level;
+
+    /**
      * @param string $Problem 问题描述。
      * @param string $Detail 问题详情。
      * @param string $Solution 建议解决方案。
+     * @param string $Level 伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class Advice extends AbstractModel
 
         if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
             $this->Solution = $param["Solution"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
     }
 }

@@ -69,25 +69,25 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
  * @method string getStartTime() 获取开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
  * @method void setStartTime(string $StartTime) 设置开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
  * @method string getEndTime() 获取结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
  * @method void setEndTime(string $EndTime) 设置结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
  * @method string getOperator() 获取任务操作人备注。
  * @method void setOperator(string $Operator) 设置任务操作人备注。
  * @method string getPushArgs() 获取推流参数。
@@ -198,6 +198,8 @@ PullVodPushLive -点播。
 0 - 不启用。
 1 - 启用。
 注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+ * @method string getRecordTemplateId() 获取录制模板 ID。
+ * @method void setRecordTemplateId(string $RecordTemplateId) 设置录制模板 ID。
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -248,7 +250,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
      * @var string 开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      */
     public $StartTime;
 
@@ -259,7 +261,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      */
     public $EndTime;
 
@@ -371,6 +373,11 @@ PullVodPushLive -点播。
     public $VodLocalMode;
 
     /**
+     * @var string 录制模板 ID。
+     */
+    public $RecordTemplateId;
+
+    /**
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播，
@@ -397,14 +404,14 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
      * @param string $StartTime 开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      * @param string $EndTime 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      * @param string $Operator 任务操作人备注。
      * @param string $PushArgs 推流参数。
 推流时携带自定义参数。
@@ -460,6 +467,7 @@ PullVodPushLive -点播。
 0 - 不启用。
 1 - 启用。
 注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+     * @param string $RecordTemplateId 录制模板 ID。
      */
     function __construct()
     {
@@ -557,6 +565,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
             $this->VodLocalMode = $param["VodLocalMode"];
+        }
+
+        if (array_key_exists("RecordTemplateId",$param) and $param["RecordTemplateId"] !== null) {
+            $this->RecordTemplateId = $param["RecordTemplateId"];
         }
     }
 }

@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContactPhone(string $ContactPhone) 设置手机。
  * @method string getValidityPeriod() 获取有效期，默认12个月，目前仅支持12个月。
  * @method void setValidityPeriod(string $ValidityPeriod) 设置有效期，默认12个月，目前仅支持12个月。
- * @method string getCsrEncryptAlgo() 获取加密算法，仅支持 RSA。
- * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) 设置加密算法，仅支持 RSA。
- * @method string getCsrKeyParameter() 获取密钥对参数，仅支持2048。
- * @method void setCsrKeyParameter(string $CsrKeyParameter) 设置密钥对参数，仅支持2048。
+ * @method string getCsrEncryptAlgo() 获取加密算法，支持 RSA及ECC。
+ * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) 设置加密算法，支持 RSA及ECC。
+ * @method string getCsrKeyParameter() 获取密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
+ * @method void setCsrKeyParameter(string $CsrKeyParameter) 设置密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
  * @method string getCsrKeyPassword() 获取CSR 的加密密码。
  * @method void setCsrKeyPassword(string $CsrKeyPassword) 设置CSR 的加密密码。
  * @method string getAlias() 获取备注名称。
@@ -87,12 +87,12 @@ class ApplyCertificateRequest extends AbstractModel
     public $ValidityPeriod;
 
     /**
-     * @var string 加密算法，仅支持 RSA。
+     * @var string 加密算法，支持 RSA及ECC。
      */
     public $CsrEncryptAlgo;
 
     /**
-     * @var string 密钥对参数，仅支持2048。
+     * @var string 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
      */
     public $CsrKeyParameter;
 
@@ -129,8 +129,8 @@ class ApplyCertificateRequest extends AbstractModel
      * @param string $ContactEmail 邮箱。
      * @param string $ContactPhone 手机。
      * @param string $ValidityPeriod 有效期，默认12个月，目前仅支持12个月。
-     * @param string $CsrEncryptAlgo 加密算法，仅支持 RSA。
-     * @param string $CsrKeyParameter 密钥对参数，仅支持2048。
+     * @param string $CsrEncryptAlgo 加密算法，支持 RSA及ECC。
+     * @param string $CsrKeyParameter 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
      * @param string $CsrKeyPassword CSR 的加密密码。
      * @param string $Alias 备注名称。
      * @param string $OldCertificateId 原证书 ID，用于重新申请。

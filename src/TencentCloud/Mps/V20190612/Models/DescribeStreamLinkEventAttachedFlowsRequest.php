@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(string $EventId) 设置EventId。
  * @method integer getPageNum() 获取当前页数，默认1。
  * @method void setPageNum(integer $PageNum) 设置当前页数，默认1。
- * @method integer getPageSize() 获取每页大小，默认10。
- * @method void setPageSize(integer $PageSize) 设置每页大小，默认10。
+ * @method integer getPageSize() 获取每页大小，默认1000。
+ * @method void setPageSize(integer $PageSize) 设置每页大小，默认1000。
  */
 class DescribeStreamLinkEventAttachedFlowsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeStreamLinkEventAttachedFlowsRequest extends AbstractModel
     public $PageNum;
 
     /**
-     * @var integer 每页大小，默认10。
+     * @var integer 每页大小，默认1000。
      */
     public $PageSize;
 
     /**
      * @param string $EventId EventId。
      * @param integer $PageNum 当前页数，默认1。
-     * @param integer $PageSize 每页大小，默认10。
+     * @param integer $PageSize 每页大小，默认1000。
      */
     function __construct()
     {

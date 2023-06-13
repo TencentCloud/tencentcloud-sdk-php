@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBErrlogs请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如postgres-5bq3wfjd
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-5bq3wfjd
- * @method string getStartTime() 获取查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
- * @method void setStartTime(string $StartTime) 设置查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
- * @method string getEndTime() 获取查询结束时间，形如2018-01-01 00:00:00
- * @method void setEndTime(string $EndTime) 设置查询结束时间，形如2018-01-01 00:00:00
- * @method string getDatabaseName() 获取数据库名字
- * @method void setDatabaseName(string $DatabaseName) 设置数据库名字
- * @method array getSearchKeys() 获取搜索关键字
- * @method void setSearchKeys(array $SearchKeys) 设置搜索关键字
- * @method integer getLimit() 获取分页返回，每页返回的最大数量。取值为1-100
- * @method void setLimit(integer $Limit) 设置分页返回，每页返回的最大数量。取值为1-100
- * @method integer getOffset() 获取分页返回，返回第几页的数据，从第0页开始计数
- * @method void setOffset(integer $Offset) 设置分页返回，返回第几页的数据，从第0页开始计数
+ * @method string getDBInstanceId() 获取实例ID。	
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。	
+ * @method string getStartTime() 获取查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
+ * @method void setStartTime(string $StartTime) 设置查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
+ * @method string getEndTime() 获取查询结束时间，形如2018-01-01 00:00:00。	
+ * @method void setEndTime(string $EndTime) 设置查询结束时间，形如2018-01-01 00:00:00。	
+ * @method string getDatabaseName() 获取数据库名字。
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名字。
+ * @method array getSearchKeys() 获取搜索关键字。
+ * @method void setSearchKeys(array $SearchKeys) 设置搜索关键字。
+ * @method integer getLimit() 获取每页显示数量，取值范围为1-100。默认值为50。	
+ * @method void setLimit(integer $Limit) 设置每页显示数量，取值范围为1-100。默认值为50。	
+ * @method integer getOffset() 获取数据偏移量，从0开始。默认值为0。	
+ * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。默认值为0。	
  */
 class DescribeDBErrlogsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如postgres-5bq3wfjd
+     * @var string 实例ID。	
      */
     public $DBInstanceId;
 
     /**
-     * @var string 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
+     * @var string 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束时间，形如2018-01-01 00:00:00
+     * @var string 查询结束时间，形如2018-01-01 00:00:00。	
      */
     public $EndTime;
 
     /**
-     * @var string 数据库名字
+     * @var string 数据库名字。
      */
     public $DatabaseName;
 
     /**
-     * @var array 搜索关键字
+     * @var array 搜索关键字。
      */
     public $SearchKeys;
 
     /**
-     * @var integer 分页返回，每页返回的最大数量。取值为1-100
+     * @var integer 每页显示数量，取值范围为1-100。默认值为50。	
      */
     public $Limit;
 
     /**
-     * @var integer 分页返回，返回第几页的数据，从第0页开始计数
+     * @var integer 数据偏移量，从0开始。默认值为0。	
      */
     public $Offset;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如postgres-5bq3wfjd
-     * @param string $StartTime 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
-     * @param string $EndTime 查询结束时间，形如2018-01-01 00:00:00
-     * @param string $DatabaseName 数据库名字
-     * @param array $SearchKeys 搜索关键字
-     * @param integer $Limit 分页返回，每页返回的最大数量。取值为1-100
-     * @param integer $Offset 分页返回，返回第几页的数据，从第0页开始计数
+     * @param string $DBInstanceId 实例ID。	
+     * @param string $StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
+     * @param string $EndTime 查询结束时间，形如2018-01-01 00:00:00。	
+     * @param string $DatabaseName 数据库名字。
+     * @param array $SearchKeys 搜索关键字。
+     * @param integer $Limit 每页显示数量，取值范围为1-100。默认值为50。	
+     * @param integer $Offset 数据偏移量，从0开始。默认值为0。	
      */
     function __construct()
     {

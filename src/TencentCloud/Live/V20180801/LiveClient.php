@@ -40,7 +40,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 注意：至少填写一个回调 URL。
  * @method Models\CreateLivePullStreamTaskResponse CreateLivePullStreamTask(Models\CreateLivePullStreamTaskRequest $req) 创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到指定的目标地址。
 注意：
-1. 默认支持任务数上限20个，如有特殊需求，可通过提单到售后进行评估增加上限。
+1. 默认支持任务数上限200个，如有特殊需求，可通过提单到售后进行评估增加上限。
 2. 源流视频编码目前只支持: H264, H265。其他编码格式建议先进行转码处理。
 3. 源流音频编码目前只支持: AAC。其他编码格式建议先进行转码处理。
 4. 可在控制台开启过期自动清理，避免过期任务占用任务数额度。

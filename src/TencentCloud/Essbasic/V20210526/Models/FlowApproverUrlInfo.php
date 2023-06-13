@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 签署人签署链接信息
  *
- * @method string getSignUrl() 获取签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
- * @method void setSignUrl(string $SignUrl) 设置签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+ * @method string getSignUrl() 获取签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+ * @method void setSignUrl(string $SignUrl) 设置签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
  * @method string getApproverType() 获取签署人类型 PERSON-个人
  * @method void setApproverType(string $ApproverType) 设置签署人类型 PERSON-个人
  * @method string getName() 获取签署人姓名
  * @method void setName(string $Name) 设置签署人姓名
  * @method string getMobile() 获取签署人手机号
  * @method void setMobile(string $Mobile) 设置签署人手机号
- * @method string getLongUrl() 获取签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+ * @method string getLongUrl() 获取签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLongUrl(string $LongUrl) 设置签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+ * @method void setLongUrl(string $LongUrl) 设置签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverUrlInfo extends AbstractModel
 {
     /**
-     * @var string 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @var string 签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
      */
     public $SignUrl;
 
@@ -56,17 +56,17 @@ class FlowApproverUrlInfo extends AbstractModel
     public $Mobile;
 
     /**
-     * @var string 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @var string 签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LongUrl;
 
     /**
-     * @param string $SignUrl 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param string $SignUrl 签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
      * @param string $ApproverType 签署人类型 PERSON-个人
      * @param string $Name 签署人姓名
      * @param string $Mobile 签署人手机号
-     * @param string $LongUrl 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param string $LongUrl 签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

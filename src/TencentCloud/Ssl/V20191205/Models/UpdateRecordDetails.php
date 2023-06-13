@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) 设置部署资源类型
  * @method array getList() 获取部署资源详情列表
  * @method void setList(array $List) 设置部署资源详情列表
+ * @method integer getTotalCount() 获取该部署资源总数
+ * @method void setTotalCount(integer $TotalCount) 设置该部署资源总数
  */
 class UpdateRecordDetails extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UpdateRecordDetails extends AbstractModel
     public $List;
 
     /**
+     * @var integer 该部署资源总数
+     */
+    public $TotalCount;
+
+    /**
      * @param string $ResourceType 部署资源类型
      * @param array $List 部署资源详情列表
+     * @param integer $TotalCount 该部署资源总数
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class UpdateRecordDetails extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
     }
 }

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeployRecordId() 获取待部署的证书ID
  * @method void setDeployRecordId(string $DeployRecordId) 设置待部署的证书ID
+ * @method string getLimit() 获取每页数量，默认10。
+ * @method void setLimit(string $Limit) 设置每页数量，默认10。
+ * @method string getOffset() 获取分页偏移量，从0开始。
+ * @method void setOffset(string $Offset) 设置分页偏移量，从0开始。
  */
 class DescribeHostUpdateRecordDetailRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeHostUpdateRecordDetailRequest extends AbstractModel
     public $DeployRecordId;
 
     /**
+     * @var string 每页数量，默认10。
+     */
+    public $Limit;
+
+    /**
+     * @var string 分页偏移量，从0开始。
+     */
+    public $Offset;
+
+    /**
      * @param string $DeployRecordId 待部署的证书ID
+     * @param string $Limit 每页数量，默认10。
+     * @param string $Offset 分页偏移量，从0开始。
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeHostUpdateRecordDetailRequest extends AbstractModel
         }
         if (array_key_exists("DeployRecordId",$param) and $param["DeployRecordId"] !== null) {
             $this->DeployRecordId = $param["DeployRecordId"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

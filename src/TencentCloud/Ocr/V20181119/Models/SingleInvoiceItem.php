@@ -108,6 +108,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainTicket(TrainTicket $TrainTicket) 设置火车票
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MedicalInvoice getMedicalOutpatientInvoice() 获取医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMedicalOutpatientInvoice(MedicalInvoice $MedicalOutpatientInvoice) 设置医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method MedicalInvoice getMedicalHospitalizedInvoice() 获取医疗住院收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMedicalHospitalizedInvoice(MedicalInvoice $MedicalHospitalizedInvoice) 设置医疗住院收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SingleInvoiceItem extends AbstractModel
 {
@@ -244,6 +252,18 @@ class SingleInvoiceItem extends AbstractModel
     public $TrainTicket;
 
     /**
+     * @var MedicalInvoice 医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MedicalOutpatientInvoice;
+
+    /**
+     * @var MedicalInvoice 医疗住院收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MedicalHospitalizedInvoice;
+
+    /**
      * @param VatInvoiceInfo $VatSpecialInvoice 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VatInvoiceInfo $VatCommonInvoice 增值税普通发票
@@ -287,6 +307,10 @@ class SingleInvoiceItem extends AbstractModel
      * @param NonTaxIncomeBill $NonTaxIncomeElectronicBill 非税收入一般缴款书(电子)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TrainTicket $TrainTicket 火车票
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedicalInvoice $MedicalOutpatientInvoice 医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedicalInvoice $MedicalHospitalizedInvoice 医疗住院收费票据（电子）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -410,6 +434,16 @@ class SingleInvoiceItem extends AbstractModel
         if (array_key_exists("TrainTicket",$param) and $param["TrainTicket"] !== null) {
             $this->TrainTicket = new TrainTicket();
             $this->TrainTicket->deserialize($param["TrainTicket"]);
+        }
+
+        if (array_key_exists("MedicalOutpatientInvoice",$param) and $param["MedicalOutpatientInvoice"] !== null) {
+            $this->MedicalOutpatientInvoice = new MedicalInvoice();
+            $this->MedicalOutpatientInvoice->deserialize($param["MedicalOutpatientInvoice"]);
+        }
+
+        if (array_key_exists("MedicalHospitalizedInvoice",$param) and $param["MedicalHospitalizedInvoice"] !== null) {
+            $this->MedicalHospitalizedInvoice = new MedicalInvoice();
+            $this->MedicalHospitalizedInvoice->deserialize($param["MedicalHospitalizedInvoice"]);
         }
     }
 }

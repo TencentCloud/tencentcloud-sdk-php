@@ -14,30 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBErrlogs返回参数结构体
+ * DescribeRabbitMQVirtualHostList返回参数结构体
  *
- * @method integer getTotalCount() 获取查询到的日志数量，最大值为10000条。
- * @method void setTotalCount(integer $TotalCount) 设置查询到的日志数量，最大值为10000条。
- * @method array getDetails() 获取错误日志详细信息集合。
- * @method void setDetails(array $Details) 设置错误日志详细信息集合。
+ * @method integer getTotalCount() 获取集群列表数量
+ * @method void setTotalCount(integer $TotalCount) 设置集群列表数量
+ * @method array getVirtualHostList() 获取集群列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVirtualHostList(array $VirtualHostList) 设置集群列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBErrlogsResponse extends AbstractModel
+class DescribeRabbitMQVirtualHostListResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的日志数量，最大值为10000条。
+     * @var integer 集群列表数量
      */
     public $TotalCount;
 
     /**
-     * @var array 错误日志详细信息集合。
+     * @var array 集群列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Details;
+    public $VirtualHostList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class DescribeDBErrlogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询到的日志数量，最大值为10000条。
-     * @param array $Details 错误日志详细信息集合。
+     * @param integer $TotalCount 集群列表数量
+     * @param array $VirtualHostList 集群列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +70,12 @@ class DescribeDBErrlogsResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
-            $this->Details = [];
-            foreach ($param["Details"] as $key => $value){
-                $obj = new ErrLogDetail();
+        if (array_key_exists("VirtualHostList",$param) and $param["VirtualHostList"] !== null) {
+            $this->VirtualHostList = [];
+            foreach ($param["VirtualHostList"] as $key => $value){
+                $obj = new RabbitMQPrivateVirtualHost();
                 $obj->deserialize($value);
-                array_push($this->Details, $obj);
+                array_push($this->VirtualHostList, $obj);
             }
         }
 

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExcludePaths(array $ExcludePaths) 设置采集黑名单路径列表
  * @method string getUserDefineRule() 获取用户自定义采集规则，Json格式序列化的字符串
  * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义采集规则，Json格式序列化的字符串
+ * @method string getAdvancedConfig() 获取高级采集配置
+ * @method void setAdvancedConfig(string $AdvancedConfig) 设置高级采集配置
  */
 class CreateConfigRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateConfigRequest extends AbstractModel
     public $UserDefineRule;
 
     /**
+     * @var string 高级采集配置
+     */
+    public $AdvancedConfig;
+
+    /**
      * @param string $Name 采集配置名称
      * @param string $Output 采集配置所属日志主题ID即TopicId
      * @param string $Path 日志采集路径,包含文件名
@@ -80,6 +87,7 @@ class CreateConfigRequest extends AbstractModel
      * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
      * @param array $ExcludePaths 采集黑名单路径列表
      * @param string $UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
+     * @param string $AdvancedConfig 高级采集配置
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class CreateConfigRequest extends AbstractModel
 
         if (array_key_exists("UserDefineRule",$param) and $param["UserDefineRule"] !== null) {
             $this->UserDefineRule = $param["UserDefineRule"];
+        }
+
+        if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
+            $this->AdvancedConfig = $param["AdvancedConfig"];
         }
     }
 }

@@ -20,80 +20,80 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainList请求参数结构体
  *
- * @method integer getOffset() 获取-
- * @method void setOffset(integer $Offset) 设置-
- * @method integer getLimit() 获取-
- * @method void setLimit(integer $Limit) 设置-
- * @method integer getAssetBasicType() 获取-
- * @method void setAssetBasicType(integer $AssetBasicType) 设置-
- * @method array getFilter() 获取-
- * @method void setFilter(array $Filter) 设置-
- * @method string getOrder() 获取-
- * @method void setOrder(string $Order) 设置-
- * @method string getBy() 获取-
- * @method void setBy(string $By) 设置-
- * @method array getField() 获取-
- * @method void setField(array $Field) 设置-
- * @method integer getTimeRange() 获取-
- * @method void setTimeRange(integer $TimeRange) 设置-
- * @method integer getLogic() 获取-
- * @method void setLogic(integer $Logic) 设置-
- * @method string getGroupByField() 获取-
- * @method void setGroupByField(string $GroupByField) 设置-
+ * @method integer getOffset() 获取起始，从0开始(只支持32位)
+ * @method void setOffset(integer $Offset) 设置起始，从0开始(只支持32位)
+ * @method integer getLimit() 获取limit,最大值200(只支持32位)
+ * @method void setLimit(integer $Limit) 设置limit,最大值200(只支持32位)
+ * @method integer getAssetBasicType() 获取资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
+ * @method void setAssetBasicType(integer $AssetBasicType) 设置资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
+ * @method array getFilter() 获取过滤条件
+ * @method void setFilter(array $Filter) 设置过滤条件
+ * @method string getOrder() 获取排序
+ * @method void setOrder(string $Order) 设置排序
+ * @method string getBy() 获取排序字段
+ * @method void setBy(string $By) 设置排序字段
+ * @method array getField() 获取导出字段
+ * @method void setField(array $Field) 设置导出字段
+ * @method integer getTimeRange() 获取时间范围(只支持32位)
+ * @method void setTimeRange(integer $TimeRange) 设置时间范围(只支持32位)
+ * @method integer getLogic() 获取逻辑字段(只支持32位)
+ * @method void setLogic(integer $Logic) 设置逻辑字段(只支持32位)
+ * @method string getGroupByField() 获取聚合字段  
+ * @method void setGroupByField(string $GroupByField) 设置聚合字段  
  * @method string getTask() 获取-
  * @method void setTask(string $Task) 设置-
- * @method integer getRequestFrom() 获取-
- * @method void setRequestFrom(integer $RequestFrom) 设置-
+ * @method integer getRequestFrom() 获取0:cfw 1:vss 2.soc 3.waf 4.cwp
+ * @method void setRequestFrom(integer $RequestFrom) 设置0:cfw 1:vss 2.soc 3.waf 4.cwp
  */
 class DescribeDomainListRequest extends AbstractModel
 {
     /**
-     * @var integer -
+     * @var integer 起始，从0开始(只支持32位)
      */
     public $Offset;
 
     /**
-     * @var integer -
+     * @var integer limit,最大值200(只支持32位)
      */
     public $Limit;
 
     /**
-     * @var integer -
+     * @var integer 资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
      */
     public $AssetBasicType;
 
     /**
-     * @var array -
+     * @var array 过滤条件
      */
     public $Filter;
 
     /**
-     * @var string -
+     * @var string 排序
      */
     public $Order;
 
     /**
-     * @var string -
+     * @var string 排序字段
      */
     public $By;
 
     /**
-     * @var array -
+     * @var array 导出字段
      */
     public $Field;
 
     /**
-     * @var integer -
+     * @var integer 时间范围(只支持32位)
      */
     public $TimeRange;
 
     /**
-     * @var integer -
+     * @var integer 逻辑字段(只支持32位)
      */
     public $Logic;
 
     /**
-     * @var string -
+     * @var string 聚合字段  
      */
     public $GroupByField;
 
@@ -103,23 +103,23 @@ class DescribeDomainListRequest extends AbstractModel
     public $Task;
 
     /**
-     * @var integer -
+     * @var integer 0:cfw 1:vss 2.soc 3.waf 4.cwp
      */
     public $RequestFrom;
 
     /**
-     * @param integer $Offset -
-     * @param integer $Limit -
-     * @param integer $AssetBasicType -
-     * @param array $Filter -
-     * @param string $Order -
-     * @param string $By -
-     * @param array $Field -
-     * @param integer $TimeRange -
-     * @param integer $Logic -
-     * @param string $GroupByField -
+     * @param integer $Offset 起始，从0开始(只支持32位)
+     * @param integer $Limit limit,最大值200(只支持32位)
+     * @param integer $AssetBasicType 资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
+     * @param array $Filter 过滤条件
+     * @param string $Order 排序
+     * @param string $By 排序字段
+     * @param array $Field 导出字段
+     * @param integer $TimeRange 时间范围(只支持32位)
+     * @param integer $Logic 逻辑字段(只支持32位)
+     * @param string $GroupByField 聚合字段  
      * @param string $Task -
-     * @param integer $RequestFrom -
+     * @param integer $RequestFrom 0:cfw 1:vss 2.soc 3.waf 4.cwp
      */
     function __construct()
     {

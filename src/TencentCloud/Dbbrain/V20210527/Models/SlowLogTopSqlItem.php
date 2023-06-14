@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLockTimeAvg(float $LockTimeAvg) 设置平均锁等待时间，单位秒
  * @method float getRowsExaminedAvg() 获取平均扫描行数
  * @method void setRowsExaminedAvg(float $RowsExaminedAvg) 设置平均扫描行数
- * @method string getMd5() 获取SOL模板的MD5值
- * @method void setMd5(string $Md5) 设置SOL模板的MD5值
+ * @method string getMd5() 获取SQL模板的MD5值
+ * @method void setMd5(string $Md5) 设置SQL模板的MD5值
  */
 class SlowLogTopSqlItem extends AbstractModel
 {
@@ -194,7 +194,7 @@ class SlowLogTopSqlItem extends AbstractModel
     public $RowsExaminedAvg;
 
     /**
-     * @var string SOL模板的MD5值
+     * @var string SQL模板的MD5值
      */
     public $Md5;
 
@@ -223,7 +223,7 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param float $RowsSentAvg 平均返回行数
      * @param float $LockTimeAvg 平均锁等待时间，单位秒
      * @param float $RowsExaminedAvg 平均扫描行数
-     * @param string $Md5 SOL模板的MD5值
+     * @param string $Md5 SQL模板的MD5值
      */
     function __construct()
     {

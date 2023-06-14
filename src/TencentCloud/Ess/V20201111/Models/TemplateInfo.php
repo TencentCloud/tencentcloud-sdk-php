@@ -72,6 +72,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublished(boolean $Published) 设置模板是否已发布。true-已发布；false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTemplateSeals() 获取模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateSeals(array $TemplateSeals) 设置模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSeals() 获取模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSeals(array $Seals) 设置模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -182,6 +190,19 @@ class TemplateInfo extends AbstractModel
     public $Published;
 
     /**
+     * @var array 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateSeals;
+
+    /**
+     * @var array 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $Seals;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
@@ -207,6 +228,10 @@ class TemplateInfo extends AbstractModel
      * @param string $TemplateVersion 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Published 模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TemplateSeals 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Seals 模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -321,6 +346,24 @@ class TemplateInfo extends AbstractModel
 
         if (array_key_exists("Published",$param) and $param["Published"] !== null) {
             $this->Published = $param["Published"];
+        }
+
+        if (array_key_exists("TemplateSeals",$param) and $param["TemplateSeals"] !== null) {
+            $this->TemplateSeals = [];
+            foreach ($param["TemplateSeals"] as $key => $value){
+                $obj = new SealInfo();
+                $obj->deserialize($value);
+                array_push($this->TemplateSeals, $obj);
+            }
+        }
+
+        if (array_key_exists("Seals",$param) and $param["Seals"] !== null) {
+            $this->Seals = [];
+            foreach ($param["Seals"] as $key => $value){
+                $obj = new SealInfo();
+                $obj->deserialize($value);
+                array_push($this->Seals, $obj);
+            }
         }
     }
 }

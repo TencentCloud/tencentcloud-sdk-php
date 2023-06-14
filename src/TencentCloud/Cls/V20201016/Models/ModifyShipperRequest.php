@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShipperName(string $ShipperName) 设置投递规则的名字
  * @method integer getInterval() 获取投递的时间间隔，单位 秒，默认300，范围 300-900
  * @method void setInterval(integer $Interval) 设置投递的时间间隔，单位 秒，默认300，范围 300-900
- * @method integer getMaxSize() 获取投递的文件的最大值，单位 MB，默认256，范围 100-256
- * @method void setMaxSize(integer $MaxSize) 设置投递的文件的最大值，单位 MB，默认256，范围 100-256
+ * @method integer getMaxSize() 获取投递的文件的最大值，单位 MB，默认256，范围 5-256
+ * @method void setMaxSize(integer $MaxSize) 设置投递的文件的最大值，单位 MB，默认256，范围 5-256
  * @method array getFilterRules() 获取投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
  * @method void setFilterRules(array $FilterRules) 设置投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
  * @method string getPartition() 获取投递日志的分区规则，支持strftime的时间格式表示
@@ -78,7 +78,7 @@ class ModifyShipperRequest extends AbstractModel
     public $Interval;
 
     /**
-     * @var integer 投递的文件的最大值，单位 MB，默认256，范围 100-256
+     * @var integer 投递的文件的最大值，单位 MB，默认256，范围 5-256
      */
     public $MaxSize;
 
@@ -114,7 +114,7 @@ class ModifyShipperRequest extends AbstractModel
      * @param boolean $Status 投递规则的开关状态
      * @param string $ShipperName 投递规则的名字
      * @param integer $Interval 投递的时间间隔，单位 秒，默认300，范围 300-900
-     * @param integer $MaxSize 投递的文件的最大值，单位 MB，默认256，范围 100-256
+     * @param integer $MaxSize 投递的文件的最大值，单位 MB，默认256，范围 5-256
      * @param array $FilterRules 投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
      * @param string $Partition 投递日志的分区规则，支持strftime的时间格式表示
      * @param CompressInfo $Compress 投递日志的压缩配置

@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirmwareUpdateTime(integer $FirmwareUpdateTime) 设置ota最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateUserId() 获取创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateUserId(integer $CreateUserId) 设置创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceInfo extends AbstractModel
 {
@@ -219,6 +223,12 @@ class DeviceInfo extends AbstractModel
     public $FirmwareUpdateTime;
 
     /**
+     * @var integer 创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateUserId;
+
+    /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
      * @param integer $LoginTime 设备登录时间
@@ -251,6 +261,8 @@ class DeviceInfo extends AbstractModel
      * @param string $ClientIP MQTT客户端IP地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FirmwareUpdateTime ota最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateUserId 创建者 Uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -370,6 +382,10 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("FirmwareUpdateTime",$param) and $param["FirmwareUpdateTime"] !== null) {
             $this->FirmwareUpdateTime = $param["FirmwareUpdateTime"];
+        }
+
+        if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
+            $this->CreateUserId = $param["CreateUserId"];
         }
     }
 }

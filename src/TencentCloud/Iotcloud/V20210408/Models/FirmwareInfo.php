@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFwType() 获取固件类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFwType(string $FwType) 设置固件类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateUserId() 获取创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateUserId(integer $CreateUserId) 设置创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FirmwareInfo extends AbstractModel
 {
@@ -85,6 +93,18 @@ class FirmwareInfo extends AbstractModel
     public $ProductId;
 
     /**
+     * @var string 固件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FwType;
+
+    /**
+     * @var integer 创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateUserId;
+
+    /**
      * @param string $Version 固件版本
      * @param string $Md5sum 固件MD5值
      * @param integer $CreateTime 固件创建时间
@@ -95,6 +115,10 @@ class FirmwareInfo extends AbstractModel
      * @param string $Description 固件描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductId 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FwType 固件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateUserId 创建者 Uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +160,14 @@ class FirmwareInfo extends AbstractModel
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
+        }
+
+        if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
+            $this->CreateUserId = $param["CreateUserId"];
         }
     }
 }

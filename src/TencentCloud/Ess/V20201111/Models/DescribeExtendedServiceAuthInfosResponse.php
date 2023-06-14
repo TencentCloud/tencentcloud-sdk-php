@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Partners\V20180321\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAgentSelfPayDeals返回参数结构体
+ * DescribeExtendedServiceAuthInfos返回参数结构体
  *
- * @method array getAgentPayDealSet() 获取订单数组
- * @method void setAgentPayDealSet(array $AgentPayDealSet) 设置订单数组
- * @method integer getTotalCount() 获取符合条件的订单总数量
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的订单总数量
+ * @method array getAuthInfoList() 获取授权服务信息列表
+ * @method void setAuthInfoList(array $AuthInfoList) 设置授权服务信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAgentSelfPayDealsResponse extends AbstractModel
+class DescribeExtendedServiceAuthInfosResponse extends AbstractModel
 {
     /**
-     * @var array 订单数组
+     * @var array 授权服务信息列表
      */
-    public $AgentPayDealSet;
-
-    /**
-     * @var integer 符合条件的订单总数量
-     */
-    public $TotalCount;
+    public $AuthInfoList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeAgentSelfPayDealsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AgentPayDealSet 订单数组
-     * @param integer $TotalCount 符合条件的订单总数量
+     * @param array $AuthInfoList 授权服务信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,13 @@ class DescribeAgentSelfPayDealsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AgentPayDealSet",$param) and $param["AgentPayDealSet"] !== null) {
-            $this->AgentPayDealSet = [];
-            foreach ($param["AgentPayDealSet"] as $key => $value){
-                $obj = new AgentDealElem();
+        if (array_key_exists("AuthInfoList",$param) and $param["AuthInfoList"] !== null) {
+            $this->AuthInfoList = [];
+            foreach ($param["AuthInfoList"] as $key => $value){
+                $obj = new ExtendAuthInfo();
                 $obj->deserialize($value);
-                array_push($this->AgentPayDealSet, $obj);
+                array_push($this->AuthInfoList, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

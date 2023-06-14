@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Partners\V20180321\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClientBalance请求参数结构体
+ * RestartLivePullStreamTask请求参数结构体
  *
- * @method string getClientUin() 获取客户(代客)账号ID
- * @method void setClientUin(string $ClientUin) 设置客户(代客)账号ID
+ * @method string getTaskId() 获取任务 Id。
+ * @method void setTaskId(string $TaskId) 设置任务 Id。
+ * @method string getOperator() 获取操作人备注名称。
+ * @method void setOperator(string $Operator) 设置操作人备注名称。
  */
-class DescribeClientBalanceRequest extends AbstractModel
+class RestartLivePullStreamTaskRequest extends AbstractModel
 {
     /**
-     * @var string 客户(代客)账号ID
+     * @var string 任务 Id。
      */
-    public $ClientUin;
+    public $TaskId;
 
     /**
-     * @param string $ClientUin 客户(代客)账号ID
+     * @var string 操作人备注名称。
+     */
+    public $Operator;
+
+    /**
+     * @param string $TaskId 任务 Id。
+     * @param string $Operator 操作人备注名称。
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeClientBalanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

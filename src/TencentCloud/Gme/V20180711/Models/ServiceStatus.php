@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTimeAsr(StatusInfo $RealTimeAsr) 设置语音转文本服务开关状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method StatusInfo getTextTranslate() 获取文本翻译服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTextTranslate(StatusInfo $TextTranslate) 设置文本翻译服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceStatus extends AbstractModel
 {
@@ -74,6 +78,12 @@ class ServiceStatus extends AbstractModel
     public $RealTimeAsr;
 
     /**
+     * @var StatusInfo 文本翻译服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TextTranslate;
+
+    /**
      * @param StatusInfo $RealTimeSpeech 实时语音服务开关状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusInfo $VoiceMessage 语音消息服务开关状态
@@ -83,6 +93,8 @@ class ServiceStatus extends AbstractModel
      * @param StatusInfo $Live 语音录制服务开关状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusInfo $RealTimeAsr 语音转文本服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusInfo $TextTranslate 文本翻译服务开关状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -121,6 +133,11 @@ class ServiceStatus extends AbstractModel
         if (array_key_exists("RealTimeAsr",$param) and $param["RealTimeAsr"] !== null) {
             $this->RealTimeAsr = new StatusInfo();
             $this->RealTimeAsr->deserialize($param["RealTimeAsr"]);
+        }
+
+        if (array_key_exists("TextTranslate",$param) and $param["TextTranslate"] !== null) {
+            $this->TextTranslate = new StatusInfo();
+            $this->TextTranslate->deserialize($param["TextTranslate"]);
         }
     }
 }

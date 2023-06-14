@@ -115,6 +115,7 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
      * @var string 印章图片的base64
 注：已废弃
 请先通过UploadFiles接口上传文件，获取 FileId
+     * @deprecated
      */
     public $SealImage;
 

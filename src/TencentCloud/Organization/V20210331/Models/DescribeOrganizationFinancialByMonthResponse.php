@@ -14,30 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Partners\V20180321\Models;
+namespace TencentCloud\Organization\V20210331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClientBalance返回参数结构体
+ * DescribeOrganizationFinancialByMonth返回参数结构体
  *
- * @method integer getBalance() 获取账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
- * @method void setBalance(integer $Balance) 设置账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
- * @method integer getCash() 获取账户现金余额，单位分
- * @method void setCash(integer $Cash) 设置账户现金余额，单位分
+ * @method array getItems() 获取产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItems(array $Items) 设置产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeClientBalanceResponse extends AbstractModel
+class DescribeOrganizationFinancialByMonthResponse extends AbstractModel
 {
     /**
-     * @var integer 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
+     * @var array 产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Balance;
-
-    /**
-     * @var integer 账户现金余额，单位分
-     */
-    public $Cash;
+    public $Items;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +41,8 @@ class DescribeClientBalanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
-     * @param integer $Cash 账户现金余额，单位分
+     * @param array $Items 产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +58,13 @@ class DescribeClientBalanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Balance",$param) and $param["Balance"] !== null) {
-            $this->Balance = $param["Balance"];
-        }
-
-        if (array_key_exists("Cash",$param) and $param["Cash"] !== null) {
-            $this->Cash = $param["Cash"];
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new OrgFinancialByMonth();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

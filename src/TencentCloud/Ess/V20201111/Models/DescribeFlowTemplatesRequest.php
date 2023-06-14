@@ -32,13 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询偏移位置，默认0
  * @method integer getLimit() 获取查询个数，默认20，最大200
  * @method void setLimit(integer $Limit) 设置查询个数，默认20，最大200
- * @method string getApplicationId() 获取这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+ * @method string getApplicationId() 获取ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
- * @method void setApplicationId(string $ApplicationId) 设置这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+ * @method void setApplicationId(string $ApplicationId) 设置ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
  * @method boolean getIsChannel() 获取默认为false，查询SaaS模板库列表；
 为true，查询第三方应用集成平台企业模板库管理列表
@@ -82,9 +78,7 @@ class DescribeFlowTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+     * @var string ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
      */
     public $ApplicationId;
@@ -92,6 +86,7 @@ ApplicationId为空，查询所有应用下的模板列表
     /**
      * @var boolean 默认为false，查询SaaS模板库列表；
 为true，查询第三方应用集成平台企业模板库管理列表
+     * @deprecated
      */
     public $IsChannel;
 
@@ -114,9 +109,7 @@ ApplicationId为空，查询所有应用下的模板列表
      * @param array $Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
      * @param integer $Offset 查询偏移位置，默认0
      * @param integer $Limit 查询个数，默认20，最大200
-     * @param string $ApplicationId 这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+     * @param string $ApplicationId ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
      * @param boolean $IsChannel 默认为false，查询SaaS模板库列表；
 为true，查询第三方应用集成平台企业模板库管理列表

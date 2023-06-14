@@ -34,6 +34,9 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DeleteOrganizationNodesResponse DeleteOrganizationNodes(Models\DeleteOrganizationNodesRequest $req) 批量删除企业组织节点
  * @method Models\DescribeOrganizationResponse DescribeOrganization(Models\DescribeOrganizationRequest $req) 获取企业组织信息
  * @method Models\DescribeOrganizationAuthNodeResponse DescribeOrganizationAuthNode(Models\DescribeOrganizationAuthNodeRequest $req) 获取已设置管理员的互信主体关系列表
+ * @method Models\DescribeOrganizationFinancialByMemberResponse DescribeOrganizationFinancialByMember(Models\DescribeOrganizationFinancialByMemberRequest $req) 以成员维度获取组织财务信息
+ * @method Models\DescribeOrganizationFinancialByMonthResponse DescribeOrganizationFinancialByMonth(Models\DescribeOrganizationFinancialByMonthRequest $req) 以月维度获取组织财务信息趋势
+ * @method Models\DescribeOrganizationFinancialByProductResponse DescribeOrganizationFinancialByProduct(Models\DescribeOrganizationFinancialByProductRequest $req) 以产品维度获取组织财务信息
  * @method Models\DescribeOrganizationMemberAuthAccountsResponse DescribeOrganizationMemberAuthAccounts(Models\DescribeOrganizationMemberAuthAccountsRequest $req) 获取组织成员被绑定授权关系的子账号列表
  * @method Models\DescribeOrganizationMemberAuthIdentitiesResponse DescribeOrganizationMemberAuthIdentities(Models\DescribeOrganizationMemberAuthIdentitiesRequest $req) 获取组织成员可被管理的身份列表
  * @method Models\DescribeOrganizationMemberEmailBindResponse DescribeOrganizationMemberEmailBind(Models\DescribeOrganizationMemberEmailBindRequest $req) 查询成员邮箱绑定详细信息

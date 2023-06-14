@@ -150,9 +150,6 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ModifyAMQPQueueResponse ModifyAMQPQueue(Models\ModifyAMQPQueueRequest $req) 产品下线了，对应的接口也要下线。
 
 更新Amqp队列
- * @method Models\ModifyAMQPVHostResponse ModifyAMQPVHost(Models\ModifyAMQPVHostRequest $req) 产品下线了，对应的接口也要下线。
-
-更新Vhost
  * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 更新集群信息
  * @method Models\ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(Models\ModifyCmqQueueAttributeRequest $req) 修改cmq队列属性
  * @method Models\ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(Models\ModifyCmqSubscriptionAttributeRequest $req) 修改cmq订阅属性

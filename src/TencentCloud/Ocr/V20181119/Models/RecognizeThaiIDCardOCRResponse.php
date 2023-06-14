@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(string $Address) 设置地址
  * @method string getBirthday() 获取出生日期
  * @method void setBirthday(string $Birthday) 设置出生日期
- * @method string getIssueDate() 获取首次领用日期
- * @method void setIssueDate(string $IssueDate) 设置首次领用日期
- * @method string getExpirationDate() 获取签发日期
- * @method void setExpirationDate(string $ExpirationDate) 设置签发日期
+ * @method string getIssueDate() 获取签发日期
+ * @method void setIssueDate(string $IssueDate) 设置签发日期
+ * @method string getExpirationDate() 获取到期日期
+ * @method void setExpirationDate(string $ExpirationDate) 设置到期日期
  * @method string getEnLastName() 获取英文姓名
  * @method void setEnLastName(string $EnLastName) 设置英文姓名
  * @method string getPortraitImage() 获取证件人像照片抠取
@@ -69,12 +69,12 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $Birthday;
 
     /**
-     * @var string 首次领用日期
+     * @var string 签发日期
      */
     public $IssueDate;
 
     /**
-     * @var string 签发日期
+     * @var string 到期日期
      */
     public $ExpirationDate;
 
@@ -99,8 +99,8 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
      * @param string $EnFirstName 英文姓名
      * @param string $Address 地址
      * @param string $Birthday 出生日期
-     * @param string $IssueDate 首次领用日期
-     * @param string $ExpirationDate 签发日期
+     * @param string $IssueDate 签发日期
+     * @param string $ExpirationDate 到期日期
      * @param string $EnLastName 英文姓名
      * @param string $PortraitImage 证件人像照片抠取
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

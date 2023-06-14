@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApprovingNodeId(string $ApprovingNodeId) 设置正在审批的节点id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifyTime() 获取更新时间，时间格式：2021-12-12 10:12:10	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyTime(string $ModifyTime) 设置更新时间，时间格式：2021-12-12 10:12:10	
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -124,6 +128,12 @@ class GetBpaasApproveDetailResponse extends AbstractModel
     public $ApprovingNodeId;
 
     /**
+     * @var string 更新时间，时间格式：2021-12-12 10:12:10	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -146,6 +156,8 @@ class GetBpaasApproveDetailResponse extends AbstractModel
      * @param array $Nodes 节点信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApprovingNodeId 正在审批的节点id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModifyTime 更新时间，时间格式：2021-12-12 10:12:10	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -214,6 +226,10 @@ class GetBpaasApproveDetailResponse extends AbstractModel
 
         if (array_key_exists("ApprovingNodeId",$param) and $param["ApprovingNodeId"] !== null) {
             $this->ApprovingNodeId = $param["ApprovingNodeId"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -96,6 +96,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParallelNodes(string $ParallelNodes) 设置并行节点 3-4
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRejectedCloudFunctionMsg() 获取scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRejectedCloudFunctionMsg(string $RejectedCloudFunctionMsg) 设置scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrevNode() 获取上一个节点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrevNode(string $PrevNode) 设置上一个节点
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatusNode extends AbstractModel
 {
@@ -222,6 +230,18 @@ class StatusNode extends AbstractModel
     public $ParallelNodes;
 
     /**
+     * @var string scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RejectedCloudFunctionMsg;
+
+    /**
+     * @var string 上一个节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrevNode;
+
+    /**
      * @param string $NodeId 节点id
      * @param string $NodeName 节点名称
      * @param integer $NodeType 节点类型 1:审批节点 2:执行节点 3:条件节点
@@ -259,6 +279,10 @@ class StatusNode extends AbstractModel
      * @param string $ExternalUrl 外部审批Url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParallelNodes 并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RejectedCloudFunctionMsg scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PrevNode 上一个节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -358,6 +382,14 @@ class StatusNode extends AbstractModel
 
         if (array_key_exists("ParallelNodes",$param) and $param["ParallelNodes"] !== null) {
             $this->ParallelNodes = $param["ParallelNodes"];
+        }
+
+        if (array_key_exists("RejectedCloudFunctionMsg",$param) and $param["RejectedCloudFunctionMsg"] !== null) {
+            $this->RejectedCloudFunctionMsg = $param["RejectedCloudFunctionMsg"];
+        }
+
+        if (array_key_exists("PrevNode",$param) and $param["PrevNode"] !== null) {
+            $this->PrevNode = $param["PrevNode"];
         }
     }
 }

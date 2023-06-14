@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateIntegrationEmployees请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method array getEmployees() 获取员工信息
- * @method void setEmployees(array $Employees) 设置员工信息
+ * @method UserInfo getOperator() 获取操作人信息，userId必填
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
+ * @method array getEmployees() 获取员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
+ * @method void setEmployees(array $Employees) 设置员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
  */
 class UpdateIntegrationEmployeesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 操作人信息，userId必填
      */
     public $Operator;
 
     /**
-     * @var array 员工信息
+     * @var array 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
      */
     public $Employees;
 
@@ -45,8 +45,8 @@ class UpdateIntegrationEmployeesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 操作人信息
-     * @param array $Employees 员工信息
+     * @param UserInfo $Operator 操作人信息，userId必填
+     * @param array $Employees 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
      */
     function __construct()

@@ -33,7 +33,7 @@ use TencentCloud\Ssa\V20180608\Models as Models;
  * @method Models\DescribeComplianceDetailResponse DescribeComplianceDetail(Models\DescribeComplianceDetailRequest $req) 合规管理检查项详情
  * @method Models\DescribeComplianceListResponse DescribeComplianceList(Models\DescribeComplianceListRequest $req) 合规管理总览页检查项列表
  * @method Models\DescribeConfigListResponse DescribeConfigList(Models\DescribeConfigListRequest $req) 云配置检查项总览页检查项列表
- * @method Models\DescribeDomainListResponse DescribeDomainList(Models\DescribeDomainListRequest $req) 域名列表信息啊
+ * @method Models\DescribeDomainListResponse DescribeDomainList(Models\DescribeDomainListRequest $req) 域名列表信息
  * @method Models\DescribeEventDetailResponse DescribeEventDetail(Models\DescribeEventDetailRequest $req) 获取安全事件详情
  * @method Models\DescribeLeakDetectionListResponse DescribeLeakDetectionList(Models\DescribeLeakDetectionListRequest $req) 获取泄露列表
  * @method Models\DescribeMappingResultsResponse DescribeMappingResults(Models\DescribeMappingResultsRequest $req) 获取测绘列表

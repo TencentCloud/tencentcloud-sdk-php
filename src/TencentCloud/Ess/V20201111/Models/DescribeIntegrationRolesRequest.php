@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrationRoles请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
+ * @method UserInfo getOperator() 获取操作人信息，UserId必填
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息，UserId必填
  * @method integer getLimit() 获取返回最大数量，最大为200
  * @method void setLimit(integer $Limit) 设置返回最大数量，最大为200
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -40,7 +40,7 @@ Key:"IsGroupRole"，Values:["0"],查询非集团角色，Values:["1"]表示查�
 class DescribeIntegrationRolesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 操作人信息，UserId必填
      */
     public $Operator;
 
@@ -68,7 +68,7 @@ Key:"IsGroupRole"，Values:["0"],查询非集团角色，Values:["1"]表示查�
     public $Offset;
 
     /**
-     * @param UserInfo $Operator 操作人信息
+     * @param UserInfo $Operator 操作人信息，UserId必填
      * @param integer $Limit 返回最大数量，最大为200
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param array $Filters 查询的关键字段:

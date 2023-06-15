@@ -33,7 +33,8 @@ use TencentCloud\Common\AbstractModel;
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li>
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -47,7 +48,8 @@ use TencentCloud\Common\AbstractModel;
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li>
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -122,6 +124,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) 设置提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() 获取提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask) 设置提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ReviewAudioVideoTask getReviewAudioVideoTask() 获取音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) 设置音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
@@ -153,7 +159,8 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li>
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
      */
     public $TaskType;
 
@@ -271,6 +278,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $ExtractTraceWatermarkTask;
 
     /**
+     * @var ExtractCopyRightWatermarkTask 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtractCopyRightWatermarkTask;
+
+    /**
      * @var ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -307,7 +320,8 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li>
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -344,6 +358,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param RebuildMediaTask $RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtractCopyRightWatermarkTask $ExtractCopyRightWatermarkTask 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReviewAudioVideoTask $ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -459,6 +475,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("ExtractTraceWatermarkTask",$param) and $param["ExtractTraceWatermarkTask"] !== null) {
             $this->ExtractTraceWatermarkTask = new ExtractTraceWatermarkTask();
             $this->ExtractTraceWatermarkTask->deserialize($param["ExtractTraceWatermarkTask"]);
+        }
+
+        if (array_key_exists("ExtractCopyRightWatermarkTask",$param) and $param["ExtractCopyRightWatermarkTask"] !== null) {
+            $this->ExtractCopyRightWatermarkTask = new ExtractCopyRightWatermarkTask();
+            $this->ExtractCopyRightWatermarkTask->deserialize($param["ExtractCopyRightWatermarkTask"]);
         }
 
         if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {

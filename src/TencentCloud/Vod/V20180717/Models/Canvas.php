@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
 <li>Black：黑色背景</li>
 <li>White：白色背景</li>
 默认值：Black。
- * @method integer getWidth() 获取画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+ * @method integer getWidth() 获取画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
- * @method void setWidth(integer $Width) 设置画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+ * @method void setWidth(integer $Width) 设置画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
- * @method integer getHeight() 获取画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+ * @method integer getHeight() 获取画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
- * @method void setHeight(integer $Height) 设置画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+ * @method void setHeight(integer $Height) 设置画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
  */
 class Canvas extends AbstractModel
@@ -48,13 +48,13 @@ class Canvas extends AbstractModel
     public $Color;
 
     /**
-     * @var integer 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+     * @var integer 画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
      */
     public $Width;
 
     /**
-     * @var integer 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+     * @var integer 画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
      */
     public $Height;
@@ -64,9 +64,9 @@ class Canvas extends AbstractModel
 <li>Black：黑色背景</li>
 <li>White：白色背景</li>
 默认值：Black。
-     * @param integer $Width 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+     * @param integer $Width 画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
-     * @param integer $Height 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+     * @param integer $Height 画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
      */
     function __construct()

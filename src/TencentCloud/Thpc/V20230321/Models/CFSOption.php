@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
 <li>TURBO。
  * @method string getStorageType() 获取文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
  * @method void setStorageType(string $StorageType) 设置文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+ * @method string getMountOption() 获取文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr
+ * @method void setMountOption(string $MountOption) 设置文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr
  */
 class CFSOption extends AbstractModel
 {
@@ -61,6 +71,15 @@ class CFSOption extends AbstractModel
     public $StorageType;
 
     /**
+     * @var string 文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr
+     */
+    public $MountOption;
+
+    /**
      * @param string $LocalPath 文件系统本地挂载路径。
      * @param string $RemotePath 文件系统远程挂载ip及路径。
      * @param string $Protocol 文件系统协议类型，默认值NFS 3.0。
@@ -68,6 +87,11 @@ class CFSOption extends AbstractModel
 <li>NFS 4.0。
 <li>TURBO。
      * @param string $StorageType 文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+     * @param string $MountOption 文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr
      */
     function __construct()
     {
@@ -96,6 +120,10 @@ class CFSOption extends AbstractModel
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("MountOption",$param) and $param["MountOption"] !== null) {
+            $this->MountOption = $param["MountOption"];
         }
     }
 }

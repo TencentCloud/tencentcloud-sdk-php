@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自动挂载并初始化该数据盘。
  *
- * @method string getInstanceId() 获取待挂载的实例ID。指定的实例必须处于“运行中”状态。
- * @method void setInstanceId(string $InstanceId) 设置待挂载的实例ID。指定的实例必须处于“运行中”状态。
+ * @method string getInstanceId() 获取待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
+ * @method void setInstanceId(string $InstanceId) 设置待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
  * @method string getMountPoint() 获取实例内的挂载点。仅Linux操作系统的实例可传入该参数, 不传则默认挂载在“/data/disk”路径下。
  * @method void setMountPoint(string $MountPoint) 设置实例内的挂载点。仅Linux操作系统的实例可传入该参数, 不传则默认挂载在“/data/disk”路径下。
  * @method string getFileSystemType() 获取文件系统类型。取值: “ext4”、“xfs”。仅Linux操作系统的实例可传入该参数, 不传则默认为“ext4”。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AutoMountConfiguration extends AbstractModel
 {
     /**
-     * @var string 待挂载的实例ID。指定的实例必须处于“运行中”状态。
+     * @var string 待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class AutoMountConfiguration extends AbstractModel
     public $FileSystemType;
 
     /**
-     * @param string $InstanceId 待挂载的实例ID。指定的实例必须处于“运行中”状态。
+     * @param string $InstanceId 待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
      * @param string $MountPoint 实例内的挂载点。仅Linux操作系统的实例可传入该参数, 不传则默认挂载在“/data/disk”路径下。
      * @param string $FileSystemType 文件系统类型。取值: “ext4”、“xfs”。仅Linux操作系统的实例可传入该参数, 不传则默认为“ext4”。
      */

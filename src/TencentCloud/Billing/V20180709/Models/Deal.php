@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOrderId() 获取订单号
  * @method void setOrderId(string $OrderId) 设置订单号
- * @method integer getStatus() 获取订单状态
- * @method void setStatus(integer $Status) 设置订单状态
+ * @method integer getStatus() 获取订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
+ * @method void setStatus(integer $Status) 设置订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
  * @method string getPayer() 获取支付者
  * @method void setPayer(string $Payer) 设置支付者
  * @method string getCreateTime() 获取创建时间
@@ -119,7 +119,7 @@ class Deal extends AbstractModel
     public $OrderId;
 
     /**
-     * @var integer 订单状态
+     * @var integer 订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
      */
     public $Status;
 
@@ -264,7 +264,7 @@ postMoveIn 按量计费迁入资源
 
     /**
      * @param string $OrderId 订单号
-     * @param integer $Status 订单状态
+     * @param integer $Status 订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
      * @param string $Payer 支付者
      * @param string $CreateTime 创建时间
      * @param string $Creator 创建人

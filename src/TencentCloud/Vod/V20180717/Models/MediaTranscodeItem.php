@@ -46,10 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
  * @method string getDigitalWatermarkType() 获取数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
  * @method void setDigitalWatermarkType(string $DigitalWatermarkType) 设置数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
+ * @method string getCopyRightWatermarkText() 获取版权信息。
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置版权信息。
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -112,9 +116,15 @@ class MediaTranscodeItem extends AbstractModel
     /**
      * @var string 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
      */
     public $DigitalWatermarkType;
+
+    /**
+     * @var string 版权信息。
+     */
+    public $CopyRightWatermarkText;
 
     /**
      * @param string $Url 转码后的视频文件地址。
@@ -131,7 +141,9 @@ class MediaTranscodeItem extends AbstractModel
      * @param array $AudioStreamSet 音频流信息。
      * @param string $DigitalWatermarkType 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
+     * @param string $CopyRightWatermarkText 版权信息。
      */
     function __construct()
     {
@@ -202,6 +214,10 @@ class MediaTranscodeItem extends AbstractModel
 
         if (array_key_exists("DigitalWatermarkType",$param) and $param["DigitalWatermarkType"] !== null) {
             $this->DigitalWatermarkType = $param["DigitalWatermarkType"];
+        }
+
+        if (array_key_exists("CopyRightWatermarkText",$param) and $param["CopyRightWatermarkText"] !== null) {
+            $this->CopyRightWatermarkText = $param["CopyRightWatermarkText"];
         }
     }
 }

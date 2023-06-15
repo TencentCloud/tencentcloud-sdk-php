@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取操作人信息，userId必填
  * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
- * @method array getEmployees() 获取待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持
- * @method void setEmployees(array $Employees) 设置待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持
+ * @method array getEmployees() 获取待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+ * @method void setEmployees(array $Employees) 设置待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
@@ -35,7 +37,8 @@ class CreateIntegrationEmployeesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var array 待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持
+     * @var array 待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
      */
     public $Employees;
 
@@ -46,7 +49,8 @@ class CreateIntegrationEmployeesRequest extends AbstractModel
 
     /**
      * @param UserInfo $Operator 操作人信息，userId必填
-     * @param array $Employees 待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持
+     * @param array $Employees 待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()

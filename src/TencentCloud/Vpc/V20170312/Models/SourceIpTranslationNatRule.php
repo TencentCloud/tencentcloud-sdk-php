@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * NAT的SNAT规则
  *
- * @method string getResourceId() 获取资源ID
- * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method string getResourceType() 获取资源类型，目前包含SUBNET、NETWORKINTERFACE
+ * @method string getResourceId() 获取资源ID，如果ResourceType为USERDEFINED，可以为空
+ * @method void setResourceId(string $ResourceId) 设置资源ID，如果ResourceType为USERDEFINED，可以为空
+ * @method string getResourceType() 获取资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceType(string $ResourceType) 设置资源类型，目前包含SUBNET、NETWORKINTERFACE
+ * @method void setResourceType(string $ResourceType) 设置资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateIpAddress() 获取源IP/网段
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置源IP/网段
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class SourceIpTranslationNatRule extends AbstractModel
 {
     /**
-     * @var string 资源ID
+     * @var string 资源ID，如果ResourceType为USERDEFINED，可以为空
      */
     public $ResourceId;
 
     /**
-     * @var string 资源类型，目前包含SUBNET、NETWORKINTERFACE
+     * @var string 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
@@ -99,8 +99,8 @@ class SourceIpTranslationNatRule extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @param string $ResourceId 资源ID
-     * @param string $ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE
+     * @param string $ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空
+     * @param string $ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIpAddress 源IP/网段
      * @param array $PublicIpAddresses 弹性IP地址池

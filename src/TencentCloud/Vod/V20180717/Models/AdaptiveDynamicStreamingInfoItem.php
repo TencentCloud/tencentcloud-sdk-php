@@ -42,12 +42,16 @@ use TencentCloud\Common\AbstractModel;
 <li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
  * @method string getDigitalWatermarkType() 获取数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
  * @method void setDigitalWatermarkType(string $DigitalWatermarkType) 设置数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
  * @method array getSubStreamSet() 获取子流信息列表。
  * @method void setSubStreamSet(array $SubStreamSet) 设置子流信息列表。
+ * @method string getCopyRightWatermarkText() 获取版权信息。
+ * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置版权信息。
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -84,6 +88,7 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     /**
      * @var string 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
      */
     public $DigitalWatermarkType;
@@ -92,6 +97,11 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
      * @var array 子流信息列表。
      */
     public $SubStreamSet;
+
+    /**
+     * @var string 版权信息。
+     */
+    public $CopyRightWatermarkText;
 
     /**
      * @param integer $Definition 转自适应码流规格。
@@ -106,8 +116,10 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 <li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
      * @param string $DigitalWatermarkType 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
      * @param array $SubStreamSet 子流信息列表。
+     * @param string $CopyRightWatermarkText 版权信息。
      */
     function __construct()
     {
@@ -153,6 +165,10 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SubStreamSet, $obj);
             }
+        }
+
+        if (array_key_exists("CopyRightWatermarkText",$param) and $param["CopyRightWatermarkText"] !== null) {
+            $this->CopyRightWatermarkText = $param["CopyRightWatermarkText"];
         }
     }
 }

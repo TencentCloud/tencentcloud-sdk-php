@@ -133,7 +133,9 @@ ComponentType为SIGN_DATE时，支持以下参数：
 特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
 参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}",
  * @method boolean getIsFormType() 获取是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFormType(boolean $IsFormType) 设置是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
@@ -297,9 +299,13 @@ KEYWORD 关键字，使用ComponentId指定关键字
  * @method string getChannelComponentId() 获取第三方应用集成平台模板控件 id 标识
  * @method void setChannelComponentId(string $ChannelComponentId) 设置第三方应用集成平台模板控件 id 标识
  * @method float getOffsetX() 获取指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOffsetY() 获取指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelComponentSource() 获取第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
  * @method void setChannelComponentSource(integer $ChannelComponentSource) 设置第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
  * @method string getKeywordOrder() 获取指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
@@ -421,6 +427,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
 
     /**
      * @var boolean 是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFormType;
 
@@ -523,11 +530,13 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
     /**
      * @var float 指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetX;
 
     /**
      * @var float 指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetY;
 
@@ -615,6 +624,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
 特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
 参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}",
      * @param boolean $IsFormType 是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
@@ -697,7 +707,9 @@ KEYWORD 关键字，使用ComponentId指定关键字
      * @param integer $ComponentDateFontSize 日期签署控件的字号，默认为 12
      * @param string $ChannelComponentId 第三方应用集成平台模板控件 id 标识
      * @param float $OffsetX 指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelComponentSource 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
      * @param string $KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。

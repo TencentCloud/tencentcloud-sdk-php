@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVPort(integer $VPort) 设置端口
  * @method array getSecurityGroup() 获取安全组
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组
+ * @method string getConnectionPoolType() 获取连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+ * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
  */
 class CreateCdbProxyAddressRequest extends AbstractModel
 {
@@ -146,6 +148,11 @@ class CreateCdbProxyAddressRequest extends AbstractModel
     public $SecurityGroup;
 
     /**
+     * @var string 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+     */
+    public $ConnectionPoolType;
+
+    /**
      * @param string $ProxyGroupId 代理组ID
      * @param string $WeightMode 权重分配模式，
 系统自动分配："system"， 自定义："custom"
@@ -164,6 +171,7 @@ class CreateCdbProxyAddressRequest extends AbstractModel
      * @param string $Vip IP地址
      * @param integer $VPort 端口
      * @param array $SecurityGroup 安全组
+     * @param string $ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
      */
     function __construct()
     {
@@ -249,6 +257,10 @@ class CreateCdbProxyAddressRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
             $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("ConnectionPoolType",$param) and $param["ConnectionPoolType"] !== null) {
+            $this->ConnectionPoolType = $param["ConnectionPoolType"];
         }
     }
 }

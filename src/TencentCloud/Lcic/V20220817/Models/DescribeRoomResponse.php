@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取房间名称。
  * @method void setName(string $Name) 设置房间名称。
- * @method integer getStartTime() 获取预定的房间开始时间，unix时间戳。
- * @method void setStartTime(integer $StartTime) 设置预定的房间开始时间，unix时间戳。
- * @method integer getEndTime() 获取预定的房间结束时间，unix时间戳。
- * @method void setEndTime(integer $EndTime) 设置预定的房间结束时间，unix时间戳。
+ * @method integer getStartTime() 获取预定的房间开始时间，unix时间戳（秒）。
+ * @method void setStartTime(integer $StartTime) 设置预定的房间开始时间，unix时间戳（秒）。
+ * @method integer getEndTime() 获取预定的房间结束时间，unix时间戳（秒）。
+ * @method void setEndTime(integer $EndTime) 设置预定的房间结束时间，unix时间戳（秒）。
  * @method string getTeacherId() 获取老师的UserId。
  * @method void setTeacherId(string $TeacherId) 设置老师的UserId。
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
@@ -95,12 +95,12 @@ class DescribeRoomResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 预定的房间开始时间，unix时间戳。
+     * @var integer 预定的房间开始时间，unix时间戳（秒）。
      */
     public $StartTime;
 
     /**
-     * @var integer 预定的房间结束时间，unix时间戳。
+     * @var integer 预定的房间结束时间，unix时间戳（秒）。
      */
     public $EndTime;
 
@@ -192,8 +192,8 @@ video 纯视频
 
     /**
      * @param string $Name 房间名称。
-     * @param integer $StartTime 预定的房间开始时间，unix时间戳。
-     * @param integer $EndTime 预定的房间结束时间，unix时间戳。
+     * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。
+     * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。
      * @param string $TeacherId 老师的UserId。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $Resolution 分辨率。可以有如下取值：

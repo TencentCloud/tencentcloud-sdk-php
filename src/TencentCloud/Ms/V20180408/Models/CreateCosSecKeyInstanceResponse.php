@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosTocken(string $CosTocken) 设置密钥TOCKEN信息
  * @method string getCosPrefix() 获取密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
  * @method void setCosPrefix(string $CosPrefix) 设置密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
+ * @method string getCosToken() 获取密钥TOCKEN信息
+ * @method void setCosToken(string $CosToken) 设置密钥TOCKEN信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,6 +75,7 @@ class CreateCosSecKeyInstanceResponse extends AbstractModel
 
     /**
      * @var string 密钥TOCKEN信息
+     * @deprecated
      */
     public $CosTocken;
 
@@ -80,6 +83,11 @@ class CreateCosSecKeyInstanceResponse extends AbstractModel
      * @var string 密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
      */
     public $CosPrefix;
+
+    /**
+     * @var string 密钥TOCKEN信息
+     */
+    public $CosToken;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -95,6 +103,7 @@ class CreateCosSecKeyInstanceResponse extends AbstractModel
      * @param string $CosKey 密钥KEY信息
      * @param string $CosTocken 密钥TOCKEN信息
      * @param string $CosPrefix 密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
+     * @param string $CosToken 密钥TOCKEN信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +149,10 @@ class CreateCosSecKeyInstanceResponse extends AbstractModel
 
         if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {
             $this->CosPrefix = $param["CosPrefix"];
+        }
+
+        if (array_key_exists("CosToken",$param) and $param["CosToken"] !== null) {
+            $this->CosToken = $param["CosToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

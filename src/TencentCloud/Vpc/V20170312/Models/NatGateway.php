@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestrictState(string $RestrictState) 设置NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNatProductVersion() 获取NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGateway extends AbstractModel
 {
@@ -184,6 +188,12 @@ class NatGateway extends AbstractModel
     public $RestrictState;
 
     /**
+     * @var integer NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NatProductVersion;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -211,6 +221,8 @@ class NatGateway extends AbstractModel
      * @param integer $ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NatProductVersion NAT网关大版本号，传统型=1，标准型=2
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -320,6 +332,10 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
             $this->RestrictState = $param["RestrictState"];
+        }
+
+        if (array_key_exists("NatProductVersion",$param) and $param["NatProductVersion"] !== null) {
+            $this->NatProductVersion = $param["NatProductVersion"];
         }
     }
 }

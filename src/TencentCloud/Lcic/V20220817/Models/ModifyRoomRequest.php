@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(integer $RoomId) 设置房间ID。
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId
- * @method integer getStartTime() 获取预定的房间开始时间，unix时间戳。直播开始后不允许修改。
- * @method void setStartTime(integer $StartTime) 设置预定的房间开始时间，unix时间戳。直播开始后不允许修改。
- * @method integer getEndTime() 获取预定的房间结束时间，unix时间戳。直播开始后不允许修改。
- * @method void setEndTime(integer $EndTime) 设置预定的房间结束时间，unix时间戳。直播开始后不允许修改。
+ * @method integer getStartTime() 获取预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
+ * @method void setStartTime(integer $StartTime) 设置预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
+ * @method integer getEndTime() 获取预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
+ * @method void setEndTime(integer $EndTime) 设置预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
  * @method string getTeacherId() 获取老师ID。直播开始后不允许修改。
  * @method void setTeacherId(string $TeacherId) 设置老师ID。直播开始后不允许修改。
  * @method string getName() 获取房间名称。
@@ -100,12 +100,12 @@ class ModifyRoomRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 预定的房间开始时间，unix时间戳。直播开始后不允许修改。
+     * @var integer 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
      */
     public $StartTime;
 
     /**
-     * @var integer 预定的房间结束时间，unix时间戳。直播开始后不允许修改。
+     * @var integer 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
      */
     public $EndTime;
 
@@ -185,8 +185,8 @@ coteaching 双师
     /**
      * @param integer $RoomId 房间ID。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId
-     * @param integer $StartTime 预定的房间开始时间，unix时间戳。直播开始后不允许修改。
-     * @param integer $EndTime 预定的房间结束时间，unix时间戳。直播开始后不允许修改。
+     * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
+     * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
      * @param string $TeacherId 老师ID。直播开始后不允许修改。
      * @param string $Name 房间名称。
      * @param integer $Resolution 分辨率。可以有如下取值：

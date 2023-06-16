@@ -28,23 +28,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowType(string $FlowType) 设置合同(流程)的类型
  * @method string getFlowStatus() 获取合同(流程)的状态, 状态如下
 
-INIT 还没发起
-PART 部分签署
-REJECT 拒签
-ALL 全部签署
-DEADLINE 流签
-CANCEL 取消
-RELIEVED 解除
+INIT 合同创建
+PART 合同签署中
+REJECT 合同拒签
+ALL 合同签署完成
+DEADLINE 合同流签(合同过期)
+CANCEL 合同撤回
+RELIEVED 解除协议（已解除）
  
  * @method void setFlowStatus(string $FlowStatus) 设置合同(流程)的状态, 状态如下
 
-INIT 还没发起
-PART 部分签署
-REJECT 拒签
-ALL 全部签署
-DEADLINE 流签
-CANCEL 取消
-RELIEVED 解除
+INIT 合同创建
+PART 合同签署中
+REJECT 合同拒签
+ALL 合同签署完成
+DEADLINE 合同流签(合同过期)
+CANCEL 合同撤回
+RELIEVED 解除协议（已解除）
  
  * @method string getFlowMessage() 获取合同(流程)的信息
  * @method void setFlowMessage(string $FlowMessage) 设置合同(流程)的信息
@@ -81,13 +81,13 @@ class FlowDetailInfo extends AbstractModel
     /**
      * @var string 合同(流程)的状态, 状态如下
 
-INIT 还没发起
-PART 部分签署
-REJECT 拒签
-ALL 全部签署
-DEADLINE 流签
-CANCEL 取消
-RELIEVED 解除
+INIT 合同创建
+PART 合同签署中
+REJECT 合同拒签
+ALL 合同签署完成
+DEADLINE 合同流签(合同过期)
+CANCEL 合同撤回
+RELIEVED 解除协议（已解除）
  
      */
     public $FlowStatus;
@@ -133,13 +133,13 @@ RELIEVED 解除
      * @param string $FlowType 合同(流程)的类型
      * @param string $FlowStatus 合同(流程)的状态, 状态如下
 
-INIT 还没发起
-PART 部分签署
-REJECT 拒签
-ALL 全部签署
-DEADLINE 流签
-CANCEL 取消
-RELIEVED 解除
+INIT 合同创建
+PART 合同签署中
+REJECT 合同拒签
+ALL 合同签署完成
+DEADLINE 合同流签(合同过期)
+CANCEL 合同撤回
+RELIEVED 解除协议（已解除）
  
      * @param string $FlowMessage 合同(流程)的信息
      * @param integer $CreateOn 合同(流程)的创建时间戳，单位秒

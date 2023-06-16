@@ -128,6 +128,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeEdgeLogSwitchesResponse DescribeEdgeLogSwitches(Models\DescribeEdgeLogSwitchesRequest $req) 获取事件、审计和日志的状态
  * @method Models\DescribeEksContainerInstanceLogResponse DescribeEksContainerInstanceLog(Models\DescribeEksContainerInstanceLogRequest $req) 查询容器实例中容器日志
  * @method Models\DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(Models\DescribeEnableVpcCniProgressRequest $req) 本接口用于查询开启vpc-cni模式的任务进度
+ * @method Models\DescribeEncryptionStatusResponse DescribeEncryptionStatus(Models\DescribeEncryptionStatusRequest $req) 查询etcd数据是否进行加密
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) 查询已经存在的节点，判断是否可以加入集群
  * @method Models\DescribeExternalClusterSpecResponse DescribeExternalClusterSpec(Models\DescribeExternalClusterSpecRequest $req) 获取导入第三方集群YAML定义
  * @method Models\DescribeImageCachesResponse DescribeImageCaches(Models\DescribeImageCachesRequest $req) 查询镜像缓存信息接口
@@ -163,11 +164,13 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimits(Models\DescribeVpcCniPodLimitsRequest $req) 本接口查询当前用户和地域在指定可用区下的机型可支持的最大 TKE VPC-CNI 网络模式的 Pod 数量
  * @method Models\DisableClusterAuditResponse DisableClusterAudit(Models\DisableClusterAuditRequest $req) 关闭集群审计
  * @method Models\DisableClusterDeletionProtectionResponse DisableClusterDeletionProtection(Models\DisableClusterDeletionProtectionRequest $req) 关闭集群删除保护
+ * @method Models\DisableEncryptionProtectionResponse DisableEncryptionProtection(Models\DisableEncryptionProtectionRequest $req) 关闭加密信息保护
  * @method Models\DisableEventPersistenceResponse DisableEventPersistence(Models\DisableEventPersistenceRequest $req) 关闭事件持久化功能
  * @method Models\DisableVpcCniNetworkTypeResponse DisableVpcCniNetworkType(Models\DisableVpcCniNetworkTypeRequest $req) 提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
  * @method Models\DrainClusterVirtualNodeResponse DrainClusterVirtualNode(Models\DrainClusterVirtualNodeRequest $req) 驱逐虚拟节点
  * @method Models\EnableClusterAuditResponse EnableClusterAudit(Models\EnableClusterAuditRequest $req) 开启集群审计
  * @method Models\EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(Models\EnableClusterDeletionProtectionRequest $req) 启用集群删除保护
+ * @method Models\EnableEncryptionProtectionResponse EnableEncryptionProtection(Models\EnableEncryptionProtectionRequest $req) 开启加密数据保护
  * @method Models\EnableEventPersistenceResponse EnableEventPersistence(Models\EnableEventPersistenceRequest $req) 开启事件持久化功能
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力
  * @method Models\ForwardApplicationRequestV3Response ForwardApplicationRequestV3(Models\ForwardApplicationRequestV3Request $req) 操作TKE集群的addon

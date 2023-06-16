@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
- * @method string getRelatedFlowId() 获取暂未开放
- * @method void setRelatedFlowId(string $RelatedFlowId) 设置暂未开放
  * @method integer getDeadLine() 获取签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
  * @method void setDeadLine(integer $DeadLine) 设置签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
+ * @method integer getRemindedOn() 获取合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+ * @method void setRemindedOn(integer $RemindedOn) 设置合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
  * @method string getUserData() 获取用户自定义字段，回调的时候会进行透传，长度需要小于20480
  * @method void setUserData(string $UserData) 设置用户自定义字段，回调的时候会进行透传，长度需要小于20480
  * @method string getFlowDescription() 获取签署流程描述,最大长度1000个字符
@@ -58,8 +58,6 @@ false：有序签
 若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
- * @method string getCallbackUrl() 获取暂未开放
- * @method void setCallbackUrl(string $CallbackUrl) 设置暂未开放
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method array getCcInfos() 获取被抄送人的信息列表。
@@ -68,6 +66,10 @@ false：有序签
 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
  * @method string getAutoSignScene() 获取个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  * @method void setAutoSignScene(string $AutoSignScene) 设置个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method string getRelatedFlowId() 获取暂未开放
+ * @method void setRelatedFlowId(string $RelatedFlowId) 设置暂未开放
+ * @method string getCallbackUrl() 获取暂未开放
+ * @method void setCallbackUrl(string $CallbackUrl) 设置暂未开放
  */
 class CreateFlowRequest extends AbstractModel
 {
@@ -97,16 +99,15 @@ class CreateFlowRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var string 暂未开放
-     * @deprecated
-     */
-    public $RelatedFlowId;
-
-    /**
      * @var integer 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      */
     public $DeadLine;
+
+    /**
+     * @var integer 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+     */
+    public $RemindedOn;
 
     /**
      * @var string 用户自定义字段，回调的时候会进行透传，长度需要小于20480
@@ -140,12 +141,6 @@ false：有序签
     public $NeedSignReview;
 
     /**
-     * @var string 暂未开放
-     * @deprecated
-     */
-    public $CallbackUrl;
-
-    /**
      * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
@@ -162,14 +157,26 @@ false：有序签
     public $AutoSignScene;
 
     /**
+     * @var string 暂未开放
+     * @deprecated
+     */
+    public $RelatedFlowId;
+
+    /**
+     * @var string 暂未开放
+     * @deprecated
+     */
+    public $CallbackUrl;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署流程参与者信息，最大限制50方
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
-     * @param string $RelatedFlowId 暂未开放
      * @param integer $DeadLine 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
+     * @param integer $RemindedOn 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
      * @param string $UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
      * @param string $FlowDescription 签署流程描述,最大长度1000个字符
      * @param boolean $Unordered 发送类型：
@@ -181,11 +188,12 @@ false：有序签
 若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
-     * @param string $CallbackUrl 暂未开放
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param array $CcInfos 被抄送人的信息列表。
 注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
      * @param string $AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param string $RelatedFlowId 暂未开放
+     * @param string $CallbackUrl 暂未开放
      */
     function __construct()
     {
@@ -226,12 +234,12 @@ false：有序签
             $this->ClientToken = $param["ClientToken"];
         }
 
-        if (array_key_exists("RelatedFlowId",$param) and $param["RelatedFlowId"] !== null) {
-            $this->RelatedFlowId = $param["RelatedFlowId"];
-        }
-
         if (array_key_exists("DeadLine",$param) and $param["DeadLine"] !== null) {
             $this->DeadLine = $param["DeadLine"];
+        }
+
+        if (array_key_exists("RemindedOn",$param) and $param["RemindedOn"] !== null) {
+            $this->RemindedOn = $param["RemindedOn"];
         }
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
@@ -254,10 +262,6 @@ false：有序签
             $this->NeedSignReview = $param["NeedSignReview"];
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
-        }
-
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
@@ -274,6 +278,14 @@ false：有序签
 
         if (array_key_exists("AutoSignScene",$param) and $param["AutoSignScene"] !== null) {
             $this->AutoSignScene = $param["AutoSignScene"];
+        }
+
+        if (array_key_exists("RelatedFlowId",$param) and $param["RelatedFlowId"] !== null) {
+            $this->RelatedFlowId = $param["RelatedFlowId"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
     }
 }

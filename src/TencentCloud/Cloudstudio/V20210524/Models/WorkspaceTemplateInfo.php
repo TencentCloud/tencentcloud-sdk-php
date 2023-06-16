@@ -90,10 +90,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPluginFile(string $PluginFile) 设置xxx
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPrebuildFile() 获取xxx
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrebuildFile(string $PrebuildFile) 设置xxx
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMarked() 获取是否标记
  * @method void setMarked(boolean $Marked) 设置是否标记
  * @method integer getMarkAt() 获取标记状态
@@ -239,12 +235,6 @@ class WorkspaceTemplateInfo extends AbstractModel
     public $PluginFile;
 
     /**
-     * @var string xxx
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PrebuildFile;
-
-    /**
      * @var boolean 是否标记
      */
     public $Marked;
@@ -334,8 +324,6 @@ class WorkspaceTemplateInfo extends AbstractModel
      * @param string $DevFile xxx
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PluginFile xxx
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PrebuildFile xxx
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Marked 是否标记
      * @param integer $MarkAt 标记状态
@@ -440,10 +428,6 @@ class WorkspaceTemplateInfo extends AbstractModel
 
         if (array_key_exists("PluginFile",$param) and $param["PluginFile"] !== null) {
             $this->PluginFile = $param["PluginFile"];
-        }
-
-        if (array_key_exists("PrebuildFile",$param) and $param["PrebuildFile"] !== null) {
-            $this->PrebuildFile = $param["PrebuildFile"];
         }
 
         if (array_key_exists("Marked",$param) and $param["Marked"] !== null) {

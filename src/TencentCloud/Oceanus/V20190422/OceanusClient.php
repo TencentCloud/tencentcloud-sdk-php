@@ -44,6 +44,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeSystemResourcesResponse DescribeSystemResources(Models\DescribeSystemResourcesRequest $req) 描述系统资源接口
  * @method Models\DescribeTreeJobsResponse DescribeTreeJobs(Models\DescribeTreeJobsRequest $req) 生成树状作业显示结构
  * @method Models\DescribeTreeResourcesResponse DescribeTreeResources(Models\DescribeTreeResourcesRequest $req) 查询树状结构资源列表
+ * @method Models\DescribeWorkSpacesResponse DescribeWorkSpaces(Models\DescribeWorkSpacesRequest $req) 授权工作空间列表
  * @method Models\ModifyJobResponse ModifyJob(Models\ModifyJobRequest $req) 更新作业属性，仅允许以下3种操作，不支持组合操作：
 (1)	更新作业名称
 (2)	更新作业备注 

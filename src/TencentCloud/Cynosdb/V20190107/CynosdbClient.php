@@ -30,6 +30,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) 为集群绑定资源包
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) TDSQL-C for MySQL实例关闭审计服务
  * @method Models\CloseClusterPasswordComplexityResponse CloseClusterPasswordComplexity(Models\CloseClusterPasswordComplexityRequest $req) 本接口（CloseClusterPasswordComplexity）用于关闭集群密码复杂度
+ * @method Models\CloseProxyResponse CloseProxy(Models\CloseProxyRequest $req) 关闭数据库代理
  * @method Models\CloseWanResponse CloseWan(Models\CloseWanRequest $req) 本接口（CloseWan）用于关闭外网
  * @method Models\CopyClusterPasswordComplexityResponse CopyClusterPasswordComplexity(Models\CopyClusterPasswordComplexityRequest $req) 本接口（CopyClusterPasswordComplexity）用于复制集群密码复杂度
  * @method Models\CreateAccountsResponse CreateAccounts(Models\CreateAccountsRequest $req) 创建账号
@@ -39,6 +40,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateClusterDatabaseResponse CreateClusterDatabase(Models\CreateClusterDatabaseRequest $req) 创建数据库
  * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) 创建集群
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 本接口（CreateParamTemplate）用于创建参数模板
+ * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 创建数据库代理
+ * @method Models\CreateProxyEndPointResponse CreateProxyEndPoint(Models\CreateProxyEndPointRequest $req) 创建数据库代理连接点
  * @method Models\CreateResourcePackageResponse CreateResourcePackage(Models\CreateResourcePackageRequest $req) 新购资源包
  * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) 删除账号
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
@@ -78,6 +81,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeParamTemplateDetailResponse DescribeParamTemplateDetail(Models\DescribeParamTemplateDetailRequest $req) 本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) 查询用户指定产品下的所有参数模板信息
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 查询项目安全组信息
+ * @method Models\DescribeProxiesResponse DescribeProxies(Models\DescribeProxiesRequest $req) 查询数据库代理列表
+ * @method Models\DescribeProxyNodesResponse DescribeProxyNodes(Models\DescribeProxyNodesRequest $req) 本接口（DescribeProxyNodes）用于查询代理接口列表。
  * @method Models\DescribeResourcePackageDetailResponse DescribeResourcePackageDetail(Models\DescribeResourcePackageDetailRequest $req) 查询资源包使用详情
  * @method Models\DescribeResourcePackageListResponse DescribeResourcePackageList(Models\DescribeResourcePackageListRequest $req) 查询资源包列表
  * @method Models\DescribeResourcePackageSaleSpecResponse DescribeResourcePackageSaleSpec(Models\DescribeResourcePackageSaleSpecRequest $req) 查询资源包规格
@@ -113,6 +118,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口（ModifyInstanceParam）用于修改实例参数。
  * @method Models\ModifyMaintainPeriodConfigResponse ModifyMaintainPeriodConfig(Models\ModifyMaintainPeriodConfigRequest $req) 修改维护时间配置
  * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) 本接口（ModifyParamTemplate）用于修改用户参数模板。
+ * @method Models\ModifyProxyDescResponse ModifyProxyDesc(Models\ModifyProxyDescRequest $req) 修改数据库代理描述
+ * @method Models\ModifyProxyRwSplitResponse ModifyProxyRwSplit(Models\ModifyProxyRwSplitRequest $req) 配置数据库代理读写分离
  * @method Models\ModifyResourcePackageClustersResponse ModifyResourcePackageClusters(Models\ModifyResourcePackageClustersRequest $req) 给资源包绑定集群
  * @method Models\ModifyResourcePackageNameResponse ModifyResourcePackageName(Models\ModifyResourcePackageNameRequest $req) 修改资源包名称
  * @method Models\ModifyVipVportResponse ModifyVipVport(Models\ModifyVipVportRequest $req) 修改实例组ip，端口
@@ -124,6 +131,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\OpenWanResponse OpenWan(Models\OpenWanRequest $req) 本接口（OpenWan）用于开通外网
  * @method Models\PauseServerlessResponse PauseServerless(Models\PauseServerlessRequest $req) 暂停serverless集群
  * @method Models\RefundResourcePackageResponse RefundResourcePackage(Models\RefundResourcePackageRequest $req) 退款资源包
+ * @method Models\ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(Models\ReloadBalanceProxyNodeRequest $req) 负载均衡数据库代理
  * @method Models\RemoveClusterSlaveZoneResponse RemoveClusterSlaveZone(Models\RemoveClusterSlaveZoneRequest $req) 删除从可用区
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口(ResetAccountPassword)用于重置实例的数据库账号密码。
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 重启实例
@@ -139,6 +147,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\UnbindClusterResourcePackagesResponse UnbindClusterResourcePackages(Models\UnbindClusterResourcePackagesRequest $req) cynos解绑资源包
  * @method Models\UpgradeClusterVersionResponse UpgradeClusterVersion(Models\UpgradeClusterVersionRequest $req) 更新集群Cynos内核版本
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 升级实例
+ * @method Models\UpgradeProxyResponse UpgradeProxy(Models\UpgradeProxyRequest $req) 升级数据库代理配置
+ * @method Models\UpgradeProxyVersionResponse UpgradeProxyVersion(Models\UpgradeProxyVersionRequest $req) 升级数据库代理版本
  */
 
 class CynosdbClient extends AbstractClient

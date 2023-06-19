@@ -138,7 +138,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeGroupsWithPluginResponse DescribeGroupsWithPlugin(Models\DescribeGroupsWithPluginRequest $req) 查询某个插件下绑定或未绑定的API分组
  * @method Models\DescribeImageRepositoryResponse DescribeImageRepository(Models\DescribeImageRepositoryRequest $req) 镜像仓库列表 
  * @method Models\DescribeImageTagsResponse DescribeImageTags(Models\DescribeImageTagsRequest $req) 镜像版本列表
- * @method Models\DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(Models\DescribeInovcationIndicatorsRequest $req) 查询调用监控指标
+ * @method Models\DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(Models\DescribeInovcationIndicatorsRequest $req) 废弃
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 无
  * @method Models\DescribeInvocationMetricDataCurveResponse DescribeInvocationMetricDataCurve(Models\DescribeInvocationMetricDataCurveRequest $req) 查询调用指标数据变化曲线
  * @method Models\DescribeInvocationMetricDataDimensionResponse DescribeInvocationMetricDataDimension(Models\DescribeInvocationMetricDataDimensionRequest $req) 查询维度

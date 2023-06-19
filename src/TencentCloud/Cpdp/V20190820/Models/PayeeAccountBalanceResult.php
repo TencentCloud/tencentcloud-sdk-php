@@ -60,6 +60,30 @@ OCCASION:偶然所得
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSumSettlementAmount(string $SumSettlementAmount) 设置累计结算金额
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPaidIncomeTax() 获取已缴个税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPaidIncomeTax(string $PaidIncomeTax) 设置已缴个税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInPayIncomeTax() 获取提现中个税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInPayIncomeTax(string $InPayIncomeTax) 设置提现中个税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPaidValueAddedTax() 获取已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPaidValueAddedTax(string $PaidValueAddedTax) 设置已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInPayValueAddedTax() 获取提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInPayValueAddedTax(string $InPayValueAddedTax) 设置提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPaidAttachTax() 获取已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPaidAttachTax(string $PaidAttachTax) 设置已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInPayAttachTax() 获取提现中附加税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInPayAttachTax(string $InPayAttachTax) 设置提现中附加税
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PayeeAccountBalanceResult extends AbstractModel
 {
@@ -120,6 +144,42 @@ OCCASION:偶然所得
     public $SumSettlementAmount;
 
     /**
+     * @var string 已缴个税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PaidIncomeTax;
+
+    /**
+     * @var string 提现中个税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InPayIncomeTax;
+
+    /**
+     * @var string 已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PaidValueAddedTax;
+
+    /**
+     * @var string 提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InPayValueAddedTax;
+
+    /**
+     * @var string 已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PaidAttachTax;
+
+    /**
+     * @var string 提现中附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InPayAttachTax;
+
+    /**
      * @param string $AccountId 账户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IncomeType 收入类型
@@ -139,6 +199,18 @@ OCCASION:偶然所得
      * @param string $InPayBalance 提现中余额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SumSettlementAmount 累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PaidIncomeTax 已缴个税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InPayIncomeTax 提现中个税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PaidValueAddedTax 已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InPayValueAddedTax 提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PaidAttachTax 已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InPayAttachTax 提现中附加税
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +260,30 @@ OCCASION:偶然所得
 
         if (array_key_exists("SumSettlementAmount",$param) and $param["SumSettlementAmount"] !== null) {
             $this->SumSettlementAmount = $param["SumSettlementAmount"];
+        }
+
+        if (array_key_exists("PaidIncomeTax",$param) and $param["PaidIncomeTax"] !== null) {
+            $this->PaidIncomeTax = $param["PaidIncomeTax"];
+        }
+
+        if (array_key_exists("InPayIncomeTax",$param) and $param["InPayIncomeTax"] !== null) {
+            $this->InPayIncomeTax = $param["InPayIncomeTax"];
+        }
+
+        if (array_key_exists("PaidValueAddedTax",$param) and $param["PaidValueAddedTax"] !== null) {
+            $this->PaidValueAddedTax = $param["PaidValueAddedTax"];
+        }
+
+        if (array_key_exists("InPayValueAddedTax",$param) and $param["InPayValueAddedTax"] !== null) {
+            $this->InPayValueAddedTax = $param["InPayValueAddedTax"];
+        }
+
+        if (array_key_exists("PaidAttachTax",$param) and $param["PaidAttachTax"] !== null) {
+            $this->PaidAttachTax = $param["PaidAttachTax"];
+        }
+
+        if (array_key_exists("InPayAttachTax",$param) and $param["InPayAttachTax"] !== null) {
+            $this->InPayAttachTax = $param["InPayAttachTax"];
         }
     }
 }

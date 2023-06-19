@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置检索分析语句，最大长度为12KB
 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
 使用*或空字符串可查询所有日志
- * @method string getTopicId() 获取要检索分析的日志主题ID
- * @method void setTopicId(string $TopicId) 设置要检索分析的日志主题ID
+ * @method string getTopicId() 获取- 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。
+ * @method void setTopicId(string $TopicId) 设置- 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。
  * @method integer getLimit() 获取表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
@@ -80,6 +82,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyntaxRule(integer $SyntaxRule) 设置检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+ * @method array getTopics() 获取- 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。
+ * @method void setTopics(array $Topics) 设置- 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -101,7 +109,8 @@ class SearchLogRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var string 要检索分析的日志主题ID
+     * @var string - 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。
      */
     public $TopicId;
 
@@ -154,12 +163,20 @@ class SearchLogRequest extends AbstractModel
     public $SyntaxRule;
 
     /**
+     * @var array - 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。
+     */
+    public $Topics;
+
+    /**
      * @param integer $From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
      * @param integer $To 要检索分析的日志的结束时间，Unix时间戳（毫秒）
      * @param string $Query 检索分析语句，最大长度为12KB
 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
 使用*或空字符串可查询所有日志
-     * @param string $TopicId 要检索分析的日志主题ID
+     * @param string $TopicId - 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。
      * @param integer $Limit 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
@@ -184,6 +201,9 @@ class SearchLogRequest extends AbstractModel
      * @param integer $SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+     * @param array $Topics - 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。
      */
     function __construct()
     {
@@ -236,6 +256,15 @@ class SearchLogRequest extends AbstractModel
 
         if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
             $this->SyntaxRule = $param["SyntaxRule"];
+        }
+
+        if (array_key_exists("Topics",$param) and $param["Topics"] !== null) {
+            $this->Topics = [];
+            foreach ($param["Topics"] as $key => $value){
+                $obj = new MultiTopicSearchInformation();
+                $obj->deserialize($value);
+                array_push($this->Topics, $obj);
+            }
         }
     }
 }

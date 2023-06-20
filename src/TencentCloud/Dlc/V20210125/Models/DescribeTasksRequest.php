@@ -44,8 +44,8 @@ task-kind - string （任务类型过滤）
  * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
  * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
  * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
- * @method string getDataEngineName() 获取支持计算资源名字筛选
- * @method void setDataEngineName(string $DataEngineName) 设置支持计算资源名字筛选
+ * @method string getDataEngineName() 获取数据引擎名称，用于筛选
+ * @method void setDataEngineName(string $DataEngineName) 设置数据引擎名称，用于筛选
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -90,7 +90,7 @@ task-kind - string （任务类型过滤）
     public $EndTime;
 
     /**
-     * @var string 支持计算资源名字筛选
+     * @var string 数据引擎名称，用于筛选
      */
     public $DataEngineName;
 
@@ -107,7 +107,7 @@ task-kind - string （任务类型过滤）
      * @param string $Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc。
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
-     * @param string $DataEngineName 支持计算资源名字筛选
+     * @param string $DataEngineName 数据引擎名称，用于筛选
      */
     function __construct()
     {

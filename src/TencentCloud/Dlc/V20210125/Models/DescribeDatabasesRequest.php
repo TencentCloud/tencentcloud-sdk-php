@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyWord(string $KeyWord) 设置模糊匹配，库名关键字。
  * @method string getDatasourceConnectionName() 获取数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
- * @method string getSort() 获取排序字段，当前版本仅支持按库名排序
- * @method void setSort(string $Sort) 设置排序字段，当前版本仅支持按库名排序
+ * @method string getSort() 获取排序字段，CreateTime：创建时间，Name：数据库名称
+ * @method void setSort(string $Sort) 设置排序字段，CreateTime：创建时间，Name：数据库名称
  * @method boolean getAsc() 获取排序类型：false：降序（默认）、true：升序
  * @method void setAsc(boolean $Asc) 设置排序类型：false：降序（默认）、true：升序
  */
@@ -56,7 +56,7 @@ class DescribeDatabasesRequest extends AbstractModel
     public $DatasourceConnectionName;
 
     /**
-     * @var string 排序字段，当前版本仅支持按库名排序
+     * @var string 排序字段，CreateTime：创建时间，Name：数据库名称
      */
     public $Sort;
 
@@ -70,7 +70,7 @@ class DescribeDatabasesRequest extends AbstractModel
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
      * @param string $KeyWord 模糊匹配，库名关键字。
      * @param string $DatasourceConnectionName 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
-     * @param string $Sort 排序字段，当前版本仅支持按库名排序
+     * @param string $Sort 排序字段，CreateTime：创建时间，Name：数据库名称
      * @param boolean $Asc 排序类型：false：降序（默认）、true：升序
      */
     function __construct()

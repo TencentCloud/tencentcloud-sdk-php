@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteSparkApp请求参数结构体
+ * 漏洞风险高级配置
  *
- * @method string getAppName() 获取spark作业名
- * @method void setAppName(string $AppName) 设置spark作业名
+ * @method string getRiskId() 获取风险ID
+ * @method void setRiskId(string $RiskId) 设置风险ID
+ * @method integer getEnable() 获取是否开启，0-不开启，1-开启
+ * @method void setEnable(integer $Enable) 设置是否开启，0-不开启，1-开启
  */
-class DeleteSparkAppRequest extends AbstractModel
+class TaskCenterVulRiskInputParam extends AbstractModel
 {
     /**
-     * @var string spark作业名
+     * @var string 风险ID
      */
-    public $AppName;
+    public $RiskId;
 
     /**
-     * @param string $AppName spark作业名
+     * @var integer 是否开启，0-不开启，1-开启
+     */
+    public $Enable;
+
+    /**
+     * @param string $RiskId 风险ID
+     * @param integer $Enable 是否开启，0-不开启，1-开启
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteSparkAppRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists("RiskId",$param) and $param["RiskId"] !== null) {
+            $this->RiskId = $param["RiskId"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
         }
     }
 }

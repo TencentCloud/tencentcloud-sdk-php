@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrontabResumeSuspend(integer $CrontabResumeSuspend) 设置定时启停集群策略：0（默认）：关闭定时策略、1：开启定时策略（注：定时启停策略与自动挂起策略互斥）
  * @method CrontabResumeSuspendStrategy getCrontabResumeSuspendStrategy() 获取定时启停策略，复杂类型：包含启停时间、挂起集群策略
  * @method void setCrontabResumeSuspendStrategy(CrontabResumeSuspendStrategy $CrontabResumeSuspendStrategy) 设置定时启停策略，复杂类型：包含启停时间、挂起集群策略
- * @method string getEngineExecType() 获取引擎执行任务类型，默认为SQL
- * @method void setEngineExecType(string $EngineExecType) 设置引擎执行任务类型，默认为SQL
+ * @method string getEngineExecType() 获取引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+ * @method void setEngineExecType(string $EngineExecType) 设置引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
  * @method integer getMaxConcurrency() 获取单个集群最大并发任务数，默认5
  * @method void setMaxConcurrency(integer $MaxConcurrency) 设置单个集群最大并发任务数，默认5
  * @method integer getTolerableQueueTime() 获取可容忍的排队时间，默认0。当任务排队的时间超过可容忍的时间时可能会触发扩容。如果该参数为0，则表示一旦有任务排队就可能立即触发扩容。
@@ -179,7 +179,7 @@ class CreateDataEngineRequest extends AbstractModel
     public $CrontabResumeSuspendStrategy;
 
     /**
-     * @var string 引擎执行任务类型，默认为SQL
+     * @var string 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
      */
     public $EngineExecType;
 
@@ -253,7 +253,7 @@ class CreateDataEngineRequest extends AbstractModel
      * @param boolean $AutoSuspend 是否自定挂起集群：false（默认）：不自动挂起、true：自动挂起
      * @param integer $CrontabResumeSuspend 定时启停集群策略：0（默认）：关闭定时策略、1：开启定时策略（注：定时启停策略与自动挂起策略互斥）
      * @param CrontabResumeSuspendStrategy $CrontabResumeSuspendStrategy 定时启停策略，复杂类型：包含启停时间、挂起集群策略
-     * @param string $EngineExecType 引擎执行任务类型，默认为SQL
+     * @param string $EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
      * @param integer $MaxConcurrency 单个集群最大并发任务数，默认5
      * @param integer $TolerableQueueTime 可容忍的排队时间，默认0。当任务排队的时间超过可容忍的时间时可能会触发扩容。如果该参数为0，则表示一旦有任务排队就可能立即触发扩容。
      * @param integer $AutoSuspendTime 集群自动挂起时间，默认10分钟

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSparkAppJob请求参数结构体
  *
- * @method string getJobId() 获取spark作业Id，与JobName同时存在时，JobName无效
- * @method void setJobId(string $JobId) 设置spark作业Id，与JobName同时存在时，JobName无效
+ * @method string getJobId() 获取spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
+ * @method void setJobId(string $JobId) 设置spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
  * @method string getJobName() 获取spark作业名
  * @method void setJobName(string $JobName) 设置spark作业名
  */
 class DescribeSparkAppJobRequest extends AbstractModel
 {
     /**
-     * @var string spark作业Id，与JobName同时存在时，JobName无效
+     * @var string spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
      */
     public $JobId;
 
@@ -38,7 +38,7 @@ class DescribeSparkAppJobRequest extends AbstractModel
     public $JobName;
 
     /**
-     * @param string $JobId spark作业Id，与JobName同时存在时，JobName无效
+     * @param string $JobId spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
      * @param string $JobName spark作业名
      */
     function __construct()

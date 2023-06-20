@@ -34,12 +34,12 @@ table-name - String - （过滤条件）数据表名称,形如：table-001。
 table-id - String - （过滤条件）table id形如：12342。
  * @method string getDatasourceConnectionName() 获取指定查询的数据源名称，默认为DataLakeCatalog
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置指定查询的数据源名称，默认为DataLakeCatalog
- * @method string getStartTime() 获取起始时间：用于对更新时间的筛选
- * @method void setStartTime(string $StartTime) 设置起始时间：用于对更新时间的筛选
- * @method string getEndTime() 获取终止时间：用于对更新时间的筛选
- * @method void setEndTime(string $EndTime) 设置终止时间：用于对更新时间的筛选
- * @method string getSort() 获取排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
- * @method void setSort(string $Sort) 设置排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
+ * @method string getStartTime() 获取起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
+ * @method void setStartTime(string $StartTime) 设置起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
+ * @method string getEndTime() 获取终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
+ * @method void setEndTime(string $EndTime) 设置终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
+ * @method string getSort() 获取排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
+ * @method void setSort(string $Sort) 设置排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
  * @method boolean getAsc() 获取排序字段，false：降序（默认）；true：升序
  * @method void setAsc(boolean $Asc) 设置排序字段，false：降序（默认）；true：升序
  * @method string getTableType() 获取table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
@@ -77,17 +77,17 @@ table-id - String - （过滤条件）table id形如：12342。
     public $DatasourceConnectionName;
 
     /**
-     * @var string 起始时间：用于对更新时间的筛选
+     * @var string 起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
      */
     public $StartTime;
 
     /**
-     * @var string 终止时间：用于对更新时间的筛选
+     * @var string 终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
      */
     public $EndTime;
 
     /**
-     * @var string 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
+     * @var string 排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
      */
     public $Sort;
 
@@ -114,9 +114,9 @@ table-id - String - （过滤条件）table id形如：12342。
 table-name - String - （过滤条件）数据表名称,形如：table-001。
 table-id - String - （过滤条件）table id形如：12342。
      * @param string $DatasourceConnectionName 指定查询的数据源名称，默认为DataLakeCatalog
-     * @param string $StartTime 起始时间：用于对更新时间的筛选
-     * @param string $EndTime 终止时间：用于对更新时间的筛选
-     * @param string $Sort 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
+     * @param string $StartTime 起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
+     * @param string $EndTime 终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
+     * @param string $Sort 排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
      * @param boolean $Asc 排序字段，false：降序（默认）；true：升序
      * @param string $TableType table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
      * @param string $TableFormat 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；

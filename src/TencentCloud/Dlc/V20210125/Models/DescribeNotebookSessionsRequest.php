@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortFields(array $SortFields) 设置排序字段（默认按创建时间）
  * @method boolean getAsc() 获取排序字段：true：升序、false：降序（默认）
  * @method void setAsc(boolean $Asc) 设置排序字段：true：升序、false：降序（默认）
- * @method integer getLimit() 获取分页字段
- * @method void setLimit(integer $Limit) 设置分页字段
- * @method integer getOffset() 获取分页字段
- * @method void setOffset(integer $Offset) 设置分页字段
+ * @method integer getLimit() 获取分页参数，默认10
+ * @method void setLimit(integer $Limit) 设置分页参数，默认10
+ * @method integer getOffset() 获取分页参数，默认0
+ * @method void setOffset(integer $Offset) 设置分页参数，默认0
  */
 class DescribeNotebookSessionsRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DescribeNotebookSessionsRequest extends AbstractModel
     public $Asc;
 
     /**
-     * @var integer 分页字段
+     * @var integer 分页参数，默认10
      */
     public $Limit;
 
     /**
-     * @var integer 分页字段
+     * @var integer 分页参数，默认0
      */
     public $Offset;
 
@@ -70,8 +70,8 @@ class DescribeNotebookSessionsRequest extends AbstractModel
      * @param array $State Session状态，包含：not_started（未启动）、starting（已启动）、idle（等待输入）、busy(正在运行statement)、shutting_down（停止）、error（异常）、dead（已退出）、killed（被杀死）、success（正常停止）
      * @param array $SortFields 排序字段（默认按创建时间）
      * @param boolean $Asc 排序字段：true：升序、false：降序（默认）
-     * @param integer $Limit 分页字段
-     * @param integer $Offset 分页字段
+     * @param integer $Limit 分页参数，默认10
+     * @param integer $Offset 分页参数，默认0
      */
     function __construct()
     {

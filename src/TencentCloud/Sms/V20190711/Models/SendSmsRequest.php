@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateParamSet(array $TemplateParamSet) 设置模板参数，若无模板参数，则设置为空。
  * @method string getExtendCode() 获取短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
  * @method void setExtendCode(string $ExtendCode) 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
- * @method string getSessionContext() 获取用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
- * @method void setSessionContext(string $SessionContext) 设置用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
+ * @method string getSessionContext() 获取用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
+ * @method void setSessionContext(string $SessionContext) 设置用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
  * @method string getSenderId() 获取国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。
  * @method void setSenderId(string $SenderId) 设置国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。
  */
@@ -73,7 +73,7 @@ class SendSmsRequest extends AbstractModel
     public $ExtendCode;
 
     /**
-     * @var string 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
+     * @var string 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
      */
     public $SessionContext;
 
@@ -90,7 +90,7 @@ class SendSmsRequest extends AbstractModel
      * @param string $Sign 短信签名内容，使用 UTF-8 编码，必须填写已审核通过的签名，签名信息可登录 [短信控制台](https://console.cloud.tencent.com/smsv2)  查看。注：国内短信为必填参数。
      * @param array $TemplateParamSet 模板参数，若无模板参数，则设置为空。
      * @param string $ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
-     * @param string $SessionContext 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
+     * @param string $SessionContext 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
      * @param string $SenderId 国内短信无senderid，无需填写该项；若需开通国际/港澳台短信senderid，请联系smshelper。
      */
     function __construct()

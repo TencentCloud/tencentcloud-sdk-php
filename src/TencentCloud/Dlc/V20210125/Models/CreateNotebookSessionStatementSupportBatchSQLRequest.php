@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置Session唯一标识
  * @method string getCode() 获取执行的代码
  * @method void setCode(string $Code) 设置执行的代码
- * @method string getKind() 获取类型，当前支持：spark、pyspark、sparkr、sql
- * @method void setKind(string $Kind) 设置类型，当前支持：spark、pyspark、sparkr、sql
+ * @method string getKind() 获取类型，当前支持：sql
+ * @method void setKind(string $Kind) 设置类型，当前支持：sql
  * @method boolean getSaveResult() 获取是否保存运行结果
  * @method void setSaveResult(boolean $SaveResult) 设置是否保存运行结果
  */
@@ -42,7 +42,7 @@ class CreateNotebookSessionStatementSupportBatchSQLRequest extends AbstractModel
     public $Code;
 
     /**
-     * @var string 类型，当前支持：spark、pyspark、sparkr、sql
+     * @var string 类型，当前支持：sql
      */
     public $Kind;
 
@@ -54,7 +54,7 @@ class CreateNotebookSessionStatementSupportBatchSQLRequest extends AbstractModel
     /**
      * @param string $SessionId Session唯一标识
      * @param string $Code 执行的代码
-     * @param string $Kind 类型，当前支持：spark、pyspark、sparkr、sql
+     * @param string $Kind 类型，当前支持：sql
      * @param boolean $SaveResult 是否保存运行结果
      */
     function __construct()

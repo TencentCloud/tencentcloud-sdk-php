@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobName() 获取spark作业名
  * @method void setJobName(string $JobName) 设置spark作业名
- * @method string getCmdArgs() 获取spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
- * @method void setCmdArgs(string $CmdArgs) 设置spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
+ * @method string getCmdArgs() 获取spark作业程序入参，以空格分隔；一般用于周期性调用使用
+ * @method void setCmdArgs(string $CmdArgs) 设置spark作业程序入参，以空格分隔；一般用于周期性调用使用
  */
 class CreateSparkAppTaskRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateSparkAppTaskRequest extends AbstractModel
     public $JobName;
 
     /**
-     * @var string spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
+     * @var string spark作业程序入参，以空格分隔；一般用于周期性调用使用
      */
     public $CmdArgs;
 
     /**
      * @param string $JobName spark作业名
-     * @param string $CmdArgs spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
+     * @param string $CmdArgs spark作业程序入参，以空格分隔；一般用于周期性调用使用
      */
     function __construct()
     {

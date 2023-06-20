@@ -58,6 +58,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreatePrometheusTempResponse CreatePrometheusTemp(Models\CreatePrometheusTempRequest $req) 创建一个云原生Prometheus模板
  * @method Models\CreatePrometheusTemplateResponse CreatePrometheusTemplate(Models\CreatePrometheusTemplateRequest $req) 创建一个云原生Prometheus模板实例
  * @method Models\CreateTKEEdgeClusterResponse CreateTKEEdgeCluster(Models\CreateTKEEdgeClusterRequest $req) 创建边缘计算集群
+ * @method Models\DeleteAddonResponse DeleteAddon(Models\DeleteAddonRequest $req) 删除一个addon
  * @method Models\DeleteBackupStorageLocationResponse DeleteBackupStorageLocation(Models\DeleteBackupStorageLocationRequest $req) 删除备份仓库
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除集群(YUNAPI V3版本)
  * @method Models\DeleteClusterAsGroupsResponse DeleteClusterAsGroups(Models\DeleteClusterAsGroupsRequest $req) 删除集群伸缩组
@@ -85,6 +86,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeletePrometheusTemplateResponse DeletePrometheusTemplate(Models\DeletePrometheusTemplateRequest $req) 删除一个云原生Prometheus配置模板
  * @method Models\DeletePrometheusTemplateSyncResponse DeletePrometheusTemplateSync(Models\DeletePrometheusTemplateSyncRequest $req) 取消模板同步，这将会删除目标中该模板所生产的配置
  * @method Models\DeleteTKEEdgeClusterResponse DeleteTKEEdgeCluster(Models\DeleteTKEEdgeClusterRequest $req) 删除边缘计算集群
+ * @method Models\DescribeAddonResponse DescribeAddon(Models\DescribeAddonRequest $req) 获取addon列表
+ * @method Models\DescribeAddonValuesResponse DescribeAddonValues(Models\DescribeAddonValuesRequest $req) 获取一个addon的参数
  * @method Models\DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(Models\DescribeAvailableClusterVersionRequest $req) 获取集群可以升级的所有版本
  * @method Models\DescribeAvailableTKEEdgeVersionResponse DescribeAvailableTKEEdgeVersion(Models\DescribeAvailableTKEEdgeVersionRequest $req) 边缘计算支持版本和k8s版本
  * @method Models\DescribeBackupStorageLocationsResponse DescribeBackupStorageLocations(Models\DescribeBackupStorageLocationsRequest $req) 查询备份仓库信息
@@ -179,6 +182,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\GetMostSuitableImageCacheResponse GetMostSuitableImageCache(Models\GetMostSuitableImageCacheRequest $req) 根据镜像列表，查询匹配的镜像缓存
  * @method Models\GetTkeAppChartListResponse GetTkeAppChartList(Models\GetTkeAppChartListRequest $req) 获取TKE支持的App列表
  * @method Models\GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(Models\GetUpgradeInstanceProgressRequest $req) 获得节点升级当前的进度
+ * @method Models\InstallAddonResponse InstallAddon(Models\InstallAddonRequest $req) 为目标集群安装一个addon
  * @method Models\InstallEdgeLogAgentResponse InstallEdgeLogAgent(Models\InstallEdgeLogAgentRequest $req) 在tke@edge集群的边缘节点上安装日志采集组件
  * @method Models\InstallLogAgentResponse InstallLogAgent(Models\InstallLogAgentRequest $req) 在TKE集群中安装CLS日志采集组件
  * @method Models\ListClusterInspectionResultsResponse ListClusterInspectionResults(Models\ListClusterInspectionResultsRequest $req) 查询指定集群的巡检结果信息
@@ -212,6 +216,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\UninstallClusterReleaseResponse UninstallClusterRelease(Models\UninstallClusterReleaseRequest $req) 在应用市场中集群删除某个应用
  * @method Models\UninstallEdgeLogAgentResponse UninstallEdgeLogAgent(Models\UninstallEdgeLogAgentRequest $req) 从tke@edge集群边缘节点上卸载日志采集组件
  * @method Models\UninstallLogAgentResponse UninstallLogAgent(Models\UninstallLogAgentRequest $req) 从TKE集群中卸载CLS日志采集组件
+ * @method Models\UpdateAddonResponse UpdateAddon(Models\UpdateAddonRequest $req) 更新一个addon的参数和版本
  * @method Models\UpdateClusterKubeconfigResponse UpdateClusterKubeconfig(Models\UpdateClusterKubeconfigRequest $req) 对集群的Kubeconfig信息进行更新
  * @method Models\UpdateClusterVersionResponse UpdateClusterVersion(Models\UpdateClusterVersionRequest $req) 升级集群 Master 组件到指定版本
  * @method Models\UpdateEKSClusterResponse UpdateEKSCluster(Models\UpdateEKSClusterRequest $req) 修改弹性集群名称等属性 

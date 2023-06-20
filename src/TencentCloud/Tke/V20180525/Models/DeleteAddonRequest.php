@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteSparkApp请求参数结构体
+ * DeleteAddon请求参数结构体
  *
- * @method string getAppName() 获取spark作业名
- * @method void setAppName(string $AppName) 设置spark作业名
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getAddonName() 获取addon名称
+ * @method void setAddonName(string $AddonName) 设置addon名称
  */
-class DeleteSparkAppRequest extends AbstractModel
+class DeleteAddonRequest extends AbstractModel
 {
     /**
-     * @var string spark作业名
+     * @var string 集群ID
      */
-    public $AppName;
+    public $ClusterId;
 
     /**
-     * @param string $AppName spark作业名
+     * @var string addon名称
+     */
+    public $AddonName;
+
+    /**
+     * @param string $ClusterId 集群ID
+     * @param string $AddonName addon名称
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteSparkAppRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("AddonName",$param) and $param["AddonName"] !== null) {
+            $this->AddonName = $param["AddonName"];
         }
     }
 }

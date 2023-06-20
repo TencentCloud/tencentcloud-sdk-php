@@ -198,6 +198,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
  * @method Models\SendMessagesResponse SendMessages(Models\SendMessagesRequest $req) 发送单条消息
 不支持持久topic
  * @method Models\SendMsgResponse SendMsg(Models\SendMsgRequest $req) 此接口仅用于测试发生消息，不能作为现网正式生产使用
+ * @method Models\SendRocketMQMessageResponse SendRocketMQMessage(Models\SendRocketMQMessageRequest $req) 发送RocketMQ消息
  * @method Models\UnbindCmqDeadLetterResponse UnbindCmqDeadLetter(Models\UnbindCmqDeadLetterRequest $req) 解绑cmq死信队列
  */
 

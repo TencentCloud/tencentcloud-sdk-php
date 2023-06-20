@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置待查询表格所属集群ID
  * @method array getTableGroupIds() 获取待查询表格所属表格组ID列表
  * @method void setTableGroupIds(array $TableGroupIds) 设置待查询表格所属表格组ID列表
- * @method array getSelectedTables() 获取待查询表格信息列表
- * @method void setSelectedTables(array $SelectedTables) 设置待查询表格信息列表
+ * @method array getSelectedTables() 获取待查询表格信息列表，用户不用关注，过滤请使用filter
+ * @method void setSelectedTables(array $SelectedTables) 设置待查询表格信息列表，用户不用关注，过滤请使用filter
  * @method array getFilters() 获取过滤条件，本接口支持：TableName，TableInstanceId
  * @method void setFilters(array $Filters) 设置过滤条件，本接口支持：TableName，TableInstanceId
  * @method integer getOffset() 获取查询结果偏移量
@@ -46,7 +46,7 @@ class DescribeTablesRequest extends AbstractModel
     public $TableGroupIds;
 
     /**
-     * @var array 待查询表格信息列表
+     * @var array 待查询表格信息列表，用户不用关注，过滤请使用filter
      */
     public $SelectedTables;
 
@@ -68,7 +68,7 @@ class DescribeTablesRequest extends AbstractModel
     /**
      * @param string $ClusterId 待查询表格所属集群ID
      * @param array $TableGroupIds 待查询表格所属表格组ID列表
-     * @param array $SelectedTables 待查询表格信息列表
+     * @param array $SelectedTables 待查询表格信息列表，用户不用关注，过滤请使用filter
      * @param array $Filters 过滤条件，本接口支持：TableName，TableInstanceId
      * @param integer $Offset 查询结果偏移量
      * @param integer $Limit 查询结果返回记录数量

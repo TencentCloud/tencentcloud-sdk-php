@@ -138,6 +138,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) 设置指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CommonMetrics getCommonMetrics() 获取任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCommonMetrics(CommonMetrics $CommonMetrics) 设置任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SparkMonitorMetrics getSparkMonitorMetrics() 获取spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSparkMonitorMetrics(SparkMonitorMetrics $SparkMonitorMetrics) 设置spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PrestoMonitorMetrics getPrestoMonitorMetrics() 获取presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) 设置presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -349,6 +361,24 @@ class TaskResponseInfo extends AbstractModel
     public $ExecutorMaxNumbers;
 
     /**
+     * @var CommonMetrics 任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CommonMetrics;
+
+    /**
+     * @var SparkMonitorMetrics spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SparkMonitorMetrics;
+
+    /**
+     * @var PrestoMonitorMetrics presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrestoMonitorMetrics;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -407,6 +437,12 @@ class TaskResponseInfo extends AbstractModel
      * @param integer $ExecutorNums 指定executor数量，最小值为1，最大值小于集群规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExecutorMaxNumbers 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CommonMetrics $CommonMetrics 任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkMonitorMetrics $SparkMonitorMetrics spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrestoMonitorMetrics $PrestoMonitorMetrics presto任务指标数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -568,6 +604,21 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("ExecutorMaxNumbers",$param) and $param["ExecutorMaxNumbers"] !== null) {
             $this->ExecutorMaxNumbers = $param["ExecutorMaxNumbers"];
+        }
+
+        if (array_key_exists("CommonMetrics",$param) and $param["CommonMetrics"] !== null) {
+            $this->CommonMetrics = new CommonMetrics();
+            $this->CommonMetrics->deserialize($param["CommonMetrics"]);
+        }
+
+        if (array_key_exists("SparkMonitorMetrics",$param) and $param["SparkMonitorMetrics"] !== null) {
+            $this->SparkMonitorMetrics = new SparkMonitorMetrics();
+            $this->SparkMonitorMetrics->deserialize($param["SparkMonitorMetrics"]);
+        }
+
+        if (array_key_exists("PrestoMonitorMetrics",$param) and $param["PrestoMonitorMetrics"] !== null) {
+            $this->PrestoMonitorMetrics = new PrestoMonitorMetrics();
+            $this->PrestoMonitorMetrics->deserialize($param["PrestoMonitorMetrics"]);
         }
     }
 }

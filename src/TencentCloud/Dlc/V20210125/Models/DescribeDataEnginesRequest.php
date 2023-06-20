@@ -22,20 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String
- * @method void setFilters(array $Filters) 设置滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String
+ * @method array getFilters() 获取过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH）
+ * @method void setFilters(array $Filters) 设置过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH）
  * @method string getSortBy() 获取排序字段，支持如下字段类型，create-time
  * @method void setSortBy(string $SortBy) 设置排序字段，支持如下字段类型，create-time
  * @method string getSorting() 获取排序方式，desc表示正序，asc表示反序， 默认为asc。
@@ -48,8 +36,8 @@ message - String
  * @method void setExcludePublicEngine(boolean $ExcludePublicEngine) 设置是否不返回共享引擎，true不返回共享引擎，false可以返回共享引擎
  * @method array getAccessTypes() 获取参数应该为引擎权限类型，有效类型："USE", "MODIFY", "OPERATE", "MONITOR", "DELETE"
  * @method void setAccessTypes(array $AccessTypes) 设置参数应该为引擎权限类型，有效类型："USE", "MODIFY", "OPERATE", "MONITOR", "DELETE"
- * @method string getEngineExecType() 获取引擎执行任务类型，有效值：SQL/BATCH
- * @method void setEngineExecType(string $EngineExecType) 设置引擎执行任务类型，有效值：SQL/BATCH
+ * @method string getEngineExecType() 获取引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+ * @method void setEngineExecType(string $EngineExecType) 设置引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
  * @method string getEngineType() 获取引擎类型，有效值：spark/presto
  * @method void setEngineType(string $EngineType) 设置引擎类型，有效值：spark/presto
  * @method array getDatasourceConnectionNameSet() 获取网络配置列表，若传入该参数，则返回网络配置关联的计算引擎
@@ -63,13 +51,7 @@ class DescribeDataEnginesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String
+     * @var array 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH）
      */
     public $Filters;
 
@@ -104,7 +86,7 @@ message - String
     public $AccessTypes;
 
     /**
-     * @var string 引擎执行任务类型，有效值：SQL/BATCH
+     * @var string 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
      */
     public $EngineExecType;
 
@@ -120,20 +102,14 @@ message - String
 
     /**
      * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String
+     * @param array $Filters 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH）
      * @param string $SortBy 排序字段，支持如下字段类型，create-time
      * @param string $Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param string $DatasourceConnectionName 已废弃，请使用DatasourceConnectionNameSet
      * @param boolean $ExcludePublicEngine 是否不返回共享引擎，true不返回共享引擎，false可以返回共享引擎
      * @param array $AccessTypes 参数应该为引擎权限类型，有效类型："USE", "MODIFY", "OPERATE", "MONITOR", "DELETE"
-     * @param string $EngineExecType 引擎执行任务类型，有效值：SQL/BATCH
+     * @param string $EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
      * @param string $EngineType 引擎类型，有效值：spark/presto
      * @param array $DatasourceConnectionNameSet 网络配置列表，若传入该参数，则返回网络配置关联的计算引擎
      */

@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntervalDays(integer $IntervalDays) 设置快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCrossRegionsAliveDays() 获取跨地域复制的快照保留时间
+ * @method void setCrossRegionsAliveDays(integer $CrossRegionsAliveDays) 设置跨地域复制的快照保留时间
  */
 class AutoSnapshotPolicyInfo extends AbstractModel
 {
@@ -135,6 +137,11 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $IntervalDays;
 
     /**
+     * @var integer 跨地域复制的快照保留时间
+     */
+    public $CrossRegionsAliveDays;
+
+    /**
      * @param string $AutoSnapshotPolicyId 快照策略ID
      * @param string $PolicyName 快照策略ID
      * @param string $CreationTime 快照策略创建时间
@@ -152,6 +159,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IntervalDays 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CrossRegionsAliveDays 跨地域复制的快照保留时间
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class AutoSnapshotPolicyInfo extends AbstractModel
 
         if (array_key_exists("IntervalDays",$param) and $param["IntervalDays"] !== null) {
             $this->IntervalDays = $param["IntervalDays"];
+        }
+
+        if (array_key_exists("CrossRegionsAliveDays",$param) and $param["CrossRegionsAliveDays"] !== null) {
+            $this->CrossRegionsAliveDays = $param["CrossRegionsAliveDays"];
         }
     }
 }

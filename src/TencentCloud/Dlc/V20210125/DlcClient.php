@@ -31,10 +31,10 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 绑定鉴权策略到用户
  * @method Models\AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(Models\AttachWorkGroupPolicyRequest $req) 绑定鉴权策略到工作组
  * @method Models\BindWorkGroupsToUserResponse BindWorkGroupsToUser(Models\BindWorkGroupsToUserRequest $req) 绑定工作组到用户
- * @method Models\CancelNotebookSessionStatementResponse CancelNotebookSessionStatement(Models\CancelNotebookSessionStatementRequest $req) 本接口（CancelNotebookSessionStatement）用于取消session statement
- * @method Models\CancelNotebookSessionStatementBatchResponse CancelNotebookSessionStatementBatch(Models\CancelNotebookSessionStatementBatchRequest $req) 本接口（CancelNotebookSessionStatementBatch）用于按批取消Session statement。
+ * @method Models\CancelNotebookSessionStatementResponse CancelNotebookSessionStatement(Models\CancelNotebookSessionStatementRequest $req) 本接口（CancelNotebookSessionStatement）用于取消session中执行的任务
+ * @method Models\CancelNotebookSessionStatementBatchResponse CancelNotebookSessionStatementBatch(Models\CancelNotebookSessionStatementBatchRequest $req) 本接口（CancelNotebookSessionStatementBatch）用于批量取消Session 中执行的任务
  * @method Models\CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQL(Models\CancelSparkSessionBatchSQLRequest $req) 本接口（CancelSparkSessionBatchSQL）用于取消Spark SQL批任务。
- * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 本接口（CancelTask），用于取消任务执行
+ * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 本接口（CancelTask），用于取消任务
  * @method Models\CheckLockMetaDataResponse CheckLockMetaData(Models\CheckLockMetaDataRequest $req) 元数据锁检查
  * @method Models\CreateDMSDatabaseResponse CreateDMSDatabase(Models\CreateDMSDatabaseRequest $req) DMS元数据创建库
  * @method Models\CreateDMSTableResponse CreateDMSTable(Models\CreateDMSTableRequest $req) DMS元数据创建表
@@ -43,24 +43,24 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) 该接口（CreateExportTask）用于创建导出任务
  * @method Models\CreateImportTaskResponse CreateImportTask(Models\CreateImportTaskRequest $req) 该接口（CreateImportTask）用于创建导入任务
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) 创建托管存储内表（该接口已废弃）
- * @method Models\CreateNotebookSessionResponse CreateNotebookSession(Models\CreateNotebookSessionRequest $req) 本接口（CreateNotebookSession）用于创建notebook livy session
- * @method Models\CreateNotebookSessionStatementResponse CreateNotebookSessionStatement(Models\CreateNotebookSessionStatementRequest $req) 本接口（CreateNotebookSessionStatement）用于创建session statement
- * @method Models\CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(Models\CreateNotebookSessionStatementSupportBatchSQLRequest $req) 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建Statement批量运行SQL任务。
+ * @method Models\CreateNotebookSessionResponse CreateNotebookSession(Models\CreateNotebookSessionRequest $req) 本接口（CreateNotebookSession）用于创建交互式session（notebook）
+ * @method Models\CreateNotebookSessionStatementResponse CreateNotebookSessionStatement(Models\CreateNotebookSessionStatementRequest $req) 本接口（CreateNotebookSessionStatement）用于在session中执行代码片段
+ * @method Models\CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(Models\CreateNotebookSessionStatementSupportBatchSQLRequest $req) 本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建交互式session并执行SQL任务
  * @method Models\CreateResultDownloadResponse CreateResultDownload(Models\CreateResultDownloadRequest $req) 创建查询结果下载任务
  * @method Models\CreateScriptResponse CreateScript(Models\CreateScriptRequest $req) 该接口（CreateScript）用于创建sql脚本。
- * @method Models\CreateSparkAppResponse CreateSparkApp(Models\CreateSparkAppRequest $req) 创建spark应用
- * @method Models\CreateSparkAppTaskResponse CreateSparkAppTask(Models\CreateSparkAppTaskRequest $req) 创建spark任务
+ * @method Models\CreateSparkAppResponse CreateSparkApp(Models\CreateSparkAppRequest $req) 创建spark作业
+ * @method Models\CreateSparkAppTaskResponse CreateSparkAppTask(Models\CreateSparkAppTaskRequest $req) 启动Spark作业
  * @method Models\CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQL(Models\CreateSparkSessionBatchSQLRequest $req) 本接口（CreateSparkSessionBatchSQL）用于提交Spark SQL批任务。
  * @method Models\CreateStoreLocationResponse CreateStoreLocation(Models\CreateStoreLocationRequest $req) 该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口（CreateTable）用于生成建表SQL。
- * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 本接口（CreateTask）用于创建sql查询任务。（推荐使用CreateTasks接口）
- * @method Models\CreateTasksResponse CreateTasks(Models\CreateTasksRequest $req) 本接口（CreateTasks），用于批量创建任务
+ * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 本接口（CreateTask）用于创建并执行SQL任务。（推荐使用CreateTasks接口）
+ * @method Models\CreateTasksResponse CreateTasks(Models\CreateTasksRequest $req) 本接口（CreateTasks），用于批量创建并执行SQL任务
  * @method Models\CreateTasksInOrderResponse CreateTasksInOrder(Models\CreateTasksInOrderRequest $req) 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) 创建工作组
  * @method Models\DeleteNotebookSessionResponse DeleteNotebookSession(Models\DeleteNotebookSessionRequest $req) 本接口（DeleteNotebookSession）用于删除notebook livy session
  * @method Models\DeleteScriptResponse DeleteScript(Models\DeleteScriptRequest $req) 该接口（DeleteScript）用于删除sql脚本。
- * @method Models\DeleteSparkAppResponse DeleteSparkApp(Models\DeleteSparkAppRequest $req) 删除spark应用
+ * @method Models\DeleteSparkAppResponse DeleteSparkApp(Models\DeleteSparkAppRequest $req) 删除spark作业
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(Models\DeleteUsersFromWorkGroupRequest $req) 从工作组中删除用户
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) 删除工作组
@@ -68,23 +68,23 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDMSPartitionsResponse DescribeDMSPartitions(Models\DescribeDMSPartitionsRequest $req) DMS元数据获取分区
  * @method Models\DescribeDMSTableResponse DescribeDMSTable(Models\DescribeDMSTableRequest $req) DMS元数据获取表
  * @method Models\DescribeDMSTablesResponse DescribeDMSTables(Models\DescribeDMSTablesRequest $req) DMS元数据获取表列表
- * @method Models\DescribeDataEnginesResponse DescribeDataEngines(Models\DescribeDataEnginesRequest $req) 本接口（DescribeDataEngines）用于获取DataEngines信息列表
+ * @method Models\DescribeDataEnginesResponse DescribeDataEngines(Models\DescribeDataEnginesRequest $req) 本接口（DescribeDataEngines）用于查询DataEngines信息列表
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
- * @method Models\DescribeEngineUsageInfoResponse DescribeEngineUsageInfo(Models\DescribeEngineUsageInfoRequest $req) 本接口根据引擎ID获取数据引擎资源使用情况
- * @method Models\DescribeForbiddenTableProResponse DescribeForbiddenTablePro(Models\DescribeForbiddenTableProRequest $req) 本接口（DescribeForbiddenTablePro）用于获取被禁用的表属性列表
+ * @method Models\DescribeEngineUsageInfoResponse DescribeEngineUsageInfo(Models\DescribeEngineUsageInfoRequest $req) 本接口根据引擎ID查询数据引擎资源使用情况
+ * @method Models\DescribeForbiddenTableProResponse DescribeForbiddenTablePro(Models\DescribeForbiddenTableProRequest $req) 本接口（DescribeForbiddenTablePro）用于查询被禁用的表属性列表（新）
  * @method Models\DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummary(Models\DescribeLakeFsDirSummaryRequest $req) 查询托管存储指定目录的Summary
  * @method Models\DescribeLakeFsInfoResponse DescribeLakeFsInfo(Models\DescribeLakeFsInfoRequest $req) 查询用户的托管存储信息
- * @method Models\DescribeNotebookSessionResponse DescribeNotebookSession(Models\DescribeNotebookSessionRequest $req) 本接口（DescribeNotebookSession）用于获取notebook livy session详情信息
- * @method Models\DescribeNotebookSessionLogResponse DescribeNotebookSessionLog(Models\DescribeNotebookSessionLogRequest $req) 本接口（DescribeNotebookSessionLog）用于获取notebook livy session日志
- * @method Models\DescribeNotebookSessionStatementResponse DescribeNotebookSessionStatement(Models\DescribeNotebookSessionStatementRequest $req) 本接口（DescribeNotebookSessionStatement）用于获取session statement信息
+ * @method Models\DescribeNotebookSessionResponse DescribeNotebookSession(Models\DescribeNotebookSessionRequest $req) 本接口（DescribeNotebookSession）用于查询交互式 session详情信息
+ * @method Models\DescribeNotebookSessionLogResponse DescribeNotebookSessionLog(Models\DescribeNotebookSessionLogRequest $req) 本接口（DescribeNotebookSessionLog）用于查询交互式 session日志
+ * @method Models\DescribeNotebookSessionStatementResponse DescribeNotebookSessionStatement(Models\DescribeNotebookSessionStatementRequest $req) 本接口（DescribeNotebookSessionStatement）用于查询session 中执行任务的详情
  * @method Models\DescribeNotebookSessionStatementSqlResultResponse DescribeNotebookSessionStatementSqlResult(Models\DescribeNotebookSessionStatementSqlResultRequest $req) 本接口（DescribeNotebookSessionStatementSqlResult）用于获取statement运行结果。
- * @method Models\DescribeNotebookSessionStatementsResponse DescribeNotebookSessionStatements(Models\DescribeNotebookSessionStatementsRequest $req) 本接口（DescribeNotebookSessionStatements）用于获取Session Statement列表。
- * @method Models\DescribeNotebookSessionsResponse DescribeNotebookSessions(Models\DescribeNotebookSessionsRequest $req) 本接口（DescribeNotebookSessions）用于获取notebook livy session列表
+ * @method Models\DescribeNotebookSessionStatementsResponse DescribeNotebookSessionStatements(Models\DescribeNotebookSessionStatementsRequest $req) 本接口（DescribeNotebookSessionStatements）用于查询Session中执行的任务列表
+ * @method Models\DescribeNotebookSessionsResponse DescribeNotebookSessions(Models\DescribeNotebookSessionsRequest $req) 本接口（DescribeNotebookSessions）用于查询交互式 session列表
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) 查询结果下载任务
- * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于获取所有SQL查询。
- * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) 查询具体的spark应用
- * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) 获取spark应用列表。
- * @method Models\DescribeSparkAppTasksResponse DescribeSparkAppTasks(Models\DescribeSparkAppTasksRequest $req) 查询spark应用的运行任务实例列表
+ * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于查询SQL脚本列表
+ * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) 查询spark作业信息
+ * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) 查询spark作业列表
+ * @method Models\DescribeSparkAppTasksResponse DescribeSparkAppTasks(Models\DescribeSparkAppTasksRequest $req) 查询Spark作业的运行任务列表
  * @method Models\DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLog(Models\DescribeSparkSessionBatchSqlLogRequest $req) 本接口（DescribeSparkSessionBatchSqlLog）用于获取SparkSQL批任务日志
  * @method Models\DescribeStoreLocationResponse DescribeStoreLocation(Models\DescribeStoreLocationRequest $req) 查询计算结果存储位置。
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 本接口（DescribeTable），用于查询单个表的详细信息。
@@ -100,15 +100,15 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DropDMSPartitionsResponse DropDMSPartitions(Models\DropDMSPartitionsRequest $req) DMS元数据删除分区
  * @method Models\DropDMSTableResponse DropDMSTable(Models\DropDMSTableRequest $req) DMS元数据删除表
  * @method Models\GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(Models\GenerateCreateMangedTableSqlRequest $req) 生成创建托管表语句
- * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark-jar日志列表
+ * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
  * @method Models\LockMetaDataResponse LockMetaData(Models\LockMetaDataRequest $req) 元数据锁
  * @method Models\ModifyGovernEventRuleResponse ModifyGovernEventRule(Models\ModifyGovernEventRuleRequest $req) 修改数据治理事件阈值
- * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) 更新spark应用
+ * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) 更新spark作业
  * @method Models\ModifySparkAppBatchResponse ModifySparkAppBatch(Models\ModifySparkAppBatchRequest $req) 本接口（ModifySparkAppBatch）用于批量修改Spark作业参数配置
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
  * @method Models\ReportHeartbeatMetaDataResponse ReportHeartbeatMetaData(Models\ReportHeartbeatMetaDataRequest $req) 上报元数据心跳
- * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) 本接口用于控制暂停或恢复数据引擎
+ * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) 本接口用于控制挂起或启动数据引擎
  * @method Models\SwitchDataEngineResponse SwitchDataEngine(Models\SwitchDataEngineRequest $req) 切换主备集群
  * @method Models\UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUser(Models\UnbindWorkGroupsFromUserRequest $req) 解绑用户上的用户组
  * @method Models\UnlockMetaDataResponse UnlockMetaData(Models\UnlockMetaDataRequest $req) 元数据解锁

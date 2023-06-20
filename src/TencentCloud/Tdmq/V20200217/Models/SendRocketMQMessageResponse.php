@@ -14,36 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcaplusdb\V20190823\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ImportSnapshots返回参数结构体
+ * SendRocketMQMessage返回参数结构体
  *
- * @method string getTaskId() 获取TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
+ * @method boolean getResult() 获取发送结果
+ * @method void setResult(boolean $Result) 设置发送结果
+ * @method string getMsgId() 获取消息ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApplicationId() 获取ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplicationId(string $ApplicationId) 设置ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+ * @method void setMsgId(string $MsgId) 设置消息ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ImportSnapshotsResponse extends AbstractModel
+class SendRocketMQMessageResponse extends AbstractModel
 {
     /**
-     * @var string TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var boolean 发送结果
      */
-    public $TaskId;
+    public $Result;
 
     /**
-     * @var string ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+     * @var string 消息ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ApplicationId;
+    public $MsgId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,9 +48,8 @@ class ImportSnapshotsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApplicationId ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+     * @param boolean $Result 发送结果
+     * @param string $MsgId 消息ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,12 +66,12 @@ class ImportSnapshotsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("MsgId",$param) and $param["MsgId"] !== null) {
+            $this->MsgId = $param["MsgId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

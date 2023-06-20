@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEngineUsageInfo请求参数结构体
  *
- * @method string getDataEngineId() 获取House Id
- * @method void setDataEngineId(string $DataEngineId) 设置House Id
+ * @method string getDataEngineId() 获取数据引擎ID
+ * @method void setDataEngineId(string $DataEngineId) 设置数据引擎ID
  */
 class DescribeEngineUsageInfoRequest extends AbstractModel
 {
     /**
-     * @var string House Id
+     * @var string 数据引擎ID
      */
     public $DataEngineId;
 
     /**
-     * @param string $DataEngineId House Id
+     * @param string $DataEngineId 数据引擎ID
      */
     function __construct()
     {

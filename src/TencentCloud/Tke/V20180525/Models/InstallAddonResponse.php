@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteSparkApp请求参数结构体
+ * InstallAddon返回参数结构体
  *
- * @method string getAppName() 获取spark作业名
- * @method void setAppName(string $AppName) 设置spark作业名
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteSparkAppRequest extends AbstractModel
+class InstallAddonResponse extends AbstractModel
 {
     /**
-     * @var string spark作业名
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $AppName;
+    public $RequestId;
 
     /**
-     * @param string $AppName spark作业名
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteSparkAppRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

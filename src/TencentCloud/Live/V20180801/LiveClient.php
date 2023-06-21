@@ -160,6 +160,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLivePadTemplateResponse DescribeLivePadTemplate(Models\DescribeLivePadTemplateRequest $req) 获取单个直播垫片模板
  * @method Models\DescribeLivePadTemplatesResponse DescribeLivePadTemplates(Models\DescribeLivePadTemplatesRequest $req) 获取直播垫片模板。
  * @method Models\DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(Models\DescribeLivePlayAuthKeyRequest $req) 查询播放鉴权key。
+ * @method Models\DescribeLivePullStreamTaskStatusResponse DescribeLivePullStreamTaskStatus(Models\DescribeLivePullStreamTaskStatusRequest $req) 查询直播拉流任务状态信息。
  * @method Models\DescribeLivePullStreamTasksResponse DescribeLivePullStreamTasks(Models\DescribeLivePullStreamTasksRequest $req) 查询使用 CreateLivePullStreamTask 接口创建的直播拉流任务。
 排序方式：默认按更新时间 倒序排列。
  * @method Models\DescribeLivePushAuthKeyResponse DescribeLivePushAuthKey(Models\DescribeLivePushAuthKeyRequest $req) 查询直播推流鉴权key

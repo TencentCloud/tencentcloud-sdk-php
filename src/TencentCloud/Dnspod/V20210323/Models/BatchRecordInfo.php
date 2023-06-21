@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置记录权重
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置备注信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchRecordInfo extends AbstractModel
 {
@@ -151,6 +155,12 @@ class BatchRecordInfo extends AbstractModel
     public $Weight;
 
     /**
+     * @var string 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param integer $RecordId 记录 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubDomain 子域名(主机记录)。
@@ -175,6 +185,8 @@ class BatchRecordInfo extends AbstractModel
      * @param integer $MX 记录的MX权重
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 记录权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -240,6 +252,10 @@ class BatchRecordInfo extends AbstractModel
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicMessageHeap(array $TopicMessageHeap) 设置Topic 消息堆积/占用磁盘排行
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBrokerIp() 获取Broker Ip 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBrokerIp(array $BrokerIp) 设置Broker Ip 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBrokerTopicData() 获取单个broker 节点 Topic占用的数据大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBrokerTopicData(array $BrokerTopicData) 设置单个broker 节点 Topic占用的数据大小
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicFlowRankingResult extends AbstractModel
 {
@@ -48,9 +56,25 @@ class TopicFlowRankingResult extends AbstractModel
     public $TopicMessageHeap;
 
     /**
+     * @var array Broker Ip 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BrokerIp;
+
+    /**
+     * @var array 单个broker 节点 Topic占用的数据大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BrokerTopicData;
+
+    /**
      * @param array $TopicFlow Topic 流量数组
      * @param array $ConsumeSpeed 消费者组消费速度排行速度
      * @param array $TopicMessageHeap Topic 消息堆积/占用磁盘排行
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BrokerIp Broker Ip 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BrokerTopicData 单个broker 节点 Topic占用的数据大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -90,6 +114,19 @@ class TopicFlowRankingResult extends AbstractModel
                 $obj = new TopicMessageHeapRanking();
                 $obj->deserialize($value);
                 array_push($this->TopicMessageHeap, $obj);
+            }
+        }
+
+        if (array_key_exists("BrokerIp",$param) and $param["BrokerIp"] !== null) {
+            $this->BrokerIp = $param["BrokerIp"];
+        }
+
+        if (array_key_exists("BrokerTopicData",$param) and $param["BrokerTopicData"] !== null) {
+            $this->BrokerTopicData = [];
+            foreach ($param["BrokerTopicData"] as $key => $value){
+                $obj = new BrokerTopicData();
+                $obj->deserialize($value);
+                array_push($this->BrokerTopicData, $obj);
             }
         }
     }

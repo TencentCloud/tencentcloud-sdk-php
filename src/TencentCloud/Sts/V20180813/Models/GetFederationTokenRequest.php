@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取您可以自定义调用方英文名称，由字母组成。
  * @method void setName(string $Name) 设置您可以自定义调用方英文名称，由字母组成。
- * @method string getPolicy() 获取授予该临时证书权限的CAM策略
+ * @method string getPolicy() 获取授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
 3、该参数需要做urlencode。
- * @method void setPolicy(string $Policy) 设置授予该临时证书权限的CAM策略
+ * @method void setPolicy(string $Policy) 设置授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
@@ -43,7 +43,7 @@ class GetFederationTokenRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 授予该临时证书权限的CAM策略
+     * @var string 授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
@@ -58,7 +58,7 @@ class GetFederationTokenRequest extends AbstractModel
 
     /**
      * @param string $Name 您可以自定义调用方英文名称，由字母组成。
-     * @param string $Policy 授予该临时证书权限的CAM策略
+     * @param string $Policy 授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。

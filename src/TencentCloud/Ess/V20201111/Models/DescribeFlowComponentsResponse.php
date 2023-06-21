@@ -14,37 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sts\V20180813\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AssumeRoleWithWebIdentity返回参数结构体
+ * DescribeFlowComponents返回参数结构体
  *
- * @method integer getExpiredTime() 获取临时访问凭证过期时间(时间戳)
- * @method void setExpiredTime(integer $ExpiredTime) 设置临时访问凭证过期时间(时间戳)
- * @method string getExpiration() 获取临时访问凭证过期时间
- * @method void setExpiration(string $Expiration) 设置临时访问凭证过期时间
- * @method Credentials getCredentials() 获取临时访问凭证
- * @method void setCredentials(Credentials $Credentials) 设置临时访问凭证
+ * @method array getRecipientComponentInfos() 获取流程关联的填写控件信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecipientComponentInfos(array $RecipientComponentInfos) 设置流程关联的填写控件信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AssumeRoleWithWebIdentityResponse extends AbstractModel
+class DescribeFlowComponentsResponse extends AbstractModel
 {
     /**
-     * @var integer 临时访问凭证过期时间(时间戳)
+     * @var array 流程关联的填写控件信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ExpiredTime;
-
-    /**
-     * @var string 临时访问凭证过期时间
-     */
-    public $Expiration;
-
-    /**
-     * @var Credentials 临时访问凭证
-     */
-    public $Credentials;
+    public $RecipientComponentInfos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +41,8 @@ class AssumeRoleWithWebIdentityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ExpiredTime 临时访问凭证过期时间(时间戳)
-     * @param string $Expiration 临时访问凭证过期时间
-     * @param Credentials $Credentials 临时访问凭证
+     * @param array $RecipientComponentInfos 流程关联的填写控件信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,17 +58,13 @@ class AssumeRoleWithWebIdentityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
-        }
-
-        if (array_key_exists("Expiration",$param) and $param["Expiration"] !== null) {
-            $this->Expiration = $param["Expiration"];
-        }
-
-        if (array_key_exists("Credentials",$param) and $param["Credentials"] !== null) {
-            $this->Credentials = new Credentials();
-            $this->Credentials->deserialize($param["Credentials"]);
+        if (array_key_exists("RecipientComponentInfos",$param) and $param["RecipientComponentInfos"] !== null) {
+            $this->RecipientComponentInfos = [];
+            foreach ($param["RecipientComponentInfos"] as $key => $value){
+                $obj = new RecipientComponentInfo();
+                $obj->deserialize($value);
+                array_push($this->RecipientComponentInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

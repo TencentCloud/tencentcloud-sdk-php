@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取媒体库名称，最多 50 个字符
  * @method void setName(string $Name) 设置媒体库名称，最多 50 个字符
- * @method string getBucketName() 获取存储桶全名，新建后不可更改
- * @method void setBucketName(string $BucketName) 设置存储桶全名，新建后不可更改
- * @method string getBucketRegion() 获取存储桶所在地域，新建后不可更改
- * @method void setBucketRegion(string $BucketRegion) 设置存储桶所在地域，新建后不可更改
- * @method LibraryExtension getLibraryExtension() 获取媒体库配置项，部分参数新建后不可更改
- * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置媒体库配置项，部分参数新建后不可更改
  * @method string getRemark() 获取备注，最多 250 个字符
  * @method void setRemark(string $Remark) 设置备注，最多 250 个字符
+ * @method string getBucketName() 获取存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+ * @method void setBucketName(string $BucketName) 设置存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+ * @method string getBucketRegion() 获取存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+ * @method void setBucketRegion(string $BucketRegion) 设置存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+ * @method LibraryExtension getLibraryExtension() 获取媒体库配置项，部分参数新建后不可更改
+ * @method void setLibraryExtension(LibraryExtension $LibraryExtension) 设置媒体库配置项，部分参数新建后不可更改
  */
 class CreateLibraryRequest extends AbstractModel
 {
@@ -39,12 +39,17 @@ class CreateLibraryRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 存储桶全名，新建后不可更改
+     * @var string 备注，最多 250 个字符
+     */
+    public $Remark;
+
+    /**
+     * @var string 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
      */
     public $BucketName;
 
     /**
-     * @var string 存储桶所在地域，新建后不可更改
+     * @var string 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
      */
     public $BucketRegion;
 
@@ -54,16 +59,11 @@ class CreateLibraryRequest extends AbstractModel
     public $LibraryExtension;
 
     /**
-     * @var string 备注，最多 250 个字符
-     */
-    public $Remark;
-
-    /**
      * @param string $Name 媒体库名称，最多 50 个字符
-     * @param string $BucketName 存储桶全名，新建后不可更改
-     * @param string $BucketRegion 存储桶所在地域，新建后不可更改
-     * @param LibraryExtension $LibraryExtension 媒体库配置项，部分参数新建后不可更改
      * @param string $Remark 备注，最多 250 个字符
+     * @param string $BucketName 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+     * @param string $BucketRegion 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+     * @param LibraryExtension $LibraryExtension 媒体库配置项，部分参数新建后不可更改
      */
     function __construct()
     {
@@ -82,6 +82,10 @@ class CreateLibraryRequest extends AbstractModel
             $this->Name = $param["Name"];
         }
 
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
         if (array_key_exists("BucketName",$param) and $param["BucketName"] !== null) {
             $this->BucketName = $param["BucketName"];
         }
@@ -93,10 +97,6 @@ class CreateLibraryRequest extends AbstractModel
         if (array_key_exists("LibraryExtension",$param) and $param["LibraryExtension"] !== null) {
             $this->LibraryExtension = new LibraryExtension();
             $this->LibraryExtension->deserialize($param["LibraryExtension"]);
-        }
-
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
         }
     }
 }

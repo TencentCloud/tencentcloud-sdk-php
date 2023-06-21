@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginDate(string $BeginDate) 设置排行起始日期
  * @method string getEndDate() 获取排行结束日期
  * @method void setEndDate(string $EndDate) 设置排行结束日期
+ * @method string getBrokerIp() 获取Broker IP 地址
+ * @method void setBrokerIp(string $BrokerIp) 设置Broker IP 地址
  */
 class DescribeTopicFlowRankingRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTopicFlowRankingRequest extends AbstractModel
     public $EndDate;
 
     /**
+     * @var string Broker IP 地址
+     */
+    public $BrokerIp;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $RankingType 排行类别(PRO-Topic生产流量/CON-Topic消费流量)
      * @param string $BeginDate 排行起始日期
      * @param string $EndDate 排行结束日期
+     * @param string $BrokerIp Broker IP 地址
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTopicFlowRankingRequest extends AbstractModel
 
         if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
             $this->EndDate = $param["EndDate"];
+        }
+
+        if (array_key_exists("BrokerIp",$param) and $param["BrokerIp"] !== null) {
+            $this->BrokerIp = $param["BrokerIp"];
         }
     }
 }

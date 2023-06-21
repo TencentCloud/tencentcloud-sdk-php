@@ -124,6 +124,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置订单更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourceIds() 获取资源id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceIds(array $ResourceIds) 设置资源id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentDealNewElem extends AbstractModel
 {
@@ -292,6 +296,12 @@ class AgentDealNewElem extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var array 资源id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceIds;
+
+    /**
      * @param string $DealId 订单自增 ID【请勿依赖该字段作为唯一标识】
      * @param string $DealName 订单号【订单唯一键】
      * @param string $GoodsCategoryId 商品类型 ID
@@ -343,6 +353,8 @@ class AgentDealNewElem extends AbstractModel
      * @param string $PaymentMethod 付款方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourceIds 资源id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -474,6 +486,10 @@ class AgentDealNewElem extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
+            $this->ResourceIds = $param["ResourceIds"];
         }
     }
 }

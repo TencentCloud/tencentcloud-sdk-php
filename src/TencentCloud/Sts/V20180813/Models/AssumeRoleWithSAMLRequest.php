@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleArn(string $RoleArn) 设置角色访问描述名
  * @method string getRoleSessionName() 获取会话名称
  * @method void setRoleSessionName(string $RoleSessionName) 设置会话名称
- * @method integer getDurationSeconds() 获取指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
- * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+ * @method integer getDurationSeconds() 获取指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+ * @method void setDurationSeconds(integer $DurationSeconds) 设置指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
  */
 class AssumeRoleWithSAMLRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AssumeRoleWithSAMLRequest extends AbstractModel
     public $RoleSessionName;
 
     /**
-     * @var integer 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+     * @var integer 指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     public $DurationSeconds;
 
@@ -63,7 +63,7 @@ class AssumeRoleWithSAMLRequest extends AbstractModel
      * @param string $PrincipalArn 扮演者访问描述名
      * @param string $RoleArn 角色访问描述名
      * @param string $RoleSessionName 会话名称
-     * @param integer $DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+     * @param integer $DurationSeconds 指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     function __construct()
     {

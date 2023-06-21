@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sts\V20180813\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AssumeRoleWithWebIdentity返回参数结构体
+ * DescribeDBTmpInstances返回参数结构体
  *
- * @method integer getExpiredTime() 获取临时访问凭证过期时间(时间戳)
- * @method void setExpiredTime(integer $ExpiredTime) 设置临时访问凭证过期时间(时间戳)
- * @method string getExpiration() 获取临时访问凭证过期时间
- * @method void setExpiration(string $Expiration) 设置临时访问凭证过期时间
- * @method Credentials getCredentials() 获取临时访问凭证
- * @method void setCredentials(Credentials $Credentials) 设置临时访问凭证
+ * @method array getTmpInstances() 获取临时实例列表
+ * @method void setTmpInstances(array $TmpInstances) 设置临时实例列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AssumeRoleWithWebIdentityResponse extends AbstractModel
+class DescribeDBTmpInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 临时访问凭证过期时间(时间戳)
+     * @var array 临时实例列表
      */
-    public $ExpiredTime;
-
-    /**
-     * @var string 临时访问凭证过期时间
-     */
-    public $Expiration;
-
-    /**
-     * @var Credentials 临时访问凭证
-     */
-    public $Credentials;
+    public $TmpInstances;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class AssumeRoleWithWebIdentityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ExpiredTime 临时访问凭证过期时间(时间戳)
-     * @param string $Expiration 临时访问凭证过期时间
-     * @param Credentials $Credentials 临时访问凭证
+     * @param array $TmpInstances 临时实例列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,17 +54,13 @@ class AssumeRoleWithWebIdentityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
-            $this->ExpiredTime = $param["ExpiredTime"];
-        }
-
-        if (array_key_exists("Expiration",$param) and $param["Expiration"] !== null) {
-            $this->Expiration = $param["Expiration"];
-        }
-
-        if (array_key_exists("Credentials",$param) and $param["Credentials"] !== null) {
-            $this->Credentials = new Credentials();
-            $this->Credentials->deserialize($param["Credentials"]);
+        if (array_key_exists("TmpInstances",$param) and $param["TmpInstances"] !== null) {
+            $this->TmpInstances = [];
+            foreach ($param["TmpInstances"] as $key => $value){
+                $obj = new TmpInstance();
+                $obj->deserialize($value);
+                array_push($this->TmpInstances, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

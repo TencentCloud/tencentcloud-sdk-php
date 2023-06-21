@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssumeRole返回参数结构体
  *
- * @method Credentials getCredentials() 获取临时安全证书
- * @method void setCredentials(Credentials $Credentials) 设置临时安全证书
- * @method integer getExpiredTime() 获取证书无效的时间，返回 Unix 时间戳，精确到秒
- * @method void setExpiredTime(integer $ExpiredTime) 设置证书无效的时间，返回 Unix 时间戳，精确到秒
- * @method string getExpiration() 获取证书无效的时间，以 iso8601 格式的 UTC 时间表示
- * @method void setExpiration(string $Expiration) 设置证书无效的时间，以 iso8601 格式的 UTC 时间表示
+ * @method Credentials getCredentials() 获取临时访问凭证
+ * @method void setCredentials(Credentials $Credentials) 设置临时访问凭证
+ * @method integer getExpiredTime() 获取临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
+ * @method void setExpiredTime(integer $ExpiredTime) 设置临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
+ * @method string getExpiration() 获取临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
+ * @method void setExpiration(string $Expiration) 设置临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class AssumeRoleResponse extends AbstractModel
 {
     /**
-     * @var Credentials 临时安全证书
+     * @var Credentials 临时访问凭证
      */
     public $Credentials;
 
     /**
-     * @var integer 证书无效的时间，返回 Unix 时间戳，精确到秒
+     * @var integer 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
      */
     public $ExpiredTime;
 
     /**
-     * @var string 证书无效的时间，以 iso8601 格式的 UTC 时间表示
+     * @var string 临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
      */
     public $Expiration;
 
@@ -52,9 +52,9 @@ class AssumeRoleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Credentials $Credentials 临时安全证书
-     * @param integer $ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒
-     * @param string $Expiration 证书无效的时间，以 iso8601 格式的 UTC 时间表示
+     * @param Credentials $Credentials 临时访问凭证
+     * @param integer $ExpiredTime 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
+     * @param string $Expiration 临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

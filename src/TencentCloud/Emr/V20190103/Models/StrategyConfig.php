@@ -26,13 +26,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollingRestartSwitch(integer $RollingRestartSwitch) 设置0:关闭滚动重启
 1:开启滚动启动
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBatchSize() 获取滚动重启每批次的重启数量
+ * @method integer getBatchSize() 获取滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBatchSize(integer $BatchSize) 设置滚动重启每批次的重启数量
+ * @method void setBatchSize(integer $BatchSize) 设置滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimeWait() 获取滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+ * @method integer getTimeWait() 获取滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeWait(integer $TimeWait) 设置滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+ * @method void setTimeWait(integer $TimeWait) 设置滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDealOnFail() 获取操作失败处理策略，0:失败阻塞, 1:失败自动跳过
 注意：此字段可能返回 null，表示取不到有效值。
@@ -49,13 +49,13 @@ class StrategyConfig extends AbstractModel
     public $RollingRestartSwitch;
 
     /**
-     * @var integer 滚动重启每批次的重启数量
+     * @var integer 滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchSize;
 
     /**
-     * @var integer 滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+     * @var integer 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeWait;
@@ -70,9 +70,9 @@ class StrategyConfig extends AbstractModel
      * @param integer $RollingRestartSwitch 0:关闭滚动重启
 1:开启滚动启动
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BatchSize 滚动重启每批次的重启数量
+     * @param integer $BatchSize 滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TimeWait 滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+     * @param integer $TimeWait 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DealOnFail 操作失败处理策略，0:失败阻塞, 1:失败自动跳过
 注意：此字段可能返回 null，表示取不到有效值。

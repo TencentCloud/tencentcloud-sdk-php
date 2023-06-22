@@ -27,6 +27,7 @@ use TencentCloud\Yinsuda\V20220527\Models as Models;
  * @method Models\BatchDescribeKTVMusicDetailsResponse BatchDescribeKTVMusicDetails(Models\BatchDescribeKTVMusicDetailsRequest $req) 批量获取歌曲详细信息，包括：歌词下载链接、播放凭证、音高数据下载链接信息等。
  * @method Models\CreateKTVRobotResponse CreateKTVRobot(Models\CreateKTVRobotRequest $req) 创建机器人，支持进入 RTC 房间，播放曲库歌曲。
  * @method Models\DescribeKTVMatchMusicsResponse DescribeKTVMatchMusics(Models\DescribeKTVMatchMusicsRequest $req) 根据输入的规则匹配曲库中的歌曲。
+ * @method Models\DescribeKTVMusicAccompanySegmentUrlResponse DescribeKTVMusicAccompanySegmentUrl(Models\DescribeKTVMusicAccompanySegmentUrlRequest $req) 获取歌曲伴奏片段链接，可用于抢唱
  * @method Models\DescribeKTVMusicsByTagResponse DescribeKTVMusicsByTag(Models\DescribeKTVMusicsByTagRequest $req) 通过标签过滤歌曲列表。
  * @method Models\DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(Models\DescribeKTVPlaylistDetailRequest $req) 根据歌单 Id 获取歌单详情。
  * @method Models\DescribeKTVPlaylistsResponse DescribeKTVPlaylists(Models\DescribeKTVPlaylistsRequest $req) 获取歌单列表。

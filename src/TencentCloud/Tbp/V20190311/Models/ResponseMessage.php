@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 从TBP-RTS服务v1.3版本起，机器人以消息组列表的形式响应，消息组列表GroupList包含多组消息，用户根据需要对部分或全部消息组进行组合使用。
  *
- * @method Group getGroupList() 获取消息组列表。	
+ * @method array getGroupList() 获取消息组列表。	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupList(Group $GroupList) 设置消息组列表。	
+ * @method void setGroupList(array $GroupList) 设置消息组列表。	
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResponseMessage extends AbstractModel
 {
     /**
-     * @var Group 消息组列表。	
+     * @var array 消息组列表。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupList;
 
     /**
-     * @param Group $GroupList 消息组列表。	
+     * @param array $GroupList 消息组列表。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -51,8 +51,12 @@ class ResponseMessage extends AbstractModel
             return;
         }
         if (array_key_exists("GroupList",$param) and $param["GroupList"] !== null) {
-            $this->GroupList = new Group();
-            $this->GroupList->deserialize($param["GroupList"]);
+            $this->GroupList = [];
+            foreach ($param["GroupList"] as $key => $value){
+                $obj = new Group();
+                $obj->deserialize($value);
+                array_push($this->GroupList, $obj);
+            }
         }
     }
 }

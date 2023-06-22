@@ -34,7 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
-<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务；</li>
+<li>QualityInspect：音画质检测任务。</li>
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -49,7 +50,8 @@ use TencentCloud\Common\AbstractModel;
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
-<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务；</li>
+<li>QualityInspect：音画质检测任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -140,6 +142,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) 设置获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method QualityInspectTask getQualityInspectTask() 获取音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualityInspectTask(QualityInspectTask $QualityInspectTask) 设置音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -160,7 +166,8 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
-<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务；</li>
+<li>QualityInspect：音画质检测任务。</li>
      */
     public $TaskType;
 
@@ -302,6 +309,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $DescribeFileAttributesTask;
 
     /**
+     * @var QualityInspectTask 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QualityInspectTask;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -321,7 +334,8 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
 <li>ExtractTraceWatermark：提取溯源水印任务；</li>
-<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务；</li>
+<li>QualityInspect：音画质检测任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -366,6 +380,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask 该字段已无效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeFileAttributesTask $DescribeFileAttributesTask 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityInspectTask $QualityInspectTask 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -495,6 +511,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("DescribeFileAttributesTask",$param) and $param["DescribeFileAttributesTask"] !== null) {
             $this->DescribeFileAttributesTask = new DescribeFileAttributesTask();
             $this->DescribeFileAttributesTask->deserialize($param["DescribeFileAttributesTask"]);
+        }
+
+        if (array_key_exists("QualityInspectTask",$param) and $param["QualityInspectTask"] !== null) {
+            $this->QualityInspectTask = new QualityInspectTask();
+            $this->QualityInspectTask->deserialize($param["QualityInspectTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReadOnlyDBInstance请求参数结构体
  *
- * @method string getSpecCode() 获取售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
- * @method void setSpecCode(string $SpecCode) 设置售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+ * @method string getSpecCode() 获取售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
+ * @method void setSpecCode(string $SpecCode) 设置售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
  * @method integer getStorage() 获取实例容量大小，单位：GB。
  * @method void setStorage(integer $Storage) 设置实例容量大小，单位：GB。
  * @method integer getInstanceCount() 获取一次性购买的实例数量。取值1-100
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
  * @method string getDBVersion() 获取【废弃】不再需要指定，内核版本号与主实例保持一致
  * @method void setDBVersion(string $DBVersion) 设置【废弃】不再需要指定，内核版本号与主实例保持一致
- * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。
+ * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
  * @method integer getAutoVoucher() 获取是否自动使用代金券。1（是），0（否），默认不使用。
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券。1（是），0（否），默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * @var string 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
      */
     public $SpecCode;
 
@@ -104,7 +104,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $DBVersion;
 
     /**
-     * @var string 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。
+     * @var string 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      */
     public $InstanceChargeType;
 
@@ -164,7 +164,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
      * @param integer $Storage 实例容量大小，单位：GB。
      * @param integer $InstanceCount 一次性购买的实例数量。取值1-100
      * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
@@ -172,7 +172,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      * @param integer $ProjectId 项目ID。
      * @param string $DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
-     * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。如果主实例为后付费，只读实例必须也为后付费。
+     * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      * @param integer $AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；

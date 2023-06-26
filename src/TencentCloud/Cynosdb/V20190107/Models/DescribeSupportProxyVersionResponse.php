@@ -14,30 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tbaas\V20180416\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetBcosTransList返回参数结构体
+ * DescribeSupportProxyVersion返回参数结构体
  *
- * @method integer getTotalCount() 获取总记录数
- * @method void setTotalCount(integer $TotalCount) 设置总记录数
- * @method array getList() 获取返回数据列表
- * @method void setList(array $List) 设置返回数据列表
+ * @method array getSupportProxyVersions() 获取支持的数据库代理版本集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportProxyVersions(array $SupportProxyVersions) 设置支持的数据库代理版本集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCurrentProxyVersion() 获取当前proxy版本号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置当前proxy版本号
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetBcosTransListResponse extends AbstractModel
+class DescribeSupportProxyVersionResponse extends AbstractModel
 {
     /**
-     * @var integer 总记录数
+     * @var array 支持的数据库代理版本集合
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TotalCount;
+    public $SupportProxyVersions;
 
     /**
-     * @var array 返回数据列表
+     * @var string 当前proxy版本号
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $List;
+    public $CurrentProxyVersion;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +51,10 @@ class GetBcosTransListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总记录数
-     * @param array $List 返回数据列表
+     * @param array $SupportProxyVersions 支持的数据库代理版本集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CurrentProxyVersion 当前proxy版本号
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +70,12 @@ class GetBcosTransListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("SupportProxyVersions",$param) and $param["SupportProxyVersions"] !== null) {
+            $this->SupportProxyVersions = $param["SupportProxyVersions"];
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = [];
-            foreach ($param["List"] as $key => $value){
-                $obj = new BcosTransInfo();
-                $obj->deserialize($value);
-                array_push($this->List, $obj);
-            }
+        if (array_key_exists("CurrentProxyVersion",$param) and $param["CurrentProxyVersion"] !== null) {
+            $this->CurrentProxyVersion = $param["CurrentProxyVersion"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置数据库名称
  * @method string getOrderByType() 获取排序规则（desc-降序，asc-升序），默认desc
  * @method void setOrderByType(string $OrderByType) 设置排序规则（desc-降序，asc-升序），默认desc
+ * @method string getEncryption() 获取是否已开启TDE加密，enable-已加密，disable-未加密
+ * @method void setEncryption(string $Encryption) 设置是否已开启TDE加密，enable-已加密，disable-未加密
  */
 class DescribeDBsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeDBsRequest extends AbstractModel
     public $OrderByType;
 
     /**
+     * @var string 是否已开启TDE加密，enable-已加密，disable-未加密
+     */
+    public $Encryption;
+
+    /**
      * @param array $InstanceIdSet 实例ID
      * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
      * @param integer $Offset 分页返回，页编号，默认值为第0页
      * @param string $Name 数据库名称
      * @param string $OrderByType 排序规则（desc-降序，asc-升序），默认desc
+     * @param string $Encryption 是否已开启TDE加密，enable-已加密，disable-未加密
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeDBsRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = $param["Encryption"];
         }
     }
 }

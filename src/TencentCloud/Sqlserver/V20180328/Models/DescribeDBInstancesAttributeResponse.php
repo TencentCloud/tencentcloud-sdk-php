@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockedThreshold(integer $BlockedThreshold) 设置阻塞进程阈值，单位毫秒
  * @method integer getEventSaveDays() 获取慢SQL、阻塞、死锁扩展事件文件保留时长
  * @method void setEventSaveDays(integer $EventSaveDays) 设置慢SQL、阻塞、死锁扩展事件文件保留时长
+ * @method TDEConfigAttribute getTDEConfig() 获取TDE透明数据加密配置
+ * @method void setTDEConfig(TDEConfigAttribute $TDEConfig) 设置TDE透明数据加密配置
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -82,6 +84,11 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
     public $EventSaveDays;
 
     /**
+     * @var TDEConfigAttribute TDE透明数据加密配置
+     */
+    public $TDEConfig;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +102,7 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @param string $RegularBackupStartTime 定期备份开始日期，格式-YYYY-MM-DD 默认当前日期
      * @param integer $BlockedThreshold 阻塞进程阈值，单位毫秒
      * @param integer $EventSaveDays 慢SQL、阻塞、死锁扩展事件文件保留时长
+     * @param TDEConfigAttribute $TDEConfig TDE透明数据加密配置
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +148,11 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
 
         if (array_key_exists("EventSaveDays",$param) and $param["EventSaveDays"] !== null) {
             $this->EventSaveDays = $param["EventSaveDays"];
+        }
+
+        if (array_key_exists("TDEConfig",$param) and $param["TDEConfig"] !== null) {
+            $this->TDEConfig = new TDEConfigAttribute();
+            $this->TDEConfig->deserialize($param["TDEConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

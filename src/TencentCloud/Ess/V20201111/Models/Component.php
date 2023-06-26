@@ -110,7 +110,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
 
 ComponentType为SIGN_SEAL类型时，支持以下参数：
 1.PageRanges：PageRange的数组，通过PageRanges属性设置该印章在PDF所有页面上盖章（适用于标书在所有页面盖章的情况）
-参数样例： "ComponentExtra":"{\"PageRanges\":[\"PageRange\":{\"BeginPage\":1,\"EndPage\":-1}]}"
+参数样例："ComponentExtra":"{\"PageRanges\":[{\"BeginPage\":1,\"EndPage\":-1}]}"
  * @method void setComponentExtra(string $ComponentExtra) 设置扩展参数：
 为JSON格式。
 
@@ -139,7 +139,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
 
 ComponentType为SIGN_SEAL类型时，支持以下参数：
 1.PageRanges：PageRange的数组，通过PageRanges属性设置该印章在PDF所有页面上盖章（适用于标书在所有页面盖章的情况）
-参数样例： "ComponentExtra":"{\"PageRanges\":[\"PageRange\":{\"BeginPage\":1,\"EndPage\":-1}]}"
+参数样例："ComponentExtra":"{\"PageRanges\":[{\"BeginPage\":1,\"EndPage\":-1}]}"
  * @method boolean getIsFormType() 获取是否是表单域类型，默认不false-不是
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFormType(boolean $IsFormType) 设置是否是表单域类型，默认不false-不是
@@ -433,7 +433,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
 
 ComponentType为SIGN_SEAL类型时，支持以下参数：
 1.PageRanges：PageRange的数组，通过PageRanges属性设置该印章在PDF所有页面上盖章（适用于标书在所有页面盖章的情况）
-参数样例： "ComponentExtra":"{\"PageRanges\":[\"PageRange\":{\"BeginPage\":1,\"EndPage\":-1}]}"
+参数样例："ComponentExtra":"{\"PageRanges\":[{\"BeginPage\":1,\"EndPage\":-1}]}"
      */
     public $ComponentExtra;
 
@@ -638,7 +638,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
 
 ComponentType为SIGN_SEAL类型时，支持以下参数：
 1.PageRanges：PageRange的数组，通过PageRanges属性设置该印章在PDF所有页面上盖章（适用于标书在所有页面盖章的情况）
-参数样例： "ComponentExtra":"{\"PageRanges\":[\"PageRange\":{\"BeginPage\":1,\"EndPage\":-1}]}"
+参数样例："ComponentExtra":"{\"PageRanges\":[{\"BeginPage\":1,\"EndPage\":-1}]}"
      * @param boolean $IsFormType 是否是表单域类型，默认不false-不是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：

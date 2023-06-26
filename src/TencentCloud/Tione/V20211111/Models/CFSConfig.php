@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置cfs的实例的ID
  * @method string getPath() 获取存储的路径
  * @method void setPath(string $Path) 设置存储的路径
+ * @method string getMountType() 获取cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMountType(string $MountType) 设置cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocol() 获取协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocol(string $Protocol) 设置协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CFSConfig extends AbstractModel
 {
@@ -38,8 +46,24 @@ class CFSConfig extends AbstractModel
     public $Path;
 
     /**
+     * @var string cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MountType;
+
+    /**
+     * @var string 协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Protocol;
+
+    /**
      * @param string $Id cfs的实例的ID
      * @param string $Path 存储的路径
+     * @param string $MountType cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Protocol 协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +84,14 @@ class CFSConfig extends AbstractModel
 
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("MountType",$param) and $param["MountType"] !== null) {
+            $this->MountType = $param["MountType"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

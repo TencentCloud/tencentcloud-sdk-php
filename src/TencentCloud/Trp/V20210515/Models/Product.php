@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 商品信息
  *
+ * @method string getMerchantId() 获取商户标识码
+ * @method void setMerchantId(string $MerchantId) 设置商户标识码
+ * @method string getName() 获取商品名称
+ * @method void setName(string $Name) 设置商品名称
  * @method string getProductId() 获取商品id
  * @method void setProductId(string $ProductId) 设置商品id
  * @method integer getCorpId() 获取企业id
  * @method void setCorpId(integer $CorpId) 设置企业id
- * @method string getMerchantId() 获取商户标识码
- * @method void setMerchantId(string $MerchantId) 设置商户标识码
  * @method string getProductCode() 获取商品编号
  * @method void setProductCode(string $ProductCode) 设置商品编号
- * @method string getName() 获取商品名称
- * @method void setName(string $Name) 设置商品名称
  * @method string getSpecification() 获取商品规格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecification(string $Specification) 设置商品规格
@@ -56,6 +56,16 @@ use TencentCloud\Common\AbstractModel;
 class Product extends AbstractModel
 {
     /**
+     * @var string 商户标识码
+     */
+    public $MerchantId;
+
+    /**
+     * @var string 商品名称
+     */
+    public $Name;
+
+    /**
      * @var string 商品id
      */
     public $ProductId;
@@ -66,19 +76,9 @@ class Product extends AbstractModel
     public $CorpId;
 
     /**
-     * @var string 商户标识码
-     */
-    public $MerchantId;
-
-    /**
      * @var string 商品编号
      */
     public $ProductCode;
-
-    /**
-     * @var string 商品名称
-     */
-    public $Name;
 
     /**
      * @var string 商品规格
@@ -120,11 +120,11 @@ class Product extends AbstractModel
     public $MerchantName;
 
     /**
+     * @param string $MerchantId 商户标识码
+     * @param string $Name 商品名称
      * @param string $ProductId 商品id
      * @param integer $CorpId 企业id
-     * @param string $MerchantId 商户标识码
      * @param string $ProductCode 商品编号
-     * @param string $Name 商品名称
      * @param string $Specification 商品规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
@@ -150,6 +150,14 @@ class Product extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
+            $this->MerchantId = $param["MerchantId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
         }
@@ -158,16 +166,8 @@ class Product extends AbstractModel
             $this->CorpId = $param["CorpId"];
         }
 
-        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
-            $this->MerchantId = $param["MerchantId"];
-        }
-
         if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
             $this->ProductCode = $param["ProductCode"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("Specification",$param) and $param["Specification"] !== null) {

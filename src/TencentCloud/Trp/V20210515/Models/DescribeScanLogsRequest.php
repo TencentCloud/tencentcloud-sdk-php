@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanLogs请求参数结构体
  *
- * @method string getCode() 获取码
- * @method void setCode(string $Code) 设置码
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
+ * @method integer getPageSize() 获取分页数量
+ * @method void setPageSize(integer $PageSize) 设置分页数量
+ * @method integer getPageNumber() 获取当前分页
+ * @method void setPageNumber(integer $PageNumber) 设置当前分页
+ * @method string getCode() 获取安心码
+ * @method void setCode(string $Code) 设置安心码
+ * @method string getOpenid() 获取小程序用户ID
+ * @method void setOpenid(string $Openid) 设置小程序用户ID
  */
 class DescribeScanLogsRequest extends AbstractModel
 {
-    /**
-     * @var string 码
-     */
-    public $Code;
-
     /**
      * @var integer 企业ID
      */
     public $CorpId;
 
     /**
-     * @param string $Code 码
+     * @var integer 分页数量
+     */
+    public $PageSize;
+
+    /**
+     * @var integer 当前分页
+     */
+    public $PageNumber;
+
+    /**
+     * @var string 安心码
+     */
+    public $Code;
+
+    /**
+     * @var string 小程序用户ID
+     */
+    public $Openid;
+
+    /**
      * @param integer $CorpId 企业ID
+     * @param integer $PageSize 分页数量
+     * @param integer $PageNumber 当前分页
+     * @param string $Code 安心码
+     * @param string $Openid 小程序用户ID
      */
     function __construct()
     {
@@ -54,12 +78,24 @@ class DescribeScanLogsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
+            $this->CorpId = $param["CorpId"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
+
         if (array_key_exists("Code",$param) and $param["Code"] !== null) {
             $this->Code = $param["Code"];
         }
 
-        if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
-            $this->CorpId = $param["CorpId"];
+        if (array_key_exists("Openid",$param) and $param["Openid"] !== null) {
+            $this->Openid = $param["Openid"];
         }
     }
 }

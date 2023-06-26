@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 扫码明细
  *
  * @method integer getLogId() 获取行ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogId(integer $LogId) 设置行ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOpenid() 获取微信openid
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenid(string $Openid) 设置微信openid
@@ -84,12 +82,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchId(string $BatchId) 设置批次ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getType() 获取扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+ * @method void setType(integer $Type) 设置扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+ * @method string getMerchantName() 获取商户名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMerchantName(string $MerchantName) 设置商户名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductName() 获取产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductName(string $ProductName) 设置产品名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScanLog extends AbstractModel
 {
     /**
      * @var integer 行ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogId;
 
@@ -184,8 +191,24 @@ class ScanLog extends AbstractModel
     public $BatchId;
 
     /**
-     * @param integer $LogId 行ID
+     * @var integer 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+     */
+    public $Type;
+
+    /**
+     * @var string 商户名称
 注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MerchantName;
+
+    /**
+     * @var string 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductName;
+
+    /**
+     * @param integer $LogId 行ID
      * @param string $Openid 微信openid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nickname 微信昵称
@@ -215,6 +238,11 @@ class ScanLog extends AbstractModel
      * @param integer $First 首次扫码 0:否, 1:是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BatchId 批次ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Type 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+     * @param string $MerchantName 商户名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductName 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +320,18 @@ class ScanLog extends AbstractModel
 
         if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
             $this->BatchId = $param["BatchId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MerchantName",$param) and $param["MerchantName"] !== null) {
+            $this->MerchantName = $param["MerchantName"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

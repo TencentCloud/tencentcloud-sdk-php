@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdid\V20210519\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetDidDetail请求参数结构体
+ * DescribeSupportProxyVersion请求参数结构体
  *
- * @method string getDid() 获取DID号码的具体信息
- * @method void setDid(string $Did) 设置DID号码的具体信息
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getProxyGroupId() 获取数据库代理组ID
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID
  */
-class GetDidDetailRequest extends AbstractModel
+class DescribeSupportProxyVersionRequest extends AbstractModel
 {
     /**
-     * @var string DID号码的具体信息
+     * @var string 集群ID
      */
-    public $Did;
+    public $ClusterId;
 
     /**
-     * @param string $Did DID号码的具体信息
+     * @var string 数据库代理组ID
+     */
+    public $ProxyGroupId;
+
+    /**
+     * @param string $ClusterId 集群ID
+     * @param string $ProxyGroupId 数据库代理组ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class GetDidDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Did",$param) and $param["Did"] !== null) {
-            $this->Did = $param["Did"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
+            $this->ProxyGroupId = $param["ProxyGroupId"];
         }
     }
 }

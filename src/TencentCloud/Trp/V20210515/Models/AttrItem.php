@@ -18,8 +18,9 @@ namespace TencentCloud\Trp\V20210515\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 溯源数据项 Type 的枚举值
+ * 通用属性
 
+Type 的枚举值
 text:文本类型, longtext:长文本类型, banner:单图片类型, image:多图片类型, video:视频类型, mp:小程序类型
 
 具体组合如下
@@ -44,22 +45,18 @@ text:文本类型,
 longtext:长文本类型, banner:单图片类型, image:多图片类型,
 video:视频类型,
 mp:小程序类型
- * @method array getValues() 获取多个值
- * @method void setValues(array $Values) 设置多个值
  * @method boolean getReadOnly() 获取只读
  * @method void setReadOnly(boolean $ReadOnly) 设置只读
  * @method boolean getHidden() 获取扫码展示
  * @method void setHidden(boolean $Hidden) 设置扫码展示
+ * @method array getValues() 获取多个值
+ * @method void setValues(array $Values) 设置多个值
  * @method string getKey() 获取类型标识
  * @method void setKey(string $Key) 设置类型标识
  * @method string getExt() 获取扩展字段
  * @method void setExt(string $Ext) 设置扩展字段
- * @method array getAttrs() 获取额外属性
- * @method void setAttrs(array $Attrs) 设置额外属性
- * @method array getList() 获取子页面，只读
- * @method void setList(array $List) 设置子页面，只读
  */
-class TraceItem extends AbstractModel
+class AttrItem extends AbstractModel
 {
     /**
      * @var string 字段名称
@@ -81,11 +78,6 @@ mp:小程序类型
     public $Type;
 
     /**
-     * @var array 多个值
-     */
-    public $Values;
-
-    /**
      * @var boolean 只读
      */
     public $ReadOnly;
@@ -94,6 +86,11 @@ mp:小程序类型
      * @var boolean 扫码展示
      */
     public $Hidden;
+
+    /**
+     * @var array 多个值
+     */
+    public $Values;
 
     /**
      * @var string 类型标识
@@ -106,16 +103,6 @@ mp:小程序类型
     public $Ext;
 
     /**
-     * @var array 额外属性
-     */
-    public $Attrs;
-
-    /**
-     * @var array 子页面，只读
-     */
-    public $List;
-
-    /**
      * @param string $Name 字段名称
      * @param string $Value 字段值
      * @param string $Type 字段类型
@@ -123,13 +110,11 @@ text:文本类型,
 longtext:长文本类型, banner:单图片类型, image:多图片类型,
 video:视频类型,
 mp:小程序类型
-     * @param array $Values 多个值
      * @param boolean $ReadOnly 只读
      * @param boolean $Hidden 扫码展示
+     * @param array $Values 多个值
      * @param string $Key 类型标识
      * @param string $Ext 扩展字段
-     * @param array $Attrs 额外属性
-     * @param array $List 子页面，只读
      */
     function __construct()
     {
@@ -156,10 +141,6 @@ mp:小程序类型
             $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
-        }
-
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
             $this->ReadOnly = $param["ReadOnly"];
         }
@@ -168,30 +149,16 @@ mp:小程序类型
             $this->Hidden = $param["Hidden"];
         }
 
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
+        }
+
         if (array_key_exists("Key",$param) and $param["Key"] !== null) {
             $this->Key = $param["Key"];
         }
 
         if (array_key_exists("Ext",$param) and $param["Ext"] !== null) {
             $this->Ext = $param["Ext"];
-        }
-
-        if (array_key_exists("Attrs",$param) and $param["Attrs"] !== null) {
-            $this->Attrs = [];
-            foreach ($param["Attrs"] as $key => $value){
-                $obj = new TraceItem();
-                $obj->deserialize($value);
-                array_push($this->Attrs, $obj);
-            }
-        }
-
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = [];
-            foreach ($param["List"] as $key => $value){
-                $obj = new TraceData();
-                $obj->deserialize($value);
-                array_push($this->List, $obj);
-            }
         }
     }
 }

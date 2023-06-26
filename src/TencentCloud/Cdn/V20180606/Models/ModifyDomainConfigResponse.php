@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdid\V20210519\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DownCpt请求参数结构体
+ * ModifyDomainConfig返回参数结构体
  *
- * @method integer getCptIndex() 获取Cpt索引
- * @method void setCptIndex(integer $CptIndex) 设置Cpt索引
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DownCptRequest extends AbstractModel
+class ModifyDomainConfigResponse extends AbstractModel
 {
     /**
-     * @var integer Cpt索引
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $CptIndex;
+    public $RequestId;
 
     /**
-     * @param integer $CptIndex Cpt索引
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DownCptRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CptIndex",$param) and $param["CptIndex"] !== null) {
-            $this->CptIndex = $param["CptIndex"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

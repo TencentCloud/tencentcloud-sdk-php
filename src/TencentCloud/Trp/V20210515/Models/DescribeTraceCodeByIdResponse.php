@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method TraceCode getTraceCode() 获取无
  * @method void setTraceCode(TraceCode $TraceCode) 设置无
+ * @method array getCodePath() 获取码路径，如level是2，则为 [1级, 2级]
+ * @method void setCodePath(array $CodePath) 设置码路径，如level是2，则为 [1级, 2级]
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeTraceCodeByIdResponse extends AbstractModel
     public $TraceCode;
 
     /**
+     * @var array 码路径，如level是2，则为 [1级, 2级]
+     */
+    public $CodePath;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param TraceCode $TraceCode 无
+     * @param array $CodePath 码路径，如level是2，则为 [1级, 2级]
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +65,10 @@ class DescribeTraceCodeByIdResponse extends AbstractModel
         if (array_key_exists("TraceCode",$param) and $param["TraceCode"] !== null) {
             $this->TraceCode = new TraceCode();
             $this->TraceCode->deserialize($param["TraceCode"]);
+        }
+
+        if (array_key_exists("CodePath",$param) and $param["CodePath"] !== null) {
+            $this->CodePath = $param["CodePath"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

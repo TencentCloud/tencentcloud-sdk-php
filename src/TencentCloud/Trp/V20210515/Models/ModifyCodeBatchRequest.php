@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method string getBatchCode() 获取批次编码，业务字段不判断唯一性
  * @method void setBatchCode(string $BatchCode) 设置批次编码，业务字段不判断唯一性
+ * @method string getValidDate() 获取有效期
+ * @method void setValidDate(string $ValidDate) 设置有效期
+ * @method string getProductionDate() 获取生产日期
+ * @method void setProductionDate(string $ProductionDate) 设置生产日期
  */
 class ModifyCodeBatchRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class ModifyCodeBatchRequest extends AbstractModel
     public $BatchCode;
 
     /**
+     * @var string 有效期
+     */
+    public $ValidDate;
+
+    /**
+     * @var string 生产日期
+     */
+    public $ProductionDate;
+
+    /**
      * @param string $BatchId 批次ID
      * @param integer $CorpId 企业ID
      * @param integer $Status 状态 0: 未激活 1: 已激活 -1: 已冻结
@@ -88,6 +102,8 @@ class ModifyCodeBatchRequest extends AbstractModel
      * @param string $ProductId 商品ID
      * @param string $Remark 备注
      * @param string $BatchCode 批次编码，业务字段不判断唯一性
+     * @param string $ValidDate 有效期
+     * @param string $ProductionDate 生产日期
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class ModifyCodeBatchRequest extends AbstractModel
 
         if (array_key_exists("BatchCode",$param) and $param["BatchCode"] !== null) {
             $this->BatchCode = $param["BatchCode"];
+        }
+
+        if (array_key_exists("ValidDate",$param) and $param["ValidDate"] !== null) {
+            $this->ValidDate = $param["ValidDate"];
+        }
+
+        if (array_key_exists("ProductionDate",$param) and $param["ProductionDate"] !== null) {
+            $this->ProductionDate = $param["ProductionDate"];
         }
     }
 }

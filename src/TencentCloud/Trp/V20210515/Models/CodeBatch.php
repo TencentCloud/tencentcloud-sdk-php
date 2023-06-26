@@ -88,6 +88,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJob(Job $Job) 设置调度任务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductionDate() 获取生产日期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductionDate(string $ProductionDate) 设置生产日期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValidDate() 获取有效期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValidDate(string $ValidDate) 设置有效期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAttrs() 获取扩展属性
+ * @method void setAttrs(array $Attrs) 设置扩展属性
  */
 class CodeBatch extends AbstractModel
 {
@@ -194,6 +204,23 @@ class CodeBatch extends AbstractModel
     public $Job;
 
     /**
+     * @var string 生产日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductionDate;
+
+    /**
+     * @var string 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValidDate;
+
+    /**
+     * @var array 扩展属性
+     */
+    public $Attrs;
+
+    /**
      * @param string $BatchId 批次号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CorpId 企业ID
@@ -228,6 +255,11 @@ class CodeBatch extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Job $Job 调度任务
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductionDate 生产日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ValidDate 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Attrs 扩展属性
      */
     function __construct()
     {
@@ -310,6 +342,23 @@ class CodeBatch extends AbstractModel
         if (array_key_exists("Job",$param) and $param["Job"] !== null) {
             $this->Job = new Job();
             $this->Job->deserialize($param["Job"]);
+        }
+
+        if (array_key_exists("ProductionDate",$param) and $param["ProductionDate"] !== null) {
+            $this->ProductionDate = $param["ProductionDate"];
+        }
+
+        if (array_key_exists("ValidDate",$param) and $param["ValidDate"] !== null) {
+            $this->ValidDate = $param["ValidDate"];
+        }
+
+        if (array_key_exists("Attrs",$param) and $param["Attrs"] !== null) {
+            $this->Attrs = [];
+            foreach ($param["Attrs"] as $key => $value){
+                $obj = new AttrItem();
+                $obj->deserialize($value);
+                array_push($this->Attrs, $obj);
+            }
         }
     }
 }

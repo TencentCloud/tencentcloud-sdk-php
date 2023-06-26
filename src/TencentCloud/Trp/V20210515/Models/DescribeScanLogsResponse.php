@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeScanLogs返回参数结构体
  *
  * @method array getProducts() 获取【弃用】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProducts(array $Products) 设置【弃用】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取条数
  * @method void setTotalCount(integer $TotalCount) 设置条数
  * @method array getScanLogs() 获取扫描记录
@@ -35,7 +33,7 @@ class DescribeScanLogsResponse extends AbstractModel
 {
     /**
      * @var array 【弃用】
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Products;
 
@@ -56,7 +54,6 @@ class DescribeScanLogsResponse extends AbstractModel
 
     /**
      * @param array $Products 【弃用】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 条数
      * @param array $ScanLogs 扫描记录
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

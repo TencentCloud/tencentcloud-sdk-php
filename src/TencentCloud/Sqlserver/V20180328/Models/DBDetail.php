@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccounts(array $Accounts) 设置数据库账号权限信息
  * @method string getInternalStatus() 获取内部状态。ONLINE表示运行中
  * @method void setInternalStatus(string $InternalStatus) 设置内部状态。ONLINE表示运行中
+ * @method string getEncryption() 获取是否已开启TDE加密，enable-已加密，disable-未加密
+ * @method void setEncryption(string $Encryption) 设置是否已开启TDE加密，enable-已加密，disable-未加密
  */
 class DBDetail extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DBDetail extends AbstractModel
     public $InternalStatus;
 
     /**
+     * @var string 是否已开启TDE加密，enable-已加密，disable-未加密
+     */
+    public $Encryption;
+
+    /**
      * @param string $Name 数据库名称
      * @param string $Charset 字符集
      * @param string $Remark 备注
@@ -80,6 +87,7 @@ class DBDetail extends AbstractModel
      * @param integer $Status 数据库状态。1--创建中， 2--运行中， 3--修改中，-1--删除中
      * @param array $Accounts 数据库账号权限信息
      * @param string $InternalStatus 内部状态。ONLINE表示运行中
+     * @param string $Encryption 是否已开启TDE加密，enable-已加密，disable-未加密
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DBDetail extends AbstractModel
 
         if (array_key_exists("InternalStatus",$param) and $param["InternalStatus"] !== null) {
             $this->InternalStatus = $param["InternalStatus"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = $param["Encryption"];
         }
     }
 }

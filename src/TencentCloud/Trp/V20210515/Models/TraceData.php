@@ -40,8 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTraceTime(string $TraceTime) 设置溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTraceItems() 获取无
- * @method void setTraceItems(array $TraceItems) 设置无
  * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
@@ -64,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取溯源阶段状态 0: 无效, 1: 有效
  * @method void setStatus(integer $Status) 设置溯源阶段状态 0: 无效, 1: 有效
+ * @method array getTraceItems() 获取无
+ * @method void setTraceItems(array $TraceItems) 设置无
  */
 class TraceData extends AbstractModel
 {
@@ -110,11 +110,6 @@ class TraceData extends AbstractModel
     public $TraceTime;
 
     /**
-     * @var array 无
-     */
-    public $TraceItems;
-
-    /**
      * @var string 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -150,6 +145,11 @@ class TraceData extends AbstractModel
     public $Status;
 
     /**
+     * @var array 无
+     */
+    public $TraceItems;
+
+    /**
      * @param string $TraceId 溯源ID
      * @param integer $CorpId 企业ID
      * @param integer $Type 码类型 0: 批次, 1: 码, 2: 生产任务
@@ -160,7 +160,6 @@ class TraceData extends AbstractModel
      * @param string $PhaseName 溯源环节名称
      * @param string $TraceTime 溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TraceItems 无
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChainStatus 上链状态 0: 未上链 1: 上链中 2: 已上链 -1: 异常
@@ -172,6 +171,7 @@ class TraceData extends AbstractModel
      * @param PhaseData $PhaseData 溯源阶段配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 溯源阶段状态 0: 无效, 1: 有效
+     * @param array $TraceItems 无
      */
     function __construct()
     {
@@ -218,15 +218,6 @@ class TraceData extends AbstractModel
             $this->TraceTime = $param["TraceTime"];
         }
 
-        if (array_key_exists("TraceItems",$param) and $param["TraceItems"] !== null) {
-            $this->TraceItems = [];
-            foreach ($param["TraceItems"] as $key => $value){
-                $obj = new TraceItem();
-                $obj->deserialize($value);
-                array_push($this->TraceItems, $obj);
-            }
-        }
-
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
         }
@@ -251,6 +242,15 @@ class TraceData extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("TraceItems",$param) and $param["TraceItems"] !== null) {
+            $this->TraceItems = [];
+            foreach ($param["TraceItems"] as $key => $value){
+                $obj = new TraceItem();
+                $obj->deserialize($value);
+                array_push($this->TraceItems, $obj);
+            }
         }
     }
 }

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloneId(string $CloneId) 设置克隆批次ID，同时会复制溯源信息
  * @method string getBatchCode() 获取批次编号，业务字段不判断唯一性
  * @method void setBatchCode(string $BatchCode) 设置批次编号，业务字段不判断唯一性
+ * @method string getValidDate() 获取有效期
+ * @method void setValidDate(string $ValidDate) 设置有效期
+ * @method string getProductionDate() 获取生产日期
+ * @method void setProductionDate(string $ProductionDate) 设置生产日期
  */
 class CreateCodeBatchRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class CreateCodeBatchRequest extends AbstractModel
     public $BatchCode;
 
     /**
+     * @var string 有效期
+     */
+    public $ValidDate;
+
+    /**
+     * @var string 生产日期
+     */
+    public $ProductionDate;
+
+    /**
      * @param integer $CorpId 企业ID
      * @param string $MerchantId 商户ID
      * @param string $ProductId 产品ID
@@ -96,6 +110,8 @@ class CreateCodeBatchRequest extends AbstractModel
      * @param string $MpTpl 模版ID，或者活动ID
      * @param string $CloneId 克隆批次ID，同时会复制溯源信息
      * @param string $BatchCode 批次编号，业务字段不判断唯一性
+     * @param string $ValidDate 有效期
+     * @param string $ProductionDate 生产日期
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class CreateCodeBatchRequest extends AbstractModel
 
         if (array_key_exists("BatchCode",$param) and $param["BatchCode"] !== null) {
             $this->BatchCode = $param["BatchCode"];
+        }
+
+        if (array_key_exists("ValidDate",$param) and $param["ValidDate"] !== null) {
+            $this->ValidDate = $param["ValidDate"];
+        }
+
+        if (array_key_exists("ProductionDate",$param) and $param["ProductionDate"] !== null) {
+            $this->ProductionDate = $param["ProductionDate"];
         }
     }
 }

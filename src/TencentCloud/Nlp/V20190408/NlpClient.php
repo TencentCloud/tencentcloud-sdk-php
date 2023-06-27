@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Nlp\V20190408\Models as Models;
 
 /**
+ * @method Models\AnalyzeSentimentResponse AnalyzeSentiment(Models\AnalyzeSentimentRequest $req) 情感分析接口能够对带有情感色彩的主观性文本进行分析、处理、归纳和推理，识别出用户的情感倾向，是积极、中性还是消极，并且提供各自概率。
  * @method Models\AutoSummarizationResponse AutoSummarization(Models\AutoSummarizationRequest $req) 因业务调整该接口将于北京时间2023年8月1日0点下线，届时该产品功能将无法正常使用，为了避免对您的业务造成影响，请您尽快做好相关业务调整。详见：https://cloud.tencent.com/document/product/271/90711
 
 利用人工智能算法，自动抽取文本中的关键信息并生成指定长度的文本摘要。可用于新闻标题生成、科技文献摘要生成和商品评论摘要等。
@@ -31,6 +32,9 @@ use TencentCloud\Nlp\V20190408\Models as Models;
 闲聊服务基于腾讯领先的NLP引擎能力、数据运算能力和千亿级互联网语料数据的支持，同时集成了广泛的知识问答能力，可实现上百种自定义属性配置，以及儿童语言风格及说话方式，从而让聊天变得更睿智、简单和有趣。
 
 
+ * @method Models\ClassifyContentResponse ClassifyContent(Models\ClassifyContentRequest $req) 文本分类接口能够对用户输入的文章进行自动分类，将其映射到具体的类目上，用户只需要提供待分类的文本，而无需关注具体实现。该功能定义了一套较为完备的[三级分类体系](https://cloud.tencent.com/document/product/271/94286)，积累了数百万的语料，经过多轮迭代优化打造了较先进的深度学习模型，以保证效果不断提升。
+ * @method Models\ComposeCoupletResponse ComposeCouplet(Models\ComposeCoupletRequest $req) 对联生成接口根据用户输入的命题关键词，智能生成一副完整的春联，包括上联、下联和横批。该接口利用先进的自然语言处理技术，确保生成的春联既符合传统对仗、对韵、对义的要求，又具有新意和创意，为用户提供独特的春节祝福。
+ * @method Models\ComposePoetryResponse ComposePoetry(Models\ComposePoetryRequest $req) 诗词生成接口利用现代的自然语言处理和深度学习技术，模仿了古代著名诗人的风格，为用户产生独特的诗词。用户只需输入的命题关键词，接口就能自动生成一首七言律诗或五言律诗。
  * @method Models\CreateDictResponse CreateDict(Models\CreateDictRequest $req) 因业务调整该接口将于北京时间2023年8月1日0点下线，届时该产品功能将无法正常使用，为了避免对您的业务造成影响，请您尽快做好相关业务调整。详见：https://cloud.tencent.com/document/product/271/90711
 
 根据指定的名称、描述创建自定义词库。

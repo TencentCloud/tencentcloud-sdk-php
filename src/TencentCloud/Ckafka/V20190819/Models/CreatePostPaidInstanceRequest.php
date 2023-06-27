@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置实例日志的默认最长保留时间，单位分钟。不传入该参数时默认为 1440 分钟（1天），最大30天。当 topic 显式设置消息保留时间时，以 topic 保留时间为准
  * @method integer getClusterId() 获取创建实例时可以选择集群Id, 该入参表示集群Id。不指定实例所在集群则不传入该参数
  * @method void setClusterId(integer $ClusterId) 设置创建实例时可以选择集群Id, 该入参表示集群Id。不指定实例所在集群则不传入该参数
- * @method string getKafkaVersion() 获取实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
- * @method void setKafkaVersion(string $KafkaVersion) 设置实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
+ * @method string getKafkaVersion() 获取实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
+ * @method void setKafkaVersion(string $KafkaVersion) 设置实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
  * @method string getSpecificationsType() 获取实例类型。"standard"：标准版，"profession"：专业版
  * @method void setSpecificationsType(string $SpecificationsType) 设置实例类型。"standard"：标准版，"profession"：专业版
  * @method string getDiskType() 获取实例硬盘类型，"CLOUD_BASIC"：云硬盘，"CLOUD_SSD"：高速云硬盘。不传默认为 "CLOUD_BASIC"
@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneIds(array $ZoneIds) 设置当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中
  * @method integer getInstanceNum() 获取购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
  * @method void setInstanceNum(integer $InstanceNum) 设置购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
- * @method integer getPublicNetworkMonthly() 获取公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
- * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) 设置公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
+ * @method integer getPublicNetworkMonthly() 获取公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
+ * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) 设置公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
  */
 class CreatePostPaidInstanceRequest extends AbstractModel
 {
@@ -90,7 +90,7 @@ class CreatePostPaidInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
+     * @var string 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
      */
     public $KafkaVersion;
 
@@ -145,7 +145,7 @@ class CreatePostPaidInstanceRequest extends AbstractModel
     public $InstanceNum;
 
     /**
-     * @var integer 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
+     * @var integer 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
      */
     public $PublicNetworkMonthly;
 
@@ -156,7 +156,7 @@ class CreatePostPaidInstanceRequest extends AbstractModel
      * @param integer $InstanceType 实例规格。当创建标准版实例时必填，创建专业版实例时不需要填写。1：入门型；2：标准型；3：进阶型；4：容量型；5：高阶型1；6：高阶性2；7：高阶型3；8：高阶型4；9 ：独占型
      * @param integer $MsgRetentionTime 实例日志的默认最长保留时间，单位分钟。不传入该参数时默认为 1440 分钟（1天），最大30天。当 topic 显式设置消息保留时间时，以 topic 保留时间为准
      * @param integer $ClusterId 创建实例时可以选择集群Id, 该入参表示集群Id。不指定实例所在集群则不传入该参数
-     * @param string $KafkaVersion 实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
+     * @param string $KafkaVersion 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
      * @param string $SpecificationsType 实例类型。"standard"：标准版，"profession"：专业版
      * @param string $DiskType 实例硬盘类型，"CLOUD_BASIC"：云硬盘，"CLOUD_SSD"：高速云硬盘。不传默认为 "CLOUD_BASIC"
      * @param integer $BandWidth 实例内网峰值带宽。单位 MB/s。标准版需传入当前实例规格所对应的峰值带宽。注意如果创建的实例为专业版实例，峰值带宽，分区数等参数配置需要满足专业版的计费规格。
@@ -167,7 +167,7 @@ class CreatePostPaidInstanceRequest extends AbstractModel
      * @param boolean $MultiZoneFlag 当前实例是否为多可用区实例。
      * @param array $ZoneIds 当实例为多可用区实例时，多可用区 id 列表。注意参数 ZoneId 对应的多可用区需要包含在该参数数组中
      * @param integer $InstanceNum 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
-     * @param integer $PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
+     * @param integer $PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
      */
     function __construct()
     {

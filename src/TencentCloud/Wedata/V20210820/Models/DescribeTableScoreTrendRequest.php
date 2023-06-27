@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatisticsEndDate(integer $StatisticsEndDate) 设置结束时间 秒级时间戳
  * @method string getTableId() 获取表id
  * @method void setTableId(string $TableId) 设置表id
+ * @method string getScoreType() 获取1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+ * @method void setScoreType(string $ScoreType) 设置1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
  */
 class DescribeTableScoreTrendRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTableScoreTrendRequest extends AbstractModel
     public $TableId;
 
     /**
+     * @var string 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public $ScoreType;
+
+    /**
      * @param string $ProjectId 项目id
      * @param integer $StatisticsStartDate 开始时间 秒级时间戳
      * @param integer $StatisticsEndDate 结束时间 秒级时间戳
      * @param string $TableId 表id
+     * @param string $ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTableScoreTrendRequest extends AbstractModel
 
         if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
             $this->TableId = $param["TableId"];
+        }
+
+        if (array_key_exists("ScoreType",$param) and $param["ScoreType"] !== null) {
+            $this->ScoreType = $param["ScoreType"];
         }
     }
 }

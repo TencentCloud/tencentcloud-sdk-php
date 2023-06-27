@@ -96,6 +96,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelConditionExpr(string $RelConditionExpr) 设置源字段与目标字段关联条件on表达式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(string $StartTime) 设置执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlarmLevel() 获取1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExecResult extends AbstractModel
 {
@@ -214,6 +222,18 @@ class RuleExecResult extends AbstractModel
     public $RelConditionExpr;
 
     /**
+     * @var string 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmLevel;
+
+    /**
      * @param integer $RuleExecId 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupExecId 规则组执行ID
@@ -251,6 +271,10 @@ class RuleExecResult extends AbstractModel
      * @param RuleFieldConfig $FieldConfig 自定义模版sql表达式参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RelConditionExpr 源字段与目标字段关联条件on表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlarmLevel 1/2/3:低/中/高
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -342,6 +366,14 @@ class RuleExecResult extends AbstractModel
 
         if (array_key_exists("RelConditionExpr",$param) and $param["RelConditionExpr"] !== null) {
             $this->RelConditionExpr = $param["RelConditionExpr"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
         }
     }
 }

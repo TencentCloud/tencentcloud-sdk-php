@@ -27,38 +27,58 @@ use TencentCloud\Tdid\V20210519\Models as Models;
 
 DID添加标签
 
- * @method Models\CheckChainResponse CheckChain(Models\CheckChainRequest $req) 检查区块链信息
- * @method Models\CreateCredentialResponse CreateCredential(Models\CreateCredentialRequest $req) 创建凭证
- * @method Models\CreateSelectiveCredentialResponse CreateSelectiveCredential(Models\CreateSelectiveCredentialRequest $req) 创建选择性批露凭证
- * @method Models\CreateTDidResponse CreateTDid(Models\CreateTDidRequest $req) 创建机构DID
- * @method Models\CreateTDidByPrivateKeyResponse CreateTDidByPrivateKey(Models\CreateTDidByPrivateKeyRequest $req) 新建DID根据私钥生成Tdid
- * @method Models\CreateTDidByPublicKeyResponse CreateTDidByPublicKey(Models\CreateTDidByPublicKeyRequest $req)  新建DID根据公钥生成Tdid
+ * @method Models\CheckChainResponse CheckChain(Models\CheckChainRequest $req) 该接口不再使用
+
+检查区块链信息
+ * @method Models\CreateCredentialResponse CreateCredential(Models\CreateCredentialRequest $req) 该接口不再使用
+
+创建凭证
+ * @method Models\CreateSelectiveCredentialResponse CreateSelectiveCredential(Models\CreateSelectiveCredentialRequest $req) 该接口不再使用
+
+创建选择性批露凭证
+ * @method Models\CreateTDidResponse CreateTDid(Models\CreateTDidRequest $req) 该接口不再使用
+
+创建机构DID
+ * @method Models\CreateTDidByPrivateKeyResponse CreateTDidByPrivateKey(Models\CreateTDidByPrivateKeyRequest $req) 该接口不再使用
+
+新建DID根据私钥生成Tdid
+ * @method Models\CreateTDidByPublicKeyResponse CreateTDidByPublicKey(Models\CreateTDidByPublicKeyRequest $req) 该接口不再使用
+
+ 新建DID根据公钥生成Tdid
  * @method Models\GetAgencyTDidResponse GetAgencyTDid(Models\GetAgencyTDidRequest $req) 该接口已废弃
 
 本机构DID详情
- * @method Models\GetAuthorityIssuerResponse GetAuthorityIssuer(Models\GetAuthorityIssuerRequest $req) 获取权威机构信息
+ * @method Models\GetAuthorityIssuerResponse GetAuthorityIssuer(Models\GetAuthorityIssuerRequest $req) 该接口不再使用
+
+获取权威机构信息
  * @method Models\GetConsortiumClusterListResponse GetConsortiumClusterList(Models\GetConsortiumClusterListRequest $req) 下线已有内测接口，待上线正式版本的接口
 
 获取联盟bcos网络列表
  * @method Models\GetConsortiumListResponse GetConsortiumList(Models\GetConsortiumListRequest $req) 下线已有内测接口，待上线正式版本的接口
 
 获取联盟列表
- * @method Models\GetCptInfoResponse GetCptInfo(Models\GetCptInfoRequest $req) 凭证模版详情
+ * @method Models\GetCptInfoResponse GetCptInfo(Models\GetCptInfoRequest $req) 该接口不再使用
+
+凭证模版详情
  * @method Models\GetCredentialCptRankResponse GetCredentialCptRank(Models\GetCredentialCptRankRequest $req) 下线已有内测接口，待上线正式版本的接口
 
 凭证颁发按机构排行
- * @method Models\GetCredentialStatusResponse GetCredentialStatus(Models\GetCredentialStatusRequest $req) 获取凭证链上状态信息
- * @method Models\GetDidClusterDetailResponse GetDidClusterDetail(Models\GetDidClusterDetailRequest $req) 下线已有内测接口，待上线正式版本的接口
+ * @method Models\GetCredentialStatusResponse GetCredentialStatus(Models\GetCredentialStatusRequest $req) 该接口不再使用
 
-获取DID区块链网络详情
- * @method Models\GetDidClusterListResponse GetDidClusterList(Models\GetDidClusterListRequest $req) 下线已有内测接口，待上线正式版本的接口
+获取凭证链上状态信息
+ * @method Models\GetDidDocumentResponse GetDidDocument(Models\GetDidDocumentRequest $req) 该接口不再使用
 
-获取用户的DID网络列表
- * @method Models\GetDidDocumentResponse GetDidDocument(Models\GetDidDocumentRequest $req) 查看DID文档
+查看DID文档
 
- * @method Models\RegisterCptResponse RegisterCpt(Models\RegisterCptRequest $req) 凭证模版新建
- * @method Models\SetCredentialStatusResponse SetCredentialStatus(Models\SetCredentialStatusRequest $req) 设置凭证链上状态
- * @method Models\VerifyCredentialResponse VerifyCredential(Models\VerifyCredentialRequest $req) 验证凭证
+ * @method Models\RegisterCptResponse RegisterCpt(Models\RegisterCptRequest $req) 该接口不再使用
+
+凭证模版新建
+ * @method Models\SetCredentialStatusResponse SetCredentialStatus(Models\SetCredentialStatusRequest $req) 该接口不再使用
+
+设置凭证链上状态
+ * @method Models\VerifyCredentialResponse VerifyCredential(Models\VerifyCredentialRequest $req) 该接口不再使用
+
+验证凭证
  */
 
 class TdidClient extends AbstractClient

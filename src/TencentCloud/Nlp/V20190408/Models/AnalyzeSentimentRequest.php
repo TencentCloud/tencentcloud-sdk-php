@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdid\V20210519\Models;
+namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetDidClusterList请求参数结构体
+ * AnalyzeSentiment请求参数结构体
  *
-
+ * @method string getText() 获取待分析的文本（仅支持UTF-8格式，不超过200字）。
+ * @method void setText(string $Text) 设置待分析的文本（仅支持UTF-8格式，不超过200字）。
  */
-class GetDidClusterListRequest extends AbstractModel
+class AnalyzeSentimentRequest extends AbstractModel
 {
-
+    /**
+     * @var string 待分析的文本（仅支持UTF-8格式，不超过200字）。
+     */
+    public $Text;
 
     /**
-
+     * @param string $Text 待分析的文本（仅支持UTF-8格式，不超过200字）。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class GetDidClusterListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
+        }
     }
 }

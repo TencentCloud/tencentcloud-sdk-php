@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderFields(array $OrderFields) 设置排序参数 排序方式 DESC 或者 ASC，表得分排序 TableScore
  * @method string getDatasourceId() 获取数据来源id
  * @method void setDatasourceId(string $DatasourceId) 设置数据来源id
+ * @method string getScoreType() 获取1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+ * @method void setScoreType(string $ScoreType) 设置1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
  */
 class DescribeTableQualityDetailsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeTableQualityDetailsRequest extends AbstractModel
     public $DatasourceId;
 
     /**
+     * @var string 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public $ScoreType;
+
+    /**
      * @param integer $StatisticsDate 统计日期
      * @param string $ProjectId 项目id
      * @param integer $PageNumber 分页序号
@@ -80,6 +87,7 @@ class DescribeTableQualityDetailsRequest extends AbstractModel
      * @param array $Filters 过滤参数TableName、DatabaseId 、DatabaseName、OwnerUserName
      * @param array $OrderFields 排序参数 排序方式 DESC 或者 ASC，表得分排序 TableScore
      * @param string $DatasourceId 数据来源id
+     * @param string $ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
      */
     function __construct()
     {
@@ -130,6 +138,10 @@ class DescribeTableQualityDetailsRequest extends AbstractModel
 
         if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
             $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("ScoreType",$param) and $param["ScoreType"] !== null) {
+            $this->ScoreType = $param["ScoreType"];
         }
     }
 }

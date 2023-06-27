@@ -14,37 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdid\V20210519\Models;
+namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetDidClusterDetail返回参数结构体
+ * ComposeCouplet返回参数结构体
  *
- * @method string getClusterId() 获取网络ID
- * @method void setClusterId(string $ClusterId) 设置网络ID
- * @method string getConsortiumName() 获取组织名称
- * @method void setConsortiumName(string $ConsortiumName) 设置组织名称
- * @method string getChainAgency() 获取区块链组织名称
- * @method void setChainAgency(string $ChainAgency) 设置区块链组织名称
+ * @method string getTopScroll() 获取横批。
+ * @method void setTopScroll(string $TopScroll) 设置横批。
+ * @method array getContent() 获取上联与下联。
+ * @method void setContent(array $Content) 设置上联与下联。
+ * @method string getRandomCause() 获取当对联随机生成时，展示随机生成原因。
+ * @method void setRandomCause(string $RandomCause) 设置当对联随机生成时，展示随机生成原因。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetDidClusterDetailResponse extends AbstractModel
+class ComposeCoupletResponse extends AbstractModel
 {
     /**
-     * @var string 网络ID
+     * @var string 横批。
      */
-    public $ClusterId;
+    public $TopScroll;
 
     /**
-     * @var string 组织名称
+     * @var array 上联与下联。
      */
-    public $ConsortiumName;
+    public $Content;
 
     /**
-     * @var string 区块链组织名称
+     * @var string 当对联随机生成时，展示随机生成原因。
      */
-    public $ChainAgency;
+    public $RandomCause;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +52,9 @@ class GetDidClusterDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ClusterId 网络ID
-     * @param string $ConsortiumName 组织名称
-     * @param string $ChainAgency 区块链组织名称
+     * @param string $TopScroll 横批。
+     * @param array $Content 上联与下联。
+     * @param string $RandomCause 当对联随机生成时，展示随机生成原因。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +70,16 @@ class GetDidClusterDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("TopScroll",$param) and $param["TopScroll"] !== null) {
+            $this->TopScroll = $param["TopScroll"];
         }
 
-        if (array_key_exists("ConsortiumName",$param) and $param["ConsortiumName"] !== null) {
-            $this->ConsortiumName = $param["ConsortiumName"];
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
 
-        if (array_key_exists("ChainAgency",$param) and $param["ChainAgency"] !== null) {
-            $this->ChainAgency = $param["ChainAgency"];
+        if (array_key_exists("RandomCause",$param) and $param["RandomCause"] !== null) {
+            $this->RandomCause = $param["RandomCause"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

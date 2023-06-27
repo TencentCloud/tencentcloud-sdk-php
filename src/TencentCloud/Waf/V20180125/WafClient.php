@@ -65,6 +65,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 开启或禁用访问控制（自定义策略）
  * @method Models\ModifyCustomWhiteRuleResponse ModifyCustomWhiteRule(Models\ModifyCustomWhiteRuleRequest $req) 编辑精准白名单
  * @method Models\ModifyDomainWhiteRuleResponse ModifyDomainWhiteRule(Models\ModifyDomainWhiteRuleRequest $req) 更改某一条规则
+ * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) 修改域名配置
  * @method Models\ModifyWafAutoDenyRulesResponse ModifyWafAutoDenyRules(Models\ModifyWafAutoDenyRulesRequest $req) 修改ip惩罚规则
  * @method Models\ModifyWafAutoDenyStatusResponse ModifyWafAutoDenyStatus(Models\ModifyWafAutoDenyStatusRequest $req) 配置WAF自动封禁模块状态
  * @method Models\ModifyWafThreatenIntelligenceResponse ModifyWafThreatenIntelligence(Models\ModifyWafThreatenIntelligenceRequest $req) 配置WAF威胁情报封禁模块详情

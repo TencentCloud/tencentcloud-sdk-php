@@ -47,7 +47,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 • 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
 •   生成字幕场景可设置参数ResTextFormat为3，解析ResultDetail结构生成字幕，可参考 [生成字幕最佳实践](https://cloud.tencent.com/document/product/1093/84291)。
 •   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
-• 默认接口请求频率限制：20次/秒，如您有提高请求频率限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
+• 默认接口请求频率限制：20次/秒。
  * @method Models\DeleteAsrVocabResponse DeleteAsrVocab(Models\DeleteAsrVocabRequest $req) 用户通过本接口进行热词表的删除。
  * @method Models\DeleteCustomizationResponse DeleteCustomization(Models\DeleteCustomizationRequest $req) 用户通过该接口可以删除自学习模型
  * @method Models\DescribeAsyncRecognitionTasksResponse DescribeAsyncRecognitionTasks(Models\DescribeAsyncRecognitionTasksRequest $req) 本接口用于查询当前在运行的语音流异步识别任务列表。

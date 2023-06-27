@@ -28,25 +28,63 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceObjectValue(string $SourceObjectValue) 设置源字段名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getObjectDataTypeName() 获取源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectDataTypeName(string $ObjectDataTypeName) 设置源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getObjectValue() 获取源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectValue(string $ObjectValue) 设置源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getObjectType() 获取对象类型 1.常量  2.离线表级   3.离线字段级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectType(integer $ObjectType) 设置对象类型 1.常量  2.离线表级   3.离线字段级
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceObject extends AbstractModel
 {
     /**
      * @var string 源字段详细类型，int、string
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $SourceObjectDataTypeName;
 
     /**
      * @var string 源字段名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $SourceObjectValue;
+
+    /**
+     * @var string 源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectDataTypeName;
+
+    /**
+     * @var string 源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectValue;
+
+    /**
+     * @var integer 对象类型 1.常量  2.离线表级   3.离线字段级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectType;
 
     /**
      * @param string $SourceObjectDataTypeName 源字段详细类型，int、string
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceObjectValue 源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ObjectDataTypeName 源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ObjectValue 源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ObjectType 对象类型 1.常量  2.离线表级   3.离线字段级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +106,18 @@ class SourceObject extends AbstractModel
 
         if (array_key_exists("SourceObjectValue",$param) and $param["SourceObjectValue"] !== null) {
             $this->SourceObjectValue = $param["SourceObjectValue"];
+        }
+
+        if (array_key_exists("ObjectDataTypeName",$param) and $param["ObjectDataTypeName"] !== null) {
+            $this->ObjectDataTypeName = $param["ObjectDataTypeName"];
+        }
+
+        if (array_key_exists("ObjectValue",$param) and $param["ObjectValue"] !== null) {
+            $this->ObjectValue = $param["ObjectValue"];
+        }
+
+        if (array_key_exists("ObjectType",$param) and $param["ObjectType"] !== null) {
+            $this->ObjectType = $param["ObjectType"];
         }
     }
 }

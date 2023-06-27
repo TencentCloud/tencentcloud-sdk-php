@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExcludeAdvancedInfo(boolean $ExcludeAdvancedInfo) 设置默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
  * @method array getFilterAssetIpList() 获取资产IP数组
  * @method void setFilterAssetIpList(array $FilterAssetIpList) 设置资产IP数组
+ * @method integer getFilterBasicPlusFlag() 获取是否包含基础防护增强版 0: 不包含 1: 包含
+ * @method void setFilterBasicPlusFlag(integer $FilterBasicPlusFlag) 设置是否包含基础防护增强版 0: 不包含 1: 包含
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterAssetIpList;
 
     /**
+     * @var integer 是否包含基础防护增强版 0: 不包含 1: 包含
+     */
+    public $FilterBasicPlusFlag;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -168,6 +175,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param integer $FilterConvoy 重保护航搜索
      * @param boolean $ExcludeAdvancedInfo 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
      * @param array $FilterAssetIpList 资产IP数组
+     * @param integer $FilterBasicPlusFlag 是否包含基础防护增强版 0: 不包含 1: 包含
      */
     function __construct()
     {
@@ -253,6 +261,10 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterAssetIpList",$param) and $param["FilterAssetIpList"] !== null) {
             $this->FilterAssetIpList = $param["FilterAssetIpList"];
+        }
+
+        if (array_key_exists("FilterBasicPlusFlag",$param) and $param["FilterBasicPlusFlag"] !== null) {
+            $this->FilterBasicPlusFlag = $param["FilterBasicPlusFlag"];
         }
     }
 }

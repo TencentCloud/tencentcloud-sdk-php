@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableOwnerUserId(integer $TableOwnerUserId) 设置表负责人userId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDatasourceType() 获取2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceType(integer $DatasourceType) 设置2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExecResultDetail extends AbstractModel
 {
@@ -114,6 +118,12 @@ class RuleExecResultDetail extends AbstractModel
     public $TableOwnerUserId;
 
     /**
+     * @var integer 2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceType;
+
+    /**
      * @param integer $DatasourceId 数据源id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceName 数据源名称
@@ -131,6 +141,8 @@ class RuleExecResultDetail extends AbstractModel
      * @param RuleExecResult $RuleExecResult 规则执行记录
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TableOwnerUserId 表负责人userId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DatasourceType 2.HIVE 3.DLC
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -181,6 +193,10 @@ class RuleExecResultDetail extends AbstractModel
 
         if (array_key_exists("TableOwnerUserId",$param) and $param["TableOwnerUserId"] !== null) {
             $this->TableOwnerUserId = $param["TableOwnerUserId"];
+        }
+
+        if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
+            $this->DatasourceType = $param["DatasourceType"];
         }
     }
 }

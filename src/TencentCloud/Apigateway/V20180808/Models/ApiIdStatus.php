@@ -170,6 +170,7 @@ class ApiIdStatus extends AbstractModel
     /**
      * @var array 授权API关联的业务API列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $RelationBuniessApiIds;
 

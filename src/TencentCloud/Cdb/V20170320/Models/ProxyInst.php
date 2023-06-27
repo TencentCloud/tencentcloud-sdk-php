@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取实例类型
+ * @method integer getInstanceType() 获取实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置实例类型
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,7 +64,7 @@ class ProxyInst extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 实例类型
+     * @var integer 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
@@ -98,7 +98,7 @@ class ProxyInst extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType 实例类型
+     * @param integer $InstanceType 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
 注意：此字段可能返回 null，表示取不到有效值。

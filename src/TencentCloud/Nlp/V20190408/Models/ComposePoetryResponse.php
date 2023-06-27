@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdid\V20210519\Models;
+namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetDidClusterList返回参数结构体
+ * ComposePoetry返回参数结构体
  *
- * @method array getDidClusterList() 获取DID网络列表
- * @method void setDidClusterList(array $DidClusterList) 设置DID网络列表
+ * @method string getTitle() 获取诗题，即输入的生成诗词的关键词。
+ * @method void setTitle(string $Title) 设置诗题，即输入的生成诗词的关键词。
+ * @method array getContent() 获取诗的内容。
+ * @method void setContent(array $Content) 设置诗的内容。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetDidClusterListResponse extends AbstractModel
+class ComposePoetryResponse extends AbstractModel
 {
     /**
-     * @var array DID网络列表
+     * @var string 诗题，即输入的生成诗词的关键词。
      */
-    public $DidClusterList;
+    public $Title;
+
+    /**
+     * @var array 诗的内容。
+     */
+    public $Content;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class GetDidClusterListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DidClusterList DID网络列表
+     * @param string $Title 诗题，即输入的生成诗词的关键词。
+     * @param array $Content 诗的内容。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +62,12 @@ class GetDidClusterListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DidClusterList",$param) and $param["DidClusterList"] !== null) {
-            $this->DidClusterList = [];
-            foreach ($param["DidClusterList"] as $key => $value){
-                $obj = new DidCluster();
-                $obj->deserialize($value);
-                array_push($this->DidClusterList, $obj);
-            }
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

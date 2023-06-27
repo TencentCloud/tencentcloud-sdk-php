@@ -28,12 +28,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置统计值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getQualityDim() 获取维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualityDim(integer $QualityDim) 设置维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DimensionCount extends AbstractModel
 {
     /**
      * @var integer 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DimType;
 
@@ -44,9 +49,17 @@ class DimensionCount extends AbstractModel
     public $Count;
 
     /**
+     * @var integer 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QualityDim;
+
+    /**
      * @param integer $DimType 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 统计值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $QualityDim 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +81,10 @@ class DimensionCount extends AbstractModel
 
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("QualityDim",$param) and $param["QualityDim"] !== null) {
+            $this->QualityDim = $param["QualityDim"];
         }
     }
 }

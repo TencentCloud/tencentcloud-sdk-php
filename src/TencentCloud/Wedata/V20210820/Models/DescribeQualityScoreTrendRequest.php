@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method string getDatasourceId() 获取数据来源id
  * @method void setDatasourceId(string $DatasourceId) 设置数据来源id
+ * @method string getScoreType() 获取1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+ * @method void setScoreType(string $ScoreType) 设置1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+ * @method array getFilters() 获取过滤参数
+ * @method void setFilters(array $Filters) 设置过滤参数
  */
 class DescribeQualityScoreTrendRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class DescribeQualityScoreTrendRequest extends AbstractModel
     public $DatasourceId;
 
     /**
+     * @var string 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public $ScoreType;
+
+    /**
+     * @var array 过滤参数
+     */
+    public $Filters;
+
+    /**
      * @param integer $StatisticsStartDate 统计开始日期
      * @param integer $StatisticsEndDate 统计结束日期
      * @param string $ProjectId 项目id
      * @param string $DatasourceId 数据来源id
+     * @param string $ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     * @param array $Filters 过滤参数
      */
     function __construct()
     {
@@ -84,6 +100,19 @@ class DescribeQualityScoreTrendRequest extends AbstractModel
 
         if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
             $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("ScoreType",$param) and $param["ScoreType"] !== null) {
+            $this->ScoreType = $param["ScoreType"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

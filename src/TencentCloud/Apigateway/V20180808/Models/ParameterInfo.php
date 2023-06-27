@@ -88,6 +88,7 @@ class ParameterInfo extends AbstractModel
 
     /**
      * @var string 修改时间
+     * @deprecated
      */
     public $ModifedTime;
 

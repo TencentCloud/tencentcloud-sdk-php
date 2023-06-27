@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableOwnerUserId(integer $TableOwnerUserId) 设置表负责人UserId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroup extends AbstractModel
 {
@@ -194,6 +198,12 @@ class RuleGroup extends AbstractModel
     public $TableOwnerUserId;
 
     /**
+     * @var string 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -227,6 +237,8 @@ class RuleGroup extends AbstractModel
      * @param boolean $MonitorStatus 监控状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TableOwnerUserId 表负责人UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -310,6 +322,10 @@ class RuleGroup extends AbstractModel
 
         if (array_key_exists("TableOwnerUserId",$param) and $param["TableOwnerUserId"] !== null) {
             $this->TableOwnerUserId = $param["TableOwnerUserId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

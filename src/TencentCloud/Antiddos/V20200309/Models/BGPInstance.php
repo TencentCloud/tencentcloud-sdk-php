@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBasicPlusFlag() 获取是否是基础防护加强版 0: 不是 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBasicPlusFlag(integer $BasicPlusFlag) 设置是否是基础防护加强版 0: 不是 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstance extends AbstractModel
 {
@@ -206,6 +210,12 @@ class BGPInstance extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var integer 是否是基础防护加强版 0: 不是 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BasicPlusFlag;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPInstanceUsages $Usage 资产实例的使用统计信息
@@ -239,6 +249,8 @@ class BGPInstance extends AbstractModel
      * @param integer $ElasticServiceBandwidth 弹性业务带宽开关
      * @param integer $GiftServiceBandWidth 赠送的业务带宽
      * @param string $ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BasicPlusFlag 是否是基础防护加强版 0: 不是 1: 是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -347,6 +359,10 @@ class BGPInstance extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("BasicPlusFlag",$param) and $param["BasicPlusFlag"] !== null) {
+            $this->BasicPlusFlag = $param["BasicPlusFlag"];
         }
     }
 }

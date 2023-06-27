@@ -25,22 +25,38 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
 /**
  * @method Models\ApplyChainMakerBatchUserCertResponse ApplyChainMakerBatchUserCert(Models\ApplyChainMakerBatchUserCertRequest $req) 批量申请长安链用户签名证书
  * @method Models\ApplyUserCertResponse ApplyUserCert(Models\ApplyUserCertRequest $req) 申请用户证书
- * @method Models\CreateChaincodeAndInstallForUserResponse CreateChaincodeAndInstallForUser(Models\CreateChaincodeAndInstallForUserRequest $req) 创建并安装合约
+ * @method Models\CreateChaincodeAndInstallForUserResponse CreateChaincodeAndInstallForUser(Models\CreateChaincodeAndInstallForUserRequest $req) 接口已废弃，请通过控制台查询或操作
+
+创建并安装合约
  * @method Models\DownloadUserCertResponse DownloadUserCert(Models\DownloadUserCertRequest $req) 下载用户证书
  * @method Models\GetBlockListResponse GetBlockList(Models\GetBlockListRequest $req) 查看当前网络下的所有区块列表，分页展示
  * @method Models\GetBlockTransactionListForUserResponse GetBlockTransactionListForUser(Models\GetBlockTransactionListForUserRequest $req) 获取区块内的交易列表
- * @method Models\GetChaincodeCompileLogForUserResponse GetChaincodeCompileLogForUser(Models\GetChaincodeCompileLogForUserRequest $req) 获取合约编译日志
- * @method Models\GetChaincodeInitializeResultForUserResponse GetChaincodeInitializeResultForUser(Models\GetChaincodeInitializeResultForUserRequest $req) 实例化结果查询
- * @method Models\GetChaincodeLogForUserResponse GetChaincodeLogForUser(Models\GetChaincodeLogForUserRequest $req) 获取合约容器日志
- * @method Models\GetChannelListForUserResponse GetChannelListForUser(Models\GetChannelListForUserRequest $req) 获取通道列表
- * @method Models\GetClusterListForUserResponse GetClusterListForUser(Models\GetClusterListForUserRequest $req) 获取该用户的网络列表。网络信息中包含组织信息，但仅包含该用户所在组织的信息。
+ * @method Models\GetChaincodeCompileLogForUserResponse GetChaincodeCompileLogForUser(Models\GetChaincodeCompileLogForUserRequest $req) 接口已废弃，请通过控制台查询或操作
+
+获取合约编译日志
+ * @method Models\GetChaincodeInitializeResultForUserResponse GetChaincodeInitializeResultForUser(Models\GetChaincodeInitializeResultForUserRequest $req) 接口已废弃，请通过控制台查询或操作
+
+实例化结果查询
+ * @method Models\GetChaincodeLogForUserResponse GetChaincodeLogForUser(Models\GetChaincodeLogForUserRequest $req) 接口已废弃，请通过控制台查询或操作
+
+获取合约容器日志
+ * @method Models\GetChannelListForUserResponse GetChannelListForUser(Models\GetChannelListForUserRequest $req) 接口已废弃，请通过控制台查询或操作
+
+获取通道列表
+ * @method Models\GetClusterListForUserResponse GetClusterListForUser(Models\GetClusterListForUserRequest $req) 接口已废弃，请通过控制台查询或操作
+
+获取该用户的网络列表。网络信息中包含组织信息，但仅包含该用户所在组织的信息。
  * @method Models\GetClusterSummaryResponse GetClusterSummary(Models\GetClusterSummaryRequest $req) 获取区块链网络概要
  * @method Models\GetInvokeTxResponse GetInvokeTx(Models\GetInvokeTxRequest $req) Invoke异步调用结果查询
  * @method Models\GetLatesdTransactionListResponse GetLatesdTransactionList(Models\GetLatesdTransactionListRequest $req) 获取最新交易列表（已废弃）
  * @method Models\GetLatestTransactionListResponse GetLatestTransactionList(Models\GetLatestTransactionListRequest $req) 获取fabric最新交易列表
- * @method Models\GetPeerLogForUserResponse GetPeerLogForUser(Models\GetPeerLogForUserRequest $req) 获取节点日志
+ * @method Models\GetPeerLogForUserResponse GetPeerLogForUser(Models\GetPeerLogForUserRequest $req) 接口已废弃，请通过控制台查询或操作
+
+获取节点日志
  * @method Models\GetTransactionDetailForUserResponse GetTransactionDetailForUser(Models\GetTransactionDetailForUserRequest $req) 获取交易详情
- * @method Models\InitializeChaincodeForUserResponse InitializeChaincodeForUser(Models\InitializeChaincodeForUserRequest $req) 实例化合约
+ * @method Models\InitializeChaincodeForUserResponse InitializeChaincodeForUser(Models\InitializeChaincodeForUserRequest $req) 接口已废弃，请通过控制台查询或操作
+
+实例化合约
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易
  * @method Models\InvokeChainMakerContractResponse InvokeChainMakerContract(Models\InvokeChainMakerContractRequest $req) 调用长安链合约执行交易
  * @method Models\InvokeChainMakerDemoContractResponse InvokeChainMakerDemoContract(Models\InvokeChainMakerDemoContractRequest $req) 调用长安链体验网络合约执行交易

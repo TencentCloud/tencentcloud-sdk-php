@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTaskInfo请求参数结构体
+ * DeleteCustomAccount请求参数结构体
  *
- * @method integer getTaskId() 获取任务 ID。
- * @method void setTaskId(integer $TaskId) 设置任务 ID。
+ * @method string getRegistryId() 获取实例Id	
+ * @method void setRegistryId(string $RegistryId) 设置实例Id	
+ * @method string getName() 获取自定义的账户名
+ * @method void setName(string $Name) 设置自定义的账户名
  */
-class DescribeTaskInfoRequest extends AbstractModel
+class DeleteCustomAccountRequest extends AbstractModel
 {
     /**
-     * @var integer 任务 ID。
+     * @var string 实例Id	
      */
-    public $TaskId;
+    public $RegistryId;
 
     /**
-     * @param integer $TaskId 任务 ID。
+     * @var string 自定义的账户名
+     */
+    public $Name;
+
+    /**
+     * @param string $RegistryId 实例Id	
+     * @param string $Name 自定义的账户名
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeTaskInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

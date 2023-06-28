@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置可选，用户需要查询的group名称。
  * @method string getTopicName() 获取可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
  * @method void setTopicName(string $TopicName) 设置可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
- * @method integer getLimit() 获取本次返回个数限制
- * @method void setLimit(integer $Limit) 设置本次返回个数限制
+ * @method integer getLimit() 获取本次返回个数限制，最大支持50
+ * @method void setLimit(integer $Limit) 设置本次返回个数限制，最大支持50
  * @method integer getOffset() 获取偏移位置
  * @method void setOffset(integer $Offset) 设置偏移位置
  */
@@ -49,7 +49,7 @@ class DescribeConsumerGroupRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer 本次返回个数限制
+     * @var integer 本次返回个数限制，最大支持50
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeConsumerGroupRequest extends AbstractModel
      * @param string $InstanceId ckafka实例id。
      * @param string $GroupName 可选，用户需要查询的group名称。
      * @param string $TopicName 可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
-     * @param integer $Limit 本次返回个数限制
+     * @param integer $Limit 本次返回个数限制，最大支持50
      * @param integer $Offset 偏移位置
      */
     function __construct()

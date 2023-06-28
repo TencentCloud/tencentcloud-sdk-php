@@ -39,7 +39,6 @@ use TencentCloud\Common\AbstractModel;
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本
  * @method void setRegionId(integer $RegionId) 设置地域ID 。
 - 1：广州 
@@ -58,7 +57,6 @@ use TencentCloud\Common\AbstractModel;
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本
  * @method string getGroupId() 获取复制组 ID。格式如：crs-rpl-deind****。
  * @method void setGroupId(string $GroupId) 设置复制组 ID。格式如：crs-rpl-deind****。
@@ -114,7 +112,6 @@ class Groups extends AbstractModel
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本
      */
     public $RegionId;
@@ -176,7 +173,6 @@ class Groups extends AbstractModel
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本
      * @param string $GroupId 复制组 ID。格式如：crs-rpl-deind****。
      * @param string $GroupName 复制组名称。

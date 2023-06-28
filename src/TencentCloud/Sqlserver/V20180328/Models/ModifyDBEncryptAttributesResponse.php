@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChangeMasterInstance返回参数结构体
+ * ModifyDBEncryptAttributes返回参数结构体
  *
- * @method integer getTaskId() 获取异步流程ID。
- * @method void setTaskId(integer $TaskId) 设置异步流程ID。
+ * @method integer getFlowId() 获取任务流ID
+ * @method void setFlowId(integer $FlowId) 设置任务流ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChangeMasterInstanceResponse extends AbstractModel
+class ModifyDBEncryptAttributesResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID。
+     * @var integer 任务流ID
      */
-    public $TaskId;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ChangeMasterInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 异步流程ID。
+     * @param integer $FlowId 任务流ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class ChangeMasterInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页输出实例列表的大小，参数默认值20。
  * @method integer getOffset() 获取分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method string getGroupId() 获取复制组ID。
- * @method void setGroupId(string $GroupId) 设置复制组ID。
- * @method string getSearchKey() 获取模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
- * @method void setSearchKey(string $SearchKey) 设置模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+ * @method string getGroupId() 获取指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+ * @method void setGroupId(string $GroupId) 设置指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+ * @method string getSearchKey() 获取模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
+ * @method void setSearchKey(string $SearchKey) 设置模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
  */
 class DescribeReplicationGroupRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DescribeReplicationGroupRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 复制组ID。
+     * @var string 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
      */
     public $GroupId;
 
     /**
-     * @var string 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+     * @var string 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
      */
     public $SearchKey;
 
     /**
      * @param integer $Limit 每页输出实例列表的大小，参数默认值20。
      * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
-     * @param string $GroupId 复制组ID。
-     * @param string $SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+     * @param string $GroupId 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+     * @param string $SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
      */
     function __construct()
     {

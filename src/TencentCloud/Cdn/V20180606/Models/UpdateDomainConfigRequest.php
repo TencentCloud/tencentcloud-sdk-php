@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFollowRedirect(FollowRedirect $FollowRedirect) 设置301/302 回源跟随配置
  * @method ErrorPage getErrorPage() 获取错误码重定向配置（功能灰度中，尚未全量）
  * @method void setErrorPage(ErrorPage $ErrorPage) 设置错误码重定向配置（功能灰度中，尚未全量）
- * @method RequestHeader getRequestHeader() 获取请求头部配置
- * @method void setRequestHeader(RequestHeader $RequestHeader) 设置请求头部配置
+ * @method RequestHeader getRequestHeader() 获取回源请求头部配置
+ * @method void setRequestHeader(RequestHeader $RequestHeader) 设置回源请求头部配置
  * @method ResponseHeader getResponseHeader() 获取响应头部配置
  * @method void setResponseHeader(ResponseHeader $ResponseHeader) 设置响应头部配置
  * @method DownstreamCapping getDownstreamCapping() 获取下载速度配置
@@ -193,7 +193,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $ErrorPage;
 
     /**
-     * @var RequestHeader 请求头部配置
+     * @var RequestHeader 回源请求头部配置
      */
     public $RequestHeader;
 
@@ -402,7 +402,7 @@ global：全球加速
      * @param RangeOriginPull $RangeOriginPull Range 回源配置
      * @param FollowRedirect $FollowRedirect 301/302 回源跟随配置
      * @param ErrorPage $ErrorPage 错误码重定向配置（功能灰度中，尚未全量）
-     * @param RequestHeader $RequestHeader 请求头部配置
+     * @param RequestHeader $RequestHeader 回源请求头部配置
      * @param ResponseHeader $ResponseHeader 响应头部配置
      * @param DownstreamCapping $DownstreamCapping 下载速度配置
      * @param CacheKey $CacheKey 节点缓存键配置

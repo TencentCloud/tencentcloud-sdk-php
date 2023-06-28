@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbVersionId(string $DbVersionId) 设置db版本
  * @method string getSecurityGroupId() 获取安全组ID
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID
+ * @method array getSecurityGroupIds() 获取安全组ID列表
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表
  * @method string getDcnInstanceId() 获取DCN源实例ID
  * @method void setDcnInstanceId(string $DcnInstanceId) 设置DCN源实例ID
  * @method string getDcnRegion() 获取DCN源实例地域名
@@ -165,6 +167,11 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
     public $SecurityGroupId;
 
     /**
+     * @var array 安全组ID列表
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @var string DCN源实例ID
      */
     public $DcnInstanceId;
@@ -237,6 +244,7 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
      * @param integer $ShardNodeStorage （废弃）节点磁盘大小，单位：GB
      * @param string $DbVersionId db版本
      * @param string $SecurityGroupId 安全组ID
+     * @param array $SecurityGroupIds 安全组ID列表
      * @param string $DcnInstanceId DCN源实例ID
      * @param string $DcnRegion DCN源实例地域名
      * @param string $InstanceName 自定义实例名称
@@ -328,6 +336,10 @@ class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
             $this->SecurityGroupId = $param["SecurityGroupId"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
 
         if (array_key_exists("DcnInstanceId",$param) and $param["DcnInstanceId"] !== null) {

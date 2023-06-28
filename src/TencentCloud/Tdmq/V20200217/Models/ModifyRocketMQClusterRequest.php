@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置3-64个字符，只能包含字母、数字、“-”及“_”
  * @method string getRemark() 获取说明信息，不超过128个字符
  * @method void setRemark(string $Remark) 设置说明信息，不超过128个字符
+ * @method boolean getPublicAccessEnabled() 获取是否开启HTTP公网访问
+ * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置是否开启HTTP公网访问
  */
 class ModifyRocketMQClusterRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyRocketMQClusterRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var boolean 是否开启HTTP公网访问
+     */
+    public $PublicAccessEnabled;
+
+    /**
      * @param string $ClusterId RocketMQ集群ID
      * @param string $ClusterName 3-64个字符，只能包含字母、数字、“-”及“_”
      * @param string $Remark 说明信息，不超过128个字符
+     * @param boolean $PublicAccessEnabled 是否开启HTTP公网访问
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyRocketMQClusterRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PublicAccessEnabled",$param) and $param["PublicAccessEnabled"] !== null) {
+            $this->PublicAccessEnabled = $param["PublicAccessEnabled"];
         }
     }
 }

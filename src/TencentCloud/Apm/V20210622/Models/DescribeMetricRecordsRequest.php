@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageIndex(integer $PageIndex) 设置页码
  * @method integer getPageSize() 获取页长
  * @method void setPageSize(integer $PageSize) 设置页长
+ * @method array getOrFilters() 获取Or过滤条件
+ * @method void setOrFilters(array $OrFilters) 设置Or过滤条件
  */
 class DescribeMetricRecordsRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeMetricRecordsRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var array Or过滤条件
+     */
+    public $OrFilters;
+
+    /**
      * @param array $Filters 过滤条件
      * @param array $Metrics 指标列表
      * @param array $GroupBy 聚合维度
@@ -120,6 +127,7 @@ class DescribeMetricRecordsRequest extends AbstractModel
      * @param string $BusinessName 业务名称（默认值：taw）
      * @param integer $PageIndex 页码
      * @param integer $PageSize 页长
+     * @param array $OrFilters Or过滤条件
      */
     function __construct()
     {
@@ -191,6 +199,15 @@ class DescribeMetricRecordsRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("OrFilters",$param) and $param["OrFilters"] !== null) {
+            $this->OrFilters = [];
+            foreach ($param["OrFilters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->OrFilters, $obj);
+            }
         }
     }
 }

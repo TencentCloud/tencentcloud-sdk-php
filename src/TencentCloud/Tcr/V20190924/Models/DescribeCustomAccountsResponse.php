@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Billing\V20180709\Models;
+namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBillSummaryByProject返回参数结构体
+ * DescribeCustomAccounts返回参数结构体
  *
- * @method integer getReady() 获取数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
- * @method void setReady(integer $Ready) 设置数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
- * @method array getSummaryOverview() 获取各项目花费分布详情
+ * @method array getCustomAccounts() 获取自定义账户列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummaryOverview(array $SummaryOverview) 设置各项目花费分布详情
+ * @method void setCustomAccounts(array $CustomAccounts) 设置自定义账户列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取自定义账户数量
+ * @method void setTotalCount(integer $TotalCount) 设置自定义账户数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeBillSummaryByProjectResponse extends AbstractModel
+class DescribeCustomAccountsResponse extends AbstractModel
 {
     /**
-     * @var integer 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
-     */
-    public $Ready;
-
-    /**
-     * @var array 各项目花费分布详情
+     * @var array 自定义账户列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SummaryOverview;
+    public $CustomAccounts;
+
+    /**
+     * @var integer 自定义账户数量
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +48,9 @@ class DescribeBillSummaryByProjectResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
-     * @param array $SummaryOverview 各项目花费分布详情
+     * @param array $CustomAccounts 自定义账户列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 自定义账户数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +66,17 @@ class DescribeBillSummaryByProjectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ready",$param) and $param["Ready"] !== null) {
-            $this->Ready = $param["Ready"];
+        if (array_key_exists("CustomAccounts",$param) and $param["CustomAccounts"] !== null) {
+            $this->CustomAccounts = [];
+            foreach ($param["CustomAccounts"] as $key => $value){
+                $obj = new CustomAccount();
+                $obj->deserialize($value);
+                array_push($this->CustomAccounts, $obj);
+            }
         }
 
-        if (array_key_exists("SummaryOverview",$param) and $param["SummaryOverview"] !== null) {
-            $this->SummaryOverview = [];
-            foreach ($param["SummaryOverview"] as $key => $value){
-                $obj = new ProjectSummaryOverviewItem();
-                $obj->deserialize($value);
-                array_push($this->SummaryOverview, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

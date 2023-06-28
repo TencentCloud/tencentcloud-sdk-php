@@ -20,43 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskInfo返回参数结构体
  *
- * @method string getStatus() 获取任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
- * @method void setStatus(string $Status) 设置任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
- * @method string getStartTime() 获取任务开始时间
- * @method void setStartTime(string $StartTime) 设置任务开始时间
- * @method string getTaskType() 获取任务类型
- * @method void setTaskType(string $TaskType) 设置任务类型
- * @method string getInstanceId() 获取实例的ID
- * @method void setInstanceId(string $InstanceId) 设置实例的ID
- * @method string getTaskMessage() 获取任务信息，错误时显示错误信息。执行中与成功则为空
- * @method void setTaskMessage(string $TaskMessage) 设置任务信息，错误时显示错误信息。执行中与成功则为空
+ * @method string getStatus() 获取任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。
+ * @method void setStatus(string $Status) 设置任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。
+ * @method string getStartTime() 获取任务开始时间。
+ * @method void setStartTime(string $StartTime) 设置任务开始时间。
+ * @method string getTaskType() 获取任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
+ * @method void setTaskType(string $TaskType) 设置任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
+ * @method string getInstanceId() 获取实例的 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例的 ID。
+ * @method string getTaskMessage() 获取任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
+ * @method void setTaskMessage(string $TaskMessage) 设置任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTaskInfoResponse extends AbstractModel
 {
     /**
-     * @var string 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
+     * @var string 任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。
      */
     public $Status;
 
     /**
-     * @var string 任务开始时间
+     * @var string 任务开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 任务类型
+     * @var string 任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
      */
     public $TaskType;
 
     /**
-     * @var string 实例的ID
+     * @var string 实例的 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 任务信息，错误时显示错误信息。执行中与成功则为空
+     * @var string 任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
      */
     public $TaskMessage;
 
@@ -66,11 +81,16 @@ class DescribeTaskInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
-     * @param string $StartTime 任务开始时间
-     * @param string $TaskType 任务类型
-     * @param string $InstanceId 实例的ID
-     * @param string $TaskMessage 任务信息，错误时显示错误信息。执行中与成功则为空
+     * @param string $Status 任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。
+     * @param string $StartTime 任务开始时间。
+     * @param string $TaskType 任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
+     * @param string $InstanceId 实例的 ID。
+     * @param string $TaskMessage 任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

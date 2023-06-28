@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取指定复制组中的主实例ID。
  * @method void setInstanceId(string $InstanceId) 设置指定复制组中的主实例ID。
- * @method string getGroupName() 获取复制组名称。
- * @method void setGroupName(string $GroupName) 设置复制组名称。
+ * @method string getGroupName() 获取复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+ * @method void setGroupName(string $GroupName) 设置复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
  * @method string getRemark() 获取备注信息。
  * @method void setRemark(string $Remark) 设置备注信息。
  */
@@ -35,7 +35,7 @@ class CreateReplicationGroupRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 复制组名称。
+     * @var string 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public $GroupName;
 
@@ -46,7 +46,7 @@ class CreateReplicationGroupRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 指定复制组中的主实例ID。
-     * @param string $GroupName 复制组名称。
+     * @param string $GroupName 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
      * @param string $Remark 备注信息。
      */
     function __construct()

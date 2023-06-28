@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByRegion返回参数结构体
  *
- * @method integer getReady() 获取数据是否准备好，0未准备好，1准备好
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
- * @method void setReady(integer $Ready) 设置数据是否准备好，0未准备好，1准备好
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
+ * @method integer getReady() 获取数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+ * @method void setReady(integer $Ready) 设置数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
  * @method array getSummaryOverview() 获取各地域花费分布详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummaryOverview(array $SummaryOverview) 设置各地域花费分布详情
@@ -34,8 +32,7 @@ Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请
 class DescribeBillSummaryByRegionResponse extends AbstractModel
 {
     /**
-     * @var integer 数据是否准备好，0未准备好，1准备好
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
+     * @var integer 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
      */
     public $Ready;
 
@@ -51,8 +48,7 @@ Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请
     public $RequestId;
 
     /**
-     * @param integer $Ready 数据是否准备好，0未准备好，1准备好
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
+     * @param integer $Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
      * @param array $SummaryOverview 各地域花费分布详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

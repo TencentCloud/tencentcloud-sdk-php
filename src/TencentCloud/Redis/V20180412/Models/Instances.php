@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量。
  * @method integer getRedisShardSize() 获取分片内存大小。
  * @method void setRedisShardSize(integer $RedisShardSize) 设置分片内存大小。
- * @method integer getDiskSize() 获取实例的磁盘大小
+ * @method integer getDiskSize() 获取实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskSize(integer $DiskSize) 设置实例的磁盘大小
+ * @method void setDiskSize(integer $DiskSize) 设置实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV。
  * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV。
@@ -128,7 +128,7 @@ class Instances extends AbstractModel
     public $RedisShardSize;
 
     /**
-     * @var integer 实例的磁盘大小
+     * @var integer 实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
@@ -208,7 +208,7 @@ class Instances extends AbstractModel
      * @param integer $RedisReplicasNum 副本数量。
      * @param integer $RedisShardNum 分片数量。
      * @param integer $RedisShardSize 分片内存大小。
-     * @param integer $DiskSize 实例的磁盘大小
+     * @param integer $DiskSize 实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Engine 引擎：社区版Redis、腾讯云CKV。
      * @param string $Role 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>

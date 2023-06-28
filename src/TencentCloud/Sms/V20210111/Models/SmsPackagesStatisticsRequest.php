@@ -27,13 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取偏移量。
  * @method void setOffset(integer $Offset) 设置偏移量。
  * @method string getBeginTime() 获取起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
  * @method void setBeginTime(string $BeginTime) 设置起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
  * @method string getEndTime() 获取结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime 且小于当前时间。
  * @method void setEndTime(string $EndTime) 设置结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime 且小于当前时间。
  */
 class SmsPackagesStatisticsRequest extends AbstractModel
 {
@@ -54,13 +54,13 @@ class SmsPackagesStatisticsRequest extends AbstractModel
 
     /**
      * @var string 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
      */
     public $BeginTime;
 
     /**
      * @var string 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime 且小于当前时间。
      */
     public $EndTime;
 
@@ -69,9 +69,9 @@ class SmsPackagesStatisticsRequest extends AbstractModel
      * @param integer $Limit 最大上限(需要拉取的套餐包个数)。
      * @param integer $Offset 偏移量。
      * @param string $BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
      * @param string $EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime 且小于当前时间。
      */
     function __construct()
     {

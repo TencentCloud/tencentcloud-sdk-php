@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfig(ModifyInstanceAttributesConfig $Config) 设置实例配置
  * @method DynamicRetentionTime getDynamicRetentionConfig() 获取动态消息保留策略配置
  * @method void setDynamicRetentionConfig(DynamicRetentionTime $DynamicRetentionConfig) 设置动态消息保留策略配置
- * @method integer getRebalanceTime() 获取修改升配置rebalance时间
- * @method void setRebalanceTime(integer $RebalanceTime) 设置修改升配置rebalance时间
+ * @method integer getRebalanceTime() 获取升配Rebalance时间
+ * @method void setRebalanceTime(integer $RebalanceTime) 设置升配Rebalance时间
  * @method integer getPublicNetwork() 获取公网带宽
  * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽
  * @method DynamicDiskConfig getDynamicDiskConfig() 获取动态硬盘扩容策略配置
@@ -67,7 +67,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $DynamicRetentionConfig;
 
     /**
-     * @var integer 修改升配置rebalance时间
+     * @var integer 升配Rebalance时间
      */
     public $RebalanceTime;
 
@@ -92,7 +92,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param ModifyInstanceAttributesConfig $Config 实例配置
      * @param DynamicRetentionTime $DynamicRetentionConfig 动态消息保留策略配置
-     * @param integer $RebalanceTime 修改升配置rebalance时间
+     * @param integer $RebalanceTime 升配Rebalance时间
      * @param integer $PublicNetwork 公网带宽
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略配置
      * @param integer $MaxMessageByte 实例级别单条消息大小（单位byte)

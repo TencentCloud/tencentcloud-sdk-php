@@ -26,14 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置服务的前端请求类型。如 http、https、http&https。
  * @method string getServiceDesc() 获取用户自定义的服务描述。
  * @method void setServiceDesc(string $ServiceDesc) 设置用户自定义的服务描述。
- * @method string getExclusiveSetName() 获取独立集群名称，用于指定创建服务所在的独立集群。
- * @method void setExclusiveSetName(string $ExclusiveSetName) 设置独立集群名称，用于指定创建服务所在的独立集群。
  * @method array getNetTypes() 获取网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
  * @method void setNetTypes(array $NetTypes) 设置网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
  * @method string getIpVersion() 获取IP版本号，支持IPv4和IPv6，默认为IPv4。
  * @method void setIpVersion(string $IpVersion) 设置IP版本号，支持IPv4和IPv6，默认为IPv4。
- * @method string getSetServerName() 获取集群名称。保留字段，tsf serverlss类型使用。
- * @method void setSetServerName(string $SetServerName) 设置集群名称。保留字段，tsf serverlss类型使用。
+ * @method string getSetServerName() 获取集群名称。保留字段，tsf serverless类型使用。
+ * @method void setSetServerName(string $SetServerName) 设置集群名称。保留字段，tsf serverless类型使用。
  * @method string getAppIdType() 获取用户类型。保留类型，serverless用户使用。
  * @method void setAppIdType(string $AppIdType) 设置用户类型。保留类型，serverless用户使用。
  * @method array getTags() 获取标签。
@@ -61,11 +59,6 @@ class CreateServiceRequest extends AbstractModel
     public $ServiceDesc;
 
     /**
-     * @var string 独立集群名称，用于指定创建服务所在的独立集群。
-     */
-    public $ExclusiveSetName;
-
-    /**
      * @var array 网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
      */
     public $NetTypes;
@@ -76,7 +69,7 @@ class CreateServiceRequest extends AbstractModel
     public $IpVersion;
 
     /**
-     * @var string 集群名称。保留字段，tsf serverlss类型使用。
+     * @var string 集群名称。保留字段，tsf serverless类型使用。
      */
     public $SetServerName;
 
@@ -104,10 +97,9 @@ class CreateServiceRequest extends AbstractModel
      * @param string $ServiceName 用户自定义的服务名称。
      * @param string $Protocol 服务的前端请求类型。如 http、https、http&https。
      * @param string $ServiceDesc 用户自定义的服务描述。
-     * @param string $ExclusiveSetName 独立集群名称，用于指定创建服务所在的独立集群。
      * @param array $NetTypes 网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
      * @param string $IpVersion IP版本号，支持IPv4和IPv6，默认为IPv4。
-     * @param string $SetServerName 集群名称。保留字段，tsf serverlss类型使用。
+     * @param string $SetServerName 集群名称。保留字段，tsf serverless类型使用。
      * @param string $AppIdType 用户类型。保留类型，serverless用户使用。
      * @param array $Tags 标签。
      * @param string $InstanceId 独享实例id
@@ -136,10 +128,6 @@ class CreateServiceRequest extends AbstractModel
 
         if (array_key_exists("ServiceDesc",$param) and $param["ServiceDesc"] !== null) {
             $this->ServiceDesc = $param["ServiceDesc"];
-        }
-
-        if (array_key_exists("ExclusiveSetName",$param) and $param["ExclusiveSetName"] !== null) {
-            $this->ExclusiveSetName = $param["ExclusiveSetName"];
         }
 
         if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {

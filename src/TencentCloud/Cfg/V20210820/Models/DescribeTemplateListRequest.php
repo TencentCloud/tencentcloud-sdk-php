@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsUsed(integer $IsUsed) 设置状态，1---使用中， 2---停用
  * @method array getTags() 获取标签对
  * @method void setTags(array $Tags) 设置标签对
+ * @method integer getTemplateSource() 获取经验来源 0-自建 1-专家推荐
+ * @method void setTemplateSource(integer $TemplateSource) 设置经验来源 0-自建 1-专家推荐
+ * @method array getTemplateIdList() 获取经验ID
+ * @method void setTemplateIdList(array $TemplateIdList) 设置经验ID
  */
 class DescribeTemplateListRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DescribeTemplateListRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 经验来源 0-自建 1-专家推荐
+     */
+    public $TemplateSource;
+
+    /**
+     * @var array 经验ID
+     */
+    public $TemplateIdList;
+
+    /**
      * @param integer $Limit 分页Limit, 最大值100
      * @param integer $Offset 分页Offset
      * @param string $Title 演练名称
      * @param array $Tag 标签键
      * @param integer $IsUsed 状态，1---使用中， 2---停用
      * @param array $Tags 标签对
+     * @param integer $TemplateSource 经验来源 0-自建 1-专家推荐
+     * @param array $TemplateIdList 经验ID
      */
     function __construct()
     {
@@ -113,6 +129,14 @@ class DescribeTemplateListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("TemplateSource",$param) and $param["TemplateSource"] !== null) {
+            $this->TemplateSource = $param["TemplateSource"];
+        }
+
+        if (array_key_exists("TemplateIdList",$param) and $param["TemplateIdList"] !== null) {
+            $this->TemplateIdList = $param["TemplateIdList"];
         }
     }
 }

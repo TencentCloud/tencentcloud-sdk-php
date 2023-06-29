@@ -74,8 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamConnectProjectInput(StreamConnectProjectInput $StreamConnectProjectInput) 设置云转推项目输入信息，仅当项目类型为 STREAM_CONNECT 时必填。
  * @method RecordReplayProjectInput getRecordReplayProjectInput() 获取录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。
  * @method void setRecordReplayProjectInput(RecordReplayProjectInput $RecordReplayProjectInput) 设置录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。
- * @method MediaCastProjectInput getMediaCastProjectInput() 获取点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
- * @method void setMediaCastProjectInput(MediaCastProjectInput $MediaCastProjectInput) 设置点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+ * @method MediaCastProjectInput getMediaCastProjectInput() 获取媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+ * @method void setMediaCastProjectInput(MediaCastProjectInput $MediaCastProjectInput) 设置媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
  */
 class CreateProjectRequest extends AbstractModel
 {
@@ -159,7 +159,7 @@ class CreateProjectRequest extends AbstractModel
     public $RecordReplayProjectInput;
 
     /**
-     * @var MediaCastProjectInput 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+     * @var MediaCastProjectInput 媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
      */
     public $MediaCastProjectInput;
 
@@ -191,7 +191,7 @@ class CreateProjectRequest extends AbstractModel
      * @param VideoSegmentationProjectInput $VideoSegmentationProjectInput 视频拆条项目输入信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
      * @param StreamConnectProjectInput $StreamConnectProjectInput 云转推项目输入信息，仅当项目类型为 STREAM_CONNECT 时必填。
      * @param RecordReplayProjectInput $RecordReplayProjectInput 录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。
-     * @param MediaCastProjectInput $MediaCastProjectInput 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+     * @param MediaCastProjectInput $MediaCastProjectInput 媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
      */
     function __construct()
     {

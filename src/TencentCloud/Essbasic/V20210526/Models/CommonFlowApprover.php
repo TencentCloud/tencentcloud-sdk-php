@@ -116,6 +116,7 @@ class CommonFlowApprover extends AbstractModel
 
     /**
      * @var string 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
+     * @deprecated
      */
     public $NotifyType;
 

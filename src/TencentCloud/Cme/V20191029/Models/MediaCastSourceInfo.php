@@ -27,13 +27,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
  * @method void setType(string $Type) 设置输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
  * @method string getFileId() 获取云点播媒体文件 ID。当 Type = VOD 时必填。
  * @method void setFileId(string $FileId) 设置云点播媒体文件 ID。当 Type = VOD 时必填。
  * @method string getMaterialId() 获取多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
  * @method void setMaterialId(string $MaterialId) 设置多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
+ * @method float getOffset() 获取文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+ * @method void setOffset(float $Offset) 设置文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+ * @method float getDuration() 获取播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+ * @method void setDuration(float $Duration) 设置播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+ * @method string getUrl() 获取外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
+ * @method void setUrl(string $Url) 设置外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
  */
 class MediaCastSourceInfo extends AbstractModel
 {
@@ -47,6 +55,7 @@ class MediaCastSourceInfo extends AbstractModel
      * @var string 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
      */
     public $Type;
 
@@ -61,13 +70,32 @@ class MediaCastSourceInfo extends AbstractModel
     public $MaterialId;
 
     /**
+     * @var float 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     */
+    public $Offset;
+
+    /**
+     * @var float 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+     */
+    public $Duration;
+
+    /**
+     * @var string 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
+     */
+    public $Url;
+
+    /**
      * @param string $Id 输入源 Id，由系统分配。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
      * @param string $FileId 云点播媒体文件 ID。当 Type = VOD 时必填。
      * @param string $MaterialId 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
+     * @param float $Offset 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     * @param float $Duration 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+     * @param string $Url 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
      */
     function __construct()
     {
@@ -96,6 +124,18 @@ class MediaCastSourceInfo extends AbstractModel
 
         if (array_key_exists("MaterialId",$param) and $param["MaterialId"] !== null) {
             $this->MaterialId = $param["MaterialId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

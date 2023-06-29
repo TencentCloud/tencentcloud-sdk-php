@@ -18,20 +18,16 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisableEncryptionProtection请求参数结构体
+ * kms加密参数
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+
  */
-class DisableEncryptionProtectionRequest extends AbstractModel
+class KMSConfiguration extends AbstractModel
 {
-    /**
-     * @var string 集群ID
-     */
-    public $ClusterId;
+
 
     /**
-     * @param string $ClusterId 集群ID
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DisableEncryptionProtectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
+
     }
 }

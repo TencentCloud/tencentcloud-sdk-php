@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
- * @method string getProjectId() 获取点播转直播项目 Id 。
- * @method void setProjectId(string $ProjectId) 设置点播转直播项目 Id 。
+ * @method string getProjectId() 获取媒体转推项目 Id 。
+ * @method void setProjectId(string $ProjectId) 设置媒体转推项目 Id 。
  * @method string getOperation() 获取请参考 [操作类型](#Operation)。
  * @method void setOperation(string $Operation) 设置请参考 [操作类型](#Operation)。
  * @method array getSourceInfos() 获取输入源信息。具体操作方式详见 [操作类型](#Operation) 及下文示例。
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 当 Operation 为 AddSource 时必填。
  * @method void setPosition(integer $Position) 设置新添加的输入源位于输入源列表的位置，从0开始。默认加在输入源列表的后面。具体操作方式详见 [操作类型](#Operation) 及下文示例。
 当 Operation 为 AddSource 时必填。
- * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
- * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
  */
 class HandleMediaCastProjectRequest extends AbstractModel
 {
@@ -57,7 +57,7 @@ class HandleMediaCastProjectRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var string 点播转直播项目 Id 。
+     * @var string 媒体转推项目 Id 。
      */
     public $ProjectId;
 
@@ -97,13 +97,13 @@ class HandleMediaCastProjectRequest extends AbstractModel
     public $Position;
 
     /**
-     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
      */
     public $Operator;
 
     /**
      * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
-     * @param string $ProjectId 点播转直播项目 Id 。
+     * @param string $ProjectId 媒体转推项目 Id 。
      * @param string $Operation 请参考 [操作类型](#Operation)。
      * @param array $SourceInfos 输入源信息。具体操作方式详见 [操作类型](#Operation) 及下文示例。
 当 Operation 为 AddSource、DeleteSource、SwitchSource 时必填。
@@ -115,7 +115,7 @@ class HandleMediaCastProjectRequest extends AbstractModel
 当 Operation 为 ModifyPlaySetting 时必填。
      * @param integer $Position 新添加的输入源位于输入源列表的位置，从0开始。默认加在输入源列表的后面。具体操作方式详见 [操作类型](#Operation) 及下文示例。
 当 Operation 为 AddSource 时必填。
-     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
      */
     function __construct()
     {

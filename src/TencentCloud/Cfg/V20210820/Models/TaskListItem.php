@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskPreCheckSuccess(boolean $TaskPreCheckSuccess) 设置环境检查是否通过
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskExpect() 获取演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskExpect(integer $TaskExpect) 设置演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskListItem extends AbstractModel
 {
@@ -96,6 +100,12 @@ class TaskListItem extends AbstractModel
     public $TaskPreCheckSuccess;
 
     /**
+     * @var integer 演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskExpect;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -107,6 +117,8 @@ class TaskListItem extends AbstractModel
      * @param integer $TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TaskPreCheckSuccess 环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,10 @@ class TaskListItem extends AbstractModel
 
         if (array_key_exists("TaskPreCheckSuccess",$param) and $param["TaskPreCheckSuccess"] !== null) {
             $this->TaskPreCheckSuccess = $param["TaskPreCheckSuccess"];
+        }
+
+        if (array_key_exists("TaskExpect",$param) and $param["TaskExpect"] !== null) {
+            $this->TaskExpect = $param["TaskExpect"];
         }
     }
 }

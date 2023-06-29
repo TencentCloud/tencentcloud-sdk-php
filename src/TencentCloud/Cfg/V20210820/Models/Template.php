@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTemplateSource() 获取经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateSource(integer $TemplateSource) 设置经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -138,6 +142,12 @@ class Template extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateSource;
+
+    /**
      * @param integer $TemplateId 经验库ID
      * @param string $TemplateTitle 经验库标题
      * @param string $TemplateDescription 经验库描述
@@ -155,6 +165,8 @@ class Template extends AbstractModel
      * @param TemplatePolicy $TemplatePolicy 护栏监控
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TemplateSource 经验来源 0-自建 1-专家推荐
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class Template extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("TemplateSource",$param) and $param["TemplateSource"] !== null) {
+            $this->TemplateSource = $param["TemplateSource"];
         }
     }
 }

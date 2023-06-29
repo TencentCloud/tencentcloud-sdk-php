@@ -184,9 +184,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceWebsocketTransportFunctionQualifier(string $ServiceWebsocketTransportFunctionQualifier) 设置scf websocket传输函数版本。当前端类型是WEBSOCKET且后端类型是SCF时生效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMicroServices() 获取API绑定微服务服务列表。
+ * @method array getMicroServices() 获取API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMicroServices(array $MicroServices) 设置API绑定微服务服务列表。
+ * @method void setMicroServices(array $MicroServices) 设置API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMicroServicesInfo() 获取微服务信息详情。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -474,7 +474,7 @@ class ApiInfo extends AbstractModel
     public $ServiceWebsocketTransportFunctionQualifier;
 
     /**
-     * @var array API绑定微服务服务列表。
+     * @var array API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MicroServices;
@@ -616,7 +616,7 @@ class ApiInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceWebsocketTransportFunctionQualifier scf websocket传输函数版本。当前端类型是WEBSOCKET且后端类型是SCF时生效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MicroServices API绑定微服务服务列表。
+     * @param array $MicroServices API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MicroServicesInfo 微服务信息详情。
 注意：此字段可能返回 null，表示取不到有效值。

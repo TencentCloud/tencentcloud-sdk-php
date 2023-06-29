@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置房间绑定的群组ID
  * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关
  * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关
+ * @method integer getInteractionMode() 获取开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+ * @method void setInteractionMode(integer $InteractionMode) 设置开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+ * @method integer getVideoOrientation() 获取横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+ * @method void setVideoOrientation(integer $VideoOrientation) 设置横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
  */
 class RoomInfo extends AbstractModel
 {
@@ -143,6 +147,16 @@ class RoomInfo extends AbstractModel
     public $EnableDirectControl;
 
     /**
+     * @var integer 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+     */
+    public $InteractionMode;
+
+    /**
+     * @var integer 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     */
+    public $VideoOrientation;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳。
@@ -160,6 +174,8 @@ class RoomInfo extends AbstractModel
      * @param integer $RecordLayout 录制布局。
      * @param string $GroupId 房间绑定的群组ID
      * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     * @param integer $InteractionMode 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+     * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
      */
     function __construct()
     {
@@ -240,6 +256,14 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
             $this->EnableDirectControl = $param["EnableDirectControl"];
+        }
+
+        if (array_key_exists("InteractionMode",$param) and $param["InteractionMode"] !== null) {
+            $this->InteractionMode = $param["InteractionMode"];
+        }
+
+        if (array_key_exists("VideoOrientation",$param) and $param["VideoOrientation"] !== null) {
+            $this->VideoOrientation = $param["VideoOrientation"];
         }
     }
 }

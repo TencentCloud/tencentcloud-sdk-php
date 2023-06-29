@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoopCount(integer $LoopCount) 设置循环播放次数。LoopCount 和 EndTime 同时只能有一个生效。默认循环播放次数为一次。如果同时设置了 LoopCount 和 EndTime 参数，优先使用 LoopCount 参数。
  * @method string getEndTime() 获取结束时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setEndTime(string $EndTime) 设置结束时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getAutoStartTime() 获取自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setAutoStartTime(string $AutoStartTime) 设置自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class MediaCastPlaySetting extends AbstractModel
 {
@@ -38,8 +40,14 @@ class MediaCastPlaySetting extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $AutoStartTime;
+
+    /**
      * @param integer $LoopCount 循环播放次数。LoopCount 和 EndTime 同时只能有一个生效。默认循环播放次数为一次。如果同时设置了 LoopCount 和 EndTime 参数，优先使用 LoopCount 参数。
      * @param string $EndTime 结束时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $AutoStartTime 自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class MediaCastPlaySetting extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("AutoStartTime",$param) and $param["AutoStartTime"] !== null) {
+            $this->AutoStartTime = $param["AutoStartTime"];
         }
     }
 }

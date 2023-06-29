@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) 设置Acl操作方式，枚举值(所有操作: All, 读：Read，写：Write)
  * @method string getPermissionType() 获取权限类型，(Deny，Allow)
  * @method void setPermissionType(string $PermissionType) 设置权限类型，(Deny，Allow)
- * @method string getHost() 获取默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
- * @method void setHost(string $Host) 设置默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
+ * @method string getHost() 获取默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
+ * @method void setHost(string $Host) 设置默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
  * @method string getPrincipal() 获取用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
  * @method void setPrincipal(string $Principal) 设置用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
  */
@@ -42,7 +42,7 @@ class AclRuleInfo extends AbstractModel
     public $PermissionType;
 
     /**
-     * @var string 默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
+     * @var string 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
      */
     public $Host;
 
@@ -54,7 +54,7 @@ class AclRuleInfo extends AbstractModel
     /**
      * @param string $Operation Acl操作方式，枚举值(所有操作: All, 读：Read，写：Write)
      * @param string $PermissionType 权限类型，(Deny，Allow)
-     * @param string $Host 默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
+     * @param string $Host 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
      * @param string $Principal 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入格式需要带【User:】前缀。例如用户A，传入为User:A。
      */
     function __construct()

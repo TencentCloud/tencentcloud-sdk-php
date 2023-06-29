@@ -36,8 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置服务创建时间。
  * @method string getModifiedTime() 获取服务修改时间。
  * @method void setModifiedTime(string $ModifiedTime) 设置服务修改时间。
- * @method string getExclusiveSetName() 获取独立集群名称。
- * @method void setExclusiveSetName(string $ExclusiveSetName) 设置独立集群名称。
  * @method array getNetTypes() 获取网络类型列表，INNER为内网访问，OUTER为外网访问。
  * @method void setNetTypes(array $NetTypes) 设置网络类型列表，INNER为内网访问，OUTER为外网访问。
  * @method string getInternalSubDomain() 获取内网访问子域名。
@@ -136,11 +134,6 @@ class DescribeServiceResponse extends AbstractModel
      * @var string 服务修改时间。
      */
     public $ModifiedTime;
-
-    /**
-     * @var string 独立集群名称。
-     */
-    public $ExclusiveSetName;
 
     /**
      * @var array 网络类型列表，INNER为内网访问，OUTER为外网访问。
@@ -257,7 +250,6 @@ class DescribeServiceResponse extends AbstractModel
      * @param string $Protocol 服务支持协议，可选值为http、https、http&https。
      * @param string $CreatedTime 服务创建时间。
      * @param string $ModifiedTime 服务修改时间。
-     * @param string $ExclusiveSetName 独立集群名称。
      * @param array $NetTypes 网络类型列表，INNER为内网访问，OUTER为外网访问。
      * @param string $InternalSubDomain 内网访问子域名。
      * @param string $OuterSubDomain 外网访问子域名。
@@ -328,10 +320,6 @@ class DescribeServiceResponse extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
-        }
-
-        if (array_key_exists("ExclusiveSetName",$param) and $param["ExclusiveSetName"] !== null) {
-            $this->ExclusiveSetName = $param["ExclusiveSetName"];
         }
 
         if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {

@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEncryptionStatus返回参数结构体
  *
+ * @method string getStatus() 获取加密状态
+ * @method void setStatus(string $Status) 设置加密状态
+ * @method string getErrorMsg() 获取加密错误信息
+ * @method void setErrorMsg(string $ErrorMsg) 设置加密错误信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeEncryptionStatusResponse extends AbstractModel
 {
     /**
+     * @var string 加密状态
+     */
+    public $Status;
+
+    /**
+     * @var string 加密错误信息
+     */
+    public $ErrorMsg;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $Status 加密状态
+     * @param string $ErrorMsg 加密错误信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class DescribeEncryptionStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

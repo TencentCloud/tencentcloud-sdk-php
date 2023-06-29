@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUsagePlanId() 获取待查询的使用计划唯一 ID。
  * @method void setUsagePlanId(string $UsagePlanId) 设置待查询的使用计划唯一 ID。
- * @method string getBindType() 获取定类型，取值为 API、SERVICE，默认值为 SERVICE。
- * @method void setBindType(string $BindType) 设置定类型，取值为 API、SERVICE，默认值为 SERVICE。
+ * @method string getBindType() 获取定义类型，取值为 API、SERVICE，默认值为 SERVICE。
+ * @method void setBindType(string $BindType) 设置定义类型，取值为 API、SERVICE，默认值为 SERVICE。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。
  * @method integer getOffset() 获取偏移量，默认为 0。
@@ -37,7 +37,7 @@ class DescribeUsagePlanEnvironmentsRequest extends AbstractModel
     public $UsagePlanId;
 
     /**
-     * @var string 定类型，取值为 API、SERVICE，默认值为 SERVICE。
+     * @var string 定义类型，取值为 API、SERVICE，默认值为 SERVICE。
      */
     public $BindType;
 
@@ -53,7 +53,7 @@ class DescribeUsagePlanEnvironmentsRequest extends AbstractModel
 
     /**
      * @param string $UsagePlanId 待查询的使用计划唯一 ID。
-     * @param string $BindType 定类型，取值为 API、SERVICE，默认值为 SERVICE。
+     * @param string $BindType 定义类型，取值为 API、SERVICE，默认值为 SERVICE。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      * @param integer $Offset 偏移量，默认为 0。
      */

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoCreateTopicEnable(boolean $AutoCreateTopicEnable) 设置自动创建 true 表示开启，false 表示不开启
  * @method integer getDefaultNumPartitions() 获取可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
  * @method void setDefaultNumPartitions(integer $DefaultNumPartitions) 设置可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
- * @method integer getDefaultReplicationFactor() 获取如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2
- * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) 设置如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2
+ * @method integer getDefaultReplicationFactor() 获取如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+ * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) 设置如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
  */
 class ModifyInstanceAttributesConfig extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyInstanceAttributesConfig extends AbstractModel
     public $DefaultNumPartitions;
 
     /**
-     * @var integer 如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * @var integer 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
      */
     public $DefaultReplicationFactor;
 
     /**
      * @param boolean $AutoCreateTopicEnable 自动创建 true 表示开启，false 表示不开启
      * @param integer $DefaultNumPartitions 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
-     * @param integer $DefaultReplicationFactor 如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * @param integer $DefaultReplicationFactor 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
      */
     function __construct()
     {

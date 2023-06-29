@@ -39,6 +39,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DeleteMerchantResponse DeleteMerchant(Models\DeleteMerchantRequest $req) 删除商户
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 删除商品，如果商品被使用，则不可删除
  * @method Models\DeleteTraceDataResponse DeleteTraceData(Models\DeleteTraceDataRequest $req) 删除溯源信息，如果已经上链则不可删除
+ * @method Models\DescribeAgentCorpsResponse DescribeAgentCorps(Models\DescribeAgentCorpsRequest $req) 查询渠道企业列表
  * @method Models\DescribeCodeBatchByIdResponse DescribeCodeBatchById(Models\DescribeCodeBatchByIdRequest $req) 查询批次信息
  * @method Models\DescribeCodeBatchsResponse DescribeCodeBatchs(Models\DescribeCodeBatchsRequest $req) 查询批次列表
  * @method Models\DescribeCodePackStatusResponse DescribeCodePackStatus(Models\DescribeCodePackStatusRequest $req) 查询码包状态

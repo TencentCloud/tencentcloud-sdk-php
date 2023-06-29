@@ -26,12 +26,8 @@ use TencentCloud\Common\AbstractModel;
 china-中国内地通用，overseas-港澳台及海外通用
  * @method void setPackageRegion(string $PackageRegion) 设置资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
- * @method string getPackageType() 获取资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包
- * @method void setPackageType(string $PackageType) 设置资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包
+ * @method string getPackageType() 获取资源包类型：CCU-计算资源包，DISK-存储资源包
+ * @method void setPackageType(string $PackageType) 设置资源包类型：CCU-计算资源包，DISK-存储资源包
  * @method string getPackageVersion() 获取资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本
  * @method void setPackageVersion(string $PackageVersion) 设置资源包版本
@@ -59,9 +55,7 @@ china-中国内地通用，overseas-港澳台及海外通用
     public $PackageRegion;
 
     /**
-     * @var string 资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包
+     * @var string 资源包类型：CCU-计算资源包，DISK-存储资源包
      */
     public $PackageType;
 
@@ -95,9 +89,7 @@ base-基础版本，common-通用版本，enterprise-企业版本
      * @param string $InstanceType 实例类型
      * @param string $PackageRegion 资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-     * @param string $PackageType 资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包
+     * @param string $PackageType 资源包类型：CCU-计算资源包，DISK-存储资源包
      * @param string $PackageVersion 资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本
      * @param float $PackageSpec 资源包大小，计算资源单位：万个；存储资源：GB

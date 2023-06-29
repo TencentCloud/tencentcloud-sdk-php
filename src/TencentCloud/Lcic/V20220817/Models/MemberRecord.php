@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStage(integer $Stage) 设置用户的上台状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCurrentState() 获取用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrentState(integer $CurrentState) 设置用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MemberRecord extends AbstractModel
 {
@@ -173,6 +177,12 @@ class MemberRecord extends AbstractModel
     public $Stage;
 
     /**
+     * @var integer 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CurrentState;
+
+    /**
      * @param string $UserId 用户ID。
      * @param string $UserName 用户名称。
      * @param integer $PresentTime 在线时长，单位秒。
@@ -195,6 +205,8 @@ class MemberRecord extends AbstractModel
      * @param array $SubGroupId 子上课班号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Stage 用户的上台状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CurrentState 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +300,10 @@ class MemberRecord extends AbstractModel
 
         if (array_key_exists("Stage",$param) and $param["Stage"] !== null) {
             $this->Stage = $param["Stage"];
+        }
+
+        if (array_key_exists("CurrentState",$param) and $param["CurrentState"] !== null) {
+            $this->CurrentState = $param["CurrentState"];
         }
     }
 }

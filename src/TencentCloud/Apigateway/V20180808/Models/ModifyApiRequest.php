@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiBusinessType(string $ApiBusinessType) 设置当AuthType 为 OAUTH时，该字段有效， NORMAL：业务api   OAUTH：授权API。
  * @method string getServiceMockReturnMessage() 获取API 的后端 Mock 返回信息。如果 ServiceType 是 Mock，则此参数必传。
  * @method void setServiceMockReturnMessage(string $ServiceMockReturnMessage) 设置API 的后端 Mock 返回信息。如果 ServiceType 是 Mock，则此参数必传。
- * @method array getMicroServices() 获取API绑定微服务服务列表。
- * @method void setMicroServices(array $MicroServices) 设置API绑定微服务服务列表。
+ * @method array getMicroServices() 获取API绑定微服务列表。
+ * @method void setMicroServices(array $MicroServices) 设置API绑定微服务列表。
  * @method TsfLoadBalanceConfResp getServiceTsfLoadBalanceConf() 获取微服务的负载均衡配置。
  * @method void setServiceTsfLoadBalanceConf(TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf) 设置微服务的负载均衡配置。
  * @method HealthCheckConf getServiceTsfHealthCheckConf() 获取微服务的健康检查配置。
@@ -212,7 +212,7 @@ class ModifyApiRequest extends AbstractModel
     public $ServiceMockReturnMessage;
 
     /**
-     * @var array API绑定微服务服务列表。
+     * @var array API绑定微服务列表。
      */
     public $MicroServices;
 
@@ -418,7 +418,7 @@ class ModifyApiRequest extends AbstractModel
      * @param array $RequestParameters 前端请求参数。
      * @param string $ApiBusinessType 当AuthType 为 OAUTH时，该字段有效， NORMAL：业务api   OAUTH：授权API。
      * @param string $ServiceMockReturnMessage API 的后端 Mock 返回信息。如果 ServiceType 是 Mock，则此参数必传。
-     * @param array $MicroServices API绑定微服务服务列表。
+     * @param array $MicroServices API绑定微服务列表。
      * @param TsfLoadBalanceConfResp $ServiceTsfLoadBalanceConf 微服务的负载均衡配置。
      * @param HealthCheckConf $ServiceTsfHealthCheckConf 微服务的健康检查配置。
      * @param integer $TargetServicesLoadBalanceConf target类型负载均衡配置。（内测阶段）

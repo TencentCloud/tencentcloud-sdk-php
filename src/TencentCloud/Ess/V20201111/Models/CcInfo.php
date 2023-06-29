@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcPermission(integer $CcPermission) 设置被抄送人权限
 0--可查看
 1--可查看也可下载
+ * @method string getNotifyType() 获取关注方通知类型：sms--短信，none--不通知
+ * @method void setNotifyType(string $NotifyType) 设置关注方通知类型：sms--短信，none--不通知
  */
 class CcInfo extends AbstractModel
 {
@@ -64,6 +66,11 @@ class CcInfo extends AbstractModel
     public $CcPermission;
 
     /**
+     * @var string 关注方通知类型：sms--短信，none--不通知
+     */
+    public $NotifyType;
+
+    /**
      * @param string $Mobile 被抄送人手机号，11位数字
      * @param string $Name 被抄送人姓名
      * @param integer $CcType 被抄送人类型,
@@ -72,6 +79,7 @@ class CcInfo extends AbstractModel
      * @param integer $CcPermission 被抄送人权限
 0--可查看
 1--可查看也可下载
+     * @param string $NotifyType 关注方通知类型：sms--短信，none--不通知
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class CcInfo extends AbstractModel
 
         if (array_key_exists("CcPermission",$param) and $param["CcPermission"] !== null) {
             $this->CcPermission = $param["CcPermission"];
+        }
+
+        if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
+            $this->NotifyType = $param["NotifyType"];
         }
     }
 }

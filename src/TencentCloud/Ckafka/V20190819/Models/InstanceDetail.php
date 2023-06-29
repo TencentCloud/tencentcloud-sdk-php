@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthy(integer $Healthy) 设置实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
  * @method string getHealthyMessage() 获取实例状态信息
  * @method void setHealthyMessage(string $HealthyMessage) 设置实例状态信息
- * @method integer getCreateTime() 获取实例创建时间时间
- * @method void setCreateTime(integer $CreateTime) 设置实例创建时间时间
+ * @method integer getCreateTime() 获取实例创建时间
+ * @method void setCreateTime(integer $CreateTime) 设置实例创建时间
  * @method integer getExpireTime() 获取实例过期时间
  * @method void setExpireTime(integer $ExpireTime) 设置实例过期时间
  * @method integer getIsInternal() 获取是否为内部客户。值为1 表示内部客户
@@ -184,7 +184,7 @@ class InstanceDetail extends AbstractModel
     public $HealthyMessage;
 
     /**
-     * @var integer 实例创建时间时间
+     * @var integer 实例创建时间
      */
     public $CreateTime;
 
@@ -301,7 +301,7 @@ class InstanceDetail extends AbstractModel
      * @param integer $RenewFlag 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
      * @param integer $Healthy 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
      * @param string $HealthyMessage 实例状态信息
-     * @param integer $CreateTime 实例创建时间时间
+     * @param integer $CreateTime 实例创建时间
      * @param integer $ExpireTime 实例过期时间
      * @param integer $IsInternal 是否为内部客户。值为1 表示内部客户
      * @param integer $TopicNum Topic个数

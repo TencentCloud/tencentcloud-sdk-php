@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCharacterSet(string $CharacterSet) 设置字符集类型
  * @method string getStatus() 获取数据库状态
  * @method void setStatus(string $Status) 设置数据库状态
- * @method string getCollateRule() 获取拍讯规则
- * @method void setCollateRule(string $CollateRule) 设置拍讯规则
+ * @method string getCollateRule() 获取排序规则
+ * @method void setCollateRule(string $CollateRule) 设置排序规则
  * @method string getDescription() 获取数据库备注
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置数据库备注
@@ -79,7 +79,7 @@ class DbInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string 拍讯规则
+     * @var string 排序规则
      */
     public $CollateRule;
 
@@ -135,7 +135,7 @@ class DbInfo extends AbstractModel
      * @param string $DbName 数据库名称
      * @param string $CharacterSet 字符集类型
      * @param string $Status 数据库状态
-     * @param string $CollateRule 拍讯规则
+     * @param string $CollateRule 排序规则
      * @param string $Description 数据库备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserHostPrivileges 用户权限

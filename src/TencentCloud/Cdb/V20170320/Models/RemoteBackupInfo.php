@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 异地备份信息
  *
- * @method array getSubBackupId() 获取异地备份子任务的ID
- * @method void setSubBackupId(array $SubBackupId) 设置异地备份子任务的ID
+ * @method integer getSubBackupId() 获取异地备份子任务的ID
+ * @method void setSubBackupId(integer $SubBackupId) 设置异地备份子任务的ID
  * @method string getRegion() 获取异地备份所在地域
  * @method void setRegion(string $Region) 设置异地备份所在地域
  * @method string getStatus() 获取备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class RemoteBackupInfo extends AbstractModel
 {
     /**
-     * @var array 异地备份子任务的ID
+     * @var integer 异地备份子任务的ID
      */
     public $SubBackupId;
 
@@ -66,7 +66,7 @@ class RemoteBackupInfo extends AbstractModel
     public $Url;
 
     /**
-     * @param array $SubBackupId 异地备份子任务的ID
+     * @param integer $SubBackupId 异地备份子任务的ID
      * @param string $Region 异地备份所在地域
      * @param string $Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
      * @param string $StartTime 异地备份任务的开始时间

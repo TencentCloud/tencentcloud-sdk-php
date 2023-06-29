@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateUpdateTime(string $TemplateUpdateTime) 设置经验库更新时间
  * @method integer getTemplateUsedNum() 获取经验库关联的任务数量
  * @method void setTemplateUsedNum(integer $TemplateUsedNum) 设置经验库关联的任务数量
+ * @method integer getTemplateSource() 获取经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateSource(integer $TemplateSource) 设置经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateListItem extends AbstractModel
 {
@@ -83,6 +87,12 @@ class TemplateListItem extends AbstractModel
     public $TemplateUsedNum;
 
     /**
+     * @var integer 经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateSource;
+
+    /**
      * @param integer $TemplateId 经验库ID
      * @param string $TemplateTitle 经验库标题
      * @param string $TemplateDescription 经验库描述
@@ -92,6 +102,8 @@ class TemplateListItem extends AbstractModel
      * @param string $TemplateCreateTime 经验库创建时间
      * @param string $TemplateUpdateTime 经验库更新时间
      * @param integer $TemplateUsedNum 经验库关联的任务数量
+     * @param integer $TemplateSource 经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -136,6 +148,10 @@ class TemplateListItem extends AbstractModel
 
         if (array_key_exists("TemplateUsedNum",$param) and $param["TemplateUsedNum"] !== null) {
             $this->TemplateUsedNum = $param["TemplateUsedNum"];
+        }
+
+        if (array_key_exists("TemplateSource",$param) and $param["TemplateSource"] !== null) {
+            $this->TemplateSource = $param["TemplateSource"];
         }
     }
 }

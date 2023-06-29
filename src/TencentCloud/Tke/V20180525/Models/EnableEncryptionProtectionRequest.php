@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableEncryptionProtection请求参数结构体
  *
-
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method KMSConfiguration getKMSConfiguration() 获取kms加密配置
+ * @method void setKMSConfiguration(KMSConfiguration $KMSConfiguration) 设置kms加密配置
  */
 class EnableEncryptionProtectionRequest extends AbstractModel
 {
-
+    /**
+     * @var string 集群ID
+     */
+    public $ClusterId;
 
     /**
+     * @var KMSConfiguration kms加密配置
+     */
+    public $KMSConfiguration;
 
+    /**
+     * @param string $ClusterId 集群ID
+     * @param KMSConfiguration $KMSConfiguration kms加密配置
      */
     function __construct()
     {
@@ -42,6 +54,13 @@ class EnableEncryptionProtectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("KMSConfiguration",$param) and $param["KMSConfiguration"] !== null) {
+            $this->KMSConfiguration = new KMSConfiguration();
+            $this->KMSConfiguration->deserialize($param["KMSConfiguration"]);
+        }
     }
 }

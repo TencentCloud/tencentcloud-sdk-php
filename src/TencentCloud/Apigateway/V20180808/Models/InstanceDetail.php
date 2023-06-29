@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolationStartedTime(string $IsolationStartedTime) 设置独享实例隔离时间
  * @method string getCreatedTime() 获取创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method string getZones() 获取可用区列表
+ * @method array getZones() 获取可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZones(string $Zones) 设置可用区列表
+ * @method void setZones(array $Zones) 设置可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
@@ -128,7 +128,7 @@ class InstanceDetail extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string 可用区列表
+     * @var array 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zones;
@@ -150,7 +150,7 @@ class InstanceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolationStartedTime 独享实例隔离时间
      * @param string $CreatedTime 创建时间
-     * @param string $Zones 可用区列表
+     * @param array $Zones 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

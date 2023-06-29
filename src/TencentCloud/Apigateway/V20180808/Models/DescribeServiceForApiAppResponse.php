@@ -44,10 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiedTime(string $ModifiedTime) 设置服务修改时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExclusiveSetName() 获取独立集群名称。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExclusiveSetName(string $ExclusiveSetName) 设置独立集群名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNetTypes() 获取网络类型列表，INNER为内网访问，OUTER为外网访问。
  * @method void setNetTypes(array $NetTypes) 设置网络类型列表，INNER为内网访问，OUTER为外网访问。
  * @method string getInternalSubDomain() 获取内网访问子域名。
@@ -134,12 +130,6 @@ class DescribeServiceForApiAppResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifiedTime;
-
-    /**
-     * @var string 独立集群名称。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ExclusiveSetName;
 
     /**
      * @var array 网络类型列表，INNER为内网访问，OUTER为外网访问。
@@ -232,8 +222,6 @@ class DescribeServiceForApiAppResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifiedTime 服务修改时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExclusiveSetName 独立集群名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NetTypes 网络类型列表，INNER为内网访问，OUTER为外网访问。
      * @param string $InternalSubDomain 内网访问子域名。
      * @param string $OuterSubDomain 外网访问子域名。
@@ -296,10 +284,6 @@ class DescribeServiceForApiAppResponse extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
-        }
-
-        if (array_key_exists("ExclusiveSetName",$param) and $param["ExclusiveSetName"] !== null) {
-            $this->ExclusiveSetName = $param["ExclusiveSetName"];
         }
 
         if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {

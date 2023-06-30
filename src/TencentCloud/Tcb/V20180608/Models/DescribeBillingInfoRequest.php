@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcr\V20190924\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteImageLifecyclePersonal请求参数结构体
+ * DescribeBillingInfo请求参数结构体
  *
- * @method string getRepoName() 获取仓库名称
- * @method void setRepoName(string $RepoName) 设置仓库名称
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  */
-class DeleteImageLifecyclePersonalRequest extends AbstractModel
+class DescribeBillingInfoRequest extends AbstractModel
 {
     /**
-     * @var string 仓库名称
+     * @var string 环境ID
      */
-    public $RepoName;
+    public $EnvId;
 
     /**
-     * @param string $RepoName 仓库名称
+     * @param string $EnvId 环境ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteImageLifecyclePersonalRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
-            $this->RepoName = $param["RepoName"];
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
         }
     }
 }

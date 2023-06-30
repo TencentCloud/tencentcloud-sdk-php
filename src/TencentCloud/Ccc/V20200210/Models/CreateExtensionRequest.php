@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtensionId(string $ExtensionId) 设置分机号
  * @method string getExtensionName() 获取分机名称
  * @method void setExtensionName(string $ExtensionName) 设置分机名称
+ * @method array getSkillGroupIds() 获取绑定的技能组列表
+ * @method void setSkillGroupIds(array $SkillGroupIds) 设置绑定的技能组列表
+ * @method string getRelation() 获取绑定的坐席邮箱
+ * @method void setRelation(string $Relation) 设置绑定的坐席邮箱
  */
 class CreateExtensionRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class CreateExtensionRequest extends AbstractModel
     public $ExtensionName;
 
     /**
+     * @var array 绑定的技能组列表
+     */
+    public $SkillGroupIds;
+
+    /**
+     * @var string 绑定的坐席邮箱
+     */
+    public $Relation;
+
+    /**
      * @param integer $SdkAppId TCCC 实例应用 ID
      * @param string $ExtensionId 分机号
      * @param string $ExtensionName 分机名称
+     * @param array $SkillGroupIds 绑定的技能组列表
+     * @param string $Relation 绑定的坐席邮箱
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class CreateExtensionRequest extends AbstractModel
 
         if (array_key_exists("ExtensionName",$param) and $param["ExtensionName"] !== null) {
             $this->ExtensionName = $param["ExtensionName"];
+        }
+
+        if (array_key_exists("SkillGroupIds",$param) and $param["SkillGroupIds"] !== null) {
+            $this->SkillGroupIds = $param["SkillGroupIds"];
+        }
+
+        if (array_key_exists("Relation",$param) and $param["Relation"] !== null) {
+            $this->Relation = $param["Relation"];
         }
     }
 }

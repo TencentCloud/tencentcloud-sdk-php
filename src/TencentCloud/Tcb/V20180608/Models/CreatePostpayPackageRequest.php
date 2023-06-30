@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置付费来源
 <li>miniapp</li>
 <li>qcloud</li>
- * @method string getFreeQuota() 获取用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
- * @method void setFreeQuota(string $FreeQuota) 设置用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+ * @method string getFreeQuota() 获取用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
+ * @method void setFreeQuota(string $FreeQuota) 设置用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
  * @method string getEnvSource() 获取环境创建来源，取值：
 <li>miniapp</li>
 <li>qcloud</li>
@@ -83,7 +83,7 @@ class CreatePostpayPackageRequest extends AbstractModel
     public $Source;
 
     /**
-     * @var string 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+     * @var string 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
      */
     public $FreeQuota;
 
@@ -136,7 +136,7 @@ class CreatePostpayPackageRequest extends AbstractModel
      * @param string $Source 付费来源
 <li>miniapp</li>
 <li>qcloud</li>
-     * @param string $FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+     * @param string $FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
      * @param string $EnvSource 环境创建来源，取值：
 <li>miniapp</li>
 <li>qcloud</li>

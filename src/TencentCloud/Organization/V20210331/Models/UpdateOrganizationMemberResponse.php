@@ -14,47 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Organization\V20210331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateProxyEndPoint返回参数结构体
+ * UpdateOrganizationMember返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程ID
- * @method void setFlowId(integer $FlowId) 设置异步流程ID
- * @method integer getTaskId() 获取异步任务ID
- * @method void setTaskId(integer $TaskId) 设置异步任务ID
- * @method string getProxyGroupId() 获取数据库代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateProxyEndPointResponse extends AbstractModel
+class UpdateOrganizationMemberResponse extends AbstractModel
 {
-    /**
-     * @var integer 异步流程ID
-     */
-    public $FlowId;
-
-    /**
-     * @var integer 异步任务ID
-     */
-    public $TaskId;
-
-    /**
-     * @var string 数据库代理组ID
-     */
-    public $ProxyGroupId;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程ID
-     * @param integer $TaskId 异步任务ID
-     * @param string $ProxyGroupId 数据库代理组ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,18 +46,6 @@ class CreateProxyEndPointResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
-        }
-
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
-        }
-
-        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
-            $this->ProxyGroupId = $param["ProxyGroupId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

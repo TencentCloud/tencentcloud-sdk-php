@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcr\V20190924\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteImageLifecyclePersonal返回参数结构体
+ * DescribeBillingInfo返回参数结构体
  *
+ * @method array getEnvBillingInfoList() 获取环境计费信息列表
+ * @method void setEnvBillingInfoList(array $EnvBillingInfoList) 设置环境计费信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteImageLifecyclePersonalResponse extends AbstractModel
+class DescribeBillingInfoResponse extends AbstractModel
 {
+    /**
+     * @var array 环境计费信息列表
+     */
+    public $EnvBillingInfoList;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $EnvBillingInfoList 环境计费信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,15 @@ class DeleteImageLifecyclePersonalResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnvBillingInfoList",$param) and $param["EnvBillingInfoList"] !== null) {
+            $this->EnvBillingInfoList = [];
+            foreach ($param["EnvBillingInfoList"] as $key => $value){
+                $obj = new EnvBillingInfoItem();
+                $obj->deserialize($value);
+                array_push($this->EnvBillingInfoList, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -18,7 +18,7 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 央视P2P流信息。
+ * P2P流信息。
  *
  * @method integer getCdnBytes() 获取CDN流量。
  * @method void setCdnBytes(integer $CdnBytes) 设置CDN流量。

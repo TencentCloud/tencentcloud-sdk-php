@@ -14,37 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateProxyEndPoint返回参数结构体
+ * DescribeGatewayVersions返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程ID
- * @method void setFlowId(integer $FlowId) 设置异步流程ID
- * @method integer getTaskId() 获取异步任务ID
- * @method void setTaskId(integer $TaskId) 设置异步任务ID
- * @method string getProxyGroupId() 获取数据库代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID
+ * @method string getGatewayId() 获取网关id
+ * @method void setGatewayId(string $GatewayId) 设置网关id
+ * @method integer getTotalCount() 获取版本总数
+ * @method void setTotalCount(integer $TotalCount) 设置版本总数
+ * @method array getGatewayVersionItems() 获取版本信息详情
+ * @method void setGatewayVersionItems(array $GatewayVersionItems) 设置版本信息详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateProxyEndPointResponse extends AbstractModel
+class DescribeGatewayVersionsResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID
+     * @var string 网关id
      */
-    public $FlowId;
+    public $GatewayId;
 
     /**
-     * @var integer 异步任务ID
+     * @var integer 版本总数
      */
-    public $TaskId;
+    public $TotalCount;
 
     /**
-     * @var string 数据库代理组ID
+     * @var array 版本信息详情
      */
-    public $ProxyGroupId;
+    public $GatewayVersionItems;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +52,9 @@ class CreateProxyEndPointResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程ID
-     * @param integer $TaskId 异步任务ID
-     * @param string $ProxyGroupId 数据库代理组ID
+     * @param string $GatewayId 网关id
+     * @param integer $TotalCount 版本总数
+     * @param array $GatewayVersionItems 版本信息详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +70,21 @@ class CreateProxyEndPointResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
+            $this->GatewayId = $param["GatewayId"];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
-            $this->ProxyGroupId = $param["ProxyGroupId"];
+        if (array_key_exists("GatewayVersionItems",$param) and $param["GatewayVersionItems"] !== null) {
+            $this->GatewayVersionItems = [];
+            foreach ($param["GatewayVersionItems"] as $key => $value){
+                $obj = new GatewayVersionItem();
+                $obj->deserialize($value);
+                array_push($this->GatewayVersionItems, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

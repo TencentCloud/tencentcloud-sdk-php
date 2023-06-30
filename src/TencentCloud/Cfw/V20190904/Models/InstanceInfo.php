@@ -74,6 +74,10 @@ type InstanceInfo struct {
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServer(array $Server) 设置扫描结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionKey() 获取地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionKey(string $RegionKey) 设置地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -156,6 +160,12 @@ class InstanceInfo extends AbstractModel
     public $Server;
 
     /**
+     * @var string 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionKey;
+
+    /**
      * @param string $AppId appid信息
      * @param string $Region 地域
      * @param string $VpcId vpcid信息
@@ -173,6 +183,8 @@ class InstanceInfo extends AbstractModel
      * @param array $ResourcePath [a,b]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Server 扫描结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionKey 地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -246,6 +258,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("Server",$param) and $param["Server"] !== null) {
             $this->Server = $param["Server"];
+        }
+
+        if (array_key_exists("RegionKey",$param) and $param["RegionKey"] !== null) {
+            $this->RegionKey = $param["RegionKey"];
         }
     }
 }

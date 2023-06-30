@@ -24,6 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method string getReportId() 获取出证报告编号
  * @method void setReportId(string $ReportId) 设置出证报告编号
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class DescribeFlowEvidenceReportRequest extends AbstractModel
 {
@@ -38,8 +41,15 @@ class DescribeFlowEvidenceReportRequest extends AbstractModel
     public $ReportId;
 
     /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $ReportId 出证报告编号
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -61,6 +71,11 @@ class DescribeFlowEvidenceReportRequest extends AbstractModel
 
         if (array_key_exists("ReportId",$param) and $param["ReportId"] !== null) {
             $this->ReportId = $param["ReportId"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

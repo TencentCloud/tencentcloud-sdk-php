@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页参数，分页步长，默认为10
  * @method array getSearchTags() 获取搜索标签列表
  * @method void setSearchTags(array $SearchTags) 设置搜索标签列表
+ * @method boolean getIsSimple() 获取信息详细与否
+ * @method void setIsSimple(boolean $IsSimple) 设置信息详细与否
  */
 class DescribeInstancesNewRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeInstancesNewRequest extends AbstractModel
     public $SearchTags;
 
     /**
+     * @var boolean 信息详细与否
+     */
+    public $IsSimple;
+
+    /**
      * @param string $SearchInstanceId 搜索的集群id名称
      * @param string $SearchInstanceName 搜索的集群name
      * @param integer $Offset 分页参数，第一页为0，第二页为10
      * @param integer $Limit 分页参数，分页步长，默认为10
      * @param array $SearchTags 搜索标签列表
+     * @param boolean $IsSimple 信息详细与否
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class DescribeInstancesNewRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SearchTags, $obj);
             }
+        }
+
+        if (array_key_exists("IsSimple",$param) and $param["IsSimple"] !== null) {
+            $this->IsSimple = $param["IsSimple"];
         }
     }
 }

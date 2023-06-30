@@ -18,19 +18,32 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAuthDomains返回参数结构体
+ * DescribeWxGatewayRoutes返回参数结构体
  *
- * @method array getDomains() 获取安全域名列表
- * @method void setDomains(array $Domains) 设置安全域名列表
+ * @method integer getTotalCount() 获取返回的服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置返回的服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWxGatewayRouteSet() 获取返回的服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWxGatewayRouteSet(array $WxGatewayRouteSet) 设置返回的服务列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAuthDomainsResponse extends AbstractModel
+class DescribeWxGatewayRoutesResponse extends AbstractModel
 {
     /**
-     * @var array 安全域名列表
+     * @var integer 返回的服务个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Domains;
+    public $TotalCount;
+
+    /**
+     * @var array 返回的服务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WxGatewayRouteSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class DescribeAuthDomainsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Domains 安全域名列表
+     * @param integer $TotalCount 返回的服务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WxGatewayRouteSet 返回的服务列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +70,16 @@ class DescribeAuthDomainsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
-            $this->Domains = [];
-            foreach ($param["Domains"] as $key => $value){
-                $obj = new AuthDomain();
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("WxGatewayRouteSet",$param) and $param["WxGatewayRouteSet"] !== null) {
+            $this->WxGatewayRouteSet = [];
+            foreach ($param["WxGatewayRouteSet"] as $key => $value){
+                $obj = new WxGatewayRountItem();
                 $obj->deserialize($value);
-                array_push($this->Domains, $obj);
+                array_push($this->WxGatewayRouteSet, $obj);
             }
         }
 

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnCode(integer $ReturnCode) 设置状态值，0：查询成功，非0：查询失败
  * @method string getReturnMsg() 获取状态信息，success：查询成功，fail：查询失败
  * @method void setReturnMsg(string $ReturnMsg) 设置状态信息，success：查询成功，fail：查询失败
+ * @method array getSourceList() 获取安全事件来源下拉框
+ * @method void setSourceList(array $SourceList) 设置安全事件来源下拉框
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeBlockIgnoreListResponse extends AbstractModel
     public $ReturnMsg;
 
     /**
+     * @var array 安全事件来源下拉框
+     */
+    public $SourceList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeBlockIgnoreListResponse extends AbstractModel
      * @param integer $Total 查询结果总数，用于分页
      * @param integer $ReturnCode 状态值，0：查询成功，非0：查询失败
      * @param string $ReturnMsg 状态信息，success：查询成功，fail：查询失败
+     * @param array $SourceList 安全事件来源下拉框
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +105,10 @@ class DescribeBlockIgnoreListResponse extends AbstractModel
 
         if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
             $this->ReturnMsg = $param["ReturnMsg"];
+        }
+
+        if (array_key_exists("SourceList",$param) and $param["SourceList"] !== null) {
+            $this->SourceList = $param["SourceList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

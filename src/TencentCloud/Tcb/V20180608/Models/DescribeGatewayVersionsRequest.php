@@ -18,44 +18,36 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyEndUser请求参数结构体
+ * DescribeGatewayVersions请求参数结构体
  *
- * @method string getEnvId() 获取环境ID
- * @method void setEnvId(string $EnvId) 设置环境ID
- * @method string getUUId() 获取C端用户端的唯一ID
- * @method void setUUId(string $UUId) 设置C端用户端的唯一ID
- * @method string getStatus() 获取账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
- * @method void setStatus(string $Status) 设置账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+ * @method string getEnvId() 获取环境id
+ * @method void setEnvId(string $EnvId) 设置环境id
+ * @method string getGatewayId() 获取网关id
+ * @method void setGatewayId(string $GatewayId) 设置网关id
+ * @method string getVersionName() 获取版本名
+ * @method void setVersionName(string $VersionName) 设置版本名
  */
-class ModifyEndUserRequest extends AbstractModel
+class DescribeGatewayVersionsRequest extends AbstractModel
 {
     /**
-     * @var string 环境ID
+     * @var string 环境id
      */
     public $EnvId;
 
     /**
-     * @var string C端用户端的唯一ID
+     * @var string 网关id
      */
-    public $UUId;
+    public $GatewayId;
 
     /**
-     * @var string 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * @var string 版本名
      */
-    public $Status;
+    public $VersionName;
 
     /**
-     * @param string $EnvId 环境ID
-     * @param string $UUId C端用户端的唯一ID
-     * @param string $Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * @param string $EnvId 环境id
+     * @param string $GatewayId 网关id
+     * @param string $VersionName 版本名
      */
     function __construct()
     {
@@ -74,12 +66,12 @@ class ModifyEndUserRequest extends AbstractModel
             $this->EnvId = $param["EnvId"];
         }
 
-        if (array_key_exists("UUId",$param) and $param["UUId"] !== null) {
-            $this->UUId = $param["UUId"];
+        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
+            $this->GatewayId = $param["GatewayId"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
+            $this->VersionName = $param["VersionName"];
         }
     }
 }

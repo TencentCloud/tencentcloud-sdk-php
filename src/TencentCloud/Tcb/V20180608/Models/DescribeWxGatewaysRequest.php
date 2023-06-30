@@ -18,20 +18,18 @@ namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyEndUser请求参数结构体
+ * DescribeWxGateways请求参数结构体
  *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
- * @method string getUUId() 获取C端用户端的唯一ID
- * @method void setUUId(string $UUId) 设置C端用户端的唯一ID
- * @method string getStatus() 获取账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
- * @method void setStatus(string $Status) 设置账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+ * @method string getGatewayName() 获取服务名称，精确匹配
+ * @method void setGatewayName(string $GatewayName) 设置服务名称，精确匹配
+ * @method integer getLimit() 获取分页参数
+ * @method void setLimit(integer $Limit) 设置分页参数
+ * @method integer getOffset() 获取分页参数
+ * @method void setOffset(integer $Offset) 设置分页参数
  */
-class ModifyEndUserRequest extends AbstractModel
+class DescribeWxGatewaysRequest extends AbstractModel
 {
     /**
      * @var string 环境ID
@@ -39,23 +37,25 @@ class ModifyEndUserRequest extends AbstractModel
     public $EnvId;
 
     /**
-     * @var string C端用户端的唯一ID
+     * @var string 服务名称，精确匹配
      */
-    public $UUId;
+    public $GatewayName;
 
     /**
-     * @var string 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * @var integer 分页参数
      */
-    public $Status;
+    public $Limit;
+
+    /**
+     * @var integer 分页参数
+     */
+    public $Offset;
 
     /**
      * @param string $EnvId 环境ID
-     * @param string $UUId C端用户端的唯一ID
-     * @param string $Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * @param string $GatewayName 服务名称，精确匹配
+     * @param integer $Limit 分页参数
+     * @param integer $Offset 分页参数
      */
     function __construct()
     {
@@ -74,12 +74,16 @@ class ModifyEndUserRequest extends AbstractModel
             $this->EnvId = $param["EnvId"];
         }
 
-        if (array_key_exists("UUId",$param) and $param["UUId"] !== null) {
-            $this->UUId = $param["UUId"];
+        if (array_key_exists("GatewayName",$param) and $param["GatewayName"] !== null) {
+            $this->GatewayName = $param["GatewayName"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

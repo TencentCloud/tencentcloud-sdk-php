@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * kms加密参数
  *
-
+ * @method string getKeyId() 获取kms id
+ * @method void setKeyId(string $KeyId) 设置kms id
+ * @method string getKmsRegion() 获取kms 地域
+ * @method void setKmsRegion(string $KmsRegion) 设置kms 地域
  */
 class KMSConfiguration extends AbstractModel
 {
-
+    /**
+     * @var string kms id
+     */
+    public $KeyId;
 
     /**
+     * @var string kms 地域
+     */
+    public $KmsRegion;
 
+    /**
+     * @param string $KeyId kms id
+     * @param string $KmsRegion kms 地域
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class KMSConfiguration extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
 
+        if (array_key_exists("KmsRegion",$param) and $param["KmsRegion"] !== null) {
+            $this->KmsRegion = $param["KmsRegion"];
+        }
     }
 }

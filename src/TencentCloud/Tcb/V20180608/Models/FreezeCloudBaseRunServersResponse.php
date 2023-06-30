@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FreezeCloudBaseRunServers返回参数结构体
  *
- * @method string getResult() 获取批量状态状态
+ * @method string getResult() 获取批量状态
 成功：succ
 失败：fail
 部分：partial（部分成功、部分失败）
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置批量状态状态
+ * @method void setResult(string $Result) 设置批量状态
 成功：succ
 失败：fail
 部分：partial（部分成功、部分失败）
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class FreezeCloudBaseRunServersResponse extends AbstractModel
 {
     /**
-     * @var string 批量状态状态
+     * @var string 批量状态
 成功：succ
 失败：fail
 部分：partial（部分成功、部分失败）
@@ -66,7 +66,7 @@ class FreezeCloudBaseRunServersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 批量状态状态
+     * @param string $Result 批量状态
 成功：succ
 失败：fail
 部分：partial（部分成功、部分失败）

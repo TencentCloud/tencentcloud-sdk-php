@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(integer $FlowId) 设置异步流程ID
  * @method integer getTaskId() 获取异步任务ID
  * @method void setTaskId(integer $TaskId) 设置异步任务ID
+ * @method string getProxyGroupId() 获取数据库代理组ID
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class CreateProxyResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string 数据库代理组ID
+     */
+    public $ProxyGroupId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class CreateProxyResponse extends AbstractModel
     /**
      * @param integer $FlowId 异步流程ID
      * @param integer $TaskId 异步任务ID
+     * @param string $ProxyGroupId 数据库代理组ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class CreateProxyResponse extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
+            $this->ProxyGroupId = $param["ProxyGroupId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,51 +14,63 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 表示主机资产专属的详情。
+ * 仓库信息
  *
- * @method string getDockerVersion() 获取主机上的Docker版本。
+ * @method string getRepo() 获取仓库名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDockerVersion(string $DockerVersion) 设置主机上的Docker版本。
+ * @method void setRepo(string $Repo) 设置仓库名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getK8SVersion() 获取主机上的K8S的版本。
+ * @method string getRepoType() 获取仓库平台
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setK8SVersion(string $K8SVersion) 设置主机上的K8S的版本。
+ * @method void setRepoType(string $RepoType) 设置仓库平台
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContainerdVersion() 获取主机上Containerd版本
+ * @method string getRepoLanguage() 获取仓库语言
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContainerdVersion(string $ContainerdVersion) 设置主机上Containerd版本
+ * @method void setRepoLanguage(string $RepoLanguage) 设置仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBranch() 获取分支名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBranch(string $Branch) 设置分支名称
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class ComplianceHostDetailInfo extends AbstractModel
+class CbrRepoInfo extends AbstractModel
 {
     /**
-     * @var string 主机上的Docker版本。
+     * @var string 仓库名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DockerVersion;
+    public $Repo;
 
     /**
-     * @var string 主机上的K8S的版本。
+     * @var string 仓库平台
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $K8SVersion;
+    public $RepoType;
 
     /**
-     * @var string 主机上Containerd版本
+     * @var string 仓库语言
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ContainerdVersion;
+    public $RepoLanguage;
 
     /**
-     * @param string $DockerVersion 主机上的Docker版本。
+     * @var string 分支名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $K8SVersion 主机上的K8S的版本。
+     */
+    public $Branch;
+
+    /**
+     * @param string $Repo 仓库名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ContainerdVersion 主机上Containerd版本
+     * @param string $RepoType 仓库平台
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepoLanguage 仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Branch 分支名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,16 +86,20 @@ class ComplianceHostDetailInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DockerVersion",$param) and $param["DockerVersion"] !== null) {
-            $this->DockerVersion = $param["DockerVersion"];
+        if (array_key_exists("Repo",$param) and $param["Repo"] !== null) {
+            $this->Repo = $param["Repo"];
         }
 
-        if (array_key_exists("K8SVersion",$param) and $param["K8SVersion"] !== null) {
-            $this->K8SVersion = $param["K8SVersion"];
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
         }
 
-        if (array_key_exists("ContainerdVersion",$param) and $param["ContainerdVersion"] !== null) {
-            $this->ContainerdVersion = $param["ContainerdVersion"];
+        if (array_key_exists("RepoLanguage",$param) and $param["RepoLanguage"] !== null) {
+            $this->RepoLanguage = $param["RepoLanguage"];
+        }
+
+        if (array_key_exists("Branch",$param) and $param["Branch"] !== null) {
+            $this->Branch = $param["Branch"];
         }
     }
 }

@@ -106,6 +106,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageType(string $PackageType) 设置套餐类型:空\baas\tcbr
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArchitectureType() 获取架构类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArchitectureType(string $ArchitectureType) 设置架构类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecycle() 获取回收标志，默认为空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecycle(string $Recycle) 设置回收标志，默认为空
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -245,6 +253,18 @@ class EnvInfo extends AbstractModel
     public $PackageType;
 
     /**
+     * @var string 架构类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ArchitectureType;
+
+    /**
+     * @var string 回收标志，默认为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Recycle;
+
+    /**
      * @param string $EnvId 账户下该环境唯一标识
      * @param string $Source 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
@@ -287,6 +307,10 @@ class EnvInfo extends AbstractModel
      * @param boolean $IsDauPackage 是否是dau新套餐
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 套餐类型:空\baas\tcbr
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ArchitectureType 架构类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Recycle 回收标志，默认为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -427,6 +451,14 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("ArchitectureType",$param) and $param["ArchitectureType"] !== null) {
+            $this->ArchitectureType = $param["ArchitectureType"];
+        }
+
+        if (array_key_exists("Recycle",$param) and $param["Recycle"] !== null) {
+            $this->Recycle = $param["Recycle"];
         }
     }
 }

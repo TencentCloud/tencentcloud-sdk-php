@@ -298,6 +298,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoicemailRecordURL(array $VoicemailRecordURL) 设置通话中语音留言录音URL
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVoicemailAsrURL() 获取通话中语音留言ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVoicemailAsrURL(array $VoicemailAsrURL) 设置通话中语音留言ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -573,6 +577,12 @@ class TelCdrInfo extends AbstractModel
     public $VoicemailRecordURL;
 
     /**
+     * @var array 通话中语音留言ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VoicemailAsrURL;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -711,6 +721,8 @@ class TelCdrInfo extends AbstractModel
      * @param string $QueuedSkillGroupName 排队技能组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VoicemailRecordURL 通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VoicemailAsrURL 通话中语音留言ASR文本信息地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -872,6 +884,10 @@ class TelCdrInfo extends AbstractModel
 
         if (array_key_exists("VoicemailRecordURL",$param) and $param["VoicemailRecordURL"] !== null) {
             $this->VoicemailRecordURL = $param["VoicemailRecordURL"];
+        }
+
+        if (array_key_exists("VoicemailAsrURL",$param) and $param["VoicemailAsrURL"] !== null) {
+            $this->VoicemailAsrURL = $param["VoicemailAsrURL"];
         }
     }
 }

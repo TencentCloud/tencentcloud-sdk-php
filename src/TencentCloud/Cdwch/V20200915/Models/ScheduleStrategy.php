@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecuteHour(integer $ExecuteHour) 设置备份小时
  * @method integer getScheduleId() 获取策略id
  * @method void setScheduleId(integer $ScheduleId) 设置策略id
+ * @method string getNextBackupTime() 获取下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNextBackupTime(string $NextBackupTime) 设置下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScheduleStrategy extends AbstractModel
 {
@@ -62,12 +66,20 @@ class ScheduleStrategy extends AbstractModel
     public $ScheduleId;
 
     /**
+     * @var string 下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NextBackupTime;
+
+    /**
      * @param string $CosBucketName 备份桶列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetainDays 备份保留天数
      * @param string $WeekDays 备份的天
      * @param integer $ExecuteHour 备份小时
      * @param integer $ScheduleId 策略id
+     * @param string $NextBackupTime 下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -100,6 +112,10 @@ class ScheduleStrategy extends AbstractModel
 
         if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
             $this->ScheduleId = $param["ScheduleId"];
+        }
+
+        if (array_key_exists("NextBackupTime",$param) and $param["NextBackupTime"] !== null) {
+            $this->NextBackupTime = $param["NextBackupTime"];
         }
     }
 }

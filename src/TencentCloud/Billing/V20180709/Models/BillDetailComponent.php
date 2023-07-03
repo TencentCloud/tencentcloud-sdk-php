@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsedAmount(string $UsedAmount) 设置组件用量：该组件实际结算用量，组件用量 = 组件原始用量 - 抵扣用量（含资源包
  * @method string getUsedAmountUnit() 获取组件用量单位：组件用量对应的单位
  * @method void setUsedAmountUnit(string $UsedAmountUnit) 设置组件用量单位：组件用量对应的单位
+ * @method string getRealTotalMeasure() 获取原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRealTotalMeasure(string $RealTotalMeasure) 设置原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeductedMeasure() 获取抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeductedMeasure(string $DeductedMeasure) 设置抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeSpan() 获取使用时长：资源使用的时长
  * @method void setTimeSpan(string $TimeSpan) 设置使用时长：资源使用的时长
  * @method string getTimeUnitName() 获取时长单位：资源使用时长的单位
@@ -134,6 +142,18 @@ class BillDetailComponent extends AbstractModel
      * @var string 组件用量单位：组件用量对应的单位
      */
     public $UsedAmountUnit;
+
+    /**
+     * @var string 原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RealTotalMeasure;
+
+    /**
+     * @var string 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeductedMeasure;
 
     /**
      * @var string 使用时长：资源使用的时长
@@ -255,6 +275,10 @@ class BillDetailComponent extends AbstractModel
      * @param string $PriceUnit 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
      * @param string $UsedAmount 组件用量：该组件实际结算用量，组件用量 = 组件原始用量 - 抵扣用量（含资源包
      * @param string $UsedAmountUnit 组件用量单位：组件用量对应的单位
+     * @param string $RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeSpan 使用时长：资源使用的时长
      * @param string $TimeUnitName 时长单位：资源使用时长的单位
      * @param string $Cost 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
@@ -326,6 +350,14 @@ class BillDetailComponent extends AbstractModel
 
         if (array_key_exists("UsedAmountUnit",$param) and $param["UsedAmountUnit"] !== null) {
             $this->UsedAmountUnit = $param["UsedAmountUnit"];
+        }
+
+        if (array_key_exists("RealTotalMeasure",$param) and $param["RealTotalMeasure"] !== null) {
+            $this->RealTotalMeasure = $param["RealTotalMeasure"];
+        }
+
+        if (array_key_exists("DeductedMeasure",$param) and $param["DeductedMeasure"] !== null) {
+            $this->DeductedMeasure = $param["DeductedMeasure"];
         }
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {

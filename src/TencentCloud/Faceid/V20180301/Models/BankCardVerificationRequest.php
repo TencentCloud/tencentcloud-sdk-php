@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBankCard() 获取银行卡
  * @method void setBankCard(string $BankCard) 设置银行卡
  * @method integer getCertType() 获取证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型需求可以添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行确认。
+目前默认：0 身份证，其他证件类型暂不支持。
  * @method void setCertType(integer $CertType) 设置证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型需求可以添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行确认。
+目前默认：0 身份证，其他证件类型暂不支持。
  * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
@@ -52,7 +52,7 @@ class BankCardVerificationRequest extends AbstractModel
 
     /**
      * @var integer 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型需求可以添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行确认。
+目前默认：0 身份证，其他证件类型暂不支持。
      */
     public $CertType;
 
@@ -66,7 +66,7 @@ class BankCardVerificationRequest extends AbstractModel
      * @param string $Name 姓名
      * @param string $BankCard 银行卡
      * @param integer $CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型需求可以添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行确认。
+目前默认：0 身份证，其他证件类型暂不支持。
      * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()

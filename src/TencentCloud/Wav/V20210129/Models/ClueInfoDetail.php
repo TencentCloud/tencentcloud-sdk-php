@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClueId() 获取线索id，线索唯一识别编码
  * @method void setClueId(string $ClueId) 设置线索id，线索唯一识别编码
- * @method string getDealerId() 获取接待客户经销商顾问所属组织id,多个组织使用逗号分割
- * @method void setDealerId(string $DealerId) 设置接待客户经销商顾问所属组织id,多个组织使用逗号分割
+ * @method string getDealerId() 获取接待客户经销商顾问所属经销商code
+ * @method void setDealerId(string $DealerId) 设置接待客户经销商顾问所属经销商code
  * @method integer getEnquireTime() 获取线索获取时间，用户添加企业微信时间，单位是秒
  * @method void setEnquireTime(integer $EnquireTime) 设置线索获取时间，用户添加企业微信时间，单位是秒
  * @method string getUnionId() 获取客户在微信生态中唯一识别码
@@ -82,6 +82,68 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateAtTime() 获取获取线索的时间戳，单位：秒
  * @method void setCreateAtTime(integer $CreateAtTime) 设置获取线索的时间戳，单位：秒
+ * @method string getWxId() 获取客户微信id
+ * @method void setWxId(string $WxId) 设置客户微信id
+ * @method string getBrandCode() 获取意向车型对应品牌code
+ * @method void setBrandCode(string $BrandCode) 设置意向车型对应品牌code
+ * @method integer getBuildTime() 获取建档时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBuildTime(integer $BuildTime) 设置建档时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOrderTime() 获取下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrderTime(integer $OrderTime) 设置下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getArrivalTime() 获取到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArrivalTime(integer $ArrivalTime) 设置到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeliveryTime() 获取交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeliveryTime(integer $DeliveryTime) 设置交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFollowTime() 获取上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFollowTime(integer $FollowTime) 设置上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNextFollowTime() 获取下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNextFollowTime(integer $NextFollowTime) 设置下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOrgId() 获取线索所属组织id
+ * @method void setOrgId(integer $OrgId) 设置线索所属组织id
+ * @method string getOrgName() 获取线索所属组织名称
+ * @method void setOrgName(string $OrgName) 设置线索所属组织名称
+ * @method string getIntroducer() 获取介绍人姓名
+ * @method void setIntroducer(string $Introducer) 设置介绍人姓名
+ * @method string getIntroducerPhone() 获取介绍人电话
+ * @method void setIntroducerPhone(string $IntroducerPhone) 设置介绍人电话
+ * @method integer getIsBindWx() 获取是否关联微信 1 是 0 否
+ * @method void setIsBindWx(integer $IsBindWx) 设置是否关联微信 1 是 0 否
+ * @method integer getIsMerge() 获取是否经过合并 1 是 0 否
+ * @method void setIsMerge(integer $IsMerge) 设置是否经过合并 1 是 0 否
+ * @method integer getIsInvalid() 获取是否无效  1 是 0 否
+ * @method void setIsInvalid(integer $IsInvalid) 设置是否无效  1 是 0 否
+ * @method string getInvalidType() 获取无效类型
+ * @method void setInvalidType(string $InvalidType) 设置无效类型
+ * @method string getInvalidTypeName() 获取无效类型枚举：
+无意向购买、空错号、未接听、其他
+ * @method void setInvalidTypeName(string $InvalidTypeName) 设置无效类型枚举：
+无意向购买、空错号、未接听、其他
+ * @method string getInvalidRemark() 获取由顾问手动输入的无效原因文字
+ * @method void setInvalidRemark(string $InvalidRemark) 设置由顾问手动输入的无效原因文字
+ * @method integer getInvalidTime() 获取无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInvalidTime(integer $InvalidTime) 设置无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDealerName() 获取经销商名称
+ * @method void setDealerName(string $DealerName) 设置经销商名称
+ * @method integer getShopId() 获取经销商下级门店ID
+ * @method void setShopId(integer $ShopId) 设置经销商下级门店ID
+ * @method string getShopName() 获取经销商下级门店名称
+ * @method void setShopName(string $ShopName) 设置经销商下级门店名称
+ * @method string getPosition() 获取职位
+ * @method void setPosition(string $Position) 设置职位
  */
 class ClueInfoDetail extends AbstractModel
 {
@@ -91,7 +153,7 @@ class ClueInfoDetail extends AbstractModel
     public $ClueId;
 
     /**
-     * @var string 接待客户经销商顾问所属组织id,多个组织使用逗号分割
+     * @var string 接待客户经销商顾问所属经销商code
      */
     public $DealerId;
 
@@ -225,8 +287,131 @@ class ClueInfoDetail extends AbstractModel
     public $CreateAtTime;
 
     /**
+     * @var string 客户微信id
+     */
+    public $WxId;
+
+    /**
+     * @var string 意向车型对应品牌code
+     */
+    public $BrandCode;
+
+    /**
+     * @var integer 建档时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BuildTime;
+
+    /**
+     * @var integer 下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrderTime;
+
+    /**
+     * @var integer 到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ArrivalTime;
+
+    /**
+     * @var integer 交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeliveryTime;
+
+    /**
+     * @var integer 上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FollowTime;
+
+    /**
+     * @var integer 下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NextFollowTime;
+
+    /**
+     * @var integer 线索所属组织id
+     */
+    public $OrgId;
+
+    /**
+     * @var string 线索所属组织名称
+     */
+    public $OrgName;
+
+    /**
+     * @var string 介绍人姓名
+     */
+    public $Introducer;
+
+    /**
+     * @var string 介绍人电话
+     */
+    public $IntroducerPhone;
+
+    /**
+     * @var integer 是否关联微信 1 是 0 否
+     */
+    public $IsBindWx;
+
+    /**
+     * @var integer 是否经过合并 1 是 0 否
+     */
+    public $IsMerge;
+
+    /**
+     * @var integer 是否无效  1 是 0 否
+     */
+    public $IsInvalid;
+
+    /**
+     * @var string 无效类型
+     */
+    public $InvalidType;
+
+    /**
+     * @var string 无效类型枚举：
+无意向购买、空错号、未接听、其他
+     */
+    public $InvalidTypeName;
+
+    /**
+     * @var string 由顾问手动输入的无效原因文字
+     */
+    public $InvalidRemark;
+
+    /**
+     * @var integer 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InvalidTime;
+
+    /**
+     * @var string 经销商名称
+     */
+    public $DealerName;
+
+    /**
+     * @var integer 经销商下级门店ID
+     */
+    public $ShopId;
+
+    /**
+     * @var string 经销商下级门店名称
+     */
+    public $ShopName;
+
+    /**
+     * @var string 职位
+     */
+    public $Position;
+
+    /**
      * @param string $ClueId 线索id，线索唯一识别编码
-     * @param string $DealerId 接待客户经销商顾问所属组织id,多个组织使用逗号分割
+     * @param string $DealerId 接待客户经销商顾问所属经销商code
      * @param integer $EnquireTime 线索获取时间，用户添加企业微信时间，单位是秒
      * @param string $UnionId 客户在微信生态中唯一识别码
      * @param string $Name 微信昵称
@@ -256,6 +441,37 @@ class ClueInfoDetail extends AbstractModel
      * @param integer $DistributeTime 完成线索分配的时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateAtTime 获取线索的时间戳，单位：秒
+     * @param string $WxId 客户微信id
+     * @param string $BrandCode 意向车型对应品牌code
+     * @param integer $BuildTime 建档时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OrderTime 下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ArrivalTime 到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeliveryTime 交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FollowTime 上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NextFollowTime 下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OrgId 线索所属组织id
+     * @param string $OrgName 线索所属组织名称
+     * @param string $Introducer 介绍人姓名
+     * @param string $IntroducerPhone 介绍人电话
+     * @param integer $IsBindWx 是否关联微信 1 是 0 否
+     * @param integer $IsMerge 是否经过合并 1 是 0 否
+     * @param integer $IsInvalid 是否无效  1 是 0 否
+     * @param string $InvalidType 无效类型
+     * @param string $InvalidTypeName 无效类型枚举：
+无意向购买、空错号、未接听、其他
+     * @param string $InvalidRemark 由顾问手动输入的无效原因文字
+     * @param integer $InvalidTime 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DealerName 经销商名称
+     * @param integer $ShopId 经销商下级门店ID
+     * @param string $ShopName 经销商下级门店名称
+     * @param string $Position 职位
      */
     function __construct()
     {
@@ -376,6 +592,98 @@ class ClueInfoDetail extends AbstractModel
 
         if (array_key_exists("CreateAtTime",$param) and $param["CreateAtTime"] !== null) {
             $this->CreateAtTime = $param["CreateAtTime"];
+        }
+
+        if (array_key_exists("WxId",$param) and $param["WxId"] !== null) {
+            $this->WxId = $param["WxId"];
+        }
+
+        if (array_key_exists("BrandCode",$param) and $param["BrandCode"] !== null) {
+            $this->BrandCode = $param["BrandCode"];
+        }
+
+        if (array_key_exists("BuildTime",$param) and $param["BuildTime"] !== null) {
+            $this->BuildTime = $param["BuildTime"];
+        }
+
+        if (array_key_exists("OrderTime",$param) and $param["OrderTime"] !== null) {
+            $this->OrderTime = $param["OrderTime"];
+        }
+
+        if (array_key_exists("ArrivalTime",$param) and $param["ArrivalTime"] !== null) {
+            $this->ArrivalTime = $param["ArrivalTime"];
+        }
+
+        if (array_key_exists("DeliveryTime",$param) and $param["DeliveryTime"] !== null) {
+            $this->DeliveryTime = $param["DeliveryTime"];
+        }
+
+        if (array_key_exists("FollowTime",$param) and $param["FollowTime"] !== null) {
+            $this->FollowTime = $param["FollowTime"];
+        }
+
+        if (array_key_exists("NextFollowTime",$param) and $param["NextFollowTime"] !== null) {
+            $this->NextFollowTime = $param["NextFollowTime"];
+        }
+
+        if (array_key_exists("OrgId",$param) and $param["OrgId"] !== null) {
+            $this->OrgId = $param["OrgId"];
+        }
+
+        if (array_key_exists("OrgName",$param) and $param["OrgName"] !== null) {
+            $this->OrgName = $param["OrgName"];
+        }
+
+        if (array_key_exists("Introducer",$param) and $param["Introducer"] !== null) {
+            $this->Introducer = $param["Introducer"];
+        }
+
+        if (array_key_exists("IntroducerPhone",$param) and $param["IntroducerPhone"] !== null) {
+            $this->IntroducerPhone = $param["IntroducerPhone"];
+        }
+
+        if (array_key_exists("IsBindWx",$param) and $param["IsBindWx"] !== null) {
+            $this->IsBindWx = $param["IsBindWx"];
+        }
+
+        if (array_key_exists("IsMerge",$param) and $param["IsMerge"] !== null) {
+            $this->IsMerge = $param["IsMerge"];
+        }
+
+        if (array_key_exists("IsInvalid",$param) and $param["IsInvalid"] !== null) {
+            $this->IsInvalid = $param["IsInvalid"];
+        }
+
+        if (array_key_exists("InvalidType",$param) and $param["InvalidType"] !== null) {
+            $this->InvalidType = $param["InvalidType"];
+        }
+
+        if (array_key_exists("InvalidTypeName",$param) and $param["InvalidTypeName"] !== null) {
+            $this->InvalidTypeName = $param["InvalidTypeName"];
+        }
+
+        if (array_key_exists("InvalidRemark",$param) and $param["InvalidRemark"] !== null) {
+            $this->InvalidRemark = $param["InvalidRemark"];
+        }
+
+        if (array_key_exists("InvalidTime",$param) and $param["InvalidTime"] !== null) {
+            $this->InvalidTime = $param["InvalidTime"];
+        }
+
+        if (array_key_exists("DealerName",$param) and $param["DealerName"] !== null) {
+            $this->DealerName = $param["DealerName"];
+        }
+
+        if (array_key_exists("ShopId",$param) and $param["ShopId"] !== null) {
+            $this->ShopId = $param["ShopId"];
+        }
+
+        if (array_key_exists("ShopName",$param) and $param["ShopName"] !== null) {
+            $this->ShopName = $param["ShopName"];
+        }
+
+        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
+            $this->Position = $param["Position"];
         }
     }
 }

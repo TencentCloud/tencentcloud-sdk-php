@@ -22,18 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceName() 获取实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method void setInstanceName(string $InstanceName) 设置实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method integer getZoneId() 获取可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
- * @method void setZoneId(integer $ZoneId) 设置可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
+ * @method integer getZoneId() 获取可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
+ * @method void setZoneId(integer $ZoneId) 设置可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
  * @method string getPeriod() 获取预付费购买时长，例如 "1m",就是一个月
  * @method void setPeriod(string $Period) 设置预付费购买时长，例如 "1m",就是一个月
- * @method integer getInstanceType() 获取实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
- * @method void setInstanceType(integer $InstanceType) 设置实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
- * @method string getVpcId() 获取vpcId必填
- * @method void setVpcId(string $VpcId) 设置vpcId必填
- * @method string getSubnetId() 获取子网id，vpc网络需要传该参数，基础网络可以不传
- * @method void setSubnetId(string $SubnetId) 设置子网id，vpc网络需要传该参数，基础网络可以不传
+ * @method integer getInstanceType() 获取国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
+ * @method void setInstanceType(integer $InstanceType) 设置国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
+ * @method string getVpcId() 获取vpcId，必填
+ * @method void setVpcId(string $VpcId) 设置vpcId，必填
+ * @method string getSubnetId() 获取子网id，必填
+ * @method void setSubnetId(string $SubnetId) 设置子网id，必填
  * @method integer getMsgRetentionTime() 获取可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
  * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
  * @method integer getClusterId() 获取创建实例时可以选择集群Id, 该入参表示集群Id
@@ -42,20 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewFlag(integer $RenewFlag) 设置预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
  * @method string getKafkaVersion() 获取CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
  * @method void setKafkaVersion(string $KafkaVersion) 设置CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
- * @method string getSpecificationsType() 获取实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
- * @method void setSpecificationsType(string $SpecificationsType) 设置实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
- * @method integer getDiskSize() 获取磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
- * @method integer getBandWidth() 获取带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
- * @method void setBandWidth(integer $BandWidth) 设置带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
- * @method integer getPartition() 获取分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
- * @method void setPartition(integer $Partition) 设置分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
+ * @method string getSpecificationsType() 获取实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+ * @method void setSpecificationsType(string $SpecificationsType) 设置实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+ * @method integer getDiskSize() 获取磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
+ * @method void setDiskSize(integer $DiskSize) 设置磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
+ * @method integer getBandWidth() 获取带宽，如果跟控制台规格配比不相符，则无法创建成功
+ * @method void setBandWidth(integer $BandWidth) 设置带宽，如果跟控制台规格配比不相符，则无法创建成功
+ * @method integer getPartition() 获取分区大小，如果跟控制台规格配比不相符，则无法创建成功
+ * @method void setPartition(integer $Partition) 设置分区大小，如果跟控制台规格配比不相符，则无法创建成功
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
- * @method string getDiskType() 获取磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
- * @method void setDiskType(string $DiskType) 设置磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
- * @method boolean getMultiZoneFlag() 获取跨可用区，zoneIds必填
- * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置跨可用区，zoneIds必填
+ * @method string getDiskType() 获取专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+ * @method void setDiskType(string $DiskType) 设置专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+ * @method boolean getMultiZoneFlag() 获取是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
+ * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
  * @method array getZoneIds() 获取可用区列表，购买多可用区实例时为必填项
  * @method void setZoneIds(array $ZoneIds) 设置可用区列表，购买多可用区实例时为必填项
  * @method integer getPublicNetworkMonthly() 获取公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
@@ -71,7 +69,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
+     * @var integer 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
      */
     public $ZoneId;
 
@@ -81,18 +79,17 @@ class CreateInstancePreRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var integer 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
+     * @var integer 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
      */
     public $InstanceType;
 
     /**
-     * @var string vpcId必填
+     * @var string vpcId，必填
      */
     public $VpcId;
 
     /**
-     * @var string 子网id，vpc网络需要传该参数，基础网络可以不传
+     * @var string 子网id，必填
      */
     public $SubnetId;
 
@@ -117,22 +114,22 @@ class CreateInstancePreRequest extends AbstractModel
     public $KafkaVersion;
 
     /**
-     * @var string 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
+     * @var string 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
      */
     public $SpecificationsType;
 
     /**
-     * @var integer 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
+     * @var integer 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
      */
     public $DiskSize;
 
     /**
-     * @var integer 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * @var integer 带宽，如果跟控制台规格配比不相符，则无法创建成功
      */
     public $BandWidth;
 
     /**
-     * @var integer 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
+     * @var integer 分区大小，如果跟控制台规格配比不相符，则无法创建成功
      */
     public $Partition;
 
@@ -142,12 +139,12 @@ class CreateInstancePreRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+     * @var string 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
      */
     public $DiskType;
 
     /**
-     * @var boolean 跨可用区，zoneIds必填
+     * @var boolean 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
      */
     public $MultiZoneFlag;
 
@@ -168,23 +165,22 @@ class CreateInstancePreRequest extends AbstractModel
 
     /**
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param integer $ZoneId 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
+     * @param integer $ZoneId 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
-     * @param integer $InstanceType 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
-     * @param string $VpcId vpcId必填
-     * @param string $SubnetId 子网id，vpc网络需要传该参数，基础网络可以不传
+     * @param integer $InstanceType 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
+     * @param string $VpcId vpcId，必填
+     * @param string $SubnetId 子网id，必填
      * @param integer $MsgRetentionTime 可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
      * @param integer $ClusterId 创建实例时可以选择集群Id, 该入参表示集群Id
      * @param integer $RenewFlag 预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
      * @param string $KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
-     * @param string $SpecificationsType 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
-     * @param integer $DiskSize 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
-     * @param integer $BandWidth 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
-     * @param integer $Partition 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
+     * @param string $SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+     * @param integer $DiskSize 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
+     * @param integer $BandWidth 带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * @param integer $Partition 分区大小，如果跟控制台规格配比不相符，则无法创建成功
      * @param array $Tags 标签
-     * @param string $DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
-     * @param boolean $MultiZoneFlag 跨可用区，zoneIds必填
+     * @param string $DiskType 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+     * @param boolean $MultiZoneFlag 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
      * @param array $ZoneIds 可用区列表，购买多可用区实例时为必填项
      * @param integer $PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
      * @param integer $InstanceNum 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例

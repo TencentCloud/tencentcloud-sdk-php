@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 获取token时的的配置
+ * 获取token时的配置
  *
  * @method string getInputType() 获取姓名身份证输入方式。
 1：传身份证正反面OCR   

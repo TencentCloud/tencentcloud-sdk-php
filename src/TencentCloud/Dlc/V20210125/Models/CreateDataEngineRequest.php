@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinClusters(integer $MinClusters) 设置最小资源
  * @method integer getMaxClusters() 获取最大资源
  * @method void setMaxClusters(integer $MaxClusters) 设置最大资源
- * @method boolean getDefaultDataEngine() 获取是否为默虚拟集群
- * @method void setDefaultDataEngine(boolean $DefaultDataEngine) 设置是否为默虚拟集群
+ * @method boolean getDefaultDataEngine() 获取是否为默认虚拟集群
+ * @method void setDefaultDataEngine(boolean $DefaultDataEngine) 设置是否为默认虚拟集群
  * @method string getCidrBlock() 获取VPC网段
  * @method void setCidrBlock(string $CidrBlock) 设置VPC网段
  * @method string getMessage() 获取描述信息
@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngineConfigPairs(array $DataEngineConfigPairs) 设置集群高级配置
  * @method string getImageVersionName() 获取集群镜像版本名字。如SuperSQL-P 1.1;SuperSQL-S 3.2等,不传，默认创建最新镜像版本的集群
  * @method void setImageVersionName(string $ImageVersionName) 设置集群镜像版本名字。如SuperSQL-P 1.1;SuperSQL-S 3.2等,不传，默认创建最新镜像版本的集群
- * @method string getMainClusterName() 获取主集群名称
- * @method void setMainClusterName(string $MainClusterName) 设置主集群名称
+ * @method string getMainClusterName() 获取主集群名称，创建容灾集群时指定
+ * @method void setMainClusterName(string $MainClusterName) 设置主集群名称，创建容灾集群时指定
  * @method boolean getElasticSwitch() 获取spark jar 包年包月集群是否开启弹性
  * @method void setElasticSwitch(boolean $ElasticSwitch) 设置spark jar 包年包月集群是否开启弹性
  * @method integer getElasticLimit() 获取spark jar 包年包月集群弹性上限
@@ -119,7 +119,8 @@ class CreateDataEngineRequest extends AbstractModel
     public $MaxClusters;
 
     /**
-     * @var boolean 是否为默虚拟集群
+     * @var boolean 是否为默认虚拟集群
+     * @deprecated
      */
     public $DefaultDataEngine;
 
@@ -214,7 +215,7 @@ class CreateDataEngineRequest extends AbstractModel
     public $ImageVersionName;
 
     /**
-     * @var string 主集群名称
+     * @var string 主集群名称，创建容灾集群时指定
      */
     public $MainClusterName;
 
@@ -241,7 +242,7 @@ class CreateDataEngineRequest extends AbstractModel
      * @param boolean $AutoResume 是否自动启动集群
      * @param integer $MinClusters 最小资源
      * @param integer $MaxClusters 最大资源
-     * @param boolean $DefaultDataEngine 是否为默虚拟集群
+     * @param boolean $DefaultDataEngine 是否为默认虚拟集群
      * @param string $CidrBlock VPC网段
      * @param string $Message 描述信息
      * @param integer $Size 集群规模
@@ -260,7 +261,7 @@ class CreateDataEngineRequest extends AbstractModel
      * @param string $ResourceType 资源类型。Standard_CU：标准型；Memory_CU：内存型
      * @param array $DataEngineConfigPairs 集群高级配置
      * @param string $ImageVersionName 集群镜像版本名字。如SuperSQL-P 1.1;SuperSQL-S 3.2等,不传，默认创建最新镜像版本的集群
-     * @param string $MainClusterName 主集群名称
+     * @param string $MainClusterName 主集群名称，创建容灾集群时指定
      * @param boolean $ElasticSwitch spark jar 包年包月集群是否开启弹性
      * @param integer $ElasticLimit spark jar 包年包月集群弹性上限
      * @param SessionResourceTemplate $SessionResourceTemplate spark作业集群session资源配置模板

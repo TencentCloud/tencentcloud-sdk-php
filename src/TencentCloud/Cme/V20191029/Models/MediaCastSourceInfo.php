@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) 设置云点播媒体文件 ID。当 Type = VOD 时必填。
  * @method string getMaterialId() 获取多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
  * @method void setMaterialId(string $MaterialId) 设置多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
- * @method float getOffset() 获取文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
- * @method void setOffset(float $Offset) 设置文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+ * @method float getOffset() 获取文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+ * @method void setOffset(float $Offset) 设置文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
  * @method float getDuration() 获取播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
  * @method void setDuration(float $Duration) 设置播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
  * @method string getUrl() 获取外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
@@ -70,7 +70,7 @@ class MediaCastSourceInfo extends AbstractModel
     public $MaterialId;
 
     /**
-     * @var float 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     * @var float 文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
      */
     public $Offset;
 
@@ -93,7 +93,7 @@ class MediaCastSourceInfo extends AbstractModel
 <li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
      * @param string $FileId 云点播媒体文件 ID。当 Type = VOD 时必填。
      * @param string $MaterialId 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
-     * @param float $Offset 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     * @param float $Offset 文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
      * @param float $Duration 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
      * @param string $Url 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
      */

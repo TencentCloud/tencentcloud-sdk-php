@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取激活状态: 0=已激活，1=已禁用，-1=退出企业"
  * @method void setStatus(integer $Status) 设置激活状态: 0=已激活，1=已禁用，-1=退出企业"
+ * @method string getJobNumber() 获取工号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobNumber(string $JobNumber) 设置工号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CorpUserInfo extends AbstractModel
 {
@@ -118,6 +122,12 @@ class CorpUserInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobNumber;
+
+    /**
      * @param integer $UserId 企业成员UserId
      * @param string $UserName 企业成员在SaaS名片内填写的姓名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,6 +146,8 @@ class CorpUserInfo extends AbstractModel
      * @param string $IsLeaderInDept 是否为部门负责人，第三方应用可为空。与orgIds值一一对应，多个部门使用逗号隔开，0-否， 1-是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 激活状态: 0=已激活，1=已禁用，-1=退出企业"
+     * @param string $JobNumber 工号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -188,6 +200,10 @@ class CorpUserInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("JobNumber",$param) and $param["JobNumber"] !== null) {
+            $this->JobNumber = $param["JobNumber"];
         }
     }
 }

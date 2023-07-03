@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 解除协议的签署人，如不指定，默认使用待解除流程（即原流程）中的签署人。
 注意：不支持更换C端（个人身份类型）签署人，如果原流程中含有C端签署人，默认使用原流程中的该签署人。
+注意：目前不支持替换C端（个人身份类型）签署人，但是可以指定C端签署人的签署方自定义控件别名，具体见参数ApproverSignRole描述。 
+注意：当指定C端签署人的签署方自定义控件别名不空时，除参数ApproverNumber外，可以只参数ApproverSignRole。
 
 如果需要指定B端（机构身份类型）签署人，其中ReleasedApprover需要传递的参数如下：
 ApproverNumber, OrganizationName, ApproverType必传。
@@ -57,6 +59,14 @@ ENTERPRISESERVER-企业静默签
 当签署方为同一第三方应用下的员工时，该字必传
  * @method void setOpenId(string $OpenId) 设置用户侧第三方id，最大长度64个字符
 当签署方为同一第三方应用下的员工时，该字必传
+ * @method string getApproverSignComponentType() 获取签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+ * @method void setApproverSignComponentType(string $ApproverSignComponentType) 设置签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+ * @method string getApproverSignRole() 获取签署方自定义控件别名，最大长度20个字符
+ * @method void setApproverSignRole(string $ApproverSignRole) 设置签署方自定义控件别名，最大长度20个字符
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -112,6 +122,18 @@ ENTERPRISESERVER-企业静默签
     public $OpenId;
 
     /**
+     * @var string 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+     */
+    public $ApproverSignComponentType;
+
+    /**
+     * @var string 签署方自定义控件别名，最大长度20个字符
+     */
+    public $ApproverSignRole;
+
+    /**
      * @param string $OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
      * @param integer $ApproverNumber 签署人在原流程中的签署人列表中的顺序序号（从0开始，按顺序依次递增），如果不清楚原流程中的签署人列表，可以通过DescribeFlows接口查看
      * @param string $ApproverType 签署人类型，目前仅支持
@@ -127,6 +149,10 @@ ENTERPRISESERVER-企业静默签
      * @param string $OrganizationOpenId 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
      * @param string $OpenId 用户侧第三方id，最大长度64个字符
 当签署方为同一第三方应用下的员工时，该字必传
+     * @param string $ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+     * @param string $ApproverSignRole 签署方自定义控件别名，最大长度20个字符
      */
     function __construct()
     {
@@ -175,6 +201,14 @@ ENTERPRISESERVER-企业静默签
 
         if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
             $this->OpenId = $param["OpenId"];
+        }
+
+        if (array_key_exists("ApproverSignComponentType",$param) and $param["ApproverSignComponentType"] !== null) {
+            $this->ApproverSignComponentType = $param["ApproverSignComponentType"];
+        }
+
+        if (array_key_exists("ApproverSignRole",$param) and $param["ApproverSignRole"] !== null) {
+            $this->ApproverSignRole = $param["ApproverSignRole"];
         }
     }
 }

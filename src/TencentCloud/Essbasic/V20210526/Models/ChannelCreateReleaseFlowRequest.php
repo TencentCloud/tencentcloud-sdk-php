@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganization(OrganizationInfo $Organization) 设置暂未开放
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
+ * @method integer getDeadline() 获取签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+ * @method void setDeadline(integer $Deadline) 设置签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
  */
 class ChannelCreateReleaseFlowRequest extends AbstractModel
 {
@@ -75,6 +77,11 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var integer 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     */
+    public $Deadline;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $NeedRelievedFlowId 待解除的流程编号（即原流程的编号）
      * @param RelieveInfo $ReliveInfo 解除协议内容
@@ -82,6 +89,7 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符
      * @param OrganizationInfo $Organization 暂未开放
      * @param UserInfo $Operator 暂未开放
+     * @param integer $Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
      */
     function __construct()
     {
@@ -131,6 +139,10 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
     }
 }

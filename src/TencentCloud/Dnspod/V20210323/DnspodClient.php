@@ -38,6 +38,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DeleteDomainAliasResponse DeleteDomainAlias(Models\DeleteDomainAliasRequest $req) 删除域名别名
  * @method Models\DeleteDomainBatchResponse DeleteDomainBatch(Models\DeleteDomainBatchRequest $req) 批量删除域名
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除记录
+ * @method Models\DeleteRecordBatchResponse DeleteRecordBatch(Models\DeleteRecordBatchRequest $req) 批量删除解析记录
  * @method Models\DeleteRecordGroupResponse DeleteRecordGroup(Models\DeleteRecordGroupRequest $req) 删除记录分组
  * @method Models\DeleteShareDomainResponse DeleteShareDomain(Models\DeleteShareDomainRequest $req) 删除域名共享
  * @method Models\DeleteSnapshotResponse DeleteSnapshot(Models\DeleteSnapshotRequest $req) 删除快照

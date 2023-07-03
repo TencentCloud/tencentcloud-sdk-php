@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 解除协议的签署人，如不指定，默认使用待解除流程（即原流程）中的签署人。
 注意：不支持更换C端（个人身份类型）签署人，如果原流程中含有C端签署人，默认使用原流程中的该C端签署人。
+注意：目前不支持替换C端（个人身份类型）签署人，但是可以指定C端签署人的签署方自定义控件别名，具体见参数ApproverSignRole描述。
+注意：当指定C端签署人的签署方自定义控件别名不空时，除RelievedApproverReceiptId参数外，可以只参数ApproverSignRole。
  *
  * @method string getName() 获取签署人姓名，最大长度50个字符
 
@@ -35,6 +37,14 @@ ENTERPRISESERVER-企业静默签
  * @method void setApproverType(string $ApproverType) 设置指定签署人类型，目前仅支持
 ORGANIZATION-企业
 ENTERPRISESERVER-企业静默签
+ * @method string getApproverSignComponentType() 获取签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+ * @method void setApproverSignComponentType(string $ApproverSignComponentType) 设置签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+ * @method string getApproverSignRole() 获取签署方自定义控件别名，最大长度20个字符
+ * @method void setApproverSignRole(string $ApproverSignRole) 设置签署方自定义控件别名，最大长度20个字符
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -62,6 +72,18 @@ ENTERPRISESERVER-企业静默签
     public $ApproverType;
 
     /**
+     * @var string 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+     */
+    public $ApproverSignComponentType;
+
+    /**
+     * @var string 签署方自定义控件别名，最大长度20个字符
+     */
+    public $ApproverSignRole;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字符
 
      * @param string $Mobile 签署人手机号
@@ -69,6 +91,10 @@ ENTERPRISESERVER-企业静默签
      * @param string $ApproverType 指定签署人类型，目前仅支持
 ORGANIZATION-企业
 ENTERPRISESERVER-企业静默签
+     * @param string $ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+     * @param string $ApproverSignRole 签署方自定义控件别名，最大长度20个字符
      */
     function __construct()
     {
@@ -97,6 +123,14 @@ ENTERPRISESERVER-企业静默签
 
         if (array_key_exists("ApproverType",$param) and $param["ApproverType"] !== null) {
             $this->ApproverType = $param["ApproverType"];
+        }
+
+        if (array_key_exists("ApproverSignComponentType",$param) and $param["ApproverSignComponentType"] !== null) {
+            $this->ApproverSignComponentType = $param["ApproverSignComponentType"];
+        }
+
+        if (array_key_exists("ApproverSignRole",$param) and $param["ApproverSignRole"] !== null) {
+            $this->ApproverSignRole = $param["ApproverSignRole"];
         }
     }
 }

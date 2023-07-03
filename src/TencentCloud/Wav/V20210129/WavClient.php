@@ -29,6 +29,7 @@ use TencentCloud\Wav\V20210129\Models as Models;
  * @method Models\QueryActivityJoinListResponse QueryActivityJoinList(Models\QueryActivityJoinListRequest $req) 根据游标拉取活动参与列表信息
  * @method Models\QueryActivityListResponse QueryActivityList(Models\QueryActivityListRequest $req) 根据游标拉取活动列表信息
  * @method Models\QueryActivityLiveCodeListResponse QueryActivityLiveCodeList(Models\QueryActivityLiveCodeListRequest $req) 根据游标拉取活动活码列表信息
+ * @method Models\QueryArrivalListResponse QueryArrivalList(Models\QueryArrivalListRequest $req) 查询指定时间范围内发生过到店的潜客到店信息
  * @method Models\QueryChannelCodeListResponse QueryChannelCodeList(Models\QueryChannelCodeListRequest $req) 根据游标拉取渠道活码列表信息
  * @method Models\QueryChatArchivingListResponse QueryChatArchivingList(Models\QueryChatArchivingListRequest $req) 根据游标拉取会话存档列表信息
  * @method Models\QueryClueInfoListResponse QueryClueInfoList(Models\QueryClueInfoListRequest $req) 企业可通过此接口获取线索列表。
@@ -41,6 +42,7 @@ use TencentCloud\Wav\V20210129\Models as Models;
  * @method Models\QueryExternalContactListResponse QueryExternalContactList(Models\QueryExternalContactListRequest $req) 企业可通过此接口基于外部联系人获取指定成员添加的客户列表。客户是指配置了客户联系功能的成员所添加的外部联系人。没有配置客户联系功能的成员，所添加的外部联系人将不会作为客户返回。
  * @method Models\QueryExternalUserEventListResponse QueryExternalUserEventList(Models\QueryExternalUserEventListRequest $req) 通过接口拉取租户在指定时间范围内的外部联系人添加/删除明细，此接口提供的数据以天为维度，查询的时间范围为[StarTime, EndTime]，即前后均为闭区间，支持的最大查询跨度为365天；
  * @method Models\QueryExternalUserMappingInfoResponse QueryExternalUserMappingInfo(Models\QueryExternalUserMappingInfoRequest $req) 企业可通过此接口将企业主体对应的外部联系人id转换为乐销车应用主体对应的外部联系人。
+ * @method Models\QueryFollowListResponse QueryFollowList(Models\QueryFollowListRequest $req) 查询指定时间范围内发生过跟进的潜客信息
  * @method Models\QueryLicenseInfoResponse QueryLicenseInfo(Models\QueryLicenseInfoRequest $req) 该接口获取license对应的详细信息
  * @method Models\QueryMaterialListResponse QueryMaterialList(Models\QueryMaterialListRequest $req) 通过接口按类型拉取租户当前的素材列表及关键信息
  * @method Models\QueryMiniAppCodeListResponse QueryMiniAppCodeList(Models\QueryMiniAppCodeListRequest $req) 查询小程序码列表接口

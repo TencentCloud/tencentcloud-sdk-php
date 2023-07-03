@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinBackupStartTime(string $MinBackupStartTime) 设置实例最早开始备份时间
  * @method string getMaxBackupStartTime() 获取实例最晚开始备份时间
  * @method void setMaxBackupStartTime(string $MaxBackupStartTime) 设置实例最晚开始备份时间
- * @method integer getBaseBackupRetentionPeriod() 获取实例备份保留时长，取值范围为3-7，单位是天
- * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置实例备份保留时长，取值范围为3-7，单位是天
+ * @method integer getBaseBackupRetentionPeriod() 获取实例备份保留时长，取值范围为7-1830，单位是天
+ * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置实例备份保留时长，取值范围为7-1830，单位是天
  * @method array getBackupPeriod() 获取实例备份周期，按照星期维度，格式为小写星期英文单词
  * @method void setBackupPeriod(array $BackupPeriod) 设置实例备份周期，按照星期维度，格式为小写星期英文单词
  */
@@ -49,7 +49,7 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $MaxBackupStartTime;
 
     /**
-     * @var integer 实例备份保留时长，取值范围为3-7，单位是天
+     * @var integer 实例备份保留时长，取值范围为7-1830，单位是天
      */
     public $BaseBackupRetentionPeriod;
 
@@ -62,7 +62,7 @@ class ModifyBackupPlanRequest extends AbstractModel
      * @param string $DBInstanceId 实例ID
      * @param string $MinBackupStartTime 实例最早开始备份时间
      * @param string $MaxBackupStartTime 实例最晚开始备份时间
-     * @param integer $BaseBackupRetentionPeriod 实例备份保留时长，取值范围为3-7，单位是天
+     * @param integer $BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
      * @param array $BackupPeriod 实例备份周期，按照星期维度，格式为小写星期英文单词
      */
     function __construct()

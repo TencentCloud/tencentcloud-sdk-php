@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Ciam\V20220331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 签署人个性化能力信息
+ * ListUserStore请求参数结构体
  *
- * @method boolean getHideOneKeySign() 获取是否隐藏一键签署 默认false-不隐藏true-隐藏
- * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置是否隐藏一键签署 默认false-不隐藏true-隐藏
+
  */
-class ApproverOption extends AbstractModel
+class ListUserStoreRequest extends AbstractModel
 {
-    /**
-     * @var boolean 是否隐藏一键签署 默认false-不隐藏true-隐藏
-     */
-    public $HideOneKeySign;
+
 
     /**
-     * @param boolean $HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class ApproverOption extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HideOneKeySign",$param) and $param["HideOneKeySign"] !== null) {
-            $this->HideOneKeySign = $param["HideOneKeySign"];
-        }
+
     }
 }

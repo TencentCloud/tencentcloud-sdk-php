@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginRegex(string $BeginRegex) 设置行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getKeys() 获取取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key
+ * @method array getKeys() 获取取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeys(array $Keys) 设置取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key
+ * @method void setKeys(array $Keys) 设置取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFilterKeyRegex() 获取需要过滤日志的key，及其对应的regex
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,7 +132,7 @@ class ExtractRuleInfo extends AbstractModel
     public $BeginRegex;
 
     /**
-     * @var array 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key
+     * @var array 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
@@ -223,7 +223,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginRegex 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key
+     * @param array $Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FilterKeyRegex 需要过滤日志的key，及其对应的regex
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EvaluateSentenceSimilarity请求参数结构体
  *
- * @method array getSentencePairList() 获取待分析的句子对数组。句子对应不超过5对，支持中英文文本，原句子与目标句子均应不超过500字符。
- * @method void setSentencePairList(array $SentencePairList) 设置待分析的句子对数组。句子对应不超过5对，支持中英文文本，原句子与目标句子均应不超过500字符。
+ * @method array getSentencePairList() 获取待分析的句子对数组。句子对应不超过1对，仅支持中文文本，原句子与目标句子均应不超过64字符。
+ * @method void setSentencePairList(array $SentencePairList) 设置待分析的句子对数组。句子对应不超过1对，仅支持中文文本，原句子与目标句子均应不超过64字符。
  */
 class EvaluateSentenceSimilarityRequest extends AbstractModel
 {
     /**
-     * @var array 待分析的句子对数组。句子对应不超过5对，支持中英文文本，原句子与目标句子均应不超过500字符。
+     * @var array 待分析的句子对数组。句子对应不超过1对，仅支持中文文本，原句子与目标句子均应不超过64字符。
      */
     public $SentencePairList;
 
     /**
-     * @param array $SentencePairList 待分析的句子对数组。句子对应不超过5对，支持中英文文本，原句子与目标句子均应不超过500字符。
+     * @param array $SentencePairList 待分析的句子对数组。句子对应不超过1对，仅支持中文文本，原句子与目标句子均应不超过64字符。
      */
     function __construct()
     {

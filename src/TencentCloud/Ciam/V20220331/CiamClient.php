@@ -26,6 +26,10 @@ use TencentCloud\Ciam\V20220331\Models as Models;
  * @method Models\CreateApiImportUserJobResponse CreateApiImportUserJob(Models\CreateApiImportUserJobRequest $req) 新建接口导入用户任务
  * @method Models\CreateFileExportUserJobResponse CreateFileExportUserJob(Models\CreateFileExportUserJobRequest $req) 新建文件导出用户任务
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
+ * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 创建用户组
+ * @method Models\CreateUserStoreResponse CreateUserStore(Models\CreateUserStoreRequest $req) 创建用户目录
+ * @method Models\DeleteUserGroupsResponse DeleteUserGroups(Models\DeleteUserGroupsRequest $req) 批量删除用户组
+ * @method Models\DeleteUserStoreResponse DeleteUserStore(Models\DeleteUserStoreRequest $req) 删除用户目录
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 批量删除用户
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 多条件查询用户信息
  * @method Models\DescribeUserByIdResponse DescribeUserById(Models\DescribeUserByIdRequest $req) 根据ID查询用户信息
@@ -34,10 +38,14 @@ use TencentCloud\Ciam\V20220331\Models as Models;
  * @method Models\ListLogMessageByConditionResponse ListLogMessageByCondition(Models\ListLogMessageByConditionRequest $req) 查询日志信息
  * @method Models\ListUserResponse ListUser(Models\ListUserRequest $req) 查询用户列表
  * @method Models\ListUserByPropertyResponse ListUserByProperty(Models\ListUserByPropertyRequest $req) 根据属性查询用户列表
+ * @method Models\ListUserGroupsResponse ListUserGroups(Models\ListUserGroupsRequest $req) 查询用户组列表
+ * @method Models\ListUserStoreResponse ListUserStore(Models\ListUserStoreRequest $req) 查询用户目录列表
  * @method Models\ResetPasswordResponse ResetPassword(Models\ResetPasswordRequest $req) 重置用户密码
  * @method Models\SetPasswordResponse SetPassword(Models\SetPasswordRequest $req) 设置用户密码
  * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) 更新用户
+ * @method Models\UpdateUserGroupResponse UpdateUserGroup(Models\UpdateUserGroupRequest $req) 更新用户组
  * @method Models\UpdateUserStatusResponse UpdateUserStatus(Models\UpdateUserStatusRequest $req) 更新用户状态
+ * @method Models\UpdateUserStoreResponse UpdateUserStore(Models\UpdateUserStoreRequest $req) 更新用户目录
  */
 
 class CiamClient extends AbstractClient

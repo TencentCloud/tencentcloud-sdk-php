@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 签署人个性化能力信息
+ * DeleteKafkaRecharge请求参数结构体
  *
- * @method boolean getHideOneKeySign() 获取是否隐藏一键签署 默认false-不隐藏true-隐藏
- * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置是否隐藏一键签署 默认false-不隐藏true-隐藏
+ * @method string getId() 获取Kafka导入配置ID
+ * @method void setId(string $Id) 设置Kafka导入配置ID
+ * @method string getTopicId() 获取导入CLS目标topic ID
+ * @method void setTopicId(string $TopicId) 设置导入CLS目标topic ID
  */
-class ApproverOption extends AbstractModel
+class DeleteKafkaRechargeRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @var string Kafka导入配置ID
      */
-    public $HideOneKeySign;
+    public $Id;
 
     /**
-     * @param boolean $HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @var string 导入CLS目标topic ID
+     */
+    public $TopicId;
+
+    /**
+     * @param string $Id Kafka导入配置ID
+     * @param string $TopicId 导入CLS目标topic ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class ApproverOption extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HideOneKeySign",$param) and $param["HideOneKeySign"] !== null) {
-            $this->HideOneKeySign = $param["HideOneKeySign"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
         }
     }
 }

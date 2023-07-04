@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Ciam\V20220331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 签署人个性化能力信息
+ * DeleteUserGroups请求参数结构体
  *
- * @method boolean getHideOneKeySign() 获取是否隐藏一键签署 默认false-不隐藏true-隐藏
- * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置是否隐藏一键签署 默认false-不隐藏true-隐藏
+ * @method array getUserGroupIds() 获取用户组ID数组
+ * @method void setUserGroupIds(array $UserGroupIds) 设置用户组ID数组
+ * @method string getUserStoreId() 获取用户目录ID
+ * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
  */
-class ApproverOption extends AbstractModel
+class DeleteUserGroupsRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @var array 用户组ID数组
      */
-    public $HideOneKeySign;
+    public $UserGroupIds;
 
     /**
-     * @param boolean $HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @var string 用户目录ID
+     */
+    public $UserStoreId;
+
+    /**
+     * @param array $UserGroupIds 用户组ID数组
+     * @param string $UserStoreId 用户目录ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class ApproverOption extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HideOneKeySign",$param) and $param["HideOneKeySign"] !== null) {
-            $this->HideOneKeySign = $param["HideOneKeySign"];
+        if (array_key_exists("UserGroupIds",$param) and $param["UserGroupIds"] !== null) {
+            $this->UserGroupIds = $param["UserGroupIds"];
+        }
+
+        if (array_key_exists("UserStoreId",$param) and $param["UserStoreId"] !== null) {
+            $this->UserStoreId = $param["UserStoreId"];
         }
     }
 }

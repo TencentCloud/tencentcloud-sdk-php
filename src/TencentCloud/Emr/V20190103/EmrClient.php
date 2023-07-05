@@ -31,6 +31,8 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询集群节点信息
  * @method Models\DescribeCvmQuotaResponse DescribeCvmQuota(Models\DescribeCvmQuotaRequest $req) 获取账户的CVM配额
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req)  yarn application 统计接口查询
+ * @method Models\DescribeHiveQueriesResponse DescribeHiveQueries(Models\DescribeHiveQueriesRequest $req) 获取hive查询信息
+ * @method Models\DescribeImpalaQueriesResponse DescribeImpalaQueries(Models\DescribeImpalaQueriesRequest $req) DescribeImpalaQueries
  * @method Models\DescribeInstanceRenewNodesResponse DescribeInstanceRenewNodes(Models\DescribeInstanceRenewNodesRequest $req) 查询待续费节点信息
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询集群实例信息
  * @method Models\DescribeInstancesListResponse DescribeInstancesList(Models\DescribeInstancesListRequest $req) 查询集群列表
@@ -38,6 +40,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeResourceScheduleResponse DescribeResourceSchedule(Models\DescribeResourceScheduleRequest $req) 查询YARN资源调度数据信息
  * @method Models\DescribeUsersForUserManagerResponse DescribeUsersForUserManager(Models\DescribeUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
 批量导出用户。对于kerberos集群，如果需要kertab文件下载地址，可以将NeedKeytabInfo设置为true；注意SupportDownLoadKeyTab为true，但是DownLoadKeyTabUrl为空字符串，表示keytab文件在后台没有准备好（正在生成）。
+ * @method Models\DescribeYarnApplicationsResponse DescribeYarnApplications(Models\DescribeYarnApplicationsRequest $req) DescribeYarnApplications
  * @method Models\InquirePriceRenewEmrResponse InquirePriceRenewEmr(Models\InquirePriceRenewEmrRequest $req) 集群续费询价。
  * @method Models\InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(Models\InquiryPriceCreateInstanceRequest $req) 创建实例询价
  * @method Models\InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(Models\InquiryPriceRenewInstanceRequest $req) 续费询价。

@@ -26,14 +26,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置修改后的实例内存大小，单位GiB。
  * @method integer getStorage() 获取修改后的实例磁盘大小，单位GiB。
  * @method void setStorage(integer $Storage) 设置修改后的实例磁盘大小，单位GiB。
- * @method integer getAutoVoucher() 获取是否自动使用代金券,1是,0否，默认不使用。
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券,1是,0否，默认不使用。
+ * @method integer getAutoVoucher() 获取是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
  * @method integer getActivityId() 获取活动ID。
  * @method void setActivityId(integer $ActivityId) 设置活动ID。
- * @method integer getSwitchTag() 获取指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
- * @method void setSwitchTag(integer $SwitchTag) 设置指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+ * @method integer getSwitchTag() 获取指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
+ * @method void setSwitchTag(integer $SwitchTag) 设置指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
  * @method string getSwitchStartTime() 获取切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method string getSwitchEndTime() 获取切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
@@ -57,7 +71,10 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer 是否自动使用代金券,1是,0否，默认不使用。
+     * @var integer 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public $AutoVoucher;
 
@@ -72,7 +89,11 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @var integer 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+     * @var integer 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      */
     public $SwitchTag;
 
@@ -90,10 +111,17 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
      * @param string $DBInstanceId 实例ID，形如：postgres-6bwgamo3。
      * @param integer $Memory 修改后的实例内存大小，单位GiB。
      * @param integer $Storage 修改后的实例磁盘大小，单位GiB。
-     * @param integer $AutoVoucher 是否自动使用代金券,1是,0否，默认不使用。
+     * @param integer $AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param integer $ActivityId 活动ID。
-     * @param integer $SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+     * @param integer $SwitchTag 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      * @param string $SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      * @param string $SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
      */

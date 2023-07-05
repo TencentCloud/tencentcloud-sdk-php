@@ -20,42 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisIsolateDBInstances请求参数结构体
  *
- * @method array getDBInstanceIdSet() 获取资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
- * @method integer getPeriod() 获取包年包月实例解隔离时购买时常 以月为单位
- * @method void setPeriod(integer $Period) 设置包年包月实例解隔离时购买时常 以月为单位
- * @method boolean getAutoVoucher() 获取是否使用代金券：true-使用,false-不使用，默认不使用
- * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否使用代金券：true-使用,false-不使用，默认不使用
- * @method array getVoucherIds() 获取代金券id列表
- * @method void setVoucherIds(array $VoucherIds) 设置代金券id列表
+ * @method array getDBInstanceIdSet() 获取实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+ * @method integer getPeriod() 获取购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+ * @method void setPeriod(integer $Period) 设置购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+ * @method boolean getAutoVoucher() 获取是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false
+ * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false
+ * @method array getVoucherIds() 获取代金券id列表。
+ * @method void setVoucherIds(array $VoucherIds) 设置代金券id列表。
  */
 class DisIsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+     * @var array 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
      */
     public $DBInstanceIdSet;
 
     /**
-     * @var integer 包年包月实例解隔离时购买时常 以月为单位
+     * @var integer 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public $Period;
 
     /**
-     * @var boolean 是否使用代金券：true-使用,false-不使用，默认不使用
+     * @var boolean 是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false
      */
     public $AutoVoucher;
 
     /**
-     * @var array 代金券id列表
+     * @var array 代金券id列表。
      */
     public $VoucherIds;
 
     /**
-     * @param array $DBInstanceIdSet 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
-     * @param integer $Period 包年包月实例解隔离时购买时常 以月为单位
-     * @param boolean $AutoVoucher 是否使用代金券：true-使用,false-不使用，默认不使用
-     * @param array $VoucherIds 代金券id列表
+     * @param array $DBInstanceIdSet 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+     * @param integer $Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+     * @param boolean $AutoVoucher 是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false
+     * @param array $VoucherIds 代金券id列表。
      */
     function __construct()
     {

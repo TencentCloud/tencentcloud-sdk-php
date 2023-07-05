@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务id
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method string getEvent() 获取事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
+ * @method void setEvent(string $Event) 设置事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
+ * @method array getExtConfig() 获取额外参数
+ * @method void setExtConfig(array $ExtConfig) 设置额外参数
  */
 class ResumeIntegrationTaskRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ResumeIntegrationTaskRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
+     */
+    public $Event;
+
+    /**
+     * @var array 额外参数
+     */
+    public $ExtConfig;
+
+    /**
      * @param string $TaskId 任务id
      * @param string $ProjectId 项目id
+     * @param string $Event 事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
+     * @param array $ExtConfig 额外参数
      */
     function __construct()
     {
@@ -60,6 +76,19 @@ class ResumeIntegrationTaskRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Event",$param) and $param["Event"] !== null) {
+            $this->Event = $param["Event"];
+        }
+
+        if (array_key_exists("ExtConfig",$param) and $param["ExtConfig"] !== null) {
+            $this->ExtConfig = [];
+            foreach ($param["ExtConfig"] as $key => $value){
+                $obj = new RecordField();
+                $obj->deserialize($value);
+                array_push($this->ExtConfig, $obj);
+            }
         }
     }
 }

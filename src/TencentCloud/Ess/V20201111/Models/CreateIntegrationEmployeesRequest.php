@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method UserInfo getOperator() 获取操作人信息，userId必填
  * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
  * @method array getEmployees() 获取待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
  * @method void setEmployees(array $Employees) 设置待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
@@ -38,7 +40,8 @@ class CreateIntegrationEmployeesRequest extends AbstractModel
 
     /**
      * @var array 待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
      */
     public $Employees;
 
@@ -50,7 +53,8 @@ Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其�
     /**
      * @param UserInfo $Operator 操作人信息，userId必填
      * @param array $Employees 待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()

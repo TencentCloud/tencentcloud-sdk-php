@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFieldType(string $FieldType) 设置字段类型
  * @method string getAlias() 获取字段别名
  * @method void setAlias(string $Alias) 设置字段别名
+ * @method string getComment() 获取字段描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComment(string $Comment) 设置字段描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceFieldInfo extends AbstractModel
 {
@@ -45,9 +49,17 @@ class SourceFieldInfo extends AbstractModel
     public $Alias;
 
     /**
+     * @var string 字段描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Comment;
+
+    /**
      * @param string $FieldName 字段名称
      * @param string $FieldType 字段类型
      * @param string $Alias 字段别名
+     * @param string $Comment 字段描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class SourceFieldInfo extends AbstractModel
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

@@ -22,10 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID。
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
- * @method array getDBNodeSet() 获取实例节点信息。
- * @method void setDBNodeSet(array $DBNodeSet) 设置实例节点信息。
- * @method integer getSwitchTag() 获取切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
- * @method void setSwitchTag(integer $SwitchTag) 设置切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
+ * @method array getDBNodeSet() 获取实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+ * @method void setDBNodeSet(array $DBNodeSet) 设置实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+ * @method integer getSwitchTag() 获取指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
+ * @method void setSwitchTag(integer $SwitchTag) 设置指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
  * @method string getSwitchStartTime() 获取切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method string getSwitchEndTime() 获取切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
@@ -39,12 +49,17 @@ class ModifyDBInstanceDeploymentRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var array 实例节点信息。
+     * @var array 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public $DBNodeSet;
 
     /**
-     * @var integer 切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
+     * @var integer 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      */
     public $SwitchTag;
 
@@ -60,8 +75,13 @@ class ModifyDBInstanceDeploymentRequest extends AbstractModel
 
     /**
      * @param string $DBInstanceId 实例ID。
-     * @param array $DBNodeSet 实例节点信息。
-     * @param integer $SwitchTag 切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
+     * @param array $DBNodeSet 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     * @param integer $SwitchTag 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      * @param string $SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      * @param string $SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
      */

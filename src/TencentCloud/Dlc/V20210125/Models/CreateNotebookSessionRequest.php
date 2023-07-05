@@ -40,14 +40,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutorSize(string $ExecutorSize) 设置指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
  * @method integer getExecutorNumbers() 获取指定的Executor数量，默认为1
  * @method void setExecutorNumbers(integer $ExecutorNumbers) 设置指定的Executor数量，默认为1
- * @method array getArguments() 获取Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
- * @method void setArguments(array $Arguments) 设置Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+ * @method array getArguments() 获取Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
+ * @method void setArguments(array $Arguments) 设置Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
  * @method string getProxyUser() 获取代理用户，默认为root
  * @method void setProxyUser(string $ProxyUser) 设置代理用户，默认为root
  * @method integer getTimeoutInSecond() 获取指定的Session超时时间，单位秒，默认3600秒
  * @method void setTimeoutInSecond(integer $TimeoutInSecond) 设置指定的Session超时时间，单位秒，默认3600秒
  * @method integer getExecutorMaxNumbers() 获取指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
  * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) 设置指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
+ * @method string getSparkImage() 获取指定spark版本名称，当前任务使用该spark镜像运行
+ * @method void setSparkImage(string $SparkImage) 设置指定spark版本名称，当前任务使用该spark镜像运行
  */
 class CreateNotebookSessionRequest extends AbstractModel
 {
@@ -102,7 +110,10 @@ class CreateNotebookSessionRequest extends AbstractModel
     public $ExecutorNumbers;
 
     /**
-     * @var array Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+     * @var array Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
      */
     public $Arguments;
 
@@ -122,6 +133,11 @@ class CreateNotebookSessionRequest extends AbstractModel
     public $ExecutorMaxNumbers;
 
     /**
+     * @var string 指定spark版本名称，当前任务使用该spark镜像运行
+     */
+    public $SparkImage;
+
+    /**
      * @param string $Name Session名称
      * @param string $Kind 类型，当前支持：spark、pyspark、sparkr、sql
      * @param string $DataEngineName DLC Spark作业引擎名称
@@ -132,10 +148,14 @@ class CreateNotebookSessionRequest extends AbstractModel
      * @param string $DriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      * @param string $ExecutorSize 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      * @param integer $ExecutorNumbers 指定的Executor数量，默认为1
-     * @param array $Arguments Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+     * @param array $Arguments Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
      * @param string $ProxyUser 代理用户，默认为root
      * @param integer $TimeoutInSecond 指定的Session超时时间，单位秒，默认3600秒
      * @param integer $ExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
+     * @param string $SparkImage 指定spark版本名称，当前任务使用该spark镜像运行
      */
     function __construct()
     {
@@ -209,6 +229,10 @@ class CreateNotebookSessionRequest extends AbstractModel
 
         if (array_key_exists("ExecutorMaxNumbers",$param) and $param["ExecutorMaxNumbers"] !== null) {
             $this->ExecutorMaxNumbers = $param["ExecutorMaxNumbers"];
+        }
+
+        if (array_key_exists("SparkImage",$param) and $param["SparkImage"] !== null) {
+            $this->SparkImage = $param["SparkImage"];
         }
     }
 }

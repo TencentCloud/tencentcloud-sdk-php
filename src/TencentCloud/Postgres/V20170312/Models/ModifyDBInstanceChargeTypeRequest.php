@@ -22,14 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161
- * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。
- * @method integer getPeriod() 获取购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
- * @method void setPeriod(integer $Period) 设置购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
- * @method integer getAutoRenewFlag() 获取续费标记：0-正常续费（默认）；1-自动续费。
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：0-正常续费（默认）；1-自动续费。
- * @method integer getAutoVoucher() 获取是否自动使用代金券,1是,0否，默认不使用
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券,1是,0否，默认不使用
+ * @method string getInstanceChargeType() 获取实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
+ * @method integer getPeriod() 获取购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+ * @method void setPeriod(integer $Period) 设置购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+ * @method integer getAutoRenewFlag() 获取续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+ * @method integer getAutoVoucher() 获取是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
  */
 class ModifyDBInstanceChargeTypeRequest extends AbstractModel
 {
@@ -39,31 +61,53 @@ class ModifyDBInstanceChargeTypeRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。
+     * @var string 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+     * @var integer 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public $Period;
 
     /**
-     * @var integer 续费标记：0-正常续费（默认）；1-自动续费。
+     * @var integer 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 是否自动使用代金券,1是,0否，默认不使用
+     * @var integer 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public $AutoVoucher;
 
     /**
      * @param string $DBInstanceId 实例ID，形如postgres-6fego161
-     * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。
-     * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
-     * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费。
-     * @param integer $AutoVoucher 是否自动使用代金券,1是,0否，默认不使用
+     * @param string $InstanceChargeType 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
+     * @param integer $Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+     * @param integer $AutoRenewFlag 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+     * @param integer $AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     function __construct()
     {

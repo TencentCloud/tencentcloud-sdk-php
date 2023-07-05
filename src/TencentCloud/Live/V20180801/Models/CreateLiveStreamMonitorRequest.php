@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckStreamLowFrameRate(integer $CheckStreamLowFrameRate) 设置是否开启低帧率检测。
  * @method integer getAllowMonitorReport() 获取是否存储监播事件到监播报告，以及是否允许查询监播报告。
  * @method void setAllowMonitorReport(integer $AllowMonitorReport) 设置是否存储监播事件到监播报告，以及是否允许查询监播报告。
+ * @method integer getAiFormatDiagnose() 获取是否开启格式诊断。
+ * @method void setAiFormatDiagnose(integer $AiFormatDiagnose) 设置是否开启格式诊断。
  */
 class CreateLiveStreamMonitorRequest extends AbstractModel
 {
@@ -116,6 +118,11 @@ class CreateLiveStreamMonitorRequest extends AbstractModel
     public $AllowMonitorReport;
 
     /**
+     * @var integer 是否开启格式诊断。
+     */
+    public $AiFormatDiagnose;
+
+    /**
      * @param LiveStreamMonitorOutputInfo $OutputInfo 监播任务的输出信息。
      * @param array $InputList 待监播的输入流信息列表。
      * @param string $MonitorName 监播任务名称。字段长度小于128字节（一个汉字两个字节）。
@@ -132,6 +139,7 @@ class CreateLiveStreamMonitorRequest extends AbstractModel
      * @param integer $CheckStreamBroken 是否开启断流检测。
      * @param integer $CheckStreamLowFrameRate 是否开启低帧率检测。
      * @param integer $AllowMonitorReport 是否存储监播事件到监播报告，以及是否允许查询监播报告。
+     * @param integer $AiFormatDiagnose 是否开启格式诊断。
      */
     function __construct()
     {
@@ -195,6 +203,10 @@ class CreateLiveStreamMonitorRequest extends AbstractModel
 
         if (array_key_exists("AllowMonitorReport",$param) and $param["AllowMonitorReport"] !== null) {
             $this->AllowMonitorReport = $param["AllowMonitorReport"];
+        }
+
+        if (array_key_exists("AiFormatDiagnose",$param) and $param["AiFormatDiagnose"] !== null) {
+            $this->AiFormatDiagnose = $param["AiFormatDiagnose"];
         }
     }
 }

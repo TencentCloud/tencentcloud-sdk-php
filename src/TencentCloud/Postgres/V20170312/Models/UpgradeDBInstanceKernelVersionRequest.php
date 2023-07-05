@@ -20,46 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstanceKernelVersion请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
- * @method string getTargetDBKernelVersion() 获取升级的目标内核版本号。可以通过接口DescribeDBVersions的返回字段AvailableUpgradeTarget获取。
- * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) 设置升级的目标内核版本号。可以通过接口DescribeDBVersions的返回字段AvailableUpgradeTarget获取。
- * @method integer getSwitchTag() 获取指定实例升级内核版本号完成后的切换时间。可选值，
-0：立即切换（默认值）。
-1：指定时间切换。
-2：维护时间窗口内切换。
- * @method void setSwitchTag(integer $SwitchTag) 设置指定实例升级内核版本号完成后的切换时间。可选值，
-0：立即切换（默认值）。
-1：指定时间切换。
-2：维护时间窗口内切换。
+ * @method string getDBInstanceId() 获取实例ID。
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
+ * @method string getTargetDBKernelVersion() 获取升级的目标内核版本号。可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)的返回字段AvailableUpgradeTarget获取。
+
+ * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) 设置升级的目标内核版本号。可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)的返回字段AvailableUpgradeTarget获取。
+
+ * @method integer getSwitchTag() 获取指定实例升级内核版本号完成后的切换时间。可选值:
+<li>0：立即切换
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
+ * @method void setSwitchTag(integer $SwitchTag) 设置指定实例升级内核版本号完成后的切换时间。可选值:
+<li>0：立即切换
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
  * @method string getSwitchStartTime() 获取切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method string getSwitchEndTime() 获取切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。SwitchStartTime和SwitchEndTime时间窗口不能小于30分钟。
  * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。SwitchStartTime和SwitchEndTime时间窗口不能小于30分钟。
- * @method boolean getDryRun() 获取是否对本次升级实例内核版本号操作执行预检查。可选值，
-true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-false：发送正常请求（默认值），通过检查后直接升级内核版本号。
- * @method void setDryRun(boolean $DryRun) 设置是否对本次升级实例内核版本号操作执行预检查。可选值，
-true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+ * @method boolean getDryRun() 获取是否对本次升级实例内核版本号操作执行预检查。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+默认值：false
+ * @method void setDryRun(boolean $DryRun) 设置是否对本次升级实例内核版本号操作执行预检查。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+默认值：false
  */
 class UpgradeDBInstanceKernelVersionRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。
      */
     public $DBInstanceId;
 
     /**
-     * @var string 升级的目标内核版本号。可以通过接口DescribeDBVersions的返回字段AvailableUpgradeTarget获取。
+     * @var string 升级的目标内核版本号。可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)的返回字段AvailableUpgradeTarget获取。
+
      */
     public $TargetDBKernelVersion;
 
     /**
-     * @var integer 指定实例升级内核版本号完成后的切换时间。可选值，
-0：立即切换（默认值）。
-1：指定时间切换。
-2：维护时间窗口内切换。
+     * @var integer 指定实例升级内核版本号完成后的切换时间。可选值:
+<li>0：立即切换
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      */
     public $SwitchTag;
 
@@ -74,24 +82,28 @@ class UpgradeDBInstanceKernelVersionRequest extends AbstractModel
     public $SwitchEndTime;
 
     /**
-     * @var boolean 是否对本次升级实例内核版本号操作执行预检查。可选值，
-true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+     * @var boolean 是否对本次升级实例内核版本号操作执行预检查。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+默认值：false
      */
     public $DryRun;
 
     /**
-     * @param string $DBInstanceId 实例ID
-     * @param string $TargetDBKernelVersion 升级的目标内核版本号。可以通过接口DescribeDBVersions的返回字段AvailableUpgradeTarget获取。
-     * @param integer $SwitchTag 指定实例升级内核版本号完成后的切换时间。可选值，
-0：立即切换（默认值）。
-1：指定时间切换。
-2：维护时间窗口内切换。
+     * @param string $DBInstanceId 实例ID。
+     * @param string $TargetDBKernelVersion 升级的目标内核版本号。可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)的返回字段AvailableUpgradeTarget获取。
+
+     * @param integer $SwitchTag 指定实例升级内核版本号完成后的切换时间。可选值:
+<li>0：立即切换
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      * @param string $SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      * @param string $SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。SwitchStartTime和SwitchEndTime时间窗口不能小于30分钟。
-     * @param boolean $DryRun 是否对本次升级实例内核版本号操作执行预检查。可选值，
-true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
-false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+     * @param boolean $DryRun 是否对本次升级实例内核版本号操作执行预检查。
+<li>true：执行预检查操作，不升级内核版本号。检查项目包含请求参数、内核版本号兼容性、实例参数等。
+<li>false：发送正常请求（默认值），通过检查后直接升级内核版本号。
+默认值：false
      */
     function __construct()
     {

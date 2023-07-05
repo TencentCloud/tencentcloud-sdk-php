@@ -38,8 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置Session唯一标识，当指定sessionid，则使用该session运行任务。
  * @method string getSessionName() 获取指定要创建的session名称
  * @method void setSessionName(string $SessionName) 设置指定要创建的session名称
- * @method array getArguments() 获取Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
- * @method void setArguments(array $Arguments) 设置Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+ * @method array getArguments() 获取Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
+ * @method void setArguments(array $Arguments) 设置Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
  */
 class CreateSparkSessionBatchSQLRequest extends AbstractModel
 {
@@ -89,7 +93,9 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
     public $SessionName;
 
     /**
-     * @var array Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+     * @var array Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
      */
     public $Arguments;
 
@@ -103,7 +109,9 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
      * @param integer $TimeoutInSecond 指定的Session超时时间，单位秒，默认3600秒
      * @param string $SessionId Session唯一标识，当指定sessionid，则使用该session运行任务。
      * @param string $SessionName 指定要创建的session名称
-     * @param array $Arguments Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+     * @param array $Arguments Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
      */
     function __construct()
     {

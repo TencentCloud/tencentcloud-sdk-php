@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置关联dlc查询脚本id
  * @method integer getIsInherit() 获取任务资源配置是否继承集群模板，0（默认）不继承，1：继承
  * @method void setIsInherit(integer $IsInherit) 设置任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+ * @method boolean getIsSessionStarted() 获取是否使用session脚本的sql运行任务：false：否，true：是
+ * @method void setIsSessionStarted(boolean $IsSessionStarted) 设置是否使用session脚本的sql运行任务：false：否，true：是
  */
 class CreateSparkAppRequest extends AbstractModel
 {
@@ -220,6 +222,11 @@ class CreateSparkAppRequest extends AbstractModel
     public $IsInherit;
 
     /**
+     * @var boolean 是否使用session脚本的sql运行任务：false：否，true：是
+     */
+    public $IsSessionStarted;
+
+    /**
      * @param string $AppName spark作业名
      * @param integer $AppType spark作业类型，1代表spark jar作业，2代表spark streaming作业
      * @param string $DataEngine 执行spark作业的数据引擎名称
@@ -248,6 +255,7 @@ class CreateSparkAppRequest extends AbstractModel
      * @param integer $AppExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
      * @param string $SessionId 关联dlc查询脚本id
      * @param integer $IsInherit 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+     * @param boolean $IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
      */
     function __construct()
     {
@@ -372,6 +380,10 @@ class CreateSparkAppRequest extends AbstractModel
 
         if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
             $this->IsInherit = $param["IsInherit"];
+        }
+
+        if (array_key_exists("IsSessionStarted",$param) and $param["IsSessionStarted"] !== null) {
+            $this->IsSessionStarted = $param["IsSessionStarted"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 域名的详细信息
+ * domain列表
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
@@ -28,22 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getCname() 获取cname地址
  * @method void setCname(string $Cname) 设置cname地址
- * @method string getEdition() 获取实例类型
- * @method void setEdition(string $Edition) 设置实例类型
+ * @method string getEdition() 获取实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
+ * @method void setEdition(string $Edition) 设置实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
  * @method string getInstanceName() 获取实例名
  * @method void setInstanceName(string $InstanceName) 设置实例名
  * @method integer getClsStatus() 获取日志包
  * @method void setClsStatus(integer $ClsStatus) 设置日志包
- * @method integer getFlowMode() 获取clb模式
- * @method void setFlowMode(integer $FlowMode) 设置clb模式
- * @method integer getStatus() 获取waf开关
- * @method void setStatus(integer $Status) 设置waf开关
- * @method integer getMode() 获取防御模式
- * @method void setMode(integer $Mode) 设置防御模式
- * @method integer getEngine() 获取AI防御模式
- * @method void setEngine(integer $Engine) 设置AI防御模式
+ * @method integer getFlowMode() 获取clbwaf使用模式,0镜像模式 1清洗模式
+ * @method void setFlowMode(integer $FlowMode) 设置clbwaf使用模式,0镜像模式 1清洗模式
+ * @method integer getStatus() 获取waf开关,0关闭 1开启
+ * @method void setStatus(integer $Status) 设置waf开关,0关闭 1开启
+ * @method integer getMode() 获取规则防御模式,0观察模式 1拦截模式
+ * @method void setMode(integer $Mode) 设置规则防御模式,0观察模式 1拦截模式
+ * @method integer getEngine() 获取AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+ * @method void setEngine(integer $Engine) 设置AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
  * @method array getCCList() 获取CC列表
  * @method void setCCList(array $CCList) 设置CC列表
  * @method array getRsList() 获取回源ip
@@ -54,23 +54,39 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置负载均衡器
  * @method integer getAppId() 获取用户id
  * @method void setAppId(integer $AppId) 设置用户id
- * @method integer getState() 获取clb状态
- * @method void setState(integer $State) 设置clb状态
+ * @method integer getState() 获取clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
+ * @method void setState(integer $State) 设置clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getIpv6Status() 获取0关闭 1开启
- * @method void setIpv6Status(integer $Ipv6Status) 设置0关闭 1开启
- * @method integer getBotStatus() 获取0关闭 1开启
- * @method void setBotStatus(integer $BotStatus) 设置0关闭 1开启
+ * @method integer getIpv6Status() 获取Ipv6开关状态,0关闭 1开启
+ * @method void setIpv6Status(integer $Ipv6Status) 设置Ipv6开关状态,0关闭 1开启
+ * @method integer getBotStatus() 获取BOT开关状态,0关闭 1开启
+ * @method void setBotStatus(integer $BotStatus) 设置BOT开关状态,0关闭 1开启
  * @method integer getLevel() 获取版本信息
  * @method void setLevel(integer $Level) 设置版本信息
- * @method integer getPostCLSStatus() 获取是否开启投递CLS功能
- * @method void setPostCLSStatus(integer $PostCLSStatus) 设置是否开启投递CLS功能
- * @method integer getPostCKafkaStatus() 获取是否开启投递CKafka功能
- * @method void setPostCKafkaStatus(integer $PostCKafkaStatus) 设置是否开启投递CKafka功能
- * @method string getAlbType() 获取应用型负载均衡类型: clb或者apisix，默认clb
+ * @method integer getPostCLSStatus() 获取是否开启投递CLS功能,0关闭 1开启
+ * @method void setPostCLSStatus(integer $PostCLSStatus) 设置是否开启投递CLS功能,0关闭 1开启
+ * @method integer getPostCKafkaStatus() 获取是否开启投递CKafka功能,0关闭 1开启
+ * @method void setPostCKafkaStatus(integer $PostCKafkaStatus) 设置是否开启投递CKafka功能,0关闭 1开启
+ * @method string getCdcClusters() 获取cdc实例域名接入的集群信息,非cdc实例忽略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlbType(string $AlbType) 设置应用型负载均衡类型: clb或者apisix，默认clb
+ * @method void setCdcClusters(string $CdcClusters) 设置cdc实例域名接入的集群信息,非cdc实例忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getApiStatus() 获取api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiStatus(integer $ApiStatus) 设置api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlbType() 获取应用型负载均衡类型,clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlbType(string $AlbType) 设置应用型负载均衡类型,clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSgState() 获取安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSgState(integer $SgState) 设置安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSgDetail() 获取安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSgDetail(string $SgDetail) 设置安全组状态的详细解释
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
@@ -96,7 +112,7 @@ class DomainInfo extends AbstractModel
     public $Cname;
 
     /**
-     * @var string 实例类型
+     * @var string 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
      */
     public $Edition;
 
@@ -116,22 +132,22 @@ class DomainInfo extends AbstractModel
     public $ClsStatus;
 
     /**
-     * @var integer clb模式
+     * @var integer clbwaf使用模式,0镜像模式 1清洗模式
      */
     public $FlowMode;
 
     /**
-     * @var integer waf开关
+     * @var integer waf开关,0关闭 1开启
      */
     public $Status;
 
     /**
-     * @var integer 防御模式
+     * @var integer 规则防御模式,0观察模式 1拦截模式
      */
     public $Mode;
 
     /**
-     * @var integer AI防御模式
+     * @var integer AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public $Engine;
 
@@ -161,7 +177,7 @@ class DomainInfo extends AbstractModel
     public $AppId;
 
     /**
-     * @var integer clb状态
+     * @var integer clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
      */
     public $State;
 
@@ -171,12 +187,12 @@ class DomainInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 0关闭 1开启
+     * @var integer Ipv6开关状态,0关闭 1开启
      */
     public $Ipv6Status;
 
     /**
-     * @var integer 0关闭 1开启
+     * @var integer BOT开关状态,0关闭 1开启
      */
     public $BotStatus;
 
@@ -186,47 +202,79 @@ class DomainInfo extends AbstractModel
     public $Level;
 
     /**
-     * @var integer 是否开启投递CLS功能
+     * @var integer 是否开启投递CLS功能,0关闭 1开启
      */
     public $PostCLSStatus;
 
     /**
-     * @var integer 是否开启投递CKafka功能
+     * @var integer 是否开启投递CKafka功能,0关闭 1开启
      */
     public $PostCKafkaStatus;
 
     /**
-     * @var string 应用型负载均衡类型: clb或者apisix，默认clb
+     * @var string cdc实例域名接入的集群信息,非cdc实例忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcClusters;
+
+    /**
+     * @var integer api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiStatus;
+
+    /**
+     * @var string 应用型负载均衡类型,clb或者apisix，默认clb
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlbType;
+
+    /**
+     * @var integer 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SgState;
+
+    /**
+     * @var string 安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SgDetail;
 
     /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param string $InstanceId 实例ID
      * @param string $Cname cname地址
-     * @param string $Edition 实例类型
+     * @param string $Edition 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
      * @param string $Region 地域
      * @param string $InstanceName 实例名
      * @param integer $ClsStatus 日志包
-     * @param integer $FlowMode clb模式
-     * @param integer $Status waf开关
-     * @param integer $Mode 防御模式
-     * @param integer $Engine AI防御模式
+     * @param integer $FlowMode clbwaf使用模式,0镜像模式 1清洗模式
+     * @param integer $Status waf开关,0关闭 1开启
+     * @param integer $Mode 规则防御模式,0观察模式 1拦截模式
+     * @param integer $Engine AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      * @param array $CCList CC列表
      * @param array $RsList 回源ip
      * @param array $Ports 服务端口配置
      * @param array $LoadBalancerSet 负载均衡器
      * @param integer $AppId 用户id
-     * @param integer $State clb状态
+     * @param integer $State clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
      * @param string $CreateTime 创建时间
-     * @param integer $Ipv6Status 0关闭 1开启
-     * @param integer $BotStatus 0关闭 1开启
+     * @param integer $Ipv6Status Ipv6开关状态,0关闭 1开启
+     * @param integer $BotStatus BOT开关状态,0关闭 1开启
      * @param integer $Level 版本信息
-     * @param integer $PostCLSStatus 是否开启投递CLS功能
-     * @param integer $PostCKafkaStatus 是否开启投递CKafka功能
-     * @param string $AlbType 应用型负载均衡类型: clb或者apisix，默认clb
+     * @param integer $PostCLSStatus 是否开启投递CLS功能,0关闭 1开启
+     * @param integer $PostCKafkaStatus 是否开启投递CKafka功能,0关闭 1开启
+     * @param string $CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ApiStatus api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlbType 应用型负载均衡类型,clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SgState 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SgDetail 安全组状态的详细解释
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -348,8 +396,24 @@ class DomainInfo extends AbstractModel
             $this->PostCKafkaStatus = $param["PostCKafkaStatus"];
         }
 
+        if (array_key_exists("CdcClusters",$param) and $param["CdcClusters"] !== null) {
+            $this->CdcClusters = $param["CdcClusters"];
+        }
+
+        if (array_key_exists("ApiStatus",$param) and $param["ApiStatus"] !== null) {
+            $this->ApiStatus = $param["ApiStatus"];
+        }
+
         if (array_key_exists("AlbType",$param) and $param["AlbType"] !== null) {
             $this->AlbType = $param["AlbType"];
+        }
+
+        if (array_key_exists("SgState",$param) and $param["SgState"] !== null) {
+            $this->SgState = $param["SgState"];
+        }
+
+        if (array_key_exists("SgDetail",$param) and $param["SgDetail"] !== null) {
+            $this->SgDetail = $param["SgDetail"];
         }
     }
 }

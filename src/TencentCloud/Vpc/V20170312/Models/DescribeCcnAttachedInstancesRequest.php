@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例ID。</li>
  * @method void setFilters(array $Filters) 设置过滤条件：
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例ID。</li>
  * @method string getCcnId() 获取云联网实例ID
  * @method void setCcnId(string $CcnId) 设置云联网实例ID
  * @method string getOrderField() 获取排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。默认值：`AttachedTime`
@@ -58,7 +58,7 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例ID。</li>
      */
     public $Filters;
 
@@ -84,7 +84,7 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例ID。</li>
      * @param string $CcnId 云联网实例ID
      * @param string $OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。默认值：`AttachedTime`
      * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`

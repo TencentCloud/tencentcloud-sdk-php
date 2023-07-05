@@ -18,7 +18,7 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 负载均衡算法
+ * 负载均衡器
  *
  * @method string getListenerId() 获取监听id
 注意：此字段可能返回 null，表示取不到有效值。

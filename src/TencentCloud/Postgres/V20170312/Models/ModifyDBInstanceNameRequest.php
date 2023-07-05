@@ -22,8 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取数据库实例ID，形如postgres-6fego161
  * @method void setDBInstanceId(string $DBInstanceId) 设置数据库实例ID，形如postgres-6fego161
- * @method string getInstanceName() 获取新的数据库实例名字
- * @method void setInstanceName(string $InstanceName) 设置新的数据库实例名字
+ * @method string getInstanceName() 获取实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+
+ * @method void setInstanceName(string $InstanceName) 设置实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
  */
 class ModifyDBInstanceNameRequest extends AbstractModel
 {
@@ -33,13 +34,14 @@ class ModifyDBInstanceNameRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string 新的数据库实例名字
+     * @var string 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+
      */
     public $InstanceName;
 
     /**
      * @param string $DBInstanceId 数据库实例ID，形如postgres-6fego161
-     * @param string $InstanceName 新的数据库实例名字
+     * @param string $InstanceName 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
      */
     function __construct()
     {

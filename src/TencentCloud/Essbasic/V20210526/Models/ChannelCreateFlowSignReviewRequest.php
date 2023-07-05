@@ -36,16 +36,18 @@ SIGN_REJECT:拒签(流程结束)
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
  * @method void setReviewMessage(string $ReviewMessage) 设置审核原因 
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
- * @method string getRecipientId() 获取签署节点审核时需要指定
- * @method void setRecipientId(string $RecipientId) 设置签署节点审核时需要指定
+ * @method string getRecipientId() 获取签署节点审核时需要指定，给个人审核时必填。
+ * @method void setRecipientId(string $RecipientId) 设置签署节点审核时需要指定，给个人审核时必填。
  * @method string getOperateType() 获取操作类型，默认：SignReview；SignReview:签署审核，CreateReview：发起审核
 注：接口通过该字段区分操作类型
 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
 若想使用发起审核，请指定该字段为：CreateReview
+若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
  * @method void setOperateType(string $OperateType) 设置操作类型，默认：SignReview；SignReview:签署审核，CreateReview：发起审核
 注：接口通过该字段区分操作类型
 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
 若想使用发起审核，请指定该字段为：CreateReview
+若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
  */
 class ChannelCreateFlowSignReviewRequest extends AbstractModel
 {
@@ -74,7 +76,7 @@ SIGN_REJECT:拒签(流程结束)
     public $ReviewMessage;
 
     /**
-     * @var string 签署节点审核时需要指定
+     * @var string 签署节点审核时需要指定，给个人审核时必填。
      */
     public $RecipientId;
 
@@ -83,6 +85,7 @@ SIGN_REJECT:拒签(流程结束)
 注：接口通过该字段区分操作类型
 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
 若想使用发起审核，请指定该字段为：CreateReview
+若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
      */
     public $OperateType;
 
@@ -95,11 +98,12 @@ REJECT: 拒绝
 SIGN_REJECT:拒签(流程结束)
      * @param string $ReviewMessage 审核原因 
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
-     * @param string $RecipientId 签署节点审核时需要指定
+     * @param string $RecipientId 签署节点审核时需要指定，给个人审核时必填。
      * @param string $OperateType 操作类型，默认：SignReview；SignReview:签署审核，CreateReview：发起审核
 注：接口通过该字段区分操作类型
 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
 若想使用发起审核，请指定该字段为：CreateReview
+若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
      */
     function __construct()
     {

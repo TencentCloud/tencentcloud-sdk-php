@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayName(string $DisplayName) 设置员工名
  * @method string getMobile() 获取员工手机号
  * @method void setMobile(string $Mobile) 设置员工手机号
+ * @method string getWeworkOpenId() 获取传入的企微账号id
+ * @method void setWeworkOpenId(string $WeworkOpenId) 设置传入的企微账号id
  * @method string getReason() 获取失败原因
  * @method void setReason(string $Reason) 设置失败原因
  */
@@ -40,6 +42,11 @@ class FailedCreateStaffData extends AbstractModel
     public $Mobile;
 
     /**
+     * @var string 传入的企微账号id
+     */
+    public $WeworkOpenId;
+
+    /**
      * @var string 失败原因
      */
     public $Reason;
@@ -47,6 +54,7 @@ class FailedCreateStaffData extends AbstractModel
     /**
      * @param string $DisplayName 员工名
      * @param string $Mobile 员工手机号
+     * @param string $WeworkOpenId 传入的企微账号id
      * @param string $Reason 失败原因
      */
     function __construct()
@@ -68,6 +76,10 @@ class FailedCreateStaffData extends AbstractModel
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("WeworkOpenId",$param) and $param["WeworkOpenId"] !== null) {
+            $this->WeworkOpenId = $param["WeworkOpenId"];
         }
 
         if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {

@@ -86,6 +86,10 @@ AnycastEIP是否用于绑定负载均衡。
  * @method void setAddressName(string $AddressName) 设置EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
  * @method string getEgress() 获取网络出口，默认是：center_egress1
  * @method void setEgress(string $Egress) 设置网络出口，默认是：center_egress1
+ * @method string getAntiDDoSPackageId() 获取高防包ID， 申请高防IP时，该字段必传。
+ * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) 设置高防包ID， 申请高防IP时，该字段必传。
+ * @method string getClientToken() 获取保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+ * @method void setClientToken(string $ClientToken) 设置保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
  */
 class AllocateAddressesRequest extends AbstractModel
 {
@@ -171,6 +175,16 @@ AnycastEIP是否用于绑定负载均衡。
     public $Egress;
 
     /**
+     * @var string 高防包ID， 申请高防IP时，该字段必传。
+     */
+    public $AntiDDoSPackageId;
+
+    /**
+     * @var string 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     */
+    public $ClientToken;
+
+    /**
      * @param integer $AddressCount EIP数量。默认值：1。
      * @param string $InternetServiceProvider EIP线路类型。默认值：BGP。
 <ul style="margin:0"><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
@@ -204,6 +218,8 @@ AnycastEIP是否用于绑定负载均衡。
      * @param string $BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
      * @param string $AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
      * @param string $Egress 网络出口，默认是：center_egress1
+     * @param string $AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
+     * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
      */
     function __construct()
     {
@@ -270,6 +286,14 @@ AnycastEIP是否用于绑定负载均衡。
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
             $this->Egress = $param["Egress"];
+        }
+
+        if (array_key_exists("AntiDDoSPackageId",$param) and $param["AntiDDoSPackageId"] !== null) {
+            $this->AntiDDoSPackageId = $param["AntiDDoSPackageId"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

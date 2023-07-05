@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLowFrameRateResults(array $LowFrameRateResults) 设置低帧率信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getStreamFormatResults() 获取流格式诊断信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStreamFormatResults(array $StreamFormatResults) 设置流格式诊断信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiagnoseResult extends AbstractModel
 {
@@ -44,9 +48,17 @@ class DiagnoseResult extends AbstractModel
     public $LowFrameRateResults;
 
     /**
+     * @var array 流格式诊断信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StreamFormatResults;
+
+    /**
      * @param array $StreamBrokenResults 断流信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LowFrameRateResults 低帧率信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $StreamFormatResults 流格式诊断信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class DiagnoseResult extends AbstractModel
 
         if (array_key_exists("LowFrameRateResults",$param) and $param["LowFrameRateResults"] !== null) {
             $this->LowFrameRateResults = $param["LowFrameRateResults"];
+        }
+
+        if (array_key_exists("StreamFormatResults",$param) and $param["StreamFormatResults"] !== null) {
+            $this->StreamFormatResults = $param["StreamFormatResults"];
         }
     }
 }

@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发
+2：关闭立即下发开关情况下，触发开始下发
  * @method void setStatus(integer $Status) 设置0：打开立即下发开关；
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发
+2：关闭立即下发开关情况下，触发开始下发
  */
 class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
 {
@@ -38,7 +38,7 @@ class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发
+2：关闭立即下发开关情况下，触发开始下发
      */
     public $Status;
 
@@ -47,7 +47,7 @@ class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发
+2：关闭立即下发开关情况下，触发开始下发
      */
     function __construct()
     {

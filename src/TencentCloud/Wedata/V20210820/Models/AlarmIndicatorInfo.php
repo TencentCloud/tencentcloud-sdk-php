@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmIndicatorUnit(string $AlarmIndicatorUnit) 设置告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDuration() 获取告警周期
+ * @method void setDuration(integer $Duration) 设置告警周期
+ * @method string getDurationUnit() 获取告警周期单位
+ * @method void setDurationUnit(string $DurationUnit) 设置告警周期单位
+ * @method integer getMaxTimes() 获取周期内最多告警次数
+ * @method void setMaxTimes(integer $MaxTimes) 设置周期内最多告警次数
  */
 class AlarmIndicatorInfo extends AbstractModel
 {
@@ -94,6 +100,21 @@ class AlarmIndicatorInfo extends AbstractModel
     public $AlarmIndicatorUnit;
 
     /**
+     * @var integer 告警周期
+     */
+    public $Duration;
+
+    /**
+     * @var string 告警周期单位
+     */
+    public $DurationUnit;
+
+    /**
+     * @var integer 周期内最多告警次数
+     */
+    public $MaxTimes;
+
+    /**
      * @param string $Id 指标id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
@@ -108,6 +129,9 @@ class AlarmIndicatorInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmIndicatorUnit 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Duration 告警周期
+     * @param string $DurationUnit 告警周期单位
+     * @param integer $MaxTimes 周期内最多告警次数
      */
     function __construct()
     {
@@ -148,6 +172,18 @@ class AlarmIndicatorInfo extends AbstractModel
 
         if (array_key_exists("AlarmIndicatorUnit",$param) and $param["AlarmIndicatorUnit"] !== null) {
             $this->AlarmIndicatorUnit = $param["AlarmIndicatorUnit"];
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("DurationUnit",$param) and $param["DurationUnit"] !== null) {
+            $this->DurationUnit = $param["DurationUnit"];
+        }
+
+        if (array_key_exists("MaxTimes",$param) and $param["MaxTimes"] !== null) {
+            $this->MaxTimes = $param["MaxTimes"];
         }
     }
 }

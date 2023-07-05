@@ -54,6 +54,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeMerchantsResponse DescribeMerchants(Models\DescribeMerchantsRequest $req) 查询商户列表
  * @method Models\DescribeProductByIdResponse DescribeProductById(Models\DescribeProductByIdRequest $req) 查询商品信息
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 查询商品列表
+ * @method Models\DescribeRawScanLogsResponse DescribeRawScanLogs(Models\DescribeRawScanLogsRequest $req) 支持增量查询扫码日志，通常提供给数据同步使用，调用时需要指定从哪一行开始查询数据
  * @method Models\DescribeScanLogsResponse DescribeScanLogs(Models\DescribeScanLogsRequest $req) 查询扫码日志明细
  * @method Models\DescribeScanStatsResponse DescribeScanStats(Models\DescribeScanStatsRequest $req) 查询扫码的统计信息列表，支持按照商户ID，产品ID，批次ID，安心码筛选，筛选条件至少有一个
 没有被扫过的不会返回

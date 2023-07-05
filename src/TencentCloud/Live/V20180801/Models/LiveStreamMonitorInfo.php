@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowMonitorReport(integer $AllowMonitorReport) 设置是否存储监播事件到监播报告，以及是否允许查询监播报告
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAiFormatDiagnose() 获取是否开启格式诊断
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAiFormatDiagnose(integer $AiFormatDiagnose) 设置是否开启格式诊断
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamMonitorInfo extends AbstractModel
 {
@@ -216,6 +220,12 @@ class LiveStreamMonitorInfo extends AbstractModel
     public $AllowMonitorReport;
 
     /**
+     * @var integer 是否开启格式诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AiFormatDiagnose;
+
+    /**
      * @param string $MonitorId 监播任务ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MonitorName 监播任务名称。128字节以内。
@@ -255,6 +265,8 @@ class LiveStreamMonitorInfo extends AbstractModel
      * @param array $AiOcrInputIndexList 开启智能文字识别的输入Index列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AllowMonitorReport 是否存储监播事件到监播报告，以及是否允许查询监播报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AiFormatDiagnose 是否开启格式诊断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -347,6 +359,10 @@ class LiveStreamMonitorInfo extends AbstractModel
 
         if (array_key_exists("AllowMonitorReport",$param) and $param["AllowMonitorReport"] !== null) {
             $this->AllowMonitorReport = $param["AllowMonitorReport"];
+        }
+
+        if (array_key_exists("AiFormatDiagnose",$param) and $param["AiFormatDiagnose"] !== null) {
+            $this->AiFormatDiagnose = $param["AiFormatDiagnose"];
         }
     }
 }

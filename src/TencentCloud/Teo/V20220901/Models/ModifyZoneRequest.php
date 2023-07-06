@@ -24,14 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
  * @method string getType() 获取站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
  * @method void setType(string $Type) 设置站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。
- * @method VanityNameServers getVanityNameServers() 获取自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
- * @method void setVanityNameServers(VanityNameServers $VanityNameServers) 设置自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
+ * @method VanityNameServers getVanityNameServers() 获取自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
+ * @method void setVanityNameServers(VanityNameServers $VanityNameServers) 设置自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
  * @method string getAliasZoneName() 获取站点别名。数字、英文、-和_组合，限制20个字符。
  * @method void setAliasZoneName(string $AliasZoneName) 设置站点别名。数字、英文、-和_组合，限制20个字符。
+ * @method string getArea() 获取站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+ * @method void setArea(string $Area) 设置站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+ * @method string getZoneName() 获取站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
+ * @method void setZoneName(string $ZoneName) 设置站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
  */
 class ModifyZoneRequest extends AbstractModel
 {
@@ -43,12 +53,12 @@ class ModifyZoneRequest extends AbstractModel
     /**
      * @var string 站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
      */
     public $Type;
 
     /**
-     * @var VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+     * @var VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
      */
     public $VanityNameServers;
 
@@ -58,12 +68,30 @@ class ModifyZoneRequest extends AbstractModel
     public $AliasZoneName;
 
     /**
+     * @var string 站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+     */
+    public $Area;
+
+    /**
+     * @var string 站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
+     */
+    public $ZoneName;
+
+    /**
      * @param string $ZoneId 站点 ID。
      * @param string $Type 站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。
-     * @param VanityNameServers $VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
+     * @param VanityNameServers $VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
      * @param string $AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
+     * @param string $Area 站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+     * @param string $ZoneName 站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
      */
     function __construct()
     {
@@ -93,6 +121,14 @@ class ModifyZoneRequest extends AbstractModel
 
         if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
             $this->AliasZoneName = $param["AliasZoneName"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
         }
     }
 }

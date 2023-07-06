@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
- * @method string getRegistryType() 获取实例的规格
- * @method void setRegistryType(string $RegistryType) 设置实例的规格
+ * @method string getRegistryType() 获取实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium
+ * @method void setRegistryType(string $RegistryType) 设置实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium
+ * @method boolean getDeletionProtection() 获取实例删除保护，false为关闭
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置实例删除保护，false为关闭
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -33,13 +41,25 @@ class ModifyInstanceRequest extends AbstractModel
     public $RegistryId;
 
     /**
-     * @var string 实例的规格
+     * @var string 实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium
      */
     public $RegistryType;
 
     /**
+     * @var boolean 实例删除保护，false为关闭
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $RegistryId 实例ID
-     * @param string $RegistryType 实例的规格
+     * @param string $RegistryType 实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium
+     * @param boolean $DeletionProtection 实例删除保护，false为关闭
      */
     function __construct()
     {
@@ -60,6 +80,10 @@ class ModifyInstanceRequest extends AbstractModel
 
         if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
             $this->RegistryType = $param["RegistryType"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

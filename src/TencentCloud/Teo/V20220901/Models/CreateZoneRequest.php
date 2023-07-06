@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneName(string $ZoneName) 设置站点名称。
  * @method string getType() 获取接入方式，取值有：
 <li> full：NS接入；</li>
-<li> partial：CNAME接入，请先调用认证站点API（IdentifyZone）进行站点归属权校验，校验通过后继续调用本接口创建站点。</li>不填写使用默认值full。
+<li> partial：CNAME接入，请先调用认证站点API（IdentifyZone）进行站点归属权校验，校验通过后继续调用本接口创建站点；<li>noDomainAccess：无域名接入，取此值时仅Tags字段有效。</li>
+</li>不填写使用默认值full。
  * @method void setType(string $Type) 设置接入方式，取值有：
 <li> full：NS接入；</li>
-<li> partial：CNAME接入，请先调用认证站点API（IdentifyZone）进行站点归属权校验，校验通过后继续调用本接口创建站点。</li>不填写使用默认值full。
+<li> partial：CNAME接入，请先调用认证站点API（IdentifyZone）进行站点归属权校验，校验通过后继续调用本接口创建站点；<li>noDomainAccess：无域名接入，取此值时仅Tags字段有效。</li>
+</li>不填写使用默认值full。
  * @method boolean getJumpStart() 获取是否跳过站点现有的DNS记录扫描。默认值：false。
  * @method void setJumpStart(boolean $JumpStart) 设置是否跳过站点现有的DNS记录扫描。默认值：false。
  * @method array getTags() 获取资源标签。
@@ -51,7 +53,8 @@ class CreateZoneRequest extends AbstractModel
     /**
      * @var string 接入方式，取值有：
 <li> full：NS接入；</li>
-<li> partial：CNAME接入，请先调用认证站点API（IdentifyZone）进行站点归属权校验，校验通过后继续调用本接口创建站点。</li>不填写使用默认值full。
+<li> partial：CNAME接入，请先调用认证站点API（IdentifyZone）进行站点归属权校验，校验通过后继续调用本接口创建站点；<li>noDomainAccess：无域名接入，取此值时仅Tags字段有效。</li>
+</li>不填写使用默认值full。
      */
     public $Type;
 
@@ -81,7 +84,8 @@ class CreateZoneRequest extends AbstractModel
      * @param string $ZoneName 站点名称。
      * @param string $Type 接入方式，取值有：
 <li> full：NS接入；</li>
-<li> partial：CNAME接入，请先调用认证站点API（IdentifyZone）进行站点归属权校验，校验通过后继续调用本接口创建站点。</li>不填写使用默认值full。
+<li> partial：CNAME接入，请先调用认证站点API（IdentifyZone）进行站点归属权校验，校验通过后继续调用本接口创建站点；<li>noDomainAccess：无域名接入，取此值时仅Tags字段有效。</li>
+</li>不填写使用默认值full。
      * @param boolean $JumpStart 是否跳过站点现有的DNS记录扫描。默认值：false。
      * @param array $Tags 资源标签。
      * @param boolean $AllowDuplicates 是否允许重复接入。

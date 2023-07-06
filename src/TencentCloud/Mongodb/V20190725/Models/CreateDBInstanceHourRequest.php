@@ -102,24 +102,22 @@ use TencentCloud\Common\AbstractModel;
 - 不支持4.2及以上版本。
 - 不支持只读灾备实例。
 - 不能选择基础网络。
- * @method integer getMongosCpu() 获取Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
- * @method void setMongosCpu(integer $MongosCpu) 设置Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
- * @method integer getMongosMemory() 获取Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
- * @method void setMongosMemory(integer $MongosMemory) 设置Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
- * @method integer getMongosNodeNum() 获取Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
- * @method void setMongosNodeNum(integer $MongosNodeNum) 设置Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+ * @method integer getMongosCpu() 获取Mongos CPU 核数。购买分片集群时，必须填写。
+
+ * @method void setMongosCpu(integer $MongosCpu) 设置Mongos CPU 核数。购买分片集群时，必须填写。
+
+ * @method integer getMongosMemory() 获取Mongos 内存大小。购买分片集群时，必须填写。
+
+
+ * @method void setMongosMemory(integer $MongosMemory) 设置Mongos 内存大小。购买分片集群时，必须填写。
+
+
+ * @method integer getMongosNodeNum() 获取Mongos 数量。购买分片集群时，必须填写。
+
+
+ * @method void setMongosNodeNum(integer $MongosNodeNum) 设置Mongos 数量。购买分片集群时，必须填写。
+
+
  * @method integer getReadonlyNodeNum() 获取只读节点数量，最大不超过7个。
  * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) 设置只读节点数量，最大不超过7个。
  * @method array getReadonlyNodeAvailabilityZoneList() 获取指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
@@ -251,23 +249,22 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $AvailabilityZoneList;
 
     /**
-     * @var integer Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * @var integer Mongos CPU 核数。购买分片集群时，必须填写。
+
      */
     public $MongosCpu;
 
     /**
-     * @var integer Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * @var integer Mongos 内存大小。购买分片集群时，必须填写。
+
+
      */
     public $MongosMemory;
 
     /**
-     * @var integer Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * @var integer Mongos 数量。购买分片集群时，必须填写。
+
+
      */
     public $MongosNodeNum;
 
@@ -328,15 +325,14 @@ class CreateDBInstanceHourRequest extends AbstractModel
 - 不支持4.2及以上版本。
 - 不支持只读灾备实例。
 - 不能选择基础网络。
-     * @param integer $MongosCpu Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
-     * @param integer $MongosMemory Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
-     * @param integer $MongosNodeNum Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * @param integer $MongosCpu Mongos CPU 核数。购买分片集群时，必须填写。
+
+     * @param integer $MongosMemory Mongos 内存大小。购买分片集群时，必须填写。
+
+
+     * @param integer $MongosNodeNum Mongos 数量。购买分片集群时，必须填写。
+
+
      * @param integer $ReadonlyNodeNum 只读节点数量，最大不超过7个。
      * @param array $ReadonlyNodeAvailabilityZoneList 指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
      * @param string $HiddenZone Hidden节点所属可用区。跨可用区部署实例，必须配置该参数。

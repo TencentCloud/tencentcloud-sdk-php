@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccelerateMainland(AccelerateMainland $AccelerateMainland) 设置中国大陆加速优化配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method StandardDebug getStandardDebug() 获取标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStandardDebug(StandardDebug $StandardDebug) 设置标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneSetting extends AbstractModel
 {
@@ -244,6 +248,12 @@ class ZoneSetting extends AbstractModel
     public $AccelerateMainland;
 
     /**
+     * @var StandardDebug 标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StandardDebug;
+
+    /**
      * @param string $ZoneName 站点名称。
      * @param string $Area 站点加速区域信息，取值有：
 <li> mainland：中国境内加速；</li>
@@ -287,6 +297,8 @@ class ZoneSetting extends AbstractModel
      * @param ImageOptimize $ImageOptimize 图片优化相关配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AccelerateMainland $AccelerateMainland 中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StandardDebug $StandardDebug 标准 Debug 配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -408,6 +420,11 @@ class ZoneSetting extends AbstractModel
         if (array_key_exists("AccelerateMainland",$param) and $param["AccelerateMainland"] !== null) {
             $this->AccelerateMainland = new AccelerateMainland();
             $this->AccelerateMainland->deserialize($param["AccelerateMainland"]);
+        }
+
+        if (array_key_exists("StandardDebug",$param) and $param["StandardDebug"] !== null) {
+            $this->StandardDebug = new StandardDebug();
+            $this->StandardDebug->deserialize($param["StandardDebug"]);
         }
     }
 }

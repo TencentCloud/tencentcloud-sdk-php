@@ -60,6 +60,20 @@ use TencentCloud\Common\AbstractModel;
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
 <li>global：全球。</li>
+ * @method string getGroup() 获取资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroup(string $Group) 设置资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getZoneNumber() 获取当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneNumber(integer $ZoneNumber) 设置当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
@@ -124,6 +138,21 @@ class Resource extends AbstractModel
     public $Area;
 
     /**
+     * @var string 资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Group;
+
+    /**
+     * @var integer 当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneNumber;
+
+    /**
      * @param string $Id 资源 ID。
      * @param integer $PayMode 付费模式，取值有：
 <li>0：后付费。</li>
@@ -144,6 +173,13 @@ class Resource extends AbstractModel
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
 <li>global：全球。</li>
+     * @param string $Group 资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ZoneNumber 当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -201,6 +237,14 @@ class Resource extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Group",$param) and $param["Group"] !== null) {
+            $this->Group = $param["Group"];
+        }
+
+        if (array_key_exists("ZoneNumber",$param) and $param["ZoneNumber"] !== null) {
+            $this->ZoneNumber = $param["ZoneNumber"];
         }
     }
 }

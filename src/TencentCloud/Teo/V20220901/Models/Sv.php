@@ -24,6 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(string $Key) 设置询价参数键。
  * @method string getValue() 获取询价参数值。
  * @method void setValue(string $Value) 设置询价参数值。
+ * @method string getPack() 获取询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPack(string $Pack) 设置询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtectionSpecs() 获取询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtectionSpecs(string $ProtectionSpecs) 设置询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Sv extends AbstractModel
 {
@@ -38,8 +60,42 @@ class Sv extends AbstractModel
     public $Value;
 
     /**
+     * @var string 询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Pack;
+
+    /**
+     * @var string 询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtectionSpecs;
+
+    /**
      * @param string $Key 询价参数键。
      * @param string $Value 询价参数值。
+     * @param string $Pack 询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProtectionSpecs 询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +116,18 @@ class Sv extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Pack",$param) and $param["Pack"] !== null) {
+            $this->Pack = $param["Pack"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ProtectionSpecs",$param) and $param["ProtectionSpecs"] !== null) {
+            $this->ProtectionSpecs = $param["ProtectionSpecs"];
         }
     }
 }

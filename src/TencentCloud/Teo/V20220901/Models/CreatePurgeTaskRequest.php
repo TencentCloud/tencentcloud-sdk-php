@@ -20,42 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePurgeTask请求参数结构体
  *
- * @method string getZoneId() 获取站点ID。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
- * @method string getType() 获取清除缓存类型，取值有：
-<li>purge_url：URL；</li>
-<li>purge_prefix：前缀；</li>
-<li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存；</li>
-<li>purge_cache_tag：cache-tag刷新。</li>
- * @method void setType(string $Type) 设置清除缓存类型，取值有：
-<li>purge_url：URL；</li>
-<li>purge_prefix：前缀；</li>
-<li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存；</li>
-<li>purge_cache_tag：cache-tag刷新。</li>
- * @method array getTargets() 获取要清除缓存的资源列表，每个元素格式依据Type而定：
-1) Type = purge_host 时：
-形如：www.example.com 或 foo.bar.example.com。
-2) Type = purge_prefix 时：
-形如：http://www.example.com/example。
-3) Type = purge_url 时：
-形如：https://www.example.com/example.jpg。
-4）Type = purge_all 时：
-Targets可为空，不需要填写。
-5）Type = purge_cache_tag 时：
-形如：tag1。
- * @method void setTargets(array $Targets) 设置要清除缓存的资源列表，每个元素格式依据Type而定：
-1) Type = purge_host 时：
-形如：www.example.com 或 foo.bar.example.com。
-2) Type = purge_prefix 时：
-形如：http://www.example.com/example。
-3) Type = purge_url 时：
-形如：https://www.example.com/example.jpg。
-4）Type = purge_all 时：
-Targets可为空，不需要填写。
-5）Type = purge_cache_tag 时：
-形如：tag1。
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method string getType() 获取节点缓存清除类型，取值有：
+<li>purge_url：URL刷新；</li>
+<li>purge_prefix：目录刷新；</li>
+<li>purge_host：Hostname 刷新；</li>
+<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
+ * @method void setType(string $Type) 设置节点缓存清除类型，取值有：
+<li>purge_url：URL刷新；</li>
+<li>purge_prefix：目录刷新；</li>
+<li>purge_host：Hostname 刷新；</li>
+<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
+ * @method string getMethod() 获取节点缓存清除方法，仅对目录刷新类型有效，取值有：<li> invalidate：仅刷新目录下产生了更新的资源；</li><li> delete：无论目录下资源是否更新都刷新节点资源。</li>注意：使用目录刷新时，默认值： invalidate。
+ * @method void setMethod(string $Method) 设置节点缓存清除方法，仅对目录刷新类型有效，取值有：<li> invalidate：仅刷新目录下产生了更新的资源；</li><li> delete：无论目录下资源是否更新都刷新节点资源。</li>注意：使用目录刷新时，默认值： invalidate。
+ * @method array getTargets() 获取要清除缓存的资源列表。每个元素格式依据清除缓存类型而定，可参考接口示例。<li>EO 默认针对内容含有非 ASCII 字符集的字符进行转义，编码规则遵循 RFC3986；</li><li>单次提交的任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。</li>
+ * @method void setTargets(array $Targets) 设置要清除缓存的资源列表。每个元素格式依据清除缓存类型而定，可参考接口示例。<li>EO 默认针对内容含有非 ASCII 字符集的字符进行转义，编码规则遵循 RFC3986；</li><li>单次提交的任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。</li>
  * @method boolean getEncodeUrl() 获取若有编码转换，仅清除编码转换后匹配的资源。
 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
  * @method void setEncodeUrl(boolean $EncodeUrl) 设置若有编码转换，仅清除编码转换后匹配的资源。
@@ -64,60 +46,47 @@ Targets可为空，不需要填写。
 class CreatePurgeTaskRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID。
+     * @var string 站点 ID。
      */
     public $ZoneId;
 
     /**
-     * @var string 清除缓存类型，取值有：
-<li>purge_url：URL；</li>
-<li>purge_prefix：前缀；</li>
-<li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存；</li>
-<li>purge_cache_tag：cache-tag刷新。</li>
+     * @var string 节点缓存清除类型，取值有：
+<li>purge_url：URL刷新；</li>
+<li>purge_prefix：目录刷新；</li>
+<li>purge_host：Hostname 刷新；</li>
+<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
      */
     public $Type;
 
     /**
-     * @var array 要清除缓存的资源列表，每个元素格式依据Type而定：
-1) Type = purge_host 时：
-形如：www.example.com 或 foo.bar.example.com。
-2) Type = purge_prefix 时：
-形如：http://www.example.com/example。
-3) Type = purge_url 时：
-形如：https://www.example.com/example.jpg。
-4）Type = purge_all 时：
-Targets可为空，不需要填写。
-5）Type = purge_cache_tag 时：
-形如：tag1。
+     * @var string 节点缓存清除方法，仅对目录刷新类型有效，取值有：<li> invalidate：仅刷新目录下产生了更新的资源；</li><li> delete：无论目录下资源是否更新都刷新节点资源。</li>注意：使用目录刷新时，默认值： invalidate。
+     */
+    public $Method;
+
+    /**
+     * @var array 要清除缓存的资源列表。每个元素格式依据清除缓存类型而定，可参考接口示例。<li>EO 默认针对内容含有非 ASCII 字符集的字符进行转义，编码规则遵循 RFC3986；</li><li>单次提交的任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。</li>
      */
     public $Targets;
 
     /**
      * @var boolean 若有编码转换，仅清除编码转换后匹配的资源。
 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
+     * @deprecated
      */
     public $EncodeUrl;
 
     /**
-     * @param string $ZoneId 站点ID。
-     * @param string $Type 清除缓存类型，取值有：
-<li>purge_url：URL；</li>
-<li>purge_prefix：前缀；</li>
-<li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存；</li>
-<li>purge_cache_tag：cache-tag刷新。</li>
-     * @param array $Targets 要清除缓存的资源列表，每个元素格式依据Type而定：
-1) Type = purge_host 时：
-形如：www.example.com 或 foo.bar.example.com。
-2) Type = purge_prefix 时：
-形如：http://www.example.com/example。
-3) Type = purge_url 时：
-形如：https://www.example.com/example.jpg。
-4）Type = purge_all 时：
-Targets可为空，不需要填写。
-5）Type = purge_cache_tag 时：
-形如：tag1。
+     * @param string $ZoneId 站点 ID。
+     * @param string $Type 节点缓存清除类型，取值有：
+<li>purge_url：URL刷新；</li>
+<li>purge_prefix：目录刷新；</li>
+<li>purge_host：Hostname 刷新；</li>
+<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
+     * @param string $Method 节点缓存清除方法，仅对目录刷新类型有效，取值有：<li> invalidate：仅刷新目录下产生了更新的资源；</li><li> delete：无论目录下资源是否更新都刷新节点资源。</li>注意：使用目录刷新时，默认值： invalidate。
+     * @param array $Targets 要清除缓存的资源列表。每个元素格式依据清除缓存类型而定，可参考接口示例。<li>EO 默认针对内容含有非 ASCII 字符集的字符进行转义，编码规则遵循 RFC3986；</li><li>单次提交的任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。</li>
      * @param boolean $EncodeUrl 若有编码转换，仅清除编码转换后匹配的资源。
 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
      */
@@ -140,6 +109,10 @@ Targets可为空，不需要填写。
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
         }
 
         if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {

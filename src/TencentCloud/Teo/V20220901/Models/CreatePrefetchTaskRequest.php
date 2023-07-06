@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
  * @method array getTargets() 获取要预热的资源列表，每个元素格式类似如下:
 http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。
  * @method void setTargets(array $Targets) 设置要预热的资源列表，每个元素格式类似如下:
 http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。
  * @method boolean getEncodeUrl() 获取是否对url进行encode，若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
  * @method void setEncodeUrl(boolean $EncodeUrl) 设置是否对url进行encode，若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
  * @method array getHeaders() 获取附带的http头部信息。
@@ -41,6 +43,7 @@ class CreatePrefetchTaskRequest extends AbstractModel
     /**
      * @var array 要预热的资源列表，每个元素格式类似如下:
 http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。
      */
     public $Targets;
 
@@ -58,6 +61,7 @@ http://www.example.com/example.txt。
      * @param string $ZoneId 站点 ID。
      * @param array $Targets 要预热的资源列表，每个元素格式类似如下:
 http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。
      * @param boolean $EncodeUrl 是否对url进行encode，若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
      * @param array $Headers 附带的http头部信息。
      */

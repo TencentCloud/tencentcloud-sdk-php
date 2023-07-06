@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePurgeTask返回参数结构体
  *
- * @method string getJobId() 获取任务ID。
- * @method void setJobId(string $JobId) 设置任务ID。
+ * @method string getJobId() 获取任务 ID。
+ * @method void setJobId(string $JobId) 设置任务 ID。
  * @method array getFailedList() 获取失败的任务列表及原因。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedList(array $FailedList) 设置失败的任务列表及原因。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePurgeTaskResponse extends AbstractModel
 {
     /**
-     * @var string 任务ID。
+     * @var string 任务 ID。
      */
     public $JobId;
 
@@ -48,7 +48,7 @@ class CreatePurgeTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobId 任务ID。
+     * @param string $JobId 任务 ID。
      * @param array $FailedList 失败的任务列表及原因。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

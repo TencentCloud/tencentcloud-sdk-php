@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserStore返回参数结构体
  *
+ * @method string getUserStoreId() 获取用户目录ID
+ * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateUserStoreResponse extends AbstractModel
 {
     /**
+     * @var string 用户目录ID
+     */
+    public $UserStoreId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $UserStoreId 用户目录ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateUserStoreResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("UserStoreId",$param) and $param["UserStoreId"] !== null) {
+            $this->UserStoreId = $param["UserStoreId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

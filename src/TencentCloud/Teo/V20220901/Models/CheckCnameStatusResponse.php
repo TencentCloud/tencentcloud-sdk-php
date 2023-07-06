@@ -18,19 +18,19 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSpeedTestingMetricData返回参数结构体
+ * CheckCnameStatus返回参数结构体
  *
- * @method SpeedTestingMetricData getSpeedTestingMetricData() 获取站点拨测维度数据。
- * @method void setSpeedTestingMetricData(SpeedTestingMetricData $SpeedTestingMetricData) 设置站点拨测维度数据。
+ * @method array getCnameStatus() 获取域名Cname状态信息列表。
+ * @method void setCnameStatus(array $CnameStatus) 设置域名Cname状态信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSpeedTestingMetricDataResponse extends AbstractModel
+class CheckCnameStatusResponse extends AbstractModel
 {
     /**
-     * @var SpeedTestingMetricData 站点拨测维度数据。
+     * @var array 域名Cname状态信息列表。
      */
-    public $SpeedTestingMetricData;
+    public $CnameStatus;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeSpeedTestingMetricDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SpeedTestingMetricData $SpeedTestingMetricData 站点拨测维度数据。
+     * @param array $CnameStatus 域名Cname状态信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,13 @@ class DescribeSpeedTestingMetricDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SpeedTestingMetricData",$param) and $param["SpeedTestingMetricData"] !== null) {
-            $this->SpeedTestingMetricData = new SpeedTestingMetricData();
-            $this->SpeedTestingMetricData->deserialize($param["SpeedTestingMetricData"]);
+        if (array_key_exists("CnameStatus",$param) and $param["CnameStatus"] !== null) {
+            $this->CnameStatus = [];
+            foreach ($param["CnameStatus"] as $key => $value){
+                $obj = new CnameStatus();
+                $obj->deserialize($value);
+                array_push($this->CnameStatus, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

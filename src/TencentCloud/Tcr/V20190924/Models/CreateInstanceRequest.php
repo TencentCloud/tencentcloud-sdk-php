@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncTag(boolean $SyncTag) 设置是否同步TCR云标签至生成的COS Bucket
  * @method boolean getEnableCosMAZ() 获取是否开启Cos桶多AZ特性
  * @method void setEnableCosMAZ(boolean $EnableCosMAZ) 设置是否开启Cos桶多AZ特性
+ * @method boolean getDeletionProtection() 获取是否开启实例删除保护
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否开启实例删除保护
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateInstanceRequest extends AbstractModel
     public $EnableCosMAZ;
 
     /**
+     * @var boolean 是否开启实例删除保护
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $RegistryName 企业版实例名称
      * @param string $RegistryType 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
      * @param TagSpecification $TagSpecification 云标签描述
@@ -80,6 +87,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param RegistryChargePrepaid $RegistryChargePrepaid 预付费自动续费标识和购买时长
      * @param boolean $SyncTag 是否同步TCR云标签至生成的COS Bucket
      * @param boolean $EnableCosMAZ 是否开启Cos桶多AZ特性
+     * @param boolean $DeletionProtection 是否开启实例删除保护
      */
     function __construct()
     {
@@ -122,6 +130,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnableCosMAZ",$param) and $param["EnableCosMAZ"] !== null) {
             $this->EnableCosMAZ = $param["EnableCosMAZ"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

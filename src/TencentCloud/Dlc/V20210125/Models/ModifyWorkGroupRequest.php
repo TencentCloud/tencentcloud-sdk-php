@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWorkGroupId() 获取工作组Id
  * @method void setWorkGroupId(integer $WorkGroupId) 设置工作组Id
- * @method string getWorkGroupDescription() 获取工作组描述
- * @method void setWorkGroupDescription(string $WorkGroupDescription) 设置工作组描述
+ * @method string getWorkGroupDescription() 获取工作组描述，最大字符数限制50
+ * @method void setWorkGroupDescription(string $WorkGroupDescription) 设置工作组描述，最大字符数限制50
  */
 class ModifyWorkGroupRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyWorkGroupRequest extends AbstractModel
     public $WorkGroupId;
 
     /**
-     * @var string 工作组描述
+     * @var string 工作组描述，最大字符数限制50
      */
     public $WorkGroupDescription;
 
     /**
      * @param integer $WorkGroupId 工作组Id
-     * @param string $WorkGroupDescription 工作组描述
+     * @param string $WorkGroupDescription 工作组描述，最大字符数限制50
      */
     function __construct()
     {

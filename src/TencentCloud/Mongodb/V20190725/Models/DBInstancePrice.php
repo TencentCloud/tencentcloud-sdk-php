@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOriginalPrice() 获取原价
  * @method void setOriginalPrice(float $OriginalPrice) 设置原价
- * @method float getDiscountPrice() 获取折扣加
- * @method void setDiscountPrice(float $DiscountPrice) 设置折扣加
+ * @method float getDiscountPrice() 获取折扣价
+ * @method void setDiscountPrice(float $DiscountPrice) 设置折扣价
  */
 class DBInstancePrice extends AbstractModel
 {
@@ -43,7 +43,7 @@ class DBInstancePrice extends AbstractModel
     public $OriginalPrice;
 
     /**
-     * @var float 折扣加
+     * @var float 折扣价
      */
     public $DiscountPrice;
 
@@ -51,7 +51,7 @@ class DBInstancePrice extends AbstractModel
      * @param float $UnitPrice 单价
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OriginalPrice 原价
-     * @param float $DiscountPrice 折扣加
+     * @param float $DiscountPrice 折扣价
      */
     function __construct()
     {

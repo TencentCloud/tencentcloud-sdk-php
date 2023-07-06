@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserGroup返回参数结构体
  *
+ * @method string getUserGroupId() 获取用户组ID
+ * @method void setUserGroupId(string $UserGroupId) 设置用户组ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateUserGroupResponse extends AbstractModel
 {
     /**
+     * @var string 用户组ID
+     */
+    public $UserGroupId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $UserGroupId 用户组ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateUserGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("UserGroupId",$param) and $param["UserGroupId"] !== null) {
+            $this->UserGroupId = $param["UserGroupId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

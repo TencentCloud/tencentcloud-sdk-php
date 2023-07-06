@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
 不填写表示关闭。
  * @method void setImageOptimize(ImageOptimize $ImageOptimize) 设置图片优化配置。
 不填写表示关闭。
+ * @method StandardDebug getStandardDebug() 获取标准 Debug 配置。
+ * @method void setStandardDebug(StandardDebug $StandardDebug) 设置标准 Debug 配置。
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -221,6 +223,11 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $ImageOptimize;
 
     /**
+     * @var StandardDebug 标准 Debug 配置。
+     */
+    public $StandardDebug;
+
+    /**
      * @param string $ZoneId 待变更的站点 ID。
      * @param CacheConfig $CacheConfig 缓存过期时间配置。
 不填写表示保持原有配置。
@@ -260,6 +267,7 @@ class ModifyZoneSettingRequest extends AbstractModel
 不填写表示保持原有配置。
      * @param ImageOptimize $ImageOptimize 图片优化配置。
 不填写表示关闭。
+     * @param StandardDebug $StandardDebug 标准 Debug 配置。
      */
     function __construct()
     {
@@ -371,6 +379,11 @@ class ModifyZoneSettingRequest extends AbstractModel
         if (array_key_exists("ImageOptimize",$param) and $param["ImageOptimize"] !== null) {
             $this->ImageOptimize = new ImageOptimize();
             $this->ImageOptimize->deserialize($param["ImageOptimize"]);
+        }
+
+        if (array_key_exists("StandardDebug",$param) and $param["StandardDebug"] !== null) {
+            $this->StandardDebug = new StandardDebug();
+            $this->StandardDebug->deserialize($param["StandardDebug"]);
         }
     }
 }

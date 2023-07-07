@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowId() 获取签署流程编号
  * @method void setFlowId(string $FlowId) 设置签署流程编号
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method string getCancelMessage() 获取撤回原因，最大不超过200字符
  * @method void setCancelMessage(string $CancelMessage) 设置撤回原因，最大不超过200字符
  * @method integer getCancelMessageFormat() 获取撤销理由自定义格式；选项：
@@ -47,7 +47,7 @@ class ChannelCancelFlowRequest extends AbstractModel
     public $FlowId;
 
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -73,7 +73,7 @@ class ChannelCancelFlowRequest extends AbstractModel
 
     /**
      * @param string $FlowId 签署流程编号
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param string $CancelMessage 撤回原因，最大不超过200字符
      * @param integer $CancelMessageFormat 撤销理由自定义格式；选项：
 0 默认格式

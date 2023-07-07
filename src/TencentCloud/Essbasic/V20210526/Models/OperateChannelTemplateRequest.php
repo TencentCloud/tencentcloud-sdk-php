@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthTag(string $AuthTag) 设置模板可见性, 全部可见-"all", 部分可见-"part"
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
+ * @method integer getAvailable() 获取当OperateType=UPADATE时，可以通过设置此字段对模板启停用状态进行操作。若此字段值为0，则不会修改模板Available，1为启用模板，2为停用模板。
+启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
+ * @method void setAvailable(integer $Available) 设置当OperateType=UPADATE时，可以通过设置此字段对模板启停用状态进行操作。若此字段值为0，则不会修改模板Available，1为启用模板，2为停用模板。
+启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
  */
 class OperateChannelTemplateRequest extends AbstractModel
 {
@@ -67,12 +71,20 @@ class OperateChannelTemplateRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var integer 当OperateType=UPADATE时，可以通过设置此字段对模板启停用状态进行操作。若此字段值为0，则不会修改模板Available，1为启用模板，2为停用模板。
+启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
+     */
+    public $Available;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.AppId必填。
      * @param string $OperateType 操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
      * @param string $TemplateId 第三方应用平台模板库模板唯一标识
      * @param string $ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
      * @param string $AuthTag 模板可见性, 全部可见-"all", 部分可见-"part"
      * @param UserInfo $Operator 暂未开放
+     * @param integer $Available 当OperateType=UPADATE时，可以通过设置此字段对模板启停用状态进行操作。若此字段值为0，则不会修改模板Available，1为启用模板，2为停用模板。
+启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
      */
     function __construct()
     {
@@ -111,6 +123,10 @@ class OperateChannelTemplateRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
+            $this->Available = $param["Available"];
         }
     }
 }

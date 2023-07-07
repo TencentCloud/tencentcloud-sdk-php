@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
  * @method string getName() 获取节点池名称
  * @method void setName(string $Name) 设置节点池名称
+ * @method array getSecurityGroupIds() 获取安全组ID列表
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表
  * @method array getLabels() 获取虚拟节点label
  * @method void setLabels(array $Labels) 设置虚拟节点label
  * @method array getTaints() 获取虚拟节点taint
@@ -51,6 +53,11 @@ class ModifyClusterVirtualNodePoolRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var array 安全组ID列表
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @var array 虚拟节点label
      */
     public $Labels;
@@ -69,6 +76,7 @@ class ModifyClusterVirtualNodePoolRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
      * @param string $Name 节点池名称
+     * @param array $SecurityGroupIds 安全组ID列表
      * @param array $Labels 虚拟节点label
      * @param array $Taints 虚拟节点taint
      * @param boolean $DeletionProtection 删除保护开关
@@ -96,6 +104,10 @@ class ModifyClusterVirtualNodePoolRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {

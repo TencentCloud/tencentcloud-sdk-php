@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
  * @method void setPhone(string $Phone) 设置精确查询，IdSet、UserName为空时才生效。
 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+ * @method string getEmail() 获取邮箱，精确查询
+ * @method void setEmail(string $Email) 设置邮箱，精确查询
  * @method array getAuthorizedDeviceIdSet() 获取查询具有指定资产ID访问权限的用户
  * @method void setAuthorizedDeviceIdSet(array $AuthorizedDeviceIdSet) 设置查询具有指定资产ID访问权限的用户
  * @method array getAuthTypeSet() 获取认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
@@ -75,6 +77,11 @@ class DescribeUsersRequest extends AbstractModel
     public $Phone;
 
     /**
+     * @var string 邮箱，精确查询
+     */
+    public $Email;
+
+    /**
      * @var array 查询具有指定资产ID访问权限的用户
      */
     public $AuthorizedDeviceIdSet;
@@ -97,6 +104,7 @@ class DescribeUsersRequest extends AbstractModel
      * @param string $UserName 精确查询，IdSet为空时才生效
      * @param string $Phone 精确查询，IdSet、UserName为空时才生效。
 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * @param string $Email 邮箱，精确查询
      * @param array $AuthorizedDeviceIdSet 查询具有指定资产ID访问权限的用户
      * @param array $AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
      * @param string $DepartmentId 部门ID，用于过滤属于某个部门的用户
@@ -136,6 +144,10 @@ class DescribeUsersRequest extends AbstractModel
 
         if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
             $this->Phone = $param["Phone"];
+        }
+
+        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
+            $this->Email = $param["Email"];
         }
 
         if (array_key_exists("AuthorizedDeviceIdSet",$param) and $param["AuthorizedDeviceIdSet"] !== null) {

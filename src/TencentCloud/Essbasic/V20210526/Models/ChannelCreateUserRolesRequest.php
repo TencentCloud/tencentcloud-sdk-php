@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateUserRoles请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method array getRoleIds() 获取绑定角色的角色id列表
  * @method void setRoleIds(array $RoleIds) 设置绑定角色的角色id列表
  * @method array getUserIds() 获取电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreateUserRolesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -60,7 +60,7 @@ class ChannelCreateUserRolesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param array $RoleIds 绑定角色的角色id列表
      * @param array $UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
      * @param array $OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数

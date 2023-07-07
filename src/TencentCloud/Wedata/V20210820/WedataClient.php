@@ -88,6 +88,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 删除工作流
  * @method Models\DescribeAlarmEventsResponse DescribeAlarmEvents(Models\DescribeAlarmEventsRequest $req) 告警事件列表
  * @method Models\DescribeAlarmReceiverResponse DescribeAlarmReceiver(Models\DescribeAlarmReceiverRequest $req) 告警接收人详情
+ * @method Models\DescribeBatchOperateTaskResponse DescribeBatchOperateTask(Models\DescribeBatchOperateTaskRequest $req) 批量操作任务列表
  * @method Models\DescribeClusterNamespaceListResponse DescribeClusterNamespaceList(Models\DescribeClusterNamespaceListRequest $req) 获取集群命名空间列表
  * @method Models\DescribeDataBasesResponse DescribeDataBases(Models\DescribeDataBasesRequest $req) 查询数据来源列表
  * @method Models\DescribeDataCheckStatResponse DescribeDataCheckStat(Models\DescribeDataCheckStatRequest $req) 数据质量的概览页面数据监测情况接口

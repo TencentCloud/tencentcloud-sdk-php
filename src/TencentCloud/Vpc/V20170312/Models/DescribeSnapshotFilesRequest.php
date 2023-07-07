@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessType() 获取业务类型，目前支持安全组：securitygroup。
  * @method void setBusinessType(string $BusinessType) 设置业务类型，目前支持安全组：securitygroup。
- * @method string getInstanceId() 获取实例Id。
- * @method void setInstanceId(string $InstanceId) 设置实例Id。
+ * @method string getInstanceId() 获取业务实例Id，和BusinessType对应。
+ * @method void setInstanceId(string $InstanceId) 设置业务实例Id，和BusinessType对应。
  * @method string getStartDate() 获取开始日期，格式%Y-%m-%d %H:%M:%S。
  * @method void setStartDate(string $StartDate) 设置开始日期，格式%Y-%m-%d %H:%M:%S。
  * @method string getEndDate() 获取结束日期，格式%Y-%m-%d %H:%M:%S。
@@ -41,7 +41,7 @@ class DescribeSnapshotFilesRequest extends AbstractModel
     public $BusinessType;
 
     /**
-     * @var string 实例Id。
+     * @var string 业务实例Id，和BusinessType对应。
      */
     public $InstanceId;
 
@@ -67,7 +67,7 @@ class DescribeSnapshotFilesRequest extends AbstractModel
 
     /**
      * @param string $BusinessType 业务类型，目前支持安全组：securitygroup。
-     * @param string $InstanceId 实例Id。
+     * @param string $InstanceId 业务实例Id，和BusinessType对应。
      * @param string $StartDate 开始日期，格式%Y-%m-%d %H:%M:%S。
      * @param string $EndDate 结束日期，格式%Y-%m-%d %H:%M:%S。
      * @param integer $Offset 偏移量，默认为0。

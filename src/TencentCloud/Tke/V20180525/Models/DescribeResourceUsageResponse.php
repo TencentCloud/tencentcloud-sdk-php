@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCRDUsage(ResourceUsage $CRDUsage) 设置CRD使用量
  * @method integer getPodUsage() 获取Pod使用量
  * @method void setPodUsage(integer $PodUsage) 设置Pod使用量
+ * @method integer getRSUsage() 获取ReplicaSet使用量
+ * @method void setRSUsage(integer $RSUsage) 设置ReplicaSet使用量
  * @method integer getConfigMapUsage() 获取ConfigMap使用量
  * @method void setConfigMapUsage(integer $ConfigMapUsage) 设置ConfigMap使用量
  * @method ResourceUsage getOtherUsage() 获取其他资源使用量
@@ -44,6 +46,11 @@ class DescribeResourceUsageResponse extends AbstractModel
     public $PodUsage;
 
     /**
+     * @var integer ReplicaSet使用量
+     */
+    public $RSUsage;
+
+    /**
      * @var integer ConfigMap使用量
      */
     public $ConfigMapUsage;
@@ -61,6 +68,7 @@ class DescribeResourceUsageResponse extends AbstractModel
     /**
      * @param ResourceUsage $CRDUsage CRD使用量
      * @param integer $PodUsage Pod使用量
+     * @param integer $RSUsage ReplicaSet使用量
      * @param integer $ConfigMapUsage ConfigMap使用量
      * @param ResourceUsage $OtherUsage 其他资源使用量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -85,6 +93,10 @@ class DescribeResourceUsageResponse extends AbstractModel
 
         if (array_key_exists("PodUsage",$param) and $param["PodUsage"] !== null) {
             $this->PodUsage = $param["PodUsage"];
+        }
+
+        if (array_key_exists("RSUsage",$param) and $param["RSUsage"] !== null) {
+            $this->RSUsage = $param["RSUsage"];
         }
 
         if (array_key_exists("ConfigMapUsage",$param) and $param["ConfigMapUsage"] !== null) {

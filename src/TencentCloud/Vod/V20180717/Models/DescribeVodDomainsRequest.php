@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVodDomains请求参数结构体
  *
- * @method array getDomains() 获取域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+ * @method array getDomains() 获取域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li>
- * @method void setDomains(array $Domains) 设置域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+ * @method void setDomains(array $Domains) 设置域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li>
  * @method integer getLimit() 获取分页拉取的最大返回结果数。默认值：20。
  * @method void setLimit(integer $Limit) 设置分页拉取的最大返回结果数。默认值：20。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVodDomainsRequest extends AbstractModel
 {
     /**
-     * @var array 域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+     * @var array 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li>
      */
     public $Domains;
@@ -55,7 +55,7 @@ class DescribeVodDomainsRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param array $Domains 域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+     * @param array $Domains 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li>
      * @param integer $Limit 分页拉取的最大返回结果数。默认值：20。
      * @param integer $Offset 分页拉取的起始偏移量。默认值：0。

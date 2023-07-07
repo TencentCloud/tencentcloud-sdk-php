@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  * @method string getSubnetId() 获取子网实例ID。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID。
- * @method array getIpAddresses() 获取查询是否占用的ip列表
- * @method void setIpAddresses(array $IpAddresses) 设置查询是否占用的ip列表
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取请求对象个数。
- * @method void setLimit(integer $Limit) 设置请求对象个数。
+ * @method array getIpAddresses() 获取查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
+ * @method void setIpAddresses(array $IpAddresses) 设置查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  */
 class DescribeUsedIpAddressRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class DescribeUsedIpAddressRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var array 查询是否占用的ip列表
+     * @var array 查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
      */
     public $IpAddresses;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 请求对象个数。
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
     /**
      * @param string $VpcId VPC实例ID。
      * @param string $SubnetId 子网实例ID。
-     * @param array $IpAddresses 查询是否占用的ip列表
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 请求对象个数。
+     * @param array $IpAddresses 查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelGetTaskResultApi请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
  * @method string getTaskId() 获取任务Id，通过ChannelCreateConvertTaskApi接口获得
  * @method void setTaskId(string $TaskId) 设置任务Id，通过ChannelCreateConvertTaskApi接口获得
  * @method UserInfo getOperator() 获取操作者的信息，不用传
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ChannelGetTaskResultApiRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
      */
     public $Agent;
 
@@ -54,7 +54,7 @@ class ChannelGetTaskResultApiRequest extends AbstractModel
     public $Organization;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
      * @param string $TaskId 任务Id，通过ChannelCreateConvertTaskApi接口获得
      * @param UserInfo $Operator 操作者的信息，不用传
      * @param OrganizationInfo $Organization 暂未开放

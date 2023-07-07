@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PrepareFlows请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method array getFlowInfos() 获取多个合同（签署流程）信息，最大支持20个签署流程。
  * @method void setFlowInfos(array $FlowInfos) 设置多个合同（签署流程）信息，最大支持20个签署流程。
  * @method string getJumpUrl() 获取操作完成后的跳转地址，最大长度200
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class PrepareFlowsRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -53,7 +53,7 @@ class PrepareFlowsRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param array $FlowInfos 多个合同（签署流程）信息，最大支持20个签署流程。
      * @param string $JumpUrl 操作完成后的跳转地址，最大长度200
      * @param UserInfo $Operator 暂未开放

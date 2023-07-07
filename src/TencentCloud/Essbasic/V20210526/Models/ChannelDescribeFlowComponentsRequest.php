@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeFlowComponents请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method Agent getAgent() 获取应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
  * @method string getFlowId() 获取电子签流程的Id
  * @method void setFlowId(string $FlowId) 设置电子签流程的Id
  */
 class ChannelDescribeFlowComponentsRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息
+     * @var Agent 应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
     public $Agent;
 
@@ -38,7 +38,7 @@ class ChannelDescribeFlowComponentsRequest extends AbstractModel
     public $FlowId;
 
     /**
-     * @param Agent $Agent 应用相关信息
+     * @param Agent $Agent 应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      * @param string $FlowId 电子签流程的Id
      */
     function __construct()

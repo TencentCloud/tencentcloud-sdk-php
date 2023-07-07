@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
  * @method string getRealName() 获取用户姓名， 最大20个字符，不能包含空白字符
  * @method void setRealName(string $RealName) 设置用户姓名， 最大20个字符，不能包含空白字符
- * @method string getPhone() 获取手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
- * @method void setPhone(string $Phone) 设置手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
  * @method integer getId() 获取用户ID
  * @method void setId(integer $Id) 设置用户ID
+ * @method string getPhone() 获取手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+ * @method void setPhone(string $Phone) 设置手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
  * @method string getEmail() 获取电子邮件
  * @method void setEmail(string $Email) 设置电子邮件
  * @method string getValidateFrom() 获取用户生效时间，如:"2021-09-22T00:00:00+00:00"
@@ -66,14 +66,14 @@ class User extends AbstractModel
     public $RealName;
 
     /**
-     * @var string 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-     */
-    public $Phone;
-
-    /**
      * @var integer 用户ID
      */
     public $Id;
+
+    /**
+     * @var string 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     */
+    public $Phone;
 
     /**
      * @var string 电子邮件
@@ -122,8 +122,8 @@ class User extends AbstractModel
     /**
      * @param string $UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      * @param string $RealName 用户姓名， 最大20个字符，不能包含空白字符
-     * @param string $Phone 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
      * @param integer $Id 用户ID
+     * @param string $Phone 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
      * @param string $Email 电子邮件
      * @param string $ValidateFrom 用户生效时间，如:"2021-09-22T00:00:00+00:00"
 生效、失效时间不填则用户长期有效
@@ -158,12 +158,12 @@ class User extends AbstractModel
             $this->RealName = $param["RealName"];
         }
 
-        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
-            $this->Phone = $param["Phone"];
-        }
-
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
+            $this->Phone = $param["Phone"];
         }
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {

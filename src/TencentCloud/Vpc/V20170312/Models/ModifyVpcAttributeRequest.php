@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsServers(array $DnsServers) 设置DNS地址，最多支持4个，第1个默认为主，其余为备。
  * @method string getDomainName() 获取域名。
  * @method void setDomainName(string $DomainName) 设置域名。
+ * @method boolean getEnableCdcPublish() 获取发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
+ * @method void setEnableCdcPublish(boolean $EnableCdcPublish) 设置发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
  */
 class ModifyVpcAttributeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $DomainName;
 
     /**
+     * @var boolean 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
+     */
+    public $EnableCdcPublish;
+
+    /**
      * @param string $VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param string $VpcName 私有网络名称，可任意命名，但不得超过60个字符。
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 关闭。
      * @param array $DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备。
      * @param string $DomainName 域名。
+     * @param boolean $EnableCdcPublish 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyVpcAttributeRequest extends AbstractModel
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("EnableCdcPublish",$param) and $param["EnableCdcPublish"] !== null) {
+            $this->EnableCdcPublish = $param["EnableCdcPublish"];
         }
     }
 }

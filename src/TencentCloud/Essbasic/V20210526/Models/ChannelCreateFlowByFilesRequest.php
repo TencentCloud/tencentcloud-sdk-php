@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateFlowByFiles请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
  * @method string getFlowName() 获取签署流程名称，长度不超过200个字符
  * @method void setFlowName(string $FlowName) 设置签署流程名称，长度不超过200个字符
  * @method array getFlowApprovers() 获取签署流程签约方列表，最多不超过50个参与方
@@ -68,7 +68,7 @@ MobileCheck：手机号验证
 class ChannelCreateFlowByFilesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
      */
     public $Agent;
 
@@ -167,7 +167,7 @@ MobileCheck：手机号验证
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
      * @param string $FlowName 签署流程名称，长度不超过200个字符
      * @param array $FlowApprovers 签署流程签约方列表，最多不超过50个参与方
      * @param array $FileIds 签署文件资源Id列表，目前仅支持单个文件

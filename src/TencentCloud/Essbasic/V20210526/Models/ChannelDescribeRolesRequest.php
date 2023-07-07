@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeRoles请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method integer getOffset() 获取查询起始偏移，最大2000
  * @method void setOffset(integer $Offset) 设置查询起始偏移，最大2000
  * @method string getLimit() 获取查询数量，最大200
@@ -38,7 +38,7 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
 class ChannelDescribeRolesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -66,7 +66,7 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param integer $Offset 查询起始偏移，最大2000
      * @param string $Limit 查询数量，最大200
      * @param array $Filters 查询的关键字段:

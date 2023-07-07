@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSignUrls请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method array getFlowIds() 获取签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
  * @method void setFlowIds(array $FlowIds) 设置签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
  * @method string getFlowGroupId() 获取合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
@@ -62,7 +62,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 class CreateSignUrlsRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -134,7 +134,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param array $FlowIds 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
      * @param string $FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
      * @param string $Endpoint 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；

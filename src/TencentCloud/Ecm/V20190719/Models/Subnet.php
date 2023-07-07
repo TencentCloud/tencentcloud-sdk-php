@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getISPType() 获取运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setISPType(string $ISPType) 设置运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subnet extends AbstractModel
 {
@@ -175,6 +179,12 @@ class Subnet extends AbstractModel
     public $Region;
 
     /**
+     * @var string 运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ISPType;
+
+    /**
      * @param string $VpcId VPC实例ID。
      * @param string $SubnetId 子网实例ID，例如：subnet-bthucmmy。
      * @param string $SubnetName 子网名称。
@@ -199,6 +209,8 @@ class Subnet extends AbstractModel
      * @param string $VpcIpv6CidrBlock VPC的 IPv6 CIDR。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ISPType 运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +305,10 @@ class Subnet extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("ISPType",$param) and $param["ISPType"] !== null) {
+            $this->ISPType = $param["ISPType"];
         }
     }
 }

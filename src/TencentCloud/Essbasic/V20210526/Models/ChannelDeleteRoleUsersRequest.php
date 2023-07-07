@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDeleteRoleUsers请求参数结构体
  *
- * @method Agent getAgent() 获取代理信息
- * @method void setAgent(Agent $Agent) 设置代理信息
+ * @method Agent getAgent() 获取代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method void setAgent(Agent $Agent) 设置代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method string getRoleId() 获取角色Id（非超管或法人角色Id）
  * @method void setRoleId(string $RoleId) 设置角色Id（非超管或法人角色Id）
  * @method array getUserIds() 获取电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ChannelDeleteRoleUsersRequest extends AbstractModel
 {
     /**
-     * @var Agent 代理信息
+     * @var Agent 代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -60,7 +60,7 @@ class ChannelDeleteRoleUsersRequest extends AbstractModel
     public $OpenIds;
 
     /**
-     * @param Agent $Agent 代理信息
+     * @param Agent $Agent 代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param string $RoleId 角色Id（非超管或法人角色Id）
      * @param array $UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
      * @param UserInfo $Operator 操作人信息

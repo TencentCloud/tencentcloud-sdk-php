@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTranscodeDefinition(integer $TranscodeDefinition) 设置允许输出的转码模板 ID。
  * @method integer getImageSpriteDefinition() 获取允许输出的雪碧图模板 ID。
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) 设置允许输出的雪碧图模板 ID。
- * @method array getResolutionNames() 获取播放器对不于不同分辨率的子流展示名字。
- * @method void setResolutionNames(array $ResolutionNames) 设置播放器对不于不同分辨率的子流展示名字。
+ * @method array getResolutionNames() 获取播放器对于不同分辨率的子流展示名字。
+ * @method void setResolutionNames(array $ResolutionNames) 设置播放器对于不同分辨率的子流展示名字。
  * @method string getDomain() 获取播放时使用的域名。填 Default 表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
  * @method void setDomain(string $Domain) 设置播放时使用的域名。填 Default 表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
  * @method string getScheme() 获取播放时使用的 Scheme。取值范围：
@@ -109,7 +109,7 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
     public $ImageSpriteDefinition;
 
     /**
-     * @var array 播放器对不于不同分辨率的子流展示名字。
+     * @var array 播放器对于不同分辨率的子流展示名字。
      */
     public $ResolutionNames;
 
@@ -145,7 +145,7 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
      * @param DrmStreamingsInfoForUpdate $DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容。
      * @param integer $TranscodeDefinition 允许输出的转码模板 ID。
      * @param integer $ImageSpriteDefinition 允许输出的雪碧图模板 ID。
-     * @param array $ResolutionNames 播放器对不于不同分辨率的子流展示名字。
+     * @param array $ResolutionNames 播放器对于不同分辨率的子流展示名字。
      * @param string $Domain 播放时使用的域名。填 Default 表示使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的域名。
      * @param string $Scheme 播放时使用的 Scheme。取值范围：
 <li>Default：使用[默认分发配置](https://cloud.tencent.com/document/product/266/33373)中的 Scheme；</li>

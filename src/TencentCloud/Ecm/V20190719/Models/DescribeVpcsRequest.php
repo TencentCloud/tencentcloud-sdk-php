@@ -29,6 +29,8 @@ cidr-block - String - vpc的cidr，只支持单值的模糊查询。
 region - String - vpc的region。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
 tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+ipv6-cidr-block - String - 是否必填：否 - 按照IPv6 CIDR block进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商（如CMCC, CUCC, CTCC）进行过滤。
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定VpcIds和Filters。
 vpc-name - String - VPC实例名称，只支持单值的模糊查询。
 vpc-id - String - VPC实例ID形如：vpc-f49l6u0z。
@@ -36,6 +38,8 @@ cidr-block - String - vpc的cidr，只支持单值的模糊查询。
 region - String - vpc的region。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
 tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+ipv6-cidr-block - String - 是否必填：否 - 按照IPv6 CIDR block进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商（如CMCC, CUCC, CTCC）进行过滤。
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取返回数量
@@ -60,6 +64,8 @@ cidr-block - String - vpc的cidr，只支持单值的模糊查询。
 region - String - vpc的region。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
 tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+ipv6-cidr-block - String - 是否必填：否 - 按照IPv6 CIDR block进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商（如CMCC, CUCC, CTCC）进行过滤。
      */
     public $Filters;
 
@@ -92,6 +98,8 @@ cidr-block - String - vpc的cidr，只支持单值的模糊查询。
 region - String - vpc的region。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
 tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+ipv6-cidr-block - String - 是否必填：否 - 按照IPv6 CIDR block进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商（如CMCC, CUCC, CTCC）进行过滤。
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      * @param string $EcmRegion 地域

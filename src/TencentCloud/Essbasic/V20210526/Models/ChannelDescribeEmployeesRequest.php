@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() 获取返回最大数量，最大为20
  * @method void setLimit(integer $Limit) 设置返回最大数量，最大为20
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method array getFilters() 获取查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
 查询离职员工时，Key为Status，Values为["QuiteJob"]
@@ -43,7 +43,7 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -67,7 +67,7 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
 
     /**
      * @param integer $Limit 返回最大数量，最大为20
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param array $Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
 查询离职员工时，Key为Status，Values为["QuiteJob"]

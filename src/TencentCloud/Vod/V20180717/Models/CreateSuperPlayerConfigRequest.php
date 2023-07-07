@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 当 AudioVideoType 为 Transcode 时必填。
  * @method integer getImageSpriteDefinition() 获取允许输出的雪碧图模板 ID。
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) 设置允许输出的雪碧图模板 ID。
- * @method array getResolutionNames() 获取播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+ * @method array getResolutionNames() 获取播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>
@@ -72,7 +72,7 @@ use TencentCloud\Common\AbstractModel;
 <li>MinEdgeLength：1440，Name：2K；</li>
 <li>MinEdgeLength：2160，Name：4K；</li>
 <li>MinEdgeLength：4320，Name：8K。</li>
- * @method void setResolutionNames(array $ResolutionNames) 设置播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+ * @method void setResolutionNames(array $ResolutionNames) 设置播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>
@@ -148,7 +148,7 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
     public $ImageSpriteDefinition;
 
     /**
-     * @var array 播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+     * @var array 播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>
@@ -199,7 +199,7 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
 
 当 AudioVideoType 为 Transcode 时必填。
      * @param integer $ImageSpriteDefinition 允许输出的雪碧图模板 ID。
-     * @param array $ResolutionNames 播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+     * @param array $ResolutionNames 播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>

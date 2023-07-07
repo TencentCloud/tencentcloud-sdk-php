@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeResourceUrlsByFlows请求参数结构体
  *
  * @method Agent getAgent() 获取应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method array getFlowIds() 获取查询资源所对应的签署流程Id，最多支持50个
  * @method void setFlowIds(array $FlowIds) 设置查询资源所对应的签署流程Id，最多支持50个
  * @method UserInfo getOperator() 获取操作者的信息，不用传
@@ -33,7 +33,7 @@ class DescribeResourceUrlsByFlowsRequest extends AbstractModel
 {
     /**
      * @var Agent 应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -50,7 +50,7 @@ class DescribeResourceUrlsByFlowsRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param array $FlowIds 查询资源所对应的签署流程Id，最多支持50个
      * @param UserInfo $Operator 操作者的信息，不用传
      */

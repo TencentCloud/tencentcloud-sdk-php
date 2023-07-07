@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ChannelCreateMultiFlowSignQRCode请求参数结构体
  *
  * @method Agent getAgent() 获取应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method string getTemplateId() 获取模版ID
  * @method void setTemplateId(string $TemplateId) 设置模版ID
  * @method string getFlowName() 获取签署流程名称，最大长度200个字符。
@@ -51,7 +51,7 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
     /**
      * @var Agent 应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
 
@@ -106,7 +106,7 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param string $TemplateId 模版ID
      * @param string $FlowName 签署流程名称，最大长度200个字符。
      * @param integer $MaxFlowNum 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。

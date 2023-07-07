@@ -18,7 +18,7 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 私有网络(VPC)对象。
+ * 私有网络(VPC) 对象。
  *
  * @method string getVpcName() 获取VPC名称。
  * @method void setVpcName(string $VpcName) 设置VPC名称。
@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetCount(integer $SubnetCount) 设置包含子网数量
  * @method integer getInstanceCount() 获取包含实例数量
  * @method void setInstanceCount(integer $InstanceCount) 设置包含实例数量
+ * @method string getIpv6ISP() 获取ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6ISP(string $Ipv6ISP) 设置ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIpv6CidrBlockSet() 获取多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6CidrBlockSet(array $Ipv6CidrBlockSet) 设置多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcInfo extends AbstractModel
 {
@@ -159,6 +167,18 @@ class VpcInfo extends AbstractModel
     public $InstanceCount;
 
     /**
+     * @var string ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6ISP;
+
+    /**
+     * @var array 多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6CidrBlockSet;
+
+    /**
      * @param string $VpcName VPC名称。
      * @param string $VpcId VPC实例ID，例如：vpc-azd4dt1c。
      * @param string $CidrBlock VPC的IPv4 CIDR。
@@ -180,6 +200,10 @@ class VpcInfo extends AbstractModel
      * @param string $RegionName 地域中文名
      * @param integer $SubnetCount 包含子网数量
      * @param integer $InstanceCount 包含实例数量
+     * @param string $Ipv6ISP ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Ipv6CidrBlockSet 多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -274,6 +298,19 @@ class VpcInfo extends AbstractModel
 
         if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
             $this->InstanceCount = $param["InstanceCount"];
+        }
+
+        if (array_key_exists("Ipv6ISP",$param) and $param["Ipv6ISP"] !== null) {
+            $this->Ipv6ISP = $param["Ipv6ISP"];
+        }
+
+        if (array_key_exists("Ipv6CidrBlockSet",$param) and $param["Ipv6CidrBlockSet"] !== null) {
+            $this->Ipv6CidrBlockSet = [];
+            foreach ($param["Ipv6CidrBlockSet"] as $key => $value){
+                $obj = new ISPIPv6CidrBlock();
+                $obj->deserialize($value);
+                array_push($this->Ipv6CidrBlockSet, $obj);
+            }
         }
     }
 }

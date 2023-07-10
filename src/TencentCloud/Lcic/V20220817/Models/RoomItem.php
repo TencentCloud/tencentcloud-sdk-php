@@ -76,6 +76,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableDirectControl(integer $EnableDirectControl) 设置打开学生麦克风/摄像头的授权开关 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInteractionMode() 获取开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInteractionMode(integer $InteractionMode) 设置开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVideoOrientation() 获取横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoOrientation(integer $VideoOrientation) 设置横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomItem extends AbstractModel
 {
@@ -160,6 +168,18 @@ class RoomItem extends AbstractModel
     public $EnableDirectControl;
 
     /**
+     * @var integer 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InteractionMode;
+
+    /**
+     * @var integer 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoOrientation;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomId 房间ID
@@ -187,6 +207,10 @@ class RoomItem extends AbstractModel
      * @param integer $MaxMicNumber 最高房间内人数（包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InteractionMode 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -252,6 +276,14 @@ class RoomItem extends AbstractModel
 
         if (array_key_exists("EnableDirectControl",$param) and $param["EnableDirectControl"] !== null) {
             $this->EnableDirectControl = $param["EnableDirectControl"];
+        }
+
+        if (array_key_exists("InteractionMode",$param) and $param["InteractionMode"] !== null) {
+            $this->InteractionMode = $param["InteractionMode"];
+        }
+
+        if (array_key_exists("VideoOrientation",$param) and $param["VideoOrientation"] !== null) {
+            $this->VideoOrientation = $param["VideoOrientation"];
         }
     }
 }

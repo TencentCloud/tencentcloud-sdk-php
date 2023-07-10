@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置分页查询当前页数，从1开始递增
  * @method integer getLimit() 获取默认是10条
  * @method void setLimit(integer $Limit) 设置默认是10条
+ * @method array getStatus() 获取课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
+ * @method void setStatus(array $Status) 设置课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
  */
 class GetRoomsRequest extends AbstractModel
 {
@@ -62,12 +64,18 @@ class GetRoomsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
+     */
+    public $Status;
+
+    /**
      * @param integer $SdkAppId 低代码平台的SdkAppId。
 
      * @param integer $StartTime 开始时间。默认以当前时间减去半小时作为开始时间。
      * @param integer $EndTime 结束时间。默认以当前时间加上半小时作为结束时间。
      * @param integer $Page 分页查询当前页数，从1开始递增
      * @param integer $Limit 默认是10条
+     * @param array $Status 课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class GetRoomsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

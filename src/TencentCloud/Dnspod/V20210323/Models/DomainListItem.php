@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdatedOn(string $UpdatedOn) 设置域名更新时间
  * @method string getOwner() 获取域名所属账号
  * @method void setOwner(string $Owner) 设置域名所属账号
+ * @method array getTagList() 获取域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagList(array $TagList) 设置域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainListItem extends AbstractModel
 {
@@ -178,6 +182,12 @@ class DomainListItem extends AbstractModel
     public $Owner;
 
     /**
+     * @var array 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagList;
+
+    /**
      * @param integer $DomainId 系统分配给域名的唯一标识
      * @param string $Name 域名的原始格式
      * @param string $Status 域名的状态，正常：ENABLE，暂停：PAUSE，封禁：SPAM
@@ -200,6 +210,8 @@ class DomainListItem extends AbstractModel
      * @param string $CreatedOn 域名添加时间
      * @param string $UpdatedOn 域名更新时间
      * @param string $Owner 域名所属账号
+     * @param array $TagList 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -300,6 +312,15 @@ class DomainListItem extends AbstractModel
 
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = $param["Owner"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

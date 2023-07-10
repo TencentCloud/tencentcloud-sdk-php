@@ -76,6 +76,8 @@ SPAM：封禁
  * @method void setRecordCountEnd(integer $RecordCountEnd) 设置要获取域名的记录数查询区间终点。
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method array getTags() 获取标签过滤
+ * @method void setTags(array $Tags) 设置标签过滤
  */
 class DescribeDomainFilterListRequest extends AbstractModel
 {
@@ -168,6 +170,11 @@ SPAM：封禁
     public $ProjectId;
 
     /**
+     * @var array 标签过滤
+     */
+    public $Tags;
+
+    /**
      * @param string $Type 根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。
 ALL：全部
 MINE：我的域名
@@ -196,6 +203,7 @@ SPAM：封禁
      * @param integer $RecordCountBegin 要获取域名的记录数查询区间起点。
      * @param integer $RecordCountEnd 要获取域名的记录数查询区间终点。
      * @param integer $ProjectId 项目ID
+     * @param array $Tags 标签过滤
      */
     function __construct()
     {
@@ -268,6 +276,15 @@ SPAM：封禁
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItemFilter();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -24,14 +24,18 @@ use TencentCloud\Common\AbstractModel;
 如果有渠道权限，可以传 0 会查渠道下所有的企业
  * @method void setCorpId(integer $CorpId) 设置企业ID, 默认为当前企业
 如果有渠道权限，可以传 0 会查渠道下所有的企业
- * @method integer getPageSize() 获取分页数量，默认为 100，最大为 1000
- * @method void setPageSize(integer $PageSize) 设置分页数量，默认为 100，最大为 1000
+ * @method integer getPageSize() 获取分页数量，默认为 20，最大为 1000
+ * @method void setPageSize(integer $PageSize) 设置分页数量，默认为 20，最大为 1000
  * @method integer getPageNumber() 获取当前分页，默认为 1
  * @method void setPageNumber(integer $PageNumber) 设置当前分页，默认为 1
  * @method integer getAfterLogId() 获取从哪个日志后查询
 即: LogId > $AfterLogId
  * @method void setAfterLogId(integer $AfterLogId) 设置从哪个日志后查询
 即: LogId > $AfterLogId
+ * @method string getStartTime() 获取开始时间 >= StartTime
+ * @method void setStartTime(string $StartTime) 设置开始时间 >= StartTime
+ * @method string getEndTime() 获取结束时间 < EndTime
+ * @method void setEndTime(string $EndTime) 设置结束时间 < EndTime
  */
 class DescribeRawScanLogsRequest extends AbstractModel
 {
@@ -42,7 +46,7 @@ class DescribeRawScanLogsRequest extends AbstractModel
     public $CorpId;
 
     /**
-     * @var integer 分页数量，默认为 100，最大为 1000
+     * @var integer 分页数量，默认为 20，最大为 1000
      */
     public $PageSize;
 
@@ -58,12 +62,24 @@ class DescribeRawScanLogsRequest extends AbstractModel
     public $AfterLogId;
 
     /**
+     * @var string 开始时间 >= StartTime
+     */
+    public $StartTime;
+
+    /**
+     * @var string 结束时间 < EndTime
+     */
+    public $EndTime;
+
+    /**
      * @param integer $CorpId 企业ID, 默认为当前企业
 如果有渠道权限，可以传 0 会查渠道下所有的企业
-     * @param integer $PageSize 分页数量，默认为 100，最大为 1000
+     * @param integer $PageSize 分页数量，默认为 20，最大为 1000
      * @param integer $PageNumber 当前分页，默认为 1
      * @param integer $AfterLogId 从哪个日志后查询
 即: LogId > $AfterLogId
+     * @param string $StartTime 开始时间 >= StartTime
+     * @param string $EndTime 结束时间 < EndTime
      */
     function __construct()
     {
@@ -92,6 +108,14 @@ class DescribeRawScanLogsRequest extends AbstractModel
 
         if (array_key_exists("AfterLogId",$param) and $param["AfterLogId"] !== null) {
             $this->AfterLogId = $param["AfterLogId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

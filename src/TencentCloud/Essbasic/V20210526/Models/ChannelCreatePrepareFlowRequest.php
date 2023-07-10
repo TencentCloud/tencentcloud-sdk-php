@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowInfo(BaseFlowInfo $FlowInfo) 设置合同流程基础信息
  * @method array getFlowApproverList() 获取合同签署人信息
  * @method void setFlowApproverList(array $FlowApproverList) 设置合同签署人信息
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
- * @method CreateFlowOption getFlowOption() 获取合同流程配置信息
- * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息
+ * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+ * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化
+ * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化
  * @method string getFlowId() 获取通过flowid快速获得之前成功通过页面发起的合同生成链接
  * @method void setFlowId(string $FlowId) 设置通过flowid快速获得之前成功通过页面发起的合同生成链接
  * @method boolean getNeedPreview() 获取该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
@@ -64,12 +64,12 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $FlowApproverList;
 
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
     public $Agent;
 
     /**
-     * @var CreateFlowOption 合同流程配置信息
+     * @var CreateFlowOption 合同流程配置信息，用于配置发起合同时定制化
      */
     public $FlowOption;
 
@@ -80,6 +80,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 
     /**
      * @var boolean 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * @deprecated
      */
     public $NeedPreview;
 
@@ -100,8 +101,8 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
      * @param integer $ResourceType 资源类型，1：模板，目前仅支持模板，与ResourceId对应
      * @param BaseFlowInfo $FlowInfo 合同流程基础信息
      * @param array $FlowApproverList 合同签署人信息
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
-     * @param CreateFlowOption $FlowOption 合同流程配置信息
+     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+     * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化
      * @param string $FlowId 通过flowid快速获得之前成功通过页面发起的合同生成链接
      * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
      * @param OrganizationInfo $Organization 企业机构信息，不用传

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
  * @method string getIsMark() 获取是否星标域名，”yes”、”no” 分别代表是和否。
  * @method void setIsMark(string $IsMark) 设置是否星标域名，”yes”、”no” 分别代表是和否。
+ * @method boolean getTransferSubDomain() 获取添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+ * @method void setTransferSubDomain(boolean $TransferSubDomain) 设置添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+ * @method array getTags() 获取域名绑定的标签
+ * @method void setTags(array $Tags) 设置域名绑定的标签
  */
 class CreateDomainRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class CreateDomainRequest extends AbstractModel
     public $IsMark;
 
     /**
+     * @var boolean 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+     */
+    public $TransferSubDomain;
+
+    /**
+     * @var array 域名绑定的标签
+     */
+    public $Tags;
+
+    /**
      * @param string $Domain 域名
      * @param integer $GroupId 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
      * @param string $IsMark 是否星标域名，”yes”、”no” 分别代表是和否。
+     * @param boolean $TransferSubDomain 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+     * @param array $Tags 域名绑定的标签
      */
     function __construct()
     {
@@ -72,6 +88,19 @@ class CreateDomainRequest extends AbstractModel
 
         if (array_key_exists("IsMark",$param) and $param["IsMark"] !== null) {
             $this->IsMark = $param["IsMark"];
+        }
+
+        if (array_key_exists("TransferSubDomain",$param) and $param["TransferSubDomain"] !== null) {
+            $this->TransferSubDomain = $param["TransferSubDomain"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

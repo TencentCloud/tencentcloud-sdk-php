@@ -119,7 +119,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\GetPayRollAuthResponse GetPayRollAuth(Models\GetPayRollAuthRequest $req) 务工卡-查询授权关系
  * @method Models\GetPayRollAuthListResponse GetPayRollAuthList(Models\GetPayRollAuthListRequest $req) 务工卡-查询核身记录
  * @method Models\GetPayRollAuthResultResponse GetPayRollAuthResult(Models\GetPayRollAuthResultRequest $req) 务工卡-获取核身结果
- * @method Models\MigrateOrderRefundResponse MigrateOrderRefund(Models\MigrateOrderRefundRequest $req) 山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。
+ * @method Models\MigrateOrderRefundResponse MigrateOrderRefund(Models\MigrateOrderRefundRequest $req) 山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付账号。
  * @method Models\MigrateOrderRefundQueryResponse MigrateOrderRefundQuery(Models\MigrateOrderRefundQueryRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时。
  * @method Models\ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(Models\ModifyAgentTaxPaymentInfoRequest $req) 直播平台-修改代理商完税信息
  * @method Models\ModifyBindedAccountResponse ModifyBindedAccount(Models\ModifyBindedAccountRequest $req) 灵云-重新绑定账号

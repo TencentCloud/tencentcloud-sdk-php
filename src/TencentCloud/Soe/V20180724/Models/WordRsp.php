@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywordTag(integer $KeywordTag) 设置主题词命中标志，0表示没命中，1表示命中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Tone getTone() 获取声调检测结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTone(Tone $Tone) 设置声调检测结果
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WordRsp extends AbstractModel
 {
@@ -90,6 +94,12 @@ class WordRsp extends AbstractModel
     public $KeywordTag;
 
     /**
+     * @var Tone 声调检测结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tone;
+
+    /**
      * @param integer $MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      * @param integer $MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      * @param float $PronAccuracy 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
@@ -99,6 +109,8 @@ class WordRsp extends AbstractModel
      * @param array $PhoneInfos 音节评估详情
      * @param string $ReferenceWord 参考词，目前为保留字段。
      * @param integer $KeywordTag 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tone $Tone 声调检测结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +165,11 @@ class WordRsp extends AbstractModel
 
         if (array_key_exists("KeywordTag",$param) and $param["KeywordTag"] !== null) {
             $this->KeywordTag = $param["KeywordTag"];
+        }
+
+        if (array_key_exists("Tone",$param) and $param["Tone"] !== null) {
+            $this->Tone = new Tone();
+            $this->Tone->deserialize($param["Tone"]);
         }
     }
 }

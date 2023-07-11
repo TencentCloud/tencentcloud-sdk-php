@@ -44,13 +44,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleDownUtilizationThreshold(integer $ScaleDownUtilizationThreshold) 设置节点资源使用量低于多少(百分比)时认为空闲(默认: 50(百分比))
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSkipNodesWithLocalStorage() 获取含有本地存储Pod的节点是否不缩容(默认： FALSE)
+ * @method boolean getSkipNodesWithLocalStorage() 获取含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSkipNodesWithLocalStorage(boolean $SkipNodesWithLocalStorage) 设置含有本地存储Pod的节点是否不缩容(默认： FALSE)
+ * @method void setSkipNodesWithLocalStorage(boolean $SkipNodesWithLocalStorage) 设置含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getSkipNodesWithSystemPods() 获取含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+ * @method boolean getSkipNodesWithSystemPods() 获取含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSkipNodesWithSystemPods(boolean $SkipNodesWithSystemPods) 设置含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+ * @method void setSkipNodesWithSystemPods(boolean $SkipNodesWithSystemPods) 设置含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIgnoreDaemonSetsUtilization() 获取计算资源使用量时是否默认忽略DaemonSet的实例(默认值: False，不忽略)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,13 +112,13 @@ class ClusterAsGroupOption extends AbstractModel
     public $ScaleDownUtilizationThreshold;
 
     /**
-     * @var boolean 含有本地存储Pod的节点是否不缩容(默认： FALSE)
+     * @var boolean 含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkipNodesWithLocalStorage;
 
     /**
-     * @var boolean 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+     * @var boolean 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkipNodesWithSystemPods;
@@ -166,9 +166,9 @@ class ClusterAsGroupOption extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaleDownUtilizationThreshold 节点资源使用量低于多少(百分比)时认为空闲(默认: 50(百分比))
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SkipNodesWithLocalStorage 含有本地存储Pod的节点是否不缩容(默认： FALSE)
+     * @param boolean $SkipNodesWithLocalStorage 含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $SkipNodesWithSystemPods 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+     * @param boolean $SkipNodesWithSystemPods 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IgnoreDaemonSetsUtilization 计算资源使用量时是否默认忽略DaemonSet的实例(默认值: False，不忽略)
 注意：此字段可能返回 null，表示取不到有效值。

@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEstimatedInstanceWarmup(integer $EstimatedInstanceWarmup) 设置实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
  * @method boolean getDisableScaleIn() 获取是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
  * @method void setDisableScaleIn(boolean $DisableScaleIn) 设置是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
- * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+ * @method array getNotificationUserGroupIds() 获取此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
  */
 class ModifyScalingPolicyRequest extends AbstractModel
 {
@@ -98,8 +98,8 @@ class ModifyScalingPolicyRequest extends AbstractModel
     public $DisableScaleIn;
 
     /**
-     * @var array 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+     * @var array 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
      */
     public $NotificationUserGroupIds;
 
@@ -114,8 +114,8 @@ class ModifyScalingPolicyRequest extends AbstractModel
      * @param integer $TargetValue 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
      * @param integer $EstimatedInstanceWarmup 实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
      * @param boolean $DisableScaleIn 是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
-     * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+     * @param array $NotificationUserGroupIds 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
      */
     function __construct()
     {

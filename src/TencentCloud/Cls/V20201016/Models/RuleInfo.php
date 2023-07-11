@@ -33,8 +33,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTag(RuleTagInfo $Tag) 设置元字段索引配置，如果为空时代表未开启元字段索引
 注意：此字段可能返回 null，表示取不到有效值。
  * @method DynamicIndex getDynamicIndex() 获取动态索引配置，如果为空时代表未开启动态段索引
+
+注意：该功能尚处于内测阶段，如需使用请联系技术支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDynamicIndex(DynamicIndex $DynamicIndex) 设置动态索引配置，如果为空时代表未开启动态段索引
+
+注意：该功能尚处于内测阶段，如需使用请联系技术支持
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleInfo extends AbstractModel
@@ -59,6 +63,8 @@ class RuleInfo extends AbstractModel
 
     /**
      * @var DynamicIndex 动态索引配置，如果为空时代表未开启动态段索引
+
+注意：该功能尚处于内测阶段，如需使用请联系技术支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DynamicIndex;
@@ -71,6 +77,8 @@ class RuleInfo extends AbstractModel
      * @param RuleTagInfo $Tag 元字段索引配置，如果为空时代表未开启元字段索引
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicIndex $DynamicIndex 动态索引配置，如果为空时代表未开启动态段索引
+
+注意：该功能尚处于内测阶段，如需使用请联系技术支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

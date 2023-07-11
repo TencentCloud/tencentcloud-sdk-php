@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置词内容过滤
  * @method array getEvilTypeList() 获取违规类型列表过滤
  * @method void setEvilTypeList(array $EvilTypeList) 设置违规类型列表过滤
+ * @method array getSampleIDs() 获取样本词ID列表过滤
+ * @method void setSampleIDs(array $SampleIDs) 设置样本词ID列表过滤
  */
 class DescribeLibSamplesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeLibSamplesRequest extends AbstractModel
     public $EvilTypeList;
 
     /**
+     * @var array 样本词ID列表过滤
+     */
+    public $SampleIDs;
+
+    /**
      * @param integer $Limit 单页条数，最大为100条
      * @param integer $Offset 条数偏移量
      * @param string $LibID 词库ID
      * @param string $Content 词内容过滤
      * @param array $EvilTypeList 违规类型列表过滤
+     * @param array $SampleIDs 样本词ID列表过滤
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeLibSamplesRequest extends AbstractModel
 
         if (array_key_exists("EvilTypeList",$param) and $param["EvilTypeList"] !== null) {
             $this->EvilTypeList = $param["EvilTypeList"];
+        }
+
+        if (array_key_exists("SampleIDs",$param) and $param["SampleIDs"] !== null) {
+            $this->SampleIDs = $param["SampleIDs"];
         }
     }
 }

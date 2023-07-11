@@ -38,6 +38,8 @@ APP：第三方APP或小程序跳转电子签小程序的path。
 默认为HTTP类型
  * @method string getFlowId() 获取签署流程编号 (PathType=1时必传)
  * @method void setFlowId(string $FlowId) 设置签署流程编号 (PathType=1时必传)
+ * @method string getFlowGroupId() 获取合同组ID
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID
  * @method integer getPathType() 获取跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
  * @method void setPathType(integer $PathType) 设置跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
  * @method boolean getAutoJumpBack() 获取是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
@@ -81,6 +83,11 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     public $FlowId;
 
     /**
+     * @var string 合同组ID
+     */
+    public $FlowGroupId;
+
+    /**
      * @var integer 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
      */
     public $PathType;
@@ -105,6 +112,7 @@ HTTP：跳转电子签小程序的http_url，
 APP：第三方APP或小程序跳转电子签小程序的path。
 默认为HTTP类型
      * @param string $FlowId 签署流程编号 (PathType=1时必传)
+     * @param string $FlowGroupId 合同组ID
      * @param integer $PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
      * @param boolean $AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -145,6 +153,10 @@ APP：第三方APP或小程序跳转电子签小程序的path。
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
+            $this->FlowGroupId = $param["FlowGroupId"];
         }
 
         if (array_key_exists("PathType",$param) and $param["PathType"] !== null) {

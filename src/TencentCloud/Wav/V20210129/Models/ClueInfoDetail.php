@@ -144,6 +144,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShopName(string $ShopName) 设置经销商下级门店名称
  * @method string getPosition() 获取职位
  * @method void setPosition(string $Position) 设置职位
+ * @method string getCorpShopId() 获取自定义的门店id
+ * @method void setCorpShopId(string $CorpShopId) 设置自定义的门店id
  */
 class ClueInfoDetail extends AbstractModel
 {
@@ -410,6 +412,11 @@ class ClueInfoDetail extends AbstractModel
     public $Position;
 
     /**
+     * @var string 自定义的门店id
+     */
+    public $CorpShopId;
+
+    /**
      * @param string $ClueId 线索id，线索唯一识别编码
      * @param string $DealerId 接待客户经销商顾问所属经销商code
      * @param integer $EnquireTime 线索获取时间，用户添加企业微信时间，单位是秒
@@ -472,6 +479,7 @@ class ClueInfoDetail extends AbstractModel
      * @param integer $ShopId 经销商下级门店ID
      * @param string $ShopName 经销商下级门店名称
      * @param string $Position 职位
+     * @param string $CorpShopId 自定义的门店id
      */
     function __construct()
     {
@@ -684,6 +692,10 @@ class ClueInfoDetail extends AbstractModel
 
         if (array_key_exists("Position",$param) and $param["Position"] !== null) {
             $this->Position = $param["Position"];
+        }
+
+        if (array_key_exists("CorpShopId",$param) and $param["CorpShopId"] !== null) {
+            $this->CorpShopId = $param["CorpShopId"];
         }
     }
 }

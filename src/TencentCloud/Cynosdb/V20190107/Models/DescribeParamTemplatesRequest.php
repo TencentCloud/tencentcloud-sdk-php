@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEngineVersions() 获取数据库引擎版本号
  * @method void setEngineVersions(array $EngineVersions) 设置数据库引擎版本号
- * @method array getTemplateNames() 获取模版名称
- * @method void setTemplateNames(array $TemplateNames) 设置模版名称
- * @method array getTemplateIds() 获取模版ID
- * @method void setTemplateIds(array $TemplateIds) 设置模版ID
+ * @method array getTemplateNames() 获取模板名称
+ * @method void setTemplateNames(array $TemplateNames) 设置模板名称
+ * @method array getTemplateIds() 获取模板ID
+ * @method void setTemplateIds(array $TemplateIds) 设置模板ID
  * @method array getDbModes() 获取数据库类型，可选值：NORMAL，SERVERLESS
  * @method void setDbModes(array $DbModes) 设置数据库类型，可选值：NORMAL，SERVERLESS
  * @method integer getOffset() 获取查询偏移量
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置查询限制条数
  * @method array getProducts() 获取查询的模板对应的产品类型
  * @method void setProducts(array $Products) 设置查询的模板对应的产品类型
- * @method array getTemplateTypes() 获取模版类型
- * @method void setTemplateTypes(array $TemplateTypes) 设置模版类型
+ * @method array getTemplateTypes() 获取模板类型
+ * @method void setTemplateTypes(array $TemplateTypes) 设置模板类型
  * @method array getEngineTypes() 获取版本类型
  * @method void setEngineTypes(array $EngineTypes) 设置版本类型
  * @method string getOrderBy() 获取返回结果的排序字段
@@ -51,12 +51,12 @@ class DescribeParamTemplatesRequest extends AbstractModel
     public $EngineVersions;
 
     /**
-     * @var array 模版名称
+     * @var array 模板名称
      */
     public $TemplateNames;
 
     /**
-     * @var array 模版ID
+     * @var array 模板ID
      */
     public $TemplateIds;
 
@@ -81,7 +81,7 @@ class DescribeParamTemplatesRequest extends AbstractModel
     public $Products;
 
     /**
-     * @var array 模版类型
+     * @var array 模板类型
      */
     public $TemplateTypes;
 
@@ -102,13 +102,13 @@ class DescribeParamTemplatesRequest extends AbstractModel
 
     /**
      * @param array $EngineVersions 数据库引擎版本号
-     * @param array $TemplateNames 模版名称
-     * @param array $TemplateIds 模版ID
+     * @param array $TemplateNames 模板名称
+     * @param array $TemplateIds 模板ID
      * @param array $DbModes 数据库类型，可选值：NORMAL，SERVERLESS
      * @param integer $Offset 查询偏移量
      * @param integer $Limit 查询限制条数
      * @param array $Products 查询的模板对应的产品类型
-     * @param array $TemplateTypes 模版类型
+     * @param array $TemplateTypes 模板类型
      * @param array $EngineTypes 版本类型
      * @param string $OrderBy 返回结果的排序字段
      * @param string $OrderDirection 排序方式（asc、desc）

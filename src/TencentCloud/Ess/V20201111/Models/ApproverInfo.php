@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverName(string $ApproverName) 设置签署人的姓名
  * @method string getApproverMobile() 获取签署人的手机号，11位数字
  * @method void setApproverMobile(string $ApproverMobile) 设置签署人的手机号，11位数字
- * @method array getSignComponents() 获取签署人的签署控件列表
- * @method void setSignComponents(array $SignComponents) 设置签署人的签署控件列表
  * @method string getOrganizationName() 获取如果签署方是企业签署方，则为企业名
  * @method void setOrganizationName(string $OrganizationName) 设置如果签署方是企业签署方，则为企业名
+ * @method array getSignComponents() 获取签署人的签署控件列表
+ * @method void setSignComponents(array $SignComponents) 设置签署人的签署控件列表
  * @method string getApproverIdCardNumber() 获取签署人的身份证号
  * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署人的身份证号
  * @method string getApproverIdCardType() 获取签署人的身份证件类型 
@@ -101,14 +101,14 @@ class ApproverInfo extends AbstractModel
     public $ApproverMobile;
 
     /**
-     * @var array 签署人的签署控件列表
-     */
-    public $SignComponents;
-
-    /**
      * @var string 如果签署方是企业签署方，则为企业名
      */
     public $OrganizationName;
+
+    /**
+     * @var array 签署人的签署控件列表
+     */
+    public $SignComponents;
 
     /**
      * @var string 签署人的身份证号
@@ -190,8 +190,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
      * @param string $ApproverName 签署人的姓名
      * @param string $ApproverMobile 签署人的手机号，11位数字
-     * @param array $SignComponents 签署人的签署控件列表
      * @param string $OrganizationName 如果签署方是企业签署方，则为企业名
+     * @param array $SignComponents 签署人的签署控件列表
      * @param string $ApproverIdCardNumber 签署人的身份证号
      * @param string $ApproverIdCardType 签署人的身份证件类型 
 ID_CARD 身份证
@@ -238,6 +238,10 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
             $this->ApproverMobile = $param["ApproverMobile"];
         }
 
+        if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
+            $this->OrganizationName = $param["OrganizationName"];
+        }
+
         if (array_key_exists("SignComponents",$param) and $param["SignComponents"] !== null) {
             $this->SignComponents = [];
             foreach ($param["SignComponents"] as $key => $value){
@@ -245,10 +249,6 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
                 $obj->deserialize($value);
                 array_push($this->SignComponents, $obj);
             }
-        }
-
-        if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
-            $this->OrganizationName = $param["OrganizationName"];
         }
 
         if (array_key_exists("ApproverIdCardNumber",$param) and $param["ApproverIdCardNumber"] !== null) {

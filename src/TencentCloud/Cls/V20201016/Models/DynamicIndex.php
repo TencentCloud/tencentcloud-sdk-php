@@ -19,6 +19,8 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 动态更新索引配置
+
+注意：该功能尚处于内测阶段，如需使用请联系技术支持
  *
  * @method boolean getStatus() 获取动态索引配置开关
 注意：此字段可能返回 null，表示取不到有效值。

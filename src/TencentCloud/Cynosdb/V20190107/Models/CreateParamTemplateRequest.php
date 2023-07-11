@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateParamTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模版名称
- * @method void setTemplateName(string $TemplateName) 设置模版名称
+ * @method string getTemplateName() 获取模板名称
+ * @method void setTemplateName(string $TemplateName) 设置模板名称
  * @method string getEngineVersion() 获取mysql版本号
  * @method void setEngineVersion(string $EngineVersion) 设置mysql版本号
- * @method string getTemplateDescription() 获取模版描述
- * @method void setTemplateDescription(string $TemplateDescription) 设置模版描述
- * @method integer getTemplateId() 获取可选参数，需要复制的模版ID
- * @method void setTemplateId(integer $TemplateId) 设置可选参数，需要复制的模版ID
+ * @method string getTemplateDescription() 获取模板描述
+ * @method void setTemplateDescription(string $TemplateDescription) 设置模板描述
+ * @method integer getTemplateId() 获取可选参数，需要复制的模板ID
+ * @method void setTemplateId(integer $TemplateId) 设置可选参数，需要复制的模板ID
  * @method string getDbMode() 获取数据库类型，可选值：NORMAL（默认值），SERVERLESS
  * @method void setDbMode(string $DbMode) 设置数据库类型，可选值：NORMAL（默认值），SERVERLESS
  * @method array getParamList() 获取参数列表
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模版名称
+     * @var string 模板名称
      */
     public $TemplateName;
 
@@ -46,12 +46,12 @@ class CreateParamTemplateRequest extends AbstractModel
     public $EngineVersion;
 
     /**
-     * @var string 模版描述
+     * @var string 模板描述
      */
     public $TemplateDescription;
 
     /**
-     * @var integer 可选参数，需要复制的模版ID
+     * @var integer 可选参数，需要复制的模板ID
      */
     public $TemplateId;
 
@@ -66,10 +66,10 @@ class CreateParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param string $TemplateName 模版名称
+     * @param string $TemplateName 模板名称
      * @param string $EngineVersion mysql版本号
-     * @param string $TemplateDescription 模版描述
-     * @param integer $TemplateId 可选参数，需要复制的模版ID
+     * @param string $TemplateDescription 模板描述
+     * @param integer $TemplateId 可选参数，需要复制的模板ID
      * @param string $DbMode 数据库类型，可选值：NORMAL（默认值），SERVERLESS
      * @param array $ParamList 参数列表
      */

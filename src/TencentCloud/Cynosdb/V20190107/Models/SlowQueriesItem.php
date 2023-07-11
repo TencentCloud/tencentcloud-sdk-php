@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowsExamined(integer $RowsExamined) 设置扫描行数
  * @method integer getRowsSent() 获取返回行数
  * @method void setRowsSent(integer $RowsSent) 设置返回行数
- * @method string getSqlTemplate() 获取sql模版
- * @method void setSqlTemplate(string $SqlTemplate) 设置sql模版
+ * @method string getSqlTemplate() 获取sql模板
+ * @method void setSqlTemplate(string $SqlTemplate) 设置sql模板
  * @method string getSqlMd5() 获取sql语句md5
  * @method void setSqlMd5(string $SqlMd5) 设置sql语句md5
  */
@@ -91,7 +91,7 @@ class SlowQueriesItem extends AbstractModel
     public $RowsSent;
 
     /**
-     * @var string sql模版
+     * @var string sql模板
      */
     public $SqlTemplate;
 
@@ -110,7 +110,7 @@ class SlowQueriesItem extends AbstractModel
      * @param float $LockTime 锁时长，单位秒
      * @param integer $RowsExamined 扫描行数
      * @param integer $RowsSent 返回行数
-     * @param string $SqlTemplate sql模版
+     * @param string $SqlTemplate sql模板
      * @param string $SqlMd5 sql语句md5
      */
     function __construct()

@@ -20,22 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateDBInstances返回参数结构体
  *
- * @method integer getOriginalPrice() 获取未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
- * @method void setOriginalPrice(integer $OriginalPrice) 设置未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
- * @method integer getPrice() 获取实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
- * @method void setPrice(integer $Price) 设置实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
+ * @method integer getOriginalPrice() 获取未打折前价格，其值除以100表示最终的价格。
+InstanceChargeType=PREPAID时，单位是"每月"。
+InstanceChargeType=POSTPAID时，单位是"每小时"。
+例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+ * @method void setOriginalPrice(integer $OriginalPrice) 设置未打折前价格，其值除以100表示最终的价格。
+InstanceChargeType=PREPAID时，单位是"每月"。
+InstanceChargeType=POSTPAID时，单位是"每小时"。
+例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+ * @method integer getPrice() 获取实际需要支付的价格，其值除以100表示最终的价格。
+InstanceChargeType=PREPAID时，单位是"每月"。
+InstanceChargeType=POSTPAID时，单位是"每小时"。
+例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+ * @method void setPrice(integer $Price) 设置实际需要支付的价格，其值除以100表示最终的价格。
+InstanceChargeType=PREPAID时，单位是"每月"。
+InstanceChargeType=POSTPAID时，单位是"每小时"。
+例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class InquiryPriceCreateDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
+     * @var integer 未打折前价格，其值除以100表示最终的价格。
+InstanceChargeType=PREPAID时，单位是"每月"。
+InstanceChargeType=POSTPAID时，单位是"每小时"。
+例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
      */
     public $OriginalPrice;
 
     /**
-     * @var integer 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
+     * @var integer 实际需要支付的价格，其值除以100表示最终的价格。
+InstanceChargeType=PREPAID时，单位是"每月"。
+InstanceChargeType=POSTPAID时，单位是"每小时"。
+例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
      */
     public $Price;
 
@@ -45,8 +63,14 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice 未打折前价格，其值除以100表示多少钱。例如10010表示100.10元
-     * @param integer $Price 实际需要支付的价格，其值除以100表示多少钱。例如10010表示100.10元
+     * @param integer $OriginalPrice 未打折前价格，其值除以100表示最终的价格。
+InstanceChargeType=PREPAID时，单位是"每月"。
+InstanceChargeType=POSTPAID时，单位是"每小时"。
+例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
+     * @param integer $Price 实际需要支付的价格，其值除以100表示最终的价格。
+InstanceChargeType=PREPAID时，单位是"每月"。
+InstanceChargeType=POSTPAID时，单位是"每小时"。
+例如10010，在InstanceChargeType=PREPAID情况下，表示每月100.10元。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

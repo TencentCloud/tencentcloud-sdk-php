@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleIDs(array $SampleIDs) 设置添加成功的关键词ID列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSuccessInfos() 获取成功入库关键词列表
+ * @method void setSuccessInfos(array $SuccessInfos) 设置成功入库关键词列表
  * @method array getDupInfos() 获取重复关键词列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDupInfos(array $DupInfos) 设置重复关键词列表
@@ -42,6 +44,11 @@ class CreateKeywordsSamplesResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleIDs;
+
+    /**
+     * @var array 成功入库关键词列表
+     */
+    public $SuccessInfos;
 
     /**
      * @var array 重复关键词列表
@@ -63,6 +70,7 @@ class CreateKeywordsSamplesResponse extends AbstractModel
     /**
      * @param array $SampleIDs 添加成功的关键词ID列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SuccessInfos 成功入库关键词列表
      * @param array $DupInfos 重复关键词列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InvalidSamples 无效关键词列表
@@ -84,6 +92,15 @@ class CreateKeywordsSamplesResponse extends AbstractModel
         }
         if (array_key_exists("SampleIDs",$param) and $param["SampleIDs"] !== null) {
             $this->SampleIDs = $param["SampleIDs"];
+        }
+
+        if (array_key_exists("SuccessInfos",$param) and $param["SuccessInfos"] !== null) {
+            $this->SuccessInfos = [];
+            foreach ($param["SuccessInfos"] as $key => $value){
+                $obj = new UserKeywordInfo();
+                $obj->deserialize($value);
+                array_push($this->SuccessInfos, $obj);
+            }
         }
 
         if (array_key_exists("DupInfos",$param) and $param["DupInfos"] !== null) {

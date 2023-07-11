@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderSource(string $OrderSource) 设置订单来源，字符串长度范围为[0,64)
  * @method integer getDealMode() 获取交易模式 0-下单并支付 1-下单
  * @method void setDealMode(integer $DealMode) 设置交易模式 0-下单并支付 1-下单
- * @method integer getParamTemplateId() 获取参数模版ID
- * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模版ID
+ * @method integer getParamTemplateId() 获取参数模板ID
+ * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板ID
  * @method array getInstanceParams() 获取参数列表，ParamTemplateId 传入时InstanceParams才有效
  * @method void setInstanceParams(array $InstanceParams) 设置参数列表，ParamTemplateId 传入时InstanceParams才有效
  * @method array getSecurityGroupIds() 获取安全组ID，新建只读实例时可以指定安全组。
@@ -124,7 +124,7 @@ class AddInstancesRequest extends AbstractModel
     public $DealMode;
 
     /**
-     * @var integer 参数模版ID
+     * @var integer 参数模板ID
      */
     public $ParamTemplateId;
 
@@ -153,7 +153,7 @@ class AddInstancesRequest extends AbstractModel
 <li> MYSQL </li>
      * @param string $OrderSource 订单来源，字符串长度范围为[0,64)
      * @param integer $DealMode 交易模式 0-下单并支付 1-下单
-     * @param integer $ParamTemplateId 参数模版ID
+     * @param integer $ParamTemplateId 参数模板ID
      * @param array $InstanceParams 参数列表，ParamTemplateId 传入时InstanceParams才有效
      * @param array $SecurityGroupIds 安全组ID，新建只读实例时可以指定安全组。
      */

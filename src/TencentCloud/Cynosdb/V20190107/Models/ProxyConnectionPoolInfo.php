@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置是否开启了连接池
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConnectionPoolType() 获取连接池类型：SessionConnectionPool（会话级别连接池
+ * @method string getConnectionPoolType() 获取连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型：SessionConnectionPool（会话级别连接池
+ * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyConnectionPoolInfo extends AbstractModel
@@ -48,7 +48,7 @@ class ProxyConnectionPoolInfo extends AbstractModel
     public $OpenConnectionPool;
 
     /**
-     * @var string 连接池类型：SessionConnectionPool（会话级别连接池
+     * @var string 连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectionPoolType;
@@ -58,7 +58,7 @@ class ProxyConnectionPoolInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OpenConnectionPool 是否开启了连接池
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池
+     * @param string $ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

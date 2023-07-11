@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRebuildMediaTemplate请求参数结构体
  *
- * @method integer getDefinition() 获取音画质重生模板号。
- * @method void setDefinition(integer $Definition) 设置音画质重生模板号。
+ * @method integer getDefinition() 获取视频重生模板号。
+ * @method void setDefinition(integer $Definition) 设置视频重生模板号。
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  */
 class DeleteRebuildMediaTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 音画质重生模板号。
+     * @var integer 视频重生模板号。
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class DeleteRebuildMediaTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param integer $Definition 音画质重生模板号。
+     * @param integer $Definition 视频重生模板号。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     function __construct()

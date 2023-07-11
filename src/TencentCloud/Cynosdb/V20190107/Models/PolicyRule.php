@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAction() 获取策略，ACCEPT或者DROP
  * @method void setAction(string $Action) 设置策略，ACCEPT或者DROP
- * @method string getCidrIp() 获取来源Ip或Ip段，例如192.168.0.0/16
- * @method void setCidrIp(string $CidrIp) 设置来源Ip或Ip段，例如192.168.0.0/16
+ * @method string getCidrIp() 获取来源IP或IP段，例如192.168.0.0/16
+ * @method void setCidrIp(string $CidrIp) 设置来源IP或IP段，例如192.168.0.0/16
  * @method string getPortRange() 获取端口
  * @method void setPortRange(string $PortRange) 设置端口
  * @method string getIpProtocol() 获取网络协议，支持udp、tcp等
@@ -45,7 +45,7 @@ class PolicyRule extends AbstractModel
     public $Action;
 
     /**
-     * @var string 来源Ip或Ip段，例如192.168.0.0/16
+     * @var string 来源IP或IP段，例如192.168.0.0/16
      */
     public $CidrIp;
 
@@ -81,7 +81,7 @@ class PolicyRule extends AbstractModel
 
     /**
      * @param string $Action 策略，ACCEPT或者DROP
-     * @param string $CidrIp 来源Ip或Ip段，例如192.168.0.0/16
+     * @param string $CidrIp 来源IP或IP段，例如192.168.0.0/16
      * @param string $PortRange 端口
      * @param string $IpProtocol 网络协议，支持udp、tcp等
      * @param string $ServiceModule 协议端口ID或者协议端口组ID。

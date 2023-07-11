@@ -52,6 +52,11 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注意事项：该接口需要依赖“多文件上传”接口生成pdf资源编号（FileIds）进行使用。<br/>
  * @method Models\CreateFlowEvidenceReportResponse CreateFlowEvidenceReport(Models\CreateFlowEvidenceReportRequest $req) 创建出证报告，返回报告 ID。需要配合出证套餐才能调用。
 出证需要一定时间，建议调用创建出证24小时之后再通过DescribeFlowEvidenceReport进行查询。
+ * @method Models\CreateFlowGroupByFilesResponse CreateFlowGroupByFiles(Models\CreateFlowGroupByFilesRequest $req) 此接口（CreateFlowGroupByFiles）通过多文件创建合同组签署流程。<br/>
+PDF资源Id 通过上传文件接口获取
+此接口合同组中的子合同必须都是文件发起的合同
+ * @method Models\CreateFlowGroupByTemplatesResponse CreateFlowGroupByTemplates(Models\CreateFlowGroupByTemplatesRequest $req) 此接口（CreateFlowGroupByTemplates）通过多模板创建合同组签署流程。<br/>
+此接口合同组中的子合同必须都是模板发起的合同。 <br/>目前最大仅支持50个子合同
  * @method Models\CreateFlowRemindsResponse CreateFlowReminds(Models\CreateFlowRemindsRequest $req) 指定需要批量催办的签署流程Id，批量催办合同，最多100个; 接口失败后返回错误信息
 注意:
 该接口不可直接调用，请联系客户经理申请使用

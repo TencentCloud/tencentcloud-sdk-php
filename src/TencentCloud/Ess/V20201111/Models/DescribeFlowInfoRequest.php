@@ -20,24 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowInfo请求参数结构体
  *
- * @method array getFlowIds() 获取需要查询的流程ID列表，限制最大100个
- * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表，限制最大100个
  * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method array getFlowIds() 获取需要查询的流程ID列表，限制最大100个
+ * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表，限制最大100个
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method string getFlowGroupId() 获取合同组ID
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID
  */
 class DescribeFlowInfoRequest extends AbstractModel
 {
     /**
-     * @var array 需要查询的流程ID列表，限制最大100个
-     */
-    public $FlowIds;
-
-    /**
      * @var UserInfo 调用方用户信息，userId 必填
      */
     public $Operator;
+
+    /**
+     * @var array 需要查询的流程ID列表，限制最大100个
+     */
+    public $FlowIds;
 
     /**
      * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -45,9 +47,15 @@ class DescribeFlowInfoRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @param array $FlowIds 需要查询的流程ID列表，限制最大100个
+     * @var string 合同组ID
+     */
+    public $FlowGroupId;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param array $FlowIds 需要查询的流程ID列表，限制最大100个
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param string $FlowGroupId 合同组ID
      */
     function __construct()
     {
@@ -62,18 +70,22 @@ class DescribeFlowInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
-            $this->FlowIds = $param["FlowIds"];
-        }
-
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
         }
 
+        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
+            $this->FlowIds = $param["FlowIds"];
+        }
+
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
+            $this->FlowGroupId = $param["FlowGroupId"];
         }
     }
 }

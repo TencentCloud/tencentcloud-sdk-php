@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRoutePort(integer $GatewayRoutePort) 设置4层端口
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayRouteEnvId() 获取路由环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayRouteEnvId(string $GatewayRouteEnvId) 设置路由环境ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WxGatewayRountItem extends AbstractModel
 {
@@ -146,6 +150,12 @@ class WxGatewayRountItem extends AbstractModel
     public $GatewayRoutePort;
 
     /**
+     * @var string 路由环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayRouteEnvId;
+
+    /**
      * @param string $GatewayRouteName 安全网关路由名称
      * @param string $GatewayRouteProtocol 安全网关路由协议
      * @param string $GatewayRouteAddr 安全网关路由地址
@@ -167,6 +177,8 @@ class WxGatewayRountItem extends AbstractModel
      * @param string $GatewayRouteMethod 请求模式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GatewayRoutePort 4层端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayRouteEnvId 路由环境ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -241,6 +253,10 @@ class WxGatewayRountItem extends AbstractModel
 
         if (array_key_exists("GatewayRoutePort",$param) and $param["GatewayRoutePort"] !== null) {
             $this->GatewayRoutePort = $param["GatewayRoutePort"];
+        }
+
+        if (array_key_exists("GatewayRouteEnvId",$param) and $param["GatewayRouteEnvId"] !== null) {
+            $this->GatewayRouteEnvId = $param["GatewayRouteEnvId"];
         }
     }
 }

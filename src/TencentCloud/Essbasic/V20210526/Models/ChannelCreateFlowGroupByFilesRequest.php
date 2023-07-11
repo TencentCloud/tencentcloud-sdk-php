@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateFlowGroupByFiles请求参数结构体
  *
- * @method array getFlowFileInfos() 获取每个子合同的发起所需的信息，数量限制2-100
- * @method void setFlowFileInfos(array $FlowFileInfos) 设置每个子合同的发起所需的信息，数量限制2-100
+ * @method array getFlowFileInfos() 获取每个子合同的发起所需的信息，数量限制2-50
+ * @method void setFlowFileInfos(array $FlowFileInfos) 设置每个子合同的发起所需的信息，数量限制2-50
  * @method string getFlowGroupName() 获取合同组名称，长度不超过200个字符
  * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称，长度不超过200个字符
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
@@ -40,7 +40,7 @@ MobileCheck：手机号验证
 class ChannelCreateFlowGroupByFilesRequest extends AbstractModel
 {
     /**
-     * @var array 每个子合同的发起所需的信息，数量限制2-100
+     * @var array 每个子合同的发起所需的信息，数量限制2-50
      */
     public $FlowFileInfos;
 
@@ -69,7 +69,7 @@ MobileCheck：手机号验证
     public $Operator;
 
     /**
-     * @param array $FlowFileInfos 每个子合同的发起所需的信息，数量限制2-100
+     * @param array $FlowFileInfos 每个子合同的发起所需的信息，数量限制2-50
      * @param string $FlowGroupName 合同组名称，长度不超过200个字符
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param string $ApproverVerifyType 签署人校验方式

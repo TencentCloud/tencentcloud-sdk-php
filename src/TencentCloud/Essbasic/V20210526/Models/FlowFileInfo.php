@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerData(string $CustomerData) 设置第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  * @method boolean getUnordered() 获取合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
  * @method void setUnordered(boolean $Unordered) 设置合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+ * @method array getComponents() 获取签署文件中的发起方的填写控件，需要在发起的时候进行填充
+ * @method void setComponents(array $Components) 设置签署文件中的发起方的填写控件，需要在发起的时候进行填充
  * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method boolean getNeedSignReview() 获取本企业(发起方企业)是否需要签署审批
@@ -91,6 +93,11 @@ class FlowFileInfo extends AbstractModel
     public $Unordered;
 
     /**
+     * @var array 签署文件中的发起方的填写控件，需要在发起的时候进行填充
+     */
+    public $Components;
+
+    /**
      * @var string 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      */
     public $CustomShowMap;
@@ -110,6 +117,7 @@ class FlowFileInfo extends AbstractModel
      * @param string $CallbackUrl 签署流程回调地址，长度不超过255个字符
      * @param string $CustomerData 第三方应用的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      * @param boolean $Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+     * @param array $Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      * @param boolean $NeedSignReview 本企业(发起方企业)是否需要签署审批
      */
@@ -165,6 +173,15 @@ class FlowFileInfo extends AbstractModel
 
         if (array_key_exists("Unordered",$param) and $param["Unordered"] !== null) {
             $this->Unordered = $param["Unordered"];
+        }
+
+        if (array_key_exists("Components",$param) and $param["Components"] !== null) {
+            $this->Components = [];
+            foreach ($param["Components"] as $key => $value){
+                $obj = new Component();
+                $obj->deserialize($value);
+                array_push($this->Components, $obj);
+            }
         }
 
         if (array_key_exists("CustomShowMap",$param) and $param["CustomShowMap"] !== null) {

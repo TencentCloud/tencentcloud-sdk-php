@@ -20,15 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLibSamples请求参数结构体
  *
- * @method array getSampleIDs() 获取关键词ID
- * @method void setSampleIDs(array $SampleIDs) 设置关键词ID
+ * @method array getSampleIDs() 获取关键词ID列表
+ * @method void setSampleIDs(array $SampleIDs) 设置关键词ID列表
  * @method string getLibID() 获取词库ID
  * @method void setLibID(string $LibID) 设置词库ID
+ * @method array getSampleContents() 获取关键词内容列表
+ * @method void setSampleContents(array $SampleContents) 设置关键词内容列表
  */
 class DeleteLibSamplesRequest extends AbstractModel
 {
     /**
-     * @var array 关键词ID
+     * @var array 关键词ID列表
      */
     public $SampleIDs;
 
@@ -38,8 +40,14 @@ class DeleteLibSamplesRequest extends AbstractModel
     public $LibID;
 
     /**
-     * @param array $SampleIDs 关键词ID
+     * @var array 关键词内容列表
+     */
+    public $SampleContents;
+
+    /**
+     * @param array $SampleIDs 关键词ID列表
      * @param string $LibID 词库ID
+     * @param array $SampleContents 关键词内容列表
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteLibSamplesRequest extends AbstractModel
 
         if (array_key_exists("LibID",$param) and $param["LibID"] !== null) {
             $this->LibID = $param["LibID"];
+        }
+
+        if (array_key_exists("SampleContents",$param) and $param["SampleContents"] !== null) {
+            $this->SampleContents = $param["SampleContents"];
         }
     }
 }

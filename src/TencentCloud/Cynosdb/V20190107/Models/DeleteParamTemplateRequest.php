@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteParamTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取参数模版ID
- * @method void setTemplateId(integer $TemplateId) 设置参数模版ID
+ * @method integer getTemplateId() 获取参数模板ID
+ * @method void setTemplateId(integer $TemplateId) 设置参数模板ID
  */
 class DeleteParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 参数模版ID
+     * @var integer 参数模板ID
      */
     public $TemplateId;
 
     /**
-     * @param integer $TemplateId 参数模版ID
+     * @param integer $TemplateId 参数模板ID
      */
     function __construct()
     {

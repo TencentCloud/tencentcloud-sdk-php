@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFlowDetailInfos() 获取签署流程信息
  * @method void setFlowDetailInfos(array $FlowDetailInfos) 设置签署流程信息
+ * @method string getFlowGroupId() 获取合同组ID
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID
+ * @method string getFlowGroupName() 获取合同组名称
+ * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class DescribeFlowInfoResponse extends AbstractModel
     public $FlowDetailInfos;
 
     /**
+     * @var string 合同组ID
+     */
+    public $FlowGroupId;
+
+    /**
+     * @var string 合同组名称
+     */
+    public $FlowGroupName;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $FlowDetailInfos 签署流程信息
+     * @param string $FlowGroupId 合同组ID
+     * @param string $FlowGroupName 合同组名称
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +77,14 @@ class DescribeFlowInfoResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FlowDetailInfos, $obj);
             }
+        }
+
+        if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
+            $this->FlowGroupId = $param["FlowGroupId"];
+        }
+
+        if (array_key_exists("FlowGroupName",$param) and $param["FlowGroupName"] !== null) {
+            $this->FlowGroupName = $param["FlowGroupName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRebuildMediaTemplate返回参数结构体
  *
- * @method integer getDefinition() 获取音画质重生模板 ID。
- * @method void setDefinition(integer $Definition) 设置音画质重生模板 ID。
+ * @method integer getDefinition() 获取视频重生模板 ID。
+ * @method void setDefinition(integer $Definition) 设置视频重生模板 ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateRebuildMediaTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer 音画质重生模板 ID。
+     * @var integer 视频重生模板 ID。
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class CreateRebuildMediaTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition 音画质重生模板 ID。
+     * @param integer $Definition 视频重生模板 ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

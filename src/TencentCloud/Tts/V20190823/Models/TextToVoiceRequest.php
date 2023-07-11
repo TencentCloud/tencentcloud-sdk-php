@@ -38,8 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoiceType(integer $VoiceType) 设置音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
  * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
- * @method integer getSampleRate() 获取音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+ * @method integer getSampleRate() 获取音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li>
+ * @method void setSampleRate(integer $SampleRate) 设置音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li>
  * @method string getCodec() 获取返回音频格式，可取值：wav（默认），mp3，pcm
  * @method void setCodec(string $Codec) 设置返回音频格式，可取值：wav（默认），mp3，pcm
  * @method boolean getEnableSubtitle() 获取是否开启时间戳功能，默认为false。
@@ -95,7 +101,10 @@ class TextToVoiceRequest extends AbstractModel
     public $PrimaryLanguage;
 
     /**
-     * @var integer 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+     * @var integer 音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li>
      */
     public $SampleRate;
 
@@ -134,7 +143,10 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $ModelType 模型类型，1-默认模型。
      * @param integer $VoiceType 音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
      * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
-     * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+     * @param integer $SampleRate 音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li>
      * @param string $Codec 返回音频格式，可取值：wav（默认），mp3，pcm
      * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
      * @param integer $SegmentRate 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() 获取创建实例的可用区。
  * @method void setZone(string $Zone) 设置创建实例的可用区。
- * @method integer getInstanceCount() 获取在当前可用区欲创建的实例数目。
- * @method void setInstanceCount(integer $InstanceCount) 设置在当前可用区欲创建的实例数目。
+ * @method integer getInstanceCount() 获取在当前可用区创建的实例数目。
+ * @method void setInstanceCount(integer $InstanceCount) 设置在当前可用区创建的实例数目。
  * @method string getISP() 获取运营商如下：
 CTCC：中国电信
 CUCC：中国联通
@@ -51,7 +51,7 @@ class ZoneInstanceCountISP extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 在当前可用区欲创建的实例数目。
+     * @var integer 在当前可用区创建的实例数目。
      */
     public $InstanceCount;
 
@@ -86,7 +86,7 @@ CMCC：中国移动
 
     /**
      * @param string $Zone 创建实例的可用区。
-     * @param integer $InstanceCount 在当前可用区欲创建的实例数目。
+     * @param integer $InstanceCount 在当前可用区创建的实例数目。
      * @param string $ISP 运营商如下：
 CTCC：中国电信
 CUCC：中国联通

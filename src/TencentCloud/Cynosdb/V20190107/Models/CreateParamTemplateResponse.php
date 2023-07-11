@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateParamTemplate返回参数结构体
  *
- * @method integer getTemplateId() 获取模版ID
- * @method void setTemplateId(integer $TemplateId) 设置模版ID
+ * @method integer getTemplateId() 获取模板ID
+ * @method void setTemplateId(integer $TemplateId) 设置模板ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateParamTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer 模版ID
+     * @var integer 模板ID
      */
     public $TemplateId;
 
@@ -38,7 +38,7 @@ class CreateParamTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TemplateId 模版ID
+     * @param integer $TemplateId 模板ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

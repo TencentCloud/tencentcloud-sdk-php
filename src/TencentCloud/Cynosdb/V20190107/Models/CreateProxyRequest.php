@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型：SessionConnectionPool(会话级别连接池 )
  * @method string getOpenConnectionPool() 获取是否开启连接池,yes-开启，no-不开启
  * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置是否开启连接池,yes-开启，no-不开启
- * @method integer getConnectionPoolTimeOut() 获取连接池阀值：单位（秒）
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置连接池阀值：单位（秒）
+ * @method integer getConnectionPoolTimeOut() 获取连接池阈值：单位（秒）
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置连接池阈值：单位（秒）
  * @method array getSecurityGroupIds() 获取安全组ID数组
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID数组
  * @method string getDescription() 获取描述说明
@@ -88,7 +88,7 @@ class CreateProxyRequest extends AbstractModel
     public $OpenConnectionPool;
 
     /**
-     * @var integer 连接池阀值：单位（秒）
+     * @var integer 连接池阈值：单位（秒）
      */
     public $ConnectionPoolTimeOut;
 
@@ -116,7 +116,7 @@ class CreateProxyRequest extends AbstractModel
      * @param integer $ProxyCount 数据库代理组节点个数
      * @param string $ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
      * @param string $OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
-     * @param integer $ConnectionPoolTimeOut 连接池阀值：单位（秒）
+     * @param integer $ConnectionPoolTimeOut 连接池阈值：单位（秒）
      * @param array $SecurityGroupIds 安全组ID数组
      * @param string $Description 描述说明
      * @param array $ProxyZones 数据库节点信息

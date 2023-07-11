@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 安全网关版本路由信息限额配置
  *
  * @method string getLimitObject() 获取限额对象 "ConnectionsLimit" 或 "QPSLimit"
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimitObject(string $LimitObject) 设置限额对象 "ConnectionsLimit" 或 "QPSLimit"
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLimitConfig() 获取限额配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimitConfig(string $LimitConfig) 设置限额配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FrequencyLimitConfig extends AbstractModel
 {
     /**
      * @var string 限额对象 "ConnectionsLimit" 或 "QPSLimit"
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitObject;
 
     /**
      * @var string 限额配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitConfig;
 
     /**
      * @param string $LimitObject 限额对象 "ConnectionsLimit" 或 "QPSLimit"
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LimitConfig 限额配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

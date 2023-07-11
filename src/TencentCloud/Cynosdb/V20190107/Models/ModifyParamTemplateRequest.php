@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyParamTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模版ID
- * @method void setTemplateId(integer $TemplateId) 设置模版ID
- * @method string getTemplateName() 获取模版名
- * @method void setTemplateName(string $TemplateName) 设置模版名
- * @method string getTemplateDescription() 获取模版描述
- * @method void setTemplateDescription(string $TemplateDescription) 设置模版描述
+ * @method integer getTemplateId() 获取模板ID
+ * @method void setTemplateId(integer $TemplateId) 设置模板ID
+ * @method string getTemplateName() 获取模板名
+ * @method void setTemplateName(string $TemplateName) 设置模板名
+ * @method string getTemplateDescription() 获取模板描述
+ * @method void setTemplateDescription(string $TemplateDescription) 设置模板描述
  * @method array getParamList() 获取参数列表
  * @method void setParamList(array $ParamList) 设置参数列表
  */
 class ModifyParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模版ID
+     * @var integer 模板ID
      */
     public $TemplateId;
 
     /**
-     * @var string 模版名
+     * @var string 模板名
      */
     public $TemplateName;
 
     /**
-     * @var string 模版描述
+     * @var string 模板描述
      */
     public $TemplateDescription;
 
@@ -52,9 +52,9 @@ class ModifyParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param integer $TemplateId 模版ID
-     * @param string $TemplateName 模版名
-     * @param string $TemplateDescription 模版描述
+     * @param integer $TemplateId 模板ID
+     * @param string $TemplateName 模板名
+     * @param string $TemplateDescription 模板描述
      * @param array $ParamList 参数列表
      */
     function __construct()

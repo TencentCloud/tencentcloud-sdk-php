@@ -14,30 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRebuildMediaTemplates返回参数结构体
+ * DescribeTableLineage返回参数结构体
  *
- * @method integer getTotalCount() 获取符合过滤条件的记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的记录总数。
- * @method array getRebuildMediaTemplateSet() 获取视频重生模板详情列表。
- * @method void setRebuildMediaTemplateSet(array $RebuildMediaTemplateSet) 设置视频重生模板详情列表。
+ * @method TableLineageInfo getTableLineage() 获取表血缘信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableLineage(TableLineageInfo $TableLineage) 设置表血缘信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRebuildMediaTemplatesResponse extends AbstractModel
+class DescribeTableLineageResponse extends AbstractModel
 {
     /**
-     * @var integer 符合过滤条件的记录总数。
+     * @var TableLineageInfo 表血缘信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TotalCount;
-
-    /**
-     * @var array 视频重生模板详情列表。
-     */
-    public $RebuildMediaTemplateSet;
+    public $TableLineage;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +41,8 @@ class DescribeRebuildMediaTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合过滤条件的记录总数。
-     * @param array $RebuildMediaTemplateSet 视频重生模板详情列表。
+     * @param TableLineageInfo $TableLineage 表血缘信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +58,9 @@ class DescribeRebuildMediaTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("RebuildMediaTemplateSet",$param) and $param["RebuildMediaTemplateSet"] !== null) {
-            $this->RebuildMediaTemplateSet = [];
-            foreach ($param["RebuildMediaTemplateSet"] as $key => $value){
-                $obj = new RebuildMediaTemplate();
-                $obj->deserialize($value);
-                array_push($this->RebuildMediaTemplateSet, $obj);
-            }
+        if (array_key_exists("TableLineage",$param) and $param["TableLineage"] !== null) {
+            $this->TableLineage = new TableLineageInfo();
+            $this->TableLineage->deserialize($param["TableLineage"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

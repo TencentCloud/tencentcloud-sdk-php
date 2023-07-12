@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置端口
  * @method string getSourceID() 获取服务来源ID
  * @method void setSourceID(string $SourceID) 设置服务来源ID
- * @method string getNamespace() 获取名字空间
- * @method void setNamespace(string $Namespace) 设置名字空间
+ * @method string getNamespace() 获取命名空间
+ * @method void setNamespace(string $Namespace) 设置命名空间
  * @method string getServiceName() 获取服务（注册中心或Kubernetes中的服务）名字
  * @method void setServiceName(string $ServiceName) 设置服务（注册中心或Kubernetes中的服务）名字
  * @method array getTargets() 获取服务后端类型是IPList时提供
@@ -77,7 +77,7 @@ class KongUpstreamInfo extends AbstractModel
     public $SourceID;
 
     /**
-     * @var string 名字空间
+     * @var string 命名空间
      */
     public $Namespace;
 
@@ -160,7 +160,7 @@ class KongUpstreamInfo extends AbstractModel
      * @param string $Host IP或域名
      * @param integer $Port 端口
      * @param string $SourceID 服务来源ID
-     * @param string $Namespace 名字空间
+     * @param string $Namespace 命名空间
      * @param string $ServiceName 服务（注册中心或Kubernetes中的服务）名字
      * @param array $Targets 服务后端类型是IPList时提供
      * @param string $SourceType 服务来源类型

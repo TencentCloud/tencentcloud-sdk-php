@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRebuildMediaTemplate请求参数结构体
  *
- * @method integer getDefinition() 获取音画质重生模板号。
- * @method void setDefinition(integer $Definition) 设置音画质重生模板号。
+ * @method integer getDefinition() 获取视频重生模板号。
+ * @method void setDefinition(integer $Definition) 设置视频重生模板号。
  * @method string getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(string $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method string getName() 获取音画质重生模板名称。
- * @method void setName(string $Name) 设置音画质重生模板名称。
- * @method string getComment() 获取音画质重生模板描述。
- * @method void setComment(string $Comment) 设置音画质重生模板描述。
- * @method RebuildVideoInfo getRebuildVideoInfo() 获取音画质重生视频控制信息。
- * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) 设置音画质重生视频控制信息。
- * @method RebuildAudioInfo getRebuildAudioInfo() 获取音画质重生音频控制信息。
- * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) 设置音画质重生音频控制信息。
+ * @method string getName() 获取视频重生模板名称。
+ * @method void setName(string $Name) 设置视频重生模板名称。
+ * @method string getComment() 获取视频重生模板描述。
+ * @method void setComment(string $Comment) 设置视频重生模板描述。
+ * @method RebuildVideoInfo getRebuildVideoInfo() 获取视频重生视频控制信息。
+ * @method void setRebuildVideoInfo(RebuildVideoInfo $RebuildVideoInfo) 设置视频重生视频控制信息。
+ * @method RebuildAudioInfo getRebuildAudioInfo() 获取视频重生音频控制信息。
+ * @method void setRebuildAudioInfo(RebuildAudioInfo $RebuildAudioInfo) 设置视频重生音频控制信息。
  * @method RebuildMediaTargetVideoStream getTargetVideoInfo() 获取输出目标视频控制信息。
  * @method void setTargetVideoInfo(RebuildMediaTargetVideoStream $TargetVideoInfo) 设置输出目标视频控制信息。
  * @method RebuildMediaTargetAudioStream getTargetAudioInfo() 获取输出目标音频控制信息。
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRebuildMediaTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 音画质重生模板号。
+     * @var integer 视频重生模板号。
      */
     public $Definition;
 
@@ -64,22 +64,22 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string 音画质重生模板名称。
+     * @var string 视频重生模板名称。
      */
     public $Name;
 
     /**
-     * @var string 音画质重生模板描述。
+     * @var string 视频重生模板描述。
      */
     public $Comment;
 
     /**
-     * @var RebuildVideoInfo 音画质重生视频控制信息。
+     * @var RebuildVideoInfo 视频重生视频控制信息。
      */
     public $RebuildVideoInfo;
 
     /**
-     * @var RebuildAudioInfo 音画质重生音频控制信息。
+     * @var RebuildAudioInfo 视频重生音频控制信息。
      */
     public $RebuildAudioInfo;
 
@@ -113,12 +113,12 @@ class ModifyRebuildMediaTemplateRequest extends AbstractModel
     public $RemoveAudio;
 
     /**
-     * @param integer $Definition 音画质重生模板号。
+     * @param integer $Definition 视频重生模板号。
      * @param string $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-     * @param string $Name 音画质重生模板名称。
-     * @param string $Comment 音画质重生模板描述。
-     * @param RebuildVideoInfo $RebuildVideoInfo 音画质重生视频控制信息。
-     * @param RebuildAudioInfo $RebuildAudioInfo 音画质重生音频控制信息。
+     * @param string $Name 视频重生模板名称。
+     * @param string $Comment 视频重生模板描述。
+     * @param RebuildVideoInfo $RebuildVideoInfo 视频重生视频控制信息。
+     * @param RebuildAudioInfo $RebuildAudioInfo 视频重生音频控制信息。
      * @param RebuildMediaTargetVideoStream $TargetVideoInfo 输出目标视频控制信息。
      * @param RebuildMediaTargetAudioStream $TargetAudioInfo 输出目标音频控制信息。
      * @param string $Container 输出文件封装格式，可选值：mp4、flv、hls。

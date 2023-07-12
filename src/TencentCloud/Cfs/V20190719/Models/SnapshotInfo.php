@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotType(string $SnapshotType) 设置快照类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSnapshotTime() 获取实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSnapshotTime(string $SnapshotTime) 设置实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotInfo extends AbstractModel
 {
@@ -125,6 +129,12 @@ class SnapshotInfo extends AbstractModel
     public $SnapshotType;
 
     /**
+     * @var string 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SnapshotTime;
+
+    /**
      * @param string $CreationTime 创建快照时间
      * @param string $SnapshotName 快照名称
      * @param string $SnapshotId 快照ID
@@ -139,6 +149,8 @@ class SnapshotInfo extends AbstractModel
      * @param string $FsName 文件系统名称
      * @param array $Tags 快照标签
      * @param string $SnapshotType 快照类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SnapshotTime 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +225,10 @@ class SnapshotInfo extends AbstractModel
 
         if (array_key_exists("SnapshotType",$param) and $param["SnapshotType"] !== null) {
             $this->SnapshotType = $param["SnapshotType"];
+        }
+
+        if (array_key_exists("SnapshotTime",$param) and $param["SnapshotTime"] !== null) {
+            $this->SnapshotTime = $param["SnapshotTime"];
         }
     }
 }

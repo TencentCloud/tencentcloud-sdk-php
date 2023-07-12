@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRebuildMediaTemplates请求参数结构体
  *
- * @method array getDefinitions() 获取音画质重生模板列表。
- * @method void setDefinitions(array $Definitions) 设置音画质重生模板列表。
+ * @method array getDefinitions() 获取视频重生模板列表。
+ * @method void setDefinitions(array $Definitions) 设置视频重生模板列表。
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getType() 获取模板类型过滤条件，可选值：
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRebuildMediaTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 音画质重生模板列表。
+     * @var array 视频重生模板列表。
      */
     public $Definitions;
 
@@ -65,7 +65,7 @@ class DescribeRebuildMediaTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Definitions 音画质重生模板列表。
+     * @param array $Definitions 视频重生模板列表。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Type 模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>

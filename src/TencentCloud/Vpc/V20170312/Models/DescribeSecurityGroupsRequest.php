@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroups请求参数结构体
  *
- * @method array getSecurityGroupIds() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+ * @method array getSecurityGroupIds() 获取安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
 <li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目ID。</li>
@@ -38,11 +38,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量，默认为0。
  * @method string getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method string getOrderField() 获取排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+ * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+ * @method string getOrderDirection() 获取排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
  */
 class DescribeSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * @var array 安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      */
     public $SecurityGroupIds;
 
@@ -67,7 +71,17 @@ class DescribeSecurityGroupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * @var string 排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
+     */
+    public $OrderDirection;
+
+    /**
+     * @param array $SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
 <li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目ID。</li>
@@ -76,6 +90,8 @@ class DescribeSecurityGroupsRequest extends AbstractModel
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
      * @param string $Offset 偏移量，默认为0。
      * @param string $Limit 返回数量，默认为20，最大值为100。
+     * @param string $OrderField 排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
      */
     function __construct()
     {
@@ -109,6 +125,14 @@ class DescribeSecurityGroupsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

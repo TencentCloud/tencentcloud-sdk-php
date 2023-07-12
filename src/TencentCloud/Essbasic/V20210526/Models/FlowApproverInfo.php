@@ -100,6 +100,10 @@ HANDWRITE -手写签名
  * @method void setSignId(string $SignId) 设置签署ID
 - 发起流程时系统自动补充
 - 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+ * @method string getNotifyType() 获取SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效)
+ * @method void setNotifyType(string $NotifyType) 设置SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效)
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -224,6 +228,12 @@ HANDWRITE -手写签名
     public $SignId;
 
     /**
+     * @var string SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效)
+     */
+    public $NotifyType;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字符
      * @param string $IdCardType 签署人身份证件类型
 1.ID_CARD 居民身份证
@@ -259,6 +269,8 @@ HANDWRITE -手写签名
      * @param string $SignId 签署ID
 - 发起流程时系统自动补充
 - 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     * @param string $NotifyType SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效)
      */
     function __construct()
     {
@@ -361,6 +373,10 @@ HANDWRITE -手写签名
 
         if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
             $this->SignId = $param["SignId"];
+        }
+
+        if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
+            $this->NotifyType = $param["NotifyType"];
         }
     }
 }

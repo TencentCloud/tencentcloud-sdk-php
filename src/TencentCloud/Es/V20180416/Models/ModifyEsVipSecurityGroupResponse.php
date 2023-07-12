@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRebuildMediaTemplates返回参数结构体
+ * ModifyEsVipSecurityGroup返回参数结构体
  *
- * @method integer getTotalCount() 获取符合过滤条件的记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的记录总数。
- * @method array getRebuildMediaTemplateSet() 获取视频重生模板详情列表。
- * @method void setRebuildMediaTemplateSet(array $RebuildMediaTemplateSet) 设置视频重生模板详情列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRebuildMediaTemplatesResponse extends AbstractModel
+class ModifyEsVipSecurityGroupResponse extends AbstractModel
 {
-    /**
-     * @var integer 符合过滤条件的记录总数。
-     */
-    public $TotalCount;
-
-    /**
-     * @var array 视频重生模板详情列表。
-     */
-    public $RebuildMediaTemplateSet;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合过滤条件的记录总数。
-     * @param array $RebuildMediaTemplateSet 视频重生模板详情列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeRebuildMediaTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("RebuildMediaTemplateSet",$param) and $param["RebuildMediaTemplateSet"] !== null) {
-            $this->RebuildMediaTemplateSet = [];
-            foreach ($param["RebuildMediaTemplateSet"] as $key => $value){
-                $obj = new RebuildMediaTemplate();
-                $obj->deserialize($value);
-                array_push($this->RebuildMediaTemplateSet, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

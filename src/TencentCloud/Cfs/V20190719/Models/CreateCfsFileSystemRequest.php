@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCidrBlock(string $CidrBlock) 设置云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
  * @method integer getCapacity() 获取文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售40TiB，即40960 GiB；扩容步长20TiB，即20480 GiB。turbo性能型起售20TiB，即20480 GiB；扩容步长10TiB，10240 GiB。
  * @method void setCapacity(integer $Capacity) 设置文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售40TiB，即40960 GiB；扩容步长20TiB，即20480 GiB。turbo性能型起售20TiB，即20480 GiB；扩容步长10TiB，10240 GiB。
+ * @method string getSnapshotId() 获取文件系统快照ID
+ * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照ID
+ * @method string getAutoSnapshotPolicyId() 获取定期快照策略ID
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置定期快照策略ID
+ * @method boolean getEnableAutoScaleUp() 获取是否开启默认扩容，仅Turbo类型文件存储支持
+ * @method void setEnableAutoScaleUp(boolean $EnableAutoScaleUp) 设置是否开启默认扩容，仅Turbo类型文件存储支持
  */
 class CreateCfsFileSystemRequest extends AbstractModel
 {
@@ -122,6 +128,21 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $Capacity;
 
     /**
+     * @var string 文件系统快照ID
+     */
+    public $SnapshotId;
+
+    /**
+     * @var string 定期快照策略ID
+     */
+    public $AutoSnapshotPolicyId;
+
+    /**
+     * @var boolean 是否开启默认扩容，仅Turbo类型文件存储支持
+     */
+    public $EnableAutoScaleUp;
+
+    /**
      * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      * @param string $NetInterface 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
      * @param string $PGroupId 权限组 ID
@@ -136,6 +157,9 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @param string $CcnId 云联网ID， 若网络类型选择的是CCN，该字段为必填
      * @param string $CidrBlock 云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
      * @param integer $Capacity 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售40TiB，即40960 GiB；扩容步长20TiB，即20480 GiB。turbo性能型起售20TiB，即20480 GiB；扩容步长10TiB，10240 GiB。
+     * @param string $SnapshotId 文件系统快照ID
+     * @param string $AutoSnapshotPolicyId 定期快照策略ID
+     * @param boolean $EnableAutoScaleUp 是否开启默认扩容，仅Turbo类型文件存储支持
      */
     function __construct()
     {
@@ -209,6 +233,18 @@ class CreateCfsFileSystemRequest extends AbstractModel
 
         if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
             $this->Capacity = $param["Capacity"];
+        }
+
+        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
+            $this->SnapshotId = $param["SnapshotId"];
+        }
+
+        if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
+            $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        }
+
+        if (array_key_exists("EnableAutoScaleUp",$param) and $param["EnableAutoScaleUp"] !== null) {
+            $this->EnableAutoScaleUp = $param["EnableAutoScaleUp"];
         }
     }
 }

@@ -157,9 +157,15 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
  * @method string getToUrl() 获取完整目标 URL 地址。
 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
 
+使用该方式传入目标地址支持的协议有：
+rtmp、rtmps、rtsp、rtp、srt。
+
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
  * @method void setToUrl(string $ToUrl) 设置完整目标 URL 地址。
 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
+
+使用该方式传入目标地址支持的协议有：
+rtmp、rtmps、rtsp、rtp、srt。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
  * @method string getBackupSourceType() 获取备源的类型：
@@ -334,6 +340,9 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
      * @var string 完整目标 URL 地址。
 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
 
+使用该方式传入目标地址支持的协议有：
+rtmp、rtmps、rtsp、rtp、srt。
+
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
      */
     public $ToUrl;
@@ -447,6 +456,9 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
      * @param string $Comment 任务描述，限制 512 字节。
      * @param string $ToUrl 完整目标 URL 地址。
 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
+
+使用该方式传入目标地址支持的协议有：
+rtmp、rtmps、rtsp、rtp、srt。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
      * @param string $BackupSourceType 备源的类型：

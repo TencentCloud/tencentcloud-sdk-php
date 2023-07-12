@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPGroupId(string $PGroupId) 设置权限组 ID
  * @method string getName() 获取权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
  * @method void setName(string $Name) 设置权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
- * @method string getDescInfo() 获取权限组描述信息，1-255个字符
- * @method void setDescInfo(string $DescInfo) 设置权限组描述信息，1-255个字符
+ * @method string getDescInfo() 获取权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
+ * @method void setDescInfo(string $DescInfo) 设置权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
  */
 class UpdateCfsPGroupRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class UpdateCfsPGroupRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 权限组描述信息，1-255个字符
+     * @var string 权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
      */
     public $DescInfo;
 
     /**
      * @param string $PGroupId 权限组 ID
      * @param string $Name 权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
-     * @param string $DescInfo 权限组描述信息，1-255个字符
+     * @param string $DescInfo 权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
      */
     function __construct()
     {

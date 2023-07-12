@@ -38,14 +38,22 @@ REJECT: 拒绝
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method string getRecipientId() 获取审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
  * @method void setRecipientId(string $RecipientId) 设置审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
- * @method string getOperateType() 获取操作类型：
-操作类型，默认：SignReview；SignReview:签署审核
-注：接口通过该字段区分操作类型
+ * @method string getOperateType() 获取操作类型：（接口通过该字段区分操作类型）
+
+SignReview:签署审核
+CreateReview:发起审核
+
+默认：SignReview；SignReview:签署审核
+
 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
 若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
- * @method void setOperateType(string $OperateType) 设置操作类型：
-操作类型，默认：SignReview；SignReview:签署审核
-注：接口通过该字段区分操作类型
+ * @method void setOperateType(string $OperateType) 设置操作类型：（接口通过该字段区分操作类型）
+
+SignReview:签署审核
+CreateReview:发起审核
+
+默认：SignReview；SignReview:签署审核
+
 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
 若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
  */
@@ -85,9 +93,13 @@ REJECT: 拒绝
     public $RecipientId;
 
     /**
-     * @var string 操作类型：
-操作类型，默认：SignReview；SignReview:签署审核
-注：接口通过该字段区分操作类型
+     * @var string 操作类型：（接口通过该字段区分操作类型）
+
+SignReview:签署审核
+CreateReview:发起审核
+
+默认：SignReview；SignReview:签署审核
+
 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
 若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
      */
@@ -103,9 +115,13 @@ REJECT: 拒绝
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param string $RecipientId 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
-     * @param string $OperateType 操作类型：
-操作类型，默认：SignReview；SignReview:签署审核
-注：接口通过该字段区分操作类型
+     * @param string $OperateType 操作类型：（接口通过该字段区分操作类型）
+
+SignReview:签署审核
+CreateReview:发起审核
+
+默认：SignReview；SignReview:签署审核
+
 该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
 若发起个人审核，则指定该字段为：SignReview（注意，给个人审核时，需联系客户经理开白使用）
      */

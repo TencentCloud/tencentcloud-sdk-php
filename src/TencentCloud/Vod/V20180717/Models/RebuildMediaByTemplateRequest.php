@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() 获取媒体文件 ID。
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
- * @method integer getDefinition() 获取音画质重生模板 ID。
- * @method void setDefinition(integer $Definition) 设置音画质重生模板 ID。
+ * @method integer getDefinition() 获取视频重生模板 ID。
+ * @method void setDefinition(integer $Definition) 设置视频重生模板 ID。
  * @method string getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(string $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method float getStartTimeOffset() 获取起始偏移时间，单位：秒，不填表示从视频开始截取。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置起始偏移时间，单位：秒，不填表示从视频开始截取。
  * @method float getEndTimeOffset() 获取结束偏移时间，单位：秒，不填表示截取到视频末尾。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置结束偏移时间，单位：秒，不填表示截取到视频末尾。
- * @method RebuildMediaOutputConfig getOutputConfig() 获取音画质重生后的文件配置。
- * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) 设置音画质重生后的文件配置。
+ * @method RebuildMediaOutputConfig getOutputConfig() 获取视频重生后的文件配置。
+ * @method void setOutputConfig(RebuildMediaOutputConfig $OutputConfig) 设置视频重生后的文件配置。
  * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
@@ -49,7 +49,7 @@ class RebuildMediaByTemplateRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer 音画质重生模板 ID。
+     * @var integer 视频重生模板 ID。
      */
     public $Definition;
 
@@ -69,7 +69,7 @@ class RebuildMediaByTemplateRequest extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var RebuildMediaOutputConfig 音画质重生后的文件配置。
+     * @var RebuildMediaOutputConfig 视频重生后的文件配置。
      */
     public $OutputConfig;
 
@@ -95,11 +95,11 @@ class RebuildMediaByTemplateRequest extends AbstractModel
 
     /**
      * @param string $FileId 媒体文件 ID。
-     * @param integer $Definition 音画质重生模板 ID。
+     * @param integer $Definition 视频重生模板 ID。
      * @param string $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param float $StartTimeOffset 起始偏移时间，单位：秒，不填表示从视频开始截取。
      * @param float $EndTimeOffset 结束偏移时间，单位：秒，不填表示截取到视频末尾。
-     * @param RebuildMediaOutputConfig $OutputConfig 音画质重生后的文件配置。
+     * @param RebuildMediaOutputConfig $OutputConfig 视频重生后的文件配置。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。

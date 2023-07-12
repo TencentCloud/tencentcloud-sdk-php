@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RebuildMediaByTemplate返回参数结构体
  *
- * @method string getTaskId() 获取音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
- * @method void setTaskId(string $TaskId) 设置音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
+ * @method string getTaskId() 获取视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
+ * @method void setTaskId(string $TaskId) 设置视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class RebuildMediaByTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
+     * @var string 视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class RebuildMediaByTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
+     * @param string $TaskId 视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

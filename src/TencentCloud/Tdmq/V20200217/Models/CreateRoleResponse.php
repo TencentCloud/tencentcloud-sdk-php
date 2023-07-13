@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注说明
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEnvironmentRoleSets() 获取批量绑定名字空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) 设置批量绑定名字空间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,6 +54,12 @@ class CreateRoleResponse extends AbstractModel
     public $Remark;
 
     /**
+     * @var array 批量绑定名字空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnvironmentRoleSets;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -58,6 +68,8 @@ class CreateRoleResponse extends AbstractModel
      * @param string $RoleName 角色名称
      * @param string $Token 角色token
      * @param string $Remark 备注说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $EnvironmentRoleSets 批量绑定名字空间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -84,6 +96,15 @@ class CreateRoleResponse extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("EnvironmentRoleSets",$param) and $param["EnvironmentRoleSets"] !== null) {
+            $this->EnvironmentRoleSets = [];
+            foreach ($param["EnvironmentRoleSets"] as $key => $value){
+                $obj = new EnvironmentRoleSet();
+                $obj->deserialize($value);
+                array_push($this->EnvironmentRoleSets, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

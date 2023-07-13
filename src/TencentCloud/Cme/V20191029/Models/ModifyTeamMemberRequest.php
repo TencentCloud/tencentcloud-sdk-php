@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置成员角色，可取值有：
 <li>Admin：团队管理员；</li>
 <li>Member：普通成员。</li>
- * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
- * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
  */
 class ModifyTeamMemberRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class ModifyTeamMemberRequest extends AbstractModel
     public $Role;
 
     /**
-     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
      */
     public $Operator;
 
@@ -79,7 +79,7 @@ class ModifyTeamMemberRequest extends AbstractModel
      * @param string $Role 成员角色，可取值有：
 <li>Admin：团队管理员；</li>
 <li>Member：普通成员。</li>
-     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
      */
     function __construct()
     {

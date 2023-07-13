@@ -60,14 +60,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadImage(string $HeadImage) 设置人像照片Base64后的结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWarningCode() 获取多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+ * @method array getWarningCode() 获取多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警
- * @method void setWarningCode(array $WarningCode) 设置多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+ * @method void setWarningCode(array $WarningCode) 设置多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -142,10 +140,9 @@ class HKIDCardOCRResponse extends AbstractModel
     public $HeadImage;
 
     /**
-     * @var array 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+     * @var array 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警
      */
     public $WarningCode;
 
@@ -175,10 +172,9 @@ class HKIDCardOCRResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HeadImage 人像照片Base64后的结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $WarningCode 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+     * @param array $WarningCode 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

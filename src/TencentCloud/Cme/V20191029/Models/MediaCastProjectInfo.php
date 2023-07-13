@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlaySetting(MediaCastPlaySetting $PlaySetting) 设置播放参数。
  * @method string getStartTime() 获取项目启动时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setStartTime(string $StartTime) 设置项目启动时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getStopTime() 获取项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，改字段为空。
- * @method void setStopTime(string $StopTime) 设置项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，改字段为空。
+ * @method string getStopTime() 获取项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，该字段为空。
+ * @method void setStopTime(string $StopTime) 设置项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，该字段为空。
  */
 class MediaCastProjectInfo extends AbstractModel
 {
@@ -74,7 +74,7 @@ class MediaCastProjectInfo extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，改字段为空。
+     * @var string 项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，该字段为空。
      */
     public $StopTime;
 
@@ -87,7 +87,7 @@ class MediaCastProjectInfo extends AbstractModel
      * @param MediaCastOutputMediaSetting $OutputMediaSetting 输出媒体配置。
      * @param MediaCastPlaySetting $PlaySetting 播放参数。
      * @param string $StartTime 项目启动时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $StopTime 项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，改字段为空。
+     * @param string $StopTime 项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，该字段为空。
      */
     function __construct()
     {

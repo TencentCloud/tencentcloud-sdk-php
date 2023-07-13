@@ -44,6 +44,10 @@ CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentName(string $ComponentName) 设置控件的名字，跟ComponentId二选一，不能全为空
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLockComponentValue() 获取是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLockComponentValue(boolean $LockComponentValue) 设置是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FormField extends AbstractModel
 {
@@ -72,6 +76,12 @@ CreateFlowsByTemplates 接口不使用此字段。
     public $ComponentName;
 
     /**
+     * @var boolean 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LockComponentValue;
+
+    /**
      * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
@@ -83,6 +93,8 @@ DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
 CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentName 控件的名字，跟ComponentId二选一，不能全为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LockComponentValue 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -108,6 +120,10 @@ CreateFlowsByTemplates 接口不使用此字段。
 
         if (array_key_exists("ComponentName",$param) and $param["ComponentName"] !== null) {
             $this->ComponentName = $param["ComponentName"];
+        }
+
+        if (array_key_exists("LockComponentValue",$param) and $param["LockComponentValue"] !== null) {
+            $this->LockComponentValue = $param["LockComponentValue"];
         }
     }
 }

@@ -80,42 +80,6 @@ use TencentCloud\Common\AbstractModel;
 <li>包含所指定的头尾时间点。</li>
  * @method void setExpireTime(TimeRange $ExpireTime) 设置匹配过期时间在此时间段内的文件，无法检索到已过期文件。
 <li>包含所指定的头尾时间点。</li>
- * @method SortBy getSort() 获取排序方式。
-<li>Sort.Field 可选 CreateTime 。</li>
-<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
- * @method void setSort(SortBy $Sort) 设置排序方式。
-<li>Sort.Field 可选 CreateTime 。</li>
-<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
- * @method integer getOffset() 获取<div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
- * @method void setOffset(integer $Offset) 设置<div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
- * @method integer getLimit() 获取<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
- * @method void setLimit(integer $Limit) 设置<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
- * @method array getFilters() 获取指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-<li>basicInfo（视频基础信息）。</li>
-<li>metaData（视频元信息）。</li>
-<li>transcodeInfo（视频转码结果信息）。</li>
-<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-<li>imageSpriteInfo（视频雪碧图信息）。</li>
-<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-<li>sampleSnapshotInfo（采样截图信息）。</li>
-<li>keyFrameDescInfo（打点信息）。</li>
-<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li>
- * @method void setFilters(array $Filters) 设置指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-<li>basicInfo（视频基础信息）。</li>
-<li>metaData（视频元信息）。</li>
-<li>transcodeInfo（视频转码结果信息）。</li>
-<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-<li>imageSpriteInfo（视频雪碧图信息）。</li>
-<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-<li>sampleSnapshotInfo（采样截图信息）。</li>
-<li>keyFrameDescInfo（打点信息）。</li>
-<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li>
  * @method array getStorageRegions() 获取媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
 <li>单个存储地区长度限制：20个字符。</li>
 <li>数组长度限制：20。</li>
@@ -164,6 +128,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrtcRoomIds(array $TrtcRoomIds) 设置TRTC 房间 ID 集合。匹配集合中的任意元素。
 <li>单个房间 ID 长度限制：64个字符；</li>
 <li>数组长度限制：10。</li>
+ * @method array getFilters() 获取指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
+<li>basicInfo（视频基础信息）。</li>
+<li>metaData（视频元信息）。</li>
+<li>transcodeInfo（视频转码结果信息）。</li>
+<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
+<li>imageSpriteInfo（视频雪碧图信息）。</li>
+<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
+<li>sampleSnapshotInfo（采样截图信息）。</li>
+<li>keyFrameDescInfo（打点信息）。</li>
+<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
+<li>miniProgramReviewInfo（小程序审核信息）。</li>
+ * @method void setFilters(array $Filters) 设置指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
+<li>basicInfo（视频基础信息）。</li>
+<li>metaData（视频元信息）。</li>
+<li>transcodeInfo（视频转码结果信息）。</li>
+<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
+<li>imageSpriteInfo（视频雪碧图信息）。</li>
+<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
+<li>sampleSnapshotInfo（采样截图信息）。</li>
+<li>keyFrameDescInfo（打点信息）。</li>
+<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
+<li>miniProgramReviewInfo（小程序审核信息）。</li>
+ * @method SortBy getSort() 获取排序方式。
+<li>Sort.Field 可选 CreateTime 。</li>
+<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+ * @method void setSort(SortBy $Sort) 设置排序方式。
+<li>Sort.Field 可选 CreateTime 。</li>
+<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+ * @method integer getOffset() 获取<div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+ * @method void setOffset(integer $Offset) 设置<div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+ * @method integer getLimit() 获取<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+ * @method void setLimit(integer $Limit) 设置<div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
  * @method string getText() 获取（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
  * @method void setText(string $Text) 设置（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -282,40 +282,6 @@ class SearchMediaRequest extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var SortBy 排序方式。
-<li>Sort.Field 可选 CreateTime 。</li>
-<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
-     */
-    public $Sort;
-
-    /**
-     * @var integer <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
-     */
-    public $Offset;
-
-    /**
-     * @var integer <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
-     */
-    public $Limit;
-
-    /**
-     * @var array 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-<li>basicInfo（视频基础信息）。</li>
-<li>metaData（视频元信息）。</li>
-<li>transcodeInfo（视频转码结果信息）。</li>
-<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-<li>imageSpriteInfo（视频雪碧图信息）。</li>
-<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-<li>sampleSnapshotInfo（采样截图信息）。</li>
-<li>keyFrameDescInfo（打点信息）。</li>
-<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li>
-     */
-    public $Filters;
-
-    /**
      * @var array 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
 <li>单个存储地区长度限制：20个字符。</li>
 <li>数组长度限制：20。</li>
@@ -366,6 +332,40 @@ class SearchMediaRequest extends AbstractModel
 <li>数组长度限制：10。</li>
      */
     public $TrtcRoomIds;
+
+    /**
+     * @var array 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
+<li>basicInfo（视频基础信息）。</li>
+<li>metaData（视频元信息）。</li>
+<li>transcodeInfo（视频转码结果信息）。</li>
+<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
+<li>imageSpriteInfo（视频雪碧图信息）。</li>
+<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
+<li>sampleSnapshotInfo（采样截图信息）。</li>
+<li>keyFrameDescInfo（打点信息）。</li>
+<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
+<li>miniProgramReviewInfo（小程序审核信息）。</li>
+     */
+    public $Filters;
+
+    /**
+     * @var SortBy 排序方式。
+<li>Sort.Field 可选 CreateTime 。</li>
+<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+     */
+    public $Sort;
+
+    /**
+     * @var integer <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+     */
+    public $Offset;
+
+    /**
+     * @var integer <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+     */
+    public $Limit;
 
     /**
      * @var string （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -444,24 +444,6 @@ class SearchMediaRequest extends AbstractModel
 <li>包含所指定的头尾时间点。</li>
      * @param TimeRange $ExpireTime 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
 <li>包含所指定的头尾时间点。</li>
-     * @param SortBy $Sort 排序方式。
-<li>Sort.Field 可选 CreateTime 。</li>
-<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
-     * @param integer $Offset <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
-     * @param integer $Limit <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
-<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
-     * @param array $Filters 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
-<li>basicInfo（视频基础信息）。</li>
-<li>metaData（视频元信息）。</li>
-<li>transcodeInfo（视频转码结果信息）。</li>
-<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
-<li>imageSpriteInfo（视频雪碧图信息）。</li>
-<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
-<li>sampleSnapshotInfo（采样截图信息）。</li>
-<li>keyFrameDescInfo（打点信息）。</li>
-<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li>
      * @param array $StorageRegions 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
 <li>单个存储地区长度限制：20个字符。</li>
 <li>数组长度限制：20。</li>
@@ -486,6 +468,24 @@ class SearchMediaRequest extends AbstractModel
      * @param array $TrtcRoomIds TRTC 房间 ID 集合。匹配集合中的任意元素。
 <li>单个房间 ID 长度限制：64个字符；</li>
 <li>数组长度限制：10。</li>
+     * @param array $Filters 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
+<li>basicInfo（视频基础信息）。</li>
+<li>metaData（视频元信息）。</li>
+<li>transcodeInfo（视频转码结果信息）。</li>
+<li>animatedGraphicsInfo（视频转动图结果信息）。</li>
+<li>imageSpriteInfo（视频雪碧图信息）。</li>
+<li>snapshotByTimeOffsetInfo（视频指定时间点截图信息）。</li>
+<li>sampleSnapshotInfo（采样截图信息）。</li>
+<li>keyFrameDescInfo（打点信息）。</li>
+<li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
+<li>miniProgramReviewInfo（小程序审核信息）。</li>
+     * @param SortBy $Sort 排序方式。
+<li>Sort.Field 可选 CreateTime 。</li>
+<li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+     * @param integer $Offset <div id="p_offset">分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
+     * @param integer $Limit <div id="p_limit">分页返回的记录条数，默认值：10。将返回第 Offset 到第 Offset+Limit-1 条。
+<li>取值范围：Offset + Limit 不超过5000。（参见：<a href="#maxResultsDesc">接口返回结果数限制</a>）</li></div>
      * @param string $Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
      * @param string $SourceType （不推荐：应使用 SourceTypes 替代）
@@ -568,23 +568,6 @@ class SearchMediaRequest extends AbstractModel
             $this->ExpireTime->deserialize($param["ExpireTime"]);
         }
 
-        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
-            $this->Sort = new SortBy();
-            $this->Sort->deserialize($param["Sort"]);
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = $param["Filters"];
-        }
-
         if (array_key_exists("StorageRegions",$param) and $param["StorageRegions"] !== null) {
             $this->StorageRegions = $param["StorageRegions"];
         }
@@ -611,6 +594,23 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("TrtcRoomIds",$param) and $param["TrtcRoomIds"] !== null) {
             $this->TrtcRoomIds = $param["TrtcRoomIds"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = $param["Filters"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = new SortBy();
+            $this->Sort->deserialize($param["Sort"]);
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {

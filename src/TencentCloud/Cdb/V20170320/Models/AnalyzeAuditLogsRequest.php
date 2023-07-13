@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置要分析的日志结束时间，格式为："2023-02-16 00:10:20"。
  * @method array getAggregationConditions() 获取聚合维度的排序条件。
  * @method void setAggregationConditions(array $AggregationConditions) 设置聚合维度的排序条件。
- * @method AuditLogFilter getAuditLogFilter() 获取该过滤条件下的审计日志结果集作为分析日志。
- * @method void setAuditLogFilter(AuditLogFilter $AuditLogFilter) 设置该过滤条件下的审计日志结果集作为分析日志。
+ * @method AuditLogFilter getAuditLogFilter() 获取已废弃。该过滤条件下的审计日志结果集作为分析日志。
+ * @method void setAuditLogFilter(AuditLogFilter $AuditLogFilter) 设置已废弃。该过滤条件下的审计日志结果集作为分析日志。
+ * @method array getLogFilter() 获取该过滤条件下的审计日志结果集作为分析日志。
+ * @method void setLogFilter(array $LogFilter) 设置该过滤条件下的审计日志结果集作为分析日志。
  */
 class AnalyzeAuditLogsRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class AnalyzeAuditLogsRequest extends AbstractModel
     public $AggregationConditions;
 
     /**
-     * @var AuditLogFilter 该过滤条件下的审计日志结果集作为分析日志。
+     * @var AuditLogFilter 已废弃。该过滤条件下的审计日志结果集作为分析日志。
      */
     public $AuditLogFilter;
+
+    /**
+     * @var array 该过滤条件下的审计日志结果集作为分析日志。
+     */
+    public $LogFilter;
 
     /**
      * @param string $InstanceId 实例ID。
      * @param string $StartTime 要分析的日志开始时间，格式为："2023-02-16 00:00:20"。
      * @param string $EndTime 要分析的日志结束时间，格式为："2023-02-16 00:10:20"。
      * @param array $AggregationConditions 聚合维度的排序条件。
-     * @param AuditLogFilter $AuditLogFilter 该过滤条件下的审计日志结果集作为分析日志。
+     * @param AuditLogFilter $AuditLogFilter 已废弃。该过滤条件下的审计日志结果集作为分析日志。
+     * @param array $LogFilter 该过滤条件下的审计日志结果集作为分析日志。
      */
     function __construct()
     {
@@ -102,6 +110,15 @@ class AnalyzeAuditLogsRequest extends AbstractModel
         if (array_key_exists("AuditLogFilter",$param) and $param["AuditLogFilter"] !== null) {
             $this->AuditLogFilter = new AuditLogFilter();
             $this->AuditLogFilter->deserialize($param["AuditLogFilter"]);
+        }
+
+        if (array_key_exists("LogFilter",$param) and $param["LogFilter"] !== null) {
+            $this->LogFilter = [];
+            foreach ($param["LogFilter"] as $key => $value){
+                $obj = new InstanceAuditLogFilters();
+                $obj->deserialize($value);
+                array_push($this->LogFilter, $obj);
+            }
         }
     }
 }

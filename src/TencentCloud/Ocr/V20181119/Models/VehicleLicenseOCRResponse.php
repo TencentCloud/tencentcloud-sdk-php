@@ -31,22 +31,18 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRecognizeWarnCode() 获取Code 告警码列表和释义：
 -9102 复印件告警
 -9103 翻拍件告警
--9106 ps告警
 注：告警码可以同时存在多个
  * @method void setRecognizeWarnCode(array $RecognizeWarnCode) 设置Code 告警码列表和释义：
 -9102 复印件告警
 -9103 翻拍件告警
--9106 ps告警
 注：告警码可以同时存在多个
  * @method array getRecognizeWarnMsg() 获取告警码说明：
 WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
  * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明：
 WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -69,7 +65,6 @@ class VehicleLicenseOCRResponse extends AbstractModel
      * @var array Code 告警码列表和释义：
 -9102 复印件告警
 -9103 翻拍件告警
--9106 ps告警
 注：告警码可以同时存在多个
      */
     public $RecognizeWarnCode;
@@ -78,7 +73,6 @@ class VehicleLicenseOCRResponse extends AbstractModel
      * @var array 告警码说明：
 WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
      */
     public $RecognizeWarnMsg;
@@ -96,12 +90,10 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
      * @param array $RecognizeWarnCode Code 告警码列表和释义：
 -9102 复印件告警
 -9103 翻拍件告警
--9106 ps告警
 注：告警码可以同时存在多个
      * @param array $RecognizeWarnMsg 告警码说明：
 WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
-WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

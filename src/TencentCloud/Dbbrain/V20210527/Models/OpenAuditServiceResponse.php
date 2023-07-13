@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ScaleUpFileSystem返回参数结构体
+ * OpenAuditService返回参数结构体
  *
- * @method string getFileSystemId() 获取文件系统Id
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统Id
- * @method integer getTargetCapacity() 获取扩容的目标容量（单位GiB）
- * @method void setTargetCapacity(integer $TargetCapacity) 设置扩容的目标容量（单位GiB）
+ * @method integer getTaskId() 获取taskId 为0表示开通审计成功，否则开通失败
+ * @method void setTaskId(integer $TaskId) 设置taskId 为0表示开通审计成功，否则开通失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ScaleUpFileSystemResponse extends AbstractModel
+class OpenAuditServiceResponse extends AbstractModel
 {
     /**
-     * @var string 文件系统Id
+     * @var integer taskId 为0表示开通审计成功，否则开通失败
      */
-    public $FileSystemId;
-
-    /**
-     * @var integer 扩容的目标容量（单位GiB）
-     */
-    public $TargetCapacity;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class ScaleUpFileSystemResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FileSystemId 文件系统Id
-     * @param integer $TargetCapacity 扩容的目标容量（单位GiB）
+     * @param integer $TaskId taskId 为0表示开通审计成功，否则开通失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,8 @@ class ScaleUpFileSystemResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
-        }
-
-        if (array_key_exists("TargetCapacity",$param) and $param["TargetCapacity"] !== null) {
-            $this->TargetCapacity = $param["TargetCapacity"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -36,8 +36,10 @@ use TencentCloud\Common\AbstractModel;
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
- * @method AuditLogFilter getFilter() 获取过滤条件。可按设置的过滤条件过滤日志。
- * @method void setFilter(AuditLogFilter $Filter) 设置过滤条件。可按设置的过滤条件过滤日志。
+ * @method AuditLogFilter getFilter() 获取已废弃。
+ * @method void setFilter(AuditLogFilter $Filter) 设置已废弃。
+ * @method array getLogFilter() 获取审计日志过滤条件
+ * @method void setLogFilter(array $LogFilter) 设置审计日志过滤条件
  */
 class CreateAuditLogFileRequest extends AbstractModel
 {
@@ -70,9 +72,14 @@ class CreateAuditLogFileRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var AuditLogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     * @var AuditLogFilter 已废弃。
      */
     public $Filter;
+
+    /**
+     * @var array 审计日志过滤条件
+     */
+    public $LogFilter;
 
     /**
      * @param string $InstanceId 实例ID
@@ -83,7 +90,8 @@ class CreateAuditLogFileRequest extends AbstractModel
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
-     * @param AuditLogFilter $Filter 过滤条件。可按设置的过滤条件过滤日志。
+     * @param AuditLogFilter $Filter 已废弃。
+     * @param array $LogFilter 审计日志过滤条件
      */
     function __construct()
     {
@@ -121,6 +129,15 @@ class CreateAuditLogFileRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new AuditLogFilter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("LogFilter",$param) and $param["LogFilter"] !== null) {
+            $this->LogFilter = [];
+            foreach ($param["LogFilter"] as $key => $value){
+                $obj = new InstanceAuditLogFilter();
+                $obj->deserialize($value);
+                array_push($this->LogFilter, $obj);
+            }
         }
     }
 }

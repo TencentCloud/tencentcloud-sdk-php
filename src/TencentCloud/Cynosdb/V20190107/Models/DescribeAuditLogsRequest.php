@@ -36,12 +36,14 @@ use TencentCloud\Common\AbstractModel;
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
- * @method AuditLogFilter getFilter() 获取过滤条件。可按设置的过滤条件过滤日志。
- * @method void setFilter(AuditLogFilter $Filter) 设置过滤条件。可按设置的过滤条件过滤日志。
+ * @method AuditLogFilter getFilter() 获取已废弃。
+ * @method void setFilter(AuditLogFilter $Filter) 设置已废弃。
  * @method integer getLimit() 获取分页参数，单次返回的数据条数。默认值为100，最大值为100。
  * @method void setLimit(integer $Limit) 设置分页参数，单次返回的数据条数。默认值为100，最大值为100。
  * @method integer getOffset() 获取分页偏移量。
  * @method void setOffset(integer $Offset) 设置分页偏移量。
+ * @method array getLogFilter() 获取审计日志过滤条件。
+ * @method void setLogFilter(array $LogFilter) 设置审计日志过滤条件。
  */
 class DescribeAuditLogsRequest extends AbstractModel
 {
@@ -74,7 +76,7 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var AuditLogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     * @var AuditLogFilter 已废弃。
      */
     public $Filter;
 
@@ -89,6 +91,11 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array 审计日志过滤条件。
+     */
+    public $LogFilter;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $StartTime 开始时间，格式为："2017-07-12 10:29:20"。
      * @param string $EndTime 结束时间，格式为："2017-07-12 10:29:20"。
@@ -97,9 +104,10 @@ class DescribeAuditLogsRequest extends AbstractModel
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
-     * @param AuditLogFilter $Filter 过滤条件。可按设置的过滤条件过滤日志。
+     * @param AuditLogFilter $Filter 已废弃。
      * @param integer $Limit 分页参数，单次返回的数据条数。默认值为100，最大值为100。
      * @param integer $Offset 分页偏移量。
+     * @param array $LogFilter 审计日志过滤条件。
      */
     function __construct()
     {
@@ -145,6 +153,15 @@ class DescribeAuditLogsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("LogFilter",$param) and $param["LogFilter"] !== null) {
+            $this->LogFilter = [];
+            foreach ($param["LogFilter"] as $key => $value){
+                $obj = new InstanceAuditLogFilter();
+                $obj->deserialize($value);
+                array_push($this->LogFilter, $obj);
+            }
         }
     }
 }

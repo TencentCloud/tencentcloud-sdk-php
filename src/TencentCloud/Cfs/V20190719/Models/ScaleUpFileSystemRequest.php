@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemId() 获取文件系统Id
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统Id
- * @method integer getTargetCapacity() 获取扩容的目标容量
- * @method void setTargetCapacity(integer $TargetCapacity) 设置扩容的目标容量
+ * @method integer getTargetCapacity() 获取扩容的目标容量（单位GiB）
+ * @method void setTargetCapacity(integer $TargetCapacity) 设置扩容的目标容量（单位GiB）
  */
 class ScaleUpFileSystemRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ScaleUpFileSystemRequest extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var integer 扩容的目标容量
+     * @var integer 扩容的目标容量（单位GiB）
      */
     public $TargetCapacity;
 
     /**
      * @param string $FileSystemId 文件系统Id
-     * @param integer $TargetCapacity 扩容的目标容量
+     * @param integer $TargetCapacity 扩容的目标容量（单位GiB）
      */
     function __construct()
     {

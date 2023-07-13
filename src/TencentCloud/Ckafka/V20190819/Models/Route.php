@@ -48,6 +48,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteTimestamp(string $DeleteTimestamp) 设置时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubnet() 获取子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnet(string $Subnet) 设置子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBrokerVipList() 获取虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBrokerVipList(array $BrokerVipList) 设置虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcId() 获取vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcId(string $VpcId) 设置vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Route extends AbstractModel
 {
@@ -94,6 +106,24 @@ class Route extends AbstractModel
     public $DeleteTimestamp;
 
     /**
+     * @var string 子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Subnet;
+
+    /**
+     * @var array 虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BrokerVipList;
+
+    /**
+     * @var string vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcId;
+
+    /**
      * @param integer $AccessType 实例接入方式
 0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
@@ -107,6 +137,12 @@ class Route extends AbstractModel
      * @param integer $DomainPort 域名port
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeleteTimestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Subnet 子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BrokerVipList 虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcId vpc信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +189,23 @@ class Route extends AbstractModel
 
         if (array_key_exists("DeleteTimestamp",$param) and $param["DeleteTimestamp"] !== null) {
             $this->DeleteTimestamp = $param["DeleteTimestamp"];
+        }
+
+        if (array_key_exists("Subnet",$param) and $param["Subnet"] !== null) {
+            $this->Subnet = $param["Subnet"];
+        }
+
+        if (array_key_exists("BrokerVipList",$param) and $param["BrokerVipList"] !== null) {
+            $this->BrokerVipList = [];
+            foreach ($param["BrokerVipList"] as $key => $value){
+                $obj = new VipEntity();
+                $obj->deserialize($value);
+                array_push($this->BrokerVipList, $obj);
+            }
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

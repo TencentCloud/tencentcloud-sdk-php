@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
  * @method VODExportInfo getVODExportInfo() 获取导出的云点播媒资信息。当导出目标为 VOD 时必填。
  * @method void setVODExportInfo(VODExportInfo $VODExportInfo) 设置导出的云点播媒资信息。当导出目标为 VOD 时必填。
- * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使的媒资该操作者需要拥有使用权限。
- * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使的媒资该操作者需要拥有使用权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使用的媒资该操作者需要拥有使用权限。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使用的媒资该操作者需要拥有使用权限。
  */
 class ExportVideoByEditorTrackDataRequest extends AbstractModel
 {
@@ -103,7 +103,7 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
     public $VODExportInfo;
 
     /**
-     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使的媒资该操作者需要拥有使用权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使用的媒资该操作者需要拥有使用权限。
      */
     public $Operator;
 
@@ -123,7 +123,7 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
      * @param string $CoverData 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
      * @param CMEExportInfo $CMEExportInfo 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
      * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。当导出目标为 VOD 时必填。
-     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使的媒资该操作者需要拥有使用权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使用的媒资该操作者需要拥有使用权限。
      */
     function __construct()
     {

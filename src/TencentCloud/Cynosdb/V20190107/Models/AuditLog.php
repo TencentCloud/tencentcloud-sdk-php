@@ -40,14 +40,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置客户端地址。
  * @method string getUser() 获取用户名。
  * @method void setUser(string $User) 设置用户名。
- * @method integer getExecTime() 获取执行时间。
- * @method void setExecTime(integer $ExecTime) 设置执行时间。
- * @method string getTimestamp() 获取时间戳。
- * @method void setTimestamp(string $Timestamp) 设置时间戳。
- * @method integer getSentRows() 获取发送行数。
- * @method void setSentRows(integer $SentRows) 设置发送行数。
+ * @method integer getExecTime() 获取执行时间，微秒。
+ * @method void setExecTime(integer $ExecTime) 设置执行时间，微秒。
+ * @method string getTimestamp() 获取时间。
+ * @method void setTimestamp(string $Timestamp) 设置时间。
+ * @method integer getSentRows() 获取返回行数。
+ * @method void setSentRows(integer $SentRows) 设置返回行数。
  * @method integer getThreadId() 获取执行线程ID。
  * @method void setThreadId(integer $ThreadId) 设置执行线程ID。
+ * @method integer getCheckRows() 获取扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckRows(integer $CheckRows) 设置扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCpuTime() 获取cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpuTime(float $CpuTime) 设置cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIoWaitTime() 获取IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIoWaitTime(integer $IoWaitTime) 设置IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLockWaitTime() 获取锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLockWaitTime(integer $LockWaitTime) 设置锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTrxLivingTime() 获取事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrxLivingTime(integer $TrxLivingTime) 设置事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNsTime() 获取开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNsTime(integer $NsTime) 设置开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditLog extends AbstractModel
 {
@@ -102,17 +126,17 @@ class AuditLog extends AbstractModel
     public $User;
 
     /**
-     * @var integer 执行时间。
+     * @var integer 执行时间，微秒。
      */
     public $ExecTime;
 
     /**
-     * @var string 时间戳。
+     * @var string 时间。
      */
     public $Timestamp;
 
     /**
-     * @var integer 发送行数。
+     * @var integer 返回行数。
      */
     public $SentRows;
 
@@ -120,6 +144,42 @@ class AuditLog extends AbstractModel
      * @var integer 执行线程ID。
      */
     public $ThreadId;
+
+    /**
+     * @var integer 扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckRows;
+
+    /**
+     * @var float cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CpuTime;
+
+    /**
+     * @var integer IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IoWaitTime;
+
+    /**
+     * @var integer 锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LockWaitTime;
+
+    /**
+     * @var integer 事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrxLivingTime;
+
+    /**
+     * @var integer 开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NsTime;
 
     /**
      * @param integer $AffectRows 影响行数。
@@ -132,10 +192,22 @@ class AuditLog extends AbstractModel
      * @param string $Sql SQL语句。
      * @param string $Host 客户端地址。
      * @param string $User 用户名。
-     * @param integer $ExecTime 执行时间。
-     * @param string $Timestamp 时间戳。
-     * @param integer $SentRows 发送行数。
+     * @param integer $ExecTime 执行时间，微秒。
+     * @param string $Timestamp 时间。
+     * @param integer $SentRows 返回行数。
      * @param integer $ThreadId 执行线程ID。
+     * @param integer $CheckRows 扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $CpuTime cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IoWaitTime IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LockWaitTime 锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TrxLivingTime 事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +276,30 @@ class AuditLog extends AbstractModel
 
         if (array_key_exists("ThreadId",$param) and $param["ThreadId"] !== null) {
             $this->ThreadId = $param["ThreadId"];
+        }
+
+        if (array_key_exists("CheckRows",$param) and $param["CheckRows"] !== null) {
+            $this->CheckRows = $param["CheckRows"];
+        }
+
+        if (array_key_exists("CpuTime",$param) and $param["CpuTime"] !== null) {
+            $this->CpuTime = $param["CpuTime"];
+        }
+
+        if (array_key_exists("IoWaitTime",$param) and $param["IoWaitTime"] !== null) {
+            $this->IoWaitTime = $param["IoWaitTime"];
+        }
+
+        if (array_key_exists("LockWaitTime",$param) and $param["LockWaitTime"] !== null) {
+            $this->LockWaitTime = $param["LockWaitTime"];
+        }
+
+        if (array_key_exists("TrxLivingTime",$param) and $param["TrxLivingTime"] !== null) {
+            $this->TrxLivingTime = $param["TrxLivingTime"];
+        }
+
+        if (array_key_exists("NsTime",$param) and $param["NsTime"] !== null) {
+            $this->NsTime = $param["NsTime"];
         }
     }
 }

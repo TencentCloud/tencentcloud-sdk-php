@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getProtocols() 获取协议与售卖详情
  * @method void setProtocols(array $Protocols) 设置协议与售卖详情
- * @method string getType() 获取存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
- * @method void setType(string $Type) 设置存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+ * @method string getType() 获取存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
+ * @method void setType(string $Type) 设置存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
  * @method boolean getPrepayment() 获取是否支持预付费。返回值中 true 为支持、false 为不支持
  * @method void setPrepayment(boolean $Prepayment) 设置是否支持预付费。返回值中 true 为支持、false 为不支持
  */
@@ -35,7 +35,7 @@ class AvailableType extends AbstractModel
     public $Protocols;
 
     /**
-     * @var string 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+     * @var string 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
      */
     public $Type;
 
@@ -46,7 +46,7 @@ class AvailableType extends AbstractModel
 
     /**
      * @param array $Protocols 协议与售卖详情
-     * @param string $Type 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+     * @param string $Type 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
      * @param boolean $Prepayment 是否支持预付费。返回值中 true 为支持、false 为不支持
      */
     function __construct()

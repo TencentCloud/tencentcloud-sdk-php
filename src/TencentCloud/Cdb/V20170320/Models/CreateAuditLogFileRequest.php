@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditLogFile请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getStartTime() 获取开始时间，格式为："2017-07-12 10:29:20"。
- * @method void setStartTime(string $StartTime) 设置开始时间，格式为："2017-07-12 10:29:20"。
- * @method string getEndTime() 获取结束时间，格式为："2017-07-12 10:29:20"。
- * @method void setEndTime(string $EndTime) 设置结束时间，格式为："2017-07-12 10:29:20"。
+ * @method string getInstanceId() 获取实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method string getStartTime() 获取开始时间。
+ * @method void setStartTime(string $StartTime) 设置开始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
  * @method string getOrder() 获取排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
  * @method void setOrder(string $Order) 设置排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
  * @method string getOrderBy() 获取排序字段。支持值包括：
@@ -36,23 +36,25 @@ use TencentCloud\Common\AbstractModel;
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
- * @method AuditLogFilter getFilter() 获取过滤条件。可按设置的过滤条件过滤日志。
- * @method void setFilter(AuditLogFilter $Filter) 设置过滤条件。可按设置的过滤条件过滤日志。
+ * @method AuditLogFilter getFilter() 获取已废弃。
+ * @method void setFilter(AuditLogFilter $Filter) 设置已废弃。
+ * @method array getLogFilter() 获取过滤条件。可按设置的过滤条件过滤日志。
+ * @method void setLogFilter(array $LogFilter) 设置过滤条件。可按设置的过滤条件过滤日志。
  */
 class CreateAuditLogFileRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间，格式为："2017-07-12 10:29:20"。
+     * @var string 开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，格式为："2017-07-12 10:29:20"。
+     * @var string 结束时间。
      */
     public $EndTime;
 
@@ -70,20 +72,26 @@ class CreateAuditLogFileRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var AuditLogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     * @var AuditLogFilter 已废弃。
      */
     public $Filter;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $StartTime 开始时间，格式为："2017-07-12 10:29:20"。
-     * @param string $EndTime 结束时间，格式为："2017-07-12 10:29:20"。
+     * @var array 过滤条件。可按设置的过滤条件过滤日志。
+     */
+    public $LogFilter;
+
+    /**
+     * @param string $InstanceId 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param string $StartTime 开始时间。
+     * @param string $EndTime 结束时间。
      * @param string $Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
      * @param string $OrderBy 排序字段。支持值包括：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
-     * @param AuditLogFilter $Filter 过滤条件。可按设置的过滤条件过滤日志。
+     * @param AuditLogFilter $Filter 已废弃。
+     * @param array $LogFilter 过滤条件。可按设置的过滤条件过滤日志。
      */
     function __construct()
     {
@@ -121,6 +129,15 @@ class CreateAuditLogFileRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new AuditLogFilter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("LogFilter",$param) and $param["LogFilter"] !== null) {
+            $this->LogFilter = [];
+            foreach ($param["LogFilter"] as $key => $value){
+                $obj = new InstanceAuditLogFilters();
+                $obj->deserialize($value);
+                array_push($this->LogFilter, $obj);
+            }
         }
     }
 }

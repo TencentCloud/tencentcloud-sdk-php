@@ -14,30 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ScaleUpFileSystem返回参数结构体
+ * DescribeAuditInstanceList返回参数结构体
  *
- * @method string getFileSystemId() 获取文件系统Id
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统Id
- * @method integer getTargetCapacity() 获取扩容的目标容量（单位GiB）
- * @method void setTargetCapacity(integer $TargetCapacity) 设置扩容的目标容量（单位GiB）
+ * @method integer getTotalCount() 获取符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getItems() 获取实例详情。
+ * @method void setItems(array $Items) 设置实例详情。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ScaleUpFileSystemResponse extends AbstractModel
+class DescribeAuditInstanceListResponse extends AbstractModel
 {
     /**
-     * @var string 文件系统Id
+     * @var integer 符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FileSystemId;
+    public $TotalCount;
 
     /**
-     * @var integer 扩容的目标容量（单位GiB）
+     * @var array 实例详情。
      */
-    public $TargetCapacity;
+    public $Items;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class ScaleUpFileSystemResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FileSystemId 文件系统Id
-     * @param integer $TargetCapacity 扩容的目标容量（单位GiB）
+     * @param integer $TotalCount 符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Items 实例详情。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +66,17 @@ class ScaleUpFileSystemResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("TargetCapacity",$param) and $param["TargetCapacity"] !== null) {
-            $this->TargetCapacity = $param["TargetCapacity"];
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new AuditInstance();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

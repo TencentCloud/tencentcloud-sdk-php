@@ -81,7 +81,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeExclusiveInstancesStatusResponse DescribeExclusiveInstancesStatus(Models\DescribeExclusiveInstancesStatusRequest $req) 查询专享实例列表（新）
  * @method Models\DescribeIPStrategyResponse DescribeIPStrategy(Models\DescribeIPStrategyRequest $req) 本接口（DescribeIPStrategy）用于查询IP策略详情。
  * @method Models\DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(Models\DescribeIPStrategyApisStatusRequest $req) 本接口（DescribeIPStrategyApisStatus）用于查询IP策略可以绑定的API列表。即服务下所有API和该策略已绑定API的差集。
- * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) 本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表。
+ * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) 本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表，因为接口名拼写错误，已不推荐使用，请优先使用DescribeIPStrategiesStatus接口。
  * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) 本接口DescribeLogSearch用于搜索日志
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 展示插件详情，支持按照插件ID进行。
  * @method Models\DescribePluginApisResponse DescribePluginApis(Models\DescribePluginApisRequest $req) 查询指定插件下绑定的API信息

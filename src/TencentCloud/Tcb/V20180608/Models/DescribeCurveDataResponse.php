@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValues(array $Values) 设置有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
  * @method array getTime() 获取时间数据, 标识监控数据Values中的点是哪个时间段上报的.
  * @method void setTime(array $Time) 设置时间数据, 标识监控数据Values中的点是哪个时间段上报的.
- * @method float getNewValues() 获取有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
- * @method void setNewValues(float $NewValues) 设置有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+ * @method array getNewValues() 获取有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+ * @method void setNewValues(array $NewValues) 设置有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -70,7 +70,7 @@ class DescribeCurveDataResponse extends AbstractModel
     public $Time;
 
     /**
-     * @var float 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     * @var array 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
      */
     public $NewValues;
 
@@ -86,7 +86,7 @@ class DescribeCurveDataResponse extends AbstractModel
      * @param integer $Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天.
      * @param array $Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
      * @param array $Time 时间数据, 标识监控数据Values中的点是哪个时间段上报的.
-     * @param float $NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     * @param array $NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

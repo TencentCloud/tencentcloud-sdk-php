@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildDir(string $BuildDir) 设置DockerBuild的目录
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCpu() 获取请使用CPUSize
- * @method void setCpu(integer $Cpu) 设置请使用CPUSize
- * @method integer getMem() 获取请使用MemSize
- * @method void setMem(integer $Mem) 设置请使用MemSize
+ * @method float getCpu() 获取请使用CPUSize
+ * @method void setCpu(float $Cpu) 设置请使用CPUSize
+ * @method float getMem() 获取请使用MemSize
+ * @method void setMem(float $Mem) 设置请使用MemSize
  * @method integer getMinNum() 获取副本最小值
  * @method void setMinNum(integer $MinNum) 设置副本最小值
  * @method integer getMaxNum() 获取副本最大值
@@ -187,12 +187,12 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
     public $BuildDir;
 
     /**
-     * @var integer 请使用CPUSize
+     * @var float 请使用CPUSize
      */
     public $Cpu;
 
     /**
-     * @var integer 请使用MemSize
+     * @var float 请使用MemSize
      */
     public $Mem;
 
@@ -401,8 +401,8 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BuildDir DockerBuild的目录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Cpu 请使用CPUSize
-     * @param integer $Mem 请使用MemSize
+     * @param float $Cpu 请使用CPUSize
+     * @param float $Mem 请使用MemSize
      * @param integer $MinNum 副本最小值
      * @param integer $MaxNum 副本最大值
      * @param string $PolicyType 策略类型

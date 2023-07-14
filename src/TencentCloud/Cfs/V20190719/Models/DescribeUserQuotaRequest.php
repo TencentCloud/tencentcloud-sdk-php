@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <br><li>UserId - Array of String - 是否必填：否 -（过滤条件）按UID/GID过滤。
  * @method integer getOffset() 获取Offset 分页码
  * @method void setOffset(integer $Offset) 设置Offset 分页码
- * @method integer getLimit() 获取Limit 页面大小
- * @method void setLimit(integer $Limit) 设置Limit 页面大小
+ * @method integer getLimit() 获取Limit 页面大小，可填范围为大于0的整数
+ * @method void setLimit(integer $Limit) 设置Limit 页面大小，可填范围为大于0的整数
  */
 class DescribeUserQuotaRequest extends AbstractModel
 {
@@ -53,7 +53,7 @@ class DescribeUserQuotaRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Limit 页面大小
+     * @var integer Limit 页面大小，可填范围为大于0的整数
      */
     public $Limit;
 
@@ -63,7 +63,7 @@ class DescribeUserQuotaRequest extends AbstractModel
 <br><li>UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid| Gid )
 <br><li>UserId - Array of String - 是否必填：否 -（过滤条件）按UID/GID过滤。
      * @param integer $Offset Offset 分页码
-     * @param integer $Limit Limit 页面大小
+     * @param integer $Limit Limit 页面大小，可填范围为大于0的整数
      */
     function __construct()
     {

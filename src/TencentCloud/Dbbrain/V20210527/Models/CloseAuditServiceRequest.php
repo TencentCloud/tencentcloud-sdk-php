@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseAuditService请求参数结构体
  *
- * @method string getProduct() 获取服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
  * @method string getNodeRequestType() 获取与Product保持一致。如："dcdb" ,"mariadb"。
  * @method void setNodeRequestType(string $NodeRequestType) 设置与Product保持一致。如："dcdb" ,"mariadb"。
  * @method string getInstanceId() 获取实例Id。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CloseAuditServiceRequest extends AbstractModel
 {
     /**
-     * @var string 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+     * @var string 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
      */
     public $Product;
 
@@ -45,7 +45,7 @@ class CloseAuditServiceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+     * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
      * @param string $NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
      * @param string $InstanceId 实例Id。
      */

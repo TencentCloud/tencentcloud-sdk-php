@@ -18,35 +18,35 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * API绑定策略列表
+ * 策略列表
  *
- * @method integer getTotalCount() 获取API绑定的限流策略数量。
+ * @method integer getTotalCount() 获取策略数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置API绑定的限流策略数量。
+ * @method void setTotalCount(integer $TotalCount) 设置策略数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getApiEnvironmentStrategySet() 获取API绑定的限流策略列表。
+ * @method array getStrategySet() 获取策略列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApiEnvironmentStrategySet(array $ApiEnvironmentStrategySet) 设置API绑定的限流策略列表。
+ * @method void setStrategySet(array $StrategySet) 设置策略列表。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class ApiEnvironmentStrategyStataus extends AbstractModel
+class IPStrategiesStatus extends AbstractModel
 {
     /**
-     * @var integer API绑定的限流策略数量。
+     * @var integer 策略数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
-     * @var array API绑定的限流策略列表。
+     * @var array 策略列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ApiEnvironmentStrategySet;
+    public $StrategySet;
 
     /**
-     * @param integer $TotalCount API绑定的限流策略数量。
+     * @param integer $TotalCount 策略数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ApiEnvironmentStrategySet API绑定的限流策略列表。
+     * @param array $StrategySet 策略列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -66,12 +66,12 @@ class ApiEnvironmentStrategyStataus extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("ApiEnvironmentStrategySet",$param) and $param["ApiEnvironmentStrategySet"] !== null) {
-            $this->ApiEnvironmentStrategySet = [];
-            foreach ($param["ApiEnvironmentStrategySet"] as $key => $value){
-                $obj = new ApiEnvironmentStrategy();
+        if (array_key_exists("StrategySet",$param) and $param["StrategySet"] !== null) {
+            $this->StrategySet = [];
+            foreach ($param["StrategySet"] as $key => $value){
+                $obj = new IPStrategy();
                 $obj->deserialize($value);
-                array_push($this->ApiEnvironmentStrategySet, $obj);
+                array_push($this->StrategySet, $obj);
             }
         }
     }

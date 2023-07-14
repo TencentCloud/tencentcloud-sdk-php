@@ -14,26 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeApiEnvironmentStrategy返回参数结构体
+ * DescribeAuditLogs返回参数结构体
  *
- * @method ApiEnvironmentStrategyStatus getResult() 获取api绑定策略详情
+ * @method integer getTotalCount() 获取符合条件的审计日志条数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的审计日志条数。
+ * @method array getItems() 获取审计日志详情。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(ApiEnvironmentStrategyStatus $Result) 设置api绑定策略详情
+ * @method void setItems(array $Items) 设置审计日志详情。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeApiEnvironmentStrategyResponse extends AbstractModel
+class DescribeAuditLogsResponse extends AbstractModel
 {
     /**
-     * @var ApiEnvironmentStrategyStatus api绑定策略详情
+     * @var integer 符合条件的审计日志条数。
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 审计日志详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $Items;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +48,8 @@ class DescribeApiEnvironmentStrategyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ApiEnvironmentStrategyStatus $Result api绑定策略详情
+     * @param integer $TotalCount 符合条件的审计日志条数。
+     * @param array $Items 审计日志详情。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,9 +66,17 @@ class DescribeApiEnvironmentStrategyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ApiEnvironmentStrategyStatus();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new AuditLog();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

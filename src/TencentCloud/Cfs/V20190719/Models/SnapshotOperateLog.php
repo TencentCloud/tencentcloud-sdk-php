@@ -21,20 +21,40 @@ use TencentCloud\Common\AbstractModel;
  * 快照操作日志
  *
  * @method string getAction() 获取操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照
  * @method void setAction(string $Action) 设置操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照
  * @method string getActionTime() 获取操作时间
  * @method void setActionTime(string $ActionTime) 设置操作时间
  * @method string getActionName() 获取操作名称
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
  * @method void setActionName(string $ActionName) 设置操作名称
- * @method string getOperator() 获取操作者
- * @method void setOperator(string $Operator) 设置操作者
- * @method integer getResult() 获取结果
- * @method void setResult(integer $Result) 设置结果
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
+ * @method string getOperator() 获取操作者uin
+ * @method void setOperator(string $Operator) 设置操作者uin
+ * @method integer getResult() 获取1-任务进行中；2-任务成功；3-任务失败
+ * @method void setResult(integer $Result) 设置1-任务进行中；2-任务成功；3-任务失败
  */
 class SnapshotOperateLog extends AbstractModel
 {
     /**
      * @var string 操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照
      */
     public $Action;
 
@@ -45,25 +65,37 @@ class SnapshotOperateLog extends AbstractModel
 
     /**
      * @var string 操作名称
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
      */
     public $ActionName;
 
     /**
-     * @var string 操作者
+     * @var string 操作者uin
      */
     public $Operator;
 
     /**
-     * @var integer 结果
+     * @var integer 1-任务进行中；2-任务成功；3-任务失败
      */
     public $Result;
 
     /**
      * @param string $Action 操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照
      * @param string $ActionTime 操作时间
      * @param string $ActionName 操作名称
-     * @param string $Operator 操作者
-     * @param integer $Result 结果
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
+     * @param string $Operator 操作者uin
+     * @param integer $Result 1-任务进行中；2-任务成功；3-任务失败
      */
     function __construct()
     {

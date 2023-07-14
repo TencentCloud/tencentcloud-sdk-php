@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getCanEditFlow() 获取是否允许修改合同信息，true-是，false-否
  * @method void setCanEditFlow(boolean $CanEditFlow) 设置是否允许修改合同信息，true-是，false-否
- * @method boolean getHideShowFlowName() 获取是否允许发起合同弹窗隐藏合同名称
- * @method void setHideShowFlowName(boolean $HideShowFlowName) 设置是否允许发起合同弹窗隐藏合同名称
- * @method boolean getHideShowFlowType() 获取是否允许发起合同弹窗隐藏合同类型
- * @method void setHideShowFlowType(boolean $HideShowFlowType) 设置是否允许发起合同弹窗隐藏合同类型
- * @method boolean getHideShowDeadline() 获取是否允许发起合同弹窗隐藏合同到期时间
- * @method void setHideShowDeadline(boolean $HideShowDeadline) 设置是否允许发起合同弹窗隐藏合同到期时间
- * @method boolean getCanSkipAddApprover() 获取是否允许发起合同步骤跳过指定签署方步骤
- * @method void setCanSkipAddApprover(boolean $CanSkipAddApprover) 设置是否允许发起合同步骤跳过指定签署方步骤
- * @method string getCustomCreateFlowDescription() 获取定制化发起合同页合同描述信息
- * @method void setCustomCreateFlowDescription(string $CustomCreateFlowDescription) 设置定制化发起合同页合同描述信息
+ * @method boolean getHideShowFlowName() 获取是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
+ * @method void setHideShowFlowName(boolean $HideShowFlowName) 设置是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
+ * @method boolean getHideShowFlowType() 获取是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
+ * @method void setHideShowFlowType(boolean $HideShowFlowType) 设置是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
+ * @method boolean getHideShowDeadline() 获取是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
+ * @method void setHideShowDeadline(boolean $HideShowDeadline) 设置是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
+ * @method boolean getCanSkipAddApprover() 获取是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
+ * @method void setCanSkipAddApprover(boolean $CanSkipAddApprover) 设置是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
+ * @method string getCustomCreateFlowDescription() 获取定制化发起合同弹窗的描述信息，描述信息最长500
+ * @method void setCustomCreateFlowDescription(string $CustomCreateFlowDescription) 设置定制化发起合同弹窗的描述信息，描述信息最长500
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -41,37 +41,37 @@ class CreateFlowOption extends AbstractModel
     public $CanEditFlow;
 
     /**
-     * @var boolean 是否允许发起合同弹窗隐藏合同名称
+     * @var boolean 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
      */
     public $HideShowFlowName;
 
     /**
-     * @var boolean 是否允许发起合同弹窗隐藏合同类型
+     * @var boolean 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
      */
     public $HideShowFlowType;
 
     /**
-     * @var boolean 是否允许发起合同弹窗隐藏合同到期时间
+     * @var boolean 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
      */
     public $HideShowDeadline;
 
     /**
-     * @var boolean 是否允许发起合同步骤跳过指定签署方步骤
+     * @var boolean 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
      */
     public $CanSkipAddApprover;
 
     /**
-     * @var string 定制化发起合同页合同描述信息
+     * @var string 定制化发起合同弹窗的描述信息，描述信息最长500
      */
     public $CustomCreateFlowDescription;
 
     /**
      * @param boolean $CanEditFlow 是否允许修改合同信息，true-是，false-否
-     * @param boolean $HideShowFlowName 是否允许发起合同弹窗隐藏合同名称
-     * @param boolean $HideShowFlowType 是否允许发起合同弹窗隐藏合同类型
-     * @param boolean $HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间
-     * @param boolean $CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤
-     * @param string $CustomCreateFlowDescription 定制化发起合同页合同描述信息
+     * @param boolean $HideShowFlowName 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
+     * @param boolean $HideShowFlowType 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
+     * @param boolean $HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
+     * @param boolean $CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
+     * @param string $CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500
      */
     function __construct()
     {

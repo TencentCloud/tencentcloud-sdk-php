@@ -124,6 +124,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelTags(array $ChannelTags) 设置已为该客户添加的渠道标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLeadId() 获取关联线索id
+ * @method void setLeadId(integer $LeadId) 设置关联线索id
+ * @method string getWxId() 获取客户微信id
+ * @method void setWxId(string $WxId) 设置客户微信id
+ * @method string getPosition() 获取顾问职位
+ * @method void setPosition(string $Position) 设置顾问职位
+ * @method integer getIsBindWx() 获取是否关联微信 1 是 0 否
+ * @method void setIsBindWx(integer $IsBindWx) 设置是否关联微信 1 是 0 否
+ * @method integer getIsInvalid() 获取是否无效
+ * @method void setIsInvalid(integer $IsInvalid) 设置是否无效
+ * @method string getInvalidType() 获取无效类型
+ * @method void setInvalidType(string $InvalidType) 设置无效类型
+ * @method string getInvalidTypeName() 获取无效类型名称
+ * @method void setInvalidTypeName(string $InvalidTypeName) 设置无效类型名称
+ * @method integer getInvalidTime() 获取无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInvalidTime(integer $InvalidTime) 设置无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInvalidRemark() 获取由顾问手动输入的无效原因文字
+ * @method void setInvalidRemark(string $InvalidRemark) 设置由顾问手动输入的无效原因文字
+ * @method integer getIsLose() 获取线索是否战败
+ * @method void setIsLose(integer $IsLose) 设置线索是否战败
+ * @method string getLoseType() 获取战败类型
+ * @method void setLoseType(string $LoseType) 设置战败类型
+ * @method string getLoseTypeName() 获取战败类型名称
+ * @method void setLoseTypeName(string $LoseTypeName) 设置战败类型名称
+ * @method string getLoseRemark() 获取战败申请原因
+ * @method void setLoseRemark(string $LoseRemark) 设置战败申请原因
  */
 class CustomerProfile extends AbstractModel
 {
@@ -336,6 +364,72 @@ class CustomerProfile extends AbstractModel
     public $ChannelTags;
 
     /**
+     * @var integer 关联线索id
+     */
+    public $LeadId;
+
+    /**
+     * @var string 客户微信id
+     */
+    public $WxId;
+
+    /**
+     * @var string 顾问职位
+     */
+    public $Position;
+
+    /**
+     * @var integer 是否关联微信 1 是 0 否
+     */
+    public $IsBindWx;
+
+    /**
+     * @var integer 是否无效
+     */
+    public $IsInvalid;
+
+    /**
+     * @var string 无效类型
+     */
+    public $InvalidType;
+
+    /**
+     * @var string 无效类型名称
+     */
+    public $InvalidTypeName;
+
+    /**
+     * @var integer 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InvalidTime;
+
+    /**
+     * @var string 由顾问手动输入的无效原因文字
+     */
+    public $InvalidRemark;
+
+    /**
+     * @var integer 线索是否战败
+     */
+    public $IsLose;
+
+    /**
+     * @var string 战败类型
+     */
+    public $LoseType;
+
+    /**
+     * @var string 战败类型名称
+     */
+    public $LoseTypeName;
+
+    /**
+     * @var string 战败申请原因
+     */
+    public $LoseRemark;
+
+    /**
      * @param integer $CustomerId 客户档案id，客户唯一识别编码
      * @param string $DealerCode 所属经销商id
      * @param string $UnionId 客户在微信生态中唯一识别码
@@ -388,6 +482,20 @@ class CustomerProfile extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ChannelTags 已为该客户添加的渠道标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LeadId 关联线索id
+     * @param string $WxId 客户微信id
+     * @param string $Position 顾问职位
+     * @param integer $IsBindWx 是否关联微信 1 是 0 否
+     * @param integer $IsInvalid 是否无效
+     * @param string $InvalidType 无效类型
+     * @param string $InvalidTypeName 无效类型名称
+     * @param integer $InvalidTime 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InvalidRemark 由顾问手动输入的无效原因文字
+     * @param integer $IsLose 线索是否战败
+     * @param string $LoseType 战败类型
+     * @param string $LoseTypeName 战败类型名称
+     * @param string $LoseRemark 战败申请原因
      */
     function __construct()
     {
@@ -572,6 +680,58 @@ class CustomerProfile extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ChannelTags, $obj);
             }
+        }
+
+        if (array_key_exists("LeadId",$param) and $param["LeadId"] !== null) {
+            $this->LeadId = $param["LeadId"];
+        }
+
+        if (array_key_exists("WxId",$param) and $param["WxId"] !== null) {
+            $this->WxId = $param["WxId"];
+        }
+
+        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
+            $this->Position = $param["Position"];
+        }
+
+        if (array_key_exists("IsBindWx",$param) and $param["IsBindWx"] !== null) {
+            $this->IsBindWx = $param["IsBindWx"];
+        }
+
+        if (array_key_exists("IsInvalid",$param) and $param["IsInvalid"] !== null) {
+            $this->IsInvalid = $param["IsInvalid"];
+        }
+
+        if (array_key_exists("InvalidType",$param) and $param["InvalidType"] !== null) {
+            $this->InvalidType = $param["InvalidType"];
+        }
+
+        if (array_key_exists("InvalidTypeName",$param) and $param["InvalidTypeName"] !== null) {
+            $this->InvalidTypeName = $param["InvalidTypeName"];
+        }
+
+        if (array_key_exists("InvalidTime",$param) and $param["InvalidTime"] !== null) {
+            $this->InvalidTime = $param["InvalidTime"];
+        }
+
+        if (array_key_exists("InvalidRemark",$param) and $param["InvalidRemark"] !== null) {
+            $this->InvalidRemark = $param["InvalidRemark"];
+        }
+
+        if (array_key_exists("IsLose",$param) and $param["IsLose"] !== null) {
+            $this->IsLose = $param["IsLose"];
+        }
+
+        if (array_key_exists("LoseType",$param) and $param["LoseType"] !== null) {
+            $this->LoseType = $param["LoseType"];
+        }
+
+        if (array_key_exists("LoseTypeName",$param) and $param["LoseTypeName"] !== null) {
+            $this->LoseTypeName = $param["LoseTypeName"];
+        }
+
+        if (array_key_exists("LoseRemark",$param) and $param["LoseRemark"] !== null) {
+            $this->LoseRemark = $param["LoseRemark"];
         }
     }
 }

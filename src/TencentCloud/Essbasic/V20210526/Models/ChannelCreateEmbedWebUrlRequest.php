@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method string getEmbedType() 获取WEB嵌入资源类型。
 CREATE_SEAL: 创建印章
-CREATE_TEMPLATE：创建模版
-MODIFY_TEMPLATE：修改模版
-PREVIEW_TEMPLATE：预览模版
+CREATE_TEMPLATE：创建模板
+MODIFY_TEMPLATE：修改模板
+PREVIEW_TEMPLATE：预览模板
 PREVIEW_FLOW：预览合同文档
 PREVIEW_FLOW_DETAIL：预览合同详情
 PREVIEW_SEAL_LIST：预览印章列表
@@ -34,20 +34,20 @@ PREVIEW_SEAL_DETAIL：预览印章详情
 EXTEND_SERVICE：扩展服务
  * @method void setEmbedType(string $EmbedType) 设置WEB嵌入资源类型。
 CREATE_SEAL: 创建印章
-CREATE_TEMPLATE：创建模版
-MODIFY_TEMPLATE：修改模版
-PREVIEW_TEMPLATE：预览模版
+CREATE_TEMPLATE：创建模板
+MODIFY_TEMPLATE：修改模板
+PREVIEW_TEMPLATE：预览模板
 PREVIEW_FLOW：预览合同文档
 PREVIEW_FLOW_DETAIL：预览合同详情
 PREVIEW_SEAL_LIST：预览印章列表
 PREVIEW_SEAL_DETAIL：预览印章详情
 EXTEND_SERVICE：扩展服务
  * @method string getBusinessId() 获取WEB嵌入的业务资源ID
-EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模板id
 PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
 PREVIEW_SEAL_DETAIL，必填，取值为印章id
  * @method void setBusinessId(string $BusinessId) 设置WEB嵌入的业务资源ID
-EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模板id
 PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
 PREVIEW_SEAL_DETAIL，必填，取值为印章id
  * @method boolean getHiddenComponents() 获取是否隐藏控件，只有预览模板时生效
@@ -65,9 +65,9 @@ class ChannelCreateEmbedWebUrlRequest extends AbstractModel
     /**
      * @var string WEB嵌入资源类型。
 CREATE_SEAL: 创建印章
-CREATE_TEMPLATE：创建模版
-MODIFY_TEMPLATE：修改模版
-PREVIEW_TEMPLATE：预览模版
+CREATE_TEMPLATE：创建模板
+MODIFY_TEMPLATE：修改模板
+PREVIEW_TEMPLATE：预览模板
 PREVIEW_FLOW：预览合同文档
 PREVIEW_FLOW_DETAIL：预览合同详情
 PREVIEW_SEAL_LIST：预览印章列表
@@ -78,7 +78,7 @@ EXTEND_SERVICE：扩展服务
 
     /**
      * @var string WEB嵌入的业务资源ID
-EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模板id
 PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
 PREVIEW_SEAL_DETAIL，必填，取值为印章id
      */
@@ -99,16 +99,16 @@ PREVIEW_SEAL_DETAIL，必填，取值为印章id
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param string $EmbedType WEB嵌入资源类型。
 CREATE_SEAL: 创建印章
-CREATE_TEMPLATE：创建模版
-MODIFY_TEMPLATE：修改模版
-PREVIEW_TEMPLATE：预览模版
+CREATE_TEMPLATE：创建模板
+MODIFY_TEMPLATE：修改模板
+PREVIEW_TEMPLATE：预览模板
 PREVIEW_FLOW：预览合同文档
 PREVIEW_FLOW_DETAIL：预览合同详情
 PREVIEW_SEAL_LIST：预览印章列表
 PREVIEW_SEAL_DETAIL：预览印章详情
 EXTEND_SERVICE：扩展服务
      * @param string $BusinessId WEB嵌入的业务资源ID
-EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模板id
 PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
 PREVIEW_SEAL_DETAIL，必填，取值为印章id
      * @param boolean $HiddenComponents 是否隐藏控件，只有预览模板时生效

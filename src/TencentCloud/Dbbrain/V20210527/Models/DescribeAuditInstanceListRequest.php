@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditInstanceList请求参数结构体
  *
- * @method string getProduct() 获取服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
  * @method string getNodeRequestType() 获取与Product保持一致。如："dcdb" ,"mariadb"。
  * @method void setNodeRequestType(string $NodeRequestType) 设置与Product保持一致。如："dcdb" ,"mariadb"。
  * @method integer getAuditSwitch() 获取审计状态标识，0-未开通审计；1-已开通审计，默认为0。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAuditInstanceListRequest extends AbstractModel
 {
     /**
-     * @var string 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+     * @var string 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
      */
     public $Product;
 
@@ -66,7 +66,7 @@ class DescribeAuditInstanceListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+     * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
      * @param string $NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
      * @param integer $AuditSwitch 审计状态标识，0-未开通审计；1-已开通审计，默认为0。
      * @param integer $Offset 偏移量，默认为0。

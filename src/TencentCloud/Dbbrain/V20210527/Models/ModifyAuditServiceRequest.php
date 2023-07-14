@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuditService请求参数结构体
  *
- * @method string getProduct() 获取服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
  * @method string getNodeRequestType() 获取与Product保持一致。如："dcdb" ,"mariadb"。
  * @method void setNodeRequestType(string $NodeRequestType) 设置与Product保持一致。如："dcdb" ,"mariadb"。
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method integer getLogExpireDay() 获取日志保存总时长，只能是7,30,90,180,365,1095,1825
- * @method void setLogExpireDay(integer $LogExpireDay) 设置日志保存总时长，只能是7,30,90,180,365,1095,1825
- * @method integer getHotLogExpireDay() 获取高频日志保存时长，只能是7,30,90,180,365,1095,1825
- * @method void setHotLogExpireDay(integer $HotLogExpireDay) 设置高频日志保存时长，只能是7,30,90,180,365,1095,1825
+ * @method integer getLogExpireDay() 获取日志保存总时长，只能是7,30,90,180,365,1095,1825。
+ * @method void setLogExpireDay(integer $LogExpireDay) 设置日志保存总时长，只能是7,30,90,180,365,1095,1825。
+ * @method integer getHotLogExpireDay() 获取高频日志保存时长，只能是7,30,90,180,365,1095,1825。
+ * @method void setHotLogExpireDay(integer $HotLogExpireDay) 设置高频日志保存时长，只能是7,30,90,180,365,1095,1825。
  */
 class ModifyAuditServiceRequest extends AbstractModel
 {
     /**
-     * @var string 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+     * @var string 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
      */
     public $Product;
 
@@ -49,21 +49,21 @@ class ModifyAuditServiceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 日志保存总时长，只能是7,30,90,180,365,1095,1825
+     * @var integer 日志保存总时长，只能是7,30,90,180,365,1095,1825。
      */
     public $LogExpireDay;
 
     /**
-     * @var integer 高频日志保存时长，只能是7,30,90,180,365,1095,1825
+     * @var integer 高频日志保存时长，只能是7,30,90,180,365,1095,1825。
      */
     public $HotLogExpireDay;
 
     /**
-     * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+     * @param string $Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
      * @param string $NodeRequestType 与Product保持一致。如："dcdb" ,"mariadb"。
      * @param string $InstanceId 实例ID。
-     * @param integer $LogExpireDay 日志保存总时长，只能是7,30,90,180,365,1095,1825
-     * @param integer $HotLogExpireDay 高频日志保存时长，只能是7,30,90,180,365,1095,1825
+     * @param integer $LogExpireDay 日志保存总时长，只能是7,30,90,180,365,1095,1825。
+     * @param integer $HotLogExpireDay 高频日志保存时长，只能是7,30,90,180,365,1095,1825。
      */
     function __construct()
     {

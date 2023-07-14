@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDayOfWeek(string $DayOfWeek) 设置快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
  * @method string getHour() 获取快照定期备份在一天的哪一小时
  * @method void setHour(string $Hour) 设置快照定期备份在一天的哪一小时
- * @method integer getIsActivated() 获取是否激活定期快照功能
- * @method void setIsActivated(integer $IsActivated) 设置是否激活定期快照功能
+ * @method integer getIsActivated() 获取是否激活定期快照功能,1代表已激活，0代表未激活
+ * @method void setIsActivated(integer $IsActivated) 设置是否激活定期快照功能,1代表已激活，0代表未激活
  * @method string getNextActiveTime() 获取下一次触发快照时间
  * @method void setNextActiveTime(string $NextActiveTime) 设置下一次触发快照时间
- * @method string getStatus() 获取快照策略状态
- * @method void setStatus(string $Status) 设置快照策略状态
+ * @method string getStatus() 获取快照策略状态，1代表快照策略状态正常。这里只有一种状态
+ * @method void setStatus(string $Status) 设置快照策略状态，1代表快照策略状态正常。这里只有一种状态
  * @method integer getAppId() 获取帐号ID
  * @method void setAppId(integer $AppId) 设置帐号ID
  * @method integer getAliveDays() 获取保留时间
@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntervalDays(integer $IntervalDays) 设置快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCrossRegionsAliveDays() 获取跨地域复制的快照保留时间
- * @method void setCrossRegionsAliveDays(integer $CrossRegionsAliveDays) 设置跨地域复制的快照保留时间
+ * @method integer getCrossRegionsAliveDays() 获取跨地域复制的快照保留时间，单位天
+ * @method void setCrossRegionsAliveDays(integer $CrossRegionsAliveDays) 设置跨地域复制的快照保留时间，单位天
  */
 class AutoSnapshotPolicyInfo extends AbstractModel
 {
@@ -90,7 +90,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $Hour;
 
     /**
-     * @var integer 是否激活定期快照功能
+     * @var integer 是否激活定期快照功能,1代表已激活，0代表未激活
      */
     public $IsActivated;
 
@@ -100,7 +100,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $NextActiveTime;
 
     /**
-     * @var string 快照策略状态
+     * @var string 快照策略状态，1代表快照策略状态正常。这里只有一种状态
      */
     public $Status;
 
@@ -137,7 +137,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $IntervalDays;
 
     /**
-     * @var integer 跨地域复制的快照保留时间
+     * @var integer 跨地域复制的快照保留时间，单位天
      */
     public $CrossRegionsAliveDays;
 
@@ -148,9 +148,9 @@ class AutoSnapshotPolicyInfo extends AbstractModel
      * @param integer $FileSystemNums 关联的文件系统个数
      * @param string $DayOfWeek 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
      * @param string $Hour 快照定期备份在一天的哪一小时
-     * @param integer $IsActivated 是否激活定期快照功能
+     * @param integer $IsActivated 是否激活定期快照功能,1代表已激活，0代表未激活
      * @param string $NextActiveTime 下一次触发快照时间
-     * @param string $Status 快照策略状态
+     * @param string $Status 快照策略状态，1代表快照策略状态正常。这里只有一种状态
      * @param integer $AppId 帐号ID
      * @param integer $AliveDays 保留时间
      * @param string $RegionName 地域
@@ -159,7 +159,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IntervalDays 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CrossRegionsAliveDays 跨地域复制的快照保留时间
+     * @param integer $CrossRegionsAliveDays 跨地域复制的快照保留时间，单位天
      */
     function __construct()
     {

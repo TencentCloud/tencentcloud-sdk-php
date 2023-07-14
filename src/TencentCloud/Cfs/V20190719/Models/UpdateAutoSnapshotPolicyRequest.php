@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID
  * @method string getPolicyName() 获取快照策略名称
  * @method void setPolicyName(string $PolicyName) 设置快照策略名称
- * @method string getDayOfWeek() 获取快照定期备份在一星期哪一天
- * @method void setDayOfWeek(string $DayOfWeek) 设置快照定期备份在一星期哪一天
+ * @method string getDayOfWeek() 获取快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
+ * @method void setDayOfWeek(string $DayOfWeek) 设置快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
  * @method string getHour() 获取快照定期备份在一天的哪一小时
  * @method void setHour(string $Hour) 设置快照定期备份在一天的哪一小时
  * @method integer getAliveDays() 获取快照保留日期
  * @method void setAliveDays(integer $AliveDays) 设置快照保留日期
- * @method integer getIsActivated() 获取是否激活定期快照功能
- * @method void setIsActivated(integer $IsActivated) 设置是否激活定期快照功能
+ * @method integer getIsActivated() 获取是否激活定期快照功能；1代表激活，0代表未激活
+ * @method void setIsActivated(integer $IsActivated) 设置是否激活定期快照功能；1代表激活，0代表未激活
  * @method string getDayOfMonth() 获取定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
  * @method void setDayOfMonth(string $DayOfMonth) 设置定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
  * @method integer getIntervalDays() 获取间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
@@ -50,7 +50,7 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
     public $PolicyName;
 
     /**
-     * @var string 快照定期备份在一星期哪一天
+     * @var string 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
      */
     public $DayOfWeek;
 
@@ -65,7 +65,7 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
     public $AliveDays;
 
     /**
-     * @var integer 是否激活定期快照功能
+     * @var integer 是否激活定期快照功能；1代表激活，0代表未激活
      */
     public $IsActivated;
 
@@ -82,10 +82,10 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
     /**
      * @param string $AutoSnapshotPolicyId 快照策略ID
      * @param string $PolicyName 快照策略名称
-     * @param string $DayOfWeek 快照定期备份在一星期哪一天
+     * @param string $DayOfWeek 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
      * @param string $Hour 快照定期备份在一天的哪一小时
      * @param integer $AliveDays 快照保留日期
-     * @param integer $IsActivated 是否激活定期快照功能
+     * @param integer $IsActivated 是否激活定期快照功能；1代表激活，0代表未激活
      * @param string $DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
      * @param integer $IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
      */

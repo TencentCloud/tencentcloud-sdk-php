@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，取值范围[1,200]
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，取值范围[1,200]
- * @method string getCode() 获取手机或者邮箱精确搜索
- * @method void setCode(string $Code) 设置手机或者邮箱精确搜索
+ * @method string getCode() 获取手机或者邮箱，用于精确搜索
+ * @method void setCode(string $Code) 设置手机或者邮箱，用于精确搜索
  */
 class DescribePhoneEmailListRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribePhoneEmailListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 手机或者邮箱精确搜索
+     * @var string 手机或者邮箱，用于精确搜索
      */
     public $Code;
 
@@ -55,7 +55,7 @@ class DescribePhoneEmailListRequest extends AbstractModel
      * @param integer $Type 0：所有类型  1：手机  2：邮箱，默认0
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，取值范围[1,200]
-     * @param string $Code 手机或者邮箱精确搜索
+     * @param string $Code 手机或者邮箱，用于精确搜索
      */
     function __construct()
     {

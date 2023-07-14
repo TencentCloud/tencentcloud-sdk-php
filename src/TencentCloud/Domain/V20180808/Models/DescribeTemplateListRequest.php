@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置用户注册类型，默认:all , 个人：I ,企业: E
  * @method string getStatus() 获取认证状态：未实名审核:NotUpload, 实名审核中:InAudit，已实名审核:Approved，实名审核失败:Reject，更新手机邮箱:NotVerified。
  * @method void setStatus(string $Status) 设置认证状态：未实名审核:NotUpload, 实名审核中:InAudit，已实名审核:Approved，实名审核失败:Reject，更新手机邮箱:NotVerified。
- * @method string getKeyword() 获取域名所有者筛选
- * @method void setKeyword(string $Keyword) 设置域名所有者筛选
+ * @method string getKeyword() 获取关键字，用于域名所有者筛选
+ * @method void setKeyword(string $Keyword) 设置关键字，用于域名所有者筛选
  */
 class DescribeTemplateListRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeTemplateListRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 域名所有者筛选
+     * @var string 关键字，用于域名所有者筛选
      */
     public $Keyword;
 
@@ -63,7 +63,7 @@ class DescribeTemplateListRequest extends AbstractModel
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param string $Type 用户注册类型，默认:all , 个人：I ,企业: E
      * @param string $Status 认证状态：未实名审核:NotUpload, 实名审核中:InAudit，已实名审核:Approved，实名审核失败:Reject，更新手机邮箱:NotVerified。
-     * @param string $Keyword 域名所有者筛选
+     * @param string $Keyword 关键字，用于域名所有者筛选
      */
     function __construct()
     {

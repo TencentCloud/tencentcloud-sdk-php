@@ -100,10 +100,10 @@ HANDWRITE -手写签名
  * @method void setSignId(string $SignId) 设置签署ID
 - 发起流程时系统自动补充
 - 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
- * @method string getNotifyType() 获取SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效)
- * @method void setNotifyType(string $NotifyType) 设置SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效)
+ * @method string getNotifyType() 获取SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效)
+ * @method void setNotifyType(string $NotifyType) 设置SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效)
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -228,8 +228,8 @@ HANDWRITE -手写签名
     public $SignId;
 
     /**
-     * @var string SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效)
+     * @var string SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效)
      */
     public $NotifyType;
 
@@ -269,8 +269,8 @@ HANDWRITE -手写签名
      * @param string $SignId 签署ID
 - 发起流程时系统自动补充
 - 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
-     * @param string $NotifyType SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效)
+     * @param string $NotifyType SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效)
      */
     function __construct()
     {

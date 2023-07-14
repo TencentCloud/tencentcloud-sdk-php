@@ -22,15 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNormalText() 获取输入文本正则化的结果。（包括对英文文本中的开头和实体进行大写等）
  * @method void setNormalText(string $NormalText) 设置输入文本正则化的结果。（包括对英文文本中的开头和实体进行大写等）
- * @method array getBasicParticiples() 获取基础粒度分词和词性标注的结果。（词性表请参见附录）
+ * @method array getBasicParticiples() 获取基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
+ * @method void setBasicParticiples(array $BasicParticiples) 设置基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
+ * @method array getCompoundParticiples() 获取复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
+ * @method void setCompoundParticiples(array $CompoundParticiples) 设置复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
+ * @method array getEntities() 获取实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
 
- * @method void setBasicParticiples(array $BasicParticiples) 设置基础粒度分词和词性标注的结果。（词性表请参见附录）
-
- * @method array getCompoundParticiples() 获取复合粒度分词和词性标注的结果。（词性表请参见附录）
- * @method void setCompoundParticiples(array $CompoundParticiples) 设置复合粒度分词和词性标注的结果。（词性表请参见附录）
- * @method array getEntities() 获取实体识别结果。（实体类型数据请参见附录）
-
- * @method void setEntities(array $Entities) 设置实体识别结果。（实体类型数据请参见附录）
+ * @method void setEntities(array $Entities) 设置实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
 
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,18 +41,17 @@ class ParseWordsResponse extends AbstractModel
     public $NormalText;
 
     /**
-     * @var array 基础粒度分词和词性标注的结果。（词性表请参见附录）
-
+     * @var array 基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
      */
     public $BasicParticiples;
 
     /**
-     * @var array 复合粒度分词和词性标注的结果。（词性表请参见附录）
+     * @var array 复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
      */
     public $CompoundParticiples;
 
     /**
-     * @var array 实体识别结果。（实体类型数据请参见附录）
+     * @var array 实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
 
      */
     public $Entities;
@@ -66,10 +63,9 @@ class ParseWordsResponse extends AbstractModel
 
     /**
      * @param string $NormalText 输入文本正则化的结果。（包括对英文文本中的开头和实体进行大写等）
-     * @param array $BasicParticiples 基础粒度分词和词性标注的结果。（词性表请参见附录）
-
-     * @param array $CompoundParticiples 复合粒度分词和词性标注的结果。（词性表请参见附录）
-     * @param array $Entities 实体识别结果。（实体类型数据请参见附录）
+     * @param array $BasicParticiples 基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
+     * @param array $CompoundParticiples 复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
+     * @param array $Entities 实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
 
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

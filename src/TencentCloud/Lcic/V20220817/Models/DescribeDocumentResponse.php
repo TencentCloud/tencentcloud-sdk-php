@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置更新的UNIX时间戳
  * @method integer getPages() 获取课件页数
  * @method void setPages(integer $Pages) 设置课件页数
+ * @method string getPreview() 获取课件预览地址
+ * @method void setPreview(string $Preview) 设置课件预览地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -131,6 +133,11 @@ class DescribeDocumentResponse extends AbstractModel
     public $Pages;
 
     /**
+     * @var string 课件预览地址
+     */
+    public $Preview;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +158,7 @@ class DescribeDocumentResponse extends AbstractModel
      * @param integer $DocumentSize 文档大小，单位：字节
      * @param integer $UpdateTime 更新的UNIX时间戳
      * @param integer $Pages 课件页数
+     * @param string $Preview 课件预览地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -224,6 +232,10 @@ class DescribeDocumentResponse extends AbstractModel
 
         if (array_key_exists("Pages",$param) and $param["Pages"] !== null) {
             $this->Pages = $param["Pages"];
+        }
+
+        if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
+            $this->Preview = $param["Preview"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

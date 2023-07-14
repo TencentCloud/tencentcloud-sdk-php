@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClassifyContent返回参数结构体
  *
- * @method Category getFirstClassification() 获取一级分类。分类详情见附录-三级分类体系表。
- * @method void setFirstClassification(Category $FirstClassification) 设置一级分类。分类详情见附录-三级分类体系表。
- * @method Category getSecondClassification() 获取二级分类。分类详情见附录-三级分类体系表。
- * @method void setSecondClassification(Category $SecondClassification) 设置二级分类。分类详情见附录-三级分类体系表。
- * @method Category getThirdClassification() 获取三级分类。分类详情见附录-三级分类体系表。
+ * @method Category getFirstClassification() 获取一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
+ * @method void setFirstClassification(Category $FirstClassification) 设置一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
+ * @method Category getSecondClassification() 获取二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
+ * @method void setSecondClassification(Category $SecondClassification) 设置二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
+ * @method Category getThirdClassification() 获取三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThirdClassification(Category $ThirdClassification) 设置三级分类。分类详情见附录-三级分类体系表。
+ * @method void setThirdClassification(Category $ThirdClassification) 设置三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class ClassifyContentResponse extends AbstractModel
 {
     /**
-     * @var Category 一级分类。分类详情见附录-三级分类体系表。
+     * @var Category 一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
      */
     public $FirstClassification;
 
     /**
-     * @var Category 二级分类。分类详情见附录-三级分类体系表。
+     * @var Category 二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
      */
     public $SecondClassification;
 
     /**
-     * @var Category 三级分类。分类详情见附录-三级分类体系表。
+     * @var Category 三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThirdClassification;
@@ -55,9 +55,9 @@ class ClassifyContentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Category $FirstClassification 一级分类。分类详情见附录-三级分类体系表。
-     * @param Category $SecondClassification 二级分类。分类详情见附录-三级分类体系表。
-     * @param Category $ThirdClassification 三级分类。分类详情见附录-三级分类体系表。
+     * @param Category $FirstClassification 一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
+     * @param Category $SecondClassification 二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
+     * @param Category $ThirdClassification 三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

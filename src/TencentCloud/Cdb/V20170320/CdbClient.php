@@ -79,6 +79,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 本接口(DescribeAsyncRequestInfo)用于查询云数据库实例异步任务的执行结果。
  * @method Models\DescribeAuditConfigResponse DescribeAuditConfig(Models\DescribeAuditConfigRequest $req) 本接口(DescribeAuditConfig)用于查询云数据库审计策略的服务配置，包括审计日志保存时长等。
  * @method Models\DescribeAuditLogFilesResponse DescribeAuditLogFiles(Models\DescribeAuditLogFilesRequest $req) 本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
+ * @method Models\DescribeAuditLogsResponse DescribeAuditLogs(Models\DescribeAuditLogsRequest $req) 本接口(DescribeAuditLogs)用于查询数据库审计日志。
  * @method Models\DescribeAuditPoliciesResponse DescribeAuditPolicies(Models\DescribeAuditPoliciesRequest $req) 本接口(DescribeAuditPolicies)用于查询云数据库实例的审计策略。
  * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) 本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
  * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) 本接口(DescribeBackupConfig)用于查询数据库备份配置信息。

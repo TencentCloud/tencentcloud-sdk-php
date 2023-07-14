@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperateResult() 获取描述模版可见性更改的结果，和参数中Available无关，全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示。
+ * @method string getOperateResult() 获取描述模板可见性更改的结果，和参数中Available无关，全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateResult(string $OperateResult) 设置描述模版可见性更改的结果，和参数中Available无关，全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示。
+ * @method void setOperateResult(string $OperateResult) 设置描述模板可见性更改的结果，和参数中Available无关，全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthTag() 获取模板可见性, 全部可见-"all", 部分可见-"part"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,7 +62,7 @@ class OperateChannelTemplateResponse extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 描述模版可见性更改的结果，和参数中Available无关，全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示。
+     * @var string 描述模板可见性更改的结果，和参数中Available无关，全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateResult;
@@ -95,7 +95,7 @@ class OperateChannelTemplateResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateId 第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OperateResult 描述模版可见性更改的结果，和参数中Available无关，全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示。
+     * @param string $OperateResult 描述模板可见性更改的结果，和参数中Available无关，全部成功-"all-success",部分成功-"part-success", 全部失败-"fail"失败的会在FailMessageList中展示。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthTag 模板可见性, 全部可见-"all", 部分可见-"part"
 注意：此字段可能返回 null，表示取不到有效值。

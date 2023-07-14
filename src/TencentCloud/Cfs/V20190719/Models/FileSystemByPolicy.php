@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationToken(string $CreationToken) 设置文件系统名称
  * @method string getFileSystemId() 获取文件系统ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
- * @method integer getSizeByte() 获取文件系统大小
- * @method void setSizeByte(integer $SizeByte) 设置文件系统大小
- * @method string getStorageType() 获取存储类型
- * @method void setStorageType(string $StorageType) 设置存储类型
- * @method integer getTotalSnapshotSize() 获取快照总大小
- * @method void setTotalSnapshotSize(integer $TotalSnapshotSize) 设置快照总大小
+ * @method integer getSizeByte() 获取文件系统大小，单位Byte
+ * @method void setSizeByte(integer $SizeByte) 设置文件系统大小，单位Byte
+ * @method string getStorageType() 获取存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
+ * @method void setStorageType(string $StorageType) 设置存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
+ * @method integer getTotalSnapshotSize() 获取快照总大小，单位GiB
+ * @method void setTotalSnapshotSize(integer $TotalSnapshotSize) 设置快照总大小，单位GiB
  * @method string getCreationTime() 获取文件系统创建时间
  * @method void setCreationTime(string $CreationTime) 设置文件系统创建时间
  * @method integer getZoneId() 获取文件系统所在区ID
@@ -48,17 +48,17 @@ class FileSystemByPolicy extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var integer 文件系统大小
+     * @var integer 文件系统大小，单位Byte
      */
     public $SizeByte;
 
     /**
-     * @var string 存储类型
+     * @var string 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
      */
     public $StorageType;
 
     /**
-     * @var integer 快照总大小
+     * @var integer 快照总大小，单位GiB
      */
     public $TotalSnapshotSize;
 
@@ -75,9 +75,9 @@ class FileSystemByPolicy extends AbstractModel
     /**
      * @param string $CreationToken 文件系统名称
      * @param string $FileSystemId 文件系统ID
-     * @param integer $SizeByte 文件系统大小
-     * @param string $StorageType 存储类型
-     * @param integer $TotalSnapshotSize 快照总大小
+     * @param integer $SizeByte 文件系统大小，单位Byte
+     * @param string $StorageType 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
+     * @param integer $TotalSnapshotSize 快照总大小，单位GiB
      * @param string $CreationTime 文件系统创建时间
      * @param integer $ZoneId 文件系统所在区ID
      */

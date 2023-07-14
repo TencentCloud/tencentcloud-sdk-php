@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeApiEnvironmentStrategy返回参数结构体
+ * DeleteAddressTemplate返回参数结构体
  *
- * @method ApiEnvironmentStrategyStatus getResult() 获取api绑定策略详情
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(ApiEnvironmentStrategyStatus $Result) 设置api绑定策略详情
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取删除结果,0成功
+ * @method void setStatus(integer $Status) 设置删除结果,0成功
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeApiEnvironmentStrategyResponse extends AbstractModel
+class DeleteAddressTemplateResponse extends AbstractModel
 {
     /**
-     * @var ApiEnvironmentStrategyStatus api绑定策略详情
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 删除结果,0成功
      */
-    public $Result;
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class DescribeApiEnvironmentStrategyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ApiEnvironmentStrategyStatus $Result api绑定策略详情
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 删除结果,0成功
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,9 +54,8 @@ class DescribeApiEnvironmentStrategyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ApiEnvironmentStrategyStatus();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

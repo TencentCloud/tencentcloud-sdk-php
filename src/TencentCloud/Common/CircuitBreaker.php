@@ -46,7 +46,6 @@ class Counter
 class CircuitBreaker
 {
     public $breakerSetting;
-//    public $lock;
     public $counter;
     public $state;
     public $expiry;
@@ -55,7 +54,6 @@ class CircuitBreaker
     public function __construct($breakerSetting)
     {
         $this->breakerSetting = $breakerSetting;
-//        $this->lock = new \Mutex();
         $this->counter = new Counter();
         $this->state = STATE_CLOSED;
         $this->expiry = time() + $breakerSetting->windowInterval;
@@ -108,10 +106,8 @@ class CircuitBreaker
     
     public function beforeRequests()
     {
-//        $this->lock->lock();
         $now = time();
         list($state, $generation) = $this->currentState($now);
-//        $this->lock->unlock();
         if ($state == STATE_OPEN) {
             return array($generation, true);
         }
@@ -120,10 +116,8 @@ class CircuitBreaker
     
     public function afterRequests($before, $success)
     {
-//        $this->lock->lock();
         $now = time();
         list($state, $generation) = $this->currentState($now);
-//        $this->lock->unlock();
         if ($generation != $before) {
             return;
         }
@@ -140,7 +134,7 @@ class CircuitBreaker
             $this->counter->onSuccess();
         } elseif ($state == STATE_HALF_OPEN) {
             $this->counter->onSuccess();
-            if ($this->counter->total - $this->counter->failures >= $this->breakerSetting->max_requests) {
+            if ($this->counter->total - $this->counter->failures >= $this->breakerSetting->maxRequests) {
                 $this->switchState(STATE_CLOSED, $now);
             }
         }

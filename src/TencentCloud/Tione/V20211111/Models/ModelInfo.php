@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelType(string $ModelType) 设置默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelFormat() 获取模型格式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelFormat(string $ModelFormat) 设置模型格式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelInfo extends AbstractModel
 {
@@ -89,6 +93,12 @@ class ModelInfo extends AbstractModel
     public $ModelType;
 
     /**
+     * @var string 模型格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelFormat;
+
+    /**
      * @param string $ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
 自动学习类型的模型填写自动学习的任务id
      * @param string $ModelId 模型id
@@ -99,6 +109,8 @@ class ModelInfo extends AbstractModel
      * @param string $AlgorithmFramework 模型对应的算法框架，预留
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelType 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelFormat 模型格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -145,6 +157,10 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("ModelType",$param) and $param["ModelType"] !== null) {
             $this->ModelType = $param["ModelType"];
+        }
+
+        if (array_key_exists("ModelFormat",$param) and $param["ModelFormat"] !== null) {
+            $this->ModelFormat = $param["ModelFormat"];
         }
     }
 }

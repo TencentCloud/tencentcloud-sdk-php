@@ -32,7 +32,13 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateBatchCancelFlowUrlResponse CreateBatchCancelFlowUrl(Models\CreateBatchCancelFlowUrlRequest $req) 注：此接口将会废弃，请使用撤销单个签署流程（CancelFlow）接口。
 指定需要批量撤回的签署流程Id，获取批量撤销链接。
 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回。
- * @method Models\CreateChannelSubOrganizationModifyQrCodeResponse CreateChannelSubOrganizationModifyQrCode(Models\CreateChannelSubOrganizationModifyQrCodeRequest $req) 生成子客编辑企业信息二维码
+ * @method Models\CreateChannelSubOrganizationModifyQrCodeResponse CreateChannelSubOrganizationModifyQrCode(Models\CreateChannelSubOrganizationModifyQrCodeRequest $req) 根据产品要求，调整接口目录
+
+新接口：ChannelCreateOrganizationModifyQrCode 
+
+老接口目前无线上流量，测试用例已下线处理
+
+生成子客编辑企业信息二维码
  * @method Models\CreateConvertTaskApiResponse CreateConvertTaskApi(Models\CreateConvertTaskApiRequest $req) 上传了word、excel、图片文件后，通过该接口发起文件转换任务，将word、excel、图片文件转换为pdf文件。
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建签署流程电子文档
 适用场景：见创建签署流程接口。

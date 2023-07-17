@@ -30,11 +30,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method PriceResource getPriceSpec() 获取询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,7 +64,7 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
     /**
      * @var string 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
@@ -93,7 +93,7 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceResource $PriceSpec 询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。

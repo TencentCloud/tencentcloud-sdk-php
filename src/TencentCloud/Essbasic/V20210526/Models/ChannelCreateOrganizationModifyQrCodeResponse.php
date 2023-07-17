@@ -14,23 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAMQPVHost返回参数结构体
+ * ChannelCreateOrganizationModifyQrCode返回参数结构体
  *
+ * @method string getQrCodeUrl() 获取二维码下载链接
+ * @method void setQrCodeUrl(string $QrCodeUrl) 设置二维码下载链接
+ * @method integer getExpiredTime() 获取二维码失效时间 UNIX 时间戳 精确到秒
+ * @method void setExpiredTime(integer $ExpiredTime) 设置二维码失效时间 UNIX 时间戳 精确到秒
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAMQPVHostResponse extends AbstractModel
+class ChannelCreateOrganizationModifyQrCodeResponse extends AbstractModel
 {
+    /**
+     * @var string 二维码下载链接
+     */
+    public $QrCodeUrl;
+
+    /**
+     * @var integer 二维码失效时间 UNIX 时间戳 精确到秒
+     */
+    public $ExpiredTime;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $QrCodeUrl 二维码下载链接
+     * @param integer $ExpiredTime 二维码失效时间 UNIX 时间戳 精确到秒
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class CreateAMQPVHostResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("QrCodeUrl",$param) and $param["QrCodeUrl"] !== null) {
+            $this->QrCodeUrl = $param["QrCodeUrl"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

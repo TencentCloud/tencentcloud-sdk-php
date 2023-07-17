@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalVersion(string $OriginalVersion) 设置原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateUserId() 获取创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateUserId(integer $CreateUserId) 设置创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatorNickName() 获取创建账号ID昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatorNickName(string $CreatorNickName) 设置创建账号ID昵称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -106,6 +114,18 @@ class DescribeFirmwareTaskResponse extends AbstractModel
     public $OriginalVersion;
 
     /**
+     * @var integer 创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateUserId;
+
+    /**
+     * @var string 创建账号ID昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatorNickName;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -126,6 +146,10 @@ class DescribeFirmwareTaskResponse extends AbstractModel
      * @param string $ProductId 产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalVersion 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateUserId 创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatorNickName 创建账号ID昵称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -172,6 +196,14 @@ class DescribeFirmwareTaskResponse extends AbstractModel
 
         if (array_key_exists("OriginalVersion",$param) and $param["OriginalVersion"] !== null) {
             $this->OriginalVersion = $param["OriginalVersion"];
+        }
+
+        if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
+            $this->CreateUserId = $param["CreateUserId"];
+        }
+
+        if (array_key_exists("CreatorNickName",$param) and $param["CreatorNickName"] !== null) {
+            $this->CreatorNickName = $param["CreatorNickName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

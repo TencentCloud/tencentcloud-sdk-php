@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceDescription(string $ServiceDescription) 设置服务描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ServiceInfo getServiceInfo() 获取服务的详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceInfo(ServiceInfo $ServiceInfo) 设置服务的详细信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取集群id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群id
@@ -49,6 +53,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceGroupId() 获取包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupId(string $ResourceGroupId) 设置包年包月服务的资源组id，按量计费的服务为空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupName() 获取包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIngressName() 获取服务所在的 ingress 的 name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIngressName(string $IngressName) 设置服务所在的 ingress 的 name
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedBy() 获取创建者
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,33 +90,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置app_id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取版本号
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置版本号
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLatestVersion() 获取服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatestVersion(string $LatestVersion) 设置服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。
- * @method ServiceInfo getServiceInfo() 获取服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceInfo(ServiceInfo $ServiceInfo) 设置服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessStatus() 获取服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessStatus(string $BusinessStatus) 设置服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateSource() 获取服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+ * @method ServiceLimit getServiceLimit() 获取已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateSource(string $CreateSource) 设置服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+ * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBillingInfo() 获取费用信息
+ * @method ScheduledAction getScheduledAction() 获取已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBillingInfo(string $BillingInfo) 设置费用信息
+ * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置已废弃
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateFailedReason() 获取服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateFailedReason(string $CreateFailedReason) 设置服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取服务状态
 CREATING 创建中
@@ -122,33 +126,29 @@ Abnormal 异常
 Pending 启动中
 Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillingInfo() 获取费用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingInfo(string $BillingInfo) 设置费用信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取模型权重
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置模型权重
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIngressName() 获取服务所在的 ingress 的 name
+ * @method string getCreateSource() 获取服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIngressName(string $IngressName) 设置服务所在的 ingress 的 name
+ * @method void setCreateSource(string $CreateSource) 设置服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ServiceLimit getServiceLimit() 获取服务限速限流相关配置
+ * @method string getVersion() 获取版本号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置服务限速限流相关配置
+ * @method void setVersion(string $Version) 设置版本号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduledAction getScheduledAction() 获取定时停止的配置
+ * @method string getLatestVersion() 获取服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置定时停止的配置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateFailedReason() 获取服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateFailedReason(string $CreateFailedReason) 设置服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceGroupName() 获取包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceGroupName(string $ResourceGroupName) 设置包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取服务的标签
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置服务的标签
+ * @method void setLatestVersion(string $LatestVersion) 设置服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Service extends AbstractModel
@@ -173,6 +173,12 @@ class Service extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceDescription;
+
+    /**
+     * @var ServiceInfo 服务的详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceInfo;
 
     /**
      * @var string 集群id
@@ -203,6 +209,24 @@ class Service extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
+
+    /**
+     * @var string 包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupName;
+
+    /**
+     * @var array 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string 服务所在的 ingress 的 name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IngressName;
 
     /**
      * @var string 创建者
@@ -241,42 +265,28 @@ class Service extends AbstractModel
     public $AppId;
 
     /**
-     * @var string 版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Version;
-
-    /**
-     * @var string 服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $LatestVersion;
-
-    /**
-     * @var ServiceInfo 服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ServiceInfo;
-
-    /**
      * @var string 服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessStatus;
 
     /**
-     * @var string 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * @var ServiceLimit 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CreateSource;
+    public $ServiceLimit;
 
     /**
-     * @var string 费用信息
+     * @var ScheduledAction 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BillingInfo;
+    public $ScheduledAction;
+
+    /**
+     * @var string 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateFailedReason;
 
     /**
      * @var string 服务状态
@@ -293,52 +303,44 @@ Waiting 就绪中
     public $Status;
 
     /**
+     * @var string 费用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingInfo;
+
+    /**
      * @var integer 模型权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
-     * @var string 服务所在的 ingress 的 name
+     * @var string 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $IngressName;
+    public $CreateSource;
 
     /**
-     * @var ServiceLimit 服务限速限流相关配置
+     * @var string 版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ServiceLimit;
+    public $Version;
 
     /**
-     * @var ScheduledAction 定时停止的配置
+     * @var string 服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ScheduledAction;
-
-    /**
-     * @var string 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CreateFailedReason;
-
-    /**
-     * @var string 包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ResourceGroupName;
-
-    /**
-     * @var array 服务的标签
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Tags;
+    public $LatestVersion;
 
     /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceId 服务id
      * @param string $ServiceGroupName 服务组名
      * @param string $ServiceDescription 服务描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceInfo $ServiceInfo 服务的详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -349,6 +351,12 @@ Waiting 就绪中
      * @param string $ChargeType 付费类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupId 包年包月服务的资源组id，按量计费的服务为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName 包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IngressName 服务所在的 ingress 的 name
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedBy 创建者
 注意：此字段可能返回 null，表示取不到有效值。
@@ -362,19 +370,13 @@ Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId app_id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LatestVersion 服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceInfo $ServiceInfo 服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessStatus 服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateSource 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * @param ServiceLimit $ServiceLimit 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BillingInfo 费用信息
+     * @param ScheduledAction $ScheduledAction 已废弃
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 服务状态
 CREATING 创建中
@@ -386,19 +388,17 @@ Abnormal 异常
 Pending 启动中
 Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillingInfo 费用信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 模型权重
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IngressName 服务所在的 ingress 的 name
+     * @param string $CreateSource 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
+     * @param string $Version 版本号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduledAction $ScheduledAction 定时停止的配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceGroupName 包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 服务的标签
+     * @param string $LatestVersion 服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -430,6 +430,11 @@ Waiting 就绪中
             $this->ServiceDescription = $param["ServiceDescription"];
         }
 
+        if (array_key_exists("ServiceInfo",$param) and $param["ServiceInfo"] !== null) {
+            $this->ServiceInfo = new ServiceInfo();
+            $this->ServiceInfo->deserialize($param["ServiceInfo"]);
+        }
+
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
         }
@@ -448,6 +453,23 @@ Waiting 就绪中
 
         if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
             $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("IngressName",$param) and $param["IngressName"] !== null) {
+            $this->IngressName = $param["IngressName"];
         }
 
         if (array_key_exists("CreatedBy",$param) and $param["CreatedBy"] !== null) {
@@ -474,41 +496,8 @@ Waiting 就绪中
             $this->AppId = $param["AppId"];
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
-        }
-
-        if (array_key_exists("LatestVersion",$param) and $param["LatestVersion"] !== null) {
-            $this->LatestVersion = $param["LatestVersion"];
-        }
-
-        if (array_key_exists("ServiceInfo",$param) and $param["ServiceInfo"] !== null) {
-            $this->ServiceInfo = new ServiceInfo();
-            $this->ServiceInfo->deserialize($param["ServiceInfo"]);
-        }
-
         if (array_key_exists("BusinessStatus",$param) and $param["BusinessStatus"] !== null) {
             $this->BusinessStatus = $param["BusinessStatus"];
-        }
-
-        if (array_key_exists("CreateSource",$param) and $param["CreateSource"] !== null) {
-            $this->CreateSource = $param["CreateSource"];
-        }
-
-        if (array_key_exists("BillingInfo",$param) and $param["BillingInfo"] !== null) {
-            $this->BillingInfo = $param["BillingInfo"];
-        }
-
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
-        }
-
-        if (array_key_exists("IngressName",$param) and $param["IngressName"] !== null) {
-            $this->IngressName = $param["IngressName"];
         }
 
         if (array_key_exists("ServiceLimit",$param) and $param["ServiceLimit"] !== null) {
@@ -525,17 +514,28 @@ Waiting 就绪中
             $this->CreateFailedReason = $param["CreateFailedReason"];
         }
 
-        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
-            $this->ResourceGroupName = $param["ResourceGroupName"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new Tag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
+        if (array_key_exists("BillingInfo",$param) and $param["BillingInfo"] !== null) {
+            $this->BillingInfo = $param["BillingInfo"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("CreateSource",$param) and $param["CreateSource"] !== null) {
+            $this->CreateSource = $param["CreateSource"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("LatestVersion",$param) and $param["LatestVersion"] !== null) {
+            $this->LatestVersion = $param["LatestVersion"];
         }
     }
 }

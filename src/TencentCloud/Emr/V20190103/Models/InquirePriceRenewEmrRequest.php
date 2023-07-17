@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) 设置实例续费的时间单位。取值范围：
 <li>m：表示月份。</li>
  * @method string getCurrency() 获取货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
  * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
  */
 class InquirePriceRenewEmrRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class InquirePriceRenewEmrRequest extends AbstractModel
 
     /**
      * @var string 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      */
     public $Currency;
 
@@ -79,7 +79,7 @@ class InquirePriceRenewEmrRequest extends AbstractModel
      * @param string $TimeUnit 实例续费的时间单位。取值范围：
 <li>m：表示月份。</li>
      * @param string $Currency 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      */
     function __construct()
     {

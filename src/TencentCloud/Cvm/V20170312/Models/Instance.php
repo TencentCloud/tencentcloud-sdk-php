@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRdmaIpAddresses(array $RdmaIpAddresses) 设置高性能计算集群`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDedicatedClusterId() 获取实例所在的专用集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置实例所在的专用集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolatedSource() 获取实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolatedSource(string $IsolatedSource) 设置实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
@@ -308,6 +312,12 @@ class Instance extends AbstractModel
     public $RdmaIpAddresses;
 
     /**
+     * @var string 实例所在的专用集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @var string 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -389,6 +399,8 @@ class Instance extends AbstractModel
      * @param string $HpcClusterId 高性能计算集群`ID`。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RdmaIpAddresses 高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DedicatedClusterId 实例所在的专用集群`ID`。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -559,6 +571,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("RdmaIpAddresses",$param) and $param["RdmaIpAddresses"] !== null) {
             $this->RdmaIpAddresses = $param["RdmaIpAddresses"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
 
         if (array_key_exists("IsolatedSource",$param) and $param["IsolatedSource"] !== null) {

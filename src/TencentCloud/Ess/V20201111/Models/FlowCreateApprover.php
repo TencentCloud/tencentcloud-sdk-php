@@ -76,6 +76,20 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 - 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
  * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。
  * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。
+ * @method array getSignComponents() 获取签署人签署控件
+ * @method void setSignComponents(array $SignComponents) 设置签署人签署控件
+ * @method array getComponents() 获取签署人填写控件
+ * @method void setComponents(array $Components) 设置签署人填写控件
+ * @method array getComponentLimitType() 获取签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+ * @method void setComponentLimitType(array $ComponentLimitType) 设置签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -189,6 +203,25 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $ApproverNeedSignReview;
 
     /**
+     * @var array 签署人签署控件
+     */
+    public $SignComponents;
+
+    /**
+     * @var array 签署人填写控件
+     */
+    public $Components;
+
+    /**
+     * @var array 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     */
+    public $ComponentLimitType;
+
+    /**
      * @param integer $ApproverType 参与者类型：
 0：企业
 1：个人
@@ -217,6 +250,13 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 - 发起流程时系统自动补充
 - 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
      * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。
+     * @param array $SignComponents 签署人签署控件
+     * @param array $Components 签署人填写控件
+     * @param array $ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
      */
     function __construct()
     {
@@ -311,6 +351,28 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
         if (array_key_exists("ApproverNeedSignReview",$param) and $param["ApproverNeedSignReview"] !== null) {
             $this->ApproverNeedSignReview = $param["ApproverNeedSignReview"];
+        }
+
+        if (array_key_exists("SignComponents",$param) and $param["SignComponents"] !== null) {
+            $this->SignComponents = [];
+            foreach ($param["SignComponents"] as $key => $value){
+                $obj = new Component();
+                $obj->deserialize($value);
+                array_push($this->SignComponents, $obj);
+            }
+        }
+
+        if (array_key_exists("Components",$param) and $param["Components"] !== null) {
+            $this->Components = [];
+            foreach ($param["Components"] as $key => $value){
+                $obj = new Component();
+                $obj->deserialize($value);
+                array_push($this->Components, $obj);
+            }
+        }
+
+        if (array_key_exists("ComponentLimitType",$param) and $param["ComponentLimitType"] !== null) {
+            $this->ComponentLimitType = $param["ComponentLimitType"];
         }
     }
 }

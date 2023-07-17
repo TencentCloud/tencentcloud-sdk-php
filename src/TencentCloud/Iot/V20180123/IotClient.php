@@ -65,7 +65,9 @@ use TencentCloud\Iot\V20180123\Models as Models;
  * @method Models\IssueDeviceControlResponse IssueDeviceControl(Models\IssueDeviceControlRequest $req) 提供下发控制指令到指定设备的能力，该接口适用于使用高级版类型的产品。
  * @method Models\PublishMsgResponse PublishMsg(Models\PublishMsgRequest $req) 提供向指定的Topic发布消息的能力，常用于向设备下发控制指令。该接口只适用于产品版本为“基础版”类型的产品，使用高级版的产品需使用“下发设备控制指令”接口
  * @method Models\ResetDeviceResponse ResetDevice(Models\ResetDeviceRequest $req) 重置设备操作，将会为设备生成新的证书及清空最新数据，需谨慎操作。
- * @method Models\UnassociateSubDeviceFromGatewayProductResponse UnassociateSubDeviceFromGatewayProduct(Models\UnassociateSubDeviceFromGatewayProductRequest $req) 取消子设备产品与网关设备产品的关联
+ * @method Models\UnassociateSubDeviceFromGatewayProductResponse UnassociateSubDeviceFromGatewayProduct(Models\UnassociateSubDeviceFromGatewayProductRequest $req) 业务无客户使用，下线接口。
+
+取消子设备产品与网关设备产品的关联
  * @method Models\UpdateProductResponse UpdateProduct(Models\UpdateProductRequest $req) 提供修改产品信息及数据模板的能力。
  * @method Models\UpdateRuleResponse UpdateRule(Models\UpdateRuleRequest $req) 更新规则
  */

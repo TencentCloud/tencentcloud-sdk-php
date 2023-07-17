@@ -29,10 +29,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscountCost(float $DiscountCost) 设置折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeSpan() 获取实例续费的时长。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -57,7 +57,7 @@ class InquiryPriceRenewInstanceResponse extends AbstractModel
 
     /**
      * @var string 实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
@@ -79,7 +79,7 @@ class InquiryPriceRenewInstanceResponse extends AbstractModel
      * @param float $DiscountCost 折扣价，单位为元。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 实例续费的时间单位。取值范围：
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeSpan 实例续费的时长。
 注意：此字段可能返回 null，表示取不到有效值。

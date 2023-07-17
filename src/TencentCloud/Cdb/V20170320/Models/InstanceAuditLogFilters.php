@@ -20,10 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 审计日志搜索过滤器
  *
- * @method string getType() 获取过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+ * @method string getType() 获取过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -44,10 +41,7 @@ cpuTime - cpu时间；
 checkRows - 扫描行数；
 affectRows - 影响行数；
 sentRows - 返回行数。
- * @method void setType(string $Type) 设置过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+ * @method void setType(string $Type) 设置过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -86,10 +80,7 @@ RA - 范围。
 class InstanceAuditLogFilters extends AbstractModel
 {
     /**
-     * @var string 过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+     * @var string 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -129,10 +120,7 @@ RA - 范围。
     public $Value;
 
     /**
-     * @param string $Type 过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+     * @param string $Type 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；

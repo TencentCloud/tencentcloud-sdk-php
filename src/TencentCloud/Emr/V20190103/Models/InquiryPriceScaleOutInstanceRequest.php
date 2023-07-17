@@ -47,9 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskCount() 获取扩容的Task节点数量。
  * @method void setTaskCount(integer $TaskCount) 设置扩容的Task节点数量。
  * @method string getCurrency() 获取货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
  * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
  * @method integer getRouterCount() 获取扩容的Router节点数量。
  * @method void setRouterCount(integer $RouterCount) 设置扩容的Router节点数量。
  * @method integer getMasterCount() 获取扩容的Master节点数量。
@@ -100,7 +100,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 
     /**
      * @var string 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      */
     public $Currency;
 
@@ -129,7 +129,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
      * @param integer $CoreCount 扩容的Core节点数量。
      * @param integer $TaskCount 扩容的Task节点数量。
      * @param string $Currency 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      * @param integer $RouterCount 扩容的Router节点数量。
      * @param integer $MasterCount 扩容的Master节点数量。
      */

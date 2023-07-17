@@ -24,14 +24,20 @@ use TencentCloud\Common\AbstractModel;
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置云盘类型
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVolume() 获取云盘大小
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolume(integer $Volume) 设置云盘大小
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MultiDisk extends AbstractModel
 {
@@ -40,16 +46,19 @@ class MultiDisk extends AbstractModel
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var integer 云盘大小
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Volume;
 
     /**
      * @var integer 该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
@@ -58,8 +67,11 @@ class MultiDisk extends AbstractModel
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Volume 云盘大小
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

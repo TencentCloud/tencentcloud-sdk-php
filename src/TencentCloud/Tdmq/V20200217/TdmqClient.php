@@ -26,21 +26,6 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\AcknowledgeMessageResponse AcknowledgeMessage(Models\AcknowledgeMessageRequest $req) 根据提供的 MessageID 确认指定 topic 中的消息
  * @method Models\ClearCmqQueueResponse ClearCmqQueue(Models\ClearCmqQueueRequest $req) 清空cmq消息队列中的消息
  * @method Models\ClearCmqSubscriptionFilterTagsResponse ClearCmqSubscriptionFilterTags(Models\ClearCmqSubscriptionFilterTagsRequest $req) 清空订阅者消息标签
- * @method Models\CreateAMQPClusterResponse CreateAMQPCluster(Models\CreateAMQPClusterRequest $req) 产品下线了，对应的接口也要下线。
-
-创建AMQP集群
- * @method Models\CreateAMQPExchangeResponse CreateAMQPExchange(Models\CreateAMQPExchangeRequest $req) 产品下线了，对应的接口也要下线。
-
-创建AMQP Exchange
- * @method Models\CreateAMQPQueueResponse CreateAMQPQueue(Models\CreateAMQPQueueRequest $req) 产品下线了，对应的接口也要下线。
-
-创建AMQP队列
- * @method Models\CreateAMQPRouteRelationResponse CreateAMQPRouteRelation(Models\CreateAMQPRouteRelationRequest $req) 产品下线了，对应的接口也要下线。
-
-创建AMQP路由关系
- * @method Models\CreateAMQPVHostResponse CreateAMQPVHost(Models\CreateAMQPVHostRequest $req) 产品下线了，对应的接口也要下线。
-
-创建Amqp Vhost
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建用户的集群
  * @method Models\CreateCmqQueueResponse CreateCmqQueue(Models\CreateCmqQueueRequest $req) 创建cmq队列接口
  * @method Models\CreateCmqSubscribeResponse CreateCmqSubscribe(Models\CreateCmqSubscribeRequest $req) 创建cmq订阅接口
@@ -57,21 +42,6 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) 创建角色
  * @method Models\CreateSubscriptionResponse CreateSubscription(Models\CreateSubscriptionRequest $req) 创建一个主题的订阅关系
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 新增指定分区、类型的消息主题
- * @method Models\DeleteAMQPClusterResponse DeleteAMQPCluster(Models\DeleteAMQPClusterRequest $req) 产品下线了，对应的接口也要下线。
-
-删除AMQP集群
- * @method Models\DeleteAMQPExchangeResponse DeleteAMQPExchange(Models\DeleteAMQPExchangeRequest $req) 产品下线了，对应的接口也要下线。
-
-删除Amqp交换机
- * @method Models\DeleteAMQPQueueResponse DeleteAMQPQueue(Models\DeleteAMQPQueueRequest $req) 产品下线了，对应的接口也要下线。
-
-删除Amqp队列
- * @method Models\DeleteAMQPRouteRelationResponse DeleteAMQPRouteRelation(Models\DeleteAMQPRouteRelationRequest $req) 产品下线了，对应的接口也要下线。
-
-删除Amqp路由关系
- * @method Models\DeleteAMQPVHostResponse DeleteAMQPVHost(Models\DeleteAMQPVHostRequest $req) 产品下线了，对应的接口也要下线。
-
-删除Vhost
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除集群
  * @method Models\DeleteCmqQueueResponse DeleteCmqQueue(Models\DeleteCmqQueueRequest $req) 删除cmq队列
  * @method Models\DeleteCmqSubscribeResponse DeleteCmqSubscribe(Models\DeleteCmqSubscribeRequest $req) 删除cmq订阅
@@ -88,25 +58,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DeleteRolesResponse DeleteRoles(Models\DeleteRolesRequest $req) 删除角色，支持批量。
  * @method Models\DeleteSubscriptionsResponse DeleteSubscriptions(Models\DeleteSubscriptionsRequest $req) 删除订阅关系
  * @method Models\DeleteTopicsResponse DeleteTopics(Models\DeleteTopicsRequest $req) 批量删除topics
- * @method Models\DescribeAMQPClusterResponse DescribeAMQPCluster(Models\DescribeAMQPClusterRequest $req) 产品下线了，对应的接口也要下线。
-
-获取单个Amqp集群信息
  * @method Models\DescribeAMQPClustersResponse DescribeAMQPClusters(Models\DescribeAMQPClustersRequest $req) 获取amqp集群列表
- * @method Models\DescribeAMQPCreateQuotaResponse DescribeAMQPCreateQuota(Models\DescribeAMQPCreateQuotaRequest $req) 产品下线了，对应的接口也要下线。
-
-获取用户的配额，如Queue容量，Exchange容量，Vhost容量，单Vhost Tps数,剩余可创建集群数
- * @method Models\DescribeAMQPExchangesResponse DescribeAMQPExchanges(Models\DescribeAMQPExchangesRequest $req) 产品下线了，对应的接口也要下线。
-
-获取AMQP Exchange列表
- * @method Models\DescribeAMQPQueuesResponse DescribeAMQPQueues(Models\DescribeAMQPQueuesRequest $req) 产品下线了，对应的接口也要下线。
-
-获取Amqp队列列表
- * @method Models\DescribeAMQPRouteRelationsResponse DescribeAMQPRouteRelations(Models\DescribeAMQPRouteRelationsRequest $req) 产品下线了，对应的接口也要下线。
-
-获取Amqp路由关系列表
- * @method Models\DescribeAMQPVHostsResponse DescribeAMQPVHosts(Models\DescribeAMQPVHostsRequest $req) 产品下线了，对应的接口也要下线。
-
-获取Amqp Vhost 列表
  * @method Models\DescribeAllTenantsResponse DescribeAllTenants(Models\DescribeAllTenantsRequest $req) 获取某个租户的虚拟集群列表
  * @method Models\DescribeBindClustersResponse DescribeBindClusters(Models\DescribeBindClustersRequest $req) 获取用户绑定的专享集群列表
  * @method Models\DescribeBindVpcsResponse DescribeBindVpcs(Models\DescribeBindVpcsRequest $req) 获取租户VPC绑定关系
@@ -145,12 +97,6 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeSubscriptionsResponse DescribeSubscriptions(Models\DescribeSubscriptionsRequest $req) 查询指定环境和主题下的订阅者列表
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) 获取环境下主题列表
  * @method Models\ModifyAMQPClusterResponse ModifyAMQPCluster(Models\ModifyAMQPClusterRequest $req) 更新Amqp集群信息
- * @method Models\ModifyAMQPExchangeResponse ModifyAMQPExchange(Models\ModifyAMQPExchangeRequest $req) 产品下线了，对应的接口也要下线。
-
-更新Amqp交换机
- * @method Models\ModifyAMQPQueueResponse ModifyAMQPQueue(Models\ModifyAMQPQueueRequest $req) 产品下线了，对应的接口也要下线。
-
-更新Amqp队列
  * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 更新集群信息
  * @method Models\ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(Models\ModifyCmqQueueAttributeRequest $req) 修改cmq队列属性
  * @method Models\ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(Models\ModifyCmqSubscriptionAttributeRequest $req) 修改cmq订阅属性

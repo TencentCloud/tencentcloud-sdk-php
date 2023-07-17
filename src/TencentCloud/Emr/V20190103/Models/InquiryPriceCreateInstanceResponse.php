@@ -30,11 +30,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeSpan() 获取购买实例的时长。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,7 +64,7 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
     /**
      * @var string 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
@@ -93,7 +93,7 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeSpan 购买实例的时长。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -60,8 +60,8 @@ FailedOperation.UnKnowError：表示识别失败；
 15：非税发票
 16：全电发票
 17：医疗发票
- * @method Polygon getPolygon() 获取旋转后的图片四点坐标。
- * @method void setPolygon(Polygon $Polygon) 设置旋转后的图片四点坐标。
+ * @method Polygon getPolygon() 获取该发票在原图片中的四点坐标。
+ * @method void setPolygon(Polygon $Polygon) 设置该发票在原图片中的四点坐标。
  * @method float getAngle() 获取识别出的图片在混贴票据图片中的旋转角度。
  * @method void setAngle(float $Angle) 设置识别出的图片在混贴票据图片中的旋转角度。
  * @method SingleInvoiceItem getSingleInvoiceInfos() 获取识别到的内容。
@@ -108,7 +108,7 @@ FailedOperation.UnKnowError：表示识别失败；
     public $Type;
 
     /**
-     * @var Polygon 旋转后的图片四点坐标。
+     * @var Polygon 该发票在原图片中的四点坐标。
      */
     public $Polygon;
 
@@ -168,7 +168,7 @@ FailedOperation.UnKnowError：表示识别失败；
 15：非税发票
 16：全电发票
 17：医疗发票
-     * @param Polygon $Polygon 旋转后的图片四点坐标。
+     * @param Polygon $Polygon 该发票在原图片中的四点坐标。
      * @param float $Angle 识别出的图片在混贴票据图片中的旋转角度。
      * @param SingleInvoiceItem $SingleInvoiceInfos 识别到的内容。
      * @param integer $Page 发票处于识别图片或PDF文件中的页教，默认从1开始。

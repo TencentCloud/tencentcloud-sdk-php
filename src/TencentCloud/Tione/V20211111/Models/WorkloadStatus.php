@@ -46,6 +46,10 @@ Stopping 停止中
  * @method void setStatefulSetCondition(array $StatefulSetCondition) 设置工作负载的状况信息
  * @method array getConditions() 获取工作负载历史的状况信息
  * @method void setConditions(array $Conditions) 设置工作负载历史的状况信息
+ * @method string getReason() 获取状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReason(string $Reason) 设置状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkloadStatus extends AbstractModel
 {
@@ -95,6 +99,12 @@ Stopping 停止中
     public $Conditions;
 
     /**
+     * @var string 状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Reason;
+
+    /**
      * @param integer $Replicas 当前实例数
      * @param integer $UpdatedReplicas 更新的实例数
      * @param integer $ReadyReplicas 就绪的实例数
@@ -108,6 +118,8 @@ Pending 启动中
 Stopping 停止中
      * @param array $StatefulSetCondition 工作负载的状况信息
      * @param array $Conditions 工作负载历史的状况信息
+     * @param string $Reason 状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -162,6 +174,10 @@ Stopping 停止中
                 $obj->deserialize($value);
                 array_push($this->Conditions, $obj);
             }
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

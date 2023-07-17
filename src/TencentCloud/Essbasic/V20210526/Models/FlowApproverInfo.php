@@ -74,10 +74,16 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署完回调url，最大长度1000个字符
  * @method array getSignComponents() 获取使用PDF文件直接发起合同时，签署人指定的签署控件
  * @method void setSignComponents(array $SignComponents) 设置使用PDF文件直接发起合同时，签署人指定的签署控件
- * @method array getComponentLimitType() 获取个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
-HANDWRITE -手写签名
- * @method void setComponentLimitType(array $ComponentLimitType) 设置个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
-HANDWRITE -手写签名
+ * @method array getComponentLimitType() 获取	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+ * @method void setComponentLimitType(array $ComponentLimitType) 设置	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
  * @method integer getPreReadTime() 获取合同的强制预览时间：3~300s，未指定则按合同页数计算
  * @method void setPreReadTime(integer $PreReadTime) 设置合同的强制预览时间：3~300s，未指定则按合同页数计算
  * @method string getJumpUrl() 获取签署完前端跳转的url，此字段的用法场景请联系客户经理确认
@@ -183,8 +189,11 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     public $SignComponents;
 
     /**
-     * @var array 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
-HANDWRITE -手写签名
+     * @var array 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
      */
     public $ComponentLimitType;
 
@@ -256,8 +265,11 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      * @param integer $Deadline 签署截止时间戳，默认一年
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符
      * @param array $SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件
-     * @param array $ComponentLimitType 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
-HANDWRITE -手写签名
+     * @param array $ComponentLimitType 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
      * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
      * @param string $JumpUrl 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
      * @param ApproverOption $ApproverOption 签署人个性化能力值

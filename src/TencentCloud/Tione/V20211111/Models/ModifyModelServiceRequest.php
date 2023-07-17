@@ -106,6 +106,8 @@ HYBRID_PAID:
  * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置服务限速限流相关配置
  * @method VolumeMount getVolumeMount() 获取挂载配置，目前只支持CFS
  * @method void setVolumeMount(VolumeMount $VolumeMount) 设置挂载配置，目前只支持CFS
+ * @method boolean getModelTurboEnable() 获取是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
+ * @method void setModelTurboEnable(boolean $ModelTurboEnable) 设置是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -233,6 +235,11 @@ HYBRID_PAID:
     public $VolumeMount;
 
     /**
+     * @var boolean 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
+     */
+    public $ModelTurboEnable;
+
+    /**
      * @param string $ServiceId 服务id
      * @param ModelInfo $ModelInfo 模型信息，需要挂载模型时填写
      * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
@@ -276,6 +283,7 @@ HYBRID_PAID:
      * @param ScheduledAction $ScheduledAction 定时停止配置
      * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
      * @param VolumeMount $VolumeMount 挂载配置，目前只支持CFS
+     * @param boolean $ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
      */
     function __construct()
     {
@@ -386,6 +394,10 @@ HYBRID_PAID:
         if (array_key_exists("VolumeMount",$param) and $param["VolumeMount"] !== null) {
             $this->VolumeMount = new VolumeMount();
             $this->VolumeMount->deserialize($param["VolumeMount"]);
+        }
+
+        if (array_key_exists("ModelTurboEnable",$param) and $param["ModelTurboEnable"] !== null) {
+            $this->ModelTurboEnable = $param["ModelTurboEnable"];
         }
     }
 }

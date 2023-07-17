@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) 设置备份策略(0-实例备份 1-多库备份)
  * @method array getDBNames() 获取需要备份库名的列表(多库备份才填写)
  * @method void setDBNames(array $DBNames) 设置需要备份库名的列表(多库备份才填写)
- * @method string getInstanceId() 获取实例ID，形如mssql-i1z41iwd
- * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-i1z41iwd
+ * @method string getInstanceId() 获取实例ID（必填），形如mssql-i1z41iwd
+ * @method void setInstanceId(string $InstanceId) 设置实例ID（必填），形如mssql-i1z41iwd
  * @method string getBackupName() 获取备份名称，若不填则自动生成“实例ID_备份开始时间戳”
  * @method void setBackupName(string $BackupName) 设置备份名称，若不填则自动生成“实例ID_备份开始时间戳”
  */
@@ -42,7 +42,7 @@ class CreateBackupRequest extends AbstractModel
     public $DBNames;
 
     /**
-     * @var string 实例ID，形如mssql-i1z41iwd
+     * @var string 实例ID（必填），形如mssql-i1z41iwd
      */
     public $InstanceId;
 
@@ -54,7 +54,7 @@ class CreateBackupRequest extends AbstractModel
     /**
      * @param integer $Strategy 备份策略(0-实例备份 1-多库备份)
      * @param array $DBNames 需要备份库名的列表(多库备份才填写)
-     * @param string $InstanceId 实例ID，形如mssql-i1z41iwd
+     * @param string $InstanceId 实例ID（必填），形如mssql-i1z41iwd
      * @param string $BackupName 备份名称，若不填则自动生成“实例ID_备份开始时间戳”
      */
     function __construct()

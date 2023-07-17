@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPipelineArgs(string $PipelineArgs) 设置Stable Diffusion 模型优化参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLoraScale() 获取Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoraScale(string $LoraScale) 设置Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HyperParameter extends AbstractModel
 {
@@ -104,6 +108,12 @@ class HyperParameter extends AbstractModel
     public $PipelineArgs;
 
     /**
+     * @var string Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoraScale;
+
+    /**
      * @param string $MaxNNZ 最大nnz数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SlotNum slot数
@@ -119,6 +129,8 @@ class HyperParameter extends AbstractModel
      * @param string $MinBlockSizeTf FROZEN_GRAPH、SAVED_MODEL格式在进行优化时切分子图的最小算子数目，一般无需进行改动，默认为10
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PipelineArgs Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LoraScale Stable Diffusion 模型优化参数，控制Lora模型的影响效果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class HyperParameter extends AbstractModel
 
         if (array_key_exists("PipelineArgs",$param) and $param["PipelineArgs"] !== null) {
             $this->PipelineArgs = $param["PipelineArgs"];
+        }
+
+        if (array_key_exists("LoraScale",$param) and $param["LoraScale"] !== null) {
+            $this->LoraScale = $param["LoraScale"];
         }
     }
 }

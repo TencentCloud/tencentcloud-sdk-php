@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为10，最大值为100。
  * @method string getOrderField() 获取排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
  * @method void setOrderField(string $OrderField) 设置排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
- * @method integer getAsc() 获取按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
- * @method void setAsc(integer $Asc) 设置按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
+ * @method integer getAsc() 获取按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
+ * @method void setAsc(integer $Asc) 设置按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
  * @method array getFilters() 获取自定义查询
  * @method void setFilters(array $Filters) 设置自定义查询
  */
@@ -56,7 +56,7 @@ class DescribeInstancesListRequest extends AbstractModel
     public $OrderField;
 
     /**
-     * @var integer 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
+     * @var integer 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
      */
     public $Asc;
 
@@ -70,7 +70,7 @@ class DescribeInstancesListRequest extends AbstractModel
      * @param integer $Offset 页编号，默认值为0，表示第一页。
      * @param integer $Limit 每页返回数量，默认值为10，最大值为100。
      * @param string $OrderField 排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
-     * @param integer $Asc 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
+     * @param integer $Asc 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
      * @param array $Filters 自定义查询
      */
     function __construct()

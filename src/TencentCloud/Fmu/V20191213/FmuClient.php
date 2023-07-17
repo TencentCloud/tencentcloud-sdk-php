@@ -24,7 +24,7 @@ use TencentCloud\Fmu\V20191213\Models as Models;
 
 /**
  * @method Models\BeautifyPicResponse BeautifyPic(Models\BeautifyPicRequest $req) 用户上传一张人脸图片（最多能处理一张图片中最大的五张人脸信息），精准定位五官，实现美肤、亮肤、祛痘等美颜功能。
- * @method Models\BeautifyVideoResponse BeautifyVideo(Models\BeautifyVideoRequest $req) 视频美颜
+ * @method Models\BeautifyVideoResponse BeautifyVideo(Models\BeautifyVideoRequest $req) 视频美颜(此接口目前已下线)
  * @method Models\CancelBeautifyVideoJobResponse CancelBeautifyVideoJob(Models\CancelBeautifyVideoJobRequest $req) 撤销视频美颜任务请求
  * @method Models\CreateModelResponse CreateModel(Models\CreateModelRequest $req) 在使用LUT素材的modelid实现试唇色前，您需要先上传 LUT 格式的cube文件注册唇色ID。查看 [LUT文件的使用说明](https://cloud.tencent.com/document/product/1172/41701)。
 

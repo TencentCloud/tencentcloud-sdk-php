@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
  * @method string getCurrency() 获取货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
  * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
  * @method integer getPayMode() 获取实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
@@ -121,7 +121,7 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 
     /**
      * @var string 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      */
     public $Currency;
 
@@ -222,7 +222,7 @@ Hadoop-Hbase
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      * @param string $Currency 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      * @param integer $PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>

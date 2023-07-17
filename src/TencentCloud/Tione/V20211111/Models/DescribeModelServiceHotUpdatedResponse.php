@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelServiceHotUpdated返回参数结构体
  *
+ * @method string getModelTurboFlag() 获取模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
+ * @method void setModelTurboFlag(string $ModelTurboFlag) 设置模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeModelServiceHotUpdatedResponse extends AbstractModel
 {
     /**
+     * @var string 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
+     */
+    public $ModelTurboFlag;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $ModelTurboFlag 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeModelServiceHotUpdatedResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ModelTurboFlag",$param) and $param["ModelTurboFlag"] !== null) {
+            $this->ModelTurboFlag = $param["ModelTurboFlag"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

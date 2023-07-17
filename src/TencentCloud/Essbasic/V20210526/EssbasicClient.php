@@ -73,6 +73,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 - 模板中配置的签署顺序是无序
 - B端企业的签署方式是静默签署
 - B端企业是非首位签署
+ * @method Models\ChannelCreateOrganizationModifyQrCodeResponse ChannelCreateOrganizationModifyQrCode(Models\ChannelCreateOrganizationModifyQrCodeRequest $req) 生成渠道子客编辑企业信息二维码
  * @method Models\ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlow(Models\ChannelCreatePrepareFlowRequest $req) 创建预发起合同
 通过此接口指定：合同，签署人，填写控件信息，生成预创建合同链接，点击后跳转到web页面完成合同创建并发起
 可指定合同信息不可更改，签署人信息不可更改

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-njj2mtpl
- * @method string getGroupId() 获取聚合ID, 可通过接口DescribeBackups获取
- * @method void setGroupId(string $GroupId) 设置聚合ID, 可通过接口DescribeBackups获取
+ * @method string getGroupId() 获取单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
+ * @method void setGroupId(string $GroupId) 设置单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
  * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1-100，默认值为20
  * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为20
  * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
@@ -41,7 +41,7 @@ class DescribeBackupFilesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 聚合ID, 可通过接口DescribeBackups获取
+     * @var string 单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
      */
     public $GroupId;
 
@@ -67,7 +67,7 @@ class DescribeBackupFilesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
-     * @param string $GroupId 聚合ID, 可通过接口DescribeBackups获取
+     * @param string $GroupId 单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
      * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
      * @param integer $Offset 分页返回，页编号，默认值为第0页
      * @param string $DatabaseName 按照备份的库名称筛选，不填则不筛选此项

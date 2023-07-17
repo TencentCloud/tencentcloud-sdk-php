@@ -120,6 +120,10 @@ HYBRID_PAID:
  * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置服务限速限流相关配置
  * @method string getCallbackUrl() 获取回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+ * @method boolean getModelTurboEnable() 获取是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+ * @method void setModelTurboEnable(boolean $ModelTurboEnable) 设置是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+ * @method string getServiceCategory() 获取服务分类
+ * @method void setServiceCategory(string $ServiceCategory) 设置服务分类
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -282,6 +286,16 @@ HYBRID_PAID:
     public $CallbackUrl;
 
     /**
+     * @var boolean 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     */
+    public $ModelTurboEnable;
+
+    /**
+     * @var string 服务分类
+     */
+    public $ServiceCategory;
+
+    /**
      * @param string $ServiceGroupId 新增版本时需要填写
      * @param string $ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
      * @param string $ServiceDescription 模型服务的描述
@@ -332,6 +346,8 @@ HYBRID_PAID:
      * @param VolumeMount $VolumeMount 挂载配置，目前只支持CFS
      * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
      * @param string $CallbackUrl 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+     * @param boolean $ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * @param string $ServiceCategory 服务分类
      */
     function __construct()
     {
@@ -475,6 +491,14 @@ HYBRID_PAID:
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("ModelTurboEnable",$param) and $param["ModelTurboEnable"] !== null) {
+            $this->ModelTurboEnable = $param["ModelTurboEnable"];
+        }
+
+        if (array_key_exists("ServiceCategory",$param) and $param["ServiceCategory"] !== null) {
+            $this->ServiceCategory = $param["ServiceCategory"];
         }
     }
 }

@@ -48,6 +48,54 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getDeviceId() 获取设备ID
  * @method void setDeviceId(string $DeviceId) 设置设备ID
+ * @method string getVer() 获取sdk版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVer(string $Ver) 设置sdk版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSdkMode() 获取模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSdkMode(string $SdkMode) 设置模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDecodeCost() 获取解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDecodeCost(array $DecodeCost) 设置解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRenderConst() 获取渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRenderConst(array $RenderConst) 设置渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getK100() 获取卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setK100(array $K100) 设置卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getK150() 获取卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setK150(array $K150) 设置卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNACK() 获取nack请求数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNACK(array $NACK) 设置nack请求数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBitRateEstimate() 获取服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBitRateEstimate(array $BitRateEstimate) 设置服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWidth() 获取宽度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWidth(integer $Width) 设置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHeight() 获取高度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeight(integer $Height) 设置高度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEncodeCost() 获取编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncodeCost(array $EncodeCost) 设置编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCaptureCost() 获取采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCaptureCost(array $CaptureCost) 设置采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SessionDeviceDetail extends AbstractModel
 {
@@ -122,6 +170,78 @@ class SessionDeviceDetail extends AbstractModel
     public $DeviceId;
 
     /**
+     * @var string sdk版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ver;
+
+    /**
+     * @var string 模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SdkMode;
+
+    /**
+     * @var array 解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DecodeCost;
+
+    /**
+     * @var array 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RenderConst;
+
+    /**
+     * @var array 卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $K100;
+
+    /**
+     * @var array 卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $K150;
+
+    /**
+     * @var array nack请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NACK;
+
+    /**
+     * @var array 服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BitRateEstimate;
+
+    /**
+     * @var integer 宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Width;
+
+    /**
+     * @var integer 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Height;
+
+    /**
+     * @var array 编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncodeCost;
+
+    /**
+     * @var array 采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CaptureCost;
+
+    /**
      * @param string $DeviceType 设备类型：field或remote
      * @param integer $StartTime 起始点位时间，单位：秒
      * @param integer $EndTime 结束点位时间，单位：秒
@@ -136,6 +256,30 @@ class SessionDeviceDetail extends AbstractModel
      * @param array $TimeOffset 时间偏移量，单位：秒
      * @param string $ProjectId 项目ID
      * @param string $DeviceId 设备ID
+     * @param string $Ver sdk版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SdkMode 模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DecodeCost 解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RenderConst 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $K100 卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $K150 卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NACK nack请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BitRateEstimate 服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Width 宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Height 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $EncodeCost 编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CaptureCost 采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +348,54 @@ class SessionDeviceDetail extends AbstractModel
 
         if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
             $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("Ver",$param) and $param["Ver"] !== null) {
+            $this->Ver = $param["Ver"];
+        }
+
+        if (array_key_exists("SdkMode",$param) and $param["SdkMode"] !== null) {
+            $this->SdkMode = $param["SdkMode"];
+        }
+
+        if (array_key_exists("DecodeCost",$param) and $param["DecodeCost"] !== null) {
+            $this->DecodeCost = $param["DecodeCost"];
+        }
+
+        if (array_key_exists("RenderConst",$param) and $param["RenderConst"] !== null) {
+            $this->RenderConst = $param["RenderConst"];
+        }
+
+        if (array_key_exists("K100",$param) and $param["K100"] !== null) {
+            $this->K100 = $param["K100"];
+        }
+
+        if (array_key_exists("K150",$param) and $param["K150"] !== null) {
+            $this->K150 = $param["K150"];
+        }
+
+        if (array_key_exists("NACK",$param) and $param["NACK"] !== null) {
+            $this->NACK = $param["NACK"];
+        }
+
+        if (array_key_exists("BitRateEstimate",$param) and $param["BitRateEstimate"] !== null) {
+            $this->BitRateEstimate = $param["BitRateEstimate"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
+        }
+
+        if (array_key_exists("Height",$param) and $param["Height"] !== null) {
+            $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("EncodeCost",$param) and $param["EncodeCost"] !== null) {
+            $this->EncodeCost = $param["EncodeCost"];
+        }
+
+        if (array_key_exists("CaptureCost",$param) and $param["CaptureCost"] !== null) {
+            $this->CaptureCost = $param["CaptureCost"];
         }
     }
 }

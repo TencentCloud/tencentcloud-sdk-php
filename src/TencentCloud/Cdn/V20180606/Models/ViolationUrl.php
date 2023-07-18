@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中
  * @method void setUrlStatus(string $UrlStatus) 设置违规资源当前状态
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
@@ -65,7 +65,7 @@ class ViolationUrl extends AbstractModel
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中
      */
     public $UrlStatus;
@@ -88,7 +88,7 @@ complain：申诉进行中
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间

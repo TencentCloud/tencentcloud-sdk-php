@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabasePrimaryKey(string $DatabasePrimaryKey) 设置转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
  * @method FailureParam getDropDlq() 获取死信队列
  * @method void setDropDlq(FailureParam $DropDlq) 设置死信队列
+ * @method array getRecordMappingList() 获取使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+ * @method void setRecordMappingList(array $RecordMappingList) 设置使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+ * @method string getDateField() 获取消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+ * @method void setDateField(string $DateField) 设置消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
  */
 class EsParam extends AbstractModel
 {
@@ -143,6 +147,16 @@ class EsParam extends AbstractModel
     public $DropDlq;
 
     /**
+     * @var array 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+     */
+    public $RecordMappingList;
+
+    /**
+     * @var string 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+     */
+    public $DateField;
+
+    /**
      * @param string $Resource 实例资源
      * @param integer $Port Es的连接port
      * @param string $UserName Es用户名
@@ -160,6 +174,8 @@ class EsParam extends AbstractModel
      * @param DropCls $DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
      * @param string $DatabasePrimaryKey 转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
      * @param FailureParam $DropDlq 死信队列
+     * @param array $RecordMappingList 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+     * @param string $DateField 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
      */
     function __construct()
     {
@@ -242,6 +258,19 @@ class EsParam extends AbstractModel
         if (array_key_exists("DropDlq",$param) and $param["DropDlq"] !== null) {
             $this->DropDlq = new FailureParam();
             $this->DropDlq->deserialize($param["DropDlq"]);
+        }
+
+        if (array_key_exists("RecordMappingList",$param) and $param["RecordMappingList"] !== null) {
+            $this->RecordMappingList = [];
+            foreach ($param["RecordMappingList"] as $key => $value){
+                $obj = new EsRecordMapping();
+                $obj->deserialize($value);
+                array_push($this->RecordMappingList, $obj);
+            }
+        }
+
+        if (array_key_exists("DateField",$param) and $param["DateField"] !== null) {
+            $this->DateField = $param["DateField"];
         }
     }
 }

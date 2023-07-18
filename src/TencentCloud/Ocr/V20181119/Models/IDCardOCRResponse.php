@@ -50,7 +50,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 -9103	身份证翻拍告警，
 -9105	身份证框内遮挡告警，
 -9104	临时身份证告警，
--9106	身份证 PS 告警，
+-9106	身份证疑似存在PS痕迹告警，
 -9107       身份证反光告警。
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展信息，不请求则不返回，具体输入参考示例3和示例4。
 IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
@@ -66,7 +66,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 -9103	身份证翻拍告警，
 -9105	身份证框内遮挡告警，
 -9104	临时身份证告警，
--9106	身份证 PS 告警，
+-9106	身份证疑似存在PS痕迹告警，
 -9107       身份证反光告警。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -128,7 +128,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 -9103	身份证翻拍告警，
 -9105	身份证框内遮挡告警，
 -9104	临时身份证告警，
--9106	身份证 PS 告警，
+-9106	身份证疑似存在PS痕迹告警，
 -9107       身份证反光告警。
      */
     public $AdvancedInfo;
@@ -161,7 +161,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 -9103	身份证翻拍告警，
 -9105	身份证框内遮挡告警，
 -9104	临时身份证告警，
--9106	身份证 PS 告警，
+-9106	身份证疑似存在PS痕迹告警，
 -9107       身份证反光告警。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

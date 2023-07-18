@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogSet(string $LogSet) 设置CLS日志集 | ES集群ID
  * @method string getLogSource() 获取CLS | ES
  * @method void setLogSource(string $LogSource) 设置CLS | ES
+ * @method array getCustomShowTags() 获取用户自定义展示标签列表
+ * @method void setCustomShowTags(array $CustomShowTags) 设置用户自定义展示标签列表
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $LogSource;
 
     /**
+     * @var array 用户自定义展示标签列表
+     */
+    public $CustomShowTags;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名
      * @param array $Tags 标签列表
@@ -152,6 +159,7 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param string $LogTopicID CLS日志主题ID | ES 索引名
      * @param string $LogSet CLS日志集 | ES集群ID
      * @param string $LogSource CLS | ES
+     * @param array $CustomShowTags 用户自定义展示标签列表
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("LogSource",$param) and $param["LogSource"] !== null) {
             $this->LogSource = $param["LogSource"];
+        }
+
+        if (array_key_exists("CustomShowTags",$param) and $param["CustomShowTags"] !== null) {
+            $this->CustomShowTags = $param["CustomShowTags"];
         }
     }
 }

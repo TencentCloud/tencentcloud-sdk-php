@@ -67,15 +67,19 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method array getApproverVerifyTypes() 获取签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
+模板发起的时候,认证方式以模版配置为主
  * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
+模板发起的时候,认证方式以模版配置为主
  * @method array getApproverSignTypes() 获取签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
+模板发起的时候,认证方式以模版配置为主
  * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
+模板发起的时候,认证方式以模版配置为主
  * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
  * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
  */
@@ -167,6 +171,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @var array 签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
+模板发起的时候,认证方式以模版配置为主
      */
     public $ApproverVerifyTypes;
 
@@ -174,6 +179,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @var array 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
+模板发起的时候,认证方式以模版配置为主
      */
     public $ApproverSignTypes;
 
@@ -208,9 +214,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param array $ApproverVerifyTypes 签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
+模板发起的时候,认证方式以模版配置为主
      * @param array $ApproverSignTypes 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
+模板发起的时候,认证方式以模版配置为主
      * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
      */
     function __construct()

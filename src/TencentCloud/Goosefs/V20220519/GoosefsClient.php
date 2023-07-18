@@ -24,6 +24,9 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
 
 /**
  * @method Models\CreateDataRepositoryTaskResponse CreateDataRepositoryTask(Models\CreateDataRepositoryTaskRequest $req) 创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
+ * @method Models\DescribeClusterClientTokenResponse DescribeClusterClientToken(Models\DescribeClusterClientTokenRequest $req) 查询GooseFS集群客户端凭证
+ * @method Models\DescribeClusterRoleTokenResponse DescribeClusterRoleToken(Models\DescribeClusterRoleTokenRequest $req) 查询GooseFS集群角色凭证
+ * @method Models\DescribeClusterRolesResponse DescribeClusterRoles(Models\DescribeClusterRolesRequest $req) 查询GooseFS集群角色
  * @method Models\DescribeDataRepositoryTaskStatusResponse DescribeDataRepositoryTaskStatus(Models\DescribeDataRepositoryTaskStatusRequest $req) 获取数据流通任务实时状态，用作客户端控制
  */
 

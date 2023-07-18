@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份文件下载信息
  *
- * @method string getFileName() 获取备份文件名称
- * @method void setFileName(string $FileName) 设置备份文件名称
- * @method integer getFileSize() 获取备份文件大小，单位B，如果为0，表示无效
- * @method void setFileSize(integer $FileSize) 设置备份文件大小，单位B，如果为0，表示无效
- * @method string getDownloadUrl() 获取备份文件外网下载地址（6小时）
- * @method void setDownloadUrl(string $DownloadUrl) 设置备份文件外网下载地址（6小时）
- * @method string getInnerDownloadUrl() 获取备份文件内网下载地址（6小时）
- * @method void setInnerDownloadUrl(string $InnerDownloadUrl) 设置备份文件内网下载地址（6小时）
+ * @method string getFileName() 获取备份文件名称。
+ * @method void setFileName(string $FileName) 设置备份文件名称。
+ * @method integer getFileSize() 获取备份文件大小，单位B，如果为0，表示无效。
+ * @method void setFileSize(integer $FileSize) 设置备份文件大小，单位B，如果为0，表示无效。
+ * @method string getDownloadUrl() 获取备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
+ * @method void setDownloadUrl(string $DownloadUrl) 设置备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
+ * @method string getInnerDownloadUrl() 获取备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
+ * @method void setInnerDownloadUrl(string $InnerDownloadUrl) 设置备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
  */
 class BackupDownloadInfo extends AbstractModel
 {
     /**
-     * @var string 备份文件名称
+     * @var string 备份文件名称。
      */
     public $FileName;
 
     /**
-     * @var integer 备份文件大小，单位B，如果为0，表示无效
+     * @var integer 备份文件大小，单位B，如果为0，表示无效。
      */
     public $FileSize;
 
     /**
-     * @var string 备份文件外网下载地址（6小时）
+     * @var string 备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
      */
     public $DownloadUrl;
 
     /**
-     * @var string 备份文件内网下载地址（6小时）
+     * @var string 备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
      */
     public $InnerDownloadUrl;
 
     /**
-     * @param string $FileName 备份文件名称
-     * @param integer $FileSize 备份文件大小，单位B，如果为0，表示无效
-     * @param string $DownloadUrl 备份文件外网下载地址（6小时）
-     * @param string $InnerDownloadUrl 备份文件内网下载地址（6小时）
+     * @param string $FileName 备份文件名称。
+     * @param integer $FileSize 备份文件大小，单位B，如果为0，表示无效。
+     * @param string $DownloadUrl 备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
+     * @param string $InnerDownloadUrl 备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
      */
     function __construct()
     {

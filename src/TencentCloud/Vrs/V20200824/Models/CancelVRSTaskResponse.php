@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Vrs\V20200824\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSearchExportList返回参数结构体
+ * CancelVRSTask返回参数结构体
  *
- * @method integer getTaskId() 获取任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
- * @method void setTaskId(integer $TaskId) 设置任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
- * @method string getDownloadUrl() 获取该参数作废
- * @method void setDownloadUrl(string $DownloadUrl) 设置该参数作废
+ * @method CancelVRSTaskRsp getData() 获取任务ID
+ * @method void setData(CancelVRSTaskRsp $Data) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSearchExportListResponse extends AbstractModel
+class CancelVRSTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * @var CancelVRSTaskRsp 任务ID
      */
-    public $TaskId;
-
-    /**
-     * @var string 该参数作废
-     */
-    public $DownloadUrl;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeSearchExportListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-     * @param string $DownloadUrl 该参数作废
+     * @param CancelVRSTaskRsp $Data 任务ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,9 @@ class DescribeSearchExportListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
-        }
-
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new CancelVRSTaskRsp();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

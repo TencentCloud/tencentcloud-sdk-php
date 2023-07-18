@@ -74,6 +74,8 @@ serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费
  * @method void setDomainStatus(array $DomainStatus) 设置域名状态。
 ok：正常
 serverHold：注册局暂停解析 
@@ -88,6 +90,8 @@ serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费
  * @method string getBuyStatus() 获取域名购买状态。
 ok：正常
 RegisterPending：待注册
@@ -212,6 +216,8 @@ serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费
      */
     public $DomainStatus;
 
@@ -317,6 +323,8 @@ serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费
      * @param string $BuyStatus 域名购买状态。
 ok：正常
 RegisterPending：待注册

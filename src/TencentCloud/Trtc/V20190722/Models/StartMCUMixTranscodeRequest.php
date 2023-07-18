@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncodeParams(EncodeParams $EncodeParams) 设置混流输出编码参数。
  * @method LayoutParams getLayoutParams() 获取混流输出布局参数。
  * @method void setLayoutParams(LayoutParams $LayoutParams) 设置混流输出布局参数。
- * @method PublishCdnParams getPublishCdnParams() 获取第三方CDN转推参数。
- * @method void setPublishCdnParams(PublishCdnParams $PublishCdnParams) 设置第三方CDN转推参数。
+ * @method PublishCdnParams getPublishCdnParams() 获取第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
+ * @method void setPublishCdnParams(PublishCdnParams $PublishCdnParams) 设置第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
  */
 class StartMCUMixTranscodeRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class StartMCUMixTranscodeRequest extends AbstractModel
     public $LayoutParams;
 
     /**
-     * @var PublishCdnParams 第三方CDN转推参数。
+     * @var PublishCdnParams 第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
      */
     public $PublishCdnParams;
 
@@ -71,7 +71,7 @@ class StartMCUMixTranscodeRequest extends AbstractModel
      * @param OutputParams $OutputParams 混流输出控制参数。
      * @param EncodeParams $EncodeParams 混流输出编码参数。
      * @param LayoutParams $LayoutParams 混流输出布局参数。
-     * @param PublishCdnParams $PublishCdnParams 第三方CDN转推参数。
+     * @param PublishCdnParams $PublishCdnParams 第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
      */
     function __construct()
     {

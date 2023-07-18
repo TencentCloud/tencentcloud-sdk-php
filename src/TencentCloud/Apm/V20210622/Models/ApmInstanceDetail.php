@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricDuration(integer $MetricDuration) 设置Metric数据保存时长
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCustomShowTags() 获取用户自定义展示标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomShowTags(array $CustomShowTags) 设置用户自定义展示标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -278,6 +282,12 @@ class ApmInstanceDetail extends AbstractModel
     public $MetricDuration;
 
     /**
+     * @var array 用户自定义展示标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomShowTags;
+
+    /**
      * @param float $AmountOfUsedStorage 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例名
@@ -327,6 +337,8 @@ class ApmInstanceDetail extends AbstractModel
      * @param string $LogSet CLS日志集 | ES集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MetricDuration Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CustomShowTags 用户自定义展示标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -449,6 +461,10 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("MetricDuration",$param) and $param["MetricDuration"] !== null) {
             $this->MetricDuration = $param["MetricDuration"];
+        }
+
+        if (array_key_exists("CustomShowTags",$param) and $param["CustomShowTags"] !== null) {
+            $this->CustomShowTags = $param["CustomShowTags"];
         }
     }
 }

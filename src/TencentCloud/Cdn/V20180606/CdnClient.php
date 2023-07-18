@@ -61,7 +61,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribeDDoSDataResponse DescribeDDoSData(Models\DescribeDDoSDataRequest $req) DDoS统计数据查询
  * @method Models\DescribeDiagnoseReportResponse DescribeDiagnoseReport(Models\DescribeDiagnoseReportRequest $req) DescribeDiagnoseReport 用于获取指定报告id的内容， <font color=red>将于 **2023年5月31日** 下线</font><br>
  * @method Models\DescribeDistrictIspDataResponse DescribeDistrictIspData(Models\DescribeDistrictIspDataRequest $req) 查询指定域名的区域、运营商明细数据
-注意事项：接口尚未全量开放，未在内测名单中的账号不支持调用
+注意事项：接口尚未全面开放，未在内测名单中的账号不支持调用
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) DescribeDomains 用于查询内容分发网络加速域名（含境内、境外）基本配置信息，包括项目ID、服务状态，业务类型、创建时间、更新时间等信息。
  * @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) DescribeDomainsConfig 用于查询内容分发网络加速域名（含境内、境外）的所有配置信息。
  * @method Models\DescribeEdgePackTaskStatusResponse DescribeEdgePackTaskStatus(Models\DescribeEdgePackTaskStatusRequest $req) DescribeEdgePackTaskStatus 用于查询动态打包任务状态列表

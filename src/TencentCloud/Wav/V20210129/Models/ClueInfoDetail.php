@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGender(integer $Gender) 设置0：未知，1：男，2：女
  * @method string getCreateTime() 获取线索创建时间戳，单位：秒
  * @method void setCreateTime(string $CreateTime) 设置线索创建时间戳，单位：秒
+ * @method string getUpdateTime() 获取线索创建时间戳，单位：秒
+ * @method void setUpdateTime(string $UpdateTime) 设置线索创建时间戳，单位：秒
  * @method integer getLeadStatus() 获取线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
  * @method void setLeadStatus(integer $LeadStatus) 设置线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
  * @method string getLevelCode() 获取线索意向等级
@@ -262,6 +264,11 @@ class ClueInfoDetail extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 线索创建时间戳，单位：秒
+     */
+    public $UpdateTime;
+
+    /**
      * @var integer 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
      */
     public $LeadStatus;
@@ -441,6 +448,7 @@ class ClueInfoDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Gender 0：未知，1：男，2：女
      * @param string $CreateTime 线索创建时间戳，单位：秒
+     * @param string $UpdateTime 线索创建时间戳，单位：秒
      * @param integer $LeadStatus 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
      * @param string $LevelCode 线索意向等级
      * @param integer $ImportAtTime 线索成功导入的时间戳，单位：秒
@@ -580,6 +588,10 @@ class ClueInfoDetail extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
 
         if (array_key_exists("LeadStatus",$param) and $param["LeadStatus"] !== null) {

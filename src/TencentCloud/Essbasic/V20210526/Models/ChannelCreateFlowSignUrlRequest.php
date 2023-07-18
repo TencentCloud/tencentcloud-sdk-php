@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置用户信息，暂未开放
  * @method OrganizationInfo getOrganization() 获取机构信息，暂未开放
  * @method void setOrganization(OrganizationInfo $Organization) 设置机构信息，暂未开放
+ * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+ * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
  */
 class ChannelCreateFlowSignUrlRequest extends AbstractModel
 {
@@ -61,11 +63,17 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
     public $Organization;
 
     /**
+     * @var string 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     */
+    public $JumpUrl;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      * @param string $FlowId 流程编号
      * @param array $FlowApproverInfos 流程签署人，其中Name和Mobile必传，其他可不传，ApproverType目前只支持PERSON类型的签署人，如果不传默认为该值。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
      * @param UserInfo $Operator 用户信息，暂未开放
      * @param OrganizationInfo $Organization 机构信息，暂未开放
+     * @param string $JumpUrl 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
      */
     function __construct()
     {
@@ -106,6 +114,10 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
         if (array_key_exists("Organization",$param) and $param["Organization"] !== null) {
             $this->Organization = new OrganizationInfo();
             $this->Organization->deserialize($param["Organization"]);
+        }
+
+        if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
+            $this->JumpUrl = $param["JumpUrl"];
         }
     }
 }

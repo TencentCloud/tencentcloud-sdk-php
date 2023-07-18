@@ -152,6 +152,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebAttack(integer $WebAttack) 设置web攻击
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getServiceRisk() 获取风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceRisk(integer $ServiceRisk) 设置风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainAssetVO extends AbstractModel
 {
@@ -354,6 +358,12 @@ class DomainAssetVO extends AbstractModel
     public $WebAttack;
 
     /**
+     * @var integer 风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceRisk;
+
+    /**
      * @param array $AssetId 资产id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssetName 资产名
@@ -419,6 +429,8 @@ class DomainAssetVO extends AbstractModel
      * @param integer $CCAttack cc攻击
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WebAttack web攻击
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ServiceRisk 风险服务暴露数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -569,6 +581,10 @@ class DomainAssetVO extends AbstractModel
 
         if (array_key_exists("WebAttack",$param) and $param["WebAttack"] !== null) {
             $this->WebAttack = $param["WebAttack"];
+        }
+
+        if (array_key_exists("ServiceRisk",$param) and $param["ServiceRisk"] !== null) {
+            $this->ServiceRisk = $param["ServiceRisk"];
         }
     }
 }

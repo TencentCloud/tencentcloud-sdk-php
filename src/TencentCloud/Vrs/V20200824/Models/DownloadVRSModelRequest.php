@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Vrs\V20200824\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSearchExportList请求参数结构体
+ * DownloadVRSModel请求参数结构体
  *
- * @method string getQuery() 获取ES查询条件JSON
- * @method void setQuery(string $Query) 设置ES查询条件JSON
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
  */
-class DescribeSearchExportListRequest extends AbstractModel
+class DownloadVRSModelRequest extends AbstractModel
 {
     /**
-     * @var string ES查询条件JSON
+     * @var string 任务ID
      */
-    public $Query;
+    public $TaskId;
 
     /**
-     * @param string $Query ES查询条件JSON
+     * @param string $TaskId 任务ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeSearchExportListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
-            $this->Query = $param["Query"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

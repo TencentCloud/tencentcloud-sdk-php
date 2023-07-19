@@ -37,6 +37,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DeleteEngineResponse DeleteEngine(Models\DeleteEngineRequest $req) 删除引擎实例
  * @method Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse DescribeCloudNativeAPIGatewayCanaryRules(Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest $req) 查询云原生网关灰度规则列表
  * @method Models\DescribeCloudNativeAPIGatewayNodesResponse DescribeCloudNativeAPIGatewayNodes(Models\DescribeCloudNativeAPIGatewayNodesRequest $req) 获取云原生网关节点列表
+ * @method Models\DescribeCloudNativeAPIGatewayPortsResponse DescribeCloudNativeAPIGatewayPorts(Models\DescribeCloudNativeAPIGatewayPortsRequest $req) 获取云原生API网关实例端口信息
  * @method Models\DescribeCloudNativeAPIGatewayRouteRateLimitResponse DescribeCloudNativeAPIGatewayRouteRateLimit(Models\DescribeCloudNativeAPIGatewayRouteRateLimitRequest $req) 查询云原生网关的限流插件(路由)
  * @method Models\DescribeCloudNativeAPIGatewayRoutesResponse DescribeCloudNativeAPIGatewayRoutes(Models\DescribeCloudNativeAPIGatewayRoutesRequest $req) 查询云原生网关路由列表
  * @method Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse DescribeCloudNativeAPIGatewayServiceRateLimit(Models\DescribeCloudNativeAPIGatewayServiceRateLimitRequest $req) 查询云原生网关的限流插件(服务)

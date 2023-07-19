@@ -14,23 +14,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PutMonitorData返回参数结构体
+ * DeleteFilePath返回参数结构体
  *
+ * @method array getUserFileList() 获取文件列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserFileList(array $UserFileList) 设置文件列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class PutMonitorDataResponse extends AbstractModel
+class DeleteFilePathResponse extends AbstractModel
 {
+    /**
+     * @var array 文件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserFileList;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $UserFileList 文件列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +58,15 @@ class PutMonitorDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("UserFileList",$param) and $param["UserFileList"] !== null) {
+            $this->UserFileList = [];
+            foreach ($param["UserFileList"] as $key => $value){
+                $obj = new UserFileInfo();
+                $obj->deserialize($value);
+                array_push($this->UserFileList, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

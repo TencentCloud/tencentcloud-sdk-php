@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
  * @method void setMemSize(integer $MemSize) 设置配置变更后，每个分片持久化内存容量，单位：GB。
 <ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
- * @method integer getMachineCpu() 获取CPU 核数。
- * @method void setMachineCpu(integer $MachineCpu) 设置CPU 核数。
+ * @method integer getMachineCpu() 获取CPU 核数，可忽略不传
+ * @method void setMachineCpu(integer $MachineCpu) 设置CPU 核数，可忽略不传
  * @method integer getMachineMemory() 获取实例内存容量，单位：GB。
 <ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
  * @method void setMachineMemory(integer $MachineMemory) 设置实例内存容量，单位：GB。
@@ -55,7 +55,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $MemSize;
 
     /**
-     * @var integer CPU 核数。
+     * @var integer CPU 核数，可忽略不传
      */
     public $MachineCpu;
 
@@ -81,7 +81,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param string $InstanceId 实例 ID。
      * @param integer $MemSize 配置变更后，每个分片持久化内存容量，单位：GB。
 <ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
-     * @param integer $MachineCpu CPU 核数。
+     * @param integer $MachineCpu CPU 核数，可忽略不传
      * @param integer $MachineMemory 实例内存容量，单位：GB。
 <ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
      * @param integer $ShardNum 配置变更后，分片数量。

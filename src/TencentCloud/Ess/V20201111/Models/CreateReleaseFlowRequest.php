@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 解除协议的签署人数量不能多于原流程的签署人数量
  * @method integer getDeadline() 获取签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
  * @method void setDeadline(integer $Deadline) 设置签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class CreateReleaseFlowRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class CreateReleaseFlowRequest extends AbstractModel
     public $Deadline;
 
     /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $NeedRelievedFlowId 待解除的签署流程编号（即原签署流程的编号）
      * @param RelieveInfo $ReliveInfo 解除协议内容
@@ -72,6 +79,7 @@ class CreateReleaseFlowRequest extends AbstractModel
 默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
 解除协议的签署人数量不能多于原流程的签署人数量
      * @param integer $Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -111,6 +119,11 @@ class CreateReleaseFlowRequest extends AbstractModel
 
         if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
             $this->Deadline = $param["Deadline"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

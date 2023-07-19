@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Goosefs\V20220519\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterRoles请求参数结构体
+ * ScheduledSql的资源信息
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getRoleName() 获取角色名
- * @method void setRoleName(string $RoleName) 设置角色名
+ * @method string getTopicId() 获取目标主题id
+ * @method void setTopicId(string $TopicId) 设置目标主题id
+ * @method string getRegion() 获取topic的地域信息
+ * @method void setRegion(string $Region) 设置topic的地域信息
  */
-class DescribeClusterRolesRequest extends AbstractModel
+class ScheduledSqlResouceInfo extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 目标主题id
      */
-    public $ClusterId;
+    public $TopicId;
 
     /**
-     * @var string 角色名
+     * @var string topic的地域信息
      */
-    public $RoleName;
+    public $Region;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $RoleName 角色名
+     * @param string $TopicId 目标主题id
+     * @param string $Region topic的地域信息
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeClusterRolesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
         }
 
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

@@ -23,20 +23,24 @@ use TencentCloud\Common\AbstractModel;
  * @method string getImageUrl() 获取图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method string getImageBase64() 获取图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
  * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
  * @method boolean getIsPdf() 获取是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
  * @method void setIsPdf(boolean $IsPdf) 设置是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
@@ -50,6 +54,20 @@ ItemNames=["姓名","性别"]
 ItemNames=["姓名","性别"]
  * @method boolean getReturnFullText() 获取是否开启全文字段识别
  * @method void setReturnFullText(boolean $ReturnFullText) 设置是否开启全文字段识别
+ * @method string getConfigId() 获取配置id支持：
+General -- 通用场景
+OnlineTaxiItinerary -- 网约车行程单
+RideHailingDriverLicense -- 网约车驾驶证
+RideHailingTransportLicense -- 网约车运输证
+WayBill -- 快递运单
+AccountOpeningPermit -- 银行开户许可证
+ * @method void setConfigId(string $ConfigId) 设置配置id支持：
+General -- 通用场景
+OnlineTaxiItinerary -- 网约车行程单
+RideHailingDriverLicense -- 网约车驾驶证
+RideHailingTransportLicense -- 网约车运输证
+WayBill -- 快递运单
+AccountOpeningPermit -- 银行开户许可证
  */
 class SmartStructuralOCRV2Request extends AbstractModel
 {
@@ -57,6 +75,7 @@ class SmartStructuralOCRV2Request extends AbstractModel
      * @var string 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
@@ -66,6 +85,7 @@ class SmartStructuralOCRV2Request extends AbstractModel
      * @var string 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public $ImageBase64;
@@ -93,14 +113,27 @@ ItemNames=["姓名","性别"]
     public $ReturnFullText;
 
     /**
+     * @var string 配置id支持：
+General -- 通用场景
+OnlineTaxiItinerary -- 网约车行程单
+RideHailingDriverLicense -- 网约车驾驶证
+RideHailingTransportLicense -- 网约车运输证
+WayBill -- 快递运单
+AccountOpeningPermit -- 银行开户许可证
+     */
+    public $ConfigId;
+
+    /**
      * @param string $ImageUrl 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param boolean $IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
@@ -108,6 +141,13 @@ ItemNames=["姓名","性别"]
 若客户只想返回姓名、性别两个字段的识别结果，则输入
 ItemNames=["姓名","性别"]
      * @param boolean $ReturnFullText 是否开启全文字段识别
+     * @param string $ConfigId 配置id支持：
+General -- 通用场景
+OnlineTaxiItinerary -- 网约车行程单
+RideHailingDriverLicense -- 网约车驾驶证
+RideHailingTransportLicense -- 网约车运输证
+WayBill -- 快递运单
+AccountOpeningPermit -- 银行开户许可证
      */
     function __construct()
     {
@@ -144,6 +184,10 @@ ItemNames=["姓名","性别"]
 
         if (array_key_exists("ReturnFullText",$param) and $param["ReturnFullText"] !== null) {
             $this->ReturnFullText = $param["ReturnFullText"];
+        }
+
+        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
+            $this->ConfigId = $param["ConfigId"];
         }
     }
 }

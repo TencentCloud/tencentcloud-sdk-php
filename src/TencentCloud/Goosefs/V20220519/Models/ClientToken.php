@@ -20,13 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询Client Token
  *
+ * @method string getNodeIp() 获取节点 IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeIp(string $NodeIp) 设置节点 IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalDirectory() 获取挂载点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalDirectory(string $LocalDirectory) 设置挂载点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGooseFSDirectory() 获取可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGooseFSDirectory(string $GooseFSDirectory) 设置可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getToken() 获取token
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setToken(string $Token) 设置token
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClientToken extends AbstractModel
 {
+    /**
+     * @var string 节点 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeIp;
+
     /**
      * @var string 挂载点
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +52,25 @@ class ClientToken extends AbstractModel
     public $LocalDirectory;
 
     /**
+     * @var string 可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GooseFSDirectory;
+
+    /**
+     * @var string token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Token;
+
+    /**
+     * @param string $NodeIp 节点 IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalDirectory 挂载点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GooseFSDirectory 可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Token token
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -50,8 +86,20 @@ class ClientToken extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("NodeIp",$param) and $param["NodeIp"] !== null) {
+            $this->NodeIp = $param["NodeIp"];
+        }
+
         if (array_key_exists("LocalDirectory",$param) and $param["LocalDirectory"] !== null) {
             $this->LocalDirectory = $param["LocalDirectory"];
+        }
+
+        if (array_key_exists("GooseFSDirectory",$param) and $param["GooseFSDirectory"] !== null) {
+            $this->GooseFSDirectory = $param["GooseFSDirectory"];
+        }
+
+        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
+            $this->Token = $param["Token"];
         }
     }
 }

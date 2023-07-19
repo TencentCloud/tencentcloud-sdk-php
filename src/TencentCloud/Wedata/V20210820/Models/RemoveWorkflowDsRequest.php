@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Goosefs\V20220519\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterRoles请求参数结构体
+ * RemoveWorkflowDs请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getRoleName() 获取角色名
- * @method void setRoleName(string $RoleName) 设置角色名
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getWorkflowId() 获取工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
  */
-class DescribeClusterRolesRequest extends AbstractModel
+class RemoveWorkflowDsRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 项目ID
      */
-    public $ClusterId;
+    public $ProjectId;
 
     /**
-     * @var string 角色名
+     * @var string 工作流ID
      */
-    public $RoleName;
+    public $WorkflowId;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $RoleName 角色名
+     * @param string $ProjectId 项目ID
+     * @param string $WorkflowId 工作流ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeClusterRolesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
 
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
+        if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
+            $this->WorkflowId = $param["WorkflowId"];
         }
     }
 }

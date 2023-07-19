@@ -244,6 +244,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserId() 获取UserId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserId(string $UserId) 设置UserId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerId() 获取OwnerId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerId(string $OwnerId) 设置OwnerId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTenantId() 获取TenantId
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTenantId(string $TenantId) 设置TenantId
+
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskCanvasInfo extends AbstractModel
 {
@@ -484,6 +498,25 @@ class TaskCanvasInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserId;
+
+    /**
+     * @var string OwnerId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerId;
+
+    /**
+     * @var string TenantId
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TenantId;
+
+    /**
      * @param string $TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -595,6 +628,13 @@ class TaskCanvasInfo extends AbstractModel
      * @param string $AlarmType 任务告警类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserId UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerId OwnerId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TenantId TenantId
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -732,6 +772,18 @@ class TaskCanvasInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("OwnerId",$param) and $param["OwnerId"] !== null) {
+            $this->OwnerId = $param["OwnerId"];
+        }
+
+        if (array_key_exists("TenantId",$param) and $param["TenantId"] !== null) {
+            $this->TenantId = $param["TenantId"];
         }
     }
 }

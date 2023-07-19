@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置伸缩活动结束时间。
  * @method string getCreatedTime() 获取伸缩活动创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置伸缩活动创建时间。
- * @method array getActivityRelatedInstanceSet() 获取伸缩活动相关实例信息集合。
- * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) 设置伸缩活动相关实例信息集合。
+ * @method array getActivityRelatedInstanceSet() 获取该参数已废弃，请勿使用。
+ * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) 设置该参数已废弃，请勿使用。
  * @method string getStatusMessageSimplified() 获取伸缩活动状态简要描述。
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) 设置伸缩活动状态简要描述。
  * @method array getLifecycleActionResultSet() 获取伸缩活动中生命周期挂钩的执行结果。
@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetailedStatusMessageSet(array $DetailedStatusMessageSet) 设置伸缩活动状态详细描述。
  * @method array getInvocationResultSet() 获取执行命令结果。
  * @method void setInvocationResultSet(array $InvocationResultSet) 设置执行命令结果。
+ * @method array getRelatedInstanceSet() 获取伸缩活动相关实例信息集合。
+ * @method void setRelatedInstanceSet(array $RelatedInstanceSet) 设置伸缩活动相关实例信息集合。
  */
 class Activity extends AbstractModel
 {
@@ -134,7 +136,8 @@ class Activity extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var array 伸缩活动相关实例信息集合。
+     * @var array 该参数已废弃，请勿使用。
+     * @deprecated
      */
     public $ActivityRelatedInstanceSet;
 
@@ -159,6 +162,11 @@ class Activity extends AbstractModel
     public $InvocationResultSet;
 
     /**
+     * @var array 伸缩活动相关实例信息集合。
+     */
+    public $RelatedInstanceSet;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param string $ActivityId 伸缩活动ID。
      * @param string $ActivityType 伸缩活动类型。取值如下：<br>
@@ -179,11 +187,12 @@ class Activity extends AbstractModel
      * @param string $StartTime 伸缩活动开始时间。
      * @param string $EndTime 伸缩活动结束时间。
      * @param string $CreatedTime 伸缩活动创建时间。
-     * @param array $ActivityRelatedInstanceSet 伸缩活动相关实例信息集合。
+     * @param array $ActivityRelatedInstanceSet 该参数已废弃，请勿使用。
      * @param string $StatusMessageSimplified 伸缩活动状态简要描述。
      * @param array $LifecycleActionResultSet 伸缩活动中生命周期挂钩的执行结果。
      * @param array $DetailedStatusMessageSet 伸缩活动状态详细描述。
      * @param array $InvocationResultSet 执行命令结果。
+     * @param array $RelatedInstanceSet 伸缩活动相关实例信息集合。
      */
     function __construct()
     {
@@ -275,6 +284,15 @@ class Activity extends AbstractModel
                 $obj = new InvocationResult();
                 $obj->deserialize($value);
                 array_push($this->InvocationResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("RelatedInstanceSet",$param) and $param["RelatedInstanceSet"] !== null) {
+            $this->RelatedInstanceSet = [];
+            foreach ($param["RelatedInstanceSet"] as $key => $value){
+                $obj = new RelatedInstance();
+                $obj->deserialize($value);
+                array_push($this->RelatedInstanceSet, $obj);
             }
         }
     }

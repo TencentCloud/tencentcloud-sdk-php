@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 指标名称和值的封装
+ * DeleteProjectParamDs请求参数结构体
  *
- * @method string getMetricName() 获取指标名称
- * @method void setMetricName(string $MetricName) 设置指标名称
- * @method integer getValue() 获取指标的值
- * @method void setValue(integer $Value) 设置指标的值
+ * @method string getParamKey() 获取参数名
+ * @method void setParamKey(string $ParamKey) 设置参数名
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
  */
-class MetricDatum extends AbstractModel
+class DeleteProjectParamDsRequest extends AbstractModel
 {
     /**
-     * @var string 指标名称
+     * @var string 参数名
      */
-    public $MetricName;
+    public $ParamKey;
 
     /**
-     * @var integer 指标的值
+     * @var string 项目id
      */
-    public $Value;
+    public $ProjectId;
 
     /**
-     * @param string $MetricName 指标名称
-     * @param integer $Value 指标的值
+     * @param string $ParamKey 参数名
+     * @param string $ProjectId 项目id
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class MetricDatum extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
+        if (array_key_exists("ParamKey",$param) and $param["ParamKey"] !== null) {
+            $this->ParamKey = $param["ParamKey"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

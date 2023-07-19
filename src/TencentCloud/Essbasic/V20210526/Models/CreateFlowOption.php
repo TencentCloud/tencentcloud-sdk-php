@@ -18,7 +18,7 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 创建合同配置信息
+ * 创建合同个性化参数
  *
  * @method boolean getCanEditFlow() 获取是否允许修改合同信息，true-是，false-否
  * @method void setCanEditFlow(boolean $CanEditFlow) 设置是否允许修改合同信息，true-是，false-否

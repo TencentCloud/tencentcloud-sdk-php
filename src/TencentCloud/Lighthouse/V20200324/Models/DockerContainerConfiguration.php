@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolumes(array $Volumes) 设置容器加载本地卷列表
  * @method string getCommand() 获取运行的命令
  * @method void setCommand(string $Command) 设置运行的命令
+ * @method string getRestartPolicy() 获取容器重启策略
+ * @method void setRestartPolicy(string $RestartPolicy) 设置容器重启策略
  */
 class DockerContainerConfiguration extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DockerContainerConfiguration extends AbstractModel
     public $Command;
 
     /**
+     * @var string 容器重启策略
+     */
+    public $RestartPolicy;
+
+    /**
      * @param string $ContainerImage 容器镜像地址
      * @param string $ContainerName 容器名称
      * @param array $Envs 环境变量列表
      * @param array $PublishPorts 容器端口主机端口映射列表
      * @param array $Volumes 容器加载本地卷列表
      * @param string $Command 运行的命令
+     * @param string $RestartPolicy 容器重启策略
      */
     function __construct()
     {
@@ -123,6 +131,10 @@ class DockerContainerConfiguration extends AbstractModel
 
         if (array_key_exists("Command",$param) and $param["Command"] !== null) {
             $this->Command = $param["Command"];
+        }
+
+        if (array_key_exists("RestartPolicy",$param) and $param["RestartPolicy"] !== null) {
+            $this->RestartPolicy = $param["RestartPolicy"];
         }
     }
 }

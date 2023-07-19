@@ -42,8 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShardNum(integer $ShardNum) 设置分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。
  * @method integer getReplicasNum() 获取副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
  * @method void setReplicasNum(integer $ReplicasNum) 设置副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
- * @method integer getMachineCpu() 获取计算cpu核心数。
- * @method void setMachineCpu(integer $MachineCpu) 设置计算cpu核心数。
  * @method integer getMachineMemory() 获取实例内存容量，单位：GB。
 KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
  * @method void setMachineMemory(integer $MachineMemory) 设置实例内存容量，单位：GB。
@@ -78,8 +76,12 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
 每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
  * @method void setDiskSize(integer $DiskSize) 设置每个分片硬盘的容量。单位：GB。
 每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+ * @method integer getMachineCpu() 获取计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+ * @method void setMachineCpu(integer $MachineCpu) 设置计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
  * @method integer getProjectId() 获取项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
  * @method void setProjectId(integer $ProjectId) 设置项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
+ * @method string getCompression() 获取数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+ * @method void setCompression(string $Compression) 设置数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -125,11 +127,6 @@ class CreateInstancesRequest extends AbstractModel
      * @var integer 副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
      */
     public $ReplicasNum;
-
-    /**
-     * @var integer 计算cpu核心数。
-     */
-    public $MachineCpu;
 
     /**
      * @var integer 实例内存容量，单位：GB。
@@ -197,9 +194,19 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
     public $DiskSize;
 
     /**
+     * @var integer 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     */
+    public $MachineCpu;
+
+    /**
      * @var integer 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
      */
     public $ProjectId;
+
+    /**
+     * @var string 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+     */
+    public $Compression;
 
     /**
      * @param integer $TypeId 产品版本。
@@ -213,7 +220,6 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
      * @param integer $Period 选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。
      * @param integer $ShardNum 分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。
      * @param integer $ReplicasNum 副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
-     * @param integer $MachineCpu 计算cpu核心数。
      * @param integer $MachineMemory 实例内存容量，单位：GB。
 KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
      * @param integer $ZoneId 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
@@ -231,7 +237,9 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
 KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
      * @param integer $DiskSize 每个分片硬盘的容量。单位：GB。
 每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * @param integer $MachineCpu 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
      * @param integer $ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
+     * @param string $Compression 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
      */
     function __construct()
     {
@@ -276,10 +284,6 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
 
         if (array_key_exists("ReplicasNum",$param) and $param["ReplicasNum"] !== null) {
             $this->ReplicasNum = $param["ReplicasNum"];
-        }
-
-        if (array_key_exists("MachineCpu",$param) and $param["MachineCpu"] !== null) {
-            $this->MachineCpu = $param["MachineCpu"];
         }
 
         if (array_key_exists("MachineMemory",$param) and $param["MachineMemory"] !== null) {
@@ -335,8 +339,16 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
             $this->DiskSize = $param["DiskSize"];
         }
 
+        if (array_key_exists("MachineCpu",$param) and $param["MachineCpu"] !== null) {
+            $this->MachineCpu = $param["MachineCpu"];
+        }
+
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
         }
     }
 }

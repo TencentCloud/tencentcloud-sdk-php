@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroup(integer $Group) 设置分组数
  * @method integer getMember() 获取分组用户总数
  * @method void setMember(integer $Member) 设置分组用户总数
+ * @method integer getIdentityProviders() 获取身份提供商数。
+ * @method void setIdentityProviders(integer $IdentityProviders) 设置身份提供商数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,6 +51,7 @@ class GetAccountSummaryResponse extends AbstractModel
 
     /**
      * @var integer 身份提供商数
+     * @deprecated
      */
     public $Idps;
 
@@ -68,6 +71,11 @@ class GetAccountSummaryResponse extends AbstractModel
     public $Member;
 
     /**
+     * @var integer 身份提供商数。
+     */
+    public $IdentityProviders;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +87,7 @@ class GetAccountSummaryResponse extends AbstractModel
      * @param integer $User 子账户数
      * @param integer $Group 分组数
      * @param integer $Member 分组用户总数
+     * @param integer $IdentityProviders 身份提供商数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +125,10 @@ class GetAccountSummaryResponse extends AbstractModel
 
         if (array_key_exists("Member",$param) and $param["Member"] !== null) {
             $this->Member = $param["Member"];
+        }
+
+        if (array_key_exists("IdentityProviders",$param) and $param["IdentityProviders"] !== null) {
+            $this->IdentityProviders = $param["IdentityProviders"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

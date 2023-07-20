@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 <li>av1：AOMedia Video 1 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 注意：av1 编码容器目前只支持 mp4 。
- * @method integer getFps() 获取视频帧率，取值范围：[0, 100]，单位：Hz。
+ * @method integer getFps() 获取视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
- * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 100]，单位：Hz。
+ * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
  * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
@@ -98,7 +98,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $Codec;
 
     /**
-     * @var integer 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * @var integer 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      */
     public $Fps;
@@ -166,7 +166,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>av1：AOMedia Video 1 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 注意：av1 编码容器目前只支持 mp4 。
-     * @param integer $Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * @param integer $Fps 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。

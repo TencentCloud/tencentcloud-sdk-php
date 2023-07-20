@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMosaicConfigure(MosaicConfigureInfoForUpdate $MosaicConfigure) 设置视频画面马赛克检测的控制参数。
  * @method QRCodeConfigureInfoForUpdate getQRCodeConfigure() 获取视频画面二维码检测的控制参数。
  * @method void setQRCodeConfigure(QRCodeConfigureInfoForUpdate $QRCodeConfigure) 设置视频画面二维码检测的控制参数。
- * @method QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() 获取视频画面质量评价的控制参数。
- * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure) 设置视频画面质量评价的控制参数。
  * @method VoiceConfigureInfoForUpdate getVoiceConfigure() 获取音频（静音、低音、爆音）检测的控制参数。
  * @method void setVoiceConfigure(VoiceConfigureInfoForUpdate $VoiceConfigure) 设置音频（静音、低音、爆音）检测的控制参数。
+ * @method QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() 获取视频画面质量评价的控制参数。
+ * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure) 设置视频画面质量评价的控制参数。
  */
 class ModifyQualityInspectTemplateRequest extends AbstractModel
 {
@@ -119,14 +119,14 @@ class ModifyQualityInspectTemplateRequest extends AbstractModel
     public $QRCodeConfigure;
 
     /**
-     * @var QualityEvaluationConfigureInfoForUpdate 视频画面质量评价的控制参数。
-     */
-    public $QualityEvaluationConfigure;
-
-    /**
      * @var VoiceConfigureInfoForUpdate 音频（静音、低音、爆音）检测的控制参数。
      */
     public $VoiceConfigure;
+
+    /**
+     * @var QualityEvaluationConfigureInfoForUpdate 视频画面质量评价的控制参数。
+     */
+    public $QualityEvaluationConfigure;
 
     /**
      * @param integer $Definition 模板 ID。
@@ -142,8 +142,8 @@ class ModifyQualityInspectTemplateRequest extends AbstractModel
      * @param NoiseConfigureInfoForUpdate $NoiseConfigure 视频画面噪点检测的控制参数。
      * @param MosaicConfigureInfoForUpdate $MosaicConfigure 视频画面马赛克检测的控制参数。
      * @param QRCodeConfigureInfoForUpdate $QRCodeConfigure 视频画面二维码检测的控制参数。
-     * @param QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure 视频画面质量评价的控制参数。
      * @param VoiceConfigureInfoForUpdate $VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
+     * @param QualityEvaluationConfigureInfoForUpdate $QualityEvaluationConfigure 视频画面质量评价的控制参数。
      */
     function __construct()
     {
@@ -218,14 +218,14 @@ class ModifyQualityInspectTemplateRequest extends AbstractModel
             $this->QRCodeConfigure->deserialize($param["QRCodeConfigure"]);
         }
 
-        if (array_key_exists("QualityEvaluationConfigure",$param) and $param["QualityEvaluationConfigure"] !== null) {
-            $this->QualityEvaluationConfigure = new QualityEvaluationConfigureInfoForUpdate();
-            $this->QualityEvaluationConfigure->deserialize($param["QualityEvaluationConfigure"]);
-        }
-
         if (array_key_exists("VoiceConfigure",$param) and $param["VoiceConfigure"] !== null) {
             $this->VoiceConfigure = new VoiceConfigureInfoForUpdate();
             $this->VoiceConfigure->deserialize($param["VoiceConfigure"]);
+        }
+
+        if (array_key_exists("QualityEvaluationConfigure",$param) and $param["QualityEvaluationConfigure"] !== null) {
+            $this->QualityEvaluationConfigure = new QualityEvaluationConfigureInfoForUpdate();
+            $this->QualityEvaluationConfigure->deserialize($param["QualityEvaluationConfigure"]);
         }
     }
 }

@@ -194,6 +194,22 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeVersions(string $UpgradeVersions) 设置可升级的内核版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEsIndexId() 获取ex-index
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsIndexId(string $EsIndexId) 设置ex-index
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEsIndexUsername() 获取username
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsIndexUsername(string $EsIndexUsername) 设置username
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEsIndexPassword() 获取password
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsIndexPassword(string $EsIndexPassword) 设置password
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHasEsIndex() 获取true
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasEsIndex(boolean $HasEsIndex) 设置true
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -453,6 +469,30 @@ Modify 集群变更中；
     public $UpgradeVersions;
 
     /**
+     * @var string ex-index
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsIndexId;
+
+    /**
+     * @var string username
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsIndexUsername;
+
+    /**
+     * @var string password
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsIndexPassword;
+
+    /**
+     * @var boolean true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasEsIndex;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -539,6 +579,14 @@ Modify 集群变更中；
      * @param array $Components 服务信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeVersions 可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EsIndexId ex-index
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EsIndexUsername username
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EsIndexPassword password
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasEsIndex true
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -733,6 +781,22 @@ Modify 集群变更中；
 
         if (array_key_exists("UpgradeVersions",$param) and $param["UpgradeVersions"] !== null) {
             $this->UpgradeVersions = $param["UpgradeVersions"];
+        }
+
+        if (array_key_exists("EsIndexId",$param) and $param["EsIndexId"] !== null) {
+            $this->EsIndexId = $param["EsIndexId"];
+        }
+
+        if (array_key_exists("EsIndexUsername",$param) and $param["EsIndexUsername"] !== null) {
+            $this->EsIndexUsername = $param["EsIndexUsername"];
+        }
+
+        if (array_key_exists("EsIndexPassword",$param) and $param["EsIndexPassword"] !== null) {
+            $this->EsIndexPassword = $param["EsIndexPassword"];
+        }
+
+        if (array_key_exists("HasEsIndex",$param) and $param["HasEsIndex"] !== null) {
+            $this->HasEsIndex = $param["HasEsIndex"];
         }
     }
 }

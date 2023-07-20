@@ -44,17 +44,17 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method integer getMaxFaceNum() 获取最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
-例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
+例如：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
  * @method void setMaxFaceNum(integer $MaxFaceNum) 设置最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
-例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
+例如：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
  * @method integer getMinFaceSize() 获取人脸长和宽的最小尺寸，单位为像素。默认为34。低于34的人脸图片无法被识别。建议设置为80。
  * @method void setMinFaceSize(integer $MinFaceSize) 设置人脸长和宽的最小尺寸，单位为像素。默认为34。低于34的人脸图片无法被识别。建议设置为80。
  * @method integer getMaxPersonNum() 获取单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
-例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+例如，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
 值越大，需要处理的时间越长。建议不要超过10。
  * @method void setMaxPersonNum(integer $MaxPersonNum) 设置单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
-例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+例如，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
 值越大，需要处理的时间越长。建议不要超过10。
  * @method integer getNeedPersonInfo() 获取是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
  * @method void setNeedPersonInfo(integer $NeedPersonInfo) 设置是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
@@ -107,7 +107,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     /**
      * @var integer 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
-例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
+例如：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      */
     public $MaxFaceNum;
 
@@ -118,7 +118,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
 
     /**
      * @var integer 单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
-例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+例如，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
 值越大，需要处理的时间越长。建议不要超过10。
      */
     public $MaxPersonNum;
@@ -164,10 +164,10 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param integer $MaxFaceNum 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。 
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。 
-例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
+例如：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      * @param integer $MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为34。低于34的人脸图片无法被识别。建议设置为80。
      * @param integer $MaxPersonNum 单张被识别的人脸返回的最相似人员数量。默认值为5，最大值为100。 
-例，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
+例如，设MaxFaceNum为1，MaxPersonNum为8，则返回Top8相似的人员信息。
 值越大，需要处理的时间越长。建议不要超过10。
      * @param integer $NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      * @param integer $QualityControl 图片质量控制。 

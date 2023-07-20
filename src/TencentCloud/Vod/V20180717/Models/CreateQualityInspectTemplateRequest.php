@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMosaicConfigure(MosaicConfigureInfo $MosaicConfigure) 设置视频画面马赛克检测的控制参数。
  * @method QRCodeConfigureInfo getQRCodeConfigure() 获取视频画面二维码检测的控制参数。
  * @method void setQRCodeConfigure(QRCodeConfigureInfo $QRCodeConfigure) 设置视频画面二维码检测的控制参数。
- * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() 获取视频画面质量评价的控制参数。
- * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) 设置视频画面质量评价的控制参数。
  * @method VoiceConfigureInfo getVoiceConfigure() 获取音频（静音、低音、爆音）检测的控制参数。
  * @method void setVoiceConfigure(VoiceConfigureInfo $VoiceConfigure) 设置音频（静音、低音、爆音）检测的控制参数。
+ * @method QualityEvaluationConfigureInfo getQualityEvaluationConfigure() 获取视频画面质量评价的控制参数。
+ * @method void setQualityEvaluationConfigure(QualityEvaluationConfigureInfo $QualityEvaluationConfigure) 设置视频画面质量评价的控制参数。
  */
 class CreateQualityInspectTemplateRequest extends AbstractModel
 {
@@ -112,14 +112,14 @@ class CreateQualityInspectTemplateRequest extends AbstractModel
     public $QRCodeConfigure;
 
     /**
-     * @var QualityEvaluationConfigureInfo 视频画面质量评价的控制参数。
-     */
-    public $QualityEvaluationConfigure;
-
-    /**
      * @var VoiceConfigureInfo 音频（静音、低音、爆音）检测的控制参数。
      */
     public $VoiceConfigure;
+
+    /**
+     * @var QualityEvaluationConfigureInfo 视频画面质量评价的控制参数。
+     */
+    public $QualityEvaluationConfigure;
 
     /**
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
@@ -134,8 +134,8 @@ class CreateQualityInspectTemplateRequest extends AbstractModel
      * @param NoiseConfigureInfo $NoiseConfigure 视频画面噪点检测的控制参数。
      * @param MosaicConfigureInfo $MosaicConfigure 视频画面马赛克检测的控制参数。
      * @param QRCodeConfigureInfo $QRCodeConfigure 视频画面二维码检测的控制参数。
-     * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure 视频画面质量评价的控制参数。
      * @param VoiceConfigureInfo $VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
+     * @param QualityEvaluationConfigureInfo $QualityEvaluationConfigure 视频画面质量评价的控制参数。
      */
     function __construct()
     {
@@ -206,14 +206,14 @@ class CreateQualityInspectTemplateRequest extends AbstractModel
             $this->QRCodeConfigure->deserialize($param["QRCodeConfigure"]);
         }
 
-        if (array_key_exists("QualityEvaluationConfigure",$param) and $param["QualityEvaluationConfigure"] !== null) {
-            $this->QualityEvaluationConfigure = new QualityEvaluationConfigureInfo();
-            $this->QualityEvaluationConfigure->deserialize($param["QualityEvaluationConfigure"]);
-        }
-
         if (array_key_exists("VoiceConfigure",$param) and $param["VoiceConfigure"] !== null) {
             $this->VoiceConfigure = new VoiceConfigureInfo();
             $this->VoiceConfigure->deserialize($param["VoiceConfigure"]);
+        }
+
+        if (array_key_exists("QualityEvaluationConfigure",$param) and $param["QualityEvaluationConfigure"] !== null) {
+            $this->QualityEvaluationConfigure = new QualityEvaluationConfigureInfo();
+            $this->QualityEvaluationConfigure->deserialize($param["QualityEvaluationConfigure"]);
         }
     }
 }

@@ -27,8 +27,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getApiAppId() 获取应用ID
  * @method void setApiAppId(string $ApiAppId) 设置应用ID
  * @method string getApiAppSecret() 获取应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiAppSecret(string $ApiAppSecret) 设置应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApiAppDesc() 获取应用描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -43,8 +45,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifiedTime(string $ModifiedTime) 设置修改时间，按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApiAppKey() 获取应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiAppKey(string $ApiAppKey) 设置应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiAppInfo extends AbstractModel
@@ -62,6 +66,7 @@ class ApiAppInfo extends AbstractModel
 
     /**
      * @var string 应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiAppSecret;
@@ -86,6 +91,7 @@ class ApiAppInfo extends AbstractModel
 
     /**
      * @var string 应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiAppKey;
@@ -95,6 +101,7 @@ class ApiAppInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApiAppId 应用ID
      * @param string $ApiAppSecret 应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApiAppDesc 应用描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +110,7 @@ class ApiAppInfo extends AbstractModel
      * @param string $ModifiedTime 修改时间，按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApiAppKey 应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

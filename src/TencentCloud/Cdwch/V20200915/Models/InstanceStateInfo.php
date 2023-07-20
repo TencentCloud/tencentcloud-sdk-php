@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequestId(string $RequestId) 设置请求id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProcessSubName() 获取流程的二级名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcessSubName(string $ProcessSubName) 设置流程的二级名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceStateInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ class InstanceStateInfo extends AbstractModel
     public $RequestId;
 
     /**
+     * @var string 流程的二级名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProcessSubName;
+
+    /**
      * @param string $InstanceState 集群状态，例如：Serving
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowCreateTime 集群操作创建时间
@@ -119,6 +129,8 @@ class InstanceStateInfo extends AbstractModel
      * @param string $ProcessName 当前步骤的名称，例如：”购买资源中“
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 请求id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProcessSubName 流程的二级名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class InstanceStateInfo extends AbstractModel
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("ProcessSubName",$param) and $param["ProcessSubName"] !== null) {
+            $this->ProcessSubName = $param["ProcessSubName"];
         }
     }
 }

@@ -24,7 +24,7 @@ use TencentCloud\Cloudstudio\V20230508\Models as Models;
 
 /**
  * @method Models\CreateWorkspaceResponse CreateWorkspace(Models\CreateWorkspaceRequest $req) 创建工作空间
- * @method Models\CreateWorkspaceTokenResponse CreateWorkspaceToken(Models\CreateWorkspaceTokenRequest $req) 为工作空间创建临时访问凭证，重复调用会创建新的 Token，旧的 Token 将会自动失效
+ * @method Models\CreateWorkspaceTokenResponse CreateWorkspaceToken(Models\CreateWorkspaceTokenRequest $req) 创建工作空间临时访问凭证，重复调用会创建新的 Token，旧的 Token 将会自动失效
  * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 获取用户配置
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取基础镜像列表
  * @method Models\DescribeWorkspacesResponse DescribeWorkspaces(Models\DescribeWorkspacesRequest $req) 获取用户工作空间列表

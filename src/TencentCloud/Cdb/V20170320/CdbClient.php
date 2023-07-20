@@ -170,9 +170,6 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ModifyCDBProxyConnectionPoolResponse ModifyCDBProxyConnectionPool(Models\ModifyCDBProxyConnectionPoolRequest $req) 当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
 
 请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
- * @method Models\ModifyCDBProxyDescResponse ModifyCDBProxyDesc(Models\ModifyCDBProxyDescRequest $req) 当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
-
-修改数据库代理描述
  * @method Models\ModifyCDBProxyVipVPortResponse ModifyCDBProxyVipVPort(Models\ModifyCDBProxyVipVPortRequest $req) 当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
 
 修改数据库代理VIP或端口

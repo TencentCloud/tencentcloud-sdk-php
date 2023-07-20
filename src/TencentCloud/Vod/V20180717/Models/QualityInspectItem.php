@@ -20,18 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音画质检测异常片段信息。
  *
- * @method integer getConfidence() 获取置信度，取值范围：[0, 100]。
-<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
-<li>Mosaic：马赛克；</li>
-<li>QRCode：二维码；</li>
-<li>AppletCode：小程序码；</li>
-<li>BarCode：条形码。</li>
- * @method void setConfidence(integer $Confidence) 设置置信度，取值范围：[0, 100]。
-<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
-<li>Mosaic：马赛克；</li>
-<li>QRCode：二维码；</li>
-<li>AppletCode：小程序码；</li>
-<li>BarCode：条形码。</li>
  * @method float getStartTimeOffset() 获取异常片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置异常片段起始的偏移时间，单位：秒。
  * @method float getEndTimeOffset() 获取异常片段终止的偏移时间，单位：秒。
@@ -50,19 +38,21 @@ use TencentCloud\Common\AbstractModel;
 <li>QRCode：二维码；</li>
 <li>AppletCode：小程序码；</li>
 <li>BarCode：条形码。</li>
- */
-class QualityInspectItem extends AbstractModel
-{
-    /**
-     * @var integer 置信度，取值范围：[0, 100]。
+ * @method integer getConfidence() 获取置信度，取值范围：[0, 100]。
 <font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
 <li>Mosaic：马赛克；</li>
 <li>QRCode：二维码；</li>
 <li>AppletCode：小程序码；</li>
 <li>BarCode：条形码。</li>
-     */
-    public $Confidence;
-
+ * @method void setConfidence(integer $Confidence) 设置置信度，取值范围：[0, 100]。
+<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
+<li>Mosaic：马赛克；</li>
+<li>QRCode：二维码；</li>
+<li>AppletCode：小程序码；</li>
+<li>BarCode：条形码。</li>
+ */
+class QualityInspectItem extends AbstractModel
+{
     /**
      * @var float 异常片段起始的偏移时间，单位：秒。
      */
@@ -85,17 +75,27 @@ class QualityInspectItem extends AbstractModel
     public $AreaCoordSet;
 
     /**
-     * @param integer $Confidence 置信度，取值范围：[0, 100]。
+     * @var integer 置信度，取值范围：[0, 100]。
 <font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
 <li>Mosaic：马赛克；</li>
 <li>QRCode：二维码；</li>
 <li>AppletCode：小程序码；</li>
 <li>BarCode：条形码。</li>
+     */
+    public $Confidence;
+
+    /**
      * @param float $StartTimeOffset 异常片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 异常片段终止的偏移时间，单位：秒。
      * @param array $AreaCoordSet 检测出异常的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
 <font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
 <li>BlackWhiteEdge：黑白边；</li>
+<li>Mosaic：马赛克；</li>
+<li>QRCode：二维码；</li>
+<li>AppletCode：小程序码；</li>
+<li>BarCode：条形码。</li>
+     * @param integer $Confidence 置信度，取值范围：[0, 100]。
+<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
 <li>Mosaic：马赛克；</li>
 <li>QRCode：二维码；</li>
 <li>AppletCode：小程序码；</li>
@@ -114,10 +114,6 @@ class QualityInspectItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
-            $this->Confidence = $param["Confidence"];
-        }
-
         if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
             $this->StartTimeOffset = $param["StartTimeOffset"];
         }
@@ -128,6 +124,10 @@ class QualityInspectItem extends AbstractModel
 
         if (array_key_exists("AreaCoordSet",$param) and $param["AreaCoordSet"] !== null) {
             $this->AreaCoordSet = $param["AreaCoordSet"];
+        }
+
+        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
+            $this->Confidence = $param["Confidence"];
         }
     }
 }

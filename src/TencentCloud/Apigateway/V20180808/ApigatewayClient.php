@@ -63,7 +63,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeAPIDocsResponse DescribeAPIDocs(Models\DescribeAPIDocsRequest $req) 查询 API 文档列表
  * @method Models\DescribeAllPluginApisResponse DescribeAllPluginApis(Models\DescribeAllPluginApisRequest $req) 展示插件相关的API列表，包括已绑定的和未绑定的API信息。
  * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。​
- * @method Models\DescribeApiAppResponse DescribeApiApp(Models\DescribeApiAppRequest $req) 本接口（DescribeApiApp）用于根据应用ID搜索应用。
+ * @method Models\DescribeApiAppResponse DescribeApiApp(Models\DescribeApiAppRequest $req) 本接口（DescribeApiApp）用于根据应用ID搜索应用。此接口已下线，如需使用功能请使用DescribeApiAppsStatus接口。
  * @method Models\DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatus(Models\DescribeApiAppBindApisStatusRequest $req) 本接口（DescribeApiAppBindApisStatus）查询应用绑定的Api列表。
  * @method Models\DescribeApiAppsStatusResponse DescribeApiAppsStatus(Models\DescribeApiAppsStatusRequest $req) 本接口（DescribeApiAppsStatus）查询应用列表。
  * @method Models\DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(Models\DescribeApiBindApiAppsStatusRequest $req) 本接口（DescribeApiBindApiAppsStatus）查询Api绑定的应用列表。

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置命名空间名称
  * @method string getDescription() 获取命名空间描述
  * @method void setDescription(string $Description) 设置命名空间描述
+ * @method NamespaceResourceEnv getResourceEnv() 获取资源池配置
+ * @method void setResourceEnv(NamespaceResourceEnv $ResourceEnv) 设置资源池配置
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateNamespaceRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var NamespaceResourceEnv 资源池配置
+     */
+    public $ResourceEnv;
+
+    /**
      * @param string $Namespace 命名空间名称
      * @param string $Description 命名空间描述
+     * @param NamespaceResourceEnv $ResourceEnv 资源池配置
      */
     function __construct()
     {
@@ -60,6 +68,11 @@ class CreateNamespaceRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ResourceEnv",$param) and $param["ResourceEnv"] !== null) {
+            $this->ResourceEnv = new NamespaceResourceEnv();
+            $this->ResourceEnv->deserialize($param["ResourceEnv"]);
         }
     }
 }

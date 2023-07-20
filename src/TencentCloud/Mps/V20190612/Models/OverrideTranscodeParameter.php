@@ -39,9 +39,13 @@ use TencentCloud\Common\AbstractModel;
  * @method AudioTemplateInfoForUpdate getAudioTemplate() 获取音频流配置参数。
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) 设置音频流配置参数。
  * @method TEHDConfigForUpdate getTEHDConfig() 获取极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) 设置极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method SubtitleTemplate getSubtitleTemplate() 获取字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) 设置字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAddonAudioStream() 获取外挂音轨参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddonAudioStream(array $AddonAudioStream) 设置外挂音轨参数。
@@ -80,11 +84,13 @@ class OverrideTranscodeParameter extends AbstractModel
 
     /**
      * @var TEHDConfigForUpdate 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TEHDConfig;
 
     /**
      * @var SubtitleTemplate 字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitleTemplate;
 
@@ -105,7 +111,9 @@ class OverrideTranscodeParameter extends AbstractModel
      * @param VideoTemplateInfoForUpdate $VideoTemplate 视频流配置参数。
      * @param AudioTemplateInfoForUpdate $AudioTemplate 音频流配置参数。
      * @param TEHDConfigForUpdate $TEHDConfig 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SubtitleTemplate $SubtitleTemplate 字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AddonAudioStream 外挂音轨参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */

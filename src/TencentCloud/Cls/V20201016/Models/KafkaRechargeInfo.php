@@ -62,9 +62,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态   status 1: 运行中, 2: 暂停 ...
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOffset() 获取导入数据位置，-1:最早（默认），-2：最晚，大于等于0: 指定offset
+ * @method integer getOffset() 获取导入数据位置，-2:最早（默认），-1：最晚
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOffset(integer $Offset) 设置导入数据位置，-1:最早（默认），-2：最晚，大于等于0: 指定offset
+ * @method void setOffset(integer $Offset) 设置导入数据位置，-2:最早（默认），-1：最晚
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,7 +147,7 @@ class KafkaRechargeInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 导入数据位置，-1:最早（默认），-2：最晚，大于等于0: 指定offset
+     * @var integer 导入数据位置，-2:最早（默认），-1：最晚
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
@@ -192,7 +192,7 @@ class KafkaRechargeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态   status 1: 运行中, 2: 暂停 ...
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Offset 导入数据位置，-1:最早（默认），-2：最晚，大于等于0: 指定offset
+     * @param integer $Offset 导入数据位置，-2:最早（默认），-1：最晚
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableId(string $TableId) 设置批量投递表格ID，不填表示单例投递。
  * @method array getTableRowUuids() 获取批量投递表格行UUID。不填表示表格全部行。
  * @method void setTableRowUuids(array $TableRowUuids) 设置批量投递表格行UUID。不填表示表格全部行。
+ * @method string getApplicationVersionId() 获取应用版本ID。不填表示使用当前最新版本。
+ * @method void setApplicationVersionId(string $ApplicationVersionId) 设置应用版本ID。不填表示使用当前最新版本。
  */
 class RunApplicationRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class RunApplicationRequest extends AbstractModel
     public $TableRowUuids;
 
     /**
+     * @var string 应用版本ID。不填表示使用当前最新版本。
+     */
+    public $ApplicationVersionId;
+
+    /**
      * @param string $ApplicationId 应用ID。
      * @param string $ProjectId 项目ID。
      * @param string $Name 任务批次名称。
@@ -104,6 +111,7 @@ class RunApplicationRequest extends AbstractModel
      * @param string $Description 任务批次描述。
      * @param string $TableId 批量投递表格ID，不填表示单例投递。
      * @param array $TableRowUuids 批量投递表格行UUID。不填表示表格全部行。
+     * @param string $ApplicationVersionId 应用版本ID。不填表示使用当前最新版本。
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ class RunApplicationRequest extends AbstractModel
 
         if (array_key_exists("TableRowUuids",$param) and $param["TableRowUuids"] !== null) {
             $this->TableRowUuids = $param["TableRowUuids"];
+        }
+
+        if (array_key_exists("ApplicationVersionId",$param) and $param["ApplicationVersionId"] !== null) {
+            $this->ApplicationVersionId = $param["ApplicationVersionId"];
         }
     }
 }

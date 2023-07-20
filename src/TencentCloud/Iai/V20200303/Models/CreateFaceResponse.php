@@ -33,9 +33,9 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
 其他非 0 值代表算法服务异常。 
 RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
  * @method array getSucIndexes() 获取加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
  * @method void setSucIndexes(array $SucIndexes) 设置加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
  * @method array getSucFaceRects() 获取加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
  * @method void setSucFaceRects(array $SucFaceRects) 设置加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
  * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
@@ -65,7 +65,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
 
     /**
      * @var array 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      */
     public $SucIndexes;
 
@@ -92,7 +92,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
 其他非 0 值代表算法服务异常。 
 RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
      * @param array $SucIndexes 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      * @param array $SucFaceRects 加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
      * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

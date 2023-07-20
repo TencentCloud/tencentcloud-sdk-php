@@ -25,9 +25,9 @@ AttributeItem对应的Type为 —— 0：不戴帽子，1：普通帽子，2：�
  * @method void setStyle(AttributeItem $Style) 设置帽子佩戴状态信息。
 AttributeItem对应的Type为 —— 0：不戴帽子，1：普通帽子，2：头盔，3：保安帽。
  * @method AttributeItem getColor() 获取帽子颜色。
-AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系子。
+AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系。
  * @method void setColor(AttributeItem $Color) 设置帽子颜色。
-AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系子。
+AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系。
  */
 class Hat extends AbstractModel
 {
@@ -39,7 +39,7 @@ AttributeItem对应的Type为 —— 0：不戴帽子，1：普通帽子，2：�
 
     /**
      * @var AttributeItem 帽子颜色。
-AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系子。
+AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系。
      */
     public $Color;
 
@@ -47,7 +47,7 @@ AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄�
      * @param AttributeItem $Style 帽子佩戴状态信息。
 AttributeItem对应的Type为 —— 0：不戴帽子，1：普通帽子，2：头盔，3：保安帽。
      * @param AttributeItem $Color 帽子颜色。
-AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系子。
+AttributeItem对应的Type为 —— 0：不戴帽子，1：红色系，2：黄色系，3：蓝色系，4：黑色系，5：灰白色系，6：混色系。
      */
     function __construct()
     {

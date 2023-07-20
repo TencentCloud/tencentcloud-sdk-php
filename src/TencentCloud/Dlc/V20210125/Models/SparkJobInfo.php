@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsInherit(integer $IsInherit) 设置任务资源配置是否继承集群模板，0（默认）不继承，1：继承
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSessionStarted() 获取是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSessionStarted(boolean $IsSessionStarted) 设置是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -352,6 +356,12 @@ class SparkJobInfo extends AbstractModel
     public $IsInherit;
 
     /**
+     * @var boolean 是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSessionStarted;
+
+    /**
      * @param string $JobId spark作业ID
      * @param string $JobName spark作业名
      * @param integer $JobType spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
@@ -407,6 +417,8 @@ class SparkJobInfo extends AbstractModel
      * @param string $DataEngineImageVersion Spark 3.2-EMR
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsInherit 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -581,6 +593,10 @@ class SparkJobInfo extends AbstractModel
 
         if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
             $this->IsInherit = $param["IsInherit"];
+        }
+
+        if (array_key_exists("IsSessionStarted",$param) and $param["IsSessionStarted"] !== null) {
+            $this->IsSessionStarted = $param["IsSessionStarted"];
         }
     }
 }

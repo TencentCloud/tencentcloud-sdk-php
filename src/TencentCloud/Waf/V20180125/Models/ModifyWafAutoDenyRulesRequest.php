@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeThreshold(integer $TimeThreshold) 设置IP封禁统计时间，范围为1-60分钟
  * @method integer getDenyTimeThreshold() 获取触发IP封禁后的封禁时间，范围为5~360分钟
  * @method void setDenyTimeThreshold(integer $DenyTimeThreshold) 设置触发IP封禁后的封禁时间，范围为5~360分钟
- * @method integer getDefenseStatus() 获取自动封禁状态
- * @method void setDefenseStatus(integer $DefenseStatus) 设置自动封禁状态
+ * @method integer getDefenseStatus() 获取自动封禁状态，0表示关闭，1表示打开
+ * @method void setDefenseStatus(integer $DefenseStatus) 设置自动封禁状态，0表示关闭，1表示打开
  */
 class ModifyWafAutoDenyRulesRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyWafAutoDenyRulesRequest extends AbstractModel
     public $DenyTimeThreshold;
 
     /**
-     * @var integer 自动封禁状态
+     * @var integer 自动封禁状态，0表示关闭，1表示打开
      */
     public $DefenseStatus;
 
@@ -63,7 +63,7 @@ class ModifyWafAutoDenyRulesRequest extends AbstractModel
      * @param integer $AttackThreshold 触发IP封禁的攻击次数阈值，范围为2~100次
      * @param integer $TimeThreshold IP封禁统计时间，范围为1-60分钟
      * @param integer $DenyTimeThreshold 触发IP封禁后的封禁时间，范围为5~360分钟
-     * @param integer $DefenseStatus 自动封禁状态
+     * @param integer $DefenseStatus 自动封禁状态，0表示关闭，1表示打开
      */
     function __construct()
     {

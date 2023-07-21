@@ -51,18 +51,9 @@ DID添加标签
  * @method Models\GetAuthorityIssuerResponse GetAuthorityIssuer(Models\GetAuthorityIssuerRequest $req) 该接口不再使用
 
 获取权威机构信息
- * @method Models\GetConsortiumClusterListResponse GetConsortiumClusterList(Models\GetConsortiumClusterListRequest $req) 下线已有内测接口，待上线正式版本的接口
-
-获取联盟bcos网络列表
- * @method Models\GetConsortiumListResponse GetConsortiumList(Models\GetConsortiumListRequest $req) 下线已有内测接口，待上线正式版本的接口
-
-获取联盟列表
  * @method Models\GetCptInfoResponse GetCptInfo(Models\GetCptInfoRequest $req) 该接口不再使用
 
 凭证模版详情
- * @method Models\GetCredentialCptRankResponse GetCredentialCptRank(Models\GetCredentialCptRankRequest $req) 下线已有内测接口，待上线正式版本的接口
-
-凭证颁发按机构排行
  * @method Models\GetCredentialStatusResponse GetCredentialStatus(Models\GetCredentialStatusRequest $req) 该接口不再使用
 
 获取凭证链上状态信息

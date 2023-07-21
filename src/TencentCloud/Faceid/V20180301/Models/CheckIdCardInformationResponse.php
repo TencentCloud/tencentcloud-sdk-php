@@ -47,7 +47,7 @@ use TencentCloud\Common\AbstractModel;
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104"
  * @method void setWarnings(string $Warnings) 设置告警信息，当在Config中配置了告警信息会停止人像比对，Result返回错误（FailedOperation.OcrWarningOccurred）并有此告警信息，Code 告警码列表和释义：
@@ -57,7 +57,7 @@ use TencentCloud\Common\AbstractModel;
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104"
  * @method float getQuality() 获取图片质量分数，当请求Config中配置图片模糊告警该参数才有意义，取值范围（0～100），目前默认阈值是50分，低于50分会触发模糊告警。
@@ -129,7 +129,7 @@ class CheckIdCardInformationResponse extends AbstractModel
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104"
      */
@@ -169,7 +169,7 @@ class CheckIdCardInformationResponse extends AbstractModel
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104"
      * @param float $Quality 图片质量分数，当请求Config中配置图片模糊告警该参数才有意义，取值范围（0～100），目前默认阈值是50分，低于50分会触发模糊告警。

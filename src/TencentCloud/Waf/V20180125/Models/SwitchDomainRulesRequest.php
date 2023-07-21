@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method array getIds() 获取规则列表
  * @method void setIds(array $Ids) 设置规则列表
- * @method integer getStatus() 获取开关状态
- * @method void setStatus(integer $Status) 设置开关状态
- * @method integer getReason() 获取设置为观察模式原因
- * @method void setReason(integer $Reason) 设置设置为观察模式原因
+ * @method integer getStatus() 获取开关状态，0表示关闭，1表示开启，2表示只观察
+ * @method void setStatus(integer $Status) 设置开关状态，0表示关闭，1表示开启，2表示只观察
+ * @method integer getReason() 获取设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
+ * @method void setReason(integer $Reason) 设置设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
  */
 class SwitchDomainRulesRequest extends AbstractModel
 {
@@ -42,20 +44,22 @@ class SwitchDomainRulesRequest extends AbstractModel
     public $Ids;
 
     /**
-     * @var integer 开关状态
+     * @var integer 开关状态，0表示关闭，1表示开启，2表示只观察
      */
     public $Status;
 
     /**
-     * @var integer 设置为观察模式原因
+     * @var integer 设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
      */
     public $Reason;
 
     /**
      * @param string $Domain 域名
      * @param array $Ids 规则列表
-     * @param integer $Status 开关状态
-     * @param integer $Reason 设置为观察模式原因
+     * @param integer $Status 开关状态，0表示关闭，1表示开启，2表示只观察
+     * @param integer $Reason 设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
      */
     function __construct()
     {

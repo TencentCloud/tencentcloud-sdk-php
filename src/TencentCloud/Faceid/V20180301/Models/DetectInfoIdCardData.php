@@ -47,7 +47,7 @@ use TencentCloud\Common\AbstractModel;
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnInfos(array $WarnInfos) 设置身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
@@ -57,7 +57,7 @@ use TencentCloud\Common\AbstractModel;
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackWarnInfos() 获取身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
@@ -67,7 +67,7 @@ use TencentCloud\Common\AbstractModel;
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackWarnInfos(array $BackWarnInfos) 设置身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
@@ -77,7 +77,7 @@ use TencentCloud\Common\AbstractModel;
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
  */
@@ -121,7 +121,7 @@ class DetectInfoIdCardData extends AbstractModel
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -135,7 +135,7 @@ class DetectInfoIdCardData extends AbstractModel
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -159,7 +159,7 @@ class DetectInfoIdCardData extends AbstractModel
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackWarnInfos 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
@@ -169,7 +169,7 @@ class DetectInfoIdCardData extends AbstractModel
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */

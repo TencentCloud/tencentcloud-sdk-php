@@ -25,9 +25,9 @@ use TencentCloud\Common\AbstractModel;
 若 FaceAttributesType 没有输入相关类型，则FaceDetaiAttributesInfo返回的细项不具备参考意义。
  *
  * @method integer getAge() 获取年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
  * @method void setAge(integer $Age) 设置年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
  * @method integer getBeauty() 获取美丑打分[0,100]。 
 FaceAttributesType 不含 Beauty 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
  * @method void setBeauty(integer $Beauty) 设置美丑打分[0,100]。 
@@ -107,7 +107,7 @@ class FaceDetailAttributesInfo extends AbstractModel
 {
     /**
      * @var integer 年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
     public $Age;
 
@@ -210,7 +210,7 @@ FaceAttributesType 不含 Smile 或检测超过 5 张人脸时，此参数仍返
 
     /**
      * @param integer $Age 年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param integer $Beauty 美丑打分[0,100]。 
 FaceAttributesType 不含 Beauty 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param AttributeItem $Emotion 情绪，可识别自然、高兴、惊讶、生气、悲伤、厌恶、害怕。 

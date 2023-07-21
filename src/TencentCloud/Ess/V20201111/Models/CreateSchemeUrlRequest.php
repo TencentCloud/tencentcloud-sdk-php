@@ -46,6 +46,18 @@ APP：第三方APP或小程序跳转电子签小程序的path。
  * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method array getHides() 获取生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+ * @method void setHides(array $Hides) 设置生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
  */
 class CreateSchemeUrlRequest extends AbstractModel
 {
@@ -103,6 +115,16 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     public $Agent;
 
     /**
+     * @var array 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+     */
+    public $Hides;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $OrganizationName 企业名称
      * @param string $Name 姓名,最大长度50个字符
@@ -116,6 +138,12 @@ APP：第三方APP或小程序跳转电子签小程序的path。
      * @param integer $PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
      * @param boolean $AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param array $Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
      */
     function __construct()
     {
@@ -170,6 +198,10 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("Hides",$param) and $param["Hides"] !== null) {
+            $this->Hides = $param["Hides"];
         }
     }
 }

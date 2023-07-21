@@ -66,6 +66,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExt(string $Ext) 设置文档制作方式(内测体验)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAssignTime() 获取文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssignTime(integer $AssignTime) 设置文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFinishedTime() 获取文档转码任务完成时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFinishedTime(integer $FinishedTime) 设置文档转码任务完成时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -143,6 +155,24 @@ class DescribeTranscodeResponse extends AbstractModel
     public $Ext;
 
     /**
+     * @var integer 文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssignTime;
+
+    /**
+     * @var integer 文档转码任务完成时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FinishedTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -170,6 +200,12 @@ class DescribeTranscodeResponse extends AbstractModel
      * @param string $ResourceListUrl 资源清单文件下载URL(内测体验)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ext 文档制作方式(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AssignTime 文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FinishedTime 文档转码任务完成时间，单位s
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -232,6 +268,18 @@ class DescribeTranscodeResponse extends AbstractModel
 
         if (array_key_exists("Ext",$param) and $param["Ext"] !== null) {
             $this->Ext = $param["Ext"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("AssignTime",$param) and $param["AssignTime"] !== null) {
+            $this->AssignTime = $param["AssignTime"];
+        }
+
+        if (array_key_exists("FinishedTime",$param) and $param["FinishedTime"] !== null) {
+            $this->FinishedTime = $param["FinishedTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -60,8 +60,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setRequired(boolean $Required) 设置当前只支持true，默认为true
  * @method string getApproverSource() 获取签署人用户来源,企微侧用户请传入：WEWORKAPP
  * @method void setApproverSource(string $ApproverSource) 设置签署人用户来源,企微侧用户请传入：WEWORKAPP
- * @method string getCustomApproverTag() 获取客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
- * @method void setCustomApproverTag(string $CustomApproverTag) 设置客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+ * @method string getCustomApproverTag() 获取客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+ * @method void setCustomApproverTag(string $CustomApproverTag) 设置客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
  * @method RegisterInfo getRegisterInfo() 获取快速注册相关信息，目前暂未开放！
  * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置快速注册相关信息，目前暂未开放！
  * @method ApproverOption getApproverOption() 获取签署人个性化能力值
@@ -170,7 +170,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $ApproverSource;
 
     /**
-     * @var string 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+     * @var string 客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
      */
     public $CustomApproverTag;
 
@@ -242,7 +242,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。
      * @param boolean $Required 当前只支持true，默认为true
      * @param string $ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
-     * @param string $CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+     * @param string $CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
      * @param RegisterInfo $RegisterInfo 快速注册相关信息，目前暂未开放！
      * @param ApproverOption $ApproverOption 签署人个性化能力值
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用

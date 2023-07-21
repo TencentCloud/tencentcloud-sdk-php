@@ -22,32 +22,58 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取克隆的源实例ID。
  * @method void setDBInstanceId(string $DBInstanceId) 设置克隆的源实例ID。
- * @method string getSpecCode() 获取售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
- * @method void setSpecCode(string $SpecCode) 设置售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+ * @method string getSpecCode() 获取售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+ * @method void setSpecCode(string $SpecCode) 设置售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
  * @method integer getStorage() 获取实例容量大小，单位：GB。
  * @method void setStorage(integer $Storage) 设置实例容量大小，单位：GB。
- * @method integer getPeriod() 获取购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
- * @method void setPeriod(integer $Period) 设置购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
- * @method integer getAutoRenewFlag() 获取续费标记：0-正常续费（默认）；1-自动续费。
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：0-正常续费（默认）；1-自动续费。
- * @method string getVpcId() 获取私有网络ID。
- * @method void setVpcId(string $VpcId) 设置私有网络ID。
- * @method string getSubnetId() 获取已配置的私有网络中的子网ID。
- * @method void setSubnetId(string $SubnetId) 设置已配置的私有网络中的子网ID。
- * @method string getName() 获取新购实例的实例名称。
- * @method void setName(string $Name) 设置新购实例的实例名称。
- * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
- * @method array getSecurityGroupIds() 获取安全组ID。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID。
+ * @method integer getPeriod() 获取购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+ * @method void setPeriod(integer $Period) 设置购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+ * @method integer getAutoRenewFlag() 获取续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+ * @method string getVpcId() 获取私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+ * @method string getSubnetId() 获取私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+ * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+ * @method string getName() 获取新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+ * @method void setName(string $Name) 设置新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+ * @method string getInstanceChargeType() 获取实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
+ * @method array getSecurityGroupIds() 获取实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
  * @method integer getProjectId() 获取项目ID。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
- * @method array getTagList() 获取实例需要绑定的Tag信息，默认为空。
- * @method void setTagList(array $TagList) 设置实例需要绑定的Tag信息，默认为空。
- * @method array getDBNodeSet() 获取购买多可用区实例时填写。
- * @method void setDBNodeSet(array $DBNodeSet) 设置购买多可用区实例时填写。
- * @method integer getAutoVoucher() 获取是否自动使用代金券。1（是），0（否），默认不使用。
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券。1（是），0（否），默认不使用。
+ * @method array getTagList() 获取实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+ * @method void setTagList(array $TagList) 设置实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+ * @method array getDBNodeSet() 获取实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+ * @method void setDBNodeSet(array $DBNodeSet) 设置实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+ * @method integer getAutoVoucher() 获取是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
  * @method string getVoucherIds() 获取代金券ID列表。
  * @method void setVoucherIds(string $VoucherIds) 设置代金券ID列表。
  * @method integer getActivityId() 获取活动ID。
@@ -56,6 +82,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupSetId(string $BackupSetId) 设置基础备份集ID。
  * @method string getRecoveryTargetTime() 获取恢复时间点。
  * @method void setRecoveryTargetTime(string $RecoveryTargetTime) 设置恢复时间点。
+ * @method string getSyncMode() 获取主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async
+ * @method void setSyncMode(string $SyncMode) 设置主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async
  */
 class CloneDBInstanceRequest extends AbstractModel
 {
@@ -65,7 +101,7 @@ class CloneDBInstanceRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * @var string 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      */
     public $SpecCode;
 
@@ -75,37 +111,46 @@ class CloneDBInstanceRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+     * @var integer 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public $Period;
 
     /**
-     * @var integer 续费标记：0-正常续费（默认）；1-自动续费。
+     * @var integer 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 私有网络ID。
+     * @var string 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
      */
     public $VpcId;
 
     /**
-     * @var string 已配置的私有网络中的子网ID。
+     * @var string 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
      */
     public $SubnetId;
 
     /**
-     * @var string 新购实例的实例名称。
+     * @var string 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
      */
     public $Name;
 
     /**
-     * @var string 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+     * @var string 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
      */
     public $InstanceChargeType;
 
     /**
-     * @var array 安全组ID。
+     * @var array 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
      */
     public $SecurityGroupIds;
 
@@ -115,17 +160,21 @@ class CloneDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 实例需要绑定的Tag信息，默认为空。
+     * @var array 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
      */
     public $TagList;
 
     /**
-     * @var array 购买多可用区实例时填写。
+     * @var array 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public $DBNodeSet;
 
     /**
-     * @var integer 是否自动使用代金券。1（是），0（否），默认不使用。
+     * @var integer 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public $AutoVoucher;
 
@@ -150,24 +199,51 @@ class CloneDBInstanceRequest extends AbstractModel
     public $RecoveryTargetTime;
 
     /**
+     * @var string 主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async
+     */
+    public $SyncMode;
+
+    /**
      * @param string $DBInstanceId 克隆的源实例ID。
-     * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * @param string $SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      * @param integer $Storage 实例容量大小，单位：GB。
-     * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
-     * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费。
-     * @param string $VpcId 私有网络ID。
-     * @param string $SubnetId 已配置的私有网络中的子网ID。
-     * @param string $Name 新购实例的实例名称。
-     * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
-     * @param array $SecurityGroupIds 安全组ID。
+     * @param integer $Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+     * @param integer $AutoRenewFlag 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+     * @param string $VpcId 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+     * @param string $SubnetId 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * @param string $Name 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+     * @param string $InstanceChargeType 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
+     * @param array $SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
      * @param integer $ProjectId 项目ID。
-     * @param array $TagList 实例需要绑定的Tag信息，默认为空。
-     * @param array $DBNodeSet 购买多可用区实例时填写。
-     * @param integer $AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
+     * @param array $TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+     * @param array $DBNodeSet 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     * @param integer $AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      * @param string $VoucherIds 代金券ID列表。
      * @param integer $ActivityId 活动ID。
      * @param string $BackupSetId 基础备份集ID。
      * @param string $RecoveryTargetTime 恢复时间点。
+     * @param string $SyncMode 主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async
      */
     function __construct()
     {
@@ -262,6 +338,10 @@ class CloneDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("RecoveryTargetTime",$param) and $param["RecoveryTargetTime"] !== null) {
             $this->RecoveryTargetTime = $param["RecoveryTargetTime"];
+        }
+
+        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
+            $this->SyncMode = $param["SyncMode"];
         }
     }
 }

@@ -21,49 +21,69 @@ use TencentCloud\Common\AbstractModel;
  * 敏感数据加密
  *
  * @method array getEncryptList() 获取在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptList(array $EncryptList) 设置在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCiphertextBlob() 获取有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCiphertextBlob(string $CiphertextBlob) 设置有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIv() 获取有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIv(string $Iv) 设置有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlgorithm() 获取加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgorithm(string $Algorithm) 设置加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Encryption extends AbstractModel
 {
     /**
      * @var array 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptList;
 
     /**
      * @var string 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CiphertextBlob;
 
     /**
      * @var string 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Iv;
 
     /**
      * @var string 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Algorithm;
 
     /**
      * @var array SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
 
     /**
      * @param array $EncryptList 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Iv 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Algorithm 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

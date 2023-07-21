@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置项目启动时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getStopTime() 获取项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，该字段为空。
  * @method void setStopTime(string $StopTime) 设置项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，该字段为空。
+ * @method float getDuration() 获取推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
+ * @method void setDuration(float $Duration) 设置推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
  */
 class MediaCastProjectInfo extends AbstractModel
 {
@@ -79,6 +81,11 @@ class MediaCastProjectInfo extends AbstractModel
     public $StopTime;
 
     /**
+     * @var float 推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
+     */
+    public $Duration;
+
+    /**
      * @param string $Status 点播转直播项目状态，取值有：
 <li>Working ：运行中；</li>
 <li>Idle ：空闲。</li>
@@ -88,6 +95,7 @@ class MediaCastProjectInfo extends AbstractModel
      * @param MediaCastPlaySetting $PlaySetting 播放参数。
      * @param string $StartTime 项目启动时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $StopTime 项目结束时间。采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。如果项目还在运行中，该字段为空。
+     * @param float $Duration 推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ class MediaCastProjectInfo extends AbstractModel
 
         if (array_key_exists("StopTime",$param) and $param["StopTime"] !== null) {
             $this->StopTime = $param["StopTime"];
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
         }
     }
 }

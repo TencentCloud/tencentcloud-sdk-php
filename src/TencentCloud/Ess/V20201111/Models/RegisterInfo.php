@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLegalName(string $LegalName) 设置法人姓名
  * @method string getUscc() 获取社会统一信用代码
  * @method void setUscc(string $Uscc) 设置社会统一信用代码
+ * @method string getUnifiedSocialCreditCode() 获取社会统一信用代码
+ * @method void setUnifiedSocialCreditCode(string $UnifiedSocialCreditCode) 设置社会统一信用代码
  */
 class RegisterInfo extends AbstractModel
 {
@@ -34,12 +36,19 @@ class RegisterInfo extends AbstractModel
 
     /**
      * @var string 社会统一信用代码
+     * @deprecated
      */
     public $Uscc;
 
     /**
+     * @var string 社会统一信用代码
+     */
+    public $UnifiedSocialCreditCode;
+
+    /**
      * @param string $LegalName 法人姓名
      * @param string $Uscc 社会统一信用代码
+     * @param string $UnifiedSocialCreditCode 社会统一信用代码
      */
     function __construct()
     {
@@ -60,6 +69,10 @@ class RegisterInfo extends AbstractModel
 
         if (array_key_exists("Uscc",$param) and $param["Uscc"] !== null) {
             $this->Uscc = $param["Uscc"];
+        }
+
+        if (array_key_exists("UnifiedSocialCreditCode",$param) and $param["UnifiedSocialCreditCode"] !== null) {
+            $this->UnifiedSocialCreditCode = $param["UnifiedSocialCreditCode"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置需要添加的规则url
  * @method string getFunction() 获取规则的方法
  * @method void setFunction(string $Function) 设置规则的方法
- * @method integer getStatus() 获取规则的开关
- * @method void setStatus(integer $Status) 设置规则的开关
+ * @method integer getStatus() 获取规则的开关，0表示规则关闭，1表示规则打开
+ * @method void setStatus(integer $Status) 设置规则的开关，0表示规则关闭，1表示规则打开
  */
 class AddDomainWhiteRuleRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AddDomainWhiteRuleRequest extends AbstractModel
     public $Function;
 
     /**
-     * @var integer 规则的开关
+     * @var integer 规则的开关，0表示规则关闭，1表示规则打开
      */
     public $Status;
 
@@ -63,7 +63,7 @@ class AddDomainWhiteRuleRequest extends AbstractModel
      * @param array $Rules 需要添加的规则
      * @param string $Url 需要添加的规则url
      * @param string $Function 规则的方法
-     * @param integer $Status 规则的开关
+     * @param integer $Status 规则的开关，0表示规则关闭，1表示规则打开
      */
     function __construct()
     {

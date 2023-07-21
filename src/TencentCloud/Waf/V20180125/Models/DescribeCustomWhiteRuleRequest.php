@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getOffset() 获取偏移
- * @method void setOffset(integer $Offset) 设置偏移
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取容量
  * @method void setLimit(integer $Limit) 设置容量
  * @method array getFilters() 获取过滤数组,name可以是如下的值： RuleID,RuleName,Match
@@ -41,7 +41,7 @@ class DescribeCustomWhiteRuleRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 偏移
+     * @var integer 偏移量
      */
     public $Offset;
 
@@ -67,7 +67,7 @@ class DescribeCustomWhiteRuleRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param integer $Offset 偏移
+     * @param integer $Offset 偏移量
      * @param integer $Limit 容量
      * @param array $Filters 过滤数组,name可以是如下的值： RuleID,RuleName,Match
      * @param string $Order asc或者desc

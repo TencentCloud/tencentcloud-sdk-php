@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredPodNumber(integer $DesiredPodNumber) 设置该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GPUArgs getGPUArgs() 获取GPU驱动相关参数
+ * @method GPUArgs getGPUArgs() 获取GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动相关参数
+ * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreStartUserScript() 获取base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ class InstanceAdvancedSettings extends AbstractModel
     public $DesiredPodNumber;
 
     /**
-     * @var GPUArgs GPU驱动相关参数
+     * @var GPUArgs GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUArgs;
@@ -136,7 +136,7 @@ class InstanceAdvancedSettings extends AbstractModel
     /**
      * @param integer $DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GPUArgs $GPUArgs GPU驱动相关参数
+     * @param GPUArgs $GPUArgs GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。

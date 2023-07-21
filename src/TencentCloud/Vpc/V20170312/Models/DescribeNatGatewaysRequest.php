@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatGateways请求参数结构体
  *
- * @method array getNatGatewayIds() 获取NAT网关统一 ID，形如：`nat-123xx454`。
- * @method void setNatGatewayIds(array $NatGatewayIds) 设置NAT网关统一 ID，形如：`nat-123xx454`。
- * @method array getFilters() 获取过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+ * @method array getNatGatewayIds() 获取NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。
+ * @method void setNatGatewayIds(array $NatGatewayIds) 设置NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。
+ * @method array getFilters() 获取过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
 <li>tag-key - String - （过滤条件）标签键，形如：`test-key`。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+ * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNatGatewaysRequest extends AbstractModel
 {
     /**
-     * @var array NAT网关统一 ID，形如：`nat-123xx454`。
+     * @var array NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。
      */
     public $NatGatewayIds;
 
     /**
-     * @var array 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+     * @var array 过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
@@ -64,8 +64,8 @@ class DescribeNatGatewaysRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
-     * @param array $Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+     * @param array $NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。
+     * @param array $Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>

@@ -23,7 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getNatGatewayIds() 获取NAT网关ID。
  * @method void setNatGatewayIds(array $NatGatewayIds) 设置NAT网关ID。
  * @method array getFilters() 获取过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 <li>private-port， 内网端口。</li>
 <li>description，规则描述。</li>
  * @method void setFilters(array $Filters) 设置过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
@@ -54,7 +54,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends Abst
 
     /**
      * @var array 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
@@ -78,7 +78,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends Abst
     /**
      * @param array $NatGatewayIds NAT网关ID。
      * @param array $Filters 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>

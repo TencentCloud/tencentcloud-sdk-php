@@ -19,6 +19,9 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 补充签署人信息
+- RecipientId 必须指定
+-  通过企业自定义账号ID补充签署人时，ApproverSource 和 CustomUserId 必填
+- 通过二要素（姓名/手机号）补充签署人时，ApproverName 和 ApproverMobile 必填
  *
  * @method string getRecipientId() 获取对应模板中的参与方ID
  * @method void setRecipientId(string $RecipientId) 设置对应模板中的参与方ID
@@ -30,6 +33,10 @@ WEWORKAPP: 企业微信
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
  * @method void setCustomUserId(string $CustomUserId) 设置企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
+ * @method string getApproverName() 获取补充签署人姓名
+ * @method void setApproverName(string $ApproverName) 设置补充签署人姓名
+ * @method string getApproverMobile() 获取补充签署人手机号
+ * @method void setApproverMobile(string $ApproverMobile) 设置补充签署人手机号
  */
 class FillApproverInfo extends AbstractModel
 {
@@ -51,11 +58,23 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
     public $CustomUserId;
 
     /**
+     * @var string 补充签署人姓名
+     */
+    public $ApproverName;
+
+    /**
+     * @var string 补充签署人手机号
+     */
+    public $ApproverMobile;
+
+    /**
      * @param string $RecipientId 对应模板中的参与方ID
      * @param string $ApproverSource 签署人来源
 WEWORKAPP: 企业微信
      * @param string $CustomUserId 企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
+     * @param string $ApproverName 补充签署人姓名
+     * @param string $ApproverMobile 补充签署人手机号
      */
     function __construct()
     {
@@ -80,6 +99,14 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
 
         if (array_key_exists("CustomUserId",$param) and $param["CustomUserId"] !== null) {
             $this->CustomUserId = $param["CustomUserId"];
+        }
+
+        if (array_key_exists("ApproverName",$param) and $param["ApproverName"] !== null) {
+            $this->ApproverName = $param["ApproverName"];
+        }
+
+        if (array_key_exists("ApproverMobile",$param) and $param["ApproverMobile"] !== null) {
+            $this->ApproverMobile = $param["ApproverMobile"];
         }
     }
 }

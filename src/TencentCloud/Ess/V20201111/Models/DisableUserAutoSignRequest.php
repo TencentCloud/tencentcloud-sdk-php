@@ -28,6 +28,8 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
 E_PRESCRIPTION_AUTO_SIGN 电子处方
  * @method UserThreeFactor getUserInfo() 获取关闭自动签的个人的三要素
  * @method void setUserInfo(UserThreeFactor $UserInfo) 设置关闭自动签的个人的三要素
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class DisableUserAutoSignRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     public $UserInfo;
 
     /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 操作人信息,UserId必填
      * @param string $SceneKey 自动签场景:
 E_PRESCRIPTION_AUTO_SIGN 电子处方
      * @param UserThreeFactor $UserInfo 关闭自动签的个人的三要素
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -78,6 +86,11 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         if (array_key_exists("UserInfo",$param) and $param["UserInfo"] !== null) {
             $this->UserInfo = new UserThreeFactor();
             $this->UserInfo->deserialize($param["UserInfo"]);
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

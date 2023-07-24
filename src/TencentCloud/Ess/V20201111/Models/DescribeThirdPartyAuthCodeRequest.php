@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAuthCode() 获取电子签小程序跳转客户小程序时携带的授权查看码
  * @method void setAuthCode(string $AuthCode) 设置电子签小程序跳转客户小程序时携带的授权查看码
+ * @method UserInfo getOperator() 获取操作人信息
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class DescribeThirdPartyAuthCodeRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeThirdPartyAuthCodeRequest extends AbstractModel
     public $AuthCode;
 
     /**
+     * @var UserInfo 操作人信息
+     */
+    public $Operator;
+
+    /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
+
+    /**
      * @param string $AuthCode 电子签小程序跳转客户小程序时携带的授权查看码
+     * @param UserInfo $Operator 操作人信息
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -48,6 +64,16 @@ class DescribeThirdPartyAuthCodeRequest extends AbstractModel
         }
         if (array_key_exists("AuthCode",$param) and $param["AuthCode"] !== null) {
             $this->AuthCode = $param["AuthCode"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

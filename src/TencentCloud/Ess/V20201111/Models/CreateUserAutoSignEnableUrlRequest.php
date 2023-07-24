@@ -36,6 +36,8 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
  * @method void setNotifyAddress(string $NotifyAddress) 设置若上方填写为 SMS，则此处为手机号
  * @method integer getExpiredTime() 获取链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
  * @method void setExpiredTime(integer $ExpiredTime) 设置链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class CreateUserAutoSignEnableUrlRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     public $ExpiredTime;
 
     /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 操作人信息,UserId必填
      * @param string $SceneKey 自动签场景:
 E_PRESCRIPTION_AUTO_SIGN 电子处方
@@ -84,6 +91,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
      * @param string $NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
      * @param string $NotifyAddress 若上方填写为 SMS，则此处为手机号
      * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -126,6 +134,11 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
 
         if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
             $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

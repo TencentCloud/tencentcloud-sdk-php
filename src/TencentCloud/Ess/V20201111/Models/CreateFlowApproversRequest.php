@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApprovers(array $Approvers) 设置补充签署人信息
  * @method string getInitiator() 获取企微消息中的发起人
  * @method void setInitiator(string $Initiator) 设置企微消息中的发起人
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作
+
+
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作
  */
 class CreateFlowApproversRequest extends AbstractModel
 {
@@ -52,10 +56,18 @@ class CreateFlowApproversRequest extends AbstractModel
     public $Initiator;
 
     /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作
+
+
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowId 签署流程编号
      * @param array $Approvers 补充签署人信息
      * @param string $Initiator 企微消息中的发起人
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作
      */
     function __construct()
     {
@@ -90,6 +102,11 @@ class CreateFlowApproversRequest extends AbstractModel
 
         if (array_key_exists("Initiator",$param) and $param["Initiator"] !== null) {
             $this->Initiator = $param["Initiator"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

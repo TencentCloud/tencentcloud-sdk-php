@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerCertInfo(array $ServerCertInfo) 设置证书信息, 只需要传入 CertId 即可, 如果为空, 则使用默认证书。
  * @method string getApplyType() 获取托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。
+<li>none：不托管EO；</li>不填，默认取值为none。
  * @method void setApplyType(string $ApplyType) 设置托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。
+<li>none：不托管EO；</li>不填，默认取值为none。
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -53,7 +53,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
     /**
      * @var string 托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。
+<li>none：不托管EO；</li>不填，默认取值为none。
      */
     public $ApplyType;
 
@@ -63,7 +63,7 @@ class ModifyHostsCertificateRequest extends AbstractModel
      * @param array $ServerCertInfo 证书信息, 只需要传入 CertId 即可, 如果为空, 则使用默认证书。
      * @param string $ApplyType 托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。
+<li>none：不托管EO；</li>不填，默认取值为none。
      */
     function __construct()
     {

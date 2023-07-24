@@ -23,10 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tdid\V20210519\Models as Models;
 
 /**
- * @method Models\AddLabelResponse AddLabel(Models\AddLabelRequest $req) 下线已有内测接口，待上线正式版本的接口
-
-DID添加标签
-
  * @method Models\CheckChainResponse CheckChain(Models\CheckChainRequest $req) 该接口不再使用
 
 检查区块链信息
@@ -45,9 +41,6 @@ DID添加标签
  * @method Models\CreateTDidByPublicKeyResponse CreateTDidByPublicKey(Models\CreateTDidByPublicKeyRequest $req) 该接口不再使用
 
  新建DID根据公钥生成Tdid
- * @method Models\GetAgencyTDidResponse GetAgencyTDid(Models\GetAgencyTDidRequest $req) 该接口已废弃
-
-本机构DID详情
  * @method Models\GetAuthorityIssuerResponse GetAuthorityIssuer(Models\GetAuthorityIssuerRequest $req) 该接口不再使用
 
 获取权威机构信息

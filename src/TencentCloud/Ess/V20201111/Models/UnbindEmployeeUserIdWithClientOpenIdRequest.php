@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置电子签系统员工UserId
  * @method string getOpenId() 获取客户系统OpenId
  * @method void setOpenId(string $OpenId) 设置客户系统OpenId
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel
     public $OpenId;
 
     /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为INTEGRATE；当传入参数UserId，Channel无需指定(参数用法参考示例)
      * @param string $UserId 电子签系统员工UserId
      * @param string $OpenId 客户系统OpenId
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -73,6 +81,11 @@ class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel
 
         if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
             $this->OpenId = $param["OpenId"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

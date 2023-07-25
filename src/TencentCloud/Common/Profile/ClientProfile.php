@@ -18,6 +18,8 @@
 
 namespace TencentCloud\Common\Profile;
 
+use TencentCloud\Common\Exception\TencentCloudSDKException;
+
 /**
  * client可选参数类
  * Class ClientProfile
@@ -50,7 +52,12 @@ class ClientProfile
      * @var string English
      */
     public static $EN_US = "en-US";
-
+    
+    /**
+     * @var boolean 开启地域容器
+     */
+    public $enableRegionBreaker;
+    
     /**
      * @var HttpProfile http相关参数
      */
@@ -75,19 +82,27 @@ class ClientProfile
      * @var string
      */
     private $language;
-
+    
+    /**
+     * @var RegionBreakerProfile 地域容灾相关参数
+     */
+    private $regionBreakerProfile;
 
     /**
      * ClientProfile constructor.
      * @param string $signMethod  签名算法，目前支持SHA256，SHA1
      * @param HttpProfile $httpProfile http参数类
+     * @param boolean $enableRegionBreaker  开启地域容灾
+     * @param RegionBreakerProfile $regionBreakerProfile  地域容灾相关参数
      */
-    public function __construct($signMethod = null, $httpProfile = null)
+    public function __construct($signMethod = null, $httpProfile = null, $enableRegionBreaker = false, $regionBreakerProfile = null)
     {
         $this->signMethod = $signMethod ? $signMethod : ClientProfile::$SIGN_TC3_SHA256;
         $this->httpProfile = $httpProfile ? $httpProfile : new HttpProfile();
         $this->unsignedPayload = false;
-	$this->checkPHPVersion = true;
+	    $this->checkPHPVersion = true;
+        $this->enableRegionBreaker = $enableRegionBreaker;
+        $this->regionBreakerProfile = $regionBreakerProfile;
 	//$this->language = ClientProfile::$ZH_CN;
     }
 
@@ -158,7 +173,21 @@ class ClientProfile
     {
 	$this->language = $language;
     }
-
+    
+    public function getRegionBreakerProfile()
+    {
+        return $this->regionBreakerProfile;
+    }
+    
+    /**
+     * 设置地域容灾相关参数
+     * @param RegionBreakerProfile $regionBreakerProfile 地域容灾相关参数
+     */
+    public function setRegionBreakerProfile($regionBreakerProfile)
+    {
+        $this->regionBreakerProfile = $regionBreakerProfile;
+    }
+    
     /**
      * 获取http选项实例
      * @return null|HttpProfile http选项实例
@@ -166,5 +195,33 @@ class ClientProfile
     public function getHttpProfile()
     {
         return $this->httpProfile;
+    }
+}
+
+class RegionBreakerProfile {
+    
+    public function __construct($masterEndpoint,
+                                $slaveEndpoint,
+                                $maxFailNum = 5,
+                                $maxFailPercent = 0.75,
+                                $windowInterval = 60*5,
+                                $timeout = 60,
+                                $maxRequests = 5) {
+        if (empty($masterEndpoint) || !(substr($masterEndpoint, -20) === '.tencentcloudapi.com')) {
+            throw new TencentCloudSDKException("", 'masterEndpoint must be provided and end with ".tencentcloudapi.com"');
+        }
+        if (empty($slaveEndpoint) || !(substr($slaveEndpoint, -20) === '.tencentcloudapi.com')) {
+            throw new TencentCloudSDKException("", 'slaveEndpoint must be provided and end with ".tencentcloudapi.com"');
+        }
+        $this->masterEndpoint = $masterEndpoint;
+        $this->slaveEndpoint = $slaveEndpoint;
+        $this->maxFailNum = $maxFailNum;
+        $this->maxFailPercent = $maxFailPercent;
+        if ($this->maxFailPercent < 0 || $this->maxFailPercent > 1) {
+            throw new TencentCloudSDKException("", "ClientError: max fail percent must be set between 0 and 1");
+        }
+        $this->windowInterval = $windowInterval;
+        $this->timeout = $timeout;
+        $this->maxRequests = $maxRequests;
     }
 }

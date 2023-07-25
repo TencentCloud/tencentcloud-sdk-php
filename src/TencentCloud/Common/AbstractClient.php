@@ -23,6 +23,8 @@ use \ReflectionClass;
 use TencentCloud\Common\Http\HttpConnection;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
+use TencentCloud\Common\Profile\RegionBreakerProfile;
+use TencentCloud\Common\CircuitBreaker;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 
 
@@ -53,7 +55,9 @@ abstract class AbstractClient
      * @var ClientProfile 会话配置信息类
      */
     private $profile;
-
+    
+    private $regionBreakerProfile;
+    private $circuitBreaker;
     /**
      * @var string 产品地域
      */
@@ -63,6 +67,7 @@ abstract class AbstractClient
      * @var string 请求路径
      */
     private $path;
+    
 
     /**
      * @var string sdk版本号
@@ -97,11 +102,19 @@ abstract class AbstractClient
         } else {
             $this->profile = new ClientProfile();
         }
-
+        
+        
         $this->getRefreshedEndpoint();
 
         $this->sdkVersion = AbstractClient::$SDK_VERSION;
         $this->apiVersion = $version;
+    
+        if ($this->profile->enableRegionBreaker) {
+            if (is_null($this->profile->getRegionBreakerProfile())) {
+                throw new TencentCloudSDKException("ClientError", "RegionBreakerProfile have not been set yet.");
+                }
+            $this->circuitBreaker = new CircuitBreaker($this->profile->getRegionBreakerProfile());
+        }
 
         if (version_compare(phpversion(), $this->PHP_VERSION_MINIMUM, '<') && $profile->getCheckPHPVersion()) {
             throw new TencentCloudSDKException("ClientError", "PHP version must >= ".$this->PHP_VERSION_MINIMUM.", your current is ".phpversion());
@@ -172,7 +185,13 @@ abstract class AbstractClient
      */
     public function __call($action, $request)
     {
-        return $this->doRequestWithOptions($action, $request[0], array());
+        if ($this->profile->enableRegionBreaker) {
+            return $this->doRequestWithOptionsOnRegionBreaker($action, $request[0], array());
+        }
+        else {
+            return $this->doRequestWithOptions($action, $request[0], array());
+        }
+        
     }
 
     /**
@@ -280,6 +299,51 @@ abstract class AbstractClient
 
             return $this->returnResponse($action, $tmpResp);
         } catch (\Exception $e) {
+            if (!($e instanceof TencentCloudSDKException)) {
+                throw new TencentCloudSDKException("", $e->getMessage());
+            } else {
+                throw $e;
+            }
+        }
+    }
+    
+    protected function doRequestWithOptionsOnRegionBreaker($action, $request, $options)
+    {
+        try {
+            $endpoint = $this->profile->getRegionBreakerProfile()->masterEndpoint;
+            list($generation, $need_break) = $this->circuitBreaker->beforeRequests();
+            if ($need_break) {
+                $endpoint = $this->profile->getRegionBreakerProfile()->slaveEndpoint;
+            }
+            $this->profile->getHttpProfile()->setEndpoint($endpoint);
+            $responseData = null;
+            $serializeRequest = $request->serialize();
+            $method = $this->getPrivateMethod($request, "arrayMerge");
+            $serializeRequest = $method->invoke($request, $serializeRequest);
+            switch ($this->profile->getSignMethod()) {
+                case ClientProfile::$SIGN_HMAC_SHA1:
+                case ClientProfile::$SIGN_HMAC_SHA256:
+                    $responseData = $this->doRequest($action, $serializeRequest);
+                    break;
+                case ClientProfile::$SIGN_TC3_SHA256:
+                    $responseData = $this->doRequestWithTC3($action, $request, $options, array(), "");
+                    break;
+                default:
+                    throw new TencentCloudSDKException("ClientError", "Invalid sign method");
+                    break;
+            }
+            if ($responseData->getStatusCode() !== AbstractClient::$HTTP_RSP_OK) {
+                throw new TencentCloudSDKException($responseData->getReasonPhrase(), $responseData->getBody());
+            }
+            $tmpResp = json_decode($responseData->getBody(), true)["Response"];
+            if (array_key_exists("Error", $tmpResp)) {
+                $this->circuitBreaker->afterRequests($generation, True);
+                throw new TencentCloudSDKException($tmpResp["Error"]["Code"], $tmpResp["Error"]["Message"], $tmpResp["RequestId"]);
+            }
+            $this->circuitBreaker->afterRequests($generation, True);
+            return $this->returnResponse($action, $tmpResp);
+        } catch (\Exception $e) {
+            $this->circuitBreaker->afterRequests($generation, False);
             if (!($e instanceof TencentCloudSDKException)) {
                 throw new TencentCloudSDKException("", $e->getMessage());
             } else {

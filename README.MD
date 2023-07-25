@@ -150,6 +150,27 @@ $clientProfile->setHttpProfile($httpProfile);
 $client = new OcrClient($cred, 'ap-beijing', $this->clientProfile);
 ```
 
+## 地域容灾
+
+从`3.0.933`起 腾讯云 Php SDK 支持地域容灾，当某个域名请求失败时，会自动切换到容灾域名。使用方式如下：
+使用地域时有三种状态相互转换：关闭、全开和半开状态
+关闭：使用主要域名请求，如果出现错误时，会切换到全开状态
+全开：使用容灾域名请求，当达到一定时间时，会切换到半开状态
+半开：此时会放少量的请求到主要域名，如果请求失败，则切换到全开状态，当请求成功数达到一定的数量时，会切换到关闭状态
+
+相关设置如下
+```php
+use TencentCloud\Common\Profile\RegionBreakerProfile;
+// 开启地域容灾
+$clientProfile->enableRegionBreaker=true;  
+// 设置主备节点，以cvm产品为例，假设主节点在上海，备节点在北京，则配置如下
+$regionBreakerProfile = new RegionBreakerProfile(
+    "cvm.ap-shanghai.tencentcloudapi.com",	// 主节点
+    "cvm.ap-beijing.tencentcloudapi.com"    // 备节点	
+);
+$clientProfile->setRegionBreakerProfile($regionBreakerProfile);		
+```
+
 ## 证书问题
 
 如果你的 PHP 环境证书有问题，可能会遇到报错，类似于 `cURL error 60: See http://curl.haxx.se/libcurl/c/libcurl-errors.html`，请尝试按如下步骤解决：

@@ -14,29 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aiart\V20221229\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ImageToImage返回参数结构体
+ * InstanceScalingDown返回参数结构体
  *
- * @method string getResultImage() 获取根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
- * @method void setResultImage(string $ResultImage) 设置根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+ * @method ScalingDownResp getResult() 获取缩容应答
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(ScalingDownResp $Result) 设置缩容应答
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ImageToImageResponse extends AbstractModel
+class InstanceScalingDownResponse extends AbstractModel
 {
     /**
-     * @var string 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * @var ScalingDownResp 缩容应答
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ResultImage;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,9 +41,8 @@ class ImageToImageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultImage 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * @param ScalingDownResp $Result 缩容应答
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,8 +58,9 @@ class ImageToImageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultImage",$param) and $param["ResultImage"] !== null) {
-            $this->ResultImage = $param["ResultImage"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new ScalingDownResp();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

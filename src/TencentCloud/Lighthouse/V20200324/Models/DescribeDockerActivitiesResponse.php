@@ -14,29 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Aiart\V20221229\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ImageToImage返回参数结构体
+ * DescribeDockerActivities返回参数结构体
  *
- * @method string getResultImage() 获取根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
- * @method void setResultImage(string $ResultImage) 设置根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+ * @method integer getTotalCount() 获取总数量。
+ * @method void setTotalCount(integer $TotalCount) 设置总数量。
+ * @method array getDockerActivitySet() 获取Docker活动列表。
+ * @method void setDockerActivitySet(array $DockerActivitySet) 设置Docker活动列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ImageToImageResponse extends AbstractModel
+class DescribeDockerActivitiesResponse extends AbstractModel
 {
     /**
-     * @var string 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * @var integer 总数量。
      */
-    public $ResultImage;
+    public $TotalCount;
+
+    /**
+     * @var array Docker活动列表。
+     */
+    public $DockerActivitySet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,9 +45,8 @@ class ImageToImageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultImage 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * @param integer $TotalCount 总数量。
+     * @param array $DockerActivitySet Docker活动列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,8 +62,17 @@ class ImageToImageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultImage",$param) and $param["ResultImage"] !== null) {
-            $this->ResultImage = $param["ResultImage"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("DockerActivitySet",$param) and $param["DockerActivitySet"] !== null) {
+            $this->DockerActivitySet = [];
+            foreach ($param["DockerActivitySet"] as $key => $value){
+                $obj = new DockerActivity();
+                $obj->deserialize($value);
+                array_push($this->DockerActivitySet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

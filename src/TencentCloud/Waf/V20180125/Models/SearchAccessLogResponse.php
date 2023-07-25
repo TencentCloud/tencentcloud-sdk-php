@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchAccessLog返回参数结构体
  *
- * @method string getContext() 获取加载后续内容的Context
- * @method void setContext(string $Context) 设置加载后续内容的Context
+ * @method string getContext() 获取新接口此字段失效，默认返回空字符串
+ * @method void setContext(string $Context) 设置新接口此字段失效，默认返回空字符串
  * @method boolean getListOver() 获取日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
  * @method void setListOver(boolean $ListOver) 设置日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
  * @method boolean getAnalysis() 获取返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class SearchAccessLogResponse extends AbstractModel
 {
     /**
-     * @var string 加载后续内容的Context
+     * @var string 新接口此字段失效，默认返回空字符串
      */
     public $Context;
 
@@ -91,7 +91,7 @@ class SearchAccessLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Context 加载后续内容的Context
+     * @param string $Context 新接口此字段失效，默认返回空字符串
      * @param boolean $ListOver 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
      * @param boolean $Analysis 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
      * @param array $ColNames 如果Analysis为True，则返回分析结果的列名，否则为空

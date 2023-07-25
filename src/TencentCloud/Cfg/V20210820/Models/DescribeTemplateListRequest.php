@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateSource(integer $TemplateSource) 设置经验来源 0-自建 1-专家推荐
  * @method array getTemplateIdList() 获取经验ID
  * @method void setTemplateIdList(array $TemplateIdList) 设置经验ID
+ * @method array getFilters() 获取过滤参数
+ * @method void setFilters(array $Filters) 设置过滤参数
  */
 class DescribeTemplateListRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeTemplateListRequest extends AbstractModel
     public $TemplateIdList;
 
     /**
+     * @var array 过滤参数
+     */
+    public $Filters;
+
+    /**
      * @param integer $Limit 分页Limit, 最大值100
      * @param integer $Offset 分页Offset
      * @param string $Title 演练名称
@@ -88,6 +95,7 @@ class DescribeTemplateListRequest extends AbstractModel
      * @param array $Tags 标签对
      * @param integer $TemplateSource 经验来源 0-自建 1-专家推荐
      * @param array $TemplateIdList 经验ID
+     * @param array $Filters 过滤参数
      */
     function __construct()
     {
@@ -137,6 +145,15 @@ class DescribeTemplateListRequest extends AbstractModel
 
         if (array_key_exists("TemplateIdList",$param) and $param["TemplateIdList"] !== null) {
             $this->TemplateIdList = $param["TemplateIdList"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new ActionFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

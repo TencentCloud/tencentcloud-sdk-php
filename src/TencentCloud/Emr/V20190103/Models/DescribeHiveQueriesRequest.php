@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method integer getStartTime() 获取起始时间秒
  * @method void setStartTime(integer $StartTime) 设置起始时间秒
- * @method integer getEndTime() 获取结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
- * @method void setEndTime(integer $EndTime) 设置结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
+ * @method integer getEndTime() 获取结束时间秒，EndTime-StartTime不得超过1天秒数86400
+ * @method void setEndTime(integer $EndTime) 设置结束时间秒，EndTime-StartTime不得超过1天秒数86400
  * @method integer getOffset() 获取分页起始偏移，从0开始
  * @method void setOffset(integer $Offset) 设置分页起始偏移，从0开始
  * @method integer getLimit() 获取分页大小，合法范围[1,100]
@@ -44,7 +44,7 @@ class DescribeHiveQueriesRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var integer 结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
+     * @var integer 结束时间秒，EndTime-StartTime不得超过1天秒数86400
      */
     public $EndTime;
 
@@ -61,7 +61,7 @@ class DescribeHiveQueriesRequest extends AbstractModel
     /**
      * @param string $InstanceId 集群ID
      * @param integer $StartTime 起始时间秒
-     * @param integer $EndTime 结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
+     * @param integer $EndTime 结束时间秒，EndTime-StartTime不得超过1天秒数86400
      * @param integer $Offset 分页起始偏移，从0开始
      * @param integer $Limit 分页大小，合法范围[1,100]
      */

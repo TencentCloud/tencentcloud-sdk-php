@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskEndTime(string $TaskEndTime) 设置结束时间，固定格式%Y-%m-%d %H:%M:%S
  * @method array getTags() 获取标签对
  * @method void setTags(array $Tags) 设置标签对
+ * @method array getFilters() 获取筛选条件
+ * @method void setFilters(array $Filters) 设置筛选条件
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeTaskListRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array 筛选条件
+     */
+    public $Filters;
+
+    /**
      * @param integer $Limit 分页Limit
      * @param integer $Offset 分页Offset
      * @param string $TaskTitle 演练名称
@@ -88,6 +95,7 @@ class DescribeTaskListRequest extends AbstractModel
      * @param string $TaskStartTime 开始时间，固定格式%Y-%m-%d %H:%M:%S
      * @param string $TaskEndTime 结束时间，固定格式%Y-%m-%d %H:%M:%S
      * @param array $Tags 标签对
+     * @param array $Filters 筛选条件
      */
     function __construct()
     {
@@ -136,6 +144,15 @@ class DescribeTaskListRequest extends AbstractModel
                 $obj = new TagWithDescribe();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new ActionFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
             }
         }
     }

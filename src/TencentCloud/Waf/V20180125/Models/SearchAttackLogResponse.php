@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getCount() 获取当前返回的攻击日志条数
  * @method void setCount(integer $Count) 设置当前返回的攻击日志条数
- * @method string getContext() 获取翻页游标，如果没有下一页了，这个参数为空""
- * @method void setContext(string $Context) 设置翻页游标，如果没有下一页了，这个参数为空""
+ * @method string getContext() 获取接口升级，此字段无效，默认返回空字符串
+ * @method void setContext(string $Context) 设置接口升级，此字段无效，默认返回空字符串
  * @method array getData() 获取攻击日志数组条目内容
  * @method void setData(array $Data) 设置攻击日志数组条目内容
  * @method boolean getListOver() 获取CLS接口返回内容
@@ -41,7 +41,7 @@ class SearchAttackLogResponse extends AbstractModel
     public $Count;
 
     /**
-     * @var string 翻页游标，如果没有下一页了，这个参数为空""
+     * @var string 接口升级，此字段无效，默认返回空字符串
      */
     public $Context;
 
@@ -67,7 +67,7 @@ class SearchAttackLogResponse extends AbstractModel
 
     /**
      * @param integer $Count 当前返回的攻击日志条数
-     * @param string $Context 翻页游标，如果没有下一页了，这个参数为空""
+     * @param string $Context 接口升级，此字段无效，默认返回空字符串
      * @param array $Data 攻击日志数组条目内容
      * @param boolean $ListOver CLS接口返回内容
      * @param boolean $SqlFlag CLS接口返回内容，标志是否启动新版本索引

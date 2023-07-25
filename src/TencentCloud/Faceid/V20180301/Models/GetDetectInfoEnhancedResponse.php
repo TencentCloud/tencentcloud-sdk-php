@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method IntentionVerifyData getIntentionVerifyData() 获取意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+ * @method IntentionVerifyData getIntentionVerifyData() 获取意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntentionVerifyData(IntentionVerifyData $IntentionVerifyData) 设置意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+ * @method void setIntentionVerifyData(IntentionVerifyData $IntentionVerifyData) 设置意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method IntentionQuestionResult getIntentionQuestionResult() 获取意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -84,7 +84,7 @@ class GetDetectInfoEnhancedResponse extends AbstractModel
     public $Encryption;
 
     /**
-     * @var IntentionVerifyData 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * @var IntentionVerifyData 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntentionVerifyData;
@@ -111,7 +111,7 @@ class GetDetectInfoEnhancedResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Encryption $Encryption 敏感数据加密信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionVerifyData $IntentionVerifyData 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * @param IntentionVerifyData $IntentionVerifyData 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IntentionQuestionResult $IntentionQuestionResult 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。

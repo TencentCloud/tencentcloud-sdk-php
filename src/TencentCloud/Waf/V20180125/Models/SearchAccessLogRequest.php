@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置查询语句，语句长度最大为4096
  * @method integer getLimit() 获取单次查询返回的日志条数，最大值为100
  * @method void setLimit(integer $Limit) 设置单次查询返回的日志条数，最大值为100
- * @method string getContext() 获取加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填
- * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填
+ * @method string getContext() 获取新版本此字段失效，填空字符串，翻页使用Page
+ * @method void setContext(string $Context) 设置新版本此字段失效，填空字符串，翻页使用Page
  * @method string getSort() 获取日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
  * @method void setSort(string $Sort) 设置日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
  * @method integer getPage() 获取第几页，从0开始。新版本接口字段
@@ -67,8 +65,7 @@ class SearchAccessLogRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填
+     * @var string 新版本此字段失效，填空字符串，翻页使用Page
      */
     public $Context;
 
@@ -88,8 +85,7 @@ class SearchAccessLogRequest extends AbstractModel
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
      * @param string $Query 查询语句，语句长度最大为4096
      * @param integer $Limit 单次查询返回的日志条数，最大值为100
-     * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填
+     * @param string $Context 新版本此字段失效，填空字符串，翻页使用Page
      * @param string $Sort 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
      * @param integer $Page 第几页，从0开始。新版本接口字段
      */

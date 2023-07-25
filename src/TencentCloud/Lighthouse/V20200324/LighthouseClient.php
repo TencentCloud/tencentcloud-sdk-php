@@ -89,6 +89,10 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DescribeDisksResponse DescribeDisks(Models\DescribeDisksRequest $req) 本接口（DescribeDisks）用于查询云硬盘信息。
  * @method Models\DescribeDisksDeniedActionsResponse DescribeDisksDeniedActions(Models\DescribeDisksDeniedActionsRequest $req) 本接口（DescribeDisksDeniedActions）用于查询一个或多个云硬盘的操作限制列表信息。
  * @method Models\DescribeDisksReturnableResponse DescribeDisksReturnable(Models\DescribeDisksReturnableRequest $req) 本接口（DescribeDisksReturnable）用于查询云硬盘是否可退还。
+ * @method Models\DescribeDockerActivitiesResponse DescribeDockerActivities(Models\DescribeDockerActivitiesRequest $req) 查询实例内的Docker活动列表。
+ * @method Models\DescribeDockerContainerConfigurationResponse DescribeDockerContainerConfiguration(Models\DescribeDockerContainerConfigurationRequest $req) 查询实例内的Docker容器配置信息
+ * @method Models\DescribeDockerContainerDetailResponse DescribeDockerContainerDetail(Models\DescribeDockerContainerDetailRequest $req) 查询实例内的Docker容器详情
+ * @method Models\DescribeDockerContainersResponse DescribeDockerContainers(Models\DescribeDockerContainersRequest $req) 查询实例内的容器列表。
  * @method Models\DescribeFirewallRulesResponse DescribeFirewallRules(Models\DescribeFirewallRulesRequest $req) 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
  * @method Models\DescribeFirewallRulesTemplateResponse DescribeFirewallRulesTemplate(Models\DescribeFirewallRulesTemplateRequest $req) 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模板。
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) 本接口（DescribeGeneralResourceQuotas）用于查询通用资源配额信息。
@@ -155,6 +159,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\ModifyDiskBackupsAttributeResponse ModifyDiskBackupsAttribute(Models\ModifyDiskBackupsAttributeRequest $req) 本接口 (ModifyDiskBackupsAttribute) 用于修改云硬盘备份点属性。
  * @method Models\ModifyDisksAttributeResponse ModifyDisksAttribute(Models\ModifyDisksAttributeRequest $req) 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
  * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
+ * @method Models\ModifyDockerContainerResponse ModifyDockerContainer(Models\ModifyDockerContainerRequest $req) 修改实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
+请注意：本接口会重新创建并运行实例内的Docker容器。
  * @method Models\ModifyFirewallRuleDescriptionResponse ModifyFirewallRuleDescription(Models\ModifyFirewallRuleDescriptionRequest $req) 本接口（ModifyFirewallRuleDescription）用于修改单条防火墙规则描述。
 
 * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接修改防火墙规则备注。
@@ -199,6 +205,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 接口调用成功时，实例会进入 REBOOTING 状态；重启实例成功时，实例会进入 RUNNING 状态。
 * 支持批量操作，每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+ * @method Models\RemoveDockerContainersResponse RemoveDockerContainers(Models\RemoveDockerContainersRequest $req) 删除实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询删除情况。
+ * @method Models\RenameDockerContainerResponse RenameDockerContainer(Models\RenameDockerContainerRequest $req) 重命名实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重命名情况。
  * @method Models\RenewDisksResponse RenewDisks(Models\RenewDisksRequest $req) 本接口(RenewDisks)用于续费一个或多个轻量应用服务器云硬盘。
 
 只有状态为 ATTACHED，UNATTACHED 或 SHUTDOWN 的数据盘才可以进行此操作。
@@ -208,6 +216,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 只有状态为 RUNNING，STOPPED 或 SHUTDOWN 的实例才可以进行此操作。
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+ * @method Models\RerunDockerContainerResponse RerunDockerContainer(Models\RerunDockerContainerRequest $req) 重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
  * @method Models\ResetAttachCcnResponse ResetAttachCcn(Models\ResetAttachCcnRequest $req) 本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
  * @method Models\ResetInstanceResponse ResetInstance(Models\ResetInstanceRequest $req) 本接口（ResetInstance）用于重装指定实例上的镜像。
 
@@ -221,12 +230,16 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 建议对运行中的实例先手动关机，然后再进行密码重置。如实例处于运行中状态，本接口操作过程中会对实例进行关机操作，尝试正常关机失败后进行强制关机。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
 注意：强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏。
+ * @method Models\RestartDockerContainersResponse RestartDockerContainers(Models\RestartDockerContainersRequest $req) 重启实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重启情况。
+ * @method Models\RunDockerContainersResponse RunDockerContainers(Models\RunDockerContainersRequest $req) 创建并运行多个Docker容器，之后可以通过返回的ActivityIds调用DescribeDockerActivities接口查询创建情况。
+ * @method Models\StartDockerContainersResponse StartDockerContainers(Models\StartDockerContainersRequest $req) 启动实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询启动情况。
  * @method Models\StartInstancesResponse StartInstances(Models\StartInstancesRequest $req) 本接口（StartInstances）用于启动一个或多个实例。
 
 * 只有状态为 STOPPED 的实例才可以进行此操作。
 * 接口调用成功时，实例会进入 STARTING 状态；启动实例成功时，实例会进入 RUNNING 状态。
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+ * @method Models\StopDockerContainersResponse StopDockerContainers(Models\StopDockerContainersRequest $req) 停止实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询停止情况。
  * @method Models\StopInstancesResponse StopInstances(Models\StopInstancesRequest $req) 本接口（StopInstances）用于关闭一个或多个实例。
 * 只有状态为 RUNNING 的实例才可以进行此操作。
 * 接口调用成功时，实例会进入 STOPPING 状态；关闭实例成功时，实例会进入 STOPPED 状态。

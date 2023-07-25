@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceRenewEmr请求参数结构体
  *
- * @method integer getTimeSpan() 获取实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
- * @method void setTimeSpan(integer $TimeSpan) 设置实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
+ * @method integer getTimeSpan() 获取实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
+ * @method void setTimeSpan(integer $TimeSpan) 设置实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
  * @method string getInstanceId() 获取待续费集群ID列表。
  * @method void setInstanceId(string $InstanceId) 设置待续费集群ID列表。
  * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class InquirePriceRenewEmrRequest extends AbstractModel
 {
     /**
-     * @var integer 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
+     * @var integer 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
      */
     public $TimeSpan;
 
@@ -72,7 +72,7 @@ class InquirePriceRenewEmrRequest extends AbstractModel
     public $Currency;
 
     /**
-     * @param integer $TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
+     * @param integer $TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
      * @param string $InstanceId 待续费集群ID列表。
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param integer $PayMode 实例计费模式。此处只支持取值为1，表示包年包月。

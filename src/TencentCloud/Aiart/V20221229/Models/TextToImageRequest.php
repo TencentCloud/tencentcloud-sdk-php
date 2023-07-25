@@ -22,24 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPrompt() 获取文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。
  * @method void setPrompt(string $Prompt) 设置文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。
  * @method string getNegativePrompt() 获取反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
  * @method void setNegativePrompt(string $NegativePrompt) 设置反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
  * @method array getStyles() 获取绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
  * @method void setStyles(array $Styles) 设置绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
  * @method ResultConfig getResultConfig() 获取生成图结果的配置，包括输出图片分辨率和尺寸等。
  * @method void setResultConfig(ResultConfig $ResultConfig) 设置生成图结果的配置，包括输出图片分辨率和尺寸等。
  * @method integer getLogoAdd() 获取为生成结果图添加标识的开关，默认为1。
@@ -56,20 +54,22 @@ use TencentCloud\Common\AbstractModel;
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+ * @method string getRspImgType() 获取返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
  */
 class TextToImageRequest extends AbstractModel
 {
     /**
      * @var string 文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。
      */
     public $Prompt;
 
     /**
      * @var string 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
      */
     public $NegativePrompt;
 
@@ -77,7 +77,6 @@ class TextToImageRequest extends AbstractModel
      * @var array 绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
      */
     public $Styles;
 
@@ -102,16 +101,20 @@ class TextToImageRequest extends AbstractModel
     public $LogoParam;
 
     /**
+     * @var string 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     */
+    public $RspImgType;
+
+    /**
      * @param string $Prompt 文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。
      * @param string $NegativePrompt 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
      * @param array $Styles 绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
      * @param ResultConfig $ResultConfig 生成图结果的配置，包括输出图片分辨率和尺寸等。
      * @param integer $LogoAdd 为生成结果图添加标识的开关，默认为1。
 1：添加标识。
@@ -120,6 +123,7 @@ class TextToImageRequest extends AbstractModel
 建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
      * @param LogoParam $LogoParam 标识内容设置。
 默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * @param string $RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
      */
     function __construct()
     {
@@ -158,6 +162,10 @@ class TextToImageRequest extends AbstractModel
         if (array_key_exists("LogoParam",$param) and $param["LogoParam"] !== null) {
             $this->LogoParam = new LogoParam();
             $this->LogoParam->deserialize($param["LogoParam"]);
+        }
+
+        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
+            $this->RspImgType = $param["RspImgType"];
         }
     }
 }

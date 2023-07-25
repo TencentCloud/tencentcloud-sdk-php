@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置查询起始时间
  * @method string getEndTime() 获取查询结束时间
  * @method void setEndTime(string $EndTime) 设置查询结束时间
- * @method string getContext() 获取查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
- * @method void setContext(string $Context) 设置查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
+ * @method string getContext() 获取接口升级，这个字段传空字符串,翻页使用Page字段
+ * @method void setContext(string $Context) 设置接口升级，这个字段传空字符串,翻页使用Page字段
  * @method string getQueryString() 获取Lucene语法
  * @method void setQueryString(string $QueryString) 设置Lucene语法
  * @method integer getCount() 获取查询的数量，默认10条，最多100条
@@ -55,7 +55,7 @@ class SearchAttackLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
+     * @var string 接口升级，这个字段传空字符串,翻页使用Page字段
      */
     public $Context;
 
@@ -83,7 +83,7 @@ class SearchAttackLogRequest extends AbstractModel
      * @param string $Domain 查询的域名，所有域名使用all
      * @param string $StartTime 查询起始时间
      * @param string $EndTime 查询结束时间
-     * @param string $Context 查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
+     * @param string $Context 接口升级，这个字段传空字符串,翻页使用Page字段
      * @param string $QueryString Lucene语法
      * @param integer $Count 查询的数量，默认10条，最多100条
      * @param string $Sort 默认为desc，可以取值desc和asc

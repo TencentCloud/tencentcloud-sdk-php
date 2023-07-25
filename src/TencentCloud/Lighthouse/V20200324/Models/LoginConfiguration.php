@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置实例登录密码。具体按照操作系统的复杂度要求。 
 `LINUX_UNIX` 实例密码必须 8-30 位，推荐使用 12 位以上密码，不能包含空格, 不能以“/”开头，至少包含以下字符中的三种不同字符，字符种类：<br><li>小写字母：[a-z]<br><li>大写字母：[A-Z]<br><li>数字：0-9<br><li>特殊字符： ()\`\~!@#$%^&\*-+=\_|{}[]:;' <>,.?/</li>
 `WINDOWS` 实例密码必须 12-30 位，不能包含空格, 不能以“/”开头且不包括用户名，至少包含以下字符中的三种不同字符<br><li>小写字母：[a-z]<br><li>大写字母：[A-Z]<br><li>数字： 0-9<br><li>特殊字符：()\`~!@#$%^&\*-+=\_|{}[]:;' <>,.?/
+ * @method array getKeyIds() 获取密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
+ * @method void setKeyIds(array $KeyIds) 设置密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
  */
 class LoginConfiguration extends AbstractModel
 {
@@ -47,11 +49,17 @@ class LoginConfiguration extends AbstractModel
     public $Password;
 
     /**
+     * @var array 密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
+     */
+    public $KeyIds;
+
+    /**
      * @param string $AutoGeneratePassword <li>"YES"代表选择自动生成密码，这时不指定Password字段。</li>
 <li>"NO"代表选择自定义密码，这时要指定Password字段。</li>
      * @param string $Password 实例登录密码。具体按照操作系统的复杂度要求。 
 `LINUX_UNIX` 实例密码必须 8-30 位，推荐使用 12 位以上密码，不能包含空格, 不能以“/”开头，至少包含以下字符中的三种不同字符，字符种类：<br><li>小写字母：[a-z]<br><li>大写字母：[A-Z]<br><li>数字：0-9<br><li>特殊字符： ()\`\~!@#$%^&\*-+=\_|{}[]:;' <>,.?/</li>
 `WINDOWS` 实例密码必须 12-30 位，不能包含空格, 不能以“/”开头且不包括用户名，至少包含以下字符中的三种不同字符<br><li>小写字母：[a-z]<br><li>大写字母：[A-Z]<br><li>数字： 0-9<br><li>特殊字符：()\`~!@#$%^&\*-+=\_|{}[]:;' <>,.?/
+     * @param array $KeyIds 密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class LoginConfiguration extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
+            $this->KeyIds = $param["KeyIds"];
         }
     }
 }

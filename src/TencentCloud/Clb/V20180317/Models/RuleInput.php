@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
  * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
- * @method string getForwardType() 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
- * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
+ * @method string getForwardType() 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/TRPC，TRPC暂未对外开放，默认HTTP。
+ * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/TRPC，TRPC暂未对外开放，默认HTTP。
  * @method boolean getDefaultServer() 获取是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
  * @method void setDefaultServer(boolean $DefaultServer) 设置是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
  * @method boolean getHttp2() 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
@@ -87,7 +87,7 @@ class RuleInput extends AbstractModel
     public $Scheduler;
 
     /**
-     * @var string 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
+     * @var string 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/TRPC，TRPC暂未对外开放，默认HTTP。
      */
     public $ForwardType;
 
@@ -139,7 +139,7 @@ class RuleInput extends AbstractModel
      * @param CertificateInput $Certificate 证书信息；此参数和MultiCertInfo不能同时传入。
      * @param string $Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
-     * @param string $ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
+     * @param string $ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/GRPC/TRPC，TRPC暂未对外开放，默认HTTP。
      * @param boolean $DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
      * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组

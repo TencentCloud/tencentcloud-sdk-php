@@ -165,8 +165,8 @@ use TencentCloud\Common\Profile\RegionBreakerProfile;
 $clientProfile->enableRegionBreaker=true;  
 // 设置主备节点，以cvm产品为例，假设主节点在上海，备节点在北京，则配置如下
 $regionBreakerProfile = new RegionBreakerProfile(
-							"cvm.ap-shanghai.tencentcloudapi.com",	// 主节点
-							"cvm.ap-beijing.tencentcloudapi.com"    // 备节点	
+	"cvm.ap-shanghai.tencentcloudapi.com",	// 主节点
+	"cvm.ap-beijing.tencentcloudapi.com"    // 备节点	
 );
 $clientProfile->setRegionBreakerProfile($regionBreakerProfile);		
 ```

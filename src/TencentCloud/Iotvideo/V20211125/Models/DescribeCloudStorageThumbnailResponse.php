@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getThumbnailURL() 获取缩略图访问地址
  * @method void setThumbnailURL(string $ThumbnailURL) 设置缩略图访问地址
+ * @method integer getExpireTime() 获取缩略图访问地址的过期时间
+ * @method void setExpireTime(integer $ExpireTime) 设置缩略图访问地址的过期时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeCloudStorageThumbnailResponse extends AbstractModel
     public $ThumbnailURL;
 
     /**
+     * @var integer 缩略图访问地址的过期时间
+     */
+    public $ExpireTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $ThumbnailURL 缩略图访问地址
+     * @param integer $ExpireTime 缩略图访问地址的过期时间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class DescribeCloudStorageThumbnailResponse extends AbstractModel
         }
         if (array_key_exists("ThumbnailURL",$param) and $param["ThumbnailURL"] !== null) {
             $this->ThumbnailURL = $param["ThumbnailURL"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

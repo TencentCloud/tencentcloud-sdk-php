@@ -104,6 +104,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElectronicFullNumber(string $ElectronicFullNumber) 设置全电号码
  * @method string getFormName() 获取发票联名
  * @method void setFormName(string $FormName) 设置发票联名
+ * @method integer getBlockChainMark() 获取是否有区块链标记（0：没有，1：有）	
+ * @method void setBlockChainMark(integer $BlockChainMark) 设置是否有区块链标记（0：没有，1：有）	
+ * @method integer getAcquisitionMark() 获取是否有收购标记（0：没有，1：有）	
+ * @method void setAcquisitionMark(integer $AcquisitionMark) 设置是否有收购标记（0：没有，1：有）	
+ * @method string getSubTotal() 获取小计金额
+ * @method void setSubTotal(string $SubTotal) 设置小计金额
+ * @method string getSubTax() 获取小计税额
+ * @method void setSubTax(string $SubTax) 设置小计税额
  */
 class VatInvoiceInfo extends AbstractModel
 {
@@ -318,6 +326,26 @@ class VatInvoiceInfo extends AbstractModel
     public $FormName;
 
     /**
+     * @var integer 是否有区块链标记（0：没有，1：有）	
+     */
+    public $BlockChainMark;
+
+    /**
+     * @var integer 是否有收购标记（0：没有，1：有）	
+     */
+    public $AcquisitionMark;
+
+    /**
+     * @var string 小计金额
+     */
+    public $SubTotal;
+
+    /**
+     * @var string 小计税额
+     */
+    public $SubTax;
+
+    /**
      * @param string $CheckCode 校验码
      * @param string $FormType 发票联次
      * @param string $TravelTax 车船税
@@ -360,6 +388,10 @@ class VatInvoiceInfo extends AbstractModel
      * @param integer $ElectronicFullMark 是否有全电纸质票（0：没有，1：有）
      * @param string $ElectronicFullNumber 全电号码
      * @param string $FormName 发票联名
+     * @param integer $BlockChainMark 是否有区块链标记（0：没有，1：有）	
+     * @param integer $AcquisitionMark 是否有收购标记（0：没有，1：有）	
+     * @param string $SubTotal 小计金额
+     * @param string $SubTax 小计税额
      */
     function __construct()
     {
@@ -545,6 +577,22 @@ class VatInvoiceInfo extends AbstractModel
 
         if (array_key_exists("FormName",$param) and $param["FormName"] !== null) {
             $this->FormName = $param["FormName"];
+        }
+
+        if (array_key_exists("BlockChainMark",$param) and $param["BlockChainMark"] !== null) {
+            $this->BlockChainMark = $param["BlockChainMark"];
+        }
+
+        if (array_key_exists("AcquisitionMark",$param) and $param["AcquisitionMark"] !== null) {
+            $this->AcquisitionMark = $param["AcquisitionMark"];
+        }
+
+        if (array_key_exists("SubTotal",$param) and $param["SubTotal"] !== null) {
+            $this->SubTotal = $param["SubTotal"];
+        }
+
+        if (array_key_exists("SubTax",$param) and $param["SubTax"] !== null) {
+            $this->SubTax = $param["SubTax"];
         }
     }
 }

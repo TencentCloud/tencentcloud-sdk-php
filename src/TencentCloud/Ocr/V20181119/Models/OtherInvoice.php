@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOtherInvoiceListItems(array $OtherInvoiceListItems) 设置列表
  * @method array getOtherInvoiceTableItems() 获取表格
  * @method void setOtherInvoiceTableItems(array $OtherInvoiceTableItems) 设置表格
+ * @method string getDate() 获取发票日期
+ * @method void setDate(string $Date) 设置发票日期
  */
 class OtherInvoice extends AbstractModel
 {
@@ -52,10 +54,16 @@ class OtherInvoice extends AbstractModel
     public $OtherInvoiceTableItems;
 
     /**
+     * @var string 发票日期
+     */
+    public $Date;
+
+    /**
      * @param string $Title 发票名称
      * @param string $Total 金额
      * @param array $OtherInvoiceListItems 列表
      * @param array $OtherInvoiceTableItems 表格
+     * @param string $Date 发票日期
      */
     function __construct()
     {
@@ -94,6 +102,10 @@ class OtherInvoice extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OtherInvoiceTableItems, $obj);
             }
+        }
+
+        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
+            $this->Date = $param["Date"];
         }
     }
 }

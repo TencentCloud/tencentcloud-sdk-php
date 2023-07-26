@@ -60,8 +60,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setUserId(string $UserId) 设置签署人userId，传此字段则不用传姓名、手机号
  * @method string getApproverSource() 获取签署人用户来源，企微侧用户请传入：WEWORKAPP
  * @method void setApproverSource(string $ApproverSource) 设置签署人用户来源，企微侧用户请传入：WEWORKAPP
- * @method string getCustomApproverTag() 获取客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
- * @method void setCustomApproverTag(string $CustomApproverTag) 设置客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+ * @method string getCustomApproverTag() 获取企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+ * @method void setCustomApproverTag(string $CustomApproverTag) 设置企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
  * @method ApproverOption getApproverOption() 获取签署人个性化能力值
  * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值
  * @method array getApproverVerifyTypes() 获取签署人查看合同时认证方式, 
@@ -158,7 +158,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $ApproverSource;
 
     /**
-     * @var string 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+     * @var string 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
      */
     public $CustomApproverTag;
 
@@ -209,7 +209,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
      * @param string $UserId 签署人userId，传此字段则不用传姓名、手机号
      * @param string $ApproverSource 签署人用户来源，企微侧用户请传入：WEWORKAPP
-     * @param string $CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+     * @param string $CustomApproverTag 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
      * @param ApproverOption $ApproverOption 签署人个性化能力值
      * @param array $ApproverVerifyTypes 签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)

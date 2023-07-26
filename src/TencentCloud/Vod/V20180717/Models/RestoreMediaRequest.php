@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestoreMedia请求参数结构体
  *
- * @method array getFileIds() 获取媒体文件唯一标识列表。
- * @method void setFileIds(array $FileIds) 设置媒体文件唯一标识列表。
- * @method integer getRestoreDay() 获取解冻出的临时媒体文件的可访问持续时长，单位为“天”。
- * @method void setRestoreDay(integer $RestoreDay) 设置解冻出的临时媒体文件的可访问持续时长，单位为“天”。
+ * @method array getFileIds() 获取媒体文件唯一标识列表，最大长度：100。
+ * @method void setFileIds(array $FileIds) 设置媒体文件唯一标识列表，最大长度：100。
+ * @method integer getRestoreDay() 获取解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
+ * @method void setRestoreDay(integer $RestoreDay) 设置解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
  * @method string getRestoreTier() 获取解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
 class RestoreMediaRequest extends AbstractModel
 {
     /**
-     * @var array 媒体文件唯一标识列表。
+     * @var array 媒体文件唯一标识列表，最大长度：100。
      */
     public $FileIds;
 
     /**
-     * @var integer 解冻出的临时媒体文件的可访问持续时长，单位为“天”。
+     * @var integer 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
      */
     public $RestoreDay;
 
@@ -70,8 +70,8 @@ class RestoreMediaRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param array $FileIds 媒体文件唯一标识列表。
-     * @param integer $RestoreDay 解冻出的临时媒体文件的可访问持续时长，单位为“天”。
+     * @param array $FileIds 媒体文件唯一标识列表，最大长度：100。
+     * @param integer $RestoreDay 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
      * @param string $RestoreTier 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>

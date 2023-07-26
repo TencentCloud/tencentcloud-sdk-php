@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicensePlate(string $LicensePlate) 设置车牌号
  * @method string getVehicleType() 获取车辆类型
  * @method void setVehicleType(string $VehicleType) 设置车辆类型
+ * @method string getSerialNumber() 获取序号
+ * @method void setSerialNumber(string $SerialNumber) 设置序号
  */
 class VatInvoiceItemInfo extends AbstractModel
 {
@@ -108,6 +110,11 @@ class VatInvoiceItemInfo extends AbstractModel
     public $VehicleType;
 
     /**
+     * @var string 序号
+     */
+    public $SerialNumber;
+
+    /**
      * @param string $Name 项目名称
      * @param string $Specification 规格型号
      * @param string $Unit 单位
@@ -120,6 +127,7 @@ class VatInvoiceItemInfo extends AbstractModel
      * @param string $DateEnd 通行日期止
      * @param string $LicensePlate 车牌号
      * @param string $VehicleType 车辆类型
+     * @param string $SerialNumber 序号
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class VatInvoiceItemInfo extends AbstractModel
 
         if (array_key_exists("VehicleType",$param) and $param["VehicleType"] !== null) {
             $this->VehicleType = $param["VehicleType"];
+        }
+
+        if (array_key_exists("SerialNumber",$param) and $param["SerialNumber"] !== null) {
+            $this->SerialNumber = $param["SerialNumber"];
         }
     }
 }

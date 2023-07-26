@@ -63,6 +63,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) 获取基础防护攻击状态
  * @method Models\DescribeBgpBizTrendResponse DescribeBgpBizTrend(Models\DescribeBgpBizTrendRequest $req) 获取高防包流量折线图
  * @method Models\DescribeBizHttpStatusResponse DescribeBizHttpStatus(Models\DescribeBizHttpStatusRequest $req) 获取业务流量状态码统计列表
+ * @method Models\DescribeBizMonitorTrendResponse DescribeBizMonitorTrend(Models\DescribeBizMonitorTrendRequest $req) 获取高防IP业务监控流量曲线
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单
  * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) 获取边界防护CC防护等级列表

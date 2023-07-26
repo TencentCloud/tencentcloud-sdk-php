@@ -57,6 +57,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribePackageDetailResponse DescribePackageDetail(Models\DescribePackageDetailRequest $req) 获取各套餐配置详情
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 获取记录信息
  * @method Models\DescribeRecordExistExceptDefaultNSResponse DescribeRecordExistExceptDefaultNS(Models\DescribeRecordExistExceptDefaultNSRequest $req) 判断是否有除系统默认的@-NS记录之外的记录存在
+ * @method Models\DescribeRecordFilterListResponse DescribeRecordFilterList(Models\DescribeRecordFilterListRequest $req) 获取某个域名下的解析记录列表
  * @method Models\DescribeRecordGroupListResponse DescribeRecordGroupList(Models\DescribeRecordGroupListRequest $req) 查询解析记录分组列表
  * @method Models\DescribeRecordLineListResponse DescribeRecordLineList(Models\DescribeRecordLineListRequest $req) 获取等级允许的线路
  * @method Models\DescribeRecordListResponse DescribeRecordList(Models\DescribeRecordListRequest $req) 获取某个域名下的解析记录列表

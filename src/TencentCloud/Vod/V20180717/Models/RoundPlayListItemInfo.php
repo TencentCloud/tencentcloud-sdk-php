@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 加权轮播媒体文件信息
+ * 轮播媒体文件信息
  *
  * @method string getFileId() 获取媒体文件标识。
  * @method void setFileId(string $FileId) 设置媒体文件标识。

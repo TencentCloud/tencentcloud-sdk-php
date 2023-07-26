@@ -72,14 +72,14 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
  * @method void setDeadline(integer $Deadline) 设置签署截止时间戳，默认一年
  * @method string getCallbackUrl() 获取签署完回调url，最大长度1000个字符
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署完回调url，最大长度1000个字符
- * @method array getSignComponents() 获取使用PDF文件直接发起合同时，签署人指定的签署控件
- * @method void setSignComponents(array $SignComponents) 设置使用PDF文件直接发起合同时，签署人指定的签署控件
- * @method array getComponentLimitType() 获取	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+ * @method array getSignComponents() 获取使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+ * @method void setSignComponents(array $SignComponents) 设置使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+ * @method array getComponentLimitType() 获取签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
- * @method void setComponentLimitType(array $ComponentLimitType) 设置	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+ * @method void setComponentLimitType(array $ComponentLimitType) 设置签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
@@ -184,12 +184,12 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     public $CallbackUrl;
 
     /**
-     * @var array 使用PDF文件直接发起合同时，签署人指定的签署控件
+     * @var array 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
      */
     public $SignComponents;
 
     /**
-     * @var array 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+     * @var array 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
@@ -264,8 +264,8 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      * @param string $RecipientId 签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
      * @param integer $Deadline 签署截止时间戳，默认一年
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符
-     * @param array $SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件
-     * @param array $ComponentLimitType 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+     * @param array $SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+     * @param array $ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型

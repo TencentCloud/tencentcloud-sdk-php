@@ -41,6 +41,7 @@ use TencentCloud\Iotvideo\V20211125\Models as Models;
  * @method Models\CreateForwardRuleResponse CreateForwardRule(Models\CreateForwardRuleRequest $req) 创建转发规则
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 创建产品
  * @method Models\CreateTaskFileUrlResponse CreateTaskFileUrl(Models\CreateTaskFileUrlRequest $req) 本接口（CreateTaskFileUrl）用于获取产品级任务文件上传链接
+ * @method Models\DeleteCloudStorageEventResponse DeleteCloudStorageEvent(Models\DeleteCloudStorageEventRequest $req) 删除云存事件
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备
  * @method Models\DeleteFirmwareResponse DeleteFirmware(Models\DeleteFirmwareRequest $req) 本接口（DeleteFirmware）用于删除固件 
  * @method Models\DeleteForwardRuleResponse DeleteForwardRule(Models\DeleteForwardRuleRequest $req) 删除转发规则
@@ -73,6 +74,7 @@ use TencentCloud\Iotvideo\V20211125\Models as Models;
  * @method Models\DescribeDeviceDataHistoryResponse DescribeDeviceDataHistory(Models\DescribeDeviceDataHistoryRequest $req) 获取设备在指定时间范围内上报的历史数据。
  * @method Models\DescribeDeviceDataStatsResponse DescribeDeviceDataStats(Models\DescribeDeviceDataStatsRequest $req) 查询设备数据统计
  * @method Models\DescribeDeviceEventHistoryResponse DescribeDeviceEventHistory(Models\DescribeDeviceEventHistoryRequest $req) 获取设备的历史事件
+ * @method Models\DescribeDevicePackagesResponse DescribeDevicePackages(Models\DescribeDevicePackagesRequest $req) 根据设备信息拉取有效套餐列表
  * @method Models\DescribeDeviceStatusLogResponse DescribeDeviceStatusLog(Models\DescribeDeviceStatusLogRequest $req) 获取设备上下线日志
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 获取设备列表
  * @method Models\DescribeFirmwareResponse DescribeFirmware(Models\DescribeFirmwareRequest $req) 本接口（DescribeFirmware）用于查询固件信息

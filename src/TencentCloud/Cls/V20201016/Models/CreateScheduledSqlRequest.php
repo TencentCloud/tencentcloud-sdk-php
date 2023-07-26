@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置任务名称
  * @method integer getEnableFlag() 获取任务启动状态.  1正常开启,  2关闭
  * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.  1正常开启,  2关闭
- * @method ScheduledSqlResouceInfo getDstResource() 获取加工任务目的topic_id以及别名
- * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) 设置加工任务目的topic_id以及别名
- * @method string getScheduledSqlContent() 获取ScheduledSQL语句
- * @method void setScheduledSqlContent(string $ScheduledSqlContent) 设置ScheduledSQL语句
+ * @method ScheduledSqlResouceInfo getDstResource() 获取定时SQL分析目标日志主题
+ * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) 设置定时SQL分析目标日志主题
+ * @method string getScheduledSqlContent() 获取查询语句
+ * @method void setScheduledSqlContent(string $ScheduledSqlContent) 设置查询语句
  * @method integer getProcessStartTime() 获取调度开始时间,Unix时间戳，单位ms
  * @method void setProcessStartTime(integer $ProcessStartTime) 设置调度开始时间,Unix时间戳，单位ms
  * @method integer getProcessType() 获取调度类型，1:持续运行 2:指定调度结束时间
  * @method void setProcessType(integer $ProcessType) 设置调度类型，1:持续运行 2:指定调度结束时间
  * @method integer getProcessPeriod() 获取调度周期(分钟)
  * @method void setProcessPeriod(integer $ProcessPeriod) 设置调度周期(分钟)
- * @method string getProcessTimeWindow() 获取调度时间窗口
- * @method void setProcessTimeWindow(string $ProcessTimeWindow) 设置调度时间窗口
+ * @method string getProcessTimeWindow() 获取单次查询的时间窗口
+ * @method void setProcessTimeWindow(string $ProcessTimeWindow) 设置单次查询的时间窗口
  * @method integer getProcessDelay() 获取执行延迟(秒)
  * @method void setProcessDelay(integer $ProcessDelay) 设置执行延迟(秒)
  * @method string getSrcTopicRegion() 获取源topicId的地域信息
@@ -65,12 +65,12 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $EnableFlag;
 
     /**
-     * @var ScheduledSqlResouceInfo 加工任务目的topic_id以及别名
+     * @var ScheduledSqlResouceInfo 定时SQL分析目标日志主题
      */
     public $DstResource;
 
     /**
-     * @var string ScheduledSQL语句
+     * @var string 查询语句
      */
     public $ScheduledSqlContent;
 
@@ -90,7 +90,7 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $ProcessPeriod;
 
     /**
-     * @var string 调度时间窗口
+     * @var string 单次查询的时间窗口
      */
     public $ProcessTimeWindow;
 
@@ -118,12 +118,12 @@ class CreateScheduledSqlRequest extends AbstractModel
      * @param string $SrcTopicId 源日志主题
      * @param string $Name 任务名称
      * @param integer $EnableFlag 任务启动状态.  1正常开启,  2关闭
-     * @param ScheduledSqlResouceInfo $DstResource 加工任务目的topic_id以及别名
-     * @param string $ScheduledSqlContent ScheduledSQL语句
+     * @param ScheduledSqlResouceInfo $DstResource 定时SQL分析目标日志主题
+     * @param string $ScheduledSqlContent 查询语句
      * @param integer $ProcessStartTime 调度开始时间,Unix时间戳，单位ms
      * @param integer $ProcessType 调度类型，1:持续运行 2:指定调度结束时间
      * @param integer $ProcessPeriod 调度周期(分钟)
-     * @param string $ProcessTimeWindow 调度时间窗口
+     * @param string $ProcessTimeWindow 单次查询的时间窗口
      * @param integer $ProcessDelay 执行延迟(秒)
      * @param string $SrcTopicRegion 源topicId的地域信息
      * @param integer $ProcessEndTime 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms

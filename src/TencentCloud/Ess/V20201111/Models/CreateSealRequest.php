@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealName(string $SealName) 设置电子印章名字
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
- * @method string getSealType() 获取电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
- * @method void setSealType(string $SealType) 设置电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
+ * @method string getGenerateSource() 获取本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+ * @method void setGenerateSource(string $GenerateSource) 设置本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+ * @method string getSealType() 获取电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
+ * @method void setSealType(string $SealType) 设置电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
  * @method string getFileName() 获取电子印章图片文件名称
  * @method void setFileName(string $FileName) 设置电子印章图片文件名称
  * @method string getImage() 获取电子印章图片base64编码
@@ -48,24 +50,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColor(string $Color) 设置电子印章印章颜色(默认红色RED),RED-红色
 
 系统目前只支持红色印章创建。
- * @method string getSealHorizontalText() 获取电子印章生成时的横向文字。
- * @method void setSealHorizontalText(string $SealHorizontalText) 设置电子印章生成时的横向文字。
- * @method string getSealChordText() 获取电子印章下弦文字
- * @method void setSealChordText(string $SealChordText) 设置电子印章下弦文字
- * @method string getSealCentralType() 获取电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR
- * @method void setSealCentralType(string $SealCentralType) 设置电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR
+ * @method string getSealHorizontalText() 获取暂时不支持横向文字设置
+ * @method void setSealHorizontalText(string $SealHorizontalText) 设置暂时不支持横向文字设置
+ * @method string getSealChordText() 获取暂时不支持下弦文字设置
+ * @method void setSealChordText(string $SealChordText) 设置暂时不支持下弦文字设置
+ * @method string getSealCentralType() 获取系统生成的印章只支持STAR
+ * @method void setSealCentralType(string $SealCentralType) 设置系统生成的印章只支持STAR
  * @method string getFileToken() 获取通过文件上传时，服务端生成的电子印章上传图片的token
 
  * @method void setFileToken(string $FileToken) 设置通过文件上传时，服务端生成的电子印章上传图片的token
-
- * @method string getGenerateSource() 获取印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章
- * @method void setGenerateSource(string $GenerateSource) 设置印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章
  */
 class CreateSealRequest extends AbstractModel
 {
@@ -85,7 +78,12 @@ class CreateSealRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
+     * @var string 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+     */
+    public $GenerateSource;
+
+    /**
+     * @var string 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
      */
     public $SealType;
 
@@ -120,18 +118,17 @@ class CreateSealRequest extends AbstractModel
     public $Color;
 
     /**
-     * @var string 电子印章生成时的横向文字。
+     * @var string 暂时不支持横向文字设置
      */
     public $SealHorizontalText;
 
     /**
-     * @var string 电子印章下弦文字
+     * @var string 暂时不支持下弦文字设置
      */
     public $SealChordText;
 
     /**
-     * @var string 电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR
+     * @var string 系统生成的印章只支持STAR
      */
     public $SealCentralType;
 
@@ -142,17 +139,11 @@ class CreateSealRequest extends AbstractModel
     public $FileToken;
 
     /**
-     * @var string 印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章
-     */
-    public $GenerateSource;
-
-    /**
      * @param UserInfo $Operator 操作人信息
      * @param string $SealName 电子印章名字
      * @param Agent $Agent 应用相关信息
-     * @param string $SealType 电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
+     * @param string $GenerateSource 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+     * @param string $SealType 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
      * @param string $FileName 电子印章图片文件名称
      * @param string $Image 电子印章图片base64编码
 参数Image,FileToken或GenerateSource=SealGenerateSourceSystem三选一。
@@ -163,15 +154,10 @@ SealGenerateSourceSystem 表示系统生成企业印章
      * @param string $Color 电子印章印章颜色(默认红色RED),RED-红色
 
 系统目前只支持红色印章创建。
-     * @param string $SealHorizontalText 电子印章生成时的横向文字。
-     * @param string $SealChordText 电子印章下弦文字
-     * @param string $SealCentralType 电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR
+     * @param string $SealHorizontalText 暂时不支持横向文字设置
+     * @param string $SealChordText 暂时不支持下弦文字设置
+     * @param string $SealCentralType 系统生成的印章只支持STAR
      * @param string $FileToken 通过文件上传时，服务端生成的电子印章上传图片的token
-
-     * @param string $GenerateSource 印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章
      */
     function __construct()
     {
@@ -198,6 +184,10 @@ SealGenerateSourceSystem 表示系统生成企业印章
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("GenerateSource",$param) and $param["GenerateSource"] !== null) {
+            $this->GenerateSource = $param["GenerateSource"];
         }
 
         if (array_key_exists("SealType",$param) and $param["SealType"] !== null) {
@@ -238,10 +228,6 @@ SealGenerateSourceSystem 表示系统生成企业印章
 
         if (array_key_exists("FileToken",$param) and $param["FileToken"] !== null) {
             $this->FileToken = $param["FileToken"];
-        }
-
-        if (array_key_exists("GenerateSource",$param) and $param["GenerateSource"] !== null) {
-            $this->GenerateSource = $param["GenerateSource"];
         }
     }
 }

@@ -288,7 +288,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\GeneralHandwritingOCRResponse GeneralHandwritingOCR(Models\GeneralHandwritingOCRRequest $req) 本接口支持图片内手写体文字的检测和识别，针对手写字体无规则、字迹潦草、模糊等特点进行了识别能力的增强。
 
 默认接口请求频率限制：10次/秒。
- * @method Models\GetTaskStateResponse GetTaskState(Models\GetTaskStateRequest $req) 支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
+ * @method Models\GetTaskStateResponse GetTaskState(Models\GetTaskStateRequest $req) 支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超链接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
  * @method Models\HKIDCardOCRResponse HKIDCardOCR(Models\HKIDCardOCRRequest $req) 本接口支持中国香港身份证人像面中关键字段的识别，包括中文姓名、英文姓名、姓名电码、出生日期、性别、证件符号、首次签发日期、最近领用日期、身份证号、是否是永久性居民身份证；具备人像照片裁剪等扩展功能。
 
 默认接口请求频率限制：5次/秒。
@@ -441,6 +441,11 @@ use TencentCloud\Ocr\V20181119\Models as Models;
         <tr>
           <td> VatElectronicInvoiceToll</td>
           <td> 增值税电子普通发票(通行费)</td>
+          <td> 3 </td>
+        </tr>
+        <tr>
+          <td> VatSalesList</td>
+          <td> 增值税销货清单</td>
           <td> 3 </td>
         </tr>
         <tr>

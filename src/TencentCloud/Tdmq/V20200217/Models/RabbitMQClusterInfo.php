@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcs() 获取VPC及网络信息
  * @method void setVpcs(array $Vpcs) 设置VPC及网络信息
+ * @method array getZoneIds() 获取可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneIds(array $ZoneIds) 设置可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVirtualHostNumber() 获取虚拟主机数量
  * @method void setVirtualHostNumber(integer $VirtualHostNumber) 设置虚拟主机数量
  * @method integer getQueueNumber() 获取队列数量
@@ -57,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterStatus(integer $ClusterStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
@@ -93,6 +95,12 @@ class RabbitMQClusterInfo extends AbstractModel
      * @var array VPC及网络信息
      */
     public $Vpcs;
+
+    /**
+     * @var array 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneIds;
 
     /**
      * @var integer 虚拟主机数量
@@ -147,7 +155,6 @@ class RabbitMQClusterInfo extends AbstractModel
 
     /**
      * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterStatus;
 
@@ -159,6 +166,8 @@ class RabbitMQClusterInfo extends AbstractModel
      * @param string $Remark 集群说明信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Vpcs VPC及网络信息
+     * @param array $ZoneIds 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VirtualHostNumber 虚拟主机数量
      * @param integer $QueueNumber 队列数量
      * @param float $MessagePublishRate 每秒生产消息数 单位：条/秒
@@ -171,7 +180,6 @@ class RabbitMQClusterInfo extends AbstractModel
      * @param string $ExceptionInformation 集群异常。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -213,6 +221,10 @@ class RabbitMQClusterInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Vpcs, $obj);
             }
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
         }
 
         if (array_key_exists("VirtualHostNumber",$param) and $param["VirtualHostNumber"] !== null) {

@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 热词的词和权重
  *
  * @method string getWord() 获取热词
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWord(string $Word) 设置热词
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取权重
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置权重
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HotWord extends AbstractModel
 {
     /**
      * @var string 热词
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Word;
 
     /**
      * @var integer 权重
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @param string $Word 热词
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

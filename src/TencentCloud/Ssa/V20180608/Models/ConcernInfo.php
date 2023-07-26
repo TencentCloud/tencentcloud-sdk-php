@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConcernType(integer $ConcernType) 设置关注点类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEntityType() 获取实体类型
+ * @method integer getEntityType() 获取实体类型 1: 非云上IP，2: 云上IP，3: 域名，4: IP，5: 文件，6: 进程
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEntityType(integer $EntityType) 设置实体类型
+ * @method void setEntityType(integer $EntityType) 设置实体类型 1: 非云上IP，2: 云上IP，3: 域名，4: IP，5: 文件，6: 进程
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConcern() 获取关注点
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,7 +170,7 @@ class ConcernInfo extends AbstractModel
     public $ConcernType;
 
     /**
-     * @var integer 实体类型
+     * @var integer 实体类型 1: 非云上IP，2: 云上IP，3: 域名，4: IP，5: 文件，6: 进程
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EntityType;
@@ -376,7 +376,7 @@ class ConcernInfo extends AbstractModel
     /**
      * @param integer $ConcernType 关注点类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EntityType 实体类型
+     * @param integer $EntityType 实体类型 1: 非云上IP，2: 云上IP，3: 域名，4: IP，5: 文件，6: 进程
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Concern 关注点
 注意：此字段可能返回 null，表示取不到有效值。

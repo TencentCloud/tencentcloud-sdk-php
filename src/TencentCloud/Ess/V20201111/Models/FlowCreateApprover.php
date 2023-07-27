@@ -90,6 +90,10 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+ * @method array getApproverVerifyTypes() 获取合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+ * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+ * @method array getApproverSignTypes() 获取合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+ * @method void setApproverSignTypes(array $ApproverSignTypes) 设置合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -222,6 +226,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $ComponentLimitType;
 
     /**
+     * @var array 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+     */
+    public $ApproverVerifyTypes;
+
+    /**
+     * @var array 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+     */
+    public $ApproverSignTypes;
+
+    /**
      * @param integer $ApproverType 参与者类型：
 0：企业
 1：个人
@@ -257,6 +271,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     * @param array $ApproverVerifyTypes 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+     * @param array $ApproverSignTypes 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
      */
     function __construct()
     {
@@ -373,6 +389,14 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
         if (array_key_exists("ComponentLimitType",$param) and $param["ComponentLimitType"] !== null) {
             $this->ComponentLimitType = $param["ComponentLimitType"];
+        }
+
+        if (array_key_exists("ApproverVerifyTypes",$param) and $param["ApproverVerifyTypes"] !== null) {
+            $this->ApproverVerifyTypes = $param["ApproverVerifyTypes"];
+        }
+
+        if (array_key_exists("ApproverSignTypes",$param) and $param["ApproverSignTypes"] !== null) {
+            $this->ApproverSignTypes = $param["ApproverSignTypes"];
         }
     }
 }

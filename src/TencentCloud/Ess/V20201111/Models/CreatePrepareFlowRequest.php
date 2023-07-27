@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApprovers(array $Approvers) 设置签署流程参与者信息，最大限制50方
  * @method string getIntelligentStatus() 获取打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
  * @method void setIntelligentStatus(string $IntelligentStatus) 设置打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
  */
 class CreatePrepareFlowRequest extends AbstractModel
 {
@@ -83,6 +85,11 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $IntelligentStatus;
 
     /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $ResourceId 资源Id，通过多文件上传（UploadFiles）接口获得
      * @param string $FlowName 合同名称
@@ -92,6 +99,7 @@ class CreatePrepareFlowRequest extends AbstractModel
      * @param string $UserFlowTypeId 用户自定义合同类型
      * @param array $Approvers 签署流程参与者信息，最大限制50方
      * @param string $IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
      */
     function __construct()
     {
@@ -142,6 +150,11 @@ class CreatePrepareFlowRequest extends AbstractModel
 
         if (array_key_exists("IntelligentStatus",$param) and $param["IntelligentStatus"] !== null) {
             $this->IntelligentStatus = $param["IntelligentStatus"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

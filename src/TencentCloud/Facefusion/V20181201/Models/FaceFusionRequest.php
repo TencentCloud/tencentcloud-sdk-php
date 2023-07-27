@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  * @method string getUrl() 获取图片Url地址
  * @method void setUrl(string $Url) 设置图片Url地址
+ * @method FuseParam getFuseParam() 获取融合参数
+ * @method void setFuseParam(FuseParam $FuseParam) 设置融合参数
  */
 class FaceFusionRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ class FaceFusionRequest extends AbstractModel
     public $Url;
 
     /**
+     * @var FuseParam 融合参数
+     */
+    public $FuseParam;
+
+    /**
      * @param string $ProjectId 活动 ID，请在人脸融合控制台查看。
      * @param string $ModelId 素材 ID，请在人脸融合控制台查看。
      * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
@@ -84,6 +91,7 @@ class FaceFusionRequest extends AbstractModel
      * @param integer $CelebrityIdentify 0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
 请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
      * @param string $Url 图片Url地址
+     * @param FuseParam $FuseParam 融合参数
      */
     function __construct()
     {
@@ -124,6 +132,11 @@ class FaceFusionRequest extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("FuseParam",$param) and $param["FuseParam"] !== null) {
+            $this->FuseParam = new FuseParam();
+            $this->FuseParam->deserialize($param["FuseParam"]);
         }
     }
 }

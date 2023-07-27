@@ -20,51 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReadOnlyDBInstance请求参数结构体
  *
- * @method string getSpecCode() 获取售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
- * @method void setSpecCode(string $SpecCode) 设置售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
+ * @method string getZone() 获取实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+ * @method void setZone(string $Zone) 设置实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+ * @method string getMasterDBInstanceId() 获取只读实例的主实例ID。
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置只读实例的主实例ID。
+ * @method string getSpecCode() 获取售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+ * @method void setSpecCode(string $SpecCode) 设置售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
  * @method integer getStorage() 获取实例容量大小，单位：GB。
  * @method void setStorage(integer $Storage) 设置实例容量大小，单位：GB。
- * @method integer getInstanceCount() 获取一次性购买的实例数量。取值1-100
- * @method void setInstanceCount(integer $InstanceCount) 设置一次性购买的实例数量。取值1-100
- * @method integer getPeriod() 获取购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
- * @method void setPeriod(integer $Period) 设置购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
- * @method string getMasterDBInstanceId() 获取只读实例的主实例ID
- * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置只读实例的主实例ID
- * @method string getZone() 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
- * @method void setZone(string $Zone) 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
- * @method integer getProjectId() 获取项目ID。
- * @method void setProjectId(integer $ProjectId) 设置项目ID。
- * @method string getDBVersion() 获取【废弃】不再需要指定，内核版本号与主实例保持一致
- * @method void setDBVersion(string $DBVersion) 设置【废弃】不再需要指定，内核版本号与主实例保持一致
- * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
- * @method integer getAutoVoucher() 获取是否自动使用代金券。1（是），0（否），默认不使用。
- * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券。1（是），0（否），默认不使用。
+ * @method integer getInstanceCount() 获取购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+ * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+ * @method integer getPeriod() 获取购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+ * @method void setPeriod(integer $Period) 设置购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+ * @method string getVpcId() 获取私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+ * @method string getSubnetId() 获取私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+ * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+ * @method string getInstanceChargeType() 获取实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+ * @method integer getAutoVoucher() 获取是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
- * @method integer getAutoRenewFlag() 获取续费标记：0-正常续费（默认）；1-自动续费；
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：0-正常续费（默认）；1-自动续费；
- * @method string getVpcId() 获取私有网络ID。
- * @method void setVpcId(string $VpcId) 设置私有网络ID。
- * @method string getSubnetId() 获取私有网络子网ID。
- * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID。
+ * @method integer getAutoRenewFlag() 获取续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+ * @method integer getProjectId() 获取项目ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID。
  * @method integer getActivityId() 获取优惠活动ID
  * @method void setActivityId(integer $ActivityId) 设置优惠活动ID
- * @method string getName() 获取实例名(后续支持)
- * @method void setName(string $Name) 设置实例名(后续支持)
- * @method integer getNeedSupportIpv6() 获取是否需要支持Ipv6，1：是，0：否
- * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6，1：是，0：否
  * @method string getReadOnlyGroupId() 获取只读组ID。
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID。
- * @method Tag getTagList() 获取实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
- * @method void setTagList(Tag $TagList) 设置实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
- * @method array getSecurityGroupIds() 获取安全组id
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id
+ * @method Tag getTagList() 获取实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+ * @method void setTagList(Tag $TagList) 设置实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+ * @method array getSecurityGroupIds() 获取实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
+ * @method integer getNeedSupportIpv6() 获取是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0
+ * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0
+ * @method string getName() 获取实例名(后续支持)
+ * @method void setName(string $Name) 设置实例名(后续支持)
+ * @method string getDBVersion() 获取【废弃】不再需要指定，内核版本号与主实例保持一致
+ * @method void setDBVersion(string $DBVersion) 设置【废弃】不再需要指定，内核版本号与主实例保持一致
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
+     * @var string 实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     */
+    public $Zone;
+
+    /**
+     * @var string 只读实例的主实例ID。
+     */
+    public $MasterDBInstanceId;
+
+    /**
+     * @var string 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      */
     public $SpecCode;
 
@@ -74,42 +117,40 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer 一次性购买的实例数量。取值1-100
+     * @var integer 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
      */
     public $InstanceCount;
 
     /**
-     * @var integer 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+     * @var integer 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public $Period;
 
     /**
-     * @var string 只读实例的主实例ID
+     * @var string 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
      */
-    public $MasterDBInstanceId;
+    public $VpcId;
 
     /**
-     * @var string 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * @var string 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
      */
-    public $Zone;
+    public $SubnetId;
 
     /**
-     * @var integer 项目ID。
-     */
-    public $ProjectId;
-
-    /**
-     * @var string 【废弃】不再需要指定，内核版本号与主实例保持一致
-     */
-    public $DBVersion;
-
-    /**
-     * @var string 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+     * @var string 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      */
     public $InstanceChargeType;
 
     /**
-     * @var integer 是否自动使用代金券。1（是），0（否），默认不使用。
+     * @var integer 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public $AutoVoucher;
 
@@ -119,19 +160,17 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var integer 续费标记：0-正常续费（默认）；1-自动续费；
+     * @var integer 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 私有网络ID。
+     * @var integer 项目ID。
      */
-    public $VpcId;
-
-    /**
-     * @var string 私有网络子网ID。
-     */
-    public $SubnetId;
+    public $ProjectId;
 
     /**
      * @var integer 优惠活动ID
@@ -139,51 +178,76 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @var string 实例名(后续支持)
-     */
-    public $Name;
-
-    /**
-     * @var integer 是否需要支持Ipv6，1：是，0：否
-     */
-    public $NeedSupportIpv6;
-
-    /**
      * @var string 只读组ID。
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @var Tag 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
+     * @var Tag 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
      */
     public $TagList;
 
     /**
-     * @var array 安全组id
+     * @var array 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
+     * @var integer 是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0
+     */
+    public $NeedSupportIpv6;
+
+    /**
+     * @var string 实例名(后续支持)
+     */
+    public $Name;
+
+    /**
+     * @var string 【废弃】不再需要指定，内核版本号与主实例保持一致
+     */
+    public $DBVersion;
+
+    /**
+     * @param string $Zone 实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     * @param string $MasterDBInstanceId 只读实例的主实例ID。
+     * @param string $SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      * @param integer $Storage 实例容量大小，单位：GB。
-     * @param integer $InstanceCount 一次性购买的实例数量。取值1-100
-     * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
-     * @param string $MasterDBInstanceId 只读实例的主实例ID
-     * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     * @param integer $ProjectId 项目ID。
-     * @param string $DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
-     * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
-     * @param integer $AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
+     * @param integer $InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+     * @param integer $Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+     * @param string $VpcId 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+     * @param string $SubnetId 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * @param string $InstanceChargeType 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+     * @param integer $AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
-     * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
-     * @param string $VpcId 私有网络ID。
-     * @param string $SubnetId 私有网络子网ID。
+     * @param integer $AutoRenewFlag 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+     * @param integer $ProjectId 项目ID。
      * @param integer $ActivityId 优惠活动ID
-     * @param string $Name 实例名(后续支持)
-     * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
      * @param string $ReadOnlyGroupId 只读组ID。
-     * @param Tag $TagList 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
-     * @param array $SecurityGroupIds 安全组id
+     * @param Tag $TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+     * @param array $SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
+     * @param integer $NeedSupportIpv6 是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0
+     * @param string $Name 实例名(后续支持)
+     * @param string $DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
      */
     function __construct()
     {
@@ -198,6 +262,14 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("MasterDBInstanceId",$param) and $param["MasterDBInstanceId"] !== null) {
+            $this->MasterDBInstanceId = $param["MasterDBInstanceId"];
+        }
+
         if (array_key_exists("SpecCode",$param) and $param["SpecCode"] !== null) {
             $this->SpecCode = $param["SpecCode"];
         }
@@ -214,20 +286,12 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
             $this->Period = $param["Period"];
         }
 
-        if (array_key_exists("MasterDBInstanceId",$param) and $param["MasterDBInstanceId"] !== null) {
-            $this->MasterDBInstanceId = $param["MasterDBInstanceId"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
-        }
-
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
-            $this->DBVersion = $param["DBVersion"];
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
@@ -246,24 +310,12 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
 
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
             $this->ActivityId = $param["ActivityId"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("NeedSupportIpv6",$param) and $param["NeedSupportIpv6"] !== null) {
-            $this->NeedSupportIpv6 = $param["NeedSupportIpv6"];
         }
 
         if (array_key_exists("ReadOnlyGroupId",$param) and $param["ReadOnlyGroupId"] !== null) {
@@ -277,6 +329,18 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("NeedSupportIpv6",$param) and $param["NeedSupportIpv6"] !== null) {
+            $this->NeedSupportIpv6 = $param["NeedSupportIpv6"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
+            $this->DBVersion = $param["DBVersion"];
         }
     }
 }

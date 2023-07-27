@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelType(integer $ModelType) 设置模型类型，1-默认模型。
  * @method integer getVoiceType() 获取音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
  * @method void setVoiceType(integer $VoiceType) 设置音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
- * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
- * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+ * @method integer getPrimaryLanguage() 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
+ * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
  * @method integer getSampleRate() 获取音频采样率：
 <li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
 <li>16000：16k（默认）</li>
@@ -96,7 +96,7 @@ class TextToVoiceRequest extends AbstractModel
     public $VoiceType;
 
     /**
-     * @var integer 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+     * @var integer 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
      */
     public $PrimaryLanguage;
 
@@ -142,7 +142,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $ProjectId 项目id，用户自定义，默认为0。
      * @param integer $ModelType 模型类型，1-默认模型。
      * @param integer $VoiceType 音色 ID，包括标准音色与精品音色，精品音色拟真度更高，价格不同于标准音色，请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。
-     * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+     * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
      * @param integer $SampleRate 音频采样率：
 <li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
 <li>16000：16k（默认）</li>

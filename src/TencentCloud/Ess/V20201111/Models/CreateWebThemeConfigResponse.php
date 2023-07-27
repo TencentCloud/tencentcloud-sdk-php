@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GenerateApiDocument返回参数结构体
+ * CreateWebThemeConfig返回参数结构体
  *
- * @method DocumentSDK getResult() 获取api文档&sdk链接。
- * @method void setResult(DocumentSDK $Result) 设置api文档&sdk链接。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GenerateApiDocumentResponse extends AbstractModel
+class CreateWebThemeConfigResponse extends AbstractModel
 {
-    /**
-     * @var DocumentSDK api文档&sdk链接。
-     */
-    public $Result;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param DocumentSDK $Result api文档&sdk链接。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,11 +46,6 @@ class GenerateApiDocumentResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new DocumentSDK();
-            $this->Result->deserialize($param["Result"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

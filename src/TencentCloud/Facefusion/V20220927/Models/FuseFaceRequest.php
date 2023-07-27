@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 默认在融合结果图右下角添加“本图片为AI合成图片”字样，您可根据自身需要替换为其他的Logo图片。
  * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
 默认在融合结果图右下角添加“本图片为AI合成图片”字样，您可根据自身需要替换为其他的Logo图片。
+ * @method FuseParam getFuseParam() 获取融合参数。
+ * @method void setFuseParam(FuseParam $FuseParam) 设置融合参数。
  */
 class FuseFaceRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class FuseFaceRequest extends AbstractModel
     public $LogoParam;
 
     /**
+     * @var FuseParam 融合参数。
+     */
+    public $FuseParam;
+
+    /**
      * @param string $ProjectId 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      * @param string $ModelId 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
@@ -116,6 +123,7 @@ class FuseFaceRequest extends AbstractModel
 建议您使用显著标识来提示结果图使用了人脸融合技术，是AI合成的图片。
      * @param LogoParam $LogoParam 标识内容设置。
 默认在融合结果图右下角添加“本图片为AI合成图片”字样，您可根据自身需要替换为其他的Logo图片。
+     * @param FuseParam $FuseParam 融合参数。
      */
     function __construct()
     {
@@ -166,6 +174,11 @@ class FuseFaceRequest extends AbstractModel
         if (array_key_exists("LogoParam",$param) and $param["LogoParam"] !== null) {
             $this->LogoParam = new LogoParam();
             $this->LogoParam->deserialize($param["LogoParam"]);
+        }
+
+        if (array_key_exists("FuseParam",$param) and $param["FuseParam"] !== null) {
+            $this->FuseParam = new FuseParam();
+            $this->FuseParam->deserialize($param["FuseParam"]);
         }
     }
 }

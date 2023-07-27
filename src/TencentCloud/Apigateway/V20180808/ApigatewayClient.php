@@ -113,9 +113,6 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\DetachPluginResponse DetachPlugin(Models\DetachPluginRequest $req) 解除插件与API绑定
  * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) 本接口（DisableApiKey）用于禁用一对 API 密钥。
  * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) 本接口（EnableApiKey）用于启动一对被禁用的 API 密钥。
- * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) 接口已废弃
-
-本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
  * @method Models\ImportOpenApiResponse ImportOpenApi(Models\ImportOpenApiRequest $req) 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
  * @method Models\ModifyAPIDocResponse ModifyAPIDoc(Models\ModifyAPIDocRequest $req) 修改 API 文档
  * @method Models\ModifyApiResponse ModifyApi(Models\ModifyApiRequest $req) 本接口（ModifyApi）用于修改 API 接口，可调用此接口对已经配置的 API 接口进行编辑修改。修改后的 API 需要重新发布 API 所在的服务到对应环境方能生效。

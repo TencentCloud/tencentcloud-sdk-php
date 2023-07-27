@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络（VPC） ID
  * @method string getSubnetId() 获取子网 ID
  * @method void setSubnetId(string $SubnetId) 设置子网 ID
+ * @method integer getOffset() 获取Offset 分页码
+ * @method void setOffset(integer $Offset) 设置Offset 分页码
+ * @method integer getLimit() 获取Limit 页面大小
+ * @method void setLimit(integer $Limit) 设置Limit 页面大小
  */
 class DescribeCfsFileSystemsRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var integer Offset 分页码
+     */
+    public $Offset;
+
+    /**
+     * @var integer Limit 页面大小
+     */
+    public $Limit;
+
+    /**
      * @param string $FileSystemId 文件系统 ID
      * @param string $VpcId 私有网络（VPC） ID
      * @param string $SubnetId 子网 ID
+     * @param integer $Offset Offset 分页码
+     * @param integer $Limit Limit 页面大小
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

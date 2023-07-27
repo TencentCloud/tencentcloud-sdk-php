@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCSShiftDuration(integer $CSShiftDuration) 设置云存回看时长
  * @method integer getCSExpiredTime() 获取云存套餐过期时间
  * @method void setCSExpiredTime(integer $CSExpiredTime) 设置云存套餐过期时间
+ * @method integer getCreatedAt() 获取云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedAt(integer $CreatedAt) 设置云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdatedAt() 获取云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdatedAt(integer $UpdatedAt) 设置云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PackageInfo extends AbstractModel
 {
@@ -55,11 +63,27 @@ class PackageInfo extends AbstractModel
     public $CSExpiredTime;
 
     /**
+     * @var integer 云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedAt;
+
+    /**
+     * @var integer 云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdatedAt;
+
+    /**
      * @param integer $Status 云存开启状态，0为未开启，2为正在生效，1为已过期
 注：这里只返回状态为0的数据
      * @param integer $CSType 云存类型，1为全时云存，2为事件云存
      * @param integer $CSShiftDuration 云存回看时长
      * @param integer $CSExpiredTime 云存套餐过期时间
+     * @param integer $CreatedAt 云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdatedAt 云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -88,6 +112,14 @@ class PackageInfo extends AbstractModel
 
         if (array_key_exists("CSExpiredTime",$param) and $param["CSExpiredTime"] !== null) {
             $this->CSExpiredTime = $param["CSExpiredTime"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
+        }
+
+        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
+            $this->UpdatedAt = $param["UpdatedAt"];
         }
     }
 }

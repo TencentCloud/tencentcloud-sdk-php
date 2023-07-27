@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabase(string $Database) 设置数据库名
  * @method string getFileType() 获取文件类型，可选值：csv, original
  * @method void setFileType(string $FileType) 设置文件类型，可选值：csv, original
+ * @method string getOrderBy() 获取排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent
+ * @method string getOrderByType() 获取排序类型，可选值：asc,desc
+ * @method void setOrderByType(string $OrderByType) 设置排序类型，可选值：asc,desc
  */
 class ExportInstanceSlowQueriesRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
     public $FileType;
 
     /**
+     * @var string 排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent
+     */
+    public $OrderBy;
+
+    /**
+     * @var string 排序类型，可选值：asc,desc
+     */
+    public $OrderByType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $StartTime 事务开始最早时间
      * @param string $EndTime 事务开始最晚时间
@@ -96,6 +110,8 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
      * @param string $Host 客户端host
      * @param string $Database 数据库名
      * @param string $FileType 文件类型，可选值：csv, original
+     * @param string $OrderBy 排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent
+     * @param string $OrderByType 排序类型，可选值：asc,desc
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ExportInstanceSlowQueriesRequest extends AbstractModel
 
         if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
             $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
         }
     }
 }

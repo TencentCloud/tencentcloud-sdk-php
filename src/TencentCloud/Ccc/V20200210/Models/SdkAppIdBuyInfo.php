@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaffBuyList(array $StaffBuyList) 设置坐席购买列表 （还在有效期内）
  * @method array getPhoneNumBuyList() 获取号码购买列表
  * @method void setPhoneNumBuyList(array $PhoneNumBuyList) 设置号码购买列表
+ * @method integer getSipBuyNum() 获取办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSipBuyNum(integer $SipBuyNum) 设置办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SdkAppIdBuyInfo extends AbstractModel
 {
@@ -59,11 +63,19 @@ class SdkAppIdBuyInfo extends AbstractModel
     public $PhoneNumBuyList;
 
     /**
+     * @var integer 办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SipBuyNum;
+
+    /**
      * @param integer $SdkAppId 应用ID
      * @param string $Name 应用名称
      * @param integer $StaffBuyNum 坐席购买数（还在有效期内）
      * @param array $StaffBuyList 坐席购买列表 （还在有效期内）
      * @param array $PhoneNumBuyList 号码购买列表
+     * @param integer $SipBuyNum 办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -106,6 +118,10 @@ class SdkAppIdBuyInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PhoneNumBuyList, $obj);
             }
+        }
+
+        if (array_key_exists("SipBuyNum",$param) and $param["SipBuyNum"] !== null) {
+            $this->SipBuyNum = $param["SipBuyNum"];
         }
     }
 }

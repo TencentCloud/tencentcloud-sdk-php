@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackgroundImageUrl(string $BackgroundImageUrl) 设置整个画布的背景图url，优先级高于BackGroundColor。
  * @method array getWaterMarkList() 获取混流布局的水印参数。
  * @method void setWaterMarkList(array $WaterMarkList) 设置混流布局的水印参数。
+ * @method integer getBackgroundRenderMode() 获取背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
+ * @method void setBackgroundRenderMode(integer $BackgroundRenderMode) 设置背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
  */
 class McuVideoParams extends AbstractModel
 {
@@ -80,6 +82,11 @@ class McuVideoParams extends AbstractModel
     public $WaterMarkList;
 
     /**
+     * @var integer 背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
+     */
+    public $BackgroundRenderMode;
+
+    /**
      * @param VideoEncode $VideoEncode 输出流视频编码参数。
      * @param McuLayoutParams $LayoutParams 混流布局参数。
      * @param string $BackGroundColor 整个画布背景颜色，常用的颜色有：
@@ -92,6 +99,7 @@ class McuVideoParams extends AbstractModel
 灰色：0x999999。
      * @param string $BackgroundImageUrl 整个画布的背景图url，优先级高于BackGroundColor。
      * @param array $WaterMarkList 混流布局的水印参数。
+     * @param integer $BackgroundRenderMode 背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
      */
     function __construct()
     {
@@ -131,6 +139,10 @@ class McuVideoParams extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WaterMarkList, $obj);
             }
+        }
+
+        if (array_key_exists("BackgroundRenderMode",$param) and $param["BackgroundRenderMode"] !== null) {
+            $this->BackgroundRenderMode = $param["BackgroundRenderMode"];
         }
     }
 }

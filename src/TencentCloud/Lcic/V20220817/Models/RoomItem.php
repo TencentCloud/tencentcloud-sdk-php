@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoOrientation(integer $VideoOrientation) 设置横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsGradingRequiredPostClass() 获取开启课后评分。 0：不开启(默认)  1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置开启课后评分。 0：不开启(默认)  1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRoomType() 获取房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRoomType(integer $RoomType) 设置房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomItem extends AbstractModel
 {
@@ -180,6 +188,18 @@ class RoomItem extends AbstractModel
     public $VideoOrientation;
 
     /**
+     * @var integer 开启课后评分。 0：不开启(默认)  1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsGradingRequiredPostClass;
+
+    /**
+     * @var integer 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RoomType;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomId 房间ID
@@ -211,6 +231,10 @@ class RoomItem extends AbstractModel
      * @param integer $InteractionMode 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RoomType 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -284,6 +308,14 @@ class RoomItem extends AbstractModel
 
         if (array_key_exists("VideoOrientation",$param) and $param["VideoOrientation"] !== null) {
             $this->VideoOrientation = $param["VideoOrientation"];
+        }
+
+        if (array_key_exists("IsGradingRequiredPostClass",$param) and $param["IsGradingRequiredPostClass"] !== null) {
+            $this->IsGradingRequiredPostClass = $param["IsGradingRequiredPostClass"];
+        }
+
+        if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
+            $this->RoomType = $param["RoomType"];
         }
     }
 }

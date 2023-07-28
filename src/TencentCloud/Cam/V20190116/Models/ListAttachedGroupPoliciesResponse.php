@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAttachedGroupPolicies返回参数结构体
  *
- * @method integer getTotalNum() 获取策略总数
- * @method void setTotalNum(integer $TotalNum) 设置策略总数
+ * @method integer getTotalNum() 获取策略总数。取值范围大于等于0。
+ * @method void setTotalNum(integer $TotalNum) 设置策略总数。取值范围大于等于0。
  * @method array getList() 获取策略列表
  * @method void setList(array $List) 设置策略列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ListAttachedGroupPoliciesResponse extends AbstractModel
 {
     /**
-     * @var integer 策略总数
+     * @var integer 策略总数。取值范围大于等于0。
      */
     public $TotalNum;
 
@@ -45,7 +45,7 @@ class ListAttachedGroupPoliciesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalNum 策略总数
+     * @param integer $TotalNum 策略总数。取值范围大于等于0。
      * @param array $List 策略列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

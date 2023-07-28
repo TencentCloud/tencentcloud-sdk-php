@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowId() 获取流程编号
  * @method void setFlowId(string $FlowId) 设置流程编号
- * @method array getFlowApproverInfos() 获取流程签署人，其中ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
- * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人，其中ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+ * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。
+
+签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+ * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。
+
+签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
  * @method UserInfo getOperator() 获取用户信息，此结构体UserId必填
  * @method void setOperator(UserInfo $Operator) 设置用户信息，此结构体UserId必填
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -41,7 +45,9 @@ class CreateFlowSignUrlRequest extends AbstractModel
     public $FlowId;
 
     /**
-     * @var array 流程签署人，其中ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+     * @var array 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。
+
+签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
      */
     public $FlowApproverInfos;
 
@@ -68,7 +74,9 @@ class CreateFlowSignUrlRequest extends AbstractModel
 
     /**
      * @param string $FlowId 流程编号
-     * @param array $FlowApproverInfos 流程签署人，其中ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+     * @param array $FlowApproverInfos 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，ApproverType目前只支持个人类型的签署人。
+
+签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
      * @param UserInfo $Operator 用户信息，此结构体UserId必填
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param OrganizationInfo $Organization 机构信息，暂未开放

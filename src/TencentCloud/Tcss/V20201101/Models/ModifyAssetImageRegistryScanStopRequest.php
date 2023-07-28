@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExcludeImageList(array $ExcludeImageList) 设置不要扫描的镜像列表，与Filters配合使用
  * @method boolean getOnlyScanLatest() 获取是否仅扫描各repository最新版本的镜像
  * @method void setOnlyScanLatest(boolean $OnlyScanLatest) 设置是否仅扫描各repository最新版本的镜像
+ * @method integer getTaskID() 获取停止的任务ID
+ * @method void setTaskID(integer $TaskID) 设置停止的任务ID
  */
 class ModifyAssetImageRegistryScanStopRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyAssetImageRegistryScanStopRequest extends AbstractModel
     public $OnlyScanLatest;
 
     /**
+     * @var integer 停止的任务ID
+     */
+    public $TaskID;
+
+    /**
      * @param boolean $All 是否扫描全部镜像
      * @param array $Images 扫描的镜像列表
      * @param array $Id 扫描的镜像列表
      * @param array $Filters 过滤条件
      * @param array $ExcludeImageList 不要扫描的镜像列表，与Filters配合使用
      * @param boolean $OnlyScanLatest 是否仅扫描各repository最新版本的镜像
+     * @param integer $TaskID 停止的任务ID
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class ModifyAssetImageRegistryScanStopRequest extends AbstractModel
 
         if (array_key_exists("OnlyScanLatest",$param) and $param["OnlyScanLatest"] !== null) {
             $this->OnlyScanLatest = $param["OnlyScanLatest"];
+        }
+
+        if (array_key_exists("TaskID",$param) and $param["TaskID"] !== null) {
+            $this->TaskID = $param["TaskID"];
         }
     }
 }

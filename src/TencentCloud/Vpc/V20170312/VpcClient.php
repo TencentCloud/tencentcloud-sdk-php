@@ -346,6 +346,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeSnapshotAttachedInstancesResponse DescribeSnapshotAttachedInstances(Models\DescribeSnapshotAttachedInstancesRequest $req) 本接口（DescribeSnapshotAttachedInstances）用于查询快照策略关联实例列表。
  * @method Models\DescribeSnapshotFilesResponse DescribeSnapshotFiles(Models\DescribeSnapshotFilesRequest $req) 本接口（DescribeSnapshotFiles）用于查询快照文件。
  * @method Models\DescribeSnapshotPoliciesResponse DescribeSnapshotPolicies(Models\DescribeSnapshotPoliciesRequest $req) 本接口（DescribeSnapshotPolicies）用于查询快照策略。
+ * @method Models\DescribeSpecificTrafficPackageUsedDetailsResponse DescribeSpecificTrafficPackageUsedDetails(Models\DescribeSpecificTrafficPackageUsedDetailsRequest $req) 本接口 (DescribeSpecificTrafficPackageUsedDetails) 用于查询指定 共享流量包 的用量明细。
  * @method Models\DescribeSubnetResourceDashboardResponse DescribeSubnetResourceDashboard(Models\DescribeSubnetResourceDashboardRequest $req) 本接口(DescribeSubnetResourceDashboard)用于查看Subnet资源信息。
  * @method Models\DescribeSubnetsResponse DescribeSubnets(Models\DescribeSubnetsRequest $req) 本接口（DescribeSubnets）用于查询子网列表。
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询EIP异步任务执行结果

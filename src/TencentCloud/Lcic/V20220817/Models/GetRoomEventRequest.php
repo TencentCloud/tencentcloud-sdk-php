@@ -34,12 +34,28 @@ RoomEnd:房间结束
 MemberJoin:成员加入
 MemberQuit:成员退出
 RecordFinish:录制结束
+CameraOn: 摄像头打开
+CameraOff: 摄像头关闭
+MicOn: 麦克风打开
+MicOff: 麦克风关闭
+ScreenOn: 屏幕共享打开
+ScreenOff: 屏幕共享关闭
+VisibleOn: 页面可见
+VisibleOff: 页面不可见
  * @method void setKeyword(string $Keyword) 设置搜索事件类型。有以下事件类型:
 RoomStart:房间开始
 RoomEnd:房间结束
 MemberJoin:成员加入
 MemberQuit:成员退出
 RecordFinish:录制结束
+CameraOn: 摄像头打开
+CameraOff: 摄像头关闭
+MicOn: 麦克风打开
+MicOff: 麦克风关闭
+ScreenOn: 屏幕共享打开
+ScreenOff: 屏幕共享关闭
+VisibleOn: 页面可见
+VisibleOff: 页面不可见
  */
 class GetRoomEventRequest extends AbstractModel
 {
@@ -70,6 +86,14 @@ RoomEnd:房间结束
 MemberJoin:成员加入
 MemberQuit:成员退出
 RecordFinish:录制结束
+CameraOn: 摄像头打开
+CameraOff: 摄像头关闭
+MicOn: 麦克风打开
+MicOff: 麦克风关闭
+ScreenOn: 屏幕共享打开
+ScreenOff: 屏幕共享关闭
+VisibleOn: 页面可见
+VisibleOff: 页面不可见
      */
     public $Keyword;
 
@@ -84,6 +108,14 @@ RoomEnd:房间结束
 MemberJoin:成员加入
 MemberQuit:成员退出
 RecordFinish:录制结束
+CameraOn: 摄像头打开
+CameraOff: 摄像头关闭
+MicOn: 麦克风打开
+MicOff: 麦克风关闭
+ScreenOn: 屏幕共享打开
+ScreenOff: 屏幕共享关闭
+VisibleOn: 页面可见
+VisibleOff: 页面不可见
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAll(boolean $All) 设置是否获取全部镜像
  * @method array getId() 获取需要获取进度的镜像列表Id
  * @method void setId(array $Id) 设置需要获取进度的镜像列表Id
+ * @method integer getTaskID() 获取获取进度的任务ID
+ * @method void setTaskID(integer $TaskID) 设置获取进度的任务ID
  */
 class DescribeAssetImageRegistryScanStatusOneKeyRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeAssetImageRegistryScanStatusOneKeyRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var integer 获取进度的任务ID
+     */
+    public $TaskID;
+
+    /**
      * @param array $Images 需要获取进度的镜像列表
      * @param boolean $All 是否获取全部镜像
      * @param array $Id 需要获取进度的镜像列表Id
+     * @param integer $TaskID 获取进度的任务ID
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeAssetImageRegistryScanStatusOneKeyRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("TaskID",$param) and $param["TaskID"] !== null) {
+            $this->TaskID = $param["TaskID"];
         }
     }
 }

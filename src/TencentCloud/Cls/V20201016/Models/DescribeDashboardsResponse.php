@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAssetImageRegistryScanTaskOneKey返回参数结构体
+ * DescribeDashboards返回参数结构体
  *
- * @method integer getTaskID() 获取扫描任务id
- * @method void setTaskID(integer $TaskID) 设置扫描任务id
+ * @method integer getTotalCount() 获取仪表盘的数量
+ * @method void setTotalCount(integer $TotalCount) 设置仪表盘的数量
+ * @method array getDashboardInfos() 获取仪表盘详细明细
+ * @method void setDashboardInfos(array $DashboardInfos) 设置仪表盘详细明细
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel
+class DescribeDashboardsResponse extends AbstractModel
 {
     /**
-     * @var integer 扫描任务id
+     * @var integer 仪表盘的数量
      */
-    public $TaskID;
+    public $TotalCount;
+
+    /**
+     * @var array 仪表盘详细明细
+     */
+    public $DashboardInfos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskID 扫描任务id
+     * @param integer $TotalCount 仪表盘的数量
+     * @param array $DashboardInfos 仪表盘详细明细
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskID",$param) and $param["TaskID"] !== null) {
-            $this->TaskID = $param["TaskID"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("DashboardInfos",$param) and $param["DashboardInfos"] !== null) {
+            $this->DashboardInfos = [];
+            foreach ($param["DashboardInfos"] as $key => $value){
+                $obj = new DashboardInfo();
+                $obj->deserialize($value);
+                array_push($this->DashboardInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationY(integer $LocationY) 设置子画面在输出时的Y偏移，单位为像素值，LocationY与ImageHeight之和不能超过混流输出的总高度，不填默认为0。
  * @method integer getZOrder() 获取子画面在输出时的层级，不填默认为0。
  * @method void setZOrder(integer $ZOrder) 设置子画面在输出时的层级，不填默认为0。
- * @method integer getRenderMode() 获取子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
- * @method void setRenderMode(integer $RenderMode) 设置子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+ * @method integer getRenderMode() 获取子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
+ * @method void setRenderMode(integer $RenderMode) 设置子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
  * @method string getBackGroundColor() 获取【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackgroundImageUrl(string $BackgroundImageUrl) 设置子画面的背景图url，填写该参数，当用户关闭摄像头或未进入TRTC房间时，会在布局位置填充为指定图片。若指定图片与布局位置尺寸比例不一致，则会对图片进行拉伸处理，优先级高于BackGroundColor。
  * @method McuCustomCrop getCustomCrop() 获取客户自定义裁剪，针对原始输入流裁剪
  * @method void setCustomCrop(McuCustomCrop $CustomCrop) 设置客户自定义裁剪，针对原始输入流裁剪
+ * @method integer getBackgroundRenderMode() 获取子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+ * @method void setBackgroundRenderMode(integer $BackgroundRenderMode) 设置子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
  */
 class McuLayout extends AbstractModel
 {
@@ -88,7 +90,7 @@ class McuLayout extends AbstractModel
     public $ZOrder;
 
     /**
-     * @var integer 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+     * @var integer 子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
      */
     public $RenderMode;
 
@@ -115,13 +117,18 @@ class McuLayout extends AbstractModel
     public $CustomCrop;
 
     /**
+     * @var integer 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+     */
+    public $BackgroundRenderMode;
+
+    /**
      * @param UserMediaStream $UserMediaStream 用户媒体流参数。不填时腾讯云后台按照上行主播的进房顺序自动填充。
      * @param integer $ImageWidth 子画面在输出时的宽度，单位为像素值，不填默认为0。
      * @param integer $ImageHeight 子画面在输出时的高度，单位为像素值，不填默认为0。
      * @param integer $LocationX 子画面在输出时的X偏移，单位为像素值，LocationX与ImageWidth之和不能超过混流输出的总宽度，不填默认为0。
      * @param integer $LocationY 子画面在输出时的Y偏移，单位为像素值，LocationY与ImageHeight之和不能超过混流输出的总高度，不填默认为0。
      * @param integer $ZOrder 子画面在输出时的层级，不填默认为0。
-     * @param integer $RenderMode 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+     * @param integer $RenderMode 子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
      * @param string $BackGroundColor 【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
@@ -132,6 +139,7 @@ class McuLayout extends AbstractModel
 灰色：0x999999。
      * @param string $BackgroundImageUrl 子画面的背景图url，填写该参数，当用户关闭摄像头或未进入TRTC房间时，会在布局位置填充为指定图片。若指定图片与布局位置尺寸比例不一致，则会对图片进行拉伸处理，优先级高于BackGroundColor。
      * @param McuCustomCrop $CustomCrop 客户自定义裁剪，针对原始输入流裁剪
+     * @param integer $BackgroundRenderMode 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class McuLayout extends AbstractModel
         if (array_key_exists("CustomCrop",$param) and $param["CustomCrop"] !== null) {
             $this->CustomCrop = new McuCustomCrop();
             $this->CustomCrop->deserialize($param["CustomCrop"]);
+        }
+
+        if (array_key_exists("BackgroundRenderMode",$param) and $param["BackgroundRenderMode"] !== null) {
+            $this->BackgroundRenderMode = $param["BackgroundRenderMode"];
         }
     }
 }

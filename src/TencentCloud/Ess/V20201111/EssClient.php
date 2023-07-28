@@ -74,8 +74,10 @@ PDF资源Id 通过上传文件接口获取
 适用场景: 
 在通过接口(CreateFlow 或者CreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true，且发起方企业作为签署方参与了流程签署，则可以调用此接口提交企业内部签署审批结果。
 若签署流程状态正常，且本企业存在签署方未签署，同一签署流程可以多次提交签署审批结果，签署时的最后一个“审批结果”有效。
- * @method Models\CreateFlowSignUrlResponse CreateFlowSignUrl(Models\CreateFlowSignUrlRequest $req) 创建个人H5签署链接，请联系客户经理申请使用 <br/>
-该接口用于发起合同后，生成C端签署人的签署链接 <br/>
+ * @method Models\CreateFlowSignUrlResponse CreateFlowSignUrl(Models\CreateFlowSignUrlRequest $req) 创建个人H5签署链接，请联系客户经理申请开通使用, 否则调用会返回失败 <br/>
+
+该接口用于发起合同后，生成个人签署人的签署链接, 暂时不支持企业端签署 <br/>
+
 注意：该接口目前签署人类型仅支持个人签署方（PERSON） <br/>
 注意：该接口可生成签署链接的C端签署人必须仅有手写签名和时间类型的签署控件<br/>
 注意：该接口返回的签署链接是用于APP集成的场景，支持APP打开或浏览器直接打开，不支持微信小程序嵌入。微信小程序请使用小程序跳转或半屏弹窗的方式<br/>
@@ -127,8 +129,18 @@ PDF资源Id 通过上传文件接口获取
  * @method Models\DescribeFlowEvidenceReportResponse DescribeFlowEvidenceReport(Models\DescribeFlowEvidenceReportRequest $req) 查询出证报告，返回报告 URL。
  * @method Models\DescribeFlowInfoResponse DescribeFlowInfo(Models\DescribeFlowInfoRequest $req) 查询合同详情
 适用场景：可用于主动查询某个合同详情信息。
- * @method Models\DescribeFlowTemplatesResponse DescribeFlowTemplates(Models\DescribeFlowTemplatesRequest $req) 当模板较多或模板中的控件较多时，可以通过查询模板接口更方便的获取模板列表，以及每个模板内的控件信息。<br/>
-该接口常用来配合“创建电子文档”接口作为前置的接口使用。<br/>
+ * @method Models\DescribeFlowTemplatesResponse DescribeFlowTemplates(Models\DescribeFlowTemplatesRequest $req) 本接口用于查询本企业模板列表。
+
+当模板较多或模板中的控件较多时，可以通过查询模板接口更方便的获取模板列表，以及每个模板内的控件信息。
+
+> **适用场景** 
+>  该接口常用来配合“模板发起合同-创建电子文档”接口作为前置的接口使用。 
+>  一个模板通常会包含以下结构信息
+>- 模板基本信息
+>- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
+>- 填写控件 Components
+>- 签署控件 SignComponents
+>- 生成模板的文件基础信息 FileInfos
  * @method Models\DescribeIntegrationDepartmentsResponse DescribeIntegrationDepartments(Models\DescribeIntegrationDepartmentsRequest $req) 通过此接口，查询企业的部门，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
  * @method Models\DescribeIntegrationEmployeesResponse DescribeIntegrationEmployees(Models\DescribeIntegrationEmployeesRequest $req) 查询企业员工列表，每次返回的数据量最大为20
  * @method Models\DescribeIntegrationMainOrganizationUserResponse DescribeIntegrationMainOrganizationUser(Models\DescribeIntegrationMainOrganizationUserRequest $req) 集团企业统一使用主代子进行操作，无需根据子企业账号进行转化查询，该接口需要屏蔽下线

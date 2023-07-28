@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryVersion(string $RegistryVersion) 设置仓库版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNetType() 获取网络类型，列表：public（公网）
- * @method void setNetType(string $NetType) 设置网络类型，列表：public（公网）
+ * @method string getNetType() 获取网络类型，列表：public（公网）,private（私网）
+ * @method void setNetType(string $NetType) 设置网络类型，列表：public（公网）,private（私网）
  * @method string getRegistryRegion() 获取区域，列表:default（默认）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryRegion(string $RegistryRegion) 设置区域，列表:default（默认）
@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInsecure(integer $Insecure) 设置安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getConnDetectDetail() 获取联通性检测结果详情
+ * @method void setConnDetectDetail(array $ConnDetectDetail) 设置联通性检测结果详情
+ * @method string getInstanceID() 获取tcr情况下instance_id
+ * @method void setInstanceID(string $InstanceID) 设置tcr情况下instance_id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -85,7 +89,7 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
     public $RegistryVersion;
 
     /**
-     * @var string 网络类型，列表：public（公网）
+     * @var string 网络类型，列表：public（公网）,private（私网）
      */
     public $NetType;
 
@@ -108,6 +112,16 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
     public $Insecure;
 
     /**
+     * @var array 联通性检测结果详情
+     */
+    public $ConnDetectDetail;
+
+    /**
+     * @var string tcr情况下instance_id
+     */
+    public $InstanceID;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -120,13 +134,15 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
      * @param string $RegistryType 仓库类型，列表：harbor
      * @param string $RegistryVersion 仓库版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NetType 网络类型，列表：public（公网）
+     * @param string $NetType 网络类型，列表：public（公网）,private（私网）
      * @param string $RegistryRegion 区域，列表:default（默认）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SpeedLimit 限速
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ConnDetectDetail 联通性检测结果详情
+     * @param string $InstanceID tcr情况下instance_id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -180,6 +196,19 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
 
         if (array_key_exists("Insecure",$param) and $param["Insecure"] !== null) {
             $this->Insecure = $param["Insecure"];
+        }
+
+        if (array_key_exists("ConnDetectDetail",$param) and $param["ConnDetectDetail"] !== null) {
+            $this->ConnDetectDetail = [];
+            foreach ($param["ConnDetectDetail"] as $key => $value){
+                $obj = new RegistryConnDetectResult();
+                $obj->deserialize($value);
+                array_push($this->ConnDetectDetail, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

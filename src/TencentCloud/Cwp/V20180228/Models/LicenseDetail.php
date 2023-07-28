@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置平台标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFreezeNum() 获取冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFreezeNum(integer $FreezeNum) 设置冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LicenseDetail extends AbstractModel
 {
@@ -135,6 +139,12 @@ class LicenseDetail extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FreezeNum;
+
+    /**
      * @param integer $LicenseId 授权ID
      * @param integer $LicenseType 授权类型,0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月
      * @param integer $LicenseStatus 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
@@ -151,6 +161,8 @@ class LicenseDetail extends AbstractModel
      * @param integer $SourceType 是否试用订单.
      * @param string $Alias 资源别名
      * @param array $Tags 平台标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FreezeNum 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -229,6 +241,10 @@ class LicenseDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("FreezeNum",$param) and $param["FreezeNum"] !== null) {
+            $this->FreezeNum = $param["FreezeNum"];
         }
     }
 }

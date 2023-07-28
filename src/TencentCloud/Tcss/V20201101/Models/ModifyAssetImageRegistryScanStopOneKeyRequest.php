@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImages(array $Images) 设置扫描的镜像列表
  * @method array getId() 获取扫描的镜像列表Id
  * @method void setId(array $Id) 设置扫描的镜像列表Id
+ * @method integer getTaskID() 获取停止的任务ID
+ * @method void setTaskID(integer $TaskID) 设置停止的任务ID
  */
 class ModifyAssetImageRegistryScanStopOneKeyRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyAssetImageRegistryScanStopOneKeyRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var integer 停止的任务ID
+     */
+    public $TaskID;
+
+    /**
      * @param boolean $All 是否扫描全部镜像
      * @param array $Images 扫描的镜像列表
      * @param array $Id 扫描的镜像列表Id
+     * @param integer $TaskID 停止的任务ID
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class ModifyAssetImageRegistryScanStopOneKeyRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("TaskID",$param) and $param["TaskID"] !== null) {
+            $this->TaskID = $param["TaskID"];
         }
     }
 }

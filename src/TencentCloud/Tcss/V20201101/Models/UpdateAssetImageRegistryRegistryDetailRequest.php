@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpeedLimit(integer $SpeedLimit) 设置限速
  * @method integer getInsecure() 获取安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
  * @method void setInsecure(integer $Insecure) 设置安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+ * @method array getConnDetectConfig() 获取联通性检测的配置
+ * @method void setConnDetectConfig(array $ConnDetectConfig) 设置联通性检测的配置
  */
 class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $Insecure;
 
     /**
+     * @var array 联通性检测的配置
+     */
+    public $ConnDetectConfig;
+
+    /**
      * @param string $Name 仓库名
      * @param string $Username 用户名
      * @param string $Password 密码
@@ -104,6 +111,7 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
      * @param string $RegistryRegion 区域，列表：default（默认）
      * @param integer $SpeedLimit 限速
      * @param integer $Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+     * @param array $ConnDetectConfig 联通性检测的配置
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
 
         if (array_key_exists("Insecure",$param) and $param["Insecure"] !== null) {
             $this->Insecure = $param["Insecure"];
+        }
+
+        if (array_key_exists("ConnDetectConfig",$param) and $param["ConnDetectConfig"] !== null) {
+            $this->ConnDetectConfig = [];
+            foreach ($param["ConnDetectConfig"] as $key => $value){
+                $obj = new ConnDetectConfig();
+                $obj->deserialize($value);
+                array_push($this->ConnDetectConfig, $obj);
+            }
         }
     }
 }

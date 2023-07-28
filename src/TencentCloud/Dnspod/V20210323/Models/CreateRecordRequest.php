@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) 设置权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
  * @method string getStatus() 获取记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
  * @method void setStatus(string $Status) 设置记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
  */
 class CreateRecordRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateRecordRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var string 备注
+     */
+    public $Remark;
+
+    /**
      * @param string $Domain 域名
      * @param string $RecordType 记录类型，通过 API 记录类型获得，大写英文，比如：A 。
      * @param string $RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
@@ -112,6 +119,7 @@ class CreateRecordRequest extends AbstractModel
      * @param integer $TTL TTL，范围1-604800，不同等级域名最小值不同。
      * @param integer $Weight 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
      * @param string $Status 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
+     * @param string $Remark 备注
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class CreateRecordRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

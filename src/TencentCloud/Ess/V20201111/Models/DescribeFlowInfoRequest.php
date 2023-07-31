@@ -23,11 +23,18 @@ use TencentCloud\Common\AbstractModel;
  * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method array getFlowIds() 获取需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数
  * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method string getFlowGroupId() 获取合同组ID
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID
+ * @method string getFlowGroupId() 获取合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
+
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
  */
 class DescribeFlowInfoRequest extends AbstractModel
 {
@@ -38,6 +45,8 @@ class DescribeFlowInfoRequest extends AbstractModel
 
     /**
      * @var array 需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数
      */
     public $FlowIds;
 
@@ -47,15 +56,20 @@ class DescribeFlowInfoRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 合同组ID
+     * @var string 合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
+
      */
     public $FlowGroupId;
 
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param array $FlowIds 需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param string $FlowGroupId 合同组ID
+     * @param string $FlowGroupId 合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
      */
     function __construct()
     {

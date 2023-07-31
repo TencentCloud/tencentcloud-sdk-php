@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTaskResultApi请求参数结构体
  *
- * @method string getTaskId() 获取任务Id，通过CreateConvertTaskApi得到
- * @method void setTaskId(string $TaskId) 设置任务Id，通过CreateConvertTaskApi得到
+ * @method string getTaskId() 获取任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
+ * @method void setTaskId(string $TaskId) 设置任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
  * @method UserInfo getOperator() 获取操作人信息,UserId必填
  * @method void setOperator(UserInfo $Operator) 设置操作人信息,UserId必填
  * @method Agent getAgent() 获取应用号信息
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class GetTaskResultApiRequest extends AbstractModel
 {
     /**
-     * @var string 任务Id，通过CreateConvertTaskApi得到
+     * @var string 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
      */
     public $TaskId;
 
@@ -54,7 +54,7 @@ class GetTaskResultApiRequest extends AbstractModel
     public $Organization;
 
     /**
-     * @param string $TaskId 任务Id，通过CreateConvertTaskApi得到
+     * @param string $TaskId 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
      * @param UserInfo $Operator 操作人信息,UserId必填
      * @param Agent $Agent 应用号信息
      * @param OrganizationInfo $Organization 暂未开放

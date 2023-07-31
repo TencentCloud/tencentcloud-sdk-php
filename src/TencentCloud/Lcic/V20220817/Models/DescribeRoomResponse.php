@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeacherId(string $TeacherId) 设置老师的UserId。
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
+ * @method integer getAudienceType() 获取观看类型。互动观看 （默认）	
+ * @method void setAudienceType(integer $AudienceType) 设置观看类型。互动观看 （默认）	
  * @method integer getResolution() 获取分辨率。可以有如下取值：
 1 标清
 2 高清
@@ -125,6 +127,11 @@ class DescribeRoomResponse extends AbstractModel
      * @var integer 低代码互动课堂的SdkAppId。
      */
     public $SdkAppId;
+
+    /**
+     * @var integer 观看类型。互动观看 （默认）	
+     */
+    public $AudienceType;
 
     /**
      * @var integer 分辨率。可以有如下取值：
@@ -230,6 +237,7 @@ video 纯视频
      * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。
      * @param string $TeacherId 老师的UserId。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
+     * @param integer $AudienceType 观看类型。互动观看 （默认）	
      * @param integer $Resolution 分辨率。可以有如下取值：
 1 标清
 2 高清
@@ -296,6 +304,10 @@ video 纯视频
 
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
             $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("AudienceType",$param) and $param["AudienceType"] !== null) {
+            $this->AudienceType = $param["AudienceType"];
         }
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {

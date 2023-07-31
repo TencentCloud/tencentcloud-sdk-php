@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppOriginalId(string $AppOriginalId) 设置小程序 原始 Id
  * @method string getPath() 获取跳转路径
  * @method void setPath(string $Path) 设置跳转路径
- * @method string getQrCode() 获取base64格式跳转二维码
- * @method void setQrCode(string $QrCode) 设置base64格式跳转二维码
+ * @method string getQrCode() 获取base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
+ * @method void setQrCode(string $QrCode) 设置base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
  * @method string getUrlType() 获取链接类型，空-默认小程序端链接，H5SIGN-h5端链接
  * @method void setUrlType(string $UrlType) 设置链接类型，空-默认小程序端链接，H5SIGN-h5端链接
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -58,7 +58,7 @@ class CreateUserAutoSignEnableUrlResponse extends AbstractModel
     public $Path;
 
     /**
-     * @var string base64格式跳转二维码
+     * @var string base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
      */
     public $QrCode;
 
@@ -77,7 +77,7 @@ class CreateUserAutoSignEnableUrlResponse extends AbstractModel
      * @param string $AppId 小程序AppId
      * @param string $AppOriginalId 小程序 原始 Id
      * @param string $Path 跳转路径
-     * @param string $QrCode base64格式跳转二维码
+     * @param string $QrCode base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
      * @param string $UrlType 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

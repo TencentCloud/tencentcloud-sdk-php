@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryBarCode请求参数结构体
+ * CreateNotebookImage返回参数结构体
  *
- * @method string getBarCode() 获取条形码
- * @method void setBarCode(string $BarCode) 设置条形码
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class QueryBarCodeRequest extends AbstractModel
+class CreateNotebookImageResponse extends AbstractModel
 {
     /**
-     * @var string 条形码
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $BarCode;
+    public $RequestId;
 
     /**
-     * @param string $BarCode 条形码
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class QueryBarCodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BarCode",$param) and $param["BarCode"] !== null) {
-            $this->BarCode = $param["BarCode"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

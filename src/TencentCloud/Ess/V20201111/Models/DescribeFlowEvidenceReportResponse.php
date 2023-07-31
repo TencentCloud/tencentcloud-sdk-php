@@ -20,31 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowEvidenceReport返回参数结构体
  *
- * @method string getReportUrl() 获取报告 URL
+ * @method string getReportUrl() 获取出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReportUrl(string $ReportUrl) 设置报告 URL
+ * @method void setReportUrl(string $ReportUrl) 设置出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
- * @method void setStatus(string $Status) 设置执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+ * @method string getStatus() 获取出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败
+ * @method void setStatus(string $Status) 设置出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFlowEvidenceReportResponse extends AbstractModel
 {
     /**
-     * @var string 报告 URL
+     * @var string 出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportUrl;
 
     /**
-     * @var string 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * @var string 出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败
      */
     public $Status;
 
@@ -54,11 +60,13 @@ class DescribeFlowEvidenceReportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ReportUrl 报告 URL
+     * @param string $ReportUrl 出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * @param string $Status 出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

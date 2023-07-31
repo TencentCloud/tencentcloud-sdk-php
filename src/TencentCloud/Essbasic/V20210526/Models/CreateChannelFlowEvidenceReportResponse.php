@@ -20,16 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateChannelFlowEvidenceReport返回参数结构体
  *
- * @method string getReportId() 获取出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+ * @method string getReportId() 获取出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReportId(string $ReportId) 设置出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+ * @method void setReportId(string $ReportId) 设置出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
- * @method void setStatus(string $Status) 设置执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+ * @method string getStatus() 获取出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败
+ * @method void setStatus(string $Status) 设置出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败
  * @method string getReportUrl() 获取废除，字段无效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportUrl(string $ReportUrl) 设置废除，字段无效
@@ -40,15 +46,18 @@ use TencentCloud\Common\AbstractModel;
 class CreateChannelFlowEvidenceReportResponse extends AbstractModel
 {
     /**
-     * @var string 出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+     * @var string 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportId;
 
     /**
-     * @var string 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * @var string 出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败
      */
     public $Status;
 
@@ -64,11 +73,14 @@ class CreateChannelFlowEvidenceReportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ReportId 出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+     * @param string $ReportId 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * @param string $Status 出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败
      * @param string $ReportUrl 废除，字段无效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -22,16 +22,50 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserThreeFactor getUserInfo() 获取自动签开通个人用户的三要素
  * @method void setUserInfo(UserThreeFactor $UserInfo) 设置自动签开通个人用户的三要素
- * @method string getCallbackUrl() 获取接受自动签开启的回调地址。需要保证post返回200
- * @method void setCallbackUrl(string $CallbackUrl) 设置接受自动签开启的回调地址。需要保证post返回200
- * @method boolean getCertInfoCallback() 获取是否回调证书信息，默认false-不需要
- * @method void setCertInfoCallback(boolean $CertInfoCallback) 设置是否回调证书信息，默认false-不需要
- * @method boolean getUserDefineSeal() 获取是否支持用户自定义签名印章，默认false-不需要
- * @method void setUserDefineSeal(boolean $UserDefineSeal) 设置是否支持用户自定义签名印章，默认false-不需要
- * @method boolean getSealImgCallback() 获取是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
- * @method void setSealImgCallback(boolean $SealImgCallback) 设置是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
- * @method array getVerifyChannels() 获取开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
- * @method void setVerifyChannels(array $VerifyChannels) 设置开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+ * @method string getCallbackUrl() 获取接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+ * @method void setCallbackUrl(string $CallbackUrl) 设置接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+ * @method boolean getCertInfoCallback() 获取是否回调证书信息
+false-不需要 (默认值)
+true-需要
+ * @method void setCertInfoCallback(boolean $CertInfoCallback) 设置是否回调证书信息
+false-不需要 (默认值)
+true-需要
+ * @method boolean getUserDefineSeal() 获取是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要
+ * @method void setUserDefineSeal(boolean $UserDefineSeal) 设置是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要
+ * @method boolean getSealImgCallback() 获取是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要(
+ * @method void setSealImgCallback(boolean $SealImgCallback) 设置是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要(
+ * @method array getVerifyChannels() 获取开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+ * @method void setVerifyChannels(array $VerifyChannels) 设置开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
  */
 class AutoSignConfig extends AbstractModel
 {
@@ -41,37 +75,71 @@ class AutoSignConfig extends AbstractModel
     public $UserInfo;
 
     /**
-     * @var string 接受自动签开启的回调地址。需要保证post返回200
+     * @var string 接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
      */
     public $CallbackUrl;
 
     /**
-     * @var boolean 是否回调证书信息，默认false-不需要
+     * @var boolean 是否回调证书信息
+false-不需要 (默认值)
+true-需要
      */
     public $CertInfoCallback;
 
     /**
-     * @var boolean 是否支持用户自定义签名印章，默认false-不需要
+     * @var boolean 是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要
      */
     public $UserDefineSeal;
 
     /**
-     * @var boolean 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
+     * @var boolean 是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要(
      */
     public $SealImgCallback;
 
     /**
-     * @var array 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+     * @var array 开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
      */
     public $VerifyChannels;
 
     /**
      * @param UserThreeFactor $UserInfo 自动签开通个人用户的三要素
-     * @param string $CallbackUrl 接受自动签开启的回调地址。需要保证post返回200
-     * @param boolean $CertInfoCallback 是否回调证书信息，默认false-不需要
-     * @param boolean $UserDefineSeal 是否支持用户自定义签名印章，默认false-不需要
-     * @param boolean $SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
-     * @param array $VerifyChannels 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+     * @param string $CallbackUrl 接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+     * @param boolean $CertInfoCallback 是否回调证书信息
+false-不需要 (默认值)
+true-需要
+     * @param boolean $UserDefineSeal 是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要
+     * @param boolean $SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要(
+     * @param array $VerifyChannels 开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
      */
     function __construct()
     {

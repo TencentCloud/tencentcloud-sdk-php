@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcTopicId(string $SrcTopicId) 设置源日志主题
  * @method string getName() 获取任务名称
  * @method void setName(string $Name) 设置任务名称
- * @method integer getEnableFlag() 获取任务启动状态.  1正常开启,  2关闭
- * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.  1正常开启,  2关闭
+ * @method integer getEnableFlag() 获取任务启动状态.  1开启,  2关闭
+ * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.  1开启,  2关闭
  * @method ScheduledSqlResouceInfo getDstResource() 获取定时SQL分析目标日志主题
  * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) 设置定时SQL分析目标日志主题
  * @method string getScheduledSqlContent() 获取查询语句
  * @method void setScheduledSqlContent(string $ScheduledSqlContent) 设置查询语句
  * @method integer getProcessStartTime() 获取调度开始时间,Unix时间戳，单位ms
  * @method void setProcessStartTime(integer $ProcessStartTime) 设置调度开始时间,Unix时间戳，单位ms
- * @method integer getProcessType() 获取调度类型，1:持续运行 2:指定调度结束时间
- * @method void setProcessType(integer $ProcessType) 设置调度类型，1:持续运行 2:指定调度结束时间
+ * @method integer getProcessType() 获取调度类型，1:持续运行 2:指定时间范围
+ * @method void setProcessType(integer $ProcessType) 设置调度类型，1:持续运行 2:指定时间范围
  * @method integer getProcessPeriod() 获取调度周期(分钟)
  * @method void setProcessPeriod(integer $ProcessPeriod) 设置调度周期(分钟)
  * @method string getProcessTimeWindow() 获取单次查询的时间窗口
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcTopicRegion(string $SrcTopicRegion) 设置源topicId的地域信息
  * @method integer getProcessEndTime() 获取调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
  * @method void setProcessEndTime(integer $ProcessEndTime) 设置调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
- * @method integer getSyntaxRule() 获取语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
- * @method void setSyntaxRule(integer $SyntaxRule) 设置语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+ * @method integer getSyntaxRule() 获取查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+ * @method void setSyntaxRule(integer $SyntaxRule) 设置查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
  */
 class CreateScheduledSqlRequest extends AbstractModel
 {
@@ -60,7 +60,7 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 任务启动状态.  1正常开启,  2关闭
+     * @var integer 任务启动状态.  1开启,  2关闭
      */
     public $EnableFlag;
 
@@ -80,7 +80,7 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $ProcessStartTime;
 
     /**
-     * @var integer 调度类型，1:持续运行 2:指定调度结束时间
+     * @var integer 调度类型，1:持续运行 2:指定时间范围
      */
     public $ProcessType;
 
@@ -110,24 +110,24 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $ProcessEndTime;
 
     /**
-     * @var integer 语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * @var integer 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
      */
     public $SyntaxRule;
 
     /**
      * @param string $SrcTopicId 源日志主题
      * @param string $Name 任务名称
-     * @param integer $EnableFlag 任务启动状态.  1正常开启,  2关闭
+     * @param integer $EnableFlag 任务启动状态.  1开启,  2关闭
      * @param ScheduledSqlResouceInfo $DstResource 定时SQL分析目标日志主题
      * @param string $ScheduledSqlContent 查询语句
      * @param integer $ProcessStartTime 调度开始时间,Unix时间戳，单位ms
-     * @param integer $ProcessType 调度类型，1:持续运行 2:指定调度结束时间
+     * @param integer $ProcessType 调度类型，1:持续运行 2:指定时间范围
      * @param integer $ProcessPeriod 调度周期(分钟)
      * @param string $ProcessTimeWindow 单次查询的时间窗口
      * @param integer $ProcessDelay 执行延迟(秒)
      * @param string $SrcTopicRegion 源topicId的地域信息
      * @param integer $ProcessEndTime 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms
-     * @param integer $SyntaxRule 语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * @param integer $SyntaxRule 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
      */
     function __construct()
     {

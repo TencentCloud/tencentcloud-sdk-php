@@ -23,9 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBatchCancelFlowUrl() 获取批量撤回签署流程链接
  * @method void setBatchCancelFlowUrl(string $BatchCancelFlowUrl) 设置批量撤回签署流程链接
  * @method array getFailMessages() 获取签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
  * @method void setFailMessages(array $FailMessages) 设置签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
  * @method string getUrlExpireOn() 获取签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59
  * @method void setUrlExpireOn(string $UrlExpireOn) 设置签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,11 +44,14 @@ class CreateBatchCancelFlowUrlResponse extends AbstractModel
 
     /**
      * @var array 签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
      */
     public $FailMessages;
 
     /**
      * @var string 签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59
      */
     public $UrlExpireOn;
 
@@ -54,7 +63,10 @@ class CreateBatchCancelFlowUrlResponse extends AbstractModel
     /**
      * @param string $BatchCancelFlowUrl 批量撤回签署流程链接
      * @param array $FailMessages 签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
      * @param string $UrlExpireOn 签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

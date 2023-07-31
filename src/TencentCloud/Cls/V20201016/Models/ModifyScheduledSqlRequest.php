@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getSrcTopicId() 获取源日志主题
  * @method void setSrcTopicId(string $SrcTopicId) 设置源日志主题
- * @method integer getEnableFlag() 获取任务启动状态.   1正常开启,  2关闭
- * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.   1正常开启,  2关闭
+ * @method integer getEnableFlag() 获取任务启动状态.   1开启,  2关闭
+ * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.   1开启,  2关闭
  * @method ScheduledSqlResouceInfo getDstResource() 获取定时SQL分析的目标日志主题
  * @method void setDstResource(ScheduledSqlResouceInfo $DstResource) 设置定时SQL分析的目标日志主题
  * @method string getScheduledSqlContent() 获取查询语句
@@ -56,7 +56,7 @@ class ModifyScheduledSqlRequest extends AbstractModel
     public $SrcTopicId;
 
     /**
-     * @var integer 任务启动状态.   1正常开启,  2关闭
+     * @var integer 任务启动状态.   1开启,  2关闭
      */
     public $EnableFlag;
 
@@ -103,7 +103,7 @@ class ModifyScheduledSqlRequest extends AbstractModel
     /**
      * @param string $TaskId 任务ID
      * @param string $SrcTopicId 源日志主题
-     * @param integer $EnableFlag 任务启动状态.   1正常开启,  2关闭
+     * @param integer $EnableFlag 任务启动状态.   1开启,  2关闭
      * @param ScheduledSqlResouceInfo $DstResource 定时SQL分析的目标日志主题
      * @param string $ScheduledSqlContent 查询语句
      * @param integer $ProcessPeriod 调度周期(分钟)

@@ -28,12 +28,22 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
 E_PRESCRIPTION_AUTO_SIGN 电子处方
  * @method AutoSignConfig getAutoSignConfig() 获取自动签开通，签署相关配置
  * @method void setAutoSignConfig(AutoSignConfig $AutoSignConfig) 设置自动签开通，签署相关配置
- * @method string getUrlType() 获取链接类型，空-默认小程序端链接，H5SIGN-h5端链接
- * @method void setUrlType(string $UrlType) 设置链接类型，空-默认小程序端链接，H5SIGN-h5端链接
- * @method string getNotifyType() 获取通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
- * @method void setNotifyType(string $NotifyType) 设置通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
- * @method string getNotifyAddress() 获取若上方填写为 SMS，则此处为手机号
- * @method void setNotifyAddress(string $NotifyAddress) 设置若上方填写为 SMS，则此处为手机号
+ * @method string getUrlType() 获取链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接
+ * @method void setUrlType(string $UrlType) 设置链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接
+ * @method string getNotifyType() 获取通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
+ * @method void setNotifyType(string $NotifyType) 设置通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
+ * @method string getNotifyAddress() 获取如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
+ * @method void setNotifyAddress(string $NotifyAddress) 设置如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
  * @method integer getExpiredTime() 获取链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
  * @method void setExpiredTime(integer $ExpiredTime) 设置链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -58,17 +68,22 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     public $AutoSignConfig;
 
     /**
-     * @var string 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+     * @var string 链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接
      */
     public $UrlType;
 
     /**
-     * @var string 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
+     * @var string 通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
      */
     public $NotifyType;
 
     /**
-     * @var string 若上方填写为 SMS，则此处为手机号
+     * @var string 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
      */
     public $NotifyAddress;
 
@@ -87,9 +102,14 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
      * @param string $SceneKey 自动签场景:
 E_PRESCRIPTION_AUTO_SIGN 电子处方
      * @param AutoSignConfig $AutoSignConfig 自动签开通，签署相关配置
-     * @param string $UrlType 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
-     * @param string $NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
-     * @param string $NotifyAddress 若上方填写为 SMS，则此处为手机号
+     * @param string $UrlType 链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接
+     * @param string $NotifyType 通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
+     * @param string $NotifyAddress 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
      * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */

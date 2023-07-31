@@ -20,29 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserAutoSignStatus返回参数结构体
  *
- * @method boolean getIsOpen() 获取是否已开通自动签
- * @method void setIsOpen(boolean $IsOpen) 设置是否已开通自动签
+ * @method boolean getIsOpen() 获取查询用户是否已开通自动签
+ * @method void setIsOpen(boolean $IsOpen) 设置查询用户是否已开通自动签
  * @method integer getLicenseFrom() 获取自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。
  * @method void setLicenseFrom(integer $LicenseFrom) 设置自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。
  * @method integer getLicenseTo() 获取自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。
  * @method void setLicenseTo(integer $LicenseTo) 设置自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUserAutoSignStatusResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否已开通自动签
+     * @var boolean 查询用户是否已开通自动签
      */
     public $IsOpen;
 
     /**
      * @var integer 自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public $LicenseFrom;
 
     /**
      * @var integer 自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。
      */
     public $LicenseTo;
 
@@ -52,9 +61,12 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $IsOpen 是否已开通自动签
+     * @param boolean $IsOpen 查询用户是否已开通自动签
      * @param integer $LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      * @param integer $LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

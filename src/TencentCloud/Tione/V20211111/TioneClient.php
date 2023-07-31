@@ -27,6 +27,8 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\CreateBatchTaskResponse CreateBatchTask(Models\CreateBatchTaskRequest $req) 创建跑批任务
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集
  * @method Models\CreateModelServiceResponse CreateModelService(Models\CreateModelServiceRequest $req) 用于创建、发布一个新的模型服务
+ * @method Models\CreateNotebookResponse CreateNotebook(Models\CreateNotebookRequest $req) 创建Notebook
+ * @method Models\CreateNotebookImageResponse CreateNotebookImage(Models\CreateNotebookImageRequest $req) 保存镜像
  * @method Models\CreateOptimizedModelResponse CreateOptimizedModel(Models\CreateOptimizedModelRequest $req) 保存优化模型
  * @method Models\CreateTrainingModelResponse CreateTrainingModel(Models\CreateTrainingModelRequest $req) 导入模型
  * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) 创建模型训练任务
@@ -35,6 +37,8 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DeleteModelAccelerateTaskResponse DeleteModelAccelerateTask(Models\DeleteModelAccelerateTaskRequest $req) 删除模型加速任务
  * @method Models\DeleteModelServiceResponse DeleteModelService(Models\DeleteModelServiceRequest $req) 根据服务id删除模型服务
  * @method Models\DeleteModelServiceGroupResponse DeleteModelServiceGroup(Models\DeleteModelServiceGroupRequest $req) 根据服务组id删除服务组下所有模型服务
+ * @method Models\DeleteNotebookResponse DeleteNotebook(Models\DeleteNotebookRequest $req) 删除Notebook
+ * @method Models\DeleteNotebookImageRecordResponse DeleteNotebookImageRecord(Models\DeleteNotebookImageRecordRequest $req) 删除notebook镜像保存记录
  * @method Models\DeleteTrainingModelResponse DeleteTrainingModel(Models\DeleteTrainingModelRequest $req) 删除模型
  * @method Models\DeleteTrainingModelVersionResponse DeleteTrainingModelVersion(Models\DeleteTrainingModelVersionRequest $req) 删除模型版本
  * @method Models\DeleteTrainingTaskResponse DeleteTrainingTask(Models\DeleteTrainingTaskRequest $req) 删除训练任务
@@ -61,6 +65,10 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeModelServiceHistoryResponse DescribeModelServiceHistory(Models\DescribeModelServiceHistoryRequest $req) 展示服务的历史版本
  * @method Models\DescribeModelServiceHotUpdatedResponse DescribeModelServiceHotUpdated(Models\DescribeModelServiceHotUpdatedRequest $req) 用于查询模型服务能否开启热更新
  * @method Models\DescribeModelServicesResponse DescribeModelServices(Models\DescribeModelServicesRequest $req) 查询多个服务
+ * @method Models\DescribeNotebookResponse DescribeNotebook(Models\DescribeNotebookRequest $req) Notebook详情
+ * @method Models\DescribeNotebookImageKernelsResponse DescribeNotebookImageKernels(Models\DescribeNotebookImageKernelsRequest $req) 查询镜像kernel
+ * @method Models\DescribeNotebookImageRecordsResponse DescribeNotebookImageRecords(Models\DescribeNotebookImageRecordsRequest $req) 查看notebook镜像保存记录
+ * @method Models\DescribeNotebooksResponse DescribeNotebooks(Models\DescribeNotebooksRequest $req) Notebook列表
  * @method Models\DescribeTrainingFrameworksResponse DescribeTrainingFrameworks(Models\DescribeTrainingFrameworksRequest $req) 训练框架列表
  * @method Models\DescribeTrainingMetricsResponse DescribeTrainingMetrics(Models\DescribeTrainingMetricsRequest $req) 查询训练自定义指标
  * @method Models\DescribeTrainingModelVersionResponse DescribeTrainingModelVersion(Models\DescribeTrainingModelVersionRequest $req) 查询模型版本
@@ -71,12 +79,17 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeTrainingTasksResponse DescribeTrainingTasks(Models\DescribeTrainingTasksRequest $req) 训练任务列表
  * @method Models\ModifyModelServiceResponse ModifyModelService(Models\ModifyModelServiceRequest $req) 用于更新模型服务
  * @method Models\ModifyModelServicePartialConfigResponse ModifyModelServicePartialConfig(Models\ModifyModelServicePartialConfigRequest $req) 增量更新在线推理服务的部分配置，不更新的配置项不需要传入
+ * @method Models\ModifyNotebookResponse ModifyNotebook(Models\ModifyNotebookRequest $req) 修改Notebook
+ * @method Models\ModifyNotebookTagsResponse ModifyNotebookTags(Models\ModifyNotebookTagsRequest $req) 修改Notebook标签
  * @method Models\ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(Models\ModifyServiceGroupWeightsRequest $req) 更新推理服务组流量分配
  * @method Models\PushTrainingMetricsResponse PushTrainingMetrics(Models\PushTrainingMetricsRequest $req) 上报训练自定义指标
  * @method Models\RestartModelAccelerateTaskResponse RestartModelAccelerateTask(Models\RestartModelAccelerateTaskRequest $req) 重启模型加速任务
+ * @method Models\StartNotebookResponse StartNotebook(Models\StartNotebookRequest $req) 启动Notebook
  * @method Models\StartTrainingTaskResponse StartTrainingTask(Models\StartTrainingTaskRequest $req) 启动模型训练任务
  * @method Models\StopBatchTaskResponse StopBatchTask(Models\StopBatchTaskRequest $req) 停止跑批任务
+ * @method Models\StopCreatingImageResponse StopCreatingImage(Models\StopCreatingImageRequest $req) 停止保存镜像
  * @method Models\StopModelAccelerateTaskResponse StopModelAccelerateTask(Models\StopModelAccelerateTaskRequest $req) 停止模型加速任务
+ * @method Models\StopNotebookResponse StopNotebook(Models\StopNotebookRequest $req) 停止Notebook
  * @method Models\StopTrainingTaskResponse StopTrainingTask(Models\StopTrainingTaskRequest $req) 停止模型训练任务
  */
 

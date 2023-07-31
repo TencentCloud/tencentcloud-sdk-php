@@ -27,15 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCancelMessage() 获取撤销理由,不超过200个字符
  * @method void setCancelMessage(string $CancelMessage) 设置撤销理由,不超过200个字符
  * @method integer getCancelMessageFormat() 获取撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
  * @method void setCancelMessageFormat(integer $CancelMessageFormat) 设置撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
@@ -58,10 +60,11 @@ class ChannelBatchCancelFlowsRequest extends AbstractModel
 
     /**
      * @var integer 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
      */
     public $CancelMessageFormat;
 
@@ -76,10 +79,11 @@ class ChannelBatchCancelFlowsRequest extends AbstractModel
      * @param array $FlowIds 签署流程Id数组，最多100个，超过100不处理
      * @param string $CancelMessage 撤销理由,不超过200个字符
      * @param integer $CancelMessageFormat 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

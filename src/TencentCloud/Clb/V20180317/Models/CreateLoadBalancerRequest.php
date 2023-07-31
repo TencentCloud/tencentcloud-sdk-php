@@ -61,13 +61,11 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method ExclusiveCluster getExclusiveCluster() 获取独占型实例信息。若创建独占型的内网负载均衡实例，则此参数必填。
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置独占型实例信息。若创建独占型的内网负载均衡实例，则此参数必填。
  * @method string getSlaType() 获取创建性能容量型实例。
-<ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
-<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
+<ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示超强型1规格。
+<ul><li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
  * @method void setSlaType(string $SlaType) 设置创建性能容量型实例。
-<ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
-<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
+<ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示超强型1规格。
+<ul><li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method boolean getSnatPro() 获取是否支持绑定跨地域/跨Vpc绑定IP的功能。
@@ -175,9 +173,8 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * @var string 创建性能容量型实例。
-<ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
-<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
+<ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示超强型1规格。
+<ul><li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
      */
     public $SlaType;
 
@@ -244,9 +241,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
      * @param ExclusiveCluster $ExclusiveCluster 独占型实例信息。若创建独占型的内网负载均衡实例，则此参数必填。
      * @param string $SlaType 创建性能容量型实例。
-<ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
-<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
+<ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示超强型1规格。
+<ul><li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。如需超大型规格的性能容量型，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
      * @param array $SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。

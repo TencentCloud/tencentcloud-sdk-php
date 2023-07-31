@@ -50,8 +50,8 @@ TaskEnd        - 任务处理完成
 DownloadFailed - 下载失败
 ProcessFailed  - 转换失败
 ProcessTimeout - 转换文件超时
- * @method string getResourceId() 获取资源Id，也是FileId，用于文件发起使用
- * @method void setResourceId(string $ResourceId) 设置资源Id，也是FileId，用于文件发起使用
+ * @method string getResourceId() 获取资源Id，也是FileId，用于文件发起时使用
+ * @method void setResourceId(string $ResourceId) 设置资源Id，也是FileId，用于文件发起时使用
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -85,7 +85,7 @@ ProcessTimeout - 转换文件超时
     public $TaskMessage;
 
     /**
-     * @var string 资源Id，也是FileId，用于文件发起使用
+     * @var string 资源Id，也是FileId，用于文件发起时使用
      */
     public $ResourceId;
 
@@ -110,7 +110,7 @@ TaskEnd        - 任务处理完成
 DownloadFailed - 下载失败
 ProcessFailed  - 转换失败
 ProcessTimeout - 转换文件超时
-     * @param string $ResourceId 资源Id，也是FileId，用于文件发起使用
+     * @param string $ResourceId 资源Id，也是FileId，用于文件发起时使用
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstance返回参数结构体
  *
- * @method array getDealIds() 获取短订单 ID。
- * @method void setDealIds(array $DealIds) 设置短订单 ID。
+ * @method array getDealIds() 获取计费子订单 ID。
+ * @method void setDealIds(array $DealIds) 设置计费子订单 ID。
  * @method array getInstanceIds() 获取实例 ID 列表。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var array 短订单 ID。
+     * @var array 计费子订单 ID。
      */
     public $DealIds;
 
@@ -45,7 +45,7 @@ class CreateDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DealIds 短订单 ID。
+     * @param array $DealIds 计费子订单 ID。
      * @param array $InstanceIds 实例 ID 列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

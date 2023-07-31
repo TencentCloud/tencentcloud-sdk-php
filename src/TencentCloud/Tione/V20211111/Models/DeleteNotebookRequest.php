@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 企业四要素核验结果
+ * DeleteNotebook请求参数结构体
  *
- * @method integer getResult() 获取企业四要素核验结果状态码
- * @method void setResult(integer $Result) 设置企业四要素核验结果状态码
- * @method string getDesc() 获取企业四要素核验结果描述
- * @method void setDesc(string $Desc) 设置企业四要素核验结果描述
+ * @method string getId() 获取notebook id
+ * @method void setId(string $Id) 设置notebook id
  */
-class Detail extends AbstractModel
+class DeleteNotebookRequest extends AbstractModel
 {
     /**
-     * @var integer 企业四要素核验结果状态码
+     * @var string notebook id
      */
-    public $Result;
+    public $Id;
 
     /**
-     * @var string 企业四要素核验结果描述
-     */
-    public $Desc;
-
-    /**
-     * @param integer $Result 企业四要素核验结果状态码
-     * @param string $Desc 企业四要素核验结果描述
+     * @param string $Id notebook id
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Detail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
-        }
-
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = $param["Desc"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(integer $ResourceType) 设置资源类型，1：模板，目前仅支持模板，与ResourceId对应
  * @method BaseFlowInfo getFlowInfo() 获取合同流程基础信息
  * @method void setFlowInfo(BaseFlowInfo $FlowInfo) 设置合同流程基础信息
- * @method array getFlowApproverList() 获取合同签署人信息
- * @method void setFlowApproverList(array $FlowApproverList) 设置合同签署人信息
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
  * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化
  * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化
+ * @method array getFlowApproverList() 获取合同签署人信息
+ * @method void setFlowApproverList(array $FlowApproverList) 设置合同签署人信息
  * @method string getFlowId() 获取通过flowid快速获得之前成功通过页面发起的合同生成链接
  * @method void setFlowId(string $FlowId) 设置通过flowid快速获得之前成功通过页面发起的合同生成链接
  * @method boolean getNeedPreview() 获取该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
@@ -59,11 +59,6 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $FlowInfo;
 
     /**
-     * @var array 合同签署人信息
-     */
-    public $FlowApproverList;
-
-    /**
      * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
     public $Agent;
@@ -72,6 +67,11 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
      * @var CreateFlowOption 合同流程配置信息，用于配置发起合同时定制化
      */
     public $FlowOption;
+
+    /**
+     * @var array 合同签署人信息
+     */
+    public $FlowApproverList;
 
     /**
      * @var string 通过flowid快速获得之前成功通过页面发起的合同生成链接
@@ -100,9 +100,9 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
      * @param string $ResourceId 资源id，与ResourceType对应
      * @param integer $ResourceType 资源类型，1：模板，目前仅支持模板，与ResourceId对应
      * @param BaseFlowInfo $FlowInfo 合同流程基础信息
-     * @param array $FlowApproverList 合同签署人信息
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化
+     * @param array $FlowApproverList 合同签署人信息
      * @param string $FlowId 通过flowid快速获得之前成功通过页面发起的合同生成链接
      * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
      * @param OrganizationInfo $Organization 企业机构信息，不用传
@@ -134,15 +134,6 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
             $this->FlowInfo->deserialize($param["FlowInfo"]);
         }
 
-        if (array_key_exists("FlowApproverList",$param) and $param["FlowApproverList"] !== null) {
-            $this->FlowApproverList = [];
-            foreach ($param["FlowApproverList"] as $key => $value){
-                $obj = new CommonFlowApprover();
-                $obj->deserialize($value);
-                array_push($this->FlowApproverList, $obj);
-            }
-        }
-
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
@@ -151,6 +142,15 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
         if (array_key_exists("FlowOption",$param) and $param["FlowOption"] !== null) {
             $this->FlowOption = new CreateFlowOption();
             $this->FlowOption->deserialize($param["FlowOption"]);
+        }
+
+        if (array_key_exists("FlowApproverList",$param) and $param["FlowApproverList"] !== null) {
+            $this->FlowApproverList = [];
+            foreach ($param["FlowApproverList"] as $key => $value){
+                $obj = new CommonFlowApprover();
+                $obj->deserialize($value);
+                array_push($this->FlowApproverList, $obj);
+            }
         }
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {

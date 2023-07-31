@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryBarCode返回参数结构体
+ * DescribeNotebook返回参数结构体
  *
- * @method string getBarCode() 获取条码
- * @method void setBarCode(string $BarCode) 设置条码
- * @method array getProductDataRecords() 获取条码信息数组
- * @method void setProductDataRecords(array $ProductDataRecords) 设置条码信息数组
+ * @method NotebookDetail getNotebookDetail() 获取详情
+ * @method void setNotebookDetail(NotebookDetail $NotebookDetail) 设置详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class QueryBarCodeResponse extends AbstractModel
+class DescribeNotebookResponse extends AbstractModel
 {
     /**
-     * @var string 条码
+     * @var NotebookDetail 详情
      */
-    public $BarCode;
-
-    /**
-     * @var array 条码信息数组
-     */
-    public $ProductDataRecords;
+    public $NotebookDetail;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class QueryBarCodeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BarCode 条码
-     * @param array $ProductDataRecords 条码信息数组
+     * @param NotebookDetail $NotebookDetail 详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class QueryBarCodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BarCode",$param) and $param["BarCode"] !== null) {
-            $this->BarCode = $param["BarCode"];
-        }
-
-        if (array_key_exists("ProductDataRecords",$param) and $param["ProductDataRecords"] !== null) {
-            $this->ProductDataRecords = [];
-            foreach ($param["ProductDataRecords"] as $key => $value){
-                $obj = new ProductDataRecord();
-                $obj->deserialize($value);
-                array_push($this->ProductDataRecords, $obj);
-            }
+        if (array_key_exists("NotebookDetail",$param) and $param["NotebookDetail"] !== null) {
+            $this->NotebookDetail = new NotebookDetail();
+            $this->NotebookDetail->deserialize($param["NotebookDetail"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScheduledSqlContent(string $ScheduledSqlContent) 设置查询语句
  * @method string getProcessStartTime() 获取调度开始时间
  * @method void setProcessStartTime(string $ProcessStartTime) 设置调度开始时间
- * @method integer getProcessType() 获取调度类型，1:持续运行 2:指定调度结束时间
- * @method void setProcessType(integer $ProcessType) 设置调度类型，1:持续运行 2:指定调度结束时间
+ * @method integer getProcessType() 获取调度类型，1:持续运行 2:指定时间范围
+ * @method void setProcessType(integer $ProcessType) 设置调度类型，1:持续运行 2:指定时间范围
  * @method string getProcessEndTime() 获取调度结束时间，当process_type=2时为必传字段
  * @method void setProcessEndTime(string $ProcessEndTime) 设置调度结束时间，当process_type=2时为必传字段
  * @method integer getProcessPeriod() 获取调度周期(分钟)
@@ -123,7 +123,7 @@ class ScheduledSqlTaskInfo extends AbstractModel
     public $ProcessStartTime;
 
     /**
-     * @var integer 调度类型，1:持续运行 2:指定调度结束时间
+     * @var integer 调度类型，1:持续运行 2:指定时间范围
      */
     public $ProcessType;
 
@@ -172,7 +172,7 @@ class ScheduledSqlTaskInfo extends AbstractModel
      * @param integer $EnableFlag 任务启用状态，1开启,  2关闭
      * @param string $ScheduledSqlContent 查询语句
      * @param string $ProcessStartTime 调度开始时间
-     * @param integer $ProcessType 调度类型，1:持续运行 2:指定调度结束时间
+     * @param integer $ProcessType 调度类型，1:持续运行 2:指定时间范围
      * @param string $ProcessEndTime 调度结束时间，当process_type=2时为必传字段
      * @param integer $ProcessPeriod 调度周期(分钟)
      * @param string $ProcessTimeWindow 查询的时间窗口. @m-15m, @m，意为近15分钟

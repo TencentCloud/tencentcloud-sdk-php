@@ -62,9 +62,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedOn(integer $CreatedOn) 设置流程创建的时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFlowMessage() 获取拒签或者取消的原因描述
+ * @method string getFlowMessage() 获取当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowMessage(string $FlowMessage) 设置拒签或者取消的原因描述
+ * @method void setFlowMessage(string $FlowMessage) 设置当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreator() 获取 合同发起人userId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,7 +127,9 @@ class FlowBrief extends AbstractModel
     public $CreatedOn;
 
     /**
-     * @var string 拒签或者取消的原因描述
+     * @var string 当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowMessage;
@@ -162,7 +168,9 @@ class FlowBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreatedOn 流程创建的时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FlowMessage 拒签或者取消的原因描述
+     * @param string $FlowMessage 当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator  合同发起人userId
 注意：此字段可能返回 null，表示取不到有效值。

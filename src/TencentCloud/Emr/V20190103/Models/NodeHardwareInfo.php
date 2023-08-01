@@ -222,6 +222,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTradeVersion(integer $TradeVersion) 设置0表示老计费，1表示新计费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServicesStatus() 获取各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServicesStatus(string $ServicesStatus) 设置各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -527,6 +531,12 @@ class NodeHardwareInfo extends AbstractModel
     public $TradeVersion;
 
     /**
+     * @var string 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServicesStatus;
+
+    /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 序列号
@@ -627,6 +637,8 @@ class NodeHardwareInfo extends AbstractModel
      * @param boolean $DisableApiTermination 该实例是否开启实例保护，true为开启 false为关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TradeVersion 0表示老计费，1表示新计费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServicesStatus 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -852,6 +864,10 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("TradeVersion",$param) and $param["TradeVersion"] !== null) {
             $this->TradeVersion = $param["TradeVersion"];
+        }
+
+        if (array_key_exists("ServicesStatus",$param) and $param["ServicesStatus"] !== null) {
+            $this->ServicesStatus = $param["ServicesStatus"];
         }
     }
 }

@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignAlgorithm(string $SignAlgorithm) 设置签名算法
  * @method string getCertSn() 获取签名证书序列号
  * @method void setCertSn(string $CertSn) 设置签名证书序列号
- * @method integer getCertNotBefore() 获取证书起始时间戳，单位秒
- * @method void setCertNotBefore(integer $CertNotBefore) 设置证书起始时间戳，单位秒
- * @method integer getCertNotAfter() 获取证书过期时间戳，单位秒
- * @method void setCertNotAfter(integer $CertNotAfter) 设置证书过期时间戳，单位秒
+ * @method integer getCertNotBefore() 获取证书起始时间戳，单位毫秒
+ * @method void setCertNotBefore(integer $CertNotBefore) 设置证书起始时间戳，单位毫秒
+ * @method integer getCertNotAfter() 获取证书过期时间戳，单位毫秒
+ * @method void setCertNotAfter(integer $CertNotAfter) 设置证书过期时间戳，单位毫秒
  * @method float getComponentPosX() 获取签名域横坐标，单位pt
  * @method void setComponentPosX(float $ComponentPosX) 设置签名域横坐标，单位pt
  * @method float getComponentPosY() 获取签名域纵坐标，单位pt
@@ -80,12 +80,12 @@ class PdfVerifyResult extends AbstractModel
     public $CertSn;
 
     /**
-     * @var integer 证书起始时间戳，单位秒
+     * @var integer 证书起始时间戳，单位毫秒
      */
     public $CertNotBefore;
 
     /**
-     * @var integer 证书过期时间戳，单位秒
+     * @var integer 证书过期时间戳，单位毫秒
      */
     public $CertNotAfter;
 
@@ -121,8 +121,8 @@ class PdfVerifyResult extends AbstractModel
      * @param integer $SignTime 签署时间戳，单位秒
      * @param string $SignAlgorithm 签名算法
      * @param string $CertSn 签名证书序列号
-     * @param integer $CertNotBefore 证书起始时间戳，单位秒
-     * @param integer $CertNotAfter 证书过期时间戳，单位秒
+     * @param integer $CertNotBefore 证书起始时间戳，单位毫秒
+     * @param integer $CertNotAfter 证书过期时间戳，单位毫秒
      * @param float $ComponentPosX 签名域横坐标，单位pt
      * @param float $ComponentPosY 签名域纵坐标，单位pt
      * @param float $ComponentWidth 签名域宽度，单位pt

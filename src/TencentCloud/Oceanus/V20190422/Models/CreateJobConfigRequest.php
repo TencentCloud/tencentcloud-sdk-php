@@ -58,6 +58,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogLevel(string $LogLevel) 设置日志级别
  * @method integer getAutoRecover() 获取Oceanus 平台恢复作业开关 1:开启 -1: 关闭
  * @method void setAutoRecover(integer $AutoRecover) 设置Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+ * @method array getClazzLevels() 获取类日志级别
+ * @method void setClazzLevels(array $ClazzLevels) 设置类日志级别
+ * @method boolean getExpertModeOn() 获取是否打开专家模式
+ * @method void setExpertModeOn(boolean $ExpertModeOn) 设置是否打开专家模式
+ * @method ExpertModeConfiguration getExpertModeConfiguration() 获取专家模式的配置
+ * @method void setExpertModeConfiguration(ExpertModeConfiguration $ExpertModeConfiguration) 设置专家模式的配置
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -157,6 +163,21 @@ class CreateJobConfigRequest extends AbstractModel
     public $AutoRecover;
 
     /**
+     * @var array 类日志级别
+     */
+    public $ClazzLevels;
+
+    /**
+     * @var boolean 是否打开专家模式
+     */
+    public $ExpertModeOn;
+
+    /**
+     * @var ExpertModeConfiguration 专家模式的配置
+     */
+    public $ExpertModeConfiguration;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -176,6 +197,9 @@ class CreateJobConfigRequest extends AbstractModel
      * @param string $WorkSpaceId 工作空间 SerialId
      * @param string $LogLevel 日志级别
      * @param integer $AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * @param array $ClazzLevels 类日志级别
+     * @param boolean $ExpertModeOn 是否打开专家模式
+     * @param ExpertModeConfiguration $ExpertModeConfiguration 专家模式的配置
      */
     function __construct()
     {
@@ -274,6 +298,24 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("AutoRecover",$param) and $param["AutoRecover"] !== null) {
             $this->AutoRecover = $param["AutoRecover"];
+        }
+
+        if (array_key_exists("ClazzLevels",$param) and $param["ClazzLevels"] !== null) {
+            $this->ClazzLevels = [];
+            foreach ($param["ClazzLevels"] as $key => $value){
+                $obj = new ClazzLevel();
+                $obj->deserialize($value);
+                array_push($this->ClazzLevels, $obj);
+            }
+        }
+
+        if (array_key_exists("ExpertModeOn",$param) and $param["ExpertModeOn"] !== null) {
+            $this->ExpertModeOn = $param["ExpertModeOn"];
+        }
+
+        if (array_key_exists("ExpertModeConfiguration",$param) and $param["ExpertModeConfiguration"] !== null) {
+            $this->ExpertModeConfiguration = new ExpertModeConfiguration();
+            $this->ExpertModeConfiguration->deserialize($param["ExpertModeConfiguration"]);
         }
     }
 }

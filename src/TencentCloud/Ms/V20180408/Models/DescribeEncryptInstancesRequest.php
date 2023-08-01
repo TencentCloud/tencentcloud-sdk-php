@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置多记录查询时排序使用  仅支持CreateTime 任务创建时间排序
  * @method string getOrderDirection() 获取升序（asc）还是降序（desc），默认：desc。
  * @method void setOrderDirection(string $OrderDirection) 设置升序（asc）还是降序（desc），默认：desc。
- * @method integer getPlatformType() 获取(条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
- * @method void setPlatformType(integer $PlatformType) 设置(条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method integer getPlatformType() 获取(条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method void setPlatformType(integer $PlatformType) 设置(条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
  * @method integer getOrderType() 获取(条件过滤字段) 订单采购类型 1-免费试用 2-按年收费 3-按次收费
  * @method void setOrderType(integer $OrderType) 设置(条件过滤字段) 订单采购类型 1-免费试用 2-按年收费 3-按次收费
  * @method integer getEncryptOpType() 获取(条件过滤字段) 1-在线加固 或 2-输出工具加固
@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderId(string $OrderId) 设置(条件过滤字段) 查询与订单Id关联的任务
  * @method string getResourceId() 获取(条件过滤字段) 查询与资源Id关联的任务
  * @method void setResourceId(string $ResourceId) 设置(条件过滤字段) 查询与资源Id关联的任务
- * @method string getAppType() 获取(条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
- * @method void setAppType(string $AppType) 设置(条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
- * @method string getAppPkgName() 获取（条件过滤字段）安卓应用的包名
- * @method void setAppPkgName(string $AppPkgName) 设置（条件过滤字段）安卓应用的包名
+ * @method string getAppType() 获取(条件过滤字段) 应用类型：android-apk; android-aab;
+ * @method void setAppType(string $AppType) 设置(条件过滤字段) 应用类型：android-apk; android-aab;
+ * @method string getAppPkgName() 获取（条件过滤字段）应用的包名
+ * @method void setAppPkgName(string $AppPkgName) 设置（条件过滤字段）应用的包名
  * @method array getEncryptState() 获取加固结果，
 0：正在排队；
 1：加固成功；
@@ -82,7 +82,7 @@ class DescribeEncryptInstancesRequest extends AbstractModel
     public $OrderDirection;
 
     /**
-     * @var integer (条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @var integer (条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public $PlatformType;
 
@@ -112,12 +112,12 @@ class DescribeEncryptInstancesRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string (条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
+     * @var string (条件过滤字段) 应用类型：android-apk; android-aab;
      */
     public $AppType;
 
     /**
-     * @var string （条件过滤字段）安卓应用的包名
+     * @var string （条件过滤字段）应用的包名
      */
     public $AppPkgName;
 
@@ -137,14 +137,14 @@ class DescribeEncryptInstancesRequest extends AbstractModel
      * @param integer $PageSize 多记录每页展示数量
      * @param string $OrderField 多记录查询时排序使用  仅支持CreateTime 任务创建时间排序
      * @param string $OrderDirection 升序（asc）还是降序（desc），默认：desc。
-     * @param integer $PlatformType (条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param integer $PlatformType (条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      * @param integer $OrderType (条件过滤字段) 订单采购类型 1-免费试用 2-按年收费 3-按次收费
      * @param integer $EncryptOpType (条件过滤字段) 1-在线加固 或 2-输出工具加固
      * @param string $ResultId (条件过滤字段) 单记录查询时使用，结果ID该字段非空时，结构会根据结果ID进行单记录查询，符合查询条件时，只返回一条记录。
      * @param string $OrderId (条件过滤字段) 查询与订单Id关联的任务
      * @param string $ResourceId (条件过滤字段) 查询与资源Id关联的任务
-     * @param string $AppType (条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
-     * @param string $AppPkgName （条件过滤字段）安卓应用的包名
+     * @param string $AppType (条件过滤字段) 应用类型：android-apk; android-aab;
+     * @param string $AppPkgName （条件过滤字段）应用的包名
      * @param array $EncryptState 加固结果，
 0：正在排队；
 1：加固成功；

@@ -54,6 +54,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置绑定的机器组id
  * @method array getGroupIds() 获取绑定的机器组id列表
  * @method void setGroupIds(array $GroupIds) 设置绑定的机器组id列表
+ * @method string getAdvancedConfig() 获取高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+ * @method void setAdvancedConfig(string $AdvancedConfig) 设置高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
  */
 class CreateConfigExtraRequest extends AbstractModel
 {
@@ -143,6 +153,15 @@ class CreateConfigExtraRequest extends AbstractModel
     public $GroupIds;
 
     /**
+     * @var string 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+     */
+    public $AdvancedConfig;
+
+    /**
      * @param string $Name 采集配置规程名称，最长63个字符，只能包含小写字符、数字及分隔符（“-”），且必须以小写字符开头，数字或小写字符结尾
      * @param string $TopicId 日志主题id
      * @param string $Type 类型：container_stdout、container_file、host_file
@@ -160,6 +179,11 @@ class CreateConfigExtraRequest extends AbstractModel
      * @param string $UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
      * @param string $GroupId 绑定的机器组id
      * @param array $GroupIds 绑定的机器组id列表
+     * @param string $AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
      */
     function __construct()
     {
@@ -249,6 +273,10 @@ class CreateConfigExtraRequest extends AbstractModel
 
         if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
             $this->GroupIds = $param["GroupIds"];
+        }
+
+        if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
+            $this->AdvancedConfig = $param["AdvancedConfig"];
         }
     }
 }

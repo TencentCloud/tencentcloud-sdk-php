@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPlatformType() 获取平台类型整型值  
  * @method void setPlatformType(integer $PlatformType) 设置平台类型整型值  
- * @method string getPlatformTypeDesc() 获取平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
- * @method void setPlatformTypeDesc(string $PlatformTypeDesc) 设置平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method string getPlatformTypeDesc() 获取平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method void setPlatformTypeDesc(string $PlatformTypeDesc) 设置平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
  * @method integer getEncryptOpType() 获取1- 在线加固 2-输出工具加固
  * @method void setEncryptOpType(integer $EncryptOpType) 设置1- 在线加固 2-输出工具加固
  * @method string getEncryptOpTypeDesc() 获取1- 在线加固 2-输出工具加固
@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderTypeDesc(string $OrderTypeDesc) 设置订单收费类型描述
  * @method string getResourceId() 获取资源id
  * @method void setResourceId(string $ResourceId) 设置资源id
- * @method AndroidPlan getAndroidPlan() 获取上次安卓加固策略
+ * @method AndroidPlan getAndroidPlan() 获取上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAndroidPlan(AndroidPlan $AndroidPlan) 设置上次安卓加固策略
+ * @method void setAndroidPlan(AndroidPlan $AndroidPlan) 设置上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AppletPlan getAppletPlan() 获取上次小程序加固策略
 注意：此字段可能返回 null，表示取不到有效值。
@@ -61,7 +61,7 @@ class DescribeEncryptPlanResponse extends AbstractModel
     public $PlatformType;
 
     /**
-     * @var string 平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @var string 平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public $PlatformTypeDesc;
 
@@ -91,7 +91,7 @@ class DescribeEncryptPlanResponse extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var AndroidPlan 上次安卓加固策略
+     * @var AndroidPlan 上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidPlan;
@@ -121,13 +121,13 @@ class DescribeEncryptPlanResponse extends AbstractModel
 
     /**
      * @param integer $PlatformType 平台类型整型值  
-     * @param string $PlatformTypeDesc 平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param string $PlatformTypeDesc 平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      * @param integer $EncryptOpType 1- 在线加固 2-输出工具加固
      * @param string $EncryptOpTypeDesc 1- 在线加固 2-输出工具加固
      * @param integer $OrderType 订单收费类型枚举值
      * @param string $OrderTypeDesc 订单收费类型描述
      * @param string $ResourceId 资源id
-     * @param AndroidPlan $AndroidPlan 上次安卓加固策略
+     * @param AndroidPlan $AndroidPlan 上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppletPlan $AppletPlan 上次小程序加固策略
 注意：此字段可能返回 null，表示取不到有效值。

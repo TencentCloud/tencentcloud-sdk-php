@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
   '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+
  * @method void setResult(string $Result) 设置认证结果码
 计费结果码：
   '0': '认证通过'
@@ -60,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
   '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -88,6 +92,8 @@ class BankCard2EVerificationResponse extends AbstractModel
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
   '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+
      */
     public $Result;
 
@@ -122,6 +128,8 @@ class BankCard2EVerificationResponse extends AbstractModel
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
   '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+
      * @param string $Description 业务结果描述。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

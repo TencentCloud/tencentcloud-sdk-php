@@ -58,6 +58,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义解析字符串
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdvancedConfig() 获取高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancedConfig(string $AdvancedConfig) 设置高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigInfo extends AbstractModel
 {
@@ -125,6 +137,16 @@ class ConfigInfo extends AbstractModel
     public $UserDefineRule;
 
     /**
+     * @var string 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancedConfig;
+
+    /**
      * @param string $ConfigId 采集规则配置ID
      * @param string $Name 采集规则配置名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,6 +165,12 @@ class ConfigInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      * @param string $UserDefineRule 用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -206,6 +234,10 @@ class ConfigInfo extends AbstractModel
 
         if (array_key_exists("UserDefineRule",$param) and $param["UserDefineRule"] !== null) {
             $this->UserDefineRule = $param["UserDefineRule"];
+        }
+
+        if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
+            $this->AdvancedConfig = $param["AdvancedConfig"];
         }
     }
 }

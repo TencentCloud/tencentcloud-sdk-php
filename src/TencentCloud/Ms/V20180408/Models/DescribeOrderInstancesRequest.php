@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置按某个字段排序，目前仅支持CreateTime排序。
  * @method string getOrderDirection() 获取升序（asc）还是降序（desc），默认：desc。
  * @method void setOrderDirection(string $OrderDirection) 设置升序（asc）还是降序（desc），默认：desc。
- * @method integer getPlatformType() 获取（条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
- * @method void setPlatformType(integer $PlatformType) 设置（条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method integer getPlatformType() 获取（条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method void setPlatformType(integer $PlatformType) 设置（条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
  * @method integer getOrderType() 获取（条件过滤字段）订单采购类型 1-免费试用 2-按年收费 3-按次收费
  * @method void setOrderType(integer $OrderType) 设置（条件过滤字段）订单采购类型 1-免费试用 2-按年收费 3-按次收费
  * @method integer getApprovalStatus() 获取（条件过滤字段）订单审批状态：
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderId(string $OrderId) 设置（条件过滤字段）订单ID
  * @method string getResourceId() 获取（条件过滤字段）资源ID
  * @method void setResourceId(string $ResourceId) 设置（条件过滤字段）资源ID
- * @method string getAppPkgName() 获取（条件过滤字段）安卓包名，查询android安卓加固订单时使用
- * @method void setAppPkgName(string $AppPkgName) 设置（条件过滤字段）安卓包名，查询android安卓加固订单时使用
+ * @method string getAppPkgName() 获取（条件过滤字段）包名，查询android加固订单时使用
+ * @method void setAppPkgName(string $AppPkgName) 设置（条件过滤字段）包名，查询android加固订单时使用
  */
 class DescribeOrderInstancesRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class DescribeOrderInstancesRequest extends AbstractModel
     public $OrderDirection;
 
     /**
-     * @var integer （条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @var integer （条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public $PlatformType;
 
@@ -96,7 +96,7 @@ class DescribeOrderInstancesRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string （条件过滤字段）安卓包名，查询android安卓加固订单时使用
+     * @var string （条件过滤字段）包名，查询android加固订单时使用
      */
     public $AppPkgName;
 
@@ -105,13 +105,13 @@ class DescribeOrderInstancesRequest extends AbstractModel
      * @param integer $PageSize 每页展示数量
      * @param string $OrderField 按某个字段排序，目前仅支持CreateTime排序。
      * @param string $OrderDirection 升序（asc）还是降序（desc），默认：desc。
-     * @param integer $PlatformType （条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param integer $PlatformType （条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      * @param integer $OrderType （条件过滤字段）订单采购类型 1-免费试用 2-按年收费 3-按次收费
      * @param integer $ApprovalStatus （条件过滤字段）订单审批状态：
      * @param integer $ResourceStatus （条件过滤字段）资源状态：
      * @param string $OrderId （条件过滤字段）订单ID
      * @param string $ResourceId （条件过滤字段）资源ID
-     * @param string $AppPkgName （条件过滤字段）安卓包名，查询android安卓加固订单时使用
+     * @param string $AppPkgName （条件过滤字段）包名，查询android加固订单时使用
      */
     function __construct()
     {

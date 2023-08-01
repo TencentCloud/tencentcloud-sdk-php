@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
  * @method string getVpnGatewayName() 获取网关实例名称。
  * @method void setVpnGatewayName(string $VpnGatewayName) 设置网关实例名称。
- * @method string getType() 获取网关实例类型：'IPSEC', 'SSL','CCN'。
- * @method void setType(string $Type) 设置网关实例类型：'IPSEC', 'SSL','CCN'。
- * @method string getState() 获取网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
- * @method void setState(string $State) 设置网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+ * @method string getType() 获取网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
+ * @method void setType(string $Type) 设置网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
+ * @method string getState() 获取网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
+ * @method void setState(string $State) 设置网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
  * @method string getPublicIpAddress() 获取网关公网IP。
  * @method void setPublicIpAddress(string $PublicIpAddress) 设置网关公网IP。
  * @method string getRenewFlag() 获取网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
  * @method void setRenewFlag(string $RenewFlag) 设置网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
- * @method string getInstanceChargeType() 获取网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+ * @method string getInstanceChargeType() 获取网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
  * @method integer getInternetMaxBandwidthOut() 获取网关出带宽。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置网关出带宽。
  * @method string getCreatedTime() 获取创建时间。
@@ -46,18 +46,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAddressBlocked(boolean $IsAddressBlocked) 设置公网IP是否被封堵。
  * @method string getNewPurchasePlan() 获取计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
  * @method void setNewPurchasePlan(string $NewPurchasePlan) 设置计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
- * @method string getRestrictState() 获取网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
- * @method void setRestrictState(string $RestrictState) 设置网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
- * @method string getZone() 获取可用区，如：ap-guangzhou-2
- * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou-2
- * @method array getVpnGatewayQuotaSet() 获取网关带宽配额信息
- * @method void setVpnGatewayQuotaSet(array $VpnGatewayQuotaSet) 设置网关带宽配额信息
- * @method string getVersion() 获取网关实例版本信息
- * @method void setVersion(string $Version) 设置网关实例版本信息
- * @method string getNetworkInstanceId() 获取Type值为CCN时，该值表示云联网实例ID
- * @method void setNetworkInstanceId(string $NetworkInstanceId) 设置Type值为CCN时，该值表示云联网实例ID
- * @method string getCdcId() 获取CDC 实例ID
- * @method void setCdcId(string $CdcId) 设置CDC 实例ID
+ * @method string getRestrictState() 获取网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+ * @method void setRestrictState(string $RestrictState) 设置网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+ * @method string getZone() 获取可用区，如：ap-guangzhou-2。
+ * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou-2。
+ * @method array getVpnGatewayQuotaSet() 获取网关带宽配额信息。
+ * @method void setVpnGatewayQuotaSet(array $VpnGatewayQuotaSet) 设置网关带宽配额信息。
+ * @method string getVersion() 获取网关实例版本信息。
+ * @method void setVersion(string $Version) 设置网关实例版本信息。
+ * @method string getNetworkInstanceId() 获取Type值为CCN时，该值表示云联网实例ID。
+ * @method void setNetworkInstanceId(string $NetworkInstanceId) 设置Type值为CCN时，该值表示云联网实例ID。
+ * @method string getCdcId() 获取CDC 实例ID。
+ * @method void setCdcId(string $CdcId) 设置CDC 实例ID。
  * @method integer getMaxConnection() 获取SSL-VPN 客户端连接数。
  * @method void setMaxConnection(integer $MaxConnection) 设置SSL-VPN 客户端连接数。
  */
@@ -79,12 +79,12 @@ class VpnGateway extends AbstractModel
     public $VpnGatewayName;
 
     /**
-     * @var string 网关实例类型：'IPSEC', 'SSL','CCN'。
+     * @var string 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
      */
     public $Type;
 
     /**
-     * @var string 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * @var string 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
      */
     public $State;
 
@@ -99,7 +99,7 @@ class VpnGateway extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * @var string 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
      */
     public $InstanceChargeType;
 
@@ -129,32 +129,32 @@ class VpnGateway extends AbstractModel
     public $NewPurchasePlan;
 
     /**
-     * @var string 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * @var string 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      */
     public $RestrictState;
 
     /**
-     * @var string 可用区，如：ap-guangzhou-2
+     * @var string 可用区，如：ap-guangzhou-2。
      */
     public $Zone;
 
     /**
-     * @var array 网关带宽配额信息
+     * @var array 网关带宽配额信息。
      */
     public $VpnGatewayQuotaSet;
 
     /**
-     * @var string 网关实例版本信息
+     * @var string 网关实例版本信息。
      */
     public $Version;
 
     /**
-     * @var string Type值为CCN时，该值表示云联网实例ID
+     * @var string Type值为CCN时，该值表示云联网实例ID。
      */
     public $NetworkInstanceId;
 
     /**
-     * @var string CDC 实例ID
+     * @var string CDC 实例ID。
      */
     public $CdcId;
 
@@ -167,22 +167,22 @@ class VpnGateway extends AbstractModel
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
      * @param string $VpnGatewayName 网关实例名称。
-     * @param string $Type 网关实例类型：'IPSEC', 'SSL','CCN'。
-     * @param string $State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * @param string $Type 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
+     * @param string $State 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
      * @param string $PublicIpAddress 网关公网IP。
      * @param string $RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
-     * @param string $InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * @param string $InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
      * @param integer $InternetMaxBandwidthOut 网关出带宽。
      * @param string $CreatedTime 创建时间。
      * @param string $ExpiredTime 预付费网关过期时间。
      * @param boolean $IsAddressBlocked 公网IP是否被封堵。
      * @param string $NewPurchasePlan 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
-     * @param string $RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
-     * @param string $Zone 可用区，如：ap-guangzhou-2
-     * @param array $VpnGatewayQuotaSet 网关带宽配额信息
-     * @param string $Version 网关实例版本信息
-     * @param string $NetworkInstanceId Type值为CCN时，该值表示云联网实例ID
-     * @param string $CdcId CDC 实例ID
+     * @param string $RestrictState 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * @param string $Zone 可用区，如：ap-guangzhou-2。
+     * @param array $VpnGatewayQuotaSet 网关带宽配额信息。
+     * @param string $Version 网关实例版本信息。
+     * @param string $NetworkInstanceId Type值为CCN时，该值表示云联网实例ID。
+     * @param string $CdcId CDC 实例ID。
      * @param integer $MaxConnection SSL-VPN 客户端连接数。
      */
     function __construct()

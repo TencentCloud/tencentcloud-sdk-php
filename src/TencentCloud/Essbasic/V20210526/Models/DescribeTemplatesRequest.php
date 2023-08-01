@@ -20,24 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTemplates请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+ * @method Agent getAgent() 获取应用相关信息。 
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+ * @method void setAgent(Agent $Agent) 设置应用相关信息。 
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
  * @method string getTemplateId() 获取模板唯一标识，查询单个模板时使用
  * @method void setTemplateId(string $TemplateId) 设置模板唯一标识，查询单个模板时使用
- * @method integer getContentType() 获取查询内容：0-模板列表及详情（默认），1-仅模板列表
- * @method void setContentType(integer $ContentType) 设置查询内容：0-模板列表及详情（默认），1-仅模板列表
- * @method integer getLimit() 获取查询个数，默认20，最大100；在查询列表的时候有效
- * @method void setLimit(integer $Limit) 设置查询个数，默认20，最大100；在查询列表的时候有效
- * @method integer getOffset() 获取查询偏移位置，默认0；在查询列表的时候有效
- * @method void setOffset(integer $Offset) 设置查询偏移位置，默认0；在查询列表的时候有效
- * @method boolean getQueryAllComponents() 获取是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
- * @method void setQueryAllComponents(boolean $QueryAllComponents) 设置是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
+ * @method integer getContentType() 获取查询内容：
+0-模板列表及详情（默认），
+1-仅模板列表
+ * @method void setContentType(integer $ContentType) 设置查询内容：
+0-模板列表及详情（默认），
+1-仅模板列表
+ * @method integer getLimit() 获取指定每页多少条数据，如果不传默认为20，单页最大100。
+ * @method void setLimit(integer $Limit) 设置指定每页多少条数据，如果不传默认为20，单页最大100。
+ * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+ * @method boolean getQueryAllComponents() 获取是否返回所有组件信息。
+默认false，只返回发起方控件；
+true，返回所有签署方控件
+ * @method void setQueryAllComponents(boolean $QueryAllComponents) 设置是否返回所有组件信息。
+默认false，只返回发起方控件；
+true，返回所有签署方控件
  * @method string getTemplateName() 获取模糊搜索模板名称，最大长度200
  * @method void setTemplateName(string $TemplateName) 设置模糊搜索模板名称，最大长度200
- * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接
- * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接
- * @method boolean getWithPdfUrl() 获取是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
- * @method void setWithPdfUrl(boolean $WithPdfUrl) 设置是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
+ * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接，
+默认false-不获取
+true-获取
+ * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接，
+默认false-不获取
+true-获取
+ * @method boolean getWithPdfUrl() 获取是否获取模板的PDF文件链接。
+默认false-不获取
+true-获取
+请联系客户经理开白后使用。
+ * @method void setWithPdfUrl(boolean $WithPdfUrl) 设置是否获取模板的PDF文件链接。
+默认false-不获取
+true-获取
+请联系客户经理开白后使用。
  * @method string getChannelTemplateId() 获取对应第三方应用平台企业的模板ID
  * @method void setChannelTemplateId(string $ChannelTemplateId) 设置对应第三方应用平台企业的模板ID
  * @method UserInfo getOperator() 获取操作者的信息
@@ -46,7 +66,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+     * @var Agent 应用相关信息。 
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
      */
     public $Agent;
 
@@ -56,22 +77,26 @@ class DescribeTemplatesRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var integer 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     * @var integer 查询内容：
+0-模板列表及详情（默认），
+1-仅模板列表
      */
     public $ContentType;
 
     /**
-     * @var integer 查询个数，默认20，最大100；在查询列表的时候有效
+     * @var integer 指定每页多少条数据，如果不传默认为20，单页最大100。
      */
     public $Limit;
 
     /**
-     * @var integer 查询偏移位置，默认0；在查询列表的时候有效
+     * @var integer 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
      */
     public $Offset;
 
     /**
-     * @var boolean 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
+     * @var boolean 是否返回所有组件信息。
+默认false，只返回发起方控件；
+true，返回所有签署方控件
      */
     public $QueryAllComponents;
 
@@ -81,12 +106,17 @@ class DescribeTemplatesRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var boolean 是否获取模板预览链接
+     * @var boolean 是否获取模板预览链接，
+默认false-不获取
+true-获取
      */
     public $WithPreviewUrl;
 
     /**
-     * @var boolean 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
+     * @var boolean 是否获取模板的PDF文件链接。
+默认false-不获取
+true-获取
+请联系客户经理开白后使用。
      */
     public $WithPdfUrl;
 
@@ -102,15 +132,25 @@ class DescribeTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+     * @param Agent $Agent 应用相关信息。 
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
      * @param string $TemplateId 模板唯一标识，查询单个模板时使用
-     * @param integer $ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
-     * @param integer $Limit 查询个数，默认20，最大100；在查询列表的时候有效
-     * @param integer $Offset 查询偏移位置，默认0；在查询列表的时候有效
-     * @param boolean $QueryAllComponents 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
+     * @param integer $ContentType 查询内容：
+0-模板列表及详情（默认），
+1-仅模板列表
+     * @param integer $Limit 指定每页多少条数据，如果不传默认为20，单页最大100。
+     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+     * @param boolean $QueryAllComponents 是否返回所有组件信息。
+默认false，只返回发起方控件；
+true，返回所有签署方控件
      * @param string $TemplateName 模糊搜索模板名称，最大长度200
-     * @param boolean $WithPreviewUrl 是否获取模板预览链接
-     * @param boolean $WithPdfUrl 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
+     * @param boolean $WithPreviewUrl 是否获取模板预览链接，
+默认false-不获取
+true-获取
+     * @param boolean $WithPdfUrl 是否获取模板的PDF文件链接。
+默认false-不获取
+true-获取
+请联系客户经理开白后使用。
      * @param string $ChannelTemplateId 对应第三方应用平台企业的模板ID
      * @param UserInfo $Operator 操作者的信息
      */

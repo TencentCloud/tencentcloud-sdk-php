@@ -39,6 +39,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\CreateRocketMQGroupResponse CreateRocketMQGroup(Models\CreateRocketMQGroupRequest $req) 创建RocketMQ消费组
  * @method Models\CreateRocketMQNamespaceResponse CreateRocketMQNamespace(Models\CreateRocketMQNamespaceRequest $req) 创建RocketMQ命名空间
  * @method Models\CreateRocketMQTopicResponse CreateRocketMQTopic(Models\CreateRocketMQTopicRequest $req) 创建RocketMQ主题
+ * @method Models\CreateRocketMQVipInstanceResponse CreateRocketMQVipInstance(Models\CreateRocketMQVipInstanceRequest $req) 创建RocketMQ专享实例
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) 创建角色
  * @method Models\CreateSubscriptionResponse CreateSubscription(Models\CreateSubscriptionRequest $req) 创建一个主题的订阅关系
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 新增指定分区、类型的消息主题

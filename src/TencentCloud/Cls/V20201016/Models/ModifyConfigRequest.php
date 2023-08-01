@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutput(string $Output) 设置采集配置关联的日志主题（TopicId）
  * @method string getUserDefineRule() 获取用户自定义解析字符串，Json格式序列化的字符串
  * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义解析字符串，Json格式序列化的字符串
+ * @method string getAdvancedConfig() 获取高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+ * @method void setAdvancedConfig(string $AdvancedConfig) 设置高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
  */
 class ModifyConfigRequest extends AbstractModel
 {
@@ -80,6 +90,15 @@ class ModifyConfigRequest extends AbstractModel
     public $UserDefineRule;
 
     /**
+     * @var string 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+     */
+    public $AdvancedConfig;
+
+    /**
      * @param string $ConfigId 采集规则配置ID
      * @param string $Name 采集规则配置名称
      * @param string $Path 日志采集路径，包含文件名
@@ -88,6 +107,11 @@ class ModifyConfigRequest extends AbstractModel
      * @param array $ExcludePaths 采集黑名单路径列表
      * @param string $Output 采集配置关联的日志主题（TopicId）
      * @param string $UserDefineRule 用户自定义解析字符串，Json格式序列化的字符串
+     * @param string $AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
      */
     function __construct()
     {
@@ -138,6 +162,10 @@ class ModifyConfigRequest extends AbstractModel
 
         if (array_key_exists("UserDefineRule",$param) and $param["UserDefineRule"] !== null) {
             $this->UserDefineRule = $param["UserDefineRule"];
+        }
+
+        if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
+            $this->AdvancedConfig = $param["AdvancedConfig"];
         }
     }
 }

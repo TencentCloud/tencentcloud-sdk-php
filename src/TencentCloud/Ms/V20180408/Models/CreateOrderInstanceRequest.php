@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOrderInstance请求参数结构体
  *
- * @method integer getPlatformType() 获取平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
- * @method void setPlatformType(integer $PlatformType) 设置平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
+ * @method integer getPlatformType() 获取平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
+ * @method void setPlatformType(integer $PlatformType) 设置平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
  * @method integer getOrderType() 获取订单采购类型 1-免费试用 ；2-按年收费 ；3-按次收费
  * @method void setOrderType(integer $OrderType) 设置订单采购类型 1-免费试用 ；2-按年收费 ；3-按次收费
  * @method string getAppPkgNameList() 获取代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
 
  * @method void setAppPkgNameList(string $AppPkgNameList) 设置代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
  */
 class CreateOrderInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer 平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
+     * @var integer 平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
      */
     public $PlatformType;
 
@@ -44,16 +44,16 @@ class CreateOrderInstanceRequest extends AbstractModel
 
     /**
      * @var string 代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
 
      */
     public $AppPkgNameList;
 
     /**
-     * @param integer $PlatformType 平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
+     * @param integer $PlatformType 平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
      * @param integer $OrderType 订单采购类型 1-免费试用 ；2-按年收费 ；3-按次收费
      * @param string $AppPkgNameList 代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
      */
     function __construct()
     {

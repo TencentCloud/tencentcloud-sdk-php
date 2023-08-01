@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制量
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
+ * @method string getAccountRegular() 获取模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
+ * @method void setAccountRegular(string $AccountRegular) 设置模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -72,6 +74,11 @@ class DescribeAccountsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
+     */
+    public $AccountRegular;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $AccountNames 需要过滤的账户列表
      * @param string $DbType 数据库类型，取值范围: 
@@ -80,6 +87,7 @@ class DescribeAccountsRequest extends AbstractModel
      * @param array $Hosts 需要过滤的账户列表
      * @param integer $Limit 限制量
      * @param integer $Offset 偏移量
+     * @param string $AccountRegular 模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class DescribeAccountsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("AccountRegular",$param) and $param["AccountRegular"] !== null) {
+            $this->AccountRegular = $param["AccountRegular"];
         }
     }
 }

@@ -27,13 +27,15 @@ use TencentCloud\Common\AbstractModel;
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
-
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情
  * @method void setEmbedType(string $EmbedType) 设置WEB嵌入资源类型。
 <br/>CREATE_SEAL: 创建印章
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
-
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情
  * @method string getBusinessId() 获取WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
  * @method void setBusinessId(string $BusinessId) 设置WEB嵌入的业务资源ID
@@ -42,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作
  * @method ReviewerInfo getReviewer() 获取抄送方信息
  * @method void setReviewer(ReviewerInfo $Reviewer) 设置抄送方信息
+ * @method EmbedUrlOption getOption() 获取个性化参数
+ * @method void setOption(EmbedUrlOption $Option) 设置个性化参数
  */
 class CreateEmbedWebUrlRequest extends AbstractModel
 {
@@ -56,7 +60,8 @@ class CreateEmbedWebUrlRequest extends AbstractModel
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
-
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情
      */
     public $EmbedType;
 
@@ -77,17 +82,24 @@ class CreateEmbedWebUrlRequest extends AbstractModel
     public $Reviewer;
 
     /**
+     * @var EmbedUrlOption 个性化参数
+     */
+    public $Option;
+
+    /**
      * @param UserInfo $Operator 操作者信息
      * @param string $EmbedType WEB嵌入资源类型。
 <br/>CREATE_SEAL: 创建印章
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
-
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情
      * @param string $BusinessId WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作
      * @param ReviewerInfo $Reviewer 抄送方信息
+     * @param EmbedUrlOption $Option 个性化参数
      */
     function __construct()
     {
@@ -123,6 +135,11 @@ class CreateEmbedWebUrlRequest extends AbstractModel
         if (array_key_exists("Reviewer",$param) and $param["Reviewer"] !== null) {
             $this->Reviewer = new ReviewerInfo();
             $this->Reviewer->deserialize($param["Reviewer"]);
+        }
+
+        if (array_key_exists("Option",$param) and $param["Option"] !== null) {
+            $this->Option = new EmbedUrlOption();
+            $this->Option->deserialize($param["Option"]);
         }
     }
 }

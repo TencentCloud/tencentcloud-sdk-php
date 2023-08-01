@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenKafkaConsumer返回参数结构体
  *
- * @method string getTopicID() 获取待消费TopicId
- * @method void setTopicID(string $TopicID) 设置待消费TopicId
+ * @method string getTopicID() 获取KafkaConsumer 消费时使用的Topic参数
+ * @method void setTopicID(string $TopicID) 设置KafkaConsumer 消费时使用的Topic参数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class OpenKafkaConsumerResponse extends AbstractModel
 {
     /**
-     * @var string 待消费TopicId
+     * @var string KafkaConsumer 消费时使用的Topic参数
      */
     public $TopicID;
 
@@ -38,7 +38,7 @@ class OpenKafkaConsumerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TopicID 待消费TopicId
+     * @param string $TopicID KafkaConsumer 消费时使用的Topic参数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStorage(integer $InstanceStorage) 设置硬盘
  * @method string getInstanceRole() 获取实例角色
  * @method void setInstanceRole(string $InstanceRole) 设置实例角色
+ * @method integer getMaintainStartTime() 获取执行开始时间(距离0点的秒数)	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaintainStartTime(integer $MaintainStartTime) 设置执行开始时间(距离0点的秒数)	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaintainDuration() 获取持续的时间(单位：秒)	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaintainDuration(integer $MaintainDuration) 设置持续的时间(单位：秒)	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMaintainWeekDays() 获取可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaintainWeekDays(array $MaintainWeekDays) 设置可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -87,6 +99,24 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceRole;
 
     /**
+     * @var integer 执行开始时间(距离0点的秒数)	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaintainStartTime;
+
+    /**
+     * @var integer 持续的时间(单位：秒)	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaintainDuration;
+
+    /**
+     * @var array 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaintainWeekDays;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $InstanceType 引擎类型
@@ -96,6 +126,12 @@ class ClusterInstanceDetail extends AbstractModel
      * @param integer $InstanceMemory 内存
      * @param integer $InstanceStorage 硬盘
      * @param string $InstanceRole 实例角色
+     * @param integer $MaintainStartTime 执行开始时间(距离0点的秒数)	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaintainDuration 持续的时间(单位：秒)	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +180,18 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
             $this->InstanceRole = $param["InstanceRole"];
+        }
+
+        if (array_key_exists("MaintainStartTime",$param) and $param["MaintainStartTime"] !== null) {
+            $this->MaintainStartTime = $param["MaintainStartTime"];
+        }
+
+        if (array_key_exists("MaintainDuration",$param) and $param["MaintainDuration"] !== null) {
+            $this->MaintainDuration = $param["MaintainDuration"];
+        }
+
+        if (array_key_exists("MaintainWeekDays",$param) and $param["MaintainWeekDays"] !== null) {
+            $this->MaintainWeekDays = $param["MaintainWeekDays"];
         }
     }
 }

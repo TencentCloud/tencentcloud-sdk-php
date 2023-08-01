@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTemplates返回参数结构体
  *
- * @method array getTemplates() 获取模板详情
- * @method void setTemplates(array $Templates) 设置模板详情
- * @method integer getTotalCount() 获取查询总数
- * @method void setTotalCount(integer $TotalCount) 设置查询总数
- * @method integer getLimit() 获取查询数量
- * @method void setLimit(integer $Limit) 设置查询数量
- * @method integer getOffset() 获取查询起始偏移
- * @method void setOffset(integer $Offset) 设置查询起始偏移
+ * @method array getTemplates() 获取模板列表
+ * @method void setTemplates(array $Templates) 设置模板列表
+ * @method integer getTotalCount() 获取查询到的总数
+ * @method void setTotalCount(integer $TotalCount) 设置查询到的总数
+ * @method integer getLimit() 获取每页多少条数据
+ * @method void setLimit(integer $Limit) 设置每页多少条数据
+ * @method integer getOffset() 获取查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTemplatesResponse extends AbstractModel
 {
     /**
-     * @var array 模板详情
+     * @var array 模板列表
      */
     public $Templates;
 
     /**
-     * @var integer 查询总数
+     * @var integer 查询到的总数
      */
     public $TotalCount;
 
     /**
-     * @var integer 查询数量
+     * @var integer 每页多少条数据
      */
     public $Limit;
 
     /**
-     * @var integer 查询起始偏移
+     * @var integer 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
      */
     public $Offset;
 
@@ -59,10 +59,10 @@ class DescribeTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Templates 模板详情
-     * @param integer $TotalCount 查询总数
-     * @param integer $Limit 查询数量
-     * @param integer $Offset 查询起始偏移
+     * @param array $Templates 模板列表
+     * @param integer $TotalCount 查询到的总数
+     * @param integer $Limit 每页多少条数据
+     * @param integer $Offset 查询结果分页返回，此处指定第几页。页码从0开始，即首页为0。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

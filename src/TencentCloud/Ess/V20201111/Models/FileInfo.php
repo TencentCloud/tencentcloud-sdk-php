@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模板中文件的信息结构
  *
- * @method string getFileId() 获取文件Id
- * @method void setFileId(string $FileId) 设置文件Id
+ * @method string getFileId() 获取文件ID
+ * @method void setFileId(string $FileId) 设置文件ID
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
  * @method integer getFileSize() 获取文件大小，单位为Byte
  * @method void setFileSize(integer $FileSize) 设置文件大小，单位为Byte
- * @method integer getCreatedOn() 获取文件上传时间，10位时间戳（精确到秒）
- * @method void setCreatedOn(integer $CreatedOn) 设置文件上传时间，10位时间戳（精确到秒）
+ * @method integer getCreatedOn() 获取文件上传时间，格式为Unix标准时间戳（秒）
+ * @method void setCreatedOn(integer $CreatedOn) 设置文件上传时间，格式为Unix标准时间戳（秒）
  */
 class FileInfo extends AbstractModel
 {
     /**
-     * @var string 文件Id
+     * @var string 文件ID
      */
     public $FileId;
 
@@ -47,15 +47,15 @@ class FileInfo extends AbstractModel
     public $FileSize;
 
     /**
-     * @var integer 文件上传时间，10位时间戳（精确到秒）
+     * @var integer 文件上传时间，格式为Unix标准时间戳（秒）
      */
     public $CreatedOn;
 
     /**
-     * @param string $FileId 文件Id
+     * @param string $FileId 文件ID
      * @param string $FileName 文件名
      * @param integer $FileSize 文件大小，单位为Byte
-     * @param integer $CreatedOn 文件上传时间，10位时间戳（精确到秒）
+     * @param integer $CreatedOn 文件上传时间，格式为Unix标准时间戳（秒）
      */
     function __construct()
     {

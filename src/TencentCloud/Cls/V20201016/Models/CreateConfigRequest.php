@@ -34,8 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExcludePaths(array $ExcludePaths) 设置采集黑名单路径列表
  * @method string getUserDefineRule() 获取用户自定义采集规则，Json格式序列化的字符串
  * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义采集规则，Json格式序列化的字符串
- * @method string getAdvancedConfig() 获取高级采集配置
- * @method void setAdvancedConfig(string $AdvancedConfig) 设置高级采集配置
+ * @method string getAdvancedConfig() 获取高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+ * @method void setAdvancedConfig(string $AdvancedConfig) 设置高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
  */
 class CreateConfigRequest extends AbstractModel
 {
@@ -75,7 +83,11 @@ class CreateConfigRequest extends AbstractModel
     public $UserDefineRule;
 
     /**
-     * @var string 高级采集配置
+     * @var string 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
      */
     public $AdvancedConfig;
 
@@ -87,7 +99,11 @@ class CreateConfigRequest extends AbstractModel
      * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
      * @param array $ExcludePaths 采集黑名单路径列表
      * @param string $UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
-     * @param string $AdvancedConfig 高级采集配置
+     * @param string $AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
      */
     function __construct()
     {

@@ -43,7 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method RecordParam getMp3Param() 获取Mp3录制参数，开启Mp3录制时设置。
  * @method void setMp3Param(RecordParam $Mp3Param) 设置Mp3录制参数，开启Mp3录制时设置。
  * @method boolean getRemoveWatermark() 获取是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。
  * @method void setRemoveWatermark(boolean $RemoveWatermark) 设置是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。
  * @method FlvSpecialParam getFlvSpecialParam() 获取FLV 录制特殊参数。
  * @method void setFlvSpecialParam(FlvSpecialParam $FlvSpecialParam) 设置FLV 录制特殊参数。
  */
@@ -98,6 +100,7 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
 
     /**
      * @var boolean 是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。
      */
     public $RemoveWatermark;
 
@@ -119,6 +122,7 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
      * @param HlsSpecialParam $HlsSpecialParam HLS专属录制参数。
      * @param RecordParam $Mp3Param Mp3录制参数，开启Mp3录制时设置。
      * @param boolean $RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。
      * @param FlvSpecialParam $FlvSpecialParam FLV 录制特殊参数。
      */
     function __construct()

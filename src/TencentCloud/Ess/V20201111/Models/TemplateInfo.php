@@ -18,48 +18,69 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 企业模板的信息结构
+ * 此结构体 (TemplateInfo) 用于描述模板的信息。
+
+> **模板组成** 
+>
+>  一个模板通常会包含以下结构信息
+>- 模板基本信息
+>- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
+>- 填写控件 Components
+>- 签署控件 SignComponents
+>- 生成模板的文件基础信息 FileInfos
  *
- * @method string getTemplateId() 获取模板ID
- * @method void setTemplateId(string $TemplateId) 设置模板ID
- * @method string getTemplateName() 获取模板名字
- * @method void setTemplateName(string $TemplateName) 设置模板名字
+ * @method string getTemplateId() 获取模板ID，模板的唯一标识
+ * @method void setTemplateId(string $TemplateId) 设置模板ID，模板的唯一标识
+ * @method string getTemplateName() 获取模板名
+ * @method void setTemplateName(string $TemplateName) 设置模板名
  * @method string getDescription() 获取模板描述信息
  * @method void setDescription(string $Description) 设置模板描述信息
  * @method array getDocumentResourceIds() 获取模板关联的资源ID列表
  * @method void setDocumentResourceIds(array $DocumentResourceIds) 设置模板关联的资源ID列表
- * @method array getFileInfos() 获取返回的文件信息结构
- * @method void setFileInfos(array $FileInfos) 设置返回的文件信息结构
+ * @method array getFileInfos() 获取生成模板的文件基础信息
+ * @method void setFileInfos(array $FileInfos) 设置生成模板的文件基础信息
  * @method array getAttachmentResourceIds() 获取附件关联的资源ID
  * @method void setAttachmentResourceIds(array $AttachmentResourceIds) 设置附件关联的资源ID
  * @method array getSignOrder() 获取签署顺序
+无序 -1
+有序为序列数字 0,1,2
  * @method void setSignOrder(array $SignOrder) 设置签署顺序
- * @method array getRecipients() 获取签署参与者的信息
- * @method void setRecipients(array $Recipients) 设置签署参与者的信息
- * @method array getComponents() 获取模板信息结构
- * @method void setComponents(array $Components) 设置模板信息结构
- * @method array getSignComponents() 获取签署区模板信息结构
- * @method void setSignComponents(array $SignComponents) 设置签署区模板信息结构
- * @method integer getStatus() 获取模板状态(-1:不可用；0:草稿态；1:正式态)
- * @method void setStatus(integer $Status) 设置模板状态(-1:不可用；0:草稿态；1:正式态)
- * @method string getCreator() 获取模板的创建人UserId
- * @method void setCreator(string $Creator) 设置模板的创建人UserId
- * @method integer getCreatedOn() 获取模板创建的时间戳，单位秒
- * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳，单位秒
- * @method Recipient getPromoter() 获取发起人角色信息
- * @method void setPromoter(Recipient $Promoter) 设置发起人角色信息
- * @method integer getTemplateType() 获取模板类型
-取值：
+无序 -1
+有序为序列数字 0,1,2
+ * @method array getRecipients() 获取模板中的签署参与方列表
+ * @method void setRecipients(array $Recipients) 设置模板中的签署参与方列表
+ * @method array getComponents() 获取模板的填充控件列表
+ * @method void setComponents(array $Components) 设置模板的填充控件列表
+ * @method array getSignComponents() 获取模板中的签署控件列表
+ * @method void setSignComponents(array $SignComponents) 设置模板中的签署控件列表
+ * @method integer getStatus() 获取模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用
+ * @method void setStatus(integer $Status) 设置模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用
+ * @method string getCreator() 获取模板的创建者信息，电子签系统用户ID
+ * @method void setCreator(string $Creator) 设置模板的创建者信息，电子签系统用户ID
+ * @method integer getCreatedOn() 获取模板创建的时间戳，格式为Unix标准时间戳（秒）
+ * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳，格式为Unix标准时间戳（秒）
+ * @method Recipient getPromoter() 获取发起方参与信息Promoter
+ * @method void setPromoter(Recipient $Promoter) 设置发起方参与信息Promoter
+ * @method integer getTemplateType() 获取模板类型：
 1  静默签,
 3  普通模板
- * @method void setTemplateType(integer $TemplateType) 设置模板类型
-取值：
+ * @method void setTemplateType(integer $TemplateType) 设置模板类型：
 1  静默签,
 3  普通模板
- * @method integer getAvailable() 获取模板可用状态，取值：1启用（默认），2停用
- * @method void setAvailable(integer $Available) 设置模板可用状态，取值：1启用（默认），2停用
- * @method string getOrganizationId() 获取创建模板的机构id
- * @method void setOrganizationId(string $OrganizationId) 设置创建模板的机构id
+ * @method integer getAvailable() 获取模板可用状态：
+1 启用（默认）
+2 停用
+ * @method void setAvailable(integer $Available) 设置模板可用状态：
+1 启用（默认）
+2 停用
+ * @method string getOrganizationId() 获取创建模板的企业ID，电子签的机构ID
+ * @method void setOrganizationId(string $OrganizationId) 设置创建模板的企业ID，电子签的机构ID
  * @method string getPreviewUrl() 获取模板预览链接，有效时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置模板预览链接，有效时间5分钟
@@ -68,9 +89,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getPublished() 获取模板是否已发布。true-已发布；false-未发布
+ * @method boolean getPublished() 获取模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublished(boolean $Published) 设置模板是否已发布。true-已发布；false-未发布
+ * @method void setPublished(boolean $Published) 设置模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTemplateSeals() 获取模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -84,12 +109,12 @@ use TencentCloud\Common\AbstractModel;
 class TemplateInfo extends AbstractModel
 {
     /**
-     * @var string 模板ID
+     * @var string 模板ID，模板的唯一标识
      */
     public $TemplateId;
 
     /**
-     * @var string 模板名字
+     * @var string 模板名
      */
     public $TemplateName;
 
@@ -104,7 +129,7 @@ class TemplateInfo extends AbstractModel
     public $DocumentResourceIds;
 
     /**
-     * @var array 返回的文件信息结构
+     * @var array 生成模板的文件基础信息
      */
     public $FileInfos;
 
@@ -115,59 +140,65 @@ class TemplateInfo extends AbstractModel
 
     /**
      * @var array 签署顺序
+无序 -1
+有序为序列数字 0,1,2
      */
     public $SignOrder;
 
     /**
-     * @var array 签署参与者的信息
+     * @var array 模板中的签署参与方列表
      */
     public $Recipients;
 
     /**
-     * @var array 模板信息结构
+     * @var array 模板的填充控件列表
      */
     public $Components;
 
     /**
-     * @var array 签署区模板信息结构
+     * @var array 模板中的签署控件列表
      */
     public $SignComponents;
 
     /**
-     * @var integer 模板状态(-1:不可用；0:草稿态；1:正式态)
+     * @var integer 模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用
      */
     public $Status;
 
     /**
-     * @var string 模板的创建人UserId
+     * @var string 模板的创建者信息，电子签系统用户ID
      */
     public $Creator;
 
     /**
-     * @var integer 模板创建的时间戳，单位秒
+     * @var integer 模板创建的时间戳，格式为Unix标准时间戳（秒）
      */
     public $CreatedOn;
 
     /**
-     * @var Recipient 发起人角色信息
+     * @var Recipient 发起方参与信息Promoter
      */
     public $Promoter;
 
     /**
-     * @var integer 模板类型
-取值：
+     * @var integer 模板类型：
 1  静默签,
 3  普通模板
      */
     public $TemplateType;
 
     /**
-     * @var integer 模板可用状态，取值：1启用（默认），2停用
+     * @var integer 模板可用状态：
+1 启用（默认）
+2 停用
      */
     public $Available;
 
     /**
-     * @var string 创建模板的机构id
+     * @var string 创建模板的企业ID，电子签的机构ID
      */
     public $OrganizationId;
 
@@ -184,7 +215,9 @@ class TemplateInfo extends AbstractModel
     public $TemplateVersion;
 
     /**
-     * @var boolean 模板是否已发布。true-已发布；false-未发布
+     * @var boolean 模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Published;
@@ -203,31 +236,39 @@ class TemplateInfo extends AbstractModel
     public $Seals;
 
     /**
-     * @param string $TemplateId 模板ID
-     * @param string $TemplateName 模板名字
+     * @param string $TemplateId 模板ID，模板的唯一标识
+     * @param string $TemplateName 模板名
      * @param string $Description 模板描述信息
      * @param array $DocumentResourceIds 模板关联的资源ID列表
-     * @param array $FileInfos 返回的文件信息结构
+     * @param array $FileInfos 生成模板的文件基础信息
      * @param array $AttachmentResourceIds 附件关联的资源ID
      * @param array $SignOrder 签署顺序
-     * @param array $Recipients 签署参与者的信息
-     * @param array $Components 模板信息结构
-     * @param array $SignComponents 签署区模板信息结构
-     * @param integer $Status 模板状态(-1:不可用；0:草稿态；1:正式态)
-     * @param string $Creator 模板的创建人UserId
-     * @param integer $CreatedOn 模板创建的时间戳，单位秒
-     * @param Recipient $Promoter 发起人角色信息
-     * @param integer $TemplateType 模板类型
-取值：
+无序 -1
+有序为序列数字 0,1,2
+     * @param array $Recipients 模板中的签署参与方列表
+     * @param array $Components 模板的填充控件列表
+     * @param array $SignComponents 模板中的签署控件列表
+     * @param integer $Status 模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用
+     * @param string $Creator 模板的创建者信息，电子签系统用户ID
+     * @param integer $CreatedOn 模板创建的时间戳，格式为Unix标准时间戳（秒）
+     * @param Recipient $Promoter 发起方参与信息Promoter
+     * @param integer $TemplateType 模板类型：
 1  静默签,
 3  普通模板
-     * @param integer $Available 模板可用状态，取值：1启用（默认），2停用
-     * @param string $OrganizationId 创建模板的机构id
+     * @param integer $Available 模板可用状态：
+1 启用（默认）
+2 停用
+     * @param string $OrganizationId 创建模板的企业ID，电子签的机构ID
      * @param string $PreviewUrl 模板预览链接，有效时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateVersion 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Published 模板是否已发布。true-已发布；false-未发布
+     * @param boolean $Published 模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TemplateSeals 模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。

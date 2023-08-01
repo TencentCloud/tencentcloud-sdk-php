@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 回档表信息
  *
  * @method string getOldTable() 获取旧表名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldTable(string $OldTable) 设置旧表名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewTable() 获取新表名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewTable(string $NewTable) 设置新表名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RollbackTableInfo extends AbstractModel
 {
     /**
      * @var string 旧表名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldTable;
 
     /**
      * @var string 新表名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewTable;
 
     /**
      * @param string $OldTable 旧表名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewTable 新表名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

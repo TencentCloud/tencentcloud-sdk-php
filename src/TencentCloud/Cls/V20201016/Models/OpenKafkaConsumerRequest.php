@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenKafkaConsumer请求参数结构体
  *
- * @method string getFromTopicId() 获取CLS控制台创建的TopicId
- * @method void setFromTopicId(string $FromTopicId) 设置CLS控制台创建的TopicId
+ * @method string getFromTopicId() 获取日志主题ID
+ * @method void setFromTopicId(string $FromTopicId) 设置日志主题ID
  * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]
  * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]
  * @method KafkaConsumerContent getConsumerContent() 获取kafka协议消费数据格式
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class OpenKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string CLS控制台创建的TopicId
+     * @var string 日志主题ID
      */
     public $FromTopicId;
 
@@ -45,7 +45,7 @@ class OpenKafkaConsumerRequest extends AbstractModel
     public $ConsumerContent;
 
     /**
-     * @param string $FromTopicId CLS控制台创建的TopicId
+     * @param string $FromTopicId 日志主题ID
      * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
      * @param KafkaConsumerContent $ConsumerContent kafka协议消费数据格式
      */

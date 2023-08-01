@@ -34,11 +34,21 @@ use TencentCloud\Clb\V20180317\Models as Models;
  * @method Models\CloneLoadBalancerResponse CloneLoadBalancer(Models\CloneLoadBalancerRequest $req) 克隆负载均衡实例，根据指定的负载均衡实例，复制出相同规则和绑定关系的负载均衡实例。克隆接口为异步操作，克隆的数据以调用CloneLoadBalancer时为准，如果调用CloneLoadBalancer后克隆CLB发生变化，变化规则不会克隆。
 
 限制说明：
-不支持基础网络和传统型负载均衡、IPv6和NAT64
-不支持包年包月CLB
-不支持监听器为 QUIC、端口段
-不支持后端类型为 目标组、SCF云函数
-个性化配置、重定向配置、安全组默认放通开关 将不会被克隆，须手工配置
+实例属性维度限制
+  仅支持克隆按量计费实例，不支持包年包月实例。
+  不支持克隆未关联实例计费项的 CLB。
+  不支持克隆传统型负载均衡实例和高防 CLB。
+  不支持克隆基础网络类型的实例。
+  不支持克隆 IPv6、IPv6 NAT64 版本以及混绑的实例。
+  个性化配置、重定向配置、安全组默认放通开关的配置将不会被克隆，需重新配置。
+  执行克隆操作前，请确保实例上没有使用已过期证书，否则会导致克隆失败。
+监听器维度限制
+  不支持克隆监听器为 QUIC 类型和端口段的实例。
+  不支持监听器为 TCP_SSL 的内网型负载均衡的实例。
+  不支持克隆七层监听器没有转发规则的实例。
+  当实例的监听器个数超过50个时，不支持克隆。
+后端服务维度限制
+  不支持克隆绑定的后端服务类型为目标组和 SCF 云函数的实例。
 
 通过接口调用：
 BGP带宽包必须传带宽包id
@@ -105,7 +115,6 @@ BGP带宽包必须传带宽包id
  * @method Models\DescribeLoadBalancerOverviewResponse DescribeLoadBalancerOverview(Models\DescribeLoadBalancerOverviewRequest $req) 查询运行中、隔离中、即将到期和负载均衡总数。
  * @method Models\DescribeLoadBalancerTrafficResponse DescribeLoadBalancerTraffic(Models\DescribeLoadBalancerTrafficRequest $req) 查询账号下的高流量负载均衡，返回前10个负载均衡。如果是子账号登录，只返回子账号有权限的负载均衡。
  * @method Models\DescribeLoadBalancersResponse DescribeLoadBalancers(Models\DescribeLoadBalancersRequest $req) 查询一个地域的负载均衡实例列表。
-
  * @method Models\DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetail(Models\DescribeLoadBalancersDetailRequest $req) 查询负载均衡的详细信息，包括监听器，规则及后端目标。
  * @method Models\DescribeQuotaResponse DescribeQuota(Models\DescribeQuotaRequest $req) 查询用户当前地域下的各项配额
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户在当前地域支持可用区列表和资源列表。

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应
+注：请保证员工有相关的角色权限
  * @method void setOperator(UserInfo $Operator) 设置调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应
+注：请保证员工有相关的角色权限
  * @method Agent getAgent() 获取代理相关应用信息
 如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息
@@ -66,7 +66,7 @@ class DescribeFlowTemplatesRequest extends AbstractModel
     /**
      * @var UserInfo 调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应
+注：请保证员工有相关的角色权限
      */
     public $Operator;
 
@@ -129,7 +129,7 @@ ApplicationId为空，查询所有应用下的模板列表
     /**
      * @param UserInfo $Operator 调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应
+注：请保证员工有相关的角色权限
      * @param Agent $Agent 代理相关应用信息
 如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param integer $ContentType 查询内容类型

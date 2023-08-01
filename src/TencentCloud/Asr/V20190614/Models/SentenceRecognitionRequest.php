@@ -98,10 +98,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomizationId(string $CustomizationId) 设置自学习模型 id。如设置了该参数，将生效对应的自学习模型。
  * @method integer getReinforceHotword() 获取热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
  * @method void setReinforceHotword(integer $ReinforceHotword) 设置热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
- * @method string getHotwordList() 获取临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
-“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据
- * @method void setHotwordList(string $HotwordList) 设置临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
-“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据
+ * @method string getHotwordList() 获取临时热词表，该参数用于提升热词识别准确率。
+单个热词规则："热词|权重"，不超过30个字符（最多10个汉字），权重1-10；
+临时热词表限制：多个热词用英文逗号分割，最多128个热词，参数示例："腾讯云|10,语音识别|5,ASR|10"；
+参数 hotword_list 与 hotword_id 区别：
+hotword_id：需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+hotword_list：每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表；
+注意：如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list。
+ * @method void setHotwordList(string $HotwordList) 设置临时热词表，该参数用于提升热词识别准确率。
+单个热词规则："热词|权重"，不超过30个字符（最多10个汉字），权重1-10；
+临时热词表限制：多个热词用英文逗号分割，最多128个热词，参数示例："腾讯云|10,语音识别|5,ASR|10"；
+参数 hotword_list 与 hotword_id 区别：
+hotword_id：需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+hotword_list：每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表；
+注意：如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list。
  * @method integer getInputSampleRate() 获取支持pcm格式的8k音频在与引擎采样率不匹配的情况下升采样到16k后识别，能有效提升识别准确率。仅支持：8000。如：传入 8000 ，则pcm音频采样率为8k，当引擎选用16k_zh， 那么该8k采样率的pcm音频可以在16k_zh引擎下正常识别。 注：此参数仅适用于pcm格式音频，不传入值将维持默认状态，即默认调用的引擎采样率等于pcm音频采样率。
  * @method void setInputSampleRate(integer $InputSampleRate) 设置支持pcm格式的8k音频在与引擎采样率不匹配的情况下升采样到16k后识别，能有效提升识别准确率。仅支持：8000。如：传入 8000 ，则pcm音频采样率为8k，当引擎选用16k_zh， 那么该8k采样率的pcm音频可以在16k_zh引擎下正常识别。 注：此参数仅适用于pcm格式音频，不传入值将维持默认状态，即默认调用的引擎采样率等于pcm音频采样率。
  */
@@ -218,8 +228,13 @@ class SentenceRecognitionRequest extends AbstractModel
     public $ReinforceHotword;
 
     /**
-     * @var string 临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
-“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据
+     * @var string 临时热词表，该参数用于提升热词识别准确率。
+单个热词规则："热词|权重"，不超过30个字符（最多10个汉字），权重1-10；
+临时热词表限制：多个热词用英文逗号分割，最多128个热词，参数示例："腾讯云|10,语音识别|5,ASR|10"；
+参数 hotword_list 与 hotword_id 区别：
+hotword_id：需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+hotword_list：每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表；
+注意：如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list。
      */
     public $HotwordList;
 
@@ -268,8 +283,13 @@ class SentenceRecognitionRequest extends AbstractModel
      * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      * @param string $CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
      * @param integer $ReinforceHotword 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
-     * @param string $HotwordList 临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
-“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据
+     * @param string $HotwordList 临时热词表，该参数用于提升热词识别准确率。
+单个热词规则："热词|权重"，不超过30个字符（最多10个汉字），权重1-10；
+临时热词表限制：多个热词用英文逗号分割，最多128个热词，参数示例："腾讯云|10,语音识别|5,ASR|10"；
+参数 hotword_list 与 hotword_id 区别：
+hotword_id：需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+hotword_list：每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表；
+注意：如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list。
      * @param integer $InputSampleRate 支持pcm格式的8k音频在与引擎采样率不匹配的情况下升采样到16k后识别，能有效提升识别准确率。仅支持：8000。如：传入 8000 ，则pcm音频采样率为8k，当引擎选用16k_zh， 那么该8k采样率的pcm音频可以在16k_zh引擎下正常识别。 注：此参数仅适用于pcm格式音频，不传入值将维持默认状态，即默认调用的引擎采样率等于pcm音频采样率。
      */
     function __construct()

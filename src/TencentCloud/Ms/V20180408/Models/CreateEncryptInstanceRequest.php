@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEncryptInstance请求参数结构体
  *
- * @method integer getPlatformType() 获取平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
- * @method void setPlatformType(integer $PlatformType) 设置平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method integer getPlatformType() 获取平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method void setPlatformType(integer $PlatformType) 设置平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
  * @method integer getOrderType() 获取订单采购类型 1-免费试用 2-按年收费 3-按次收费
  * @method void setOrderType(integer $OrderType) 设置订单采购类型 1-免费试用 2-按年收费 3-按次收费
  * @method integer getEncryptOpType() 获取1-在线加固、  2-输出工具加固
  * @method void setEncryptOpType(integer $EncryptOpType) 设置1-在线加固、  2-输出工具加固
  * @method string getResourceId() 获取本次加固使用的资源id
  * @method void setResourceId(string $ResourceId) 设置本次加固使用的资源id
- * @method AndroidAppInfo getAndroidAppInfo() 获取渠道合作安卓加固App信息 
- * @method void setAndroidAppInfo(AndroidAppInfo $AndroidAppInfo) 设置渠道合作安卓加固App信息 
- * @method AndroidPlan getAndroidPlan() 获取渠道合作安卓加固策略信息
- * @method void setAndroidPlan(AndroidPlan $AndroidPlan) 设置渠道合作安卓加固策略信息
+ * @method AndroidAppInfo getAndroidAppInfo() 获取渠道合作android加固App信息 
+ * @method void setAndroidAppInfo(AndroidAppInfo $AndroidAppInfo) 设置渠道合作android加固App信息 
+ * @method AndroidPlan getAndroidPlan() 获取渠道合作android加固策略信息
+ * @method void setAndroidPlan(AndroidPlan $AndroidPlan) 设置渠道合作android加固策略信息
  * @method AppletInfo getAppletInfo() 获取小程序加固信息
  * @method void setAppletInfo(AppletInfo $AppletInfo) 设置小程序加固信息
  */
 class CreateEncryptInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @var integer 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public $PlatformType;
 
@@ -58,12 +58,12 @@ class CreateEncryptInstanceRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var AndroidAppInfo 渠道合作安卓加固App信息 
+     * @var AndroidAppInfo 渠道合作android加固App信息 
      */
     public $AndroidAppInfo;
 
     /**
-     * @var AndroidPlan 渠道合作安卓加固策略信息
+     * @var AndroidPlan 渠道合作android加固策略信息
      */
     public $AndroidPlan;
 
@@ -73,12 +73,12 @@ class CreateEncryptInstanceRequest extends AbstractModel
     public $AppletInfo;
 
     /**
-     * @param integer $PlatformType 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param integer $PlatformType 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      * @param integer $OrderType 订单采购类型 1-免费试用 2-按年收费 3-按次收费
      * @param integer $EncryptOpType 1-在线加固、  2-输出工具加固
      * @param string $ResourceId 本次加固使用的资源id
-     * @param AndroidAppInfo $AndroidAppInfo 渠道合作安卓加固App信息 
-     * @param AndroidPlan $AndroidPlan 渠道合作安卓加固策略信息
+     * @param AndroidAppInfo $AndroidAppInfo 渠道合作android加固App信息 
+     * @param AndroidPlan $AndroidPlan 渠道合作android加固策略信息
      * @param AppletInfo $AppletInfo 小程序加固信息
      */
     function __construct()

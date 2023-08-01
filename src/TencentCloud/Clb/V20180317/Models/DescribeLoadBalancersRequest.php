@@ -30,8 +30,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setForward(integer $Forward) 设置负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
  * @method string getLoadBalancerName() 获取负载均衡实例的名称。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称。
- * @method string getDomain() 获取腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
- * @method void setDomain(string $Domain) 设置腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+ * @method string getDomain() 获取腾讯云为负载均衡实例分配的域名。
+ * @method void setDomain(string $Domain) 设置腾讯云为负载均衡实例分配的域名。
  * @method array getLoadBalancerVips() 获取负载均衡实例的 VIP 地址，支持多个。
  * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置负载均衡实例的 VIP 地址，支持多个。
  * @method array getBackendPublicIps() 获取负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
@@ -105,7 +105,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerName;
 
     /**
-     * @var string 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+     * @var string 腾讯云为负载均衡实例分配的域名。
      */
     public $Domain;
 
@@ -195,7 +195,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      * @param string $LoadBalancerName 负载均衡实例的名称。
-     * @param string $Domain 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+     * @param string $Domain 腾讯云为负载均衡实例分配的域名。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 地址，支持多个。
      * @param array $BackendPublicIps 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
      * @param array $BackendPrivateIps 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) 设置新的监听器名称。
  * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
- * @method HealthCheck getHealthCheck() 获取健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
- * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
- * @method CertificateInput getCertificate() 获取证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
- * @method void setCertificate(CertificateInput $Certificate) 设置证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
+ * @method HealthCheck getHealthCheck() 获取健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+ * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+ * @method CertificateInput getCertificate() 获取证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。
+ * @method void setCertificate(CertificateInput $Certificate) 设置证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。
  * @method string getScheduler() 获取监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
  * @method void setScheduler(string $Scheduler) 设置监听器转发的方式。可选值：WRR、LEAST_CONN
@@ -78,12 +78,12 @@ class ModifyListenerRequest extends AbstractModel
     public $SessionExpireTime;
 
     /**
-     * @var HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+     * @var HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public $HealthCheck;
 
     /**
-     * @var CertificateInput 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
+     * @var CertificateInput 证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。
      */
     public $Certificate;
 
@@ -143,8 +143,8 @@ class ModifyListenerRequest extends AbstractModel
      * @param string $ListenerId 负载均衡监听器ID。
      * @param string $ListenerName 新的监听器名称。
      * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
-     * @param HealthCheck $HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
-     * @param CertificateInput $Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
+     * @param HealthCheck $HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+     * @param CertificateInput $Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。
      * @param string $Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
      * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。

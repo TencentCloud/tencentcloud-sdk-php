@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
  * @method string getSessionId() 获取一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
  * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
- * @method float getVolume() 获取音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
- * @method void setVolume(float $Volume) 设置音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+ * @method float getVolume() 获取音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+ * @method void setVolume(float $Volume) 设置音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
  * @method float getSpeed() 获取语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5 1.1 1.8等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
  * @method void setSpeed(float $Speed) 设置语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5 1.1 1.8等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
  * @method integer getProjectId() 获取项目id，用户自定义，默认为0。
@@ -71,7 +71,7 @@ class TextToVoiceRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var float 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * @var float 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
      */
     public $Volume;
 
@@ -137,7 +137,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
-     * @param float $Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * @param float $Volume 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
      * @param float $Speed 语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5 1.1 1.8等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
      * @param integer $ProjectId 项目id，用户自定义，默认为0。
      * @param integer $ModelType 模型类型，1-默认模型。

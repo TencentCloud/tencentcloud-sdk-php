@@ -21,43 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 字幕流配置参数。
  *
  * @method string getPath() 获取要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStreamIndex() 获取指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamIndex(integer $StreamIndex) 设置指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFontType() 获取字体类型，
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
 默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFontType(string $FontType) 设置字体类型，
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
 默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFontSize() 获取字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFontSize(string $FontSize) 设置字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFontColor() 获取字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFontColor(string $FontColor) 设置字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFontAlpha() 获取文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFontAlpha(float $FontAlpha) 设置文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubtitleTemplate extends AbstractModel
 {
     /**
      * @var string 要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var integer 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamIndex;
 
@@ -68,16 +82,19 @@ class SubtitleTemplate extends AbstractModel
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
 默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FontType;
 
     /**
      * @var string 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FontSize;
 
     /**
      * @var string 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FontColor;
 
@@ -86,24 +103,31 @@ class SubtitleTemplate extends AbstractModel
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FontAlpha;
 
     /**
      * @param string $Path 要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StreamIndex 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FontType 字体类型，
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
 默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FontAlpha 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

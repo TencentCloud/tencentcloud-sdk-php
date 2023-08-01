@@ -21,26 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * AWS S3存储输入
  *
  * @method string getS3Bucket() 获取S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3Bucket(string $S3Bucket) 设置S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3Region() 获取S3 bucket 对应的区域，目前支持：  
 us-east-1  
 eu-west-3
 
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3Region(string $S3Region) 设置S3 bucket 对应的区域，目前支持：  
 us-east-1  
 eu-west-3
 
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3Object() 获取S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3Object(string $S3Object) 设置S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3SecretId() 获取AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3SecretId(string $S3SecretId) 设置AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3SecretKey() 获取AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3SecretKey(string $S3SecretKey) 设置AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class S3InputInfo extends AbstractModel
 {
     /**
      * @var string S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3Bucket;
 
@@ -49,33 +60,42 @@ class S3InputInfo extends AbstractModel
 us-east-1  
 eu-west-3
 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3Region;
 
     /**
      * @var string S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3Object;
 
     /**
      * @var string AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3SecretId;
 
     /**
      * @var string AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3SecretKey;
 
     /**
      * @param string $S3Bucket S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3Region S3 bucket 对应的区域，目前支持：  
 us-east-1  
 eu-west-3
 
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3Object S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3SecretId AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3SecretKey AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

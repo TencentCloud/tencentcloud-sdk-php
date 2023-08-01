@@ -24,12 +24,16 @@ use TencentCloud\Common\AbstractModel;
 <li>TEHD-100：极速高清-100（视频极速高清）。</li>
 <li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不修改。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置极速高清类型，可选值：
 <li>TEHD-100：极速高清-100（视频极速高清）。</li>
 <li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不修改。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxVideoBitrate() 获取视频码率上限，不填代表不修改。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) 设置视频码率上限，不填代表不修改。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TEHDConfigForUpdate extends AbstractModel
 {
@@ -38,11 +42,13 @@ class TEHDConfigForUpdate extends AbstractModel
 <li>TEHD-100：极速高清-100（视频极速高清）。</li>
 <li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不修改。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 视频码率上限，不填代表不修改。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxVideoBitrate;
 
@@ -51,7 +57,9 @@ class TEHDConfigForUpdate extends AbstractModel
 <li>TEHD-100：极速高清-100（视频极速高清）。</li>
 <li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不修改。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxVideoBitrate 视频码率上限，不填代表不修改。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -97,7 +97,8 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelDescribeOrganizationSealsResponse ChannelDescribeOrganizationSeals(Models\ChannelDescribeOrganizationSealsRequest $req) 查询子客企业电子印章，需要操作者具有管理印章权限
 客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
  * @method Models\ChannelDescribeRolesResponse ChannelDescribeRoles(Models\ChannelDescribeRolesRequest $req) 查询角色列表，支持根据类型和状态过滤角色列表
- * @method Models\ChannelGetTaskResultApiResponse ChannelGetTaskResultApi(Models\ChannelGetTaskResultApiRequest $req) 通过发起转换任务接口（ChannelCreateConvertTaskApi）返回的任务Id查询转换任务状态，通过本接口确认转换任务是否完成。大文件转换所需的时间可能会比较长。
+ * @method Models\ChannelGetTaskResultApiResponse ChannelGetTaskResultApi(Models\ChannelGetTaskResultApiRequest $req) 查询转换任务的状态。转换任务Id通过发起转换任务接口（ChannelCreateConvertTaskApi）获取。
+注意：大文件转换所需的时间可能会比较长。
  * @method Models\ChannelUpdateSealStatusResponse ChannelUpdateSealStatus(Models\ChannelUpdateSealStatusRequest $req) 本接口（ChannelUpdateSealStatus）用于第三方应用平台为子客企业更新印章状态
  * @method Models\ChannelVerifyPdfResponse ChannelVerifyPdf(Models\ChannelVerifyPdfRequest $req) 对流程的合同文件进行验证，判断文件是否合法。
  * @method Models\CreateChannelFlowEvidenceReportResponse CreateChannelFlowEvidenceReport(Models\CreateChannelFlowEvidenceReportRequest $req) 创建出证报告，返回报告 ID。需要配合出证套餐才能调用。
@@ -138,7 +139,17 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
  * @method Models\DescribeFlowDetailInfoResponse DescribeFlowDetailInfo(Models\DescribeFlowDetailInfoRequest $req) 此接口（DescribeFlowDetailInfo）用于查询合同(签署流程)的详细信息。
  * @method Models\DescribeResourceUrlsByFlowsResponse DescribeResourceUrlsByFlows(Models\DescribeResourceUrlsByFlowsRequest $req) 根据签署流程信息批量获取资源下载链接，可以下载签署中、签署完的合同，需合作企业先进行授权。
 此接口直接返回下载的资源的url，与接口GetDownloadFlowUrl跳转到控制台的下载方式不同。
- * @method Models\DescribeTemplatesResponse DescribeTemplates(Models\DescribeTemplatesRequest $req) 通过此接口（DescribeTemplates）查询该第三方平台子客企业在电子签拥有的有效模板，不包括第三方平台模板
+ * @method Models\DescribeTemplatesResponse DescribeTemplates(Models\DescribeTemplatesRequest $req) 通过此接口（DescribeTemplates）查询该第三方平台子客企业在电子签拥有的有效模板，不包括第三方平台模板。
+
+> **适用场景** 
+>
+>  该接口常用来配合“使用模板创建签署流程”接口作为前置的接口使用。 
+>  一个模板通常会包含以下结构信息
+>- 模板基本信息
+>- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
+>- 填写控件 Components
+>- 签署控件 SignComponents
+>- 生成模板的文件基础信息 FileInfos
  * @method Models\DescribeUsageResponse DescribeUsage(Models\DescribeUsageRequest $req) 此接口（DescribeUsage）用于获取第三方平台所有合作企业流量消耗情况。
  注: 此接口每日限频2次，若要扩大限制次数,请提前与客服经理或邮件至e-contract@tencent.com进行联系。
  * @method Models\GetDownloadFlowUrlResponse GetDownloadFlowUrl(Models\GetDownloadFlowUrlRequest $req) 此接口（GetDownloadFlowUrl）用于创建电子签批量下载地址，让合作企业进入控制台直接下载，支持客户合同（流程）按照自定义文件夹形式 分类下载。

@@ -18,7 +18,7 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 渠道合作安卓加固App信息
+ * 渠道合作Android加固App信息
  *
  * @method string getAppMd5() 获取app文件的md5算法值，需要正确传递，在线加固必输。
 例如linux环境下执行算法命令md5sum ：
@@ -35,17 +35,17 @@ d40cc11e4bddd643ecdf29cde729a12b
  * @method string getAppName() 获取app名称，非必输
  * @method void setAppName(string $AppName) 设置app名称，非必输
  * @method string getAppPkgName() 获取app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
  * @method void setAppPkgName(string $AppPkgName) 设置app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
  * @method string getAppFileName() 获取app的文件名，非必输。
  * @method void setAppFileName(string $AppFileName) 设置app的文件名，非必输。
  * @method string getAppVersion() 获取app版本号，非必输。
  * @method void setAppVersion(string $AppVersion) 设置app版本号，非必输。
- * @method string getAppType() 获取安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
- * @method void setAppType(string $AppType) 设置安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+ * @method string getAppType() 获取Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+ * @method void setAppType(string $AppType) 设置Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
  */
 class AndroidAppInfo extends AbstractModel
 {
@@ -74,7 +74,7 @@ d40cc11e4bddd643ecdf29cde729a12b
 
     /**
      * @var string app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
      */
     public $AppPkgName;
 
@@ -89,8 +89,8 @@ d40cc11e4bddd643ecdf29cde729a12b
     public $AppVersion;
 
     /**
-     * @var string 安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * @var string Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
      */
     public $AppType;
 
@@ -103,11 +103,11 @@ d40cc11e4bddd643ecdf29cde729a12b
      * @param string $AppUrl app下载链接，在线加固必输。
      * @param string $AppName app名称，非必输
      * @param string $AppPkgName app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
      * @param string $AppFileName app的文件名，非必输。
      * @param string $AppVersion app版本号，非必输。
-     * @param string $AppType 安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * @param string $AppType Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
      */
     function __construct()
     {

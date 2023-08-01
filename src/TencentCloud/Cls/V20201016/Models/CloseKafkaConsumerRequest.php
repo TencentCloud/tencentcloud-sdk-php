@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseKafkaConsumer请求参数结构体
  *
- * @method string getFromTopicId() 获取CLS对应的topic标识
- * @method void setFromTopicId(string $FromTopicId) 设置CLS对应的topic标识
+ * @method string getFromTopicId() 获取日志主题ID
+ * @method void setFromTopicId(string $FromTopicId) 设置日志主题ID
  */
 class CloseKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string CLS对应的topic标识
+     * @var string 日志主题ID
      */
     public $FromTopicId;
 
     /**
-     * @param string $FromTopicId CLS对应的topic标识
+     * @param string $FromTopicId 日志主题ID
      */
     function __construct()
     {

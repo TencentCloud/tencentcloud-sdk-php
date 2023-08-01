@@ -33,8 +33,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -45,8 +44,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -93,12 +91,14 @@ SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内�
 SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
 
 表单域的控件不能作为印章和签名控件
- * @method string getComponentName() 获取控件简称，不能超过30个字符
- * @method void setComponentName(string $ComponentName) 设置控件简称，不能超过30个字符
- * @method boolean getComponentRequired() 获取定义控件是否为必填项，默认为false
- * @method void setComponentRequired(boolean $ComponentRequired) 设置定义控件是否为必填项，默认为false
- * @method string getComponentRecipientId() 获取控件关联的签署方id
- * @method void setComponentRecipientId(string $ComponentRecipientId) 设置控件关联的签署方id
+ * @method string getComponentName() 获取控件简称，不超过30个字符
+ * @method void setComponentName(string $ComponentName) 设置控件简称，不超过30个字符
+ * @method boolean getComponentRequired() 获取控件是否为必填项，
+默认为false-非必填
+ * @method void setComponentRequired(boolean $ComponentRequired) 设置控件是否为必填项，
+默认为false-非必填
+ * @method string getComponentRecipientId() 获取控件关联的参与方ID，对应Recipient结构体中的RecipientId	
+ * @method void setComponentRecipientId(string $ComponentRecipientId) 设置控件关联的参与方ID，对应Recipient结构体中的RecipientId	
  * @method integer getFileIndex() 获取控件所属文件的序号 (文档中文件的排列序号，从0开始)
  * @method void setFileIndex(integer $FileIndex) 设置控件所属文件的序号 (文档中文件的排列序号，从0开始)
  * @method string getGenerateMode() 获取控件生成的方式：
@@ -353,10 +353,10 @@ SIGN_PAGING_SEAL - 可以指定印章ID
  * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置日期签署控件的字号，默认为 12
 
 签署区日期控件会转换成图片格式并带存证，需要通过字体决定图片大小
- * @method string getDocumentId() 获取控件所属文档的Id, 模块相关接口为空值
- * @method void setDocumentId(string $DocumentId) 设置控件所属文档的Id, 模块相关接口为空值
- * @method string getComponentDescription() 获取控件描述，不能超过30个字符
- * @method void setComponentDescription(string $ComponentDescription) 设置控件描述，不能超过30个字符
+ * @method string getDocumentId() 获取控件所属文档的Id, 模板相关接口为空值
+ * @method void setDocumentId(string $DocumentId) 设置控件所属文档的Id, 模板相关接口为空值
+ * @method string getComponentDescription() 获取控件描述，不超过30个字符
+ * @method void setComponentDescription(string $ComponentDescription) 设置控件描述，不超过30个字符
  * @method float getOffsetX() 获取指定关键字时横坐标偏移量，单位pt
  * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量，单位pt
  * @method float getOffsetY() 获取指定关键字时纵坐标偏移量，单位pt
@@ -365,16 +365,38 @@ SIGN_PAGING_SEAL - 可以指定印章ID
 如果不为空，属于平台企业预设控件；
  * @method void setChannelComponentId(string $ChannelComponentId) 设置平台企业控件ID。
 如果不为空，属于平台企业预设控件；
- * @method string getKeywordOrder() 获取指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+ * @method string getKeywordOrder() 获取指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
- * @method void setKeywordOrder(string $KeywordOrder) 设置指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+ * @method void setKeywordOrder(string $KeywordOrder) 设置指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
- * @method integer getKeywordPage() 获取指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
- * @method void setKeywordPage(integer $KeywordPage) 设置指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
- * @method string getRelativeLocation() 获取关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
- * @method void setRelativeLocation(string $RelativeLocation) 设置关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
- * @method array getKeywordIndexes() 获取关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
- * @method void setKeywordIndexes(array $KeywordIndexes) 设置关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+ * @method integer getKeywordPage() 获取指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+ * @method void setKeywordPage(integer $KeywordPage) 设置指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+ * @method string getRelativeLocation() 获取关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+ * @method void setRelativeLocation(string $RelativeLocation) 设置关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+ * @method array getKeywordIndexes() 获取关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+ * @method void setKeywordIndexes(array $KeywordIndexes) 设置关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
  * @method string getPlaceholder() 获取填写提示的内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlaceholder(string $Placeholder) 设置填写提示的内容
@@ -389,8 +411,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -424,17 +445,18 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     public $ComponentType;
 
     /**
-     * @var string 控件简称，不能超过30个字符
+     * @var string 控件简称，不超过30个字符
      */
     public $ComponentName;
 
     /**
-     * @var boolean 定义控件是否为必填项，默认为false
+     * @var boolean 控件是否为必填项，
+默认为false-非必填
      */
     public $ComponentRequired;
 
     /**
-     * @var string 控件关联的签署方id
+     * @var string 控件关联的参与方ID，对应Recipient结构体中的RecipientId	
      */
     public $ComponentRecipientId;
 
@@ -606,12 +628,12 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     public $ComponentDateFontSize;
 
     /**
-     * @var string 控件所属文档的Id, 模块相关接口为空值
+     * @var string 控件所属文档的Id, 模板相关接口为空值
      */
     public $DocumentId;
 
     /**
-     * @var string 控件描述，不能超过30个字符
+     * @var string 控件描述，不超过30个字符
      */
     public $ComponentDescription;
 
@@ -632,23 +654,34 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     public $ChannelComponentId;
 
     /**
-     * @var string 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * @var string 指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
      */
     public $KeywordOrder;
 
     /**
-     * @var integer 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * @var integer 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
      */
     public $KeywordPage;
 
     /**
-     * @var string 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * @var string 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      */
     public $RelativeLocation;
 
     /**
-     * @var array 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+     * @var array 关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      */
     public $KeywordIndexes;
 
@@ -665,8 +698,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -692,9 +724,10 @@ SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内�
 SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
 
 表单域的控件不能作为印章和签名控件
-     * @param string $ComponentName 控件简称，不能超过30个字符
-     * @param boolean $ComponentRequired 定义控件是否为必填项，默认为false
-     * @param string $ComponentRecipientId 控件关联的签署方id
+     * @param string $ComponentName 控件简称，不超过30个字符
+     * @param boolean $ComponentRequired 控件是否为必填项，
+默认为false-非必填
+     * @param string $ComponentRecipientId 控件关联的参与方ID，对应Recipient结构体中的RecipientId	
      * @param integer $FileIndex 控件所属文件的序号 (文档中文件的排列序号，从0开始)
      * @param string $GenerateMode 控件生成的方式：
 NORMAL - 普通控件
@@ -822,17 +855,28 @@ SIGN_PAGING_SEAL - 可以指定印章ID
      * @param integer $ComponentDateFontSize 日期签署控件的字号，默认为 12
 
 签署区日期控件会转换成图片格式并带存证，需要通过字体决定图片大小
-     * @param string $DocumentId 控件所属文档的Id, 模块相关接口为空值
-     * @param string $ComponentDescription 控件描述，不能超过30个字符
+     * @param string $DocumentId 控件所属文档的Id, 模板相关接口为空值
+     * @param string $ComponentDescription 控件描述，不超过30个字符
      * @param float $OffsetX 指定关键字时横坐标偏移量，单位pt
      * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
      * @param string $ChannelComponentId 平台企业控件ID。
 如果不为空，属于平台企业预设控件；
-     * @param string $KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * @param string $KeywordOrder 指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
-     * @param integer $KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
-     * @param string $RelativeLocation 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
-     * @param array $KeywordIndexes 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+     * @param integer $KeywordPage 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * @param string $RelativeLocation 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * @param array $KeywordIndexes 关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      * @param string $Placeholder 填写提示的内容
 注意：此字段可能返回 null，表示取不到有效值。
      */

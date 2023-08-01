@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEncryptPlan请求参数结构体
  *
- * @method integer getPlatformType() 获取平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
- * @method void setPlatformType(integer $PlatformType) 设置平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method integer getPlatformType() 获取平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method void setPlatformType(integer $PlatformType) 设置平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
  * @method integer getOrderType() 获取订单采购类型 1-免费试用 2-按年收费 3-按次收费
  * @method void setOrderType(integer $OrderType) 设置订单采购类型 1-免费试用 2-按年收费 3-按次收费
  * @method integer getEncryptOpType() 获取1-在线加固；2-输出工具
  * @method void setEncryptOpType(integer $EncryptOpType) 设置1-在线加固；2-输出工具
  * @method string getResourceId() 获取本次加固使用的资源id
  * @method void setResourceId(string $ResourceId) 设置本次加固使用的资源id
- * @method string getAppPkgName() 获取（条件过滤字段）安卓加固查询时，根据包名查询
- * @method void setAppPkgName(string $AppPkgName) 设置（条件过滤字段）安卓加固查询时，根据包名查询
- * @method string getAppType() 获取（条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
- * @method void setAppType(string $AppType) 设置（条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
+ * @method string getAppPkgName() 获取（条件过滤字段）加固查询时，根据包名查询
+ * @method void setAppPkgName(string $AppPkgName) 设置（条件过滤字段）加固查询时，根据包名查询
+ * @method string getAppType() 获取（条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
+ * @method void setAppType(string $AppType) 设置（条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
  */
 class DescribeEncryptPlanRequest extends AbstractModel
 {
     /**
-     * @var integer 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @var integer 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public $PlatformType;
 
@@ -56,22 +56,22 @@ class DescribeEncryptPlanRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string （条件过滤字段）安卓加固查询时，根据包名查询
+     * @var string （条件过滤字段）加固查询时，根据包名查询
      */
     public $AppPkgName;
 
     /**
-     * @var string （条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
+     * @var string （条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
      */
     public $AppType;
 
     /**
-     * @param integer $PlatformType 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param integer $PlatformType 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      * @param integer $OrderType 订单采购类型 1-免费试用 2-按年收费 3-按次收费
      * @param integer $EncryptOpType 1-在线加固；2-输出工具
      * @param string $ResourceId 本次加固使用的资源id
-     * @param string $AppPkgName （条件过滤字段）安卓加固查询时，根据包名查询
-     * @param string $AppType （条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
+     * @param string $AppPkgName （条件过滤字段）加固查询时，根据包名查询
+     * @param string $AppType （条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
      */
     function __construct()
     {

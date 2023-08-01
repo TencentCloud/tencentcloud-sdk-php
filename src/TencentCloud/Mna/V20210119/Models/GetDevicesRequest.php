@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
  * @method string getKeyword() 获取搜索设备的关键字（ID或者设备名），为空时匹配所有设备
  * @method void setKeyword(string $Keyword) 设置搜索设备的关键字（ID或者设备名），为空时匹配所有设备
+ * @method integer getDeviceType() 获取DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备
+ * @method void setDeviceType(integer $DeviceType) 设置DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备
  */
 class GetDevicesRequest extends AbstractModel
 {
@@ -45,9 +53,21 @@ class GetDevicesRequest extends AbstractModel
     public $Keyword;
 
     /**
+     * @var integer DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备
+     */
+    public $DeviceType;
+
+    /**
      * @param integer $PageSize 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
      * @param integer $PageNumber 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
      * @param string $Keyword 搜索设备的关键字（ID或者设备名），为空时匹配所有设备
+     * @param integer $DeviceType DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备
      */
     function __construct()
     {
@@ -72,6 +92,10 @@ class GetDevicesRequest extends AbstractModel
 
         if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
             $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

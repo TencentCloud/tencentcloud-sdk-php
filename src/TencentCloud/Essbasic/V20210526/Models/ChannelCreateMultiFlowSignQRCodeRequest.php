@@ -28,14 +28,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(string $TemplateId) 设置模版ID
  * @method string getFlowName() 获取签署流程名称，最大长度200个字符。
  * @method void setFlowName(string $FlowName) 设置签署流程名称，最大长度200个字符。
- * @method integer getMaxFlowNum() 获取最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
- * @method void setMaxFlowNum(integer $MaxFlowNum) 设置最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+ * @method integer getMaxFlowNum() 获取最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
+ * @method void setMaxFlowNum(integer $MaxFlowNum) 设置最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
  * @method integer getFlowEffectiveDay() 获取签署流程有效天数 默认7天 最高设置不超过30天
  * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置签署流程有效天数 默认7天 最高设置不超过30天
  * @method integer getQrEffectiveDay() 获取二维码有效天数 默认7天 最高设置不超过90天
  * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码有效天数 默认7天 最高设置不超过90天
- * @method array getRestrictions() 获取限制二维码用户条件
- * @method void setRestrictions(array $Restrictions) 设置限制二维码用户条件
+ * @method array getRestrictions() 获取指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署
+ * @method void setRestrictions(array $Restrictions) 设置指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署
  * @method string getCallbackUrl() 获取回调地址，最大长度1000个字符
 不传默认使用第三方应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
@@ -66,7 +72,9 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $FlowName;
 
     /**
-     * @var integer 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+     * @var integer 最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
      */
     public $MaxFlowNum;
 
@@ -81,7 +89,8 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $QrEffectiveDay;
 
     /**
-     * @var array 限制二维码用户条件
+     * @var array 指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署
      */
     public $Restrictions;
 
@@ -109,10 +118,13 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param string $TemplateId 模版ID
      * @param string $FlowName 签署流程名称，最大长度200个字符。
-     * @param integer $MaxFlowNum 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+     * @param integer $MaxFlowNum 最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
      * @param integer $FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
      * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
-     * @param array $Restrictions 限制二维码用户条件
+     * @param array $Restrictions 指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署
      * @param string $CallbackUrl 回调地址，最大长度1000个字符
 不传默认使用第三方应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败

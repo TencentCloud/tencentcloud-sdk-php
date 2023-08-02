@@ -76,6 +76,10 @@ filterType = 2表示用户使用 bindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotifyContentFormat(string $NotifyContentFormat) 设置推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicName() 获取订阅所属的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicName(string $TopicName) 设置订阅所属的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CmqSubscription extends AbstractModel
 {
@@ -156,6 +160,12 @@ filterType = 2表示用户使用 bindingKey 过滤。
     public $NotifyContentFormat;
 
     /**
+     * @var string 订阅所属的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicName;
+
+    /**
      * @param string $SubscriptionName 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
@@ -183,6 +193,8 @@ filterType = 2表示用户使用 bindingKey 过滤。
 （2）EXPONENTIAL_DECAY_RETRY，指数衰退重试。每次重试的间隔是指数递增的，例如开始 1s，后面是 2s，4s，8s...由于 Topic 消息的周期是一天，所以最多重试一天就把消息丢弃。默认值是 EXPONENTIAL_DECAY_RETRY。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NotifyContentFormat 推送内容的格式。取值：（1）JSON；（2）SIMPLIFIED，即 raw 格式。如果 protocol 是 queue，则取值必须为 SIMPLIFIED。如果 protocol 是 HTTP，两个值均可以，默认值是 JSON。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicName 订阅所属的主题名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ filterType = 2表示用户使用 bindingKey 过滤。
 
         if (array_key_exists("NotifyContentFormat",$param) and $param["NotifyContentFormat"] !== null) {
             $this->NotifyContentFormat = $param["NotifyContentFormat"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

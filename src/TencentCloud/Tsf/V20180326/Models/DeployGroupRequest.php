@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentProfileList(array $AgentProfileList) 设置部署agent的类型、版本
  * @method WarmupSetting getWarmupSetting() 获取预热参数配置
  * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热参数配置
+ * @method boolean getEnableBatchHealthCheck() 获取开启分批健康检查
+ * @method void setEnableBatchHealthCheck(boolean $EnableBatchHealthCheck) 设置开启分批健康检查
  */
 class DeployGroupRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class DeployGroupRequest extends AbstractModel
     public $WarmupSetting;
 
     /**
+     * @var boolean 开启分批健康检查
+     */
+    public $EnableBatchHealthCheck;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
      * @param string $StartupParameters 部署组启动参数
@@ -176,6 +183,7 @@ class DeployGroupRequest extends AbstractModel
      * @param string $JdkVersion JDK版本: 8或11 (openJDK只支持8)
      * @param array $AgentProfileList 部署agent的类型、版本
      * @param WarmupSetting $WarmupSetting 预热参数配置
+     * @param boolean $EnableBatchHealthCheck 开启分批健康检查
      */
     function __construct()
     {
@@ -271,6 +279,10 @@ class DeployGroupRequest extends AbstractModel
         if (array_key_exists("WarmupSetting",$param) and $param["WarmupSetting"] !== null) {
             $this->WarmupSetting = new WarmupSetting();
             $this->WarmupSetting->deserialize($param["WarmupSetting"]);
+        }
+
+        if (array_key_exists("EnableBatchHealthCheck",$param) and $param["EnableBatchHealthCheck"] !== null) {
+            $this->EnableBatchHealthCheck = $param["EnableBatchHealthCheck"];
         }
     }
 }

@@ -56,6 +56,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DeleteRocketMQGroupResponse DeleteRocketMQGroup(Models\DeleteRocketMQGroupRequest $req) 删除RocketMQ消费组
  * @method Models\DeleteRocketMQNamespaceResponse DeleteRocketMQNamespace(Models\DeleteRocketMQNamespaceRequest $req) 删除RocketMQ命名空间
  * @method Models\DeleteRocketMQTopicResponse DeleteRocketMQTopic(Models\DeleteRocketMQTopicRequest $req) 删除RocketMQ主题
+ * @method Models\DeleteRocketMQVipInstanceResponse DeleteRocketMQVipInstance(Models\DeleteRocketMQVipInstanceRequest $req) 删除RocketMQ专享实例
  * @method Models\DeleteRolesResponse DeleteRoles(Models\DeleteRolesRequest $req) 删除角色，支持批量。
  * @method Models\DeleteSubscriptionsResponse DeleteSubscriptions(Models\DeleteSubscriptionsRequest $req) 删除订阅关系
  * @method Models\DeleteTopicsResponse DeleteTopics(Models\DeleteTopicsRequest $req) 批量删除topics

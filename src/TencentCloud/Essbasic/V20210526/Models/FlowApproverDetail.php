@@ -39,46 +39,48 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproveName(string $ApproveName) 设置签署人姓名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproveStatus() 获取当前签署人的状态, 状态如下
-
-PENDING 待签署	
-FILLPENDING 待填写
-FILLACCEPT 填写完成	
-FILLREJECT 拒绝填写	
-WAITPICKUP 待领取	
-ACCEPT 已签署	
-REJECT 拒签 
-DEADLINE 过期没人处理 
-CANCEL 流程已撤回	
-FORWARD 已经转他人处理
-STOP 流程已终止	
-RELIEVED 解除协议（已解除）
+<br/>PENDING 待签署	
+<br/>FILLPENDING 待填写
+<br/>FILLACCEPT 填写完成	
+<br/>FILLREJECT 拒绝填写	
+<br/>WAITPICKUP 待领取	
+<br/>ACCEPT 已签署	
+<br/>REJECT 拒签 
+<br/>DEADLINE 过期没人处理 
+<br/>CANCEL 流程已撤回	
+<br/>FORWARD 已经转他人处理
+<br/>STOP 流程已终止	
+<br/>RELIEVED 解除协议（已解除）
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveStatus(string $ApproveStatus) 设置当前签署人的状态, 状态如下
-
-PENDING 待签署	
-FILLPENDING 待填写
-FILLACCEPT 填写完成	
-FILLREJECT 拒绝填写	
-WAITPICKUP 待领取	
-ACCEPT 已签署	
-REJECT 拒签 
-DEADLINE 过期没人处理 
-CANCEL 流程已撤回	
-FORWARD 已经转他人处理
-STOP 流程已终止	
-RELIEVED 解除协议（已解除）
+<br/>PENDING 待签署	
+<br/>FILLPENDING 待填写
+<br/>FILLACCEPT 填写完成	
+<br/>FILLREJECT 拒绝填写	
+<br/>WAITPICKUP 待领取	
+<br/>ACCEPT 已签署	
+<br/>REJECT 拒签 
+<br/>DEADLINE 过期没人处理 
+<br/>CANCEL 流程已撤回	
+<br/>FORWARD 已经转他人处理
+<br/>STOP 流程已终止	
+<br/>RELIEVED 解除协议（已解除）
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproveMessage() 获取签署人信息
+ * @method string getApproveMessage() 获取签署人自定义信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveMessage(string $ApproveMessage) 设置签署人信息
+ * @method void setApproveMessage(string $ApproveMessage) 设置签署人自定义信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApproveTime() 获取签署人签署时间戳，单位秒
  * @method void setApproveTime(integer $ApproveTime) 设置签署人签署时间戳，单位秒
- * @method string getApproveType() 获取参与者类型 (ORGANIZATION企业/PERSON个人)
+ * @method string getApproveType() 获取参与者类型 
+<br/>ORGANIZATION：企业签署人
+<br/>PERSON：个人签署人
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveType(string $ApproveType) 设置参与者类型 (ORGANIZATION企业/PERSON个人)
+ * @method void setApproveType(string $ApproveType) 设置参与者类型 
+<br/>ORGANIZATION：企业签署人
+<br/>PERSON：个人签署人
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverDetail extends AbstractModel
@@ -122,26 +124,25 @@ class FlowApproverDetail extends AbstractModel
 
     /**
      * @var string 当前签署人的状态, 状态如下
-
-PENDING 待签署	
-FILLPENDING 待填写
-FILLACCEPT 填写完成	
-FILLREJECT 拒绝填写	
-WAITPICKUP 待领取	
-ACCEPT 已签署	
-REJECT 拒签 
-DEADLINE 过期没人处理 
-CANCEL 流程已撤回	
-FORWARD 已经转他人处理
-STOP 流程已终止	
-RELIEVED 解除协议（已解除）
+<br/>PENDING 待签署	
+<br/>FILLPENDING 待填写
+<br/>FILLACCEPT 填写完成	
+<br/>FILLREJECT 拒绝填写	
+<br/>WAITPICKUP 待领取	
+<br/>ACCEPT 已签署	
+<br/>REJECT 拒签 
+<br/>DEADLINE 过期没人处理 
+<br/>CANCEL 流程已撤回	
+<br/>FORWARD 已经转他人处理
+<br/>STOP 流程已终止	
+<br/>RELIEVED 解除协议（已解除）
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveStatus;
 
     /**
-     * @var string 签署人信息
+     * @var string 签署人自定义信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveMessage;
@@ -152,7 +153,9 @@ RELIEVED 解除协议（已解除）
     public $ApproveTime;
 
     /**
-     * @var string 参与者类型 (ORGANIZATION企业/PERSON个人)
+     * @var string 参与者类型 
+<br/>ORGANIZATION：企业签署人
+<br/>PERSON：个人签署人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveType;
@@ -168,25 +171,26 @@ RELIEVED 解除协议（已解除）
      * @param string $ApproveName 签署人姓名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveStatus 当前签署人的状态, 状态如下
-
-PENDING 待签署	
-FILLPENDING 待填写
-FILLACCEPT 填写完成	
-FILLREJECT 拒绝填写	
-WAITPICKUP 待领取	
-ACCEPT 已签署	
-REJECT 拒签 
-DEADLINE 过期没人处理 
-CANCEL 流程已撤回	
-FORWARD 已经转他人处理
-STOP 流程已终止	
-RELIEVED 解除协议（已解除）
+<br/>PENDING 待签署	
+<br/>FILLPENDING 待填写
+<br/>FILLACCEPT 填写完成	
+<br/>FILLREJECT 拒绝填写	
+<br/>WAITPICKUP 待领取	
+<br/>ACCEPT 已签署	
+<br/>REJECT 拒签 
+<br/>DEADLINE 过期没人处理 
+<br/>CANCEL 流程已撤回	
+<br/>FORWARD 已经转他人处理
+<br/>STOP 流程已终止	
+<br/>RELIEVED 解除协议（已解除）
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproveMessage 签署人信息
+     * @param string $ApproveMessage 签署人自定义信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApproveTime 签署人签署时间戳，单位秒
-     * @param string $ApproveType 参与者类型 (ORGANIZATION企业/PERSON个人)
+     * @param string $ApproveType 参与者类型 
+<br/>ORGANIZATION：企业签署人
+<br/>PERSON：个人签署人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

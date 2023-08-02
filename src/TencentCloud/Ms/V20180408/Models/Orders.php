@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderId(string $OrderId) 设置订单号
  * @method integer getPlatformType() 获取平台类型整型值 
  * @method void setPlatformType(integer $PlatformType) 设置平台类型整型值 
- * @method string getPlatformTypeDesc() 获取平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
- * @method void setPlatformTypeDesc(string $PlatformTypeDesc) 设置平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method string getPlatformTypeDesc() 获取平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+ * @method void setPlatformTypeDesc(string $PlatformTypeDesc) 设置平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
  * @method integer getOrderType() 获取订单采购类型整型值
  * @method void setOrderType(integer $OrderType) 设置订单采购类型整型值
  * @method string getOrderTypeDesc() 获取订单采购类型描述： 1-免费试用 2-按年收费 3-按次收费
  * @method void setOrderTypeDesc(string $OrderTypeDesc) 设置订单采购类型描述： 1-免费试用 2-按年收费 3-按次收费
- * @method string getAppPkgName() 获取安卓包年收费加固的包名
- * @method void setAppPkgName(string $AppPkgName) 设置安卓包年收费加固的包名
+ * @method string getAppPkgName() 获取android包年收费加固的包名
+ * @method void setAppPkgName(string $AppPkgName) 设置android包年收费加固的包名
  * @method string getResourceId() 获取资源号
  * @method void setResourceId(string $ResourceId) 设置资源号
  * @method integer getResourceStatus() 获取资源状态整型值
@@ -76,7 +76,7 @@ class Orders extends AbstractModel
     public $PlatformType;
 
     /**
-     * @var string 平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @var string 平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public $PlatformTypeDesc;
 
@@ -91,7 +91,7 @@ class Orders extends AbstractModel
     public $OrderTypeDesc;
 
     /**
-     * @var string 安卓包年收费加固的包名
+     * @var string android包年收费加固的包名
      */
     public $AppPkgName;
 
@@ -169,10 +169,10 @@ class Orders extends AbstractModel
     /**
      * @param string $OrderId 订单号
      * @param integer $PlatformType 平台类型整型值 
-     * @param string $PlatformTypeDesc 平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param string $PlatformTypeDesc 平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      * @param integer $OrderType 订单采购类型整型值
      * @param string $OrderTypeDesc 订单采购类型描述： 1-免费试用 2-按年收费 3-按次收费
-     * @param string $AppPkgName 安卓包年收费加固的包名
+     * @param string $AppPkgName android包年收费加固的包名
      * @param string $ResourceId 资源号
      * @param integer $ResourceStatus 资源状态整型值
      * @param string $ResourceStatusDesc 资源状态描述

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置主机名，可为空
  * @method string getDepartmentId() 获取资产所属的部门ID
  * @method void setDepartmentId(string $DepartmentId) 设置资产所属的部门ID
+ * @method array getIpPortSet() 获取资产多节点：字段ip和端口
+ * @method void setIpPortSet(array $IpPortSet) 设置资产多节点：字段ip和端口
  */
 class ExternalDevice extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ExternalDevice extends AbstractModel
     public $DepartmentId;
 
     /**
+     * @var array 资产多节点：字段ip和端口
+     */
+    public $IpPortSet;
+
+    /**
      * @param string $OsName 操作系统名称，只能是Linux、Windows或MySQL
      * @param string $Ip IP地址
      * @param integer $Port 管理端口
      * @param string $Name 主机名，可为空
      * @param string $DepartmentId 资产所属的部门ID
+     * @param array $IpPortSet 资产多节点：字段ip和端口
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ExternalDevice extends AbstractModel
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
             $this->DepartmentId = $param["DepartmentId"];
+        }
+
+        if (array_key_exists("IpPortSet",$param) and $param["IpPortSet"] !== null) {
+            $this->IpPortSet = $param["IpPortSet"];
         }
     }
 }

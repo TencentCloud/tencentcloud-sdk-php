@@ -18,21 +18,21 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 渠道合作安卓加固策略信息
+ * 渠道合作Android加固策略信息
  *
  * @method integer getPlanId() 获取非必输字段，PlanId 是指本次加固使用的配置策略Id，可通过载入上次配置接口获取。其值非0时，代表引用对应的策略。
  * @method void setPlanId(integer $PlanId) 设置非必输字段，PlanId 是指本次加固使用的配置策略Id，可通过载入上次配置接口获取。其值非0时，代表引用对应的策略。
  * @method string getAppPkgName() 获取本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
  * @method void setAppPkgName(string $AppPkgName) 设置本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
- * @method string getAppType() 获取安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
+ * @method string getAppType() 获取android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
 
- * @method void setAppType(string $AppType) 设置安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+ * @method void setAppType(string $AppType) 设置android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
 
- * @method string getEncryptParam() 获取安卓加固必输字段。
+ * @method string getEncryptParam() 获取android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;
@@ -144,7 +144,7 @@ aab加固方案二
         "antimonitor": 1
     }
 }’
- * @method void setEncryptParam(string $EncryptParam) 设置安卓加固必输字段。
+ * @method void setEncryptParam(string $EncryptParam) 设置android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;
@@ -266,19 +266,19 @@ class AndroidPlan extends AbstractModel
 
     /**
      * @var string 本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
      */
     public $AppPkgName;
 
     /**
-     * @var string 安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * @var string android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
 
      */
     public $AppType;
 
     /**
-     * @var string 安卓加固必输字段。
+     * @var string android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;
@@ -396,11 +396,11 @@ aab加固方案二
     /**
      * @param integer $PlanId 非必输字段，PlanId 是指本次加固使用的配置策略Id，可通过载入上次配置接口获取。其值非0时，代表引用对应的策略。
      * @param string $AppPkgName 本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
-     * @param string $AppType 安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
+     * @param string $AppType android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
 
-     * @param string $EncryptParam 安卓加固必输字段。
+     * @param string $EncryptParam android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;

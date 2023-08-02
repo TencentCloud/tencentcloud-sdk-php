@@ -172,6 +172,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置Envoy网关配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableBatchHealthCheck() 获取批次是否开启健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableBatchHealthCheck(boolean $EnableBatchHealthCheck) 设置批次是否开启健康检查
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -404,6 +408,12 @@ class VmGroup extends AbstractModel
     public $GatewayConfig;
 
     /**
+     * @var boolean 批次是否开启健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableBatchHealthCheck;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -479,6 +489,8 @@ class VmGroup extends AbstractModel
      * @param WarmupSetting $WarmupSetting 预热属性配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayConfig $GatewayConfig Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableBatchHealthCheck 批次是否开启健康检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -652,6 +664,10 @@ class VmGroup extends AbstractModel
         if (array_key_exists("GatewayConfig",$param) and $param["GatewayConfig"] !== null) {
             $this->GatewayConfig = new GatewayConfig();
             $this->GatewayConfig->deserialize($param["GatewayConfig"]);
+        }
+
+        if (array_key_exists("EnableBatchHealthCheck",$param) and $param["EnableBatchHealthCheck"] !== null) {
+            $this->EnableBatchHealthCheck = $param["EnableBatchHealthCheck"];
         }
     }
 }

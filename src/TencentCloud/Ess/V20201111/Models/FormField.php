@@ -20,8 +20,72 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 电子文档的控件填充信息。按照控件类型进行相应的填充。
 
+当控件的 ComponentType='TEXT'时，FormField.ComponentValue填入文本内容
+```
+FormFiled输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "文本内容"
+}
+```
+当控件的 ComponentType='MULTI_LINE_TEXT'时，FormField.ComponentValue填入文本内容，支持自动换行。
+```
+FormFiled输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "多行文本内容"
+}
+```
+当控件的 ComponentType='CHECK_BOX'时，FormField.ComponentValue填入true或false文本
+```
+FormFiled输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "true"
+}
+```
+当控件的 ComponentType='FILL_IMAGE'时，FormField.ComponentValue填入图片的资源ID
+```
+FormFiled输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "yDwhsxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
+```
+当控件的 ComponentType='ATTACHMENT'时，FormField.ComponentValue填入附件图片的资源ID列表，以逗号分隔，单个附件控件最多支持6个资源ID；
+```
+FormFiled输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "yDwhsxxxxxxxxxxxxxxxxxxxxxxxxxx1,yDwhsxxxxxxxxxxxxxxxxxxxxxxxxxx2,yDwhsxxxxxxxxxxxxxxxxxxxxxxxxxx3"
+}
+```
+当控件的 ComponentType='SELECTOR'时，FormField.ComponentValue填入选择的选项内容；
+```
+FormFiled输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "选择的内容"
+}
+```
+当控件的 ComponentType='DATE'时，FormField.ComponentValue填入日期内容；
+```
+FormFiled输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "2023年01月01日"
+}
+```
+当控件的 ComponentType='DISTRICT'时，FormField.ComponentValue填入省市区内容；
+```
+FormFiled输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "广东省深圳市福田区"
+}
+```
 【数据表格传参说明】
-当模板的 ComponentType='DYNAMIC_TABLE'时，FormField.ComponentValue需要传递json格式的字符串参数，用于确定表头&填充数据表格（支持内容的单元格合并）
+当控件的 ComponentType='DYNAMIC_TABLE'时，FormField.ComponentValue需要传递json格式的字符串参数，用于确定表头&填充数据表格（支持内容的单元格合并）
 输入示例1：
 
 ```

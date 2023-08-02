@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFlowName() 获取签署流程名称,最大长度200个字符
  * @method void setFlowName(string $FlowName) 设置签署流程名称,最大长度200个字符
  * @method array getApprovers() 获取签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
  * @method void setApprovers(array $Approvers) 设置签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
  * @method string getFlowType() 获取签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
@@ -85,6 +87,7 @@ class CreateFlowRequest extends AbstractModel
 
     /**
      * @var array 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
      */
     public $Approvers;
 
@@ -172,6 +175,7 @@ false：有序签
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      * @param integer $DeadLine 签署流程的签署截止时间。

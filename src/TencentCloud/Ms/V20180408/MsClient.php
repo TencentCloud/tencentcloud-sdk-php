@@ -23,11 +23,17 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ms\V20180408\Models as Models;
 
 /**
- * @method Models\CancelEncryptTaskResponse CancelEncryptTask(Models\CancelEncryptTaskRequest $req) 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，取消渠道合作加固中的任务。
+ * @method Models\CancelEncryptTaskResponse CancelEncryptTask(Models\CancelEncryptTaskRequest $req) 上错服务器了
+
+该接口供渠道合作应用加固使用，接口调用有白名单用户限制，取消渠道合作加固中的任务。
  * @method Models\CreateBindInstanceResponse CreateBindInstance(Models\CreateBindInstanceRequest $req) 将应用和资源进行绑定。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\CreateCosSecKeyInstanceResponse CreateCosSecKeyInstance(Models\CreateCosSecKeyInstanceRequest $req) 获取云COS文件存储临时密钥，密钥仅限于临时上传文件，有访问限制和时效性，请保管好临时密钥。
- * @method Models\CreateEncryptInstanceResponse CreateEncryptInstance(Models\CreateEncryptInstanceRequest $req) 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于创建加固任务。
- * @method Models\CreateOrderInstanceResponse CreateOrderInstance(Models\CreateOrderInstanceRequest $req) 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。
+ * @method Models\CreateEncryptInstanceResponse CreateEncryptInstance(Models\CreateEncryptInstanceRequest $req) 上错服务器了
+
+该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于创建加固任务。
+ * @method Models\CreateOrderInstanceResponse CreateOrderInstance(Models\CreateOrderInstanceRequest $req) 上错服务器了
+
+该接口供渠道合作应用加固使用，接口调用有白名单用户限制。
 订单类型有：免费试用、按年收费、按次收费。
 应用加固支持的平台类型有：android加固 、ios源码混淆 、sdk加固、applet小程序加固。
  * @method Models\CreateResourceInstancesResponse CreateResourceInstances(Models\CreateResourceInstancesRequest $req) 用户可以使用该接口自建资源，只支持白名单用户
@@ -35,9 +41,13 @@ use TencentCloud\Ms\V20180408\Models as Models;
  * @method Models\CreateShieldPlanInstanceResponse CreateShieldPlanInstance(Models\CreateShieldPlanInstanceRequest $req) 对资源进行策略新增。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DeleteShieldInstancesResponse DeleteShieldInstances(Models\DeleteShieldInstancesRequest $req) 删除一个或者多个app加固信息。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DescribeApkDetectionResultResponse DescribeApkDetectionResult(Models\DescribeApkDetectionResultRequest $req) 该接口采用同步模式请求腾讯APK云检测服务，即时返回检测数据，需要用户用轮询的方式调用本接口来进行样本送检并获取检测结果(每隔60s发送一次请求，传相同的参数，重试30次)，一般情况下0.5h内会出检测结果，最长时间是3h。当Result为ok并且ResultList数组非空有值时，代表检测完毕，若长时间获取不到检测结果，请联系客服。
- * @method Models\DescribeEncryptInstancesResponse DescribeEncryptInstances(Models\DescribeEncryptInstancesRequest $req) 该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于查询加固任务，入参中的条件过滤字段均为精准匹配。支持功能点：1. 多任务分页查询  2.根据任务Id唯一值查询单记录
+ * @method Models\DescribeEncryptInstancesResponse DescribeEncryptInstances(Models\DescribeEncryptInstancesRequest $req) 上错服务器了
+
+该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于查询加固任务，入参中的条件过滤字段均为精准匹配。支持功能点：1. 多任务分页查询  2.根据任务Id唯一值查询单记录
  * @method Models\DescribeEncryptPlanResponse DescribeEncryptPlan(Models\DescribeEncryptPlanRequest $req) 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。入参中的条件过滤字段均为精准匹配。
- * @method Models\DescribeOrderInstancesResponse DescribeOrderInstances(Models\DescribeOrderInstancesRequest $req) 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。 接口返回的结果为：创建订单后，订单审批状态信息，以及与订单关联的资源状态等信息，入参中的条件过滤字段均为精准匹配。
+ * @method Models\DescribeOrderInstancesResponse DescribeOrderInstances(Models\DescribeOrderInstancesRequest $req) 上错服务器了
+
+该接口供渠道合作应用加固使用，接口调用有白名单用户限制。 接口返回的结果为：创建订单后，订单审批状态信息，以及与订单关联的资源状态等信息，入参中的条件过滤字段均为精准匹配。
 接口功能点：
 1.支持多订单分页查询；
 2.支持唯一订单号精准匹配查询；

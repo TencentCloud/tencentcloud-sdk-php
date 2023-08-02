@@ -88,6 +88,10 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrokerType(integer $BrokerType) 设置0表示pulsar，1表示rocketmq
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubscriptionCount() 获取订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubscriptionCount(integer $SubscriptionCount) 设置订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CmqTopic extends AbstractModel
 {
@@ -190,6 +194,12 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     public $BrokerType;
 
     /**
+     * @var integer 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubscriptionCount;
+
+    /**
      * @param string $TopicId 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 主题名称。
@@ -223,6 +233,8 @@ FilterType = 2表示用户使用 BindingKey 过滤。
      * @param integer $Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BrokerType 0表示pulsar，1表示rocketmq
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubscriptionCount 订阅数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -305,6 +317,10 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
         if (array_key_exists("BrokerType",$param) and $param["BrokerType"] !== null) {
             $this->BrokerType = $param["BrokerType"];
+        }
+
+        if (array_key_exists("SubscriptionCount",$param) and $param["SubscriptionCount"] !== null) {
+            $this->SubscriptionCount = $param["SubscriptionCount"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安卓加固结果
+ * Android加固结果
  *
  * @method string getResultId() 获取结果Id,用于查询加固结果
  * @method void setResultId(string $ResultId) 设置结果Id,用于查询加固结果
@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置与当前任务关联的资源Id
  * @method integer getOpUin() 获取本次任务发起者
  * @method void setOpUin(integer $OpUin) 设置本次任务发起者
- * @method string getAppType() 获取应用类型：安卓-apk; 安卓-aab;
- * @method void setAppType(string $AppType) 设置应用类型：安卓-apk; 安卓-aab;
+ * @method string getAppType() 获取应用类型：android-apk; android-aab;
+ * @method void setAppType(string $AppType) 设置应用类型：android-apk; android-aab;
  * @method string getAppPkgName() 获取应用包名
  * @method void setAppPkgName(string $AppPkgName) 设置应用包名
  * @method string getBindAppPkgName() 获取后台资源绑定的包名
@@ -52,36 +52,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置任务处理结束时间
  * @method integer getCostTime() 获取加固耗时（秒单位）
  * @method void setCostTime(integer $CostTime) 设置加固耗时（秒单位）
- * @method string getAppUrl() 获取在线加固-安卓应用原包下载链接
- * @method void setAppUrl(string $AppUrl) 设置在线加固-安卓应用原包下载链接
- * @method string getAppMd5() 获取在线加固-安卓应用文件MD5算法值
- * @method void setAppMd5(string $AppMd5) 设置在线加固-安卓应用文件MD5算法值
- * @method string getAppName() 获取在线加固-安卓应用应用名称
- * @method void setAppName(string $AppName) 设置在线加固-安卓应用应用名称
- * @method string getAppVersion() 获取在线加固-安卓应用版本；
- * @method void setAppVersion(string $AppVersion) 设置在线加固-安卓应用版本；
- * @method integer getAppSize() 获取在线加固-安卓应用大小
- * @method void setAppSize(integer $AppSize) 设置在线加固-安卓应用大小
- * @method string getOnlineToolVersion() 获取在线加固-安卓加固-腾讯云应用加固工具版本
- * @method void setOnlineToolVersion(string $OnlineToolVersion) 设置在线加固-安卓加固-腾讯云应用加固工具版本
- * @method string getEncryptAppMd5() 获取在线加固-安卓加固，加固成功后文件md5算法值
- * @method void setEncryptAppMd5(string $EncryptAppMd5) 设置在线加固-安卓加固，加固成功后文件md5算法值
- * @method integer getEncryptAppSize() 获取在线加固-安卓加固，加固成功后应用大小
- * @method void setEncryptAppSize(integer $EncryptAppSize) 设置在线加固-安卓加固，加固成功后应用大小
- * @method string getEncryptPkgUrl() 获取在线加固-安卓加固，加固包下载链接。
- * @method void setEncryptPkgUrl(string $EncryptPkgUrl) 设置在线加固-安卓加固，加固包下载链接。
- * @method string getOutputToolVersion() 获取输出工具-安卓加固-腾讯云输出工具版本
- * @method void setOutputToolVersion(string $OutputToolVersion) 设置输出工具-安卓加固-腾讯云输出工具版本
- * @method integer getOutputToolSize() 获取输出工具-安卓加固-工具大小
- * @method void setOutputToolSize(integer $OutputToolSize) 设置输出工具-安卓加固-工具大小
- * @method string getToolOutputTime() 获取输出工具-安卓加固-工具输出时间
- * @method void setToolOutputTime(string $ToolOutputTime) 设置输出工具-安卓加固-工具输出时间
- * @method string getToolExpireTime() 获取输出工具-安卓加固-工具到期时间
- * @method void setToolExpireTime(string $ToolExpireTime) 设置输出工具-安卓加固-工具到期时间
- * @method string getOutputToolUrl() 获取输出工具-安卓加固-输出工具下载链接
- * @method void setOutputToolUrl(string $OutputToolUrl) 设置输出工具-安卓加固-输出工具下载链接
- * @method AndroidPlan getAndroidPlan() 获取本次安卓加固策略信息
- * @method void setAndroidPlan(AndroidPlan $AndroidPlan) 设置本次安卓加固策略信息
+ * @method string getAppUrl() 获取在线加固-android应用原包下载链接
+ * @method void setAppUrl(string $AppUrl) 设置在线加固-android应用原包下载链接
+ * @method string getAppMd5() 获取在线加固-android应用文件MD5算法值
+ * @method void setAppMd5(string $AppMd5) 设置在线加固-android应用文件MD5算法值
+ * @method string getAppName() 获取在线加固-android应用应用名称
+ * @method void setAppName(string $AppName) 设置在线加固-android应用应用名称
+ * @method string getAppVersion() 获取在线加固-android应用版本；
+ * @method void setAppVersion(string $AppVersion) 设置在线加固-android应用版本；
+ * @method integer getAppSize() 获取在线加固-android应用大小
+ * @method void setAppSize(integer $AppSize) 设置在线加固-android应用大小
+ * @method string getOnlineToolVersion() 获取在线加固-android加固-腾讯云应用加固工具版本
+ * @method void setOnlineToolVersion(string $OnlineToolVersion) 设置在线加固-android加固-腾讯云应用加固工具版本
+ * @method string getEncryptAppMd5() 获取在线加固-android加固，加固成功后文件md5算法值
+ * @method void setEncryptAppMd5(string $EncryptAppMd5) 设置在线加固-android加固，加固成功后文件md5算法值
+ * @method integer getEncryptAppSize() 获取在线加固-android加固，加固成功后应用大小
+ * @method void setEncryptAppSize(integer $EncryptAppSize) 设置在线加固-android加固，加固成功后应用大小
+ * @method string getEncryptPkgUrl() 获取在线加固-android加固，加固包下载链接。
+ * @method void setEncryptPkgUrl(string $EncryptPkgUrl) 设置在线加固-android加固，加固包下载链接。
+ * @method string getOutputToolVersion() 获取输出工具-android加固-腾讯云输出工具版本
+ * @method void setOutputToolVersion(string $OutputToolVersion) 设置输出工具-android加固-腾讯云输出工具版本
+ * @method integer getOutputToolSize() 获取输出工具-android加固-工具大小
+ * @method void setOutputToolSize(integer $OutputToolSize) 设置输出工具-android加固-工具大小
+ * @method string getToolOutputTime() 获取输出工具-android加固-工具输出时间
+ * @method void setToolOutputTime(string $ToolOutputTime) 设置输出工具-android加固-工具输出时间
+ * @method string getToolExpireTime() 获取输出工具-android加固-工具到期时间
+ * @method void setToolExpireTime(string $ToolExpireTime) 设置输出工具-android加固-工具到期时间
+ * @method string getOutputToolUrl() 获取输出工具-android加固-输出工具下载链接
+ * @method void setOutputToolUrl(string $OutputToolUrl) 设置输出工具-android加固-输出工具下载链接
+ * @method AndroidPlan getAndroidPlan() 获取本次android加固策略信息
+ * @method void setAndroidPlan(AndroidPlan $AndroidPlan) 设置本次android加固策略信息
  */
 class AndroidResult extends AbstractModel
 {
@@ -106,7 +106,7 @@ class AndroidResult extends AbstractModel
     public $OpUin;
 
     /**
-     * @var string 应用类型：安卓-apk; 安卓-aab;
+     * @var string 应用类型：android-apk; android-aab;
      */
     public $AppType;
 
@@ -166,77 +166,77 @@ class AndroidResult extends AbstractModel
     public $CostTime;
 
     /**
-     * @var string 在线加固-安卓应用原包下载链接
+     * @var string 在线加固-android应用原包下载链接
      */
     public $AppUrl;
 
     /**
-     * @var string 在线加固-安卓应用文件MD5算法值
+     * @var string 在线加固-android应用文件MD5算法值
      */
     public $AppMd5;
 
     /**
-     * @var string 在线加固-安卓应用应用名称
+     * @var string 在线加固-android应用应用名称
      */
     public $AppName;
 
     /**
-     * @var string 在线加固-安卓应用版本；
+     * @var string 在线加固-android应用版本；
      */
     public $AppVersion;
 
     /**
-     * @var integer 在线加固-安卓应用大小
+     * @var integer 在线加固-android应用大小
      */
     public $AppSize;
 
     /**
-     * @var string 在线加固-安卓加固-腾讯云应用加固工具版本
+     * @var string 在线加固-android加固-腾讯云应用加固工具版本
      */
     public $OnlineToolVersion;
 
     /**
-     * @var string 在线加固-安卓加固，加固成功后文件md5算法值
+     * @var string 在线加固-android加固，加固成功后文件md5算法值
      */
     public $EncryptAppMd5;
 
     /**
-     * @var integer 在线加固-安卓加固，加固成功后应用大小
+     * @var integer 在线加固-android加固，加固成功后应用大小
      */
     public $EncryptAppSize;
 
     /**
-     * @var string 在线加固-安卓加固，加固包下载链接。
+     * @var string 在线加固-android加固，加固包下载链接。
      */
     public $EncryptPkgUrl;
 
     /**
-     * @var string 输出工具-安卓加固-腾讯云输出工具版本
+     * @var string 输出工具-android加固-腾讯云输出工具版本
      */
     public $OutputToolVersion;
 
     /**
-     * @var integer 输出工具-安卓加固-工具大小
+     * @var integer 输出工具-android加固-工具大小
      */
     public $OutputToolSize;
 
     /**
-     * @var string 输出工具-安卓加固-工具输出时间
+     * @var string 输出工具-android加固-工具输出时间
      */
     public $ToolOutputTime;
 
     /**
-     * @var string 输出工具-安卓加固-工具到期时间
+     * @var string 输出工具-android加固-工具到期时间
      */
     public $ToolExpireTime;
 
     /**
-     * @var string 输出工具-安卓加固-输出工具下载链接
+     * @var string 输出工具-android加固-输出工具下载链接
      */
     public $OutputToolUrl;
 
     /**
-     * @var AndroidPlan 本次安卓加固策略信息
+     * @var AndroidPlan 本次android加固策略信息
      */
     public $AndroidPlan;
 
@@ -245,7 +245,7 @@ class AndroidResult extends AbstractModel
      * @param string $OrderId 与当前任务关联的订单id
      * @param string $ResourceId 与当前任务关联的资源Id
      * @param integer $OpUin 本次任务发起者
-     * @param string $AppType 应用类型：安卓-apk; 安卓-aab;
+     * @param string $AppType 应用类型：android-apk; android-aab;
      * @param string $AppPkgName 应用包名
      * @param string $BindAppPkgName 后台资源绑定的包名
      * @param integer $EncryptState 加固结果
@@ -257,21 +257,21 @@ class AndroidResult extends AbstractModel
      * @param string $StartTime 任务开始处理时间
      * @param string $EndTime 任务处理结束时间
      * @param integer $CostTime 加固耗时（秒单位）
-     * @param string $AppUrl 在线加固-安卓应用原包下载链接
-     * @param string $AppMd5 在线加固-安卓应用文件MD5算法值
-     * @param string $AppName 在线加固-安卓应用应用名称
-     * @param string $AppVersion 在线加固-安卓应用版本；
-     * @param integer $AppSize 在线加固-安卓应用大小
-     * @param string $OnlineToolVersion 在线加固-安卓加固-腾讯云应用加固工具版本
-     * @param string $EncryptAppMd5 在线加固-安卓加固，加固成功后文件md5算法值
-     * @param integer $EncryptAppSize 在线加固-安卓加固，加固成功后应用大小
-     * @param string $EncryptPkgUrl 在线加固-安卓加固，加固包下载链接。
-     * @param string $OutputToolVersion 输出工具-安卓加固-腾讯云输出工具版本
-     * @param integer $OutputToolSize 输出工具-安卓加固-工具大小
-     * @param string $ToolOutputTime 输出工具-安卓加固-工具输出时间
-     * @param string $ToolExpireTime 输出工具-安卓加固-工具到期时间
-     * @param string $OutputToolUrl 输出工具-安卓加固-输出工具下载链接
-     * @param AndroidPlan $AndroidPlan 本次安卓加固策略信息
+     * @param string $AppUrl 在线加固-android应用原包下载链接
+     * @param string $AppMd5 在线加固-android应用文件MD5算法值
+     * @param string $AppName 在线加固-android应用应用名称
+     * @param string $AppVersion 在线加固-android应用版本；
+     * @param integer $AppSize 在线加固-android应用大小
+     * @param string $OnlineToolVersion 在线加固-android加固-腾讯云应用加固工具版本
+     * @param string $EncryptAppMd5 在线加固-android加固，加固成功后文件md5算法值
+     * @param integer $EncryptAppSize 在线加固-android加固，加固成功后应用大小
+     * @param string $EncryptPkgUrl 在线加固-android加固，加固包下载链接。
+     * @param string $OutputToolVersion 输出工具-android加固-腾讯云输出工具版本
+     * @param integer $OutputToolSize 输出工具-android加固-工具大小
+     * @param string $ToolOutputTime 输出工具-android加固-工具输出时间
+     * @param string $ToolExpireTime 输出工具-android加固-工具到期时间
+     * @param string $OutputToolUrl 输出工具-android加固-输出工具下载链接
+     * @param AndroidPlan $AndroidPlan 本次android加固策略信息
      */
     function __construct()
     {

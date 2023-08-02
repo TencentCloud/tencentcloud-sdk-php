@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPayTime() 获取扣费时间
  * @method void setPayTime(string $PayTime) 设置扣费时间
- * @method integer getCoresCnt() 获取计费核数
- * @method void setCoresCnt(integer $CoresCnt) 设置计费核数
+ * @method integer getCoresCnt() 获取计费核数(已废弃)
+ * @method void setCoresCnt(integer $CoresCnt) 设置计费核数(已废弃)
  */
 class SoftQuotaDayInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SoftQuotaDayInfo extends AbstractModel
     public $PayTime;
 
     /**
-     * @var integer 计费核数
+     * @var integer 计费核数(已废弃)
      */
     public $CoresCnt;
 
     /**
      * @param string $PayTime 扣费时间
-     * @param integer $CoresCnt 计费核数
+     * @param integer $CoresCnt 计费核数(已废弃)
      */
     function __construct()
     {

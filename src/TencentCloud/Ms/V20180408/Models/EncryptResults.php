@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 渠道合作加固结果信息
  *
- * @method integer getPlatformType() 获取平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
- * @method void setPlatformType(integer $PlatformType) 设置平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
- * @method string getPlatformDesc() 获取平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
- * @method void setPlatformDesc(string $PlatformDesc) 设置平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+ * @method integer getPlatformType() 获取平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+ * @method void setPlatformType(integer $PlatformType) 设置平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+ * @method string getPlatformDesc() 获取平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+ * @method void setPlatformDesc(string $PlatformDesc) 设置平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
  * @method integer getOrderType() 获取订单采购类型枚举值， 1-免费试用 2-按年收费 3-按次收费
  * @method void setOrderType(integer $OrderType) 设置订单采购类型枚举值， 1-免费试用 2-按年收费 3-按次收费
  * @method string getOrderTypeDesc() 获取订单采购类型 描述：1-免费试用 2-按年收费 3-按次收费
@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置与当前任务关联的资源Id
  * @method string getOrderId() 获取与当前任务关联的订单Id
  * @method void setOrderId(string $OrderId) 设置与当前任务关联的订单Id
- * @method AndroidResult getAndroidResult() 获取对应PlatformType平台类型值   1-android安卓加固结果
+ * @method AndroidResult getAndroidResult() 获取对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAndroidResult(AndroidResult $AndroidResult) 设置对应PlatformType平台类型值   1-android安卓加固结果
+ * @method void setAndroidResult(AndroidResult $AndroidResult) 设置对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method IOSResult getIOSResult() 获取对应PlatformType平台类型值   2-ios源码混淆加固结果
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,12 +56,12 @@ use TencentCloud\Common\AbstractModel;
 class EncryptResults extends AbstractModel
 {
     /**
-     * @var integer 平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * @var integer 平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
      */
     public $PlatformType;
 
     /**
-     * @var string 平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * @var string 平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
      */
     public $PlatformDesc;
 
@@ -96,7 +96,7 @@ class EncryptResults extends AbstractModel
     public $OrderId;
 
     /**
-     * @var AndroidResult 对应PlatformType平台类型值   1-android安卓加固结果
+     * @var AndroidResult 对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AndroidResult;
@@ -120,15 +120,15 @@ class EncryptResults extends AbstractModel
     public $AppletResult;
 
     /**
-     * @param integer $PlatformType 平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
-     * @param string $PlatformDesc 平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * @param integer $PlatformType 平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * @param string $PlatformDesc 平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
      * @param integer $OrderType 订单采购类型枚举值， 1-免费试用 2-按年收费 3-按次收费
      * @param string $OrderTypeDesc 订单采购类型 描述：1-免费试用 2-按年收费 3-按次收费
      * @param integer $EncryptOpType 枚举值：1-在线加固 或 2-输出工具加固
      * @param string $EncryptOpTypeDesc 描述：1-在线加固 或 2-输出工具加固
      * @param string $ResourceId 与当前任务关联的资源Id
      * @param string $OrderId 与当前任务关联的订单Id
-     * @param AndroidResult $AndroidResult 对应PlatformType平台类型值   1-android安卓加固结果
+     * @param AndroidResult $AndroidResult 对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IOSResult $IOSResult 对应PlatformType平台类型值   2-ios源码混淆加固结果
 注意：此字段可能返回 null，表示取不到有效值。

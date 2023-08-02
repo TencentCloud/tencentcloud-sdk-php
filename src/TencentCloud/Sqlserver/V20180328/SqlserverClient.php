@@ -68,6 +68,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeDBsNormalResponse DescribeDBsNormal(Models\DescribeDBsNormalRequest $req) 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
  * @method Models\DescribeFlowStatusResponse DescribeFlowStatus(Models\DescribeFlowStatusRequest $req) 本接口(DescribeFlowStatus)用于查询流程状态。
  * @method Models\DescribeIncrementalMigrationResponse DescribeIncrementalMigration(Models\DescribeIncrementalMigrationRequest $req) 本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
+ * @method Models\DescribeInstanceByOrdersResponse DescribeInstanceByOrders(Models\DescribeInstanceByOrdersRequest $req) 本接口（DescribeInstanceByOrders）用于根据订单号查询资源ID
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 该接口（DescribeInstanceParams）用于查询实例的参数列表。
  * @method Models\DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(Models\DescribeMaintenanceSpanRequest $req) 本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。

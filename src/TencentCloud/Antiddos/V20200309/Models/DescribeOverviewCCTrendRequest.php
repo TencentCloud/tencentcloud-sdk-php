@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置统计结束时间
  * @method string getMetricName() 获取指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
  * @method void setMetricName(string $MetricName) 设置指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
  * @method array getIpList() 获取资源的IP
  * @method void setIpList(array $IpList) 设置资源的IP
  * @method string getId() 获取资源实例ID
@@ -58,7 +58,7 @@ class DescribeOverviewCCTrendRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
      */
     public $Business;
 
@@ -77,7 +77,7 @@ class DescribeOverviewCCTrendRequest extends AbstractModel
      * @param string $StartTime 统计开始时间
      * @param string $EndTime 统计结束时间
      * @param string $MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
      * @param array $IpList 资源的IP
      * @param string $Id 资源实例ID
      */

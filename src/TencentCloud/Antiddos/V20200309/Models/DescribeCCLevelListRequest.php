@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCCLevelList请求参数结构体
  *
- * @method string getBusiness() 获取大禹子产品代号（bgp-multip表示高防包）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgp-multip表示高防包）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgp-multip表示高防包）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgp-multip表示高防包）
  * @method integer getOffset() 获取页起始偏移，取值为(页码-1)*一页条数
  * @method void setOffset(integer $Offset) 设置页起始偏移，取值为(页码-1)*一页条数
  * @method integer getLimit() 获取一页条数
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCCLevelListRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgp-multip表示高防包）
+     * @var string DDoS防护子产品代号（bgp-multip表示高防包）
      */
     public $Business;
 
@@ -52,7 +52,7 @@ class DescribeCCLevelListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $Business 大禹子产品代号（bgp-multip表示高防包）
+     * @param string $Business DDoS防护子产品代号（bgp-multip表示高防包）
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数
      * @param string $InstanceId 指定实例Id

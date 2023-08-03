@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 访问来源信息
  *
- * @method string getIp() 获取来源IP
- * @method void setIp(string $Ip) 设置来源IP
- * @method integer getConn() 获取连接数
- * @method void setConn(integer $Conn) 设置连接数
+ * @method string getIp() 获取来源 IP 地址。
+ * @method void setIp(string $Ip) 设置来源 IP 地址。
+ * @method integer getConn() 获取客户端连接数量。
+ * @method void setConn(integer $Conn) 设置客户端连接数量。
  * @method integer getCmd() 获取命令
  * @method void setCmd(integer $Cmd) 设置命令
  */
 class SourceInfo extends AbstractModel
 {
     /**
-     * @var string 来源IP
+     * @var string 来源 IP 地址。
      */
     public $Ip;
 
     /**
-     * @var integer 连接数
+     * @var integer 客户端连接数量。
      */
     public $Conn;
 
@@ -45,8 +45,8 @@ class SourceInfo extends AbstractModel
     public $Cmd;
 
     /**
-     * @param string $Ip 来源IP
-     * @param integer $Conn 连接数
+     * @param string $Ip 来源 IP 地址。
+     * @param integer $Conn 客户端连接数量。
      * @param integer $Cmd 命令
      */
     function __construct()

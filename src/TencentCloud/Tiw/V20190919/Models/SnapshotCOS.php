@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 板书文件存储cos参数
  *
- * @method integer getUin() 获取cos所在腾讯云帐号uin
- * @method void setUin(integer $Uin) 设置cos所在腾讯云帐号uin
+ * @method integer getUin() 获取cos所在腾讯云账号uin
+ * @method void setUin(integer $Uin) 设置cos所在腾讯云账号uin
  * @method string getRegion() 获取cos所在地区
  * @method void setRegion(string $Region) 设置cos所在地区
  * @method string getBucket() 获取cos存储桶名称
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class SnapshotCOS extends AbstractModel
 {
     /**
-     * @var integer cos所在腾讯云帐号uin
+     * @var integer cos所在腾讯云账号uin
      */
     public $Uin;
 
@@ -59,7 +59,7 @@ class SnapshotCOS extends AbstractModel
     public $Domain;
 
     /**
-     * @param integer $Uin cos所在腾讯云帐号uin
+     * @param integer $Uin cos所在腾讯云账号uin
      * @param string $Region cos所在地区
      * @param string $Bucket cos存储桶名称
      * @param string $TargetDir 板书文件存储根目录

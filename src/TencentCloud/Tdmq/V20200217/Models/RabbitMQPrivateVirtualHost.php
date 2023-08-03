@@ -18,7 +18,7 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RabbitMQ专享版虚拟机
+ * RabbitMQ专享版云服务器
  *
  * @method string getVirtualHostName() 获取虚拟主机的名字
 注意：此字段可能返回 null，表示取不到有效值。

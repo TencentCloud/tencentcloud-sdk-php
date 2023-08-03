@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatistics() 获取统计方式，仅支持sum
  * @method void setStatistics(string $Statistics) 设置统计方式，仅支持sum
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP）
  * @method integer getPeriod() 获取统计周期，可取值60，300，1800，3600， 21600，86400，单位秒
  * @method void setPeriod(integer $Period) 设置统计周期，可取值60，300，1800，3600， 21600，86400，单位秒
  * @method string getStartTime() 获取统计开始时间。 如2020-02-01 12:04:12
@@ -45,7 +45,7 @@ class DescribeBizHttpStatusRequest extends AbstractModel
     public $Statistics;
 
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP）
      */
     public $Business;
 
@@ -81,7 +81,7 @@ class DescribeBizHttpStatusRequest extends AbstractModel
 
     /**
      * @param string $Statistics 统计方式，仅支持sum
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP）
      * @param integer $Period 统计周期，可取值60，300，1800，3600， 21600，86400，单位秒
      * @param string $StartTime 统计开始时间。 如2020-02-01 12:04:12
      * @param string $EndTime 统计结束时间。如2020-02-03 18:03:23

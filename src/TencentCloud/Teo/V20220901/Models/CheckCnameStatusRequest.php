@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckCnameStatus请求参数结构体
  *
- * @method string getZoneId() 获取站点ID。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
- * @method array getRecordNames() 获取记录名称列表。
- * @method void setRecordNames(array $RecordNames) 设置记录名称列表。
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method array getRecordNames() 获取加速域名列表。
+ * @method void setRecordNames(array $RecordNames) 设置加速域名列表。
  */
 class CheckCnameStatusRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID。
+     * @var string 站点 ID。
      */
     public $ZoneId;
 
     /**
-     * @var array 记录名称列表。
+     * @var array 加速域名列表。
      */
     public $RecordNames;
 
     /**
-     * @param string $ZoneId 站点ID。
-     * @param array $RecordNames 记录名称列表。
+     * @param string $ZoneId 站点 ID。
+     * @param array $RecordNames 加速域名列表。
      */
     function __construct()
     {

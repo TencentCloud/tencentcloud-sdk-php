@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败
+EvidenceStatusFailed  出证任务执行失败
  * @method void setStatus(string $Status) 设置出证任务执行的状态, 分布表示下面的含义
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败
+EvidenceStatusFailed  出证任务执行失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,7 +50,7 @@ class DescribeFlowEvidenceReportResponse extends AbstractModel
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败
+EvidenceStatusFailed  出证任务执行失败
      */
     public $Status;
 
@@ -66,7 +66,7 @@ EvidenceStatusFailed  出征任务执行失败
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败
+EvidenceStatusFailed  出证任务执行失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNewDomainRules请求参数结构体
  *
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP）
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
  * @method NewL7RuleEntry getRule() 获取域名转发规则
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyNewDomainRulesRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP）
      */
     public $Business;
 
@@ -45,7 +45,7 @@ class ModifyNewDomainRulesRequest extends AbstractModel
     public $Rule;
 
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP）
      * @param string $Id 资源ID
      * @param NewL7RuleEntry $Rule 域名转发规则
      */

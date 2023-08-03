@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatistics() 获取统计方式，可取值max, min, avg, sum, 如统计纬度是流量速率或包量速率，仅可取值max
  * @method void setStatistics(string $Statistics) 设置统计方式，可取值max, min, avg, sum, 如统计纬度是流量速率或包量速率，仅可取值max
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP）
  * @method integer getPeriod() 获取统计周期，可取值60，300，1800，3600，21600，86400，单位秒
  * @method void setPeriod(integer $Period) 设置统计周期，可取值60，300，1800，3600，21600，86400，单位秒
  * @method string getStartTime() 获取统计开始时间。 例：“2020-09-22 00:00:00”
@@ -53,7 +53,7 @@ class DescribeBizTrendRequest extends AbstractModel
     public $Statistics;
 
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP）
      */
     public $Business;
 
@@ -101,7 +101,7 @@ domain：域名业务
 
     /**
      * @param string $Statistics 统计方式，可取值max, min, avg, sum, 如统计纬度是流量速率或包量速率，仅可取值max
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP）
      * @param integer $Period 统计周期，可取值60，300，1800，3600，21600，86400，单位秒
      * @param string $StartTime 统计开始时间。 例：“2020-09-22 00:00:00”
      * @param string $EndTime 统计结束时间。 例：“2020-09-22 00:00:00”

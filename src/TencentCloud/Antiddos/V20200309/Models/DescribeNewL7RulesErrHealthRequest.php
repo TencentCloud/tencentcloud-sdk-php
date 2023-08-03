@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNewL7RulesErrHealth请求参数结构体
  *
- * @method string getBusiness() 获取大禹子产品代号(bgpip表示高防IP)
- * @method void setBusiness(string $Business) 设置大禹子产品代号(bgpip表示高防IP)
+ * @method string getBusiness() 获取DDoS防护子产品代号(bgpip表示高防IP)
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号(bgpip表示高防IP)
  * @method array getRuleIdList() 获取规则Id列表
  * @method void setRuleIdList(array $RuleIdList) 设置规则Id列表
  */
 class DescribeNewL7RulesErrHealthRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号(bgpip表示高防IP)
+     * @var string DDoS防护子产品代号(bgpip表示高防IP)
      */
     public $Business;
 
@@ -38,7 +38,7 @@ class DescribeNewL7RulesErrHealthRequest extends AbstractModel
     public $RuleIdList;
 
     /**
-     * @param string $Business 大禹子产品代号(bgpip表示高防IP)
+     * @param string $Business DDoS防护子产品代号(bgpip表示高防IP)
      * @param array $RuleIdList 规则Id列表
      */
     function __construct()

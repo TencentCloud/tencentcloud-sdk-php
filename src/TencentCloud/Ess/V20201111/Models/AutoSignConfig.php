@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserInfo(UserThreeFactor $UserInfo) 设置自动签开通个人用户的三要素
  * @method string getCallbackUrl() 获取接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
  * @method void setCallbackUrl(string $CallbackUrl) 设置接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
  * @method boolean getCertInfoCallback() 获取是否回调证书信息
 false-不需要 (默认值)
 true-需要
@@ -43,11 +43,11 @@ true-需要
  * @method boolean getSealImgCallback() 获取是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要(
+true-需要
  * @method void setSealImgCallback(boolean $SealImgCallback) 设置是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要(
+true-需要
  * @method array getVerifyChannels() 获取开通时候的验证方式, 分布为
 
 WEIXINAPP : 微信人脸识别
@@ -77,7 +77,7 @@ class AutoSignConfig extends AbstractModel
     /**
      * @var string 接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
      */
     public $CallbackUrl;
 
@@ -99,7 +99,7 @@ true-需要
      * @var boolean 是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要(
+true-需要
      */
     public $SealImgCallback;
 
@@ -120,7 +120,7 @@ TELECOM : 运营商三要素验证
      * @param UserThreeFactor $UserInfo 自动签开通个人用户的三要素
      * @param string $CallbackUrl 接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
      * @param boolean $CertInfoCallback 是否回调证书信息
 false-不需要 (默认值)
 true-需要
@@ -130,7 +130,7 @@ true-需要
      * @param boolean $SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要(
+true-需要
      * @param array $VerifyChannels 开通时候的验证方式, 分布为
 
 WEIXINAPP : 微信人脸识别

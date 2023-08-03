@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthTag(string $AuthTag) 设置模板可见性, 
 全部可见-"all",
  部分可见-"part"
- * @method integer getAvailable() 获取当OperateType=UPADATE时，可以通过设置此字段对模板启停用状态进行操作。
+ * @method integer getAvailable() 获取当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
 若此字段值为0，则不会修改模板Available，
 1为启用模板，
 2为停用模板。
 启用后模板可以正常领取。停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。如果Available更新失败，会直接返回错误。
- * @method void setAvailable(integer $Available) 设置当OperateType=UPADATE时，可以通过设置此字段对模板启停用状态进行操作。
+ * @method void setAvailable(integer $Available) 设置当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
 若此字段值为0，则不会修改模板Available，
 1为启用模板，
 2为停用模板。
@@ -92,7 +92,7 @@ class OperateChannelTemplateRequest extends AbstractModel
     public $AuthTag;
 
     /**
-     * @var integer 当OperateType=UPADATE时，可以通过设置此字段对模板启停用状态进行操作。
+     * @var integer 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
 若此字段值为0，则不会修改模板Available，
 1为启用模板，
 2为停用模板。
@@ -119,7 +119,7 @@ class OperateChannelTemplateRequest extends AbstractModel
      * @param string $AuthTag 模板可见性, 
 全部可见-"all",
  部分可见-"part"
-     * @param integer $Available 当OperateType=UPADATE时，可以通过设置此字段对模板启停用状态进行操作。
+     * @param integer $Available 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
 若此字段值为0，则不会修改模板Available，
 1为启用模板，
 2为停用模板。

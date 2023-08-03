@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNewL7Rules请求参数结构体
  *
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP）
  * @method array getStatusList() 获取状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
  * @method void setStatusList(array $StatusList) 设置状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
  * @method string getDomain() 获取域名搜索，选填，当需要搜索域名请填写
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNewL7RulesRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP）
      */
     public $Business;
 
@@ -87,7 +87,7 @@ class DescribeNewL7RulesRequest extends AbstractModel
     public $Export;
 
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP）
      * @param array $StatusList 状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      * @param string $Domain 域名搜索，选填，当需要搜索域名请填写
      * @param string $Ip IP搜索，选填，当需要搜索IP请填写

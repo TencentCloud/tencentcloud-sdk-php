@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
 <br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
  * @method void setCanEditFlow(boolean $CanEditFlow) 设置是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
 <br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
- * @method boolean getCanEditFormField() 获取是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息
- * @method void setCanEditFormField(boolean $CanEditFormField) 设置是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息
+ * @method boolean getCanEditFormField() 获取是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息
+ * @method void setCanEditFormField(boolean $CanEditFormField) 设置是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息
  * @method boolean getHideShowFlowName() 获取发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
 <br/>false:发起页面不隐藏合同名称展示
@@ -97,10 +97,10 @@ class CreateFlowOption extends AbstractModel
     public $CanEditFlow;
 
     /**
-     * @var boolean 是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息
+     * @var boolean 是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息
      */
     public $CanEditFormField;
 
@@ -163,10 +163,10 @@ class CreateFlowOption extends AbstractModel
     /**
      * @param boolean $CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
 <br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
-     * @param boolean $CanEditFormField 是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息
+     * @param boolean $CanEditFormField 是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息
      * @param boolean $HideShowFlowName 发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
 <br/>false:发起页面不隐藏合同名称展示

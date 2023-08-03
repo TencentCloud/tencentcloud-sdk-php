@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 当设置值为0时，表示采用默认值；
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method integer getOtherThresholdFlag() 获取配置其他阈值标志位，1表示配置其他阈值
  * @method void setOtherThresholdFlag(integer $OtherThresholdFlag) 设置配置其他阈值标志位，1表示配置其他阈值
  * @method integer getSynFloodThreshold() 获取SYN FLOOD流量阈值
@@ -65,7 +65,7 @@ class ModifyDDoSThresholdRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public $Business;
 
@@ -128,7 +128,7 @@ class ModifyDDoSThresholdRequest extends AbstractModel
      * @param integer $Threshold DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
 当设置值为0时，表示采用默认值；
      * @param string $Id 资源ID
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param integer $OtherThresholdFlag 配置其他阈值标志位，1表示配置其他阈值
      * @param integer $SynFloodThreshold SYN FLOOD流量阈值
      * @param integer $SynFloodPktThreshold SYN FLOOD包量阈值

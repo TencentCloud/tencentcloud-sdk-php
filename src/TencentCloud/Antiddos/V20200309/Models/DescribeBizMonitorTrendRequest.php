@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBizMonitorTrend请求参数结构体
  *
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP）
  * @method string getStartTime() 获取统计开始时间。 例：“2020-09-22 00:00:00”
  * @method void setStartTime(string $StartTime) 设置统计开始时间。 例：“2020-09-22 00:00:00”
  * @method string getEndTime() 获取统计结束时间。 例：“2020-09-22 00:00:00”
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBizMonitorTrendRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP）
      */
     public $Business;
 
@@ -66,7 +66,7 @@ class DescribeBizMonitorTrendRequest extends AbstractModel
     public $Period;
 
     /**
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP）
      * @param string $StartTime 统计开始时间。 例：“2020-09-22 00:00:00”
      * @param string $EndTime 统计结束时间。 例：“2020-09-22 00:00:00”
      * @param string $Id 资源实例ID

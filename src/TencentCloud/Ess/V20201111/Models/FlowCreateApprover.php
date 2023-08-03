@@ -63,11 +63,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method string getApproverIdCardNumber() 获取签署方经办人证件号码
  * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署方经办人证件号码
  * @method string getRecipientId() 获取签署方经办人在模板中的参与方ID
-<br/>模版发起合同时，该参数为必填项
+<br/>模板发起合同时，该参数为必填项
 <br/>文件发起合同是，该参数无序传值
 
  * @method void setRecipientId(string $RecipientId) 设置签署方经办人在模板中的参与方ID
-<br/>模版发起合同时，该参数为必填项
+<br/>模板发起合同时，该参数为必填项
 <br/>文件发起合同是，该参数无序传值
 
  * @method array getVerifyChannel() 获取签署意愿确认渠道,WEIXINAPP:人脸识别
@@ -198,7 +198,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * @var string 签署方经办人在模板中的参与方ID
-<br/>模版发起合同时，该参数为必填项
+<br/>模板发起合同时，该参数为必填项
 <br/>文件发起合同是，该参数无序传值
 
      */
@@ -339,7 +339,7 @@ HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $ApproverIdCardNumber 签署方经办人证件号码
      * @param string $RecipientId 签署方经办人在模板中的参与方ID
-<br/>模版发起合同时，该参数为必填项
+<br/>模板发起合同时，该参数为必填项
 <br/>文件发起合同是，该参数无序传值
 
      * @param array $VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别

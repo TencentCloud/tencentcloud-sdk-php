@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJoinedTotal(integer $JoinedTotal) 设置已授权待激活的企业数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getActivedTotal() 获取已加入的企业数量
+ * @method integer getActivedTotal() 获取已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setActivedTotal(integer $ActivedTotal) 设置已加入的企业数量
+ * @method void setActivedTotal(integer $ActivedTotal) 设置已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExportUrl() 获取导出文件的url
 注意：此字段可能返回 null，表示取不到有效值。
@@ -39,6 +39,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getList() 获取成员企业信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置成员企业信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getActivatedTotal() 获取已加入的企业数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActivatedTotal(integer $ActivatedTotal) 设置已加入的企业数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -58,8 +62,9 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
     public $JoinedTotal;
 
     /**
-     * @var integer 已加入的企业数量
+     * @var integer 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ActivedTotal;
 
@@ -76,6 +81,12 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
     public $List;
 
     /**
+     * @var integer 已加入的企业数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActivatedTotal;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -85,11 +96,13 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JoinedTotal 已授权待激活的企业数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ActivedTotal 已加入的企业数量
+     * @param integer $ActivedTotal 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExportUrl 导出文件的url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $List 成员企业信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ActivatedTotal 已加入的企业数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -129,6 +142,10 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
+        }
+
+        if (array_key_exists("ActivatedTotal",$param) and $param["ActivatedTotal"] !== null) {
+            $this->ActivatedTotal = $param["ActivatedTotal"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

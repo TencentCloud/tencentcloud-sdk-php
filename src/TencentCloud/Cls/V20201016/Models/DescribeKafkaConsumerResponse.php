@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicID(string $TopicID) 设置KafkaConsumer 消费时使用的Topic参数
  * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]
  * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+ * @method KafkaConsumerContent getConsumerContent() 获取kafka协议消费数据格式
+ * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) 设置kafka协议消费数据格式
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class DescribeKafkaConsumerResponse extends AbstractModel
     public $Compression;
 
     /**
+     * @var KafkaConsumerContent kafka协议消费数据格式
+     */
+    public $ConsumerContent;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeKafkaConsumerResponse extends AbstractModel
      * @param boolean $Status Kafka协议消费是否打开
      * @param string $TopicID KafkaConsumer 消费时使用的Topic参数
      * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     * @param KafkaConsumerContent $ConsumerContent kafka协议消费数据格式
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +88,11 @@ class DescribeKafkaConsumerResponse extends AbstractModel
 
         if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
             $this->Compression = $param["Compression"];
+        }
+
+        if (array_key_exists("ConsumerContent",$param) and $param["ConsumerContent"] !== null) {
+            $this->ConsumerContent = new KafkaConsumerContent();
+            $this->ConsumerContent->deserialize($param["ConsumerContent"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

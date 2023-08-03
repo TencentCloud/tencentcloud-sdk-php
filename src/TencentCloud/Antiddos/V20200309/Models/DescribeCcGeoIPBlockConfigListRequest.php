@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCcGeoIPBlockConfigList请求参数结构体
  *
- * @method string getBusiness() 获取大禹子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
  * @method integer getOffset() 获取页起始偏移，取值为(页码-1)*一页条数
  * @method void setOffset(integer $Offset) 设置页起始偏移，取值为(页码-1)*一页条数
  * @method integer getLimit() 获取一页条数
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCcGeoIPBlockConfigListRequest extends AbstractModel
 {
     /**
-     * @var string 大禹子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
+     * @var string DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
      */
     public $Business;
 
@@ -73,7 +73,7 @@ class DescribeCcGeoIPBlockConfigListRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @param string $Business 大禹子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
+     * @param string $Business DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数
      * @param string $InstanceId 指定特定实例ID

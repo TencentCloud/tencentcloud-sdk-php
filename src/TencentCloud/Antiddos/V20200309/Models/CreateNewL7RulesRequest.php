@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getRules() 获取规则列表
  * @method void setRules(array $Rules) 设置规则列表
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP）
  * @method array getIdList() 获取资源ID列表
  * @method void setIdList(array $IdList) 设置资源ID列表
  * @method array getVipList() 获取资源IP列表
@@ -37,7 +37,7 @@ class CreateNewL7RulesRequest extends AbstractModel
     public $Rules;
 
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP）
      */
     public $Business;
 
@@ -53,7 +53,7 @@ class CreateNewL7RulesRequest extends AbstractModel
 
     /**
      * @param array $Rules 规则列表
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP）
      * @param array $IdList 资源ID列表
      * @param array $VipList 资源IP列表
      */

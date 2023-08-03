@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取目标主题id
  * @method void setTopicId(string $TopicId) 设置目标主题id
- * @method string getRegion() 获取主题的的地域信息
- * @method void setRegion(string $Region) 设置主题的的地域信息
+ * @method string getRegion() 获取主题的地域信息
+ * @method void setRegion(string $Region) 设置主题的地域信息
  * @method integer getBizType() 获取主题类型：0为日志主题，1为指标主题
  * @method void setBizType(integer $BizType) 设置主题类型：0为日志主题，1为指标主题
  * @method string getMetricName() 获取指标名称
@@ -37,7 +37,7 @@ class ScheduledSqlResouceInfo extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 主题的的地域信息
+     * @var string 主题的地域信息
      */
     public $Region;
 
@@ -53,7 +53,7 @@ class ScheduledSqlResouceInfo extends AbstractModel
 
     /**
      * @param string $TopicId 目标主题id
-     * @param string $Region 主题的的地域信息
+     * @param string $Region 主题的地域信息
      * @param integer $BizType 主题类型：0为日志主题，1为指标主题
      * @param string $MetricName 指标名称
      */

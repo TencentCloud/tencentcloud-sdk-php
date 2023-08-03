@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
 <br/>true：允许在合同详情页展示控件
 <br/>false：不允许在合同详情页展示控件
 <br/>默认false，合同详情页不展示控件
- * @method boolean getShowTemplateComponent() 获取模版预览，允许展示模版控件信息
-<br/>true：允许在模版预览页展示控件
-<br/>false：不允许在模版预览页展示控件
-<br/>默认false，模版预览页不展示控件
- * @method void setShowTemplateComponent(boolean $ShowTemplateComponent) 设置模版预览，允许展示模版控件信息
-<br/>true：允许在模版预览页展示控件
-<br/>false：不允许在模版预览页展示控件
-<br/>默认false，模版预览页不展示控件
+ * @method boolean getShowTemplateComponent() 获取模板预览，允许展示模板控件信息
+<br/>true：允许在模板预览页展示控件
+<br/>false：不允许在模板预览页展示控件
+<br/>默认false，模板预览页不展示控件
+ * @method void setShowTemplateComponent(boolean $ShowTemplateComponent) 设置模板预览，允许展示模板控件信息
+<br/>true：允许在模板预览页展示控件
+<br/>false：不允许在模板预览页展示控件
+<br/>默认false，模板预览页不展示控件
  */
 class EmbedUrlOption extends AbstractModel
 {
@@ -48,10 +48,10 @@ class EmbedUrlOption extends AbstractModel
     public $ShowFlowDetailComponent;
 
     /**
-     * @var boolean 模版预览，允许展示模版控件信息
-<br/>true：允许在模版预览页展示控件
-<br/>false：不允许在模版预览页展示控件
-<br/>默认false，模版预览页不展示控件
+     * @var boolean 模板预览，允许展示模板控件信息
+<br/>true：允许在模板预览页展示控件
+<br/>false：不允许在模板预览页展示控件
+<br/>默认false，模板预览页不展示控件
      */
     public $ShowTemplateComponent;
 
@@ -60,10 +60,10 @@ class EmbedUrlOption extends AbstractModel
 <br/>true：允许在合同详情页展示控件
 <br/>false：不允许在合同详情页展示控件
 <br/>默认false，合同详情页不展示控件
-     * @param boolean $ShowTemplateComponent 模版预览，允许展示模版控件信息
-<br/>true：允许在模版预览页展示控件
-<br/>false：不允许在模版预览页展示控件
-<br/>默认false，模版预览页不展示控件
+     * @param boolean $ShowTemplateComponent 模板预览，允许展示模板控件信息
+<br/>true：允许在模板预览页展示控件
+<br/>false：不允许在模板预览页展示控件
+<br/>默认false，模板预览页不展示控件
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置统计结束时间
  * @method string getMetricName() 获取指标，取值[bps(攻击流量带宽，pps(攻击包速率))]
  * @method void setMetricName(string $MetricName) 设置指标，取值[bps(攻击流量带宽，pps(攻击包速率))]
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
  * @method array getIpList() 获取资源实例的IP列表
  * @method void setIpList(array $IpList) 设置资源实例的IP列表
  * @method string getId() 获取资源实例ID
@@ -58,7 +58,7 @@ class DescribeOverviewDDoSTrendRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
      */
     public $Business;
 
@@ -77,7 +77,7 @@ class DescribeOverviewDDoSTrendRequest extends AbstractModel
      * @param string $StartTime 统计开始时间
      * @param string $EndTime 统计结束时间
      * @param string $MetricName 指标，取值[bps(攻击流量带宽，pps(攻击包速率))]
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP；bgp-multip表示高防包；basic表示DDoS基础防护）
      * @param array $IpList 资源实例的IP列表
      * @param string $Id 资源实例ID
      */

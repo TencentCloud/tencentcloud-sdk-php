@@ -56,7 +56,7 @@ use TencentCloud\Tiw\V20190919\Models as Models;
 2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
 
  * @method Models\DescribeTranscodeResponse DescribeTranscode(Models\DescribeTranscodeRequest $req) 查询文档转码任务的执行进度与转码结果
- * @method Models\DescribeTranscodeByUrlResponse DescribeTranscodeByUrl(Models\DescribeTranscodeByUrlRequest $req) 通过文档URL查询转码任务，返回最近的一次转码结果
+ * @method Models\DescribeTranscodeByUrlResponse DescribeTranscodeByUrl(Models\DescribeTranscodeByUrlRequest $req) 通过文档URL查询转码任务，返回最近一次的转码任务状态
  * @method Models\DescribeTranscodeCallbackResponse DescribeTranscodeCallback(Models\DescribeTranscodeCallbackRequest $req) 查询文档转码回调地址
  * @method Models\DescribeTranscodeSearchResponse DescribeTranscodeSearch(Models\DescribeTranscodeSearchRequest $req) 按文档名称搜索转码任务
  * @method Models\DescribeUsageSummaryResponse DescribeUsageSummary(Models\DescribeUsageSummaryRequest $req) 查询指定时间段内子产品的用量汇总

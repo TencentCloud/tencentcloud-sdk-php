@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() 获取资源ID
  * @method void setId(string $Id) 设置资源ID
- * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
- * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+ * @method string getBusiness() 获取DDoS防护子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+ * @method void setBusiness(string $Business) 设置DDoS防护子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method string getMethod() 获取=get表示读取防护等级；=set表示修改防护等级
  * @method void setMethod(string $Method) 设置=get表示读取防护等级；=set表示修改防护等级
  * @method string getDDoSLevel() 获取防护等级，取值[low,middle,high]；当Method=set时必填
@@ -37,7 +37,7 @@ class ModifyDDoSLevelRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @var string DDoS防护子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public $Business;
 
@@ -53,7 +53,7 @@ class ModifyDDoSLevelRequest extends AbstractModel
 
     /**
      * @param string $Id 资源ID
-     * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @param string $Business DDoS防护子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param string $Method =get表示读取防护等级；=set表示修改防护等级
      * @param string $DDoSLevel 防护等级，取值[low,middle,high]；当Method=set时必填
      */

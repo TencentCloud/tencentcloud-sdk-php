@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddResourceTag请求参数结构体
  *
- * @method string getTagKey() 获取标签键
- * @method void setTagKey(string $TagKey) 设置标签键
- * @method string getTagValue() 获取标签值
- * @method void setTagValue(string $TagValue) 设置标签值
- * @method string getResource() 获取[ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
- * @method void setResource(string $Resource) 设置[ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+ * @method string getTagKey() 获取需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+ * @method void setTagKey(string $TagKey) 设置需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+ * @method string getTagValue() 获取需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+ * @method void setTagValue(string $TagValue) 设置需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+ * @method string getResource() 获取待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
+ * @method void setResource(string $Resource) 设置待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
  */
 class AddResourceTagRequest extends AbstractModel
 {
     /**
-     * @var string 标签键
+     * @var string 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public $TagKey;
 
     /**
-     * @var string 标签值
+     * @var string 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public $TagValue;
 
     /**
-     * @var string [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+     * @var string 待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
      */
     public $Resource;
 
     /**
-     * @param string $TagKey 标签键
-     * @param string $TagValue 标签值
-     * @param string $Resource [ 资源六段式描述 ](https://cloud.tencent.com/document/product/598/10606)
+     * @param string $TagKey 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+     * @param string $TagValue 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+     * @param string $Resource 待关联的资源，用标准的资源六段式表示。正确的资源六段式请参考：https://cloud.tencent.com/document/product/651/89122
      */
     function __construct()
     {

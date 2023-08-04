@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(integer $TaskType) 设置任务类型
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method integer getDeleteKFFlag() 获取是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
+ * @method void setDeleteKFFlag(integer $DeleteKFFlag) 设置是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
  */
 class BatchDeleteIntegrationTasksRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BatchDeleteIntegrationTasksRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var integer 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
+     */
+    public $DeleteKFFlag;
+
+    /**
      * @param array $TaskIds 任务id
      * @param integer $TaskType 任务类型
      * @param string $ProjectId 项目id
+     * @param integer $DeleteKFFlag 是否删除开发态任务。默认不删除开发态，为 0 不删除 , 为 1 删除
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class BatchDeleteIntegrationTasksRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("DeleteKFFlag",$param) and $param["DeleteKFFlag"] !== null) {
+            $this->DeleteKFFlag = $param["DeleteKFFlag"];
         }
     }
 }

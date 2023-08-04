@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getScene() 获取业务场景 (1-注册, 2-登录, 3-发消息)
  * @method void setScene(string $Scene) 设置业务场景 (1-注册, 2-登录, 3-发消息)
  * @method string getPhoneNumber() 获取电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileSize() 获取Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
  * @method void setFileSize(integer $FileSize) 设置Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
  * @method string getIp() 获取点分格式的IP (业务名为bri_ip时必填)
@@ -50,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWechat(string $Wechat) 设置微信号 (业务名为bri_social时必填, 除非已填QQ)
  * @method string getWechatTag() 获取微信号的可疑标签
  * @method void setWechatTag(string $WechatTag) 设置微信号的可疑标签
+ * @method string getSubAppid() 获取子客户ID
+ * @method void setSubAppid(string $SubAppid) 设置子客户ID
  */
 class BRIRequest extends AbstractModel
 {
@@ -95,7 +95,6 @@ class BRIRequest extends AbstractModel
 
     /**
      * @var string 电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhoneNumber;
 
@@ -125,6 +124,11 @@ class BRIRequest extends AbstractModel
     public $WechatTag;
 
     /**
+     * @var string 子客户ID
+     */
+    public $SubAppid;
+
+    /**
      * @param string $Service 业务名, 必须是以下六个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url,bri_social)
      * @param string $QQ QQ号 (业务名为bri_social时必填, 除非已填Wechat)
      * @param string $QQTag QQ号的可疑标签
@@ -134,12 +138,12 @@ class BRIRequest extends AbstractModel
      * @param string $FileMd5 Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
      * @param string $Scene 业务场景 (1-注册, 2-登录, 3-发消息)
      * @param string $PhoneNumber 电话号码 (业务名为bri_num时必填)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileSize Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
      * @param string $Ip 点分格式的IP (业务名为bri_ip时必填)
      * @param string $Imei 安卓设备的Imei (业务名为bri_dev时必填)
      * @param string $Wechat 微信号 (业务名为bri_social时必填, 除非已填QQ)
      * @param string $WechatTag 微信号的可疑标签
+     * @param string $SubAppid 子客户ID
      */
     function __construct()
     {
@@ -208,6 +212,10 @@ class BRIRequest extends AbstractModel
 
         if (array_key_exists("WechatTag",$param) and $param["WechatTag"] !== null) {
             $this->WechatTag = $param["WechatTag"];
+        }
+
+        if (array_key_exists("SubAppid",$param) and $param["SubAppid"] !== null) {
+            $this->SubAppid = $param["SubAppid"];
         }
     }
 }

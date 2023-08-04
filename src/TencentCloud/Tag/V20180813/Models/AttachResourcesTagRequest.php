@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachResourcesTag请求参数结构体
  *
- * @method string getServiceType() 获取资源所属业务名称（资源六段式中的第三段）
- * @method void setServiceType(string $ServiceType) 设置资源所属业务名称（资源六段式中的第三段）
+ * @method string getServiceType() 获取业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
+ * @method void setServiceType(string $ServiceType) 设置业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
  * @method array getResourceIds() 获取资源ID数组，资源个数最多为50
  * @method void setResourceIds(array $ResourceIds) 设置资源ID数组，资源个数最多为50
- * @method string getTagKey() 获取标签键
- * @method void setTagKey(string $TagKey) 设置标签键
- * @method string getTagValue() 获取标签值
- * @method void setTagValue(string $TagValue) 设置标签值
- * @method string getResourceRegion() 获取资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
- * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+ * @method string getTagKey() 获取需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+ * @method void setTagKey(string $TagKey) 设置需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+ * @method string getTagValue() 获取需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+ * @method void setTagValue(string $TagValue) 设置需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+ * @method string getResourceRegion() 获取资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
  * @method string getResourcePrefix() 获取资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
  * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
  */
 class AttachResourcesTagRequest extends AbstractModel
 {
     /**
-     * @var string 资源所属业务名称（资源六段式中的第三段）
+     * @var string 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
      */
     public $ServiceType;
 
@@ -46,17 +46,17 @@ class AttachResourcesTagRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var string 标签键
+     * @var string 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public $TagKey;
 
     /**
-     * @var string 标签值
+     * @var string 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      */
     public $TagValue;
 
     /**
-     * @var string 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @var string 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
      */
     public $ResourceRegion;
 
@@ -66,11 +66,11 @@ class AttachResourcesTagRequest extends AbstractModel
     public $ResourcePrefix;
 
     /**
-     * @param string $ServiceType 资源所属业务名称（资源六段式中的第三段）
+     * @param string $ServiceType 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
      * @param array $ResourceIds 资源ID数组，资源个数最多为50
-     * @param string $TagKey 标签键
-     * @param string $TagValue 标签值
-     * @param string $ResourceRegion 资源所在地域，不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @param string $TagKey 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+     * @param string $TagValue 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
+     * @param string $ResourceRegion 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
      * @param string $ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
      */
     function __construct()

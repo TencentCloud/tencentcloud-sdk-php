@@ -190,6 +190,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskAlarmRegularList(array $TaskAlarmRegularList) 设置该任务关联的告警规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSwitchResource() 获取资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSwitchResource(integer $SwitchResource) 设置资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReadPhase() 获取读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReadPhase(integer $ReadPhase) 设置读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceVersion() 获取版本号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceVersion(integer $InstanceVersion) 设置版本号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationTaskInfo extends AbstractModel
 {
@@ -455,6 +467,24 @@ class IntegrationTaskInfo extends AbstractModel
     public $TaskAlarmRegularList;
 
     /**
+     * @var integer 资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SwitchResource;
+
+    /**
+     * @var integer 读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReadPhase;
+
+    /**
+     * @var integer 版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceVersion;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -539,6 +569,12 @@ class IntegrationTaskInfo extends AbstractModel
      * @param float $RunningCu 耗费资源量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TaskAlarmRegularList 该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SwitchResource 资源分层情况： 0：进行中,1：成功 ,2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReadPhase 读取阶段：0：全部全量,1：部分全量,2：全部增量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceVersion 版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -754,6 +790,18 @@ class IntegrationTaskInfo extends AbstractModel
 
         if (array_key_exists("TaskAlarmRegularList",$param) and $param["TaskAlarmRegularList"] !== null) {
             $this->TaskAlarmRegularList = $param["TaskAlarmRegularList"];
+        }
+
+        if (array_key_exists("SwitchResource",$param) and $param["SwitchResource"] !== null) {
+            $this->SwitchResource = $param["SwitchResource"];
+        }
+
+        if (array_key_exists("ReadPhase",$param) and $param["ReadPhase"] !== null) {
+            $this->ReadPhase = $param["ReadPhase"];
+        }
+
+        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
+            $this->InstanceVersion = $param["InstanceVersion"];
         }
     }
 }

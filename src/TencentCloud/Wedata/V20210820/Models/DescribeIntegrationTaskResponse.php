@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskInfo(IntegrationTaskInfo $TaskInfo) 设置任务信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AgentStatus getAgentStatus() 获取采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentStatus(AgentStatus $AgentStatus) 设置采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TaskVersionInstance getTaskVersion() 获取任务版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskVersion(TaskVersionInstance $TaskVersion) 设置任务版本信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +44,28 @@ class DescribeIntegrationTaskResponse extends AbstractModel
     public $TaskInfo;
 
     /**
+     * @var AgentStatus 采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentStatus;
+
+    /**
+     * @var TaskVersionInstance 任务版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskVersion;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param IntegrationTaskInfo $TaskInfo 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentStatus $AgentStatus 采集器统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskVersionInstance $TaskVersion 任务版本信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -61,6 +85,16 @@ class DescribeIntegrationTaskResponse extends AbstractModel
         if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
             $this->TaskInfo = new IntegrationTaskInfo();
             $this->TaskInfo->deserialize($param["TaskInfo"]);
+        }
+
+        if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
+            $this->AgentStatus = new AgentStatus();
+            $this->AgentStatus->deserialize($param["AgentStatus"]);
+        }
+
+        if (array_key_exists("TaskVersion",$param) and $param["TaskVersion"] !== null) {
+            $this->TaskVersion = new TaskVersionInstance();
+            $this->TaskVersion->deserialize($param["TaskVersion"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

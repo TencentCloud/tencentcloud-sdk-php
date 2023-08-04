@@ -18,68 +18,84 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 离线日志详细信息
+ * 七层离线日志详细信息。
  *
- * @method integer getLogTime() 获取日志打包开始时间。
- * @method void setLogTime(integer $LogTime) 设置日志打包开始时间。
- * @method string getDomain() 获取子域名。
- * @method void setDomain(string $Domain) 设置子域名。
- * @method integer getSize() 获取原始大小，单位byte。
- * @method void setSize(integer $Size) 设置原始大小，单位byte。
- * @method string getUrl() 获取下载地址。
- * @method void setUrl(string $Url) 设置下载地址。
- * @method string getLogPacketName() 获取日志数据包名。
- * @method void setLogPacketName(string $LogPacketName) 设置日志数据包名。
- * @method string getArea() 获取加速区域，取值有：
+ * @method string getDomain() 获取离线日志域名。
+ * @method void setDomain(string $Domain) 设置离线日志域名。
+ * @method string getArea() 获取日志所属区域，取值有：
 <li>mainland：中国大陆境内; </li>
 <li>overseas：全球（不含中国大陆）。</li>
- * @method void setArea(string $Area) 设置加速区域，取值有：
+ * @method void setArea(string $Area) 设置日志所属区域，取值有：
 <li>mainland：中国大陆境内; </li>
 <li>overseas：全球（不含中国大陆）。</li>
+ * @method string getLogPacketName() 获取离线日志数据包名。	
+ * @method void setLogPacketName(string $LogPacketName) 设置离线日志数据包名。	
+ * @method string getUrl() 获取离线日志下载地址。	
+ * @method void setUrl(string $Url) 设置离线日志下载地址。	
+ * @method integer getLogTime() 获取日志打包时间，此参数已经废弃。
+ * @method void setLogTime(integer $LogTime) 设置日志打包时间，此参数已经废弃。
+ * @method string getLogStartTime() 获取日志打包开始时间。
+ * @method void setLogStartTime(string $LogStartTime) 设置日志打包开始时间。
+ * @method string getLogEndTime() 获取日志打包结束时间。
+ * @method void setLogEndTime(string $LogEndTime) 设置日志打包结束时间。
+ * @method integer getSize() 获取日志原始大小，单位 Byte。
+ * @method void setSize(integer $Size) 设置日志原始大小，单位 Byte。
  */
 class L7OfflineLog extends AbstractModel
 {
     /**
-     * @var integer 日志打包开始时间。
-     */
-    public $LogTime;
-
-    /**
-     * @var string 子域名。
+     * @var string 离线日志域名。
      */
     public $Domain;
 
     /**
-     * @var integer 原始大小，单位byte。
-     */
-    public $Size;
-
-    /**
-     * @var string 下载地址。
-     */
-    public $Url;
-
-    /**
-     * @var string 日志数据包名。
-     */
-    public $LogPacketName;
-
-    /**
-     * @var string 加速区域，取值有：
+     * @var string 日志所属区域，取值有：
 <li>mainland：中国大陆境内; </li>
 <li>overseas：全球（不含中国大陆）。</li>
      */
     public $Area;
 
     /**
-     * @param integer $LogTime 日志打包开始时间。
-     * @param string $Domain 子域名。
-     * @param integer $Size 原始大小，单位byte。
-     * @param string $Url 下载地址。
-     * @param string $LogPacketName 日志数据包名。
-     * @param string $Area 加速区域，取值有：
+     * @var string 离线日志数据包名。	
+     */
+    public $LogPacketName;
+
+    /**
+     * @var string 离线日志下载地址。	
+     */
+    public $Url;
+
+    /**
+     * @var integer 日志打包时间，此参数已经废弃。
+     */
+    public $LogTime;
+
+    /**
+     * @var string 日志打包开始时间。
+     */
+    public $LogStartTime;
+
+    /**
+     * @var string 日志打包结束时间。
+     */
+    public $LogEndTime;
+
+    /**
+     * @var integer 日志原始大小，单位 Byte。
+     */
+    public $Size;
+
+    /**
+     * @param string $Domain 离线日志域名。
+     * @param string $Area 日志所属区域，取值有：
 <li>mainland：中国大陆境内; </li>
 <li>overseas：全球（不含中国大陆）。</li>
+     * @param string $LogPacketName 离线日志数据包名。	
+     * @param string $Url 离线日志下载地址。	
+     * @param integer $LogTime 日志打包时间，此参数已经废弃。
+     * @param string $LogStartTime 日志打包开始时间。
+     * @param string $LogEndTime 日志打包结束时间。
+     * @param integer $Size 日志原始大小，单位 Byte。
      */
     function __construct()
     {
@@ -94,28 +110,36 @@ class L7OfflineLog extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LogTime",$param) and $param["LogTime"] !== null) {
-            $this->LogTime = $param["LogTime"];
-        }
-
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
         }
 
-        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
-            $this->Size = $param["Size"];
-        }
-
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
 
         if (array_key_exists("LogPacketName",$param) and $param["LogPacketName"] !== null) {
             $this->LogPacketName = $param["LogPacketName"];
         }
 
-        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
-            $this->Area = $param["Area"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("LogTime",$param) and $param["LogTime"] !== null) {
+            $this->LogTime = $param["LogTime"];
+        }
+
+        if (array_key_exists("LogStartTime",$param) and $param["LogStartTime"] !== null) {
+            $this->LogStartTime = $param["LogStartTime"];
+        }
+
+        if (array_key_exists("LogEndTime",$param) and $param["LogEndTime"] !== null) {
+            $this->LogEndTime = $param["LogEndTime"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
     }
 }

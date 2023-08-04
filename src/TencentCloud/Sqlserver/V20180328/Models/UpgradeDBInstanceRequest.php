@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBVersion(string $DBVersion) 设置升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
  * @method string getHAType() 获取升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
  * @method void setHAType(string $HAType) 设置升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
- * @method string getMultiZones() 获取修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
- * @method void setMultiZones(string $MultiZones) 设置修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+ * @method string getMultiZones() 获取修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
+ * @method void setMultiZones(string $MultiZones) 设置修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
  * @method integer getWaitSwitch() 获取执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
  * @method void setWaitSwitch(integer $WaitSwitch) 设置执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
  */
@@ -84,7 +84,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $HAType;
 
     /**
-     * @var string 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+     * @var string 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
      */
     public $MultiZones;
 
@@ -102,7 +102,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param integer $Cpu 实例升级后的CPU核心数
      * @param string $DBVersion 升级sqlserver的版本，目前支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise）版本等。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息，版本不支持降级，不填则不修改版本
      * @param string $HAType 升级sqlserver的高可用架构,从镜像容灾升级到always on集群容灾，仅支持2017及以上版本且支持always on高可用的实例，不支持降级到镜像方式容灾，CLUSTER-升级为always on容灾，不填则不修改高可用架构
-     * @param string $MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为夸可用区
+     * @param string $MultiZones 修改实例是否为跨可用区容灾，SameZones-修改为同可用区 MultiZones-修改为跨可用区
      * @param integer $WaitSwitch 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
      */
     function __construct()

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
- * @method array getZoneIds() 获取站点集合，不填默认选择全部站点。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合，不填默认选择全部站点。
- * @method array getProxyIds() 获取四层实例ID集合。
- * @method void setProxyIds(array $ProxyIds) 设置四层实例ID集合。
- * @method integer getLimit() 获取分页查询的限制数目，默认值为20，最大查询条目为1000。
- * @method void setLimit(integer $Limit) 设置分页查询的限制数目，默认值为20，最大查询条目为1000。
- * @method integer getOffset() 获取分页的偏移量，默认值为0。
- * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
+ * @method array getZoneIds() 获取站点集合，此参数必填，不填默认查询为空。
+ * @method void setZoneIds(array $ZoneIds) 设置站点集合，此参数必填，不填默认查询为空。
+ * @method array getProxyIds() 获取四层实例 ID 集合。
+ * @method void setProxyIds(array $ProxyIds) 设置四层实例 ID 集合。
+ * @method integer getLimit() 获取分页查询的限制数目，默认值为 20，最大查询条目为 1000。
+ * @method void setLimit(integer $Limit) 设置分页查询的限制数目，默认值为 20，最大查询条目为 1000。
+ * @method integer getOffset() 获取分页的偏移量，默认值为 0。
+ * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为 0。
  */
 class DownloadL4LogsRequest extends AbstractModel
 {
@@ -46,32 +46,32 @@ class DownloadL4LogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 站点集合，不填默认选择全部站点。
+     * @var array 站点集合，此参数必填，不填默认查询为空。
      */
     public $ZoneIds;
 
     /**
-     * @var array 四层实例ID集合。
+     * @var array 四层实例 ID 集合。
      */
     public $ProxyIds;
 
     /**
-     * @var integer 分页查询的限制数目，默认值为20，最大查询条目为1000。
+     * @var integer 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
      */
     public $Limit;
 
     /**
-     * @var integer 分页的偏移量，默认值为0。
+     * @var integer 分页的偏移量，默认值为 0。
      */
     public $Offset;
 
     /**
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
-     * @param array $ZoneIds 站点集合，不填默认选择全部站点。
-     * @param array $ProxyIds 四层实例ID集合。
-     * @param integer $Limit 分页查询的限制数目，默认值为20，最大查询条目为1000。
-     * @param integer $Offset 分页的偏移量，默认值为0。
+     * @param array $ZoneIds 站点集合，此参数必填，不填默认查询为空。
+     * @param array $ProxyIds 四层实例 ID 集合。
+     * @param integer $Limit 分页查询的限制数目，默认值为 20，最大查询条目为 1000。
+     * @param integer $Offset 分页的偏移量，默认值为 0。
      */
     function __construct()
     {

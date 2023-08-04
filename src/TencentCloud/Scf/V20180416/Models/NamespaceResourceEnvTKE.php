@@ -42,6 +42,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置scf组件将占用的节点端口起始号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPodTemplatePatch() 获取yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodTemplatePatch(string $PodTemplatePatch) 设置yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NamespaceResourceEnvTKE extends AbstractModel
 {
@@ -85,6 +95,15 @@ class NamespaceResourceEnvTKE extends AbstractModel
     public $Port;
 
     /**
+     * @var string yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodTemplatePatch;
+
+    /**
      * @param string $ClusterID 集群ID
      * @param string $SubnetID 子网ID
      * @param string $Namespace 命名空间
@@ -95,6 +114,11 @@ class NamespaceResourceEnvTKE extends AbstractModel
      * @param array $Tolerations 污点容忍
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port scf组件将占用的节点端口起始号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PodTemplatePatch yaml格式的pod patch内容，例如
+metadata:
+  labels:
+    key: value
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -146,6 +170,10 @@ class NamespaceResourceEnvTKE extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("PodTemplatePatch",$param) and $param["PodTemplatePatch"] !== null) {
+            $this->PodTemplatePatch = $param["PodTemplatePatch"];
         }
     }
 }

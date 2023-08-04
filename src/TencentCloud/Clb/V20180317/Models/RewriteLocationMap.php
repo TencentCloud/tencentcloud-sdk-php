@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSourceLocationId() 获取源转发规则ID
  * @method void setSourceLocationId(string $SourceLocationId) 设置源转发规则ID
- * @method string getTargetLocationId() 获取重定向至的目标转发规则ID
- * @method void setTargetLocationId(string $TargetLocationId) 设置重定向至的目标转发规则ID
+ * @method string getTargetLocationId() 获取重定向目标转发规则的ID
+ * @method void setTargetLocationId(string $TargetLocationId) 设置重定向目标转发规则的ID
  * @method integer getRewriteCode() 获取重定向状态码，可取值301,302,307
  * @method void setRewriteCode(integer $RewriteCode) 设置重定向状态码，可取值301,302,307
  * @method boolean getTakeUrl() 获取重定向是否携带匹配的url，配置RewriteCode时必填
@@ -39,7 +39,7 @@ class RewriteLocationMap extends AbstractModel
     public $SourceLocationId;
 
     /**
-     * @var string 重定向至的目标转发规则ID
+     * @var string 重定向目标转发规则的ID
      */
     public $TargetLocationId;
 
@@ -60,7 +60,7 @@ class RewriteLocationMap extends AbstractModel
 
     /**
      * @param string $SourceLocationId 源转发规则ID
-     * @param string $TargetLocationId 重定向至的目标转发规则ID
+     * @param string $TargetLocationId 重定向目标转发规则的ID
      * @param integer $RewriteCode 重定向状态码，可取值301,302,307
      * @param boolean $TakeUrl 重定向是否携带匹配的url，配置RewriteCode时必填
      * @param string $SourceDomain 源转发的域名，必须是SourceLocationId对应的域名，配置RewriteCode时必填

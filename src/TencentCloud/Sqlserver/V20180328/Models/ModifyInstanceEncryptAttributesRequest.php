@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getCertificateAttribution() 获取证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
- * @method void setCertificateAttribution(string $CertificateAttribution) 设置证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
+ * @method string getCertificateAttribution() 获取证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
+ * @method void setCertificateAttribution(string $CertificateAttribution) 设置证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
  * @method string getQuoteUin() 获取引用的其他主账号ID，当CertificateAttribution 为others时必填。
  * @method void setQuoteUin(string $QuoteUin) 设置引用的其他主账号ID，当CertificateAttribution 为others时必填。
  */
@@ -35,7 +35,7 @@ class ModifyInstanceEncryptAttributesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
+     * @var string 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
      */
     public $CertificateAttribution;
 
@@ -46,7 +46,7 @@ class ModifyInstanceEncryptAttributesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
-     * @param string $CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认self。
+     * @param string $CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
      * @param string $QuoteUin 引用的其他主账号ID，当CertificateAttribution 为others时必填。
      */
     function __construct()

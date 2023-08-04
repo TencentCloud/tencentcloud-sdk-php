@@ -26,14 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置速率限制统计时间，取值范围 10/20/30/40/50/60 单位是秒。
  * @method string getRuleName() 获取规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
  * @method void setRuleName(string $RuleName) 设置规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
- * @method string getAction() 获取处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li>
- * @method void setAction(string $Action) 设置处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li>
+ * @method string getAction() 获取处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
+ * @method void setAction(string $Action) 设置处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
  * @method integer getPunishTime() 获取惩罚时长，0-2天。
  * @method void setPunishTime(integer $PunishTime) 设置惩罚时长，0-2天。
  * @method string getPunishTimeUnit() 获取处罚时长单位，取值有：
@@ -54,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclConditions(array $AclConditions) 设置规则详情。
  * @method integer getRulePriority() 获取规则权重，取值范围0-100。
  * @method void setRulePriority(integer $RulePriority) 设置规则权重，取值范围0-100。
- * @method integer getRuleID() 获取规则id。仅出参使用。
+ * @method integer getRuleID() 获取规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleID(integer $RuleID) 设置规则id。仅出参使用。
+ * @method void setRuleID(integer $RuleID) 设置规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFreqFields() 获取过滤词，取值有：
 <li>sip：客户端ip。</li>
@@ -68,11 +62,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFreqScope() 获取统计范围，字段为null时，代表source_to_eo。取值有：
+ * @method array getFreqScope() 获取统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFreqScope(array $FreqScope) 设置统计范围，字段为null时，代表source_to_eo。取值有：
+ * @method void setFreqScope(array $FreqScope) 设置统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,10 +89,7 @@ class RateLimitUserRule extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string 处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li>
+     * @var string 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
      */
     public $Action;
 
@@ -133,7 +124,7 @@ class RateLimitUserRule extends AbstractModel
     public $RulePriority;
 
     /**
-     * @var integer 规则id。仅出参使用。
+     * @var integer 规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleID;
@@ -152,7 +143,7 @@ class RateLimitUserRule extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var array 统计范围，字段为null时，代表source_to_eo。取值有：
+     * @var array 统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,10 +154,7 @@ class RateLimitUserRule extends AbstractModel
      * @param integer $Threshold 速率限制统计阈值，单位是次，取值范围0-4294967294。
      * @param integer $Period 速率限制统计时间，取值范围 10/20/30/40/50/60 单位是秒。
      * @param string $RuleName 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
-     * @param string $Action 处置动作，取值有：
-<li>monitor：观察；</li>
-<li>drop：拦截；</li>
-<li>alg：JavaScript挑战。</li>
+     * @param string $Action 处置动作，取值有： <li>monitor：观察；</li> <li>drop：拦截；</li> <li>alg：JavaScript挑战。</li>	
      * @param integer $PunishTime 惩罚时长，0-2天。
      * @param string $PunishTimeUnit 处罚时长单位，取值有：
 <li>second：秒；</li>
@@ -177,14 +165,14 @@ class RateLimitUserRule extends AbstractModel
 <li>off：不生效。</li>默认on生效。
      * @param array $AclConditions 规则详情。
      * @param integer $RulePriority 规则权重，取值范围0-100。
-     * @param integer $RuleID 规则id。仅出参使用。
+     * @param integer $RuleID 规则 Id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FreqFields 过滤词，取值有：
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FreqScope 统计范围，字段为null时，代表source_to_eo。取值有：
+     * @param array $FreqScope 统计范围，字段为 null 时，代表 source_to_eo。取值有：
 <li>source_to_eo：（响应）源站到EdgeOne。</li>
 <li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。

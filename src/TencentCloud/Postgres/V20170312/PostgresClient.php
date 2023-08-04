@@ -58,6 +58,9 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DescribeDBBackupsResponse DescribeDBBackups(Models\DescribeDBBackupsRequest $req) 本接口（DescribeDBBackups）用于查询实例备份列表。本接口已废弃，推荐使用接口[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)替代。
  * @method Models\DescribeDBErrlogsResponse DescribeDBErrlogs(Models\DescribeDBErrlogsRequest $req) 本接口（DescribeDBErrlogs）用于查询错误日志。
  * @method Models\DescribeDBInstanceAttributeResponse DescribeDBInstanceAttribute(Models\DescribeDBInstanceAttributeRequest $req) 本接口 (DescribeDBInstanceAttribute) 用于查询某个实例的详情信息。
+ * @method Models\DescribeDBInstanceHAConfigResponse DescribeDBInstanceHAConfig(Models\DescribeDBInstanceHAConfigRequest $req) 本接口（DescribeDBInstanceHAConfig）用于查询实例HA配置信息。其中HA配置信息包括：
+<li>允许备节点切换为主节点的条件配置
+<li>半同步实例使用同步复制或异步复制的条件配置
  * @method Models\DescribeDBInstanceParametersResponse DescribeDBInstanceParameters(Models\DescribeDBInstanceParametersRequest $req) 本接口（DescribeDBInstanceAttribute）用于查询实例的参数信息。
  * @method Models\DescribeDBInstanceSecurityGroupsResponse DescribeDBInstanceSecurityGroups(Models\DescribeDBInstanceSecurityGroupsRequest $req) 本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
@@ -92,6 +95,9 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\ModifyBaseBackupExpireTimeResponse ModifyBaseBackupExpireTime(Models\ModifyBaseBackupExpireTimeRequest $req) 本接口（ModifyBaseBackupExpireTime）用于修改实例指定全量备份的过期时间。
  * @method Models\ModifyDBInstanceChargeTypeResponse ModifyDBInstanceChargeType(Models\ModifyDBInstanceChargeTypeRequest $req) 支持实例的计费类型转换（目前仅支持按量计费转包年包月）
  * @method Models\ModifyDBInstanceDeploymentResponse ModifyDBInstanceDeployment(Models\ModifyDBInstanceDeploymentRequest $req) 本接口（ModifyDBInstanceDeployment）用于修改节点可用区部署方式，仅支持主实例。
+ * @method Models\ModifyDBInstanceHAConfigResponse ModifyDBInstanceHAConfig(Models\ModifyDBInstanceHAConfigRequest $req) 本接口（ModifyDBInstanceHAConfig）用于修改实例HA配置信息。其中HA配置信息包括：
+<li>允许备节点切换为主节点的条件配置
+<li>半同步实例使用同步复制或异步复制的条件配置
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口（ModifyDBInstanceName）用于修改postgresql实例名字。
  * @method Models\ModifyDBInstanceParametersResponse ModifyDBInstanceParameters(Models\ModifyDBInstanceParametersRequest $req) 本接口 (ModifyDBInstanceParameters) 用于修改实例参数。
  * @method Models\ModifyDBInstanceReadOnlyGroupResponse ModifyDBInstanceReadOnlyGroup(Models\ModifyDBInstanceReadOnlyGroupRequest $req) 本接口（ModifyDBInstanceReadOnlyGroup）用于修改实例所属的只读组
@@ -109,6 +115,10 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口（ResetAccountPassword）用于重置实例的账户密码。
  * @method Models\RestartDBInstanceResponse RestartDBInstance(Models\RestartDBInstanceRequest $req) 本接口（RestartDBInstance）用于重启实例。
  * @method Models\SetAutoRenewFlagResponse SetAutoRenewFlag(Models\SetAutoRenewFlagRequest $req) 本接口（SetAutoRenewFlag）用于设置自动续费。
+ * @method Models\SwitchDBInstancePrimaryResponse SwitchDBInstancePrimary(Models\SwitchDBInstancePrimaryRequest $req) 本接口（SwitchDBInstancePrimary）用于切换实例主备关系。
+<li>通过主动发起切换，可以验证业务能否正确处理实例主备切换的场景
+<li>通过使用强制切换，可以在备节点延迟不满足切换条件时，强制发起主从切换
+<li>只有主实例可以执行该操作
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
  * @method Models\UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(Models\UpgradeDBInstanceKernelVersionRequest $req) 本接口（UpgradeDBInstanceKernelVersion）用于升级实例的内核版本号。
  */

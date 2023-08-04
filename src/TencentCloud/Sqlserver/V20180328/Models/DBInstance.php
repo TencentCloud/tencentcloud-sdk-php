@@ -140,9 +140,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZones(SlaveZones $SlaveZones) 设置备可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getArchitecture() 获取架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+ * @method string getArchitecture() 获取架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArchitecture(string $Architecture) 设置架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+ * @method void setArchitecture(string $Architecture) 设置架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStyle() 获取类型标识，EXCLUSIVE-独享型，SHARED-共享型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -420,7 +420,7 @@ class DBInstance extends AbstractModel
     public $SlaveZones;
 
     /**
-     * @var string 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+     * @var string 架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Architecture;
@@ -492,7 +492,7 @@ class DBInstance extends AbstractModel
      * @param boolean $IsDrZone 是否跨AZ
      * @param SlaveZones $SlaveZones 备可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+     * @param string $Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
 注意：此字段可能返回 null，表示取不到有效值。

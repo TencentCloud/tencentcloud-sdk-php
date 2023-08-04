@@ -22,6 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getData() 获取任务删除成功与否标识
  * @method void setData(boolean $Data) 设置任务删除成功与否标识
+ * @method integer getDeleteFlag() 获取任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleteFlag(integer $DeleteFlag) 设置任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeleteErrInfo() 获取删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleteErrInfo(string $DeleteErrInfo) 设置删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +47,34 @@ class DeleteIntegrationTaskResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var integer 任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeleteFlag;
+
+    /**
+     * @var string 删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeleteErrInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param boolean $Data 任务删除成功与否标识
+     * @param integer $DeleteFlag 任务删除成功与否标识
+0表示删除成功
+1 表示失败，失败原因见 DeleteErrInfo
+100 表示running or suspend task can't be deleted失败，失败原因也会写到DeleteErrInfo里面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeleteErrInfo 删除失败原因
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +92,14 @@ class DeleteIntegrationTaskResponse extends AbstractModel
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("DeleteFlag",$param) and $param["DeleteFlag"] !== null) {
+            $this->DeleteFlag = $param["DeleteFlag"];
+        }
+
+        if (array_key_exists("DeleteErrInfo",$param) and $param["DeleteErrInfo"] !== null) {
+            $this->DeleteErrInfo = $param["DeleteErrInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

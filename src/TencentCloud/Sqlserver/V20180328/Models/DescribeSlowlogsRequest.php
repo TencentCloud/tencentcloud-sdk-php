@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，形如mssql-k8voqdlz
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-k8voqdlz
- * @method string getStartTime() 获取查询开始时间
- * @method void setStartTime(string $StartTime) 设置查询开始时间
- * @method string getEndTime() 获取查询结束时间
- * @method void setEndTime(string $EndTime) 设置查询结束时间
+ * @method string getStartTime() 获取开始时间(yyyy-MM-dd HH:mm:ss)
+ * @method void setStartTime(string $StartTime) 设置开始时间(yyyy-MM-dd HH:mm:ss)
+ * @method string getEndTime() 获取结束时间(yyyy-MM-dd HH:mm:ss)
+ * @method void setEndTime(string $EndTime) 设置结束时间(yyyy-MM-dd HH:mm:ss)
  * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1-100，默认值为20
  * @method void setLimit(integer $Limit) 设置分页返回，每页返回的数目，取值为1-100，默认值为20
  * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
@@ -39,12 +39,12 @@ class DescribeSlowlogsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 查询开始时间
+     * @var string 开始时间(yyyy-MM-dd HH:mm:ss)
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束时间
+     * @var string 结束时间(yyyy-MM-dd HH:mm:ss)
      */
     public $EndTime;
 
@@ -60,8 +60,8 @@ class DescribeSlowlogsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID，形如mssql-k8voqdlz
-     * @param string $StartTime 查询开始时间
-     * @param string $EndTime 查询结束时间
+     * @param string $StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
+     * @param string $EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
      * @param integer $Offset 分页返回，页编号，默认值为第0页
      */

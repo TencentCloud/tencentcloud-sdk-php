@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method integer getTaskType() 获取任务类型：201. stream,   202. offline
  * @method void setTaskType(integer $TaskType) 设置任务类型：201. stream,   202. offline
+ * @method integer getInstanceVersion() 获取提交版本号
+ * @method void setInstanceVersion(integer $InstanceVersion) 设置提交版本号
  */
 class DescribeIntegrationTaskRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeIntegrationTaskRequest extends AbstractModel
     public $TaskType;
 
     /**
+     * @var integer 提交版本号
+     */
+    public $InstanceVersion;
+
+    /**
      * @param string $TaskId 任务id
      * @param string $ProjectId 项目id
      * @param integer $TaskType 任务类型：201. stream,   202. offline
+     * @param integer $InstanceVersion 提交版本号
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeIntegrationTaskRequest extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
+            $this->InstanceVersion = $param["InstanceVersion"];
         }
     }
 }

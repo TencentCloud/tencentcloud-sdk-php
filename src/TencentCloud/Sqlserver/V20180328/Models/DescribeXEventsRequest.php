@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getEventType() 获取事件类型，slow-慢SQL事件，blocked-阻塞事件，deadlock-死锁事件
  * @method void setEventType(string $EventType) 设置事件类型，slow-慢SQL事件，blocked-阻塞事件，deadlock-死锁事件
- * @method string getStartTime() 获取扩展文件生成开始时间
- * @method void setStartTime(string $StartTime) 设置扩展文件生成开始时间
- * @method string getEndTime() 获取扩展文件生成结束时间
- * @method void setEndTime(string $EndTime) 设置扩展文件生成结束时间
+ * @method string getStartTime() 获取扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
+ * @method void setStartTime(string $StartTime) 设置扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
+ * @method string getEndTime() 获取扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
+ * @method void setEndTime(string $EndTime) 设置扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
  * @method integer getOffset() 获取分页返回，页编号，默认值为第0页
  * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
  * @method integer getLimit() 获取分页返回，每页返回的数目，取值为1~100，默认值为20
@@ -46,12 +46,12 @@ class DescribeXEventsRequest extends AbstractModel
     public $EventType;
 
     /**
-     * @var string 扩展文件生成开始时间
+     * @var string 扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
      */
     public $StartTime;
 
     /**
-     * @var string 扩展文件生成结束时间
+     * @var string 扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
      */
     public $EndTime;
 
@@ -68,8 +68,8 @@ class DescribeXEventsRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param string $EventType 事件类型，slow-慢SQL事件，blocked-阻塞事件，deadlock-死锁事件
-     * @param string $StartTime 扩展文件生成开始时间
-     * @param string $EndTime 扩展文件生成结束时间
+     * @param string $StartTime 扩展文件生成开始时间(yyyy-MM-dd HH:mm:ss)
+     * @param string $EndTime 扩展文件生成结束时间(yyyy-MM-dd HH:mm:ss)
      * @param integer $Offset 分页返回，页编号，默认值为第0页
      * @param integer $Limit 分页返回，每页返回的数目，取值为1~100，默认值为20
      */

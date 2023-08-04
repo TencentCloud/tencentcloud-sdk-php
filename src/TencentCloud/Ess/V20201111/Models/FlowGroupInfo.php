@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserData(string $UserData) 设置第三方平台传递过来的信息, 限制1024字符 格式必须是base64的
  * @method boolean getUnordered() 获取合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认 
  * @method void setUnordered(boolean $Unordered) 设置合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认 
- * @method array getComponents() 获取合同（流程）发起方的填写控件，用户
- * @method void setComponents(array $Components) 设置合同（流程）发起方的填写控件，用户
+ * @method array getComponents() 获取合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
+ * @method void setComponents(array $Components) 设置合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
  * @method boolean getNeedSignReview() 获取本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。
  * @method void setNeedSignReview(boolean $NeedSignReview) 设置本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。
  * @method string getAutoSignScene() 获取本企业（发起方）自动签署，需要您在发起合同时给印章控件指定自动签的印章。
@@ -100,7 +100,7 @@ class FlowGroupInfo extends AbstractModel
     public $Unordered;
 
     /**
-     * @var array 合同（流程）发起方的填写控件，用户
+     * @var array 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
      */
     public $Components;
 
@@ -125,7 +125,7 @@ class FlowGroupInfo extends AbstractModel
      * @param string $CallbackUrl 合同（流程）的回调地址
      * @param string $UserData 第三方平台传递过来的信息, 限制1024字符 格式必须是base64的
      * @param boolean $Unordered 合同（流程）的签署是否是无序签, true - 无序。 false - 有序, 默认 
-     * @param array $Components 合同（流程）发起方的填写控件，用户
+     * @param array $Components 合同（流程）发起方的填写控件, 由发起方进行在发起时进行填充
      * @param boolean $NeedSignReview 本企业（发起方）是否需要签署审批，若需要审批则只允许查看不允许签署，需要您调用接口CreateFlowSignReview提交审批结果。
      * @param string $AutoSignScene 本企业（发起方）自动签署，需要您在发起合同时给印章控件指定自动签的印章。
      */

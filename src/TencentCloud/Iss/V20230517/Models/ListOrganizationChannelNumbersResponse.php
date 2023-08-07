@@ -18,28 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 组织目录下的未添加到实时上云计划中的通道数量返回数据
+ * ListOrganizationChannelNumbers返回参数结构体
  *
- * @method integer getTotalCount() 获取组织下通道总数
- * @method void setTotalCount(integer $TotalCount) 设置组织下通道总数
- * @method integer getNotInPlanCount() 获取组织下未添加到计划的通道总数
- * @method void setNotInPlanCount(integer $NotInPlanCount) 设置组织下未添加到计划的通道总数
+ * @method ListOrganizationChannelNumbersData getData() 获取返回结果
+ * @method void setData(ListOrganizationChannelNumbersData $Data) 设置返回结果
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ListOrganizationChannelNumbersResponse extends AbstractModel
 {
     /**
-     * @var integer 组织下通道总数
+     * @var ListOrganizationChannelNumbersData 返回结果
      */
-    public $TotalCount;
+    public $Data;
 
     /**
-     * @var integer 组织下未添加到计划的通道总数
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $NotInPlanCount;
+    public $RequestId;
 
     /**
-     * @param integer $TotalCount 组织下通道总数
-     * @param integer $NotInPlanCount 组织下未添加到计划的通道总数
+     * @param ListOrganizationChannelNumbersData $Data 返回结果
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +54,13 @@ class ListOrganizationChannelNumbersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ListOrganizationChannelNumbersData();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("NotInPlanCount",$param) and $param["NotInPlanCount"] !== null) {
-            $this->NotInPlanCount = $param["NotInPlanCount"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

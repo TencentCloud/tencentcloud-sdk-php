@@ -18,7 +18,7 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 增加组织接口返回数据
+ * 修改组织接口返回数据
  *
  * @method string getOrganizationId() 获取组织 ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -53,7 +53,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOnline(integer $Online) 设置设备在线数量
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AddOrgResponse extends AbstractModel
+class UpdateOrgData extends AbstractModel
 {
     /**
      * @var string 组织 ID

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateOrganization返回参数结构体
  *
- * @method UpdateOrgResponse getData() 获取返回结果
- * @method void setData(UpdateOrgResponse $Data) 设置返回结果
+ * @method UpdateOrgData getData() 获取返回结果
+ * @method void setData(UpdateOrgData $Data) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateOrganizationResponse extends AbstractModel
 {
     /**
-     * @var UpdateOrgResponse 返回结果
+     * @var UpdateOrgData 返回结果
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class UpdateOrganizationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param UpdateOrgResponse $Data 返回结果
+     * @param UpdateOrgData $Data 返回结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class UpdateOrganizationResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new UpdateOrgResponse();
+            $this->Data = new UpdateOrgData();
             $this->Data->deserialize($param["Data"]);
         }
 

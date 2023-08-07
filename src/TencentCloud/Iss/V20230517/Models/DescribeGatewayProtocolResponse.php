@@ -18,48 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询网关所支持的接入协议
+ * DescribeGatewayProtocol返回参数结构体
  *
- * @method string getTypeCode() 获取接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTypeCode(string $TypeCode) 设置接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getValue() 获取接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(integer $Value) 设置接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLabel() 获取接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getData() 获取返回数据
+ * @method void setData(array $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGatewayProtocolResponse extends AbstractModel
 {
     /**
-     * @var string 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 返回数据
      */
-    public $TypeCode;
+    public $Data;
 
     /**
-     * @var integer 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Value;
+    public $RequestId;
 
     /**
-     * @var string 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Label;
-
-    /**
-     * @param string $TypeCode 接入协议的字典码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Value 接入协议类型值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Label 接入协议的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -74,16 +54,17 @@ class DescribeGatewayProtocolResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TypeCode",$param) and $param["TypeCode"] !== null) {
-            $this->TypeCode = $param["TypeCode"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new DescribeGatewayProtocolData();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
-        }
-
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

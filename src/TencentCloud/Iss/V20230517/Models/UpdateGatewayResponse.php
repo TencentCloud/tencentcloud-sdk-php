@@ -18,132 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 修改网关信息返回结果
+ * UpdateGateway返回参数结构体
  *
- * @method string getGatewayId() 获取网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGatewayId(string $GatewayId) 设置网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGwId() 获取网关编码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGwId(string $GwId) 设置网关编码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterName() 获取服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterName(string $ClusterName) 设置服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreatedAt() 获取激活时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedAt(integer $CreatedAt) 设置激活时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecret() 获取网关密钥
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecret(string $Secret) 设置网关密钥
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取网关版本信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置网关版本信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method UpdateGatewayData getData() 获取返回数据
+ * @method void setData(UpdateGatewayData $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateGatewayResponse extends AbstractModel
 {
     /**
-     * @var string 网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var UpdateGatewayData 返回数据
      */
-    public $GatewayId;
+    public $Data;
 
     /**
-     * @var string 网关编码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $GwId;
+    public $RequestId;
 
     /**
-     * @var string 网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Name;
-
-    /**
-     * @var string 网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Description;
-
-    /**
-     * @var string 服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ClusterId;
-
-    /**
-     * @var string 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ClusterName;
-
-    /**
-     * @var integer 网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Status;
-
-    /**
-     * @var integer 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CreatedAt;
-
-    /**
-     * @var string 网关密钥
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Secret;
-
-    /**
-     * @var string 网关版本信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Version;
-
-    /**
-     * @param string $GatewayId 网关索引ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GwId 网关编码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 网关名称，仅支持中文、英文、数字、_、-，长度不超过32个字符
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 网关描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId 服务节点ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterName 服务节点名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 网关状态，0：离线，1:在线
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreatedAt 激活时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Secret 网关密钥
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 网关版本信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateGatewayData $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -158,44 +54,13 @@ class UpdateGatewayResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
-            $this->GatewayId = $param["GatewayId"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new UpdateGatewayData();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("GwId",$param) and $param["GwId"] !== null) {
-            $this->GwId = $param["GwId"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
-
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
-        }
-
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
-        }
-
-        if (array_key_exists("Secret",$param) and $param["Secret"] !== null) {
-            $this->Secret = $param["Secret"];
-        }
-
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

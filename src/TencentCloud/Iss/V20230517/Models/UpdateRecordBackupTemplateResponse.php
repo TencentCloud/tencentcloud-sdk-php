@@ -18,96 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 修改录像上云模版返回数据
+ * UpdateRecordBackupTemplate返回参数结构体
  *
- * @method string getTemplateId() 获取模板ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateId(string $TemplateId) 设置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateName() 获取模板名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateName(string $TemplateName) 设置模板名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTimeSections() 获取上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeSections(array $TimeSections) 设置上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDevTimeSections() 获取录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDevTimeSections(array $DevTimeSections) 设置录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScale() 获取上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScale(integer $Scale) 设置上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateAt() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateAt(string $CreateAt) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateAt() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateAt(string $UpdateAt) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method UpdateRecordBackupTemplateData getData() 获取返回数据
+ * @method void setData(UpdateRecordBackupTemplateData $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateRecordBackupTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var UpdateRecordBackupTemplateData 返回数据
      */
-    public $TemplateId;
+    public $Data;
 
     /**
-     * @var string 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $TemplateName;
+    public $RequestId;
 
     /**
-     * @var array 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TimeSections;
-
-    /**
-     * @var array 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DevTimeSections;
-
-    /**
-     * @var integer 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Scale;
-
-    /**
-     * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CreateAt;
-
-    /**
-     * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $UpdateAt;
-
-    /**
-     * @param string $TemplateId 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Scale 上云倍速（支持1，2，4倍速）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateRecordBackupTemplateData $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -122,42 +54,13 @@ class UpdateRecordBackupTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new UpdateRecordBackupTemplateData();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
-            $this->TemplateName = $param["TemplateName"];
-        }
-
-        if (array_key_exists("TimeSections",$param) and $param["TimeSections"] !== null) {
-            $this->TimeSections = [];
-            foreach ($param["TimeSections"] as $key => $value){
-                $obj = new RecordTemplateTimeSections();
-                $obj->deserialize($value);
-                array_push($this->TimeSections, $obj);
-            }
-        }
-
-        if (array_key_exists("DevTimeSections",$param) and $param["DevTimeSections"] !== null) {
-            $this->DevTimeSections = [];
-            foreach ($param["DevTimeSections"] as $key => $value){
-                $obj = new RecordTemplateTimeSections();
-                $obj->deserialize($value);
-                array_push($this->DevTimeSections, $obj);
-            }
-        }
-
-        if (array_key_exists("Scale",$param) and $param["Scale"] !== null) {
-            $this->Scale = $param["Scale"];
-        }
-
-        if (array_key_exists("CreateAt",$param) and $param["CreateAt"] !== null) {
-            $this->CreateAt = $param["CreateAt"];
-        }
-
-        if (array_key_exists("UpdateAt",$param) and $param["UpdateAt"] !== null) {
-            $this->UpdateAt = $param["UpdateAt"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

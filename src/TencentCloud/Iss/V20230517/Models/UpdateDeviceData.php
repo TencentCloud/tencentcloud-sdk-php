@@ -18,11 +18,11 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 增加设备接口返回数据
+ * 修改设备接口返回数据
  *
- * @method string getDeviceId() 获取设备iD
+ * @method string getDeviceId() 获取设备ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceId(string $DeviceId) 设置设备iD
+ * @method void setDeviceId(string $DeviceId) 设置设备ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取设备编码（即我们为设备生成的20位国标编码）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,27 +78,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolType(integer $ProtocolType) 设置网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIp() 获取设备接入IP（仅网关接入需要）
+ * @method string getIp() 获取设备接入IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIp(string $Ip) 设置设备接入IP（仅网关接入需要）
+ * @method void setIp(string $Ip) 设置设备接入IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPort() 获取设备Port（仅网关接入需要）
+ * @method integer getPort() 获取设备Port
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPort(integer $Port) 设置设备Port（仅网关接入需要）
+ * @method void setPort(integer $Port) 设置设备Port
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUsername() 获取设备用户名（仅网关接入需要）
+ * @method string getUsername() 获取设备用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsername(string $Username) 设置设备用户名（仅网关接入需要）
+ * @method void setUsername(string $Username) 设置设备用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取用户ID
+ * @method integer getAppId() 获取用户Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置用户ID
+ * @method void setAppId(integer $AppId) 设置用户Id
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AddDeviceResponse extends AbstractModel
+class UpdateDeviceData extends AbstractModel
 {
     /**
-     * @var string 设备iD
+     * @var string 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
@@ -183,31 +183,31 @@ class AddDeviceResponse extends AbstractModel
     public $ProtocolType;
 
     /**
-     * @var string 设备接入IP（仅网关接入需要）
+     * @var string 设备接入IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
-     * @var integer 设备Port（仅网关接入需要）
+     * @var integer 设备Port
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
-     * @var string 设备用户名（仅网关接入需要）
+     * @var string 设备用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Username;
 
     /**
-     * @var integer 用户ID
+     * @var integer 用户Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @param string $DeviceId 设备iD
+     * @param string $DeviceId 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 设备编码（即我们为设备生成的20位国标编码）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -236,13 +236,13 @@ class AddDeviceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProtocolType 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ip 设备接入IP（仅网关接入需要）
+     * @param string $Ip 设备接入IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Port 设备Port（仅网关接入需要）
+     * @param integer $Port 设备Port
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Username 设备用户名（仅网关接入需要）
+     * @param string $Username 设备用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId 用户ID
+     * @param integer $AppId 用户Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

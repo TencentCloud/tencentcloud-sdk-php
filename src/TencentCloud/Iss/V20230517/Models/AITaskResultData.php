@@ -29,7 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAIResults(AITaskResultInfo $AIResults) 设置AI 任务执行结果详情
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AITaskResultResponse extends AbstractModel
+class AITaskResultData extends AbstractModel
 {
     /**
      * @var string AI 任务 ID

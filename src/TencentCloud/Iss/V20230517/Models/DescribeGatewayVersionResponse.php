@@ -18,24 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询网关服务版本信息返回数据
+ * DescribeGatewayVersion返回参数结构体
  *
- * @method array getServices() 获取网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServices(array $Services) 设置网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribeGatewayVersionData getData() 获取返回数据
+ * @method void setData(DescribeGatewayVersionData $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGatewayVersionResponse extends AbstractModel
 {
     /**
-     * @var array 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var DescribeGatewayVersionData 返回数据
      */
-    public $Services;
+    public $Data;
 
     /**
-     * @param array $Services 网关服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $RequestId;
+
+    /**
+     * @param DescribeGatewayVersionData $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -50,13 +54,13 @@ class DescribeGatewayVersionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Services",$param) and $param["Services"] !== null) {
-            $this->Services = [];
-            foreach ($param["Services"] as $key => $value){
-                $obj = new DescribeGatewayVersion();
-                $obj->deserialize($value);
-                array_push($this->Services, $obj);
-            }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new DescribeGatewayVersionData();
+            $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

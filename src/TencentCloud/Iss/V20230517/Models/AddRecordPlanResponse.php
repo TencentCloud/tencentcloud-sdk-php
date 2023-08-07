@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddRecordPlan返回参数结构体
  *
- * @method RecordPlanOptResponse getData() 获取返回结果
- * @method void setData(RecordPlanOptResponse $Data) 设置返回结果
+ * @method RecordPlanOptData getData() 获取返回结果
+ * @method void setData(RecordPlanOptData $Data) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class AddRecordPlanResponse extends AbstractModel
 {
     /**
-     * @var RecordPlanOptResponse 返回结果
+     * @var RecordPlanOptData 返回结果
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class AddRecordPlanResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param RecordPlanOptResponse $Data 返回结果
+     * @param RecordPlanOptData $Data 返回结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class AddRecordPlanResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new RecordPlanOptResponse();
+            $this->Data = new RecordPlanOptData();
             $this->Data->deserialize($param["Data"]);
         }
 

@@ -18,108 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询推拉流鉴权返回数据结构
+ * DescribeStreamAuth返回参数结构体
  *
- * @method string getId() 获取鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(string $Id) 设置鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPullState() 获取是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPullState(integer $PullState) 设置是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPullSecret() 获取播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPullSecret(string $PullSecret) 设置播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPullExpired() 获取播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPullExpired(integer $PullExpired) 设置播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPushState() 获取是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPushState(integer $PushState) 设置是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPushSecret() 获取推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPushSecret(string $PushSecret) 设置推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPushExpired() 获取推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPushExpired(integer $PushExpired) 设置推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribeStreamAuthData getData() 获取返回结果
+ * @method void setData(DescribeStreamAuthData $Data) 设置返回结果
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeStreamAuthResponse extends AbstractModel
 {
     /**
-     * @var string 鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var DescribeStreamAuthData 返回结果
      */
-    public $Id;
+    public $Data;
 
     /**
-     * @var integer 是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $PullState;
+    public $RequestId;
 
     /**
-     * @var string 播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PullSecret;
-
-    /**
-     * @var integer 播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PullExpired;
-
-    /**
-     * @var integer 是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PushState;
-
-    /**
-     * @var string 推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PushSecret;
-
-    /**
-     * @var integer 推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PushExpired;
-
-    /**
-     * @var integer 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AppId;
-
-    /**
-     * @param string $Id 鉴权配置ID（uuid）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PullState 是否开播放鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PullSecret 播放密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PullExpired 播放过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PushState 是否开启推流鉴权（1:开启,0:关闭）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PushSecret 推流密钥（仅支持字母数字，长度0-10位）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PushExpired 推流过期时间（单位：分钟）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescribeStreamAuthData $Data 返回结果
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -134,36 +54,13 @@ class DescribeStreamAuthResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new DescribeStreamAuthData();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("PullState",$param) and $param["PullState"] !== null) {
-            $this->PullState = $param["PullState"];
-        }
-
-        if (array_key_exists("PullSecret",$param) and $param["PullSecret"] !== null) {
-            $this->PullSecret = $param["PullSecret"];
-        }
-
-        if (array_key_exists("PullExpired",$param) and $param["PullExpired"] !== null) {
-            $this->PullExpired = $param["PullExpired"];
-        }
-
-        if (array_key_exists("PushState",$param) and $param["PushState"] !== null) {
-            $this->PushState = $param["PushState"];
-        }
-
-        if (array_key_exists("PushSecret",$param) and $param["PushSecret"] !== null) {
-            $this->PushSecret = $param["PushSecret"];
-        }
-
-        if (array_key_exists("PushExpired",$param) and $param["PushExpired"] !== null) {
-            $this->PushExpired = $param["PushExpired"];
-        }
-
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

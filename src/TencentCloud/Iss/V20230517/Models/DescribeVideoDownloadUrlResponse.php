@@ -18,60 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 获取云录像下载URL返回的数据
+ * DescribeVideoDownloadUrl返回参数结构体
  *
- * @method string getUrl() 获取录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType} 
- * @method void setUrl(string $Url) 设置录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType} 
- * @method string getActualBeginTime() 获取实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
- * @method void setActualBeginTime(string $ActualBeginTime) 设置实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
- * @method string getActualEndTime() 获取实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
- * @method void setActualEndTime(string $ActualEndTime) 设置实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
+ * @method DescribeVideoDownloadUrlData getData() 获取返回的数据结构
+ * @method void setData(DescribeVideoDownloadUrlData $Data) 设置返回的数据结构
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVideoDownloadUrlResponse extends AbstractModel
 {
     /**
-     * @var string 录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType} 
+     * @var DescribeVideoDownloadUrlData 返回的数据结构
      */
-    public $Url;
+    public $Data;
 
     /**
-     * @var string 实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $ActualBeginTime;
+    public $RequestId;
 
     /**
-     * @var string 实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
-     */
-    public $ActualEndTime;
-
-    /**
-     * @param string $Url 录像文件下载 URL
-注意：
-URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获取 
-录像文件下载采用分块传输编码，响应头Transfer-Encoding:chunked 
-下载文件命名格式为{ChannelId}-{BeginTime}-{EndTime}.{FileType} 
-     * @param string $ActualBeginTime 实际下载录像的开始时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
-     * @param string $ActualEndTime 实际下载录像的结束时间
-注意：当请求中指定IsRespActualTime参数为true时，才有该字段
+     * @param DescribeVideoDownloadUrlData $Data 返回的数据结构
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -86,16 +54,13 @@ URL 有效期是10分钟，过期后将拒绝访问，若需再用请重新获�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new DescribeVideoDownloadUrlData();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("ActualBeginTime",$param) and $param["ActualBeginTime"] !== null) {
-            $this->ActualBeginTime = $param["ActualBeginTime"];
-        }
-
-        if (array_key_exists("ActualEndTime",$param) and $param["ActualEndTime"] !== null) {
-            $this->ActualEndTime = $param["ActualEndTime"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

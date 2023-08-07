@@ -18,32 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用于查询设备云端录像时间轴信息返回数据
+ * DescribeRecordFile返回参数结构体
  *
- * @method integer getTips() 获取提示类型，0:时间段内无归档录像，1:时间段内有归档录像
- * @method void setTips(integer $Tips) 设置提示类型，0:时间段内无归档录像，1:时间段内有归档录像
- * @method array getList() 获取存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setList(array $List) 设置存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribeRecordFileData getData() 获取返回结果
+ * @method void setData(DescribeRecordFileData $Data) 设置返回结果
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRecordFileResponse extends AbstractModel
 {
     /**
-     * @var integer 提示类型，0:时间段内无归档录像，1:时间段内有归档录像
+     * @var DescribeRecordFileData 返回结果
      */
-    public $Tips;
+    public $Data;
 
     /**
-     * @var array 存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $List;
+    public $RequestId;
 
     /**
-     * @param integer $Tips 提示类型，0:时间段内无归档录像，1:时间段内有归档录像
-     * @param array $List 存在为数组格式，不存在字段内容为空
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescribeRecordFileData $Data 返回结果
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -58,17 +54,13 @@ class DescribeRecordFileResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tips",$param) and $param["Tips"] !== null) {
-            $this->Tips = $param["Tips"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new DescribeRecordFileData();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = [];
-            foreach ($param["List"] as $key => $value){
-                $obj = new RecordTimeLine();
-                $obj->deserialize($value);
-                array_push($this->List, $obj);
-            }
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

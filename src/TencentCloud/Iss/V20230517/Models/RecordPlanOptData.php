@@ -37,7 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamType(string $StreamType) 设置码流类型，default:设备默认码流类型，main:主码流，sub:子码流，其他根据设备能力集自定义
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class RecordPlanOptResponse extends AbstractModel
+class RecordPlanOptData extends AbstractModel
 {
     /**
      * @var string 上云计划ID

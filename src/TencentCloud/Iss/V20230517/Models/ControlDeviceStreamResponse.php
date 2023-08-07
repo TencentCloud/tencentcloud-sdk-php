@@ -18,48 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 获取开流地址返回数据
+ * ControlDeviceStream返回参数结构体
  *
- * @method string getFlv() 获取flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlv(string $Flv) 设置flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHls() 获取hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHls(string $Hls) 设置hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRtmp() 获取rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRtmp(string $Rtmp) 设置rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method ControlDeviceStreamData getData() 获取返回数据
+ * @method void setData(ControlDeviceStreamData $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ControlDeviceStreamResponse extends AbstractModel
 {
     /**
-     * @var string flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var ControlDeviceStreamData 返回数据
      */
-    public $Flv;
+    public $Data;
 
     /**
-     * @var string hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Hls;
+    public $RequestId;
 
     /**
-     * @var string rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Rtmp;
-
-    /**
-     * @param string $Flv flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Hls hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Rtmp rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param ControlDeviceStreamData $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -74,16 +54,13 @@ class ControlDeviceStreamResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Flv",$param) and $param["Flv"] !== null) {
-            $this->Flv = $param["Flv"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ControlDeviceStreamData();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("Hls",$param) and $param["Hls"] !== null) {
-            $this->Hls = $param["Hls"];
-        }
-
-        if (array_key_exists("Rtmp",$param) and $param["Rtmp"] !== null) {
-            $this->Rtmp = $param["Rtmp"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

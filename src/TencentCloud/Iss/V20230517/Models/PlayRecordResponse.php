@@ -18,24 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 本地录像播放url数据结构
+ * PlayRecord返回参数结构体
  *
- * @method string getFlv() 获取录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlv(string $Flv) 设置录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method PlayRecordData getData() 获取返回结果
+ * @method void setData(PlayRecordData $Data) 设置返回结果
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class PlayRecordResponse extends AbstractModel
 {
     /**
-     * @var string 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var PlayRecordData 返回结果
      */
-    public $Flv;
+    public $Data;
 
     /**
-     * @param string $Flv 录像播放地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $RequestId;
+
+    /**
+     * @param PlayRecordData $Data 返回结果
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -50,8 +54,13 @@ class PlayRecordResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Flv",$param) and $param["Flv"] !== null) {
-            $this->Flv = $param["Flv"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new PlayRecordData();
+            $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

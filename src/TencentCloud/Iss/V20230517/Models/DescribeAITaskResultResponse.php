@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAITaskResult返回参数结构体
  *
- * @method AITaskResultResponse getData() 获取AI识别结果
+ * @method AITaskResultData getData() 获取AI识别结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(AITaskResultResponse $Data) 设置AI识别结果
+ * @method void setData(AITaskResultData $Data) 设置AI识别结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取AI识别结果数量
  * @method void setTotalCount(integer $TotalCount) 设置AI识别结果数量
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAITaskResultResponse extends AbstractModel
 {
     /**
-     * @var AITaskResultResponse AI识别结果
+     * @var AITaskResultData AI识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -48,7 +48,7 @@ class DescribeAITaskResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AITaskResultResponse $Data AI识别结果
+     * @param AITaskResultData $Data AI识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount AI识别结果数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -67,7 +67,7 @@ class DescribeAITaskResultResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new AITaskResultResponse();
+            $this->Data = new AITaskResultData();
             $this->Data->deserialize($param["Data"]);
         }
 

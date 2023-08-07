@@ -18,48 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询域名可绑定集群数据
+ * DescribeDomainRegion返回参数结构体
  *
- * @method string getLabel() 获取服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getData() 获取返回数据
+ * @method void setData(array $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDomainRegionResponse extends AbstractModel
 {
     /**
-     * @var string 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 返回数据
      */
-    public $Label;
+    public $Data;
 
     /**
-     * @var string 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Value;
+    public $RequestId;
 
     /**
-     * @var string 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Region;
-
-    /**
-     * @param string $Label 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -74,16 +54,17 @@ class DescribeDomainRegionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
-            $this->Label = $param["Label"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new DescribeDomainRegionData();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
-        }
-
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

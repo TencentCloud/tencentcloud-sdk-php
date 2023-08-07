@@ -18,60 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询录像上云计划关联通道的返回数据
+ * ListRecordBackupPlanDevices返回参数结构体
  *
- * @method integer getPageNumber() 获取第几页
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNumber(integer $PageNumber) 设置第几页
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageSize() 获取当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageSize(integer $PageSize) 设置当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method RecordPlanChannelInfo getList() 获取设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setList(RecordPlanChannelInfo $List) 设置设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method ListRecordBackupPlanDevicesData getData() 获取返回数据
+ * @method void setData(ListRecordBackupPlanDevicesData $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ListRecordBackupPlanDevicesResponse extends AbstractModel
 {
     /**
-     * @var integer 第几页
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var ListRecordBackupPlanDevicesData 返回数据
      */
-    public $PageNumber;
+    public $Data;
 
     /**
-     * @var integer 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $PageSize;
+    public $RequestId;
 
     /**
-     * @var integer 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TotalCount;
-
-    /**
-     * @var RecordPlanChannelInfo 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $List;
-
-    /**
-     * @param integer $PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageSize 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordPlanChannelInfo $List 设备通道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param ListRecordBackupPlanDevicesData $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -86,21 +54,13 @@ class ListRecordBackupPlanDevicesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
-            $this->PageNumber = $param["PageNumber"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ListRecordBackupPlanDevicesData();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = new RecordPlanChannelInfo();
-            $this->List->deserialize($param["List"]);
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

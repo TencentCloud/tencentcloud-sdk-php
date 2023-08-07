@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUserDevice返回参数结构体
  *
- * @method AddDeviceResponse getData() 获取增加设备返回数据
- * @method void setData(AddDeviceResponse $Data) 设置增加设备返回数据
+ * @method AddDeviceData getData() 获取增加设备返回数据
+ * @method void setData(AddDeviceData $Data) 设置增加设备返回数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class AddUserDeviceResponse extends AbstractModel
 {
     /**
-     * @var AddDeviceResponse 增加设备返回数据
+     * @var AddDeviceData 增加设备返回数据
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class AddUserDeviceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AddDeviceResponse $Data 增加设备返回数据
+     * @param AddDeviceData $Data 增加设备返回数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class AddUserDeviceResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new AddDeviceResponse();
+            $this->Data = new AddDeviceData();
             $this->Data->deserialize($param["Data"]);
         }
 

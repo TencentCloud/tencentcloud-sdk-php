@@ -18,36 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询设备预置位返回数据
+ * DescribeDevicePreset返回参数结构体
  *
- * @method integer getIndex() 获取预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndex(integer $Index) 设置预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getData() 获取返回数据
+ * @method void setData(array $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDevicePresetResponse extends AbstractModel
 {
     /**
-     * @var integer 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 返回数据
      */
-    public $Index;
+    public $Data;
 
     /**
-     * @var string 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Name;
+    public $RequestId;
 
     /**
-     * @param integer $Index 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -62,12 +54,17 @@ class DescribeDevicePresetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Index",$param) and $param["Index"] !== null) {
-            $this->Index = $param["Index"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new DescribeDevicePresetData();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

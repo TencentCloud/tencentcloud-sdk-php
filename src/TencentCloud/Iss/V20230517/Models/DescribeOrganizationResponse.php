@@ -18,108 +18,28 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询组织数据返回结果
+ * DescribeOrganization返回参数结构体
  *
- * @method string getOrganizationId() 获取组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationId(string $OrganizationId) 设置组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取组织名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置组织名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParentId() 获取组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentId(string $ParentId) 设置组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLevel() 获取组织层级
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLevel(integer $Level) 设置组织层级
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取用户id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置用户id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParentIds() 获取组织结构
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParentIds(string $ParentIds) 设置组织结构
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取设备总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置设备总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOnline() 获取设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOnline(integer $Online) 设置设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getData() 获取返回数据
+ * @method void setData(array $Data) 设置返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOrganizationResponse extends AbstractModel
 {
     /**
-     * @var string 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 返回数据
      */
-    public $OrganizationId;
+    public $Data;
 
     /**
-     * @var string 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Name;
+    public $RequestId;
 
     /**
-     * @var string 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ParentId;
-
-    /**
-     * @var integer 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Level;
-
-    /**
-     * @var integer 用户id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AppId;
-
-    /**
-     * @var string 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ParentIds;
-
-    /**
-     * @var integer 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Total;
-
-    /**
-     * @var integer 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Online;
-
-    /**
-     * @param string $OrganizationId 组织 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 组织名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParentId 组织父节点 ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Level 组织层级
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParentIds 组织结构
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 设备总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Online 设备在线数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Data 返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -134,36 +54,17 @@ class DescribeOrganizationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrganizationId",$param) and $param["OrganizationId"] !== null) {
-            $this->OrganizationId = $param["OrganizationId"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new DescribeOrganizationData();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("ParentId",$param) and $param["ParentId"] !== null) {
-            $this->ParentId = $param["ParentId"];
-        }
-
-        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
-            $this->Level = $param["Level"];
-        }
-
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
-        }
-
-        if (array_key_exists("ParentIds",$param) and $param["ParentIds"] !== null) {
-            $this->ParentIds = $param["ParentIds"];
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("Online",$param) and $param["Online"] !== null) {
-            $this->Online = $param["Online"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

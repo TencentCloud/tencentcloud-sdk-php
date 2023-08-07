@@ -18,7 +18,7 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询录像上云计划列表返回数据
+ * 修改录像上云计划返回数据
  *
  * @method string getPlanId() 获取录像上云计划ID
  * @method void setPlanId(string $PlanId) 设置录像上云计划ID
@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpdateAt() 获取修改时间
  * @method void setUpdateAt(string $UpdateAt) 设置修改时间
  */
-class ListRecordBackupPlanResponse extends AbstractModel
+class UpdateRecordBackupPlanData extends AbstractModel
 {
     /**
      * @var string 录像上云计划ID

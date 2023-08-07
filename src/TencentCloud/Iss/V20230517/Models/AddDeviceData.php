@@ -18,11 +18,11 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询设备接口返回数据
+ * 增加设备接口返回数据
  *
- * @method string getDeviceId() 获取设备ID
+ * @method string getDeviceId() 获取设备iD
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceId(string $DeviceId) 设置设备ID
+ * @method void setDeviceId(string $DeviceId) 设置设备iD
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取设备编码（即我们为设备生成的20位国标编码）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置设备类型，1:IPC,2:NVR
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取设备接入服务节点id
+ * @method string getClusterId() 获取设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置设备接入服务节点id
+ * @method void setClusterId(string $ClusterId) 设置设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取设备接入服务节点名称
 
@@ -62,75 +62,43 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置设备描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSipId() 获取sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSipId(string $SipId) 设置sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSipDomain() 获取sip服务域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSipDomain(string $SipDomain) 设置sip服务域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSipIp() 获取sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSipIp(string $SipIp) 设置sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSipPort() 获取sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSipPort(integer $SipPort) 设置sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPushStreamUrl() 获取Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPushStreamUrl(string $PushStreamUrl) 设置Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取设备状态，0:未注册,1:在线,2:离线,3:禁用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置设备状态，0:未注册,1:在线,2:离线,3:禁用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrganizationId() 获取设备所属组织ID
+ * @method integer getOrganizationId() 获取设备所属组织ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationId(string $OrganizationId) 设置设备所属组织ID
+ * @method void setOrganizationId(integer $OrganizationId) 设置设备所属组织ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayId() 获取设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGatewayName() 获取设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGatewayName(string $GatewayName) 设置设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocolTypeName() 获取设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocolTypeName(string $ProtocolTypeName) 设置设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProtocolType() 获取网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolType(integer $ProtocolType) 设置网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIp() 获取设备接入IP
+ * @method string getIp() 获取设备接入IP（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIp(string $Ip) 设置设备接入IP
+ * @method void setIp(string $Ip) 设置设备接入IP（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPort() 获取设备Port
+ * @method integer getPort() 获取设备Port（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPort(integer $Port) 设置设备Port
+ * @method void setPort(integer $Port) 设置设备Port（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUsername() 获取设备用户名
+ * @method string getUsername() 获取设备用户名（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsername(string $Username) 设置设备用户名
+ * @method void setUsername(string $Username) 设置设备用户名（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取设备地域
+ * @method integer getAppId() 获取用户ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置设备地域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getManufacturer() 获取设备厂商
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setManufacturer(string $Manufacturer) 设置设备厂商
+ * @method void setAppId(integer $AppId) 设置用户ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DescribeDeviceResponse extends AbstractModel
+class AddDeviceData extends AbstractModel
 {
     /**
-     * @var string 设备ID
+     * @var string 设备iD
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
@@ -160,7 +128,7 @@ class DescribeDeviceResponse extends AbstractModel
     public $Type;
 
     /**
-     * @var string 设备接入服务节点id
+     * @var string 设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
@@ -191,43 +159,13 @@ class DescribeDeviceResponse extends AbstractModel
     public $Description;
 
     /**
-     * @var string sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $SipId;
-
-    /**
-     * @var string sip服务域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $SipDomain;
-
-    /**
-     * @var string sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $SipIp;
-
-    /**
-     * @var integer sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $SipPort;
-
-    /**
-     * @var string Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PushStreamUrl;
-
-    /**
      * @var integer 设备状态，0:未注册,1:在线,2:离线,3:禁用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 设备所属组织ID
+     * @var integer 设备所属组织ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationId;
@@ -239,55 +177,37 @@ class DescribeDeviceResponse extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var string 设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $GatewayName;
-
-    /**
-     * @var string 设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ProtocolTypeName;
-
-    /**
      * @var integer 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolType;
 
     /**
-     * @var string 设备接入IP
+     * @var string 设备接入IP（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
-     * @var integer 设备Port
+     * @var integer 设备Port（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
-     * @var string 设备用户名
+     * @var string 设备用户名（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Username;
 
     /**
-     * @var string 设备地域
+     * @var integer 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Region;
+    public $AppId;
 
     /**
-     * @var string 设备厂商
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Manufacturer;
-
-    /**
-     * @param string $DeviceId 设备ID
+     * @param string $DeviceId 设备iD
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 设备编码（即我们为设备生成的20位国标编码）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -297,7 +217,7 @@ class DescribeDeviceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 设备类型，1:IPC,2:NVR
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId 设备接入服务节点id
+     * @param string $ClusterId 设备接入服务节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 设备接入服务节点名称
 
@@ -308,37 +228,21 @@ class DescribeDeviceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 设备描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SipId sip服务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SipDomain sip服务域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SipIp sip服务IP地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SipPort sip服务端口
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PushStreamUrl Rtmp设备推流地址(仅rtmp设备有效)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 设备状态，0:未注册,1:在线,2:离线,3:禁用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrganizationId 设备所属组织ID
+     * @param integer $OrganizationId 设备所属组织ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayId 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GatewayName 设备所属网关名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProtocolTypeName 设备网关协议名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProtocolType 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ip 设备接入IP
+     * @param string $Ip 设备接入IP（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Port 设备Port
+     * @param integer $Port 设备Port（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Username 设备用户名
+     * @param string $Username 设备用户名（仅网关接入需要）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 设备地域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Manufacturer 设备厂商
+     * @param integer $AppId 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -394,26 +298,6 @@ class DescribeDeviceResponse extends AbstractModel
             $this->Description = $param["Description"];
         }
 
-        if (array_key_exists("SipId",$param) and $param["SipId"] !== null) {
-            $this->SipId = $param["SipId"];
-        }
-
-        if (array_key_exists("SipDomain",$param) and $param["SipDomain"] !== null) {
-            $this->SipDomain = $param["SipDomain"];
-        }
-
-        if (array_key_exists("SipIp",$param) and $param["SipIp"] !== null) {
-            $this->SipIp = $param["SipIp"];
-        }
-
-        if (array_key_exists("SipPort",$param) and $param["SipPort"] !== null) {
-            $this->SipPort = $param["SipPort"];
-        }
-
-        if (array_key_exists("PushStreamUrl",$param) and $param["PushStreamUrl"] !== null) {
-            $this->PushStreamUrl = $param["PushStreamUrl"];
-        }
-
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
         }
@@ -424,14 +308,6 @@ class DescribeDeviceResponse extends AbstractModel
 
         if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
             $this->GatewayId = $param["GatewayId"];
-        }
-
-        if (array_key_exists("GatewayName",$param) and $param["GatewayName"] !== null) {
-            $this->GatewayName = $param["GatewayName"];
-        }
-
-        if (array_key_exists("ProtocolTypeName",$param) and $param["ProtocolTypeName"] !== null) {
-            $this->ProtocolTypeName = $param["ProtocolTypeName"];
         }
 
         if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
@@ -450,12 +326,8 @@ class DescribeDeviceResponse extends AbstractModel
             $this->Username = $param["Username"];
         }
 
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
-        }
-
-        if (array_key_exists("Manufacturer",$param) and $param["Manufacturer"] !== null) {
-            $this->Manufacturer = $param["Manufacturer"];
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

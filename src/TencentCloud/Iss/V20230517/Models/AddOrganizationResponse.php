@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddOrganization返回参数结构体
  *
- * @method AddOrgResponse getData() 获取增加组织接口返回数据
- * @method void setData(AddOrgResponse $Data) 设置增加组织接口返回数据
+ * @method AddOrgData getData() 获取增加组织接口返回数据
+ * @method void setData(AddOrgData $Data) 设置增加组织接口返回数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class AddOrganizationResponse extends AbstractModel
 {
     /**
-     * @var AddOrgResponse 增加组织接口返回数据
+     * @var AddOrgData 增加组织接口返回数据
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class AddOrganizationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AddOrgResponse $Data 增加组织接口返回数据
+     * @param AddOrgData $Data 增加组织接口返回数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class AddOrganizationResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new AddOrgResponse();
+            $this->Data = new AddOrgData();
             $this->Data->deserialize($param["Data"]);
         }
 

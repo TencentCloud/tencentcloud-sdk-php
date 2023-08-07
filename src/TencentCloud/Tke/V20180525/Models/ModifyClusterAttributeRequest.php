@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) 设置自动变配集群等级
  * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
  * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
+ * @method ClusterProperty getClusterProperty() 获取集群属性
+ * @method void setClusterProperty(ClusterProperty $ClusterProperty) 设置集群属性
  */
 class ModifyClusterAttributeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyClusterAttributeRequest extends AbstractModel
     public $QGPUShareEnable;
 
     /**
+     * @var ClusterProperty 集群属性
+     */
+    public $ClusterProperty;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $ProjectId 集群所属项目
      * @param string $ClusterName 集群名称
@@ -80,6 +87,7 @@ class ModifyClusterAttributeRequest extends AbstractModel
      * @param string $ClusterLevel 集群等级
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
+     * @param ClusterProperty $ClusterProperty 集群属性
      */
     function __construct()
     {
@@ -121,6 +129,11 @@ class ModifyClusterAttributeRequest extends AbstractModel
 
         if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
             $this->QGPUShareEnable = $param["QGPUShareEnable"];
+        }
+
+        if (array_key_exists("ClusterProperty",$param) and $param["ClusterProperty"] !== null) {
+            $this->ClusterProperty = new ClusterProperty();
+            $this->ClusterProperty->deserialize($param["ClusterProperty"]);
         }
     }
 }

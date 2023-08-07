@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ClusterProperty getClusterProperty() 获取集群属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterProperty(ClusterProperty $ClusterProperty) 设置集群属性
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -86,6 +90,12 @@ class ModifyClusterAttributeResponse extends AbstractModel
     public $QGPUShareEnable;
 
     /**
+     * @var ClusterProperty 集群属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterProperty;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -102,6 +112,8 @@ class ModifyClusterAttributeResponse extends AbstractModel
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterProperty $ClusterProperty 集群属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -141,6 +153,11 @@ class ModifyClusterAttributeResponse extends AbstractModel
 
         if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
             $this->QGPUShareEnable = $param["QGPUShareEnable"];
+        }
+
+        if (array_key_exists("ClusterProperty",$param) and $param["ClusterProperty"] !== null) {
+            $this->ClusterProperty = new ClusterProperty();
+            $this->ClusterProperty->deserialize($param["ClusterProperty"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

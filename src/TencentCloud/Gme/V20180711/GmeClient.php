@@ -36,15 +36,15 @@ use TencentCloud\Gme\V20180711\Models as Models;
 </br>
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用。
  * @method Models\CreateCustomizationResponse CreateCustomization(Models\CreateCustomizationRequest $req) 用户使用该接口可以创建语音消息转文本热句模型，以供识别调用
- * @method Models\CreateScanUserResponse CreateScanUser(Models\CreateScanUserRequest $req) 新增自定义送检用户
+ * @method Models\CreateScanUserResponse CreateScanUser(Models\CreateScanUserRequest $req) 新增自定义送检用户。**接口使用前提**：目前 CreateScanUser 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
  * @method Models\DeleteCustomizationResponse DeleteCustomization(Models\DeleteCustomizationRequest $req) 用户通过该接口可以删除语音消息转文本热句模型
  * @method Models\DeleteRoomMemberResponse DeleteRoomMember(Models\DeleteRoomMemberRequest $req) 本接口(DeleteRoomMember)用户删除房间或者剔除房间内用户
- * @method Models\DeleteScanUserResponse DeleteScanUser(Models\DeleteScanUserRequest $req) 删除自定义送检用户
+ * @method Models\DeleteScanUserResponse DeleteScanUser(Models\DeleteScanUserRequest $req) 删除自定义送检用户。**接口使用前提**：目前 DeleteScanUser 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
  * @method Models\DescribeAgeDetectTaskResponse DescribeAgeDetectTask(Models\DescribeAgeDetectTaskRequest $req) 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近60天。
  * @method Models\DescribeApplicationDataResponse DescribeApplicationData(Models\DescribeApplicationDataRequest $req) 本接口(DescribeApplicationData)用于获取数据详情信息，最多可拉取最近90天的数据。
  * @method Models\DescribeApplicationListResponse DescribeApplicationList(Models\DescribeApplicationListRequest $req) 本接口(DescribeApplicationList)用于查询自己账号下的应用列表
- * @method Models\DescribeRealtimeScanConfigResponse DescribeRealtimeScanConfig(Models\DescribeRealtimeScanConfigRequest $req) 获取用户自定义送检信息
+ * @method Models\DescribeRealtimeScanConfigResponse DescribeRealtimeScanConfig(Models\DescribeRealtimeScanConfigRequest $req) 获取用户自定义送检信息。**接口使用前提**：目前 DescribeRealtimeScanConfig 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
  * @method Models\DescribeRecordInfoResponse DescribeRecordInfo(Models\DescribeRecordInfoRequest $req) 查询录制任务信息。
  * @method Models\DescribeRoomInfoResponse DescribeRoomInfo(Models\DescribeRoomInfoRequest $req) 获取房间内用户信息
  * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
@@ -198,8 +198,9 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\StartRecordResponse StartRecord(Models\StartRecordRequest $req) 开启录制
  * @method Models\StopRecordResponse StopRecord(Models\StopRecordRequest $req) 停止录制
 
- * @method Models\UpdateScanRoomsResponse UpdateScanRooms(Models\UpdateScanRoomsRequest $req) 更新自定义送检房间号
- * @method Models\UpdateScanUsersResponse UpdateScanUsers(Models\UpdateScanUsersRequest $req) 更新自定义送检用户号
+ * @method Models\UpdateScanRoomsResponse UpdateScanRooms(Models\UpdateScanRoomsRequest $req) 更新自定义送检房间号。**接口使用前提**：目前 UpdateScanRooms 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
+ * @method Models\UpdateScanUsersResponse UpdateScanUsers(Models\UpdateScanUsersRequest $req) 更新自定义送检用户号。
+**接口使用前提**：目前 UpdateScanUsers 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
  */
 
 class GmeClient extends AbstractClient

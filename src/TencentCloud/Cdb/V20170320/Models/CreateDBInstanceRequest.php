@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterInstanceId(string $MasterInstanceId) 设置实例 ID，购买只读实例时必填，该字段表示只读实例的主实例ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
  * @method string getEngineVersion() 获取MySQL 版本，值包括：5.5、5.6 、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
  * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本，值包括：5.5、5.6 、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
- * @method string getPassword() 获取设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
- * @method void setPassword(string $Password) 设置设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+ * @method string getPassword() 获取设置 root 账号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+ * @method void setPassword(string $Password) 设置设置 root 账号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
  * @method integer getProtectMode() 获取数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
  * @method void setProtectMode(integer $ProtectMode) 设置数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
  * @method integer getDeployMode() 获取多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
@@ -76,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
  * @method integer getParamTemplateId() 获取参数模板id。
  * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板id。
- * @method array getAlarmPolicyList() 获取告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
- * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+ * @method array getAlarmPolicyList() 获取告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
  * @method integer getInstanceNodes() 获取实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
  * @method void setInstanceNodes(integer $InstanceNodes) 设置实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
  * @method integer getCpu() 获取实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
@@ -160,7 +160,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $EngineVersion;
 
     /**
-     * @var string 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @var string 设置 root 账号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public $Password;
 
@@ -240,7 +240,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ParamTemplateId;
 
     /**
-     * @var array 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+     * @var array 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
      */
     public $AlarmPolicyList;
 
@@ -302,7 +302,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
      * @param string $MasterInstanceId 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      * @param string $EngineVersion MySQL 版本，值包括：5.5、5.6 、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
-     * @param string $Password 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * @param string $Password 设置 root 账号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param integer $ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      * @param integer $DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区。
      * @param string $SlaveZone 备库 1 的可用区信息，默认为 Zone 的值。
@@ -318,7 +318,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param string $DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      * @param integer $ParamTemplateId 参数模板id。
-     * @param array $AlarmPolicyList 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+     * @param array $AlarmPolicyList 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
      * @param integer $InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
      * @param integer $Cpu 实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
      * @param integer $AutoSyncFlag 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。该值默认为0。

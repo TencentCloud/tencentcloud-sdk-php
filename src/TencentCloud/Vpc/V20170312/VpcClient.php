@@ -24,6 +24,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 
 /**
  * @method Models\AcceptAttachCcnInstancesResponse AcceptAttachCcnInstances(Models\AcceptAttachCcnInstancesRequest $req) 本接口（AcceptAttachCcnInstances）用于跨账号关联实例时，云联网所有者接受并同意关联操作。
+ * @method Models\AcceptVpcPeeringConnectionResponse AcceptVpcPeeringConnection(Models\AcceptVpcPeeringConnectionRequest $req) 本接口（AcceptVpcPeeringConnection）用于接受对等连接请求。
  * @method Models\AddBandwidthPackageResourcesResponse AddBandwidthPackageResources(Models\AddBandwidthPackageResourcesRequest $req) 接口用于添加带宽包资源，包括[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)和[负载均衡](https://cloud.tencent.com/document/product/214/517)等
  * @method Models\AddIp6RulesResponse AddIp6Rules(Models\AddIp6RulesRequest $req) 1. 该接口用于在转换实例下添加IPV6转换规则。
 2. 支持在同一个转换实例下批量添加转换规则，一个账户在一个地域最多50个。
@@ -211,6 +212,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateVpcEndPointResponse CreateVpcEndPoint(Models\CreateVpcEndPointRequest $req) 本接口（CreateVpcEndPoint）用于创建终端节点。
  * @method Models\CreateVpcEndPointServiceResponse CreateVpcEndPointService(Models\CreateVpcEndPointServiceRequest $req) 本接口（CreateVpcEndPointService）用于创建终端节点服务。
  * @method Models\CreateVpcEndPointServiceWhiteListResponse CreateVpcEndPointServiceWhiteList(Models\CreateVpcEndPointServiceWhiteListRequest $req) 本接口（CreateVpcEndPointServiceWhiteList）创建终端服务白名单。
+ * @method Models\CreateVpcPeeringConnectionResponse CreateVpcPeeringConnection(Models\CreateVpcPeeringConnectionRequest $req) 本接口（CreateVpcPeeringConnection）用于创建私有网络对等连接。
  * @method Models\CreateVpnConnectionResponse CreateVpnConnection(Models\CreateVpnConnectionRequest $req) 本接口（CreateVpnConnection）用于创建VPN通道。
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
@@ -273,6 +275,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteVpcEndPointResponse DeleteVpcEndPoint(Models\DeleteVpcEndPointRequest $req) 本接口（DeleteVpcEndPoint）用于删除终端节点。
  * @method Models\DeleteVpcEndPointServiceResponse DeleteVpcEndPointService(Models\DeleteVpcEndPointServiceRequest $req) 本接口（DeleteVpcEndPointService）用于删除终端节点服务。
  * @method Models\DeleteVpcEndPointServiceWhiteListResponse DeleteVpcEndPointServiceWhiteList(Models\DeleteVpcEndPointServiceWhiteListRequest $req) 本接口（DeleteVpcEndPointServiceWhiteList）用于删除终端节点服务白名单。
+ * @method Models\DeleteVpcPeeringConnectionResponse DeleteVpcPeeringConnection(Models\DeleteVpcPeeringConnectionRequest $req) 本接口（DeleteVpcPeeringConnection）用于删除私有网络对等连接。
  * @method Models\DeleteVpnConnectionResponse DeleteVpnConnection(Models\DeleteVpnConnectionRequest $req) 本接口（DeleteVpnConnection）用于删除VPN通道。
  * @method Models\DeleteVpnGatewayResponse DeleteVpnGateway(Models\DeleteVpnGatewayRequest $req) 本接口（DeleteVpnGateway）用于删除VPN网关。目前只支持删除运行中的按量计费的IPSEC网关实例。
  * @method Models\DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutes(Models\DeleteVpnGatewayRoutesRequest $req) 本接口（DeleteVpnGatewayRoutes）用于删除VPN网关路由
@@ -395,6 +398,7 @@ LimitTypes取值范围：
 * vpc-max-assistant_cidrs（每个VPC可分配的辅助CIDR数）。
 * appid-max-end-point-services （每个开发商每个地域可创建的终端节点服务个数）。
 * appid-max-end-point-service-white-lists （每个开发商每个地域可创建的终端节点服务白名单个数）。
+ * @method Models\DescribeVpcPeeringConnectionsResponse DescribeVpcPeeringConnections(Models\DescribeVpcPeeringConnectionsRequest $req) 查询私有网络对等连接。
  * @method Models\DescribeVpcPrivateIpAddressesResponse DescribeVpcPrivateIpAddresses(Models\DescribeVpcPrivateIpAddressesRequest $req) 本接口（DescribeVpcPrivateIpAddresses）用于查询VPC内网IP信息。<br />
 只能查询已使用的IP信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
  * @method Models\DescribeVpcResourceDashboardResponse DescribeVpcResourceDashboard(Models\DescribeVpcResourceDashboardRequest $req) 本接口(DescribeVpcResourceDashboard)用于查看VPC资源信息。
@@ -536,6 +540,7 @@ LimitTypes取值范围：
 
 
  * @method Models\ModifyVpcEndPointServiceWhiteListResponse ModifyVpcEndPointServiceWhiteList(Models\ModifyVpcEndPointServiceWhiteListRequest $req) 本接口（ModifyVpcEndPointServiceWhiteList）用于修改终端节点服务白名单属性。
+ * @method Models\ModifyVpcPeeringConnectionResponse ModifyVpcPeeringConnection(Models\ModifyVpcPeeringConnectionRequest $req) 本接口（ModifyVpcPeeringConnection）用于修改私有网络对等连接属性。
  * @method Models\ModifyVpnConnectionAttributeResponse ModifyVpnConnectionAttribute(Models\ModifyVpnConnectionAttributeRequest $req) 本接口（ModifyVpnConnectionAttribute）用于修改VPN通道。
  * @method Models\ModifyVpnGatewayAttributeResponse ModifyVpnGatewayAttribute(Models\ModifyVpnGatewayAttributeRequest $req) 本接口（ModifyVpnGatewayAttribute）用于修改VPN网关属性。
  * @method Models\ModifyVpnGatewayCcnRoutesResponse ModifyVpnGatewayCcnRoutes(Models\ModifyVpnGatewayCcnRoutesRequest $req) 本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由。
@@ -544,6 +549,7 @@ LimitTypes取值范围：
  * @method Models\RefreshDirectConnectGatewayRouteToNatGatewayResponse RefreshDirectConnectGatewayRouteToNatGateway(Models\RefreshDirectConnectGatewayRouteToNatGatewayRequest $req) 刷新专线直连nat路由，更新nat到专线的路由表
  * @method Models\RejectAttachCcnInstancesResponse RejectAttachCcnInstances(Models\RejectAttachCcnInstancesRequest $req) 本接口（RejectAttachCcnInstances）用于跨账号关联实例时，云联网所有者拒绝关联操作。
 
+ * @method Models\RejectVpcPeeringConnectionResponse RejectVpcPeeringConnection(Models\RejectVpcPeeringConnectionRequest $req) 本接口（RejectVpcPeeringConnection）用于驳回对等连接请求。
  * @method Models\ReleaseAddressesResponse ReleaseAddresses(Models\ReleaseAddressesRequest $req) 本接口 (ReleaseAddresses) 用于释放一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * 该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
 * 只有状态为 UNBIND 的 EIP 才能进行释放操作。

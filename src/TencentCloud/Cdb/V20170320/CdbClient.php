@@ -99,6 +99,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeCdbProxyInfoResponse DescribeCdbProxyInfo(Models\DescribeCdbProxyInfoRequest $req) 查询数据库代理详情信息
  * @method Models\DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(Models\DescribeCdbZoneConfigRequest $req) 本接口(DescribeCdbZoneConfig)用于查询云数据库各地域可售卖的规格配置。
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
+ * @method Models\DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategy(Models\DescribeCpuExpandStrategyRequest $req) 通过该 API 可以查询实例的 CPU 弹性扩容策略
  * @method Models\DescribeDBFeaturesResponse DescribeDBFeatures(Models\DescribeDBFeaturesRequest $req) 本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
  * @method Models\DescribeDBImportRecordsResponse DescribeDBImportRecords(Models\DescribeDBImportRecordsRequest $req) 本接口(DescribeDBImportRecords)用于查询云数据库导入任务操作日志。
  * @method Models\DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(Models\DescribeDBInstanceCharsetRequest $req) 本接口(DescribeDBInstanceCharset)用于查询云数据库实例的字符集，获取字符集的名称。
@@ -208,7 +209,9 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 1、本接口只支持主实例进行重启操作；
 2、实例状态必须为正常，并且没有其他异步任务在执行中。
  * @method Models\StartBatchRollbackResponse StartBatchRollback(Models\StartBatchRollbackRequest $req) 该接口（StartBatchRollback）用于批量回档云数据库实例的库表。
+ * @method Models\StartCpuExpandResponse StartCpuExpand(Models\StartCpuExpandRequest $req) 通过该API，可以开启CPU弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
  * @method Models\StartReplicationResponse StartReplication(Models\StartReplicationRequest $req) 开启 RO 复制，从主实例同步数据。
+ * @method Models\StopCpuExpandResponse StopCpuExpand(Models\StopCpuExpandRequest $req) 通过该API，可以关闭 CPU 弹性扩容。
  * @method Models\StopDBImportJobResponse StopDBImportJob(Models\StopDBImportJobRequest $req) 本接口(StopDBImportJob)用于终止数据导入任务。
  * @method Models\StopReplicationResponse StopReplication(Models\StopReplicationRequest $req) 停止 RO 复制，中断从主实例同步数据。
  * @method Models\StopRollbackResponse StopRollback(Models\StopRollbackRequest $req) 本接口(StopRollback) 用于撤销实例正在进行的回档任务，该接口返回一个异步任务id。 撤销结果可以通过 DescribeAsyncRequestInfo 查询任务的执行情况。

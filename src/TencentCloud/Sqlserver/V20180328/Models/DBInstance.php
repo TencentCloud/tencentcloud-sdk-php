@@ -76,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置实例cpu核心数
  * @method string getVersion() 获取实例版本代号
  * @method void setVersion(string $Version) 设置实例版本代号
- * @method string getType() 获取物理机代号
- * @method void setType(string $Type) 设置物理机代号
+ * @method string getType() 获取实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
+ * @method void setType(string $Type) 设置实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
  * @method integer getPid() 获取计费ID
  * @method void setPid(integer $Pid) 设置计费ID
  * @method string getUniqVpcId() 获取实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
@@ -292,7 +292,7 @@ class DBInstance extends AbstractModel
     public $Version;
 
     /**
-     * @var string 物理机代号
+     * @var string 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
      */
     public $Type;
 
@@ -460,7 +460,7 @@ class DBInstance extends AbstractModel
      * @param string $Uid 实例唯一UID
      * @param integer $Cpu 实例cpu核心数
      * @param string $Version 实例版本代号
-     * @param string $Type 物理机代号
+     * @param string $Type 实例类型代号："TS85"-物理机，本地SSD硬盘；"Z3"-物理机早期版本，本地SSD硬盘；"CLOUD_BASIC"-虚拟机，普通云硬盘；"CLOUD_PREMIUM"-虚拟机，高性能云硬盘；"CLOUD_SSD"-虚拟机，云SSD硬盘；"CLOUD_HSSD"-虚拟机，增强型SSD云硬盘；"CLOUD_TSSD"-虚拟机，极速型SSD云硬盘；"CLOUD_BSSD"-虚拟机，通用型SSD云硬盘
      * @param integer $Pid 计费ID
      * @param string $UniqVpcId 实例所属VPC的唯一字符串ID，格式如：vpc-xxx，基础网络时为空字符串
      * @param string $UniqSubnetId 实例所属子网的唯一字符串ID，格式如： subnet-xxx，基础网络时为空字符串

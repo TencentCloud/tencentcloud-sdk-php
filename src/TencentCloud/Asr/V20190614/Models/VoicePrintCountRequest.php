@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据库地址
+ * VoicePrintCount请求参数结构体
  *
- * @method string getIP() 获取IP地址
- * @method void setIP(string $IP) 设置IP地址
- * @method integer getPort() 获取端口
- * @method void setPort(integer $Port) 设置端口
+
  */
-class Addr extends AbstractModel
+class VoicePrintCountRequest extends AbstractModel
 {
-    /**
-     * @var string IP地址
-     */
-    public $IP;
+
 
     /**
-     * @var integer 端口
-     */
-    public $Port;
 
-    /**
-     * @param string $IP IP地址
-     * @param integer $Port 端口
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class Addr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
-            $this->IP = $param["IP"];
-        }
 
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
-        }
     }
 }

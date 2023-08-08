@@ -98,6 +98,8 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetaTags() 获取用户自定义元数据信息，MetadataType为2时必填
  * @method void setMetaTags(array $MetaTags) 设置用户自定义元数据信息，MetadataType为2时必填
+ * @method array getEventLogRules() 获取windows事件日志采集
+ * @method void setEventLogRules(array $EventLogRules) 设置windows事件日志采集
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -213,6 +215,11 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     public $MetaTags;
 
     /**
+     * @var array windows事件日志采集
+     */
+    public $EventLogRules;
+
+    /**
      * @param string $TimeKey 时间字段的key名字，time_key和time_format必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
@@ -252,6 +259,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
      * @param string $PathRegex 采集配置路径正则表达式，MetadataType为3时必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MetaTags 用户自定义元数据信息，MetadataType为2时必填
+     * @param array $EventLogRules windows事件日志采集
      */
     function __construct()
     {
@@ -345,6 +353,15 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
                 $obj = new MetaTagInfo();
                 $obj->deserialize($value);
                 array_push($this->MetaTags, $obj);
+            }
+        }
+
+        if (array_key_exists("EventLogRules",$param) and $param["EventLogRules"] !== null) {
+            $this->EventLogRules = [];
+            foreach ($param["EventLogRules"] as $key => $value){
+                $obj = new EventLog();
+                $obj->deserialize($value);
+                array_push($this->EventLogRules, $obj);
             }
         }
     }

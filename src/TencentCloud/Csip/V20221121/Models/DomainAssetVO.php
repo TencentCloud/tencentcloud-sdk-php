@@ -156,6 +156,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceRisk(integer $ServiceRisk) 设置风险服务暴露数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsNewAsset() 获取是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVerifyDomain() 获取待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerifyDomain(string $VerifyDomain) 设置待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVerifyTXTRecord() 获取待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerifyTXTRecord(string $VerifyTXTRecord) 设置待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVerifyStatus() 获取待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerifyStatus(integer $VerifyStatus) 设置待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainAssetVO extends AbstractModel
 {
@@ -364,6 +380,30 @@ class DomainAssetVO extends AbstractModel
     public $ServiceRisk;
 
     /**
+     * @var integer 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsNewAsset;
+
+    /**
+     * @var string 待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VerifyDomain;
+
+    /**
+     * @var string 待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VerifyTXTRecord;
+
+    /**
+     * @var integer 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VerifyStatus;
+
+    /**
      * @param array $AssetId 资产id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssetName 资产名
@@ -431,6 +471,14 @@ class DomainAssetVO extends AbstractModel
      * @param integer $WebAttack web攻击
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ServiceRisk 风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VerifyDomain 待确认资产的随机三级域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VerifyTXTRecord 待确认资产的TXT记录内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VerifyStatus 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -585,6 +633,22 @@ class DomainAssetVO extends AbstractModel
 
         if (array_key_exists("ServiceRisk",$param) and $param["ServiceRisk"] !== null) {
             $this->ServiceRisk = $param["ServiceRisk"];
+        }
+
+        if (array_key_exists("IsNewAsset",$param) and $param["IsNewAsset"] !== null) {
+            $this->IsNewAsset = $param["IsNewAsset"];
+        }
+
+        if (array_key_exists("VerifyDomain",$param) and $param["VerifyDomain"] !== null) {
+            $this->VerifyDomain = $param["VerifyDomain"];
+        }
+
+        if (array_key_exists("VerifyTXTRecord",$param) and $param["VerifyTXTRecord"] !== null) {
+            $this->VerifyTXTRecord = $param["VerifyTXTRecord"];
+        }
+
+        if (array_key_exists("VerifyStatus",$param) and $param["VerifyStatus"] !== null) {
+            $this->VerifyStatus = $param["VerifyStatus"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateIntegrationEmployees请求参数结构体
  *
- * @method UserInfo getOperator() 获取当前用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为YUFU；
- * @method void setOperator(UserInfo $Operator) 设置当前用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为YUFU；
+ * @method UserInfo getOperator() 获取当前用户信息，UserId必填
+ * @method void setOperator(UserInfo $Operator) 设置当前用户信息，UserId必填
  * @method array getEmployees() 获取员工信息，不超过100个。
 根据UserId或OpenId更新员工，必填一个，优先UserId。
 可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateIntegrationEmployeesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 当前用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为YUFU；
+     * @var UserInfo 当前用户信息，UserId必填
      */
     public $Operator;
 
@@ -51,7 +51,7 @@ class UpdateIntegrationEmployeesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 当前用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为YUFU；
+     * @param UserInfo $Operator 当前用户信息，UserId必填
      * @param array $Employees 员工信息，不超过100个。
 根据UserId或OpenId更新员工，必填一个，优先UserId。
 可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持

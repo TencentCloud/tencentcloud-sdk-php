@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelDescribeFlowComponents返回参数结构体
+ * VoicePrintCount返回参数结构体
  *
- * @method array getRecipientComponentInfos() 获取流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecipientComponentInfos(array $RecipientComponentInfos) 设置流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method VoicePrintCountData getData() 获取统计数据
+ * @method void setData(VoicePrintCountData $Data) 设置统计数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelDescribeFlowComponentsResponse extends AbstractModel
+class VoicePrintCountResponse extends AbstractModel
 {
     /**
-     * @var array 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var VoicePrintCountData 统计数据
      */
-    public $RecipientComponentInfos;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class ChannelDescribeFlowComponentsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RecipientComponentInfos 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param VoicePrintCountData $Data 统计数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,13 +54,9 @@ class ChannelDescribeFlowComponentsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecipientComponentInfos",$param) and $param["RecipientComponentInfos"] !== null) {
-            $this->RecipientComponentInfos = [];
-            foreach ($param["RecipientComponentInfos"] as $key => $value){
-                $obj = new RecipientComponentInfo();
-                $obj->deserialize($value);
-                array_push($this->RecipientComponentInfos, $obj);
-            }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new VoicePrintCountData();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

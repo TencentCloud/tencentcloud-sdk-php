@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取操作人信息，UserId必填且需拥有组织架构管理权限
  * @method void setOperator(UserInfo $Operator) 设置操作人信息，UserId必填且需拥有组织架构管理权限
- * @method string getDeptId() 获取电子签部门ID
- * @method void setDeptId(string $DeptId) 设置电子签部门ID
- * @method string getParentDeptId() 获取电子签父部门ID
- * @method void setParentDeptId(string $ParentDeptId) 设置电子签父部门ID
+ * @method string getDeptId() 获取电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+ * @method void setDeptId(string $DeptId) 设置电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+ * @method string getParentDeptId() 获取电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
+ * @method void setParentDeptId(string $ParentDeptId) 设置电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
  * @method string getDeptName() 获取部门名称，不超过50个字符
  * @method void setDeptName(string $DeptName) 设置部门名称，不超过50个字符
  * @method string getDeptOpenId() 获取客户系统部门ID，不超过64个字符
@@ -41,12 +41,12 @@ class ModifyIntegrationDepartmentRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 电子签部门ID
+     * @var string 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
      */
     public $DeptId;
 
     /**
-     * @var string 电子签父部门ID
+     * @var string 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
      */
     public $ParentDeptId;
 
@@ -67,8 +67,8 @@ class ModifyIntegrationDepartmentRequest extends AbstractModel
 
     /**
      * @param UserInfo $Operator 操作人信息，UserId必填且需拥有组织架构管理权限
-     * @param string $DeptId 电子签部门ID
-     * @param string $ParentDeptId 电子签父部门ID
+     * @param string $DeptId 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+     * @param string $ParentDeptId 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
      * @param string $DeptName 部门名称，不超过50个字符
      * @param string $DeptOpenId 客户系统部门ID，不超过64个字符
      * @param integer $OrderNo 排序号,1~30000范围内

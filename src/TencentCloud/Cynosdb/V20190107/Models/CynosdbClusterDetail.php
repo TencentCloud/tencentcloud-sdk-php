@@ -96,8 +96,8 @@ pausing
  * @method void setVip(string $Vip) 设置vip地址
  * @method integer getVport() 获取vport端口
  * @method void setVport(integer $Vport) 设置vport端口
- * @method array getRoAddr() 获取读写分离Vport
- * @method void setRoAddr(array $RoAddr) 设置读写分离Vport
+ * @method array getRoAddr() 获取集群只读实例的vip地址和vport端口
+ * @method void setRoAddr(array $RoAddr) 设置集群只读实例的vip地址和vport端口
  * @method Ability getAbility() 获取集群支持的功能
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbility(Ability $Ability) 设置集群支持的功能
@@ -318,7 +318,7 @@ pausing
     public $Vport;
 
     /**
-     * @var array 读写分离Vport
+     * @var array 集群只读实例的vip地址和vport端口
      */
     public $RoAddr;
 
@@ -482,7 +482,7 @@ pausing
      * @param integer $UsedStorage 使用容量
      * @param string $Vip vip地址
      * @param integer $Vport vport端口
-     * @param array $RoAddr 读写分离Vport
+     * @param array $RoAddr 集群只读实例的vip地址和vport端口
      * @param Ability $Ability 集群支持的功能
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CynosVersion cynos版本

@@ -74,9 +74,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeType(integer $RuntimeType) 设置环境类型：0: sandbox, 1:shared, 2:private 3: trial
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuntimeClass() 获取环境运行类型：0:运行时类型、1:api类型
+ * @method integer getRuntimeClass() 获取环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimeClass(integer $RuntimeClass) 设置环境运行类型：0:运行时类型、1:api类型
+ * @method void setRuntimeClass(integer $RuntimeClass) 设置环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBandwidthOutUsed() 获取已使用出带宽 Mbps
 注意：此字段可能返回 null，表示取不到有效值。
@@ -201,7 +201,7 @@ class RuntimeMC extends AbstractModel
     public $RuntimeType;
 
     /**
-     * @var integer 环境运行类型：0:运行时类型、1:api类型
+     * @var integer 环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeClass;
@@ -246,7 +246,7 @@ class RuntimeMC extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuntimeType 环境类型：0: sandbox, 1:shared, 2:private 3: trial
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     * @param integer $RuntimeClass 环境运行类型：0:运行时类型、1:api类型、2:etl环境
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $BandwidthOutUsed 已使用出带宽 Mbps
 注意：此字段可能返回 null，表示取不到有效值。

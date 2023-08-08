@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelDescribeFlowComponents返回参数结构体
+ * CreateAdminURL返回参数结构体
  *
- * @method array getRecipientComponentInfos() 获取流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecipientComponentInfos(array $RecipientComponentInfos) 设置流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getURL() 获取登录链接
+ * @method void setURL(string $URL) 设置登录链接
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelDescribeFlowComponentsResponse extends AbstractModel
+class CreateAdminURLResponse extends AbstractModel
 {
     /**
-     * @var array 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 登录链接
      */
-    public $RecipientComponentInfos;
+    public $URL;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class ChannelDescribeFlowComponentsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RecipientComponentInfos 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $URL 登录链接
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,13 +54,8 @@ class ChannelDescribeFlowComponentsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RecipientComponentInfos",$param) and $param["RecipientComponentInfos"] !== null) {
-            $this->RecipientComponentInfos = [];
-            foreach ($param["RecipientComponentInfos"] as $key => $value){
-                $obj = new RecipientComponentInfo();
-                $obj->deserialize($value);
-                array_push($this->RecipientComponentInfos, $obj);
-            }
+        if (array_key_exists("URL",$param) and $param["URL"] !== null) {
+            $this->URL = $param["URL"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

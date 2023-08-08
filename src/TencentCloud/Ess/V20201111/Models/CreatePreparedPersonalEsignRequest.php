@@ -78,6 +78,8 @@ true：做透明化处理和颜色增强。
  * @method void setFileId(string $FileId) 设置印章图片文件 id
 取值：
 填写的FileId通过UploadFiles接口上传文件获取。
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class CreatePreparedPersonalEsignRequest extends AbstractModel
 {
@@ -160,6 +162,11 @@ true：做透明化处理和颜色增强。
     public $FileId;
 
     /**
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public $Agent;
+
+    /**
      * @param string $UserName 个人用户姓名
      * @param string $IdCardNumber 身份证件号码
      * @param string $SealName 印章名称
@@ -189,6 +196,7 @@ true：做透明化处理和颜色增强。
      * @param string $FileId 印章图片文件 id
 取值：
 填写的FileId通过UploadFiles接口上传文件获取。
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {
@@ -250,6 +258,11 @@ true：做透明化处理和颜色增强。
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

@@ -152,6 +152,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskExposure(integer $RiskExposure) 设置风险服务暴露
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsNewAsset() 获取是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVerifyStatus() 获取资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerifyStatus(integer $VerifyStatus) 设置资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpAssetListVO extends AbstractModel
 {
@@ -354,6 +362,18 @@ class IpAssetListVO extends AbstractModel
     public $RiskExposure;
 
     /**
+     * @var integer 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsNewAsset;
+
+    /**
+     * @var integer 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VerifyStatus;
+
+    /**
      * @param string $AssetId 资产id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产name
@@ -419,6 +439,10 @@ class IpAssetListVO extends AbstractModel
      * @param string $MemberId memberid信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskExposure 风险服务暴露
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VerifyStatus 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -569,6 +593,14 @@ class IpAssetListVO extends AbstractModel
 
         if (array_key_exists("RiskExposure",$param) and $param["RiskExposure"] !== null) {
             $this->RiskExposure = $param["RiskExposure"];
+        }
+
+        if (array_key_exists("IsNewAsset",$param) and $param["IsNewAsset"] !== null) {
+            $this->IsNewAsset = $param["IsNewAsset"];
+        }
+
+        if (array_key_exists("VerifyStatus",$param) and $param["VerifyStatus"] !== null) {
+            $this->VerifyStatus = $param["VerifyStatus"];
         }
     }
 }

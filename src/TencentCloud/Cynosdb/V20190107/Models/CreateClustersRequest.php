@@ -41,13 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置当DbMode为NORMAL或不填时必选
 普通实例Cpu核数
  * @method integer getMemory() 获取当DbMode为NORMAL或不填时必选
-普通实例内存,单位G
+普通实例内存,单位GB
  * @method void setMemory(integer $Memory) 设置当DbMode为NORMAL或不填时必选
-普通实例内存,单位G
+普通实例内存,单位GB
  * @method integer getStorage() 获取该参数无实际意义，已废弃。
-存储大小，单位G。
+存储大小，单位GB。
  * @method void setStorage(integer $Storage) 设置该参数无实际意义，已废弃。
-存储大小，单位G。
+存储大小，单位GB。
  * @method string getClusterName() 获取集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
  * @method void setClusterName(string $ClusterName) 设置集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
  * @method string getAdminPassword() 获取账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
@@ -187,13 +187,13 @@ class CreateClustersRequest extends AbstractModel
 
     /**
      * @var integer 当DbMode为NORMAL或不填时必选
-普通实例内存,单位G
+普通实例内存,单位GB
      */
     public $Memory;
 
     /**
      * @var integer 该参数无实际意义，已废弃。
-存储大小，单位G。
+存储大小，单位GB。
      */
     public $Storage;
 
@@ -385,9 +385,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param integer $Cpu 当DbMode为NORMAL或不填时必选
 普通实例Cpu核数
      * @param integer $Memory 当DbMode为NORMAL或不填时必选
-普通实例内存,单位G
+普通实例内存,单位GB
      * @param integer $Storage 该参数无实际意义，已废弃。
-存储大小，单位G。
+存储大小，单位GB。
      * @param string $ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
      * @param string $AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      * @param integer $Port 端口，默认3306，取值范围[0, 65535)

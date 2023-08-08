@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployed(boolean $Deployed) 设置是否已在当前环境发布
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMatchExtensions() 获取环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMatchExtensions(string $MatchExtensions) 设置环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbstractRuntimeMC extends AbstractModel
 {
@@ -97,6 +101,12 @@ class AbstractRuntimeMC extends AbstractModel
     public $Deployed;
 
     /**
+     * @var string 环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MatchExtensions;
+
+    /**
      * @param integer $RuntimeId 环境id
      * @param string $DisplayName 环境名称，用户输入，同一uin内唯一
      * @param integer $Type 环境类型：0: sandbox, 1:shared, 2:private
@@ -107,6 +117,8 @@ class AbstractRuntimeMC extends AbstractModel
      * @param integer $ExpiredAt 环境过期时间
      * @param integer $RuntimeClass 环境运行类型：0:运行时类型、1:api类型
      * @param boolean $Deployed 是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MatchExtensions 环境扩展组件是否满足应用要求：0=true, 1=false 表示该应用需要扩展组件0(cdc)以及1(java)，但是独立环境有cdc无java，不满足发布要求
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +172,10 @@ class AbstractRuntimeMC extends AbstractModel
 
         if (array_key_exists("Deployed",$param) and $param["Deployed"] !== null) {
             $this->Deployed = $param["Deployed"];
+        }
+
+        if (array_key_exists("MatchExtensions",$param) and $param["MatchExtensions"] !== null) {
+            $this->MatchExtensions = $param["MatchExtensions"];
         }
     }
 }

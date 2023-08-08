@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCore(integer $IsCore) 设置是否核心：1:核心，2:非核心
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsNewAsset() 获取是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetClusterPod extends AbstractModel
 {
@@ -199,6 +203,12 @@ class AssetClusterPod extends AbstractModel
     public $IsCore;
 
     /**
+     * @var integer 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsNewAsset;
+
+    /**
      * @param integer $AppId 租户id
      * @param string $Uin 租户uin
      * @param string $Nick 租户昵称
@@ -231,6 +241,8 @@ class AssetClusterPod extends AbstractModel
      * @param string $PrivateIp 内网ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsCore 是否核心：1:核心，2:非核心
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsNewAsset 是否新资产 1新
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -320,6 +332,10 @@ class AssetClusterPod extends AbstractModel
 
         if (array_key_exists("IsCore",$param) and $param["IsCore"] !== null) {
             $this->IsCore = $param["IsCore"];
+        }
+
+        if (array_key_exists("IsNewAsset",$param) and $param["IsNewAsset"] !== null) {
+            $this->IsNewAsset = $param["IsNewAsset"];
         }
     }
 }

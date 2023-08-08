@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method integer getScanAssetType() 获取0-全扫，1-指定资产扫，2-排除资产扫，3-手动填写扫；1和2则Assets字段必填，3则SelfDefiningAssets必填
  * @method void setScanAssetType(integer $ScanAssetType) 设置0-全扫，1-指定资产扫，2-排除资产扫，3-手动填写扫；1和2则Assets字段必填，3则SelfDefiningAssets必填
- * @method array getScanItem() 获取扫描项目；port/poc/weakpass/webcontent/configrisk
- * @method void setScanItem(array $ScanItem) 设置扫描项目；port/poc/weakpass/webcontent/configrisk
+ * @method array getScanItem() 获取扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
+ * @method void setScanItem(array $ScanItem) 设置扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
  * @method integer getScanPlanType() 获取0-周期任务,1-立即扫描,2-定时扫描,3-自定义；0,2,3则ScanPlanContent必填
  * @method void setScanPlanType(integer $ScanPlanType) 设置0-周期任务,1-立即扫描,2-定时扫描,3-自定义；0,2,3则ScanPlanContent必填
  * @method array getAssets() 获取扫描资产信息列表
@@ -52,7 +52,7 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     public $ScanAssetType;
 
     /**
-     * @var array 扫描项目；port/poc/weakpass/webcontent/configrisk
+     * @var array 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
      */
     public $ScanItem;
 
@@ -89,7 +89,7 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     /**
      * @param string $TaskName 任务名称
      * @param integer $ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫，3-手动填写扫；1和2则Assets字段必填，3则SelfDefiningAssets必填
-     * @param array $ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk
+     * @param array $ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
      * @param integer $ScanPlanType 0-周期任务,1-立即扫描,2-定时扫描,3-自定义；0,2,3则ScanPlanContent必填
      * @param array $Assets 扫描资产信息列表
      * @param string $ScanPlanContent 扫描计划详情

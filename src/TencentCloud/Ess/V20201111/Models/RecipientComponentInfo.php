@@ -25,16 +25,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecipientId(string $RecipientId) 设置参与方Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecipientFillStatus() 获取参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecipientFillStatus(string $RecipientFillStatus) 设置参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsPromoter() 获取是否发起方
+ * @method boolean getIsPromoter() 获取是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsPromoter(boolean $IsPromoter) 设置是否发起方
+ * @method void setIsPromoter(boolean $IsPromoter) 设置是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getComponents() 获取填写控件内容
+ * @method array getComponents() 获取填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComponents(array $Components) 设置填写控件内容
+ * @method void setComponents(array $Components) 设置填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecipientComponentInfo extends AbstractModel
@@ -47,18 +51,20 @@ class RecipientComponentInfo extends AbstractModel
 
     /**
      * @var string 参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecipientFillStatus;
 
     /**
-     * @var boolean 是否发起方
+     * @var boolean 是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPromoter;
 
     /**
-     * @var array 填写控件内容
+     * @var array 填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Components;
@@ -67,10 +73,12 @@ class RecipientComponentInfo extends AbstractModel
      * @param string $RecipientId 参与方Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecipientFillStatus 参与方填写状态
+0-未填写
+1-已填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsPromoter 是否发起方
+     * @param boolean $IsPromoter 是否为发起方
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Components 填写控件内容
+     * @param array $Components 填写控件列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

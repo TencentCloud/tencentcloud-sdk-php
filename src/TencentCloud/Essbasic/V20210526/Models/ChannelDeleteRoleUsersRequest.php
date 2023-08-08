@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method string getRoleId() 获取角色Id（非超管或法人角色Id）
  * @method void setRoleId(string $RoleId) 设置角色Id（非超管或法人角色Id）
- * @method array getUserIds() 获取电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
- * @method void setUserIds(array $UserIds) 设置电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+ * @method array getUserIds() 获取电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
+ * @method void setUserIds(array $UserIds) 设置电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
  * @method UserInfo getOperator() 获取操作人信息
  * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method array getOpenIds() 获取客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
- * @method void setOpenIds(array $OpenIds) 设置客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+ * @method array getOpenIds() 获取客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
+ * @method void setOpenIds(array $OpenIds) 设置客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
  */
 class ChannelDeleteRoleUsersRequest extends AbstractModel
 {
@@ -44,7 +44,7 @@ class ChannelDeleteRoleUsersRequest extends AbstractModel
     public $RoleId;
 
     /**
-     * @var array 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * @var array 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
      */
     public $UserIds;
 
@@ -55,16 +55,16 @@ class ChannelDeleteRoleUsersRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var array 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * @var array 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
      */
     public $OpenIds;
 
     /**
      * @param Agent $Agent 代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param string $RoleId 角色Id（非超管或法人角色Id）
-     * @param array $UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * @param array $UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多两百
      * @param UserInfo $Operator 操作人信息
-     * @param array $OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * @param array $OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多两百
      */
     function __construct()
     {

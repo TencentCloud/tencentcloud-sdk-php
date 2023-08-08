@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务id
  * @method void setTaskId(string $TaskId) 设置任务id
+ * @method integer getStatus() 获取0,任务创建成功；小于0失败；-1为存在资产未认证
+ * @method void setStatus(integer $Status) 设置0,任务创建成功；小于0失败；-1为存在资产未认证
+ * @method array getUnAuthAsset() 获取未认证资产列表
+ * @method void setUnAuthAsset(array $UnAuthAsset) 设置未认证资产列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class CreateRiskCenterScanTaskResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 0,任务创建成功；小于0失败；-1为存在资产未认证
+     */
+    public $Status;
+
+    /**
+     * @var array 未认证资产列表
+     */
+    public $UnAuthAsset;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $TaskId 任务id
+     * @param integer $Status 0,任务创建成功；小于0失败；-1为存在资产未认证
+     * @param array $UnAuthAsset 未认证资产列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +72,14 @@ class CreateRiskCenterScanTaskResponse extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("UnAuthAsset",$param) and $param["UnAuthAsset"] !== null) {
+            $this->UnAuthAsset = $param["UnAuthAsset"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

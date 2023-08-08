@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceIdSet(array $ResourceIdSet) 设置过滤条件，资产绑定的堡垒机服务ID集合
  * @method array getKindSet() 获取可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
  * @method void setKindSet(array $KindSet) 设置可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+ * @method string getManagedAccount() 获取资产是否包含托管账号。1，包含；0，不包含
+ * @method void setManagedAccount(string $ManagedAccount) 设置资产是否包含托管账号。1，包含；0，不包含
  * @method string getDepartmentId() 获取过滤条件，可按照部门ID进行过滤
  * @method void setDepartmentId(string $DepartmentId) 设置过滤条件，可按照部门ID进行过滤
  * @method array getTagFilters() 获取过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
@@ -102,6 +104,11 @@ class DescribeDevicesRequest extends AbstractModel
     public $KindSet;
 
     /**
+     * @var string 资产是否包含托管账号。1，包含；0，不包含
+     */
+    public $ManagedAccount;
+
+    /**
      * @var string 过滤条件，可按照部门ID进行过滤
      */
     public $DepartmentId;
@@ -128,6 +135,7 @@ BindingStatus 绑定状态
      * @param array $AuthorizedUserIdSet 有该资产访问权限的用户ID集合
      * @param array $ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合
      * @param array $KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @param string $ManagedAccount 资产是否包含托管账号。1，包含；0，不包含
      * @param string $DepartmentId 过滤条件，可按照部门ID进行过滤
      * @param array $TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
      * @param array $Filters 过滤数组。支持的Name：
@@ -184,6 +192,10 @@ BindingStatus 绑定状态
 
         if (array_key_exists("KindSet",$param) and $param["KindSet"] !== null) {
             $this->KindSet = $param["KindSet"];
+        }
+
+        if (array_key_exists("ManagedAccount",$param) and $param["ManagedAccount"] !== null) {
+            $this->ManagedAccount = $param["ManagedAccount"];
         }
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {

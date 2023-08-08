@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmployees(array $Employees) 设置员工数据列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOffset() 获取偏移量，默认为0，最大为20000
+ * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为20000
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLimit() 获取返回最大数量，最大为20
- * @method void setLimit(integer $Limit) 设置返回最大数量，最大为20
+ * @method integer getLimit() 获取指定每页多少条数据，单页最大20
+ * @method void setLimit(integer $Limit) 设置指定每页多少条数据，单页最大20
  * @method integer getTotalCount() 获取符合条件的员工数量
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的员工数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,13 +44,13 @@ class DescribeIntegrationEmployeesResponse extends AbstractModel
     public $Employees;
 
     /**
-     * @var integer 偏移量，默认为0，最大为20000
+     * @var integer 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
-     * @var integer 返回最大数量，最大为20
+     * @var integer 指定每页多少条数据，单页最大20
      */
     public $Limit;
 
@@ -67,9 +67,9 @@ class DescribeIntegrationEmployeesResponse extends AbstractModel
     /**
      * @param array $Employees 员工数据列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Offset 偏移量，默认为0，最大为20000
+     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Limit 返回最大数量，最大为20
+     * @param integer $Limit 指定每页多少条数据，单页最大20
      * @param integer $TotalCount 符合条件的员工数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

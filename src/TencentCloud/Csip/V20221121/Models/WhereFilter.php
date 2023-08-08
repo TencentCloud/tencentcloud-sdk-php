@@ -24,8 +24,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置过滤的项
  * @method array getValues() 获取过滤的值
  * @method void setValues(array $Values) 设置过滤的值
- * @method integer getOperatorType() 获取精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构
- * @method void setOperatorType(integer $OperatorType) 设置精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构
+ * @method integer getOperatorType() 获取中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+
+ * @method void setOperatorType(integer $OperatorType) 设置中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
  */
 class WhereFilter extends AbstractModel
 {
@@ -40,14 +45,19 @@ class WhereFilter extends AbstractModel
     public $Values;
 
     /**
-     * @var integer 精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构
+     * @var integer 中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+
      */
     public $OperatorType;
 
     /**
      * @param string $Name 过滤的项
      * @param array $Values 过滤的值
-     * @param integer $OperatorType 精确匹配填 7 模糊匹配填9 ， 兼容 中台定的结构
+     * @param integer $OperatorType 中台定义：
+1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
+精确匹配填 7 模糊匹配填9 兼容 中台定的结构
      */
     function __construct()
     {

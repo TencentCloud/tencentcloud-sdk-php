@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取操作人信息，UserId必填且需拥有组织架构管理权限
  * @method void setOperator(UserInfo $Operator) 设置操作人信息，UserId必填且需拥有组织架构管理权限
- * @method string getDeptId() 获取电子签中的部门id
- * @method void setDeptId(string $DeptId) 设置电子签中的部门id
+ * @method string getDeptId() 获取电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+ * @method void setDeptId(string $DeptId) 设置电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
  * @method string getReceiveDeptId() 获取交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
  * @method void setReceiveDeptId(string $ReceiveDeptId) 设置交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
  */
@@ -35,7 +35,7 @@ class DeleteIntegrationDepartmentRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 电子签中的部门id
+     * @var string 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
      */
     public $DeptId;
 
@@ -46,7 +46,7 @@ class DeleteIntegrationDepartmentRequest extends AbstractModel
 
     /**
      * @param UserInfo $Operator 操作人信息，UserId必填且需拥有组织架构管理权限
-     * @param string $DeptId 电子签中的部门id
+     * @param string $DeptId 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
      * @param string $ReceiveDeptId 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
      */
     function __construct()

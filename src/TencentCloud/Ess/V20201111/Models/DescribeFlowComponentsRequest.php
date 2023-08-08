@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取操作者信息
  * @method void setOperator(UserInfo $Operator) 设置操作者信息
- * @method string getFlowId() 获取电子签流程的Id
- * @method void setFlowId(string $FlowId) 设置电子签流程的Id
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method string getFlowId() 获取流程(合同)的编号
+ * @method void setFlowId(string $FlowId) 设置流程(合同)的编号
+ * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  */
 class DescribeFlowComponentsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeFlowComponentsRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 电子签流程的Id
+     * @var string 流程(合同)的编号
      */
     public $FlowId;
 
     /**
-     * @var Agent 应用相关信息
+     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public $Agent;
 
     /**
      * @param UserInfo $Operator 操作者信息
-     * @param string $FlowId 电子签流程的Id
-     * @param Agent $Agent 应用相关信息
+     * @param string $FlowId 流程(合同)的编号
+     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     function __construct()
     {

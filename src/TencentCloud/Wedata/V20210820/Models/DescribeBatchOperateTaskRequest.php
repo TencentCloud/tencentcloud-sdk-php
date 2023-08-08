@@ -76,6 +76,14 @@ presto
  * @method void setOwnerId(string $OwnerId) 设置1
  * @method string getTenantId() 获取1
  * @method void setTenantId(string $TenantId) 设置1
+ * @method array getDatasourceIdList() 获取数据源ID列表
+ * @method void setDatasourceIdList(array $DatasourceIdList) 设置数据源ID列表
+ * @method array getDatasourceTypeList() 获取数据源类型列表
+ * @method void setDatasourceTypeList(array $DatasourceTypeList) 设置数据源类型列表
+ * @method array getCycleUnitList() 获取调度单位类型列表
+ * @method void setCycleUnitList(array $CycleUnitList) 设置调度单位类型列表
+ * @method boolean getCanSubmit() 获取是否筛选出可提交的任务
+ * @method void setCanSubmit(boolean $CanSubmit) 设置是否筛选出可提交的任务
  */
 class DescribeBatchOperateTaskRequest extends AbstractModel
 {
@@ -176,6 +184,26 @@ presto
     public $TenantId;
 
     /**
+     * @var array 数据源ID列表
+     */
+    public $DatasourceIdList;
+
+    /**
+     * @var array 数据源类型列表
+     */
+    public $DatasourceTypeList;
+
+    /**
+     * @var array 调度单位类型列表
+     */
+    public $CycleUnitList;
+
+    /**
+     * @var boolean 是否筛选出可提交的任务
+     */
+    public $CanSubmit;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $Page 页码
      * @param string $Size 页号
@@ -204,6 +232,10 @@ presto
      * @param string $UserId 操作人名
      * @param string $OwnerId 1
      * @param string $TenantId 1
+     * @param array $DatasourceIdList 数据源ID列表
+     * @param array $DatasourceTypeList 数据源类型列表
+     * @param array $CycleUnitList 调度单位类型列表
+     * @param boolean $CanSubmit 是否筛选出可提交的任务
      */
     function __construct()
     {
@@ -284,6 +316,22 @@ presto
 
         if (array_key_exists("TenantId",$param) and $param["TenantId"] !== null) {
             $this->TenantId = $param["TenantId"];
+        }
+
+        if (array_key_exists("DatasourceIdList",$param) and $param["DatasourceIdList"] !== null) {
+            $this->DatasourceIdList = $param["DatasourceIdList"];
+        }
+
+        if (array_key_exists("DatasourceTypeList",$param) and $param["DatasourceTypeList"] !== null) {
+            $this->DatasourceTypeList = $param["DatasourceTypeList"];
+        }
+
+        if (array_key_exists("CycleUnitList",$param) and $param["CycleUnitList"] !== null) {
+            $this->CycleUnitList = $param["CycleUnitList"];
+        }
+
+        if (array_key_exists("CanSubmit",$param) and $param["CanSubmit"] !== null) {
+            $this->CanSubmit = $param["CanSubmit"];
         }
     }
 }

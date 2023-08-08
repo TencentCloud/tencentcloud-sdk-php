@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置uin
  * @method string getNick() 获取昵称
  * @method void setNick(string $Nick) 设置昵称
+ * @method integer getIsNewAsset() 获取是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsCore() 获取是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsCore(integer $IsCore) 设置是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Vpc extends AbstractModel
 {
@@ -121,6 +129,18 @@ class Vpc extends AbstractModel
     public $Nick;
 
     /**
+     * @var integer 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsNewAsset;
+
+    /**
+     * @var integer 是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsCore;
+
+    /**
      * @param integer $Subnet 子网(只支持32位)
      * @param integer $ConnectedVpc 互通vpc(只支持32位)
      * @param string $AssetId 资产id
@@ -136,6 +156,10 @@ class Vpc extends AbstractModel
      * @param string $AppId appid
      * @param string $Uin uin
      * @param string $Nick 昵称
+     * @param integer $IsNewAsset 是否新资产 1新
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsCore 是否核心资产1是 2不是
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -205,6 +229,14 @@ class Vpc extends AbstractModel
 
         if (array_key_exists("Nick",$param) and $param["Nick"] !== null) {
             $this->Nick = $param["Nick"];
+        }
+
+        if (array_key_exists("IsNewAsset",$param) and $param["IsNewAsset"] !== null) {
+            $this->IsNewAsset = $param["IsNewAsset"];
+        }
+
+        if (array_key_exists("IsCore",$param) and $param["IsCore"] !== null) {
+            $this->IsCore = $param["IsCore"];
         }
     }
 }

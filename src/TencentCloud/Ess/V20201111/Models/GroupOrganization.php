@@ -64,9 +64,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJoinTime(integer $JoinTime) 设置成员企业加入集团时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getFlowEngineEnable() 获取是否使用审批流引擎，true-是，false-否
+ * @method boolean getFlowEngineEnable() 获取是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowEngineEnable(boolean $FlowEngineEnable) 设置是否使用审批流引擎，true-是，false-否
+ * @method void setFlowEngineEnable(boolean $FlowEngineEnable) 设置是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupOrganization extends AbstractModel
@@ -138,7 +138,7 @@ class GroupOrganization extends AbstractModel
     public $JoinTime;
 
     /**
-     * @var boolean 是否使用审批流引擎，true-是，false-否
+     * @var boolean 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowEngineEnable;
@@ -166,7 +166,7 @@ class GroupOrganization extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JoinTime 成员企业加入集团时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $FlowEngineEnable 是否使用审批流引擎，true-是，false-否
+     * @param boolean $FlowEngineEnable 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method integer getOffset() 获取查询起始偏移，最大2000
- * @method void setOffset(integer $Offset) 设置查询起始偏移，最大2000
- * @method string getLimit() 获取查询数量，最大200
- * @method void setLimit(string $Limit) 设置查询数量，最大200
+ * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+ * @method string getLimit() 获取指定每页多少条数据，单页最大200
+ * @method void setLimit(string $Limit) 设置指定每页多少条数据，单页最大200
  * @method array getFilters() 获取查询的关键字段:
 Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
@@ -43,12 +43,12 @@ class ChannelDescribeRolesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var integer 查询起始偏移，最大2000
+     * @var integer 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
      */
     public $Offset;
 
     /**
-     * @var string 查询数量，最大200
+     * @var string 指定每页多少条数据，单页最大200
      */
     public $Limit;
 
@@ -67,8 +67,8 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param integer $Offset 查询起始偏移，最大2000
-     * @param string $Limit 查询数量，最大200
+     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * @param string $Limit 指定每页多少条数据，单页最大200
      * @param array $Filters 查询的关键字段:
 Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色

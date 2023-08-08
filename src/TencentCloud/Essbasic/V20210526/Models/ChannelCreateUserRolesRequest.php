@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method array getRoleIds() 获取绑定角色的角色id列表
- * @method void setRoleIds(array $RoleIds) 设置绑定角色的角色id列表
- * @method array getUserIds() 获取电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
- * @method void setUserIds(array $UserIds) 设置电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
- * @method array getOpenIds() 获取客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
- * @method void setOpenIds(array $OpenIds) 设置客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+ * @method array getRoleIds() 获取绑定角色的角色id列表，最多 100 个
+ * @method void setRoleIds(array $RoleIds) 设置绑定角色的角色id列表，最多 100 个
+ * @method array getUserIds() 获取电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
+ * @method void setUserIds(array $UserIds) 设置电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
+ * @method array getOpenIds() 获取客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
+ * @method void setOpenIds(array $OpenIds) 设置客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
  * @method UserInfo getOperator() 获取操作者信息
  * @method void setOperator(UserInfo $Operator) 设置操作者信息
  */
@@ -39,17 +39,17 @@ class ChannelCreateUserRolesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var array 绑定角色的角色id列表
+     * @var array 绑定角色的角色id列表，最多 100 个
      */
     public $RoleIds;
 
     /**
-     * @var array 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * @var array 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
      */
     public $UserIds;
 
     /**
-     * @var array 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * @var array 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
      */
     public $OpenIds;
 
@@ -61,9 +61,9 @@ class ChannelCreateUserRolesRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param array $RoleIds 绑定角色的角色id列表
-     * @param array $UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
-     * @param array $OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * @param array $RoleIds 绑定角色的角色id列表，最多 100 个
+     * @param array $UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
+     * @param array $OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个
      * @param UserInfo $Operator 操作者信息
      */
     function __construct()

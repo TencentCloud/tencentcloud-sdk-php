@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeEmployees请求参数结构体
  *
- * @method integer getLimit() 获取返回最大数量，最大为20
- * @method void setLimit(integer $Limit) 设置返回最大数量，最大为20
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method integer getLimit() 获取指定每页多少条数据，单页最大20
+ * @method void setLimit(integer $Limit) 设置指定每页多少条数据，单页最大20
  * @method array getFilters() 获取查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
 查询离职员工时，Key为Status，Values为["QuiteJob"]
  * @method void setFilters(array $Filters) 设置查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
 查询离职员工时，Key为Status，Values为["QuiteJob"]
- * @method integer getOffset() 获取偏移量，默认为0，最大为20000
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为20000
+ * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0,最大为20000
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0,最大为20000
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class ChannelDescribeEmployeesRequest extends AbstractModel
 {
     /**
-     * @var integer 返回最大数量，最大为20
-     */
-    public $Limit;
-
-    /**
      * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public $Agent;
+
+    /**
+     * @var integer 指定每页多少条数据，单页最大20
+     */
+    public $Limit;
 
     /**
      * @var array 查询过滤实名用户，Key为Status，Values为["IsVerified"]
@@ -55,7 +55,7 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认为0，最大为20000
+     * @var integer 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0,最大为20000
      */
     public $Offset;
 
@@ -66,12 +66,12 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param integer $Limit 返回最大数量，最大为20
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @param integer $Limit 指定每页多少条数据，单页最大20
      * @param array $Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
 查询离职员工时，Key为Status，Values为["QuiteJob"]
-     * @param integer $Offset 偏移量，默认为0，最大为20000
+     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0,最大为20000
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()
@@ -87,13 +87,13 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

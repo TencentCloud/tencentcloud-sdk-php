@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取操作人信息，userId必填
  * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
- * @method integer getLimit() 获取返回最大数量，最大为20
- * @method void setLimit(integer $Limit) 设置返回最大数量，最大为20
+ * @method integer getLimit() 获取指定每页多少条数据，单页最大20
+ * @method void setLimit(integer $Limit) 设置指定每页多少条数据，单页最大20
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method array getFilters() 获取查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
  * @method void setFilters(array $Filters) 设置查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
- * @method integer getOffset() 获取偏移量，默认为0，最大为20000
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为20000
+ * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
  */
 class DescribeIntegrationEmployeesRequest extends AbstractModel
 {
@@ -41,7 +41,7 @@ class DescribeIntegrationEmployeesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var integer 返回最大数量，最大为20
+     * @var integer 指定每页多少条数据，单页最大20
      */
     public $Limit;
 
@@ -57,17 +57,17 @@ class DescribeIntegrationEmployeesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认为0，最大为20000
+     * @var integer 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
      */
     public $Offset;
 
     /**
      * @param UserInfo $Operator 操作人信息，userId必填
-     * @param integer $Limit 返回最大数量，最大为20
+     * @param integer $Limit 指定每页多少条数据，单页最大20
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      * @param array $Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
-     * @param integer $Offset 偏移量，默认为0，最大为20000
+     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
      */
     function __construct()
     {

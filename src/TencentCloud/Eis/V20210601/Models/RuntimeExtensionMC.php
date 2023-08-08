@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运行环境扩展组件
  *
- * @method integer getType() 获取扩展组件类型：0:cdc
- * @method void setType(integer $Type) 设置扩展组件类型：0:cdc
+ * @method integer getType() 获取扩展组件类型：0:cdc 1:dataway-java
+ * @method void setType(integer $Type) 设置扩展组件类型：0:cdc 1:dataway-java
  * @method float getSize() 获取部署规格vcore数
  * @method void setSize(float $Size) 设置部署规格vcore数
  * @method integer getReplica() 获取副本数
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class RuntimeExtensionMC extends AbstractModel
 {
     /**
-     * @var integer 扩展组件类型：0:cdc
+     * @var integer 扩展组件类型：0:cdc 1:dataway-java
      */
     public $Type;
 
@@ -73,7 +73,7 @@ class RuntimeExtensionMC extends AbstractModel
     public $UpdatedAt;
 
     /**
-     * @param integer $Type 扩展组件类型：0:cdc
+     * @param integer $Type 扩展组件类型：0:cdc 1:dataway-java
      * @param float $Size 部署规格vcore数
      * @param integer $Replica 副本数
      * @param string $Name 扩展组件名称

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(integer $InstanceId) 设置实例id
  * @method integer getPlanType() 获取版本类型 0-pro 1-lite
  * @method void setPlanType(integer $PlanType) 设置版本类型 0-pro 1-lite
+ * @method integer getRuntimeClass() 获取0：应用集成，1：API，2：ETL
+ * @method void setRuntimeClass(integer $RuntimeClass) 设置0：应用集成，1：API，2：ETL
  */
 class ListDeployableRuntimesMCRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ListDeployableRuntimesMCRequest extends AbstractModel
     public $PlanType;
 
     /**
+     * @var integer 0：应用集成，1：API，2：ETL
+     */
+    public $RuntimeClass;
+
+    /**
      * @param integer $ProjectId 应用id
      * @param integer $InstanceId 实例id
      * @param integer $PlanType 版本类型 0-pro 1-lite
+     * @param integer $RuntimeClass 0：应用集成，1：API，2：ETL
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListDeployableRuntimesMCRequest extends AbstractModel
 
         if (array_key_exists("PlanType",$param) and $param["PlanType"] !== null) {
             $this->PlanType = $param["PlanType"];
+        }
+
+        if (array_key_exists("RuntimeClass",$param) and $param["RuntimeClass"] !== null) {
+            $this->RuntimeClass = $param["RuntimeClass"];
         }
     }
 }

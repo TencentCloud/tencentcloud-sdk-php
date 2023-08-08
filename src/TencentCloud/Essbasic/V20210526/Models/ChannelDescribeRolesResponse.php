@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeRoles返回参数结构体
  *
- * @method integer getOffset() 获取页面偏移量，最大2000
- * @method void setOffset(integer $Offset) 设置页面偏移量，最大2000
- * @method integer getLimit() 获取查询数量，最大200
- * @method void setLimit(integer $Limit) 设置查询数量，最大200
+ * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+ * @method integer getLimit() 获取指定每页多少条数据，单页最大200
+ * @method void setLimit(integer $Limit) 设置指定每页多少条数据，单页最大200
  * @method integer getTotalCount() 获取查询角色的总数量
  * @method void setTotalCount(integer $TotalCount) 设置查询角色的总数量
  * @method array getChannelRoles() 获取角色信息
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class ChannelDescribeRolesResponse extends AbstractModel
 {
     /**
-     * @var integer 页面偏移量，最大2000
+     * @var integer 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
      */
     public $Offset;
 
     /**
-     * @var integer 查询数量，最大200
+     * @var integer 指定每页多少条数据，单页最大200
      */
     public $Limit;
 
@@ -62,8 +62,8 @@ class ChannelDescribeRolesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Offset 页面偏移量，最大2000
-     * @param integer $Limit 查询数量，最大200
+     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * @param integer $Limit 指定每页多少条数据，单页最大200
      * @param integer $TotalCount 查询角色的总数量
      * @param array $ChannelRoles 角色信息
 注意：此字段可能返回 null，表示取不到有效值。

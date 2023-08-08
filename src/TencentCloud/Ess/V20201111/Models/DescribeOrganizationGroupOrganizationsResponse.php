@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivedTotal(integer $ActivedTotal) 设置已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExportUrl() 获取导出文件的url
+ * @method string getExportUrl() 获取如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExportUrl(string $ExportUrl) 设置导出文件的url
+ * @method void setExportUrl(string $ExportUrl) 设置如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getList() 获取成员企业信息列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -69,7 +69,7 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
     public $ActivedTotal;
 
     /**
-     * @var string 导出文件的url
+     * @var string 如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExportUrl;
@@ -98,7 +98,7 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivedTotal 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExportUrl 导出文件的url
+     * @param string $ExportUrl 如果入参Export为 true 时使用，表示导出Excel的url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $List 成员企业信息列表
 注意：此字段可能返回 null，表示取不到有效值。

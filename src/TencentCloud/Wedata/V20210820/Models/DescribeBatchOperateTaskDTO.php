@@ -78,6 +78,22 @@ presto\SparkJob\SparkSql
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创造时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCycleUnit() 获取周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCycleUnit(string $CycleUnit) 设置周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduleDesc() 获取调度计划
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleDesc(string $ScheduleDesc) 设置调度计划
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceId() 获取数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceId(string $DatasourceId) 设置数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeBatchOperateTaskDTO extends AbstractModel
 {
@@ -167,6 +183,30 @@ presto\SparkJob\SparkSql
     public $CreateTime;
 
     /**
+     * @var string 周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CycleUnit;
+
+    /**
+     * @var string 调度计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleDesc;
+
+    /**
+     * @var string 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceId;
+
+    /**
+     * @var string 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceType;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名
@@ -195,6 +235,14 @@ presto\SparkJob\SparkSql
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创造时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CycleUnit 周期类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleDesc 调度计划
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -264,6 +312,22 @@ presto\SparkJob\SparkSql
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("CycleUnit",$param) and $param["CycleUnit"] !== null) {
+            $this->CycleUnit = $param["CycleUnit"];
+        }
+
+        if (array_key_exists("ScheduleDesc",$param) and $param["ScheduleDesc"] !== null) {
+            $this->ScheduleDesc = $param["ScheduleDesc"];
+        }
+
+        if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
+            $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
+            $this->DatasourceType = $param["DatasourceType"];
         }
     }
 }

@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP返回码数据信息
  *
- * @method string getTime() 获取时间，格式：yyyy-mm-dd HH:MM:SS。
- * @method void setTime(string $Time) 设置时间，格式：yyyy-mm-dd HH:MM:SS。
+ * @method string getTime() 获取时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setTime(string $Time) 设置时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method integer getNumbers() 获取次数。
  * @method void setNumbers(integer $Numbers) 设置次数。
  * @method float getPercentage() 获取占比。
@@ -30,7 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class HttpCodeValue extends AbstractModel
 {
     /**
-     * @var string 时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @var string 时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $Time;
 
@@ -45,7 +54,10 @@ class HttpCodeValue extends AbstractModel
     public $Percentage;
 
     /**
-     * @param string $Time 时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @param string $Time 时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param integer $Numbers 次数。
      * @param float $Percentage 占比。
      */

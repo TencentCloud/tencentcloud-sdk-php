@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method MediaCastVideoSetting getVideoSetting() 获取视频配置。
  * @method void setVideoSetting(MediaCastVideoSetting $VideoSetting) 设置视频配置。
+ * @method boolean getFollowSourceInfo() 获取视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
+ * @method void setFollowSourceInfo(boolean $FollowSourceInfo) 设置视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
  */
 class MediaCastOutputMediaSetting extends AbstractModel
 {
@@ -31,7 +33,13 @@ class MediaCastOutputMediaSetting extends AbstractModel
     public $VideoSetting;
 
     /**
+     * @var boolean 视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
+     */
+    public $FollowSourceInfo;
+
+    /**
      * @param MediaCastVideoSetting $VideoSetting 视频配置。
+     * @param boolean $FollowSourceInfo 视频配置是否和第一个输入源的视频配置相同，默认值：false。如果 FollowSourceInfo 的值为 true，忽略 VideoSetting 参数。
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class MediaCastOutputMediaSetting extends AbstractModel
         if (array_key_exists("VideoSetting",$param) and $param["VideoSetting"] !== null) {
             $this->VideoSetting = new MediaCastVideoSetting();
             $this->VideoSetting->deserialize($param["VideoSetting"]);
+        }
+
+        if (array_key_exists("FollowSourceInfo",$param) and $param["FollowSourceInfo"] !== null) {
+            $this->FollowSourceInfo = $param["FollowSourceInfo"];
         }
     }
 }

@@ -124,6 +124,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseNetEnv(string $DatabaseNetEnv) 设置数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCcnOwnerUin() 获取数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCcnOwnerUin(string $CcnOwnerUin) 设置数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Endpoint extends AbstractModel
 {
@@ -284,6 +288,12 @@ class Endpoint extends AbstractModel
     public $DatabaseNetEnv;
 
     /**
+     * @var string 数据库为跨账号云联网下的实例时、表示云联网所属主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CcnOwnerUin;
+
+    /**
      * @param string $Region 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Role tdsql mysql版的节点类型，枚举值为proxy、set
@@ -335,6 +345,8 @@ class Endpoint extends AbstractModel
      * @param string $EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CcnOwnerUin 数据库为跨账号云联网下的实例时、表示云联网所属主账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -452,6 +464,10 @@ class Endpoint extends AbstractModel
 
         if (array_key_exists("DatabaseNetEnv",$param) and $param["DatabaseNetEnv"] !== null) {
             $this->DatabaseNetEnv = $param["DatabaseNetEnv"];
+        }
+
+        if (array_key_exists("CcnOwnerUin",$param) and $param["CcnOwnerUin"] !== null) {
+            $this->CcnOwnerUin = $param["CcnOwnerUin"];
         }
     }
 }

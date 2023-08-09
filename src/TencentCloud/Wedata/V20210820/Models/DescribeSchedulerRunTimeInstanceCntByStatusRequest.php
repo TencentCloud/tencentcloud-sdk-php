@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始日期：2023-03-02
  * @method string getEndTime() 获取结束日前：2023-03-20
  * @method void setEndTime(string $EndTime) 设置结束日前：2023-03-20
+ * @method integer getTaskType() 获取1
+ * @method void setTaskType(integer $TaskType) 设置1
+ * @method string getInCharge() 获取1
+ * @method void setInCharge(string $InCharge) 设置1
  */
 class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var integer 1
+     */
+    public $TaskType;
+
+    /**
+     * @var string 1
+     */
+    public $InCharge;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $CycleUnit 周期类型
      * @param string $TimeUnit 时间单元 eg: 12h
      * @param string $StartTime 开始日期：2023-03-02
      * @param string $EndTime 结束日前：2023-03-20
+     * @param integer $TaskType 1
+     * @param string $InCharge 1
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("InCharge",$param) and $param["InCharge"] !== null) {
+            $this->InCharge = $param["InCharge"];
         }
     }
 }

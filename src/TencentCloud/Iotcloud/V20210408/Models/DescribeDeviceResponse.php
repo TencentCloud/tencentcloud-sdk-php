@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeviceName() 获取设备名
  * @method void setDeviceName(string $DeviceName) 设置设备名
- * @method integer getOnline() 获取设备是否在线，0不在线，1在线
- * @method void setOnline(integer $Online) 设置设备是否在线，0不在线，1在线
+ * @method integer getOnline() 获取设备是否在线，0不在线，1在线，3未激活
+ * @method void setOnline(integer $Online) 设置设备是否在线，0不在线，1在线，3未激活
  * @method integer getLoginTime() 获取设备登录时间
  * @method void setLoginTime(integer $LoginTime) 设置设备登录时间
  * @method string getVersion() 获取设备固件版本
@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserId(integer $CreateUserId) 设置创建者账号ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNBIoTDeviceID() 获取NB IoT运营商处的DeviceID
+ * @method void setNBIoTDeviceID(string $NBIoTDeviceID) 设置NB IoT运营商处的DeviceID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -101,7 +103,7 @@ class DescribeDeviceResponse extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var integer 设备是否在线，0不在线，1在线
+     * @var integer 设备是否在线，0不在线，1在线，3未激活
      */
     public $Online;
 
@@ -157,6 +159,7 @@ class DescribeDeviceResponse extends AbstractModel
 
     /**
      * @var string NB IoT运营商处的DeviceID
+     * @deprecated
      */
     public $NbiotDeviceID;
 
@@ -231,13 +234,18 @@ class DescribeDeviceResponse extends AbstractModel
     public $CreateUserId;
 
     /**
+     * @var string NB IoT运营商处的DeviceID
+     */
+    public $NBIoTDeviceID;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $DeviceName 设备名
-     * @param integer $Online 设备是否在线，0不在线，1在线
+     * @param integer $Online 设备是否在线，0不在线，1在线，3未激活
      * @param integer $LoginTime 设备登录时间
      * @param string $Version 设备固件版本
      * @param integer $LastUpdateTime 设备最后更新时间
@@ -271,6 +279,7 @@ class DescribeDeviceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateUserId 创建者账号ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NBIoTDeviceID NB IoT运营商处的DeviceID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -394,6 +403,10 @@ class DescribeDeviceResponse extends AbstractModel
 
         if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
             $this->CreateUserId = $param["CreateUserId"];
+        }
+
+        if (array_key_exists("NBIoTDeviceID",$param) and $param["NBIoTDeviceID"] !== null) {
+            $this->NBIoTDeviceID = $param["NBIoTDeviceID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

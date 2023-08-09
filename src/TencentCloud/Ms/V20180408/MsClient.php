@@ -35,7 +35,7 @@ use TencentCloud\Ms\V20180408\Models as Models;
 
 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。
 订单类型有：免费试用、按年收费、按次收费。
-应用加固支持的平台类型有：android加固 、ios源码混淆 、sdk加固、applet小程序加固。
+应用加固支持的平台类型有：android加固 、ios源码混淆 、sdk加固、applet小程序加固
  * @method Models\CreateResourceInstancesResponse CreateResourceInstances(Models\CreateResourceInstancesRequest $req) 用户可以使用该接口自建资源，只支持白名单用户
  * @method Models\CreateShieldInstanceResponse CreateShieldInstance(Models\CreateShieldInstanceRequest $req) 用户通过该接口提交应用进行应用加固，加固后需通过DescribeShieldResult接口查询加固结果。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\CreateShieldPlanInstanceResponse CreateShieldPlanInstance(Models\CreateShieldPlanInstanceRequest $req) 对资源进行策略新增。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）

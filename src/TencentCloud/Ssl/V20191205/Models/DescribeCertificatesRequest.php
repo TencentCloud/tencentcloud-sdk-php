@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSM(integer $IsSM) 设置是否筛选国密证书。1:筛选  0:不筛选
  * @method integer getFilterExpiring() 获取筛选证书是否即将过期，传1是筛选，0不筛选
  * @method void setFilterExpiring(integer $FilterExpiring) 设置筛选证书是否即将过期，传1是筛选，0不筛选
+ * @method integer getHostable() 获取是否可托管，可选值：1 = 可托管，0 =  不可托管。
+ * @method void setHostable(integer $Hostable) 设置是否可托管，可选值：1 = 可托管，0 =  不可托管。
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeCertificatesRequest extends AbstractModel
     public $FilterExpiring;
 
     /**
+     * @var integer 是否可托管，可选值：1 = 可托管，0 =  不可托管。
+     */
+    public $Hostable;
+
+    /**
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认20。最大1000
      * @param string $SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
@@ -128,6 +135,7 @@ class DescribeCertificatesRequest extends AbstractModel
      * @param string $FilterSource 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
      * @param integer $IsSM 是否筛选国密证书。1:筛选  0:不筛选
      * @param integer $FilterExpiring 筛选证书是否即将过期，传1是筛选，0不筛选
+     * @param integer $Hostable 是否可托管，可选值：1 = 可托管，0 =  不可托管。
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeCertificatesRequest extends AbstractModel
 
         if (array_key_exists("FilterExpiring",$param) and $param["FilterExpiring"] !== null) {
             $this->FilterExpiring = $param["FilterExpiring"];
+        }
+
+        if (array_key_exists("Hostable",$param) and $param["Hostable"] !== null) {
+            $this->Hostable = $param["Hostable"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) 设置日志时间
  * @method string getUserid() 获取腾讯云账号
  * @method void setUserid(string $Userid) 设置腾讯云账号
+ * @method string getUserId() 获取腾讯云账号
+ * @method void setUserId(string $UserId) 设置腾讯云账号
  */
 class CLSLogItem extends AbstractModel
 {
@@ -76,8 +78,14 @@ class CLSLogItem extends AbstractModel
 
     /**
      * @var string 腾讯云账号
+     * @deprecated
      */
     public $Userid;
+
+    /**
+     * @var string 腾讯云账号
+     */
+    public $UserId;
 
     /**
      * @param string $Content 日志内容
@@ -88,6 +96,7 @@ class CLSLogItem extends AbstractModel
      * @param string $Scene 模块
      * @param string $Time 日志时间
      * @param string $Userid 腾讯云账号
+     * @param string $UserId 腾讯云账号
      */
     function __construct()
     {
@@ -132,6 +141,10 @@ class CLSLogItem extends AbstractModel
 
         if (array_key_exists("Userid",$param) and $param["Userid"] !== null) {
             $this->Userid = $param["Userid"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

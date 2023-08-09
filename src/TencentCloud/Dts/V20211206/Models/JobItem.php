@@ -96,6 +96,10 @@ manualPaused(已暂停)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试时间段信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDumperResumeCtrl() 获取全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDumperResumeCtrl(string $DumperResumeCtrl) 设置全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobItem extends AbstractModel
 {
@@ -210,6 +214,12 @@ manualPaused(已暂停)
     public $AutoRetryTimeRangeMinutes;
 
     /**
+     * @var string 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DumperResumeCtrl;
+
+    /**
      * @param string $JobId 数据迁移任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobName 数据迁移任务名称
@@ -247,6 +257,8 @@ manualPaused(已暂停)
      * @param array $Tags 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRetryTimeRangeMinutes 自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -343,6 +355,10 @@ manualPaused(已暂停)
 
         if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
             $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
+        }
+
+        if (array_key_exists("DumperResumeCtrl",$param) and $param["DumperResumeCtrl"] !== null) {
+            $this->DumperResumeCtrl = $param["DumperResumeCtrl"];
         }
     }
 }

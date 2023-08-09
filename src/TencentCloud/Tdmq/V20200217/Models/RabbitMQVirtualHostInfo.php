@@ -44,6 +44,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualHostStatistics(RabbitMQVirtualHostStatistics $VirtualHostStatistics) 设置vhost概览统计信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMessageHeapCount() 获取消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessageHeapCount(integer $MessageHeapCount) 设置消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getMessageRateIn() 获取输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessageRateIn(float $MessageRateIn) 设置输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getMessageRateOut() 获取输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessageRateOut(float $MessageRateOut) 设置输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQVirtualHostInfo extends AbstractModel
 {
@@ -88,6 +104,30 @@ class RabbitMQVirtualHostInfo extends AbstractModel
     public $VirtualHostStatistics;
 
     /**
+     * @var string vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var integer 消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MessageHeapCount;
+
+    /**
+     * @var float 输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MessageRateIn;
+
+    /**
+     * @var float 输出消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MessageRateOut;
+
+    /**
      * @param string $InstanceId 集群实例Id
      * @param string $VirtualHost vhost名
      * @param string $Description vhost描述信息
@@ -99,6 +139,14 @@ class RabbitMQVirtualHostInfo extends AbstractModel
      * @param string $ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RabbitMQVirtualHostStatistics $VirtualHostStatistics vhost概览统计信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status vhost状态，与原生控制台对应，有running、partial、stopped、unknown
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MessageHeapCount 消息堆积数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $MessageRateIn 输入消息速率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $MessageRateOut 输出消息速率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -141,6 +189,22 @@ class RabbitMQVirtualHostInfo extends AbstractModel
         if (array_key_exists("VirtualHostStatistics",$param) and $param["VirtualHostStatistics"] !== null) {
             $this->VirtualHostStatistics = new RabbitMQVirtualHostStatistics();
             $this->VirtualHostStatistics->deserialize($param["VirtualHostStatistics"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("MessageHeapCount",$param) and $param["MessageHeapCount"] !== null) {
+            $this->MessageHeapCount = $param["MessageHeapCount"];
+        }
+
+        if (array_key_exists("MessageRateIn",$param) and $param["MessageRateIn"] !== null) {
+            $this->MessageRateIn = $param["MessageRateIn"];
+        }
+
+        if (array_key_exists("MessageRateOut",$param) and $param["MessageRateOut"] !== null) {
+            $this->MessageRateOut = $param["MessageRateOut"];
         }
     }
 }

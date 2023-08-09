@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShowTime(string $ShowTime) 设置当前展示时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReportTime() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReportTime(string $ReportTime) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCount() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCount(integer $Count) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceStatisticInfo extends AbstractModel
 {
@@ -68,6 +76,18 @@ class InstanceStatisticInfo extends AbstractModel
     public $ShowTime;
 
     /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReportTime;
+
+    /**
+     * @var integer 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Count;
+
+    /**
      * @param array $CountList 实例状态趋势状态统计
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimeList 实例状态趋势时间分割
@@ -75,6 +95,10 @@ class InstanceStatisticInfo extends AbstractModel
      * @param string $InstanceStatus 实例状态标识：WAITING_RUNNING、KILLING、FAILED、FAILED_TRYING、SUCCEED 分别表示等待执行、正在终止、失败、失败重试、成功，用于实例状态分布和实例状态趋势
      * @param integer $InstanceCount 用于实例状态分布计数
      * @param string $ShowTime 当前展示时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReportTime 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Count 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -108,6 +132,14 @@ class InstanceStatisticInfo extends AbstractModel
 
         if (array_key_exists("ShowTime",$param) and $param["ShowTime"] !== null) {
             $this->ShowTime = $param["ShowTime"];
+        }
+
+        if (array_key_exists("ReportTime",$param) and $param["ReportTime"] !== null) {
+            $this->ReportTime = $param["ReportTime"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

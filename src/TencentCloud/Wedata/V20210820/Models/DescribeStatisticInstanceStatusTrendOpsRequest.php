@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutionGroupId(string $ExecutionGroupId) 设置资源组ID
  * @method string getExecutionGroupName() 获取资源组名称
  * @method void setExecutionGroupName(string $ExecutionGroupName) 设置资源组名称
+ * @method string getInCharge() 获取1
+ * @method void setInCharge(string $InCharge) 设置1
+ * @method integer getTaskType() 获取1
+ * @method void setTaskType(integer $TaskType) 设置1
+ * @method array getStateList() 获取1
+ * @method void setStateList(array $StateList) 设置1
+ * @method string getAggregationUnit() 获取D代表天，H代表小时
+ * @method void setAggregationUnit(string $AggregationUnit) 设置D代表天，H代表小时
+ * @method integer getAverageWindowSize() 获取1
+ * @method void setAverageWindowSize(integer $AverageWindowSize) 设置1
  */
 class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
 {
@@ -80,6 +90,31 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
     public $ExecutionGroupName;
 
     /**
+     * @var string 1
+     */
+    public $InCharge;
+
+    /**
+     * @var integer 1
+     */
+    public $TaskType;
+
+    /**
+     * @var array 1
+     */
+    public $StateList;
+
+    /**
+     * @var string D代表天，H代表小时
+     */
+    public $AggregationUnit;
+
+    /**
+     * @var integer 1
+     */
+    public $AverageWindowSize;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskTypeId 任务类型Id
      * @param string $TimeType 时间类型
@@ -88,6 +123,11 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
      * @param string $EndTime 结束时间
      * @param string $ExecutionGroupId 资源组ID
      * @param string $ExecutionGroupName 资源组名称
+     * @param string $InCharge 1
+     * @param integer $TaskType 1
+     * @param array $StateList 1
+     * @param string $AggregationUnit D代表天，H代表小时
+     * @param integer $AverageWindowSize 1
      */
     function __construct()
     {
@@ -132,6 +172,26 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
 
         if (array_key_exists("ExecutionGroupName",$param) and $param["ExecutionGroupName"] !== null) {
             $this->ExecutionGroupName = $param["ExecutionGroupName"];
+        }
+
+        if (array_key_exists("InCharge",$param) and $param["InCharge"] !== null) {
+            $this->InCharge = $param["InCharge"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("StateList",$param) and $param["StateList"] !== null) {
+            $this->StateList = $param["StateList"];
+        }
+
+        if (array_key_exists("AggregationUnit",$param) and $param["AggregationUnit"] !== null) {
+            $this->AggregationUnit = $param["AggregationUnit"];
+        }
+
+        if (array_key_exists("AverageWindowSize",$param) and $param["AverageWindowSize"] !== null) {
+            $this->AverageWindowSize = $param["AverageWindowSize"];
         }
     }
 }

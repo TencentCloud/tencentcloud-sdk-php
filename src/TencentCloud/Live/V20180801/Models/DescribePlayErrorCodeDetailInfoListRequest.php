@@ -20,15 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlayErrorCodeDetailInfoList请求参数结构体
  *
- * @method string getStartTime() 获取起始时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
- * @method void setStartTime(string $StartTime) 设置起始时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
- * @method string getEndTime() 获取结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
+ * @method string getStartTime() 获取起始时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setStartTime(string $StartTime) 设置起始时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getEndTime() 获取结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
- * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
+ * @method void setEndTime(string $EndTime) 设置结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
  * @method integer getGranularity() 获取查询粒度：
 1-1分钟粒度。
@@ -44,14 +52,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
 {
     /**
-     * @var string 起始时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
+     * @var string 起始时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
+     * @var string 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
      */
     public $EndTime;
@@ -78,10 +90,14 @@ class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel
     public $MainlandOrOversea;
 
     /**
-     * @param string $StartTime 起始时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
-     * @param string $EndTime 结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
+     * @param string $StartTime 起始时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $EndTime 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
      * @param integer $Granularity 查询粒度：
 1-1分钟粒度。

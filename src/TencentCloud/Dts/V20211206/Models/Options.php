@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaOption(KafkaOption $KafkaOption) 设置kafka同步选项
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RateLimitOption getRateLimitOption() 获取任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRateLimitOption(RateLimitOption $RateLimitOption) 设置任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Options extends AbstractModel
 {
@@ -104,6 +112,18 @@ class Options extends AbstractModel
     public $KafkaOption;
 
     /**
+     * @var RateLimitOption 任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RateLimitOption;
+
+    /**
+     * @var integer 自动重试的时间窗口设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRetryTimeRangeMinutes;
+
+    /**
      * @param string $InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、InitializeAfterDelete(删除并重新初始化)、ExecuteAfterIgnore(忽略并继续执行)
@@ -119,6 +139,10 @@ class Options extends AbstractModel
      * @param array $DdlOptions DDL同步选项，具体描述要同步那些DDL
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaOption $KafkaOption kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RateLimitOption $RateLimitOption 任务限速信息、该字段仅用作出参、入参该字段无效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -171,6 +195,15 @@ class Options extends AbstractModel
         if (array_key_exists("KafkaOption",$param) and $param["KafkaOption"] !== null) {
             $this->KafkaOption = new KafkaOption();
             $this->KafkaOption->deserialize($param["KafkaOption"]);
+        }
+
+        if (array_key_exists("RateLimitOption",$param) and $param["RateLimitOption"] !== null) {
+            $this->RateLimitOption = new RateLimitOption();
+            $this->RateLimitOption->deserialize($param["RateLimitOption"]);
+        }
+
+        if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
+            $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
         }
     }
 }

@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 播放错误码信息
  *
  * @method string getTime() 获取数据时间点，
-格式：yyyy-mm-dd HH:MM:SS。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setTime(string $Time) 设置数据时间点，
-格式：yyyy-mm-dd HH:MM:SS。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method array getHttpStatusInfoList() 获取播放状态码详细信息。
  * @method void setHttpStatusInfoList(array $HttpStatusInfoList) 设置播放状态码详细信息。
  */
@@ -31,7 +35,9 @@ class HttpStatusData extends AbstractModel
 {
     /**
      * @var string 数据时间点，
-格式：yyyy-mm-dd HH:MM:SS。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $Time;
 
@@ -42,7 +48,9 @@ class HttpStatusData extends AbstractModel
 
     /**
      * @param string $Time 数据时间点，
-格式：yyyy-mm-dd HH:MM:SS。
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param array $HttpStatusInfoList 播放状态码详细信息。
      */
     function __construct()

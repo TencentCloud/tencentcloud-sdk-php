@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserId(integer $CreateUserId) 设置创建者 Uin
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNBIoTDeviceID() 获取NB IOT运营商处的DeviceID
+ * @method void setNBIoTDeviceID(string $NBIoTDeviceID) 设置NB IOT运营商处的DeviceID
  */
 class DeviceInfo extends AbstractModel
 {
@@ -145,6 +147,7 @@ class DeviceInfo extends AbstractModel
 
     /**
      * @var string NB IOT运营商处的DeviceID
+     * @deprecated
      */
     public $NbiotDeviceID;
 
@@ -229,6 +232,11 @@ class DeviceInfo extends AbstractModel
     public $CreateUserId;
 
     /**
+     * @var string NB IOT运营商处的DeviceID
+     */
+    public $NBIoTDeviceID;
+
+    /**
      * @param string $DeviceName 设备名
      * @param integer $Online 设备是否在线，0不在线，1在线
      * @param integer $LoginTime 设备登录时间
@@ -264,6 +272,7 @@ class DeviceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateUserId 创建者 Uin
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NBIoTDeviceID NB IOT运营商处的DeviceID
      */
     function __construct()
     {
@@ -386,6 +395,10 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
             $this->CreateUserId = $param["CreateUserId"];
+        }
+
+        if (array_key_exists("NBIoTDeviceID",$param) and $param["NBIoTDeviceID"] !== null) {
+            $this->NBIoTDeviceID = $param["NBIoTDeviceID"];
         }
     }
 }

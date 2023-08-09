@@ -32,16 +32,18 @@ RecipientId参数：
  *
  * @method string getName() 获取签署人姓名，最大长度50个字符
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字符
- * @method string getIdCardType() 获取签署人身份证件类型
+ * @method string getIdCardType() 获取签署人的证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
- * @method void setIdCardType(string $IdCardType) 设置签署人身份证件类型
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+ * @method void setIdCardType(string $IdCardType) 设置签署人的证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
- * @method string getIdCardNumber() 获取签署人证件号
- * @method void setIdCardNumber(string $IdCardNumber) 设置签署人证件号
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+ * @method string getIdCardNumber() 获取签署人证件号（长度不超过18位）
+ * @method void setIdCardNumber(string $IdCardNumber) 设置签署人证件号（长度不超过18位）
  * @method string getMobile() 获取签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
  * @method void setMobile(string $Mobile) 设置签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
  * @method string getOrganizationName() 获取企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
@@ -119,15 +121,16 @@ class FlowApproverInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string 签署人身份证件类型
+     * @var string 签署人的证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
      */
     public $IdCardType;
 
     /**
-     * @var string 签署人证件号
+     * @var string 签署人证件号（长度不超过18位）
      */
     public $IdCardNumber;
 
@@ -244,11 +247,12 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
 
     /**
      * @param string $Name 签署人姓名，最大长度50个字符
-     * @param string $IdCardType 签署人身份证件类型
+     * @param string $IdCardType 签署人的证件类型
 1.ID_CARD 居民身份证
 2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
 3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-     * @param string $IdCardNumber 签署人证件号
+4.OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+     * @param string $IdCardNumber 签署人证件号（长度不超过18位）
      * @param string $Mobile 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号。
      * @param string $OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符；
      * @param boolean $NotChannelOrganization 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。

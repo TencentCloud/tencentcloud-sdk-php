@@ -30,6 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页Limit
  * @method Filter getFilters() 获取search-virtual-host：vhost名称模糊查询，之前前缀和后缀匹配
  * @method void setFilters(Filter $Filters) 设置search-virtual-host：vhost名称模糊查询，之前前缀和后缀匹配
+ * @method string getSortElement() 获取排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率；
+ * @method void setSortElement(string $SortElement) 设置排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率；
+ * @method string getSortOrder() 获取排序顺序，ascend 或 descend
+ * @method void setSortOrder(string $SortOrder) 设置排序顺序，ascend 或 descend
  */
 class DescribeRabbitMQVirtualHostRequest extends AbstractModel
 {
@@ -59,11 +71,31 @@ class DescribeRabbitMQVirtualHostRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率；
+     */
+    public $SortElement;
+
+    /**
+     * @var string 排序顺序，ascend 或 descend
+     */
+    public $SortOrder;
+
+    /**
      * @param string $InstanceId 集群实例Id
      * @param string $VirtualHost vhost名,不传则查询全部
      * @param integer $Offset 分页Offset
      * @param integer $Limit 分页Limit
      * @param Filter $Filters search-virtual-host：vhost名称模糊查询，之前前缀和后缀匹配
+     * @param string $SortElement 排序依据的字段：
+MessageHeapCount - 消息堆积数；
+MessageRateInOut - 生产消费速率之和；
+MessageRateIn - 生产速率；
+MessageRateOut - 消费速率；
+     * @param string $SortOrder 排序顺序，ascend 或 descend
      */
     function __construct()
     {
@@ -97,6 +129,14 @@ class DescribeRabbitMQVirtualHostRequest extends AbstractModel
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = new Filter();
             $this->Filters->deserialize($param["Filters"]);
+        }
+
+        if (array_key_exists("SortElement",$param) and $param["SortElement"] !== null) {
+            $this->SortElement = $param["SortElement"];
+        }
+
+        if (array_key_exists("SortOrder",$param) and $param["SortOrder"] !== null) {
+            $this->SortOrder = $param["SortOrder"];
         }
     }
 }

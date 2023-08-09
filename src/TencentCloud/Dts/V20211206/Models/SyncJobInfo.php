@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSrcNodeType() 获取枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSrcNodeType(string $SrcNodeType) 设置枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，多节点数据库使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置源端信息，多节点数据库使用
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDstRegion() 获取目标端地域，如：ap-guangzhou等
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstRegion(string $DstRegion) 设置目标端地域，如：ap-guangzhou等
@@ -95,6 +103,14 @@ use TencentCloud\Common\AbstractModel;
  * @method Endpoint getDstInfo() 获取目标端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstInfo(Endpoint $DstInfo) 设置目标端信息，单节点数据库使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDstNodeType() 获取枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDstNodeType(string $DstNodeType) 设置枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SyncDBEndpointInfos getDstInfos() 获取目标端信息，多节点数据库使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，多节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,6 +155,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试时间段设置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试时间段设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDumperResumeCtrl() 获取全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDumperResumeCtrl(string $DumperResumeCtrl) 设置全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SyncJobInfo extends AbstractModel
@@ -234,6 +254,18 @@ class SyncJobInfo extends AbstractModel
     public $SrcInfo;
 
     /**
+     * @var string 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SrcNodeType;
+
+    /**
+     * @var SyncDBEndpointInfos 源端信息，多节点数据库使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SrcInfos;
+
+    /**
      * @var string 目标端地域，如：ap-guangzhou等
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -256,6 +288,18 @@ class SyncJobInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstInfo;
+
+    /**
+     * @var string 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DstNodeType;
+
+    /**
+     * @var SyncDBEndpointInfos 目标端信息，多节点数据库使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DstInfos;
 
     /**
      * @var string 创建时间，格式为 yyyy-mm-dd hh:mm:ss
@@ -324,6 +368,12 @@ class SyncJobInfo extends AbstractModel
     public $AutoRetryTimeRangeMinutes;
 
     /**
+     * @var string 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DumperResumeCtrl;
+
+    /**
      * @param string $JobId 同步任务id，如：sync-btso140
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobName 同步任务名
@@ -354,6 +404,10 @@ class SyncJobInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Endpoint $SrcInfo 源端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SyncDBEndpointInfos $SrcInfos 源端信息，多节点数据库使用
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DstRegion 目标端地域，如：ap-guangzhou等
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DstDatabaseType 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
@@ -361,6 +415,10 @@ class SyncJobInfo extends AbstractModel
      * @param string $DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Endpoint $DstInfo 目标端信息，单节点数据库使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SyncDBEndpointInfos $DstInfos 目标端信息，多节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
@@ -383,6 +441,8 @@ class SyncJobInfo extends AbstractModel
      * @param string $OfflineTime 下线时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRetryTimeRangeMinutes 自动重试时间段设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -461,6 +521,15 @@ class SyncJobInfo extends AbstractModel
             $this->SrcInfo->deserialize($param["SrcInfo"]);
         }
 
+        if (array_key_exists("SrcNodeType",$param) and $param["SrcNodeType"] !== null) {
+            $this->SrcNodeType = $param["SrcNodeType"];
+        }
+
+        if (array_key_exists("SrcInfos",$param) and $param["SrcInfos"] !== null) {
+            $this->SrcInfos = new SyncDBEndpointInfos();
+            $this->SrcInfos->deserialize($param["SrcInfos"]);
+        }
+
         if (array_key_exists("DstRegion",$param) and $param["DstRegion"] !== null) {
             $this->DstRegion = $param["DstRegion"];
         }
@@ -476,6 +545,15 @@ class SyncJobInfo extends AbstractModel
         if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
             $this->DstInfo = new Endpoint();
             $this->DstInfo->deserialize($param["DstInfo"]);
+        }
+
+        if (array_key_exists("DstNodeType",$param) and $param["DstNodeType"] !== null) {
+            $this->DstNodeType = $param["DstNodeType"];
+        }
+
+        if (array_key_exists("DstInfos",$param) and $param["DstInfos"] !== null) {
+            $this->DstInfos = new SyncDBEndpointInfos();
+            $this->DstInfos->deserialize($param["DstInfos"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
@@ -526,6 +604,10 @@ class SyncJobInfo extends AbstractModel
 
         if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
             $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
+        }
+
+        if (array_key_exists("DumperResumeCtrl",$param) and $param["DumperResumeCtrl"] !== null) {
+            $this->DumperResumeCtrl = $param["DumperResumeCtrl"];
         }
     }
 }

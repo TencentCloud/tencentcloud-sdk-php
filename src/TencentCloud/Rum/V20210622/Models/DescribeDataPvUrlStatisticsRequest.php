@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrowser(string $Browser) 设置浏览器
  * @method string getEnv() 获取环境
  * @method void setEnv(string $Env) 设置环境
+ * @method integer getGroupByType() 获取group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d
+ * @method void setGroupByType(integer $GroupByType) 设置group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d
  */
 class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 {
@@ -171,6 +175,12 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var integer group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d
+     */
+    public $GroupByType;
+
+    /**
      * @param integer $StartTime 开始时间
      * @param string $Type allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      * @param integer $EndTime 结束时间
@@ -192,6 +202,8 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
      * @param string $Env 环境
+     * @param integer $GroupByType group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
+ 5:1d
      */
     function __construct()
     {
@@ -288,6 +300,10 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("GroupByType",$param) and $param["GroupByType"] !== null) {
+            $this->GroupByType = $param["GroupByType"];
         }
     }
 }

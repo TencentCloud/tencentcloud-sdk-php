@@ -38,16 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationName(string $OrganizationName) 设置如果签署方是企业签署方，则为企业名
  * @method array getSignComponents() 获取签署人的签署控件列表
  * @method void setSignComponents(array $SignComponents) 设置签署人的签署控件列表
- * @method string getApproverIdCardNumber() 获取签署人的身份证号
- * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署人的身份证号
- * @method string getApproverIdCardType() 获取签署人的身份证件类型 
+ * @method string getApproverIdCardType() 获取签署人的证件类型
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
- * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署人的身份证件类型 
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+ * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署人的证件类型
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+ * @method string getApproverIdCardNumber() 获取签署人证件号（长度不超过18位）	
+ * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署人证件号（长度不超过18位）	
  * @method string getNotifyType() 获取签署通知类型：sms--短信，none--不通知
  * @method void setNotifyType(string $NotifyType) 设置签署通知类型：sms--短信，none--不通知
  * @method integer getApproverRole() 获取签署人角色类型：1--收款人、2--开具人、3--见证人
@@ -115,17 +117,18 @@ class ApproverInfo extends AbstractModel
     public $SignComponents;
 
     /**
-     * @var string 签署人的身份证号
-     */
-    public $ApproverIdCardNumber;
-
-    /**
-     * @var string 签署人的身份证件类型 
+     * @var string 签署人的证件类型
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
      */
     public $ApproverIdCardType;
+
+    /**
+     * @var string 签署人证件号（长度不超过18位）	
+     */
+    public $ApproverIdCardNumber;
 
     /**
      * @var string 签署通知类型：sms--短信，none--不通知
@@ -198,11 +201,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $ApproverMobile 签署人的手机号，11位数字
      * @param string $OrganizationName 如果签署方是企业签署方，则为企业名
      * @param array $SignComponents 签署人的签署控件列表
-     * @param string $ApproverIdCardNumber 签署人的身份证号
-     * @param string $ApproverIdCardType 签署人的身份证件类型 
+     * @param string $ApproverIdCardType 签署人的证件类型
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+     * @param string $ApproverIdCardNumber 签署人证件号（长度不超过18位）	
      * @param string $NotifyType 签署通知类型：sms--短信，none--不通知
      * @param integer $ApproverRole 签署人角色类型：1--收款人、2--开具人、3--见证人
      * @param array $VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
@@ -259,12 +263,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
             }
         }
 
-        if (array_key_exists("ApproverIdCardNumber",$param) and $param["ApproverIdCardNumber"] !== null) {
-            $this->ApproverIdCardNumber = $param["ApproverIdCardNumber"];
-        }
-
         if (array_key_exists("ApproverIdCardType",$param) and $param["ApproverIdCardType"] !== null) {
             $this->ApproverIdCardType = $param["ApproverIdCardType"];
+        }
+
+        if (array_key_exists("ApproverIdCardNumber",$param) and $param["ApproverIdCardNumber"] !== null) {
+            $this->ApproverIdCardNumber = $param["ApproverIdCardNumber"];
         }
 
         if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {

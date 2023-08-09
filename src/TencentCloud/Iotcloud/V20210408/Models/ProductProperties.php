@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceLimit(integer $DeviceLimit) 设置设备限制
  * @method integer getForbiddenStatus() 获取产品禁用状态
  * @method void setForbiddenStatus(integer $ForbiddenStatus) 设置产品禁用状态
+ * @method string getAppEUI() 获取LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+ * @method void setAppEUI(string $AppEUI) 设置LoRa产品运营侧APPEUI，只有LoRa产品需要填写
  */
 class ProductProperties extends AbstractModel
 {
@@ -94,6 +96,7 @@ class ProductProperties extends AbstractModel
 
     /**
      * @var string LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     * @deprecated
      */
     public $Appeui;
 
@@ -153,6 +156,11 @@ class ProductProperties extends AbstractModel
     public $ForbiddenStatus;
 
     /**
+     * @var string LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     */
+    public $AppEUI;
+
+    /**
      * @param string $ProductDescription 产品描述
      * @param string $EncryptionType 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      * @param string $Region 产品所属区域，目前只支持广州（gz）
@@ -172,6 +180,7 @@ class ProductProperties extends AbstractModel
      * @param integer $OriginUserId 划归的产品，展示为源用户ID，其余为空
      * @param integer $DeviceLimit 设备限制
      * @param integer $ForbiddenStatus 产品禁用状态
+     * @param string $AppEUI LoRa产品运营侧APPEUI，只有LoRa产品需要填写
      */
     function __construct()
     {
@@ -256,6 +265,10 @@ class ProductProperties extends AbstractModel
 
         if (array_key_exists("ForbiddenStatus",$param) and $param["ForbiddenStatus"] !== null) {
             $this->ForbiddenStatus = $param["ForbiddenStatus"];
+        }
+
+        if (array_key_exists("AppEUI",$param) and $param["AppEUI"] !== null) {
+            $this->AppEUI = $param["AppEUI"];
         }
     }
 }

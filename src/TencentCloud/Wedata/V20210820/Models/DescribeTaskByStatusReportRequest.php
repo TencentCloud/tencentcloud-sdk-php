@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getAggregationUnit() 获取无
+ * @method void setAggregationUnit(string $AggregationUnit) 设置无
+ * @method string getCycleUnit() 获取无
+ * @method void setCycleUnit(string $CycleUnit) 设置无
+ * @method string getStatus() 获取无
+ * @method void setStatus(string $Status) 设置无
+ * @method string getInCharge() 获取无
+ * @method void setInCharge(string $InCharge) 设置无
  */
 class DescribeTaskByStatusReportRequest extends AbstractModel
 {
@@ -66,12 +74,36 @@ class DescribeTaskByStatusReportRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 无
+     */
+    public $AggregationUnit;
+
+    /**
+     * @var string 无
+     */
+    public $CycleUnit;
+
+    /**
+     * @var string 无
+     */
+    public $Status;
+
+    /**
+     * @var string 无
+     */
+    public $InCharge;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $Type 时间类型
      * @param string $TaskType 类型
      * @param string $TypeName 类型名称
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
+     * @param string $AggregationUnit 无
+     * @param string $CycleUnit 无
+     * @param string $Status 无
+     * @param string $InCharge 无
      */
     function __construct()
     {
@@ -108,6 +140,22 @@ class DescribeTaskByStatusReportRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("AggregationUnit",$param) and $param["AggregationUnit"] !== null) {
+            $this->AggregationUnit = $param["AggregationUnit"];
+        }
+
+        if (array_key_exists("CycleUnit",$param) and $param["CycleUnit"] !== null) {
+            $this->CycleUnit = $param["CycleUnit"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("InCharge",$param) and $param["InCharge"] !== null) {
+            $this->InCharge = $param["InCharge"];
         }
     }
 }

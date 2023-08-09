@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArguments(array $Arguments) 设置Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
 2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
 3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
+ * @method integer getIsInherit() 获取是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+ * @method void setIsInherit(integer $IsInherit) 设置是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
  */
 class CreateSparkSessionBatchSQLRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
     public $Arguments;
 
     /**
+     * @var integer 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     */
+    public $IsInherit;
+
+    /**
      * @param string $DataEngineName DLC Spark作业引擎名称
      * @param string $ExecuteSQL 运行sql
      * @param string $DriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
@@ -112,6 +119,7 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
      * @param array $Arguments Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
 2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
 3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
+     * @param integer $IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Arguments, $obj);
             }
+        }
+
+        if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
+            $this->IsInherit = $param["IsInherit"];
         }
     }
 }

@@ -104,6 +104,12 @@ manualPaused(已暂停)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(array $ErrorInfo) 设置任务错误信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDumperResumeCtrl() 获取全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+ * @method void setDumperResumeCtrl(string $DumperResumeCtrl) 设置全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+ * @method RateLimitOption getRateLimitOption() 获取任务的限速信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRateLimitOption(RateLimitOption $RateLimitOption) 设置任务的限速信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -232,6 +238,17 @@ manualPaused(已暂停)
     public $ErrorInfo;
 
     /**
+     * @var string 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+     */
+    public $DumperResumeCtrl;
+
+    /**
+     * @var RateLimitOption 任务的限速信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RateLimitOption;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -278,6 +295,9 @@ manualPaused(已暂停)
      * @param TradeInfo $TradeInfo 描述计费相关的信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ErrorInfo 任务错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DumperResumeCtrl 全量导出可重入标识：enum::"yes"/"no"。yes表示当前任务可重入、no表示当前任务处于全量导出且不可重入阶段；如果在该值为no时重启任务导出流程不支持断点续传
+     * @param RateLimitOption $RateLimitOption 任务的限速信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -390,6 +410,15 @@ manualPaused(已暂停)
                 $obj->deserialize($value);
                 array_push($this->ErrorInfo, $obj);
             }
+        }
+
+        if (array_key_exists("DumperResumeCtrl",$param) and $param["DumperResumeCtrl"] !== null) {
+            $this->DumperResumeCtrl = $param["DumperResumeCtrl"];
+        }
+
+        if (array_key_exists("RateLimitOption",$param) and $param["RateLimitOption"] !== null) {
+            $this->RateLimitOption = new RateLimitOption();
+            $this->RateLimitOption->deserialize($param["RateLimitOption"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

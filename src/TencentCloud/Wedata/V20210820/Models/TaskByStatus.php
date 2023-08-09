@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCycleUnit(string $CycleUnit) 设置周期单位
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReportTime() 获取1
+ * @method void setReportTime(string $ReportTime) 设置1
+ * @method integer getCount() 获取1
+ * @method void setCount(integer $Count) 设置1
  */
 class TaskByStatus extends AbstractModel
 {
@@ -64,6 +68,16 @@ class TaskByStatus extends AbstractModel
     public $CycleUnit;
 
     /**
+     * @var string 1
+     */
+    public $ReportTime;
+
+    /**
+     * @var integer 1
+     */
+    public $Count;
+
+    /**
      * @param string $CountGroup 统计值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ShowTimeGroup 日期
@@ -72,6 +86,8 @@ class TaskByStatus extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CycleUnit 周期单位
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReportTime 1
+     * @param integer $Count 1
      */
     function __construct()
     {
@@ -100,6 +116,14 @@ class TaskByStatus extends AbstractModel
 
         if (array_key_exists("CycleUnit",$param) and $param["CycleUnit"] !== null) {
             $this->CycleUnit = $param["CycleUnit"];
+        }
+
+        if (array_key_exists("ReportTime",$param) and $param["ReportTime"] !== null) {
+            $this->ReportTime = $param["ReportTime"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

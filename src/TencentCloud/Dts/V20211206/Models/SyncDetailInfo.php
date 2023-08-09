@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置总体进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCurrentStepProgress() 获取当前步骤进度
+ * @method integer getCurrentStepProgress() 获取当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentStepProgress(integer $CurrentStepProgress) 设置当前步骤进度
+ * @method void setCurrentStepProgress(integer $CurrentStepProgress) 设置当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMasterSlaveDistance() 获取同步两端数据量差距
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,6 +55,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCauseOfCompareDisable() 获取不能发起一致性校验的原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) 设置不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ErrInfo getErrInfo() 获取任务的错误和解决方案信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrInfo(ErrInfo $ErrInfo) 设置任务的错误和解决方案信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SyncDetailInfo extends AbstractModel
@@ -78,7 +82,7 @@ class SyncDetailInfo extends AbstractModel
     public $Progress;
 
     /**
-     * @var integer 当前步骤进度
+     * @var integer 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentStepProgress;
@@ -114,13 +118,19 @@ class SyncDetailInfo extends AbstractModel
     public $CauseOfCompareDisable;
 
     /**
+     * @var ErrInfo 任务的错误和解决方案信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrInfo;
+
+    /**
      * @param integer $StepAll 总步骤数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepNow 当前步骤
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 总体进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CurrentStepProgress 当前步骤进度
+     * @param integer $CurrentStepProgress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MasterSlaveDistance 同步两端数据量差距
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,6 +141,8 @@ class SyncDetailInfo extends AbstractModel
      * @param array $StepInfos 详细步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CauseOfCompareDisable 不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrInfo $ErrInfo 任务的错误和解决方案信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -185,6 +197,11 @@ class SyncDetailInfo extends AbstractModel
 
         if (array_key_exists("CauseOfCompareDisable",$param) and $param["CauseOfCompareDisable"] !== null) {
             $this->CauseOfCompareDisable = $param["CauseOfCompareDisable"];
+        }
+
+        if (array_key_exists("ErrInfo",$param) and $param["ErrInfo"] !== null) {
+            $this->ErrInfo = new ErrInfo();
+            $this->ErrInfo->deserialize($param["ErrInfo"]);
         }
     }
 }

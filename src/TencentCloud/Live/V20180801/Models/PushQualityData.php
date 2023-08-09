@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 某条流的推流质量详情数据。
  *
- * @method string getTime() 获取数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
- * @method void setTime(string $Time) 设置数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+ * @method string getTime() 获取数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setTime(string $Time) 设置数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getAppName() 获取推流路径。
@@ -72,7 +76,9 @@ use TencentCloud\Common\AbstractModel;
 class PushQualityData extends AbstractModel
 {
     /**
-     * @var string 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * @var string 数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $Time;
 
@@ -188,7 +194,9 @@ class PushQualityData extends AbstractModel
     public $ServerIp;
 
     /**
-     * @param string $Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * @param string $Time 数据时间，使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $PushDomain 推流域名。
      * @param string $AppName 推流路径。
      * @param string $ClientIp 推流客户端 IP。

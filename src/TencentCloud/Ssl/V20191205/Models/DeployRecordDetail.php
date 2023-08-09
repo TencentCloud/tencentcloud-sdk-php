@@ -72,6 +72,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置端口
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvId() 获取TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvId(string $EnvId) 设置TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTCBType() 获取部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTCBType(string $TCBType) 设置部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployRecordDetail extends AbstractModel
 {
@@ -174,6 +186,24 @@ class DeployRecordDetail extends AbstractModel
     public $Port;
 
     /**
+     * @var string TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnvId;
+
+    /**
+     * @var string 部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TCBType;
+
+    /**
+     * @var string 部署的TCB地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
      * @param integer $Id 部署记录详情ID
      * @param string $CertId 部署证书ID
      * @param string $OldCertId 原绑定证书ID
@@ -199,6 +229,12 @@ class DeployRecordDetail extends AbstractModel
      * @param string $SecretName secret名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EnvId TCB环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TCBType 部署的TCB类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 部署的TCB地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -284,6 +320,18 @@ class DeployRecordDetail extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("TCBType",$param) and $param["TCBType"] !== null) {
+            $this->TCBType = $param["TCBType"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

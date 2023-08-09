@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypeName(string $TypeName) 设置Y
  * @method string getProjectId() 获取111
  * @method void setProjectId(string $ProjectId) 设置111
+ * @method string getInCharge() 获取1
+ * @method void setInCharge(string $InCharge) 设置1
  */
 class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 1
+     */
+    public $InCharge;
+
+    /**
      * @param integer $TaskType 1
      * @param string $TypeName Y
      * @param string $ProjectId 111
+     * @param string $InCharge 1
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("InCharge",$param) and $param["InCharge"] !== null) {
+            $this->InCharge = $param["InCharge"];
         }
     }
 }

@@ -54,14 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码
 <br/>在未指定签署人电子签UserId情况下，为必填参数
 
- * @method string getApproverIdCardType() 获取签署方经办人证件类型ID_CARD 身份证
+ * @method string getApproverIdCardType() 获取签署人的证件类型
+ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
- * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人证件类型ID_CARD 身份证
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+ * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署人的证件类型
+ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
- * @method string getApproverIdCardNumber() 获取签署方经办人证件号码
- * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署方经办人证件号码
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+ * @method string getApproverIdCardNumber() 获取签署人证件号（长度不超过18位）	
+ * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署人证件号（长度不超过18位）	
  * @method string getRecipientId() 获取签署方经办人在模板中的参与方ID
 <br/>模板发起合同时，该参数为必填项
 <br/>文件发起合同是，该参数无序传值
@@ -185,14 +189,16 @@ class FlowCreateApprover extends AbstractModel
     public $ApproverMobile;
 
     /**
-     * @var string 签署方经办人证件类型ID_CARD 身份证
+     * @var string 签署人的证件类型
+ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
      */
     public $ApproverIdCardType;
 
     /**
-     * @var string 签署方经办人证件号码
+     * @var string 签署人证件号（长度不超过18位）	
      */
     public $ApproverIdCardNumber;
 
@@ -334,10 +340,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $ApproverMobile 签署方经办人手机号码
 <br/>在未指定签署人电子签UserId情况下，为必填参数
 
-     * @param string $ApproverIdCardType 签署方经办人证件类型ID_CARD 身份证
+     * @param string $ApproverIdCardType 签署人的证件类型
+ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-     * @param string $ApproverIdCardNumber 签署方经办人证件号码
+OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+     * @param string $ApproverIdCardNumber 签署人证件号（长度不超过18位）	
      * @param string $RecipientId 签署方经办人在模板中的参与方ID
 <br/>模板发起合同时，该参数为必填项
 <br/>文件发起合同是，该参数无序传值

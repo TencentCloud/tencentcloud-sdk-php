@@ -86,6 +86,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretName(string $SecretName) 设置secret名称（TKE专用）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvId() 获取环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvId(string $EnvId) 设置环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTCBType() 获取TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTCBType(string $TCBType) 设置TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpdateRecordDetail extends AbstractModel
 {
@@ -203,6 +211,18 @@ class UpdateRecordDetail extends AbstractModel
     public $SecretName;
 
     /**
+     * @var string 环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnvId;
+
+    /**
+     * @var string TCB部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TCBType;
+
+    /**
      * @param integer $Id 详情记录id
      * @param string $CertId 新证书ID
      * @param string $OldCertId 旧证书ID
@@ -235,6 +255,10 @@ class UpdateRecordDetail extends AbstractModel
      * @param string $Namespace 命名空间（TKE专用）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretName secret名称（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EnvId 环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TCBType TCB部署类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -328,6 +352,14 @@ class UpdateRecordDetail extends AbstractModel
 
         if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
             $this->SecretName = $param["SecretName"];
+        }
+
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("TCBType",$param) and $param["TCBType"] !== null) {
+            $this->TCBType = $param["TCBType"];
         }
     }
 }

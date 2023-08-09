@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，多节点数据库使用，且DstNodeType传cluster
  * @method string getDstNodeType() 获取枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
  * @method void setDstNodeType(string $DstNodeType) 设置枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
- * @method Options getOptions() 获取同步任务选项
- * @method void setOptions(Options $Options) 设置同步任务选项
+ * @method Options getOptions() 获取同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
+ * @method void setOptions(Options $Options) 设置同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
  * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试的时间段、可设置5至720分钟、0表示不重试
  * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间段、可设置5至720分钟、0表示不重试
  */
@@ -126,7 +126,7 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $DstNodeType;
 
     /**
-     * @var Options 同步任务选项
+     * @var Options 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
      */
     public $Options;
 
@@ -150,7 +150,7 @@ class ConfigureSyncJobRequest extends AbstractModel
      * @param Endpoint $DstInfo 目标端信息，单节点数据库使用
      * @param SyncDBEndpointInfos $DstInfos 目标端信息，多节点数据库使用，且DstNodeType传cluster
      * @param string $DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-     * @param Options $Options 同步任务选项
+     * @param Options $Options 同步任务选项；该字段下的RateLimitOption暂时无法生效、如果需要修改限速、可通过ModifySyncRateLimit接口完成限速
      * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
      */
     function __construct()

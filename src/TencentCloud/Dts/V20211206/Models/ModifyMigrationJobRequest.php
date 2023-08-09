@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置任务id
  * @method string getRunMode() 获取运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
  * @method void setRunMode(string $RunMode) 设置运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
- * @method MigrateOption getMigrateOption() 获取迁移任务配置选项，描述任务如何执行迁移等一系列配置信息
- * @method void setMigrateOption(MigrateOption $MigrateOption) 设置迁移任务配置选项，描述任务如何执行迁移等一系列配置信息
+ * @method MigrateOption getMigrateOption() 获取迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
+ * @method void setMigrateOption(MigrateOption $MigrateOption) 设置迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
  * @method DBEndpointInfo getSrcInfo() 获取源实例信息
  * @method void setSrcInfo(DBEndpointInfo $SrcInfo) 设置源实例信息
  * @method DBEndpointInfo getDstInfo() 获取目标实例信息
@@ -52,7 +52,7 @@ class ModifyMigrationJobRequest extends AbstractModel
     public $RunMode;
 
     /**
-     * @var MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息
+     * @var MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
      */
     public $MigrateOption;
 
@@ -89,7 +89,7 @@ class ModifyMigrationJobRequest extends AbstractModel
     /**
      * @param string $JobId 任务id
      * @param string $RunMode 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
-     * @param MigrateOption $MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息
+     * @param MigrateOption $MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
      * @param DBEndpointInfo $SrcInfo 源实例信息
      * @param DBEndpointInfo $DstInfo 目标实例信息
      * @param string $JobName 迁移任务名称，最大长度128

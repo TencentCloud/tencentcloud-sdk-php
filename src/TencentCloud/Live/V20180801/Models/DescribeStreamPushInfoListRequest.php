@@ -22,10 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
- * @method string getStartTime() 获取起始时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS。
- * @method void setStartTime(string $StartTime) 设置起始时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS。
- * @method string getEndTime() 获取结束时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
- * @method void setEndTime(string $EndTime) 设置结束时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
+ * @method string getStartTime() 获取起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setStartTime(string $StartTime) 设置起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getEndTime() 获取结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+支持查询最近7天数据，建议查询时间跨度在3小时之内。
+ * @method void setEndTime(string $EndTime) 设置结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+支持查询最近7天数据，建议查询时间跨度在3小时之内。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
@@ -39,12 +53,19 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string 起始时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS。
+     * @var string 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
+     * @var string 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+支持查询最近7天数据，建议查询时间跨度在3小时之内。
      */
     public $EndTime;
 
@@ -60,8 +81,15 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
 
     /**
      * @param string $StreamName 流名称。
-     * @param string $StartTime 起始时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS。
-     * @param string $EndTime 结束时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
+     * @param string $StartTime 起始时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $EndTime 结束时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+支持查询最近7天数据，建议查询时间跨度在3小时之内。
      * @param string $PushDomain 推流域名。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostDeployRecordDetail请求参数结构体
  *
- * @method string getDeployRecordId() 获取待部署的证书ID
- * @method void setDeployRecordId(string $DeployRecordId) 设置待部署的证书ID
+ * @method string getDeployRecordId() 获取部署记录ID
+ * @method void setDeployRecordId(string $DeployRecordId) 设置部署记录ID
  * @method integer getOffset() 获取分页偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
  * @method integer getLimit() 获取每页数量，默认10。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHostDeployRecordDetailRequest extends AbstractModel
 {
     /**
-     * @var string 待部署的证书ID
+     * @var string 部署记录ID
      */
     public $DeployRecordId;
 
@@ -45,7 +45,7 @@ class DescribeHostDeployRecordDetailRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $DeployRecordId 待部署的证书ID
+     * @param string $DeployRecordId 部署记录ID
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认10。
      */

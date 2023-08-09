@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutionGroupId(string $ExecutionGroupId) 设置执行资源组ID
  * @method string getExecutionGroupName() 获取执行资源组名字
  * @method void setExecutionGroupName(string $ExecutionGroupName) 设置执行资源组名字
+ * @method string getStartTime() 获取开始时间
+ * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method string getEndTime() 获取结束时间
+ * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getInCharge() 获取责任人
+ * @method void setInCharge(string $InCharge) 设置责任人
  */
 class DescribeSchedulerInstanceStatusRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class DescribeSchedulerInstanceStatusRequest extends AbstractModel
     public $ExecutionGroupName;
 
     /**
+     * @var string 开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 结束时间
+     */
+    public $EndTime;
+
+    /**
+     * @var string 责任人
+     */
+    public $InCharge;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskTypeId 任务类型ID
      * @param string $ExecutionGroupId 执行资源组ID
      * @param string $ExecutionGroupName 执行资源组名字
+     * @param string $StartTime 开始时间
+     * @param string $EndTime 结束时间
+     * @param string $InCharge 责任人
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class DescribeSchedulerInstanceStatusRequest extends AbstractModel
 
         if (array_key_exists("ExecutionGroupName",$param) and $param["ExecutionGroupName"] !== null) {
             $this->ExecutionGroupName = $param["ExecutionGroupName"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("InCharge",$param) and $param["InCharge"] !== null) {
+            $this->InCharge = $param["InCharge"];
         }
     }
 }

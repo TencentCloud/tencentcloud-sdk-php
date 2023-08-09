@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) 设置指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
  * @method string getSparkImage() 获取指定spark版本名称，当前任务使用该spark镜像运行
  * @method void setSparkImage(string $SparkImage) 设置指定spark版本名称，当前任务使用该spark镜像运行
+ * @method integer getIsInherit() 获取是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+ * @method void setIsInherit(integer $IsInherit) 设置是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
  */
 class CreateNotebookSessionRequest extends AbstractModel
 {
@@ -138,6 +140,11 @@ class CreateNotebookSessionRequest extends AbstractModel
     public $SparkImage;
 
     /**
+     * @var integer 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     */
+    public $IsInherit;
+
+    /**
      * @param string $Name Session名称
      * @param string $Kind 类型，当前支持：spark、pyspark、sparkr、sql
      * @param string $DataEngineName DLC Spark作业引擎名称
@@ -156,6 +163,7 @@ class CreateNotebookSessionRequest extends AbstractModel
      * @param integer $TimeoutInSecond 指定的Session超时时间，单位秒，默认3600秒
      * @param integer $ExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
      * @param string $SparkImage 指定spark版本名称，当前任务使用该spark镜像运行
+     * @param integer $IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class CreateNotebookSessionRequest extends AbstractModel
 
         if (array_key_exists("SparkImage",$param) and $param["SparkImage"] !== null) {
             $this->SparkImage = $param["SparkImage"];
+        }
+
+        if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
+            $this->IsInherit = $param["IsInherit"];
         }
     }
 }

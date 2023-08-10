@@ -20,7 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 审计日志搜索过滤器
  *
- * @method string getType() 获取过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
+ * @method string getType() 获取过滤项。目前支持以下搜索条件：
+
+包含、不包含、包含（分词维度）、不包含（分词维度）:
+sql - SQL详情
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -41,7 +44,10 @@ cpuTime - cpu时间；
 checkRows - 扫描行数；
 affectRows - 影响行数；
 sentRows - 返回行数。
- * @method void setType(string $Type) 设置过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
+ * @method void setType(string $Type) 设置过滤项。目前支持以下搜索条件：
+
+包含、不包含、包含（分词维度）、不包含（分词维度）:
+sql - SQL详情
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -63,24 +69,31 @@ checkRows - 扫描行数；
 affectRows - 影响行数；
 sentRows - 返回行数。
  * @method string getCompare() 获取过滤条件。支持以下条件：
+WINC-包含（分词维度），
+WEXC-不包含（分词维度）,
 INC - 包含,
 EXC - 不包含,
 EQS - 等于,
 NEQ - 不等于,
 RA - 范围。
  * @method void setCompare(string $Compare) 设置过滤条件。支持以下条件：
+WINC-包含（分词维度），
+WEXC-不包含（分词维度）,
 INC - 包含,
 EXC - 不包含,
 EQS - 等于,
 NEQ - 不等于,
 RA - 范围。
- * @method array getValue() 获取过滤的值。
- * @method void setValue(array $Value) 设置过滤的值。
+ * @method array getValue() 获取过滤的值。反向查询时，多个值之前是且的关系，正向查询多个值是或的关系
+ * @method void setValue(array $Value) 设置过滤的值。反向查询时，多个值之前是且的关系，正向查询多个值是或的关系
  */
 class InstanceAuditLogFilters extends AbstractModel
 {
     /**
-     * @var string 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
+     * @var string 过滤项。目前支持以下搜索条件：
+
+包含、不包含、包含（分词维度）、不包含（分词维度）:
+sql - SQL详情
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -106,6 +119,8 @@ sentRows - 返回行数。
 
     /**
      * @var string 过滤条件。支持以下条件：
+WINC-包含（分词维度），
+WEXC-不包含（分词维度）,
 INC - 包含,
 EXC - 不包含,
 EQS - 等于,
@@ -115,12 +130,15 @@ RA - 范围。
     public $Compare;
 
     /**
-     * @var array 过滤的值。
+     * @var array 过滤的值。反向查询时，多个值之前是且的关系，正向查询多个值是或的关系
      */
     public $Value;
 
     /**
-     * @param string $Type 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
+     * @param string $Type 过滤项。目前支持以下搜索条件：
+
+包含、不包含、包含（分词维度）、不包含（分词维度）:
+sql - SQL详情
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -142,12 +160,14 @@ checkRows - 扫描行数；
 affectRows - 影响行数；
 sentRows - 返回行数。
      * @param string $Compare 过滤条件。支持以下条件：
+WINC-包含（分词维度），
+WEXC-不包含（分词维度）,
 INC - 包含,
 EXC - 不包含,
 EQS - 等于,
 NEQ - 不等于,
 RA - 范围。
-     * @param array $Value 过滤的值。
+     * @param array $Value 过滤的值。反向查询时，多个值之前是且的关系，正向查询多个值是或的关系
      */
     function __construct()
     {

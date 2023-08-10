@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页参数，单次返回的数据条数。默认值为100，最大值为100。
  * @method integer getOffset() 获取分页偏移量。
  * @method void setOffset(integer $Offset) 设置分页偏移量。
- * @method array getLogFilter() 获取审计日志过滤条件。
- * @method void setLogFilter(array $LogFilter) 设置审计日志过滤条件。
+ * @method array getLogFilter() 获取过滤条件。多个值之前是且的关系。
+ * @method void setLogFilter(array $LogFilter) 设置过滤条件。多个值之前是且的关系。
  */
 class DescribeAuditLogsRequest extends AbstractModel
 {
@@ -91,7 +91,7 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 审计日志过滤条件。
+     * @var array 过滤条件。多个值之前是且的关系。
      */
     public $LogFilter;
 
@@ -107,7 +107,7 @@ class DescribeAuditLogsRequest extends AbstractModel
      * @param AuditLogFilter $Filter 已废弃。
      * @param integer $Limit 分页参数，单次返回的数据条数。默认值为100，最大值为100。
      * @param integer $Offset 分页偏移量。
-     * @param array $LogFilter 审计日志过滤条件。
+     * @param array $LogFilter 过滤条件。多个值之前是且的关系。
      */
     function __construct()
     {

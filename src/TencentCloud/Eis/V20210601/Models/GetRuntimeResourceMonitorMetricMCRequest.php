@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInterval(integer $Interval) 设置采样粒度：60(s), 300(s), 3600(s), 86400(s)
  * @method integer getRuntimeClass() 获取环境运行类型：0:运行时类型、1:api类型
  * @method void setRuntimeClass(integer $RuntimeClass) 设置环境运行类型：0:运行时类型、1:api类型
+ * @method integer getAggregationType() 获取资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
+ * @method void setAggregationType(integer $AggregationType) 设置资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
  */
 class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel
     public $RuntimeClass;
 
     /**
+     * @var integer 资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
+     */
+    public $AggregationType;
+
+    /**
      * @param integer $RuntimeId 运行时id
      * @param integer $StartTime 起始时间
      * @param integer $EndTime 结束时间
@@ -80,6 +87,7 @@ class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel
      * @param boolean $RateType 是否返回百分比数值，仅支持CPU，Memory
      * @param integer $Interval 采样粒度：60(s), 300(s), 3600(s), 86400(s)
      * @param integer $RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     * @param integer $AggregationType 资源指标聚合类型：0: 环境维度 1:执行引擎维度 2:datatwaypy维度 3.datawayjava维度
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel
 
         if (array_key_exists("RuntimeClass",$param) and $param["RuntimeClass"] !== null) {
             $this->RuntimeClass = $param["RuntimeClass"];
+        }
+
+        if (array_key_exists("AggregationType",$param) and $param["AggregationType"] !== null) {
+            $this->AggregationType = $param["AggregationType"];
         }
     }
 }

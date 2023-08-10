@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置-2: 不按状态筛选，获取所有
 0: 运行中
 2: 已停止
+ * @method integer getRuntimeClass() 获取0: 应用集成
+1: API管理
+2: ETL
+ * @method void setRuntimeClass(integer $RuntimeClass) 设置0: 应用集成
+1: API管理
+2: ETL
  */
 class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
 {
@@ -96,6 +102,13 @@ class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 0: 应用集成
+1: API管理
+2: ETL
+     */
+    public $RuntimeClass;
+
+    /**
      * @param integer $RuntimeId 运行时id
      * @param integer $Limit 最大请求数量
      * @param integer $Offset 请求偏移量
@@ -108,6 +121,9 @@ class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
      * @param integer $Status -2: 不按状态筛选，获取所有
 0: 运行中
 2: 已停止
+     * @param integer $RuntimeClass 0: 应用集成
+1: API管理
+2: ETL
      */
     function __construct()
     {
@@ -156,6 +172,10 @@ class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RuntimeClass",$param) and $param["RuntimeClass"] !== null) {
+            $this->RuntimeClass = $param["RuntimeClass"];
         }
     }
 }

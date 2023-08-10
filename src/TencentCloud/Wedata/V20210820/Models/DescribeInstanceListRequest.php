@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目/工作空间id
  * @method integer getPageIndex() 获取页码
  * @method void setPageIndex(integer $PageIndex) 设置页码
- * @method integer getPageSize() 获取页大小
- * @method void setPageSize(integer $PageSize) 设置页大小
+ * @method integer getPageSize() 获取一页展示的条数
+ * @method void setPageSize(integer $PageSize) 设置一页展示的条数
  * @method array getCycleList() 获取周期列表（如天，一次性），可选
  * @method void setCycleList(array $CycleList) 设置周期列表（如天，一次性），可选
  * @method array getOwnerList() 获取责任人
@@ -36,8 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSort(string $Sort) 设置排序顺序（asc，desc）
  * @method string getSortCol() 获取排序列（costTime 运行耗时，startTime 开始时间，state 实例状态，curRunDate 数据时间）
  * @method void setSortCol(string $SortCol) 设置排序列（costTime 运行耗时，startTime 开始时间，state 实例状态，curRunDate 数据时间）
- * @method array getTaskTypeList() 获取类型列表（如35 shell任务），可选
- * @method void setTaskTypeList(array $TaskTypeList) 设置类型列表（如35 shell任务），可选
+ * @method array getTaskTypeList() 获取类型列表（如python任务类型：30
+pyspark任务类型：31
+hivesql任务类型：34
+shell任务类型：35
+sparksql任务类型：36 jdbcsql任务类型：21 dlc任务类型：32），可选
+ * @method void setTaskTypeList(array $TaskTypeList) 设置类型列表（如python任务类型：30
+pyspark任务类型：31
+hivesql任务类型：34
+shell任务类型：35
+sparksql任务类型：36 jdbcsql任务类型：21 dlc任务类型：32），可选
  * @method array getStateList() 获取状态列表（如成功 2，正在执行 1），可选
  * @method void setStateList(array $StateList) 设置状态列表（如成功 2，正在执行 1），可选
  * @method string getKeyword() 获取任务名称
@@ -56,7 +64,7 @@ class DescribeInstanceListRequest extends AbstractModel
     public $PageIndex;
 
     /**
-     * @var integer 页大小
+     * @var integer 一页展示的条数
      */
     public $PageSize;
 
@@ -86,7 +94,11 @@ class DescribeInstanceListRequest extends AbstractModel
     public $SortCol;
 
     /**
-     * @var array 类型列表（如35 shell任务），可选
+     * @var array 类型列表（如python任务类型：30
+pyspark任务类型：31
+hivesql任务类型：34
+shell任务类型：35
+sparksql任务类型：36 jdbcsql任务类型：21 dlc任务类型：32），可选
      */
     public $TaskTypeList;
 
@@ -103,13 +115,17 @@ class DescribeInstanceListRequest extends AbstractModel
     /**
      * @param string $ProjectId 项目/工作空间id
      * @param integer $PageIndex 页码
-     * @param integer $PageSize 页大小
+     * @param integer $PageSize 一页展示的条数
      * @param array $CycleList 周期列表（如天，一次性），可选
      * @param array $OwnerList 责任人
      * @param string $InstanceType 跟之前保持一致
      * @param string $Sort 排序顺序（asc，desc）
      * @param string $SortCol 排序列（costTime 运行耗时，startTime 开始时间，state 实例状态，curRunDate 数据时间）
-     * @param array $TaskTypeList 类型列表（如35 shell任务），可选
+     * @param array $TaskTypeList 类型列表（如python任务类型：30
+pyspark任务类型：31
+hivesql任务类型：34
+shell任务类型：35
+sparksql任务类型：36 jdbcsql任务类型：21 dlc任务类型：32），可选
      * @param array $StateList 状态列表（如成功 2，正在执行 1），可选
      * @param string $Keyword 任务名称
      */

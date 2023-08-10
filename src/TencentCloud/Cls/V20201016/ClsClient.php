@@ -39,7 +39,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateKafkaRechargeResponse CreateKafkaRecharge(Models\CreateKafkaRechargeRequest $req) 本接口用于创建Kafka数据订阅任务
  * @method Models\CreateLogsetResponse CreateLogset(Models\CreateLogsetRequest $req) 本接口用于创建日志集，返回新创建的日志集的 ID。
  * @method Models\CreateMachineGroupResponse CreateMachineGroup(Models\CreateMachineGroupRequest $req) 创建机器组
- * @method Models\CreateScheduledSqlResponse CreateScheduledSql(Models\CreateScheduledSqlRequest $req) 本接口用于创建ScheduledSql任务
+ * @method Models\CreateScheduledSqlResponse CreateScheduledSql(Models\CreateScheduledSqlRequest $req) 本接口用于创建定时SQL分析任务
  * @method Models\CreateShipperResponse CreateShipper(Models\CreateShipperRequest $req) 新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 本接口用于创建日志主题。
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
@@ -55,7 +55,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteLogsetResponse DeleteLogset(Models\DeleteLogsetRequest $req) 本接口用于删除日志集。
  * @method Models\DeleteMachineGroupResponse DeleteMachineGroup(Models\DeleteMachineGroupRequest $req) 删除机器组
  * @method Models\DeleteMachineGroupInfoResponse DeleteMachineGroupInfo(Models\DeleteMachineGroupInfoRequest $req) 用于删除机器组信息
- * @method Models\DeleteScheduledSqlResponse DeleteScheduledSql(Models\DeleteScheduledSqlRequest $req) 本接口用于删除ScheduledSql任务
+ * @method Models\DeleteScheduledSqlResponse DeleteScheduledSql(Models\DeleteScheduledSqlRequest $req) 本接口用于删除定时SQL分析任务
  * @method Models\DeleteShipperResponse DeleteShipper(Models\DeleteShipperRequest $req) 删除投递COS任务
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 本接口用于删除日志主题。
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 该接口用于获取通知渠道组列表
@@ -80,7 +80,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DescribeMachineGroupsResponse DescribeMachineGroups(Models\DescribeMachineGroupsRequest $req) 获取机器组信息列表
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 获取制定机器组下的机器状态
  * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 本接口用于获取主题分区列表。
- * @method Models\DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(Models\DescribeScheduledSqlInfoRequest $req) 本接口用于获取ScheduledSql任务列表
+ * @method Models\DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(Models\DescribeScheduledSqlInfoRequest $req) 本接口用于获取定时SQL分析任务列表
  * @method Models\DescribeShipperTasksResponse DescribeShipperTasks(Models\DescribeShipperTasksRequest $req) 获取投递任务列表
  * @method Models\DescribeShippersResponse DescribeShippers(Models\DescribeShippersRequest $req) 获取投递到COS的任务配置信息
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) 本接口用于获取日志主题列表，支持分页
@@ -99,7 +99,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\ModifyKafkaRechargeResponse ModifyKafkaRecharge(Models\ModifyKafkaRechargeRequest $req) 本接口用于修改Kafka数据订阅任务
  * @method Models\ModifyLogsetResponse ModifyLogset(Models\ModifyLogsetRequest $req) 本接口用于修改日志集信息
  * @method Models\ModifyMachineGroupResponse ModifyMachineGroup(Models\ModifyMachineGroupRequest $req) 修改机器组
- * @method Models\ModifyScheduledSqlResponse ModifyScheduledSql(Models\ModifyScheduledSqlRequest $req) 本接口用于修改ScheduledSql任务
+ * @method Models\ModifyScheduledSqlResponse ModifyScheduledSql(Models\ModifyScheduledSqlRequest $req) 本接口用于修改定时SQL分析任务
  * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 本接口用于修改日志主题。
  * @method Models\OpenKafkaConsumerResponse OpenKafkaConsumer(Models\OpenKafkaConsumerRequest $req) 打开Kafka协议消费功能

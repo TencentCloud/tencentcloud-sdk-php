@@ -28,8 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
- * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+ * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知
+ * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知
  */
 class StartFlowRequest extends AbstractModel
 {
@@ -54,7 +62,11 @@ class StartFlowRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var integer 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * @var integer 给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知
      */
     public $CcNotifyType;
 
@@ -63,7 +75,11 @@ class StartFlowRequest extends AbstractModel
      * @param string $FlowId 签署流程编号，由CreateFlow接口返回
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param integer $CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * @param integer $CcNotifyType 给关注人发送短信通知的类型，
+
+0-合同发起时通知 
+
+1-签署完成后通知
      */
     function __construct()
     {

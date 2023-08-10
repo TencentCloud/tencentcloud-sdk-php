@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
- * @method array getLogFilter() 获取过滤条件。可按设置的过滤条件过滤日志。
- * @method void setLogFilter(array $LogFilter) 设置过滤条件。可按设置的过滤条件过滤日志。
+ * @method array getLogFilter() 获取过滤条件。多个值之前是且的关系。
+ * @method void setLogFilter(array $LogFilter) 设置过滤条件。多个值之前是且的关系。
  */
 class DescribeAuditLogsRequest extends AbstractModel
 {
@@ -84,7 +84,7 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var array 过滤条件。可按设置的过滤条件过滤日志。
+     * @var array 过滤条件。多个值之前是且的关系。
      */
     public $LogFilter;
 
@@ -99,7 +99,7 @@ class DescribeAuditLogsRequest extends AbstractModel
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
-     * @param array $LogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     * @param array $LogFilter 过滤条件。多个值之前是且的关系。
      */
     function __construct()
     {

@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(string $SdkAppId) 设置推流应用ID。
  * @method string getUserId() 获取用户唯一标识。
  * @method void setUserId(string $UserId) 设置用户唯一标识。
+ * @method string getRoomIdType() 获取TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRoomIdType(string $RoomIdType) 设置TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TRTCJoinRoomInput extends AbstractModel
 {
@@ -52,10 +64,26 @@ class TRTCJoinRoomInput extends AbstractModel
     public $UserId;
 
     /**
+     * @var string TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RoomIdType;
+
+    /**
      * @param string $Sign 签名。
      * @param string $RoomId 房间号。
      * @param string $SdkAppId 推流应用ID。
      * @param string $UserId 用户唯一标识。
+     * @param string $RoomIdType TRTC房间号的类型：
+
+Integer：数字类型
+String：字符串类型
+默认为：Integer 。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +112,10 @@ class TRTCJoinRoomInput extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("RoomIdType",$param) and $param["RoomIdType"] !== null) {
+            $this->RoomIdType = $param["RoomIdType"];
         }
     }
 }

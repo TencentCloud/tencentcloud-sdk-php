@@ -39,6 +39,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 注意:
 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
  * @method Models\ChannelCancelMultiFlowSignQRCodeResponse ChannelCancelMultiFlowSignQRCode(Models\ChannelCancelMultiFlowSignQRCodeRequest $req) 此接口（ChannelCancelMultiFlowSignQRCode）用于取消一码多扫二维码。该接口对传入的二维码ID，若还在有效期内，可以提前失效。
+ * @method Models\ChannelCancelUserAutoSignEnableUrlResponse ChannelCancelUserAutoSignEnableUrl(Models\ChannelCancelUserAutoSignEnableUrlRequest $req) 此接口（ChannelCancelUserAutoSignEnableUrl）用来撤销发送给个人用户的自动签开通链接，撤销后对应的个人用户开通链接失效。若个人用户已经完成开通，将无法撤销。（处方单场景专用，使用此接口请与客户经理确认）
  * @method Models\ChannelCreateBatchCancelFlowUrlResponse ChannelCreateBatchCancelFlowUrl(Models\ChannelCreateBatchCancelFlowUrlRequest $req) 指定需要批量撤销的签署流程Id，获取批量撤销链接 - 不建议使用此接口，可使用ChannelBatchCancelFlows
 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
 接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
@@ -88,6 +89,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlow(Models\ChannelCreateReleaseFlowRequest $req) 发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
 合同发起人必须在电子签已经进行实名。
  * @method Models\ChannelCreateSealPolicyResponse ChannelCreateSealPolicy(Models\ChannelCreateSealPolicyRequest $req) 将指定印章授权给第三方平台子客企业下的某些员工
+ * @method Models\ChannelCreateUserAutoSignEnableUrlResponse ChannelCreateUserAutoSignEnableUrl(Models\ChannelCreateUserAutoSignEnableUrlRequest $req) 企业方可以通过此接口获取个人用户开启自动签的跳转链接
  * @method Models\ChannelCreateUserRolesResponse ChannelCreateUserRoles(Models\ChannelCreateUserRolesRequest $req) 通过此接口，绑定员工角色，支持以电子签userId、客户系统userId两种方式调用。
  * @method Models\ChannelCreateWebThemeConfigResponse ChannelCreateWebThemeConfig(Models\ChannelCreateWebThemeConfigRequest $req) 生成页面主题配置
  * @method Models\ChannelDeleteRoleUsersResponse ChannelDeleteRoleUsers(Models\ChannelDeleteRoleUsersRequest $req) 通过此接口，删除员工绑定的角色，支持以电子签userId、客户系统userId两种方式调用。
@@ -97,6 +99,8 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelDescribeOrganizationSealsResponse ChannelDescribeOrganizationSeals(Models\ChannelDescribeOrganizationSealsRequest $req) 查询子客企业电子印章，需要操作者具有管理印章权限
 客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数，只返回启用的印章。
  * @method Models\ChannelDescribeRolesResponse ChannelDescribeRoles(Models\ChannelDescribeRolesRequest $req) 查询角色列表，支持根据类型和状态过滤角色列表
+ * @method Models\ChannelDescribeUserAutoSignStatusResponse ChannelDescribeUserAutoSignStatus(Models\ChannelDescribeUserAutoSignStatusRequest $req) 企业方可以通过此接口查询个人用户自动签开启状态
+ * @method Models\ChannelDisableUserAutoSignResponse ChannelDisableUserAutoSign(Models\ChannelDisableUserAutoSignRequest $req) 企业方可以通过此接口关闭个人的自动签功能
  * @method Models\ChannelGetTaskResultApiResponse ChannelGetTaskResultApi(Models\ChannelGetTaskResultApiRequest $req) 查询转换任务的状态。转换任务Id通过发起转换任务接口（ChannelCreateConvertTaskApi）获取。
 注意：大文件转换所需的时间可能会比较长。
  * @method Models\ChannelUpdateSealStatusResponse ChannelUpdateSealStatus(Models\ChannelUpdateSealStatusRequest $req) 本接口（ChannelUpdateSealStatus）用于第三方应用平台为子客企业更新印章状态

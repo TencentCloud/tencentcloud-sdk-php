@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBizId(integer $BizId) 设置应用ID
  * @method string getRoomIdString() 获取需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003"
  * @method void setRoomIdString(string $RoomIdString) 设置需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003"
- * @method array getRoomIdRegex() 获取符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
- * @method void setRoomIdRegex(array $RoomIdRegex) 设置符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
+ * @method array getRoomIdRegex() 获取符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
+ * @method void setRoomIdRegex(array $RoomIdRegex) 设置符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
  */
 class UpdateScanRoomsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class UpdateScanRoomsRequest extends AbstractModel
     public $RoomIdString;
 
     /**
-     * @var array 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
+     * @var array 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      */
     public $RoomIdRegex;
 
     /**
      * @param integer $BizId 应用ID
      * @param string $RoomIdString 需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003"
-     * @param array $RoomIdRegex 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
+     * @param array $RoomIdRegex 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      */
     function __construct()
     {

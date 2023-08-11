@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 自动签署仅进行盖章操作，不能是手写签名。
 本方企业自动签署的签署人会默认是当前的发起人
 他方企业自动签署的签署人是自动签模板的他方企业授权人
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
  * @method void setApproverType(integer $ApproverType) 设置参与者类型：
 0：企业
 1：个人
@@ -36,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 自动签署仅进行盖章操作，不能是手写签名。
 本方企业自动签署的签署人会默认是当前的发起人
 他方企业自动签署的签署人是自动签模板的他方企业授权人
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
  * @method string getOrganizationName() 获取签署人企业名称
 <br/>当approverType=1 或 approverType=3时，必须指定
 
@@ -90,18 +94,20 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
  * @method void setIsFullText(boolean $IsFullText) 设置合同强制需要阅读全文，无需传此参数
  * @method integer getPreReadTime() 获取合同的强制预览时间：3~300s，未指定则按合同页数计算
  * @method void setPreReadTime(integer $PreReadTime) 设置合同的强制预览时间：3~300s，未指定则按合同页数计算
- * @method string getUserId() 获取签署方经办人的电子签用户ID
-<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+ * @method string getUserId() 获取签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
- * @method void setUserId(string $UserId) 设置签署方经办人的电子签用户ID
-<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
+ * @method void setUserId(string $UserId) 设置签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
  * @method boolean getRequired() 获取当前只支持true，默认为true
  * @method void setRequired(boolean $Required) 设置当前只支持true，默认为true
- * @method string getApproverSource() 获取签署人用户来源
-<br/>企微侧用户请传入：WEWORKAPP
- * @method void setApproverSource(string $ApproverSource) 设置签署人用户来源
-<br/>企微侧用户请传入：WEWORKAPP
+ * @method string getApproverSource() 获取签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP
+ * @method void setApproverSource(string $ApproverSource) 设置签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP
  * @method string getCustomApproverTag() 获取企业签署方或签标识，客户自定义，64位长度
 <br>用于发起含有或签签署人的合同。或签参与人必须有此字段。
 <br/>合同内不同或签参与人CustomApproverTag需要保证唯一。
@@ -130,13 +136,13 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 <br>true 则为需要
 <br/>false,无序企业内部审批（默认）
 <br/>为个人签署方时则由发起方企业审核。
- * @method array getSignComponents() 获取签署人签署控件
+ * @method array getSignComponents() 获取签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
 <br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
- * @method void setSignComponents(array $SignComponents) 设置签署人签署控件
+ * @method void setSignComponents(array $SignComponents) 设置签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
 <br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
- * @method array getComponents() 获取签署人填写控件
+ * @method array getComponents() 获取签署人填写控件 此参数仅针对文件发起（CreateFlowByFiles）生效
 <br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
- * @method void setComponents(array $Components) 设置签署人填写控件
+ * @method void setComponents(array $Components) 设置签署人填写控件 此参数仅针对文件发起（CreateFlowByFiles）生效
 <br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
  * @method array getComponentLimitType() 获取签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
@@ -164,6 +170,8 @@ class FlowCreateApprover extends AbstractModel
 自动签署仅进行盖章操作，不能是手写签名。
 本方企业自动签署的签署人会默认是当前的发起人
 他方企业自动签署的签署人是自动签模板的他方企业授权人
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
      */
     public $ApproverType;
 
@@ -235,9 +243,9 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     public $PreReadTime;
 
     /**
-     * @var string 签署方经办人的电子签用户ID
-<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+     * @var string 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
      */
     public $UserId;
 
@@ -247,8 +255,9 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     public $Required;
 
     /**
-     * @var string 签署人用户来源
-<br/>企微侧用户请传入：WEWORKAPP
+     * @var string 签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP
      */
     public $ApproverSource;
 
@@ -292,13 +301,13 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     public $ApproverNeedSignReview;
 
     /**
-     * @var array 签署人签署控件
+     * @var array 签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
 <br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
      */
     public $SignComponents;
 
     /**
-     * @var array 签署人填写控件
+     * @var array 签署人填写控件 此参数仅针对文件发起（CreateFlowByFiles）生效
 <br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
      */
     public $Components;
@@ -331,6 +340,8 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 自动签署仅进行盖章操作，不能是手写签名。
 本方企业自动签署的签署人会默认是当前的发起人
 他方企业自动签署的签署人是自动签模板的他方企业授权人
+7: 个人自动签署，适用于个人自动签场景。
+注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
      * @param string $OrganizationName 签署人企业名称
 <br/>当approverType=1 或 approverType=3时，必须指定
 
@@ -358,12 +369,13 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 <br/>发起方=签署方时不发送短信
      * @param boolean $IsFullText 合同强制需要阅读全文，无需传此参数
      * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
-     * @param string $UserId 签署方经办人的电子签用户ID
-<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+     * @param string $UserId 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
+若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
      * @param boolean $Required 当前只支持true，默认为true
-     * @param string $ApproverSource 签署人用户来源
-<br/>企微侧用户请传入：WEWORKAPP
+     * @param string $ApproverSource 签署人用户来源，此参数仅针对企微用户开放
+
+企微侧用户请传入：WEWORKAPP
      * @param string $CustomApproverTag 企业签署方或签标识，客户自定义，64位长度
 <br>用于发起含有或签签署人的合同。或签参与人必须有此字段。
 <br/>合同内不同或签参与人CustomApproverTag需要保证唯一。
@@ -378,9 +390,9 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 <br>true 则为需要
 <br/>false,无序企业内部审批（默认）
 <br/>为个人签署方时则由发起方企业审核。
-     * @param array $SignComponents 签署人签署控件
+     * @param array $SignComponents 签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
 <br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
-     * @param array $Components 签署人填写控件
+     * @param array $Components 签署人填写控件 此参数仅针对文件发起（CreateFlowByFiles）生效
 <br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
      * @param array $ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名

@@ -98,6 +98,8 @@ video 纯视频
  * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置开启课后评分。 0：不开启(默认)  1：开启
  * @method integer getRoomType() 获取房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
  * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+ * @method integer getVideoDuration() 获取录制时长
+ * @method void setVideoDuration(integer $VideoDuration) 设置录制时长
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -227,6 +229,11 @@ video 纯视频
     public $RoomType;
 
     /**
+     * @var integer 录制时长
+     */
+    public $VideoDuration;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -271,6 +278,7 @@ video 纯视频
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
      * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * @param integer $VideoDuration 录制时长
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -368,6 +376,10 @@ video 纯视频
 
         if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
             $this->RoomType = $param["RoomType"];
+        }
+
+        if (array_key_exists("VideoDuration",$param) and $param["VideoDuration"] !== null) {
+            $this->VideoDuration = $param["VideoDuration"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

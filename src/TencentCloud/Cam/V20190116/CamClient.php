@@ -31,6 +31,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(Models\ConsumeCustomMFATokenRequest $req) 验证自定义多因子Token
  * @method Models\CreateAccessKeyResponse CreateAccessKey(Models\CreateAccessKeyRequest $req) 为CAM用户创建访问密钥
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建用户组
+ * @method Models\CreateMessageReceiverResponse CreateMessageReceiver(Models\CreateMessageReceiverRequest $req) 创建消息接收人接口：仅允许已完成实名认证的用户访问消息接收人接口，并对每个用户限制每天最多请求10次。
  * @method Models\CreateOIDCConfigResponse CreateOIDCConfig(Models\CreateOIDCConfigRequest $req) 创建角色OIDC配置
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) 本接口（CreatePolicy）可用于创建策略。
  * @method Models\CreatePolicyVersionResponse CreatePolicyVersion(Models\CreatePolicyVersionRequest $req) 该接口（CreatePolicyVersion）用于新增策略版本，用户创建了一个策略版本之后可以方便的通过变更策略版本的方式来变更策略。

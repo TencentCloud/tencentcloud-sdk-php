@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceChargeType() 获取实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -314,6 +318,12 @@ class InstanceAttributesResponse extends AbstractModel
     public $DynamicDiskConfig;
 
     /**
+     * @var string 实例计费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceChargeType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param array $VipList 接入点 VIP 列表信息
@@ -363,6 +373,8 @@ class InstanceAttributesResponse extends AbstractModel
      * @param integer $RemainingTopics 剩余创建主题数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceChargeType 实例计费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -529,6 +541,10 @@ class InstanceAttributesResponse extends AbstractModel
         if (array_key_exists("DynamicDiskConfig",$param) and $param["DynamicDiskConfig"] !== null) {
             $this->DynamicDiskConfig = new DynamicDiskConfig();
             $this->DynamicDiskConfig->deserialize($param["DynamicDiskConfig"]);
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
         }
     }
 }

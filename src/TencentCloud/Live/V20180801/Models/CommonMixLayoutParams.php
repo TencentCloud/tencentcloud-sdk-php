@@ -88,18 +88,18 @@ use TencentCloud\Common\AbstractModel;
 使用百分比时，期望输出为（百分比 * 背景宽）
  * @method string getColor() 获取当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。
 灰色：0x999999。
  * @method void setColor(string $Color) 设置当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。
@@ -169,9 +169,9 @@ class CommonMixLayoutParams extends AbstractModel
     /**
      * @var string 当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。
@@ -220,9 +220,9 @@ class CommonMixLayoutParams extends AbstractModel
 使用百分比时，期望输出为（百分比 * 背景宽）
      * @param string $Color 当InputType为3(画布)时，该值表示画布的颜色。
 常用的颜色有：
-红色：0xcc0033。
-黄色：0xcc9900。
-绿色：0xcccc33。
+红色：0xCC0033。
+黄色：0xCC9900。
+绿色：0xCCCC33。
 蓝色：0x99CCFF。
 黑色：0x000000。
 白色：0xFFFFFF。

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordMappingList(array $RecordMappingList) 设置使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
  * @method string getDateField() 获取消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
  * @method void setDateField(string $DateField) 设置消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+ * @method string getRecordMappingMode() 获取用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+ * @method void setRecordMappingMode(string $RecordMappingMode) 设置用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
  */
 class EsParam extends AbstractModel
 {
@@ -157,6 +159,11 @@ class EsParam extends AbstractModel
     public $DateField;
 
     /**
+     * @var string 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
+     */
+    public $RecordMappingMode;
+
+    /**
      * @param string $Resource 实例资源
      * @param integer $Port Es的连接port
      * @param string $UserName Es用户名
@@ -176,6 +183,7 @@ class EsParam extends AbstractModel
      * @param FailureParam $DropDlq 死信队列
      * @param array $RecordMappingList 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
      * @param string $DateField 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+     * @param string $RecordMappingMode 用来区分当前索引映射，属于新建索引还是存量索引。"EXIST_MAPPING"：从存量索引中选择；"NEW_MAPPING"：新建索引
      */
     function __construct()
     {
@@ -271,6 +279,10 @@ class EsParam extends AbstractModel
 
         if (array_key_exists("DateField",$param) and $param["DateField"] !== null) {
             $this->DateField = $param["DateField"];
+        }
+
+        if (array_key_exists("RecordMappingMode",$param) and $param["RecordMappingMode"] !== null) {
+            $this->RecordMappingMode = $param["RecordMappingMode"];
         }
     }
 }

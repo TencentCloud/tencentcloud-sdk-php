@@ -76,9 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationPorts(array $DestinationPorts) 设置目的端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method KVMapping getHeaders() 获取路由的Headers
+ * @method array getHeaders() 获取路由的Headers
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeaders(KVMapping $Headers) 设置路由的Headers
+ * @method void setHeaders(array $Headers) 设置路由的Headers
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongRoutePreview extends AbstractModel
@@ -169,7 +169,7 @@ class KongRoutePreview extends AbstractModel
     public $DestinationPorts;
 
     /**
-     * @var KVMapping 路由的Headers
+     * @var array 路由的Headers
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
@@ -203,7 +203,7 @@ class KongRoutePreview extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DestinationPorts 目的端口
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KVMapping $Headers 路由的Headers
+     * @param array $Headers 路由的Headers
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,8 +276,12 @@ class KongRoutePreview extends AbstractModel
         }
 
         if (array_key_exists("Headers",$param) and $param["Headers"] !== null) {
-            $this->Headers = new KVMapping();
-            $this->Headers->deserialize($param["Headers"]);
+            $this->Headers = [];
+            foreach ($param["Headers"] as $key => $value){
+                $obj = new KVMapping();
+                $obj->deserialize($value);
+                array_push($this->Headers, $obj);
+            }
         }
     }
 }

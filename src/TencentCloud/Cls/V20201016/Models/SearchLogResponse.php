@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog返回参数结构体
  *
- * @method string getContext() 获取透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
- * @method void setContext(string $Context) 设置透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+ * @method string getContext() 获取透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
+ * @method void setContext(string $Context) 设置透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
  * @method boolean getListOver() 获取符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
 注意：仅当检索分析语句(Query)不包含SQL时有效
  * @method void setListOver(boolean $ListOver) 设置符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
@@ -60,13 +64,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSamplingRate(float $SamplingRate) 设置本次统计分析使用的采样率
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SearchLogTopics getTopics() 获取使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopics(SearchLogTopics $Topics) 设置使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class SearchLogResponse extends AbstractModel
 {
     /**
-     * @var string 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * @var string 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
      */
     public $Context;
 
@@ -122,12 +132,20 @@ class SearchLogResponse extends AbstractModel
     public $SamplingRate;
 
     /**
+     * @var SearchLogTopics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Topics;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * @param string $Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
+注意：
+* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
      * @param boolean $ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
 注意：仅当检索分析语句(Query)不包含SQL时有效
      * @param boolean $Analysis 返回的是否为统计分析（即SQL）结果
@@ -146,6 +164,8 @@ class SearchLogResponse extends AbstractModel
 当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $SamplingRate 本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SearchLogTopics $Topics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -211,6 +231,11 @@ class SearchLogResponse extends AbstractModel
 
         if (array_key_exists("SamplingRate",$param) and $param["SamplingRate"] !== null) {
             $this->SamplingRate = $param["SamplingRate"];
+        }
+
+        if (array_key_exists("Topics",$param) and $param["Topics"] !== null) {
+            $this->Topics = new SearchLogTopics();
+            $this->Topics->deserialize($param["Topics"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

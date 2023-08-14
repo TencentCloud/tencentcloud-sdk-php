@@ -18,7 +18,7 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SSL-VPN-SERVER 信息 SET
+ * SSL-VPN-SERVER 出参
  *
  * @method string getVpcId() 获取VPC实例ID.
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 2 更新中
 3 更新出错
 4 销毁中
-5 销毁出粗
+5 销毁出错
 6 已连通
 7 未知
  * @method void setState(integer $State) 设置SSL-VPN-SERVER 创建状态。
@@ -65,7 +65,7 @@ use TencentCloud\Common\AbstractModel;
 2 更新中
 3 更新出错
 4 销毁中
-5 销毁出粗
+5 销毁出错
 6 已连通
 7 未知
  * @method integer getSsoEnabled() 获取是否开启SSO认证。1：开启  0： 不开启
@@ -157,7 +157,7 @@ class SslVpnSever extends AbstractModel
 2 更新中
 3 更新出错
 4 销毁中
-5 销毁出粗
+5 销毁出错
 6 已连通
 7 未知
      */
@@ -205,7 +205,7 @@ class SslVpnSever extends AbstractModel
 2 更新中
 3 更新出错
 4 销毁中
-5 销毁出粗
+5 销毁出错
 6 已连通
 7 未知
      * @param integer $SsoEnabled 是否开启SSO认证。1：开启  0： 不开启

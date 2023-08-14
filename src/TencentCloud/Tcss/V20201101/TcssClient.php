@@ -235,6 +235,8 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeReverseShellEventsExportResponse DescribeReverseShellEventsExport(Models\DescribeReverseShellEventsExportRequest $req) 查询运行时反弹shell事件列表信息导出
  * @method Models\DescribeReverseShellWhiteListDetailResponse DescribeReverseShellWhiteListDetail(Models\DescribeReverseShellWhiteListDetailRequest $req) 查询运行时反弹shell白名单详细信息
  * @method Models\DescribeReverseShellWhiteListsResponse DescribeReverseShellWhiteLists(Models\DescribeReverseShellWhiteListsRequest $req) 查询运行时运行时反弹shell白名单列表信息
+ * @method Models\DescribeRiskDnsEventDetailResponse DescribeRiskDnsEventDetail(Models\DescribeRiskDnsEventDetailRequest $req) 查询恶意请求事件详情
+ * @method Models\DescribeRiskDnsListResponse DescribeRiskDnsList(Models\DescribeRiskDnsListRequest $req) 查询恶意请求事件列表
  * @method Models\DescribeRiskListResponse DescribeRiskList(Models\DescribeRiskListRequest $req) 查询最近一次任务发现的风险项的信息列表，支持根据特殊字段进行过滤
  * @method Models\DescribeRiskSyscallDetailResponse DescribeRiskSyscallDetail(Models\DescribeRiskSyscallDetailRequest $req) 查询高危系统调用事件详细信息
  * @method Models\DescribeRiskSyscallEventsResponse DescribeRiskSyscallEvents(Models\DescribeRiskSyscallEventsRequest $req) 查询运行时运行时高危系统调用列表信息

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(integer $TaskId) 设置返回最近的一次任务ID
  * @method string getTaskStatus() 获取任务状态，为Task_New,Task_Running,Task_Finish,Task_Error,Task_NoExist.Task_New,Task_Running表示有任务存在，不允许新下发
  * @method void setTaskStatus(string $TaskStatus) 设置任务状态，为Task_New,Task_Running,Task_Finish,Task_Error,Task_NoExist.Task_New,Task_Running表示有任务存在，不允许新下发
+ * @method string getNewTaskID() 获取新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewTaskID(string $NewTaskID) 设置新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,12 @@ class DescribeUnfinishRefreshTaskResponse extends AbstractModel
     public $TaskStatus;
 
     /**
+     * @var string 新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewTaskID;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class DescribeUnfinishRefreshTaskResponse extends AbstractModel
     /**
      * @param integer $TaskId 返回最近的一次任务ID
      * @param string $TaskStatus 任务状态，为Task_New,Task_Running,Task_Finish,Task_Error,Task_NoExist.Task_New,Task_Running表示有任务存在，不允许新下发
+     * @param string $NewTaskID 新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,10 @@ class DescribeUnfinishRefreshTaskResponse extends AbstractModel
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
             $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("NewTaskID",$param) and $param["NewTaskID"] !== null) {
+            $this->NewTaskID = $param["NewTaskID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

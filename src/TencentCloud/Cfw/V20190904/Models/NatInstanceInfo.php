@@ -72,6 +72,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleMax(integer $RuleMax) 设置实例的规则限制最大规格数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineVersion() 获取实例引擎版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineVersion(string $EngineVersion) 设置实例引擎版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpdateEnable() 获取引擎是否可升级：0，不可升级；1，可升级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateEnable(integer $UpdateEnable) 设置引擎是否可升级：0，不可升级；1，可升级
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatInstanceInfo extends AbstractModel
 {
@@ -170,6 +178,18 @@ class NatInstanceInfo extends AbstractModel
     public $RuleMax;
 
     /**
+     * @var string 实例引擎版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineVersion;
+
+    /**
+     * @var integer 引擎是否可升级：0，不可升级；1，可升级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateEnable;
+
+    /**
      * @param string $NatinsId nat实例id
      * @param string $NatinsName nat实例名称
      * @param string $Region 实例所在地域
@@ -195,6 +215,10 @@ class NatInstanceInfo extends AbstractModel
      * @param integer $RuleUsed 已使用规则数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleMax 实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineVersion 实例引擎版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +300,14 @@ class NatInstanceInfo extends AbstractModel
 
         if (array_key_exists("RuleMax",$param) and $param["RuleMax"] !== null) {
             $this->RuleMax = $param["RuleMax"];
+        }
+
+        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
+            $this->EngineVersion = $param["EngineVersion"];
+        }
+
+        if (array_key_exists("UpdateEnable",$param) and $param["UpdateEnable"] !== null) {
+            $this->UpdateEnable = $param["UpdateEnable"];
         }
     }
 }

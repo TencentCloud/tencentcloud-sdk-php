@@ -44,6 +44,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotImportedClusterCount(integer $NotImportedClusterCount) 设置未导入的集群数量
  * @method integer getServerlessClusterCount() 获取eks集群数量
  * @method void setServerlessClusterCount(integer $ServerlessClusterCount) 设置eks集群数量
+ * @method integer getTkeClusterCount() 获取TKE集群数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTkeClusterCount(integer $TkeClusterCount) 设置TKE集群数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUserCreateTencentClusterCount() 获取用户自建腾讯云集群数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserCreateTencentClusterCount(integer $UserCreateTencentClusterCount) 设置用户自建腾讯云集群数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUserCreateHybridClusterCount() 获取用户自建集群混合云数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserCreateHybridClusterCount(integer $UserCreateHybridClusterCount) 设置用户自建集群混合云数量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -110,6 +122,24 @@ class DescribeClusterSummaryResponse extends AbstractModel
     public $ServerlessClusterCount;
 
     /**
+     * @var integer TKE集群数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TkeClusterCount;
+
+    /**
+     * @var integer 用户自建腾讯云集群数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserCreateTencentClusterCount;
+
+    /**
+     * @var integer 用户自建集群混合云数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserCreateHybridClusterCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -127,6 +157,12 @@ class DescribeClusterSummaryResponse extends AbstractModel
      * @param integer $FailedClusterCount 检查失败集群数
      * @param integer $NotImportedClusterCount 未导入的集群数量
      * @param integer $ServerlessClusterCount eks集群数量
+     * @param integer $TkeClusterCount TKE集群数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UserCreateTencentClusterCount 用户自建腾讯云集群数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UserCreateHybridClusterCount 用户自建集群混合云数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -188,6 +224,18 @@ class DescribeClusterSummaryResponse extends AbstractModel
 
         if (array_key_exists("ServerlessClusterCount",$param) and $param["ServerlessClusterCount"] !== null) {
             $this->ServerlessClusterCount = $param["ServerlessClusterCount"];
+        }
+
+        if (array_key_exists("TkeClusterCount",$param) and $param["TkeClusterCount"] !== null) {
+            $this->TkeClusterCount = $param["TkeClusterCount"];
+        }
+
+        if (array_key_exists("UserCreateTencentClusterCount",$param) and $param["UserCreateTencentClusterCount"] !== null) {
+            $this->UserCreateTencentClusterCount = $param["UserCreateTencentClusterCount"];
+        }
+
+        if (array_key_exists("UserCreateHybridClusterCount",$param) and $param["UserCreateHybridClusterCount"] !== null) {
+            $this->UserCreateHybridClusterCount = $param["UserCreateHybridClusterCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

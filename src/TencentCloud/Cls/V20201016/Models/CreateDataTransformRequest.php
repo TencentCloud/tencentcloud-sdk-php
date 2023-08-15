@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(integer $TaskType) 设置加工类型  1 使用源日志主题中的随机数据，进行加工预览 :2 使用用户自定义测试数据，进行加工预览 3 创建真实加工任务
  * @method integer getEnableFlag() 获取任务启动状态.   默认为1:开启,  2:关闭
  * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.   默认为1:开启,  2:关闭
- * @method array getDstResources() 获取加工任务目的topic_id以及别名
- * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名
+ * @method array getDstResources() 获取加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
+ * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
  * @method array getPreviewLogStatistics() 获取用于预览加工结果的测试数据
  * @method void setPreviewLogStatistics(array $PreviewLogStatistics) 设置用于预览加工结果的测试数据
  */
@@ -70,7 +70,7 @@ class CreateDataTransformRequest extends AbstractModel
     public $EnableFlag;
 
     /**
-     * @var array 加工任务目的topic_id以及别名
+     * @var array 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
      */
     public $DstResources;
 
@@ -86,7 +86,7 @@ class CreateDataTransformRequest extends AbstractModel
      * @param string $EtlContent 加工语句
      * @param integer $TaskType 加工类型  1 使用源日志主题中的随机数据，进行加工预览 :2 使用用户自定义测试数据，进行加工预览 3 创建真实加工任务
      * @param integer $EnableFlag 任务启动状态.   默认为1:开启,  2:关闭
-     * @param array $DstResources 加工任务目的topic_id以及别名
+     * @param array $DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写
      * @param array $PreviewLogStatistics 用于预览加工结果的测试数据
      */
     function __construct()

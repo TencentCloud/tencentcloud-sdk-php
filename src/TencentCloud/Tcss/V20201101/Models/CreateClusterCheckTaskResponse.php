@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(integer $TaskId) 设置返回创建的集群检查任务的ID，为0表示创建失败。
  * @method string getCreateResult() 获取创建检查任务的结果，"Succ"为成功，其他的为失败原因
  * @method void setCreateResult(string $CreateResult) 设置创建检查任务的结果，"Succ"为成功，其他的为失败原因
+ * @method string getNewTaskID() 获取返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewTaskID(string $NewTaskID) 设置返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,12 @@ class CreateClusterCheckTaskResponse extends AbstractModel
     public $CreateResult;
 
     /**
+     * @var string 返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewTaskID;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class CreateClusterCheckTaskResponse extends AbstractModel
     /**
      * @param integer $TaskId 返回创建的集群检查任务的ID，为0表示创建失败。
      * @param string $CreateResult 创建检查任务的结果，"Succ"为成功，其他的为失败原因
+     * @param string $NewTaskID 返回创建的集群新任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,10 @@ class CreateClusterCheckTaskResponse extends AbstractModel
 
         if (array_key_exists("CreateResult",$param) and $param["CreateResult"] !== null) {
             $this->CreateResult = $param["CreateResult"];
+        }
+
+        if (array_key_exists("NewTaskID",$param) and $param["NewTaskID"] !== null) {
+            $this->NewTaskID = $param["NewTaskID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

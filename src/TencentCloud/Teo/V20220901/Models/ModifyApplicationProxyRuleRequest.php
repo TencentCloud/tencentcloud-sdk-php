@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginPort(string $OriginPort) 设置源站端口，支持格式：
 <li>单端口：80；</li>
 <li>端口段：81-90，81至90端口。</li>
+ * @method string getRuleTag() 获取规则标签。不填保持原有值。
+ * @method void setRuleTag(string $RuleTag) 设置规则标签。不填保持原有值。
  */
 class ModifyApplicationProxyRuleRequest extends AbstractModel
 {
@@ -155,6 +157,11 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
     public $OriginPort;
 
     /**
+     * @var string 规则标签。不填保持原有值。
+     */
+    public $RuleTag;
+
+    /**
      * @param string $ZoneId 站点ID。
      * @param string $ProxyId 代理ID。
      * @param string $RuleId 规则ID。
@@ -184,6 +191,7 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
      * @param string $OriginPort 源站端口，支持格式：
 <li>单端口：80；</li>
 <li>端口段：81-90，81至90端口。</li>
+     * @param string $RuleTag 规则标签。不填保持原有值。
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
 
         if (array_key_exists("OriginPort",$param) and $param["OriginPort"] !== null) {
             $this->OriginPort = $param["OriginPort"];
+        }
+
+        if (array_key_exists("RuleTag",$param) and $param["RuleTag"] !== null) {
+            $this->RuleTag = $param["RuleTag"];
         }
     }
 }

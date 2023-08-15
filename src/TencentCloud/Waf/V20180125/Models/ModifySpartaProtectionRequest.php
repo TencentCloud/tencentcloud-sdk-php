@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTLSVersion(integer $TLSVersion) 设置TLS版本信息
  * @method array getCiphers() 获取加密套件信息
  * @method void setCiphers(array $Ciphers) 设置加密套件信息
- * @method integer getCipherTemplate() 获取0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
- * @method void setCipherTemplate(integer $CipherTemplate) 设置0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+ * @method integer getCipherTemplate() 获取0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
+ * @method void setCipherTemplate(integer $CipherTemplate) 设置0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
  * @method integer getProxyReadTimeout() 获取300s
  * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置300s
  * @method integer getProxySendTimeout() 获取300s
@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSniHost(string $SniHost) 设置SniType=3时，需要填此参数，表示自定义的host；
  * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header
+ * @method integer getXFFReset() 获取0:关闭xff重置；1:开启xff重置
+ * @method void setXFFReset(integer $XFFReset) 设置0:关闭xff重置；1:开启xff重置
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -218,7 +220,7 @@ class ModifySpartaProtectionRequest extends AbstractModel
     public $Ciphers;
 
     /**
-     * @var integer 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     * @var integer 0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
      */
     public $CipherTemplate;
 
@@ -248,6 +250,11 @@ class ModifySpartaProtectionRequest extends AbstractModel
     public $IpHeaders;
 
     /**
+     * @var integer 0:关闭xff重置；1:开启xff重置
+     */
+    public $XFFReset;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param integer $CertType 证书类型，0表示没有证书，CertType=1表示自有证书,2 为托管证书
@@ -274,12 +281,13 @@ class ModifySpartaProtectionRequest extends AbstractModel
      * @param integer $ActiveCheck 是否开启源站的主动健康检测，1表示开启，0表示不开启
      * @param integer $TLSVersion TLS版本信息
      * @param array $Ciphers 加密套件信息
-     * @param integer $CipherTemplate 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     * @param integer $CipherTemplate 0:不支持选择：默认模板  1:通用型模板 2:安全型模板 3:自定义模板
      * @param integer $ProxyReadTimeout 300s
      * @param integer $ProxySendTimeout 300s
      * @param integer $SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
      * @param string $SniHost SniType=3时，需要填此参数，表示自定义的host；
      * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header
+     * @param integer $XFFReset 0:关闭xff重置；1:开启xff重置
      */
     function __construct()
     {
@@ -425,6 +433,10 @@ class ModifySpartaProtectionRequest extends AbstractModel
 
         if (array_key_exists("IpHeaders",$param) and $param["IpHeaders"] !== null) {
             $this->IpHeaders = $param["IpHeaders"];
+        }
+
+        if (array_key_exists("XFFReset",$param) and $param["XFFReset"] !== null) {
+            $this->XFFReset = $param["XFFReset"];
         }
     }
 }

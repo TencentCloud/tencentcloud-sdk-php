@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCorpId(integer $CorpId) 设置企业ID
  * @method integer getSerialType() 获取是否有流水码 0:无 1:有
  * @method void setSerialType(integer $SerialType) 设置是否有流水码 0:无 1:有
+ * @method string getResType() 获取资源类型 batch:批次, order_in 入库, order_out: 出入
+ * @method void setResType(string $ResType) 设置资源类型 batch:批次, order_in 入库, order_out: 出入
+ * @method string getResId() 获取资源ID ResType是 batch 时对应是批次ID, 是 order_in, order_out时，则是订单ID
+ * @method void setResId(string $ResId) 设置资源ID ResType是 batch 时对应是批次ID, 是 order_in, order_out时，则是订单ID
  */
 class DescribeCodePacksRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeCodePacksRequest extends AbstractModel
     public $SerialType;
 
     /**
+     * @var string 资源类型 batch:批次, order_in 入库, order_out: 出入
+     */
+    public $ResType;
+
+    /**
+     * @var string 资源ID ResType是 batch 时对应是批次ID, 是 order_in, order_out时，则是订单ID
+     */
+    public $ResId;
+
+    /**
      * @param integer $PageSize 每页数量
      * @param integer $PageNumber 页数
      * @param string $Keyword 查询关键字
      * @param integer $CorpId 企业ID
      * @param integer $SerialType 是否有流水码 0:无 1:有
+     * @param string $ResType 资源类型 batch:批次, order_in 入库, order_out: 出入
+     * @param string $ResId 资源ID ResType是 batch 时对应是批次ID, 是 order_in, order_out时，则是订单ID
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DescribeCodePacksRequest extends AbstractModel
 
         if (array_key_exists("SerialType",$param) and $param["SerialType"] !== null) {
             $this->SerialType = $param["SerialType"];
+        }
+
+        if (array_key_exists("ResType",$param) and $param["ResType"] !== null) {
+            $this->ResType = $param["ResType"];
+        }
+
+        if (array_key_exists("ResId",$param) and $param["ResId"] !== null) {
+            $this->ResId = $param["ResId"];
         }
     }
 }

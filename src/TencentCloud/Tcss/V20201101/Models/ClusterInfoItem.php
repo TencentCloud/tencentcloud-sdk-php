@@ -60,6 +60,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckStatus(string $CheckStatus) 设置检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
  * @method string getTaskCreateTime() 获取任务创建时间,检查时间
  * @method void setTaskCreateTime(string $TaskCreateTime) 设置任务创建时间,检查时间
+ * @method string getAccessedStatus() 获取接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessedStatus(string $AccessedStatus) 设置接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessedSubStatus() 获取接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessedSubStatus(string $AccessedSubStatus) 设置接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNodeCount() 获取节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeCount(integer $NodeCount) 设置节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOffLineNodeCount() 获取离线节点数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOffLineNodeCount(integer $OffLineNodeCount) 设置离线节点数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUnInstallAgentNodeCount() 获取未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnInstallAgentNodeCount(integer $UnInstallAgentNodeCount) 设置未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfoItem extends AbstractModel
 {
@@ -164,6 +184,36 @@ class ClusterInfoItem extends AbstractModel
     public $TaskCreateTime;
 
     /**
+     * @var string 接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessedStatus;
+
+    /**
+     * @var string 接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessedSubStatus;
+
+    /**
+     * @var integer 节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeCount;
+
+    /**
+     * @var integer 离线节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OffLineNodeCount;
+
+    /**
+     * @var integer 未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnInstallAgentNodeCount;
+
+    /**
      * @param string $ClusterId 集群id
      * @param string $ClusterName 集群名字
      * @param string $ClusterVersion 集群版本
@@ -184,6 +234,16 @@ class ClusterInfoItem extends AbstractModel
      * @param string $CheckFailReason 检查失败原因
      * @param string $CheckStatus 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
      * @param string $TaskCreateTime 任务创建时间,检查时间
+     * @param string $AccessedStatus 接入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessedSubStatus 接入失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NodeCount 节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OffLineNodeCount 离线节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UnInstallAgentNodeCount 未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +336,26 @@ class ClusterInfoItem extends AbstractModel
 
         if (array_key_exists("TaskCreateTime",$param) and $param["TaskCreateTime"] !== null) {
             $this->TaskCreateTime = $param["TaskCreateTime"];
+        }
+
+        if (array_key_exists("AccessedStatus",$param) and $param["AccessedStatus"] !== null) {
+            $this->AccessedStatus = $param["AccessedStatus"];
+        }
+
+        if (array_key_exists("AccessedSubStatus",$param) and $param["AccessedSubStatus"] !== null) {
+            $this->AccessedSubStatus = $param["AccessedSubStatus"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("OffLineNodeCount",$param) and $param["OffLineNodeCount"] !== null) {
+            $this->OffLineNodeCount = $param["OffLineNodeCount"];
+        }
+
+        if (array_key_exists("UnInstallAgentNodeCount",$param) and $param["UnInstallAgentNodeCount"] !== null) {
+            $this->UnInstallAgentNodeCount = $param["UnInstallAgentNodeCount"];
         }
     }
 }

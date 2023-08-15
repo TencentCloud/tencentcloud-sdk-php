@@ -78,9 +78,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackLogPost(integer $AttackLogPost) 设置攻击日志投递开关
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxBandwidth() 获取带宽峰值
+ * @method integer getMaxBandwidth() 获取带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxBandwidth(integer $MaxBandwidth) 设置带宽峰值
+ * @method void setMaxBandwidth(integer $MaxBandwidth) 设置带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAPISecurity() 获取api安全是否购买
  * @method void setAPISecurity(integer $APISecurity) 设置api安全是否购买
@@ -99,6 +99,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSandboxQps() 获取实例沙箱值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSandboxQps(integer $SandboxQps) 设置实例沙箱值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsAPISecurityTrial() 获取是否api 安全试用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAPISecurityTrial(integer $IsAPISecurityTrial) 设置是否api 安全试用
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
@@ -229,7 +233,7 @@ class InstanceInfo extends AbstractModel
     public $AttackLogPost;
 
     /**
-     * @var integer 带宽峰值
+     * @var integer 带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxBandwidth;
@@ -264,6 +268,12 @@ class InstanceInfo extends AbstractModel
     public $SandboxQps;
 
     /**
+     * @var integer 是否api 安全试用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAPISecurityTrial;
+
+    /**
      * @param string $InstanceId id
      * @param string $InstanceName Name
      * @param string $ResourceIds 资源id
@@ -293,7 +303,7 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackLogPost 攻击日志投递开关
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxBandwidth 带宽峰值
+     * @param integer $MaxBandwidth 带宽峰值，单位为B/s(字节每秒)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $APISecurity api安全是否购买
      * @param integer $QpsStandard 购买的qps规格
@@ -303,6 +313,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $Status 实例状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SandboxQps 实例沙箱值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsAPISecurityTrial 是否api 安全试用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -441,6 +453,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("SandboxQps",$param) and $param["SandboxQps"] !== null) {
             $this->SandboxQps = $param["SandboxQps"];
+        }
+
+        if (array_key_exists("IsAPISecurityTrial",$param) and $param["IsAPISecurityTrial"] !== null) {
+            $this->IsAPISecurityTrial = $param["IsAPISecurityTrial"];
         }
     }
 }

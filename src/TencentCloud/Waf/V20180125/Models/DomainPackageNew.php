@@ -21,49 +21,69 @@ use TencentCloud\Common\AbstractModel;
  * clb-waf 域名扩展套餐
  *
  * @method string getResourceIds() 获取资源ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceIds(string $ResourceIds) 设置资源ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidTime() 获取过期时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidTime(string $ValidTime) 设置过期时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRenewFlag() 获取是否自动续费，1：自动续费，0：不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费，1：自动续费，0：不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取套餐购买个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置套餐购买个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取套餐购买地域，clb-waf暂时没有用到
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置套餐购买地域，clb-waf暂时没有用到
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainPackageNew extends AbstractModel
 {
     /**
      * @var string 资源ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceIds;
 
     /**
      * @var string 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidTime;
 
     /**
      * @var integer 是否自动续费，1：自动续费，0：不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var integer 套餐购买个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var string 套餐购买地域，clb-waf暂时没有用到
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @param string $ResourceIds 资源ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidTime 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 是否自动续费，1：自动续费，0：不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 套餐购买个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 套餐购买地域，clb-waf暂时没有用到
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

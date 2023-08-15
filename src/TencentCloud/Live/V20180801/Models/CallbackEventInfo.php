@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回调事件信息
  *
- * @method string getEventTime() 获取事件时间
- * @method void setEventTime(string $EventTime) 设置事件时间
+ * @method string getEventTime() 获取事件时间。
+数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
+ * @method void setEventTime(string $EventTime) 设置事件时间。
+数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
  * @method integer getEventType() 获取事件类型
  * @method void setEventType(integer $EventType) 设置事件类型
  * @method string getRequest() 获取回调请求
@@ -38,7 +46,11 @@ use TencentCloud\Common\AbstractModel;
 class CallbackEventInfo extends AbstractModel
 {
     /**
-     * @var string 事件时间
+     * @var string 事件时间。
+数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
      */
     public $EventTime;
 
@@ -73,7 +85,11 @@ class CallbackEventInfo extends AbstractModel
     public $StreamId;
 
     /**
-     * @param string $EventTime 事件时间
+     * @param string $EventTime 事件时间。
+数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
      * @param integer $EventType 事件类型
      * @param string $Request 回调请求
      * @param string $Response 回调响应

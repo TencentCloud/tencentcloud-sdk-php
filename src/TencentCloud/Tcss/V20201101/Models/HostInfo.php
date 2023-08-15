@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterID() 获取集群id
  * @method void setClusterID(string $ClusterID) 设置集群id
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getClusterAccessedStatus() 获取集群接入状态
+ * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) 设置集群接入状态
  */
 class HostInfo extends AbstractModel
 {
@@ -156,6 +160,16 @@ class HostInfo extends AbstractModel
     public $ClusterID;
 
     /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
+     * @var string 集群接入状态
+     */
+    public $ClusterAccessedStatus;
+
+    /**
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip即内网ip
      * @param string $HostName 主机名称
@@ -176,6 +190,8 @@ class HostInfo extends AbstractModel
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterID 集群id
+     * @param string $ClusterName 集群名称
+     * @param string $ClusterAccessedStatus 集群接入状态
      */
     function __construct()
     {
@@ -266,6 +282,14 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
             $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ClusterAccessedStatus",$param) and $param["ClusterAccessedStatus"] !== null) {
+            $this->ClusterAccessedStatus = $param["ClusterAccessedStatus"];
         }
     }
 }

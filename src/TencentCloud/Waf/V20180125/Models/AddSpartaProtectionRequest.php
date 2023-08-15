@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpstreamType(integer $UpstreamType) 设置回源类型，0表示通过IP回源,1 表示通过域名回源
  * @method integer getIsWebsocket() 获取是否开启WebSocket支持，1表示开启，0不开启
  * @method void setIsWebsocket(integer $IsWebsocket) 设置是否开启WebSocket支持，1表示开启，0不开启
- * @method string getLoadBalance() 获取负载均衡策略，0表示轮徇，1表示IP hash
- * @method void setLoadBalance(string $LoadBalance) 设置负载均衡策略，0表示轮徇，1表示IP hash
- * @method string getCert() 获取CertType=1时，需要填次参数，表示证书内容
- * @method void setCert(string $Cert) 设置CertType=1时，需要填次参数，表示证书内容
+ * @method string getLoadBalance() 获取负载均衡策略，0表示轮询，1表示IP hash
+ * @method void setLoadBalance(string $LoadBalance) 设置负载均衡策略，0表示轮询，1表示IP hash
+ * @method string getCert() 获取值为1时，需要填次参数，表示证书内容
+ * @method void setCert(string $Cert) 设置值为1时，需要填次参数，表示证书内容
  * @method string getPrivateKey() 获取CertType=1时，需要填次参数，表示证书的私钥
  * @method void setPrivateKey(string $PrivateKey) 设置CertType=1时，需要填次参数，表示证书的私钥
  * @method string getSSLId() 获取CertType=2时，需要填次参数，表示证书的ID
@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSniHost(string $SniHost) 设置SniType=3时，需要填此参数，表示自定义的host；
  * @method array getIpHeaders() 获取is_cdn=3时，需要填此参数，表示自定义header
  * @method void setIpHeaders(array $IpHeaders) 设置is_cdn=3时，需要填此参数，表示自定义header
+ * @method integer getXFFReset() 获取0:关闭xff重置；1:开启xff重置
+ * @method void setXFFReset(integer $XFFReset) 设置0:关闭xff重置；1:开启xff重置
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -115,12 +117,12 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $IsWebsocket;
 
     /**
-     * @var string 负载均衡策略，0表示轮徇，1表示IP hash
+     * @var string 负载均衡策略，0表示轮询，1表示IP hash
      */
     public $LoadBalance;
 
     /**
-     * @var string CertType=1时，需要填次参数，表示证书内容
+     * @var string 值为1时，需要填次参数，表示证书内容
      */
     public $Cert;
 
@@ -255,13 +257,18 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $IpHeaders;
 
     /**
+     * @var integer 0:关闭xff重置；1:开启xff重置
+     */
+    public $XFFReset;
+
+    /**
      * @param string $Domain 需要防御的域名
      * @param integer $CertType 证书类型，0表示没有证书，CertType=1表示自有证书,2 为托管证书
      * @param integer $IsCdn 表示是否开启了CDN代理，1：有部署CDN，0：未部署CDN
      * @param integer $UpstreamType 回源类型，0表示通过IP回源,1 表示通过域名回源
      * @param integer $IsWebsocket 是否开启WebSocket支持，1表示开启，0不开启
-     * @param string $LoadBalance 负载均衡策略，0表示轮徇，1表示IP hash
-     * @param string $Cert CertType=1时，需要填次参数，表示证书内容
+     * @param string $LoadBalance 负载均衡策略，0表示轮询，1表示IP hash
+     * @param string $Cert 值为1时，需要填次参数，表示证书内容
      * @param string $PrivateKey CertType=1时，需要填次参数，表示证书的私钥
      * @param string $SSLId CertType=2时，需要填次参数，表示证书的ID
      * @param string $ResourceId Waf的资源ID
@@ -288,6 +295,7 @@ class AddSpartaProtectionRequest extends AbstractModel
      * @param integer $SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
      * @param string $SniHost SniType=3时，需要填此参数，表示自定义的host；
      * @param array $IpHeaders is_cdn=3时，需要填此参数，表示自定义header
+     * @param integer $XFFReset 0:关闭xff重置；1:开启xff重置
      */
     function __construct()
     {
@@ -437,6 +445,10 @@ class AddSpartaProtectionRequest extends AbstractModel
 
         if (array_key_exists("IpHeaders",$param) and $param["IpHeaders"] !== null) {
             $this->IpHeaders = $param["IpHeaders"];
+        }
+
+        if (array_key_exists("XFFReset",$param) and $param["XFFReset"] !== null) {
+            $this->XFFReset = $param["XFFReset"];
         }
     }
 }

@@ -98,6 +98,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getXFFReset() 获取0:关闭xff重置；1:开启xff重置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setXFFReset(integer $XFFReset) 设置0:关闭xff重置；1:开启xff重置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -257,6 +261,12 @@ class DomainsPartInfo extends AbstractModel
     public $IpHeaders;
 
     /**
+     * @var integer 0:关闭xff重置；1:开启xff重置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $XFFReset;
+
+    /**
      * @param integer $HttpsRewrite 是否开启httpRewrite
      * @param string $HttpsUpstreamPort https回源端口
      * @param integer $IsCdn 是否是cdn
@@ -295,6 +305,8 @@ class DomainsPartInfo extends AbstractModel
      * @param array $Weights 无
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpHeaders IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $XFFReset 0:关闭xff重置；1:开启xff重置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -429,6 +441,10 @@ class DomainsPartInfo extends AbstractModel
 
         if (array_key_exists("IpHeaders",$param) and $param["IpHeaders"] !== null) {
             $this->IpHeaders = $param["IpHeaders"];
+        }
+
+        if (array_key_exists("XFFReset",$param) and $param["XFFReset"] !== null) {
+            $this->XFFReset = $param["XFFReset"];
         }
     }
 }

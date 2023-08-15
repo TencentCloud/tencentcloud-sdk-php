@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSwitchStatus() 获取0：开关关闭 ， 1: 开关打开
  * @method void setSwitchStatus(integer $SwitchStatus) 设置0：开关关闭 ， 1: 开关打开
+ * @method integer getProtectedStatus() 获取0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtectedStatus(integer $ProtectedStatus) 设置0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSupportDNSFW() 获取是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportDNSFW(integer $SupportDNSFW) 设置是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcDnsInfo extends AbstractModel
 {
@@ -86,6 +94,18 @@ class VpcDnsInfo extends AbstractModel
     public $SwitchStatus;
 
     /**
+     * @var integer 0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtectedStatus;
+
+    /**
+     * @var integer 是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportDNSFW;
+
+    /**
      * @param string $VpcId vpc id
      * @param string $VpcName vpc 名称
      * @param integer $FwMode nat 防火墙模式 0：新增模式， 1: 接入模式
@@ -96,6 +116,10 @@ class VpcDnsInfo extends AbstractModel
      * @param string $NatInsName nat网关名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SwitchStatus 0：开关关闭 ， 1: 开关打开
+     * @param integer $ProtectedStatus 0：未防护， 1: 已防护，2：忽略此字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SupportDNSFW 是否支持DNS FW，0-不支持、1-支持
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -140,6 +164,14 @@ class VpcDnsInfo extends AbstractModel
 
         if (array_key_exists("SwitchStatus",$param) and $param["SwitchStatus"] !== null) {
             $this->SwitchStatus = $param["SwitchStatus"];
+        }
+
+        if (array_key_exists("ProtectedStatus",$param) and $param["ProtectedStatus"] !== null) {
+            $this->ProtectedStatus = $param["ProtectedStatus"];
+        }
+
+        if (array_key_exists("SupportDNSFW",$param) and $param["SupportDNSFW"] !== null) {
+            $this->SupportDNSFW = $param["SupportDNSFW"];
         }
     }
 }

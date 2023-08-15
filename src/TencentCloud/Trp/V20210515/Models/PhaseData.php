@@ -21,57 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 环节数据
  *
  * @method boolean getHeadEnabled() 获取启用头
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadEnabled(boolean $HeadEnabled) 设置启用头
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHeadTitle() 获取标题
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadTitle(string $HeadTitle) 设置标题
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取标识符
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置标识符
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppPath() 获取小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppPath(string $AppPath) 设置小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppName() 获取小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppName(string $AppName) 设置小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PhaseData extends AbstractModel
 {
     /**
      * @var boolean 启用头
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadEnabled;
 
     /**
      * @var string 标题
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadTitle;
 
     /**
      * @var string 标识符
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppPath;
 
     /**
      * @var string 小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppName;
 
     /**
      * @param boolean $HeadEnabled 启用头
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HeadTitle 标题
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 标识符
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 小程序AppId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppPath 小程序AppPath
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppName 小程序名称AppName
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

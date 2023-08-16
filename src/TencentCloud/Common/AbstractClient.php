@@ -55,7 +55,7 @@ abstract class AbstractClient
      * @var ClientProfile 会话配置信息类
      */
     private $profile;
-    
+
     private $regionBreakerProfile;
     private $circuitBreaker;
     /**
@@ -67,7 +67,6 @@ abstract class AbstractClient
      * @var string 请求路径
      */
     private $path;
-    
 
     /**
      * @var string sdk版本号
@@ -102,13 +101,12 @@ abstract class AbstractClient
         } else {
             $this->profile = new ClientProfile();
         }
-        
-        
+
         $this->getRefreshedEndpoint();
 
         $this->sdkVersion = AbstractClient::$SDK_VERSION;
         $this->apiVersion = $version;
-    
+
         if ($this->profile->enableRegionBreaker) {
             if (is_null($this->profile->getRegionBreakerProfile())) {
                 throw new TencentCloudSDKException("ClientError", "RegionBreakerProfile have not been set yet.");
@@ -191,7 +189,6 @@ abstract class AbstractClient
         else {
             return $this->doRequestWithOptions($action, $request[0], array());
         }
-        
     }
 
     /**
@@ -306,7 +303,7 @@ abstract class AbstractClient
             }
         }
     }
-    
+
     protected function doRequestWithOptionsOnRegionBreaker($action, $request, $options)
     {
         try {

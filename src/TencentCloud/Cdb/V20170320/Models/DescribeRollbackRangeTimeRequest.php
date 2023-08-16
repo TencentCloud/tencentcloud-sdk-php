@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取实例 ID 列表，单个实例 ID 的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，单个实例 ID 的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getIsRemoteZone() 获取克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
- * @method void setIsRemoteZone(string $IsRemoteZone) 设置克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
+ * @method string getIsRemoteZone() 获取克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
+ * @method void setIsRemoteZone(string $IsRemoteZone) 设置克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
  * @method string getBackupRegion() 获取克隆实例与源实例不在同一地域时需填写克隆实例所在地域，例："ap-guangzhou"
  * @method void setBackupRegion(string $BackupRegion) 设置克隆实例与源实例不在同一地域时需填写克隆实例所在地域，例："ap-guangzhou"
  */
@@ -35,7 +35,7 @@ class DescribeRollbackRangeTimeRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
+     * @var string 克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
      */
     public $IsRemoteZone;
 
@@ -46,7 +46,7 @@ class DescribeRollbackRangeTimeRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds 实例 ID 列表，单个实例 ID 的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $IsRemoteZone 克隆实例与源实例是否在同一可用区，是:"false"，否:"true"
+     * @param string $IsRemoteZone 克隆实例与源实例是否在异地可用区，是:"true"，否:"false"
      * @param string $BackupRegion 克隆实例与源实例不在同一地域时需填写克隆实例所在地域，例："ap-guangzhou"
      */
     function __construct()

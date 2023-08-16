@@ -42,6 +42,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthTypeSet(array $AuthTypeSet) 设置认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
  * @method string getDepartmentId() 获取部门ID，用于过滤属于某个部门的用户
  * @method void setDepartmentId(string $DepartmentId) 设置部门ID，用于过滤属于某个部门的用户
+ * @method array getFilters() 获取参数过滤数组
+
+ * @method void setFilters(array $Filters) 设置参数过滤数组
  */
 class DescribeUsersRequest extends AbstractModel
 {
@@ -97,6 +100,12 @@ class DescribeUsersRequest extends AbstractModel
     public $DepartmentId;
 
     /**
+     * @var array 参数过滤数组
+
+     */
+    public $Filters;
+
+    /**
      * @param array $IdSet 如果IdSet不为空，则忽略其他参数
      * @param string $Name 模糊查询，IdSet、UserName、Phone为空时才生效，对用户名和姓名进行模糊查询
      * @param integer $Offset 分页偏移位置，默认值为0
@@ -108,6 +117,7 @@ class DescribeUsersRequest extends AbstractModel
      * @param array $AuthorizedDeviceIdSet 查询具有指定资产ID访问权限的用户
      * @param array $AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
      * @param string $DepartmentId 部门ID，用于过滤属于某个部门的用户
+     * @param array $Filters 参数过滤数组
      */
     function __construct()
     {
@@ -160,6 +170,15 @@ class DescribeUsersRequest extends AbstractModel
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
             $this->DepartmentId = $param["DepartmentId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

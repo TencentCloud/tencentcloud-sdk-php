@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 回调事件信息
  *
  * @method string getEventTime() 获取事件时间。
-数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。
  * @method void setEventTime(string $EventTime) 设置事件时间。
-数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。
  * @method integer getEventType() 获取事件类型
@@ -36,8 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequest(string $Request) 设置回调请求
  * @method string getResponse() 获取回调响应
  * @method void setResponse(string $Response) 设置回调响应
- * @method string getResponseTime() 获取客户接口响应时间
- * @method void setResponseTime(string $ResponseTime) 设置客户接口响应时间
+ * @method string getResponseTime() 获取客户接口响应时间。
+接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
+ * @method void setResponseTime(string $ResponseTime) 设置客户接口响应时间。
+接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
  * @method integer getResultCode() 获取回调结果
  * @method void setResultCode(integer $ResultCode) 设置回调结果
  * @method string getStreamId() 获取流名称
@@ -47,8 +55,8 @@ class CallbackEventInfo extends AbstractModel
 {
     /**
      * @var string 事件时间。
-数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。
      */
@@ -70,7 +78,11 @@ class CallbackEventInfo extends AbstractModel
     public $Response;
 
     /**
-     * @var string 客户接口响应时间
+     * @var string 客户接口响应时间。
+接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
      */
     public $ResponseTime;
 
@@ -86,14 +98,18 @@ class CallbackEventInfo extends AbstractModel
 
     /**
      * @param string $EventTime 事件时间。
-数据时间点，接口返回支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见ISO日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
 2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
 接口返回的时间格式和查询请求传入的时间格式一致。
      * @param integer $EventType 事件类型
      * @param string $Request 回调请求
      * @param string $Response 回调响应
-     * @param string $ResponseTime 客户接口响应时间
+     * @param string $ResponseTime 客户接口响应时间。
+接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
      * @param integer $ResultCode 回调结果
      * @param string $StreamId 流名称
      */

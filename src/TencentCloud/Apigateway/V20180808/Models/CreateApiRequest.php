@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() 获取API 所在的服务唯一 ID。
  * @method void setServiceId(string $ServiceId) 设置API 所在的服务唯一 ID。
- * @method string getServiceType() 获取API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
- * @method void setServiceType(string $ServiceType) 设置API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
+ * @method string getServiceType() 获取API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、EB、TARGET、VPC、UPSTREAM、GRPC、COS、WEBSOCKET。
+ * @method void setServiceType(string $ServiceType) 设置API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、EB、TARGET、VPC、UPSTREAM、GRPC、COS、WEBSOCKET。
  * @method integer getServiceTimeout() 获取API 的后端服务超时时间，单位是秒。
  * @method void setServiceTimeout(integer $ServiceTimeout) 设置API 的后端服务超时时间，单位是秒。
  * @method string getProtocol() 获取API 的前端请求协议，支持HTTP和WEBSOCKET。
@@ -135,7 +135,7 @@ class CreateApiRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
+     * @var string API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、EB、TARGET、VPC、UPSTREAM、GRPC、COS、WEBSOCKET。
      */
     public $ServiceType;
 
@@ -396,7 +396,7 @@ class CreateApiRequest extends AbstractModel
 
     /**
      * @param string $ServiceId API 所在的服务唯一 ID。
-     * @param string $ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
+     * @param string $ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、EB、TARGET、VPC、UPSTREAM、GRPC、COS、WEBSOCKET。
      * @param integer $ServiceTimeout API 的后端服务超时时间，单位是秒。
      * @param string $Protocol API 的前端请求协议，支持HTTP和WEBSOCKET。
      * @param ApiRequestConfig $RequestConfig 请求的前端配置。

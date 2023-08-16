@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterKubeconfig返回参数结构体
  *
- * @method string getKubeconfig() 获取子账户kubeconfig文件，可用于直接访问集群kube-apiserver
- * @method void setKubeconfig(string $Kubeconfig) 设置子账户kubeconfig文件，可用于直接访问集群kube-apiserver
+ * @method string getKubeconfig() 获取子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理）
+ * @method void setKubeconfig(string $Kubeconfig) 设置子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeClusterKubeconfigResponse extends AbstractModel
 {
     /**
-     * @var string 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
+     * @var string 子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理）
      */
     public $Kubeconfig;
 
@@ -38,7 +38,7 @@ class DescribeClusterKubeconfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver
+     * @param string $Kubeconfig 子账户kubeconfig文件，可用于直接访问集群kube-apiserver（入参IsExtranet为false，返回内网访问的kubeconfig，没开内网的情况下server会是一个默认域名；入参IsExtranet为true，返回外网的kubeconfig，没开外网的情况下server会是一个默认域名。默认域名默认不可达，需要自行处理）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

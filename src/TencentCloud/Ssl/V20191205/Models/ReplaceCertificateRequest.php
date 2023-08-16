@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCsrkeyPassword(string $CsrkeyPassword) 设置KEY 密码。
  * @method string getReason() 获取重颁发原因。
  * @method void setReason(string $Reason) 设置重颁发原因。
+ * @method string getCertCSREncryptAlgo() 获取CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA
+ * @method void setCertCSREncryptAlgo(string $CertCSREncryptAlgo) 设置CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA
+ * @method string getCertCSRKeyParameter() 获取CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+ * @method void setCertCSRKeyParameter(string $CertCSRKeyParameter) 设置CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
  */
 class ReplaceCertificateRequest extends AbstractModel
 {
@@ -66,12 +72,26 @@ class ReplaceCertificateRequest extends AbstractModel
     public $Reason;
 
     /**
+     * @var string CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA
+     */
+    public $CertCSREncryptAlgo;
+
+    /**
+     * @var string CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
+     */
+    public $CertCSRKeyParameter;
+
+    /**
      * @param string $CertificateId 证书 ID。
      * @param string $ValidType 验证类型：DNS_AUTO = 自动DNS验证（仅支持在腾讯云解析且解析状态正常的域名使用该验证类型），DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $CsrType 类型，默认 Original。可选项：Original = 原证书 CSR，Upload = 手动上传，Online = 在线生成。
      * @param string $CsrContent CSR 内容。
      * @param string $CsrkeyPassword KEY 密码。
      * @param string $Reason 重颁发原因。
+     * @param string $CertCSREncryptAlgo CSR加密方式，可选：RSA、ECC、SM2
+（CsrType为Online才可选）， 默认为RSA
+     * @param string $CertCSRKeyParameter CSR加密参数，CsrEncryptAlgo为RSA时， 可选2048、4096等默认为2048；CsrEncryptAlgo为ECC时，可选prime256v1，secp384r1等，默认为prime256v1; 
      */
     function __construct()
     {
@@ -108,6 +128,14 @@ class ReplaceCertificateRequest extends AbstractModel
 
         if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
             $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("CertCSREncryptAlgo",$param) and $param["CertCSREncryptAlgo"] !== null) {
+            $this->CertCSREncryptAlgo = $param["CertCSREncryptAlgo"];
+        }
+
+        if (array_key_exists("CertCSRKeyParameter",$param) and $param["CertCSRKeyParameter"] !== null) {
+            $this->CertCSRKeyParameter = $param["CertCSRKeyParameter"];
         }
     }
 }

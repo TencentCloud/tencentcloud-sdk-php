@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 签署人个性化能力信息
  *
- * @method boolean getNoRefuse() 获取是否可以拒签 默认false-可以拒签 true-不可以拒签
- * @method void setNoRefuse(boolean $NoRefuse) 设置是否可以拒签 默认false-可以拒签 true-不可以拒签
- * @method boolean getNoTransfer() 获取是否可以转发 默认false-可以转发 true-不可以转发
- * @method void setNoTransfer(boolean $NoTransfer) 设置是否可以转发 默认false-可以转发 true-不可以转发
+ * @method boolean getNoRefuse() 获取签署方是否可以拒签
+
+- false: ( 默认)可以拒签 
+- true:不可以拒签
+ * @method void setNoRefuse(boolean $NoRefuse) 设置签署方是否可以拒签
+
+- false: ( 默认)可以拒签 
+- true:不可以拒签
+ * @method boolean getNoTransfer() 获取签署方是否可以转他人处理
+
+- false: ( 默认)可以转他人处理
+- true:不可以转他人处理
+ * @method void setNoTransfer(boolean $NoTransfer) 设置签署方是否可以转他人处理
+
+- false: ( 默认)可以转他人处理
+- true:不可以转他人处理
  */
 class ApproverOption extends AbstractModel
 {
     /**
-     * @var boolean 是否可以拒签 默认false-可以拒签 true-不可以拒签
+     * @var boolean 签署方是否可以拒签
+
+- false: ( 默认)可以拒签 
+- true:不可以拒签
      */
     public $NoRefuse;
 
     /**
-     * @var boolean 是否可以转发 默认false-可以转发 true-不可以转发
+     * @var boolean 签署方是否可以转他人处理
+
+- false: ( 默认)可以转他人处理
+- true:不可以转他人处理
      */
     public $NoTransfer;
 
     /**
-     * @param boolean $NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
-     * @param boolean $NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
+     * @param boolean $NoRefuse 签署方是否可以拒签
+
+- false: ( 默认)可以拒签 
+- true:不可以拒签
+     * @param boolean $NoTransfer 签署方是否可以转他人处理
+
+- false: ( 默认)可以转他人处理
+- true:不可以转他人处理
      */
     function __construct()
     {

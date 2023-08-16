@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源包绑定的实例信息
  *
- * @method string getInstanceId() 获取绑定的实例ID
+ * @method string getInstanceId() 获取绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置绑定的实例ID
+ * @method void setInstanceId(string $InstanceId) 设置绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceRegion() 获取绑定的实例所在的地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,11 +32,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置绑定的实例类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getExtendIds() 获取绑定集群下的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtendIds(array $ExtendIds) 设置绑定集群下的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BindInstanceInfo extends AbstractModel
 {
     /**
-     * @var string 绑定的实例ID
+     * @var string 绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
@@ -54,11 +58,19 @@ class BindInstanceInfo extends AbstractModel
     public $InstanceType;
 
     /**
-     * @param string $InstanceId 绑定的实例ID
+     * @var array 绑定集群下的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtendIds;
+
+    /**
+     * @param string $InstanceId 绑定的集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceRegion 绑定的实例所在的地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 绑定的实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ExtendIds 绑定集群下的实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class BindInstanceInfo extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("ExtendIds",$param) and $param["ExtendIds"] !== null) {
+            $this->ExtendIds = $param["ExtendIds"];
         }
     }
 }

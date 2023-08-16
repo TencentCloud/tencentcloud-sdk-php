@@ -46,11 +46,11 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getBusinessId() 获取WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
  * @method void setBusinessId(string $BusinessId) 设置WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作
@@ -84,7 +84,7 @@ class CreateEmbedWebUrlRequest extends AbstractModel
     /**
      * @var string WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
      */
     public $BusinessId;
@@ -119,7 +119,7 @@ class CreateEmbedWebUrlRequest extends AbstractModel
 
      * @param string $BusinessId WEB嵌入的业务资源ID
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模版id
+<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作
      * @param ReviewerInfo $Reviewer 抄送方信息

@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartment(Department $Department) 设置所属部门的信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAllowAccessCredential() 获取是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllowAccessCredential(boolean $AllowAccessCredential) 设置是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getACTemplateSet() 获取关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setACTemplateSet(array $ACTemplateSet) 设置关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Acl extends AbstractModel
 {
@@ -222,6 +230,18 @@ class Acl extends AbstractModel
     public $Department;
 
     /**
+     * @var boolean 是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllowAccessCredential;
+
+    /**
+     * @var array 关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ACTemplateSet;
+
+    /**
      * @param integer $Id 访问权限ID
      * @param string $Name 访问权限名称
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
@@ -251,6 +271,10 @@ class Acl extends AbstractModel
 生效、失效时间不填则访问权限长期有效
      * @param integer $Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      * @param Department $Department 所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AllowAccessCredential 是否允许使用访问串，默认允许
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ACTemplateSet 关联的数据库高危命令列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -398,6 +422,19 @@ class Acl extends AbstractModel
         if (array_key_exists("Department",$param) and $param["Department"] !== null) {
             $this->Department = new Department();
             $this->Department->deserialize($param["Department"]);
+        }
+
+        if (array_key_exists("AllowAccessCredential",$param) and $param["AllowAccessCredential"] !== null) {
+            $this->AllowAccessCredential = $param["AllowAccessCredential"];
+        }
+
+        if (array_key_exists("ACTemplateSet",$param) and $param["ACTemplateSet"] !== null) {
+            $this->ACTemplateSet = [];
+            foreach ($param["ACTemplateSet"] as $key => $value){
+                $obj = new ACTemplate();
+                $obj->deserialize($value);
+                array_push($this->ACTemplateSet, $obj);
+            }
         }
     }
 }

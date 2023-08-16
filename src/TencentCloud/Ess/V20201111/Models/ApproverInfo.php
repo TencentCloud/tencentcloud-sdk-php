@@ -20,153 +20,293 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 参与者信息
  *
- * @method integer getApproverType() 获取参与者类型：
+ * @method integer getApproverType() 获取在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
 3：企业静默签署
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
 7: 个人自动签署，适用于个人自动签场景。
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
- * @method void setApproverType(integer $ApproverType) 设置参与者类型：
+注: 个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。
+ * @method void setApproverType(integer $ApproverType) 设置在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
 3：企业静默签署
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
 7: 个人自动签署，适用于个人自动签场景。
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
- * @method string getApproverName() 获取签署人的姓名
- * @method void setApproverName(string $ApproverName) 设置签署人的姓名
- * @method string getApproverMobile() 获取签署人的手机号，11位数字
- * @method void setApproverMobile(string $ApproverMobile) 设置签署人的手机号，11位数字
- * @method string getOrganizationName() 获取如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+注: 个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。
+ * @method string getApproverName() 获取签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
+ * @method void setApproverName(string $ApproverName) 设置签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
+ * @method string getApproverMobile() 获取本企业的签署方经办人的员工UserId
 
-则企业名称必填
- * @method void setOrganizationName(string $OrganizationName) 设置如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
 
-则企业名称必填
- * @method array getSignComponents() 获取签署人的签署控件列表
- * @method void setSignComponents(array $SignComponents) 设置签署人的签署控件列表
- * @method string getApproverIdCardType() 获取签署人的证件类型
-ID_CARD 身份证
-HONGKONG_AND_MACAO 港澳居民来往内地通行证
-HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
- * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署人的证件类型
-ID_CARD 身份证
-HONGKONG_AND_MACAO 港澳居民来往内地通行证
-HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
- * @method string getApproverIdCardNumber() 获取签署人证件号（长度不超过18位）	
- * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署人证件号（长度不超过18位）	
- * @method string getNotifyType() 获取签署通知类型：sms--短信，none--不通知
- * @method void setNotifyType(string $NotifyType) 设置签署通知类型：sms--短信，none--不通知
- * @method integer getApproverRole() 获取签署人角色类型：1--收款人、2--开具人、3--见证人
- * @method void setApproverRole(integer $ApproverRole) 设置签署人角色类型：1--收款人、2--开具人、3--见证人
+注: 若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。
+ * @method void setApproverMobile(string $ApproverMobile) 设置本企业的签署方经办人的员工UserId
+
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+
+注: 若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。
+ * @method string getOrganizationName() 获取组织机构名称。
+如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
+
+注: 请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。
+ * @method void setOrganizationName(string $OrganizationName) 设置组织机构名称。
+如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
+
+注: 请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。
+ * @method array getSignComponents() 获取合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+- 个人签名/印章
+- 企业印章
+- 骑缝章等签署控件
+ * @method void setSignComponents(array $SignComponents) 设置合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+- 个人签名/印章
+- 企业印章
+- 骑缝章等签署控件
+ * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型
+- ID_CARD 居民身份证  (默认值)
+- HONGKONG_AND_MACAO 港澳居民来往内地通行证
+- HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+- OTHER_CARD_TYPE 其他证件
+
+注: 其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。
+ * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人的证件类型，支持以下类型
+- ID_CARD 居民身份证  (默认值)
+- HONGKONG_AND_MACAO 港澳居民来往内地通行证
+- HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+- OTHER_CARD_TYPE 其他证件
+
+注: 其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。
+ * @method string getApproverIdCardNumber() 获取签署方经办人的证件号码，应符合以下规则
+- 居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。
+- 港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。
+- 港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。
+ * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署方经办人的证件号码，应符合以下规则
+- 居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。
+- 港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。
+- 港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。
+ * @method string getNotifyType() 获取通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知
+ * @method void setNotifyType(string $NotifyType) 设置通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知
+ * @method integer getApproverRole() 获取收据场景设置签署人角色类型, 可以设置如下类型:
+- 1:收款人
+- 2:开具人
+- 3:见证人
+
+注: 收据场景为白名单功能，使用前请联系对接的客户经理沟通。
+ * @method void setApproverRole(integer $ApproverRole) 设置收据场景设置签署人角色类型, 可以设置如下类型:
+- 1:收款人
+- 2:开具人
+- 3:见证人
+
+注: 收据场景为白名单功能，使用前请联系对接的客户经理沟通。
  * @method array getVerifyChannel() 获取签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+
+注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
  * @method void setVerifyChannel(array $VerifyChannel) 设置签署意愿确认渠道，默认为WEIXINAPP:人脸识别
- * @method integer getPreReadTime() 获取合同的强制预览时间：3~300s，未指定则按合同页数计算
- * @method void setPreReadTime(integer $PreReadTime) 设置合同的强制预览时间：3~300s，未指定则按合同页数计算
+
+注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
+ * @method integer getPreReadTime() 获取签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+
+- 合同页数少于等于2页，阅读时间为3秒；
+- 合同页数为3到5页，阅读时间为5秒；
+- 合同页数大于等于6页，阅读时间为10秒。
+ * @method void setPreReadTime(integer $PreReadTime) 设置签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+
+- 合同页数少于等于2页，阅读时间为3秒；
+- 合同页数为3到5页，阅读时间为5秒；
+- 合同页数大于等于6页，阅读时间为10秒。
  * @method string getUserId() 获取签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
 若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
  * @method void setUserId(string $UserId) 设置签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
 若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
- * @method string getApproverSource() 获取签署人用户来源，此参数仅针对企微用户开放
+ * @method string getApproverSource() 获取在企微场景下使用，需设置参数为WEWORKAPP，以表明合同来源于企微。
+ * @method void setApproverSource(string $ApproverSource) 设置在企微场景下使用，需设置参数为WEWORKAPP，以表明合同来源于企微。
+ * @method string getCustomApproverTag() 获取在企业微信场景下，表明该合同流程为或签，其最大长度为64位字符串。
+所有参与或签的人员均需具备该标识。
+注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
+如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
+ * @method void setCustomApproverTag(string $CustomApproverTag) 设置在企业微信场景下，表明该合同流程为或签，其最大长度为64位字符串。
+所有参与或签的人员均需具备该标识。
+注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
+如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
+ * @method ApproverOption getApproverOption() 获取可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。
+ * @method void setApproverOption(ApproverOption $ApproverOption) 设置可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。
+ * @method array getApproverVerifyTypes() 获取指定个人签署方查看合同的校验方式,可以传值如下:
 
-企微侧用户请传入：WEWORKAPP
- * @method void setApproverSource(string $ApproverSource) 设置签署人用户来源，此参数仅针对企微用户开放
+- 1 : （默认）人脸识别,人脸识别后才能合同内容
+- 2 : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
 
-企微侧用户请传入：WEWORKAPP
- * @method string getCustomApproverTag() 获取企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
- * @method void setCustomApproverTag(string $CustomApproverTag) 设置企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
- * @method ApproverOption getApproverOption() 获取签署人个性化能力值
- * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值
- * @method array getApproverVerifyTypes() 获取签署人查看合同时认证方式, 
-1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
-如果不传默认为1
-模板发起的时候,认证方式以模板配置为主
- * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置签署人查看合同时认证方式, 
-1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
-如果不传默认为1
-模板发起的时候,认证方式以模板配置为主
- * @method array getApproverSignTypes() 获取签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
-合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模板配置为主
- * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
-合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模板配置为主
- * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
- * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
+注: 
+
+- 如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式
+- 此字段不可传多个校验方式
+ * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置指定个人签署方查看合同的校验方式,可以传值如下:
+
+- 1 : （默认）人脸识别,人脸识别后才能合同内容
+- 2 : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
+
+注: 
+
+- 如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式
+- 此字段不可传多个校验方式
+ * @method array getApproverSignTypes() 获取您可以指定签署方签署合同的认证校验方式，可传递以下值：
+
+- 1：人脸认证，需进行人脸识别成功后才能签署合同；
+- 2：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；
+- 3：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。
+
+注：
+
+- 默认情况下，认证校验方式为人脸认证和签署密码两种形式；
+- 您可以传递多种值，表示可用多种认证校验方式。
+
+ * @method void setApproverSignTypes(array $ApproverSignTypes) 设置您可以指定签署方签署合同的认证校验方式，可传递以下值：
+
+- 1：人脸认证，需进行人脸识别成功后才能签署合同；
+- 2：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；
+- 3：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。
+
+注：
+
+- 默认情况下，认证校验方式为人脸认证和签署密码两种形式；
+- 您可以传递多种值，表示可用多种认证校验方式。
+
+ * @method boolean getApproverNeedSignReview() 获取
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
+ * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
  */
 class ApproverInfo extends AbstractModel
 {
     /**
-     * @var integer 参与者类型：
+     * @var integer 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
 3：企业静默签署
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
 7: 个人自动签署，适用于个人自动签场景。
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
+注: 个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。
      */
     public $ApproverType;
 
     /**
-     * @var string 签署人的姓名
+     * @var string 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
      */
     public $ApproverName;
 
     /**
-     * @var string 签署人的手机号，11位数字
+     * @var string 本企业的签署方经办人的员工UserId
+
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+
+注: 若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。
      */
     public $ApproverMobile;
 
     /**
-     * @var string 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+     * @var string 组织机构名称。
+如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
 
-则企业名称必填
+注: 请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。
      */
     public $OrganizationName;
 
     /**
-     * @var array 签署人的签署控件列表
+     * @var array 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+- 个人签名/印章
+- 企业印章
+- 骑缝章等签署控件
      */
     public $SignComponents;
 
     /**
-     * @var string 签署人的证件类型
-ID_CARD 身份证
-HONGKONG_AND_MACAO 港澳居民来往内地通行证
-HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
+     * @var string 签署方经办人的证件类型，支持以下类型
+- ID_CARD 居民身份证  (默认值)
+- HONGKONG_AND_MACAO 港澳居民来往内地通行证
+- HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+- OTHER_CARD_TYPE 其他证件
+
+注: 其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。
      */
     public $ApproverIdCardType;
 
     /**
-     * @var string 签署人证件号（长度不超过18位）	
+     * @var string 签署方经办人的证件号码，应符合以下规则
+- 居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。
+- 港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。
+- 港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。
      */
     public $ApproverIdCardNumber;
 
     /**
-     * @var string 签署通知类型：sms--短信，none--不通知
+     * @var string 通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知
      */
     public $NotifyType;
 
     /**
-     * @var integer 签署人角色类型：1--收款人、2--开具人、3--见证人
+     * @var integer 收据场景设置签署人角色类型, 可以设置如下类型:
+- 1:收款人
+- 2:开具人
+- 3:见证人
+
+注: 收据场景为白名单功能，使用前请联系对接的客户经理沟通。
      */
     public $ApproverRole;
 
     /**
      * @var array 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+
+注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
      */
     public $VerifyChannel;
 
     /**
-     * @var integer 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     * @var integer 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+
+- 合同页数少于等于2页，阅读时间为3秒；
+- 合同页数为3到5页，阅读时间为5秒；
+- 合同页数大于等于6页，阅读时间为10秒。
      */
     public $PreReadTime;
 
@@ -178,84 +318,164 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
     public $UserId;
 
     /**
-     * @var string 签署人用户来源，此参数仅针对企微用户开放
-
-企微侧用户请传入：WEWORKAPP
+     * @var string 在企微场景下使用，需设置参数为WEWORKAPP，以表明合同来源于企微。
      */
     public $ApproverSource;
 
     /**
-     * @var string 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+     * @var string 在企业微信场景下，表明该合同流程为或签，其最大长度为64位字符串。
+所有参与或签的人员均需具备该标识。
+注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
+如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
      */
     public $CustomApproverTag;
 
     /**
-     * @var ApproverOption 签署人个性化能力值
+     * @var ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。
      */
     public $ApproverOption;
 
     /**
-     * @var array 签署人查看合同时认证方式, 
-1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
-如果不传默认为1
-模板发起的时候,认证方式以模板配置为主
+     * @var array 指定个人签署方查看合同的校验方式,可以传值如下:
+
+- 1 : （默认）人脸识别,人脸识别后才能合同内容
+- 2 : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
+
+注: 
+
+- 如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式
+- 此字段不可传多个校验方式
      */
     public $ApproverVerifyTypes;
 
     /**
-     * @var array 签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
-合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模板配置为主
+     * @var array 您可以指定签署方签署合同的认证校验方式，可传递以下值：
+
+- 1：人脸认证，需进行人脸识别成功后才能签署合同；
+- 2：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；
+- 3：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。
+
+注：
+
+- 默认情况下，认证校验方式为人脸认证和签署密码两种形式；
+- 您可以传递多种值，表示可用多种认证校验方式。
+
      */
     public $ApproverSignTypes;
 
     /**
-     * @var boolean 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
+     * @var boolean 
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
      */
     public $ApproverNeedSignReview;
 
     /**
-     * @param integer $ApproverType 参与者类型：
+     * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
 3：企业静默签署
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
 7: 个人自动签署，适用于个人自动签场景。
-注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
-     * @param string $ApproverName 签署人的姓名
-     * @param string $ApproverMobile 签署人的手机号，11位数字
-     * @param string $OrganizationName 如果签署方是企业签署方(approverType = 1 或者 approverType = 3)，
+注: 个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。
+     * @param string $ApproverName 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
+     * @param string $ApproverMobile 本企业的签署方经办人的员工UserId
 
-则企业名称必填
-     * @param array $SignComponents 签署人的签署控件列表
-     * @param string $ApproverIdCardType 签署人的证件类型
-ID_CARD 身份证
-HONGKONG_AND_MACAO 港澳居民来往内地通行证
-HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
-     * @param string $ApproverIdCardNumber 签署人证件号（长度不超过18位）	
-     * @param string $NotifyType 签署通知类型：sms--短信，none--不通知
-     * @param integer $ApproverRole 签署人角色类型：1--收款人、2--开具人、3--见证人
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+
+注: 若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。
+     * @param string $OrganizationName 组织机构名称。
+如果签署方是企业签署方(approverType = 1 或者 approverType = 3)， 则企业名称必填。
+
+注: 请确认该名称与企业营业执照中注册的名称一致 ; 如果名称中包含英文括号()，请使用中文括号（）代替。
+     * @param array $SignComponents 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
+- 个人签名/印章
+- 企业印章
+- 骑缝章等签署控件
+     * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型
+- ID_CARD 居民身份证  (默认值)
+- HONGKONG_AND_MACAO 港澳居民来往内地通行证
+- HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+- OTHER_CARD_TYPE 其他证件
+
+注: 其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。
+     * @param string $ApproverIdCardNumber 签署方经办人的证件号码，应符合以下规则
+- 居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。
+- 港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。
+- 港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。
+     * @param string $NotifyType 通知签署方经办人的方式,  有以下途径:
+
+- sms:  (默认)短信 
+- none: 不通知
+     * @param integer $ApproverRole 收据场景设置签署人角色类型, 可以设置如下类型:
+- 1:收款人
+- 2:开具人
+- 3:见证人
+
+注: 收据场景为白名单功能，使用前请联系对接的客户经理沟通。
      * @param array $VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
-     * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
+
+注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
+     * @param integer $PreReadTime 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
+
+若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
+
+- 合同页数少于等于2页，阅读时间为3秒；
+- 合同页数为3到5页，阅读时间为5秒；
+- 合同页数大于等于6页，阅读时间为10秒。
      * @param string $UserId 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
 若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息
-     * @param string $ApproverSource 签署人用户来源，此参数仅针对企微用户开放
+     * @param string $ApproverSource 在企微场景下使用，需设置参数为WEWORKAPP，以表明合同来源于企微。
+     * @param string $CustomApproverTag 在企业微信场景下，表明该合同流程为或签，其最大长度为64位字符串。
+所有参与或签的人员均需具备该标识。
+注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
+如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
+     * @param ApproverOption $ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+详细操作可以参考开发者中心的ApproverOption结构体。
+     * @param array $ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
 
-企微侧用户请传入：WEWORKAPP
-     * @param string $CustomApproverTag 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
-     * @param ApproverOption $ApproverOption 签署人个性化能力值
-     * @param array $ApproverVerifyTypes 签署人查看合同时认证方式, 
-1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
-如果不传默认为1
-模板发起的时候,认证方式以模板配置为主
-     * @param array $ApproverSignTypes 签署人签署合同时的认证方式
-1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
-合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模板配置为主
-     * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
+- 1 : （默认）人脸识别,人脸识别后才能合同内容
+- 2 : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容
+
+注: 
+
+- 如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式
+- 此字段不可传多个校验方式
+     * @param array $ApproverSignTypes 您可以指定签署方签署合同的认证校验方式，可传递以下值：
+
+- 1：人脸认证，需进行人脸识别成功后才能签署合同；
+- 2：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；
+- 3：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。
+
+注：
+
+- 默认情况下，认证校验方式为人脸认证和签署密码两种形式；
+- 您可以传递多种值，表示可用多种认证校验方式。
+
+     * @param boolean $ApproverNeedSignReview 
+发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+
+- false：（默认）不需要审批，直接签署。
+- true：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。
+
+企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+
+- 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。
+- 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。
+
+注：此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同
      */
     function __construct()
     {

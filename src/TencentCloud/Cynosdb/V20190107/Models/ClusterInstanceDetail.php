@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaintainWeekDays(array $MaintainWeekDays) 设置可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServerlessStatus() 获取serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServerlessStatus(string $ServerlessStatus) 设置serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -117,6 +121,12 @@ class ClusterInstanceDetail extends AbstractModel
     public $MaintainWeekDays;
 
     /**
+     * @var string serverless实例子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServerlessStatus;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $InstanceType 引擎类型
@@ -131,6 +141,8 @@ class ClusterInstanceDetail extends AbstractModel
      * @param integer $MaintainDuration 持续的时间(单位：秒)	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MaintainWeekDays 可以执行的时间，枚举值：["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServerlessStatus serverless实例子状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +204,10 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("MaintainWeekDays",$param) and $param["MaintainWeekDays"] !== null) {
             $this->MaintainWeekDays = $param["MaintainWeekDays"];
+        }
+
+        if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
+            $this->ServerlessStatus = $param["ServerlessStatus"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourcePackageDetail返回参数结构体
  *
- * @method integer getTotal() 获取总使用明细数
- * @method void setTotal(integer $Total) 设置总使用明细数
+ * @method integer getTotal() 获取资源包抵扣总数
+ * @method void setTotal(integer $Total) 设置资源包抵扣总数
  * @method array getDetail() 获取资源包明细说明
  * @method void setDetail(array $Detail) 设置资源包明细说明
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeResourcePackageDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 总使用明细数
+     * @var integer 资源包抵扣总数
      */
     public $Total;
 
@@ -45,7 +45,7 @@ class DescribeResourcePackageDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总使用明细数
+     * @param integer $Total 资源包抵扣总数
      * @param array $Detail 资源包明细说明
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) 设置实例类型 rw/ro
  * @method integer getInstanceCount() 获取实例个数,范围[1,15]
  * @method void setInstanceCount(integer $InstanceCount) 设置实例个数,范围[1,15]
+ * @method integer getMinRoCount() 获取Serverless实例个数最小值，范围[1,15]
+ * @method void setMinRoCount(integer $MinRoCount) 设置Serverless实例个数最小值，范围[1,15]
+ * @method integer getMaxRoCount() 获取Serverless实例个数最大值，范围[1,15]
+ * @method void setMaxRoCount(integer $MaxRoCount) 设置Serverless实例个数最大值，范围[1,15]
+ * @method float getMinRoCpu() 获取Serverless实例最小规格
+ * @method void setMinRoCpu(float $MinRoCpu) 设置Serverless实例最小规格
+ * @method float getMaxRoCpu() 获取Serverless实例最大规格
+ * @method void setMaxRoCpu(float $MaxRoCpu) 设置Serverless实例最大规格
  */
 class InstanceInitInfo extends AbstractModel
 {
@@ -52,10 +60,34 @@ class InstanceInitInfo extends AbstractModel
     public $InstanceCount;
 
     /**
+     * @var integer Serverless实例个数最小值，范围[1,15]
+     */
+    public $MinRoCount;
+
+    /**
+     * @var integer Serverless实例个数最大值，范围[1,15]
+     */
+    public $MaxRoCount;
+
+    /**
+     * @var float Serverless实例最小规格
+     */
+    public $MinRoCpu;
+
+    /**
+     * @var float Serverless实例最大规格
+     */
+    public $MaxRoCpu;
+
+    /**
      * @param integer $Cpu 实例cpu
      * @param integer $Memory 实例内存
      * @param string $InstanceType 实例类型 rw/ro
      * @param integer $InstanceCount 实例个数,范围[1,15]
+     * @param integer $MinRoCount Serverless实例个数最小值，范围[1,15]
+     * @param integer $MaxRoCount Serverless实例个数最大值，范围[1,15]
+     * @param float $MinRoCpu Serverless实例最小规格
+     * @param float $MaxRoCpu Serverless实例最大规格
      */
     function __construct()
     {
@@ -84,6 +116,22 @@ class InstanceInitInfo extends AbstractModel
 
         if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
             $this->InstanceCount = $param["InstanceCount"];
+        }
+
+        if (array_key_exists("MinRoCount",$param) and $param["MinRoCount"] !== null) {
+            $this->MinRoCount = $param["MinRoCount"];
+        }
+
+        if (array_key_exists("MaxRoCount",$param) and $param["MaxRoCount"] !== null) {
+            $this->MaxRoCount = $param["MaxRoCount"];
+        }
+
+        if (array_key_exists("MinRoCpu",$param) and $param["MinRoCpu"] !== null) {
+            $this->MinRoCpu = $param["MinRoCpu"];
+        }
+
+        if (array_key_exists("MaxRoCpu",$param) and $param["MaxRoCpu"] !== null) {
+            $this->MaxRoCpu = $param["MaxRoCpu"];
         }
     }
 }

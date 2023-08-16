@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartmentId(string $DepartmentId) 设置用户所属部门（用于入参）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getActiveStatus() 获取激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActiveStatus(integer $ActiveStatus) 设置激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLockStatus() 获取锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLockStatus(integer $LockStatus) 设置锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class User extends AbstractModel
 {
@@ -120,6 +132,24 @@ class User extends AbstractModel
     public $DepartmentId;
 
     /**
+     * @var integer 激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActiveStatus;
+
+    /**
+     * @var integer 锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LockStatus;
+
+    /**
+     * @var string 状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      * @param string $RealName 用户姓名， 最大20个字符，不能包含空白字符
      * @param integer $Id 用户ID
@@ -135,6 +165,12 @@ class User extends AbstractModel
      * @param Department $Department 用户所属部门（用于出参）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentId 用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ActiveStatus 激活状态 0 - 未激活 1 - 激活
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LockStatus 锁定状态 0 - 未锁定 1 - 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 状态 与Filter中一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -202,6 +238,18 @@ class User extends AbstractModel
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
             $this->DepartmentId = $param["DepartmentId"];
+        }
+
+        if (array_key_exists("ActiveStatus",$param) and $param["ActiveStatus"] !== null) {
+            $this->ActiveStatus = $param["ActiveStatus"];
+        }
+
+        if (array_key_exists("LockStatus",$param) and $param["LockStatus"] !== null) {
+            $this->LockStatus = $param["LockStatus"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

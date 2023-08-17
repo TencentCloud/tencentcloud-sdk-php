@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilter(array $Filter) 设置查询参数
  * @method array getSorter() 获取排序参数
  * @method void setSorter(array $Sorter) 设置排序参数
- * @method boolean getExportFlag() 获取是否导出
- * @method void setExportFlag(boolean $ExportFlag) 设置是否导出
+ * @method boolean getExportFlag() 获取是否导出；默认为否，如量级超过1000，则使用单独的导出接口
+ * @method void setExportFlag(boolean $ExportFlag) 设置是否导出；默认为否，如量级超过1000，则使用单独的导出接口
  */
 class DescribeSocAlertListRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeSocAlertListRequest extends AbstractModel
     public $Sorter;
 
     /**
-     * @var boolean 是否导出
+     * @var boolean 是否导出；默认为否，如量级超过1000，则使用单独的导出接口
      */
     public $ExportFlag;
 
@@ -71,7 +71,7 @@ class DescribeSocAlertListRequest extends AbstractModel
      * @param integer $Scenes 1:急需关注 2.重保监控 3.全量告警
      * @param array $Filter 查询参数
      * @param array $Sorter 排序参数
-     * @param boolean $ExportFlag 是否导出
+     * @param boolean $ExportFlag 是否导出；默认为否，如量级超过1000，则使用单独的导出接口
      */
     function __construct()
     {

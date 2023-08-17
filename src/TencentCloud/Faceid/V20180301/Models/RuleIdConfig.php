@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getIntentionRecognition() 获取意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
  * @method void setIntentionRecognition(boolean $IntentionRecognition) 设置意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+ * @method integer getIntentionType() 获取意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段；
+ * @method void setIntentionType(integer $IntentionType) 设置意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段；
  */
 class RuleIdConfig extends AbstractModel
 {
@@ -31,7 +37,17 @@ class RuleIdConfig extends AbstractModel
     public $IntentionRecognition;
 
     /**
+     * @var integer 意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段；
+     */
+    public $IntentionType;
+
+    /**
      * @param boolean $IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认不开启。
+     * @param integer $IntentionType 意愿核身类型，默认为0：
+0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
+1：点头模式，DetectAuth接口需要传入IntentionActions字段；
      */
     function __construct()
     {
@@ -48,6 +64,10 @@ class RuleIdConfig extends AbstractModel
         }
         if (array_key_exists("IntentionRecognition",$param) and $param["IntentionRecognition"] !== null) {
             $this->IntentionRecognition = $param["IntentionRecognition"];
+        }
+
+        if (array_key_exists("IntentionType",$param) and $param["IntentionType"] !== null) {
+            $this->IntentionType = $param["IntentionType"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
- * @method array getFlowInfos() 获取多个合同（签署流程）信息，最多支持20个
- * @method void setFlowInfos(array $FlowInfos) 设置多个合同（签署流程）信息，最多支持20个
+ * @method array getFlowInfos() 获取要创建的合同信息列表，最多支持一次创建20个合同
+ * @method void setFlowInfos(array $FlowInfos) 设置要创建的合同信息列表，最多支持一次创建20个合同
  * @method boolean getNeedPreview() 获取是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls；
 预览链接有效期300秒；
 同时，如果预览的文件中指定了动态表格控件，需要进行异步合成；此时此接口返回的是合成前的文档预览链接，而合成完成后的文档预览链接会通过：回调通知的方式、或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询；
@@ -43,7 +43,7 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var array 多个合同（签署流程）信息，最多支持20个
+     * @var array 要创建的合同信息列表，最多支持一次创建20个合同
      */
     public $FlowInfos;
 
@@ -67,7 +67,7 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
-     * @param array $FlowInfos 多个合同（签署流程）信息，最多支持20个
+     * @param array $FlowInfos 要创建的合同信息列表，最多支持一次创建20个合同
      * @param boolean $NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls；
 预览链接有效期300秒；
 同时，如果预览的文件中指定了动态表格控件，需要进行异步合成；此时此接口返回的是合成前的文档预览链接，而合成完成后的文档预览链接会通过：回调通知的方式、或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询；

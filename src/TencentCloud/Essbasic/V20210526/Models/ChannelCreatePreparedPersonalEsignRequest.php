@@ -22,18 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
- * @method string getUserName() 获取个人用户名称
- * @method void setUserName(string $UserName) 设置个人用户名称
+ * @method string getUserName() 获取个人用户姓名
+ * @method void setUserName(string $UserName) 设置个人用户姓名
  * @method string getIdCardNumber() 获取身份证件号码
  * @method void setIdCardNumber(string $IdCardNumber) 设置身份证件号码
- * @method string getSealImage() 获取印章图片的base64
- * @method void setSealImage(string $SealImage) 设置印章图片的base64
  * @method string getSealName() 获取印章名称
  * @method void setSealName(string $SealName) 设置印章名称
+ * @method string getSealImage() 获取印章图片的base64，最大不超过 8M
+ * @method void setSealImage(string $SealImage) 设置印章图片的base64，最大不超过 8M
  * @method UserInfo getOperator() 获取操作者信息
  * @method void setOperator(UserInfo $Operator) 设置操作者信息
  * @method string getIdCardType() 获取身份证件类型
  * @method void setIdCardType(string $IdCardType) 设置身份证件类型
+ * @method boolean getSealImageCompress() 获取是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+ * @method void setSealImageCompress(boolean $SealImageCompress) 设置是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
  * @method string getMobile() 获取手机号码；当需要开通自动签时，该参数必传
  * @method void setMobile(string $Mobile) 设置手机号码；当需要开通自动签时，该参数必传
  * @method boolean getEnableAutoSign() 获取是否开通自动签，该功能需联系运营工作人员开通后使用
@@ -47,7 +49,7 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 个人用户名称
+     * @var string 个人用户姓名
      */
     public $UserName;
 
@@ -57,14 +59,14 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
     public $IdCardNumber;
 
     /**
-     * @var string 印章图片的base64
-     */
-    public $SealImage;
-
-    /**
      * @var string 印章名称
      */
     public $SealName;
+
+    /**
+     * @var string 印章图片的base64，最大不超过 8M
+     */
+    public $SealImage;
 
     /**
      * @var UserInfo 操作者信息
@@ -75,6 +77,11 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
      * @var string 身份证件类型
      */
     public $IdCardType;
+
+    /**
+     * @var boolean 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     */
+    public $SealImageCompress;
 
     /**
      * @var string 手机号码；当需要开通自动签时，该参数必传
@@ -88,12 +95,13 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
-     * @param string $UserName 个人用户名称
+     * @param string $UserName 个人用户姓名
      * @param string $IdCardNumber 身份证件号码
-     * @param string $SealImage 印章图片的base64
      * @param string $SealName 印章名称
+     * @param string $SealImage 印章图片的base64，最大不超过 8M
      * @param UserInfo $Operator 操作者信息
      * @param string $IdCardType 身份证件类型
+     * @param boolean $SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
      * @param string $Mobile 手机号码；当需要开通自动签时，该参数必传
      * @param boolean $EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用
      */
@@ -123,12 +131,12 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
             $this->IdCardNumber = $param["IdCardNumber"];
         }
 
-        if (array_key_exists("SealImage",$param) and $param["SealImage"] !== null) {
-            $this->SealImage = $param["SealImage"];
-        }
-
         if (array_key_exists("SealName",$param) and $param["SealName"] !== null) {
             $this->SealName = $param["SealName"];
+        }
+
+        if (array_key_exists("SealImage",$param) and $param["SealImage"] !== null) {
+            $this->SealImage = $param["SealImage"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
@@ -138,6 +146,10 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
 
         if (array_key_exists("IdCardType",$param) and $param["IdCardType"] !== null) {
             $this->IdCardType = $param["IdCardType"];
+        }
+
+        if (array_key_exists("SealImageCompress",$param) and $param["SealImageCompress"] !== null) {
+            $this->SealImageCompress = $param["SealImageCompress"];
         }
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {

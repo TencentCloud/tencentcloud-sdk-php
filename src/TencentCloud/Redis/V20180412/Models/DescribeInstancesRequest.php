@@ -30,16 +30,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
 
 
- * @method string getOrderBy() 获取实例列表排序依据，枚举值如下所示：<ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
- * @method void setOrderBy(string $OrderBy) 设置实例列表排序依据，枚举值如下所示：<ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
- * @method integer getOrderType() 获取实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
- * @method void setOrderType(integer $OrderType) 设置实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
+ * @method string getOrderBy() 获取实例列表排序依据，枚举值如下所示：
+- projectId：依据项目ID排序。
+- createtime：依据实例创建时间排序。
+- instancename：依据实例名称排序。
+- type：依据实例类型排序。
+- curDeadline：依据实例到期时间排序。
+ * @method void setOrderBy(string $OrderBy) 设置实例列表排序依据，枚举值如下所示：
+- projectId：依据项目ID排序。
+- createtime：依据实例创建时间排序。
+- instancename：依据实例名称排序。
+- type：依据实例类型排序。
+- curDeadline：依据实例到期时间排序。
+ * @method integer getOrderType() 获取实例排序方式，默认为倒序排序。
+- 1：倒序。
+- 0：顺序。
+ * @method void setOrderType(integer $OrderType) 设置实例排序方式，默认为倒序排序。
+- 1：倒序。
+- 0：顺序。
  * @method array getVpcIds() 获取私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
  * @method void setVpcIds(array $VpcIds) 设置私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
  * @method array getSubnetIds() 获取私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
  * @method void setSubnetIds(array $SubnetIds) 设置私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
- * @method string getSearchKey() 获取设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
- * @method void setSearchKey(string $SearchKey) 设置设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
+ * @method string getSearchKey() 获取设置模糊查询关键字段，仅实例名称支持模糊查询。
+ * @method void setSearchKey(string $SearchKey) 设置设置模糊查询关键字段，仅实例名称支持模糊查询。
  * @method array getProjectIds() 获取项目 ID 组成的数组。
  * @method void setProjectIds(array $ProjectIds) 设置项目 ID 组成的数组。
  * @method string getInstanceName() 获取实例名称。
@@ -50,16 +64,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
  * @method array getRegionIds() 获取地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
  * @method void setRegionIds(array $RegionIds) 设置地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
- * @method array getStatus() 获取实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
- * @method void setStatus(array $Status) 设置实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
- * @method integer getTypeVersion() 获取实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
- * @method void setTypeVersion(integer $TypeVersion) 设置实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
+ * @method array getStatus() 获取实例状态。
+- 0：待初始化。
+- 1：流程中。
+- 2：运行中。
+- -2：已隔离。
+- -3：待删除。
+ * @method void setStatus(array $Status) 设置实例状态。
+- 0：待初始化。
+- 1：流程中。
+- 2：运行中。
+- -2：已隔离。
+- -3：待删除。
+ * @method integer getTypeVersion() 获取实例架构版本。
+- 1：单机版。
+- 2：主从版。
+- 3：集群版。
+ * @method void setTypeVersion(integer $TypeVersion) 设置实例架构版本。
+- 1：单机版。
+- 2：主从版。
+- 3：集群版。
  * @method string getEngineName() 获取存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
  * @method void setEngineName(string $EngineName) 设置存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
- * @method array getAutoRenew() 获取续费模式。<ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
- * @method void setAutoRenew(array $AutoRenew) 设置续费模式。<ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
- * @method string getBillingMode() 获取计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
- * @method void setBillingMode(string $BillingMode) 设置计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+ * @method array getAutoRenew() 获取续费模式。
+- 0：手动续费。
+- 1：自动续费。
+- 2：到期不再续费。
+ * @method void setAutoRenew(array $AutoRenew) 设置续费模式。
+- 0：手动续费。
+- 1：自动续费。
+- 2：到期不再续费。
+ * @method string getBillingMode() 获取计费模式。
+- postpaid：按量计费。
+- prepaid：包年包月。
+ * @method void setBillingMode(string $BillingMode) 设置计费模式。
+- postpaid：按量计费。
+- prepaid：包年包月。
  * @method integer getType() 获取实例类型。
 - 2：Redis 2.8内存版（标准架构）。
 - 3：CKV 3.2内存版（标准架构）。
@@ -82,8 +122,8 @@ use TencentCloud\Common\AbstractModel;
 - 9：Redis 5.0内存版（集群架构）。
 - 15：Redis 6.2内存版（标准架构）。
 - 16：Redis 6.2内存版（集群架构）。
- * @method array getSearchKeys() 获取设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
- * @method void setSearchKeys(array $SearchKeys) 设置设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
+ * @method array getSearchKeys() 获取设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
+ * @method void setSearchKeys(array $SearchKeys) 设置设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
  * @method array getTypeList() 获取内部参数，用户可忽略。
  * @method void setTypeList(array $TypeList) 设置内部参数，用户可忽略。
  * @method string getMonitorVersion() 获取内部参数，用户可忽略。
@@ -92,12 +132,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTags(array $InstanceTags) 设置根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
  * @method array getTagKeys() 获取根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
  * @method void setTagKeys(array $TagKeys) 设置根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
- * @method array getProductVersions() 获取实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cdc：独享集群版。</li></ul>
- * @method void setProductVersions(array $ProductVersions) 设置实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cdc：独享集群版。</li></ul>
+ * @method array getProductVersions() 获取实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
+- local：本地盘版。
+- cdc：独享集群版。
+ * @method void setProductVersions(array $ProductVersions) 设置实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
+- local：本地盘版。
+- cdc：独享集群版。
  * @method array getInstanceIds() 获取批量查询指定的实例 ID，返回结果已 Limit 限制为主。
  * @method void setInstanceIds(array $InstanceIds) 设置批量查询指定的实例 ID，返回结果已 Limit 限制为主。
- * @method string getAzMode() 获取可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
- * @method void setAzMode(string $AzMode) 设置可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+ * @method string getAzMode() 获取可用区模式。
+- singleaz：单可用区。
+- multiaz：多可用区。
+ * @method void setAzMode(string $AzMode) 设置可用区模式。
+- singleaz：单可用区。
+- multiaz：多可用区。
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -119,12 +167,19 @@ class DescribeInstancesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 实例列表排序依据，枚举值如下所示：<ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
+     * @var string 实例列表排序依据，枚举值如下所示：
+- projectId：依据项目ID排序。
+- createtime：依据实例创建时间排序。
+- instancename：依据实例名称排序。
+- type：依据实例类型排序。
+- curDeadline：依据实例到期时间排序。
      */
     public $OrderBy;
 
     /**
-     * @var integer 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
+     * @var integer 实例排序方式，默认为倒序排序。
+- 1：倒序。
+- 0：顺序。
      */
     public $OrderType;
 
@@ -139,7 +194,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var string 设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
+     * @var string 设置模糊查询关键字段，仅实例名称支持模糊查询。
      */
     public $SearchKey;
 
@@ -169,12 +224,20 @@ class DescribeInstancesRequest extends AbstractModel
     public $RegionIds;
 
     /**
-     * @var array 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+     * @var array 实例状态。
+- 0：待初始化。
+- 1：流程中。
+- 2：运行中。
+- -2：已隔离。
+- -3：待删除。
      */
     public $Status;
 
     /**
-     * @var integer 实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
+     * @var integer 实例架构版本。
+- 1：单机版。
+- 2：主从版。
+- 3：集群版。
      */
     public $TypeVersion;
 
@@ -184,12 +247,17 @@ class DescribeInstancesRequest extends AbstractModel
     public $EngineName;
 
     /**
-     * @var array 续费模式。<ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * @var array 续费模式。
+- 0：手动续费。
+- 1：自动续费。
+- 2：到期不再续费。
      */
     public $AutoRenew;
 
     /**
-     * @var string 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+     * @var string 计费模式。
+- postpaid：按量计费。
+- prepaid：包年包月。
      */
     public $BillingMode;
 
@@ -209,7 +277,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var array 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
+     * @var array 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
      */
     public $SearchKeys;
 
@@ -234,7 +302,9 @@ class DescribeInstancesRequest extends AbstractModel
     public $TagKeys;
 
     /**
-     * @var array 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cdc：独享集群版。</li></ul>
+     * @var array 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
+- local：本地盘版。
+- cdc：独享集群版。
      */
     public $ProductVersions;
 
@@ -244,7 +314,9 @@ class DescribeInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+     * @var string 可用区模式。
+- singleaz：单可用区。
+- multiaz：多可用区。
      */
     public $AzMode;
 
@@ -254,21 +326,41 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
 
 
-     * @param string $OrderBy 实例列表排序依据，枚举值如下所示：<ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
-     * @param integer $OrderType 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>
+     * @param string $OrderBy 实例列表排序依据，枚举值如下所示：
+- projectId：依据项目ID排序。
+- createtime：依据实例创建时间排序。
+- instancename：依据实例名称排序。
+- type：依据实例类型排序。
+- curDeadline：依据实例到期时间排序。
+     * @param integer $OrderType 实例排序方式，默认为倒序排序。
+- 1：倒序。
+- 0：顺序。
      * @param array $VpcIds 私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
      * @param array $SubnetIds 私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
-     * @param string $SearchKey 设置模糊查询关键字，支持根据实例名称或实例ID模糊查询实例。
+     * @param string $SearchKey 设置模糊查询关键字段，仅实例名称支持模糊查询。
      * @param array $ProjectIds 项目 ID 组成的数组。
      * @param string $InstanceName 实例名称。
      * @param array $UniqVpcIds 私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
      * @param array $UniqSubnetIds 私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
      * @param array $RegionIds 地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
-     * @param array $Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
-     * @param integer $TypeVersion 实例架构版本。<ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
+     * @param array $Status 实例状态。
+- 0：待初始化。
+- 1：流程中。
+- 2：运行中。
+- -2：已隔离。
+- -3：待删除。
+     * @param integer $TypeVersion 实例架构版本。
+- 1：单机版。
+- 2：主从版。
+- 3：集群版。
      * @param string $EngineName 存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
-     * @param array $AutoRenew 续费模式。<ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
-     * @param string $BillingMode 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+     * @param array $AutoRenew 续费模式。
+- 0：手动续费。
+- 1：自动续费。
+- 2：到期不再续费。
+     * @param string $BillingMode 计费模式。
+- postpaid：按量计费。
+- prepaid：包年包月。
      * @param integer $Type 实例类型。
 - 2：Redis 2.8内存版（标准架构）。
 - 3：CKV 3.2内存版（标准架构）。
@@ -280,14 +372,18 @@ class DescribeInstancesRequest extends AbstractModel
 - 9：Redis 5.0内存版（集群架构）。
 - 15：Redis 6.2内存版（标准架构）。
 - 16：Redis 6.2内存版（集群架构）。
-     * @param array $SearchKeys 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址查询实例。
+     * @param array $SearchKeys 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
      * @param array $TypeList 内部参数，用户可忽略。
      * @param string $MonitorVersion 内部参数，用户可忽略。
      * @param array $InstanceTags 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
      * @param array $TagKeys 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
-     * @param array $ProductVersions 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。<ul><li>local：本地盘版。</li><li>cdc：独享集群版。</li></ul>
+     * @param array $ProductVersions 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
+- local：本地盘版。
+- cdc：独享集群版。
      * @param array $InstanceIds 批量查询指定的实例 ID，返回结果已 Limit 限制为主。
-     * @param string $AzMode 可用区模式。<ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+     * @param string $AzMode 可用区模式。
+- singleaz：单可用区。
+- multiaz：多可用区。
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFlowIds() 获取多个合同ID
  * @method void setFlowIds(array $FlowIds) 设置多个合同ID
- * @method array getCustomerData() 获取业务信息，限制1024字符
- * @method void setCustomerData(array $CustomerData) 设置业务信息，限制1024字符
+ * @method array getCustomerData() 获取第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
+ * @method void setCustomerData(array $CustomerData) 设置第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
  * @method array getErrorMessages() 获取创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
  * @method void setErrorMessages(array $ErrorMessages) 设置创建消息，对应多个合同ID，
@@ -45,7 +45,7 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
     public $FlowIds;
 
     /**
-     * @var array 业务信息，限制1024字符
+     * @var array 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
      */
     public $CustomerData;
 
@@ -73,7 +73,7 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
 
     /**
      * @param array $FlowIds 多个合同ID
-     * @param array $CustomerData 业务信息，限制1024字符
+     * @param array $CustomerData 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
      * @param array $ErrorMessages 创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
      * @param array $PreviewUrls 预览模式下返回的预览文件url数组

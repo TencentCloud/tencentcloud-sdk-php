@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtParams(array $ExtParams) 设置额外参数（传递调用方信息）
  * @method boolean getIgnoreTemp() 获取是否过滤临时表,默认true
  * @method void setIgnoreTemp(boolean $IgnoreTemp) 设置是否过滤临时表,默认true
+ * @method boolean getRecursiveSecond() 获取是否递归查询二级节点数目，默认为true
+ * @method void setRecursiveSecond(boolean $RecursiveSecond) 设置是否递归查询二级节点数目，默认为true
  */
 class DescribeTableLineageRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeTableLineageRequest extends AbstractModel
     public $IgnoreTemp;
 
     /**
+     * @var boolean 是否递归查询二级节点数目，默认为true
+     */
+    public $RecursiveSecond;
+
+    /**
      * @param string $Direction 查询方向，INPUT,OUTPUT,BOTH枚举值
      * @param TableLineageInfo $Data 表信息
      * @param integer $InputDepth 单次查询入度,默认 1
      * @param integer $OutputDepth 单次查询出度,默认 1
      * @param array $ExtParams 额外参数（传递调用方信息）
      * @param boolean $IgnoreTemp 是否过滤临时表,默认true
+     * @param boolean $RecursiveSecond 是否递归查询二级节点数目，默认为true
      */
     function __construct()
     {
@@ -114,6 +122,10 @@ class DescribeTableLineageRequest extends AbstractModel
 
         if (array_key_exists("IgnoreTemp",$param) and $param["IgnoreTemp"] !== null) {
             $this->IgnoreTemp = $param["IgnoreTemp"];
+        }
+
+        if (array_key_exists("RecursiveSecond",$param) and $param["RecursiveSecond"] !== null) {
+            $this->RecursiveSecond = $param["RecursiveSecond"];
         }
     }
 }

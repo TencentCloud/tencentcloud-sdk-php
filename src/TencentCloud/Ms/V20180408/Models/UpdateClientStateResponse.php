@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Ms\V20180408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSchemeUrl返回参数结构体
+ * UpdateClientState返回参数结构体
  *
- * @method string getSchemeUrl() 获取小程序链接地址，有效期30天
- * @method void setSchemeUrl(string $SchemeUrl) 设置小程序链接地址，有效期30天
+ * @method string getResultCode() 获取返回值
+ * @method void setResultCode(string $ResultCode) 设置返回值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSchemeUrlResponse extends AbstractModel
+class UpdateClientStateResponse extends AbstractModel
 {
     /**
-     * @var string 小程序链接地址，有效期30天
+     * @var string 返回值
      */
-    public $SchemeUrl;
+    public $ResultCode;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateSchemeUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SchemeUrl 小程序链接地址，有效期30天
+     * @param string $ResultCode 返回值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateSchemeUrlResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SchemeUrl",$param) and $param["SchemeUrl"] !== null) {
-            $this->SchemeUrl = $param["SchemeUrl"];
+        if (array_key_exists("ResultCode",$param) and $param["ResultCode"] !== null) {
+            $this->ResultCode = $param["ResultCode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

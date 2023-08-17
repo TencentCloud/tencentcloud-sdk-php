@@ -42,10 +42,12 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method string getIntentionVerifyText() 获取意愿核身（朗读模式）使用的文案，若未使用意愿核身（朗读模式），则该字段无需传入。默认为空，最长可接受120的字符串长度。
  * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置意愿核身（朗读模式）使用的文案，若未使用意愿核身（朗读模式），则该字段无需传入。默认为空，最长可接受120的字符串长度。
- * @method array getIntentionQuestions() 获取意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
- * @method void setIntentionQuestions(array $IntentionQuestions) 设置意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
+ * @method array getIntentionQuestions() 获取意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
+ * @method void setIntentionQuestions(array $IntentionQuestions) 设置意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
  * @method RuleIdConfig getConfig() 获取RuleId相关配置
  * @method void setConfig(RuleIdConfig $Config) 设置RuleId相关配置
+ * @method array getIntentionActions() 获取意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+ * @method void setIntentionActions(array $IntentionActions) 设置意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
  */
 class DetectAuthRequest extends AbstractModel
 {
@@ -97,7 +99,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     public $IntentionVerifyText;
 
     /**
-     * @var array 意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
+     * @var array 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
      */
     public $IntentionQuestions;
 
@@ -105,6 +107,11 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
      * @var RuleIdConfig RuleId相关配置
      */
     public $Config;
+
+    /**
+     * @var array 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+     */
+    public $IntentionActions;
 
     /**
      * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
@@ -118,8 +125,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      * @param string $IntentionVerifyText 意愿核身（朗读模式）使用的文案，若未使用意愿核身（朗读模式），则该字段无需传入。默认为空，最长可接受120的字符串长度。
-     * @param array $IntentionQuestions 意愿核身（问答模式）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持一个播报文本+回答文本。
+     * @param array $IntentionQuestions 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
      * @param RuleIdConfig $Config RuleId相关配置
+     * @param array $IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
      */
     function __construct()
     {
@@ -183,6 +191,15 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = new RuleIdConfig();
             $this->Config->deserialize($param["Config"]);
+        }
+
+        if (array_key_exists("IntentionActions",$param) and $param["IntentionActions"] !== null) {
+            $this->IntentionActions = [];
+            foreach ($param["IntentionActions"] as $key => $value){
+                $obj = new IntentionActionConfig();
+                $obj->deserialize($value);
+                array_push($this->IntentionActions, $obj);
+            }
         }
     }
 }

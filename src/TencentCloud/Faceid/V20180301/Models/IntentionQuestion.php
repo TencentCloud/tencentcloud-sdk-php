@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 意愿核身过程中播报的问题文本、用户回答的标准文本。
  *
- * @method string getQuestion() 获取系统播报的问题文本，问题最大长度为150个字符。
- * @method void setQuestion(string $Question) 设置系统播报的问题文本，问题最大长度为150个字符。
- * @method array getAnswers() 获取用户答案的标准文本列表，用于识别用户回答的语音与标准文本是否一致。列表长度最大为50，单个答案长度限制10个字符。
- * @method void setAnswers(array $Answers) 设置用户答案的标准文本列表，用于识别用户回答的语音与标准文本是否一致。列表长度最大为50，单个答案长度限制10个字符。
+ * @method string getQuestion() 获取当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+ * @method void setQuestion(string $Question) 设置当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+ * @method array getAnswers() 获取当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表，传入后可自动判断用户回答文本是否在标准文本列表中。列表长度最大为50，单个答案长度限制10个字符。
+ * @method void setAnswers(array $Answers) 设置当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表，传入后可自动判断用户回答文本是否在标准文本列表中。列表长度最大为50，单个答案长度限制10个字符。
  */
 class IntentionQuestion extends AbstractModel
 {
     /**
-     * @var string 系统播报的问题文本，问题最大长度为150个字符。
+     * @var string 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
      */
     public $Question;
 
     /**
-     * @var array 用户答案的标准文本列表，用于识别用户回答的语音与标准文本是否一致。列表长度最大为50，单个答案长度限制10个字符。
+     * @var array 当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表，传入后可自动判断用户回答文本是否在标准文本列表中。列表长度最大为50，单个答案长度限制10个字符。
      */
     public $Answers;
 
     /**
-     * @param string $Question 系统播报的问题文本，问题最大长度为150个字符。
-     * @param array $Answers 用户答案的标准文本列表，用于识别用户回答的语音与标准文本是否一致。列表长度最大为50，单个答案长度限制10个字符。
+     * @param string $Question 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+     * @param array $Answers 当选择语音问答模式时，用于判断用户回答是否通过的标准答案列表，传入后可自动判断用户回答文本是否在标准文本列表中。列表长度最大为50，单个答案长度限制10个字符。
      */
     function __construct()
     {

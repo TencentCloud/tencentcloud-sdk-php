@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(integer $UpdatedAt) 设置云存套餐更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPackageId() 获取套餐id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPackageId(string $PackageId) 设置套餐id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrderId() 获取订单id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrderId(string $OrderId) 设置订单id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PackageInfo extends AbstractModel
 {
@@ -75,6 +83,18 @@ class PackageInfo extends AbstractModel
     public $UpdatedAt;
 
     /**
+     * @var string 套餐id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PackageId;
+
+    /**
+     * @var string 订单id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrderId;
+
+    /**
      * @param integer $Status 云存开启状态，0为未开启，2为正在生效，1为已过期
 注：这里只返回状态为0的数据
      * @param integer $CSType 云存类型，1为全时云存，2为事件云存
@@ -83,6 +103,10 @@ class PackageInfo extends AbstractModel
      * @param integer $CreatedAt 云存套餐创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdatedAt 云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PackageId 套餐id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrderId 订单id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -120,6 +144,14 @@ class PackageInfo extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
+            $this->PackageId = $param["PackageId"];
+        }
+
+        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
+            $this->OrderId = $param["OrderId"];
         }
     }
 }

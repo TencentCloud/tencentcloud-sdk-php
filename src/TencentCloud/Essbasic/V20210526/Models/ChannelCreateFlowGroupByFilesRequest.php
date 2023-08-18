@@ -34,6 +34,8 @@ MobileCheck：手机号验证
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
 参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+ * @method FlowGroupOptions getFlowGroupOptions() 获取合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+ * @method void setFlowGroupOptions(FlowGroupOptions $FlowGroupOptions) 设置合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
  * @method UserInfo getOperator() 获取操作者的信息，此参数不用传
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息，此参数不用传
  */
@@ -63,6 +65,11 @@ MobileCheck：手机号验证
     public $ApproverVerifyType;
 
     /**
+     * @var FlowGroupOptions 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
+     */
+    public $FlowGroupOptions;
+
+    /**
      * @var UserInfo 操作者的信息，此参数不用传
      * @deprecated
      */
@@ -76,6 +83,7 @@ MobileCheck：手机号验证
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
 参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+     * @param FlowGroupOptions $FlowGroupOptions 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
      * @param UserInfo $Operator 操作者的信息，此参数不用传
      */
     function __construct()
@@ -111,6 +119,11 @@ MobileCheck：手机号验证
 
         if (array_key_exists("ApproverVerifyType",$param) and $param["ApproverVerifyType"] !== null) {
             $this->ApproverVerifyType = $param["ApproverVerifyType"];
+        }
+
+        if (array_key_exists("FlowGroupOptions",$param) and $param["FlowGroupOptions"] !== null) {
+            $this->FlowGroupOptions = new FlowGroupOptions();
+            $this->FlowGroupOptions->deserialize($param["FlowGroupOptions"]);
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdExtInfo(string $StdExtInfo) 设置转码扩展字段。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAddOnSubtitles() 获取要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) 设置要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
@@ -111,6 +115,12 @@ class OverrideTranscodeParameter extends AbstractModel
     public $StdExtInfo;
 
     /**
+     * @var array 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AddOnSubtitles;
+
+    /**
      * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @param integer $RemoveVideo 是否去除视频数据，取值：
 <li>0：保留；</li>
@@ -127,6 +137,8 @@ class OverrideTranscodeParameter extends AbstractModel
      * @param array $AddonAudioStream 外挂音轨参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdExtInfo 转码扩展字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AddOnSubtitles 要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -185,6 +197,15 @@ class OverrideTranscodeParameter extends AbstractModel
 
         if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
             $this->StdExtInfo = $param["StdExtInfo"];
+        }
+
+        if (array_key_exists("AddOnSubtitles",$param) and $param["AddOnSubtitles"] !== null) {
+            $this->AddOnSubtitles = [];
+            foreach ($param["AddOnSubtitles"] as $key => $value){
+                $obj = new AddOnSubtitle();
+                $obj->deserialize($value);
+                array_push($this->AddOnSubtitles, $obj);
+            }
         }
     }
 }

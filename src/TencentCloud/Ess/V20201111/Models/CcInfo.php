@@ -29,29 +29,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置被抄送方姓名。
 抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
  * @method integer getCcType() 获取被抄送方类型, 可设置以下类型:
-
-- 0:个人抄送方
-- 1:企业员工抄送方
+<ul><li> **0** :个人抄送方</li>
+<li> **1** :企业员工抄送方</li></ul>
  * @method void setCcType(integer $CcType) 设置被抄送方类型, 可设置以下类型:
-
-- 0:个人抄送方
-- 1:企业员工抄送方
+<ul><li> **0** :个人抄送方</li>
+<li> **1** :企业员工抄送方</li></ul>
  * @method integer getCcPermission() 获取被抄送方权限, 可设置如下权限:
-
-- 0:可查看合同内容
-- 1:可查看合同内容也可下载原文
+<ul><li> **0** :可查看合同内容</li>
+<li> **1** :可查看合同内容也可下载原文</li></ul>
  * @method void setCcPermission(integer $CcPermission) 设置被抄送方权限, 可设置如下权限:
-
-- 0:可查看合同内容
-- 1:可查看合同内容也可下载原文
+<ul><li> **0** :可查看合同内容</li>
+<li> **1** :可查看合同内容也可下载原文</li></ul>
  * @method string getNotifyType() 获取通知签署方经办人的方式,  有以下途径:
-
-- sms:  (默认)短信 
-- none: 不通知
+<ul><li> **sms** :  (默认)短信</li>
+<li> **none** : 不通知</li></ul>
  * @method void setNotifyType(string $NotifyType) 设置通知签署方经办人的方式,  有以下途径:
-
-- sms:  (默认)短信 
-- none: 不通知
+<ul><li> **sms** :  (默认)短信</li>
+<li> **none** : 不通知</li></ul>
  */
 class CcInfo extends AbstractModel
 {
@@ -69,25 +63,22 @@ class CcInfo extends AbstractModel
 
     /**
      * @var integer 被抄送方类型, 可设置以下类型:
-
-- 0:个人抄送方
-- 1:企业员工抄送方
+<ul><li> **0** :个人抄送方</li>
+<li> **1** :企业员工抄送方</li></ul>
      */
     public $CcType;
 
     /**
      * @var integer 被抄送方权限, 可设置如下权限:
-
-- 0:可查看合同内容
-- 1:可查看合同内容也可下载原文
+<ul><li> **0** :可查看合同内容</li>
+<li> **1** :可查看合同内容也可下载原文</li></ul>
      */
     public $CcPermission;
 
     /**
      * @var string 通知签署方经办人的方式,  有以下途径:
-
-- sms:  (默认)短信 
-- none: 不通知
+<ul><li> **sms** :  (默认)短信</li>
+<li> **none** : 不通知</li></ul>
      */
     public $NotifyType;
 
@@ -97,17 +88,14 @@ class CcInfo extends AbstractModel
      * @param string $Name 被抄送方姓名。
 抄送方的姓名将用于身份认证，请确保填写的姓名为抄送方的真实姓名，而非昵称等代名。
      * @param integer $CcType 被抄送方类型, 可设置以下类型:
-
-- 0:个人抄送方
-- 1:企业员工抄送方
+<ul><li> **0** :个人抄送方</li>
+<li> **1** :企业员工抄送方</li></ul>
      * @param integer $CcPermission 被抄送方权限, 可设置如下权限:
-
-- 0:可查看合同内容
-- 1:可查看合同内容也可下载原文
+<ul><li> **0** :可查看合同内容</li>
+<li> **1** :可查看合同内容也可下载原文</li></ul>
      * @param string $NotifyType 通知签署方经办人的方式,  有以下途径:
-
-- sms:  (默认)短信 
-- none: 不通知
+<ul><li> **sms** :  (默认)短信</li>
+<li> **none** : 不通知</li></ul>
      */
     function __construct()
     {

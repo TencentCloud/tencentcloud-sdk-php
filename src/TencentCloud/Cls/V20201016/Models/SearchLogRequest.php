@@ -34,11 +34,11 @@ use TencentCloud\Common\AbstractModel;
 - 如需同时检索多个日志主题，请使用Topics参数。
  * @method void setTopicId(string $TopicId) 设置- 要检索分析的日志主题ID，仅能指定一个日志主题。
 - 如需同时检索多个日志主题，请使用Topics参数。
- * @method integer getLimit() 获取表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+ * @method integer getLimit() 获取表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
- * @method void setLimit(integer $Limit) 设置表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+ * @method void setLimit(integer $Limit) 设置表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
@@ -115,7 +115,7 @@ class SearchLogRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var integer 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+     * @var integer 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
@@ -177,7 +177,7 @@ class SearchLogRequest extends AbstractModel
 使用*或空字符串可查询所有日志
      * @param string $TopicId - 要检索分析的日志主题ID，仅能指定一个日志主题。
 - 如需同时检索多个日志主题，请使用Topics参数。
-     * @param integer $Limit 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
+     * @param integer $Limit 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
 * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>

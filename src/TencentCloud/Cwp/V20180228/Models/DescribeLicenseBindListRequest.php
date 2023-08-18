@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseType(integer $LicenseType) 设置授权类型
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method array getFilters() 获取<li>Keywords 机器别名/公私IP 模糊查询</li>
- * @method void setFilters(array $Filters) 设置<li>Keywords 机器别名/公私IP 模糊查询</li>
+ * @method array getFilters() 获取<li>InstanceID、IP、
+
+MachineName 模糊查询</li>
+ * @method void setFilters(array $Filters) 设置<li>InstanceID、IP、
+
+MachineName 模糊查询</li>
  * @method integer getLimit() 获取限制条数,默认10.
  * @method void setLimit(integer $Limit) 设置限制条数,默认10.
  * @method integer getOffset() 获取偏移量,默认0.
@@ -51,7 +55,9 @@ class DescribeLicenseBindListRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var array <li>Keywords 机器别名/公私IP 模糊查询</li>
+     * @var array <li>InstanceID、IP、
+
+MachineName 模糊查询</li>
      */
     public $Filters;
 
@@ -69,7 +75,9 @@ class DescribeLicenseBindListRequest extends AbstractModel
      * @param integer $LicenseId 授权ID
      * @param integer $LicenseType 授权类型
      * @param string $ResourceId 资源ID
-     * @param array $Filters <li>Keywords 机器别名/公私IP 模糊查询</li>
+     * @param array $Filters <li>InstanceID、IP、
+
+MachineName 模糊查询</li>
      * @param integer $Limit 限制条数,默认10.
      * @param integer $Offset 偏移量,默认0.
      */

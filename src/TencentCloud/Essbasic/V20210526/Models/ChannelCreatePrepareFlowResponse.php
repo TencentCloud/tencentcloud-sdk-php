@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreatePrepareFlow返回参数结构体
  *
- * @method string getPrepareFlowUrl() 获取预发起的合同链接
- * @method void setPrepareFlowUrl(string $PrepareFlowUrl) 设置预发起的合同链接
- * @method string getPreviewFlowUrl() 获取合同发起后预览链接
- * @method void setPreviewFlowUrl(string $PreviewFlowUrl) 设置合同发起后预览链接
+ * @method string getPrepareFlowUrl() 获取预发起的合同链接， 可以直接点击进入进行合同发起
+ * @method void setPrepareFlowUrl(string $PrepareFlowUrl) 设置预发起的合同链接， 可以直接点击进入进行合同发起
+ * @method string getPreviewFlowUrl() 获取合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
+ * @method void setPreviewFlowUrl(string $PreviewFlowUrl) 设置合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreatePrepareFlowResponse extends AbstractModel
 {
     /**
-     * @var string 预发起的合同链接
+     * @var string 预发起的合同链接， 可以直接点击进入进行合同发起
      */
     public $PrepareFlowUrl;
 
     /**
-     * @var string 合同发起后预览链接
+     * @var string 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
      */
     public $PreviewFlowUrl;
 
@@ -45,8 +45,8 @@ class ChannelCreatePrepareFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PrepareFlowUrl 预发起的合同链接
-     * @param string $PreviewFlowUrl 合同发起后预览链接
+     * @param string $PrepareFlowUrl 预发起的合同链接， 可以直接点击进入进行合同发起
+     * @param string $PreviewFlowUrl 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

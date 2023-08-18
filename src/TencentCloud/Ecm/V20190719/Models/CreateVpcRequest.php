@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method string getDescription() 获取描述信息
  * @method void setDescription(string $Description) 设置描述信息
+ * @method array getISPTypes() 获取网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+ * @method void setISPTypes(array $ISPTypes) 设置网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
  */
 class CreateVpcRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateVpcRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+     */
+    public $ISPTypes;
+
+    /**
      * @param string $VpcName vpc名称，最大长度不能超过60个字节。
      * @param string $CidrBlock vpc的cidr，只能为10.*.0.0/16，172.[16-31].0.0/16，192.168.0.0/16这三个内网网段内。
      * @param string $EcmRegion ECM 地域
@@ -88,6 +95,7 @@ class CreateVpcRequest extends AbstractModel
      * @param string $DomainName 域名，暂不支持
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      * @param string $Description 描述信息
+     * @param array $ISPTypes 网络运营商类型 取值范围:'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
      */
     function __construct()
     {
@@ -137,6 +145,15 @@ class CreateVpcRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ISPTypes",$param) and $param["ISPTypes"] !== null) {
+            $this->ISPTypes = [];
+            foreach ($param["ISPTypes"] as $key => $value){
+                $obj = new ISPTypeItem();
+                $obj->deserialize($value);
+                array_push($this->ISPTypes, $obj);
+            }
         }
     }
 }

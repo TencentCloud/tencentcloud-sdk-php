@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * AWS S3 输出位置
  *
  * @method string getS3Bucket() 获取S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3Bucket(string $S3Bucket) 设置S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3Region() 获取S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3Region(string $S3Region) 设置S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3SecretId() 获取AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3SecretId(string $S3SecretId) 设置AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3SecretKey() 获取AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3SecretKey(string $S3SecretKey) 设置AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class S3OutputStorage extends AbstractModel
 {
     /**
      * @var string S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3Bucket;
 
     /**
      * @var string S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3Region;
 
     /**
      * @var string AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3SecretId;
 
     /**
      * @var string AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3SecretKey;
 
     /**
      * @param string $S3Bucket S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3Region S3 bucket 对应的区域。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3SecretId AWS 内网上传 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3SecretKey AWS 内网上传 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

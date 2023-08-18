@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据库表名
+ * DeleteUser请求参数结构体
  *
- * @method string getDatabaseName() 获取数据库表名
- * @method void setDatabaseName(string $DatabaseName) 设置数据库表名
+ * @method string getUserId() 获取待删除用户的ID
+ * @method void setUserId(string $UserId) 设置待删除用户的ID
  */
-class DatabaseName extends AbstractModel
+class DeleteUserRequest extends AbstractModel
 {
     /**
-     * @var string 数据库表名
+     * @var string 待删除用户的ID
      */
-    public $DatabaseName;
+    public $UserId;
 
     /**
-     * @param string $DatabaseName 数据库表名
+     * @param string $UserId 待删除用户的ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DatabaseName extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
-            $this->DatabaseName = $param["DatabaseName"];
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

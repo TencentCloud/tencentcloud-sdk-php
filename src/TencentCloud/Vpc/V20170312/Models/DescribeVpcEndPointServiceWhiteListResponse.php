@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcEndPointServiceWhiteList返回参数结构体
  *
- * @method array getVpcEndpointServiceUserSet() 获取白名单对象数组。
- * @method void setVpcEndpointServiceUserSet(array $VpcEndpointServiceUserSet) 设置白名单对象数组。
+ * @method array getVpcEndpointServiceUserSet() 获取白名单对象数组。已废弃
+ * @method void setVpcEndpointServiceUserSet(array $VpcEndpointServiceUserSet) 设置白名单对象数组。已废弃
+ * @method array getVpcEndPointServiceUserSet() 获取白名单对象数组。
+ * @method void setVpcEndPointServiceUserSet(array $VpcEndPointServiceUserSet) 设置白名单对象数组。
  * @method integer getTotalCount() 获取符合条件的白名单个数。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的白名单个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,9 +32,14 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel
 {
     /**
-     * @var array 白名单对象数组。
+     * @var array 白名单对象数组。已废弃
      */
     public $VpcEndpointServiceUserSet;
+
+    /**
+     * @var array 白名单对象数组。
+     */
+    public $VpcEndPointServiceUserSet;
 
     /**
      * @var integer 符合条件的白名单个数。
@@ -45,7 +52,8 @@ class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $VpcEndpointServiceUserSet 白名单对象数组。
+     * @param array $VpcEndpointServiceUserSet 白名单对象数组。已废弃
+     * @param array $VpcEndPointServiceUserSet 白名单对象数组。
      * @param integer $TotalCount 符合条件的白名单个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -68,6 +76,15 @@ class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel
                 $obj = new VpcEndPointServiceUser();
                 $obj->deserialize($value);
                 array_push($this->VpcEndpointServiceUserSet, $obj);
+            }
+        }
+
+        if (array_key_exists("VpcEndPointServiceUserSet",$param) and $param["VpcEndPointServiceUserSet"] !== null) {
+            $this->VpcEndPointServiceUserSet = [];
+            foreach ($param["VpcEndPointServiceUserSet"] as $key => $value){
+                $obj = new VpcEndPointServiceUser();
+                $obj->deserialize($value);
+                array_push($this->VpcEndPointServiceUserSet, $obj);
             }
         }
 

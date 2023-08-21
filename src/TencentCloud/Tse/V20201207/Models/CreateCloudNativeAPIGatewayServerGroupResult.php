@@ -14,47 +14,55 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 启发式自定义时间缓存配置
+ * 创建网关分组信息
  *
- * @method string getHeuristicCacheTimeSwitch() 获取启发式自定义时间缓存配置开关，取值有：
-on：开启
-off：关闭
+ * @method string getGatewayId() 获取网关实例id
+ * @method void setGatewayId(string $GatewayId) 设置网关实例id
+ * @method string getGroupId() 获取分组id
+ * @method void setGroupId(string $GroupId) 设置分组id
+ * @method string getStatus() 获取状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) 设置启发式自定义时间缓存配置开关，取值有：
-on：开启
-off：关闭
+ * @method void setStatus(string $Status) 设置状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeuristicCacheTime() 获取单位 秒.
+ * @method string getTaskId() 获取任务ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) 设置单位 秒.
+ * @method void setTaskId(string $TaskId) 设置任务ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class CacheConfig extends AbstractModel
+class CreateCloudNativeAPIGatewayServerGroupResult extends AbstractModel
 {
     /**
-     * @var string 启发式自定义时间缓存配置开关，取值有：
-on：开启
-off：关闭
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 网关实例id
      */
-    public $HeuristicCacheTimeSwitch;
+    public $GatewayId;
 
     /**
-     * @var integer 单位 秒.
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 分组id
      */
-    public $HeuristicCacheTime;
+    public $GroupId;
 
     /**
-     * @param string $HeuristicCacheTimeSwitch 启发式自定义时间缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @var string 状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HeuristicCacheTime 单位 秒.
+     */
+    public $Status;
+
+    /**
+     * @var string 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskId;
+
+    /**
+     * @param string $GatewayId 网关实例id
+     * @param string $GroupId 分组id
+     * @param string $Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,12 +78,20 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HeuristicCacheTimeSwitch",$param) and $param["HeuristicCacheTimeSwitch"] !== null) {
-            $this->HeuristicCacheTimeSwitch = $param["HeuristicCacheTimeSwitch"];
+        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
+            $this->GatewayId = $param["GatewayId"];
         }
 
-        if (array_key_exists("HeuristicCacheTime",$param) and $param["HeuristicCacheTime"] !== null) {
-            $this->HeuristicCacheTime = $param["HeuristicCacheTime"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

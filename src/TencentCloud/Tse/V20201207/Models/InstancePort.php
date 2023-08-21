@@ -14,47 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 启发式自定义时间缓存配置
+ * 实例监听端口信息
  *
- * @method string getHeuristicCacheTimeSwitch() 获取启发式自定义时间缓存配置开关，取值有：
-on：开启
-off：关闭
+ * @method string getHttpPort() 获取监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeuristicCacheTimeSwitch(string $HeuristicCacheTimeSwitch) 设置启发式自定义时间缓存配置开关，取值有：
-on：开启
-off：关闭
+ * @method void setHttpPort(string $HttpPort) 设置监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeuristicCacheTime() 获取单位 秒.
+ * @method string getHttpsPort() 获取监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeuristicCacheTime(integer $HeuristicCacheTime) 设置单位 秒.
+ * @method void setHttpsPort(string $HttpsPort) 设置监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class CacheConfig extends AbstractModel
+class InstancePort extends AbstractModel
 {
     /**
-     * @var string 启发式自定义时间缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @var string 监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $HeuristicCacheTimeSwitch;
+    public $HttpPort;
 
     /**
-     * @var integer 单位 秒.
+     * @var string 监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $HeuristicCacheTime;
+    public $HttpsPort;
 
     /**
-     * @param string $HeuristicCacheTimeSwitch 启发式自定义时间缓存配置开关，取值有：
-on：开启
-off：关闭
+     * @param string $HttpPort 监听的 http 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HeuristicCacheTime 单位 秒.
+     * @param string $HttpsPort 监听的 https 端口范围。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,12 +62,12 @@ off：关闭
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HeuristicCacheTimeSwitch",$param) and $param["HeuristicCacheTimeSwitch"] !== null) {
-            $this->HeuristicCacheTimeSwitch = $param["HeuristicCacheTimeSwitch"];
+        if (array_key_exists("HttpPort",$param) and $param["HttpPort"] !== null) {
+            $this->HttpPort = $param["HttpPort"];
         }
 
-        if (array_key_exists("HeuristicCacheTime",$param) and $param["HeuristicCacheTime"] !== null) {
-            $this->HeuristicCacheTime = $param["HeuristicCacheTime"];
+        if (array_key_exists("HttpsPort",$param) and $param["HttpsPort"] !== null) {
+            $this->HttpsPort = $param["HttpsPort"];
         }
     }
 }

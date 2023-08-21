@@ -20,10 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIntegrationDepartment请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息，UserId必填且需拥有组织架构管理权限
- * @method void setOperator(UserInfo $Operator) 设置操作人信息，UserId必填且需拥有组织架构管理权限
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
  * @method string getDeptName() 获取部门名称，不超过50个字符
  * @method void setDeptName(string $DeptName) 设置部门名称，不超过50个字符
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method string getParentDeptId() 获取电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
  * @method void setParentDeptId(string $ParentDeptId) 设置电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
  * @method string getParentDeptOpenId() 获取第三方平台中父部门ID,与ParentDeptId二选一,优先ParentDeptId,都为空时自动填充至根节点下
@@ -36,7 +42,8 @@ use TencentCloud\Common\AbstractModel;
 class CreateIntegrationDepartmentRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息，UserId必填且需拥有组织架构管理权限
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
@@ -44,6 +51,12 @@ class CreateIntegrationDepartmentRequest extends AbstractModel
      * @var string 部门名称，不超过50个字符
      */
     public $DeptName;
+
+    /**
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public $Agent;
 
     /**
      * @var string 电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
@@ -66,8 +79,11 @@ class CreateIntegrationDepartmentRequest extends AbstractModel
     public $OrderNo;
 
     /**
-     * @param UserInfo $Operator 操作人信息，UserId必填且需拥有组织架构管理权限
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
      * @param string $DeptName 部门名称，不超过50个字符
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param string $ParentDeptId 电子签父部门ID，与ParentDeptOpenId二选一,优先ParentDeptId,都为空时自动填充至根节点下
      * @param string $ParentDeptOpenId 第三方平台中父部门ID,与ParentDeptId二选一,优先ParentDeptId,都为空时自动填充至根节点下
      * @param string $DeptOpenId 客户系统部门ID，不超过64个字符
@@ -93,6 +109,11 @@ class CreateIntegrationDepartmentRequest extends AbstractModel
 
         if (array_key_exists("DeptName",$param) and $param["DeptName"] !== null) {
             $this->DeptName = $param["DeptName"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
 
         if (array_key_exists("ParentDeptId",$param) and $param["ParentDeptId"] !== null) {

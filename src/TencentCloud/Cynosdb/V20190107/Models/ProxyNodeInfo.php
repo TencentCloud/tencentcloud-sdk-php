@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
+ * @method string getOssProxyNodeName() 获取数据库代理节点名字
+ * @method void setOssProxyNodeName(string $OssProxyNodeName) 设置数据库代理节点名字
  */
 class ProxyNodeInfo extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ProxyNodeInfo extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 数据库代理节点名字
+     */
+    public $OssProxyNodeName;
+
+    /**
      * @param string $ProxyNodeId 数据库代理节点ID
      * @param integer $ProxyNodeConnections 节点当前连接数, DescribeProxyNodes接口此字段值不返回
      * @param integer $Cpu 数据库代理节点cpu
@@ -104,6 +111,7 @@ class ProxyNodeInfo extends AbstractModel
      * @param integer $AppId 用户AppID
      * @param string $Region 地域
      * @param string $Zone 可用区
+     * @param string $OssProxyNodeName 数据库代理节点名字
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ProxyNodeInfo extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("OssProxyNodeName",$param) and $param["OssProxyNodeName"] !== null) {
+            $this->OssProxyNodeName = $param["OssProxyNodeName"];
         }
     }
 }

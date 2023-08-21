@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyLegalName(string $ProxyLegalName) 设置第三方平台子客企业法人/负责人姓名
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
+ * @method string getProxyLegalIdCardType() 获取第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+ * @method void setProxyLegalIdCardType(string $ProxyLegalIdCardType) 设置第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+ * @method string getProxyLegalIdCardNumber() 获取第三方平台子客企业法人/负责人证件号
+ * @method void setProxyLegalIdCardNumber(string $ProxyLegalIdCardNumber) 设置第三方平台子客企业法人/负责人证件号
  */
 class SyncProxyOrganizationRequest extends AbstractModel
 {
@@ -70,6 +74,16 @@ class SyncProxyOrganizationRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+     */
+    public $ProxyLegalIdCardType;
+
+    /**
+     * @var string 第三方平台子客企业法人/负责人证件号
+     */
+    public $ProxyLegalIdCardNumber;
+
+    /**
      * @param Agent $Agent 应用信息
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
      * @param string $ProxyOrganizationName 第三方平台子客企业名称，最大长度64个字符
@@ -77,6 +91,8 @@ class SyncProxyOrganizationRequest extends AbstractModel
      * @param string $UniformSocialCreditCode 第三方平台子客企业统一社会信用代码，最大长度200个字符
      * @param string $ProxyLegalName 第三方平台子客企业法人/负责人姓名
      * @param UserInfo $Operator 暂未开放
+     * @param string $ProxyLegalIdCardType 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+     * @param string $ProxyLegalIdCardNumber 第三方平台子客企业法人/负责人证件号
      */
     function __construct()
     {
@@ -115,6 +131,14 @@ class SyncProxyOrganizationRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("ProxyLegalIdCardType",$param) and $param["ProxyLegalIdCardType"] !== null) {
+            $this->ProxyLegalIdCardType = $param["ProxyLegalIdCardType"];
+        }
+
+        if (array_key_exists("ProxyLegalIdCardNumber",$param) and $param["ProxyLegalIdCardNumber"] !== null) {
+            $this->ProxyLegalIdCardNumber = $param["ProxyLegalIdCardNumber"];
         }
     }
 }

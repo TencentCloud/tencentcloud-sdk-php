@@ -57,11 +57,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSignComponents() 获取合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul>
+<li> 骑缝章等签署控件</li></ul>
  * @method void setSignComponents(array $SignComponents) 设置合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul>
+<li> 骑缝章等签署控件</li></ul>
  * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD 居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
@@ -220,7 +220,7 @@ class ApproverInfo extends AbstractModel
      * @var array 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul>
+<li> 骑缝章等签署控件</li></ul>
      */
     public $SignComponents;
 
@@ -356,7 +356,7 @@ class ApproverInfo extends AbstractModel
      * @param array $SignComponents 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
-<li> 骑缝章等签署控件</li><ul>
+<li> 骑缝章等签署控件</li></ul>
      * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD 居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>

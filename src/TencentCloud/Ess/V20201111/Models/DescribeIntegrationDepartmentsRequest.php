@@ -20,10 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrationDepartments请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息，UserId必填且需拥有组织架构管理权限
- * @method void setOperator(UserInfo $Operator) 设置操作人信息，UserId必填且需拥有组织架构管理权限
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
  * @method integer getQueryType() 获取查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
  * @method void setQueryType(integer $QueryType) 设置查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method string getDeptId() 获取部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
  * @method void setDeptId(string $DeptId) 设置部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
  * @method string getDeptOpenId() 获取客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
@@ -32,7 +38,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIntegrationDepartmentsRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息，UserId必填且需拥有组织架构管理权限
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
@@ -40,6 +47,12 @@ class DescribeIntegrationDepartmentsRequest extends AbstractModel
      * @var integer 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
      */
     public $QueryType;
+
+    /**
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public $Agent;
 
     /**
      * @var string 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
@@ -52,8 +65,11 @@ class DescribeIntegrationDepartmentsRequest extends AbstractModel
     public $DeptOpenId;
 
     /**
-     * @param UserInfo $Operator 操作人信息，UserId必填且需拥有组织架构管理权限
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
      * @param integer $QueryType 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param string $DeptId 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
      * @param string $DeptOpenId 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
      */
@@ -77,6 +93,11 @@ class DescribeIntegrationDepartmentsRequest extends AbstractModel
 
         if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
             $this->QueryType = $param["QueryType"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
 
         if (array_key_exists("DeptId",$param) and $param["DeptId"] !== null) {

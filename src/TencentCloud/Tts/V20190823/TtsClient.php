@@ -47,7 +47,6 @@ use TencentCloud\Tts\V20190823\Models as Models;
 <li>当采用轮询方式时，需要主动提交任务ID来轮询识别结果，共有任务成功、等待、执行中和失败四种结果，具体信息请参见下文说明。</li>
  * @method Models\TextToVoiceResponse TextToVoice(Models\TextToVoiceRequest $req) 腾讯云语音合成技术（TTS）可以将任意文本转化为语音，实现让机器和应用张口说话。
 腾讯TTS技术可以应用到很多场景，比如，移动APP语音播报新闻；智能设备语音提醒；依靠网上现有节目或少量录音，快速合成明星语音，降低邀约成本；支持车载导航语音合成的个性化语音播报。
-内测期间免费使用。
 基础合成支持 SSML，语法详见 [SSML 标记语言](https://cloud.tencent.com/document/product/1073/49575)。
 默认接口请求频率限制：20次/秒。
  */

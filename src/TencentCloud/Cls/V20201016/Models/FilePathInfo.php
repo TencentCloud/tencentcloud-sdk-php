@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ssa\V20180608\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVulList请求参数结构体
+ * 文件路径信息
  *
- * @method string getParams() 获取查询过滤参数:(json序列化的结果）
- * @method void setParams(string $Params) 设置查询过滤参数:(json序列化的结果）
+ * @method string getPath() 获取文件路径
+ * @method void setPath(string $Path) 设置文件路径
+ * @method string getFile() 获取文件名称
+ * @method void setFile(string $File) 设置文件名称
  */
-class DescribeVulListRequest extends AbstractModel
+class FilePathInfo extends AbstractModel
 {
     /**
-     * @var string 查询过滤参数:(json序列化的结果）
+     * @var string 文件路径
      */
-    public $Params;
+    public $Path;
 
     /**
-     * @param string $Params 查询过滤参数:(json序列化的结果）
+     * @var string 文件名称
+     */
+    public $File;
+
+    /**
+     * @param string $Path 文件路径
+     * @param string $File 文件名称
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeVulListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
-            $this->Params = $param["Params"];
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("File",$param) and $param["File"] !== null) {
+            $this->File = $param["File"];
         }
     }
 }

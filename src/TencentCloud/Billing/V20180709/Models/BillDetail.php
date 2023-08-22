@@ -78,9 +78,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method array getPriceInfo() 获取价格属性
+ * @method array getPriceInfo() 获取价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPriceInfo(array $PriceInfo) 设置价格属性
+ * @method void setPriceInfo(array $PriceInfo) 设置价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BillDetailAssociatedOrder getAssociatedOrder() 获取关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) 设置关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFormula() 获取计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFormula(string $Formula) 设置计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFormulaUrl() 获取计费规则：各产品详细的计费规则官网说明链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFormulaUrl(string $FormulaUrl) 设置计费规则：各产品详细的计费规则官网说明链接
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillDetail extends AbstractModel
@@ -211,10 +223,28 @@ class BillDetail extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 价格属性
+     * @var array 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceInfo;
+
+    /**
+     * @var BillDetailAssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssociatedOrder;
+
+    /**
+     * @var string 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Formula;
+
+    /**
+     * @var string 计费规则：各产品详细的计费规则官网说明链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FormulaUrl;
 
     /**
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
@@ -246,7 +276,13 @@ class BillDetail extends AbstractModel
      * @param string $RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目ID
-     * @param array $PriceInfo 价格属性
+     * @param array $PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillDetailAssociatedOrder $AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -370,6 +406,19 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("PriceInfo",$param) and $param["PriceInfo"] !== null) {
             $this->PriceInfo = $param["PriceInfo"];
+        }
+
+        if (array_key_exists("AssociatedOrder",$param) and $param["AssociatedOrder"] !== null) {
+            $this->AssociatedOrder = new BillDetailAssociatedOrder();
+            $this->AssociatedOrder->deserialize($param["AssociatedOrder"]);
+        }
+
+        if (array_key_exists("Formula",$param) and $param["Formula"] !== null) {
+            $this->Formula = $param["Formula"];
+        }
+
+        if (array_key_exists("FormulaUrl",$param) and $param["FormulaUrl"] !== null) {
+            $this->FormulaUrl = $param["FormulaUrl"];
         }
     }
 }

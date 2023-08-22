@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 告警多维分析一些配置信息
+ * 明细账单配置描述结构
  *
- * @method string getKey() 获取键
+ * @method string getName() 获取配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置键
+ * @method void setName(string $Name) 设置配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取值
+ * @method string getValue() 获取配置描述值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置值
+ * @method void setValue(string $Value) 设置配置描述值
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AlarmAnalysisConfig extends AbstractModel
+class BillDetailComponentConfig extends AbstractModel
 {
     /**
-     * @var string 键
+     * @var string 配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Key;
+    public $Name;
 
     /**
-     * @var string 值
+     * @var string 配置描述值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param string $Key 键
+     * @param string $Name 配置描述名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 值
+     * @param string $Value 配置描述值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,8 +62,8 @@ class AlarmAnalysisConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {

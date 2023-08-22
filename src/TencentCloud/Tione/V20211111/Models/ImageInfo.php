@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryId(string $RegistryId) 设置TCR镜像对应的实例id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAllowSaveAllContent() 获取是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllowSaveAllContent(boolean $AllowSaveAllContent) 设置是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getImageName() 获取镜像名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageName(string $ImageName) 设置镜像名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageInfo extends AbstractModel
 {
@@ -58,11 +66,27 @@ class ImageInfo extends AbstractModel
     public $RegistryId;
 
     /**
+     * @var boolean 是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllowSaveAllContent;
+
+    /**
+     * @var string 镜像名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageName;
+
+    /**
      * @param string $ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像
      * @param string $ImageUrl 镜像地址
      * @param string $RegistryRegion TCR镜像对应的地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistryId TCR镜像对应的实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AllowSaveAllContent 是否允许导出全部内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ImageName 镜像名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -92,6 +116,14 @@ class ImageInfo extends AbstractModel
 
         if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
             $this->RegistryId = $param["RegistryId"];
+        }
+
+        if (array_key_exists("AllowSaveAllContent",$param) and $param["AllowSaveAllContent"] !== null) {
+            $this->AllowSaveAllContent = $param["AllowSaveAllContent"];
+        }
+
+        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
+            $this->ImageName = $param["ImageName"];
         }
     }
 }

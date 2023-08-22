@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogPath(string $LogPath) 设置日志文件夹
  * @method string getFilePattern() 获取日志名称
  * @method void setFilePattern(string $FilePattern) 设置日志名称
+ * @method array getFilePaths() 获取日志文件信息
+ * @method void setFilePaths(array $FilePaths) 设置日志文件信息
  * @method array getIncludeLabels() 获取pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncludeLabels(array $IncludeLabels) 设置pod标签信息
@@ -43,6 +45,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getExcludeLabels() 获取需要排除的pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeLabels(array $ExcludeLabels) 设置需要排除的pod标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCustomLabels() 获取metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomLabels(array $CustomLabels) 设置metadata信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerFileInfo extends AbstractModel
@@ -66,6 +72,11 @@ class ContainerFileInfo extends AbstractModel
      * @var string 日志名称
      */
     public $FilePattern;
+
+    /**
+     * @var array 日志文件信息
+     */
+    public $FilePaths;
 
     /**
      * @var array pod标签信息
@@ -92,10 +103,17 @@ class ContainerFileInfo extends AbstractModel
     public $ExcludeLabels;
 
     /**
+     * @var array metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomLabels;
+
+    /**
      * @param string $Namespace namespace可以多个，用分隔号分割,例如A,B
      * @param string $Container 容器名称
      * @param string $LogPath 日志文件夹
      * @param string $FilePattern 日志名称
+     * @param array $FilePaths 日志文件信息
      * @param array $IncludeLabels pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerWorkLoadInfo $WorkLoad 工作负载信息
@@ -103,6 +121,8 @@ class ContainerFileInfo extends AbstractModel
      * @param string $ExcludeNamespace 需要排除的namespace可以多个，用分隔号分割,例如A,B
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExcludeLabels 需要排除的pod标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CustomLabels metadata信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -134,6 +154,15 @@ class ContainerFileInfo extends AbstractModel
             $this->FilePattern = $param["FilePattern"];
         }
 
+        if (array_key_exists("FilePaths",$param) and $param["FilePaths"] !== null) {
+            $this->FilePaths = [];
+            foreach ($param["FilePaths"] as $key => $value){
+                $obj = new FilePathInfo();
+                $obj->deserialize($value);
+                array_push($this->FilePaths, $obj);
+            }
+        }
+
         if (array_key_exists("IncludeLabels",$param) and $param["IncludeLabels"] !== null) {
             $this->IncludeLabels = $param["IncludeLabels"];
         }
@@ -149,6 +178,10 @@ class ContainerFileInfo extends AbstractModel
 
         if (array_key_exists("ExcludeLabels",$param) and $param["ExcludeLabels"] !== null) {
             $this->ExcludeLabels = $param["ExcludeLabels"];
+        }
+
+        if (array_key_exists("CustomLabels",$param) and $param["CustomLabels"] !== null) {
+            $this->CustomLabels = $param["CustomLabels"];
         }
     }
 }

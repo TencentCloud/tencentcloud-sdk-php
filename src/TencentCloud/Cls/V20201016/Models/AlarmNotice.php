@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNoticeRules() 获取通知规则。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNoticeRules(array $NoticeRules) 设置通知规则。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmNotice extends AbstractModel
 {
@@ -97,6 +101,12 @@ class AlarmNotice extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var array 通知规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NoticeRules;
+
+    /**
      * @param string $Name 告警通知模板名称。
      * @param string $Type 告警模板的类型。可选值：
 <br><li> Trigger - 告警触发
@@ -111,6 +121,8 @@ class AlarmNotice extends AbstractModel
      * @param string $CreateTime 创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最近更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NoticeRules 通知规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -162,6 +174,15 @@ class AlarmNotice extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("NoticeRules",$param) and $param["NoticeRules"] !== null) {
+            $this->NoticeRules = [];
+            foreach ($param["NoticeRules"] as $key => $value){
+                $obj = new NoticeRule();
+                $obj->deserialize($value);
+                array_push($this->NoticeRules, $obj);
+            }
         }
     }
 }

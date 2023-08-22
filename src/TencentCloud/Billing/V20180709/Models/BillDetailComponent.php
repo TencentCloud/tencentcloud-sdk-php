@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlendedDiscount(string $BlendedDiscount) 设置混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getComponentConfig() 获取配置描述：资源配置规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComponentConfig(array $ComponentConfig) 设置配置描述：资源配置规格信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -268,6 +272,12 @@ class BillDetailComponent extends AbstractModel
     public $BlendedDiscount;
 
     /**
+     * @var array 配置描述：资源配置规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ComponentConfig;
+
+    /**
      * @param string $ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类，例如：云服务器 CVM 的组件：CPU、内存等
      * @param string $ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
      * @param string $SinglePrice 组件刊例价：组件的官网原始单价（如果客户享受一口价/合同价则默认不展示）
@@ -309,6 +319,8 @@ class BillDetailComponent extends AbstractModel
      * @param string $OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ComponentConfig 配置描述：资源配置规格信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -438,6 +450,15 @@ class BillDetailComponent extends AbstractModel
 
         if (array_key_exists("BlendedDiscount",$param) and $param["BlendedDiscount"] !== null) {
             $this->BlendedDiscount = $param["BlendedDiscount"];
+        }
+
+        if (array_key_exists("ComponentConfig",$param) and $param["ComponentConfig"] !== null) {
+            $this->ComponentConfig = [];
+            foreach ($param["ComponentConfig"] as $key => $value){
+                $obj = new BillDetailComponentConfig();
+                $obj->deserialize($value);
+                array_push($this->ComponentConfig, $obj);
+            }
         }
     }
 }

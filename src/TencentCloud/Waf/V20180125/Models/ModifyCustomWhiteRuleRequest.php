@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(integer $RuleId) 设置编辑的规则ID
  * @method string getRuleName() 获取编辑的规则名称
  * @method void setRuleName(string $RuleName) 设置编辑的规则名称
- * @method string getBypass() 获取放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。
- * @method void setBypass(string $Bypass) 设置放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。
+ * @method string getBypass() 获取放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果勾选多个，则以“，”串接。
+ * @method void setBypass(string $Bypass) 设置放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果勾选多个，则以“，”串接。
  * @method integer getSortId() 获取优先级，1~100的整数，数字越小，代表这条规则的执行优先级越高。
  * @method void setSortId(integer $SortId) 设置优先级，1~100的整数，数字越小，代表这条规则的执行优先级越高。
  * @method integer getExpireTime() 获取规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
@@ -53,7 +53,7 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。
+     * @var string 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果勾选多个，则以“，”串接。
      */
     public $Bypass;
 
@@ -76,7 +76,7 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
      * @param string $Domain 编辑的域名
      * @param integer $RuleId 编辑的规则ID
      * @param string $RuleName 编辑的规则名称
-     * @param string $Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。
+     * @param string $Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果勾选多个，则以“，”串接。
      * @param integer $SortId 优先级，1~100的整数，数字越小，代表这条规则的执行优先级越高。
      * @param integer $ExpireTime 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
      * @param array $Strategies 匹配条件数组

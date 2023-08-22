@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodec(string $Codec) 设置返回音频格式，可取值：mp3（默认），wav，pcm
  * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。[回调说明](https://cloud.tencent.com/document/product/1073/55746)
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。[回调说明](https://cloud.tencent.com/document/product/1073/55746)
+ * @method boolean getEnableSubtitle() 获取是否开启时间戳功能，默认为false。
+ * @method void setEnableSubtitle(boolean $EnableSubtitle) 设置是否开启时间戳功能，默认为false。
  * @method boolean getVoiceoverDialogueSplit() 获取旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
  * @method void setVoiceoverDialogueSplit(boolean $VoiceoverDialogueSplit) 设置旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
  */
@@ -96,6 +98,11 @@ class CreateTtsTaskRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
+     * @var boolean 是否开启时间戳功能，默认为false。
+     */
+    public $EnableSubtitle;
+
+    /**
      * @var boolean 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
      */
     public $VoiceoverDialogueSplit;
@@ -111,6 +118,7 @@ class CreateTtsTaskRequest extends AbstractModel
      * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      * @param string $Codec 返回音频格式，可取值：mp3（默认），wav，pcm
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。[回调说明](https://cloud.tencent.com/document/product/1073/55746)
+     * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
      * @param boolean $VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
      */
     function __construct()
@@ -164,6 +172,10 @@ class CreateTtsTaskRequest extends AbstractModel
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("EnableSubtitle",$param) and $param["EnableSubtitle"] !== null) {
+            $this->EnableSubtitle = $param["EnableSubtitle"];
         }
 
         if (array_key_exists("VoiceoverDialogueSplit",$param) and $param["VoiceoverDialogueSplit"] !== null) {

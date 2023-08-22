@@ -126,6 +126,12 @@ use TencentCloud\Common\AbstractModel;
 2: 持久非分区
 3: 持久分区
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒
+
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Topic extends AbstractModel
 {
@@ -271,6 +277,13 @@ class Topic extends AbstractModel
     public $PulsarTopicType;
 
     /**
+     * @var integer 未消费消息过期时间，单位：秒
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MsgTTL;
+
+    /**
      * @param string $AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerCount 消费者数量。
@@ -323,6 +336,9 @@ class Topic extends AbstractModel
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MsgTTL 未消费消息过期时间，单位：秒
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -429,6 +445,10 @@ class Topic extends AbstractModel
 
         if (array_key_exists("PulsarTopicType",$param) and $param["PulsarTopicType"] !== null) {
             $this->PulsarTopicType = $param["PulsarTopicType"];
+        }
+
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
         }
     }
 }

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeLabels(array $ExcludeLabels) 设置需要排除的pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCustomLabels() 获取metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomLabels(array $CustomLabels) 设置metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerStdoutInfo extends AbstractModel
 {
@@ -91,6 +95,12 @@ class ContainerStdoutInfo extends AbstractModel
     public $ExcludeLabels;
 
     /**
+     * @var array metadata信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomLabels;
+
+    /**
      * @param boolean $AllContainers 是否所有容器
      * @param string $Container container为空表所有的，不为空采集指定的容器
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +113,8 @@ class ContainerStdoutInfo extends AbstractModel
      * @param string $ExcludeNamespace 需要排除的namespace可以多个，用分隔号分割,例如A,B
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExcludeLabels 需要排除的pod标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CustomLabels metadata信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -149,6 +161,10 @@ class ContainerStdoutInfo extends AbstractModel
 
         if (array_key_exists("ExcludeLabels",$param) and $param["ExcludeLabels"] !== null) {
             $this->ExcludeLabels = $param["ExcludeLabels"];
+        }
+
+        if (array_key_exists("CustomLabels",$param) and $param["CustomLabels"] !== null) {
+            $this->CustomLabels = $param["CustomLabels"];
         }
     }
 }

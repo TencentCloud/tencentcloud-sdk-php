@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
 值为unix时间戳,单位为秒。
  * @method void setLicenseTo(integer $LicenseTo) 设置自动签许可到期时间。当且仅当已开通自动签时有值。
 值为unix时间戳,单位为秒。
+ * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+1-不绑定，发起合同时将按标准合同套餐进行扣减
+ * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+1-不绑定，发起合同时将按标准合同套餐进行扣减
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +62,13 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
     public $LicenseTo;
 
     /**
+     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+1-不绑定，发起合同时将按标准合同套餐进行扣减
+     */
+    public $LicenseType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +80,9 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
 值为unix时间戳,单位为秒。
      * @param integer $LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
 值为unix时间戳,单位为秒。
+     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+1-不绑定，发起合同时将按标准合同套餐进行扣减
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +108,10 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
 
         if (array_key_exists("LicenseTo",$param) and $param["LicenseTo"] !== null) {
             $this->LicenseTo = $param["LicenseTo"];
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

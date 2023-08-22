@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
  * @method WebThemeConfig getWebThemeConfig() 获取主题配置
  * @method void setWebThemeConfig(WebThemeConfig $WebThemeConfig) 设置主题配置
+ * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
  */
 class CreateWebThemeConfigRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class CreateWebThemeConfigRequest extends AbstractModel
     public $WebThemeConfig;
 
     /**
+     * @var Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param string $ThemeType 主题类型
 <br/>EMBED_WEB_THEME：嵌入式主题
 <br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
      * @param WebThemeConfig $WebThemeConfig 主题配置
+     * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
      */
     function __construct()
     {
@@ -82,6 +90,11 @@ class CreateWebThemeConfigRequest extends AbstractModel
         if (array_key_exists("WebThemeConfig",$param) and $param["WebThemeConfig"] !== null) {
             $this->WebThemeConfig = new WebThemeConfig();
             $this->WebThemeConfig->deserialize($param["WebThemeConfig"]);
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

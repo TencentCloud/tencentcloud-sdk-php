@@ -18,35 +18,39 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 告警多维分析一些配置信息
+ * 多触发条件。
  *
- * @method string getKey() 获取键
+ * @method string getCondition() 获取触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置键
+ * @method void setCondition(string $Condition) 设置触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取值
+ * @method integer getAlarmLevel() 获取告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置值
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AlarmAnalysisConfig extends AbstractModel
+class MultiCondition extends AbstractModel
 {
     /**
-     * @var string 键
+     * @var string 触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Key;
+    public $Condition;
 
     /**
-     * @var string 值
+     * @var integer 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Value;
+    public $AlarmLevel;
 
     /**
-     * @param string $Key 键
+     * @param string $Condition 触发条件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 值
+     * @param integer $AlarmLevel 告警级别。0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
+<li> 不填则默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +66,12 @@ class AlarmAnalysisConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {
+            $this->Condition = $param["Condition"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
         }
     }
 }

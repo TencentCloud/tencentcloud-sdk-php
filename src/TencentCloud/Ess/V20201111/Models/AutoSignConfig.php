@@ -66,6 +66,13 @@ TELECOM : 运营商三要素验证
 如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
 
 如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+ * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+1-不绑定，发起合同时将按标准合同套餐进行扣减
+
+ * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+1-不绑定，发起合同时将按标准合同套餐进行扣减
  */
 class AutoSignConfig extends AbstractModel
 {
@@ -117,6 +124,14 @@ TELECOM : 运营商三要素验证
     public $VerifyChannels;
 
     /**
+     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+1-不绑定，发起合同时将按标准合同套餐进行扣减
+
+     */
+    public $LicenseType;
+
+    /**
      * @param UserThreeFactor $UserInfo 自动签开通个人用户的三要素
      * @param string $CallbackUrl 接受回调URL地址。支持http://或者https://协议
 
@@ -140,6 +155,9 @@ TELECOM : 运营商三要素验证
 如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
 
 如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
+0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+1-不绑定，发起合同时将按标准合同套餐进行扣减
      */
     function __construct()
     {
@@ -177,6 +195,10 @@ TELECOM : 运营商三要素验证
 
         if (array_key_exists("VerifyChannels",$param) and $param["VerifyChannels"] !== null) {
             $this->VerifyChannels = $param["VerifyChannels"];
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

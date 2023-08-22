@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroup extends AbstractModel
 {
@@ -204,6 +208,12 @@ class RuleGroup extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -239,6 +249,8 @@ class RuleGroup extends AbstractModel
      * @param integer $TableOwnerUserId 表负责人UserId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -326,6 +338,10 @@ class RuleGroup extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

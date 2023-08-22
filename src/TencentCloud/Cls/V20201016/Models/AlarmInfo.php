@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnalysis(array $Analysis) 设置多维分析设置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMultiConditions() 获取多触发条件。
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。
+
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmInfo extends AbstractModel
 {
@@ -131,6 +137,13 @@ class AlarmInfo extends AbstractModel
     public $Analysis;
 
     /**
+     * @var array 多触发条件。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MultiConditions;
+
+    /**
      * @param string $Name 告警策略名称。
      * @param array $AlarmTargets 监控对象列表。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
@@ -147,6 +160,9 @@ class AlarmInfo extends AbstractModel
      * @param CallBackInfo $CallBack 自定义回调模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Analysis 多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MultiConditions 多触发条件。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -227,6 +243,15 @@ class AlarmInfo extends AbstractModel
                 $obj = new AnalysisDimensional();
                 $obj->deserialize($value);
                 array_push($this->Analysis, $obj);
+            }
+        }
+
+        if (array_key_exists("MultiConditions",$param) and $param["MultiConditions"] !== null) {
+            $this->MultiConditions = [];
+            foreach ($param["MultiConditions"] as $key => $value){
+                $obj = new MultiCondition();
+                $obj->deserialize($value);
+                array_push($this->MultiConditions, $obj);
             }
         }
     }

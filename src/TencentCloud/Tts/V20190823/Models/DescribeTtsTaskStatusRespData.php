@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusStr(string $StatusStr) 设置任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
  * @method string getResultUrl() 获取合成音频COS地址（链接有效期1天）。
  * @method void setResultUrl(string $ResultUrl) 设置合成音频COS地址（链接有效期1天）。
+ * @method array getSubtitles() 获取时间戳信息，若未开启时间戳，则返回空数组。
+ * @method void setSubtitles(array $Subtitles) 设置时间戳信息，若未开启时间戳，则返回空数组。
  * @method string getErrorMsg() 获取失败原因说明。
  * @method void setErrorMsg(string $ErrorMsg) 设置失败原因说明。
  */
@@ -54,6 +56,11 @@ class DescribeTtsTaskStatusRespData extends AbstractModel
     public $ResultUrl;
 
     /**
+     * @var array 时间戳信息，若未开启时间戳，则返回空数组。
+     */
+    public $Subtitles;
+
+    /**
      * @var string 失败原因说明。
      */
     public $ErrorMsg;
@@ -63,6 +70,7 @@ class DescribeTtsTaskStatusRespData extends AbstractModel
      * @param integer $Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
      * @param string $StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
      * @param string $ResultUrl 合成音频COS地址（链接有效期1天）。
+     * @param array $Subtitles 时间戳信息，若未开启时间戳，则返回空数组。
      * @param string $ErrorMsg 失败原因说明。
      */
     function __construct()
@@ -92,6 +100,15 @@ class DescribeTtsTaskStatusRespData extends AbstractModel
 
         if (array_key_exists("ResultUrl",$param) and $param["ResultUrl"] !== null) {
             $this->ResultUrl = $param["ResultUrl"];
+        }
+
+        if (array_key_exists("Subtitles",$param) and $param["Subtitles"] !== null) {
+            $this->Subtitles = [];
+            foreach ($param["Subtitles"] as $key => $value){
+                $obj = new Subtitle();
+                $obj->deserialize($value);
+                array_push($this->Subtitles, $obj);
+            }
         }
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {

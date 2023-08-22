@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSQL(string $SQL) 设置当前执行的SQL，一个任务包含一个SQL
  * @method string getSQLType() 获取执行任务的类型，现在分为DDL、DML、DQL
  * @method void setSQLType(string $SQLType) 设置执行任务的类型，现在分为DDL、DML、DQL
- * @method integer getState() 获取任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功 -1：任务执行失败 -3：用户手动终止。只有任务执行成功的情况下，才会返回任务执行的结果
- * @method void setState(integer $State) 设置任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功 -1：任务执行失败 -3：用户手动终止。只有任务执行成功的情况下，才会返回任务执行的结果
+ * @method integer getState() 获取任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功  3：数据写入中 4：排队中 -1：任务执行失败 -3：用户手动终止 。只有任务执行成功的情况下，才会返回任务执行的结果
+ * @method void setState(integer $State) 设置任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功  3：数据写入中 4：排队中 -1：任务执行失败 -3：用户手动终止 。只有任务执行成功的情况下，才会返回任务执行的结果
  * @method integer getDataAmount() 获取扫描的数据量，单位byte
  * @method void setDataAmount(integer $DataAmount) 设置扫描的数据量，单位byte
  * @method integer getUsedTime() 获取计算耗时，单位： ms
@@ -97,7 +97,7 @@ class TaskResultInfo extends AbstractModel
     public $SQLType;
 
     /**
-     * @var integer 任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功 -1：任务执行失败 -3：用户手动终止。只有任务执行成功的情况下，才会返回任务执行的结果
+     * @var integer 任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功  3：数据写入中 4：排队中 -1：任务执行失败 -3：用户手动终止 。只有任务执行成功的情况下，才会返回任务执行的结果
      */
     public $State;
 
@@ -176,7 +176,7 @@ class TaskResultInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SQL 当前执行的SQL，一个任务包含一个SQL
      * @param string $SQLType 执行任务的类型，现在分为DDL、DML、DQL
-     * @param integer $State 任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功 -1：任务执行失败 -3：用户手动终止。只有任务执行成功的情况下，才会返回任务执行的结果
+     * @param integer $State 任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功  3：数据写入中 4：排队中 -1：任务执行失败 -3：用户手动终止 。只有任务执行成功的情况下，才会返回任务执行的结果
      * @param integer $DataAmount 扫描的数据量，单位byte
      * @param integer $UsedTime 计算耗时，单位： ms
      * @param string $OutputPath 任务结果输出的COS桶地址

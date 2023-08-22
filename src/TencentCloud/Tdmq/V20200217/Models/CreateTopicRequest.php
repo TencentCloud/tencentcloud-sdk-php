@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+ * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+ * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，取值范围：60秒~15天。
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ class CreateTopicRequest extends AbstractModel
     public $PulsarTopicType;
 
     /**
+     * @var integer 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+     */
+    public $MsgTTL;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      * @param integer $Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
@@ -116,6 +123,7 @@ class CreateTopicRequest extends AbstractModel
 1: 非持久分区
 2: 持久非分区
 3: 持久分区
+     * @param integer $MsgTTL 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("PulsarTopicType",$param) and $param["PulsarTopicType"] !== null) {
             $this->PulsarTopicType = $param["PulsarTopicType"];
+        }
+
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
         }
     }
 }

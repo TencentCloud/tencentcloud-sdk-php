@@ -74,6 +74,22 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) 该接口根据传入参数更新函数配置。
  * @method Models\UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(Models\UpdateFunctionEventInvokeConfigRequest $req) 更新函数的异步重试配置，包括重试次数和消息保留时间
  * @method Models\UpdateNamespaceResponse UpdateNamespace(Models\UpdateNamespaceRequest $req) 更新命名空间
+ * @method Models\UpdateTriggerResponse UpdateTrigger(Models\UpdateTriggerRequest $req) 支持触发器配置更新。
+默认接口请求频率限制：20次/秒
+
+注意：目前只支持timer触发器和ckafka触发器更新！
+
+timer触发器和ckafka触发器支持更新字段有：Enable、TriggerDesc、Description、CustomArgument。
+
+timer触发器TriggerDesc支持5段式和7段式的更新。
+
+ckafka触发器TriggerDesc支持Retry、MaxMsgNum、TimeOut参数更新，不传值表示原值不变，传值不能为空。
+
+Enable 触发器开启或关闭，传参为OPEN为开启，CLOSE为关闭。不传值表示原值不变，传值不能为空。
+
+Description 触发器描述，不传值保持原值不变，传值为空则为空。
+
+CustomArgument 触发器用户附加信息（注意：只有timer触发器展示），不传值保持原值不变，传值为空则为空。
  * @method Models\UpdateTriggerStatusResponse UpdateTriggerStatus(Models\UpdateTriggerStatusRequest $req) 更新触发器状态的值
  */
 

@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeReceivers(array $NoticeReceivers) 设置通知接收对象。
  * @method array getWebCallbacks() 获取接口回调信息（包括企业微信）。
  * @method void setWebCallbacks(array $WebCallbacks) 设置接口回调信息（包括企业微信）。
+ * @method array getNoticeRules() 获取通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。
+ * @method void setNoticeRules(array $NoticeRules) 设置通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。
  */
 class ModifyAlarmNoticeRequest extends AbstractModel
 {
@@ -68,6 +80,16 @@ class ModifyAlarmNoticeRequest extends AbstractModel
     public $WebCallbacks;
 
     /**
+     * @var array 通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。
+     */
+    public $NoticeRules;
+
+    /**
      * @param string $AlarmNoticeId 通知渠道组ID。
      * @param string $Name 通知渠道组名称。
      * @param string $Type 通知类型。可选值：
@@ -76,6 +98,12 @@ class ModifyAlarmNoticeRequest extends AbstractModel
 <li> All - 告警触发和告警恢复
      * @param array $NoticeReceivers 通知接收对象。
      * @param array $WebCallbacks 接口回调信息（包括企业微信）。
+     * @param array $NoticeRules 通知规则。
+
+注意: 
+
+- Type、NoticeReceivers和WebCallbacks是一组配置，NoticeRules是另一组配置，2组配置互斥。
+- 传其中一组数据，则另一组数据置空。
      */
     function __construct()
     {
@@ -117,6 +145,15 @@ class ModifyAlarmNoticeRequest extends AbstractModel
                 $obj = new WebCallback();
                 $obj->deserialize($value);
                 array_push($this->WebCallbacks, $obj);
+            }
+        }
+
+        if (array_key_exists("NoticeRules",$param) and $param["NoticeRules"] !== null) {
+            $this->NoticeRules = [];
+            foreach ($param["NoticeRules"] as $key => $value){
+                $obj = new NoticeRule();
+                $obj->deserialize($value);
+                array_push($this->NoticeRules, $obj);
             }
         }
     }

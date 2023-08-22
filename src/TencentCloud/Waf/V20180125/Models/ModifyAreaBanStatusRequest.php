@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAreaBanStatus请求参数结构体
  *
- * @method string getDomain() 获取修要修改的域名
- * @method void setDomain(string $Domain) 设置修要修改的域名
+ * @method string getDomain() 获取需要修改的域名
+ * @method void setDomain(string $Domain) 设置需要修改的域名
  * @method integer getStatus() 获取状态值，0表示关闭，1表示开启
  * @method void setStatus(integer $Status) 设置状态值，0表示关闭，1表示开启
  */
 class ModifyAreaBanStatusRequest extends AbstractModel
 {
     /**
-     * @var string 修要修改的域名
+     * @var string 需要修改的域名
      */
     public $Domain;
 
@@ -38,7 +38,7 @@ class ModifyAreaBanStatusRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $Domain 修要修改的域名
+     * @param string $Domain 需要修改的域名
      * @param integer $Status 状态值，0表示关闭，1表示开启
      */
     function __construct()

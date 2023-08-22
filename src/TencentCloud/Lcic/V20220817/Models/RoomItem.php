@@ -68,9 +68,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordUrl(string $RecordUrl) 设置录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxMicNumber() 获取最高房间内人数（包括老师），0表示不限制，默认为0
+ * @method integer getMaxMicNumber() 获取最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最高房间内人数（包括老师），0表示不限制，默认为0
+ * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableDirectControl() 获取打开学生麦克风/摄像头的授权开关 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -164,7 +164,7 @@ class RoomItem extends AbstractModel
     public $RecordUrl;
 
     /**
-     * @var integer 最高房间内人数（包括老师），0表示不限制，默认为0
+     * @var integer 最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMicNumber;
@@ -224,7 +224,7 @@ class RoomItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxMicNumber 最高房间内人数（包括老师），0表示不限制，默认为0
+     * @param integer $MaxMicNumber 最高房间内人数（不包括老师），0表示不限制，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableDirectControl 打开学生麦克风/摄像头的授权开关 
 注意：此字段可能返回 null，表示取不到有效值。

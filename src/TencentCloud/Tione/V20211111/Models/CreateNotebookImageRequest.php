@@ -20,20 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNotebookImage请求参数结构体
  *
- * @method array getKernels() 获取要保存的kernel数组
- * @method void setKernels(array $Kernels) 设置要保存的kernel数组
  * @method ImageInfo getImageInfo() 获取镜像信息
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
  * @method string getNotebookId() 获取notebook id
  * @method void setNotebookId(string $NotebookId) 设置notebook id
+ * @method array getKernels() 获取要保存的kernel数组
+ * @method void setKernels(array $Kernels) 设置要保存的kernel数组
  */
 class CreateNotebookImageRequest extends AbstractModel
 {
-    /**
-     * @var array 要保存的kernel数组
-     */
-    public $Kernels;
-
     /**
      * @var ImageInfo 镜像信息
      */
@@ -45,9 +40,14 @@ class CreateNotebookImageRequest extends AbstractModel
     public $NotebookId;
 
     /**
-     * @param array $Kernels 要保存的kernel数组
+     * @var array 要保存的kernel数组
+     */
+    public $Kernels;
+
+    /**
      * @param ImageInfo $ImageInfo 镜像信息
      * @param string $NotebookId notebook id
+     * @param array $Kernels 要保存的kernel数组
      */
     function __construct()
     {
@@ -62,10 +62,6 @@ class CreateNotebookImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Kernels",$param) and $param["Kernels"] !== null) {
-            $this->Kernels = $param["Kernels"];
-        }
-
         if (array_key_exists("ImageInfo",$param) and $param["ImageInfo"] !== null) {
             $this->ImageInfo = new ImageInfo();
             $this->ImageInfo->deserialize($param["ImageInfo"]);
@@ -73,6 +69,10 @@ class CreateNotebookImageRequest extends AbstractModel
 
         if (array_key_exists("NotebookId",$param) and $param["NotebookId"] !== null) {
             $this->NotebookId = $param["NotebookId"];
+        }
+
+        if (array_key_exists("Kernels",$param) and $param["Kernels"] !== null) {
+            $this->Kernels = $param["Kernels"];
         }
     }
 }

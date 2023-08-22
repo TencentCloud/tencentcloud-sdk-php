@@ -30,12 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMobile(string $Mobile) 设置手机号，大陆手机号11位
  * @method string getEndPoint() 获取要跳转的链接类型
 
-- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)
+- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)，此时返回长链
+- HTTP_SHORT_URL：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链
 - APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
 
  * @method void setEndPoint(string $EndPoint) 设置要跳转的链接类型
 
-- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)
+- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)，此时返回长链
+- HTTP_SHORT_URL：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链
 - APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
 
  * @method string getFlowId() 获取签署流程编号 (PathType=1时必传)
@@ -102,7 +104,8 @@ class CreateSchemeUrlRequest extends AbstractModel
     /**
      * @var string 要跳转的链接类型
 
-- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)
+- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)，此时返回长链
+- HTTP_SHORT_URL：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链
 - APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
 
      */
@@ -158,7 +161,8 @@ false：否。
      * @param string $Mobile 手机号，大陆手机号11位
      * @param string $EndPoint 要跳转的链接类型
 
-- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)
+- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)，此时返回长链
+- HTTP_SHORT_URL：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链
 - APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
 
      * @param string $FlowId 签署流程编号 (PathType=1时必传)

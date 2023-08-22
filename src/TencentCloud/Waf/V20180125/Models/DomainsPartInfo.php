@@ -70,9 +70,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCiphers(array $Ciphers) 设置加密套件信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCipherTemplate() 获取模版
+ * @method integer getCipherTemplate() 获取模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCipherTemplate(integer $CipherTemplate) 设置模版
+ * @method void setCipherTemplate(integer $CipherTemplate) 设置模板
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProxyReadTimeout() 获取300s
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,7 +219,7 @@ class DomainsPartInfo extends AbstractModel
     public $Ciphers;
 
     /**
-     * @var integer 模版
+     * @var integer 模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CipherTemplate;
@@ -292,7 +292,7 @@ class DomainsPartInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Ciphers 加密套件信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CipherTemplate 模版
+     * @param integer $CipherTemplate 模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyReadTimeout 300s
 注意：此字段可能返回 null，表示取不到有效值。

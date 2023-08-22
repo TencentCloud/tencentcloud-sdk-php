@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMobile(string $Mobile) 设置手机号码；当需要开通自动签时，该参数必传
  * @method boolean getEnableAutoSign() 获取是否开通自动签，该功能需联系运营工作人员开通后使用
  * @method void setEnableAutoSign(boolean $EnableAutoSign) 设置是否开通自动签，该功能需联系运营工作人员开通后使用
+ * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+ * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
  */
 class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
     public $EnableAutoSign;
 
     /**
+     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     */
+    public $LicenseType;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      * @param string $UserName 个人用户姓名
      * @param string $IdCardNumber 身份证件号码
@@ -104,6 +111,7 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
      * @param boolean $SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
      * @param string $Mobile 手机号码；当需要开通自动签时，该参数必传
      * @param boolean $EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用
+     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
      */
     function __construct()
     {
@@ -158,6 +166,10 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
 
         if (array_key_exists("EnableAutoSign",$param) and $param["EnableAutoSign"] !== null) {
             $this->EnableAutoSign = $param["EnableAutoSign"];
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationHooks(array $NotificationHooks) 设置WebHook请求配置
  * @method string getOwner() 获取创建人名
  * @method void setOwner(string $Owner) 设置创建人名
+ * @method string getEnvId() 获取环境ID
+ * @method void setEnvId(string $EnvId) 设置环境ID
  */
 class UpdateScenarioRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class UpdateScenarioRequest extends AbstractModel
     public $Owner;
 
     /**
+     * @var string 环境ID
+     */
+    public $EnvId;
+
+    /**
      * @param string $ScenarioId 场景ID
      * @param string $Name 场景名
      * @param string $Description 场景描述
@@ -192,6 +199,7 @@ class UpdateScenarioRequest extends AbstractModel
      * @param DomainNameConfig $DomainNameConfig 域名解析配置
      * @param array $NotificationHooks WebHook请求配置
      * @param string $Owner 创建人名
+     * @param string $EnvId 环境ID
      */
     function __construct()
     {
@@ -321,6 +329,10 @@ class UpdateScenarioRequest extends AbstractModel
 
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = $param["Owner"];
+        }
+
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
         }
     }
 }

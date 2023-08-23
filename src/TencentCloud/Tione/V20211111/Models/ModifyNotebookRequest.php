@@ -78,6 +78,8 @@ POSTPAID_BY_HOUR：按小时后付费
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
  * @method string getImageType() 获取镜像类型
  * @method void setImageType(string $ImageType) 设置镜像类型
+ * @method SSHConfig getSSHConfig() 获取SSH配置
+ * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置
  */
 class ModifyNotebookRequest extends AbstractModel
 {
@@ -203,6 +205,11 @@ POSTPAID_BY_HOUR：按小时后付费
     public $ImageType;
 
     /**
+     * @var SSHConfig SSH配置
+     */
+    public $SSHConfig;
+
+    /**
      * @param string $Id notebook id
      * @param string $Name 名称
      * @param string $ChargeType 计算资源付费模式 ，可选值为：
@@ -232,6 +239,7 @@ POSTPAID_BY_HOUR：按小时后付费
      * @param array $DataConfigs 数据配置
      * @param ImageInfo $ImageInfo 镜像信息
      * @param string $ImageType 镜像类型
+     * @param SSHConfig $SSHConfig SSH配置
      */
     function __construct()
     {
@@ -350,6 +358,11 @@ POSTPAID_BY_HOUR：按小时后付费
 
         if (array_key_exists("ImageType",$param) and $param["ImageType"] !== null) {
             $this->ImageType = $param["ImageType"];
+        }
+
+        if (array_key_exists("SSHConfig",$param) and $param["SSHConfig"] !== null) {
+            $this->SSHConfig = new SSHConfig();
+            $this->SSHConfig->deserialize($param["SSHConfig"]);
         }
     }
 }

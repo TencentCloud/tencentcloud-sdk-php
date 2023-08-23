@@ -98,8 +98,10 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
  * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要
  * @method array getApproverVerifyTypes() 获取签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
 查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
  * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
 查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
  * @method array getApproverSignTypes() 获取签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
  * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人签署合同时的认证方式
@@ -226,6 +228,7 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     /**
      * @var array 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
 查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
      */
     public $ApproverVerifyTypes;
 
@@ -284,6 +287,7 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
      * @param array $ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
 查看合同的认证方式 Flow层级的优先于approver层级的
+（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
      * @param array $ApproverSignTypes 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
      * @param string $SignId 签署ID

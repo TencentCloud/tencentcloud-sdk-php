@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserTypes(array $UserTypes) 设置notebook用户类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SSHConfig getSSHConfig() 获取SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookSetItem extends AbstractModel
 {
@@ -262,6 +266,12 @@ class NotebookSetItem extends AbstractModel
     public $UserTypes;
 
     /**
+     * @var SSHConfig SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SSHConfig;
+
+    /**
      * @param string $Id notebook ID
      * @param string $Name notebook 名称
      * @param string $ChargeType 计费模式
@@ -307,6 +317,8 @@ class NotebookSetItem extends AbstractModel
      * @param string $Message notebook 信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserTypes notebook用户类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SSHConfig $SSHConfig SSH配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -427,6 +439,11 @@ class NotebookSetItem extends AbstractModel
 
         if (array_key_exists("UserTypes",$param) and $param["UserTypes"] !== null) {
             $this->UserTypes = $param["UserTypes"];
+        }
+
+        if (array_key_exists("SSHConfig",$param) and $param["SSHConfig"] !== null) {
+            $this->SSHConfig = new SSHConfig();
+            $this->SSHConfig->deserialize($param["SSHConfig"]);
         }
     }
 }

@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监控指标
  *
- * @method integer getMonitorId() 获取监控指标ID
- * @method void setMonitorId(integer $MonitorId) 设置监控指标ID
+ * @method integer getMonitorId() 获取pk
+ * @method void setMonitorId(integer $MonitorId) 设置pk
+ * @method integer getMetricId() 获取监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetricId(integer $MetricId) 设置监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getObjectTypeId() 获取监控指标对象类型ID
  * @method void setObjectTypeId(integer $ObjectTypeId) 设置监控指标对象类型ID
  * @method string getMetricName() 获取指标名称
@@ -34,9 +38,15 @@ use TencentCloud\Common\AbstractModel;
 class TemplateMonitor extends AbstractModel
 {
     /**
-     * @var integer 监控指标ID
+     * @var integer pk
      */
     public $MonitorId;
+
+    /**
+     * @var integer 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetricId;
 
     /**
      * @var integer 监控指标对象类型ID
@@ -55,7 +65,9 @@ class TemplateMonitor extends AbstractModel
     public $MetricChineseName;
 
     /**
-     * @param integer $MonitorId 监控指标ID
+     * @param integer $MonitorId pk
+     * @param integer $MetricId 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ObjectTypeId 监控指标对象类型ID
      * @param string $MetricName 指标名称
      * @param string $MetricChineseName 中文指标
@@ -76,6 +88,10 @@ class TemplateMonitor extends AbstractModel
         }
         if (array_key_exists("MonitorId",$param) and $param["MonitorId"] !== null) {
             $this->MonitorId = $param["MonitorId"];
+        }
+
+        if (array_key_exists("MetricId",$param) and $param["MetricId"] !== null) {
+            $this->MetricId = $param["MetricId"];
         }
 
         if (array_key_exists("ObjectTypeId",$param) and $param["ObjectTypeId"] !== null) {

@@ -160,10 +160,10 @@ use TencentCloud\Common\AbstractModel;
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
  * @method string getApproverVerifyType() 获取指定个人签署方查看合同的校验方式
 <ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
  * @method void setApproverVerifyType(string $ApproverVerifyType) 设置指定个人签署方查看合同的校验方式
 <ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
  * @method integer getSignBeanTag() 获取签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
@@ -323,7 +323,7 @@ class CreateFlowByFilesRequest extends AbstractModel
     /**
      * @var string 指定个人签署方查看合同的校验方式
 <ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
      */
     public $ApproverVerifyType;
 
@@ -419,7 +419,7 @@ class CreateFlowByFilesRequest extends AbstractModel
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      * @param string $ApproverVerifyType 指定个人签署方查看合同的校验方式
 <ul><li>   **VerifyCheck**  :（默认）人脸识别,人脸识别后才能合同内容 </li>
-<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+<li>   **MobileCheck**  :  手机号验证, 用户手机号和参与方手机号（ApproverMobile）相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）</li></ul>
      * @param integer $SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>

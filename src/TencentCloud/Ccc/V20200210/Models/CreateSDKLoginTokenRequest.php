@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getSeatUserId() 获取座席账号。
  * @method void setSeatUserId(string $SeatUserId) 设置座席账号。
+ * @method boolean getOnlyOnce() 获取生成的token是否一次性校验
+ * @method void setOnlyOnce(boolean $OnlyOnce) 设置生成的token是否一次性校验
  */
 class CreateSDKLoginTokenRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateSDKLoginTokenRequest extends AbstractModel
     public $SeatUserId;
 
     /**
+     * @var boolean 生成的token是否一次性校验
+     */
+    public $OnlyOnce;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $SeatUserId 座席账号。
+     * @param boolean $OnlyOnce 生成的token是否一次性校验
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateSDKLoginTokenRequest extends AbstractModel
 
         if (array_key_exists("SeatUserId",$param) and $param["SeatUserId"] !== null) {
             $this->SeatUserId = $param["SeatUserId"];
+        }
+
+        if (array_key_exists("OnlyOnce",$param) and $param["OnlyOnce"] !== null) {
+            $this->OnlyOnce = $param["OnlyOnce"];
         }
     }
 }

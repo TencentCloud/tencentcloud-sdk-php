@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIP(string $IP) 设置pod的IP
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取pod状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置pod状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PodInfo extends AbstractModel
 {
@@ -44,9 +48,17 @@ class PodInfo extends AbstractModel
     public $IP;
 
     /**
+     * @var string pod状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $Name pod名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IP pod的IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status pod状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class PodInfo extends AbstractModel
 
         if (array_key_exists("IP",$param) and $param["IP"] !== null) {
             $this->IP = $param["IP"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

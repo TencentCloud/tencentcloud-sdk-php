@@ -96,6 +96,8 @@ video 纯视频
  * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置开启课后评分。 0：不开启(默认)  1：开启
  * @method integer getRoomType() 获取房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
  * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+ * @method integer getRecordLayout() 获取录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+ * @method void setRecordLayout(integer $RecordLayout) 设置录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
  */
 class ModifyRoomRequest extends AbstractModel
 {
@@ -214,6 +216,11 @@ video 纯视频
     public $RoomType;
 
     /**
+     * @var integer 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     */
+    public $RecordLayout;
+
+    /**
      * @param integer $RoomId 房间ID。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
@@ -252,6 +259,7 @@ video 纯视频
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
      * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * @param integer $RecordLayout 录制模板。仅可修改还未开始的房间。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      */
     function __construct()
     {
@@ -340,6 +348,10 @@ video 纯视频
 
         if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
             $this->RoomType = $param["RoomType"];
+        }
+
+        if (array_key_exists("RecordLayout",$param) and $param["RecordLayout"] !== null) {
+            $this->RecordLayout = $param["RecordLayout"];
         }
     }
 }

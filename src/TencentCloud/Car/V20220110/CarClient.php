@@ -23,8 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Car\V20220110\Models as Models;
 
 /**
- * @method Models\ApplyConcurrentResponse ApplyConcurrent(Models\ApplyConcurrentRequest $req) 申请并发
- * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
+ * @method Models\ApplyConcurrentResponse ApplyConcurrent(Models\ApplyConcurrentRequest $req) 本接口用于申请并发。接口超时时间：20秒。
+ * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 本接口用于创建会话。接口超时时间：5秒。
  * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) 销毁会话
  * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) 开始云端推流
  * @method Models\StopPublishStreamResponse StopPublishStream(Models\StopPublishStreamRequest $req) 停止云端推流

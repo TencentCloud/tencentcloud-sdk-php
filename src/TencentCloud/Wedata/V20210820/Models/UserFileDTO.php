@@ -40,13 +40,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5Value(string $Md5Value) 设置文件MD5值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取创建时间，秒级别的时间戳
+ * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(integer $CreateTime) 设置创建时间，秒级别的时间戳
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateTime() 获取更新时间，秒级别的时间戳
+ * @method string getUpdateTime() 获取更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间，秒级别的时间戳
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取文件大小，单位为字节
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,13 +130,13 @@ class UserFileDTO extends AbstractModel
     public $Md5Value;
 
     /**
-     * @var integer 创建时间，秒级别的时间戳
+     * @var string 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var integer 更新时间，秒级别的时间戳
+     * @var string 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
@@ -224,9 +224,9 @@ class UserFileDTO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Md5Value 文件MD5值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime 创建时间，秒级别的时间戳
+     * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateTime 更新时间，秒级别的时间戳
+     * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 文件大小，单位为字节
 注意：此字段可能返回 null，表示取不到有效值。

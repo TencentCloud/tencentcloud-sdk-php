@@ -50,6 +50,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setContainers(array $Containers) 设置要创建的容器配置列表。
  * @method boolean getAutoVoucher() 获取是否自动使用代金券。默认不使用。
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券。默认不使用。
+ * @method string getFirewallTemplateId() 获取防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+ * @method void setFirewallTemplateId(string $FirewallTemplateId) 设置防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -113,6 +115,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $AutoVoucher;
 
     /**
+     * @var string 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+     */
+    public $FirewallTemplateId;
+
+    /**
      * @param string $BundleId 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
      * @param string $BlueprintId 镜像ID。可以通过调用 [查询镜像信息](https://cloud.tencent.com/document/api/1207/47689) 接口获取。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
@@ -128,6 +135,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param LoginConfiguration $LoginConfiguration 实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
      * @param array $Containers 要创建的容器配置列表。
      * @param boolean $AutoVoucher 是否自动使用代金券。默认不使用。
+     * @param string $FirewallTemplateId 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
      */
     function __construct()
     {
@@ -191,6 +199,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
         if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
             $this->AutoVoucher = $param["AutoVoucher"];
+        }
+
+        if (array_key_exists("FirewallTemplateId",$param) and $param["FirewallTemplateId"] !== null) {
+            $this->FirewallTemplateId = $param["FirewallTemplateId"];
         }
     }
 }

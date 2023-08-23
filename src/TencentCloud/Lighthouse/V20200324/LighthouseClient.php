@@ -30,6 +30,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 回滚云硬盘备份点时，云硬盘的状态必须为 UNATTACHED或ATTACHED。
   云硬盘状态可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口查询。
 * 如果云硬盘处于 ATTACHED状态，相关RUNNING 状态的实例会强制关机，然后回滚云硬盘备份点。
+ * @method Models\ApplyFirewallTemplateResponse ApplyFirewallTemplate(Models\ApplyFirewallTemplateRequest $req) 本接口 (ApplyFirewallTemplate) 用于应用防火墙模板到多个实例。
  * @method Models\ApplyInstanceSnapshotResponse ApplyInstanceSnapshot(Models\ApplyInstanceSnapshotRequest $req) 本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
 <li>仅支持回滚到原系统盘。</li>
 <li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
@@ -57,6 +58,8 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
 * Action 字段只允许输入 ACCEPT 或 DROP。
 * FirewallRuleDescription 字段长度不得超过 64。
+ * @method Models\CreateFirewallTemplateResponse CreateFirewallTemplate(Models\CreateFirewallTemplateRequest $req) 本接口 (CreateFirewallTemplate) 用于创建防火墙模板。
+ * @method Models\CreateFirewallTemplateRulesResponse CreateFirewallTemplateRules(Models\CreateFirewallTemplateRulesRequest $req) 本接口 (CreateFirewallTemplateRules) 用于创建防火墙模板规则。
  * @method Models\CreateInstanceSnapshotResponse CreateInstanceSnapshot(Models\CreateInstanceSnapshotRequest $req) 本接口（CreateInstanceSnapshot）用于创建指定实例的系统盘快照。
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 本接口(CreateInstances)用于创建一个或多个指定套餐的轻量应用服务器实例。
  * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) 本接口（CreateKeyPair）用于创建一个密钥对。
@@ -73,6 +76,8 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
 * Action 字段只允许输入 ACCEPT 或 DROP。
 * FirewallRuleDescription 字段长度不得超过 64。
+ * @method Models\DeleteFirewallTemplateResponse DeleteFirewallTemplate(Models\DeleteFirewallTemplateRequest $req) 本接口 (DeleteFirewallTemplate) 用于删除防火墙模板。
+ * @method Models\DeleteFirewallTemplateRulesResponse DeleteFirewallTemplateRules(Models\DeleteFirewallTemplateRulesRequest $req) 本接口 (DeleteFirewallTemplateRules) 用于删除防火墙模板规则。
  * @method Models\DeleteKeyPairsResponse DeleteKeyPairs(Models\DeleteKeyPairsRequest $req) 本接口（DeleteKeyPairs）用于删除密钥对。
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) 本接口（DeleteSnapshots）用于删除快照。
 快照必须处于 NORMAL 状态，快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。
@@ -95,6 +100,11 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DescribeDockerContainersResponse DescribeDockerContainers(Models\DescribeDockerContainersRequest $req) 查询实例内的容器列表。
  * @method Models\DescribeFirewallRulesResponse DescribeFirewallRules(Models\DescribeFirewallRulesRequest $req) 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
  * @method Models\DescribeFirewallRulesTemplateResponse DescribeFirewallRulesTemplate(Models\DescribeFirewallRulesTemplateRequest $req) 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模板。
+ * @method Models\DescribeFirewallTemplateApplyRecordsResponse DescribeFirewallTemplateApplyRecords(Models\DescribeFirewallTemplateApplyRecordsRequest $req) 本接口 (DescribeFirewallTemplateApplyRecords) 用于查询防火墙模板应用记录列表。
+ * @method Models\DescribeFirewallTemplateQuotaResponse DescribeFirewallTemplateQuota(Models\DescribeFirewallTemplateQuotaRequest $req) 本接口 (DescribeFirewallTemplateQuota) 用于查询防火墙模板配额。
+ * @method Models\DescribeFirewallTemplateRuleQuotaResponse DescribeFirewallTemplateRuleQuota(Models\DescribeFirewallTemplateRuleQuotaRequest $req) 本接口 (DescribeFirewallTemplateRuleQuota) 用于查询防火墙模板规则配额。
+ * @method Models\DescribeFirewallTemplateRulesResponse DescribeFirewallTemplateRules(Models\DescribeFirewallTemplateRulesRequest $req) 本接口 (DescribeFirewallTemplateRules) 用于查询防火墙模板规则列表。
+ * @method Models\DescribeFirewallTemplatesResponse DescribeFirewallTemplates(Models\DescribeFirewallTemplatesRequest $req) 本接口 (DescribeFirewallTemplates) 用于查询防火墙模板列表。
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) 本接口（DescribeGeneralResourceQuotas）用于查询通用资源配额信息。
  * @method Models\DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttribute(Models\DescribeInstanceLoginKeyPairAttributeRequest $req) 本接口用于查询实例默认登录密钥属性。
  * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
@@ -183,6 +193,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
 * Action 字段只允许输入 ACCEPT 或 DROP。
 * FirewallRuleDescription 字段长度不得超过 64。
+ * @method Models\ModifyFirewallTemplateResponse ModifyFirewallTemplate(Models\ModifyFirewallTemplateRequest $req) 本接口 (ModifyFirewallTemplate) 用于修改防火墙模板。
  * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) 本接口（ModifyInstancesAttribute）用于修改实例的属性。
 * “实例名称”仅为方便用户自己管理之用。
 * 支持批量操作。每次请求批量实例的上限为 100。
@@ -216,8 +227,10 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 只有状态为 RUNNING，STOPPED 或 SHUTDOWN 的实例才可以进行此操作。
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+ * @method Models\ReplaceFirewallTemplateRuleResponse ReplaceFirewallTemplateRule(Models\ReplaceFirewallTemplateRuleRequest $req) 本接口 (ReplaceFirewallTemplateRules) 用于替换防火墙模板规则。
  * @method Models\RerunDockerContainerResponse RerunDockerContainer(Models\RerunDockerContainerRequest $req) 重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
  * @method Models\ResetAttachCcnResponse ResetAttachCcn(Models\ResetAttachCcnRequest $req) 本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
+ * @method Models\ResetFirewallTemplateRulesResponse ResetFirewallTemplateRules(Models\ResetFirewallTemplateRulesRequest $req) 本接口 (ResetFirewallTemplateRules) 用于重置防火墙模板下所有规则。
  * @method Models\ResetInstanceResponse ResetInstance(Models\ResetInstanceRequest $req) 本接口（ResetInstance）用于重装指定实例上的镜像。
 
 * 如果指定了 BlueprintId 参数，则使用指定的镜像重装；否则按照当前实例使用的镜像进行重装。

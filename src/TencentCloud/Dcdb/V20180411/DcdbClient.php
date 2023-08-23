@@ -67,9 +67,6 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口（DescribeProjectSecurityGroups）用于查询项目安全组信息
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 本接口（DescribeProjects）用于查询项目列表
  * @method Models\DescribeShardSpecResponse DescribeShardSpec(Models\DescribeShardSpecRequest $req) 查询可创建的分布式数据库可售卖的分片规格配置。
- * @method Models\DescribeSqlLogsResponse DescribeSqlLogs(Models\DescribeSqlLogsRequest $req) 已废弃接口
-
-本接口（DescribeSqlLogs）用于获取实例SQL日志。
  * @method Models\DescribeUserTasksResponse DescribeUserTasks(Models\DescribeUserTasksRequest $req) 本接口（DescribeUserTasks）用于拉取用户任务列表
  * @method Models\DestroyDCDBInstanceResponse DestroyDCDBInstance(Models\DestroyDCDBInstanceRequest $req) 本接口(DestroyDCDBInstance)用于销毁已隔离的TDSQL包年包月实例。
  * @method Models\DestroyHourDCDBInstanceResponse DestroyHourDCDBInstance(Models\DestroyHourDCDBInstanceRequest $req) 本接口（DestroyHourDCDBInstance）用于TDSQL销毁按量计费实例。

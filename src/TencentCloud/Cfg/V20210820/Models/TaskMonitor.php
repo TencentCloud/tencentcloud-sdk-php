@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监控指标
  *
- * @method integer getTaskMonitorId() 获取监控指标ID
- * @method void setTaskMonitorId(integer $TaskMonitorId) 设置监控指标ID
+ * @method integer getTaskMonitorId() 获取演练监控指标ID
+ * @method void setTaskMonitorId(integer $TaskMonitorId) 设置演练监控指标ID
+ * @method integer getMetricId() 获取监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetricId(integer $MetricId) 设置监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskMonitorObjectTypeId() 获取监控指标对象类型ID
  * @method void setTaskMonitorObjectTypeId(integer $TaskMonitorObjectTypeId) 设置监控指标对象类型ID
  * @method string getMetricName() 获取指标名称
@@ -40,9 +44,15 @@ use TencentCloud\Common\AbstractModel;
 class TaskMonitor extends AbstractModel
 {
     /**
-     * @var integer 监控指标ID
+     * @var integer 演练监控指标ID
      */
     public $TaskMonitorId;
+
+    /**
+     * @var integer 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetricId;
 
     /**
      * @var integer 监控指标对象类型ID
@@ -72,7 +82,9 @@ class TaskMonitor extends AbstractModel
     public $Unit;
 
     /**
-     * @param integer $TaskMonitorId 监控指标ID
+     * @param integer $TaskMonitorId 演练监控指标ID
+     * @param integer $MetricId 监控指标ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskMonitorObjectTypeId 监控指标对象类型ID
      * @param string $MetricName 指标名称
      * @param array $InstancesIds 实例ID列表
@@ -96,6 +108,10 @@ class TaskMonitor extends AbstractModel
         }
         if (array_key_exists("TaskMonitorId",$param) and $param["TaskMonitorId"] !== null) {
             $this->TaskMonitorId = $param["TaskMonitorId"];
+        }
+
+        if (array_key_exists("MetricId",$param) and $param["MetricId"] !== null) {
+            $this->MetricId = $param["MetricId"];
         }
 
         if (array_key_exists("TaskMonitorObjectTypeId",$param) and $param["TaskMonitorObjectTypeId"] !== null) {

@@ -28,14 +28,6 @@ POSTPAID_BY_HOUR 按量计费
 POSTPAID_BY_HOUR 按量计费
  * @method array getResourceConfigInfos() 获取资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
  * @method void setResourceConfigInfos(array $ResourceConfigInfos) 设置资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
- * @method CosPathInfo getCodePackagePath() 获取COS代码包路径
- * @method void setCodePackagePath(CosPathInfo $CodePackagePath) 设置COS代码包路径
- * @method string getTrainingMode() 获取训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
- * @method void setTrainingMode(string $TrainingMode) 设置训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
- * @method CosPathInfo getOutput() 获取COS训练输出路径
- * @method void setOutput(CosPathInfo $Output) 设置COS训练输出路径
- * @method boolean getLogEnable() 获取是否上报日志
- * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
  * @method string getFrameworkName() 获取训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
  * @method void setFrameworkName(string $FrameworkName) 设置训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
  * @method string getFrameworkVersion() 获取训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
@@ -48,18 +40,26 @@ POSTPAID_BY_HOUR 按量计费
  * @method void setTags(array $Tags) 设置标签配置
  * @method ImageInfo getImageInfo() 获取自定义镜像信息
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置自定义镜像信息
+ * @method CosPathInfo getCodePackagePath() 获取COS代码包路径
+ * @method void setCodePackagePath(CosPathInfo $CodePackagePath) 设置COS代码包路径
  * @method StartCmdInfo getStartCmdInfo() 获取启动命令信息，默认为sh start.sh
  * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置启动命令信息，默认为sh start.sh
+ * @method string getTrainingMode() 获取训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+ * @method void setTrainingMode(string $TrainingMode) 设置训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
  * @method array getDataConfigs() 获取数据配置，依赖DataSource字段
  * @method void setDataConfigs(array $DataConfigs) 设置数据配置，依赖DataSource字段
  * @method string getVpcId() 获取VPC Id
  * @method void setVpcId(string $VpcId) 设置VPC Id
  * @method string getSubnetId() 获取子网Id
  * @method void setSubnetId(string $SubnetId) 设置子网Id
+ * @method CosPathInfo getOutput() 获取COS训练输出路径
+ * @method void setOutput(CosPathInfo $Output) 设置COS训练输出路径
  * @method LogConfig getLogConfig() 获取CLS日志配置
  * @method void setLogConfig(LogConfig $LogConfig) 设置CLS日志配置
  * @method string getTuningParameters() 获取调优参数
  * @method void setTuningParameters(string $TuningParameters) 设置调优参数
+ * @method boolean getLogEnable() 获取是否上报日志
+ * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
  * @method string getRemark() 获取备注，最多500个字
  * @method void setRemark(string $Remark) 设置备注，最多500个字
  * @method string getDataSource() 获取数据来源，eg：DATASET、COS、CFS、HDFS
@@ -84,26 +84,6 @@ POSTPAID_BY_HOUR 按量计费
      * @var array 资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
      */
     public $ResourceConfigInfos;
-
-    /**
-     * @var CosPathInfo COS代码包路径
-     */
-    public $CodePackagePath;
-
-    /**
-     * @var string 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     */
-    public $TrainingMode;
-
-    /**
-     * @var CosPathInfo COS训练输出路径
-     */
-    public $Output;
-
-    /**
-     * @var boolean 是否上报日志
-     */
-    public $LogEnable;
 
     /**
      * @var string 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
@@ -136,9 +116,19 @@ POSTPAID_BY_HOUR 按量计费
     public $ImageInfo;
 
     /**
+     * @var CosPathInfo COS代码包路径
+     */
+    public $CodePackagePath;
+
+    /**
      * @var StartCmdInfo 启动命令信息，默认为sh start.sh
      */
     public $StartCmdInfo;
+
+    /**
+     * @var string 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     */
+    public $TrainingMode;
 
     /**
      * @var array 数据配置，依赖DataSource字段
@@ -156,6 +146,11 @@ POSTPAID_BY_HOUR 按量计费
     public $SubnetId;
 
     /**
+     * @var CosPathInfo COS训练输出路径
+     */
+    public $Output;
+
+    /**
      * @var LogConfig CLS日志配置
      */
     public $LogConfig;
@@ -164,6 +159,11 @@ POSTPAID_BY_HOUR 按量计费
      * @var string 调优参数
      */
     public $TuningParameters;
+
+    /**
+     * @var boolean 是否上报日志
+     */
+    public $LogEnable;
 
     /**
      * @var string 备注，最多500个字
@@ -185,22 +185,22 @@ POSTPAID_BY_HOUR 按量计费
      * @param string $ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
 POSTPAID_BY_HOUR 按量计费
      * @param array $ResourceConfigInfos 资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
-     * @param CosPathInfo $CodePackagePath COS代码包路径
-     * @param string $TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     * @param CosPathInfo $Output COS训练输出路径
-     * @param boolean $LogEnable 是否上报日志
      * @param string $FrameworkName 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
      * @param string $FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
      * @param string $FrameworkEnvironment 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
      * @param string $ResourceGroupId 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
      * @param array $Tags 标签配置
      * @param ImageInfo $ImageInfo 自定义镜像信息
+     * @param CosPathInfo $CodePackagePath COS代码包路径
      * @param StartCmdInfo $StartCmdInfo 启动命令信息，默认为sh start.sh
+     * @param string $TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
      * @param array $DataConfigs 数据配置，依赖DataSource字段
      * @param string $VpcId VPC Id
      * @param string $SubnetId 子网Id
+     * @param CosPathInfo $Output COS训练输出路径
      * @param LogConfig $LogConfig CLS日志配置
      * @param string $TuningParameters 调优参数
+     * @param boolean $LogEnable 是否上报日志
      * @param string $Remark 备注，最多500个字
      * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
      * @param string $CallbackUrl 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
@@ -235,24 +235,6 @@ POSTPAID_BY_HOUR 按量计费
             }
         }
 
-        if (array_key_exists("CodePackagePath",$param) and $param["CodePackagePath"] !== null) {
-            $this->CodePackagePath = new CosPathInfo();
-            $this->CodePackagePath->deserialize($param["CodePackagePath"]);
-        }
-
-        if (array_key_exists("TrainingMode",$param) and $param["TrainingMode"] !== null) {
-            $this->TrainingMode = $param["TrainingMode"];
-        }
-
-        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
-            $this->Output = new CosPathInfo();
-            $this->Output->deserialize($param["Output"]);
-        }
-
-        if (array_key_exists("LogEnable",$param) and $param["LogEnable"] !== null) {
-            $this->LogEnable = $param["LogEnable"];
-        }
-
         if (array_key_exists("FrameworkName",$param) and $param["FrameworkName"] !== null) {
             $this->FrameworkName = $param["FrameworkName"];
         }
@@ -283,9 +265,18 @@ POSTPAID_BY_HOUR 按量计费
             $this->ImageInfo->deserialize($param["ImageInfo"]);
         }
 
+        if (array_key_exists("CodePackagePath",$param) and $param["CodePackagePath"] !== null) {
+            $this->CodePackagePath = new CosPathInfo();
+            $this->CodePackagePath->deserialize($param["CodePackagePath"]);
+        }
+
         if (array_key_exists("StartCmdInfo",$param) and $param["StartCmdInfo"] !== null) {
             $this->StartCmdInfo = new StartCmdInfo();
             $this->StartCmdInfo->deserialize($param["StartCmdInfo"]);
+        }
+
+        if (array_key_exists("TrainingMode",$param) and $param["TrainingMode"] !== null) {
+            $this->TrainingMode = $param["TrainingMode"];
         }
 
         if (array_key_exists("DataConfigs",$param) and $param["DataConfigs"] !== null) {
@@ -305,6 +296,11 @@ POSTPAID_BY_HOUR 按量计费
             $this->SubnetId = $param["SubnetId"];
         }
 
+        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
+            $this->Output = new CosPathInfo();
+            $this->Output->deserialize($param["Output"]);
+        }
+
         if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
             $this->LogConfig = new LogConfig();
             $this->LogConfig->deserialize($param["LogConfig"]);
@@ -312,6 +308,10 @@ POSTPAID_BY_HOUR 按量计费
 
         if (array_key_exists("TuningParameters",$param) and $param["TuningParameters"] !== null) {
             $this->TuningParameters = $param["TuningParameters"];
+        }
+
+        if (array_key_exists("LogEnable",$param) and $param["LogEnable"] !== null) {
+            $this->LogEnable = $param["LogEnable"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

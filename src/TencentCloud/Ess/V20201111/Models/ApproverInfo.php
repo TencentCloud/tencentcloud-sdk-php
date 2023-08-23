@@ -140,13 +140,15 @@ use TencentCloud\Common\AbstractModel;
 详细操作可以参考开发者中心的ApproverOption结构体。
  * @method array getApproverVerifyTypes() 获取指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
-<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
 <li>此字段不可传多个校验方式</li></ul>
  * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
-<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
 <li>此字段不可传多个校验方式</li></ul>
@@ -305,7 +307,8 @@ class ApproverInfo extends AbstractModel
     /**
      * @var array 指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
-<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
 <li>此字段不可传多个校验方式</li></ul>
@@ -397,7 +400,8 @@ class ApproverInfo extends AbstractModel
 详细操作可以参考开发者中心的ApproverOption结构体。
      * @param array $ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
-<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容</li></ul>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
 <li>此字段不可传多个校验方式</li></ul>

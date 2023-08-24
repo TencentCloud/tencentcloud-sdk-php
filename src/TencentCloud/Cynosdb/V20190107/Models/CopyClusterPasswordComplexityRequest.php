@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopyClusterPasswordComplexity请求参数结构体
  *
- * @method array getClusterIds() 获取复制集群ID数组
- * @method void setClusterIds(array $ClusterIds) 设置复制集群ID数组
- * @method string getSourceClusterId() 获取集群id
- * @method void setSourceClusterId(string $SourceClusterId) 设置集群id
+ * @method array getClusterIds() 获取复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+ * @method void setClusterIds(array $ClusterIds) 设置复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+ * @method string getSourceClusterId() 获取集群id，例如"cynosdbmysql-bzxxrmtq"
+ * @method void setSourceClusterId(string $SourceClusterId) 设置集群id，例如"cynosdbmysql-bzxxrmtq"
  */
 class CopyClusterPasswordComplexityRequest extends AbstractModel
 {
     /**
-     * @var array 复制集群ID数组
+     * @var array 复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
      */
     public $ClusterIds;
 
     /**
-     * @var string 集群id
+     * @var string 集群id，例如"cynosdbmysql-bzxxrmtq"
      */
     public $SourceClusterId;
 
     /**
-     * @param array $ClusterIds 复制集群ID数组
-     * @param string $SourceClusterId 集群id
+     * @param array $ClusterIds 复制集群ID数组，例如["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+     * @param string $SourceClusterId 集群id，例如"cynosdbmysql-bzxxrmtq"
      */
     function __construct()
     {

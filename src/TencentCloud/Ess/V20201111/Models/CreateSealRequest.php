@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSeal请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method string getSealName() 获取电子印章名字
- * @method void setSealName(string $SealName) 设置电子印章名字
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
- * @method string getGenerateSource() 获取本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
- * @method void setGenerateSource(string $GenerateSource) 设置本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
- * @method string getSealType() 获取电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
- * @method void setSealType(string $SealType) 设置电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
- * @method string getFileName() 获取电子印章图片文件名称
- * @method void setFileName(string $FileName) 设置电子印章图片文件名称
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getSealName() 获取电子印章名字，1-50个中文字符。
+ * @method void setSealName(string $SealName) 设置电子印章名字，1-50个中文字符。
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getGenerateSource() 获取本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image
+ * @method void setGenerateSource(string $GenerateSource) 设置本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image
+ * @method string getSealType() 获取电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章.
+ * @method void setSealType(string $SealType) 设置电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章.
+ * @method string getFileName() 获取电子印章图片文件名称，1-50个中文字符。
+ * @method void setFileName(string $FileName) 设置电子印章图片文件名称，1-50个中文字符。
  * @method string getImage() 获取电子印章图片base64编码
 参数Image,FileToken或GenerateSource=SealGenerateSourceSystem三选一。
  * @method void setImage(string $Image) 设置电子印章图片base64编码
@@ -50,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColor(string $Color) 设置电子印章印章颜色(默认红色RED),RED-红色
 
 系统目前只支持红色印章创建。
- * @method string getSealHorizontalText() 获取暂时不支持横向文字设置
- * @method void setSealHorizontalText(string $SealHorizontalText) 设置暂时不支持横向文字设置
+ * @method string getSealHorizontalText() 获取企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
+ * @method void setSealHorizontalText(string $SealHorizontalText) 设置企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
  * @method string getSealChordText() 获取暂时不支持下弦文字设置
  * @method void setSealChordText(string $SealChordText) 设置暂时不支持下弦文字设置
  * @method string getSealCentralType() 获取系统生成的印章只支持STAR
@@ -59,36 +75,63 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileToken() 获取通过文件上传时，服务端生成的电子印章上传图片的token
 
  * @method void setFileToken(string $FileToken) 设置通过文件上传时，服务端生成的电子印章上传图片的token
+
+ * @method string getSealStyle() 获取印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章
+ * @method void setSealStyle(string $SealStyle) 设置印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章
+ * @method string getSealSize() 获取印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm;
+ * @method void setSealSize(string $SealSize) 设置印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm;
  */
 class CreateSealRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 电子印章名字
+     * @var string 电子印章名字，1-50个中文字符。
      */
     public $SealName;
 
     /**
-     * @var Agent 应用相关信息
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @var string 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+     * @var string 本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image
      */
     public $GenerateSource;
 
     /**
-     * @var string 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
+     * @var string 电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章.
      */
     public $SealType;
 
     /**
-     * @var string 电子印章图片文件名称
+     * @var string 电子印章图片文件名称，1-50个中文字符。
      */
     public $FileName;
 
@@ -118,7 +161,7 @@ class CreateSealRequest extends AbstractModel
     public $Color;
 
     /**
-     * @var string 暂时不支持横向文字设置
+     * @var string 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
      */
     public $SealHorizontalText;
 
@@ -139,12 +182,37 @@ class CreateSealRequest extends AbstractModel
     public $FileToken;
 
     /**
-     * @param UserInfo $Operator 操作人信息
-     * @param string $SealName 电子印章名字
-     * @param Agent $Agent 应用相关信息
-     * @param string $GenerateSource 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
-     * @param string $SealType 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
-     * @param string $FileName 电子印章图片文件名称
+     * @var string 印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章
+     */
+    public $SealStyle;
+
+    /**
+     * @var string 印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm;
+     */
+    public $SealSize;
+
+    /**
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $SealName 电子印章名字，1-50个中文字符。
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $GenerateSource 本接口支持上传图片印章及系统直接生成印章；
+如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
+如果要使用图片上传请传字段 Image
+     * @param string $SealType 电子印章类型：
+OFFICIAL-公章；
+CONTRACT-合同专用章;
+FINANCE-合财务专用章;
+PERSONNEL-人事专用章.
+     * @param string $FileName 电子印章图片文件名称，1-50个中文字符。
      * @param string $Image 电子印章图片base64编码
 参数Image,FileToken或GenerateSource=SealGenerateSourceSystem三选一。
      * @param integer $Width 电子印章宽度,单位px
@@ -154,10 +222,20 @@ class CreateSealRequest extends AbstractModel
      * @param string $Color 电子印章印章颜色(默认红色RED),RED-红色
 
 系统目前只支持红色印章创建。
-     * @param string $SealHorizontalText 暂时不支持横向文字设置
+     * @param string $SealHorizontalText 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号）
      * @param string $SealChordText 暂时不支持下弦文字设置
      * @param string $SealCentralType 系统生成的印章只支持STAR
      * @param string $FileToken 通过文件上传时，服务端生成的电子印章上传图片的token
+
+     * @param string $SealStyle 印章样式:
+
+cycle:圆形印章;
+ellipse:椭圆印章;
+注：默认圆形印章
+     * @param string $SealSize 印章尺寸取值描述：
+42_42 圆形企业公章直径42mm；
+40_40 圆形企业印章直径40mm；
+45_30 椭圆形印章45mm x 30mm;
      */
     function __construct()
     {
@@ -228,6 +306,14 @@ class CreateSealRequest extends AbstractModel
 
         if (array_key_exists("FileToken",$param) and $param["FileToken"] !== null) {
             $this->FileToken = $param["FileToken"];
+        }
+
+        if (array_key_exists("SealStyle",$param) and $param["SealStyle"] !== null) {
+            $this->SealStyle = $param["SealStyle"];
+        }
+
+        if (array_key_exists("SealSize",$param) and $param["SealSize"] !== null) {
+            $this->SealSize = $param["SealSize"];
         }
     }
 }

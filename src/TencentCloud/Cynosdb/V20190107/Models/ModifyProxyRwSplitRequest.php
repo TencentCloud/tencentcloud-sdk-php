@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProxyRwSplit请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getProxyGroupId() 获取数据库代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID
+ * @method string getClusterId() 获取集群ID，例如cynosdbmysql-asd123
+ * @method void setClusterId(string $ClusterId) 设置集群ID，例如cynosdbmysql-asd123
+ * @method string getProxyGroupId() 获取数据库代理组ID，例如cynosdbmysql-proxy-qwe123
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组ID，例如cynosdbmysql-proxy-qwe123
  * @method string getConsistencyType() 获取一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
  * @method void setConsistencyType(string $ConsistencyType) 设置一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
  * @method string getConsistencyTimeOut() 获取一致性超时时间
@@ -62,12 +62,12 @@ SessionConnectionPool
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，例如cynosdbmysql-asd123
      */
     public $ClusterId;
 
     /**
-     * @var string 数据库代理组ID
+     * @var string 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
      */
     public $ProxyGroupId;
 
@@ -141,8 +141,8 @@ SessionConnectionPool
     public $ConnectionPoolTimeOut;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $ProxyGroupId 数据库代理组ID
+     * @param string $ClusterId 集群ID，例如cynosdbmysql-asd123
+     * @param string $ProxyGroupId 数据库代理组ID，例如cynosdbmysql-proxy-qwe123
      * @param string $ConsistencyType 一致性类型；“eventual"-最终一致性, "session"-会话一致性, "global"-全局一致性
      * @param string $ConsistencyTimeOut 一致性超时时间
      * @param string $WeightMode 读写权重分配模式；系统自动分配："system"， 自定义："custom"

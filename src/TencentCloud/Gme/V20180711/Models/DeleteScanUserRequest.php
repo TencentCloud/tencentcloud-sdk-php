@@ -23,7 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBizId() 获取应用ID，登录控制台 - 服务管理创建应用得到的AppID
  * @method void setBizId(integer $BizId) 设置应用ID，登录控制台 - 服务管理创建应用得到的AppID
  * @method integer getUserId() 获取需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
  * @method void setUserId(integer $UserId) 设置需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
+ * @method string getUserIdString() 获取需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+ * @method void setUserIdString(string $UserIdString) 设置需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
  */
 class DeleteScanUserRequest extends AbstractModel
 {
@@ -34,12 +40,22 @@ class DeleteScanUserRequest extends AbstractModel
 
     /**
      * @var integer 需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
      */
     public $UserId;
 
     /**
+     * @var string 需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     */
+    public $UserIdString;
+
+    /**
      * @param integer $BizId 应用ID，登录控制台 - 服务管理创建应用得到的AppID
      * @param integer $UserId 需要删除送检的用户号。示例：1234
+(若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
+     * @param string $UserIdString 需要删除送检的用户号。示例："1234"
+(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
      */
     function __construct()
     {
@@ -60,6 +76,10 @@ class DeleteScanUserRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("UserIdString",$param) and $param["UserIdString"] !== null) {
+            $this->UserIdString = $param["UserIdString"];
         }
     }
 }

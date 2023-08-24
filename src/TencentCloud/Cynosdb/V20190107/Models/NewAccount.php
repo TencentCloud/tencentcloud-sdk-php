@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * x08新创建的账号
  *
- * @method string getAccountName() 获取账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
- * @method void setAccountName(string $AccountName) 设置账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+ * @method string getAccountName() 获取账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
+ * @method void setAccountName(string $AccountName) 设置账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
  * @method string getAccountPassword() 获取密码，密码长度范围为8到64个字符
  * @method void setAccountPassword(string $AccountPassword) 设置密码，密码长度范围为8到64个字符
- * @method string getHost() 获取主机
- * @method void setHost(string $Host) 设置主机
+ * @method string getHost() 获取主机(%或ipv4地址)
+ * @method void setHost(string $Host) 设置主机(%或ipv4地址)
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  * @method integer getMaxUserConnections() 获取用户最大连接数，不能大于10240
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class NewAccount extends AbstractModel
 {
     /**
-     * @var string 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+     * @var string 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
      */
     public $AccountName;
 
@@ -44,7 +44,7 @@ class NewAccount extends AbstractModel
     public $AccountPassword;
 
     /**
-     * @var string 主机
+     * @var string 主机(%或ipv4地址)
      */
     public $Host;
 
@@ -59,9 +59,9 @@ class NewAccount extends AbstractModel
     public $MaxUserConnections;
 
     /**
-     * @param string $AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+     * @param string $AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-30
      * @param string $AccountPassword 密码，密码长度范围为8到64个字符
-     * @param string $Host 主机
+     * @param string $Host 主机(%或ipv4地址)
      * @param string $Description 描述
      * @param integer $MaxUserConnections 用户最大连接数，不能大于10240
      */

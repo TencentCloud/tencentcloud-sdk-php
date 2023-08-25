@@ -76,6 +76,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(Models\DescribeVideoDownloadUrlRequest $req) 用于获取云录像下载 url
  * @method Models\ListAITasksResponse ListAITasks(Models\ListAITasksRequest $req) 获取AI任务列表
  * @method Models\ListDevicesResponse ListDevices(Models\ListDevicesRequest $req) 用于获取对应组织下的设备列表。
+ * @method Models\ListGatewayDevicesResponse ListGatewayDevices(Models\ListGatewayDevicesRequest $req) 用于查询网关下挂载的设备列表。
  * @method Models\ListGatewaysResponse ListGateways(Models\ListGatewaysRequest $req) 用于获取网关列表。
  * @method Models\ListOrganizationChannelNumbersResponse ListOrganizationChannelNumbers(Models\ListOrganizationChannelNumbersRequest $req) 用于查询组织目录下的未添加到实时上云计划中的通道数量
  * @method Models\ListOrganizationChannelsResponse ListOrganizationChannels(Models\ListOrganizationChannelsRequest $req) 用于查询组织目录下的通道列表

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionName(string $SubscriptionName) 设置订阅者名称，不超过128个字符。
  * @method boolean getIsIdempotent() 获取是否幂等创建，若否不允许创建同名的订阅关系。
  * @method void setIsIdempotent(boolean $IsIdempotent) 设置是否幂等创建，若否不允许创建同名的订阅关系。
- * @method string getRemark() 获取备注，128个字符以内。
- * @method void setRemark(string $Remark) 设置备注，128个字符以内。
  * @method string getClusterId() 获取Pulsar 集群的ID
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
+ * @method string getRemark() 获取备注，128个字符以内。
+ * @method void setRemark(string $Remark) 设置备注，128个字符以内。
  * @method boolean getAutoCreatePolicyTopic() 获取是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
  * @method void setAutoCreatePolicyTopic(boolean $AutoCreatePolicyTopic) 设置是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
  * @method string getPostFixPattern() 获取指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
@@ -60,14 +60,14 @@ class CreateSubscriptionRequest extends AbstractModel
     public $IsIdempotent;
 
     /**
-     * @var string 备注，128个字符以内。
-     */
-    public $Remark;
-
-    /**
      * @var string Pulsar 集群的ID
      */
     public $ClusterId;
+
+    /**
+     * @var string 备注，128个字符以内。
+     */
+    public $Remark;
 
     /**
      * @var boolean 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
@@ -84,8 +84,8 @@ class CreateSubscriptionRequest extends AbstractModel
      * @param string $TopicName 主题名称。
      * @param string $SubscriptionName 订阅者名称，不超过128个字符。
      * @param boolean $IsIdempotent 是否幂等创建，若否不允许创建同名的订阅关系。
-     * @param string $Remark 备注，128个字符以内。
      * @param string $ClusterId Pulsar 集群的ID
+     * @param string $Remark 备注，128个字符以内。
      * @param boolean $AutoCreatePolicyTopic 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
      * @param string $PostFixPattern 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
      */
@@ -118,12 +118,12 @@ class CreateSubscriptionRequest extends AbstractModel
             $this->IsIdempotent = $param["IsIdempotent"];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
-        }
-
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
 
         if (array_key_exists("AutoCreatePolicyTopic",$param) and $param["AutoCreatePolicyTopic"] !== null) {

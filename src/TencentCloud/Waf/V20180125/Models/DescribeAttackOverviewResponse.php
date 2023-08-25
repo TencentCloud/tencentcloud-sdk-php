@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotCount(integer $BotCount) 设置Bot攻击总数
  * @method integer getApiAssetsCount() 获取api资产总数
  * @method void setApiAssetsCount(integer $ApiAssetsCount) 设置api资产总数
+ * @method integer getApiRiskEventCount() 获取api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiRiskEventCount(integer $ApiRiskEventCount) 设置api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +72,12 @@ class DescribeAttackOverviewResponse extends AbstractModel
     public $ApiAssetsCount;
 
     /**
+     * @var integer api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiRiskEventCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +89,8 @@ class DescribeAttackOverviewResponse extends AbstractModel
      * @param integer $CCCount CC攻击总数
      * @param integer $BotCount Bot攻击总数
      * @param integer $ApiAssetsCount api资产总数
+     * @param integer $ApiRiskEventCount api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +128,10 @@ class DescribeAttackOverviewResponse extends AbstractModel
 
         if (array_key_exists("ApiAssetsCount",$param) and $param["ApiAssetsCount"] !== null) {
             $this->ApiAssetsCount = $param["ApiAssetsCount"];
+        }
+
+        if (array_key_exists("ApiRiskEventCount",$param) and $param["ApiRiskEventCount"] !== null) {
+            $this->ApiRiskEventCount = $param["ApiRiskEventCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

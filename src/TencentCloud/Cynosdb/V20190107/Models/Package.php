@@ -68,9 +68,9 @@ refund-已退费。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageUsedSpec(float $PackageUsedSpec) 设置资源包已使用量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getHasQuota() 获取资源包已使用量
+ * @method boolean getHasQuota() 获取是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHasQuota(boolean $HasQuota) 设置资源包已使用量
+ * @method void setHasQuota(boolean $HasQuota) 设置是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBindInstanceInfos() 获取绑定实例信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,7 +144,7 @@ refund-已退费。
     public $PackageUsedSpec;
 
     /**
-     * @var boolean 资源包已使用量
+     * @var boolean 是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasQuota;
@@ -192,7 +192,7 @@ refund-已退费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $PackageUsedSpec 资源包已使用量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $HasQuota 资源包已使用量
+     * @param boolean $HasQuota 是否还有库存余量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BindInstanceInfos 绑定实例信息
 注意：此字段可能返回 null，表示取不到有效值。

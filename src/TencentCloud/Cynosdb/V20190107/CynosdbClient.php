@@ -38,7 +38,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(Models\CreateAuditRuleTemplateRequest $req) 创建审计规则模版
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) 为集群创建手动备份
  * @method Models\CreateClusterDatabaseResponse CreateClusterDatabase(Models\CreateClusterDatabaseRequest $req) 创建数据库
- * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) 创建集群
+ * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) 购买新集群
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 本接口（CreateParamTemplate）用于创建参数模板
  * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 创建数据库代理
  * @method Models\CreateProxyEndPointResponse CreateProxyEndPoint(Models\CreateProxyEndPointRequest $req) 创建数据库代理连接点
@@ -114,7 +114,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyClusterParamResponse ModifyClusterParam(Models\ModifyClusterParamRequest $req) 修改集群参数
  * @method Models\ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexity(Models\ModifyClusterPasswordComplexityRequest $req) 本接口（ModifyClusterPasswordComplexity）用于修改/开启集群密码复杂度
  * @method Models\ModifyClusterSlaveZoneResponse ModifyClusterSlaveZone(Models\ModifyClusterSlaveZoneRequest $req) 修改从可用区
- * @method Models\ModifyClusterStorageResponse ModifyClusterStorage(Models\ModifyClusterStorageRequest $req) 升级预付费存储
+ * @method Models\ModifyClusterStorageResponse ModifyClusterStorage(Models\ModifyClusterStorageRequest $req) 调整包年包月存储容量
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口(ModifyInstanceName)用于修改实例名称。
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口（ModifyInstanceParam）用于修改实例参数。
@@ -125,10 +125,10 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyResourcePackageClustersResponse ModifyResourcePackageClusters(Models\ModifyResourcePackageClustersRequest $req) 给资源包绑定集群
  * @method Models\ModifyResourcePackageNameResponse ModifyResourcePackageName(Models\ModifyResourcePackageNameRequest $req) 修改资源包名称
  * @method Models\ModifyVipVportResponse ModifyVipVport(Models\ModifyVipVportRequest $req) 修改实例组ip，端口
- * @method Models\OfflineClusterResponse OfflineCluster(Models\OfflineClusterRequest $req) 下线集群
- * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) 下线实例
+ * @method Models\OfflineClusterResponse OfflineCluster(Models\OfflineClusterRequest $req) 销毁集群
+ * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) 销毁实例
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) TDSQL-C for MySQL实例开通审计服务
- * @method Models\OpenClusterPasswordComplexityResponse OpenClusterPasswordComplexity(Models\OpenClusterPasswordComplexityRequest $req) 本接口（OpenClusterPasswordComplexity）用于开启集群密码复杂度
+ * @method Models\OpenClusterPasswordComplexityResponse OpenClusterPasswordComplexity(Models\OpenClusterPasswordComplexityRequest $req) 本接口（OpenClusterPasswordComplexity）用于开启自定义密码复杂度功能
  * @method Models\OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccess(Models\OpenClusterReadOnlyInstanceGroupAccessRequest $req) 开启只读实例组接入
  * @method Models\OpenReadOnlyInstanceExclusiveAccessResponse OpenReadOnlyInstanceExclusiveAccess(Models\OpenReadOnlyInstanceExclusiveAccessRequest $req) 开通只读实例独有访问接入组
  * @method Models\OpenWanResponse OpenWan(Models\OpenWanRequest $req) 本接口（OpenWan）用于开通外网
@@ -148,8 +148,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\SwitchClusterZoneResponse SwitchClusterZone(Models\SwitchClusterZoneRequest $req) 切换到从可用区
  * @method Models\SwitchProxyVpcResponse SwitchProxyVpc(Models\SwitchProxyVpcRequest $req) 本接口(SwitchProxyVpc)更换数据库代理vpc
  * @method Models\UnbindClusterResourcePackagesResponse UnbindClusterResourcePackages(Models\UnbindClusterResourcePackagesRequest $req) cynos解绑资源包
- * @method Models\UpgradeClusterVersionResponse UpgradeClusterVersion(Models\UpgradeClusterVersionRequest $req) 更新集群Cynos内核版本
- * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 升级实例
+ * @method Models\UpgradeClusterVersionResponse UpgradeClusterVersion(Models\UpgradeClusterVersionRequest $req) 更新内核小版本
+ * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 实例变配
  * @method Models\UpgradeProxyResponse UpgradeProxy(Models\UpgradeProxyRequest $req) 升级数据库代理配置
  * @method Models\UpgradeProxyVersionResponse UpgradeProxyVersion(Models\UpgradeProxyVersionRequest $req) 升级数据库代理版本
  */

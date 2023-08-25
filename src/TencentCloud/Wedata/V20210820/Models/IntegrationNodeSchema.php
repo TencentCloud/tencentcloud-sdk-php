@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置schema别名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getComment() 获取字段备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComment(string $Comment) 设置字段备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationNodeSchema extends AbstractModel
 {
@@ -75,6 +79,12 @@ class IntegrationNodeSchema extends AbstractModel
     public $Alias;
 
     /**
+     * @var string 字段备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Comment;
+
+    /**
      * @param string $Id schema id
      * @param string $Name schema名称
      * @param string $Type schema类型
@@ -83,6 +93,8 @@ class IntegrationNodeSchema extends AbstractModel
      * @param array $Properties schema拓展属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias schema别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Comment 字段备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -125,6 +137,10 @@ class IntegrationNodeSchema extends AbstractModel
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

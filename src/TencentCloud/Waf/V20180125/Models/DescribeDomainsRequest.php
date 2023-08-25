@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomains请求参数结构体
  *
- * @method integer getOffset() 获取数据偏移量，从1开始。
- * @method void setOffset(integer $Offset) 设置数据偏移量，从1开始。
+ * @method integer getOffset() 获取分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+ * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
  * @method integer getLimit() 获取返回域名的数量
  * @method void setLimit(integer $Limit) 设置返回域名的数量
  * @method array getFilters() 获取过滤数组
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDomainsRequest extends AbstractModel
 {
     /**
-     * @var integer 数据偏移量，从1开始。
+     * @var integer 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
      */
     public $Offset;
 
@@ -45,7 +45,7 @@ class DescribeDomainsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Offset 数据偏移量，从1开始。
+     * @param integer $Offset 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
      * @param integer $Limit 返回域名的数量
      * @param array $Filters 过滤数组
      */

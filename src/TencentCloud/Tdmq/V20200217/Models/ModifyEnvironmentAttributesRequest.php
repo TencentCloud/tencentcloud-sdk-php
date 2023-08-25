@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间名称。
  * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，范围60秒~15天。
  * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，范围60秒~15天。
- * @method string getRemark() 获取备注，字符串最长不超过128。
- * @method void setRemark(string $Remark) 设置备注，字符串最长不超过128。
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getRemark() 获取备注，字符串最长不超过128。
+ * @method void setRemark(string $Remark) 设置备注，字符串最长不超过128。
  * @method RetentionPolicy getRetentionPolicy() 获取消息保留策略
  * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) 设置消息保留策略
  * @method boolean getAutoSubscriptionCreation() 获取是否开启自动创建订阅
@@ -46,14 +46,14 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $MsgTTL;
 
     /**
-     * @var string 备注，字符串最长不超过128。
-     */
-    public $Remark;
-
-    /**
      * @var string 集群ID
      */
     public $ClusterId;
+
+    /**
+     * @var string 备注，字符串最长不超过128。
+     */
+    public $Remark;
 
     /**
      * @var RetentionPolicy 消息保留策略
@@ -68,8 +68,8 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     /**
      * @param string $EnvironmentId 命名空间名称。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，范围60秒~15天。
-     * @param string $Remark 备注，字符串最长不超过128。
      * @param string $ClusterId 集群ID
+     * @param string $Remark 备注，字符串最长不超过128。
      * @param RetentionPolicy $RetentionPolicy 消息保留策略
      * @param boolean $AutoSubscriptionCreation 是否开启自动创建订阅
      */
@@ -94,12 +94,12 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
             $this->MsgTTL = $param["MsgTTL"];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
-        }
-
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
 
         if (array_key_exists("RetentionPolicy",$param) and $param["RetentionPolicy"] !== null) {

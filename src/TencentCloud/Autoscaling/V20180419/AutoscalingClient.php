@@ -199,7 +199,9 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 * 关闭`IN_SERVICE`状态的实例，会减少期望实例数，期望实例数不可低于设置的最小值
 * 使用`STOP_CHARGING`选项关机，待关机的实例需要满足[关机不收费条件](https://cloud.tencent.com/document/product/213/19918)
 * 本接口支持批量操作，每次请求关机实例的上限为100
- * @method Models\UpgradeLaunchConfigurationResponse UpgradeLaunchConfiguration(Models\UpgradeLaunchConfigurationRequest $req) 本接口（UpgradeLaunchConfiguration）用于升级启动配置。
+ * @method Models\UpgradeLaunchConfigurationResponse UpgradeLaunchConfiguration(Models\UpgradeLaunchConfigurationRequest $req) 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
+
+本接口（UpgradeLaunchConfiguration）用于升级启动配置。
 
 * 本接口用于升级启动配置，采用“完全覆盖”风格，无论之前参数如何，统一按照接口参数设置为新的配置。对于非必填字段，不填写则按照默认值赋值。
 * 升级修改启动配置后，已经使用该启动配置扩容的存量实例不会发生变更，此后使用该启动配置的新增实例会按照新的配置进行扩容。

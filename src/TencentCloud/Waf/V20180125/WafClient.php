@@ -84,7 +84,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\GetAttackHistogramResponse GetAttackHistogram(Models\GetAttackHistogramRequest $req) 生成攻击日志的产生时间柱状图
  * @method Models\GetAttackTotalCountResponse GetAttackTotalCount(Models\GetAttackTotalCountRequest $req) 按照条件查询展示攻击总次数
  * @method Models\ModifyAccessPeriodResponse ModifyAccessPeriod(Models\ModifyAccessPeriodRequest $req) 本接口用于修改访问日志保存期限及大字段是否存储
+ * @method Models\ModifyApiAnalyzeStatusResponse ModifyApiAnalyzeStatus(Models\ModifyApiAnalyzeStatusRequest $req) api分析页面开关
  * @method Models\ModifyAreaBanStatusResponse ModifyAreaBanStatus(Models\ModifyAreaBanStatusRequest $req) 修改防护域名的地域封禁状态
+ * @method Models\ModifyBotStatusResponse ModifyBotStatus(Models\ModifyBotStatusRequest $req) Bot_V2 bot总开关更新
  * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 开启或禁用访问控制（自定义策略）
  * @method Models\ModifyCustomWhiteRuleResponse ModifyCustomWhiteRule(Models\ModifyCustomWhiteRuleRequest $req) 编辑精准白名单
  * @method Models\ModifyDomainIpv6StatusResponse ModifyDomainIpv6Status(Models\ModifyDomainIpv6StatusRequest $req) 修改ipv6开关

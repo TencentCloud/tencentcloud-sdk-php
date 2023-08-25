@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
  * @method string getTopicName() 获取主题名称。
  * @method void setTopicName(string $TopicName) 设置主题名称。
+ * @method string getClusterId() 获取Pulsar 集群的ID
+ * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method integer getOffset() 获取起始下标，不填默认为0。
  * @method void setOffset(integer $Offset) 设置起始下标，不填默认为0。
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为20。
@@ -32,8 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionName(string $SubscriptionName) 设置订阅者名称，模糊匹配。
  * @method array getFilters() 获取数据过滤条件。
  * @method void setFilters(array $Filters) 设置数据过滤条件。
- * @method string getClusterId() 获取Pulsar 集群的ID
- * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  */
 class DescribeSubscriptionsRequest extends AbstractModel
 {
@@ -46,6 +46,11 @@ class DescribeSubscriptionsRequest extends AbstractModel
      * @var string 主题名称。
      */
     public $TopicName;
+
+    /**
+     * @var string Pulsar 集群的ID
+     */
+    public $ClusterId;
 
     /**
      * @var integer 起始下标，不填默认为0。
@@ -68,18 +73,13 @@ class DescribeSubscriptionsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string Pulsar 集群的ID
-     */
-    public $ClusterId;
-
-    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名称。
+     * @param string $ClusterId Pulsar 集群的ID
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $SubscriptionName 订阅者名称，模糊匹配。
      * @param array $Filters 数据过滤条件。
-     * @param string $ClusterId Pulsar 集群的ID
      */
     function __construct()
     {
@@ -102,6 +102,10 @@ class DescribeSubscriptionsRequest extends AbstractModel
             $this->TopicName = $param["TopicName"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
@@ -121,10 +125,6 @@ class DescribeSubscriptionsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

@@ -22,26 +22,74 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() 获取实例所属区域及可用区信息。格式：ap-guangzhou-2。
  * @method void setZone(string $Zone) 设置实例所属区域及可用区信息。格式：ap-guangzhou-2。
- * @method integer getNodeNum() 获取每个分片的主从节点数量。<br>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。</li></ul>
- * @method void setNodeNum(integer $NodeNum) 设置每个分片的主从节点数量。<br>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。</li></ul>
- * @method integer getMemory() 获取实例内存大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数CPU与Memory分别对应CPU核数与内存规格。</li></ul>
- * @method void setMemory(integer $Memory) 设置实例内存大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数CPU与Memory分别对应CPU核数与内存规格。</li></ul>
- * @method integer getVolume() 获取实例硬盘大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。</br>
- * @method void setVolume(integer $Volume) 设置实例硬盘大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。</br>
- * @method string getMongoVersion() 获取实例版本信息。<ul><li>具体支持的版本，请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。</li><li>版本信息与版本号对应关系如下：<ul><li>MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。</li><li>MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。</li><li>MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。</li><li>MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。</li><li>MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。</li><li>MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。</li></ul>
- * @method void setMongoVersion(string $MongoVersion) 设置实例版本信息。<ul><li>具体支持的版本，请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。</li><li>版本信息与版本号对应关系如下：<ul><li>MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。</li><li>MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。</li><li>MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。</li><li>MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。</li><li>MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。</li><li>MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。</li></ul>
- * @method string getMachineCode() 获取机器类型。<ul><li>HIO：高IO型。</li><li>HIO10G：高IO万兆型。</li></ul>
- * @method void setMachineCode(string $MachineCode) 设置机器类型。<ul><li>HIO：高IO型。</li><li>HIO10G：高IO万兆型。</li></ul>
+ * @method integer getNodeNum() 获取每个分片的主从节点数量。
+取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
+ * @method void setNodeNum(integer $NodeNum) 设置每个分片的主从节点数量。
+取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
+ * @method integer getMemory() 获取实例内存大小。
+- 单位：GB。
+- 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数CPU与Memory分别对应CPU核数与内存规格。
+ * @method void setMemory(integer $Memory) 设置实例内存大小。
+- 单位：GB。
+- 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数CPU与Memory分别对应CPU核数与内存规格。
+ * @method integer getVolume() 获取实例硬盘大小。
+- 单位：GB。
+- 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。
+ * @method void setVolume(integer $Volume) 设置实例硬盘大小。
+- 单位：GB。
+- 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。
+ * @method string getMongoVersion() 获取实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
+- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
+- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+ * @method void setMongoVersion(string $MongoVersion) 设置实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
+- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
+- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+ * @method string getMachineCode() 获取机器类型。
+- HIO：高IO型。
+- HIO10G：高IO万兆型。
+ * @method void setMachineCode(string $MachineCode) 设置机器类型。
+- HIO：高IO型。
+- HIO10G：高IO万兆型。
  * @method integer getGoodsNum() 获取实例数量，取值范围为[1,10]。
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，取值范围为[1,10]。
- * @method string getClusterType() 获取实例类型。<ul><li>REPLSET：副本集。</li><li>SHARD：分片集群。</li><li>STANDALONE：单节点。</li></ul>
- * @method void setClusterType(string $ClusterType) 设置实例类型。<ul><li>REPLSET：副本集。</li><li>SHARD：分片集群。</li><li>STANDALONE：单节点。</li></ul>
- * @method integer getReplicateSetNum() 获取副本集个数。<ul><li>创建副本集实例时，该参数固定设置为1。</li><li>创建分片集群时，指分片数量，请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。</li><li>若为单节点实例，该参数固定设置为0。</li></ul>
- * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置副本集个数。<ul><li>创建副本集实例时，该参数固定设置为1。</li><li>创建分片集群时，指分片数量，请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。</li><li>若为单节点实例，该参数固定设置为0。</li></ul>
- * @method integer getPeriod() 获取选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。<ul><li>单位：月。</li><li>可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</li></ul>
- * @method void setPeriod(integer $Period) 设置选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。<ul><li>单位：月。</li><li>可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</li></ul>
- * @method string getInstanceChargeType() 获取实例付费方式。<ul><li>PREPAID：包年包月计费。</li><li>POSTPAID_BY_HOUR：按量计费。</li></ul>
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例付费方式。<ul><li>PREPAID：包年包月计费。</li><li>POSTPAID_BY_HOUR：按量计费。</li></ul>
+ * @method string getClusterType() 获取实例类型。
+- REPLSET：副本集。
+- SHARD：分片集群。
+- STANDALONE：单节点。
+ * @method void setClusterType(string $ClusterType) 设置实例类型。
+- REPLSET：副本集。
+- SHARD：分片集群。
+- STANDALONE：单节点。
+ * @method integer getReplicateSetNum() 获取副本集个数。
+- 创建副本集实例时，该参数固定设置为1。
+- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
+- 若为单节点实例，该参数固定设置为0。
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置副本集个数。
+- 创建副本集实例时，该参数固定设置为1。
+- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
+- 若为单节点实例，该参数固定设置为0。
+ * @method integer getPeriod() 获取选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。
+- 单位：月。
+- 可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+ * @method void setPeriod(integer $Period) 设置选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。
+- 单位：月。
+- 可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+ * @method string getInstanceChargeType() 获取实例付费方式。
+- PREPAID：包年包月计费。
+- POSTPAID_BY_HOUR：按量计费。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例付费方式。
+- PREPAID：包年包月计费。
+- POSTPAID_BY_HOUR：按量计费。
  * @method integer getMongosCpu() 获取分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。
  * @method void setMongosCpu(integer $MongosCpu) 设置分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。
  * @method integer getMongosMemory() 获取分片实例询价必填参数，指 Mongos 内存，取值范围为[2,32]，单位：GB。
@@ -63,27 +111,41 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 每个分片的主从节点数量。<br>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。</li></ul>
+     * @var integer 每个分片的主从节点数量。
+取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
      */
     public $NodeNum;
 
     /**
-     * @var integer 实例内存大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数CPU与Memory分别对应CPU核数与内存规格。</li></ul>
+     * @var integer 实例内存大小。
+- 单位：GB。
+- 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数CPU与Memory分别对应CPU核数与内存规格。
      */
     public $Memory;
 
     /**
-     * @var integer 实例硬盘大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。</br>
+     * @var integer 实例硬盘大小。
+- 单位：GB。
+- 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。
      */
     public $Volume;
 
     /**
-     * @var string 实例版本信息。<ul><li>具体支持的版本，请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。</li><li>版本信息与版本号对应关系如下：<ul><li>MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。</li><li>MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。</li><li>MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。</li><li>MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。</li><li>MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。</li><li>MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。</li></ul>
+     * @var string 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
+- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
+- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
     /**
-     * @var string 机器类型。<ul><li>HIO：高IO型。</li><li>HIO10G：高IO万兆型。</li></ul>
+     * @var string 机器类型。
+- HIO：高IO型。
+- HIO10G：高IO万兆型。
      */
     public $MachineCode;
 
@@ -93,22 +155,32 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var string 实例类型。<ul><li>REPLSET：副本集。</li><li>SHARD：分片集群。</li><li>STANDALONE：单节点。</li></ul>
+     * @var string 实例类型。
+- REPLSET：副本集。
+- SHARD：分片集群。
+- STANDALONE：单节点。
      */
     public $ClusterType;
 
     /**
-     * @var integer 副本集个数。<ul><li>创建副本集实例时，该参数固定设置为1。</li><li>创建分片集群时，指分片数量，请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。</li><li>若为单节点实例，该参数固定设置为0。</li></ul>
+     * @var integer 副本集个数。
+- 创建副本集实例时，该参数固定设置为1。
+- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
+- 若为单节点实例，该参数固定设置为0。
      */
     public $ReplicateSetNum;
 
     /**
-     * @var integer 选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。<ul><li>单位：月。</li><li>可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</li></ul>
+     * @var integer 选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。
+- 单位：月。
+- 可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      */
     public $Period;
 
     /**
-     * @var string 实例付费方式。<ul><li>PREPAID：包年包月计费。</li><li>POSTPAID_BY_HOUR：按量计费。</li></ul>
+     * @var string 实例付费方式。
+- PREPAID：包年包月计费。
+- POSTPAID_BY_HOUR：按量计费。
      */
     public $InstanceChargeType;
 
@@ -144,16 +216,40 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
 
     /**
      * @param string $Zone 实例所属区域及可用区信息。格式：ap-guangzhou-2。
-     * @param integer $NodeNum 每个分片的主从节点数量。<br>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。</li></ul>
-     * @param integer $Memory 实例内存大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数CPU与Memory分别对应CPU核数与内存规格。</li></ul>
-     * @param integer $Volume 实例硬盘大小。<ul><li>单位：GB。</li><li>取值范围：请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。</br>
-     * @param string $MongoVersion 实例版本信息。<ul><li>具体支持的版本，请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。</li><li>版本信息与版本号对应关系如下：<ul><li>MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。</li><li>MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。</li><li>MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。</li><li>MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。</li><li>MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。</li><li>MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。</li></ul>
-     * @param string $MachineCode 机器类型。<ul><li>HIO：高IO型。</li><li>HIO10G：高IO万兆型。</li></ul>
+     * @param integer $NodeNum 每个分片的主从节点数量。
+取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
+     * @param integer $Memory 实例内存大小。
+- 单位：GB。
+- 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数CPU与Memory分别对应CPU核数与内存规格。
+     * @param integer $Volume 实例硬盘大小。
+- 单位：GB。
+- 取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinStorage与MaxStorage分别对应其最小磁盘规格与最大磁盘规格。
+     * @param string $MongoVersion 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
+- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
+- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+     * @param string $MachineCode 机器类型。
+- HIO：高IO型。
+- HIO10G：高IO万兆型。
      * @param integer $GoodsNum 实例数量，取值范围为[1,10]。
-     * @param string $ClusterType 实例类型。<ul><li>REPLSET：副本集。</li><li>SHARD：分片集群。</li><li>STANDALONE：单节点。</li></ul>
-     * @param integer $ReplicateSetNum 副本集个数。<ul><li>创建副本集实例时，该参数固定设置为1。</li><li>创建分片集群时，指分片数量，请通过接口<a href="https://cloud.tencent.com/document/product/240/38567">DescribeSpecInfo</a>查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。</li><li>若为单节点实例，该参数固定设置为0。</li></ul>
-     * @param integer $Period 选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。<ul><li>单位：月。</li><li>可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</li></ul>
-     * @param string $InstanceChargeType 实例付费方式。<ul><li>PREPAID：包年包月计费。</li><li>POSTPAID_BY_HOUR：按量计费。</li></ul>
+     * @param string $ClusterType 实例类型。
+- REPLSET：副本集。
+- SHARD：分片集群。
+- STANDALONE：单节点。
+     * @param integer $ReplicateSetNum 副本集个数。
+- 创建副本集实例时，该参数固定设置为1。
+- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
+- 若为单节点实例，该参数固定设置为0。
+     * @param integer $Period 选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。
+- 单位：月。
+- 可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @param string $InstanceChargeType 实例付费方式。
+- PREPAID：包年包月计费。
+- POSTPAID_BY_HOUR：按量计费。
      * @param integer $MongosCpu 分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。
      * @param integer $MongosMemory 分片实例询价必填参数，指 Mongos 内存，取值范围为[2,32]，单位：GB。
      * @param integer $MongosNum 分片实例询价必填参数，指 Mongos 个数，取值范围为[3,32]。

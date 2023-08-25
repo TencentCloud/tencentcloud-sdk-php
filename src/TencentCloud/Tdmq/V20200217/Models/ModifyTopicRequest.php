@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) 设置主题名。
  * @method integer getPartitions() 获取分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
  * @method void setPartitions(integer $Partitions) 设置分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
- * @method string getRemark() 获取备注，128字符以内。
- * @method void setRemark(string $Remark) 设置备注，128字符以内。
  * @method string getClusterId() 获取Pulsar 集群的ID
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
+ * @method string getRemark() 获取备注，128字符以内。
+ * @method void setRemark(string $Remark) 设置备注，128字符以内。
  * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，取值范围：60秒~15天。
 
  * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，取值范围：60秒~15天。
@@ -52,14 +52,14 @@ class ModifyTopicRequest extends AbstractModel
     public $Partitions;
 
     /**
-     * @var string 备注，128字符以内。
-     */
-    public $Remark;
-
-    /**
      * @var string Pulsar 集群的ID
      */
     public $ClusterId;
+
+    /**
+     * @var string 备注，128字符以内。
+     */
+    public $Remark;
 
     /**
      * @var integer 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
@@ -71,8 +71,8 @@ class ModifyTopicRequest extends AbstractModel
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名。
      * @param integer $Partitions 分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过128个分区。
-     * @param string $Remark 备注，128字符以内。
      * @param string $ClusterId Pulsar 集群的ID
+     * @param string $Remark 备注，128字符以内。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
      */
     function __construct()
@@ -100,12 +100,12 @@ class ModifyTopicRequest extends AbstractModel
             $this->Partitions = $param["Partitions"];
         }
 
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
-        }
-
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
 
         if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {

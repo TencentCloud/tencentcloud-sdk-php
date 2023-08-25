@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID（该参数必传，例如cynosdbmysql-xxxxxx）
+ * @method void setClusterId(string $ClusterId) 设置集群ID（该参数必传，例如cynosdbmysql-xxxxxx）
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100
  * @method integer getOffset() 获取记录偏移量，默认值为0
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeProxiesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID（该参数必传，例如cynosdbmysql-xxxxxx）
      */
     public $ClusterId;
 
@@ -78,7 +78,7 @@ class DescribeProxiesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID（该参数必传，例如cynosdbmysql-xxxxxx）
      * @param integer $Limit 返回数量，默认为 20，最大值为 100
      * @param integer $Offset 记录偏移量，默认值为0
      * @param string $OrderBy 排序字段，取值范围：

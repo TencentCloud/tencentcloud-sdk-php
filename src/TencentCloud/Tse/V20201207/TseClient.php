@@ -50,6 +50,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGateways(Models\DescribeCloudNativeAPIGatewaysRequest $req) 获取云原生API网关实例列表
  * @method Models\DescribeNacosReplicasResponse DescribeNacosReplicas(Models\DescribeNacosReplicasRequest $req) 查询Nacos类型引擎实例副本信息
  * @method Models\DescribeNacosServerInterfacesResponse DescribeNacosServerInterfaces(Models\DescribeNacosServerInterfacesRequest $req) 查询nacos服务接口列表
+ * @method Models\DescribeNativeGatewayServerGroupsResponse DescribeNativeGatewayServerGroups(Models\DescribeNativeGatewayServerGroupsRequest $req) 查询云原生网关分组信息
  * @method Models\DescribeOneCloudNativeAPIGatewayServiceResponse DescribeOneCloudNativeAPIGatewayService(Models\DescribeOneCloudNativeAPIGatewayServiceRequest $req) 获取云原生网关服务详情
  * @method Models\DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(Models\DescribeSREInstanceAccessAddressRequest $req) 查询引擎实例访问地址
  * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询引擎实例列表

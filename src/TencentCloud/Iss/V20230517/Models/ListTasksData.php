@@ -14,51 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * mysql表权限
+ * 查询任务列表
  *
- * @method string getDb() 获取数据库名
+ * @method array getList() 获取任务列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDb(string $Db) 设置数据库名
+ * @method void setList(array $List) 设置任务列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTableName() 获取表名
+ * @method integer getTotalCount() 获取任务数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableName(string $TableName) 设置表名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPrivileges() 获取权限列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivileges(array $Privileges) 设置权限列表
+ * @method void setTotalCount(integer $TotalCount) 设置任务数量
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class TablePrivileges extends AbstractModel
+class ListTasksData extends AbstractModel
 {
     /**
-     * @var string 数据库名
+     * @var array 任务列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Db;
+    public $List;
 
     /**
-     * @var string 表名
+     * @var integer 任务数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TableName;
+    public $TotalCount;
 
     /**
-     * @var array 权限列表
+     * @param array $List 任务列表
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Privileges;
-
-    /**
-     * @param string $Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TableName 表名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Privileges 权限列表
+     * @param integer $TotalCount 任务数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,16 +62,17 @@ class TablePrivileges extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Db",$param) and $param["Db"] !== null) {
-            $this->Db = $param["Db"];
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new TaskData();
+                $obj->deserialize($value);
+                array_push($this->List, $obj);
+            }
         }
 
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
-        }
-
-        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
-            $this->Privileges = $param["Privileges"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method CFSConfig getCFSConfig() 获取cfs的配置信息
  * @method void setCFSConfig(CFSConfig $CFSConfig) 设置cfs的配置信息
- * @method string getVolumeSourceType() 获取挂载源类型
- * @method void setVolumeSourceType(string $VolumeSourceType) 设置挂载源类型
+ * @method string getVolumeSourceType() 获取挂载源类型，CFS、COS，默认为CFS
+ * @method void setVolumeSourceType(string $VolumeSourceType) 设置挂载源类型，CFS、COS，默认为CFS
  */
 class VolumeMount extends AbstractModel
 {
@@ -33,13 +33,13 @@ class VolumeMount extends AbstractModel
     public $CFSConfig;
 
     /**
-     * @var string 挂载源类型
+     * @var string 挂载源类型，CFS、COS，默认为CFS
      */
     public $VolumeSourceType;
 
     /**
      * @param CFSConfig $CFSConfig cfs的配置信息
-     * @param string $VolumeSourceType 挂载源类型
+     * @param string $VolumeSourceType 挂载源类型，CFS、COS，默认为CFS
      */
     function __construct()
     {

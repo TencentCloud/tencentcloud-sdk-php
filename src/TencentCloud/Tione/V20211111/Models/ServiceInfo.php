@@ -140,6 +140,18 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelTurboEnable(boolean $ModelTurboEnable) 设置是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method VolumeMount getVolumeMount() 获取挂载
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVolumeMount(VolumeMount $VolumeMount) 设置挂载
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method InferCodeInfo getInferCodeInfo() 获取推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInferCodeInfo(InferCodeInfo $InferCodeInfo) 设置推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCommand() 获取服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCommand(string $Command) 设置服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceInfo extends AbstractModel
 {
@@ -308,6 +320,24 @@ HYBRID_PAID:
     public $ModelTurboEnable;
 
     /**
+     * @var VolumeMount 挂载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VolumeMount;
+
+    /**
+     * @var InferCodeInfo 推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InferCodeInfo;
+
+    /**
+     * @var string 服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Command;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -367,6 +397,12 @@ HYBRID_PAID:
      * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeMount $VolumeMount 挂载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InferCodeInfo $InferCodeInfo 推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Command 服务的启动命令
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -508,6 +544,20 @@ HYBRID_PAID:
 
         if (array_key_exists("ModelTurboEnable",$param) and $param["ModelTurboEnable"] !== null) {
             $this->ModelTurboEnable = $param["ModelTurboEnable"];
+        }
+
+        if (array_key_exists("VolumeMount",$param) and $param["VolumeMount"] !== null) {
+            $this->VolumeMount = new VolumeMount();
+            $this->VolumeMount->deserialize($param["VolumeMount"]);
+        }
+
+        if (array_key_exists("InferCodeInfo",$param) and $param["InferCodeInfo"] !== null) {
+            $this->InferCodeInfo = new InferCodeInfo();
+            $this->InferCodeInfo->deserialize($param["InferCodeInfo"]);
+        }
+
+        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
+            $this->Command = $param["Command"];
         }
     }
 }

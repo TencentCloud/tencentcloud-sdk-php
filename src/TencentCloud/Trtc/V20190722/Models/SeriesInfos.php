@@ -14,51 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * mysql表权限
+ * SeriesInfos类型
  *
- * @method string getDb() 获取数据库名
+ * @method array getColumns() 获取数据列
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDb(string $Db) 设置数据库名
+ * @method void setColumns(array $Columns) 设置数据列
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTableName() 获取表名
+ * @method array getValues() 获取数据值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableName(string $TableName) 设置表名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPrivileges() 获取权限列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivileges(array $Privileges) 设置权限列表
+ * @method void setValues(array $Values) 设置数据值
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class TablePrivileges extends AbstractModel
+class SeriesInfos extends AbstractModel
 {
     /**
-     * @var string 数据库名
+     * @var array 数据列
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Db;
+    public $Columns;
 
     /**
-     * @var string 表名
+     * @var array 数据值
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TableName;
+    public $Values;
 
     /**
-     * @var array 权限列表
+     * @param array $Columns 数据列
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Privileges;
-
-    /**
-     * @param string $Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TableName 表名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Privileges 权限列表
+     * @param array $Values 数据值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,16 +62,17 @@ class TablePrivileges extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Db",$param) and $param["Db"] !== null) {
-            $this->Db = $param["Db"];
+        if (array_key_exists("Columns",$param) and $param["Columns"] !== null) {
+            $this->Columns = $param["Columns"];
         }
 
-        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
-            $this->TableName = $param["TableName"];
-        }
-
-        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
-            $this->Privileges = $param["Privileges"];
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = [];
+            foreach ($param["Values"] as $key => $value){
+                $obj = new RowValues();
+                $obj->deserialize($value);
+                array_push($this->Values, $obj);
+            }
         }
     }
 }

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTransitionTime(string $LastTransitionTime) 设置上次更新的时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastUpdateTime() 获取上次更新的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastUpdateTime(string $LastUpdateTime) 设置上次更新的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatefulSetCondition extends AbstractModel
 {
@@ -74,6 +78,12 @@ class StatefulSetCondition extends AbstractModel
     public $LastTransitionTime;
 
     /**
+     * @var string 上次更新的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastUpdateTime;
+
+    /**
      * @param string $Message 信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 原因
@@ -83,6 +93,8 @@ class StatefulSetCondition extends AbstractModel
      * @param string $Type 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastTransitionTime 上次更新的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastUpdateTime 上次更新的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class StatefulSetCondition extends AbstractModel
 
         if (array_key_exists("LastTransitionTime",$param) and $param["LastTransitionTime"] !== null) {
             $this->LastTransitionTime = $param["LastTransitionTime"];
+        }
+
+        if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {
+            $this->LastUpdateTime = $param["LastUpdateTime"];
         }
     }
 }

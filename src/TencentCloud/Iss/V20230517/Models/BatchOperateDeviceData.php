@@ -14,39 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据库权限列表
+ * 批量操作设备返回结果
  *
- * @method string getDb() 获取数据库
+ * @method string getTaskId() 获取任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDb(string $Db) 设置数据库
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPrivileges() 获取权限列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivileges(array $Privileges) 设置权限列表
+ * @method void setTaskId(string $TaskId) 设置任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DatabasePrivileges extends AbstractModel
+class BatchOperateDeviceData extends AbstractModel
 {
     /**
-     * @var string 数据库
+     * @var string 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Db;
+    public $TaskId;
 
     /**
-     * @var array 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Privileges;
-
-    /**
-     * @param string $Db 数据库
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Privileges 权限列表
+     * @param string $TaskId 任务 ID（用于在查询任务的子任务列表接口ListSubTasks中查询任务进度）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +50,8 @@ class DatabasePrivileges extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Db",$param) and $param["Db"] !== null) {
-            $this->Db = $param["Db"];
-        }
-
-        if (array_key_exists("Privileges",$param) and $param["Privileges"] !== null) {
-            $this->Privileges = $param["Privileges"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

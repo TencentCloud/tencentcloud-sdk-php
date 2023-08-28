@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取网关索引ID（从获取网关列表接口ListGateways中获取）
  * @method void setGatewayId(string $GatewayId) 设置网关索引ID（从获取网关列表接口ListGateways中获取）
+ * @method integer getPageNumber() 获取分页页数
+ * @method void setPageNumber(integer $PageNumber) 设置分页页数
+ * @method integer getPageSize() 获取分页大小
+ * @method void setPageSize(integer $PageSize) 设置分页大小
  */
 class ListGatewayDevicesRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class ListGatewayDevicesRequest extends AbstractModel
     public $GatewayId;
 
     /**
+     * @var integer 分页页数
+     */
+    public $PageNumber;
+
+    /**
+     * @var integer 分页大小
+     */
+    public $PageSize;
+
+    /**
      * @param string $GatewayId 网关索引ID（从获取网关列表接口ListGateways中获取）
+     * @param integer $PageNumber 分页页数
+     * @param integer $PageSize 分页大小
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class ListGatewayDevicesRequest extends AbstractModel
         }
         if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
             $this->GatewayId = $param["GatewayId"];
+        }
+
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

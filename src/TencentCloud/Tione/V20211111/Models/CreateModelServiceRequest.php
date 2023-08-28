@@ -124,6 +124,8 @@ HYBRID_PAID:
  * @method void setModelTurboEnable(boolean $ModelTurboEnable) 设置是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
  * @method string getServiceCategory() 获取服务分类
  * @method void setServiceCategory(string $ServiceCategory) 设置服务分类
+ * @method string getCommand() 获取服务的启动命令
+ * @method void setCommand(string $Command) 设置服务的启动命令
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -296,6 +298,11 @@ HYBRID_PAID:
     public $ServiceCategory;
 
     /**
+     * @var string 服务的启动命令
+     */
+    public $Command;
+
+    /**
      * @param string $ServiceGroupId 新增版本时需要填写
      * @param string $ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
      * @param string $ServiceDescription 模型服务的描述
@@ -348,6 +355,7 @@ HYBRID_PAID:
      * @param string $CallbackUrl 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
      * @param boolean $ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
      * @param string $ServiceCategory 服务分类
+     * @param string $Command 服务的启动命令
      */
     function __construct()
     {
@@ -499,6 +507,10 @@ HYBRID_PAID:
 
         if (array_key_exists("ServiceCategory",$param) and $param["ServiceCategory"] !== null) {
             $this->ServiceCategory = $param["ServiceCategory"];
+        }
+
+        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
+            $this->Command = $param["Command"];
         }
     }
 }

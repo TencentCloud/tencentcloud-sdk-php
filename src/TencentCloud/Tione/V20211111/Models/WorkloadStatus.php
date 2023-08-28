@@ -90,6 +90,7 @@ Stopping 停止中
 
     /**
      * @var array 工作负载的状况信息
+     * @deprecated
      */
     public $StatefulSetCondition;
 

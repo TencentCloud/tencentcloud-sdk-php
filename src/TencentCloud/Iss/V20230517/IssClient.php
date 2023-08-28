@@ -35,6 +35,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\AddRecordTemplateResponse AddRecordTemplate(Models\AddRecordTemplateRequest $req) 用于新增实时上云模板
  * @method Models\AddStreamAuthResponse AddStreamAuth(Models\AddStreamAuthRequest $req) 用于设置推拉流鉴权配置。
  * @method Models\AddUserDeviceResponse AddUserDevice(Models\AddUserDeviceRequest $req) 用于新增单个设备。添加设备之后，可根据返回结果到设备上进行配置，配置后等待设备注册/推流。
+ * @method Models\BatchOperateDeviceResponse BatchOperateDevice(Models\BatchOperateDeviceRequest $req) 用于批量操作（启用，禁用，删除）设备
  * @method Models\CheckDomainResponse CheckDomain(Models\CheckDomainRequest $req) 用于检测域名是否备案。
  * @method Models\ControlDevicePTZResponse ControlDevicePTZ(Models\ControlDevicePTZRequest $req) 用于设备通道云台控制，包括转动、变倍、变焦、光圈等。
  * @method Models\ControlDevicePresetResponse ControlDevicePreset(Models\ControlDevicePresetRequest $req) 用于操作设备预置位，包括设置、删除、调用。
@@ -72,6 +73,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeRecordRetrieveTaskResponse DescribeRecordRetrieveTask(Models\DescribeRecordRetrieveTaskRequest $req) 用于查询云录像取回任务详情
  * @method Models\DescribeRecordTemplateResponse DescribeRecordTemplate(Models\DescribeRecordTemplateRequest $req) 用于查询实时上云模板详情
  * @method Models\DescribeStreamAuthResponse DescribeStreamAuth(Models\DescribeStreamAuthRequest $req) 用于查询推拉流鉴权配置。
+ * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 用于查询任务详情
  * @method Models\DescribeUserDeviceResponse DescribeUserDevice(Models\DescribeUserDeviceRequest $req) 用于查询设备的详细信息。
  * @method Models\DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(Models\DescribeVideoDownloadUrlRequest $req) 用于获取云录像下载 url
  * @method Models\ListAITasksResponse ListAITasks(Models\ListAITasksRequest $req) 获取AI任务列表
@@ -88,6 +90,8 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ListRecordPlansResponse ListRecordPlans(Models\ListRecordPlansRequest $req) 用于查询实时上云计划列表
  * @method Models\ListRecordRetrieveTasksResponse ListRecordRetrieveTasks(Models\ListRecordRetrieveTasksRequest $req) 用于查询取回任务列表
  * @method Models\ListRecordTemplatesResponse ListRecordTemplates(Models\ListRecordTemplatesRequest $req) 用于查询实时上云模板列表
+ * @method Models\ListSubTasksResponse ListSubTasks(Models\ListSubTasksRequest $req) 用于查询任务的子任务列表
+ * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) 用于查询批量任务和简单任务列表
  * @method Models\PlayRecordResponse PlayRecord(Models\PlayRecordRequest $req) 用于获取设备本地录像 URL 地址。
  * @method Models\RefreshDeviceChannelResponse RefreshDeviceChannel(Models\RefreshDeviceChannelRequest $req) 用于刷新国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
  * @method Models\UpdateAITaskResponse UpdateAITask(Models\UpdateAITaskRequest $req) 更新AI任务

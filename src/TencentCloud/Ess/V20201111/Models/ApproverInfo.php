@@ -18,7 +18,7 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 参与者信息
+ * 参与者信息。
  *
  * @method integer getApproverType() 获取在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业

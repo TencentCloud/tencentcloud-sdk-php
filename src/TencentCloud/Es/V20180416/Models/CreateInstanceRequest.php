@@ -47,9 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeType(string $NodeType) 设置已废弃请使用NodeInfoList
 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
  * @method string getDiskType() 获取已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
  * @method void setDiskType(string $DiskType) 设置已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
  * @method integer getDiskSize() 获取已废弃请使用NodeInfoList
 节点磁盘容量（单位GB）
  * @method void setDiskSize(integer $DiskSize) 设置已废弃请使用NodeInfoList
@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskEnhance(integer $DiskEnhance) 设置是否开启essd 增强型云盘
  * @method boolean getEnableDiagnose() 获取是否开启智能巡检
  * @method void setEnableDiagnose(boolean $EnableDiagnose) 设置是否开启智能巡检
+ * @method string getCdcId() 获取cdcId，使用cdc子网时传递
+ * @method void setCdcId(string $CdcId) 设置cdcId，使用cdc子网时传递
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -166,7 +168,7 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @var string 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
      */
     public $DiskType;
 
@@ -286,6 +288,11 @@ class CreateInstanceRequest extends AbstractModel
     public $EnableDiagnose;
 
     /**
+     * @var string cdcId，使用cdc子网时传递
+     */
+    public $CdcId;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -300,7 +307,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $NodeType 已废弃请使用NodeInfoList
 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param string $DiskType 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
      * @param integer $DiskSize 已废弃请使用NodeInfoList
 节点磁盘容量（单位GB）
      * @param string $TimeUnit 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
@@ -328,6 +335,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param boolean $EnableHybridStorage 是否开启存算分离
      * @param integer $DiskEnhance 是否开启essd 增强型云盘
      * @param boolean $EnableDiagnose 是否开启智能巡检
+     * @param string $CdcId cdcId，使用cdc子网时传递
      */
     function __construct()
     {
@@ -493,6 +501,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnableDiagnose",$param) and $param["EnableDiagnose"] !== null) {
             $this->EnableDiagnose = $param["EnableDiagnose"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

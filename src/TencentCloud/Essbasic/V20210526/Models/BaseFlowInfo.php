@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 <br/>true：开启发起方发起前审核
 <br/>false：不开启发起方发起前审核
 <br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+ * @method array getComponents() 获取填写控件：文件发起使用
+ * @method void setComponents(array $Components) 设置填写控件：文件发起使用
  */
 class BaseFlowInfo extends AbstractModel
 {
@@ -125,6 +127,11 @@ class BaseFlowInfo extends AbstractModel
     public $NeedCreateReview;
 
     /**
+     * @var array 填写控件：文件发起使用
+     */
+    public $Components;
+
+    /**
      * @param string $FlowName 合同流程名称
      * @param string $FlowType 合同流程类型
 <br/>客户自定义，用于合同分类展示
@@ -144,6 +151,7 @@ class BaseFlowInfo extends AbstractModel
 <br/>true：开启发起方发起前审核
 <br/>false：不开启发起方发起前审核
 <br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     * @param array $Components 填写控件：文件发起使用
      */
     function __construct()
     {
@@ -210,6 +218,15 @@ class BaseFlowInfo extends AbstractModel
 
         if (array_key_exists("NeedCreateReview",$param) and $param["NeedCreateReview"] !== null) {
             $this->NeedCreateReview = $param["NeedCreateReview"];
+        }
+
+        if (array_key_exists("Components",$param) and $param["Components"] !== null) {
+            $this->Components = [];
+            foreach ($param["Components"] as $key => $value){
+                $obj = new Component();
+                $obj->deserialize($value);
+                array_push($this->Components, $obj);
+            }
         }
     }
 }

@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignalDatabase(string $SignalDatabase) 设置存放信令表的数据库名称
  * @method boolean getIsTableRegular() 获取输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
  * @method void setIsTableRegular(boolean $IsTableRegular) 设置输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+ * @method string getSignalTable() 获取信号表
+ * @method void setSignalTable(string $SignalTable) 设置信号表
  */
 class MySQLParam extends AbstractModel
 {
@@ -199,6 +201,11 @@ class MySQLParam extends AbstractModel
     public $IsTableRegular;
 
     /**
+     * @var string 信号表
+     */
+    public $SignalTable;
+
+    /**
      * @param string $Database MySQL的数据库名称，"*"为全数据库
      * @param string $Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
      * @param string $Resource 该MySQL在连接管理内的Id
@@ -224,6 +231,7 @@ class MySQLParam extends AbstractModel
      * @param boolean $RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
      * @param string $SignalDatabase 存放信令表的数据库名称
      * @param boolean $IsTableRegular 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+     * @param string $SignalTable 信号表
      */
     function __construct()
     {
@@ -342,6 +350,10 @@ class MySQLParam extends AbstractModel
 
         if (array_key_exists("IsTableRegular",$param) and $param["IsTableRegular"] !== null) {
             $this->IsTableRegular = $param["IsTableRegular"];
+        }
+
+        if (array_key_exists("SignalTable",$param) and $param["SignalTable"] !== null) {
+            $this->SignalTable = $param["SignalTable"];
         }
     }
 }

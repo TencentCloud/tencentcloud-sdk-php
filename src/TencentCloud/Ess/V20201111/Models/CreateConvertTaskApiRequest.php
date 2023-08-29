@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置文件Id，通过UploadFiles获取
  * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method Agent getAgent() 获取应用号信息
- * @method void setAgent(Agent $Agent) 设置应用号信息
+ * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method OrganizationInfo getOrganization() 获取暂未开放
  * @method void setOrganization(OrganizationInfo $Organization) 设置暂未开放
  */
@@ -56,8 +56,7 @@ class CreateConvertTaskApiRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var Agent 应用号信息
-     * @deprecated
+     * @var Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
@@ -72,7 +71,7 @@ class CreateConvertTaskApiRequest extends AbstractModel
      * @param string $ResourceName 资源名称，长度限制为256字符
      * @param string $ResourceId 文件Id，通过UploadFiles获取
      * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param Agent $Agent 应用号信息
+     * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param OrganizationInfo $Organization 暂未开放
      */
     function __construct()

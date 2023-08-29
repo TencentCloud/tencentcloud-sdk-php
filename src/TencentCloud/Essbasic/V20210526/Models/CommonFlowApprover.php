@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotifyType(string $NotifyType) 设置通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
  * @method CommonApproverOption getApproverOption() 获取签署人配置
  * @method void setApproverOption(CommonApproverOption $ApproverOption) 设置签署人配置
+ * @method array getSignComponents() 获取签署控件：文件发起使用
+ * @method void setSignComponents(array $SignComponents) 设置签署控件：文件发起使用
  */
 class CommonFlowApprover extends AbstractModel
 {
@@ -126,6 +128,11 @@ class CommonFlowApprover extends AbstractModel
     public $ApproverOption;
 
     /**
+     * @var array 签署控件：文件发起使用
+     */
+    public $SignComponents;
+
+    /**
      * @param boolean $NotChannelOrganization 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
      * @param integer $ApproverType 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
      * @param string $OrganizationId 企业id
@@ -141,6 +148,7 @@ class CommonFlowApprover extends AbstractModel
      * @param boolean $IsFullText 签署前置条件：阅读全文限制
      * @param string $NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
      * @param CommonApproverOption $ApproverOption 签署人配置
+     * @param array $SignComponents 签署控件：文件发起使用
      */
     function __construct()
     {
@@ -210,6 +218,15 @@ class CommonFlowApprover extends AbstractModel
         if (array_key_exists("ApproverOption",$param) and $param["ApproverOption"] !== null) {
             $this->ApproverOption = new CommonApproverOption();
             $this->ApproverOption->deserialize($param["ApproverOption"]);
+        }
+
+        if (array_key_exists("SignComponents",$param) and $param["SignComponents"] !== null) {
+            $this->SignComponents = [];
+            foreach ($param["SignComponents"] as $key => $value){
+                $obj = new Component();
+                $obj->deserialize($value);
+                array_push($this->SignComponents, $obj);
+            }
         }
     }
 }

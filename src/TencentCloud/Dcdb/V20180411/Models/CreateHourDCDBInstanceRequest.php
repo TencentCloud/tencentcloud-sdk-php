@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  查询实例规格获得。
  * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
  * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
- * @method array getZones() 获取分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
- * @method void setZones(array $Zones) 设置分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+ * @method array getZones() 获取分片节点可用区分布，可填写多个可用区。
+ * @method void setZones(array $Zones) 设置分片节点可用区分布，可填写多个可用区。
  * @method string getSecurityGroupId() 获取安全组id
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组id
  * @method string getInstanceName() 获取实例名称， 可以通过该字段自主的设置实例的名字
@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackTime(string $RollbackTime) 设置回档时间，例如“2021-11-22 00:00:00”
  * @method array getSecurityGroupIds() 获取安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+ * @method integer getDcnSyncMode() 获取DCN同步模式，0：普通DCN同步，1：一致性同步
+ * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：普通DCN同步，1：一致性同步
  */
 class CreateHourDCDBInstanceRequest extends AbstractModel
 {
@@ -128,7 +130,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
     public $DbVersionId;
 
     /**
-     * @var array 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * @var array 分片节点可用区分布，可填写多个可用区。
      */
     public $Zones;
 
@@ -183,6 +185,11 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var integer DCN同步模式，0：普通DCN同步，1：一致性同步
+     */
+    public $DcnSyncMode;
+
+    /**
      * @param integer $ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param integer $ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
@@ -197,7 +204,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
      * @param integer $ShardCpu 分片cpu大小，单位：核，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param string $DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
-     * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * @param array $Zones 分片节点可用区分布，可填写多个可用区。
      * @param string $SecurityGroupId 安全组id
      * @param string $InstanceName 实例名称， 可以通过该字段自主的设置实例的名字
      * @param integer $Ipv6Flag 是否支持IPv6，0:不支持，1:支持
@@ -208,6 +215,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
      * @param string $RollbackInstanceId 需要回档的源实例ID
      * @param string $RollbackTime 回档时间，例如“2021-11-22 00:00:00”
      * @param array $SecurityGroupIds 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+     * @param integer $DcnSyncMode DCN同步模式，0：普通DCN同步，1：一致性同步
      */
     function __construct()
     {
@@ -314,6 +322,10 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
+            $this->DcnSyncMode = $param["DcnSyncMode"];
         }
     }
 }

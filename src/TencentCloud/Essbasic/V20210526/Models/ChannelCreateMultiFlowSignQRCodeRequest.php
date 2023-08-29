@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
 <br/>指定后，只允许知道的人操作和签署
  * @method void setRestrictions(array $Restrictions) 设置指定的签署二维码签署人
 <br/>指定后，只允许知道的人操作和签署
- * @method string getCallbackUrl() 获取回调地址，最大长度1000个字符
-不传默认使用第三方应用号配置的回调地址
-回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，最大长度1000个字符
-不传默认使用第三方应用号配置的回调地址
-回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+ * @method string getCallbackUrl() 获取已废弃，回调配置统一使用企业应用管理-应用集成-第三方应用中的配置
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/partner/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
+ * @method void setCallbackUrl(string $CallbackUrl) 设置已废弃，回调配置统一使用企业应用管理-应用集成-第三方应用中的配置
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/partner/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
  * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件（已弃用）
  * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
  * @method UserInfo getOperator() 获取暂未开放
@@ -95,9 +95,10 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $Restrictions;
 
     /**
-     * @var string 回调地址，最大长度1000个字符
-不传默认使用第三方应用号配置的回调地址
-回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+     * @var string 已废弃，回调配置统一使用企业应用管理-应用集成-第三方应用中的配置
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/partner/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
+     * @deprecated
      */
     public $CallbackUrl;
 
@@ -125,9 +126,9 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
      * @param array $Restrictions 指定的签署二维码签署人
 <br/>指定后，只允许知道的人操作和签署
-     * @param string $CallbackUrl 回调地址，最大长度1000个字符
-不传默认使用第三方应用号配置的回调地址
-回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+     * @param string $CallbackUrl 已废弃，回调配置统一使用企业应用管理-应用集成-第三方应用中的配置
+<br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/partner/callback_types_contracts_sign
+<br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
      * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      * @param UserInfo $Operator 暂未开放
      */

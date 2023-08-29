@@ -80,6 +80,7 @@ class IntentionVerifyData extends AbstractModel
     /**
      * @var string 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $AsrResultSimilarity;
 

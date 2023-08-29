@@ -29,7 +29,7 @@ use TencentCloud\Nlp\V20190408\Models as Models;
  * @method Models\ComposePoetryResponse ComposePoetry(Models\ComposePoetryRequest $req) 诗词生成接口利用现代的自然语言处理和深度学习技术，模仿了古代著名诗人的风格，为用户产生独特的诗词。用户只需输入的命题关键词，接口就能自动生成一首七言律诗或五言律诗。
  * @method Models\EvaluateSentenceSimilarityResponse EvaluateSentenceSimilarity(Models\EvaluateSentenceSimilarityRequest $req) 通过计算句子间的语义相似性，帮助您快速找到文本中重复或相似的句子，用于文本聚类、相似问题检索等应用场景。
  * @method Models\EvaluateWordSimilarityResponse EvaluateWordSimilarity(Models\EvaluateWordSimilarityRequest $req) 评估两个词语在语义空间的相似程度，为您的场景应用提供有力支持，如关键词过滤、热门话题挖掘等。（目前仅支持中文）
- * @method Models\GenerateKeywordSentenceResponse GenerateKeywordSentence(Models\GenerateKeywordSentenceRequest $req) 提取文本中的关键信息，生成简洁明了的关键句子，便于用户快速获取核心观点。
+ * @method Models\GenerateKeywordSentenceResponse GenerateKeywordSentence(Models\GenerateKeywordSentenceRequest $req) 根据提供的关键词，生成简洁明了的关键句子，便于用户快速获取核心观点。
  * @method Models\ParseWordsResponse ParseWords(Models\ParseWordsRequest $req) 通过精准地对文本进行分词、词性标注、命名实体识别等功能，助您更好地理解文本内容，挖掘出潜在的价值信息。
  * @method Models\RetrieveSimilarWordsResponse RetrieveSimilarWords(Models\RetrieveSimilarWordsRequest $req) 基于大数据和深度学习技术，可以快速地找到与给定词语高度相似的其他词语，有助于提高搜索和推荐的准确性。（目前仅支持中文）
  * @method Models\SentenceCorrectionResponse SentenceCorrection(Models\SentenceCorrectionRequest $req) 智能识别并纠正句子中的语法、拼写、用词等错误，确保文本的准确性和可读性。

@@ -282,6 +282,14 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHasKernelUpgrade() 获取本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasKernelUpgrade(boolean $HasKernelUpgrade) 设置本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCdcId() 获取cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCdcId(string $CdcId) 设置cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -741,6 +749,18 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $KibanaAlteringPublicAccess;
 
     /**
+     * @var boolean 本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasKernelUpgrade;
+
+    /**
+     * @var string cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CdcId;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -871,6 +891,10 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param float $ProcessPercent 流程进度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KibanaAlteringPublicAccess Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasKernelUpgrade 本月是否有内核可以更新：false-无，true-有
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CdcId cdcId，使用cdc子网时传递
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1241,6 +1265,14 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("KibanaAlteringPublicAccess",$param) and $param["KibanaAlteringPublicAccess"] !== null) {
             $this->KibanaAlteringPublicAccess = $param["KibanaAlteringPublicAccess"];
+        }
+
+        if (array_key_exists("HasKernelUpgrade",$param) and $param["HasKernelUpgrade"] !== null) {
+            $this->HasKernelUpgrade = $param["HasKernelUpgrade"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

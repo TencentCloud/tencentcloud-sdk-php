@@ -38,6 +38,8 @@ FOREIGN_ID_CARD 外国人永久居留身份证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method string getIdCardNumber() 获取身份证件号码
  * @method void setIdCardNumber(string $IdCardNumber) 设置身份证件号码
+ * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class CreatePersonAuthCertificateImageRequest extends AbstractModel
 {
@@ -67,6 +69,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $IdCardNumber;
 
     /**
+     * @var Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     */
+    public $Agent;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param string $UserName 个人用户名称
      * @param string $IdCardType 身份证件类型取值：
@@ -76,6 +83,7 @@ HONGKONG_AND_MACAO 港澳居民来往内地通行证
 FOREIGN_ID_CARD 外国人永久居留身份证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $IdCardNumber 身份证件号码
+     * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {
@@ -105,6 +113,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
         if (array_key_exists("IdCardNumber",$param) and $param["IdCardNumber"] !== null) {
             $this->IdCardNumber = $param["IdCardNumber"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

@@ -46,6 +46,27 @@ ORGANIZATION_SEAL：企业印章(图片上传创建)；
 LEGAL_PERSON_SEAL：法定代表人章
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method array getSealStatuses() 获取查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
+
+ * @method void setSealStatuses(array $SealStatuses) 设置查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
  */
 class DescribeOrganizationSealsRequest extends AbstractModel
 {
@@ -91,6 +112,21 @@ LEGAL_PERSON_SEAL：法定代表人章
     public $Agent;
 
     /**
+     * @var array 查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
+
+     */
+    public $SealStatuses;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param integer $Limit 返回最大数量，最大为100
      * @param integer $Offset 偏移量，默认为0，最大为20000
@@ -104,6 +140,16 @@ CONTRACT：合同专用章；
 ORGANIZATION_SEAL：企业印章(图片上传创建)；
 LEGAL_PERSON_SEAL：法定代表人章
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param array $SealStatuses 查询的印章状态列表。
+取值为空，只查询启用状态的印章；
+取值ALL，查询所有状态的印章；
+取值CHECKING，查询待审核的印章；
+取值SUCCESS，查询启用状态的印章；
+取值FAIL，查询印章审核拒绝的印章；
+取值DISABLE，查询已停用的印章；
+取值STOPPED，查询已终止的印章；
+取值VOID，查询已作废的印章；
+取值INVALID，查询以失效的印章；
      */
     function __construct()
     {
@@ -146,6 +192,10 @@ LEGAL_PERSON_SEAL：法定代表人章
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("SealStatuses",$param) and $param["SealStatuses"] !== null) {
+            $this->SealStatuses = $param["SealStatuses"];
         }
     }
 }

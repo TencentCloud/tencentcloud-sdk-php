@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 公网负载均衡配置
  *
- * @method string getInternetAddressVersion() 获取公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
- * @method void setInternetAddressVersion(string $InternetAddressVersion) 设置公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
+ * @method string getInternetAddressVersion() 获取公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
+ * @method void setInternetAddressVersion(string $InternetAddressVersion) 设置公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
  * @method string getInternetPayMode() 获取公网付费类型，当前仅可选："BANDWIDTH"。不填默认为 "BANDWIDTH"
  * @method void setInternetPayMode(string $InternetPayMode) 设置公网付费类型，当前仅可选："BANDWIDTH"。不填默认为 "BANDWIDTH"
  * @method integer getInternetMaxBandwidthOut() 获取公网带宽。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class InternetConfig extends AbstractModel
 {
     /**
-     * @var string 公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
+     * @var string 公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
      */
     public $InternetAddressVersion;
 
@@ -80,7 +80,7 @@ class InternetConfig extends AbstractModel
     public $SlaveZoneId;
 
     /**
-     * @param string $InternetAddressVersion 公网地址版本，可选："IPV4" | "IPV6-NAT64" 。不填默认 IPV4 。
+     * @param string $InternetAddressVersion 公网地址版本，可选："IPV4" | "IPV6" 。不填默认 IPV4 。
      * @param string $InternetPayMode 公网付费类型，当前仅可选："BANDWIDTH"。不填默认为 "BANDWIDTH"
      * @param integer $InternetMaxBandwidthOut 公网带宽。
      * @param string $Description 负载均衡描述

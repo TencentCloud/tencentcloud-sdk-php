@@ -40,7 +40,6 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 生成子客编辑企业信息二维码
  * @method Models\CreateConvertTaskApiResponse CreateConvertTaskApi(Models\CreateConvertTaskApiRequest $req) 上传了word、excel、图片文件后，通过该接口发起文件转换任务，将word、excel、图片文件转换为pdf文件。
-注：如果是集团代子企业发起任务场景，可以通过对Agent参数（未列在入参列表）设置代理的相关应用信息来支持，Agent参数设置可以参考CreateFlow接口的Agent相关说明。
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建签署流程电子文档
 适用场景：见创建签署流程接口。
 注：该接口需要给对应的流程指定一个模板id，并且填充该模板中需要补充的信息。是“发起流程”接口的前置接口。
@@ -95,6 +94,10 @@ PDF资源Id 通过上传文件接口获取
 - 模板中配置的签署顺序是无序
 - B端企业的签署方式是静默签署
 - B端企业是非首位签署
+
+ 通过一码多扫二维码发起的合同，涉及到的合同回调消息可参考文档[合同发起以及签署相关回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign)
+
+用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档[签署二维码相关回调](https://qian.tencent.com/developers/company/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83)
  * @method Models\CreateOrganizationBatchSignUrlResponse CreateOrganizationBatchSignUrl(Models\CreateOrganizationBatchSignUrlRequest $req) 通过此接口，创建企业批量签署链接，企业员工点击链接即可跳转控制台进行批量签署。
 如果没有UserId，Name和Mobile必填，对应的员工必须在企业下已经实名，且该员工为批量签署合同中的签署方。
  * @method Models\CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImage(Models\CreatePersonAuthCertificateImageRequest $req) 本接口（CreatePersonAuthCertificateImage）用于创建个人用户证书证明图片
@@ -179,7 +182,7 @@ callbackinfo包含： 回调地址和签名key
 调用时需要设置Domain/接口请求域名为 file.ess.tencent.cn,代码示例：<br/>
 HttpProfile httpProfile = new HttpProfile();<br/>
 httpProfile.setEndpoint("file.test.ess.tencent.cn");<br/>
- * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 对流程的合同文件进行验证，判断文件是否合法。
+ * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 对流程的合同文件进行数字签名验证，判断文件是否被篡改。
  */
 
 class EssClient extends AbstractClient

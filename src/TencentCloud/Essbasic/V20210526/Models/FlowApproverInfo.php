@@ -28,7 +28,7 @@ use TencentCloud\Common\AbstractModel;
 4-非第三方平台子客企业：Name、Mobile必传，OrgName必传，且NotChannelOrganization=True。
 
 RecipientId参数：
-从DescribeTemplates接口中，可以得到模板下的签署方Recipient列表，根据模板自定义的Rolename在此结构体中确定其RecipientId
+从DescribeTemplates接口中，可以得到模板下的签署方Recipient列表，根据模板自定义的Rolename在此结构体中确定其RecipientId。
  *
  * @method string getName() 获取签署人姓名，最大长度50个字符
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字符

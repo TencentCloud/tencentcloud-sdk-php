@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置用户昵称。
  * @method string getAvatar() 获取用户头像Url。
  * @method void setAvatar(string $Avatar) 设置用户头像Url。
+ * @method string getOriginId() 获取用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginId(string $OriginId) 设置用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +58,12 @@ class DescribeUserResponse extends AbstractModel
     public $Avatar;
 
     /**
+     * @var string 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +73,8 @@ class DescribeUserResponse extends AbstractModel
      * @param string $UserId 用户Id。
      * @param string $Name 用户昵称。
      * @param string $Avatar 用户头像Url。
+     * @param string $OriginId 用户在客户系统的Id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +104,10 @@ class DescribeUserResponse extends AbstractModel
 
         if (array_key_exists("Avatar",$param) and $param["Avatar"] !== null) {
             $this->Avatar = $param["Avatar"];
+        }
+
+        if (array_key_exists("OriginId",$param) and $param["OriginId"] !== null) {
+            $this->OriginId = $param["OriginId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

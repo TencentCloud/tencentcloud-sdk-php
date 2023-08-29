@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() 获取资源id，与ResourceType对应
  * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType对应
- * @method integer getResourceType() 获取资源类型，1：模板，目前仅支持模板，与ResourceId对应
- * @method void setResourceType(integer $ResourceType) 设置资源类型，1：模板，目前仅支持模板，与ResourceId对应
+ * @method integer getResourceType() 获取资源类型，与ResourceId对应1：模板   2: 文件
+ * @method void setResourceType(integer $ResourceType) 设置资源类型，与ResourceId对应1：模板   2: 文件
  * @method BaseFlowInfo getFlowInfo() 获取合同流程基础信息
  * @method void setFlowInfo(BaseFlowInfo $FlowInfo) 设置合同流程基础信息
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
@@ -49,7 +49,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var integer 资源类型，1：模板，目前仅支持模板，与ResourceId对应
+     * @var integer 资源类型，与ResourceId对应1：模板   2: 文件
      */
     public $ResourceType;
 
@@ -98,7 +98,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 
     /**
      * @param string $ResourceId 资源id，与ResourceType对应
-     * @param integer $ResourceType 资源类型，1：模板，目前仅支持模板，与ResourceId对应
+     * @param integer $ResourceType 资源类型，与ResourceId对应1：模板   2: 文件
      * @param BaseFlowInfo $FlowInfo 合同流程基础信息
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化

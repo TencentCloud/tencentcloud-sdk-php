@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBody(string $Body) 设置自定义响应体
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getHeaders() 获取headrs
+ * @method array getHeaders() 获取Headers
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeaders(array $Headers) 设置headrs
+ * @method void setHeaders(array $Headers) 设置Headers
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttpStatus() 获取http状态码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,7 +42,7 @@ class RateLimitResponse extends AbstractModel
     public $Body;
 
     /**
-     * @var array headrs
+     * @var array Headers
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
@@ -56,7 +56,7 @@ class RateLimitResponse extends AbstractModel
     /**
      * @param string $Body 自定义响应体
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Headers headrs
+     * @param array $Headers Headers
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HttpStatus http状态码
 注意：此字段可能返回 null，表示取不到有效值。

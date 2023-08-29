@@ -50,8 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcToken(string $CcToken) 设置暂不开放
  * @method string getScene() 获取暂不开放
  * @method void setScene(string $Scene) 设置暂不开放
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class DescribeFileUrlsRequest extends AbstractModel
 {
@@ -113,8 +115,8 @@ class DescribeFileUrlsRequest extends AbstractModel
     public $Scene;
 
     /**
-     * @var Agent 应用相关信息
-     * @deprecated
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
@@ -134,7 +136,8 @@ class DescribeFileUrlsRequest extends AbstractModel
      * @param integer $UrlTtl 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
      * @param string $CcToken 暂不开放
      * @param string $Scene 暂不开放
-     * @param Agent $Agent 应用相关信息
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {

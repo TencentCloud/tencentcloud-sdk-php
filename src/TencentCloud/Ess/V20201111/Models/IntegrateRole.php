@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubOrgIdList(array $SubOrgIdList) 设置管辖的子企业列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPermissionGroups() 获取权限树
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPermissionGroups(array $PermissionGroups) 设置权限树
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrateRole extends AbstractModel
 {
@@ -74,6 +78,12 @@ class IntegrateRole extends AbstractModel
     public $SubOrgIdList;
 
     /**
+     * @var array 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PermissionGroups;
+
+    /**
      * @param string $RoleId 角色id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName 角色名
@@ -83,6 +93,8 @@ class IntegrateRole extends AbstractModel
      * @param boolean $IsGroupRole 是否是集团角色，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubOrgIdList 管辖的子企业列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PermissionGroups 权限树
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,15 @@ class IntegrateRole extends AbstractModel
 
         if (array_key_exists("SubOrgIdList",$param) and $param["SubOrgIdList"] !== null) {
             $this->SubOrgIdList = $param["SubOrgIdList"];
+        }
+
+        if (array_key_exists("PermissionGroups",$param) and $param["PermissionGroups"] !== null) {
+            $this->PermissionGroups = [];
+            foreach ($param["PermissionGroups"] as $key => $value){
+                $obj = new PermissionGroup();
+                $obj->deserialize($value);
+                array_push($this->PermissionGroups, $obj);
+            }
         }
     }
 }

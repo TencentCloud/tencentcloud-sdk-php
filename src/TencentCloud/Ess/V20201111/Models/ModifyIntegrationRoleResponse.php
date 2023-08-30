@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdwch\V20200915\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBackUpSchedule返回参数结构体
+ * ModifyIntegrationRole返回参数结构体
  *
- * @method string getErrorMsg() 获取错误描述
- * @method void setErrorMsg(string $ErrorMsg) 设置错误描述
+ * @method string getRoleId() 获取角色id
+ * @method void setRoleId(string $RoleId) 设置角色id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBackUpScheduleResponse extends AbstractModel
+class ModifyIntegrationRoleResponse extends AbstractModel
 {
     /**
-     * @var string 错误描述
+     * @var string 角色id
      */
-    public $ErrorMsg;
+    public $RoleId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateBackUpScheduleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrorMsg 错误描述
+     * @param string $RoleId 角色id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateBackUpScheduleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
-            $this->ErrorMsg = $param["ErrorMsg"];
+        if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
+            $this->RoleId = $param["RoleId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

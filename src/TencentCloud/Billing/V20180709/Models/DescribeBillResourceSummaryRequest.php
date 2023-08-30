@@ -100,6 +100,12 @@ use TencentCloud\Common\AbstractModel;
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
  * @method string getPayerUin() 获取支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
  * @method void setPayerUin(string $PayerUin) 设置支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+ * @method string getTagKey() 获取分账标签键，用户自定义（支持2021-01以后账单查询）
+ * @method void setTagKey(string $TagKey) 设置分账标签键，用户自定义（支持2021-01以后账单查询）
+ * @method string getTagValue() 获取分账标签值，该参数为空表示该标签键下未设置标签值的记录
+（支持2021-01以后账单查询）
+ * @method void setTagValue(string $TagValue) 设置分账标签值，该参数为空表示该标签键下未设置标签值的记录
+（支持2021-01以后账单查询）
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -184,6 +190,17 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $PayerUin;
 
     /**
+     * @var string 分账标签键，用户自定义（支持2021-01以后账单查询）
+     */
+    public $TagKey;
+
+    /**
+     * @var string 分账标签值，该参数为空表示该标签键下未设置标签值的记录
+（支持2021-01以后账单查询）
+     */
+    public $TagValue;
+
+    /**
      * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
      * @param integer $Limit 数量，最大值为1000
      * @param string $Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份
@@ -224,6 +241,9 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
      * @param string $BusinessCode 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      * @param string $PayerUin 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     * @param string $TagKey 分账标签键，用户自定义（支持2021-01以后账单查询）
+     * @param string $TagValue 分账标签值，该参数为空表示该标签键下未设置标签值的记录
+（支持2021-01以后账单查询）
      */
     function __construct()
     {
@@ -276,6 +296,14 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 
         if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
             $this->PayerUin = $param["PayerUin"];
+        }
+
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

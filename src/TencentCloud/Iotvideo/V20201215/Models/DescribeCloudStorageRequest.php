@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getUserId() 获取云存用户ID
  * @method void setUserId(string $UserId) 设置云存用户ID
+ * @method integer getChannelId() 获取通道ID 非NVR设备不填 NVR设备必填 默认为无
+ * @method void setChannelId(integer $ChannelId) 设置通道ID 非NVR设备不填 NVR设备必填 默认为无
  */
 class DescribeCloudStorageRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeCloudStorageRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 通道ID 非NVR设备不填 NVR设备必填 默认为无
+     */
+    public $ChannelId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $UserId 云存用户ID
+     * @param integer $ChannelId 通道ID 非NVR设备不填 NVR设备必填 默认为无
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeCloudStorageRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

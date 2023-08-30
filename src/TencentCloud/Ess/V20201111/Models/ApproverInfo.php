@@ -38,14 +38,10 @@ use TencentCloud\Common\AbstractModel;
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
  * @method void setApproverName(string $ApproverName) 设置签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
- * @method string getApproverMobile() 获取本企业的签署方经办人的员工UserId
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
-
-注: `若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。`
- * @method void setApproverMobile(string $ApproverMobile) 设置本企业的签署方经办人的员工UserId
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
-
-注: `若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。`
+ * @method string getApproverMobile() 获取签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此合同签署方。
+ * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此合同签署方。
  * @method string getOrganizationName() 获取组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
@@ -205,10 +201,8 @@ class ApproverInfo extends AbstractModel
     public $ApproverName;
 
     /**
-     * @var string 本企业的签署方经办人的员工UserId
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
-
-注: `若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。`
+     * @var string 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此合同签署方。
      */
     public $ApproverMobile;
 
@@ -351,10 +345,8 @@ class ApproverInfo extends AbstractModel
 注: `个人自动签场景为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param string $ApproverName 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
-     * @param string $ApproverMobile 本企业的签署方经办人的员工UserId
-可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
-
-注: `若传该字段，则签署方经办人的其他信息（如签署方经办人的姓名、证件号码、手机号码等）将被忽略。`
+     * @param string $ApproverMobile 签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+请确认手机号所有方为此合同签署方。
      * @param string $OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。

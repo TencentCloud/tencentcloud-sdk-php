@@ -41,11 +41,11 @@ use TencentCloud\Common\AbstractModel;
 7: 个人自动签署，适用于个人自动签场景。
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
  * @method string getOrganizationName() 获取签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
 
  * @method void setOrganizationName(string $OrganizationName) 设置签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
 
  * @method string getApproverName() 获取签署方经办人姓名
@@ -155,9 +155,17 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 	ESIGN -- 个人印章类型
 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
  * @method array getApproverVerifyTypes() 获取合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
  * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
  * @method array getApproverSignTypes() 获取合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
  * @method void setApproverSignTypes(array $ApproverSignTypes) 设置合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -177,7 +185,7 @@ class FlowCreateApprover extends AbstractModel
 
     /**
      * @var string 签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
 
      */
@@ -323,11 +331,15 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 
     /**
      * @var array 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      */
     public $ApproverVerifyTypes;
 
     /**
      * @var array 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      */
     public $ApproverSignTypes;
 
@@ -343,7 +355,7 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 7: 个人自动签署，适用于个人自动签场景。
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
      * @param string $OrganizationName 签署人企业名称
-<br/>当approverType=1 或 approverType=3时，必须指定
+当approverType=0 或 approverType=3时，必须指定
 
 
      * @param string $ApproverName 签署方经办人姓名
@@ -400,7 +412,11 @@ OTHER_CARD_TYPE 其他（需要使用该类型请先联系运营经理）
 	ESIGN -- 个人印章类型
 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
      * @param array $ApproverVerifyTypes 合同查看方式<br/>默认1 -实名查看 <br/>2-短信验证码查看(企业签署方暂不支持该方式)
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      * @param array $ApproverSignTypes 合同签署方式(默认1,2) <br/>1-人脸认证 <br/>2-签署密码 <br/>3-运营商三要素
+
+> 注意:此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主.
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method string getResourceId() 获取资源Id，通过多文件上传（UploadFiles）接口获得
- * @method void setResourceId(string $ResourceId) 设置资源Id，通过多文件上传（UploadFiles）接口获得
+ * @method string getResourceId() 获取资源id，与ResourceType对应
+ * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType对应
  * @method string getFlowName() 获取合同名称
  * @method void setFlowName(string $FlowName) 设置合同名称
  * @method boolean getUnordered() 获取是否顺序签署
@@ -39,27 +39,35 @@ false:顺序签
 值为unix时间戳,精确到秒
 不传默认为当前时间一年后
  * @method string getUserFlowTypeId() 获取用户自定义合同类型Id
-该id为电子签企业内的合同类型id
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
  * @method void setUserFlowTypeId(string $UserFlowTypeId) 设置用户自定义合同类型Id
-该id为电子签企业内的合同类型id
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
+ * @method string getFlowType() 获取合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
+ * @method void setFlowType(string $FlowType) 设置合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
  * @method array getApprovers() 获取签署流程参与者信息，最大限制50方
  * @method void setApprovers(array $Approvers) 设置签署流程参与者信息，最大限制50方
  * @method string getIntelligentStatus() 获取打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE"
  * @method void setIntelligentStatus(string $IntelligentStatus) 设置打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE"
  * @method integer getResourceType() 获取资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件
+1：模板
+2：文件，
+不传默认为2：文件
  * @method void setResourceType(integer $ResourceType) 设置资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件
+1：模板
+2：文件，
+不传默认为2：文件
  * @method Component getComponents() 获取发起方填写控件
 该类型控件由发起方完成填写
  * @method void setComponents(Component $Components) 设置发起方填写控件
@@ -90,12 +98,6 @@ false:不开启发起方发起合同审核
  * @method void setUserData(string $UserData) 设置用户自定义参数
  * @method string getFlowId() 获取合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
  * @method void setFlowId(string $FlowId) 设置合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
- * @method string getFlowType() 获取合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看
- * @method void setFlowType(string $FlowType) 设置合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
  */
@@ -107,7 +109,7 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 资源Id，通过多文件上传（UploadFiles）接口获得
+     * @var string 资源id，与ResourceType对应
      */
     public $ResourceId;
 
@@ -132,9 +134,18 @@ false:顺序签
 
     /**
      * @var string 用户自定义合同类型Id
-该id为电子签企业内的合同类型id
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
      */
     public $UserFlowTypeId;
+
+    /**
+     * @var string 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
+     */
+    public $FlowType;
 
     /**
      * @var array 签署流程参与者信息，最大限制50方
@@ -143,17 +154,16 @@ false:顺序签
 
     /**
      * @var string 打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE"
      */
     public $IntelligentStatus;
 
     /**
      * @var integer 资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件
+1：模板
+2：文件，
+不传默认为2：文件
      */
     public $ResourceType;
 
@@ -197,20 +207,13 @@ false:不开启发起方发起合同审核
     public $FlowId;
 
     /**
-     * @var string 合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看
-     */
-    public $FlowType;
-
-    /**
      * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
      */
     public $Agent;
 
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param string $ResourceId 资源Id，通过多文件上传（UploadFiles）接口获得
+     * @param string $ResourceId 资源id，与ResourceType对应
      * @param string $FlowName 合同名称
      * @param boolean $Unordered 是否顺序签署
 true:无序签
@@ -219,16 +222,20 @@ false:顺序签
 值为unix时间戳,精确到秒
 不传默认为当前时间一年后
      * @param string $UserFlowTypeId 用户自定义合同类型Id
-该id为电子签企业内的合同类型id
+
+该id为电子签企业内的合同类型id， 可以在自定义合同类型处获取
+     * @param string $FlowType 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+如果合同类型与自定义的合同类型描述一致，会自动归类到自定义的合同类型处，如果不一致，则会创建一个新的自定义合同类型
      * @param array $Approvers 签署流程参与者信息，最大限制50方
      * @param string $IntelligentStatus 打开智能添加填写区
-(默认开启，打开:"OPEN"
+默认开启，打开:"OPEN"
  关闭："CLOSE"
      * @param integer $ResourceType 资源类型，
-1：文件，
-2：模板
-不传默认为1：文件
-目前仅支持文件
+1：模板
+2：文件，
+不传默认为2：文件
      * @param Component $Components 发起方填写控件
 该类型控件由发起方完成填写
      * @param CreateFlowOption $FlowOption 发起合同个性化参数
@@ -244,9 +251,6 @@ false:不开启发起方发起合同审核
 默认false:不开启发起方发起合同审核
      * @param string $UserData 用户自定义参数
      * @param string $FlowId 合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
-     * @param string $FlowType 合同类型名称
-该字段用于客户自定义合同类型
-建议使用时指定合同类型，便于之后合同分类以及查看
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
      */
     function __construct()
@@ -285,6 +289,10 @@ false:不开启发起方发起合同审核
 
         if (array_key_exists("UserFlowTypeId",$param) and $param["UserFlowTypeId"] !== null) {
             $this->UserFlowTypeId = $param["UserFlowTypeId"];
+        }
+
+        if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
+            $this->FlowType = $param["FlowType"];
         }
 
         if (array_key_exists("Approvers",$param) and $param["Approvers"] !== null) {
@@ -328,10 +336,6 @@ false:不开启发起方发起合同审核
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
-        }
-
-        if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
-            $this->FlowType = $param["FlowType"];
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method array getNamespaceList() 获取集群命名空间列表
  * @method void setNamespaceList(array $NamespaceList) 设置集群命名空间列表
+ * @method string getClusterType() 获取集群类型
+ * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getClusterVersion() 获取集群版本
+ * @method void setClusterVersion(string $ClusterVersion) 设置集群版本
  */
 class TkeInstanceDetail extends AbstractModel
 {
@@ -45,9 +49,21 @@ class TkeInstanceDetail extends AbstractModel
     public $NamespaceList;
 
     /**
+     * @var string 集群类型
+     */
+    public $ClusterType;
+
+    /**
+     * @var string 集群版本
+     */
+    public $ClusterVersion;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param array $NamespaceList 集群命名空间列表
+     * @param string $ClusterType 集群类型
+     * @param string $ClusterVersion 集群版本
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class TkeInstanceDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NamespaceList, $obj);
             }
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
+            $this->ClusterVersion = $param["ClusterVersion"];
         }
     }
 }

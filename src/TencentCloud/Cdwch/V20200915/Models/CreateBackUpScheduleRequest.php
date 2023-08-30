@@ -20,6 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBackUpSchedule请求参数结构体
  *
+ * @method string getInstanceId() 获取集群id
+ * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method string getScheduleType() 获取策略类型 meta(元数据)  data (表数据)
+ * @method void setScheduleType(string $ScheduleType) 设置策略类型 meta(元数据)  data (表数据)
+ * @method string getOperationType() 获取操作类型 create(创建) update(编辑修改)
+ * @method void setOperationType(string $OperationType) 设置操作类型 create(创建) update(编辑修改)
+ * @method integer getRetainDays() 获取保留天数 例如7
+ * @method void setRetainDays(integer $RetainDays) 设置保留天数 例如7
  * @method integer getScheduleId() 获取编辑时需要传
  * @method void setScheduleId(integer $ScheduleId) 设置编辑时需要传
  * @method string getWeekDays() 获取选择的星期 逗号分隔，例如 2 代表周二
@@ -31,6 +39,26 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateBackUpScheduleRequest extends AbstractModel
 {
+    /**
+     * @var string 集群id
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 策略类型 meta(元数据)  data (表数据)
+     */
+    public $ScheduleType;
+
+    /**
+     * @var string 操作类型 create(创建) update(编辑修改)
+     */
+    public $OperationType;
+
+    /**
+     * @var integer 保留天数 例如7
+     */
+    public $RetainDays;
+
     /**
      * @var integer 编辑时需要传
      */
@@ -52,6 +80,10 @@ class CreateBackUpScheduleRequest extends AbstractModel
     public $BackUpTables;
 
     /**
+     * @param string $InstanceId 集群id
+     * @param string $ScheduleType 策略类型 meta(元数据)  data (表数据)
+     * @param string $OperationType 操作类型 create(创建) update(编辑修改)
+     * @param integer $RetainDays 保留天数 例如7
      * @param integer $ScheduleId 编辑时需要传
      * @param string $WeekDays 选择的星期 逗号分隔，例如 2 代表周二
      * @param integer $ExecuteHour 执行小时
@@ -70,6 +102,22 @@ class CreateBackUpScheduleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ScheduleType",$param) and $param["ScheduleType"] !== null) {
+            $this->ScheduleType = $param["ScheduleType"];
+        }
+
+        if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
+            $this->OperationType = $param["OperationType"];
+        }
+
+        if (array_key_exists("RetainDays",$param) and $param["RetainDays"] !== null) {
+            $this->RetainDays = $param["RetainDays"];
+        }
+
         if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
             $this->ScheduleId = $param["ScheduleId"];
         }

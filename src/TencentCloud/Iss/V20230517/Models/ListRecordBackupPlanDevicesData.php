@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置本次查询的设备通道总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RecordPlanChannelInfo getList() 获取设备通道信息列表
+ * @method array getList() 获取设备通道信息列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setList(RecordPlanChannelInfo $List) 设置设备通道信息列表
+ * @method void setList(array $List) 设置设备通道信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListRecordBackupPlanDevicesData extends AbstractModel
@@ -58,7 +58,7 @@ class ListRecordBackupPlanDevicesData extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var RecordPlanChannelInfo 设备通道信息列表
+     * @var array 设备通道信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
@@ -70,7 +70,7 @@ class ListRecordBackupPlanDevicesData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 本次查询的设备通道总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordPlanChannelInfo $List 设备通道信息列表
+     * @param array $List 设备通道信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -99,8 +99,12 @@ class ListRecordBackupPlanDevicesData extends AbstractModel
         }
 
         if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = new RecordPlanChannelInfo();
-            $this->List->deserialize($param["List"]);
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new RecordPlanChannelInfo();
+                $obj->deserialize($value);
+                array_push($this->List, $obj);
+            }
         }
     }
 }

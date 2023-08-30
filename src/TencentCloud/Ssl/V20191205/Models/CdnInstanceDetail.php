@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertId(string $CertId) 设置已部署证书ID
  * @method string getStatus() 获取域名状态
  * @method void setStatus(string $Status) 设置域名状态
+ * @method string getHttpsBillingSwitch() 获取域名计费状态
+ * @method void setHttpsBillingSwitch(string $HttpsBillingSwitch) 设置域名计费状态
  */
 class CdnInstanceDetail extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CdnInstanceDetail extends AbstractModel
     public $Status;
 
     /**
+     * @var string 域名计费状态
+     */
+    public $HttpsBillingSwitch;
+
+    /**
      * @param string $Domain 域名
      * @param string $CertId 已部署证书ID
      * @param string $Status 域名状态
+     * @param string $HttpsBillingSwitch 域名计费状态
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CdnInstanceDetail extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("HttpsBillingSwitch",$param) and $param["HttpsBillingSwitch"] !== null) {
+            $this->HttpsBillingSwitch = $param["HttpsBillingSwitch"];
         }
     }
 }

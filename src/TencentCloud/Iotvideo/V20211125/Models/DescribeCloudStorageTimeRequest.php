@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间，unix时间
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
+ * @method integer getChannelId() 获取通道ID
+ * @method void setChannelId(integer $ChannelId) 设置通道ID
  */
 class DescribeCloudStorageTimeRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeCloudStorageTimeRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 通道ID
+     */
+    public $ChannelId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $Date 云存日期，例如"2020-01-05"
      * @param integer $StartTime 开始时间，unix时间
      * @param integer $EndTime 结束时间，unix时间
      * @param string $UserId 用户ID
+     * @param integer $ChannelId 通道ID
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeCloudStorageTimeRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

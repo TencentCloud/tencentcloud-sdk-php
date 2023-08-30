@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealOldEvents(integer $DealOldEvents) 设置是否处理之前的事件 0: 不处理 1:处理
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置规则描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BashRule extends AbstractModel
 {
@@ -86,6 +90,7 @@ class BashRule extends AbstractModel
 
     /**
      * @var string 规则描述
+     * @deprecated
      */
     public $Decription;
 
@@ -138,6 +143,12 @@ class BashRule extends AbstractModel
     public $DealOldEvents;
 
     /**
+     * @var string 规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param integer $Id 规则ID
      * @param string $Uuid 客户端ID
      * @param string $Name 规则名称
@@ -155,6 +166,8 @@ class BashRule extends AbstractModel
      * @param integer $White 0=黑名单 1=白名单
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DealOldEvents 是否处理之前的事件 0: 不处理 1:处理
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 规则描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +241,10 @@ class BashRule extends AbstractModel
 
         if (array_key_exists("DealOldEvents",$param) and $param["DealOldEvents"] !== null) {
             $this->DealOldEvents = $param["DealOldEvents"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

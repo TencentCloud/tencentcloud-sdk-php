@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置服务Id
  * @method string getEnvironmentId() 获取环境ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
- * @method integer getSourceChannel() 获取来源渠道
- * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
+ * @method integer getSourceChannel() 获取来源渠道(用户不需要关心此参数)
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道(用户不需要关心此参数)
  * @method boolean getDeleteApplicationIfNoRunningVersion() 获取当服务没有任何运行版本时，是否删除此服务
  * @method void setDeleteApplicationIfNoRunningVersion(boolean $DeleteApplicationIfNoRunningVersion) 设置当服务没有任何运行版本时，是否删除此服务
  */
@@ -42,7 +42,7 @@ class DeleteApplicationRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer 来源渠道
+     * @var integer 来源渠道(用户不需要关心此参数)
      */
     public $SourceChannel;
 
@@ -54,7 +54,7 @@ class DeleteApplicationRequest extends AbstractModel
     /**
      * @param string $ApplicationId 服务Id
      * @param string $EnvironmentId 环境ID
-     * @param integer $SourceChannel 来源渠道
+     * @param integer $SourceChannel 来源渠道(用户不需要关心此参数)
      * @param boolean $DeleteApplicationIfNoRunningVersion 当服务没有任何运行版本时，是否删除此服务
      */
     function __construct()

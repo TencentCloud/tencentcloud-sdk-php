@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationReplicas请求参数结构体
  *
- * @method string getApplicationId() 获取服务id
- * @method void setApplicationId(string $ApplicationId) 设置服务id
+ * @method string getApplicationId() 获取应用id
+ * @method void setApplicationId(string $ApplicationId) 设置应用id
  * @method string getEnvironmentId() 获取环境ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
  * @method integer getReplicas() 获取实例数量
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyApplicationReplicasRequest extends AbstractModel
 {
     /**
-     * @var string 服务id
+     * @var string 应用id
      */
     public $ApplicationId;
 
@@ -52,7 +52,7 @@ class ModifyApplicationReplicasRequest extends AbstractModel
     public $SourceChannel;
 
     /**
-     * @param string $ApplicationId 服务id
+     * @param string $ApplicationId 应用id
      * @param string $EnvironmentId 环境ID
      * @param integer $Replicas 实例数量
      * @param integer $SourceChannel 来源渠道

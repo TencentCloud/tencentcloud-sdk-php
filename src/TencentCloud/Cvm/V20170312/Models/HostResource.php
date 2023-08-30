@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGpuTotal(integer $GpuTotal) 设置专用宿主机实例总GPU卡数
  * @method integer getGpuAvailable() 获取专用宿主机实例可用GPU卡数
  * @method void setGpuAvailable(integer $GpuAvailable) 设置专用宿主机实例可用GPU卡数
+ * @method string getExclusiveOwner() 获取CDH owner
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExclusiveOwner(string $ExclusiveOwner) 设置CDH owner
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostResource extends AbstractModel
 {
@@ -87,6 +91,12 @@ class HostResource extends AbstractModel
     public $GpuAvailable;
 
     /**
+     * @var string CDH owner
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExclusiveOwner;
+
+    /**
      * @param integer $CpuTotal 专用宿主机实例总CPU核数
      * @param integer $CpuAvailable 专用宿主机实例可用CPU核数
      * @param float $MemTotal 专用宿主机实例总内存大小（单位为:GiB）
@@ -96,6 +106,8 @@ class HostResource extends AbstractModel
      * @param string $DiskType 专用宿主机实例磁盘类型
      * @param integer $GpuTotal 专用宿主机实例总GPU卡数
      * @param integer $GpuAvailable 专用宿主机实例可用GPU卡数
+     * @param string $ExclusiveOwner CDH owner
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class HostResource extends AbstractModel
 
         if (array_key_exists("GpuAvailable",$param) and $param["GpuAvailable"] !== null) {
             $this->GpuAvailable = $param["GpuAvailable"];
+        }
+
+        if (array_key_exists("ExclusiveOwner",$param) and $param["ExclusiveOwner"] !== null) {
+            $this->ExclusiveOwner = $param["ExclusiveOwner"];
         }
     }
 }

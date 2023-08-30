@@ -42,12 +42,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetDate(string $SetDate) 设置成立日期
  * @method array getRecognizeWarnCode() 获取Code 告警码列表和释义：
 -9102 黑白复印件告警
+-9104 翻拍件告警
  * @method void setRecognizeWarnCode(array $RecognizeWarnCode) 设置Code 告警码列表和释义：
 -9102 黑白复印件告警
+-9104 翻拍件告警
  * @method array getRecognizeWarnMsg() 获取告警码说明：
 WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警
  * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明：
 WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警
  * @method integer getIsDuplication() 获取是否为副本。1为是，-1为不是。
  * @method void setIsDuplication(integer $IsDuplication) 设置是否为副本。1为是，-1为不是。
  * @method string getRegistrationDate() 获取登记日期
@@ -110,12 +114,14 @@ class BizLicenseOCRResponse extends AbstractModel
     /**
      * @var array Code 告警码列表和释义：
 -9102 黑白复印件告警
+-9104 翻拍件告警
      */
     public $RecognizeWarnCode;
 
     /**
      * @var array 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警
      */
     public $RecognizeWarnMsg;
 
@@ -147,8 +153,10 @@ WARN_COPY_CARD 黑白复印件告警
      * @param string $SetDate 成立日期
      * @param array $RecognizeWarnCode Code 告警码列表和释义：
 -9102 黑白复印件告警
+-9104 翻拍件告警
      * @param array $RecognizeWarnMsg 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
+WARN_RESHOOT_SCREENED_CARD 翻拍件告警
      * @param integer $IsDuplication 是否为副本。1为是，-1为不是。
      * @param string $RegistrationDate 登记日期
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mna\V20210119\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 多网聚合加速目标地址结构体
+ * DeleteAllocationTag请求参数结构体
  *
- * @method array getDestIp() 获取加速业务目标 ip 地址数组
- * @method void setDestIp(array $DestIp) 设置加速业务目标 ip 地址数组
+ * @method array getTagKey() 获取用户分账标签键
+ * @method void setTagKey(array $TagKey) 设置用户分账标签键
  */
-class DestAddressInfo extends AbstractModel
+class DeleteAllocationTagRequest extends AbstractModel
 {
     /**
-     * @var array 加速业务目标 ip 地址数组
+     * @var array 用户分账标签键
      */
-    public $DestIp;
+    public $TagKey;
 
     /**
-     * @param array $DestIp 加速业务目标 ip 地址数组
+     * @param array $TagKey 用户分账标签键
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DestAddressInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestIp",$param) and $param["DestIp"] !== null) {
-            $this->DestIp = $param["DestIp"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
         }
     }
 }

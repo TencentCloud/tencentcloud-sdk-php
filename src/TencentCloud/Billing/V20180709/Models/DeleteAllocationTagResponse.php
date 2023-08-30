@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mna\V20210119\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 多网聚合加速目标地址结构体
+ * DeleteAllocationTag返回参数结构体
  *
- * @method array getDestIp() 获取加速业务目标 ip 地址数组
- * @method void setDestIp(array $DestIp) 设置加速业务目标 ip 地址数组
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DestAddressInfo extends AbstractModel
+class DeleteAllocationTagResponse extends AbstractModel
 {
     /**
-     * @var array 加速业务目标 ip 地址数组
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $DestIp;
+    public $RequestId;
 
     /**
-     * @param array $DestIp 加速业务目标 ip 地址数组
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DestAddressInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestIp",$param) and $param["DestIp"] !== null) {
-            $this->DestIp = $param["DestIp"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

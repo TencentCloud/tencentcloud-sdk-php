@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelName(string $ChannelName) 设置按照通道名称查询（为空时，不参考该参数）
  * @method string getOrganizationName() 获取按照组织名称查询（为空时，不参考该参数）
  * @method void setOrganizationName(string $OrganizationName) 设置按照组织名称查询（为空时，不参考该参数）
- * @method string getPageSize() 获取每页最大数量
- * @method void setPageSize(string $PageSize) 设置每页最大数量
- * @method string getPageNumber() 获取第几页
- * @method void setPageNumber(string $PageNumber) 设置第几页
+ * @method integer getPageSize() 获取每页最大数量
+ * @method void setPageSize(integer $PageSize) 设置每页最大数量
+ * @method integer getPageNumber() 获取分页页数
+ * @method void setPageNumber(integer $PageNumber) 设置分页页数
  */
 class ListRecordBackupPlanDevicesRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class ListRecordBackupPlanDevicesRequest extends AbstractModel
     public $OrganizationName;
 
     /**
-     * @var string 每页最大数量
+     * @var integer 每页最大数量
      */
     public $PageSize;
 
     /**
-     * @var string 第几页
+     * @var integer 分页页数
      */
     public $PageNumber;
 
@@ -70,8 +70,8 @@ class ListRecordBackupPlanDevicesRequest extends AbstractModel
      * @param string $DeviceName 按照设备名称查询（为空时，不参考该参数）
      * @param string $ChannelName 按照通道名称查询（为空时，不参考该参数）
      * @param string $OrganizationName 按照组织名称查询（为空时，不参考该参数）
-     * @param string $PageSize 每页最大数量
-     * @param string $PageNumber 第几页
+     * @param integer $PageSize 每页最大数量
+     * @param integer $PageNumber 分页页数
      */
     function __construct()
     {

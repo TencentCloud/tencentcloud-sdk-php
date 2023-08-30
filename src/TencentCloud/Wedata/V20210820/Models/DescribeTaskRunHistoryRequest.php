@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchCondition(InstanceSearchCondition $SearchCondition) 设置检索条件
  * @method integer getPageSize() 获取分页大小
  * @method void setPageSize(integer $PageSize) 设置分页大小
- * @method string getPageNumber() 获取分页页码
- * @method void setPageNumber(string $PageNumber) 设置分页页码
+ * @method integer getPageNumber() 获取分页页码
+ * @method void setPageNumber(integer $PageNumber) 设置分页页码
  */
 class DescribeTaskRunHistoryRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeTaskRunHistoryRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @var string 分页页码
+     * @var integer 分页页码
      */
     public $PageNumber;
 
@@ -55,7 +55,7 @@ class DescribeTaskRunHistoryRequest extends AbstractModel
      * @param string $ProjectId 项目id
      * @param InstanceSearchCondition $SearchCondition 检索条件
      * @param integer $PageSize 分页大小
-     * @param string $PageNumber 分页页码
+     * @param integer $PageNumber 分页页码
      */
     function __construct()
     {

@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdwch\V20200915\Models;
+namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBackUpSchedule返回参数结构体
+ * DescribeTagList返回参数结构体
  *
- * @method string getErrorMsg() 获取错误描述
- * @method void setErrorMsg(string $ErrorMsg) 设置错误描述
+ * @method integer getRecordNum() 获取总记录数
+ * @method void setRecordNum(integer $RecordNum) 设置总记录数
+ * @method array getData() 获取标签信息
+ * @method void setData(array $Data) 设置标签信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBackUpScheduleResponse extends AbstractModel
+class DescribeTagListResponse extends AbstractModel
 {
     /**
-     * @var string 错误描述
+     * @var integer 总记录数
      */
-    public $ErrorMsg;
+    public $RecordNum;
+
+    /**
+     * @var array 标签信息
+     */
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateBackUpScheduleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrorMsg 错误描述
+     * @param integer $RecordNum 总记录数
+     * @param array $Data 标签信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateBackUpScheduleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
-            $this->ErrorMsg = $param["ErrorMsg"];
+        if (array_key_exists("RecordNum",$param) and $param["RecordNum"] !== null) {
+            $this->RecordNum = $param["RecordNum"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new TagDataInfo();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

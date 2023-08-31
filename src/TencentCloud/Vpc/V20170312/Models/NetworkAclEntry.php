@@ -20,28 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 网络ACL规则。
  *
- * @method string getModifyTime() 获取修改时间。
- * @method void setModifyTime(string $ModifyTime) 设置修改时间。
  * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP, ALL。
  * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP, ICMP, ALL。
  * @method string getPort() 获取端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
  * @method void setPort(string $Port) 设置端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
- * @method string getCidrBlock() 获取网段或IP(互斥)。
- * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。
+ * @method string getCidrBlock() 获取网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
+ * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
  * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。
  * @method string getAction() 获取ACCEPT 或 DROP。
  * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
  * @method string getDescription() 获取规则描述，最大长度100。
  * @method void setDescription(string $Description) 设置规则描述，最大长度100。
+ * @method string getModifyTime() 获取修改时间。
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间。
+ * @method integer getPriority() 获取优先级，从1开始。	
+ * @method void setPriority(integer $Priority) 设置优先级，从1开始。	
+ * @method string getNetworkAclIpv4EntryId() 获取IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkAclIpv4EntryId(string $NetworkAclIpv4EntryId) 设置IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNetworkAclIpv6EntryId() 获取IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkAclIpv6EntryId(string $NetworkAclIpv6EntryId) 设置IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkAclEntry extends AbstractModel
 {
-    /**
-     * @var string 修改时间。
-     */
-    public $ModifyTime;
-
     /**
      * @var string 协议, 取值: TCP,UDP, ICMP, ALL。
      */
@@ -53,7 +58,7 @@ class NetworkAclEntry extends AbstractModel
     public $Port;
 
     /**
-     * @var string 网段或IP(互斥)。
+     * @var string 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
      */
     public $CidrBlock;
 
@@ -73,13 +78,40 @@ class NetworkAclEntry extends AbstractModel
     public $Description;
 
     /**
-     * @param string $ModifyTime 修改时间。
+     * @var string 修改时间。
+     */
+    public $ModifyTime;
+
+    /**
+     * @var integer 优先级，从1开始。	
+     */
+    public $Priority;
+
+    /**
+     * @var string IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkAclIpv4EntryId;
+
+    /**
+     * @var string IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkAclIpv6EntryId;
+
+    /**
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP, ALL。
      * @param string $Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
-     * @param string $CidrBlock 网段或IP(互斥)。
+     * @param string $CidrBlock 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
      * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
      * @param string $Action ACCEPT 或 DROP。
      * @param string $Description 规则描述，最大长度100。
+     * @param string $ModifyTime 修改时间。
+     * @param integer $Priority 优先级，从1开始。	
+     * @param string $NetworkAclIpv4EntryId IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NetworkAclIpv6EntryId IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -94,10 +126,6 @@ class NetworkAclEntry extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
-            $this->ModifyTime = $param["ModifyTime"];
-        }
-
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
         }
@@ -120,6 +148,22 @@ class NetworkAclEntry extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("NetworkAclIpv4EntryId",$param) and $param["NetworkAclIpv4EntryId"] !== null) {
+            $this->NetworkAclIpv4EntryId = $param["NetworkAclIpv4EntryId"];
+        }
+
+        if (array_key_exists("NetworkAclIpv6EntryId",$param) and $param["NetworkAclIpv6EntryId"] !== null) {
+            $this->NetworkAclIpv6EntryId = $param["NetworkAclIpv6EntryId"];
         }
     }
 }

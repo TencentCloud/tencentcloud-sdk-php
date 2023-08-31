@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataSourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataSourceName() 获取数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetsName() 获取资产对象名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetsName(string $AssetsName) 设置资产对象名称
@@ -40,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalRiskCount(integer $TotalRiskCount) 设置总的风险个数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskSide() 获取风险面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskSide(string $RiskSide) 设置风险面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceRegion() 获取地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceRegion(string $ResourceRegion) 设置地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HighRiskAssetsDetail extends AbstractModel
 {
@@ -48,6 +64,18 @@ class HighRiskAssetsDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
+
+    /**
+     * @var string 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataSourceType;
+
+    /**
+     * @var string 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataSourceName;
 
     /**
      * @var string 资产对象名称
@@ -74,7 +102,23 @@ class HighRiskAssetsDetail extends AbstractModel
     public $TotalRiskCount;
 
     /**
+     * @var string 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskSide;
+
+    /**
+     * @var string 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceRegion;
+
+    /**
      * @param string $InstanceId 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataSourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataSourceName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetsName 资产对象名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,6 +127,10 @@ class HighRiskAssetsDetail extends AbstractModel
      * @param string $RiskType 风险类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalRiskCount 总的风险个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceRegion 地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -102,6 +150,14 @@ class HighRiskAssetsDetail extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
+        if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
+            $this->DataSourceType = $param["DataSourceType"];
+        }
+
+        if (array_key_exists("DataSourceName",$param) and $param["DataSourceName"] !== null) {
+            $this->DataSourceName = $param["DataSourceName"];
+        }
+
         if (array_key_exists("AssetsName",$param) and $param["AssetsName"] !== null) {
             $this->AssetsName = $param["AssetsName"];
         }
@@ -116,6 +172,14 @@ class HighRiskAssetsDetail extends AbstractModel
 
         if (array_key_exists("TotalRiskCount",$param) and $param["TotalRiskCount"] !== null) {
             $this->TotalRiskCount = $param["TotalRiskCount"];
+        }
+
+        if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
+            $this->RiskSide = $param["RiskSide"];
+        }
+
+        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
+            $this->ResourceRegion = $param["ResourceRegion"];
         }
     }
 }

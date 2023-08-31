@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置扫描结束时间
  * @method string getRiskLevel() 获取风险等级筛选
  * @method void setRiskLevel(string $RiskLevel) 设置风险等级筛选
+ * @method array getRiskSide() 获取风险面筛选
+ * @method void setRiskSide(array $RiskSide) 设置风险面筛选
  */
 class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
     public $RiskLevel;
 
     /**
+     * @var array 风险面筛选
+     */
+    public $RiskSide;
+
+    /**
      * @param string $DspaId dspa实例Id
      * @param integer $TemplateId 评估模版id
      * @param integer $Limit 限制条数
@@ -112,6 +119,7 @@ class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
      * @param string $BeginTime 扫描开始时间
      * @param string $EndTime 扫描结束时间
      * @param string $RiskLevel 风险等级筛选
+     * @param array $RiskSide 风险面筛选
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
 
         if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
             $this->RiskLevel = $param["RiskLevel"];
+        }
+
+        if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
+            $this->RiskSide = $param["RiskSide"];
         }
     }
 }

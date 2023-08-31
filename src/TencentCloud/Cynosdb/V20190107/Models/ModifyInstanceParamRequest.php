@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getInstanceIds() 获取实例ID
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID
- * @method array getClusterParamList() 获取集群参数列表
- * @method void setClusterParamList(array $ClusterParamList) 设置集群参数列表
- * @method array getInstanceParamList() 获取实例参数列表
- * @method void setInstanceParamList(array $InstanceParamList) 设置实例参数列表
+ * @method array getClusterParamList() 获取集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+ * @method void setClusterParamList(array $ClusterParamList) 设置集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+ * @method array getInstanceParamList() 获取实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+ * @method void setInstanceParamList(array $InstanceParamList) 设置实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
  * @method string getIsInMaintainPeriod() 获取yes：在运维时间窗内修改，no：立即执行（默认值）
  * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置yes：在运维时间窗内修改，no：立即执行（默认值）
  */
@@ -44,12 +44,12 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var array 集群参数列表
+     * @var array 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public $ClusterParamList;
 
     /**
-     * @var array 实例参数列表
+     * @var array 实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public $InstanceParamList;
 
@@ -61,8 +61,8 @@ class ModifyInstanceParamRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 实例ID
-     * @param array $ClusterParamList 集群参数列表
-     * @param array $InstanceParamList 实例参数列表
+     * @param array $ClusterParamList 集群参数列表，例如 [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+     * @param array $InstanceParamList 实例参数列表，例如[{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      * @param string $IsInMaintainPeriod yes：在运维时间窗内修改，no：立即执行（默认值）
      */
     function __construct()

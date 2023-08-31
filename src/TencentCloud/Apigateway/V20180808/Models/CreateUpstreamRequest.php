@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUpstream请求参数结构体
  *
- * @method string getScheme() 获取后端协议，取值范围：HTTP, HTTPS
- * @method void setScheme(string $Scheme) 设置后端协议，取值范围：HTTP, HTTPS
+ * @method string getScheme() 获取后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
+ * @method void setScheme(string $Scheme) 设置后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
  * @method string getAlgorithm() 获取负载均衡算法，取值范围：ROUND-ROBIN
  * @method void setAlgorithm(string $Algorithm) 设置负载均衡算法，取值范围：ROUND-ROBIN
  * @method string getUniqVpcId() 获取VPC唯一ID
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateUpstreamRequest extends AbstractModel
 {
     /**
-     * @var string 后端协议，取值范围：HTTP, HTTPS
+     * @var string 后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
      */
     public $Scheme;
 
@@ -108,7 +108,7 @@ class CreateUpstreamRequest extends AbstractModel
     public $K8sService;
 
     /**
-     * @param string $Scheme 后端协议，取值范围：HTTP, HTTPS
+     * @param string $Scheme 后端协议，取值范围：HTTP, HTTPS,gRPC，gRPCs
      * @param string $Algorithm 负载均衡算法，取值范围：ROUND-ROBIN
      * @param string $UniqVpcId VPC唯一ID
      * @param string $UpstreamName 后端通道名字

@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelName(string $LevelName) 设置分级名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLevelRiskScore() 获取分级分数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLevelRiskScore(integer $LevelRiskScore) 设置分级分数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ESTaskResultDetail extends AbstractModel
 {
@@ -124,6 +128,12 @@ class ESTaskResultDetail extends AbstractModel
     public $LevelName;
 
     /**
+     * @var integer 分级分数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LevelRiskScore;
+
+    /**
      * @param integer $Id id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskId 任务id
@@ -143,6 +153,8 @@ class ESTaskResultDetail extends AbstractModel
      * @param integer $LevelId 分级id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LevelName 分级名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LevelRiskScore 分级分数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class ESTaskResultDetail extends AbstractModel
 
         if (array_key_exists("LevelName",$param) and $param["LevelName"] !== null) {
             $this->LevelName = $param["LevelName"];
+        }
+
+        if (array_key_exists("LevelRiskScore",$param) and $param["LevelRiskScore"] !== null) {
+            $this->LevelRiskScore = $param["LevelRiskScore"];
         }
     }
 }

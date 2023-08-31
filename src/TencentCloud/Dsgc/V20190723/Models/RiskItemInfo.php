@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceRegion() 获取资源地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源地域
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetName() 获取资产名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetName(string $AssetName) 设置资产名称
@@ -82,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemSubType(string $ItemSubType) 设置类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskSide() 获取风险面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskSide(string $RiskSide) 设置风险面
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskItemInfo extends AbstractModel
 {
@@ -107,6 +115,12 @@ class RiskItemInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceType;
+
+    /**
+     * @var string 资源地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceRegion;
 
     /**
      * @var string 资产名称
@@ -181,12 +195,20 @@ class RiskItemInfo extends AbstractModel
     public $ItemSubType;
 
     /**
+     * @var string 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskSide;
+
+    /**
      * @param integer $Id 最新风险项id
      * @param string $DataSourceId 数据源id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceRegion 资源地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -211,6 +233,8 @@ class RiskItemInfo extends AbstractModel
      * @param integer $IdentifyComplianceId 分类分级合规组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemSubType 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskSide 风险面
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -240,6 +264,10 @@ class RiskItemInfo extends AbstractModel
 
         if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
             $this->DataSourceType = $param["DataSourceType"];
+        }
+
+        if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
+            $this->ResourceRegion = $param["ResourceRegion"];
         }
 
         if (array_key_exists("AssetName",$param) and $param["AssetName"] !== null) {
@@ -293,6 +321,10 @@ class RiskItemInfo extends AbstractModel
 
         if (array_key_exists("ItemSubType",$param) and $param["ItemSubType"] !== null) {
             $this->ItemSubType = $param["ItemSubType"];
+        }
+
+        if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
+            $this->RiskSide = $param["RiskSide"];
         }
     }
 }

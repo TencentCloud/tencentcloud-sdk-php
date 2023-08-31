@@ -18,21 +18,17 @@ namespace TencentCloud\Dsgc\V20190723\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDSPAAssessmentRiskDistributionOverview请求参数结构体
+ * DescribeDSPAAssessmentRiskSideDistributed请求参数结构体
  *
- * @method string getDspaId() 获取dspa实例Id
- * @method void setDspaId(string $DspaId) 设置dspa实例Id
+ * @method string getDspaId() 获取DSPA实例ID
+ * @method void setDspaId(string $DspaId) 设置DSPA实例ID
  * @method integer getTemplateId() 获取评估模版id
  * @method void setTemplateId(integer $TemplateId) 设置评估模版id
- * @method string getFilter() 获取风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部）
- * @method void setFilter(string $Filter) 设置风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部）
  */
-class DescribeDSPAAssessmentRiskDistributionOverviewRequest extends AbstractModel
+class DescribeDSPAAssessmentRiskSideDistributedRequest extends AbstractModel
 {
     /**
-     * @var string dspa实例Id
+     * @var string DSPA实例ID
      */
     public $DspaId;
 
@@ -42,16 +38,8 @@ class DescribeDSPAAssessmentRiskDistributionOverviewRequest extends AbstractMode
     public $TemplateId;
 
     /**
-     * @var string 风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部）
-     */
-    public $Filter;
-
-    /**
-     * @param string $DspaId dspa实例Id
+     * @param string $DspaId DSPA实例ID
      * @param integer $TemplateId 评估模版id
-     * @param string $Filter 风险资产分布的过滤条件
-（rdb，cos，不传就筛选全部）
      */
     function __construct()
     {
@@ -72,10 +60,6 @@ class DescribeDSPAAssessmentRiskDistributionOverviewRequest extends AbstractMode
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
-        }
-
-        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
-            $this->Filter = $param["Filter"];
         }
     }
 }

@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDataSource(array $SupportDataSource) 设置支持的数据源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskSide() 获取风险面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskSide(string $RiskSide) 设置风险面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getReferTemplateList() 获取关联模版列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReferTemplateList(array $ReferTemplateList) 设置关联模版列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentRiskItem extends AbstractModel
 {
@@ -94,6 +102,18 @@ class AssessmentRiskItem extends AbstractModel
     public $SupportDataSource;
 
     /**
+     * @var string 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskSide;
+
+    /**
+     * @var array 关联模版列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReferTemplateList;
+
+    /**
      * @param integer $Id 脆弱项id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskName 名称
@@ -107,6 +127,10 @@ class AssessmentRiskItem extends AbstractModel
      * @param integer $ReferTemplateCount 关联模版个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SupportDataSource 支持的数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ReferTemplateList 关联模版列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +172,19 @@ class AssessmentRiskItem extends AbstractModel
 
         if (array_key_exists("SupportDataSource",$param) and $param["SupportDataSource"] !== null) {
             $this->SupportDataSource = $param["SupportDataSource"];
+        }
+
+        if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
+            $this->RiskSide = $param["RiskSide"];
+        }
+
+        if (array_key_exists("ReferTemplateList",$param) and $param["ReferTemplateList"] !== null) {
+            $this->ReferTemplateList = [];
+            foreach ($param["ReferTemplateList"] as $key => $value){
+                $obj = new TemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->ReferTemplateList, $obj);
+            }
         }
     }
 }

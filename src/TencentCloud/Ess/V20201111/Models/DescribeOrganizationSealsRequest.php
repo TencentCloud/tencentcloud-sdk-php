@@ -55,7 +55,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
 
  * @method void setSealStatuses(array $SealStatuses) 设置查询的印章状态列表。
 取值为空，只查询启用状态的印章；
@@ -66,7 +66,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
  */
 class DescribeOrganizationSealsRequest extends AbstractModel
 {
@@ -121,7 +121,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
 
      */
     public $SealStatuses;
@@ -149,7 +149,7 @@ LEGAL_PERSON_SEAL：法定代表人章
 取值DISABLE，查询已停用的印章；
 取值STOPPED，查询已终止的印章；
 取值VOID，查询已作废的印章；
-取值INVALID，查询以失效的印章；
+取值INVALID，查询已失效的印章；
      */
     function __construct()
     {

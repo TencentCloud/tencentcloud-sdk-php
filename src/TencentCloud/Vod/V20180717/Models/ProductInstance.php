@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>1：已绑定。</li>
  * @method array getProductInstanceResourceSet() 获取预付费资源包实例中包含的资源包列表。
  * @method void setProductInstanceResourceSet(array $ProductInstanceResourceSet) 设置预付费资源包实例中包含的资源包列表。
+ * @method array getResourceSet() 获取预付费资源包实例中包含的资源包列表。
+ * @method void setResourceSet(array $ResourceSet) 设置预付费资源包实例中包含的资源包列表。
  * @method string getProductInstanceStatus() 获取资源包实例的状态，取值有：
 <li>Effective：生效，可用于计费抵扣。</li>
 <li>Isolated：隔离，不可用于计费抵扣。</li>
@@ -106,8 +108,14 @@ class ProductInstance extends AbstractModel
 
     /**
      * @var array 预付费资源包实例中包含的资源包列表。
+     * @deprecated
      */
     public $ProductInstanceResourceSet;
+
+    /**
+     * @var array 预付费资源包实例中包含的资源包列表。
+     */
+    public $ResourceSet;
 
     /**
      * @var string 资源包实例的状态，取值有：
@@ -145,6 +153,7 @@ class ProductInstance extends AbstractModel
 <li>0：未绑定。</li>
 <li>1：已绑定。</li>
      * @param array $ProductInstanceResourceSet 预付费资源包实例中包含的资源包列表。
+     * @param array $ResourceSet 预付费资源包实例中包含的资源包列表。
      * @param string $ProductInstanceStatus 资源包实例的状态，取值有：
 <li>Effective：生效，可用于计费抵扣。</li>
 <li>Isolated：隔离，不可用于计费抵扣。</li>
@@ -200,6 +209,15 @@ class ProductInstance extends AbstractModel
                 $obj = new ProductInstanceRecource();
                 $obj->deserialize($value);
                 array_push($this->ProductInstanceResourceSet, $obj);
+            }
+        }
+
+        if (array_key_exists("ResourceSet",$param) and $param["ResourceSet"] !== null) {
+            $this->ResourceSet = [];
+            foreach ($param["ResourceSet"] as $key => $value){
+                $obj = new ProductInstanceResource();
+                $obj->deserialize($value);
+                array_push($this->ResourceSet, $obj);
             }
         }
 

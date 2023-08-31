@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitRuleTagList(array $UnitRuleTagList) 设置规则标签列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getItemIndex() 获取项目id
+ * @method integer getItemIndex() 获取规则项索引
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItemIndex(integer $ItemIndex) 设置项目id
+ * @method void setItemIndex(integer $ItemIndex) 设置规则项索引
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,7 +114,7 @@ class UnitRuleItem extends AbstractModel
     public $UnitRuleTagList;
 
     /**
-     * @var integer 项目id
+     * @var integer 规则项索引
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemIndex;
@@ -146,7 +146,7 @@ class UnitRuleItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UnitRuleTagList 规则标签列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ItemIndex 项目id
+     * @param integer $ItemIndex 规则项索引
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。

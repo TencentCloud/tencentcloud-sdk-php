@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) 设置公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
  * @method integer getInstanceNum() 获取购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
  * @method void setInstanceNum(integer $InstanceNum) 设置购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
+ * @method integer getAutoVoucher() 获取是否自动选择代金券:1-是;0否。默认为0
+ * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券:1-是;0否。默认为0
  */
 class CreateInstancePreRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class CreateInstancePreRequest extends AbstractModel
     public $InstanceNum;
 
     /**
+     * @var integer 是否自动选择代金券:1-是;0否。默认为0
+     */
+    public $AutoVoucher;
+
+    /**
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $ZoneId 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
@@ -184,6 +191,7 @@ class CreateInstancePreRequest extends AbstractModel
      * @param array $ZoneIds 可用区列表，购买多可用区实例时为必填项
      * @param integer $PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
      * @param integer $InstanceNum 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
+     * @param integer $AutoVoucher 是否自动选择代金券:1-是;0否。默认为0
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ class CreateInstancePreRequest extends AbstractModel
 
         if (array_key_exists("InstanceNum",$param) and $param["InstanceNum"] !== null) {
             $this->InstanceNum = $param["InstanceNum"];
+        }
+
+        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
+            $this->AutoVoucher = $param["AutoVoucher"];
         }
     }
 }

@@ -18,39 +18,35 @@ namespace TencentCloud\Dsgc\V20190723\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 待处理风险项数量信息
+ * 评估模版的详情数据
  *
- * @method string getRiskLevel() 获取风险等级
- * @method void setRiskLevel(string $RiskLevel) 设置风险等级
- * @method integer getCount() 获取该等级风险项数量
- * @method void setCount(integer $Count) 设置该等级风险项数量
- * @method string getRiskLevelName() 获取风险等级名称
+ * @method integer getTemplateId() 获取模版id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskLevelName(string $RiskLevelName) 设置风险等级名称
+ * @method void setTemplateId(integer $TemplateId) 设置模版id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTemplateName() 获取模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateName(string $TemplateName) 设置模版名称
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class RiskCountInfo extends AbstractModel
+class TemplateInfo extends AbstractModel
 {
     /**
-     * @var string 风险等级
-     */
-    public $RiskLevel;
-
-    /**
-     * @var integer 该等级风险项数量
-     */
-    public $Count;
-
-    /**
-     * @var string 风险等级名称
+     * @var integer 模版id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RiskLevelName;
+    public $TemplateId;
 
     /**
-     * @param string $RiskLevel 风险等级
-     * @param integer $Count 该等级风险项数量
-     * @param string $RiskLevelName 风险等级名称
+     * @var string 模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateName;
+
+    /**
+     * @param integer $TemplateId 模版id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TemplateName 模版名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -66,16 +62,12 @@ class RiskCountInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
-            $this->RiskLevel = $param["RiskLevel"];
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
 
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
-        }
-
-        if (array_key_exists("RiskLevelName",$param) and $param["RiskLevelName"] !== null) {
-            $this->RiskLevelName = $param["RiskLevelName"];
+        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
+            $this->TemplateName = $param["TemplateName"];
         }
     }
 }

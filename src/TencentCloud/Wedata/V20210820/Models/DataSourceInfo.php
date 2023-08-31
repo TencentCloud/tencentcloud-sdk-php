@@ -140,6 +140,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiedTime(integer $ModifiedTime) 设置修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShowType() 获取数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShowType(string $ShowType) 设置数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -324,6 +328,12 @@ class DataSourceInfo extends AbstractModel
     public $ModifiedTime;
 
     /**
+     * @var string 数据源页面展示类型，与Type对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShowType;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -383,6 +393,8 @@ class DataSourceInfo extends AbstractModel
      * @param string $BizParamsString BizParams json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ModifiedTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShowType 数据源页面展示类型，与Type对应
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -516,6 +528,10 @@ class DataSourceInfo extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
+        }
+
+        if (array_key_exists("ShowType",$param) and $param["ShowType"] !== null) {
+            $this->ShowType = $param["ShowType"];
         }
     }
 }

@@ -26,8 +26,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置评估任务名称。1-20个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method string getTemplateId() 获取评估模版Id，格式“template-xxxxxxxx”
  * @method void setTemplateId(string $TemplateId) 设置评估模版Id，格式“template-xxxxxxxx”
- * @method DiscoveryCondition getDiscoveryCondition() 获取敏感数据扫描数据源条件。
- * @method void setDiscoveryCondition(DiscoveryCondition $DiscoveryCondition) 设置敏感数据扫描数据源条件。
  * @method string getBusinessName() 获取评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method void setBusinessName(string $BusinessName) 设置评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method string getBusinessDept() 获取业务所属部门。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
@@ -36,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessOwner(string $BusinessOwner) 设置业务负责人。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method integer getComplianceId() 获取分类分级模版Id
  * @method void setComplianceId(integer $ComplianceId) 设置分类分级模版Id
+ * @method DiscoveryCondition getDiscoveryCondition() 获取敏感数据扫描数据源条件。
+ * @method void setDiscoveryCondition(DiscoveryCondition $DiscoveryCondition) 设置敏感数据扫描数据源条件。
  * @method string getDescription() 获取说明
  * @method void setDescription(string $Description) 设置说明
  */
@@ -55,11 +55,6 @@ class CreateDSPAAssessmentTaskRequest extends AbstractModel
      * @var string 评估模版Id，格式“template-xxxxxxxx”
      */
     public $TemplateId;
-
-    /**
-     * @var DiscoveryCondition 敏感数据扫描数据源条件。
-     */
-    public $DiscoveryCondition;
 
     /**
      * @var string 评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
@@ -85,6 +80,11 @@ class CreateDSPAAssessmentTaskRequest extends AbstractModel
     public $ComplianceId;
 
     /**
+     * @var DiscoveryCondition 敏感数据扫描数据源条件。
+     */
+    public $DiscoveryCondition;
+
+    /**
      * @var string 说明
      */
     public $Description;
@@ -93,11 +93,11 @@ class CreateDSPAAssessmentTaskRequest extends AbstractModel
      * @param string $DspaId DSPA实例Id，格式“dspa-xxxxxxxx”
      * @param string $Name 评估任务名称。1-20个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
      * @param string $TemplateId 评估模版Id，格式“template-xxxxxxxx”
-     * @param DiscoveryCondition $DiscoveryCondition 敏感数据扫描数据源条件。
      * @param string $BusinessName 评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
      * @param string $BusinessDept 业务所属部门。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
      * @param string $BusinessOwner 业务负责人。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
      * @param integer $ComplianceId 分类分级模版Id
+     * @param DiscoveryCondition $DiscoveryCondition 敏感数据扫描数据源条件。
      * @param string $Description 说明
      */
     function __construct()
@@ -125,11 +125,6 @@ class CreateDSPAAssessmentTaskRequest extends AbstractModel
             $this->TemplateId = $param["TemplateId"];
         }
 
-        if (array_key_exists("DiscoveryCondition",$param) and $param["DiscoveryCondition"] !== null) {
-            $this->DiscoveryCondition = new DiscoveryCondition();
-            $this->DiscoveryCondition->deserialize($param["DiscoveryCondition"]);
-        }
-
         if (array_key_exists("BusinessName",$param) and $param["BusinessName"] !== null) {
             $this->BusinessName = $param["BusinessName"];
         }
@@ -144,6 +139,11 @@ class CreateDSPAAssessmentTaskRequest extends AbstractModel
 
         if (array_key_exists("ComplianceId",$param) and $param["ComplianceId"] !== null) {
             $this->ComplianceId = $param["ComplianceId"];
+        }
+
+        if (array_key_exists("DiscoveryCondition",$param) and $param["DiscoveryCondition"] !== null) {
+            $this->DiscoveryCondition = new DiscoveryCondition();
+            $this->DiscoveryCondition->deserialize($param["DiscoveryCondition"]);
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

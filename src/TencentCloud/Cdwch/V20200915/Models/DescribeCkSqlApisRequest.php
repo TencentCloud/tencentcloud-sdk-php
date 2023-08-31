@@ -50,6 +50,8 @@ GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
  * @method void setCluster(string $Cluster) 设置集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
  * @method string getUserName() 获取用户名称，api与user相关的必填
  * @method void setUserName(string $UserName) 设置用户名称，api与user相关的必填
+ * @method string getUserType() 获取账户的类型
+ * @method void setUserType(string $UserType) 设置账户的类型
  */
 class DescribeCkSqlApisRequest extends AbstractModel
 {
@@ -85,6 +87,11 @@ GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
     public $UserName;
 
     /**
+     * @var string 账户的类型
+     */
+    public $UserType;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $ApiType api接口名称,GetClusters:获取集群cluster列表
 GetSystemUsers:获取系统用户列表
@@ -100,6 +107,7 @@ GetUserOptionMessages:获取用户配置备注信息
 GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
      * @param string $Cluster 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
      * @param string $UserName 用户名称，api与user相关的必填
+     * @param string $UserType 账户的类型
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
 
         if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
             $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

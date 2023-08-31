@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategoryIdList(array $CategoryIdList) 设置多级分类的分类ID集合
  * @method integer getLevelId() 获取敏感数据分级ID
  * @method void setLevelId(integer $LevelId) 设置敏感数据分级ID
+ * @method string getDbName() 获取索引名称
+ * @method void setDbName(string $DbName) 设置索引名称
  */
 class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractModel
     public $LevelId;
 
     /**
+     * @var string 索引名称
+     */
+    public $DbName;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $TaskId 任务ID
      * @param integer $ComplianceId 合规组ID
@@ -80,6 +87,7 @@ class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractModel
      * @param integer $Limit 返回数量，默认值为20，最大值为100
      * @param array $CategoryIdList 多级分类的分类ID集合
      * @param integer $LevelId 敏感数据分级ID
+     * @param string $DbName 索引名称
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractModel
 
         if (array_key_exists("LevelId",$param) and $param["LevelId"] !== null) {
             $this->LevelId = $param["LevelId"];
+        }
+
+        if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
+            $this->DbName = $param["DbName"];
         }
     }
 }

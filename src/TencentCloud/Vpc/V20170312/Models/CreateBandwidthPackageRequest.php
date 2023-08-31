@@ -30,10 +30,16 @@ use TencentCloud\Common\AbstractModel;
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
+
  * @method void setChargeType(string $ChargeType) 设置带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
+
  * @method string getBandwidthPackageName() 获取带宽包名称。
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名称。
  * @method integer getBandwidthPackageCount() 获取带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
@@ -61,6 +67,9 @@ class CreateBandwidthPackageRequest extends AbstractModel
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
+
      */
     public $ChargeType;
 
@@ -102,6 +111,9 @@ class CreateBandwidthPackageRequest extends AbstractModel
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
+<li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
+
      * @param string $BandwidthPackageName 带宽包名称。
      * @param integer $BandwidthPackageCount 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
      * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。

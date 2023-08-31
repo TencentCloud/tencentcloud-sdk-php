@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDataSource(array $SupportDataSource) 设置支持的数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsASMTemplate() 获取是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsASMTemplate(boolean $IsASMTemplate) 设置是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentTemplate extends AbstractModel
 {
@@ -110,6 +114,12 @@ class AssessmentTemplate extends AbstractModel
     public $SupportDataSource;
 
     /**
+     * @var boolean 是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsASMTemplate;
+
+    /**
      * @param integer $Id id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateId 评估模版Id
@@ -123,6 +133,8 @@ class AssessmentTemplate extends AbstractModel
      * @param integer $AppliedItemCount 模版已启用的评估项数量
      * @param string $Status 模版启用状态，草稿/已启用，取值draft / launched
      * @param array $SupportDataSource 支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsASMTemplate 是否包含攻击面风险
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class AssessmentTemplate extends AbstractModel
 
         if (array_key_exists("SupportDataSource",$param) and $param["SupportDataSource"] !== null) {
             $this->SupportDataSource = $param["SupportDataSource"];
+        }
+
+        if (array_key_exists("IsASMTemplate",$param) and $param["IsASMTemplate"] !== null) {
+            $this->IsASMTemplate = $param["IsASMTemplate"];
         }
     }
 }

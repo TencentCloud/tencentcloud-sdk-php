@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置修改后的服务前端请求类型，如 http、https和 http&https。
  * @method array getNetTypes() 获取网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
  * @method void setNetTypes(array $NetTypes) 设置网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
+ * @method string getUniqVpcId() 获取vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
+ * @method void setUniqVpcId(string $UniqVpcId) 设置vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
  */
 class ModifyServiceRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyServiceRequest extends AbstractModel
     public $NetTypes;
 
     /**
+     * @var string vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
+     */
+    public $UniqVpcId;
+
+    /**
      * @param string $ServiceId 待修改服务的唯一 Id。
      * @param string $ServiceName 修改后的服务名称。
      * @param string $ServiceDesc 修改后的服务描述。
      * @param string $Protocol 修改后的服务前端请求类型，如 http、https和 http&https。
      * @param array $NetTypes 网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
+     * @param string $UniqVpcId vpc属性，选择VPC后不可修改。为服务选择VPC后，可对接该VPC下的后端资源
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyServiceRequest extends AbstractModel
 
         if (array_key_exists("NetTypes",$param) and $param["NetTypes"] !== null) {
             $this->NetTypes = $param["NetTypes"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskType(string $RiskType) 设置风险类型
  * @method string getRiskName() 获取风险名称
  * @method void setRiskName(string $RiskName) 设置风险名称
+ * @method string getRiskSide() 获取风险面
+ * @method void setRiskSide(string $RiskSide) 设置风险面
  */
 class DescribeDSPAAssessmentRiskTemplateVulnerableListRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeDSPAAssessmentRiskTemplateVulnerableListRequest extends AbstractMo
     public $RiskName;
 
     /**
+     * @var string 风险面
+     */
+    public $RiskSide;
+
+    /**
      * @param string $DspaId dspa实例id
      * @param integer $Limit 限制条数
      * @param integer $Offset 偏移量
      * @param string $RiskType 风险类型
      * @param string $RiskName 风险名称
+     * @param string $RiskSide 风险面
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeDSPAAssessmentRiskTemplateVulnerableListRequest extends AbstractMo
 
         if (array_key_exists("RiskName",$param) and $param["RiskName"] !== null) {
             $this->RiskName = $param["RiskName"];
+        }
+
+        if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
+            $this->RiskSide = $param["RiskSide"];
         }
     }
 }

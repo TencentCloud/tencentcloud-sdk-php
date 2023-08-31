@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhiteList(string $WhiteList) 设置白名单
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取白名单备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置白名单备注
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInsertTime() 获取新增时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInsertTime(string $InsertTime) 设置新增时间
@@ -78,6 +82,12 @@ class WhiteListData extends AbstractModel
     public $WhiteList;
 
     /**
+     * @var string 白名单备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @var string 新增时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -93,6 +103,8 @@ class WhiteListData extends AbstractModel
      * @param integer $AssetsType 资产类型：0-网站 1-app 2-公众号 3-小程序
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WhiteList 白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 白名单备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InsertTime 新增时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,6 +140,10 @@ class WhiteListData extends AbstractModel
 
         if (array_key_exists("WhiteList",$param) and $param["WhiteList"] !== null) {
             $this->WhiteList = $param["WhiteList"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
 
         if (array_key_exists("InsertTime",$param) and $param["InsertTime"] !== null) {

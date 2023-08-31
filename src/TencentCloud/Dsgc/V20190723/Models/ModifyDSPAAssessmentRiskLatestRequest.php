@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNote(string $Note) 设置备注
  * @method string getProcessPeople() 获取处置人
  * @method void setProcessPeople(string $ProcessPeople) 设置处置人
+ * @method array getBathRiskIdList() 获取批量处理的列表
+ * @method void setBathRiskIdList(array $BathRiskIdList) 设置批量处理的列表
  */
 class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel
 {
@@ -40,6 +42,7 @@ class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel
 
     /**
      * @var integer 最新风险项Id
+     * @deprecated
      */
     public $RiskLatestTableId;
 
@@ -59,11 +62,17 @@ class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel
     public $ProcessPeople;
 
     /**
+     * @var array 批量处理的列表
+     */
+    public $BathRiskIdList;
+
+    /**
      * @param string $DspaId dspa实例id
      * @param integer $RiskLatestTableId 最新风险项Id
      * @param string $Status 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
      * @param string $Note 备注
      * @param string $ProcessPeople 处置人
+     * @param array $BathRiskIdList 批量处理的列表
      */
     function __construct()
     {
@@ -96,6 +105,10 @@ class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel
 
         if (array_key_exists("ProcessPeople",$param) and $param["ProcessPeople"] !== null) {
             $this->ProcessPeople = $param["ProcessPeople"];
+        }
+
+        if (array_key_exists("BathRiskIdList",$param) and $param["BathRiskIdList"] !== null) {
+            $this->BathRiskIdList = $param["BathRiskIdList"];
         }
     }
 }

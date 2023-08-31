@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置dspa实例Id
  * @method integer getTemplateId() 获取评估模版id
  * @method void setTemplateId(integer $TemplateId) 设置评估模版id
+ * @method string getFilter() 获取过滤条件， rdb（数据库）cos（对象存储）
+不传就是全部
+ * @method void setFilter(string $Filter) 设置过滤条件， rdb（数据库）cos（对象存储）
+不传就是全部
  */
 class DescribeDSPAAssessmentHighRiskTop10OverviewRequest extends AbstractModel
 {
@@ -38,8 +42,16 @@ class DescribeDSPAAssessmentHighRiskTop10OverviewRequest extends AbstractModel
     public $TemplateId;
 
     /**
+     * @var string 过滤条件， rdb（数据库）cos（对象存储）
+不传就是全部
+     */
+    public $Filter;
+
+    /**
      * @param string $DspaId dspa实例Id
      * @param integer $TemplateId 评估模版id
+     * @param string $Filter 过滤条件， rdb（数据库）cos（对象存储）
+不传就是全部
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class DescribeDSPAAssessmentHighRiskTop10OverviewRequest extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = $param["Filter"];
         }
     }
 }

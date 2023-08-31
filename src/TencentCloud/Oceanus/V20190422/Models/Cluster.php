@@ -130,6 +130,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterSessions(array $ClusterSessions) 设置session集群信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getArchGeneration() 获取V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArchGeneration(integer $ArchGeneration) 设置V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClusterType() 获取0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterType(integer $ClusterType) 设置0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOrders() 获取订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrders(array $Orders) 设置订单信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -333,6 +345,24 @@ class Cluster extends AbstractModel
     public $ClusterSessions;
 
     /**
+     * @var integer V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ArchGeneration;
+
+    /**
+     * @var integer 0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterType;
+
+    /**
+     * @var array 订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Orders;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -387,6 +417,12 @@ class Cluster extends AbstractModel
      * @param integer $IsNeedManageNode 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterSessions session集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ArchGeneration V3版本 = 2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClusterType 0:TKE, 1:EKS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Orders 订单信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -564,6 +600,23 @@ class Cluster extends AbstractModel
                 $obj = new ClusterSession();
                 $obj->deserialize($value);
                 array_push($this->ClusterSessions, $obj);
+            }
+        }
+
+        if (array_key_exists("ArchGeneration",$param) and $param["ArchGeneration"] !== null) {
+            $this->ArchGeneration = $param["ArchGeneration"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("Orders",$param) and $param["Orders"] !== null) {
+            $this->Orders = [];
+            foreach ($param["Orders"] as $key => $value){
+                $obj = new Order();
+                $obj->deserialize($value);
+                array_push($this->Orders, $obj);
             }
         }
     }

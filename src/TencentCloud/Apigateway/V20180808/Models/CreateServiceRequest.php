@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签。
  * @method string getInstanceId() 获取独享实例id
  * @method void setInstanceId(string $InstanceId) 设置独享实例id
- * @method string getUniqVpcId() 获取vpc属性
- * @method void setUniqVpcId(string $UniqVpcId) 设置vpc属性
+ * @method string getUniqVpcId() 获取vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
+ * @method void setUniqVpcId(string $UniqVpcId) 设置vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
  */
 class CreateServiceRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class CreateServiceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string vpc属性
+     * @var string vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
      */
     public $UniqVpcId;
 
@@ -103,7 +103,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $AppIdType 用户类型。保留类型，serverless用户使用。
      * @param array $Tags 标签。
      * @param string $InstanceId 独享实例id
-     * @param string $UniqVpcId vpc属性
+     * @param string $UniqVpcId vpc属性，选择VPC后不可修改，为服务选择VPC后，可对接该VPC下的后端资源
      */
     function __construct()
     {

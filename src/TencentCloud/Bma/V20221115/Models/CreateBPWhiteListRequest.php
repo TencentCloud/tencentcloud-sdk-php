@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWhiteListType(integer $WhiteListType) 设置白名单类型：0-网站 1-应用 2-公众号 3-小程
  * @method array getWhiteLists() 获取白名单名称
  * @method void setWhiteLists(array $WhiteLists) 设置白名单名称
+ * @method string getRemark() 获取白名单备注
+ * @method void setRemark(string $Remark) 设置白名单备注
  */
 class CreateBPWhiteListRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateBPWhiteListRequest extends AbstractModel
     public $WhiteLists;
 
     /**
+     * @var string 白名单备注
+     */
+    public $Remark;
+
+    /**
      * @param integer $CompanyId 企业Id
      * @param integer $WhiteListType 白名单类型：0-网站 1-应用 2-公众号 3-小程
      * @param array $WhiteLists 白名单名称
+     * @param string $Remark 白名单备注
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateBPWhiteListRequest extends AbstractModel
 
         if (array_key_exists("WhiteLists",$param) and $param["WhiteLists"] !== null) {
             $this->WhiteLists = $param["WhiteLists"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

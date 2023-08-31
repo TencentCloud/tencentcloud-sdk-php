@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 微服务网关单元化规则标签
  *
- * @method string getTagType() 获取标签类型 : U(用户标签)
- * @method void setTagType(string $TagType) 设置标签类型 : U(用户标签)
+ * @method string getTagType() 获取标签类型 : U(用户标签)/S(系统标签)
+ * @method void setTagType(string $TagType) 设置标签类型 : U(用户标签)/S(系统标签)
  * @method string getTagField() 获取标签名
  * @method void setTagField(string $TagField) 设置标签名
  * @method string getTagOperator() 获取操作符:IN/NOT_IN/EQUAL/NOT_EQUAL/REGEX
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class UnitRuleTag extends AbstractModel
 {
     /**
-     * @var string 标签类型 : U(用户标签)
+     * @var string 标签类型 : U(用户标签)/S(系统标签)
      */
     public $TagType;
 
@@ -72,7 +72,7 @@ class UnitRuleTag extends AbstractModel
     public $Id;
 
     /**
-     * @param string $TagType 标签类型 : U(用户标签)
+     * @param string $TagType 标签类型 : U(用户标签)/S(系统标签)
      * @param string $TagField 标签名
      * @param string $TagOperator 操作符:IN/NOT_IN/EQUAL/NOT_EQUAL/REGEX
      * @param string $TagValue 标签值

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesInfo(array $SalesInfo) 设置标准版售罄信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtraFlag() 获取额外标识
+ * @method void setExtraFlag(string $ExtraFlag) 设置额外标识
  */
 class ZoneInfo extends AbstractModel
 {
@@ -75,6 +77,7 @@ class ZoneInfo extends AbstractModel
 
     /**
      * @var string 额外标识
+     * @deprecated
      */
     public $Exflag;
 
@@ -90,6 +93,11 @@ class ZoneInfo extends AbstractModel
     public $SalesInfo;
 
     /**
+     * @var string 额外标识
+     */
+    public $ExtraFlag;
+
+    /**
      * @param string $ZoneId zone的id
      * @param integer $IsInternalApp 是否内部APP
      * @param integer $AppId app id
@@ -100,6 +108,7 @@ class ZoneInfo extends AbstractModel
      * @param string $SoldOut json对象，key为机型，value true为售罄，false为未售罄
      * @param array $SalesInfo 标准版售罄信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtraFlag 额外标识
      */
     function __construct()
     {
@@ -153,6 +162,10 @@ class ZoneInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SalesInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ExtraFlag",$param) and $param["ExtraFlag"] !== null) {
+            $this->ExtraFlag = $param["ExtraFlag"];
         }
     }
 }

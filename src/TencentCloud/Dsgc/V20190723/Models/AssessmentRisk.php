@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(string $RiskType) 设置风险类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskSide() 获取风险面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskSide(string $RiskSide) 设置风险面
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentRisk extends AbstractModel
 {
@@ -168,6 +172,12 @@ class AssessmentRisk extends AbstractModel
     public $RiskType;
 
     /**
+     * @var string 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskSide;
+
+    /**
      * @param string $RiskId 风险项Id
      * @param string $RiskDescription 风险项描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,6 +201,8 @@ class AssessmentRisk extends AbstractModel
      * @param array $SecurityProduct 建议使用安全产品
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskType 风险类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskSide 风险面
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +293,10 @@ class AssessmentRisk extends AbstractModel
 
         if (array_key_exists("RiskType",$param) and $param["RiskType"] !== null) {
             $this->RiskType = $param["RiskType"];
+        }
+
+        if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
+            $this->RiskSide = $param["RiskSide"];
         }
     }
 }

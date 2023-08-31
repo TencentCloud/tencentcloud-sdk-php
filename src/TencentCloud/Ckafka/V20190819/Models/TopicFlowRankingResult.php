@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrokerTopicData(array $BrokerTopicData) 设置单个broker 节点 Topic占用的数据大小
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBrokerTopicFlowData() 获取单个Broker 节点Topic 流量的大小(单位MB)
+ * @method void setBrokerTopicFlowData(array $BrokerTopicFlowData) 设置单个Broker 节点Topic 流量的大小(单位MB)
  */
 class TopicFlowRankingResult extends AbstractModel
 {
@@ -68,6 +70,11 @@ class TopicFlowRankingResult extends AbstractModel
     public $BrokerTopicData;
 
     /**
+     * @var array 单个Broker 节点Topic 流量的大小(单位MB)
+     */
+    public $BrokerTopicFlowData;
+
+    /**
      * @param array $TopicFlow Topic 流量数组
      * @param array $ConsumeSpeed 消费者组消费速度排行速度
      * @param array $TopicMessageHeap Topic 消息堆积/占用磁盘排行
@@ -76,6 +83,7 @@ class TopicFlowRankingResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BrokerTopicData 单个broker 节点 Topic占用的数据大小
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BrokerTopicFlowData 单个Broker 节点Topic 流量的大小(单位MB)
      */
     function __construct()
     {
@@ -127,6 +135,15 @@ class TopicFlowRankingResult extends AbstractModel
                 $obj = new BrokerTopicData();
                 $obj->deserialize($value);
                 array_push($this->BrokerTopicData, $obj);
+            }
+        }
+
+        if (array_key_exists("BrokerTopicFlowData",$param) and $param["BrokerTopicFlowData"] !== null) {
+            $this->BrokerTopicFlowData = [];
+            foreach ($param["BrokerTopicFlowData"] as $key => $value){
+                $obj = new BrokerTopicFlowData();
+                $obj->deserialize($value);
+                array_push($this->BrokerTopicFlowData, $obj);
             }
         }
     }

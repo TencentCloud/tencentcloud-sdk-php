@@ -139,6 +139,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateNetDetectResponse CreateNetDetect(Models\CreateNetDetectRequest $req) 本接口（CreateNetDetect）用于创建网络探测。
  * @method Models\CreateNetworkAclResponse CreateNetworkAcl(Models\CreateNetworkAclRequest $req) 本接口（CreateNetworkAcl）用于创建新的<a href="https://cloud.tencent.com/document/product/215/20088">网络ACL</a>。
 * 新建的网络ACL的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用ModifyNetworkAclEntries将网络ACL的规则设置为需要的规则。
+ * @method Models\CreateNetworkAclEntriesResponse CreateNetworkAclEntries(Models\CreateNetworkAclEntriesRequest $req) 本接口（CreateNetworkAclEntries）用于增量添加网络ACL三元组的入站规则和出站规则。
  * @method Models\CreateNetworkAclQuintupleEntriesResponse CreateNetworkAclQuintupleEntries(Models\CreateNetworkAclQuintupleEntriesRequest $req) 本接口（CreateNetworkAclQuintupleEntries）用于增量网络ACL五元组的入站规则和出站规则。
  * @method Models\CreateNetworkInterfaceResponse CreateNetworkInterface(Models\CreateNetworkInterfaceRequest $req) 本接口（CreateNetworkInterface）用于创建弹性网卡。
 * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
@@ -248,6 +249,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRule(Models\DeleteNatGatewaySourceIpTranslationNatRuleRequest $req) 本接口（DeleteNatGatewaySourceIpTranslationNatRule）用于删除NAT网关端口SNAT转发规则。
  * @method Models\DeleteNetDetectResponse DeleteNetDetect(Models\DeleteNetDetectRequest $req) 本接口（DeleteNetDetect）用于删除网络探测实例。
  * @method Models\DeleteNetworkAclResponse DeleteNetworkAcl(Models\DeleteNetworkAclRequest $req) 本接口（DeleteNetworkAcl）用于删除网络ACL。
+ * @method Models\DeleteNetworkAclEntriesResponse DeleteNetworkAclEntries(Models\DeleteNetworkAclEntriesRequest $req) 本接口（DeleteNetworkAclEntries）用于删除三元组网络ACL的入站规则和出站规则。在NetworkAclEntrySet参数中：
+* 删除IPv4规则，需要传入NetworkAclIpv4EntryId。
+* 删除IPv6规则，需要传入NetworkAclIpv6EntryId。
  * @method Models\DeleteNetworkAclQuintupleEntriesResponse DeleteNetworkAclQuintupleEntries(Models\DeleteNetworkAclQuintupleEntriesRequest $req) 本接口（DeleteNetworkAclQuintupleEntries）用于删除网络ACL五元组指定的入站规则和出站规则（但不是全量删除该ACL下的所有条目）。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
  * @method Models\DeleteNetworkInterfaceResponse DeleteNetworkInterface(Models\DeleteNetworkInterfaceRequest $req) 本接口（DeleteNetworkInterface）用于删除弹性网卡。
 * 弹性网卡上绑定了云服务器时，不能被删除。

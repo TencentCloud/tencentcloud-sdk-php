@@ -1,0 +1,118 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Waf\V20180125\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * DescribeAntiInfoLeakRules返回的规则列表元素
+ *
+ * @method string getRuleId() 获取规则ID
+ * @method void setRuleId(string $RuleId) 设置规则ID
+ * @method string getName() 获取规则名称
+ * @method void setName(string $Name) 设置规则名称
+ * @method string getStatus() 获取规则状态
+ * @method void setStatus(string $Status) 设置规则状态
+ * @method string getActionType() 获取规则动作类型
+ * @method void setActionType(string $ActionType) 设置规则动作类型
+ * @method string getCreateTime() 获取规则创建时间
+ * @method void setCreateTime(string $CreateTime) 设置规则创建时间
+ * @method array getStrategies() 获取详细的规则
+ * @method void setStrategies(array $Strategies) 设置详细的规则
+ */
+class DescribeAntiInfoLeakRulesRuleItem extends AbstractModel
+{
+    /**
+     * @var string 规则ID
+     */
+    public $RuleId;
+
+    /**
+     * @var string 规则名称
+     */
+    public $Name;
+
+    /**
+     * @var string 规则状态
+     */
+    public $Status;
+
+    /**
+     * @var string 规则动作类型
+     */
+    public $ActionType;
+
+    /**
+     * @var string 规则创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var array 详细的规则
+     */
+    public $Strategies;
+
+    /**
+     * @param string $RuleId 规则ID
+     * @param string $Name 规则名称
+     * @param string $Status 规则状态
+     * @param string $ActionType 规则动作类型
+     * @param string $CreateTime 规则创建时间
+     * @param array $Strategies 详细的规则
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
+            $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Strategies",$param) and $param["Strategies"] !== null) {
+            $this->Strategies = [];
+            foreach ($param["Strategies"] as $key => $value){
+                $obj = new DescribeAntiInfoLeakRulesStrategyItem();
+                $obj->deserialize($value);
+                array_push($this->Strategies, $obj);
+            }
+        }
+    }
+}

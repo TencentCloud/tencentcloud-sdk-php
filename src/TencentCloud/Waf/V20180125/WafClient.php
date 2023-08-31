@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Waf\V20180125\Models as Models;
 
 /**
+ * @method Models\AddAntiFakeUrlResponse AddAntiFakeUrl(Models\AddAntiFakeUrlRequest $req) 添加防篡改url
+ * @method Models\AddAntiInfoLeakRulesResponse AddAntiInfoLeakRules(Models\AddAntiInfoLeakRulesRequest $req) 添加信息防泄漏规则
  * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) 增加访问控制（自定义策略）
  * @method Models\AddCustomWhiteRuleResponse AddCustomWhiteRule(Models\AddCustomWhiteRuleRequest $req) 增加精准白名单规则
  * @method Models\AddDomainWhiteRuleResponse AddDomainWhiteRule(Models\AddDomainWhiteRuleRequest $req) 增加域名规则白名单
@@ -32,7 +34,10 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\CreateAccessExportResponse CreateAccessExport(Models\CreateAccessExportRequest $req) 本接口用于创建访问日志导出
  * @method Models\CreateHostResponse CreateHost(Models\CreateHostRequest $req) clb-waf中添加防护的域名
  * @method Models\DeleteAccessExportResponse DeleteAccessExport(Models\DeleteAccessExportRequest $req) 本接口用于删除访问日志导出
+ * @method Models\DeleteAntiFakeUrlResponse DeleteAntiFakeUrl(Models\DeleteAntiFakeUrlRequest $req) 删除防篡改url
+ * @method Models\DeleteAntiInfoLeakRuleResponse DeleteAntiInfoLeakRule(Models\DeleteAntiInfoLeakRuleRequest $req) 信息防泄漏删除规则
  * @method Models\DeleteAttackDownloadRecordResponse DeleteAttackDownloadRecord(Models\DeleteAttackDownloadRecordRequest $req) 删除攻击日志下载任务记录
+ * @method Models\DeleteCCRuleResponse DeleteCCRule(Models\DeleteCCRuleRequest $req) Waf  CC V2 Delete接口
  * @method Models\DeleteCustomRuleResponse DeleteCustomRule(Models\DeleteCustomRuleRequest $req) 删除自定义规则
  * @method Models\DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(Models\DeleteCustomWhiteRuleRequest $req) 删除精准白名单规则
  * @method Models\DeleteDomainWhiteRulesResponse DeleteDomainWhiteRules(Models\DeleteDomainWhiteRulesRequest $req) 删除域名规则白名单
@@ -46,10 +51,19 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAccessFastAnalysisResponse DescribeAccessFastAnalysis(Models\DescribeAccessFastAnalysisRequest $req) 本接口用于访问日志的快速分析
  * @method Models\DescribeAccessHistogramResponse DescribeAccessHistogram(Models\DescribeAccessHistogramRequest $req) 本接口用于访问日志柱状趋势图
  * @method Models\DescribeAccessIndexResponse DescribeAccessIndex(Models\DescribeAccessIndexRequest $req) 本接口用于获取访问日志索引配置信息
+ * @method Models\DescribeAntiFakeRulesResponse DescribeAntiFakeRules(Models\DescribeAntiFakeRulesRequest $req) 获取防篡改url
+ * @method Models\DescribeAntiFakeUrlResponse DescribeAntiFakeUrl(Models\DescribeAntiFakeUrlRequest $req) 获取防篡改url
+ * @method Models\DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRules(Models\DescribeAntiInfoLeakRulesRequest $req) 老接口已经不再使用。
+
+获取信息防泄漏规则列表
+ * @method Models\DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(Models\DescribeAntiInfoLeakageRulesRequest $req) 取得信息防泄漏规则列表
  * @method Models\DescribeAttackOverviewResponse DescribeAttackOverview(Models\DescribeAttackOverviewRequest $req) 攻击总览
  * @method Models\DescribeAutoDenyIPResponse DescribeAutoDenyIP(Models\DescribeAutoDenyIPRequest $req) 接口已废弃
 
 描述WAF自动封禁IP详情,对齐自动封堵状态
+ * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) Waf 多域名ip黑白名单查询
+ * @method Models\DescribeCCRuleResponse DescribeCCRule(Models\DescribeCCRuleRequest $req) Waf  CC V2 Query接口
+ * @method Models\DescribeCCRuleListResponse DescribeCCRuleList(Models\DescribeCCRuleListRequest $req) 根据多条件查询CC规则
  * @method Models\DescribeCiphersDetailResponse DescribeCiphersDetail(Models\DescribeCiphersDetailRequest $req) 查询加密套件信息
  * @method Models\DescribeCustomRuleListResponse DescribeCustomRuleList(Models\DescribeCustomRuleListRequest $req) 获取防护配置中的访问控制策略列表
  * @method Models\DescribeCustomWhiteRuleResponse DescribeCustomWhiteRule(Models\DescribeCustomWhiteRuleRequest $req) 获取防护配置中的精准白名单策略列表
@@ -70,6 +84,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribePeakValueResponse DescribePeakValue(Models\DescribePeakValueRequest $req) 获取业务和攻击概览峰值
  * @method Models\DescribePolicyStatusResponse DescribePolicyStatus(Models\DescribePolicyStatusRequest $req) 获取防护状态以及生效的实例id
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
+ * @method Models\DescribeSessionResponse DescribeSession(Models\DescribeSessionRequest $req) Waf 会话定义查询接口
  * @method Models\DescribeTlsVersionResponse DescribeTlsVersion(Models\DescribeTlsVersionRequest $req) 查询用户TLS版本
  * @method Models\DescribeUserCdcClbWafRegionsResponse DescribeUserCdcClbWafRegions(Models\DescribeUserCdcClbWafRegionsRequest $req) 在CDC场景下，负载均衡型WAF的添加、编辑域名配置的时候，需要展示CDC负载均衡型WAF（cdc-clb-waf)支持的地域列表，通过DescribeUserCdcClbWafRegions既可以获得当前对客户已经开放的地域列表
  * @method Models\DescribeUserClbWafRegionsResponse DescribeUserClbWafRegions(Models\DescribeUserClbWafRegionsRequest $req) 在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
@@ -86,12 +101,17 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\GetAttackHistogramResponse GetAttackHistogram(Models\GetAttackHistogramRequest $req) 生成攻击日志的产生时间柱状图
  * @method Models\GetAttackTotalCountResponse GetAttackTotalCount(Models\GetAttackTotalCountRequest $req) 按照条件查询展示攻击总次数
  * @method Models\ModifyAccessPeriodResponse ModifyAccessPeriod(Models\ModifyAccessPeriodRequest $req) 本接口用于修改访问日志保存期限及大字段是否存储
+ * @method Models\ModifyAntiFakeUrlResponse ModifyAntiFakeUrl(Models\ModifyAntiFakeUrlRequest $req) 编辑防篡改url
+ * @method Models\ModifyAntiFakeUrlStatusResponse ModifyAntiFakeUrlStatus(Models\ModifyAntiFakeUrlStatusRequest $req) 切换防篡改开关
+ * @method Models\ModifyAntiInfoLeakRuleStatusResponse ModifyAntiInfoLeakRuleStatus(Models\ModifyAntiInfoLeakRuleStatusRequest $req) 信息防泄漏切换规则开关
+ * @method Models\ModifyAntiInfoLeakRulesResponse ModifyAntiInfoLeakRules(Models\ModifyAntiInfoLeakRulesRequest $req) 编辑信息防泄漏规则
  * @method Models\ModifyApiAnalyzeStatusResponse ModifyApiAnalyzeStatus(Models\ModifyApiAnalyzeStatusRequest $req) api分析页面开关
  * @method Models\ModifyAreaBanStatusResponse ModifyAreaBanStatus(Models\ModifyAreaBanStatusRequest $req) 修改防护域名的地域封禁状态
  * @method Models\ModifyBotStatusResponse ModifyBotStatus(Models\ModifyBotStatusRequest $req) Bot_V2 bot总开关更新
  * @method Models\ModifyCustomRuleResponse ModifyCustomRule(Models\ModifyCustomRuleRequest $req) 编辑自定义规则
  * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 开启或禁用访问控制（自定义策略）
  * @method Models\ModifyCustomWhiteRuleResponse ModifyCustomWhiteRule(Models\ModifyCustomWhiteRuleRequest $req) 编辑精准白名单
+ * @method Models\ModifyCustomWhiteRuleStatusResponse ModifyCustomWhiteRuleStatus(Models\ModifyCustomWhiteRuleStatusRequest $req) 开启或禁用精准白名单
  * @method Models\ModifyDomainIpv6StatusResponse ModifyDomainIpv6Status(Models\ModifyDomainIpv6StatusRequest $req) 修改ipv6开关
  * @method Models\ModifyDomainWhiteRuleResponse ModifyDomainWhiteRule(Models\ModifyDomainWhiteRuleRequest $req) 更改某一条规则
  * @method Models\ModifyDomainsCLSStatusResponse ModifyDomainsCLSStatus(Models\ModifyDomainsCLSStatusRequest $req) 修改域名列表的访问日志开关
@@ -111,7 +131,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\SearchAccessLogResponse SearchAccessLog(Models\SearchAccessLogRequest $req) 本接口用于搜索WAF访问日志
  * @method Models\SearchAttackLogResponse SearchAttackLog(Models\SearchAttackLogRequest $req) 新版本CLS接口存在参数变化，query改成了query_string支持lucence语法接口搜索查询。
  * @method Models\SwitchDomainRulesResponse SwitchDomainRules(Models\SwitchDomainRulesRequest $req) 切换域名的规则开关
+ * @method Models\UpsertCCRuleResponse UpsertCCRule(Models\UpsertCCRuleRequest $req) Waf  CC V2 Upsert接口
  * @method Models\UpsertIpAccessControlResponse UpsertIpAccessControl(Models\UpsertIpAccessControlRequest $req) Waf IP黑白名单Upsert接口
+ * @method Models\UpsertSessionResponse UpsertSession(Models\UpsertSessionRequest $req) Waf  会话定义 Upsert接口
  */
 
 class WafClient extends AbstractClient

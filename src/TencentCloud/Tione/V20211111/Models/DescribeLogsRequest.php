@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getService() 获取查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER）
  * @method void setService(string $Service) 设置查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER）
- * @method string getPodName() 获取查询哪个Pod的日志（支持结尾通配符*)
- * @method void setPodName(string $PodName) 设置查询哪个Pod的日志（支持结尾通配符*)
  * @method string getStartTime() 获取日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
  * @method void setStartTime(string $StartTime) 设置日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
  * @method string getEndTime() 获取日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
  * @method void setEndTime(string $EndTime) 设置日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
  * @method integer getLimit() 获取日志查询条数，默认值100，最大值100
  * @method void setLimit(integer $Limit) 设置日志查询条数，默认值100，最大值100
+ * @method string getPodName() 获取查询哪个Pod的日志（支持结尾通配符*)
+ * @method void setPodName(string $PodName) 设置查询哪个Pod的日志（支持结尾通配符*)
  * @method string getOrder() 获取排序方向（可选值为ASC, DESC ），默认为DESC
  * @method void setOrder(string $Order) 设置排序方向（可选值为ASC, DESC ），默认为DESC
  * @method string getOrderField() 获取按哪个字段排序（可选值为Timestamp），默认值为Timestamp
@@ -55,11 +55,6 @@ class DescribeLogsRequest extends AbstractModel
     public $Service;
 
     /**
-     * @var string 查询哪个Pod的日志（支持结尾通配符*)
-     */
-    public $PodName;
-
-    /**
      * @var string 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
      */
     public $StartTime;
@@ -73,6 +68,11 @@ class DescribeLogsRequest extends AbstractModel
      * @var integer 日志查询条数，默认值100，最大值100
      */
     public $Limit;
+
+    /**
+     * @var string 查询哪个Pod的日志（支持结尾通配符*)
+     */
+    public $PodName;
 
     /**
      * @var string 排序方向（可选值为ASC, DESC ），默认为DESC
@@ -100,10 +100,10 @@ class DescribeLogsRequest extends AbstractModel
 
     /**
      * @param string $Service 查询哪个服务的事件（可选值为TRAIN, NOTEBOOK, INFER）
-     * @param string $PodName 查询哪个Pod的日志（支持结尾通配符*)
      * @param string $StartTime 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
      * @param string $EndTime 日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
      * @param integer $Limit 日志查询条数，默认值100，最大值100
+     * @param string $PodName 查询哪个Pod的日志（支持结尾通配符*)
      * @param string $Order 排序方向（可选值为ASC, DESC ），默认为DESC
      * @param string $OrderField 按哪个字段排序（可选值为Timestamp），默认值为Timestamp
      * @param string $Context 日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回
@@ -130,10 +130,6 @@ class DescribeLogsRequest extends AbstractModel
             $this->Service = $param["Service"];
         }
 
-        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
-            $this->PodName = $param["PodName"];
-        }
-
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
@@ -144,6 +140,10 @@ class DescribeLogsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
         }
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {

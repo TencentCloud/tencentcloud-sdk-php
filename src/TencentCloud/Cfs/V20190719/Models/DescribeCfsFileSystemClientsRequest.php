@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemId() 获取文件系统 ID。
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID。
+ * @method integer getOffset() 获取Offset 分页码
+ * @method void setOffset(integer $Offset) 设置Offset 分页码
+ * @method integer getLimit() 获取Limit 页面大小
+ * @method void setLimit(integer $Limit) 设置Limit 页面大小
  */
 class DescribeCfsFileSystemClientsRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeCfsFileSystemClientsRequest extends AbstractModel
     public $FileSystemId;
 
     /**
+     * @var integer Offset 分页码
+     */
+    public $Offset;
+
+    /**
+     * @var integer Limit 页面大小
+     */
+    public $Limit;
+
+    /**
      * @param string $FileSystemId 文件系统 ID。
+     * @param integer $Offset Offset 分页码
+     * @param integer $Limit Limit 页面大小
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeCfsFileSystemClientsRequest extends AbstractModel
         }
         if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
             $this->FileSystemId = $param["FileSystemId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

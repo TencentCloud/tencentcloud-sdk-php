@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 ["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
  * @method array getTagFilters() 获取标签过滤参数
  * @method void setTagFilters(array $TagFilters) 设置标签过滤参数
+ * @method string getServiceCategory() 获取服务分类
+ * @method void setServiceCategory(string $ServiceCategory) 设置服务分类
  */
 class DescribeModelServiceGroupsRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ class DescribeModelServiceGroupsRequest extends AbstractModel
     public $TagFilters;
 
     /**
+     * @var string 服务分类
+     */
+    public $ServiceCategory;
+
+    /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值为100
      * @param string $Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
@@ -76,6 +83,7 @@ class DescribeModelServiceGroupsRequest extends AbstractModel
      * @param array $Filters 分页参数，支持的分页过滤Name包括：
 ["ClusterId", "ServiceId", "ServiceGroupName", "ServiceGroupId","Status","CreatedBy","ModelVersionId"]
      * @param array $TagFilters 标签过滤参数
+     * @param string $ServiceCategory 服务分类
      */
     function __construct()
     {
@@ -122,6 +130,10 @@ class DescribeModelServiceGroupsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
             }
+        }
+
+        if (array_key_exists("ServiceCategory",$param) and $param["ServiceCategory"] !== null) {
+            $this->ServiceCategory = $param["ServiceCategory"];
         }
     }
 }

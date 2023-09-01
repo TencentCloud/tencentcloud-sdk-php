@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddOnSubtitles(array $AddOnSubtitles) 设置要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DrmInfo getDrmInfo() 获取Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDrmInfo(DrmInfo $DrmInfo) 设置Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -79,6 +83,12 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $AddOnSubtitles;
 
     /**
+     * @var DrmInfo Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DrmInfo;
+
+    /**
      * @param integer $Definition 转自适应码流模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param TaskOutputStorage $OutputStorage 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -87,6 +97,8 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
      * @param string $SubStreamObjectName 转自适应码流后，子流文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`。
      * @param string $SegmentObjectName 转自适应码流（仅 HLS）后，分片文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`。
      * @param array $AddOnSubtitles 要插入的字幕文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DrmInfo $DrmInfo Drm信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -139,6 +151,11 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AddOnSubtitles, $obj);
             }
+        }
+
+        if (array_key_exists("DrmInfo",$param) and $param["DrmInfo"] !== null) {
+            $this->DrmInfo = new DrmInfo();
+            $this->DrmInfo->deserialize($param["DrmInfo"]);
         }
     }
 }

@@ -42,7 +42,7 @@ use TencentCloud\Cdwch\V20200915\Models as Models;
  * @method Models\DestroyInstanceResponse DestroyInstance(Models\DestroyInstanceRequest $req) 销毁集群 open api
  * @method Models\ModifyClusterConfigsResponse ModifyClusterConfigs(Models\ModifyClusterConfigsRequest $req) 在集群配置页面修改集群配置文件接口，xml模式
  * @method Models\ModifyInstanceKeyValConfigsResponse ModifyInstanceKeyValConfigs(Models\ModifyInstanceKeyValConfigsRequest $req) KV模式修改配置接口
- * @method Models\ModifyUserNewPrivilegeResponse ModifyUserNewPrivilege(Models\ModifyUserNewPrivilegeRequest $req) 针对ck账号的权限做管控（新版）
+ * @method Models\ModifyUserNewPrivilegeResponse ModifyUserNewPrivilege(Models\ModifyUserNewPrivilegeRequest $req) 针对集群账号的权限做管控（新版）
  * @method Models\OpenBackUpResponse OpenBackUp(Models\OpenBackUpRequest $req) 开启或者关闭策略
  * @method Models\RecoverBackUpJobResponse RecoverBackUpJob(Models\RecoverBackUpJobRequest $req) 备份恢复
  * @method Models\ResizeDiskResponse ResizeDisk(Models\ResizeDiskRequest $req) 扩容磁盘，包含扩容数据节点，zk节点

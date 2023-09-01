@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method string getTrunkingFlag() 获取网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
  * @method void setTrunkingFlag(string $TrunkingFlag) 设置网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+ * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
+ * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
  */
 class CreateNetworkInterfaceRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $TrunkingFlag;
 
     /**
+     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
+     */
+    public $ClientToken;
+
+    /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
@@ -104,6 +111,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      * @param string $TrunkingFlag 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
      */
     function __construct()
     {
@@ -166,6 +174,10 @@ class CreateNetworkInterfaceRequest extends AbstractModel
 
         if (array_key_exists("TrunkingFlag",$param) and $param["TrunkingFlag"] !== null) {
             $this->TrunkingFlag = $param["TrunkingFlag"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

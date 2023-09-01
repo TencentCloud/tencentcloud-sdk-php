@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecondaryPrivateIpAddressCount(integer $SecondaryPrivateIpAddressCount) 设置新申请的内网IP地址个数，与PrivateIpAddresses至少提供一个。内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
  * @method string getQosLevel() 获取IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
  * @method void setQosLevel(string $QosLevel) 设置IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+ * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+ * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  */
 class AssignPrivateIpAddressesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
     public $QosLevel;
 
     /**
+     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     */
+    public $ClientToken;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。与SecondaryPrivateIpAddressCount至少提供一个。
      * @param integer $SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，与PrivateIpAddresses至少提供一个。内网IP地址个数总和不能超过配额数，详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
      * @param string $QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class AssignPrivateIpAddressesRequest extends AbstractModel
 
         if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
             $this->QosLevel = $param["QosLevel"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

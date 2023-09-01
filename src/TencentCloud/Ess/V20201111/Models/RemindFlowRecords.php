@@ -18,36 +18,44 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 催办接口返回详细信息
+ * 催办接口返回的详细信息。
  *
- * @method boolean getCanRemind() 获取是否能够催办，true-是，false-否
- * @method void setCanRemind(boolean $CanRemind) 设置是否能够催办，true-是，false-否
- * @method string getFlowId() 获取合同id
- * @method void setFlowId(string $FlowId) 设置合同id
- * @method string getRemindMessage() 获取催办详情信息
- * @method void setRemindMessage(string $RemindMessage) 设置催办详情信息
+ * @method boolean getCanRemind() 获取合同流程是否可以催办：
+true - 可以，false - 不可以。
+若无法催办，将返回RemindMessage以解释原因。
+ * @method void setCanRemind(boolean $CanRemind) 设置合同流程是否可以催办：
+true - 可以，false - 不可以。
+若无法催办，将返回RemindMessage以解释原因。
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+ * @method string getRemindMessage() 获取在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。
+ * @method void setRemindMessage(string $RemindMessage) 设置在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。
  */
 class RemindFlowRecords extends AbstractModel
 {
     /**
-     * @var boolean 是否能够催办，true-是，false-否
+     * @var boolean 合同流程是否可以催办：
+true - 可以，false - 不可以。
+若无法催办，将返回RemindMessage以解释原因。
      */
     public $CanRemind;
 
     /**
-     * @var string 合同id
+     * @var string 合同流程ID，为32位字符串。
      */
     public $FlowId;
 
     /**
-     * @var string 催办详情信息
+     * @var string 在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。
      */
     public $RemindMessage;
 
     /**
-     * @param boolean $CanRemind 是否能够催办，true-是，false-否
-     * @param string $FlowId 合同id
-     * @param string $RemindMessage 催办详情信息
+     * @param boolean $CanRemind 合同流程是否可以催办：
+true - 可以，false - 不可以。
+若无法催办，将返回RemindMessage以解释原因。
+     * @param string $FlowId 合同流程ID，为32位字符串。
+     * @param string $RemindMessage 在合同流程无法催办的情况下，系统将返回RemindMessage以阐述原因。
      */
     function __construct()
     {

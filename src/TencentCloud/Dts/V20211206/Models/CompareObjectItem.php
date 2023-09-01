@@ -40,13 +40,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTables(array $Tables) 设置用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getViewMode() 获取视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+ * @method string getViewMode() 获取视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setViewMode(string $ViewMode) 设置视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+ * @method void setViewMode(string $ViewMode) 设置视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getViews() 获取用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+ * @method array getViews() 获取用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setViews(array $Views) 设置用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+ * @method void setViews(array $Views) 设置用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareObjectItem extends AbstractModel
@@ -82,13 +82,13 @@ class CompareObjectItem extends AbstractModel
     public $Tables;
 
     /**
-     * @var string 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * @var string 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewMode;
 
     /**
-     * @var array 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+     * @var array 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Views;
@@ -104,9 +104,9 @@ class CompareObjectItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tables 用于一致性校验的表配置，当 TableMode 为 partial 时，需要填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象
+     * @param string $ViewMode 视图选择模式: all 为当前对象下的所有视图对象,partial 为部分视图对象(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写
+     * @param array $Views 用于一致性校验的视图配置，当 ViewMode 为 partial 时， 需要填写(一致性校验不校验视图，当前参数未启作用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

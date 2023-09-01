@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置CVM实例ID。形如：ins-r8hr2upy。
  * @method integer getAttachType() 获取网卡的挂载类型：0 标准型，1扩展型，默认值0。
  * @method void setAttachType(integer $AttachType) 设置网卡的挂载类型：0 标准型，1扩展型，默认值0。
+ * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
+ * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
  */
 class AttachNetworkInterfaceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AttachNetworkInterfaceRequest extends AbstractModel
     public $AttachType;
 
     /**
+     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
+     */
+    public $ClientToken;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param string $InstanceId CVM实例ID。形如：ins-r8hr2upy。
      * @param integer $AttachType 网卡的挂载类型：0 标准型，1扩展型，默认值0。
+     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。	
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AttachNetworkInterfaceRequest extends AbstractModel
 
         if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
             $this->AttachType = $param["AttachType"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

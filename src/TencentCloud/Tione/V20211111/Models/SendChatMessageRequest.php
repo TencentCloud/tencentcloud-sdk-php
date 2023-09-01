@@ -24,14 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置会话id，标识一组对话的唯一id，id变更则重置会话
  * @method string getQuestion() 获取问题描述
  * @method void setQuestion(string $Question) 设置问题描述
- * @method string getModelVersion() 获取会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1
- * @method void setModelVersion(string $ModelVersion) 设置会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1
- * @method string getMode() 获取使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
- * @method void setMode(string $Mode) 设置使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
- * @method string getSearchSource() 获取搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
- * @method void setSearchSource(string $SearchSource) 设置搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
+ * @method string getModelVersion() 获取会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。
+ * @method void setModelVersion(string $ModelVersion) 设置会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。
+ * @method string getMode() 获取使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
+ * @method void setMode(string $Mode) 设置使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
+ * @method string getSearchSource() 获取搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。
+ * @method void setSearchSource(string $SearchSource) 设置搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。
  */
 class SendChatMessageRequest extends AbstractModel
 {
@@ -46,28 +58,40 @@ class SendChatMessageRequest extends AbstractModel
     public $Question;
 
     /**
-     * @var string 会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1
+     * @var string 会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。
      */
     public $ModelVersion;
 
     /**
-     * @var string 使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
+     * @var string 使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
      */
     public $Mode;
 
     /**
-     * @var string 搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
+     * @var string 搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。
      */
     public $SearchSource;
 
     /**
      * @param string $SessionId 会话id，标识一组对话的唯一id，id变更则重置会话
      * @param string $Question 问题描述
-     * @param string $ModelVersion 会话模型版本，不同的会话模型调用到不同的模型后台。
-注: 多行业多场景大模型填写 tj_llm_clm-v1
-     * @param string $Mode 使用模式(仅部分模型支持)。General 通用问答；WithSearchPlugin 搜索增强问答
-     * @param string $SearchSource 搜索来源。仅当Mode未WithSearchPlugin时生效。Preset 预置文稿库；Custom 自定义。
+     * @param string $ModelVersion 会话模型版本。
+多行业多场景大模型：填写 tj_llm_clm-v1。
+多行业客服大模型：填写demo_big_model_version_id。
+默认为demo_big_model_version_id，即多行业客服大模型。
+     * @param string $Mode 使用模式(仅多场景客服大模型支持)。
+通用问答：填写General。
+搜索增强问答：填写WithSearchPlugin。
+默认为General，即通用问答。
+     * @param string $SearchSource 搜索来源。仅当Mode为WithSearchPlugin时生效。
+预置文稿库：填写Preset。自定义：填写Custom。
      */
     function __construct()
     {

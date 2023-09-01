@@ -76,6 +76,8 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(Models\ModifyDiagDBInstanceConfRequest $req) 修改实例巡检开关。
  * @method Models\ModifySqlFiltersResponse ModifySqlFilters(Models\ModifySqlFiltersRequest $req) 更改实例限流任务状态，目前仅用于终止限流。
  * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) 开启数据库审计服务
+ * @method Models\UpdateAgentSwitchResponse UpdateAgentSwitch(Models\UpdateAgentSwitchRequest $req) 更新agent状态（停止或重连Agent）
+ * @method Models\UpdateMonitorSwitchResponse UpdateMonitorSwitch(Models\UpdateMonitorSwitchRequest $req) 更新Agent实例状态（停止或重连实例）
  * @method Models\VerifyUserAccountResponse VerifyUserAccount(Models\VerifyUserAccountRequest $req) 验证用户数据库账号权限，获取会话token。
  */
 

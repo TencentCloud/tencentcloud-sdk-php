@@ -20,15 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlow返回参数结构体
  *
- * @method string getFlowId() 获取签署流程编号
- * @method void setFlowId(string $FlowId) 设置签署流程编号
+ * @method string getFlowId() 获取签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
+ * @method void setFlowId(string $FlowId) 设置签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateFlowResponse extends AbstractModel
 {
     /**
-     * @var string 签署流程编号
+     * @var string 签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
      */
     public $FlowId;
 
@@ -38,7 +50,11 @@ class CreateFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 签署流程编号
+     * @param string $FlowId 签署流程编号，
+
+返回的流程编号，需要在CreateDocument，StartFlow中使用，
+
+注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

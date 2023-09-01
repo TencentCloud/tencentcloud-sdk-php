@@ -23,7 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tione\V20211111\Models as Models;
 
 /**
- * @method Models\ChatCompletionResponse ChatCompletion(Models\ChatCompletionRequest $req) 与大模型聊天
+ * @method Models\ChatCompletionResponse ChatCompletion(Models\ChatCompletionRequest $req) 该接口支持与两种类型大模型的聊天。
+1. 与多行业多场景大模型的在线体验聊天
+2. 与自行部署的开源大模型的聊天
  * @method Models\CreateBatchModelAccTasksResponse CreateBatchModelAccTasks(Models\CreateBatchModelAccTasksRequest $req) 批量创建模型加速任务
  * @method Models\CreateBatchTaskResponse CreateBatchTask(Models\CreateBatchTaskRequest $req) 创建跑批任务
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集
@@ -55,7 +57,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeDatasetsResponse DescribeDatasets(Models\DescribeDatasetsRequest $req) 查询数据集列表
  * @method Models\DescribeInferTemplatesResponse DescribeInferTemplates(Models\DescribeInferTemplatesRequest $req) 查询推理镜像模板
  * @method Models\DescribeLatestTrainingMetricsResponse DescribeLatestTrainingMetrics(Models\DescribeLatestTrainingMetricsRequest $req) 查询最近上报的训练自定义指标
- * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 获取训练、推理、Notebook服务的日志
+ * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 获取训练、推理、Notebook服务的日志 API
  * @method Models\DescribeModelAccEngineVersionsResponse DescribeModelAccEngineVersions(Models\DescribeModelAccEngineVersionsRequest $req) 查询模型加速引擎版本列表
  * @method Models\DescribeModelAccelerateTaskResponse DescribeModelAccelerateTask(Models\DescribeModelAccelerateTaskRequest $req) 查询模型优化任务详情
  * @method Models\DescribeModelAccelerateTasksResponse DescribeModelAccelerateTasks(Models\DescribeModelAccelerateTasksRequest $req) 查询模型加速任务列表
@@ -85,7 +87,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(Models\ModifyServiceGroupWeightsRequest $req) 更新推理服务组流量分配
  * @method Models\PushTrainingMetricsResponse PushTrainingMetrics(Models\PushTrainingMetricsRequest $req) 上报训练自定义指标
  * @method Models\RestartModelAccelerateTaskResponse RestartModelAccelerateTask(Models\RestartModelAccelerateTaskRequest $req) 重启模型加速任务
- * @method Models\SendChatMessageResponse SendChatMessage(Models\SendChatMessageRequest $req) LLM模型的对话请求发送接口
+ * @method Models\SendChatMessageResponse SendChatMessage(Models\SendChatMessageRequest $req) 这是一个供您体验大模型聊天的接口。
  * @method Models\StartNotebookResponse StartNotebook(Models\StartNotebookRequest $req) 启动Notebook
  * @method Models\StartTrainingTaskResponse StartTrainingTask(Models\StartTrainingTaskRequest $req) 启动模型训练任务
  * @method Models\StopBatchTaskResponse StopBatchTask(Models\StopBatchTaskRequest $req) 停止跑批任务

@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultNginxGatewayCallInfo(DefaultNginxGatewayCallInfo $DefaultNginxGatewayCallInfo) 设置默认nginx网关的调用信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TJCallInfo getTJCallInfo() 获取太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTJCallInfo(TJCallInfo $TJCallInfo) 设置太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method IntranetCallInfo getIntranetCallInfo() 获取内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntranetCallInfo(IntranetCallInfo $IntranetCallInfo) 设置内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +64,18 @@ class DescribeModelServiceCallInfoResponse extends AbstractModel
     public $DefaultNginxGatewayCallInfo;
 
     /**
+     * @var TJCallInfo 太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TJCallInfo;
+
+    /**
+     * @var IntranetCallInfo 内网调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntranetCallInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +86,10 @@ class DescribeModelServiceCallInfoResponse extends AbstractModel
      * @param InferGatewayCallInfo $InferGatewayCallInfo 升级网关调用信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultNginxGatewayCallInfo $DefaultNginxGatewayCallInfo 默认nginx网关的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TJCallInfo $TJCallInfo 太极服务的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntranetCallInfo $IntranetCallInfo 内网调用信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -95,6 +119,16 @@ class DescribeModelServiceCallInfoResponse extends AbstractModel
         if (array_key_exists("DefaultNginxGatewayCallInfo",$param) and $param["DefaultNginxGatewayCallInfo"] !== null) {
             $this->DefaultNginxGatewayCallInfo = new DefaultNginxGatewayCallInfo();
             $this->DefaultNginxGatewayCallInfo->deserialize($param["DefaultNginxGatewayCallInfo"]);
+        }
+
+        if (array_key_exists("TJCallInfo",$param) and $param["TJCallInfo"] !== null) {
+            $this->TJCallInfo = new TJCallInfo();
+            $this->TJCallInfo->deserialize($param["TJCallInfo"]);
+        }
+
+        if (array_key_exists("IntranetCallInfo",$param) and $param["IntranetCallInfo"] !== null) {
+            $this->IntranetCallInfo = new IntranetCallInfo();
+            $this->IntranetCallInfo->deserialize($param["IntranetCallInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

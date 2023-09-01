@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowReminds请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method array getFlowIds() 获取需要执行催办的签署流程id数组，最多100个
- * @method void setFlowIds(array $FlowIds) 设置需要执行催办的签署流程id数组，最多100个
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method array getFlowIds() 获取需执行催办的签署流程ID数组，最多包含100个。
+ * @method void setFlowIds(array $FlowIds) 设置需执行催办的签署流程ID数组，最多包含100个。
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class CreateFlowRemindsRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var array 需要执行催办的签署流程id数组，最多100个
+     * @var array 需执行催办的签署流程ID数组，最多包含100个。
      */
     public $FlowIds;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param array $FlowIds 需要执行催办的签署流程id数组，最多100个
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param array $FlowIds 需执行催办的签署流程ID数组，最多包含100个。
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {

@@ -66,8 +66,8 @@ LOCAL_GATEWAY：本地网关。
  * @method void setRouteTableIds(array $RouteTableIds) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method string getOffset() 获取偏移量。
  * @method void setOffset(string $Offset) 设置偏移量。
- * @method string getLimit() 获取请求对象个数。
- * @method void setLimit(string $Limit) 设置请求对象个数。
+ * @method string getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
  */
 class DescribeRouteTablesRequest extends AbstractModel
 {
@@ -107,7 +107,7 @@ LOCAL_GATEWAY：本地网关。
     public $Offset;
 
     /**
-     * @var string 请求对象个数。
+     * @var string 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
@@ -135,7 +135,7 @@ LOCAL_GATEWAY：本地网关。
 </li>
      * @param array $RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $Offset 偏移量。
-     * @param string $Limit 请求对象个数。
+     * @param string $Limit 返回数量，默认为20，最大值为100。
      */
     function __construct()
     {

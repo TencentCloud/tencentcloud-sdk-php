@@ -28,8 +28,6 @@ EXIST：导入现有版本
 MODEL：导入新模型
 VERSION：导入新版本
 EXIST：导入现有版本
- * @method CosPathInfo getTrainingModelCosPath() 获取模型来源cos目录，以/结尾
- * @method void setTrainingModelCosPath(CosPathInfo $TrainingModelCosPath) 设置模型来源cos目录，以/结尾
  * @method string getReasoningEnvironmentSource() 获取推理环境来源（SYSTEM/CUSTOM）
  * @method void setReasoningEnvironmentSource(string $ReasoningEnvironmentSource) 设置推理环境来源（SYSTEM/CUSTOM）
  * @method string getTrainingModelName() 获取模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
@@ -38,6 +36,8 @@ EXIST：导入现有版本
  * @method void setTags(array $Tags) 设置标签配置
  * @method string getTrainingJobName() 获取训练任务名称
  * @method void setTrainingJobName(string $TrainingJobName) 设置训练任务名称
+ * @method CosPathInfo getTrainingModelCosPath() 获取模型来源cos目录，以/结尾
+ * @method void setTrainingModelCosPath(CosPathInfo $TrainingModelCosPath) 设置模型来源cos目录，以/结尾
  * @method string getAlgorithmFramework() 获取算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
  * @method void setAlgorithmFramework(string $AlgorithmFramework) 设置算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
  * @method string getReasoningEnvironment() 获取推理环境
@@ -94,11 +94,6 @@ EXIST：导入现有版本
     public $ImportMethod;
 
     /**
-     * @var CosPathInfo 模型来源cos目录，以/结尾
-     */
-    public $TrainingModelCosPath;
-
-    /**
      * @var string 推理环境来源（SYSTEM/CUSTOM）
      */
     public $ReasoningEnvironmentSource;
@@ -117,6 +112,11 @@ EXIST：导入现有版本
      * @var string 训练任务名称
      */
     public $TrainingJobName;
+
+    /**
+     * @var CosPathInfo 模型来源cos目录，以/结尾
+     */
+    public $TrainingModelCosPath;
 
     /**
      * @var string 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
@@ -225,11 +225,11 @@ EXIST：导入现有版本
 MODEL：导入新模型
 VERSION：导入新版本
 EXIST：导入现有版本
-     * @param CosPathInfo $TrainingModelCosPath 模型来源cos目录，以/结尾
      * @param string $ReasoningEnvironmentSource 推理环境来源（SYSTEM/CUSTOM）
      * @param string $TrainingModelName 模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param array $Tags 标签配置
      * @param string $TrainingJobName 训练任务名称
+     * @param CosPathInfo $TrainingModelCosPath 模型来源cos目录，以/结尾
      * @param string $AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
      * @param string $ReasoningEnvironment 推理环境
      * @param string $TrainingModelIndex 训练指标，最多支持1000字符
@@ -270,11 +270,6 @@ EXIST：导入现有版本
             $this->ImportMethod = $param["ImportMethod"];
         }
 
-        if (array_key_exists("TrainingModelCosPath",$param) and $param["TrainingModelCosPath"] !== null) {
-            $this->TrainingModelCosPath = new CosPathInfo();
-            $this->TrainingModelCosPath->deserialize($param["TrainingModelCosPath"]);
-        }
-
         if (array_key_exists("ReasoningEnvironmentSource",$param) and $param["ReasoningEnvironmentSource"] !== null) {
             $this->ReasoningEnvironmentSource = $param["ReasoningEnvironmentSource"];
         }
@@ -294,6 +289,11 @@ EXIST：导入现有版本
 
         if (array_key_exists("TrainingJobName",$param) and $param["TrainingJobName"] !== null) {
             $this->TrainingJobName = $param["TrainingJobName"];
+        }
+
+        if (array_key_exists("TrainingModelCosPath",$param) and $param["TrainingModelCosPath"] !== null) {
+            $this->TrainingModelCosPath = new CosPathInfo();
+            $this->TrainingModelCosPath->deserialize($param["TrainingModelCosPath"]);
         }
 
         if (array_key_exists("AlgorithmFramework",$param) and $param["AlgorithmFramework"] !== null) {

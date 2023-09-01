@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoScalerId(string $AutoScalerId) 设置指标配置ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AutoScalerBehavior getBehavior() 获取指标伸缩行为配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBehavior(AutoScalerBehavior $Behavior) 设置指标伸缩行为配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 {
@@ -72,26 +76,36 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
     /**
      * @var string 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ModifyTime;
 
     /**
      * @var string 弹性策略ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $StrategyId;
 
     /**
      * @var string 指标配置ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $AutoScalerId;
+
+    /**
+     * @var AutoScalerBehavior 指标伸缩行为配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Behavior;
 
     /**
      * @param integer $MaxReplicas 最大副本数
@@ -107,6 +121,8 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
      * @param string $StrategyId 弹性策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoScalerId 指标配置ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoScalerBehavior $Behavior 指标伸缩行为配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +169,11 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 
         if (array_key_exists("AutoScalerId",$param) and $param["AutoScalerId"] !== null) {
             $this->AutoScalerId = $param["AutoScalerId"];
+        }
+
+        if (array_key_exists("Behavior",$param) and $param["Behavior"] !== null) {
+            $this->Behavior = new AutoScalerBehavior();
+            $this->Behavior->deserialize($param["Behavior"]);
         }
     }
 }

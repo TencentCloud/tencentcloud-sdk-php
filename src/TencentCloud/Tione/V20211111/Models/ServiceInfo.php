@@ -152,6 +152,10 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommand(string $Command) 设置服务的启动命令
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ServiceEIP getServiceEIP() 获取开启TIONE内网访问外部设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceEIP(ServiceEIP $ServiceEIP) 设置开启TIONE内网访问外部设置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceInfo extends AbstractModel
 {
@@ -338,6 +342,12 @@ HYBRID_PAID:
     public $Command;
 
     /**
+     * @var ServiceEIP 开启TIONE内网访问外部设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceEIP;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -403,6 +413,8 @@ HYBRID_PAID:
      * @param InferCodeInfo $InferCodeInfo 推理代码信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Command 服务的启动命令
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceEIP $ServiceEIP 开启TIONE内网访问外部设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -558,6 +570,11 @@ HYBRID_PAID:
 
         if (array_key_exists("Command",$param) and $param["Command"] !== null) {
             $this->Command = $param["Command"];
+        }
+
+        if (array_key_exists("ServiceEIP",$param) and $param["ServiceEIP"] !== null) {
+            $this->ServiceEIP = new ServiceEIP();
+            $this->ServiceEIP->deserialize($param["ServiceEIP"]);
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceGroupId() 获取服务组id
  * @method void setServiceGroupId(string $ServiceGroupId) 设置服务组id
+ * @method string getServiceCategory() 获取服务分类
+ * @method void setServiceCategory(string $ServiceCategory) 设置服务分类
  */
 class DescribeModelServiceCallInfoRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeModelServiceCallInfoRequest extends AbstractModel
     public $ServiceGroupId;
 
     /**
+     * @var string 服务分类
+     */
+    public $ServiceCategory;
+
+    /**
      * @param string $ServiceGroupId 服务组id
+     * @param string $ServiceCategory 服务分类
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeModelServiceCallInfoRequest extends AbstractModel
         }
         if (array_key_exists("ServiceGroupId",$param) and $param["ServiceGroupId"] !== null) {
             $this->ServiceGroupId = $param["ServiceGroupId"];
+        }
+
+        if (array_key_exists("ServiceCategory",$param) and $param["ServiceCategory"] !== null) {
+            $this->ServiceCategory = $param["ServiceCategory"];
         }
     }
 }

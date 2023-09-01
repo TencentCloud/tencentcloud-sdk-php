@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReplaceSecurityGroupPolicy请求参数结构体
  *
- * @method string getSecurityGroupId() 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+ * @method string getSecurityGroupId() 获取安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() 获取安全组规则集合对象。
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) 设置安全组规则集合对象。
  * @method SecurityGroupPolicySet getOriginalSecurityGroupPolicySet() 获取旧的安全组规则集合对象，可选，日志记录用。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ReplaceSecurityGroupPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @var string 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      */
     public $SecurityGroupId;
 
@@ -45,7 +45,7 @@ class ReplaceSecurityGroupPolicyRequest extends AbstractModel
     public $OriginalSecurityGroupPolicySet;
 
     /**
-     * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet 安全组规则集合对象。
      * @param SecurityGroupPolicySet $OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
      */

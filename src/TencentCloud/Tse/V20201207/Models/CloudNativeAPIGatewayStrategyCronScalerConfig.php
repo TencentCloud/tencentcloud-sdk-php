@@ -58,18 +58,21 @@ class CloudNativeAPIGatewayStrategyCronScalerConfig extends AbstractModel
     /**
      * @var string 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ModifyTime;
 
     /**
      * @var string 弹性策略ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $StrategyId;
 

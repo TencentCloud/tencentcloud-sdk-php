@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getColumnMode() 获取column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColumnMode(string $ColumnMode) 设置column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getColumns() 获取当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColumns(array $Columns) 设置当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareTableItem extends AbstractModel
 {
@@ -34,7 +42,23 @@ class CompareTableItem extends AbstractModel
     public $TableName;
 
     /**
+     * @var string column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColumnMode;
+
+    /**
+     * @var array 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Columns;
+
+    /**
      * @param string $TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ColumnMode column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Columns 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +76,19 @@ class CompareTableItem extends AbstractModel
         }
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("ColumnMode",$param) and $param["ColumnMode"] !== null) {
+            $this->ColumnMode = $param["ColumnMode"];
+        }
+
+        if (array_key_exists("Columns",$param) and $param["Columns"] !== null) {
+            $this->Columns = [];
+            foreach ($param["Columns"] as $key => $value){
+                $obj = new CompareColumnItem();
+                $obj->deserialize($value);
+                array_push($this->Columns, $obj);
+            }
         }
     }
 }

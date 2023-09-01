@@ -28,20 +28,22 @@ use TencentCloud\Common\AbstractModel;
 注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
  * @method void setApprovers(array $Approvers) 设置签署流程参与者信息，最大限制50方
 注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
+ * @method string getFlowDescription() 获取签署流程描述,最大长度1000个字符
+ * @method void setFlowDescription(string $FlowDescription) 设置签署流程描述,最大长度1000个字符
  * @method string getFlowType() 获取签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
  * @method integer getDeadLine() 获取签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
  * @method void setDeadLine(integer $DeadLine) 设置签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
  * @method integer getRemindedOn() 获取合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
  * @method void setRemindedOn(integer $RemindedOn) 设置合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
  * @method string getUserData() 获取用户自定义字段，回调的时候会进行透传，长度需要小于20480
  * @method void setUserData(string $UserData) 设置用户自定义字段，回调的时候会进行透传，长度需要小于20480
- * @method string getFlowDescription() 获取签署流程描述,最大长度1000个字符
- * @method void setFlowDescription(string $FlowDescription) 设置签署流程描述,最大长度1000个字符
  * @method boolean getUnordered() 获取发送类型：
 true：无序签
 false：有序签
@@ -92,6 +94,11 @@ class CreateFlowRequest extends AbstractModel
     public $Approvers;
 
     /**
+     * @var string 签署流程描述,最大长度1000个字符
+     */
+    public $FlowDescription;
+
+    /**
      * @var string 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      */
     public $FlowType;
@@ -103,6 +110,7 @@ class CreateFlowRequest extends AbstractModel
 
     /**
      * @var integer 签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      */
     public $DeadLine;
@@ -116,11 +124,6 @@ class CreateFlowRequest extends AbstractModel
      * @var string 用户自定义字段，回调的时候会进行透传，长度需要小于20480
      */
     public $UserData;
-
-    /**
-     * @var string 签署流程描述,最大长度1000个字符
-     */
-    public $FlowDescription;
 
     /**
      * @var boolean 发送类型：
@@ -176,13 +179,14 @@ false：有序签
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署流程参与者信息，最大限制50方
 注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
+     * @param string $FlowDescription 签署流程描述,最大长度1000个字符
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      * @param integer $DeadLine 签署流程的签署截止时间。
+
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      * @param integer $RemindedOn 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
      * @param string $UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
-     * @param string $FlowDescription 签署流程描述,最大长度1000个字符
      * @param boolean $Unordered 发送类型：
 true：无序签
 false：有序签
@@ -230,6 +234,10 @@ false：有序签
             }
         }
 
+        if (array_key_exists("FlowDescription",$param) and $param["FlowDescription"] !== null) {
+            $this->FlowDescription = $param["FlowDescription"];
+        }
+
         if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
             $this->FlowType = $param["FlowType"];
         }
@@ -248,10 +256,6 @@ false：有序签
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
-        }
-
-        if (array_key_exists("FlowDescription",$param) and $param["FlowDescription"] !== null) {
-            $this->FlowDescription = $param["FlowDescription"];
         }
 
         if (array_key_exists("Unordered",$param) and $param["Unordered"] !== null) {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
  * @method string getGroupDescription() 获取安全组备注，最多100个字符。
  * @method void setGroupDescription(string $GroupDescription) 设置安全组备注，最多100个字符。
- * @method string getProjectId() 获取项目ID，默认0。可在qcloud控制台项目管理页面查询到。
- * @method void setProjectId(string $ProjectId) 设置项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+ * @method string getProjectId() 获取项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
+ * @method void setProjectId(string $ProjectId) 设置项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
@@ -42,7 +42,7 @@ class CreateSecurityGroupRequest extends AbstractModel
     public $GroupDescription;
 
     /**
-     * @var string 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+     * @var string 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
      */
     public $ProjectId;
 
@@ -54,7 +54,7 @@ class CreateSecurityGroupRequest extends AbstractModel
     /**
      * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。
      * @param string $GroupDescription 安全组备注，最多100个字符。
-     * @param string $ProjectId 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+     * @param string $ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()

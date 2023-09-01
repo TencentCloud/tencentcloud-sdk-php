@@ -40,8 +40,10 @@ CMCC：中国移动
  * @method void setSubnetId(string $SubnetId) 设置指定子网编号，SubnetId与VpcId必须同时指定或不指定
  * @method array getPrivateIpAddresses() 获取指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
- * @method integer getIpv6AddressCount() 获取为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+ * @method integer getIpv6AddressCount() 获取为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
+ * @method array getIpv6SubnetIds() 获取指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+ * @method void setIpv6SubnetIds(array $Ipv6SubnetIds) 设置指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
  */
 class ZoneInstanceCountISP extends AbstractModel
 {
@@ -80,9 +82,14 @@ CMCC：中国移动
     public $PrivateIpAddresses;
 
     /**
-     * @var integer 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+     * @var integer 为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
      */
     public $Ipv6AddressCount;
+
+    /**
+     * @var array 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+     */
+    public $Ipv6SubnetIds;
 
     /**
      * @param string $Zone 创建实例的可用区。
@@ -95,7 +102,8 @@ CMCC：中国移动
      * @param string $VpcId 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
      * @param string $SubnetId 指定子网编号，SubnetId与VpcId必须同时指定或不指定
      * @param array $PrivateIpAddresses 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
-     * @param integer $Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，目前数量不能大于1。
+     * @param integer $Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
+     * @param array $Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ CMCC：中国移动
 
         if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
             $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
+        }
+
+        if (array_key_exists("Ipv6SubnetIds",$param) and $param["Ipv6SubnetIds"] !== null) {
+            $this->Ipv6SubnetIds = $param["Ipv6SubnetIds"];
         }
     }
 }

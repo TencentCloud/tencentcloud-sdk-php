@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroupAssociationStatistics请求参数结构体
  *
- * @method array getSecurityGroupIds() 获取安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+ * @method array getSecurityGroupIds() 获取安全实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
  */
 class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel
 {
     /**
-     * @var array 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @var array 安全实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      */
     public $SecurityGroupIds;
 
     /**
-     * @param array $SecurityGroupIds 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * @param array $SecurityGroupIds 安全实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      */
     function __construct()
     {

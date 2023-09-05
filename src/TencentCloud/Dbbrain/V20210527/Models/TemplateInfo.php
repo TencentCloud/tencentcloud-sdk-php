@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExecuteTask请求参数结构体
+ * 通知模板
  *
- * @method string getTaskId() 获取任务 ID
- * @method void setTaskId(string $TaskId) 设置任务 ID
+ * @method string getTemplateId() 获取模板id
+ * @method void setTemplateId(string $TemplateId) 设置模板id
+ * @method string getTemplateName() 获取模板名
+ * @method void setTemplateName(string $TemplateName) 设置模板名
  */
-class ExecuteTaskRequest extends AbstractModel
+class TemplateInfo extends AbstractModel
 {
     /**
-     * @var string 任务 ID
+     * @var string 模板id
      */
-    public $TaskId;
+    public $TemplateId;
 
     /**
-     * @param string $TaskId 任务 ID
+     * @var string 模板名
+     */
+    public $TemplateName;
+
+    /**
+     * @param string $TemplateId 模板id
+     * @param string $TemplateName 模板名
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class ExecuteTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
+            $this->TemplateName = $param["TemplateName"];
         }
     }
 }

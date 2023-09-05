@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExecuteTask请求参数结构体
+ * DescribeDeliverLogDownList请求参数结构体
  *
- * @method string getTaskId() 获取任务 ID
- * @method void setTaskId(string $TaskId) 设置任务 ID
+
  */
-class ExecuteTaskRequest extends AbstractModel
+class DescribeDeliverLogDownListRequest extends AbstractModel
 {
-    /**
-     * @var string 任务 ID
-     */
-    public $TaskId;
+
 
     /**
-     * @param string $TaskId 任务 ID
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class ExecuteTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
-        }
+
     }
 }

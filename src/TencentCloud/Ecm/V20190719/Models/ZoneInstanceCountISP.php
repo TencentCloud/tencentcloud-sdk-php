@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。
  * @method void setISP(string $ISP) 设置运营商如下：
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。
  * @method string getVpcId() 获取指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
  * @method void setVpcId(string $VpcId) 设置指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
  * @method string getSubnetId() 获取指定子网编号，SubnetId与VpcId必须同时指定或不指定
@@ -42,8 +42,10 @@ CMCC：中国移动
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
  * @method integer getIpv6AddressCount() 获取为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
- * @method array getIpv6SubnetIds() 获取指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
- * @method void setIpv6SubnetIds(array $Ipv6SubnetIds) 设置指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+ * @method array getIpv6SubnetIds() 获取指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段
+ * @method void setIpv6SubnetIds(array $Ipv6SubnetIds) 设置指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段
  */
 class ZoneInstanceCountISP extends AbstractModel
 {
@@ -62,7 +64,7 @@ class ZoneInstanceCountISP extends AbstractModel
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。
      */
     public $ISP;
 
@@ -87,7 +89,8 @@ CMCC：中国移动
     public $Ipv6AddressCount;
 
     /**
-     * @var array 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+     * @var array 指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段
      */
     public $Ipv6SubnetIds;
 
@@ -98,12 +101,13 @@ CMCC：中国移动
 CTCC：中国电信
 CUCC：中国联通
 CMCC：中国移动
-多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+CMCC;CUCC;CTCC：三网；三网需要开通白名单，请直接联系腾讯云客服。
      * @param string $VpcId 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
      * @param string $SubnetId 指定子网编号，SubnetId与VpcId必须同时指定或不指定
      * @param array $PrivateIpAddresses 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。
      * @param integer $Ipv6AddressCount 为弹性网卡指定随机生成的IPv6地址数量，单网情况下是1，单网需要ISP 只能为单网运营商，三网情况3
-     * @param array $Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，单独ipv4和单网ipv6子网依然使用SubnetId字段
+     * @param array $Ipv6SubnetIds 指定创建三网ipv6地址，使用的subnet数组，只创建ipv4不创建ipv6和单网ipv6子网依然使用SubnetId字段；
+该数组必须且仅支持传入三个不同的子网，并且这三个子网各自分配了电信、联通、移动三个运营商的其中一个IPV6 CIDR网段
      */
     function __construct()
     {

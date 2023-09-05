@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCityName(string $CityName) 设置城市名
  * @method string getCountryName() 获取国家名
  * @method void setCountryName(string $CountryName) 设置国家名
+ * @method string getRegionIso() 获取国家二位iso代码或者省份缩写代码
+ * @method void setRegionIso(string $RegionIso) 设置国家二位iso代码或者省份缩写代码
  */
 class RuleInfoData extends AbstractModel
 {
@@ -150,6 +152,11 @@ class RuleInfoData extends AbstractModel
     public $CountryName;
 
     /**
+     * @var string 国家二位iso代码或者省份缩写代码
+     */
+    public $RegionIso;
+
+    /**
      * @param integer $OrderIndex 执行顺序
      * @param string $SourceIp 访问源
      * @param string $TargetIp 访问目的
@@ -168,6 +175,7 @@ class RuleInfoData extends AbstractModel
      * @param integer $IsRegion 是否为地域
      * @param string $CityName 城市名
      * @param string $CountryName 国家名
+     * @param string $RegionIso 国家二位iso代码或者省份缩写代码
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class RuleInfoData extends AbstractModel
 
         if (array_key_exists("CountryName",$param) and $param["CountryName"] !== null) {
             $this->CountryName = $param["CountryName"];
+        }
+
+        if (array_key_exists("RegionIso",$param) and $param["RegionIso"] !== null) {
+            $this->RegionIso = $param["RegionIso"];
         }
     }
 }

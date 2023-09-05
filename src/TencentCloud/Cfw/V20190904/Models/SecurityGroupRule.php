@@ -22,33 +22,33 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSourceContent() 获取访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
  * @method void setSourceContent(string $SourceContent) 设置访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
  * @method string getSourceType() 获取访问源类型，类型可以为以下6种：net|template|instance|resourcegroup|tag|region
  * @method void setSourceType(string $SourceType) 设置访问源类型，类型可以为以下6种：net|template|instance|resourcegroup|tag|region
  * @method string getDestContent() 获取访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
  * @method void setDestContent(string $DestContent) 设置访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
  * @method string getDestType() 获取访问目的类型，类型可以为以下6种：net|template|instance|resourcegroup|tag|region
  * @method void setDestType(string $DestType) 设置访问目的类型，类型可以为以下6种：net|template|instance|resourcegroup|tag|region
@@ -60,8 +60,8 @@ accept：放行
 drop：拒绝
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
- * @method string getOrderIndex() 获取规则顺序，-1表示最低，1表示最高
- * @method void setOrderIndex(string $OrderIndex) 设置规则顺序，-1表示最低，1表示最高
+ * @method string getOrderIndex() 获取规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
+ * @method void setOrderIndex(string $OrderIndex) 设置规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
  * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ANY
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ANY
@@ -78,20 +78,22 @@ drop：拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getId() 获取规则对应的唯一id
- * @method void setId(string $Id) 设置规则对应的唯一id
- * @method string getEnable() 获取规则状态，true表示启用，false表示禁用
- * @method void setEnable(string $Enable) 设置规则状态，true表示启用，false表示禁用
+ * @method string getId() 获取（入参时无需填写，自动生成）规则对应的唯一id
+ * @method void setId(string $Id) 设置（入参时无需填写，自动生成）规则对应的唯一id
+ * @method string getEnable() 获取（入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用
+ * @method void setEnable(string $Enable) 设置（入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用
  */
 class SecurityGroupRule extends AbstractModel
 {
     /**
      * @var string 访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      */
     public $SourceContent;
@@ -104,10 +106,10 @@ region：地域(ap-gaungzhou)
     /**
      * @var string 访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      */
     public $DestContent;
@@ -130,7 +132,7 @@ drop：拒绝
     public $Description;
 
     /**
-     * @var string 规则顺序，-1表示最低，1表示最高
+     * @var string 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
      */
     public $OrderIndex;
 
@@ -155,37 +157,38 @@ drop：拒绝
     public $ServiceTemplateId;
 
     /**
-     * @var string 规则对应的唯一id
+     * @var string （入参时无需填写，自动生成）规则对应的唯一id
      */
     public $Id;
 
     /**
-     * @var string 规则状态，true表示启用，false表示禁用
+     * @var string （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用
      */
     public $Enable;
 
     /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      * @param string $SourceType 访问源类型，类型可以为以下6种：net|template|instance|resourcegroup|tag|region
      * @param string $DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
-template：参数模板(ipm-dyodhpby)
-instance：资产实例(ins-123456)
-resourcegroup：资产分组(/全部分组/分组1/子分组1)
-tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
+template：参数模板id(ipm-dyodhpby)
+instance：资产实例id(ins-123456)
+resourcegroup：资产分组id(cfwrg-xxxx)
+tag：资源标签({\"Key\":\"标签key值\",\"Value\":\"标签Value值\"})
 region：地域(ap-gaungzhou)
      * @param string $DestType 访问目的类型，类型可以为以下6种：net|template|instance|resourcegroup|tag|region
      * @param string $RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值：
 accept：放行
 drop：拒绝
      * @param string $Description 描述
-     * @param string $OrderIndex 规则顺序，-1表示最低，1表示最高
+     * @param string $OrderIndex 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
      * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Port 访问控制策略的端口。取值：
@@ -194,8 +197,9 @@ drop：拒绝
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Id 规则对应的唯一id
-     * @param string $Enable 规则状态，true表示启用，false表示禁用
+     * @param string $Id （入参时无需填写，自动生成）规则对应的唯一id
+     * @param string $Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+规则状态，true表示启用，false表示禁用
      */
     function __construct()
     {

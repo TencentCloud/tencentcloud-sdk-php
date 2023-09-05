@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置域名关联的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSearchEnginePush() 获取是否启用搜索引擎推送
+ * @method void setSearchEnginePush(string $SearchEnginePush) 设置是否启用搜索引擎推送
  */
 class DomainInfo extends AbstractModel
 {
@@ -274,6 +276,11 @@ class DomainInfo extends AbstractModel
     public $TagList;
 
     /**
+     * @var string 是否启用搜索引擎推送
+     */
+    public $SearchEnginePush;
+
+    /**
      * @param integer $DomainId 域名ID
      * @param string $Status 域名状态
      * @param string $Grade 域名套餐等级
@@ -316,6 +323,7 @@ class DomainInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 域名关联的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SearchEnginePush 是否启用搜索引擎推送
      */
     function __construct()
     {
@@ -457,6 +465,10 @@ class DomainInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("SearchEnginePush",$param) and $param["SearchEnginePush"] !== null) {
+            $this->SearchEnginePush = $param["SearchEnginePush"];
         }
     }
 }

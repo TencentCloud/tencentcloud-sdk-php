@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mps\V20190612\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 音视频增强配置
+ * 接收用户
  *
- * @method VideoEnhanceConfig getVideoEnhance() 获取视频增强配置。
+ * @method string getUinName() 获取用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVideoEnhance(VideoEnhanceConfig $VideoEnhance) 设置视频增强配置。
+ * @method void setUinName(string $UinName) 设置用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AudioEnhanceConfig getAudioEnhance() 获取音频增强配置。
+ * @method string getUin() 获取用户id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioEnhance(AudioEnhanceConfig $AudioEnhance) 设置音频增强配置。
+ * @method void setUin(string $Uin) 设置用户id
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class EnhanceConfig extends AbstractModel
+class ReceiveUin extends AbstractModel
 {
     /**
-     * @var VideoEnhanceConfig 视频增强配置。
+     * @var string 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $VideoEnhance;
+    public $UinName;
 
     /**
-     * @var AudioEnhanceConfig 音频增强配置。
+     * @var string 用户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AudioEnhance;
+    public $Uin;
 
     /**
-     * @param VideoEnhanceConfig $VideoEnhance 视频增强配置。
+     * @param string $UinName 用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioEnhanceConfig $AudioEnhance 音频增强配置。
+     * @param string $Uin 用户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,14 +62,12 @@ class EnhanceConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VideoEnhance",$param) and $param["VideoEnhance"] !== null) {
-            $this->VideoEnhance = new VideoEnhanceConfig();
-            $this->VideoEnhance->deserialize($param["VideoEnhance"]);
+        if (array_key_exists("UinName",$param) and $param["UinName"] !== null) {
+            $this->UinName = $param["UinName"];
         }
 
-        if (array_key_exists("AudioEnhance",$param) and $param["AudioEnhance"] !== null) {
-            $this->AudioEnhance = new AudioEnhanceConfig();
-            $this->AudioEnhance->deserialize($param["AudioEnhance"]);
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
         }
     }
 }

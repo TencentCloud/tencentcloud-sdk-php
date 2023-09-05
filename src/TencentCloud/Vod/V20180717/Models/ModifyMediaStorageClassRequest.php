@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMediaStorageClass请求参数结构体
  *
- * @method array getFileIds() 获取媒体文件唯一标识列表。
- * @method void setFileIds(array $FileIds) 设置媒体文件唯一标识列表。
+ * @method array getFileIds() 获取媒体文件唯一标识列表，最大长度：100。
+ * @method void setFileIds(array $FileIds) 设置媒体文件唯一标识列表，最大长度：100。
  * @method string getStorageClass() 获取目标存储类型。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyMediaStorageClassRequest extends AbstractModel
 {
     /**
-     * @var array 媒体文件唯一标识列表。
+     * @var array 媒体文件唯一标识列表，最大长度：100。
      */
     public $FileIds;
 
@@ -85,7 +85,7 @@ class ModifyMediaStorageClassRequest extends AbstractModel
     public $RestoreTier;
 
     /**
-     * @param array $FileIds 媒体文件唯一标识列表。
+     * @param array $FileIds 媒体文件唯一标识列表，最大长度：100。
      * @param string $StorageClass 目标存储类型。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>

@@ -14,24 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ExecuteTask请求参数结构体
+ * 音频降噪配置
  *
- * @method string getTaskId() 获取任务 ID
- * @method void setTaskId(string $TaskId) 设置任务 ID
+ * @method string getSwitch() 获取能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。
+ * @method void setSwitch(string $Switch) 设置能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。
  */
-class ExecuteTaskRequest extends AbstractModel
+class AudioDenoiseConfig extends AbstractModel
 {
     /**
-     * @var string 任务 ID
+     * @var string 能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。
      */
-    public $TaskId;
+    public $Switch;
 
     /**
-     * @param string $TaskId 任务 ID
+     * @param string $Switch 能力配置开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+默认值：ON。
      */
     function __construct()
     {
@@ -46,8 +58,8 @@ class ExecuteTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

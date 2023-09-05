@@ -193,7 +193,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
  * @method Models\EnableUnitRouteResponse EnableUnitRoute(Models\EnableUnitRouteRequest $req) 启用单元化路由
  * @method Models\EnableUnitRuleResponse EnableUnitRule(Models\EnableUnitRuleRequest $req) 启用单元化规则
- * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 手动执行一次任务。
+ * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 手动执行一次任务
  * @method Models\ExecuteTaskFlowResponse ExecuteTaskFlow(Models\ExecuteTaskFlowRequest $req) 执行一次工作流
  * @method Models\ExpandGroupResponse ExpandGroup(Models\ExpandGroupRequest $req) 虚拟机部署组添加实例
  * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 修改应用

@@ -30,6 +30,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailable(boolean $Available) 设置是否售罄
  * @method array getAvailableRegion() 获取当前资源售罄时，可用的区域有哪些
  * @method void setAvailableRegion(array $AvailableRegion) 设置当前资源售罄时，可用的区域有哪些
+ * @method array getSpecFeatures() 获取当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpecFeatures(array $SpecFeatures) 设置当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSpecType() 获取计费项类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpecType(string $SpecType) 设置计费项类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGpuType() 获取GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGpuType(string $GpuType) 设置GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCategoryId() 获取计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategoryId(string $CategoryId) 设置计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Spec extends AbstractModel
 {
@@ -59,11 +75,43 @@ class Spec extends AbstractModel
     public $AvailableRegion;
 
     /**
+     * @var array 当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpecFeatures;
+
+    /**
+     * @var string 计费项类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpecType;
+
+    /**
+     * @var string GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GpuType;
+
+    /**
+     * @var string 计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CategoryId;
+
+    /**
      * @param string $SpecId 计费项标签
      * @param string $SpecName 计费项名称
      * @param string $SpecAlias 计费项显示名称
      * @param boolean $Available 是否售罄
      * @param array $AvailableRegion 当前资源售罄时，可用的区域有哪些
+     * @param array $SpecFeatures 当前计费项支持的特性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SpecType 计费项类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GpuType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CategoryId 计费项CategoryId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +144,22 @@ class Spec extends AbstractModel
 
         if (array_key_exists("AvailableRegion",$param) and $param["AvailableRegion"] !== null) {
             $this->AvailableRegion = $param["AvailableRegion"];
+        }
+
+        if (array_key_exists("SpecFeatures",$param) and $param["SpecFeatures"] !== null) {
+            $this->SpecFeatures = $param["SpecFeatures"];
+        }
+
+        if (array_key_exists("SpecType",$param) and $param["SpecType"] !== null) {
+            $this->SpecType = $param["SpecType"];
+        }
+
+        if (array_key_exists("GpuType",$param) and $param["GpuType"] !== null) {
+            $this->GpuType = $param["GpuType"];
+        }
+
+        if (array_key_exists("CategoryId",$param) and $param["CategoryId"] !== null) {
+            $this->CategoryId = $param["CategoryId"];
         }
     }
 }

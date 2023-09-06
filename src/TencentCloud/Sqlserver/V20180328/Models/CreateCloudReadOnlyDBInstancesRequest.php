@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadOnlyGroupMinInGroup(integer $ReadOnlyGroupMinInGroup) 设置ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。
  * @method string getInstanceChargeType() 获取付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
- * @method integer getGoodsNum() 获取本次购买几个只读实例，默认值为2。
- * @method void setGoodsNum(integer $GoodsNum) 设置本次购买几个只读实例，默认值为2。
+ * @method integer getGoodsNum() 获取本次即将购买的实例数量，默认取值2。
+ * @method void setGoodsNum(integer $GoodsNum) 设置本次即将购买的实例数量，默认取值2。
  * @method string getSubnetId() 获取VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
  * @method void setSubnetId(string $SubnetId) 设置VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
  * @method string getVpcId() 获取VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
@@ -142,7 +142,7 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var integer 本次购买几个只读实例，默认值为2。
+     * @var integer 本次即将购买的实例数量，默认取值2。
      */
     public $GoodsNum;
 
@@ -206,7 +206,7 @@ class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel
      * @param integer $ReadOnlyGroupMaxDelayTime ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除的阈值。
      * @param integer $ReadOnlyGroupMinInGroup ReadOnlyGroupType=2 且 ReadOnlyGroupIsOfflineDelay=1时必填，新建的只读组延迟剔除后至少保留只读副本的个数。
      * @param string $InstanceChargeType 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
-     * @param integer $GoodsNum 本次购买几个只读实例，默认值为2。
+     * @param integer $GoodsNum 本次即将购买的实例数量，默认取值2。
      * @param string $SubnetId VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
      * @param string $VpcId VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
      * @param integer $Period 购买实例周期，默认取值为1，表示一个月。取值不超过48

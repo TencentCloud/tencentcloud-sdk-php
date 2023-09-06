@@ -20,170 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSchemeUrl请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method string getOrganizationName() 获取企业名称
- * @method void setOrganizationName(string $OrganizationName) 设置企业名称
- * @method string getName() 获取姓名,最大长度50个字符
- * @method void setName(string $Name) 设置姓名,最大长度50个字符
- * @method string getMobile() 获取手机号，大陆手机号11位
- * @method void setMobile(string $Mobile) 设置手机号，大陆手机号11位
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息, userId 必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息, userId 必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getOrganizationName() 获取合同流程签署方的组织机构名称。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+ * @method void setOrganizationName(string $OrganizationName) 设置合同流程签署方的组织机构名称。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+ * @method string getName() 获取合同流程里边签署方经办人的姓名。
+
+ * @method void setName(string $Name) 设置合同流程里边签署方经办人的姓名。
+
+ * @method string getMobile() 获取合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+ * @method void setMobile(string $Mobile) 设置合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
  * @method string getEndPoint() 获取要跳转的链接类型
 
-- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)，此时返回长链
-- HTTP_SHORT_URL：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链
-- APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
-
+<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li>
+<li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li>
+<li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li></ul>
  * @method void setEndPoint(string $EndPoint) 设置要跳转的链接类型
 
-- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)，此时返回长链
-- HTTP_SHORT_URL：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链
-- APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
-
- * @method string getFlowId() 获取签署流程编号 (PathType=1时必传)
- * @method void setFlowId(string $FlowId) 设置签署流程编号 (PathType=1时必传)
- * @method string getFlowGroupId() 获取合同组ID 
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID 
+<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li>
+<li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li>
+<li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li></ul>
+ * @method string getFlowId() 获取合同流程ID 
+注: `如果准备跳转到合同流程签署的详情页面(即PathType=1时)必传,   跳转其他页面可不传`
+ * @method void setFlowId(string $FlowId) 设置合同流程ID 
+注: `如果准备跳转到合同流程签署的详情页面(即PathType=1时)必传,   跳转其他页面可不传`
+ * @method string getFlowGroupId() 获取合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
  * @method integer getPathType() 获取要跳转到的页面类型 
 
-- 0: 不传, 主页 (默认)
-- 1: 小程序合同详情 
-- 2: 小程序合同列表页 
-
+<ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
+<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
+<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
  * @method void setPathType(integer $PathType) 设置要跳转到的页面类型 
 
-- 0: 不传, 主页 (默认)
-- 1: 小程序合同详情 
-- 2: 小程序合同列表页 
+<ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
+<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
+<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+ * @method boolean getAutoJumpBack() 获取签署完成后是否自动回跳
+<ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
+注:  ` 该参数只针对"APP" 类型的签署链接有效`
+ * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置签署完成后是否自动回跳
+<ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
+注:  ` 该参数只针对"APP" 类型的签署链接有效`
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method array getHides() 获取生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
 
- * @method boolean getAutoJumpBack() 获取是否自动回跳
-true：是，
-false：否。
-该参数只针对"APP" 类型的签署链接有效
- * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置是否自动回跳
-true：是，
-false：否。
-该参数只针对"APP" 类型的签署链接有效
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method array getHides() 获取生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li></ul>
 
-- 0:合同签署页面更多操作按钮
-- 1:合同签署页面更多操作的拒绝签署按钮
-- 2:合同签署页面更多操作的转他人处理按钮
-- 3:签署成功页的查看详情按钮
- * @method void setHides(array $Hides) 设置生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+注:  `字段为数组, 可以传值隐藏多个按钮`
+ * @method void setHides(array $Hides) 设置生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
 
-- 0:合同签署页面更多操作按钮
-- 1:合同签署页面更多操作的拒绝签署按钮
-- 2:合同签署页面更多操作的转他人处理按钮
-- 3:签署成功页的查看详情按钮
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
  */
 class CreateSchemeUrlRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 执行本接口操作的员工信息, userId 必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 企业名称
+     * @var string 合同流程签署方的组织机构名称。
+如果名称中包含英文括号()，请使用中文括号（）代替。
      */
     public $OrganizationName;
 
     /**
-     * @var string 姓名,最大长度50个字符
+     * @var string 合同流程里边签署方经办人的姓名。
+
      */
     public $Name;
 
     /**
-     * @var string 手机号，大陆手机号11位
+     * @var string 合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
      */
     public $Mobile;
 
     /**
      * @var string 要跳转的链接类型
 
-- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)，此时返回长链
-- HTTP_SHORT_URL：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链
-- APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
-
+<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li>
+<li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li>
+<li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li></ul>
      */
     public $EndPoint;
 
     /**
-     * @var string 签署流程编号 (PathType=1时必传)
+     * @var string 合同流程ID 
+注: `如果准备跳转到合同流程签署的详情页面(即PathType=1时)必传,   跳转其他页面可不传`
      */
     public $FlowId;
 
     /**
-     * @var string 合同组ID 
+     * @var string 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
      */
     public $FlowGroupId;
 
     /**
      * @var integer 要跳转到的页面类型 
 
-- 0: 不传, 主页 (默认)
-- 1: 小程序合同详情 
-- 2: 小程序合同列表页 
-
+<ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
+<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
+<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
      */
     public $PathType;
 
     /**
-     * @var boolean 是否自动回跳
-true：是，
-false：否。
-该参数只针对"APP" 类型的签署链接有效
+     * @var boolean 签署完成后是否自动回跳
+<ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
+注:  ` 该参数只针对"APP" 类型的签署链接有效`
      */
     public $AutoJumpBack;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @var array 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+     * @var array 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
 
-- 0:合同签署页面更多操作按钮
-- 1:合同签署页面更多操作的拒绝签署按钮
-- 2:合同签署页面更多操作的转他人处理按钮
-- 3:签署成功页的查看详情按钮
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li></ul>
+
+注:  `字段为数组, 可以传值隐藏多个按钮`
      */
     public $Hides;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param string $OrganizationName 企业名称
-     * @param string $Name 姓名,最大长度50个字符
-     * @param string $Mobile 手机号，大陆手机号11位
+     * @param UserInfo $Operator 执行本接口操作的员工信息, userId 必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $OrganizationName 合同流程签署方的组织机构名称。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+     * @param string $Name 合同流程里边签署方经办人的姓名。
+
+     * @param string $Mobile 合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
      * @param string $EndPoint 要跳转的链接类型
 
-- HTTP：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  (默认)，此时返回长链
-- HTTP_SHORT_URL：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链
-- APP： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型
-
-     * @param string $FlowId 签署流程编号 (PathType=1时必传)
-     * @param string $FlowGroupId 合同组ID 
+<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li>
+<li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li>
+<li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li></ul>
+     * @param string $FlowId 合同流程ID 
+注: `如果准备跳转到合同流程签署的详情页面(即PathType=1时)必传,   跳转其他页面可不传`
+     * @param string $FlowGroupId 合同流程组的组ID, 在合同流程组场景下，生成合同流程组的签署链接时需要赋值
      * @param integer $PathType 要跳转到的页面类型 
 
-- 0: 不传, 主页 (默认)
-- 1: 小程序合同详情 
-- 2: 小程序合同列表页 
+<ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
+<li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
+<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+     * @param boolean $AutoJumpBack 签署完成后是否自动回跳
+<ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
+注:  ` 该参数只针对"APP" 类型的签署链接有效`
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param array $Hides 生成的签署链接在签署页面隐藏的按钮列表，可设置如下：
 
-     * @param boolean $AutoJumpBack 是否自动回跳
-true：是，
-false：否。
-该参数只针对"APP" 类型的签署链接有效
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param array $Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+<ul><li> **0** :合同签署页面更多操作按钮</li>
+<li> **1** :合同签署页面更多操作的拒绝签署按钮</li>
+<li> **2** :合同签署页面更多操作的转他人处理按钮</li>
+<li> **3** :签署成功页的查看详情按钮</li></ul>
 
-- 0:合同签署页面更多操作按钮
-- 1:合同签署页面更多操作的拒绝签署按钮
-- 2:合同签署页面更多操作的转他人处理按钮
-- 3:签署成功页的查看详情按钮
+注:  `字段为数组, 可以传值隐藏多个按钮`
      */
     function __construct()
     {

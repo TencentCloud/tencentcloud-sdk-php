@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCover(string $Cover) 设置封面，仅转码的课件会生成封面
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreview() 获取课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreview(string $Preview) 设置课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DocumentInfo extends AbstractModel
 {
@@ -204,6 +208,12 @@ class DocumentInfo extends AbstractModel
     public $Cover;
 
     /**
+     * @var string 课件预览地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Preview;
+
+    /**
      * @param string $DocumentId 文档Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocumentUrl 文档原址url
@@ -239,6 +249,8 @@ class DocumentInfo extends AbstractModel
      * @param integer $Height 高，仅在静态转码的课件有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cover 封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Preview 课件预览地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +336,10 @@ class DocumentInfo extends AbstractModel
 
         if (array_key_exists("Cover",$param) and $param["Cover"] !== null) {
             $this->Cover = $param["Cover"];
+        }
+
+        if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
+            $this->Preview = $param["Preview"];
         }
     }
 }

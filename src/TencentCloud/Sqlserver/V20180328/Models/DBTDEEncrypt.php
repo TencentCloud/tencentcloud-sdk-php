@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBName() 获取数据库名称
  * @method void setDBName(string $DBName) 设置数据库名称
- * @method string getEncryption() 获取enable-开启加密，disable-关闭加密
- * @method void setEncryption(string $Encryption) 设置enable-开启加密，disable-关闭加密
+ * @method string getEncryption() 获取enable-开启数据库TDE加密，disable-关闭数据库TDE加密
+ * @method void setEncryption(string $Encryption) 设置enable-开启数据库TDE加密，disable-关闭数据库TDE加密
  */
 class DBTDEEncrypt extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DBTDEEncrypt extends AbstractModel
     public $DBName;
 
     /**
-     * @var string enable-开启加密，disable-关闭加密
+     * @var string enable-开启数据库TDE加密，disable-关闭数据库TDE加密
      */
     public $Encryption;
 
     /**
      * @param string $DBName 数据库名称
-     * @param string $Encryption enable-开启加密，disable-关闭加密
+     * @param string $Encryption enable-开启数据库TDE加密，disable-关闭数据库TDE加密
      */
     function __construct()
     {

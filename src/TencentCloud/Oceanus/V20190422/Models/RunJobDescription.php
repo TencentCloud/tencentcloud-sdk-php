@@ -24,16 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置作业Id
  * @method integer getRunType() 获取运行类型，1：启动，2：恢复
  * @method void setRunType(integer $RunType) 设置运行类型，1：启动，2：恢复
- * @method string getStartMode() 获取兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
- * @method void setStartMode(string $StartMode) 设置兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+ * @method string getStartMode() 获取兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
+ * @method void setStartMode(string $StartMode) 设置兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
  * @method integer getJobConfigVersion() 获取当前作业的某个版本
+（不传默认为非草稿的作业版本）
  * @method void setJobConfigVersion(integer $JobConfigVersion) 设置当前作业的某个版本
+（不传默认为非草稿的作业版本）
  * @method string getSavepointPath() 获取Savepoint路径
  * @method void setSavepointPath(string $SavepointPath) 设置Savepoint路径
  * @method string getSavepointId() 获取Savepoint的Id
  * @method void setSavepointId(string $SavepointId) 设置Savepoint的Id
  * @method boolean getUseOldSystemConnector() 获取使用历史版本系统依赖
  * @method void setUseOldSystemConnector(boolean $UseOldSystemConnector) 设置使用历史版本系统依赖
+ * @method integer getCustomTimestamp() 获取自定义时间戳
+ * @method void setCustomTimestamp(integer $CustomTimestamp) 设置自定义时间戳
  */
 class RunJobDescription extends AbstractModel
 {
@@ -48,12 +54,14 @@ class RunJobDescription extends AbstractModel
     public $RunType;
 
     /**
-     * @var string 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+     * @var string 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
      */
     public $StartMode;
 
     /**
      * @var integer 当前作业的某个版本
+（不传默认为非草稿的作业版本）
      */
     public $JobConfigVersion;
 
@@ -73,13 +81,21 @@ class RunJobDescription extends AbstractModel
     public $UseOldSystemConnector;
 
     /**
+     * @var integer 自定义时间戳
+     */
+    public $CustomTimestamp;
+
+    /**
      * @param string $JobId 作业Id
      * @param integer $RunType 运行类型，1：启动，2：恢复
-     * @param string $StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+     * @param string $StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（建议传值）
+保证参数为 LATEST、EARLIEST、T+Timestamp （例:T1557394288000）
      * @param integer $JobConfigVersion 当前作业的某个版本
+（不传默认为非草稿的作业版本）
      * @param string $SavepointPath Savepoint路径
      * @param string $SavepointId Savepoint的Id
      * @param boolean $UseOldSystemConnector 使用历史版本系统依赖
+     * @param integer $CustomTimestamp 自定义时间戳
      */
     function __construct()
     {
@@ -120,6 +136,10 @@ class RunJobDescription extends AbstractModel
 
         if (array_key_exists("UseOldSystemConnector",$param) and $param["UseOldSystemConnector"] !== null) {
             $this->UseOldSystemConnector = $param["UseOldSystemConnector"];
+        }
+
+        if (array_key_exists("CustomTimestamp",$param) and $param["CustomTimestamp"] !== null) {
+            $this->CustomTimestamp = $param["CustomTimestamp"];
         }
     }
 }

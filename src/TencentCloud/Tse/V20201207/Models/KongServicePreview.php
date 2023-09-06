@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditable(boolean $Editable) 设置是否可编辑
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPath() 获取请求路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPath(string $Path) 设置请求路径
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongServicePreview extends AbstractModel
 {
@@ -94,6 +98,12 @@ class KongServicePreview extends AbstractModel
     public $Editable;
 
     /**
+     * @var string 请求路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Path;
+
+    /**
      * @param string $ID 服务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 服务名字
@@ -107,6 +117,8 @@ class KongServicePreview extends AbstractModel
      * @param string $CreatedTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Editable 是否可编辑
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Path 请求路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -149,6 +161,10 @@ class KongServicePreview extends AbstractModel
 
         if (array_key_exists("Editable",$param) and $param["Editable"] !== null) {
             $this->Editable = $param["Editable"];
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
     }
 }

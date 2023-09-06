@@ -18,43 +18,43 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 被授权用户信息
+ * 被授权的用户信息
  *
- * @method string getUserId() 获取用户id
+ * @method string getUserId() 获取员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserId(string $UserId) 设置用户id
+ * @method void setUserId(string $UserId) 设置员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBelongTo() 获取用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+ * @method string getBelongTo() 获取当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBelongTo(string $BelongTo) 设置用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+ * @method void setBelongTo(string $BelongTo) 设置当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class HasAuthUser extends AbstractModel
 {
     /**
-     * @var string 用户id
+     * @var string 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
-     * @var string 用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+     * @var string 当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BelongTo;
 
     /**
-     * @param string $UserId 用户id
+     * @param string $UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BelongTo 用户归属
-MainOrg：主企业
-CurrentOrg：当前企业
+     * @param string $BelongTo 当前员工的归属情况，可能值是：
+MainOrg：在集团企业的场景下，返回此值代表是归属主企业
+CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

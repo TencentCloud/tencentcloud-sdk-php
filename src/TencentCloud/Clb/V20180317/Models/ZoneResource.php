@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneResourceType(string $ZoneResourceType) 设置可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
  * @method boolean getEdgeZone() 获取可用区是否是EdgeZone可用区，如：false
  * @method void setEdgeZone(boolean $EdgeZone) 设置可用区是否是EdgeZone可用区，如：false
+ * @method string getEgress() 获取网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEgress(string $Egress) 设置网络出口
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneResource extends AbstractModel
 {
@@ -86,6 +90,12 @@ class ZoneResource extends AbstractModel
     public $EdgeZone;
 
     /**
+     * @var string 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Egress;
+
+    /**
      * @param string $MasterZone 主可用区，如"ap-guangzhou-1"。
      * @param array $ResourceSet 资源列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,6 +106,8 @@ class ZoneResource extends AbstractModel
      * @param boolean $LocalZone 可用区是否是LocalZone可用区，如：false
      * @param string $ZoneResourceType 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
      * @param boolean $EdgeZone 可用区是否是EdgeZone可用区，如：false
+     * @param string $Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -145,6 +157,10 @@ class ZoneResource extends AbstractModel
 
         if (array_key_exists("EdgeZone",$param) and $param["EdgeZone"] !== null) {
             $this->EdgeZone = $param["EdgeZone"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

@@ -172,6 +172,10 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡实例的域名。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEgress() 获取网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEgress(string $Egress) 设置网络出口
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -404,6 +408,12 @@ Public：公网属性， Private：内网属性。
     public $LoadBalancerDomain;
 
     /**
+     * @var string 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Egress;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -479,6 +489,8 @@ Public：公网属性， Private：内网属性。
      * @param integer $SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoadBalancerDomain 负载均衡实例的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Egress 网络出口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -652,6 +664,10 @@ Public：公网属性， Private：内网属性。
 
         if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {
             $this->LoadBalancerDomain = $param["LoadBalancerDomain"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

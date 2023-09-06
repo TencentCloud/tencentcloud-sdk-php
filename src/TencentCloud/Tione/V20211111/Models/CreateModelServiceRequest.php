@@ -126,6 +126,8 @@ HYBRID_PAID:
  * @method void setServiceCategory(string $ServiceCategory) 设置服务分类
  * @method string getCommand() 获取服务的启动命令
  * @method void setCommand(string $Command) 设置服务的启动命令
+ * @method ServiceEIP getServiceEIP() 获取是否开启TIONE内网访问外部
+ * @method void setServiceEIP(ServiceEIP $ServiceEIP) 设置是否开启TIONE内网访问外部
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -303,6 +305,11 @@ HYBRID_PAID:
     public $Command;
 
     /**
+     * @var ServiceEIP 是否开启TIONE内网访问外部
+     */
+    public $ServiceEIP;
+
+    /**
      * @param string $ServiceGroupId 新增版本时需要填写
      * @param string $ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
      * @param string $ServiceDescription 模型服务的描述
@@ -356,6 +363,7 @@ HYBRID_PAID:
      * @param boolean $ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
      * @param string $ServiceCategory 服务分类
      * @param string $Command 服务的启动命令
+     * @param ServiceEIP $ServiceEIP 是否开启TIONE内网访问外部
      */
     function __construct()
     {
@@ -511,6 +519,11 @@ HYBRID_PAID:
 
         if (array_key_exists("Command",$param) and $param["Command"] !== null) {
             $this->Command = $param["Command"];
+        }
+
+        if (array_key_exists("ServiceEIP",$param) and $param["ServiceEIP"] !== null) {
+            $this->ServiceEIP = new ServiceEIP();
+            $this->ServiceEIP->deserialize($param["ServiceEIP"]);
         }
     }
 }

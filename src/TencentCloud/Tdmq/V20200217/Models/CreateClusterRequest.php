@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCluster请求参数结构体
  *
- * @method string getClusterName() 获取集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
- * @method void setClusterName(string $ClusterName) 设置集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
+ * @method string getClusterName() 获取集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+ * @method void setClusterName(string $ClusterName) 设置集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
  * @method integer getBindClusterId() 获取用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
  * @method void setBindClusterId(integer $BindClusterId) 设置用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
  * @method string getRemark() 获取说明，128个字符以内。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateClusterRequest extends AbstractModel
 {
     /**
-     * @var string 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
+     * @var string 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      */
     public $ClusterName;
 
@@ -59,7 +59,7 @@ class CreateClusterRequest extends AbstractModel
     public $PublicAccessEnabled;
 
     /**
-     * @param string $ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
+     * @param string $ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      * @param integer $BindClusterId 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
      * @param string $Remark 说明，128个字符以内。
      * @param array $Tags 集群的标签列表(已废弃)

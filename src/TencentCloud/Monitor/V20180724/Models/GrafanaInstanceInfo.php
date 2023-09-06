@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC ID
  * @method array getSubnetIds() 获取子网 ID 数组
  * @method void setSubnetIds(array $SubnetIds) 设置子网 ID 数组
- * @method string getInternetUrl() 获取Grafana 内网地址
- * @method void setInternetUrl(string $InternetUrl) 设置Grafana 内网地址
- * @method string getInternalUrl() 获取Grafana 公网地址
- * @method void setInternalUrl(string $InternalUrl) 设置Grafana 公网地址
+ * @method string getInternetUrl() 获取Grafana 公网地址
+ * @method void setInternetUrl(string $InternetUrl) 设置Grafana 公网地址
+ * @method string getInternalUrl() 获取Grafana 内网地址
+ * @method void setInternalUrl(string $InternalUrl) 设置Grafana 内网地址
  * @method string getCreatedAt() 获取创建时间
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  * @method integer getInstanceStatus() 获取运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:停机中； 6:已停机； 7: 已删除）
@@ -89,12 +89,12 @@ class GrafanaInstanceInfo extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var string Grafana 内网地址
+     * @var string Grafana 公网地址
      */
     public $InternetUrl;
 
     /**
-     * @var string Grafana 公网地址
+     * @var string Grafana 内网地址
      */
     public $InternalUrl;
 
@@ -165,8 +165,8 @@ class GrafanaInstanceInfo extends AbstractModel
      * @param string $Region 地域
      * @param string $VpcId VPC ID
      * @param array $SubnetIds 子网 ID 数组
-     * @param string $InternetUrl Grafana 内网地址
-     * @param string $InternalUrl Grafana 公网地址
+     * @param string $InternetUrl Grafana 公网地址
+     * @param string $InternalUrl Grafana 内网地址
      * @param string $CreatedAt 创建时间
      * @param integer $InstanceStatus 运行状态（1:正在创建；2:运行中；3:异常；4:重启中；5:停机中； 6:已停机； 7: 已删除）
      * @param array $TagSpecification 实例的标签

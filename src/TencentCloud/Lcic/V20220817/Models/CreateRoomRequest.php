@@ -100,6 +100,8 @@ video 纯视频
  * @method void setIsGradingRequiredPostClass(integer $IsGradingRequiredPostClass) 设置开启课后评分。 0：不开启(默认)  1：开启
  * @method integer getRoomType() 获取房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
  * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+ * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+ * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -232,6 +234,11 @@ video 纯视频
     public $RoomType;
 
     /**
+     * @var integer 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     */
+    public $EndDelayTime;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。
@@ -272,6 +279,7 @@ video 纯视频
      * @param integer $VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
      * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
      */
     function __construct()
     {
@@ -372,6 +380,10 @@ video 纯视频
 
         if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
             $this->RoomType = $param["RoomType"];
+        }
+
+        if (array_key_exists("EndDelayTime",$param) and $param["EndDelayTime"] !== null) {
+            $this->EndDelayTime = $param["EndDelayTime"];
         }
     }
 }

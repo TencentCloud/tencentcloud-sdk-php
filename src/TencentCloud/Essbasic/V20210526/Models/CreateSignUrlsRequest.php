@@ -22,31 +22,45 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method array getFlowIds() 获取签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
- * @method void setFlowIds(array $FlowIds) 设置签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
+ * @method array getFlowIds() 获取流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
+ * @method void setFlowIds(array $FlowIds) 设置流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
  * @method string getFlowGroupId() 获取合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
  * @method void setFlowGroupId(string $FlowGroupId) 设置合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
- * @method string getEndpoint() 获取签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
- * @method void setEndpoint(string $Endpoint) 设置签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
- * @method string getGenerateType() 获取签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方；
- * @method void setGenerateType(string $GenerateType) 设置签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方；
+ * @method string getEndpoint() 获取签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序
+ * @method void setEndpoint(string $Endpoint) 设置签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序
+ * @method string getGenerateType() 获取签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方
+ * @method void setGenerateType(string $GenerateType) 设置签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方
  * @method string getOrganizationName() 获取非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
  * @method void setOrganizationName(string $OrganizationName) 设置非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
- * @method string getName() 获取参与人姓名，GenerateType为"PERSON"时必填
- * @method void setName(string $Name) 设置参与人姓名，GenerateType为"PERSON"时必填
- * @method string getMobile() 获取参与人手机号；
+ * @method string getName() 获取参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填
+ * @method void setName(string $Name) 设置参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填
+ * @method string getMobile() 获取参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填
- * @method void setMobile(string $Mobile) 设置参与人手机号；
+ * @method void setMobile(string $Mobile) 设置参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填
  * @method string getOrganizationOpenId() 获取第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填
@@ -60,16 +74,16 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  * @method array getHides() 获取生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮
  * @method void setHides(array $Hides) 设置生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮
  */
 class CreateSignUrlsRequest extends AbstractModel
 {
@@ -79,7 +93,7 @@ class CreateSignUrlsRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var array 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
+     * @var array 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
      */
     public $FlowIds;
 
@@ -89,17 +103,23 @@ class CreateSignUrlsRequest extends AbstractModel
     public $FlowGroupId;
 
     /**
-     * @var string 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+     * @var string 签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序
      */
     public $Endpoint;
 
     /**
-     * @var string 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方；
+     * @var string 签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方
      */
     public $GenerateType;
 
@@ -109,12 +129,13 @@ class CreateSignUrlsRequest extends AbstractModel
     public $OrganizationName;
 
     /**
-     * @var string 参与人姓名，GenerateType为"PERSON"时必填
+     * @var string 参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填
      */
     public $Name;
 
     /**
-     * @var string 参与人手机号；
+     * @var string 参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填
      */
     public $Mobile;
@@ -148,27 +169,34 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     /**
      * @var array 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮
      */
     public $Hides;
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param array $FlowIds 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
+     * @param array $FlowIds 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
      * @param string $FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
-     * @param string $Endpoint 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
-     * @param string $GenerateType 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：第三方平台子客企业企业；
-"NOT_CHANNEL"：非第三方平台子客企业企业；
-"PERSON"：个人；
-"FOLLOWER"：关注方，目前是合同抄送方；
+     * @param string $Endpoint 签署链接类型,可以设置的参数如下
+
+- WEIXINAPP:短链直接跳小程序 (默认类型)
+- CHANNEL:跳转H5页面
+- APP:第三方APP或小程序跳转电子签小程序
+- LONGURL2WEIXINAPP:长链接跳转小程序
+     * @param string $GenerateType 签署链接生成类型，可以选择的类型如下
+
+- ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
+- CHANNEL：第三方平台子客企业企业
+- NOT_CHANNEL：非第三方平台子客企业企业
+- PERSON：个人
+- FOLLOWER：关注方，目前是合同抄送方
      * @param string $OrganizationName 非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
-     * @param string $Name 参与人姓名，GenerateType为"PERSON"时必填
-     * @param string $Mobile 参与人手机号；
+     * @param string $Name 参与人姓名
+GenerateType为"PERSON"(即个人签署方)时必填
+     * @param string $Mobile 参与人手机号
 GenerateType为"PERSON"或"FOLLOWER"时必填
      * @param string $OrganizationOpenId 第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填
      * @param string $OpenId 第三方平台子客企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
@@ -177,10 +205,10 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
      * @param UserInfo $Operator 暂未开放
      * @param array $Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
 
-0:合同签署页面更多操作按钮
-1:合同签署页面更多操作的拒绝签署按钮
-2:合同签署页面更多操作的转他人处理按钮
-3:签署成功页的查看详情按钮
+- 0:合同签署页面更多操作按钮
+- 1:合同签署页面更多操作的拒绝签署按钮
+- 2:合同签署页面更多操作的转他人处理按钮
+- 3:签署成功页的查看详情按钮
      */
     function __construct()
     {

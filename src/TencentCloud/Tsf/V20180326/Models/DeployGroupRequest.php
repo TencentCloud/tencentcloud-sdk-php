@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployBetaEnable(boolean $DeployBetaEnable) 设置是否启用beta批次
  * @method array getDeployBatch() 获取滚动发布每个批次参与的实例比率
  * @method void setDeployBatch(array $DeployBatch) 设置滚动发布每个批次参与的实例比率
- * @method string getDeployExeMode() 获取滚动发布的执行方式
- * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的执行方式
+ * @method string getDeployExeMode() 获取滚动发布的执行方式，auto表示自动， manual表示手动
+ * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的执行方式，auto表示自动， manual表示手动
  * @method integer getDeployWaitTime() 获取滚动发布每个批次的时间间隔
  * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布每个批次的时间间隔
  * @method string getStartScript() 获取启动脚本 base64编码
@@ -52,8 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置是否进行增量部署，默认为false，全量更新
  * @method string getJdkName() 获取JDK名称: konaJDK或openJDK
  * @method void setJdkName(string $JdkName) 设置JDK名称: konaJDK或openJDK
- * @method string getJdkVersion() 获取JDK版本: 8或11 (openJDK只支持8)
- * @method void setJdkVersion(string $JdkVersion) 设置JDK版本: 8或11 (openJDK只支持8)
+ * @method string getJdkVersion() 获取konaJDK版本：8、11和17
+openJDK版本：8、17
+ * @method void setJdkVersion(string $JdkVersion) 设置konaJDK版本：8、11和17
+openJDK版本：8、17
  * @method array getAgentProfileList() 获取部署agent的类型、版本
  * @method void setAgentProfileList(array $AgentProfileList) 设置部署agent的类型、版本
  * @method WarmupSetting getWarmupSetting() 获取预热参数配置
@@ -114,7 +116,7 @@ class DeployGroupRequest extends AbstractModel
     public $DeployBatch;
 
     /**
-     * @var string 滚动发布的执行方式
+     * @var string 滚动发布的执行方式，auto表示自动， manual表示手动
      */
     public $DeployExeMode;
 
@@ -144,7 +146,8 @@ class DeployGroupRequest extends AbstractModel
     public $JdkName;
 
     /**
-     * @var string JDK版本: 8或11 (openJDK只支持8)
+     * @var string konaJDK版本：8、11和17
+openJDK版本：8、17
      */
     public $JdkVersion;
 
@@ -174,13 +177,14 @@ class DeployGroupRequest extends AbstractModel
      * @param integer $UpdateType 部署方式，0表示快速更新，1表示滚动更新
      * @param boolean $DeployBetaEnable 是否启用beta批次
      * @param array $DeployBatch 滚动发布每个批次参与的实例比率
-     * @param string $DeployExeMode 滚动发布的执行方式
+     * @param string $DeployExeMode 滚动发布的执行方式，auto表示自动， manual表示手动
      * @param integer $DeployWaitTime 滚动发布每个批次的时间间隔
      * @param string $StartScript 启动脚本 base64编码
      * @param string $StopScript 停止脚本 base64编码
      * @param boolean $IncrementalDeployment 是否进行增量部署，默认为false，全量更新
      * @param string $JdkName JDK名称: konaJDK或openJDK
-     * @param string $JdkVersion JDK版本: 8或11 (openJDK只支持8)
+     * @param string $JdkVersion konaJDK版本：8、11和17
+openJDK版本：8、17
      * @param array $AgentProfileList 部署agent的类型、版本
      * @param WarmupSetting $WarmupSetting 预热参数配置
      * @param boolean $EnableBatchHealthCheck 开启分批健康检查

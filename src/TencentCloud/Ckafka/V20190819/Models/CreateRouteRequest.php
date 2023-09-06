@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置vpc网络Id
  * @method string getSubnetId() 获取vpc子网id
  * @method void setSubnetId(string $SubnetId) 设置vpc子网id
- * @method integer getAccessType() 获取访问类型
- * @method void setAccessType(integer $AccessType) 设置访问类型
+ * @method integer getAccessType() 获取访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
+ * @method void setAccessType(integer $AccessType) 设置访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
  * @method integer getAuthFlag() 获取是否需要权限管理
  * @method void setAuthFlag(integer $AuthFlag) 设置是否需要权限管理
  * @method integer getCallerAppid() 获取调用方appId
@@ -62,7 +62,7 @@ class CreateRouteRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 访问类型
+     * @var integer 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
      */
     public $AccessType;
 
@@ -91,7 +91,7 @@ class CreateRouteRequest extends AbstractModel
      * @param integer $VipType 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
      * @param string $VpcId vpc网络Id
      * @param string $SubnetId vpc子网id
-     * @param integer $AccessType 访问类型
+     * @param integer $AccessType 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl
      * @param integer $AuthFlag 是否需要权限管理
      * @param integer $CallerAppid 调用方appId
      * @param integer $PublicNetwork 公网带宽

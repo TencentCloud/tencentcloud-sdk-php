@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosPath(string $CosPath) 设置日志导出路径
  * @method string getCreateTime() 获取日志导出创建时间
  * @method void setCreateTime(string $CreateTime) 设置日志导出创建时间
+ * @method integer getSyntaxRule() 获取语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。
+ * @method void setSyntaxRule(integer $SyntaxRule) 设置语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。
  */
 class ExportInfo extends AbstractModel
 {
@@ -115,6 +119,12 @@ class ExportInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。
+     */
+    public $SyntaxRule;
+
+    /**
      * @param string $TopicId 日志主题ID
      * @param string $ExportId 日志导出任务ID
      * @param string $Query 日志导出查询语句
@@ -128,6 +138,8 @@ class ExportInfo extends AbstractModel
      * @param integer $To 日志导出结束时间
      * @param string $CosPath 日志导出路径
      * @param string $CreateTime 日志导出创建时间
+     * @param integer $SyntaxRule 语法规则。 默认值为0。
+0：Lucene语法，1：CQL语法。
      */
     function __construct()
     {
@@ -192,6 +204,10 @@ class ExportInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

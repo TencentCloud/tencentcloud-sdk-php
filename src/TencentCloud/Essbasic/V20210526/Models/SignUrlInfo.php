@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 签署链接内容
  *
- * @method string getSignUrl() 获取签署链接，过期时间为30天
+ * @method string getSignUrl() 获取签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSignUrl(string $SignUrl) 设置签署链接，过期时间为30天
+ * @method void setSignUrl(string $SignUrl) 设置签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeadline() 获取合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,7 +80,7 @@ PERSON 自然人
 class SignUrlInfo extends AbstractModel
 {
     /**
-     * @var string 签署链接，过期时间为30天
+     * @var string 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignUrl;
@@ -161,7 +161,7 @@ PERSON 自然人
     public $FlowGroupId;
 
     /**
-     * @param string $SignUrl 签署链接，过期时间为30天
+     * @param string $SignUrl 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deadline 合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。

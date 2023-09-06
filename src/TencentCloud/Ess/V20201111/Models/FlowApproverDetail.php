@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationName(string $OrganizationName) 设置签署方企业名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSignId() 获取签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSignId(string $SignId) 设置签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverDetail extends AbstractModel
 {
@@ -175,6 +179,12 @@ class FlowApproverDetail extends AbstractModel
     public $OrganizationName;
 
     /**
+     * @var string 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SignId;
+
+    /**
      * @param string $ApproveMessage 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveName 签署方姓名
@@ -207,6 +217,8 @@ class FlowApproverDetail extends AbstractModel
      * @param string $OrganizationId 签署方企业Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationName 签署方企业名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -272,6 +284,10 @@ class FlowApproverDetail extends AbstractModel
 
         if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
             $this->OrganizationName = $param["OrganizationName"];
+        }
+
+        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
+            $this->SignId = $param["SignId"];
         }
     }
 }

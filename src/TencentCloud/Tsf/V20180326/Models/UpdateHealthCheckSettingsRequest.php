@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取部署组ID
  * @method void setGroupId(string $GroupId) 设置部署组ID
- * @method boolean getEnableHealthCheck() 获取是否能使健康检查
- * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否能使健康检查
+ * @method boolean getEnableHealthCheck() 获取是否开启健康检查
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否开启健康检查
  * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查配置
  * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置
  */
@@ -35,7 +35,7 @@ class UpdateHealthCheckSettingsRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var boolean 是否能使健康检查
+     * @var boolean 是否开启健康检查
      */
     public $EnableHealthCheck;
 
@@ -46,7 +46,7 @@ class UpdateHealthCheckSettingsRequest extends AbstractModel
 
     /**
      * @param string $GroupId 部署组ID
-     * @param boolean $EnableHealthCheck 是否能使健康检查
+     * @param boolean $EnableHealthCheck 是否开启健康检查
      * @param HealthCheckSettings $HealthCheckSettings 健康检查配置
      */
     function __construct()

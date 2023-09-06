@@ -18,21 +18,21 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 应用回调信息
+ * 企业应用回调信息
  *
- * @method string getCallbackUrl() 获取回调url
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调url
+ * @method string getCallbackUrl() 获取回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
  * @method string getToken() 获取回调加密key，已废弃
  * @method void setToken(string $Token) 设置回调加密key，已废弃
- * @method string getCallbackKey() 获取回调加密key
- * @method void setCallbackKey(string $CallbackKey) 设置回调加密key
- * @method string getCallbackToken() 获取回调验签token
- * @method void setCallbackToken(string $CallbackToken) 设置回调验签token
+ * @method string getCallbackKey() 获取回调加密key，用于回调消息加解密。
+ * @method void setCallbackKey(string $CallbackKey) 设置回调加密key，用于回调消息加解密。
+ * @method string getCallbackToken() 获取回调验签token，用于回调通知校验。
+ * @method void setCallbackToken(string $CallbackToken) 设置回调验签token，用于回调通知校验。
  */
 class CallbackInfo extends AbstractModel
 {
     /**
-     * @var string 回调url
+     * @var string 回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
      */
     public $CallbackUrl;
 
@@ -43,20 +43,20 @@ class CallbackInfo extends AbstractModel
     public $Token;
 
     /**
-     * @var string 回调加密key
+     * @var string 回调加密key，用于回调消息加解密。
      */
     public $CallbackKey;
 
     /**
-     * @var string 回调验签token
+     * @var string 回调验签token，用于回调通知校验。
      */
     public $CallbackToken;
 
     /**
-     * @param string $CallbackUrl 回调url
+     * @param string $CallbackUrl 回调url,。请确保回调地址能够接收并处理 HTTP POST 请求，并返回状态码 200 以表示处理正常。
      * @param string $Token 回调加密key，已废弃
-     * @param string $CallbackKey 回调加密key
-     * @param string $CallbackToken 回调验签token
+     * @param string $CallbackKey 回调加密key，用于回调消息加解密。
+     * @param string $CallbackToken 回调验签token，用于回调通知校验。
      */
     function __construct()
     {

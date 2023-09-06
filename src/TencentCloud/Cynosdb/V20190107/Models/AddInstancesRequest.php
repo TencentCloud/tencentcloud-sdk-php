@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置Cpu核数
  * @method integer getMemory() 获取内存，单位为GB
  * @method void setMemory(integer $Memory) 设置内存，单位为GB
- * @method integer getReadOnlyCount() 获取新增只读实例数，取值范围为[0,4]
- * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置新增只读实例数，取值范围为[0,4]
+ * @method integer getReadOnlyCount() 获取新增只读实例数，取值范围为(0,15]
+ * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置新增只读实例数，取值范围为(0,15]
  * @method string getInstanceGrpId() 获取实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
  * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
  * @method string getVpcId() 获取所属VPC网络ID。
@@ -73,7 +73,7 @@ class AddInstancesRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer 新增只读实例数，取值范围为[0,4]
+     * @var integer 新增只读实例数，取值范围为(0,15]
      */
     public $ReadOnlyCount;
 
@@ -142,7 +142,7 @@ class AddInstancesRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param integer $Cpu Cpu核数
      * @param integer $Memory 内存，单位为GB
-     * @param integer $ReadOnlyCount 新增只读实例数，取值范围为[0,4]
+     * @param integer $ReadOnlyCount 新增只读实例数，取值范围为(0,15]
      * @param string $InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
      * @param string $VpcId 所属VPC网络ID。
      * @param string $SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。

@@ -20,66 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartFlow请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
- * @method string getFlowId() 获取签署流程编号，由CreateFlow接口返回
- * @method void setFlowId(string $FlowId) 设置签署流程编号，由CreateFlow接口返回
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
  * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method integer getCcNotifyType() 获取给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知
- * @method void setCcNotifyType(integer $CcNotifyType) 设置给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method integer getCcNotifyType() 获取若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知
+ * @method void setCcNotifyType(integer $CcNotifyType) 设置若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知
  */
 class StartFlowRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 签署流程编号，由CreateFlow接口返回
+     * @var string 合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
      */
     public $FlowId;
 
     /**
      * @var string 客户端Token，保持接口幂等性,最大长度64个字符
+     * @deprecated
      */
     public $ClientToken;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @var integer 给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知
+     * @var integer 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知
      */
     public $CcNotifyType;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
-     * @param string $FlowId 签署流程编号，由CreateFlow接口返回
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $FlowId 合同流程ID，为32位字符串。
+此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param integer $CcNotifyType 给关注人发送短信通知的类型，
-
-0-合同发起时通知 
-
-1-签署完成后通知
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param integer $CcNotifyType 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
+0 - 合同发起时通知（默认）
+1 - 签署完成后通知
      */
     function __construct()
     {

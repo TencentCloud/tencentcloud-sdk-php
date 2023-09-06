@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchCreateAcl返回参数结构体
  *
- * @method integer getResult() 获取状态码
- * @method void setResult(integer $Result) 设置状态码
+ * @method integer getResult() 获取状态码：0-修改成功，否则修改失败
+ * @method void setResult(integer $Result) 设置状态码：0-修改成功，否则修改失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class BatchCreateAclResponse extends AbstractModel
 {
     /**
-     * @var integer 状态码
+     * @var integer 状态码：0-修改成功，否则修改失败
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class BatchCreateAclResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Result 状态码
+     * @param integer $Result 状态码：0-修改成功，否则修改失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

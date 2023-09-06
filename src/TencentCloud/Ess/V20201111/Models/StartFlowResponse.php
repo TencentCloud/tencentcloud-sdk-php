@@ -20,33 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartFlow返回参数结构体
  *
- * @method string getStatus() 获取发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务
- * @method void setStatus(string $Status) 设置发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务
+ * @method string getStatus() 获取发起成功后返回的状态，根据合同流程的不同，返回不同状态：
+START - 发起成功
+REVIEW - 提交审核成功
+EXECUTING - 已提交发起任务
+ * @method void setStatus(string $Status) 设置发起成功后返回的状态，根据合同流程的不同，返回不同状态：
+START - 发起成功
+REVIEW - 提交审核成功
+EXECUTING - 已提交发起任务
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class StartFlowResponse extends AbstractModel
 {
     /**
-     * @var string 发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务
+     * @var string 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
+START - 发起成功
+REVIEW - 提交审核成功
+EXECUTING - 已提交发起任务
      */
     public $Status;
 
@@ -56,13 +47,10 @@ EXECUTING-已提交发起任务
     public $RequestId;
 
     /**
-     * @param string $Status 发起成功之后返回状态，
-
-START-发起成功， 
-
-REVIEW-提交审核成功，
-
-EXECUTING-已提交发起任务
+     * @param string $Status 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
+START - 发起成功
+REVIEW - 提交审核成功
+EXECUTING - 已提交发起任务
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

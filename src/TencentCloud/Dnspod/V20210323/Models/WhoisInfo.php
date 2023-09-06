@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsQcloud(boolean $IsQcloud) 设置是否是在腾讯云注册的域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsQcloudOwner() 获取是否当前操作帐号注册的域名
+ * @method boolean getIsQcloudOwner() 获取是否当前操作账号注册的域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsQcloudOwner(boolean $IsQcloudOwner) 设置是否当前操作帐号注册的域名
+ * @method void setIsQcloudOwner(boolean $IsQcloudOwner) 设置是否当前操作账号注册的域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNameServers() 获取域名配置的NS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,7 +88,7 @@ class WhoisInfo extends AbstractModel
     public $IsQcloud;
 
     /**
-     * @var boolean 是否当前操作帐号注册的域名
+     * @var boolean 是否当前操作账号注册的域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsQcloudOwner;
@@ -132,7 +132,7 @@ class WhoisInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsQcloud 是否是在腾讯云注册的域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsQcloudOwner 是否当前操作帐号注册的域名
+     * @param boolean $IsQcloudOwner 是否当前操作账号注册的域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NameServers 域名配置的NS
 注意：此字段可能返回 null，表示取不到有效值。

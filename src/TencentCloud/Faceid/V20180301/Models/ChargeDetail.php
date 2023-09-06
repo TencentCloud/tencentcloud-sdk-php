@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReqTime(string $ReqTime) 设置一比一时间时间戳，13位。
  * @method string getSeq() 获取一比一请求的唯一标记。
  * @method void setSeq(string $Seq) 设置一比一请求的唯一标记。
- * @method string getIdcard() 获取一比一时使用的、脱敏后的身份证号。
- * @method void setIdcard(string $Idcard) 设置一比一时使用的、脱敏后的身份证号。
+ * @method string getIdCard() 获取一比一时使用的、脱敏后的身份证号。
+ * @method void setIdCard(string $IdCard) 设置一比一时使用的、脱敏后的身份证号。
+ * @method string getIdcard() 获取已废弃。请使用“IdCard”字段
+ * @method void setIdcard(string $Idcard) 设置已废弃。请使用“IdCard”字段
  * @method string getName() 获取一比一时使用的、脱敏后的姓名。
  * @method void setName(string $Name) 设置一比一时使用的、脱敏后的姓名。
  * @method string getSim() 获取一比一的相似度。0-100，保留2位小数。
@@ -53,6 +55,12 @@ class ChargeDetail extends AbstractModel
 
     /**
      * @var string 一比一时使用的、脱敏后的身份证号。
+     */
+    public $IdCard;
+
+    /**
+     * @var string 已废弃。请使用“IdCard”字段
+     * @deprecated
      */
     public $Idcard;
 
@@ -89,7 +97,8 @@ class ChargeDetail extends AbstractModel
     /**
      * @param string $ReqTime 一比一时间时间戳，13位。
      * @param string $Seq 一比一请求的唯一标记。
-     * @param string $Idcard 一比一时使用的、脱敏后的身份证号。
+     * @param string $IdCard 一比一时使用的、脱敏后的身份证号。
+     * @param string $Idcard 已废弃。请使用“IdCard”字段
      * @param string $Name 一比一时使用的、脱敏后的姓名。
      * @param string $Sim 一比一的相似度。0-100，保留2位小数。
      * @param boolean $IsNeedCharge 本次详情是否收费。
@@ -116,6 +125,10 @@ class ChargeDetail extends AbstractModel
 
         if (array_key_exists("Seq",$param) and $param["Seq"] !== null) {
             $this->Seq = $param["Seq"];
+        }
+
+        if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
+            $this->IdCard = $param["IdCard"];
         }
 
         if (array_key_exists("Idcard",$param) and $param["Idcard"] !== null) {

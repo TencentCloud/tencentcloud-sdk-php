@@ -100,6 +100,8 @@ video 纯视频
  * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
  * @method integer getVideoDuration() 获取录制时长
  * @method void setVideoDuration(integer $VideoDuration) 设置录制时长
+ * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+ * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -234,6 +236,11 @@ video 纯视频
     public $VideoDuration;
 
     /**
+     * @var integer 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     */
+    public $EndDelayTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -279,6 +286,7 @@ video 纯视频
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
      * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
      * @param integer $VideoDuration 录制时长
+     * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -380,6 +388,10 @@ video 纯视频
 
         if (array_key_exists("VideoDuration",$param) and $param["VideoDuration"] !== null) {
             $this->VideoDuration = $param["VideoDuration"];
+        }
+
+        if (array_key_exists("EndDelayTime",$param) and $param["EndDelayTime"] !== null) {
+            $this->EndDelayTime = $param["EndDelayTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

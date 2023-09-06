@@ -26,8 +26,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
  * @method array getHostIds() 获取实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
  * @method void setHostIds(array $HostIds) 设置实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
- * @method array getHostIps() 获取指定母机IP生产子机
- * @method void setHostIps(array $HostIps) 设置指定母机IP生产子机
  * @method string getHostId() 获取实例所属的专用宿主机ID，仅用于出参。
  * @method void setHostId(string $HostId) 设置实例所属的专用宿主机ID，仅用于出参。
  */
@@ -49,11 +47,6 @@ class Placement extends AbstractModel
     public $HostIds;
 
     /**
-     * @var array 指定母机IP生产子机
-     */
-    public $HostIps;
-
-    /**
      * @var string 实例所属的专用宿主机ID，仅用于出参。
      */
     public $HostId;
@@ -62,7 +55,6 @@ class Placement extends AbstractModel
      * @param string $Zone 实例所属的可用区ID。该参数可以通过调用  [DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
      * @param integer $ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
      * @param array $HostIds 实例所属的专用宿主机ID列表，仅用于入参。如果您有购买专用宿主机并且指定了该参数，则您购买的实例就会随机的部署在这些专用宿主机上。
-     * @param array $HostIps 指定母机IP生产子机
      * @param string $HostId 实例所属的专用宿主机ID，仅用于出参。
      */
     function __construct()
@@ -88,10 +80,6 @@ class Placement extends AbstractModel
 
         if (array_key_exists("HostIds",$param) and $param["HostIds"] !== null) {
             $this->HostIds = $param["HostIds"];
-        }
-
-        if (array_key_exists("HostIps",$param) and $param["HostIps"] !== null) {
-            $this->HostIps = $param["HostIps"];
         }
 
         if (array_key_exists("HostId",$param) and $param["HostId"] !== null) {

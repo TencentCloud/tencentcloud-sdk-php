@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置pod状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取pod启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(string $StartTime) 设置pod启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndTime() 获取pod结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndTime(string $EndTime) 设置pod结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ResourceConfigInfo getResourceConfigInfo() 获取pod资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceConfigInfo(ResourceConfigInfo $ResourceConfigInfo) 设置pod资源配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PodInfo extends AbstractModel
 {
@@ -54,11 +66,35 @@ class PodInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string pod启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTime;
+
+    /**
+     * @var string pod结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndTime;
+
+    /**
+     * @var ResourceConfigInfo pod资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceConfigInfo;
+
+    /**
      * @param string $Name pod名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IP pod的IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status pod状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime pod启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EndTime pod结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceConfigInfo $ResourceConfigInfo pod资源配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +120,19 @@ class PodInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("ResourceConfigInfo",$param) and $param["ResourceConfigInfo"] !== null) {
+            $this->ResourceConfigInfo = new ResourceConfigInfo();
+            $this->ResourceConfigInfo->deserialize($param["ResourceConfigInfo"]);
         }
     }
 }

@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisasterRecoveryType(string $DisasterRecoveryType) 设置集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEgress() 获取网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEgress(string $Egress) 设置网络出口
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -236,6 +240,12 @@ class Cluster extends AbstractModel
     public $DisasterRecoveryType;
 
     /**
+     * @var string 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Egress;
+
+    /**
      * @param string $ClusterId 集群唯一ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型，如TGW，STGW，VPCGW
@@ -275,6 +285,8 @@ class Cluster extends AbstractModel
      * @param string $ClustersVersion 集群版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisasterRecoveryType 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Egress 网络出口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -381,6 +393,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("DisasterRecoveryType",$param) and $param["DisasterRecoveryType"] !== null) {
             $this->DisasterRecoveryType = $param["DisasterRecoveryType"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

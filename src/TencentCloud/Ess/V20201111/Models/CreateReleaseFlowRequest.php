@@ -20,66 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReleaseFlow请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method string getNeedRelievedFlowId() 获取待解除的签署流程编号（即原签署流程的编号）
- * @method void setNeedRelievedFlowId(string $NeedRelievedFlowId) 设置待解除的签署流程编号（即原签署流程的编号）
- * @method RelieveInfo getReliveInfo() 获取解除协议内容
- * @method void setReliveInfo(RelieveInfo $ReliveInfo) 设置解除协议内容
- * @method array getReleasedApprovers() 获取非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量
- * @method void setReleasedApprovers(array $ReleasedApprovers) 设置非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量
- * @method integer getDeadline() 获取签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
- * @method void setDeadline(integer $Deadline) 设置签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getNeedRelievedFlowId() 获取待解除的签署流程编号（即原签署流程的编号）。
+ * @method void setNeedRelievedFlowId(string $NeedRelievedFlowId) 设置待解除的签署流程编号（即原签署流程的编号）。
+ * @method RelieveInfo getReliveInfo() 获取解除协议内容。
+ * @method void setReliveInfo(RelieveInfo $ReliveInfo) 设置解除协议内容。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method array getReleasedApprovers() 获取解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/>
+ * @method void setReleasedApprovers(array $ReleasedApprovers) 设置解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/>
+ * @method integer getDeadline() 获取合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+ * @method void setDeadline(integer $Deadline) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+ * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+ * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
  */
 class CreateReleaseFlowRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 待解除的签署流程编号（即原签署流程的编号）
+     * @var string 待解除的签署流程编号（即原签署流程的编号）。
      */
     public $NeedRelievedFlowId;
 
     /**
-     * @var RelieveInfo 解除协议内容
+     * @var RelieveInfo 解除协议内容。
      */
     public $ReliveInfo;
 
     /**
-     * @var array 非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量
-     */
-    public $ReleasedApprovers;
-
-    /**
-     * @var integer 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
-     */
-    public $Deadline;
-
-    /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param string $NeedRelievedFlowId 待解除的签署流程编号（即原签署流程的编号）
-     * @param RelieveInfo $ReliveInfo 解除协议内容
-     * @param array $ReleasedApprovers 非必须，解除协议的本企业签署人列表，
-默认使用原流程的签署人列表,当解除协议的签署人与原流程的签署人不能相同时（例如原流程签署人离职了），需要指定本企业其他已实名员工来替换原流程中的原签署人，注意需要指明原签署人的编号(ReceiptId,通过DescribeFlowInfo接口获取)来代表需要替换哪一个签署人
-解除协议的签署人数量不能多于原流程的签署人数量
-     * @param integer $Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var array 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/>
+     */
+    public $ReleasedApprovers;
+
+    /**
+     * @var integer 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     */
+    public $Deadline;
+
+    /**
+     * @var string 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     */
+    public $UserData;
+
+    /**
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $NeedRelievedFlowId 待解除的签署流程编号（即原签署流程的编号）。
+     * @param RelieveInfo $ReliveInfo 解除协议内容。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param array $ReleasedApprovers 解除协议的签署人列表(如不指定该参数，默认使用原流程的签署人列表)。 <br/>
+如需更换原合同中的签署人，可通过指定该签署人的RecipientId编号更换此签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+解除协议的签署人数量不能多于原流程的签署人数量。<br/>
+
+`注意：只能更换同企业的签署人。`<br/>
+`注意：不支持更换个人类型的签署人。`<br/>
+     * @param integer $Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
+如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     * @param string $UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      */
     function __construct()
     {
@@ -108,6 +144,11 @@ class CreateReleaseFlowRequest extends AbstractModel
             $this->ReliveInfo->deserialize($param["ReliveInfo"]);
         }
 
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
+        }
+
         if (array_key_exists("ReleasedApprovers",$param) and $param["ReleasedApprovers"] !== null) {
             $this->ReleasedApprovers = [];
             foreach ($param["ReleasedApprovers"] as $key => $value){
@@ -121,9 +162,8 @@ class CreateReleaseFlowRequest extends AbstractModel
             $this->Deadline = $param["Deadline"];
         }
 
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
     }
 }

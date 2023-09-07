@@ -133,8 +133,8 @@ use TencentCloud\Cbs\V20170312\Models as Models;
  * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识，支持批量修改。
  * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
 
-* 当前仅支持修改快照名称及将非永久快照修改为永久快照。
-* “快照名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。
+* 本接口支持修改快照名称及到期时间，以及将非永久快照修改为永久快照。
+* “快照名称”仅为方便用户管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。
  * @method Models\ModifySnapshotsSharePermissionResponse ModifySnapshotsSharePermission(Models\ModifySnapshotsSharePermissionRequest $req) 本接口（ModifySnapshotsSharePermission）用于修改快照分享信息。
 
 分享快照后，被分享账户可以通过该快照创建云硬盘。

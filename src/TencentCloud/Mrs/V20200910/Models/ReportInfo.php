@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimes(array $Times) 设置未归类时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBedNo() 获取床号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBedNo(string $BedNo) 设置床号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportInfo extends AbstractModel
 {
@@ -274,6 +278,12 @@ class ReportInfo extends AbstractModel
     public $Times;
 
     /**
+     * @var string 床号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BedNo;
+
+    /**
      * @param string $Hospital 医院名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentName 科室名称
@@ -323,6 +333,8 @@ class ReportInfo extends AbstractModel
      * @param string $PrintTime 打印时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Times 未归类时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BedNo 床号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -441,6 +453,10 @@ class ReportInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Times, $obj);
             }
+        }
+
+        if (array_key_exists("BedNo",$param) and $param["BedNo"] !== null) {
+            $this->BedNo = $param["BedNo"];
         }
     }
 }

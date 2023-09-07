@@ -200,6 +200,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置在报告图片中的坐标
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Size getIsthmusThickness() 获取峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsthmusThickness(Size $IsthmusThickness) 设置峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TuberInfo extends AbstractModel
 {
@@ -392,6 +396,7 @@ class TuberInfo extends AbstractModel
     /**
      * @var Size 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $IsthmusThicknese;
 
@@ -472,6 +477,12 @@ class TuberInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
+
+    /**
+     * @var Size 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsthmusThickness;
 
     /**
      * @param BlockInfo $Type 类型
@@ -563,6 +574,8 @@ class TuberInfo extends AbstractModel
      * @param BlockInfo $ImageFeature 影像特征
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Size $IsthmusThickness 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -811,6 +824,11 @@ class TuberInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Coords, $obj);
             }
+        }
+
+        if (array_key_exists("IsthmusThickness",$param) and $param["IsthmusThickness"] !== null) {
+            $this->IsthmusThickness = new Size();
+            $this->IsthmusThickness->deserialize($param["IsthmusThickness"]);
         }
     }
 }

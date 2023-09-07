@@ -24,16 +24,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportUrl(string $ReportUrl) 设置出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败
- * @method void setStatus(string $Status) 设置出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败
+ * @method string getStatus() 获取签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul>
+ * @method void setStatus(string $Status) 设置签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,11 +48,12 @@ class DescribeFlowEvidenceReportResponse extends AbstractModel
     public $ReportUrl;
 
     /**
-     * @var string 出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败
+     * @var string 签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul>
      */
     public $Status;
 
@@ -62,11 +65,12 @@ EvidenceStatusFailed  出证任务执行失败
     /**
      * @param string $ReportUrl 出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 出证任务执行的状态, 分布表示下面的含义
-
-EvidenceStatusExecuting  出证任务在执行中
-EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出证任务执行失败
+     * @param string $Status 签署报告出证任务的状态
+<ul>
+<li>EvidenceStatusExecuting : 出证任务在执行中</li>
+<li>EvidenceStatusSuccess : 出证任务执行成功</li>
+<li>EvidenceStatusFailed : 出证任务执行失败</li>
+</ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20180301\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 人脸属性信息
+ * FreshAntiFakeUrl请求参数结构体
  *
- * @method integer getType() 获取属性值
- * @method void setType(integer $Type) 设置属性值
- * @method float getProbability() 获取Type识别概率值,[0,1],代表判断正确的概率。
- * @method void setProbability(float $Probability) 设置Type识别概率值,[0,1],代表判断正确的概率。
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
+ * @method integer getId() 获取Id
+ * @method void setId(integer $Id) 设置Id
  */
-class AttributeItem extends AbstractModel
+class FreshAntiFakeUrlRequest extends AbstractModel
 {
     /**
-     * @var integer 属性值
+     * @var string 域名
      */
-    public $Type;
+    public $Domain;
 
     /**
-     * @var float Type识别概率值,[0,1],代表判断正确的概率。
+     * @var integer Id
      */
-    public $Probability;
+    public $Id;
 
     /**
-     * @param integer $Type 属性值
-     * @param float $Probability Type识别概率值,[0,1],代表判断正确的概率。
+     * @param string $Domain 域名
+     * @param integer $Id Id
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class AttributeItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
-        if (array_key_exists("Probability",$param) and $param["Probability"] !== null) {
-            $this->Probability = $param["Probability"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

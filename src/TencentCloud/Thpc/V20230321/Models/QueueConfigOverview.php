@@ -54,6 +54,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxNodesPerCycle(integer $MaxNodesPerCycle) 设置每轮扩容最大节点个数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScaleUpMemRatio() 获取扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScaleUpMemRatio(integer $ScaleUpMemRatio) 设置扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueueConfigOverview extends AbstractModel
 {
@@ -115,6 +127,16 @@ class QueueConfigOverview extends AbstractModel
     public $MaxNodesPerCycle;
 
     /**
+     * @var integer 扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScaleUpMemRatio;
+
+    /**
      * @param string $QueueName 队列名称。
      * @param integer $MinSize 队列中弹性节点数量最小值。取值范围0～200。
      * @param integer $MaxSize 队列中弹性节点数量最大值。取值范围0～200。
@@ -131,6 +153,12 @@ class QueueConfigOverview extends AbstractModel
 此参数配合ScaleOutRatio参数进行使用，用于比例扩容场景下，在作业负载所需节点数量较小时，加快收敛速度。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxNodesPerCycle 每轮扩容最大节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScaleUpMemRatio 扩容过程中，作业的内存在匹配实例机型时增大比例（不会影响作业提交的内存大小，只影响匹配计算过程）。<br/>
+针对场景：由于实例机型的总内存会大于实例内部的可用内存，16GB内存规格的实例，实例操作系统内的可用内存只有约14.9GB内存。假设此时提交一个需要15GB内存的作业，
+
+- 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
+- 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +217,10 @@ class QueueConfigOverview extends AbstractModel
 
         if (array_key_exists("MaxNodesPerCycle",$param) and $param["MaxNodesPerCycle"] !== null) {
             $this->MaxNodesPerCycle = $param["MaxNodesPerCycle"];
+        }
+
+        if (array_key_exists("ScaleUpMemRatio",$param) and $param["ScaleUpMemRatio"] !== null) {
+            $this->ScaleUpMemRatio = $param["ScaleUpMemRatio"];
         }
     }
 }

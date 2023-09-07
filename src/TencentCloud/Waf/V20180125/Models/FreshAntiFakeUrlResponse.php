@@ -14,29 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateReleaseFlow返回参数结构体
+ * FreshAntiFakeUrl返回参数结构体
  *
- * @method string getFlowId() 获取解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
- * @method void setFlowId(string $FlowId) 设置解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+ * @method string getResult() 获取结果成功与否
+ * @method void setResult(string $Result) 设置结果成功与否
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateReleaseFlowResponse extends AbstractModel
+class FreshAntiFakeUrlResponse extends AbstractModel
 {
     /**
-     * @var string 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+     * @var string 结果成功与否
      */
-    public $FlowId;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,9 +38,7 @@ class CreateReleaseFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 解除协议流程编号
-`注意：这里的流程编号对应的合同是本次发起的解除协议。`
-
+     * @param string $Result 结果成功与否
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,8 +54,8 @@ class CreateReleaseFlowResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

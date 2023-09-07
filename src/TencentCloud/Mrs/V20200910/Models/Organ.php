@@ -168,6 +168,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置器官在报告图片中的坐标
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Size getIsthmusThickness() 获取峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsthmusThickness(Size $IsthmusThickness) 设置峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Organ extends AbstractModel
 {
@@ -282,6 +286,7 @@ class Organ extends AbstractModel
     /**
      * @var Size 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $IsthmusThicknese;
 
@@ -394,6 +399,12 @@ class Organ extends AbstractModel
     public $Coords;
 
     /**
+     * @var Size 峡部厚度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsthmusThickness;
+
+    /**
      * @param Part $Part 部位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Size 大小
@@ -467,6 +478,8 @@ class Organ extends AbstractModel
      * @param BlockInfo $Operation 手术情况
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Size $IsthmusThickness 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -671,6 +684,11 @@ class Organ extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Coords, $obj);
             }
+        }
+
+        if (array_key_exists("IsthmusThickness",$param) and $param["IsthmusThickness"] !== null) {
+            $this->IsthmusThickness = new Size();
+            $this->IsthmusThickness->deserialize($param["IsthmusThickness"]);
         }
     }
 }

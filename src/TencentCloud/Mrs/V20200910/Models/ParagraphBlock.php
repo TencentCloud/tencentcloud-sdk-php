@@ -130,6 +130,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreatmentResultText(string $TreatmentResultText) 设置治疗结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMenstrualHistoryText() 获取月经史
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMenstrualHistoryText(string $MenstrualHistoryText) 设置月经史
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParagraphBlock extends AbstractModel
 {
@@ -245,6 +249,7 @@ class ParagraphBlock extends AbstractModel
     /**
      * @var string 月经史
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $MenstruallHistoryText;
 
@@ -295,6 +300,12 @@ class ParagraphBlock extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreatmentResultText;
+
+    /**
+     * @var string 月经史
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MenstrualHistoryText;
 
     /**
      * @param string $IncisionHealingText 切口愈合情况
@@ -351,6 +362,8 @@ class ParagraphBlock extends AbstractModel
      * @param string $SpecialistExaminationText 专科检查
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TreatmentResultText 治疗结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MenstrualHistoryText 月经史
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -472,6 +485,10 @@ class ParagraphBlock extends AbstractModel
 
         if (array_key_exists("TreatmentResultText",$param) and $param["TreatmentResultText"] !== null) {
             $this->TreatmentResultText = $param["TreatmentResultText"];
+        }
+
+        if (array_key_exists("MenstrualHistoryText",$param) and $param["MenstrualHistoryText"] !== null) {
+            $this->MenstrualHistoryText = $param["MenstrualHistoryText"];
         }
     }
 }

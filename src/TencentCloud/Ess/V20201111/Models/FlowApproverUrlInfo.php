@@ -20,13 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 签署链接信息
  *
- * @method string getSignUrl() 获取签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+ * @method string getSignUrl() 获取签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSignUrl(string $SignUrl) 设置签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+ * @method void setSignUrl(string $SignUrl) 设置签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getApproverType() 获取签署人类型 1-个人
+ * @method integer getApproverType() 获取签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproverType(integer $ApproverType) 设置签署人类型 1-个人
+ * @method void setApproverType(integer $ApproverType) 设置签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproverName() 获取签署人姓名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,21 +44,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverMobile(string $ApproverMobile) 设置签署人手机号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLongUrl() 获取签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+ * @method string getLongUrl() 获取签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLongUrl(string $LongUrl) 设置签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+ * @method void setLongUrl(string $LongUrl) 设置签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverUrlInfo extends AbstractModel
 {
     /**
-     * @var string 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @var string 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignUrl;
 
     /**
-     * @var integer 签署人类型 1-个人
+     * @var integer 签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverType;
@@ -68,21 +82,27 @@ class FlowApproverUrlInfo extends AbstractModel
     public $ApproverMobile;
 
     /**
-     * @var string 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @var string 签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LongUrl;
 
     /**
-     * @param string $SignUrl 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param string $SignUrl 签署链接(短链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ApproverType 签署人类型 1-个人
+     * @param integer $ApproverType 签署参与人类型 
+<ul><li> **1** :个人参与方</li></ul>
+
+注: `现在仅支持个人参与方`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverName 签署人姓名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverMobile 签署人手机号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LongUrl 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param string $LongUrl 签署链接(长链形式呈现)。请注意保密，不要将其外泄给无关用户。
+注: `注意该链接有效期为30分钟`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

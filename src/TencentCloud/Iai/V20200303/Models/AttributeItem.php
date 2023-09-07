@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getType() 获取属性值
  * @method void setType(integer $Type) 设置属性值
- * @method float getProbability() 获取Type识别概率值，【0,1】,代表判断正确的概率。
- * @method void setProbability(float $Probability) 设置Type识别概率值，【0,1】,代表判断正确的概率。
+ * @method float getProbability() 获取Type识别概率值,[0,1],代表判断正确的概率。
+ * @method void setProbability(float $Probability) 设置Type识别概率值,[0,1],代表判断正确的概率。
  */
 class AttributeItem extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AttributeItem extends AbstractModel
     public $Type;
 
     /**
-     * @var float Type识别概率值，【0,1】,代表判断正确的概率。
+     * @var float Type识别概率值,[0,1],代表判断正确的概率。
      */
     public $Probability;
 
     /**
      * @param integer $Type 属性值
-     * @param float $Probability Type识别概率值，【0,1】,代表判断正确的概率。
+     * @param float $Probability Type识别概率值,[0,1],代表判断正确的概率。
      */
     function __construct()
     {

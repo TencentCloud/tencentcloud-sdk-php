@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Trocket\V20230308\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddSpartaProtectionsAuto返回参数结构体
+ * DeleteInstance返回参数结构体
  *
- * @method array getFailedInfos() 获取失败原因
- * @method void setFailedInfos(array $FailedInfos) 设置失败原因
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AddSpartaProtectionsAutoResponse extends AbstractModel
+class DeleteInstanceResponse extends AbstractModel
 {
-    /**
-     * @var array 失败原因
-     */
-    public $FailedInfos;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $FailedInfos 失败原因
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class AddSpartaProtectionsAutoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FailedInfos",$param) and $param["FailedInfos"] !== null) {
-            $this->FailedInfos = [];
-            foreach ($param["FailedInfos"] as $key => $value){
-                $obj = new FailedInfo();
-                $obj->deserialize($value);
-                array_push($this->FailedInfos, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

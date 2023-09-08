@@ -22,24 +22,40 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
- * @method string getFlowId() 获取签署流程编号,由CreateFlow接口返回
- * @method void setFlowId(string $FlowId) 设置签署流程编号,由CreateFlow接口返回
- * @method string getTemplateId() 获取用户上传的模板ID
- * @method void setTemplateId(string $TemplateId) 设置用户上传的模板ID
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。
+ * @method string getTemplateId() 获取用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
+ * @method void setTemplateId(string $TemplateId) 设置用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
  * @method array getFileNames() 获取文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
  * @method void setFileNames(array $FileNames) 设置文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
- * @method array getFormFields() 获取内容控件信息数组
- * @method void setFormFields(array $FormFields) 设置内容控件信息数组
- * @method boolean getNeedPreview() 获取是否需要生成预览文件 默认不生成；
-预览链接有效期300秒；
- * @method void setNeedPreview(boolean $NeedPreview) 设置是否需要生成预览文件 默认不生成；
-预览链接有效期300秒；
- * @method integer getPreviewType() 获取预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
- * @method void setPreviewType(integer $PreviewType) 设置预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
- * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
+ * @method array getFormFields() 获取电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。
+ * @method void setFormFields(array $FormFields) 设置电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。
+ * @method boolean getNeedPreview() 获取是否为预览模式，取值如下：
+<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式，取值如下：
+<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+ * @method integer getPreviewType() 获取预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+ * @method void setPreviewType(integer $PreviewType) 设置预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getClientToken() 获取已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+ * @method void setClientToken(string $ClientToken) 设置已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -49,12 +65,14 @@ class CreateDocumentRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 签署流程编号,由CreateFlow接口返回
+     * @var string 合同流程ID，为32位字符串。
+此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。
      */
     public $FlowId;
 
     /**
-     * @var string 用户上传的模板ID
+     * @var string 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      */
     public $TemplateId;
 
@@ -64,42 +82,56 @@ class CreateDocumentRequest extends AbstractModel
     public $FileNames;
 
     /**
-     * @var array 内容控件信息数组
+     * @var array 电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。
      */
     public $FormFields;
 
     /**
-     * @var boolean 是否需要生成预览文件 默认不生成；
-预览链接有效期300秒；
+     * @var boolean 是否为预览模式，取值如下：
+<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
      */
     public $NeedPreview;
 
     /**
-     * @var integer 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
+     * @var integer 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
      */
     public $PreviewType;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @var string 客户端Token，保持接口幂等性,最大长度64个字符
+     * @var string 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
      */
     public $ClientToken;
 
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
-     * @param string $FlowId 签署流程编号,由CreateFlow接口返回
-     * @param string $TemplateId 用户上传的模板ID
+     * @param string $FlowId 合同流程ID，为32位字符串。
+此接口的合同流程ID需要由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow" target="_blank">创建签署流程</a>接口创建得到。
+     * @param string $TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      * @param array $FileNames 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
-     * @param array $FormFields 内容控件信息数组
-     * @param boolean $NeedPreview 是否需要生成预览文件 默认不生成；
-预览链接有效期300秒；
-     * @param integer $PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * @param array $FormFields 电子文档的填写控件的填充内容。具体方式可以参考<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#formfield" target="_blank">FormField</a>结构体的定义。
+     * @param boolean $NeedPreview 是否为预览模式，取值如下：
+<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+     * @param integer $PreviewType 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $ClientToken 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
      */
     function __construct()
     {

@@ -20,50 +20,80 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserAutoSignEnableUrl返回参数结构体
  *
- * @method string getUrl() 获取跳转短链
- * @method void setUrl(string $Url) 设置跳转短链
- * @method string getAppId() 获取小程序AppId
- * @method void setAppId(string $AppId) 设置小程序AppId
- * @method string getAppOriginalId() 获取小程序 原始 Id
- * @method void setAppOriginalId(string $AppOriginalId) 设置小程序 原始 Id
- * @method string getPath() 获取跳转路径
- * @method void setPath(string $Path) 设置跳转路径
- * @method string getQrCode() 获取base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
- * @method void setQrCode(string $QrCode) 设置base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
- * @method string getUrlType() 获取链接类型，空-默认小程序端链接，H5SIGN-h5端链接
- * @method void setUrlType(string $UrlType) 设置链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+ * @method string getUrl() 获取个人用户自动签的开通链接, 短链形式
+ * @method void setUrl(string $Url) 设置个人用户自动签的开通链接, 短链形式
+ * @method string getAppId() 获取腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+ * @method void setAppId(string $AppId) 设置腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+ * @method string getAppOriginalId() 获取腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+ * @method void setAppOriginalId(string $AppOriginalId) 设置腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+ * @method string getPath() 获取腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+ * @method void setPath(string $Path) 设置腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+ * @method string getQrCode() 获取base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
+
+注: `如果获取的是H5链接, 则不会返回此二维码图片`
+ * @method void setQrCode(string $QrCode) 设置base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
+
+注: `如果获取的是H5链接, 则不会返回此二维码图片`
+ * @method string getUrlType() 获取返回的链接类型
+<ul><li> 空: 默认小程序端链接</li>
+<li> **H5SIGN** : h5端链接</li></ul>
+ * @method void setUrlType(string $UrlType) 设置返回的链接类型
+<ul><li> 空: 默认小程序端链接</li>
+<li> **H5SIGN** : h5端链接</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateUserAutoSignEnableUrlResponse extends AbstractModel
 {
     /**
-     * @var string 跳转短链
+     * @var string 个人用户自动签的开通链接, 短链形式
      */
     public $Url;
 
     /**
-     * @var string 小程序AppId
+     * @var string 腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
      */
     public $AppId;
 
     /**
-     * @var string 小程序 原始 Id
+     * @var string 腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
      */
     public $AppOriginalId;
 
     /**
-     * @var string 跳转路径
+     * @var string 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
      */
     public $Path;
 
     /**
-     * @var string base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
+     * @var string base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
+
+注: `如果获取的是H5链接, 则不会返回此二维码图片`
      */
     public $QrCode;
 
     /**
-     * @var string 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+     * @var string 返回的链接类型
+<ul><li> 空: 默认小程序端链接</li>
+<li> **H5SIGN** : h5端链接</li></ul>
      */
     public $UrlType;
 
@@ -73,12 +103,22 @@ class CreateUserAutoSignEnableUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Url 跳转短链
-     * @param string $AppId 小程序AppId
-     * @param string $AppOriginalId 小程序 原始 Id
-     * @param string $Path 跳转路径
-     * @param string $QrCode base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
-     * @param string $UrlType 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+     * @param string $Url 个人用户自动签的开通链接, 短链形式
+     * @param string $AppId 腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+     * @param string $AppOriginalId 腾讯电子签小程序的原始 Id,  ，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+     * @param string $Path 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
+
+注: `如果获取的是H5链接, 则不会返回此值`
+     * @param string $QrCode base64 格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
+
+注: `如果获取的是H5链接, 则不会返回此二维码图片`
+     * @param string $UrlType 返回的链接类型
+<ul><li> 空: 默认小程序端链接</li>
+<li> **H5SIGN** : h5端链接</li></ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

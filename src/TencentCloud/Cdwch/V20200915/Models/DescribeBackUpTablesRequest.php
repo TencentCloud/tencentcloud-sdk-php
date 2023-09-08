@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Cdwch\V20200915\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddSpartaProtectionAuto请求参数结构体
+ * DescribeBackUpTables请求参数结构体
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
+ * @method string getInstanceId() 获取集群id
+ * @method void setInstanceId(string $InstanceId) 设置集群id
  */
-class AddSpartaProtectionAutoRequest extends AbstractModel
+class DescribeBackUpTablesRequest extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string 集群id
      */
-    public $Domain;
+    public $InstanceId;
 
     /**
-     * @param string $Domain 域名
+     * @param string $InstanceId 集群id
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class AddSpartaProtectionAutoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

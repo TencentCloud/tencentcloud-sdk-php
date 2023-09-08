@@ -23,6 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trocket\V20230308\Models as Models;
 
 /**
+ * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 购买新实例
+ * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除实例
+ * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，实例ID查询
@@ -34,6 +37,7 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 
 1. TopicName，主题名称模糊搜索
 2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
+ * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改实例属性
  */
 
 class TrocketClient extends AbstractClient

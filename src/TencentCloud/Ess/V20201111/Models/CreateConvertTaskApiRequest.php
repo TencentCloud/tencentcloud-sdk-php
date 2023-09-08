@@ -20,43 +20,91 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConvertTaskApi请求参数结构体
  *
- * @method string getResourceType() 获取资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
- * @method void setResourceType(string $ResourceType) 设置资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
- * @method string getResourceName() 获取资源名称，长度限制为256字符
- * @method void setResourceName(string $ResourceName) 设置资源名称，长度限制为256字符
- * @method string getResourceId() 获取文件Id，通过UploadFiles获取
- * @method void setResourceId(string $ResourceId) 设置文件Id，通过UploadFiles获取
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getResourceType() 获取需要进行转换的资源文件类型
+支持的文件类型如下：
+<ul><li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li>
+<li>bmp</li>
+<li>txt</li></ul>
+ * @method void setResourceType(string $ResourceType) 设置需要进行转换的资源文件类型
+支持的文件类型如下：
+<ul><li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li>
+<li>bmp</li>
+<li>txt</li></ul>
+ * @method string getResourceName() 获取需要进行转换操作的文件资源名称，带资源后缀名。
+
+注:  `资源名称长度限制为256个字符`
+ * @method void setResourceName(string $ResourceName) 设置需要进行转换操作的文件资源名称，带资源后缀名。
+
+注:  `资源名称长度限制为256个字符`
+ * @method string getResourceId() 获取需要进行转换操作的文件资源Id，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取文件资源Id。
+
+注:  `目前，此接口仅支持单个文件进行转换。`
+ * @method void setResourceId(string $ResourceId) 设置需要进行转换操作的文件资源Id，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取文件资源Id。
+
+注:  `目前，此接口仅支持单个文件进行转换。`
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method OrganizationInfo getOrganization() 获取暂未开放
  * @method void setOrganization(OrganizationInfo $Organization) 设置暂未开放
  */
 class CreateConvertTaskApiRequest extends AbstractModel
 {
     /**
-     * @var string 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
+     * @var string 需要进行转换的资源文件类型
+支持的文件类型如下：
+<ul><li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li>
+<li>bmp</li>
+<li>txt</li></ul>
      */
     public $ResourceType;
 
     /**
-     * @var string 资源名称，长度限制为256字符
+     * @var string 需要进行转换操作的文件资源名称，带资源后缀名。
+
+注:  `资源名称长度限制为256个字符`
      */
     public $ResourceName;
 
     /**
-     * @var string 文件Id，通过UploadFiles获取
+     * @var string 需要进行转换操作的文件资源Id，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取文件资源Id。
+
+注:  `目前，此接口仅支持单个文件进行转换。`
      */
     public $ResourceId;
 
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public $Operator;
 
     /**
-     * @var Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
@@ -67,11 +115,27 @@ class CreateConvertTaskApiRequest extends AbstractModel
     public $Organization;
 
     /**
-     * @param string $ResourceType 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
-     * @param string $ResourceName 资源名称，长度限制为256字符
-     * @param string $ResourceId 文件Id，通过UploadFiles获取
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $ResourceType 需要进行转换的资源文件类型
+支持的文件类型如下：
+<ul><li>doc</li>
+<li>docx</li>
+<li>xls</li>
+<li>xlsx</li>
+<li>jpg</li>
+<li>jpeg</li>
+<li>png</li>
+<li>bmp</li>
+<li>txt</li></ul>
+     * @param string $ResourceName 需要进行转换操作的文件资源名称，带资源后缀名。
+
+注:  `资源名称长度限制为256个字符`
+     * @param string $ResourceId 需要进行转换操作的文件资源Id，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">UploadFiles</a>接口获取文件资源Id。
+
+注:  `目前，此接口仅支持单个文件进行转换。`
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param OrganizationInfo $Organization 暂未开放
      */
     function __construct()

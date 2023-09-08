@@ -14,39 +14,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Trocket\V20230308\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 失败描述
+ * IP规则
  *
- * @method string getDomain() 获取域名
+ * @method string getIp() 获取IP地址
+ * @method void setIp(string $Ip) 设置IP地址
+ * @method boolean getAllow() 获取是否允许放行
+ * @method void setAllow(boolean $Allow) 设置是否允许放行
+ * @method string getRemark() 获取备注信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取失败信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置失败信息
+ * @method void setRemark(string $Remark) 设置备注信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class FailedInfo extends AbstractModel
+class IpRule extends AbstractModel
 {
     /**
-     * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string IP地址
      */
-    public $Domain;
+    public $Ip;
 
     /**
-     * @var string 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var boolean 是否允许放行
      */
-    public $Message;
+    public $Allow;
 
     /**
-     * @param string $Domain 域名
+     * @var string 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message 失败信息
+     */
+    public $Remark;
+
+    /**
+     * @param string $Ip IP地址
+     * @param boolean $Allow 是否允许放行
+     * @param string $Remark 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +66,16 @@ class FailedInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
+        if (array_key_exists("Allow",$param) and $param["Allow"] !== null) {
+            $this->Allow = $param["Allow"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

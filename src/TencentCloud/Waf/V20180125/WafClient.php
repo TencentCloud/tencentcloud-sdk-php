@@ -29,8 +29,6 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\AddCustomWhiteRuleResponse AddCustomWhiteRule(Models\AddCustomWhiteRuleRequest $req) 增加精准白名单规则
  * @method Models\AddDomainWhiteRuleResponse AddDomainWhiteRule(Models\AddDomainWhiteRuleRequest $req) 增加域名规则白名单
  * @method Models\AddSpartaProtectionResponse AddSpartaProtection(Models\AddSpartaProtectionRequest $req) 添加Spart防护域名
- * @method Models\AddSpartaProtectionAutoResponse AddSpartaProtectionAuto(Models\AddSpartaProtectionAutoRequest $req) 一键接入
- * @method Models\AddSpartaProtectionsAutoResponse AddSpartaProtectionsAuto(Models\AddSpartaProtectionsAutoRequest $req) 批量添加域名
  * @method Models\CreateAccessExportResponse CreateAccessExport(Models\CreateAccessExportRequest $req) 本接口用于创建访问日志导出
  * @method Models\CreateHostResponse CreateHost(Models\CreateHostRequest $req) clb-waf中添加防护的域名
  * @method Models\DeleteAccessExportResponse DeleteAccessExport(Models\DeleteAccessExportRequest $req) 本接口用于删除访问日志导出
@@ -70,6 +68,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeDomainCountInfoResponse DescribeDomainCountInfo(Models\DescribeDomainCountInfoRequest $req) 获取域名概况
  * @method Models\DescribeDomainDetailsClbResponse DescribeDomainDetailsClb(Models\DescribeDomainDetailsClbRequest $req) 获取一个clb域名详情
  * @method Models\DescribeDomainDetailsSaasResponse DescribeDomainDetailsSaas(Models\DescribeDomainDetailsSaasRequest $req) 查询单个saas域名详情
+ * @method Models\DescribeDomainVerifyResultResponse DescribeDomainVerifyResult(Models\DescribeDomainVerifyResultRequest $req) 获取添加域名操作的结果
  * @method Models\DescribeDomainWhiteRulesResponse DescribeDomainWhiteRules(Models\DescribeDomainWhiteRulesRequest $req) 获取域名的规则白名单
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查询用户所有域名的详细信息
  * @method Models\DescribeFindDomainListResponse DescribeFindDomainList(Models\DescribeFindDomainListRequest $req) 获取发现域名列表接口

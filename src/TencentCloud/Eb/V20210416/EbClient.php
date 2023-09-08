@@ -37,10 +37,14 @@ use TencentCloud\Eb\V20210416\Models as Models;
  * @method Models\DeleteTransformationResponse DeleteTransformation(Models\DeleteTransformationRequest $req) 用于删除转换器
  * @method Models\DescribeLogTagValueResponse DescribeLogTagValue(Models\DescribeLogTagValueRequest $req) 查询日志索引维度值
  * @method Models\GetEventBusResponse GetEventBus(Models\GetEventBusRequest $req) 获取事件集详情
+ * @method Models\GetPlatformEventTemplateResponse GetPlatformEventTemplate(Models\GetPlatformEventTemplateRequest $req) 获取平台产品事件模板
  * @method Models\GetRuleResponse GetRule(Models\GetRuleRequest $req) 获取事件规则详情
  * @method Models\GetTransformationResponse GetTransformation(Models\GetTransformationRequest $req) 用于获取转换器详情
  * @method Models\ListConnectionsResponse ListConnections(Models\ListConnectionsRequest $req) 获取事件连接器列表
  * @method Models\ListEventBusesResponse ListEventBuses(Models\ListEventBusesRequest $req) 获取事件集列表
+ * @method Models\ListPlatformEventNamesResponse ListPlatformEventNames(Models\ListPlatformEventNamesRequest $req) 获取平台产品事件名称
+ * @method Models\ListPlatformEventPatternsResponse ListPlatformEventPatterns(Models\ListPlatformEventPatternsRequest $req) 获取平台产品事件匹配规则
+ * @method Models\ListPlatformProductsResponse ListPlatformProducts(Models\ListPlatformProductsRequest $req) 获取平台产品列表
  * @method Models\ListRulesResponse ListRules(Models\ListRulesRequest $req) 获取事件规则列表
  * @method Models\ListTargetsResponse ListTargets(Models\ListTargetsRequest $req) 获取事件目标列表
  * @method Models\PublishEventResponse PublishEvent(Models\PublishEventRequest $req) （已废弃）用于Event事件投递

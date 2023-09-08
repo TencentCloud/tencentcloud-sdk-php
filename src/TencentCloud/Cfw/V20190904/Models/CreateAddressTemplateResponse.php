@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取创建结果,0成功
  * @method void setStatus(integer $Status) 设置创建结果,0成功
+ * @method string getUuid() 获取唯一Id
+ * @method void setUuid(string $Uuid) 设置唯一Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class CreateAddressTemplateResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string 唯一Id
+     */
+    public $Uuid;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $Status 创建结果,0成功
+     * @param string $Uuid 唯一Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateAddressTemplateResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

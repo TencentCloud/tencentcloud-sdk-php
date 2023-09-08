@@ -46,11 +46,15 @@ use TencentCloud\Common\AbstractModel;
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
  * @method void setDeadline(integer $Deadline) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
- * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+ * @method string getUserData() 获取调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
- * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+ * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
  */
 class CreateReleaseFlowRequest extends AbstractModel
@@ -93,8 +97,10 @@ class CreateReleaseFlowRequest extends AbstractModel
     public $Deadline;
 
     /**
-     * @var string 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+     * @var string 调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      */
     public $UserData;
@@ -113,8 +119,10 @@ class CreateReleaseFlowRequest extends AbstractModel
 `注意：不支持更换个人类型的签署人。`<br/>
      * @param integer $Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
-     * @param string $UserData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 20480长度。
+     * @param string $UserData 调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。
+
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+
 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      */
     function __construct()

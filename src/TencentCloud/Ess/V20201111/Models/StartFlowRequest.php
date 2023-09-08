@@ -35,11 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method integer getCcNotifyType() 获取若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul>
  * @method void setCcNotifyType(integer $CcNotifyType) 设置若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul>
  */
 class StartFlowRequest extends AbstractModel
 {
@@ -69,8 +69,8 @@ class StartFlowRequest extends AbstractModel
 
     /**
      * @var integer 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul>
      */
     public $CcNotifyType;
 
@@ -83,8 +83,8 @@ class StartFlowRequest extends AbstractModel
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param integer $CcNotifyType 若在创建签署流程时指定了关注人CcInfos，此参数可设定向关注人发送短信通知的类型：
-0 - 合同发起时通知（默认）
-1 - 签署完成后通知
+<ul><li> **0** :合同发起时通知通知对方来查看合同（默认）</li>
+<li> **1** : 签署完成后通知对方来查看合同</li></ul>
      */
     function __construct()
     {

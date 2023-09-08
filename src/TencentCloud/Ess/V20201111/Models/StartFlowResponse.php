@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * StartFlow返回参数结构体
  *
  * @method string getStatus() 获取发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
  * @method void setStatus(string $Status) 设置发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,9 +35,9 @@ class StartFlowResponse extends AbstractModel
 {
     /**
      * @var string 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
      */
     public $Status;
 
@@ -48,9 +48,9 @@ EXECUTING - 已提交发起任务
 
     /**
      * @param string $Status 发起成功后返回的状态，根据合同流程的不同，返回不同状态：
-START - 发起成功
-REVIEW - 提交审核成功
-EXECUTING - 已提交发起任务
+<ul><li> **START** : 发起成功, 合同进入签署环节</li>
+<li> **REVIEW** : 提交审核成功, 合同需要发起审核, 发起方企业通过接口审核通过后合同才进入签署环境  `白名单功能，使用前请联系对接的客户经理沟通。`</li>
+<li> **EXECUTING** : 已提交发起任务且PDF合同正在合成中, 等PDF合同合成成功后进入签署环节</li></ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

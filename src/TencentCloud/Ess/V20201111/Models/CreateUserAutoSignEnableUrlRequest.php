@@ -20,65 +20,73 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserAutoSignEnableUrl请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息,UserId必填
- * @method void setOperator(UserInfo $Operator) 设置操作人信息,UserId必填
- * @method string getSceneKey() 获取自动签场景:
-E_PRESCRIPTION_AUTO_SIGN 电子处方
- * @method void setSceneKey(string $SceneKey) 设置自动签场景:
-E_PRESCRIPTION_AUTO_SIGN 电子处方
- * @method AutoSignConfig getAutoSignConfig() 获取自动签开通，签署相关配置
- * @method void setAutoSignConfig(AutoSignConfig $AutoSignConfig) 设置自动签开通，签署相关配置
- * @method string getUrlType() 获取链接类型，
-空-默认小程序端链接
-H5SIGN-h5端链接
- * @method void setUrlType(string $UrlType) 设置链接类型，
-空-默认小程序端链接
-H5SIGN-h5端链接
- * @method string getNotifyType() 获取通知类型
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getSceneKey() 获取自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
 
-默认不设置为不通知开通方，
-SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
- * @method void setNotifyType(string $NotifyType) 设置通知类型
+注: `现在仅支持电子处方场景`
+ * @method void setSceneKey(string $SceneKey) 设置自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
 
-默认不设置为不通知开通方，
-SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
+注: `现在仅支持电子处方场景`
+ * @method AutoSignConfig getAutoSignConfig() 获取自动签开通配置信息, 包括开通的人员的信息等
+ * @method void setAutoSignConfig(AutoSignConfig $AutoSignConfig) 设置自动签开通配置信息, 包括开通的人员的信息等
+ * @method string getUrlType() 获取生成的链接类型：
+<ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+ * @method void setUrlType(string $UrlType) 设置生成的链接类型：
+<ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+ * @method string getNotifyType() 获取是否通知开通方，通知类型:
+<ul><li>默认不设置为不通知开通方</li>
+<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
+ * @method void setNotifyType(string $NotifyType) 设置是否通知开通方，通知类型:
+<ul><li>默认不设置为不通知开通方</li>
+<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
  * @method string getNotifyAddress() 获取如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
  * @method void setNotifyAddress(string $NotifyAddress) 设置如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
- * @method integer getExpiredTime() 获取链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
- * @method void setExpiredTime(integer $ExpiredTime) 设置链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method integer getExpiredTime() 获取链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
+ * @method void setExpiredTime(integer $ExpiredTime) 设置链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class CreateUserAutoSignEnableUrlRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息,UserId必填
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 自动签场景:
-E_PRESCRIPTION_AUTO_SIGN 电子处方
+     * @var string 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
      */
     public $SceneKey;
 
     /**
-     * @var AutoSignConfig 自动签开通，签署相关配置
+     * @var AutoSignConfig 自动签开通配置信息, 包括开通的人员的信息等
      */
     public $AutoSignConfig;
 
     /**
-     * @var string 链接类型，
-空-默认小程序端链接
-H5SIGN-h5端链接
+     * @var string 生成的链接类型：
+<ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+<li> **H5SIGN** : 生成H5端开通链接</li><ul>
      */
     public $UrlType;
 
     /**
-     * @var string 通知类型
-
-默认不设置为不通知开通方，
-SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
+     * @var string 是否通知开通方，通知类型:
+<ul><li>默认不设置为不通知开通方</li>
+<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
      */
     public $NotifyType;
 
@@ -88,30 +96,34 @@ SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
     public $NotifyAddress;
 
     /**
-     * @var integer 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+     * @var integer 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
      */
     public $ExpiredTime;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 操作人信息,UserId必填
-     * @param string $SceneKey 自动签场景:
-E_PRESCRIPTION_AUTO_SIGN 电子处方
-     * @param AutoSignConfig $AutoSignConfig 自动签开通，签署相关配置
-     * @param string $UrlType 链接类型，
-空-默认小程序端链接
-H5SIGN-h5端链接
-     * @param string $NotifyType 通知类型
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
 
-默认不设置为不通知开通方，
-SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
+注: `现在仅支持电子处方场景`
+     * @param AutoSignConfig $AutoSignConfig 自动签开通配置信息, 包括开通的人员的信息等
+     * @param string $UrlType 生成的链接类型：
+<ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+     * @param string $NotifyType 是否通知开通方，通知类型:
+<ul><li>默认不设置为不通知开通方</li>
+<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
      * @param string $NotifyAddress 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
-     * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {

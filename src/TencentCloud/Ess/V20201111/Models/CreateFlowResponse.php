@@ -20,27 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlow返回参数结构体
  *
- * @method string getFlowId() 获取签署流程编号，
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-返回的流程编号，需要在CreateDocument，StartFlow中使用，
+注:
+此返回的合同流程ID，需再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument" target="_blank">创建电子文档</a>和<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>接口将合同开始后，合同才能进入签署环节
 
-注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
- * @method void setFlowId(string $FlowId) 设置签署流程编号，
 
-返回的流程编号，需要在CreateDocument，StartFlow中使用，
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
+注:
+此返回的合同流程ID，需再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument" target="_blank">创建电子文档</a>和<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>接口将合同开始后，合同才能进入签署环节
+
+
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateFlowResponse extends AbstractModel
 {
     /**
-     * @var string 签署流程编号，
+     * @var string 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-返回的流程编号，需要在CreateDocument，StartFlow中使用，
+注:
+此返回的合同流程ID，需再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument" target="_blank">创建电子文档</a>和<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>接口将合同开始后，合同才能进入签署环节
 
-注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
+
      */
     public $FlowId;
 
@@ -50,11 +56,13 @@ class CreateFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 签署流程编号，
+     * @param string $FlowId 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-返回的流程编号，需要在CreateDocument，StartFlow中使用，
+注:
+此返回的合同流程ID，需再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument" target="_blank">创建电子文档</a>和<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>接口将合同开始后，合同才能进入签署环节
 
-注意：这三个接口（CreateFlow，CreateDocument，StartFlow）要一并调用，才算发起成功
+
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

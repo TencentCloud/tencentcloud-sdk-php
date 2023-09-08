@@ -20,144 +20,137 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自动签开启、签署相关配置
  *
- * @method UserThreeFactor getUserInfo() 获取自动签开通个人用户的三要素
- * @method void setUserInfo(UserThreeFactor $UserInfo) 设置自动签开通个人用户的三要素
- * @method string getCallbackUrl() 获取接受回调URL地址。支持http://或者https://协议
+ * @method UserThreeFactor getUserInfo() 获取自动签开通个人用户信息, 包括名字,身份证等
+ * @method void setUserInfo(UserThreeFactor $UserInfo) 设置自动签开通个人用户信息, 包括名字,身份证等
+ * @method boolean getCertInfoCallback() 获取是否回调证书信息:
+<ul><li>**false**: 不需要(默认)</li>
+<li>**true**:需要</li></ul>
+ * @method void setCertInfoCallback(boolean $CertInfoCallback) 设置是否回调证书信息:
+<ul><li>**false**: 不需要(默认)</li>
+<li>**true**:需要</li></ul>
+ * @method boolean getUserDefineSeal() 获取是否支持用户自定义签名印章:
+<ul><li>**false**: 不能自己定义(默认)</li>
+<li>**true**: 可以自己定义</li></ul>
+ * @method void setUserDefineSeal(boolean $UserDefineSeal) 设置是否支持用户自定义签名印章:
+<ul><li>**false**: 不能自己定义(默认)</li>
+<li>**true**: 可以自己定义</li></ul>
+ * @method boolean getSealImgCallback() 获取回调中是否需要自动签将要使用的印章(签名) 图片的 base64:
+<ul><li>**false**: 不需要(默认)</li>
+<li>**true**: 需要</li></ul>
+ * @method void setSealImgCallback(boolean $SealImgCallback) 设置回调中是否需要自动签将要使用的印章(签名) 图片的 base64:
+<ul><li>**false**: 不需要(默认)</li>
+<li>**true**: 需要</li></ul>
+ * @method string getCallbackUrl() 获取执行结果的回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
+腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+ * @method void setCallbackUrl(string $CallbackUrl) 设置执行结果的回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
+腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+ * @method array getVerifyChannels() 获取开通时候的身份验证方式, 取值为：
+<ul><li>**WEIXINAPP** : 微信人脸识别</li>
+<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**TELECOM** : 运营商三要素验证</li></ul>
+注：
+<ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
+ * @method void setVerifyChannels(array $VerifyChannels) 设置开通时候的身份验证方式, 取值为：
+<ul><li>**WEIXINAPP** : 微信人脸识别</li>
+<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**TELECOM** : 运营商三要素验证</li></ul>
+注：
+<ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
+ * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。
 
-Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
- * @method void setCallbackUrl(string $CallbackUrl) 设置接受回调URL地址。支持http://或者https://协议
+<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
 
-Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
- * @method boolean getCertInfoCallback() 获取是否回调证书信息
-false-不需要 (默认值)
-true-需要
- * @method void setCertInfoCallback(boolean $CertInfoCallback) 设置是否回调证书信息
-false-不需要 (默认值)
-true-需要
- * @method boolean getUserDefineSeal() 获取是否支持用户自定义签名印章
-false-不需要(默认)
-true-需要
- * @method void setUserDefineSeal(boolean $UserDefineSeal) 设置是否支持用户自定义签名印章
-false-不需要(默认)
-true-需要
- * @method boolean getSealImgCallback() 获取是否需要回调的时候返回印章(签名) 图片的 base64
+ * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。
 
-false-不需要(默认)
-true-需要
- * @method void setSealImgCallback(boolean $SealImgCallback) 设置是否需要回调的时候返回印章(签名) 图片的 base64
-
-false-不需要(默认)
-true-需要
- * @method array getVerifyChannels() 获取开通时候的验证方式, 分布为
-
-WEIXINAPP : 微信人脸识别
-INSIGHT : 慧眼人脸认别
-TELECOM : 运营商三要素验证
-
-如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
-
-如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
- * @method void setVerifyChannels(array $VerifyChannels) 设置开通时候的验证方式, 分布为
-
-WEIXINAPP : 微信人脸识别
-INSIGHT : 慧眼人脸认别
-TELECOM : 运营商三要素验证
-
-如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
-
-如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
- * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减
-
- * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减
+<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
  */
 class AutoSignConfig extends AbstractModel
 {
     /**
-     * @var UserThreeFactor 自动签开通个人用户的三要素
+     * @var UserThreeFactor 自动签开通个人用户信息, 包括名字,身份证等
      */
     public $UserInfo;
 
     /**
-     * @var string 接受回调URL地址。支持http://或者https://协议
-
-Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
-     */
-    public $CallbackUrl;
-
-    /**
-     * @var boolean 是否回调证书信息
-false-不需要 (默认值)
-true-需要
+     * @var boolean 是否回调证书信息:
+<ul><li>**false**: 不需要(默认)</li>
+<li>**true**:需要</li></ul>
      */
     public $CertInfoCallback;
 
     /**
-     * @var boolean 是否支持用户自定义签名印章
-false-不需要(默认)
-true-需要
+     * @var boolean 是否支持用户自定义签名印章:
+<ul><li>**false**: 不能自己定义(默认)</li>
+<li>**true**: 可以自己定义</li></ul>
      */
     public $UserDefineSeal;
 
     /**
-     * @var boolean 是否需要回调的时候返回印章(签名) 图片的 base64
-
-false-不需要(默认)
-true-需要
+     * @var boolean 回调中是否需要自动签将要使用的印章(签名) 图片的 base64:
+<ul><li>**false**: 不需要(默认)</li>
+<li>**true**: 需要</li></ul>
      */
     public $SealImgCallback;
 
     /**
-     * @var array 开通时候的验证方式, 分布为
+     * @var string 执行结果的回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
+腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     * @deprecated
+     */
+    public $CallbackUrl;
 
-WEIXINAPP : 微信人脸识别
-INSIGHT : 慧眼人脸认别
-TELECOM : 运营商三要素验证
-
-如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
-
-如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+    /**
+     * @var array 开通时候的身份验证方式, 取值为：
+<ul><li>**WEIXINAPP** : 微信人脸识别</li>
+<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**TELECOM** : 运营商三要素验证</li></ul>
+注：
+<ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
      */
     public $VerifyChannels;
 
     /**
-     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减
+     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
 
      */
     public $LicenseType;
 
     /**
-     * @param UserThreeFactor $UserInfo 自动签开通个人用户的三要素
-     * @param string $CallbackUrl 接受回调URL地址。支持http://或者https://协议
+     * @param UserThreeFactor $UserInfo 自动签开通个人用户信息, 包括名字,身份证等
+     * @param boolean $CertInfoCallback 是否回调证书信息:
+<ul><li>**false**: 不需要(默认)</li>
+<li>**true**:需要</li></ul>
+     * @param boolean $UserDefineSeal 是否支持用户自定义签名印章:
+<ul><li>**false**: 不能自己定义(默认)</li>
+<li>**true**: 可以自己定义</li></ul>
+     * @param boolean $SealImgCallback 回调中是否需要自动签将要使用的印章(签名) 图片的 base64:
+<ul><li>**false**: 不需要(默认)</li>
+<li>**true**: 需要</li></ul>
+     * @param string $CallbackUrl 执行结果的回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
+腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
+回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
+     * @param array $VerifyChannels 开通时候的身份验证方式, 取值为：
+<ul><li>**WEIXINAPP** : 微信人脸识别</li>
+<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**TELECOM** : 运营商三要素验证</li></ul>
+注：
+<ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
+<li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li>
+     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
 
-Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
-     * @param boolean $CertInfoCallback 是否回调证书信息
-false-不需要 (默认值)
-true-需要
-     * @param boolean $UserDefineSeal 是否支持用户自定义签名印章
-false-不需要(默认)
-true-需要
-     * @param boolean $SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
-
-false-不需要(默认)
-true-需要
-     * @param array $VerifyChannels 开通时候的验证方式, 分布为
-
-WEIXINAPP : 微信人脸识别
-INSIGHT : 慧眼人脸认别
-TELECOM : 运营商三要素验证
-
-如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
-
-如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
-     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。
-0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
-1-不绑定，发起合同时将按标准合同套餐进行扣减
+<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
+<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
      */
     function __construct()
     {
@@ -177,10 +170,6 @@ TELECOM : 运营商三要素验证
             $this->UserInfo->deserialize($param["UserInfo"]);
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
-        }
-
         if (array_key_exists("CertInfoCallback",$param) and $param["CertInfoCallback"] !== null) {
             $this->CertInfoCallback = $param["CertInfoCallback"];
         }
@@ -191,6 +180,10 @@ TELECOM : 运营商三要素验证
 
         if (array_key_exists("SealImgCallback",$param) and $param["SealImgCallback"] !== null) {
             $this->SealImgCallback = $param["SealImgCallback"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
 
         if (array_key_exists("VerifyChannels",$param) and $param["VerifyChannels"] !== null) {

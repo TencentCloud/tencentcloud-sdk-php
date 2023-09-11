@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSignConfig(AutoSignConfig $AutoSignConfig) 设置自动签开通配置信息, 包括开通的人员的信息等
  * @method string getUrlType() 获取生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
  * @method void setUrlType(string $UrlType) 设置生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
  * @method string getNotifyType() 获取是否通知开通方，通知类型:
 <ul><li>默认不设置为不通知开通方</li>
 <li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
@@ -79,7 +79,7 @@ class CreateUserAutoSignEnableUrlRequest extends AbstractModel
     /**
      * @var string 生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
      */
     public $UrlType;
 
@@ -116,7 +116,7 @@ class CreateUserAutoSignEnableUrlRequest extends AbstractModel
      * @param AutoSignConfig $AutoSignConfig 自动签开通配置信息, 包括开通的人员的信息等
      * @param string $UrlType 生成的链接类型：
 <ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
-<li> **H5SIGN** : 生成H5端开通链接</li><ul>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
      * @param string $NotifyType 是否通知开通方，通知类型:
 <ul><li>默认不设置为不通知开通方</li>
 <li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>

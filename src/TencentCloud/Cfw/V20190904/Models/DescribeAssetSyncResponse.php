@@ -14,33 +14,55 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcr\V20190924\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeServiceAccounts返回参数结构体
+ * DescribeAssetSync返回参数结构体
  *
- * @method array getServiceAccounts() 获取服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceAccounts(array $ServiceAccounts) 设置服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取服务级账户数量
- * @method void setTotalCount(integer $TotalCount) 设置服务级账户数量
+ * @method integer getStatus() 获取返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败
+ * @method void setStatus(integer $Status) 设置返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败
+ * @method string getReturnMsg() 获取success 成功
+其他失败
+ * @method void setReturnMsg(string $ReturnMsg) 设置success 成功
+其他失败
+ * @method integer getReturnCode() 获取0 成功
+非0 失败
+ * @method void setReturnCode(integer $ReturnCode) 设置0 成功
+非0 失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeServiceAccountsResponse extends AbstractModel
+class DescribeAssetSyncResponse extends AbstractModel
 {
     /**
-     * @var array 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败
      */
-    public $ServiceAccounts;
+    public $Status;
 
     /**
-     * @var integer 服务级账户数量
+     * @var string success 成功
+其他失败
      */
-    public $TotalCount;
+    public $ReturnMsg;
+
+    /**
+     * @var integer 0 成功
+非0 失败
+     */
+    public $ReturnCode;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +70,15 @@ class DescribeServiceAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ServiceAccounts 服务级账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 服务级账户数量
+     * @param integer $Status 返回状态
+1 更新中
+2 更新完成
+3 更新失败
+4 更新失败
+     * @param string $ReturnMsg success 成功
+其他失败
+     * @param integer $ReturnCode 0 成功
+非0 失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +94,16 @@ class DescribeServiceAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceAccounts",$param) and $param["ServiceAccounts"] !== null) {
-            $this->ServiceAccounts = [];
-            foreach ($param["ServiceAccounts"] as $key => $value){
-                $obj = new ServiceAccount();
-                $obj->deserialize($value);
-                array_push($this->ServiceAccounts, $obj);
-            }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
+            $this->ReturnMsg = $param["ReturnMsg"];
+        }
+
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

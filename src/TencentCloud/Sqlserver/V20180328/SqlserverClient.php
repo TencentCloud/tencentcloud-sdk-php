@@ -67,6 +67,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeDBsResponse DescribeDBs(Models\DescribeDBsRequest $req) 本接口（DescribeDBs）用于查询数据库列表。
  * @method Models\DescribeDBsNormalResponse DescribeDBsNormal(Models\DescribeDBsNormalRequest $req) 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
  * @method Models\DescribeFlowStatusResponse DescribeFlowStatus(Models\DescribeFlowStatusRequest $req) 本接口(DescribeFlowStatus)用于查询流程状态。
+ * @method Models\DescribeHASwitchLogResponse DescribeHASwitchLog(Models\DescribeHASwitchLogRequest $req) 本接口(DescribeHASwitchLog)用于手动主备切换。
  * @method Models\DescribeIncrementalMigrationResponse DescribeIncrementalMigration(Models\DescribeIncrementalMigrationRequest $req) 本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
  * @method Models\DescribeInstanceByOrdersResponse DescribeInstanceByOrders(Models\DescribeInstanceByOrdersRequest $req) 本接口（DescribeInstanceByOrders）用于根据订单号查询资源ID
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
@@ -136,6 +137,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\StartInstanceXEventResponse StartInstanceXEvent(Models\StartInstanceXEventRequest $req) 本接口（StartInstanceXEvent）用于开启、关闭扩展事件。
  * @method Models\StartMigrationCheckResponse StartMigrationCheck(Models\StartMigrationCheckRequest $req) 本接口（StartMigrationCheck）的作用是启动一个迁移前的校验任务，适用于迁移源的类型为TencentDB for SQLServer 的迁移方式
  * @method Models\StopMigrationResponse StopMigration(Models\StopMigrationRequest $req) 本接口（StopMigration）作用是中止一个迁移任务
+ * @method Models\SwitchCloudInstanceHAResponse SwitchCloudInstanceHA(Models\SwitchCloudInstanceHARequest $req) 本接口(SwitchCloudInstanceHA)用于手动主备切换。
  * @method Models\TerminateDBInstanceResponse TerminateDBInstance(Models\TerminateDBInstanceRequest $req) 本接口(TerminateDBInstance)用于主动隔离实例，使得实例进入回收站。
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 本接口（UpgradeDBInstance）用于升级实例
  */

@@ -42,7 +42,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 用于企业版创建镜像仓库
  * @method Models\CreateRepositoryPersonalResponse CreateRepositoryPersonal(Models\CreateRepositoryPersonalRequest $req) 用于在个人版仓库中创建镜像仓库
  * @method Models\CreateSecurityPolicyResponse CreateSecurityPolicy(Models\CreateSecurityPolicyRequest $req) 创建实例公网访问白名单策略
- * @method Models\CreateServiceAccountResponse CreateServiceAccount(Models\CreateServiceAccountRequest $req) 创建自定义账户
+ * @method Models\CreateServiceAccountResponse CreateServiceAccount(Models\CreateServiceAccountRequest $req) 创建服务级账户
  * @method Models\CreateSignatureResponse CreateSignature(Models\CreateSignatureRequest $req) 为一个镜像版本创建签名
  * @method Models\CreateSignaturePolicyResponse CreateSignaturePolicy(Models\CreateSignaturePolicyRequest $req) 创建镜像签名策略
  * @method Models\CreateTagRetentionExecutionResponse CreateTagRetentionExecution(Models\CreateTagRetentionExecutionRequest $req) 手动执行版本保留

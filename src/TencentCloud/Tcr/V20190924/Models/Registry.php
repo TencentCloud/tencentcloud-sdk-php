@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeletionProtection() 获取是否开启实例删除保护，false表示不开启
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否开启实例删除保护，false表示不开启
  */
 class Registry extends AbstractModel
 {
@@ -141,6 +143,11 @@ class Registry extends AbstractModel
     public $RenewFlag;
 
     /**
+     * @var boolean 是否开启实例删除保护，false表示不开启
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $RegistryId 实例ID
      * @param string $RegistryName 实例名称
      * @param string $RegistryType 实例规格
@@ -160,6 +167,7 @@ class Registry extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeletionProtection 是否开启实例删除保护，false表示不开启
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class Registry extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

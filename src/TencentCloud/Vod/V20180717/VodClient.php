@@ -53,6 +53,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 每个分类的子类数量不可超过 500 个。
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [创建审核模板](https://cloud.tencent.com/document/api/266/84391)。
 创建用户自定义音视频内容审核模板，数量上限：50。
+ * @method Models\CreateDomainVerifyRecordResponse CreateDomainVerifyRecord(Models\CreateDomainVerifyRecordRequest $req) 该接口用于生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
  * @method Models\CreateEnhanceMediaTemplateResponse CreateEnhanceMediaTemplate(Models\CreateEnhanceMediaTemplateRequest $req) 创建音画质重生模板。
  * @method Models\CreateHeadTailTemplateResponse CreateHeadTailTemplate(Models\CreateHeadTailTemplateRequest $req) 创建片头片尾模板。
  * @method Models\CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(Models\CreateImageProcessingTemplateRequest $req) 创建一个用户自定义的图片处理模板，数量上限：16。最多支持十次操作，例如：裁剪-缩略-裁剪-模糊-缩略-裁剪-缩略-裁剪-模糊-缩略。
@@ -466,6 +467,8 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 剪辑不固化的优势在于其剪辑操作十分“轻量化”，不会产生额外的存储开销。但其不足之处在于生命周期与原始录制视频相同，且无法进一步进行转码等视频处理。
  * @method Models\SplitMediaResponse SplitMedia(Models\SplitMediaRequest $req) 对点播视频进行拆条，生成多个新的点播视频。
+ * @method Models\VerifyDomainOwnershipForConsoleResponse VerifyDomainOwnershipForConsole(Models\VerifyDomainOwnershipForConsoleRequest $req) 控制台验证域名归属
+ * @method Models\VerifyDomainRecordResponse VerifyDomainRecord(Models\VerifyDomainRecordRequest $req) 该接口用于验证域名解析值。
  * @method Models\WeChatMiniProgramPublishResponse WeChatMiniProgramPublish(Models\WeChatMiniProgramPublishRequest $req) 将点播视频发布到微信小程序，供微信小程序播放器播放。
 本接口支持发布原始视频和转码后视频，暂不支持发布自适应码流。
  */

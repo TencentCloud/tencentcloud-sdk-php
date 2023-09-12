@@ -30,6 +30,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置宿主机内存大小，单位：GB
  * @method integer getCount() 获取该规格宿主机的数量
  * @method void setCount(integer $Count) 设置该规格宿主机的数量
+ * @method float getCpuAverage() 获取平均cpu负载百分比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpuAverage(float $CpuAverage) 设置平均cpu负载百分比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getMemAverage() 获取平均内存使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemAverage(float $MemAverage) 设置平均内存使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getNetAverage() 获取平均网络流量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetAverage(float $NetAverage) 设置平均网络流量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DetailData getCpuDetailData() 获取cpu详细监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpuDetailData(DetailData $CpuDetailData) 设置cpu详细监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DetailData getMemDetailData() 获取内存详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemDetailData(DetailData $MemDetailData) 设置内存详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DetailData getNetRateDetailData() 获取网络速率详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetRateDetailData(DetailData $NetRateDetailData) 设置网络速率详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DetailData getNetPacketDetailData() 获取网速包详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetPacketDetailData(DetailData $NetPacketDetailData) 设置网速包详细数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostStatistic extends AbstractModel
 {
@@ -59,11 +87,67 @@ class HostStatistic extends AbstractModel
     public $Count;
 
     /**
+     * @var float 平均cpu负载百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CpuAverage;
+
+    /**
+     * @var float 平均内存使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemAverage;
+
+    /**
+     * @var float 平均网络流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetAverage;
+
+    /**
+     * @var DetailData cpu详细监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CpuDetailData;
+
+    /**
+     * @var DetailData 内存详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemDetailData;
+
+    /**
+     * @var DetailData 网络速率详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetRateDetailData;
+
+    /**
+     * @var DetailData 网速包详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetPacketDetailData;
+
+    /**
      * @param string $HostType 宿主机规格
      * @param string $HostFamily 宿主机机型系列
      * @param integer $Cpu 宿主机的CPU核数，单位：核
      * @param integer $Memory 宿主机内存大小，单位：GB
      * @param integer $Count 该规格宿主机的数量
+     * @param float $CpuAverage 平均cpu负载百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $MemAverage 平均内存使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $NetAverage 平均网络流量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailData $CpuDetailData cpu详细监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailData $MemDetailData 内存详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailData $NetRateDetailData 网络速率详细数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailData $NetPacketDetailData 网速包详细数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +180,38 @@ class HostStatistic extends AbstractModel
 
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("CpuAverage",$param) and $param["CpuAverage"] !== null) {
+            $this->CpuAverage = $param["CpuAverage"];
+        }
+
+        if (array_key_exists("MemAverage",$param) and $param["MemAverage"] !== null) {
+            $this->MemAverage = $param["MemAverage"];
+        }
+
+        if (array_key_exists("NetAverage",$param) and $param["NetAverage"] !== null) {
+            $this->NetAverage = $param["NetAverage"];
+        }
+
+        if (array_key_exists("CpuDetailData",$param) and $param["CpuDetailData"] !== null) {
+            $this->CpuDetailData = new DetailData();
+            $this->CpuDetailData->deserialize($param["CpuDetailData"]);
+        }
+
+        if (array_key_exists("MemDetailData",$param) and $param["MemDetailData"] !== null) {
+            $this->MemDetailData = new DetailData();
+            $this->MemDetailData->deserialize($param["MemDetailData"]);
+        }
+
+        if (array_key_exists("NetRateDetailData",$param) and $param["NetRateDetailData"] !== null) {
+            $this->NetRateDetailData = new DetailData();
+            $this->NetRateDetailData->deserialize($param["NetRateDetailData"]);
+        }
+
+        if (array_key_exists("NetPacketDetailData",$param) and $param["NetPacketDetailData"] !== null) {
+            $this->NetPacketDetailData = new DetailData();
+            $this->NetPacketDetailData->deserialize($param["NetPacketDetailData"]);
         }
     }
 }

@@ -116,6 +116,12 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
 默认为SMS(签署方为子客时该字段不生效)
  * @method void setNotifyType(string $NotifyType) 设置SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
 默认为SMS(签署方为子客时该字段不生效)
+ * @method array getAddSignComponentsLimits() 获取[通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+ * @method void setAddSignComponentsLimits(array $AddSignComponentsLimits) 设置[通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -252,6 +258,13 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     public $NotifyType;
 
     /**
+     * @var array [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+     */
+    public $AddSignComponentsLimits;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字符
      * @param string $IdCardType 签署人的证件类型
 1.ID_CARD 居民身份证
@@ -295,6 +308,9 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
 - 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
      * @param string $NotifyType SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
 默认为SMS(签署方为子客时该字段不生效)
+     * @param array $AddSignComponentsLimits [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
      */
     function __construct()
     {
@@ -401,6 +417,15 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
 
         if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
             $this->NotifyType = $param["NotifyType"];
+        }
+
+        if (array_key_exists("AddSignComponentsLimits",$param) and $param["AddSignComponentsLimits"] !== null) {
+            $this->AddSignComponentsLimits = [];
+            foreach ($param["AddSignComponentsLimits"] as $key => $value){
+                $obj = new ComponentLimit();
+                $obj->deserialize($value);
+                array_push($this->AddSignComponentsLimits, $obj);
+            }
         }
     }
 }

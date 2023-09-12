@@ -45,6 +45,7 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\ListEmailAddressResponse ListEmailAddress(Models\ListEmailAddressRequest $req) 获取发信地址列表
  * @method Models\ListEmailIdentitiesResponse ListEmailIdentities(Models\ListEmailIdentitiesRequest $req) 获取当前发信域名列表，包含已验证通过与未验证的域名
  * @method Models\ListEmailTemplatesResponse ListEmailTemplates(Models\ListEmailTemplatesRequest $req) 获取当前邮件模板列表
+ * @method Models\ListReceiverDetailsResponse ListReceiverDetails(Models\ListReceiverDetailsRequest $req) 根据收件人列表id查询收件人列表中的所有收件人邮箱地址，分页查询，可以根据收件邮箱地址来过滤查询
  * @method Models\ListReceiversResponse ListReceivers(Models\ListReceiversRequest $req) 根据条件查询收件人列表，支持分页，模糊查询，状态查询
  * @method Models\ListSendTasksResponse ListSendTasks(Models\ListSendTasksRequest $req) 分页查询批量发送邮件任务，包含即时发送任务，定时发送任务，周期重复发送任务，查询发送情况，包括请求数量，已发数量，缓存数量，任务状态等信息
  * @method Models\SendEmailResponse SendEmail(Models\SendEmailRequest $req) 您可以通过此API发送HTML或者TEXT邮件，适用于触发类邮件（验证码、交易类）。默认仅支持使用模板发送邮件。

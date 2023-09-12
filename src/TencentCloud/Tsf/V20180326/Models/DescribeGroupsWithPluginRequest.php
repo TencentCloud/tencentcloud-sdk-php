@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPluginId() 获取插件ID
  * @method void setPluginId(string $PluginId) 设置插件ID
- * @method boolean getBound() 获取绑定/未绑定: true / false
- * @method void setBound(boolean $Bound) 设置绑定/未绑定: true / false
  * @method integer getOffset() 获取翻页偏移量
  * @method void setOffset(integer $Offset) 设置翻页偏移量
  * @method integer getLimit() 获取每页记录数量
  * @method void setLimit(integer $Limit) 设置每页记录数量
+ * @method boolean getBound() 获取绑定/未绑定: true / false
+ * @method void setBound(boolean $Bound) 设置绑定/未绑定: true / false
  * @method string getSearchWord() 获取搜索关键字
  * @method void setSearchWord(string $SearchWord) 设置搜索关键字
  * @method string getGatewayInstanceId() 获取网关实体ID
@@ -41,11 +41,6 @@ class DescribeGroupsWithPluginRequest extends AbstractModel
     public $PluginId;
 
     /**
-     * @var boolean 绑定/未绑定: true / false
-     */
-    public $Bound;
-
-    /**
      * @var integer 翻页偏移量
      */
     public $Offset;
@@ -54,6 +49,11 @@ class DescribeGroupsWithPluginRequest extends AbstractModel
      * @var integer 每页记录数量
      */
     public $Limit;
+
+    /**
+     * @var boolean 绑定/未绑定: true / false
+     */
+    public $Bound;
 
     /**
      * @var string 搜索关键字
@@ -67,9 +67,9 @@ class DescribeGroupsWithPluginRequest extends AbstractModel
 
     /**
      * @param string $PluginId 插件ID
-     * @param boolean $Bound 绑定/未绑定: true / false
      * @param integer $Offset 翻页偏移量
      * @param integer $Limit 每页记录数量
+     * @param boolean $Bound 绑定/未绑定: true / false
      * @param string $SearchWord 搜索关键字
      * @param string $GatewayInstanceId 网关实体ID
      */
@@ -90,16 +90,16 @@ class DescribeGroupsWithPluginRequest extends AbstractModel
             $this->PluginId = $param["PluginId"];
         }
 
-        if (array_key_exists("Bound",$param) and $param["Bound"] !== null) {
-            $this->Bound = $param["Bound"];
-        }
-
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Bound",$param) and $param["Bound"] !== null) {
+            $this->Bound = $param["Bound"];
         }
 
         if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {

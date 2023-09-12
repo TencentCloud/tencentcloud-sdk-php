@@ -43,8 +43,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverSignComponentType(string $ApproverSignComponentType) 设置签署控件类型，支持自定义企业签署方的签署控件类型
 <ul><li> **SIGN_SEAL**：默认为印章控件类型（默认值）</li>
 <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
- * @method string getApproverSignRole() 获取参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
- * @method void setApproverSignRole(string $ApproverSignRole) 设置参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
+ * @method string getApproverSignRole() 获取参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
+
+如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+
+ * @method void setApproverSignRole(string $ApproverSignRole) 设置参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
+
+如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -79,7 +84,10 @@ class ReleasedApprover extends AbstractModel
     public $ApproverSignComponentType;
 
     /**
-     * @var string 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
+     * @var string 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
+
+如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+
      */
     public $ApproverSignRole;
 
@@ -94,7 +102,9 @@ class ReleasedApprover extends AbstractModel
      * @param string $ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件类型
 <ul><li> **SIGN_SEAL**：默认为印章控件类型（默认值）</li>
 <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
-     * @param string $ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议默认会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方，以此类推。如果您需要改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字。
+     * @param string $ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
+
+如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
      */
     function __construct()
     {

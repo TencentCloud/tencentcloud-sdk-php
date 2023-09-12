@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverOption(CommonApproverOption $ApproverOption) 设置签署人配置
  * @method array getSignComponents() 获取签署控件：文件发起使用
  * @method void setSignComponents(array $SignComponents) 设置签署控件：文件发起使用
+ * @method array getApproverVerifyTypes() 获取签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+ * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+ * @method array getApproverSignTypes() 获取签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
+ * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
  */
 class CommonFlowApprover extends AbstractModel
 {
@@ -118,7 +122,6 @@ class CommonFlowApprover extends AbstractModel
 
     /**
      * @var string 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-     * @deprecated
      */
     public $NotifyType;
 
@@ -131,6 +134,16 @@ class CommonFlowApprover extends AbstractModel
      * @var array 签署控件：文件发起使用
      */
     public $SignComponents;
+
+    /**
+     * @var array 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     */
+    public $ApproverVerifyTypes;
+
+    /**
+     * @var array 签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
+     */
+    public $ApproverSignTypes;
 
     /**
      * @param boolean $NotChannelOrganization 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
@@ -149,6 +162,8 @@ class CommonFlowApprover extends AbstractModel
      * @param string $NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
      * @param CommonApproverOption $ApproverOption 签署人配置
      * @param array $SignComponents 签署控件：文件发起使用
+     * @param array $ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1 查看合同的认证方式 Flow层级的优先于approver层级的 （当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     * @param array $ApproverSignTypes 签署人签署合同时的认证方式 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)	
      */
     function __construct()
     {
@@ -227,6 +242,14 @@ class CommonFlowApprover extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SignComponents, $obj);
             }
+        }
+
+        if (array_key_exists("ApproverVerifyTypes",$param) and $param["ApproverVerifyTypes"] !== null) {
+            $this->ApproverVerifyTypes = $param["ApproverVerifyTypes"];
+        }
+
+        if (array_key_exists("ApproverSignTypes",$param) and $param["ApproverSignTypes"] !== null) {
+            $this->ApproverSignTypes = $param["ApproverSignTypes"];
         }
     }
 }

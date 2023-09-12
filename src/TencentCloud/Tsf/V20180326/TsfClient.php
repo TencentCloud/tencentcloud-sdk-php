@@ -116,7 +116,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
  * @method Models\DescribeDeliveryConfigResponse DescribeDeliveryConfig(Models\DescribeDeliveryConfigRequest $req) 获取单个投递项配置信息
  * @method Models\DescribeDeliveryConfigByGroupIdResponse DescribeDeliveryConfigByGroupId(Models\DescribeDeliveryConfigByGroupIdRequest $req) 用部署组id获取绑定信息
- * @method Models\DescribeDeliveryConfigsResponse DescribeDeliveryConfigs(Models\DescribeDeliveryConfigsRequest $req) 获取多个投递项配置 
+ * @method Models\DescribeDeliveryConfigsResponse DescribeDeliveryConfigs(Models\DescribeDeliveryConfigsRequest $req) 获取多个投递项配置
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(Models\DescribeEnabledUnitRuleRequest $req) 查询生效的单元化规则

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCreateGatewayApiStatus请求参数结构体
  *
- * @method string getGroupId() 获取请求方法
- * @method void setGroupId(string $GroupId) 设置请求方法
+ * @method string getGroupId() 获取所属分组ID
+ * @method void setGroupId(string $GroupId) 设置所属分组ID
  * @method string getMicroserviceId() 获取微服务ID
  * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID
  */
 class DescribeCreateGatewayApiStatusRequest extends AbstractModel
 {
     /**
-     * @var string 请求方法
+     * @var string 所属分组ID
      */
     public $GroupId;
 
@@ -38,7 +38,7 @@ class DescribeCreateGatewayApiStatusRequest extends AbstractModel
     public $MicroserviceId;
 
     /**
-     * @param string $GroupId 请求方法
+     * @param string $GroupId 所属分组ID
      * @param string $MicroserviceId 微服务ID
      */
     function __construct()

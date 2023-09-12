@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowBriefs返回参数结构体
  *
- * @method array getFlowBriefs() 获取流程列表
- * @method void setFlowBriefs(array $FlowBriefs) 设置流程列表
+ * @method array getFlowBriefs() 获取合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
+ * @method void setFlowBriefs(array $FlowBriefs) 设置合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFlowBriefsResponse extends AbstractModel
 {
     /**
-     * @var array 流程列表
+     * @var array 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
      */
     public $FlowBriefs;
 
@@ -38,7 +41,8 @@ class DescribeFlowBriefsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowBriefs 流程列表
+     * @param array $FlowBriefs 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
+注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

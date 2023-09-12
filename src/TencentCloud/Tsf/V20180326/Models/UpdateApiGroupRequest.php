@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置Api 分组名称
  * @method string getDescription() 获取Api 分组描述
  * @method void setDescription(string $Description) 设置Api 分组描述
- * @method string getAuthType() 获取鉴权类型
- * @method void setAuthType(string $AuthType) 设置鉴权类型
+ * @method string getAuthType() 获取鉴权类型。 secret： 密钥鉴权； none:无鉴权
+ * @method void setAuthType(string $AuthType) 设置鉴权类型。 secret： 密钥鉴权； none:无鉴权
  * @method string getGroupContext() 获取分组上下文
  * @method void setGroupContext(string $GroupContext) 设置分组上下文
  * @method string getNamespaceNameKey() 获取命名空间参数key值
@@ -57,7 +57,7 @@ class UpdateApiGroupRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 鉴权类型
+     * @var string 鉴权类型。 secret： 密钥鉴权； none:无鉴权
      */
     public $AuthType;
 
@@ -90,7 +90,7 @@ class UpdateApiGroupRequest extends AbstractModel
      * @param string $GroupId Api 分组ID
      * @param string $GroupName Api 分组名称
      * @param string $Description Api 分组描述
-     * @param string $AuthType 鉴权类型
+     * @param string $AuthType 鉴权类型。 secret： 密钥鉴权； none:无鉴权
      * @param string $GroupContext 分组上下文
      * @param string $NamespaceNameKey 命名空间参数key值
      * @param string $ServiceNameKey 微服务名参数key值

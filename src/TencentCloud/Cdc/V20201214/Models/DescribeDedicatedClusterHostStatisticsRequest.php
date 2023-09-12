@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDedicatedClusterId() 获取查询的专用集群id
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置查询的专用集群id
+ * @method string getHostId() 获取宿主机id
+ * @method void setHostId(string $HostId) 设置宿主机id
+ * @method string getStartTime() 获取开始时间
+ * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method string getEndTime() 获取结束时间
+ * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getPeriod() 获取时间范围精度，1分钟/5分钟
+ * @method void setPeriod(string $Period) 设置时间范围精度，1分钟/5分钟
  */
 class DescribeDedicatedClusterHostStatisticsRequest extends AbstractModel
 {
@@ -31,7 +39,31 @@ class DescribeDedicatedClusterHostStatisticsRequest extends AbstractModel
     public $DedicatedClusterId;
 
     /**
+     * @var string 宿主机id
+     */
+    public $HostId;
+
+    /**
+     * @var string 开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 结束时间
+     */
+    public $EndTime;
+
+    /**
+     * @var string 时间范围精度，1分钟/5分钟
+     */
+    public $Period;
+
+    /**
      * @param string $DedicatedClusterId 查询的专用集群id
+     * @param string $HostId 宿主机id
+     * @param string $StartTime 开始时间
+     * @param string $EndTime 结束时间
+     * @param string $Period 时间范围精度，1分钟/5分钟
      */
     function __construct()
     {
@@ -48,6 +80,22 @@ class DescribeDedicatedClusterHostStatisticsRequest extends AbstractModel
         }
         if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
             $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("HostId",$param) and $param["HostId"] !== null) {
+            $this->HostId = $param["HostId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

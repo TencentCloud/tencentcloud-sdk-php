@@ -68,6 +68,10 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
  * @method void setState(string $State) 设置状态（仅电子驾驶证支持返回该字段）
  * @method string getCumulativeScore() 获取累积记分（仅电子驾驶证支持返回该字段）
  * @method void setCumulativeScore(string $CumulativeScore) 设置累积记分（仅电子驾驶证支持返回该字段）
+ * @method string getCurrentTime() 获取当前时间（仅电子驾驶证支持返回该字段）
+ * @method void setCurrentTime(string $CurrentTime) 设置当前时间（仅电子驾驶证支持返回该字段）
+ * @method string getGenerateTime() 获取生成时间（仅电子驾驶证支持返回该字段）
+ * @method void setGenerateTime(string $GenerateTime) 设置生成时间（仅电子驾驶证支持返回该字段）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -166,6 +170,16 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     public $CumulativeScore;
 
     /**
+     * @var string 当前时间（仅电子驾驶证支持返回该字段）
+     */
+    public $CurrentTime;
+
+    /**
+     * @var string 生成时间（仅电子驾驶证支持返回该字段）
+     */
+    public $GenerateTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -195,6 +209,8 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
      * @param string $IssuingAuthority 发证单位
      * @param string $State 状态（仅电子驾驶证支持返回该字段）
      * @param string $CumulativeScore 累积记分（仅电子驾驶证支持返回该字段）
+     * @param string $CurrentTime 当前时间（仅电子驾驶证支持返回该字段）
+     * @param string $GenerateTime 生成时间（仅电子驾驶证支持返回该字段）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -276,6 +292,14 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
 
         if (array_key_exists("CumulativeScore",$param) and $param["CumulativeScore"] !== null) {
             $this->CumulativeScore = $param["CumulativeScore"];
+        }
+
+        if (array_key_exists("CurrentTime",$param) and $param["CurrentTime"] !== null) {
+            $this->CurrentTime = $param["CurrentTime"];
+        }
+
+        if (array_key_exists("GenerateTime",$param) and $param["GenerateTime"] !== null) {
+            $this->GenerateTime = $param["GenerateTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

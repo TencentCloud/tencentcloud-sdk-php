@@ -114,6 +114,8 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) 设置IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
  * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
+ * @method LoginSettings getLoginSettings() 获取实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -249,6 +251,11 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $DisasterRecoverGroupIds;
 
     /**
+     * @var LoginSettings 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
+     */
+    public $LoginSettings;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
@@ -296,6 +303,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 注意：此字段默认为空。
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
      * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * @param LoginSettings $LoginSettings 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
      */
     function __construct()
     {
@@ -405,6 +413,11 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 
         if (array_key_exists("DisasterRecoverGroupIds",$param) and $param["DisasterRecoverGroupIds"] !== null) {
             $this->DisasterRecoverGroupIds = $param["DisasterRecoverGroupIds"];
+        }
+
+        if (array_key_exists("LoginSettings",$param) and $param["LoginSettings"] !== null) {
+            $this->LoginSettings = new LoginSettings();
+            $this->LoginSettings->deserialize($param["LoginSettings"]);
         }
     }
 }

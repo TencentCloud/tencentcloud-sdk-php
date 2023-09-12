@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocumentType(string $DocumentType) 设置文档后缀名。
  * @method integer getDocumentSize() 获取文档大小，单位 字节
  * @method void setDocumentSize(integer $DocumentSize) 设置文档大小，单位 字节
+ * @method boolean getAutoHandleUnsupportedElement() 获取是否对不支持元素开启自动处理的功能。默认关闭。
+ * @method void setAutoHandleUnsupportedElement(boolean $AutoHandleUnsupportedElement) 设置是否对不支持元素开启自动处理的功能。默认关闭。
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -98,6 +100,11 @@ class CreateDocumentRequest extends AbstractModel
     public $DocumentSize;
 
     /**
+     * @var boolean 是否对不支持元素开启自动处理的功能。默认关闭。
+     */
+    public $AutoHandleUnsupportedElement;
+
+    /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param string $DocumentUrl 文档地址。
      * @param string $DocumentName 文档名称。
@@ -112,6 +119,7 @@ class CreateDocumentRequest extends AbstractModel
 1 公共文档
      * @param string $DocumentType 文档后缀名。
      * @param integer $DocumentSize 文档大小，单位 字节
+     * @param boolean $AutoHandleUnsupportedElement 是否对不支持元素开启自动处理的功能。默认关闭。
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateDocumentRequest extends AbstractModel
 
         if (array_key_exists("DocumentSize",$param) and $param["DocumentSize"] !== null) {
             $this->DocumentSize = $param["DocumentSize"];
+        }
+
+        if (array_key_exists("AutoHandleUnsupportedElement",$param) and $param["AutoHandleUnsupportedElement"] !== null) {
+            $this->AutoHandleUnsupportedElement = $param["AutoHandleUnsupportedElement"];
         }
     }
 }

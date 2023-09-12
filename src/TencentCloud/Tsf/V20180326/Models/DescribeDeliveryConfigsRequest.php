@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移
  * @method integer getLimit() 获取搜索条数
  * @method void setLimit(integer $Limit) 设置搜索条数
+ * @method array getProgramIdList() 获取数据集idList
+ * @method void setProgramIdList(array $ProgramIdList) 设置数据集idList
+ * @method array getConfigIdList() 获取ConfigIdList
+ * @method void setConfigIdList(array $ConfigIdList) 设置ConfigIdList
  */
 class DescribeDeliveryConfigsRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeDeliveryConfigsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 数据集idList
+     */
+    public $ProgramIdList;
+
+    /**
+     * @var array ConfigIdList
+     */
+    public $ConfigIdList;
+
+    /**
      * @param string $SearchWord 关键字
      * @param integer $Offset 偏移
      * @param integer $Limit 搜索条数
+     * @param array $ProgramIdList 数据集idList
+     * @param array $ConfigIdList ConfigIdList
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeDeliveryConfigsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
+        }
+
+        if (array_key_exists("ConfigIdList",$param) and $param["ConfigIdList"] !== null) {
+            $this->ConfigIdList = $param["ConfigIdList"];
         }
     }
 }

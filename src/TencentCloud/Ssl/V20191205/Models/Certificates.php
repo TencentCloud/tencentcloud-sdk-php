@@ -176,6 +176,18 @@ null = 用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHostingStatus() 获取托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostingStatus(integer $HostingStatus) 设置托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostingCompleteTime() 获取托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostingCompleteTime(string $HostingCompleteTime) 设置托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostingRenewCertId() 获取托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostingRenewCertId(string $HostingRenewCertId) 设置托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -410,6 +422,24 @@ null = 用户上传证书（没有套餐类型），
     public $AutoRenewFlag;
 
     /**
+     * @var integer 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostingStatus;
+
+    /**
+     * @var string 托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostingCompleteTime;
+
+    /**
+     * @var string 托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostingRenewCertId;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -487,6 +517,12 @@ null = 用户上传证书（没有套餐类型），
      * @param PreAuditInfo $PreAuditInfo 证书预审核信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HostingStatus 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostingCompleteTime 托管完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostingRenewCertId 托管新证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -660,6 +696,18 @@ null = 用户上传证书（没有套餐类型），
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("HostingStatus",$param) and $param["HostingStatus"] !== null) {
+            $this->HostingStatus = $param["HostingStatus"];
+        }
+
+        if (array_key_exists("HostingCompleteTime",$param) and $param["HostingCompleteTime"] !== null) {
+            $this->HostingCompleteTime = $param["HostingCompleteTime"];
+        }
+
+        if (array_key_exists("HostingRenewCertId",$param) and $param["HostingRenewCertId"] !== null) {
+            $this->HostingRenewCertId = $param["HostingRenewCertId"];
         }
     }
 }

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置IP搜索，选填，当需要搜索IP请填写
  * @method integer getLimit() 获取一页条数，默认值100，最大值100，超过100最大返回100条
  * @method void setLimit(integer $Limit) 设置一页条数，默认值100，最大值100，超过100最大返回100条
- * @method integer getOffset() 获取页起始偏移，取值为(页码-1)*一页条数
- * @method void setOffset(integer $Offset) 设置页起始偏移，取值为(页码-1)*一页条数
+ * @method integer getOffset() 获取规则偏移量，取值为(页码-1)*一页条数
+ * @method void setOffset(integer $Offset) 设置规则偏移量，取值为(页码-1)*一页条数
  * @method array getProtocolList() 获取转发协议搜索，选填，取值[http, https, http/https]
  * @method void setProtocolList(array $ProtocolList) 设置转发协议搜索，选填，取值[http, https, http/https]
  * @method string getCname() 获取高防IP实例的Cname
@@ -67,7 +67,7 @@ class DescribeNewL7RulesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 页起始偏移，取值为(页码-1)*一页条数
+     * @var integer 规则偏移量，取值为(页码-1)*一页条数
      */
     public $Offset;
 
@@ -92,7 +92,7 @@ class DescribeNewL7RulesRequest extends AbstractModel
      * @param string $Domain 域名搜索，选填，当需要搜索域名请填写
      * @param string $Ip IP搜索，选填，当需要搜索IP请填写
      * @param integer $Limit 一页条数，默认值100，最大值100，超过100最大返回100条
-     * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
+     * @param integer $Offset 规则偏移量，取值为(页码-1)*一页条数
      * @param array $ProtocolList 转发协议搜索，选填，取值[http, https, http/https]
      * @param string $Cname 高防IP实例的Cname
      * @param boolean $Export 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则

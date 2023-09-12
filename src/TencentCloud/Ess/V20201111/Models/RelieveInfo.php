@@ -20,64 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 解除协议文档中内容信息，包括但不限于：解除理由、解除后仍然有效的条款-保留条款、原合同事项处理-费用结算、原合同事项处理-其他事项、其他约定等。
  *
- * @method string getReason() 获取解除理由，最大支持200个字
- * @method void setReason(string $Reason) 设置解除理由，最大支持200个字
- * @method string getRemainInForceItem() 获取解除后仍然有效的条款，保留条款，最大支持200个字
+ * @method string getReason() 获取解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+ * @method void setReason(string $Reason) 设置解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+ * @method string getRemainInForceItem() 获取解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
 
- * @method void setRemainInForceItem(string $RemainInForceItem) 设置解除后仍然有效的条款，保留条款，最大支持200个字
+ * @method void setRemainInForceItem(string $RemainInForceItem) 设置解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
 
- * @method string getOriginalExpenseSettlement() 获取原合同事项处理-费用结算，最大支持200个字
-
- * @method void setOriginalExpenseSettlement(string $OriginalExpenseSettlement) 设置原合同事项处理-费用结算，最大支持200个字
-
- * @method string getOriginalOtherSettlement() 获取原合同事项处理-其他事项，最大支持200个字
-
- * @method void setOriginalOtherSettlement(string $OriginalOtherSettlement) 设置原合同事项处理-其他事项，最大支持200个字
-
- * @method string getOtherDeals() 获取其他约定，最大支持200个字
-
- * @method void setOtherDeals(string $OtherDeals) 设置其他约定，最大支持200个字
+ * @method string getOriginalExpenseSettlement() 获取原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+ * @method void setOriginalExpenseSettlement(string $OriginalExpenseSettlement) 设置原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+ * @method string getOriginalOtherSettlement() 获取原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+ * @method void setOriginalOtherSettlement(string $OriginalOtherSettlement) 设置原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+ * @method string getOtherDeals() 获取其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+ * @method void setOtherDeals(string $OtherDeals) 设置其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
  */
 class RelieveInfo extends AbstractModel
 {
     /**
-     * @var string 解除理由，最大支持200个字
+     * @var string 解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public $Reason;
 
     /**
-     * @var string 解除后仍然有效的条款，保留条款，最大支持200个字
+     * @var string 解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
 
      */
     public $RemainInForceItem;
 
     /**
-     * @var string 原合同事项处理-费用结算，最大支持200个字
-
+     * @var string 原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public $OriginalExpenseSettlement;
 
     /**
-     * @var string 原合同事项处理-其他事项，最大支持200个字
-
+     * @var string 原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public $OriginalOtherSettlement;
 
     /**
-     * @var string 其他约定，最大支持200个字
-
+     * @var string 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public $OtherDeals;
 
     /**
-     * @param string $Reason 解除理由，最大支持200个字
-     * @param string $RemainInForceItem 解除后仍然有效的条款，保留条款，最大支持200个字
+     * @param string $Reason 解除理由，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * @param string $RemainInForceItem 解除后仍然有效的条款，保留条款，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
 
-     * @param string $OriginalExpenseSettlement 原合同事项处理-费用结算，最大支持200个字
-
-     * @param string $OriginalOtherSettlement 原合同事项处理-其他事项，最大支持200个字
-
-     * @param string $OtherDeals 其他约定，最大支持200个字
+     * @param string $OriginalExpenseSettlement 原合同事项处理-费用结算，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * @param string $OriginalOtherSettlement 原合同事项处理-其他事项，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * @param string $OtherDeals 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     function __construct()
     {

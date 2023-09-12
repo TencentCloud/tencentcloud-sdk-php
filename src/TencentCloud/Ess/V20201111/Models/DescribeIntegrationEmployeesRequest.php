@@ -26,9 +26,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置指定每页多少条数据，单页最大20
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method array getFilters() 获取查询过滤实名用户，Key为Status，Values为["IsVerified"]
+ * @method array getFilters() 获取查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
- * @method void setFilters(array $Filters) 设置查询过滤实名用户，Key为Status，Values为["IsVerified"]
+ * @method void setFilters(array $Filters) 设置查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
  * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
  * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
@@ -51,7 +55,9 @@ class DescribeIntegrationEmployeesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var array 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+     * @var array 查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
      */
     public $Filters;
@@ -65,7 +71,9 @@ class DescribeIntegrationEmployeesRequest extends AbstractModel
      * @param UserInfo $Operator 操作人信息，userId必填
      * @param integer $Limit 指定每页多少条数据，单页最大20
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param array $Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+     * @param array $Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]，查询过滤未实名用户，Key为Status，Values为["NotVerified"]
+查询某个部门的用户，Key为DepartmentId，Values为["DepartmentId"]
+根据用户Id查询员工时，Key为UserId，Values为["UserId"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
      * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
      */

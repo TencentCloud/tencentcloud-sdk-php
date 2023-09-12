@@ -172,6 +172,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyStatus(integer $VerifyStatus) 设置待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBotAccessCount() 获取bot访问数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBotAccessCount(integer $BotAccessCount) 设置bot访问数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainAssetVO extends AbstractModel
 {
@@ -404,6 +408,12 @@ class DomainAssetVO extends AbstractModel
     public $VerifyStatus;
 
     /**
+     * @var integer bot访问数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BotAccessCount;
+
+    /**
      * @param array $AssetId 资产id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssetName 资产名
@@ -479,6 +489,8 @@ class DomainAssetVO extends AbstractModel
      * @param string $VerifyTXTRecord 待确认资产的TXT记录内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VerifyStatus 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BotAccessCount bot访问数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -649,6 +661,10 @@ class DomainAssetVO extends AbstractModel
 
         if (array_key_exists("VerifyStatus",$param) and $param["VerifyStatus"] !== null) {
             $this->VerifyStatus = $param["VerifyStatus"];
+        }
+
+        if (array_key_exists("BotAccessCount",$param) and $param["BotAccessCount"] !== null) {
+            $this->BotAccessCount = $param["BotAccessCount"];
         }
     }
 }

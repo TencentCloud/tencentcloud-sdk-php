@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserDetail返回参数结构体
  *
- * @method UserInfo getUserInfo() 获取帐户信息
- * @method void setUserInfo(UserInfo $UserInfo) 设置帐户信息
+ * @method UserInfo getUserInfo() 获取账户信息
+ * @method void setUserInfo(UserInfo $UserInfo) 设置账户信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUserDetailResponse extends AbstractModel
 {
     /**
-     * @var UserInfo 帐户信息
+     * @var UserInfo 账户信息
      */
     public $UserInfo;
 
@@ -38,7 +38,7 @@ class DescribeUserDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param UserInfo $UserInfo 帐户信息
+     * @param UserInfo $UserInfo 账户信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

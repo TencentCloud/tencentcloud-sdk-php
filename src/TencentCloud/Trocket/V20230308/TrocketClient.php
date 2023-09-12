@@ -23,8 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trocket\V20230308\Models as Models;
 
 /**
+ * @method Models\CreateConsumerGroupResponse CreateConsumerGroup(Models\CreateConsumerGroupRequest $req) 创建消费组
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 购买新实例
+ * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题
+ * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除实例
+ * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除主题
+ * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) 查询消费组详情
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
@@ -33,11 +38,17 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 3. InstanceStatus，实例状态查询，支持多选
 
 当使用TagFilters查询时，Filters参数失效。
+ * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 查询主题详情，Offset和Limit参数是指订阅该主题的消费组查询分页参数，Filter参数使用说明如下：
+
+ConsumerGroup，消费组名称过滤
  * @method Models\DescribeTopicListResponse DescribeTopicList(Models\DescribeTopicListRequest $req) 获取主题列表，Filter参数使用说明如下：
 
 1. TopicName，主题名称模糊搜索
 2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
+ * @method Models\DescribeTopicStatsOpResponse DescribeTopicStatsOp(Models\DescribeTopicStatsOpRequest $req) 运营端查询topicStata
+ * @method Models\ModifyConsumerGroupResponse ModifyConsumerGroup(Models\ModifyConsumerGroupRequest $req) 修改消费组属性
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改实例属性
+ * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
  */
 
 class TrocketClient extends AbstractClient

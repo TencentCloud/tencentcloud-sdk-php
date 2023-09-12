@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(string $Offset) 设置偏移量，默认为0。
  * @method string getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method boolean getNeedMemberInfo() 获取是否查询IP地址模板成员标识。
+ * @method void setNeedMemberInfo(boolean $NeedMemberInfo) 设置是否查询IP地址模板成员标识。
  */
 class DescribeAddressTemplateGroupsRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class DescribeAddressTemplateGroupsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var boolean 是否查询IP地址模板成员标识。
+     */
+    public $NeedMemberInfo;
+
+    /**
      * @param array $Filters 过滤条件。
 <li>address-template-group-name - String - （过滤条件）IP地址模板集合名称。</li>
 <li>address-template-group-id - String - （过滤条件）IP地址模板实集合例ID，例如：ipmg-mdunqeb6。</li>
      * @param string $Offset 偏移量，默认为0。
      * @param string $Limit 返回数量，默认为20，最大值为100。
+     * @param boolean $NeedMemberInfo 是否查询IP地址模板成员标识。
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class DescribeAddressTemplateGroupsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("NeedMemberInfo",$param) and $param["NeedMemberInfo"] !== null) {
+            $this->NeedMemberInfo = $param["NeedMemberInfo"];
         }
     }
 }

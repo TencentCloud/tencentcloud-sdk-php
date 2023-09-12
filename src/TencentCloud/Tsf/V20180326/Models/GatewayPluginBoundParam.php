@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPluginId() 获取插件id
  * @method void setPluginId(string $PluginId) 设置插件id
- * @method string getScopeType() 获取插件绑定到的对象类型:group/api
- * @method void setScopeType(string $ScopeType) 设置插件绑定到的对象类型:group/api
+ * @method string getScopeType() 获取插件绑定到的对象类型:group/api/all
+ * @method void setScopeType(string $ScopeType) 设置插件绑定到的对象类型:group/api/all
  * @method string getScopeValue() 获取插件绑定到的对象主键值，例如分组的ID/API的ID
  * @method void setScopeValue(string $ScopeValue) 设置插件绑定到的对象主键值，例如分组的ID/API的ID
+ * @method string getMicroserviceId() 获取创建关联的服务id，关联envoy网关时使用
+ * @method void setMicroserviceId(string $MicroserviceId) 设置创建关联的服务id，关联envoy网关时使用
+ * @method string getGatewayInstanceId() 获取网关id
+ * @method void setGatewayInstanceId(string $GatewayInstanceId) 设置网关id
  */
 class GatewayPluginBoundParam extends AbstractModel
 {
@@ -35,7 +39,7 @@ class GatewayPluginBoundParam extends AbstractModel
     public $PluginId;
 
     /**
-     * @var string 插件绑定到的对象类型:group/api
+     * @var string 插件绑定到的对象类型:group/api/all
      */
     public $ScopeType;
 
@@ -45,9 +49,21 @@ class GatewayPluginBoundParam extends AbstractModel
     public $ScopeValue;
 
     /**
+     * @var string 创建关联的服务id，关联envoy网关时使用
+     */
+    public $MicroserviceId;
+
+    /**
+     * @var string 网关id
+     */
+    public $GatewayInstanceId;
+
+    /**
      * @param string $PluginId 插件id
-     * @param string $ScopeType 插件绑定到的对象类型:group/api
+     * @param string $ScopeType 插件绑定到的对象类型:group/api/all
      * @param string $ScopeValue 插件绑定到的对象主键值，例如分组的ID/API的ID
+     * @param string $MicroserviceId 创建关联的服务id，关联envoy网关时使用
+     * @param string $GatewayInstanceId 网关id
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class GatewayPluginBoundParam extends AbstractModel
 
         if (array_key_exists("ScopeValue",$param) and $param["ScopeValue"] !== null) {
             $this->ScopeValue = $param["ScopeValue"];
+        }
+
+        if (array_key_exists("MicroserviceId",$param) and $param["MicroserviceId"] !== null) {
+            $this->MicroserviceId = $param["MicroserviceId"];
+        }
+
+        if (array_key_exists("GatewayInstanceId",$param) and $param["GatewayInstanceId"] !== null) {
+            $this->GatewayInstanceId = $param["GatewayInstanceId"];
         }
     }
 }

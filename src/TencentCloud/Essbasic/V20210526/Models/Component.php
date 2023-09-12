@@ -401,6 +401,14 @@ UpperRight-右下角。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlaceholder(string $Placeholder) 设置填写提示的内容
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLockComponentValue() 获取是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLockComponentValue(boolean $LockComponentValue) 设置是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getForbidMoveAndDelete() 获取是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForbidMoveAndDelete(boolean $ForbidMoveAndDelete) 设置是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Component extends AbstractModel
 {
@@ -692,6 +700,18 @@ UpperRight-右下角。
     public $Placeholder;
 
     /**
+     * @var boolean 是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LockComponentValue;
+
+    /**
+     * @var boolean 是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForbidMoveAndDelete;
+
+    /**
      * @param string $ComponentId 控件编号
 
 CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
@@ -879,6 +899,10 @@ UpperRight-右下角。
 示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      * @param string $Placeholder 填写提示的内容
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LockComponentValue 是否锁定控件值不允许编辑（嵌入式发起使用） <br/>默认false：不锁定控件值，允许在页面编辑控件值	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ForbidMoveAndDelete 是否禁止移动和删除控件 <br/>默认false，不禁止移动和删除控件	
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -991,6 +1015,14 @@ UpperRight-右下角。
 
         if (array_key_exists("Placeholder",$param) and $param["Placeholder"] !== null) {
             $this->Placeholder = $param["Placeholder"];
+        }
+
+        if (array_key_exists("LockComponentValue",$param) and $param["LockComponentValue"] !== null) {
+            $this->LockComponentValue = $param["LockComponentValue"];
+        }
+
+        if (array_key_exists("ForbidMoveAndDelete",$param) and $param["ForbidMoveAndDelete"] !== null) {
+            $this->ForbidMoveAndDelete = $param["ForbidMoveAndDelete"];
         }
     }
 }

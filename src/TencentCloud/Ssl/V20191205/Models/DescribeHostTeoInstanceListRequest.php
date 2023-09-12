@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
  * @method string getOldCertificateId() 获取已部署的证书ID
  * @method void setOldCertificateId(string $OldCertificateId) 设置已部署的证书ID
+ * @method integer getOffset() 获取分页偏移量，从0开始。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
+ * @method integer getLimit() 获取每页数量，默认10。	
+ * @method void setLimit(integer $Limit) 设置每页数量，默认10。	
+ * @method integer getAsyncCache() 获取是否异步
+ * @method void setAsyncCache(integer $AsyncCache) 设置是否异步
  */
 class DescribeHostTeoInstanceListRequest extends AbstractModel
 {
@@ -59,11 +65,29 @@ class DescribeHostTeoInstanceListRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
+     * @var integer 分页偏移量，从0开始。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 每页数量，默认10。	
+     */
+    public $Limit;
+
+    /**
+     * @var integer 是否异步
+     */
+    public $AsyncCache;
+
+    /**
      * @param string $CertificateId 待部署的证书ID
      * @param string $ResourceType 部署资源类型
      * @param integer $IsCache 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
      * @param array $Filters 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
      * @param string $OldCertificateId 已部署的证书ID
+     * @param integer $Offset 分页偏移量，从0开始。
+     * @param integer $Limit 每页数量，默认10。	
+     * @param integer $AsyncCache 是否异步
      */
     function __construct()
     {
@@ -101,6 +125,18 @@ class DescribeHostTeoInstanceListRequest extends AbstractModel
 
         if (array_key_exists("OldCertificateId",$param) and $param["OldCertificateId"] !== null) {
             $this->OldCertificateId = $param["OldCertificateId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("AsyncCache",$param) and $param["AsyncCache"] !== null) {
+            $this->AsyncCache = $param["AsyncCache"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置搜索关键字，支持 API path
  * @method string getGatewayDeployGroupId() 获取部署组ID
  * @method void setGatewayDeployGroupId(string $GatewayDeployGroupId) 设置部署组ID
+ * @method string getReleaseStatus() 获取发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+ * @method void setReleaseStatus(string $ReleaseStatus) 设置发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
  */
 class DescribeGatewayApisRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeGatewayApisRequest extends AbstractModel
     public $GatewayDeployGroupId;
 
     /**
+     * @var string 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
+     */
+    public $ReleaseStatus;
+
+    /**
      * @param string $GroupId 分组ID
      * @param integer $Offset 翻页偏移量
      * @param integer $Limit 每页的记录数
      * @param string $SearchWord 搜索关键字，支持 API path
      * @param string $GatewayDeployGroupId 部署组ID
+     * @param string $ReleaseStatus 发布状态, drafted(未发布)/released(已发布)/releasing(发布中)/failed(发布失败)
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeGatewayApisRequest extends AbstractModel
 
         if (array_key_exists("GatewayDeployGroupId",$param) and $param["GatewayDeployGroupId"] !== null) {
             $this->GatewayDeployGroupId = $param["GatewayDeployGroupId"];
+        }
+
+        if (array_key_exists("ReleaseStatus",$param) and $param["ReleaseStatus"] !== null) {
+            $this->ReleaseStatus = $param["ReleaseStatus"];
         }
     }
 }

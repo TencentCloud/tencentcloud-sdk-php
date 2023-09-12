@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUnitRuleWithDetailResp返回参数结构体
  *
- * @method UnitRule getResult() 获取单元化规则 ID
+ * @method UnitRule getResult() 获取单元化规则信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(UnitRule $Result) 设置单元化规则 ID
+ * @method void setResult(UnitRule $Result) 设置单元化规则信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateUnitRuleWithDetailRespResponse extends AbstractModel
 {
     /**
-     * @var UnitRule 单元化规则 ID
+     * @var UnitRule 单元化规则信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
@@ -41,7 +41,7 @@ class CreateUnitRuleWithDetailRespResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param UnitRule $Result 单元化规则 ID
+     * @param UnitRule $Result 单元化规则信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getScopeValue() 获取分组或者API的ID
  * @method void setScopeValue(string $ScopeValue) 设置分组或者API的ID
- * @method boolean getBound() 获取绑定: true; 未绑定: false
- * @method void setBound(boolean $Bound) 设置绑定: true; 未绑定: false
  * @method integer getOffset() 获取翻页偏移量
  * @method void setOffset(integer $Offset) 设置翻页偏移量
  * @method integer getLimit() 获取每页展示的条数
  * @method void setLimit(integer $Limit) 设置每页展示的条数
+ * @method boolean getBound() 获取绑定: true; 未绑定: false
+ * @method void setBound(boolean $Bound) 设置绑定: true; 未绑定: false
  * @method string getType() 获取插件类型
  * @method void setType(string $Type) 设置插件类型
  * @method string getSearchWord() 获取搜索关键字
@@ -41,11 +41,6 @@ class DescribePluginInstancesRequest extends AbstractModel
     public $ScopeValue;
 
     /**
-     * @var boolean 绑定: true; 未绑定: false
-     */
-    public $Bound;
-
-    /**
      * @var integer 翻页偏移量
      */
     public $Offset;
@@ -54,6 +49,11 @@ class DescribePluginInstancesRequest extends AbstractModel
      * @var integer 每页展示的条数
      */
     public $Limit;
+
+    /**
+     * @var boolean 绑定: true; 未绑定: false
+     */
+    public $Bound;
 
     /**
      * @var string 插件类型
@@ -67,9 +67,9 @@ class DescribePluginInstancesRequest extends AbstractModel
 
     /**
      * @param string $ScopeValue 分组或者API的ID
-     * @param boolean $Bound 绑定: true; 未绑定: false
      * @param integer $Offset 翻页偏移量
      * @param integer $Limit 每页展示的条数
+     * @param boolean $Bound 绑定: true; 未绑定: false
      * @param string $Type 插件类型
      * @param string $SearchWord 搜索关键字
      */
@@ -90,16 +90,16 @@ class DescribePluginInstancesRequest extends AbstractModel
             $this->ScopeValue = $param["ScopeValue"];
         }
 
-        if (array_key_exists("Bound",$param) and $param["Bound"] !== null) {
-            $this->Bound = $param["Bound"];
-        }
-
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Bound",$param) and $param["Bound"] !== null) {
+            $this->Bound = $param["Bound"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {

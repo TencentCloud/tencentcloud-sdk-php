@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEmbedWebUrl请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作者信息
- * @method void setOperator(UserInfo $Operator) 设置操作者信息
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
  * @method string getEmbedType() 获取WEB嵌入资源类型。
 <br/>CREATE_SEAL: 生成创建印章的嵌入页面
 <br/>CREATE_TEMPLATE：生成创建模板的嵌入页面
@@ -52,17 +54,20 @@ use TencentCloud\Common\AbstractModel;
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
 <br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method ReviewerInfo getReviewer() 获取抄送方信息
  * @method void setReviewer(ReviewerInfo $Reviewer) 设置抄送方信息
- * @method EmbedUrlOption getOption() 获取个性化参数
- * @method void setOption(EmbedUrlOption $Option) 设置个性化参数
+ * @method EmbedUrlOption getOption() 获取个性化参数，用于控制页面展示内容
+ * @method void setOption(EmbedUrlOption $Option) 设置个性化参数，用于控制页面展示内容
  */
 class CreateEmbedWebUrlRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作者信息
+     * @var UserInfo 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public $Operator;
 
@@ -90,7 +95,8 @@ class CreateEmbedWebUrlRequest extends AbstractModel
     public $BusinessId;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作
+     * @var Agent 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
@@ -100,12 +106,13 @@ class CreateEmbedWebUrlRequest extends AbstractModel
     public $Reviewer;
 
     /**
-     * @var EmbedUrlOption 个性化参数
+     * @var EmbedUrlOption 个性化参数，用于控制页面展示内容
      */
     public $Option;
 
     /**
-     * @param UserInfo $Operator 操作者信息
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+<br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      * @param string $EmbedType WEB嵌入资源类型。
 <br/>CREATE_SEAL: 生成创建印章的嵌入页面
 <br/>CREATE_TEMPLATE：生成创建模板的嵌入页面
@@ -121,9 +128,10 @@ class CreateEmbedWebUrlRequest extends AbstractModel
 <br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
 <br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
 <br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作
+     * @param Agent $Agent 代理企业和员工的信息。
+<br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param ReviewerInfo $Reviewer 抄送方信息
-     * @param EmbedUrlOption $Option 个性化参数
+     * @param EmbedUrlOption $Option 个性化参数，用于控制页面展示内容
      */
     function __construct()
     {

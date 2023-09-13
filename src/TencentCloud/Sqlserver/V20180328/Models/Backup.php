@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) 设置多库备份时的DB列表
  * @method integer getStrategy() 获取备份策略（0-实例备份；1-多库备份）
  * @method void setStrategy(integer $Strategy) 设置备份策略（0-实例备份；1-多库备份）
+ * @method integer getStorageStrategy() 获取备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
+ * @method void setStorageStrategy(integer $StorageStrategy) 设置备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
  * @method integer getBackupWay() 获取备份方式，0-定时备份；1-手动临时备份；2-定期备份
  * @method void setBackupWay(integer $BackupWay) 设置备份方式，0-定时备份；1-手动临时备份；2-定期备份
  * @method string getBackupName() 获取备份任务名称，可自定义
@@ -108,6 +110,11 @@ class Backup extends AbstractModel
     public $Strategy;
 
     /**
+     * @var integer 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
+     */
+    public $StorageStrategy;
+
+    /**
      * @var integer 备份方式，0-定时备份；1-手动临时备份；2-定期备份
      */
     public $BackupWay;
@@ -153,6 +160,7 @@ class Backup extends AbstractModel
      * @param integer $Status 备份文件状态（0-创建中；1-成功；2-失败）
      * @param array $DBs 多库备份时的DB列表
      * @param integer $Strategy 备份策略（0-实例备份；1-多库备份）
+     * @param integer $StorageStrategy 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线
      * @param integer $BackupWay 备份方式，0-定时备份；1-手动临时备份；2-定期备份
      * @param string $BackupName 备份任务名称，可自定义
      * @param string $GroupId 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
@@ -212,6 +220,10 @@ class Backup extends AbstractModel
 
         if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
             $this->Strategy = $param["Strategy"];
+        }
+
+        if (array_key_exists("StorageStrategy",$param) and $param["StorageStrategy"] !== null) {
+            $this->StorageStrategy = $param["StorageStrategy"];
         }
 
         if (array_key_exists("BackupWay",$param) and $param["BackupWay"] !== null) {

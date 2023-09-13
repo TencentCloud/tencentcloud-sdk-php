@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDimensions(string $Dimensions) 设置告警实例的维度信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlarmLevel() 获取告警等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmLevel(string $AlarmLevel) 设置告警等级
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmHistory extends AbstractModel
 {
@@ -198,6 +202,12 @@ class AlarmHistory extends AbstractModel
     public $Dimensions;
 
     /**
+     * @var string 告警等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmLevel;
+
+    /**
      * @param string $AlarmId 告警历史Id
      * @param string $MonitorType 监控类型
      * @param string $Namespace 策略类型
@@ -223,6 +233,8 @@ class AlarmHistory extends AbstractModel
      * @param array $MetricsInfo 指标信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Dimensions 告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlarmLevel 告警等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -342,6 +354,10 @@ class AlarmHistory extends AbstractModel
 
         if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
             $this->Dimensions = $param["Dimensions"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
         }
     }
 }

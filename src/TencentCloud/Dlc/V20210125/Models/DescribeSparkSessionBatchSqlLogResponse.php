@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSparkSessionBatchSqlLog返回参数结构体
  *
- * @method integer getState() 获取状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
- * @method void setState(integer $State) 设置状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
+ * @method integer getState() 获取状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
+ * @method void setState(integer $State) 设置状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
  * @method array getLogSet() 获取日志信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSet(array $LogSet) 设置日志信息列表
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSparkSessionBatchSqlLogResponse extends AbstractModel
 {
     /**
-     * @var integer 状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
+     * @var integer 状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
      */
     public $State;
 
@@ -48,7 +48,7 @@ class DescribeSparkSessionBatchSqlLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $State 状态：0：初始化、1：成功、2：失败、3：取消、4：异常；
+     * @param integer $State 状态：0：运行中、1：成功、2：失败、3：取消、4：超时；
      * @param array $LogSet 日志信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

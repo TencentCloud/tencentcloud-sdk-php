@@ -29,7 +29,8 @@ use TencentCloud\Mrs\V20200910\Models as Models;
  * @method Models\TextToObjectResponse TextToObject(Models\TextToObjectRequest $req) 文本转结构化对象。
 
 适用场景：经过腾讯医疗专用 OCR 从图片识别之后的文本，可以调用此接口。通过其它 OCR 识别的文本可能不适配。医院的 XML 格式文本也不适配，XML 文件需要经过特殊转换才能直接调用此接口。单次调用传入的文本不宜超过 2000 字。
- * @method Models\TurnPDFToObjectResponse TurnPDFToObject(Models\TurnPDFToObjectRequest $req) 将PDF格式的体检报告文件结构化,解析关键信息.
+ * @method Models\TurnPDFToObjectResponse TurnPDFToObject(Models\TurnPDFToObjectRequest $req) 将PDF格式的体检报告文件结构化，解析关键信息。
+注意：该接口是按照体检报告 PDF 页面数量统计次数，不是按照 PDF 文件数量统计次数。通过该接口传入的报告必须是体检报告，非体检报告可能无法正确解析。
  */
 
 class MrsClient extends AbstractClient

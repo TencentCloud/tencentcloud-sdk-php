@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCageId(string $CageId) 设置专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取专用宿主机关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置专用宿主机关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostItem extends AbstractModel
 {
@@ -118,6 +122,12 @@ class HostItem extends AbstractModel
     public $CageId;
 
     /**
+     * @var array 专用宿主机关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param Placement $Placement 专用宿主机实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $HostId 专用宿主机实例ID
      * @param string $HostType 专用宿主机实例类型
@@ -131,6 +141,8 @@ class HostItem extends AbstractModel
      * @param string $HostIp 专用宿主机实例IP
      * @param HostResource $HostResource 专用宿主机实例资源信息
      * @param string $CageId 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 专用宿主机关联的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -198,6 +210,15 @@ class HostItem extends AbstractModel
 
         if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
             $this->CageId = $param["CageId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

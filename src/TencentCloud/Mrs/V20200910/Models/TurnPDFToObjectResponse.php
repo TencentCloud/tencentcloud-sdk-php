@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplate(Template $Template) 设置报告结构化结果
  * @method array getTextTypeList() 获取多级分类结果
  * @method void setTextTypeList(array $TextTypeList) 设置多级分类结果
- * @method Block getBlock() 获取报告结构化结果
- * @method void setBlock(Block $Block) 设置报告结构化结果
+ * @method Block getBlock() 获取报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
+ * @method void setBlock(Block $Block) 设置报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
  * @method boolean getIsBlock() 获取是否使用Block字段
  * @method void setIsBlock(boolean $IsBlock) 设置是否使用Block字段
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +44,7 @@ class TurnPDFToObjectResponse extends AbstractModel
     public $TextTypeList;
 
     /**
-     * @var Block 报告结构化结果
+     * @var Block 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
      */
     public $Block;
 
@@ -61,7 +61,7 @@ class TurnPDFToObjectResponse extends AbstractModel
     /**
      * @param Template $Template 报告结构化结果
      * @param array $TextTypeList 多级分类结果
-     * @param Block $Block 报告结构化结果
+     * @param Block $Block 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
      * @param boolean $IsBlock 是否使用Block字段
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

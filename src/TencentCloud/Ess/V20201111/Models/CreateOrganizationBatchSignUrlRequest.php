@@ -20,58 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOrganizationBatchSignUrl请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，UserId 必填，支持填入集团子公司经办人UserId。
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，UserId 必填，支持填入集团子公司经办人UserId。
- * @method array getFlowIds() 获取指定需要进行批量签署的流程id，数量1-100，填写后用户将通过链接对这些合同进行批量签署。
- * @method void setFlowIds(array $FlowIds) 设置指定需要进行批量签署的流程id，数量1-100，填写后用户将通过链接对这些合同进行批量签署。
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填。
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填。
- * @method string getUserId() 获取员工的UserId，该UserId对应的员工必须已经加入企业并实名，Name和Mobile为空时该字段不能为空。（优先使用UserId对应的员工）
- * @method void setUserId(string $UserId) 设置员工的UserId，该UserId对应的员工必须已经加入企业并实名，Name和Mobile为空时该字段不能为空。（优先使用UserId对应的员工）
- * @method string getName() 获取员工姓名，该字段需要与Mobile组合使用，UserId为空时该字段不能为空。（UserId为空时，使用Name和Mbile对应的员工）
- * @method void setName(string $Name) 设置员工姓名，该字段需要与Mobile组合使用，UserId为空时该字段不能为空。（UserId为空时，使用Name和Mbile对应的员工）
- * @method string getMobile() 获取员工手机号码，该字段需要与Name组合使用，UserId为空时该字段不能为空。（UserId为空时，使用Name和Mbile对应的员工）
- * @method void setMobile(string $Mobile) 设置员工手机号码，该字段需要与Name组合使用，UserId为空时该字段不能为空。（UserId为空时，使用Name和Mbile对应的员工）
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。使用此接口时，必须填写userId。
+支持填入集团子公司经办人 userId 代发合同。
+
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。使用此接口时，必须填写userId。
+支持填入集团子公司经办人 userId 代发合同。
+
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method array getFlowIds() 获取请指定需执行批量签署的流程ID，数量范围为1-100。</br>
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+用户将利用链接对这些合同实施批量操作。
+ * @method void setFlowIds(array $FlowIds) 设置请指定需执行批量签署的流程ID，数量范围为1-100。</br>
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+用户将利用链接对这些合同实施批量操作。
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getUserId() 获取员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+UserId必须是传入合同（FlowId）中的签署人。
+- 1. 若UserId为空，Name和Mobile 必须提供。
+- 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
+ * @method void setUserId(string $UserId) 设置员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+UserId必须是传入合同（FlowId）中的签署人。
+- 1. 若UserId为空，Name和Mobile 必须提供。
+- 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
+ * @method string getName() 获取员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+ * @method void setName(string $Name) 设置员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+ * @method string getMobile() 获取员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+ * @method void setMobile(string $Mobile) 设置员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
  */
 class CreateOrganizationBatchSignUrlRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，UserId 必填，支持填入集团子公司经办人UserId。
+     * @var UserInfo 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+支持填入集团子公司经办人 userId 代发合同。
+
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var array 指定需要进行批量签署的流程id，数量1-100，填写后用户将通过链接对这些合同进行批量签署。
+     * @var array 请指定需执行批量签署的流程ID，数量范围为1-100。</br>
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+用户将利用链接对这些合同实施批量操作。
      */
     public $FlowIds;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填。
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @var string 员工的UserId，该UserId对应的员工必须已经加入企业并实名，Name和Mobile为空时该字段不能为空。（优先使用UserId对应的员工）
+     * @var string 员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+UserId必须是传入合同（FlowId）中的签署人。
+- 1. 若UserId为空，Name和Mobile 必须提供。
+- 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
      */
     public $UserId;
 
     /**
-     * @var string 员工姓名，该字段需要与Mobile组合使用，UserId为空时该字段不能为空。（UserId为空时，使用Name和Mbile对应的员工）
+     * @var string 员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      */
     public $Name;
 
     /**
-     * @var string 员工手机号码，该字段需要与Name组合使用，UserId为空时该字段不能为空。（UserId为空时，使用Name和Mbile对应的员工）
+     * @var string 员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      */
     public $Mobile;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，UserId 必填，支持填入集团子公司经办人UserId。
-     * @param array $FlowIds 指定需要进行批量签署的流程id，数量1-100，填写后用户将通过链接对这些合同进行批量签署。
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填。
-     * @param string $UserId 员工的UserId，该UserId对应的员工必须已经加入企业并实名，Name和Mobile为空时该字段不能为空。（优先使用UserId对应的员工）
-     * @param string $Name 员工姓名，该字段需要与Mobile组合使用，UserId为空时该字段不能为空。（UserId为空时，使用Name和Mbile对应的员工）
-     * @param string $Mobile 员工手机号码，该字段需要与Name组合使用，UserId为空时该字段不能为空。（UserId为空时，使用Name和Mbile对应的员工）
+     * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+支持填入集团子公司经办人 userId 代发合同。
+
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param array $FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。</br>
+您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。</br>
+用户将利用链接对这些合同实施批量操作。
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $UserId 员工在腾讯电子签平台的独特身份标识，为32位字符串。</br>
+您可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查阅某位员工的UserId（在页面中显示为用户ID）。</br>
+UserId必须是传入合同（FlowId）中的签署人。
+- 1. 若UserId为空，Name和Mobile 必须提供。
+- 2. 若UserId 与 Name，Mobile均存在，将优先采用UserId对应的员工。
+     * @param string $Name 员工姓名，必须与手机号码一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
+     * @param string $Mobile 员工手机号，必须与姓名一起使用。</br> 如果UserId为空，则此字段不能为空。同时，姓名和手机号码必须与传入合同（FlowId）中的签署人信息一致。
      */
     function __construct()
     {

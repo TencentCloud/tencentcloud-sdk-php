@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VerifyDomainOwnershipForConsole返回参数结构体
+ * DescribePorts请求参数结构体
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getEdition() 获取版本
+ * @method void setEdition(string $Edition) 设置版本
+ * @method string getInstanceID() 获取实例ID
+ * @method void setInstanceID(string $InstanceID) 设置实例ID
  */
-class VerifyDomainOwnershipForConsoleResponse extends AbstractModel
+class DescribePortsRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 版本
      */
-    public $RequestId;
+    public $Edition;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 实例ID
+     */
+    public $InstanceID;
+
+    /**
+     * @param string $Edition 版本
+     * @param string $InstanceID 实例ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class VerifyDomainOwnershipForConsoleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
+            $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
     }
 }

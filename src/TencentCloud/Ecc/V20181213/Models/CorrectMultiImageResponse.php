@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method CompostionContext getData() 获取接口返回数据
  * @method void setData(CompostionContext $Data) 设置接口返回数据
+ * @method CompositionContext getResultData() 获取接口返回数据
+ * @method void setResultData(CompositionContext $ResultData) 设置接口返回数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -29,8 +31,14 @@ class CorrectMultiImageResponse extends AbstractModel
 {
     /**
      * @var CompostionContext 接口返回数据
+     * @deprecated
      */
     public $Data;
+
+    /**
+     * @var CompositionContext 接口返回数据
+     */
+    public $ResultData;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -39,6 +47,7 @@ class CorrectMultiImageResponse extends AbstractModel
 
     /**
      * @param CompostionContext $Data 接口返回数据
+     * @param CompositionContext $ResultData 接口返回数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +66,11 @@ class CorrectMultiImageResponse extends AbstractModel
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new CompostionContext();
             $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("ResultData",$param) and $param["ResultData"] !== null) {
+            $this->ResultData = new CompositionContext();
+            $this->ResultData->deserialize($param["ResultData"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

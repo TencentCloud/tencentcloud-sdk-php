@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TurnPDFToObject请求参数结构体
  *
- * @method PdfInfo getPdfInfo() 获取体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
- * @method void setPdfInfo(PdfInfo $PdfInfo) 设置体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
+ * @method PdfInfo getPdfInfo() 获取体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+ * @method void setPdfInfo(PdfInfo $PdfInfo) 设置体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
  */
 class TurnPDFToObjectRequest extends AbstractModel
 {
     /**
-     * @var PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
+     * @var PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
      */
     public $PdfInfo;
 
     /**
-     * @param PdfInfo $PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符
+     * @param PdfInfo $PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
      */
     function __construct()
     {

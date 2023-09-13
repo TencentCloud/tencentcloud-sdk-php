@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置备份类型，1-数据备份，2-日志备份，默认值为1
  * @method string getBackupFormat() 获取按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
  * @method void setBackupFormat(string $BackupFormat) 设置按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+ * @method integer getStorageStrategy() 获取备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线，默认取值0
+ * @method void setStorageStrategy(integer $StorageStrategy) 设置备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线，默认取值0
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeBackupsRequest extends AbstractModel
     public $BackupFormat;
 
     /**
+     * @var integer 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线，默认取值0
+     */
+    public $StorageStrategy;
+
+    /**
      * @param string $StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
@@ -128,6 +135,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @param integer $Group 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
      * @param integer $Type 备份类型，1-数据备份，2-日志备份，默认值为1
      * @param string $BackupFormat 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+     * @param integer $StorageStrategy 备份存储策略 0-跟随自定义备份保留策略 1-跟随实例生命周期直到实例下线，默认取值0
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeBackupsRequest extends AbstractModel
 
         if (array_key_exists("BackupFormat",$param) and $param["BackupFormat"] !== null) {
             $this->BackupFormat = $param["BackupFormat"];
+        }
+
+        if (array_key_exists("StorageStrategy",$param) and $param["StorageStrategy"] !== null) {
+            $this->StorageStrategy = $param["StorageStrategy"];
         }
     }
 }

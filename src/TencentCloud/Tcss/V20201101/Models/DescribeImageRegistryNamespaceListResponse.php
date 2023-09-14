@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageRegistryNamespaceList返回参数结构体
  *
- * @method integer getTotalCount() 获取可返回的项目空间的总量。
- * @method void setTotalCount(integer $TotalCount) 设置可返回的项目空间的总量。
- * @method array getNamespaceList() 获取返回的项目空间列表
- * @method void setNamespaceList(array $NamespaceList) 设置返回的项目空间列表
+ * @method integer getTotalCount() 获取可返回的命令空间的总量。
+ * @method void setTotalCount(integer $TotalCount) 设置可返回的命令空间的总量。
+ * @method array getNamespaceList() 获取返回的命令空间列表
+ * @method void setNamespaceList(array $NamespaceList) 设置返回的命令空间列表
+ * @method array getNamespaceDetail() 获取返回的命令空间详细信息列表
+ * @method void setNamespaceDetail(array $NamespaceDetail) 设置返回的命令空间详细信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeImageRegistryNamespaceListResponse extends AbstractModel
 {
     /**
-     * @var integer 可返回的项目空间的总量。
+     * @var integer 可返回的命令空间的总量。
      */
     public $TotalCount;
 
     /**
-     * @var array 返回的项目空间列表
+     * @var array 返回的命令空间列表
      */
     public $NamespaceList;
+
+    /**
+     * @var array 返回的命令空间详细信息列表
+     */
+    public $NamespaceDetail;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeImageRegistryNamespaceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 可返回的项目空间的总量。
-     * @param array $NamespaceList 返回的项目空间列表
+     * @param integer $TotalCount 可返回的命令空间的总量。
+     * @param array $NamespaceList 返回的命令空间列表
+     * @param array $NamespaceDetail 返回的命令空间详细信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,15 @@ class DescribeImageRegistryNamespaceListResponse extends AbstractModel
 
         if (array_key_exists("NamespaceList",$param) and $param["NamespaceList"] !== null) {
             $this->NamespaceList = $param["NamespaceList"];
+        }
+
+        if (array_key_exists("NamespaceDetail",$param) and $param["NamespaceDetail"] !== null) {
+            $this->NamespaceDetail = [];
+            foreach ($param["NamespaceDetail"] as $key => $value){
+                $obj = new NamespaceInfo();
+                $obj->deserialize($value);
+                array_push($this->NamespaceDetail, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

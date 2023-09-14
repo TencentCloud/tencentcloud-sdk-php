@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetImageRegistrySummary请求参数结构体
  *
-
+ * @method array getFilters() 获取过滤字段
+ * @method void setFilters(array $Filters) 设置过滤字段
  */
 class DescribeAssetImageRegistrySummaryRequest extends AbstractModel
 {
-
+    /**
+     * @var array 过滤字段
+     */
+    public $Filters;
 
     /**
-
+     * @param array $Filters 过滤字段
      */
     function __construct()
     {
@@ -42,6 +46,13 @@ class DescribeAssetImageRegistrySummaryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new AssetFilters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

@@ -57,7 +57,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConditions(array $Conditions) 设置评估项风险列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DescribeStrategie extends AbstractModel
+class Strategies extends AbstractModel
 {
     /**
      * @var integer 评估项ID
@@ -181,7 +181,7 @@ class DescribeStrategie extends AbstractModel
         if (array_key_exists("Conditions",$param) and $param["Conditions"] !== null) {
             $this->Conditions = [];
             foreach ($param["Conditions"] as $key => $value){
-                $obj = new DescribeStrategiesCondition();
+                $obj = new Conditions();
                 $obj->deserialize($value);
                 array_push($this->Conditions, $obj);
             }

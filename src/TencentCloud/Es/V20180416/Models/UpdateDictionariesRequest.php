@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取ES实例ID
  * @method void setInstanceId(string $InstanceId) 设置ES实例ID
- * @method array getIkMainDicts() 获取IK分词主词典COS地址
- * @method void setIkMainDicts(array $IkMainDicts) 设置IK分词主词典COS地址
- * @method array getIkStopwords() 获取IK分词停用词词典COS地址
- * @method void setIkStopwords(array $IkStopwords) 设置IK分词停用词词典COS地址
- * @method array getSynonym() 获取同义词词典COS地址
- * @method void setSynonym(array $Synonym) 设置同义词词典COS地址
- * @method array getQQDict() 获取QQ分词词典COS地址
- * @method void setQQDict(array $QQDict) 设置QQ分词词典COS地址
+ * @method array getIkMainDicts() 获取安装时填IK分词主词典COS地址，删除时填词典名如test.dic
+ * @method void setIkMainDicts(array $IkMainDicts) 设置安装时填IK分词主词典COS地址，删除时填词典名如test.dic
+ * @method array getIkStopwords() 获取安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
+ * @method void setIkStopwords(array $IkStopwords) 设置安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
+ * @method array getSynonym() 获取安装时填同义词词典COS地址，删除时填词典名如test.dic
+ * @method void setSynonym(array $Synonym) 设置安装时填同义词词典COS地址，删除时填词典名如test.dic
+ * @method array getQQDict() 获取安装时填QQ分词词典COS地址，删除时填词典名如test.dic
+ * @method void setQQDict(array $QQDict) 设置安装时填QQ分词词典COS地址，删除时填词典名如test.dic
  * @method integer getUpdateType() 获取0：安装；1：删除。默认值0
  * @method void setUpdateType(integer $UpdateType) 设置0：安装；1：删除。默认值0
  * @method boolean getForceRestart() 获取是否强制重启集群。默认值false
@@ -43,22 +43,22 @@ class UpdateDictionariesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array IK分词主词典COS地址
+     * @var array 安装时填IK分词主词典COS地址，删除时填词典名如test.dic
      */
     public $IkMainDicts;
 
     /**
-     * @var array IK分词停用词词典COS地址
+     * @var array 安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
      */
     public $IkStopwords;
 
     /**
-     * @var array 同义词词典COS地址
+     * @var array 安装时填同义词词典COS地址，删除时填词典名如test.dic
      */
     public $Synonym;
 
     /**
-     * @var array QQ分词词典COS地址
+     * @var array 安装时填QQ分词词典COS地址，删除时填词典名如test.dic
      */
     public $QQDict;
 
@@ -74,10 +74,10 @@ class UpdateDictionariesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId ES实例ID
-     * @param array $IkMainDicts IK分词主词典COS地址
-     * @param array $IkStopwords IK分词停用词词典COS地址
-     * @param array $Synonym 同义词词典COS地址
-     * @param array $QQDict QQ分词词典COS地址
+     * @param array $IkMainDicts 安装时填IK分词主词典COS地址，删除时填词典名如test.dic
+     * @param array $IkStopwords 安装时填IK分词停用词词典COS地址，删除时填词典名如test.dic
+     * @param array $Synonym 安装时填同义词词典COS地址，删除时填词典名如test.dic
+     * @param array $QQDict 安装时填QQ分词词典COS地址，删除时填词典名如test.dic
      * @param integer $UpdateType 0：安装；1：删除。默认值0
      * @param boolean $ForceRestart 是否强制重启集群。默认值false
      */

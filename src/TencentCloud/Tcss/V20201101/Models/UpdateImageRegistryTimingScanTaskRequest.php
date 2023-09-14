@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(array $Id) 设置扫描镜像Id
  * @method boolean getLatest() 获取是否扫描最新版本
  * @method void setLatest(boolean $Latest) 设置是否扫描最新版本
+ * @method boolean getContainerRunning() 获取是否存在运行中的容器
+ * @method void setContainerRunning(boolean $ContainerRunning) 设置是否存在运行中的容器
+ * @method string getScanEndTime() 获取扫描结束时间
+ * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间
+ * @method integer getScanScope() 获取扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+ * @method void setScanScope(integer $ScanScope) 设置扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+ * @method array getRegistryType() 获取仓库类型 tcr,ccr,harbor
+ * @method void setRegistryType(array $RegistryType) 设置仓库类型 tcr,ccr,harbor
+ * @method array getNamespace() 获取命名空间
+ * @method void setNamespace(array $Namespace) 设置命名空间
  */
 class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 {
@@ -66,6 +76,7 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 
     /**
      * @var boolean 是否扫描所有
+     * @deprecated
      */
     public $All;
 
@@ -80,6 +91,31 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
     public $Latest;
 
     /**
+     * @var boolean 是否存在运行中的容器
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var string 扫描结束时间
+     */
+    public $ScanEndTime;
+
+    /**
+     * @var integer 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     */
+    public $ScanScope;
+
+    /**
+     * @var array 仓库类型 tcr,ccr,harbor
+     */
+    public $RegistryType;
+
+    /**
+     * @var array 命名空间
+     */
+    public $Namespace;
+
+    /**
      * @param integer $ScanPeriod 定时扫描周期
      * @param boolean $Enable 定时扫描开关
      * @param string $ScanTime 定时扫描的时间
@@ -88,6 +124,11 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
      * @param boolean $All 是否扫描所有
      * @param array $Id 扫描镜像Id
      * @param boolean $Latest 是否扫描最新版本
+     * @param boolean $ContainerRunning 是否存在运行中的容器
+     * @param string $ScanEndTime 扫描结束时间
+     * @param integer $ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     * @param array $RegistryType 仓库类型 tcr,ccr,harbor
+     * @param array $Namespace 命名空间
      */
     function __construct()
     {
@@ -137,6 +178,26 @@ class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel
 
         if (array_key_exists("Latest",$param) and $param["Latest"] !== null) {
             $this->Latest = $param["Latest"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
+            $this->ScanEndTime = $param["ScanEndTime"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
+            $this->RegistryType = $param["RegistryType"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
     }
 }

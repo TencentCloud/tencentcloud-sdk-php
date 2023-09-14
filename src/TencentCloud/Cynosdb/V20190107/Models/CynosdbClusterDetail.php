@@ -172,6 +172,10 @@ pausing
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标识，1为自动续费，0为到期不续
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNetworkType() 获取节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkType(string $NetworkType) 设置节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -444,6 +448,12 @@ pausing
     public $RenewFlag;
 
     /**
+     * @var string 节点网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkType;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -519,6 +529,8 @@ pausing
      * @param array $ResourcePackages 集群绑定的资源包信息	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NetworkType 节点网络类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -750,6 +762,10 @@ pausing
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
         }
     }
 }

@@ -61,7 +61,7 @@ class DescribeStrategiesResponse extends AbstractModel
         if (array_key_exists("Strategies",$param) and $param["Strategies"] !== null) {
             $this->Strategies = [];
             foreach ($param["Strategies"] as $key => $value){
-                $obj = new DescribeStrategie();
+                $obj = new Strategies();
                 $obj->deserialize($value);
                 array_push($this->Strategies, $obj);
             }

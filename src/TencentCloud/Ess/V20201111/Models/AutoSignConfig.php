@@ -63,12 +63,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。
 
 <ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
-
+</ul>
  * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。
 
 <ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
+</ul>
  */
 class AutoSignConfig extends AbstractModel
 {
@@ -121,8 +120,7 @@ class AutoSignConfig extends AbstractModel
      * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。
 
 <ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
-
+</ul>
      */
     public $LicenseType;
 
@@ -150,7 +148,7 @@ class AutoSignConfig extends AbstractModel
      * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
 
 <ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
+</ul>
      */
     function __construct()
     {

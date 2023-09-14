@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置规范，配合Limit使用，Limit最大取值为100
  * @method string getEmailAddress() 获取可以指定邮箱进行查询
  * @method void setEmailAddress(string $EmailAddress) 设置可以指定邮箱进行查询
- * @method string getTaskID() 获取可以指定任务ID进行查询
- * @method void setTaskID(string $TaskID) 设置可以指定任务ID进行查询
+ * @method string getTaskID() 获取已废弃
+ * @method void setTaskID(string $TaskID) 设置已废弃
  */
 class ListBlackEmailAddressRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ListBlackEmailAddressRequest extends AbstractModel
     public $EmailAddress;
 
     /**
-     * @var string 可以指定任务ID进行查询
+     * @var string 已废弃
      */
     public $TaskID;
 
@@ -71,7 +71,7 @@ class ListBlackEmailAddressRequest extends AbstractModel
      * @param integer $Limit 规范，配合Offset使用
      * @param integer $Offset 规范，配合Limit使用，Limit最大取值为100
      * @param string $EmailAddress 可以指定邮箱进行查询
-     * @param string $TaskID 可以指定任务ID进行查询
+     * @param string $TaskID 已废弃
      */
     function __construct()
     {

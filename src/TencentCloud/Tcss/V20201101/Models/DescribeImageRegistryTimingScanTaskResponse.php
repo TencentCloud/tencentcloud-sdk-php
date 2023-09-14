@@ -46,6 +46,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatest(boolean $Latest) 设置是否扫描最新版本镜像
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScanEndTime() 获取扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRegistryType() 获取仓库类型 tcr,ccr,harbor	
+ * @method void setRegistryType(array $RegistryType) 设置仓库类型 tcr,ccr,harbor	
+ * @method boolean getContainerRunning() 获取是否存在运行中的容器	
+ * @method void setContainerRunning(boolean $ContainerRunning) 设置是否存在运行中的容器	
+ * @method integer getScanScope() 获取扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+ * @method void setScanScope(integer $ScanScope) 设置扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+ * @method array getNamespace() 获取命名空间
+ * @method void setNamespace(array $Namespace) 设置命名空间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +87,7 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 
     /**
      * @var boolean 扫描全部镜像
+     * @deprecated
      */
     public $All;
 
@@ -97,6 +110,32 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
     public $Latest;
 
     /**
+     * @var string 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScanEndTime;
+
+    /**
+     * @var array 仓库类型 tcr,ccr,harbor	
+     */
+    public $RegistryType;
+
+    /**
+     * @var boolean 是否存在运行中的容器	
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var integer 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     */
+    public $ScanScope;
+
+    /**
+     * @var array 命名空间
+     */
+    public $Namespace;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -115,6 +154,12 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Latest 是否扫描最新版本镜像
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScanEndTime 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RegistryType 仓库类型 tcr,ccr,harbor	
+     * @param boolean $ContainerRunning 是否存在运行中的容器	
+     * @param integer $ScanScope 扫描范围 0全部镜像，1自选镜像，2推荐扫描镜像
+     * @param array $Namespace 命名空间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -165,6 +210,26 @@ class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel
 
         if (array_key_exists("Latest",$param) and $param["Latest"] !== null) {
             $this->Latest = $param["Latest"];
+        }
+
+        if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
+            $this->ScanEndTime = $param["ScanEndTime"];
+        }
+
+        if (array_key_exists("RegistryType",$param) and $param["RegistryType"] !== null) {
+            $this->RegistryType = $param["RegistryType"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

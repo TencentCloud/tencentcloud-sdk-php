@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTasks(array $Tasks) 设置流程任务信息
  * @method float getProgress() 获取操作进度
  * @method void setProgress(float $Progress) 设置操作进度
+ * @method string getSubAccountUin() 获取操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Operation extends AbstractModel
 {
@@ -73,6 +77,12 @@ class Operation extends AbstractModel
     public $Progress;
 
     /**
+     * @var string 操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubAccountUin;
+
+    /**
      * @param integer $Id 操作唯一id
      * @param string $StartTime 操作开始时间
      * @param string $Type 操作类型
@@ -80,6 +90,8 @@ class Operation extends AbstractModel
      * @param string $Result 操作结果
      * @param array $Tasks 流程任务信息
      * @param float $Progress 操作进度
+     * @param string $SubAccountUin 操作者Uin
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -126,6 +138,10 @@ class Operation extends AbstractModel
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
         }
     }
 }

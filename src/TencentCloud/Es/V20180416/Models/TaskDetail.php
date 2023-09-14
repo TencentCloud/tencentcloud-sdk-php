@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElapsedTime(integer $ElapsedTime) 设置任务花费时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ProcessDetail getProcessInfo() 获取任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcessInfo(ProcessDetail $ProcessInfo) 设置任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDetail extends AbstractModel
 {
@@ -62,11 +66,19 @@ class TaskDetail extends AbstractModel
     public $ElapsedTime;
 
     /**
+     * @var ProcessDetail 任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProcessInfo;
+
+    /**
      * @param string $Name 任务名
      * @param float $Progress 任务进度
      * @param string $FinishTime 任务完成时间
      * @param array $SubTasks 子任务
      * @param integer $ElapsedTime 任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProcessDetail $ProcessInfo 任务进度详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -105,6 +117,11 @@ class TaskDetail extends AbstractModel
 
         if (array_key_exists("ElapsedTime",$param) and $param["ElapsedTime"] !== null) {
             $this->ElapsedTime = $param["ElapsedTime"];
+        }
+
+        if (array_key_exists("ProcessInfo",$param) and $param["ProcessInfo"] !== null) {
+            $this->ProcessInfo = new ProcessDetail();
+            $this->ProcessInfo->deserialize($param["ProcessInfo"]);
         }
     }
 }

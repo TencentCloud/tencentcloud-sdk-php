@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置组件版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAttackLevel() 获取攻击热度 0-3
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度 0-3
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageVul extends AbstractModel
 {
@@ -214,6 +218,12 @@ class ImageVul extends AbstractModel
     public $Version;
 
     /**
+     * @var integer 攻击热度 0-3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttackLevel;
+
+    /**
      * @param string $CVEID 漏洞id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $POCID 观点验证程序id
@@ -251,6 +261,8 @@ class ImageVul extends AbstractModel
      * @param string $Component 组件名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 组件版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AttackLevel 攻击热度 0-3
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -345,6 +357,10 @@ class ImageVul extends AbstractModel
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {
             $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("AttackLevel",$param) and $param["AttackLevel"] !== null) {
+            $this->AttackLevel = $param["AttackLevel"];
         }
     }
 }

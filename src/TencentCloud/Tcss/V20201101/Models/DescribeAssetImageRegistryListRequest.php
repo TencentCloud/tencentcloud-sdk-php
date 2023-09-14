@@ -34,6 +34,8 @@ IsAuthorized是否授权，取值全部all，未授权0，已授权1
  * @method void setOrder(string $Order) 设置排序方式，asc，desc
  * @method boolean getOnlyShowLatest() 获取是否仅展示各repository最新的镜像, 默认为false
  * @method void setOnlyShowLatest(boolean $OnlyShowLatest) 设置是否仅展示各repository最新的镜像, 默认为false
+ * @method boolean getIsRunning() 获取是否仅展示运行中容器镜像
+ * @method void setIsRunning(boolean $IsRunning) 设置是否仅展示运行中容器镜像
  */
 class DescribeAssetImageRegistryListRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ IsAuthorized是否授权，取值全部all，未授权0，已授权1
     public $OnlyShowLatest;
 
     /**
+     * @var boolean 是否仅展示运行中容器镜像
+     */
+    public $IsRunning;
+
+    /**
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0
      * @param array $Filters 过滤字段
@@ -76,6 +83,7 @@ IsAuthorized是否授权，取值全部all，未授权0，已授权1
      * @param string $By 排序字段
      * @param string $Order 排序方式，asc，desc
      * @param boolean $OnlyShowLatest 是否仅展示各repository最新的镜像, 默认为false
+     * @param boolean $IsRunning 是否仅展示运行中容器镜像
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ IsAuthorized是否授权，取值全部all，未授权0，已授权1
 
         if (array_key_exists("OnlyShowLatest",$param) and $param["OnlyShowLatest"] !== null) {
             $this->OnlyShowLatest = $param["OnlyShowLatest"];
+        }
+
+        if (array_key_exists("IsRunning",$param) and $param["IsRunning"] !== null) {
+            $this->IsRunning = $param["IsRunning"];
         }
     }
 }

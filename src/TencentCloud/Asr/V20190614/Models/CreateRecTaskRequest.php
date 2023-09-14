@@ -112,6 +112,40 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(integer $SourceType) 设置语音数据来源
 0：语音 URL；
 1：语音数据（post body）
+ * @method string getData() 获取语音数据base64编码
+**当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
+
+注意：音频数据要小于5MB（含）
+ * @method void setData(string $Data) 设置语音数据base64编码
+**当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
+
+注意：音频数据要小于5MB（含）
+ * @method integer getDataLen() 获取数据长度（此数据长度为数据未进行base64编码时的长度）
+ * @method void setDataLen(integer $DataLen) 设置数据长度（此数据长度为数据未进行base64编码时的长度）
+ * @method string getUrl() 获取语音URL的地址（需要公网环境浏览器可下载）
+**当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
+
+注意：
+1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
+2. 请保证文件的下载速度，否则可能下载失败
+ * @method void setUrl(string $Url) 设置语音URL的地址（需要公网环境浏览器可下载）
+**当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
+
+注意：
+1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
+2. 请保证文件的下载速度，否则可能下载失败
+ * @method string getCallbackUrl() 获取回调 URL
+用户自行搭建的用于接收识别结果的服务URL
+回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+
+注意：
+如果用户使用轮询方式获取识别结果，则无需提交该参数
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL
+用户自行搭建的用于接收识别结果的服务URL
+回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+
+注意：
+如果用户使用轮询方式获取识别结果，则无需提交该参数
  * @method integer getSpeakerDiarization() 获取是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id，且ChannelNum=1时可用）；
@@ -136,40 +170,60 @@ use TencentCloud\Common\AbstractModel;
 0：自动分离（最多分离出20个人）；
 1-10：指定人数分离；
 默认值为 0
- * @method string getCallbackUrl() 获取回调 URL
-用户自行搭建的用于接收识别结果的服务URL
-回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+ * @method string getHotwordId() 获取热词表id
+如不设置该参数，将自动生效默认热词表；
+如设置该参数，将生效对应id的热词表；
+点击这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)
+ * @method void setHotwordId(string $HotwordId) 设置热词表id
+如不设置该参数，将自动生效默认热词表；
+如设置该参数，将生效对应id的热词表；
+点击这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)
+ * @method integer getReinforceHotword() 获取热词增强功能（目前仅支持8k_zh/16k_zh引擎）
+1：开启热词增强功能
+
+注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
+ * @method void setReinforceHotword(integer $ReinforceHotword) 设置热词增强功能（目前仅支持8k_zh/16k_zh引擎）
+1：开启热词增强功能
+
+注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
+ * @method string getCustomizationId() 获取自学习定制模型 id
+如设置了该参数，将生效对应id的自学习定制模型；
+点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
+ * @method void setCustomizationId(string $CustomizationId) 设置自学习定制模型 id
+如设置了该参数，将生效对应id的自学习定制模型；
+点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
+ * @method integer getEmotionRecognition() 获取**【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+0：不开启；
+1：开启情绪识别，但不在文本展示情绪标签；
+2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
+默认值为0
+支持的情绪分类为：高兴、伤心、愤怒
 
 注意：
-如果用户使用轮询方式获取识别结果，则无需提交该参数
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL
-用户自行搭建的用于接收识别结果的服务URL
-回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
+2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值1或2，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
+3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
+ * @method void setEmotionRecognition(integer $EmotionRecognition) 设置**【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+0：不开启；
+1：开启情绪识别，但不在文本展示情绪标签；
+2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
+默认值为0
+支持的情绪分类为：高兴、伤心、愤怒
 
 注意：
-如果用户使用轮询方式获取识别结果，则无需提交该参数
- * @method string getUrl() 获取语音URL的地址（需要公网环境浏览器可下载）
-**当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
-
-注意：
-1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
-2. 请保证文件的下载速度，否则可能下载失败
- * @method void setUrl(string $Url) 设置语音URL的地址（需要公网环境浏览器可下载）
-**当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
-
-注意：
-1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
-2. 请保证文件的下载速度，否则可能下载失败
- * @method string getData() 获取语音数据base64编码
-**当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
-
-注意：音频数据要小于5MB（含）
- * @method void setData(string $Data) 设置语音数据base64编码
-**当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
-
-注意：音频数据要小于5MB（含）
- * @method integer getDataLen() 获取数据长度（此数据长度为数据未进行base64编码时的长度）
- * @method void setDataLen(integer $DataLen) 设置数据长度（此数据长度为数据未进行base64编码时的长度）
+1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
+2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值1或2，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
+3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
+ * @method integer getEmotionalEnergy() 获取情绪能量值
+取值为音量分贝值/10，取值范围：[1,10]，值越高情绪越强烈
+0：不开启；
+1：开启；
+默认值为0
+ * @method void setEmotionalEnergy(integer $EmotionalEnergy) 设置情绪能量值
+取值为音量分贝值/10，取值范围：[1,10]，值越高情绪越强烈
+0：不开启；
+1：开启；
+默认值为0
  * @method integer getConvertNumMode() 获取阿拉伯数字智能转换（目前仅支持8k_zh/16k_zh引擎）
 0：不转换，直接输出中文数字；
 1：根据场景智能转换为阿拉伯数字；
@@ -190,22 +244,6 @@ use TencentCloud\Common\AbstractModel;
 1：过滤脏词；
 2：将脏词替换为 * ；
 默认值为 0
- * @method string getHotwordId() 获取热词表id
-如不设置该参数，将自动生效默认热词表；
-如设置该参数，将生效对应id的热词表；
-点击这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)
- * @method void setHotwordId(string $HotwordId) 设置热词表id
-如不设置该参数，将自动生效默认热词表；
-如设置该参数，将生效对应id的热词表；
-点击这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)
- * @method string getCustomizationId() 获取自学习定制模型 id
-如设置了该参数，将生效对应id的自学习定制模型；
-点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
- * @method void setCustomizationId(string $CustomizationId) 设置自学习定制模型 id
-如设置了该参数，将生效对应id的自学习定制模型；
-点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
- * @method string getExtra() 获取附加参数**（该参数无意义，忽略即可）**
- * @method void setExtra(string $Extra) 设置附加参数**（该参数无意义，忽略即可）**
  * @method integer getFilterPunc() 获取标点符号过滤（目前仅支持8k_zh/16k_zh引擎）
 0：不过滤标点；
 1：过滤句末标点；
@@ -216,34 +254,16 @@ use TencentCloud\Common\AbstractModel;
 1：过滤句末标点；
 2：过滤所有标点；
 默认值为 0
- * @method integer getFilterModal() 获取语气词过滤（目前支持8k_zh/16k_zh引擎）
+ * @method integer getFilterModal() 获取语气词过滤（目前仅支持8k_zh/16k_zh引擎）
 0：不过滤语气词；
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
- * @method void setFilterModal(integer $FilterModal) 设置语气词过滤（目前支持8k_zh/16k_zh引擎）
+ * @method void setFilterModal(integer $FilterModal) 设置语气词过滤（目前仅支持8k_zh/16k_zh引擎）
 0：不过滤语气词；
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
- * @method integer getEmotionalEnergy() 获取情绪能量值
-取值为音量分贝值/10，取值范围：[1,10]，值越高情绪越强烈
-0：不开启；
-1：开启；
-默认值为0
- * @method void setEmotionalEnergy(integer $EmotionalEnergy) 设置情绪能量值
-取值为音量分贝值/10，取值范围：[1,10]，值越高情绪越强烈
-0：不开启；
-1：开启；
-默认值为0
- * @method integer getReinforceHotword() 获取热词增强功能（仅支持8k_zh/16k_zh引擎）
-1：开启热词增强功能
-
-注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
- * @method void setReinforceHotword(integer $ReinforceHotword) 设置热词增强功能（仅支持8k_zh/16k_zh引擎）
-1：开启热词增强功能
-
-注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
  * @method integer getSentenceMaxLength() 获取单标点最多字数
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
@@ -256,26 +276,8 @@ use TencentCloud\Common\AbstractModel;
 默认值为0
 
 注意：需设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果
- * @method integer getEmotionRecognition() 获取**【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
-0：不开启；
-1：开启情绪识别，但不在文本展示情绪标签；
-2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
-默认值为0
-
-注意：
-1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
-2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值4，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
-3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
- * @method void setEmotionRecognition(integer $EmotionRecognition) 设置**【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
-0：不开启；
-1：开启情绪识别，但不在文本展示情绪标签；
-2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
-默认值为0
-
-注意：
-1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
-2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值4，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
-3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
+ * @method string getExtra() 获取附加参数**（该参数无意义，忽略即可）**
+ * @method void setExtra(string $Extra) 设置附加参数**（该参数无意义，忽略即可）**
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -342,6 +344,39 @@ class CreateRecTaskRequest extends AbstractModel
     public $SourceType;
 
     /**
+     * @var string 语音数据base64编码
+**当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
+
+注意：音频数据要小于5MB（含）
+     */
+    public $Data;
+
+    /**
+     * @var integer 数据长度（此数据长度为数据未进行base64编码时的长度）
+     */
+    public $DataLen;
+
+    /**
+     * @var string 语音URL的地址（需要公网环境浏览器可下载）
+**当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
+
+注意：
+1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
+2. 请保证文件的下载速度，否则可能下载失败
+     */
+    public $Url;
+
+    /**
+     * @var string 回调 URL
+用户自行搭建的用于接收识别结果的服务URL
+回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+
+注意：
+如果用户使用轮询方式获取识别结果，则无需提交该参数
+     */
+    public $CallbackUrl;
+
+    /**
      * @var integer 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id，且ChannelNum=1时可用）；
@@ -362,37 +397,51 @@ class CreateRecTaskRequest extends AbstractModel
     public $SpeakerNumber;
 
     /**
-     * @var string 回调 URL
-用户自行搭建的用于接收识别结果的服务URL
-回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+     * @var string 热词表id
+如不设置该参数，将自动生效默认热词表；
+如设置该参数，将生效对应id的热词表；
+点击这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)
+     */
+    public $HotwordId;
+
+    /**
+     * @var integer 热词增强功能（目前仅支持8k_zh/16k_zh引擎）
+1：开启热词增强功能
+
+注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
+     */
+    public $ReinforceHotword;
+
+    /**
+     * @var string 自学习定制模型 id
+如设置了该参数，将生效对应id的自学习定制模型；
+点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
+     */
+    public $CustomizationId;
+
+    /**
+     * @var integer **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+0：不开启；
+1：开启情绪识别，但不在文本展示情绪标签；
+2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
+默认值为0
+支持的情绪分类为：高兴、伤心、愤怒
 
 注意：
-如果用户使用轮询方式获取识别结果，则无需提交该参数
+1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
+2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值1或2，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
+3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
      */
-    public $CallbackUrl;
+    public $EmotionRecognition;
 
     /**
-     * @var string 语音URL的地址（需要公网环境浏览器可下载）
-**当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
-
-注意：
-1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
-2. 请保证文件的下载速度，否则可能下载失败
+     * @var integer 情绪能量值
+取值为音量分贝值/10，取值范围：[1,10]，值越高情绪越强烈
+0：不开启；
+1：开启；
+默认值为0
      */
-    public $Url;
-
-    /**
-     * @var string 语音数据base64编码
-**当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
-
-注意：音频数据要小于5MB（含）
-     */
-    public $Data;
-
-    /**
-     * @var integer 数据长度（此数据长度为数据未进行base64编码时的长度）
-     */
-    public $DataLen;
+    public $EmotionalEnergy;
 
     /**
      * @var integer 阿拉伯数字智能转换（目前仅支持8k_zh/16k_zh引擎）
@@ -413,26 +462,6 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterDirty;
 
     /**
-     * @var string 热词表id
-如不设置该参数，将自动生效默认热词表；
-如设置该参数，将生效对应id的热词表；
-点击这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)
-     */
-    public $HotwordId;
-
-    /**
-     * @var string 自学习定制模型 id
-如设置了该参数，将生效对应id的自学习定制模型；
-点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
-     */
-    public $CustomizationId;
-
-    /**
-     * @var string 附加参数**（该参数无意义，忽略即可）**
-     */
-    public $Extra;
-
-    /**
      * @var integer 标点符号过滤（目前仅支持8k_zh/16k_zh引擎）
 0：不过滤标点；
 1：过滤句末标点；
@@ -442,30 +471,13 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterPunc;
 
     /**
-     * @var integer 语气词过滤（目前支持8k_zh/16k_zh引擎）
+     * @var integer 语气词过滤（目前仅支持8k_zh/16k_zh引擎）
 0：不过滤语气词；
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
      */
     public $FilterModal;
-
-    /**
-     * @var integer 情绪能量值
-取值为音量分贝值/10，取值范围：[1,10]，值越高情绪越强烈
-0：不开启；
-1：开启；
-默认值为0
-     */
-    public $EmotionalEnergy;
-
-    /**
-     * @var integer 热词增强功能（仅支持8k_zh/16k_zh引擎）
-1：开启热词增强功能
-
-注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
-     */
-    public $ReinforceHotword;
 
     /**
      * @var integer 单标点最多字数
@@ -478,18 +490,9 @@ class CreateRecTaskRequest extends AbstractModel
     public $SentenceMaxLength;
 
     /**
-     * @var integer **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
-0：不开启；
-1：开启情绪识别，但不在文本展示情绪标签；
-2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
-默认值为0
-
-注意：
-1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
-2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值4，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
-3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
+     * @var string 附加参数**（该参数无意义，忽略即可）**
      */
-    public $EmotionRecognition;
+    public $Extra;
 
     /**
      * @param string $EngineModelType 引擎模型类型
@@ -538,6 +541,23 @@ class CreateRecTaskRequest extends AbstractModel
      * @param integer $SourceType 语音数据来源
 0：语音 URL；
 1：语音数据（post body）
+     * @param string $Data 语音数据base64编码
+**当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
+
+注意：音频数据要小于5MB（含）
+     * @param integer $DataLen 数据长度（此数据长度为数据未进行base64编码时的长度）
+     * @param string $Url 语音URL的地址（需要公网环境浏览器可下载）
+**当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
+
+注意：
+1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
+2. 请保证文件的下载速度，否则可能下载失败
+     * @param string $CallbackUrl 回调 URL
+用户自行搭建的用于接收识别结果的服务URL
+回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+
+注意：
+如果用户使用轮询方式获取识别结果，则无需提交该参数
      * @param integer $SpeakerDiarization 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/16k_zh/16k_ms/16k_en/16k_id，且ChannelNum=1时可用）；
@@ -550,23 +570,33 @@ class CreateRecTaskRequest extends AbstractModel
 0：自动分离（最多分离出20个人）；
 1-10：指定人数分离；
 默认值为 0
-     * @param string $CallbackUrl 回调 URL
-用户自行搭建的用于接收识别结果的服务URL
-回调格式和内容详见：[录音识别回调说明](https://cloud.tencent.com/document/product/1093/52632)
+     * @param string $HotwordId 热词表id
+如不设置该参数，将自动生效默认热词表；
+如设置该参数，将生效对应id的热词表；
+点击这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)
+     * @param integer $ReinforceHotword 热词增强功能（目前仅支持8k_zh/16k_zh引擎）
+1：开启热词增强功能
+
+注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
+     * @param string $CustomizationId 自学习定制模型 id
+如设置了该参数，将生效对应id的自学习定制模型；
+点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
+     * @param integer $EmotionRecognition **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+0：不开启；
+1：开启情绪识别，但不在文本展示情绪标签；
+2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
+默认值为0
+支持的情绪分类为：高兴、伤心、愤怒
 
 注意：
-如果用户使用轮询方式获取识别结果，则无需提交该参数
-     * @param string $Url 语音URL的地址（需要公网环境浏览器可下载）
-**当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
-
-注意：
-1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
-2. 请保证文件的下载速度，否则可能下载失败
-     * @param string $Data 语音数据base64编码
-**当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
-
-注意：音频数据要小于5MB（含）
-     * @param integer $DataLen 数据长度（此数据长度为数据未进行base64编码时的长度）
+1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
+2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值1或2，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
+3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
+     * @param integer $EmotionalEnergy 情绪能量值
+取值为音量分贝值/10，取值范围：[1,10]，值越高情绪越强烈
+0：不开启；
+1：开启；
+默认值为0
      * @param integer $ConvertNumMode 阿拉伯数字智能转换（目前仅支持8k_zh/16k_zh引擎）
 0：不转换，直接输出中文数字；
 1：根据场景智能转换为阿拉伯数字；
@@ -577,49 +607,23 @@ class CreateRecTaskRequest extends AbstractModel
 1：过滤脏词；
 2：将脏词替换为 * ；
 默认值为 0
-     * @param string $HotwordId 热词表id
-如不设置该参数，将自动生效默认热词表；
-如设置该参数，将生效对应id的热词表；
-点击这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)
-     * @param string $CustomizationId 自学习定制模型 id
-如设置了该参数，将生效对应id的自学习定制模型；
-点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
-     * @param string $Extra 附加参数**（该参数无意义，忽略即可）**
      * @param integer $FilterPunc 标点符号过滤（目前仅支持8k_zh/16k_zh引擎）
 0：不过滤标点；
 1：过滤句末标点；
 2：过滤所有标点；
 默认值为 0
-     * @param integer $FilterModal 语气词过滤（目前支持8k_zh/16k_zh引擎）
+     * @param integer $FilterModal 语气词过滤（目前仅支持8k_zh/16k_zh引擎）
 0：不过滤语气词；
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
-     * @param integer $EmotionalEnergy 情绪能量值
-取值为音量分贝值/10，取值范围：[1,10]，值越高情绪越强烈
-0：不开启；
-1：开启；
-默认值为0
-     * @param integer $ReinforceHotword 热词增强功能（仅支持8k_zh/16k_zh引擎）
-1：开启热词增强功能
-
-注意：热词增强功能开启后，将对传入的热词表id开启同音替换功能，可以在这里查看[热词表配置方法](https://cloud.tencent.com/document/product/1093/40996)。效果举例：在热词表中配置“蜜制”一词，并开启增强功能，与“蜜制”（mìzhì）同音同调的“秘制”（mìzhì）的识别结果会被强制替换成“蜜制”。**建议客户根据实际的业务需求开启该功能**
      * @param integer $SentenceMaxLength 单标点最多字数
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
 
 注意：需设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果
-     * @param integer $EmotionRecognition **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
-0：不开启；
-1：开启情绪识别，但不在文本展示情绪标签；
-2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
-默认值为0
-
-注意：
-1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
-2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值4，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
-3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
+     * @param string $Extra 附加参数**（该参数无意义，忽略即可）**
      */
     function __construct()
     {
@@ -650,6 +654,22 @@ class CreateRecTaskRequest extends AbstractModel
             $this->SourceType = $param["SourceType"];
         }
 
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("DataLen",$param) and $param["DataLen"] !== null) {
+            $this->DataLen = $param["DataLen"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
         if (array_key_exists("SpeakerDiarization",$param) and $param["SpeakerDiarization"] !== null) {
             $this->SpeakerDiarization = $param["SpeakerDiarization"];
         }
@@ -658,20 +678,24 @@ class CreateRecTaskRequest extends AbstractModel
             $this->SpeakerNumber = $param["SpeakerNumber"];
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
+            $this->HotwordId = $param["HotwordId"];
         }
 
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists("ReinforceHotword",$param) and $param["ReinforceHotword"] !== null) {
+            $this->ReinforceHotword = $param["ReinforceHotword"];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = $param["Data"];
+        if (array_key_exists("CustomizationId",$param) and $param["CustomizationId"] !== null) {
+            $this->CustomizationId = $param["CustomizationId"];
         }
 
-        if (array_key_exists("DataLen",$param) and $param["DataLen"] !== null) {
-            $this->DataLen = $param["DataLen"];
+        if (array_key_exists("EmotionRecognition",$param) and $param["EmotionRecognition"] !== null) {
+            $this->EmotionRecognition = $param["EmotionRecognition"];
+        }
+
+        if (array_key_exists("EmotionalEnergy",$param) and $param["EmotionalEnergy"] !== null) {
+            $this->EmotionalEnergy = $param["EmotionalEnergy"];
         }
 
         if (array_key_exists("ConvertNumMode",$param) and $param["ConvertNumMode"] !== null) {
@@ -682,18 +706,6 @@ class CreateRecTaskRequest extends AbstractModel
             $this->FilterDirty = $param["FilterDirty"];
         }
 
-        if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
-            $this->HotwordId = $param["HotwordId"];
-        }
-
-        if (array_key_exists("CustomizationId",$param) and $param["CustomizationId"] !== null) {
-            $this->CustomizationId = $param["CustomizationId"];
-        }
-
-        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
-            $this->Extra = $param["Extra"];
-        }
-
         if (array_key_exists("FilterPunc",$param) and $param["FilterPunc"] !== null) {
             $this->FilterPunc = $param["FilterPunc"];
         }
@@ -702,20 +714,12 @@ class CreateRecTaskRequest extends AbstractModel
             $this->FilterModal = $param["FilterModal"];
         }
 
-        if (array_key_exists("EmotionalEnergy",$param) and $param["EmotionalEnergy"] !== null) {
-            $this->EmotionalEnergy = $param["EmotionalEnergy"];
-        }
-
-        if (array_key_exists("ReinforceHotword",$param) and $param["ReinforceHotword"] !== null) {
-            $this->ReinforceHotword = $param["ReinforceHotword"];
-        }
-
         if (array_key_exists("SentenceMaxLength",$param) and $param["SentenceMaxLength"] !== null) {
             $this->SentenceMaxLength = $param["SentenceMaxLength"];
         }
 
-        if (array_key_exists("EmotionRecognition",$param) and $param["EmotionRecognition"] !== null) {
-            $this->EmotionRecognition = $param["EmotionRecognition"];
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
     }
 }

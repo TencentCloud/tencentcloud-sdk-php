@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置ES实例ID
  * @method integer getStatus() 获取0：开启智能运维；-1：关闭智能运维
  * @method void setStatus(integer $Status) 设置0：开启智能运维；-1：关闭智能运维
- * @method string getCronTime() 获取智能运维每天定时巡检时间
- * @method void setCronTime(string $CronTime) 设置智能运维每天定时巡检时间
+ * @method string getCronTime() 获取智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
+ * @method void setCronTime(string $CronTime) 设置智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
  */
 class UpdateDiagnoseSettingsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class UpdateDiagnoseSettingsRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 智能运维每天定时巡检时间
+     * @var string 智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
      */
     public $CronTime;
 
     /**
      * @param string $InstanceId ES实例ID
      * @param integer $Status 0：开启智能运维；-1：关闭智能运维
-     * @param string $CronTime 智能运维每天定时巡检时间
+     * @param string $CronTime 智能运维每天定时巡检时间，时间格式为HH:00:00，例如15:00:00
      */
     function __construct()
     {

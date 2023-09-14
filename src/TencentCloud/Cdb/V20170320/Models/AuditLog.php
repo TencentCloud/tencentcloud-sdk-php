@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrxLivingTime(integer $TrxLivingTime) 设置事物持续时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTemplateInfo() 获取日志命中规则模板的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateInfo(array $TemplateInfo) 设置日志命中规则模板的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditLog extends AbstractModel
 {
@@ -168,6 +172,12 @@ class AuditLog extends AbstractModel
     public $TrxLivingTime;
 
     /**
+     * @var array 日志命中规则模板的基本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateInfo;
+
+    /**
      * @param integer $AffectRows 影响行数。
      * @param integer $ErrCode 错误码。
      * @param string $SqlType SQL 类型。
@@ -191,6 +201,8 @@ class AuditLog extends AbstractModel
      * @param integer $NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrxLivingTime 事物持续时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TemplateInfo 日志命中规则模板的基本信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,15 @@ class AuditLog extends AbstractModel
 
         if (array_key_exists("TrxLivingTime",$param) and $param["TrxLivingTime"] !== null) {
             $this->TrxLivingTime = $param["TrxLivingTime"];
+        }
+
+        if (array_key_exists("TemplateInfo",$param) and $param["TemplateInfo"] !== null) {
+            $this->TemplateInfo = [];
+            foreach ($param["TemplateInfo"] as $key => $value){
+                $obj = new LogRuleTemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->TemplateInfo, $obj);
+            }
         }
     }
 }

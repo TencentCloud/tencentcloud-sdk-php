@@ -36,14 +36,10 @@ use TencentCloud\Common\AbstractModel;
 值为unix时间戳,单位为秒。
  * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
-
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
  * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
-
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -71,9 +67,7 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
     /**
      * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
-
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
      */
     public $LicenseType;
 
@@ -92,9 +86,7 @@ class DescribeUserAutoSignStatusResponse extends AbstractModel
 值为unix时间戳,单位为秒。
      * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不使用个人自动签账号许可进行开通</li></ul>
-
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

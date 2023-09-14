@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
  * @method array getVoucherIds() 获取代金券ID列表（目前仅支持指定一张代金券）
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表（目前仅支持指定一张代金券）
- * @method integer getBasicSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
- * @method void setBasicSecurityType(integer $BasicSecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+ * @method integer getBasicSecurityType() 获取6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li><li>不传参时会默认维持原状，传参时需注意只能由不开启变为开启，无法由开启变为不开启</li>
+ * @method void setBasicSecurityType(integer $BasicSecurityType) 设置6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li><li>不传参时会默认维持原状，传参时需注意只能由不开启变为开启，无法由开启变为不开启</li>
  * @method boolean getForceRestart() 获取是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
  * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
  */
@@ -56,7 +56,7 @@ class UpgradeLicenseRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @var integer 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @var integer 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li><li>不传参时会默认维持原状，传参时需注意只能由不开启变为开启，无法由开启变为不开启</li>
      */
     public $BasicSecurityType;
 
@@ -70,7 +70,7 @@ class UpgradeLicenseRequest extends AbstractModel
      * @param string $LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      * @param integer $AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      * @param array $VoucherIds 代金券ID列表（目前仅支持指定一张代金券）
-     * @param integer $BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
+     * @param integer $BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li><li>不传参时会默认维持原状，传参时需注意只能由不开启变为开启，无法由开启变为不开启</li>
      * @param boolean $ForceRestart 是否强制重启<li>true强制重启</li><li>false不强制重启</li> 默认值false
      */
     function __construct()

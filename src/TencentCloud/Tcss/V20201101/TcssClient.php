@@ -197,7 +197,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeImageAutoAuthorizedRuleResponse DescribeImageAutoAuthorizedRule(Models\DescribeImageAutoAuthorizedRuleRequest $req) 查询本地镜像自动授权规则
  * @method Models\DescribeImageAutoAuthorizedTaskListResponse DescribeImageAutoAuthorizedTaskList(Models\DescribeImageAutoAuthorizedTaskListRequest $req) 查询镜像自动授权任务列表
  * @method Models\DescribeImageComponentListResponse DescribeImageComponentList(Models\DescribeImageComponentListRequest $req) 查询本地镜像组件列表
- * @method Models\DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceList(Models\DescribeImageRegistryNamespaceListRequest $req) 查询用户镜像仓库下的项目名称列表
+ * @method Models\DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceList(Models\DescribeImageRegistryNamespaceListRequest $req) 查询用户镜像仓库下的命令空间列表
  * @method Models\DescribeImageRegistryTimingScanTaskResponse DescribeImageRegistryTimingScanTask(Models\DescribeImageRegistryTimingScanTaskRequest $req) 镜像仓库查看定时任务
  * @method Models\DescribeImageRiskSummaryResponse DescribeImageRiskSummary(Models\DescribeImageRiskSummaryRequest $req) 查询本地镜像风险概览
  * @method Models\DescribeImageRiskTendencyResponse DescribeImageRiskTendency(Models\DescribeImageRiskTendencyRequest $req) 查询容器安全本地镜像风险趋势

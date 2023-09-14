@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul>
+</ul>
  * @method void setSealType(string $SealType) 设置电子印章类型：
 <ul><li>OFFICIAL-公章</li>
 <li>CONTRACT-合同专用章;</li>
@@ -47,7 +47,7 @@ use TencentCloud\Common\AbstractModel;
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul>
+</ul>
  * @method string getSealHorizontalText() 获取企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
  * @method void setSealHorizontalText(string $SealHorizontalText) 设置企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
  * @method string getSealStyle() 获取印章样式:
@@ -106,7 +106,7 @@ class CreateSealByImageRequest extends AbstractModel
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul>
+</ul>
      */
     public $SealType;
 
@@ -146,7 +146,7 @@ class CreateSealByImageRequest extends AbstractModel
 <li>PERSONNEL-人事专用章
 </li>
 <li>默认：OFFICIAL</li>
-<ul>
+</ul>
      * @param string $SealHorizontalText 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
      * @param string $SealStyle 印章样式:
 

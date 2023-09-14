@@ -46,8 +46,10 @@ use TencentCloud\Common\AbstractModel;
 30 - 一个月；
  * @method array getAuditRuleFilters() 获取审计规则。同RuleTemplateIds都不填是全审计。
  * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置审计规则。同RuleTemplateIds都不填是全审计。
- * @method array getRuleTemplateIds() 获取规则模版ID。同AuditRuleFilters都不填是全审计。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模版ID。同AuditRuleFilters都不填是全审计。
+ * @method array getRuleTemplateIds() 获取规则模板ID。同AuditRuleFilters都不填是全审计。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板ID。同AuditRuleFilters都不填是全审计。
+ * @method boolean getAuditAll() 获取审计类型。true-全审计；默认false-规则审计。
+ * @method void setAuditAll(boolean $AuditAll) 设置审计类型。true-全审计；默认false-规则审计。
  */
 class OpenAuditServiceRequest extends AbstractModel
 {
@@ -81,9 +83,14 @@ class OpenAuditServiceRequest extends AbstractModel
     public $AuditRuleFilters;
 
     /**
-     * @var array 规则模版ID。同AuditRuleFilters都不填是全审计。
+     * @var array 规则模板ID。同AuditRuleFilters都不填是全审计。
      */
     public $RuleTemplateIds;
+
+    /**
+     * @var boolean 审计类型。true-全审计；默认false-规则审计。
+     */
+    public $AuditAll;
 
     /**
      * @param string $InstanceId CDB实例ID
@@ -99,7 +106,8 @@ class OpenAuditServiceRequest extends AbstractModel
 7 - 一周
 30 - 一个月；
      * @param array $AuditRuleFilters 审计规则。同RuleTemplateIds都不填是全审计。
-     * @param array $RuleTemplateIds 规则模版ID。同AuditRuleFilters都不填是全审计。
+     * @param array $RuleTemplateIds 规则模板ID。同AuditRuleFilters都不填是全审计。
+     * @param boolean $AuditAll 审计类型。true-全审计；默认false-规则审计。
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class OpenAuditServiceRequest extends AbstractModel
 
         if (array_key_exists("RuleTemplateIds",$param) and $param["RuleTemplateIds"] !== null) {
             $this->RuleTemplateIds = $param["RuleTemplateIds"];
+        }
+
+        if (array_key_exists("AuditAll",$param) and $param["AuditAll"] !== null) {
+            $this->AuditAll = $param["AuditAll"];
         }
     }
 }

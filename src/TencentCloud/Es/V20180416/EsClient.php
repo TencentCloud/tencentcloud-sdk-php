@@ -27,7 +27,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建指定规格的ES集群实例
  * @method Models\CreateLogstashInstanceResponse CreateLogstashInstance(Models\CreateLogstashInstanceRequest $req) 用于创建Logstash实例
  * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) 删除索引
- * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 销毁集群实例 
+ * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 销毁集群实例
  * @method Models\DeleteLogstashInstanceResponse DeleteLogstashInstance(Models\DeleteLogstashInstanceRequest $req) 用于删除Logstash实例
  * @method Models\DeleteLogstashPipelinesResponse DeleteLogstashPipelines(Models\DeleteLogstashPipelinesRequest $req) 用于批量删除Logstash管道
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表

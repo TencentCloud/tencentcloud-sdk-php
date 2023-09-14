@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置识别的物体名称。
  * @method array getSegmentSet() 获取物体出现的片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置物体出现的片段列表。
+ * @method array getRecognitionSegmentSet() 获取物体出现的片段列表。
+ * @method void setRecognitionSegmentSet(array $RecognitionSegmentSet) 设置物体出现的片段列表。
  */
 class AiRecognitionTaskObjectResultItem extends AbstractModel
 {
@@ -34,12 +36,19 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
 
     /**
      * @var array 物体出现的片段列表。
+     * @deprecated
      */
     public $SegmentSet;
 
     /**
+     * @var array 物体出现的片段列表。
+     */
+    public $RecognitionSegmentSet;
+
+    /**
      * @param string $Name 识别的物体名称。
      * @param array $SegmentSet 物体出现的片段列表。
+     * @param array $RecognitionSegmentSet 物体出现的片段列表。
      */
     function __construct()
     {
@@ -64,6 +73,15 @@ class AiRecognitionTaskObjectResultItem extends AbstractModel
                 $obj = new AiRecognitionTaskObjectSeqmentItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
+            }
+        }
+
+        if (array_key_exists("RecognitionSegmentSet",$param) and $param["RecognitionSegmentSet"] !== null) {
+            $this->RecognitionSegmentSet = [];
+            foreach ($param["RecognitionSegmentSet"] as $key => $value){
+                $obj = new AiRecognitionTaskObjectSegmentItem();
+                $obj->deserialize($value);
+                array_push($this->RecognitionSegmentSet, $obj);
             }
         }
     }

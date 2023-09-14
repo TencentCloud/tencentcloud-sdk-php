@@ -20,6 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * saas域名详情
  *
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
+ * @method string getDomainId() 获取域名id
+ * @method void setDomainId(string $DomainId) 设置域名id
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getEdition() 获取类型
+ * @method void setEdition(string $Edition) 设置类型
+ * @method string getInstanceName() 获取实例名
+ * @method void setInstanceName(string $InstanceName) 设置实例名
+ * @method string getCert() 获取证书
+ * @method void setCert(string $Cert) 设置证书
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method integer getEngine() 获取AI防御模式
+ * @method void setEngine(integer $Engine) 设置AI防御模式
  * @method integer getHttpsRewrite() 获取是否开启httpRewrite
  * @method void setHttpsRewrite(integer $HttpsRewrite) 设置是否开启httpRewrite
  * @method string getHttpsUpstreamPort() 获取https回源端口
@@ -105,6 +121,46 @@ use TencentCloud\Common\AbstractModel;
  */
 class DomainsPartInfo extends AbstractModel
 {
+    /**
+     * @var string 域名
+     */
+    public $Domain;
+
+    /**
+     * @var string 域名id
+     */
+    public $DomainId;
+
+    /**
+     * @var string 实例id
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 类型
+     */
+    public $Edition;
+
+    /**
+     * @var string 实例名
+     */
+    public $InstanceName;
+
+    /**
+     * @var string 证书
+     */
+    public $Cert;
+
+    /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer AI防御模式
+     */
+    public $Engine;
+
     /**
      * @var integer 是否开启httpRewrite
      */
@@ -267,6 +323,14 @@ class DomainsPartInfo extends AbstractModel
     public $XFFReset;
 
     /**
+     * @param string $Domain 域名
+     * @param string $DomainId 域名id
+     * @param string $InstanceId 实例id
+     * @param string $Edition 类型
+     * @param string $InstanceName 实例名
+     * @param string $Cert 证书
+     * @param string $CreateTime 创建时间
+     * @param integer $Engine AI防御模式
      * @param integer $HttpsRewrite 是否开启httpRewrite
      * @param string $HttpsUpstreamPort https回源端口
      * @param integer $IsCdn 是否是cdn
@@ -322,6 +386,38 @@ class DomainsPartInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
+            $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
+            $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
+            $this->Cert = $param["Cert"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
+            $this->Engine = $param["Engine"];
+        }
+
         if (array_key_exists("HttpsRewrite",$param) and $param["HttpsRewrite"] !== null) {
             $this->HttpsRewrite = $param["HttpsRewrite"];
         }

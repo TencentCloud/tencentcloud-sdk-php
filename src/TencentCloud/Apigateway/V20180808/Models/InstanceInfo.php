@@ -40,6 +40,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源ID同唯一id
  * @method void setResourceId(string $ResourceId) 设置资源ID同唯一id
+ * @method array getOuterIpList() 获取公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOuterIpList(array $OuterIpList) 设置公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInnerIpList() 获取内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInnerIpList(array $InnerIpList) 设置内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUniqVpcId() 获取所属vpc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置所属vpc
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -90,6 +106,30 @@ class InstanceInfo extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var array 公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OuterIpList;
+
+    /**
+     * @var array 内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InnerIpList;
+
+    /**
+     * @var InstanceChargePrepaid 专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceChargePrepaid;
+
+    /**
+     * @var string 所属vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UniqVpcId;
+
+    /**
      * @param string $InstanceId 独享实例唯一id
      * @param string $InstanceName 独享实例name
      * @param string $InstanceDescription 独享实例描述
@@ -100,6 +140,14 @@ class InstanceInfo extends AbstractModel
      * @param string $DealName 订单号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源ID同唯一id
+     * @param array $OuterIpList 公网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InnerIpList 内网IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceChargePrepaid $InstanceChargePrepaid 专享实例计费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UniqVpcId 所属vpc
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -148,6 +196,23 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("OuterIpList",$param) and $param["OuterIpList"] !== null) {
+            $this->OuterIpList = $param["OuterIpList"];
+        }
+
+        if (array_key_exists("InnerIpList",$param) and $param["InnerIpList"] !== null) {
+            $this->InnerIpList = $param["InnerIpList"];
+        }
+
+        if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
+            $this->InstanceChargePrepaid = new InstanceChargePrepaid();
+            $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
         }
     }
 }

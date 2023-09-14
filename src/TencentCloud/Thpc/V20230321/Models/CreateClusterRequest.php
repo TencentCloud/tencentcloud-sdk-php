@@ -70,6 +70,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。默认值：THPC_AS<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
  * @method array getInitNodeScripts() 获取节点初始化脚本信息列表。
  * @method void setInitNodeScripts(array $InitNodeScripts) 设置节点初始化脚本信息列表。
+ * @method string getHpcClusterId() 获取高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+ * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -179,6 +181,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $InitNodeScripts;
 
     /**
+     * @var string 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
+     */
+    public $HpcClusterId;
+
+    /**
      * @param Placement $Placement 集群中实例所在的位置。
      * @param ManagerNode $ManagerNode 指定管理节点。
      * @param integer $ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
@@ -204,6 +211,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param array $Tags 创建集群时同时绑定的标签对说明。
      * @param string $AutoScalingType 弹性伸缩类型。默认值：THPC_AS<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
      * @param array $InitNodeScripts 节点初始化脚本信息列表。
+     * @param string $HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
      */
     function __construct()
     {
@@ -313,6 +321,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
                 $obj->deserialize($value);
                 array_push($this->InitNodeScripts, $obj);
             }
+        }
+
+        if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
+            $this->HpcClusterId = $param["HpcClusterId"];
         }
     }
 }

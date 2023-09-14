@@ -20,54 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 此结构体(FlowGroupOptions)描述的是合同组的个性化配置，支持控制是否发送短信、未实名个人签署方查看合同组时是否需要实名认证（仅在合同组文件发起配置时生效）
  *
- * @method string getApproverVerifyType() 获取发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+ * @method string getApproverVerifyType() 获取签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
- * @method void setApproverVerifyType(string $ApproverVerifyType) 设置发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+ * @method void setApproverVerifyType(string $ApproverVerifyType) 设置签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
  * @method string getSelfOrganizationApproverNotifyType() 获取发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
  * @method void setSelfOrganizationApproverNotifyType(string $SelfOrganizationApproverNotifyType) 设置发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
  * @method string getOtherApproverNotifyType() 获取发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
  * @method void setOtherApproverNotifyType(string $OtherApproverNotifyType) 设置发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
  */
 class FlowGroupOptions extends AbstractModel
 {
     /**
-     * @var string 发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+     * @var string 签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      */
     public $ApproverVerifyType;
 
     /**
      * @var string 发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      */
     public $SelfOrganizationApproverNotifyType;
 
     /**
      * @var string 发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      */
     public $OtherApproverNotifyType;
 
     /**
-     * @param string $ApproverVerifyType 发起合同（流程）组的合同（流程）签署人校验方式
-VerifyCheck: 人脸识别（默认）
-MobileCheck：手机号验证
+     * @param string $ApproverVerifyType 签署人校验方式,支持以下类型
+<ul><li>VerifyCheck : 人脸识别 (默认值)</li>
+<li>MobileCheck : 手机号验证</li></ul>
 参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      * @param string $SelfOrganizationApproverNotifyType 发起合同（流程）组本方企业经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      * @param string $OtherApproverNotifyType 发起合同（流程）组他方经办人通知方式
-签署通知类型：sms--短信，none--不通知
+签署通知类型，支持以下类型
+<ul><li>sms : 短信 (默认值)</li><li>none : 不通知</li></ul>
      */
     function __construct()
     {

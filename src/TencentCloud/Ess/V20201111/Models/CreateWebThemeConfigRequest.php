@@ -20,30 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWebThemeConfig请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method string getThemeType() 获取主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
- * @method void setThemeType(string $ThemeType) 设置主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+ * @method UserInfo getOperator() 获取注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getThemeType() 获取主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul>
+ * @method void setThemeType(string $ThemeType) 设置主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul>
  * @method WebThemeConfig getWebThemeConfig() 获取主题配置
  * @method void setWebThemeConfig(WebThemeConfig $WebThemeConfig) 设置主题配置
- * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class CreateWebThemeConfigRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+     * @var string 主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul>
      */
     public $ThemeType;
 
@@ -53,17 +55,19 @@ class CreateWebThemeConfigRequest extends AbstractModel
     public $WebThemeConfig;
 
     /**
-     * @var Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 操作人信息
-     * @param string $ThemeType 主题类型
-<br/>EMBED_WEB_THEME：嵌入式主题
-<br/>目前只支持EMBED_WEB_THEME，web页面嵌入的主题风格配置
+     * @param UserInfo $Operator 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $ThemeType 主题类型，取值如下：
+<ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
+</ul>
      * @param WebThemeConfig $WebThemeConfig 主题配置
-     * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {

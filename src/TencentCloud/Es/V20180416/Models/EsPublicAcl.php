@@ -18,7 +18,7 @@ namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ES公网访问访问控制信息
+ * ES公网访问控制信息
  *
  * @method array getBlackIpList() 获取访问黑名单
  * @method void setBlackIpList(array $BlackIpList) 设置访问黑名单

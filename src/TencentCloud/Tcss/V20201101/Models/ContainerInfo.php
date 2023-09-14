@@ -90,6 +90,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodCpu(integer $PodCpu) 设置所属Pod的CPU
  * @method integer getPodMem() 获取所属Pod的内存
  * @method void setPodMem(integer $PodMem) 设置所属Pod的内存
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getClusterID() 获取集群ID
+ * @method void setClusterID(string $ClusterID) 设置集群ID
+ * @method string getPodUid() 获取pod uid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodUid(string $PodUid) 设置pod uid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerInfo extends AbstractModel
 {
@@ -237,6 +245,22 @@ class ContainerInfo extends AbstractModel
     public $PodMem;
 
     /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
+
+    /**
+     * @var string 集群ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var string pod uid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodUid;
+
+    /**
      * @param string $ContainerID 容器id
      * @param string $ContainerName 容器名称
      * @param string $Status 容器运行状态
@@ -272,6 +296,10 @@ class ContainerInfo extends AbstractModel
      * @param string $NodeUniqueID 超级节点唯一id
      * @param integer $PodCpu 所属Pod的CPU
      * @param integer $PodMem 所属Pod的内存
+     * @param string $ClusterName 集群名称
+     * @param string $ClusterID 集群ID
+     * @param string $PodUid pod uid
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -392,6 +420,18 @@ class ContainerInfo extends AbstractModel
 
         if (array_key_exists("PodMem",$param) and $param["PodMem"] !== null) {
             $this->PodMem = $param["PodMem"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("PodUid",$param) and $param["PodUid"] !== null) {
+            $this->PodUid = $param["PodUid"];
         }
     }
 }

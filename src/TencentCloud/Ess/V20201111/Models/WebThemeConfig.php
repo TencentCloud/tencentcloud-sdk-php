@@ -21,45 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 页面主题配置
  *
  * @method boolean getDisplaySignBrandLogo() 获取是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul>
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul>
  * @method void setDisplaySignBrandLogo(boolean $DisplaySignBrandLogo) 设置是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul>
- * @method string getWebEmbedThemeColor() 获取主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
- * @method void setWebEmbedThemeColor(string $WebEmbedThemeColor) 设置主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul>
+ * @method string getWebEmbedThemeColor() 获取主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/>
+ * @method void setWebEmbedThemeColor(string $WebEmbedThemeColor) 设置主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/>
  */
 class WebThemeConfig extends AbstractModel
 {
     /**
      * @var boolean 是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul>
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul>
      */
     public $DisplaySignBrandLogo;
 
     /**
-     * @var string 主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+     * @var string 主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/>
      */
     public $WebEmbedThemeColor;
 
     /**
      * @param boolean $DisplaySignBrandLogo 是否显示页面底部电子签logo，取值如下：
-<ul>
-<li> **true**：页面底部显示电子签logo</li>
-<li> **false**：页面底部不显示电子签logo（默认）</li>
-</ul>
-     * @param string $WebEmbedThemeColor 主题颜色
-<br/>支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<ul><li> **true**：页面底部显示电子签logo</li>
+<li> **false**：页面底部不显示电子签logo（默认）</li></ul>
+     * @param string $WebEmbedThemeColor 主题颜色：
+支持十六进制颜色值以及RGB格式颜色值，例如：#D54941，rgb(213, 73, 65)
+<br/>
      */
     function __construct()
     {

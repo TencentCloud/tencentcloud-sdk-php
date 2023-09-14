@@ -33,7 +33,9 @@ use TencentCloud\Nlp\V20190408\Models as Models;
  * @method Models\ParseWordsResponse ParseWords(Models\ParseWordsRequest $req) 通过精准地对文本进行分词、词性标注、命名实体识别等功能，助您更好地理解文本内容，挖掘出潜在的价值信息。
  * @method Models\RetrieveSimilarWordsResponse RetrieveSimilarWords(Models\RetrieveSimilarWordsRequest $req) 基于大数据和深度学习技术，可以快速地找到与给定词语高度相似的其他词语，有助于提高搜索和推荐的准确性。（目前仅支持中文）
  * @method Models\SentenceCorrectionResponse SentenceCorrection(Models\SentenceCorrectionRequest $req) 智能识别并纠正句子中的语法、拼写、用词等错误，确保文本的准确性和可读性。
- * @method Models\TestingTextGenerationResponse TestingTextGeneration(Models\TestingTextGenerationRequest $req) 基于腾讯大模型能力，用户可以通过传入不同的参数控制生成内容的类型，并通过自然语言给模型以内容生成的指令，可以满足多种场景的文本生成需求，包括但不限于文章写作、营销文案、视频脚本、电商文案、纪要整理等（**注意：当前接口为内测体验专用接口，仅有获取白名单权限的客户可以测试调用，如需测试请联系商务非正式服务接口，内测期结束接口会下线或停服，届时请接入正式服务接口**）
+ * @method Models\TestingTextGenerationResponse TestingTextGeneration(Models\TestingTextGenerationRequest $req) 文案创作（内测版）为内测体验专用接口，现内测期结束，统一改为使用正式服务接口（混元大模型），故内测接口做下线处理。
+
+基于腾讯大模型能力，用户可以通过传入不同的参数控制生成内容的类型，并通过自然语言给模型以内容生成的指令，可以满足多种场景的文本生成需求，包括但不限于文章写作、营销文案、视频脚本、电商文案、纪要整理等（**注意：当前接口为内测体验专用接口，仅有获取白名单权限的客户可以测试调用，如需测试请联系商务非正式服务接口，内测期结束接口会下线或停服，届时请接入正式服务接口**）
  * @method Models\TextEmbellishResponse TextEmbellish(Models\TextEmbellishRequest $req) 运用先进的自然语言处理技术，对原始文本进行优化润色，提升文本的通顺性、表达力和语言质量。
  * @method Models\TextWritingResponse TextWriting(Models\TextWritingRequest $req) 通过自动补全文本片段，帮助用户快速生成高质量、连贯的完整文本，提高创作效率。
  */

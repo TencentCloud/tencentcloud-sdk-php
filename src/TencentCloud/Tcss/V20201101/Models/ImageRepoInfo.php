@@ -116,6 +116,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsLatestImage(boolean $IsLatestImage) 设置是否为镜像的最新版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLowLevelVulCnt() 获取low级别漏洞个数
+ * @method void setLowLevelVulCnt(integer $LowLevelVulCnt) 设置low级别漏洞个数
+ * @method integer getMediumLevelVulCnt() 获取medium级别漏洞个数
+ * @method void setMediumLevelVulCnt(integer $MediumLevelVulCnt) 设置medium级别漏洞个数
+ * @method integer getHighLevelVulCnt() 获取high级别漏洞个数
+ * @method void setHighLevelVulCnt(integer $HighLevelVulCnt) 设置high级别漏洞个数
+ * @method integer getCriticalLevelVulCnt() 获取critical级别漏洞个数
+ * @method void setCriticalLevelVulCnt(integer $CriticalLevelVulCnt) 设置critical级别漏洞个数
+ * @method integer getContainerCnt() 获取关联容器数
+ * @method void setContainerCnt(integer $ContainerCnt) 设置关联容器数
+ * @method integer getComponentCnt() 获取组件数
+ * @method void setComponentCnt(integer $ComponentCnt) 设置组件数
+ * @method boolean getIsRunning() 获取是否运行中
+ * @method void setIsRunning(boolean $IsRunning) 设置是否运行中
+ * @method boolean getHasNeedFixVul() 获取是否存在必修漏洞
+ * @method void setHasNeedFixVul(boolean $HasNeedFixVul) 设置是否存在必修漏洞
+ * @method integer getSensitiveInfoCnt() 获取敏感信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSensitiveInfoCnt(integer $SensitiveInfoCnt) 设置敏感信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageRepoInfo extends AbstractModel
 {
@@ -176,6 +196,7 @@ class ImageRepoInfo extends AbstractModel
 
     /**
      * @var integer 敏感信息数
+     * @deprecated
      */
     public $SentiveInfoCnt;
 
@@ -304,6 +325,52 @@ class ImageRepoInfo extends AbstractModel
     public $IsLatestImage;
 
     /**
+     * @var integer low级别漏洞个数
+     */
+    public $LowLevelVulCnt;
+
+    /**
+     * @var integer medium级别漏洞个数
+     */
+    public $MediumLevelVulCnt;
+
+    /**
+     * @var integer high级别漏洞个数
+     */
+    public $HighLevelVulCnt;
+
+    /**
+     * @var integer critical级别漏洞个数
+     */
+    public $CriticalLevelVulCnt;
+
+    /**
+     * @var integer 关联容器数
+     */
+    public $ContainerCnt;
+
+    /**
+     * @var integer 组件数
+     */
+    public $ComponentCnt;
+
+    /**
+     * @var boolean 是否运行中
+     */
+    public $IsRunning;
+
+    /**
+     * @var boolean 是否存在必修漏洞
+     */
+    public $HasNeedFixVul;
+
+    /**
+     * @var integer 敏感信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SensitiveInfoCnt;
+
+    /**
      * @param string $ImageDigest 镜像Digest
      * @param string $ImageRepoAddress 镜像仓库地址
      * @param string $RegistryType 仓库类型
@@ -351,6 +418,16 @@ class ImageRepoInfo extends AbstractModel
      * @param string $ImageCreateTime 镜像创建的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsLatestImage 是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LowLevelVulCnt low级别漏洞个数
+     * @param integer $MediumLevelVulCnt medium级别漏洞个数
+     * @param integer $HighLevelVulCnt high级别漏洞个数
+     * @param integer $CriticalLevelVulCnt critical级别漏洞个数
+     * @param integer $ContainerCnt 关联容器数
+     * @param integer $ComponentCnt 组件数
+     * @param boolean $IsRunning 是否运行中
+     * @param boolean $HasNeedFixVul 是否存在必修漏洞
+     * @param integer $SensitiveInfoCnt 敏感信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -500,6 +577,42 @@ class ImageRepoInfo extends AbstractModel
 
         if (array_key_exists("IsLatestImage",$param) and $param["IsLatestImage"] !== null) {
             $this->IsLatestImage = $param["IsLatestImage"];
+        }
+
+        if (array_key_exists("LowLevelVulCnt",$param) and $param["LowLevelVulCnt"] !== null) {
+            $this->LowLevelVulCnt = $param["LowLevelVulCnt"];
+        }
+
+        if (array_key_exists("MediumLevelVulCnt",$param) and $param["MediumLevelVulCnt"] !== null) {
+            $this->MediumLevelVulCnt = $param["MediumLevelVulCnt"];
+        }
+
+        if (array_key_exists("HighLevelVulCnt",$param) and $param["HighLevelVulCnt"] !== null) {
+            $this->HighLevelVulCnt = $param["HighLevelVulCnt"];
+        }
+
+        if (array_key_exists("CriticalLevelVulCnt",$param) and $param["CriticalLevelVulCnt"] !== null) {
+            $this->CriticalLevelVulCnt = $param["CriticalLevelVulCnt"];
+        }
+
+        if (array_key_exists("ContainerCnt",$param) and $param["ContainerCnt"] !== null) {
+            $this->ContainerCnt = $param["ContainerCnt"];
+        }
+
+        if (array_key_exists("ComponentCnt",$param) and $param["ComponentCnt"] !== null) {
+            $this->ComponentCnt = $param["ComponentCnt"];
+        }
+
+        if (array_key_exists("IsRunning",$param) and $param["IsRunning"] !== null) {
+            $this->IsRunning = $param["IsRunning"];
+        }
+
+        if (array_key_exists("HasNeedFixVul",$param) and $param["HasNeedFixVul"] !== null) {
+            $this->HasNeedFixVul = $param["HasNeedFixVul"];
+        }
+
+        if (array_key_exists("SensitiveInfoCnt",$param) and $param["SensitiveInfoCnt"] !== null) {
+            $this->SensitiveInfoCnt = $param["SensitiveInfoCnt"];
         }
     }
 }

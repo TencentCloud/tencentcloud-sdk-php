@@ -35,7 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDesc() 获取警告条件描述
  * @method void setDesc(string $Desc) 设置警告条件描述
  */
-class DescribeStrategiesCondition extends AbstractModel
+class Conditions extends AbstractModel
 {
     /**
      * @var integer 警告条件ID

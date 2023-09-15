@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关大版本号，传统型=1，标准型=2
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSmartScheduleMode() 获取是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmartScheduleMode(boolean $SmartScheduleMode) 设置是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDedicatedClusterId() 获取NAT实例归属的专属集群id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置NAT实例归属的专属集群id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGateway extends AbstractModel
 {
@@ -194,6 +202,18 @@ class NatGateway extends AbstractModel
     public $NatProductVersion;
 
     /**
+     * @var boolean 是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmartScheduleMode;
+
+    /**
+     * @var string NAT实例归属的专属集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -223,6 +243,10 @@ class NatGateway extends AbstractModel
      * @param string $RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NatProductVersion NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DedicatedClusterId NAT实例归属的专属集群id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -336,6 +360,14 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("NatProductVersion",$param) and $param["NatProductVersion"] !== null) {
             $this->NatProductVersion = $param["NatProductVersion"];
+        }
+
+        if (array_key_exists("SmartScheduleMode",$param) and $param["SmartScheduleMode"] !== null) {
+            $this->SmartScheduleMode = $param["SmartScheduleMode"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

@@ -98,7 +98,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 可单独删除指定 ID 的视频文件下的原文件、转码视频、微信发布视频等；
 * 注意：原文件删除后，无法发起转码、微信发布等任何视频处理操作。
  * @method Models\DeletePersonSampleResponse DeletePersonSample(Models\DeletePersonSampleRequest $req) 该接口用于根据人物 ID，删除素材样本。
- * @method Models\DeleteProcedureTemplateResponse DeleteProcedureTemplate(Models\DeleteProcedureTemplateRequest $req) 删除用户自定义的任务流模板。  
+ * @method Models\DeleteProcedureTemplateResponse DeleteProcedureTemplate(Models\DeleteProcedureTemplateRequest $req) 删除用户自定义的任务流模板。
  * @method Models\DeleteQualityInspectTemplateResponse DeleteQualityInspectTemplate(Models\DeleteQualityInspectTemplateRequest $req) 删除音画质检测模板。
  * @method Models\DeleteRebuildMediaTemplateResponse DeleteRebuildMediaTemplate(Models\DeleteRebuildMediaTemplateRequest $req) 删除视频重生模板。
  * @method Models\DeleteReviewTemplateResponse DeleteReviewTemplate(Models\DeleteReviewTemplateRequest $req) 删除用户自定义审核模板。
@@ -136,7 +136,6 @@ use TencentCloud\Vod\V20180717\Models as Models;
    1. 可以查询最近365天内的客户端上传加速统计数据。
    2. 查询时间跨度不超过90天。
    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
-
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [获取审核模板列表](https://cloud.tencent.com/document/api/266/84389)。
 根据音视频内容审核模板唯一标识，获取音视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
  * @method Models\DescribeDailyMediaPlayStatResponse DescribeDailyMediaPlayStat(Models\DescribeDailyMediaPlayStatRequest $req) 该接口用于查询指定日期范围内每天的播放统计数据。
@@ -167,7 +166,6 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 默认接口请求频率限制：100次/秒。
  * @method Models\DescribeEventsStateResponse DescribeEventsState(Models\DescribeEventsStateRequest $req) * 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
-
  * @method Models\DescribeFileAttributesResponse DescribeFileAttributes(Models\DescribeFileAttributesRequest $req) 用于异步获取文件属性。
 - 当前仅支持获取源文件的 Md5。
 - 对输入文件为 HLS 或 DASH 的情况，仅获取索引文件的属性。
@@ -177,13 +175,11 @@ use TencentCloud\Vod\V20180717\Models as Models;
    1. 可以查询最近365天内的图片审核统计数据。
    2. 查询时间跨度不超过90天。
    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
-
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) 查询雪碧图模板，支持根据条件，分页查询。
  * @method Models\DescribeLicenseUsageDataResponse DescribeLicenseUsageData(Models\DescribeLicenseUsageDataRequest $req) 该接口返回查询时间范围内每天 License 请求次数信息。
    1. 可以查询最近365天内的 License 请求次数统计数据。
    2. 查询时间跨度不超过90天。
    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
-
  * @method Models\DescribeMediaInfosResponse DescribeMediaInfos(Models\DescribeMediaInfosRequest $req) 1. 该接口可以获取多个媒体文件的多种信息，包括：
     1. 基础信息（basicInfo）：包括媒体名称、分类、播放地址、封面图片等。
     2. 元信息（metaData）：包括大小、时长、视频流信息、音频流信息等。
@@ -287,7 +283,6 @@ use TencentCloud\Vod\V20180717\Models as Models;
 剪辑不固化，由于其剪辑结果不是一个独立的视频，因而也不会纳入点播媒资视频管理（例如控制台的视频总数不会统计这一片段）中，也无法单独针对这个片段做转码、微信发布等任何视频处理操作。
 
 剪辑不固化的优势在于其剪辑操作十分“轻量化”，不会产生额外的存储开销。但其不足之处在于生命周期与原始录制视频相同，且无法进一步进行转码等视频处理。
-
  * @method Models\ManageTaskResponse ManageTask(Models\ManageTaskRequest $req) 对已发起的任务进行管理。
  * @method Models\ModifyAIAnalysisTemplateResponse ModifyAIAnalysisTemplate(Models\ModifyAIAnalysisTemplateRequest $req) 修改用户自定义音视频内容分析模板。
 
@@ -352,7 +347,6 @@ use TencentCloud\Vod\V20180717\Models as Models;
 ><li>图片文件大小支持：文件 < 5M；</li>
 ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响识别效果；</li>
 ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
-
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) 对点播中的音视频媒体发起处理任务，功能包括：
 1. 视频转码（带水印）；
 2. 视频转动图；
@@ -384,7 +378,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 2. URL 的域名必须已在云点播中注册。
 3. 单次请求最多指定20个 URL。
 4. 默认预热配额为每天10000个 URL。
- * @method Models\RebuildMediaResponse RebuildMedia(Models\RebuildMediaRequest $req) 发起视频重生
+ * @method Models\RebuildMediaResponse RebuildMedia(Models\RebuildMediaRequest $req) 发起音画质重生
  * @method Models\RebuildMediaByTemplateResponse RebuildMediaByTemplate(Models\RebuildMediaByTemplateRequest $req) 使用模板发起视频重生。
  * @method Models\RefreshUrlCacheResponse RefreshUrlCache(Models\RefreshUrlCacheRequest $req) 1. 刷新指定的 URL 列表。
 2. URL 的域名必须已在云点播中注册。

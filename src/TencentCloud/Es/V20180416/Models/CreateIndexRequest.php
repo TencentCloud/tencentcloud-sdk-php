@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIndexType(string $IndexType) 设置创建的索引类型。auto：自治索引；normal：普通索引
  * @method string getIndexName() 获取创建的索引名
  * @method void setIndexName(string $IndexName) 设置创建的索引名
- * @method string getIndexMetaJson() 获取创建的索引元数据JSON，如mappings、settings
- * @method void setIndexMetaJson(string $IndexMetaJson) 设置创建的索引元数据JSON，如mappings、settings
+ * @method string getIndexMetaJson() 获取【必填】创建的索引元数据JSON，如mappings、settings
+ * @method void setIndexMetaJson(string $IndexMetaJson) 设置【必填】创建的索引元数据JSON，如mappings、settings
  * @method string getUsername() 获取集群访问用户名
  * @method void setUsername(string $Username) 设置集群访问用户名
  * @method string getPassword() 获取集群访问密码
@@ -51,7 +51,7 @@ class CreateIndexRequest extends AbstractModel
     public $IndexName;
 
     /**
-     * @var string 创建的索引元数据JSON，如mappings、settings
+     * @var string 【必填】创建的索引元数据JSON，如mappings、settings
      */
     public $IndexMetaJson;
 
@@ -69,7 +69,7 @@ class CreateIndexRequest extends AbstractModel
      * @param string $InstanceId ES集群ID
      * @param string $IndexType 创建的索引类型。auto：自治索引；normal：普通索引
      * @param string $IndexName 创建的索引名
-     * @param string $IndexMetaJson 创建的索引元数据JSON，如mappings、settings
+     * @param string $IndexMetaJson 【必填】创建的索引元数据JSON，如mappings、settings
      * @param string $Username 集群访问用户名
      * @param string $Password 集群访问密码
      */

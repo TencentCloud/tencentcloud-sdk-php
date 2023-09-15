@@ -22,52 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取过滤项。目前支持以下搜索条件：
 
-包含、不包含、包含（分词维度）、不包含（分词维度）:
-sql - SQL详情
+包含、不包含、包含（分词维度）、不包含（分词维度）: sql - SQL详情；alarmLevel - 告警等级；ruleTemplateId - 规则模板Id
 
-等于、不等于、包含、不包含：
-host - 客户端地址；
-user - 用户名；
-dbName - 数据库名称；
+等于、不等于、包含、不包含： host - 客户端地址； user - 用户名； dbName - 数据库名称；
 
-等于、不等于：
-sqlType - SQL类型；
-errCode - 错误码；
-threadId - 线程ID；
+等于、不等于： sqlType - SQL类型； errCode - 错误码； threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
-execTime - 执行时间；
-lockWaitTime - 锁等待时间；
-ioWaitTime - IO等待时间；
-trxLivingTime - 事物持续时间；
-cpuTime - cpu时间；
-checkRows - 扫描行数；
-affectRows - 影响行数；
-sentRows - 返回行数。
+范围搜索（时间类型统一为微秒）： execTime - 执行时间； lockWaitTime - 执行时间； ioWaitTime - IO等待时间； trxLivingTime - 事物持续时间； cpuTime - cpu时间； checkRows - 扫描行数； affectRows - 影响行数； sentRows - 返回行数。
  * @method void setType(string $Type) 设置过滤项。目前支持以下搜索条件：
 
-包含、不包含、包含（分词维度）、不包含（分词维度）:
-sql - SQL详情
+包含、不包含、包含（分词维度）、不包含（分词维度）: sql - SQL详情；alarmLevel - 告警等级；ruleTemplateId - 规则模板Id
 
-等于、不等于、包含、不包含：
-host - 客户端地址；
-user - 用户名；
-dbName - 数据库名称；
+等于、不等于、包含、不包含： host - 客户端地址； user - 用户名； dbName - 数据库名称；
 
-等于、不等于：
-sqlType - SQL类型；
-errCode - 错误码；
-threadId - 线程ID；
+等于、不等于： sqlType - SQL类型； errCode - 错误码； threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
-execTime - 执行时间；
-lockWaitTime - 锁等待时间；
-ioWaitTime - IO等待时间；
-trxLivingTime - 事物持续时间；
-cpuTime - cpu时间；
-checkRows - 扫描行数；
-affectRows - 影响行数；
-sentRows - 返回行数。
+范围搜索（时间类型统一为微秒）： execTime - 执行时间； lockWaitTime - 执行时间； ioWaitTime - IO等待时间； trxLivingTime - 事物持续时间； cpuTime - cpu时间； checkRows - 扫描行数； affectRows - 影响行数； sentRows - 返回行数。
  * @method string getCompare() 获取过滤条件。支持以下条件：
 WINC-包含（分词维度），
 WEXC-不包含（分词维度）,
@@ -92,28 +62,13 @@ class InstanceAuditLogFilter extends AbstractModel
     /**
      * @var string 过滤项。目前支持以下搜索条件：
 
-包含、不包含、包含（分词维度）、不包含（分词维度）:
-sql - SQL详情
+包含、不包含、包含（分词维度）、不包含（分词维度）: sql - SQL详情；alarmLevel - 告警等级；ruleTemplateId - 规则模板Id
 
-等于、不等于、包含、不包含：
-host - 客户端地址；
-user - 用户名；
-dbName - 数据库名称；
+等于、不等于、包含、不包含： host - 客户端地址； user - 用户名； dbName - 数据库名称；
 
-等于、不等于：
-sqlType - SQL类型；
-errCode - 错误码；
-threadId - 线程ID；
+等于、不等于： sqlType - SQL类型； errCode - 错误码； threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
-execTime - 执行时间；
-lockWaitTime - 锁等待时间；
-ioWaitTime - IO等待时间；
-trxLivingTime - 事物持续时间；
-cpuTime - cpu时间；
-checkRows - 扫描行数；
-affectRows - 影响行数；
-sentRows - 返回行数。
+范围搜索（时间类型统一为微秒）： execTime - 执行时间； lockWaitTime - 执行时间； ioWaitTime - IO等待时间； trxLivingTime - 事物持续时间； cpuTime - cpu时间； checkRows - 扫描行数； affectRows - 影响行数； sentRows - 返回行数。
      */
     public $Type;
 
@@ -137,28 +92,13 @@ RA - 范围。
     /**
      * @param string $Type 过滤项。目前支持以下搜索条件：
 
-包含、不包含、包含（分词维度）、不包含（分词维度）:
-sql - SQL详情
+包含、不包含、包含（分词维度）、不包含（分词维度）: sql - SQL详情；alarmLevel - 告警等级；ruleTemplateId - 规则模板Id
 
-等于、不等于、包含、不包含：
-host - 客户端地址；
-user - 用户名；
-dbName - 数据库名称；
+等于、不等于、包含、不包含： host - 客户端地址； user - 用户名； dbName - 数据库名称；
 
-等于、不等于：
-sqlType - SQL类型；
-errCode - 错误码；
-threadId - 线程ID；
+等于、不等于： sqlType - SQL类型； errCode - 错误码； threadId - 线程ID；
 
-范围搜索（时间类型统一为微妙）：
-execTime - 执行时间；
-lockWaitTime - 锁等待时间；
-ioWaitTime - IO等待时间；
-trxLivingTime - 事物持续时间；
-cpuTime - cpu时间；
-checkRows - 扫描行数；
-affectRows - 影响行数；
-sentRows - 返回行数。
+范围搜索（时间类型统一为微秒）： execTime - 执行时间； lockWaitTime - 执行时间； ioWaitTime - IO等待时间； trxLivingTime - 事物持续时间； cpuTime - cpu时间； checkRows - 扫描行数； affectRows - 影响行数； sentRows - 返回行数。
      * @param string $Compare 过滤条件。支持以下条件：
 WINC-包含（分词维度），
 WEXC-不包含（分词维度）,

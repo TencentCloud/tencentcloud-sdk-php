@@ -24,36 +24,34 @@ use TencentCloud\Common\AbstractModel;
 <br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 <br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
- * @method string getEmbedType() 获取WEB嵌入资源类型。
-<br/>CREATE_SEAL: 生成创建印章的嵌入页面
-<br/>CREATE_TEMPLATE：生成创建模板的嵌入页面
-<br/>MODIFY_TEMPLATE：生成编辑模板的嵌入页面
-<br/>PREVIEW_TEMPLATE：生成预览模板的嵌入页面
-<br/>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面
-<br/>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面
-<br/>EXTEND_SERVICE：生成拓展服务的嵌入页面
-<br/>PREVIEW_FLOW：生成预览合同的嵌入页面
-<br/>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面
-
- * @method void setEmbedType(string $EmbedType) 设置WEB嵌入资源类型。
-<br/>CREATE_SEAL: 生成创建印章的嵌入页面
-<br/>CREATE_TEMPLATE：生成创建模板的嵌入页面
-<br/>MODIFY_TEMPLATE：生成编辑模板的嵌入页面
-<br/>PREVIEW_TEMPLATE：生成预览模板的嵌入页面
-<br/>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面
-<br/>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面
-<br/>EXTEND_SERVICE：生成拓展服务的嵌入页面
-<br/>PREVIEW_FLOW：生成预览合同的嵌入页面
-<br/>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面
-
+ * @method string getEmbedType() 获取WEB嵌入资源类型，支持以下类型
+<ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
+<li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
+<li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
+<li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
+<li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
+<li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同的嵌入页面</li>
+<li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面</li></ul>
+ * @method void setEmbedType(string $EmbedType) 设置WEB嵌入资源类型，支持以下类型
+<ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
+<li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
+<li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
+<li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
+<li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
+<li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同的嵌入页面</li>
+<li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面</li></ul>
  * @method string getBusinessId() 获取WEB嵌入的业务资源ID
-<br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
-<br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
+<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
+<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
+<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
  * @method void setBusinessId(string $BusinessId) 设置WEB嵌入的业务资源ID
-<br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
-<br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
+<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
+<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
+<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
  * @method Agent getAgent() 获取代理企业和员工的信息。
 <br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -72,25 +70,24 @@ class CreateEmbedWebUrlRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string WEB嵌入资源类型。
-<br/>CREATE_SEAL: 生成创建印章的嵌入页面
-<br/>CREATE_TEMPLATE：生成创建模板的嵌入页面
-<br/>MODIFY_TEMPLATE：生成编辑模板的嵌入页面
-<br/>PREVIEW_TEMPLATE：生成预览模板的嵌入页面
-<br/>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面
-<br/>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面
-<br/>EXTEND_SERVICE：生成拓展服务的嵌入页面
-<br/>PREVIEW_FLOW：生成预览合同的嵌入页面
-<br/>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面
-
+     * @var string WEB嵌入资源类型，支持以下类型
+<ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
+<li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
+<li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
+<li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
+<li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
+<li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同的嵌入页面</li>
+<li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面</li></ul>
      */
     public $EmbedType;
 
     /**
      * @var string WEB嵌入的业务资源ID
-<br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
-<br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
+<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
+<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
+<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
      */
     public $BusinessId;
 
@@ -113,21 +110,20 @@ class CreateEmbedWebUrlRequest extends AbstractModel
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 <br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
-     * @param string $EmbedType WEB嵌入资源类型。
-<br/>CREATE_SEAL: 生成创建印章的嵌入页面
-<br/>CREATE_TEMPLATE：生成创建模板的嵌入页面
-<br/>MODIFY_TEMPLATE：生成编辑模板的嵌入页面
-<br/>PREVIEW_TEMPLATE：生成预览模板的嵌入页面
-<br/>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面
-<br/>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面
-<br/>EXTEND_SERVICE：生成拓展服务的嵌入页面
-<br/>PREVIEW_FLOW：生成预览合同的嵌入页面
-<br/>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面
-
+     * @param string $EmbedType WEB嵌入资源类型，支持以下类型
+<ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
+<li>CREATE_TEMPLATE：生成创建模板的嵌入页面</li>
+<li>MODIFY_TEMPLATE：生成编辑模板的嵌入页面</li>
+<li>PREVIEW_TEMPLATE：生成预览模板的嵌入页面</li>
+<li>PREVIEW_SEAL_LIST：生成预览印章列表的嵌入页面</li>
+<li>PREVIEW_SEAL_DETAIL：生成预览印章详情的嵌入页面</li>
+<li>EXTEND_SERVICE：生成拓展服务的嵌入页面</li>
+<li>PREVIEW_FLOW：生成预览合同的嵌入页面</li>
+<li>PREVIEW_FLOW_DETAIL：生成查看合同详情的嵌入页面</li></ul>
      * @param string $BusinessId WEB嵌入的业务资源ID
-<br/>PREVIEW_SEAL_DETAIL，必填，取值为印章id
-<br/>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id
-<br/>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id
+<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
+<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
+<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
      * @param Agent $Agent 代理企业和员工的信息。
 <br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param ReviewerInfo $Reviewer 抄送方信息

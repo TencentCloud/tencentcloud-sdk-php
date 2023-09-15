@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIntegrationMainOrganizationUser请求参数结构体
+ * CancelAuditCertificate请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息，userId必填
- * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
+ * @method string getCertificateId() 获取证书ID
+ * @method void setCertificateId(string $CertificateId) 设置证书ID
  */
-class DescribeIntegrationMainOrganizationUserRequest extends AbstractModel
+class CancelAuditCertificateRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息，userId必填
+     * @var string 证书ID
      */
-    public $Operator;
+    public $CertificateId;
 
     /**
-     * @param UserInfo $Operator 操作人信息，userId必填
+     * @param string $CertificateId 证书ID
      */
     function __construct()
     {
@@ -46,9 +46,8 @@ class DescribeIntegrationMainOrganizationUserRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
+        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
+            $this->CertificateId = $param["CertificateId"];
         }
     }
 }

@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Ssa\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIntegrationMainOrganizationUser返回参数结构体
+ * SaDivulgeScanRuleMutate返回参数结构体
  *
- * @method IntegrationMainOrganizationUser getIntegrationMainOrganizationUser() 获取主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntegrationMainOrganizationUser(IntegrationMainOrganizationUser $IntegrationMainOrganizationUser) 设置主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method SaDivulgeScanRuleSetList getData() 获取Data
+ * @method void setData(SaDivulgeScanRuleSetList $Data) 设置Data
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeIntegrationMainOrganizationUserResponse extends AbstractModel
+class SaDivulgeScanRuleMutateResponse extends AbstractModel
 {
     /**
-     * @var IntegrationMainOrganizationUser 主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var SaDivulgeScanRuleSetList Data
      */
-    public $IntegrationMainOrganizationUser;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class DescribeIntegrationMainOrganizationUserResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param IntegrationMainOrganizationUser $IntegrationMainOrganizationUser 主企业员工账号信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param SaDivulgeScanRuleSetList $Data Data
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,9 +54,9 @@ class DescribeIntegrationMainOrganizationUserResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IntegrationMainOrganizationUser",$param) and $param["IntegrationMainOrganizationUser"] !== null) {
-            $this->IntegrationMainOrganizationUser = new IntegrationMainOrganizationUser();
-            $this->IntegrationMainOrganizationUser->deserialize($param["IntegrationMainOrganizationUser"]);
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new SaDivulgeScanRuleSetList();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

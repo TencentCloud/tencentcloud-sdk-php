@@ -18,56 +18,116 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 审计规则模版的详情
+ * 审计规则模板的详情
  *
- * @method string getRuleTemplateId() 获取规则模版ID。
- * @method void setRuleTemplateId(string $RuleTemplateId) 设置规则模版ID。
- * @method string getRuleTemplateName() 获取规则模版名称。
- * @method void setRuleTemplateName(string $RuleTemplateName) 设置规则模版名称。
- * @method array getRuleFilters() 获取规则模版的过滤条件
- * @method void setRuleFilters(array $RuleFilters) 设置规则模版的过滤条件
- * @method string getDescription() 获取规则模版描述。
+ * @method string getRuleTemplateId() 获取规则模板ID。
+ * @method void setRuleTemplateId(string $RuleTemplateId) 设置规则模板ID。
+ * @method string getRuleTemplateName() 获取规则模板名称。
+ * @method void setRuleTemplateName(string $RuleTemplateName) 设置规则模板名称。
+ * @method array getRuleFilters() 获取规则模板的过滤条件
+ * @method void setRuleFilters(array $RuleFilters) 设置规则模板的过滤条件
+ * @method string getDescription() 获取规则模板描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置规则模版描述。
+ * @method void setDescription(string $Description) 设置规则模板描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateAt() 获取规则模版创建时间。
- * @method void setCreateAt(string $CreateAt) 设置规则模版创建时间。
+ * @method string getCreateAt() 获取规则模板创建时间。
+ * @method void setCreateAt(string $CreateAt) 设置规则模板创建时间。
+ * @method string getUpdateAt() 获取规则模板修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateAt(string $UpdateAt) 设置规则模板修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警等级。1-低风险，2-中风险，3-高风险。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlarmPolicy() 获取告警策略。0-不告警，1-告警。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmPolicy(integer $AlarmPolicy) 设置告警策略。0-不告警，1-告警。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取模版状态。0-无任务 ，1-修改中。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置模版状态。0-无任务 ，1-修改中。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAffectedInstances() 获取规则模板应用在哪些在实例。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAffectedInstances(array $AffectedInstances) 设置规则模板应用在哪些在实例。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditRuleTemplateInfo extends AbstractModel
 {
     /**
-     * @var string 规则模版ID。
+     * @var string 规则模板ID。
      */
     public $RuleTemplateId;
 
     /**
-     * @var string 规则模版名称。
+     * @var string 规则模板名称。
      */
     public $RuleTemplateName;
 
     /**
-     * @var array 规则模版的过滤条件
+     * @var array 规则模板的过滤条件
      */
     public $RuleFilters;
 
     /**
-     * @var string 规则模版描述。
+     * @var string 规则模板描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 规则模版创建时间。
+     * @var string 规则模板创建时间。
      */
     public $CreateAt;
 
     /**
-     * @param string $RuleTemplateId 规则模版ID。
-     * @param string $RuleTemplateName 规则模版名称。
-     * @param array $RuleFilters 规则模版的过滤条件
-     * @param string $Description 规则模版描述。
+     * @var string 规则模板修改时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateAt 规则模版创建时间。
+     */
+    public $UpdateAt;
+
+    /**
+     * @var integer 告警等级。1-低风险，2-中风险，3-高风险。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var integer 告警策略。0-不告警，1-告警。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmPolicy;
+
+    /**
+     * @var integer 模版状态。0-无任务 ，1-修改中。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var array 规则模板应用在哪些在实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AffectedInstances;
+
+    /**
+     * @param string $RuleTemplateId 规则模板ID。
+     * @param string $RuleTemplateName 规则模板名称。
+     * @param array $RuleFilters 规则模板的过滤条件
+     * @param string $Description 规则模板描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateAt 规则模板创建时间。
+     * @param string $UpdateAt 规则模板修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 模版状态。0-无任务 ，1-修改中。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AffectedInstances 规则模板应用在哪些在实例。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -105,6 +165,26 @@ class AuditRuleTemplateInfo extends AbstractModel
 
         if (array_key_exists("CreateAt",$param) and $param["CreateAt"] !== null) {
             $this->CreateAt = $param["CreateAt"];
+        }
+
+        if (array_key_exists("UpdateAt",$param) and $param["UpdateAt"] !== null) {
+            $this->UpdateAt = $param["UpdateAt"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AffectedInstances",$param) and $param["AffectedInstances"] !== null) {
+            $this->AffectedInstances = $param["AffectedInstances"];
         }
     }
 }

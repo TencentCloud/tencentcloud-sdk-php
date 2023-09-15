@@ -20,50 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowGroupByTemplates请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
- * @method string getFlowGroupName() 获取合同组名称,最大长度200个字符
- * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称,最大长度200个字符
- * @method array getFlowGroupInfos() 获取合同组的子合同信息，支持2-50个子合同
- * @method void setFlowGroupInfos(array $FlowGroupInfos) 设置合同组的子合同信息，支持2-50个子合同
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method FlowGroupOptions getFlowGroupOptions() 获取合同组的配置信息。包括是否通知本企业签署方，是否通知其他签署方
- * @method void setFlowGroupOptions(FlowGroupOptions $FlowGroupOptions) 设置合同组的配置信息。包括是否通知本企业签署方，是否通知其他签署方
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+ * @method string getFlowGroupName() 获取合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method void setFlowGroupName(string $FlowGroupName) 设置合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method array getFlowGroupInfos() 获取合同（流程）组的子合同信息，支持2-50个子合同
+ * @method void setFlowGroupInfos(array $FlowGroupInfos) 设置合同（流程）组的子合同信息，支持2-50个子合同
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method FlowGroupOptions getFlowGroupOptions() 获取合同（流程）组的配置项信息。
+其中包括：
+<ul>
+<li>是否通知本企业签署方</li>
+<li>是否通知其他签署方</li>
+</ul>
+ * @method void setFlowGroupOptions(FlowGroupOptions $FlowGroupOptions) 设置合同（流程）组的配置项信息。
+其中包括：
+<ul>
+<li>是否通知本企业签署方</li>
+<li>是否通知其他签署方</li>
+</ul>
  */
 class CreateFlowGroupByTemplatesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public $Operator;
 
     /**
-     * @var string 合同组名称,最大长度200个字符
+     * @var string 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public $FlowGroupName;
 
     /**
-     * @var array 合同组的子合同信息，支持2-50个子合同
+     * @var array 合同（流程）组的子合同信息，支持2-50个子合同
      */
     public $FlowGroupInfos;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @var FlowGroupOptions 合同组的配置信息。包括是否通知本企业签署方，是否通知其他签署方
+     * @var FlowGroupOptions 合同（流程）组的配置项信息。
+其中包括：
+<ul>
+<li>是否通知本企业签署方</li>
+<li>是否通知其他签署方</li>
+</ul>
      */
     public $FlowGroupOptions;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
-     * @param string $FlowGroupName 合同组名称,最大长度200个字符
-     * @param array $FlowGroupInfos 合同组的子合同信息，支持2-50个子合同
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param FlowGroupOptions $FlowGroupOptions 合同组的配置信息。包括是否通知本企业签署方，是否通知其他签署方
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @param string $FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param array $FlowGroupInfos 合同（流程）组的子合同信息，支持2-50个子合同
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param FlowGroupOptions $FlowGroupOptions 合同（流程）组的配置项信息。
+其中包括：
+<ul>
+<li>是否通知本企业签署方</li>
+<li>是否通知其他签署方</li>
+</ul>
      */
     function __construct()
     {

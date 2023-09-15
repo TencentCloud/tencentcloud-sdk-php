@@ -18,7 +18,7 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例的审计规则详情，DescribeAuditRuleWithInstanceIds接口的出参。
+ * 实例的审计规则详情。
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
@@ -29,6 +29,14 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAuditRuleFilters() 获取审计规则详情。仅当AuditRule=true时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置审计规则详情。仅当AuditRule=true时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getOldRule() 获取是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOldRule(boolean $OldRule) 设置是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRuleTemplates() 获取实例应用的规则模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleTemplates(array $RuleTemplates) 设置实例应用的规则模板详情
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAuditRule extends AbstractModel
@@ -51,10 +59,26 @@ class InstanceAuditRule extends AbstractModel
     public $AuditRuleFilters;
 
     /**
+     * @var boolean 是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OldRule;
+
+    /**
+     * @var array 实例应用的规则模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleTemplates;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param boolean $AuditRule 是否是规则审计。true-规则审计，false-全审计。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AuditRuleFilters 审计规则详情。仅当AuditRule=true时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $OldRule 是否是审计策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RuleTemplates 实例应用的规则模板详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +108,19 @@ class InstanceAuditRule extends AbstractModel
                 $obj = new AuditRuleFilters();
                 $obj->deserialize($value);
                 array_push($this->AuditRuleFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("OldRule",$param) and $param["OldRule"] !== null) {
+            $this->OldRule = $param["OldRule"];
+        }
+
+        if (array_key_exists("RuleTemplates",$param) and $param["RuleTemplates"] !== null) {
+            $this->RuleTemplates = [];
+            foreach ($param["RuleTemplates"] as $key => $value){
+                $obj = new RuleTemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->RuleTemplates, $obj);
             }
         }
     }

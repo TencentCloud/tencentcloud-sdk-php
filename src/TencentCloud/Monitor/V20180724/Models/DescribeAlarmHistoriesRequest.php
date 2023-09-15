@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverGroups(array $ReceiverGroups) 设置根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
  * @method array getPolicyIds() 获取根据告警策略 Id 列表搜索
  * @method void setPolicyIds(array $PolicyIds) 设置根据告警策略 Id 列表搜索
+ * @method array getAlarmLevels() 获取告警等级
+ * @method void setAlarmLevels(array $AlarmLevels) 设置告警等级
  */
 class DescribeAlarmHistoriesRequest extends AbstractModel
 {
@@ -156,6 +158,11 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $PolicyIds;
 
     /**
+     * @var array 告警等级
+     */
+    public $AlarmLevels;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -176,6 +183,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param array $ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
      * @param array $ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
      * @param array $PolicyIds 根据告警策略 Id 列表搜索
+     * @param array $AlarmLevels 告警等级
      */
     function __construct()
     {
@@ -265,6 +273,10 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("AlarmLevels",$param) and $param["AlarmLevels"] !== null) {
+            $this->AlarmLevels = $param["AlarmLevels"];
         }
     }
 }

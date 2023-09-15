@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAuditRuleTemplates请求参数结构体
  *
- * @method array getRuleTemplateIds() 获取审计规则模版ID。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模版ID。
+ * @method array getRuleTemplateIds() 获取审计规则模板ID。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模板ID。
  */
 class DeleteAuditRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 审计规则模版ID。
+     * @var array 审计规则模板ID。
      */
     public $RuleTemplateIds;
 
     /**
-     * @param array $RuleTemplateIds 审计规则模版ID。
+     * @param array $RuleTemplateIds 审计规则模板ID。
      */
     function __construct()
     {

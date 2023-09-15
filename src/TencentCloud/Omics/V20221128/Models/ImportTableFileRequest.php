@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置表格名称，支持20个字符内的英文字符、数字和下划线。
  * @method string getCosUri() 获取表格文件Cos对象路径。
  * @method void setCosUri(string $CosUri) 设置表格文件Cos对象路径。
- * @method array getDataType() 获取表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File]
- * @method void setDataType(array $DataType) 设置表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File]
+ * @method array getDataType() 获取表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
+ * @method void setDataType(array $DataType) 设置表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
  * @method string getDescription() 获取表格描述。
  * @method void setDescription(string $Description) 设置表格描述。
  */
@@ -49,7 +49,7 @@ class ImportTableFileRequest extends AbstractModel
     public $CosUri;
 
     /**
-     * @var array 表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File]
+     * @var array 表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
      */
     public $DataType;
 
@@ -62,7 +62,7 @@ class ImportTableFileRequest extends AbstractModel
      * @param string $ProjectId 表格关联的项目ID。
      * @param string $Name 表格名称，支持20个字符内的英文字符、数字和下划线。
      * @param string $CosUri 表格文件Cos对象路径。
-     * @param array $DataType 表格文件中每列的数据类型，支持的类型包括：Int、String、File、Array[File]
+     * @param array $DataType 表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
      * @param string $Description 表格描述。
      */
     function __construct()

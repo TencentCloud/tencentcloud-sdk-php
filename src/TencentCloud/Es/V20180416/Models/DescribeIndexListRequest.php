@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime
  * @method array getIndexStatusList() 获取过滤索引状态
  * @method void setIndexStatusList(array $IndexStatusList) 设置过滤索引状态
- * @method string getOrder() 获取排序顺序，支持asc、desc
- * @method void setOrder(string $Order) 设置排序顺序，支持asc、desc
+ * @method string getOrder() 获取排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
+ * @method void setOrder(string $Order) 设置排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
  */
 class DescribeIndexListRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class DescribeIndexListRequest extends AbstractModel
     public $IndexStatusList;
 
     /**
-     * @var string 排序顺序，支持asc、desc
+     * @var string 排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
      */
     public $Order;
 
@@ -103,7 +103,7 @@ class DescribeIndexListRequest extends AbstractModel
      * @param integer $Limit 一页展示数量
      * @param string $OrderBy 排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime
      * @param array $IndexStatusList 过滤索引状态
-     * @param string $Order 排序顺序，支持asc、desc
+     * @param string $Order 排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
      */
     function __construct()
     {

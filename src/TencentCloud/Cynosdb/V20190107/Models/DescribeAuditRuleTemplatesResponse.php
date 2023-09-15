@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合查询条件的实例总数。
  * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数。
- * @method array getItems() 获取规则模版详细信息列表。
+ * @method array getItems() 获取规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(array $Items) 设置规则模版详细信息列表。
+ * @method void setItems(array $Items) 设置规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class DescribeAuditRuleTemplatesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 规则模版详细信息列表。
+     * @var array 规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
@@ -49,7 +49,7 @@ class DescribeAuditRuleTemplatesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合查询条件的实例总数。
-     * @param array $Items 规则模版详细信息列表。
+     * @param array $Items 规则模板详细信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

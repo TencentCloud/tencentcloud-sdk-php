@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrationRoles返回参数结构体
  *
- * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
- * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
- * @method integer getLimit() 获取指定每页多少条数据，单页最大200
- * @method void setLimit(integer $Limit) 设置指定每页多少条数据，单页最大200
- * @method integer getTotalCount() 获取符合查询条件的总的角色数
- * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的总的角色数
- * @method array getIntegrateRoles() 获取企业角色信息列表
- * @method void setIntegrateRoles(array $IntegrateRoles) 设置企业角色信息列表
+ * @method integer getOffset() 获取指定分页返回的页码。页码从0开始，最大为2000。
+ * @method void setOffset(integer $Offset) 设置指定分页返回的页码。页码从0开始，最大为2000。
+ * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 200。
+ * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 200。
+ * @method integer getTotalCount() 获取符合查询条件的总角色数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的总角色数。
+ * @method array getIntegrateRoles() 获取企业角色信息列表。
+ * @method void setIntegrateRoles(array $IntegrateRoles) 设置企业角色信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeIntegrationRolesResponse extends AbstractModel
 {
     /**
-     * @var integer 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * @var integer 指定分页返回的页码。页码从0开始，最大为2000。
      */
     public $Offset;
 
     /**
-     * @var integer 指定每页多少条数据，单页最大200
+     * @var integer 指定分页每页返回的数据条数，单页最大支持 200。
      */
     public $Limit;
 
     /**
-     * @var integer 符合查询条件的总的角色数
+     * @var integer 符合查询条件的总角色数。
      */
     public $TotalCount;
 
     /**
-     * @var array 企业角色信息列表
+     * @var array 企业角色信息列表。
      */
     public $IntegrateRoles;
 
@@ -59,10 +59,10 @@ class DescribeIntegrationRolesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     * @param integer $Limit 指定每页多少条数据，单页最大200
-     * @param integer $TotalCount 符合查询条件的总的角色数
-     * @param array $IntegrateRoles 企业角色信息列表
+     * @param integer $Offset 指定分页返回的页码。页码从0开始，最大为2000。
+     * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 200。
+     * @param integer $TotalCount 符合查询条件的总角色数。
+     * @param array $IntegrateRoles 企业角色信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

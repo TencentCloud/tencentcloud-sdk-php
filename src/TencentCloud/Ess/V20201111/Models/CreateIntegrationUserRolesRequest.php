@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIntegrationUserRoles请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息，UserId必填
- * @method void setOperator(UserInfo $Operator) 设置操作人信息，UserId必填
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
  * @method array getUserIds() 获取绑定角色的用户id列表，不能重复，不能大于 100 个
  * @method void setUserIds(array $UserIds) 设置绑定角色的用户id列表，不能重复，不能大于 100 个
- * @method array getRoleIds() 获取绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
- * @method void setRoleIds(array $RoleIds) 设置绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method array getRoleIds() 获取绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取角色信息
+ * @method void setRoleIds(array $RoleIds) 设置绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取角色信息
+ * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class CreateIntegrationUserRolesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息，UserId必填
+     * @var UserInfo 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public $Operator;
 
@@ -42,20 +42,20 @@ class CreateIntegrationUserRolesRequest extends AbstractModel
     public $UserIds;
 
     /**
-     * @var array 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
+     * @var array 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取角色信息
      */
     public $RoleIds;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 操作人信息，UserId必填
+     * @param UserInfo $Operator 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      * @param array $UserIds 绑定角色的用户id列表，不能重复，不能大于 100 个
-     * @param array $RoleIds 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param array $RoleIds 绑定角色的角色id列表，不能重复，不能大于 100，可以通过DescribeIntegrationRoles接口获取角色信息
+     * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddress(string $PublicIpAddress) 设置外网IP地址，形如：`123.121.34.33`。
  * @method boolean getIsBlocked() 获取资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
  * @method void setIsBlocked(boolean $IsBlocked) 设置资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+ * @method string getBlockType() 获取资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
+ * @method void setBlockType(string $BlockType) 设置资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
  */
 class NatGatewayAddress extends AbstractModel
 {
@@ -45,9 +47,15 @@ class NatGatewayAddress extends AbstractModel
     public $IsBlocked;
 
     /**
+     * @var string 资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
+     */
+    public $BlockType;
+
+    /**
      * @param string $AddressId 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
      * @param string $PublicIpAddress 外网IP地址，形如：`123.121.34.33`。
      * @param boolean $IsBlocked 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+     * @param string $BlockType 资源封堵类型。NORMAL表示未封禁，SECURITY表示安全封禁，USER表示用户封禁，OTHER表示其他封禁，多个原因封禁时用&连接，比如：SECURITY&USER&OTHER。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class NatGatewayAddress extends AbstractModel
 
         if (array_key_exists("IsBlocked",$param) and $param["IsBlocked"] !== null) {
             $this->IsBlocked = $param["IsBlocked"];
+        }
+
+        if (array_key_exists("BlockType",$param) and $param["BlockType"] !== null) {
+            $this->BlockType = $param["BlockType"];
         }
     }
 }

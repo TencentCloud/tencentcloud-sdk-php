@@ -20,19 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuditRuleTemplates请求参数结构体
  *
- * @method array getRuleTemplateIds() 获取审计规则模版ID。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模版ID。
+ * @method array getRuleTemplateIds() 获取审计规则模板ID。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模板ID。
  * @method array getRuleFilters() 获取修改后的审计规则。
  * @method void setRuleFilters(array $RuleFilters) 设置修改后的审计规则。
- * @method string getRuleTemplateName() 获取修改后的规则模版名称。
- * @method void setRuleTemplateName(string $RuleTemplateName) 设置修改后的规则模版名称。
- * @method string getDescription() 获取修改后的规则模版描述。
- * @method void setDescription(string $Description) 设置修改后的规则模版描述。
+ * @method string getRuleTemplateName() 获取修改后的规则模板名称。
+ * @method void setRuleTemplateName(string $RuleTemplateName) 设置修改后的规则模板名称。
+ * @method string getDescription() 获取修改后的规则模板描述。
+ * @method void setDescription(string $Description) 设置修改后的规则模板描述。
+ * @method integer getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险。
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警等级。1-低风险，2-中风险，3-高风险。
+ * @method integer getAlarmPolicy() 获取告警策略。0-不告警，1-告警。
+ * @method void setAlarmPolicy(integer $AlarmPolicy) 设置告警策略。0-不告警，1-告警。
  */
 class ModifyAuditRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 审计规则模版ID。
+     * @var array 审计规则模板ID。
      */
     public $RuleTemplateIds;
 
@@ -42,20 +46,32 @@ class ModifyAuditRuleTemplatesRequest extends AbstractModel
     public $RuleFilters;
 
     /**
-     * @var string 修改后的规则模版名称。
+     * @var string 修改后的规则模板名称。
      */
     public $RuleTemplateName;
 
     /**
-     * @var string 修改后的规则模版描述。
+     * @var string 修改后的规则模板描述。
      */
     public $Description;
 
     /**
-     * @param array $RuleTemplateIds 审计规则模版ID。
+     * @var integer 告警等级。1-低风险，2-中风险，3-高风险。
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var integer 告警策略。0-不告警，1-告警。
+     */
+    public $AlarmPolicy;
+
+    /**
+     * @param array $RuleTemplateIds 审计规则模板ID。
      * @param array $RuleFilters 修改后的审计规则。
-     * @param string $RuleTemplateName 修改后的规则模版名称。
-     * @param string $Description 修改后的规则模版描述。
+     * @param string $RuleTemplateName 修改后的规则模板名称。
+     * @param string $Description 修改后的规则模板描述。
+     * @param integer $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
+     * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警。
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class ModifyAuditRuleTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
         }
     }
 }

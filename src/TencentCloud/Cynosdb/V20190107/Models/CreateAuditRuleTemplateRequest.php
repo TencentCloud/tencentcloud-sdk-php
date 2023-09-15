@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getRuleFilters() 获取审计规则。
  * @method void setRuleFilters(array $RuleFilters) 设置审计规则。
- * @method string getRuleTemplateName() 获取规则模版名称。
- * @method void setRuleTemplateName(string $RuleTemplateName) 设置规则模版名称。
- * @method string getDescription() 获取规则模版描述。
- * @method void setDescription(string $Description) 设置规则模版描述。
+ * @method string getRuleTemplateName() 获取规则模板名称。
+ * @method void setRuleTemplateName(string $RuleTemplateName) 设置规则模板名称。
+ * @method string getDescription() 获取规则模板描述。
+ * @method void setDescription(string $Description) 设置规则模板描述。
+ * @method integer getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警等级。1-低风险，2-中风险，3-高风险
+ * @method integer getAlarmPolicy() 获取告警策略。0-不告警，1-告警。
+ * @method void setAlarmPolicy(integer $AlarmPolicy) 设置告警策略。0-不告警，1-告警。
  */
 class CreateAuditRuleTemplateRequest extends AbstractModel
 {
@@ -35,19 +39,31 @@ class CreateAuditRuleTemplateRequest extends AbstractModel
     public $RuleFilters;
 
     /**
-     * @var string 规则模版名称。
+     * @var string 规则模板名称。
      */
     public $RuleTemplateName;
 
     /**
-     * @var string 规则模版描述。
+     * @var string 规则模板描述。
      */
     public $Description;
 
     /**
+     * @var integer 告警等级。1-低风险，2-中风险，3-高风险
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var integer 告警策略。0-不告警，1-告警。
+     */
+    public $AlarmPolicy;
+
+    /**
      * @param array $RuleFilters 审计规则。
-     * @param string $RuleTemplateName 规则模版名称。
-     * @param string $Description 规则模版描述。
+     * @param string $RuleTemplateName 规则模板名称。
+     * @param string $Description 规则模板描述。
+     * @param integer $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险
+     * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警。
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class CreateAuditRuleTemplateRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
         }
     }
 }

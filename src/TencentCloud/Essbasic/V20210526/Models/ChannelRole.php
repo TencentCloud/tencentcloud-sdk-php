@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleStatus(integer $RoleStatus) 设置角色状态：1-启用；2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPermissionGroups() 获取权限树
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPermissionGroups(array $PermissionGroups) 设置权限树
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChannelRole extends AbstractModel
 {
@@ -54,11 +58,19 @@ class ChannelRole extends AbstractModel
     public $RoleStatus;
 
     /**
+     * @var array 权限树
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PermissionGroups;
+
+    /**
      * @param string $RoleId 角色id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName 角色名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoleStatus 角色状态：1-启用；2-禁用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PermissionGroups 权限树
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,15 @@ class ChannelRole extends AbstractModel
 
         if (array_key_exists("RoleStatus",$param) and $param["RoleStatus"] !== null) {
             $this->RoleStatus = $param["RoleStatus"];
+        }
+
+        if (array_key_exists("PermissionGroups",$param) and $param["PermissionGroups"] !== null) {
+            $this->PermissionGroups = [];
+            foreach ($param["PermissionGroups"] as $key => $value){
+                $obj = new PermissionGroup();
+                $obj->deserialize($value);
+                array_push($this->PermissionGroups, $obj);
+            }
         }
     }
 }

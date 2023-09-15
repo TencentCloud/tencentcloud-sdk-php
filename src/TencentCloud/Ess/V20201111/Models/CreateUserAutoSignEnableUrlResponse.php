@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserAutoSignEnableUrl返回参数结构体
  *
- * @method string getUrl() 获取个人用户自动签的开通链接, 短链形式
- * @method void setUrl(string $Url) 设置个人用户自动签的开通链接, 短链形式
+ * @method string getUrl() 获取个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
+ * @method void setUrl(string $Url) 设置个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
  * @method string getAppId() 获取腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
 
 注: `如果获取的是H5链接, 则不会返回此值`
@@ -58,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateUserAutoSignEnableUrlResponse extends AbstractModel
 {
     /**
-     * @var string 个人用户自动签的开通链接, 短链形式
+     * @var string 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
      */
     public $Url;
 
@@ -103,7 +103,7 @@ class CreateUserAutoSignEnableUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Url 个人用户自动签的开通链接, 短链形式
+     * @param string $Url 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
      * @param string $AppId 腾讯电子签小程序的 AppID，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用
 
 注: `如果获取的是H5链接, 则不会返回此值`

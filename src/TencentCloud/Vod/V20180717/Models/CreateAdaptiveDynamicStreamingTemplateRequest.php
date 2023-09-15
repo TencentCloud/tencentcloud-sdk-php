@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 <li>SimpleAES</li>
 <li>Widevine</li>
 <li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+默认值为空字符串，如果取值为空字符串，代表不对视频做 DRM 保护。
  * @method void setDrmType(string $DrmType) 设置DRM 方案类型，取值范围：
 <li>SimpleAES</li>
 <li>Widevine</li>
 <li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+默认值为空字符串，如果取值为空字符串，代表不对视频做 DRM 保护。
  * @method string getDrmKeyProvider() 获取DRM 的密钥提供商，取值范围：
 <li>SDMC：华曦达；</li>
 <li>VOD：云点播。</li>
@@ -109,7 +109,7 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 <li>SimpleAES</li>
 <li>Widevine</li>
 <li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+默认值为空字符串，如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public $DrmType;
 
@@ -162,7 +162,7 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 <li>SimpleAES</li>
 <li>Widevine</li>
 <li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+默认值为空字符串，如果取值为空字符串，代表不对视频做 DRM 保护。
      * @param string $DrmKeyProvider DRM 的密钥提供商，取值范围：
 <li>SDMC：华曦达；</li>
 <li>VOD：云点播。</li>

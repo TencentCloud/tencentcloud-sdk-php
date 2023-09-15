@@ -43,8 +43,8 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DiagnoseInstanceResponse DiagnoseInstance(Models\DiagnoseInstanceRequest $req) 智能运维诊断集群
  * @method Models\GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(Models\GetRequestTargetNodeTypesRequest $req) 获取接收客户端请求的节点类型
  * @method Models\ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroup(Models\ModifyEsVipSecurityGroupRequest $req) 修改绑定VIP的安全组，传安全组id列表
- * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 重启ES集群实例(用于系统版本更新等操作) 
- * @method Models\RestartKibanaResponse RestartKibana(Models\RestartKibanaRequest $req) 重启Kibana 
+ * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 重启ES集群实例(用于系统版本更新等操作)
+ * @method Models\RestartKibanaResponse RestartKibana(Models\RestartKibanaRequest $req) 重启Kibana
  * @method Models\RestartLogstashInstanceResponse RestartLogstashInstance(Models\RestartLogstashInstanceRequest $req) 用于重启Logstash实例
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) 用于重启集群节点
  * @method Models\SaveAndDeployLogstashPipelineResponse SaveAndDeployLogstashPipeline(Models\SaveAndDeployLogstashPipelineRequest $req) 用于下发并且部署管道

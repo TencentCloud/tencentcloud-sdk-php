@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditRuleTemplate返回参数结构体
  *
- * @method string getRuleTemplateId() 获取生成的规则模版ID。
+ * @method string getRuleTemplateId() 获取生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleTemplateId(string $RuleTemplateId) 设置生成的规则模版ID。
+ * @method void setRuleTemplateId(string $RuleTemplateId) 设置生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAuditRuleTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 生成的规则模版ID。
+     * @var string 生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTemplateId;
@@ -41,7 +41,7 @@ class CreateAuditRuleTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RuleTemplateId 生成的规则模版ID。
+     * @param string $RuleTemplateId 生成的规则模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

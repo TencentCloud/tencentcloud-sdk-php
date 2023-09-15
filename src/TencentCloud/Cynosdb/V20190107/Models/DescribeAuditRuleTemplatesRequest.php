@@ -20,24 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditRuleTemplates请求参数结构体
  *
- * @method array getRuleTemplateIds() 获取规则模版ID。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模版ID。
- * @method array getRuleTemplateNames() 获取规则模版名称
- * @method void setRuleTemplateNames(array $RuleTemplateNames) 设置规则模版名称
+ * @method array getRuleTemplateIds() 获取规则模板ID。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板ID。
+ * @method array getRuleTemplateNames() 获取规则模板名称
+ * @method void setRuleTemplateNames(array $RuleTemplateNames) 设置规则模板名称
  * @method integer getLimit() 获取单次请求返回的数量。默认值20。
  * @method void setLimit(integer $Limit) 设置单次请求返回的数量。默认值20。
  * @method integer getOffset() 获取偏移量，默认值为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为 0。
+ * @method integer getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险。
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警等级。1-低风险，2-中风险，3-高风险。
+ * @method integer getAlarmPolicy() 获取告警策略。0-不告警，1-告警。
+ * @method void setAlarmPolicy(integer $AlarmPolicy) 设置告警策略。0-不告警，1-告警。
  */
 class DescribeAuditRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 规则模版ID。
+     * @var array 规则模板ID。
      */
     public $RuleTemplateIds;
 
     /**
-     * @var array 规则模版名称
+     * @var array 规则模板名称
      */
     public $RuleTemplateNames;
 
@@ -52,10 +56,22 @@ class DescribeAuditRuleTemplatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $RuleTemplateIds 规则模版ID。
-     * @param array $RuleTemplateNames 规则模版名称
+     * @var integer 告警等级。1-低风险，2-中风险，3-高风险。
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var integer 告警策略。0-不告警，1-告警。
+     */
+    public $AlarmPolicy;
+
+    /**
+     * @param array $RuleTemplateIds 规则模板ID。
+     * @param array $RuleTemplateNames 规则模板名称
      * @param integer $Limit 单次请求返回的数量。默认值20。
      * @param integer $Offset 偏移量，默认值为 0。
+     * @param integer $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
+     * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警。
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class DescribeAuditRuleTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
         }
     }
 }

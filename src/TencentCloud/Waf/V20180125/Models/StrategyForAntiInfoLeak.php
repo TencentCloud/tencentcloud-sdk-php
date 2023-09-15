@@ -20,34 +20,56 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 防信息泄露的匹配条件结构体
  *
- * @method string getField() 获取匹配字段
- * @method void setField(string $Field) 设置匹配字段
- * @method string getCompareFunc() 获取逻辑符号
- * @method void setCompareFunc(string $CompareFunc) 设置逻辑符号
- * @method string getContent() 获取匹配内容
- * @method void setContent(string $Content) 设置匹配内容
+ * @method string getField() 获取匹配条件，returncode（响应码）、keywords（关键字）、information（敏感信息）
+ * @method void setField(string $Field) 设置匹配条件，returncode（响应码）、keywords（关键字）、information（敏感信息）
+ * @method string getCompareFunc() 获取逻辑符号，固定取值为contains
+ * @method void setCompareFunc(string $CompareFunc) 设置逻辑符号，固定取值为contains
+ * @method string getContent() 获取匹配内容。
+以下三个对应Field为information时可取的匹配内容：
+idcard（身份证）、phone（手机号）、bankcard（银行卡）。
+以下为对应Field为returncode时可取的匹配内容：
+400（状态码400）、403（状态码403）、404（状态码404）、4xx（其它4xx状态码）、500（状态码500）、501（状态码501）、502（状态码502）、504（状态码504）、5xx（其它5xx状态码）。
+当对应Field为keywords时由用户自己输入匹配内容。
+
+ * @method void setContent(string $Content) 设置匹配内容。
+以下三个对应Field为information时可取的匹配内容：
+idcard（身份证）、phone（手机号）、bankcard（银行卡）。
+以下为对应Field为returncode时可取的匹配内容：
+400（状态码400）、403（状态码403）、404（状态码404）、4xx（其它4xx状态码）、500（状态码500）、501（状态码501）、502（状态码502）、504（状态码504）、5xx（其它5xx状态码）。
+当对应Field为keywords时由用户自己输入匹配内容。
  */
 class StrategyForAntiInfoLeak extends AbstractModel
 {
     /**
-     * @var string 匹配字段
+     * @var string 匹配条件，returncode（响应码）、keywords（关键字）、information（敏感信息）
      */
     public $Field;
 
     /**
-     * @var string 逻辑符号
+     * @var string 逻辑符号，固定取值为contains
      */
     public $CompareFunc;
 
     /**
-     * @var string 匹配内容
+     * @var string 匹配内容。
+以下三个对应Field为information时可取的匹配内容：
+idcard（身份证）、phone（手机号）、bankcard（银行卡）。
+以下为对应Field为returncode时可取的匹配内容：
+400（状态码400）、403（状态码403）、404（状态码404）、4xx（其它4xx状态码）、500（状态码500）、501（状态码501）、502（状态码502）、504（状态码504）、5xx（其它5xx状态码）。
+当对应Field为keywords时由用户自己输入匹配内容。
+
      */
     public $Content;
 
     /**
-     * @param string $Field 匹配字段
-     * @param string $CompareFunc 逻辑符号
-     * @param string $Content 匹配内容
+     * @param string $Field 匹配条件，returncode（响应码）、keywords（关键字）、information（敏感信息）
+     * @param string $CompareFunc 逻辑符号，固定取值为contains
+     * @param string $Content 匹配内容。
+以下三个对应Field为information时可取的匹配内容：
+idcard（身份证）、phone（手机号）、bankcard（银行卡）。
+以下为对应Field为returncode时可取的匹配内容：
+400（状态码400）、403（状态码403）、404（状态码404）、4xx（其它4xx状态码）、500（状态码500）、501（状态码501）、502（状态码502）、504（状态码504）、5xx（其它5xx状态码）。
+当对应Field为keywords时由用户自己输入匹配内容。
      */
     function __construct()
     {

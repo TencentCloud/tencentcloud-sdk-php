@@ -59,12 +59,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAddressType() 获取EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
  * @method void setAddressType(string $AddressType) 设置EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
  * @method string getAnycastZone() 获取Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li><li><b>[已废弃]</b> ANYCAST_ZONE_A：发布域A（已更新为全球发布域）</li><li><b>[已废弃]</b> ANYCAST_ZONE_B：发布域B（已更新为全球发布域）</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
@@ -84,8 +82,8 @@ AnycastEIP是否用于绑定负载均衡。
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
  * @method string getAddressName() 获取EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
  * @method void setAddressName(string $AddressName) 设置EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
- * @method string getEgress() 获取网络出口，默认是：center_egress1
- * @method void setEgress(string $Egress) 设置网络出口，默认是：center_egress1
+ * @method string getEgress() 获取静态单线IP网络出口，默认值：center_egress1
+ * @method void setEgress(string $Egress) 设置静态单线IP网络出口，默认值：center_egress1
  * @method string getAntiDDoSPackageId() 获取高防包ID， 申请高防IP时，该字段必传。
  * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) 设置高防包ID， 申请高防IP时，该字段必传。
  * @method string getClientToken() 获取保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
@@ -135,7 +133,6 @@ class AllocateAddressesRequest extends AbstractModel
      * @var string EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
      */
     public $AddressType;
@@ -170,7 +167,7 @@ AnycastEIP是否用于绑定负载均衡。
     public $AddressName;
 
     /**
-     * @var string 网络出口，默认是：center_egress1
+     * @var string 静态单线IP网络出口，默认值：center_egress1
      */
     public $Egress;
 
@@ -206,7 +203,6 @@ AnycastEIP是否用于绑定负载均衡。
      * @param string $AddressType EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
 <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
-</ul>
 <ul style="margin:0"><li>已开高防IP白名单的用户，可选值：<ul><li>AntiDDoSEIP：高防IP</li></ul>注意：仅部分地域支持高防IP。</li></ul>
      * @param string $AnycastZone Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li><li><b>[已废弃]</b> ANYCAST_ZONE_A：发布域A（已更新为全球发布域）</li><li><b>[已废弃]</b> ANYCAST_ZONE_B：发布域B（已更新为全球发布域）</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
@@ -217,7 +213,7 @@ AnycastEIP是否用于绑定负载均衡。
      * @param array $Tags 需要关联的标签列表。
      * @param string $BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
      * @param string $AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
-     * @param string $Egress 网络出口，默认是：center_egress1
+     * @param string $Egress 静态单线IP网络出口，默认值：center_egress1
      * @param string $AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
      * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
      */

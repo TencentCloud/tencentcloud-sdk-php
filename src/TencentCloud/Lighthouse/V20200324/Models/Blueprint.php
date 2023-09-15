@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDockerVersion(string $DockerVersion) 设置Docker版本号。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getBlueprintShared() 获取镜像是否已共享。
+ * @method void setBlueprintShared(boolean $BlueprintShared) 设置镜像是否已共享。
  */
 class Blueprint extends AbstractModel
 {
@@ -182,6 +184,11 @@ class Blueprint extends AbstractModel
     public $DockerVersion;
 
     /**
+     * @var boolean 镜像是否已共享。
+     */
+    public $BlueprintShared;
+
+    /**
      * @param string $BlueprintId 镜像 ID  ，是 Blueprint 的唯一标识。
      * @param string $DisplayTitle 镜像对外展示标题。
      * @param string $DisplayVersion 镜像对外展示版本。
@@ -208,6 +215,7 @@ class Blueprint extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DockerVersion Docker版本号。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $BlueprintShared 镜像是否已共享。
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ class Blueprint extends AbstractModel
 
         if (array_key_exists("DockerVersion",$param) and $param["DockerVersion"] !== null) {
             $this->DockerVersion = $param["DockerVersion"];
+        }
+
+        if (array_key_exists("BlueprintShared",$param) and $param["BlueprintShared"] !== null) {
+            $this->BlueprintShared = $param["BlueprintShared"];
         }
     }
 }

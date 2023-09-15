@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileIds() 获取媒体文件唯一标识列表，最大长度：100。
  * @method void setFileIds(array $FileIds) 设置媒体文件唯一标识列表，最大长度：100。
+ * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method integer getRestoreDay() 获取解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
  * @method void setRestoreDay(integer $RestoreDay) 设置解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
  * @method string getRestoreTier() 获取解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
@@ -38,8 +40,6 @@ use TencentCloud\Common\AbstractModel;
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class RestoreMediaRequest extends AbstractModel
 {
@@ -47,6 +47,11 @@ class RestoreMediaRequest extends AbstractModel
      * @var array 媒体文件唯一标识列表，最大长度：100。
      */
     public $FileIds;
+
+    /**
+     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     */
+    public $SubAppId;
 
     /**
      * @var integer 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
@@ -65,12 +70,8 @@ class RestoreMediaRequest extends AbstractModel
     public $RestoreTier;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param array $FileIds 媒体文件唯一标识列表，最大长度：100。
+     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param integer $RestoreDay 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
      * @param string $RestoreTier 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
@@ -79,7 +80,6 @@ class RestoreMediaRequest extends AbstractModel
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -98,16 +98,16 @@ class RestoreMediaRequest extends AbstractModel
             $this->FileIds = $param["FileIds"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("RestoreDay",$param) and $param["RestoreDay"] !== null) {
             $this->RestoreDay = $param["RestoreDay"];
         }
 
         if (array_key_exists("RestoreTier",$param) and $param["RestoreTier"] !== null) {
             $this->RestoreTier = $param["RestoreTier"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

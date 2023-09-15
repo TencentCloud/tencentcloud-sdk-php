@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置EIP绑定的实例类型。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEgress() 获取静态单线IP网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEgress(string $Egress) 设置静态单线IP网络出口
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAntiDDoSPackageId() 获取高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
  * @method void setAntiDDoSPackageId(string $AntiDDoSPackageId) 设置高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
  */
@@ -218,6 +222,12 @@ class Address extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var string 静态单线IP网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Egress;
+
+    /**
      * @var string 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
      */
     public $AntiDDoSPackageId;
@@ -258,6 +268,8 @@ class Address extends AbstractModel
      * @param string $DeadlineDate 到期时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType EIP绑定的实例类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Egress 静态单线IP网络出口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AntiDDoSPackageId 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
      */
@@ -362,6 +374,10 @@ class Address extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
 
         if (array_key_exists("AntiDDoSPackageId",$param) and $param["AntiDDoSPackageId"] !== null) {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrationDepartments返回参数结构体
  *
- * @method array getDepartments() 获取部门列表
- * @method void setDepartments(array $Departments) 设置部门列表
+ * @method array getDepartments() 获取部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
+ * @method void setDepartments(array $Departments) 设置部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeIntegrationDepartmentsResponse extends AbstractModel
 {
     /**
-     * @var array 部门列表
+     * @var array 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
      */
     public $Departments;
 
@@ -38,7 +38,7 @@ class DescribeIntegrationDepartmentsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Departments 部门列表
+     * @param array $Departments 部门信息列表。部门信息根据部门排序号OrderNo降序排列，根据部门创建时间升序排列。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

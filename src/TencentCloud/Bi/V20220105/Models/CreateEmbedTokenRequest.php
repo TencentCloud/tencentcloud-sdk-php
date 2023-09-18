@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(string $ExpireTime) 设置过期时间。 单位：分钟 最大值：240。即，4小时 默认值：240
  * @method string getExtraParam() 获取备用字段
  * @method void setExtraParam(string $ExtraParam) 设置备用字段
+ * @method string getUserCorpId() 获取使用者企业Id(仅用于多用户)
+ * @method void setUserCorpId(string $UserCorpId) 设置使用者企业Id(仅用于多用户)
+ * @method string getUserId() 获取使用者Id(仅用于多用户)
+ * @method void setUserId(string $UserId) 设置使用者Id(仅用于多用户)
  */
 class CreateEmbedTokenRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class CreateEmbedTokenRequest extends AbstractModel
     public $ExtraParam;
 
     /**
+     * @var string 使用者企业Id(仅用于多用户)
+     */
+    public $UserCorpId;
+
+    /**
+     * @var string 使用者Id(仅用于多用户)
+     */
+    public $UserId;
+
+    /**
      * @param integer $ProjectId 分享项目id
      * @param integer $PageId 分享页面id，嵌出看板时此为空值0
      * @param string $Scope page表示嵌出页面，panel表嵌出整个看板
      * @param string $ExpireTime 过期时间。 单位：分钟 最大值：240。即，4小时 默认值：240
      * @param string $ExtraParam 备用字段
+     * @param string $UserCorpId 使用者企业Id(仅用于多用户)
+     * @param string $UserId 使用者Id(仅用于多用户)
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class CreateEmbedTokenRequest extends AbstractModel
 
         if (array_key_exists("ExtraParam",$param) and $param["ExtraParam"] !== null) {
             $this->ExtraParam = $param["ExtraParam"];
+        }
+
+        if (array_key_exists("UserCorpId",$param) and $param["UserCorpId"] !== null) {
+            $this->UserCorpId = $param["UserCorpId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

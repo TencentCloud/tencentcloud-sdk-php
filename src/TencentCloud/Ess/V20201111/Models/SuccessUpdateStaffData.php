@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDisplayName() 获取传入的用户名称
  * @method void setDisplayName(string $DisplayName) 设置传入的用户名称
- * @method string getMobile() 获取传入的手机号
- * @method void setMobile(string $Mobile) 设置传入的手机号
- * @method string getUserId() 获取用户Id
- * @method void setUserId(string $UserId) 设置用户Id
+ * @method string getMobile() 获取传入的手机号，没有打码
+ * @method void setMobile(string $Mobile) 设置传入的手机号，没有打码
+ * @method string getUserId() 获取员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+ * @method void setUserId(string $UserId) 设置员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
  */
 class SuccessUpdateStaffData extends AbstractModel
 {
@@ -35,19 +37,21 @@ class SuccessUpdateStaffData extends AbstractModel
     public $DisplayName;
 
     /**
-     * @var string 传入的手机号
+     * @var string 传入的手机号，没有打码
      */
     public $Mobile;
 
     /**
-     * @var string 用户Id
+     * @var string 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      */
     public $UserId;
 
     /**
      * @param string $DisplayName 传入的用户名称
-     * @param string $Mobile 传入的手机号
-     * @param string $UserId 用户Id
+     * @param string $Mobile 传入的手机号，没有打码
+     * @param string $UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      */
     function __construct()
     {

@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIntegrationEmployees请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息，userId必填
- * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
- * @method array getEmployees() 获取待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
- * @method void setEmployees(array $Employees) 设置待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method array getEmployees() 获取待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。
+ * @method void setEmployees(array $Employees) 设置待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class CreateIntegrationEmployeesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息，userId必填
+     * @var UserInfo 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var array 待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
+     * @var array 待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。
      */
     public $Employees;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 操作人信息，userId必填
-     * @param array $Employees 待创建员工的信息，不超过20个。
-所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
-企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param array $Employees 待创建员工的信息，最多不超过20个。
+其中入参Mobile和DisplayName必填，OpenId、Email和Department.DepartmentId选填，其他字段暂不支持设置。
+在创建企微企业员工场景下，只需传入WeworkOpenId，无需再传其他信息。
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {

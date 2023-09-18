@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddressesBandwidthOut(integer $PublicIpAddressesBandwidthOut) 设置需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
  * @method boolean getPublicIpFromSameZone() 获取公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
  * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) 设置公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+ * @method integer getNatProductVersion() 获取NAT网关大版本号，1是传统型，2是标准型，默认是1
+ * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关大版本号，1是传统型，2是标准型，默认是1
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class CreateNatGatewayRequest extends AbstractModel
     public $PublicIpFromSameZone;
 
     /**
+     * @var integer NAT网关大版本号，1是传统型，2是标准型，默认是1
+     */
+    public $NatProductVersion;
+
+    /**
      * @param string $NatGatewayName NAT网关名称
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
@@ -120,6 +127,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param integer $StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
      * @param integer $PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
      * @param boolean $PublicIpFromSameZone 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+     * @param integer $NatProductVersion NAT网关大版本号，1是传统型，2是标准型，默认是1
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class CreateNatGatewayRequest extends AbstractModel
 
         if (array_key_exists("PublicIpFromSameZone",$param) and $param["PublicIpFromSameZone"] !== null) {
             $this->PublicIpFromSameZone = $param["PublicIpFromSameZone"];
+        }
+
+        if (array_key_exists("NatProductVersion",$param) and $param["NatProductVersion"] !== null) {
+            $this->NatProductVersion = $param["NatProductVersion"];
         }
     }
 }

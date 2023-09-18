@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescribe(string $Describe) 设置录像计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
  * @method LifeCycleData getLifeCycle() 获取生命周期（录像文件生命周期设置，管理文件冷、热存储的时间，不修改生命周期时，不需要该字段）
  * @method void setLifeCycle(LifeCycleData $LifeCycle) 设置生命周期（录像文件生命周期设置，管理文件冷、热存储的时间，不修改生命周期时，不需要该字段）
- * @method string getAdd() 获取要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
- * @method void setAdd(string $Add) 设置要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
- * @method string getDel() 获取要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
- * @method void setDel(string $Del) 设置要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
- * @method string getOrganizationId() 获取添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
- * @method void setOrganizationId(string $OrganizationId) 设置添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
+ * @method array getAdd() 获取要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
+ * @method void setAdd(array $Add) 设置要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
+ * @method array getDel() 获取要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
+ * @method void setDel(array $Del) 设置要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
+ * @method array getOrganizationId() 获取添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
+ * @method void setOrganizationId(array $OrganizationId) 设置添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
  */
 class UpdateRecordBackupPlanModify extends AbstractModel
 {
@@ -58,17 +58,17 @@ class UpdateRecordBackupPlanModify extends AbstractModel
     public $LifeCycle;
 
     /**
-     * @var string 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
+     * @var array 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
      */
     public $Add;
 
     /**
-     * @var string 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
+     * @var array 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
      */
     public $Del;
 
     /**
-     * @var string 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
+     * @var array 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
      */
     public $OrganizationId;
 
@@ -77,9 +77,9 @@ class UpdateRecordBackupPlanModify extends AbstractModel
      * @param string $TemplateId 录制模板ID（从查询录像上云模板列表接口ListRecordBackupTemplates中获取，不修改模板ID时，不需要该字段）
      * @param string $Describe 录像计划描述（仅支持中文、英文、数字、_、-，长度不超过128个字符， 不修改描述时，不需要该字段）
      * @param LifeCycleData $LifeCycle 生命周期（录像文件生命周期设置，管理文件冷、热存储的时间，不修改生命周期时，不需要该字段）
-     * @param string $Add 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
-     * @param string $Del 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
-     * @param string $OrganizationId 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
+     * @param array $Add 要新增的设备通道（Json数组，没有新增时，不需要该字段，一次添加通道总数不超过5000个，包括组织目录下的通道数量）
+     * @param array $Del 要删除的设备通道（Json数组，内容为要删除的设备通道id，没有删除设备通道时，不需要该字段）
+     * @param array $OrganizationId 添加组织目录下所有设备通道（Json数组，可以为空，并且通道总数量不超过5000个（包括Add字段通道数量））
      */
     function __construct()
     {
@@ -112,7 +112,12 @@ class UpdateRecordBackupPlanModify extends AbstractModel
         }
 
         if (array_key_exists("Add",$param) and $param["Add"] !== null) {
-            $this->Add = $param["Add"];
+            $this->Add = [];
+            foreach ($param["Add"] as $key => $value){
+                $obj = new ChannelInfo();
+                $obj->deserialize($value);
+                array_push($this->Add, $obj);
+            }
         }
 
         if (array_key_exists("Del",$param) and $param["Del"] !== null) {

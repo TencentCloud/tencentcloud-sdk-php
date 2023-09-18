@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindEmployeeUserIdWithClientOpenId返回参数结构体
  *
- * @method integer getStatus() 获取绑定是否成功，1表示成功，0表示失败
- * @method void setStatus(integer $Status) 设置绑定是否成功，1表示成功，0表示失败
+ * @method integer getStatus() 获取绑定是否成功。
+<ul><li>**0**：失败</li><li>**1**：成功</li></ul>
+ * @method void setStatus(integer $Status) 设置绑定是否成功。
+<ul><li>**0**：失败</li><li>**1**：成功</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class BindEmployeeUserIdWithClientOpenIdResponse extends AbstractModel
 {
     /**
-     * @var integer 绑定是否成功，1表示成功，0表示失败
+     * @var integer 绑定是否成功。
+<ul><li>**0**：失败</li><li>**1**：成功</li></ul>
      */
     public $Status;
 
@@ -38,7 +41,8 @@ class BindEmployeeUserIdWithClientOpenIdResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 绑定是否成功，1表示成功，0表示失败
+     * @param integer $Status 绑定是否成功。
+<ul><li>**0**：失败</li><li>**1**：成功</li></ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,21 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateIntegrationEmployees请求参数结构体
  *
- * @method UserInfo getOperator() 获取当前用户信息，UserId必填
- * @method void setOperator(UserInfo $Operator) 设置当前用户信息，UserId必填
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息,UserId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息,UserId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method array getEmployees() 获取员工信息，不超过100个。
 根据UserId或OpenId更新员工，必填一个，优先UserId。
 可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
  * @method void setEmployees(array $Employees) 设置员工信息，不超过100个。
 根据UserId或OpenId更新员工，必填一个，优先UserId。
 可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class UpdateIntegrationEmployeesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 当前用户信息，UserId必填
+     * @var UserInfo 执行本接口操作的员工信息,UserId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
@@ -46,16 +51,19 @@ class UpdateIntegrationEmployeesRequest extends AbstractModel
     public $Employees;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 当前用户信息，UserId必填
+     * @param UserInfo $Operator 执行本接口操作的员工信息,UserId必填。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param array $Employees 员工信息，不超过100个。
 根据UserId或OpenId更新员工，必填一个，优先UserId。
 可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {

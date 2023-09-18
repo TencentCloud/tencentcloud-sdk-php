@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getRollbackStrategy() 获取回档策略 timeRollback-按时间点回档 snapRollback-按备份文件回档
  * @method void setRollbackStrategy(string $RollbackStrategy) 设置回档策略 timeRollback-按时间点回档 snapRollback-按备份文件回档
- * @method integer getRollbackId() 获取回档ID
- * @method void setRollbackId(integer $RollbackId) 设置回档ID
- * @method string getExpectTime() 获取期望回档时间
- * @method void setExpectTime(string $ExpectTime) 设置期望回档时间
+ * @method integer getRollbackId() 获取备份文件ID。
+回档策略为按备份文件回档时必填。
+ * @method void setRollbackId(integer $RollbackId) 设置备份文件ID。
+回档策略为按备份文件回档时必填。
+ * @method string getExpectTime() 获取期望回档时间。
+回档策略为timeRollback按时间点回档时必填。
+ * @method void setExpectTime(string $ExpectTime) 设置期望回档时间。
+回档策略为timeRollback按时间点回档时必填。
  * @method integer getExpectTimeThresh() 获取期望阈值（已废弃）
  * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置期望阈值（已废弃）
  * @method array getRollbackDatabases() 获取回档数据库列表
@@ -50,12 +54,14 @@ class RollBackClusterRequest extends AbstractModel
     public $RollbackStrategy;
 
     /**
-     * @var integer 回档ID
+     * @var integer 备份文件ID。
+回档策略为按备份文件回档时必填。
      */
     public $RollbackId;
 
     /**
-     * @var string 期望回档时间
+     * @var string 期望回档时间。
+回档策略为timeRollback按时间点回档时必填。
      */
     public $ExpectTime;
 
@@ -82,8 +88,10 @@ class RollBackClusterRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群ID
      * @param string $RollbackStrategy 回档策略 timeRollback-按时间点回档 snapRollback-按备份文件回档
-     * @param integer $RollbackId 回档ID
-     * @param string $ExpectTime 期望回档时间
+     * @param integer $RollbackId 备份文件ID。
+回档策略为按备份文件回档时必填。
+     * @param string $ExpectTime 期望回档时间。
+回档策略为timeRollback按时间点回档时必填。
      * @param integer $ExpectTimeThresh 期望阈值（已废弃）
      * @param array $RollbackDatabases 回档数据库列表
      * @param array $RollbackTables 回档数据库表列表

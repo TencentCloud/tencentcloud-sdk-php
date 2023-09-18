@@ -24,16 +24,24 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
- * @method integer getQueryType() 获取查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
- * @method void setQueryType(integer $QueryType) 设置查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+ * @method integer getQueryType() 获取查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
+ * @method void setQueryType(integer $QueryType) 设置查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getDeptId() 获取部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
- * @method void setDeptId(string $DeptId) 设置部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
- * @method string getDeptOpenId() 获取客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
- * @method void setDeptOpenId(string $DeptOpenId) 设置客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
+ * @method string getDeptId() 获取查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
+ * @method void setDeptId(string $DeptId) 设置查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
+ * @method string getDeptOpenId() 获取查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
+ * @method void setDeptOpenId(string $DeptOpenId) 设置查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
  */
 class DescribeIntegrationDepartmentsRequest extends AbstractModel
 {
@@ -44,7 +52,9 @@ class DescribeIntegrationDepartmentsRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var integer 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+     * @var integer 查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
      */
     public $QueryType;
 
@@ -55,23 +65,29 @@ class DescribeIntegrationDepartmentsRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
+     * @var string 查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
      */
     public $DeptId;
 
     /**
-     * @var string 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
+     * @var string 查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
      */
     public $DeptOpenId;
 
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
-     * @param integer $QueryType 查询类型 0-查询单个部门节点 1-单个部门节点及一级子节点部门列表
+     * @param integer $QueryType 查询类型，支持以下类型：
+<ul><li>**0**：查询单个部门节点列表，不包含子节点部门信息</li>
+<li>**1**：查询单个部门节点级一级子节点部门信息列表</li></ul>
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $DeptId 部门ID,与DeptOpenId二选一,优先DeptId,都为空时获取根节点数据
-     * @param string $DeptOpenId 客户系统部门ID,与DeptId二选一,优先DeptId,都为空时获取根节点数据
+     * @param string $DeptId 查询的部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
+     * @param string $DeptOpenId 查询的客户系统部门ID。
+注：`如果同时指定了DeptId与DeptOpenId参数，系统将优先使用DeptId参数进行查询。当二者都未指定时，系统将返回根节点部门数据。`
      */
     function __construct()
     {

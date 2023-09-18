@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 部门信息
  *
- * @method string getDeptId() 获取部门ID
+ * @method string getDeptId() 获取部门ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeptId(string $DeptId) 设置部门ID
+ * @method void setDeptId(string $DeptId) 设置部门ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeptName() 获取部门名
+ * @method string getDeptName() 获取部门名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeptName(string $DeptName) 设置部门名
+ * @method void setDeptName(string $DeptName) 设置部门名。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParentDeptId() 获取父部门ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,21 +36,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeptOpenId(string $DeptOpenId) 设置客户系统部门ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOrderNo() 获取序列号
+ * @method integer getOrderNo() 获取序列号。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrderNo(integer $OrderNo) 设置序列号
+ * @method void setOrderNo(integer $OrderNo) 设置序列号。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationDepartment extends AbstractModel
 {
     /**
-     * @var string 部门ID
+     * @var string 部门ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeptId;
 
     /**
-     * @var string 部门名
+     * @var string 部门名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeptName;
@@ -68,21 +68,21 @@ class IntegrationDepartment extends AbstractModel
     public $DeptOpenId;
 
     /**
-     * @var integer 序列号
+     * @var integer 序列号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderNo;
 
     /**
-     * @param string $DeptId 部门ID
+     * @param string $DeptId 部门ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeptName 部门名
+     * @param string $DeptName 部门名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentDeptId 父部门ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeptOpenId 客户系统部门ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OrderNo 序列号
+     * @param integer $OrderNo 序列号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

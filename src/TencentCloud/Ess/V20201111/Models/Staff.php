@@ -18,187 +18,195 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 企业员工信息
+ * 企业员工信息。
  *
- * @method string getUserId() 获取用户在电子签平台的id
-注：创建和更新场景无需填写
- * @method void setUserId(string $UserId) 设置用户在电子签平台的id
-注：创建和更新场景无需填写
- * @method string getDisplayName() 获取显示的用户名/昵称
- * @method void setDisplayName(string $DisplayName) 设置显示的用户名/昵称
- * @method string getMobile() 获取用户手机号
- * @method void setMobile(string $Mobile) 设置用户手机号
- * @method string getEmail() 获取用户邮箱
+ * @method string getUserId() 获取员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+注：`创建和更新场景无需填写。`
+ * @method void setUserId(string $UserId) 设置员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+注：`创建和更新场景无需填写。`
+ * @method string getDisplayName() 获取显示的用户名/昵称。
+ * @method void setDisplayName(string $DisplayName) 设置显示的用户名/昵称。
+ * @method string getMobile() 获取用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+ * @method void setMobile(string $Mobile) 设置用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+ * @method string getEmail() 获取用户邮箱。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmail(string $Email) 设置用户邮箱
+ * @method void setEmail(string $Email) 设置用户邮箱。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOpenId() 获取用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
+ * @method string getOpenId() 获取用户在第三方平台ID。
+注：`如需在此接口提醒员工实名，该参数不传。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOpenId(string $OpenId) 设置用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
+ * @method void setOpenId(string $OpenId) 设置用户在第三方平台ID。
+注：`如需在此接口提醒员工实名，该参数不传。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRoles() 获取员工角色
-注：创建和更新场景无需填写
+ * @method array getRoles() 获取员工角色信息。
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoles(array $Roles) 设置员工角色
-注：创建和更新场景无需填写
+ * @method void setRoles(array $Roles) 设置员工角色信息。
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Department getDepartment() 获取员工部门
+ * @method Department getDepartment() 获取员工部门信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDepartment(Department $Department) 设置员工部门
+ * @method void setDepartment(Department $Department) 设置员工部门信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getVerified() 获取员工是否实名
-注：创建和更新场景无需填写
- * @method void setVerified(boolean $Verified) 设置员工是否实名
-注：创建和更新场景无需填写
- * @method integer getCreatedOn() 获取员工创建时间戳，单位秒
-注：创建和更新场景无需填写
- * @method void setCreatedOn(integer $CreatedOn) 设置员工创建时间戳，单位秒
-注：创建和更新场景无需填写
- * @method integer getVerifiedOn() 获取员工实名时间戳，单位秒
-注：创建和更新场景无需填写
+ * @method boolean getVerified() 获取员工是否实名。
+注：`创建和更新场景无需填写。`
+ * @method void setVerified(boolean $Verified) 设置员工是否实名。
+注：`创建和更新场景无需填写。`
+ * @method integer getCreatedOn() 获取员工创建时间戳，单位秒。
+注：`创建和更新场景无需填写。`
+ * @method void setCreatedOn(integer $CreatedOn) 设置员工创建时间戳，单位秒。
+注：`创建和更新场景无需填写。`
+ * @method integer getVerifiedOn() 获取员工实名时间戳，单位秒。
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVerifiedOn(integer $VerifiedOn) 设置员工实名时间戳，单位秒
-注：创建和更新场景无需填写
+ * @method void setVerifiedOn(integer $VerifiedOn) 设置员工实名时间戳，单位秒。
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQuiteJob() 获取员工是否离职：0-未离职，1-离职
-注：创建和更新场景无需填写
+ * @method integer getQuiteJob() 获取员工是否离职：
+<ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuiteJob(integer $QuiteJob) 设置员工是否离职：0-未离职，1-离职
-注：创建和更新场景无需填写
+ * @method void setQuiteJob(integer $QuiteJob) 设置员工是否离职：
+<ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReceiveUserId() 获取员工离职交接人用户id
-注：创建和更新场景无需填写
- * @method void setReceiveUserId(string $ReceiveUserId) 设置员工离职交接人用户id
-注：创建和更新场景无需填写
- * @method string getReceiveOpenId() 获取员工离职交接人用户OpenId
-注：创建和更新场景无需填写
- * @method void setReceiveOpenId(string $ReceiveOpenId) 设置员工离职交接人用户OpenId
-注：创建和更新场景无需填写
- * @method string getWeworkOpenId() 获取企业微信用户账号ID
-注：仅企微类型的企业创建员工接口支持该字段
+ * @method string getReceiveUserId() 获取员工离职交接人用户ID。
+注：`创建和更新场景无需填写。`
+ * @method void setReceiveUserId(string $ReceiveUserId) 设置员工离职交接人用户ID。
+注：`创建和更新场景无需填写。`
+ * @method string getReceiveOpenId() 获取员工离职交接人用户OpenId。
+注：`创建和更新场景无需填写。`
+ * @method void setReceiveOpenId(string $ReceiveOpenId) 设置员工离职交接人用户OpenId。
+注：`创建和更新场景无需填写。`
+ * @method string getWeworkOpenId() 获取企业微信用户账号ID。
+注：`仅企微类型的企业创建员工接口支持该字段。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeworkOpenId(string $WeworkOpenId) 设置企业微信用户账号ID
-注：仅企微类型的企业创建员工接口支持该字段
+ * @method void setWeworkOpenId(string $WeworkOpenId) 设置企业微信用户账号ID。
+注：`仅企微类型的企业创建员工接口支持该字段。`
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Staff extends AbstractModel
 {
     /**
-     * @var string 用户在电子签平台的id
-注：创建和更新场景无需填写
+     * @var string 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+注：`创建和更新场景无需填写。`
      */
     public $UserId;
 
     /**
-     * @var string 显示的用户名/昵称
+     * @var string 显示的用户名/昵称。
      */
     public $DisplayName;
 
     /**
-     * @var string 用户手机号
+     * @var string 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
      */
     public $Mobile;
 
     /**
-     * @var string 用户邮箱
+     * @var string 用户邮箱。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
-     * @var string 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
+     * @var string 用户在第三方平台ID。
+注：`如需在此接口提醒员工实名，该参数不传。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
 
     /**
-     * @var array 员工角色
-注：创建和更新场景无需填写
+     * @var array 员工角色信息。
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Roles;
 
     /**
-     * @var Department 员工部门
+     * @var Department 员工部门信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Department;
 
     /**
-     * @var boolean 员工是否实名
-注：创建和更新场景无需填写
+     * @var boolean 员工是否实名。
+注：`创建和更新场景无需填写。`
      */
     public $Verified;
 
     /**
-     * @var integer 员工创建时间戳，单位秒
-注：创建和更新场景无需填写
+     * @var integer 员工创建时间戳，单位秒。
+注：`创建和更新场景无需填写。`
      */
     public $CreatedOn;
 
     /**
-     * @var integer 员工实名时间戳，单位秒
-注：创建和更新场景无需填写
+     * @var integer 员工实名时间戳，单位秒。
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifiedOn;
 
     /**
-     * @var integer 员工是否离职：0-未离职，1-离职
-注：创建和更新场景无需填写
+     * @var integer 员工是否离职：
+<ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuiteJob;
 
     /**
-     * @var string 员工离职交接人用户id
-注：创建和更新场景无需填写
+     * @var string 员工离职交接人用户ID。
+注：`创建和更新场景无需填写。`
      */
     public $ReceiveUserId;
 
     /**
-     * @var string 员工离职交接人用户OpenId
-注：创建和更新场景无需填写
+     * @var string 员工离职交接人用户OpenId。
+注：`创建和更新场景无需填写。`
      */
     public $ReceiveOpenId;
 
     /**
-     * @var string 企业微信用户账号ID
-注：仅企微类型的企业创建员工接口支持该字段
+     * @var string 企业微信用户账号ID。
+注：`仅企微类型的企业创建员工接口支持该字段。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WeworkOpenId;
 
     /**
-     * @param string $UserId 用户在电子签平台的id
-注：创建和更新场景无需填写
-     * @param string $DisplayName 显示的用户名/昵称
-     * @param string $Mobile 用户手机号
-     * @param string $Email 用户邮箱
+     * @param string $UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+注：`创建和更新场景无需填写。`
+     * @param string $DisplayName 显示的用户名/昵称。
+     * @param string $Mobile 用户手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
+     * @param string $Email 用户邮箱。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OpenId 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
+     * @param string $OpenId 用户在第三方平台ID。
+注：`如需在此接口提醒员工实名，该参数不传。`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Roles 员工角色
-注：创建和更新场景无需填写
+     * @param array $Roles 员工角色信息。
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Department $Department 员工部门
+     * @param Department $Department 员工部门信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Verified 员工是否实名
-注：创建和更新场景无需填写
-     * @param integer $CreatedOn 员工创建时间戳，单位秒
-注：创建和更新场景无需填写
-     * @param integer $VerifiedOn 员工实名时间戳，单位秒
-注：创建和更新场景无需填写
+     * @param boolean $Verified 员工是否实名。
+注：`创建和更新场景无需填写。`
+     * @param integer $CreatedOn 员工创建时间戳，单位秒。
+注：`创建和更新场景无需填写。`
+     * @param integer $VerifiedOn 员工实名时间戳，单位秒。
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QuiteJob 员工是否离职：0-未离职，1-离职
-注：创建和更新场景无需填写
+     * @param integer $QuiteJob 员工是否离职：
+<ul><li>**0**：未离职</li><li>**1**：离职</li></ul>
+注：`创建和更新场景无需填写。`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReceiveUserId 员工离职交接人用户id
-注：创建和更新场景无需填写
-     * @param string $ReceiveOpenId 员工离职交接人用户OpenId
-注：创建和更新场景无需填写
-     * @param string $WeworkOpenId 企业微信用户账号ID
-注：仅企微类型的企业创建员工接口支持该字段
+     * @param string $ReceiveUserId 员工离职交接人用户ID。
+注：`创建和更新场景无需填写。`
+     * @param string $ReceiveOpenId 员工离职交接人用户OpenId。
+注：`创建和更新场景无需填写。`
+     * @param string $WeworkOpenId 企业微信用户账号ID。
+注：`仅企微类型的企业创建员工接口支持该字段。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

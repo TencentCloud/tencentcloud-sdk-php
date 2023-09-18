@@ -24,9 +24,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置超管名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMobile() 获取超管手机号
+ * @method string getMobile() 获取超管手机号，打码显示
+示例值：138****1569
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMobile(string $Mobile) 设置超管手机号
+ * @method void setMobile(string $Mobile) 设置超管手机号，打码显示
+示例值：138****1569
+
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Admin extends AbstractModel
@@ -38,7 +42,9 @@ class Admin extends AbstractModel
     public $Name;
 
     /**
-     * @var string 超管手机号
+     * @var string 超管手机号，打码显示
+示例值：138****1569
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mobile;
@@ -46,7 +52,9 @@ class Admin extends AbstractModel
     /**
      * @param string $Name 超管名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Mobile 超管手机号
+     * @param string $Mobile 超管手机号，打码显示
+示例值：138****1569
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

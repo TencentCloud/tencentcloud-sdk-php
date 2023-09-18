@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDisplayName() 获取用户传入的名称
  * @method void setDisplayName(string $DisplayName) 设置用户传入的名称
- * @method string getMobile() 获取用户传入的手机号
- * @method void setMobile(string $Mobile) 设置用户传入的手机号
+ * @method string getMobile() 获取用户传入的手机号，明文展示
+ * @method void setMobile(string $Mobile) 设置用户传入的手机号，明文展示
  * @method string getReason() 获取失败原因
  * @method void setReason(string $Reason) 设置失败原因
- * @method string getUserId() 获取用户Id
- * @method void setUserId(string $UserId) 设置用户Id
+ * @method string getUserId() 获取员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+ * @method void setUserId(string $UserId) 设置员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
  * @method string getOpenId() 获取员工在第三方平台的openId
  * @method void setOpenId(string $OpenId) 设置员工在第三方平台的openId
  */
@@ -39,7 +41,7 @@ class FailedUpdateStaffData extends AbstractModel
     public $DisplayName;
 
     /**
-     * @var string 用户传入的手机号
+     * @var string 用户传入的手机号，明文展示
      */
     public $Mobile;
 
@@ -49,7 +51,8 @@ class FailedUpdateStaffData extends AbstractModel
     public $Reason;
 
     /**
-     * @var string 用户Id
+     * @var string 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      */
     public $UserId;
 
@@ -60,9 +63,10 @@ class FailedUpdateStaffData extends AbstractModel
 
     /**
      * @param string $DisplayName 用户传入的名称
-     * @param string $Mobile 用户传入的手机号
+     * @param string $Mobile 用户传入的手机号，明文展示
      * @param string $Reason 失败原因
-     * @param string $UserId 用户Id
+     * @param string $UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      * @param string $OpenId 员工在第三方平台的openId
      */
     function __construct()

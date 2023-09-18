@@ -204,6 +204,10 @@ PullVodPushLive -点播。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordTemplateId(string $RecordTemplateId) 设置录制模板 ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBackupToUrl() 获取新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupToUrl(string $BackupToUrl) 设置新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -412,6 +416,12 @@ PullVodPushLive -点播。
     public $RecordTemplateId;
 
     /**
+     * @var string 新增的推流地址。用于单任务推两路场景。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupToUrl;
+
+    /**
      * @param string $TaskId 拉流任务Id。
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
@@ -503,6 +513,8 @@ PullVodPushLive -点播。
 1 - 启用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordTemplateId 录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BackupToUrl 新增的推流地址。用于单任务推两路场景。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -634,6 +646,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("RecordTemplateId",$param) and $param["RecordTemplateId"] !== null) {
             $this->RecordTemplateId = $param["RecordTemplateId"];
+        }
+
+        if (array_key_exists("BackupToUrl",$param) and $param["BackupToUrl"] !== null) {
+            $this->BackupToUrl = $param["BackupToUrl"];
         }
     }
 }

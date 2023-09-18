@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIntegrationDepartment返回参数结构体
  *
- * @method string getDeptId() 获取电子签部门ID
- * @method void setDeptId(string $DeptId) 设置电子签部门ID
+ * @method string getDeptId() 获取电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
+ * @method void setDeptId(string $DeptId) 设置电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateIntegrationDepartmentResponse extends AbstractModel
 {
     /**
-     * @var string 电子签部门ID
+     * @var string 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
      */
     public $DeptId;
 
@@ -38,7 +38,7 @@ class CreateIntegrationDepartmentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DeptId 电子签部门ID
+     * @param string $DeptId 电子签部门ID。建议开发者保存此部门ID，方便后续查询或修改部门信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

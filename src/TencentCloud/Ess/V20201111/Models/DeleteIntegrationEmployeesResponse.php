@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteIntegrationEmployees返回参数结构体
  *
- * @method DeleteStaffsResult getDeleteEmployeeResult() 获取员工删除数据
- * @method void setDeleteEmployeeResult(DeleteStaffsResult $DeleteEmployeeResult) 设置员工删除数据
+ * @method DeleteStaffsResult getDeleteEmployeeResult() 获取员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
+ * @method void setDeleteEmployeeResult(DeleteStaffsResult $DeleteEmployeeResult) 设置员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteIntegrationEmployeesResponse extends AbstractModel
 {
     /**
-     * @var DeleteStaffsResult 员工删除数据
+     * @var DeleteStaffsResult 员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
      */
     public $DeleteEmployeeResult;
 
@@ -38,7 +44,9 @@ class DeleteIntegrationEmployeesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DeleteStaffsResult $DeleteEmployeeResult 员工删除数据
+     * @param DeleteStaffsResult $DeleteEmployeeResult 员工删除结果。包含成功数据与失败数据。
+<ul><li>**成功数据**：展示员工姓名、手机号与电子签平台UserId</li>
+<li>**失败数据**：展示员工电子签平台UserId、第三方平台OpenId和失败原因</li></ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

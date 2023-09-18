@@ -20,34 +20,76 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 其它账号信息。
  *
- * @method string getAccountId() 获取id
- * @method void setAccountId(string $AccountId) 设置id
- * @method string getMobilePhone() 获取手机号
- * @method void setMobilePhone(string $MobilePhone) 设置手机号
- * @method string getDeviceId() 获取id
- * @method void setDeviceId(string $DeviceId) 设置id
+ * @method string getAccountId() 获取其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+
+ * @method void setAccountId(string $AccountId) 设置其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+
+ * @method string getMobilePhone() 获取手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。
+ * @method void setMobilePhone(string $MobilePhone) 设置手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。
+ * @method string getDeviceId() 获取用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
+
+ * @method void setDeviceId(string $DeviceId) 设置用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
  */
 class OtherAccountInfo extends AbstractModel
 {
     /**
-     * @var string id
+     * @var string 其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+
      */
     public $AccountId;
 
     /**
-     * @var string 手机号
+     * @var string 手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。
      */
     public $MobilePhone;
 
     /**
-     * @var string id
+     * @var string 用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
+
      */
     public $DeviceId;
 
     /**
-     * @param string $AccountId id
-     * @param string $MobilePhone 手机号
-     * @param string $DeviceId id
+     * @param string $AccountId 其它账号信息：  
+AccountType 是 4 时，填入真实的手机号（如 13123456789）。 
+AccountType 是 8 时，支持 imei、idfa、imeiMD5、idfaMD5入参。  
+AccountType 是 0 时，填入账号信息。  
+AccountType 是 10004 时，填入手机号的 MD5 值。 
+注：imeiMd5 加密方式为：  
+imei 明文小写后，进行 MD5 加密，加密后取小写值。  
+IdfaMd5 加密方式为：idfa 明文大写后，进行 MD5 加密，加密后取小写值。
+
+     * @param string $MobilePhone 手机号，若 AccountType 是 4（手机号）、或 10004（手机号 MD5），则无需重复填写 
+否则填入对应的手机号（如 13123456789）。
+     * @param string $DeviceId 用户设备号。若 AccountType 是 8（设备号），则无需重复填写，否则填入对应的设备 
+号。 
      */
     function __construct()
     {

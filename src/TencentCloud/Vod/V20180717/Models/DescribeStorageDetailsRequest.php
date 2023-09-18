@@ -50,6 +50,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
 <li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
 <li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
+<li>InfrequentRetrieval：低频存储取回量。</li>
 默认值为 TotalStorage。
  * @method void setStorageType(string $StorageType) 设置查询的存储类型，有效值：
 <li>TotalStorage：存储总量，标准、低频、归档和深度归档存储量之和，不含提前删除量。</li>
@@ -65,6 +66,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
 <li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
 <li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
+<li>InfrequentRetrieval：低频存储取回量。</li>
 默认值为 TotalStorage。
  * @method string getArea() 获取查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
@@ -116,6 +118,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
 <li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
 <li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
+<li>InfrequentRetrieval：低频存储取回量。</li>
 默认值为 TotalStorage。
      */
     public $StorageType;
@@ -151,6 +154,7 @@ class DescribeStorageDetailsRequest extends AbstractModel
 <li>ArchiveBulkRetrieval：归档批量取回量。</li>
 <li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
 <li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
+<li>InfrequentRetrieval：低频存储取回量。</li>
 默认值为 TotalStorage。
      * @param string $Area 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>

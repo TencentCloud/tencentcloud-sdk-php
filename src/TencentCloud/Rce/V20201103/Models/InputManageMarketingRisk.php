@@ -20,8 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全栈式风控引擎入参
  *
- * @method AccountInfo getAccount() 获取账号信息。
- * @method void setAccount(AccountInfo $Account) 设置账号信息。
+ * @method AccountInfo getAccount() 获取用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+
+ * @method void setAccount(AccountInfo $Account) 设置用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+
  * @method string getSceneCode() 获取场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
 例如：e_register_protection_1521184361
 控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
@@ -62,25 +80,47 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMacAddress(string $MacAddress) 设置MAC地址或设备唯一标识。
  * @method string getVendorId() 获取手机制造商ID，如果手机注册，请带上此信息。
  * @method void setVendorId(string $VendorId) 设置手机制造商ID，如果手机注册，请带上此信息。
- * @method integer getDeviceType() 获取设备类型：
-1：Android
-2：IOS
- * @method void setDeviceType(integer $DeviceType) 设置设备类型：
-1：Android
-2：IOS
+ * @method integer getDeviceType() 获取设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5;
+ * @method void setDeviceType(integer $DeviceType) 设置设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5;
  * @method array getDetails() 获取详细信息
  * @method void setDetails(array $Details) 设置详细信息
  * @method SponsorInfo getSponsor() 获取可选填写。详情请跳转至SponsorInfo查看。
  * @method void setSponsor(SponsorInfo $Sponsor) 设置可选填写。详情请跳转至SponsorInfo查看。
  * @method OnlineScamInfo getOnlineScam() 获取可选填写。详情请跳转至OnlineScamInfo查看。
  * @method void setOnlineScam(OnlineScamInfo $OnlineScam) 设置可选填写。详情请跳转至OnlineScamInfo查看。
- * @method string getPlatform() 获取平台: 1android
- * @method void setPlatform(string $Platform) 设置平台: 1android
+ * @method string getPlatform() 获取1：安卓
+2：iOS 
+3：H5 
+4：小程序 
+
+ * @method void setPlatform(string $Platform) 设置1：安卓
+2：iOS 
+3：H5 
+4：小程序 
  */
 class InputManageMarketingRisk extends AbstractModel
 {
     /**
-     * @var AccountInfo 账号信息。
+     * @var AccountInfo 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+
      */
     public $Account;
 
@@ -169,9 +209,12 @@ class InputManageMarketingRisk extends AbstractModel
     public $VendorId;
 
     /**
-     * @var integer 设备类型：
-1：Android
-2：IOS
+     * @var integer 设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5;
      */
     public $DeviceType;
 
@@ -191,12 +234,25 @@ class InputManageMarketingRisk extends AbstractModel
     public $OnlineScam;
 
     /**
-     * @var string 平台: 1android
+     * @var string 1：安卓
+2：iOS 
+3：H5 
+4：小程序 
+
      */
     public $Platform;
 
     /**
-     * @param AccountInfo $Account 账号信息。
+     * @param AccountInfo $Account 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
+信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
+开放账号）： 
+1：QQ 开放账号。 
+2：微信开放账号。 
+4：手机号（暂仅支持国内手机号）。 
+8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
+0： 其他。 
+10004：手机号 MD5。
+
      * @param string $SceneCode 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
 例如：e_register_protection_1521184361
 控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
@@ -217,13 +273,19 @@ class InputManageMarketingRisk extends AbstractModel
      * @param string $XForwardedFor 用户HTTP请求的X-Forwarded-For值。
      * @param string $MacAddress MAC地址或设备唯一标识。
      * @param string $VendorId 手机制造商ID，如果手机注册，请带上此信息。
-     * @param integer $DeviceType 设备类型：
-1：Android
-2：IOS
+     * @param integer $DeviceType 设备类型，账号类型为8时必填： 
+0:未知 
+1:Imei;国际移动设备识别号（15-17位数字） 
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
+3:Idfa; 
+4:IdfaMD5;
      * @param array $Details 详细信息
      * @param SponsorInfo $Sponsor 可选填写。详情请跳转至SponsorInfo查看。
      * @param OnlineScamInfo $OnlineScam 可选填写。详情请跳转至OnlineScamInfo查看。
-     * @param string $Platform 平台: 1android
+     * @param string $Platform 1：安卓
+2：iOS 
+3：H5 
+4：小程序 
      */
     function __construct()
     {

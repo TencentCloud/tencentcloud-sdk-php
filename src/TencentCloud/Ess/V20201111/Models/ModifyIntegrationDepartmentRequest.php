@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
- * @method string getDeptId() 获取电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
- * @method void setDeptId(string $DeptId) 设置电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+ * @method string getDeptId() 获取电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
+ * @method void setDeptId(string $DeptId) 设置电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getParentDeptId() 获取电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
- * @method void setParentDeptId(string $ParentDeptId) 设置电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
- * @method string getDeptName() 获取部门名称，不超过50个字符
- * @method void setDeptName(string $DeptName) 设置部门名称，不超过50个字符
- * @method string getDeptOpenId() 获取客户系统部门ID，不超过64个字符
- * @method void setDeptOpenId(string $DeptOpenId) 设置客户系统部门ID，不超过64个字符
- * @method integer getOrderNo() 获取排序号,1~30000范围内
- * @method void setOrderNo(integer $OrderNo) 设置排序号,1~30000范围内
+ * @method string getParentDeptId() 获取电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
+ * @method void setParentDeptId(string $ParentDeptId) 设置电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
+ * @method string getDeptName() 获取部门名称，最大长度为50个字符。
+ * @method void setDeptName(string $DeptName) 设置部门名称，最大长度为50个字符。
+ * @method string getDeptOpenId() 获取客户系统部门ID，最大长度为64个字符。
+ * @method void setDeptOpenId(string $DeptOpenId) 设置客户系统部门ID，最大长度为64个字符。
+ * @method integer getOrderNo() 获取排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
+ * @method void setOrderNo(integer $OrderNo) 设置排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
  */
 class ModifyIntegrationDepartmentRequest extends AbstractModel
 {
@@ -48,7 +48,7 @@ class ModifyIntegrationDepartmentRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+     * @var string 电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
      */
     public $DeptId;
 
@@ -59,35 +59,35 @@ class ModifyIntegrationDepartmentRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
+     * @var string 电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
      */
     public $ParentDeptId;
 
     /**
-     * @var string 部门名称，不超过50个字符
+     * @var string 部门名称，最大长度为50个字符。
      */
     public $DeptName;
 
     /**
-     * @var string 客户系统部门ID，不超过64个字符
+     * @var string 客户系统部门ID，最大长度为64个字符。
      */
     public $DeptOpenId;
 
     /**
-     * @var integer 排序号,1~30000范围内
+     * @var integer 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
      */
     public $OrderNo;
 
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $DeptId 电子签部门ID,通过DescribeIntegrationDepartments接口可以获取
+     * @param string $DeptId 电子签部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $ParentDeptId 电子签父部门ID，通过DescribeIntegrationDepartments接口可以获取
-     * @param string $DeptName 部门名称，不超过50个字符
-     * @param string $DeptOpenId 客户系统部门ID，不超过64个字符
-     * @param integer $OrderNo 排序号,1~30000范围内
+     * @param string $ParentDeptId 电子签父部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口获得。
+     * @param string $DeptName 部门名称，最大长度为50个字符。
+     * @param string $DeptOpenId 客户系统部门ID，最大长度为64个字符。
+     * @param integer $OrderNo 排序号，支持设置的数值范围为1~30000。同一父部门下，排序号越大，部门顺序越靠前。
      */
     function __construct()
     {

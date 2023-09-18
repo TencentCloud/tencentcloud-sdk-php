@@ -18,28 +18,28 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 集成版员工部门信息
+ * 集成版员工部门信息。
  *
- * @method string getDepartmentId() 获取部门id
- * @method void setDepartmentId(string $DepartmentId) 设置部门id
- * @method string getDepartmentName() 获取部门名称
- * @method void setDepartmentName(string $DepartmentName) 设置部门名称
+ * @method string getDepartmentId() 获取部门ID。
+ * @method void setDepartmentId(string $DepartmentId) 设置部门ID。
+ * @method string getDepartmentName() 获取部门名称。
+ * @method void setDepartmentName(string $DepartmentName) 设置部门名称。
  */
 class Department extends AbstractModel
 {
     /**
-     * @var string 部门id
+     * @var string 部门ID。
      */
     public $DepartmentId;
 
     /**
-     * @var string 部门名称
+     * @var string 部门名称。
      */
     public $DepartmentName;
 
     /**
-     * @param string $DepartmentId 部门id
-     * @param string $DepartmentName 部门名称
+     * @param string $DepartmentId 部门ID。
+     * @param string $DepartmentName 部门名称。
      */
     function __construct()
     {

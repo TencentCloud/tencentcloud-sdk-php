@@ -46,6 +46,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+ * @method array getDefaultParameterConfs() 获取自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+ * @method void setDefaultParameterConfs(array $DefaultParameterConfs) 设置自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
  * @method string getUsername() 获取在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
  * @method void setUsername(string $Username) 设置在 CVM 或 Lighthouse 实例中执行命令的用户名称。
@@ -109,6 +115,13 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     public $DefaultParameters;
 
     /**
+     * @var array 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
+     */
+    public $DefaultParameterConfs;
+
+    /**
      * @var string 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
      */
@@ -141,6 +154,9 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * @param array $DefaultParameterConfs 自定义参数数组。
+如果InvokeCommand时未提供参数取值，将使用这里的默认值进行替换。
+自定义参数最多20个。
      * @param string $Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
      * @param string $OutputCOSBucketUrl 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
@@ -192,6 +208,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
         if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
             $this->DefaultParameters = $param["DefaultParameters"];
+        }
+
+        if (array_key_exists("DefaultParameterConfs",$param) and $param["DefaultParameterConfs"] !== null) {
+            $this->DefaultParameterConfs = [];
+            foreach ($param["DefaultParameterConfs"] as $key => $value){
+                $obj = new DefaultParameterConf();
+                $obj->deserialize($value);
+                array_push($this->DefaultParameterConfs, $obj);
+            }
         }
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {

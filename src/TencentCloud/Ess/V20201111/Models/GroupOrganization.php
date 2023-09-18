@@ -28,17 +28,31 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置成员企业别名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrganizationId() 获取成员企业id
+ * @method string getOrganizationId() 获取成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationId(string $OrganizationId) 设置成员企业id
+ * @method void setOrganizationId(string $OrganizationId) 设置成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateTime() 获取更新时间，时间戳，单位秒
+ * @method integer getUpdateTime() 获取记录更新时间， unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间，时间戳，单位秒
+ * @method void setUpdateTime(integer $UpdateTime) 设置记录更新时间， unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+ * @method integer getStatus() 获取成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul>
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+ * @method void setStatus(integer $Status) 设置成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul>
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsMainOrganization() 获取是否为集团主企业
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,21 +66,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdminInfo(Admin $AdminInfo) 设置企业超管信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLicense() 获取企业许可证
+ * @method string getLicense() 获取企业许可证Id，此字段暂时不需要关注
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLicense(string $License) 设置企业许可证
+ * @method void setLicense(string $License) 设置企业许可证Id，此字段暂时不需要关注
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLicenseExpireTime() 获取企业许可证过期时间，时间戳，单位秒
+ * @method integer getLicenseExpireTime() 获取企业许可证过期时间，unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLicenseExpireTime(integer $LicenseExpireTime) 设置企业许可证过期时间，时间戳，单位秒
+ * @method void setLicenseExpireTime(integer $LicenseExpireTime) 设置企业许可证过期时间，unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getJoinTime() 获取成员企业加入集团时间，时间戳，单位秒
+ * @method integer getJoinTime() 获取成员企业加入集团时间，unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJoinTime(integer $JoinTime) 设置成员企业加入集团时间，时间戳，单位秒
+ * @method void setJoinTime(integer $JoinTime) 设置成员企业加入集团时间，unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getFlowEngineEnable() 获取是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
+ * @method boolean getFlowEngineEnable() 获取是否使用自建审批流引擎（即不是企微审批流引擎）
+<ul><li> **true**：是</li>
+<li> **false**：否</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowEngineEnable(boolean $FlowEngineEnable) 设置是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
+ * @method void setFlowEngineEnable(boolean $FlowEngineEnable) 设置是否使用自建审批流引擎（即不是企微审批流引擎）
+<ul><li> **true**：是</li>
+<li> **false**：否</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupOrganization extends AbstractModel
@@ -84,19 +102,26 @@ class GroupOrganization extends AbstractModel
     public $Alias;
 
     /**
-     * @var string 成员企业id
+     * @var string 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationId;
 
     /**
-     * @var integer 更新时间，时间戳，单位秒
+     * @var integer 记录更新时间， unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var integer 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+     * @var integer 成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul>
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -120,25 +145,27 @@ class GroupOrganization extends AbstractModel
     public $AdminInfo;
 
     /**
-     * @var string 企业许可证
+     * @var string 企业许可证Id，此字段暂时不需要关注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $License;
 
     /**
-     * @var integer 企业许可证过期时间，时间戳，单位秒
+     * @var integer 企业许可证过期时间，unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseExpireTime;
 
     /**
-     * @var integer 成员企业加入集团时间，时间戳，单位秒
+     * @var integer 成员企业加入集团时间，unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JoinTime;
 
     /**
-     * @var boolean 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
+     * @var boolean 是否使用自建审批流引擎（即不是企微审批流引擎）
+<ul><li> **true**：是</li>
+<li> **false**：否</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowEngineEnable;
@@ -148,11 +175,18 @@ class GroupOrganization extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 成员企业别名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrganizationId 成员企业id
+     * @param string $OrganizationId 成员企业id，为 32 位字符串，可在电子签PC 控制台，企业设置->企业电子签账号 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateTime 更新时间，时间戳，单位秒
+     * @param integer $UpdateTime 记录更新时间， unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
+     * @param integer $Status 成员企业加入集团的当前状态
+<ul><li> **1**：待授权</li>
+<li> **2**：已授权待激活</li>
+<li> **3**：拒绝授权</li>
+<li> **4**：已解除</li>
+<li> **5**：已加入</li>
+</ul>
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsMainOrganization 是否为集团主企业
 注意：此字段可能返回 null，表示取不到有效值。
@@ -160,13 +194,15 @@ class GroupOrganization extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Admin $AdminInfo 企业超管信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $License 企业许可证
+     * @param string $License 企业许可证Id，此字段暂时不需要关注
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LicenseExpireTime 企业许可证过期时间，时间戳，单位秒
+     * @param integer $LicenseExpireTime 企业许可证过期时间，unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $JoinTime 成员企业加入集团时间，时间戳，单位秒
+     * @param integer $JoinTime 成员企业加入集团时间，unix时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $FlowEngineEnable 是否使用自建审批流引擎（即不是企微审批流引擎），true-是，false-否
+     * @param boolean $FlowEngineEnable 是否使用自建审批流引擎（即不是企微审批流引擎）
+<ul><li> **true**：是</li>
+<li> **false**：否</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

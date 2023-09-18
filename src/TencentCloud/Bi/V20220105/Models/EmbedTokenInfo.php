@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间，分钟为单位，最大240
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserCorpId() 获取使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserCorpId(string $UserCorpId) 设置使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserId() 获取使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserId(string $UserId) 设置使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmbedTokenInfo extends AbstractModel
 {
@@ -134,6 +142,18 @@ class EmbedTokenInfo extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string 使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserCorpId;
+
+    /**
+     * @var string 使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserId;
+
+    /**
      * @param integer $Id 信息标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BIToken 令牌
@@ -155,6 +175,10 @@ class EmbedTokenInfo extends AbstractModel
      * @param string $Scope 嵌出类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 过期时间，分钟为单位，最大240
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserCorpId 使用者企业Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserId 使用者Id(仅用于多用户)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +236,14 @@ class EmbedTokenInfo extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("UserCorpId",$param) and $param["UserCorpId"] !== null) {
+            $this->UserCorpId = $param["UserCorpId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

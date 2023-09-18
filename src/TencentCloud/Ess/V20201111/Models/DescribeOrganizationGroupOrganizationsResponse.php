@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationGroupOrganizations返回参数结构体
  *
- * @method integer getTotal() 获取查询到的符合条件的成员企业总数量
+ * @method integer getTotal() 获取符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置查询到的符合条件的成员企业总数量
+ * @method void setTotal(integer $Total) 设置符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getJoinedTotal() 获取已授权待激活的企业数量
+ * @method integer getJoinedTotal() 获取已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJoinedTotal(integer $JoinedTotal) 设置已授权待激活的企业数量
+ * @method void setJoinedTotal(integer $JoinedTotal) 设置已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActivedTotal() 获取已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置成员企业信息列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getActivatedTotal() 获取已加入的企业数量
+ * @method integer getActivatedTotal() 获取已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setActivatedTotal(integer $ActivatedTotal) 设置已加入的企业数量
+ * @method void setActivatedTotal(integer $ActivatedTotal) 设置已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的符合条件的成员企业总数量
+     * @var integer 符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var integer 已授权待激活的企业数量
+     * @var integer 已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JoinedTotal;
@@ -81,7 +81,7 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
     public $List;
 
     /**
-     * @var integer 已加入的企业数量
+     * @var integer 已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivatedTotal;
@@ -92,9 +92,9 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 查询到的符合条件的成员企业总数量
+     * @param integer $Total 符合查询条件的资源实例总数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $JoinedTotal 已授权待激活的企业数量
+     * @param integer $JoinedTotal 已授权待激活的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivedTotal 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,7 +102,7 @@ class DescribeOrganizationGroupOrganizationsResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $List 成员企业信息列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ActivatedTotal 已加入的企业数量
+     * @param integer $ActivatedTotal 已加入的子企业总数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

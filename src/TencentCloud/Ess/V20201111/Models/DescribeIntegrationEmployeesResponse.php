@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrationEmployees返回参数结构体
  *
- * @method array getEmployees() 获取员工数据列表
+ * @method array getEmployees() 获取员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmployees(array $Employees) 设置员工数据列表
+ * @method void setEmployees(array $Employees) 设置员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+ * @method integer getOffset() 获取指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+ * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLimit() 获取指定每页多少条数据，单页最大20
- * @method void setLimit(integer $Limit) 设置指定每页多少条数据，单页最大20
- * @method integer getTotalCount() 获取符合条件的员工数量
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的员工数量
+ * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 20。
+ * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 20。
+ * @method integer getTotalCount() 获取符合条件的员工数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的员工数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeIntegrationEmployeesResponse extends AbstractModel
 {
     /**
-     * @var array 员工数据列表
+     * @var array 员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Employees;
 
     /**
-     * @var integer 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+     * @var integer 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
-     * @var integer 指定每页多少条数据，单页最大20
+     * @var integer 指定分页每页返回的数据条数，单页最大支持 20。
      */
     public $Limit;
 
     /**
-     * @var integer 符合条件的员工数量
+     * @var integer 符合条件的员工数量。
      */
     public $TotalCount;
 
@@ -65,12 +65,12 @@ class DescribeIntegrationEmployeesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Employees 员工数据列表
+     * @param array $Employees 员工信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大20000
+     * @param integer $Offset 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Limit 指定每页多少条数据，单页最大20
-     * @param integer $TotalCount 符合条件的员工数量
+     * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 20。
+     * @param integer $TotalCount 符合条件的员工数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

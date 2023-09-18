@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
- * @method string getDeptId() 获取电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
- * @method void setDeptId(string $DeptId) 设置电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+ * @method string getDeptId() 获取电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
+ * @method void setDeptId(string $DeptId) 设置电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getReceiveDeptId() 获取交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
- * @method void setReceiveDeptId(string $ReceiveDeptId) 设置交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
+ * @method string getReceiveDeptId() 获取交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
+ * @method void setReceiveDeptId(string $ReceiveDeptId) 设置交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
  */
 class DeleteIntegrationDepartmentRequest extends AbstractModel
 {
@@ -42,7 +44,7 @@ class DeleteIntegrationDepartmentRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+     * @var string 电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
      */
     public $DeptId;
 
@@ -53,17 +55,19 @@ class DeleteIntegrationDepartmentRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
+     * @var string 交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
      */
     public $ReceiveDeptId;
 
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得组织架构管理权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $DeptId 电子签中的部门id,通过DescribeIntegrationDepartments接口可获得
+     * @param string $DeptId 电子签中的部门ID，通过<a href="https://qian.tencent.com/developers/companyApis/organizations/DescribeIntegrationDepartments" target="_blank">DescribeIntegrationDepartments</a>接口可获得。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $ReceiveDeptId 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
+     * @param string $ReceiveDeptId 交接部门ID。
+待删除部门中的合同、印章和模板数据，将会被交接至该部门ID下；若未填写则交接至公司根部门。
      */
     function __construct()
     {

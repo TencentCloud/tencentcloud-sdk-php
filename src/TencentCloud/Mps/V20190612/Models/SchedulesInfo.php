@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleName(string $ScheduleName) 设置编排名称。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取编排状态，取值范围：
 Enabled：已启用，
 Disabled：已禁用。
@@ -75,6 +83,14 @@ class SchedulesInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleName;
+
+    /**
+     * @var string 编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
 
     /**
      * @var string 编排状态，取值范围：
@@ -130,6 +146,10 @@ Disabled：已禁用。
      * @param integer $ScheduleId 编排唯一标识。
      * @param string $ScheduleName 编排名称。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type 编排类型，可选值：
+ <li>Preset：系统预置编排；</li>
+<li>Custom：用户自定义编排。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 编排状态，取值范围：
 Enabled：已启用，
 Disabled：已禁用。
@@ -168,6 +188,10 @@ Disabled：已禁用。
 
         if (array_key_exists("ScheduleName",$param) and $param["ScheduleName"] !== null) {
             $this->ScheduleName = $param["ScheduleName"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

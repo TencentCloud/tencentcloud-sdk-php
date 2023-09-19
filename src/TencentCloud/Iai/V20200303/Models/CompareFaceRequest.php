@@ -22,19 +22,19 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageA() 获取A 图片 base64 数据，base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+若图片中包含多张人脸，只选取其中置信度最高的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setImageA(string $ImageA) 设置A 图片 base64 数据，base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+若图片中包含多张人脸，只选取其中置信度最高的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method string getImageB() 获取B 图片 base64 数据，base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+若图片中包含多张人脸，只选取其中置信度最高的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method void setImageB(string $ImageB) 设置B 图片 base64 数据，base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+若图片中包含多张人脸，只选取其中置信度最高的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method string getUrlA() 获取A 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
@@ -106,7 +106,7 @@ class CompareFaceRequest extends AbstractModel
     /**
      * @var string A 图片 base64 数据，base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+若图片中包含多张人脸，只选取其中置信度最高的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $ImageA;
@@ -114,7 +114,7 @@ jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2
     /**
      * @var string B 图片 base64 数据，base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+若图片中包含多张人脸，只选取其中置信度最高的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $ImageB;
@@ -174,11 +174,11 @@ B 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。
     /**
      * @param string $ImageA A 图片 base64 数据，base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+若图片中包含多张人脸，只选取其中置信度最高的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $ImageB B 图片 base64 数据，base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。
-若图片中包含多张人脸，只选取其中人脸面积最大的人脸。
+若图片中包含多张人脸，只选取其中置信度最高的人脸。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $UrlA A 图片的 Url ，对应图片 base64 编码后大小不可超过5M。
 jpg格式长边像素不可超过4000，其他格式图片长边像素不可超2000。

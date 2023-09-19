@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取评估任务Id
  * @method void setTaskId(string $TaskId) 设置评估任务Id
+ * @method integer getTaskUid() 获取评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskUid(integer $TaskUid) 设置评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskName() 获取评估任务名称
  * @method void setTaskName(string $TaskName) 设置评估任务名称
  * @method string getBusinessName() 获取业务名称
@@ -58,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorInfo() 获取评估任务失败信息
  * @method void setErrorInfo(string $ErrorInfo) 设置评估任务失败信息
+ * @method integer getTemplateUid() 获取模版主键id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateUid(integer $TemplateUid) 设置模版主键id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProgressPercent() 获取进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProgressPercent(integer $ProgressPercent) 设置进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentTask extends AbstractModel
 {
@@ -65,6 +79,13 @@ class AssessmentTask extends AbstractModel
      * @var string 评估任务Id
      */
     public $TaskId;
+
+    /**
+     * @var integer 评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskUid;
 
     /**
      * @var string 评估任务名称
@@ -149,7 +170,22 @@ class AssessmentTask extends AbstractModel
     public $ErrorInfo;
 
     /**
+     * @var integer 模版主键id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateUid;
+
+    /**
+     * @var integer 进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProgressPercent;
+
+    /**
      * @param string $TaskId 评估任务Id
+     * @param integer $TaskUid 评估任务的自增ID
+
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 评估任务名称
      * @param string $BusinessName 业务名称
      * @param string $BusinessDept 业务所属部门
@@ -168,6 +204,10 @@ class AssessmentTask extends AbstractModel
      * @param DiscoveryCondition $DiscoveryCondition 数据源信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorInfo 评估任务失败信息
+     * @param integer $TemplateUid 模版主键id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProgressPercent 进度百分比
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -184,6 +224,10 @@ class AssessmentTask extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("TaskUid",$param) and $param["TaskUid"] !== null) {
+            $this->TaskUid = $param["TaskUid"];
         }
 
         if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
@@ -254,6 +298,14 @@ class AssessmentTask extends AbstractModel
 
         if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
             $this->ErrorInfo = $param["ErrorInfo"];
+        }
+
+        if (array_key_exists("TemplateUid",$param) and $param["TemplateUid"] !== null) {
+            $this->TemplateUid = $param["TemplateUid"];
+        }
+
+        if (array_key_exists("ProgressPercent",$param) and $param["ProgressPercent"] !== null) {
+            $this->ProgressPercent = $param["ProgressPercent"];
         }
     }
 }

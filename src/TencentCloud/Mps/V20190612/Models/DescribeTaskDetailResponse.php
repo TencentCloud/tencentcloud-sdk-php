@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTask(ScheduleTask $ScheduleTask) 设置编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LiveScheduleTask getLiveScheduleTask() 获取直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLiveScheduleTask(LiveScheduleTask $LiveScheduleTask) 设置直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -160,6 +164,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $ScheduleTask;
 
     /**
+     * @var LiveScheduleTask 直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LiveScheduleTask;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -190,6 +200,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      * @param string $ExtInfo 扩展信息字段，仅用于特定场景。
      * @param ScheduleTask $ScheduleTask 编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveScheduleTask $LiveScheduleTask 直播编排处理任务信息，仅当 TaskType 为 LiveScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -265,6 +277,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("ScheduleTask",$param) and $param["ScheduleTask"] !== null) {
             $this->ScheduleTask = new ScheduleTask();
             $this->ScheduleTask->deserialize($param["ScheduleTask"]);
+        }
+
+        if (array_key_exists("LiveScheduleTask",$param) and $param["LiveScheduleTask"] !== null) {
+            $this->LiveScheduleTask = new LiveScheduleTask();
+            $this->LiveScheduleTask->deserialize($param["LiveScheduleTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

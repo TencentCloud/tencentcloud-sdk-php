@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcClusters(string $CdcClusters) 设置cdc类型会增加集群信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCloudType() 获取云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudType(string $CloudType) 设置云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClbDomainsInfo extends AbstractModel
 {
@@ -120,6 +124,12 @@ class ClbDomainsInfo extends AbstractModel
     public $CdcClusters;
 
     /**
+     * @var string 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudType;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名id
      * @param string $InstanceId 实例id
@@ -135,6 +145,8 @@ class ClbDomainsInfo extends AbstractModel
      * @param array $IpHeaders IsCdn=3时，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcClusters cdc类型会增加集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +213,10 @@ class ClbDomainsInfo extends AbstractModel
 
         if (array_key_exists("CdcClusters",$param) and $param["CdcClusters"] !== null) {
             $this->CdcClusters = $param["CdcClusters"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

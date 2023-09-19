@@ -84,8 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSniHost(string $SniHost) 设置SniType=3时，需要填此参数，表示自定义的host；
  * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header
- * @method integer getXFFReset() 获取0:关闭xff重置；1:开启xff重置
- * @method void setXFFReset(integer $XFFReset) 设置0:关闭xff重置；1:开启xff重置
+ * @method integer getXFFReset() 获取0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
+ * @method void setXFFReset(integer $XFFReset) 设置0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -250,7 +250,7 @@ class ModifySpartaProtectionRequest extends AbstractModel
     public $IpHeaders;
 
     /**
-     * @var integer 0:关闭xff重置；1:开启xff重置
+     * @var integer 0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
      */
     public $XFFReset;
 
@@ -287,7 +287,7 @@ class ModifySpartaProtectionRequest extends AbstractModel
      * @param integer $SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
      * @param string $SniHost SniType=3时，需要填此参数，表示自定义的host；
      * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header
-     * @param integer $XFFReset 0:关闭xff重置；1:开启xff重置
+     * @param integer $XFFReset 0:关闭xff重置；1:开启xff重置，只有在IsCdn=0时可以开启
      */
     function __construct()
     {

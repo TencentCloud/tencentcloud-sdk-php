@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskSide(string $RiskSide) 设置风险面
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataSourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentRisk extends AbstractModel
 {
@@ -178,6 +182,12 @@ class AssessmentRisk extends AbstractModel
     public $RiskSide;
 
     /**
+     * @var string 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataSourceType;
+
+    /**
      * @param string $RiskId 风险项Id
      * @param string $RiskDescription 风险项描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,6 +213,8 @@ class AssessmentRisk extends AbstractModel
      * @param string $RiskType 风险类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataSourceType 数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +309,10 @@ class AssessmentRisk extends AbstractModel
 
         if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
             $this->RiskSide = $param["RiskSide"];
+        }
+
+        if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
+            $this->DataSourceType = $param["DataSourceType"];
         }
     }
 }

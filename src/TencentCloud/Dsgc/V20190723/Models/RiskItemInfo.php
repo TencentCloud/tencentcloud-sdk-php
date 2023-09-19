@@ -90,6 +90,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskSide(string $RiskSide) 设置风险面
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAPIRiskLinkURL() 获取API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAPIRiskLinkURL(string $APIRiskLinkURL) 设置API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskItemInfo extends AbstractModel
 {
@@ -201,6 +209,18 @@ class RiskItemInfo extends AbstractModel
     public $RiskSide;
 
     /**
+     * @var string API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $APIRiskLinkURL;
+
+    /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param integer $Id 最新风险项id
      * @param string $DataSourceId 数据源id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,6 +255,10 @@ class RiskItemInfo extends AbstractModel
      * @param string $ItemSubType 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskSide 风险面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $APIRiskLinkURL API安全风险链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -325,6 +349,14 @@ class RiskItemInfo extends AbstractModel
 
         if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
             $this->RiskSide = $param["RiskSide"];
+        }
+
+        if (array_key_exists("APIRiskLinkURL",$param) and $param["APIRiskLinkURL"] !== null) {
+            $this->APIRiskLinkURL = $param["APIRiskLinkURL"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

@@ -93,6 +93,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeRocketMQMsgResponse DescribeRocketMQMsg(Models\DescribeRocketMQMsgRequest $req) rocketmq消息详情
  * @method Models\DescribeRocketMQMsgTraceResponse DescribeRocketMQMsgTrace(Models\DescribeRocketMQMsgTraceRequest $req) 查询消息轨迹
  * @method Models\DescribeRocketMQNamespacesResponse DescribeRocketMQNamespaces(Models\DescribeRocketMQNamespacesRequest $req) 获取RocketMQ命名空间列表
+ * @method Models\DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPoint(Models\DescribeRocketMQPublicAccessPointRequest $req) 接口用于查询RocketMQ实例的公网接入信息
  * @method Models\DescribeRocketMQTopicMsgsResponse DescribeRocketMQTopicMsgs(Models\DescribeRocketMQTopicMsgsRequest $req) rocketmq 消息查询
  * @method Models\DescribeRocketMQTopicsResponse DescribeRocketMQTopics(Models\DescribeRocketMQTopicsRequest $req) 获取RocketMQ主题列表
  * @method Models\DescribeRocketMQVipInstanceDetailResponse DescribeRocketMQVipInstanceDetail(Models\DescribeRocketMQVipInstanceDetailRequest $req) 获取单个RocketMQ专享集群信息
@@ -107,6 +108,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ModifyCmqTopicAttributeResponse ModifyCmqTopicAttribute(Models\ModifyCmqTopicAttributeRequest $req) 修改cmq主题属性
  * @method Models\ModifyEnvironmentAttributesResponse ModifyEnvironmentAttributes(Models\ModifyEnvironmentAttributesRequest $req) 修改指定命名空间的属性值
  * @method Models\ModifyEnvironmentRoleResponse ModifyEnvironmentRole(Models\ModifyEnvironmentRoleRequest $req) 修改环境角色授权。
+ * @method Models\ModifyPublicNetworkAccessPointResponse ModifyPublicNetworkAccessPoint(Models\ModifyPublicNetworkAccessPointRequest $req) RabbitMQ专享版修改公网管控台，vpc15672开关
  * @method Models\ModifyRabbitMQUserResponse ModifyRabbitMQUser(Models\ModifyRabbitMQUserRequest $req) 修改RabbitMQ的用户
  * @method Models\ModifyRabbitMQVipInstanceResponse ModifyRabbitMQVipInstance(Models\ModifyRabbitMQVipInstanceRequest $req) 修改RabbitMQ专享版实例
  * @method Models\ModifyRabbitMQVirtualHostResponse ModifyRabbitMQVirtualHost(Models\ModifyRabbitMQVirtualHostRequest $req) 修改RabbitMQ的vhost
@@ -150,6 +152,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
 不支持持久topic
  * @method Models\SendMsgResponse SendMsg(Models\SendMsgRequest $req) 此接口仅用于测试发生消息，不能作为现网正式生产使用
  * @method Models\SendRocketMQMessageResponse SendRocketMQMessage(Models\SendRocketMQMessageRequest $req) 发送RocketMQ消息
+ * @method Models\SetRocketMQPublicAccessPointResponse SetRocketMQPublicAccessPoint(Models\SetRocketMQPublicAccessPointRequest $req) 该接口用于开启关闭公网访问、设置安全访问策略
  * @method Models\UnbindCmqDeadLetterResponse UnbindCmqDeadLetter(Models\UnbindCmqDeadLetterRequest $req) 解绑cmq死信队列
  */
 

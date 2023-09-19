@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getHighlightSet() 获取视频智能精彩片段列表。
  * @method void setHighlightSet(array $HighlightSet) 设置视频智能精彩片段列表。
  * @method TaskOutputStorage getOutputStorage() 获取精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskHighlightOutput extends AbstractModel
 {
@@ -34,12 +36,14 @@ class AiAnalysisTaskHighlightOutput extends AbstractModel
 
     /**
      * @var TaskOutputStorage 精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStorage;
 
     /**
      * @param array $HighlightSet 视频智能精彩片段列表。
      * @param TaskOutputStorage $OutputStorage 精彩片段的存储位置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

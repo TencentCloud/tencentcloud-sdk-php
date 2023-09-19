@@ -40,6 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+ * @method integer getScheduleId() 获取直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
+ * @method void setScheduleId(integer $ScheduleId) 设置直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
  */
 class ProcessLiveStreamRequest extends AbstractModel
 {
@@ -94,6 +104,15 @@ class ProcessLiveStreamRequest extends AbstractModel
     public $SessionContext;
 
     /**
+     * @var integer 直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
+     */
+    public $ScheduleId;
+
+    /**
      * @param string $Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
      * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，用于指定直播流处理的结果。
      * @param TaskOutputStorage $OutputStorage 直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
@@ -104,6 +123,11 @@ class ProcessLiveStreamRequest extends AbstractModel
      * @param AiQualityControlTaskInput $AiQualityControlTask 视频内容质检类型任务参数。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * @param integer $ScheduleId 直播编排ID。
+注意1：对于OutputStorage、OutputDir参数：
+<li>当服务编排中子任务节点配置了OutputStorage、OutputDir时，该子任务节点中配置的输出作为子任务的输出。</li>
+<li>当服务编排中子任务节点没有配置OutputStorage、OutputDir时，若对直播流发起处理（ProcessLiveStream）有输出，将覆盖原有编排的默认输出。</li>
+注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessLiveStream）有设置，将覆盖原有编排的默认回调。
      */
     function __construct()
     {
@@ -162,6 +186,10 @@ class ProcessLiveStreamRequest extends AbstractModel
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
+            $this->ScheduleId = $param["ScheduleId"];
         }
     }
 }

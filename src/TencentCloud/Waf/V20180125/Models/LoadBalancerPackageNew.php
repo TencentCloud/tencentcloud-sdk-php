@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置CLB类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLoadBalancerDomain() 获取负载均衡器的域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡器的域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancerPackageNew extends AbstractModel
 {
@@ -134,6 +138,12 @@ class LoadBalancerPackageNew extends AbstractModel
     public $LoadBalancerType;
 
     /**
+     * @var string 负载均衡器的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancerDomain;
+
+    /**
      * @param string $ListenerId 监听id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ListenerName 监听名
@@ -155,6 +165,8 @@ class LoadBalancerPackageNew extends AbstractModel
      * @param integer $NumericalVpcId VPCID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoadBalancerType CLB类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LoadBalancerDomain 负载均衡器的域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +224,10 @@ class LoadBalancerPackageNew extends AbstractModel
 
         if (array_key_exists("LoadBalancerType",$param) and $param["LoadBalancerType"] !== null) {
             $this->LoadBalancerType = $param["LoadBalancerType"];
+        }
+
+        if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {
+            $this->LoadBalancerDomain = $param["LoadBalancerDomain"];
         }
     }
 }

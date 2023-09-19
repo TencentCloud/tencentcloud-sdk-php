@@ -29,7 +29,6 @@ use TencentCloud\Common\AbstractModel;
 -7: 身份证号码有误
 -8: 姓名校验不通过
 -9: 没有记录
--10: 认证未通过
 -11: 验证中心服务繁忙
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
 收费结果码：
@@ -40,7 +39,6 @@ use TencentCloud\Common\AbstractModel;
 -7: 身份证号码有误
 -8: 姓名校验不通过
 -9: 没有记录
--10: 认证未通过
 -11: 验证中心服务繁忙
  * @method string getIsp() 获取运营商名称。
 取值范围为["移动","联通","电信",""]
@@ -63,7 +61,6 @@ class PhoneVerificationCTCCResponse extends AbstractModel
 -7: 身份证号码有误
 -8: 姓名校验不通过
 -9: 没有记录
--10: 认证未通过
 -11: 验证中心服务繁忙
      */
     public $Result;
@@ -94,7 +91,6 @@ class PhoneVerificationCTCCResponse extends AbstractModel
 -7: 身份证号码有误
 -8: 姓名校验不通过
 -9: 没有记录
--10: 认证未通过
 -11: 验证中心服务繁忙
      * @param string $Isp 运营商名称。
 取值范围为["移动","联通","电信",""]

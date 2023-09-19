@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 片头片尾参数
  *
  * @method array getHeadSet() 获取片头列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadSet(array $HeadSet) 设置片头列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTailSet() 获取片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTailSet(array $TailSet) 设置片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HeadTailParameter extends AbstractModel
 {
     /**
      * @var array 片头列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadSet;
 
     /**
      * @var array 片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TailSet;
 
     /**
      * @param array $HeadSet 片头列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TailSet 片尾列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

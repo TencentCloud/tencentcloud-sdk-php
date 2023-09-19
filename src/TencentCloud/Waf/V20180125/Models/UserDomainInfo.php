@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCls(integer $Cls) 设置指定域名是否写cls的开关 1:写 0:不写
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCloudType() 获取标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudType(string $CloudType) 设置标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserDomainInfo extends AbstractModel
 {
@@ -96,6 +100,12 @@ class UserDomainInfo extends AbstractModel
     public $Cls;
 
     /**
+     * @var string 标记是否是混合云接入。hybrid表示混合云接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudType;
+
+    /**
      * @param integer $Appid 用户id
      * @param string $Domain 域名
      * @param string $DomainId 域名id
@@ -107,6 +117,8 @@ class UserDomainInfo extends AbstractModel
      * @param string $WriteConfig 指定域名访问日志字段的开关
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cls 指定域名是否写cls的开关 1:写 0:不写
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,10 @@ class UserDomainInfo extends AbstractModel
 
         if (array_key_exists("Cls",$param) and $param["Cls"] !== null) {
             $this->Cls = $param["Cls"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

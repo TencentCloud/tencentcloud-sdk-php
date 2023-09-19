@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentSet(array $SegmentSet) 设置翻译片段列表。
  * @method string getSubtitlePath() 获取字幕文件地址。
  * @method void setSubtitlePath(string $SubtitlePath) 设置字幕文件地址。
- * @method TaskOutputStorage getOutputStorage() 获取字幕文件存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置字幕文件存储位置。
  */
 class AiRecognitionTaskTransTextResultOutput extends AbstractModel
 {
@@ -40,14 +38,8 @@ class AiRecognitionTaskTransTextResultOutput extends AbstractModel
     public $SubtitlePath;
 
     /**
-     * @var TaskOutputStorage 字幕文件存储位置。
-     */
-    public $OutputStorage;
-
-    /**
      * @param array $SegmentSet 翻译片段列表。
      * @param string $SubtitlePath 字幕文件地址。
-     * @param TaskOutputStorage $OutputStorage 字幕文件存储位置。
      */
     function __construct()
     {
@@ -73,11 +65,6 @@ class AiRecognitionTaskTransTextResultOutput extends AbstractModel
 
         if (array_key_exists("SubtitlePath",$param) and $param["SubtitlePath"] !== null) {
             $this->SubtitlePath = $param["SubtitlePath"];
-        }
-
-        if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
-            $this->OutputStorage = new TaskOutputStorage();
-            $this->OutputStorage->deserialize($param["OutputStorage"]);
         }
     }
 }

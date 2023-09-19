@@ -20,65 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowSignReview请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method string getFlowId() 获取签署流程编号
- * @method void setFlowId(string $FlowId) 设置签署流程编号
- * @method string getReviewType() 获取企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝
- * @method void setReviewType(string $ReviewType) 设置企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝
- * @method string getReviewMessage() 获取审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
- * @method void setReviewMessage(string $ReviewMessage) 设置审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+ * @method string getReviewType() 获取企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul>
+ * @method void setReviewType(string $ReviewType) 设置企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul>
+ * @method string getReviewMessage() 获取审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+
+ * @method void setReviewMessage(string $ReviewMessage) 设置审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method string getRecipientId() 获取审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
- * @method void setRecipientId(string $RecipientId) 设置审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
- * @method string getOperateType() 获取操作类型：（接口通过该字段区分操作类型）
+ * @method string getRecipientId() 获取审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。
+ * @method void setRecipientId(string $RecipientId) 设置审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。
+ * @method string getOperateType() 获取操作类型：（接口通过该字段区分不同的操作类型）
 
-SignReview:签署审核
-CreateReview:发起审核
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-默认：SignReview；SignReview:签署审核
+如果审核节点是个人，则操作类型只能为SignReview。
+ * @method void setOperateType(string $OperateType) 设置操作类型：（接口通过该字段区分不同的操作类型）
 
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview
- * @method void setOperateType(string $OperateType) 设置操作类型：（接口通过该字段区分操作类型）
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-SignReview:签署审核
-CreateReview:发起审核
-
-默认：SignReview；SignReview:签署审核
-
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview
+如果审核节点是个人，则操作类型只能为SignReview。
  */
 class CreateFlowSignReviewRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 签署流程编号
+     * @var string 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      */
     public $FlowId;
 
     /**
-     * @var string 企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝
+     * @var string 企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul>
      */
     public $ReviewType;
 
     /**
-     * @var string 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+     * @var string 审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+
      */
     public $ReviewMessage;
 
@@ -88,42 +101,45 @@ REJECT: 拒绝
     public $Agent;
 
     /**
-     * @var string 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
+     * @var string 审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。
      */
     public $RecipientId;
 
     /**
-     * @var string 操作类型：（接口通过该字段区分操作类型）
+     * @var string 操作类型：（接口通过该字段区分不同的操作类型）
 
-SignReview:签署审核
-CreateReview:发起审核
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-默认：SignReview；SignReview:签署审核
-
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview
+如果审核节点是个人，则操作类型只能为SignReview。
      */
     public $OperateType;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param string $FlowId 签署流程编号
-     * @param string $ReviewType 企业内部审核结果
-PASS: 通过 
-REJECT: 拒绝
-     * @param string $ReviewMessage 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $FlowId 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     * @param string $ReviewType 企业审核结果
+<ul><li>PASS: 通过</li> 
+<li>REJECT: 拒绝</li></ul>
+     * @param string $ReviewMessage 审核结果原因，
+字符串长度不超过200
+当ReviewType 是拒绝（REJECT） 时此字段必填。
+
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param string $RecipientId 审核签署节点使用 非必填 如果填写则审核该签署节点。给个人审核时必填。
-     * @param string $OperateType 操作类型：（接口通过该字段区分操作类型）
+     * @param string $RecipientId 审核签署节点人标识，
+用来标识审核的签署方。
+如果签署审核节点是个人， 此参数必填。
+     * @param string $OperateType 操作类型：（接口通过该字段区分不同的操作类型）
 
-SignReview:签署审核
-CreateReview:发起审核
+<ul><li>SignReview: 签署审核（默认）</li>
+<li>CreateReview: 创建审核</li></ul>
 
-默认：SignReview；SignReview:签署审核
-
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若发起个人审核，则指定该字段为：SignReview
+如果审核节点是个人，则操作类型只能为SignReview。
      */
     function __construct()
     {

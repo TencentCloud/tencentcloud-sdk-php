@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableSubtitle(boolean $EnableSubtitle) 设置是否开启时间戳功能，默认为false。
  * @method boolean getVoiceoverDialogueSplit() 获取旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
  * @method void setVoiceoverDialogueSplit(boolean $VoiceoverDialogueSplit) 设置旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
+ * @method string getEmotionCategory() 获取控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+ * @method void setEmotionCategory(string $EmotionCategory) 设置控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+ * @method integer getEmotionIntensity() 获取控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
+ * @method void setEmotionIntensity(integer $EmotionIntensity) 设置控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
  */
 class CreateTtsTaskRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateTtsTaskRequest extends AbstractModel
     public $VoiceoverDialogueSplit;
 
     /**
+     * @var string 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+     */
+    public $EmotionCategory;
+
+    /**
+     * @var integer 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
+     */
+    public $EmotionIntensity;
+
+    /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算，最多支持10万字符
      * @param integer $ModelType 模型类型，1-默认模型。
      * @param float $Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
@@ -120,6 +134,8 @@ class CreateTtsTaskRequest extends AbstractModel
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。[回调说明](https://cloud.tencent.com/document/product/1073/55746)
      * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
      * @param boolean $VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
+     * @param string $EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、撒娇(sajiao)、厌恶(disgusted)、震惊(amaze)、平静(peaceful)、兴奋(exciting)、傲娇(aojiao)、解说(jieshuo)
+     * @param integer $EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效。
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class CreateTtsTaskRequest extends AbstractModel
 
         if (array_key_exists("VoiceoverDialogueSplit",$param) and $param["VoiceoverDialogueSplit"] !== null) {
             $this->VoiceoverDialogueSplit = $param["VoiceoverDialogueSplit"];
+        }
+
+        if (array_key_exists("EmotionCategory",$param) and $param["EmotionCategory"] !== null) {
+            $this->EmotionCategory = $param["EmotionCategory"];
+        }
+
+        if (array_key_exists("EmotionIntensity",$param) and $param["EmotionIntensity"] !== null) {
+            $this->EmotionIntensity = $param["EmotionIntensity"];
         }
     }
 }

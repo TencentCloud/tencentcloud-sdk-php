@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnimatedGraphicTask(MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask) 设置转动图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaProcessTaskSampleSnapshotResult getSnapshotByTimeOffsetTask() 获取时间点截图任务输出
+ * @method MediaProcessTaskSnapshotByTimeOffsetResult getSnapshotByTimeOffsetTask() 获取时间点截图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSampleSnapshotResult $SnapshotByTimeOffsetTask) 设置时间点截图任务输出
+ * @method void setSnapshotByTimeOffsetTask(MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask) 设置时间点截图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaProcessTaskSampleSnapshotResult getSampleSnapshotTask() 获取采样截图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,7 +72,7 @@ class ActivityResItem extends AbstractModel
     public $AnimatedGraphicTask;
 
     /**
-     * @var MediaProcessTaskSampleSnapshotResult 时间点截图任务输出
+     * @var MediaProcessTaskSnapshotByTimeOffsetResult 时间点截图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotByTimeOffsetTask;
@@ -118,7 +118,7 @@ class ActivityResItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask 转动图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTaskSampleSnapshotResult $SnapshotByTimeOffsetTask 时间点截图任务输出
+     * @param MediaProcessTaskSnapshotByTimeOffsetResult $SnapshotByTimeOffsetTask 时间点截图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTaskSampleSnapshotResult $SampleSnapshotTask 采样截图任务输出
 注意：此字段可能返回 null，表示取不到有效值。
@@ -157,7 +157,7 @@ class ActivityResItem extends AbstractModel
         }
 
         if (array_key_exists("SnapshotByTimeOffsetTask",$param) and $param["SnapshotByTimeOffsetTask"] !== null) {
-            $this->SnapshotByTimeOffsetTask = new MediaProcessTaskSampleSnapshotResult();
+            $this->SnapshotByTimeOffsetTask = new MediaProcessTaskSnapshotByTimeOffsetResult();
             $this->SnapshotByTimeOffsetTask->deserialize($param["SnapshotByTimeOffsetTask"]);
         }
 

@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsASMTemplate(boolean $IsASMTemplate) 设置是否包含攻击面风险
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIdentifyComplianceId() 获取合规组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIdentifyComplianceId(integer $IdentifyComplianceId) 设置合规组id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentTemplate extends AbstractModel
 {
@@ -120,6 +124,12 @@ class AssessmentTemplate extends AbstractModel
     public $IsASMTemplate;
 
     /**
+     * @var integer 合规组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IdentifyComplianceId;
+
+    /**
      * @param integer $Id id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateId 评估模版Id
@@ -135,6 +145,8 @@ class AssessmentTemplate extends AbstractModel
      * @param array $SupportDataSource 支持的数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsASMTemplate 是否包含攻击面风险
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IdentifyComplianceId 合规组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class AssessmentTemplate extends AbstractModel
 
         if (array_key_exists("IsASMTemplate",$param) and $param["IsASMTemplate"] !== null) {
             $this->IsASMTemplate = $param["IsASMTemplate"];
+        }
+
+        if (array_key_exists("IdentifyComplianceId",$param) and $param["IdentifyComplianceId"] !== null) {
+            $this->IdentifyComplianceId = $param["IdentifyComplianceId"];
         }
     }
 }

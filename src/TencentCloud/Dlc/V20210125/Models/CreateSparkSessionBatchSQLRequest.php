@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDataEngineName() 获取DLC Spark作业引擎名称
  * @method void setDataEngineName(string $DataEngineName) 设置DLC Spark作业引擎名称
- * @method string getExecuteSQL() 获取运行sql
- * @method void setExecuteSQL(string $ExecuteSQL) 设置运行sql
+ * @method string getExecuteSQL() 获取运行sql，需要base64编码。
+ * @method void setExecuteSQL(string $ExecuteSQL) 设置运行sql，需要base64编码。
  * @method string getDriverSize() 获取指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
  * @method void setDriverSize(string $DriverSize) 设置指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
  * @method string getExecutorSize() 获取指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArguments(array $Arguments) 设置Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
 2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
 3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
- * @method integer getIsInherit() 获取是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
- * @method void setIsInherit(integer $IsInherit) 设置是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+ * @method integer getIsInherit() 获取是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
+ * @method void setIsInherit(integer $IsInherit) 设置是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
  */
 class CreateSparkSessionBatchSQLRequest extends AbstractModel
 {
@@ -55,7 +55,7 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
     public $DataEngineName;
 
     /**
-     * @var string 运行sql
+     * @var string 运行sql，需要base64编码。
      */
     public $ExecuteSQL;
 
@@ -102,13 +102,13 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
     public $Arguments;
 
     /**
-     * @var integer 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     * @var integer 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
      */
     public $IsInherit;
 
     /**
      * @param string $DataEngineName DLC Spark作业引擎名称
-     * @param string $ExecuteSQL 运行sql
+     * @param string $ExecuteSQL 运行sql，需要base64编码。
      * @param string $DriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      * @param string $ExecutorSize 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      * @param integer $ExecutorNumbers 指定的Executor数量，默认为1
@@ -119,7 +119,7 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
      * @param array $Arguments Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
 2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
 3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
-     * @param integer $IsInherit 是否继承集群的资源类配置：0：自定义（默认），1：继承集群；
+     * @param integer $IsInherit 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
      */
     function __construct()
     {

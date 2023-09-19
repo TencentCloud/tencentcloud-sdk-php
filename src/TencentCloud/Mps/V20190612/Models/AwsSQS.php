@@ -21,41 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * Aws SQS 队列信息
  *
  * @method string getSQSRegion() 获取SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSQSRegion(string $SQSRegion) 设置SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSQSQueueName() 获取SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSQSQueueName(string $SQSQueueName) 设置SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3SecretId() 获取读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3SecretId(string $S3SecretId) 设置读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getS3SecretKey() 获取读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3SecretKey(string $S3SecretKey) 设置读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AwsSQS extends AbstractModel
 {
     /**
      * @var string SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SQSRegion;
 
     /**
      * @var string SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SQSQueueName;
 
     /**
      * @var string 读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3SecretId;
 
     /**
      * @var string 读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $S3SecretKey;
 
     /**
      * @param string $SQSRegion SQS 队列区域。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SQSQueueName SQS 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3SecretId 读写SQS的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $S3SecretKey 读写SQS的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

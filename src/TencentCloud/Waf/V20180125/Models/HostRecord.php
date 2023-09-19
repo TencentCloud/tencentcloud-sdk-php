@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainId(string $DomainId) 设置域名ID
  * @method string getMainDomain() 获取主域名，入参时为空
  * @method void setMainDomain(string $MainDomain) 设置主域名，入参时为空
- * @method integer getMode() 获取waf模式，同saas waf保持一致
- * @method void setMode(integer $Mode) 设置waf模式，同saas waf保持一致
+ * @method integer getMode() 获取规则引擎防护模式，0 观察模式，1拦截模式
+ * @method void setMode(integer $Mode) 设置规则引擎防护模式，0 观察模式，1拦截模式
  * @method integer getStatus() 获取waf和LD的绑定，0：没有绑定，1：绑定
  * @method void setStatus(integer $Status) 设置waf和LD的绑定，0：没有绑定，1：绑定
  * @method integer getState() 获取域名状态，0：正常，1：未检测到流量，2：即将过期，3：过期
  * @method void setState(integer $State) 设置域名状态，0：正常，1：未检测到流量，2：即将过期，3：过期
- * @method integer getEngine() 获取使用的规则，同saas waf保持一致
- * @method void setEngine(integer $Engine) 设置使用的规则，同saas waf保持一致
+ * @method integer getEngine() 获取规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+ * @method void setEngine(integer $Engine) 设置规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
  * @method integer getIsCdn() 获取是否开启代理，0：不开启，1：开启
  * @method void setIsCdn(integer $IsCdn) 设置是否开启代理，0：不开启，1：开启
  * @method array getLoadBalancerSet() 获取绑定的LB列表
@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineType(integer $EngineType) 设置规则引擎类型， 1: menshen,   2:tiga
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCloudType() 获取云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudType(string $CloudType) 设置云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostRecord extends AbstractModel
 {
@@ -85,7 +89,7 @@ class HostRecord extends AbstractModel
     public $MainDomain;
 
     /**
-     * @var integer waf模式，同saas waf保持一致
+     * @var integer 规则引擎防护模式，0 观察模式，1拦截模式
      */
     public $Mode;
 
@@ -100,7 +104,7 @@ class HostRecord extends AbstractModel
     public $State;
 
     /**
-     * @var integer 使用的规则，同saas waf保持一致
+     * @var integer 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public $Engine;
 
@@ -165,13 +169,19 @@ class HostRecord extends AbstractModel
     public $EngineType;
 
     /**
+     * @var string 云类型:public:公有云；private:私有云;hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudType;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param string $MainDomain 主域名，入参时为空
-     * @param integer $Mode waf模式，同saas waf保持一致
+     * @param integer $Mode 规则引擎防护模式，0 观察模式，1拦截模式
      * @param integer $Status waf和LD的绑定，0：没有绑定，1：绑定
      * @param integer $State 域名状态，0：正常，1：未检测到流量，2：即将过期，3：过期
-     * @param integer $Engine 使用的规则，同saas waf保持一致
+     * @param integer $Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      * @param integer $IsCdn 是否开启代理，0：不开启，1：开启
      * @param array $LoadBalancerSet 绑定的LB列表
      * @param string $Region 域名绑定的LB的地域，以,分割多个地域
@@ -187,6 +197,8 @@ class HostRecord extends AbstractModel
      * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EngineType 规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -277,6 +289,10 @@ class HostRecord extends AbstractModel
 
         if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
             $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceName请求参数结构体
  *
+ * @method string getInstanceName() 获取新名称
+ * @method void setInstanceName(string $InstanceName) 设置新名称
  * @method string getInstanceID() 获取实例id
  * @method void setInstanceID(string $InstanceID) 设置实例id
  * @method string getEdition() 获取版本
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class ModifyInstanceNameRequest extends AbstractModel
 {
+    /**
+     * @var string 新名称
+     */
+    public $InstanceName;
+
     /**
      * @var string 实例id
      */
@@ -38,6 +45,7 @@ class ModifyInstanceNameRequest extends AbstractModel
     public $Edition;
 
     /**
+     * @param string $InstanceName 新名称
      * @param string $InstanceID 实例id
      * @param string $Edition 版本
      */
@@ -54,6 +62,10 @@ class ModifyInstanceNameRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
         }

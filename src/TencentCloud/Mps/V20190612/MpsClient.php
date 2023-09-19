@@ -120,11 +120,19 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeWorkflowsResponse DescribeWorkflows(Models\DescribeWorkflowsRequest $req) 根据工作流 ID，获取工作流详情列表。
  * @method Models\DisableScheduleResponse DisableSchedule(Models\DisableScheduleRequest $req) 禁用自动化触发编排任务。
  * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) 禁用工作流。
- * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) 对视频进行编辑（剪辑、拼接等），生成一个新的点播视频。编辑的功能包括：
+ * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) 对视频进行编辑，生成一个新的视频。编辑的功能包括：
+  
 
+一、**剪辑任务**：简单的视频剪辑，如剪辑、拼接等
 1. 对一个文件进行剪辑，生成一个新的视频；
 2. 对多个文件进行拼接，生成一个新的视频；
 3. 对多个文件进行剪辑，然后再拼接，生成一个新的视频。
+
+二、**合成任务**：通过接口描述信息，合成一个新的视频。
+1. 多轨道（视频、音频、字幕）、多类型元素（视频、图片、音频、文字、空）
+2. 图像级别：贴图、缩放、任意角度旋转、镜像等
+3. 音频级别：音量控制、淡入淡出、混音等
+4. 视频级别：转场、倍数播放、拼接、剪切、字幕、画中画、音画分离、出入场动效等
  * @method Models\EnableScheduleResponse EnableSchedule(Models\EnableScheduleRequest $req) 启用自动化触发编排任务。
  * @method Models\EnableWorkflowResponse EnableWorkflow(Models\EnableWorkflowRequest $req) 启用工作流。
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) 本接口仅用于定制开发的特殊场景，除非云媒体处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
@@ -155,9 +163,12 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) 对直播流媒体发起处理任务，功能包括：
 
 * 智能内容审核（画面鉴黄、敏感信息检测、声音鉴黄）；
-* 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、语音实时翻译）。
+* 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、语音实时翻译、物体识别、游戏打点）。
+* 智能内容分析（新闻实时拆条）。
+* 质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）。
+* 录制
 
-直播流处理事件通知实时写入用户指定的消息队列 CMQ 中，用户需要从消息队列 CMQ 中获取事件通知结果，同时处理过程中存在输出文件的，会写入用户指定的输出文件的目标存储中。
+直播流处理事件通知支持HTTP回调，也支持实时写入用户指定的消息队列 CMQ 中，用户从消息队列 CMQ 中获取事件通知结果，同时处理过程中存在输出文件的，会写入用户指定的输出文件的目标存储中。
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) 对 URL视频链接 或 COS 中的媒体文件发起处理任务，功能包括：
 1. 视频转码（普通转码、极速高清转码、音视频增强）；
 2. 视频转动图；

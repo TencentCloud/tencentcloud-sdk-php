@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskLevel(string $RiskLevel) 设置风险等级筛选
  * @method array getRiskSide() 获取风险面筛选
  * @method void setRiskSide(array $RiskSide) 设置风险面筛选
+ * @method string getTimeSort() 获取ASC 正序，DESC倒叙
+ * @method void setTimeSort(string $TimeSort) 设置ASC 正序，DESC倒叙
  */
 class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
     public $RiskSide;
 
     /**
+     * @var string ASC 正序，DESC倒叙
+     */
+    public $TimeSort;
+
+    /**
      * @param string $DspaId dspa实例Id
      * @param integer $TemplateId 评估模版id
      * @param integer $Limit 限制条数
@@ -120,6 +127,7 @@ class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
      * @param string $EndTime 扫描结束时间
      * @param string $RiskLevel 风险等级筛选
      * @param array $RiskSide 风险面筛选
+     * @param string $TimeSort ASC 正序，DESC倒叙
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
 
         if (array_key_exists("RiskSide",$param) and $param["RiskSide"] !== null) {
             $this->RiskSide = $param["RiskSide"];
+        }
+
+        if (array_key_exists("TimeSort",$param) and $param["TimeSort"] !== null) {
+            $this->TimeSort = $param["TimeSort"];
         }
     }
 }

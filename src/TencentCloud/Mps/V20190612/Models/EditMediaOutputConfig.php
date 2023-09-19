@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 编辑视频的结果文件输出配置。
  *
  * @method string getContainer() 获取封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EditMediaOutputConfig extends AbstractModel
 {
     /**
      * @var string 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Container;
 
     /**
      * @var string 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @param string $Container 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

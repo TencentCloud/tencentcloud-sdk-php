@@ -127,6 +127,10 @@ BGP带宽包必须传带宽包id
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 本接口用于查询异步任务的执行状态，对于非查询类的接口（创建/删除负载均衡实例、监听器、规则以及绑定或解绑后端服务等），在接口调用成功后，都需要使用本接口查询任务最终是否执行成功。
  * @method Models\DisassociateTargetGroupsResponse DisassociateTargetGroups(Models\DisassociateTargetGroupsRequest $req) 解除规则的目标组关联关系。
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+ * @method Models\InquiryPriceCreateLoadBalancerResponse InquiryPriceCreateLoadBalancer(Models\InquiryPriceCreateLoadBalancerRequest $req) InquiryPriceCreateLoadBalancer接口查询创建负载均衡的价格。
+ * @method Models\InquiryPriceModifyLoadBalancerResponse InquiryPriceModifyLoadBalancer(Models\InquiryPriceModifyLoadBalancerRequest $req) InquiryPriceModifyLoadBalancer接口修改负载均衡配置询价。
+ * @method Models\InquiryPriceRefundLoadBalancerResponse InquiryPriceRefundLoadBalancer(Models\InquiryPriceRefundLoadBalancerRequest $req) InquiryPriceRefundLoadBalancer接口查询负载均衡退费价格。
+ * @method Models\InquiryPriceRenewLoadBalancerResponse InquiryPriceRenewLoadBalancer(Models\InquiryPriceRenewLoadBalancerRequest $req) InquiryPriceRenewLoadBalancer接口查询对负载均衡续费的价格，只支持预付费负载均衡续费。
  * @method Models\ManualRewriteResponse ManualRewrite(Models\ManualRewriteRequest $req) 用户手动配置原访问地址和重定向地址，系统自动将原访问地址的请求重定向至对应路径的目的地址。同一域名下可以配置多条路径作为重定向策略，实现http/https之间请求的自动跳转。设置重定向时，需满足如下约束条件：若A已经重定向至B，则A不能再重定向至C（除非先删除老的重定向关系，再建立新的重定向关系），B不能重定向至任何其它地址。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
  * @method Models\MigrateClassicalLoadBalancersResponse MigrateClassicalLoadBalancers(Models\MigrateClassicalLoadBalancersRequest $req) 本接口将传统型负载均衡迁移成(原应用型)负载均衡

@@ -93,6 +93,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAssetWebLocationListResponse DescribeAssetWebLocationList(Models\DescribeAssetWebLocationListRequest $req) 获取Web站点列表
  * @method Models\DescribeAssetWebServiceInfoListResponse DescribeAssetWebServiceInfoList(Models\DescribeAssetWebServiceInfoListRequest $req) 查询资产管理Web服务列表
  * @method Models\DescribeAssetWebServiceProcessListResponse DescribeAssetWebServiceProcessList(Models\DescribeAssetWebServiceProcessListRequest $req) 获取Web服务关联进程列表
+ * @method Models\DescribeAttackEventsResponse DescribeAttackEvents(Models\DescribeAttackEventsRequest $req) 按分页形式展示网络攻击检测事件列表
  * @method Models\DescribeAttackLogInfoResponse DescribeAttackLogInfo(Models\DescribeAttackLogInfoRequest $req) 网络攻击日志详情
  * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) 按分页形式展示网络攻击日志列表
  * @method Models\DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(Models\DescribeAttackVulTypeListRequest $req) 获取网络攻击威胁类型列表
@@ -169,6 +170,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeMachineListResponse DescribeMachineList(Models\DescribeMachineListRequest $req) 用于网页防篡改获取区域主机列表。
  * @method Models\DescribeMachineOsListResponse DescribeMachineOsList(Models\DescribeMachineOsListRequest $req) 查询可筛选操作系统列表.
  * @method Models\DescribeMachineRegionsResponse DescribeMachineRegions(Models\DescribeMachineRegionsRequest $req) 获取机器地域列表
+ * @method Models\DescribeMachineRiskCntResponse DescribeMachineRiskCnt(Models\DescribeMachineRiskCntRequest $req) 查询主机入侵检测事件统计
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 本接口 (DescribeMachines) 用于获取区域主机列表。
  * @method Models\DescribeMalWareListResponse DescribeMalWareList(Models\DescribeMalWareListRequest $req) 入侵检测获取木马列表
  * @method Models\DescribeMaliciousRequestWhiteListResponse DescribeMaliciousRequestWhiteList(Models\DescribeMaliciousRequestWhiteListRequest $req) 查询恶意请求白名单列表
@@ -202,6 +204,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeScanVulSettingResponse DescribeScanVulSetting(Models\DescribeScanVulSettingRequest $req) 查询定期检测的配置
  * @method Models\DescribeSearchLogsResponse DescribeSearchLogs(Models\DescribeSearchLogsRequest $req) 获取历史搜索记录
  * @method Models\DescribeSearchTemplatesResponse DescribeSearchTemplates(Models\DescribeSearchTemplatesRequest $req) 获取快速检索列表
+ * @method Models\DescribeSecurityBroadcastsResponse DescribeSecurityBroadcasts(Models\DescribeSecurityBroadcastsRequest $req) 安全播报列表页
  * @method Models\DescribeSecurityDynamicsResponse DescribeSecurityDynamics(Models\DescribeSecurityDynamicsRequest $req) 本接口 (DescribeSecurityDynamics) 用于获取安全事件动态消息数据。
  * @method Models\DescribeSecurityEventStatResponse DescribeSecurityEventStat(Models\DescribeSecurityEventStatRequest $req) 获取安全事件统计
  * @method Models\DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(Models\DescribeSecurityEventsCntRequest $req) 获取安全概览相关事件统计数据接口
@@ -274,6 +277,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ModifyBaselineWeakPasswordResponse ModifyBaselineWeakPassword(Models\ModifyBaselineWeakPasswordRequest $req) 更改或新增弱口令
  * @method Models\ModifyBruteAttackRulesResponse ModifyBruteAttackRules(Models\ModifyBruteAttackRulesRequest $req) 修改暴力破解规则
  * @method Models\ModifyLicenseBindsResponse ModifyLicenseBinds(Models\ModifyLicenseBindsRequest $req) 设置中心-授权管理 对某个授权批量绑定机器
+ * @method Models\ModifyLicenseOrderResponse ModifyLicenseOrder(Models\ModifyLicenseOrderRequest $req) 编辑《主机安全-按量计费》授权订单
  * @method Models\ModifyLicenseUnBindsResponse ModifyLicenseUnBinds(Models\ModifyLicenseUnBindsRequest $req) 设置中心-授权管理 对某个授权批量解绑机器
  * @method Models\ModifyLogStorageConfigResponse ModifyLogStorageConfig(Models\ModifyLogStorageConfigRequest $req) 修改日志存储配置
  * @method Models\ModifyMachineRemarkResponse ModifyMachineRemark(Models\ModifyMachineRemarkRequest $req) 修改主机备注信息

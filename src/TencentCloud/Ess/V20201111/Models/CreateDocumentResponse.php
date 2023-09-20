@@ -30,11 +30,13 @@ use TencentCloud\Common\AbstractModel;
 后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
  * @method string getPreviewFileUrl() 获取合同预览链接URL。
 
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
+`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewFileUrl(string $PreviewFileUrl) 设置合同预览链接URL。
 
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
+`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,7 +54,8 @@ class CreateDocumentResponse extends AbstractModel
     /**
      * @var string 合同预览链接URL。
 
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
+`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewFileUrl;
@@ -69,7 +72,8 @@ class CreateDocumentResponse extends AbstractModel
 后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
      * @param string $PreviewFileUrl 合同预览链接URL。
 
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
+`2.当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

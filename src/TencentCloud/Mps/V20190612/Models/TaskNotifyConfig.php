@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAwsSQS(AwsSQS $AwsSQS) 设置AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNotifyKey() 获取用于生成回调签名的key。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNotifyKey(string $NotifyKey) 设置用于生成回调签名的key。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskNotifyConfig extends AbstractModel
 {
@@ -104,6 +108,12 @@ class TaskNotifyConfig extends AbstractModel
     public $AwsSQS;
 
     /**
+     * @var string 用于生成回调签名的key。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NotifyKey;
+
+    /**
      * @param string $NotifyType 通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
@@ -119,6 +129,8 @@ class TaskNotifyConfig extends AbstractModel
      * @param string $QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 或 TDMQ-CMQ 的队列名。
      * @param AwsSQS $AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NotifyKey 用于生成回调签名的key。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -165,6 +177,10 @@ class TaskNotifyConfig extends AbstractModel
         if (array_key_exists("AwsSQS",$param) and $param["AwsSQS"] !== null) {
             $this->AwsSQS = new AwsSQS();
             $this->AwsSQS->deserialize($param["AwsSQS"]);
+        }
+
+        if (array_key_exists("NotifyKey",$param) and $param["NotifyKey"] !== null) {
+            $this->NotifyKey = $param["NotifyKey"];
         }
     }
 }

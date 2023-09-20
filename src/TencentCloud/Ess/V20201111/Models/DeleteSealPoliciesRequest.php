@@ -20,21 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSealPolicies请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method array getPolicyIds() 获取印章授权编码数组。这个参数跟下面的SealId其中一个必填，另外一个可选填
  * @method void setPolicyIds(array $PolicyIds) 设置印章授权编码数组。这个参数跟下面的SealId其中一个必填，另外一个可选填
- * @method string getSealId() 获取印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
- * @method void setSealId(string $SealId) 设置印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
- * @method array getUserIds() 获取待授权的员工ID
- * @method void setUserIds(array $UserIds) 设置待授权的员工ID
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method string getSealId() 获取电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
+注：印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填。
+ * @method void setSealId(string $SealId) 设置电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
+注：印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填。
+ * @method array getUserIds() 获取待授权的员工ID，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+ * @method void setUserIds(array $UserIds) 设置待授权的员工ID，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  */
 class DeleteSealPoliciesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
@@ -44,26 +57,37 @@ class DeleteSealPoliciesRequest extends AbstractModel
     public $PolicyIds;
 
     /**
-     * @var string 印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
+     * @var string 电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
+注：印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填。
      */
     public $SealId;
 
     /**
-     * @var array 待授权的员工ID
+     * @var array 待授权的员工ID，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      */
     public $UserIds;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param array $PolicyIds 印章授权编码数组。这个参数跟下面的SealId其中一个必填，另外一个可选填
-     * @param string $SealId 印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
-     * @param array $UserIds 待授权的员工ID
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param string $SealId 电子印章ID，为32位字符串。
+建议开发者保留此印章ID，后续指定签署区印章或者操作印章需此印章ID。
+可登录腾讯电子签控制台，在 "印章"->"印章中心"选择查看的印章，在"印章详情" 中查看某个印章的SealId(在页面中展示为印章ID)。
+注：印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填。
+     * @param array $UserIds 待授权的员工ID，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     function __construct()
     {

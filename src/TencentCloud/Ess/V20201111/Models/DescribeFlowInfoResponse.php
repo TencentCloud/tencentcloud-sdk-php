@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFlowDetailInfos() 获取签署流程信息
  * @method void setFlowDetailInfos(array $FlowDetailInfos) 设置签署流程信息
- * @method string getFlowGroupId() 获取合同组ID
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID
+ * @method string getFlowGroupId() 获取合同组ID，为32位字符串
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID，为32位字符串
  * @method string getFlowGroupName() 获取合同组名称
  * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class DescribeFlowInfoResponse extends AbstractModel
     public $FlowDetailInfos;
 
     /**
-     * @var string 合同组ID
+     * @var string 合同组ID，为32位字符串
      */
     public $FlowGroupId;
 
@@ -53,7 +53,7 @@ class DescribeFlowInfoResponse extends AbstractModel
 
     /**
      * @param array $FlowDetailInfos 签署流程信息
-     * @param string $FlowGroupId 合同组ID
+     * @param string $FlowGroupId 合同组ID，为32位字符串
      * @param string $FlowGroupName 合同组名称
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

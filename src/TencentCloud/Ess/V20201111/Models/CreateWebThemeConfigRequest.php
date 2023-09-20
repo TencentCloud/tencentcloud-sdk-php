@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThemeType(string $ThemeType) 设置主题类型，取值如下：
 <ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
 </ul>
- * @method WebThemeConfig getWebThemeConfig() 获取主题配置
- * @method void setWebThemeConfig(WebThemeConfig $WebThemeConfig) 设置主题配置
+ * @method WebThemeConfig getWebThemeConfig() 获取电子签logo是否展示，主体颜色等配置项
+ * @method void setWebThemeConfig(WebThemeConfig $WebThemeConfig) 设置电子签logo是否展示，主体颜色等配置项
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -50,7 +50,7 @@ class CreateWebThemeConfigRequest extends AbstractModel
     public $ThemeType;
 
     /**
-     * @var WebThemeConfig 主题配置
+     * @var WebThemeConfig 电子签logo是否展示，主体颜色等配置项
      */
     public $WebThemeConfig;
 
@@ -65,7 +65,7 @@ class CreateWebThemeConfigRequest extends AbstractModel
      * @param string $ThemeType 主题类型，取值如下：
 <ul><li> **EMBED_WEB_THEME**：嵌入式主题（默认），web页面嵌入的主题风格配置</li>
 </ul>
-     * @param WebThemeConfig $WebThemeConfig 主题配置
+     * @param WebThemeConfig $WebThemeConfig 电子签logo是否展示，主体颜色等配置项
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */

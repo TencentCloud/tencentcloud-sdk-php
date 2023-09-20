@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupNames(array $BackupNames) 设置备份备注名，模糊查询
  * @method array getSnapshotIdList() 获取快照备份Id列表
  * @method void setSnapshotIdList(array $SnapshotIdList) 设置快照备份Id列表
+ * @method string getBackupRegion() 获取备份地域
+ * @method void setBackupRegion(string $BackupRegion) 设置备份地域
+ * @method string getIsCrossRegionsBackup() 获取是否跨地域备份
+ * @method void setIsCrossRegionsBackup(string $IsCrossRegionsBackup) 设置是否跨地域备份
  */
 class DescribeBackupListRequest extends AbstractModel
 {
@@ -118,6 +122,16 @@ class DescribeBackupListRequest extends AbstractModel
     public $SnapshotIdList;
 
     /**
+     * @var string 备份地域
+     */
+    public $BackupRegion;
+
+    /**
+     * @var string 是否跨地域备份
+     */
+    public $IsCrossRegionsBackup;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Limit 备份文件列表大小，取值范围(0,100]
      * @param integer $Offset 备份文件列表偏移，取值范围[0,INF)
@@ -132,6 +146,8 @@ class DescribeBackupListRequest extends AbstractModel
      * @param array $FileNames 备份文件名，模糊查询
      * @param array $BackupNames 备份备注名，模糊查询
      * @param array $SnapshotIdList 快照备份Id列表
+     * @param string $BackupRegion 备份地域
+     * @param string $IsCrossRegionsBackup 是否跨地域备份
      */
     function __construct()
     {
@@ -196,6 +212,14 @@ class DescribeBackupListRequest extends AbstractModel
 
         if (array_key_exists("SnapshotIdList",$param) and $param["SnapshotIdList"] !== null) {
             $this->SnapshotIdList = $param["SnapshotIdList"];
+        }
+
+        if (array_key_exists("BackupRegion",$param) and $param["BackupRegion"] !== null) {
+            $this->BackupRegion = $param["BackupRegion"];
+        }
+
+        if (array_key_exists("IsCrossRegionsBackup",$param) and $param["IsCrossRegionsBackup"] !== null) {
+            $this->IsCrossRegionsBackup = $param["IsCrossRegionsBackup"];
         }
     }
 }

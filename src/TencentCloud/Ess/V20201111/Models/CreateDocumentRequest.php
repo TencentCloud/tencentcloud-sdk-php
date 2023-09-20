@@ -37,9 +37,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getNeedPreview() 获取是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
 <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
  * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
 <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
  * @method integer getPreviewType() 获取预览模式下产生的预览链接类型 
 <ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
@@ -90,6 +92,7 @@ class CreateDocumentRequest extends AbstractModel
      * @var boolean 是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
 <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
      */
     public $NeedPreview;
 
@@ -124,6 +127,7 @@ class CreateDocumentRequest extends AbstractModel
      * @param boolean $NeedPreview 是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
 <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+注: `当使用的模板中存在动态表格控件时，预览结果中没有动态表格的填写内容`
      * @param integer $PreviewType 预览模式下产生的预览链接类型 
 <ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>

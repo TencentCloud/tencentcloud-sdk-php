@@ -37,15 +37,19 @@ use TencentCloud\Common\AbstractModel;
 如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
 如果要使用图片上传请传字段 Image
  * @method string getSealType() 获取电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章.
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul>
  * @method void setSealType(string $SealType) 设置电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章.
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul>
  * @method string getFileName() 获取电子印章图片文件名称，1-50个中文字符。
  * @method void setFileName(string $FileName) 设置电子印章图片文件名称，1-50个中文字符。
  * @method string getImage() 获取电子印章图片base64编码
@@ -76,24 +80,32 @@ PERSONNEL-人事专用章.
 
  * @method void setFileToken(string $FileToken) 设置通过文件上传时，服务端生成的电子印章上传图片的token
 
- * @method string getSealStyle() 获取印章样式:
+ * @method string getSealStyle() 获取印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章
- * @method void setSealStyle(string $SealStyle) 设置印章样式:
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul>
+ * @method void setSealStyle(string $SealStyle) 设置印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul>
  * @method string getSealSize() 获取印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm;
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul>
  * @method void setSealSize(string $SealSize) 设置印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm;
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul>
  */
 class CreateSealRequest extends AbstractModel
 {
@@ -123,10 +135,12 @@ class CreateSealRequest extends AbstractModel
 
     /**
      * @var string 电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章.
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul>
      */
     public $SealType;
 
@@ -182,19 +196,23 @@ PERSONNEL-人事专用章.
     public $FileToken;
 
     /**
-     * @var string 印章样式:
+     * @var string 印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul>
      */
     public $SealStyle;
 
     /**
      * @var string 印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm;
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul>
      */
     public $SealSize;
 
@@ -208,10 +226,12 @@ ellipse:椭圆印章;
 如果要使用系统生成印章，此值传：SealGenerateSourceSystem；
 如果要使用图片上传请传字段 Image
      * @param string $SealType 电子印章类型：
-OFFICIAL-公章；
-CONTRACT-合同专用章;
-FINANCE-合财务专用章;
-PERSONNEL-人事专用章.
+<ul>
+<li>OFFICIAL-公章；</li>
+<li>CONTRACT-合同专用章;</li>
+<li>FINANCE-合财务专用章;</li>
+<li>PERSONNEL-人事专用章.</li>
+</ul>
      * @param string $FileName 电子印章图片文件名称，1-50个中文字符。
      * @param string $Image 电子印章图片base64编码
 参数Image,FileToken或GenerateSource=SealGenerateSourceSystem三选一。
@@ -227,15 +247,19 @@ PERSONNEL-人事专用章.
      * @param string $SealCentralType 系统生成的印章只支持STAR
      * @param string $FileToken 通过文件上传时，服务端生成的电子印章上传图片的token
 
-     * @param string $SealStyle 印章样式:
+     * @param string $SealStyle 印章样式，取值如下:
 
-cycle:圆形印章;
-ellipse:椭圆印章;
-注：默认圆形印章
+<ul>
+<li>cycle:圆形印章;</li>
+<li>ellipse:椭圆印章;</li>
+<li>注：默认圆形印章</li>
+</ul>
      * @param string $SealSize 印章尺寸取值描述：
-42_42 圆形企业公章直径42mm；
-40_40 圆形企业印章直径40mm；
-45_30 椭圆形印章45mm x 30mm;
+<ul>
+<li>42_42 圆形企业公章直径42mm；</li>
+<li>40_40 圆形企业印章直径40mm；</li>
+<li>45_30 椭圆形印章45mm x 30mm;</li>
+</ul>
      */
     function __construct()
     {

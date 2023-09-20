@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDomains() 获取域名列表
  * @method void setDomains(array $Domains) 设置域名列表
- * @method string getEdition() 获取版本
- * @method void setEdition(string $Edition) 设置版本
+ * @method string getEdition() 获取实例类型
+ * @method void setEdition(string $Edition) 设置实例类型
  * @method string getInstanceID() 获取实例id
  * @method void setInstanceID(string $InstanceID) 设置实例id
  */
@@ -35,7 +35,7 @@ class DeleteSpartaProtectionRequest extends AbstractModel
     public $Domains;
 
     /**
-     * @var string 版本
+     * @var string 实例类型
      */
     public $Edition;
 
@@ -46,7 +46,7 @@ class DeleteSpartaProtectionRequest extends AbstractModel
 
     /**
      * @param array $Domains 域名列表
-     * @param string $Edition 版本
+     * @param string $Edition 实例类型
      * @param string $InstanceID 实例id
      */
     function __construct()

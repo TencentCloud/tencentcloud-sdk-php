@@ -20,29 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyPdf返回参数结构体
  *
- * @method integer getVerifyResult() 获取验签结果，1-文件未被篡改，全部签名在腾讯电子签完成； 2-文件未被篡改，部分签名在腾讯电子签完成；3-文件被篡改；4-异常：文件内没有签名域；5-异常：文件签名格式错误
- * @method void setVerifyResult(integer $VerifyResult) 设置验签结果，1-文件未被篡改，全部签名在腾讯电子签完成； 2-文件未被篡改，部分签名在腾讯电子签完成；3-文件被篡改；4-异常：文件内没有签名域；5-异常：文件签名格式错误
- * @method array getPdfVerifyResults() 获取验签结果详情，每个签名域对应的验签结果。状态值：1-验签成功，在电子签签署；2-验签成功，在其他平台签署；3-验签失败；4-pdf文件没有签名域；5-文件签名格式错误
- * @method void setPdfVerifyResults(array $PdfVerifyResults) 设置验签结果详情，每个签名域对应的验签结果。状态值：1-验签成功，在电子签签署；2-验签成功，在其他平台签署；3-验签失败；4-pdf文件没有签名域；5-文件签名格式错误
- * @method string getVerifySerialNo() 获取验签序列号
- * @method void setVerifySerialNo(string $VerifySerialNo) 设置验签序列号
+ * @method integer getVerifyResult() 获取验签结果代码，代码的含义如下：
+
+<ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
+<li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
+<li>**3**：文件被篡改。</li>
+<li>**4**：异常：文件内没有签名域。</li>
+<li>**5**：异常：文件签名格式错误。</li></ul>
+ * @method void setVerifyResult(integer $VerifyResult) 设置验签结果代码，代码的含义如下：
+
+<ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
+<li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
+<li>**3**：文件被篡改。</li>
+<li>**4**：异常：文件内没有签名域。</li>
+<li>**5**：异常：文件签名格式错误。</li></ul>
+ * @method array getPdfVerifyResults() 获取验签结果详情，每个签名域对应的验签结果。状态值如下
+<ul><li> **1** :验签成功，在电子签签署</li>
+<li> **2** :验签成功，在其他平台签署</li>
+<li> **3** :验签失败</li>
+<li> **4** :pdf文件没有签名域</li>
+<li> **5** :文件签名格式错误</li></ul>
+ * @method void setPdfVerifyResults(array $PdfVerifyResults) 设置验签结果详情，每个签名域对应的验签结果。状态值如下
+<ul><li> **1** :验签成功，在电子签签署</li>
+<li> **2** :验签成功，在其他平台签署</li>
+<li> **3** :验签失败</li>
+<li> **4** :pdf文件没有签名域</li>
+<li> **5** :文件签名格式错误</li></ul>
+ * @method string getVerifySerialNo() 获取验签序列号, 为11为数组组成的字符串
+ * @method void setVerifySerialNo(string $VerifySerialNo) 设置验签序列号, 为11为数组组成的字符串
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class VerifyPdfResponse extends AbstractModel
 {
     /**
-     * @var integer 验签结果，1-文件未被篡改，全部签名在腾讯电子签完成； 2-文件未被篡改，部分签名在腾讯电子签完成；3-文件被篡改；4-异常：文件内没有签名域；5-异常：文件签名格式错误
+     * @var integer 验签结果代码，代码的含义如下：
+
+<ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
+<li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
+<li>**3**：文件被篡改。</li>
+<li>**4**：异常：文件内没有签名域。</li>
+<li>**5**：异常：文件签名格式错误。</li></ul>
      */
     public $VerifyResult;
 
     /**
-     * @var array 验签结果详情，每个签名域对应的验签结果。状态值：1-验签成功，在电子签签署；2-验签成功，在其他平台签署；3-验签失败；4-pdf文件没有签名域；5-文件签名格式错误
+     * @var array 验签结果详情，每个签名域对应的验签结果。状态值如下
+<ul><li> **1** :验签成功，在电子签签署</li>
+<li> **2** :验签成功，在其他平台签署</li>
+<li> **3** :验签失败</li>
+<li> **4** :pdf文件没有签名域</li>
+<li> **5** :文件签名格式错误</li></ul>
      */
     public $PdfVerifyResults;
 
     /**
-     * @var string 验签序列号
+     * @var string 验签序列号, 为11为数组组成的字符串
      */
     public $VerifySerialNo;
 
@@ -52,9 +85,20 @@ class VerifyPdfResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $VerifyResult 验签结果，1-文件未被篡改，全部签名在腾讯电子签完成； 2-文件未被篡改，部分签名在腾讯电子签完成；3-文件被篡改；4-异常：文件内没有签名域；5-异常：文件签名格式错误
-     * @param array $PdfVerifyResults 验签结果详情，每个签名域对应的验签结果。状态值：1-验签成功，在电子签签署；2-验签成功，在其他平台签署；3-验签失败；4-pdf文件没有签名域；5-文件签名格式错误
-     * @param string $VerifySerialNo 验签序列号
+     * @param integer $VerifyResult 验签结果代码，代码的含义如下：
+
+<ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
+<li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
+<li>**3**：文件被篡改。</li>
+<li>**4**：异常：文件内没有签名域。</li>
+<li>**5**：异常：文件签名格式错误。</li></ul>
+     * @param array $PdfVerifyResults 验签结果详情，每个签名域对应的验签结果。状态值如下
+<ul><li> **1** :验签成功，在电子签签署</li>
+<li> **2** :验签成功，在其他平台签署</li>
+<li> **3** :验签失败</li>
+<li> **4** :pdf文件没有签名域</li>
+<li> **5** :文件签名格式错误</li></ul>
+     * @param string $VerifySerialNo 验签序列号, 为11为数组组成的字符串
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

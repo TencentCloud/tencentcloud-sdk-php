@@ -22,24 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserName() 获取个人用户姓名
  * @method void setUserName(string $UserName) 设置个人用户姓名
- * @method string getIdCardNumber() 获取身份证件号码
- * @method void setIdCardNumber(string $IdCardNumber) 设置身份证件号码
- * @method string getSealName() 获取印章名称
- * @method void setSealName(string $SealName) 设置印章名称
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
- * @method string getIdCardType() 获取身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾
- * @method void setIdCardType(string $IdCardType) 设置身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾
+ * @method string getIdCardNumber() 获取证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+ * @method void setIdCardNumber(string $IdCardNumber) 设置证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+ * @method string getSealName() 获取印章名称，长度1-50个字。
+ * @method void setSealName(string $SealName) 设置印章名称，长度1-50个字。
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getIdCardType() 获取证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+ * @method void setIdCardType(string $IdCardType) 设置证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method string getSealImage() 获取印章图片的base64
 注：已废弃
 请先通过UploadFiles接口上传文件，获取 FileId
@@ -64,22 +68,28 @@ BLUE 蓝色。
 BLACK 黑色,
 RED 红色,
 BLUE 蓝色。
- * @method boolean getProcessSeal() 获取是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。
- * @method void setProcessSeal(boolean $ProcessSeal) 设置是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。
+ * @method boolean getProcessSeal() 获取是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul>
+ * @method void setProcessSeal(boolean $ProcessSeal) 设置是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul>
  * @method string getFileId() 获取印章图片文件 id
 取值：
 填写的FileId通过UploadFiles接口上传文件获取。
  * @method void setFileId(string $FileId) 设置印章图片文件 id
 取值：
 填写的FileId通过UploadFiles接口上传文件获取。
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
  * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
  */
@@ -91,27 +101,29 @@ class CreatePreparedPersonalEsignRequest extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 身份证件号码
+     * @var string 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public $IdCardNumber;
 
     /**
-     * @var string 印章名称
+     * @var string 印章名称，长度1-50个字。
      */
     public $SealName;
 
     /**
-     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾
+     * @var string 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
     public $IdCardType;
 
@@ -149,10 +161,12 @@ BLUE 蓝色。
     public $SealColor;
 
     /**
-     * @var boolean 是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。
+     * @var boolean 是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul>
      */
     public $ProcessSeal;
 
@@ -164,7 +178,8 @@ true：做透明化处理和颜色增强。
     public $FileId;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
@@ -175,15 +190,17 @@ true：做透明化处理和颜色增强。
 
     /**
      * @param string $UserName 个人用户姓名
-     * @param string $IdCardNumber 身份证件号码
-     * @param string $SealName 印章名称
-     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
-     * @param string $IdCardType 身份证件类型:
-ID_CARD 身份证
-PASSPORT 护照
-HONGKONG_AND_MACAO 中国香港
-FOREIGN_ID_CARD 境外身份
-HONGKONG_MACAO_AND_TAIWAN 中国台湾
+     * @param string $IdCardNumber 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * @param string $SealName 印章名称，长度1-50个字。
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $IdCardType 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param string $SealImage 印章图片的base64
 注：已废弃
 请先通过UploadFiles接口上传文件，获取 FileId
@@ -196,14 +213,17 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
 BLACK 黑色,
 RED 红色,
 BLUE 蓝色。
-     * @param boolean $ProcessSeal 是否处理印章
-默认不做印章处理。
-取值：false：不做任何处理；
-true：做透明化处理和颜色增强。
+     * @param boolean $ProcessSeal 是否处理印章，默认不做印章处理。
+取值如下：
+<ul>
+<li>false：不做任何处理；</li>
+<li>true：做透明化处理和颜色增强。</li>
+</ul>
      * @param string $FileId 印章图片文件 id
 取值：
 填写的FileId通过UploadFiles接口上传文件获取。
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
      */
     function __construct()

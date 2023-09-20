@@ -21,102 +21,102 @@ use TencentCloud\Common\AbstractModel;
  * 创建合同个性化参数
  *
  * @method boolean getCanEditFlow() 获取是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
  * @method void setCanEditFlow(boolean $CanEditFlow) 设置是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
  * @method boolean getCanEditFormField() 获取是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/>
  * @method void setCanEditFormField(boolean $CanEditFormField) 设置是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/>
  * @method boolean getHideShowFlowName() 获取发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/>
  * @method void setHideShowFlowName(boolean $HideShowFlowName) 设置发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/>
  * @method boolean getHideShowFlowType() 获取发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
 
  * @method void setHideShowFlowType(boolean $HideShowFlowType) 设置发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
 
  * @method boolean getHideShowDeadline() 获取发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/>
  * @method void setHideShowDeadline(boolean $HideShowDeadline) 设置发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/>
  * @method boolean getCanSkipAddApprover() 获取发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
 
  * @method void setCanSkipAddApprover(boolean $CanSkipAddApprover) 设置发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
 
  * @method boolean getSkipUploadFile() 获取文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/>
  * @method void setSkipUploadFile(boolean $SkipUploadFile) 设置文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/>
  * @method boolean getForbidEditFillComponent() 获取禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件
+<br/>false:允许编辑填写控件（默认值）
+<br/>
  * @method void setForbidEditFillComponent(boolean $ForbidEditFillComponent) 设置禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件
- * @method string getCustomCreateFlowDescription() 获取定制化发起合同弹窗的描述信息，描述信息最长500
+<br/>false:允许编辑填写控件（默认值）
+<br/>
+ * @method string getCustomCreateFlowDescription() 获取定制化发起合同弹窗的描述信息，描述信息最长500字符
 
- * @method void setCustomCreateFlowDescription(string $CustomCreateFlowDescription) 设置定制化发起合同弹窗的描述信息，描述信息最长500
+ * @method void setCustomCreateFlowDescription(string $CustomCreateFlowDescription) 设置定制化发起合同弹窗的描述信息，描述信息最长500字符
  */
 class CreateFlowOption extends AbstractModel
 {
     /**
      * @var boolean 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
      */
     public $CanEditFlow;
 
     /**
      * @var boolean 是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/>
      */
     public $CanEditFormField;
 
     /**
      * @var boolean 发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/>
      */
     public $HideShowFlowName;
 
     /**
      * @var boolean 发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
 
      */
     public $HideShowFlowType;
@@ -124,16 +124,16 @@ class CreateFlowOption extends AbstractModel
     /**
      * @var boolean 发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/>
      */
     public $HideShowDeadline;
 
     /**
      * @var boolean 发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
 
      */
     public $CanSkipAddApprover;
@@ -141,59 +141,59 @@ class CreateFlowOption extends AbstractModel
     /**
      * @var boolean 文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/>
      */
     public $SkipUploadFile;
 
     /**
      * @var boolean 禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件
+<br/>false:允许编辑填写控件（默认值）
+<br/>
      */
     public $ForbidEditFillComponent;
 
     /**
-     * @var string 定制化发起合同弹窗的描述信息，描述信息最长500
+     * @var string 定制化发起合同弹窗的描述信息，描述信息最长500字符
 
      */
     public $CustomCreateFlowDescription;
 
     /**
      * @param boolean $CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
-<br/>true：允许编辑（默认），<br/>false：不允许编辑<br/>默认：false：不允许编辑
+<br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
      * @param boolean $CanEditFormField 是否允许编辑模板控件
 <br/>true:允许编辑模板控件信息
-<br/>false:不允许编辑模板控件信息
-<br/>默认false:不允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息（默认值）
+<br/>
      * @param boolean $HideShowFlowName 发起页面隐藏合同名称展示
 <br/>true:发起页面隐藏合同名称展示
-<br/>false:发起页面不隐藏合同名称展示
-<br/>默认false:发起页面不隐藏合同名称展示
+<br/>false:发起页面不隐藏合同名称展示（默认值）
+<br/>
      * @param boolean $HideShowFlowType 发起页面隐藏合同类型展示
 <br/>true:发起页面隐藏合同类型展示
-<br/>false:发起页面不隐藏合同类型展示
-<br/>默认false:发起页面不隐藏合同类型展示
+<br/>false:发起页面不隐藏合同类型展示（默认值）
+<br/>
 
      * @param boolean $HideShowDeadline 发起页面隐藏合同截止日期展示
 <br/>true:发起页面隐藏合同截止日期展示
-<br/>false:发起页面不隐藏合同截止日期展示
-<br/>默认false:发起页面不隐藏合同截止日期展示
+<br/>false:发起页面不隐藏合同截止日期展示（默认值）
+<br/>
      * @param boolean $CanSkipAddApprover 发起页面允许跳过添加签署人环节
 <br/>true:发起页面允许跳过添加签署人环节
-<br/>false:发起页面不允许跳过添加签署人环节
-<br/>默认false:发起页面不允许跳过添加签署人环节
+<br/>false:发起页面不允许跳过添加签署人环节（默认值）
+<br/>
 
      * @param boolean $SkipUploadFile 文件发起页面跳过文件上传步骤
 <br/>true:文件发起页面跳过文件上传步骤
-<br/>false:文件发起页面不跳过文件上传步骤
-<br/>默认false:文件发起页面不跳过文件上传步骤
+<br/>false:文件发起页面不跳过文件上传步骤（默认值）
+<br/>
      * @param boolean $ForbidEditFillComponent 禁止编辑填写控件
 <br/>true:禁止编辑填写控件
-<br/>false:允许编辑填写控件
-<br/>默认false:允许编辑填写控件
-     * @param string $CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500
+<br/>false:允许编辑填写控件（默认值）
+<br/>
+     * @param string $CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500字符
      */
     function __construct()
     {

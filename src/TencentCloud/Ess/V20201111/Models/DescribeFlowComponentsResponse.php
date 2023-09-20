@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowComponents返回参数结构体
  *
- * @method array getRecipientComponentInfos() 获取流程关联的填写控件信息，按照参与方进行分类返回。
+ * @method array getRecipientComponentInfos() 获取合同流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecipientComponentInfos(array $RecipientComponentInfos) 设置流程关联的填写控件信息，按照参与方进行分类返回。
+ * @method void setRecipientComponentInfos(array $RecipientComponentInfos) 设置合同流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFlowComponentsResponse extends AbstractModel
 {
     /**
-     * @var array 流程关联的填写控件信息，按照参与方进行分类返回。
+     * @var array 合同流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecipientComponentInfos;
@@ -41,7 +41,7 @@ class DescribeFlowComponentsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RecipientComponentInfos 流程关联的填写控件信息，按照参与方进行分类返回。
+     * @param array $RecipientComponentInfos 合同流程关联的填写控件信息，按照参与方进行分类返回。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

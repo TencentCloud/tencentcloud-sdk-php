@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowInfo请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`	
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`	
  * @method array getFlowIds() 获取需要查询的流程ID列表，限制最大100个
 
 如果查询合同组的信息,不要传此参数
  * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表，限制最大100个
 
 如果查询合同组的信息,不要传此参数
- * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
  * @method string getFlowGroupId() 获取合同组ID, 如果传此参数会忽略FlowIds入参
  所以如传此参数不要传FlowIds参数
 
@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFlowInfoRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填
+     * @var UserInfo 执行本接口操作的员工信息。 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`	
      */
     public $Operator;
 
@@ -51,7 +51,7 @@ class DescribeFlowInfoRequest extends AbstractModel
     public $FlowIds;
 
     /**
-     * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @var Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
      */
     public $Agent;
 
@@ -63,11 +63,11 @@ class DescribeFlowInfoRequest extends AbstractModel
     public $FlowGroupId;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param UserInfo $Operator 执行本接口操作的员工信息。 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`	
      * @param array $FlowIds 需要查询的流程ID列表，限制最大100个
 
 如果查询合同组的信息,不要传此参数
-     * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
      * @param string $FlowGroupId 合同组ID, 如果传此参数会忽略FlowIds入参
  所以如传此参数不要传FlowIds参数
      */

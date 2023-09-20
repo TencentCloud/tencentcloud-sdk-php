@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupType(string $BackupType) 设置备份方式，logic-逻辑备份，snapshot-快照备份
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogicCrossRegionsConfigUpdateTime() 获取跨地域逻辑备份配置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogicCrossRegionsConfigUpdateTime(string $LogicCrossRegionsConfigUpdateTime) 设置跨地域逻辑备份配置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,6 +71,12 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $BackupType;
 
     /**
+     * @var string 跨地域逻辑备份配置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogicCrossRegionsConfigUpdateTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +88,8 @@ class DescribeBackupConfigResponse extends AbstractModel
      * @param array $BackupFreq 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupType 备份方式，logic-逻辑备份，snapshot-快照备份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogicCrossRegionsConfigUpdateTime 跨地域逻辑备份配置修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -112,6 +124,10 @@ class DescribeBackupConfigResponse extends AbstractModel
 
         if (array_key_exists("BackupType",$param) and $param["BackupType"] !== null) {
             $this->BackupType = $param["BackupType"];
+        }
+
+        if (array_key_exists("LogicCrossRegionsConfigUpdateTime",$param) and $param["LogicCrossRegionsConfigUpdateTime"] !== null) {
+            $this->LogicCrossRegionsConfigUpdateTime = $param["LogicCrossRegionsConfigUpdateTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

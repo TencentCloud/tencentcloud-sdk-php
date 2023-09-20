@@ -71,6 +71,8 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeRecordPlanResponse DescribeRecordPlan(Models\DescribeRecordPlanRequest $req) 用于查询实时上云计划详情
  * @method Models\DescribeRecordPlaybackUrlResponse DescribeRecordPlaybackUrl(Models\DescribeRecordPlaybackUrlRequest $req) 用于获取云端录像回放url地址
  * @method Models\DescribeRecordRetrieveTaskResponse DescribeRecordRetrieveTask(Models\DescribeRecordRetrieveTaskRequest $req) 用于查询云录像取回任务详情
+ * @method Models\DescribeRecordSliceResponse DescribeRecordSlice(Models\DescribeRecordSliceRequest $req) 平台支持将数据以TS切片的形式存入客户自有COS桶，该接口用于支持客户快捷查询切片信息列表
+（注意：只支持标准存储类型的查询）
  * @method Models\DescribeRecordTemplateResponse DescribeRecordTemplate(Models\DescribeRecordTemplateRequest $req) 用于查询实时上云模板详情
  * @method Models\DescribeStreamAuthResponse DescribeStreamAuth(Models\DescribeStreamAuthRequest $req) 用于查询推拉流鉴权配置。
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 用于查询任务详情

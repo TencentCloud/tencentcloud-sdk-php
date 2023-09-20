@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSealPolicy返回参数结构体
  *
- * @method array getUserIds() 获取最终授权成功的。其他的跳过的是已经授权了的
- * @method void setUserIds(array $UserIds) 设置最终授权成功的。其他的跳过的是已经授权了的
+ * @method array getUserIds() 获取最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
+ * @method void setUserIds(array $UserIds) 设置最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSealPolicyResponse extends AbstractModel
 {
     /**
-     * @var array 最终授权成功的。其他的跳过的是已经授权了的
+     * @var array 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      */
     public $UserIds;
 
@@ -38,7 +41,8 @@ class CreateSealPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $UserIds 最终授权成功的。其他的跳过的是已经授权了的
+     * @param array $UserIds 最终授权成功的用户ID，在腾讯电子签平台的唯一身份标识，为32位字符串。
+可登录腾讯电子签控制台，在 "更多能力"->"组织管理" 中查看某位员工的UserId(在页面中展示为用户ID)。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

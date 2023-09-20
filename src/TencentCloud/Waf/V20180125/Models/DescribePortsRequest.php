@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePorts请求参数结构体
  *
- * @method string getEdition() 获取版本
- * @method void setEdition(string $Edition) 设置版本
  * @method string getInstanceID() 获取实例ID
  * @method void setInstanceID(string $InstanceID) 设置实例ID
+ * @method string getEdition() 获取实例类型
+ * @method void setEdition(string $Edition) 设置实例类型
  */
 class DescribePortsRequest extends AbstractModel
 {
-    /**
-     * @var string 版本
-     */
-    public $Edition;
-
     /**
      * @var string 实例ID
      */
     public $InstanceID;
 
     /**
-     * @param string $Edition 版本
+     * @var string 实例类型
+     */
+    public $Edition;
+
+    /**
      * @param string $InstanceID 实例ID
+     * @param string $Edition 实例类型
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribePortsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
-            $this->Edition = $param["Edition"];
-        }
-
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
+            $this->Edition = $param["Edition"];
         }
     }
 }

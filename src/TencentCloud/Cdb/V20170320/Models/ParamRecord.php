@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSucess(boolean $IsSucess) 设置参数是否修改成功
  * @method string getModifyTime() 获取修改时间
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
+ * @method boolean getIsSuccess() 获取参数是否修改成功
+ * @method void setIsSuccess(boolean $IsSuccess) 设置参数是否修改成功
  */
 class ParamRecord extends AbstractModel
 {
@@ -57,6 +59,7 @@ class ParamRecord extends AbstractModel
 
     /**
      * @var boolean 参数是否修改成功
+     * @deprecated
      */
     public $IsSucess;
 
@@ -66,12 +69,18 @@ class ParamRecord extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var boolean 参数是否修改成功
+     */
+    public $IsSuccess;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $ParamName 参数名称
      * @param string $OldValue 参数修改前的值
      * @param string $NewValue 参数修改后的值
      * @param boolean $IsSucess 参数是否修改成功
      * @param string $ModifyTime 修改时间
+     * @param boolean $IsSuccess 参数是否修改成功
      */
     function __construct()
     {
@@ -108,6 +117,10 @@ class ParamRecord extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("IsSuccess",$param) and $param["IsSuccess"] !== null) {
+            $this->IsSuccess = $param["IsSuccess"];
         }
     }
 }

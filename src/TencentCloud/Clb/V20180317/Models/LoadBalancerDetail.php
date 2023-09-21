@@ -164,9 +164,9 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZones(array $Zones) 设置内网负载均衡实例所在可用区，由白名单CLB_Internal_Zone控制
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSniSwitch() 获取是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+ * @method integer getSniSwitch() 获取是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+ * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLoadBalancerDomain() 获取负载均衡实例的域名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -396,7 +396,7 @@ Public：公网属性， Private：内网属性。
     public $Zones;
 
     /**
-     * @var integer 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+     * @var integer 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SniSwitch;
@@ -486,7 +486,7 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zones 内网负载均衡实例所在可用区，由白名单CLB_Internal_Zone控制
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+     * @param integer $SniSwitch 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoadBalancerDomain 负载均衡实例的域名。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,20 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 此结构 (FormField) 用于描述内容控件填充结构。
  *
- * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
-TEXT - 文本内容
-MULTI_LINE_TEXT - 文本内容
-CHECK_BOX - true/false
-FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-SELECTOR - 选项值
-DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
- * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
-TEXT - 文本内容
-MULTI_LINE_TEXT - 文本内容
-CHECK_BOX - true/false
-FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-SELECTOR - 选项值
-DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
+ * @method string getComponentValue() 获取控件填充值，ComponentType和传入值格式对应关系如下：
+<ul>
+<li>TEXT - 普通文本控件，需输入文本字符串；</li>
+<li>MULTI_LINE_TEXT - 多行文本控件，需输入文本字符串；</li>
+<li>CHECK_BOX - 勾选框控件，若选中需填写ComponentValue，填写 true或者 false 字符串；</li>
+<li>FILL_IMAGE - 图片控件，需填写ComponentValue为图片的资源 ID；</li>
+<li>DYNAMIC_TABLE - 动态表格控件；</li>
+<li>ATTACHMENT - 附件控件，需填写ComponentValue为附件图片的资源 ID列表，以逗号分割；</li>
+<li>DATE - 日期控件；格式为 <b>xxxx年xx月xx日</b> 字符串；</li>
+<li>DISTRICT - 省市区行政区控件，需填写ComponentValue为省市区行政区字符串内容；</li>
+</ul>
+
+ * @method void setComponentValue(string $ComponentValue) 设置控件填充值，ComponentType和传入值格式对应关系如下：
+<ul>
+<li>TEXT - 普通文本控件，需输入文本字符串；</li>
+<li>MULTI_LINE_TEXT - 多行文本控件，需输入文本字符串；</li>
+<li>CHECK_BOX - 勾选框控件，若选中需填写ComponentValue，填写 true或者 false 字符串；</li>
+<li>FILL_IMAGE - 图片控件，需填写ComponentValue为图片的资源 ID；</li>
+<li>DYNAMIC_TABLE - 动态表格控件；</li>
+<li>ATTACHMENT - 附件控件，需填写ComponentValue为附件图片的资源 ID列表，以逗号分割；</li>
+<li>DATE - 日期控件；格式为 <b>xxxx年xx月xx日</b> 字符串；</li>
+<li>DISTRICT - 省市区行政区控件，需填写ComponentValue为省市区行政区字符串内容；</li>
+</ul>
+
  * @method string getComponentId() 获取表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,13 +62,18 @@ CreateFlowsByTemplates 接口不使用此字段。
 class FormField extends AbstractModel
 {
     /**
-     * @var string 控件填充vaule，ComponentType和传入值类型对应关系：
-TEXT - 文本内容
-MULTI_LINE_TEXT - 文本内容
-CHECK_BOX - true/false
-FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-SELECTOR - 选项值
-DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
+     * @var string 控件填充值，ComponentType和传入值格式对应关系如下：
+<ul>
+<li>TEXT - 普通文本控件，需输入文本字符串；</li>
+<li>MULTI_LINE_TEXT - 多行文本控件，需输入文本字符串；</li>
+<li>CHECK_BOX - 勾选框控件，若选中需填写ComponentValue，填写 true或者 false 字符串；</li>
+<li>FILL_IMAGE - 图片控件，需填写ComponentValue为图片的资源 ID；</li>
+<li>DYNAMIC_TABLE - 动态表格控件；</li>
+<li>ATTACHMENT - 附件控件，需填写ComponentValue为附件图片的资源 ID列表，以逗号分割；</li>
+<li>DATE - 日期控件；格式为 <b>xxxx年xx月xx日</b> 字符串；</li>
+<li>DISTRICT - 省市区行政区控件，需填写ComponentValue为省市区行政区字符串内容；</li>
+</ul>
+
      */
     public $ComponentValue;
 
@@ -82,13 +97,18 @@ CreateFlowsByTemplates 接口不使用此字段。
     public $LockComponentValue;
 
     /**
-     * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
-TEXT - 文本内容
-MULTI_LINE_TEXT - 文本内容
-CHECK_BOX - true/false
-FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-SELECTOR - 选项值
-DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo
+     * @param string $ComponentValue 控件填充值，ComponentType和传入值格式对应关系如下：
+<ul>
+<li>TEXT - 普通文本控件，需输入文本字符串；</li>
+<li>MULTI_LINE_TEXT - 多行文本控件，需输入文本字符串；</li>
+<li>CHECK_BOX - 勾选框控件，若选中需填写ComponentValue，填写 true或者 false 字符串；</li>
+<li>FILL_IMAGE - 图片控件，需填写ComponentValue为图片的资源 ID；</li>
+<li>DYNAMIC_TABLE - 动态表格控件；</li>
+<li>ATTACHMENT - 附件控件，需填写ComponentValue为附件图片的资源 ID列表，以逗号分割；</li>
+<li>DATE - 日期控件；格式为 <b>xxxx年xx月xx日</b> 字符串；</li>
+<li>DISTRICT - 省市区行政区控件，需填写ComponentValue为省市区行政区字符串内容；</li>
+</ul>
+
      * @param string $ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。

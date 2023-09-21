@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagValue(string $TagValue) 设置标签值
  * @method integer getCanDelete() 获取是否可以删除
  * @method void setCanDelete(integer $CanDelete) 设置是否可以删除
+ * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagWithDelete extends AbstractModel
 {
@@ -45,9 +49,17 @@ class TagWithDelete extends AbstractModel
     public $CanDelete;
 
     /**
+     * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Category;
+
+    /**
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
      * @param integer $CanDelete 是否可以删除
+     * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class TagWithDelete extends AbstractModel
 
         if (array_key_exists("CanDelete",$param) and $param["CanDelete"] !== null) {
             $this->CanDelete = $param["CanDelete"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

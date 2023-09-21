@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceType(string $ServiceType) 设置资源类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagResource extends AbstractModel
 {
@@ -69,12 +73,20 @@ class TagResource extends AbstractModel
     public $ServiceType;
 
     /**
+     * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Category;
+
+    /**
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
      * @param string $ResourceId 资源ID
      * @param string $TagKeyMd5 标签键MD5值
      * @param string $TagValueMd5 标签值MD5值
      * @param string $ServiceType 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,6 +124,10 @@ class TagResource extends AbstractModel
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
             $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

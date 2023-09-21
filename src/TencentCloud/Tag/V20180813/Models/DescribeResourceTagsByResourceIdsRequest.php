@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method integer getLimit() 获取每页大小，默认为 15
  * @method void setLimit(integer $Limit) 设置每页大小，默认为 15
+ * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+ * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
  */
 class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public $Category;
+
+    /**
      * @param string $ServiceType 业务类型
      * @param string $ResourcePrefix 资源前缀
      * @param array $ResourceIds 资源ID数组，大小不超过50
      * @param string $ResourceRegion 资源所在地域
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param integer $Limit 每页大小，默认为 15
+     * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateUin(integer $CreateUin) 设置创建者用户 Uin，不传或为空只将 Uin 作为条件查询
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
- * @method integer getLimit() 获取每页大小，默认为 15
- * @method void setLimit(integer $Limit) 设置每页大小，默认为 15
+ * @method integer getLimit() 获取每页大小，默认为 15，最大1000
+ * @method void setLimit(integer $Limit) 设置每页大小，默认为 15，最大1000
  * @method integer getShowProject() 获取是否展现项目
  * @method void setShowProject(integer $ShowProject) 设置是否展现项目
+ * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+ * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
  */
 class DescribeTagKeysRequest extends AbstractModel
 {
@@ -42,7 +44,7 @@ class DescribeTagKeysRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 每页大小，默认为 15
+     * @var integer 每页大小，默认为 15，最大1000
      */
     public $Limit;
 
@@ -52,10 +54,16 @@ class DescribeTagKeysRequest extends AbstractModel
     public $ShowProject;
 
     /**
+     * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public $Category;
+
+    /**
      * @param integer $CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
-     * @param integer $Limit 每页大小，默认为 15
+     * @param integer $Limit 每页大小，默认为 15，最大1000
      * @param integer $ShowProject 是否展现项目
+     * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTagKeysRequest extends AbstractModel
 
         if (array_key_exists("ShowProject",$param) and $param["ShowProject"] !== null) {
             $this->ShowProject = $param["ShowProject"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

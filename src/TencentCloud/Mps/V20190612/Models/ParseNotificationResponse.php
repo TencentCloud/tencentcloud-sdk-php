@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleTaskEvent(ScheduleTask $ScheduleTaskEvent) 设置编排任务信息，仅当 EventType 为 ScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTimestamp() 获取- 过期时间，事件通知签名过期 UNIX 时间戳。
+- 来自媒体处理的消息通知默认过期时间是10分钟，如果一条消息通知中的 Timestamp 值所指定的时间已经过期，则可以判定这条通知无效，进而可以防止网络重放攻击。
+- Timestamp 的格式为十进制 UNIX 时间戳，即从1970年01月01日（UTC/GMT 的午夜）开始所经过的秒数。
+
+ * @method void setTimestamp(integer $Timestamp) 设置- 过期时间，事件通知签名过期 UNIX 时间戳。
+- 来自媒体处理的消息通知默认过期时间是10分钟，如果一条消息通知中的 Timestamp 值所指定的时间已经过期，则可以判定这条通知无效，进而可以防止网络重放攻击。
+- Timestamp 的格式为十进制 UNIX 时间戳，即从1970年01月01日（UTC/GMT 的午夜）开始所经过的秒数。
+
+ * @method string getSign() 获取事件通知安全签名 Sign = MD5（NotifyKey + Timestamp）。说明：媒体处理把 TaskNotifyConfig 里面的NotifyKey 和 Timestamp 进行字符串拼接后通过 MD5 计算得出 Sign 值，并将其放在通知消息里，您的后台服务器在收到通知消息后可以根据同样的算法确认 Sign 是否正确，进而确认消息是否确实来自媒体处理后台。
+ * @method void setSign(string $Sign) 设置事件通知安全签名 Sign = MD5（NotifyKey + Timestamp）。说明：媒体处理把 TaskNotifyConfig 里面的NotifyKey 和 Timestamp 进行字符串拼接后通过 MD5 计算得出 Sign 值，并将其放在通知消息里，您的后台服务器在收到通知消息后可以根据同样的算法确认 Sign 是否正确，进而确认消息是否确实来自媒体处理后台。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -86,6 +96,19 @@ class ParseNotificationResponse extends AbstractModel
     public $ScheduleTaskEvent;
 
     /**
+     * @var integer - 过期时间，事件通知签名过期 UNIX 时间戳。
+- 来自媒体处理的消息通知默认过期时间是10分钟，如果一条消息通知中的 Timestamp 值所指定的时间已经过期，则可以判定这条通知无效，进而可以防止网络重放攻击。
+- Timestamp 的格式为十进制 UNIX 时间戳，即从1970年01月01日（UTC/GMT 的午夜）开始所经过的秒数。
+
+     */
+    public $Timestamp;
+
+    /**
+     * @var string 事件通知安全签名 Sign = MD5（NotifyKey + Timestamp）。说明：媒体处理把 TaskNotifyConfig 里面的NotifyKey 和 Timestamp 进行字符串拼接后通过 MD5 计算得出 Sign 值，并将其放在通知消息里，您的后台服务器在收到通知消息后可以根据同样的算法确认 Sign 是否正确，进而确认消息是否确实来自媒体处理后台。
+     */
+    public $Sign;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +126,11 @@ class ParseNotificationResponse extends AbstractModel
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      * @param ScheduleTask $ScheduleTaskEvent 编排任务信息，仅当 EventType 为 ScheduleTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Timestamp - 过期时间，事件通知签名过期 UNIX 时间戳。
+- 来自媒体处理的消息通知默认过期时间是10分钟，如果一条消息通知中的 Timestamp 值所指定的时间已经过期，则可以判定这条通知无效，进而可以防止网络重放攻击。
+- Timestamp 的格式为十进制 UNIX 时间戳，即从1970年01月01日（UTC/GMT 的午夜）开始所经过的秒数。
+
+     * @param string $Sign 事件通知安全签名 Sign = MD5（NotifyKey + Timestamp）。说明：媒体处理把 TaskNotifyConfig 里面的NotifyKey 和 Timestamp 进行字符串拼接后通过 MD5 计算得出 Sign 值，并将其放在通知消息里，您的后台服务器在收到通知消息后可以根据同样的算法确认 Sign 是否正确，进而确认消息是否确实来自媒体处理后台。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -143,6 +171,14 @@ class ParseNotificationResponse extends AbstractModel
         if (array_key_exists("ScheduleTaskEvent",$param) and $param["ScheduleTaskEvent"] !== null) {
             $this->ScheduleTaskEvent = new ScheduleTask();
             $this->ScheduleTaskEvent->deserialize($param["ScheduleTaskEvent"]);
+        }
+
+        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
+            $this->Timestamp = $param["Timestamp"];
+        }
+
+        if (array_key_exists("Sign",$param) and $param["Sign"] !== null) {
+            $this->Sign = $param["Sign"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

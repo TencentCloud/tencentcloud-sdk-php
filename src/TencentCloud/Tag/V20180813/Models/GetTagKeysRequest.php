@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 缺省值：50。
  * @method void setMaxResults(integer $MaxResults) 设置每一页返回的数据最大条数，最大1000。
 缺省值：50。
+ * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+ * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
  */
 class GetTagKeysRequest extends AbstractModel
 {
@@ -44,10 +46,16 @@ class GetTagKeysRequest extends AbstractModel
     public $MaxResults;
 
     /**
+     * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public $Category;
+
+    /**
      * @param string $PaginationToken 从上一页的响应中获取的下一页的Token值。
 如果是第一次请求，设置为空。
      * @param integer $MaxResults 每一页返回的数据最大条数，最大1000。
 缺省值：50。
+     * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class GetTagKeysRequest extends AbstractModel
 
         if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
             $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

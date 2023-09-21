@@ -100,6 +100,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackSpec(array $PackSpec) 设置层级码配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductName() 获取商品名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductName(string $ProductName) 设置商品名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductSpecification() 获取商品规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductSpecification(string $ProductSpecification) 设置商品规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductId() 获取商品ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductId(string $ProductId) 设置商品ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRelateType() 获取码关系是否预关联
+0:否, 1:是
+ * @method void setRelateType(integer $RelateType) 设置码关系是否预关联
+0:否, 1:是
  */
 class CodePack extends AbstractModel
 {
@@ -224,6 +240,30 @@ class CodePack extends AbstractModel
     public $PackSpec;
 
     /**
+     * @var string 商品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductName;
+
+    /**
+     * @var string 商品规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductSpecification;
+
+    /**
+     * @var string 商品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductId;
+
+    /**
+     * @var integer 码关系是否预关联
+0:否, 1:是
+     */
+    public $RelateType;
+
+    /**
      * @param string $PackId 码id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CorpId 企业id
@@ -264,6 +304,14 @@ class CodePack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PackSpec 层级码配置
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductName 商品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductSpecification 商品规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductId 商品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RelateType 码关系是否预关联
+0:否, 1:是
      */
     function __construct()
     {
@@ -361,6 +409,22 @@ class CodePack extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PackSpec, $obj);
             }
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("ProductSpecification",$param) and $param["ProductSpecification"] !== null) {
+            $this->ProductSpecification = $param["ProductSpecification"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("RelateType",$param) and $param["RelateType"] !== null) {
+            $this->RelateType = $param["RelateType"];
         }
     }
 }

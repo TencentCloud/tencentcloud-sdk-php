@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 缺省值：50。
  * @method void setMaxResults(integer $MaxResults) 设置每一页返回的数据最大条数，最大1000。
 缺省值：50。
+ * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+ * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
  */
 class GetTagValuesRequest extends AbstractModel
 {
@@ -57,6 +59,11 @@ class GetTagValuesRequest extends AbstractModel
     public $MaxResults;
 
     /**
+     * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     */
+    public $Category;
+
+    /**
      * @param array $TagKeys 标签键。
 返回所有标签键列表对应的标签值。
 最大长度：20
@@ -64,6 +71,7 @@ class GetTagValuesRequest extends AbstractModel
 如果是第一次请求，设置为空。
      * @param integer $MaxResults 每一页返回的数据最大条数，最大1000。
 缺省值：50。
+     * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class GetTagValuesRequest extends AbstractModel
 
         if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
             $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

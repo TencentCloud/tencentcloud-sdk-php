@@ -106,29 +106,29 @@ use TencentCloud\Common\AbstractModel;
 4：**【增值付费功能】**基础识别结果之上，增加词粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)（包含词级别时间戳、语速值和标点），且识别结果按nlp语义分段，**适用会议、庭审记录转写等场景**，仅支持8k_zh/16k_zh引擎
 
 注意：如果传入参数值4，需确保账号已购买[语义分段资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值4，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**
- * @method integer getSourceType() 获取语音数据来源
-0：语音 URL；
-1：语音数据（post body）
- * @method void setSourceType(integer $SourceType) 设置语音数据来源
-0：语音 URL；
-1：语音数据（post body）
- * @method string getData() 获取语音数据base64编码
+ * @method integer getSourceType() 获取音频数据来源
+0：音频URL；
+1：音频数据（post body）
+ * @method void setSourceType(integer $SourceType) 设置音频数据来源
+0：音频URL；
+1：音频数据（post body）
+ * @method string getData() 获取音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含）
- * @method void setData(string $Data) 设置语音数据base64编码
+ * @method void setData(string $Data) 设置音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含）
  * @method integer getDataLen() 获取数据长度（此数据长度为数据未进行base64编码时的长度）
  * @method void setDataLen(integer $DataLen) 设置数据长度（此数据长度为数据未进行base64编码时的长度）
- * @method string getUrl() 获取语音URL的地址（需要公网环境浏览器可下载）
+ * @method string getUrl() 获取音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：
 1. 请确保录音文件时长在5个小时（含）之内，否则可能识别失败；
 2. 请保证文件的下载速度，否则可能下载失败
- * @method void setUrl(string $Url) 设置语音URL的地址（需要公网环境浏览器可下载）
+ * @method void setUrl(string $Url) 设置音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：
@@ -337,14 +337,14 @@ class CreateRecTaskRequest extends AbstractModel
     public $ResTextFormat;
 
     /**
-     * @var integer 语音数据来源
-0：语音 URL；
-1：语音数据（post body）
+     * @var integer 音频数据来源
+0：音频URL；
+1：音频数据（post body）
      */
     public $SourceType;
 
     /**
-     * @var string 语音数据base64编码
+     * @var string 音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含）
@@ -357,7 +357,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $DataLen;
 
     /**
-     * @var string 语音URL的地址（需要公网环境浏览器可下载）
+     * @var string 音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：
@@ -538,15 +538,15 @@ class CreateRecTaskRequest extends AbstractModel
 4：**【增值付费功能】**基础识别结果之上，增加词粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)（包含词级别时间戳、语速值和标点），且识别结果按nlp语义分段，**适用会议、庭审记录转写等场景**，仅支持8k_zh/16k_zh引擎
 
 注意：如果传入参数值4，需确保账号已购买[语义分段资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值4，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**
-     * @param integer $SourceType 语音数据来源
-0：语音 URL；
-1：语音数据（post body）
-     * @param string $Data 语音数据base64编码
+     * @param integer $SourceType 音频数据来源
+0：音频URL；
+1：音频数据（post body）
+     * @param string $Data 音频数据base64编码
 **当 SourceType 值为 1 时须填写该字段，为 0 时不需要填写**
 
 注意：音频数据要小于5MB（含）
      * @param integer $DataLen 数据长度（此数据长度为数据未进行base64编码时的长度）
-     * @param string $Url 语音URL的地址（需要公网环境浏览器可下载）
+     * @param string $Url 音频URL的地址（需要公网环境浏览器可下载）
 **当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写**
 
 注意：

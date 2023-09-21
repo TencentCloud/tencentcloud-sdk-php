@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchId(string $BatchId) 设置批次ID，如果传了生码后会同时绑定批次，并激活码
  * @method integer getSerialType() 获取是否有流水码 0:无 1:有
  * @method void setSerialType(integer $SerialType) 设置是否有流水码 0:无 1:有
+ * @method string getProductId() 获取关联产品ID
+ * @method void setProductId(string $ProductId) 设置关联产品ID
+ * @method integer getRelateType() 获取层级码时是否提前生成关联关系，默认为 1
+ * @method void setRelateType(integer $RelateType) 设置层级码时是否提前生成关联关系，默认为 1
  */
 class CreateCodePackRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class CreateCodePackRequest extends AbstractModel
     public $SerialType;
 
     /**
+     * @var string 关联产品ID
+     */
+    public $ProductId;
+
+    /**
+     * @var integer 层级码时是否提前生成关联关系，默认为 1
+     */
+    public $RelateType;
+
+    /**
      * @param string $MerchantId 商户ID
      * @param integer $CodeLength 码长度
      * @param string $CodeType 码类型 alphabet 字母, number 数字, mixin 混合
@@ -104,6 +118,8 @@ class CreateCodePackRequest extends AbstractModel
      * @param array $PackSpec 码包规格
      * @param string $BatchId 批次ID，如果传了生码后会同时绑定批次，并激活码
      * @param integer $SerialType 是否有流水码 0:无 1:有
+     * @param string $ProductId 关联产品ID
+     * @param integer $RelateType 层级码时是否提前生成关联关系，默认为 1
      */
     function __construct()
     {
@@ -161,6 +177,14 @@ class CreateCodePackRequest extends AbstractModel
 
         if (array_key_exists("SerialType",$param) and $param["SerialType"] !== null) {
             $this->SerialType = $param["SerialType"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("RelateType",$param) and $param["RelateType"] !== null) {
+            $this->RelateType = $param["RelateType"];
         }
     }
 }

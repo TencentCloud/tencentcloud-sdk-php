@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchId(string $BatchId) 设置批次ID，如果传了生码后会同时绑定批次，并激活码
  * @method integer getSerialType() 获取是否有流水码 0:无 1:有
  * @method void setSerialType(integer $SerialType) 设置是否有流水码 0:无 1:有
+ * @method string getProductId() 获取产品ID
+ * @method void setProductId(string $ProductId) 设置产品ID
+ * @method integer getRelateType() 获取是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效
+ * @method void setRelateType(integer $RelateType) 设置是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效
  */
 class CreateCustomPackRequest extends AbstractModel
 {
@@ -94,6 +102,18 @@ class CreateCustomPackRequest extends AbstractModel
     public $SerialType;
 
     /**
+     * @var string 产品ID
+     */
+    public $ProductId;
+
+    /**
+     * @var integer 是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效
+     */
+    public $RelateType;
+
+    /**
      * @param string $MerchantId 商户ID
      * @param integer $Amount 生码数量, 普通码包时必填
      * @param integer $CorpId 企业ID
@@ -104,6 +124,10 @@ class CreateCustomPackRequest extends AbstractModel
      * @param array $CodeParts 码段配置，和CustomId二选一必填
      * @param string $BatchId 批次ID，如果传了生码后会同时绑定批次，并激活码
      * @param integer $SerialType 是否有流水码 0:无 1:有
+     * @param string $ProductId 产品ID
+     * @param integer $RelateType 是否预生成码关系
+0: 否, 1:是
+默认为1，仅对层级码有效
      */
     function __construct()
     {
@@ -166,6 +190,14 @@ class CreateCustomPackRequest extends AbstractModel
 
         if (array_key_exists("SerialType",$param) and $param["SerialType"] !== null) {
             $this->SerialType = $param["SerialType"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("RelateType",$param) and $param["RelateType"] !== null) {
+            $this->RelateType = $param["RelateType"];
         }
     }
 }

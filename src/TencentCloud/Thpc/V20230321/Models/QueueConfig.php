@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
 
 - 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
 - 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+ * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
+ * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
  */
 class QueueConfig extends AbstractModel
 {
@@ -150,6 +152,11 @@ class QueueConfig extends AbstractModel
     public $ScaleUpMemRatio;
 
     /**
+     * @var EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
+     */
+    public $EnhancedService;
+
+    /**
      * @param string $QueueName 队列名称。
      * @param integer $MinSize 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
      * @param integer $MaxSize 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
@@ -172,6 +179,7 @@ class QueueConfig extends AbstractModel
 
 - 当ScaleUpMemRatio=0时，会匹配到16GB内存规格的实例,但是由于操作系统内的可用内存为14.9GB小于作业所需的15GB，扩容出来的实例作业无法运行起来。
 - 当ScaleUpMemRatio=10时，匹配实例规格会按照15*(1+10%)=16.5GB来进行实例规格匹配，则不会匹配到16GB的实例，而是更大内存规格的实例来保证作业能够被运行起来。
+     * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务、自动化助手服务。
      */
     function __construct()
     {
@@ -256,6 +264,11 @@ class QueueConfig extends AbstractModel
 
         if (array_key_exists("ScaleUpMemRatio",$param) and $param["ScaleUpMemRatio"] !== null) {
             $this->ScaleUpMemRatio = $param["ScaleUpMemRatio"];
+        }
+
+        if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
+            $this->EnhancedService = new EnhancedService();
+            $this->EnhancedService->deserialize($param["EnhancedService"]);
         }
     }
 }

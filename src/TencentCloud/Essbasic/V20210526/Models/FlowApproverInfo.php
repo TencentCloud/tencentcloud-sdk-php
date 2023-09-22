@@ -63,13 +63,23 @@ PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通
  * @method void setApproverType(string $ApproverType) 设置签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通
  * @method string getRecipientId() 获取签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
  * @method void setRecipientId(string $RecipientId) 设置签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
  * @method integer getDeadline() 获取签署截止时间戳，默认一年
@@ -177,7 +187,12 @@ PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通
      */
     public $ApproverType;
 
@@ -284,7 +299,12 @@ PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签署，适用于个人自动签场景
 注: 个人自动签场景为白名单功能, 使用前请联系对接的客户经理沟通。
 ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
-ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
+ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的本方企业自动签）
+
+若要实现他方企业（同一应用下）自动签，需要满足3个条件：
+条件1：ApproverType 设置为ENTERPRISESERVER
+条件2：子客之间完成授权
+条件3：联系对接的客户经理沟通
      * @param string $RecipientId 签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
      * @param integer $Deadline 签署截止时间戳，默认一年
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符

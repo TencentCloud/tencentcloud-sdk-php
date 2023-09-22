@@ -22,19 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取执行本接口操作的员工信息。 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`	
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`	
- * @method array getFlowIds() 获取需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数
- * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数
+ * @method array getFlowIds() 获取需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。
+ * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。
  * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
- * @method string getFlowGroupId() 获取合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
-
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
+ * @method string getFlowGroupId() 获取需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。
+ * @method void setFlowGroupId(string $FlowGroupId) 设置需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。
  */
 class DescribeFlowInfoRequest extends AbstractModel
 {
@@ -44,9 +39,8 @@ class DescribeFlowInfoRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var array 需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数
+     * @var array 需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。
      */
     public $FlowIds;
 
@@ -56,20 +50,16 @@ class DescribeFlowInfoRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
-
+     * @var string 需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。
      */
     public $FlowGroupId;
 
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`	
-     * @param array $FlowIds 需要查询的流程ID列表，限制最大100个
-
-如果查询合同组的信息,不要传此参数
+     * @param array $FlowIds 需要查询的流程ID列表，最多可传入100个ID。
+如果要查询合同组的信息，则不需要传入此参数，只需传入 FlowGroupId 参数即可。
      * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。	
-     * @param string $FlowGroupId 合同组ID, 如果传此参数会忽略FlowIds入参
- 所以如传此参数不要传FlowIds参数
+     * @param string $FlowGroupId 需要查询的流程组ID，如果传入此参数，则会忽略 FlowIds 参数。该合同组由<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowGroupByFiles" target="_blank">通过多文件创建合同组签署流程</a>等接口创建。
      */
     function __construct()
     {

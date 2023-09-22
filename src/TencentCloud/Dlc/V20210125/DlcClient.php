@@ -86,6 +86,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) 查询spark作业信息
  * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) 查询spark作业列表
  * @method Models\DescribeSparkAppTasksResponse DescribeSparkAppTasks(Models\DescribeSparkAppTasksRequest $req) 查询Spark作业的运行任务列表
+ * @method Models\DescribeSparkSessionBatchSQLResponse DescribeSparkSessionBatchSQL(Models\DescribeSparkSessionBatchSQLRequest $req) 本接口（DescribeSparkSessionBatchSQL）用于查询Spark SQL批任务运行状态
  * @method Models\DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLog(Models\DescribeSparkSessionBatchSqlLogRequest $req) 本接口（DescribeSparkSessionBatchSqlLog）用于查询Spark SQL批任务日志
  * @method Models\DescribeStoreLocationResponse DescribeStoreLocation(Models\DescribeStoreLocationRequest $req) 查询计算结果存储位置。
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 本接口（DescribeTable），用于查询单个表的详细信息。

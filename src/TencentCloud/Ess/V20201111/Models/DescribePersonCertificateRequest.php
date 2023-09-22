@@ -18,34 +18,32 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateFlowGroupByTemplates请求参数结构体
+ * DescribePersonCertificate请求参数结构体
  *
  * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getFlowGroupName() 获取合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
- * @method void setFlowGroupName(string $FlowGroupName) 设置合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
- * @method array getFlowGroupInfos() 获取合同（流程）组的子合同信息，支持2-50个子合同
- * @method void setFlowGroupInfos(array $FlowGroupInfos) 设置合同（流程）组的子合同信息，支持2-50个子合同
+ * @method UserThreeFactor getUserInfo() 获取个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul>
+ * @method void setUserInfo(UserThreeFactor $UserInfo) 设置个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul>
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method FlowGroupOptions getFlowGroupOptions() 获取合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul>
- * @method void setFlowGroupOptions(FlowGroupOptions $FlowGroupOptions) 设置合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul>
+ * @method string getSceneKey() 获取证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景`
+ * @method void setSceneKey(string $SceneKey) 设置证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景`
  */
-class CreateFlowGroupByTemplatesRequest extends AbstractModel
+class DescribePersonCertificateRequest extends AbstractModel
 {
     /**
      * @var UserInfo 执行本接口操作的员工信息。
@@ -54,14 +52,12 @@ class CreateFlowGroupByTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @var UserThreeFactor 个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul>
      */
-    public $FlowGroupName;
-
-    /**
-     * @var array 合同（流程）组的子合同信息，支持2-50个子合同
-     */
-    public $FlowGroupInfos;
+    public $UserInfo;
 
     /**
      * @var Agent 代理企业和员工的信息。
@@ -70,28 +66,24 @@ class CreateFlowGroupByTemplatesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var FlowGroupOptions 合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul>
+     * @var string 证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景`
      */
-    public $FlowGroupOptions;
+    public $SceneKey;
 
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $FlowGroupName 合同（流程）组名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
-     * @param array $FlowGroupInfos 合同（流程）组的子合同信息，支持2-50个子合同
+     * @param UserThreeFactor $UserInfo 个人用户的三要素信息：
+<ul><li>姓名</li>
+<li>证件号</li>
+<li>证件类型</li></ul>
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param FlowGroupOptions $FlowGroupOptions 合同（流程）组的配置项信息。
-其中包括：
-<ul>
-<li>是否通知本企业签署方</li>
-<li>是否通知其他签署方</li>
-</ul>
+     * @param string $SceneKey 证书使用场景，可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
+注: `现在仅支持电子处方场景`
      */
     function __construct()
     {
@@ -111,17 +103,9 @@ class CreateFlowGroupByTemplatesRequest extends AbstractModel
             $this->Operator->deserialize($param["Operator"]);
         }
 
-        if (array_key_exists("FlowGroupName",$param) and $param["FlowGroupName"] !== null) {
-            $this->FlowGroupName = $param["FlowGroupName"];
-        }
-
-        if (array_key_exists("FlowGroupInfos",$param) and $param["FlowGroupInfos"] !== null) {
-            $this->FlowGroupInfos = [];
-            foreach ($param["FlowGroupInfos"] as $key => $value){
-                $obj = new FlowGroupInfo();
-                $obj->deserialize($value);
-                array_push($this->FlowGroupInfos, $obj);
-            }
+        if (array_key_exists("UserInfo",$param) and $param["UserInfo"] !== null) {
+            $this->UserInfo = new UserThreeFactor();
+            $this->UserInfo->deserialize($param["UserInfo"]);
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
@@ -129,9 +113,8 @@ class CreateFlowGroupByTemplatesRequest extends AbstractModel
             $this->Agent->deserialize($param["Agent"]);
         }
 
-        if (array_key_exists("FlowGroupOptions",$param) and $param["FlowGroupOptions"] !== null) {
-            $this->FlowGroupOptions = new FlowGroupOptions();
-            $this->FlowGroupOptions->deserialize($param["FlowGroupOptions"]);
+        if (array_key_exists("SceneKey",$param) and $param["SceneKey"] !== null) {
+            $this->SceneKey = $param["SceneKey"];
         }
     }
 }

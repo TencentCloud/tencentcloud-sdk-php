@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCustomHeader请求参数结构体
+ * 公网IP和域名资产列表key
  *
- * @method string getRuleId() 获取规则ID
- * @method void setRuleId(string $RuleId) 设置规则ID
+ * @method string getAsset() 获取资产值
+ * @method void setAsset(string $Asset) 设置资产值
  */
-class DescribeCustomHeaderRequest extends AbstractModel
+class PublicIpDomainListKey extends AbstractModel
 {
     /**
-     * @var string 规则ID
+     * @var string 资产值
      */
-    public $RuleId;
+    public $Asset;
 
     /**
-     * @param string $RuleId 规则ID
+     * @param string $Asset 资产值
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeCustomHeaderRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists("Asset",$param) and $param["Asset"] !== null) {
+            $this->Asset = $param["Asset"];
         }
     }
 }

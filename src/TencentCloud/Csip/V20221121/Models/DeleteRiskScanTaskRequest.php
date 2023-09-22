@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCustomHeader请求参数结构体
+ * DeleteRiskScanTask请求参数结构体
  *
- * @method string getRuleId() 获取规则ID
- * @method void setRuleId(string $RuleId) 设置规则ID
+ * @method array getTaskIdList() 获取任务id 列表
+ * @method void setTaskIdList(array $TaskIdList) 设置任务id 列表
  */
-class DescribeCustomHeaderRequest extends AbstractModel
+class DeleteRiskScanTaskRequest extends AbstractModel
 {
     /**
-     * @var string 规则ID
+     * @var array 任务id 列表
      */
-    public $RuleId;
+    public $TaskIdList;
 
     /**
-     * @param string $RuleId 规则ID
+     * @param array $TaskIdList 任务id 列表
      */
     function __construct()
     {
@@ -46,8 +46,13 @@ class DescribeCustomHeaderRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists("TaskIdList",$param) and $param["TaskIdList"] !== null) {
+            $this->TaskIdList = [];
+            foreach ($param["TaskIdList"] as $key => $value){
+                $obj = new TaskIdListKey();
+                $obj->deserialize($value);
+                array_push($this->TaskIdList, $obj);
+            }
         }
     }
 }

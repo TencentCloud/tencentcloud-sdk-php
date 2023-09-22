@@ -49,6 +49,7 @@ Other 混合云专区
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Ips - String - 是否必填：否 - 通过ip查询 </li>
 <li>Names - String - 是否必填：否 - 通过实例名查询 </li>
@@ -60,6 +61,7 @@ Other 混合云专区
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
  * @method array getProjectIds() 获取机器所属业务ID列表
  * @method void setProjectIds(array $ProjectIds) 设置机器所属业务ID列表
  */
@@ -102,6 +104,7 @@ Other 混合云专区
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
      */
     public $Filters;
 
@@ -131,6 +134,7 @@ Other 混合云专区
 每个过滤条件只支持一个值，暂不支持多个值“或”关系查询
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
+<li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
      * @param array $ProjectIds 机器所属业务ID列表
      */
     function __construct()

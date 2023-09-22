@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSliceSentence(string $SliceSentence) 设置单句中间识别结果，使用空格拆分为多个词
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWrittenText() 获取口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWrittenText(string $WrittenText) 设置口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartMs() 获取单句开始时间（毫秒）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartMs(integer $StartMs) 设置单句开始时间（毫秒）
@@ -78,6 +82,12 @@ class SentenceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SliceSentence;
+
+    /**
+     * @var string 口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WrittenText;
 
     /**
      * @var integer 单句开始时间（毫秒）
@@ -138,6 +148,8 @@ class SentenceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SliceSentence 单句中间识别结果，使用空格拆分为多个词
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WrittenText 口语转书面语结果，开启改功能才有值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartMs 单句开始时间（毫秒）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndMs 单句结束时间（毫秒）
@@ -176,6 +188,10 @@ class SentenceDetail extends AbstractModel
 
         if (array_key_exists("SliceSentence",$param) and $param["SliceSentence"] !== null) {
             $this->SliceSentence = $param["SliceSentence"];
+        }
+
+        if (array_key_exists("WrittenText",$param) and $param["WrittenText"] !== null) {
+            $this->WrittenText = $param["WrittenText"];
         }
 
         if (array_key_exists("StartMs",$param) and $param["StartMs"] !== null) {

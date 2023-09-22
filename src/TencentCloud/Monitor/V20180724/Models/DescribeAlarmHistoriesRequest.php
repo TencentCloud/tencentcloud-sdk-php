@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
 可使用 [查询所有名字空间 DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 接口查询
  * @method array getMetricNames() 获取根据指标名过滤
  * @method void setMetricNames(array $MetricNames) 设置根据指标名过滤
- * @method string getPolicyName() 获取根据策略名称模糊搜索
- * @method void setPolicyName(string $PolicyName) 设置根据策略名称模糊搜索
+ * @method string getPolicyName() 获取根据策略名称模糊搜索,不支持大小写区分
+ * @method void setPolicyName(string $PolicyName) 设置根据策略名称模糊搜索,不支持大小写区分
  * @method string getContent() 获取根据告警内容模糊搜索
  * @method void setContent(string $Content) 设置根据告警内容模糊搜索
  * @method array getReceiverUids() 获取根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverGroups(array $ReceiverGroups) 设置根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
  * @method array getPolicyIds() 获取根据告警策略 Id 列表搜索
  * @method void setPolicyIds(array $PolicyIds) 设置根据告警策略 Id 列表搜索
- * @method array getAlarmLevels() 获取告警等级
- * @method void setAlarmLevels(array $AlarmLevels) 设置告警等级
+ * @method array getAlarmLevels() 获取告警等级,取值范围：Remind、Serious、Warn
+ * @method void setAlarmLevels(array $AlarmLevels) 设置告警等级,取值范围：Remind、Serious、Warn
  */
 class DescribeAlarmHistoriesRequest extends AbstractModel
 {
@@ -133,7 +133,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var string 根据策略名称模糊搜索
+     * @var string 根据策略名称模糊搜索,不支持大小写区分
      */
     public $PolicyName;
 
@@ -158,7 +158,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $PolicyIds;
 
     /**
-     * @var array 告警等级
+     * @var array 告警等级,取值范围：Remind、Serious、Warn
      */
     public $AlarmLevels;
 
@@ -178,12 +178,12 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param array $Namespaces 根据策略类型过滤，策略类型是监控类型之下的概念，在这里两者都需要传入，例如 `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
 可使用 [查询所有名字空间 DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 接口查询
      * @param array $MetricNames 根据指标名过滤
-     * @param string $PolicyName 根据策略名称模糊搜索
+     * @param string $PolicyName 根据策略名称模糊搜索,不支持大小写区分
      * @param string $Content 根据告警内容模糊搜索
      * @param array $ReceiverUids 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
      * @param array $ReceiverGroups 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
      * @param array $PolicyIds 根据告警策略 Id 列表搜索
-     * @param array $AlarmLevels 告警等级
+     * @param array $AlarmLevels 告警等级,取值范围：Remind、Serious、Warn
      */
     function __construct()
     {

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCustomHeader请求参数结构体
+ * DescribeSparkSessionBatchSQL请求参数结构体
  *
- * @method string getRuleId() 获取规则ID
- * @method void setRuleId(string $RuleId) 设置规则ID
+ * @method string getBatchId() 获取SparkSQL唯一标识
+ * @method void setBatchId(string $BatchId) 设置SparkSQL唯一标识
  */
-class DescribeCustomHeaderRequest extends AbstractModel
+class DescribeSparkSessionBatchSQLRequest extends AbstractModel
 {
     /**
-     * @var string 规则ID
+     * @var string SparkSQL唯一标识
      */
-    public $RuleId;
+    public $BatchId;
 
     /**
-     * @param string $RuleId 规则ID
+     * @param string $BatchId SparkSQL唯一标识
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeCustomHeaderRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
         }
     }
 }

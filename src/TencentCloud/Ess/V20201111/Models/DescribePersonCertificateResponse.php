@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Organization\V20210331\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddOrganizationMemberEmail返回参数结构体
+ * DescribePersonCertificate返回参数结构体
  *
- * @method integer getBindId() 获取绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBindId(integer $BindId) 设置绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCert() 获取证书的Base64
+ * @method void setCert(string $Cert) 设置证书的Base64
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AddOrganizationMemberEmailResponse extends AbstractModel
+class DescribePersonCertificateResponse extends AbstractModel
 {
     /**
-     * @var integer 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 证书的Base64
      */
-    public $BindId;
+    public $Cert;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class AddOrganizationMemberEmailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $BindId 绑定Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Cert 证书的Base64
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,8 @@ class AddOrganizationMemberEmailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BindId",$param) and $param["BindId"] !== null) {
-            $this->BindId = $param["BindId"];
+        if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
+            $this->Cert = $param["Cert"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

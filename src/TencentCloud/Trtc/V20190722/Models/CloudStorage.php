@@ -21,9 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 第三方云存储的账号信息。
  *
  * @method integer getVendor() 获取第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
  * @method void setVendor(integer $Vendor) 设置第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
  * @method string getRegion() 获取第三方云存储的地域信息。
  * @method void setRegion(string $Region) 设置第三方云存储的地域信息。
  * @method string getBucket() 获取第三方存储桶信息。
@@ -43,7 +45,8 @@ class CloudStorage extends AbstractModel
 {
     /**
      * @var integer 第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
      */
     public $Vendor;
 
@@ -76,7 +79,8 @@ class CloudStorage extends AbstractModel
 
     /**
      * @param integer $Vendor 第三方云储存的供应商:
-0：腾讯云存储 COS，暂不支持其他家。
+0：腾讯云存储 COS。
+【*注意】：目前第三方仅支持腾讯云存储COS，暂不支持AWS等其他第三方云存储。
      * @param string $Region 第三方云存储的地域信息。
      * @param string $Bucket 第三方存储桶信息。
      * @param string $AccessKey 第三方存储的access_key账号信息。

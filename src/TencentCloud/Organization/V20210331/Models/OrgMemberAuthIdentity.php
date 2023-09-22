@@ -32,21 +32,33 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) 设置身份的角色别名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取描述。
+ * @method string getDescription() 获取身份描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置描述。
+ * @method void setDescription(string $Description) 设置身份描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间。
+ * @method string getCreateTime() 获取首次配置成功的时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置首次配置成功的时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间。
+ * @method string getUpdateTime() 获取最后一次配置成功的时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
+ * @method void setUpdateTime(string $UpdateTime) 设置最后一次配置成功的时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIdentityType() 获取身份类型。取值： 1-预设  2-自定义
+ * @method integer getIdentityType() 获取身份类型。取值： 1-预设身份  2-自定义身份
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentityType(integer $IdentityType) 设置身份类型。取值： 1-预设  2-自定义
+ * @method void setIdentityType(integer $IdentityType) 设置身份类型。取值： 1-预设身份  2-自定义身份
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取配置状态。取值：1-配置完成 2-需重新配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置配置状态。取值：1-配置完成 2-需重新配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMemberUin() 获取成员Uin。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemberUin(integer $MemberUin) 设置成员Uin。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMemberName() 获取成员名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemberName(string $MemberName) 设置成员名称。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMemberAuthIdentity extends AbstractModel
@@ -70,28 +82,46 @@ class OrgMemberAuthIdentity extends AbstractModel
     public $IdentityRoleAliasName;
 
     /**
-     * @var string 描述。
+     * @var string 身份描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @var string 创建时间。
+     * @var string 首次配置成功的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间。
+     * @var string 最后一次配置成功的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var integer 身份类型。取值： 1-预设  2-自定义
+     * @var integer 身份类型。取值： 1-预设身份  2-自定义身份
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityType;
+
+    /**
+     * @var integer 配置状态。取值：1-配置完成 2-需重新配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var integer 成员Uin。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemberUin;
+
+    /**
+     * @var string 成员名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemberName;
 
     /**
      * @param integer $IdentityId 身份ID。
@@ -100,13 +130,19 @@ class OrgMemberAuthIdentity extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentityRoleAliasName 身份的角色别名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 描述。
+     * @param string $Description 身份描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间。
+     * @param string $CreateTime 首次配置成功的时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间。
+     * @param string $UpdateTime 最后一次配置成功的时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IdentityType 身份类型。取值： 1-预设  2-自定义
+     * @param integer $IdentityType 身份类型。取值： 1-预设身份  2-自定义身份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 配置状态。取值：1-配置完成 2-需重新配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MemberUin 成员Uin。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MemberName 成员名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +184,18 @@ class OrgMemberAuthIdentity extends AbstractModel
 
         if (array_key_exists("IdentityType",$param) and $param["IdentityType"] !== null) {
             $this->IdentityType = $param["IdentityType"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("MemberUin",$param) and $param["MemberUin"] !== null) {
+            $this->MemberUin = $param["MemberUin"];
+        }
+
+        if (array_key_exists("MemberName",$param) and $param["MemberName"] !== null) {
+            $this->MemberName = $param["MemberName"];
         }
     }
 }

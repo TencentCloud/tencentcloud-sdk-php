@@ -82,6 +82,10 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
  * @method void setSpecId(string $SpecId) 设置计费项ID
  * @method string getSpecAlias() 获取计费项别名
  * @method void setSpecAlias(string $SpecAlias) 设置计费项别名
+ * @method array getSpecFeatures() 获取计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpecFeatures(array $SpecFeatures) 设置计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -157,6 +161,12 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
     public $SpecAlias;
 
     /**
+     * @var array 计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpecFeatures;
+
+    /**
      * @param string $InstanceId 资源组节点id
      * @param ResourceInfo $UsedResource 节点已用资源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -188,6 +198,8 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecId 计费项ID
      * @param string $SpecAlias 计费项别名
+     * @param array $SpecFeatures 计费项特性列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -242,6 +254,10 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
 
         if (array_key_exists("SpecAlias",$param) and $param["SpecAlias"] !== null) {
             $this->SpecAlias = $param["SpecAlias"];
+        }
+
+        if (array_key_exists("SpecFeatures",$param) and $param["SpecFeatures"] !== null) {
+            $this->SpecFeatures = $param["SpecFeatures"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCustomHeader请求参数结构体
+ * 任务ID列表Key
  *
- * @method string getRuleId() 获取规则ID
- * @method void setRuleId(string $RuleId) 设置规则ID
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
  */
-class DescribeCustomHeaderRequest extends AbstractModel
+class TaskIdListKey extends AbstractModel
 {
     /**
-     * @var string 规则ID
+     * @var string 任务ID
      */
-    public $RuleId;
+    public $TaskId;
 
     /**
-     * @param string $RuleId 规则ID
+     * @param string $TaskId 任务ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeCustomHeaderRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
-            $this->RuleId = $param["RuleId"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

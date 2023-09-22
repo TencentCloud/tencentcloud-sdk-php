@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRefreshTask请求参数结构体
  *
-
+ * @method array getClusterIDs() 获取指定集群列表,若为空则标识同步所有集群
+ * @method void setClusterIDs(array $ClusterIDs) 设置指定集群列表,若为空则标识同步所有集群
+ * @method boolean getIsSyncListOnly() 获取是否只同步列表
+ * @method void setIsSyncListOnly(boolean $IsSyncListOnly) 设置是否只同步列表
  */
 class CreateRefreshTaskRequest extends AbstractModel
 {
-
+    /**
+     * @var array 指定集群列表,若为空则标识同步所有集群
+     */
+    public $ClusterIDs;
 
     /**
+     * @var boolean 是否只同步列表
+     */
+    public $IsSyncListOnly;
 
+    /**
+     * @param array $ClusterIDs 指定集群列表,若为空则标识同步所有集群
+     * @param boolean $IsSyncListOnly 是否只同步列表
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class CreateRefreshTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterIDs",$param) and $param["ClusterIDs"] !== null) {
+            $this->ClusterIDs = $param["ClusterIDs"];
+        }
 
+        if (array_key_exists("IsSyncListOnly",$param) and $param["IsSyncListOnly"] !== null) {
+            $this->IsSyncListOnly = $param["IsSyncListOnly"];
+        }
     }
 }

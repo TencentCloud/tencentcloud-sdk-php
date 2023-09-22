@@ -20,29 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowInfo返回参数结构体
  *
- * @method array getFlowDetailInfos() 获取签署流程信息
- * @method void setFlowDetailInfos(array $FlowDetailInfos) 设置签署流程信息
- * @method string getFlowGroupId() 获取合同组ID，为32位字符串
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID，为32位字符串
- * @method string getFlowGroupName() 获取合同组名称
- * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称
+ * @method array getFlowDetailInfos() 获取合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+ * @method void setFlowDetailInfos(array $FlowDetailInfos) 设置合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+ * @method string getFlowGroupId() 获取合同组ID，只有在查询合同组信息时才会返回。
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID，只有在查询合同组信息时才会返回。
+ * @method string getFlowGroupName() 获取合同组名称，只有在查询合同组信息时才会返回。
+ * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称，只有在查询合同组信息时才会返回。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFlowInfoResponse extends AbstractModel
 {
     /**
-     * @var array 签署流程信息
+     * @var array 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
      */
     public $FlowDetailInfos;
 
     /**
-     * @var string 合同组ID，为32位字符串
+     * @var string 合同组ID，只有在查询合同组信息时才会返回。
      */
     public $FlowGroupId;
 
     /**
-     * @var string 合同组名称
+     * @var string 合同组名称，只有在查询合同组信息时才会返回。
      */
     public $FlowGroupName;
 
@@ -52,9 +55,10 @@ class DescribeFlowInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowDetailInfos 签署流程信息
-     * @param string $FlowGroupId 合同组ID，为32位字符串
-     * @param string $FlowGroupName 合同组名称
+     * @param array $FlowDetailInfos 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+     * @param string $FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
+     * @param string $FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

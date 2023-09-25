@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUidSet(array $UidSet) 设置实例唯一Uid列表
  * @method string getInstanceType() 获取实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
  * @method void setInstanceType(string $InstanceType) 设置实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+ * @method string getPaginationType() 获取分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
+ * @method void setPaginationType(string $PaginationType) 设置分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -172,6 +174,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var string 分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
+     */
+    public $PaginationType;
+
+    /**
      * @param integer $ProjectId 项目ID
      * @param integer $Status 实例状态。取值范围：
 <li>1：申请中</li>
@@ -200,6 +207,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $SearchKey 模糊查询关键字，支持实例id、实例名、内网ip
      * @param array $UidSet 实例唯一Uid列表
      * @param string $InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     * @param string $PaginationType 分页查询方式 offset-按照偏移量分页查询，pageNumber-按照页数分页查询，默认取值pageNumber
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("PaginationType",$param) and $param["PaginationType"] !== null) {
+            $this->PaginationType = $param["PaginationType"];
         }
     }
 }

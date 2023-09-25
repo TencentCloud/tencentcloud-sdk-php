@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Asr\V20190614\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 统计返回[说话人注册数量](https://cloud.tencent.com/document/product/1093/96061#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)
+ * DescribeRiskCenterAssetViewCFGRiskList请求参数结构体
  *
- * @method integer getTotal() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method Filter getFilter() 获取过滤内容
+ * @method void setFilter(Filter $Filter) 设置过滤内容
  */
-class VoicePrintCountData extends AbstractModel
+class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
 {
     /**
-     * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var Filter 过滤内容
      */
-    public $Total;
+    public $Filter;
 
     /**
-     * @param integer $Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param Filter $Filter 过滤内容
      */
     function __construct()
     {
@@ -50,8 +46,9 @@ class VoicePrintCountData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = new Filter();
+            $this->Filter->deserialize($param["Filter"]);
         }
     }
 }

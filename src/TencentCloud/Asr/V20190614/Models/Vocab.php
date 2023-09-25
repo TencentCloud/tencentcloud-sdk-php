@@ -18,7 +18,7 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 词表内容
+ * [词表内容](https://cloud.tencent.com/document/product/1093/41484#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)
  *
  * @method string getName() 获取热词表名称
  * @method void setName(string $Name) 设置热词表名称

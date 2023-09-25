@@ -46,6 +46,7 @@ class EvaluationResponse extends AbstractModel
 
     /**
      * @var string 任务 id，用于查询接口
+     * @deprecated
      */
     public $TaskId;
 

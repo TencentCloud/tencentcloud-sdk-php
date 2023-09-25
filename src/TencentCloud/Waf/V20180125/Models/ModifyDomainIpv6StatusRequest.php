@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置需要修改的域名
  * @method string getDomainId() 获取需要修改的域名ID
  * @method void setDomainId(string $DomainId) 设置需要修改的域名ID
- * @method integer getStatus() 获取修改域名的Ipv6开关为Status （0:关闭 1:开启）
- * @method void setStatus(integer $Status) 设置修改域名的Ipv6开关为Status （0:关闭 1:开启）
+ * @method integer getStatus() 获取修改域名的Ipv6开关为Status （1:开启 2:关闭）
+ * @method void setStatus(integer $Status) 设置修改域名的Ipv6开关为Status （1:开启 2:关闭）
  */
 class ModifyDomainIpv6StatusRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyDomainIpv6StatusRequest extends AbstractModel
     public $DomainId;
 
     /**
-     * @var integer 修改域名的Ipv6开关为Status （0:关闭 1:开启）
+     * @var integer 修改域名的Ipv6开关为Status （1:开启 2:关闭）
      */
     public $Status;
 
@@ -55,7 +55,7 @@ class ModifyDomainIpv6StatusRequest extends AbstractModel
      * @param string $InstanceId 需要修改的域名所属的实例ID
      * @param string $Domain 需要修改的域名
      * @param string $DomainId 需要修改的域名ID
-     * @param integer $Status 修改域名的Ipv6开关为Status （0:关闭 1:开启）
+     * @param integer $Status 修改域名的Ipv6开关为Status （1:开启 2:关闭）
      */
     function __construct()
     {

@@ -81,6 +81,7 @@ class EvaluationRequest extends AbstractModel
 
     /**
      * @var integer 异步模式标识，0：同步模式，1：异步模式。默认为同步模式
+     * @deprecated
      */
     public $IsAsync;
 

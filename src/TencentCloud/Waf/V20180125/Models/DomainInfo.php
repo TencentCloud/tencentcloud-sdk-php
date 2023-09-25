@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowMode(integer $FlowMode) 设置clbwaf使用模式,0镜像模式 1清洗模式
  * @method integer getStatus() 获取waf开关,0关闭 1开启
  * @method void setStatus(integer $Status) 设置waf开关,0关闭 1开启
- * @method integer getMode() 获取规则防御模式,0观察模式 1拦截模式
- * @method void setMode(integer $Mode) 设置规则防御模式,0观察模式 1拦截模式
- * @method integer getEngine() 获取AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
- * @method void setEngine(integer $Engine) 设置AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+ * @method integer getMode() 获取规则引擎防护模式,0观察模式 1拦截模式
+ * @method void setMode(integer $Mode) 设置规则引擎防护模式,0观察模式 1拦截模式
+ * @method integer getEngine() 获取规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+ * @method void setEngine(integer $Engine) 设置规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
  * @method array getCCList() 获取CC列表
  * @method void setCCList(array $CCList) 设置CC列表
  * @method array getRsList() 获取回源ip
@@ -87,6 +87,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSgDetail() 获取安全组状态的详细解释
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgDetail(string $SgDetail) 设置安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCloudType() 获取域名类型:hybrid表示混合云域名，public表示公有云域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudType(string $CloudType) 设置域名类型:hybrid表示混合云域名，public表示公有云域名
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
@@ -142,12 +146,12 @@ class DomainInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 规则防御模式,0观察模式 1拦截模式
+     * @var integer 规则引擎防护模式,0观察模式 1拦截模式
      */
     public $Mode;
 
     /**
-     * @var integer AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * @var integer 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public $Engine;
 
@@ -242,6 +246,12 @@ class DomainInfo extends AbstractModel
     public $SgDetail;
 
     /**
+     * @var string 域名类型:hybrid表示混合云域名，public表示公有云域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudType;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param string $InstanceId 实例ID
@@ -252,8 +262,8 @@ class DomainInfo extends AbstractModel
      * @param integer $ClsStatus 日志包
      * @param integer $FlowMode clbwaf使用模式,0镜像模式 1清洗模式
      * @param integer $Status waf开关,0关闭 1开启
-     * @param integer $Mode 规则防御模式,0观察模式 1拦截模式
-     * @param integer $Engine AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * @param integer $Mode 规则引擎防护模式,0观察模式 1拦截模式
+     * @param integer $Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      * @param array $CCList CC列表
      * @param array $RsList 回源ip
      * @param array $Ports 服务端口配置
@@ -275,6 +285,8 @@ class DomainInfo extends AbstractModel
      * @param integer $SgState 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgDetail 安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CloudType 域名类型:hybrid表示混合云域名，public表示公有云域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -414,6 +426,10 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("SgDetail",$param) and $param["SgDetail"] !== null) {
             $this->SgDetail = $param["SgDetail"];
+        }
+
+        if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
+            $this->CloudType = $param["CloudType"];
         }
     }
 }

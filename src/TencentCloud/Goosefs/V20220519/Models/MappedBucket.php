@@ -50,6 +50,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleDescription(string $RuleDescription) 设置规则备注与描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取桶关联状态 0：关联中 1：关联完成
+ * @method void setStatus(integer $Status) 设置桶关联状态 0：关联中 1：关联完成
+ * @method boolean getAccelerateFlag() 获取是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccelerateFlag(boolean $AccelerateFlag) 设置是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBucketRegion() 获取桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBucketRegion(string $BucketRegion) 设置桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MappedBucket extends AbstractModel
 {
@@ -89,6 +99,23 @@ class MappedBucket extends AbstractModel
     public $RuleDescription;
 
     /**
+     * @var integer 桶关联状态 0：关联中 1：关联完成
+     */
+    public $Status;
+
+    /**
+     * @var boolean 是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccelerateFlag;
+
+    /**
+     * @var string 桶所在的园区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BucketRegion;
+
+    /**
      * @param string $BucketName 对象存储Bucket名
      * @param string $FileSystemPath 映射到的文件系统路径, 默认为/
      * @param array $DataRepositoryTaskAutoStrategy 数据流动的自动策略, 包含加载与沉降。策略可以是多种的组合
@@ -103,6 +130,11 @@ class MappedBucket extends AbstractModel
      * @param string $RuleId 绑定bucket的数据流动策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleDescription 规则备注与描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 桶关联状态 0：关联中 1：关联完成
+     * @param boolean $AccelerateFlag 是否使用全球加速域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BucketRegion 桶所在的园区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +168,18 @@ class MappedBucket extends AbstractModel
 
         if (array_key_exists("RuleDescription",$param) and $param["RuleDescription"] !== null) {
             $this->RuleDescription = $param["RuleDescription"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AccelerateFlag",$param) and $param["AccelerateFlag"] !== null) {
+            $this->AccelerateFlag = $param["AccelerateFlag"];
+        }
+
+        if (array_key_exists("BucketRegion",$param) and $param["BucketRegion"] !== null) {
+            $this->BucketRegion = $param["BucketRegion"];
         }
     }
 }

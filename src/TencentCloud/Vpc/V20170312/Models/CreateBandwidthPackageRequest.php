@@ -23,9 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNetworkType() 获取带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
  * @method void setNetworkType(string $NetworkType) 设置带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
  * @method string getChargeType() 获取带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
@@ -52,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
  * @method integer getTimeSpan() 获取预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
  * @method void setTimeSpan(integer $TimeSpan) 设置预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+ * @method string getEgress() 获取网络出口，默认值：center_egress1
+ * @method void setEgress(string $Egress) 设置网络出口，默认值：center_egress1
  */
 class CreateBandwidthPackageRequest extends AbstractModel
 {
@@ -59,6 +67,9 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @var string 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      */
     public $NetworkType;
 
@@ -104,9 +115,17 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $TimeSpan;
 
     /**
+     * @var string 网络出口，默认值：center_egress1
+     */
+    public $Egress;
+
+    /**
      * @param string $NetworkType 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+<li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
+<li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
+<li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
      * @param string $ChargeType 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
@@ -120,6 +139,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
      * @param array $Tags 需要关联的标签列表。
      * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
      * @param integer $TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+     * @param string $Egress 网络出口，默认值：center_egress1
      */
     function __construct()
     {
@@ -169,6 +189,10 @@ class CreateBandwidthPackageRequest extends AbstractModel
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

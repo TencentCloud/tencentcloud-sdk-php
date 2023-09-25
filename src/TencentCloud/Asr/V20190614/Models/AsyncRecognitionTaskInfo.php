@@ -18,7 +18,7 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 音频流异步识别任务信息
+ * [音频流异步识别](https://cloud.tencent.com/document/api/1093/37824#AsyncRecognitionTasks)任务信息
  *
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID

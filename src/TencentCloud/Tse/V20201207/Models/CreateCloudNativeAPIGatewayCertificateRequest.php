@@ -57,11 +57,13 @@ class CreateCloudNativeAPIGatewayCertificateRequest extends AbstractModel
 
     /**
      * @var string 证书私钥
+     * @deprecated
      */
     public $Key;
 
     /**
      * @var string 证书pem格式
+     * @deprecated
      */
     public $Crt;
 

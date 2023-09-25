@@ -14,27 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Asr\V20190614\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * [音频流异步识别任务列表](https://cloud.tencent.com/document/product/1093/52060#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)
+ * 风险详情
  *
- * @method array getTasks() 获取任务列表
+ * @method string getTitle() 获取标题
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasks(array $Tasks) 设置任务列表
+ * @method void setTitle(string $Title) 设置标题
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBody() 获取详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBody(string $Body) 设置详情
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AsyncRecognitionTasks extends AbstractModel
+class ServerRiskSuggestion extends AbstractModel
 {
     /**
-     * @var array 任务列表
+     * @var string 标题
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Tasks;
+    public $Title;
 
     /**
-     * @param array $Tasks 任务列表
+     * @var string 详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Body;
+
+    /**
+     * @param string $Title 标题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Body 详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -50,13 +62,12 @@ class AsyncRecognitionTasks extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
-            $this->Tasks = [];
-            foreach ($param["Tasks"] as $key => $value){
-                $obj = new AsyncRecognitionTaskInfo();
-                $obj->deserialize($value);
-                array_push($this->Tasks, $obj);
-            }
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Body",$param) and $param["Body"] !== null) {
+            $this->Body = $param["Body"];
         }
     }
 }

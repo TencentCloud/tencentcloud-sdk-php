@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceSet(array $ResourceSet) 设置带宽包资源信息
  * @method integer getBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。
+ * @method string getEgress() 获取网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEgress(string $Egress) 设置网络出口
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BandwidthPackage extends AbstractModel
 {
@@ -80,6 +84,12 @@ class BandwidthPackage extends AbstractModel
     public $Bandwidth;
 
     /**
+     * @var string 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Egress;
+
+    /**
      * @param string $BandwidthPackageId 带宽包唯一标识Id
      * @param string $NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
      * @param string $ChargeType 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
@@ -88,6 +98,8 @@ class BandwidthPackage extends AbstractModel
      * @param string $Status 带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
      * @param array $ResourceSet 带宽包资源信息
      * @param integer $Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
+     * @param string $Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -137,6 +149,10 @@ class BandwidthPackage extends AbstractModel
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
             $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

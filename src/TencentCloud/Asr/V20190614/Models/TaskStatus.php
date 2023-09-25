@@ -18,7 +18,7 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 获取录音识别结果的返回参数
+ * [获取录音识别结果的返回参数](https://cloud.tencent.com/document/product/1093/37822#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)
  *
  * @method integer getTaskId() 获取任务标识。注意：TaskId数据类型为uint64。
  * @method void setTaskId(integer $TaskId) 设置任务标识。注意：TaskId数据类型为uint64。

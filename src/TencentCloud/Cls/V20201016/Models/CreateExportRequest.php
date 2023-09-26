@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置日志导出时间排序。desc，asc，默认为desc
  * @method string getFormat() 获取日志导出数据格式。json，csv，默认为json
  * @method void setFormat(string $Format) 设置日志导出数据格式。json，csv，默认为json
+ * @method integer getSyntaxRule() 获取语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。
+ * @method void setSyntaxRule(integer $SyntaxRule) 设置语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。
  */
 class CreateExportRequest extends AbstractModel
 {
@@ -73,6 +77,12 @@ class CreateExportRequest extends AbstractModel
     public $Format;
 
     /**
+     * @var integer 语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。
+     */
+    public $SyntaxRule;
+
+    /**
      * @param string $TopicId 日志主题ID
      * @param integer $Count 日志导出数量,  最大值5000万
      * @param string $Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
@@ -80,6 +90,8 @@ class CreateExportRequest extends AbstractModel
      * @param integer $To 日志导出结束时间，毫秒时间戳
      * @param string $Order 日志导出时间排序。desc，asc，默认为desc
      * @param string $Format 日志导出数据格式。json，csv，默认为json
+     * @param integer $SyntaxRule 语法规则,  默认值为0。
+0：Lucene语法，1：CQL语法。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class CreateExportRequest extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("SyntaxRule",$param) and $param["SyntaxRule"] !== null) {
+            $this->SyntaxRule = $param["SyntaxRule"];
         }
     }
 }

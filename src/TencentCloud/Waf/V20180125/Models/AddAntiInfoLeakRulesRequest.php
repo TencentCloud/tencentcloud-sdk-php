@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method integer getActionType() 获取动作
- * @method void setActionType(integer $ActionType) 设置动作
+ * @method string getName() 获取规则名称
+ * @method void setName(string $Name) 设置规则名称
+ * @method integer getActionType() 获取动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
+ * @method void setActionType(integer $ActionType) 设置动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
  * @method array getStrategies() 获取策略详情
  * @method void setStrategies(array $Strategies) 设置策略详情
  * @method string getUri() 获取网址
@@ -39,12 +39,12 @@ class AddAntiInfoLeakRulesRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 名称
+     * @var string 规则名称
      */
     public $Name;
 
     /**
-     * @var integer 动作
+     * @var integer 动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
      */
     public $ActionType;
 
@@ -60,8 +60,8 @@ class AddAntiInfoLeakRulesRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param string $Name 名称
-     * @param integer $ActionType 动作
+     * @param string $Name 规则名称
+     * @param integer $ActionType 动作，0（告警）、1（替换）、2（仅显示前四位）、3（仅显示后四位）、4（阻断）
      * @param array $Strategies 策略详情
      * @param string $Uri 网址
      */

@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateEnable(integer $UpdateEnable) 设置引擎是否可升级：0，不可升级；1，可升级
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNeedProbeEngineUpdate() 获取是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNeedProbeEngineUpdate(integer $NeedProbeEngineUpdate) 设置是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatInstanceInfo extends AbstractModel
 {
@@ -190,6 +194,12 @@ class NatInstanceInfo extends AbstractModel
     public $UpdateEnable;
 
     /**
+     * @var integer 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NeedProbeEngineUpdate;
+
+    /**
      * @param string $NatinsId nat实例id
      * @param string $NatinsName nat实例名称
      * @param string $Region 实例所在地域
@@ -219,6 +229,8 @@ class NatInstanceInfo extends AbstractModel
      * @param string $EngineVersion 实例引擎版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NeedProbeEngineUpdate 是的需要升级引擎 支持 nat拨测 1需要 0不需要
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -308,6 +320,10 @@ class NatInstanceInfo extends AbstractModel
 
         if (array_key_exists("UpdateEnable",$param) and $param["UpdateEnable"] !== null) {
             $this->UpdateEnable = $param["UpdateEnable"];
+        }
+
+        if (array_key_exists("NeedProbeEngineUpdate",$param) and $param["NeedProbeEngineUpdate"] !== null) {
+            $this->NeedProbeEngineUpdate = $param["NeedProbeEngineUpdate"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method array getItems() 获取ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
  * @method void setItems(array $Items) 设置ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+ * @method string getInstanceId() 获取实例Id
+ * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getEdition() 获取WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method void setEdition(string $Edition) 设置WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
  * @method string getSourceType() 获取是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
@@ -42,6 +44,11 @@ class UpsertIpAccessControlRequest extends AbstractModel
     public $Items;
 
     /**
+     * @var string 实例Id
+     */
+    public $InstanceId;
+
+    /**
      * @var string WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      */
     public $Edition;
@@ -54,6 +61,7 @@ class UpsertIpAccessControlRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param array $Items ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @param string $InstanceId 实例Id
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      * @param string $SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
      */
@@ -76,6 +84,10 @@ class UpsertIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("Items",$param) and $param["Items"] !== null) {
             $this->Items = $param["Items"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {

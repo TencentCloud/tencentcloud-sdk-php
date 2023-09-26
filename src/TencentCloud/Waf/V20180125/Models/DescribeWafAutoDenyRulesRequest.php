@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
+ * @method string getInstanceId() 获取实例Id
+ * @method void setInstanceId(string $InstanceId) 设置实例Id
  */
 class DescribeWafAutoDenyRulesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeWafAutoDenyRulesRequest extends AbstractModel
     public $Domain;
 
     /**
+     * @var string 实例Id
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Domain 域名
+     * @param string $InstanceId 实例Id
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeWafAutoDenyRulesRequest extends AbstractModel
         }
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

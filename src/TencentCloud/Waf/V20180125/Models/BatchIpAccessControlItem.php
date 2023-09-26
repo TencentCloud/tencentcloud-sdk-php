@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 多域名黑白名单列表Ip
  *
+ * @method string getId() 获取mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActionType() 获取黑名单42或白名单40
  * @method void setActionType(integer $ActionType) 设置黑名单42或白名单40
  * @method string getIp() 获取黑白名单的IP
@@ -37,6 +41,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class BatchIpAccessControlItem extends AbstractModel
 {
+    /**
+     * @var string mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
     /**
      * @var integer 黑名单42或白名单40
      */
@@ -73,6 +83,8 @@ class BatchIpAccessControlItem extends AbstractModel
     public $Hosts;
 
     /**
+     * @param string $Id mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionType 黑名单42或白名单40
      * @param string $Ip 黑白名单的IP
      * @param string $Note 备注
@@ -94,6 +106,10 @@ class BatchIpAccessControlItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
         }

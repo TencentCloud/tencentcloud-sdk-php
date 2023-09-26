@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ip黑白名单
  *
+ * @method string getId() 获取mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActionType() 获取动作
  * @method void setActionType(integer $ActionType) 设置动作
  * @method string getIp() 获取ip
@@ -34,9 +38,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValidTs() 获取有效截止时间戳
  * @method void setValidTs(integer $ValidTs) 设置有效截止时间戳
+ * @method integer getValidStatus() 获取生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValidStatus(integer $ValidStatus) 设置生效状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpAccessControlItem extends AbstractModel
 {
+    /**
+     * @var string mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
     /**
      * @var integer 动作
      */
@@ -69,6 +83,14 @@ class IpAccessControlItem extends AbstractModel
     public $ValidTs;
 
     /**
+     * @var integer 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValidStatus;
+
+    /**
+     * @param string $Id mongo表自增Id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionType 动作
      * @param string $Ip ip
      * @param string $Note 备注
@@ -76,6 +98,8 @@ class IpAccessControlItem extends AbstractModel
      * @param integer $TsVersion 更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValidTs 有效截止时间戳
+     * @param integer $ValidStatus 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -90,6 +114,10 @@ class IpAccessControlItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
         }
@@ -112,6 +140,10 @@ class IpAccessControlItem extends AbstractModel
 
         if (array_key_exists("ValidTs",$param) and $param["ValidTs"] !== null) {
             $this->ValidTs = $param["ValidTs"];
+        }
+
+        if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
+            $this->ValidStatus = $param["ValidStatus"];
         }
     }
 }

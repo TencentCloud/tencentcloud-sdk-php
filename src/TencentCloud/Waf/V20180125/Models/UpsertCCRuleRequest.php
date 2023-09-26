@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置操作类型
  * @method string getEventId() 获取添加规则的来源事件id
  * @method void setEventId(string $EventId) 设置添加规则的来源事件id
+ * @method array getSessionApplied() 获取规则需要启用的SessionID
+ * @method void setSessionApplied(array $SessionApplied) 设置规则需要启用的SessionID
+ * @method integer getRuleId() 获取规则ID，新增时填0
+ * @method void setRuleId(integer $RuleId) 设置规则ID，新增时填0
  */
 class UpsertCCRuleRequest extends AbstractModel
 {
@@ -129,6 +133,16 @@ class UpsertCCRuleRequest extends AbstractModel
     public $EventId;
 
     /**
+     * @var array 规则需要启用的SessionID
+     */
+    public $SessionApplied;
+
+    /**
+     * @var integer 规则ID，新增时填0
+     */
+    public $RuleId;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 名称
      * @param integer $Status 状态
@@ -144,6 +158,8 @@ class UpsertCCRuleRequest extends AbstractModel
      * @param string $Edition waf版本
      * @param integer $Type 操作类型
      * @param string $EventId 添加规则的来源事件id
+     * @param array $SessionApplied 规则需要启用的SessionID
+     * @param integer $RuleId 规则ID，新增时填0
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class UpsertCCRuleRequest extends AbstractModel
 
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("SessionApplied",$param) and $param["SessionApplied"] !== null) {
+            $this->SessionApplied = $param["SessionApplied"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

@@ -30,34 +30,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEdition(string $Edition) 设置只有两个值有效，sparta-waf，clb-waf，不传则不过滤
  * @method string getInstanceID() 获取WAF实例ID，不传则不过滤
  * @method void setInstanceID(string $InstanceID) 设置WAF实例ID，不传则不过滤
- * @method string getMetricName() 获取十三个值可选：
+ * @method string getMetricName() 获取十一个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
 up-上行峰值带宽趋势图
 attack-Web攻击总数趋势图
 cc-CC攻击总数趋势图
-StatusServerError-WAF返回给客户端状态码次数趋势图
-StatusClientError-WAF返回给客户端状态码次数趋势图
-StatusRedirect-WAF返回给客户端状态码次数趋势图
-StatusOk-WAF返回给客户端状态码次数趋势图
-UpstreamServerError-源站返回给WAF状态码次数趋势图
-UpstreamClientError-源站返回给WAF状态码次数趋势图
-UpstreamRedirect-源站返回给WAF状态码次数趋势图
- * @method void setMetricName(string $MetricName) 设置十三个值可选：
+bw-黑IP攻击总数趋势图
+tamper-防篡改攻击总数趋势图
+leak-防泄露攻击总数趋势图
+acl-访问控制攻击总数趋势图
+http_status-状态码各次数趋势图
+ * @method void setMetricName(string $MetricName) 设置十一个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
 up-上行峰值带宽趋势图
 attack-Web攻击总数趋势图
 cc-CC攻击总数趋势图
-StatusServerError-WAF返回给客户端状态码次数趋势图
-StatusClientError-WAF返回给客户端状态码次数趋势图
-StatusRedirect-WAF返回给客户端状态码次数趋势图
-StatusOk-WAF返回给客户端状态码次数趋势图
-UpstreamServerError-源站返回给WAF状态码次数趋势图
-UpstreamClientError-源站返回给WAF状态码次数趋势图
-UpstreamRedirect-源站返回给WAF状态码次数趋势图
+bw-黑IP攻击总数趋势图
+tamper-防篡改攻击总数趋势图
+leak-防泄露攻击总数趋势图
+acl-访问控制攻击总数趋势图
+http_status-状态码各次数趋势图
  */
 class DescribePeakPointsRequest extends AbstractModel
 {
@@ -87,20 +83,18 @@ class DescribePeakPointsRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string 十三个值可选：
+     * @var string 十一个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
 up-上行峰值带宽趋势图
 attack-Web攻击总数趋势图
 cc-CC攻击总数趋势图
-StatusServerError-WAF返回给客户端状态码次数趋势图
-StatusClientError-WAF返回给客户端状态码次数趋势图
-StatusRedirect-WAF返回给客户端状态码次数趋势图
-StatusOk-WAF返回给客户端状态码次数趋势图
-UpstreamServerError-源站返回给WAF状态码次数趋势图
-UpstreamClientError-源站返回给WAF状态码次数趋势图
-UpstreamRedirect-源站返回给WAF状态码次数趋势图
+bw-黑IP攻击总数趋势图
+tamper-防篡改攻击总数趋势图
+leak-防泄露攻击总数趋势图
+acl-访问控制攻击总数趋势图
+http_status-状态码各次数趋势图
      */
     public $MetricName;
 
@@ -110,20 +104,18 @@ UpstreamRedirect-源站返回给WAF状态码次数趋势图
      * @param string $Domain 查询的域名，如果查询所有域名数据，该参数不填写
      * @param string $Edition 只有两个值有效，sparta-waf，clb-waf，不传则不过滤
      * @param string $InstanceID WAF实例ID，不传则不过滤
-     * @param string $MetricName 十三个值可选：
+     * @param string $MetricName 十一个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
 up-上行峰值带宽趋势图
 attack-Web攻击总数趋势图
 cc-CC攻击总数趋势图
-StatusServerError-WAF返回给客户端状态码次数趋势图
-StatusClientError-WAF返回给客户端状态码次数趋势图
-StatusRedirect-WAF返回给客户端状态码次数趋势图
-StatusOk-WAF返回给客户端状态码次数趋势图
-UpstreamServerError-源站返回给WAF状态码次数趋势图
-UpstreamClientError-源站返回给WAF状态码次数趋势图
-UpstreamRedirect-源站返回给WAF状态码次数趋势图
+bw-黑IP攻击总数趋势图
+tamper-防篡改攻击总数趋势图
+leak-防泄露攻击总数趋势图
+acl-访问控制攻击总数趋势图
+http_status-状态码各次数趋势图
      */
     function __construct()
     {

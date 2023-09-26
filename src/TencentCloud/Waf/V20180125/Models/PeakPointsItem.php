@@ -34,33 +34,49 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCc(integer $Cc) 设置CC攻击次数
  * @method integer getBotAccess() 获取Bot qps
  * @method void setBotAccess(integer $BotAccess) 设置Bot qps
- * @method integer getStatusServerError() 获取WAF返回给客户端状态码次数
+ * @method integer getStatusServerError() 获取WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusServerError(integer $StatusServerError) 设置WAF返回给客户端状态码次数
+ * @method void setStatusServerError(integer $StatusServerError) 设置WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatusClientError() 获取WAF返回给客户端状态码次数
+ * @method integer getStatusClientError() 获取WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusClientError(integer $StatusClientError) 设置WAF返回给客户端状态码次数
+ * @method void setStatusClientError(integer $StatusClientError) 设置WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatusRedirect() 获取WAF返回给客户端状态码次数
+ * @method integer getStatusRedirect() 获取WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusRedirect(integer $StatusRedirect) 设置WAF返回给客户端状态码次数
+ * @method void setStatusRedirect(integer $StatusRedirect) 设置WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatusOk() 获取WAF返回给客户端状态码次数
+ * @method integer getStatusOk() 获取WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusOk(integer $StatusOk) 设置WAF返回给客户端状态码次数
+ * @method void setStatusOk(integer $StatusOk) 设置WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpstreamServerError() 获取源站返回给WAF状态码次数
+ * @method integer getUpstreamServerError() 获取源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpstreamServerError(integer $UpstreamServerError) 设置源站返回给WAF状态码次数
+ * @method void setUpstreamServerError(integer $UpstreamServerError) 设置源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpstreamClientError() 获取源站返回给WAF状态码次数
+ * @method integer getUpstreamClientError() 获取源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpstreamClientError(integer $UpstreamClientError) 设置源站返回给WAF状态码次数
+ * @method void setUpstreamClientError(integer $UpstreamClientError) 设置源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpstreamRedirect() 获取源站返回给WAF状态码次数
+ * @method integer getUpstreamRedirect() 获取源站返回给WAF状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpstreamRedirect(integer $UpstreamRedirect) 设置源站返回给WAF状态码次数
+ * @method void setUpstreamRedirect(integer $UpstreamRedirect) 设置源站返回给WAF状态码302次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBlackIP() 获取黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBlackIP(integer $BlackIP) 设置黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTamper() 获取防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTamper(integer $Tamper) 设置防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLeak() 获取信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLeak(integer $Leak) 设置信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getACL() 获取访问控制 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setACL(integer $ACL) 设置访问控制 
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PeakPointsItem extends AbstractModel
@@ -101,46 +117,70 @@ class PeakPointsItem extends AbstractModel
     public $BotAccess;
 
     /**
-     * @var integer WAF返回给客户端状态码次数
+     * @var integer WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusServerError;
 
     /**
-     * @var integer WAF返回给客户端状态码次数
+     * @var integer WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusClientError;
 
     /**
-     * @var integer WAF返回给客户端状态码次数
+     * @var integer WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusRedirect;
 
     /**
-     * @var integer WAF返回给客户端状态码次数
+     * @var integer WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusOk;
 
     /**
-     * @var integer 源站返回给WAF状态码次数
+     * @var integer 源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamServerError;
 
     /**
-     * @var integer 源站返回给WAF状态码次数
+     * @var integer 源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamClientError;
 
     /**
-     * @var integer 源站返回给WAF状态码次数
+     * @var integer 源站返回给WAF状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamRedirect;
+
+    /**
+     * @var integer 黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BlackIP;
+
+    /**
+     * @var integer 防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tamper;
+
+    /**
+     * @var integer 信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Leak;
+
+    /**
+     * @var integer 访问控制 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ACL;
 
     /**
      * @param integer $Time 秒级别时间戳
@@ -150,19 +190,27 @@ class PeakPointsItem extends AbstractModel
      * @param integer $Attack Web攻击次数
      * @param integer $Cc CC攻击次数
      * @param integer $BotAccess Bot qps
-     * @param integer $StatusServerError WAF返回给客户端状态码次数
+     * @param integer $StatusServerError WAF返回给客户端状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StatusClientError WAF返回给客户端状态码次数
+     * @param integer $StatusClientError WAF返回给客户端状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StatusRedirect WAF返回给客户端状态码次数
+     * @param integer $StatusRedirect WAF返回给客户端状态码302次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StatusOk WAF返回给客户端状态码次数
+     * @param integer $StatusOk WAF返回给客户端状态码202次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpstreamServerError 源站返回给WAF状态码次数
+     * @param integer $UpstreamServerError 源站返回给WAF状态码5xx次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpstreamClientError 源站返回给WAF状态码次数
+     * @param integer $UpstreamClientError 源站返回给WAF状态码4xx次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpstreamRedirect 源站返回给WAF状态码次数
+     * @param integer $UpstreamRedirect 源站返回给WAF状态码302次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BlackIP 黑名单次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Tamper 防篡改次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Leak 信息防泄露次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ACL 访问控制 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -232,6 +280,22 @@ class PeakPointsItem extends AbstractModel
 
         if (array_key_exists("UpstreamRedirect",$param) and $param["UpstreamRedirect"] !== null) {
             $this->UpstreamRedirect = $param["UpstreamRedirect"];
+        }
+
+        if (array_key_exists("BlackIP",$param) and $param["BlackIP"] !== null) {
+            $this->BlackIP = $param["BlackIP"];
+        }
+
+        if (array_key_exists("Tamper",$param) and $param["Tamper"] !== null) {
+            $this->Tamper = $param["Tamper"];
+        }
+
+        if (array_key_exists("Leak",$param) and $param["Leak"] !== null) {
+            $this->Leak = $param["Leak"];
+        }
+
+        if (array_key_exists("ACL",$param) and $param["ACL"] !== null) {
+            $this->ACL = $param["ACL"];
         }
     }
 }

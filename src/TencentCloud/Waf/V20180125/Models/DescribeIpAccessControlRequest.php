@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSort(string $Sort) 设置排序参数
  * @method string getIp() 获取ip
  * @method void setIp(string $Ip) 设置ip
+ * @method integer getValidStatus() 获取生效状态
+ * @method void setValidStatus(integer $ValidStatus) 设置生效状态
  */
 class DescribeIpAccessControlRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $Ip;
 
     /**
+     * @var integer 生效状态
+     */
+    public $ValidStatus;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Count 计数标识
      * @param integer $ActionType 动作，40表示查询白名单，42表示查询黑名单
@@ -120,6 +127,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param string $Source 来源
      * @param string $Sort 排序参数
      * @param string $Ip ip
+     * @param integer $ValidStatus 生效状态
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class DescribeIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
             $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
+            $this->ValidStatus = $param["ValidStatus"];
         }
     }
 }

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIP() 获取IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIP(string $IP) 设置IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIoc() 获取规则ip
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIoc(string $Ioc) 设置规则ip
@@ -92,6 +96,12 @@ class BlockIgnoreRule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
+
+    /**
+     * @var string IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IP;
 
     /**
      * @var string 规则ip
@@ -186,6 +196,8 @@ class BlockIgnoreRule extends AbstractModel
     /**
      * @param string $Domain 域名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IP IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ioc 规则ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 危险等级
@@ -232,6 +244,10 @@ class BlockIgnoreRule extends AbstractModel
         }
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("IP",$param) and $param["IP"] !== null) {
+            $this->IP = $param["IP"];
         }
 
         if (array_key_exists("Ioc",$param) and $param["Ioc"] !== null) {

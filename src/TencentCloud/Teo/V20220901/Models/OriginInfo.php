@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
 <li>ORIGIN_GROUP：源站组类型源站；</li>
 <li>AWS_S3：S3兼容对象存储源站；</li>
 <li>LB: 负载均衡类型源站；</li>
-<li>SPACE：EdgeOne Shield Space 存储。</li>
+<li>SPACE：EdgeOne Shield Space 存储。</li>  
  * @method void setOriginType(string $OriginType) 设置源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6 或域名类型源站；</li>
 <li>COS：COS 源；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
 <li>AWS_S3：S3兼容对象存储源站；</li>
 <li>LB: 负载均衡类型源站；</li>
-<li>SPACE：EdgeOne Shield Space 存储。</li>
+<li>SPACE：EdgeOne Shield Space 存储。</li>  
  * @method string getOrigin() 获取源站地址，当 OriginType 参数指定为 ORIGIN_GROUP 时，该参数填写源站组 ID，其他情况下填写源站地址。
  * @method void setOrigin(string $Origin) 设置源站地址，当 OriginType 参数指定为 ORIGIN_GROUP 时，该参数填写源站组 ID，其他情况下填写源站地址。
  * @method string getBackupOrigin() 获取备用源站组 ID，该参数在 OriginType 参数指定为 ORIGIN_GROUP 时生效，为空表示不使用备用源站。
@@ -56,7 +56,7 @@ class OriginInfo extends AbstractModel
 <li>ORIGIN_GROUP：源站组类型源站；</li>
 <li>AWS_S3：S3兼容对象存储源站；</li>
 <li>LB: 负载均衡类型源站；</li>
-<li>SPACE：EdgeOne Shield Space 存储。</li>
+<li>SPACE：EdgeOne Shield Space 存储。</li>  
      */
     public $OriginType;
 
@@ -89,7 +89,7 @@ class OriginInfo extends AbstractModel
 <li>ORIGIN_GROUP：源站组类型源站；</li>
 <li>AWS_S3：S3兼容对象存储源站；</li>
 <li>LB: 负载均衡类型源站；</li>
-<li>SPACE：EdgeOne Shield Space 存储。</li>
+<li>SPACE：EdgeOne Shield Space 存储。</li>  
      * @param string $Origin 源站地址，当 OriginType 参数指定为 ORIGIN_GROUP 时，该参数填写源站组 ID，其他情况下填写源站地址。
      * @param string $BackupOrigin 备用源站组 ID，该参数在 OriginType 参数指定为 ORIGIN_GROUP 时生效，为空表示不使用备用源站。
      * @param string $PrivateAccess 指定是否允许访问私有对象存储源站，当源站类型 OriginType=COS 或 AWS_S3 时有效，取值有：

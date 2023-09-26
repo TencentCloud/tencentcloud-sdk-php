@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method array getItems() 获取删除的ip数组
  * @method void setItems(array $Items) 设置删除的ip数组
+ * @method boolean getIsId() 获取若IsId字段为True，则Items列表元素需为Id，否则为IP
+ * @method void setIsId(boolean $IsId) 设置若IsId字段为True，则Items列表元素需为Id，否则为IP
  * @method boolean getDeleteAll() 获取是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
  * @method void setDeleteAll(boolean $DeleteAll) 设置是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
  * @method string getSourceType() 获取是否为多域名黑白名单
@@ -42,6 +44,11 @@ class DeleteIpAccessControlRequest extends AbstractModel
     public $Items;
 
     /**
+     * @var boolean 若IsId字段为True，则Items列表元素需为Id，否则为IP
+     */
+    public $IsId;
+
+    /**
      * @var boolean 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
      */
     public $DeleteAll;
@@ -54,6 +61,7 @@ class DeleteIpAccessControlRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param array $Items 删除的ip数组
+     * @param boolean $IsId 若IsId字段为True，则Items列表元素需为Id，否则为IP
      * @param boolean $DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
      * @param string $SourceType 是否为多域名黑白名单
      */
@@ -76,6 +84,10 @@ class DeleteIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("Items",$param) and $param["Items"] !== null) {
             $this->Items = $param["Items"];
+        }
+
+        if (array_key_exists("IsId",$param) and $param["IsId"] !== null) {
+            $this->IsId = $param["IsId"];
         }
 
         if (array_key_exists("DeleteAll",$param) and $param["DeleteAll"] !== null) {

@@ -20,17 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccelerationDomain返回参数结构体
  *
+ * @method OwnershipVerification getOwnershipVerification() 获取当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) 设置当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAccelerationDomainResponse extends AbstractModel
 {
     /**
+     * @var OwnershipVerification 当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnershipVerification;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param OwnershipVerification $OwnershipVerification 当您的站点未进行归属权验证时，您可通过该参数返回的信息单独对域名进行归属权校验。详情参考 [站点/域名归属权验证](https://cloud.tencent.com/document/product/1552/70789)。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +58,11 @@ class CreateAccelerationDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
+            $this->OwnershipVerification = new OwnershipVerification();
+            $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

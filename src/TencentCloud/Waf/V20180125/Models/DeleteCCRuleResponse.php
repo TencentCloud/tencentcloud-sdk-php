@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置一般为null
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleId() 获取操作的规则Id
+ * @method void setRuleId(integer $RuleId) 设置操作的规则Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,6 +38,11 @@ class DeleteCCRuleResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var integer 操作的规则Id
+     */
+    public $RuleId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -43,6 +50,7 @@ class DeleteCCRuleResponse extends AbstractModel
     /**
      * @param string $Data 一般为null
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleId 操作的规则Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,10 @@ class DeleteCCRuleResponse extends AbstractModel
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

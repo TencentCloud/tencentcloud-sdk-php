@@ -104,6 +104,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAPISecurityTrial(integer $IsAPISecurityTrial) 设置是否api 安全试用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MajorEventsPkg getMajorEventsPkg() 获取重保包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMajorEventsPkg(MajorEventsPkg $MajorEventsPkg) 设置重保包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method HybridPkg getHybridPkg() 获取混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHybridPkg(HybridPkg $HybridPkg) 设置混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -274,6 +282,18 @@ class InstanceInfo extends AbstractModel
     public $IsAPISecurityTrial;
 
     /**
+     * @var MajorEventsPkg 重保包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MajorEventsPkg;
+
+    /**
+     * @var HybridPkg 混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HybridPkg;
+
+    /**
      * @param string $InstanceId id
      * @param string $InstanceName Name
      * @param string $ResourceIds 资源id
@@ -315,6 +335,10 @@ class InstanceInfo extends AbstractModel
      * @param integer $SandboxQps 实例沙箱值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAPISecurityTrial 是否api 安全试用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MajorEventsPkg $MajorEventsPkg 重保包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HybridPkg $HybridPkg 混合云子节点包
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -457,6 +481,16 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("IsAPISecurityTrial",$param) and $param["IsAPISecurityTrial"] !== null) {
             $this->IsAPISecurityTrial = $param["IsAPISecurityTrial"];
+        }
+
+        if (array_key_exists("MajorEventsPkg",$param) and $param["MajorEventsPkg"] !== null) {
+            $this->MajorEventsPkg = new MajorEventsPkg();
+            $this->MajorEventsPkg->deserialize($param["MajorEventsPkg"]);
+        }
+
+        if (array_key_exists("HybridPkg",$param) and $param["HybridPkg"] !== null) {
+            $this->HybridPkg = new HybridPkg();
+            $this->HybridPkg->deserialize($param["HybridPkg"]);
         }
     }
 }

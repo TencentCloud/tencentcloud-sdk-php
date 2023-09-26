@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndOffset(string $EndOffset) 设置结束偏移位置
  * @method string getEdition() 获取版本
  * @method void setEdition(string $Edition) 设置版本
+ * @method string getSessionName() 获取Session名
+ * @method void setSessionName(string $SessionName) 设置Session名
+ * @method integer getSessionID() 获取Session对应ID
+ * @method void setSessionID(integer $SessionID) 设置Session对应ID
  */
 class UpsertSessionRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class UpsertSessionRequest extends AbstractModel
     public $Edition;
 
     /**
+     * @var string Session名
+     */
+    public $SessionName;
+
+    /**
+     * @var integer Session对应ID
+     */
+    public $SessionID;
+
+    /**
      * @param string $Domain 域名
      * @param string $Source session来源位置
      * @param string $Category 提取类别
@@ -88,6 +102,8 @@ class UpsertSessionRequest extends AbstractModel
      * @param string $StartOffset 起始偏移位置
      * @param string $EndOffset 结束偏移位置
      * @param string $Edition 版本
+     * @param string $SessionName Session名
+     * @param integer $SessionID Session对应ID
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class UpsertSessionRequest extends AbstractModel
 
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("SessionName",$param) and $param["SessionName"] !== null) {
+            $this->SessionName = $param["SessionName"];
+        }
+
+        if (array_key_exists("SessionID",$param) and $param["SessionID"] !== null) {
+            $this->SessionID = $param["SessionID"];
         }
     }
 }

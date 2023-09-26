@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getEdition() 获取clb-waf 或者 sprta-waf
  * @method void setEdition(string $Edition) 设置clb-waf 或者 sprta-waf
+ * @method integer getSessionID() 获取要删除的SessionID
+ * @method void setSessionID(integer $SessionID) 设置要删除的SessionID
  */
 class DeleteSessionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteSessionRequest extends AbstractModel
     public $Edition;
 
     /**
+     * @var integer 要删除的SessionID
+     */
+    public $SessionID;
+
+    /**
      * @param string $Domain 域名
      * @param string $Edition clb-waf 或者 sprta-waf
+     * @param integer $SessionID 要删除的SessionID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteSessionRequest extends AbstractModel
 
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("SessionID",$param) and $param["SessionID"] !== null) {
+            $this->SessionID = $param["SessionID"];
         }
     }
 }

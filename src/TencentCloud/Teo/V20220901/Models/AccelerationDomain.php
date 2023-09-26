@@ -20,18 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 加速域名
  *
- * @method OriginDetail getOriginDetail() 获取源站信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginDetail(OriginDetail $OriginDetail) 设置源站信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedOn() 获取创建时间。
- * @method void setCreatedOn(string $CreatedOn) 设置创建时间。
- * @method string getDomainName() 获取加速域名名称。
- * @method void setDomainName(string $DomainName) 设置加速域名名称。
- * @method string getModifiedOn() 获取修改时间。
- * @method void setModifiedOn(string $ModifiedOn) 设置修改时间。
  * @method string getZoneId() 获取站点 ID。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method string getDomainName() 获取加速域名名称。
+ * @method void setDomainName(string $DomainName) 设置加速域名名称。
  * @method string getDomainStatus() 获取加速域名状态，取值有：
 <li>online：已生效；</li>
 <li>process：部署中；</li>
@@ -44,40 +36,36 @@ use TencentCloud\Common\AbstractModel;
 <li>offline：已停用；</li>
 <li>forbidden：已封禁；</li>
 <li>init：未生效，待激活站点；</li>
+ * @method OriginDetail getOriginDetail() 获取源站信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginDetail(OriginDetail $OriginDetail) 设置源站信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCname() 获取CNAME 地址。
  * @method void setCname(string $Cname) 设置CNAME 地址。
  * @method string getIdentificationStatus() 获取加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentificationStatus(string $IdentificationStatus) 设置加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedOn() 获取创建时间。
+ * @method void setCreatedOn(string $CreatedOn) 设置创建时间。
+ * @method string getModifiedOn() 获取修改时间。
+ * @method void setModifiedOn(string $ModifiedOn) 设置修改时间。
+ * @method OwnershipVerification getOwnershipVerification() 获取当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) 设置当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccelerationDomain extends AbstractModel
 {
     /**
-     * @var OriginDetail 源站信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 站点 ID。
      */
-    public $OriginDetail;
-
-    /**
-     * @var string 创建时间。
-     */
-    public $CreatedOn;
+    public $ZoneId;
 
     /**
      * @var string 加速域名名称。
      */
     public $DomainName;
-
-    /**
-     * @var string 修改时间。
-     */
-    public $ModifiedOn;
-
-    /**
-     * @var string 站点 ID。
-     */
-    public $ZoneId;
 
     /**
      * @var string 加速域名状态，取值有：
@@ -88,6 +76,12 @@ class AccelerationDomain extends AbstractModel
 <li>init：未生效，待激活站点；</li>
      */
     public $DomainStatus;
+
+    /**
+     * @var OriginDetail 源站信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginDetail;
 
     /**
      * @var string CNAME 地址。
@@ -101,20 +95,38 @@ class AccelerationDomain extends AbstractModel
     public $IdentificationStatus;
 
     /**
-     * @param OriginDetail $OriginDetail 源站信息。
+     * @var string 创建时间。
+     */
+    public $CreatedOn;
+
+    /**
+     * @var string 修改时间。
+     */
+    public $ModifiedOn;
+
+    /**
+     * @var OwnershipVerification 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedOn 创建时间。
-     * @param string $DomainName 加速域名名称。
-     * @param string $ModifiedOn 修改时间。
+     */
+    public $OwnershipVerification;
+
+    /**
      * @param string $ZoneId 站点 ID。
+     * @param string $DomainName 加速域名名称。
      * @param string $DomainStatus 加速域名状态，取值有：
 <li>online：已生效；</li>
 <li>process：部署中；</li>
 <li>offline：已停用；</li>
 <li>forbidden：已封禁；</li>
 <li>init：未生效，待激活站点；</li>
+     * @param OriginDetail $OriginDetail 源站信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cname CNAME 地址。
      * @param string $IdentificationStatus 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedOn 创建时间。
+     * @param string $ModifiedOn 修改时间。
+     * @param OwnershipVerification $OwnershipVerification 当域名需要进行归属权验证才能继续提供服务时，该对象会携带对应验证方式所需要的信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -130,29 +142,21 @@ class AccelerationDomain extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginDetail",$param) and $param["OriginDetail"] !== null) {
-            $this->OriginDetail = new OriginDetail();
-            $this->OriginDetail->deserialize($param["OriginDetail"]);
-        }
-
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
 
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
         }
 
-        if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
-            $this->ModifiedOn = $param["ModifiedOn"];
-        }
-
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
-        }
-
         if (array_key_exists("DomainStatus",$param) and $param["DomainStatus"] !== null) {
             $this->DomainStatus = $param["DomainStatus"];
+        }
+
+        if (array_key_exists("OriginDetail",$param) and $param["OriginDetail"] !== null) {
+            $this->OriginDetail = new OriginDetail();
+            $this->OriginDetail->deserialize($param["OriginDetail"]);
         }
 
         if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
@@ -161,6 +165,19 @@ class AccelerationDomain extends AbstractModel
 
         if (array_key_exists("IdentificationStatus",$param) and $param["IdentificationStatus"] !== null) {
             $this->IdentificationStatus = $param["IdentificationStatus"];
+        }
+
+        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
+            $this->CreatedOn = $param["CreatedOn"];
+        }
+
+        if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
+            $this->ModifiedOn = $param["ModifiedOn"];
+        }
+
+        if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
+            $this->OwnershipVerification = new OwnershipVerification();
+            $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
         }
     }
 }

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccelerationDomains返回参数结构体
  *
- * @method integer getTotalCount() 获取加速域名总数。
- * @method void setTotalCount(integer $TotalCount) 设置加速域名总数。
- * @method array getAccelerationDomains() 获取加速域名列表。
- * @method void setAccelerationDomains(array $AccelerationDomains) 设置加速域名列表。
+ * @method integer getTotalCount() 获取符合查询条件的加速域名个数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的加速域名个数。
+ * @method array getAccelerationDomains() 获取符合查询条件的所有加速域名的信息。
+ * @method void setAccelerationDomains(array $AccelerationDomains) 设置符合查询条件的所有加速域名的信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAccelerationDomainsResponse extends AbstractModel
 {
     /**
-     * @var integer 加速域名总数。
+     * @var integer 符合查询条件的加速域名个数。
      */
     public $TotalCount;
 
     /**
-     * @var array 加速域名列表。
+     * @var array 符合查询条件的所有加速域名的信息。
      */
     public $AccelerationDomains;
 
@@ -45,8 +45,8 @@ class DescribeAccelerationDomainsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 加速域名总数。
-     * @param array $AccelerationDomains 加速域名列表。
+     * @param integer $TotalCount 符合查询条件的加速域名个数。
+     * @param array $AccelerationDomains 符合查询条件的所有加速域名的信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

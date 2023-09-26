@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 站点信息
  *
- * @method string getZoneId() 获取站点ID。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
  * @method string getZoneName() 获取站点名称。
  * @method void setZoneName(string $ZoneName) 设置站点名称。
  * @method array getOriginalNameServers() 获取站点当前使用的 NS 列表。
@@ -33,19 +33,23 @@ use TencentCloud\Common\AbstractModel;
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
 <li> deactivated：被封禁。 </li>
+<li> initializing：待绑定套餐。 </li>
  * @method void setStatus(string $Status) 设置站点状态，取值有：
 <li> active：NS 已切换； </li>
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
 <li> deactivated：被封禁。 </li>
- * @method string getType() 获取站点接入方式，取值有
-<li> full：NS 接入； </li>
+<li> initializing：待绑定套餐。 </li>
+ * @method string getType() 获取站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li>
- * @method void setType(string $Type) 设置站点接入方式，取值有
-<li> full：NS 接入； </li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li>
+ * @method void setType(string $Type) 设置站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li>
  * @method boolean getPaused() 获取站点是否关闭。
  * @method void setPaused(boolean $Paused) 设置站点是否关闭。
  * @method string getCnameSpeedUp() 获取是否开启 CNAME 加速，取值有：
@@ -102,13 +106,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFake(integer $IsFake) 设置是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
- * @method string getLockStatus() 获取锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
- * @method void setLockStatus(string $LockStatus) 设置锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+ * @method string getLockStatus() 获取锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
+ * @method void setLockStatus(string $LockStatus) 设置锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
+ * @method OwnershipVerification getOwnershipVerification() 获取归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnershipVerification(OwnershipVerification $OwnershipVerification) 设置归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Zone extends AbstractModel
 {
     /**
-     * @var string 站点ID。
+     * @var string 站点 ID。
      */
     public $ZoneId;
 
@@ -133,14 +141,16 @@ class Zone extends AbstractModel
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
 <li> deactivated：被封禁。 </li>
+<li> initializing：待绑定套餐。 </li>
      */
     public $Status;
 
     /**
-     * @var string 站点接入方式，取值有
-<li> full：NS 接入； </li>
+     * @var string 站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li>
      */
     public $Type;
 
@@ -225,12 +235,18 @@ class Zone extends AbstractModel
     public $IsFake;
 
     /**
-     * @var string 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+     * @var string 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
      */
     public $LockStatus;
 
     /**
-     * @param string $ZoneId 站点ID。
+     * @var OwnershipVerification 归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnershipVerification;
+
+    /**
+     * @param string $ZoneId 站点 ID。
      * @param string $ZoneName 站点名称。
      * @param array $OriginalNameServers 站点当前使用的 NS 列表。
      * @param array $NameServers 腾讯云分配的 NS 列表。
@@ -239,10 +255,12 @@ class Zone extends AbstractModel
 <li> pending：NS 未切换；</li>
 <li> moved：NS 已切走；</li>
 <li> deactivated：被封禁。 </li>
-     * @param string $Type 站点接入方式，取值有
-<li> full：NS 接入； </li>
+<li> initializing：待绑定套餐。 </li>
+     * @param string $Type 站点接入方式，取值有：
+<li> full：NS 接入；</li>
 <li> partial：CNAME 接入；</li>
-<li> noDomainAccess：无域名接入。</li>
+<li> noDomainAccess：无域名接入；</li>
+<li> vodeo：vodeo默认站点。</li>
      * @param boolean $Paused 站点是否关闭。
      * @param string $CnameSpeedUp 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
@@ -271,7 +289,9 @@ class Zone extends AbstractModel
      * @param integer $IsFake 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-     * @param string $LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+     * @param string $LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作；</li><li> plan_migrate：套餐迁移中，不允许进行修改操作。</li>
+     * @param OwnershipVerification $OwnershipVerification 归属权验证信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -380,6 +400,11 @@ class Zone extends AbstractModel
 
         if (array_key_exists("LockStatus",$param) and $param["LockStatus"] !== null) {
             $this->LockStatus = $param["LockStatus"];
+        }
+
+        if (array_key_exists("OwnershipVerification",$param) and $param["OwnershipVerification"] !== null) {
+            $this->OwnershipVerification = new OwnershipVerification();
+            $this->OwnershipVerification->deserialize($param["OwnershipVerification"]);
         }
     }
 }

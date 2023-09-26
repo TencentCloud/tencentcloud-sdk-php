@@ -22,16 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点 ID。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method array getHosts() 获取本次变更的域名列表。
- * @method void setHosts(array $Hosts) 设置本次变更的域名列表。
- * @method array getServerCertInfo() 获取证书信息, 只需要传入 CertId 即可, 如果为空, 则使用默认证书。
- * @method void setServerCertInfo(array $ServerCertInfo) 设置证书信息, 只需要传入 CertId 即可, 如果为空, 则使用默认证书。
+ * @method array getHosts() 获取需要修改证书配置的加速域名。
+ * @method void setHosts(array $Hosts) 设置需要修改证书配置的加速域名。
+ * @method string getMode() 获取配置证书的模式，取值有：
+<li>disable：不配置证书；</li>
+<li>eofreecert：配置 EdgeOne 免费证书；</li>
+<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+ * @method void setMode(string $Mode) 设置配置证书的模式，取值有：
+<li>disable：不配置证书；</li>
+<li>eofreecert：配置 EdgeOne 免费证书；</li>
+<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+ * @method array getServerCertInfo() 获取SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+ * @method void setServerCertInfo(array $ServerCertInfo) 设置SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
  * @method string getApplyType() 获取托管类型，取值有：
-<li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为none。
+<li>none：不托管EO；</li>
+<li>apply：托管EO</li>
+不填，默认取值为none。
  * @method void setApplyType(string $ApplyType) 设置托管类型，取值有：
-<li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为none。
+<li>none：不托管EO；</li>
+<li>apply：托管EO</li>
+不填，默认取值为none。
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -41,29 +51,44 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array 本次变更的域名列表。
+     * @var array 需要修改证书配置的加速域名。
      */
     public $Hosts;
 
     /**
-     * @var array 证书信息, 只需要传入 CertId 即可, 如果为空, 则使用默认证书。
+     * @var string 配置证书的模式，取值有：
+<li>disable：不配置证书；</li>
+<li>eofreecert：配置 EdgeOne 免费证书；</li>
+<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+     */
+    public $Mode;
+
+    /**
+     * @var array SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
      */
     public $ServerCertInfo;
 
     /**
      * @var string 托管类型，取值有：
-<li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为none。
+<li>none：不托管EO；</li>
+<li>apply：托管EO</li>
+不填，默认取值为none。
+     * @deprecated
      */
     public $ApplyType;
 
     /**
      * @param string $ZoneId 站点 ID。
-     * @param array $Hosts 本次变更的域名列表。
-     * @param array $ServerCertInfo 证书信息, 只需要传入 CertId 即可, 如果为空, 则使用默认证书。
+     * @param array $Hosts 需要修改证书配置的加速域名。
+     * @param string $Mode 配置证书的模式，取值有：
+<li>disable：不配置证书；</li>
+<li>eofreecert：配置 EdgeOne 免费证书；</li>
+<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+     * @param array $ServerCertInfo SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
      * @param string $ApplyType 托管类型，取值有：
-<li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为none。
+<li>none：不托管EO；</li>
+<li>apply：托管EO</li>
+不填，默认取值为none。
      */
     function __construct()
     {
@@ -84,6 +109,10 @@ class ModifyHostsCertificateRequest extends AbstractModel
 
         if (array_key_exists("Hosts",$param) and $param["Hosts"] !== null) {
             $this->Hosts = $param["Hosts"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("ServerCertInfo",$param) and $param["ServerCertInfo"] !== null) {

@@ -28,6 +28,7 @@ use TencentCloud\Common\AbstractModel;
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
+<li>IsAutoRun - string - 是否必填：否 - 是否开机自启动：0否，1是</li>
 <li>Status- string - 是否必填：否 - 默认启用状态：0未启用， 1启用 仅linux</li>
 <li>Type- string - 是否必填：否 - 类型：类型 仅windows：
 1:编码器
@@ -48,6 +49,7 @@ use TencentCloud\Common\AbstractModel;
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
+<li>IsAutoRun - string - 是否必填：否 - 是否开机自启动：0否，1是</li>
 <li>Status- string - 是否必填：否 - 默认启用状态：0未启用， 1启用 仅linux</li>
 <li>Type- string - 是否必填：否 - 类型：类型 仅windows：
 1:编码器
@@ -90,6 +92,7 @@ class DescribeAssetInitServiceListRequest extends AbstractModel
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
+<li>IsAutoRun - string - 是否必填：否 - 是否开机自启动：0否，1是</li>
 <li>Status- string - 是否必填：否 - 默认启用状态：0未启用， 1启用 仅linux</li>
 <li>Type- string - 是否必填：否 - 类型：类型 仅windows：
 1:编码器
@@ -136,6 +139,7 @@ class DescribeAssetInitServiceListRequest extends AbstractModel
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
+<li>IsAutoRun - string - 是否必填：否 - 是否开机自启动：0否，1是</li>
 <li>Status- string - 是否必填：否 - 默认启用状态：0未启用， 1启用 仅linux</li>
 <li>Type- string - 是否必填：否 - 类型：类型 仅windows：
 1:编码器

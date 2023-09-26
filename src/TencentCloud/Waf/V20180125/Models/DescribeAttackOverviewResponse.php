@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiRiskEventCount(integer $ApiRiskEventCount) 设置api风险事件数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIPBlackCount() 获取黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPBlackCount(integer $IPBlackCount) 设置黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTamperCount() 获取防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTamperCount(integer $TamperCount) 设置防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLeakCount() 获取信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLeakCount(integer $LeakCount) 设置信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -78,6 +90,24 @@ class DescribeAttackOverviewResponse extends AbstractModel
     public $ApiRiskEventCount;
 
     /**
+     * @var integer 黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPBlackCount;
+
+    /**
+     * @var integer 防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TamperCount;
+
+    /**
+     * @var integer 信息泄露总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LeakCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -90,6 +120,12 @@ class DescribeAttackOverviewResponse extends AbstractModel
      * @param integer $BotCount Bot攻击总数
      * @param integer $ApiAssetsCount api资产总数
      * @param integer $ApiRiskEventCount api风险事件数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IPBlackCount 黑名单总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TamperCount 防篡改总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LeakCount 信息泄露总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +168,18 @@ class DescribeAttackOverviewResponse extends AbstractModel
 
         if (array_key_exists("ApiRiskEventCount",$param) and $param["ApiRiskEventCount"] !== null) {
             $this->ApiRiskEventCount = $param["ApiRiskEventCount"];
+        }
+
+        if (array_key_exists("IPBlackCount",$param) and $param["IPBlackCount"] !== null) {
+            $this->IPBlackCount = $param["IPBlackCount"];
+        }
+
+        if (array_key_exists("TamperCount",$param) and $param["TamperCount"] !== null) {
+            $this->TamperCount = $param["TamperCount"];
+        }
+
+        if (array_key_exists("LeakCount",$param) and $param["LeakCount"] !== null) {
+            $this->LeakCount = $param["LeakCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

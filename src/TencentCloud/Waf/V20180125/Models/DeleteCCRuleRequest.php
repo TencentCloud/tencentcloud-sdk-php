@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置规则名称
  * @method string getEdition() 获取clb-waf或者sparta-waf
  * @method void setEdition(string $Edition) 设置clb-waf或者sparta-waf
+ * @method integer getRuleId() 获取规则Id
+ * @method void setRuleId(integer $RuleId) 设置规则Id
  */
 class DeleteCCRuleRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteCCRuleRequest extends AbstractModel
     public $Edition;
 
     /**
+     * @var integer 规则Id
+     */
+    public $RuleId;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 规则名称
      * @param string $Edition clb-waf或者sparta-waf
+     * @param integer $RuleId 规则Id
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteCCRuleRequest extends AbstractModel
 
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

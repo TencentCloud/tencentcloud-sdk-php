@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRules(array $Rules) 设置规则列表
  * @method integer getRuleType() 获取规则类型，1封禁，2放通，不支持域名封禁
  * @method void setRuleType(integer $RuleType) 设置规则类型，1封禁，2放通，不支持域名封禁
+ * @method integer getCoverDuplicate() 获取是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+ * @method void setCoverDuplicate(integer $CoverDuplicate) 设置是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
  */
 class CreateBlockIgnoreRuleListRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateBlockIgnoreRuleListRequest extends AbstractModel
     public $RuleType;
 
     /**
+     * @var integer 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
+     */
+    public $CoverDuplicate;
+
+    /**
      * @param array $Rules 规则列表
      * @param integer $RuleType 规则类型，1封禁，2放通，不支持域名封禁
+     * @param integer $CoverDuplicate 是否覆盖重复数据，1覆盖，非1不覆盖，跳过重复数据
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class CreateBlockIgnoreRuleListRequest extends AbstractModel
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("CoverDuplicate",$param) and $param["CoverDuplicate"] !== null) {
+            $this->CoverDuplicate = $param["CoverDuplicate"];
         }
     }
 }

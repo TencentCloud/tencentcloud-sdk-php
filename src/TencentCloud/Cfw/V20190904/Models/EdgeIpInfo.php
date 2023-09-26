@@ -126,6 +126,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitchMode(integer $SwitchMode) 设置0 : 旁路
 1 : 串行
 2 : 正在模式切换
+ * @method integer getSwitchWeight() 获取开关权重
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSwitchWeight(integer $SwitchWeight) 设置开关权重
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeIpInfo extends AbstractModel
 {
@@ -263,6 +267,12 @@ class EdgeIpInfo extends AbstractModel
     public $SwitchMode;
 
     /**
+     * @var integer 开关权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SwitchWeight;
+
+    /**
      * @param string $PublicIp 公网IP
      * @param integer $PublicIpType 公网 IP 类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -316,6 +326,8 @@ class EdgeIpInfo extends AbstractModel
      * @param integer $SwitchMode 0 : 旁路
 1 : 串行
 2 : 正在模式切换
+     * @param integer $SwitchWeight 开关权重
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -408,6 +420,10 @@ class EdgeIpInfo extends AbstractModel
 
         if (array_key_exists("SwitchMode",$param) and $param["SwitchMode"] !== null) {
             $this->SwitchMode = $param["SwitchMode"];
+        }
+
+        if (array_key_exists("SwitchWeight",$param) and $param["SwitchWeight"] !== null) {
+            $this->SwitchWeight = $param["SwitchWeight"];
         }
     }
 }

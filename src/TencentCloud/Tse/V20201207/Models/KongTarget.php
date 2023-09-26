@@ -21,57 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Kong Upstream中的Target
  *
  * @method string getHost() 获取Host
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置Host
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取端口
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置端口
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取权重
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置权重
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHealth() 获取健康状态
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealth(string $Health) 设置健康状态
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongTarget extends AbstractModel
 {
     /**
      * @var string Host
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Host;
 
     /**
      * @var integer 端口
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var integer 权重
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @var string 健康状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Health;
 
     /**
      * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var string Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @param string $Host Host
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Health 健康状态
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

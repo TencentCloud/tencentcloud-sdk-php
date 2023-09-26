@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccelerationDomain请求参数结构体
  *
- * @method string getZoneId() 获取加速域名所属站点ID。
- * @method void setZoneId(string $ZoneId) 设置加速域名所属站点ID。
- * @method string getDomainName() 获取加速域名名称。
- * @method void setDomainName(string $DomainName) 设置加速域名名称。
+ * @method string getZoneId() 获取加速域名所属站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置加速域名所属站点 ID。
+ * @method string getDomainName() 获取加速域名。
+ * @method void setDomainName(string $DomainName) 设置加速域名。
  * @method OriginInfo getOriginInfo() 获取源站信息。
  * @method void setOriginInfo(OriginInfo $OriginInfo) 设置源站信息。
  */
 class CreateAccelerationDomainRequest extends AbstractModel
 {
     /**
-     * @var string 加速域名所属站点ID。
+     * @var string 加速域名所属站点 ID。
      */
     public $ZoneId;
 
     /**
-     * @var string 加速域名名称。
+     * @var string 加速域名。
      */
     public $DomainName;
 
@@ -45,8 +45,8 @@ class CreateAccelerationDomainRequest extends AbstractModel
     public $OriginInfo;
 
     /**
-     * @param string $ZoneId 加速域名所属站点ID。
-     * @param string $DomainName 加速域名名称。
+     * @param string $ZoneId 加速域名所属站点 ID。
+     * @param string $DomainName 加速域名。
      * @param OriginInfo $OriginInfo 源站信息。
      */
     function __construct()

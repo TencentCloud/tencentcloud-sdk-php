@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignId(string $SignId) 设置签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproverRoleName() 获取自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverDetail extends AbstractModel
 {
@@ -185,6 +189,12 @@ class FlowApproverDetail extends AbstractModel
     public $SignId;
 
     /**
+     * @var string 自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproverRoleName;
+
+    /**
      * @param string $ApproveMessage 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveName 签署方姓名
@@ -219,6 +229,8 @@ class FlowApproverDetail extends AbstractModel
      * @param string $OrganizationName 签署方企业名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点，也可用于后续创建签署链接等操作。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproverRoleName 自定义签署人角色
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +300,10 @@ class FlowApproverDetail extends AbstractModel
 
         if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
             $this->SignId = $param["SignId"];
+        }
+
+        if (array_key_exists("ApproverRoleName",$param) and $param["ApproverRoleName"] !== null) {
+            $this->ApproverRoleName = $param["ApproverRoleName"];
         }
     }
 }

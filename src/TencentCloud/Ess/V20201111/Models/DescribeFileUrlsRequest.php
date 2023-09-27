@@ -26,17 +26,17 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method string getBusinessType() 获取文件对应的业务类型，目前支持：
 <ul>
-<li>FLOW 如需下载合同文件请选择此项</li>
-<li>TEMPLATE 如需下载模板文件请选择此项</li>
-<li>DOCUMENT 如需下载文档文件请选择此项</li>
-<li>SEAL 如需下载印章图片请选择此项</li>
+<li>**FLOW ** : 如需下载合同文件请选择此项</li>
+<li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
+<li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
+<li>**SEAL  **: 如需下载印章图片请选择此项</li>
 </ul>
  * @method void setBusinessType(string $BusinessType) 设置文件对应的业务类型，目前支持：
 <ul>
-<li>FLOW 如需下载合同文件请选择此项</li>
-<li>TEMPLATE 如需下载模板文件请选择此项</li>
-<li>DOCUMENT 如需下载文档文件请选择此项</li>
-<li>SEAL 如需下载印章图片请选择此项</li>
+<li>**FLOW ** : 如需下载合同文件请选择此项</li>
+<li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
+<li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
+<li>**SEAL  **: 如需下载印章图片请选择此项</li>
 </ul>
  * @method array getBusinessIds() 获取业务编号的数组，取值如下：
 <ul>
@@ -94,10 +94,10 @@ class DescribeFileUrlsRequest extends AbstractModel
     /**
      * @var string 文件对应的业务类型，目前支持：
 <ul>
-<li>FLOW 如需下载合同文件请选择此项</li>
-<li>TEMPLATE 如需下载模板文件请选择此项</li>
-<li>DOCUMENT 如需下载文档文件请选择此项</li>
-<li>SEAL 如需下载印章图片请选择此项</li>
+<li>**FLOW ** : 如需下载合同文件请选择此项</li>
+<li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
+<li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
+<li>**SEAL  **: 如需下载印章图片请选择此项</li>
 </ul>
      */
     public $BusinessType;
@@ -167,10 +167,10 @@ class DescribeFileUrlsRequest extends AbstractModel
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $BusinessType 文件对应的业务类型，目前支持：
 <ul>
-<li>FLOW 如需下载合同文件请选择此项</li>
-<li>TEMPLATE 如需下载模板文件请选择此项</li>
-<li>DOCUMENT 如需下载文档文件请选择此项</li>
-<li>SEAL 如需下载印章图片请选择此项</li>
+<li>**FLOW ** : 如需下载合同文件请选择此项</li>
+<li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
+<li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
+<li>**SEAL  **: 如需下载印章图片请选择此项</li>
 </ul>
      * @param array $BusinessIds 业务编号的数组，取值如下：
 <ul>

@@ -14,33 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UploadFiles返回参数结构体
+ * VerifyOwnership返回参数结构体
  *
- * @method array getFileIds() 获取文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
- * @method void setFileIds(array $FileIds) 设置文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
- * @method integer getTotalCount() 获取上传成功文件数量
- * @method void setTotalCount(integer $TotalCount) 设置上传成功文件数量
+ * @method string getStatus() 获取归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li>
+ * @method void setStatus(string $Status) 设置归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li>
+ * @method string getResult() 获取当验证结果为不通过时，该字段会返回原因，协助您排查问题。
+ * @method void setResult(string $Result) 设置当验证结果为不通过时，该字段会返回原因，协助您排查问题。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class UploadFilesResponse extends AbstractModel
+class VerifyOwnershipResponse extends AbstractModel
 {
     /**
-     * @var array 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+     * @var string 归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li>
      */
-    public $FileIds;
+    public $Status;
 
     /**
-     * @var integer 上传成功文件数量
+     * @var string 当验证结果为不通过时，该字段会返回原因，协助您排查问题。
      */
-    public $TotalCount;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +51,10 @@ class UploadFilesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FileIds 文件资源ID数组，每个文件资源ID为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
-     * @param integer $TotalCount 上传成功文件数量
+     * @param string $Status 归属权验证结果。
+<li>success：验证成功；</li>
+<li>fail：验证失败。</li>
+     * @param string $Result 当验证结果为不通过时，该字段会返回原因，协助您排查问题。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +70,12 @@ class UploadFilesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
-            $this->FileIds = $param["FileIds"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

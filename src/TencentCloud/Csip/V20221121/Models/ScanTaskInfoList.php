@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScanPlanContent() 获取corn
+ * @method string getScanPlanContent() 获取cron格式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScanPlanContent(string $ScanPlanContent) 设置corn
+ * @method void setScanPlanContent(string $ScanPlanContent) 设置cron格式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskType() 获取0-周期任务,1-立即扫描,2-定时扫描,3-自定义
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,9 +68,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetNumber(integer $AssetNumber) 设置资产数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScanStatus() 获取扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+ * @method integer getScanStatus() 获取扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScanStatus(integer $ScanStatus) 设置扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+ * @method void setScanStatus(integer $ScanStatus) 设置扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPercent() 获取任务进度
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,6 +176,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDelete(integer $IsDelete) 设置是否可以删除，1-可以，0-不可以，对应多账户管理使用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSourceType() 获取任务源类型，0-默认，1-小助手，2-体检项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceType(integer $SourceType) 设置任务源类型，0-默认，1-小助手，2-体检项
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScanTaskInfoList extends AbstractModel
 {
@@ -198,7 +202,7 @@ class ScanTaskInfoList extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string corn
+     * @var string cron格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanPlanContent;
@@ -252,7 +256,7 @@ class ScanTaskInfoList extends AbstractModel
     public $AssetNumber;
 
     /**
-     * @var integer 扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+     * @var integer 扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanStatus;
@@ -414,13 +418,19 @@ class ScanTaskInfoList extends AbstractModel
     public $IsDelete;
 
     /**
+     * @var integer 任务源类型，0-默认，1-小助手，2-体检项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceType;
+
+    /**
      * @param string $TaskName 任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 任务开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScanPlanContent corn
+     * @param string $ScanPlanContent cron格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskType 0-周期任务,1-立即扫描,2-定时扫描,3-自定义
 注意：此字段可能返回 null，表示取不到有效值。
@@ -438,7 +448,7 @@ class ScanTaskInfoList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AssetNumber 资产数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScanStatus 扫描状态 0 初始值  1正在扫描  2扫描完成  3扫描出错
+     * @param integer $ScanStatus 扫描状态, 0-初始值，1-正在扫描，2-扫描完成，3-扫描出错，4-停止扫描
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Percent 任务进度
 注意：此字段可能返回 null，表示取不到有效值。
@@ -491,6 +501,8 @@ class ScanTaskInfoList extends AbstractModel
      * @param integer $IsFree 是否限免体检0不是，1是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsDelete 是否可以删除，1-可以，0-不可以，对应多账户管理使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SourceType 任务源类型，0-默认，1-小助手，2-体检项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -665,6 +677,10 @@ class ScanTaskInfoList extends AbstractModel
 
         if (array_key_exists("IsDelete",$param) and $param["IsDelete"] !== null) {
             $this->IsDelete = $param["IsDelete"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
         }
     }
 }

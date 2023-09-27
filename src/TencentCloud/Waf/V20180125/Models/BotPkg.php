@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置续费标志	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBotCPWaf() 获取购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBotCPWaf(integer $BotCPWaf) 设置购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBotNPWaf() 获取控制台买bot5折
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBotNPWaf(integer $BotNPWaf) 设置控制台买bot5折
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotPkg extends AbstractModel
 {
@@ -114,6 +122,18 @@ class BotPkg extends AbstractModel
     public $RenewFlag;
 
     /**
+     * @var integer 购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BotCPWaf;
+
+    /**
+     * @var integer 控制台买bot5折
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BotNPWaf;
+
+    /**
      * @param string $ResourceIds 资源id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
@@ -131,6 +151,10 @@ class BotPkg extends AbstractModel
      * @param string $Type 子产品code
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 续费标志	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BotCPWaf 购买页bot6折
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BotNPWaf 控制台买bot5折
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +204,14 @@ class BotPkg extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("BotCPWaf",$param) and $param["BotCPWaf"] !== null) {
+            $this->BotCPWaf = $param["BotCPWaf"];
+        }
+
+        if (array_key_exists("BotNPWaf",$param) and $param["BotNPWaf"] !== null) {
+            $this->BotNPWaf = $param["BotNPWaf"];
         }
     }
 }

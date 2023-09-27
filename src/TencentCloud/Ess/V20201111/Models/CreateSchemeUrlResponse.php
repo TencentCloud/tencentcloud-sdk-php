@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>如果EndPoint是**APP**，得到的链接类似于`pages/guide?from=default&where=mini&id=yDwJSUUirqauh***7jNSxwdirTSGuH&to=CONTRACT_DETAIL&name=&phone=&shortKey=yDw***k1xFc5`, 用法可以参加接口描述中的"跳转到小程序的实现"</li>
 <li>如果EndPoint是**HTTP**，得到的链接类似于 `https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?where=mini&from=SFY&id=yDwfEUUw**4rV6Avz&to=MVP_CONTRACT_COVER&name=%E9%83%**5%86%9B`，点击后会跳转到腾讯电子签小程序进行签署</li>
 <li>如果EndPoint是**HTTP_SHORT_URL**，得到的链接类似于 `https://essurl.cn/2n**42Nd`，点击后会跳转到腾讯电子签小程序进行签署</li></ul>
+ * @method string getSchemeQrcodeUrl() 获取二维码，在生成动态签署人跳转封面页链接时返回
+ * @method void setSchemeQrcodeUrl(string $SchemeQrcodeUrl) 设置二维码，在生成动态签署人跳转封面页链接时返回
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -45,6 +47,11 @@ class CreateSchemeUrlResponse extends AbstractModel
     public $SchemeUrl;
 
     /**
+     * @var string 二维码，在生成动态签署人跳转封面页链接时返回
+     */
+    public $SchemeQrcodeUrl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class CreateSchemeUrlResponse extends AbstractModel
 <ul><li>如果EndPoint是**APP**，得到的链接类似于`pages/guide?from=default&where=mini&id=yDwJSUUirqauh***7jNSxwdirTSGuH&to=CONTRACT_DETAIL&name=&phone=&shortKey=yDw***k1xFc5`, 用法可以参加接口描述中的"跳转到小程序的实现"</li>
 <li>如果EndPoint是**HTTP**，得到的链接类似于 `https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?where=mini&from=SFY&id=yDwfEUUw**4rV6Avz&to=MVP_CONTRACT_COVER&name=%E9%83%**5%86%9B`，点击后会跳转到腾讯电子签小程序进行签署</li>
 <li>如果EndPoint是**HTTP_SHORT_URL**，得到的链接类似于 `https://essurl.cn/2n**42Nd`，点击后会跳转到腾讯电子签小程序进行签署</li></ul>
+     * @param string $SchemeQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +80,10 @@ class CreateSchemeUrlResponse extends AbstractModel
         }
         if (array_key_exists("SchemeUrl",$param) and $param["SchemeUrl"] !== null) {
             $this->SchemeUrl = $param["SchemeUrl"];
+        }
+
+        if (array_key_exists("SchemeQrcodeUrl",$param) and $param["SchemeQrcodeUrl"] !== null) {
+            $this->SchemeQrcodeUrl = $param["SchemeQrcodeUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sms\V20210111\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 删除签名响应
+ * 签署方信息，如角色ID、角色名称等
  *
- * @method string getDeleteStatus() 获取删除状态信息。
+ * @method string getFlowId() 获取合同编号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeleteStatus(string $DeleteStatus) 设置删除状态信息。
+ * @method void setFlowId(string $FlowId) 设置合同编号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeleteTime() 获取删除时间，UNIX 时间戳（单位：秒）。
+ * @method array getApprovers() 获取签署方信息，如角色ID、角色名称等
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeleteTime(integer $DeleteTime) 设置删除时间，UNIX 时间戳（单位：秒）。
+ * @method void setApprovers(array $Approvers) 设置签署方信息，如角色ID、角色名称等
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DeleteSignStatus extends AbstractModel
+class FlowApproverItem extends AbstractModel
 {
     /**
-     * @var string 删除状态信息。
+     * @var string 合同编号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DeleteStatus;
+    public $FlowId;
 
     /**
-     * @var integer 删除时间，UNIX 时间戳（单位：秒）。
+     * @var array 签署方信息，如角色ID、角色名称等
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DeleteTime;
+    public $Approvers;
 
     /**
-     * @param string $DeleteStatus 删除状态信息。
+     * @param string $FlowId 合同编号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeleteTime 删除时间，UNIX 时间戳（单位：秒）。
+     * @param array $Approvers 签署方信息，如角色ID、角色名称等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +62,17 @@ class DeleteSignStatus extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeleteStatus",$param) and $param["DeleteStatus"] !== null) {
-            $this->DeleteStatus = $param["DeleteStatus"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
-        if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
-            $this->DeleteTime = $param["DeleteTime"];
+        if (array_key_exists("Approvers",$param) and $param["Approvers"] !== null) {
+            $this->Approvers = [];
+            foreach ($param["Approvers"] as $key => $value){
+                $obj = new ApproverItem();
+                $obj->deserialize($value);
+                array_push($this->Approvers, $obj);
+            }
         }
     }
 }

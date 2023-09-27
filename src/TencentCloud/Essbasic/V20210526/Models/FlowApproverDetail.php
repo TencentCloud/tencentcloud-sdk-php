@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 <br/>ORGANIZATION：企业签署人
 <br/>PERSON：个人签署人
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproverRoleName() 获取自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverDetail extends AbstractModel
 {
@@ -161,6 +165,12 @@ class FlowApproverDetail extends AbstractModel
     public $ApproveType;
 
     /**
+     * @var string 自定义签署人角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproverRoleName;
+
+    /**
      * @param string $ReceiptId 模板配置时候的签署人id,与控件绑定
      * @param string $ProxyOrganizationOpenId 平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,6 +201,8 @@ class FlowApproverDetail extends AbstractModel
      * @param string $ApproveType 参与者类型 
 <br/>ORGANIZATION：企业签署人
 <br/>PERSON：个人签署人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproverRoleName 自定义签署人角色
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -248,6 +260,10 @@ class FlowApproverDetail extends AbstractModel
 
         if (array_key_exists("ApproveType",$param) and $param["ApproveType"] !== null) {
             $this->ApproveType = $param["ApproveType"];
+        }
+
+        if (array_key_exists("ApproverRoleName",$param) and $param["ApproverRoleName"] !== null) {
+            $this->ApproverRoleName = $param["ApproverRoleName"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
  * @method void setTaskInfos(array $TaskInfos) 设置复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+ * @method array getFlowApprovers() 获取签署方信息，如角色ID、角色名称等
+ * @method void setFlowApprovers(array $FlowApprovers) 设置签署方信息，如角色ID、角色名称等
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,6 +69,11 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
     public $TaskInfos;
 
     /**
+     * @var array 签署方信息，如角色ID、角色名称等
+     */
+    public $FlowApprovers;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +86,7 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
      * @param array $PreviewUrls 预览模式下返回的预览文件url数组
      * @param array $TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+     * @param array $FlowApprovers 签署方信息，如角色ID、角色名称等
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +124,15 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
                 $obj = new TaskInfo();
                 $obj->deserialize($value);
                 array_push($this->TaskInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("FlowApprovers",$param) and $param["FlowApprovers"] !== null) {
+            $this->FlowApprovers = [];
+            foreach ($param["FlowApprovers"] as $key => $value){
+                $obj = new FlowApproverItem();
+                $obj->deserialize($value);
+                array_push($this->FlowApprovers, $obj);
             }
         }
 

@@ -58,7 +58,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeGroupListResponse DescribeGroupList(Models\DescribeGroupListRequest $req) 获取群组列表
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) 此接口用于获取群组成员列表
  * @method Models\DescribeQuestionListResponse DescribeQuestionList(Models\DescribeQuestionListRequest $req) 获取房间提问列表
- * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间信息
+ * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间配置信息
  * @method Models\DescribeRoomStatisticsResponse DescribeRoomStatistics(Models\DescribeRoomStatisticsRequest $req) 获取房间统计信息，仅可在房间结束后调用。
  * @method Models\DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(Models\DescribeSdkAppIdUsersRequest $req) 此接口用于获取指定应用ID下用户列表
  * @method Models\DescribeSupervisorsResponse DescribeSupervisors(Models\DescribeSupervisorsRequest $req) 获取巡课列表

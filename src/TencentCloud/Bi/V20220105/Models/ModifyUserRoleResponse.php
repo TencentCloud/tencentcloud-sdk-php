@@ -14,36 +14,46 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Bi\V20220105\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelCreateFlowByFiles返回参数结构体
+ * ModifyUserRole返回参数结构体
  *
- * @method string getFlowId() 获取合同签署流程ID
+ * @method string getExtra() 获取扩展
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowId(string $FlowId) 设置合同签署流程ID
+ * @method void setExtra(string $Extra) 设置扩展
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getApprovers() 获取签署方信息，如角色ID、角色名称等
+ * @method string getMsg() 获取消息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApprovers(array $Approvers) 设置签署方信息，如角色ID、角色名称等
+ * @method void setMsg(string $Msg) 设置消息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getData() 获取数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(string $Data) 设置数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelCreateFlowByFilesResponse extends AbstractModel
+class ModifyUserRoleResponse extends AbstractModel
 {
     /**
-     * @var string 合同签署流程ID
+     * @var string 扩展
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FlowId;
+    public $Extra;
 
     /**
-     * @var array 签署方信息，如角色ID、角色名称等
+     * @var string 消息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Approvers;
+    public $Msg;
+
+    /**
+     * @var string 数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,9 +61,11 @@ class ChannelCreateFlowByFilesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 合同签署流程ID
+     * @param string $Extra 扩展
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Approvers 签署方信息，如角色ID、角色名称等
+     * @param string $Msg 消息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Data 数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,17 +82,16 @@ class ChannelCreateFlowByFilesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
 
-        if (array_key_exists("Approvers",$param) and $param["Approvers"] !== null) {
-            $this->Approvers = [];
-            foreach ($param["Approvers"] as $key => $value){
-                $obj = new ApproverItem();
-                $obj->deserialize($value);
-                array_push($this->Approvers, $obj);
-            }
+        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
+            $this->Msg = $param["Msg"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

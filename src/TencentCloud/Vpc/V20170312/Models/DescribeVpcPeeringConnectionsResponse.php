@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcPeeringConnections返回参数结构体
  *
+ * @method integer getTotalCount() 获取满足条件的对等连接实例个数。
+ * @method void setTotalCount(integer $TotalCount) 设置满足条件的对等连接实例个数。
+ * @method array getPeerConnectionSet() 获取对等连接实例列表。
+ * @method void setPeerConnectionSet(array $PeerConnectionSet) 设置对等连接实例列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVpcPeeringConnectionsResponse extends AbstractModel
 {
     /**
+     * @var integer 满足条件的对等连接实例个数。
+     */
+    public $TotalCount;
+
+    /**
+     * @var array 对等连接实例列表。
+     */
+    public $PeerConnectionSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 满足条件的对等连接实例个数。
+     * @param array $PeerConnectionSet 对等连接实例列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeVpcPeeringConnectionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("PeerConnectionSet",$param) and $param["PeerConnectionSet"] !== null) {
+            $this->PeerConnectionSet = [];
+            foreach ($param["PeerConnectionSet"] as $key => $value){
+                $obj = new PeerConnection();
+                $obj->deserialize($value);
+                array_push($this->PeerConnectionSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

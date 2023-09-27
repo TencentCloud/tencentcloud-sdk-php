@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Filter getFilter() 获取-
  * @method void setFilter(Filter $Filter) 设置-
+ * @method array getAssetTypes() 获取资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+ * @method void setAssetTypes(array $AssetTypes) 设置资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
  */
 class DescribeDbAssetsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeDbAssetsRequest extends AbstractModel
     public $Filter;
 
     /**
+     * @var array 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+     */
+    public $AssetTypes;
+
+    /**
      * @param Filter $Filter -
+     * @param array $AssetTypes 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class DescribeDbAssetsRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("AssetTypes",$param) and $param["AssetTypes"] !== null) {
+            $this->AssetTypes = $param["AssetTypes"];
         }
     }
 }

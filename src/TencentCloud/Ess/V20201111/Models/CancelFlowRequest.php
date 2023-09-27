@@ -25,11 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method string getFlowId() 获取合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
  * @method void setFlowId(string $FlowId) 设置合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。
- * @method string getCancelMessage() 获取撤销此合同(流程)的原因，最长200个字。
- * @method void setCancelMessage(string $CancelMessage) 设置撤销此合同(流程)的原因，最长200个字。
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+ * @method string getCancelMessage() 获取撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
+ * @method void setCancelMessage(string $CancelMessage) 设置撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -45,12 +47,13 @@ class CancelFlowRequest extends AbstractModel
 
     /**
      * @var string 合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      */
     public $FlowId;
 
     /**
-     * @var string 撤销此合同(流程)的原因，最长200个字。
+     * @var string 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
      */
     public $CancelMessage;
 
@@ -64,8 +67,9 @@ class CancelFlowRequest extends AbstractModel
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $FlowId 合同流程ID, 为32位字符串。
-建议开发者保存此流程ID方便后续其他操作。
-     * @param string $CancelMessage 撤销此合同(流程)的原因，最长200个字。
+
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     * @param string $CancelMessage 撤销此合同流程的原因，最多支持200个字符长度。只能由中文、字母、数字、中文标点和英文标点组成（不支持表情）。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */

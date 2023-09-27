@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArn() 获取多云资产唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArn(string $Arn) 设置多云资产唯一id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskAssetObject extends AbstractModel
 {
@@ -71,6 +75,12 @@ class TaskAssetObject extends AbstractModel
     public $Region;
 
     /**
+     * @var string 多云资产唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Arn;
+
+    /**
      * @param string $AssetName 资产名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 	资产类型
@@ -79,6 +89,8 @@ class TaskAssetObject extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Asset ip/域名/资产id，数据库id等
      * @param string $Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Arn 多云资产唯一id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,6 +124,10 @@ class TaskAssetObject extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Arn",$param) and $param["Arn"] !== null) {
+            $this->Arn = $param["Arn"];
         }
     }
 }

@@ -44,6 +44,12 @@ CLOSE:关闭
  * @method void setOperate(string $Operate) 设置操作类型 
 OPEN:开通 
 CLOSE:关闭
+ * @method string getEndpoint() 获取链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+ * @method void setEndpoint(string $Endpoint) 设置链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
  */
 class ModifyExtendedServiceRequest extends AbstractModel
 {
@@ -72,6 +78,13 @@ CLOSE:关闭
     public $Operate;
 
     /**
+     * @var string 链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
+     */
+    public $Endpoint;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
 
 注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
@@ -84,6 +97,9 @@ CLOSE:关闭
      * @param string $Operate 操作类型 
 OPEN:开通 
 CLOSE:关闭
+     * @param string $Endpoint 链接跳转类型，支持以下类型
+<ul><li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
+<li>APP : 第三方APP或小程序跳转电子签小程序</li></ul>
      */
     function __construct()
     {
@@ -109,6 +125,10 @@ CLOSE:关闭
 
         if (array_key_exists("Operate",$param) and $param["Operate"] !== null) {
             $this->Operate = $param["Operate"];
+        }
+
+        if (array_key_exists("Endpoint",$param) and $param["Endpoint"] !== null) {
+            $this->Endpoint = $param["Endpoint"];
         }
     }
 }

@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeFileUrls返回参数结构体
  *
  * @method array getFileUrls() 获取文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
  * @method void setFileUrls(array $FileUrls) 设置文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
  * @method integer getTotalCount() 获取URL数量
  * @method void setTotalCount(integer $TotalCount) 设置URL数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +33,7 @@ class DescribeFileUrlsResponse extends AbstractModel
 {
     /**
      * @var array 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
      */
     public $FileUrls;
 
@@ -49,7 +49,7 @@ class DescribeFileUrlsResponse extends AbstractModel
 
     /**
      * @param array $FileUrls 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+链接不是永久链接,  过期时间收UrlTtl入参的影响,  默认有效期5分钟后,  到期后链接失效。
      * @param integer $TotalCount URL数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

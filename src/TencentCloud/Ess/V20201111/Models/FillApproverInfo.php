@@ -45,6 +45,8 @@ WEWORKAPP: 企业微信
  * @method void setApproverName(string $ApproverName) 设置补充企业签署人员工姓名
  * @method string getApproverMobile() 获取补充企业签署人员工手机号
  * @method void setApproverMobile(string $ApproverMobile) 设置补充企业签署人员工手机号
+ * @method string getOrganizationName() 获取补充企业动态签署人时，需要指定对应企业名称
+ * @method void setOrganizationName(string $OrganizationName) 设置补充企业动态签署人时，需要指定对应企业名称
  */
 class FillApproverInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ WEWORKAPP: 企业微信
     public $ApproverMobile;
 
     /**
+     * @var string 补充企业动态签署人时，需要指定对应企业名称
+     */
+    public $OrganizationName;
+
+    /**
      * @param string $RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
 模板发起合同时，该参数为必填项。
 文件发起合同是，该参数无需传值。
@@ -91,6 +98,7 @@ WEWORKAPP: 企业微信
 <br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企业微信的UserId
      * @param string $ApproverName 补充企业签署人员工姓名
      * @param string $ApproverMobile 补充企业签署人员工手机号
+     * @param string $OrganizationName 补充企业动态签署人时，需要指定对应企业名称
      */
     function __construct()
     {
@@ -123,6 +131,10 @@ WEWORKAPP: 企业微信
 
         if (array_key_exists("ApproverMobile",$param) and $param["ApproverMobile"] !== null) {
             $this->ApproverMobile = $param["ApproverMobile"];
+        }
+
+        if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
+            $this->OrganizationName = $param["OrganizationName"];
         }
     }
 }

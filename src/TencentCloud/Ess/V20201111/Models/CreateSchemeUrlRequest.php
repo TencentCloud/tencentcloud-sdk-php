@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
 <li> **3** :签署成功页的查看详情按钮</li></ul>
 
 注:  `字段为数组, 可以传值隐藏多个按钮`
+ * @method string getRecipientId() 获取签署节点ID，用于生成动态签署人链接完成领取
+ * @method void setRecipientId(string $RecipientId) 设置签署节点ID，用于生成动态签署人链接完成领取
  */
 class CreateSchemeUrlRequest extends AbstractModel
 {
@@ -167,6 +169,11 @@ class CreateSchemeUrlRequest extends AbstractModel
     public $Hides;
 
     /**
+     * @var string 签署节点ID，用于生成动态签署人链接完成领取
+     */
+    public $RecipientId;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息, userId 必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $OrganizationName 合同流程签署方的组织机构名称。
@@ -200,6 +207,7 @@ class CreateSchemeUrlRequest extends AbstractModel
 <li> **3** :签署成功页的查看详情按钮</li></ul>
 
 注:  `字段为数组, 可以传值隐藏多个按钮`
+     * @param string $RecipientId 签署节点ID，用于生成动态签署人链接完成领取
      */
     function __construct()
     {
@@ -258,6 +266,10 @@ class CreateSchemeUrlRequest extends AbstractModel
 
         if (array_key_exists("Hides",$param) and $param["Hides"] !== null) {
             $this->Hides = $param["Hides"];
+        }
+
+        if (array_key_exists("RecipientId",$param) and $param["RecipientId"] !== null) {
+            $this->RecipientId = $param["RecipientId"];
         }
     }
 }

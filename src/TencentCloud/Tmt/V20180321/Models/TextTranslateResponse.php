@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetText() 获取翻译后的文本
  * @method void setTargetText(string $TargetText) 设置翻译后的文本
- * @method string getSource() 获取源语言，详见入参Target
- * @method void setSource(string $Source) 设置源语言，详见入参Target
+ * @method string getSource() 获取源语言，详见入参Source
+ * @method void setSource(string $Source) 设置源语言，详见入参Source
  * @method string getTarget() 获取目标语言，详见入参Target
  * @method void setTarget(string $Target) 设置目标语言，详见入参Target
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class TextTranslateResponse extends AbstractModel
     public $TargetText;
 
     /**
-     * @var string 源语言，详见入参Target
+     * @var string 源语言，详见入参Source
      */
     public $Source;
 
@@ -53,7 +53,7 @@ class TextTranslateResponse extends AbstractModel
 
     /**
      * @param string $TargetText 翻译后的文本
-     * @param string $Source 源语言，详见入参Target
+     * @param string $Source 源语言，详见入参Source
      * @param string $Target 目标语言，详见入参Target
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

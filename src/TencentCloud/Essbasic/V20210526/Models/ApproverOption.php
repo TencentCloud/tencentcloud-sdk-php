@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getHideOneKeySign() 获取是否隐藏一键签署 默认false-不隐藏true-隐藏
  * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置是否隐藏一键签署 默认false-不隐藏true-隐藏
+ * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+ * @method void setFillType(integer $FillType) 设置签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
  */
 class ApproverOption extends AbstractModel
 {
@@ -31,7 +39,19 @@ class ApproverOption extends AbstractModel
     public $HideOneKeySign;
 
     /**
+     * @var integer 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     */
+    public $FillType;
+
+    /**
      * @param boolean $HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @param integer $FillType 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
      */
     function __construct()
     {
@@ -48,6 +68,10 @@ class ApproverOption extends AbstractModel
         }
         if (array_key_exists("HideOneKeySign",$param) and $param["HideOneKeySign"] !== null) {
             $this->HideOneKeySign = $param["HideOneKeySign"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
         }
     }
 }

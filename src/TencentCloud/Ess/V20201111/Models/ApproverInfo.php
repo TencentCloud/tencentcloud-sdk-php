@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
 <li>   **2**   :开具人</li>
 <li>   **3** :见证人</li></ul>
 注: `收据场景为白名单功能，使用前请联系对接的客户经理沟通。`
+ * @method string getApproverRoleName() 获取自定义签署人角色名：收款人、开具人、见证人
+ * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人角色名：收款人、开具人、见证人
  * @method array getVerifyChannel() 获取签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
@@ -265,6 +267,11 @@ class ApproverInfo extends AbstractModel
     public $ApproverRole;
 
     /**
+     * @var string 自定义签署人角色名：收款人、开具人、见证人
+     */
+    public $ApproverRoleName;
+
+    /**
      * @var array 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
@@ -388,6 +395,7 @@ class ApproverInfo extends AbstractModel
 <li>   **2**   :开具人</li>
 <li>   **3** :见证人</li></ul>
 注: `收据场景为白名单功能，使用前请联系对接的客户经理沟通。`
+     * @param string $ApproverRoleName 自定义签署人角色名：收款人、开具人、见证人
      * @param array $VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
 注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
@@ -485,6 +493,10 @@ class ApproverInfo extends AbstractModel
 
         if (array_key_exists("ApproverRole",$param) and $param["ApproverRole"] !== null) {
             $this->ApproverRole = $param["ApproverRole"];
+        }
+
+        if (array_key_exists("ApproverRoleName",$param) and $param["ApproverRoleName"] !== null) {
+            $this->ApproverRoleName = $param["ApproverRoleName"];
         }
 
         if (array_key_exists("VerifyChannel",$param) and $param["VerifyChannel"] !== null) {

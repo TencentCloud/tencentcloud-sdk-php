@@ -84,6 +84,8 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - 1:合同签署页面更多操作的拒绝签署按钮
 - 2:合同签署页面更多操作的转他人处理按钮
 - 3:签署成功页的查看详情按钮
+ * @method array getRecipientIds() 获取签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+ * @method void setRecipientIds(array $RecipientIds) 设置签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
  */
 class CreateSignUrlsRequest extends AbstractModel
 {
@@ -177,6 +179,11 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     public $Hides;
 
     /**
+     * @var array 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+     */
+    public $RecipientIds;
+
+    /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param array $FlowIds 流程(合同)的编号列表，最多支持100个。(备注：该参数和合同组编号必须二选一)
      * @param string $FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
@@ -209,6 +216,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - 1:合同签署页面更多操作的拒绝签署按钮
 - 2:合同签署页面更多操作的转他人处理按钮
 - 3:签署成功页的查看详情按钮
+     * @param array $RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
      */
     function __construct()
     {
@@ -279,6 +287,10 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 
         if (array_key_exists("Hides",$param) and $param["Hides"] !== null) {
             $this->Hides = $param["Hides"];
+        }
+
+        if (array_key_exists("RecipientIds",$param) and $param["RecipientIds"] !== null) {
+            $this->RecipientIds = $param["RecipientIds"];
         }
     }
 }

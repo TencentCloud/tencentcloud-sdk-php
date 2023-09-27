@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li> **false** : ( 默认)可以转他人处理</li>
 <li> **true** :不可以转他人处理</li></ul>
+ * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+ * @method void setFillType(integer $FillType) 设置签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
  */
 class ApproverOption extends AbstractModel
 {
@@ -56,6 +64,14 @@ class ApproverOption extends AbstractModel
     public $NoTransfer;
 
     /**
+     * @var integer 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     */
+    public $FillType;
+
+    /**
      * @param boolean $NoRefuse 签署方是否可以拒签
 
 <ul><li> **false** : ( 默认)可以拒签</li>
@@ -64,6 +80,10 @@ class ApproverOption extends AbstractModel
 
 <ul><li> **false** : ( 默认)可以转他人处理</li>
 <li> **true** :不可以转他人处理</li></ul>
+     * @param integer $FillType 签署人信息补充类型，默认无需补充。
+
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
      */
     function __construct()
     {
@@ -84,6 +104,10 @@ class ApproverOption extends AbstractModel
 
         if (array_key_exists("NoTransfer",$param) and $param["NoTransfer"] !== null) {
             $this->NoTransfer = $param["NoTransfer"];
+        }
+
+        if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
+            $this->FillType = $param["FillType"];
         }
     }
 }

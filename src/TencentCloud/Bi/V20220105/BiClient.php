@@ -42,6 +42,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\ModifyDatasourceResponse ModifyDatasource(Models\ModifyDatasourceRequest $req) 更新数据源
  * @method Models\ModifyDatasourceCloudResponse ModifyDatasourceCloud(Models\ModifyDatasourceCloudRequest $req) 更新云数据库
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目信息
+ * @method Models\ModifyUserRoleResponse ModifyUserRole(Models\ModifyUserRoleRequest $req) 修改用户角色信息
  * @method Models\ModifyUserRoleProjectResponse ModifyUserRoleProject(Models\ModifyUserRoleProjectRequest $req) 项目-修改用户角色信息
  */
 

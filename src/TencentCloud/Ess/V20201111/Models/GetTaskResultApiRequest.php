@@ -20,29 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTaskResultApi请求参数结构体
  *
- * @method string getTaskId() 获取任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
- * @method void setTaskId(string $TaskId) 设置任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
- * @method UserInfo getOperator() 获取操作人信息,UserId必填
- * @method void setOperator(UserInfo $Operator) 设置操作人信息,UserId必填
- * @method Agent getAgent() 获取代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getTaskId() 获取转换任务Id，通过接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>或<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateMergeFileTask" target="_blank">创建多文件转换任务接口</a>
+得到的转换任务id
+ * @method void setTaskId(string $TaskId) 设置转换任务Id，通过接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>或<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateMergeFileTask" target="_blank">创建多文件转换任务接口</a>
+得到的转换任务id
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method OrganizationInfo getOrganization() 获取暂未开放
  * @method void setOrganization(OrganizationInfo $Organization) 设置暂未开放
  */
 class GetTaskResultApiRequest extends AbstractModel
 {
     /**
-     * @var string 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
+     * @var string 转换任务Id，通过接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>或<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateMergeFileTask" target="_blank">创建多文件转换任务接口</a>
+得到的转换任务id
      */
     public $TaskId;
 
     /**
-     * @var UserInfo 操作人信息,UserId必填
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      */
     public $Operator;
 
     /**
-     * @var Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
@@ -53,9 +62,12 @@ class GetTaskResultApiRequest extends AbstractModel
     public $Organization;
 
     /**
-     * @param string $TaskId 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
-     * @param UserInfo $Operator 操作人信息,UserId必填
-     * @param Agent $Agent 代理企业和员工的信息。 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $TaskId 转换任务Id，通过接口<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi" target="_blank">创建文件转换任务接口</a>或<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateMergeFileTask" target="_blank">创建多文件转换任务接口</a>
+得到的转换任务id
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param OrganizationInfo $Organization 暂未开放
      */
     function __construct()

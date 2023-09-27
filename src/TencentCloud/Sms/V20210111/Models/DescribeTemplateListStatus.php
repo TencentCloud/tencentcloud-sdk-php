@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTemplateId() 获取模板ID。
  * @method void setTemplateId(integer $TemplateId) 设置模板ID。
- * @method integer getInternational() 获取是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
- * @method void setInternational(integer $International) 设置是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
+ * @method integer getInternational() 获取是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。
+ * @method void setInternational(integer $International) 设置是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。
  * @method integer getStatusCode() 获取申请模板状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。注：只有状态值为0时该模板才能使用。
  * @method void setStatusCode(integer $StatusCode) 设置申请模板状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。注：只有状态值为0时该模板才能使用。
  * @method string getReviewReply() 获取审核回复，审核人员审核后给出的回复，通常是审核未通过的原因。
@@ -43,7 +43,7 @@ class DescribeTemplateListStatus extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var integer 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
+     * @var integer 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。
      */
     public $International;
 
@@ -74,7 +74,7 @@ class DescribeTemplateListStatus extends AbstractModel
 
     /**
      * @param integer $TemplateId 模板ID。
-     * @param integer $International 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
+     * @param integer $International 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信，3表示该模板既支持国内短信也支持国际/港澳台短信。
      * @param integer $StatusCode 申请模板状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。注：只有状态值为0时该模板才能使用。
      * @param string $ReviewReply 审核回复，审核人员审核后给出的回复，通常是审核未通过的原因。
      * @param string $TemplateName 模板名称。

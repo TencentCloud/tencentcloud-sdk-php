@@ -21,11 +21,14 @@ use TencentCloud\Common\AbstractModel;
  * 创建签署流程签署人入参。
 
 其中签署方FlowApproverInfo需要传递的参数
-非单C、单B、B2C合同，ApproverType、RecipientId（模板发起合同时）必传，建议都传。其他身份标识
-1-个人：Name、Mobile必传
-2-第三方平台子客企业指定经办人：OpenId必传，OrgName必传、OrgOpenId必传；
-3-第三方平台子客企业不指定经办人：OrgName必传、OrgOpenId必传；
-4-非第三方平台子客企业：Name、Mobile必传，OrgName必传，且NotChannelOrganization=True。
+非单C、单B、B2C合同，ApproverType、RecipientId（模板发起合同时）必传，建议都传。
+
+其他身份标识
+
+<ul><li>1-个人：Name、Mobile必传</li>
+<li>2-第三方平台子客企业指定经办人：OpenId必传，OrgName必传、OrgOpenId必传；</li>
+<li>3-第三方平台子客企业不指定经办人：OrgName必传、OrgOpenId必传；</li>
+<li>4-非第三方平台子客企业：Name、Mobile必传，OrgName必传，且NotChannelOrganization=True。</li></ul>
 
 RecipientId参数：
 从DescribeTemplates接口中，可以得到模板下的签署方Recipient列表，根据模板自定义的Rolename在此结构体中确定其RecipientId。
@@ -132,6 +135,8 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
  * @method void setAddSignComponentsLimits(array $AddSignComponentsLimits) 设置[通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+ * @method string getApproverRoleName() 获取自定义签署方角色名称
+ * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署方角色名称
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -280,6 +285,11 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
     public $AddSignComponentsLimits;
 
     /**
+     * @var string 自定义签署方角色名称
+     */
+    public $ApproverRoleName;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字符
      * @param string $IdCardType 签署人的证件类型
 1.ID_CARD 居民身份证
@@ -331,6 +341,7 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
      * @param array $AddSignComponentsLimits [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+     * @param string $ApproverRoleName 自定义签署方角色名称
      */
     function __construct()
     {
@@ -446,6 +457,10 @@ ENTERPRISESERVER-企业自动签（他方企业自动签署或文件发起时的
                 $obj->deserialize($value);
                 array_push($this->AddSignComponentsLimits, $obj);
             }
+        }
+
+        if (array_key_exists("ApproverRoleName",$param) and $param["ApproverRoleName"] !== null) {
+            $this->ApproverRoleName = $param["ApproverRoleName"];
         }
     }
 }

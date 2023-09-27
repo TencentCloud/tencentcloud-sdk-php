@@ -76,6 +76,10 @@ PERSON 自然人
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowGroupId(string $FlowGroupId) 设置合同组签署链接对应的合同组id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSignQrcodeUrl() 获取二维码，在生成动态签署人跳转封面页链接时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSignQrcodeUrl(string $SignQrcodeUrl) 设置二维码，在生成动态签署人跳转封面页链接时返回
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SignUrlInfo extends AbstractModel
 {
@@ -161,6 +165,12 @@ PERSON 自然人
     public $FlowGroupId;
 
     /**
+     * @var string 二维码，在生成动态签署人跳转封面页链接时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SignQrcodeUrl;
+
+    /**
      * @param string $SignUrl 签署链接，过期时间为90天
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deadline 合同过期时间戳，单位秒
@@ -188,6 +198,8 @@ PERSON 自然人
      * @param string $OpenId 企业经办人 用户在渠道的编号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowGroupId 合同组签署链接对应的合同组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SignQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -253,6 +265,10 @@ PERSON 自然人
 
         if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
             $this->FlowGroupId = $param["FlowGroupId"];
+        }
+
+        if (array_key_exists("SignQrcodeUrl",$param) and $param["SignQrcodeUrl"] !== null) {
+            $this->SignQrcodeUrl = $param["SignQrcodeUrl"];
         }
     }
 }

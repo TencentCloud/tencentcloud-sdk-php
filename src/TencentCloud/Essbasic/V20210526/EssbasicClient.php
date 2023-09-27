@@ -199,7 +199,33 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
  * @method Models\GetDownloadFlowUrlResponse GetDownloadFlowUrl(Models\GetDownloadFlowUrlRequest $req) 此接口（GetDownloadFlowUrl）用于创建电子签批量下载地址，让合作企业进入控制台直接下载，支持客户合同（流程）按照自定义文件夹形式 分类下载。
 当前接口限制最多合同（流程）50个.
 返回的链接只能使用一次
- * @method Models\ModifyExtendedServiceResponse ModifyExtendedService(Models\ModifyExtendedServiceRequest $req) 修改（操作）企业扩展服务 ，企业经办人需要是企业超管或者法人
+ * @method Models\ModifyExtendedServiceResponse ModifyExtendedService(Models\ModifyExtendedServiceRequest $req) 修改（操作）企业扩展服务 ，企业经办人需要是企业超管或者法人。
+
+跳转小程序的几种方式：主要是设置不同的EndPoint
+1. 通过链接Url直接跳转到小程序，不需要返回
+设置EndPoint为WEIXINAPP，得到链接打开即可。
+
+2. 客户App直接跳转到小程序-->腾讯电子签小程序操作完成-->返回App
+跳转到小程序的实现，参考官方文档
+https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html
+其中小程序的原始Id，请联系<对接技术人员>获取，或者查看小程序信息自助获取。
+设置EndPoint为APP，得到path。
+
+4. 客户小程序直接跳到电子签小程序-->腾讯电子签小程序操作完成--->回到客户小程序
+跳转到小程序的实现，参考官方文档（分为全屏、半屏两种方式）
+全屏方式：
+（https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html）
+半屏方式：
+（https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html）
+其中小程序的原始Id，请联系<对接技术人员>获取，或者查看小程序信息自助获取。
+设置EndPoint为APP，得到path。
+
+其中小程序的原始Id如下，或者查看小程序信息自助获取。
+
+| 小程序 | AppID | 原始ID |
+| ------------ | ------------ | ------------ |
+| 腾讯电子签（正式版） | wxa023b292fd19d41d | gh_da88f6188665 |
+| 腾讯电子签Demo | wx371151823f6f3edf | gh_39a5d3de69fa |
  * @method Models\OperateChannelTemplateResponse OperateChannelTemplate(Models\OperateChannelTemplateRequest $req) 此接口（OperateChannelTemplate）用于针对第三方应用平台模板库中的模板对子客企业可见性的查询和设置。
 
 > **使用场景**

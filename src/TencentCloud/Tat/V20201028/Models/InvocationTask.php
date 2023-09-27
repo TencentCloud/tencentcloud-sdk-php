@@ -59,9 +59,13 @@ use TencentCloud\Common\AbstractModel;
  * @method TaskResult getTaskResult() 获取执行结果。
  * @method void setTaskResult(TaskResult $TaskResult) 设置执行结果。
  * @method string getStartTime() 获取执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method string getUpdatedTime() 获取更新时间。
@@ -120,11 +124,13 @@ class InvocationTask extends AbstractModel
 
     /**
      * @var string 执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -174,7 +180,9 @@ class InvocationTask extends AbstractModel
      * @param string $InstanceId 实例ID。
      * @param TaskResult $TaskResult 执行结果。
      * @param string $StartTime 执行任务开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 执行任务结束时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。
      * @param string $UpdatedTime 更新时间。
      * @param CommandDocument $CommandDocument 执行任务所执行的命令详情。

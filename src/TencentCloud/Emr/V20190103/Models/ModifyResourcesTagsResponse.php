@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartSuccessList(array $PartSuccessList) 设置部分成功的资源id列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClusterToFlowIdList() 获取集群id与流程id的映射列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterToFlowIdList(array $ClusterToFlowIdList) 设置集群id与流程id的映射列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +60,12 @@ class ModifyResourcesTagsResponse extends AbstractModel
     public $PartSuccessList;
 
     /**
+     * @var array 集群id与流程id的映射列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterToFlowIdList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +76,8 @@ class ModifyResourcesTagsResponse extends AbstractModel
      * @param array $FailList 失败的资源id列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PartSuccessList 部分成功的资源id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClusterToFlowIdList 集群id与流程id的映射列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -92,6 +104,15 @@ class ModifyResourcesTagsResponse extends AbstractModel
 
         if (array_key_exists("PartSuccessList",$param) and $param["PartSuccessList"] !== null) {
             $this->PartSuccessList = $param["PartSuccessList"];
+        }
+
+        if (array_key_exists("ClusterToFlowIdList",$param) and $param["ClusterToFlowIdList"] !== null) {
+            $this->ClusterToFlowIdList = [];
+            foreach ($param["ClusterToFlowIdList"] as $key => $value){
+                $obj = new ClusterIDToFlowID();
+                $obj->deserialize($value);
+                array_push($this->ClusterToFlowIdList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

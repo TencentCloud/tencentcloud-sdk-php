@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * SRT输出的监听地址。
  *
  * @method string getIp() 获取监听IP。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置监听IP。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取监听端口。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置监听端口。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputSRTSourceAddressResp extends AbstractModel
 {
     /**
      * @var string 监听IP。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var integer 监听端口。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @param string $Ip 监听IP。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 监听端口。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

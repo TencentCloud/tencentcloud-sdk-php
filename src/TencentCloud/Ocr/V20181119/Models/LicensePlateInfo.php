@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(integer $Confidence) 设置置信度，0 - 100 之间。
  * @method Rect getRect() 获取文本行在原图片中的像素坐标框。
  * @method void setRect(Rect $Rect) 设置文本行在原图片中的像素坐标框。
- * @method string getColor() 获取识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
- * @method void setColor(string $Color) 设置识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+ * @method string getColor() 获取识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+ * @method void setColor(string $Color) 设置识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
  */
 class LicensePlateInfo extends AbstractModel
 {
@@ -47,7 +47,7 @@ class LicensePlateInfo extends AbstractModel
     public $Rect;
 
     /**
-     * @var string 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+     * @var string 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
      */
     public $Color;
 
@@ -55,7 +55,7 @@ class LicensePlateInfo extends AbstractModel
      * @param string $Number 识别出的车牌号码。
      * @param integer $Confidence 置信度，0 - 100 之间。
      * @param Rect $Rect 文本行在原图片中的像素坐标框。
-     * @param string $Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+     * @param string $Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
      */
     function __construct()
     {

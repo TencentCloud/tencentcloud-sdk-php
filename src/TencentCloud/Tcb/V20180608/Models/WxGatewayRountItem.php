@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayRoutePathMatchType(string $GatewayRoutePathMatchType) 设置路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CustomHeader getCustomHeader() 获取安全网关自定义头部
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomHeader(CustomHeader $CustomHeader) 设置安全网关自定义头部
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WxGatewayRountItem extends AbstractModel
 {
@@ -166,6 +170,12 @@ class WxGatewayRountItem extends AbstractModel
     public $GatewayRoutePathMatchType;
 
     /**
+     * @var CustomHeader 安全网关自定义头部
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomHeader;
+
+    /**
      * @param string $GatewayRouteName 安全网关路由名称
      * @param string $GatewayRouteProtocol 安全网关路由协议
      * @param string $GatewayRouteAddr 安全网关路由地址
@@ -191,6 +201,8 @@ class WxGatewayRountItem extends AbstractModel
      * @param string $GatewayRouteEnvId 路由环境ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayRoutePathMatchType 路径匹配类型，支持prefix(前缀匹配)，regex(正则匹配)， 默认prefix
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomHeader $CustomHeader 安全网关自定义头部
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -273,6 +285,11 @@ class WxGatewayRountItem extends AbstractModel
 
         if (array_key_exists("GatewayRoutePathMatchType",$param) and $param["GatewayRoutePathMatchType"] !== null) {
             $this->GatewayRoutePathMatchType = $param["GatewayRoutePathMatchType"];
+        }
+
+        if (array_key_exists("CustomHeader",$param) and $param["CustomHeader"] !== null) {
+            $this->CustomHeader = new CustomHeader();
+            $this->CustomHeader->deserialize($param["CustomHeader"]);
         }
     }
 }

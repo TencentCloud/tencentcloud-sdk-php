@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RejectVpcPeeringConnection请求参数结构体
  *
-
+ * @method string getPeeringConnectionId() 获取对等连接唯一ID。
+ * @method void setPeeringConnectionId(string $PeeringConnectionId) 设置对等连接唯一ID。
  */
 class RejectVpcPeeringConnectionRequest extends AbstractModel
 {
-
+    /**
+     * @var string 对等连接唯一ID。
+     */
+    public $PeeringConnectionId;
 
     /**
-
+     * @param string $PeeringConnectionId 对等连接唯一ID。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class RejectVpcPeeringConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("PeeringConnectionId",$param) and $param["PeeringConnectionId"] !== null) {
+            $this->PeeringConnectionId = $param["PeeringConnectionId"];
+        }
     }
 }

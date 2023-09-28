@@ -127,12 +127,12 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCbsEncrypt() 获取集群维度CBS加密盘，默认0表示不加密，1表示加密
  * @method void setCbsEncrypt(integer $CbsEncrypt) 设置集群维度CBS加密盘，默认0表示不加密，1表示加密
  * @method string getMetaType() 获取hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
  * @method void setMetaType(string $MetaType) 设置hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
  * @method string getUnifyMetaInstanceId() 获取EMR-MetaDB实例
  * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) 设置EMR-MetaDB实例
@@ -308,8 +308,8 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @var string hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      */
     public $MetaType;
@@ -413,8 +413,8 @@ Hadoop-Hbase
 该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/213/15486 ) 的返回值中的SecurityGroupId字段来获取。
      * @param integer $CbsEncrypt 集群维度CBS加密盘，默认0表示不加密，1表示加密
      * @param string $MetaType hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      * @param string $UnifyMetaInstanceId EMR-MetaDB实例
      * @param CustomMetaInfo $MetaDBInfo 自定义MetaDB信息

@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResilientStream(ResilientStreamConf $ResilientStream) 设置延播平滑吐流配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityGroupIds() 获取绑定的输入安全组 ID。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeInput extends AbstractModel
 {
@@ -153,6 +157,12 @@ class DescribeInput extends AbstractModel
     public $ResilientStream;
 
     /**
+     * @var array 绑定的输入安全组 ID。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
@@ -175,6 +185,8 @@ class DescribeInput extends AbstractModel
      * @param DescribeInputHLSPullSettings $HLSPullSettings 输入的HLS_PULL配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResilientStreamConf $ResilientStream 延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityGroupIds 绑定的输入安全组 ID。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class DescribeInput extends AbstractModel
         if (array_key_exists("ResilientStream",$param) and $param["ResilientStream"] !== null) {
             $this->ResilientStream = new ResilientStreamConf();
             $this->ResilientStream->deserialize($param["ResilientStream"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

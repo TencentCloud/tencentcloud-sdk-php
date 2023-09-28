@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * SRT输入源地址。
  *
  * @method string getIp() 获取对端IP。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置对端IP。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取对端端口。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置对端端口。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SRTSourceAddressResp extends AbstractModel
 {
     /**
      * @var string 对端IP。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var integer 对端端口。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @param string $Ip 对端IP。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 对端端口。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

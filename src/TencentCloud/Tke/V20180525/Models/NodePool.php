@@ -82,6 +82,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceExtraArgs getExtraArgs() 获取节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method GPUArgs getGPUArgs() 获取GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDockerGraphPath() 获取dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDockerGraphPath(string $DockerGraphPath) 设置dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDataDisks() 获取多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataDisks(array $DataDisks) 设置多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUnschedulable() 获取是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnschedulable(integer $Unschedulable) 设置是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreStartUserScript() 获取用户自定义脚本,在UserScript前执行
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreStartUserScript(string $PreStartUserScript) 设置用户自定义脚本,在UserScript前执行
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodePool extends AbstractModel
 {
@@ -197,6 +221,42 @@ class NodePool extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var InstanceExtraArgs 节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtraArgs;
+
+    /**
+     * @var GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GPUArgs;
+
+    /**
+     * @var string dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DockerGraphPath;
+
+    /**
+     * @var array 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataDisks;
+
+    /**
+     * @var integer 是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Unschedulable;
+
+    /**
+     * @var string 用户自定义脚本,在UserScript前执行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreStartUserScript;
+
+    /**
      * @param string $NodePoolId NodePoolId 资源池id
      * @param string $Name Name 资源池名称
      * @param string $ClusterInstanceId ClusterInstanceId 集群实例id
@@ -227,6 +287,18 @@ class NodePool extends AbstractModel
      * @param array $Tags 资源标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeletionProtection 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceExtraArgs $ExtraArgs 节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUArgs $GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DataDisks 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Unschedulable 是否不可调度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreStartUserScript 用户自定义脚本,在UserScript前执行
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -336,6 +408,37 @@ class NodePool extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
+            $this->ExtraArgs = new InstanceExtraArgs();
+            $this->ExtraArgs->deserialize($param["ExtraArgs"]);
+        }
+
+        if (array_key_exists("GPUArgs",$param) and $param["GPUArgs"] !== null) {
+            $this->GPUArgs = new GPUArgs();
+            $this->GPUArgs->deserialize($param["GPUArgs"]);
+        }
+
+        if (array_key_exists("DockerGraphPath",$param) and $param["DockerGraphPath"] !== null) {
+            $this->DockerGraphPath = $param["DockerGraphPath"];
+        }
+
+        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+            $this->DataDisks = [];
+            foreach ($param["DataDisks"] as $key => $value){
+                $obj = new DataDisk();
+                $obj->deserialize($value);
+                array_push($this->DataDisks, $obj);
+            }
+        }
+
+        if (array_key_exists("Unschedulable",$param) and $param["Unschedulable"] !== null) {
+            $this->Unschedulable = $param["Unschedulable"];
+        }
+
+        if (array_key_exists("PreStartUserScript",$param) and $param["PreStartUserScript"] !== null) {
+            $this->PreStartUserScript = $param["PreStartUserScript"];
         }
     }
 }

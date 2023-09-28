@@ -102,6 +102,10 @@ ResetTaskConfig：任务更新回调。
  * @method void setOffsetTime(integer $OffsetTime) 设置指定播放文件偏移。
 注意：
 1. 单位：秒，配合FileIndex使用。
+ * @method string getToUrl() 获取目标 Url。
+换目标地址，会断流重推到新地址。
+ * @method void setToUrl(string $ToUrl) 设置目标 Url。
+换目标地址，会断流重推到新地址。
  * @method string getComment() 获取任务备注。
  * @method void setComment(string $Comment) 设置任务备注。
  * @method string getBackupSourceType() 获取备源的类型：
@@ -243,6 +247,12 @@ ResetTaskConfig：任务更新回调。
     public $OffsetTime;
 
     /**
+     * @var string 目标 Url。
+换目标地址，会断流重推到新地址。
+     */
+    public $ToUrl;
+
+    /**
      * @var string 任务备注。
      */
     public $Comment;
@@ -328,6 +338,8 @@ ResetTaskConfig：任务更新回调。
      * @param integer $OffsetTime 指定播放文件偏移。
 注意：
 1. 单位：秒，配合FileIndex使用。
+     * @param string $ToUrl 目标 Url。
+换目标地址，会断流重推到新地址。
      * @param string $Comment 任务备注。
      * @param string $BackupSourceType 备源的类型：
 PullLivePushLive -直播，
@@ -412,6 +424,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("OffsetTime",$param) and $param["OffsetTime"] !== null) {
             $this->OffsetTime = $param["OffsetTime"];
+        }
+
+        if (array_key_exists("ToUrl",$param) and $param["ToUrl"] !== null) {
+            $this->ToUrl = $param["ToUrl"];
         }
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {

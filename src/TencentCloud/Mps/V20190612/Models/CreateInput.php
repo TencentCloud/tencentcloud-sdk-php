@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) 设置输入的HLS_PULL配置信息。
  * @method ResilientStreamConf getResilientStream() 获取延播平滑吐流配置信息。
  * @method void setResilientStream(ResilientStreamConf $ResilientStream) 设置延播平滑吐流配置信息。
+ * @method array getSecurityGroupIds() 获取绑定的输入安全组 ID。 
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 
  */
 class CreateInput extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateInput extends AbstractModel
     public $ResilientStream;
 
     /**
+     * @var array 绑定的输入安全组 ID。 
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
      * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
      * @param string $Description 输入描述，长度为[0, 255]。
@@ -112,6 +119,7 @@ class CreateInput extends AbstractModel
      * @param CreateInputRTSPPullSettings $RTSPPullSettings 输入的RTSP_PULL配置信息。
      * @param CreateInputHLSPullSettings $HLSPullSettings 输入的HLS_PULL配置信息。
      * @param ResilientStreamConf $ResilientStream 延播平滑吐流配置信息。
+     * @param array $SecurityGroupIds 绑定的输入安全组 ID。 
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class CreateInput extends AbstractModel
         if (array_key_exists("ResilientStream",$param) and $param["ResilientStream"] !== null) {
             $this->ResilientStream = new ResilientStreamConf();
             $this->ResilientStream->deserialize($param["ResilientStream"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

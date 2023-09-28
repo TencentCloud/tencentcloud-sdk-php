@@ -153,6 +153,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 附注：
 - 员工必须在企业下完成实名认证，且需作为批量签署合同的签署方。
 - 如有UserId，应以UserId为主要标识；如果没有UserId，则必须填写Name和Mobile信息。
+ * @method Models\CreateOrganizationInfoChangeUrlResponse CreateOrganizationInfoChangeUrl(Models\CreateOrganizationInfoChangeUrlRequest $req) 此接口（CreateOrganizationInfoChangeUrl）用于创建企业信息变更链接，支持创建企业超管变更链接或企业基础信息变更链接，通过入参ChangeType指定。
  * @method Models\CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImage(Models\CreatePersonAuthCertificateImageRequest $req) 获取个人用户认证证书图片下载URL
 
 个人用户认证证书图片样式如下图

@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpcPeeringConnection请求参数结构体
  *
-
+ * @method string getPeeringConnectionId() 获取对等连接ID。
+ * @method void setPeeringConnectionId(string $PeeringConnectionId) 设置对等连接ID。
+ * @method string getPeeringConnectionName() 获取对等连接名称。
+ * @method void setPeeringConnectionName(string $PeeringConnectionName) 设置对等连接名称。
+ * @method integer getBandwidth() 获取带宽上限，单位Mbps。
+ * @method void setBandwidth(integer $Bandwidth) 设置带宽上限，单位Mbps。
+ * @method string getChargeType() 获取计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
+ * @method void setChargeType(string $ChargeType) 设置计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
  */
 class ModifyVpcPeeringConnectionRequest extends AbstractModel
 {
-
+    /**
+     * @var string 对等连接ID。
+     */
+    public $PeeringConnectionId;
 
     /**
+     * @var string 对等连接名称。
+     */
+    public $PeeringConnectionName;
 
+    /**
+     * @var integer 带宽上限，单位Mbps。
+     */
+    public $Bandwidth;
+
+    /**
+     * @var string 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
+     */
+    public $ChargeType;
+
+    /**
+     * @param string $PeeringConnectionId 对等连接ID。
+     * @param string $PeeringConnectionName 对等连接名称。
+     * @param integer $Bandwidth 带宽上限，单位Mbps。
+     * @param string $ChargeType 计费模式，日峰值POSTPAID_BY_DAY_MAX，月95 POSTPAID_BY_MONTH_95。
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class ModifyVpcPeeringConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PeeringConnectionId",$param) and $param["PeeringConnectionId"] !== null) {
+            $this->PeeringConnectionId = $param["PeeringConnectionId"];
+        }
 
+        if (array_key_exists("PeeringConnectionName",$param) and $param["PeeringConnectionName"] !== null) {
+            $this->PeeringConnectionName = $param["PeeringConnectionName"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
+        }
     }
 }

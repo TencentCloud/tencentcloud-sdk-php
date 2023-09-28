@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
  * @method string getDockerGraphPath() 获取dockerd --graph 指定值, 默认为 /var/lib/docker
  * @method void setDockerGraphPath(string $DockerGraphPath) 设置dockerd --graph 指定值, 默认为 /var/lib/docker
+ * @method string getPreStartUserScript() 获取base64编码后的自定义脚本
+ * @method void setPreStartUserScript(string $PreStartUserScript) 设置base64编码后的自定义脚本
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $DockerGraphPath;
 
     /**
+     * @var string base64编码后的自定义脚本
+     */
+    public $PreStartUserScript;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
      * @param string $Name 名称
@@ -168,6 +175,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param integer $Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
      * @param boolean $DeletionProtection 删除保护开关
      * @param string $DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+     * @param string $PreStartUserScript base64编码后的自定义脚本
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("DockerGraphPath",$param) and $param["DockerGraphPath"] !== null) {
             $this->DockerGraphPath = $param["DockerGraphPath"];
+        }
+
+        if (array_key_exists("PreStartUserScript",$param) and $param["PreStartUserScript"] !== null) {
+            $this->PreStartUserScript = $param["PreStartUserScript"];
         }
     }
 }

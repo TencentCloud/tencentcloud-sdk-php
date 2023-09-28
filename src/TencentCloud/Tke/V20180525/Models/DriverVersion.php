@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * GPU驱动和CUDA的版本信息
  *
  * @method string getVersion() 获取GPU驱动或者CUDA的版本
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置GPU驱动或者CUDA的版本
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取GPU驱动或者CUDA的名字
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置GPU驱动或者CUDA的名字
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DriverVersion extends AbstractModel
 {
     /**
      * @var string GPU驱动或者CUDA的版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string GPU驱动或者CUDA的名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $Version GPU驱动或者CUDA的版本
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name GPU驱动或者CUDA的名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

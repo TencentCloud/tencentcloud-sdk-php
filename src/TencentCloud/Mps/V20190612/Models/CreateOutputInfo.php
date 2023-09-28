@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
  * @method integer getMaxConcurrent() 获取最大拉流并发数，最大4，默认4。
  * @method void setMaxConcurrent(integer $MaxConcurrent) 设置最大拉流并发数，最大4，默认4。
+ * @method array getSecurityGroupIds() 获取绑定的输入安全组 ID。 
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 
  */
 class CreateOutputInfo extends AbstractModel
 {
@@ -90,6 +92,11 @@ class CreateOutputInfo extends AbstractModel
     public $MaxConcurrent;
 
     /**
+     * @var array 绑定的输入安全组 ID。 
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出描述。
      * @param string $Protocol 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
@@ -100,6 +107,7 @@ class CreateOutputInfo extends AbstractModel
      * @param array $AllowIpList IP白名单列表，格式为CIDR，如0.0.0.0/0。
 当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
      * @param integer $MaxConcurrent 最大拉流并发数，最大4，默认4。
+     * @param array $SecurityGroupIds 绑定的输入安全组 ID。 
      */
     function __construct()
     {
@@ -151,6 +159,10 @@ class CreateOutputInfo extends AbstractModel
 
         if (array_key_exists("MaxConcurrent",$param) and $param["MaxConcurrent"] !== null) {
             $this->MaxConcurrent = $param["MaxConcurrent"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

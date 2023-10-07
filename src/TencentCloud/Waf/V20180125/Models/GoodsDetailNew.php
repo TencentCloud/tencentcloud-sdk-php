@@ -148,6 +148,10 @@ Saas 域名扩展包  sv_wsm_waf_domain
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置对存在的实例购买bot 或api 安全
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceId() 获取资源id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceId(string $ResourceId) 设置资源id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GoodsDetailNew extends AbstractModel
 {
@@ -260,6 +264,12 @@ Saas 域名扩展包  sv_wsm_waf_domain
     public $InstanceId;
 
     /**
+     * @var string 资源id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceId;
+
+    /**
      * @param integer $TimeSpan 时间间隔
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 单位，支持购买d、m、y 即（日、月、年）
@@ -324,6 +334,8 @@ Saas 域名扩展包  sv_wsm_waf_domain
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 对存在的实例购买bot 或api 安全
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceId 资源id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -380,6 +392,10 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

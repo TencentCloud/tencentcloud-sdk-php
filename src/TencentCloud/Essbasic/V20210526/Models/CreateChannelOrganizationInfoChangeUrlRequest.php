@@ -20,14 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateChannelOrganizationInfoChangeUrl请求参数结构体
  *
-
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method integer getChangeType() 获取企业信息变更类型，可选类型如下：
+<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
+ * @method void setChangeType(integer $ChangeType) 设置企业信息变更类型，可选类型如下：
+<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
  */
 class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
 {
-
+    /**
+     * @var Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     */
+    public $Agent;
 
     /**
+     * @var integer 企业信息变更类型，可选类型如下：
+<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
+     */
+    public $ChangeType;
 
+    /**
+     * @param Agent $Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param integer $ChangeType 企业信息变更类型，可选类型如下：
+<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
      */
     function __construct()
     {
@@ -42,6 +58,13 @@ class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
+        }
 
+        if (array_key_exists("ChangeType",$param) and $param["ChangeType"] !== null) {
+            $this->ChangeType = $param["ChangeType"];
+        }
     }
 }

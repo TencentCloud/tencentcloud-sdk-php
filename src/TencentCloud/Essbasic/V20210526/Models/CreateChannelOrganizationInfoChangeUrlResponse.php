@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateChannelOrganizationInfoChangeUrl返回参数结构体
  *
+ * @method string getUrl() 获取创建的企业信息变更链接。
+ * @method void setUrl(string $Url) 设置创建的企业信息变更链接。
+ * @method integer getExpiredTime() 获取链接过期时间。链接7天有效。
+ * @method void setExpiredTime(integer $ExpiredTime) 设置链接过期时间。链接7天有效。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateChannelOrganizationInfoChangeUrlResponse extends AbstractModel
 {
     /**
+     * @var string 创建的企业信息变更链接。
+     */
+    public $Url;
+
+    /**
+     * @var integer 链接过期时间。链接7天有效。
+     */
+    public $ExpiredTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $Url 创建的企业信息变更链接。
+     * @param integer $ExpiredTime 链接过期时间。链接7天有效。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class CreateChannelOrganizationInfoChangeUrlResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

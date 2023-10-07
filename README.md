@@ -102,7 +102,7 @@ try {
     $req = new DescribeInstancesRequest();
 
     // 填充请求参数,这里request对象的成员变量即对应接口的入参
-    // 你可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
+    // 您可以通过官网接口文档或跳转到request对象的定义处查看请求参数的定义
     $respFilter = new Filter();  // 创建Filter对象, 以zone的维度来查询cvm实例
     $respFilter->Name = "zone";
     $respFilter->Values = ["ap-shanghai-1", "ap-shanghai-2"];
@@ -116,7 +116,7 @@ try {
     print_r($resp->toJsonString());
 
     // 也可以取出单个值。
-    // 你可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
+    // 您可以通过官网接口文档或跳转到response对象的定义处查看返回字段的定义
     print_r($resp->TotalCount);
 }
 catch(TencentCloudSDKException $e) {
@@ -173,7 +173,7 @@ $clientProfile->setRegionBreakerProfile($regionBreakerProfile);
 
 ## 证书问题
 
-如果你的 PHP 环境证书有问题，可能会遇到报错，类似于 `cURL error 60: See http://curl.haxx.se/libcurl/c/libcurl-errors.html`，请尝试按如下步骤解决：
+如果您的 PHP 环境证书有问题，可能会遇到报错，类似于 `cURL error 60: See http://curl.haxx.se/libcurl/c/libcurl-errors.html`，请尝试按如下步骤解决：
 
 1. 到 [https://curl.haxx.se/ca/cacert.pem](https://curl.haxx.se/ca/cacert.pem) 下载证书文件 `cacert.pem`，将其保存到 PHP 安装路径下。
 2. 编辑 `php.ini` 文件，删除 `curl.cainfo` 配置项前的分号注释符（;），值设置为保存的证书文件 `cacert.pem` 的绝对路径。

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) 设置地域 ID
  * @method string getZoneName() 获取可用区名（目前为中文）
  * @method void setZoneName(string $ZoneName) 设置可用区名（目前为中文）
+ * @method integer getZoneResourceState() 获取可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneResourceState(integer $ZoneResourceState) 设置可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusZoneItem extends AbstractModel
 {
@@ -59,11 +63,19 @@ class PrometheusZoneItem extends AbstractModel
     public $ZoneName;
 
     /**
+     * @var integer 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneResourceState;
+
+    /**
      * @param string $Zone 可用区
      * @param integer $ZoneId 可用区 ID
      * @param integer $ZoneState 可用区状态( 0: 不可用；1: 可用)
      * @param integer $RegionId 地域 ID
      * @param string $ZoneName 可用区名（目前为中文）
+     * @param integer $ZoneResourceState 可用区资源状态(0:资源不足，不可使用；1:资源足够)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class PrometheusZoneItem extends AbstractModel
 
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("ZoneResourceState",$param) and $param["ZoneResourceState"] !== null) {
+            $this->ZoneResourceState = $param["ZoneResourceState"];
         }
     }
 }

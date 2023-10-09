@@ -45,6 +45,7 @@ use TencentCloud\Common\AbstractModel;
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
 - FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
  * @method void setGenerateType(string $GenerateType) 设置签署链接生成类型，可以选择的类型如下
 
 - ALL：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接(默认类型)
@@ -52,6 +53,7 @@ use TencentCloud\Common\AbstractModel;
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
 - FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
  * @method string getOrganizationName() 获取非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
  * @method void setOrganizationName(string $OrganizationName) 设置非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
  * @method string getName() 获取参与人姓名
@@ -84,8 +86,8 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - 1:合同签署页面更多操作的拒绝签署按钮
 - 2:合同签署页面更多操作的转他人处理按钮
 - 3:签署成功页的查看详情按钮
- * @method array getRecipientIds() 获取签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
- * @method void setRecipientIds(array $RecipientIds) 设置签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+ * @method array getRecipientIds() 获取签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
+ * @method void setRecipientIds(array $RecipientIds) 设置签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
  */
 class CreateSignUrlsRequest extends AbstractModel
 {
@@ -122,6 +124,7 @@ class CreateSignUrlsRequest extends AbstractModel
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
 - FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
      */
     public $GenerateType;
 
@@ -179,7 +182,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     public $Hides;
 
     /**
-     * @var array 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+     * @var array 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
      */
     public $RecipientIds;
 
@@ -200,6 +203,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - NOT_CHANNEL：非第三方平台子客企业企业
 - PERSON：个人
 - FOLLOWER：关注方，目前是合同抄送方
+- RECIPIENT：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接
      * @param string $OrganizationName 非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
      * @param string $Name 参与人姓名
 GenerateType为"PERSON"(即个人签署方)时必填
@@ -216,7 +220,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
 - 1:合同签署页面更多操作的拒绝签署按钮
 - 2:合同签署页面更多操作的转他人处理按钮
 - 3:签署成功页的查看详情按钮
-     * @param array $RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致
+     * @param array $RecipientIds 签署节点ID，用于补充动态签署人，使用此参数需要与flow_ids数量一致并且一一对应
      */
     function __construct()
     {

@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGpuCount(float $GpuCount) 设置实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
  * @method string getFrequency() 获取实例的CPU主频信息
  * @method void setFrequency(string $Frequency) 设置实例的CPU主频信息
+ * @method string getStatusCategory() 获取描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusCategory(string $StatusCategory) 设置描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -184,6 +188,12 @@ class InstanceTypeQuotaItem extends AbstractModel
     public $Frequency;
 
     /**
+     * @var string 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusCategory;
+
+    /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
      * @param string $InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
@@ -208,6 +218,8 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param string $Remark 实例备注信息。
      * @param float $GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
      * @param string $Frequency 实例的CPU主频信息
+     * @param string $StatusCategory 描述库存情况。取值范围： <br><li> UnderStock：表示对应库存即将售罄<br><li> NormalStock：表示对应库存供应有保障<br><li> EnoughStock：表示对应库存非常充足<br><li> WithoutStock：表示对应库存已经售罄
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -315,6 +327,10 @@ class InstanceTypeQuotaItem extends AbstractModel
 
         if (array_key_exists("Frequency",$param) and $param["Frequency"] !== null) {
             $this->Frequency = $param["Frequency"];
+        }
+
+        if (array_key_exists("StatusCategory",$param) and $param["StatusCategory"] !== null) {
+            $this->StatusCategory = $param["StatusCategory"];
         }
     }
 }

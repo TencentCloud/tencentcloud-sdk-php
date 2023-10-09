@@ -20,66 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAlarmLog请求参数结构体
  *
- * @method integer getFrom() 获取要查询的日志的起始时间，Unix时间戳，单位ms
- * @method void setFrom(integer $From) 设置要查询的日志的起始时间，Unix时间戳，单位ms
- * @method integer getTo() 获取要查询的日志的结束时间，Unix时间戳，单位ms
- * @method void setTo(integer $To) 设置要查询的日志的结束时间，Unix时间戳，单位ms
- * @method string getQuery() 获取查询语句，语句长度最大为1024
- * @method void setQuery(string $Query) 设置查询语句，语句长度最大为1024
- * @method integer getLimit() 获取单次查询返回的日志条数，最大值为1000
- * @method void setLimit(integer $Limit) 设置单次查询返回的日志条数，最大值为1000
- * @method string getContext() 获取加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
- * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
- * @method string getSort() 获取日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
- * @method void setSort(string $Sort) 设置日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
- * @method boolean getUseNewAnalysis() 获取为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
- * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+ * @method integer getFrom() 获取要查询的执行详情的起始时间，Unix时间戳，单位ms
+ * @method void setFrom(integer $From) 设置要查询的执行详情的起始时间，Unix时间戳，单位ms
+ * @method integer getTo() 获取要查询的执行详情的结束时间，Unix时间戳，单位ms
+ * @method void setTo(integer $To) 设置要查询的执行详情的结束时间，Unix时间戳，单位ms
+ * @method string getQuery() 获取查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
+ * @method void setQuery(string $Query) 设置查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
+ * @method integer getLimit() 获取单次查询返回的执行详情条数，最大值为1000
+ * @method void setLimit(integer $Limit) 设置单次查询返回的执行详情条数，最大值为1000
+ * @method string getContext() 获取加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+ * @method void setContext(string $Context) 设置加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+ * @method string getSort() 获取执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+ * @method void setSort(string $Sort) 设置执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+ * @method boolean getUseNewAnalysis() 获取如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
+ * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
  */
 class GetAlarmLogRequest extends AbstractModel
 {
     /**
-     * @var integer 要查询的日志的起始时间，Unix时间戳，单位ms
+     * @var integer 要查询的执行详情的起始时间，Unix时间戳，单位ms
      */
     public $From;
 
     /**
-     * @var integer 要查询的日志的结束时间，Unix时间戳，单位ms
+     * @var integer 要查询的执行详情的结束时间，Unix时间戳，单位ms
      */
     public $To;
 
     /**
-     * @var string 查询语句，语句长度最大为1024
+     * @var string 查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
      */
     public $Query;
 
     /**
-     * @var integer 单次查询返回的日志条数，最大值为1000
+     * @var integer 单次查询返回的执行详情条数，最大值为1000
      */
     public $Limit;
 
     /**
-     * @var string 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * @var string 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
      */
     public $Context;
 
     /**
-     * @var string 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * @var string 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
      */
     public $Sort;
 
     /**
-     * @var boolean 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+     * @var boolean 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
      */
     public $UseNewAnalysis;
 
     /**
-     * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
-     * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
-     * @param string $Query 查询语句，语句长度最大为1024
-     * @param integer $Limit 单次查询返回的日志条数，最大值为1000
-     * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
-     * @param string $Sort 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
-     * @param boolean $UseNewAnalysis 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+     * @param integer $From 要查询的执行详情的起始时间，Unix时间戳，单位ms
+     * @param integer $To 要查询的执行详情的结束时间，Unix时间戳，单位ms
+     * @param string $Query 查询过滤条件，例如：
+- 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
+- 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b") `
+- 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b")`
+     * @param integer $Limit 单次查询返回的执行详情条数，最大值为1000
+     * @param string $Context 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+     * @param string $Sort 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * @param boolean $UseNewAnalysis 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
      */
     function __construct()
     {

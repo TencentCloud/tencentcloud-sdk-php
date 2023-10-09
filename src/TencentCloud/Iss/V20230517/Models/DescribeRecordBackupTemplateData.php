@@ -18,7 +18,7 @@ namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询录像上云模版返回数据
+ * 查询录像上云模板返回数据
  *
  * @method string getTemplateId() 获取模板ID
 注意：此字段可能返回 null，表示取不到有效值。

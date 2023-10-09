@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAlarmLog返回参数结构体
  *
- * @method string getContext() 获取加载后续内容的Context
- * @method void setContext(string $Context) 设置加载后续内容的Context
- * @method boolean getListOver() 获取日志查询结果是否全部返回
- * @method void setListOver(boolean $ListOver) 设置日志查询结果是否全部返回
- * @method boolean getAnalysis() 获取返回的是否为分析结果
- * @method void setAnalysis(boolean $Analysis) 设置返回的是否为分析结果
+ * @method string getContext() 获取加载后续详情的Context
+ * @method void setContext(string $Context) 设置加载后续详情的Context
+ * @method boolean getListOver() 获取指定时间范围内的告警执行详情是否完整返回
+ * @method void setListOver(boolean $ListOver) 设置指定时间范围内的告警执行详情是否完整返回
+ * @method boolean getAnalysis() 获取返回的结果是否为SQL分析结果
+ * @method void setAnalysis(boolean $Analysis) 设置返回的结果是否为SQL分析结果
  * @method array getColNames() 获取如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColNames(array $ColNames) 设置如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResults() 获取日志查询结果；当Analysis为True时，可能返回为null
+ * @method array getResults() 获取执行详情查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置日志查询结果；当Analysis为True时，可能返回为null
+ * @method void setResults(array $Results) 设置执行详情查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisResults() 获取日志分析结果；当Analysis为False时，可能返回为null
+ * @method array getAnalysisResults() 获取执行详情统计分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisResults(array $AnalysisResults) 设置日志分析结果；当Analysis为False时，可能返回为null
+ * @method void setAnalysisResults(array $AnalysisResults) 设置执行详情统计分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisRecords() 获取新的日志分析结果; UseNewAnalysis为true有效
+ * @method array getAnalysisRecords() 获取执行详情统计分析结果; UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisRecords(array $AnalysisRecords) 设置新的日志分析结果; UseNewAnalysis为true有效
+ * @method void setAnalysisRecords(array $AnalysisRecords) 设置执行详情统计分析结果; UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getColumns() 获取日志分析的列属性; UseNewAnalysis为true有效
+ * @method array getColumns() 获取分析结果的列名， UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColumns(array $Columns) 设置日志分析的列属性; UseNewAnalysis为true有效
+ * @method void setColumns(array $Columns) 设置分析结果的列名， UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,17 +52,17 @@ use TencentCloud\Common\AbstractModel;
 class GetAlarmLogResponse extends AbstractModel
 {
     /**
-     * @var string 加载后续内容的Context
+     * @var string 加载后续详情的Context
      */
     public $Context;
 
     /**
-     * @var boolean 日志查询结果是否全部返回
+     * @var boolean 指定时间范围内的告警执行详情是否完整返回
      */
     public $ListOver;
 
     /**
-     * @var boolean 返回的是否为分析结果
+     * @var boolean 返回的结果是否为SQL分析结果
      */
     public $Analysis;
 
@@ -73,25 +73,25 @@ class GetAlarmLogResponse extends AbstractModel
     public $ColNames;
 
     /**
-     * @var array 日志查询结果；当Analysis为True时，可能返回为null
+     * @var array 执行详情查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
     /**
-     * @var array 日志分析结果；当Analysis为False时，可能返回为null
+     * @var array 执行详情统计分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisResults;
 
     /**
-     * @var array 新的日志分析结果; UseNewAnalysis为true有效
+     * @var array 执行详情统计分析结果; UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisRecords;
 
     /**
-     * @var array 日志分析的列属性; UseNewAnalysis为true有效
+     * @var array 分析结果的列名， UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Columns;
@@ -102,18 +102,18 @@ class GetAlarmLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Context 加载后续内容的Context
-     * @param boolean $ListOver 日志查询结果是否全部返回
-     * @param boolean $Analysis 返回的是否为分析结果
+     * @param string $Context 加载后续详情的Context
+     * @param boolean $ListOver 指定时间范围内的告警执行详情是否完整返回
+     * @param boolean $Analysis 返回的结果是否为SQL分析结果
      * @param array $ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Results 日志查询结果；当Analysis为True时，可能返回为null
+     * @param array $Results 执行详情查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
+     * @param array $AnalysisResults 执行详情统计分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisRecords 新的日志分析结果; UseNewAnalysis为true有效
+     * @param array $AnalysisRecords 执行详情统计分析结果; UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Columns 日志分析的列属性; UseNewAnalysis为true有效
+     * @param array $Columns 分析结果的列名， UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

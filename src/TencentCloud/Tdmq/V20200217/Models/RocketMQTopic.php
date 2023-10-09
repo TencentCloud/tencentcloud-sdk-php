@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，以毫秒为单位
  * @method integer getUpdateTime() 获取创建时间，以毫秒为单位
  * @method void setUpdateTime(integer $UpdateTime) 设置创建时间，以毫秒为单位
+ * @method integer getLastUpdateTime() 获取最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubscriptionCount() 获取订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubscriptionCount(integer $SubscriptionCount) 设置订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSubscriptionData() 获取订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubscriptionData(array $SubscriptionData) 设置订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQTopic extends AbstractModel
 {
@@ -76,6 +88,24 @@ class RocketMQTopic extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer 最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastUpdateTime;
+
+    /**
+     * @var integer 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubscriptionCount;
+
+    /**
+     * @var array 订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubscriptionData;
+
+    /**
      * @param string $Name 主题名称
      * @param string $Type 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
      * @param integer $GroupNum 订阅组数量
@@ -84,6 +114,12 @@ class RocketMQTopic extends AbstractModel
      * @param integer $PartitionNum 读写分区数
      * @param integer $CreateTime 创建时间，以毫秒为单位
      * @param integer $UpdateTime 创建时间，以毫秒为单位
+     * @param integer $LastUpdateTime 最后写入时间，单位为秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubscriptionCount 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SubscriptionData 订阅关系列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +160,23 @@ class RocketMQTopic extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {
+            $this->LastUpdateTime = $param["LastUpdateTime"];
+        }
+
+        if (array_key_exists("SubscriptionCount",$param) and $param["SubscriptionCount"] !== null) {
+            $this->SubscriptionCount = $param["SubscriptionCount"];
+        }
+
+        if (array_key_exists("SubscriptionData",$param) and $param["SubscriptionData"] !== null) {
+            $this->SubscriptionData = [];
+            foreach ($param["SubscriptionData"] as $key => $value){
+                $obj = new RocketMQSubscription();
+                $obj->deserialize($value);
+                array_push($this->SubscriptionData, $obj);
+            }
         }
     }
 }

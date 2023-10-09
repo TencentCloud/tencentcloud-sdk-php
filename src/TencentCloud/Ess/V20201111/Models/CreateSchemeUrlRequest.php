@@ -54,12 +54,14 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
  * @method void setPathType(integer $PathType) 设置要跳转到的页面类型 
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
  * @method boolean getAutoJumpBack() 获取签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
 注:  ` 该参数只针对"APP" 类型的签署链接有效`
@@ -86,8 +88,12 @@ use TencentCloud\Common\AbstractModel;
 <li> **3** :签署成功页的查看详情按钮</li></ul>
 
 注:  `字段为数组, 可以传值隐藏多个按钮`
- * @method string getRecipientId() 获取签署节点ID，用于生成动态签署人链接完成领取
- * @method void setRecipientId(string $RecipientId) 设置签署节点ID，用于生成动态签署人链接完成领取
+ * @method string getRecipientId() 获取签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。`
+ * @method void setRecipientId(string $RecipientId) 设置签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。`
  */
 class CreateSchemeUrlRequest extends AbstractModel
 {
@@ -139,7 +145,8 @@ class CreateSchemeUrlRequest extends AbstractModel
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
      */
     public $PathType;
 
@@ -169,7 +176,9 @@ class CreateSchemeUrlRequest extends AbstractModel
     public $Hides;
 
     /**
-     * @var string 签署节点ID，用于生成动态签署人链接完成领取
+     * @var string 签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。`
      */
     public $RecipientId;
 
@@ -193,7 +202,8 @@ class CreateSchemeUrlRequest extends AbstractModel
 
 <ul><li> **0** : 腾讯电子签小程序个人首页 (默认)</li>
 <li> **1** : 腾讯电子签小程序流程合同的详情页 (即合同签署页面)</li>
-<li> **2** : 腾讯电子签小程序合同列表页</li></ul>
+<li> **2** : 腾讯电子签小程序合同列表页</li><li> **3** : 腾讯电子签小程序合同封面页
+注：`生成动态签署人补充链接时，必须指定为封面页`</li></ul>
      * @param boolean $AutoJumpBack 签署完成后是否自动回跳
 <ul><li>**false**：否, 签署完成不会自动跳转回来(默认)</li><li>**true**：是, 签署完成会自动跳转回来</li></ul>
 注:  ` 该参数只针对"APP" 类型的签署链接有效`
@@ -207,7 +217,9 @@ class CreateSchemeUrlRequest extends AbstractModel
 <li> **3** :签署成功页的查看详情按钮</li></ul>
 
 注:  `字段为数组, 可以传值隐藏多个按钮`
-     * @param string $RecipientId 签署节点ID，用于生成动态签署人链接完成领取
+     * @param string $RecipientId 签署节点ID，用于生成动态签署人链接完成领取。
+
+注：`生成动态签署人补充链接时必传。`
      */
     function __construct()
     {

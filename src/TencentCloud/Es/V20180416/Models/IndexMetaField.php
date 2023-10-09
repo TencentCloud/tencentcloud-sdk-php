@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexName(string $IndexName) 设置索引名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexMetaJson() 获取索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexMetaJson(string $IndexMetaJson) 设置索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIndexStatus() 获取索引状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexStatus(string $IndexStatus) 设置索引状态
@@ -90,6 +94,12 @@ class IndexMetaField extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexName;
+
+    /**
+     * @var string 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexMetaJson;
 
     /**
      * @var string 索引状态
@@ -168,6 +178,8 @@ class IndexMetaField extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexName 索引名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexMetaJson 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexStatus 索引状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IndexStorage 索引存储大小，单位Byte
@@ -212,6 +224,10 @@ class IndexMetaField extends AbstractModel
 
         if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
             $this->IndexName = $param["IndexName"];
+        }
+
+        if (array_key_exists("IndexMetaJson",$param) and $param["IndexMetaJson"] !== null) {
+            $this->IndexMetaJson = $param["IndexMetaJson"];
         }
 
         if (array_key_exists("IndexStatus",$param) and $param["IndexStatus"] !== null) {

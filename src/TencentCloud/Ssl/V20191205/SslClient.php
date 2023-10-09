@@ -64,7 +64,9 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\DescribeManagersResponse DescribeManagers(Models\DescribeManagersRequest $req) 查询管理人列表
  * @method Models\DescribePackagesResponse DescribePackages(Models\DescribePackagesRequest $req) 获得权益包列表
  * @method Models\DownloadCertificateResponse DownloadCertificate(Models\DownloadCertificateRequest $req) 本接口（DownloadCertificate）用于下载证书。
- * @method Models\HostCertificateResponse HostCertificate(Models\HostCertificateRequest $req) 云资源托管
+ * @method Models\HostCertificateResponse HostCertificate(Models\HostCertificateRequest $req) 证书托管接口已重构， 旧接口预下线， 近30天无请求
+
+云资源托管
  * @method Models\ModifyCertificateAliasResponse ModifyCertificateAlias(Models\ModifyCertificateAliasRequest $req) 用户传入证书id和备注来修改证书备注。
  * @method Models\ModifyCertificateProjectResponse ModifyCertificateProject(Models\ModifyCertificateProjectRequest $req) 批量修改证书所属项目。
  * @method Models\ModifyCertificateResubmitResponse ModifyCertificateResubmit(Models\ModifyCertificateResubmitRequest $req) 针对审核失败或审核取消的付费证书，重新发起审核

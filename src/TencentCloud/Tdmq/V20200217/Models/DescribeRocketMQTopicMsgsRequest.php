@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryDlqMsg(boolean $QueryDlqMsg) 设置死信查询时该值为true，只对Rocketmq有效
  * @method integer getNumOfLatestMsg() 获取查询最近N条消息 最大不超过1024，默认-1为其他查询条件
  * @method void setNumOfLatestMsg(integer $NumOfLatestMsg) 设置查询最近N条消息 最大不超过1024，默认-1为其他查询条件
+ * @method string getTag() 获取TAG表达式
+ * @method void setTag(string $Tag) 设置TAG表达式
+ * @method boolean getQueryDeadLetterMessage() 获取死信查询时该值为true，只对Rocketmq有效
+ * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) 设置死信查询时该值为true，只对Rocketmq有效
  */
 class DescribeRocketMQTopicMsgsRequest extends AbstractModel
 {
@@ -99,6 +103,7 @@ class DescribeRocketMQTopicMsgsRequest extends AbstractModel
 
     /**
      * @var boolean 死信查询时该值为true，只对Rocketmq有效
+     * @deprecated
      */
     public $QueryDlqMsg;
 
@@ -106,6 +111,16 @@ class DescribeRocketMQTopicMsgsRequest extends AbstractModel
      * @var integer 查询最近N条消息 最大不超过1024，默认-1为其他查询条件
      */
     public $NumOfLatestMsg;
+
+    /**
+     * @var string TAG表达式
+     */
+    public $Tag;
+
+    /**
+     * @var boolean 死信查询时该值为true，只对Rocketmq有效
+     */
+    public $QueryDeadLetterMessage;
 
     /**
      * @param string $ClusterId 集群 ID
@@ -120,6 +135,8 @@ class DescribeRocketMQTopicMsgsRequest extends AbstractModel
      * @param string $TaskRequestId 标志一次分页事务
      * @param boolean $QueryDlqMsg 死信查询时该值为true，只对Rocketmq有效
      * @param integer $NumOfLatestMsg 查询最近N条消息 最大不超过1024，默认-1为其他查询条件
+     * @param string $Tag TAG表达式
+     * @param boolean $QueryDeadLetterMessage 死信查询时该值为true，只对Rocketmq有效
      */
     function __construct()
     {
@@ -180,6 +197,14 @@ class DescribeRocketMQTopicMsgsRequest extends AbstractModel
 
         if (array_key_exists("NumOfLatestMsg",$param) and $param["NumOfLatestMsg"] !== null) {
             $this->NumOfLatestMsg = $param["NumOfLatestMsg"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("QueryDeadLetterMessage",$param) and $param["QueryDeadLetterMessage"] !== null) {
+            $this->QueryDeadLetterMessage = $param["QueryDeadLetterMessage"];
         }
     }
 }

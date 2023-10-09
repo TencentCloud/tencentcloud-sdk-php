@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置日志主题
  * @method boolean getNeedDelete() 获取是否删除
  * @method void setNeedDelete(boolean $NeedDelete) 设置是否删除
+ * @method string getRegion() 获取cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CLS extends AbstractModel
 {
@@ -52,10 +56,18 @@ class CLS extends AbstractModel
     public $NeedDelete;
 
     /**
+     * @var string cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
      * @param boolean $Enable 是否启用
      * @param string $LogSet 日志集
      * @param string $Topic 日志主题
      * @param boolean $NeedDelete 是否删除
+     * @param string $Region cls 主题创建的地域
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class CLS extends AbstractModel
 
         if (array_key_exists("NeedDelete",$param) and $param["NeedDelete"] !== null) {
             $this->NeedDelete = $param["NeedDelete"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

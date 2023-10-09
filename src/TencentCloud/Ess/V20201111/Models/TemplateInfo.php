@@ -97,6 +97,10 @@ false-未发布
 true-已发布
 false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShareTemplateId() 获取分享来源的模板ID。用在集团账号子企业模板里
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShareTemplateId(string $ShareTemplateId) 设置分享来源的模板ID。用在集团账号子企业模板里
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTemplateSeals() 获取模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateSeals(array $TemplateSeals) 设置模板内部指定的印章列表
@@ -223,6 +227,12 @@ false-未发布
     public $Published;
 
     /**
+     * @var string 分享来源的模板ID。用在集团账号子企业模板里
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShareTemplateId;
+
+    /**
      * @var array 模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -269,6 +279,8 @@ false-未发布
      * @param boolean $Published 模板是否已发布：
 true-已发布
 false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShareTemplateId 分享来源的模板ID。用在集团账号子企业模板里
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TemplateSeals 模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -387,6 +399,10 @@ false-未发布
 
         if (array_key_exists("Published",$param) and $param["Published"] !== null) {
             $this->Published = $param["Published"];
+        }
+
+        if (array_key_exists("ShareTemplateId",$param) and $param["ShareTemplateId"] !== null) {
+            $this->ShareTemplateId = $param["ShareTemplateId"];
         }
 
         if (array_key_exists("TemplateSeals",$param) and $param["TemplateSeals"] !== null) {

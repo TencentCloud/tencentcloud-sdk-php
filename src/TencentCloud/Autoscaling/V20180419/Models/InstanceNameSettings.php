@@ -20,14 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云服务器实例名称（InstanceName）的相关设置
  *
- * @method string getInstanceName() 获取云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
- * @method void setInstanceName(string $InstanceName) 设置云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
+ * @method string getInstanceName() 获取云服务器的实例名。字符长度为[2, 108]。
+ * @method void setInstanceName(string $InstanceName) 设置云服务器的实例名。字符长度为[2, 108]。
  * @method string getInstanceNameStyle() 获取云服务器实例名的风格，取值范围包括 ORIGINAL 和 UNIQUE，默认为 ORIGINAL。
 
 ORIGINAL，AS 直接将入参中所填的 InstanceName 传递给 CVM，CVM 可能会对 InstanceName 追加序列号，伸缩组中实例的 InstanceName 会出现冲突的情况。
@@ -42,10 +36,7 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 class InstanceNameSettings extends AbstractModel
 {
     /**
-     * @var string 云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
+     * @var string 云服务器的实例名。字符长度为[2, 108]。
      */
     public $InstanceName;
 
@@ -59,10 +50,7 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     public $InstanceNameStyle;
 
     /**
-     * @param string $InstanceName 云服务器的实例名。
-
-点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
-字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
+     * @param string $InstanceName 云服务器的实例名。字符长度为[2, 108]。
      * @param string $InstanceNameStyle 云服务器实例名的风格，取值范围包括 ORIGINAL 和 UNIQUE，默认为 ORIGINAL。
 
 ORIGINAL，AS 直接将入参中所填的 InstanceName 传递给 CVM，CVM 可能会对 InstanceName 追加序列号，伸缩组中实例的 InstanceName 会出现冲突的情况。

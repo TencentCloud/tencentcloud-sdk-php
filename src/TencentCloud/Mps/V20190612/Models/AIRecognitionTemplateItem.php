@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsrFullTextConfigure(AsrFullTextConfigureInfo $AsrFullTextConfigure) 设置语音全文识别控制参数。
  * @method AsrWordsConfigureInfo getAsrWordsConfigure() 获取语音关键词识别控制参数。
  * @method void setAsrWordsConfigure(AsrWordsConfigureInfo $AsrWordsConfigure) 设置语音关键词识别控制参数。
+ * @method TranslateConfigureInfo getTranslateConfigure() 获取语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTranslateConfigure(TranslateConfigureInfo $TranslateConfigure) 设置语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
@@ -92,6 +96,12 @@ class AIRecognitionTemplateItem extends AbstractModel
     public $AsrWordsConfigure;
 
     /**
+     * @var TranslateConfigureInfo 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TranslateConfigure;
+
+    /**
      * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */
     public $CreateTime;
@@ -118,6 +128,8 @@ class AIRecognitionTemplateItem extends AbstractModel
      * @param OcrWordsConfigureInfo $OcrWordsConfigure 文本关键词识别控制参数。
      * @param AsrFullTextConfigureInfo $AsrFullTextConfigure 语音全文识别控制参数。
      * @param AsrWordsConfigureInfo $AsrWordsConfigure 语音关键词识别控制参数。
+     * @param TranslateConfigureInfo $TranslateConfigure 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $Type 模板类型，取值范围：
@@ -173,6 +185,11 @@ class AIRecognitionTemplateItem extends AbstractModel
         if (array_key_exists("AsrWordsConfigure",$param) and $param["AsrWordsConfigure"] !== null) {
             $this->AsrWordsConfigure = new AsrWordsConfigureInfo();
             $this->AsrWordsConfigure->deserialize($param["AsrWordsConfigure"]);
+        }
+
+        if (array_key_exists("TranslateConfigure",$param) and $param["TranslateConfigure"] !== null) {
+            $this->TranslateConfigure = new TranslateConfigureInfo();
+            $this->TranslateConfigure->deserialize($param["TranslateConfigure"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

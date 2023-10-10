@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOsType() 获取[1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
+ * @method void setOsType(integer $OsType) 设置[1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
  */
 class RiskDnsEvent extends AbstractModel
 {
@@ -202,6 +204,11 @@ class RiskDnsEvent extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var integer [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
+     */
+    public $OsType;
+
+    /**
      * @param integer $Id 事件Id
      * @param integer $PolicyId 策略ID
      * @param integer $PolicyType 命中策略类型[-1:未知|0系统|1:用户]
@@ -228,6 +235,7 @@ class RiskDnsEvent extends AbstractModel
      * @param string $HostStatus 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OsType [1:CentOS|2:Debian|3:Gentoo|4:Redhat|5:Ubuntu|6:Windows|7:TencentOS|8:CoreOS|9:FreeBSD|10:SUSE]
      */
     function __construct()
     {
@@ -341,6 +349,10 @@ class RiskDnsEvent extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
+            $this->OsType = $param["OsType"];
         }
     }
 }

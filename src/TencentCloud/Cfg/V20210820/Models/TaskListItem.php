@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskExpect(integer $TaskExpect) 设置演练是否符合预期 1-符合预期 2-不符合预期
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationName() 获取关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationName(string $ApplicationName) 设置关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskListItem extends AbstractModel
 {
@@ -106,6 +114,18 @@ class TaskListItem extends AbstractModel
     public $TaskExpect;
 
     /**
+     * @var string 关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
+     * @var string 关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationName;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -119,6 +139,10 @@ class TaskListItem extends AbstractModel
      * @param boolean $TaskPreCheckSuccess 环境检查是否通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 关联应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationName 关联应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +196,14 @@ class TaskListItem extends AbstractModel
 
         if (array_key_exists("TaskExpect",$param) and $param["TaskExpect"] !== null) {
             $this->TaskExpect = $param["TaskExpect"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

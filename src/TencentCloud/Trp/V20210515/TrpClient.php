@@ -41,7 +41,10 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DeleteTraceDataResponse DeleteTraceData(Models\DeleteTraceDataRequest $req) 删除溯源信息，如果已经上链则不可删除
  * @method Models\DescribeAgentCorpsResponse DescribeAgentCorps(Models\DescribeAgentCorpsRequest $req) 查询渠道企业列表
  * @method Models\DescribeCodeBatchByIdResponse DescribeCodeBatchById(Models\DescribeCodeBatchByIdRequest $req) 查询批次信息
+ * @method Models\DescribeCodeBatchesResponse DescribeCodeBatches(Models\DescribeCodeBatchesRequest $req) 查询批次列表
  * @method Models\DescribeCodeBatchsResponse DescribeCodeBatchs(Models\DescribeCodeBatchsRequest $req) 查询批次列表
+
+旧版接口已经弃用，新业务请使用用新版的接口 DescribeCodeBatches
  * @method Models\DescribeCodePackStatusResponse DescribeCodePackStatus(Models\DescribeCodePackStatusRequest $req) 查询码包状态
  * @method Models\DescribeCodePackUrlResponse DescribeCodePackUrl(Models\DescribeCodePackUrlRequest $req) 查询码包地址
  * @method Models\DescribeCodePacksResponse DescribeCodePacks(Models\DescribeCodePacksRequest $req) 查询码包列表

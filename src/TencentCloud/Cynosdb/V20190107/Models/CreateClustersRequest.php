@@ -140,8 +140,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setClusterParams(array $ClusterParams) 设置参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
  * @method integer getDealMode() 获取交易模式，0-下单且支付，1-下单
  * @method void setDealMode(integer $DealMode) 设置交易模式，0-下单且支付，1-下单
- * @method integer getParamTemplateId() 获取参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
- * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+ * @method integer getParamTemplateId() 获取参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+ * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
  * @method string getSlaveZone() 获取多可用区地址
  * @method void setSlaveZone(string $SlaveZone) 设置多可用区地址
  * @method array getInstanceInitInfos() 获取实例初始化配置信息，主要用于购买集群时选不同规格实例
@@ -362,7 +362,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $DealMode;
 
     /**
-     * @var integer 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * @var integer 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      */
     public $ParamTemplateId;
 
@@ -437,7 +437,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param array $AlarmPolicyIds 告警策略Id数组
      * @param array $ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
      * @param integer $DealMode 交易模式，0-下单且支付，1-下单
-     * @param integer $ParamTemplateId 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
+     * @param integer $ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      * @param string $SlaveZone 多可用区地址
      * @param array $InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
      */

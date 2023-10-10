@@ -90,6 +90,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskPlanTitle(string $TaskPlanTitle) 设置关联的演练计划名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationName() 获取关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationName(string $ApplicationName) 设置关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAlarmPolicy() 获取关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmPolicy(array $AlarmPolicy) 设置关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getApmServiceList() 获取关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApmServiceList(array $ApmServiceList) 设置关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Task extends AbstractModel
 {
@@ -221,6 +237,30 @@ class Task extends AbstractModel
     public $TaskPlanTitle;
 
     /**
+     * @var string 关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
+     * @var string 关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationName;
+
+    /**
+     * @var array 关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmPolicy;
+
+    /**
+     * @var array 关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApmServiceList;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -255,6 +295,14 @@ class Task extends AbstractModel
      * @param integer $TaskPlanId 关联的演练计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskPlanTitle 关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 关联的应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationName 关联的应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AlarmPolicy 关联的告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ApmServiceList 关联的APM服务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -376,6 +424,27 @@ class Task extends AbstractModel
 
         if (array_key_exists("TaskPlanTitle",$param) and $param["TaskPlanTitle"] !== null) {
             $this->TaskPlanTitle = $param["TaskPlanTitle"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
+        }
+
+        if (array_key_exists("ApmServiceList",$param) and $param["ApmServiceList"] !== null) {
+            $this->ApmServiceList = [];
+            foreach ($param["ApmServiceList"] as $key => $value){
+                $obj = new ApmServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->ApmServiceList, $obj);
+            }
         }
     }
 }

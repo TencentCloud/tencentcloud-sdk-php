@@ -114,6 +114,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DropDMSPartitionsResponse DropDMSPartitions(Models\DropDMSPartitionsRequest $req) DMS元数据删除分区
  * @method Models\DropDMSTableResponse DropDMSTable(Models\DropDMSTableRequest $req) DMS元数据删除表
  * @method Models\GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(Models\GenerateCreateMangedTableSqlRequest $req) 生成创建托管表语句
+ * @method Models\GetOptimizerPolicyResponse GetOptimizerPolicy(Models\GetOptimizerPolicyRequest $req) GetOptimizerPolicy
  * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
  * @method Models\LockMetaDataResponse LockMetaData(Models\LockMetaDataRequest $req) 元数据锁
  * @method Models\ModifyDataEngineDescriptionResponse ModifyDataEngineDescription(Models\ModifyDataEngineDescriptionRequest $req) 修改引擎描述信息

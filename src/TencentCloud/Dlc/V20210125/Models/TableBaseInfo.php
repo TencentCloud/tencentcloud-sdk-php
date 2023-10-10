@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbGovernPolicyIsDisable(string $DbGovernPolicyIsDisable) 设置库数据治理是否关闭，关闭：true，开启：false
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SmartPolicy getSmartPolicy() 获取智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmartPolicy(SmartPolicy $SmartPolicy) 设置智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableBaseInfo extends AbstractModel
 {
@@ -118,6 +122,12 @@ class TableBaseInfo extends AbstractModel
     public $DbGovernPolicyIsDisable;
 
     /**
+     * @var SmartPolicy 智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmartPolicy;
+
+    /**
      * @param string $DatabaseName 该数据表所属数据库名字
      * @param string $TableName 数据表名字
      * @param string $DatasourceConnectionName 该数据表所属数据源名字
@@ -135,6 +145,8 @@ class TableBaseInfo extends AbstractModel
      * @param DataGovernPolicy $GovernPolicy 数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbGovernPolicyIsDisable 库数据治理是否关闭，关闭：true，开启：false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartPolicy $SmartPolicy 智能数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,11 @@ class TableBaseInfo extends AbstractModel
 
         if (array_key_exists("DbGovernPolicyIsDisable",$param) and $param["DbGovernPolicyIsDisable"] !== null) {
             $this->DbGovernPolicyIsDisable = $param["DbGovernPolicyIsDisable"];
+        }
+
+        if (array_key_exists("SmartPolicy",$param) and $param["SmartPolicy"] !== null) {
+            $this->SmartPolicy = new SmartPolicy();
+            $this->SmartPolicy->deserialize($param["SmartPolicy"]);
         }
     }
 }

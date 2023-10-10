@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLine(integer $Line) 设置网络线路
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFreeServiceBandwidth() 获取不计费的业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFreeServiceBandwidth(integer $FreeServiceBandwidth) 设置不计费的业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticServiceBandwidth() 获取弹性业务带宽开关
  * @method void setElasticServiceBandwidth(integer $ElasticServiceBandwidth) 设置弹性业务带宽开关
  * @method integer getGiftServiceBandWidth() 获取赠送的业务带宽
@@ -194,6 +198,12 @@ class BGPInstance extends AbstractModel
     public $Line;
 
     /**
+     * @var integer 不计费的业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FreeServiceBandwidth;
+
+    /**
      * @var integer 弹性业务带宽开关
      */
     public $ElasticServiceBandwidth;
@@ -245,6 +255,8 @@ class BGPInstance extends AbstractModel
      * @param integer $IpCountNewFlag 新版本1ip高防包
      * @param integer $VitalityVersion 攻击封堵套餐标记
      * @param integer $Line 网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FreeServiceBandwidth 不计费的业务带宽
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticServiceBandwidth 弹性业务带宽开关
      * @param integer $GiftServiceBandWidth 赠送的业务带宽
@@ -347,6 +359,10 @@ class BGPInstance extends AbstractModel
 
         if (array_key_exists("Line",$param) and $param["Line"] !== null) {
             $this->Line = $param["Line"];
+        }
+
+        if (array_key_exists("FreeServiceBandwidth",$param) and $param["FreeServiceBandwidth"] !== null) {
+            $this->FreeServiceBandwidth = $param["FreeServiceBandwidth"];
         }
 
         if (array_key_exists("ElasticServiceBandwidth",$param) and $param["ElasticServiceBandwidth"] !== null) {

@@ -120,6 +120,14 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 适用场景2：创建当前企业的自定义角色，并且创建时进行权限的设置（PermissionGroups 参数要传），权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles 的输出。此处注意权限树内容可能会更新，需尽量拉取最新的权限树内容，并且权限树内容 PermissionGroups 必须是一颗完整的权限树。
  * @method Models\ChannelCreateSealPolicyResponse ChannelCreateSealPolicy(Models\ChannelCreateSealPolicyRequest $req) 将指定印章授权给第三方平台子客企业下的某些员工
  * @method Models\ChannelCreateUserAutoSignEnableUrlResponse ChannelCreateUserAutoSignEnableUrl(Models\ChannelCreateUserAutoSignEnableUrlRequest $req) 企业方可以通过此接口获取个人用户开启自动签的跳转链接
+ * @method Models\ChannelCreateUserAutoSignSealUrlResponse ChannelCreateUserAutoSignSealUrl(Models\ChannelCreateUserAutoSignSealUrlRequest $req) 获取设置自动签印章小程序链接。
+
+注意：
+<ul><li>需要<code>企业开通自动签</code>后使用。</li>
+<li>仅支持<code>已经开通了自动签的个人</code>更换自动签印章。</li>
+<li>链接有效期默认7天，<code>最多30天</code>。</li>
+<li>该接口的链接适用于<code>小程序</code>端。</li>
+<li>该接口不会扣除您的合同套餐，暂不参与计费。</li></ul>
  * @method Models\ChannelCreateUserRolesResponse ChannelCreateUserRoles(Models\ChannelCreateUserRolesRequest $req) 通过此接口，绑定员工角色，支持以电子签userId、客户系统userId两种方式调用。
  * @method Models\ChannelCreateWebThemeConfigResponse ChannelCreateWebThemeConfig(Models\ChannelCreateWebThemeConfigRequest $req) 用来创建嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），该接口配合其他所有可嵌入页面接口使用
 创建配置对当前第三方应用全局生效，如果多次调用，会以最后一次的配置为准

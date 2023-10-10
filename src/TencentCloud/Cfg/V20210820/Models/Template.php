@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateSource(integer $TemplateSource) 设置经验来源 0-自建 1-专家推荐
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getApmServiceList() 获取apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApmServiceList(array $ApmServiceList) 设置apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAlarmPolicy() 获取告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmPolicy(array $AlarmPolicy) 设置告警指标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -148,6 +156,18 @@ class Template extends AbstractModel
     public $TemplateSource;
 
     /**
+     * @var array apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApmServiceList;
+
+    /**
+     * @var array 告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmPolicy;
+
+    /**
      * @param integer $TemplateId 经验库ID
      * @param string $TemplateTitle 经验库标题
      * @param string $TemplateDescription 经验库描述
@@ -167,6 +187,10 @@ class Template extends AbstractModel
      * @param array $Tags 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TemplateSource 经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ApmServiceList apm应用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AlarmPolicy 告警指标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +284,19 @@ class Template extends AbstractModel
 
         if (array_key_exists("TemplateSource",$param) and $param["TemplateSource"] !== null) {
             $this->TemplateSource = $param["TemplateSource"];
+        }
+
+        if (array_key_exists("ApmServiceList",$param) and $param["ApmServiceList"] !== null) {
+            $this->ApmServiceList = [];
+            foreach ($param["ApmServiceList"] as $key => $value){
+                $obj = new ApmServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->ApmServiceList, $obj);
+            }
+        }
+
+        if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
+            $this->AlarmPolicy = $param["AlarmPolicy"];
         }
     }
 }

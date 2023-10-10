@@ -1,0 +1,273 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cwp\V20180228\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 主机列表查询接口相应数据HostList的TagList节点
+ *
+ * @method integer getId() 获取策略id
+ * @method void setId(integer $Id) 设置策略id
+ * @method string getUin() 获取操作uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置操作uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取策略名称
+ * @method void setName(string $Name) 设置策略名称
+ * @method string getDescription() 获取策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取开启状态：0关闭，1开启
+ * @method void setStatus(integer $Status) 设置开启状态：0关闭，1开启
+ * @method integer getIsAll() 获取是否对所有主机生效
+ * @method void setIsAll(integer $IsAll) 设置是否对所有主机生效
+ * @method string getIncludeDir() 获取包含目录，用;分隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIncludeDir(string $IncludeDir) 设置包含目录，用;分隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExcludeDir() 获取包含目录，用;分隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExcludeDir(string $ExcludeDir) 设置包含目录，用;分隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBackupType() 获取备份模式： 0按周，1按天
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupType(integer $BackupType) 设置备份模式： 0按周，1按天
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWeekday() 获取备份星期天数（1-7）：1;2;3;4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeekday(string $Weekday) 设置备份星期天数（1-7）：1;2;3;4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHour() 获取备份执行时间点(0-23): 11:00;12:00
+ * @method void setHour(string $Hour) 设置备份执行时间点(0-23): 11:00;12:00
+ * @method integer getSaveDay() 获取保存天数，0永久保存
+ * @method void setSaveDay(integer $SaveDay) 设置保存天数，0永久保存
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifyTime() 获取最近修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyTime(string $ModifyTime) 设置最近修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMachineCount() 获取绑定机器数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineCount(integer $MachineCount) 设置绑定机器数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEventCount() 获取策略关联事件数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventCount(integer $EventCount) 设置策略关联事件数
+注意：此字段可能返回 null，表示取不到有效值。
+ */
+class RansomDefenseStrategyDetail extends AbstractModel
+{
+    /**
+     * @var integer 策略id
+     */
+    public $Id;
+
+    /**
+     * @var string 操作uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uin;
+
+    /**
+     * @var string 策略名称
+     */
+    public $Name;
+
+    /**
+     * @var string 策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
+     * @var integer 开启状态：0关闭，1开启
+     */
+    public $Status;
+
+    /**
+     * @var integer 是否对所有主机生效
+     */
+    public $IsAll;
+
+    /**
+     * @var string 包含目录，用;分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IncludeDir;
+
+    /**
+     * @var string 包含目录，用;分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExcludeDir;
+
+    /**
+     * @var integer 备份模式： 0按周，1按天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupType;
+
+    /**
+     * @var string 备份星期天数（1-7）：1;2;3;4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Weekday;
+
+    /**
+     * @var string 备份执行时间点(0-23): 11:00;12:00
+     */
+    public $Hour;
+
+    /**
+     * @var integer 保存天数，0永久保存
+     */
+    public $SaveDay;
+
+    /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 最近修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyTime;
+
+    /**
+     * @var integer 绑定机器数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineCount;
+
+    /**
+     * @var integer 策略关联事件数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventCount;
+
+    /**
+     * @param integer $Id 策略id
+     * @param string $Uin 操作uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name 策略名称
+     * @param string $Description 策略备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 开启状态：0关闭，1开启
+     * @param integer $IsAll 是否对所有主机生效
+     * @param string $IncludeDir 包含目录，用;分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExcludeDir 包含目录，用;分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BackupType 备份模式： 0按周，1按天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Weekday 备份星期天数（1-7）：1;2;3;4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Hour 备份执行时间点(0-23): 11:00;12:00
+     * @param integer $SaveDay 保存天数，0永久保存
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModifyTime 最近修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MachineCount 绑定机器数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EventCount 策略关联事件数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IsAll",$param) and $param["IsAll"] !== null) {
+            $this->IsAll = $param["IsAll"];
+        }
+
+        if (array_key_exists("IncludeDir",$param) and $param["IncludeDir"] !== null) {
+            $this->IncludeDir = $param["IncludeDir"];
+        }
+
+        if (array_key_exists("ExcludeDir",$param) and $param["ExcludeDir"] !== null) {
+            $this->ExcludeDir = $param["ExcludeDir"];
+        }
+
+        if (array_key_exists("BackupType",$param) and $param["BackupType"] !== null) {
+            $this->BackupType = $param["BackupType"];
+        }
+
+        if (array_key_exists("Weekday",$param) and $param["Weekday"] !== null) {
+            $this->Weekday = $param["Weekday"];
+        }
+
+        if (array_key_exists("Hour",$param) and $param["Hour"] !== null) {
+            $this->Hour = $param["Hour"];
+        }
+
+        if (array_key_exists("SaveDay",$param) and $param["SaveDay"] !== null) {
+            $this->SaveDay = $param["SaveDay"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("MachineCount",$param) and $param["MachineCount"] !== null) {
+            $this->MachineCount = $param["MachineCount"];
+        }
+
+        if (array_key_exists("EventCount",$param) and $param["EventCount"] !== null) {
+            $this->EventCount = $param["EventCount"];
+        }
+    }
+}

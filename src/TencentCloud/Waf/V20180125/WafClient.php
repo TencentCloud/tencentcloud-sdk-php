@@ -69,6 +69,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeDomainCountInfoResponse DescribeDomainCountInfo(Models\DescribeDomainCountInfoRequest $req) 获取域名概况
  * @method Models\DescribeDomainDetailsClbResponse DescribeDomainDetailsClb(Models\DescribeDomainDetailsClbRequest $req) 获取一个clbwaf域名详情
  * @method Models\DescribeDomainDetailsSaasResponse DescribeDomainDetailsSaas(Models\DescribeDomainDetailsSaasRequest $req) 查询单个saaswaf域名详情
+ * @method Models\DescribeDomainRulesResponse DescribeDomainRules(Models\DescribeDomainRulesRequest $req) 拉取域名的防护规则列表
  * @method Models\DescribeDomainVerifyResultResponse DescribeDomainVerifyResult(Models\DescribeDomainVerifyResultRequest $req) 获取添加域名操作的结果
  * @method Models\DescribeDomainWhiteRulesResponse DescribeDomainWhiteRules(Models\DescribeDomainWhiteRulesRequest $req) 获取域名的规则白名单
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查询用户所有域名的详细信息
@@ -90,6 +91,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeUserCdcClbWafRegionsResponse DescribeUserCdcClbWafRegions(Models\DescribeUserCdcClbWafRegionsRequest $req) 在CDC场景下，负载均衡型WAF的添加、编辑域名配置的时候，需要展示CDC负载均衡型WAF（cdc-clb-waf)支持的地域列表，通过DescribeUserCdcClbWafRegions既可以获得当前对客户已经开放的地域列表
  * @method Models\DescribeUserClbWafRegionsResponse DescribeUserClbWafRegions(Models\DescribeUserClbWafRegionsRequest $req) 在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
  * @method Models\DescribeUserDomainInfoResponse DescribeUserDomainInfo(Models\DescribeUserDomainInfoRequest $req) 查询saas和clb的域名信息
+ * @method Models\DescribeUserSignatureRuleResponse DescribeUserSignatureRule(Models\DescribeUserSignatureRuleRequest $req) 获取用户特征规则列表
  * @method Models\DescribeVipInfoResponse DescribeVipInfo(Models\DescribeVipInfoRequest $req) 根据过滤条件查询VIP信息
  * @method Models\DescribeWafAutoDenyRulesResponse DescribeWafAutoDenyRules(Models\DescribeWafAutoDenyRulesRequest $req) 返回ip惩罚规则详细信息
  * @method Models\DescribeWafAutoDenyStatusResponse DescribeWafAutoDenyStatus(Models\DescribeWafAutoDenyStatusRequest $req) 描述WAF自动封禁模块详情
@@ -128,12 +130,16 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 修改实例的名称
  * @method Models\ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimit(Models\ModifyInstanceQpsLimitRequest $req) 设置套餐实例的弹性qps上限
  * @method Models\ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(Models\ModifyInstanceRenewFlagRequest $req) 修改实例的自动续费开关
+ * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) 设置某个domain下基础安全模块的开关
  * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) waf斯巴达-waf开关
  * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) 修改域名配置
  * @method Models\ModifySpartaProtectionModeResponse ModifySpartaProtectionMode(Models\ModifySpartaProtectionModeRequest $req) 设置waf防护状态
+ * @method Models\ModifyUserLevelResponse ModifyUserLevel(Models\ModifyUserLevelRequest $req) 修改用户防护规则等级
+ * @method Models\ModifyUserSignatureRuleResponse ModifyUserSignatureRule(Models\ModifyUserSignatureRuleRequest $req) 修改用户防护规则，开启关闭具体的某条规则
  * @method Models\ModifyWafAutoDenyRulesResponse ModifyWafAutoDenyRules(Models\ModifyWafAutoDenyRulesRequest $req) 修改ip惩罚规则
  * @method Models\ModifyWafAutoDenyStatusResponse ModifyWafAutoDenyStatus(Models\ModifyWafAutoDenyStatusRequest $req) 配置WAF自动封禁模块状态
  * @method Models\ModifyWafThreatenIntelligenceResponse ModifyWafThreatenIntelligence(Models\ModifyWafThreatenIntelligenceRequest $req) 配置WAF威胁情报封禁模块详情
+ * @method Models\ModifyWebshellStatusResponse ModifyWebshellStatus(Models\ModifyWebshellStatusRequest $req) 设置域名的webshell状态。
  * @method Models\PostAttackDownloadTaskResponse PostAttackDownloadTask(Models\PostAttackDownloadTaskRequest $req) 创建搜索下载攻击日志任务，使用CLS新版本的搜索下载getlog接口
  * @method Models\RefreshAccessCheckResultResponse RefreshAccessCheckResult(Models\RefreshAccessCheckResultRequest $req) 刷新接入检查的结果，后台会生成接入检查任务
  * @method Models\SearchAccessLogResponse SearchAccessLog(Models\SearchAccessLogRequest $req) 本接口用于搜索WAF访问日志

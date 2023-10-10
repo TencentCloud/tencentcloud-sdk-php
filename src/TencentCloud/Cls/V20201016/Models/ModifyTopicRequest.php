@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
  * @method void setHotPeriod(integer $HotPeriod) 设置0：关闭日志沉降。
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
- * @method boolean getIsWebTracking() 获取webtracking开关； false: 关闭 true: 开启
- * @method void setIsWebTracking(boolean $IsWebTracking) 设置webtracking开关； false: 关闭 true: 开启
+ * @method boolean getIsWebTracking() 获取免鉴权开关； false: 关闭 true: 开启
+ * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关； false: 关闭 true: 开启
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -92,7 +92,7 @@ class ModifyTopicRequest extends AbstractModel
     public $HotPeriod;
 
     /**
-     * @var boolean webtracking开关； false: 关闭 true: 开启
+     * @var boolean 免鉴权开关； false: 关闭 true: 开启
      */
     public $IsWebTracking;
 
@@ -107,7 +107,7 @@ class ModifyTopicRequest extends AbstractModel
      * @param string $Describes 日志主题描述
      * @param integer $HotPeriod 0：关闭日志沉降。
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
-     * @param boolean $IsWebTracking webtracking开关； false: 关闭 true: 开启
+     * @param boolean $IsWebTracking 免鉴权开关； false: 关闭 true: 开启
      */
     function __construct()
     {

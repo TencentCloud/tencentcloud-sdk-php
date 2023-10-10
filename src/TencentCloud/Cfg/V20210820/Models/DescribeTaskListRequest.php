@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签对
  * @method array getFilters() 获取筛选条件
  * @method void setFilters(array $Filters) 设置筛选条件
+ * @method array getTaskId() 获取演练ID
+ * @method void setTaskId(array $TaskId) 设置演练ID
+ * @method array getApplicationId() 获取关联应用ID筛选
+ * @method void setApplicationId(array $ApplicationId) 设置关联应用ID筛选
+ * @method array getApplicationName() 获取关联应用筛选
+ * @method void setApplicationName(array $ApplicationName) 设置关联应用筛选
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class DescribeTaskListRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var array 演练ID
+     */
+    public $TaskId;
+
+    /**
+     * @var array 关联应用ID筛选
+     */
+    public $ApplicationId;
+
+    /**
+     * @var array 关联应用筛选
+     */
+    public $ApplicationName;
+
+    /**
      * @param integer $Limit 分页Limit
      * @param integer $Offset 分页Offset
      * @param string $TaskTitle 演练名称
@@ -96,6 +117,9 @@ class DescribeTaskListRequest extends AbstractModel
      * @param string $TaskEndTime 结束时间，固定格式%Y-%m-%d %H:%M:%S
      * @param array $Tags 标签对
      * @param array $Filters 筛选条件
+     * @param array $TaskId 演练ID
+     * @param array $ApplicationId 关联应用ID筛选
+     * @param array $ApplicationName 关联应用筛选
      */
     function __construct()
     {
@@ -154,6 +178,18 @@ class DescribeTaskListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Tat\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpgradeDataEngineImage请求参数结构体
+ * DescribeQuotas请求参数结构体
  *
- * @method string getDataEngineId() 获取引擎ID
- * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
+ * @method array getResourceNames() 获取资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
+ * @method void setResourceNames(array $ResourceNames) 设置资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
  */
-class UpgradeDataEngineImageRequest extends AbstractModel
+class DescribeQuotasRequest extends AbstractModel
 {
     /**
-     * @var string 引擎ID
+     * @var array 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
      */
-    public $DataEngineId;
+    public $ResourceNames;
 
     /**
-     * @param string $DataEngineId 引擎ID
+     * @param array $ResourceNames 资源名称，目前有"COMMAND","REGISTER_CODE" 这两个指标
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class UpgradeDataEngineImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
-            $this->DataEngineId = $param["DataEngineId"];
+        if (array_key_exists("ResourceNames",$param) and $param["ResourceNames"] !== null) {
+            $this->ResourceNames = $param["ResourceNames"];
         }
     }
 }

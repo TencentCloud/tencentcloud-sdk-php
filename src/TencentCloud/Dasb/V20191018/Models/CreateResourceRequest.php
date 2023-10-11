@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Dasb\V20191018\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpgradeDataEngineImage请求参数结构体
+ * CreateResource请求参数结构体
  *
- * @method string getDataEngineId() 获取引擎ID
- * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
+ * @method string getVpcId() 获取部署堡垒机的VpcId
+ * @method void setVpcId(string $VpcId) 设置部署堡垒机的VpcId
+ * @method string getSubnetId() 获取部署堡垒机的SubnetId
+ * @method void setSubnetId(string $SubnetId) 设置部署堡垒机的SubnetId
  */
-class UpgradeDataEngineImageRequest extends AbstractModel
+class CreateResourceRequest extends AbstractModel
 {
     /**
-     * @var string 引擎ID
+     * @var string 部署堡垒机的VpcId
      */
-    public $DataEngineId;
+    public $VpcId;
 
     /**
-     * @param string $DataEngineId 引擎ID
+     * @var string 部署堡垒机的SubnetId
+     */
+    public $SubnetId;
+
+    /**
+     * @param string $VpcId 部署堡垒机的VpcId
+     * @param string $SubnetId 部署堡垒机的SubnetId
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class UpgradeDataEngineImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
-            $this->DataEngineId = $param["DataEngineId"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

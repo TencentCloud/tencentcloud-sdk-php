@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestartDataEngine请求参数结构体
  *
-
+ * @method string getDataEngineId() 获取引擎ID
+ * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
+ * @method boolean getForcedOperation() 获取是否强制重启，忽略任务
+ * @method void setForcedOperation(boolean $ForcedOperation) 设置是否强制重启，忽略任务
  */
 class RestartDataEngineRequest extends AbstractModel
 {
-
+    /**
+     * @var string 引擎ID
+     */
+    public $DataEngineId;
 
     /**
+     * @var boolean 是否强制重启，忽略任务
+     */
+    public $ForcedOperation;
 
+    /**
+     * @param string $DataEngineId 引擎ID
+     * @param boolean $ForcedOperation 是否强制重启，忽略任务
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class RestartDataEngineRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
+            $this->DataEngineId = $param["DataEngineId"];
+        }
 
+        if (array_key_exists("ForcedOperation",$param) and $param["ForcedOperation"] !== null) {
+            $this->ForcedOperation = $param["ForcedOperation"];
+        }
     }
 }

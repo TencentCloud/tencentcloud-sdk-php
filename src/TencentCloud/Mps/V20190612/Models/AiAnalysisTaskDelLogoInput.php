@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpgradeDataEngineImage请求参数结构体
+ * 智能去水印任务输入类型
  *
- * @method string getDataEngineId() 获取引擎ID
- * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
+ * @method integer getDefinition() 获取视频智能去水印模板 ID。
+ * @method void setDefinition(integer $Definition) 设置视频智能去水印模板 ID。
  */
-class UpgradeDataEngineImageRequest extends AbstractModel
+class AiAnalysisTaskDelLogoInput extends AbstractModel
 {
     /**
-     * @var string 引擎ID
+     * @var integer 视频智能去水印模板 ID。
      */
-    public $DataEngineId;
+    public $Definition;
 
     /**
-     * @param string $DataEngineId 引擎ID
+     * @param integer $Definition 视频智能去水印模板 ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class UpgradeDataEngineImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
-            $this->DataEngineId = $param["DataEngineId"];
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
     }
 }

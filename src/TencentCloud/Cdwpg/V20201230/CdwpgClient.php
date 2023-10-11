@@ -24,6 +24,7 @@ use TencentCloud\Cdwpg\V20201230\Models as Models;
 
 /**
  * @method Models\CreateInstanceByApiResponse CreateInstanceByApi(Models\CreateInstanceByApiRequest $req) 创建集群
+ * @method Models\DescribeSimpleInstancesResponse DescribeSimpleInstances(Models\DescribeSimpleInstancesRequest $req) 获取集群实例列表
  * @method Models\DestroyInstanceByApiResponse DestroyInstanceByApi(Models\DestroyInstanceByApiRequest $req) 销毁集群
  */
 

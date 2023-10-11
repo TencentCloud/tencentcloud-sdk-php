@@ -14,33 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Tat\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeUserDataEngineConfig返回参数结构体
+ * DescribeQuotas返回参数结构体
  *
- * @method array getDataEngineConfigInstanceInfos() 获取用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataEngineConfigInstanceInfos(array $DataEngineConfigInstanceInfos) 设置用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取配置项总数。
- * @method void setTotalCount(integer $TotalCount) 设置配置项总数。
+ * @method array getGeneralResourceQuotaSet() 获取资源额度列表
+ * @method void setGeneralResourceQuotaSet(array $GeneralResourceQuotaSet) 设置资源额度列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeUserDataEngineConfigResponse extends AbstractModel
+class DescribeQuotasResponse extends AbstractModel
 {
     /**
-     * @var array 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 资源额度列表
      */
-    public $DataEngineConfigInstanceInfos;
-
-    /**
-     * @var integer 配置项总数。
-     */
-    public $TotalCount;
+    public $GeneralResourceQuotaSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +38,7 @@ class DescribeUserDataEngineConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DataEngineConfigInstanceInfos 用户引擎自定义配置项列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 配置项总数。
+     * @param array $GeneralResourceQuotaSet 资源额度列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +54,13 @@ class DescribeUserDataEngineConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataEngineConfigInstanceInfos",$param) and $param["DataEngineConfigInstanceInfos"] !== null) {
-            $this->DataEngineConfigInstanceInfos = [];
-            foreach ($param["DataEngineConfigInstanceInfos"] as $key => $value){
-                $obj = new DataEngineConfigInstanceInfo();
+        if (array_key_exists("GeneralResourceQuotaSet",$param) and $param["GeneralResourceQuotaSet"] !== null) {
+            $this->GeneralResourceQuotaSet = [];
+            foreach ($param["GeneralResourceQuotaSet"] as $key => $value){
+                $obj = new GeneralResourceQuotaSet();
                 $obj->deserialize($value);
-                array_push($this->DataEngineConfigInstanceInfos, $obj);
+                array_push($this->GeneralResourceQuotaSet, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

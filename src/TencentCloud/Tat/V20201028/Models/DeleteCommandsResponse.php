@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Tat\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpgradeDataEngineImage请求参数结构体
+ * DeleteCommands返回参数结构体
  *
- * @method string getDataEngineId() 获取引擎ID
- * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class UpgradeDataEngineImageRequest extends AbstractModel
+class DeleteCommandsResponse extends AbstractModel
 {
     /**
-     * @var string 引擎ID
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $DataEngineId;
+    public $RequestId;
 
     /**
-     * @param string $DataEngineId 引擎ID
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class UpgradeDataEngineImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
-            $this->DataEngineId = $param["DataEngineId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

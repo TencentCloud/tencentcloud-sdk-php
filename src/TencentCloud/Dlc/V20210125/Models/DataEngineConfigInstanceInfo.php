@@ -18,36 +18,40 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpdateUserDataEngineConfig请求参数结构体
+ * 引擎配置信息
  *
  * @method string getDataEngineId() 获取引擎ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
- * @method array getDataEngineConfigPairs() 获取引擎配置项
- * @method void setDataEngineConfigPairs(array $DataEngineConfigPairs) 设置引擎配置项
- * @method SessionResourceTemplate getSessionResourceTemplate() 获取作业引擎资源配置模版
- * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置作业引擎资源配置模版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDataEngineConfigPairs() 获取用户自定义配置项集合
+ * @method void setDataEngineConfigPairs(array $DataEngineConfigPairs) 设置用户自定义配置项集合
+ * @method SessionResourceTemplate getSessionResourceTemplate() 获取作业集群资源参数配置模版
+ * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置作业集群资源参数配置模版
  */
-class UpdateUserDataEngineConfigRequest extends AbstractModel
+class DataEngineConfigInstanceInfo extends AbstractModel
 {
     /**
      * @var string 引擎ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineId;
 
     /**
-     * @var array 引擎配置项
+     * @var array 用户自定义配置项集合
      */
     public $DataEngineConfigPairs;
 
     /**
-     * @var SessionResourceTemplate 作业引擎资源配置模版
+     * @var SessionResourceTemplate 作业集群资源参数配置模版
      */
     public $SessionResourceTemplate;
 
     /**
      * @param string $DataEngineId 引擎ID
-     * @param array $DataEngineConfigPairs 引擎配置项
-     * @param SessionResourceTemplate $SessionResourceTemplate 作业引擎资源配置模版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DataEngineConfigPairs 用户自定义配置项集合
+     * @param SessionResourceTemplate $SessionResourceTemplate 作业集群资源参数配置模版
      */
     function __construct()
     {

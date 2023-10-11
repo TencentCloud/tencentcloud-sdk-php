@@ -76,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceSetting(ServiceSetting $ServiceSetting) 设置容器部署组的网络设置。
  * @method boolean getDeployAgent() 获取是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
  * @method void setDeployAgent(boolean $DeployAgent) 设置是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
- * @method SchedulingStrategy getSchedulingStrategy() 获取节点调度策略。若不指定改参数，则默认不使用节点调度策略。
- * @method void setSchedulingStrategy(SchedulingStrategy $SchedulingStrategy) 设置节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+ * @method SchedulingStrategy getSchedulingStrategy() 获取节点调度策略。若不指定该参数，则默认不使用节点调度策略。
+ * @method void setSchedulingStrategy(SchedulingStrategy $SchedulingStrategy) 设置节点调度策略。若不指定该参数，则默认不使用节点调度策略。
  * @method boolean getIncrementalDeployment() 获取是否进行增量部署，默认为false，全量更新
  * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置是否进行增量部署，默认为false，全量更新
  * @method string getRepoType() 获取tcr或者不填
@@ -240,7 +240,7 @@ class DeployContainerGroupRequest extends AbstractModel
     public $DeployAgent;
 
     /**
-     * @var SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     * @var SchedulingStrategy 节点调度策略。若不指定该参数，则默认不使用节点调度策略。
      */
     public $SchedulingStrategy;
 
@@ -318,7 +318,7 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param array $Envs 部署组应用运行的环境变量。若不指定该参数，则默认不设置额外的环境变量。
      * @param ServiceSetting $ServiceSetting 容器部署组的网络设置。
      * @param boolean $DeployAgent 是否部署 agent 容器。若不指定该参数，则默认不部署 agent 容器。
-     * @param SchedulingStrategy $SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
+     * @param SchedulingStrategy $SchedulingStrategy 节点调度策略。若不指定该参数，则默认不使用节点调度策略。
      * @param boolean $IncrementalDeployment 是否进行增量部署，默认为false，全量更新
      * @param string $RepoType tcr或者不填
      * @param VolumeInfo $VolumeInfos 数据卷信息-废弃，请用VolumeInfoList参数

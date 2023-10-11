@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则引擎带有状态码的动作
  *
- * @method string getAction() 获取功能名称，功能名称填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。
- * @method void setAction(string $Action) 设置功能名称，功能名称填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。
+ * @method string getAction() 获取功能名称，功能名称填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。
+ * @method void setAction(string $Action) 设置功能名称，功能名称填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。
  * @method array getParameters() 获取操作参数。
  * @method void setParameters(array $Parameters) 设置操作参数。
  */
 class CodeAction extends AbstractModel
 {
     /**
-     * @var string 功能名称，功能名称填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。
+     * @var string 功能名称，功能名称填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。
      */
     public $Action;
 
@@ -38,7 +38,7 @@ class CodeAction extends AbstractModel
     public $Parameters;
 
     /**
-     * @param string $Action 功能名称，功能名称填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。
+     * @param string $Action 功能名称，功能名称填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。
      * @param array $Parameters 操作参数。
      */
     function __construct()

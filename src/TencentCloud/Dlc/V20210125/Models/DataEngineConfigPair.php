@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 引擎配置
  *
-
+ * @method string getConfigItem() 获取配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigItem(string $ConfigItem) 设置配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConfigValue() 获取配置值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigValue(string $ConfigValue) 设置配置值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineConfigPair extends AbstractModel
 {
-
+    /**
+     * @var string 配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigItem;
 
     /**
+     * @var string 配置值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigValue;
 
+    /**
+     * @param string $ConfigItem 配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConfigValue 配置值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +62,12 @@ class DataEngineConfigPair extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ConfigItem",$param) and $param["ConfigItem"] !== null) {
+            $this->ConfigItem = $param["ConfigItem"];
+        }
 
+        if (array_key_exists("ConfigValue",$param) and $param["ConfigValue"] !== null) {
+            $this->ConfigValue = $param["ConfigValue"];
+        }
     }
 }

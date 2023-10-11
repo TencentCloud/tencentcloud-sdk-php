@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 规则引擎条件常规动作参数
  *
- * @method string getName() 获取参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。
- * @method void setName(string $Name) 设置参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。
+ * @method string getName() 获取参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。
+ * @method void setName(string $Name) 设置参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。
  * @method array getValues() 获取参数值。
  * @method void setValues(array $Values) 设置参数值。
  */
 class RuleNormalActionParams extends AbstractModel
 {
     /**
-     * @var string 参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。
+     * @var string 参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class RuleNormalActionParams extends AbstractModel
     public $Values;
 
     /**
-     * @param string $Name 参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://tcloud4api.woa.com/document/product/1657/79433?!preview&!document=1) 查看。
+     * @param string $Name 参数名称，参数填写规范可调用接口 [查询规则引擎的设置参数](https://cloud.tencent.com/document/product/1552/80618) 查看。
      * @param array $Values 参数值。
      */
     function __construct()

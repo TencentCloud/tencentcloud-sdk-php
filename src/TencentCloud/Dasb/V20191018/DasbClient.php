@@ -33,6 +33,7 @@ use TencentCloud\Dasb\V20191018\Models as Models;
  * @method Models\CreateCmdTemplateResponse CreateCmdTemplate(Models\CreateCmdTemplateRequest $req) 新建高危命令模板
  * @method Models\CreateDeviceAccountResponse CreateDeviceAccount(Models\CreateDeviceAccountRequest $req) 新建主机账号
  * @method Models\CreateDeviceGroupResponse CreateDeviceGroup(Models\CreateDeviceGroupRequest $req) 新建资产组
+ * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建堡垒机实例
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 新建用户
  * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 新建用户组
  * @method Models\DeleteAclsResponse DeleteAcls(Models\DeleteAclsRequest $req) 删除访问权限
@@ -64,6 +65,7 @@ use TencentCloud\Dasb\V20191018\Models as Models;
  * @method Models\ModifyCmdTemplateResponse ModifyCmdTemplate(Models\ModifyCmdTemplateRequest $req) 修改高危命令模板
  * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 修改资产信息
  * @method Models\ModifyDeviceGroupResponse ModifyDeviceGroup(Models\ModifyDeviceGroupRequest $req) 修改资产组
+ * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 资源变配
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ResetDeviceAccountPasswordResponse ResetDeviceAccountPassword(Models\ResetDeviceAccountPasswordRequest $req) 清除设备账号绑定密码
  * @method Models\ResetDeviceAccountPrivateKeyResponse ResetDeviceAccountPrivateKey(Models\ResetDeviceAccountPrivateKeyRequest $req) 清除设备账号绑定的密钥

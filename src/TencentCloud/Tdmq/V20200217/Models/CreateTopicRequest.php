@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
  * @method string getTopicName() 获取主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
  * @method void setTopicName(string $TopicName) 设置主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
- * @method integer getPartitions() 获取入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
- * @method void setPartitions(integer $Partitions) 设置入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
+ * @method integer getPartitions() 获取入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
+ * @method void setPartitions(integer $Partitions) 设置入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
  * @method string getClusterId() 获取Pulsar 集群的ID
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method string getRemark() 获取备注，128字符以内。
@@ -68,7 +68,7 @@ class CreateTopicRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
+     * @var integer 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
      */
     public $Partitions;
 
@@ -109,7 +109,7 @@ class CreateTopicRequest extends AbstractModel
     /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
-     * @param integer $Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
+     * @param integer $Partitions 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过32。
      * @param string $ClusterId Pulsar 集群的ID
      * @param string $Remark 备注，128字符以内。
      * @param integer $TopicType 该入参将逐步弃用，可切换至PulsarTopicType参数

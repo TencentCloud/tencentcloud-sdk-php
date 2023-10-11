@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RollbackDataEngineImage请求参数结构体
  *
-
+ * @method string getDataEngineId() 获取引擎ID
+ * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
+ * @method string getFromRecordId() 获取检查是否能回滚的接口返回的FromRecordId参数
+ * @method void setFromRecordId(string $FromRecordId) 设置检查是否能回滚的接口返回的FromRecordId参数
+ * @method string getToRecordId() 获取检查是否能回滚的接口返回的ToRecordId参数
+ * @method void setToRecordId(string $ToRecordId) 设置检查是否能回滚的接口返回的ToRecordId参数
  */
 class RollbackDataEngineImageRequest extends AbstractModel
 {
-
+    /**
+     * @var string 引擎ID
+     */
+    public $DataEngineId;
 
     /**
+     * @var string 检查是否能回滚的接口返回的FromRecordId参数
+     */
+    public $FromRecordId;
 
+    /**
+     * @var string 检查是否能回滚的接口返回的ToRecordId参数
+     */
+    public $ToRecordId;
+
+    /**
+     * @param string $DataEngineId 引擎ID
+     * @param string $FromRecordId 检查是否能回滚的接口返回的FromRecordId参数
+     * @param string $ToRecordId 检查是否能回滚的接口返回的ToRecordId参数
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class RollbackDataEngineImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
+            $this->DataEngineId = $param["DataEngineId"];
+        }
 
+        if (array_key_exists("FromRecordId",$param) and $param["FromRecordId"] !== null) {
+            $this->FromRecordId = $param["FromRecordId"];
+        }
+
+        if (array_key_exists("ToRecordId",$param) and $param["ToRecordId"] !== null) {
+            $this->ToRecordId = $param["ToRecordId"];
+        }
     }
 }

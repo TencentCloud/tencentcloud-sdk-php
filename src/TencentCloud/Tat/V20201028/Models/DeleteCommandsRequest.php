@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Tat\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpgradeDataEngineImage请求参数结构体
+ * DeleteCommands请求参数结构体
  *
- * @method string getDataEngineId() 获取引擎ID
- * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
+ * @method array getCommandIds() 获取待删除命令id
+ * @method void setCommandIds(array $CommandIds) 设置待删除命令id
  */
-class UpgradeDataEngineImageRequest extends AbstractModel
+class DeleteCommandsRequest extends AbstractModel
 {
     /**
-     * @var string 引擎ID
+     * @var array 待删除命令id
      */
-    public $DataEngineId;
+    public $CommandIds;
 
     /**
-     * @param string $DataEngineId 引擎ID
+     * @param array $CommandIds 待删除命令id
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class UpgradeDataEngineImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
-            $this->DataEngineId = $param["DataEngineId"];
+        if (array_key_exists("CommandIds",$param) and $param["CommandIds"] !== null) {
+            $this->CommandIds = $param["CommandIds"];
         }
     }
 }

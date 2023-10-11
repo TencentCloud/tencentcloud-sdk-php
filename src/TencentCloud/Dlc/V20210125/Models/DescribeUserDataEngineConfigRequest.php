@@ -20,14 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserDataEngineConfig请求参数结构体
  *
-
+ * @method string getSorting() 获取排序方式，desc表示倒序，asc表示正序
+ * @method void setSorting(string $Sorting) 设置排序方式，desc表示倒序，asc表示正序
+ * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method string getSortBy() 获取排序字段，支持如下字段类型，create-time
+ * @method void setSortBy(string $SortBy) 设置排序字段，支持如下字段类型，create-time
+ * @method array getFilters() 获取过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,每种过滤参数支持的过滤值不超过5个。
+app-id - String - （appid过滤）
+engine-id - String - （引擎ID过滤）
+ * @method void setFilters(array $Filters) 设置过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,每种过滤参数支持的过滤值不超过5个。
+app-id - String - （appid过滤）
+engine-id - String - （引擎ID过滤）
  */
 class DescribeUserDataEngineConfigRequest extends AbstractModel
 {
-
+    /**
+     * @var string 排序方式，desc表示倒序，asc表示正序
+     */
+    public $Sorting;
 
     /**
+     * @var integer 返回数量，默认为10，最大值为100。
+     */
+    public $Limit;
 
+    /**
+     * @var integer 偏移量，默认为0。
+     */
+    public $Offset;
+
+    /**
+     * @var string 排序字段，支持如下字段类型，create-time
+     */
+    public $SortBy;
+
+    /**
+     * @var array 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,每种过滤参数支持的过滤值不超过5个。
+app-id - String - （appid过滤）
+engine-id - String - （引擎ID过滤）
+     */
+    public $Filters;
+
+    /**
+     * @param string $Sorting 排序方式，desc表示倒序，asc表示正序
+     * @param integer $Limit 返回数量，默认为10，最大值为100。
+     * @param integer $Offset 偏移量，默认为0。
+     * @param string $SortBy 排序字段，支持如下字段类型，create-time
+     * @param array $Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,每种过滤参数支持的过滤值不超过5个。
+app-id - String - （appid过滤）
+engine-id - String - （引擎ID过滤）
      */
     function __construct()
     {
@@ -42,6 +86,29 @@ class DescribeUserDataEngineConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Sorting",$param) and $param["Sorting"] !== null) {
+            $this->Sorting = $param["Sorting"];
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SortBy",$param) and $param["SortBy"] !== null) {
+            $this->SortBy = $param["SortBy"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

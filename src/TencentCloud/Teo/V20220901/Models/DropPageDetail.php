@@ -20,54 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 拦截页面的配置信息
  *
- * @method integer getPageId() 获取拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
- * @method void setPageId(integer $PageId) 设置拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
- * @method integer getStatusCode() 获取拦截页面的HTTP状态码。状态码范围是100-600。
- * @method void setStatusCode(integer $StatusCode) 设置拦截页面的HTTP状态码。状态码范围是100-600。
- * @method string getName() 获取页面文件名或url。
- * @method void setName(string $Name) 设置页面文件名或url。
+ * @method integer getPageId() 获取拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
+ * @method void setPageId(integer $PageId) 设置拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
+ * @method integer getStatusCode() 获取拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
+ * @method void setStatusCode(integer $StatusCode) 设置拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
+ * @method string getName() 获取页面文件名或 url。
+ * @method void setName(string $Name) 设置页面文件名或 url。
  * @method string getType() 获取页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li>
+<li>page：指定页面。</li>
+
  * @method void setType(string $Type) 设置页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li>
+<li>page：指定页面。</li>
+
+ * @method string getCustomResponseId() 获取自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
+ * @method void setCustomResponseId(string $CustomResponseId) 设置自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
  */
 class DropPageDetail extends AbstractModel
 {
     /**
-     * @var integer 拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
+     * @var integer 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
      */
     public $PageId;
 
     /**
-     * @var integer 拦截页面的HTTP状态码。状态码范围是100-600。
+     * @var integer 拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
      */
     public $StatusCode;
 
     /**
-     * @var string 页面文件名或url。
+     * @var string 页面文件名或 url。
      */
     public $Name;
 
     /**
      * @var string 页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li>
+<li>page：指定页面。</li>
+
      */
     public $Type;
 
     /**
-     * @param integer $PageId 拦截页面的唯一Id。系统默认包含一个自带拦截页面，Id值为0。
-该Id可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。
-     * @param integer $StatusCode 拦截页面的HTTP状态码。状态码范围是100-600。
-     * @param string $Name 页面文件名或url。
+     * @var string 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
+     */
+    public $CustomResponseId;
+
+    /**
+     * @param integer $PageId 拦截页面的唯一 Id。系统默认包含一个自带拦截页面，Id 值为0。
+该 Id 可通过创建拦截页面接口进行上传获取。如传入0，代表使用系统默认拦截页面。该参数已废弃。
+     * @param integer $StatusCode 拦截页面的 HTTP 状态码。状态码取值：100～600，不支持 3xx 状态码。托管规则拦截页面默认：566，安全防护（除托管规则外）拦截页面默认：567.
+     * @param string $Name 页面文件名或 url。
      * @param string $Type 页面的类型，取值有：
-<li> file：页面文件内容；</li>
-<li> url：上传的url地址。</li>
+<li>page：指定页面。</li>
+
+     * @param string $CustomResponseId 自定义响应 Id。该 Id 可通过查询自定义错误页列表接口获取。默认值为default，使用系统默认页面。Type 类型是 page 时必填，且不能为空。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DropPageDetail extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("CustomResponseId",$param) and $param["CustomResponseId"] !== null) {
+            $this->CustomResponseId = $param["CustomResponseId"];
         }
     }
 }

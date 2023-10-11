@@ -20,17 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowApprovers返回参数结构体
  *
+ * @method array getFillError() 获取批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFillError(array $FillError) 设置批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateFlowApproversResponse extends AbstractModel
 {
     /**
+     * @var array 批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FillError;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $FillError 批量补充签署人时，补充失败的报错说明
+
+注:`目前仅补充动态签署人时会返回补充失败的原因`
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +66,15 @@ class CreateFlowApproversResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FillError",$param) and $param["FillError"] !== null) {
+            $this->FillError = [];
+            foreach ($param["FillError"] as $key => $value){
+                $obj = new FillError();
+                $obj->deserialize($value);
+                array_push($this->FillError, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -32,6 +32,7 @@ use TencentCloud\Tat\V20201028\Models as Models;
  * @method Models\CreateRegisterCodeResponse CreateRegisterCode(Models\CreateRegisterCodeRequest $req) 接口用于创建注册码。
  * @method Models\DeleteCommandResponse DeleteCommand(Models\DeleteCommandRequest $req) 此接口用于删除命令。
 如果命令与执行器关联，则无法被删除。
+ * @method Models\DeleteCommandsResponse DeleteCommands(Models\DeleteCommandsRequest $req) 批量删除命令接口
  * @method Models\DeleteInvokerResponse DeleteInvoker(Models\DeleteInvokerRequest $req) 此接口用于删除执行器。
  * @method Models\DeleteRegisterCodesResponse DeleteRegisterCodes(Models\DeleteRegisterCodesRequest $req) 此接口用于批量删除注册码。
  * @method Models\DeleteRegisterInstanceResponse DeleteRegisterInstance(Models\DeleteRegisterInstanceRequest $req) 接口用于删除托管实例。
@@ -41,6 +42,7 @@ use TencentCloud\Tat\V20201028\Models as Models;
  * @method Models\DescribeInvocationsResponse DescribeInvocations(Models\DescribeInvocationsRequest $req) 此接口用于查询执行活动详情。
  * @method Models\DescribeInvokerRecordsResponse DescribeInvokerRecords(Models\DescribeInvokerRecordsRequest $req) 此接口用于查询执行器的执行记录。
  * @method Models\DescribeInvokersResponse DescribeInvokers(Models\DescribeInvokersRequest $req) 此接口用于查询执行器信息。
+ * @method Models\DescribeQuotasResponse DescribeQuotas(Models\DescribeQuotasRequest $req) 此接口用于获取配额信息
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 此接口用于查询 TAT 产品后台地域列表。
 RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；未返回，代表该地域的 TAT 后台服务尚不可用。
  * @method Models\DescribeRegisterCodesResponse DescribeRegisterCodes(Models\DescribeRegisterCodesRequest $req) 接口用于查询注册码信息。

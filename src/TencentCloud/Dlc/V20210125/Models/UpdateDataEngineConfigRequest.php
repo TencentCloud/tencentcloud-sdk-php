@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateDataEngineConfig请求参数结构体
  *
-
+ * @method array getDataEngineIds() 获取引擎ID
+ * @method void setDataEngineIds(array $DataEngineIds) 设置引擎ID
+ * @method string getDataEngineConfigCommand() 获取引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+ * @method void setDataEngineConfigCommand(string $DataEngineConfigCommand) 设置引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
  */
 class UpdateDataEngineConfigRequest extends AbstractModel
 {
-
+    /**
+     * @var array 引擎ID
+     */
+    public $DataEngineIds;
 
     /**
+     * @var string 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+     */
+    public $DataEngineConfigCommand;
 
+    /**
+     * @param array $DataEngineIds 引擎ID
+     * @param string $DataEngineConfigCommand 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class UpdateDataEngineConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DataEngineIds",$param) and $param["DataEngineIds"] !== null) {
+            $this->DataEngineIds = $param["DataEngineIds"];
+        }
 
+        if (array_key_exists("DataEngineConfigCommand",$param) and $param["DataEngineConfigCommand"] !== null) {
+            $this->DataEngineConfigCommand = $param["DataEngineConfigCommand"];
+        }
     }
 }

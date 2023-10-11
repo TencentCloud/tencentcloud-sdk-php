@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchDataEngineImage请求参数结构体
  *
-
+ * @method string getDataEngineId() 获取引擎ID
+ * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
+ * @method string getNewImageVersionId() 获取新镜像版本ID
+ * @method void setNewImageVersionId(string $NewImageVersionId) 设置新镜像版本ID
  */
 class SwitchDataEngineImageRequest extends AbstractModel
 {
-
+    /**
+     * @var string 引擎ID
+     */
+    public $DataEngineId;
 
     /**
+     * @var string 新镜像版本ID
+     */
+    public $NewImageVersionId;
 
+    /**
+     * @param string $DataEngineId 引擎ID
+     * @param string $NewImageVersionId 新镜像版本ID
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class SwitchDataEngineImageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
+            $this->DataEngineId = $param["DataEngineId"];
+        }
 
+        if (array_key_exists("NewImageVersionId",$param) and $param["NewImageVersionId"] !== null) {
+            $this->NewImageVersionId = $param["NewImageVersionId"];
+        }
     }
 }

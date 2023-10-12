@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceName() 获取实例名
  * @method void setInstanceName(string $InstanceName) 设置实例名
- * @method string getVpcId() 获取VPC ID
- * @method void setVpcId(string $VpcId) 设置VPC ID
- * @method array getSubnetIds() 获取子网 ID 数组
- * @method void setSubnetIds(array $SubnetIds) 设置子网 ID 数组
+ * @method string getVpcId() 获取VPC ID (私有网络 ID)
+ * @method void setVpcId(string $VpcId) 设置VPC ID (私有网络 ID)
+ * @method array getSubnetIds() 获取子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+ * @method void setSubnetIds(array $SubnetIds) 设置子网 ID 数组(VPC ID下的子网 ID，只取第一个)
  * @method boolean getEnableInternet() 获取是否启用外网
  * @method void setEnableInternet(boolean $EnableInternet) 设置是否启用外网
- * @method string getGrafanaInitPassword() 获取Grafana 初始密码
- * @method void setGrafanaInitPassword(string $GrafanaInitPassword) 设置Grafana 初始密码
+ * @method string getGrafanaInitPassword() 获取Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
+ * @method void setGrafanaInitPassword(string $GrafanaInitPassword) 设置Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
  * @method array getTagSpecification() 获取标签
  * @method void setTagSpecification(array $TagSpecification) 设置标签
  */
@@ -41,12 +41,12 @@ class CreateGrafanaInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string VPC ID
+     * @var string VPC ID (私有网络 ID)
      */
     public $VpcId;
 
     /**
-     * @var array 子网 ID 数组
+     * @var array 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
      */
     public $SubnetIds;
 
@@ -56,7 +56,7 @@ class CreateGrafanaInstanceRequest extends AbstractModel
     public $EnableInternet;
 
     /**
-     * @var string Grafana 初始密码
+     * @var string Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
      */
     public $GrafanaInitPassword;
 
@@ -67,10 +67,10 @@ class CreateGrafanaInstanceRequest extends AbstractModel
 
     /**
      * @param string $InstanceName 实例名
-     * @param string $VpcId VPC ID
-     * @param array $SubnetIds 子网 ID 数组
+     * @param string $VpcId VPC ID (私有网络 ID)
+     * @param array $SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
      * @param boolean $EnableInternet 是否启用外网
-     * @param string $GrafanaInitPassword Grafana 初始密码
+     * @param string $GrafanaInitPassword Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
      * @param array $TagSpecification 标签
      */
     function __construct()

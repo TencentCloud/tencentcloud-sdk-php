@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefault(string $Default) 设置字段默认值
  * @method boolean getNotNull() 获取字段是否是非空
  * @method void setNotNull(boolean $NotNull) 设置字段是否是非空
+ * @method integer getPrecision() 获取表示整个 numeric 的长度,取值1-38
+ * @method void setPrecision(integer $Precision) 设置表示整个 numeric 的长度,取值1-38
+ * @method integer getScale() 获取表示小数部分的长度
+Scale小于Precision
+ * @method void setScale(integer $Scale) 设置表示小数部分的长度
+Scale小于Precision
  */
 class TColumn extends AbstractModel
 {
@@ -59,11 +65,25 @@ class TColumn extends AbstractModel
     public $NotNull;
 
     /**
+     * @var integer 表示整个 numeric 的长度,取值1-38
+     */
+    public $Precision;
+
+    /**
+     * @var integer 表示小数部分的长度
+Scale小于Precision
+     */
+    public $Scale;
+
+    /**
      * @param string $Name 字段名称
      * @param string $Type 字段类型
      * @param string $Comment 字段描述
      * @param string $Default 字段默认值
      * @param boolean $NotNull 字段是否是非空
+     * @param integer $Precision 表示整个 numeric 的长度,取值1-38
+     * @param integer $Scale 表示小数部分的长度
+Scale小于Precision
      */
     function __construct()
     {
@@ -96,6 +116,14 @@ class TColumn extends AbstractModel
 
         if (array_key_exists("NotNull",$param) and $param["NotNull"] !== null) {
             $this->NotNull = $param["NotNull"];
+        }
+
+        if (array_key_exists("Precision",$param) and $param["Precision"] !== null) {
+            $this->Precision = $param["Precision"];
+        }
+
+        if (array_key_exists("Scale",$param) and $param["Scale"] !== null) {
+            $this->Scale = $param["Scale"];
         }
     }
 }

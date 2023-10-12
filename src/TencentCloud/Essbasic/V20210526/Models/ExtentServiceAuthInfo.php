@@ -21,17 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * 企业扩展服务授权信息
  *
  * @method string getType() 获取扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同 
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul>
  * @method void setType(string $Type) 设置扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同 
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul>
  * @method string getName() 获取扩展服务名称 
  * @method void setName(string $Name) 设置扩展服务名称 
  * @method string getStatus() 获取服务状态 
@@ -53,11 +59,14 @@ class ExtentServiceAuthInfo extends AbstractModel
 {
     /**
      * @var string 扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同 
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul>
      */
     public $Type;
 
@@ -87,11 +96,14 @@ DISABLE 关闭
 
     /**
      * @param string $Type 扩展服务类型
-  AUTO_SIGN             企业静默签（自动签署）
-  OVERSEA_SIGN          企业与港澳台居民*签署合同
-  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
-  PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权平台企业下载合同 
+<ul>
+  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+<li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
+<li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
+ <li> PAGING_SEAL           骑缝章</li>
+ <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
+<li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
+</ul>
      * @param string $Name 扩展服务名称 
      * @param string $Status 服务状态 
 ENABLE 开启 

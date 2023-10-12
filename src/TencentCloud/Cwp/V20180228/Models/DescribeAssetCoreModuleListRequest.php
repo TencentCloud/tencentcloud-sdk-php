@@ -25,11 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuuid() 获取服务器Quuid
  * @method void setQuuid(string $Quuid) 设置服务器Quuid
  * @method array getFilters() 获取过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -55,7 +59,9 @@ class DescribeAssetCoreModuleListRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
      */
@@ -85,7 +91,9 @@ class DescribeAssetCoreModuleListRequest extends AbstractModel
      * @param string $Uuid 服务器Uuid
      * @param string $Quuid 服务器Quuid
      * @param array $Filters 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
      * @param integer $Offset 偏移量，默认为0。

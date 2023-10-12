@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModel() 获取GooseFSx的型号
  * @method void setModel(string $Model) 设置GooseFSx的型号
- * @method integer getCapacity() 获取容量单位是GB, 比如4608(4.5TB)
- * @method void setCapacity(integer $Capacity) 设置容量单位是GB, 比如4608(4.5TB)
+ * @method integer getCapacity() 获取容量单位是GB, 例如4608(4.5TB)
+ * @method void setCapacity(integer $Capacity) 设置容量单位是GB, 例如4608(4.5TB)
  * @method array getMappedBucketList() 获取要关联映射的bucket列表
  * @method void setMappedBucketList(array $MappedBucketList) 设置要关联映射的bucket列表
  */
@@ -35,7 +35,7 @@ class GooseFSxBuildElement extends AbstractModel
     public $Model;
 
     /**
-     * @var integer 容量单位是GB, 比如4608(4.5TB)
+     * @var integer 容量单位是GB, 例如4608(4.5TB)
      */
     public $Capacity;
 
@@ -46,7 +46,7 @@ class GooseFSxBuildElement extends AbstractModel
 
     /**
      * @param string $Model GooseFSx的型号
-     * @param integer $Capacity 容量单位是GB, 比如4608(4.5TB)
+     * @param integer $Capacity 容量单位是GB, 例如4608(4.5TB)
      * @param array $MappedBucketList 要关联映射的bucket列表
      */
     function __construct()

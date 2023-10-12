@@ -274,6 +274,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUui(string $Uui) 设置客户自定义数据（User-to-User Interface）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUUI() 获取客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUUI(string $UUI) 设置客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIVRKeyPressedEx() 获取IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIVRKeyPressedEx(array $IVRKeyPressedEx) 设置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
@@ -537,8 +541,15 @@ class TelCdrInfo extends AbstractModel
     /**
      * @var string 客户自定义数据（User-to-User Interface）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Uui;
+
+    /**
+     * @var string 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UUI;
 
     /**
      * @var array IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
@@ -710,6 +721,8 @@ class TelCdrInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uui 客户自定义数据（User-to-User Interface）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UUI 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IVRKeyPressedEx IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsrUrl 获取录音ASR文本信息地址
@@ -855,6 +868,10 @@ class TelCdrInfo extends AbstractModel
 
         if (array_key_exists("Uui",$param) and $param["Uui"] !== null) {
             $this->Uui = $param["Uui"];
+        }
+
+        if (array_key_exists("UUI",$param) and $param["UUI"] !== null) {
+            $this->UUI = $param["UUI"];
         }
 
         if (array_key_exists("IVRKeyPressedEx",$param) and $param["IVRKeyPressedEx"] !== null) {

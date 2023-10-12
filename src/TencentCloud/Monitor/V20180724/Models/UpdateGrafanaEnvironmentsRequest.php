@@ -22,8 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
  * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
- * @method string getEnvs() 获取环境变量字符串
- * @method void setEnvs(string $Envs) 设置环境变量字符串
+ * @method string getEnvs() 获取JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
+
+ * @method void setEnvs(string $Envs) 设置JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
  */
 class UpdateGrafanaEnvironmentsRequest extends AbstractModel
 {
@@ -33,13 +34,14 @@ class UpdateGrafanaEnvironmentsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 环境变量字符串
+     * @var string JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
+
      */
     public $Envs;
 
     /**
      * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
-     * @param string $Envs 环境变量字符串
+     * @param string $Envs JSON 序列化后的环境变量字符串，如 "{\"key1\":\"key2\"}"
      */
     function __construct()
     {

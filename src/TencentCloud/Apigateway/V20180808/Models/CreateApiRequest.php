@@ -116,6 +116,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventBusId(string $EventBusId) 设置事件总线ID。
  * @method string getServiceScfFunctionType() 获取scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
  * @method void setServiceScfFunctionType(string $ServiceScfFunctionType) 设置scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+ * @method boolean getServiceScfEventIsAsyncCall() 获取是否开启SCF Event异步调用。
+ * @method void setServiceScfEventIsAsyncCall(boolean $ServiceScfEventIsAsyncCall) 设置是否开启SCF Event异步调用。
  * @method string getEIAMAppType() 获取EIAM应用类型。
  * @method void setEIAMAppType(string $EIAMAppType) 设置EIAM应用类型。
  * @method string getEIAMAuthType() 获取EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
@@ -370,6 +372,11 @@ class CreateApiRequest extends AbstractModel
     public $ServiceScfFunctionType;
 
     /**
+     * @var boolean 是否开启SCF Event异步调用。
+     */
+    public $ServiceScfEventIsAsyncCall;
+
+    /**
      * @var string EIAM应用类型。
      */
     public $EIAMAppType;
@@ -443,6 +450,7 @@ class CreateApiRequest extends AbstractModel
      * @param boolean $IsBase64Encoded 是否打开Base64编码，只有后端是scf时才会生效。
      * @param string $EventBusId 事件总线ID。
      * @param string $ServiceScfFunctionType scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     * @param boolean $ServiceScfEventIsAsyncCall 是否开启SCF Event异步调用。
      * @param string $EIAMAppType EIAM应用类型。
      * @param string $EIAMAuthType EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
      * @param integer $TokenTimeout EIAM应用Token 有效时间，单位为秒，默认为7200秒。
@@ -688,6 +696,10 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("ServiceScfFunctionType",$param) and $param["ServiceScfFunctionType"] !== null) {
             $this->ServiceScfFunctionType = $param["ServiceScfFunctionType"];
+        }
+
+        if (array_key_exists("ServiceScfEventIsAsyncCall",$param) and $param["ServiceScfEventIsAsyncCall"] !== null) {
+            $this->ServiceScfEventIsAsyncCall = $param["ServiceScfEventIsAsyncCall"];
         }
 
         if (array_key_exists("EIAMAppType",$param) and $param["EIAMAppType"] !== null) {

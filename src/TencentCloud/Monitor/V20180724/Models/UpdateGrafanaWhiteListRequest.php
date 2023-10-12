@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
  * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
- * @method array getWhitelist() 获取白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
- * @method void setWhitelist(array $Whitelist) 设置白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+ * @method array getWhitelist() 获取白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入
+ * @method void setWhitelist(array $Whitelist) 设置白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入
  */
 class UpdateGrafanaWhiteListRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class UpdateGrafanaWhiteListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+     * @var array 白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入
      */
     public $Whitelist;
 
     /**
      * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
-     * @param array $Whitelist 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+     * @param array $Whitelist 白名单数组，输入白名单 IP 或 CIDR，如：127.0.0.1或127.0.0.1/24
+如有多个 IP 可换行输入
      */
     function __construct()
     {

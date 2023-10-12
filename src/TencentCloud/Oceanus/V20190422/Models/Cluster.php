@@ -142,6 +142,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrders(array $Orders) 设置订单信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSqlGateways() 获取Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSqlGateways(array $SqlGateways) 设置Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -363,6 +367,12 @@ class Cluster extends AbstractModel
     public $Orders;
 
     /**
+     * @var array Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SqlGateways;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -423,6 +433,8 @@ class Cluster extends AbstractModel
      * @param integer $ClusterType 0:TKE, 1:EKS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Orders 订单信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SqlGateways Gateway信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -617,6 +629,15 @@ class Cluster extends AbstractModel
                 $obj = new Order();
                 $obj->deserialize($value);
                 array_push($this->Orders, $obj);
+            }
+        }
+
+        if (array_key_exists("SqlGateways",$param) and $param["SqlGateways"] !== null) {
+            $this->SqlGateways = [];
+            foreach ($param["SqlGateways"] as $key => $value){
+                $obj = new SqlGatewayItem();
+                $obj->deserialize($value);
+                array_push($this->SqlGateways, $obj);
             }
         }
     }

@@ -77,6 +77,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeStreamAuthResponse DescribeStreamAuth(Models\DescribeStreamAuthRequest $req) 用于查询推拉流鉴权配置。
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 用于查询任务详情
  * @method Models\DescribeUserDeviceResponse DescribeUserDevice(Models\DescribeUserDeviceRequest $req) 用于查询设备的详细信息。
+ * @method Models\DescribeVideoBitRateResponse DescribeVideoBitRate(Models\DescribeVideoBitRateRequest $req) 用于获取视频通道的码率信息
  * @method Models\DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(Models\DescribeVideoDownloadUrlRequest $req) 用于获取云录像下载 url
  * @method Models\ListAITasksResponse ListAITasks(Models\ListAITasksRequest $req) 获取AI任务列表
  * @method Models\ListDevicesResponse ListDevices(Models\ListDevicesRequest $req) 用于获取对应组织下的设备列表。

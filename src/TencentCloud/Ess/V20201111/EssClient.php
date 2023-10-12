@@ -221,11 +221,12 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\DeleteIntegrationRoleUsersResponse DeleteIntegrationRoleUsers(Models\DeleteIntegrationRoleUsersRequest $req) 解绑员工与对应角色的关系，如需绑定请使用 CreateIntegrationUserRoles 接口。
  * @method Models\DeleteSealPoliciesResponse DeleteSealPolicies(Models\DeleteSealPoliciesRequest $req) 本接口（DeleteSealPolicies）用于撤销企业员工持有的印章权限
  * @method Models\DescribeExtendedServiceAuthInfosResponse DescribeExtendedServiceAuthInfos(Models\DescribeExtendedServiceAuthInfosRequest $req) 查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
-1. 企业静默签
+1. 企业自动签
 2. 企业与港澳台居民签署合同
 3. 使用手机号验证签署方身份
 4. 骑缝章
 5. 批量签署能力
+6. 拓宽签署方年龄限制
  * @method Models\DescribeFileUrlsResponse DescribeFileUrls(Models\DescribeFileUrlsRequest $req) 本接口（DescribeFileUrls）用于查询文件的下载URL。
 适用场景：通过传参合同流程编号，下载对应的合同PDF文件流到本地。
  * @method Models\DescribeFlowBriefsResponse DescribeFlowBriefs(Models\DescribeFlowBriefsRequest $req) 查询流程基础信息

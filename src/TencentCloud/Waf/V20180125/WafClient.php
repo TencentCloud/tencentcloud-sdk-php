@@ -81,6 +81,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询用户所有实例的详细信息
  * @method Models\DescribeIpAccessControlResponse DescribeIpAccessControl(Models\DescribeIpAccessControlRequest $req) Waf ip黑白名单查询
  * @method Models\DescribeIpHitItemsResponse DescribeIpHitItems(Models\DescribeIpHitItemsRequest $req) Waf  IP封堵状态查询
+ * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) 查看防护对象列表
  * @method Models\DescribePeakPointsResponse DescribePeakPoints(Models\DescribePeakPointsRequest $req) 查询业务和攻击概要趋势
  * @method Models\DescribePeakValueResponse DescribePeakValue(Models\DescribePeakValueRequest $req) 获取业务和攻击概览峰值
  * @method Models\DescribePolicyStatusResponse DescribePolicyStatus(Models\DescribePolicyStatusRequest $req) 获取防护状态以及生效的实例id
@@ -131,6 +132,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimit(Models\ModifyInstanceQpsLimitRequest $req) 设置套餐实例的弹性qps上限
  * @method Models\ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(Models\ModifyInstanceRenewFlagRequest $req) 修改实例的自动续费开关
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) 设置某个domain下基础安全模块的开关
+ * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) 修改防护对象
  * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) waf斯巴达-waf开关
  * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) 修改域名配置
  * @method Models\ModifySpartaProtectionModeResponse ModifySpartaProtectionMode(Models\ModifySpartaProtectionModeRequest $req) 设置waf防护状态

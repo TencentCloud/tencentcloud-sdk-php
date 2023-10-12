@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuuid() 获取服务器Quuid
  * @method void setQuuid(string $Quuid) 设置服务器Quuid
  * @method array getFilters() 获取过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>Type- uint - 是否必填：否 - 类型	
 1: 应用程序
@@ -34,7 +36,9 @@ use TencentCloud\Common\AbstractModel;
 4 : 其他依赖包</li>
 <li>Status- string - 是否必填：否 - 是否可执行：0否，1是</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>Type- uint - 是否必填：否 - 类型	
 1: 应用程序
@@ -65,7 +69,9 @@ class DescribeAssetJarListRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>Type- uint - 是否必填：否 - 类型	
 1: 应用程序
@@ -100,7 +106,9 @@ class DescribeAssetJarListRequest extends AbstractModel
      * @param string $Uuid 服务器Uuid
      * @param string $Quuid 服务器Quuid
      * @param array $Filters 过滤条件。
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>Type- uint - 是否必填：否 - 类型	
 1: 应用程序

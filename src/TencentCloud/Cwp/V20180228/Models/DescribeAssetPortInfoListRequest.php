@@ -24,7 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
  * @method array getFilters() 获取过滤条件。
 <li>Port - uint64 - 是否必填：否 - 端口</li>
-<li>Ip - String - 是否必填：否 - 绑定IP</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>ProcessName - String - 是否必填：否 - 监听进程</li>
 <li>Pid - uint64 - 是否必填：否 - PID</li>
 <li>User - String - 是否必填：否 - 运行用户</li>
@@ -37,7 +39,9 @@ use TencentCloud\Common\AbstractModel;
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Port - uint64 - 是否必填：否 - 端口</li>
-<li>Ip - String - 是否必填：否 - 绑定IP</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>ProcessName - String - 是否必填：否 - 监听进程</li>
 <li>Pid - uint64 - 是否必填：否 - PID</li>
 <li>User - String - 是否必填：否 - 运行用户</li>
@@ -67,7 +71,9 @@ class DescribeAssetPortInfoListRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>Port - uint64 - 是否必填：否 - 端口</li>
-<li>Ip - String - 是否必填：否 - 绑定IP</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>ProcessName - String - 是否必填：否 - 监听进程</li>
 <li>Pid - uint64 - 是否必填：否 - PID</li>
 <li>User - String - 是否必填：否 - 运行用户</li>
@@ -105,7 +111,9 @@ class DescribeAssetPortInfoListRequest extends AbstractModel
      * @param string $Quuid 查询指定Quuid主机的信息
      * @param array $Filters 过滤条件。
 <li>Port - uint64 - 是否必填：否 - 端口</li>
-<li>Ip - String - 是否必填：否 - 绑定IP</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>ProcessName - String - 是否必填：否 - 监听进程</li>
 <li>Pid - uint64 - 是否必填：否 - PID</li>
 <li>User - String - 是否必填：否 - 运行用户</li>

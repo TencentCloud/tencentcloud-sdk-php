@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIds(array $DiskIds) 设置节点上磁盘ID列表
  * @method boolean getHidden() 获取是否为隐藏可用区
  * @method void setHidden(boolean $Hidden) 设置是否为隐藏可用区
+ * @method boolean getIsCoordinationNode() 获取是否充当协调节点的角色
+ * @method void setIsCoordinationNode(boolean $IsCoordinationNode) 设置是否充当协调节点的角色
  */
 class NodeView extends AbstractModel
 {
@@ -143,6 +145,11 @@ class NodeView extends AbstractModel
     public $Hidden;
 
     /**
+     * @var boolean 是否充当协调节点的角色
+     */
+    public $IsCoordinationNode;
+
+    /**
      * @param string $NodeId 节点ID
      * @param string $NodeIp 节点IP
      * @param float $Visible 节点是否可见
@@ -160,6 +167,7 @@ class NodeView extends AbstractModel
      * @param integer $ShardNum 节点分片数
      * @param array $DiskIds 节点上磁盘ID列表
      * @param boolean $Hidden 是否为隐藏可用区
+     * @param boolean $IsCoordinationNode 是否充当协调节点的角色
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class NodeView extends AbstractModel
 
         if (array_key_exists("Hidden",$param) and $param["Hidden"] !== null) {
             $this->Hidden = $param["Hidden"];
+        }
+
+        if (array_key_exists("IsCoordinationNode",$param) and $param["IsCoordinationNode"] !== null) {
+            $this->IsCoordinationNode = $param["IsCoordinationNode"];
         }
     }
 }

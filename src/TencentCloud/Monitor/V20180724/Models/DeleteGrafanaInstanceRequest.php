@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGrafanaInstance请求参数结构体
  *
- * @method array getInstanceIDs() 获取实例名数组
- * @method void setInstanceIDs(array $InstanceIDs) 设置实例名数组
+ * @method array getInstanceIDs() 获取实例ID数组
+ * @method void setInstanceIDs(array $InstanceIDs) 设置实例ID数组
  */
 class DeleteGrafanaInstanceRequest extends AbstractModel
 {
     /**
-     * @var array 实例名数组
+     * @var array 实例ID数组
      */
     public $InstanceIDs;
 
     /**
-     * @param array $InstanceIDs 实例名数组
+     * @param array $InstanceIDs 实例ID数组
      */
     function __construct()
     {

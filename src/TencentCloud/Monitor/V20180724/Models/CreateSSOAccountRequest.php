@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
  * @method string getUserId() 获取用户账号 ID ，例如：10000000
  * @method void setUserId(string $UserId) 设置用户账号 ID ，例如：10000000
- * @method array getRole() 获取权限
- * @method void setRole(array $Role) 设置权限
+ * @method array getRole() 获取权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
+ * @method void setRole(array $Role) 设置权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
  * @method string getNotes() 获取备注
  * @method void setNotes(string $Notes) 设置备注
  */
@@ -42,7 +42,7 @@ class CreateSSOAccountRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var array 权限
+     * @var array 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
      */
     public $Role;
 
@@ -54,7 +54,7 @@ class CreateSSOAccountRequest extends AbstractModel
     /**
      * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      * @param string $UserId 用户账号 ID ，例如：10000000
-     * @param array $Role 权限
+     * @param array $Role 权限(只取数组中的第一个，其中 Organization 暂未使用，可不填)
      * @param string $Notes 备注
      */
     function __construct()

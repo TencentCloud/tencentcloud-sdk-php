@@ -188,6 +188,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddSignComponentsLimits(array $AddSignComponentsLimits) 设置[用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+ * @method string getSignInstructionContent() 获取签署须知：支持传入富文本，最长字数：500个中文字符
+ * @method void setSignInstructionContent(string $SignInstructionContent) 设置签署须知：支持传入富文本，最长字数：500个中文字符
  */
 class ApproverInfo extends AbstractModel
 {
@@ -356,6 +358,11 @@ class ApproverInfo extends AbstractModel
     public $AddSignComponentsLimits;
 
     /**
+     * @var string 签署须知：支持传入富文本，最长字数：500个中文字符
+     */
+    public $SignInstructionContent;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -440,6 +447,7 @@ class ApproverInfo extends AbstractModel
      * @param array $AddSignComponentsLimits [用PDF文件创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
+     * @param string $SignInstructionContent 签署须知：支持传入富文本，最长字数：500个中文字符
      */
     function __construct()
     {
@@ -543,6 +551,10 @@ class ApproverInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AddSignComponentsLimits, $obj);
             }
+        }
+
+        if (array_key_exists("SignInstructionContent",$param) and $param["SignInstructionContent"] !== null) {
+            $this->SignInstructionContent = $param["SignInstructionContent"];
         }
     }
 }

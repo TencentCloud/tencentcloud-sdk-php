@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOrganization() 获取组织
  * @method void setOrganization(string $Organization) 设置组织
- * @method string getRole() 获取权限
- * @method void setRole(string $Role) 设置权限
+ * @method string getRole() 获取权限(Admin、Editor、Viewer)
+ * @method void setRole(string $Role) 设置权限(Admin、Editor、Viewer)
  */
 class GrafanaAccountRole extends AbstractModel
 {
@@ -33,13 +33,13 @@ class GrafanaAccountRole extends AbstractModel
     public $Organization;
 
     /**
-     * @var string 权限
+     * @var string 权限(Admin、Editor、Viewer)
      */
     public $Role;
 
     /**
      * @param string $Organization 组织
-     * @param string $Role 权限
+     * @param string $Role 权限(Admin、Editor、Viewer)
      */
     function __construct()
     {

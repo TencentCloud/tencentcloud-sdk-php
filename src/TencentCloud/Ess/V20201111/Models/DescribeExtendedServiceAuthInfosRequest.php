@@ -31,7 +31,9 @@ use TencentCloud\Common\AbstractModel;
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+
  * @method void setExtendServiceType(string $ExtendServiceType) 设置要查询的扩展服务类型。
 默认为空，即查询当前支持的所有扩展服务信息。
 若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
@@ -39,7 +41,9 @@ use TencentCloud\Common\AbstractModel;
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -61,7 +65,9 @@ class DescribeExtendedServiceAuthInfosRequest extends AbstractModel
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+
      */
     public $ExtendServiceType;
 
@@ -81,7 +87,9 @@ class DescribeExtendedServiceAuthInfosRequest extends AbstractModel
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>BATCH_SIGN：批量签署</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li></ul>
+
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */

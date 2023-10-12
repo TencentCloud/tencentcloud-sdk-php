@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelName(string $ChannelName) 设置告警通道名称，例如：test
  * @method array getChannelIds() 获取告警通道 ID，例如：nchannel-abcd1234
  * @method void setChannelIds(array $ChannelIds) 设置告警通道 ID，例如：nchannel-abcd1234
- * @method integer getChannelState() 获取告警通道状态
- * @method void setChannelState(integer $ChannelState) 设置告警通道状态
+ * @method integer getChannelState() 获取告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
+ * @method void setChannelState(integer $ChannelState) 设置告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
  */
 class DescribeGrafanaChannelsRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeGrafanaChannelsRequest extends AbstractModel
     public $ChannelIds;
 
     /**
-     * @var integer 告警通道状态
+     * @var integer 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
      */
     public $ChannelState;
 
@@ -71,7 +71,7 @@ class DescribeGrafanaChannelsRequest extends AbstractModel
      * @param integer $Limit 查询数量
      * @param string $ChannelName 告警通道名称，例如：test
      * @param array $ChannelIds 告警通道 ID，例如：nchannel-abcd1234
-     * @param integer $ChannelState 告警通道状态
+     * @param integer $ChannelState 告警通道状态(不用填写，目前只有可用和删除状态，默认只能查询可用的告警通道)
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
  * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
- * @method string getAlias() 获取版本别名，例如：v7.4.2
- * @method void setAlias(string $Alias) 设置版本别名，例如：v7.4.2
+ * @method string getAlias() 获取版本别名，目前固定为 v9.1.5
+ * @method void setAlias(string $Alias) 设置版本别名，目前固定为 v9.1.5
  */
 class UpgradeGrafanaInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UpgradeGrafanaInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 版本别名，例如：v7.4.2
+     * @var string 版本别名，目前固定为 v9.1.5
      */
     public $Alias;
 
     /**
      * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
-     * @param string $Alias 版本别名，例如：v7.4.2
+     * @param string $Alias 版本别名，目前固定为 v9.1.5
      */
     function __construct()
     {

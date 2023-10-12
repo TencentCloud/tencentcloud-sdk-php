@@ -20,13 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateResource请求参数结构体
  *
+ * @method string getDeployRegion() 获取部署region
+ * @method void setDeployRegion(string $DeployRegion) 设置部署region
  * @method string getVpcId() 获取部署堡垒机的VpcId
  * @method void setVpcId(string $VpcId) 设置部署堡垒机的VpcId
  * @method string getSubnetId() 获取部署堡垒机的SubnetId
  * @method void setSubnetId(string $SubnetId) 设置部署堡垒机的SubnetId
+ * @method string getResourceEdition() 获取资源类型。取值:standard/pro
+ * @method void setResourceEdition(string $ResourceEdition) 设置资源类型。取值:standard/pro
+ * @method integer getResourceNode() 获取资源节点数
+ * @method void setResourceNode(integer $ResourceNode) 设置资源节点数
+ * @method string getTimeUnit() 获取计费周期
+ * @method void setTimeUnit(string $TimeUnit) 设置计费周期
+ * @method integer getTimeSpan() 获取计费时长
+ * @method void setTimeSpan(integer $TimeSpan) 设置计费时长
+ * @method integer getPayMode() 获取计费模式 1预付费
+ * @method void setPayMode(integer $PayMode) 设置计费模式 1预付费
+ * @method integer getAutoRenewFlag() 获取自动续费
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费
+ * @method string getDeployZone() 获取部署zone
+ * @method void setDeployZone(string $DeployZone) 设置部署zone
  */
 class CreateResourceRequest extends AbstractModel
 {
+    /**
+     * @var string 部署region
+     */
+    public $DeployRegion;
+
     /**
      * @var string 部署堡垒机的VpcId
      */
@@ -38,8 +59,51 @@ class CreateResourceRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 资源类型。取值:standard/pro
+     */
+    public $ResourceEdition;
+
+    /**
+     * @var integer 资源节点数
+     */
+    public $ResourceNode;
+
+    /**
+     * @var string 计费周期
+     */
+    public $TimeUnit;
+
+    /**
+     * @var integer 计费时长
+     */
+    public $TimeSpan;
+
+    /**
+     * @var integer 计费模式 1预付费
+     */
+    public $PayMode;
+
+    /**
+     * @var integer 自动续费
+     */
+    public $AutoRenewFlag;
+
+    /**
+     * @var string 部署zone
+     */
+    public $DeployZone;
+
+    /**
+     * @param string $DeployRegion 部署region
      * @param string $VpcId 部署堡垒机的VpcId
      * @param string $SubnetId 部署堡垒机的SubnetId
+     * @param string $ResourceEdition 资源类型。取值:standard/pro
+     * @param integer $ResourceNode 资源节点数
+     * @param string $TimeUnit 计费周期
+     * @param integer $TimeSpan 计费时长
+     * @param integer $PayMode 计费模式 1预付费
+     * @param integer $AutoRenewFlag 自动续费
+     * @param string $DeployZone 部署zone
      */
     function __construct()
     {
@@ -54,12 +118,44 @@ class CreateResourceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DeployRegion",$param) and $param["DeployRegion"] !== null) {
+            $this->DeployRegion = $param["DeployRegion"];
+        }
+
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
         }
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ResourceEdition",$param) and $param["ResourceEdition"] !== null) {
+            $this->ResourceEdition = $param["ResourceEdition"];
+        }
+
+        if (array_key_exists("ResourceNode",$param) and $param["ResourceNode"] !== null) {
+            $this->ResourceNode = $param["ResourceNode"];
+        }
+
+        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
+            $this->TimeUnit = $param["TimeUnit"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("DeployZone",$param) and $param["DeployZone"] !== null) {
+            $this->DeployZone = $param["DeployZone"];
         }
     }
 }

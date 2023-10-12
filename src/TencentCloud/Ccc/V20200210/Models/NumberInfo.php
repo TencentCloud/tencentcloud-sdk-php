@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumber(string $Number) 设置号码
  * @method array getCallOutSkillGroupIds() 获取绑定的外呼技能组
  * @method void setCallOutSkillGroupIds(array $CallOutSkillGroupIds) 设置绑定的外呼技能组
+ * @method integer getState() 获取号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+ * @method void setState(integer $State) 设置号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
  */
 class NumberInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class NumberInfo extends AbstractModel
     public $CallOutSkillGroupIds;
 
     /**
+     * @var integer 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+     */
+    public $State;
+
+    /**
      * @param string $Number 号码
      * @param array $CallOutSkillGroupIds 绑定的外呼技能组
+     * @param integer $State 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class NumberInfo extends AbstractModel
 
         if (array_key_exists("CallOutSkillGroupIds",$param) and $param["CallOutSkillGroupIds"] !== null) {
             $this->CallOutSkillGroupIds = $param["CallOutSkillGroupIds"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
         }
     }
 }

@@ -224,6 +224,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBase64EncodedTriggerRules(array $Base64EncodedTriggerRules) 设置Header触发规则，总规则数量不超过10。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getServiceScfEventIsAsyncCall() 获取是否开启SCF Event异步调用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceScfEventIsAsyncCall(boolean $ServiceScfEventIsAsyncCall) 设置是否开启SCF Event异步调用。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiInfo extends AbstractModel
 {
@@ -534,6 +538,12 @@ class ApiInfo extends AbstractModel
     public $Base64EncodedTriggerRules;
 
     /**
+     * @var boolean 是否开启SCF Event异步调用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceScfEventIsAsyncCall;
+
+    /**
      * @param string $ServiceId API 所在的服务唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName API 所在的服务的名称。
@@ -635,6 +645,8 @@ class ApiInfo extends AbstractModel
      * @param boolean $IsBase64Trigger 是否开启Base64编码的header触发，只有后端为scf时才会生效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Base64EncodedTriggerRules Header触发规则，总规则数量不超过10。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ServiceScfEventIsAsyncCall 是否开启SCF Event异步调用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -892,6 +904,10 @@ class ApiInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Base64EncodedTriggerRules, $obj);
             }
+        }
+
+        if (array_key_exists("ServiceScfEventIsAsyncCall",$param) and $param["ServiceScfEventIsAsyncCall"] !== null) {
+            $this->ServiceScfEventIsAsyncCall = $param["ServiceScfEventIsAsyncCall"];
         }
     }
 }

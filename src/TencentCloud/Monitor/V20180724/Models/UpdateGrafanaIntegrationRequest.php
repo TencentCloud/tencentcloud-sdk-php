@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
  * @method string getKind() 获取集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
  * @method void setKind(string $Kind) 设置集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
- * @method string getContent() 获取集成内容
- * @method void setContent(string $Content) 设置集成内容
+ * @method string getContent() 获取集成内容，请查看示例
+ * @method void setContent(string $Content) 设置集成内容，请查看示例
  */
 class UpdateGrafanaIntegrationRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class UpdateGrafanaIntegrationRequest extends AbstractModel
     public $Kind;
 
     /**
-     * @var string 集成内容
+     * @var string 集成内容，请查看示例
      */
     public $Content;
 
@@ -55,7 +55,7 @@ class UpdateGrafanaIntegrationRequest extends AbstractModel
      * @param string $IntegrationId 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
      * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
      * @param string $Kind 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
-     * @param string $Content 集成内容
+     * @param string $Content 集成内容，请查看示例
      */
     function __construct()
     {

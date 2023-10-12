@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsForceUseMobile(boolean $IsForceUseMobile) 设置是否强制使用手机外呼，当前只支持 true，若为 true 请确保已配置白名单
  * @method string getUui() 获取自定义数据，长度限制 1024 字节
  * @method void setUui(string $Uui) 设置自定义数据，长度限制 1024 字节
+ * @method string getUUI() 获取自定义数据，长度限制 1024 字节
+ * @method void setUUI(string $UUI) 设置自定义数据，长度限制 1024 字节
  */
 class CreateCallOutSessionRequest extends AbstractModel
 {
@@ -69,8 +71,14 @@ class CreateCallOutSessionRequest extends AbstractModel
 
     /**
      * @var string 自定义数据，长度限制 1024 字节
+     * @deprecated
      */
     public $Uui;
+
+    /**
+     * @var string 自定义数据，长度限制 1024 字节
+     */
+    public $UUI;
 
     /**
      * @param integer $SdkAppId 应用 ID
@@ -80,6 +88,7 @@ class CreateCallOutSessionRequest extends AbstractModel
      * @param array $Callers 指定主叫号码列表，如果前面的号码失败了会自动换成下一个号码，须带 0086 前缀
      * @param boolean $IsForceUseMobile 是否强制使用手机外呼，当前只支持 true，若为 true 请确保已配置白名单
      * @param string $Uui 自定义数据，长度限制 1024 字节
+     * @param string $UUI 自定义数据，长度限制 1024 字节
      */
     function __construct()
     {
@@ -120,6 +129,10 @@ class CreateCallOutSessionRequest extends AbstractModel
 
         if (array_key_exists("Uui",$param) and $param["Uui"] !== null) {
             $this->Uui = $param["Uui"];
+        }
+
+        if (array_key_exists("UUI",$param) and $param["UUI"] !== null) {
+            $this->UUI = $param["UUI"];
         }
     }
 }

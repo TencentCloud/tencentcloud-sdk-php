@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGrafanaNotificationChannel请求参数结构体
  *
- * @method array getChannelIDs() 获取通道 ID 数组。例如：nchannel-abcd1234
- * @method void setChannelIDs(array $ChannelIDs) 设置通道 ID 数组。例如：nchannel-abcd1234
+ * @method array getChannelIDs() 获取通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
+ * @method void setChannelIDs(array $ChannelIDs) 设置通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
  * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
  * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
  */
 class DeleteGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var array 通道 ID 数组。例如：nchannel-abcd1234
+     * @var array 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
      */
     public $ChannelIDs;
 
@@ -38,7 +38,7 @@ class DeleteGrafanaNotificationChannelRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param array $ChannelIDs 通道 ID 数组。例如：nchannel-abcd1234
+     * @param array $ChannelIDs 通道 ID 数组。例如：nchannel-abcd1234，通过 DescribeGrafanaChannels 获取
      * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     function __construct()

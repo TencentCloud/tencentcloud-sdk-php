@@ -24,7 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
  * @method array getFilters() 获取过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Type - int - 是否必填：否 - 类型	: 仅linux
 0: 全部
 1: 运维
@@ -38,7 +40,9 @@ use TencentCloud\Common\AbstractModel;
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Type - int - 是否必填：否 - 类型	: 仅linux
 0: 全部
 1: 运维
@@ -65,7 +69,9 @@ class ExportAssetAppListRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Type - int - 是否必填：否 - 类型	: 仅linux
 0: 全部
 1: 运维
@@ -94,7 +100,9 @@ class ExportAssetAppListRequest extends AbstractModel
      * @param string $Quuid 查询指定Quuid主机的信息
      * @param array $Filters 过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
-<li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
+<li>IP - String - 是否必填：否 - 主机ip</li>
+<li>MachineName - String - 是否必填：否 - 主机名称</li>
+<li>InstanceID - string - 是否必填：否 - 实例ID</li>
 <li>Type - int - 是否必填：否 - 类型	: 仅linux
 0: 全部
 1: 运维

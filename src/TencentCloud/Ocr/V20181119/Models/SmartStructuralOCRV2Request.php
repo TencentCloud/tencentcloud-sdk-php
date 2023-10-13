@@ -61,6 +61,7 @@ RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
+InvoiceEng -- 海外发票模版
  * @method void setConfigId(string $ConfigId) 设置配置id支持：
 General -- 通用场景
 OnlineTaxiItinerary -- 网约车行程单
@@ -68,6 +69,7 @@ RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
+InvoiceEng -- 海外发票模版
  */
 class SmartStructuralOCRV2Request extends AbstractModel
 {
@@ -120,6 +122,7 @@ RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
+InvoiceEng -- 海外发票模版
      */
     public $ConfigId;
 
@@ -148,6 +151,7 @@ RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
+InvoiceEng -- 海外发票模版
      */
     function __construct()
     {

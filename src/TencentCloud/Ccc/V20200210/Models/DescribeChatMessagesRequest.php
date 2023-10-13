@@ -39,6 +39,7 @@ class DescribeChatMessagesRequest extends AbstractModel
 {
     /**
      * @var integer 实例 ID（废弃）
+     * @deprecated
      */
     public $InstanceId;
 

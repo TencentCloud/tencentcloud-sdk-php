@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmPolicy(integer $AlarmPolicy) 设置告警策略。0-不告警，1-告警。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取模版状态。0-无任务 ，1-修改中。
+ * @method integer getStatus() 获取模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置模版状态。0-无任务 ，1-修改中。
+ * @method void setStatus(integer $Status) 设置模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAffectedInstances() 获取规则模板应用在哪些在实例。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,7 +100,7 @@ class AuditRuleTemplateInfo extends AbstractModel
     public $AlarmPolicy;
 
     /**
-     * @var integer 模版状态。0-无任务 ，1-修改中。
+     * @var integer 模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -124,7 +124,7 @@ class AuditRuleTemplateInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 模版状态。0-无任务 ，1-修改中。
+     * @param integer $Status 模板状态。0-无任务 ，1-修改中。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AffectedInstances 规则模板应用在哪些在实例。
 注意：此字段可能返回 null，表示取不到有效值。

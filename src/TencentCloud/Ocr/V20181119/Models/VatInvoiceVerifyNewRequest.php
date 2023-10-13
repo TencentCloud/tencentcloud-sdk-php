@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 广东:4400，浙江:3300
  * @method void setRegionCode(string $RegionCode) 设置地区编码，通用机打电子发票时必填。
 广东:4400，浙江:3300
- * @method string getSellerTaxCode() 获取销方税号，通用机打电子发票必填
- * @method void setSellerTaxCode(string $SellerTaxCode) 设置销方税号，通用机打电子发票必填
+ * @method string getSellerTaxCode() 获取销方税号，通用机打电子发票必填，区块链发票时必填
+ * @method void setSellerTaxCode(string $SellerTaxCode) 设置销方税号，通用机打电子发票必填，区块链发票时必填
  * @method boolean getEnableCommonElectronic() 获取是否开启通用机打电子发票，默认为关闭。
  * @method void setEnableCommonElectronic(boolean $EnableCommonElectronic) 设置是否开启通用机打电子发票，默认为关闭。
  */
@@ -83,7 +83,7 @@ class VatInvoiceVerifyNewRequest extends AbstractModel
     public $RegionCode;
 
     /**
-     * @var string 销方税号，通用机打电子发票必填
+     * @var string 销方税号，通用机打电子发票必填，区块链发票时必填
      */
     public $SellerTaxCode;
 
@@ -102,7 +102,7 @@ class VatInvoiceVerifyNewRequest extends AbstractModel
      * @param string $Amount 不含税金额，增值税专用发票、增值税电子专用发票、机动车销售统一发票、二手车销售统一发票、区块链发票时必填; 全电发票为价税合计(含税金额)
      * @param string $RegionCode 地区编码，通用机打电子发票时必填。
 广东:4400，浙江:3300
-     * @param string $SellerTaxCode 销方税号，通用机打电子发票必填
+     * @param string $SellerTaxCode 销方税号，通用机打电子发票必填，区块链发票时必填
      * @param boolean $EnableCommonElectronic 是否开启通用机打电子发票，默认为关闭。
      */
     function __construct()

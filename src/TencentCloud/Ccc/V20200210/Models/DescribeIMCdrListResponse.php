@@ -18,12 +18,10 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIMCdrs返回参数结构体
+ * DescribeIMCdrList返回参数结构体
  *
  * @method integer getTotalCount() 获取总记录数
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
- * @method array getIMCdrs() 获取服务记录列表
- * @method void setIMCdrs(array $IMCdrs) 设置服务记录列表
  * @method array getIMCdrList() 获取服务记录列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIMCdrList(array $IMCdrList) 设置服务记录列表
@@ -31,18 +29,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeIMCdrsResponse extends AbstractModel
+class DescribeIMCdrListResponse extends AbstractModel
 {
     /**
      * @var integer 总记录数
      */
     public $TotalCount;
-
-    /**
-     * @var array 服务记录列表
-     * @deprecated
-     */
-    public $IMCdrs;
 
     /**
      * @var array 服务记录列表
@@ -57,7 +49,6 @@ class DescribeIMCdrsResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 总记录数
-     * @param array $IMCdrs 服务记录列表
      * @param array $IMCdrList 服务记录列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -77,15 +68,6 @@ class DescribeIMCdrsResponse extends AbstractModel
         }
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("IMCdrs",$param) and $param["IMCdrs"] !== null) {
-            $this->IMCdrs = [];
-            foreach ($param["IMCdrs"] as $key => $value){
-                $obj = new IMCdrInfo();
-                $obj->deserialize($value);
-                array_push($this->IMCdrs, $obj);
-            }
         }
 
         if (array_key_exists("IMCdrList",$param) and $param["IMCdrList"] !== null) {

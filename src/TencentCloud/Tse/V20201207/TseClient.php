@@ -63,6 +63,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(Models\DescribeZookeeperServerInterfacesRequest $req) 查询zookeeper服务接口列表
  * @method Models\ModifyCloudNativeAPIGatewayResponse ModifyCloudNativeAPIGateway(Models\ModifyCloudNativeAPIGatewayRequest $req) 修改云原生API网关实例基础信息
  * @method Models\ModifyCloudNativeAPIGatewayCanaryRuleResponse ModifyCloudNativeAPIGatewayCanaryRule(Models\ModifyCloudNativeAPIGatewayCanaryRuleRequest $req) 修改云原生网关的灰度规则
+ * @method Models\ModifyCloudNativeAPIGatewayCertificateResponse ModifyCloudNativeAPIGatewayCertificate(Models\ModifyCloudNativeAPIGatewayCertificateRequest $req) 更新云原生网关证书
  * @method Models\ModifyCloudNativeAPIGatewayRouteResponse ModifyCloudNativeAPIGatewayRoute(Models\ModifyCloudNativeAPIGatewayRouteRequest $req) 修改云原生网关路由
  * @method Models\ModifyCloudNativeAPIGatewayRouteRateLimitResponse ModifyCloudNativeAPIGatewayRouteRateLimit(Models\ModifyCloudNativeAPIGatewayRouteRateLimitRequest $req) 修改云原生网关限流插件(路由)
  * @method Models\ModifyCloudNativeAPIGatewayServiceResponse ModifyCloudNativeAPIGatewayService(Models\ModifyCloudNativeAPIGatewayServiceRequest $req) 修改云原生网关服务

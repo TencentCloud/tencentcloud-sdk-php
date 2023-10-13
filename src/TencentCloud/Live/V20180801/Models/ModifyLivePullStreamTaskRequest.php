@@ -102,6 +102,12 @@ ResetTaskConfig：任务更新回调。
  * @method void setOffsetTime(integer $OffsetTime) 设置指定播放文件偏移。
 注意：
 1. 单位：秒，配合FileIndex使用。
+ * @method string getSpecifyTaskId() 获取指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。
+ * @method void setSpecifyTaskId(string $SpecifyTaskId) 设置指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。
  * @method string getToUrl() 获取目标 Url。
 换目标地址，会断流重推到新地址。
  * @method void setToUrl(string $ToUrl) 设置目标 Url。
@@ -247,6 +253,13 @@ ResetTaskConfig：任务更新回调。
     public $OffsetTime;
 
     /**
+     * @var string 指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。
+     */
+    public $SpecifyTaskId;
+
+    /**
      * @var string 目标 Url。
 换目标地址，会断流重推到新地址。
      */
@@ -338,6 +351,9 @@ ResetTaskConfig：任务更新回调。
      * @param integer $OffsetTime 指定播放文件偏移。
 注意：
 1. 单位：秒，配合FileIndex使用。
+     * @param string $SpecifyTaskId 指定任务 ID 修改任务。
+
+注意：该自定义任务 ID 只有在创建任务时指定了，才可在此处修改时使用。否则请使用系统返回的任务 ID。
      * @param string $ToUrl 目标 Url。
 换目标地址，会断流重推到新地址。
      * @param string $Comment 任务备注。
@@ -424,6 +440,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("OffsetTime",$param) and $param["OffsetTime"] !== null) {
             $this->OffsetTime = $param["OffsetTime"];
+        }
+
+        if (array_key_exists("SpecifyTaskId",$param) and $param["SpecifyTaskId"] !== null) {
+            $this->SpecifyTaskId = $param["SpecifyTaskId"];
         }
 
         if (array_key_exists("ToUrl",$param) and $param["ToUrl"] !== null) {

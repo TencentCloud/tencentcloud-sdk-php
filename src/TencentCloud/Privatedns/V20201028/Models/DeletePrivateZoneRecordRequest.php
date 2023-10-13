@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取私有域ID
  * @method void setZoneId(string $ZoneId) 设置私有域ID
- * @method string getRecordId() 获取记录ID
- * @method void setRecordId(string $RecordId) 设置记录ID
+ * @method string getRecordId() 获取记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
+ * @method void setRecordId(string $RecordId) 设置记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
  * @method array getRecordIdSet() 获取记录ID数组，RecordId 优先
  * @method void setRecordIdSet(array $RecordIdSet) 设置记录ID数组，RecordId 优先
  */
@@ -35,7 +35,7 @@ class DeletePrivateZoneRecordRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 记录ID
+     * @var string 记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
      */
     public $RecordId;
 
@@ -46,7 +46,7 @@ class DeletePrivateZoneRecordRequest extends AbstractModel
 
     /**
      * @param string $ZoneId 私有域ID
-     * @param string $RecordId 记录ID
+     * @param string $RecordId 记录ID（调用DescribePrivateZoneRecordList可获取到RecordId）
      * @param array $RecordIdSet 记录ID数组，RecordId 优先
      */
     function __construct()

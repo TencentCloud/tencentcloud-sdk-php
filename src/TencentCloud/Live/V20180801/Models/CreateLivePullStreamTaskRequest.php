@@ -154,6 +154,14 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
  * @method void setExtraCmd(string $ExtraCmd) 设置其他参数。
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
+ * @method string getSpecifyTaskId() 获取自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
+ * @method void setSpecifyTaskId(string $SpecifyTaskId) 设置自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
  * @method string getComment() 获取任务描述，限制 512 字节。
  * @method void setComment(string $Comment) 设置任务描述，限制 512 字节。
  * @method string getToUrl() 获取完整目标 URL 地址。
@@ -335,6 +343,14 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
     public $ExtraCmd;
 
     /**
+     * @var string 自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
+     */
+    public $SpecifyTaskId;
+
+    /**
      * @var string 任务描述，限制 512 字节。
      */
     public $Comment;
@@ -457,6 +473,10 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 拉流转推任务相关事件会回调到该地址。
      * @param string $ExtraCmd 其他参数。
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
+     * @param string $SpecifyTaskId 自定义任务 ID。
+注：
+1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
+2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
      * @param string $Comment 任务描述，限制 512 字节。
      * @param string $ToUrl 完整目标 URL 地址。
 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
@@ -552,6 +572,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("ExtraCmd",$param) and $param["ExtraCmd"] !== null) {
             $this->ExtraCmd = $param["ExtraCmd"];
+        }
+
+        if (array_key_exists("SpecifyTaskId",$param) and $param["SpecifyTaskId"] !== null) {
+            $this->SpecifyTaskId = $param["SpecifyTaskId"];
         }
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {

@@ -18,16 +18,14 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIMCdrs请求参数结构体
+ * DescribeIMCdrList请求参数结构体
  *
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getStartTimestamp() 获取起始时间（必填），Unix 秒级时间戳
  * @method void setStartTimestamp(integer $StartTimestamp) 设置起始时间（必填），Unix 秒级时间戳
  * @method integer getEndTimestamp() 获取结束时间（必填），Unix 秒级时间戳
  * @method void setEndTimestamp(integer $EndTimestamp) 设置结束时间（必填），Unix 秒级时间戳
- * @method integer getInstanceId() 获取实例 ID（废弃）
- * @method void setInstanceId(integer $InstanceId) 设置实例 ID（废弃）
- * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getLimit() 获取返回记录条数，最大为100默认20
  * @method void setLimit(integer $Limit) 设置返回记录条数，最大为100默认20
  * @method integer getOffset() 获取返回记录偏移，默认为 0
@@ -35,8 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getType() 获取1为全媒体，2为文本客服，不填则查询全部
  * @method void setType(integer $Type) 设置1为全媒体，2为文本客服，不填则查询全部
  */
-class DescribeIMCdrsRequest extends AbstractModel
+class DescribeIMCdrListRequest extends AbstractModel
 {
+    /**
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     */
+    public $SdkAppId;
+
     /**
      * @var integer 起始时间（必填），Unix 秒级时间戳
      */
@@ -46,17 +49,6 @@ class DescribeIMCdrsRequest extends AbstractModel
      * @var integer 结束时间（必填），Unix 秒级时间戳
      */
     public $EndTimestamp;
-
-    /**
-     * @var integer 实例 ID（废弃）
-     * @deprecated
-     */
-    public $InstanceId;
-
-    /**
-     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     */
-    public $SdkAppId;
 
     /**
      * @var integer 返回记录条数，最大为100默认20
@@ -74,10 +66,9 @@ class DescribeIMCdrsRequest extends AbstractModel
     public $Type;
 
     /**
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $StartTimestamp 起始时间（必填），Unix 秒级时间戳
      * @param integer $EndTimestamp 结束时间（必填），Unix 秒级时间戳
-     * @param integer $InstanceId 实例 ID（废弃）
-     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $Limit 返回记录条数，最大为100默认20
      * @param integer $Offset 返回记录偏移，默认为 0
      * @param integer $Type 1为全媒体，2为文本客服，不填则查询全部
@@ -95,20 +86,16 @@ class DescribeIMCdrsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
+        }
+
         if (array_key_exists("StartTimestamp",$param) and $param["StartTimestamp"] !== null) {
             $this->StartTimestamp = $param["StartTimestamp"];
         }
 
         if (array_key_exists("EndTimestamp",$param) and $param["EndTimestamp"] !== null) {
             $this->EndTimestamp = $param["EndTimestamp"];
-        }
-
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

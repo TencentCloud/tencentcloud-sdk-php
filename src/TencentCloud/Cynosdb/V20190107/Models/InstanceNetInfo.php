@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanDomain(string $WanDomain) 设置外网域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWanIP() 获取外网Ip
+ * @method string getWanIP() 获取外网IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWanIP(string $WanIP) 设置外网Ip
+ * @method void setWanIP(string $WanIP) 设置外网IP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWanPort() 获取外网端口
 注意：此字段可能返回 null，表示取不到有效值。
@@ -116,7 +116,7 @@ class InstanceNetInfo extends AbstractModel
     public $WanDomain;
 
     /**
-     * @var string 外网Ip
+     * @var string 外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanIP;
@@ -150,7 +150,7 @@ class InstanceNetInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanDomain 外网域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WanIP 外网Ip
+     * @param string $WanIP 外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WanPort 外网端口
 注意：此字段可能返回 null，表示取不到有效值。

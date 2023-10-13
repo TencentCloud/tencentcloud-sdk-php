@@ -14,41 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ccc\V20200210\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIMCdrs返回参数结构体
+ * DescribeAttackWhiteRule返回参数结构体
  *
- * @method integer getTotalCount() 获取总记录数
- * @method void setTotalCount(integer $TotalCount) 设置总记录数
- * @method array getIMCdrs() 获取服务记录列表
- * @method void setIMCdrs(array $IMCdrs) 设置服务记录列表
- * @method array getIMCdrList() 获取服务记录列表
+ * @method integer getTotal() 获取规则总数
+ * @method void setTotal(integer $Total) 设置规则总数
+ * @method array getList() 获取规则白名单列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIMCdrList(array $IMCdrList) 设置服务记录列表
+ * @method void setList(array $List) 设置规则白名单列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeIMCdrsResponse extends AbstractModel
+class DescribeAttackWhiteRuleResponse extends AbstractModel
 {
     /**
-     * @var integer 总记录数
+     * @var integer 规则总数
      */
-    public $TotalCount;
+    public $Total;
 
     /**
-     * @var array 服务记录列表
-     * @deprecated
-     */
-    public $IMCdrs;
-
-    /**
-     * @var array 服务记录列表
+     * @var array 规则白名单列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $IMCdrList;
+    public $List;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -56,9 +48,8 @@ class DescribeIMCdrsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总记录数
-     * @param array $IMCdrs 服务记录列表
-     * @param array $IMCdrList 服务记录列表
+     * @param integer $Total 规则总数
+     * @param array $List 规则白名单列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -75,25 +66,16 @@ class DescribeIMCdrsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
-        if (array_key_exists("IMCdrs",$param) and $param["IMCdrs"] !== null) {
-            $this->IMCdrs = [];
-            foreach ($param["IMCdrs"] as $key => $value){
-                $obj = new IMCdrInfo();
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new UserWhiteRule();
                 $obj->deserialize($value);
-                array_push($this->IMCdrs, $obj);
-            }
-        }
-
-        if (array_key_exists("IMCdrList",$param) and $param["IMCdrList"] !== null) {
-            $this->IMCdrList = [];
-            foreach ($param["IMCdrList"] as $key => $value){
-                $obj = new IMCdrInfo();
-                $obj->deserialize($value);
-                array_push($this->IMCdrList, $obj);
+                array_push($this->List, $obj);
             }
         }
 

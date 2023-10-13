@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetType(string $NetType) 设置网络类型
  * @method string getDevice() 获取机型
  * @method void setDevice(string $Device) 设置机型
- * @method string getIsAbroad() 获取是否海外
- * @method void setIsAbroad(string $IsAbroad) 设置是否海外
+ * @method string getIsAbroad() 获取显示是否海外
+ * @method void setIsAbroad(string $IsAbroad) 设置显示是否海外
  * @method string getOs() 获取操作系统
  * @method void setOs(string $Os) 设置操作系统
  * @method string getBrowser() 获取浏览器
@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  5:1d
  * @method void setGroupByType(integer $GroupByType) 设置group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
  5:1d
+ * @method integer getIsNewData() 获取无需关注，是否查询zhiyan
+ * @method void setIsNewData(integer $IsNewData) 设置无需关注，是否查询zhiyan
  */
 class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 {
@@ -155,7 +157,7 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
     public $Device;
 
     /**
-     * @var string 是否海外
+     * @var string 显示是否海外
      */
     public $IsAbroad;
 
@@ -181,6 +183,11 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
     public $GroupByType;
 
     /**
+     * @var integer 无需关注，是否查询zhiyan
+     */
+    public $IsNewData;
+
+    /**
      * @param integer $StartTime 开始时间
      * @param string $Type allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      * @param integer $EndTime 结束时间
@@ -198,12 +205,13 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
      * @param string $ExtFirst 自定义1
      * @param string $NetType 网络类型
      * @param string $Device 机型
-     * @param string $IsAbroad 是否海外
+     * @param string $IsAbroad 显示是否海外
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
      * @param string $Env 环境
      * @param integer $GroupByType group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
  5:1d
+     * @param integer $IsNewData 无需关注，是否查询zhiyan
      */
     function __construct()
     {
@@ -304,6 +312,10 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 
         if (array_key_exists("GroupByType",$param) and $param["GroupByType"] !== null) {
             $this->GroupByType = $param["GroupByType"];
+        }
+
+        if (array_key_exists("IsNewData",$param) and $param["IsNewData"] !== null) {
+            $this->IsNewData = $param["IsNewData"];
         }
     }
 }

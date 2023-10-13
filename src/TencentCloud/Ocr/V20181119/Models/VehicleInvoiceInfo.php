@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaxtationOrgName(string $TaxtationOrgName) 设置主管税务机关名称
  * @method string getMotorTaxRate() 获取税率
  * @method void setMotorTaxRate(string $MotorTaxRate) 设置税率
- * @method string getMotorBankName() 获取开户行
- * @method void setMotorBankName(string $MotorBankName) 设置开户行
- * @method string getMotorBankAccount() 获取账号
- * @method void setMotorBankAccount(string $MotorBankAccount) 设置账号
+ * @method string getMotorBankName() 获取银行账号
+ * @method void setMotorBankName(string $MotorBankName) 设置银行账号
+ * @method string getMotorBankAccount() 获取开户行
+ * @method void setMotorBankAccount(string $MotorBankAccount) 设置开户行
  * @method string getSellerAddress() 获取销售地址
  * @method void setSellerAddress(string $SellerAddress) 设置销售地址
  * @method string getSellerTel() 获取销售电话
@@ -132,12 +132,12 @@ class VehicleInvoiceInfo extends AbstractModel
     public $MotorTaxRate;
 
     /**
-     * @var string 开户行
+     * @var string 银行账号
      */
     public $MotorBankName;
 
     /**
-     * @var string 账号
+     * @var string 开户行
      */
     public $MotorBankAccount;
 
@@ -171,8 +171,8 @@ class VehicleInvoiceInfo extends AbstractModel
      * @param string $TaxtationOrgCode 主管税务机关代码
      * @param string $TaxtationOrgName 主管税务机关名称
      * @param string $MotorTaxRate 税率
-     * @param string $MotorBankName 开户行
-     * @param string $MotorBankAccount 账号
+     * @param string $MotorBankName 银行账号
+     * @param string $MotorBankAccount 开户行
      * @param string $SellerAddress 销售地址
      * @param string $SellerTel 销售电话
      * @param string $BuyerNo 购方身份证

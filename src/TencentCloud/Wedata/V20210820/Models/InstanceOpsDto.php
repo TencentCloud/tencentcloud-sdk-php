@@ -228,6 +228,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceKey(string $InstanceKey) 设置实例标识
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutorGroupId() 获取资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutorGroupId(string $ExecutorGroupId) 设置资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutorGroupName() 获取资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutorGroupName(string $ExecutorGroupName) 设置资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -544,6 +552,18 @@ class InstanceOpsDto extends AbstractModel
     public $InstanceKey;
 
     /**
+     * @var string 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutorGroupId;
+
+    /**
+     * @var string 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutorGroupName;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -647,6 +667,10 @@ class InstanceOpsDto extends AbstractModel
      * @param string $TenantId 租户id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceKey 实例标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutorGroupName 资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -869,6 +893,14 @@ class InstanceOpsDto extends AbstractModel
 
         if (array_key_exists("InstanceKey",$param) and $param["InstanceKey"] !== null) {
             $this->InstanceKey = $param["InstanceKey"];
+        }
+
+        if (array_key_exists("ExecutorGroupId",$param) and $param["ExecutorGroupId"] !== null) {
+            $this->ExecutorGroupId = $param["ExecutorGroupId"];
+        }
+
+        if (array_key_exists("ExecutorGroupName",$param) and $param["ExecutorGroupName"] !== null) {
+            $this->ExecutorGroupName = $param["ExecutorGroupName"];
         }
     }
 }

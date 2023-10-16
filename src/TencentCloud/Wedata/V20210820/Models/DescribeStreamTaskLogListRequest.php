@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderType(string $OrderType) 设置排序类型 desc asc
  * @method integer getRunningOrderId() 获取作业运行的实例ID
  * @method void setRunningOrderId(integer $RunningOrderId) 设置作业运行的实例ID
+ * @method string getKeyword() 获取关键字
+ * @method void setKeyword(string $Keyword) 设置关键字
  */
 class DescribeStreamTaskLogListRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeStreamTaskLogListRequest extends AbstractModel
     public $RunningOrderId;
 
     /**
+     * @var string 关键字
+     */
+    public $Keyword;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskId 任务ID
      * @param string $JobId 作业ID
@@ -96,6 +103,7 @@ class DescribeStreamTaskLogListRequest extends AbstractModel
      * @param integer $Limit 条数
      * @param string $OrderType 排序类型 desc asc
      * @param integer $RunningOrderId 作业运行的实例ID
+     * @param string $Keyword 关键字
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeStreamTaskLogListRequest extends AbstractModel
 
         if (array_key_exists("RunningOrderId",$param) and $param["RunningOrderId"] !== null) {
             $this->RunningOrderId = $param["RunningOrderId"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

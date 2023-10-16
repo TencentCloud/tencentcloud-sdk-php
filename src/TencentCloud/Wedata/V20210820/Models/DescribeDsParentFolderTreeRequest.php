@@ -18,36 +18,44 @@ namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateIntegrationNode请求参数结构体
+ * DescribeDsParentFolderTree请求参数结构体
  *
- * @method IntegrationNodeInfo getNodeInfo() 获取集成节点信息
- * @method void setNodeInfo(IntegrationNodeInfo $NodeInfo) 设置集成节点信息
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getTaskType() 获取任务类型，201为实时任务，202为离线任务
- * @method void setTaskType(integer $TaskType) 设置任务类型，201为实时任务，202为离线任务
+ * @method string getFolderId() 获取文件夹ID
+ * @method void setFolderId(string $FolderId) 设置文件夹ID
+ * @method string getWorkflowId() 获取工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method string getTaskId() 获取任务id
+ * @method void setTaskId(string $TaskId) 设置任务id
  */
-class CreateIntegrationNodeRequest extends AbstractModel
+class DescribeDsParentFolderTreeRequest extends AbstractModel
 {
-    /**
-     * @var IntegrationNodeInfo 集成节点信息
-     */
-    public $NodeInfo;
-
     /**
      * @var string 项目id
      */
     public $ProjectId;
 
     /**
-     * @var integer 任务类型，201为实时任务，202为离线任务
+     * @var string 文件夹ID
      */
-    public $TaskType;
+    public $FolderId;
 
     /**
-     * @param IntegrationNodeInfo $NodeInfo 集成节点信息
+     * @var string 工作流ID
+     */
+    public $WorkflowId;
+
+    /**
+     * @var string 任务id
+     */
+    public $TaskId;
+
+    /**
      * @param string $ProjectId 项目id
-     * @param integer $TaskType 任务类型，201为实时任务，202为离线任务
+     * @param string $FolderId 文件夹ID
+     * @param string $WorkflowId 工作流ID
+     * @param string $TaskId 任务id
      */
     function __construct()
     {
@@ -62,17 +70,20 @@ class CreateIntegrationNodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeInfo",$param) and $param["NodeInfo"] !== null) {
-            $this->NodeInfo = new IntegrationNodeInfo();
-            $this->NodeInfo->deserialize($param["NodeInfo"]);
-        }
-
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
         }
 
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists("FolderId",$param) and $param["FolderId"] !== null) {
+            $this->FolderId = $param["FolderId"];
+        }
+
+        if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
+            $this->WorkflowId = $param["WorkflowId"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

@@ -82,6 +82,7 @@ class TransmitOralProcessWithInitResponse extends AbstractModel
 
     /**
      * @var string 已废弃，不再保存语音音频文件下载地址
+     * @deprecated
      */
     public $AudioUrl;
 

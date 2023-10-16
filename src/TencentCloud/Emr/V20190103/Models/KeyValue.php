@@ -14,27 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述了 “云监控” 服务相关的信息
+ * 键值对，主要用来做Filter
  *
- * @method boolean getEnabled() 获取是否开启[云监控](/document/product/248)服务。取值范围：<br><li>true：表示开启云监控服务<br><li>false：表示不开启云监控服务<br><br>默认取值：true。
+ * @method string getKey() 获取键
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnabled(boolean $Enabled) 设置是否开启[云监控](/document/product/248)服务。取值范围：<br><li>true：表示开启云监控服务<br><li>false：表示不开启云监控服务<br><br>默认取值：true。
+ * @method void setKey(string $Key) 设置键
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValue() 获取值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(string $Value) 设置值
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class RunMonitorServiceEnabled extends AbstractModel
+class KeyValue extends AbstractModel
 {
     /**
-     * @var boolean 是否开启[云监控](/document/product/248)服务。取值范围：<br><li>true：表示开启云监控服务<br><li>false：表示不开启云监控服务<br><br>默认取值：true。
+     * @var string 键
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Enabled;
+    public $Key;
 
     /**
-     * @param boolean $Enabled 是否开启[云监控](/document/product/248)服务。取值范围：<br><li>true：表示开启云监控服务<br><li>false：表示不开启云监控服务<br><br>默认取值：true。
+     * @var string 值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 键
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Value 值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -50,8 +62,12 @@ class RunMonitorServiceEnabled extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

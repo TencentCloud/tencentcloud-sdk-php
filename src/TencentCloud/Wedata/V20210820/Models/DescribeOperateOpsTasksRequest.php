@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetServiceType(string $TargetServiceType) 设置（仅针对离线同步任务）目标数据源类型
  * @method string getAlarmType() 获取告警类型，多个类型以逗号分隔
  * @method void setAlarmType(string $AlarmType) 设置告警类型，多个类型以逗号分隔
+ * @method string getExecutorGroupIdList() 获取资源组id,多个资源组id之间以英文字符逗号分隔
+ * @method void setExecutorGroupIdList(string $ExecutorGroupIdList) 设置资源组id,多个资源组id之间以英文字符逗号分隔
  */
 class DescribeOperateOpsTasksRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
     public $AlarmType;
 
     /**
+     * @var string 资源组id,多个资源组id之间以英文字符逗号分隔
+     */
+    public $ExecutorGroupIdList;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -184,6 +191,7 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
      * @param string $TargetServiceId （仅针对离线同步任务）目标数据源id
      * @param string $TargetServiceType （仅针对离线同步任务）目标数据源类型
      * @param string $AlarmType 告警类型，多个类型以逗号分隔
+     * @param string $ExecutorGroupIdList 资源组id,多个资源组id之间以英文字符逗号分隔
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("AlarmType",$param) and $param["AlarmType"] !== null) {
             $this->AlarmType = $param["AlarmType"];
+        }
+
+        if (array_key_exists("ExecutorGroupIdList",$param) and $param["ExecutorGroupIdList"] !== null) {
+            $this->ExecutorGroupIdList = $param["ExecutorGroupIdList"];
         }
     }
 }

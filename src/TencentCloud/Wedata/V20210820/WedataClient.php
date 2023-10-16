@@ -59,9 +59,10 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CommitRuleGroupTaskResponse CommitRuleGroupTask(Models\CommitRuleGroupTaskRequest $req) 提交规则组运行任务接口
  * @method Models\CountOpsInstanceStateResponse CountOpsInstanceState(Models\CountOpsInstanceStateRequest $req) 统计任务实例状态
  * @method Models\CreateBaselineResponse CreateBaseline(Models\CreateBaselineRequest $req) 创建基线
- * @method Models\CreateCustomFunctionResponse CreateCustomFunction(Models\CreateCustomFunctionRequest $req)  创建用户自定义函数
+ * @method Models\CreateCustomFunctionResponse CreateCustomFunction(Models\CreateCustomFunctionRequest $req) 创建用户自定义函数
  * @method Models\CreateDataSourceResponse CreateDataSource(Models\CreateDataSourceRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建数据源
+ * @method Models\CreateDsFolderResponse CreateDsFolder(Models\CreateDsFolderRequest $req) 编排空间-创建文件夹
  * @method Models\CreateFolderResponse CreateFolder(Models\CreateFolderRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建文件夹
  * @method Models\CreateHiveTableResponse CreateHiveTable(Models\CreateHiveTableRequest $req) 建hive表
@@ -85,6 +86,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DeleteCustomFunctionResponse DeleteCustomFunction(Models\DeleteCustomFunctionRequest $req) 删除用户自定义函数
  * @method Models\DeleteDataSourcesResponse DeleteDataSources(Models\DeleteDataSourcesRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 删除数据源
+ * @method Models\DeleteDsFolderResponse DeleteDsFolder(Models\DeleteDsFolderRequest $req) 编排空间-删除文件夹
  * @method Models\DeleteFileResponse DeleteFile(Models\DeleteFileRequest $req) 删除文件
  * @method Models\DeleteFilePathResponse DeleteFilePath(Models\DeleteFilePathRequest $req) 开发空间-批量删除目录和文件
  * @method Models\DeleteFolderResponse DeleteFolder(Models\DeleteFolderRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
@@ -141,6 +143,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeDrInstancePageResponse DescribeDrInstancePage(Models\DescribeDrInstancePageRequest $req) 分页查询试运行实例列表
  * @method Models\DescribeDrInstanceScriptContentResponse DescribeDrInstanceScriptContent(Models\DescribeDrInstanceScriptContentRequest $req) 查询试运行实例执行内容
  * @method Models\DescribeDrSonInstanceResponse DescribeDrSonInstance(Models\DescribeDrSonInstanceRequest $req) 查询试运行实例子实例列表
+ * @method Models\DescribeDsFolderTreeResponse DescribeDsFolderTree(Models\DescribeDsFolderTreeRequest $req) 查询目录树
+ * @method Models\DescribeDsParentFolderTreeResponse DescribeDsParentFolderTree(Models\DescribeDsParentFolderTreeRequest $req) 查询父目录树，用于工作流、任务定位
  * @method Models\DescribeEventResponse DescribeEvent(Models\DescribeEventRequest $req) 根据项目ID和事件名称查看事件详情
  * @method Models\DescribeEventCasesResponse DescribeEventCases(Models\DescribeEventCasesRequest $req) 根据条件查找事件实例
  * @method Models\DescribeEventConsumeTasksResponse DescribeEventConsumeTasks(Models\DescribeEventConsumeTasksRequest $req) 查看事件实例的消费任务
@@ -182,7 +186,9 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeIntegrationTaskResponse DescribeIntegrationTask(Models\DescribeIntegrationTaskRequest $req) 查询集成任务
  * @method Models\DescribeIntegrationTasksResponse DescribeIntegrationTasks(Models\DescribeIntegrationTasksRequest $req) 查询集成任务列表
  * @method Models\DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfo(Models\DescribeIntegrationVersionNodesInfoRequest $req) 查询集成任务版本节点信息
- * @method Models\DescribeKafkaTopicInfoResponse DescribeKafkaTopicInfo(Models\DescribeKafkaTopicInfoRequest $req) 获取kafka的topic信息
+ * @method Models\DescribeKafkaTopicInfoResponse DescribeKafkaTopicInfo(Models\DescribeKafkaTopicInfoRequest $req) 没用到
+
+获取kafka的topic信息
  * @method Models\DescribeMonitorsByPageResponse DescribeMonitorsByPage(Models\DescribeMonitorsByPageRequest $req) 分页查询质量监控组
  * @method Models\DescribeOfflineTaskTokenResponse DescribeOfflineTaskToken(Models\DescribeOfflineTaskTokenRequest $req) 获取离线任务长连接Token
  * @method Models\DescribeOperateOpsTaskDatasourceResponse DescribeOperateOpsTaskDatasource(Models\DescribeOperateOpsTaskDatasourceRequest $req) 任务运维搜索 查询生产态任务数据源列表
@@ -277,6 +283,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DiagnosePlusResponse DiagnosePlus(Models\DiagnosePlusRequest $req) 实例诊断信息
  * @method Models\DryRunDIOfflineTaskResponse DryRunDIOfflineTask(Models\DryRunDIOfflineTaskRequest $req) 调试运行集成任务
  * @method Models\EditBaselineResponse EditBaseline(Models\EditBaselineRequest $req) 编辑基线
+ * @method Models\FindAllFolderResponse FindAllFolder(Models\FindAllFolderRequest $req) 查找全部的文件夹
  * @method Models\ForceSucInstancesResponse ForceSucInstances(Models\ForceSucInstancesRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 实例批量置成功
  * @method Models\ForceSucScheduleInstancesResponse ForceSucScheduleInstances(Models\ForceSucScheduleInstancesRequest $req) 实例强制成功
@@ -309,6 +316,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\ModifyDataSourceResponse ModifyDataSource(Models\ModifyDataSourceRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 修改数据源
  * @method Models\ModifyDimensionWeightResponse ModifyDimensionWeight(Models\ModifyDimensionWeightRequest $req) 质量报告-修改维度权限
+ * @method Models\ModifyDsFolderResponse ModifyDsFolder(Models\ModifyDsFolderRequest $req) 数据开发模块-文件夹更新
  * @method Models\ModifyExecStrategyResponse ModifyExecStrategy(Models\ModifyExecStrategyRequest $req) 更新规则组执行策略
  * @method Models\ModifyFolderResponse ModifyFolder(Models\ModifyFolderRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 文件夹更新
@@ -342,6 +350,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\RestartInLongAgentResponse RestartInLongAgent(Models\RestartInLongAgentRequest $req) 重启采集器
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) 继续集成任务
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) 抢占锁定集成任务
+ * @method Models\RunForceSucScheduleInstancesResponse RunForceSucScheduleInstances(Models\RunForceSucScheduleInstancesRequest $req) 实例强制成功
+ * @method Models\RunRerunScheduleInstancesResponse RunRerunScheduleInstances(Models\RunRerunScheduleInstancesRequest $req) 实例批量重跑
  * @method Models\RunTaskResponse RunTask(Models\RunTaskRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 运行任务
  * @method Models\RunTasksByMultiWorkflowResponse RunTasksByMultiWorkflow(Models\RunTasksByMultiWorkflowRequest $req) 批量启动工作流

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCustomFunction请求参数结构体
  *
- * @method string getType() 获取类型：HIVE、SPARK
- * @method void setType(string $Type) 设置类型：HIVE、SPARK
- * @method string getKind() 获取分类：窗口函数、聚合函数、日期函数......
- * @method void setKind(string $Kind) 设置分类：窗口函数、聚合函数、日期函数......
+ * @method string getType() 获取枚举值：HIVE、SPARK、DLC
+ * @method void setType(string $Type) 设置枚举值：HIVE、SPARK、DLC
+ * @method string getKind() 获取枚举值：ANALYSIS(函数)、ENCRYPTION(加密函数)、AGGREGATE(聚合函数)、LOGIC(逻辑函数)、DATE_AND_TIME(日期与时间函数)、MATH(数学函数)、CONVERSION(转换函数)、STRING(字符串函数)、IP_AND_DOMAIN(IP和域名函数)、WINDOW(窗口函数)、OTHER(其他函数)
+ * @method void setKind(string $Kind) 设置枚举值：ANALYSIS(函数)、ENCRYPTION(加密函数)、AGGREGATE(聚合函数)、LOGIC(逻辑函数)、DATE_AND_TIME(日期与时间函数)、MATH(数学函数)、CONVERSION(转换函数)、STRING(字符串函数)、IP_AND_DOMAIN(IP和域名函数)、WINDOW(窗口函数)、OTHER(其他函数)
  * @method string getName() 获取函数名称
  * @method void setName(string $Name) 设置函数名称
  * @method string getClusterIdentifier() 获取集群实例引擎 ID
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateCustomFunctionRequest extends AbstractModel
 {
     /**
-     * @var string 类型：HIVE、SPARK
+     * @var string 枚举值：HIVE、SPARK、DLC
      */
     public $Type;
 
     /**
-     * @var string 分类：窗口函数、聚合函数、日期函数......
+     * @var string 枚举值：ANALYSIS(函数)、ENCRYPTION(加密函数)、AGGREGATE(聚合函数)、LOGIC(逻辑函数)、DATE_AND_TIME(日期与时间函数)、MATH(数学函数)、CONVERSION(转换函数)、STRING(字符串函数)、IP_AND_DOMAIN(IP和域名函数)、WINDOW(窗口函数)、OTHER(其他函数)
      */
     public $Kind;
 
@@ -66,8 +66,8 @@ class CreateCustomFunctionRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param string $Type 类型：HIVE、SPARK
-     * @param string $Kind 分类：窗口函数、聚合函数、日期函数......
+     * @param string $Type 枚举值：HIVE、SPARK、DLC
+     * @param string $Kind 枚举值：ANALYSIS(函数)、ENCRYPTION(加密函数)、AGGREGATE(聚合函数)、LOGIC(逻辑函数)、DATE_AND_TIME(日期与时间函数)、MATH(数学函数)、CONVERSION(转换函数)、STRING(字符串函数)、IP_AND_DOMAIN(IP和域名函数)、WINDOW(窗口函数)、OTHER(其他函数)
      * @param string $Name 函数名称
      * @param string $ClusterIdentifier 集群实例引擎 ID
      * @param string $DbName 数据库名称

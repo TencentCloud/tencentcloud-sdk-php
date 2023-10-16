@@ -127,6 +127,13 @@ KEYWORD - 关键字
 为JSON格式。
 不同类型的控件会有部分非通用参数
 
+ComponentType为TEXT、MULTI_LINE_TEXT时，支持以下参数：
+1 Font：目前只支持黑体、宋体
+2 FontSize： 范围12-72
+3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
+4 FontColor：字符串类型，格式为RGB颜色数字
+参数样例：    "ComponentExtra": "{\"FontColor\":\"255,0,0\",\"FontSize\":12}"
+
 TEXT/MULTI_LINE_TEXT控件可以指定
 1 Font：目前只支持黑体、宋体
 2 FontSize： 范围12-72
@@ -162,6 +169,13 @@ ComponentType为SIGN_SEAL类型时，支持以下参数：
  * @method void setComponentExtra(string $ComponentExtra) 设置扩展参数：
 为JSON格式。
 不同类型的控件会有部分非通用参数
+
+ComponentType为TEXT、MULTI_LINE_TEXT时，支持以下参数：
+1 Font：目前只支持黑体、宋体
+2 FontSize： 范围12-72
+3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
+4 FontColor：字符串类型，格式为RGB颜色数字
+参数样例：    "ComponentExtra": "{\"FontColor\":\"255,0,0\",\"FontSize\":12}"
 
 TEXT/MULTI_LINE_TEXT控件可以指定
 1 Font：目前只支持黑体、宋体
@@ -513,6 +527,13 @@ KEYWORD - 关键字
 为JSON格式。
 不同类型的控件会有部分非通用参数
 
+ComponentType为TEXT、MULTI_LINE_TEXT时，支持以下参数：
+1 Font：目前只支持黑体、宋体
+2 FontSize： 范围12-72
+3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
+4 FontColor：字符串类型，格式为RGB颜色数字
+参数样例：    "ComponentExtra": "{\"FontColor\":\"255,0,0\",\"FontSize\":12}"
+
 TEXT/MULTI_LINE_TEXT控件可以指定
 1 Font：目前只支持黑体、宋体
 2 FontSize： 范围12-72
@@ -763,6 +784,13 @@ KEYWORD - 关键字
      * @param string $ComponentExtra 扩展参数：
 为JSON格式。
 不同类型的控件会有部分非通用参数
+
+ComponentType为TEXT、MULTI_LINE_TEXT时，支持以下参数：
+1 Font：目前只支持黑体、宋体
+2 FontSize： 范围12-72
+3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
+4 FontColor：字符串类型，格式为RGB颜色数字
+参数样例：    "ComponentExtra": "{\"FontColor\":\"255,0,0\",\"FontSize\":12}"
 
 TEXT/MULTI_LINE_TEXT控件可以指定
 1 Font：目前只支持黑体、宋体

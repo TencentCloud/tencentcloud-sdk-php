@@ -14,40 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20210820\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateIntegrationNode请求参数结构体
+ * GetDeviceSumStatistics请求参数结构体
  *
- * @method IntegrationNodeInfo getNodeInfo() 获取集成节点信息
- * @method void setNodeInfo(IntegrationNodeInfo $NodeInfo) 设置集成节点信息
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getTaskType() 获取任务类型，201为实时任务，202为离线任务
- * @method void setTaskType(integer $TaskType) 设置任务类型，201为实时任务，202为离线任务
+ * @method array getProductIds() 获取产品id列表，长度为0则拉取项目内全部产品
+ * @method void setProductIds(array $ProductIds) 设置产品id列表，长度为0则拉取项目内全部产品
  */
-class CreateIntegrationNodeRequest extends AbstractModel
+class GetDeviceSumStatisticsRequest extends AbstractModel
 {
-    /**
-     * @var IntegrationNodeInfo 集成节点信息
-     */
-    public $NodeInfo;
-
     /**
      * @var string 项目id
      */
     public $ProjectId;
 
     /**
-     * @var integer 任务类型，201为实时任务，202为离线任务
+     * @var array 产品id列表，长度为0则拉取项目内全部产品
      */
-    public $TaskType;
+    public $ProductIds;
 
     /**
-     * @param IntegrationNodeInfo $NodeInfo 集成节点信息
      * @param string $ProjectId 项目id
-     * @param integer $TaskType 任务类型，201为实时任务，202为离线任务
+     * @param array $ProductIds 产品id列表，长度为0则拉取项目内全部产品
      */
     function __construct()
     {
@@ -62,17 +54,12 @@ class CreateIntegrationNodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodeInfo",$param) and $param["NodeInfo"] !== null) {
-            $this->NodeInfo = new IntegrationNodeInfo();
-            $this->NodeInfo->deserialize($param["NodeInfo"]);
-        }
-
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
         }
 
-        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
-            $this->TaskType = $param["TaskType"];
+        if (array_key_exists("ProductIds",$param) and $param["ProductIds"] !== null) {
+            $this->ProductIds = $param["ProductIds"];
         }
     }
 }

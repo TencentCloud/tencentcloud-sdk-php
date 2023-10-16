@@ -136,6 +136,8 @@ use TencentCloud\Common\AbstractModel;
 1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
  * @method string getKeyword() 获取主题词和关键词
  * @method void setKeyword(string $Keyword) 设置主题词和关键词
+ * @method string getCOSBucketURL() 获取音频存储路径，支持通过子路径指定文件夹名称
+ * @method void setCOSBucketURL(string $COSBucketURL) 设置音频存储路径，支持通过子路径指定文件夹名称
  */
 class TransmitOralProcessWithInitRequest extends AbstractModel
 {
@@ -226,6 +228,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
     /**
      * @var integer 音频存储模式，此参数已废弃，无需设置，设置与否都默认为0不存储；
 注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
+     * @deprecated
      */
     public $StorageMode;
 
@@ -268,6 +271,11 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
      * @var string 主题词和关键词
      */
     public $Keyword;
+
+    /**
+     * @var string 音频存储路径，支持通过子路径指定文件夹名称
+     */
+    public $COSBucketURL;
 
     /**
      * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
@@ -328,6 +336,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 0: 普通文本（默认）
 1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
      * @param string $Keyword 主题词和关键词
+     * @param string $COSBucketURL 音频存储路径，支持通过子路径指定文件夹名称
      */
     function __construct()
     {
@@ -412,6 +421,10 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 
         if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
             $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("COSBucketURL",$param) and $param["COSBucketURL"] !== null) {
+            $this->COSBucketURL = $param["COSBucketURL"];
         }
     }
 }

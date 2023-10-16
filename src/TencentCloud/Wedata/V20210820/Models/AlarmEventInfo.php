@@ -74,6 +74,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegularId(string $RegularId) 设置告警规则ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlarmRecipientName() 获取告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmRecipientName(string $AlarmRecipientName) 设置告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskType() 获取告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskType(integer $TaskType) 设置告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSendResult() 获取发送结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSendResult(string $SendResult) 设置发送结果
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmEventInfo extends AbstractModel
 {
@@ -177,6 +189,24 @@ class AlarmEventInfo extends AbstractModel
     public $RegularId;
 
     /**
+     * @var string 告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmRecipientName;
+
+    /**
+     * @var integer 告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskType;
+
+    /**
+     * @var string 发送结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SendResult;
+
+    /**
      * @param string $AlarmId 告警ID
      * @param string $AlarmTime 告警时间
      * @param string $TaskId 任务ID
@@ -203,6 +233,12 @@ class AlarmEventInfo extends AbstractModel
      * @param integer $Operator 阈值计算算子，1 : 大于 2 ：小于
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegularId 告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlarmRecipientName 告警接收人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskType 告警任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SendResult 发送结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +324,18 @@ class AlarmEventInfo extends AbstractModel
 
         if (array_key_exists("RegularId",$param) and $param["RegularId"] !== null) {
             $this->RegularId = $param["RegularId"];
+        }
+
+        if (array_key_exists("AlarmRecipientName",$param) and $param["AlarmRecipientName"] !== null) {
+            $this->AlarmRecipientName = $param["AlarmRecipientName"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("SendResult",$param) and $param["SendResult"] !== null) {
+            $this->SendResult = $param["SendResult"];
         }
     }
 }

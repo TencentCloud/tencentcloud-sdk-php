@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRealTimeTaskMetricOverview请求参数结构体
  *
- * @method string getTaskId() 获取要查看的实时任务的任务Id
- * @method void setTaskId(string $TaskId) 设置要查看的实时任务的任务Id
- * @method string getProjectId() 获取无
- * @method void setProjectId(string $ProjectId) 设置无
+ * @method string getTaskId() 获取要查看的实时任务的任务ID，可在任务列表页面中获得
+ * @method void setTaskId(string $TaskId) 设置要查看的实时任务的任务ID，可在任务列表页面中获得
+ * @method string getProjectId() 获取要查看的项目ID
+ * @method void setProjectId(string $ProjectId) 设置要查看的项目ID
  * @method integer getStartTime() 获取开始时间
  * @method void setStartTime(integer $StartTime) 设置开始时间
  * @method integer getEndTime() 获取结束时间
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel
 {
     /**
-     * @var string 要查看的实时任务的任务Id
+     * @var string 要查看的实时任务的任务ID，可在任务列表页面中获得
      */
     public $TaskId;
 
     /**
-     * @var string 无
+     * @var string 要查看的项目ID
      */
     public $ProjectId;
 
@@ -52,8 +52,8 @@ class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $TaskId 要查看的实时任务的任务Id
-     * @param string $ProjectId 无
+     * @param string $TaskId 要查看的实时任务的任务ID，可在任务列表页面中获得
+     * @param string $ProjectId 要查看的项目ID
      * @param integer $StartTime 开始时间
      * @param integer $EndTime 结束时间
      */

@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTenantId(string $TenantId) 设置租户id
  * @method string getDataTimeCycle() 获取根据当前数据时间或者是下一个数据时间查询, 默认当前数据时间
  * @method void setDataTimeCycle(string $DataTimeCycle) 设置根据当前数据时间或者是下一个数据时间查询, 默认当前数据时间
+ * @method array getExecutorGroupIdList() 获取资源组id,多个资源组id用英文逗号分隔
+ * @method void setExecutorGroupIdList(array $ExecutorGroupIdList) 设置资源组id,多个资源组id用英文逗号分隔
  */
 class InstanceApiOpsRequest extends AbstractModel
 {
@@ -234,6 +236,11 @@ class InstanceApiOpsRequest extends AbstractModel
     public $DataTimeCycle;
 
     /**
+     * @var array 资源组id,多个资源组id用英文逗号分隔
+     */
+    public $ExecutorGroupIdList;
+
+    /**
      * @param InstanceOpsDto $Instance 单个查询条件
      * @param string $SortCol 排序字段，目前包含：重试次数，实例数据时间，运行耗时
      * @param array $TaskIdList 任务id列表
@@ -264,6 +271,7 @@ class InstanceApiOpsRequest extends AbstractModel
      * @param integer $DagDepth dag深度 默认为1，取值 1-6
      * @param string $TenantId 租户id
      * @param string $DataTimeCycle 根据当前数据时间或者是下一个数据时间查询, 默认当前数据时间
+     * @param array $ExecutorGroupIdList 资源组id,多个资源组id用英文逗号分隔
      */
     function __construct()
     {
@@ -402,6 +410,10 @@ class InstanceApiOpsRequest extends AbstractModel
 
         if (array_key_exists("DataTimeCycle",$param) and $param["DataTimeCycle"] !== null) {
             $this->DataTimeCycle = $param["DataTimeCycle"];
+        }
+
+        if (array_key_exists("ExecutorGroupIdList",$param) and $param["ExecutorGroupIdList"] !== null) {
+            $this->ExecutorGroupIdList = $param["ExecutorGroupIdList"];
         }
     }
 }

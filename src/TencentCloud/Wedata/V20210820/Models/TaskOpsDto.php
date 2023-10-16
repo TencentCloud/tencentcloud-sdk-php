@@ -340,6 +340,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmit(boolean $Submit) 设置任务版本是否已提交
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutorGroupId() 获取资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutorGroupId(string $ExecutorGroupId) 设置资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutorGroupName() 获取资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutorGroupName(string $ExecutorGroupName) 设置资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOpsDto extends AbstractModel
 {
@@ -824,6 +832,18 @@ class TaskOpsDto extends AbstractModel
     public $Submit;
 
     /**
+     * @var string 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutorGroupId;
+
+    /**
+     * @var string 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutorGroupName;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务id
@@ -983,6 +1003,10 @@ class TaskOpsDto extends AbstractModel
      * @param string $TasksStr 子任务列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Submit 任务版本是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutorGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutorGroupName 资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1318,6 +1342,14 @@ class TaskOpsDto extends AbstractModel
 
         if (array_key_exists("Submit",$param) and $param["Submit"] !== null) {
             $this->Submit = $param["Submit"];
+        }
+
+        if (array_key_exists("ExecutorGroupId",$param) and $param["ExecutorGroupId"] !== null) {
+            $this->ExecutorGroupId = $param["ExecutorGroupId"];
+        }
+
+        if (array_key_exists("ExecutorGroupName",$param) and $param["ExecutorGroupName"] !== null) {
+            $this->ExecutorGroupName = $param["ExecutorGroupName"];
         }
     }
 }

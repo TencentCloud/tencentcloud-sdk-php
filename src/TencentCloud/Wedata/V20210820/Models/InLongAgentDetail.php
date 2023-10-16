@@ -58,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLifeDays(integer $LifeDays) 设置生命周期
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterId() 获取集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAgentRegion() 获取agent地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentRegion(string $AgentRegion) 设置agent地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InLongAgentDetail extends AbstractModel
 {
@@ -137,6 +145,18 @@ class InLongAgentDetail extends AbstractModel
     public $LifeDays;
 
     /**
+     * @var string 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterId;
+
+    /**
+     * @var string agent地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentRegion;
+
+    /**
      * @param string $AgentId Agent ID
      * @param string $AgentName Agent Name
      * @param string $Status Agent状态(running运行中，initializing 操作中，failed心跳异常)
@@ -155,6 +175,10 @@ class InLongAgentDetail extends AbstractModel
      * @param integer $AgentTotal agent数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LifeDays 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterId 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AgentRegion agent地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -229,6 +253,14 @@ class InLongAgentDetail extends AbstractModel
 
         if (array_key_exists("LifeDays",$param) and $param["LifeDays"] !== null) {
             $this->LifeDays = $param["LifeDays"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("AgentRegion",$param) and $param["AgentRegion"] !== null) {
+            $this->AgentRegion = $param["AgentRegion"];
         }
     }
 }

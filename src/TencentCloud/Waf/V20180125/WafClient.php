@@ -58,6 +58,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
 获取信息防泄漏规则列表
  * @method Models\DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(Models\DescribeAntiInfoLeakageRulesRequest $req) 取得信息防泄漏规则列表
  * @method Models\DescribeAttackOverviewResponse DescribeAttackOverview(Models\DescribeAttackOverviewRequest $req) 攻击总览
+ * @method Models\DescribeAttackTypeResponse DescribeAttackType(Models\DescribeAttackTypeRequest $req) 查询指定域名TOP N攻击类型
  * @method Models\DescribeAttackWhiteRuleResponse DescribeAttackWhiteRule(Models\DescribeAttackWhiteRuleRequest $req) 获取用户规则白名单列表
  * @method Models\DescribeAutoDenyIPResponse DescribeAutoDenyIP(Models\DescribeAutoDenyIPRequest $req) 接口已废弃
 
@@ -78,6 +79,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查询用户所有域名的详细信息
  * @method Models\DescribeFindDomainListResponse DescribeFindDomainList(Models\DescribeFindDomainListRequest $req) 获取发现域名列表接口
  * @method Models\DescribeFlowTrendResponse DescribeFlowTrend(Models\DescribeFlowTrendRequest $req) 获取waf流量访问趋势
+ * @method Models\DescribeHistogramResponse DescribeHistogram(Models\DescribeHistogramRequest $req) 查询多种条件的聚类分析
  * @method Models\DescribeHostResponse DescribeHost(Models\DescribeHostRequest $req) clb-waf获取防护域名详情
  * @method Models\DescribeHostLimitResponse DescribeHostLimit(Models\DescribeHostLimitRequest $req) 添加域名的首先验证是否购买了套餐，是否没有达到购买套餐的限制，域名是否已经添加
  * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) clb-waf中获取防护域名列表
@@ -92,6 +94,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
  * @method Models\DescribeSessionResponse DescribeSession(Models\DescribeSessionRequest $req) Waf 会话定义查询接口
  * @method Models\DescribeTlsVersionResponse DescribeTlsVersion(Models\DescribeTlsVersionRequest $req) 查询用户TLS版本
+ * @method Models\DescribeTopAttackDomainResponse DescribeTopAttackDomain(Models\DescribeTopAttackDomainRequest $req) 查询Top5的攻击域名
  * @method Models\DescribeUserCdcClbWafRegionsResponse DescribeUserCdcClbWafRegions(Models\DescribeUserCdcClbWafRegionsRequest $req) 在CDC场景下，负载均衡型WAF的添加、编辑域名配置的时候，需要展示CDC负载均衡型WAF（cdc-clb-waf)支持的地域列表，通过DescribeUserCdcClbWafRegions既可以获得当前对客户已经开放的地域列表
  * @method Models\DescribeUserClbWafRegionsResponse DescribeUserClbWafRegions(Models\DescribeUserClbWafRegionsRequest $req) 在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
  * @method Models\DescribeUserDomainInfoResponse DescribeUserDomainInfo(Models\DescribeUserDomainInfoRequest $req) 查询saas和clb的域名信息

@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置表名称
  * @method string getDatabaseName() 获取数据库名称
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
- * @method string getMsType() 获取表类型
- * @method void setMsType(string $MsType) 设置表类型
+ * @method string getMsType() 获取数据源的类型（例如MYSQL、HIVE、KAFKA等）
+ * @method void setMsType(string $MsType) 设置数据源的类型（例如MYSQL、HIVE、KAFKA等）
  * @method string getDatasourceId() 获取数据源id
  * @method void setDatasourceId(string $DatasourceId) 设置数据源id
- * @method string getConnectionType() 获取HIVE传rpc
- * @method void setConnectionType(string $ConnectionType) 设置HIVE传rpc
+ * @method string getConnectionType() 获取连接类型（示例值rpc）
+ * @method void setConnectionType(string $ConnectionType) 设置连接类型（示例值rpc）
  * @method string getSchemaName() 获取元数据Database下的Schema名称
  * @method void setSchemaName(string $SchemaName) 设置元数据Database下的Schema名称
  */
@@ -46,7 +46,7 @@ class DescribeTableSchemaInfoRequest extends AbstractModel
     public $DatabaseName;
 
     /**
-     * @var string 表类型
+     * @var string 数据源的类型（例如MYSQL、HIVE、KAFKA等）
      */
     public $MsType;
 
@@ -56,7 +56,7 @@ class DescribeTableSchemaInfoRequest extends AbstractModel
     public $DatasourceId;
 
     /**
-     * @var string HIVE传rpc
+     * @var string 连接类型（示例值rpc）
      */
     public $ConnectionType;
 
@@ -68,9 +68,9 @@ class DescribeTableSchemaInfoRequest extends AbstractModel
     /**
      * @param string $Name 表名称
      * @param string $DatabaseName 数据库名称
-     * @param string $MsType 表类型
+     * @param string $MsType 数据源的类型（例如MYSQL、HIVE、KAFKA等）
      * @param string $DatasourceId 数据源id
-     * @param string $ConnectionType HIVE传rpc
+     * @param string $ConnectionType 连接类型（示例值rpc）
      * @param string $SchemaName 元数据Database下的Schema名称
      */
     function __construct()

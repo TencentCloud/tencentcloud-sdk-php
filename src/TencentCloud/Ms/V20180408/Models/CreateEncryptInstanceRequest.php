@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidPlan(AndroidPlan $AndroidPlan) 设置渠道合作android加固策略信息
  * @method AppletInfo getAppletInfo() 获取小程序加固信息
  * @method void setAppletInfo(AppletInfo $AppletInfo) 设置小程序加固信息
+ * @method IOSInfo getIOSInfo() 获取iOS混淆信息
+ * @method void setIOSInfo(IOSInfo $IOSInfo) 设置iOS混淆信息
  */
 class CreateEncryptInstanceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateEncryptInstanceRequest extends AbstractModel
     public $AppletInfo;
 
     /**
+     * @var IOSInfo iOS混淆信息
+     */
+    public $IOSInfo;
+
+    /**
      * @param integer $PlatformType 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      * @param integer $OrderType 订单采购类型 1-免费试用 2-按年收费 3-按次收费
      * @param integer $EncryptOpType 1-在线加固、  2-输出工具加固
@@ -80,6 +87,7 @@ class CreateEncryptInstanceRequest extends AbstractModel
      * @param AndroidAppInfo $AndroidAppInfo 渠道合作android加固App信息 
      * @param AndroidPlan $AndroidPlan 渠道合作android加固策略信息
      * @param AppletInfo $AppletInfo 小程序加固信息
+     * @param IOSInfo $IOSInfo iOS混淆信息
      */
     function __construct()
     {
@@ -123,6 +131,11 @@ class CreateEncryptInstanceRequest extends AbstractModel
         if (array_key_exists("AppletInfo",$param) and $param["AppletInfo"] !== null) {
             $this->AppletInfo = new AppletInfo();
             $this->AppletInfo->deserialize($param["AppletInfo"]);
+        }
+
+        if (array_key_exists("IOSInfo",$param) and $param["IOSInfo"] !== null) {
+            $this->IOSInfo = new IOSInfo();
+            $this->IOSInfo->deserialize($param["IOSInfo"]);
         }
     }
 }

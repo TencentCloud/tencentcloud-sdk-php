@@ -27,7 +27,7 @@ use TencentCloud\Car\V20220110\Models as Models;
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 本接口用于创建会话。接口超时时间：5秒。
  * @method Models\DestroySessionResponse DestroySession(Models\DestroySessionRequest $req) 销毁会话
  * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) 开始云端推流
- * @method Models\StartPublishStreamWithURLResponse StartPublishStreamWithURL(Models\StartPublishStreamWithURLRequest $req) 开始云端推流到指定URL
+ * @method Models\StartPublishStreamWithURLResponse StartPublishStreamWithURL(Models\StartPublishStreamWithURLRequest $req) 开始云端推流到指定URL。该推流方式需要单独计费，详细计费方式请查看[指定地址推流费用说明](https://cloud.tencent.com/document/product/1547/72168#98ac188a-d122-4caf-88be-05268ecefdf6)
  * @method Models\StopPublishStreamResponse StopPublishStream(Models\StopPublishStreamRequest $req) 停止云端推流
  */
 

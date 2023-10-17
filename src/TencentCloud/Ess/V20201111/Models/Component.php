@@ -97,13 +97,7 @@ ComponentType为TEXT、MULTI_LINE_TEXT时，支持以下参数：
 2 FontSize： 范围12-72
 3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
 4 FontColor：字符串类型，格式为RGB颜色数字
-参数样例：    "ComponentExtra": "{\"FontColor\":\"255,0,0\",\"FontSize\":12}"
-
-TEXT/MULTI_LINE_TEXT控件可以指定
-1 Font：目前只支持黑体、宋体
-2 FontSize： 范围12-72
-3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
-例如：{"FontSize":12}
+参数样例：{\"FontColor\":\"255,0,0\",\"FontSize\":12}
 
 ComponentType为FILL_IMAGE时，支持以下参数：
 NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
@@ -140,13 +134,7 @@ ComponentType为TEXT、MULTI_LINE_TEXT时，支持以下参数：
 2 FontSize： 范围12-72
 3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
 4 FontColor：字符串类型，格式为RGB颜色数字
-参数样例：    "ComponentExtra": "{\"FontColor\":\"255,0,0\",\"FontSize\":12}"
-
-TEXT/MULTI_LINE_TEXT控件可以指定
-1 Font：目前只支持黑体、宋体
-2 FontSize： 范围12-72
-3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
-例如：{"FontSize":12}
+参数样例：{\"FontColor\":\"255,0,0\",\"FontSize\":12}
 
 ComponentType为FILL_IMAGE时，支持以下参数：
 NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
@@ -487,13 +475,7 @@ ComponentType为TEXT、MULTI_LINE_TEXT时，支持以下参数：
 2 FontSize： 范围12-72
 3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
 4 FontColor：字符串类型，格式为RGB颜色数字
-参数样例：    "ComponentExtra": "{\"FontColor\":\"255,0,0\",\"FontSize\":12}"
-
-TEXT/MULTI_LINE_TEXT控件可以指定
-1 Font：目前只支持黑体、宋体
-2 FontSize： 范围12-72
-3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
-例如：{"FontSize":12}
+参数样例：{\"FontColor\":\"255,0,0\",\"FontSize\":12}
 
 ComponentType为FILL_IMAGE时，支持以下参数：
 NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
@@ -735,13 +717,7 @@ ComponentType为TEXT、MULTI_LINE_TEXT时，支持以下参数：
 2 FontSize： 范围12-72
 3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
 4 FontColor：字符串类型，格式为RGB颜色数字
-参数样例：    "ComponentExtra": "{\"FontColor\":\"255,0,0\",\"FontSize\":12}"
-
-TEXT/MULTI_LINE_TEXT控件可以指定
-1 Font：目前只支持黑体、宋体
-2 FontSize： 范围12-72
-3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
-例如：{"FontSize":12}
+参数样例：{\"FontColor\":\"255,0,0\",\"FontSize\":12}
 
 ComponentType为FILL_IMAGE时，支持以下参数：
 NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中

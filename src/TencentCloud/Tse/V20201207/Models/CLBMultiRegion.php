@@ -14,59 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 签署方信息，发起合同后可获取到对应的签署方信息，如角色ID，角色名称
+ * CLB多可用区信息
  *
- * @method string getSignId() 获取签署方唯一编号
-
-在动态签署人场景下，可以用此编号确定参与方
+ * @method boolean getCLBMultiZoneFlag() 获取是否启用多可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSignId(string $SignId) 设置签署方唯一编号
-
-在动态签署人场景下，可以用此编号确定参与方
+ * @method void setCLBMultiZoneFlag(boolean $CLBMultiZoneFlag) 设置是否启用多可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecipientId() 获取签署方角色编号
+ * @method string getCLBMasterZone() 获取主可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecipientId(string $RecipientId) 设置签署方角色编号
+ * @method void setCLBMasterZone(string $CLBMasterZone) 设置主可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproverRoleName() 获取签署方角色名称
+ * @method string getCLBSlaveZone() 获取备可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproverRoleName(string $ApproverRoleName) 设置签署方角色名称
+ * @method void setCLBSlaveZone(string $CLBSlaveZone) 设置备可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class ApproverItem extends AbstractModel
+class CLBMultiRegion extends AbstractModel
 {
     /**
-     * @var string 签署方唯一编号
-
-在动态签署人场景下，可以用此编号确定参与方
+     * @var boolean 是否启用多可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SignId;
+    public $CLBMultiZoneFlag;
 
     /**
-     * @var string 签署方角色编号
+     * @var string 主可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RecipientId;
+    public $CLBMasterZone;
 
     /**
-     * @var string 签署方角色名称
+     * @var string 备可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ApproverRoleName;
+    public $CLBSlaveZone;
 
     /**
-     * @param string $SignId 签署方唯一编号
-
-在动态签署人场景下，可以用此编号确定参与方
+     * @param boolean $CLBMultiZoneFlag 是否启用多可用区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecipientId 签署方角色编号
+     * @param string $CLBMasterZone 主可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproverRoleName 签署方角色名称
+     * @param string $CLBSlaveZone 备可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -82,16 +74,16 @@ class ApproverItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists("CLBMultiZoneFlag",$param) and $param["CLBMultiZoneFlag"] !== null) {
+            $this->CLBMultiZoneFlag = $param["CLBMultiZoneFlag"];
         }
 
-        if (array_key_exists("RecipientId",$param) and $param["RecipientId"] !== null) {
-            $this->RecipientId = $param["RecipientId"];
+        if (array_key_exists("CLBMasterZone",$param) and $param["CLBMasterZone"] !== null) {
+            $this->CLBMasterZone = $param["CLBMasterZone"];
         }
 
-        if (array_key_exists("ApproverRoleName",$param) and $param["ApproverRoleName"] !== null) {
-            $this->ApproverRoleName = $param["ApproverRoleName"];
+        if (array_key_exists("CLBSlaveZone",$param) and $param["CLBSlaveZone"] !== null) {
+            $this->CLBSlaveZone = $param["CLBSlaveZone"];
         }
     }
 }

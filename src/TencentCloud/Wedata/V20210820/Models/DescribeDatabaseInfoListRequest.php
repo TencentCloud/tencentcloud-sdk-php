@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取过滤参数
  * @method void setFilters(array $Filters) 设置过滤参数
- * @method string getConnectionType() 获取如果是hive这里写rpc，如果是其他类型不传
- * @method void setConnectionType(string $ConnectionType) 设置如果是hive这里写rpc，如果是其他类型不传
+ * @method string getConnectionType() 获取连接类型
+ * @method void setConnectionType(string $ConnectionType) 设置连接类型
  */
 class DescribeDatabaseInfoListRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeDatabaseInfoListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 如果是hive这里写rpc，如果是其他类型不传
+     * @var string 连接类型
      */
     public $ConnectionType;
 
     /**
      * @param array $Filters 过滤参数
-     * @param string $ConnectionType 如果是hive这里写rpc，如果是其他类型不传
+     * @param string $ConnectionType 连接类型
      */
     function __construct()
     {

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplica(integer $Replica) 设置此地域节点分配数量
  * @method array getVpcInfos() 获取集群网络信息
  * @method void setVpcInfos(array $VpcInfos) 设置集群网络信息
+ * @method boolean getMainRegion() 获取是否为主地域
+ * @method void setMainRegion(boolean $MainRegion) 设置是否为主地域
+ * @method string getSpecId() 获取引擎规格ID
+ * @method void setSpecId(string $SpecId) 设置引擎规格ID
  */
 class EngineRegionInfo extends AbstractModel
 {
@@ -45,9 +49,21 @@ class EngineRegionInfo extends AbstractModel
     public $VpcInfos;
 
     /**
+     * @var boolean 是否为主地域
+     */
+    public $MainRegion;
+
+    /**
+     * @var string 引擎规格ID
+     */
+    public $SpecId;
+
+    /**
      * @param string $EngineRegion 引擎节点所在地域
      * @param integer $Replica 此地域节点分配数量
      * @param array $VpcInfos 集群网络信息
+     * @param boolean $MainRegion 是否为主地域
+     * @param string $SpecId 引擎规格ID
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class EngineRegionInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VpcInfos, $obj);
             }
+        }
+
+        if (array_key_exists("MainRegion",$param) and $param["MainRegion"] !== null) {
+            $this->MainRegion = $param["MainRegion"];
+        }
+
+        if (array_key_exists("SpecId",$param) and $param["SpecId"] !== null) {
+            $this->SpecId = $param["SpecId"];
         }
     }
 }

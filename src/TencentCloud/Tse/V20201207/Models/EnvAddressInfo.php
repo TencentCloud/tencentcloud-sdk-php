@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetBandWidth(integer $InternetBandWidth) 设置客户端公网带宽
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CLBMultiRegion getCLBMultiRegion() 获取客户端公网CLB多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCLBMultiRegion(CLBMultiRegion $CLBMultiRegion) 设置客户端公网CLB多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvAddressInfo extends AbstractModel
 {
@@ -75,6 +79,12 @@ class EnvAddressInfo extends AbstractModel
     public $InternetBandWidth;
 
     /**
+     * @var CLBMultiRegion 客户端公网CLB多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CLBMultiRegion;
+
+    /**
      * @param string $EnvName 环境名
      * @param boolean $EnableConfigInternet 是否开启config公网
      * @param string $ConfigInternetServiceIp config公网ip
@@ -83,6 +93,8 @@ class EnvAddressInfo extends AbstractModel
      * @param boolean $EnableConfigIntranet 是否开启config内网clb
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternetBandWidth 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CLBMultiRegion $CLBMultiRegion 客户端公网CLB多可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -120,6 +132,11 @@ class EnvAddressInfo extends AbstractModel
 
         if (array_key_exists("InternetBandWidth",$param) and $param["InternetBandWidth"] !== null) {
             $this->InternetBandWidth = $param["InternetBandWidth"];
+        }
+
+        if (array_key_exists("CLBMultiRegion",$param) and $param["CLBMultiRegion"] !== null) {
+            $this->CLBMultiRegion = new CLBMultiRegion();
+            $this->CLBMultiRegion->deserialize($param["CLBMultiRegion"]);
         }
     }
 }

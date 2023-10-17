@@ -85,6 +85,7 @@ CMCC：中国移动
 
     /**
      * @var string 该字段没有使用（已过期）。
+     * @deprecated
      */
     public $Ipv6ISP;
 

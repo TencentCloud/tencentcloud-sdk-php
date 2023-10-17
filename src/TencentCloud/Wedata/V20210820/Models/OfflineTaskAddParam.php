@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionStartTime(string $ExecutionStartTime) 设置调度执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTaskAutoSubmit() 获取是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskAutoSubmit(boolean $TaskAutoSubmit) 设置是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceInitStrategy() 获取实例初始化策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceInitStrategy(string $InstanceInitStrategy) 设置实例初始化策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OfflineTaskAddParam extends AbstractModel
 {
@@ -164,6 +172,18 @@ class OfflineTaskAddParam extends AbstractModel
     public $ExecutionStartTime;
 
     /**
+     * @var boolean 是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskAutoSubmit;
+
+    /**
+     * @var string 实例初始化策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceInitStrategy;
+
+    /**
      * @param string $WorkflowName 名称
      * @param string $DependencyWorkflow 依赖
      * @param string $StartTime 开始时间
@@ -187,6 +207,10 @@ class OfflineTaskAddParam extends AbstractModel
      * @param string $ExecutionEndTime 调度执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionStartTime 调度执行开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TaskAutoSubmit 是否自动提交
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceInitStrategy 实例初始化策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -268,6 +292,14 @@ class OfflineTaskAddParam extends AbstractModel
 
         if (array_key_exists("ExecutionStartTime",$param) and $param["ExecutionStartTime"] !== null) {
             $this->ExecutionStartTime = $param["ExecutionStartTime"];
+        }
+
+        if (array_key_exists("TaskAutoSubmit",$param) and $param["TaskAutoSubmit"] !== null) {
+            $this->TaskAutoSubmit = $param["TaskAutoSubmit"];
+        }
+
+        if (array_key_exists("InstanceInitStrategy",$param) and $param["InstanceInitStrategy"] !== null) {
+            $this->InstanceInitStrategy = $param["InstanceInitStrategy"];
         }
     }
 }

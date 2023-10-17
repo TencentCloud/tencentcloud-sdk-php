@@ -32,13 +32,29 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecId(string $SpecId) 设置引擎在该地域的规格id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getIntranetVpcInfos() 获取内网的网络信息
+ * @method array getIntranetVpcInfos() 获取客户端内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntranetVpcInfos(array $IntranetVpcInfos) 设置内网的网络信息
+ * @method void setIntranetVpcInfos(array $IntranetVpcInfos) 设置客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getConsoleIntranetVpcInfos() 获取控制台内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsoleIntranetVpcInfos(array $ConsoleIntranetVpcInfos) 设置控制台内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableClientInternet() 获取是否开公网
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableClientInternet(boolean $EnableClientInternet) 设置是否开公网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLimiterIntranetVpcInfos() 获取限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLimiterIntranetVpcInfos(array $LimiterIntranetVpcInfos) 设置限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getMainRegion() 获取是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMainRegion(boolean $MainRegion) 设置是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEKSClusterID() 获取该地域所在的EKS集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEKSClusterID(string $EKSClusterID) 设置该地域所在的EKS集群
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeInstanceRegionInfo extends AbstractModel
@@ -62,10 +78,16 @@ class DescribeInstanceRegionInfo extends AbstractModel
     public $SpecId;
 
     /**
-     * @var array 内网的网络信息
+     * @var array 客户端内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntranetVpcInfos;
+
+    /**
+     * @var array 控制台内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsoleIntranetVpcInfos;
 
     /**
      * @var boolean 是否开公网
@@ -74,15 +96,41 @@ class DescribeInstanceRegionInfo extends AbstractModel
     public $EnableClientInternet;
 
     /**
+     * @var array 限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LimiterIntranetVpcInfos;
+
+    /**
+     * @var boolean 是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MainRegion;
+
+    /**
+     * @var string 该地域所在的EKS集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EKSClusterID;
+
+    /**
      * @param string $EngineRegion 引擎部署地域信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Replica 引擎在该地域的副本数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecId 引擎在该地域的规格id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $IntranetVpcInfos 内网的网络信息
+     * @param array $IntranetVpcInfos 客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ConsoleIntranetVpcInfos 控制台内网的网络信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableClientInternet 是否开公网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LimiterIntranetVpcInfos 限流客户端内网的网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $MainRegion 是否为主地域，仅在服务治理中心多地域有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EKSClusterID 该地域所在的EKS集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -119,8 +167,34 @@ class DescribeInstanceRegionInfo extends AbstractModel
             }
         }
 
+        if (array_key_exists("ConsoleIntranetVpcInfos",$param) and $param["ConsoleIntranetVpcInfos"] !== null) {
+            $this->ConsoleIntranetVpcInfos = [];
+            foreach ($param["ConsoleIntranetVpcInfos"] as $key => $value){
+                $obj = new VpcInfo();
+                $obj->deserialize($value);
+                array_push($this->ConsoleIntranetVpcInfos, $obj);
+            }
+        }
+
         if (array_key_exists("EnableClientInternet",$param) and $param["EnableClientInternet"] !== null) {
             $this->EnableClientInternet = $param["EnableClientInternet"];
+        }
+
+        if (array_key_exists("LimiterIntranetVpcInfos",$param) and $param["LimiterIntranetVpcInfos"] !== null) {
+            $this->LimiterIntranetVpcInfos = [];
+            foreach ($param["LimiterIntranetVpcInfos"] as $key => $value){
+                $obj = new VpcInfo();
+                $obj->deserialize($value);
+                array_push($this->LimiterIntranetVpcInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("MainRegion",$param) and $param["MainRegion"] !== null) {
+            $this->MainRegion = $param["MainRegion"];
+        }
+
+        if (array_key_exists("EKSClusterID",$param) and $param["EKSClusterID"] !== null) {
+            $this->EKSClusterID = $param["EKSClusterID"];
         }
     }
 }

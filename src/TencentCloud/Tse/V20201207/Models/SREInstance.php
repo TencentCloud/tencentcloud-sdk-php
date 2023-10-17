@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableClientIntranet(boolean $EnableClientIntranet) 设置引擎实例是否开启客户端内网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getStorageOption() 获取存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageOption(array $StorageOption) 设置存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -330,6 +334,12 @@ class SREInstance extends AbstractModel
     public $EnableClientIntranet;
 
     /**
+     * @var array 存储额外配置选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageOption;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -387,6 +397,8 @@ class SREInstance extends AbstractModel
      * @param string $FeatureVersion 引擎的产品版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableClientIntranet 引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $StorageOption 存储额外配置选项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -557,6 +569,15 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("EnableClientIntranet",$param) and $param["EnableClientIntranet"] !== null) {
             $this->EnableClientIntranet = $param["EnableClientIntranet"];
+        }
+
+        if (array_key_exists("StorageOption",$param) and $param["StorageOption"] !== null) {
+            $this->StorageOption = [];
+            foreach ($param["StorageOption"] as $key => $value){
+                $obj = new StorageOption();
+                $obj->deserialize($value);
+                array_push($this->StorageOption, $obj);
+            }
         }
     }
 }

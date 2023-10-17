@@ -166,6 +166,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置策略标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSupportAlarmTag() 获取是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportAlarmTag(integer $IsSupportAlarmTag) 设置是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -383,6 +387,12 @@ class AlarmPolicy extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportAlarmTag;
+
+    /**
      * @param string $PolicyId 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 告警策略名称
@@ -455,6 +465,8 @@ class AlarmPolicy extends AbstractModel
      * @param integer $IsBindAll 策略是否是全部对象策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 策略标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSupportAlarmTag 是否支持告警标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -631,6 +643,10 @@ class AlarmPolicy extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IsSupportAlarmTag",$param) and $param["IsSupportAlarmTag"] !== null) {
+            $this->IsSupportAlarmTag = $param["IsSupportAlarmTag"];
         }
     }
 }

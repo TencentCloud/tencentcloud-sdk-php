@@ -66,10 +66,8 @@ use TencentCloud\Common\AbstractModel;
 <li> 动态表格等填写控件</li></ul>
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method void setCcInfos(array $CcInfos) 设置合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method integer getCcNotifyType() 获取可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
 <ul><li> **0**：合同发起时通知（默认值）</li>
 <li> **1**：签署完成后通知</li></ul>
@@ -236,7 +234,6 @@ class CreateFlowByFilesRequest extends AbstractModel
     /**
      * @var array 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public $CcInfos;
 
@@ -372,7 +369,6 @@ class CreateFlowByFilesRequest extends AbstractModel
 <li> 动态表格等填写控件</li></ul>
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param integer $CcNotifyType 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
 <ul><li> **0**：合同发起时通知（默认值）</li>
 <li> **1**：签署完成后通知</li></ul>

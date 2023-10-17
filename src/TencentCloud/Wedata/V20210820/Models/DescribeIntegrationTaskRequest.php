@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务id
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method integer getTaskType() 获取任务类型：201. stream,   202. offline
- * @method void setTaskType(integer $TaskType) 设置任务类型：201. stream,   202. offline
+ * @method integer getTaskType() 获取任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
+ * @method void setTaskType(integer $TaskType) 设置任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
  * @method integer getInstanceVersion() 获取提交版本号
  * @method void setInstanceVersion(integer $InstanceVersion) 设置提交版本号
  */
@@ -42,7 +42,7 @@ class DescribeIntegrationTaskRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 任务类型：201. stream,   202. offline
+     * @var integer 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
      */
     public $TaskType;
 
@@ -54,7 +54,7 @@ class DescribeIntegrationTaskRequest extends AbstractModel
     /**
      * @param string $TaskId 任务id
      * @param string $ProjectId 项目id
-     * @param integer $TaskType 任务类型：201. stream,   202. offline
+     * @param integer $TaskType 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
      * @param integer $InstanceVersion 提交版本号
      */
     function __construct()

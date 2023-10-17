@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncMode(string $SyncMode) 设置服务同步模式，all为全量同步，demand为按需同步
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBindRegion() 获取绑定的kubernetes集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBindRegion(string $BindRegion) 设置绑定的kubernetes集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BoundK8SInfo extends AbstractModel
 {
@@ -51,10 +55,18 @@ class BoundK8SInfo extends AbstractModel
     public $SyncMode;
 
     /**
+     * @var string 绑定的kubernetes集群所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BindRegion;
+
+    /**
      * @param string $BoundClusterId 绑定的kubernetes集群ID
      * @param string $BoundClusterType 绑定的kubernetes的集群类型，分tke和eks两种
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SyncMode 服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BindRegion 绑定的kubernetes集群所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -80,6 +92,10 @@ class BoundK8SInfo extends AbstractModel
 
         if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
             $this->SyncMode = $param["SyncMode"];
+        }
+
+        if (array_key_exists("BindRegion",$param) and $param["BindRegion"] !== null) {
+            $this->BindRegion = $param["BindRegion"];
         }
     }
 }

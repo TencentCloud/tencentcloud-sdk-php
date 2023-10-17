@@ -14,59 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 签署方信息，发起合同后可获取到对应的签署方信息，如角色ID，角色名称
+ * 存储的额外选项
  *
- * @method string getSignId() 获取签署方唯一编号
-
-在动态签署人场景下，可以用此编号确定参与方
+ * @method string getName() 获取存储对象，分为snap和txn两种
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSignId(string $SignId) 设置签署方唯一编号
-
-在动态签署人场景下，可以用此编号确定参与方
+ * @method void setName(string $Name) 设置存储对象，分为snap和txn两种
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecipientId() 获取签署方角色编号
+ * @method string getType() 获取存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecipientId(string $RecipientId) 设置签署方角色编号
+ * @method void setType(string $Type) 设置存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproverRoleName() 获取签署方角色名称
+ * @method integer getCapacity() 获取存储容量，[50, 3200]的范围
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproverRoleName(string $ApproverRoleName) 设置签署方角色名称
+ * @method void setCapacity(integer $Capacity) 设置存储容量，[50, 3200]的范围
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class ApproverItem extends AbstractModel
+class StorageOption extends AbstractModel
 {
     /**
-     * @var string 签署方唯一编号
-
-在动态签署人场景下，可以用此编号确定参与方
+     * @var string 存储对象，分为snap和txn两种
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SignId;
+    public $Name;
 
     /**
-     * @var string 签署方角色编号
+     * @var string 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RecipientId;
+    public $Type;
 
     /**
-     * @var string 签署方角色名称
+     * @var integer 存储容量，[50, 3200]的范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ApproverRoleName;
+    public $Capacity;
 
     /**
-     * @param string $SignId 签署方唯一编号
-
-在动态签署人场景下，可以用此编号确定参与方
+     * @param string $Name 存储对象，分为snap和txn两种
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecipientId 签署方角色编号
+     * @param string $Type 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproverRoleName 签署方角色名称
+     * @param integer $Capacity 存储容量，[50, 3200]的范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -82,16 +74,16 @@ class ApproverItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SignId",$param) and $param["SignId"] !== null) {
-            $this->SignId = $param["SignId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("RecipientId",$param) and $param["RecipientId"] !== null) {
-            $this->RecipientId = $param["RecipientId"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("ApproverRoleName",$param) and $param["ApproverRoleName"] !== null) {
-            $this->ApproverRoleName = $param["ApproverRoleName"];
+        if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
+            $this->Capacity = $param["Capacity"];
         }
     }
 }

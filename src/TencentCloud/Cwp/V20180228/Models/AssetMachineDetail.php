@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineWanIp(string $MachineWanIp) 设置主机外网IP
  * @method integer getCpuSize() 获取Cpu数量
  * @method void setCpuSize(integer $CpuSize) 设置Cpu数量
- * @method string getCpuLoad() 获取Cpu使用率百分比
- * @method void setCpuLoad(string $CpuLoad) 设置Cpu使用率百分比
+ * @method string getCpuLoad() 获取Cpu负载
+ * @method void setCpuLoad(string $CpuLoad) 设置Cpu负载
  * @method integer getProtectLevel() 获取防护级别：0基础版，1专业版，2旗舰版，3普惠版
  * @method void setProtectLevel(integer $ProtectLevel) 设置防护级别：0基础版，1专业版，2旗舰版，3普惠版
  * @method string getRiskStatus() 获取风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
@@ -99,6 +99,14 @@ use TencentCloud\Common\AbstractModel;
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机二外信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCpuLoadVul() 获取CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpuLoadVul(string $CpuLoadVul) 设置CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFirstTime() 获取时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirstTime(string $FirstTime) 设置时间
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetMachineDetail extends AbstractModel
@@ -169,7 +177,7 @@ class AssetMachineDetail extends AbstractModel
     public $CpuSize;
 
     /**
-     * @var string Cpu使用率百分比
+     * @var string Cpu负载
      */
     public $CpuLoad;
 
@@ -288,6 +296,18 @@ class AssetMachineDetail extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var string CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CpuLoadVul;
+
+    /**
+     * @var string 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirstTime;
+
+    /**
      * @param string $Quuid 服务器Quuid
      * @param string $Uuid 服务器uuid
      * @param string $MachineIp 服务器内网IP
@@ -301,7 +321,7 @@ class AssetMachineDetail extends AbstractModel
      * @param integer $PartitionCount 分区数
      * @param string $MachineWanIp 主机外网IP
      * @param integer $CpuSize Cpu数量
-     * @param string $CpuLoad Cpu使用率百分比
+     * @param string $CpuLoad Cpu负载
      * @param integer $ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3普惠版
      * @param string $RiskStatus 风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
      * @param integer $ProtectDays 已防护天数
@@ -327,6 +347,10 @@ class AssetMachineDetail extends AbstractModel
      * @param string $UpdateTime 数据更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CpuLoadVul CpuLoadVul
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FirstTime 时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -495,6 +519,14 @@ class AssetMachineDetail extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("CpuLoadVul",$param) and $param["CpuLoadVul"] !== null) {
+            $this->CpuLoadVul = $param["CpuLoadVul"];
+        }
+
+        if (array_key_exists("FirstTime",$param) and $param["FirstTime"] !== null) {
+            $this->FirstTime = $param["FirstTime"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRealtimeScanConfig请求参数结构体
  *
- * @method integer getBizId() 获取应用ID
- * @method void setBizId(integer $BizId) 设置应用ID
+ * @method integer getBizId() 获取应用ID。
+ * @method void setBizId(integer $BizId) 设置应用ID。
  */
 class DescribeRealtimeScanConfigRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID
+     * @var integer 应用ID。
      */
     public $BizId;
 
     /**
-     * @param integer $BizId 应用ID
+     * @param integer $BizId 应用ID。
      */
     function __construct()
     {

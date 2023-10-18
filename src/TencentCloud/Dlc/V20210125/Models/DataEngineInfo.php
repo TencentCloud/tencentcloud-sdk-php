@@ -174,6 +174,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置SessionResourceTemplate
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoAuthorization() 获取自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoAuthorization(boolean $AutoAuthorization) 设置自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -435,6 +439,12 @@ class DataEngineInfo extends AbstractModel
     public $SessionResourceTemplate;
 
     /**
+     * @var boolean 自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoAuthorization;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -511,6 +521,8 @@ class DataEngineInfo extends AbstractModel
      * @param string $UserUin 用户uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionResourceTemplate $SessionResourceTemplate SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoAuthorization 自动授权开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -716,6 +728,10 @@ class DataEngineInfo extends AbstractModel
         if (array_key_exists("SessionResourceTemplate",$param) and $param["SessionResourceTemplate"] !== null) {
             $this->SessionResourceTemplate = new SessionResourceTemplate();
             $this->SessionResourceTemplate->deserialize($param["SessionResourceTemplate"]);
+        }
+
+        if (array_key_exists("AutoAuthorization",$param) and $param["AutoAuthorization"] !== null) {
+            $this->AutoAuthorization = $param["AutoAuthorization"];
         }
     }
 }

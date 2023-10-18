@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElasticLimit(integer $ElasticLimit) 设置spark jar 包年包月集群弹性上限
  * @method SessionResourceTemplate getSessionResourceTemplate() 获取spark作业集群session资源配置模板
  * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置spark作业集群session资源配置模板
+ * @method boolean getAutoAuthorization() 获取自动授权
+ * @method void setAutoAuthorization(boolean $AutoAuthorization) 设置自动授权
  */
 class CreateDataEngineRequest extends AbstractModel
 {
@@ -235,6 +237,11 @@ class CreateDataEngineRequest extends AbstractModel
     public $SessionResourceTemplate;
 
     /**
+     * @var boolean 自动授权
+     */
+    public $AutoAuthorization;
+
+    /**
      * @param string $EngineType 引擎类型spark/presto
      * @param string $DataEngineName 虚拟集群名称
      * @param string $ClusterType 集群类型 spark_private/presto_private/presto_cu/spark_cu
@@ -265,6 +272,7 @@ class CreateDataEngineRequest extends AbstractModel
      * @param boolean $ElasticSwitch spark jar 包年包月集群是否开启弹性
      * @param integer $ElasticLimit spark jar 包年包月集群弹性上限
      * @param SessionResourceTemplate $SessionResourceTemplate spark作业集群session资源配置模板
+     * @param boolean $AutoAuthorization 自动授权
      */
     function __construct()
     {
@@ -409,6 +417,10 @@ class CreateDataEngineRequest extends AbstractModel
         if (array_key_exists("SessionResourceTemplate",$param) and $param["SessionResourceTemplate"] !== null) {
             $this->SessionResourceTemplate = new SessionResourceTemplate();
             $this->SessionResourceTemplate->deserialize($param["SessionResourceTemplate"]);
+        }
+
+        if (array_key_exists("AutoAuthorization",$param) and $param["AutoAuthorization"] !== null) {
+            $this->AutoAuthorization = $param["AutoAuthorization"];
         }
     }
 }

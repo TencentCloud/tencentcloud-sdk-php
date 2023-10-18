@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBizId(integer $BizId) 设置应用ID
  * @method integer getAuditType() 获取送检类型，0: 全量送审，1: 自定义送审
  * @method void setAuditType(integer $AuditType) 设置送检类型，0: 全量送审，1: 自定义送审
- * @method array getUserIdRegex() 获取用户号正则表达式
- * @method void setUserIdRegex(array $UserIdRegex) 设置用户号正则表达式
- * @method array getRoomIdRegex() 获取房间号正则表达式
- * @method void setRoomIdRegex(array $RoomIdRegex) 设置房间号正则表达式
+ * @method array getUserIdRegex() 获取用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
+ * @method void setUserIdRegex(array $UserIdRegex) 设置用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
+ * @method array getRoomIdRegex() 获取房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
+ * @method void setRoomIdRegex(array $RoomIdRegex) 设置房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
  * @method string getUserIdString() 获取用户号字符串，逗号分隔，示例："0001,0002,0003"
  * @method void setUserIdString(string $UserIdString) 设置用户号字符串，逗号分隔，示例："0001,0002,0003"
  * @method string getRoomIdString() 获取房间号字符串，逗号分隔，示例："0001,0002,0003"
@@ -55,12 +59,14 @@ class DescribeRealtimeScanConfigResponse extends AbstractModel
     public $AuditType;
 
     /**
-     * @var array 用户号正则表达式
+     * @var array 用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
      */
     public $UserIdRegex;
 
     /**
-     * @var array 房间号正则表达式
+     * @var array 房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      */
     public $RoomIdRegex;
 
@@ -83,8 +89,10 @@ class DescribeRealtimeScanConfigResponse extends AbstractModel
      * @param integer $ErrorCode 返回结果码，0正常，非0失败
      * @param integer $BizId 应用ID
      * @param integer $AuditType 送检类型，0: 全量送审，1: 自定义送审
-     * @param array $UserIdRegex 用户号正则表达式
-     * @param array $RoomIdRegex 房间号正则表达式
+     * @param array $UserIdRegex 用户号正则表达式。
+符合此正则表达式规则的用户号将被送检。示例：^6.*（表示所有以6开头的用户号将被送检）
+     * @param array $RoomIdRegex 房间号正则表达式。
+符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      * @param string $UserIdString 用户号字符串，逗号分隔，示例："0001,0002,0003"
      * @param string $RoomIdString 房间号字符串，逗号分隔，示例："0001,0002,0003"
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAsset请求参数结构体
  *
- * @method boolean getAll() 获取全部同步
- * @method void setAll(boolean $All) 设置全部同步
- * @method array getHosts() 获取要同步的主机列表 两个参数必选一个 All优先
- * @method void setHosts(array $Hosts) 设置要同步的主机列表 两个参数必选一个 All优先
+ * @method boolean getAll() 获取全部同步，俩参数必选一个 All优先
+ * @method void setAll(boolean $All) 设置全部同步，俩参数必选一个 All优先
+ * @method array getHosts() 获取要同步的主机列表uuid ，俩参数必选一个 All优先
+ * @method void setHosts(array $Hosts) 设置要同步的主机列表uuid ，俩参数必选一个 All优先
  */
 class ModifyAssetRequest extends AbstractModel
 {
     /**
-     * @var boolean 全部同步
+     * @var boolean 全部同步，俩参数必选一个 All优先
      */
     public $All;
 
     /**
-     * @var array 要同步的主机列表 两个参数必选一个 All优先
+     * @var array 要同步的主机列表uuid ，俩参数必选一个 All优先
      */
     public $Hosts;
 
     /**
-     * @param boolean $All 全部同步
-     * @param array $Hosts 要同步的主机列表 两个参数必选一个 All优先
+     * @param boolean $All 全部同步，俩参数必选一个 All优先
+     * @param array $Hosts 要同步的主机列表uuid ，俩参数必选一个 All优先
      */
     function __construct()
     {

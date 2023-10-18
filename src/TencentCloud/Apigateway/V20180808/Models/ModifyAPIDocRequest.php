@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAPIDoc请求参数结构体
  *
- * @method string getApiDocId() 获取API文档ID
- * @method void setApiDocId(string $ApiDocId) 设置API文档ID
  * @method string getApiDocName() 获取API文档名称
  * @method void setApiDocName(string $ApiDocName) 设置API文档名称
  * @method string getServiceId() 获取服务名称
@@ -30,14 +28,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironment(string $Environment) 设置环境名称
  * @method array getApiIds() 获取生成文档的API列表
  * @method void setApiIds(array $ApiIds) 设置生成文档的API列表
+ * @method string getApiDocId() 获取API文档ID
+ * @method void setApiDocId(string $ApiDocId) 设置API文档ID
  */
 class ModifyAPIDocRequest extends AbstractModel
 {
-    /**
-     * @var string API文档ID
-     */
-    public $ApiDocId;
-
     /**
      * @var string API文档名称
      */
@@ -59,11 +54,16 @@ class ModifyAPIDocRequest extends AbstractModel
     public $ApiIds;
 
     /**
-     * @param string $ApiDocId API文档ID
+     * @var string API文档ID
+     */
+    public $ApiDocId;
+
+    /**
      * @param string $ApiDocName API文档名称
      * @param string $ServiceId 服务名称
      * @param string $Environment 环境名称
      * @param array $ApiIds 生成文档的API列表
+     * @param string $ApiDocId API文档ID
      */
     function __construct()
     {
@@ -78,10 +78,6 @@ class ModifyAPIDocRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApiDocId",$param) and $param["ApiDocId"] !== null) {
-            $this->ApiDocId = $param["ApiDocId"];
-        }
-
         if (array_key_exists("ApiDocName",$param) and $param["ApiDocName"] !== null) {
             $this->ApiDocName = $param["ApiDocName"];
         }
@@ -96,6 +92,10 @@ class ModifyAPIDocRequest extends AbstractModel
 
         if (array_key_exists("ApiIds",$param) and $param["ApiIds"] !== null) {
             $this->ApiIds = $param["ApiIds"];
+        }
+
+        if (array_key_exists("ApiDocId",$param) and $param["ApiDocId"] !== null) {
+            $this->ApiDocId = $param["ApiDocId"];
         }
     }
 }

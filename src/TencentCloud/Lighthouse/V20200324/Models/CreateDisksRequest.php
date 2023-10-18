@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskName(string $DiskName) 设置云硬盘名称。最大长度60。
  * @method integer getDiskCount() 获取云硬盘个数。取值范围: [1, 30]。默认值: 1。
  * @method void setDiskCount(integer $DiskCount) 设置云硬盘个数。取值范围: [1, 30]。默认值: 1。
- * @method integer getDiskBackupQuota() 获取指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
- * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+ * @method integer getDiskBackupQuota() 获取指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
  * @method boolean getAutoVoucher() 获取是否自动使用代金券。默认不使用。
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券。默认不使用。
  * @method AutoMountConfiguration getAutoMountConfiguration() 获取自动挂载并初始化数据盘。
@@ -72,7 +72,7 @@ class CreateDisksRequest extends AbstractModel
     public $DiskCount;
 
     /**
-     * @var integer 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     * @var integer 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
      */
     public $DiskBackupQuota;
 
@@ -93,7 +93,7 @@ class CreateDisksRequest extends AbstractModel
      * @param DiskChargePrepaid $DiskChargePrepaid 云硬盘包年包月相关参数设置。
      * @param string $DiskName 云硬盘名称。最大长度60。
      * @param integer $DiskCount 云硬盘个数。取值范围: [1, 30]。默认值: 1。
-     * @param integer $DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     * @param integer $DiskBackupQuota 指定云硬盘备份点配额，取值范围: [0, 500]。不传时默认为不带备份点配额。
      * @param boolean $AutoVoucher 是否自动使用代金券。默认不使用。
      * @param AutoMountConfiguration $AutoMountConfiguration 自动挂载并初始化数据盘。
      */

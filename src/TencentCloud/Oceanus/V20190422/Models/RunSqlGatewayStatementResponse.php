@@ -20,17 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunSqlGatewayStatement返回参数结构体
  *
+ * @method array getErrorMessage() 获取错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorMessage(array $ErrorMessage) 设置错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+ * @method void setSessionId(string $SessionId) 设置会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+ * @method string getOperationHandleId() 获取返回执行id，可以根据该执行id和会话id获取执行结果
+ * @method void setOperationHandleId(string $OperationHandleId) 设置返回执行id，可以根据该执行id和会话id获取执行结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class RunSqlGatewayStatementResponse extends AbstractModel
 {
     /**
+     * @var array 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorMessage;
+
+    /**
+     * @var string 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+     */
+    public $SessionId;
+
+    /**
+     * @var string 返回执行id，可以根据该执行id和会话id获取执行结果
+     */
+    public $OperationHandleId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $ErrorMessage 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId 会话id，若入参未传，则返回自动创建的会话id，若入参已经传递，则返回值与原传入值一致
+     * @param string $OperationHandleId 返回执行id，可以根据该执行id和会话id获取执行结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +74,18 @@ class RunSqlGatewayStatementResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("OperationHandleId",$param) and $param["OperationHandleId"] !== null) {
+            $this->OperationHandleId = $param["OperationHandleId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

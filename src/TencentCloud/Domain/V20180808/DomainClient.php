@@ -26,6 +26,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\BatchModifyDomainInfoResponse BatchModifyDomainInfo(Models\BatchModifyDomainInfoRequest $req) 本接口 ( BatchModifyDomainInfo ) 用于批量域名信息修改 。
  * @method Models\CheckBatchStatusResponse CheckBatchStatus(Models\CheckBatchStatusRequest $req) 本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
  * @method Models\CheckDomainResponse CheckDomain(Models\CheckDomainRequest $req) 检查域名是否可以注册。
+ * @method Models\CreateCustomDnsHostResponse CreateCustomDnsHost(Models\CreateCustomDnsHostRequest $req) 创建自定义DNS Host
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) 本接口 ( CreateDomainBatch ) 用于批量域名注册 。
  * @method Models\CreateDomainRedemptionResponse CreateDomainRedemption(Models\CreateDomainRedemptionRequest $req) 创建赎回订单。
  * @method Models\CreatePhoneEmailResponse CreatePhoneEmail(Models\CreatePhoneEmailRequest $req) 此接口用于创建有效的手机、邮箱

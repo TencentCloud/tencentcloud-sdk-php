@@ -30,6 +30,9 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\CreateJobConfigResponse CreateJobConfig(Models\CreateJobConfigRequest $req) 创建作业配置，一个作业最多有100个配置版本
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建资源接口
  * @method Models\CreateResourceConfigResponse CreateResourceConfig(Models\CreateResourceConfigRequest $req) 创建资源配置接口
+ * @method Models\CreateWorkSpaceResponse CreateWorkSpace(Models\CreateWorkSpaceRequest $req) 创建工作空间
+ * @method Models\DeleteFoldersResponse DeleteFolders(Models\DeleteFoldersRequest $req) 作业列表删除文件夹
+ * @method Models\DeleteJobConfigsResponse DeleteJobConfigs(Models\DeleteJobConfigsRequest $req) 删除作业配置
  * @method Models\DeleteJobsResponse DeleteJobs(Models\DeleteJobsRequest $req) 批量删除作业接口，批量操作数量上限20
  * @method Models\DeleteResourceConfigsResponse DeleteResourceConfigs(Models\DeleteResourceConfigsRequest $req) 删除资源版本
  * @method Models\DeleteResourcesResponse DeleteResources(Models\DeleteResourcesRequest $req) 删除资源接口
@@ -47,6 +50,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeTreeResourcesResponse DescribeTreeResources(Models\DescribeTreeResourcesRequest $req) 查询树状结构资源列表
  * @method Models\DescribeWorkSpacesResponse DescribeWorkSpaces(Models\DescribeWorkSpacesRequest $req) 授权工作空间列表
  * @method Models\FetchSqlGatewayStatementResultResponse FetchSqlGatewayStatementResult(Models\FetchSqlGatewayStatementResultRequest $req) 查询Sql Gateway的Statement执行结果
+ * @method Models\ModifyFolderResponse ModifyFolder(Models\ModifyFolderRequest $req) 自定义树状结构页面拖拽文件夹
  * @method Models\ModifyJobResponse ModifyJob(Models\ModifyJobRequest $req) 更新作业属性，仅允许以下3种操作，不支持组合操作：
 (1)	更新作业名称
 (2)	更新作业备注 
@@ -58,6 +62,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
 
 
+ * @method Models\ModifyWorkSpaceResponse ModifyWorkSpace(Models\ModifyWorkSpaceRequest $req) 修改工作空间
  * @method Models\RunJobsResponse RunJobs(Models\RunJobsRequest $req) 批量启动或者恢复作业，批量操作数量上限20
  * @method Models\RunSqlGatewayStatementResponse RunSqlGatewayStatement(Models\RunSqlGatewayStatementRequest $req) 通过Sql gateway执行satement
  * @method Models\StopJobsResponse StopJobs(Models\StopJobsRequest $req) 批量停止作业，批量操作数量上限为20

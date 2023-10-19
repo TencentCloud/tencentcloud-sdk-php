@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEniIp(string $EniIp) 设置绑定IP时需要传入此参数，支持弹性网卡的IP和其他内网IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
 注意：参数 InstanceId、EniIp 有且只能传入其中一个参数。如果绑定双栈IPV6子机，则必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTag() 获取标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(string $Tag) 设置标签。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Target extends AbstractModel
 {
@@ -80,6 +84,12 @@ class Target extends AbstractModel
     public $EniIp;
 
     /**
+     * @var string 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tag;
+
+    /**
      * @param integer $Port 后端服务的监听端口。
 注意：绑定CVM（云服务器）或ENI（弹性网卡）时必传此参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,6 +101,8 @@ class Target extends AbstractModel
      * @param integer $Weight 后端服务修改后的转发权重，取值范围：[0, 100]，默认为 10。此参数的优先级高于[RsWeightRule](https://cloud.tencent.com/document/api/214/30694#RsWeightRule)中的Weight参数，即最终的权重值以此Weight参数值为准，仅当此Weight参数为空时，才以RsWeightRule中的Weight参数为准。
      * @param string $EniIp 绑定IP时需要传入此参数，支持弹性网卡的IP和其他内网IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
 注意：参数 InstanceId、EniIp 有且只能传入其中一个参数。如果绑定双栈IPV6子机，则必须传该参数。如果是跨地域绑定，则必须传该参数，不支持传InstanceId参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Tag 标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +136,10 @@ class Target extends AbstractModel
 
         if (array_key_exists("EniIp",$param) and $param["EniIp"] !== null) {
             $this->EniIp = $param["EniIp"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

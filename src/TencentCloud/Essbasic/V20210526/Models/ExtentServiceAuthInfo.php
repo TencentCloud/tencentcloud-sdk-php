@@ -18,11 +18,11 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 企业扩展服务授权信息
+ * 扩展服务开通和授权的详细信息
  *
  * @method string getType() 获取扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+  <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
  <li> PAGING_SEAL           骑缝章</li>
@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
 </ul>
  * @method void setType(string $Type) 设置扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+  <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
  <li> PAGING_SEAL           骑缝章</li>
@@ -40,19 +40,15 @@ use TencentCloud\Common\AbstractModel;
 </ul>
  * @method string getName() 获取扩展服务名称 
  * @method void setName(string $Name) 设置扩展服务名称 
- * @method string getStatus() 获取服务状态 
-ENABLE 开启 
-DISABLE 关闭
- * @method void setStatus(string $Status) 设置服务状态 
-ENABLE 开启 
-DISABLE 关闭
- * @method string getOperatorOpenId() 获取最近操作人第三方应用平台的用户openid
+ * @method string getStatus() 获取扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	
+ * @method void setStatus(string $Status) 设置扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	
+ * @method string getOperatorOpenId() 获取操作扩展服务的操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperatorOpenId(string $OperatorOpenId) 设置最近操作人第三方应用平台的用户openid
+ * @method void setOperatorOpenId(string $OperatorOpenId) 设置操作扩展服务的操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperateOn() 获取最近操作时间戳，单位秒
+ * @method integer getOperateOn() 获取扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperateOn(integer $OperateOn) 设置最近操作时间戳，单位秒
+ * @method void setOperateOn(integer $OperateOn) 设置扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExtentServiceAuthInfo extends AbstractModel
@@ -60,7 +56,7 @@ class ExtentServiceAuthInfo extends AbstractModel
     /**
      * @var string 扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+  <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
  <li> PAGING_SEAL           骑缝章</li>
@@ -76,20 +72,18 @@ class ExtentServiceAuthInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string 服务状态 
-ENABLE 开启 
-DISABLE 关闭
+     * @var string 扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	
      */
     public $Status;
 
     /**
-     * @var string 最近操作人第三方应用平台的用户openid
+     * @var string 操作扩展服务的操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorOpenId;
 
     /**
-     * @var integer 最近操作时间戳，单位秒
+     * @var integer 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateOn;
@@ -97,7 +91,7 @@ DISABLE 关闭
     /**
      * @param string $Type 扩展服务类型
 <ul>
-  <li>AUTO_SIGN             企业静默签（自动签署）</li>
+  <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民*签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
  <li> PAGING_SEAL           骑缝章</li>
@@ -105,12 +99,10 @@ DISABLE 关闭
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 </ul>
      * @param string $Name 扩展服务名称 
-     * @param string $Status 服务状态 
-ENABLE 开启 
-DISABLE 关闭
-     * @param string $OperatorOpenId 最近操作人第三方应用平台的用户openid
+     * @param string $Status 扩展服务的开通状态： ENABLE：开通 DISABLE：未开通	
+     * @param string $OperatorOpenId 操作扩展服务的操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperateOn 最近操作时间戳，单位秒
+     * @param integer $OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

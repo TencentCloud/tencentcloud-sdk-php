@@ -93,11 +93,13 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) 获取Saas型WAF防护端口列表
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
  * @method Models\DescribeSessionResponse DescribeSession(Models\DescribeSessionRequest $req) Waf 会话定义查询接口
+ * @method Models\DescribeSpartaProtectionInfoResponse DescribeSpartaProtectionInfo(Models\DescribeSpartaProtectionInfoRequest $req) waf斯巴达-获取防护域名信息
  * @method Models\DescribeTlsVersionResponse DescribeTlsVersion(Models\DescribeTlsVersionRequest $req) 查询用户TLS版本
  * @method Models\DescribeTopAttackDomainResponse DescribeTopAttackDomain(Models\DescribeTopAttackDomainRequest $req) 查询Top5的攻击域名
  * @method Models\DescribeUserCdcClbWafRegionsResponse DescribeUserCdcClbWafRegions(Models\DescribeUserCdcClbWafRegionsRequest $req) 在CDC场景下，负载均衡型WAF的添加、编辑域名配置的时候，需要展示CDC负载均衡型WAF（cdc-clb-waf)支持的地域列表，通过DescribeUserCdcClbWafRegions既可以获得当前对客户已经开放的地域列表
  * @method Models\DescribeUserClbWafRegionsResponse DescribeUserClbWafRegions(Models\DescribeUserClbWafRegionsRequest $req) 在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
  * @method Models\DescribeUserDomainInfoResponse DescribeUserDomainInfo(Models\DescribeUserDomainInfoRequest $req) 查询saas和clb的域名信息
+ * @method Models\DescribeUserLevelResponse DescribeUserLevel(Models\DescribeUserLevelRequest $req) 获取用户防护规则等级
  * @method Models\DescribeUserSignatureRuleResponse DescribeUserSignatureRule(Models\DescribeUserSignatureRuleRequest $req) 获取用户特征规则列表
  * @method Models\DescribeVipInfoResponse DescribeVipInfo(Models\DescribeVipInfoRequest $req) 根据过滤条件查询VIP信息
  * @method Models\DescribeWafAutoDenyRulesResponse DescribeWafAutoDenyRules(Models\DescribeWafAutoDenyRulesRequest $req) 返回ip惩罚规则详细信息
@@ -107,6 +109,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
 可能的错误码：ResourceNotFound（没有找到对应的资源）、UnsupportedRegion（目前clb-waf只支持北京、广州、上海、成都、重庆、香港地域）。
 
  * @method Models\DescribeWafThreatenIntelligenceResponse DescribeWafThreatenIntelligence(Models\DescribeWafThreatenIntelligenceRequest $req) 描述WAF威胁情报封禁模块配置详情
+ * @method Models\DescribeWebshellStatusResponse DescribeWebshellStatus(Models\DescribeWebshellStatusRequest $req) 获取域名的webshell状态
  * @method Models\FreshAntiFakeUrlResponse FreshAntiFakeUrl(Models\FreshAntiFakeUrlRequest $req) 刷新防篡改url
  * @method Models\GenerateDealsAndPayNewResponse GenerateDealsAndPayNew(Models\GenerateDealsAndPayNewRequest $req) 计费资源购买、续费下单接口
  * @method Models\GetAttackDownloadRecordsResponse GetAttackDownloadRecords(Models\GetAttackDownloadRecordsRequest $req) 查询下载攻击日志任务记录列表

@@ -85,15 +85,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getUnordered() 获取合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
  * @method void setUnordered(boolean $Unordered) 设置合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
  * @method string getFlowType() 获取合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为255个字符，仅限中文、字母、数字和下划线组成。
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为255个字符，仅限中文、字母、数字和下划线组成。
  * @method string getCustomShowMap() 获取您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
@@ -157,15 +153,11 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
  * @method integer getSignBeanTag() 获取签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件`
+**注**: `发起后添加控件功能不支持添加签批控件`
  * @method void setSignBeanTag(integer $SignBeanTag) 设置签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件`
+**注**: `发起后添加控件功能不支持添加签批控件`
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
  * @method void setCcInfos(array $CcInfos) 设置合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
  * @method integer getCcNotifyType() 获取可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
@@ -252,9 +244,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
      * @var boolean 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
      */
     public $Unordered;
 
@@ -312,9 +302,7 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
      * @var integer 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件`
+**注**: `发起后添加控件功能不支持添加签批控件`
      */
     public $SignBeanTag;
 
@@ -378,9 +366,7 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
      * @param boolean $Unordered 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
-
-注
-`有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
+**注**: `有序签署时以传入FlowApprovers数组的顺序作为签署顺序`
      * @param string $FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为255个字符，仅限中文、字母、数字和下划线组成。
      * @param string $CustomShowMap 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
@@ -414,9 +400,7 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
      * @param integer $SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
-
-注:
-`发起后添加控件功能不支持添加签批控件`
+**注**: `发起后添加控件功能不支持添加签批控件`
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
      * @param integer $CcNotifyType 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
 <ul><li> **0**：合同发起时通知（默认值）</li>

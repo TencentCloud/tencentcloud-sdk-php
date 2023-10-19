@@ -20,9 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateFlowByFiles返回参数结构体
  *
- * @method string getFlowId() 获取合同签署流程ID
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowId(string $FlowId) 设置合同签署流程ID
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApprovers() 获取签署方信息，如角色ID、角色名称等
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +36,8 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreateFlowByFilesResponse extends AbstractModel
 {
     /**
-     * @var string 合同签署流程ID
+     * @var string 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
@@ -51,7 +54,8 @@ class ChannelCreateFlowByFilesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 合同签署流程ID
+     * @param string $FlowId 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Approvers 签署方信息，如角色ID、角色名称等
 注意：此字段可能返回 null，表示取不到有效值。

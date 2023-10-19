@@ -20,18 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建签署流程签署人入参。
 
-其中签署方FlowApproverInfo需要传递的参数
-非单C、单B、B2C合同，ApproverType、RecipientId（模板发起合同时）必传，建议都传。
+**各种场景传参说明**:
 
-其他身份标识，注：`如果发起的是动态签署方（即ApproverOption.FillType指定为1），可以不指定具体签署人信息`
+<table>
+<thead>
+<tr>
+<th>场景编号</th>
+<th>可作为发起方类型</th>
+<th>可作为签署方的类型</th>
+<th>签署方传参说明</th>
+</tr>
+</thead>
 
-<ul><li>1-个人：Name、Mobile必传</li>
-<li>2-第三方平台子客企业指定经办人：OpenId必传，OrgName必传、OrgOpenId必传；</li>
-<li>3-第三方平台子客企业不指定经办人：OrgName必传、OrgOpenId必传；</li>
-<li>4-非第三方平台子客企业(平台企业)：Name、Mobile必传，OrgName必传，且NotChannelOrganization=True。</li></ul>
+<tbody>
+<tr>
+<td>场景一</td>
+<td>第三方子企业A员工</td>
+<td>第三方子企业A员工</td>
+<td>OpenId、OrgName、OrgOpenId必传 ,ApproverType设置为ORGANIZATION</td>
+</tr>
 
-RecipientId参数：
-从DescribeTemplates接口中，可以得到模板下的签署方Recipient列表，根据模板自定义的Rolename在此结构体中确定其RecipientId。
+<tr>
+<td>场景二</td>
+<td>第三方子企业A员工</td>
+<td>第三方子企业B(不指定经办人)</td>
+<td>OrgName、OrgOpenId必传 ,ApproverType设置为ORGANIZATION</td>
+</tr>
+
+<tr>
+<td>场景三</td>
+<td>第三方子企业A员工</td>
+<td>第三方子企业B员工</td>
+<td>OpenId、OrgName、OrgOpenId必传, ApproverType设置为ORGANIZATION</td>
+</tr>
+
+<tr>
+<td>场景四</td>
+<td>第三方子企业A员工</td>
+<td>个人/自然人</td>
+<td>Name、Mobile必传, ApproverType设置为PERSON</td>
+</tr>
+
+<tr>
+<td>场景五</td>
+<td>第三方子企业A员工</td>
+<td>SaaS平台企业员工</td>
+<td>Name、Mobile、OrgName必传，且NotChannelOrganization=True。 ApproverType设置为ORGANIZATION</td>
+</tr>
+</tbody>
+</table>
+
+**注1**: `使用模板发起合同时，RecipientId（模板发起合同时）必传`
+
+RecipientId参数获取：
+从<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/DescribeFlowTemplates" target="_blank">DescribeFlowTemplates接口</a>接口中，可以得到模板下的签署方Recipient列表，根据模板自定义的Rolename在此结构体中确定其RecipientId。
+
+**注2**:  `如果发起的是动态签署方（即ApproverOption.FillType指定为1），可以不指定具体签署人信息`,  动态签署方可以参考<a href="https://qian.tencent.com/developers/partner/dynamic_signer" target="_blank">此文档</a>
  *
  * @method string getName() 获取签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。

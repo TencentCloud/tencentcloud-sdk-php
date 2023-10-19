@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getEdition() 获取版本
  * @method void setEdition(string $Edition) 设置版本
+ * @method string getInstanceID() 获取实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceID(string $InstanceID) 设置实例ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainURI extends AbstractModel
 {
@@ -38,8 +42,16 @@ class DomainURI extends AbstractModel
     public $Edition;
 
     /**
+     * @var string 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceID;
+
+    /**
      * @param string $Domain 域名
      * @param string $Edition 版本
+     * @param string $InstanceID 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class DomainURI extends AbstractModel
 
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
     }
 }

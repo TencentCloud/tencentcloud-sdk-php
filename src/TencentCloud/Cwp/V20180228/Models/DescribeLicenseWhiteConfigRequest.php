@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseWhiteConfig请求参数结构体
  *
-
+ * @method string getRuleName() 获取规则名称,例如: cwp
+ * @method void setRuleName(string $RuleName) 设置规则名称,例如: cwp
  */
 class DescribeLicenseWhiteConfigRequest extends AbstractModel
 {
-
+    /**
+     * @var string 规则名称,例如: cwp
+     */
+    public $RuleName;
 
     /**
-
+     * @param string $RuleName 规则名称,例如: cwp
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeLicenseWhiteConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
+        }
     }
 }

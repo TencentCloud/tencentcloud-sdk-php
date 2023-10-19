@@ -72,6 +72,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfo(Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest $req) 修改云原生网关证书信息
  * @method Models\UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpec(Models\UpdateCloudNativeAPIGatewaySpecRequest $req) 修改云原生API网关实例的节点规格信息，比如节点扩缩容或者升降配
  * @method Models\UpdateEngineInternetAccessResponse UpdateEngineInternetAccess(Models\UpdateEngineInternetAccessRequest $req) 修改引擎公网访问配置
+ * @method Models\UpdateUpstreamTargetsResponse UpdateUpstreamTargets(Models\UpdateUpstreamTargetsRequest $req) 更新网关上游实例列表，仅支持IPList服务类型
  */
 
 class TseClient extends AbstractClient

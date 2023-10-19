@@ -20,16 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowsByTemplates返回参数结构体
  *
- * @method array getFlowIds() 获取多个合同ID
- * @method void setFlowIds(array $FlowIds) 设置多个合同ID
+ * @method array getFlowIds() 获取生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+ * @method void setFlowIds(array $FlowIds) 设置生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
  * @method array getCustomerData() 获取第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
  * @method void setCustomerData(array $CustomerData) 设置第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
  * @method array getErrorMessages() 获取创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
  * @method void setErrorMessages(array $ErrorMessages) 设置创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
- * @method array getPreviewUrls() 获取预览模式下返回的预览文件url数组
- * @method void setPreviewUrls(array $PreviewUrls) 设置预览模式下返回的预览文件url数组
+ * @method array getPreviewUrls() 获取合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+ * @method void setPreviewUrls(array $PreviewUrls) 设置合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
  * @method array getTaskInfos() 获取复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
  * @method void setTaskInfos(array $TaskInfos) 设置复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
@@ -42,7 +48,8 @@ use TencentCloud\Common\AbstractModel;
 class CreateFlowsByTemplatesResponse extends AbstractModel
 {
     /**
-     * @var array 多个合同ID
+     * @var array 生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
      */
     public $FlowIds;
 
@@ -58,7 +65,9 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
     public $ErrorMessages;
 
     /**
-     * @var array 预览模式下返回的预览文件url数组
+     * @var array 合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
      */
     public $PreviewUrls;
 
@@ -79,11 +88,14 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowIds 多个合同ID
+     * @param array $FlowIds 生成的合同流程ID数组，合同流程ID为32位字符串。
+建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
      * @param array $CustomerData 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
      * @param array $ErrorMessages 创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
-     * @param array $PreviewUrls 预览模式下返回的预览文件url数组
+     * @param array $PreviewUrls 合同预览链接URL数组。
+
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
      * @param array $TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
      * @param array $FlowApprovers 签署方信息，如角色ID、角色名称等

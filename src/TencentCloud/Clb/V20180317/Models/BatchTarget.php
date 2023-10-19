@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) 设置子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
  * @method string getLocationId() 获取七层规则 ID。
  * @method void setLocationId(string $LocationId) 设置七层规则 ID。
+ * @method string getTag() 获取标签。
+ * @method void setTag(string $Tag) 设置标签。
  */
 class BatchTarget extends AbstractModel
 {
@@ -69,6 +71,11 @@ class BatchTarget extends AbstractModel
     public $LocationId;
 
     /**
+     * @var string 标签。
+     */
+    public $Tag;
+
+    /**
      * @param string $ListenerId 监听器 ID。
      * @param integer $Port 绑定端口。
      * @param string $InstanceId 子机 ID。表示绑定主网卡主 IP。
@@ -76,6 +83,7 @@ class BatchTarget extends AbstractModel
 注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
      * @param integer $Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
      * @param string $LocationId 七层规则 ID。
+     * @param string $Tag 标签。
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class BatchTarget extends AbstractModel
 
         if (array_key_exists("LocationId",$param) and $param["LocationId"] !== null) {
             $this->LocationId = $param["LocationId"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

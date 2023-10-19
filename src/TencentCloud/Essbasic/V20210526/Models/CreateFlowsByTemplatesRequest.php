@@ -20,25 +20,64 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowsByTemplates请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
  * @method array getFlowInfos() 获取要创建的合同信息列表，最多支持一次创建20个合同
  * @method void setFlowInfos(array $FlowInfos) 设置要创建的合同信息列表，最多支持一次创建20个合同
- * @method boolean getNeedPreview() 获取是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls；
-预览链接有效期300秒；
-同时，如果预览的文件中指定了动态表格控件，需要进行异步合成；此时此接口返回的是合成前的文档预览链接，而合成完成后的文档预览链接会通过：回调通知的方式、或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询；
- * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls；
-预览链接有效期300秒；
-同时，如果预览的文件中指定了动态表格控件，需要进行异步合成；此时此接口返回的是合成前的文档预览链接，而合成完成后的文档预览链接会通过：回调通知的方式、或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询；
- * @method integer getPreviewType() 获取预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
- * @method void setPreviewType(integer $PreviewType) 设置预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
+ * @method boolean getNeedPreview() 获取是否为预览模式，取值如下：
+<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+
+注:
+
+`如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过回调通知的方式或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询得到`
+
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式，取值如下：
+<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+
+注:
+
+`如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过回调通知的方式或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询得到`
+
+ * @method integer getPreviewType() 获取预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+ * @method void setPreviewType(integer $PreviewType) 设置预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
  * @method UserInfo getOperator() 获取操作者的信息，不用传
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息，不用传
  */
 class CreateFlowsByTemplatesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
      */
     public $Agent;
 
@@ -48,14 +87,23 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
     public $FlowInfos;
 
     /**
-     * @var boolean 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls；
-预览链接有效期300秒；
-同时，如果预览的文件中指定了动态表格控件，需要进行异步合成；此时此接口返回的是合成前的文档预览链接，而合成完成后的文档预览链接会通过：回调通知的方式、或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询；
+     * @var boolean 是否为预览模式，取值如下：
+<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+
+注:
+
+`如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过回调通知的方式或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询得到`
+
      */
     public $NeedPreview;
 
     /**
-     * @var integer 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
+     * @var integer 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
      */
     public $PreviewType;
 
@@ -66,12 +114,28 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 均必填。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
      * @param array $FlowInfos 要创建的合同信息列表，最多支持一次创建20个合同
-     * @param boolean $NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls；
-预览链接有效期300秒；
-同时，如果预览的文件中指定了动态表格控件，需要进行异步合成；此时此接口返回的是合成前的文档预览链接，而合成完成后的文档预览链接会通过：回调通知的方式、或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询；
-     * @param integer $PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
+     * @param boolean $NeedPreview 是否为预览模式，取值如下：
+<ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+
+注:
+
+`如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过回调通知的方式或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询得到`
+
+     * @param integer $PreviewType 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
      * @param UserInfo $Operator 操作者的信息，不用传
      */
     function __construct()

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置地域（标准的ap-格式）列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRichDatas() 获取包含详细属性的地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRichDatas(array $RichDatas) 设置包含详细属性的地域信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +40,20 @@ class DescribeUserClbWafRegionsResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var array 包含详细属性的地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RichDatas;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $Data 地域（标准的ap-格式）列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RichDatas 包含详细属性的地域信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -60,6 +72,15 @@ class DescribeUserClbWafRegionsResponse extends AbstractModel
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("RichDatas",$param) and $param["RichDatas"] !== null) {
+            $this->RichDatas = [];
+            foreach ($param["RichDatas"] as $key => $value){
+                $obj = new ClbWafRegionItem();
+                $obj->deserialize($value);
+                array_push($this->RichDatas, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

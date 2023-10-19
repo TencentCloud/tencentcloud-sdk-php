@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的多媒体创作引擎媒资信息。当导出目标为 CME 时必填。
  * @method VODExportInfo getVODExportInfo() 获取导出的云点播媒资信息。当导出目标为 VOD 时必填。
  * @method void setVODExportInfo(VODExportInfo $VODExportInfo) 设置导出的云点播媒资信息。当导出目标为 VOD 时必填。
+ * @method VideoExportExtensionArgs getExportExtensionArgs() 获取视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
+ * @method void setExportExtensionArgs(VideoExportExtensionArgs $ExportExtensionArgs) 设置视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
  * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，则操作者需要有替换媒体及剪辑模板的权限。
  * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，则操作者需要有替换媒体及剪辑模板的权限。
  */
@@ -90,6 +92,11 @@ class ExportVideoByTemplateRequest extends AbstractModel
     public $VODExportInfo;
 
     /**
+     * @var VideoExportExtensionArgs 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
+     */
+    public $ExportExtensionArgs;
+
+    /**
      * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，则操作者需要有替换媒体及剪辑模板的权限。
      */
     public $Operator;
@@ -107,6 +114,7 @@ class ExportVideoByTemplateRequest extends AbstractModel
      * @param array $SlotReplacements 需要替换的素材信息。
      * @param CMEExportInfo $CMEExportInfo 导出的多媒体创作引擎媒资信息。当导出目标为 CME 时必填。
      * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。当导出目标为 VOD 时必填。
+     * @param VideoExportExtensionArgs $ExportExtensionArgs 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
      * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，则操作者需要有替换媒体及剪辑模板的权限。
      */
     function __construct()
@@ -155,6 +163,11 @@ class ExportVideoByTemplateRequest extends AbstractModel
         if (array_key_exists("VODExportInfo",$param) and $param["VODExportInfo"] !== null) {
             $this->VODExportInfo = new VODExportInfo();
             $this->VODExportInfo->deserialize($param["VODExportInfo"]);
+        }
+
+        if (array_key_exists("ExportExtensionArgs",$param) and $param["ExportExtensionArgs"] !== null) {
+            $this->ExportExtensionArgs = new VideoExportExtensionArgs();
+            $this->ExportExtensionArgs->deserialize($param["ExportExtensionArgs"]);
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

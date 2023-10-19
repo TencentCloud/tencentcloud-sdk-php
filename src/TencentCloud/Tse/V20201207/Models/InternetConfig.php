@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网带宽。
  * @method string getDescription() 获取负载均衡描述
  * @method void setDescription(string $Description) 设置负载均衡描述
- * @method string getSlaType() 获取负载均衡的规格类型，传 "SLA" 表示性能容量型，不传为共享型。
- * @method void setSlaType(string $SlaType) 设置负载均衡的规格类型，传 "SLA" 表示性能容量型，不传为共享型。
+ * @method string getSlaType() 获取负载均衡的规格类型，支持clb.c2.medium、clb.c3.small、clb.c3.medium、clb.c4.small、clb.c4.medium、clb.c4.large、clb.c4.xlarge，不传为共享型。
+ * @method void setSlaType(string $SlaType) 设置负载均衡的规格类型，支持clb.c2.medium、clb.c3.small、clb.c3.medium、clb.c4.small、clb.c4.medium、clb.c4.large、clb.c4.xlarge，不传为共享型。
  * @method boolean getMultiZoneFlag() 获取负载均衡是否多可用区
  * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置负载均衡是否多可用区
  * @method string getMasterZoneId() 获取主可用区
@@ -60,7 +60,7 @@ class InternetConfig extends AbstractModel
     public $Description;
 
     /**
-     * @var string 负载均衡的规格类型，传 "SLA" 表示性能容量型，不传为共享型。
+     * @var string 负载均衡的规格类型，支持clb.c2.medium、clb.c3.small、clb.c3.medium、clb.c4.small、clb.c4.medium、clb.c4.large、clb.c4.xlarge，不传为共享型。
      */
     public $SlaType;
 
@@ -84,7 +84,7 @@ class InternetConfig extends AbstractModel
      * @param string $InternetPayMode 公网付费类型，当前仅可选："BANDWIDTH"。不填默认为 "BANDWIDTH"
      * @param integer $InternetMaxBandwidthOut 公网带宽。
      * @param string $Description 负载均衡描述
-     * @param string $SlaType 负载均衡的规格类型，传 "SLA" 表示性能容量型，不传为共享型。
+     * @param string $SlaType 负载均衡的规格类型，支持clb.c2.medium、clb.c3.small、clb.c3.medium、clb.c4.small、clb.c4.medium、clb.c4.large、clb.c4.xlarge，不传为共享型。
      * @param boolean $MultiZoneFlag 负载均衡是否多可用区
      * @param string $MasterZoneId 主可用区
      * @param string $SlaveZoneId 备可用区

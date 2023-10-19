@@ -58,9 +58,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置负载均衡的描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSlaType() 获取负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+ * @method string getSlaType() 获取负载均衡的规格类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSlaType(string $SlaType) 设置负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+ * @method void setSlaType(string $SlaType) 设置负载均衡的规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSlaName() 获取clb规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSlaName(string $SlaName) 设置clb规格名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip() 获取clb vip
 注意：此字段可能返回 null，表示取不到有效值。
@@ -161,10 +165,16 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
     public $Description;
 
     /**
-     * @var string 负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+     * @var string 负载均衡的规格类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaType;
+
+    /**
+     * @var string clb规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SlaName;
 
     /**
      * @var string clb vip
@@ -234,7 +244,9 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 负载均衡的描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SlaType 负载均衡的规格类型，传 "SLA" 表示性能容量型，返回空为共享型
+     * @param string $SlaType 负载均衡的规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SlaName clb规格名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip clb vip
 注意：此字段可能返回 null，表示取不到有效值。
@@ -313,6 +325,10 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
 
         if (array_key_exists("SlaType",$param) and $param["SlaType"] !== null) {
             $this->SlaType = $param["SlaType"];
+        }
+
+        if (array_key_exists("SlaName",$param) and $param["SlaName"] !== null) {
+            $this->SlaName = $param["SlaName"];
         }
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {

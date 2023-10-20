@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMerchantId() 获取EID商户id，字段长度最长50位。
  * @method void setMerchantId(string $MerchantId) 设置EID商户id，字段长度最长50位。
  * @method string getIdCard() 获取身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
  * @method void setIdCard(string $IdCard) 设置身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
  * @method string getName() 获取姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
  * @method void setName(string $Name) 设置姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
  * @method string getExtra() 获取透传字段，在获取验证结果时返回。最长长度1024位。
@@ -46,7 +46,7 @@ class GetEidTokenRequest extends AbstractModel
 
     /**
      * @var string 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
      */
     public $IdCard;
 
@@ -78,7 +78,7 @@ class GetEidTokenRequest extends AbstractModel
     /**
      * @param string $MerchantId EID商户id，字段长度最长50位。
      * @param string $IdCard 身份标识（未使用OCR服务时，必须传入）。
-规则：a-zA-Z0-9组合。最长长度32位。
+规则：a-z，A-Z，0-9组合。最长长度32位。
      * @param string $Name 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
      * @param string $Extra 透传字段，在获取验证结果时返回。最长长度1024位。
      * @param GetEidTokenConfig $Config 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。

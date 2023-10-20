@@ -21,10 +21,8 @@ use TencentCloud\Common\AbstractModel;
  * ChatCompletion请求参数结构体
  *
  * @method string getModel() 获取对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
  * @method void setModel(string $Model) 设置对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
  * @method array getMessages() 获取输入对话历史。旧的对话在前，数组中最后一项应该为这次的问题。
  * @method void setMessages(array $Messages) 设置输入对话历史。旧的对话在前，数组中最后一项应该为这次的问题。
@@ -39,7 +37,6 @@ class ChatCompletionRequest extends AbstractModel
 {
     /**
      * @var string 对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
      */
     public $Model;
@@ -66,7 +63,6 @@ class ChatCompletionRequest extends AbstractModel
 
     /**
      * @param string $Model 对话的目标模型ID。
-多行业多场景大模型在线体验聊天：tj_llm_clm-v1。
 自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
      * @param array $Messages 输入对话历史。旧的对话在前，数组中最后一项应该为这次的问题。
      * @param float $Temperature 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。

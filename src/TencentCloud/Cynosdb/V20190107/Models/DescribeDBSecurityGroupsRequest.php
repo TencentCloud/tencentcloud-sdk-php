@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBSecurityGroups请求参数结构体
  *
- * @method string getInstanceId() 获取实例组ID
- * @method void setInstanceId(string $InstanceId) 设置实例组ID
+ * @method string getInstanceId() 获取实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 实例组ID
+     * @var string 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例组ID
+     * @param string $InstanceId 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
      */
     function __construct()
     {

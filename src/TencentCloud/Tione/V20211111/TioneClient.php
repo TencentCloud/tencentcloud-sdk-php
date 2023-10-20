@@ -23,9 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tione\V20211111\Models as Models;
 
 /**
- * @method Models\ChatCompletionResponse ChatCompletion(Models\ChatCompletionRequest $req) 该接口支持与两种类型大模型的聊天。
-1. 与多行业多场景大模型的在线体验聊天
-2. 与自行部署的开源大模型的聊天
+ * @method Models\ChatCompletionResponse ChatCompletion(Models\ChatCompletionRequest $req) 该接口支持与自行部署的大模型的聊天。
  * @method Models\CreateBatchModelAccTasksResponse CreateBatchModelAccTasks(Models\CreateBatchModelAccTasksRequest $req) 批量创建模型加速任务
  * @method Models\CreateBatchTaskResponse CreateBatchTask(Models\CreateBatchTaskRequest $req) 创建跑批任务
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集

@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLakeFsTaskResult返回参数结构体
+ * DescribeCustomDnsHostSet返回参数结构体
  *
- * @method LakeFileSystemToken getAccessToken() 获取路径的访问实例
- * @method void setAccessToken(LakeFileSystemToken $AccessToken) 设置路径的访问实例
+ * @method array getDnsHostSet() 获取自定义DNS Host 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDnsHostSet(array $DnsHostSet) 设置自定义DNS Host 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取自定义DNS Host总数
+ * @method void setTotalCount(integer $TotalCount) 设置自定义DNS Host总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLakeFsTaskResultResponse extends AbstractModel
+class DescribeCustomDnsHostSetResponse extends AbstractModel
 {
     /**
-     * @var LakeFileSystemToken 路径的访问实例
+     * @var array 自定义DNS Host 列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AccessToken;
+    public $DnsHostSet;
+
+    /**
+     * @var integer 自定义DNS Host总数
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class DescribeLakeFsTaskResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param LakeFileSystemToken $AccessToken 路径的访问实例
+     * @param array $DnsHostSet 自定义DNS Host 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 自定义DNS Host总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +66,17 @@ class DescribeLakeFsTaskResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
-            $this->AccessToken = new LakeFileSystemToken();
-            $this->AccessToken->deserialize($param["AccessToken"]);
+        if (array_key_exists("DnsHostSet",$param) and $param["DnsHostSet"] !== null) {
+            $this->DnsHostSet = [];
+            foreach ($param["DnsHostSet"] as $key => $value){
+                $obj = new CustomDnsHost();
+                $obj->deserialize($value);
+                array_push($this->DnsHostSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

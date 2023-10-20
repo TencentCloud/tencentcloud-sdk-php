@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLakeFsTaskResult请求参数结构体
+ * 自定义DNS Host
  *
- * @method string getFsPath() 获取需要访问的任务结果路径
- * @method void setFsPath(string $FsPath) 设置需要访问的任务结果路径
+ * @method string getDnsName() 获取DNS名称
+ * @method void setDnsName(string $DnsName) 设置DNS名称
+ * @method array getIpSet() 获取IP地址列表
+ * @method void setIpSet(array $IpSet) 设置IP地址列表
  */
-class DescribeLakeFsTaskResultRequest extends AbstractModel
+class CustomDnsHost extends AbstractModel
 {
     /**
-     * @var string 需要访问的任务结果路径
+     * @var string DNS名称
      */
-    public $FsPath;
+    public $DnsName;
 
     /**
-     * @param string $FsPath 需要访问的任务结果路径
+     * @var array IP地址列表
+     */
+    public $IpSet;
+
+    /**
+     * @param string $DnsName DNS名称
+     * @param array $IpSet IP地址列表
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeLakeFsTaskResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FsPath",$param) and $param["FsPath"] !== null) {
-            $this->FsPath = $param["FsPath"];
+        if (array_key_exists("DnsName",$param) and $param["DnsName"] !== null) {
+            $this->DnsName = $param["DnsName"];
+        }
+
+        if (array_key_exists("IpSet",$param) and $param["IpSet"] !== null) {
+            $this->IpSet = $param["IpSet"];
         }
     }
 }

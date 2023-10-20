@@ -25,11 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuestion() 获取问题描述
  * @method void setQuestion(string $Question) 设置问题描述
  * @method string getModelVersion() 获取会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。
  * @method void setModelVersion(string $ModelVersion) 设置会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。
  * @method string getMode() 获取使用模式(仅多场景客服大模型支持)。
@@ -59,7 +57,6 @@ class SendChatMessageRequest extends AbstractModel
 
     /**
      * @var string 会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。
      */
@@ -83,7 +80,6 @@ class SendChatMessageRequest extends AbstractModel
      * @param string $SessionId 会话id，标识一组对话的唯一id，id变更则重置会话
      * @param string $Question 问题描述
      * @param string $ModelVersion 会话模型版本。
-多行业多场景大模型：填写 tj_llm_clm-v1。
 多行业客服大模型：填写demo_big_model_version_id。
 默认为demo_big_model_version_id，即多行业客服大模型。
      * @param string $Mode 使用模式(仅多场景客服大模型支持)。

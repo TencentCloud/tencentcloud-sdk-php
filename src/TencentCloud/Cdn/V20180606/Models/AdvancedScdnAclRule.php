@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 精准访问控制匹配规则
  *
- * @method string getMatchKey() 获取匹配关键字：
-protocol：HTTP协议
-httpVersion：HTTP版本
-method：请求方法
-ip：请求源IP
-ipAsn：请求源IP自治域号
-ipCountry：请求源IP所在国家
-ipArea：请求源IP所在大区
-xForwardFor：请求头X-Forward-For
-directory：路径
-index：首页
-path：文件全路径
-file：文件扩展名
-param：请求参数
-referer：请求头Referer
-cookie：请求头Cookie
-userAgent：请求头User-Agent
-head：自定义请求头
- * @method void setMatchKey(string $MatchKey) 设置匹配关键字：
-protocol：HTTP协议
-httpVersion：HTTP版本
-method：请求方法
-ip：请求源IP
-ipAsn：请求源IP自治域号
-ipCountry：请求源IP所在国家
-ipArea：请求源IP所在大区
-xForwardFor：请求头X-Forward-For
-directory：路径
-index：首页
-path：文件全路径
-file：文件扩展名
-param：请求参数
-referer：请求头Referer
-cookie：请求头Cookie
-userAgent：请求头User-Agent
-head：自定义请求头
+ * @method string getMatchKey() 获取匹配关键字，可取值有：
+<li>protocol：HTTP协议</li>
+<li>httpVersion：HTTP版本</li>
+<li>method：请求方法</li>
+<li>ip：请求源IP</li>
+<li>ipAsn：请求源IP自治域号</li>
+<li>ipCountry：请求源IP所在国家</li>
+<li>ipArea：请求源IP所在大区</li>
+<li>xForwardFor：请求头X-Forwarded-For</li>
+<li>directory：路径</li>
+<li>index：首页</li>
+<li>path：文件全路径</li>
+<li>file：文件扩展名</li>
+<li>param：请求参数</li>
+<li>referer：请求头Referer</li>
+<li>cookie：请求头Cookie</li>
+<li>userAgent：请求头User-Agent</li>
+<li>head：自定义请求头</li>
+ * @method void setMatchKey(string $MatchKey) 设置匹配关键字，可取值有：
+<li>protocol：HTTP协议</li>
+<li>httpVersion：HTTP版本</li>
+<li>method：请求方法</li>
+<li>ip：请求源IP</li>
+<li>ipAsn：请求源IP自治域号</li>
+<li>ipCountry：请求源IP所在国家</li>
+<li>ipArea：请求源IP所在大区</li>
+<li>xForwardFor：请求头X-Forwarded-For</li>
+<li>directory：路径</li>
+<li>index：首页</li>
+<li>path：文件全路径</li>
+<li>file：文件扩展名</li>
+<li>param：请求参数</li>
+<li>referer：请求头Referer</li>
+<li>cookie：请求头Cookie</li>
+<li>userAgent：请求头User-Agent</li>
+<li>head：自定义请求头</li>
  * @method string getLogicOperator() 获取逻辑操作符，取值如下：
 不包含：exclude
 包含：include
@@ -506,24 +506,24 @@ head：自定义请求头
 class AdvancedScdnAclRule extends AbstractModel
 {
     /**
-     * @var string 匹配关键字：
-protocol：HTTP协议
-httpVersion：HTTP版本
-method：请求方法
-ip：请求源IP
-ipAsn：请求源IP自治域号
-ipCountry：请求源IP所在国家
-ipArea：请求源IP所在大区
-xForwardFor：请求头X-Forward-For
-directory：路径
-index：首页
-path：文件全路径
-file：文件扩展名
-param：请求参数
-referer：请求头Referer
-cookie：请求头Cookie
-userAgent：请求头User-Agent
-head：自定义请求头
+     * @var string 匹配关键字，可取值有：
+<li>protocol：HTTP协议</li>
+<li>httpVersion：HTTP版本</li>
+<li>method：请求方法</li>
+<li>ip：请求源IP</li>
+<li>ipAsn：请求源IP自治域号</li>
+<li>ipCountry：请求源IP所在国家</li>
+<li>ipArea：请求源IP所在大区</li>
+<li>xForwardFor：请求头X-Forwarded-For</li>
+<li>directory：路径</li>
+<li>index：首页</li>
+<li>path：文件全路径</li>
+<li>file：文件扩展名</li>
+<li>param：请求参数</li>
+<li>referer：请求头Referer</li>
+<li>cookie：请求头Cookie</li>
+<li>userAgent：请求头User-Agent</li>
+<li>head：自定义请求头</li>
      */
     public $MatchKey;
 
@@ -767,24 +767,24 @@ head：自定义请求头
     public $MatchKeyParam;
 
     /**
-     * @param string $MatchKey 匹配关键字：
-protocol：HTTP协议
-httpVersion：HTTP版本
-method：请求方法
-ip：请求源IP
-ipAsn：请求源IP自治域号
-ipCountry：请求源IP所在国家
-ipArea：请求源IP所在大区
-xForwardFor：请求头X-Forward-For
-directory：路径
-index：首页
-path：文件全路径
-file：文件扩展名
-param：请求参数
-referer：请求头Referer
-cookie：请求头Cookie
-userAgent：请求头User-Agent
-head：自定义请求头
+     * @param string $MatchKey 匹配关键字，可取值有：
+<li>protocol：HTTP协议</li>
+<li>httpVersion：HTTP版本</li>
+<li>method：请求方法</li>
+<li>ip：请求源IP</li>
+<li>ipAsn：请求源IP自治域号</li>
+<li>ipCountry：请求源IP所在国家</li>
+<li>ipArea：请求源IP所在大区</li>
+<li>xForwardFor：请求头X-Forwarded-For</li>
+<li>directory：路径</li>
+<li>index：首页</li>
+<li>path：文件全路径</li>
+<li>file：文件扩展名</li>
+<li>param：请求参数</li>
+<li>referer：请求头Referer</li>
+<li>cookie：请求头Cookie</li>
+<li>userAgent：请求头User-Agent</li>
+<li>head：自定义请求头</li>
      * @param string $LogicOperator 逻辑操作符，取值如下：
 不包含：exclude
 包含：include

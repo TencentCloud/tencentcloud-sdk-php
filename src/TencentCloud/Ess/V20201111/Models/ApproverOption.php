@@ -44,6 +44,22 @@ use TencentCloud\Common\AbstractModel;
 
 <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
 </ul>
+ * @method string getFlowReadLimit() 获取签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
+ * @method void setFlowReadLimit(string $FlowReadLimit) 设置签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
  */
 class ApproverOption extends AbstractModel
 {
@@ -72,6 +88,18 @@ class ApproverOption extends AbstractModel
     public $FillType;
 
     /**
+     * @var string 签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
+     */
+    public $FlowReadLimit;
+
+    /**
      * @param boolean $NoRefuse 签署方是否可以拒签
 
 <ul><li> **false** : ( 默认)可以拒签</li>
@@ -83,6 +111,14 @@ class ApproverOption extends AbstractModel
      * @param integer $FillType 签署人信息补充类型，默认无需补充。
 
 <ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+</ul>
+     * @param string $FlowReadLimit 签署人阅读合同限制参数
+ <br/>取值：
+<ul>
+<li> LimitReadTimeAndBottom，阅读合同必须限制阅读时长并且必须阅读到底</li>
+<li> LimitReadTime，阅读合同仅限制阅读时长</li>
+<li> LimitBottom，阅读合同仅限制必须阅读到底</li>
+<li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
 </ul>
      */
     function __construct()
@@ -108,6 +144,10 @@ class ApproverOption extends AbstractModel
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {
             $this->FillType = $param["FillType"];
+        }
+
+        if (array_key_exists("FlowReadLimit",$param) and $param["FlowReadLimit"] !== null) {
+            $this->FlowReadLimit = $param["FlowReadLimit"];
         }
     }
 }

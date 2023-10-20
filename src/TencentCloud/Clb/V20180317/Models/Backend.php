@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监听器绑定的后端服务的详细信息
  *
- * @method string getType() 获取后端服务的类型，可取：CVM、ENI
- * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI
+ * @method string getType() 获取后端服务的类型，可取：CVM、ENI、CCN
+ * @method void setType(string $Type) 设置后端服务的类型，可取：CVM、ENI、CCN
  * @method string getInstanceId() 获取后端服务的唯一 ID，如 ins-abcd1234
  * @method void setInstanceId(string $InstanceId) 设置后端服务的唯一 ID，如 ins-abcd1234
  * @method integer getPort() 获取后端服务的监听端口
@@ -48,11 +48,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEniId(string $EniId) 设置弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTag() 获取标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(string $Tag) 设置标签。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Backend extends AbstractModel
 {
     /**
-     * @var string 后端服务的类型，可取：CVM、ENI
+     * @var string 后端服务的类型，可取：CVM、ENI、CCN
      */
     public $Type;
 
@@ -102,7 +106,13 @@ class Backend extends AbstractModel
     public $EniId;
 
     /**
-     * @param string $Type 后端服务的类型，可取：CVM、ENI
+     * @var string 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tag;
+
+    /**
+     * @param string $Type 后端服务的类型，可取：CVM、ENI、CCN
      * @param string $InstanceId 后端服务的唯一 ID，如 ins-abcd1234
      * @param integer $Port 后端服务的监听端口
      * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
@@ -115,6 +125,8 @@ class Backend extends AbstractModel
      * @param string $RegisteredTime 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EniId 弹性网卡唯一ID，如 eni-1234abcd
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Tag 标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class Backend extends AbstractModel
 
         if (array_key_exists("EniId",$param) and $param["EniId"] !== null) {
             $this->EniId = $param["EniId"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

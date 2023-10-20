@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLakeFsTaskResult返回参数结构体
+ * ModifyIntlCustomDnsHost返回参数结构体
  *
- * @method LakeFileSystemToken getAccessToken() 获取路径的访问实例
- * @method void setAccessToken(LakeFileSystemToken $AccessToken) 设置路径的访问实例
+ * @method integer getLogId() 获取任务ID
+ * @method void setLogId(integer $LogId) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLakeFsTaskResultResponse extends AbstractModel
+class ModifyIntlCustomDnsHostResponse extends AbstractModel
 {
     /**
-     * @var LakeFileSystemToken 路径的访问实例
+     * @var integer 任务ID
      */
-    public $AccessToken;
+    public $LogId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeLakeFsTaskResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param LakeFileSystemToken $AccessToken 路径的访问实例
+     * @param integer $LogId 任务ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,8 @@ class DescribeLakeFsTaskResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessToken",$param) and $param["AccessToken"] !== null) {
-            $this->AccessToken = new LakeFileSystemToken();
-            $this->AccessToken->deserialize($param["AccessToken"]);
+        if (array_key_exists("LogId",$param) and $param["LogId"] !== null) {
+            $this->LogId = $param["LogId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

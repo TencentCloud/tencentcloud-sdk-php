@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间，单位秒。
  * @method boolean getExpireTimeRequired() 获取是否必须提供过期时间参数。
  * @method void setExpireTimeRequired(boolean $ExpireTimeRequired) 设置是否必须提供过期时间参数。
- * @method string getFormat() 获取Url组成格式，如：${private_key}${schema}${host}${full_uri。
- * @method void setFormat(string $Format) 设置Url组成格式，如：${private_key}${schema}${host}${full_uri。
+ * @method string getFormat() 获取URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
+ * @method void setFormat(string $Format) 设置URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
  * @method string getTimeFormat() 获取时间格式，dec，hex分别表示十进制，十六进制。
  * @method void setTimeFormat(string $TimeFormat) 设置时间格式，dec，hex分别表示十进制，十六进制。
  * @method integer getFailCode() 获取鉴权失败时返回的状态码。
@@ -71,7 +71,7 @@ class AdvancedAuthenticationTypeA extends AbstractModel
     public $ExpireTimeRequired;
 
     /**
-     * @var string Url组成格式，如：${private_key}${schema}${host}${full_uri。
+     * @var string URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
      */
     public $Format;
 
@@ -106,7 +106,7 @@ class AdvancedAuthenticationTypeA extends AbstractModel
      * @param string $TimeParam uri串中时间的字段名，字母，数字或下划线构成，同时必须以字母开头。
      * @param integer $ExpireTime 过期时间，单位秒。
      * @param boolean $ExpireTimeRequired 是否必须提供过期时间参数。
-     * @param string $Format Url组成格式，如：${private_key}${schema}${host}${full_uri。
+     * @param string $Format URL 组成格式，如：${private_key}${schema}${host}${full_uri}。
      * @param string $TimeFormat 时间格式，dec，hex分别表示十进制，十六进制。
      * @param integer $FailCode 鉴权失败时返回的状态码。
      * @param integer $ExpireCode 链接过期时返回的状态码。

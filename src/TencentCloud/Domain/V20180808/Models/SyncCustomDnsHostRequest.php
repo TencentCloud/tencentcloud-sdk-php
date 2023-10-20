@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLakeFsTaskResult请求参数结构体
+ * SyncCustomDnsHost请求参数结构体
  *
- * @method string getFsPath() 获取需要访问的任务结果路径
- * @method void setFsPath(string $FsPath) 设置需要访问的任务结果路径
+ * @method string getDomainId() 获取域名实例ID
+ * @method void setDomainId(string $DomainId) 设置域名实例ID
  */
-class DescribeLakeFsTaskResultRequest extends AbstractModel
+class SyncCustomDnsHostRequest extends AbstractModel
 {
     /**
-     * @var string 需要访问的任务结果路径
+     * @var string 域名实例ID
      */
-    public $FsPath;
+    public $DomainId;
 
     /**
-     * @param string $FsPath 需要访问的任务结果路径
+     * @param string $DomainId 域名实例ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeLakeFsTaskResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FsPath",$param) and $param["FsPath"] !== null) {
-            $this->FsPath = $param["FsPath"];
+        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
+            $this->DomainId = $param["DomainId"];
         }
     }
 }

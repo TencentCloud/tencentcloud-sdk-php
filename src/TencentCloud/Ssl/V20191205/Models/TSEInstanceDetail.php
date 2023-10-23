@@ -14,51 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mrs\V20200910\Models;
+namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 检查报告单
+ * tse实例详情
  *
- * @method Desc getDesc() 获取描述
+ * @method string getGatewayId() 获取网关ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDesc(Desc $Desc) 设置描述
+ * @method void setGatewayId(string $GatewayId) 设置网关ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Summary getSummary() 获取结论
+ * @method string getGatewayName() 获取网关名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummary(Summary $Summary) 设置结论
+ * @method void setGatewayName(string $GatewayName) 设置网关名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBlockTitle() 获取检查报告块标题
+ * @method array getCertificateList() 获取网关证书列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBlockTitle(array $BlockTitle) 设置检查报告块标题
+ * @method void setCertificateList(array $CertificateList) 设置网关证书列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Check extends AbstractModel
+class TSEInstanceDetail extends AbstractModel
 {
     /**
-     * @var Desc 描述
+     * @var string 网关ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Desc;
+    public $GatewayId;
 
     /**
-     * @var Summary 结论
+     * @var string 网关名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Summary;
+    public $GatewayName;
 
     /**
-     * @var array 检查报告块标题
+     * @var array 网关证书列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BlockTitle;
+    public $CertificateList;
 
     /**
-     * @param Desc $Desc 描述
+     * @param string $GatewayId 网关ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Summary $Summary 结论
+     * @param string $GatewayName 网关名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BlockTitle 检查报告块标题
+     * @param array $CertificateList 网关证书列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,22 +74,20 @@ class Check extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = new Desc();
-            $this->Desc->deserialize($param["Desc"]);
+        if (array_key_exists("GatewayId",$param) and $param["GatewayId"] !== null) {
+            $this->GatewayId = $param["GatewayId"];
         }
 
-        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
-            $this->Summary = new Summary();
-            $this->Summary->deserialize($param["Summary"]);
+        if (array_key_exists("GatewayName",$param) and $param["GatewayName"] !== null) {
+            $this->GatewayName = $param["GatewayName"];
         }
 
-        if (array_key_exists("BlockTitle",$param) and $param["BlockTitle"] !== null) {
-            $this->BlockTitle = [];
-            foreach ($param["BlockTitle"] as $key => $value){
-                $obj = new BlockTitle();
+        if (array_key_exists("CertificateList",$param) and $param["CertificateList"] !== null) {
+            $this->CertificateList = [];
+            foreach ($param["CertificateList"] as $key => $value){
+                $obj = new GatewayCertificate();
                 $obj->deserialize($value);
-                array_push($this->BlockTitle, $obj);
+                array_push($this->CertificateList, $obj);
             }
         }
     }

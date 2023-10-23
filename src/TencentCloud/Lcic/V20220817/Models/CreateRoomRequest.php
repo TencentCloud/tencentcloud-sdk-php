@@ -102,6 +102,12 @@ video 纯视频
  * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+ * @method integer getLiveType() 获取直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+ * @method void setLiveType(integer $LiveType) 设置直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+ * @method string getRecordLiveUrl() 获取伪直播链接
+ * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播链接
+ * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+ * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -239,6 +245,21 @@ video 纯视频
     public $EndDelayTime;
 
     /**
+     * @var integer 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     */
+    public $LiveType;
+
+    /**
+     * @var string 伪直播链接
+     */
+    public $RecordLiveUrl;
+
+    /**
+     * @var integer 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     */
+    public $EnableAutoStart;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。
@@ -280,6 +301,9 @@ video 纯视频
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
      * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放)
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     * @param integer $LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * @param string $RecordLiveUrl 伪直播链接
+     * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
      */
     function __construct()
     {
@@ -384,6 +408,18 @@ video 纯视频
 
         if (array_key_exists("EndDelayTime",$param) and $param["EndDelayTime"] !== null) {
             $this->EndDelayTime = $param["EndDelayTime"];
+        }
+
+        if (array_key_exists("LiveType",$param) and $param["LiveType"] !== null) {
+            $this->LiveType = $param["LiveType"];
+        }
+
+        if (array_key_exists("RecordLiveUrl",$param) and $param["RecordLiveUrl"] !== null) {
+            $this->RecordLiveUrl = $param["RecordLiveUrl"];
+        }
+
+        if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
+            $this->EnableAutoStart = $param["EnableAutoStart"];
         }
     }
 }

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndicators(array $Indicators) 设置检验指标项
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBlockTitle() 获取检验报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBlockTitle(array $BlockTitle) 设置检验报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Indicator extends AbstractModel
 {
@@ -34,7 +38,15 @@ class Indicator extends AbstractModel
     public $Indicators;
 
     /**
+     * @var array 检验报告块标题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BlockTitle;
+
+    /**
      * @param array $Indicators 检验指标项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BlockTitle 检验报告块标题
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -56,6 +68,15 @@ class Indicator extends AbstractModel
                 $obj = new IndicatorItem();
                 $obj->deserialize($value);
                 array_push($this->Indicators, $obj);
+            }
+        }
+
+        if (array_key_exists("BlockTitle",$param) and $param["BlockTitle"] !== null) {
+            $this->BlockTitle = [];
+            foreach ($param["BlockTitle"] as $key => $value){
+                $obj = new BlockTitle();
+                $obj->deserialize($value);
+                array_push($this->BlockTitle, $obj);
             }
         }
     }

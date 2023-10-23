@@ -56,7 +56,7 @@ CreateDiagnoseUrl 用于添加域名诊断任务URL。
 + 状态码 5xx 汇总及各 5 开头状态码明细（单位为 个）
  * @method Models\DescribeCdnDomainLogsResponse DescribeCdnDomainLogs(Models\DescribeCdnDomainLogsRequest $req) DescribeCdnDomainLogs 用于查询访问日志下载地址，仅支持 30 天以内的境内、境外访问日志下载链接查询。
  * @method Models\DescribeCdnIpResponse DescribeCdnIp(Models\DescribeCdnIpRequest $req) DescribeCdnIp 用于查询 CDN IP 归属。
-（注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）  
+（注意：此接口请求频率限制以 CDN 侧限制为准：200次/10分钟）
  * @method Models\DescribeCdnOriginIpResponse DescribeCdnOriginIp(Models\DescribeCdnOriginIpRequest $req) ### <font color=red>**该接口已废弃** </font><br>
 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：替换接口为DescribeIpStatus）
  * @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。

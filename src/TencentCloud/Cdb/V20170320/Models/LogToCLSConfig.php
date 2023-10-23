@@ -14,51 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mrs\V20200910\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 检查报告单
+ * DB实例慢日志、错误日志投递CLS配置
  *
- * @method Desc getDesc() 获取描述
+ * @method string getStatus() 获取投递状态打开或者关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDesc(Desc $Desc) 设置描述
+ * @method void setStatus(string $Status) 设置投递状态打开或者关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Summary getSummary() 获取结论
+ * @method string getLogSetId() 获取CLS日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummary(Summary $Summary) 设置结论
+ * @method void setLogSetId(string $LogSetId) 设置CLS日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBlockTitle() 获取检查报告块标题
+ * @method string getLogTopicId() 获取日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBlockTitle(array $BlockTitle) 设置检查报告块标题
+ * @method void setLogTopicId(string $LogTopicId) 设置日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Check extends AbstractModel
+class LogToCLSConfig extends AbstractModel
 {
     /**
-     * @var Desc 描述
+     * @var string 投递状态打开或者关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Desc;
+    public $Status;
 
     /**
-     * @var Summary 结论
+     * @var string CLS日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Summary;
+    public $LogSetId;
 
     /**
-     * @var array 检查报告块标题
+     * @var string 日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BlockTitle;
+    public $LogTopicId;
 
     /**
-     * @param Desc $Desc 描述
+     * @param string $Status 投递状态打开或者关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Summary $Summary 结论
+     * @param string $LogSetId CLS日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BlockTitle 检查报告块标题
+     * @param string $LogTopicId 日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,23 +74,16 @@ class Check extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = new Desc();
-            $this->Desc->deserialize($param["Desc"]);
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
-            $this->Summary = new Summary();
-            $this->Summary->deserialize($param["Summary"]);
+        if (array_key_exists("LogSetId",$param) and $param["LogSetId"] !== null) {
+            $this->LogSetId = $param["LogSetId"];
         }
 
-        if (array_key_exists("BlockTitle",$param) and $param["BlockTitle"] !== null) {
-            $this->BlockTitle = [];
-            foreach ($param["BlockTitle"] as $key => $value){
-                $obj = new BlockTitle();
-                $obj->deserialize($value);
-                array_push($this->BlockTitle, $obj);
-            }
+        if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
+            $this->LogTopicId = $param["LogTopicId"];
         }
     }
 }

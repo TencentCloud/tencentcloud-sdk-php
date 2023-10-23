@@ -96,6 +96,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLiveType() 获取直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLiveType(integer $LiveType) 设置直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecordLiveUrl() 获取伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomItem extends AbstractModel
 {
@@ -210,6 +222,24 @@ class RoomItem extends AbstractModel
     public $EndDelayTime;
 
     /**
+     * @var integer 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LiveType;
+
+    /**
+     * @var string 伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordLiveUrl;
+
+    /**
+     * @var integer 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableAutoStart;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomId 房间ID
@@ -247,6 +277,12 @@ class RoomItem extends AbstractModel
      * @param integer $RoomType 房间类型。0:小班课（默认值）；1:大班课；2:1V1（后续扩展）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecordLiveUrl 伪直播回放链接	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -332,6 +368,18 @@ class RoomItem extends AbstractModel
 
         if (array_key_exists("EndDelayTime",$param) and $param["EndDelayTime"] !== null) {
             $this->EndDelayTime = $param["EndDelayTime"];
+        }
+
+        if (array_key_exists("LiveType",$param) and $param["LiveType"] !== null) {
+            $this->LiveType = $param["LiveType"];
+        }
+
+        if (array_key_exists("RecordLiveUrl",$param) and $param["RecordLiveUrl"] !== null) {
+            $this->RecordLiveUrl = $param["RecordLiveUrl"];
+        }
+
+        if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
+            $this->EnableAutoStart = $param["EnableAutoStart"];
         }
     }
 }

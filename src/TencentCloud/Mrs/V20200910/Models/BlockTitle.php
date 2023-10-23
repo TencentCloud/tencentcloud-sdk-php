@@ -18,47 +18,47 @@ namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 检查报告单
+ * 块标题
  *
- * @method Desc getDesc() 获取描述
+ * @method string getName() 获取name
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDesc(Desc $Desc) 设置描述
+ * @method void setName(string $Name) 设置name
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Summary getSummary() 获取结论
+ * @method string getSrc() 获取src
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummary(Summary $Summary) 设置结论
+ * @method void setSrc(string $Src) 设置src
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBlockTitle() 获取检查报告块标题
+ * @method string getValue() 获取value
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBlockTitle(array $BlockTitle) 设置检查报告块标题
+ * @method void setValue(string $Value) 设置value
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Check extends AbstractModel
+class BlockTitle extends AbstractModel
 {
     /**
-     * @var Desc 描述
+     * @var string name
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Desc;
+    public $Name;
 
     /**
-     * @var Summary 结论
+     * @var string src
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Summary;
+    public $Src;
 
     /**
-     * @var array 检查报告块标题
+     * @var string value
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BlockTitle;
+    public $Value;
 
     /**
-     * @param Desc $Desc 描述
+     * @param string $Name name
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Summary $Summary 结论
+     * @param string $Src src
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BlockTitle 检查报告块标题
+     * @param string $Value value
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,23 +74,16 @@ class Check extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
-            $this->Desc = new Desc();
-            $this->Desc->deserialize($param["Desc"]);
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
-            $this->Summary = new Summary();
-            $this->Summary->deserialize($param["Summary"]);
+        if (array_key_exists("Src",$param) and $param["Src"] !== null) {
+            $this->Src = $param["Src"];
         }
 
-        if (array_key_exists("BlockTitle",$param) and $param["BlockTitle"] !== null) {
-            $this->BlockTitle = [];
-            foreach ($param["BlockTitle"] as $key => $value){
-                $obj = new BlockTitle();
-                $obj->deserialize($value);
-                array_push($this->BlockTitle, $obj);
-            }
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

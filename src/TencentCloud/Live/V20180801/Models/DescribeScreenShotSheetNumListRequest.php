@@ -29,11 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。
  * @method void setEndTime(string $EndTime) 设置结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。
  * @method string getZone() 获取地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
  * @method void setZone(string $Zone) 设置地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
  * @method array getPushDomains() 获取推流域名（支持查询2019年11 月1日之后的域名维度数据）。
@@ -54,7 +54,7 @@ class DescribeScreenShotSheetNumListRequest extends AbstractModel
      * @var string 结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。
      */
     public $EndTime;
 
@@ -80,7 +80,7 @@ class DescribeScreenShotSheetNumListRequest extends AbstractModel
      * @param string $EndTime 结束时间点，接口查询支持两种时间格式：
 1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-支持查询最近1年的数据。
+支持最近三个月的查询，查询开始和结束时间跨度不支持超过31天。
      * @param string $Zone 地域信息，可选值包括Mainland，Oversea，前者是查询中国大陆范围内的数据，后者是除中国大陆范围之外的数据，若不传该参数，则查询所有地区的数据。
      * @param array $PushDomains 推流域名（支持查询2019年11 月1日之后的域名维度数据）。
      * @param string $Granularity 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，按照北京时间做跨天处理，最大支持查询时间范围是186天当天）。

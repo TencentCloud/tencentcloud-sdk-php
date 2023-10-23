@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
  * @method string getCacheTime() 获取当前结果缓存时间
  * @method void setCacheTime(string $CacheTime) 设置当前结果缓存时间
+ * @method array getTSE() 获取关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTSE(array $TSE) 设置关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -140,6 +144,12 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
     public $CacheTime;
 
     /**
+     * @var array 关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TSE;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -167,6 +177,8 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
      * @param string $CacheTime 当前结果缓存时间
+     * @param array $TSE 关联tse资源详情	
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -278,6 +290,15 @@ class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel
 
         if (array_key_exists("CacheTime",$param) and $param["CacheTime"] !== null) {
             $this->CacheTime = $param["CacheTime"];
+        }
+
+        if (array_key_exists("TSE",$param) and $param["TSE"] !== null) {
+            $this->TSE = [];
+            foreach ($param["TSE"] as $key => $value){
+                $obj = new TSEInstanceList();
+                $obj->deserialize($value);
+                array_push($this->TSE, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

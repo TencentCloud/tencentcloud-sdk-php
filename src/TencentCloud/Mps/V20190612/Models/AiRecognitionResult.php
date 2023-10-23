@@ -72,6 +72,14 @@ TransTextRecognition 时有效。
 
 TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiRecognitionTaskObjectResult getObjectTask() 获取物体识别结果，当Type 为
+
+ObjectRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setObjectTask(AiRecognitionTaskObjectResult $ObjectTask) 设置物体识别结果，当Type 为
+
+ObjectRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiRecognitionResult extends AbstractModel
 {
@@ -130,6 +138,14 @@ TransTextRecognition 时有效。
     public $TransTextTask;
 
     /**
+     * @var AiRecognitionTaskObjectResult 物体识别结果，当Type 为
+
+ObjectRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ObjectTask;
+
+    /**
      * @param string $Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
@@ -155,6 +171,10 @@ TransTextRecognition 时有效。
      * @param AiRecognitionTaskTransTextResult $TransTextTask 翻译结果，当 Type 为
 
 TransTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiRecognitionTaskObjectResult $ObjectTask 物体识别结果，当Type 为
+
+ObjectRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -202,6 +222,11 @@ TransTextRecognition 时有效。
         if (array_key_exists("TransTextTask",$param) and $param["TransTextTask"] !== null) {
             $this->TransTextTask = new AiRecognitionTaskTransTextResult();
             $this->TransTextTask->deserialize($param["TransTextTask"]);
+        }
+
+        if (array_key_exists("ObjectTask",$param) and $param["ObjectTask"] !== null) {
+            $this->ObjectTask = new AiRecognitionTaskObjectResult();
+            $this->ObjectTask->deserialize($param["ObjectTask"]);
         }
     }
 }

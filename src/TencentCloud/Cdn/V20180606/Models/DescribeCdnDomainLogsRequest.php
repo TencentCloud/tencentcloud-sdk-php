@@ -22,28 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取指定域名查询
  * @method void setDomain(string $Domain) 设置指定域名查询
- * @method string getStartTime() 获取开始时间，如 2019-09-04 00:00:00
- * @method void setStartTime(string $StartTime) 设置开始时间，如 2019-09-04 00:00:00
- * @method string getEndTime() 获取结束时间，如 2019-09-04 12:00:00
- * @method void setEndTime(string $EndTime) 设置结束时间，如 2019-09-04 12:00:00
+ * @method string getStartTime() 获取开始时间
+ * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method string getEndTime() 获取结束时间
+ * @method void setEndTime(string $EndTime) 设置结束时间
  * @method integer getOffset() 获取分页查询偏移量，默认为 0
  * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0
  * @method integer getLimit() 获取分页查询限制数目，默认为 100，最大为 1000
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 100，最大为 1000
- * @method string getArea() 获取指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
- * @method void setArea(string $Area) 设置指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
- * @method string getLogType() 获取指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志
- * @method void setLogType(string $LogType) 设置指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志
+ * @method string getArea() 获取指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
+ * @method void setArea(string $Area) 设置指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
+ * @method string getLogType() 获取指定下载日志的类型，可取值有：
+<li>access：访问日志</li>
+ * @method void setLogType(string $LogType) 设置指定下载日志的类型，可取值有：
+<li>access：访问日志</li>
  */
 class DescribeCdnDomainLogsRequest extends AbstractModel
 {
@@ -53,12 +51,12 @@ class DescribeCdnDomainLogsRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 开始时间，如 2019-09-04 00:00:00
+     * @var string 开始时间
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间，如 2019-09-04 12:00:00
+     * @var string 结束时间
      */
     public $EndTime;
 
@@ -73,33 +71,31 @@ class DescribeCdnDomainLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
+     * @var string 指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
      */
     public $Area;
 
     /**
-     * @var string 指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志
+     * @var string 指定下载日志的类型，可取值有：
+<li>access：访问日志</li>
      */
     public $LogType;
 
     /**
      * @param string $Domain 指定域名查询
-     * @param string $StartTime 开始时间，如 2019-09-04 00:00:00
-     * @param string $EndTime 结束时间，如 2019-09-04 12:00:00
+     * @param string $StartTime 开始时间
+     * @param string $EndTime 结束时间
      * @param integer $Offset 分页查询偏移量，默认为 0
      * @param integer $Limit 分页查询限制数目，默认为 100，最大为 1000
-     * @param string $Area 指定区域下载日志
-mainland：获取境内加速日志包下载链接
-overseas：获取境外加速日志包下载链接
-global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
-     * @param string $LogType 指定下载日志的类型，目前仅支持访问日志（access）。
-access：访问日志
+     * @param string $Area 指定区域下载日志，默认为 mainland，可取值有：
+<li>mainland：获取境内加速日志包下载链接</li>
+<li>overseas：获取境外加速日志包下载链接</li>
+<li>global：同时获取境内、境外加速日志包下载链接（分开打包）</li>
+     * @param string $LogType 指定下载日志的类型，可取值有：
+<li>access：访问日志</li>
      */
     function __construct()
     {

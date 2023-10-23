@@ -20,10 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePushBandwidthAndFluxList请求参数结构体
  *
- * @method string getStartTime() 获取起始时间点，格式为 yyyy-mm-dd HH:MM:SS。
- * @method void setStartTime(string $StartTime) 设置起始时间点，格式为 yyyy-mm-dd HH:MM:SS。
- * @method string getEndTime() 获取结束时间点，格式为 yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
- * @method void setEndTime(string $EndTime) 设置结束时间点，格式为 yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+ * @method string getStartTime() 获取查询开始时间点，精确到分钟粒度，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F,-ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三年的查询，查询开始和结束时间跨度不支持超过31天。
+ * @method void setStartTime(string $StartTime) 设置查询开始时间点，精确到分钟粒度，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F,-ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三年的查询，查询开始和结束时间跨度不支持超过31天。
+ * @method string getEndTime() 获取查询结束时间点，精确到分钟粒度，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F,-ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三年的查询，查询开始和结束时间跨度不支持超过31天。
+ * @method void setEndTime(string $EndTime) 设置查询结束时间点，精确到分钟粒度，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F,-ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三年的查询，查询开始和结束时间跨度不支持超过31天。
  * @method array getPushDomains() 获取域名，可以填多个，若不填，表示总体数据。
  * @method void setPushDomains(array $PushDomains) 设置域名，可以填多个，若不填，表示总体数据。
  * @method string getMainlandOrOversea() 获取可选值：
@@ -72,12 +84,18 @@ https://cloud.tencent.com/document/product/267/34019。
 class DescribePushBandwidthAndFluxListRequest extends AbstractModel
 {
     /**
-     * @var string 起始时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * @var string 查询开始时间点，精确到分钟粒度，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F,-ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三年的查询，查询开始和结束时间跨度不支持超过31天。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间点，格式为 yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+     * @var string 查询结束时间点，精确到分钟粒度，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F,-ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三年的查询，查询开始和结束时间跨度不支持超过31天。
      */
     public $EndTime;
 
@@ -124,8 +142,14 @@ https://cloud.tencent.com/document/product/267/34019。
     public $CountryNames;
 
     /**
-     * @param string $StartTime 起始时间点，格式为 yyyy-mm-dd HH:MM:SS。
-     * @param string $EndTime 结束时间点，格式为 yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+     * @param string $StartTime 查询开始时间点，精确到分钟粒度，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F,-ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三年的查询，查询开始和结束时间跨度不支持超过31天。
+     * @param string $EndTime 查询结束时间点，精确到分钟粒度，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F,-ISO%20%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)。
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持最近三年的查询，查询开始和结束时间跨度不支持超过31天。
      * @param array $PushDomains 域名，可以填多个，若不填，表示总体数据。
      * @param string $MainlandOrOversea 可选值：
 Mainland：查询中国大陆（境内）数据，

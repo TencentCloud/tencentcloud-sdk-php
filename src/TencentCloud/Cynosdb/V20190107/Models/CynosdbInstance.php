@@ -146,6 +146,10 @@ pause
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourcePackages(array $ResourcePackages) 设置实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceIndexMode() 获取实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceIndexMode(string $InstanceIndexMode) 设置实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -421,6 +425,12 @@ pause
     public $ResourcePackages;
 
     /**
+     * @var string 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceIndexMode;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -483,6 +493,8 @@ pause
      * @param array $InstanceNetInfo 实例网络信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourcePackages 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -724,6 +736,10 @@ pause
                 $obj->deserialize($value);
                 array_push($this->ResourcePackages, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceIndexMode",$param) and $param["InstanceIndexMode"] !== null) {
+            $this->InstanceIndexMode = $param["InstanceIndexMode"];
         }
     }
 }

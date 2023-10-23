@@ -20,12 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePushBandwidthAndFluxList返回参数结构体
  *
- * @method string getPeakBandwidthTime() 获取峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
- * @method void setPeakBandwidthTime(string $PeakBandwidthTime) 设置峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+ * @method string getPeakBandwidthTime() 获取峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setPeakBandwidthTime(string $PeakBandwidthTime) 设置峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method float getPeakBandwidth() 获取峰值带宽，单位是 Mbps。
  * @method void setPeakBandwidth(float $PeakBandwidth) 设置峰值带宽，单位是 Mbps。
- * @method string getP95PeakBandwidthTime() 获取95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
- * @method void setP95PeakBandwidthTime(string $P95PeakBandwidthTime) 设置95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+ * @method string getP95PeakBandwidthTime() 获取95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setP95PeakBandwidthTime(string $P95PeakBandwidthTime) 设置95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method float getP95PeakBandwidth() 获取95峰值带宽，单位是 Mbps。
  * @method void setP95PeakBandwidth(float $P95PeakBandwidth) 设置95峰值带宽，单位是 Mbps。
  * @method float getSumFlux() 获取总流量，单位是 MB。
@@ -38,7 +50,10 @@ use TencentCloud\Common\AbstractModel;
 class DescribePushBandwidthAndFluxListResponse extends AbstractModel
 {
     /**
-     * @var string 峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * @var string 峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $PeakBandwidthTime;
 
@@ -48,7 +63,10 @@ class DescribePushBandwidthAndFluxListResponse extends AbstractModel
     public $PeakBandwidth;
 
     /**
-     * @var string 95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * @var string 95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $P95PeakBandwidthTime;
 
@@ -73,9 +91,15 @@ class DescribePushBandwidthAndFluxListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PeakBandwidthTime 峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * @param string $PeakBandwidthTime 峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param float $PeakBandwidth 峰值带宽，单位是 Mbps。
-     * @param string $P95PeakBandwidthTime 95峰值带宽所在时间点，格式为 yyyy-mm-dd HH:MM:SS。
+     * @param string $P95PeakBandwidthTime 95峰值带宽所在时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param float $P95PeakBandwidth 95峰值带宽，单位是 Mbps。
      * @param float $SumFlux 总流量，单位是 MB。
      * @param array $DataInfoList 明细数据信息。

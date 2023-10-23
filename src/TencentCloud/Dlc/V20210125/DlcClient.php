@@ -68,6 +68,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(Models\DeleteUsersFromWorkGroupRequest $req) 从工作组中删除用户
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) 删除工作组
+ * @method Models\DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(Models\DescribeAdvancedStoreLocationRequest $req) 查询sql查询界面高级设置
  * @method Models\DescribeDMSDatabaseResponse DescribeDMSDatabase(Models\DescribeDMSDatabaseRequest $req) DMS元数据获取库
  * @method Models\DescribeDMSPartitionsResponse DescribeDMSPartitions(Models\DescribeDMSPartitionsRequest $req) DMS元数据获取分区
  * @method Models\DescribeDMSTableResponse DescribeDMSTable(Models\DescribeDMSTableRequest $req) DMS元数据获取表
@@ -118,6 +119,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\GetOptimizerPolicyResponse GetOptimizerPolicy(Models\GetOptimizerPolicyRequest $req) GetOptimizerPolicy
  * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
  * @method Models\LockMetaDataResponse LockMetaData(Models\LockMetaDataRequest $req) 元数据锁
+ * @method Models\ModifyAdvancedStoreLocationResponse ModifyAdvancedStoreLocation(Models\ModifyAdvancedStoreLocationRequest $req) 修改sql查询界面高级设置。
  * @method Models\ModifyDataEngineDescriptionResponse ModifyDataEngineDescription(Models\ModifyDataEngineDescriptionRequest $req) 修改引擎描述信息
  * @method Models\ModifyGovernEventRuleResponse ModifyGovernEventRule(Models\ModifyGovernEventRuleRequest $req) 修改数据治理事件阈值
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) 更新spark作业

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvederInstanceNum(integer $ProvederInstanceNum) 设置实例数量
  * @method array getZoneInstanceInfoSet() 获取Zone实例信息结构体数组
  * @method void setZoneInstanceInfoSet(array $ZoneInstanceInfoSet) 设置Zone实例信息结构体数组
+ * @method integer getProviderInstanceNum() 获取实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProviderInstanceNum(integer $ProviderInstanceNum) 设置实例数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ISPCounter extends AbstractModel
 {
@@ -43,6 +47,7 @@ class ISPCounter extends AbstractModel
 
     /**
      * @var integer 实例数量
+     * @deprecated
      */
     public $ProvederInstanceNum;
 
@@ -52,10 +57,18 @@ class ISPCounter extends AbstractModel
     public $ZoneInstanceInfoSet;
 
     /**
+     * @var integer 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProviderInstanceNum;
+
+    /**
      * @param string $ProviderName 运营商名称
      * @param integer $ProviderNodeNum 节点数量
      * @param integer $ProvederInstanceNum 实例数量
      * @param array $ZoneInstanceInfoSet Zone实例信息结构体数组
+     * @param integer $ProviderInstanceNum 实例数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -89,6 +102,10 @@ class ISPCounter extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ZoneInstanceInfoSet, $obj);
             }
+        }
+
+        if (array_key_exists("ProviderInstanceNum",$param) and $param["ProviderInstanceNum"] !== null) {
+            $this->ProviderInstanceNum = $param["ProviderInstanceNum"];
         }
     }
 }

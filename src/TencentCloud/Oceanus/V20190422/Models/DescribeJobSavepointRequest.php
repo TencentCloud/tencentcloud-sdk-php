@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页参数，偏移量
  * @method string getWorkSpaceId() 获取工作空间 SerialId
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method array getRecordTypes() 获取2 是checkpoint
+1 是触发savepoint
+3 停止触发的savepoint
+ * @method void setRecordTypes(array $RecordTypes) 设置2 是checkpoint
+1 是触发savepoint
+3 停止触发的savepoint
  */
 class DescribeJobSavepointRequest extends AbstractModel
 {
@@ -52,10 +58,20 @@ class DescribeJobSavepointRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
+     * @var array 2 是checkpoint
+1 是触发savepoint
+3 停止触发的savepoint
+     */
+    public $RecordTypes;
+
+    /**
      * @param string $JobId 作业 SerialId
      * @param integer $Limit 分页参数，单页总数
      * @param integer $Offset 分页参数，偏移量
      * @param string $WorkSpaceId 工作空间 SerialId
+     * @param array $RecordTypes 2 是checkpoint
+1 是触发savepoint
+3 停止触发的savepoint
      */
     function __construct()
     {
@@ -84,6 +100,10 @@ class DescribeJobSavepointRequest extends AbstractModel
 
         if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
             $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("RecordTypes",$param) and $param["RecordTypes"] !== null) {
+            $this->RecordTypes = $param["RecordTypes"];
         }
     }
 }

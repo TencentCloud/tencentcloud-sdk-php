@@ -18,7 +18,7 @@ namespace TencentCloud\Oceanus\V20190422\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTreeJobs返回参数结构体
+ * 自定义树结构遍历子节点
  *
  * @method string getParentId() 获取父节点ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,18 +32,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置当前文件夹名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getJobSet() 获取当前文件夹下的作业列表
+ * @method array getJobSet() 获取当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobSet(array $JobSet) 设置当前文件夹下的作业列表
+ * @method void setJobSet(array $JobSet) 设置当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getChildren() 获取迭代子目录
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChildren(array $Children) 设置迭代子目录
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRequestId(string $RequestId) 设置请求ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DescribeTreeJobsResponse extends AbstractModel
+class DescribeTreeJobsRsp extends AbstractModel
 {
     /**
      * @var string 父节点ID
@@ -64,7 +66,7 @@ class DescribeTreeJobsResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var array 当前文件夹下的作业列表
+     * @var array 当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobSet;
@@ -76,7 +78,8 @@ class DescribeTreeJobsResponse extends AbstractModel
     public $Children;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestId;
 
@@ -87,11 +90,12 @@ class DescribeTreeJobsResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 当前文件夹名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $JobSet 当前文件夹下的作业列表
+     * @param array $JobSet 当前文件夹下的作业集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Children 迭代子目录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

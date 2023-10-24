@@ -20,28 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateMultiFlowSignQRCode请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method string getTemplateId() 获取模版ID
- * @method void setTemplateId(string $TemplateId) 设置模版ID
- * @method string getFlowName() 获取签署流程名称，最大长度200个字符。
- * @method void setFlowName(string $FlowName) 设置签署流程名称，最大长度200个字符。
- * @method integer getMaxFlowNum() 获取最大可发起签署流程份数
-<br/>默认5份
-<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
- * @method void setMaxFlowNum(integer $MaxFlowNum) 设置最大可发起签署流程份数
-<br/>默认5份
-<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
- * @method integer getFlowEffectiveDay() 获取签署流程有效天数 默认7天 最高设置不超过30天
- * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置签署流程有效天数 默认7天 最高设置不超过30天
- * @method integer getQrEffectiveDay() 获取二维码有效天数 默认7天 最高设置不超过90天
- * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码有效天数 默认7天 最高设置不超过90天
- * @method array getRestrictions() 获取指定的签署二维码签署人
-<br/>指定后，只允许知道的人操作和签署
- * @method void setRestrictions(array $Restrictions) 设置指定的签署二维码签署人
-<br/>指定后，只允许知道的人操作和签署
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+ * @method string getTemplateId() 获取合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+ * @method void setTemplateId(string $TemplateId) 设置合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+ * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 该名称还将用于合同签署完成后的下载文件名。
+ * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 该名称还将用于合同签署完成后的下载文件名。
+ * @method integer getMaxFlowNum() 获取通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。 一旦发起流程数超越该限制，该二维码将自动失效。	
+ * @method void setMaxFlowNum(integer $MaxFlowNum) 设置通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。 一旦发起流程数超越该限制，该二维码将自动失效。	
+ * @method integer getFlowEffectiveDay() 获取合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。 若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。 最长设定期限不得超过30天。	
+ * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。 若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。 最长设定期限不得超过30天。	
+ * @method integer getQrEffectiveDay() 获取二维码的有效期限，默认为7天，最高设定不得超过90天。 一旦超过二维码的有效期限，该二维码将自动失效。	
+ * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码的有效期限，默认为7天，最高设定不得超过90天。 一旦超过二维码的有效期限，该二维码将自动失效。	
+ * @method array getRestrictions() 获取指定签署人信息。 在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。	
+ * @method void setRestrictions(array $Restrictions) 设置指定签署人信息。 在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。	
+ * @method array getApproverComponentLimitTypes() 获取指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
+ * @method void setApproverComponentLimitTypes(array $ApproverComponentLimitTypes) 设置指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
  * @method string getCallbackUrl() 获取已废弃，回调配置统一使用企业应用管理-应用集成-第三方应用中的配置
 <br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/partner/callback_types_contracts_sign
 <br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
@@ -52,49 +62,56 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
- * @method array getApproverComponentLimitTypes() 获取指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
- * @method void setApproverComponentLimitTypes(array $ApproverComponentLimitTypes) 设置指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
  */
 class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
      */
     public $Agent;
 
     /**
-     * @var string 模版ID
+     * @var string 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
      */
     public $TemplateId;
 
     /**
-     * @var string 签署流程名称，最大长度200个字符。
+     * @var string 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 该名称还将用于合同签署完成后的下载文件名。
      */
     public $FlowName;
 
     /**
-     * @var integer 最大可发起签署流程份数
-<br/>默认5份
-<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
+     * @var integer 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。 一旦发起流程数超越该限制，该二维码将自动失效。	
      */
     public $MaxFlowNum;
 
     /**
-     * @var integer 签署流程有效天数 默认7天 最高设置不超过30天
+     * @var integer 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。 若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。 最长设定期限不得超过30天。	
      */
     public $FlowEffectiveDay;
 
     /**
-     * @var integer 二维码有效天数 默认7天 最高设置不超过90天
+     * @var integer 二维码的有效期限，默认为7天，最高设定不得超过90天。 一旦超过二维码的有效期限，该二维码将自动失效。	
      */
     public $QrEffectiveDay;
 
     /**
-     * @var array 指定的签署二维码签署人
-<br/>指定后，只允许知道的人操作和签署
+     * @var array 指定签署人信息。 在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。	
      */
     public $Restrictions;
+
+    /**
+     * @var array 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
+     */
+    public $ApproverComponentLimitTypes;
 
     /**
      * @var string 已废弃，回调配置统一使用企业应用管理-应用集成-第三方应用中的配置
@@ -117,28 +134,27 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var array 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
-     */
-    public $ApproverComponentLimitTypes;
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
-    /**
-     * @param Agent $Agent 应用相关信息。
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param string $TemplateId 模版ID
-     * @param string $FlowName 签署流程名称，最大长度200个字符。
-     * @param integer $MaxFlowNum 最大可发起签署流程份数
-<br/>默认5份
-<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
-     * @param integer $FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
-     * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
-     * @param array $Restrictions 指定的签署二维码签署人
-<br/>指定后，只允许知道的人操作和签署
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+     * @param string $TemplateId 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+     * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 该名称还将用于合同签署完成后的下载文件名。
+     * @param integer $MaxFlowNum 通过此二维码可发起的流程最大限额，如未明确指定，默认为5份。 一旦发起流程数超越该限制，该二维码将自动失效。	
+     * @param integer $FlowEffectiveDay 合同流程的签署有效期限，若未设定签署截止日期，则默认为自合同流程创建起的7天内截止。 若在签署截止日期前未完成签署，合同状态将变更为已过期，从而导致合同无效。 最长设定期限不得超过30天。	
+     * @param integer $QrEffectiveDay 二维码的有效期限，默认为7天，最高设定不得超过90天。 一旦超过二维码的有效期限，该二维码将自动失效。	
+     * @param array $Restrictions 指定签署人信息。 在指定签署人后，仅允许特定签署人通过扫描二维码进行签署。	
+     * @param array $ApproverComponentLimitTypes 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
      * @param string $CallbackUrl 已废弃，回调配置统一使用企业应用管理-应用集成-第三方应用中的配置
 <br/> 通过一码多扫二维码发起的合同，回调消息可参考文档 https://qian.tencent.com/developers/partner/callback_types_contracts_sign
 <br/> 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档 https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83
      * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      * @param UserInfo $Operator 暂未开放
-     * @param array $ApproverComponentLimitTypes 指定签署方经办人控件类型是个人印章签署控件（SIGN_SIGNATURE） 时，可选的签名方式。
      */
     function __construct()
     {
@@ -187,6 +203,15 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("ApproverComponentLimitTypes",$param) and $param["ApproverComponentLimitTypes"] !== null) {
+            $this->ApproverComponentLimitTypes = [];
+            foreach ($param["ApproverComponentLimitTypes"] as $key => $value){
+                $obj = new ApproverComponentLimitType();
+                $obj->deserialize($value);
+                array_push($this->ApproverComponentLimitTypes, $obj);
+            }
+        }
+
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
         }
@@ -199,15 +224,6 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("ApproverComponentLimitTypes",$param) and $param["ApproverComponentLimitTypes"] !== null) {
-            $this->ApproverComponentLimitTypes = [];
-            foreach ($param["ApproverComponentLimitTypes"] as $key => $value){
-                $obj = new ApproverComponentLimitType();
-                $obj->deserialize($value);
-                array_push($this->ApproverComponentLimitTypes, $obj);
-            }
         }
     }
 }

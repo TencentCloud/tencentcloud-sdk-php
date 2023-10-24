@@ -24,31 +24,43 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateId() 获取第三方应用平台模板库模板唯一标识
+ * @method string getTemplateId() 获取合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateId(string $TemplateId) 设置第三方应用平台模板库模板唯一标识
+ * @method void setTemplateId(string $TemplateId) 设置合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperateResult() 获取描述模板可见性更改的结果，和参数中Available无关。
-全部成功-"all-success",
-部分成功-"part-success", 
-全部失败-"fail"，失败的会在FailMessageList中展示。
+<ul>
+<li>全部成功-"all-success"</li>
+<li>部分成功-"part-success"</li>
+<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateResult(string $OperateResult) 设置描述模板可见性更改的结果，和参数中Available无关。
-全部成功-"all-success",
-部分成功-"part-success", 
-全部失败-"fail"，失败的会在FailMessageList中展示。
+<ul>
+<li>全部成功-"all-success"</li>
+<li>部分成功-"part-success"</li>
+<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthTag() 获取模板可见性, 
-全部可见-"all", 
-部分可见-"part"
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthTag(string $AuthTag) 设置模板可见性, 
-全部可见-"all", 
-部分可见-"part"
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getProxyOrganizationOpenIds() 获取合作企业方第三方机构唯一标识数据
+ * @method array getProxyOrganizationOpenIds() 获取第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置合作企业方第三方机构唯一标识数据
+ * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailMessageList() 获取操作失败信息数组
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,30 +78,36 @@ class OperateChannelTemplateResponse extends AbstractModel
     public $AppId;
 
     /**
-     * @var string 第三方应用平台模板库模板唯一标识
+     * @var string 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateId;
 
     /**
      * @var string 描述模板可见性更改的结果，和参数中Available无关。
-全部成功-"all-success",
-部分成功-"part-success", 
-全部失败-"fail"，失败的会在FailMessageList中展示。
+<ul>
+<li>全部成功-"all-success"</li>
+<li>部分成功-"part-success"</li>
+<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateResult;
 
     /**
      * @var string 模板可见性, 
-全部可见-"all", 
-部分可见-"part"
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthTag;
 
     /**
-     * @var array 合作企业方第三方机构唯一标识数据
+     * @var array 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyOrganizationOpenIds;
@@ -108,18 +126,24 @@ class OperateChannelTemplateResponse extends AbstractModel
     /**
      * @param string $AppId 腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateId 第三方应用平台模板库模板唯一标识
+     * @param string $TemplateId 合同模板ID，为32位字符串。此处为第三方应用平台模板库模板ID，非子客模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateResult 描述模板可见性更改的结果，和参数中Available无关。
-全部成功-"all-success",
-部分成功-"part-success", 
-全部失败-"fail"，失败的会在FailMessageList中展示。
+<ul>
+<li>全部成功-"all-success"</li>
+<li>部分成功-"part-success"</li>
+<li>全部失败-"fail"，失败的会在FailMessageList中展示</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthTag 模板可见性, 
-全部可见-"all", 
-部分可见-"part"
+<ul>
+<li>全部可见-"all"</li>
+<li>部分可见-"part"</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据
+     * @param array $ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，长度不能超过64，只能由字母和数字组成。开发者可自定义此字段的值，并需要保存此 ID 以便进行后续操作。
+
+一个第三方平台子客企业主体与子客企业 ProxyOrganizationOpenId 是一一对应的，不可更改，不可重复使用。例如，可以使用企业名称的哈希值，或者社会统一信用代码的哈希值，或者随机哈希值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailMessageList 操作失败信息数组
 注意：此字段可能返回 null，表示取不到有效值。

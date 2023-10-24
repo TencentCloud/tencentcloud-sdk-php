@@ -146,6 +146,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSqlGateways(array $SqlGateways) 设置Gateway信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWebUIType() 获取0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebUIType(integer $WebUIType) 设置0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -373,6 +377,12 @@ class Cluster extends AbstractModel
     public $SqlGateways;
 
     /**
+     * @var integer 0 公网访问 // 1 内网访问	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebUIType;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -435,6 +445,8 @@ class Cluster extends AbstractModel
      * @param array $Orders 订单信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SqlGateways Gateway信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WebUIType 0 公网访问 // 1 内网访问	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -639,6 +651,10 @@ class Cluster extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SqlGateways, $obj);
             }
+        }
+
+        if (array_key_exists("WebUIType",$param) and $param["WebUIType"] !== null) {
+            $this->WebUIType = $param["WebUIType"];
         }
     }
 }

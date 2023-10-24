@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务id
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method string getTaskVersionPath() 获取task version path
- * @method void setTaskVersionPath(string $TaskVersionPath) 设置task version path
- * @method string getTaskVersion() 获取task version
- * @method void setTaskVersion(string $TaskVersion) 设置task version
+ * @method string getTaskVersionPath() 获取该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
+ * @method void setTaskVersionPath(string $TaskVersionPath) 设置该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
+ * @method string getTaskVersion() 获取该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
+ * @method void setTaskVersion(string $TaskVersion) 设置该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
  */
 class DescribeIntegrationVersionNodesInfoRequest extends AbstractModel
 {
@@ -42,20 +46,24 @@ class DescribeIntegrationVersionNodesInfoRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string task version path
+     * @var string 该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
      */
     public $TaskVersionPath;
 
     /**
-     * @var string task version
+     * @var string 该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
      */
     public $TaskVersion;
 
     /**
      * @param string $TaskId 任务id
      * @param string $ProjectId 项目id
-     * @param string $TaskVersionPath task version path
-     * @param string $TaskVersion task version
+     * @param string $TaskVersionPath 该任务选定版本的存储路径：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 TaskInfo.TaskExt.Properties 下 Base64.encode($region | $bucket | $ftp.file.name) 值
+     * @param string $TaskVersion 该任务选定版本id：
+DescribeDsTaskVersionList 或者 DescribeDsTaskVersionInfo 返回的对应的 VersionId 取值
      */
     function __construct()
     {

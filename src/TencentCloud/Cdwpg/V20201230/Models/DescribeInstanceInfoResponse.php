@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Cdwpg\V20201230\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSparkSessionBatchSQL返回参数结构体
+ * DescribeInstanceInfo返回参数结构体
  *
- * @method string getBatchId() 获取批任务唯一标识
- * @method void setBatchId(string $BatchId) 设置批任务唯一标识
- * @method array getStatements() 获取Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatements(array $Statements) 设置Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method SimpleInstanceInfo getSimpleInstanceInfo() 获取1
+ * @method void setSimpleInstanceInfo(SimpleInstanceInfo $SimpleInstanceInfo) 设置1
+ * @method string getErrorMsg() 获取1
+ * @method void setErrorMsg(string $ErrorMsg) 设置1
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSparkSessionBatchSQLResponse extends AbstractModel
+class DescribeInstanceInfoResponse extends AbstractModel
 {
     /**
-     * @var string 批任务唯一标识
+     * @var SimpleInstanceInfo 1
      */
-    public $BatchId;
+    public $SimpleInstanceInfo;
 
     /**
-     * @var array Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 1
      */
-    public $Statements;
+    public $ErrorMsg;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +45,8 @@ class CreateSparkSessionBatchSQLResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BatchId 批任务唯一标识
-     * @param array $Statements Statement任务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param SimpleInstanceInfo $SimpleInstanceInfo 1
+     * @param string $ErrorMsg 1
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +62,13 @@ class CreateSparkSessionBatchSQLResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
-            $this->BatchId = $param["BatchId"];
+        if (array_key_exists("SimpleInstanceInfo",$param) and $param["SimpleInstanceInfo"] !== null) {
+            $this->SimpleInstanceInfo = new SimpleInstanceInfo();
+            $this->SimpleInstanceInfo->deserialize($param["SimpleInstanceInfo"]);
         }
 
-        if (array_key_exists("Statements",$param) and $param["Statements"] !== null) {
-            $this->Statements = [];
-            foreach ($param["Statements"] as $key => $value){
-                $obj = new StatementInformation();
-                $obj->deserialize($value);
-                array_push($this->Statements, $obj);
-            }
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

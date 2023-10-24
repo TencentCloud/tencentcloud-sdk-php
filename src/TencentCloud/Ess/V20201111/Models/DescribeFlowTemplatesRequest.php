@@ -68,6 +68,8 @@ Key：template-id Values：需要查询的模板Id列表
  * @method void setOrganization(OrganizationInfo $Organization) 设置暂未开放
  * @method integer getGenerateSource() 获取暂未开放
  * @method void setGenerateSource(integer $GenerateSource) 设置暂未开放
+ * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接
+ * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接
  */
 class DescribeFlowTemplatesRequest extends AbstractModel
 {
@@ -139,6 +141,11 @@ Key：template-id Values：需要查询的模板Id列表
     public $GenerateSource;
 
     /**
+     * @var boolean 是否获取模板预览链接
+     */
+    public $WithPreviewUrl;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param Agent $Agent 代理企业和员工的信息。
@@ -163,6 +170,7 @@ Key：template-id Values：需要查询的模板Id列表
 为true，查询第三方应用集成平台企业模板库管理列表
      * @param OrganizationInfo $Organization 暂未开放
      * @param integer $GenerateSource 暂未开放
+     * @param boolean $WithPreviewUrl 是否获取模板预览链接
      */
     function __construct()
     {
@@ -223,6 +231,10 @@ Key：template-id Values：需要查询的模板Id列表
 
         if (array_key_exists("GenerateSource",$param) and $param["GenerateSource"] !== null) {
             $this->GenerateSource = $param["GenerateSource"];
+        }
+
+        if (array_key_exists("WithPreviewUrl",$param) and $param["WithPreviewUrl"] !== null) {
+            $this->WithPreviewUrl = $param["WithPreviewUrl"];
         }
     }
 }

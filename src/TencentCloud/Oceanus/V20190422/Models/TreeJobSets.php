@@ -14,75 +14,75 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdwpg\V20201230\Models;
+namespace TencentCloud\Oceanus\V20190422\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 计费时间参数
+ * 自定义树结构出参作业列表
  *
- * @method integer getRenewFlag() 获取1-需要自动续期
+ * @method string getJobId() 获取作业Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewFlag(integer $RenewFlag) 设置1-需要自动续期
+ * @method void setJobId(string $JobId) 设置作业Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimeSpan() 获取订单时间范围
+ * @method string getName() 获取作业名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeSpan(integer $TimeSpan) 设置订单时间范围
+ * @method void setName(string $Name) 设置作业名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTimeUnit() 获取时间单位，一般为h和m
+ * @method integer getJobType() 获取作业类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeUnit(string $TimeUnit) 设置时间单位，一般为h和m
+ * @method void setJobType(integer $JobType) 设置作业类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPayMode() 获取计费类型0-按量计费，1-包年包月
+ * @method float getRunningCu() 获取作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPayMode(integer $PayMode) 设置计费类型0-按量计费，1-包年包月
+ * @method void setRunningCu(float $RunningCu) 设置作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeType() 获取PREPAID、POSTPAID_BY_HOUR
+ * @method integer getStatus() 获取作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeType(string $ChargeType) 设置PREPAID、POSTPAID_BY_HOUR
+ * @method void setStatus(integer $Status) 设置作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class ChargeProperties extends AbstractModel
+class TreeJobSets extends AbstractModel
 {
     /**
-     * @var integer 1-需要自动续期
+     * @var string 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RenewFlag;
+    public $JobId;
 
     /**
-     * @var integer 订单时间范围
+     * @var string 作业名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TimeSpan;
+    public $Name;
 
     /**
-     * @var string 时间单位，一般为h和m
+     * @var integer 作业类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TimeUnit;
+    public $JobType;
 
     /**
-     * @var integer 计费类型0-按量计费，1-包年包月
+     * @var float 作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $PayMode;
+    public $RunningCu;
 
     /**
-     * @var string PREPAID、POSTPAID_BY_HOUR
+     * @var integer 作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ChargeType;
+    public $Status;
 
     /**
-     * @param integer $RenewFlag 1-需要自动续期
+     * @param string $JobId 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TimeSpan 订单时间范围
+     * @param string $Name 作业名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TimeUnit 时间单位，一般为h和m
+     * @param integer $JobType 作业类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PayMode 计费类型0-按量计费，1-包年包月
+     * @param float $RunningCu 作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeType PREPAID、POSTPAID_BY_HOUR
+     * @param integer $Status 作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -98,24 +98,24 @@ class ChargeProperties extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
-        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
-            $this->TimeSpan = $param["TimeSpan"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
-            $this->TimeUnit = $param["TimeUnit"];
+        if (array_key_exists("JobType",$param) and $param["JobType"] !== null) {
+            $this->JobType = $param["JobType"];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
+        if (array_key_exists("RunningCu",$param) and $param["RunningCu"] !== null) {
+            $this->RunningCu = $param["RunningCu"];
         }
 
-        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
-            $this->ChargeType = $param["ChargeType"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

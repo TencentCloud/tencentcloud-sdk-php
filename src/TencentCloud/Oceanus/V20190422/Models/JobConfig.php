@@ -110,6 +110,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpertModeConfiguration(ExpertModeConfiguration $ExpertModeConfiguration) 设置专家模式的配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTraceModeOn() 获取trace链路
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTraceModeOn(boolean $TraceModeOn) 设置trace链路
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TraceModeConfiguration getTraceModeConfiguration() 获取trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTraceModeConfiguration(TraceModeConfiguration $TraceModeConfiguration) 设置trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCheckpointRetainedNum() 获取checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckpointRetainedNum(integer $CheckpointRetainedNum) 设置checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method JobGraph getJobGraph() 获取算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobGraph(JobGraph $JobGraph) 设置算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -255,6 +271,30 @@ class JobConfig extends AbstractModel
     public $ExpertModeConfiguration;
 
     /**
+     * @var boolean trace链路
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TraceModeOn;
+
+    /**
+     * @var TraceModeConfiguration trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TraceModeConfiguration;
+
+    /**
+     * @var integer checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckpointRetainedNum;
+
+    /**
+     * @var JobGraph 算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobGraph;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -299,6 +339,14 @@ class JobConfig extends AbstractModel
      * @param boolean $ExpertModeOn 是否开启专家模式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpertModeConfiguration $ExpertModeConfiguration 专家模式的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TraceModeOn trace链路
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TraceModeConfiguration $TraceModeConfiguration trace链路配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CheckpointRetainedNum checkpoint保留个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobGraph $JobGraph 算子拓扑图
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -424,6 +472,24 @@ class JobConfig extends AbstractModel
         if (array_key_exists("ExpertModeConfiguration",$param) and $param["ExpertModeConfiguration"] !== null) {
             $this->ExpertModeConfiguration = new ExpertModeConfiguration();
             $this->ExpertModeConfiguration->deserialize($param["ExpertModeConfiguration"]);
+        }
+
+        if (array_key_exists("TraceModeOn",$param) and $param["TraceModeOn"] !== null) {
+            $this->TraceModeOn = $param["TraceModeOn"];
+        }
+
+        if (array_key_exists("TraceModeConfiguration",$param) and $param["TraceModeConfiguration"] !== null) {
+            $this->TraceModeConfiguration = new TraceModeConfiguration();
+            $this->TraceModeConfiguration->deserialize($param["TraceModeConfiguration"]);
+        }
+
+        if (array_key_exists("CheckpointRetainedNum",$param) and $param["CheckpointRetainedNum"] !== null) {
+            $this->CheckpointRetainedNum = $param["CheckpointRetainedNum"];
+        }
+
+        if (array_key_exists("JobGraph",$param) and $param["JobGraph"] !== null) {
+            $this->JobGraph = new JobGraph();
+            $this->JobGraph->deserialize($param["JobGraph"]);
         }
     }
 }

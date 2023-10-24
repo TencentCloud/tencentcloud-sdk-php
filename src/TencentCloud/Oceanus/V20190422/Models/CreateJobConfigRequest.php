@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpertModeOn(boolean $ExpertModeOn) 设置是否打开专家模式
  * @method ExpertModeConfiguration getExpertModeConfiguration() 获取专家模式的配置
  * @method void setExpertModeConfiguration(ExpertModeConfiguration $ExpertModeConfiguration) 设置专家模式的配置
+ * @method boolean getTraceModeOn() 获取trace链路
+ * @method void setTraceModeOn(boolean $TraceModeOn) 设置trace链路
+ * @method TraceModeConfiguration getTraceModeConfiguration() 获取trace链路配置
+ * @method void setTraceModeConfiguration(TraceModeConfiguration $TraceModeConfiguration) 设置trace链路配置
+ * @method integer getCheckpointRetainedNum() 获取checkpoint保留个数
+ * @method void setCheckpointRetainedNum(integer $CheckpointRetainedNum) 设置checkpoint保留个数
+ * @method JobGraph getJobGraph() 获取算子拓扑图
+ * @method void setJobGraph(JobGraph $JobGraph) 设置算子拓扑图
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -178,6 +186,26 @@ class CreateJobConfigRequest extends AbstractModel
     public $ExpertModeConfiguration;
 
     /**
+     * @var boolean trace链路
+     */
+    public $TraceModeOn;
+
+    /**
+     * @var TraceModeConfiguration trace链路配置
+     */
+    public $TraceModeConfiguration;
+
+    /**
+     * @var integer checkpoint保留个数
+     */
+    public $CheckpointRetainedNum;
+
+    /**
+     * @var JobGraph 算子拓扑图
+     */
+    public $JobGraph;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -200,6 +228,10 @@ class CreateJobConfigRequest extends AbstractModel
      * @param array $ClazzLevels 类日志级别
      * @param boolean $ExpertModeOn 是否打开专家模式
      * @param ExpertModeConfiguration $ExpertModeConfiguration 专家模式的配置
+     * @param boolean $TraceModeOn trace链路
+     * @param TraceModeConfiguration $TraceModeConfiguration trace链路配置
+     * @param integer $CheckpointRetainedNum checkpoint保留个数
+     * @param JobGraph $JobGraph 算子拓扑图
      */
     function __construct()
     {
@@ -316,6 +348,24 @@ class CreateJobConfigRequest extends AbstractModel
         if (array_key_exists("ExpertModeConfiguration",$param) and $param["ExpertModeConfiguration"] !== null) {
             $this->ExpertModeConfiguration = new ExpertModeConfiguration();
             $this->ExpertModeConfiguration->deserialize($param["ExpertModeConfiguration"]);
+        }
+
+        if (array_key_exists("TraceModeOn",$param) and $param["TraceModeOn"] !== null) {
+            $this->TraceModeOn = $param["TraceModeOn"];
+        }
+
+        if (array_key_exists("TraceModeConfiguration",$param) and $param["TraceModeConfiguration"] !== null) {
+            $this->TraceModeConfiguration = new TraceModeConfiguration();
+            $this->TraceModeConfiguration->deserialize($param["TraceModeConfiguration"]);
+        }
+
+        if (array_key_exists("CheckpointRetainedNum",$param) and $param["CheckpointRetainedNum"] !== null) {
+            $this->CheckpointRetainedNum = $param["CheckpointRetainedNum"];
+        }
+
+        if (array_key_exists("JobGraph",$param) and $param["JobGraph"] !== null) {
+            $this->JobGraph = new JobGraph();
+            $this->JobGraph->deserialize($param["JobGraph"]);
         }
     }
 }

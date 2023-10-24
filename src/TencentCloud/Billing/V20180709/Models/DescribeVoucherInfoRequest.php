@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayScene(string $PayScene) 设置付费场景PayMode=postPay时：spotpay-竞价实例,"settle account"-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景
  * @method string getOperator() 获取操作人，默认就是用户uin
  * @method void setOperator(string $Operator) 设置操作人，默认就是用户uin
+ * @method string getVoucherMainType() 获取代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+ * @method void setVoucherMainType(string $VoucherMainType) 设置代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+ * @method string getVoucherSubType() 获取代金券副类型 discount 为折扣券 deduct 为抵扣券
+ * @method void setVoucherSubType(string $VoucherSubType) 设置代金券副类型 discount 为折扣券 deduct 为抵扣券
  */
 class DescribeVoucherInfoRequest extends AbstractModel
 {
@@ -129,6 +133,16 @@ class DescribeVoucherInfoRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+     */
+    public $VoucherMainType;
+
+    /**
+     * @var string 代金券副类型 discount 为折扣券 deduct 为抵扣券
+     */
+    public $VoucherSubType;
+
+    /**
      * @param integer $Limit 一页多少条数据，默认是20条，最大不超过1000
      * @param integer $Offset 第多少页，默认是1
      * @param string $Status 券状态：待使用：unUsed，已使用： used，已发货：delivered，已作废： cancel，已过期：overdue
@@ -144,6 +158,8 @@ class DescribeVoucherInfoRequest extends AbstractModel
      * @param string $PayMode 付费模式，postPay后付费/prePay预付费/riPay预留实例/""或者"*"表示全部模式，如果payMode为""或"*"，那么productCode与subProductCode必须传空
      * @param string $PayScene 付费场景PayMode=postPay时：spotpay-竞价实例,"settle account"-普通后付费PayMode=prePay时：purchase-包年包月新购，renew-包年包月续费（自动续费），modify-包年包月配置变更(变配）PayMode=riPay时：oneOffFee-预留实例预付，hourlyFee-预留实例每小时扣费，*-支持全部付费场景
      * @param string $Operator 操作人，默认就是用户uin
+     * @param string $VoucherMainType 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
+     * @param string $VoucherSubType 代金券副类型 discount 为折扣券 deduct 为抵扣券
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class DescribeVoucherInfoRequest extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("VoucherMainType",$param) and $param["VoucherMainType"] !== null) {
+            $this->VoucherMainType = $param["VoucherMainType"];
+        }
+
+        if (array_key_exists("VoucherSubType",$param) and $param["VoucherSubType"] !== null) {
+            $this->VoucherSubType = $param["VoucherSubType"];
         }
     }
 }

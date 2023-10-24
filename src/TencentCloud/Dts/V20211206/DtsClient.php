@@ -60,6 +60,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\ModifyMigrateJobSpecResponse ModifyMigrateJobSpec(Models\ModifyMigrateJobSpecRequest $req) 调整实例规格，此接口只支持按量计费任务的调整。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
  * @method Models\ModifyMigrateNameResponse ModifyMigrateName(Models\ModifyMigrateNameRequest $req) 修改迁移任务名
  * @method Models\ModifyMigrateRateLimitResponse ModifyMigrateRateLimit(Models\ModifyMigrateRateLimitRequest $req) 用户在发现迁移任务对用户的数据库的负载影响较大时、可通过该接口限制任务的传输速率
+ * @method Models\ModifyMigrateRuntimeAttributeResponse ModifyMigrateRuntimeAttribute(Models\ModifyMigrateRuntimeAttributeRequest $req) 修改任务运行时属性，此接口不同于配置类接口，不会进行状态机判断。
  * @method Models\ModifyMigrationJobResponse ModifyMigrationJob(Models\ModifyMigrationJobRequest $req) 配置迁移服务，配置成功后可通过`CreateMigrationCheckJob` 创建迁移校验任务接口发起校验任务，只有校验通过才能启动迁移任务。
  * @method Models\ModifySyncJobConfigResponse ModifySyncJobConfig(Models\ModifySyncJobConfigRequest $req) 该接口支持在同步任务启动后修改任务的配置
 修改同步配置的完整流程：修改同步任务配置->创建修改同步任务配置的校验任务->查询修改配置的校验任务的结果->启动修改配置任务

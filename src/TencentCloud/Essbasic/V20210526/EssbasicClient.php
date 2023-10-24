@@ -141,7 +141,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 注意：该接口目前签署人类型仅支持个人签署方（PERSON）<br/>
 注意：该接口可生成签署链接的C端签署人必须仅有手写签名和时间类型的签署控件<br/>
 注意：该接口返回的签署链接是用于APP集成的场景，支持APP打开或浏览器直接打开，不支持微信小程序嵌入。微信小程序请使用小程序跳转或半屏弹窗的方式<br/>
- * @method Models\ChannelCreateMultiFlowSignQRCodeResponse ChannelCreateMultiFlowSignQRCode(Models\ChannelCreateMultiFlowSignQRCodeRequest $req) 此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。 适用场景：无需填写签署人信息，可通过模板id生成签署二维码，签署人可通过扫描二维码补充签署信息进行实名签署。常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
+ * @method Models\ChannelCreateMultiFlowSignQRCodeResponse ChannelCreateMultiFlowSignQRCode(Models\ChannelCreateMultiFlowSignQRCodeRequest $req) 此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。 
+适用场景：无需填写签署人信息，可通过模板id生成签署二维码，签署人可通过扫描二维码补充签署信息进行实名签署。
+常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
 
 **本接口适用于发起方没有填写控件的 B2C或者单C模板**
 

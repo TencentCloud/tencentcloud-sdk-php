@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateFlowReminds返回参数结构体
  *
- * @method array getRemindFlowRecords() 获取合同催办详情信息
- * @method void setRemindFlowRecords(array $RemindFlowRecords) 设置合同催办详情信息
+ * @method array getRemindFlowRecords() 获取合同催办结果的详细信息列表。
+ * @method void setRemindFlowRecords(array $RemindFlowRecords) 设置合同催办结果的详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreateFlowRemindsResponse extends AbstractModel
 {
     /**
-     * @var array 合同催办详情信息
+     * @var array 合同催办结果的详细信息列表。
      */
     public $RemindFlowRecords;
 
@@ -38,7 +38,7 @@ class ChannelCreateFlowRemindsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RemindFlowRecords 合同催办详情信息
+     * @param array $RemindFlowRecords 合同催办结果的详细信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

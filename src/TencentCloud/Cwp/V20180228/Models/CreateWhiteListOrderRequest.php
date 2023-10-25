@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadline(integer $Deadline) 设置到期时间,最小为1
  * @method string getRuleName() 获取规则名称,大资产中心:asset_center
  * @method void setRuleName(string $RuleName) 设置规则名称,大资产中心:asset_center
+ * @method integer getSourceType() 获取订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
+ * @method void setSourceType(integer $SourceType) 设置订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
  * @method integer getRegionId() 获取地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9
  * @method void setRegionId(integer $RegionId) 设置地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9
  * @method string getExtraParam() 获取额外参数,json字符串,包含ResourceId 资源ID,LicenseType 授权类型
@@ -56,6 +58,11 @@ class CreateWhiteListOrderRequest extends AbstractModel
     public $RuleName;
 
     /**
+     * @var integer 订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
+     */
+    public $SourceType;
+
+    /**
      * @var integer 地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9
      */
     public $RegionId;
@@ -70,6 +77,7 @@ class CreateWhiteListOrderRequest extends AbstractModel
      * @param integer $LicenseNum 授权数量,最小为1 最大99999
      * @param integer $Deadline 到期时间,最小为1
      * @param string $RuleName 规则名称,大资产中心:asset_center
+     * @param integer $SourceType 订单类型, 1 试用 2 赠送 3 体验 4 SSL-证书赠送 5 cvm赠送
      * @param integer $RegionId 地域, 1 广州 9新加坡, 默认为 1. 非必要情况不要选9
      * @param string $ExtraParam 额外参数,json字符串,包含ResourceId 资源ID,LicenseType 授权类型
      */
@@ -100,6 +108,10 @@ class CreateWhiteListOrderRequest extends AbstractModel
 
         if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
             $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
         }
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {

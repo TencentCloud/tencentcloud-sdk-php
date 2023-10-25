@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最小值为1，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最小值为1，最大值为100。
+ * @method string getOrderField() 获取排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+ * @method void setOrderField(string $OrderField) 设置排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+ * @method string getOrderDirection() 获取排序方法。顺序：ASC，倒序：DESC。
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：ASC，倒序：DESC。
  */
 class DescribeNetworkAclsRequest extends AbstractModel
 {
@@ -61,6 +65,16 @@ class DescribeNetworkAclsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方法。顺序：ASC，倒序：DESC。
+     */
+    public $OrderDirection;
+
+    /**
      * @param array $Filters 过滤条件，参数不支持同时指定NetworkAclIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678。</li>
 <li>network-acl-id - String - （过滤条件）网络ACL实例ID，形如：acl-12345678。</li>
@@ -68,6 +82,8 @@ class DescribeNetworkAclsRequest extends AbstractModel
      * @param array $NetworkAclIds 网络ACL实例ID数组。形如：[acl-12345678]。每次请求的实例的上限为100。参数不支持同时指定NetworkAclIds和Filters。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最小值为1，最大值为100。
+     * @param string $OrderField 排序字段。支持：NetworkAclId,NetworkAclName,CreatedTime
+     * @param string $OrderDirection 排序方法。顺序：ASC，倒序：DESC。
      */
     function __construct()
     {
@@ -101,6 +117,14 @@ class DescribeNetworkAclsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
         }
     }
 }

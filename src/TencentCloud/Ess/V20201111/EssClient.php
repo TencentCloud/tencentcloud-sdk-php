@@ -47,13 +47,13 @@ use TencentCloud\Ess\V20201111\Models as Models;
 - 参与人点击链接后需短信验证码才能查看合同内容。
 - 企业用户批量签署，需要传OrganizationName（参与方所在企业名称）参数生成签署链接，`请确保此企业已完成腾讯电子签企业认证`。
 - 个人批量签署，签名区`仅支持手写签名`。
- * @method Models\CreateConvertTaskApiResponse CreateConvertTaskApi(Models\CreateConvertTaskApiRequest $req) 此接口（CreateConvertTaskApi）用来将word、excel、图片、txt类型文件转换为PDF文件。<br />
+ * @method Models\CreateConvertTaskApiResponse CreateConvertTaskApi(Models\CreateConvertTaskApiRequest $req) 此接口（CreateConvertTaskApi）用来将word、excel、html、图片、txt类型文件转换为PDF文件。<br />
 前提条件：源文件已经通过 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">文件上传接口</a>完成上传，并得到了源文件的资源Id。<br />
 适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同
 适用场景2：已经上传了一个jpg图片文件，希望将该图片文件转换成pdf文件后发起合同<br />
 转换文件是一个耗时操作，若想查看转换任务是否完成，可以通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi" target="_blank">查询转换任务状态</a>接口获取任务状态。<br />
 注: 
-1. `支持的文件类型有doc、docx、xls、xlsx、jpg、jpeg、png、bmp、txt`
+1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
 2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建签署流程电子文档<br />
 适用场景：见创建签署流程接口。<br />
@@ -70,6 +70,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 5. 预览合同流程
 
 用户可以通过这些链接快速将其集成到自己的系统中。
+ * @method Models\CreateExtendedServiceAuthInfosResponse CreateExtendedServiceAuthInfos(Models\CreateExtendedServiceAuthInfosRequest $req) 创建企业扩展服务授权，当前仅支持授权 “企业自动签” 给企业员工。
+
+注：支持集团代子企业操作，请联系运营开通此功能。
  * @method Models\CreateFlowResponse CreateFlow(Models\CreateFlowRequest $req) 通过模板创建签署流程<br/>
 适用场景：在标准制式的合同场景中，可通过提前预制好模板文件，每次调用模板文件的id，补充合同内容信息及签署信息生成电子合同。
 
@@ -246,6 +249,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateWebThemeConfigResponse CreateWebThemeConfig(Models\CreateWebThemeConfigRequest $req) 用来设置本企业嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），设置后获取的web签署界面都会使用此配置进行展示。
 
 如果多次调用，会以最后一次的配置为准
+ * @method Models\DeleteExtendedServiceAuthInfosResponse DeleteExtendedServiceAuthInfos(Models\DeleteExtendedServiceAuthInfosRequest $req) 删除企业扩展服务授权，当前仅支持 “企业自动签” 取消授权。
+
+注：支持集团代子企业操作，请联系运营开通此功能。
  * @method Models\DeleteIntegrationDepartmentResponse DeleteIntegrationDepartment(Models\DeleteIntegrationDepartmentRequest $req) 此接口（DeleteIntegrationDepartment）用于删除企业的部门信息。
  * @method Models\DeleteIntegrationEmployeesResponse DeleteIntegrationEmployees(Models\DeleteIntegrationEmployeesRequest $req) 该接口（DeleteIntegrationEmployees）用于移除企业员工，同时可选择是否进行离职交接。
 -  如果不设置交接人的ReceiveUserId或ReceiveOpenId，则该员工将被直接移除而不进行交接操作。

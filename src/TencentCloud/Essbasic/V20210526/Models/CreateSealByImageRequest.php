@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealImage(string $SealImage) 设置印章图片base64，大小不超过10M（原始图片不超过7.6M）
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method string getGenerateSource() 获取本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
- * @method void setGenerateSource(string $GenerateSource) 设置本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
+ * @method string getGenerateSource() 获取本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
+ * @method void setGenerateSource(string $GenerateSource) 设置本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
  * @method string getSealType() 获取电子印章类型：
 <ul><li>OFFICIAL-公章</li>
 <li>CONTRACT-合同专用章;</li>
@@ -94,7 +94,7 @@ class CreateSealByImageRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
+     * @var string 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
      */
     public $GenerateSource;
 
@@ -138,7 +138,7 @@ class CreateSealByImageRequest extends AbstractModel
      * @param string $SealName 印章名称，最大长度不超过50字符
      * @param string $SealImage 印章图片base64，大小不超过10M（原始图片不超过7.6M）
      * @param UserInfo $Operator 操作者的信息
-     * @param string $GenerateSource 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传请传字段 SealImage
+     * @param string $GenerateSource 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
      * @param string $SealType 电子印章类型：
 <ul><li>OFFICIAL-公章</li>
 <li>CONTRACT-合同专用章;</li>

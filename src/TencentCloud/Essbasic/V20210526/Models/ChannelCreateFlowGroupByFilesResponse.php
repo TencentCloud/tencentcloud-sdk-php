@@ -20,13 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateFlowGroupByFiles返回参数结构体
  *
- * @method string getFlowGroupId() 获取合同组ID
+ * @method string getFlowGroupId() 获取合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFlowIds() 获取子合同ID列表
+ * @method array getFlowIds() 获取合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowIds(array $FlowIds) 设置子合同ID列表
+ * @method void setFlowIds(array $FlowIds) 设置合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +42,17 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreateFlowGroupByFilesResponse extends AbstractModel
 {
     /**
-     * @var string 合同组ID
+     * @var string 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowGroupId;
 
     /**
-     * @var array 子合同ID列表
+     * @var array 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowIds;
@@ -51,9 +63,13 @@ class ChannelCreateFlowGroupByFilesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowGroupId 合同组ID
+     * @param string $FlowGroupId 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FlowIds 子合同ID列表
+     * @param array $FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowGroupInfos顺序回不一致`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

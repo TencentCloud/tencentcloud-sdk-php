@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取表格关联的项目ID。
  * @method void setProjectId(string $ProjectId) 设置表格关联的项目ID。
- * @method string getName() 获取表格名称，支持20个字符内的英文字符、数字和下划线。
- * @method void setName(string $Name) 设置表格名称，支持20个字符内的英文字符、数字和下划线。
+ * @method string getName() 获取表格名称。最多支持200个字符。
+ * @method void setName(string $Name) 设置表格名称。最多支持200个字符。
  * @method string getCosUri() 获取表格文件Cos对象路径。
  * @method void setCosUri(string $CosUri) 设置表格文件Cos对象路径。
  * @method array getDataType() 获取表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
  * @method void setDataType(array $DataType) 设置表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
- * @method string getDescription() 获取表格描述。
- * @method void setDescription(string $Description) 设置表格描述。
+ * @method string getDescription() 获取表格描述。最多支持500个字符。
+ * @method void setDescription(string $Description) 设置表格描述。最多支持500个字符。
  */
 class ImportTableFileRequest extends AbstractModel
 {
@@ -39,7 +39,7 @@ class ImportTableFileRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 表格名称，支持20个字符内的英文字符、数字和下划线。
+     * @var string 表格名称。最多支持200个字符。
      */
     public $Name;
 
@@ -54,16 +54,16 @@ class ImportTableFileRequest extends AbstractModel
     public $DataType;
 
     /**
-     * @var string 表格描述。
+     * @var string 表格描述。最多支持500个字符。
      */
     public $Description;
 
     /**
      * @param string $ProjectId 表格关联的项目ID。
-     * @param string $Name 表格名称，支持20个字符内的英文字符、数字和下划线。
+     * @param string $Name 表格名称。最多支持200个字符。
      * @param string $CosUri 表格文件Cos对象路径。
      * @param array $DataType 表格文件中每列的数据类型，支持的类型包括：Int、Float、String、File、Boolean、Array[Int]、Array[Float]、Array[String]、Array[File]、Array[Boolean]
-     * @param string $Description 表格描述。
+     * @param string $Description 表格描述。最多支持500个字符。
      */
     function __construct()
     {

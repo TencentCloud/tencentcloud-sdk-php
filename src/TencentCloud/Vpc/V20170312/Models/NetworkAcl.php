@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method array getSubnetSet() 获取网络ACL关联的子网数组。
  * @method void setSubnetSet(array $SubnetSet) 设置网络ACL关联的子网数组。
- * @method array getIngressEntries() 获取网络ACl入站规则。
- * @method void setIngressEntries(array $IngressEntries) 设置网络ACl入站规则。
- * @method array getEgressEntries() 获取网络ACL出站规则。
- * @method void setEgressEntries(array $EgressEntries) 设置网络ACL出站规则。
+ * @method array getIngressEntries() 获取该参数仅对三元组ACL有效，网络ACl入站规则。
+ * @method void setIngressEntries(array $IngressEntries) 设置该参数仅对三元组ACL有效，网络ACl入站规则。
+ * @method array getEgressEntries() 获取该参数仅对三元组ACL有效，网络ACL出站规则。
+ * @method void setEgressEntries(array $EgressEntries) 设置该参数仅对三元组ACL有效，网络ACL出站规则。
  * @method string getNetworkAclType() 获取网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
  * @method void setNetworkAclType(string $NetworkAclType) 设置网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
  * @method array getTagSet() 获取标签键值对
@@ -67,12 +67,12 @@ class NetworkAcl extends AbstractModel
     public $SubnetSet;
 
     /**
-     * @var array 网络ACl入站规则。
+     * @var array 该参数仅对三元组ACL有效，网络ACl入站规则。
      */
     public $IngressEntries;
 
     /**
-     * @var array 网络ACL出站规则。
+     * @var array 该参数仅对三元组ACL有效，网络ACL出站规则。
      */
     public $EgressEntries;
 
@@ -92,8 +92,8 @@ class NetworkAcl extends AbstractModel
      * @param string $NetworkAclName 网络ACL名称，最大长度为60。
      * @param string $CreatedTime 创建时间。
      * @param array $SubnetSet 网络ACL关联的子网数组。
-     * @param array $IngressEntries 网络ACl入站规则。
-     * @param array $EgressEntries 网络ACL出站规则。
+     * @param array $IngressEntries 该参数仅对三元组ACL有效，网络ACl入站规则。
+     * @param array $EgressEntries 该参数仅对三元组ACL有效，网络ACL出站规则。
      * @param string $NetworkAclType 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
      * @param array $TagSet 标签键值对
      */

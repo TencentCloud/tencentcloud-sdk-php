@@ -100,6 +100,8 @@ AnalyzeTaskType_MediaStream：音视频体验
 武汉市
 首尔
 多伦多
+ * @method string getScrollID() 获取es scroll查询id
+ * @method void setScrollID(string $ScrollID) 设置es scroll查询id
  */
 class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 {
@@ -196,6 +198,11 @@ AnalyzeTaskType_MediaStream：音视频体验
     public $City;
 
     /**
+     * @var string es scroll查询id
+     */
+    public $ScrollID;
+
+    /**
      * @param integer $BeginTime 开始时间戳（毫秒级）
      * @param integer $EndTime 结束时间戳（毫秒级）
      * @param string $TaskType 任务类型
@@ -236,6 +243,7 @@ AnalyzeTaskType_MediaStream：音视频体验
 武汉市
 首尔
 多伦多
+     * @param string $ScrollID es scroll查询id
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ AnalyzeTaskType_MediaStream：音视频体验
 
         if (array_key_exists("City",$param) and $param["City"] !== null) {
             $this->City = $param["City"];
+        }
+
+        if (array_key_exists("ScrollID",$param) and $param["ScrollID"] !== null) {
+            $this->ScrollID = $param["ScrollID"];
         }
     }
 }

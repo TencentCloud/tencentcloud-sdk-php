@@ -20,10 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateFlowGroupByTemplates返回参数结构体
  *
- * @method string getFlowGroupId() 获取合同组ID
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID
- * @method array getFlowIds() 获取子合同ID列表
- * @method void setFlowIds(array $FlowIds) 设置子合同ID列表
+ * @method string getFlowGroupId() 获取合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+ * @method array getFlowIds() 获取合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致`
+ * @method void setFlowIds(array $FlowIds) 设置合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致`
  * @method array getTaskInfos() 获取复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
  * @method void setTaskInfos(array $TaskInfos) 设置复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
@@ -34,12 +42,16 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel
 {
     /**
-     * @var string 合同组ID
+     * @var string 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
      */
     public $FlowGroupId;
 
     /**
-     * @var array 子合同ID列表
+     * @var array 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致`
      */
     public $FlowIds;
 
@@ -55,8 +67,12 @@ class ChannelCreateFlowGroupByTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowGroupId 合同组ID
-     * @param array $FlowIds 子合同ID列表
+     * @param string $FlowGroupId 合同组ID，为32位字符串。
+建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+     * @param array $FlowIds 合同组中每个合同流程ID，每个ID均为32位字符串。
+
+注:
+`此数组的顺序和入参中的FlowInfos顺序回不一致`
      * @param array $TaskInfos 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -24,6 +24,19 @@ use TencentCloud\Sts\V20180813\Models as Models;
 
 /**
  * @method Models\AssumeRoleResponse AssumeRole(Models\AssumeRoleRequest $req) 申请扮演角色临时访问凭证。
+
+1、角色策略组成
+
+（1）角色信任策略：指定谁可以扮演该角色；
+
+（2）角色权限策略：指定扮演角色后可以执行哪些操作。
+
+
+2、角色可扮演条件
+
+（1）给用户绑定允许调用AssumeRole的策略 ；
+
+（2）将用户添加为角色信任策略中的主体。
  * @method Models\AssumeRoleWithSAMLResponse AssumeRoleWithSAML(Models\AssumeRoleWithSAMLRequest $req) 本接口（AssumeRoleWithSAML）用于根据 SAML 断言申请角色临时访问凭证。
 
 注意：当使用签名方法 V3 调用本接口时，请求头无须传入 X-TC-Token, 但 Authorization 需要传入值 SKIP。

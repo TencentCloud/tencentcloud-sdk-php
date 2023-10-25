@@ -20,50 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合同组的配置项信息包括：在合同组签署过程中，是否需要对每个子合同进行独立的意愿确认。
  *
- * @method boolean getSelfOrganizationApproverSignEach() 获取发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。
- * @method void setSelfOrganizationApproverSignEach(boolean $SelfOrganizationApproverSignEach) 设置发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。
- * @method boolean getOtherApproverSignEach() 获取非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。
- * @method void setOtherApproverSignEach(boolean $OtherApproverSignEach) 设置非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。
+ * @method boolean getSelfOrganizationApproverSignEach() 获取发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
+ * @method void setSelfOrganizationApproverSignEach(boolean $SelfOrganizationApproverSignEach) 设置发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
+ * @method boolean getOtherApproverSignEach() 获取非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
+ * @method void setOtherApproverSignEach(boolean $OtherApproverSignEach) 设置非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
  */
 class FlowGroupOptions extends AbstractModel
 {
     /**
-     * @var boolean 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。
+     * @var boolean 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      */
     public $SelfOrganizationApproverSignEach;
 
     /**
-     * @var boolean 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。
+     * @var boolean 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      */
     public $OtherApproverSignEach;
 
     /**
-     * @param boolean $SelfOrganizationApproverSignEach 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认：
-fasle：发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为fasle。
-     * @param boolean $OtherApproverSignEach 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认：
-fasle：非发起方企业经办人签署时对所有子合同进行统一的意愿确认
-true：非发起方企业经办人签署时需要对子合同进行独立的意愿确认
-默认为false。
+     * @param boolean $SelfOrganizationApproverSignEach 发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
+     * @param boolean $OtherApproverSignEach 非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认
+<ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li>
+<li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      */
     function __construct()
     {

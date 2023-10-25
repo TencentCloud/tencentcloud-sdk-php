@@ -14,31 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Tms\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HLS专属录制参数
+ * 标识命中的违规关键词位置信息
  *
- * @method integer getFlowContinueDuration() 获取HLS续流超时时间。
-取值范围[0，1800]。
+ * @method integer getStart() 获取关键词起始位置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowContinueDuration(integer $FlowContinueDuration) 设置HLS续流超时时间。
-取值范围[0，1800]。
+ * @method void setStart(integer $Start) 设置关键词起始位置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnd() 获取关键词结束位置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnd(integer $End) 设置关键词结束位置
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class HlsSpecialParam extends AbstractModel
+class Positions extends AbstractModel
 {
     /**
-     * @var integer HLS续流超时时间。
-取值范围[0，1800]。
+     * @var integer 关键词起始位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FlowContinueDuration;
+    public $Start;
 
     /**
-     * @param integer $FlowContinueDuration HLS续流超时时间。
-取值范围[0，1800]。
+     * @var integer 关键词结束位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $End;
+
+    /**
+     * @param integer $Start 关键词起始位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $End 关键词结束位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -54,8 +62,12 @@ class HlsSpecialParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowContinueDuration",$param) and $param["FlowContinueDuration"] !== null) {
-            $this->FlowContinueDuration = $param["FlowContinueDuration"];
+        if (array_key_exists("Start",$param) and $param["Start"] !== null) {
+            $this->Start = $param["Start"];
+        }
+
+        if (array_key_exists("End",$param) and $param["End"] !== null) {
+            $this->End = $param["End"];
         }
     }
 }

@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) 设置开播回调 URL。
  * @method string getStreamEndNotifyUrl() 获取断流回调 URL。
  * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) 设置断流回调 URL。
- * @method string getRecordNotifyUrl() 获取录制回调 URL。
- * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制回调 URL。
+ * @method string getRecordNotifyUrl() 获取录制文件回调 URL。
+ * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制文件回调 URL。
+ * @method string getRecordStatusNotifyUrl() 获取录制状态回调 URL 。
+ * @method void setRecordStatusNotifyUrl(string $RecordStatusNotifyUrl) 设置录制状态回调 URL 。
  * @method string getSnapshotNotifyUrl() 获取截图回调 URL。
  * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) 设置截图回调 URL。
  * @method string getPornCensorshipNotifyUrl() 获取鉴黄回调 URL。
@@ -73,9 +75,14 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     public $StreamEndNotifyUrl;
 
     /**
-     * @var string 录制回调 URL。
+     * @var string 录制文件回调 URL。
      */
     public $RecordNotifyUrl;
+
+    /**
+     * @var string 录制状态回调 URL 。
+     */
+    public $RecordStatusNotifyUrl;
 
     /**
      * @var string 截图回调 URL。
@@ -109,7 +116,8 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @param string $Description 描述信息。
      * @param string $StreamBeginNotifyUrl 开播回调 URL。
      * @param string $StreamEndNotifyUrl 断流回调 URL。
-     * @param string $RecordNotifyUrl 录制回调 URL。
+     * @param string $RecordNotifyUrl 录制文件回调 URL。
+     * @param string $RecordStatusNotifyUrl 录制状态回调 URL 。
      * @param string $SnapshotNotifyUrl 截图回调 URL。
      * @param string $PornCensorshipNotifyUrl 鉴黄回调 URL。
      * @param string $CallbackKey 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
@@ -152,6 +160,10 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
 
         if (array_key_exists("RecordNotifyUrl",$param) and $param["RecordNotifyUrl"] !== null) {
             $this->RecordNotifyUrl = $param["RecordNotifyUrl"];
+        }
+
+        if (array_key_exists("RecordStatusNotifyUrl",$param) and $param["RecordStatusNotifyUrl"] !== null) {
+            $this->RecordStatusNotifyUrl = $param["RecordStatusNotifyUrl"];
         }
 
         if (array_key_exists("SnapshotNotifyUrl",$param) and $param["SnapshotNotifyUrl"] !== null) {

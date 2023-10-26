@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置查询开始时间，本地unix时间戳，单位为秒（如：1590065777），
 注意：支持查询14天内的数据。
  * @method integer getEndTime() 获取查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。
  * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。
  * @method integer getSdkAppId() 获取用户SdkAppId（如：1400xxxxxx）。
  * @method void setSdkAppId(integer $SdkAppId) 设置用户SdkAppId（如：1400xxxxxx）。
  * @method array getUserIds() 获取需查询的用户数组，默认不填返回6个用户。
@@ -90,7 +90,7 @@ class DescribeCallDetailInfoRequest extends AbstractModel
 
     /**
      * @var integer 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。
      */
     public $EndTime;
 
@@ -141,7 +141,7 @@ DataType 为null，UserIds长度不超过100，PageSize最大不超过100。
      * @param integer $StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777），
 注意：支持查询14天内的数据。
      * @param integer $EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
-注意：DataType 不为null ，与StartTime间隔时间不超过1小时；DataType 为null，与StartTime间隔时间不超过4小时。
+注意：查询起止时间需小于1小时，超过则返回null，即与StartTime间隔时间不超过1小时。
      * @param integer $SdkAppId 用户SdkAppId（如：1400xxxxxx）。
      * @param array $UserIds 需查询的用户数组，默认不填返回6个用户。
      * @param array $DataType 需查询的指标，不填则只返回用户列表，填all则返回所有指标。

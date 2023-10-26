@@ -54,6 +54,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnalysis(array $Analysis) 设置多维分析设置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getGroupTriggerStatus() 获取分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getGroupTriggerCondition() 获取分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMonitorObjectType() 获取监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlarmLevel() 获取告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMultiConditions() 获取多触发条件。
 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -137,6 +153,30 @@ class AlarmInfo extends AbstractModel
     public $Analysis;
 
     /**
+     * @var boolean 分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupTriggerStatus;
+
+    /**
+     * @var array 分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupTriggerCondition;
+
+    /**
+     * @var integer 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorObjectType;
+
+    /**
+     * @var integer 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmLevel;
+
+    /**
      * @var array 多触发条件。
 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -160,6 +200,14 @@ class AlarmInfo extends AbstractModel
      * @param CallBackInfo $CallBack 自定义回调模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Analysis 多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $GroupTriggerStatus 分组触发状态。1：开启，0：关闭（默认）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $GroupTriggerCondition 分组触发条件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MultiConditions 多触发条件。
 
@@ -244,6 +292,22 @@ class AlarmInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Analysis, $obj);
             }
+        }
+
+        if (array_key_exists("GroupTriggerStatus",$param) and $param["GroupTriggerStatus"] !== null) {
+            $this->GroupTriggerStatus = $param["GroupTriggerStatus"];
+        }
+
+        if (array_key_exists("GroupTriggerCondition",$param) and $param["GroupTriggerCondition"] !== null) {
+            $this->GroupTriggerCondition = $param["GroupTriggerCondition"];
+        }
+
+        if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
+            $this->MonitorObjectType = $param["MonitorObjectType"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
         }
 
         if (array_key_exists("MultiConditions",$param) and $param["MultiConditions"] !== null) {

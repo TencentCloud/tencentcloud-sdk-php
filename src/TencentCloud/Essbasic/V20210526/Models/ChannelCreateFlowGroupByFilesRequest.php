@@ -32,7 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
 </ul>
-
 子客企业和子客企业中的员工比较走完创建和实名过程
  * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
@@ -42,7 +41,6 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
 </ul>
-
 子客企业和子客企业中的员工比较走完创建和实名过程
  * @method string getApproverVerifyType() 获取合同组中签署人校验和认证的方式：
 <ul><li>**VerifyCheck**：人脸识别（默认）</li>
@@ -82,7 +80,6 @@ class ChannelCreateFlowGroupByFilesRequest extends AbstractModel
 <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
 </ul>
-
 子客企业和子客企业中的员工比较走完创建和实名过程
      */
     public $Agent;
@@ -119,7 +116,6 @@ class ChannelCreateFlowGroupByFilesRequest extends AbstractModel
 <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent.AppId</li>
 </ul>
-
 子客企业和子客企业中的员工比较走完创建和实名过程
      * @param string $ApproverVerifyType 合同组中签署人校验和认证的方式：
 <ul><li>**VerifyCheck**：人脸识别（默认）</li>

@@ -20,17 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseWhiteConfig返回参数结构体
  *
+ * @method VersionWhiteConfig getFlagShip() 获取旗舰版 配置信息
+ * @method void setFlagShip(VersionWhiteConfig $FlagShip) 设置旗舰版 配置信息
+ * @method VersionWhiteConfig getProfessional() 获取专业版 配置信息
+ * @method void setProfessional(VersionWhiteConfig $Professional) 设置专业版 配置信息
+ * @method VersionWhiteConfig getPrattWhitney() 获取普惠版 配置信息
+ * @method void setPrattWhitney(VersionWhiteConfig $PrattWhitney) 设置普惠版 配置信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLicenseWhiteConfigResponse extends AbstractModel
 {
     /**
+     * @var VersionWhiteConfig 旗舰版 配置信息
+     */
+    public $FlagShip;
+
+    /**
+     * @var VersionWhiteConfig 专业版 配置信息
+     */
+    public $Professional;
+
+    /**
+     * @var VersionWhiteConfig 普惠版 配置信息
+     */
+    public $PrattWhitney;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param VersionWhiteConfig $FlagShip 旗舰版 配置信息
+     * @param VersionWhiteConfig $Professional 专业版 配置信息
+     * @param VersionWhiteConfig $PrattWhitney 普惠版 配置信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +70,21 @@ class DescribeLicenseWhiteConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FlagShip",$param) and $param["FlagShip"] !== null) {
+            $this->FlagShip = new VersionWhiteConfig();
+            $this->FlagShip->deserialize($param["FlagShip"]);
+        }
+
+        if (array_key_exists("Professional",$param) and $param["Professional"] !== null) {
+            $this->Professional = new VersionWhiteConfig();
+            $this->Professional->deserialize($param["Professional"]);
+        }
+
+        if (array_key_exists("PrattWhitney",$param) and $param["PrattWhitney"] !== null) {
+            $this->PrattWhitney = new VersionWhiteConfig();
+            $this->PrattWhitney->deserialize($param["PrattWhitney"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

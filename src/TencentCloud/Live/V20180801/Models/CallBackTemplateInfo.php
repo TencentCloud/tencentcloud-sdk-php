@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) 设置混流回调 URL。(参数已弃用)。
  * @method string getStreamEndNotifyUrl() 获取断流回调 URL。
  * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) 设置断流回调 URL。
- * @method string getRecordNotifyUrl() 获取录制回调 URL。
- * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制回调 URL。
+ * @method string getRecordNotifyUrl() 获取录制文件回调 URL。
+ * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制文件回调 URL。
  * @method string getSnapshotNotifyUrl() 获取截图回调 URL。
  * @method void setSnapshotNotifyUrl(string $SnapshotNotifyUrl) 设置截图回调 URL。
  * @method string getPornCensorshipNotifyUrl() 获取鉴黄回调 URL。
@@ -82,7 +82,7 @@ class CallBackTemplateInfo extends AbstractModel
     public $StreamEndNotifyUrl;
 
     /**
-     * @var string 录制回调 URL。
+     * @var string 录制文件回调 URL。
      */
     public $RecordNotifyUrl;
 
@@ -120,7 +120,7 @@ class CallBackTemplateInfo extends AbstractModel
      * @param string $StreamBeginNotifyUrl 开播回调 URL。
      * @param string $StreamMixNotifyUrl 混流回调 URL。(参数已弃用)。
      * @param string $StreamEndNotifyUrl 断流回调 URL。
-     * @param string $RecordNotifyUrl 录制回调 URL。
+     * @param string $RecordNotifyUrl 录制文件回调 URL。
      * @param string $SnapshotNotifyUrl 截图回调 URL。
      * @param string $PornCensorshipNotifyUrl 鉴黄回调 URL。
      * @param string $CallbackKey 回调的鉴权 key。

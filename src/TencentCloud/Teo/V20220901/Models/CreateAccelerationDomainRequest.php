@@ -26,6 +26,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) 设置加速域名。
  * @method OriginInfo getOriginInfo() 获取源站信息。
  * @method void setOriginInfo(OriginInfo $OriginInfo) 设置源站信息。
+ * @method string getOriginProtocol() 获取回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填默认为： FOLLOW。</li>
+ * @method void setOriginProtocol(string $OriginProtocol) 设置回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填默认为： FOLLOW。</li>
+ * @method integer getHttpOriginPort() 获取HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+ * @method void setHttpOriginPort(integer $HttpOriginPort) 设置HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+ * @method integer getHttpsOriginPort() 获取HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) 设置HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+ * @method string getIPv6Status() 获取IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填默认为：follow。</li>
+ * @method void setIPv6Status(string $IPv6Status) 设置IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填默认为：follow。</li>
  */
 class CreateAccelerationDomainRequest extends AbstractModel
 {
@@ -45,9 +69,49 @@ class CreateAccelerationDomainRequest extends AbstractModel
     public $OriginInfo;
 
     /**
+     * @var string 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填默认为： FOLLOW。</li>
+     */
+    public $OriginProtocol;
+
+    /**
+     * @var integer HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+     */
+    public $HttpOriginPort;
+
+    /**
+     * @var integer HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+     */
+    public $HttpsOriginPort;
+
+    /**
+     * @var string IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填默认为：follow。</li>
+     */
+    public $IPv6Status;
+
+    /**
      * @param string $ZoneId 加速域名所属站点 ID。
      * @param string $DomainName 加速域名。
      * @param OriginInfo $OriginInfo 源站信息。
+     * @param string $OriginProtocol 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+<li>不填默认为： FOLLOW。</li>
+     * @param integer $HttpOriginPort HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+     * @param integer $HttpsOriginPort HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+     * @param string $IPv6Status IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+<li>不填默认为：follow。</li>
      */
     function __construct()
     {
@@ -73,6 +137,22 @@ class CreateAccelerationDomainRequest extends AbstractModel
         if (array_key_exists("OriginInfo",$param) and $param["OriginInfo"] !== null) {
             $this->OriginInfo = new OriginInfo();
             $this->OriginInfo->deserialize($param["OriginInfo"]);
+        }
+
+        if (array_key_exists("OriginProtocol",$param) and $param["OriginProtocol"] !== null) {
+            $this->OriginProtocol = $param["OriginProtocol"];
+        }
+
+        if (array_key_exists("HttpOriginPort",$param) and $param["HttpOriginPort"] !== null) {
+            $this->HttpOriginPort = $param["HttpOriginPort"];
+        }
+
+        if (array_key_exists("HttpsOriginPort",$param) and $param["HttpsOriginPort"] !== null) {
+            $this->HttpsOriginPort = $param["HttpsOriginPort"];
+        }
+
+        if (array_key_exists("IPv6Status",$param) and $param["IPv6Status"] !== null) {
+            $this->IPv6Status = $param["IPv6Status"];
         }
     }
 }

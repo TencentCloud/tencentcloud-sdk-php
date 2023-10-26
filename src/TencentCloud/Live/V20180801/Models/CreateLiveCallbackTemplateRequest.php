@@ -40,9 +40,13 @@ use TencentCloud\Common\AbstractModel;
 相关协议文档：[事件消息通知](/document/product/267/32744)。
  * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) 设置断流回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method string getRecordNotifyUrl() 获取录制回调 URL，
+ * @method string getRecordNotifyUrl() 获取录制文件回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制回调 URL，
+ * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制文件回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method string getRecordStatusNotifyUrl() 获取录制状态回调 URL ，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method void setRecordStatusNotifyUrl(string $RecordStatusNotifyUrl) 设置录制状态回调 URL ，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
  * @method string getSnapshotNotifyUrl() 获取截图回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
@@ -92,10 +96,16 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
     public $StreamEndNotifyUrl;
 
     /**
-     * @var string 录制回调 URL，
+     * @var string 录制文件回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
      */
     public $RecordNotifyUrl;
+
+    /**
+     * @var string 录制状态回调 URL ，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     */
+    public $RecordStatusNotifyUrl;
 
     /**
      * @var string 截图回调 URL，
@@ -141,7 +151,9 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
 相关协议文档：[事件消息通知](/document/product/267/32744)。
      * @param string $StreamEndNotifyUrl 断流回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
-     * @param string $RecordNotifyUrl 录制回调 URL，
+     * @param string $RecordNotifyUrl 录制文件回调 URL，
+相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param string $RecordStatusNotifyUrl 录制状态回调 URL ，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
      * @param string $SnapshotNotifyUrl 截图回调 URL，
 相关协议文档：[事件消息通知](/document/product/267/32744)。
@@ -184,6 +196,10 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
 
         if (array_key_exists("RecordNotifyUrl",$param) and $param["RecordNotifyUrl"] !== null) {
             $this->RecordNotifyUrl = $param["RecordNotifyUrl"];
+        }
+
+        if (array_key_exists("RecordStatusNotifyUrl",$param) and $param["RecordStatusNotifyUrl"] !== null) {
+            $this->RecordStatusNotifyUrl = $param["RecordStatusNotifyUrl"];
         }
 
         if (array_key_exists("SnapshotNotifyUrl",$param) and $param["SnapshotNotifyUrl"] !== null) {

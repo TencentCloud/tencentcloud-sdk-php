@@ -198,7 +198,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomizationId(string $CustomizationId) 设置自学习定制模型 id
 如设置了该参数，将生效对应id的自学习定制模型；
 点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
- * @method integer getEmotionRecognition() 获取**【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+ * @method integer getEmotionRecognition() 获取**【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
@@ -209,7 +209,7 @@ use TencentCloud\Common\AbstractModel;
 1. **本功能为增值服务**，需将参数设置为1或2时方可按对应方式生效；
 2. 如果传入参数值1或2，需确保账号已购买[情绪识别资源包](https://cloud.tencent.com/document/product/1093/35686#97ae4aa0-29a0-4066-9f07-ccaf8856a16b)，或账号开启后付费；**若当前账号已开启后付费功能，并传入参数值1或2，将[自动计费](https://cloud.tencent.com/document/product/1093/35686#d912167d-ffd5-41a9-8b1c-2e89845a6852)）**；
 3. 参数设置为0时，无需购买资源包，也不会消耗情绪识别对应资源
- * @method void setEmotionRecognition(integer $EmotionRecognition) 设置**【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+ * @method void setEmotionRecognition(integer $EmotionRecognition) 设置**【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
@@ -429,7 +429,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $CustomizationId;
 
     /**
-     * @var integer **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+     * @var integer **【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）
@@ -593,7 +593,7 @@ class CreateRecTaskRequest extends AbstractModel
      * @param string $CustomizationId 自学习定制模型 id
 如设置了该参数，将生效对应id的自学习定制模型；
 点击这里查看[自学习定制模型配置方法](https://cloud.tencent.com/document/product/1093/38416)
-     * @param integer $EmotionRecognition **【增值付费功能】**情绪识别能力（目前仅支持16k_zh）
+     * @param integer $EmotionRecognition **【增值付费功能】**情绪识别能力（目前仅支持16k_zh,8k_zh）
 0：不开启；
 1：开启情绪识别，但不在文本展示情绪标签；
 2：开启情绪识别，并且在文本展示情绪标签（**该功能需要设置ResTextFormat 大于0**）

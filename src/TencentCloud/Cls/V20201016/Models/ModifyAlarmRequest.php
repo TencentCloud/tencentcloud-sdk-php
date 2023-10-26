@@ -70,6 +70,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallBack(CallBackInfo $CallBack) 设置用户自定义回调
  * @method array getAnalysis() 获取多维分析
  * @method void setAnalysis(array $Analysis) 设置多维分析
+ * @method boolean getGroupTriggerStatus() 获取分组触发状态。true：开启，false：关闭（默认）
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。true：开启，false：关闭（默认）
+ * @method array getGroupTriggerCondition() 获取分组触发条件。
+ * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置分组触发条件。
+ * @method integer getMonitorObjectType() 获取监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+ * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
  */
 class ModifyAlarmRequest extends AbstractModel
 {
@@ -155,6 +164,23 @@ class ModifyAlarmRequest extends AbstractModel
     public $Analysis;
 
     /**
+     * @var boolean 分组触发状态。true：开启，false：关闭（默认）
+     */
+    public $GroupTriggerStatus;
+
+    /**
+     * @var array 分组触发条件。
+     */
+    public $GroupTriggerCondition;
+
+    /**
+     * @var integer 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+     */
+    public $MonitorObjectType;
+
+    /**
      * @param string $AlarmId 告警策略ID。
      * @param string $Name 告警策略名称
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
@@ -180,6 +206,10 @@ class ModifyAlarmRequest extends AbstractModel
      * @param string $MessageTemplate 用户自定义告警内容
      * @param CallBackInfo $CallBack 用户自定义回调
      * @param array $Analysis 多维分析
+     * @param boolean $GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
+     * @param array $GroupTriggerCondition 分组触发条件。
+     * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
+<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
      */
     function __construct()
     {
@@ -265,6 +295,18 @@ class ModifyAlarmRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Analysis, $obj);
             }
+        }
+
+        if (array_key_exists("GroupTriggerStatus",$param) and $param["GroupTriggerStatus"] !== null) {
+            $this->GroupTriggerStatus = $param["GroupTriggerStatus"];
+        }
+
+        if (array_key_exists("GroupTriggerCondition",$param) and $param["GroupTriggerCondition"] !== null) {
+            $this->GroupTriggerCondition = $param["GroupTriggerCondition"];
+        }
+
+        if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
+            $this->MonitorObjectType = $param["MonitorObjectType"];
         }
     }
 }

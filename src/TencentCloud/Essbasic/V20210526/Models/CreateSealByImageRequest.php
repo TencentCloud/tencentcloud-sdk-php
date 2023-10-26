@@ -20,70 +20,116 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSealByImage请求参数结构体
  *
- * @method Agent getAgent() 获取代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getSealName() 获取印章名称，最大长度不超过50字符
- * @method void setSealName(string $SealName) 设置印章名称，最大长度不超过50字符
- * @method string getSealImage() 获取印章图片base64，大小不超过10M（原始图片不超过7.6M）
- * @method void setSealImage(string $SealImage) 设置印章图片base64，大小不超过10M（原始图片不超过7.6M）
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method string getSealName() 获取电子印章名字，1-50个中文字符
+注:`同一企业下电子印章名字不能相同`
+ * @method void setSealName(string $SealName) 设置电子印章名字，1-50个中文字符
+注:`同一企业下电子印章名字不能相同`
+ * @method string getSealImage() 获取电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式
+
+注: `通过图片创建的电子印章，需电子签平台人工审核`
+
+
+ * @method void setSealImage(string $SealImage) 设置电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式
+
+注: `通过图片创建的电子印章，需电子签平台人工审核`
+
+
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method string getGenerateSource() 获取本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
- * @method void setGenerateSource(string $GenerateSource) 设置本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
- * @method string getSealType() 获取电子印章类型：
-<ul><li>OFFICIAL-公章</li>
-<li>CONTRACT-合同专用章;</li>
-<li>FINANCE-合财务专用章;</li>
-<li>PERSONNEL-人事专用章
-</li>
-<li>默认：OFFICIAL</li>
+ * @method string getGenerateSource() 获取电子印章生成方式
+<ul>
+<li><strong>空值</strong>:(默认)使用上传的图片生成印章, 此时需要上传SealImage图片</li>
+<li><strong>SealGenerateSourceSystem</strong>: 系统生成印章, 无需上传SealImage图片</li>
 </ul>
- * @method void setSealType(string $SealType) 设置电子印章类型：
-<ul><li>OFFICIAL-公章</li>
-<li>CONTRACT-合同专用章;</li>
-<li>FINANCE-合财务专用章;</li>
-<li>PERSONNEL-人事专用章
-</li>
-<li>默认：OFFICIAL</li>
+ * @method void setGenerateSource(string $GenerateSource) 设置电子印章生成方式
+<ul>
+<li><strong>空值</strong>:(默认)使用上传的图片生成印章, 此时需要上传SealImage图片</li>
+<li><strong>SealGenerateSourceSystem</strong>: 系统生成印章, 无需上传SealImage图片</li>
 </ul>
- * @method string getSealHorizontalText() 获取企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
- * @method void setSealHorizontalText(string $SealHorizontalText) 设置企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
- * @method string getSealStyle() 获取印章样式:
+ * @method string getSealType() 获取电子印章类型 , 可选类型如下: 
+<ul><li>**OFFICIAL**: (默认)公章</li>
+<li>**CONTRACT**: 合同专用章;</li>
+<li>**FINANCE**: 合财务专用章;</li>
+<li>**PERSONNEL**: 人事专用章</li>
+</ul>
+注: `同企业下只能有一个公章, 重复创建会报错`
+ * @method void setSealType(string $SealType) 设置电子印章类型 , 可选类型如下: 
+<ul><li>**OFFICIAL**: (默认)公章</li>
+<li>**CONTRACT**: 合同专用章;</li>
+<li>**FINANCE**: 合财务专用章;</li>
+<li>**PERSONNEL**: 人事专用章</li>
+</ul>
+注: `同企业下只能有一个公章, 重复创建会报错`
+ * @method string getSealHorizontalText() 获取企业印章横向文字，最多可填15个汉字  (若超过印章最大宽度，优先压缩字间距，其次缩小字号)
+横向文字的位置如下图中的"印章横向文字在这里"
 
-<ul><li>cycle:圆形印章</li>
-<li>ellipse:椭圆印章</li>
-<li> 注：默认圆形印章</li></ul>
- * @method void setSealStyle(string $SealStyle) 设置印章样式:
+![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage2.png)
 
-<ul><li>cycle:圆形印章</li>
-<li>ellipse:椭圆印章</li>
-<li> 注：默认圆形印章</li></ul>
- * @method string getSealSize() 获取印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
-<li> 40_40 圆形企业印章直径40mm</li>
-<li> 45_30 椭圆形印章45mm x 30mm</li>
-</ul>
- * @method void setSealSize(string $SealSize) 设置印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
-<li> 40_40 圆形企业印章直径40mm</li>
-<li> 45_30 椭圆形印章45mm x 30mm</li>
-</ul>
+ * @method void setSealHorizontalText(string $SealHorizontalText) 设置企业印章横向文字，最多可填15个汉字  (若超过印章最大宽度，优先压缩字间距，其次缩小字号)
+横向文字的位置如下图中的"印章横向文字在这里"
+
+![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage2.png)
+
+ * @method string getSealStyle() 获取印章样式, 可以选择的样式如下: 
+<ul><li>**cycle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li>
+ * @method void setSealStyle(string $SealStyle) 设置印章样式, 可以选择的样式如下: 
+<ul><li>**cycle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li>
+ * @method string getSealSize() 获取印章尺寸取值描述, 可以选择的尺寸如下: 
+<ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
+<li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+ * @method void setSealSize(string $SealSize) 设置印章尺寸取值描述, 可以选择的尺寸如下: 
+<ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
+<li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
  */
 class CreateSealByImageRequest extends AbstractModel
 {
     /**
-     * @var Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
     /**
-     * @var string 印章名称，最大长度不超过50字符
+     * @var string 电子印章名字，1-50个中文字符
+注:`同一企业下电子印章名字不能相同`
      */
     public $SealName;
 
     /**
-     * @var string 印章图片base64，大小不超过10M（原始图片不超过7.6M）
+     * @var string 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式
+
+注: `通过图片创建的电子印章，需电子签平台人工审核`
+
+
      */
     public $SealImage;
 
@@ -94,69 +140,91 @@ class CreateSealByImageRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
+     * @var string 电子印章生成方式
+<ul>
+<li><strong>空值</strong>:(默认)使用上传的图片生成印章, 此时需要上传SealImage图片</li>
+<li><strong>SealGenerateSourceSystem</strong>: 系统生成印章, 无需上传SealImage图片</li>
+</ul>
      */
     public $GenerateSource;
 
     /**
-     * @var string 电子印章类型：
-<ul><li>OFFICIAL-公章</li>
-<li>CONTRACT-合同专用章;</li>
-<li>FINANCE-合财务专用章;</li>
-<li>PERSONNEL-人事专用章
-</li>
-<li>默认：OFFICIAL</li>
+     * @var string 电子印章类型 , 可选类型如下: 
+<ul><li>**OFFICIAL**: (默认)公章</li>
+<li>**CONTRACT**: 合同专用章;</li>
+<li>**FINANCE**: 合财务专用章;</li>
+<li>**PERSONNEL**: 人事专用章</li>
 </ul>
+注: `同企业下只能有一个公章, 重复创建会报错`
      */
     public $SealType;
 
     /**
-     * @var string 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
+     * @var string 企业印章横向文字，最多可填15个汉字  (若超过印章最大宽度，优先压缩字间距，其次缩小字号)
+横向文字的位置如下图中的"印章横向文字在这里"
+
+![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage2.png)
+
      */
     public $SealHorizontalText;
 
     /**
-     * @var string 印章样式:
-
-<ul><li>cycle:圆形印章</li>
-<li>ellipse:椭圆印章</li>
-<li> 注：默认圆形印章</li></ul>
+     * @var string 印章样式, 可以选择的样式如下: 
+<ul><li>**cycle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li>
      */
     public $SealStyle;
 
     /**
-     * @var string 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
-<li> 40_40 圆形企业印章直径40mm</li>
-<li> 45_30 椭圆形印章45mm x 30mm</li>
-</ul>
+     * @var string 印章尺寸取值描述, 可以选择的尺寸如下: 
+<ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
+<li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
      */
     public $SealSize;
 
     /**
-     * @param Agent $Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $SealName 印章名称，最大长度不超过50字符
-     * @param string $SealImage 印章图片base64，大小不超过10M（原始图片不超过7.6M）
-     * @param UserInfo $Operator 操作者的信息
-     * @param string $GenerateSource 本接口支持上传图片印章及系统直接生成印章； 如果要使用系统生成印章，此值传：SealGenerateSourceSystem； 如果要使用图片上传，此字段置空并且传字段 SealImage
-     * @param string $SealType 电子印章类型：
-<ul><li>OFFICIAL-公章</li>
-<li>CONTRACT-合同专用章;</li>
-<li>FINANCE-合财务专用章;</li>
-<li>PERSONNEL-人事专用章
-</li>
-<li>默认：OFFICIAL</li>
-</ul>
-     * @param string $SealHorizontalText 企业印章横向文字，最多可填15个汉字（若超过印章最大宽度，优先压缩字间距，其次缩小字号
-     * @param string $SealStyle 印章样式:
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
-<ul><li>cycle:圆形印章</li>
-<li>ellipse:椭圆印章</li>
-<li> 注：默认圆形印章</li></ul>
-     * @param string $SealSize 印章尺寸取值描述：<ul><li> 42_42 圆形企业公章直径42mm</li>
-<li> 40_40 圆形企业印章直径40mm</li>
-<li> 45_30 椭圆形印章45mm x 30mm</li>
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
 </ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param string $SealName 电子印章名字，1-50个中文字符
+注:`同一企业下电子印章名字不能相同`
+     * @param string $SealImage 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式
+
+注: `通过图片创建的电子印章，需电子签平台人工审核`
+
+
+     * @param UserInfo $Operator 操作者的信息
+     * @param string $GenerateSource 电子印章生成方式
+<ul>
+<li><strong>空值</strong>:(默认)使用上传的图片生成印章, 此时需要上传SealImage图片</li>
+<li><strong>SealGenerateSourceSystem</strong>: 系统生成印章, 无需上传SealImage图片</li>
+</ul>
+     * @param string $SealType 电子印章类型 , 可选类型如下: 
+<ul><li>**OFFICIAL**: (默认)公章</li>
+<li>**CONTRACT**: 合同专用章;</li>
+<li>**FINANCE**: 合财务专用章;</li>
+<li>**PERSONNEL**: 人事专用章</li>
+</ul>
+注: `同企业下只能有一个公章, 重复创建会报错`
+     * @param string $SealHorizontalText 企业印章横向文字，最多可填15个汉字  (若超过印章最大宽度，优先压缩字间距，其次缩小字号)
+横向文字的位置如下图中的"印章横向文字在这里"
+
+![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage2.png)
+
+     * @param string $SealStyle 印章样式, 可以选择的样式如下: 
+<ul><li>**cycle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li>
+     * @param string $SealSize 印章尺寸取值描述, 可以选择的尺寸如下: 
+<ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
+<li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
      */
     function __construct()
     {

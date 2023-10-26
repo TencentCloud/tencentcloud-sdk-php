@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedDate(string $UpdatedDate) 设置更新日期
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDnssec() 获取dnssec
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDnssec(string $Dnssec) 设置dnssec
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WhoisInfo extends AbstractModel
 {
@@ -124,6 +128,12 @@ class WhoisInfo extends AbstractModel
     public $UpdatedDate;
 
     /**
+     * @var string dnssec
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Dnssec;
+
+    /**
      * @param WhoisContact $Contacts 联系信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreationDate 域名注册时间
@@ -143,6 +153,8 @@ class WhoisInfo extends AbstractModel
      * @param array $Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedDate 更新日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Dnssec dnssec
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -197,6 +209,10 @@ class WhoisInfo extends AbstractModel
 
         if (array_key_exists("UpdatedDate",$param) and $param["UpdatedDate"] !== null) {
             $this->UpdatedDate = $param["UpdatedDate"];
+        }
+
+        if (array_key_exists("Dnssec",$param) and $param["Dnssec"] !== null) {
+            $this->Dnssec = $param["Dnssec"];
         }
     }
 }

@@ -20,81 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 源站组信息
  *
- * @method string getZoneId() 获取站点ID。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
- * @method string getZoneName() 获取站点名称。
- * @method void setZoneName(string $ZoneName) 设置站点名称。
- * @method string getOriginGroupId() 获取源站组ID。
- * @method void setOriginGroupId(string $OriginGroupId) 设置源站组ID。
- * @method string getOriginType() 获取源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li>
- * @method void setOriginType(string $OriginType) 设置源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li>
- * @method string getOriginGroupName() 获取源站组名称。
- * @method void setOriginGroupName(string $OriginGroupName) 设置源站组名称。
- * @method string getConfigurationType() 获取源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
- * @method void setConfigurationType(string $ConfigurationType) 设置源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
- * @method array getOriginRecords() 获取源站记录信息。
- * @method void setOriginRecords(array $OriginRecords) 设置源站记录信息。
+ * @method string getGroupId() 获取源站组ID。
+ * @method void setGroupId(string $GroupId) 设置源站组ID。
+ * @method string getName() 获取源站组名称。
+ * @method void setName(string $Name) 设置源站组名称。
+ * @method string getType() 获取源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li>
+ * @method void setType(string $Type) 设置源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li>
+ * @method array getRecords() 获取源站记录信息。
+ * @method void setRecords(array $Records) 设置源站记录信息。
+ * @method array getReferences() 获取源站组被引用实例列表。	
+ * @method void setReferences(array $References) 设置源站组被引用实例列表。	
+ * @method string getCreateTime() 获取源站组创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置源站组创建时间。
  * @method string getUpdateTime() 获取源站组更新时间。
  * @method void setUpdateTime(string $UpdateTime) 设置源站组更新时间。
- * @method string getHostHeader() 获取当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostHeader(string $HostHeader) 设置当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OriginGroup extends AbstractModel
 {
     /**
-     * @var string 站点ID。
-     */
-    public $ZoneId;
-
-    /**
-     * @var string 站点名称。
-     */
-    public $ZoneName;
-
-    /**
      * @var string 源站组ID。
      */
-    public $OriginGroupId;
-
-    /**
-     * @var string 源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li>
-     */
-    public $OriginType;
+    public $GroupId;
 
     /**
      * @var string 源站组名称。
      */
-    public $OriginGroupName;
+    public $Name;
 
     /**
-     * @var string 源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
+     * @var string 源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li>
      */
-    public $ConfigurationType;
+    public $Type;
 
     /**
      * @var array 源站记录信息。
      */
-    public $OriginRecords;
+    public $Records;
+
+    /**
+     * @var array 源站组被引用实例列表。	
+     */
+    public $References;
+
+    /**
+     * @var string 源站组创建时间。
+     */
+    public $CreateTime;
 
     /**
      * @var string 源站组更新时间。
@@ -102,28 +79,15 @@ class OriginGroup extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $HostHeader;
-
-    /**
-     * @param string $ZoneId 站点ID。
-     * @param string $ZoneName 站点名称。
-     * @param string $OriginGroupId 源站组ID。
-     * @param string $OriginType 源站类型，取值有：
-<li>self：自有源站；</li>
-<li>third_party：第三方源站；</li>
-<li>cos：腾讯云COS源站。</li>
-     * @param string $OriginGroupName 源站组名称。
-     * @param string $ConfigurationType 源站配置类型，当OriginType=self时，取值有：
-<li>area：按区域配置；</li>
-<li>weight： 按权重配置。</li>
-<li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
-     * @param array $OriginRecords 源站记录信息。
+     * @param string $GroupId 源站组ID。
+     * @param string $Name 源站组名称。
+     * @param string $Type 源站组类型，取值有：
+<li>GENERAL：通用型源站组；</li>
+<li>HTTP： HTTP专用型源站组。</li>
+     * @param array $Records 源站记录信息。
+     * @param array $References 源站组被引用实例列表。	
+     * @param string $CreateTime 源站组创建时间。
      * @param string $UpdateTime 源站组更新时间。
-     * @param string $HostHeader 当OriginType=self时，表示回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -138,45 +102,42 @@ class OriginGroup extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
-        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
-            $this->ZoneName = $param["ZoneName"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("OriginGroupId",$param) and $param["OriginGroupId"] !== null) {
-            $this->OriginGroupId = $param["OriginGroupId"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("OriginType",$param) and $param["OriginType"] !== null) {
-            $this->OriginType = $param["OriginType"];
-        }
-
-        if (array_key_exists("OriginGroupName",$param) and $param["OriginGroupName"] !== null) {
-            $this->OriginGroupName = $param["OriginGroupName"];
-        }
-
-        if (array_key_exists("ConfigurationType",$param) and $param["ConfigurationType"] !== null) {
-            $this->ConfigurationType = $param["ConfigurationType"];
-        }
-
-        if (array_key_exists("OriginRecords",$param) and $param["OriginRecords"] !== null) {
-            $this->OriginRecords = [];
-            foreach ($param["OriginRecords"] as $key => $value){
+        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
+            $this->Records = [];
+            foreach ($param["Records"] as $key => $value){
                 $obj = new OriginRecord();
                 $obj->deserialize($value);
-                array_push($this->OriginRecords, $obj);
+                array_push($this->Records, $obj);
             }
+        }
+
+        if (array_key_exists("References",$param) and $param["References"] !== null) {
+            $this->References = [];
+            foreach ($param["References"] as $key => $value){
+                $obj = new OriginGroupReference();
+                $obj->deserialize($value);
+                array_push($this->References, $obj);
+            }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
-        }
-
-        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
-            $this->HostHeader = $param["HostHeader"];
         }
     }
 }

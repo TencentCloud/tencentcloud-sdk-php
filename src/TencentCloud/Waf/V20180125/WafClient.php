@@ -132,6 +132,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyDomainIpv6StatusResponse ModifyDomainIpv6Status(Models\ModifyDomainIpv6StatusRequest $req) 切换ipv6开关
  * @method Models\ModifyDomainWhiteRuleResponse ModifyDomainWhiteRule(Models\ModifyDomainWhiteRuleRequest $req) 更改某一条规则
  * @method Models\ModifyDomainsCLSStatusResponse ModifyDomainsCLSStatus(Models\ModifyDomainsCLSStatusRequest $req) 修改域名列表的访问日志开关
+ * @method Models\ModifyGenerateDealsResponse ModifyGenerateDeals(Models\ModifyGenerateDealsRequest $req) 提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单，计费侧接口：https://tcb.woa.com/magical-brush/docs/754661947
  * @method Models\ModifyHostResponse ModifyHost(Models\ModifyHostRequest $req) clb-waf编辑防护域名配置
  * @method Models\ModifyHostFlowModeResponse ModifyHostFlowMode(Models\ModifyHostFlowModeRequest $req) clb-waf 设置防护域名的流量模式
  * @method Models\ModifyHostModeResponse ModifyHostMode(Models\ModifyHostModeRequest $req) clb-waf设置防护域名防护状态

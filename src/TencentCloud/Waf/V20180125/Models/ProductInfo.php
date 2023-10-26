@@ -14,36 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateScanMalwareSetting返回参数结构体
+ * waf产品
  *
- * @method integer getTaskId() 获取任务id
+ * @method string getName() 获取产品名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(integer $TaskId) 设置任务id
+ * @method void setName(string $Name) 设置产品名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getValue() 获取版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(string $Value) 设置版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class CreateScanMalwareSettingResponse extends AbstractModel
+class ProductInfo extends AbstractModel
 {
     /**
-     * @var integer 任务id
+     * @var string 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TaskId;
+    public $Name;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public $RequestId;
-
-    /**
-     * @param integer $TaskId 任务id
+     * @var string 版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $Value;
+
+    /**
+     * @param string $Name 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Value 版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -58,12 +62,12 @@ class CreateScanMalwareSettingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

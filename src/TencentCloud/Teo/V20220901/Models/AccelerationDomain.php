@@ -40,6 +40,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginDetail(OriginDetail $OriginDetail) 设置源站信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginProtocol() 获取回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginProtocol(string $OriginProtocol) 设置回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHttpOriginPort() 获取HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttpOriginPort(integer $HttpOriginPort) 设置HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHttpsOriginPort() 获取HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttpsOriginPort(integer $HttpsOriginPort) 设置HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIPv6Status() 获取IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPv6Status(string $IPv6Status) 设置IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCname() 获取CNAME 地址。
  * @method void setCname(string $Cname) 设置CNAME 地址。
  * @method string getIdentificationStatus() 获取加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
@@ -88,6 +116,36 @@ class AccelerationDomain extends AbstractModel
     public $OriginDetail;
 
     /**
+     * @var string 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginProtocol;
+
+    /**
+     * @var integer HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HttpOriginPort;
+
+    /**
+     * @var integer HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HttpsOriginPort;
+
+    /**
+     * @var string IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPv6Status;
+
+    /**
      * @var string CNAME 地址。
      */
     public $Cname;
@@ -131,6 +189,20 @@ class AccelerationDomain extends AbstractModel
 <li>init：未生效，待激活站点；</li>
      * @param OriginDetail $OriginDetail 源站信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginProtocol 回源协议，取值有：
+<li>FOLLOW: 协议跟随；</li>
+<li>HTTP: HTTP协议回源；</li>
+<li>HTTPS: HTTPS协议回源。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HttpOriginPort HTTP回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HttpsOriginPort HTTPS回源端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IPv6Status IPv6状态，取值有：
+<li>follow：遵循站点IPv6配置；</li>
+<li>on：开启状态；</li>
+<li>off：关闭状态。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cname CNAME 地址。
      * @param string $IdentificationStatus 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
 注意：此字段可能返回 null，表示取不到有效值。
@@ -169,6 +241,22 @@ class AccelerationDomain extends AbstractModel
         if (array_key_exists("OriginDetail",$param) and $param["OriginDetail"] !== null) {
             $this->OriginDetail = new OriginDetail();
             $this->OriginDetail->deserialize($param["OriginDetail"]);
+        }
+
+        if (array_key_exists("OriginProtocol",$param) and $param["OriginProtocol"] !== null) {
+            $this->OriginProtocol = $param["OriginProtocol"];
+        }
+
+        if (array_key_exists("HttpOriginPort",$param) and $param["HttpOriginPort"] !== null) {
+            $this->HttpOriginPort = $param["HttpOriginPort"];
+        }
+
+        if (array_key_exists("HttpsOriginPort",$param) and $param["HttpsOriginPort"] !== null) {
+            $this->HttpsOriginPort = $param["HttpsOriginPort"];
+        }
+
+        if (array_key_exists("IPv6Status",$param) and $param["IPv6Status"] !== null) {
+            $this->IPv6Status = $param["IPv6Status"];
         }
 
         if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {

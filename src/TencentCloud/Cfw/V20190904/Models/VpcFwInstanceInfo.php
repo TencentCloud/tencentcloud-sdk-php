@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateEnable(integer $UpdateEnable) 设置引擎是否可升级：0，不可升级；1，可升级
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTrafficMode() 获取引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrafficMode(string $TrafficMode) 设置引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcFwInstanceInfo extends AbstractModel
 {
@@ -251,6 +255,12 @@ class VpcFwInstanceInfo extends AbstractModel
     public $UpdateEnable;
 
     /**
+     * @var string 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrafficMode;
+
+    /**
      * @param string $FwInsName VPC防火墙实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwInsId VPC防火墙实例ID
@@ -295,6 +305,8 @@ class VpcFwInstanceInfo extends AbstractModel
      * @param string $EngineVersion 实例引擎版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -415,6 +427,10 @@ class VpcFwInstanceInfo extends AbstractModel
 
         if (array_key_exists("UpdateEnable",$param) and $param["UpdateEnable"] !== null) {
             $this->UpdateEnable = $param["UpdateEnable"];
+        }
+
+        if (array_key_exists("TrafficMode",$param) and $param["TrafficMode"] !== null) {
+            $this->TrafficMode = $param["TrafficMode"];
         }
     }
 }

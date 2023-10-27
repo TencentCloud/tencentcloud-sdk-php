@@ -89,11 +89,11 @@ use TencentCloud\Common\AbstractModel;
 ![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage2.png)
 
  * @method string getSealStyle() 获取印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li>
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul>
  * @method void setSealStyle(string $SealStyle) 设置印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li>
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul>
  * @method string getSealSize() 获取印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
@@ -170,8 +170,8 @@ class CreateSealByImageRequest extends AbstractModel
 
     /**
      * @var string 印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li>
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul>
      */
     public $SealStyle;
 
@@ -219,8 +219,8 @@ class CreateSealByImageRequest extends AbstractModel
 ![image](https://dyn.ess.tencent.cn/guide/capi/CreateSealByImage2.png)
 
      * @param string $SealStyle 印章样式, 可以选择的样式如下: 
-<ul><li>**cycle**:(默认)圆形印章</li>
-<li>**ellipse**:椭圆印章</li>
+<ul><li>**circle**:(默认)圆形印章</li>
+<li>**ellipse**:椭圆印章</li></ul>
      * @param string $SealSize 印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>

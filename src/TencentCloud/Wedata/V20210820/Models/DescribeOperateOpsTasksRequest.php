@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmType(string $AlarmType) 设置告警类型，多个类型以逗号分隔
  * @method string getExecutorGroupIdList() 获取资源组id,多个资源组id之间以英文字符逗号分隔
  * @method void setExecutorGroupIdList(string $ExecutorGroupIdList) 设置资源组id,多个资源组id之间以英文字符逗号分隔
+ * @method array getTaskTags() 获取任务标签
+ * @method void setTaskTags(array $TaskTags) 设置任务标签
  */
 class DescribeOperateOpsTasksRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
     public $ExecutorGroupIdList;
 
     /**
+     * @var array 任务标签
+     */
+    public $TaskTags;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderIdList 文件夹id，多个文件夹以逗号分隔
      * @param string $WorkFlowIdList 工作流id，多个工作流id之间以英文字符逗号分隔
@@ -192,6 +199,7 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
      * @param string $TargetServiceType （仅针对离线同步任务）目标数据源类型
      * @param string $AlarmType 告警类型，多个类型以逗号分隔
      * @param string $ExecutorGroupIdList 资源组id,多个资源组id之间以英文字符逗号分隔
+     * @param array $TaskTags 任务标签
      */
     function __construct()
     {
@@ -288,6 +296,15 @@ class DescribeOperateOpsTasksRequest extends AbstractModel
 
         if (array_key_exists("ExecutorGroupIdList",$param) and $param["ExecutorGroupIdList"] !== null) {
             $this->ExecutorGroupIdList = $param["ExecutorGroupIdList"];
+        }
+
+        if (array_key_exists("TaskTags",$param) and $param["TaskTags"] !== null) {
+            $this->TaskTags = [];
+            foreach ($param["TaskTags"] as $key => $value){
+                $obj = new TaskTag();
+                $obj->deserialize($value);
+                array_push($this->TaskTags, $obj);
+            }
         }
     }
 }

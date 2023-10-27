@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskLogURL请求参数结构体
  *
- * @method array getReportItemKeyList() 获取任务报告Id 列表
- * @method void setReportItemKeyList(array $ReportItemKeyList) 设置任务报告Id 列表
  * @method integer getType() 获取0: 预览， 1: 下载
  * @method void setType(integer $Type) 设置0: 预览， 1: 下载
+ * @method array getReportItemKeyList() 获取任务报告Id 列表
+ * @method void setReportItemKeyList(array $ReportItemKeyList) 设置任务报告Id 列表
+ * @method array getReportTaskIdList() 获取报告中任务id列表
+ * @method void setReportTaskIdList(array $ReportTaskIdList) 设置报告中任务id列表
  */
 class DescribeTaskLogURLRequest extends AbstractModel
 {
-    /**
-     * @var array 任务报告Id 列表
-     */
-    public $ReportItemKeyList;
-
     /**
      * @var integer 0: 预览， 1: 下载
      */
     public $Type;
 
     /**
-     * @param array $ReportItemKeyList 任务报告Id 列表
+     * @var array 任务报告Id 列表
+     */
+    public $ReportItemKeyList;
+
+    /**
+     * @var array 报告中任务id列表
+     */
+    public $ReportTaskIdList;
+
+    /**
      * @param integer $Type 0: 预览， 1: 下载
+     * @param array $ReportItemKeyList 任务报告Id 列表
+     * @param array $ReportTaskIdList 报告中任务id列表
      */
     function __construct()
     {
@@ -54,6 +62,10 @@ class DescribeTaskLogURLRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
         if (array_key_exists("ReportItemKeyList",$param) and $param["ReportItemKeyList"] !== null) {
             $this->ReportItemKeyList = [];
             foreach ($param["ReportItemKeyList"] as $key => $value){
@@ -63,8 +75,13 @@ class DescribeTaskLogURLRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("ReportTaskIdList",$param) and $param["ReportTaskIdList"] !== null) {
+            $this->ReportTaskIdList = [];
+            foreach ($param["ReportTaskIdList"] as $key => $value){
+                $obj = new ReportTaskIdList();
+                $obj->deserialize($value);
+                array_push($this->ReportTaskIdList, $obj);
+            }
         }
     }
 }

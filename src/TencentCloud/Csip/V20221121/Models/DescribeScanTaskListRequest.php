@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Filter getFilter() 获取过滤内容
  * @method void setFilter(Filter $Filter) 设置过滤内容
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class DescribeScanTaskListRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeScanTaskListRequest extends AbstractModel
     public $Filter;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param Filter $Filter 过滤内容
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -49,6 +57,15 @@ class DescribeScanTaskListRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态. 默认为1，开启,  2关闭
  * @method array getDstResources() 获取加工任务目的topic_id以及别名
  * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名
+ * @method integer getHasServicesLog() 获取是否开启投递服务日志。1关闭，2开启
+ * @method void setHasServicesLog(integer $HasServicesLog) 设置是否开启投递服务日志。1关闭，2开启
  */
 class ModifyDataTransformRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyDataTransformRequest extends AbstractModel
     public $DstResources;
 
     /**
+     * @var integer 是否开启投递服务日志。1关闭，2开启
+     */
+    public $HasServicesLog;
+
+    /**
      * @param string $TaskId 加工任务id
      * @param string $Name 加工任务名称
      * @param string $EtlContent 加工语句
      * @param integer $EnableFlag 任务启动状态. 默认为1，开启,  2关闭
      * @param array $DstResources 加工任务目的topic_id以及别名
+     * @param integer $HasServicesLog 是否开启投递服务日志。1关闭，2开启
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class ModifyDataTransformRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DstResources, $obj);
             }
+        }
+
+        if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
+            $this->HasServicesLog = $param["HasServicesLog"];
         }
     }
 }

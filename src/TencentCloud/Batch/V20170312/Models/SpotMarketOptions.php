@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 竞价相关选项
  *
  * @method string getMaxPrice() 获取竞价出价
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxPrice(string $MaxPrice) 设置竞价出价
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpotInstanceType() 获取竞价请求类型，当前仅支持类型：one-time
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpotInstanceType(string $SpotInstanceType) 设置竞价请求类型，当前仅支持类型：one-time
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpotMarketOptions extends AbstractModel
 {
     /**
      * @var string 竞价出价
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxPrice;
 
     /**
      * @var string 竞价请求类型，当前仅支持类型：one-time
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpotInstanceType;
 
     /**
      * @param string $MaxPrice 竞价出价
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpotInstanceType 竞价请求类型，当前仅支持类型：one-time
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

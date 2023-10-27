@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandWidth(integer $BandWidth) 设置防火墙CVM带宽值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZoneBak() 获取实例备机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneBak(string $ZoneBak) 设置实例备机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcFwCvmInsInfo extends AbstractModel
 {
@@ -94,6 +102,18 @@ class VpcFwCvmInsInfo extends AbstractModel
     public $BandWidth;
 
     /**
+     * @var string 实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
+     * @var string 实例备机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneBak;
+
+    /**
      * @param string $FwInsId VPC防火墙实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region CVM所在地域
@@ -107,6 +127,10 @@ class VpcFwCvmInsInfo extends AbstractModel
      * @param string $ZoneZhBack 备机所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BandWidth 防火墙CVM带宽值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 实例主机所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ZoneBak 实例备机所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +172,14 @@ class VpcFwCvmInsInfo extends AbstractModel
 
         if (array_key_exists("BandWidth",$param) and $param["BandWidth"] !== null) {
             $this->BandWidth = $param["BandWidth"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ZoneBak",$param) and $param["ZoneBak"] !== null) {
+            $this->ZoneBak = $param["ZoneBak"];
         }
     }
 }

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRunUuid() 获取任务Uuid。
  * @method void setRunUuid(string $RunUuid) 设置任务Uuid。
- * @method string getProjectId() 获取项目ID。
- * @method void setProjectId(string $ProjectId) 设置项目ID。
  * @method string getPath() 获取作业路径
  * @method void setPath(string $Path) 设置作业路径
+ * @method string getProjectId() 获取项目ID。
+ * @method void setProjectId(string $ProjectId) 设置项目ID。
  */
 class GetRunCallsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class GetRunCallsRequest extends AbstractModel
     public $RunUuid;
 
     /**
-     * @var string 项目ID。
-     */
-    public $ProjectId;
-
-    /**
      * @var string 作业路径
      */
     public $Path;
 
     /**
+     * @var string 项目ID。
+     */
+    public $ProjectId;
+
+    /**
      * @param string $RunUuid 任务Uuid。
-     * @param string $ProjectId 项目ID。
      * @param string $Path 作业路径
+     * @param string $ProjectId 项目ID。
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class GetRunCallsRequest extends AbstractModel
             $this->RunUuid = $param["RunUuid"];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

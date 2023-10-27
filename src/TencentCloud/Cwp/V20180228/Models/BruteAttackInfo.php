@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置地理位置中文名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRiskLevel() 获取威胁等级：0低危，1中危，2高危
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskLevel(integer $RiskLevel) 设置威胁等级：0低危，1中危，2高危
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BruteAttackInfo extends AbstractModel
 {
@@ -251,6 +255,12 @@ class BruteAttackInfo extends AbstractModel
     public $Location;
 
     /**
+     * @var integer 威胁等级：0低危，1中危，2高危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskLevel;
+
+    /**
      * @param integer $Id 唯一Id
      * @param string $Uuid 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -295,6 +305,8 @@ class BruteAttackInfo extends AbstractModel
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 地理位置中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RiskLevel 威胁等级：0低危，1中危，2高危
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -401,6 +413,10 @@ class BruteAttackInfo extends AbstractModel
 
         if (array_key_exists("Location",$param) and $param["Location"] !== null) {
             $this->Location = $param["Location"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
         }
     }
 }

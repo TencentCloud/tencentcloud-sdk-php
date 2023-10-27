@@ -76,9 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwInsRegion(array $FwInsRegion) 设置网络经过VPC防火墙CVM所在地域
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIpsAction() 获取0 观察 1 拦截 2 严格 3 关闭
+ * @method integer getIpsAction() 获取0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpsAction(integer $IpsAction) 设置0 观察 1 拦截 2 严格 3 关闭
+ * @method void setIpsAction(integer $IpsAction) 设置0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFwInsLst() 获取开关关联的防火墙实例列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,7 +184,7 @@ class FwGroupSwitchShow extends AbstractModel
     public $FwInsRegion;
 
     /**
-     * @var integer 0 观察 1 拦截 2 严格 3 关闭
+     * @var integer 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpsAction;
@@ -232,7 +232,7 @@ class FwGroupSwitchShow extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FwInsRegion 网络经过VPC防火墙CVM所在地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IpsAction 0 观察 1 拦截 2 严格 3 关闭
+     * @param integer $IpsAction 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FwInsLst 开关关联的防火墙实例列表
 注意：此字段可能返回 null，表示取不到有效值。

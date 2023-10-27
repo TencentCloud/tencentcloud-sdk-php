@@ -55,6 +55,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeJobFileUrlResponse DescribeJobFileUrl(Models\DescribeJobFileUrlRequest $req) 获取异步任务的输出地址
  * @method Models\DescribeMerchantByIdResponse DescribeMerchantById(Models\DescribeMerchantByIdRequest $req) 查询商户信息
  * @method Models\DescribeMerchantsResponse DescribeMerchants(Models\DescribeMerchantsRequest $req) 查询商户列表
+ * @method Models\DescribePlanQRCodesResponse DescribePlanQRCodes(Models\DescribePlanQRCodesRequest $req) 查询安心计划二维码列表
  * @method Models\DescribeProductByIdResponse DescribeProductById(Models\DescribeProductByIdRequest $req) 查询商品信息
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 查询商品列表
  * @method Models\DescribeRawScanLogsResponse DescribeRawScanLogs(Models\DescribeRawScanLogsRequest $req) 支持增量查询扫码日志，通常提供给数据同步使用，调用时需要指定从哪一行开始查询数据

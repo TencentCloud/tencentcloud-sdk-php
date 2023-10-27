@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOption(RunOption $Option) 设置运行选项。
  * @method ExecutionTime getExecutionTime() 获取执行时间。
  * @method void setExecutionTime(ExecutionTime $ExecutionTime) 设置执行时间。
+ * @method CacheInfo getCache() 获取缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCache(CacheInfo $Cache) 设置缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMessage() 获取错误信息。
  * @method void setErrorMessage(string $ErrorMessage) 设置错误信息。
  * @method string getCreateTime() 获取创建时间。
@@ -123,6 +127,12 @@ class Run extends AbstractModel
     public $ExecutionTime;
 
     /**
+     * @var CacheInfo 缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cache;
+
+    /**
      * @var string 错误信息。
      */
     public $ErrorMessage;
@@ -153,6 +163,8 @@ class Run extends AbstractModel
      * @param string $Input 任务输入。
      * @param RunOption $Option 运行选项。
      * @param ExecutionTime $ExecutionTime 执行时间。
+     * @param CacheInfo $Cache 缓存信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 错误信息。
      * @param string $CreateTime 创建时间。
      * @param string $UpdateTime 更新时间。
@@ -218,6 +230,11 @@ class Run extends AbstractModel
         if (array_key_exists("ExecutionTime",$param) and $param["ExecutionTime"] !== null) {
             $this->ExecutionTime = new ExecutionTime();
             $this->ExecutionTime->deserialize($param["ExecutionTime"]);
+        }
+
+        if (array_key_exists("Cache",$param) and $param["Cache"] !== null) {
+            $this->Cache = new CacheInfo();
+            $this->Cache->deserialize($param["Cache"]);
         }
 
         if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {

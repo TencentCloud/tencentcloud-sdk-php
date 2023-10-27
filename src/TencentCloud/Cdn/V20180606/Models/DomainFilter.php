@@ -24,7 +24,7 @@ use TencentCloud\Common\AbstractModel;
 - origin：主源站。
 - domain：域名。
 - resourceId：域名id。
-- status：域名状态，online，offline或processing。
+- status：域名状态，online，offline或processing，deleted。
 - serviceType：业务类型，web，download，media，hybrid或dynamic。
 - projectId：项目ID。
 - domainType：主源站类型，cname表示自有源，cos表示cos接入，third_party表示第三方对象存储，igtm表示IGTM多活源。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 - origin：主源站。
 - domain：域名。
 - resourceId：域名id。
-- status：域名状态，online，offline或processing。
+- status：域名状态，online，offline或processing，deleted。
 - serviceType：业务类型，web，download，media，hybrid或dynamic。
 - projectId：项目ID。
 - domainType：主源站类型，cname表示自有源，cos表示cos接入，third_party表示第三方对象存储，igtm表示IGTM多活源。
@@ -58,7 +58,7 @@ class DomainFilter extends AbstractModel
 - origin：主源站。
 - domain：域名。
 - resourceId：域名id。
-- status：域名状态，online，offline或processing。
+- status：域名状态，online，offline或processing，deleted。
 - serviceType：业务类型，web，download，media，hybrid或dynamic。
 - projectId：项目ID。
 - domainType：主源站类型，cname表示自有源，cos表示cos接入，third_party表示第三方对象存储，igtm表示IGTM多活源。
@@ -85,7 +85,7 @@ class DomainFilter extends AbstractModel
 - origin：主源站。
 - domain：域名。
 - resourceId：域名id。
-- status：域名状态，online，offline或processing。
+- status：域名状态，online，offline或processing，deleted。
 - serviceType：业务类型，web，download，media，hybrid或dynamic。
 - projectId：项目ID。
 - domainType：主源站类型，cname表示自有源，cos表示cos接入，third_party表示第三方对象存储，igtm表示IGTM多活源。

@@ -34,6 +34,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\CreateOrganizationMemberAuthIdentityResponse CreateOrganizationMemberAuthIdentity(Models\CreateOrganizationMemberAuthIdentityRequest $req) 添加组织成员访问授权
  * @method Models\CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicy(Models\CreateOrganizationMemberPolicyRequest $req) 创建组织成员访问授权策略
  * @method Models\CreateOrganizationMembersPolicyResponse CreateOrganizationMembersPolicy(Models\CreateOrganizationMembersPolicyRequest $req) 创建组织成员访问策略
+ * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 删除成员账号
  * @method Models\DeleteOrganizationResponse DeleteOrganization(Models\DeleteOrganizationRequest $req) 删除企业组织
  * @method Models\DeleteOrganizationIdentityResponse DeleteOrganizationIdentity(Models\DeleteOrganizationIdentityRequest $req) 删除组织身份
  * @method Models\DeleteOrganizationMemberAuthIdentityResponse DeleteOrganizationMemberAuthIdentity(Models\DeleteOrganizationMemberAuthIdentityRequest $req) 删除组织成员访问授权

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Filter getFilter() 获取过滤内容
  * @method void setFilter(Filter $Filter) 设置过滤内容
+ * @method array getTags() 获取资产标签
+ * @method void setTags(array $Tags) 设置资产标签
  */
 class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
     public $Filter;
 
     /**
+     * @var array 资产标签
+     */
+    public $Tags;
+
+    /**
      * @param Filter $Filter 过滤内容
+     * @param array $Tags 资产标签
      */
     function __construct()
     {
@@ -49,6 +57,15 @@ class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new AssetTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

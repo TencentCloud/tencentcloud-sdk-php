@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名
  * @method string getProcTree() 获取进程树
  * @method void setProcTree(string $ProcTree) 设置进程树
- * @method integer getDetectBy() 获取检测方法
- * @method void setDetectBy(integer $DetectBy) 设置检测方法
+ * @method integer getDetectBy() 获取检测方法: 0行为分析; 1命令特征检测
+ * @method void setDetectBy(integer $DetectBy) 设置检测方法: 0行为分析; 1命令特征检测
  * @method MachineExtraInfo getMachineExtraInfo() 获取 主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 主机额外信息
@@ -67,6 +67,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPid() 获取进程id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPid(integer $Pid) 设置进程id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRiskLevel() 获取威胁等级：0中危，1高危
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskLevel(integer $RiskLevel) 设置威胁等级：0中危，1高危
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReverseShell extends AbstractModel
@@ -167,7 +171,7 @@ class ReverseShell extends AbstractModel
     public $ProcTree;
 
     /**
-     * @var integer 检测方法
+     * @var integer 检测方法: 0行为分析; 1命令特征检测
      */
     public $DetectBy;
 
@@ -182,6 +186,12 @@ class ReverseShell extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pid;
+
+    /**
+     * @var integer 威胁等级：0中危，1高危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskLevel;
 
     /**
      * @param integer $Id ID 主键
@@ -203,10 +213,12 @@ class ReverseShell extends AbstractModel
      * @param string $CreateTime 产生时间
      * @param string $MachineName 主机名
      * @param string $ProcTree 进程树
-     * @param integer $DetectBy 检测方法
+     * @param integer $DetectBy 检测方法: 0行为分析; 1命令特征检测
      * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Pid 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RiskLevel 威胁等级：0中危，1高危
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -309,6 +321,10 @@ class ReverseShell extends AbstractModel
 
         if (array_key_exists("Pid",$param) and $param["Pid"] !== null) {
             $this->Pid = $param["Pid"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
         }
     }
 }

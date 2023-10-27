@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderr(string $Stderr) 设置错误输出。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMeta() 获取其他信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMeta(string $Meta) 设置其他信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunMetadata extends AbstractModel
 {
@@ -224,6 +228,12 @@ class RunMetadata extends AbstractModel
     public $Stderr;
 
     /**
+     * @var string 其他信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Meta;
+
+    /**
      * @param string $RunType 任务类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RunId 任务ID。
@@ -263,6 +273,8 @@ class RunMetadata extends AbstractModel
      * @param string $Stdout 标准输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Stderr 错误输出。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Meta 其他信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -356,6 +368,10 @@ class RunMetadata extends AbstractModel
 
         if (array_key_exists("Stderr",$param) and $param["Stderr"] !== null) {
             $this->Stderr = $param["Stderr"];
+        }
+
+        if (array_key_exists("Meta",$param) and $param["Meta"] !== null) {
+            $this->Meta = $param["Meta"];
         }
     }
 }

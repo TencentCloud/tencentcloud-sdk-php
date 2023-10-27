@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDomainAndIp请求参数结构体
  *
- * @method array getContent() 获取-
- * @method void setContent(array $Content) 设置-
+ * @method array getContent() 获取公网IP/域名
+ * @method void setContent(array $Content) 设置公网IP/域名
+ * @method array getTags() 获取资产标签
+ * @method void setTags(array $Tags) 设置资产标签
  */
 class CreateDomainAndIpRequest extends AbstractModel
 {
     /**
-     * @var array -
+     * @var array 公网IP/域名
      */
     public $Content;
 
     /**
-     * @param array $Content -
+     * @var array 资产标签
+     */
+    public $Tags;
+
+    /**
+     * @param array $Content 公网IP/域名
+     * @param array $Tags 资产标签
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class CreateDomainAndIpRequest extends AbstractModel
         }
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new AssetTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

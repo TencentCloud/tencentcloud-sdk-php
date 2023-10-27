@@ -48,8 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置任务状态。
  * @method string getInput() 获取任务输入。
  * @method void setInput(string $Input) 设置任务输入。
- * @method RunOption getOption() 获取运行选项。
- * @method void setOption(RunOption $Option) 设置运行选项。
+ * @method RunOption getOption() 获取WDL运行选项。
+ * @method void setOption(RunOption $Option) 设置WDL运行选项。
+ * @method NFOption getNFOption() 获取Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNFOption(NFOption $NFOption) 设置Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalRun() 获取任务总数量。
  * @method void setTotalRun(integer $TotalRun) 设置任务总数量。
  * @method array getRunStatusCounts() 获取各状态任务的数量。
@@ -62,6 +66,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getUpdateTime() 获取更新时间。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
+ * @method string getCreator() 获取创建者。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreator(string $Creator) 设置创建者。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatorId() 获取创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatorId(string $CreatorId) 设置创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResultNotify() 获取运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResultNotify(string $ResultNotify) 设置运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ApplicationVersion getApplicationVersion() 获取应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationVersion(ApplicationVersion $ApplicationVersion) 设置应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunGroup extends AbstractModel
 {
@@ -132,9 +152,15 @@ class RunGroup extends AbstractModel
     public $Input;
 
     /**
-     * @var RunOption 运行选项。
+     * @var RunOption WDL运行选项。
      */
     public $Option;
+
+    /**
+     * @var NFOption Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NFOption;
 
     /**
      * @var integer 任务总数量。
@@ -167,6 +193,30 @@ class RunGroup extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 创建者。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Creator;
+
+    /**
+     * @var string 创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatorId;
+
+    /**
+     * @var string 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResultNotify;
+
+    /**
+     * @var ApplicationVersion 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationVersion;
+
+    /**
      * @param string $RunGroupId 任务批次ID。
      * @param string $ProjectId 项目ID。
      * @param string $ProjectName 项目名称。
@@ -181,13 +231,23 @@ class RunGroup extends AbstractModel
      * @param string $Description 任务描述。
      * @param string $Status 任务状态。
      * @param string $Input 任务输入。
-     * @param RunOption $Option 运行选项。
+     * @param RunOption $Option WDL运行选项。
+     * @param NFOption $NFOption Nextflow运行选项。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalRun 任务总数量。
      * @param array $RunStatusCounts 各状态任务的数量。
      * @param ExecutionTime $ExecutionTime 执行时间。
      * @param string $ErrorMessage 错误信息。
      * @param string $CreateTime 创建时间。
      * @param string $UpdateTime 更新时间。
+     * @param string $Creator 创建者。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatorId 创建者ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResultNotify 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationVersion $ApplicationVersion 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -259,6 +319,11 @@ class RunGroup extends AbstractModel
             $this->Option->deserialize($param["Option"]);
         }
 
+        if (array_key_exists("NFOption",$param) and $param["NFOption"] !== null) {
+            $this->NFOption = new NFOption();
+            $this->NFOption->deserialize($param["NFOption"]);
+        }
+
         if (array_key_exists("TotalRun",$param) and $param["TotalRun"] !== null) {
             $this->TotalRun = $param["TotalRun"];
         }
@@ -287,6 +352,23 @@ class RunGroup extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
+            $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("CreatorId",$param) and $param["CreatorId"] !== null) {
+            $this->CreatorId = $param["CreatorId"];
+        }
+
+        if (array_key_exists("ResultNotify",$param) and $param["ResultNotify"] !== null) {
+            $this->ResultNotify = $param["ResultNotify"];
+        }
+
+        if (array_key_exists("ApplicationVersion",$param) and $param["ApplicationVersion"] !== null) {
+            $this->ApplicationVersion = new ApplicationVersion();
+            $this->ApplicationVersion->deserialize($param["ApplicationVersion"]);
         }
     }
 }

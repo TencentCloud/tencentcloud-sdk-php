@@ -42,6 +42,8 @@ DatasourceConnectionType   （数据源连接连接类型）
  * @method void setDatasourceConnectionNames(array $DatasourceConnectionNames) 设置连接名称列表，指定要查询的连接名称
  * @method array getDatasourceConnectionTypes() 获取连接类型，支持Mysql/HiveCos/Kafka/DataLakeCatalog
  * @method void setDatasourceConnectionTypes(array $DatasourceConnectionTypes) 设置连接类型，支持Mysql/HiveCos/Kafka/DataLakeCatalog
+ * @method array getHiveVersion() 获取返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
+ * @method void setHiveVersion(array $HiveVersion) 设置返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
  */
 class DescribeDatasourceConnectionRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ DatasourceConnectionType   （数据源连接连接类型）
     public $DatasourceConnectionTypes;
 
     /**
+     * @var array 返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
+     */
+    public $HiveVersion;
+
+    /**
      * @param array $DatasourceConnectionIds 连接ID列表，指定要查询的连接ID
      * @param array $Filters 过滤条件，当前支持的过滤键为：DatasourceConnectionName（数据源连接名）。
 DatasourceConnectionType   （数据源连接连接类型）
@@ -108,6 +115,7 @@ DatasourceConnectionType   （数据源连接连接类型）
      * @param string $EndTime 筛选字段：截止时间
      * @param array $DatasourceConnectionNames 连接名称列表，指定要查询的连接名称
      * @param array $DatasourceConnectionTypes 连接类型，支持Mysql/HiveCos/Kafka/DataLakeCatalog
+     * @param array $HiveVersion 返回指定hive版本的数据源，该参数指定后，会过滤掉该参数指定版本以外的hive数据源，非hive数据源正常返回
      */
     function __construct()
     {
@@ -165,6 +173,10 @@ DatasourceConnectionType   （数据源连接连接类型）
 
         if (array_key_exists("DatasourceConnectionTypes",$param) and $param["DatasourceConnectionTypes"] !== null) {
             $this->DatasourceConnectionTypes = $param["DatasourceConnectionTypes"];
+        }
+
+        if (array_key_exists("HiveVersion",$param) and $param["HiveVersion"] !== null) {
+            $this->HiveVersion = $param["HiveVersion"];
         }
     }
 }

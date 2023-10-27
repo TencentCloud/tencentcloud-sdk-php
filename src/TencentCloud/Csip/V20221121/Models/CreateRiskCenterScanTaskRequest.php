@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskAdvanceCFG(TaskAdvanceCFG $TaskAdvanceCFG) 设置高级配置
  * @method integer getTaskMode() 获取体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
  * @method void setTaskMode(integer $TaskMode) 设置体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
+ * @method AssetTag getTags() 获取资产标签
+ * @method void setTags(AssetTag $Tags) 设置资产标签
  */
 class CreateRiskCenterScanTaskRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     public $TaskMode;
 
     /**
+     * @var AssetTag 资产标签
+     */
+    public $Tags;
+
+    /**
      * @param string $TaskName 任务名称
      * @param integer $ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫，3-手动填写扫；1和2则Assets字段必填，3则SelfDefiningAssets必填
      * @param array $ScanItem 扫描项目；port/poc/weakpass/webcontent/configrisk/exposedserver
@@ -104,6 +111,7 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
      * @param string $ScanFrom 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
      * @param TaskAdvanceCFG $TaskAdvanceCFG 高级配置
      * @param integer $TaskMode 体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
+     * @param AssetTag $Tags 资产标签
      */
     function __construct()
     {
@@ -162,6 +170,11 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
 
         if (array_key_exists("TaskMode",$param) and $param["TaskMode"] !== null) {
             $this->TaskMode = $param["TaskMode"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = new AssetTag();
+            $this->Tags->deserialize($param["Tags"]);
         }
     }
 }

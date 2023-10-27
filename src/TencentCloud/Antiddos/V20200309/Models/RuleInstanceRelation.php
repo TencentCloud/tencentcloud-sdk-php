@@ -18,7 +18,7 @@ namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 四七层规则的
+ * 四七层规则对应实例与IP的关系
  *
  * @method array getEipList() 获取资源实例的IP
  * @method void setEipList(array $EipList) 设置资源实例的IP

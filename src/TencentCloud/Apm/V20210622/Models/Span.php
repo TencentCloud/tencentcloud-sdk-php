@@ -19,8 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Span对象
-
-
  *
  * @method string getTraceID() 获取Trace Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,6 +63,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStartTimeMillis() 获取产生时间戳(毫秒)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeMillis(integer $StartTimeMillis) 设置产生时间戳(毫秒)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentSpanID() 获取Parent Span Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentSpanID(string $ParentSpanID) 设置Parent Span Id
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Span extends AbstractModel
@@ -136,6 +138,12 @@ class Span extends AbstractModel
     public $StartTimeMillis;
 
     /**
+     * @var string Parent Span Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParentSpanID;
+
+    /**
      * @param string $TraceID Trace Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Logs 日志
@@ -157,6 +165,8 @@ class Span extends AbstractModel
      * @param string $SpanID Span Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTimeMillis 产生时间戳(毫秒)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentSpanID Parent Span Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -230,6 +240,10 @@ class Span extends AbstractModel
 
         if (array_key_exists("StartTimeMillis",$param) and $param["StartTimeMillis"] !== null) {
             $this->StartTimeMillis = $param["StartTimeMillis"];
+        }
+
+        if (array_key_exists("ParentSpanID",$param) and $param["ParentSpanID"] !== null) {
+            $this->ParentSpanID = $param["ParentSpanID"];
         }
     }
 }

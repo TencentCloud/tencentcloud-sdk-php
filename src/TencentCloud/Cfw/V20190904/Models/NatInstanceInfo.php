@@ -84,6 +84,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeedProbeEngineUpdate(integer $NeedProbeEngineUpdate) 设置是的需要升级引擎 支持 nat拨测 1需要 0不需要
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTrafficMode() 获取引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrafficMode(string $TrafficMode) 设置引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZoneBak() 获取实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneBak(string $ZoneBak) 设置实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatInstanceInfo extends AbstractModel
 {
@@ -200,6 +212,24 @@ class NatInstanceInfo extends AbstractModel
     public $NeedProbeEngineUpdate;
 
     /**
+     * @var string 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrafficMode;
+
+    /**
+     * @var string 实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
+     * @var string 实例备所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneBak;
+
+    /**
      * @param string $NatinsId nat实例id
      * @param string $NatinsName nat实例名称
      * @param string $Region 实例所在地域
@@ -231,6 +261,12 @@ class NatInstanceInfo extends AbstractModel
      * @param integer $UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NeedProbeEngineUpdate 是的需要升级引擎 支持 nat拨测 1需要 0不需要
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 实例主所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ZoneBak 实例备所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +360,18 @@ class NatInstanceInfo extends AbstractModel
 
         if (array_key_exists("NeedProbeEngineUpdate",$param) and $param["NeedProbeEngineUpdate"] !== null) {
             $this->NeedProbeEngineUpdate = $param["NeedProbeEngineUpdate"];
+        }
+
+        if (array_key_exists("TrafficMode",$param) and $param["TrafficMode"] !== null) {
+            $this->TrafficMode = $param["TrafficMode"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ZoneBak",$param) and $param["ZoneBak"] !== null) {
+            $this->ZoneBak = $param["ZoneBak"];
         }
     }
 }

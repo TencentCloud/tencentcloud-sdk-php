@@ -22,6 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
+ * @method integer getOffset() 获取翻页支持，读取偏移
+ * @method void setOffset(integer $Offset) 设置翻页支持，读取偏移
+ * @method integer getLimit() 获取翻页支持，读取长度限制
+ * @method void setLimit(integer $Limit) 设置翻页支持，读取长度限制
+ * @method string getOrder() 获取排序方式，asc或者desc
+ * @method void setOrder(string $Order) 设置排序方式，asc或者desc
+ * @method array getFilters() 获取过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status
+ * @method void setFilters(array $Filters) 设置过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status
  */
 class DescribeAntiInfoLeakageRulesRequest extends AbstractModel
 {
@@ -31,7 +41,33 @@ class DescribeAntiInfoLeakageRulesRequest extends AbstractModel
     public $Domain;
 
     /**
+     * @var integer 翻页支持，读取偏移
+     */
+    public $Offset;
+
+    /**
+     * @var integer 翻页支持，读取长度限制
+     */
+    public $Limit;
+
+    /**
+     * @var string 排序方式，asc或者desc
+     */
+    public $Order;
+
+    /**
+     * @var array 过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status
+     */
+    public $Filters;
+
+    /**
      * @param string $Domain 域名
+     * @param integer $Offset 翻页支持，读取偏移
+     * @param integer $Limit 翻页支持，读取长度限制
+     * @param string $Order 排序方式，asc或者desc
+     * @param array $Filters 过滤器,可以允许如下的值：
+RuleId,Match_field,Name,Action,Status
      */
     function __construct()
     {
@@ -48,6 +84,27 @@ class DescribeAntiInfoLeakageRulesRequest extends AbstractModel
         }
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new FiltersItemNew();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

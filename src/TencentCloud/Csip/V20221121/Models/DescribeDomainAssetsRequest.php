@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Filter getFilter() 获取-
  * @method void setFilter(Filter $Filter) 设置-
+ * @method array getTags() 获取安全中心自定义标签
+ * @method void setTags(array $Tags) 设置安全中心自定义标签
  */
 class DescribeDomainAssetsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeDomainAssetsRequest extends AbstractModel
     public $Filter;
 
     /**
+     * @var array 安全中心自定义标签
+     */
+    public $Tags;
+
+    /**
      * @param Filter $Filter -
+     * @param array $Tags 安全中心自定义标签
      */
     function __construct()
     {
@@ -49,6 +57,15 @@ class DescribeDomainAssetsRequest extends AbstractModel
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new AssetTag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

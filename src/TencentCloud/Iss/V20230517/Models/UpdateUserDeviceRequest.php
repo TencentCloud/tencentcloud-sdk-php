@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置设备Port（仅网关接入支持）
  * @method string getUsername() 获取设备用户名（仅网关接入支持）
  * @method void setUsername(string $Username) 设置设备用户名（仅网关接入支持）
+ * @method integer getProtocolType() 获取网关设备接入协议（仅网关接入支持）
+ * @method void setProtocolType(integer $ProtocolType) 设置网关设备接入协议（仅网关接入支持）
  */
 class UpdateUserDeviceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class UpdateUserDeviceRequest extends AbstractModel
     public $Username;
 
     /**
+     * @var integer 网关设备接入协议（仅网关接入支持）
+     */
+    public $ProtocolType;
+
+    /**
      * @param string $DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
      * @param string $Name 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
      * @param integer $TransportProtocol 设备流传输协议，仅国标设备有效，填0则不做更改（1:UDP,2:TCP）
@@ -88,6 +95,7 @@ class UpdateUserDeviceRequest extends AbstractModel
      * @param string $Ip 设备接入Ip（仅网关接入支持）
      * @param integer $Port 设备Port（仅网关接入支持）
      * @param string $Username 设备用户名（仅网关接入支持）
+     * @param integer $ProtocolType 网关设备接入协议（仅网关接入支持）
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class UpdateUserDeviceRequest extends AbstractModel
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {
             $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
+            $this->ProtocolType = $param["ProtocolType"];
         }
     }
 }

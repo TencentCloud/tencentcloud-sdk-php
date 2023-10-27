@@ -30,6 +30,9 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\AddVpcAcRuleResponse AddVpcAcRule(Models\AddVpcAcRuleRequest $req) 添加VPC内网间规则
  * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) 创建访问控制规则
  * @method Models\CreateAddressTemplateResponse CreateAddressTemplate(Models\CreateAddressTemplateRequest $req) 创建地址模板规则
+ * @method Models\CreateAlertCenterIsolateResponse CreateAlertCenterIsolate(Models\CreateAlertCenterIsolateRequest $req) 用户告警中心-封隔离处置按钮
+ * @method Models\CreateAlertCenterOmitResponse CreateAlertCenterOmit(Models\CreateAlertCenterOmitRequest $req) 用户告警中心-忽略处置按钮
+ * @method Models\CreateAlertCenterRuleResponse CreateAlertCenterRule(Models\CreateAlertCenterRuleRequest $req) 用户告警中心-封禁、放通处置按钮
  * @method Models\CreateBlockIgnoreRuleListResponse CreateBlockIgnoreRuleList(Models\CreateBlockIgnoreRuleListRequest $req) 批量添加入侵防御封禁列表、放通列表规则
  * @method Models\CreateChooseVpcsResponse CreateChooseVpcs(Models\CreateChooseVpcsRequest $req) 创建、选择vpc
  * @method Models\CreateDatabaseWhiteListRulesResponse CreateDatabaseWhiteListRules(Models\CreateDatabaseWhiteListRulesRequest $req) 创建暴露数据库白名单规则

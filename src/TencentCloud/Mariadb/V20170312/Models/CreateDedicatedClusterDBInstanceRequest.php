@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackInstanceId(string $RollbackInstanceId) 设置需要回档的源实例ID
  * @method string getRollbackTime() 获取回档时间
  * @method void setRollbackTime(string $RollbackTime) 设置回档时间
+ * @method integer getDcnSyncMode() 获取DCN同步模式，0：异步， 1：强同步
+ * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：异步， 1：强同步
  */
 class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
     public $RollbackTime;
 
     /**
+     * @var integer DCN同步模式，0：异步， 1：强同步
+     */
+    public $DcnSyncMode;
+
+    /**
      * @param integer $GoodsNum 分配实例个数
      * @param integer $Memory 內存大小，单位GB
      * @param integer $Storage 磁盘大小，单位GB
@@ -224,6 +231,7 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
      * @param array $SlaveHostIds 指定从节点uuid，不填随机分配
      * @param string $RollbackInstanceId 需要回档的源实例ID
      * @param string $RollbackTime 回档时间
+     * @param integer $DcnSyncMode DCN同步模式，0：异步， 1：强同步
      */
     function __construct()
     {
@@ -346,6 +354,10 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("RollbackTime",$param) and $param["RollbackTime"] !== null) {
             $this->RollbackTime = $param["RollbackTime"];
+        }
+
+        if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
+            $this->DcnSyncMode = $param["DcnSyncMode"];
         }
     }
 }

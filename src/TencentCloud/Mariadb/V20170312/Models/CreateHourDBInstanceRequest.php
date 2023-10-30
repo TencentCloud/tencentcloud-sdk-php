@@ -60,8 +60,8 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
  * @method void setRollbackInstanceId(string $RollbackInstanceId) 设置回档源实例ID，例如“2021-11-22 00:00:00”
  * @method string getRollbackTime() 获取回档时间
  * @method void setRollbackTime(string $RollbackTime) 设置回档时间
- * @method integer getDcnSyncMode() 获取DCN同步模式，0：普通DCN同步，1：一致性同步
- * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：普通DCN同步，1：一致性同步
+ * @method integer getDcnSyncMode() 获取DCN同步模式，0：异步， 1：强同步
+ * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：异步， 1：强同步
  */
 class CreateHourDBInstanceRequest extends AbstractModel
 {
@@ -158,7 +158,7 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
     public $RollbackTime;
 
     /**
-     * @var integer DCN同步模式，0：普通DCN同步，1：一致性同步
+     * @var integer DCN同步模式，0：异步， 1：强同步
      */
     public $DcnSyncMode;
 
@@ -183,7 +183,7 @@ character_set_server（字符集，必传），lower_case_table_names（表名�
 innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
      * @param string $RollbackInstanceId 回档源实例ID，例如“2021-11-22 00:00:00”
      * @param string $RollbackTime 回档时间
-     * @param integer $DcnSyncMode DCN同步模式，0：普通DCN同步，1：一致性同步
+     * @param integer $DcnSyncMode DCN同步模式，0：异步， 1：强同步
      */
     function __construct()
     {

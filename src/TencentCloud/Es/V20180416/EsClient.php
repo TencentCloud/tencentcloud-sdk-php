@@ -30,10 +30,12 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 销毁集群实例
  * @method Models\DeleteLogstashInstanceResponse DeleteLogstashInstance(Models\DeleteLogstashInstanceRequest $req) 用于删除Logstash实例
  * @method Models\DeleteLogstashPipelinesResponse DeleteLogstashPipelines(Models\DeleteLogstashPipelinesRequest $req) 用于批量删除Logstash管道
+ * @method Models\DescribeDiagnoseResponse DescribeDiagnose(Models\DescribeDiagnoseRequest $req) 查询智能运维诊断结果报告
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
  * @method Models\DescribeIndexMetaResponse DescribeIndexMeta(Models\DescribeIndexMetaRequest $req) 获取索引元数据
  * @method Models\DescribeInstanceLogsResponse DescribeInstanceLogs(Models\DescribeInstanceLogsRequest $req) 查询用户该地域下符合条件的ES集群的日志
  * @method Models\DescribeInstanceOperationsResponse DescribeInstanceOperations(Models\DescribeInstanceOperationsRequest $req) 查询实例指定条件下的操作记录
+ * @method Models\DescribeInstancePluginListResponse DescribeInstancePluginList(Models\DescribeInstancePluginListRequest $req) 查询实例插件列表
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询用户该地域下符合条件的所有实例
  * @method Models\DescribeLogstashInstanceLogsResponse DescribeLogstashInstanceLogs(Models\DescribeLogstashInstanceLogsRequest $req) 查询用户该地域下符合条件的Logstash实例的日志
  * @method Models\DescribeLogstashInstanceOperationsResponse DescribeLogstashInstanceOperations(Models\DescribeLogstashInstanceOperationsRequest $req) 查询实例指定条件下的操作记录
@@ -41,6 +43,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeLogstashPipelinesResponse DescribeLogstashPipelines(Models\DescribeLogstashPipelinesRequest $req) 用于获取Logstash实例管道列表
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) 查询集群各视图数据，包括集群维度、节点维度、Kibana维度
  * @method Models\DiagnoseInstanceResponse DiagnoseInstance(Models\DiagnoseInstanceRequest $req) 智能运维诊断集群
+ * @method Models\GetDiagnoseSettingsResponse GetDiagnoseSettings(Models\GetDiagnoseSettingsRequest $req) 查看智能运维配置
  * @method Models\GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(Models\GetRequestTargetNodeTypesRequest $req) 获取接收客户端请求的节点类型
  * @method Models\ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroup(Models\ModifyEsVipSecurityGroupRequest $req) 修改绑定VIP的安全组，传安全组id列表
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 重启ES集群实例(用于系统版本更新等操作)

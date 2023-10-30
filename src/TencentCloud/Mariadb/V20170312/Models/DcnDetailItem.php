@@ -66,6 +66,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEncryptStatus() 获取是否开启了 kms
  * @method void setEncryptStatus(integer $EncryptStatus) 设置是否开启了 kms
+ * @method string getDcnStatusDesc() 获取实例DCN状态描述信息
+ * @method void setDcnStatusDesc(string $DcnStatusDesc) 设置实例DCN状态描述信息
+ * @method string getPolarisInstanceId() 获取DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+ * @method void setPolarisInstanceId(string $PolarisInstanceId) 设置DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+ * @method string getPolarisInstanceName() 获取DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+ * @method void setPolarisInstanceName(string $PolarisInstanceName) 设置DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+ * @method string getPolarisNamespace() 获取DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+ * @method void setPolarisNamespace(string $PolarisNamespace) 设置DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+ * @method string getPolarisService() 获取DCN实例绑定的北极星服务，若未绑定则为空
+ * @method void setPolarisService(string $PolarisService) 设置DCN实例绑定的北极星服务，若未绑定则为空
+ * @method integer getPolarisServiceStatus() 获取DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+ * @method void setPolarisServiceStatus(integer $PolarisServiceStatus) 设置DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+ * @method string getPolarisServiceStatusDesc() 获取DCN实例在北极星服务中的状态的描述信息
+ * @method void setPolarisServiceStatusDesc(string $PolarisServiceStatusDesc) 设置DCN实例在北极星服务中的状态的描述信息
+ * @method string getPolarisRegion() 获取北极星管控地址
+ * @method void setPolarisRegion(string $PolarisRegion) 设置北极星管控地址
+ * @method integer getIsDcnSwitchSupported() 获取是否支持DCN切换
+ * @method void setIsDcnSwitchSupported(integer $IsDcnSwitchSupported) 设置是否支持DCN切换
  */
 class DcnDetailItem extends AbstractModel
 {
@@ -177,6 +195,51 @@ class DcnDetailItem extends AbstractModel
     public $EncryptStatus;
 
     /**
+     * @var string 实例DCN状态描述信息
+     */
+    public $DcnStatusDesc;
+
+    /**
+     * @var string DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+     */
+    public $PolarisInstanceId;
+
+    /**
+     * @var string DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+     */
+    public $PolarisInstanceName;
+
+    /**
+     * @var string DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+     */
+    public $PolarisNamespace;
+
+    /**
+     * @var string DCN实例绑定的北极星服务，若未绑定则为空
+     */
+    public $PolarisService;
+
+    /**
+     * @var integer DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+     */
+    public $PolarisServiceStatus;
+
+    /**
+     * @var string DCN实例在北极星服务中的状态的描述信息
+     */
+    public $PolarisServiceStatusDesc;
+
+    /**
+     * @var string 北极星管控地址
+     */
+    public $PolarisRegion;
+
+    /**
+     * @var integer 是否支持DCN切换
+     */
+    public $IsDcnSwitchSupported;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 实例地域
@@ -200,6 +263,15 @@ class DcnDetailItem extends AbstractModel
      * @param DCNReplicaStatus $ReplicaStatus DCN复制的状态；对于主实例，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EncryptStatus 是否开启了 kms
+     * @param string $DcnStatusDesc 实例DCN状态描述信息
+     * @param string $PolarisInstanceId DCN实例绑定的北极星服务所属的北极星实例Id，若未绑定则为空
+     * @param string $PolarisInstanceName DCN实例绑定的北极星服务所属的北极星实例名，若未绑定则为空
+     * @param string $PolarisNamespace DCN实例绑定的北极星服务所属的北极星命名空间，若未绑定则为空
+     * @param string $PolarisService DCN实例绑定的北极星服务，若未绑定则为空
+     * @param integer $PolarisServiceStatus DCN实例在北极星服务中的状态 0:未开启; 1:已开启; 2:已隔离; 3:切换中
+     * @param string $PolarisServiceStatusDesc DCN实例在北极星服务中的状态的描述信息
+     * @param string $PolarisRegion 北极星管控地址
+     * @param integer $IsDcnSwitchSupported 是否支持DCN切换
      */
     function __construct()
     {
@@ -298,6 +370,42 @@ class DcnDetailItem extends AbstractModel
 
         if (array_key_exists("EncryptStatus",$param) and $param["EncryptStatus"] !== null) {
             $this->EncryptStatus = $param["EncryptStatus"];
+        }
+
+        if (array_key_exists("DcnStatusDesc",$param) and $param["DcnStatusDesc"] !== null) {
+            $this->DcnStatusDesc = $param["DcnStatusDesc"];
+        }
+
+        if (array_key_exists("PolarisInstanceId",$param) and $param["PolarisInstanceId"] !== null) {
+            $this->PolarisInstanceId = $param["PolarisInstanceId"];
+        }
+
+        if (array_key_exists("PolarisInstanceName",$param) and $param["PolarisInstanceName"] !== null) {
+            $this->PolarisInstanceName = $param["PolarisInstanceName"];
+        }
+
+        if (array_key_exists("PolarisNamespace",$param) and $param["PolarisNamespace"] !== null) {
+            $this->PolarisNamespace = $param["PolarisNamespace"];
+        }
+
+        if (array_key_exists("PolarisService",$param) and $param["PolarisService"] !== null) {
+            $this->PolarisService = $param["PolarisService"];
+        }
+
+        if (array_key_exists("PolarisServiceStatus",$param) and $param["PolarisServiceStatus"] !== null) {
+            $this->PolarisServiceStatus = $param["PolarisServiceStatus"];
+        }
+
+        if (array_key_exists("PolarisServiceStatusDesc",$param) and $param["PolarisServiceStatusDesc"] !== null) {
+            $this->PolarisServiceStatusDesc = $param["PolarisServiceStatusDesc"];
+        }
+
+        if (array_key_exists("PolarisRegion",$param) and $param["PolarisRegion"] !== null) {
+            $this->PolarisRegion = $param["PolarisRegion"];
+        }
+
+        if (array_key_exists("IsDcnSwitchSupported",$param) and $param["IsDcnSwitchSupported"] !== null) {
+            $this->IsDcnSwitchSupported = $param["IsDcnSwitchSupported"];
         }
     }
 }

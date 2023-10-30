@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRunUuid() 获取任务Uuid。
  * @method void setRunUuid(string $RunUuid) 设置任务Uuid。
  * @method string getProjectId() 获取项目ID。
+（不填使用指定地域下的默认项目）
  * @method void setProjectId(string $ProjectId) 设置项目ID。
+（不填使用指定地域下的默认项目）
  */
 class GetRunStatusRequest extends AbstractModel
 {
@@ -34,12 +36,14 @@ class GetRunStatusRequest extends AbstractModel
 
     /**
      * @var string 项目ID。
+（不填使用指定地域下的默认项目）
      */
     public $ProjectId;
 
     /**
      * @param string $RunUuid 任务Uuid。
      * @param string $ProjectId 项目ID。
+（不填使用指定地域下的默认项目）
      */
     function __construct()
     {

@@ -30,9 +30,11 @@ use TencentCloud\Common\AbstractModel;
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
  * @method string getCardSide() 获取FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。
  * @method void setCardSide(string $CardSide) 设置FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。
  */
 class DriverLicenseOCRRequest extends AbstractModel
@@ -52,6 +54,7 @@ class DriverLicenseOCRRequest extends AbstractModel
     /**
      * @var string FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。
      */
     public $CardSide;
@@ -63,6 +66,7 @@ BACK 为驾驶证副页正面（有档案编号的一面）。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      * @param string $CardSide FRONT 为驾驶证主页正面（有红色印章的一面），
 BACK 为驾驶证副页正面（有档案编号的一面）。
+DOUBLE 支持自动识别驾驶证正副页单面，和正副双面同框识别
 默认值为：FRONT。
      */
     function __construct()

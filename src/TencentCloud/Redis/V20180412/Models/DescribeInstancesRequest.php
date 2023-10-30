@@ -122,8 +122,14 @@ use TencentCloud\Common\AbstractModel;
 - 9：Redis 5.0内存版（集群架构）。
 - 15：Redis 6.2内存版（标准架构）。
 - 16：Redis 6.2内存版（集群架构）。
- * @method array getSearchKeys() 获取设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
- * @method void setSearchKeys(array $SearchKeys) 设置设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
+ * @method array getSearchKeys() 获取该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
+
+- 数组中每一个元素取并集进行匹配查询。
+- **InstanceId** 与 **SearchKeys** 同时配置，则取二者交集进行匹配查询。
+ * @method void setSearchKeys(array $SearchKeys) 设置该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
+
+- 数组中每一个元素取并集进行匹配查询。
+- **InstanceId** 与 **SearchKeys** 同时配置，则取二者交集进行匹配查询。
  * @method array getTypeList() 获取内部参数，用户可忽略。
  * @method void setTypeList(array $TypeList) 设置内部参数，用户可忽略。
  * @method string getMonitorVersion() 获取内部参数，用户可忽略。
@@ -277,7 +283,10 @@ class DescribeInstancesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var array 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
+     * @var array 该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
+
+- 数组中每一个元素取并集进行匹配查询。
+- **InstanceId** 与 **SearchKeys** 同时配置，则取二者交集进行匹配查询。
      */
     public $SearchKeys;
 
@@ -372,7 +381,10 @@ class DescribeInstancesRequest extends AbstractModel
 - 9：Redis 5.0内存版（集群架构）。
 - 15：Redis 6.2内存版（标准架构）。
 - 16：Redis 6.2内存版（集群架构）。
-     * @param array $SearchKeys 设置搜索关键字数组，可根据实例ID、实例名称、完整IP地址搜索实例。
+     * @param array $SearchKeys 该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
+
+- 数组中每一个元素取并集进行匹配查询。
+- **InstanceId** 与 **SearchKeys** 同时配置，则取二者交集进行匹配查询。
      * @param array $TypeList 内部参数，用户可忽略。
      * @param string $MonitorVersion 内部参数，用户可忽略。
      * @param array $InstanceTags 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。

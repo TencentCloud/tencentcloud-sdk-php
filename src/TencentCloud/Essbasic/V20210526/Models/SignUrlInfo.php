@@ -52,13 +52,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationName(string $OrganizationName) 设置签署参与者机构名字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproverType() 获取参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+ * @method string getApproverType() 获取参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproverType(string $ApproverType) 设置参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+ * @method void setApproverType(string $ApproverType) 设置参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdCardNumber() 获取经办人身份证号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -133,9 +133,9 @@ class SignUrlInfo extends AbstractModel
     public $OrganizationName;
 
     /**
-     * @var string 参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+     * @var string 参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverType;
@@ -187,9 +187,9 @@ PERSON 自然人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationName 签署参与者机构名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproverType 参与者类型:
-ORGANIZATION 企业经办人
-PERSON 自然人
+     * @param string $ApproverType 参与者类型, 类型如下:
+**ORGANIZATION**:企业经办人
+**PERSON**: 自然人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdCardNumber 经办人身份证号
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流程对应资源链接信息
  *
- * @method string getFlowId() 获取流程对应Id
+ * @method string getFlowId() 获取合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowId(string $FlowId) 设置流程对应Id
+ * @method void setFlowId(string $FlowId) 设置合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceUrlInfos() 获取流程对应资源链接信息数组
+ * @method array getResourceUrlInfos() 获取对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceUrlInfos(array $ResourceUrlInfos) 设置流程对应资源链接信息数组
+ * @method void setResourceUrlInfos(array $ResourceUrlInfos) 设置对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowResourceUrlInfo extends AbstractModel
 {
     /**
-     * @var string 流程对应Id
+     * @var string 合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
-     * @var array 流程对应资源链接信息数组
+     * @var array 对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceUrlInfos;
 
     /**
-     * @param string $FlowId 流程对应Id
+     * @param string $FlowId 合同流程的ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceUrlInfos 流程对应资源链接信息数组
+     * @param array $ResourceUrlInfos 对应的合同流程的PDF下载链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

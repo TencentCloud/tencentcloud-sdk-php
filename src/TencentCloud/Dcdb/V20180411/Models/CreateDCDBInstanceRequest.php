@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDCDBInstance请求参数结构体
  *
- * @method array getZones() 获取分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+ * @method array getZones() 获取分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
- * @method void setZones(array $Zones) 设置分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+ * @method void setZones(array $Zones) 设置分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
  * @method integer getPeriod() 获取欲购买的时长，单位：月。
  * @method void setPeriod(integer $Period) 设置欲购买的时长，单位：月。
@@ -72,11 +72,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0
  * @method array getSecurityGroupIds() 获取安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+ * @method integer getDcnSyncMode() 获取DCN同步模式，0：异步， 1：强同步 
+ * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：异步， 1：强同步 
  */
 class CreateDCDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var array 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * @var array 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      */
     public $Zones;
@@ -190,7 +192,12 @@ class CreateDCDBInstanceRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * @var integer DCN同步模式，0：异步， 1：强同步 
+     */
+    public $DcnSyncMode;
+
+    /**
+     * @param array $Zones 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      * @param integer $Period 欲购买的时长，单位：月。
      * @param integer $ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
@@ -216,6 +223,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @param string $DcnInstanceId DCN源实例ID
      * @param integer $AutoRenewFlag 自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0
      * @param array $SecurityGroupIds 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+     * @param integer $DcnSyncMode DCN同步模式，0：异步， 1：强同步 
      */
     function __construct()
     {
@@ -326,6 +334,10 @@ class CreateDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
+            $this->DcnSyncMode = $param["DcnSyncMode"];
         }
     }
 }

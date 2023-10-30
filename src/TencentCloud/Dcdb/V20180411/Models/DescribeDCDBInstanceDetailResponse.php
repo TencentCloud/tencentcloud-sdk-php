@@ -158,6 +158,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReservedNetResources(array $ReservedNetResources) 设置尚未回收的网络资源
  * @method boolean getIsPhysicalReplicationSupported() 获取是否支持物理复制
  * @method void setIsPhysicalReplicationSupported(boolean $IsPhysicalReplicationSupported) 设置是否支持物理复制
+ * @method integer getIsDcnStrongSyncSupported() 获取是否支持强同步DCN
+ * @method void setIsDcnStrongSyncSupported(integer $IsDcnStrongSyncSupported) 设置是否支持强同步DCN
+ * @method integer getIsDcnSwitchSupported() 获取是否支持DCN切换
+ * @method void setIsDcnSwitchSupported(integer $IsDcnSwitchSupported) 设置是否支持DCN切换
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -441,6 +445,16 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
     public $IsPhysicalReplicationSupported;
 
     /**
+     * @var integer 是否支持强同步DCN
+     */
+    public $IsDcnStrongSyncSupported;
+
+    /**
+     * @var integer 是否支持DCN切换
+     */
+    public $IsDcnSwitchSupported;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -515,6 +529,8 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReservedNetResources 尚未回收的网络资源
      * @param boolean $IsPhysicalReplicationSupported 是否支持物理复制
+     * @param integer $IsDcnStrongSyncSupported 是否支持强同步DCN
+     * @param integer $IsDcnSwitchSupported 是否支持DCN切换
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -751,6 +767,14 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
 
         if (array_key_exists("IsPhysicalReplicationSupported",$param) and $param["IsPhysicalReplicationSupported"] !== null) {
             $this->IsPhysicalReplicationSupported = $param["IsPhysicalReplicationSupported"];
+        }
+
+        if (array_key_exists("IsDcnStrongSyncSupported",$param) and $param["IsDcnStrongSyncSupported"] !== null) {
+            $this->IsDcnStrongSyncSupported = $param["IsDcnStrongSyncSupported"];
+        }
+
+        if (array_key_exists("IsDcnSwitchSupported",$param) and $param["IsDcnSwitchSupported"] !== null) {
+            $this->IsDcnSwitchSupported = $param["IsDcnSwitchSupported"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

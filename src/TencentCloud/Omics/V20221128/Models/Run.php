@@ -118,6 +118,7 @@ class Run extends AbstractModel
 
     /**
      * @var RunOption 运行选项。
+     * @deprecated
      */
     public $Option;
 

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRunGroups请求参数结构体
  *
  * @method string getProjectId() 获取项目ID。
+（不填使用指定地域下的默认项目）
  * @method void setProjectId(string $ProjectId) 设置项目ID。
+（不填使用指定地域下的默认项目）
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -39,6 +41,7 @@ class DescribeRunGroupsRequest extends AbstractModel
 {
     /**
      * @var string 项目ID。
+（不填使用指定地域下的默认项目）
      */
     public $ProjectId;
 
@@ -62,6 +65,7 @@ class DescribeRunGroupsRequest extends AbstractModel
 
     /**
      * @param string $ProjectId 项目ID。
+（不填使用指定地域下的默认项目）
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤器，支持过滤字段：

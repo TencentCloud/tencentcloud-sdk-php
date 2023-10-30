@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDownloadFlowUrl返回参数结构体
  *
- * @method string getDownLoadUrl() 获取合同（流程）下载地址
- * @method void setDownLoadUrl(string $DownLoadUrl) 设置合同（流程）下载地址
+ * @method string getDownLoadUrl() 获取跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+
+ * @method void setDownLoadUrl(string $DownLoadUrl) 设置跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class GetDownloadFlowUrlResponse extends AbstractModel
 {
     /**
-     * @var string 合同（流程）下载地址
+     * @var string 跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+
      */
     public $DownLoadUrl;
 
@@ -38,7 +41,8 @@ class GetDownloadFlowUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownLoadUrl 合同（流程）下载地址
+     * @param string $DownLoadUrl 跳转控制台合同下载页面链接 , 5分钟之内有效，且只能访问一次
+
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

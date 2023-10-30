@@ -20,48 +20,87 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCancelFlow请求参数结构体
  *
- * @method string getFlowId() 获取签署流程编号
- * @method void setFlowId(string $FlowId) 设置签署流程编号
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method string getCancelMessage() 获取撤回原因，最大不超过200字符
- * @method void setCancelMessage(string $CancelMessage) 设置撤回原因，最大不超过200字符
- * @method integer getCancelMessageFormat() 获取撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
- * @method void setCancelMessageFormat(integer $CancelMessageFormat) 设置撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+ * @method string getFlowId() 获取要撤销的合同流程ID
+ * @method void setFlowId(string $FlowId) 设置要撤销的合同流程ID
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method string getCancelMessage() 获取撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method void setCancelMessage(string $CancelMessage) 设置撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method integer getCancelMessageFormat() 获取撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
+
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
+ * @method void setCancelMessageFormat(integer $CancelMessageFormat) 设置撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
+
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class ChannelCancelFlowRequest extends AbstractModel
 {
     /**
-     * @var string 签署流程编号
+     * @var string 要撤销的合同流程ID
      */
     public $FlowId;
 
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
     /**
-     * @var string 撤回原因，最大不超过200字符
+     * @var string 撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public $CancelMessage;
 
     /**
-     * @var integer 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+     * @var integer 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
+
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
      */
     public $CancelMessageFormat;
 
@@ -72,14 +111,27 @@ class ChannelCancelFlowRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param string $FlowId 签署流程编号
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param string $CancelMessage 撤回原因，最大不超过200字符
-     * @param integer $CancelMessageFormat 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+     * @param string $FlowId 要撤销的合同流程ID
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param string $CancelMessage 撤回原因，长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param integer $CancelMessageFormat 撤销理由自定义格式,  会展示在合同预览的界面中,  可以选择下面的组合方式：
+
+**0** : 默认格式,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+**1** :  合同封面页面会展示为:  发起方以**CancelMessage**的理由撤销当前合同
+**2** : 保留企业名称,  合同封面页面会展示为:  发起方-企业名称以**CancelMessage**的理由撤销当前合同
+**3** : 保留企业名称+经办人名字,  合同封面页面会展示为: 发起方-企业名称-撤销的经办人名字以**CancelMessage**的理由撤销当前合同
+
+注: `CancelMessage为撤销当前合同的理由`
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_ChannelCancelFlow.png)
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

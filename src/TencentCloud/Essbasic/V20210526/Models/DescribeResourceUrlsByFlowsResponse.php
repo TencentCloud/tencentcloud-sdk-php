@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceUrlsByFlows返回参数结构体
  *
- * @method array getFlowResourceUrlInfos() 获取签署流程资源对应链接信息
- * @method void setFlowResourceUrlInfos(array $FlowResourceUrlInfos) 设置签署流程资源对应链接信息
- * @method array getErrorMessages() 获取创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
- * @method void setErrorMessages(array $ErrorMessages) 设置创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+ * @method array getFlowResourceUrlInfos() 获取合同流程PDF下载链接
+ * @method void setFlowResourceUrlInfos(array $FlowResourceUrlInfos) 设置合同流程PDF下载链接
+ * @method array getErrorMessages() 获取如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
+ * @method void setErrorMessages(array $ErrorMessages) 设置如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeResourceUrlsByFlowsResponse extends AbstractModel
 {
     /**
-     * @var array 签署流程资源对应链接信息
+     * @var array 合同流程PDF下载链接
      */
     public $FlowResourceUrlInfos;
 
     /**
-     * @var array 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+     * @var array 如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
      */
     public $ErrorMessages;
 
@@ -48,9 +48,9 @@ class DescribeResourceUrlsByFlowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowResourceUrlInfos 签署流程资源对应链接信息
-     * @param array $ErrorMessages 创建消息，对应多个合同ID，
-成功为“”,创建失败则对应失败消息
+     * @param array $FlowResourceUrlInfos 合同流程PDF下载链接
+     * @param array $ErrorMessages 如果某个序号的合同流程生成PDF下载链接成功, 对应序号的值为空
+如果某个序号的合同流程生成PDF下载链接失败, 对应序号的值为错误的原因
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

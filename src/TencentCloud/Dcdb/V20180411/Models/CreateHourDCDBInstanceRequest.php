@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackTime(string $RollbackTime) 设置回档时间，例如“2021-11-22 00:00:00”
  * @method array getSecurityGroupIds() 获取安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
- * @method integer getDcnSyncMode() 获取DCN同步模式，0：普通DCN同步，1：一致性同步
- * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：普通DCN同步，1：一致性同步
+ * @method integer getDcnSyncMode() 获取DCN同步模式，0：异步， 1：强同步
+ * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：异步， 1：强同步
  */
 class CreateHourDCDBInstanceRequest extends AbstractModel
 {
@@ -185,7 +185,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var integer DCN同步模式，0：普通DCN同步，1：一致性同步
+     * @var integer DCN同步模式，0：异步， 1：强同步
      */
     public $DcnSyncMode;
 
@@ -215,7 +215,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
      * @param string $RollbackInstanceId 需要回档的源实例ID
      * @param string $RollbackTime 回档时间，例如“2021-11-22 00:00:00”
      * @param array $SecurityGroupIds 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
-     * @param integer $DcnSyncMode DCN同步模式，0：普通DCN同步，1：一致性同步
+     * @param integer $DcnSyncMode DCN同步模式，0：异步， 1：强同步
      */
     function __construct()
     {

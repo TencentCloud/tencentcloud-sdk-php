@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPath() 获取作业路径
  * @method void setPath(string $Path) 设置作业路径
  * @method string getProjectId() 获取项目ID。
+（不填使用指定地域下的默认项目）
  * @method void setProjectId(string $ProjectId) 设置项目ID。
+（不填使用指定地域下的默认项目）
  */
 class GetRunCallsRequest extends AbstractModel
 {
@@ -41,6 +43,7 @@ class GetRunCallsRequest extends AbstractModel
 
     /**
      * @var string 项目ID。
+（不填使用指定地域下的默认项目）
      */
     public $ProjectId;
 
@@ -48,6 +51,7 @@ class GetRunCallsRequest extends AbstractModel
      * @param string $RunUuid 任务Uuid。
      * @param string $Path 作业路径
      * @param string $ProjectId 项目ID。
+（不填使用指定地域下的默认项目）
      */
     function __construct()
     {

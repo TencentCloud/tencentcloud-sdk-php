@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSecurityGroupIds() 获取要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
- * @method array getInstanceIds() 获取被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
- * @method void setInstanceIds(array $InstanceIds) 设置被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
+ * @method array getInstanceIds() 获取被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。
+ * @method void setInstanceIds(array $InstanceIds) 设置被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var array 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
+     * @var array 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。
      */
     public $InstanceIds;
 
     /**
      * @param array $SecurityGroupIds 要解绑的`安全组ID`，类似sg-efil73jd，只支持解绑单个安全组。
-     * @param array $InstanceIds 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例 。
+     * @param array $InstanceIds 被解绑的`实例ID`，类似ins-lesecurk，支持指定多个实例，每次请求批量实例的上限为100。
      */
     function __construct()
     {

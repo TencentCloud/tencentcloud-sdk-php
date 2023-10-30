@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DriverLicenseOCR返回参数结构体
  *
- * @method string getName() 获取姓名
- * @method void setName(string $Name) 设置姓名
+ * @method string getName() 获取驾驶证正页姓名
+ * @method void setName(string $Name) 设置驾驶证正页姓名
  * @method string getSex() 获取性别
  * @method void setSex(string $Sex) 设置性别
  * @method string getNationality() 获取国籍
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 老版驾驶证返回有效期限 X年）
  * @method void setEndDate(string $EndDate) 设置有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
 老版驾驶证返回有效期限 X年）
- * @method string getCardCode() 获取证号
- * @method void setCardCode(string $CardCode) 设置证号
+ * @method string getCardCode() 获取驾驶证正页证号
+ * @method void setCardCode(string $CardCode) 设置驾驶证正页证号
  * @method string getArchivesCode() 获取档案编号
  * @method void setArchivesCode(string $ArchivesCode) 设置档案编号
  * @method string getRecord() 获取记录
@@ -72,13 +72,17 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
  * @method void setCurrentTime(string $CurrentTime) 设置当前时间（仅电子驾驶证支持返回该字段）
  * @method string getGenerateTime() 获取生成时间（仅电子驾驶证支持返回该字段）
  * @method void setGenerateTime(string $GenerateTime) 设置生成时间（仅电子驾驶证支持返回该字段）
+ * @method string getBackPageName() 获取驾驶证副页姓名
+ * @method void setBackPageName(string $BackPageName) 设置驾驶证副页姓名
+ * @method string getBackPageCardCode() 获取驾驶证副页证号
+ * @method void setBackPageCardCode(string $BackPageCardCode) 设置驾驶证副页证号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DriverLicenseOCRResponse extends AbstractModel
 {
     /**
-     * @var string 姓名
+     * @var string 驾驶证正页姓名
      */
     public $Name;
 
@@ -124,7 +128,7 @@ class DriverLicenseOCRResponse extends AbstractModel
     public $EndDate;
 
     /**
-     * @var string 证号
+     * @var string 驾驶证正页证号
      */
     public $CardCode;
 
@@ -180,12 +184,22 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     public $GenerateTime;
 
     /**
+     * @var string 驾驶证副页姓名
+     */
+    public $BackPageName;
+
+    /**
+     * @var string 驾驶证副页证号
+     */
+    public $BackPageCardCode;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $Name 姓名
+     * @param string $Name 驾驶证正页姓名
      * @param string $Sex 性别
      * @param string $Nationality 国籍
      * @param string $Address 住址
@@ -195,7 +209,7 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
      * @param string $StartDate 有效期开始时间（YYYY-MM-DD）
      * @param string $EndDate 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
 老版驾驶证返回有效期限 X年）
-     * @param string $CardCode 证号
+     * @param string $CardCode 驾驶证正页证号
      * @param string $ArchivesCode 档案编号
      * @param string $Record 记录
      * @param array $RecognizeWarnCode Code 告警码列表和释义：
@@ -211,6 +225,8 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
      * @param string $CumulativeScore 累积记分（仅电子驾驶证支持返回该字段）
      * @param string $CurrentTime 当前时间（仅电子驾驶证支持返回该字段）
      * @param string $GenerateTime 生成时间（仅电子驾驶证支持返回该字段）
+     * @param string $BackPageName 驾驶证副页姓名
+     * @param string $BackPageCardCode 驾驶证副页证号
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -300,6 +316,14 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
 
         if (array_key_exists("GenerateTime",$param) and $param["GenerateTime"] !== null) {
             $this->GenerateTime = $param["GenerateTime"];
+        }
+
+        if (array_key_exists("BackPageName",$param) and $param["BackPageName"] !== null) {
+            $this->BackPageName = $param["BackPageName"];
+        }
+
+        if (array_key_exists("BackPageCardCode",$param) and $param["BackPageCardCode"] !== null) {
+            $this->BackPageCardCode = $param["BackPageCardCode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

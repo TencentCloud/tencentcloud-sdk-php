@@ -56,6 +56,10 @@ CCN VPN 形的通道 可以不传VPCID
  * @method void setDpdTimeout(string $DpdTimeout) 设置DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
  * @method string getDpdAction() 获取DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
  * @method void setDpdAction(string $DpdAction) 设置DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+ * @method CreateVpnConnRoute getRoute() 获取创建通道路由信息。
+ * @method void setRoute(CreateVpnConnRoute $Route) 设置创建通道路由信息。
+ * @method BgpConfig getBgpConfig() 获取BGP配置。
+ * @method void setBgpConfig(BgpConfig $BgpConfig) 设置BGP配置。
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
@@ -146,6 +150,16 @@ CCN VPN 形的通道 可以不传VPCID
     public $DpdAction;
 
     /**
+     * @var CreateVpnConnRoute 创建通道路由信息。
+     */
+    public $Route;
+
+    /**
+     * @var BgpConfig BGP配置。
+     */
+    public $BgpConfig;
+
+    /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $CustomerGatewayId 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
      * @param string $VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
@@ -164,6 +178,8 @@ CCN VPN 形的通道 可以不传VPCID
      * @param integer $DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
      * @param string $DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
      * @param string $DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     * @param CreateVpnConnRoute $Route 创建通道路由信息。
+     * @param BgpConfig $BgpConfig BGP配置。
      */
     function __construct()
     {
@@ -256,6 +272,16 @@ CCN VPN 形的通道 可以不传VPCID
 
         if (array_key_exists("DpdAction",$param) and $param["DpdAction"] !== null) {
             $this->DpdAction = $param["DpdAction"];
+        }
+
+        if (array_key_exists("Route",$param) and $param["Route"] !== null) {
+            $this->Route = new CreateVpnConnRoute();
+            $this->Route->deserialize($param["Route"]);
+        }
+
+        if (array_key_exists("BgpConfig",$param) and $param["BgpConfig"] !== null) {
+            $this->BgpConfig = new BgpConfig();
+            $this->BgpConfig->deserialize($param["BgpConfig"]);
         }
     }
 }

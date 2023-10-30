@@ -20,36 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeUserAutoSignStatus返回参数结构体
  *
- * @method boolean getIsOpen() 获取是否开通
- * @method void setIsOpen(boolean $IsOpen) 设置是否开通
- * @method integer getLicenseFrom() 获取自动签许可生效时间。当且仅当已开通自动签时有值。
- * @method void setLicenseFrom(integer $LicenseFrom) 设置自动签许可生效时间。当且仅当已开通自动签时有值。
- * @method integer getLicenseTo() 获取自动签许可到期时间。当且仅当已开通自动签时有值。
- * @method void setLicenseTo(integer $LicenseTo) 设置自动签许可到期时间。当且仅当已开通自动签时有值。
- * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
- * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+ * @method boolean getIsOpen() 获取查询用户是否已开通自动签
+ * @method void setIsOpen(boolean $IsOpen) 设置查询用户是否已开通自动签
+ * @method integer getLicenseFrom() 获取自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
+ * @method void setLicenseFrom(integer $LicenseFrom) 设置自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
+ * @method integer getLicenseTo() 获取自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
+ * @method void setLicenseTo(integer $LicenseTo) 设置自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
+ * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+ * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelDescribeUserAutoSignStatusResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否开通
+     * @var boolean 查询用户是否已开通自动签
      */
     public $IsOpen;
 
     /**
-     * @var integer 自动签许可生效时间。当且仅当已开通自动签时有值。
+     * @var integer 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public $LicenseFrom;
 
     /**
-     * @var integer 自动签许可到期时间。当且仅当已开通自动签时有值。
+     * @var integer 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public $LicenseTo;
 
     /**
-     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+     * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
      */
     public $LicenseType;
 
@@ -59,10 +77,16 @@ class ChannelDescribeUserAutoSignStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $IsOpen 是否开通
-     * @param integer $LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
-     * @param integer $LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
-     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次
+     * @param boolean $IsOpen 查询用户是否已开通自动签
+     * @param integer $LicenseFrom 自动签许可生效时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
+     * @param integer $LicenseTo 自动签许可到期时间。当且仅当已通过许可开通自动签时有值。
+
+值为unix时间戳,单位为秒。
+     * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
+
+<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

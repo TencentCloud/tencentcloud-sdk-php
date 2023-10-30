@@ -102,6 +102,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeRocketMQSmoothMigrationTaskListResponse DescribeRocketMQSmoothMigrationTaskList(Models\DescribeRocketMQSmoothMigrationTaskListRequest $req) 用于查询RocketMQ平滑迁移任务列表
  * @method Models\DescribeRocketMQSourceClusterGroupListResponse DescribeRocketMQSourceClusterGroupList(Models\DescribeRocketMQSourceClusterGroupListRequest $req) 平滑迁移过程获取源集群group列表接口
  * @method Models\DescribeRocketMQSourceClusterTopicListResponse DescribeRocketMQSourceClusterTopicList(Models\DescribeRocketMQSourceClusterTopicListRequest $req) 平滑迁移过程获取源集群topic列表接口
+ * @method Models\DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptions(Models\DescribeRocketMQSubscriptionsRequest $req) 用于获取RocketMQ消费组订阅关系数据
  * @method Models\DescribeRocketMQTopicMsgsResponse DescribeRocketMQTopicMsgs(Models\DescribeRocketMQTopicMsgsRequest $req) rocketmq 消息查询
  * @method Models\DescribeRocketMQTopicsResponse DescribeRocketMQTopics(Models\DescribeRocketMQTopicsRequest $req) 获取RocketMQ主题列表
  * @method Models\DescribeRocketMQVipInstanceDetailResponse DescribeRocketMQVipInstanceDetail(Models\DescribeRocketMQVipInstanceDetailRequest $req) 获取单个RocketMQ专享集群信息

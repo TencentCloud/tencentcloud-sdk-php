@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunParams(string $RunParams) 设置高级运行参数
  * @method string getConfParams() 获取高级设置
  * @method void setConfParams(string $ConfParams) 设置高级设置
+ * @method boolean getScriptEncryption() 获取脚本内容是否base64加密
+ * @method void setScriptEncryption(boolean $ScriptEncryption) 设置脚本内容是否base64加密
  */
 class SubmitSqlTaskRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class SubmitSqlTaskRequest extends AbstractModel
     public $ConfParams;
 
     /**
+     * @var boolean 脚本内容是否base64加密
+     */
+    public $ScriptEncryption;
+
+    /**
      * @param string $DatabaseType 数据库类型
      * @param integer $DatasourceId 数据源Id
      * @param string $GroupId 资源组Id
@@ -128,6 +135,7 @@ class SubmitSqlTaskRequest extends AbstractModel
      * @param string $ComputeResource 计算资源名称
      * @param string $RunParams 高级运行参数
      * @param string $ConfParams 高级设置
+     * @param boolean $ScriptEncryption 脚本内容是否base64加密
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class SubmitSqlTaskRequest extends AbstractModel
 
         if (array_key_exists("ConfParams",$param) and $param["ConfParams"] !== null) {
             $this->ConfParams = $param["ConfParams"];
+        }
+
+        if (array_key_exists("ScriptEncryption",$param) and $param["ScriptEncryption"] !== null) {
+            $this->ScriptEncryption = $param["ScriptEncryption"];
         }
     }
 }

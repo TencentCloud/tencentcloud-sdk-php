@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedRelievedFlowId(string $NeedRelievedFlowId) 设置待解除的签署流程编号（即原签署流程的编号）。
  * @method RelieveInfo getReliveInfo() 获取解除协议内容, 包括解除理由等信息。
  * @method void setReliveInfo(RelieveInfo $ReliveInfo) 设置解除协议内容, 包括解除理由等信息。
- * @method Agent getAgent() 获取关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
- * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method Agent getAgent() 获取代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method array getReleasedApprovers() 获取替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
 如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
 
@@ -76,7 +78,8 @@ class CreateReleaseFlowRequest extends AbstractModel
     public $ReliveInfo;
 
     /**
-     * @var Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @var Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
 
@@ -110,7 +113,8 @@ class CreateReleaseFlowRequest extends AbstractModel
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $NeedRelievedFlowId 待解除的签署流程编号（即原签署流程的编号）。
      * @param RelieveInfo $ReliveInfo 解除协议内容, 包括解除理由等信息。
-     * @param Agent $Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param Agent $Agent 代理企业和员工的信息。
+在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param array $ReleasedApprovers 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
 如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
 

@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNegotiationType(string $NegotiationType) 设置协商类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method BgpConfigAndAsn getBgpConfig() 获取Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBgpConfig(BgpConfigAndAsn $BgpConfig) 设置Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpnConnection extends AbstractModel
 {
@@ -204,6 +208,12 @@ class VpnConnection extends AbstractModel
     public $NegotiationType;
 
     /**
+     * @var BgpConfigAndAsn Bgp配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BgpConfig;
+
+    /**
      * @param string $VpnConnectionId 通道实例ID。
      * @param string $VpnConnectionName 通道名称。
      * @param string $VpcId VPC实例ID。
@@ -231,6 +241,8 @@ class VpnConnection extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对数组
      * @param string $NegotiationType 协商类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BgpConfigAndAsn $BgpConfig Bgp配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -352,6 +364,11 @@ class VpnConnection extends AbstractModel
 
         if (array_key_exists("NegotiationType",$param) and $param["NegotiationType"] !== null) {
             $this->NegotiationType = $param["NegotiationType"];
+        }
+
+        if (array_key_exists("BgpConfig",$param) and $param["BgpConfig"] !== null) {
+            $this->BgpConfig = new BgpConfigAndAsn();
+            $this->BgpConfig->deserialize($param["BgpConfig"]);
         }
     }
 }

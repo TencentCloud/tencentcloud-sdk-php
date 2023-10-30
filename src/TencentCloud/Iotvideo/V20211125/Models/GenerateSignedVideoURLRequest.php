@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoURL(string $VideoURL) 设置视频播放原始URL地址
  * @method integer getExpireTime() 获取播放链接过期时间
  * @method void setExpireTime(integer $ExpireTime) 设置播放链接过期时间
+ * @method integer getChannelId() 获取通道ID 非NVR设备不填 NVR设备必填 默认为无	
+ * @method void setChannelId(integer $ChannelId) 设置通道ID 非NVR设备不填 NVR设备必填 默认为无	
  */
 class GenerateSignedVideoURLRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class GenerateSignedVideoURLRequest extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var integer 通道ID 非NVR设备不填 NVR设备必填 默认为无	
+     */
+    public $ChannelId;
+
+    /**
      * @param string $VideoURL 视频播放原始URL地址
      * @param integer $ExpireTime 播放链接过期时间
+     * @param integer $ChannelId 通道ID 非NVR设备不填 NVR设备必填 默认为无	
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class GenerateSignedVideoURLRequest extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

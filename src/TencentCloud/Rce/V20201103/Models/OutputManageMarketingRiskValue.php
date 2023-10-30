@@ -116,6 +116,10 @@ reject：拒绝，高风险恶意
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConstId(string $ConstId) 设置唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskInformation() 获取扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskInformation(string $RiskInformation) 设置扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputManageMarketingRiskValue extends AbstractModel
 {
@@ -196,6 +200,12 @@ reject：拒绝，高风险恶意
     public $ConstId;
 
     /**
+     * @var string 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskInformation;
+
+    /**
      * @param string $UserId 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
@@ -244,6 +254,8 @@ reject：拒绝，高风险恶意
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConstId 唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskInformation 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -284,6 +296,10 @@ reject：拒绝，高风险恶意
 
         if (array_key_exists("ConstId",$param) and $param["ConstId"] !== null) {
             $this->ConstId = $param["ConstId"];
+        }
+
+        if (array_key_exists("RiskInformation",$param) and $param["RiskInformation"] !== null) {
+            $this->RiskInformation = $param["RiskInformation"];
         }
     }
 }

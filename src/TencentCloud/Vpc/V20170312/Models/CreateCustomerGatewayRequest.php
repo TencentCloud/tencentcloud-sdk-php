@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpAddress(string $IpAddress) 设置对端网关公网IP。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method integer getBgpAsn() 获取BGP ASN。ASN取值范围为1- 4294967295，其中139341、45090和58835不可用。
+ * @method void setBgpAsn(integer $BgpAsn) 设置BGP ASN。ASN取值范围为1- 4294967295，其中139341、45090和58835不可用。
  */
 class CreateCustomerGatewayRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateCustomerGatewayRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer BGP ASN。ASN取值范围为1- 4294967295，其中139341、45090和58835不可用。
+     */
+    public $BgpAsn;
+
+    /**
      * @param string $CustomerGatewayName 对端网关名称，可任意命名，但不得超过60个字符。
      * @param string $IpAddress 对端网关公网IP。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param integer $BgpAsn BGP ASN。ASN取值范围为1- 4294967295，其中139341、45090和58835不可用。
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class CreateCustomerGatewayRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
+            $this->BgpAsn = $param["BgpAsn"];
         }
     }
 }

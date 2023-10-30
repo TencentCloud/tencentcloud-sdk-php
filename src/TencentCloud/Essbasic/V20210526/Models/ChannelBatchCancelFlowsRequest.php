@@ -26,18 +26,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowIds(array $FlowIds) 设置签署流程Id数组，最多100个，超过100不处理
  * @method string getCancelMessage() 获取撤销理由,不超过200个字符
  * @method void setCancelMessage(string $CancelMessage) 设置撤销理由,不超过200个字符
- * @method integer getCancelMessageFormat() 获取撤销理由自定义格式；选项：
+ * @method integer getCancelMessageFormat() 获取撤销理由自定义格式，支持以下格式
+<ul><li>0 : 默认值</li>
+<li>1 : 只保留身份信息</li>
+<li>2 : 保留身份信息+企业名称</li>
+<li>3 : 保留身份信息+企业名称+经办人名称</li></ul>
+例如,假设合同的发起方是典子谦示例企业的经办人张三，撤销理由是"合同内容错误，需要修正",合同撤销后，各签署方看到的撤销理由是会是
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
- * @method void setCancelMessageFormat(integer $CancelMessageFormat) 设置撤销理由自定义格式；选项：
+0: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同
+1: 发起方以"合同内容错误，需要修正"的理由撤销当前合同
+2: 发起方-典子谦示例企业以"合同内容错误，需要修正"的理由撤销当前合同
+3: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同</br>
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+备注:`如果不传递撤销理由，那么默认撤销理由是 "自动撤销（通过接口实现）"`
+ * @method void setCancelMessageFormat(integer $CancelMessageFormat) 设置撤销理由自定义格式，支持以下格式
+<ul><li>0 : 默认值</li>
+<li>1 : 只保留身份信息</li>
+<li>2 : 保留身份信息+企业名称</li>
+<li>3 : 保留身份信息+企业名称+经办人名称</li></ul>
+例如,假设合同的发起方是典子谦示例企业的经办人张三，撤销理由是"合同内容错误，需要修正",合同撤销后，各签署方看到的撤销理由是会是
+
+0: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同
+1: 发起方以"合同内容错误，需要修正"的理由撤销当前合同
+2: 发起方-典子谦示例企业以"合同内容错误，需要修正"的理由撤销当前合同
+3: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同</br>
+
+备注:`如果不传递撤销理由，那么默认撤销理由是 "自动撤销（通过接口实现）"`
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
@@ -59,12 +73,19 @@ class ChannelBatchCancelFlowsRequest extends AbstractModel
     public $CancelMessage;
 
     /**
-     * @var integer 撤销理由自定义格式；选项：
+     * @var integer 撤销理由自定义格式，支持以下格式
+<ul><li>0 : 默认值</li>
+<li>1 : 只保留身份信息</li>
+<li>2 : 保留身份信息+企业名称</li>
+<li>3 : 保留身份信息+企业名称+经办人名称</li></ul>
+例如,假设合同的发起方是典子谦示例企业的经办人张三，撤销理由是"合同内容错误，需要修正",合同撤销后，各签署方看到的撤销理由是会是
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+0: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同
+1: 发起方以"合同内容错误，需要修正"的理由撤销当前合同
+2: 发起方-典子谦示例企业以"合同内容错误，需要修正"的理由撤销当前合同
+3: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同</br>
+
+备注:`如果不传递撤销理由，那么默认撤销理由是 "自动撤销（通过接口实现）"`
      */
     public $CancelMessageFormat;
 
@@ -78,12 +99,19 @@ class ChannelBatchCancelFlowsRequest extends AbstractModel
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      * @param array $FlowIds 签署流程Id数组，最多100个，超过100不处理
      * @param string $CancelMessage 撤销理由,不超过200个字符
-     * @param integer $CancelMessageFormat 撤销理由自定义格式；选项：
+     * @param integer $CancelMessageFormat 撤销理由自定义格式，支持以下格式
+<ul><li>0 : 默认值</li>
+<li>1 : 只保留身份信息</li>
+<li>2 : 保留身份信息+企业名称</li>
+<li>3 : 保留身份信息+企业名称+经办人名称</li></ul>
+例如,假设合同的发起方是典子谦示例企业的经办人张三，撤销理由是"合同内容错误，需要修正",合同撤销后，各签署方看到的撤销理由是会是
 
-- 0 默认格式
-- 1 只保留身份信息：展示为【发起方】
-- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
-- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+0: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同
+1: 发起方以"合同内容错误，需要修正"的理由撤销当前合同
+2: 发起方-典子谦示例企业以"合同内容错误，需要修正"的理由撤销当前合同
+3: 发起方-典子谦示例企业-张三以"合同内容错误，需要修正"的理由撤销当前合同</br>
+
+备注:`如果不传递撤销理由，那么默认撤销理由是 "自动撤销（通过接口实现）"`
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

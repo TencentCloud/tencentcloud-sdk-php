@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) 设置需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
  * @method string getTagValue() 获取需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
  * @method void setTagValue(string $TagValue) 设置需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
- * @method string getResourceRegion() 获取资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
- * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
+ * @method string getResourceRegion() 获取资源所在地域，不区分地域的资源则不必填。区分地域的资源则必填，且必填时必须是参数ResourceIds.N资源所对应的地域，且如果ResourceIds.N为批量时，这些资源也必须是同一个地域的。例如示例值：ap-beijing，则参数ResourceIds.N中都应该填写该地域的资源。
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，不区分地域的资源则不必填。区分地域的资源则必填，且必填时必须是参数ResourceIds.N资源所对应的地域，且如果ResourceIds.N为批量时，这些资源也必须是同一个地域的。例如示例值：ap-beijing，则参数ResourceIds.N中都应该填写该地域的资源。
  * @method string getResourcePrefix() 获取资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
  * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
  */
@@ -56,7 +56,7 @@ class AttachResourcesTagRequest extends AbstractModel
     public $TagValue;
 
     /**
-     * @var string 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
+     * @var string 资源所在地域，不区分地域的资源则不必填。区分地域的资源则必填，且必填时必须是参数ResourceIds.N资源所对应的地域，且如果ResourceIds.N为批量时，这些资源也必须是同一个地域的。例如示例值：ap-beijing，则参数ResourceIds.N中都应该填写该地域的资源。
      */
     public $ResourceRegion;
 
@@ -70,7 +70,7 @@ class AttachResourcesTagRequest extends AbstractModel
      * @param array $ResourceIds 资源ID数组，资源个数最多为50
      * @param string $TagKey 需要绑定的标签键，取值规范参考：https://cloud.tencent.com/document/product/651/13354
      * @param string $TagValue 需要绑定的标签值，取值规范参考：https://cloud.tencent.com/document/product/651/13354
-     * @param string $ResourceRegion 资源所在地域，区分地域的资源必填，不区分地域的资源不需要传入该字段。注意该地域必须为资源ID参数ResourceIds对应的地域
+     * @param string $ResourceRegion 资源所在地域，不区分地域的资源则不必填。区分地域的资源则必填，且必填时必须是参数ResourceIds.N资源所对应的地域，且如果ResourceIds.N为批量时，这些资源也必须是同一个地域的。例如示例值：ap-beijing，则参数ResourceIds.N中都应该填写该地域的资源。
      * @param string $ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
      */
     function __construct()

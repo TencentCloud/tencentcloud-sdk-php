@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 漏洞风险高级配置列表
  *
+ * @method string getRiskId() 获取风险ID
+ * @method void setRiskId(string $RiskId) 设置风险ID
  * @method string getVULName() 获取漏洞名称
  * @method void setVULName(string $VULName) 设置漏洞名称
  * @method string getRiskLevel() 获取风险等级
@@ -63,6 +65,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class VULRiskAdvanceCFGList extends AbstractModel
 {
+    /**
+     * @var string 风险ID
+     */
+    public $RiskId;
+
     /**
      * @var string 漏洞名称
      */
@@ -136,6 +143,7 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $ImpactComponent;
 
     /**
+     * @param string $RiskId 风险ID
      * @param string $VULName 漏洞名称
      * @param string $RiskLevel 风险等级
      * @param string $CheckFrom 识别来源
@@ -170,6 +178,10 @@ class VULRiskAdvanceCFGList extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RiskId",$param) and $param["RiskId"] !== null) {
+            $this->RiskId = $param["RiskId"];
+        }
+
         if (array_key_exists("VULName",$param) and $param["VULName"] !== null) {
             $this->VULName = $param["VULName"];
         }

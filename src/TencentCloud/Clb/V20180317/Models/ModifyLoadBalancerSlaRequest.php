@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLoadBalancerSla() 获取负载均衡实例信息。
  * @method void setLoadBalancerSla(array $LoadBalancerSla) 设置负载均衡实例信息。
+ * @method boolean getForce() 获取是否强制升级，默认否。
+ * @method void setForce(boolean $Force) 设置是否强制升级，默认否。
  */
 class ModifyLoadBalancerSlaRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ModifyLoadBalancerSlaRequest extends AbstractModel
     public $LoadBalancerSla;
 
     /**
+     * @var boolean 是否强制升级，默认否。
+     */
+    public $Force;
+
+    /**
      * @param array $LoadBalancerSla 负载均衡实例信息。
+     * @param boolean $Force 是否强制升级，默认否。
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class ModifyLoadBalancerSlaRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LoadBalancerSla, $obj);
             }
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

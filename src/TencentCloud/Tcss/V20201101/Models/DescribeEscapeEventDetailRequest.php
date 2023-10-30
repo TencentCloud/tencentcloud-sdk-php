@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEventId() 获取事件唯一id
  * @method void setEventId(string $EventId) 设置事件唯一id
+ * @method string getEventType() 获取事件类型
+ * @method void setEventType(string $EventType) 设置事件类型
  */
 class DescribeEscapeEventDetailRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeEscapeEventDetailRequest extends AbstractModel
     public $EventId;
 
     /**
+     * @var string 事件类型
+     */
+    public $EventType;
+
+    /**
      * @param string $EventId 事件唯一id
+     * @param string $EventType 事件类型
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeEscapeEventDetailRequest extends AbstractModel
         }
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("EventType",$param) and $param["EventType"] !== null) {
+            $this->EventType = $param["EventType"];
         }
     }
 }

@@ -21,105 +21,153 @@ use TencentCloud\Common\AbstractModel;
  * IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
  *
  * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPropoAuthenAlgorithm() 获取认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) 设置认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExchangeMode() 获取协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExchangeMode(string $ExchangeMode) 设置协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalIdentity() 获取本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalIdentity(string $LocalIdentity) 设置本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemoteIdentity() 获取对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteIdentity(string $RemoteIdentity) 设置对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalAddress() 获取本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalAddress(string $LocalAddress) 设置本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemoteAddress() 获取对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteAddress(string $RemoteAddress) 设置对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalFqdnName() 获取本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalFqdnName(string $LocalFqdnName) 设置本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemoteFqdnName() 获取对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteFqdnName(string $RemoteFqdnName) 设置对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDhGroupName() 获取DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDhGroupName(string $DhGroupName) 设置DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIKESaLifetimeSeconds() 获取IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIKESaLifetimeSeconds(integer $IKESaLifetimeSeconds) 设置IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIKEVersion() 获取IKE版本
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIKEVersion(string $IKEVersion) 设置IKE版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IKEOptionsSpecification extends AbstractModel
 {
     /**
      * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PropoEncryAlgorithm;
 
     /**
      * @var string 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PropoAuthenAlgorithm;
 
     /**
      * @var string 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExchangeMode;
 
     /**
      * @var string 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalIdentity;
 
     /**
      * @var string 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteIdentity;
 
     /**
      * @var string 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalAddress;
 
     /**
      * @var string 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteAddress;
 
     /**
      * @var string 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalFqdnName;
 
     /**
      * @var string 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteFqdnName;
 
     /**
      * @var string DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DhGroupName;
 
     /**
      * @var integer IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IKESaLifetimeSeconds;
 
     /**
      * @var string IKE版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IKEVersion;
 
     /**
      * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemoteIdentity 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalAddress 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemoteAddress 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalFqdnName 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemoteFqdnName 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IKEVersion IKE版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

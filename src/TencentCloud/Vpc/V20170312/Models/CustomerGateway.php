@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpAddress(string $IpAddress) 设置公网地址
  * @method string getCreatedTime() 获取创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
+ * @method integer getBgpAsn() 获取BGP ASN。
+ * @method void setBgpAsn(integer $BgpAsn) 设置BGP ASN。
  */
 class CustomerGateway extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CustomerGateway extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var integer BGP ASN。
+     */
+    public $BgpAsn;
+
+    /**
      * @param string $CustomerGatewayId 用户网关唯一ID
      * @param string $CustomerGatewayName 网关名称
      * @param string $IpAddress 公网地址
      * @param string $CreatedTime 创建时间
+     * @param integer $BgpAsn BGP ASN。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CustomerGateway extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
+            $this->BgpAsn = $param["BgpAsn"];
         }
     }
 }

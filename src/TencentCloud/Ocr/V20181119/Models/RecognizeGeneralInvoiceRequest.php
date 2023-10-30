@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableMultiplePage(boolean $EnableMultiplePage) 设置是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后EnablePdf和PdfPageNumber入参不进行控制。
  * @method boolean getEnableCutImage() 获取是否返回切割图片base64，默认值为false。
  * @method void setEnableCutImage(boolean $EnableCutImage) 设置是否返回切割图片base64，默认值为false。
+ * @method boolean getEnableItemPolygon() 获取是否打开字段坐标返回。默认为false。
+ * @method void setEnableItemPolygon(boolean $EnableItemPolygon) 设置是否打开字段坐标返回。默认为false。
  */
 class RecognizeGeneralInvoiceRequest extends AbstractModel
 {
@@ -155,6 +157,11 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
     public $EnableCutImage;
 
     /**
+     * @var boolean 是否打开字段坐标返回。默认为false。
+     */
+    public $EnableItemPolygon;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 8M。图片下载时间不超过 3 秒。
@@ -188,6 +195,7 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，传入时仅支持PDF单页识别，当上传文件为PDF且EnablePdf参数值为true时有效，默认值为1。
      * @param boolean $EnableMultiplePage 是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后EnablePdf和PdfPageNumber入参不进行控制。
      * @param boolean $EnableCutImage 是否返回切割图片base64，默认值为false。
+     * @param boolean $EnableItemPolygon 是否打开字段坐标返回。默认为false。
      */
     function __construct()
     {
@@ -232,6 +240,10 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
 
         if (array_key_exists("EnableCutImage",$param) and $param["EnableCutImage"] !== null) {
             $this->EnableCutImage = $param["EnableCutImage"];
+        }
+
+        if (array_key_exists("EnableItemPolygon",$param) and $param["EnableItemPolygon"] !== null) {
+            $this->EnableItemPolygon = $param["EnableItemPolygon"];
         }
     }
 }

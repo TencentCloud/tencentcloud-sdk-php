@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModuleName() 获取模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
  * @method void setModuleName(string $ModuleName) 设置模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
- * @method integer getDefaultBandWidth() 获取默认带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
- * @method void setDefaultBandWidth(integer $DefaultBandWidth) 设置默认带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
+ * @method integer getDefaultBandWidth() 获取默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+ * @method void setDefaultBandWidth(integer $DefaultBandWidth) 设置默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
  * @method string getDefaultImageId() 获取默认镜像。
  * @method void setDefaultImageId(string $DefaultImageId) 设置默认镜像。
  * @method string getInstanceType() 获取机型ID。
  * @method void setInstanceType(string $InstanceType) 设置机型ID。
- * @method integer getDefaultSystemDiskSize() 获取默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看DescribeConfig。
- * @method void setDefaultSystemDiskSize(integer $DefaultSystemDiskSize) 设置默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看DescribeConfig。
- * @method integer getDefaultDataDiskSize() 获取默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看DescribeConfig。
- * @method void setDefaultDataDiskSize(integer $DefaultDataDiskSize) 设置默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看DescribeConfig。
+ * @method integer getDefaultSystemDiskSize() 获取默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+ * @method void setDefaultSystemDiskSize(integer $DefaultSystemDiskSize) 设置默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+ * @method integer getDefaultDataDiskSize() 获取默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+ * @method void setDefaultDataDiskSize(integer $DefaultDataDiskSize) 设置默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
  * @method boolean getCloseIpDirect() 获取是否关闭IP直通。取值范围：
 true：表示关闭IP直通
 false：表示开通IP直通
@@ -42,8 +42,8 @@ false：表示开通IP直通
  * @method void setTagSpecification(array $TagSpecification) 设置标签列表。
  * @method array getSecurityGroups() 获取模块默认安全组列表
  * @method void setSecurityGroups(array $SecurityGroups) 设置模块默认安全组列表
- * @method integer getDefaultBandWidthIn() 获取默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
- * @method void setDefaultBandWidthIn(integer $DefaultBandWidthIn) 设置默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
+ * @method integer getDefaultBandWidthIn() 获取默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+ * @method void setDefaultBandWidthIn(integer $DefaultBandWidthIn) 设置默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
  * @method boolean getDisableWanIp() 获取是否禁止分配外网IP
  * @method void setDisableWanIp(boolean $DisableWanIp) 设置是否禁止分配外网IP
  * @method SystemDisk getSystemDisk() 获取系统盘信息。
@@ -59,7 +59,7 @@ class CreateModuleRequest extends AbstractModel
     public $ModuleName;
 
     /**
-     * @var integer 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
+     * @var integer 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public $DefaultBandWidth;
 
@@ -74,12 +74,12 @@ class CreateModuleRequest extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var integer 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看DescribeConfig。
+     * @var integer 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public $DefaultSystemDiskSize;
 
     /**
-     * @var integer 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看DescribeConfig。
+     * @var integer 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public $DefaultDataDiskSize;
 
@@ -101,7 +101,7 @@ false：表示开通IP直通
     public $SecurityGroups;
 
     /**
-     * @var integer 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
+     * @var integer 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      */
     public $DefaultBandWidthIn;
 
@@ -122,17 +122,17 @@ false：表示开通IP直通
 
     /**
      * @param string $ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
-     * @param integer $DefaultBandWidth 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
+     * @param integer $DefaultBandWidth 默认带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      * @param string $DefaultImageId 默认镜像。
      * @param string $InstanceType 机型ID。
-     * @param integer $DefaultSystemDiskSize 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看DescribeConfig。
-     * @param integer $DefaultDataDiskSize 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看DescribeConfig。
+     * @param integer $DefaultSystemDiskSize 默认系统盘大小，单位：GB，默认大小为50GB。范围不得超过系统盘上下限制，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
+     * @param integer $DefaultDataDiskSize 默认数据盘大小，单位：GB。范围不得超过数据盘范围大小，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      * @param boolean $CloseIpDirect 是否关闭IP直通。取值范围：
 true：表示关闭IP直通
 false：表示开通IP直通
      * @param array $TagSpecification 标签列表。
      * @param array $SecurityGroups 模块默认安全组列表
-     * @param integer $DefaultBandWidthIn 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看DescribeConfig。
+     * @param integer $DefaultBandWidthIn 默认入带宽，单位：Mbps。范围不得超过带宽上下限，详看[DescribeConfig](https://cloud.tencent.com/document/product/1108/42572)。
      * @param boolean $DisableWanIp 是否禁止分配外网IP
      * @param SystemDisk $SystemDisk 系统盘信息。
      * @param array $DataDisks 数据盘信息。

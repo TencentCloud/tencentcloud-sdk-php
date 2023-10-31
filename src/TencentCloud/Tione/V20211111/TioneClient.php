@@ -48,6 +48,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeBatchTaskInstancesResponse DescribeBatchTaskInstances(Models\DescribeBatchTaskInstancesRequest $req) 查询跑批实例列表
  * @method Models\DescribeBatchTasksResponse DescribeBatchTasks(Models\DescribeBatchTasksRequest $req) 批量预测任务列表信息
  * @method Models\DescribeBillingResourceGroupsResponse DescribeBillingResourceGroups(Models\DescribeBillingResourceGroupsRequest $req) 查询资源组详情
+ * @method Models\DescribeBillingResourceInstanceRunningJobsResponse DescribeBillingResourceInstanceRunningJobs(Models\DescribeBillingResourceInstanceRunningJobsRequest $req) 查询资源组节点运行中的任务
  * @method Models\DescribeBillingSpecsResponse DescribeBillingSpecs(Models\DescribeBillingSpecsRequest $req) 本接口(DescribeBillingSpecs)用于查询计费项列表
  * @method Models\DescribeBillingSpecsPriceResponse DescribeBillingSpecsPrice(Models\DescribeBillingSpecsPriceRequest $req) 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
  * @method Models\DescribeDatasetDetailStructuredResponse DescribeDatasetDetailStructured(Models\DescribeDatasetDetailStructuredRequest $req) 查询结构化数据集详情

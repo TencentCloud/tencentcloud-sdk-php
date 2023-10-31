@@ -131,6 +131,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 数据源列表
  * @method Models\DescribeDataTypesResponse DescribeDataTypes(Models\DescribeDataTypesRequest $req) 获取字段类型列表
  * @method Models\DescribeDatabaseInfoListResponse DescribeDatabaseInfoList(Models\DescribeDatabaseInfoListRequest $req) 获取数据库信息
+ * @method Models\DescribeDatabaseMetasResponse DescribeDatabaseMetas(Models\DescribeDatabaseMetasRequest $req) 查询数据库列表
  * @method Models\DescribeDatasourceResponse DescribeDatasource(Models\DescribeDatasourceRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 数据源详情
  * @method Models\DescribeDependOpsTaskListResponse DescribeDependOpsTaskList(Models\DescribeDependOpsTaskListRequest $req) 根据任务id获取下游依赖任务列表

@@ -28,7 +28,7 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
-第三方平台子客企业和员工必须已经经过实名认证
+第三方平台子客企业和员工必须已经过实名认证
  * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -37,7 +37,7 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
-第三方平台子客企业和员工必须已经经过实名认证
+第三方平台子客企业和员工必须已经过实名认证
  * @method array getFlowIds() 获取合同流程ID数组，最多支持100个。
 注: `该参数和合同组编号必须二选一`
  * @method void setFlowIds(array $FlowIds) 设置合同流程ID数组，最多支持100个。
@@ -49,14 +49,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndpoint() 获取签署链接类型,可以设置的参数如下
 <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
 <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
-<li> **APP** :第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型</li>
+<li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
 
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
  * @method void setEndpoint(string $Endpoint) 设置签署链接类型,可以设置的参数如下
 <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
 <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
-<li> **APP** :第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型</li>
+<li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
 
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
@@ -138,7 +138,7 @@ class CreateSignUrlsRequest extends AbstractModel
 <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
-第三方平台子客企业和员工必须已经经过实名认证
+第三方平台子客企业和员工必须已经过实名认证
      */
     public $Agent;
 
@@ -158,7 +158,7 @@ class CreateSignUrlsRequest extends AbstractModel
      * @var string 签署链接类型,可以设置的参数如下
 <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
 <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
-<li> **APP** :第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型</li>
+<li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
 
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
@@ -252,7 +252,7 @@ class CreateSignUrlsRequest extends AbstractModel
 <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
-第三方平台子客企业和员工必须已经经过实名认证
+第三方平台子客企业和员工必须已经过实名认证
      * @param array $FlowIds 合同流程ID数组，最多支持100个。
 注: `该参数和合同组编号必须二选一`
      * @param string $FlowGroupId 合同组编号
@@ -260,7 +260,7 @@ class CreateSignUrlsRequest extends AbstractModel
      * @param string $Endpoint 签署链接类型,可以设置的参数如下
 <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
 <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
-<li> **APP** :第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型</li>
+<li> **APP** :第三方App或小程序跳转电子签小程序的path, App或者小程序跳转适合此类型</li>
 <li> **LONGURL2WEIXINAPP** :跳转电子签小程序的链接, H5跳转适合此类型，此时返回长链</li></ul>
 
 详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**

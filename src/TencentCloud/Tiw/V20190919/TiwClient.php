@@ -45,7 +45,7 @@ use TencentCloud\Tiw\V20190919\Models as Models;
 查询课后录制回调地址
  * @method Models\DescribeOnlineRecordResponse DescribeOnlineRecord(Models\DescribeOnlineRecordRequest $req) 查询录制任务状态与结果
  * @method Models\DescribeOnlineRecordCallbackResponse DescribeOnlineRecordCallback(Models\DescribeOnlineRecordCallbackRequest $req) 查询实时录制回调地址
- * @method Models\DescribePPTCheckResponse DescribePPTCheck(Models\DescribePPTCheckRequest $req) 查询PPT检测任务的执行进度或结果
+ * @method Models\DescribePPTCheckResponse DescribePPTCheck(Models\DescribePPTCheckRequest $req) 查询PPT检测任务的执行进度或结果，支持查询最近半年内的任务结果
  * @method Models\DescribePPTCheckCallbackResponse DescribePPTCheckCallback(Models\DescribePPTCheckCallbackRequest $req) 查询PPT检测任务回调地址
  * @method Models\DescribePostpaidUsageResponse DescribePostpaidUsage(Models\DescribePostpaidUsageRequest $req) 查询用户后付费用量
  * @method Models\DescribeQualityMetricsResponse DescribeQualityMetrics(Models\DescribeQualityMetricsRequest $req) 查询互动白板质量数据

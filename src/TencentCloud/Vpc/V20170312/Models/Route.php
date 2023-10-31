@@ -43,9 +43,13 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 LOCAL_GATEWAY：本地网关。
  * @method string getGatewayId() 获取下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。
  * @method void setGatewayId(string $GatewayId) 设置下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。
  * @method integer getRouteId() 获取路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
 该字段在删除时必填，其他字段无需填写。
  * @method void setRouteId(integer $RouteId) 设置路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
@@ -67,7 +71,9 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method string getDestinationIpv6CidrBlock() 获取目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationIpv6CidrBlock(string $DestinationIpv6CidrBlock) 设置目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRouteItemId() 获取路由唯一策略ID。
  * @method void setRouteItemId(string $RouteItemId) 设置路由唯一策略ID。
  * @method boolean getPublishedToVbc() 获取路由策略是否发布到云联网。
@@ -100,7 +106,9 @@ LOCAL_GATEWAY：本地网关。
 
     /**
      * @var string 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。
      */
     public $GatewayId;
 
@@ -136,6 +144,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * @var string 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestinationIpv6CidrBlock;
 
@@ -168,7 +177,9 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 LOCAL_GATEWAY：本地网关。
      * @param string $GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特殊说明：GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+特殊说明：
+GatewayType为NORMAL_CVM时，GatewayId填写实例的内网IP。
+GatewayType为EIP时，GatewayId填写0。
      * @param integer $RouteId 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
 该字段在删除时必填，其他字段无需填写。
      * @param string $RouteDescription 路由策略描述。
@@ -180,6 +191,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RouteItemId 路由唯一策略ID。
      * @param boolean $PublishedToVbc 路由策略是否发布到云联网。
 注意：此字段可能返回 null，表示取不到有效值。

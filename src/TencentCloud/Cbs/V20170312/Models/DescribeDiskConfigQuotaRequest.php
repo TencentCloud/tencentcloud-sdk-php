@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskUsage(string $DiskUsage) 设置系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
  * @method integer getCPU() 获取实例CPU核数。
  * @method void setCPU(integer $CPU) 设置实例CPU核数。
+ * @method string getDedicatedClusterId() 获取专用集群ID。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置专用集群ID。
  */
 class DescribeDiskConfigQuotaRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     public $CPU;
 
     /**
+     * @var string 专用集群ID。
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @param string $InquiryType 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
      * @param array $InstanceFamilies 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
@@ -88,6 +95,7 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
      * @param integer $Memory 实例内存大小。
      * @param string $DiskUsage 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      * @param integer $CPU 实例CPU核数。
+     * @param string $DedicatedClusterId 专用集群ID。
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
 
         if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
             $this->CPU = $param["CPU"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
     }
 }

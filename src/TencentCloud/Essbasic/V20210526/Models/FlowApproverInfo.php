@@ -201,12 +201,20 @@ RecipientId参数获取：
 详细操作可以参考开发者中心的ApproverOption结构体。
  * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要
  * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要
- * @method array getApproverVerifyTypes() 获取签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
- * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+ * @method array getApproverVerifyTypes() 获取指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
+ * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
  * @method array getApproverSignTypes() 获取签署人签署合同时的认证方式
 <ul><li> **1** :人脸认证</li>
 <li> **2** :签署密码</li>
@@ -245,8 +253,12 @@ RecipientId参数获取：
  * @method void setAddSignComponentsLimits(array $AddSignComponentsLimits) 设置[通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
- * @method string getApproverRoleName() 获取自定义签署人角色名，如收款人、开具人、见证人等
- * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人角色名，如收款人、开具人、见证人等
+ * @method string getApproverRoleName() 获取可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
+ * @method void setApproverRoleName(string $ApproverRoleName) 设置可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -386,9 +398,13 @@ class FlowApproverInfo extends AbstractModel
     public $ApproverNeedSignReview;
 
     /**
-     * @var array 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     * @var array 指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
      */
     public $ApproverVerifyTypes;
 
@@ -428,7 +444,9 @@ class FlowApproverInfo extends AbstractModel
     public $AddSignComponentsLimits;
 
     /**
-     * @var string 自定义签署人角色名，如收款人、开具人、见证人等
+     * @var string 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
      */
     public $ApproverRoleName;
 
@@ -495,9 +513,13 @@ class FlowApproverInfo extends AbstractModel
      * @param ApproverOption $ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
      * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
-     * @param array $ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
-查看合同的认证方式 Flow层级的优先于approver层级的
-（当手写签名方式为OCR_ESIGN时，合同认证方式2无效，因为这种签名方式依赖实名认证）
+     * @param array $ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
+<ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
+<li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
+</li></ul>
+注: 
+<ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
+<li>此字段可传多个校验方式</li></ul>
      * @param array $ApproverSignTypes 签署人签署合同时的认证方式
 <ul><li> **1** :人脸认证</li>
 <li> **2** :签署密码</li>
@@ -517,7 +539,9 @@ class FlowApproverInfo extends AbstractModel
      * @param array $AddSignComponentsLimits [通过文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)时,如果设置了外层参数SignBeanTag=1(允许签署过程中添加签署控件),则可通过此参数明确规定合同所使用的签署控件类型（骑缝章、普通章法人章等）和具体的印章（印章ID）或签名方式。
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
-     * @param string $ApproverRoleName 自定义签署人角色名，如收款人、开具人、见证人等
+     * @param string $ApproverRoleName 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
+
+注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
      */
     function __construct()
     {

@@ -18,19 +18,19 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelCreateConvertTaskApi返回参数结构体
+ * ChannelCreateBatchQuickSignUrl返回参数结构体
  *
- * @method string getTaskId() 获取接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。
- * @method void setTaskId(string $TaskId) 设置接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。
+ * @method FlowApproverUrlInfo getFlowApproverUrlInfo() 获取签署人签署链接信息
+ * @method void setFlowApproverUrlInfo(FlowApproverUrlInfo $FlowApproverUrlInfo) 设置签署人签署链接信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelCreateConvertTaskApiResponse extends AbstractModel
+class ChannelCreateBatchQuickSignUrlResponse extends AbstractModel
 {
     /**
-     * @var string 接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。
+     * @var FlowApproverUrlInfo 签署人签署链接信息
      */
-    public $TaskId;
+    public $FlowApproverUrlInfo;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class ChannelCreateConvertTaskApiResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 接口返回的文件转换任务Id，可以调用接口<a href="https://qian.tencent.com/developers/partnerApis/files/ChannelGetTaskResultApi" target="_blank">查询转换任务状态</a>获取转换任务的状态和转换后的文件资源Id。
+     * @param FlowApproverUrlInfo $FlowApproverUrlInfo 签署人签署链接信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,9 @@ class ChannelCreateConvertTaskApiResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("FlowApproverUrlInfo",$param) and $param["FlowApproverUrlInfo"] !== null) {
+            $this->FlowApproverUrlInfo = new FlowApproverUrlInfo();
+            $this->FlowApproverUrlInfo->deserialize($param["FlowApproverUrlInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

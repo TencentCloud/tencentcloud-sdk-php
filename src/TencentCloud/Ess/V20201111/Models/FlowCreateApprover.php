@@ -210,7 +210,7 @@ use TencentCloud\Common\AbstractModel;
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul>
+<li>此字段可传多个校验方式</li></ul>
 
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
 
@@ -221,7 +221,7 @@ use TencentCloud\Common\AbstractModel;
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul>
+<li>此字段可传多个校验方式</li></ul>
 
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
 
@@ -441,7 +441,7 @@ class FlowCreateApprover extends AbstractModel
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul>
+<li>此字段可传多个校验方式</li></ul>
 
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
 
@@ -562,7 +562,7 @@ class FlowCreateApprover extends AbstractModel
 </li></ul>
 注: 
 <ul><li>如果合同流程设置ApproverVerifyType查看合同的校验方式,    则忽略此签署人的查看合同的校验方式</li>
-<li>此字段不可传多个校验方式</li></ul>
+<li>此字段可传多个校验方式</li></ul>
 
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
 

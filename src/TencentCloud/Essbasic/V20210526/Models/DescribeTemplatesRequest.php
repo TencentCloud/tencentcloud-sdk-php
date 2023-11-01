@@ -20,110 +20,210 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTemplates请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
- * @method string getTemplateId() 获取模板唯一标识，查询单个模板时使用
- * @method void setTemplateId(string $TemplateId) 设置模板唯一标识，查询单个模板时使用
- * @method integer getContentType() 获取查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表
- * @method void setContentType(integer $ContentType) 设置查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表
- * @method integer getLimit() 获取指定每页多少条数据，如果不传默认为20，单页最大100。
- * @method void setLimit(integer $Limit) 设置指定每页多少条数据，如果不传默认为20，单页最大100。
- * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
- * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
- * @method boolean getQueryAllComponents() 获取是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件
- * @method void setQueryAllComponents(boolean $QueryAllComponents) 设置是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件
- * @method string getTemplateName() 获取模糊搜索模板名称，最大长度200
- * @method void setTemplateName(string $TemplateName) 设置模糊搜索模板名称，最大长度200
- * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接，
-默认false-不获取
-true-获取
- * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接，
-默认false-不获取
-true-获取
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method string getTemplateId() 获取合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+ * @method void setTemplateId(string $TemplateId) 设置合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+ * @method integer getContentType() 获取查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul>
+ * @method void setContentType(integer $ContentType) 设置查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul>
+ * @method array getTemplateIds() 获取合同模板ID数组，每一个合同模板ID为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+
+```注意: 
+1. 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。
+2. 请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。
+3. 最多支持200个模板。
+4. 若传递此参数，分页参数(Limit,Offset)无效```
+
+ * @method void setTemplateIds(array $TemplateIds) 设置合同模板ID数组，每一个合同模板ID为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+
+```注意: 
+1. 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。
+2. 请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。
+3. 最多支持200个模板。
+4. 若传递此参数，分页参数(Limit,Offset)无效```
+
+ * @method integer getLimit() 获取指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
+ * @method void setLimit(integer $Limit) 设置指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
+ * @method integer getOffset() 获取查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
+ * @method string getTemplateName() 获取模糊搜索的模板名称，注意是模板名的连续部分，最大长度200
+ * @method void setTemplateName(string $TemplateName) 设置模糊搜索的模板名称，注意是模板名的连续部分，最大长度200
+ * @method string getChannelTemplateId() 获取对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+ * @method void setChannelTemplateId(string $ChannelTemplateId) 设置对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+ * @method boolean getQueryAllComponents() 获取是否返回所有控件信息。
+
+<ul><li>**false**：只返回发起方控件（默认）</li>
+<li>**true**：返回所有签署方控件</li></ul>
+ * @method void setQueryAllComponents(boolean $QueryAllComponents) 设置是否返回所有控件信息。
+
+<ul><li>**false**：只返回发起方控件（默认）</li>
+<li>**true**：返回所有签署方控件</li></ul>
+ * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+（此功能开放需要联系客户经理）
+ * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+（此功能开放需要联系客户经理）
  * @method boolean getWithPdfUrl() 获取是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟。
+（此功能开放需要联系客户经理）
  * @method void setWithPdfUrl(boolean $WithPdfUrl) 设置是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。
- * @method string getChannelTemplateId() 获取对应第三方应用平台企业的模板ID
- * @method void setChannelTemplateId(string $ChannelTemplateId) 设置对应第三方应用平台企业的模板ID
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟。
+（此功能开放需要联系客户经理）
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
     /**
-     * @var string 模板唯一标识，查询单个模板时使用
+     * @var string 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
      */
     public $TemplateId;
 
     /**
-     * @var integer 查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表
+     * @var integer 查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul>
      */
     public $ContentType;
 
     /**
-     * @var integer 指定每页多少条数据，如果不传默认为20，单页最大100。
+     * @var array 合同模板ID数组，每一个合同模板ID为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+
+```注意: 
+1. 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。
+2. 请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。
+3. 最多支持200个模板。
+4. 若传递此参数，分页参数(Limit,Offset)无效```
+
+     */
+    public $TemplateIds;
+
+    /**
+     * @var integer 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
      */
     public $Limit;
 
     /**
-     * @var integer 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+     * @var integer 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
      */
     public $Offset;
 
     /**
-     * @var boolean 是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件
-     */
-    public $QueryAllComponents;
-
-    /**
-     * @var string 模糊搜索模板名称，最大长度200
+     * @var string 模糊搜索的模板名称，注意是模板名的连续部分，最大长度200
      */
     public $TemplateName;
 
     /**
-     * @var boolean 是否获取模板预览链接，
-默认false-不获取
-true-获取
+     * @var string 对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+     */
+    public $ChannelTemplateId;
+
+    /**
+     * @var boolean 是否返回所有控件信息。
+
+<ul><li>**false**：只返回发起方控件（默认）</li>
+<li>**true**：返回所有签署方控件</li></ul>
+     */
+    public $QueryAllComponents;
+
+    /**
+     * @var boolean 是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+（此功能开放需要联系客户经理）
      */
     public $WithPreviewUrl;
 
     /**
      * @var boolean 是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟。
+（此功能开放需要联系客户经理）
      */
     public $WithPdfUrl;
-
-    /**
-     * @var string 对应第三方应用平台企业的模板ID
-     */
-    public $ChannelTemplateId;
 
     /**
      * @var UserInfo 操作者的信息
@@ -132,26 +232,58 @@ true-获取
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 
-此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId必填。
-     * @param string $TemplateId 模板唯一标识，查询单个模板时使用
-     * @param integer $ContentType 查询内容：
-0-模板列表及详情（默认），
-1-仅模板列表
-     * @param integer $Limit 指定每页多少条数据，如果不传默认为20，单页最大100。
-     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
-     * @param boolean $QueryAllComponents 是否返回所有组件信息。
-默认false，只返回发起方控件；
-true，返回所有签署方控件
-     * @param string $TemplateName 模糊搜索模板名称，最大长度200
-     * @param boolean $WithPreviewUrl 是否获取模板预览链接，
-默认false-不获取
-true-获取
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param string $TemplateId 合同模板ID，为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+     * @param integer $ContentType 查询内容控制
+
+<ul><li>**0**：模板列表及详情（默认）</li>
+<li>**1**：仅模板列表</li></ul>
+     * @param array $TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串。
+建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
+
+```注意: 
+1. 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。
+2. 请确保每个模板均正确且属于当前企业，若有任一模板不存在，则返回错误。
+3. 最多支持200个模板。
+4. 若传递此参数，分页参数(Limit,Offset)无效```
+
+     * @param integer $Limit 指定每页返回的数据条数，和Offset参数配合使用。
+
+注：`1.默认值为20，单页做大值为200。`
+     * @param integer $Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`1.offset从0开始，即第一页为0。`
+`2.默认从第一页返回。`
+     * @param string $TemplateName 模糊搜索的模板名称，注意是模板名的连续部分，最大长度200
+     * @param string $ChannelTemplateId 对应第三方应用平台企业的模板ID，通过此值可以搜索由第三方应用平台模板ID下发或领取得到的子客模板列表。
+     * @param boolean $QueryAllComponents 是否返回所有控件信息。
+
+<ul><li>**false**：只返回发起方控件（默认）</li>
+<li>**true**：返回所有签署方控件</li></ul>
+     * @param boolean $WithPreviewUrl 是否获取模板预览链接。
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PreviewUrl，为模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+（此功能开放需要联系客户经理）
      * @param boolean $WithPdfUrl 是否获取模板的PDF文件链接。
-默认false-不获取
-true-获取
-请联系客户经理开白后使用。
-     * @param string $ChannelTemplateId 对应第三方应用平台企业的模板ID
+
+<ul><li>**false**：不获取（默认）</li>
+<li>**true**：获取</li></ul>
+
+设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟。
+（此功能开放需要联系客户经理）
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
@@ -180,6 +312,10 @@ true-获取
             $this->ContentType = $param["ContentType"];
         }
 
+        if (array_key_exists("TemplateIds",$param) and $param["TemplateIds"] !== null) {
+            $this->TemplateIds = $param["TemplateIds"];
+        }
+
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }
@@ -188,12 +324,16 @@ true-获取
             $this->Offset = $param["Offset"];
         }
 
-        if (array_key_exists("QueryAllComponents",$param) and $param["QueryAllComponents"] !== null) {
-            $this->QueryAllComponents = $param["QueryAllComponents"];
-        }
-
         if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
             $this->TemplateName = $param["TemplateName"];
+        }
+
+        if (array_key_exists("ChannelTemplateId",$param) and $param["ChannelTemplateId"] !== null) {
+            $this->ChannelTemplateId = $param["ChannelTemplateId"];
+        }
+
+        if (array_key_exists("QueryAllComponents",$param) and $param["QueryAllComponents"] !== null) {
+            $this->QueryAllComponents = $param["QueryAllComponents"];
         }
 
         if (array_key_exists("WithPreviewUrl",$param) and $param["WithPreviewUrl"] !== null) {
@@ -202,10 +342,6 @@ true-获取
 
         if (array_key_exists("WithPdfUrl",$param) and $param["WithPdfUrl"] !== null) {
             $this->WithPdfUrl = $param["WithPdfUrl"];
-        }
-
-        if (array_key_exists("ChannelTemplateId",$param) and $param["ChannelTemplateId"] !== null) {
-            $this->ChannelTemplateId = $param["ChannelTemplateId"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

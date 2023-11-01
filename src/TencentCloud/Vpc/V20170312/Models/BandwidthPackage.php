@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识Id
  * @method string getNetworkType() 获取带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
  * @method void setNetworkType(string $NetworkType) 设置带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
- * @method string getChargeType() 获取带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
- * @method void setChargeType(string $ChargeType) 设置带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+ * @method string getChargeType() 获取带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+
+ * @method void setChargeType(string $ChargeType) 设置带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+
  * @method string getBandwidthPackageName() 获取带宽包名称
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名称
  * @method string getCreatedTime() 获取带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -39,6 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEgress() 获取网络出口
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgress(string $Egress) 设置网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeadline() 获取带宽包到期时间，只有预付费会返回，按量计费返回为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeadline(string $Deadline) 设置带宽包到期时间，只有预付费会返回，按量计费返回为null
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BandwidthPackage extends AbstractModel
@@ -54,7 +60,8 @@ class BandwidthPackage extends AbstractModel
     public $NetworkType;
 
     /**
-     * @var string 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+     * @var string 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+
      */
     public $ChargeType;
 
@@ -90,15 +97,24 @@ class BandwidthPackage extends AbstractModel
     public $Egress;
 
     /**
+     * @var string 带宽包到期时间，只有预付费会返回，按量计费返回为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deadline;
+
+    /**
      * @param string $BandwidthPackageId 带宽包唯一标识Id
      * @param string $NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
-     * @param string $ChargeType 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+     * @param string $ChargeType 带宽包计费类型，包括:<li>'TOP5_POSTPAID_BY_MONTH':按月后付费TOP5计费</li><li> 'PERCENT95_POSTPAID_BY_MONTH':按月后付费月95计费</li><li>'ENHANCED95_POSTPAID_BY_MONTH':按月后付费增强型95计费</li><li>'FIXED_PREPAID_BY_MONTH':包月预付费计费</li><li>‘PEAK_BANDWIDTH_POSTPAID_BY_DAY’: 后付费日结按带宽计费</li>
+
      * @param string $BandwidthPackageName 带宽包名称
      * @param string $CreatedTime 带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param string $Status 带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
      * @param array $ResourceSet 带宽包资源信息
      * @param integer $Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      * @param string $Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Deadline 带宽包到期时间，只有预付费会返回，按量计费返回为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +169,10 @@ class BandwidthPackage extends AbstractModel
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
             $this->Egress = $param["Egress"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
     }
 }

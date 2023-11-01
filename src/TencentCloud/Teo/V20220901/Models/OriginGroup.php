@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置源站组创建时间。
  * @method string getUpdateTime() 获取源站组更新时间。
  * @method void setUpdateTime(string $UpdateTime) 设置源站组更新时间。
+ * @method string getHostHeader() 获取回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostHeader(string $HostHeader) 设置回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OriginGroup extends AbstractModel
 {
@@ -79,6 +83,12 @@ class OriginGroup extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostHeader;
+
+    /**
      * @param string $GroupId 源站组ID。
      * @param string $Name 源站组名称。
      * @param string $Type 源站组类型，取值有：
@@ -88,6 +98,8 @@ class OriginGroup extends AbstractModel
      * @param array $References 源站组被引用实例列表。	
      * @param string $CreateTime 源站组创建时间。
      * @param string $UpdateTime 源站组更新时间。
+     * @param string $HostHeader 回源Host Header。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -138,6 +150,10 @@ class OriginGroup extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
+            $this->HostHeader = $param["HostHeader"];
         }
     }
 }

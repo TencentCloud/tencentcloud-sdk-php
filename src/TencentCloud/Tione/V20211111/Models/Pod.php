@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerInfos(array $ContainerInfos) 设置容器列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CrossTenantENIInfo getCrossTenantENIInfo() 获取容器调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCrossTenantENIInfo(CrossTenantENIInfo $CrossTenantENIInfo) 设置容器调用信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Pod extends AbstractModel
 {
@@ -104,6 +108,12 @@ class Pod extends AbstractModel
     public $ContainerInfos;
 
     /**
+     * @var CrossTenantENIInfo 容器调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CrossTenantENIInfo;
+
+    /**
      * @param string $Name pod名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uid pod的唯一id
@@ -119,6 +129,8 @@ class Pod extends AbstractModel
      * @param Container $Containers 容器列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ContainerInfos 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CrossTenantENIInfo $CrossTenantENIInfo 容器调用信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -170,6 +182,11 @@ class Pod extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ContainerInfos, $obj);
             }
+        }
+
+        if (array_key_exists("CrossTenantENIInfo",$param) and $param["CrossTenantENIInfo"] !== null) {
+            $this->CrossTenantENIInfo = new CrossTenantENIInfo();
+            $this->CrossTenantENIInfo->deserialize($param["CrossTenantENIInfo"]);
         }
     }
 }

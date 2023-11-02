@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotViewNumber(integer $NotViewNumber) 设置待查看数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReportTemplateNumber() 获取报告模板数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReportTemplateNumber(integer $ReportTemplateNumber) 设置报告模板数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +60,12 @@ class DescribeTaskLogListResponse extends AbstractModel
     public $NotViewNumber;
 
     /**
+     * @var integer 报告模板数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReportTemplateNumber;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +76,8 @@ class DescribeTaskLogListResponse extends AbstractModel
      * @param array $Data 报告列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NotViewNumber 待查看数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReportTemplateNumber 报告模板数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +109,10 @@ class DescribeTaskLogListResponse extends AbstractModel
 
         if (array_key_exists("NotViewNumber",$param) and $param["NotViewNumber"] !== null) {
             $this->NotViewNumber = $param["NotViewNumber"];
+        }
+
+        if (array_key_exists("ReportTemplateNumber",$param) and $param["ReportTemplateNumber"] !== null) {
+            $this->ReportTemplateNumber = $param["ReportTemplateNumber"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

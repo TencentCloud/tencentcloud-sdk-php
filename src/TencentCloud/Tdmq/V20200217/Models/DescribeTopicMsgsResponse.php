@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelBatchCancelFlows返回参数结构体
+ * DescribeTopicMsgs返回参数结构体
  *
- * @method array getFailMessages() 获取签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
- * @method void setFailMessages(array $FailMessages) 设置签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
+ * @method integer getTotalCount() 获取总记录数。
+ * @method void setTotalCount(integer $TotalCount) 设置总记录数。
+ * @method array getTopicMsgLogSets() 获取消息日志列表。
+ * @method void setTopicMsgLogSets(array $TopicMsgLogSets) 设置消息日志列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelBatchCancelFlowsResponse extends AbstractModel
+class DescribeTopicMsgsResponse extends AbstractModel
 {
     /**
-     * @var array 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
+     * @var integer 总记录数。
      */
-    public $FailMessages;
+    public $TotalCount;
+
+    /**
+     * @var array 消息日志列表。
+     */
+    public $TopicMsgLogSets;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ChannelBatchCancelFlowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FailMessages 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
+     * @param integer $TotalCount 总记录数。
+     * @param array $TopicMsgLogSets 消息日志列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class ChannelBatchCancelFlowsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FailMessages",$param) and $param["FailMessages"] !== null) {
-            $this->FailMessages = $param["FailMessages"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TopicMsgLogSets",$param) and $param["TopicMsgLogSets"] !== null) {
+            $this->TopicMsgLogSets = [];
+            foreach ($param["TopicMsgLogSets"] as $key => $value){
+                $obj = new MsgLog();
+                $obj->deserialize($value);
+                array_push($this->TopicMsgLogSets, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

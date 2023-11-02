@@ -54,7 +54,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAccessHistogramResponse DescribeAccessHistogram(Models\DescribeAccessHistogramRequest $req) 本接口用于访问日志柱状趋势图
  * @method Models\DescribeAccessIndexResponse DescribeAccessIndex(Models\DescribeAccessIndexRequest $req) 本接口用于获取访问日志索引配置信息
  * @method Models\DescribeAntiFakeRulesResponse DescribeAntiFakeRules(Models\DescribeAntiFakeRulesRequest $req) 获取防篡改url
- * @method Models\DescribeAntiFakeUrlResponse DescribeAntiFakeUrl(Models\DescribeAntiFakeUrlRequest $req) 获取防篡改url
+ * @method Models\DescribeAntiFakeUrlResponse DescribeAntiFakeUrl(Models\DescribeAntiFakeUrlRequest $req) 废弃接口
+
+获取防篡改url
  * @method Models\DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRules(Models\DescribeAntiInfoLeakRulesRequest $req) 老接口已经不再使用。
 
 获取信息防泄漏规则列表
@@ -66,7 +68,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
 
 描述WAF自动封禁IP详情,对齐自动封堵状态
  * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) Waf 多域名ip黑白名单查询
- * @method Models\DescribeCCRuleResponse DescribeCCRule(Models\DescribeCCRuleRequest $req) Waf  CC V2 Query接口
+ * @method Models\DescribeCCRuleResponse DescribeCCRule(Models\DescribeCCRuleRequest $req) 没有在使用。
+
+Waf  CC V2 Query接口
  * @method Models\DescribeCCRuleListResponse DescribeCCRuleList(Models\DescribeCCRuleListRequest $req) 根据多条件查询CC规则
  * @method Models\DescribeCertificateVerifyResultResponse DescribeCertificateVerifyResult(Models\DescribeCertificateVerifyResultRequest $req) 获取证书的检查结果
  * @method Models\DescribeCiphersDetailResponse DescribeCiphersDetail(Models\DescribeCiphersDetailRequest $req) Saas型WAF接入查询加密套件信息

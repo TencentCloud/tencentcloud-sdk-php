@@ -18,22 +18,22 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 流程中参与方的信息结构
+ * 流程中签署方和填写方(如果有填写控件存证时)的信息
  *
- * @method string getRecipientId() 获取签署人唯一标识，在通过模板发起合同的时候对应签署方ID
- * @method void setRecipientId(string $RecipientId) 设置签署人唯一标识，在通过模板发起合同的时候对应签署方ID
- * @method string getRecipientType() 获取参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方
- * @method void setRecipientType(string $RecipientType) 设置参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方
- * @method string getDescription() 获取描述信息	
- * @method void setDescription(string $Description) 设置描述信息	
- * @method string getRoleName() 获取角色名称	
- * @method void setRoleName(string $RoleName) 设置角色名称	
+ * @method string getRecipientId() 获取合同参与方的角色ID
+ * @method void setRecipientId(string $RecipientId) 设置合同参与方的角色ID
+ * @method string getRecipientType() 获取参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul>
+ * @method void setRecipientType(string $RecipientType) 设置参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul>
+ * @method string getDescription() 获取合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+ * @method void setDescription(string $Description) 设置合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+ * @method string getRoleName() 获取合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
+ * @method void setRoleName(string $RoleName) 设置合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
  * @method boolean getRequireValidation() 获取是否需要校验，
 true-是，
 false-否
@@ -60,25 +60,25 @@ false-否
 class Recipient extends AbstractModel
 {
     /**
-     * @var string 签署人唯一标识，在通过模板发起合同的时候对应签署方ID
+     * @var string 合同参与方的角色ID
      */
     public $RecipientId;
 
     /**
-     * @var string 参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方
+     * @var string 参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul>
      */
     public $RecipientType;
 
     /**
-     * @var string 描述信息	
+     * @var string 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
      */
     public $Description;
 
     /**
-     * @var string 角色名称	
+     * @var string 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
      */
     public $RoleName;
 
@@ -114,13 +114,13 @@ false-否
     public $IsPromoter;
 
     /**
-     * @param string $RecipientId 签署人唯一标识，在通过模板发起合同的时候对应签署方ID
-     * @param string $RecipientType 参与者类型，默认为空。
-ENTERPRISE-企业；
-INDIVIDUAL-个人；
-PROMOTER-发起方
-     * @param string $Description 描述信息	
-     * @param string $RoleName 角色名称	
+     * @param string $RecipientId 合同参与方的角色ID
+     * @param string $RecipientType 参与者类型, 可以选择的类型如下:
+<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
+<li> **INDIVIDUAL** :此角色为个人参与方</li>
+<li> **PROMOTER** :此角色是发起方</li></ul>
+     * @param string $Description 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+     * @param string $RoleName 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
      * @param boolean $RequireValidation 是否需要校验，
 true-是，
 false-否

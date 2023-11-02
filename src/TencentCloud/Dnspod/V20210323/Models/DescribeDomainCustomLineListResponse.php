@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Dnspod\V20210323\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelBatchCancelFlows返回参数结构体
+ * DescribeDomainCustomLineList返回参数结构体
  *
- * @method array getFailMessages() 获取签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
- * @method void setFailMessages(array $FailMessages) 设置签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
+ * @method array getLineList() 获取自定义线路列表
+ * @method void setLineList(array $LineList) 设置自定义线路列表
+ * @method integer getAvailableCount() 获取可添加的自定义线路条数
+ * @method void setAvailableCount(integer $AvailableCount) 设置可添加的自定义线路条数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelBatchCancelFlowsResponse extends AbstractModel
+class DescribeDomainCustomLineListResponse extends AbstractModel
 {
     /**
-     * @var array 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
+     * @var array 自定义线路列表
      */
-    public $FailMessages;
+    public $LineList;
+
+    /**
+     * @var integer 可添加的自定义线路条数
+     */
+    public $AvailableCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ChannelBatchCancelFlowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FailMessages 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
+     * @param array $LineList 自定义线路列表
+     * @param integer $AvailableCount 可添加的自定义线路条数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class ChannelBatchCancelFlowsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FailMessages",$param) and $param["FailMessages"] !== null) {
-            $this->FailMessages = $param["FailMessages"];
+        if (array_key_exists("LineList",$param) and $param["LineList"] !== null) {
+            $this->LineList = [];
+            foreach ($param["LineList"] as $key => $value){
+                $obj = new CustomLineInfo();
+                $obj->deserialize($value);
+                array_push($this->LineList, $obj);
+            }
+        }
+
+        if (array_key_exists("AvailableCount",$param) and $param["AvailableCount"] !== null) {
+            $this->AvailableCount = $param["AvailableCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

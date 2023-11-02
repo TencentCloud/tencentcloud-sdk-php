@@ -38,6 +38,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupNameList(array $SkillGroupNameList) 设置坐席关联的技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRole() 获取1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRole(integer $Role) 设置1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SeatUserInfo extends AbstractModel
 {
@@ -79,6 +89,15 @@ class SeatUserInfo extends AbstractModel
     public $SkillGroupNameList;
 
     /**
+     * @var integer 1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Role;
+
+    /**
      * @param string $Name 坐席名称
      * @param string $Mail 坐席邮箱
      * @param string $StaffNumber 工号
@@ -87,6 +106,11 @@ class SeatUserInfo extends AbstractModel
      * @param string $Nick 坐席昵称
      * @param string $UserId 用户ID
      * @param array $SkillGroupNameList 坐席关联的技能组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Role 1:管理员
+2:质检员
+3:普通座席
+else:自定义角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -128,6 +152,10 @@ class SeatUserInfo extends AbstractModel
 
         if (array_key_exists("SkillGroupNameList",$param) and $param["SkillGroupNameList"] !== null) {
             $this->SkillGroupNameList = $param["SkillGroupNameList"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

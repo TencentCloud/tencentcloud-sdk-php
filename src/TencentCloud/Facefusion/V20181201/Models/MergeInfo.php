@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 人脸图片和待被融合的素材模板图的人脸位置信息。
  *
- * @method string getImage() 获取输入图片base64
- * @method void setImage(string $Image) 设置输入图片base64
- * @method string getUrl() 获取输入图片url
- * @method void setUrl(string $Url) 设置输入图片url
- * @method FaceRect getInputImageFaceRect() 获取上传的图片人脸位置信息（人脸框）
- * @method void setInputImageFaceRect(FaceRect $InputImageFaceRect) 设置上传的图片人脸位置信息（人脸框）
- * @method string getTemplateFaceID() 获取控制台上传的素材人脸ID，不填默认取最大人脸
- * @method void setTemplateFaceID(string $TemplateFaceID) 设置控制台上传的素材人脸ID，不填默认取最大人脸
+ * @method string getImage() 获取输入图片base64。
+ * @method void setImage(string $Image) 设置输入图片base64。
+ * @method string getUrl() 获取输入图片url。
+Url、Image必须提供一个，如果都提供，只使用 Url。
+ * @method void setUrl(string $Url) 设置输入图片url。
+Url、Image必须提供一个，如果都提供，只使用 Url。
+ * @method FaceRect getInputImageFaceRect() 获取输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+ * @method void setInputImageFaceRect(FaceRect $InputImageFaceRect) 设置输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+ * @method string getTemplateFaceID() 获取素材人脸ID，不填默认取素材中最大人脸。
+ * @method void setTemplateFaceID(string $TemplateFaceID) 设置素材人脸ID，不填默认取素材中最大人脸。
  */
 class MergeInfo extends AbstractModel
 {
     /**
-     * @var string 输入图片base64
+     * @var string 输入图片base64。
      */
     public $Image;
 
     /**
-     * @var string 输入图片url
+     * @var string 输入图片url。
+Url、Image必须提供一个，如果都提供，只使用 Url。
      */
     public $Url;
 
     /**
-     * @var FaceRect 上传的图片人脸位置信息（人脸框）
+     * @var FaceRect 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
      */
     public $InputImageFaceRect;
 
     /**
-     * @var string 控制台上传的素材人脸ID，不填默认取最大人脸
+     * @var string 素材人脸ID，不填默认取素材中最大人脸。
      */
     public $TemplateFaceID;
 
     /**
-     * @param string $Image 输入图片base64
-     * @param string $Url 输入图片url
-     * @param FaceRect $InputImageFaceRect 上传的图片人脸位置信息（人脸框）
-     * @param string $TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸
+     * @param string $Image 输入图片base64。
+     * @param string $Url 输入图片url。
+Url、Image必须提供一个，如果都提供，只使用 Url。
+     * @param FaceRect $InputImageFaceRect 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+     * @param string $TemplateFaceID 素材人脸ID，不填默认取素材中最大人脸。
      */
     function __construct()
     {

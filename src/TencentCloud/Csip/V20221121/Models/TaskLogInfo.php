@@ -66,6 +66,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReportType() 获取报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReportType(integer $ReportType) 设置报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTemplateId() 获取报告模板id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateId(integer $TemplateId) 设置报告模板id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskLogInfo extends AbstractModel
 {
@@ -141,6 +149,18 @@ class TaskLogInfo extends AbstractModel
     public $UserName;
 
     /**
+     * @var integer 报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReportType;
+
+    /**
+     * @var integer 报告模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateId;
+
+    /**
      * @param string $TaskLogName 报告名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskLogId 报告ID
@@ -163,6 +183,10 @@ class TaskLogInfo extends AbstractModel
      * @param string $UIN 主账户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReportType 报告类型： 1安全体检 2日报 3周报 4月报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TemplateId 报告模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -224,6 +248,14 @@ class TaskLogInfo extends AbstractModel
 
         if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
             $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("ReportType",$param) and $param["ReportType"] !== null) {
+            $this->ReportType = $param["ReportType"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

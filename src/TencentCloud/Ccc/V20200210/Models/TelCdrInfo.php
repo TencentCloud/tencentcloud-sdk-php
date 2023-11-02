@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(integer $Duration) 设置通话时长
  * @method string getRecordURL() 获取录音信息
  * @method void setRecordURL(string $RecordURL) 设置录音信息
+ * @method string getRecordId() 获取录音 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordId(string $RecordId) 设置录音 ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method SeatUserInfo getSeatUser() 获取坐席信息
  * @method void setSeatUser(SeatUserInfo $SeatUser) 设置坐席信息
  * @method integer getEndStatus() 获取EndStatus与EndStatusString一一对应，具体枚举如下：
@@ -340,6 +344,12 @@ class TelCdrInfo extends AbstractModel
     public $RecordURL;
 
     /**
+     * @var string 录音 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordId;
+
+    /**
      * @var SeatUserInfo 坐席信息
      */
     public $SeatUser;
@@ -600,6 +610,8 @@ class TelCdrInfo extends AbstractModel
      * @param integer $Direction 呼入呼出方向 0 呼入 1 呼出
      * @param integer $Duration 通话时长
      * @param string $RecordURL 录音信息
+     * @param string $RecordId 录音 ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SeatUserInfo $SeatUser 坐席信息
      * @param integer $EndStatus EndStatus与EndStatusString一一对应，具体枚举如下：
 
@@ -773,6 +785,10 @@ class TelCdrInfo extends AbstractModel
 
         if (array_key_exists("RecordURL",$param) and $param["RecordURL"] !== null) {
             $this->RecordURL = $param["RecordURL"];
+        }
+
+        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
+            $this->RecordId = $param["RecordId"];
         }
 
         if (array_key_exists("SeatUser",$param) and $param["SeatUser"] !== null) {

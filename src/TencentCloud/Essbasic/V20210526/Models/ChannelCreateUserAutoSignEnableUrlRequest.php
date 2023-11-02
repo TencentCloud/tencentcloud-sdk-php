@@ -20,78 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateUserAutoSignEnableUrl请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
- * @method string getSceneKey() 获取自动签场景:
-E_PRESCRIPTION_AUTO_SIGN 电子处方
- * @method void setSceneKey(string $SceneKey) 设置自动签场景:
-E_PRESCRIPTION_AUTO_SIGN 电子处方
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method AutoSignConfig getAutoSignConfig() 获取自动签开通，签署相关配置
- * @method void setAutoSignConfig(AutoSignConfig $AutoSignConfig) 设置自动签开通，签署相关配置
- * @method string getUrlType() 获取链接类型，空-默认小程序端链接，H5SIGN-h5端链接
- * @method void setUrlType(string $UrlType) 设置链接类型，空-默认小程序端链接，H5SIGN-h5端链接
- * @method string getNotifyType() 获取通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
- * @method void setNotifyType(string $NotifyType) 设置通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
- * @method string getNotifyAddress() 获取若上方填写为 SMS，则此处为手机号
- * @method void setNotifyAddress(string $NotifyAddress) 设置若上方填写为 SMS，则此处为手机号
- * @method integer getExpiredTime() 获取链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
- * @method void setExpiredTime(integer $ExpiredTime) 设置链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method string getSceneKey() 获取自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
+ * @method void setSceneKey(string $SceneKey) 设置自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method AutoSignConfig getAutoSignConfig() 获取自动签开通配置信息, 包括开通的人员的信息等
+ * @method void setAutoSignConfig(AutoSignConfig $AutoSignConfig) 设置自动签开通配置信息, 包括开通的人员的信息等
+ * @method string getUrlType() 获取生成的链接类型：
+<ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
+ * @method void setUrlType(string $UrlType) 设置生成的链接类型：
+<ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
+ * @method string getNotifyType() 获取是否通知开通方，通知类型:
+<ul><li>默认不设置为不通知开通方</li>
+<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
+ * @method void setNotifyType(string $NotifyType) 设置是否通知开通方，通知类型:
+<ul><li>默认不设置为不通知开通方</li>
+<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
+ * @method string getNotifyAddress() 获取如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
+ * @method void setNotifyAddress(string $NotifyAddress) 设置如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
+ * @method integer getExpiredTime() 获取链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
+ * @method void setExpiredTime(integer $ExpiredTime) 设置链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
  */
 class ChannelCreateUserAutoSignEnableUrlRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public $Agent;
 
     /**
-     * @var string 自动签场景:
-E_PRESCRIPTION_AUTO_SIGN 电子处方
+     * @var string 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
      */
     public $SceneKey;
 
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var AutoSignConfig 自动签开通，签署相关配置
+     * @var AutoSignConfig 自动签开通配置信息, 包括开通的人员的信息等
      */
     public $AutoSignConfig;
 
     /**
-     * @var string 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+     * @var string 生成的链接类型：
+<ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
      */
     public $UrlType;
 
     /**
-     * @var string 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
+     * @var string 是否通知开通方，通知类型:
+<ul><li>默认不设置为不通知开通方</li>
+<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
      */
     public $NotifyType;
 
     /**
-     * @var string 若上方填写为 SMS，则此处为手机号
+     * @var string 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
      */
     public $NotifyAddress;
 
     /**
-     * @var integer 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+     * @var integer 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
      */
     public $ExpiredTime;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息
-     * @param string $SceneKey 自动签场景:
-E_PRESCRIPTION_AUTO_SIGN 电子处方
-     * @param UserInfo $Operator 操作人信息
-     * @param AutoSignConfig $AutoSignConfig 自动签开通，签署相关配置
-     * @param string $UrlType 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
-     * @param string $NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
-     * @param string $NotifyAddress 若上方填写为 SMS，则此处为手机号
-     * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param string $SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li></ul>
+
+注: `现在仅支持电子处方场景`
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param AutoSignConfig $AutoSignConfig 自动签开通配置信息, 包括开通的人员的信息等
+     * @param string $UrlType 生成的链接类型：
+<ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li>
+<li> **H5SIGN** : 生成H5端开通链接</li></ul>
+     * @param string $NotifyType 是否通知开通方，通知类型:
+<ul><li>默认不设置为不通知开通方</li>
+<li>**SMS** :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li><ul>
+     * @param string $NotifyAddress 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
+     * @param integer $ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为当前时间往后30天。`如果不传，默认过期时间为当前时间往后7天。`
      */
     function __construct()
     {

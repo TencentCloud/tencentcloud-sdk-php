@@ -20,134 +20,142 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 此结构体(FlowDetailInfo)描述的是合同(流程)的详细信息
  *
- * @method string getFlowId() 获取合同(流程)的Id
- * @method void setFlowId(string $FlowId) 设置合同(流程)的Id
- * @method string getFlowName() 获取合同(流程)的名字
- * @method void setFlowName(string $FlowName) 设置合同(流程)的名字
- * @method string getFlowType() 获取合同(流程)的类型
- * @method void setFlowType(string $FlowType) 设置合同(流程)的类型
- * @method string getFlowStatus() 获取合同(流程)的状态, 状态如下
-
-INIT 合同创建
-PART 合同签署中
-REJECT 合同拒签
-ALL 合同签署完成
-DEADLINE 合同流签(合同过期)
-CANCEL 合同撤回
-RELIEVED 解除协议（已解除）
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+ * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method string getFlowType() 获取合同流程的类别分类（如销售合同/入职合同等）。
+ * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（如销售合同/入职合同等）。
+ * @method string getFlowStatus() 获取合同流程当前的签署状态, 会存在下列的状态值
+<ul><li> **INIT** :合同创建</li>
+<li> **PART** :合同签署中(至少有一个签署方已经签署)</li>
+<li> **REJECT** :合同拒签</li>
+<li> **ALL** :合同签署完成</li>
+<li> **DEADLINE** :合同流签(合同过期)</li>
+<li> **CANCEL** :合同撤回</li>
+<li> **RELIEVED** :解除协议（已解除）</li></ul>
  
- * @method void setFlowStatus(string $FlowStatus) 设置合同(流程)的状态, 状态如下
-
-INIT 合同创建
-PART 合同签署中
-REJECT 合同拒签
-ALL 合同签署完成
-DEADLINE 合同流签(合同过期)
-CANCEL 合同撤回
-RELIEVED 解除协议（已解除）
+ * @method void setFlowStatus(string $FlowStatus) 设置合同流程当前的签署状态, 会存在下列的状态值
+<ul><li> **INIT** :合同创建</li>
+<li> **PART** :合同签署中(至少有一个签署方已经签署)</li>
+<li> **REJECT** :合同拒签</li>
+<li> **ALL** :合同签署完成</li>
+<li> **DEADLINE** :合同流签(合同过期)</li>
+<li> **CANCEL** :合同撤回</li>
+<li> **RELIEVED** :解除协议（已解除）</li></ul>
  
- * @method string getFlowMessage() 获取合同(流程)的信息
- * @method void setFlowMessage(string $FlowMessage) 设置合同(流程)的信息
- * @method integer getCreateOn() 获取合同(流程)的创建时间戳，单位秒
- * @method void setCreateOn(integer $CreateOn) 设置合同(流程)的创建时间戳，单位秒
- * @method integer getDeadLine() 获取合同(流程)的签署截止时间戳，单位秒
- * @method void setDeadLine(integer $DeadLine) 设置合同(流程)的签署截止时间戳，单位秒
- * @method string getCustomData() 获取用户自定义数据
- * @method void setCustomData(string $CustomData) 设置用户自定义数据
- * @method array getFlowApproverInfos() 获取合同(流程)的签署人数组
- * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置合同(流程)的签署人数组
- * @method array getCcInfos() 获取合同(流程)关注方信息列表
- * @method void setCcInfos(array $CcInfos) 设置合同(流程)关注方信息列表
- * @method boolean getNeedCreateReview() 获取是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
- * @method void setNeedCreateReview(boolean $NeedCreateReview) 设置是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+ * @method string getFlowMessage() 获取当合同流程状态为已拒签（即 FlowStatus=REJECT）或已撤销（即 FlowStatus=CANCEL ）时，此字段 FlowMessage 为拒签或撤销原因。
+ * @method void setFlowMessage(string $FlowMessage) 设置当合同流程状态为已拒签（即 FlowStatus=REJECT）或已撤销（即 FlowStatus=CANCEL ）时，此字段 FlowMessage 为拒签或撤销原因。
+ * @method integer getCreateOn() 获取合同流程的创建时间戳，格式为Unix标准时间戳（秒）。
+ * @method void setCreateOn(integer $CreateOn) 设置合同流程的创建时间戳，格式为Unix标准时间戳（秒）。
+ * @method integer getDeadLine() 获取签署流程的签署截止时间, 值为unix时间戳, 精确到秒。
+ * @method void setDeadLine(integer $DeadLine) 设置签署流程的签署截止时间, 值为unix时间戳, 精确到秒。
+ * @method string getCustomData() 获取调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 1000长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+ * @method void setCustomData(string $CustomData) 设置调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 1000长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+ * @method array getFlowApproverInfos() 获取合同流程的签署方数组
+ * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置合同流程的签署方数组
+ * @method array getCcInfos() 获取合同流程的关注方信息数组
+ * @method void setCcInfos(array $CcInfos) 设置合同流程的关注方信息数组
+ * @method boolean getNeedCreateReview() 获取是否需要发起前审批
+<ul><li>当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程</li>
+<li>当NeedCreateReview为false，不需要发起前审核的合同</li></ul>
+ * @method void setNeedCreateReview(boolean $NeedCreateReview) 设置是否需要发起前审批
+<ul><li>当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程</li>
+<li>当NeedCreateReview为false，不需要发起前审核的合同</li></ul>
  */
 class FlowDetailInfo extends AbstractModel
 {
     /**
-     * @var string 合同(流程)的Id
+     * @var string 合同流程ID，为32位字符串。
      */
     public $FlowId;
 
     /**
-     * @var string 合同(流程)的名字
+     * @var string 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      */
     public $FlowName;
 
     /**
-     * @var string 合同(流程)的类型
+     * @var string 合同流程的类别分类（如销售合同/入职合同等）。
      */
     public $FlowType;
 
     /**
-     * @var string 合同(流程)的状态, 状态如下
-
-INIT 合同创建
-PART 合同签署中
-REJECT 合同拒签
-ALL 合同签署完成
-DEADLINE 合同流签(合同过期)
-CANCEL 合同撤回
-RELIEVED 解除协议（已解除）
+     * @var string 合同流程当前的签署状态, 会存在下列的状态值
+<ul><li> **INIT** :合同创建</li>
+<li> **PART** :合同签署中(至少有一个签署方已经签署)</li>
+<li> **REJECT** :合同拒签</li>
+<li> **ALL** :合同签署完成</li>
+<li> **DEADLINE** :合同流签(合同过期)</li>
+<li> **CANCEL** :合同撤回</li>
+<li> **RELIEVED** :解除协议（已解除）</li></ul>
  
      */
     public $FlowStatus;
 
     /**
-     * @var string 合同(流程)的信息
+     * @var string 当合同流程状态为已拒签（即 FlowStatus=REJECT）或已撤销（即 FlowStatus=CANCEL ）时，此字段 FlowMessage 为拒签或撤销原因。
      */
     public $FlowMessage;
 
     /**
-     * @var integer 合同(流程)的创建时间戳，单位秒
+     * @var integer 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。
      */
     public $CreateOn;
 
     /**
-     * @var integer 合同(流程)的签署截止时间戳，单位秒
+     * @var integer 签署流程的签署截止时间, 值为unix时间戳, 精确到秒。
      */
     public $DeadLine;
 
     /**
-     * @var string 用户自定义数据
+     * @var string 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 1000长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
      */
     public $CustomData;
 
     /**
-     * @var array 合同(流程)的签署人数组
+     * @var array 合同流程的签署方数组
      */
     public $FlowApproverInfos;
 
     /**
-     * @var array 合同(流程)关注方信息列表
+     * @var array 合同流程的关注方信息数组
      */
     public $CcInfos;
 
     /**
-     * @var boolean 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+     * @var boolean 是否需要发起前审批
+<ul><li>当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程</li>
+<li>当NeedCreateReview为false，不需要发起前审核的合同</li></ul>
      */
     public $NeedCreateReview;
 
     /**
-     * @param string $FlowId 合同(流程)的Id
-     * @param string $FlowName 合同(流程)的名字
-     * @param string $FlowType 合同(流程)的类型
-     * @param string $FlowStatus 合同(流程)的状态, 状态如下
-
-INIT 合同创建
-PART 合同签署中
-REJECT 合同拒签
-ALL 合同签署完成
-DEADLINE 合同流签(合同过期)
-CANCEL 合同撤回
-RELIEVED 解除协议（已解除）
+     * @param string $FlowId 合同流程ID，为32位字符串。
+     * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param string $FlowType 合同流程的类别分类（如销售合同/入职合同等）。
+     * @param string $FlowStatus 合同流程当前的签署状态, 会存在下列的状态值
+<ul><li> **INIT** :合同创建</li>
+<li> **PART** :合同签署中(至少有一个签署方已经签署)</li>
+<li> **REJECT** :合同拒签</li>
+<li> **ALL** :合同签署完成</li>
+<li> **DEADLINE** :合同流签(合同过期)</li>
+<li> **CANCEL** :合同撤回</li>
+<li> **RELIEVED** :解除协议（已解除）</li></ul>
  
-     * @param string $FlowMessage 合同(流程)的信息
-     * @param integer $CreateOn 合同(流程)的创建时间戳，单位秒
-     * @param integer $DeadLine 合同(流程)的签署截止时间戳，单位秒
-     * @param string $CustomData 用户自定义数据
-     * @param array $FlowApproverInfos 合同(流程)的签署人数组
-     * @param array $CcInfos 合同(流程)关注方信息列表
-     * @param boolean $NeedCreateReview 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+     * @param string $FlowMessage 当合同流程状态为已拒签（即 FlowStatus=REJECT）或已撤销（即 FlowStatus=CANCEL ）时，此字段 FlowMessage 为拒签或撤销原因。
+     * @param integer $CreateOn 合同流程的创建时间戳，格式为Unix标准时间戳（秒）。
+     * @param integer $DeadLine 签署流程的签署截止时间, 值为unix时间戳, 精确到秒。
+     * @param string $CustomData 调用方自定义的个性化字段(可自定义此字段的值)，并以base64方式编码，支持的最大数据大小为 1000长度。
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。
+     * @param array $FlowApproverInfos 合同流程的签署方数组
+     * @param array $CcInfos 合同流程的关注方信息数组
+     * @param boolean $NeedCreateReview 是否需要发起前审批
+<ul><li>当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程</li>
+<li>当NeedCreateReview为false，不需要发起前审核的合同</li></ul>
      */
     function __construct()
     {

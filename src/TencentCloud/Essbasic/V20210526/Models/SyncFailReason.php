@@ -18,35 +18,31 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 同步经办人失败原因
+ * 同步员工失败原因
  *
- * @method string getId() 获取对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
- * @method void setId(string $Id) 设置对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
- * @method string getMessage() 获取失败原因
-例如：Id不符合规范、证件号码不合法等
+ * @method string getId() 获取企业员工标识(即OpenId)
+ * @method void setId(string $Id) 设置企业员工标识(即OpenId)
+ * @method string getMessage() 获取新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置失败原因
-例如：Id不符合规范、证件号码不合法等
+ * @method void setMessage(string $Message) 设置新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SyncFailReason extends AbstractModel
 {
     /**
-     * @var string 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
+     * @var string 企业员工标识(即OpenId)
      */
     public $Id;
 
     /**
-     * @var string 失败原因
-例如：Id不符合规范、证件号码不合法等
+     * @var string 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
-     * @param string $Id 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
-     * @param string $Message 失败原因
-例如：Id不符合规范、证件号码不合法等
+     * @param string $Id 企业员工标识(即OpenId)
+     * @param string $Message 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

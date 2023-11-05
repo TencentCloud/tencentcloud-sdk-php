@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置临时密钥开始时间
  * @method string getExpiredTime() 获取临时密钥到期时间
  * @method void setExpiredTime(string $ExpiredTime) 设置临时密钥到期时间
+ * @method string getCosSecurityToken() 获取临时密钥Token
+ * @method void setCosSecurityToken(string $CosSecurityToken) 设置临时密钥Token
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +70,7 @@ class DescribeUploadBackupInfoResponse extends AbstractModel
 
     /**
      * @var string 临时密钥Token
+     * @deprecated
      */
     public $XCosSecurityToken;
 
@@ -80,6 +83,11 @@ class DescribeUploadBackupInfoResponse extends AbstractModel
      * @var string 临时密钥到期时间
      */
     public $ExpiredTime;
+
+    /**
+     * @var string 临时密钥Token
+     */
+    public $CosSecurityToken;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -95,6 +103,7 @@ class DescribeUploadBackupInfoResponse extends AbstractModel
      * @param string $XCosSecurityToken 临时密钥Token
      * @param string $StartTime 临时密钥开始时间
      * @param string $ExpiredTime 临时密钥到期时间
+     * @param string $CosSecurityToken 临时密钥Token
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +149,10 @@ class DescribeUploadBackupInfoResponse extends AbstractModel
 
         if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
             $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("CosSecurityToken",$param) and $param["CosSecurityToken"] !== null) {
+            $this->CosSecurityToken = $param["CosSecurityToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

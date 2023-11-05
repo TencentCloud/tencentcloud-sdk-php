@@ -18,141 +18,178 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 解除协议的签署人，如不指定，默认使用待解除流程（即原流程）中的签署人。
-注意：不支持更换C端（个人身份类型）签署人，如果原流程中含有C端签署人，默认使用原流程中的该签署人。
-注意：目前不支持替换C端（个人身份类型）签署人，但是可以指定C端签署人的签署方自定义控件别名，具体见参数ApproverSignRole描述。 
-注意：当指定C端签署人的签署方自定义控件别名不空时，除参数ApproverNumber外，可以只参数ApproverSignRole。
+ * 解除协议的签署人，如不指定，默认使用待解除流程(原流程)中的签署人。</br>
+`注意`:
+ - 不支持更换C端(个人身份类型)签署人，如果原流程中含有C端签署人，默认使用原流程中的该签署人。
+ - 目前不支持替换C端(个人身份类型)签署人，但是可以指定C端签署人的签署方自定义控件别名，具体见参数ApproverSignRole描述。 
+ - 当指定C端签署人的签署方自定义控件别名不空时，除参数ApproverNumber外，可以只传参数ApproverSignRole。
 
-如果需要指定B端（机构身份类型）签署人，其中ReleasedApprover需要传递的参数如下：
-ApproverNumber, OrganizationName, ApproverType必传。
-对于其他身份标识
-- 子客企业指定经办人：OpenId必传，OrganizationOpenId必传；
-- 非子客企业：Name、Mobile必传。
+如果需要指定B端(企业身份类型)签署人，其中ReleasedApprover需要传递的参数如下：
+`ApproverNumber`, `OrganizationName`, `ApproverType`必传。</br>
+对于其他身份标识：
+- **子客企业指定经办人**：OpenId必传，OrganizationOpenId必传；
+- **非子客企业经办人**：Name、Mobile必传。
  *
- * @method string getOrganizationName() 获取企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
- * @method void setOrganizationName(string $OrganizationName) 设置企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
- * @method integer getApproverNumber() 获取签署人在原流程中的签署人列表中的顺序序号（从0开始，按顺序依次递增），如果不清楚原流程中的签署人列表，可以通过DescribeFlows接口查看
- * @method void setApproverNumber(integer $ApproverNumber) 设置签署人在原流程中的签署人列表中的顺序序号（从0开始，按顺序依次递增），如果不清楚原流程中的签署人列表，可以通过DescribeFlows接口查看
- * @method string getApproverType() 获取签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签
- * @method void setApproverType(string $ApproverType) 设置签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签
- * @method string getName() 获取签署人姓名，最大长度50个字符
- * @method void setName(string $Name) 设置签署人姓名，最大长度50个字符
- * @method string getIdCardType() 获取签署人身份证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
- * @method void setIdCardType(string $IdCardType) 设置签署人身份证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
- * @method string getIdCardNumber() 获取签署人证件号
- * @method void setIdCardNumber(string $IdCardNumber) 设置签署人证件号
- * @method string getMobile() 获取签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号
- * @method void setMobile(string $Mobile) 设置签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号
- * @method string getOrganizationOpenId() 获取企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
- * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
- * @method string getOpenId() 获取用户侧第三方id，最大长度64个字符
-当签署方为同一第三方应用下的员工时，该字必传
- * @method void setOpenId(string $OpenId) 设置用户侧第三方id，最大长度64个字符
-当签署方为同一第三方应用下的员工时，该字必传
- * @method string getApproverSignComponentType() 获取签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型
- * @method void setApproverSignComponentType(string $ApproverSignComponentType) 设置签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型
- * @method string getApproverSignRole() 获取签署方自定义控件别名，最大长度20个字符
- * @method void setApproverSignRole(string $ApproverSignRole) 设置签署方自定义控件别名，最大长度20个字符
+ * @method integer getApproverNumber() 获取签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。</br>
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
+ * @method void setApproverNumber(integer $ApproverNumber) 设置签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。</br>
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
+ * @method string getApproverType() 获取指定签署人类型，目前支持
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul>
+ * @method void setApproverType(string $ApproverType) 设置指定签署人类型，目前支持
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul>
+ * @method string getName() 获取签署人姓名，最大长度50个字。
+ * @method void setName(string $Name) 设置签署人姓名，最大长度50个字。
+ * @method string getIdCardType() 获取签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+ * @method void setIdCardType(string $IdCardType) 设置签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+ * @method string getIdCardNumber() 获取证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+ * @method void setIdCardNumber(string $IdCardNumber) 设置证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+ * @method string getMobile() 获取签署人手机号。
+ * @method void setMobile(string $Mobile) 设置签署人手机号。
+ * @method string getOrganizationName() 获取组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
+ * @method void setOrganizationName(string $OrganizationName) 设置组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
+ * @method string getOrganizationOpenId() 获取第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。</br>
+当为子客企业指定经办人时，此OrganizationOpenId必传。
+ * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。</br>
+当为子客企业指定经办人时，此OrganizationOpenId必传。
+ * @method string getOpenId() 获取第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。</br>
+当签署方为同一第三方平台下的员工时，此OpenId必传。
+ * @method void setOpenId(string $OpenId) 设置第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。</br>
+当签署方为同一第三方平台下的员工时，此OpenId必传。
+ * @method string getApproverSignComponentType() 获取签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
+ * @method void setApproverSignComponentType(string $ApproverSignComponentType) 设置签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
+ * @method string getApproverSignRole() 获取参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。</br>
+如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+ * @method void setApproverSignRole(string $ApproverSignRole) 设置参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。</br>
+如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
  */
 class ReleasedApprover extends AbstractModel
 {
     /**
-     * @var string 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
-     */
-    public $OrganizationName;
-
-    /**
-     * @var integer 签署人在原流程中的签署人列表中的顺序序号（从0开始，按顺序依次递增），如果不清楚原流程中的签署人列表，可以通过DescribeFlows接口查看
+     * @var integer 签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。</br>
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
      */
     public $ApproverNumber;
 
     /**
-     * @var string 签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签
+     * @var string 指定签署人类型，目前支持
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul>
      */
     public $ApproverType;
 
     /**
-     * @var string 签署人姓名，最大长度50个字符
+     * @var string 签署人姓名，最大长度50个字。
      */
     public $Name;
 
     /**
-     * @var string 签署人身份证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+     * @var string 签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
      */
     public $IdCardType;
 
     /**
-     * @var string 签署人证件号
+     * @var string 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public $IdCardNumber;
 
     /**
-     * @var string 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号
+     * @var string 签署人手机号。
      */
     public $Mobile;
 
     /**
-     * @var string 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+     * @var string 组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
+     */
+    public $OrganizationName;
+
+    /**
+     * @var string 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。</br>
+当为子客企业指定经办人时，此OrganizationOpenId必传。
      */
     public $OrganizationOpenId;
 
     /**
-     * @var string 用户侧第三方id，最大长度64个字符
-当签署方为同一第三方应用下的员工时，该字必传
+     * @var string 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。</br>
+当签署方为同一第三方平台下的员工时，此OpenId必传。
      */
     public $OpenId;
 
     /**
-     * @var string 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型
+     * @var string 签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
      */
     public $ApproverSignComponentType;
 
     /**
-     * @var string 签署方自定义控件别名，最大长度20个字符
+     * @var string 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。</br>
+如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
      */
     public $ApproverSignRole;
 
     /**
-     * @param string $OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
-     * @param integer $ApproverNumber 签署人在原流程中的签署人列表中的顺序序号（从0开始，按顺序依次递增），如果不清楚原流程中的签署人列表，可以通过DescribeFlows接口查看
-     * @param string $ApproverType 签署人类型，目前仅支持
-ORGANIZATION-企业
-ENTERPRISESERVER-企业静默签
-     * @param string $Name 签署人姓名，最大长度50个字符
-     * @param string $IdCardType 签署人身份证件类型
-1.ID_CARD 居民身份证
-2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
-3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
-     * @param string $IdCardNumber 签署人证件号
-     * @param string $Mobile 签署人手机号，脱敏显示。大陆手机号为11位，暂不支持海外手机号
-     * @param string $OrganizationOpenId 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
-     * @param string $OpenId 用户侧第三方id，最大长度64个字符
-当签署方为同一第三方应用下的员工时，该字必传
-     * @param string $ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
-- SIGN_SEAL-默认为印章控件类型
-- SIGN_SIGNATURE-手写签名控件类型
-     * @param string $ApproverSignRole 签署方自定义控件别名，最大长度20个字符
+     * @param integer $ApproverNumber 签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。</br>
+可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
+     * @param string $ApproverType 指定签署人类型，目前支持
+<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<li> **ENTERPRISESERVER**：企业静默签</li></ul>
+     * @param string $Name 签署人姓名，最大长度50个字。
+     * @param string $IdCardType 签署方经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+     * @param string $IdCardNumber 证件号码，应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * @param string $Mobile 签署人手机号。
+     * @param string $OrganizationName 组织机构名称。
+请确认该名称与企业营业执照中注册的名称一致。
+如果名称中包含英文括号()，请使用中文括号（）代替。
+如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
+     * @param string $OrganizationOpenId 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。</br>
+当为子客企业指定经办人时，此OrganizationOpenId必传。
+     * @param string $OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。</br>
+当签署方为同一第三方平台下的员工时，此OpenId必传。
+     * @param string $ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件类型
+<ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
+<li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
+     * @param string $ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。</br>
+如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
      */
     function __construct()
     {
@@ -167,10 +204,6 @@ ENTERPRISESERVER-企业静默签
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
-            $this->OrganizationName = $param["OrganizationName"];
-        }
-
         if (array_key_exists("ApproverNumber",$param) and $param["ApproverNumber"] !== null) {
             $this->ApproverNumber = $param["ApproverNumber"];
         }
@@ -193,6 +226,10 @@ ENTERPRISESERVER-企业静默签
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
+            $this->OrganizationName = $param["OrganizationName"];
         }
 
         if (array_key_exists("OrganizationOpenId",$param) and $param["OrganizationOpenId"] !== null) {

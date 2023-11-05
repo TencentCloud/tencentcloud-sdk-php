@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowDetailInfo返回参数结构体
  *
- * @method string getApplicationId() 获取第三方平台应用号Id
- * @method void setApplicationId(string $ApplicationId) 设置第三方平台应用号Id
- * @method string getProxyOrganizationOpenId() 获取第三方平台子客企业OpenId
- * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置第三方平台子客企业OpenId
- * @method array getFlowInfo() 获取合同(签署流程)的具体详细描述信息
+ * @method string getApplicationId() 获取合同归属的第三方平台应用号ID
+ * @method void setApplicationId(string $ApplicationId) 设置合同归属的第三方平台应用号ID
+ * @method string getProxyOrganizationOpenId() 获取合同归属的第三方平台子客企业OpenId
+ * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置合同归属的第三方平台子客企业OpenId
+ * @method array getFlowInfo() 获取合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowInfo(array $FlowInfo) 设置合同(签署流程)的具体详细描述信息
+ * @method void setFlowInfo(array $FlowInfo) 设置合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFlowGroupId() 获取合同组编号
+ * @method string getFlowGroupId() 获取合同组ID，只有在查询合同组信息时才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowGroupId(string $FlowGroupId) 设置合同组编号
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组ID，只有在查询合同组信息时才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFlowGroupName() 获取合同组名称
+ * @method string getFlowGroupName() 获取合同组名称，只有在查询合同组信息时才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称
+ * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称，只有在查询合同组信息时才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,29 +44,30 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFlowDetailInfoResponse extends AbstractModel
 {
     /**
-     * @var string 第三方平台应用号Id
+     * @var string 合同归属的第三方平台应用号ID
      */
     public $ApplicationId;
 
     /**
-     * @var string 第三方平台子客企业OpenId
+     * @var string 合同归属的第三方平台子客企业OpenId
      */
     public $ProxyOrganizationOpenId;
 
     /**
-     * @var array 合同(签署流程)的具体详细描述信息
+     * @var array 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowInfo;
 
     /**
-     * @var string 合同组编号
+     * @var string 合同组ID，只有在查询合同组信息时才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowGroupId;
 
     /**
-     * @var string 合同组名称
+     * @var string 合同组名称，只有在查询合同组信息时才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowGroupName;
@@ -75,13 +78,14 @@ class DescribeFlowDetailInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ApplicationId 第三方平台应用号Id
-     * @param string $ProxyOrganizationOpenId 第三方平台子客企业OpenId
-     * @param array $FlowInfo 合同(签署流程)的具体详细描述信息
+     * @param string $ApplicationId 合同归属的第三方平台应用号ID
+     * @param string $ProxyOrganizationOpenId 合同归属的第三方平台子客企业OpenId
+     * @param array $FlowInfo 合同流程的详细信息。
+如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FlowGroupId 合同组编号
+     * @param string $FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FlowGroupName 合同组名称
+     * @param string $FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

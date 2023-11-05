@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrno(integer $Errno) 设置返回错误码
  * @method string getMsg() 获取返回错误信息
  * @method void setMsg(string $Msg) 设置返回错误信息
+ * @method integer getCode() 获取返回错误码
+ * @method void setCode(integer $Code) 设置返回错误码
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,6 +33,7 @@ class ModifyBackupStrategyResponse extends AbstractModel
 {
     /**
      * @var integer 返回错误码
+     * @deprecated
      */
     public $Errno;
 
@@ -40,6 +43,11 @@ class ModifyBackupStrategyResponse extends AbstractModel
     public $Msg;
 
     /**
+     * @var integer 返回错误码
+     */
+    public $Code;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +55,7 @@ class ModifyBackupStrategyResponse extends AbstractModel
     /**
      * @param integer $Errno 返回错误码
      * @param string $Msg 返回错误信息
+     * @param integer $Code 返回错误码
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +77,10 @@ class ModifyBackupStrategyResponse extends AbstractModel
 
         if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
             $this->Msg = $param["Msg"];
+        }
+
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

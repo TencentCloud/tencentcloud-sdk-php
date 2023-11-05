@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置查询总数
  * @method array getSlowlogs() 获取慢查询日志信息列表
  * @method void setSlowlogs(array $Slowlogs) 设置慢查询日志信息列表
+ * @method array getSlowLogs() 获取慢查询日志信息列表
+ * @method void setSlowLogs(array $SlowLogs) 设置慢查询日志信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,8 +38,14 @@ class DescribeSlowlogsResponse extends AbstractModel
 
     /**
      * @var array 慢查询日志信息列表
+     * @deprecated
      */
     public $Slowlogs;
+
+    /**
+     * @var array 慢查询日志信息列表
+     */
+    public $SlowLogs;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,6 +55,7 @@ class DescribeSlowlogsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 查询总数
      * @param array $Slowlogs 慢查询日志信息列表
+     * @param array $SlowLogs 慢查询日志信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +81,15 @@ class DescribeSlowlogsResponse extends AbstractModel
                 $obj = new SlowlogInfo();
                 $obj->deserialize($value);
                 array_push($this->Slowlogs, $obj);
+            }
+        }
+
+        if (array_key_exists("SlowLogs",$param) and $param["SlowLogs"] !== null) {
+            $this->SlowLogs = [];
+            foreach ($param["SlowLogs"] as $key => $value){
+                $obj = new SlowLog();
+                $obj->deserialize($value);
+                array_push($this->SlowLogs, $obj);
             }
         }
 

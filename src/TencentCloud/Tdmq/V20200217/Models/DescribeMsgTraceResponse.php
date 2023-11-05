@@ -14,45 +14,46 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SyncProxyOrganizationOperators返回参数结构体
+ * DescribeMsgTrace返回参数结构体
  *
- * @method integer getStatus() 获取 同步的状态,  全部同步失败接口是接口会直接报错
-
-<ul><li> **1** :全部成功</li>
-<li> **2** :部分成功</li></ul>
+ * @method ProducerLog getProducerLog() 获取生产信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置 同步的状态,  全部同步失败接口是接口会直接报错
-
-<ul><li> **1** :全部成功</li>
-<li> **2** :部分成功</li></ul>
+ * @method void setProducerLog(ProducerLog $ProducerLog) 设置生产信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFailedList() 获取同步失败员工ID及其失败原因
+ * @method ServerLog getServerLog() 获取服务方信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailedList(array $FailedList) 设置同步失败员工ID及其失败原因
+ * @method void setServerLog(ServerLog $ServerLog) 设置服务方信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ConsumerLogs getConsumerLogs() 获取消费信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsumerLogs(ConsumerLogs $ConsumerLogs) 设置消费信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SyncProxyOrganizationOperatorsResponse extends AbstractModel
+class DescribeMsgTraceResponse extends AbstractModel
 {
     /**
-     * @var integer  同步的状态,  全部同步失败接口是接口会直接报错
-
-<ul><li> **1** :全部成功</li>
-<li> **2** :部分成功</li></ul>
+     * @var ProducerLog 生产信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Status;
+    public $ProducerLog;
 
     /**
-     * @var array 同步失败员工ID及其失败原因
+     * @var ServerLog 服务方信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FailedList;
+    public $ServerLog;
+
+    /**
+     * @var ConsumerLogs 消费信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsumerLogs;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -60,12 +61,11 @@ class SyncProxyOrganizationOperatorsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status  同步的状态,  全部同步失败接口是接口会直接报错
-
-<ul><li> **1** :全部成功</li>
-<li> **2** :部分成功</li></ul>
+     * @param ProducerLog $ProducerLog 生产信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FailedList 同步失败员工ID及其失败原因
+     * @param ServerLog $ServerLog 服务方信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsumerLogs $ConsumerLogs 消费信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -82,17 +82,19 @@ class SyncProxyOrganizationOperatorsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("ProducerLog",$param) and $param["ProducerLog"] !== null) {
+            $this->ProducerLog = new ProducerLog();
+            $this->ProducerLog->deserialize($param["ProducerLog"]);
         }
 
-        if (array_key_exists("FailedList",$param) and $param["FailedList"] !== null) {
-            $this->FailedList = [];
-            foreach ($param["FailedList"] as $key => $value){
-                $obj = new SyncFailReason();
-                $obj->deserialize($value);
-                array_push($this->FailedList, $obj);
-            }
+        if (array_key_exists("ServerLog",$param) and $param["ServerLog"] !== null) {
+            $this->ServerLog = new ServerLog();
+            $this->ServerLog->deserialize($param["ServerLog"]);
+        }
+
+        if (array_key_exists("ConsumerLogs",$param) and $param["ConsumerLogs"] !== null) {
+            $this->ConsumerLogs = new ConsumerLogs();
+            $this->ConsumerLogs->deserialize($param["ConsumerLogs"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

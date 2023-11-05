@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserAccessDesc(string $UserAccessDesc) 设置用户类型
  * @method string getCreateTime() 获取数据库创建时间
  * @method void setCreateTime(string $CreateTime) 设置数据库创建时间
+ * @method string getIsFullTextEnabled() 获取是否全文启用 0：否 1：是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsFullTextEnabled(string $IsFullTextEnabled) 设置是否全文启用 0：否 1：是
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DbNormalDetail extends AbstractModel
 {
@@ -98,6 +102,7 @@ class DbNormalDetail extends AbstractModel
 
     /**
      * @var string 是否全文启用 0：否 1：是
+     * @deprecated
      */
     public $IsFulltextEnabled;
 
@@ -157,6 +162,12 @@ class DbNormalDetail extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 是否全文启用 0：否 1：是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsFullTextEnabled;
+
+    /**
      * @param string $IsSubscribed 是否已订阅 0：否 1：是
      * @param string $CollationName 数据库排序规则
      * @param string $IsAutoCleanupOn 开启CT之后是否自动清理 0：否 1：是
@@ -176,6 +187,8 @@ class DbNormalDetail extends AbstractModel
      * @param string $StateDesc 数据库状态
      * @param string $UserAccessDesc 用户类型
      * @param string $CreateTime 数据库创建时间
+     * @param string $IsFullTextEnabled 是否全文启用 0：否 1：是
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -264,6 +277,10 @@ class DbNormalDetail extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("IsFullTextEnabled",$param) and $param["IsFullTextEnabled"] !== null) {
+            $this->IsFullTextEnabled = $param["IsFullTextEnabled"];
         }
     }
 }

@@ -78,9 +78,10 @@ use TencentCloud\Ess\V20201111\Models as Models;
 5. 预览合同流程
 
 用户可以通过这些链接快速将其集成到自己的系统中。
- * @method Models\CreateExtendedServiceAuthInfosResponse CreateExtendedServiceAuthInfos(Models\CreateExtendedServiceAuthInfosRequest $req) 创建企业扩展服务授权，当前仅支持授权 “企业自动签” 给企业员工。
+ * @method Models\CreateExtendedServiceAuthInfosResponse CreateExtendedServiceAuthInfos(Models\CreateExtendedServiceAuthInfosRequest $req) 创建企业扩展服务授权，当前仅支持授权 “企业自动签” 和 “批量签署” 给企业员工。
+该接口作用和电子签控制台 企业设置-扩展服务-企业自动签署和批量签署授权 两个模块功能相同，可通过该接口授权给企业员工。
 
-注：支持集团代子企业操作，请联系运营开通此功能。
+注：“企业自动签授权”支持集团代子企业操作，请联系运营开通此功能。
  * @method Models\CreateFlowResponse CreateFlow(Models\CreateFlowRequest $req) 通过模板创建签署流程<br/>
 适用场景：在标准制式的合同场景中，可通过提前预制好模板文件，每次调用模板文件的id，补充合同内容信息及签署信息生成电子合同。
 
@@ -262,7 +263,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateWebThemeConfigResponse CreateWebThemeConfig(Models\CreateWebThemeConfigRequest $req) 用来设置本企业嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），设置后获取的web签署界面都会使用此配置进行展示。
 
 如果多次调用，会以最后一次的配置为准
- * @method Models\DeleteExtendedServiceAuthInfosResponse DeleteExtendedServiceAuthInfos(Models\DeleteExtendedServiceAuthInfosRequest $req) 删除企业扩展服务授权，当前仅支持 “企业自动签” 取消授权。
+ * @method Models\DeleteExtendedServiceAuthInfosResponse DeleteExtendedServiceAuthInfos(Models\DeleteExtendedServiceAuthInfosRequest $req) 删除企业扩展服务授权，当前仅支持 “企业自动签” 和“批量签署”  的取消授权。
+该接口作用和电子签控制台 企业设置-扩展服务-企业自动签署和批量签署授权 两个模块功能相同，可通过该接口取消企业员工授权。
 
 注：支持集团代子企业操作，请联系运营开通此功能。
  * @method Models\DeleteIntegrationDepartmentResponse DeleteIntegrationDepartment(Models\DeleteIntegrationDepartmentRequest $req) 此接口（DeleteIntegrationDepartment）用于删除企业的部门信息。
@@ -306,6 +308,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 >- 填写控件 Components
 >- 签署控件 SignComponents
 >- 生成模板的文件基础信息 FileInfos
+
+![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeTemplates.png)
 
 当模板较多或模板中的控件较多时，可以通过查询模板接口更方便的获取模板列表，以及每个模板内的控件信息。
 

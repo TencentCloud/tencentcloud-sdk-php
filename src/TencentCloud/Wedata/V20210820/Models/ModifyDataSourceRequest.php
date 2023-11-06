@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCOSBucket(string $COSBucket) 设置cos bucket
  * @method string getCOSRegion() 获取cos region
  * @method void setCOSRegion(string $COSRegion) 设置cos region
+ * @method string getProjectId() 获取操作项目id
+ * @method void setProjectId(string $ProjectId) 设置操作项目id
  */
 class ModifyDataSourceRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class ModifyDataSourceRequest extends AbstractModel
     public $COSRegion;
 
     /**
+     * @var string 操作项目id
+     */
+    public $ProjectId;
+
+    /**
      * @param string $Name 数据源名称，在相同SpaceName下，数据源名称不能为空
      * @param string $Category 数据源类别：绑定引擎、绑定数据库
      * @param string $Type 数据源类型:枚举值
@@ -168,6 +175,7 @@ class ModifyDataSourceRequest extends AbstractModel
      * @param string $OwnerProjectIdent 项目中文名
      * @param string $COSBucket cos bucket
      * @param string $COSRegion cos region
+     * @param string $ProjectId 操作项目id
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class ModifyDataSourceRequest extends AbstractModel
 
         if (array_key_exists("COSRegion",$param) and $param["COSRegion"] !== null) {
             $this->COSRegion = $param["COSRegion"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

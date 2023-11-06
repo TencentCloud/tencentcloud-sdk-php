@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeWorkflow(boolean $IncludeWorkflow) 设置是否包含工作流
  * @method boolean getIncludeTask() 获取是否包含任务
  * @method void setIncludeTask(boolean $IncludeTask) 设置是否包含任务
+ * @method boolean getIncludeVirtualTask() 获取是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
+ * @method void setIncludeVirtualTask(boolean $IncludeVirtualTask) 设置是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
  */
 class DescribeDsFolderTreeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeDsFolderTreeRequest extends AbstractModel
     public $IncludeTask;
 
     /**
+     * @var boolean 是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
+     */
+    public $IncludeVirtualTask;
+
+    /**
      * @param string $ProjectId 项目id
      * @param boolean $FirstLevelPull 是否一级拉取
      * @param string $FolderId 文件夹ID
@@ -80,6 +87,7 @@ class DescribeDsFolderTreeRequest extends AbstractModel
      * @param string $Keyword 关键字搜索
      * @param boolean $IncludeWorkflow 是否包含工作流
      * @param boolean $IncludeTask 是否包含任务
+     * @param boolean $IncludeVirtualTask 是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeDsFolderTreeRequest extends AbstractModel
 
         if (array_key_exists("IncludeTask",$param) and $param["IncludeTask"] !== null) {
             $this->IncludeTask = $param["IncludeTask"];
+        }
+
+        if (array_key_exists("IncludeVirtualTask",$param) and $param["IncludeVirtualTask"] !== null) {
+            $this->IncludeVirtualTask = $param["IncludeVirtualTask"];
         }
     }
 }

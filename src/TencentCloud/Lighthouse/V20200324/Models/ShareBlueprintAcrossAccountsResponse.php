@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ChannelBatchCancelFlows返回参数结构体
+ * ShareBlueprintAcrossAccounts返回参数结构体
  *
- * @method array getFailMessages() 获取签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
-
-注:  `如果全部撤销成功, 此数组为空数组`
- * @method void setFailMessages(array $FailMessages) 设置签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
-
-注:  `如果全部撤销成功, 此数组为空数组`
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ChannelBatchCancelFlowsResponse extends AbstractModel
+class ShareBlueprintAcrossAccountsResponse extends AbstractModel
 {
-    /**
-     * @var array 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
-
-注:  `如果全部撤销成功, 此数组为空数组`
-     */
-    public $FailMessages;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $FailMessages 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为"", 失败则对应失败原因
-
-注:  `如果全部撤销成功, 此数组为空数组`
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,10 +46,6 @@ class ChannelBatchCancelFlowsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FailMessages",$param) and $param["FailMessages"] !== null) {
-            $this->FailMessages = $param["FailMessages"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

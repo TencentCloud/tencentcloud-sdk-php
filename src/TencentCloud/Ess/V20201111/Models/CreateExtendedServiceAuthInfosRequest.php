@@ -26,18 +26,14 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method array getUserIds() 获取本企业员工的id，需要已实名，正常在职员工
  * @method void setUserIds(array $UserIds) 设置本企业员工的id，需要已实名，正常在职员工
- * @method string getExtendServiceType() 获取要查询的扩展服务类型。
-默认为空，即查询当前支持的所有扩展服务信息。
-若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+ * @method string getExtendServiceType() 获取取值
 <ul><li>OPEN_SERVER_SIGN：企业自动签</li>
+<li>BATCH_SIGN：批量签署</li>
 </ul>
-
- * @method void setExtendServiceType(string $ExtendServiceType) 设置要查询的扩展服务类型。
-默认为空，即查询当前支持的所有扩展服务信息。
-若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+ * @method void setExtendServiceType(string $ExtendServiceType) 设置取值
 <ul><li>OPEN_SERVER_SIGN：企业自动签</li>
+<li>BATCH_SIGN：批量签署</li>
 </ul>
-
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -57,12 +53,10 @@ class CreateExtendedServiceAuthInfosRequest extends AbstractModel
     public $UserIds;
 
     /**
-     * @var string 要查询的扩展服务类型。
-默认为空，即查询当前支持的所有扩展服务信息。
-若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+     * @var string 取值
 <ul><li>OPEN_SERVER_SIGN：企业自动签</li>
+<li>BATCH_SIGN：批量签署</li>
 </ul>
-
      */
     public $ExtendServiceType;
 
@@ -76,12 +70,10 @@ class CreateExtendedServiceAuthInfosRequest extends AbstractModel
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param array $UserIds 本企业员工的id，需要已实名，正常在职员工
-     * @param string $ExtendServiceType 要查询的扩展服务类型。
-默认为空，即查询当前支持的所有扩展服务信息。
-若需查询单个扩展服务的开通情况，请传递相应的值，如下所示：
+     * @param string $ExtendServiceType 取值
 <ul><li>OPEN_SERVER_SIGN：企业自动签</li>
+<li>BATCH_SIGN：批量签署</li>
 </ul>
-
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */

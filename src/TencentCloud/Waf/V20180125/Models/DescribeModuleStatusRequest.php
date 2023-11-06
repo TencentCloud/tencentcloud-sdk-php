@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20210820\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteDataSources请求参数结构体
+ * DescribeModuleStatus请求参数结构体
  *
- * @method array getIds() 获取id列表
- * @method void setIds(array $Ids) 设置id列表
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
+
  */
-class DeleteDataSourcesRequest extends AbstractModel
+class DescribeModuleStatusRequest extends AbstractModel
 {
-    /**
-     * @var array id列表
-     */
-    public $Ids;
+
 
     /**
-     * @var string 项目id
-     */
-    public $ProjectId;
 
-    /**
-     * @param array $Ids id列表
-     * @param string $ProjectId 项目id
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class DeleteDataSourcesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
-            $this->Ids = $param["Ids"];
-        }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
     }
 }

@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
 
 电话呼出	        210	           notInService	不在服务区
 
+电话呼入&呼出	211    clientError    客户端错误
+
  * @method void setEndStatus(integer $EndStatus) 设置EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -122,6 +124,8 @@ use TencentCloud\Common\AbstractModel;
 
 电话呼出	        210	           notInService	不在服务区
 
+电话呼入&呼出	211    clientError    客户端错误
+
  * @method string getSkillGroup() 获取技能组名称
  * @method void setSkillGroup(string $SkillGroup) 设置技能组名称
  * @method string getCallerLocation() 获取主叫归属地
@@ -146,9 +150,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIVRKeyPressed(array $IVRKeyPressed) 设置IVR 按键信息 ，e.g. ["1","2","3"]
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHungUpSide() 获取挂机方 seat 坐席 user 用户
+ * @method string getHungUpSide() 获取挂机方 seat 坐席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHungUpSide(string $HungUpSide) 设置挂机方 seat 坐席 user 用户
+ * @method void setHungUpSide(string $HungUpSide) 设置挂机方 seat 坐席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServeParticipants() 获取服务参与者列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -183,7 +187,7 @@ use TencentCloud\Common\AbstractModel;
 电话呼出               2	              unconnected	未接通
                          
 电话呼出             201            unknown	未知状态
-听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -199,6 +203,8 @@ use TencentCloud\Common\AbstractModel;
 电话呼出         	209	           callerCancel	主叫取消
 
 电话呼出	        210	           notInService	不在服务区
+
+电话呼入&呼出	211    clientError    客户端错误
 
 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,7 +233,7 @@ use TencentCloud\Common\AbstractModel;
 电话呼出               2	              unconnected	未接通
                          
 电话呼出             201            unknown	未知状态
-听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -243,6 +249,8 @@ use TencentCloud\Common\AbstractModel;
 电话呼出         	209	           callerCancel	主叫取消
 
 电话呼出	        210	           notInService	不在服务区
+
+电话呼入&呼出	211    clientError    客户端错误
 
 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -397,6 +405,8 @@ class TelCdrInfo extends AbstractModel
 
 电话呼出	        210	           notInService	不在服务区
 
+电话呼入&呼出	211    clientError    客户端错误
+
      */
     public $EndStatus;
 
@@ -441,7 +451,7 @@ class TelCdrInfo extends AbstractModel
     public $IVRKeyPressed;
 
     /**
-     * @var string 挂机方 seat 坐席 user 用户
+     * @var string 挂机方 seat 坐席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HungUpSide;
@@ -484,7 +494,7 @@ class TelCdrInfo extends AbstractModel
 电话呼出               2	              unconnected	未接通
                          
 电话呼出             201            unknown	未知状态
-听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -500,6 +510,8 @@ class TelCdrInfo extends AbstractModel
 电话呼出         	209	           callerCancel	主叫取消
 
 电话呼出	        210	           notInService	不在服务区
+
+电话呼入&呼出	211    clientError    客户端错误
 
 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -655,6 +667,8 @@ class TelCdrInfo extends AbstractModel
 
 电话呼出	        210	           notInService	不在服务区
 
+电话呼入&呼出	211    clientError    客户端错误
+
      * @param string $SkillGroup 技能组名称
      * @param string $CallerLocation 主叫归属地
      * @param integer $IVRDuration IVR 阶段耗时
@@ -667,7 +681,7 @@ class TelCdrInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IVRKeyPressed IVR 按键信息 ，e.g. ["1","2","3"]
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HungUpSide 挂机方 seat 坐席 user 用户
+     * @param string $HungUpSide 挂机方 seat 坐席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServeParticipants 服务参与者列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -698,7 +712,7 @@ class TelCdrInfo extends AbstractModel
 电话呼出               2	              unconnected	未接通
                          
 电话呼出             201            unknown	未知状态
-听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -714,6 +728,8 @@ class TelCdrInfo extends AbstractModel
 电话呼出         	209	           callerCancel	主叫取消
 
 电话呼出	        210	           notInService	不在服务区
+
+电话呼入&呼出	211    clientError    客户端错误
 
 
 注意：此字段可能返回 null，表示取不到有效值。

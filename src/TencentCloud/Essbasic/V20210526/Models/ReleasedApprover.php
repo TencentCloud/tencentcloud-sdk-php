@@ -45,11 +45,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIdCardType() 获取签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method void setIdCardType(string $IdCardType) 设置签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method string getIdCardNumber() 获取证件号码，应符合以下规则
 <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
@@ -111,7 +111,7 @@ class ReleasedApprover extends AbstractModel
      * @var string 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
     public $IdCardType;
 
@@ -171,7 +171,7 @@ class ReleasedApprover extends AbstractModel
      * @param string $IdCardType 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param string $IdCardNumber 证件号码，应符合以下规则
 <ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>

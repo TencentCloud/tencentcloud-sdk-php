@@ -44,6 +44,8 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\AttachCcnResponse AttachCcn(Models\AttachCcnRequest $req) 本接口 (AttachCcn) 用于建立与云联网的关联。
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 本接口（AttachDisks）用于挂载一个或多个云硬盘。
+ * @method Models\CancelShareBlueprintAcrossAccountsResponse CancelShareBlueprintAcrossAccounts(Models\CancelShareBlueprintAcrossAccountsRequest $req) 本接口（CancelShareBlueprintAcrossAccounts）用于取消镜像跨账号共享。
+指定的镜像ID必须为自定义镜像，且指定账号ID必须已进行共享。
  * @method Models\CreateBlueprintResponse CreateBlueprint(Models\CreateBlueprintRequest $req) 本接口 (CreateBlueprint) 用于创建镜像。
  * @method Models\CreateDiskBackupResponse CreateDiskBackup(Models\CreateDiskBackupRequest $req) 本接口 ( CreateDiskBackup  ) 用于创建指定云硬盘（当前只支持数据盘）的备份点。
  * @method Models\CreateDisksResponse CreateDisks(Models\CreateDisksRequest $req) 本接口(CreateDisks)用于创建一个或多个云硬盘。
@@ -245,6 +247,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 注意：强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏。
  * @method Models\RestartDockerContainersResponse RestartDockerContainers(Models\RestartDockerContainersRequest $req) 重启实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重启情况。
  * @method Models\RunDockerContainersResponse RunDockerContainers(Models\RunDockerContainersRequest $req) 创建并运行多个Docker容器，之后可以通过返回的ActivityIds调用DescribeDockerActivities接口查询创建情况。
+ * @method Models\ShareBlueprintAcrossAccountsResponse ShareBlueprintAcrossAccounts(Models\ShareBlueprintAcrossAccountsRequest $req) 本接口（ShareBlueprintAcrossAccounts）用于跨账号共享镜像。
+仅支持共享自定义镜像， 且用于共享的镜像状态必须为NORMAL。
+共享的账号必须为主账号。
  * @method Models\StartDockerContainersResponse StartDockerContainers(Models\StartDockerContainersRequest $req) 启动实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询启动情况。
  * @method Models\StartInstancesResponse StartInstances(Models\StartInstancesRequest $req) 本接口（StartInstances）用于启动一个或多个实例。
 

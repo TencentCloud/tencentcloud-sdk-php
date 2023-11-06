@@ -25,27 +25,17 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
 <li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
 <li>**3**：文件被篡改。</li>
-<li>**4**：异常：文件内没有签名域。</li>
+<li>**4**：异常：文件内没有签名域。(如果合同还没有签署也会返回此代码)</li>
 <li>**5**：异常：文件签名格式错误。</li></ul>
  * @method void setVerifyResult(integer $VerifyResult) 设置验签结果代码，代码的含义如下：
 
 <ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
 <li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
 <li>**3**：文件被篡改。</li>
-<li>**4**：异常：文件内没有签名域。</li>
+<li>**4**：异常：文件内没有签名域。(如果合同还没有签署也会返回此代码)</li>
 <li>**5**：异常：文件签名格式错误。</li></ul>
- * @method array getPdfVerifyResults() 获取验签结果详情，每个签名域对应的验签结果。状态值如下
-<ul><li> **1** :验签成功，在电子签签署</li>
-<li> **2** :验签成功，在其他平台签署</li>
-<li> **3** :验签失败</li>
-<li> **4** :pdf文件没有签名域</li>
-<li> **5** :文件签名格式错误</li></ul>
- * @method void setPdfVerifyResults(array $PdfVerifyResults) 设置验签结果详情，每个签名域对应的验签结果。状态值如下
-<ul><li> **1** :验签成功，在电子签签署</li>
-<li> **2** :验签成功，在其他平台签署</li>
-<li> **3** :验签失败</li>
-<li> **4** :pdf文件没有签名域</li>
-<li> **5** :文件签名格式错误</li></ul>
+ * @method array getPdfVerifyResults() 获取验签结果详情，所有签署区(包括签名区, 印章区, 日期签署区,骑缝章等)的签署验签结果
+ * @method void setPdfVerifyResults(array $PdfVerifyResults) 设置验签结果详情，所有签署区(包括签名区, 印章区, 日期签署区,骑缝章等)的签署验签结果
  * @method string getVerifySerialNo() 获取验签序列号, 为11为数组组成的字符串
  * @method void setVerifySerialNo(string $VerifySerialNo) 设置验签序列号, 为11为数组组成的字符串
  * @method string getPdfResourceMd5() 获取合同文件MD5哈希值
@@ -61,18 +51,13 @@ class ChannelVerifyPdfResponse extends AbstractModel
 <ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
 <li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
 <li>**3**：文件被篡改。</li>
-<li>**4**：异常：文件内没有签名域。</li>
+<li>**4**：异常：文件内没有签名域。(如果合同还没有签署也会返回此代码)</li>
 <li>**5**：异常：文件签名格式错误。</li></ul>
      */
     public $VerifyResult;
 
     /**
-     * @var array 验签结果详情，每个签名域对应的验签结果。状态值如下
-<ul><li> **1** :验签成功，在电子签签署</li>
-<li> **2** :验签成功，在其他平台签署</li>
-<li> **3** :验签失败</li>
-<li> **4** :pdf文件没有签名域</li>
-<li> **5** :文件签名格式错误</li></ul>
+     * @var array 验签结果详情，所有签署区(包括签名区, 印章区, 日期签署区,骑缝章等)的签署验签结果
      */
     public $PdfVerifyResults;
 
@@ -97,14 +82,9 @@ class ChannelVerifyPdfResponse extends AbstractModel
 <ul><li>**1**：文件未被篡改，全部签名在腾讯电子签完成。</li>
 <li>**2**：文件未被篡改，部分签名在腾讯电子签完成。</li>
 <li>**3**：文件被篡改。</li>
-<li>**4**：异常：文件内没有签名域。</li>
+<li>**4**：异常：文件内没有签名域。(如果合同还没有签署也会返回此代码)</li>
 <li>**5**：异常：文件签名格式错误。</li></ul>
-     * @param array $PdfVerifyResults 验签结果详情，每个签名域对应的验签结果。状态值如下
-<ul><li> **1** :验签成功，在电子签签署</li>
-<li> **2** :验签成功，在其他平台签署</li>
-<li> **3** :验签失败</li>
-<li> **4** :pdf文件没有签名域</li>
-<li> **5** :文件签名格式错误</li></ul>
+     * @param array $PdfVerifyResults 验签结果详情，所有签署区(包括签名区, 印章区, 日期签署区,骑缝章等)的签署验签结果
      * @param string $VerifySerialNo 验签序列号, 为11为数组组成的字符串
      * @param string $PdfResourceMd5 合同文件MD5哈希值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

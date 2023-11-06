@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleId(string $RoleId) 设置角色Id，可通过接口 ChannelDescribeRoles 查询获取
  * @method string getDescription() 获取角色描述，最大长度为50个字符
  * @method void setDescription(string $Description) 设置角色描述，最大长度为50个字符
- * @method array getPermissionGroups() 获取权限树，权限树内容 PermissionGroups 可参考接口 DescribeIntegrationRoles 的输出
- * @method void setPermissionGroups(array $PermissionGroups) 设置权限树，权限树内容 PermissionGroups 可参考接口 DescribeIntegrationRoles 的输出
+ * @method array getPermissionGroups() 获取权限树，权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles的输出
+ * @method void setPermissionGroups(array $PermissionGroups) 设置权限树，权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles的输出
  */
 class ChannelModifyRoleRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ChannelModifyRoleRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array 权限树，权限树内容 PermissionGroups 可参考接口 DescribeIntegrationRoles 的输出
+     * @var array 权限树，权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles的输出
      */
     public $PermissionGroups;
 
@@ -63,7 +63,7 @@ class ChannelModifyRoleRequest extends AbstractModel
      * @param string $Name 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
      * @param string $RoleId 角色Id，可通过接口 ChannelDescribeRoles 查询获取
      * @param string $Description 角色描述，最大长度为50个字符
-     * @param array $PermissionGroups 权限树，权限树内容 PermissionGroups 可参考接口 DescribeIntegrationRoles 的输出
+     * @param array $PermissionGroups 权限树，权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles的输出
      */
     function __construct()
     {

@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHybridPkg(HybridPkg $HybridPkg) 设置混合云子节点包
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ApiPkg getApiPkg() 获取API安全资源包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiPkg(ApiPkg $ApiPkg) 设置API安全资源包
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -294,6 +298,12 @@ class InstanceInfo extends AbstractModel
     public $HybridPkg;
 
     /**
+     * @var ApiPkg API安全资源包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiPkg;
+
+    /**
      * @param string $InstanceId id
      * @param string $InstanceName Name
      * @param string $ResourceIds 资源id
@@ -339,6 +349,8 @@ class InstanceInfo extends AbstractModel
      * @param MajorEventsPkg $MajorEventsPkg 重保包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HybridPkg $HybridPkg 混合云子节点包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiPkg $ApiPkg API安全资源包
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -491,6 +503,11 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("HybridPkg",$param) and $param["HybridPkg"] !== null) {
             $this->HybridPkg = new HybridPkg();
             $this->HybridPkg->deserialize($param["HybridPkg"]);
+        }
+
+        if (array_key_exists("ApiPkg",$param) and $param["ApiPkg"] !== null) {
+            $this->ApiPkg = new ApiPkg();
+            $this->ApiPkg->deserialize($param["ApiPkg"]);
         }
     }
 }

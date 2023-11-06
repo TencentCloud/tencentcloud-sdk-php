@@ -36,10 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCc(array $Cc) 设置抄送人邮箱地址，最多支持抄送20人。
  * @method array getBcc() 获取密送人邮箱地址，最多支持抄送20人。
  * @method void setBcc(array $Bcc) 设置密送人邮箱地址，最多支持抄送20人。
- * @method Template getTemplate() 获取使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
- * @method void setTemplate(Template $Template) 设置使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
+ * @method Template getTemplate() 获取使用模板发送时，填写模板相关参数。
+<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
+ * @method void setTemplate(Template $Template) 设置使用模板发送时，填写模板相关参数。
+<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
  * @method Simple getSimple() 获取已废弃
+<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
  * @method void setSimple(Simple $Simple) 设置已废弃
+<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
  * @method array getAttachments() 获取需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
  * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
  * @method string getUnsubscribe() 获取退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
@@ -82,12 +86,14 @@ class SendEmailRequest extends AbstractModel
     public $Bcc;
 
     /**
-     * @var Template 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
+     * @var Template 使用模板发送时，填写模板相关参数。
+<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
      */
     public $Template;
 
     /**
      * @var Simple 已废弃
+<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
      */
     public $Simple;
 
@@ -115,8 +121,10 @@ class SendEmailRequest extends AbstractModel
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
      * @param array $Cc 抄送人邮箱地址，最多支持抄送20人。
      * @param array $Bcc 密送人邮箱地址，最多支持抄送20人。
-     * @param Template $Template 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
+     * @param Template $Template 使用模板发送时，填写模板相关参数。
+<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
      * @param Simple $Simple 已废弃
+<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
      * @param array $Attachments 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
      * @param string $Unsubscribe 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
      * @param integer $TriggerType 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道

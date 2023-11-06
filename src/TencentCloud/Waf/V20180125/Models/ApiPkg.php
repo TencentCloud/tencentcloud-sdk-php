@@ -18,7 +18,7 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot资源信息
+ * API安全资源信息
  *
  * @method string getResourceIds() 获取资源id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,28 +48,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedNum(integer $UsedNum) 设置使用数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取子产品code
+ * @method integer getRenewFlag() 获取续费标志
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置子产品code
+ * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRenewFlag() 获取续费标志	
+ * @method string getBillingItem() 获取计费项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标志	
+ * @method void setBillingItem(string $BillingItem) 设置计费项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBotCPWaf() 获取购买页bot6折
+ * @method integer getAPICPWaf() 获取1 API安全6折
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBotCPWaf(integer $BotCPWaf) 设置购买页bot6折
+ * @method void setAPICPWaf(integer $APICPWaf) 设置1 API安全6折
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBotNPWaf() 获取控制台买bot5折
+ * @method integer getAPINPWaf() 获取1 表示5折折扣
+2 表示4折折扣
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBotNPWaf(integer $BotNPWaf) 设置控制台买bot5折
+ * @method void setAPINPWaf(integer $APINPWaf) 设置1 表示5折折扣
+2 表示4折折扣
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsBotTrial() 获取7天bot试用标识 1 试用 0 没有试用
+ * @method integer getIsAPISecurityTrial() 获取api安全7天试用标识。1试用。0没试用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsBotTrial(integer $IsBotTrial) 设置7天bot试用标识 1 试用 0 没有试用
+ * @method void setIsAPISecurityTrial(integer $IsAPISecurityTrial) 设置api安全7天试用标识。1试用。0没试用
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class BotPkg extends AbstractModel
+class ApiPkg extends AbstractModel
 {
     /**
      * @var string 资源id
@@ -114,34 +116,35 @@ class BotPkg extends AbstractModel
     public $UsedNum;
 
     /**
-     * @var string 子产品code
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Type;
-
-    /**
-     * @var integer 续费标志	
+     * @var integer 续费标志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
-     * @var integer 购买页bot6折
+     * @var string 计费项
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BotCPWaf;
+    public $BillingItem;
 
     /**
-     * @var integer 控制台买bot5折
+     * @var integer 1 API安全6折
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BotNPWaf;
+    public $APICPWaf;
 
     /**
-     * @var integer 7天bot试用标识 1 试用 0 没有试用
+     * @var integer 1 表示5折折扣
+2 表示4折折扣
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $IsBotTrial;
+    public $APINPWaf;
+
+    /**
+     * @var integer api安全7天试用标识。1试用。0没试用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAPISecurityTrial;
 
     /**
      * @param string $ResourceIds 资源id
@@ -158,15 +161,16 @@ class BotPkg extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedNum 使用数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 子产品code
+     * @param integer $RenewFlag 续费标志
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RenewFlag 续费标志	
+     * @param string $BillingItem 计费项
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BotCPWaf 购买页bot6折
+     * @param integer $APICPWaf 1 API安全6折
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BotNPWaf 控制台买bot5折
+     * @param integer $APINPWaf 1 表示5折折扣
+2 表示4折折扣
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsBotTrial 7天bot试用标识 1 试用 0 没有试用
+     * @param integer $IsAPISecurityTrial api安全7天试用标识。1试用。0没试用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -210,24 +214,24 @@ class BotPkg extends AbstractModel
             $this->UsedNum = $param["UsedNum"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
-        }
-
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
         }
 
-        if (array_key_exists("BotCPWaf",$param) and $param["BotCPWaf"] !== null) {
-            $this->BotCPWaf = $param["BotCPWaf"];
+        if (array_key_exists("BillingItem",$param) and $param["BillingItem"] !== null) {
+            $this->BillingItem = $param["BillingItem"];
         }
 
-        if (array_key_exists("BotNPWaf",$param) and $param["BotNPWaf"] !== null) {
-            $this->BotNPWaf = $param["BotNPWaf"];
+        if (array_key_exists("APICPWaf",$param) and $param["APICPWaf"] !== null) {
+            $this->APICPWaf = $param["APICPWaf"];
         }
 
-        if (array_key_exists("IsBotTrial",$param) and $param["IsBotTrial"] !== null) {
-            $this->IsBotTrial = $param["IsBotTrial"];
+        if (array_key_exists("APINPWaf",$param) and $param["APINPWaf"] !== null) {
+            $this->APINPWaf = $param["APINPWaf"];
+        }
+
+        if (array_key_exists("IsAPISecurityTrial",$param) and $param["IsAPISecurityTrial"] !== null) {
+            $this->IsAPISecurityTrial = $param["IsAPISecurityTrial"];
         }
     }
 }

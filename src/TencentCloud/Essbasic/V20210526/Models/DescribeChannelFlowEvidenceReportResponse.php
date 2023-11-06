@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeChannelFlowEvidenceReport返回参数结构体
  *
- * @method string getReportUrl() 获取出证报告下载 URL
+ * @method string getReportUrl() 获取出证报告PDF的下载 URL，有效期为5分钟，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReportUrl(string $ReportUrl) 设置出证报告下载 URL
+ * @method void setReportUrl(string $ReportUrl) 设置出证报告PDF的下载 URL，有效期为5分钟，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取出征任务的执行状态,状态列表如下
+ * @method string getStatus() 获取出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败
- * @method void setStatus(string $Status) 设置出征任务的执行状态,状态列表如下
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
+ * @method void setStatus(string $Status) 设置出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeChannelFlowEvidenceReportResponse extends AbstractModel
 {
     /**
-     * @var string 出证报告下载 URL
+     * @var string 出证报告PDF的下载 URL，有效期为5分钟，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportUrl;
 
     /**
-     * @var string 出征任务的执行状态,状态列表如下
+     * @var string 出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
      */
     public $Status;
 
@@ -60,13 +60,13 @@ class DescribeChannelFlowEvidenceReportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ReportUrl 出证报告下载 URL
+     * @param string $ReportUrl 出证报告PDF的下载 URL，有效期为5分钟，超过有效期后将无法再下载。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 出征任务的执行状态,状态列表如下
+     * @param string $Status 出证任务执行的状态, 状态含义如下：
 
-- EvidenceStatusExecuting : 出征任务正在执行中
-- EvidenceStatusSuccess : 出征任务执行成功
-- EvidenceStatusFailed : 出征任务执行失败
+<ul><li>**EvidenceStatusExecuting**：  出证任务在执行中</li>
+<li>**EvidenceStatusSuccess**：  出证任务执行成功</li>
+<li>**EvidenceStatusFailed** ： 出征任务执行失败</li></ul>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,33 +20,72 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateFlowSignUrl请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
- * @method string getFlowId() 获取流程编号
- * @method void setFlowId(string $FlowId) 设置流程编号
- * @method array getFlowApproverInfos() 获取流程签署人，其中Name和Mobile必传，其他可不传，ApproverType目前只支持PERSON类型的签署人，如果不传默认为该值。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
- * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人，其中Name和Mobile必传，其他可不传，ApproverType目前只支持PERSON类型的签署人，如果不传默认为该值。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+ * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，其他可不传。
+注:
+`1. ApproverType目前只支持个人(PERSON)类型的签署人。`
+`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+ * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，其他可不传。
+注:
+`1. ApproverType目前只支持个人(PERSON)类型的签署人。`
+`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
  * @method UserInfo getOperator() 获取用户信息，暂未开放
  * @method void setOperator(UserInfo $Operator) 设置用户信息，暂未开放
  * @method OrganizationInfo getOrganization() 获取机构信息，暂未开放
  * @method void setOrganization(OrganizationInfo $Organization) 设置机构信息，暂未开放
- * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
- * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+ * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
+ * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
  */
 class ChannelCreateFlowSignUrlRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
     /**
-     * @var string 流程编号
+     * @var string 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      */
     public $FlowId;
 
     /**
-     * @var array 流程签署人，其中Name和Mobile必传，其他可不传，ApproverType目前只支持PERSON类型的签署人，如果不传默认为该值。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+     * @var array 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，其他可不传。
+注:
+`1. ApproverType目前只支持个人(PERSON)类型的签署人。`
+`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
      */
     public $FlowApproverInfos;
 
@@ -63,17 +102,30 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
     public $Organization;
 
     /**
-     * @var string 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     * @var string 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
      */
     public $JumpUrl;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
-     * @param string $FlowId 流程编号
-     * @param array $FlowApproverInfos 流程签署人，其中Name和Mobile必传，其他可不传，ApproverType目前只支持PERSON类型的签署人，如果不传默认为该值。还需注意签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param string $FlowId 合同流程ID，为32位字符串。
+建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
+可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+     * @param array $FlowApproverInfos 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，其他可不传。
+注:
+`1. ApproverType目前只支持个人(PERSON)类型的签署人。`
+`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
      * @param UserInfo $Operator 用户信息，暂未开放
      * @param OrganizationInfo $Organization 机构信息，暂未开放
-     * @param string $JumpUrl 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     * @param string $JumpUrl 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
      */
     function __construct()
     {

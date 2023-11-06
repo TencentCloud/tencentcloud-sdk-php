@@ -92,6 +92,7 @@ Waf  CC V2 Query接口
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询用户所有实例的详细信息
  * @method Models\DescribeIpAccessControlResponse DescribeIpAccessControl(Models\DescribeIpAccessControlRequest $req) Waf ip黑白名单查询
  * @method Models\DescribeIpHitItemsResponse DescribeIpHitItems(Models\DescribeIpHitItemsRequest $req) Waf  IP封堵状态查询
+ * @method Models\DescribeModuleStatusResponse DescribeModuleStatus(Models\DescribeModuleStatusRequest $req) 查询各个waf基础安全模块的开关状态，看每个模块是否开启
  * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) 查看防护对象列表
  * @method Models\DescribePeakPointsResponse DescribePeakPoints(Models\DescribePeakPointsRequest $req) 查询业务和攻击概要趋势
  * @method Models\DescribePeakValueResponse DescribePeakValue(Models\DescribePeakValueRequest $req) 获取业务和攻击概览峰值

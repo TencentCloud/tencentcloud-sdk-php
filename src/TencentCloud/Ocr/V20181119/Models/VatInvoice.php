@@ -98,6 +98,18 @@ Y: 有清单 N：无清单
  * @method void setTaxBureau(string $TaxBureau) 设置所属税局
  * @method string getTrafficFreeFlag() 获取通行费标志:Y、是;N、否
  * @method void setTrafficFreeFlag(string $TrafficFreeFlag) 设置通行费标志:Y、是;N、否
+ * @method boolean getRedLetterInvoiceMark() 获取是否为红票
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRedLetterInvoiceMark(boolean $RedLetterInvoiceMark) 设置是否为红票
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIssuingTypeMark() 获取开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIssuingTypeMark(integer $IssuingTypeMark) 设置开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSellerAgentName() 获取代开销售方名称
+ * @method void setSellerAgentName(string $SellerAgentName) 设置代开销售方名称
+ * @method string getSellerAgentTaxID() 获取代开销售方税号
+ * @method void setSellerAgentTaxID(string $SellerAgentTaxID) 设置代开销售方税号
  */
 class VatInvoice extends AbstractModel
 {
@@ -241,6 +253,28 @@ Y: 有清单 N：无清单
     public $TrafficFreeFlag;
 
     /**
+     * @var boolean 是否为红票
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RedLetterInvoiceMark;
+
+    /**
+     * @var integer 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IssuingTypeMark;
+
+    /**
+     * @var string 代开销售方名称
+     */
+    public $SellerAgentName;
+
+    /**
+     * @var string 代开销售方税号
+     */
+    public $SellerAgentTaxID;
+
+    /**
      * @param string $Code 发票代码
      * @param string $Number 发票号码
      * @param string $Date 开票日期
@@ -280,6 +314,12 @@ Y: 有清单 N：无清单
      * @param array $Items 项目明细
      * @param string $TaxBureau 所属税局
      * @param string $TrafficFreeFlag 通行费标志:Y、是;N、否
+     * @param boolean $RedLetterInvoiceMark 是否为红票
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IssuingTypeMark 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SellerAgentName 代开销售方名称
+     * @param string $SellerAgentTaxID 代开销售方税号
      */
     function __construct()
     {
@@ -397,6 +437,22 @@ Y: 有清单 N：无清单
 
         if (array_key_exists("TrafficFreeFlag",$param) and $param["TrafficFreeFlag"] !== null) {
             $this->TrafficFreeFlag = $param["TrafficFreeFlag"];
+        }
+
+        if (array_key_exists("RedLetterInvoiceMark",$param) and $param["RedLetterInvoiceMark"] !== null) {
+            $this->RedLetterInvoiceMark = $param["RedLetterInvoiceMark"];
+        }
+
+        if (array_key_exists("IssuingTypeMark",$param) and $param["IssuingTypeMark"] !== null) {
+            $this->IssuingTypeMark = $param["IssuingTypeMark"];
+        }
+
+        if (array_key_exists("SellerAgentName",$param) and $param["SellerAgentName"] !== null) {
+            $this->SellerAgentName = $param["SellerAgentName"];
+        }
+
+        if (array_key_exists("SellerAgentTaxID",$param) and $param["SellerAgentTaxID"] !== null) {
+            $this->SellerAgentTaxID = $param["SellerAgentTaxID"];
         }
     }
 }

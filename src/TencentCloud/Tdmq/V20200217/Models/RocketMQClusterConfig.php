@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxQueuesPerTopic(integer $MaxQueuesPerTopic) 设置单个主题最大队列数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTopicDistribution() 获取topic分布
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicDistribution(array $TopicDistribution) 设置topic分布
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterConfig extends AbstractModel
 {
@@ -97,6 +101,12 @@ class RocketMQClusterConfig extends AbstractModel
     public $MaxQueuesPerTopic;
 
     /**
+     * @var array topic分布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicDistribution;
+
+    /**
      * @param integer $MaxTpsPerNamespace 单命名空间TPS上线
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $UsedNamespaceNum 已使用命名空间数量
@@ -107,6 +117,8 @@ class RocketMQClusterConfig extends AbstractModel
      * @param integer $MaxRetentionTime 消息最大保留时间，以毫秒为单位
      * @param integer $MaxLatencyTime 消息最长延时，以毫秒为单位
      * @param integer $MaxQueuesPerTopic 单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TopicDistribution topic分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +172,15 @@ class RocketMQClusterConfig extends AbstractModel
 
         if (array_key_exists("MaxQueuesPerTopic",$param) and $param["MaxQueuesPerTopic"] !== null) {
             $this->MaxQueuesPerTopic = $param["MaxQueuesPerTopic"];
+        }
+
+        if (array_key_exists("TopicDistribution",$param) and $param["TopicDistribution"] !== null) {
+            $this->TopicDistribution = [];
+            foreach ($param["TopicDistribution"] as $key => $value){
+                $obj = new RocketMQTopicDistribution();
+                $obj->deserialize($value);
+                array_push($this->TopicDistribution, $obj);
+            }
         }
     }
 }

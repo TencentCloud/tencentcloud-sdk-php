@@ -20,35 +20,68 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncProxyOrganization请求参数结构体
  *
- * @method Agent getAgent() 获取应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
- * @method void setAgent(Agent $Agent) 设置应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
- * @method string getProxyOrganizationName() 获取第三方平台子客企业名称，最大长度64个字符
- * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置第三方平台子客企业名称，最大长度64个字符
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+
+ * @method string getProxyOrganizationName() 获取第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
  * @method string getBusinessLicense() 获取营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  * @method string getUniformSocialCreditCode() 获取第三方平台子客企业统一社会信用代码，最大长度200个字符
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置第三方平台子客企业统一社会信用代码，最大长度200个字符
- * @method string getProxyLegalName() 获取第三方平台子客企业法人/负责人姓名
- * @method void setProxyLegalName(string $ProxyLegalName) 设置第三方平台子客企业法人/负责人姓名
+ * @method string getProxyLegalName() 获取第三方平台子客企业法定代表人的名字
+ * @method void setProxyLegalName(string $ProxyLegalName) 设置第三方平台子客企业法定代表人的名字
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
- * @method string getProxyLegalIdCardType() 获取第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
- * @method void setProxyLegalIdCardType(string $ProxyLegalIdCardType) 设置第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
- * @method string getProxyLegalIdCardNumber() 获取第三方平台子客企业法人/负责人证件号
- * @method void setProxyLegalIdCardNumber(string $ProxyLegalIdCardNumber) 设置第三方平台子客企业法人/负责人证件号
+ * @method string getProxyLegalIdCardType() 获取第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型`
+ * @method void setProxyLegalIdCardType(string $ProxyLegalIdCardType) 设置第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型`
+ * @method string getProxyLegalIdCardNumber() 获取第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+ * @method void setProxyLegalIdCardNumber(string $ProxyLegalIdCardNumber) 设置第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+ * @method string getProxyAddress() 获取第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
+ * @method void setProxyAddress(string $ProxyAddress) 设置第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
  */
 class SyncProxyOrganizationRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+
      */
     public $Agent;
 
     /**
-     * @var string 第三方平台子客企业名称，最大长度64个字符
+     * @var string 第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
      */
     public $ProxyOrganizationName;
 
@@ -63,7 +96,7 @@ class SyncProxyOrganizationRequest extends AbstractModel
     public $UniformSocialCreditCode;
 
     /**
-     * @var string 第三方平台子客企业法人/负责人姓名
+     * @var string 第三方平台子客企业法定代表人的名字
      */
     public $ProxyLegalName;
 
@@ -74,25 +107,48 @@ class SyncProxyOrganizationRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
+     * @var string 第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型`
      */
     public $ProxyLegalIdCardType;
 
     /**
-     * @var string 第三方平台子客企业法人/负责人证件号
+     * @var string 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
      */
     public $ProxyLegalIdCardNumber;
 
     /**
-     * @param Agent $Agent 应用信息
-此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
-     * @param string $ProxyOrganizationName 第三方平台子客企业名称，最大长度64个字符
+     * @var string 第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
+     */
+    public $ProxyAddress;
+
+    /**
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+</ul>
+
+     * @param string $ProxyOrganizationName 第三方平台子客企业名称，请确认该名称与企业营业执照中注册的名称一致。
+注: `如果名称中包含英文括号()，请使用中文括号（）代替。`
      * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
      * @param string $UniformSocialCreditCode 第三方平台子客企业统一社会信用代码，最大长度200个字符
-     * @param string $ProxyLegalName 第三方平台子客企业法人/负责人姓名
+     * @param string $ProxyLegalName 第三方平台子客企业法定代表人的名字
      * @param UserInfo $Operator 暂未开放
-     * @param string $ProxyLegalIdCardType 第三方平台子客企业法人/负责人证件类型，默认居民身份证（ID_CARD）类型，暂不支持其他类型
-     * @param string $ProxyLegalIdCardNumber 第三方平台子客企业法人/负责人证件号
+     * @param string $ProxyLegalIdCardType 第三方平台子客企业法定代表人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
+注: `现在仅支持ID_CARD居民身份证类型`
+     * @param string $ProxyLegalIdCardNumber 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+     * @param string $ProxyAddress 第三方平台子客企业详细住所，最大长度500个字符
+
+注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
      */
     function __construct()
     {
@@ -139,6 +195,10 @@ class SyncProxyOrganizationRequest extends AbstractModel
 
         if (array_key_exists("ProxyLegalIdCardNumber",$param) and $param["ProxyLegalIdCardNumber"] !== null) {
             $this->ProxyLegalIdCardNumber = $param["ProxyLegalIdCardNumber"];
+        }
+
+        if (array_key_exists("ProxyAddress",$param) and $param["ProxyAddress"] !== null) {
+            $this->ProxyAddress = $param["ProxyAddress"];
         }
     }
 }

@@ -14,39 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标签的key/value的类型
+ * 网卡流量指标数据
  *
- * @method string getTagKey() 获取标签的key的值
+ * @method string getNetInfoName() 获取网卡名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagKey(string $TagKey) 设置标签的key的值
+ * @method void setNetInfoName(string $NetInfoName) 设置网卡名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTagValue() 获取标签的Value的值
+ * @method string getPublicIP() 获取公网IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagValue(string $TagValue) 设置标签的Value的值
+ * @method void setPublicIP(string $PublicIP) 设置公网IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCurrent() 获取指标数据（bps/ms/%）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrent(float $Current) 设置指标数据（bps/ms/%）
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Tag extends AbstractModel
+class SlotNetInfo extends AbstractModel
 {
     /**
-     * @var string 标签的key的值
+     * @var string 网卡名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TagKey;
+    public $NetInfoName;
 
     /**
-     * @var string 标签的Value的值
+     * @var string 公网IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TagValue;
+    public $PublicIP;
 
     /**
-     * @param string $TagKey 标签的key的值
+     * @var float 指标数据（bps/ms/%）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TagValue 标签的Value的值
+     */
+    public $Current;
+
+    /**
+     * @param string $NetInfoName 网卡名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicIP 公网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Current 指标数据（bps/ms/%）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +74,16 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists("NetInfoName",$param) and $param["NetInfoName"] !== null) {
+            $this->NetInfoName = $param["NetInfoName"];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("PublicIP",$param) and $param["PublicIP"] !== null) {
+            $this->PublicIP = $param["PublicIP"];
+        }
+
+        if (array_key_exists("Current",$param) and $param["Current"] !== null) {
+            $this->Current = $param["Current"];
         }
     }
 }

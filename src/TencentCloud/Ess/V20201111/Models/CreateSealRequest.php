@@ -45,14 +45,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSealType() 获取电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
  * @method void setSealType(string $SealType) 设置电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
@@ -148,7 +148,7 @@ class CreateSealRequest extends AbstractModel
      * @var string 电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
@@ -243,7 +243,7 @@ class CreateSealRequest extends AbstractModel
      * @param string $SealType 电子印章类型 , 可选类型如下: 
 <ul><li>**OFFICIAL**: (默认)公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 合财务专用章;</li>
+<li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`

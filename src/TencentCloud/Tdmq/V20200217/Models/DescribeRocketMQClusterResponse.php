@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterInfo(RocketMQClusterInfo $ClusterInfo) 设置集群信息
  * @method RocketMQClusterConfig getClusterConfig() 获取集群配置
  * @method void setClusterConfig(RocketMQClusterConfig $ClusterConfig) 设置集群配置
- * @method RocketMQClusterRecentStats getClusterStats() 获取集群最近使用量
+ * @method RocketMQClusterRecentStats getClusterStats() 获取集群最近使用量，即将废弃，请使用云监控获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterStats(RocketMQClusterRecentStats $ClusterStats) 设置集群最近使用量
+ * @method void setClusterStats(RocketMQClusterRecentStats $ClusterStats) 设置集群最近使用量，即将废弃，请使用云监控获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +44,7 @@ class DescribeRocketMQClusterResponse extends AbstractModel
     public $ClusterConfig;
 
     /**
-     * @var RocketMQClusterRecentStats 集群最近使用量
+     * @var RocketMQClusterRecentStats 集群最近使用量，即将废弃，请使用云监控获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterStats;
@@ -57,7 +57,7 @@ class DescribeRocketMQClusterResponse extends AbstractModel
     /**
      * @param RocketMQClusterInfo $ClusterInfo 集群信息
      * @param RocketMQClusterConfig $ClusterConfig 集群配置
-     * @param RocketMQClusterRecentStats $ClusterStats 集群最近使用量
+     * @param RocketMQClusterRecentStats $ClusterStats 集群最近使用量，即将废弃，请使用云监控获取相关数据。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

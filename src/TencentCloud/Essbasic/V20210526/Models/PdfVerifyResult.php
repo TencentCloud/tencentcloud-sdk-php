@@ -41,15 +41,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSignerName() 获取申请证书的主体的名字
 
 如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-**企业**:  ESS@企业名称@编码
-**个人**: ESS@个人姓名@证件号@808854
+**企业**:  ESS@企业名称@平台生成的数字编码
+**个人**: ESS@个人姓名@证件号@平台生成的数字编码
 
 如果在其他平台签署的, 主体的名字参考其他平台的说明
  * @method void setSignerName(string $SignerName) 设置申请证书的主体的名字
 
 如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-**企业**:  ESS@企业名称@编码
-**个人**: ESS@个人姓名@证件号@808854
+**企业**:  ESS@企业名称@平台生成的数字编码
+**个人**: ESS@个人姓名@证件号@平台生成的数字编码
 
 如果在其他平台签署的, 主体的名字参考其他平台的说明
  * @method integer getSignTime() 获取签署时间的Unix时间戳，单位毫秒
@@ -106,8 +106,8 @@ class PdfVerifyResult extends AbstractModel
      * @var string 申请证书的主体的名字
 
 如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-**企业**:  ESS@企业名称@编码
-**个人**: ESS@个人姓名@证件号@808854
+**企业**:  ESS@企业名称@平台生成的数字编码
+**个人**: ESS@个人姓名@证件号@平台生成的数字编码
 
 如果在其他平台签署的, 主体的名字参考其他平台的说明
      */
@@ -185,8 +185,8 @@ class PdfVerifyResult extends AbstractModel
      * @param string $SignerName 申请证书的主体的名字
 
 如果是在腾讯电子签平台签署, 则对应的主体的名字个数如下
-**企业**:  ESS@企业名称@编码
-**个人**: ESS@个人姓名@证件号@808854
+**企业**:  ESS@企业名称@平台生成的数字编码
+**个人**: ESS@个人姓名@证件号@平台生成的数字编码
 
 如果在其他平台签署的, 主体的名字参考其他平台的说明
      * @param integer $SignTime 签署时间的Unix时间戳，单位毫秒

@@ -25,6 +25,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
 /**
  * @method Models\AddMachineGroupInfoResponse AddMachineGroupInfo(Models\AddMachineGroupInfoRequest $req) 用于添加机器组信息
  * @method Models\ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroup(Models\ApplyConfigToMachineGroupRequest $req) 应用采集配置到指定机器组
+ * @method Models\CheckFunctionResponse CheckFunction(Models\CheckFunctionRequest $req) 本接口用于数据加工DSL函数的语法校验。
  * @method Models\CheckRechargeKafkaServerResponse CheckRechargeKafkaServer(Models\CheckRechargeKafkaServerRequest $req) 本接口用于校验Kafka服务集群是否可以正常访问
  * @method Models\CloseKafkaConsumerResponse CloseKafkaConsumer(Models\CloseKafkaConsumerRequest $req) 关闭Kafka协议消费
  * @method Models\CreateAlarmResponse CreateAlarm(Models\CreateAlarmRequest $req) 本接口用于创建告警策略。

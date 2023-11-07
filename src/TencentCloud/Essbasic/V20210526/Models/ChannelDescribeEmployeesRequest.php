@@ -42,18 +42,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 20。
  * @method array getFilters() 获取查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
+注: `同名字的Key的过滤条件会冲突,  只能填写一个`
  * @method void setFilters(array $Filters) 设置查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
- * @method integer getOffset() 获取指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
- * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+注: `同名字的Key的过滤条件会冲突,  只能填写一个`
+ * @method integer getOffset() 获取指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。
+ * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
@@ -80,15 +84,17 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     /**
      * @var array 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
+注: `同名字的Key的过滤条件会冲突,  只能填写一个`
      */
     public $Filters;
 
     /**
-     * @var integer 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+     * @var integer 指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。
      */
     public $Offset;
 
@@ -111,11 +117,13 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
      * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 20。
      * @param array $Filters 查询的关键字段，支持Key-Values查询。可选键值如下：
 <ul>
-  <li>Key:**"Status"**，根据实名状态查询员工，Values可选：
-    <ul><li>**["IsVerified"]**：查询已实名的员工</li><li>**["QuiteJob"]**：查询离职员工</li></ul></li>
-  <li>Key:**"StaffOpenId"**，根据第三方系统用户OpenId查询员工，Values为第三方系统用户OpenId列表：**["OpenId1","OpenId2",...]**</li>
+  <li>Key:**"Status"**，Values: **["IsVerified"]**, 查询已实名的员工</li>
+  <li>Key:**"Status"**，Values: **["QuiteJob"]**, 查询离职员工</li>
+  <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
-     * @param integer $Offset 指定分页返回第几页的数据，如果不传默认返回第一页。页码从 0 开始，即首页为 0，最大20000。
+注: `同名字的Key的过滤条件会冲突,  只能填写一个`
+     * @param integer $Offset 指定分页返回第几页的数据，如果不传默认返回第一页。
+页码从 0 开始，即首页为 0，最大20000。
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

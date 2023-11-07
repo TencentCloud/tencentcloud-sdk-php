@@ -76,6 +76,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpInternalEndpoint(string $HttpInternalEndpoint) 设置HTTP协议内部接入地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAclEnabled() 获取是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAclEnabled(boolean $AclEnabled) 设置是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicClbId() 获取公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicClbId(string $PublicClbId) 设置公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVip() 获取vip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVip(string $Vip) 设置vip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcId() 获取所属VPC
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcId(string $VpcId) 设置所属VPC
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSupportMigration() 获取是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportMigration(boolean $SupportMigration) 设置是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceStatus(integer $InstanceStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -176,6 +200,42 @@ class RocketMQClusterInfo extends AbstractModel
     public $HttpInternalEndpoint;
 
     /**
+     * @var boolean 是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AclEnabled;
+
+    /**
+     * @var string 公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicClbId;
+
+    /**
+     * @var string vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vip;
+
+    /**
+     * @var string 所属VPC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcId;
+
+    /**
+     * @var boolean 是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportMigration;
+
+    /**
+     * @var integer 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceStatus;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -203,6 +263,18 @@ class RocketMQClusterInfo extends AbstractModel
      * @param string $InternalEndpoint TCP内部接入地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpInternalEndpoint HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AclEnabled 是否开启ACL鉴权，专享实例支持关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicClbId 公网CLB实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Vip vip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcId 所属VPC
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SupportMigration 是否支持迁移
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -289,6 +361,30 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("HttpInternalEndpoint",$param) and $param["HttpInternalEndpoint"] !== null) {
             $this->HttpInternalEndpoint = $param["HttpInternalEndpoint"];
+        }
+
+        if (array_key_exists("AclEnabled",$param) and $param["AclEnabled"] !== null) {
+            $this->AclEnabled = $param["AclEnabled"];
+        }
+
+        if (array_key_exists("PublicClbId",$param) and $param["PublicClbId"] !== null) {
+            $this->PublicClbId = $param["PublicClbId"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SupportMigration",$param) and $param["SupportMigration"] !== null) {
+            $this->SupportMigration = $param["SupportMigration"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
         }
     }
 }

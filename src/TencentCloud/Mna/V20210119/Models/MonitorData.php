@@ -14,39 +14,47 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标签的key/value的类型
+ * 流量监控指标
  *
- * @method string getTagKey() 获取标签的key的值
+ * @method string getTime() 获取时间点：s
+ * @method void setTime(string $Time) 设置时间点：s
+ * @method float getBusinessMetrics() 获取业务指标（bps/ms/%）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagKey(string $TagKey) 设置标签的key的值
+ * @method void setBusinessMetrics(float $BusinessMetrics) 设置业务指标（bps/ms/%）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTagValue() 获取标签的Value的值
+ * @method array getSlotNetInfo() 获取网卡状态信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagValue(string $TagValue) 设置标签的Value的值
+ * @method void setSlotNetInfo(array $SlotNetInfo) 设置网卡状态信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Tag extends AbstractModel
+class MonitorData extends AbstractModel
 {
     /**
-     * @var string 标签的key的值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 时间点：s
      */
-    public $TagKey;
+    public $Time;
 
     /**
-     * @var string 标签的Value的值
+     * @var float 业务指标（bps/ms/%）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TagValue;
+    public $BusinessMetrics;
 
     /**
-     * @param string $TagKey 标签的key的值
+     * @var array 网卡状态信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TagValue 标签的Value的值
+     */
+    public $SlotNetInfo;
+
+    /**
+     * @param string $Time 时间点：s
+     * @param float $BusinessMetrics 业务指标（bps/ms/%）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SlotNetInfo 网卡状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +70,21 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
+            $this->Time = $param["Time"];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("BusinessMetrics",$param) and $param["BusinessMetrics"] !== null) {
+            $this->BusinessMetrics = $param["BusinessMetrics"];
+        }
+
+        if (array_key_exists("SlotNetInfo",$param) and $param["SlotNetInfo"] !== null) {
+            $this->SlotNetInfo = [];
+            foreach ($param["SlotNetInfo"] as $key => $value){
+                $obj = new SlotNetInfo();
+                $obj->deserialize($value);
+                array_push($this->SlotNetInfo, $obj);
+            }
         }
     }
 }

@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSharedCNAME返回参数结构体
+ * DescribeBillUsageDetail返回参数结构体
  *
- * @method string getSharedCNAME() 获取共享 CNAME。格式为：<自定义前缀>+<ZoneId中的12位随机字符串>+"share.dnse[0-5].com"。
- * @method void setSharedCNAME(string $SharedCNAME) 设置共享 CNAME。格式为：<自定义前缀>+<ZoneId中的12位随机字符串>+"share.dnse[0-5].com"。
+ * @method integer getTotal() 获取总数
+ * @method void setTotal(integer $Total) 设置总数
+ * @method array getDetails() 获取消耗详情
+ * @method void setDetails(array $Details) 设置消耗详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSharedCNAMEResponse extends AbstractModel
+class DescribeBillUsageDetailResponse extends AbstractModel
 {
     /**
-     * @var string 共享 CNAME。格式为：<自定义前缀>+<ZoneId中的12位随机字符串>+"share.dnse[0-5].com"。
+     * @var integer 总数
      */
-    public $SharedCNAME;
+    public $Total;
+
+    /**
+     * @var array 消耗详情
+     */
+    public $Details;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateSharedCNAMEResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SharedCNAME 共享 CNAME。格式为：<自定义前缀>+<ZoneId中的12位随机字符串>+"share.dnse[0-5].com"。
+     * @param integer $Total 总数
+     * @param array $Details 消耗详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateSharedCNAMEResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SharedCNAME",$param) and $param["SharedCNAME"] !== null) {
-            $this->SharedCNAME = $param["SharedCNAME"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Details",$param) and $param["Details"] !== null) {
+            $this->Details = [];
+            foreach ($param["Details"] as $key => $value){
+                $obj = new BillUsageDetail();
+                $obj->deserialize($value);
+                array_push($this->Details, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

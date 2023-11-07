@@ -33,6 +33,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 获取设备信息列表
  * @method Models\GetFlowStatisticResponse GetFlowStatistic(Models\GetFlowStatisticRequest $req) 获取指定设备Id，指定时间点数据流量使用情况
  * @method Models\GetMultiFlowStatisticResponse GetMultiFlowStatistic(Models\GetMultiFlowStatisticRequest $req) 批量获取设备流量统计曲线
+ * @method Models\GetNetMonitorResponse GetNetMonitor(Models\GetNetMonitorRequest $req) 获取单设备的实时流量统计指标
  * @method Models\GetPublicKeyResponse GetPublicKey(Models\GetPublicKeyRequest $req) 获取公钥用于验签
  * @method Models\GetStatisticDataResponse GetStatisticData(Models\GetStatisticDataRequest $req) 在用量统计页面下载流量数据
  * @method Models\UpdateDeviceResponse UpdateDevice(Models\UpdateDeviceRequest $req) 更新设备信息

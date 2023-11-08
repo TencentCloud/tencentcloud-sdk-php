@@ -20,17 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportExternalDevice返回参数结构体
  *
+ * @method array getDeviceIdSet() 获取资产ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceIdSet(array $DeviceIdSet) 设置资产ID列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ImportExternalDeviceResponse extends AbstractModel
 {
     /**
+     * @var array 资产ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceIdSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $DeviceIdSet 资产ID列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +58,10 @@ class ImportExternalDeviceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DeviceIdSet",$param) and $param["DeviceIdSet"] !== null) {
+            $this->DeviceIdSet = $param["DeviceIdSet"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

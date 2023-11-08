@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeModuleStatus请求参数结构体
+ * DescribeRoomForbiddenUser请求参数结构体
  *
- * @method string getDomain() 获取要查询状态的域名
- * @method void setDomain(string $Domain) 设置要查询状态的域名
+ * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
+ * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
+ * @method integer getRoomId() 获取房间ID。
+ * @method void setRoomId(integer $RoomId) 设置房间ID。
  */
-class DescribeModuleStatusRequest extends AbstractModel
+class DescribeRoomForbiddenUserRequest extends AbstractModel
 {
     /**
-     * @var string 要查询状态的域名
+     * @var integer 低代码互动课堂的SdkAppId。
      */
-    public $Domain;
+    public $SdkAppId;
 
     /**
-     * @param string $Domain 要查询状态的域名
+     * @var integer 房间ID。
+     */
+    public $RoomId;
+
+    /**
+     * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
+     * @param integer $RoomId 房间ID。
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeModuleStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
         }
     }
 }

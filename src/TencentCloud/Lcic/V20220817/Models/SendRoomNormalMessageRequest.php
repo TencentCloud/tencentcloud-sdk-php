@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgBody(array $MsgBody) 设置自定义消息
  * @method string getCloudCustomData() 获取消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到）。
  * @method void setCloudCustomData(string $CloudCustomData) 设置消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到）。
+ * @method string getNickName() 获取昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+ * @method void setNickName(string $NickName) 设置昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
  */
 class SendRoomNormalMessageRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class SendRoomNormalMessageRequest extends AbstractModel
     public $CloudCustomData;
 
     /**
+     * @var string 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+     */
+    public $NickName;
+
+    /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $RoomId 房间ID。
      * @param string $FromAccount 管理员指定消息发送方账号（若需设置 FromAccount 信息，则该参数取值不能为空）
      * @param array $MsgBody 自定义消息
      * @param string $CloudCustomData 消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到）。
+     * @param string $NickName 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class SendRoomNormalMessageRequest extends AbstractModel
 
         if (array_key_exists("CloudCustomData",$param) and $param["CloudCustomData"] !== null) {
             $this->CloudCustomData = $param["CloudCustomData"];
+        }
+
+        if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
+            $this->NickName = $param["NickName"];
         }
     }
 }

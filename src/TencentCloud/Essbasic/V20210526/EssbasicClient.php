@@ -268,12 +268,15 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 `1. 发起合同时候,  作为发起方的第三方子企业A员工的企业和员工必须经过实名, 而作为签署方的第三方子企业A员工/个人/自然人/SaaS平台企业员工/第三方子企业B员工企业中的企业和个人/员工可以未实名`
 
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
- * @method Models\ChannelCreateFlowRemindsResponse ChannelCreateFlowReminds(Models\ChannelCreateFlowRemindsRequest $req) 指定需要批量催办的签署流程ID，批量催办合同，最多100个。需要符合以下条件的合同才可被催办：
+ * @method Models\ChannelCreateFlowRemindsResponse ChannelCreateFlowReminds(Models\ChannelCreateFlowRemindsRequest $req) 指定需要批量催办的签署流程ID，批量催办合同，最多100个。需要符合以下条件的合同才可被催办
+1. 合同中当前状态为 **待签署** 的签署人是催办的对象
+2. **每个合同只能催办一次**
 
-1. 合同中当前状态为“待签署”的签署人是催办的对象
-2. 每个合同只能催办一次
+**催办的效果**: 对方会受到如下的短信通知
+![image](https://qcloudimg.tencent-cloud.cn/raw/3caf94b7f540fa5736270d38528d3a7b.png)
 
-注意：该接口无法直接调用，请联系客户经理申请使用。
+
+**注**：`合同催办是白名单功能，请联系客户经理申请开白后使用`
  * @method Models\ChannelCreateFlowSignReviewResponse ChannelCreateFlowSignReview(Models\ChannelCreateFlowSignReviewRequest $req) 提交企业流程审批结果
 目前存在两种审核操作，签署审核，发起审核
 签署审核：通过接口（CreateFlowsByTemplates或ChannelCreateFlowByFiles或ChannelCreatePrepareFlow）发起签署流程后，若指定了参数 NeedSignReview 为true,则可以调用此接口，指定operate=SignReview，提交企业内部签署审批结果；若签署流程状态正常，且本企业存在签署方未签署，同一签署流程可以多次提交签署审批结果，签署时的最后一个“审批结果”有效
@@ -303,12 +306,12 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 ]( https://qian.tencent.com/developers/partner/callback_types_contracts_sign)
 
 用户通过签署二维码发起合同时，因企业额度不足导致失败 会触发签署二维码相关回调,具体参考文档[签署二维码相关回调](https://qian.tencent.com/developers/partner/callback_types_commons#%E7%AD%BE%E7%BD%B2%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%9B%B8%E5%85%B3%E5%9B%9E%E8%B0%83)
- * @method Models\ChannelCreateOrganizationBatchSignUrlResponse ChannelCreateOrganizationBatchSignUrl(Models\ChannelCreateOrganizationBatchSignUrlRequest $req) 通过此接口，创建小程序批量签署链接，可以创建企业批量签署链接，员工只需点击链接即可跳转至控制台进行批量签署。
+ * @method Models\ChannelCreateOrganizationBatchSignUrlResponse ChannelCreateOrganizationBatchSignUrl(Models\ChannelCreateOrganizationBatchSignUrlRequest $req) 通过此接口，可以创建企业批量签署链接，员工只需点击链接即可跳转至控制台进行批量签署。
 
 注：
 - 员工必须在企业下完成实名认证，且需作为批量签署合同的签署方或者领取方。
 - 仅支持传入待签署或者待领取的合同，待填写暂不支持。
-- 员工批量签署，支持多种签名方式，包括手写签名、临摹签名、系统签名、个人印章，暂不支持签批控件
+- 员工批量签署，支持多种签名方式，包括手写签名、临摹签名、系统签名、个人印章、签批控件等。
  * @method Models\ChannelCreateOrganizationModifyQrCodeResponse ChannelCreateOrganizationModifyQrCode(Models\ChannelCreateOrganizationModifyQrCodeRequest $req) 生成渠道子客编辑企业信息二维码
  * @method Models\ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlow(Models\ChannelCreatePrepareFlowRequest $req) 创建预发起合同
 通过此接口指定：合同，签署人，填写控件信息，生成预创建合同链接，点击后跳转到web页面完成合同创建并发起
@@ -459,6 +462,9 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 1. 若在激活过程中，**更换用户OpenID重新生成链接，之前的认证会被清理**。因此不要在企业认证过程生成多个链接给多人同时操作，会导致认证过程互相影响。
 2. 若您认证中发现信息有误需要重新认证，**可通过更换用户OpenID重新生成链接的方式，来清理掉已有的流程**。
+
+系统的渠道企业, 应用, 子客企业, 子客员工的组织形式
+![image](https://qcloudimg.tencent-cloud.cn/raw/bee4b7375fe7a097f3573b18a1c1e30b.png)
  * @method Models\CreateFlowsByTemplatesResponse CreateFlowsByTemplates(Models\CreateFlowsByTemplatesRequest $req) 接口（CreateFlowsByTemplates）用于使用模板批量创建签署流程。当前可批量发起合同（签署流程）数量为1-20个。
 如若在模板中配置了动态表格, 上传的附件必须为A4大小 
 合同发起人必须在电子签已经进行实名。
@@ -536,6 +542,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 |  CHANNEL  | 带有H5引导页的跳转腾讯电子签小程序签署场景 |  点击链接打开一个H5引导页面, 页面中有个"前往小程序"的按钮, 点击后会跳转到腾讯电子签小程序签署场景;  签署完成会回到H5引导页面, 然后跳转到指定创建链接指定的JumpUrl<br>示例: https://res.ess.tencent.cn/cdn/h5-activity-beta/jump-mp.html?use=channel-guide&type=warning&token=uIFKIU8fTd |
 |APP| 贵方App跳转腾讯电子签小程序签署场景|  贵方App直接跳转到小程序后, 在腾讯电子签小程序签署完成后返回贵方App的场景<br>跳转到腾讯电子签小程序的实现可以参考微信的官方文档:<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html" target="_blank">开放能力/打开 App</a> <br> 示例: pages/guide?from=default&where=mini& to=CONTRACT_DETAIL& id=yDwiBUUc*duRvquCSX8wd& shortKey=yDwivUA**W1yRsTre3 |
 |APP| 贵方小程序跳转腾讯电子签小程序签署场景|  贵方App直接跳转到小程序后, 在腾讯电子签小程序签署完成后返回贵方小程序的场景<br>跳转到腾讯电子签小程序的实现可以参考微信官方文档<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html" target="_blank">全屏方式</a>和<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html " target="_blank">半屏方式</a><br>此时返回的SignUrl就是官方文档中的path<br> 示例:pages/guide?from=default&where=mini& to=CONTRACT_DETAIL& id=yDwiBUUc*duRvquCSX8wd& shortKey=yDwivUA**W1yRsTre3  |
+ * @method Models\DescribeBillUsageDetailResponse DescribeBillUsageDetail(Models\DescribeBillUsageDetailRequest $req) 通过此接口（DescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。
  * @method Models\DescribeChannelFlowEvidenceReportResponse DescribeChannelFlowEvidenceReport(Models\DescribeChannelFlowEvidenceReportRequest $req) 获取出证报告任务执行结果，返回报告 URL。
 
 注意：
@@ -566,11 +573,20 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 **第一种**:   需第三方应用的子企业登录控制台进行授权,  授权在**企业中心**的**授权管理**区域,  界面如下图
 授权过程需要**子企业超管**扫描跳转到电子签小程序签署<<渠道端下载渠道子客合同功能授权委托书>>
 
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeResourceUrlsByFlows2.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/8b483dfebdeafac85051279406944048.png)
 
 **第二种**: 第三方应用的配置接口打开全第三个应用下的所有自己起开通, 需要**渠道方企业的超管**扫描二维码跳转到电子签小程序签署 <<渠道端下载渠道子客合同功能开通知情同意书>>
-![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeResourceUrlsByFlows_appilications2.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/238979ef51dd381ccbdbc755a593debc/channel_DescribeResourceUrlsByFlows_appilications2.png)
  * @method Models\DescribeTemplatesResponse DescribeTemplates(Models\DescribeTemplatesRequest $req) 通过此接口（DescribeTemplates）查询该第三方平台子客企业在电子签拥有的有效模板，不包括第三方平台模板。
+
+**适用场景**
+ 该接口常用来配合<a href="https://qian.tencent.com/developers/partnerApis/startFlows/CreateFlowsByTemplates" target="_blank">用模板创建签署流程</a>和<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates" target="_blank">通过多模板创建合同组签署流程</a>接口，作为创建合同的前置接口使用。 
+通过此接口查询到模板信息后，再通过调用创建合同的接口，指定模板ID，指定模板中需要的填写控件内容等，完成合同文档的的创建。
+
+**模版的来源**
+子客企业的模板有两种途径获取
+- 渠道方(平台方)配置完成后, 分发给同应用的各个子企业
+- 子客企业通过CreateConsoleLoginUrl创建的链接登录子客控制台自己创建
 
 **一个模板通常会包含以下结构信息** 
 
@@ -581,14 +597,8 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 ![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeTemplates.png)
 
-**适用场景**
- 该接口常用来配合<a href="https://qian.tencent.com/developers/partnerApis/startFlows/CreateFlowsByTemplates" target="_blank">用模板创建签署流程</a>和<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowGroupByTemplates" target="_blank">通过多模板创建合同组签署流程</a>接口，作为创建合同的前置接口使用。 
-通过此接口查询到模板信息后，再通过调用创建合同的接口，指定模板ID，指定模板中需要的填写控件内容等，完成合同文档的的创建。
-
-**模版的来源**
-子客企业的模板有两种途径获取
-- 渠道方(平台方)配置完成后, 分发给同应用的各个子企业
-- 子客企业通过CreateConsoleLoginUrl创建的链接登录子客控制台自己创建
+模版中各元素的层级关系, 所有的填写控件和签署控件都归属某一个角色(通过控件的ComponentRecipientId来关联)
+![image](https://qcloudimg.tencent-cloud.cn/raw/45c638bd93f9c8024763add9ab47c27f.png)
 
 
 **注意**

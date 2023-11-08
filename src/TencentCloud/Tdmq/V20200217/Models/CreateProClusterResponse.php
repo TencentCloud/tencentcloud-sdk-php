@@ -14,26 +14,44 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dasb\V20191018\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateResource返回参数结构体
+ * CreateProCluster返回参数结构体
  *
- * @method string getResourceId() 获取实例Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceId(string $ResourceId) 设置实例Id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDealName() 获取子订单号
+ * @method void setDealName(string $DealName) 设置子订单号
+ * @method string getBigDealId() 获取订单号
+ * @method void setBigDealId(string $BigDealId) 设置订单号
+ * @method string getClusterId() 获取集群Id
+ * @method void setClusterId(string $ClusterId) 设置集群Id
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateResourceResponse extends AbstractModel
+class CreateProClusterResponse extends AbstractModel
 {
     /**
-     * @var string 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 子订单号
      */
-    public $ResourceId;
+    public $DealName;
+
+    /**
+     * @var string 订单号
+     */
+    public $BigDealId;
+
+    /**
+     * @var string 集群Id
+     */
+    public $ClusterId;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +59,10 @@ class CreateResourceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResourceId 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DealName 子订单号
+     * @param string $BigDealId 订单号
+     * @param string $ClusterId 集群Id
+     * @param string $ClusterName 集群名称
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +78,20 @@ class CreateResourceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
+        }
+
+        if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
+            $this->BigDealId = $param["BigDealId"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,26 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dasb\V20191018\Models;
+namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateResource返回参数结构体
+ * DescribeRoomForbiddenUser返回参数结构体
  *
- * @method string getResourceId() 获取实例Id
+ * @method array getMutedAccountList() 获取禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceId(string $ResourceId) 设置实例Id
+ * @method void setMutedAccountList(array $MutedAccountList) 设置禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateResourceResponse extends AbstractModel
+class DescribeRoomForbiddenUserResponse extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var array 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ResourceId;
+    public $MutedAccountList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +41,7 @@ class CreateResourceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResourceId 实例Id
+     * @param array $MutedAccountList 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +58,13 @@ class CreateResourceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
+        if (array_key_exists("MutedAccountList",$param) and $param["MutedAccountList"] !== null) {
+            $this->MutedAccountList = [];
+            foreach ($param["MutedAccountList"] as $key => $value){
+                $obj = new MutedAccountList();
+                $obj->deserialize($value);
+                array_push($this->MutedAccountList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

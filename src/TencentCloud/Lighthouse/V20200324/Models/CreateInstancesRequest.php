@@ -52,8 +52,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setContainers(array $Containers) 设置要创建的容器配置列表。
  * @method boolean getAutoVoucher() 获取是否自动使用代金券。默认不使用。
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券。默认不使用。
- * @method string getFirewallTemplateId() 获取防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
- * @method void setFirewallTemplateId(string $FirewallTemplateId) 设置防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+ * @method string getFirewallTemplateId() 获取防火墙模板ID。若不指定该参数，则使用默认防火墙策略。
+ * @method void setFirewallTemplateId(string $FirewallTemplateId) 设置防火墙模板ID。若不指定该参数，则使用默认防火墙策略。
  * @method array getTags() 获取标签键和标签值。
 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。
 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。
@@ -128,7 +128,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $AutoVoucher;
 
     /**
-     * @var string 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+     * @var string 防火墙模板ID。若不指定该参数，则使用默认防火墙策略。
      */
     public $FirewallTemplateId;
 
@@ -158,7 +158,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param LoginConfiguration $LoginConfiguration 实例登录密码信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码。
      * @param array $Containers 要创建的容器配置列表。
      * @param boolean $AutoVoucher 是否自动使用代金券。默认不使用。
-     * @param string $FirewallTemplateId 防火墙模版ID。若不指定该参数，则使用默认防火墙策略。
+     * @param string $FirewallTemplateId 防火墙模板ID。若不指定该参数，则使用默认防火墙策略。
      * @param array $Tags 标签键和标签值。
 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。
 同一个资源上的同一个标签键只能对应一个标签值。如果您尝试添加已有标签键，则对应的标签值会更新为新值。

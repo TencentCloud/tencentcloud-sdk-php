@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
@@ -22,11 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowId() 获取合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperatorName() 获取合同经办人名称
 如果有多个经办人用分号隔开。
@@ -134,7 +132,6 @@ class BillUsageDetail extends AbstractModel
     /**
      * @var string 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
@@ -232,7 +229,6 @@ AuthService-企业工商信息查询
     /**
      * @param string $FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperatorName 合同经办人名称
 如果有多个经办人用分号隔开。

@@ -35,28 +35,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverNumber(integer $ApproverNumber) 设置签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。</br>
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
  * @method string getApproverType() 获取指定签署人类型，目前支持
-<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<ul><li> **ORGANIZATION**：企业(默认值)</li>
 <li> **ENTERPRISESERVER**：企业静默签</li></ul>
  * @method void setApproverType(string $ApproverType) 设置指定签署人类型，目前支持
-<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<ul><li> **ORGANIZATION**：企业(默认值)</li>
 <li> **ENTERPRISESERVER**：企业静默签</li></ul>
  * @method string getName() 获取签署人姓名，最大长度50个字。
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字。
  * @method string getIdCardType() 获取签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method void setIdCardType(string $IdCardType) 设置签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method string getIdCardNumber() 获取证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
  * @method void setIdCardNumber(string $IdCardNumber) 设置证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
  * @method string getMobile() 获取签署人手机号。
  * @method void setMobile(string $Mobile) 设置签署人手机号。
@@ -97,7 +97,7 @@ class ReleasedApprover extends AbstractModel
 
     /**
      * @var string 指定签署人类型，目前支持
-<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<ul><li> **ORGANIZATION**：企业(默认值)</li>
 <li> **ENTERPRISESERVER**：企业静默签</li></ul>
      */
     public $ApproverType;
@@ -109,7 +109,7 @@ class ReleasedApprover extends AbstractModel
 
     /**
      * @var string 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
@@ -117,8 +117,8 @@ class ReleasedApprover extends AbstractModel
 
     /**
      * @var string 证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public $IdCardNumber;
@@ -165,16 +165,16 @@ class ReleasedApprover extends AbstractModel
      * @param integer $ApproverNumber 签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。</br>
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。
      * @param string $ApproverType 指定签署人类型，目前支持
-<ul><li> **ORGANIZATION**：企业（默认值）</li>
+<ul><li> **ORGANIZATION**：企业(默认值)</li>
 <li> **ENTERPRISESERVER**：企业静默签</li></ul>
      * @param string $Name 签署人姓名，最大长度50个字。
      * @param string $IdCardType 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<ul><li>ID_CARD : 居民身份证(默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param string $IdCardNumber 证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母(但“I”、“O”除外)，后7位为阿拉伯数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      * @param string $Mobile 签署人手机号。
      * @param string $OrganizationName 组织机构名称。

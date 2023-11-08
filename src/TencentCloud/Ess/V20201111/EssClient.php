@@ -275,7 +275,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注：`1. 超管或法人身份的员工不能被删除。2. 员工存在待处理合同且无人交接时不能被删除。`
  * @method Models\DeleteIntegrationRoleUsersResponse DeleteIntegrationRoleUsers(Models\DeleteIntegrationRoleUsersRequest $req) 解绑员工与对应角色的关系，如需绑定请使用 CreateIntegrationUserRoles 接口。
  * @method Models\DeleteSealPoliciesResponse DeleteSealPolicies(Models\DeleteSealPoliciesRequest $req) 本接口（DeleteSealPolicies）用于撤销企业员工持有的印章权限
- * @method Models\DescribeBillUsageDetailResponse DescribeBillUsageDetail(Models\DescribeBillUsageDetailRequest $req) 查询企业使用情况
+ * @method Models\DescribeBillUsageDetailResponse DescribeBillUsageDetail(Models\DescribeBillUsageDetailRequest $req) 通过此接口（DescribeBillUsageDetail）查询该企业的套餐消耗详情。
  * @method Models\DescribeExtendedServiceAuthInfosResponse DescribeExtendedServiceAuthInfos(Models\DescribeExtendedServiceAuthInfosRequest $req) 查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
 1. 企业自动签
 2. 企业与港澳台居民签署合同
@@ -303,25 +303,26 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 适用场景：可用于主动查询某个合同详情信息。
  * @method Models\DescribeFlowTemplatesResponse DescribeFlowTemplates(Models\DescribeFlowTemplatesRequest $req) 此接口（DescribeFlowTemplates）用于查询本企业模板列表信息。
->  一个模板通常会包含以下结构信息
->- 模板基本信息
->- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
->- 填写控件 Components
->- 签署控件 SignComponents
->- 生成模板的文件基础信息 FileInfos
+
+
+**适用场景**
+该接口常用来配合<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument" target="_blank">模板发起合同-创建电子文档</a>接口，作为创建电子文档的前置接口使用。
+通过此接口查询到模板信息后，再通过调用创建电子文档接口，指定模板ID，指定模板中需要的填写控件内容等，完成电子文档的创建。
+
+**一个模板通常会包含以下结构信息** 
+
+- 模板模版ID, 模板名字等基本信息
+- 发起方参与信息Promoter、签署参与方 Recipients，后者会在模板发起合同时用于指定参与方
+- 发起方和签署方的填写控件 Components
+- 签署方的签署控件 SignComponents
 
 ![image](https://dyn.ess.tencent.cn/guide/capi/channel_DescribeTemplates.png)
 
-当模板较多或模板中的控件较多时，可以通过查询模板接口更方便的获取模板列表，以及每个模板内的控件信息。
-
-适用场景：
-该接口常用来配合<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateDocument" target="_blank">模板发起合同-创建电子文档</a>接口，作为创建电子文档的前置接口使用。
-通过此接口查询到模板信息后，再通过调用创建电子文档接口，指定模板ID，指定模板中需要的填写控件内容等，完成电子文档的创建。
+模版中各元素的层级关系, 所有的填写控件和签署控件都归属某一个角色(通过控件的ComponentRecipientId来关联)
+![image](https://qcloudimg.tencent-cloud.cn/raw/45c638bd93f9c8024763add9ab47c27f.png)
  * @method Models\DescribeIntegrationDepartmentsResponse DescribeIntegrationDepartments(Models\DescribeIntegrationDepartmentsRequest $req) 此接口（DescribeIntegrationDepartments）用于查询企业的部门信息列表，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
  * @method Models\DescribeIntegrationEmployeesResponse DescribeIntegrationEmployees(Models\DescribeIntegrationEmployeesRequest $req) 此接口（DescribeIntegrationEmployees）用于分页查询企业员工信息列表，支持设置过滤条件以筛选员工查询结果。
  * @method Models\DescribeIntegrationRolesResponse DescribeIntegrationRoles(Models\DescribeIntegrationRolesRequest $req) 此接口（DescribeIntegrationRoles）用于分页查询企业角色列表，列表按照角色创建时间升序排列。
-
-注：`法人角色是系统保留角色，因此返回列表中不含法人角色。`
  * @method Models\DescribeOrganizationGroupOrganizationsResponse DescribeOrganizationGroupOrganizations(Models\DescribeOrganizationGroupOrganizationsRequest $req) 此API接口用来查询加入集团的成员企业信息
 适用场景：子企业在加入集团后，主企业可能通过此接口获取到所有的子企业列表，方便进行展示和统计
  * @method Models\DescribeOrganizationSealsResponse DescribeOrganizationSeals(Models\DescribeOrganizationSealsRequest $req) 查询企业印章的列表，需要操作者具有查询印章权限

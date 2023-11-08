@@ -50,9 +50,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFromIp(string $FromIp) 设置source ip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSessTime() 获取该命令所属会话的会话开始时间
+ * @method string getSessionTime() 获取该命令所属会话的会话开始时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSessTime(string $SessTime) 设置该命令所属会话的会话开始时间
+ * @method void setSessionTime(string $SessionTime) 设置该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessTime() 获取该命令所属会话的会话开始时间（废弃，使用SessionTime）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessTime(string $SessTime) 设置该命令所属会话的会话开始时间（废弃，使用SessionTime）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfirmTime() 获取复核时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,6 +152,13 @@ class SearchCommandResult extends AbstractModel
      * @var string 该命令所属会话的会话开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
+    public $SessionTime;
+
+    /**
+     * @var string 该命令所属会话的会话开始时间（废弃，使用SessionTime）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
     public $SessTime;
 
     /**
@@ -196,7 +207,9 @@ class SearchCommandResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FromIp source ip
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SessTime 该命令所属会话的会话开始时间
+     * @param string $SessionTime 该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfirmTime 复核时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -272,6 +285,10 @@ class SearchCommandResult extends AbstractModel
 
         if (array_key_exists("FromIp",$param) and $param["FromIp"] !== null) {
             $this->FromIp = $param["FromIp"];
+        }
+
+        if (array_key_exists("SessionTime",$param) and $param["SessionTime"] !== null) {
+            $this->SessionTime = $param["SessionTime"];
         }
 
         if (array_key_exists("SessTime",$param) and $param["SessTime"] !== null) {

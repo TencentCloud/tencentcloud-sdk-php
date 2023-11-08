@@ -18,7 +18,7 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 虚拟节点
+ * 超级节点
  *
  * @method string getDisplayName() 获取节点展示名称
  * @method void setDisplayName(string $DisplayName) 设置节点展示名称

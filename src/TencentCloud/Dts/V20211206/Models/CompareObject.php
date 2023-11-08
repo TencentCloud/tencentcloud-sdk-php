@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectItems(array $ObjectItems) 设置对象列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAdvancedObjects() 获取高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+ * @method array getAdvancedObjects() 获取高级对象类型，如account(账号),index(索引),shardkey(片键，后面可能会调整),schema(库表结构)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvancedObjects(array $AdvancedObjects) 设置高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+ * @method void setAdvancedObjects(array $AdvancedObjects) 设置高级对象类型，如account(账号),index(索引),shardkey(片键，后面可能会调整),schema(库表结构)
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareObject extends AbstractModel
@@ -48,7 +48,7 @@ class CompareObject extends AbstractModel
     public $ObjectItems;
 
     /**
-     * @var array 高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+     * @var array 高级对象类型，如account(账号),index(索引),shardkey(片键，后面可能会调整),schema(库表结构)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvancedObjects;
@@ -58,7 +58,7 @@ class CompareObject extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ObjectItems 对象列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AdvancedObjects 高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+     * @param array $AdvancedObjects 高级对象类型，如account(账号),index(索引),shardkey(片键，后面可能会调整),schema(库表结构)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

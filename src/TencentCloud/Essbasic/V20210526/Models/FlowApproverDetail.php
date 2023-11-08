@@ -20,93 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 签署人的流程信息明细
  *
- * @method string getReceiptId() 获取模板配置时候的签署人id,与控件绑定
- * @method void setReceiptId(string $ReceiptId) 设置模板配置时候的签署人id,与控件绑定
- * @method string getProxyOrganizationOpenId() 获取平台企业的第三方id
+ * @method string getReceiptId() 获取模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+ * @method void setReceiptId(string $ReceiptId) 设置模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+ * @method string getProxyOrganizationOpenId() 获取第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置平台企业的第三方id
+ * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProxyOperatorOpenId() 获取平台企业操作人的第三方id
- * @method void setProxyOperatorOpenId(string $ProxyOperatorOpenId) 设置平台企业操作人的第三方id
- * @method string getProxyOrganizationName() 获取平台企业名称
- * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置平台企业名称
+ * @method string getProxyOperatorOpenId() 获取第三方平台子客企业员工的唯一标识
+ * @method void setProxyOperatorOpenId(string $ProxyOperatorOpenId) 设置第三方平台子客企业员工的唯一标识
+ * @method string getProxyOrganizationName() 获取第三方平台子客企业名称，与企业营业执照中注册的名称一致。
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置第三方平台子客企业名称，与企业营业执照中注册的名称一致。
  * @method string getMobile() 获取签署人手机号
  * @method void setMobile(string $Mobile) 设置签署人手机号
- * @method integer getSignOrder() 获取签署人签署顺序
- * @method void setSignOrder(integer $SignOrder) 设置签署人签署顺序
- * @method string getApproveName() 获取签署人姓名
+ * @method integer getSignOrder() 获取签署顺序，如果是有序签署，签署顺序从小到大
+ * @method void setSignOrder(integer $SignOrder) 设置签署顺序，如果是有序签署，签署顺序从小到大
+ * @method string getApproveName() 获取签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveName(string $ApproveName) 设置签署人姓名
+ * @method void setApproveName(string $ApproveName) 设置签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproveStatus() 获取当前签署人的状态, 状态如下
-<br/>PENDING 待签署	
-<br/>FILLPENDING 待填写
-<br/>FILLACCEPT 填写完成	
-<br/>FILLREJECT 拒绝填写	
-<br/>WAITPICKUP 待领取	
-<br/>ACCEPT 已签署	
-<br/>REJECT 拒签 
-<br/>DEADLINE 过期没人处理 
-<br/>CANCEL 流程已撤回	
-<br/>FORWARD 已经转他人处理
-<br/>STOP 流程已终止	
-<br/>RELIEVED 解除协议（已解除）
-
+<ul><li> **PENDING** :待签署</li>
+<li> **FILLPENDING** :待填写</li>
+<li> **FILLACCEPT** :填写完成</li>
+<li> **FILLREJECT** :拒绝填写</li>
+<li> **WAITPICKUP** :待领取</li>
+<li> **ACCEPT** :已签署</li>
+<li> **REJECT** :拒签</li>
+<li> **DEADLINE** :过期没人处理</li>
+<li> **CANCEL** :流程已撤回</li>
+<li> **FORWARD** :已经转他人处理</li>
+<li> **STOP** :流程已终止</li>
+<li> **RELIEVED** :解除协议（已解除）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveStatus(string $ApproveStatus) 设置当前签署人的状态, 状态如下
-<br/>PENDING 待签署	
-<br/>FILLPENDING 待填写
-<br/>FILLACCEPT 填写完成	
-<br/>FILLREJECT 拒绝填写	
-<br/>WAITPICKUP 待领取	
-<br/>ACCEPT 已签署	
-<br/>REJECT 拒签 
-<br/>DEADLINE 过期没人处理 
-<br/>CANCEL 流程已撤回	
-<br/>FORWARD 已经转他人处理
-<br/>STOP 流程已终止	
-<br/>RELIEVED 解除协议（已解除）
-
+<ul><li> **PENDING** :待签署</li>
+<li> **FILLPENDING** :待填写</li>
+<li> **FILLACCEPT** :填写完成</li>
+<li> **FILLREJECT** :拒绝填写</li>
+<li> **WAITPICKUP** :待领取</li>
+<li> **ACCEPT** :已签署</li>
+<li> **REJECT** :拒签</li>
+<li> **DEADLINE** :过期没人处理</li>
+<li> **CANCEL** :流程已撤回</li>
+<li> **FORWARD** :已经转他人处理</li>
+<li> **STOP** :流程已终止</li>
+<li> **RELIEVED** :解除协议（已解除）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproveMessage() 获取签署人自定义信息
+ * @method string getApproveMessage() 获取签署人拒签等情况的时候填写的原因
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveMessage(string $ApproveMessage) 设置签署人自定义信息
+ * @method void setApproveMessage(string $ApproveMessage) 设置签署人拒签等情况的时候填写的原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApproveTime() 获取签署人签署时间戳，单位秒
  * @method void setApproveTime(integer $ApproveTime) 设置签署人签署时间戳，单位秒
  * @method string getApproveType() 获取参与者类型 
-<br/>ORGANIZATION：企业签署人
-<br/>PERSON：个人签署人
+<ul><li> **ORGANIZATION** :企业签署人</li>
+<li> **PERSON** :个人签署人</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveType(string $ApproveType) 设置参与者类型 
-<br/>ORGANIZATION：企业签署人
-<br/>PERSON：个人签署人
+<ul><li> **ORGANIZATION** :企业签署人</li>
+<li> **PERSON** :个人签署人</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproverRoleName() 获取自定义签署人角色
+ * @method string getApproverRoleName() 获取自定义签署人的角色名, 如: 收款人、开具人、见证人等
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人角色
+ * @method void setApproverRoleName(string $ApproverRoleName) 设置自定义签署人的角色名, 如: 收款人、开具人、见证人等
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverDetail extends AbstractModel
 {
     /**
-     * @var string 模板配置时候的签署人id,与控件绑定
+     * @var string 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
      */
     public $ReceiptId;
 
     /**
-     * @var string 平台企业的第三方id
+     * @var string 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyOrganizationOpenId;
 
     /**
-     * @var string 平台企业操作人的第三方id
+     * @var string 第三方平台子客企业员工的唯一标识
      */
     public $ProxyOperatorOpenId;
 
     /**
-     * @var string 平台企业名称
+     * @var string 第三方平台子客企业名称，与企业营业执照中注册的名称一致。
      */
     public $ProxyOrganizationName;
 
@@ -116,37 +116,37 @@ class FlowApproverDetail extends AbstractModel
     public $Mobile;
 
     /**
-     * @var integer 签署人签署顺序
+     * @var integer 签署顺序，如果是有序签署，签署顺序从小到大
      */
     public $SignOrder;
 
     /**
-     * @var string 签署人姓名
+     * @var string 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveName;
 
     /**
      * @var string 当前签署人的状态, 状态如下
-<br/>PENDING 待签署	
-<br/>FILLPENDING 待填写
-<br/>FILLACCEPT 填写完成	
-<br/>FILLREJECT 拒绝填写	
-<br/>WAITPICKUP 待领取	
-<br/>ACCEPT 已签署	
-<br/>REJECT 拒签 
-<br/>DEADLINE 过期没人处理 
-<br/>CANCEL 流程已撤回	
-<br/>FORWARD 已经转他人处理
-<br/>STOP 流程已终止	
-<br/>RELIEVED 解除协议（已解除）
-
+<ul><li> **PENDING** :待签署</li>
+<li> **FILLPENDING** :待填写</li>
+<li> **FILLACCEPT** :填写完成</li>
+<li> **FILLREJECT** :拒绝填写</li>
+<li> **WAITPICKUP** :待领取</li>
+<li> **ACCEPT** :已签署</li>
+<li> **REJECT** :拒签</li>
+<li> **DEADLINE** :过期没人处理</li>
+<li> **CANCEL** :流程已撤回</li>
+<li> **FORWARD** :已经转他人处理</li>
+<li> **STOP** :流程已终止</li>
+<li> **RELIEVED** :解除协议（已解除）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveStatus;
 
     /**
-     * @var string 签署人自定义信息
+     * @var string 签署人拒签等情况的时候填写的原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveMessage;
@@ -158,51 +158,51 @@ class FlowApproverDetail extends AbstractModel
 
     /**
      * @var string 参与者类型 
-<br/>ORGANIZATION：企业签署人
-<br/>PERSON：个人签署人
+<ul><li> **ORGANIZATION** :企业签署人</li>
+<li> **PERSON** :个人签署人</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveType;
 
     /**
-     * @var string 自定义签署人角色
+     * @var string 自定义签署人的角色名, 如: 收款人、开具人、见证人等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverRoleName;
 
     /**
-     * @param string $ReceiptId 模板配置时候的签署人id,与控件绑定
-     * @param string $ProxyOrganizationOpenId 平台企业的第三方id
+     * @param string $ReceiptId 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
+     * @param string $ProxyOrganizationOpenId 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProxyOperatorOpenId 平台企业操作人的第三方id
-     * @param string $ProxyOrganizationName 平台企业名称
+     * @param string $ProxyOperatorOpenId 第三方平台子客企业员工的唯一标识
+     * @param string $ProxyOrganizationName 第三方平台子客企业名称，与企业营业执照中注册的名称一致。
      * @param string $Mobile 签署人手机号
-     * @param integer $SignOrder 签署人签署顺序
-     * @param string $ApproveName 签署人姓名
+     * @param integer $SignOrder 签署顺序，如果是有序签署，签署顺序从小到大
+     * @param string $ApproveName 签署方经办人的姓名。
+经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveStatus 当前签署人的状态, 状态如下
-<br/>PENDING 待签署	
-<br/>FILLPENDING 待填写
-<br/>FILLACCEPT 填写完成	
-<br/>FILLREJECT 拒绝填写	
-<br/>WAITPICKUP 待领取	
-<br/>ACCEPT 已签署	
-<br/>REJECT 拒签 
-<br/>DEADLINE 过期没人处理 
-<br/>CANCEL 流程已撤回	
-<br/>FORWARD 已经转他人处理
-<br/>STOP 流程已终止	
-<br/>RELIEVED 解除协议（已解除）
-
+<ul><li> **PENDING** :待签署</li>
+<li> **FILLPENDING** :待填写</li>
+<li> **FILLACCEPT** :填写完成</li>
+<li> **FILLREJECT** :拒绝填写</li>
+<li> **WAITPICKUP** :待领取</li>
+<li> **ACCEPT** :已签署</li>
+<li> **REJECT** :拒签</li>
+<li> **DEADLINE** :过期没人处理</li>
+<li> **CANCEL** :流程已撤回</li>
+<li> **FORWARD** :已经转他人处理</li>
+<li> **STOP** :流程已终止</li>
+<li> **RELIEVED** :解除协议（已解除）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproveMessage 签署人自定义信息
+     * @param string $ApproveMessage 签署人拒签等情况的时候填写的原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApproveTime 签署人签署时间戳，单位秒
      * @param string $ApproveType 参与者类型 
-<br/>ORGANIZATION：企业签署人
-<br/>PERSON：个人签署人
+<ul><li> **ORGANIZATION** :企业签署人</li>
+<li> **PERSON** :个人签署人</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproverRoleName 自定义签署人角色
+     * @param string $ApproverRoleName 自定义签署人的角色名, 如: 收款人、开具人、见证人等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

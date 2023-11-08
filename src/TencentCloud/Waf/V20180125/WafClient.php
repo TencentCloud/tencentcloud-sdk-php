@@ -64,9 +64,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAttackOverviewResponse DescribeAttackOverview(Models\DescribeAttackOverviewRequest $req) 攻击总览
  * @method Models\DescribeAttackTypeResponse DescribeAttackType(Models\DescribeAttackTypeRequest $req) 查询指定域名TOP N攻击类型
  * @method Models\DescribeAttackWhiteRuleResponse DescribeAttackWhiteRule(Models\DescribeAttackWhiteRuleRequest $req) 获取用户规则白名单列表
- * @method Models\DescribeAutoDenyIPResponse DescribeAutoDenyIP(Models\DescribeAutoDenyIPRequest $req) 接口已废弃
-
-描述WAF自动封禁IP详情,对齐自动封堵状态
+ * @method Models\DescribeAutoDenyIPResponse DescribeAutoDenyIP(Models\DescribeAutoDenyIPRequest $req) 描述WAF自动封禁IP详情,对齐自动封堵状态
  * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) Waf 多域名ip黑白名单查询
  * @method Models\DescribeCCRuleResponse DescribeCCRule(Models\DescribeCCRuleRequest $req) 没有在使用。
 

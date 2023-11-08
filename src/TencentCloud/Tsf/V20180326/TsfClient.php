@@ -136,7 +136,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeGroupUseDetailResponse DescribeGroupUseDetail(Models\DescribeGroupUseDetailRequest $req) 查询网关分组监控明细数据
  * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 获取虚拟机部署组列表
  * @method Models\DescribeGroupsWithPluginResponse DescribeGroupsWithPlugin(Models\DescribeGroupsWithPluginRequest $req) 查询某个插件下绑定或未绑定的API分组
- * @method Models\DescribeImageRepositoryResponse DescribeImageRepository(Models\DescribeImageRepositoryRequest $req) 镜像仓库列表 
+ * @method Models\DescribeImageRepositoryResponse DescribeImageRepository(Models\DescribeImageRepositoryRequest $req) 查询镜像仓库列表
  * @method Models\DescribeImageTagsResponse DescribeImageTags(Models\DescribeImageTagsRequest $req) 镜像版本列表
  * @method Models\DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(Models\DescribeInovcationIndicatorsRequest $req) 废弃
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 无

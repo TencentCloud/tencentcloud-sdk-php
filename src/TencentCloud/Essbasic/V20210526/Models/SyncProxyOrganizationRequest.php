@@ -55,9 +55,9 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
 注: `现在仅支持ID_CARD居民身份证类型`
  * @method string getProxyLegalIdCardNumber() 获取第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
  * @method void setProxyLegalIdCardNumber(string $ProxyLegalIdCardNumber) 设置第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
  * @method string getProxyAddress() 获取第三方平台子客企业详细住所，最大长度500个字符
 
 注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`
@@ -115,7 +115,7 @@ class SyncProxyOrganizationRequest extends AbstractModel
 
     /**
      * @var string 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
      */
     public $ProxyLegalIdCardNumber;
 
@@ -145,7 +145,7 @@ class SyncProxyOrganizationRequest extends AbstractModel
 <ul><li>ID_CARD : 居民身份证 (默认值)</li></ul>
 注: `现在仅支持ID_CARD居民身份证类型`
      * @param string $ProxyLegalIdCardNumber 第三方平台子客企业法定代表人的证件号码, 应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li></ul>
      * @param string $ProxyAddress 第三方平台子客企业详细住所，最大长度500个字符
 
 注：`需要符合省市区详情的格式例如： XX省XX市XX区街道具体地址`

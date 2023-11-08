@@ -42,21 +42,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedRelievedFlowId(string $NeedRelievedFlowId) 设置待解除的签署流程编号(即原签署流程的编号)。
  * @method RelieveInfo getReliveInfo() 获取解除协议内容, 包括解除理由等信息。
  * @method void setReliveInfo(RelieveInfo $ReliveInfo) 设置解除协议内容, 包括解除理由等信息。
- * @method array getReleasedApprovers() 获取替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+ * @method array getReleasedApprovers() 获取指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
- * @method void setReleasedApprovers(array $ReleasedApprovers) 设置替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+ * @method void setReleasedApprovers(array $ReleasedApprovers) 设置指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
  * @method string getCallbackUrl() 获取签署完回调url，最大长度1000个字符
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署完回调url，最大长度1000个字符
@@ -105,13 +105,13 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
     public $ReliveInfo;
 
     /**
-     * @var array 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @var array 指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
      */
     public $ReleasedApprovers;
@@ -161,13 +161,13 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
 第三方平台子客企业和员工必须已经经过实名认证
      * @param string $NeedRelievedFlowId 待解除的签署流程编号(即原签署流程的编号)。
      * @param RelieveInfo $ReliveInfo 解除协议内容, 包括解除理由等信息。
-     * @param array $ReleasedApprovers 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
-如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @param array $ReleasedApprovers 指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
+如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>
 
 注意：
 <ul>
-<li>只能更换自己企业的签署人, 不支持更换个人类型或者其他企业的签署人</li>
-<li>可以不指定替换签署人, 使用原流程的签署人</li>
+<li>只能更换自己企业的签署人，不支持更换个人类型或者其他企业的签署人</li>
+<li>可以不指定替换签署人，使用原流程的签署人</li>
 </ul>
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符
      * @param OrganizationInfo $Organization 暂未开放

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUrl() 获取发起流程的web页面链接，有效期5分钟
  * @method void setUrl(string $Url) 设置发起流程的web页面链接，有效期5分钟
+ * @method string getFlowId() 获取创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
+ * @method void setFlowId(string $FlowId) 设置创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class CreatePrepareFlowResponse extends AbstractModel
     public $Url;
 
     /**
+     * @var string 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
+     */
+    public $FlowId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Url 发起流程的web页面链接，有效期5分钟
+     * @param string $FlowId 创建的合同id（还未实际发起），每次调用会生成新的id，用户可以记录此字段对应后续页面发起的合同，若在页面上未成功发起，则此字段无效。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreatePrepareFlowResponse extends AbstractModel
         }
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -59,12 +59,16 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeGroupMemberListResponse DescribeGroupMemberList(Models\DescribeGroupMemberListRequest $req) 此接口用于获取群组成员列表
  * @method Models\DescribeQuestionListResponse DescribeQuestionList(Models\DescribeQuestionListRequest $req) 获取房间提问列表
  * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间配置信息
+ * @method Models\DescribeRoomForbiddenUserResponse DescribeRoomForbiddenUser(Models\DescribeRoomForbiddenUserRequest $req) 根据房间ID获取群组中被禁言的用户列表。
  * @method Models\DescribeRoomStatisticsResponse DescribeRoomStatistics(Models\DescribeRoomStatisticsRequest $req) 获取房间统计信息，仅可在房间结束后调用。
  * @method Models\DescribeScoreListResponse DescribeScoreList(Models\DescribeScoreListRequest $req) 获取课堂评分列表
  * @method Models\DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(Models\DescribeSdkAppIdUsersRequest $req) 此接口用于获取指定应用ID下用户列表
  * @method Models\DescribeSupervisorsResponse DescribeSupervisors(Models\DescribeSupervisorsRequest $req) 获取巡课列表
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 获取用户信息
  * @method Models\EndRoomResponse EndRoom(Models\EndRoomRequest $req) 结束房间的直播
+ * @method Models\ForbidSendMsgResponse ForbidSendMsg(Models\ForbidSendMsgRequest $req) 禁止指定房间中某些用户在一段时间内发言。
+取消对某些用户的禁言。
+被禁言用户退出房间之后再进入同一房间，禁言仍然有效。
  * @method Models\GetRoomEventResponse GetRoomEvent(Models\GetRoomEventRequest $req) 获取房间事件,仅在课堂结束1小时内有效。
  * @method Models\GetRoomMessageResponse GetRoomMessage(Models\GetRoomMessageRequest $req) 获取房间历史消息(房间历史消息保存7天)
  * @method Models\GetRoomsResponse GetRooms(Models\GetRoomsRequest $req) 获取房间列表

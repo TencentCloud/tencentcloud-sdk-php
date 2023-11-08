@@ -20,20 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreatePreparedPersonalEsign请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
  * @method string getUserName() 获取个人用户姓名
  * @method void setUserName(string $UserName) 设置个人用户姓名
- * @method string getIdCardNumber() 获取身份证件号码
- * @method void setIdCardNumber(string $IdCardNumber) 设置身份证件号码
- * @method string getSealName() 获取印章名称
- * @method void setSealName(string $SealName) 设置印章名称
- * @method string getSealImage() 获取印章图片的base64，最大不超过 8M
- * @method void setSealImage(string $SealImage) 设置印章图片的base64，最大不超过 8M
- * @method UserInfo getOperator() 获取操作者信息
- * @method void setOperator(UserInfo $Operator) 设置操作者信息
- * @method string getIdCardType() 获取身份证件类型
- * @method void setIdCardType(string $IdCardType) 设置身份证件类型
+ * @method string getIdCardNumber() 获取证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+ * @method void setIdCardNumber(string $IdCardNumber) 设置证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+ * @method string getSealName() 获取电子印章名字，1-50个中文字符
+注:`同一企业下电子印章名字不能相同`
+ * @method void setSealName(string $SealName) 设置电子印章名字，1-50个中文字符
+注:`同一企业下电子印章名字不能相同`
+ * @method string getSealImage() 获取电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
+
+
+ * @method void setSealImage(string $SealImage) 设置电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
+
+
+ * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method string getIdCardType() 获取证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+ * @method void setIdCardType(string $IdCardType) 设置证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method boolean getSealImageCompress() 获取是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
  * @method void setSealImageCompress(boolean $SealImageCompress) 设置是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
  * @method string getMobile() 获取手机号码；当需要开通自动签时，该参数必传
@@ -46,7 +72,7 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public $Agent;
 
@@ -56,27 +82,40 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 身份证件号码
+     * @var string 证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public $IdCardNumber;
 
     /**
-     * @var string 印章名称
+     * @var string 电子印章名字，1-50个中文字符
+注:`同一企业下电子印章名字不能相同`
      */
     public $SealName;
 
     /**
-     * @var string 印章图片的base64，最大不超过 8M
+     * @var string 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
+
+
      */
     public $SealImage;
 
     /**
-     * @var UserInfo 操作者信息
+     * @var UserInfo 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
 
     /**
-     * @var string 身份证件类型
+     * @var string 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public $IdCardType;
 
@@ -101,13 +140,26 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
     public $LicenseType;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      * @param string $UserName 个人用户姓名
-     * @param string $IdCardNumber 身份证件号码
-     * @param string $SealName 印章名称
-     * @param string $SealImage 印章图片的base64，最大不超过 8M
-     * @param UserInfo $Operator 操作者信息
-     * @param string $IdCardType 身份证件类型
+     * @param string $IdCardNumber 证件号码, 应符合以下规则
+<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>港澳居民来往内地通行证号码应为9位字符串，第1位为“C”，第2位为英文字母（但“I”、“O”除外），后7位为阿拉伯数字。</li>
+<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+     * @param string $SealName 电子印章名字，1-50个中文字符
+注:`同一企业下电子印章名字不能相同`
+     * @param string $SealImage 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式。
+
+
+     * @param UserInfo $Operator 执行本接口操作的员工信息。
+注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param string $IdCardType 证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li>
+<li>OTHER_CARD_TYPE : 其他</li></ul>
+
+注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param boolean $SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
      * @param string $Mobile 手机号码；当需要开通自动签时，该参数必传
      * @param boolean $EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用

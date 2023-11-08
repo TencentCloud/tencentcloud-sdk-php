@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepoType(string $RepoType) 设置企业: tcr ；个人: personal或者不填
  * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
  * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
+ * @method string getRepoName() 获取仓库名
+ * @method void setRepoName(string $RepoName) 设置仓库名
  */
 class DescribeImageTagsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeImageTagsRequest extends AbstractModel
     public $TcrRepoInfo;
 
     /**
+     * @var string 仓库名
+     */
+    public $RepoName;
+
+    /**
      * @param string $ApplicationId 应用Id
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~100
@@ -80,6 +87,7 @@ class DescribeImageTagsRequest extends AbstractModel
      * @param string $SearchWord 可用于搜索的 tag 名字
      * @param string $RepoType 企业: tcr ；个人: personal或者不填
      * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
+     * @param string $RepoName 仓库名
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class DescribeImageTagsRequest extends AbstractModel
         if (array_key_exists("TcrRepoInfo",$param) and $param["TcrRepoInfo"] !== null) {
             $this->TcrRepoInfo = new TcrRepoInfo();
             $this->TcrRepoInfo->deserialize($param["TcrRepoInfo"]);
+        }
+
+        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
+            $this->RepoName = $param["RepoName"];
         }
     }
 }

@@ -172,6 +172,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置Envoy网关服务配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerName() 获取容器名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerName(string $ContainerName) 设置容器名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAdditionalContainerList() 获取附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdditionalContainerList(array $AdditionalContainerList) 设置附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInternalContainerList() 获取内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInternalContainerList(array $InternalContainerList) 设置内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDeploy extends AbstractModel
 {
@@ -404,6 +416,24 @@ class ContainerGroupDeploy extends AbstractModel
     public $GatewayConfig;
 
     /**
+     * @var string 容器名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerName;
+
+    /**
+     * @var array 附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdditionalContainerList;
+
+    /**
+     * @var array 内部容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InternalContainerList;
+
+    /**
      * @param string $GroupId 部署组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -479,6 +509,12 @@ class ContainerGroupDeploy extends AbstractModel
      * @param WarmupSetting $WarmupSetting 预热配置设置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayConfig $GatewayConfig Envoy网关服务配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerName 容器名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AdditionalContainerList 附加容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InternalContainerList 内部容器列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -668,6 +704,28 @@ class ContainerGroupDeploy extends AbstractModel
         if (array_key_exists("GatewayConfig",$param) and $param["GatewayConfig"] !== null) {
             $this->GatewayConfig = new GatewayConfig();
             $this->GatewayConfig->deserialize($param["GatewayConfig"]);
+        }
+
+        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
+            $this->ContainerName = $param["ContainerName"];
+        }
+
+        if (array_key_exists("AdditionalContainerList",$param) and $param["AdditionalContainerList"] !== null) {
+            $this->AdditionalContainerList = [];
+            foreach ($param["AdditionalContainerList"] as $key => $value){
+                $obj = new GroupContainerInfo();
+                $obj->deserialize($value);
+                array_push($this->AdditionalContainerList, $obj);
+            }
+        }
+
+        if (array_key_exists("InternalContainerList",$param) and $param["InternalContainerList"] !== null) {
+            $this->InternalContainerList = [];
+            foreach ($param["InternalContainerList"] as $key => $value){
+                $obj = new GroupContainerInfo();
+                $obj->deserialize($value);
+                array_push($this->InternalContainerList, $obj);
+            }
         }
     }
 }

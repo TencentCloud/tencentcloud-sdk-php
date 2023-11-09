@@ -37,6 +37,12 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 
+<li> deliverFlag
+按照【投递状态】进行过滤。
+类型：String
+必选：否
+可选值： "1":未启用,  "2": 已启用, "3":投递异常
+
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method void setFilters(array $Filters) 设置<li> name
 按照【通知渠道组名称】进行过滤。
@@ -54,6 +60,12 @@ use TencentCloud\Common\AbstractModel;
 按照【接收用户组ID】进行过滤。
 类型：String
 必选：否
+
+<li> deliverFlag
+按照【投递状态】进行过滤。
+类型：String
+必选：否
+可选值： "1":未启用,  "2": 已启用, "3":投递异常
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
  * @method integer getOffset() 获取分页的偏移量，默认值为0。
@@ -80,6 +92,12 @@ class DescribeAlarmNoticesRequest extends AbstractModel
 按照【接收用户组ID】进行过滤。
 类型：String
 必选：否
+
+<li> deliverFlag
+按照【投递状态】进行过滤。
+类型：String
+必选：否
+可选值： "1":未启用,  "2": 已启用, "3":投递异常
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
@@ -112,6 +130,12 @@ class DescribeAlarmNoticesRequest extends AbstractModel
 按照【接收用户组ID】进行过滤。
 类型：String
 必选：否
+
+<li> deliverFlag
+按照【投递状态】进行过滤。
+类型：String
+必选：否
+可选值： "1":未启用,  "2": 已启用, "3":投递异常
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      * @param integer $Offset 分页的偏移量，默认值为0。

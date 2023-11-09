@@ -20,59 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsage请求参数结构体
  *
- * @method Agent getAgent() 获取应用信息，此接口Agent.AppId必填
- * @method void setAgent(Agent $Agent) 设置应用信息，此接口Agent.AppId必填
- * @method string getStartDate() 获取开始时间，例如：2021-03-21
- * @method void setStartDate(string $StartDate) 设置开始时间，例如：2021-03-21
- * @method string getEndDate() 获取结束时间，例如：2021-06-21；
-开始时间到结束时间的区间长度小于等于90天。
- * @method void setEndDate(string $EndDate) 设置结束时间，例如：2021-06-21；
-开始时间到结束时间的区间长度小于等于90天。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+</ul>
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+</ul>
+ * @method string getStartDate() 获取查询日期范围的开始时间, 查询会包含此日期的数据 , 格式为yyyy-mm-dd (例如：2021-03-21)
+
+注: `查询日期范围区间长度大于90天`。
+ * @method void setStartDate(string $StartDate) 设置查询日期范围的开始时间, 查询会包含此日期的数据 , 格式为yyyy-mm-dd (例如：2021-03-21)
+
+注: `查询日期范围区间长度大于90天`。
+ * @method string getEndDate() 获取查询日期范围的结束时间, 查询会包含此日期的数据 , 格式为yyyy-mm-dd (例如：2021-04-21)
+
+注: `查询日期范围区间长度大于90天`。
+ * @method void setEndDate(string $EndDate) 设置查询日期范围的结束时间, 查询会包含此日期的数据 , 格式为yyyy-mm-dd (例如：2021-04-21)
+
+注: `查询日期范围区间长度大于90天`。
  * @method boolean getNeedAggregate() 获取是否汇总数据，默认不汇总。
-不汇总：返回在统计区间内第三方平台下所有企业的每日明细，即每个企业N条数据，N为统计天数；
-汇总：返回在统计区间内第三方平台下所有企业的汇总后数据，即每个企业一条数据；
+<ul><li> **true** :  汇总数据,  即每个企业一条数据, 对日志范围内的数据相加</li>
+<li> **false** :  不会总数据,  返回企业每日明细,   按日期返回每个企业的数据(如果企业对应天数没有操作则无此企业此日期的数据)</li></ul>
+
  * @method void setNeedAggregate(boolean $NeedAggregate) 设置是否汇总数据，默认不汇总。
-不汇总：返回在统计区间内第三方平台下所有企业的每日明细，即每个企业N条数据，N为统计天数；
-汇总：返回在统计区间内第三方平台下所有企业的汇总后数据，即每个企业一条数据；
- * @method integer getLimit() 获取单次返回的最多条目数量。默认为1000，且不能超过1000。
- * @method void setLimit(integer $Limit) 设置单次返回的最多条目数量。默认为1000，且不能超过1000。
- * @method integer getOffset() 获取偏移量，默认是0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认是0。
+<ul><li> **true** :  汇总数据,  即每个企业一条数据, 对日志范围内的数据相加</li>
+<li> **false** :  不会总数据,  返回企业每日明细,   按日期返回每个企业的数据(如果企业对应天数没有操作则无此企业此日期的数据)</li></ul>
+
+ * @method integer getLimit() 获取指定每页返回的数据条数，和Offset参数配合使用。
+
+注: `默认值为1000，单页做大值为1000`
+ * @method void setLimit(integer $Limit) 设置指定每页返回的数据条数，和Offset参数配合使用。
+
+注: `默认值为1000，单页做大值为1000`
+ * @method integer getOffset() 获取查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`offset从0开始，即第一页为0。`
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`offset从0开始，即第一页为0。`
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class DescribeUsageRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用信息，此接口Agent.AppId必填
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+</ul>
      */
     public $Agent;
 
     /**
-     * @var string 开始时间，例如：2021-03-21
+     * @var string 查询日期范围的开始时间, 查询会包含此日期的数据 , 格式为yyyy-mm-dd (例如：2021-03-21)
+
+注: `查询日期范围区间长度大于90天`。
      */
     public $StartDate;
 
     /**
-     * @var string 结束时间，例如：2021-06-21；
-开始时间到结束时间的区间长度小于等于90天。
+     * @var string 查询日期范围的结束时间, 查询会包含此日期的数据 , 格式为yyyy-mm-dd (例如：2021-04-21)
+
+注: `查询日期范围区间长度大于90天`。
      */
     public $EndDate;
 
     /**
      * @var boolean 是否汇总数据，默认不汇总。
-不汇总：返回在统计区间内第三方平台下所有企业的每日明细，即每个企业N条数据，N为统计天数；
-汇总：返回在统计区间内第三方平台下所有企业的汇总后数据，即每个企业一条数据；
+<ul><li> **true** :  汇总数据,  即每个企业一条数据, 对日志范围内的数据相加</li>
+<li> **false** :  不会总数据,  返回企业每日明细,   按日期返回每个企业的数据(如果企业对应天数没有操作则无此企业此日期的数据)</li></ul>
+
      */
     public $NeedAggregate;
 
     /**
-     * @var integer 单次返回的最多条目数量。默认为1000，且不能超过1000。
+     * @var integer 指定每页返回的数据条数，和Offset参数配合使用。
+
+注: `默认值为1000，单页做大值为1000`
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认是0。
+     * @var integer 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`offset从0开始，即第一页为0。`
      */
     public $Offset;
 
@@ -83,15 +122,28 @@ class DescribeUsageRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用信息，此接口Agent.AppId必填
-     * @param string $StartDate 开始时间，例如：2021-03-21
-     * @param string $EndDate 结束时间，例如：2021-06-21；
-开始时间到结束时间的区间长度小于等于90天。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+</ul>
+     * @param string $StartDate 查询日期范围的开始时间, 查询会包含此日期的数据 , 格式为yyyy-mm-dd (例如：2021-03-21)
+
+注: `查询日期范围区间长度大于90天`。
+     * @param string $EndDate 查询日期范围的结束时间, 查询会包含此日期的数据 , 格式为yyyy-mm-dd (例如：2021-04-21)
+
+注: `查询日期范围区间长度大于90天`。
      * @param boolean $NeedAggregate 是否汇总数据，默认不汇总。
-不汇总：返回在统计区间内第三方平台下所有企业的每日明细，即每个企业N条数据，N为统计天数；
-汇总：返回在统计区间内第三方平台下所有企业的汇总后数据，即每个企业一条数据；
-     * @param integer $Limit 单次返回的最多条目数量。默认为1000，且不能超过1000。
-     * @param integer $Offset 偏移量，默认是0。
+<ul><li> **true** :  汇总数据,  即每个企业一条数据, 对日志范围内的数据相加</li>
+<li> **false** :  不会总数据,  返回企业每日明细,   按日期返回每个企业的数据(如果企业对应天数没有操作则无此企业此日期的数据)</li></ul>
+
+     * @param integer $Limit 指定每页返回的数据条数，和Offset参数配合使用。
+
+注: `默认值为1000，单页做大值为1000`
+     * @param integer $Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用。
+
+注：`offset从0开始，即第一页为0。`
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

@@ -21,16 +21,24 @@ use TencentCloud\Common\AbstractModel;
  * 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。
  *
  * @method string getQrCodeId() 获取二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
  * @method void setQrCodeId(string $QrCodeId) 设置二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
  * @method string getQrCodeUrl() 获取二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。	
  * @method void setQrCodeUrl(string $QrCodeUrl) 设置二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。	
- * @method integer getExpiredTime() 获取二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
- * @method void setExpiredTime(integer $ExpiredTime) 设置二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
+ * @method integer getExpiredTime() 获取二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	
+ * @method void setExpiredTime(integer $ExpiredTime) 设置二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	
  */
 class SignQrCode extends AbstractModel
 {
     /**
      * @var string 二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
      */
     public $QrCodeId;
 
@@ -40,14 +48,18 @@ class SignQrCode extends AbstractModel
     public $QrCodeUrl;
 
     /**
-     * @var integer 二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
+     * @var integer 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	
      */
     public $ExpiredTime;
 
     /**
      * @param string $QrCodeId 二维码ID，为32位字符串。	
+
+注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
      * @param string $QrCodeUrl 二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。	
-     * @param integer $ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒）。 一旦超过二维码的有效期限，该二维码将自动失效。	
+     * @param integer $ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
+一旦超过二维码的有效期限，该二维码将自动失效。	
      */
     function __construct()
     {

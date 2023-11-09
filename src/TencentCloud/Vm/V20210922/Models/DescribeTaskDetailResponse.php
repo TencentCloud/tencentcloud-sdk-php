@@ -82,13 +82,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioSegments(array $AudioSegments) 设置该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrorType() 获取当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+ * @method string getErrorType() 获取当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorType(string $ErrorType) 设置当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+ * @method void setErrorType(string $ErrorType) 设置当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorDescription() 获取当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -105,6 +115,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAsrs() 获取该字段用于返回音频文件识别出的对应文本内容。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrs(array $Asrs) 设置该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SegmentCosUrlList getSegmentCosUrlList() 获取该字段用于返回检测结果明细数据相关的cos url	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentCosUrlList(SegmentCosUrlList $SegmentCosUrlList) 设置该字段用于返回检测结果明细数据相关的cos url	
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -203,9 +217,14 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $AudioSegments;
 
     /**
-     * @var string 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+     * @var string 当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorType;
@@ -233,6 +252,12 @@ class DescribeTaskDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Asrs;
+
+    /**
+     * @var SegmentCosUrlList 该字段用于返回检测结果明细数据相关的cos url	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentCosUrlList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -271,9 +296,14 @@ class DescribeTaskDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AudioSegments 该字段用于返回视频中音频审核的结果，详细返回内容敬请参考AudioSegments数据结构的描述。<br>备注：数据有效期为24小时，如需要延长存储时间，请在已配置的COS储存桶中设置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrorType 当任务状态为Error时，返回对应错误的类型，取值：**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
+     * @param string $ErrorType 当任务状态为Error时，返回对应错误的类型，取值：
+**DECODE_ERROR**: 解码失败。（输入资源中可能包含无法解码的视频）
 **URL_ERROR**：下载地址验证失败。
-**TIMEOUT_ERROR**：处理超时。任务状态非Error时默认返回为空。
+**TIMEOUT_ERROR**：处理超时。
+**CALLBACK_ERRORR**：回调错误。
+**MODERATION_ERROR**：审核失败。
+**URL_NOT_SUPPORTED**：源文件太大或没有图片音频帧
+任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorDescription 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -282,6 +312,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $AudioText 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Asrs 该字段用于返回音频文件识别出的对应文本内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentCosUrlList $SegmentCosUrlList 该字段用于返回检测结果明细数据相关的cos url	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -398,6 +430,11 @@ class DescribeTaskDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Asrs, $obj);
             }
+        }
+
+        if (array_key_exists("SegmentCosUrlList",$param) and $param["SegmentCosUrlList"] !== null) {
+            $this->SegmentCosUrlList = new SegmentCosUrlList();
+            $this->SegmentCosUrlList->deserialize($param["SegmentCosUrlList"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

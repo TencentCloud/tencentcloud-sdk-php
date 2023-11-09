@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置关联应用名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVerifyId() 获取验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerifyId(integer $VerifyId) 设置验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskStatusType() 获取状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskStatusType(integer $TaskStatusType) 设置状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskListItem extends AbstractModel
 {
@@ -126,6 +134,18 @@ class TaskListItem extends AbstractModel
     public $ApplicationName;
 
     /**
+     * @var integer 验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VerifyId;
+
+    /**
+     * @var integer 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskStatusType;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -143,6 +163,10 @@ class TaskListItem extends AbstractModel
      * @param string $ApplicationId 关联应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 关联应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VerifyId 验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -204,6 +228,14 @@ class TaskListItem extends AbstractModel
 
         if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
             $this->ApplicationName = $param["ApplicationName"];
+        }
+
+        if (array_key_exists("VerifyId",$param) and $param["VerifyId"] !== null) {
+            $this->VerifyId = $param["VerifyId"];
+        }
+
+        if (array_key_exists("TaskStatusType",$param) and $param["TaskStatusType"] !== null) {
+            $this->TaskStatusType = $param["TaskStatusType"];
         }
     }
 }

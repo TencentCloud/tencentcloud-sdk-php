@@ -18,9 +18,7 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 动态更新索引配置
-
-注意：该功能尚处于内测阶段，如需使用请联系技术支持
+ * 动态索引配置，启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
  *
  * @method boolean getStatus() 获取动态索引配置开关
 注意：此字段可能返回 null，表示取不到有效值。

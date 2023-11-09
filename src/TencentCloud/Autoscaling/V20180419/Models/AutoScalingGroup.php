@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapacityRebalance(boolean $CapacityRebalance) 设置容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
 <br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
 <br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+ * @method InstanceNameIndexSettings getInstanceNameIndexSettings() 获取实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) 设置实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -292,6 +296,12 @@ class AutoScalingGroup extends AbstractModel
     public $CapacityRebalance;
 
     /**
+     * @var InstanceNameIndexSettings 实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceNameIndexSettings;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
      * @param string $AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br>
@@ -340,6 +350,8 @@ class AutoScalingGroup extends AbstractModel
      * @param boolean $CapacityRebalance 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
 <br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
 <br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+     * @param InstanceNameIndexSettings $InstanceNameIndexSettings 实例名称序号相关设置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -488,6 +500,11 @@ class AutoScalingGroup extends AbstractModel
 
         if (array_key_exists("CapacityRebalance",$param) and $param["CapacityRebalance"] !== null) {
             $this->CapacityRebalance = $param["CapacityRebalance"];
+        }
+
+        if (array_key_exists("InstanceNameIndexSettings",$param) and $param["InstanceNameIndexSettings"] !== null) {
+            $this->InstanceNameIndexSettings = new InstanceNameIndexSettings();
+            $this->InstanceNameIndexSettings->deserialize($param["InstanceNameIndexSettings"]);
         }
     }
 }

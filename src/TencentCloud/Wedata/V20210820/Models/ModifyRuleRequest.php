@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleTemplateId(integer $RuleTemplateId) 设置规则模板ID
  * @method integer getType() 获取规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
  * @method void setType(integer $Type) 设置规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
- * @method integer getQualityDim() 获取规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
- * @method void setQualityDim(integer $QualityDim) 设置规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+ * @method integer getQualityDim() 获取规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
+ * @method void setQualityDim(integer $QualityDim) 设置规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
  * @method string getSourceObjectDataTypeName() 获取源字段详细类型，int、string
  * @method void setSourceObjectDataTypeName(string $SourceObjectDataTypeName) 设置源字段详细类型，int、string
  * @method string getSourceObjectValue() 获取源字段名称
@@ -105,7 +105,7 @@ class ModifyRuleRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * @var integer 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
      */
     public $QualityDim;
 
@@ -192,7 +192,7 @@ class ModifyRuleRequest extends AbstractModel
      * @param string $TableId 数据表ID
      * @param integer $RuleTemplateId 规则模板ID
      * @param integer $Type 规则类型 1.系统模版, 2.自定义模版, 3.自定义SQL
-     * @param integer $QualityDim 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+     * @param integer $QualityDim 规则所属质量维度（1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性）
      * @param string $SourceObjectDataTypeName 源字段详细类型，int、string
      * @param string $SourceObjectValue 源字段名称
      * @param integer $ConditionType 检测范围 1.全表   2.条件扫描

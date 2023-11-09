@@ -68,9 +68,9 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置分数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNames() 获取如果命中场景为涉政，则该数据为人物姓名列表，否则null
+ * @method array getNames() 获取人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNames(array $Names) 设置如果命中场景为涉政，则该数据为人物姓名列表，否则null
+ * @method void setNames(array $Names) 设置人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取图片OCR文本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,7 +132,7 @@ Block 确认违规
     public $Score;
 
     /**
-     * @var array 如果命中场景为涉政，则该数据为人物姓名列表，否则null
+     * @var array 人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Names;
@@ -174,7 +174,7 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 分数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Names 如果命中场景为涉政，则该数据为人物姓名列表，否则null
+     * @param array $Names 人物名称列表，如未识别，则为null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 图片OCR文本
 注意：此字段可能返回 null，表示取不到有效值。

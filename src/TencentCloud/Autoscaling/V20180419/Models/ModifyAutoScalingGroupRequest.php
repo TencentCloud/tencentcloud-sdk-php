@@ -112,6 +112,8 @@ INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加�
  * @method void setCapacityRebalance(boolean $CapacityRebalance) 设置容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
 <br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
 <br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+ * @method InstanceNameIndexSettings getInstanceNameIndexSettings() 获取实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+ * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) 设置实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
  */
 class ModifyAutoScalingGroupRequest extends AbstractModel
 {
@@ -250,6 +252,11 @@ INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加�
     public $CapacityRebalance;
 
     /**
+     * @var InstanceNameIndexSettings 实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+     */
+    public $InstanceNameIndexSettings;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param integer $DefaultCooldown 默认冷却时间，单位秒，默认值为300
@@ -296,6 +303,7 @@ INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加�
      * @param boolean $CapacityRebalance 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
 <br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
 <br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+     * @param InstanceNameIndexSettings $InstanceNameIndexSettings 实例名称序号相关设置。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
      */
     function __construct()
     {
@@ -398,6 +406,11 @@ INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加�
 
         if (array_key_exists("CapacityRebalance",$param) and $param["CapacityRebalance"] !== null) {
             $this->CapacityRebalance = $param["CapacityRebalance"];
+        }
+
+        if (array_key_exists("InstanceNameIndexSettings",$param) and $param["InstanceNameIndexSettings"] !== null) {
+            $this->InstanceNameIndexSettings = new InstanceNameIndexSettings();
+            $this->InstanceNameIndexSettings->deserialize($param["InstanceNameIndexSettings"]);
         }
     }
 }

@@ -116,6 +116,8 @@ use TencentCloud\Common\AbstractModel;
 <br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
 
 默认取 FALSE。
+ * @method InstanceNameIndexSettings getInstanceNameIndexSettings() 获取实例名称序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+ * @method void setInstanceNameIndexSettings(InstanceNameIndexSettings $InstanceNameIndexSettings) 设置实例名称序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
  */
 class CreateAutoScalingGroupRequest extends AbstractModel
 {
@@ -264,6 +266,11 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $CapacityRebalance;
 
     /**
+     * @var InstanceNameIndexSettings 实例名称序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
+     */
+    public $InstanceNameIndexSettings;
+
+    /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param string $LaunchConfigurationId 启动配置ID
      * @param integer $MaxSize 最大实例数，取值范围为0-2000。
@@ -312,6 +319,7 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 <br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
 
 默认取 FALSE。
+     * @param InstanceNameIndexSettings $InstanceNameIndexSettings 实例名称序号相关设置。若不指定该参数，则默认不开启。开启后为伸缩组内自动创建的实例名称添加递增的数字序号。
      */
     function __construct()
     {
@@ -432,6 +440,11 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 
         if (array_key_exists("CapacityRebalance",$param) and $param["CapacityRebalance"] !== null) {
             $this->CapacityRebalance = $param["CapacityRebalance"];
+        }
+
+        if (array_key_exists("InstanceNameIndexSettings",$param) and $param["InstanceNameIndexSettings"] !== null) {
+            $this->InstanceNameIndexSettings = new InstanceNameIndexSettings();
+            $this->InstanceNameIndexSettings->deserialize($param["InstanceNameIndexSettings"]);
         }
     }
 }

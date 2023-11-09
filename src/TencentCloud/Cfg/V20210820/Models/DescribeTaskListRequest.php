@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskStartTime(string $TaskStartTime) 设置开始时间，固定格式%Y-%m-%d %H:%M:%S
  * @method string getTaskEndTime() 获取结束时间，固定格式%Y-%m-%d %H:%M:%S
  * @method void setTaskEndTime(string $TaskEndTime) 设置结束时间，固定格式%Y-%m-%d %H:%M:%S
+ * @method string getTaskUpdateTime() 获取更新时间，固定格式%Y-%m-%d %H:%M:%S
+ * @method void setTaskUpdateTime(string $TaskUpdateTime) 设置更新时间，固定格式%Y-%m-%d %H:%M:%S
  * @method array getTags() 获取标签对
  * @method void setTags(array $Tags) 设置标签对
  * @method array getFilters() 获取筛选条件
@@ -44,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(array $ApplicationId) 设置关联应用ID筛选
  * @method array getApplicationName() 获取关联应用筛选
  * @method void setApplicationName(array $ApplicationName) 设置关联应用筛选
+ * @method array getTaskStatusList() 获取任务状态筛选--支持多选 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
+ * @method void setTaskStatusList(array $TaskStatusList) 设置任务状态筛选--支持多选 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -83,6 +87,11 @@ class DescribeTaskListRequest extends AbstractModel
     public $TaskEndTime;
 
     /**
+     * @var string 更新时间，固定格式%Y-%m-%d %H:%M:%S
+     */
+    public $TaskUpdateTime;
+
+    /**
      * @var array 标签对
      */
     public $Tags;
@@ -108,6 +117,11 @@ class DescribeTaskListRequest extends AbstractModel
     public $ApplicationName;
 
     /**
+     * @var array 任务状态筛选--支持多选 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
+     */
+    public $TaskStatusList;
+
+    /**
      * @param integer $Limit 分页Limit
      * @param integer $Offset 分页Offset
      * @param string $TaskTitle 演练名称
@@ -115,11 +129,13 @@ class DescribeTaskListRequest extends AbstractModel
      * @param integer $TaskStatus 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
      * @param string $TaskStartTime 开始时间，固定格式%Y-%m-%d %H:%M:%S
      * @param string $TaskEndTime 结束时间，固定格式%Y-%m-%d %H:%M:%S
+     * @param string $TaskUpdateTime 更新时间，固定格式%Y-%m-%d %H:%M:%S
      * @param array $Tags 标签对
      * @param array $Filters 筛选条件
      * @param array $TaskId 演练ID
      * @param array $ApplicationId 关联应用ID筛选
      * @param array $ApplicationName 关联应用筛选
+     * @param array $TaskStatusList 任务状态筛选--支持多选 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
      */
     function __construct()
     {
@@ -162,6 +178,10 @@ class DescribeTaskListRequest extends AbstractModel
             $this->TaskEndTime = $param["TaskEndTime"];
         }
 
+        if (array_key_exists("TaskUpdateTime",$param) and $param["TaskUpdateTime"] !== null) {
+            $this->TaskUpdateTime = $param["TaskUpdateTime"];
+        }
+
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = [];
             foreach ($param["Tags"] as $key => $value){
@@ -190,6 +210,10 @@ class DescribeTaskListRequest extends AbstractModel
 
         if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
             $this->ApplicationName = $param["ApplicationName"];
+        }
+
+        if (array_key_exists("TaskStatusList",$param) and $param["TaskStatusList"] !== null) {
+            $this->TaskStatusList = $param["TaskStatusList"];
         }
     }
 }

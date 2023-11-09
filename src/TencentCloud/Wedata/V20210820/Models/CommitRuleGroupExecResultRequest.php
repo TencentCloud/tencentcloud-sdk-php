@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CommitRuleGroupExecResult请求参数结构体
  *
- * @method string getProjectId() 获取preject id
- * @method void setProjectId(string $ProjectId) 设置preject id
- * @method integer getRuleGroupExecId() 获取rule group exec id
- * @method void setRuleGroupExecId(integer $RuleGroupExecId) 设置rule group exec id
- * @method string getRuleGroupState() 获取group exec state
- * @method void setRuleGroupState(string $RuleGroupState) 设置group exec state
- * @method array getRuleExecResults() 获取runner rule exec result list
- * @method void setRuleExecResults(array $RuleExecResults) 设置runner rule exec result list
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method integer getRuleGroupExecId() 获取规则组执行ID
+ * @method void setRuleGroupExecId(integer $RuleGroupExecId) 设置规则组执行ID
+ * @method string getRuleGroupState() 获取规则组执行状态
+ * @method void setRuleGroupState(string $RuleGroupState) 设置规则组执行状态
+ * @method array getRuleExecResults() 获取规则执行结果集合
+ * @method void setRuleExecResults(array $RuleExecResults) 设置规则执行结果集合
  */
 class CommitRuleGroupExecResultRequest extends AbstractModel
 {
     /**
-     * @var string preject id
+     * @var string 项目ID
      */
     public $ProjectId;
 
     /**
-     * @var integer rule group exec id
+     * @var integer 规则组执行ID
      */
     public $RuleGroupExecId;
 
     /**
-     * @var string group exec state
+     * @var string 规则组执行状态
      */
     public $RuleGroupState;
 
     /**
-     * @var array runner rule exec result list
+     * @var array 规则执行结果集合
      */
     public $RuleExecResults;
 
     /**
-     * @param string $ProjectId preject id
-     * @param integer $RuleGroupExecId rule group exec id
-     * @param string $RuleGroupState group exec state
-     * @param array $RuleExecResults runner rule exec result list
+     * @param string $ProjectId 项目ID
+     * @param integer $RuleGroupExecId 规则组执行ID
+     * @param string $RuleGroupState 规则组执行状态
+     * @param array $RuleExecResults 规则执行结果集合
      */
     function __construct()
     {

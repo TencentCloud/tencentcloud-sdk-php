@@ -52,6 +52,10 @@ Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置得分，分数是 0 ～ 100
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabel() 获取命中的二级标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabel(string $SubLabel) 设置命中的二级标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskLabel extends AbstractModel
 {
@@ -84,6 +88,12 @@ Block 确认违规
     public $Score;
 
     /**
+     * @var string 命中的二级标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabel;
+
+    /**
      * @param string $Label 命中的标签
 Porn 色情
 Sexy 性感
@@ -99,6 +109,8 @@ Review 建议人审，
 Block 确认违规
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分，分数是 0 ～ 100
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabel 命中的二级标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +136,10 @@ Block 确认违规
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
         }
     }
 }

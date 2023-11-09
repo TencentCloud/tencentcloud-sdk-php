@@ -29,37 +29,41 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。
  * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。
  * @method string getQuotaType() 获取查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
  * @method void setQuotaType(string $QuotaType) 设置查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -89,21 +93,23 @@ class DescribeBillUsageDetailRequest extends AbstractModel
 
     /**
      * @var string 查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
      */
     public $QuotaType;
 
@@ -119,21 +125,23 @@ AuthService-企业工商信息查询
      * @param integer $Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
      * @param integer $Limit 指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。
      * @param string $QuotaType 查询的套餐类型 （选填 ）不传则查询所有套餐；
-对应关系如下
-CloudEnterprise-企业版合同
-SingleSignature-单方签章
-CloudProve-签署报告
-CloudOnlineSign-腾讯会议在线签约
-ChannelWeCard-微工卡
-SignFlow-合同套餐
-SignFace-签署意愿（人脸识别）
-SignPassword-签署意愿（密码）
-SignSMS-签署意愿（短信）
-PersonalEssAuth-签署人实名（腾讯电子签认证）
-PersonalThirdAuth-签署人实名（信任第三方认证）
-OrgEssAuth-签署企业实名
-FlowNotify-短信通知
-AuthService-企业工商信息查询
+目前支持:
+<ul>
+<li>**CloudEnterprise**: 企业版合同</li>
+<li>**SingleSignature**: 单方签章</li>
+<li>**CloudProve**: 签署报告</li>
+<li>**CloudOnlineSign**: 腾讯会议在线签约</li>
+<li>**ChannelWeCard**: 微工卡</li>
+<li>**SignFlow**: 合同套餐</li>
+<li>**SignFace**: 签署意愿（人脸识别）</li>
+<li>**SignPassword**: 签署意愿（密码）</li>
+<li>**SignSMS**: 签署意愿（短信）</li>
+<li>**PersonalEssAuth**: 签署人实名（腾讯电子签认证）</li>
+<li>**PersonalThirdAuth**: 签署人实名（信任第三方认证）</li>
+<li>**OrgEssAuth**: 签署企业实名</li>
+<li>**FlowNotify**: 短信通知</li>
+<li>**AuthService**: 企业工商信息查询</li>
+</ul>
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */

@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNote(string $Note) 设置备注
  * @method array getGoodsInfos() 获取货物或服务清单
  * @method void setGoodsInfos(array $GoodsInfos) 设置货物或服务清单
+ * @method AirTicketInfo getAirTicketInfo() 获取航空运输电子客票行程单信息
+ * @method void setAirTicketInfo(AirTicketInfo $AirTicketInfo) 设置航空运输电子客票行程单信息
+ * @method RailwayTicketInfo getRailwayTicketInfo() 获取铁路电子客票
+ * @method void setRailwayTicketInfo(RailwayTicketInfo $RailwayTicketInfo) 设置铁路电子客票
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -157,6 +161,16 @@ class VerifyOfdVatInvoiceOCRResponse extends AbstractModel
     public $GoodsInfos;
 
     /**
+     * @var AirTicketInfo 航空运输电子客票行程单信息
+     */
+    public $AirTicketInfo;
+
+    /**
+     * @var RailwayTicketInfo 铁路电子客票
+     */
+    public $RailwayTicketInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -183,6 +197,8 @@ class VerifyOfdVatInvoiceOCRResponse extends AbstractModel
      * @param string $TaxExclusiveTotalAmount 不含税金额
      * @param string $Note 备注
      * @param array $GoodsInfos 货物或服务清单
+     * @param AirTicketInfo $AirTicketInfo 航空运输电子客票行程单信息
+     * @param RailwayTicketInfo $RailwayTicketInfo 铁路电子客票
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -271,6 +287,16 @@ class VerifyOfdVatInvoiceOCRResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->GoodsInfos, $obj);
             }
+        }
+
+        if (array_key_exists("AirTicketInfo",$param) and $param["AirTicketInfo"] !== null) {
+            $this->AirTicketInfo = new AirTicketInfo();
+            $this->AirTicketInfo->deserialize($param["AirTicketInfo"]);
+        }
+
+        if (array_key_exists("RailwayTicketInfo",$param) and $param["RailwayTicketInfo"] !== null) {
+            $this->RailwayTicketInfo = new RailwayTicketInfo();
+            $this->RailwayTicketInfo->deserialize($param["RailwayTicketInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

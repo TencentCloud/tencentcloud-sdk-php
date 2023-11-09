@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRuleTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模版ID
- * @method void setTemplateId(integer $TemplateId) 设置模版ID
- * @method integer getType() 获取模版类型  1.系统模版   2.自定义模版
- * @method void setType(integer $Type) 设置模版类型  1.系统模版   2.自定义模版
- * @method string getName() 获取模版名称
- * @method void setName(string $Name) 设置模版名称
+ * @method integer getTemplateId() 获取模板ID
+ * @method void setTemplateId(integer $TemplateId) 设置模板ID
+ * @method integer getType() 获取模板类型  1.系统模板   2.自定义模板
+ * @method void setType(integer $Type) 设置模板类型  1.系统模板   2.自定义模板
+ * @method string getName() 获取模板名称
+ * @method void setName(string $Name) 设置模板名称
  * @method integer getQualityDim() 获取质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
  * @method void setQualityDim(integer $QualityDim) 设置质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
  * @method integer getSourceObjectType() 获取源端数据对象类型 1.常量  2.离线表级   2.离线字段级
@@ -46,17 +46,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRuleTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模版ID
+     * @var integer 模板ID
      */
     public $TemplateId;
 
     /**
-     * @var integer 模版类型  1.系统模版   2.自定义模版
+     * @var integer 模板类型  1.系统模板   2.自定义模板
      */
     public $Type;
 
     /**
-     * @var string 模版名称
+     * @var string 模板名称
      */
     public $Name;
 
@@ -101,9 +101,9 @@ class ModifyRuleTemplateRequest extends AbstractModel
     public $WhereFlag;
 
     /**
-     * @param integer $TemplateId 模版ID
-     * @param integer $Type 模版类型  1.系统模版   2.自定义模版
-     * @param string $Name 模版名称
+     * @param integer $TemplateId 模板ID
+     * @param integer $Type 模板类型  1.系统模板   2.自定义模板
+     * @param string $Name 模板名称
      * @param integer $QualityDim 质量检测维度 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性
      * @param integer $SourceObjectType 源端数据对象类型 1.常量  2.离线表级   2.离线字段级
      * @param string $Description 描述

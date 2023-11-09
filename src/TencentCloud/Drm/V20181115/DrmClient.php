@@ -39,6 +39,7 @@ use TencentCloud\Drm\V20181115\Models as Models;
  * @method Models\DescribeKeysResponse DescribeKeys(Models\DescribeKeysRequest $req) 开发者需要指定使用的DRM类型、和需要加密的Track类型，后台返回加密使用的密钥
 如果加密使用的ContentID没有关联的密钥信息，后台会自动生成新的密钥返回
 
+ * @method Models\GenerateTDRMKeyResponse GenerateTDRMKey(Models\GenerateTDRMKeyRequest $req) 开发者需要指定使用的DRM类型取值 NORMALAES、和需要加密的Track类型取值 SD,ContentType取值 LiveVideo
  * @method Models\ModifyFairPlayPemResponse ModifyFairPlayPem(Models\ModifyFairPlayPemRequest $req) 本接口用来设置fairplay方案所需的私钥、私钥密钥、ask等信息。
 如需使用fairplay方案，请务必先设置私钥。
  * @method Models\StartEncryptionResponse StartEncryption(Models\StartEncryptionRequest $req) 开发者调用该接口，启动一次内容文件的DRM加密工作流。

@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
 - available:可使用
 - unserviced:停服中
 - upgrading:升级中
- * @method integer getSizeByte() 获取文件系统已使用容量,单位Byte
- * @method void setSizeByte(integer $SizeByte) 设置文件系统已使用容量,单位Byte
- * @method integer getSizeLimit() 获取文件系统最大空间限制,GiB
- * @method void setSizeLimit(integer $SizeLimit) 设置文件系统最大空间限制,GiB
+ * @method integer getSizeByte() 获取文件系统已使用容量。单位：Byte
+ * @method void setSizeByte(integer $SizeByte) 设置文件系统已使用容量。单位：Byte
+ * @method integer getSizeLimit() 获取文件系统最大空间限制。单位:GiB
+ * @method void setSizeLimit(integer $SizeLimit) 设置文件系统最大空间限制。单位:GiB
  * @method integer getZoneId() 获取区域 ID
  * @method void setZoneId(integer $ZoneId) 设置区域 ID
  * @method string getZone() 获取区域名称
@@ -69,7 +69,9 @@ use TencentCloud\Common\AbstractModel;
  * @method float getBandwidthLimit() 获取文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
  * @method void setBandwidthLimit(float $BandwidthLimit) 设置文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
  * @method integer getCapacity() 获取文件系统总容量
+单位:GiB
  * @method void setCapacity(integer $Capacity) 设置文件系统总容量
+单位:GiB
  * @method array getTags() 获取文件系统标签列表
  * @method void setTags(array $Tags) 设置文件系统标签列表
  * @method string getTieringState() 获取文件系统生命周期管理状态
@@ -112,12 +114,12 @@ class FileSystemInfo extends AbstractModel
     public $LifeCycleState;
 
     /**
-     * @var integer 文件系统已使用容量,单位Byte
+     * @var integer 文件系统已使用容量。单位：Byte
      */
     public $SizeByte;
 
     /**
-     * @var integer 文件系统最大空间限制,GiB
+     * @var integer 文件系统最大空间限制。单位:GiB
      */
     public $SizeLimit;
 
@@ -183,6 +185,7 @@ class FileSystemInfo extends AbstractModel
 
     /**
      * @var integer 文件系统总容量
+单位:GiB
      */
     public $Capacity;
 
@@ -215,8 +218,8 @@ Available:可用
 - available:可使用
 - unserviced:停服中
 - upgrading:升级中
-     * @param integer $SizeByte 文件系统已使用容量,单位Byte
-     * @param integer $SizeLimit 文件系统最大空间限制,GiB
+     * @param integer $SizeByte 文件系统已使用容量。单位：Byte
+     * @param integer $SizeLimit 文件系统最大空间限制。单位:GiB
      * @param integer $ZoneId 区域 ID
      * @param string $Zone 区域名称
      * @param string $Protocol 文件系统协议类型, 支持 NFS,CIFS,TURBO
@@ -230,6 +233,7 @@ Available:可用
      * @param integer $AppId 应用ID
      * @param float $BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
      * @param integer $Capacity 文件系统总容量
+单位:GiB
      * @param array $Tags 文件系统标签列表
      * @param string $TieringState 文件系统生命周期管理状态
 NotAvailable：不可用

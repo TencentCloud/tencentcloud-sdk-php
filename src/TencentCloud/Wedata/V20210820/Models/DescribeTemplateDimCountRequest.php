@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTemplateDimCount请求参数结构体
  *
- * @method integer getType() 获取模版类型
- * @method void setType(integer $Type) 设置模版类型
+ * @method integer getType() 获取模板类型
+ * @method void setType(integer $Type) 设置模板类型
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  */
 class DescribeTemplateDimCountRequest extends AbstractModel
 {
     /**
-     * @var integer 模版类型
+     * @var integer 模板类型
      */
     public $Type;
 
@@ -38,7 +38,7 @@ class DescribeTemplateDimCountRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param integer $Type 模版类型
+     * @param integer $Type 模板类型
      * @param string $ProjectId 项目ID
      */
     function __construct()

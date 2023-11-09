@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用量明细
  *
- * @method string getProxyOrganizationOpenId() 获取子客企业唯一标识
- * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置子客企业唯一标识
+ * @method string getProxyOrganizationOpenId() 获取子客企业标识
+ * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置子客企业标识
  * @method string getProxyOrganizationName() 获取子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDate() 获取日期，当需要汇总数据时日期为空
+ * @method string getDate() 获取对应的消耗日期, **如果是汇总数据则为1970-01-01**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDate(string $Date) 设置日期，当需要汇总数据时日期为空
+ * @method void setDate(string $Date) 设置对应的消耗日期, **如果是汇总数据则为1970-01-01**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUsage() 获取消耗数量
- * @method void setUsage(integer $Usage) 设置消耗数量
- * @method integer getCancel() 获取撤回数量
+ * @method integer getUsage() 获取消耗合同数量
+ * @method void setUsage(integer $Usage) 设置消耗合同数量
+ * @method integer getCancel() 获取撤回合同数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCancel(integer $Cancel) 设置撤回数量
+ * @method void setCancel(integer $Cancel) 设置撤回合同数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowChannel() 获取消耗渠道
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class UsageDetail extends AbstractModel
 {
     /**
-     * @var string 子客企业唯一标识
+     * @var string 子客企业标识
      */
     public $ProxyOrganizationOpenId;
 
@@ -55,18 +55,18 @@ class UsageDetail extends AbstractModel
     public $ProxyOrganizationName;
 
     /**
-     * @var string 日期，当需要汇总数据时日期为空
+     * @var string 对应的消耗日期, **如果是汇总数据则为1970-01-01**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
-     * @var integer 消耗数量
+     * @var integer 消耗合同数量
      */
     public $Usage;
 
     /**
-     * @var integer 撤回数量
+     * @var integer 撤回合同数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cancel;
@@ -78,13 +78,13 @@ class UsageDetail extends AbstractModel
     public $FlowChannel;
 
     /**
-     * @param string $ProxyOrganizationOpenId 子客企业唯一标识
+     * @param string $ProxyOrganizationOpenId 子客企业标识
      * @param string $ProxyOrganizationName 子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Date 日期，当需要汇总数据时日期为空
+     * @param string $Date 对应的消耗日期, **如果是汇总数据则为1970-01-01**
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Usage 消耗数量
-     * @param integer $Cancel 撤回数量
+     * @param integer $Usage 消耗合同数量
+     * @param integer $Cancel 撤回合同数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowChannel 消耗渠道
 注意：此字段可能返回 null，表示取不到有效值。

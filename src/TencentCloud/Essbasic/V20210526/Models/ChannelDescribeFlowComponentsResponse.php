@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeFlowComponents返回参数结构体
  *
- * @method array getRecipientComponentInfos() 获取流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecipientComponentInfos(array $RecipientComponentInfos) 设置流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRecipientComponentInfos() 获取合同填写控件信息列表，填写控件会按照参与方角色进行分类。
+ * @method void setRecipientComponentInfos(array $RecipientComponentInfos) 设置合同填写控件信息列表，填写控件会按照参与方角色进行分类。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelDescribeFlowComponentsResponse extends AbstractModel
 {
     /**
-     * @var array 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 合同填写控件信息列表，填写控件会按照参与方角色进行分类。
      */
     public $RecipientComponentInfos;
 
@@ -41,8 +38,7 @@ class ChannelDescribeFlowComponentsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RecipientComponentInfos 流程关联的填写控件信息，控件会按照参与方进行分类。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RecipientComponentInfos 合同填写控件信息列表，填写控件会按照参与方角色进行分类。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

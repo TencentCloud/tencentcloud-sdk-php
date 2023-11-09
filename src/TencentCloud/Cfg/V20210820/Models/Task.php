@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApmServiceList(array $ApmServiceList) 设置关联的APM服务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVerifyId() 获取关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerifyId(integer $VerifyId) 设置关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Task extends AbstractModel
 {
@@ -261,6 +265,12 @@ class Task extends AbstractModel
     public $ApmServiceList;
 
     /**
+     * @var integer 关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VerifyId;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -303,6 +313,8 @@ class Task extends AbstractModel
      * @param array $AlarmPolicy 关联的告警指标
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApmServiceList 关联的APM服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VerifyId 关联的隐患验证项ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -445,6 +457,10 @@ class Task extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ApmServiceList, $obj);
             }
+        }
+
+        if (array_key_exists("VerifyId",$param) and $param["VerifyId"] !== null) {
+            $this->VerifyId = $param["VerifyId"];
         }
     }
 }

@@ -40,14 +40,15 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateBatchCancelFlowUrlResponse CreateBatchCancelFlowUrl(Models\CreateBatchCancelFlowUrlRequest $req) 注：此接口将会废弃，请使用撤销单个签署流程（CancelFlow）接口。
 指定需要批量撤回的签署流程Id，获取批量撤销链接。
 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回。
- * @method Models\CreateBatchQuickSignUrlResponse CreateBatchQuickSignUrl(Models\CreateBatchQuickSignUrlRequest $req) 该接口用于发起合同后，生成个人用户的批量签署链接, 暂时不支持企业端签署 <br/>
-`注意：`<br/>
-`1. 该接口目前仅支持签署人类型是个人签署方的批量签署场景(ApproverType=1)。` <br/>
-`2. 该接口可生成批量签署链接的C端签署人必须仅有手写签名和时间类型的签署控件，不支持填写控件 。` <br/>
-`3. 请确保C端签署人在批量签署合同中为待签署状态，如需顺序签署请待前一位参与人签署完成后，再创建该C端用户的签署链接。` <br/>
-`4. 该签署链接有效期为30分钟，过期后将失效，如需签署可重新创建批量签署链接 。` <br/>
-`5. 该接口返回的签署链接适用于APP集成的场景，支持APP打开或浏览器直接打开，不支持微信小程序嵌入。`<br/>
-跳转到小程序的实现，参考微信官方文档(分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式)，如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>
+ * @method Models\CreateBatchQuickSignUrlResponse CreateBatchQuickSignUrl(Models\CreateBatchQuickSignUrlRequest $req) 该接口用于发起合同后，生成个人用户的批量签署链接, 暂时不支持企业端签署。
+**注意：**
+1. 该接口目前仅支持签署人类型是**个人签署方的批量签署场景**(ApproverType=1)。
+2. 该接口可生成批量签署链接的C端签署人**必须仅有手写签名和时间类型的签署控件**，**不支持填写控件** 。
+3. 请确保C端签署人在批量签署合同中**为待签署状态**，如需顺序签署请待前一位参与人签署完成后，再创建该C端用户的签署链接。
+4. 该签署链接**有效期为30分钟**，过期后将失效，如需签署可重新创建批量签署链接 。
+5. 该接口返回的签署链接适用于APP集成的场景，支持APP打开或浏览器直接打开，**不支持微信小程序嵌入**。
+跳转到小程序的实现，参考微信官方文档(分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式)，如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>。
+6. 因h5涉及人脸身份认证能力基于慧眼人脸核身，对Android和iOS系统均有一定要求， 因此<font color='red'>App嵌入H5签署合同需要按照慧眼提供的<a href="https://cloud.tencent.com/document/product/1007/61076">慧眼人脸核身兼容性文档</a>做兼容性适配</font>。
  * @method Models\CreateBatchSignUrlResponse CreateBatchSignUrl(Models\CreateBatchSignUrlRequest $req) 通过此接口，创建小程序批量签署链接，个人/企业员工点击此链接即可跳转小程序进行批量签署。
 请确保生成链接时候的身份信息和签署合同参与方的信息保持一致。
 
@@ -128,12 +129,13 @@ use TencentCloud\Ess\V20201111\Models as Models;
 2. 若签署流程状态正常，同一签署流程可以多次提交签署审批结果，签署时的最后一个“审批结果”有效。
  * @method Models\CreateFlowSignUrlResponse CreateFlowSignUrl(Models\CreateFlowSignUrlRequest $req) 该接口用于发起合同后，生成个人用户的签署链接, 暂时不支持企业端签署 <br/>
 
-`注意：`<br/>
-`1. 该接口目前仅支持签署人类型是个人签署方的场景（PERSON）。` <br/>
-`2. 该接口可生成签署链接的C端签署人必须仅有手写签名和时间类型的签署控件，不支持填写控件 。` <br/>
-`3. 该签署链接有效期为30分钟，过期后将失效，如需签署可重新创建签署链接 。` <br/>
-`4. 该接口返回的签署链接适用于APP集成的场景，支持APP打开或浏览器直接打开，不支持微信小程序嵌入`。<br/>
-跳转到小程序的实现，参考微信官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式），如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>
+**注意**
+1. 该接口目前**仅支持签署人类型是个人签署方**的场景(PERSON)。
+2. 该接口可生成签署链接的C端签署人必须仅有手写签名和时间类型的签署控件，**不支持填写控件** 。
+3. 该签署**链接有效期为30分钟**，过期后将失效，如需签署可重新创建签署链接 。
+4. 该接口返回的签署链接适用于APP集成的场景，支持APP打开或浏览器直接打开，**不支持微信小程序嵌入**。
+跳转到小程序的实现，参考微信官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式），如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>。
+5. 因h5涉及人脸身份认证能力基于慧眼人脸核身，对Android和iOS系统均有一定要求， 因此<font color='red'>App嵌入H5签署合同需要按照慧眼提供的<a href="https://cloud.tencent.com/document/product/1007/61076">慧眼人脸核身兼容性文档</a>做兼容性适配</font>。
  * @method Models\CreateIntegrationDepartmentResponse CreateIntegrationDepartment(Models\CreateIntegrationDepartmentRequest $req) 此接口（CreateIntegrationDepartment）用于创建企业的部门信息，支持绑定客户系统部门ID。
  * @method Models\CreateIntegrationEmployeesResponse CreateIntegrationEmployees(Models\CreateIntegrationEmployeesRequest $req) 此接口（CreateIntegrationEmployees）用于创建企业员工。调用成功后会给员工发送提醒员工实名的短信。若通过手机号发现员工已经创建，则不会重新创建，但会发送短信提醒员工实名。另外，此接口还支持通过企微组织架构的openid 创建员工（将WeworkOpenId字段设置为企微员工明文的openid，但需确保该企微员工在应用的可见范围内），该场景下，员工会接收到提醒实名的企微消息。
  * @method Models\CreateIntegrationRoleResponse CreateIntegrationRole(Models\CreateIntegrationRoleRequest $req) 此接口（CreateIntegrationRole）用来创建企业自定义的SaaS角色或集团角色。

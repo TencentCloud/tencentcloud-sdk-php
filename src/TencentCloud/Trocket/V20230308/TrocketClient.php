@@ -32,6 +32,10 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 删除角色
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除主题
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) 查询消费组详情
+ * @method Models\DescribeConsumerGroupListResponse DescribeConsumerGroupList(Models\DescribeConsumerGroupListRequest $req) 获取消费组列表，Filter参数使用说明如下：
+
+1. ConsumerGroupName，名称模糊查询
+2. ConsumeMessageOrderly，投递顺序性。"true":顺序投递；"false":并发投递
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询

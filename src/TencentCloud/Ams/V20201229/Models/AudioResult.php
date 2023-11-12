@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDuration() 获取该字段用于返回音频文件的时长，单位为秒。
- * @method void setDuration(string $Duration) 设置该字段用于返回音频文件的时长，单位为秒。
+ * @method string getDuration() 获取该字段用于返回音频文件的时长，单位为毫秒。
+ * @method void setDuration(string $Duration) 设置该字段用于返回音频文件的时长，单位为毫秒。
  * @method string getExtra() 获取该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
  * @method void setExtra(string $Extra) 设置该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
  * @method array getTextResults() 获取该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
@@ -105,7 +105,7 @@ class AudioResult extends AbstractModel
     public $Url;
 
     /**
-     * @var string 该字段用于返回音频文件的时长，单位为秒。
+     * @var string 该字段用于返回音频文件的时长，单位为毫秒。
      */
     public $Duration;
 
@@ -155,7 +155,7 @@ class AudioResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Duration 该字段用于返回音频文件的时长，单位为秒。
+     * @param string $Duration 该字段用于返回音频文件的时长，单位为毫秒。
      * @param string $Extra 该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
      * @param array $TextResults 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
      * @param array $MoanResults 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。

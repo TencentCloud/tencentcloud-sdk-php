@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuggestion(integer $Suggestion) 设置处置建议,0保持现状、1限制访问、2封禁端口
  * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略
  * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略
- * @method string getId() 获取资产唯一id
- * @method void setId(string $Id) 设置资产唯一id
+ * @method string getId() 获取风险ID
+ * @method void setId(string $Id) 设置风险ID
  * @method string getIndex() 获取前端索引
  * @method void setIndex(string $Index) 设置前端索引
  * @method string getInstanceId() 获取实例id
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFrom() 获取来源
- * @method void setFrom(string $From) 设置来源
+ * @method string getFrom() 获取识别来源，详细看枚举返回。
+ * @method void setFrom(string $From) 设置识别来源，详细看枚举返回。
  */
 class AssetViewPortRisk extends AbstractModel
 {
@@ -121,7 +121,7 @@ class AssetViewPortRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string 资产唯一id
+     * @var string 风险ID
      */
     public $Id;
 
@@ -158,7 +158,7 @@ class AssetViewPortRisk extends AbstractModel
     public $Uin;
 
     /**
-     * @var string 来源
+     * @var string 识别来源，详细看枚举返回。
      */
     public $From;
 
@@ -174,7 +174,7 @@ class AssetViewPortRisk extends AbstractModel
      * @param string $FirstTime 首次识别时间
      * @param integer $Suggestion 处置建议,0保持现状、1限制访问、2封禁端口
      * @param integer $Status 状态，0未处理、1已处置、2已忽略
-     * @param string $Id 资产唯一id
+     * @param string $Id 风险ID
      * @param string $Index 前端索引
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名
@@ -183,7 +183,7 @@ class AssetViewPortRisk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户uin
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $From 来源
+     * @param string $From 识别来源，详细看枚举返回。
      */
     function __construct()
     {

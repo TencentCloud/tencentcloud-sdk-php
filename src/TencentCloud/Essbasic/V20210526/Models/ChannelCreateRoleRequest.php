@@ -22,8 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
  * @method void setName(string $Name) 设置角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
- * @method Agent getAgent() 获取代理企业和员工的信息。
- * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
  * @method string getDescription() 获取角色描述，最大长度为50个字符
  * @method void setDescription(string $Description) 设置角色描述，最大长度为50个字符
  * @method array getPermissionGroups() 获取权限树，权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles 的输出
@@ -37,7 +53,15 @@ class ChannelCreateRoleRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var Agent 代理企业和员工的信息。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
@@ -53,7 +77,15 @@ class ChannelCreateRoleRequest extends AbstractModel
 
     /**
      * @param string $Name 角色名称，最大长度为20个字符，仅限中文、字母、数字和下划线组成。
-     * @param Agent $Agent 代理企业和员工的信息。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      * @param string $Description 角色描述，最大长度为50个字符
      * @param array $PermissionGroups 权限树，权限树内容 PermissionGroups 可参考接口 ChannelDescribeRoles 的输出
      */

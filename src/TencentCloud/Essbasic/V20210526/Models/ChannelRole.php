@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleName(string $RoleName) 设置角色名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoleStatus() 获取角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleStatus(integer $RoleStatus) 设置角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPermissionGroups() 获取权限树
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissionGroups(array $PermissionGroups) 设置权限树
@@ -53,7 +51,6 @@ class ChannelRole extends AbstractModel
 
     /**
      * @var integer 角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleStatus;
 
@@ -69,7 +66,6 @@ class ChannelRole extends AbstractModel
      * @param string $RoleName 角色名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoleStatus 角色状态：1-启用；2-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PermissionGroups 权限树
 注意：此字段可能返回 null，表示取不到有效值。
      */

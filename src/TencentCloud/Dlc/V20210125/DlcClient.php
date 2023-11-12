@@ -74,6 +74,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDMSTableResponse DescribeDMSTable(Models\DescribeDMSTableRequest $req) DMS元数据获取表
  * @method Models\DescribeDMSTablesResponse DescribeDMSTables(Models\DescribeDMSTablesRequest $req) DMS元数据获取表列表
  * @method Models\DescribeDataEngineResponse DescribeDataEngine(Models\DescribeDataEngineRequest $req) 本接口根据名称用于获取数据引擎详细信息
+ * @method Models\DescribeDataEngineEventsResponse DescribeDataEngineEvents(Models\DescribeDataEngineEventsRequest $req) 查询数据引擎事件
  * @method Models\DescribeDataEngineImageVersionsResponse DescribeDataEngineImageVersions(Models\DescribeDataEngineImageVersionsRequest $req) 本接口（DescribeDataEngineImageVersions）用于获取独享集群大版本镜像列表。
  * @method Models\DescribeDataEnginePythonSparkImagesResponse DescribeDataEnginePythonSparkImages(Models\DescribeDataEnginePythonSparkImagesRequest $req) 本接口（DescribeDataEnginePythonSparkImages）用于获取PYSPARK镜像列表
  * @method Models\DescribeDataEnginesResponse DescribeDataEngines(Models\DescribeDataEnginesRequest $req) 本接口（DescribeDataEngines）用于查询DataEngines信息列表

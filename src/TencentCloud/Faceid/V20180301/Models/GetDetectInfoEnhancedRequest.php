@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsEncrypt(boolean $IsEncrypt) 设置已弃用。
  * @method Encryption getEncryption() 获取是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
  * @method void setEncryption(Encryption $Encryption) 设置是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+ * @method boolean getIsEncryptResponse() 获取是否对回包整体进行加密
+ * @method void setIsEncryptResponse(boolean $IsEncryptResponse) 设置是否对回包整体进行加密
  */
 class GetDetectInfoEnhancedRequest extends AbstractModel
 {
@@ -86,6 +88,11 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
     public $Encryption;
 
     /**
+     * @var boolean 是否对回包整体进行加密
+     */
+    public $IsEncryptResponse;
+
+    /**
      * @param string $BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      * @param string $RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      * @param string $InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
@@ -96,6 +103,7 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
      * @param boolean $IsNeedIdCardAvatar 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
      * @param boolean $IsEncrypt 已弃用。
      * @param Encryption $Encryption 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     * @param boolean $IsEncryptResponse 是否对回包整体进行加密
      */
     function __construct()
     {
@@ -141,6 +149,10 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
         if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
             $this->Encryption = new Encryption();
             $this->Encryption->deserialize($param["Encryption"]);
+        }
+
+        if (array_key_exists("IsEncryptResponse",$param) and $param["IsEncryptResponse"] !== null) {
+            $this->IsEncryptResponse = $param["IsEncryptResponse"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfig(EnvironmentConfig $Config) 设置环境配置信息。
  * @method string getDescription() 获取环境描述。
  * @method void setDescription(string $Description) 设置环境描述。
+ * @method boolean getIsDefault() 获取是否为默认环境。
+ * @method void setIsDefault(boolean $IsDefault) 设置是否为默认环境。
  */
 class CreateEnvironmentRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateEnvironmentRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var boolean 是否为默认环境。
+     */
+    public $IsDefault;
+
+    /**
      * @param string $Name 环境名称。
      * @param EnvironmentConfig $Config 环境配置信息。
      * @param string $Description 环境描述。
+     * @param boolean $IsDefault 是否为默认环境。
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateEnvironmentRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

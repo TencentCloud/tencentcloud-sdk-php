@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelUpdateSealStatus请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method string getStatus() 获取操作的印章状态，DISABLE-停用印章
- * @method void setStatus(string $Status) 设置操作的印章状态，DISABLE-停用印章
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method string getStatus() 获取印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul>
+ * @method void setStatus(string $Status) 设置印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul>
  * @method string getSealId() 获取印章ID
  * @method void setSealId(string $SealId) 设置印章ID
  * @method string getReason() 获取更新印章状态原因说明
@@ -34,12 +36,13 @@ use TencentCloud\Common\AbstractModel;
 class ChannelUpdateSealStatusRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public $Agent;
 
     /**
-     * @var string 操作的印章状态，DISABLE-停用印章
+     * @var string 印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul>
      */
     public $Status;
 
@@ -60,8 +63,9 @@ class ChannelUpdateSealStatusRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param string $Status 操作的印章状态，DISABLE-停用印章
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param string $Status 印章状态，目前支持传入以下类型：
+<ul><li>DISABLE-停用印章</li></ul>
      * @param string $SealId 印章ID
      * @param string $Reason 更新印章状态原因说明
      * @param UserInfo $Operator 操作者的信息

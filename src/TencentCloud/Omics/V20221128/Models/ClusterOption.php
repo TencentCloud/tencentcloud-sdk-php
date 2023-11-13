@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 - KUBERNETES
  * @method void setType(string $Type) 设置计算集群类型，取值范围：
 - KUBERNETES
+ * @method ResourceQuota getResourceQuota() 获取资源配额。
+ * @method void setResourceQuota(ResourceQuota $ResourceQuota) 设置资源配额。
+ * @method LimitRange getLimitRange() 获取限制范围。
+ * @method void setLimitRange(LimitRange $LimitRange) 设置限制范围。
  */
 class ClusterOption extends AbstractModel
 {
@@ -41,9 +45,21 @@ class ClusterOption extends AbstractModel
     public $Type;
 
     /**
+     * @var ResourceQuota 资源配额。
+     */
+    public $ResourceQuota;
+
+    /**
+     * @var LimitRange 限制范围。
+     */
+    public $LimitRange;
+
+    /**
      * @param string $Zone 计算集群可用区。
      * @param string $Type 计算集群类型，取值范围：
 - KUBERNETES
+     * @param ResourceQuota $ResourceQuota 资源配额。
+     * @param LimitRange $LimitRange 限制范围。
      */
     function __construct()
     {
@@ -64,6 +80,16 @@ class ClusterOption extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ResourceQuota",$param) and $param["ResourceQuota"] !== null) {
+            $this->ResourceQuota = new ResourceQuota();
+            $this->ResourceQuota->deserialize($param["ResourceQuota"]);
+        }
+
+        if (array_key_exists("LimitRange",$param) and $param["LimitRange"] !== null) {
+            $this->LimitRange = new LimitRange();
+            $this->LimitRange->deserialize($param["LimitRange"]);
         }
     }
 }

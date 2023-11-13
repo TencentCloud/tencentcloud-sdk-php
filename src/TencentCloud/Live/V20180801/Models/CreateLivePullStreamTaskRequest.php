@@ -216,6 +216,8 @@ PullVodPushLive -点播。
 注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
  * @method string getRecordTemplateId() 获取录制模板 ID。
  * @method void setRecordTemplateId(string $RecordTemplateId) 设置录制模板 ID。
+ * @method string getBackupToUrl() 获取新的目标地址，用于任务同时推两路场景。
+ * @method void setBackupToUrl(string $BackupToUrl) 设置新的目标地址，用于任务同时推两路场景。
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -406,6 +408,11 @@ PullVodPushLive -点播。
     public $RecordTemplateId;
 
     /**
+     * @var string 新的目标地址，用于任务同时推两路场景。
+     */
+    public $BackupToUrl;
+
+    /**
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播，
@@ -504,6 +511,7 @@ PullVodPushLive -点播。
 1 - 启用。
 注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
      * @param string $RecordTemplateId 录制模板 ID。
+     * @param string $BackupToUrl 新的目标地址，用于任务同时推两路场景。
      */
     function __construct()
     {
@@ -609,6 +617,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("RecordTemplateId",$param) and $param["RecordTemplateId"] !== null) {
             $this->RecordTemplateId = $param["RecordTemplateId"];
+        }
+
+        if (array_key_exists("BackupToUrl",$param) and $param["BackupToUrl"] !== null) {
+            $this->BackupToUrl = $param["BackupToUrl"];
         }
     }
 }

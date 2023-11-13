@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getLogType() 获取日志类型：errorLog/slowLog
- * @method void setLogType(string $LogType) 设置日志类型：errorLog/slowLog
+ * @method string getLogType() 获取日志类型：error/slowLog
+ * @method void setLogType(string $LogType) 设置日志类型：error/slowLog
  * @method string getStatus() 获取投递状态：ON/OFF
  * @method void setStatus(string $Status) 设置投递状态：ON/OFF
  * @method boolean getCreateLogset() 获取是否需要创建日志集
@@ -47,7 +47,7 @@ class ModifyDBInstanceLogToCLSRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 日志类型：errorLog/slowLog
+     * @var string 日志类型：error/slowLog
      */
     public $LogType;
 
@@ -88,7 +88,7 @@ class ModifyDBInstanceLogToCLSRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
-     * @param string $LogType 日志类型：errorLog/slowLog
+     * @param string $LogType 日志类型：error/slowLog
      * @param string $Status 投递状态：ON/OFF
      * @param boolean $CreateLogset 是否需要创建日志集
      * @param string $Logset 需要创建日志集时为日志集名称；选择已有日志集时，为日志集ID

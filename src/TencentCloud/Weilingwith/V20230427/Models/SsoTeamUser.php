@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealName(string $RealName) 设置用户名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserType() 获取用户类型
+ * @method string getUserType() 获取用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserType(string $UserType) 设置用户类型
+ * @method void setUserType(string $UserType) 设置用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTenantId() 获取所属租户ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,7 +80,7 @@ class SsoTeamUser extends AbstractModel
     public $RealName;
 
     /**
-     * @var string 用户类型
+     * @var string 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserType;
@@ -138,7 +138,7 @@ class SsoTeamUser extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealName 用户名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserType 用户类型
+     * @param string $UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TenantId 所属租户ID
 注意：此字段可能返回 null，表示取不到有效值。

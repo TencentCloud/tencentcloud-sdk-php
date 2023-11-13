@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealName(string $RealName) 设置用户名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserType() 获取用户类型
+ * @method string getUserType() 获取用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserType(string $UserType) 设置用户类型
+ * @method void setUserType(string $UserType) 设置用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTenantId() 获取所属租户ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhone(string $Phone) 设置电话
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取用户状态
+ * @method integer getStatus() 获取用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置用户状态
+ * @method void setStatus(integer $Status) 设置用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateAt() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,17 +64,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateAt(integer $UpdateAt) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBelongTeam() 获取是否属于团队
+ * @method integer getBelongTeam() 获取是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBelongTeam(integer $BelongTeam) 设置是否属于团队
+ * @method void setBelongTeam(integer $BelongTeam) 设置是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDepartmentId() 获取ID
+ * @method string getDepartmentId() 获取部门ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDepartmentId(string $DepartmentId) 设置ID
+ * @method void setDepartmentId(string $DepartmentId) 设置部门ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDepartmentName() 获取名称
+ * @method string getDepartmentName() 获取部门名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDepartmentName(string $DepartmentName) 设置名称
+ * @method void setDepartmentName(string $DepartmentName) 设置部门名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDepartmentUserId() 获取子账户ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,7 +106,7 @@ class SsoUser extends AbstractModel
     public $RealName;
 
     /**
-     * @var string 用户类型
+     * @var string 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserType;
@@ -136,7 +136,7 @@ class SsoUser extends AbstractModel
     public $Phone;
 
     /**
-     * @var integer 用户状态
+     * @var integer 用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -154,19 +154,19 @@ class SsoUser extends AbstractModel
     public $UpdateAt;
 
     /**
-     * @var integer 是否属于团队
+     * @var integer 是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BelongTeam;
 
     /**
-     * @var string ID
+     * @var string 部门ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentId;
 
     /**
-     * @var string 名称
+     * @var string 部门名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentName;
@@ -190,7 +190,7 @@ class SsoUser extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealName 用户名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserType 用户类型
+     * @param string $UserType 用户类型，1-超级管理员；2-1号管理员；3-普通管理员；99-普通用户
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TenantId 所属租户ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -200,17 +200,17 @@ class SsoUser extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 电话
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 用户状态
+     * @param integer $Status 用户状态，0待审核，1正常启用，2禁用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateAt 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BelongTeam 是否属于团队
+     * @param integer $BelongTeam 是否属于团队，0不可用，1属于，2不属
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DepartmentId ID
+     * @param string $DepartmentId 部门ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DepartmentName 名称
+     * @param string $DepartmentName 部门名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DepartmentUserId 子账户ID
 注意：此字段可能返回 null，表示取不到有效值。

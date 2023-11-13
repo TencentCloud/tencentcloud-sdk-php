@@ -184,6 +184,10 @@ CrossBorder表示跨境通道。
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsAutoScaleProxy() 获取是否是开启了auto scale的通道，0表示否，1表示是。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAutoScaleProxy(integer $IsAutoScaleProxy) 设置是否是开启了auto scale的通道，0表示否，1表示是。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
 {
@@ -410,6 +414,12 @@ CrossBorder表示跨境通道。
     public $FeatureBitmap;
 
     /**
+     * @var integer 是否是开启了auto scale的通道，0表示否，1表示是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAutoScaleProxy;
+
+    /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
@@ -491,6 +501,8 @@ CrossBorder表示跨境通道。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsAutoScaleProxy 是否是开启了auto scale的通道，0表示否，1表示是。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -656,6 +668,10 @@ CrossBorder表示跨境通道。
 
         if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
             $this->FeatureBitmap = $param["FeatureBitmap"];
+        }
+
+        if (array_key_exists("IsAutoScaleProxy",$param) and $param["IsAutoScaleProxy"] !== null) {
+            $this->IsAutoScaleProxy = $param["IsAutoScaleProxy"];
         }
     }
 }

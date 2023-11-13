@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getNoRefuse() 获取是否可以拒签 默认false-可以拒签 true-不可以拒签
  * @method void setNoRefuse(boolean $NoRefuse) 设置是否可以拒签 默认false-可以拒签 true-不可以拒签
+ * @method boolean getNoTransfer() 获取是否可以转发 默认false-可以转发 true-不可以转发
+ * @method void setNoTransfer(boolean $NoTransfer) 设置是否可以转发 默认false-可以转发 true-不可以转发
  * @method boolean getHideOneKeySign() 获取是否隐藏一键签署 默认false-不隐藏true-隐藏
  * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置是否隐藏一键签署 默认false-不隐藏true-隐藏
  * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
@@ -57,6 +59,11 @@ class ApproverOption extends AbstractModel
     public $NoRefuse;
 
     /**
+     * @var boolean 是否可以转发 默认false-可以转发 true-不可以转发
+     */
+    public $NoTransfer;
+
+    /**
      * @var boolean 是否隐藏一键签署 默认false-不隐藏true-隐藏
      */
     public $HideOneKeySign;
@@ -83,6 +90,7 @@ class ApproverOption extends AbstractModel
 
     /**
      * @param boolean $NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
+     * @param boolean $NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
      * @param boolean $HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
      * @param integer $FillType 签署人信息补充类型，默认无需补充。
 
@@ -112,6 +120,10 @@ class ApproverOption extends AbstractModel
         }
         if (array_key_exists("NoRefuse",$param) and $param["NoRefuse"] !== null) {
             $this->NoRefuse = $param["NoRefuse"];
+        }
+
+        if (array_key_exists("NoTransfer",$param) and $param["NoTransfer"] !== null) {
+            $this->NoTransfer = $param["NoTransfer"];
         }
 
         if (array_key_exists("HideOneKeySign",$param) and $param["HideOneKeySign"] !== null) {

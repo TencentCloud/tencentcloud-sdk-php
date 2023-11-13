@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：mssql-3l3fgqn7
  * @method string getBackupName() 获取修改的备份名称
  * @method void setBackupName(string $BackupName) 设置修改的备份名称
- * @method integer getBackupId() 获取要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
- * @method void setBackupId(integer $BackupId) 设置要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
+ * @method integer getBackupId() 获取备份ID 可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。当GroupId为空时，BackupId必填。
+ * @method void setBackupId(integer $BackupId) 设置备份ID 可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。当GroupId为空时，BackupId必填。
  * @method string getGroupId() 获取备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
  BackupId 和 GroupId 同时存在，按照BackupId进行修改。
  * @method void setGroupId(string $GroupId) 设置备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
@@ -44,7 +44,7 @@ class ModifyBackupNameRequest extends AbstractModel
     public $BackupName;
 
     /**
-     * @var integer 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
+     * @var integer 备份ID 可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。当GroupId为空时，BackupId必填。
      */
     public $BackupId;
 
@@ -57,7 +57,7 @@ class ModifyBackupNameRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID，格式如：mssql-3l3fgqn7
      * @param string $BackupName 修改的备份名称
-     * @param integer $BackupId 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
+     * @param integer $BackupId 备份ID 可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。当GroupId为空时，BackupId必填。
      * @param string $GroupId 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
  BackupId 和 GroupId 同时存在，按照BackupId进行修改。
      */

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageOption(StorageOption $StorageOption) 设置存储配置。
  * @method CVMOption getCVMOption() 获取云服务器配置。
  * @method void setCVMOption(CVMOption $CVMOption) 设置云服务器配置。
+ * @method SecurityGroupOption getSecurityGroupOption() 获取安全组配置。
+ * @method void setSecurityGroupOption(SecurityGroupOption $SecurityGroupOption) 设置安全组配置。
  */
 class EnvironmentConfig extends AbstractModel
 {
@@ -59,11 +61,17 @@ class EnvironmentConfig extends AbstractModel
     public $CVMOption;
 
     /**
+     * @var SecurityGroupOption 安全组配置。
+     */
+    public $SecurityGroupOption;
+
+    /**
      * @param VPCOption $VPCOption 私有网络配置。
      * @param ClusterOption $ClusterOption 计算集群配置。
      * @param DatabaseOption $DatabaseOption 数据库配置。
      * @param StorageOption $StorageOption 存储配置。
      * @param CVMOption $CVMOption 云服务器配置。
+     * @param SecurityGroupOption $SecurityGroupOption 安全组配置。
      */
     function __construct()
     {
@@ -101,6 +109,11 @@ class EnvironmentConfig extends AbstractModel
         if (array_key_exists("CVMOption",$param) and $param["CVMOption"] !== null) {
             $this->CVMOption = new CVMOption();
             $this->CVMOption->deserialize($param["CVMOption"]);
+        }
+
+        if (array_key_exists("SecurityGroupOption",$param) and $param["SecurityGroupOption"] !== null) {
+            $this->SecurityGroupOption = new SecurityGroupOption();
+            $this->SecurityGroupOption->deserialize($param["SecurityGroupOption"]);
         }
     }
 }

@@ -20,14 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDeleteSealPolicies请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method string getSealId() 获取指定印章ID
- * @method void setSealId(string $SealId) 设置指定印章ID
- * @method array getUserIds() 获取指定用户ID数组，电子签系统用户ID
-可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
- * @method void setUserIds(array $UserIds) 设置指定用户ID数组，电子签系统用户ID
-可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method string getSealId() 获取操作的印章ID
+ * @method void setSealId(string $SealId) 设置操作的印章ID
+ * @method array getUserIds() 获取需要删除授权的用户ID数组，可以传入电子签系统用户ID或OpenId。
+注: 
+1. `填写OpenId时，系统会通过组织+渠道+OpenId查询得到对应的UserId进行授权取消操作`
+ * @method void setUserIds(array $UserIds) 设置需要删除授权的用户ID数组，可以传入电子签系统用户ID或OpenId。
+注: 
+1. `填写OpenId时，系统会通过组织+渠道+OpenId查询得到对应的UserId进行授权取消操作`
  * @method OrganizationInfo getOrganization() 获取组织机构信息，不用传
  * @method void setOrganization(OrganizationInfo $Organization) 设置组织机构信息，不用传
  * @method UserInfo getOperator() 获取操作人（用户）信息，不用传
@@ -36,18 +38,19 @@ use TencentCloud\Common\AbstractModel;
 class ChannelDeleteSealPoliciesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public $Agent;
 
     /**
-     * @var string 指定印章ID
+     * @var string 操作的印章ID
      */
     public $SealId;
 
     /**
-     * @var array 指定用户ID数组，电子签系统用户ID
-可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
+     * @var array 需要删除授权的用户ID数组，可以传入电子签系统用户ID或OpenId。
+注: 
+1. `填写OpenId时，系统会通过组织+渠道+OpenId查询得到对应的UserId进行授权取消操作`
      */
     public $UserIds;
 
@@ -64,10 +67,11 @@ class ChannelDeleteSealPoliciesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param string $SealId 指定印章ID
-     * @param array $UserIds 指定用户ID数组，电子签系统用户ID
-可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @param string $SealId 操作的印章ID
+     * @param array $UserIds 需要删除授权的用户ID数组，可以传入电子签系统用户ID或OpenId。
+注: 
+1. `填写OpenId时，系统会通过组织+渠道+OpenId查询得到对应的UserId进行授权取消操作`
      * @param OrganizationInfo $Organization 组织机构信息，不用传
      * @param UserInfo $Operator 操作人（用户）信息，不用传
      */

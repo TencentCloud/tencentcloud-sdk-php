@@ -29,6 +29,7 @@ use TencentCloud\Common\AbstractModel;
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul>
  * @method void setResourceType(string $ResourceType) 设置需要进行转换的资源文件类型
@@ -40,6 +41,7 @@ use TencentCloud\Common\AbstractModel;
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul>
  * @method string getResourceName() 获取需要进行转换操作的文件资源名称，带资源后缀名。
@@ -77,6 +79,7 @@ class CreateConvertTaskApiRequest extends AbstractModel
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul>
      */
@@ -124,6 +127,7 @@ class CreateConvertTaskApiRequest extends AbstractModel
 <li>jpg</li>
 <li>jpeg</li>
 <li>png</li>
+<li>html</li>
 <li>bmp</li>
 <li>txt</li></ul>
      * @param string $ResourceName 需要进行转换操作的文件资源名称，带资源后缀名。

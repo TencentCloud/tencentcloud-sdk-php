@@ -32,6 +32,7 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\CheckIdNameDateResponse CheckIdNameDate(Models\CheckIdNameDateRequest $req) 本接口用于校验姓名、身份证号、身份证有效期的真实性和一致性。
  * @method Models\CheckPhoneAndNameResponse CheckPhoneAndName(Models\CheckPhoneAndNameRequest $req) 手机号二要素核验接口用于校验手机号和姓名的真实性和一致性，支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
 
+ * @method Models\DetectAIFakeFacesResponse DetectAIFakeFaces(Models\DetectAIFakeFacesRequest $req) 提供对人脸图片/视频的AI合成、翻拍、水印等攻击痕迹的检测，增强图片/视频防伪能力
  * @method Models\DetectAuthResponse DetectAuth(Models\DetectAuthRequest $req) 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
  * @method Models\EncryptedPhoneVerificationResponse EncryptedPhoneVerification(Models\EncryptedPhoneVerificationRequest $req) 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持明文、MD5和SHA256加密传输。
  * @method Models\GetActionSequenceResponse GetActionSequence(Models\GetActionSequenceRequest $req) 使用动作活体检测模式前，需调用本接口获取动作顺序。

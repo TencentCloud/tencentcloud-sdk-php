@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，形如mssql-j8kv137v
  * @method void setInstanceId(string $InstanceId) 设置实例ID，形如mssql-j8kv137v
- * @method array getBackupNames() 获取待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
- * @method void setBackupNames(array $BackupNames) 设置待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
- * @method string getStartTime() 获取批量删除手动备份起始时间
- * @method void setStartTime(string $StartTime) 设置批量删除手动备份起始时间
- * @method string getEndTime() 获取批量删除手动备份截止时间
- * @method void setEndTime(string $EndTime) 设置批量删除手动备份截止时间
+ * @method array getBackupNames() 获取待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
+ * @method void setBackupNames(array $BackupNames) 设置待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
+ * @method string getStartTime() 获取批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
+ * @method void setStartTime(string $StartTime) 设置批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
+ * @method string getEndTime() 获取批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
+ * @method void setEndTime(string $EndTime) 设置批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
  */
 class RemoveBackupsRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class RemoveBackupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
+     * @var array 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
      */
     public $BackupNames;
 
     /**
-     * @var string 批量删除手动备份起始时间
+     * @var string 批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
      */
     public $StartTime;
 
     /**
-     * @var string 批量删除手动备份截止时间
+     * @var string 批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
      */
     public $EndTime;
 
     /**
      * @param string $InstanceId 实例ID，形如mssql-j8kv137v
-     * @param array $BackupNames 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得。单次请求批量删除备份数不能超过10个。
-     * @param string $StartTime 批量删除手动备份起始时间
-     * @param string $EndTime 批量删除手动备份截止时间
+     * @param array $BackupNames 待删除的备份名称，备份名称可通过DescribeBackups接口的FileName字段获得，单次请求批量删除备份数不能超过10个。当StartTime、EndTime为空时，此字段必填。
+     * @param string $StartTime 批量删除手动备份起始时间。当BackupNames为空时，此字段必填。
+     * @param string $EndTime 批量删除手动备份截止时间。当BackupNames为空时，此字段必填。
      */
     function __construct()
     {

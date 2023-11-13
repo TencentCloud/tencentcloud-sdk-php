@@ -20,35 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeOrganizationSeals请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
  * @method integer getLimit() 获取返回最大数量，最大为100
  * @method void setLimit(integer $Limit) 设置返回最大数量，最大为100
- * @method integer getOffset() 获取偏移量，默认为0，最大为20000
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为20000
- * @method integer getInfoType() 获取查询信息类型，为1时返回授权用户，为其他值时不返回
- * @method void setInfoType(integer $InfoType) 设置查询信息类型，为1时返回授权用户，为其他值时不返回
+ * @method integer getOffset() 获取分页查询偏移量，默认为0，最大为20000
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为0，最大为20000
+ * @method integer getInfoType() 获取查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul>
+ * @method void setInfoType(integer $InfoType) 设置查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul>
  * @method string getSealId() 获取印章id（没有输入返回所有）
+
+注:  `没有输入返回所有记录，最大返回100条。`
  * @method void setSealId(string $SealId) 设置印章id（没有输入返回所有）
- * @method array getSealTypes() 获取印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章
- * @method void setSealTypes(array $SealTypes) 设置印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章
+
+注:  `没有输入返回所有记录，最大返回100条。`
+ * @method array getSealTypes() 获取印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。`
+ * @method void setSealTypes(array $SealTypes) 设置印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。`
  */
 class ChannelDescribeOrganizationSealsRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
     public $Agent;
 
@@ -58,44 +72,58 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0，最大为20000
+     * @var integer 分页查询偏移量，默认为0，最大为20000
      */
     public $Offset;
 
     /**
-     * @var integer 查询信息类型，为1时返回授权用户，为其他值时不返回
+     * @var integer 查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul>
      */
     public $InfoType;
 
     /**
      * @var string 印章id（没有输入返回所有）
+
+注:  `没有输入返回所有记录，最大返回100条。`
      */
     public $SealId;
 
     /**
-     * @var array 印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章
+     * @var array 印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。`
      */
     public $SealTypes;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      * @param integer $Limit 返回最大数量，最大为100
-     * @param integer $Offset 偏移量，默认为0，最大为20000
-     * @param integer $InfoType 查询信息类型，为1时返回授权用户，为其他值时不返回
+     * @param integer $Offset 分页查询偏移量，默认为0，最大为20000
+     * @param integer $InfoType 查询信息类型
+支持的值如下：
+<ul><li>0-默认，不返回授权用户信息</li>
+<li>1-返回授权用户信息</li>
+</ul>
      * @param string $SealId 印章id（没有输入返回所有）
-     * @param array $SealTypes 印章类型列表（都是组织机构印章）。
-为空时查询所有类型的印章。
-目前支持以下类型：
-OFFICIAL：企业公章；
-CONTRACT：合同专用章；
-ORGANIZATION_SEAL：企业印章(图片上传创建)；
-LEGAL_PERSON_SEAL：法定代表人章
+
+注:  `没有输入返回所有记录，最大返回100条。`
+     * @param array $SealTypes 印章类型列表，目前支持传入以下类型：
+<ul><li>OFFICIAL-企业公章</li>
+<li>CONTRACT-合同专用章</li>
+<li>ORGANIZATION_SEAL-企业印章(图片上传创建)</li>
+<li>LEGAL_PERSON_SEAL-法定代表人章</li>
+</ul>
+
+注:  `为空时查询所有类型的印章。`
      */
     function __construct()
     {

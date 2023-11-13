@@ -14,23 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Weilingwith\V20230427\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeApplicationList返回参数结构体
+ * DescribeTableMetas返回参数结构体
  *
- * @method ApplicationList getResult() 获取应用列表
- * @method void setResult(ApplicationList $Result) 设置应用列表
+ * @method array getTableMetas() 获取表元数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableMetas(array $TableMetas) 设置表元数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取总条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置总条数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeApplicationListResponse extends AbstractModel
+class DescribeTableMetasResponse extends AbstractModel
 {
     /**
-     * @var ApplicationList 应用列表
+     * @var array 表元数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $TableMetas;
+
+    /**
+     * @var integer 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class DescribeApplicationListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ApplicationList $Result 应用列表
+     * @param array $TableMetas 表元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 总条数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +70,17 @@ class DescribeApplicationListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ApplicationList();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("TableMetas",$param) and $param["TableMetas"] !== null) {
+            $this->TableMetas = [];
+            foreach ($param["TableMetas"] as $key => $value){
+                $obj = new TableMeta();
+                $obj->deserialize($value);
+                array_push($this->TableMetas, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

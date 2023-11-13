@@ -160,6 +160,10 @@ PullVodPushLive -点播。
 0 - 不启用。
 1 - 启用。
 注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+ * @method string getBackupToUrl() 获取新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。
+ * @method void setBackupToUrl(string $BackupToUrl) 设置新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。
  */
 class ModifyLivePullStreamTaskRequest extends AbstractModel
 {
@@ -310,6 +314,12 @@ PullVodPushLive -点播。
     public $VodLocalMode;
 
     /**
+     * @var string 新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。
+     */
+    public $BackupToUrl;
+
+    /**
      * @param string $TaskId 任务Id。
      * @param string $Operator 操作人姓名。
      * @param array $SourceUrls 拉流源url列表。
@@ -380,6 +390,8 @@ PullVodPushLive -点播。
 0 - 不启用。
 1 - 启用。
 注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+     * @param string $BackupToUrl 新的目标地址。传空值，则取消该地址的推流。
+传入新值，则替换原有地址。
      */
     function __construct()
     {
@@ -473,6 +485,10 @@ PullVodPushLive -点播。
 
         if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
             $this->VodLocalMode = $param["VodLocalMode"];
+        }
+
+        if (array_key_exists("BackupToUrl",$param) and $param["BackupToUrl"] !== null) {
+            $this->BackupToUrl = $param["BackupToUrl"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelDescribeRoles返回参数结构体
  *
- * @method integer getOffset() 获取查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
- * @method void setOffset(integer $Offset) 设置查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
- * @method integer getLimit() 获取指定每页多少条数据，单页最大200
- * @method void setLimit(integer $Limit) 设置指定每页多少条数据，单页最大200
+ * @method integer getOffset() 获取查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+ * @method void setOffset(integer $Offset) 设置查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+ * @method integer getLimit() 获取指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
+ * @method void setLimit(integer $Limit) 设置指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
  * @method integer getTotalCount() 获取查询角色的总数量
  * @method void setTotalCount(integer $TotalCount) 设置查询角色的总数量
- * @method array getChannelRoles() 获取角色信息
+ * @method array getChannelRoles() 获取查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChannelRoles(array $ChannelRoles) 设置角色信息
+ * @method void setChannelRoles(array $ChannelRoles) 设置查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class ChannelDescribeRolesResponse extends AbstractModel
 {
     /**
-     * @var integer 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
+     * @var integer 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
      */
     public $Offset;
 
     /**
-     * @var integer 指定每页多少条数据，单页最大200
+     * @var integer 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
      */
     public $Limit;
 
@@ -51,7 +51,7 @@ class ChannelDescribeRolesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 角色信息
+     * @var array 查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelRoles;
@@ -62,10 +62,10 @@ class ChannelDescribeRolesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Offset 查询结果分页返回，此处指定第几页，如果不传默认从第一页返回。页码从 0 开始，即首页为 0，最大2000
-     * @param integer $Limit 指定每页多少条数据，单页最大200
+     * @param integer $Offset 查询结果分页返回，指定从第几页返回数据，和Limit参数配合使用，最大2000条。
+     * @param integer $Limit 指定每页返回的数据条数，和Offset参数配合使用，单页最大200。
      * @param integer $TotalCount 查询角色的总数量
-     * @param array $ChannelRoles 角色信息
+     * @param array $ChannelRoles 查询的角色信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

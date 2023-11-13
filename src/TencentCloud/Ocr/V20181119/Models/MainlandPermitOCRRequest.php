@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method boolean getRetProfile() 获取是否返回头像。默认不返回。
  * @method void setRetProfile(boolean $RetProfile) 设置是否返回头像。默认不返回。
+ * @method string getCardSide() 获取图片正反面
+FRONT：正面、BACK：反面，默认为FRONT
+ * @method void setCardSide(string $CardSide) 设置图片正反面
+FRONT：正面、BACK：反面，默认为FRONT
  */
 class MainlandPermitOCRRequest extends AbstractModel
 {
@@ -66,6 +70,12 @@ class MainlandPermitOCRRequest extends AbstractModel
     public $RetProfile;
 
     /**
+     * @var string 图片正反面
+FRONT：正面、BACK：反面，默认为FRONT
+     */
+    public $CardSide;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -76,6 +86,8 @@ class MainlandPermitOCRRequest extends AbstractModel
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param boolean $RetProfile 是否返回头像。默认不返回。
+     * @param string $CardSide 图片正反面
+FRONT：正面、BACK：反面，默认为FRONT
      */
     function __construct()
     {
@@ -100,6 +112,10 @@ class MainlandPermitOCRRequest extends AbstractModel
 
         if (array_key_exists("RetProfile",$param) and $param["RetProfile"] !== null) {
             $this->RetProfile = $param["RetProfile"];
+        }
+
+        if (array_key_exists("CardSide",$param) and $param["CardSide"] !== null) {
+            $this->CardSide = $param["CardSide"];
         }
     }
 }

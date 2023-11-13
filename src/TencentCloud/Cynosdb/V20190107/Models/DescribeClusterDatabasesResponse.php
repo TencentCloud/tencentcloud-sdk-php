@@ -14,23 +14,44 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Weilingwith\V20230427\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeApplicationList返回参数结构体
+ * DescribeClusterDatabases返回参数结构体
  *
- * @method ApplicationList getResult() 获取应用列表
- * @method void setResult(ApplicationList $Result) 设置应用列表
+ * @method integer getTotalCount() 获取总条数
+ * @method void setTotalCount(integer $TotalCount) 设置总条数
+ * @method integer getOffset() 获取分页偏移
+ * @method void setOffset(integer $Offset) 设置分页偏移
+ * @method array getDatabases() 获取数据库列表
+ * @method void setDatabases(array $Databases) 设置数据库列表
+ * @method integer getLimit() 获取分页限制数
+ * @method void setLimit(integer $Limit) 设置分页限制数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeApplicationListResponse extends AbstractModel
+class DescribeClusterDatabasesResponse extends AbstractModel
 {
     /**
-     * @var ApplicationList 应用列表
+     * @var integer 总条数
      */
-    public $Result;
+    public $TotalCount;
+
+    /**
+     * @var integer 分页偏移
+     */
+    public $Offset;
+
+    /**
+     * @var array 数据库列表
+     */
+    public $Databases;
+
+    /**
+     * @var integer 分页限制数
+     */
+    public $Limit;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +59,10 @@ class DescribeApplicationListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ApplicationList $Result 应用列表
+     * @param integer $TotalCount 总条数
+     * @param integer $Offset 分页偏移
+     * @param array $Databases 数据库列表
+     * @param integer $Limit 分页限制数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +78,20 @@ class DescribeApplicationListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ApplicationList();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Databases",$param) and $param["Databases"] !== null) {
+            $this->Databases = $param["Databases"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

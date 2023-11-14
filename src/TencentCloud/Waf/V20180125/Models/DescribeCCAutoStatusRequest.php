@@ -18,20 +18,20 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyWafAutoDenyStatus请求参数结构体
+ * DescribeCCAutoStatus请求参数结构体
  *
- * @method AutoDenyDetail getWafAutoDenyDetails() 获取WAF 自动封禁配置项
- * @method void setWafAutoDenyDetails(AutoDenyDetail $WafAutoDenyDetails) 设置WAF 自动封禁配置项
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
  */
-class ModifyWafAutoDenyStatusRequest extends AbstractModel
+class DescribeCCAutoStatusRequest extends AbstractModel
 {
     /**
-     * @var AutoDenyDetail WAF 自动封禁配置项
+     * @var string 域名
      */
-    public $WafAutoDenyDetails;
+    public $Domain;
 
     /**
-     * @param AutoDenyDetail $WafAutoDenyDetails WAF 自动封禁配置项
+     * @param string $Domain 域名
      */
     function __construct()
     {
@@ -46,9 +46,8 @@ class ModifyWafAutoDenyStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WafAutoDenyDetails",$param) and $param["WafAutoDenyDetails"] !== null) {
-            $this->WafAutoDenyDetails = new AutoDenyDetail();
-            $this->WafAutoDenyDetails->deserialize($param["WafAutoDenyDetails"]);
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

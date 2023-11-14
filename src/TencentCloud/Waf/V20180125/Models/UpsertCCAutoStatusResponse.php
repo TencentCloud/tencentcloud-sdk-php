@@ -18,19 +18,22 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyWafAutoDenyStatus返回参数结构体
+ * UpsertCCAutoStatus返回参数结构体
  *
- * @method AutoDenyDetail getWafAutoDenyDetails() 获取WAF 自动封禁配置项
- * @method void setWafAutoDenyDetails(AutoDenyDetail $WafAutoDenyDetails) 设置WAF 自动封禁配置项
+ * @method string getData() 获取正常情况为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(string $Data) 设置正常情况为null
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyWafAutoDenyStatusResponse extends AbstractModel
+class UpsertCCAutoStatusResponse extends AbstractModel
 {
     /**
-     * @var AutoDenyDetail WAF 自动封禁配置项
+     * @var string 正常情况为null
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $WafAutoDenyDetails;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class ModifyWafAutoDenyStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AutoDenyDetail $WafAutoDenyDetails WAF 自动封禁配置项
+     * @param string $Data 正常情况为null
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +58,8 @@ class ModifyWafAutoDenyStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WafAutoDenyDetails",$param) and $param["WafAutoDenyDetails"] !== null) {
-            $this->WafAutoDenyDetails = new AutoDenyDetail();
-            $this->WafAutoDenyDetails->deserialize($param["WafAutoDenyDetails"]);
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -56,16 +56,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingItem(string $BillingItem) 设置计费项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAPICPWaf() 获取1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAPICPWaf(integer $APICPWaf) 设置1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAPINPWaf() 获取1 表示5折折扣
-2 表示4折折扣
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAPINPWaf(integer $APINPWaf) 设置1 表示5折折扣
-2 表示4折折扣
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAPISecurityTrial() 获取api安全7天试用标识。1试用。0没试用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAPISecurityTrial(integer $IsAPISecurityTrial) 设置api安全7天试用标识。1试用。0没试用
@@ -128,19 +118,6 @@ class ApiPkg extends AbstractModel
     public $BillingItem;
 
     /**
-     * @var integer 1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $APICPWaf;
-
-    /**
-     * @var integer 1 表示5折折扣
-2 表示4折折扣
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $APINPWaf;
-
-    /**
      * @var integer api安全7天试用标识。1试用。0没试用
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -164,11 +141,6 @@ class ApiPkg extends AbstractModel
      * @param integer $RenewFlag 续费标志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingItem 计费项
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $APICPWaf 1 API安全6折
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $APINPWaf 1 表示5折折扣
-2 表示4折折扣
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAPISecurityTrial api安全7天试用标识。1试用。0没试用
 注意：此字段可能返回 null，表示取不到有效值。
@@ -220,14 +192,6 @@ class ApiPkg extends AbstractModel
 
         if (array_key_exists("BillingItem",$param) and $param["BillingItem"] !== null) {
             $this->BillingItem = $param["BillingItem"];
-        }
-
-        if (array_key_exists("APICPWaf",$param) and $param["APICPWaf"] !== null) {
-            $this->APICPWaf = $param["APICPWaf"];
-        }
-
-        if (array_key_exists("APINPWaf",$param) and $param["APINPWaf"] !== null) {
-            $this->APINPWaf = $param["APINPWaf"];
         }
 
         if (array_key_exists("IsAPISecurityTrial",$param) and $param["IsAPISecurityTrial"] !== null) {

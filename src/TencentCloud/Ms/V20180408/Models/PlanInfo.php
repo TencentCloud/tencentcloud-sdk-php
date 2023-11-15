@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAntiScreenshot(integer $AntiScreenshot) 设置防止截屏，0关闭，1开启
  * @method integer getAntiSSL() 获取SSL证书防窃取，0关闭，1开启
  * @method void setAntiSSL(integer $AntiSSL) 设置SSL证书防窃取，0关闭，1开启
+ * @method string getSetFile() 获取Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSetFile(string $SetFile) 设置Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileSign() 获取Dex签名校验，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileSign(string $FileSign) 设置Dex签名校验，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAntiRoot() 获取root检测，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAntiRoot(string $AntiRoot) 设置root检测，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PlanInfo extends AbstractModel
 {
@@ -82,6 +94,7 @@ class PlanInfo extends AbstractModel
 
     /**
      * @var integer Dex分离，0关闭，1开启
+     * @deprecated
      */
     public $SeperateDex;
 
@@ -92,6 +105,7 @@ class PlanInfo extends AbstractModel
 
     /**
      * @var integer Dex签名校验，0关闭，1开启
+     * @deprecated
      */
     public $DexSig;
 
@@ -117,6 +131,7 @@ class PlanInfo extends AbstractModel
 
     /**
      * @var integer root检测，0关闭，1开启
+     * @deprecated
      */
     public $AntiQemuRoot;
 
@@ -136,6 +151,24 @@ class PlanInfo extends AbstractModel
     public $AntiSSL;
 
     /**
+     * @var string Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SetFile;
+
+    /**
+     * @var string Dex签名校验，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileSign;
+
+    /**
+     * @var string root检测，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AntiRoot;
+
+    /**
      * @param integer $ApkSizeOpt apk大小优化，0关闭，1开启
      * @param integer $Dex Dex加固，0关闭，1开启
      * @param integer $So So加固，0关闭，1开启
@@ -152,6 +185,12 @@ class PlanInfo extends AbstractModel
      * @param integer $AntiAssets 资源防篡改，0关闭，1开启
      * @param integer $AntiScreenshot 防止截屏，0关闭，1开启
      * @param integer $AntiSSL SSL证书防窃取，0关闭，1开启
+     * @param string $SetFile Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileSign Dex签名校验，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AntiRoot root检测，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -229,6 +268,18 @@ class PlanInfo extends AbstractModel
 
         if (array_key_exists("AntiSSL",$param) and $param["AntiSSL"] !== null) {
             $this->AntiSSL = $param["AntiSSL"];
+        }
+
+        if (array_key_exists("SetFile",$param) and $param["SetFile"] !== null) {
+            $this->SetFile = $param["SetFile"];
+        }
+
+        if (array_key_exists("FileSign",$param) and $param["FileSign"] !== null) {
+            $this->FileSign = $param["FileSign"];
+        }
+
+        if (array_key_exists("AntiRoot",$param) and $param["AntiRoot"] !== null) {
+            $this->AntiRoot = $param["AntiRoot"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceTypeSet(array $DeviceTypeSet) 设置设备类型code
  * @method array getProductIdSet() 获取产品 pid
  * @method void setProductIdSet(array $ProductIdSet) 设置产品 pid
+ * @method array getTagIdSet() 获取设备标签id
+ * @method void setTagIdSet(array $TagIdSet) 设置设备标签id
  * @method array getSpaceCodeSet() 获取空间层级，（支持空间多层，比如具体建筑、具体楼层）
  * @method void setSpaceCodeSet(array $SpaceCodeSet) 设置空间层级，（支持空间多层，比如具体建筑、具体楼层）
  * @method array getDeviceTagSet() 获取设备标签名
@@ -77,6 +79,11 @@ class DescribeDeviceShadowListRequest extends AbstractModel
     public $ProductIdSet;
 
     /**
+     * @var array 设备标签id
+     */
+    public $TagIdSet;
+
+    /**
      * @var array 空间层级，（支持空间多层，比如具体建筑、具体楼层）
      */
     public $SpaceCodeSet;
@@ -94,6 +101,7 @@ class DescribeDeviceShadowListRequest extends AbstractModel
      * @param string $ApplicationToken 应用token
      * @param array $DeviceTypeSet 设备类型code
      * @param array $ProductIdSet 产品 pid
+     * @param array $TagIdSet 设备标签id
      * @param array $SpaceCodeSet 空间层级，（支持空间多层，比如具体建筑、具体楼层）
      * @param array $DeviceTagSet 设备标签名
      */
@@ -136,6 +144,10 @@ class DescribeDeviceShadowListRequest extends AbstractModel
 
         if (array_key_exists("ProductIdSet",$param) and $param["ProductIdSet"] !== null) {
             $this->ProductIdSet = $param["ProductIdSet"];
+        }
+
+        if (array_key_exists("TagIdSet",$param) and $param["TagIdSet"] !== null) {
+            $this->TagIdSet = $param["TagIdSet"];
         }
 
         if (array_key_exists("SpaceCodeSet",$param) and $param["SpaceCodeSet"] !== null) {

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCityWorkspaceList请求参数结构体
  *
-
+ * @method array getAdministrativeCodeSet() 获取行政区编码集合
+ * @method void setAdministrativeCodeSet(array $AdministrativeCodeSet) 设置行政区编码集合
+ * @method string getApplicationToken() 获取应用token
+ * @method void setApplicationToken(string $ApplicationToken) 设置应用token
  */
 class DescribeCityWorkspaceListRequest extends AbstractModel
 {
-
+    /**
+     * @var array 行政区编码集合
+     */
+    public $AdministrativeCodeSet;
 
     /**
+     * @var string 应用token
+     */
+    public $ApplicationToken;
 
+    /**
+     * @param array $AdministrativeCodeSet 行政区编码集合
+     * @param string $ApplicationToken 应用token
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeCityWorkspaceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AdministrativeCodeSet",$param) and $param["AdministrativeCodeSet"] !== null) {
+            $this->AdministrativeCodeSet = $param["AdministrativeCodeSet"];
+        }
 
+        if (array_key_exists("ApplicationToken",$param) and $param["ApplicationToken"] !== null) {
+            $this->ApplicationToken = $param["ApplicationToken"];
+        }
     }
 }

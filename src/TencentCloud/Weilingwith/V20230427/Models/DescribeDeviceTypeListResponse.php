@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceTypeList返回参数结构体
  *
+ * @method DeviceTypeSet getResult() 获取设备的设备类型列表
+ * @method void setResult(DeviceTypeSet $Result) 设置设备的设备类型列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDeviceTypeListResponse extends AbstractModel
 {
     /**
+     * @var DeviceTypeSet 设备的设备类型列表
+     */
+    public $Result;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param DeviceTypeSet $Result 设备的设备类型列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeDeviceTypeListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new DeviceTypeSet();
+            $this->Result->deserialize($param["Result"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -42,7 +42,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除记录
  * @method Models\DeleteRecordBatchResponse DeleteRecordBatch(Models\DeleteRecordBatchRequest $req) 批量删除解析记录
  * @method Models\DeleteRecordGroupResponse DeleteRecordGroup(Models\DeleteRecordGroupRequest $req) 删除记录分组
- * @method Models\DeleteShareDomainResponse DeleteShareDomain(Models\DeleteShareDomainRequest $req) 删除域名共享
+ * @method Models\DeleteShareDomainResponse DeleteShareDomain(Models\DeleteShareDomainRequest $req) 按账号删除域名共享
  * @method Models\DeleteSnapshotResponse DeleteSnapshot(Models\DeleteSnapshotRequest $req) 删除快照
  * @method Models\DescribeBatchTaskResponse DescribeBatchTask(Models\DescribeBatchTaskRequest $req) 获取任务详情
  * @method Models\DescribeDomainResponse DescribeDomain(Models\DescribeDomainRequest $req) 获取域名信息

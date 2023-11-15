@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileDownloadURL返回参数结构体
  *
+ * @method FileDownloadURL getResult() 获取文件下载URL地址
+ * @method void setResult(FileDownloadURL $Result) 设置文件下载URL地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFileDownloadURLResponse extends AbstractModel
 {
     /**
+     * @var FileDownloadURL 文件下载URL地址
+     */
+    public $Result;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param FileDownloadURL $Result 文件下载URL地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeFileDownloadURLResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new FileDownloadURL();
+            $this->Result->deserialize($param["Result"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

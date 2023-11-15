@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSceneList返回参数结构体
  *
+ * @method SceneListRes getResult() 获取场景列表出参
+ * @method void setResult(SceneListRes $Result) 设置场景列表出参
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSceneListResponse extends AbstractModel
 {
     /**
+     * @var SceneListRes 场景列表出参
+     */
+    public $Result;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param SceneListRes $Result 场景列表出参
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeSceneListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new SceneListRes();
+            $this->Result->deserialize($param["Result"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

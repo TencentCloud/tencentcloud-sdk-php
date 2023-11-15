@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecentTime(string $RecentTime) 设置最近识别时间
  * @method string getFirstTime() 获取首次识别时间
  * @method void setFirstTime(string $FirstTime) 设置首次识别时间
- * @method integer getAffectAssetCount() 获取状态，0未处理、1已处置、2已忽略
- * @method void setAffectAssetCount(integer $AffectAssetCount) 设置状态，0未处理、1已处置、2已忽略
- * @method string getId() 获取资产唯一id
- * @method void setId(string $Id) 设置资产唯一id
- * @method string getFrom() 获取资产子类型
- * @method void setFrom(string $From) 设置资产子类型
+ * @method integer getAffectAssetCount() 获取影响资产数量
+ * @method void setAffectAssetCount(integer $AffectAssetCount) 设置影响资产数量
+ * @method string getId() 获取风险ID
+ * @method void setId(string $Id) 设置风险ID
+ * @method string getFrom() 获取扫描来源，具体看接口返回枚举类型
+ * @method void setFrom(string $From) 设置扫描来源，具体看接口返回枚举类型
  * @method string getIndex() 获取前端索引
  * @method void setIndex(string $Index) 设置前端索引
  * @method string getVULType() 获取漏洞类型
@@ -48,16 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCVE(string $CVE) 设置cve
  * @method string getDescribe() 获取描述
  * @method void setDescribe(string $Describe) 设置描述
- * @method string getPayload() 获取负载
- * @method void setPayload(string $Payload) 设置负载
- * @method string getAppName() 获取版本名
- * @method void setAppName(string $AppName) 设置版本名
- * @method string getReferences() 获取相关引用
- * @method void setReferences(string $References) 设置相关引用
- * @method string getAppVersion() 获取版本
- * @method void setAppVersion(string $AppVersion) 设置版本
- * @method string getVULURL() 获取漏洞链接
- * @method void setVULURL(string $VULURL) 设置漏洞链接
+ * @method string getPayload() 获取漏洞payload
+ * @method void setPayload(string $Payload) 设置漏洞payload
+ * @method string getAppName() 获取漏洞影响组件
+ * @method void setAppName(string $AppName) 设置漏洞影响组件
+ * @method string getReferences() 获取技术参考
+ * @method void setReferences(string $References) 设置技术参考
+ * @method string getAppVersion() 获取漏洞影响版本
+ * @method void setAppVersion(string $AppVersion) 设置漏洞影响版本
+ * @method string getVULURL() 获取风险点
+ * @method void setVULURL(string $VULURL) 设置风险点
  * @method string getNick() 获取用户昵称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
@@ -110,17 +110,17 @@ class VULViewVULRisk extends AbstractModel
     public $FirstTime;
 
     /**
-     * @var integer 状态，0未处理、1已处置、2已忽略
+     * @var integer 影响资产数量
      */
     public $AffectAssetCount;
 
     /**
-     * @var string 资产唯一id
+     * @var string 风险ID
      */
     public $Id;
 
     /**
-     * @var string 资产子类型
+     * @var string 扫描来源，具体看接口返回枚举类型
      */
     public $From;
 
@@ -150,27 +150,27 @@ class VULViewVULRisk extends AbstractModel
     public $Describe;
 
     /**
-     * @var string 负载
+     * @var string 漏洞payload
      */
     public $Payload;
 
     /**
-     * @var string 版本名
+     * @var string 漏洞影响组件
      */
     public $AppName;
 
     /**
-     * @var string 相关引用
+     * @var string 技术参考
      */
     public $References;
 
     /**
-     * @var string 版本
+     * @var string 漏洞影响版本
      */
     public $AppVersion;
 
     /**
-     * @var string 漏洞链接
+     * @var string 风险点
      */
     public $VULURL;
 
@@ -210,19 +210,19 @@ class VULViewVULRisk extends AbstractModel
      * @param string $Component 组件
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间
-     * @param integer $AffectAssetCount 状态，0未处理、1已处置、2已忽略
-     * @param string $Id 资产唯一id
-     * @param string $From 资产子类型
+     * @param integer $AffectAssetCount 影响资产数量
+     * @param string $Id 风险ID
+     * @param string $From 扫描来源，具体看接口返回枚举类型
      * @param string $Index 前端索引
      * @param string $VULType 漏洞类型
      * @param string $VULName 漏洞名
      * @param string $CVE cve
      * @param string $Describe 描述
-     * @param string $Payload 负载
-     * @param string $AppName 版本名
-     * @param string $References 相关引用
-     * @param string $AppVersion 版本
-     * @param string $VULURL 漏洞链接
+     * @param string $Payload 漏洞payload
+     * @param string $AppName 漏洞影响组件
+     * @param string $References 技术参考
+     * @param string $AppVersion 漏洞影响版本
+     * @param string $VULURL 风险点
      * @param string $Nick 用户昵称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 用户appid

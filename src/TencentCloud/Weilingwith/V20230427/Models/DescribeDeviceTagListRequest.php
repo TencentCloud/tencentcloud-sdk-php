@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceTagList请求参数结构体
  *
-
+ * @method integer getWorkspaceId() 获取工作空间id
+ * @method void setWorkspaceId(integer $WorkspaceId) 设置工作空间id
+ * @method integer getPageNumber() 获取分页查询，第几页，必传，大于0
+ * @method void setPageNumber(integer $PageNumber) 设置分页查询，第几页，必传，大于0
+ * @method integer getPageSize() 获取每页条数，必传大于0
+ * @method void setPageSize(integer $PageSize) 设置每页条数，必传大于0
+ * @method string getApplicationToken() 获取应用token
+ * @method void setApplicationToken(string $ApplicationToken) 设置应用token
  */
 class DescribeDeviceTagListRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 工作空间id
+     */
+    public $WorkspaceId;
 
     /**
+     * @var integer 分页查询，第几页，必传，大于0
+     */
+    public $PageNumber;
 
+    /**
+     * @var integer 每页条数，必传大于0
+     */
+    public $PageSize;
+
+    /**
+     * @var string 应用token
+     */
+    public $ApplicationToken;
+
+    /**
+     * @param integer $WorkspaceId 工作空间id
+     * @param integer $PageNumber 分页查询，第几页，必传，大于0
+     * @param integer $PageSize 每页条数，必传大于0
+     * @param string $ApplicationToken 应用token
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class DescribeDeviceTagListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("WorkspaceId",$param) and $param["WorkspaceId"] !== null) {
+            $this->WorkspaceId = $param["WorkspaceId"];
+        }
 
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("ApplicationToken",$param) and $param["ApplicationToken"] !== null) {
+            $this->ApplicationToken = $param["ApplicationToken"];
+        }
     }
 }

@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ControlDevice请求参数结构体
  *
-
+ * @method integer getWorkspaceId() 获取工作空间id
+ * @method void setWorkspaceId(integer $WorkspaceId) 设置工作空间id
+ * @method array getWIDSet() 获取设备wid，最大100个
+ * @method void setWIDSet(array $WIDSet) 设置设备wid，最大100个
+ * @method string getControlData() 获取控制内容
+ * @method void setControlData(string $ControlData) 设置控制内容
+ * @method string getApplicationToken() 获取应用token
+ * @method void setApplicationToken(string $ApplicationToken) 设置应用token
  */
 class ControlDeviceRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 工作空间id
+     */
+    public $WorkspaceId;
 
     /**
+     * @var array 设备wid，最大100个
+     */
+    public $WIDSet;
 
+    /**
+     * @var string 控制内容
+     */
+    public $ControlData;
+
+    /**
+     * @var string 应用token
+     */
+    public $ApplicationToken;
+
+    /**
+     * @param integer $WorkspaceId 工作空间id
+     * @param array $WIDSet 设备wid，最大100个
+     * @param string $ControlData 控制内容
+     * @param string $ApplicationToken 应用token
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class ControlDeviceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("WorkspaceId",$param) and $param["WorkspaceId"] !== null) {
+            $this->WorkspaceId = $param["WorkspaceId"];
+        }
 
+        if (array_key_exists("WIDSet",$param) and $param["WIDSet"] !== null) {
+            $this->WIDSet = $param["WIDSet"];
+        }
+
+        if (array_key_exists("ControlData",$param) and $param["ControlData"] !== null) {
+            $this->ControlData = $param["ControlData"];
+        }
+
+        if (array_key_exists("ApplicationToken",$param) and $param["ApplicationToken"] !== null) {
+            $this->ApplicationToken = $param["ApplicationToken"];
+        }
     }
 }

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmLevelList请求参数结构体
  *
-
+ * @method integer getWorkspaceId() 获取工作空间id
+ * @method void setWorkspaceId(integer $WorkspaceId) 设置工作空间id
+ * @method string getApplicationToken() 获取应用token
+ * @method void setApplicationToken(string $ApplicationToken) 设置应用token
  */
 class DescribeAlarmLevelListRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 工作空间id
+     */
+    public $WorkspaceId;
 
     /**
+     * @var string 应用token
+     */
+    public $ApplicationToken;
 
+    /**
+     * @param integer $WorkspaceId 工作空间id
+     * @param string $ApplicationToken 应用token
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeAlarmLevelListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("WorkspaceId",$param) and $param["WorkspaceId"] !== null) {
+            $this->WorkspaceId = $param["WorkspaceId"];
+        }
 
+        if (array_key_exists("ApplicationToken",$param) and $param["ApplicationToken"] !== null) {
+            $this->ApplicationToken = $param["ApplicationToken"];
+        }
     }
 }

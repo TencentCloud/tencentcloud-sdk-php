@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSceneRiskInfos(array $SceneRiskInfos) 设置场景风险信息
  * @method integer getSuggestionLevel() 获取建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
  * @method void setSuggestionLevel(integer $SuggestionLevel) 设置建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
+ * @method string getUnionid() 获取图灵盾统一ID
+ * @method void setUnionid(string $Unionid) 设置图灵盾统一ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -124,6 +126,11 @@ class DescribeFraudUltimateResponse extends AbstractModel
     public $SuggestionLevel;
 
     /**
+     * @var string 图灵盾统一ID
+     */
+    public $Unionid;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -143,6 +150,7 @@ class DescribeFraudUltimateResponse extends AbstractModel
      * @param string $Openid 设备匿名标识
      * @param array $SceneRiskInfos 场景风险信息
      * @param integer $SuggestionLevel 建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
+     * @param string $Unionid 图灵盾统一ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -227,6 +235,10 @@ class DescribeFraudUltimateResponse extends AbstractModel
 
         if (array_key_exists("SuggestionLevel",$param) and $param["SuggestionLevel"] !== null) {
             $this->SuggestionLevel = $param["SuggestionLevel"];
+        }
+
+        if (array_key_exists("Unionid",$param) and $param["Unionid"] !== null) {
+            $this->Unionid = $param["Unionid"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

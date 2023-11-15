@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBuildingList请求参数结构体
  *
-
+ * @method string getWorkspaceId() 获取项目空间id
+ * @method void setWorkspaceId(string $WorkspaceId) 设置项目空间id
+ * @method string getApplicationToken() 获取应用token
+ * @method void setApplicationToken(string $ApplicationToken) 设置应用token
+ * @method boolean getHasModel() 获取是否有模型文件
+ * @method void setHasModel(boolean $HasModel) 设置是否有模型文件
+ * @method array getSpaceCodes() 获取空间编码
+ * @method void setSpaceCodes(array $SpaceCodes) 设置空间编码
  */
 class DescribeBuildingListRequest extends AbstractModel
 {
-
+    /**
+     * @var string 项目空间id
+     */
+    public $WorkspaceId;
 
     /**
+     * @var string 应用token
+     */
+    public $ApplicationToken;
 
+    /**
+     * @var boolean 是否有模型文件
+     */
+    public $HasModel;
+
+    /**
+     * @var array 空间编码
+     */
+    public $SpaceCodes;
+
+    /**
+     * @param string $WorkspaceId 项目空间id
+     * @param string $ApplicationToken 应用token
+     * @param boolean $HasModel 是否有模型文件
+     * @param array $SpaceCodes 空间编码
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class DescribeBuildingListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("WorkspaceId",$param) and $param["WorkspaceId"] !== null) {
+            $this->WorkspaceId = $param["WorkspaceId"];
+        }
 
+        if (array_key_exists("ApplicationToken",$param) and $param["ApplicationToken"] !== null) {
+            $this->ApplicationToken = $param["ApplicationToken"];
+        }
+
+        if (array_key_exists("HasModel",$param) and $param["HasModel"] !== null) {
+            $this->HasModel = $param["HasModel"];
+        }
+
+        if (array_key_exists("SpaceCodes",$param) and $param["SpaceCodes"] !== null) {
+            $this->SpaceCodes = $param["SpaceCodes"];
+        }
     }
 }

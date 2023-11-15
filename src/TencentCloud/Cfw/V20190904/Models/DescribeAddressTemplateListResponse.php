@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(array $Data) 设置模板列表数据
  * @method array getNameList() 获取模板名称列表
  * @method void setNameList(array $NameList) 设置模板名称列表
+ * @method integer getIpTemplateCount() 获取Ip地址模板数量
+ * @method void setIpTemplateCount(integer $IpTemplateCount) 设置Ip地址模板数量
+ * @method integer getDomainTemplateCount() 获取域名地址模板数量
+ * @method void setDomainTemplateCount(integer $DomainTemplateCount) 设置域名地址模板数量
+ * @method integer getPortTemplateCount() 获取协议端口模板数量
+ * @method void setPortTemplateCount(integer $PortTemplateCount) 设置协议端口模板数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +53,21 @@ class DescribeAddressTemplateListResponse extends AbstractModel
     public $NameList;
 
     /**
+     * @var integer Ip地址模板数量
+     */
+    public $IpTemplateCount;
+
+    /**
+     * @var integer 域名地址模板数量
+     */
+    public $DomainTemplateCount;
+
+    /**
+     * @var integer 协议端口模板数量
+     */
+    public $PortTemplateCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +76,9 @@ class DescribeAddressTemplateListResponse extends AbstractModel
      * @param integer $Total 模板总数
      * @param array $Data 模板列表数据
      * @param array $NameList 模板名称列表
+     * @param integer $IpTemplateCount Ip地址模板数量
+     * @param integer $DomainTemplateCount 域名地址模板数量
+     * @param integer $PortTemplateCount 协议端口模板数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -85,6 +109,18 @@ class DescribeAddressTemplateListResponse extends AbstractModel
 
         if (array_key_exists("NameList",$param) and $param["NameList"] !== null) {
             $this->NameList = $param["NameList"];
+        }
+
+        if (array_key_exists("IpTemplateCount",$param) and $param["IpTemplateCount"] !== null) {
+            $this->IpTemplateCount = $param["IpTemplateCount"];
+        }
+
+        if (array_key_exists("DomainTemplateCount",$param) and $param["DomainTemplateCount"] !== null) {
+            $this->DomainTemplateCount = $param["DomainTemplateCount"];
+        }
+
+        if (array_key_exists("PortTemplateCount",$param) and $param["PortTemplateCount"] !== null) {
+            $this->PortTemplateCount = $param["PortTemplateCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

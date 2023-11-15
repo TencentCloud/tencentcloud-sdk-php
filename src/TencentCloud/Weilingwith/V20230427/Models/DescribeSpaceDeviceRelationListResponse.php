@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSpaceDeviceRelationList返回参数结构体
  *
+ * @method SpaceDeviceRelationRes getResult() 获取查询指定空间下设备与构件绑定关系列表出参
+ * @method void setResult(SpaceDeviceRelationRes $Result) 设置查询指定空间下设备与构件绑定关系列表出参
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSpaceDeviceRelationListResponse extends AbstractModel
 {
     /**
+     * @var SpaceDeviceRelationRes 查询指定空间下设备与构件绑定关系列表出参
+     */
+    public $Result;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param SpaceDeviceRelationRes $Result 查询指定空间下设备与构件绑定关系列表出参
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeSpaceDeviceRelationListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new SpaceDeviceRelationRes();
+            $this->Result->deserialize($param["Result"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

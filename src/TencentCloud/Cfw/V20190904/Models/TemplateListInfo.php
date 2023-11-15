@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRulesNum(integer $RulesNum) 设置关联规则条数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTemplateId() 获取模板Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateId(string $TemplateId) 设置模板Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocolType() 获取协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocolType(string $ProtocolType) 设置协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateListInfo extends AbstractModel
 {
@@ -104,6 +112,18 @@ class TemplateListInfo extends AbstractModel
     public $RulesNum;
 
     /**
+     * @var string 模板Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateId;
+
+    /**
+     * @var string 协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtocolType;
+
+    /**
      * @param string $Uuid 模版ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 模版名称
@@ -119,6 +139,10 @@ class TemplateListInfo extends AbstractModel
      * @param integer $Type 模版类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RulesNum 关联规则条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TemplateId 模板Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +188,14 @@ class TemplateListInfo extends AbstractModel
 
         if (array_key_exists("RulesNum",$param) and $param["RulesNum"] !== null) {
             $this->RulesNum = $param["RulesNum"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
+            $this->ProtocolType = $param["ProtocolType"];
         }
     }
 }

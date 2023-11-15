@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmTypeList返回参数结构体
  *
+ * @method DescribeAlarmTypeListRes getResult() 获取告警类型列表查询
+ * @method void setResult(DescribeAlarmTypeListRes $Result) 设置告警类型列表查询
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAlarmTypeListResponse extends AbstractModel
 {
     /**
+     * @var DescribeAlarmTypeListRes 告警类型列表查询
+     */
+    public $Result;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param DescribeAlarmTypeListRes $Result 告警类型列表查询
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeAlarmTypeListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new DescribeAlarmTypeListRes();
+            $this->Result->deserialize($param["Result"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

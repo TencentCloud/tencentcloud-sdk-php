@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。
  * @method string getCustomerGatewayName() 获取对端网关名称，可任意命名，但不得超过60个字符。
  * @method void setCustomerGatewayName(string $CustomerGatewayName) 设置对端网关名称，可任意命名，但不得超过60个字符。
+ * @method integer getBgpAsn() 获取BGP ASN。只有开启BGP白名单才可以修改此参数。
+ * @method void setBgpAsn(integer $BgpAsn) 设置BGP ASN。只有开启BGP白名单才可以修改此参数。
  */
 class ModifyCustomerGatewayAttributeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyCustomerGatewayAttributeRequest extends AbstractModel
     public $CustomerGatewayName;
 
     /**
+     * @var integer BGP ASN。只有开启BGP白名单才可以修改此参数。
+     */
+    public $BgpAsn;
+
+    /**
      * @param string $CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。
      * @param string $CustomerGatewayName 对端网关名称，可任意命名，但不得超过60个字符。
+     * @param integer $BgpAsn BGP ASN。只有开启BGP白名单才可以修改此参数。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyCustomerGatewayAttributeRequest extends AbstractModel
 
         if (array_key_exists("CustomerGatewayName",$param) and $param["CustomerGatewayName"] !== null) {
             $this->CustomerGatewayName = $param["CustomerGatewayName"];
+        }
+
+        if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
+            $this->BgpAsn = $param["BgpAsn"];
         }
     }
 }

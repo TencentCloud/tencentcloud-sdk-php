@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskNumber(integer $RiskNumber) 设置安全风险数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTime() 获取报告生成时间,任务结束时间
+ * @method string getTime() 获取报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTime(string $Time) 设置报告生成时间,任务结束时间
+ * @method void setTime(string $Time) 设置报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
 注意：此字段可能返回 null，表示取不到有效值。
@@ -101,7 +101,7 @@ class TaskLogInfo extends AbstractModel
     public $RiskNumber;
 
     /**
-     * @var string 报告生成时间,任务结束时间
+     * @var string 报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
@@ -168,7 +168,7 @@ class TaskLogInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskNumber 安全风险数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Time 报告生成时间,任务结束时间
+     * @param string $Time 报告生成时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
 注意：此字段可能返回 null，表示取不到有效值。

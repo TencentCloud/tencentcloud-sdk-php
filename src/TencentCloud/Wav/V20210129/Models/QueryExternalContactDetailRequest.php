@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryExternalContactDetail请求参数结构体
  *
- * @method string getExternalUserId() 获取外部联系人的userid，注意不是企业成员的帐号
- * @method void setExternalUserId(string $ExternalUserId) 设置外部联系人的userid，注意不是企业成员的帐号
+ * @method string getExternalUserId() 获取外部联系人的userid，注意不是企业成员的账号
+ * @method void setExternalUserId(string $ExternalUserId) 设置外部联系人的userid，注意不是企业成员的账号
  * @method string getCursor() 获取用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取
  * @method void setCursor(string $Cursor) 设置用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取
  * @method integer getLimit() 获取当前接口Limit不需要传参， 保留Limit只是为了保持向后兼容性， Limit默认值为500，当返回结果超过500时， NextCursor才有返回值
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class QueryExternalContactDetailRequest extends AbstractModel
 {
     /**
-     * @var string 外部联系人的userid，注意不是企业成员的帐号
+     * @var string 外部联系人的userid，注意不是企业成员的账号
      */
     public $ExternalUserId;
 
@@ -45,7 +45,7 @@ class QueryExternalContactDetailRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $ExternalUserId 外部联系人的userid，注意不是企业成员的帐号
+     * @param string $ExternalUserId 外部联系人的userid，注意不是企业成员的账号
      * @param string $Cursor 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取
      * @param integer $Limit 当前接口Limit不需要传参， 保留Limit只是为了保持向后兼容性， Limit默认值为500，当返回结果超过500时， NextCursor才有返回值
      */

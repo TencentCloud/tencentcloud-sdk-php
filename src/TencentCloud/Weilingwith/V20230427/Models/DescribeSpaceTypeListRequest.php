@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSpaceTypeList请求参数结构体
  *
-
+ * @method string getWorkspaceId() 获取项目空间ID
+ * @method void setWorkspaceId(string $WorkspaceId) 设置项目空间ID
+ * @method integer getPageNumber() 获取页码
+ * @method void setPageNumber(integer $PageNumber) 设置页码
+ * @method integer getPageSize() 获取页容量
+ * @method void setPageSize(integer $PageSize) 设置页容量
+ * @method string getApplicationToken() 获取应用token
+ * @method void setApplicationToken(string $ApplicationToken) 设置应用token
  */
 class DescribeSpaceTypeListRequest extends AbstractModel
 {
-
+    /**
+     * @var string 项目空间ID
+     */
+    public $WorkspaceId;
 
     /**
+     * @var integer 页码
+     */
+    public $PageNumber;
 
+    /**
+     * @var integer 页容量
+     */
+    public $PageSize;
+
+    /**
+     * @var string 应用token
+     */
+    public $ApplicationToken;
+
+    /**
+     * @param string $WorkspaceId 项目空间ID
+     * @param integer $PageNumber 页码
+     * @param integer $PageSize 页容量
+     * @param string $ApplicationToken 应用token
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class DescribeSpaceTypeListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("WorkspaceId",$param) and $param["WorkspaceId"] !== null) {
+            $this->WorkspaceId = $param["WorkspaceId"];
+        }
 
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("ApplicationToken",$param) and $param["ApplicationToken"] !== null) {
+            $this->ApplicationToken = $param["ApplicationToken"];
+        }
     }
 }

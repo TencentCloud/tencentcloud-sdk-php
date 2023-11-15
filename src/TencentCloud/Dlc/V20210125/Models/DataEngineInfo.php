@@ -178,6 +178,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoAuthorization(boolean $AutoAuthorization) 设置自动授权开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineGeneration() 获取引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineGeneration(string $EngineGeneration) 设置引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineTypeDetail() 获取引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -445,6 +453,18 @@ class DataEngineInfo extends AbstractModel
     public $AutoAuthorization;
 
     /**
+     * @var string 引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineGeneration;
+
+    /**
+     * @var string 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineTypeDetail;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -523,6 +543,10 @@ class DataEngineInfo extends AbstractModel
      * @param SessionResourceTemplate $SessionResourceTemplate SessionResourceTemplate
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoAuthorization 自动授权开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineGeneration 引擎版本，支持Native/SuperSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineTypeDetail 引擎详细类型，支持：SparkSQL/SparkBatch/PrestoSQL/Kyuubi
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -732,6 +756,14 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("AutoAuthorization",$param) and $param["AutoAuthorization"] !== null) {
             $this->AutoAuthorization = $param["AutoAuthorization"];
+        }
+
+        if (array_key_exists("EngineGeneration",$param) and $param["EngineGeneration"] !== null) {
+            $this->EngineGeneration = $param["EngineGeneration"];
+        }
+
+        if (array_key_exists("EngineTypeDetail",$param) and $param["EngineTypeDetail"] !== null) {
+            $this->EngineTypeDetail = $param["EngineTypeDetail"];
         }
     }
 }

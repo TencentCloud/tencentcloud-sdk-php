@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetName(string $AssetName) 设置资产名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取	资产类型
+ * @method string getInstanceType() 获取资产类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置	资产类型
+ * @method void setInstanceType(string $InstanceType) 设置资产类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetType() 获取资产分类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,7 +52,7 @@ class TaskAssetObject extends AbstractModel
     public $AssetName;
 
     /**
-     * @var string 	资产类型
+     * @var string 资产类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
@@ -83,7 +83,7 @@ class TaskAssetObject extends AbstractModel
     /**
      * @param string $AssetName 资产名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType 	资产类型
+     * @param string $InstanceType 资产类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetType 资产分类
 注意：此字段可能返回 null，表示取不到有效值。

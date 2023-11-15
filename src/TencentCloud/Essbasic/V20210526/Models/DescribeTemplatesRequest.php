@@ -44,11 +44,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(string $TemplateId) 设置合同模板ID，为32位字符串。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
- * @method integer getContentType() 获取查询模版的内容
+ * @method integer getContentType() 获取查询模板的内容
 
 <ul><li>**0**：（默认）模板列表及详情</li>
 <li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
- * @method void setContentType(integer $ContentType) 设置查询模版的内容
+ * @method void setContentType(integer $ContentType) 设置查询模板的内容
 
 <ul><li>**0**：（默认）模板列表及详情</li>
 <li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
@@ -150,7 +150,7 @@ class DescribeTemplatesRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var integer 查询模版的内容
+     * @var integer 查询模板的内容
 
 <ul><li>**0**：（默认）模板列表及详情</li>
 <li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>
@@ -244,7 +244,7 @@ class DescribeTemplatesRequest extends AbstractModel
      * @param string $TemplateId 合同模板ID，为32位字符串。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
-     * @param integer $ContentType 查询模版的内容
+     * @param integer $ContentType 查询模板的内容
 
 <ul><li>**0**：（默认）模板列表及详情</li>
 <li>**1**：仅模板列表, 不会返回模板中的签署控件, 填写控件, 参与方角色列表等信息</li></ul>

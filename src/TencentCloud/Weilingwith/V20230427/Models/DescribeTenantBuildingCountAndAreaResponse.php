@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTenantBuildingCountAndArea返回参数结构体
  *
+ * @method SpaceDataTotalStatsRes getResult() 获取租户所有项目空间楼栋数量与建筑面积统计结果
+ * @method void setResult(SpaceDataTotalStatsRes $Result) 设置租户所有项目空间楼栋数量与建筑面积统计结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTenantBuildingCountAndAreaResponse extends AbstractModel
 {
     /**
+     * @var SpaceDataTotalStatsRes 租户所有项目空间楼栋数量与建筑面积统计结果
+     */
+    public $Result;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param SpaceDataTotalStatsRes $Result 租户所有项目空间楼栋数量与建筑面积统计结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeTenantBuildingCountAndAreaResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new SpaceDataTotalStatsRes();
+            $this->Result->deserialize($param["Result"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -52,6 +52,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeCloudNativeAPIGatewayRoutesResponse DescribeCloudNativeAPIGatewayRoutes(Models\DescribeCloudNativeAPIGatewayRoutesRequest $req) 查询云原生网关路由列表
  * @method Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse DescribeCloudNativeAPIGatewayServiceRateLimit(Models\DescribeCloudNativeAPIGatewayServiceRateLimitRequest $req) 查询云原生网关的限流插件(服务)
  * @method Models\DescribeCloudNativeAPIGatewayServicesResponse DescribeCloudNativeAPIGatewayServices(Models\DescribeCloudNativeAPIGatewayServicesRequest $req) 查询云原生网关服务列表
+ * @method Models\DescribeCloudNativeAPIGatewayUpstreamResponse DescribeCloudNativeAPIGatewayUpstream(Models\DescribeCloudNativeAPIGatewayUpstreamRequest $req) 获取云原生网关服务详情下的Upstream列表
  * @method Models\DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGateways(Models\DescribeCloudNativeAPIGatewaysRequest $req) 获取云原生API网关实例列表
  * @method Models\DescribeNacosReplicasResponse DescribeNacosReplicas(Models\DescribeNacosReplicasRequest $req) 查询Nacos类型引擎实例副本信息
  * @method Models\DescribeNacosServerInterfacesResponse DescribeNacosServerInterfaces(Models\DescribeNacosServerInterfacesRequest $req) 查询nacos服务接口列表
@@ -59,6 +60,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeOneCloudNativeAPIGatewayServiceResponse DescribeOneCloudNativeAPIGatewayService(Models\DescribeOneCloudNativeAPIGatewayServiceRequest $req) 获取云原生网关服务详情
  * @method Models\DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(Models\DescribeSREInstanceAccessAddressRequest $req) 查询引擎实例访问地址
  * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询引擎实例列表
+ * @method Models\DescribeUpstreamHealthCheckConfigResponse DescribeUpstreamHealthCheckConfig(Models\DescribeUpstreamHealthCheckConfigRequest $req) 获取云原生网关服务健康检查配置
  * @method Models\DescribeZookeeperReplicasResponse DescribeZookeeperReplicas(Models\DescribeZookeeperReplicasRequest $req) 查询Zookeeper类型注册引擎实例副本信息
  * @method Models\DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(Models\DescribeZookeeperServerInterfacesRequest $req) 查询zookeeper服务接口列表
  * @method Models\ModifyCloudNativeAPIGatewayResponse ModifyCloudNativeAPIGateway(Models\ModifyCloudNativeAPIGatewayRequest $req) 修改云原生API网关实例基础信息
@@ -69,9 +71,11 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyCloudNativeAPIGatewayServiceResponse ModifyCloudNativeAPIGatewayService(Models\ModifyCloudNativeAPIGatewayServiceRequest $req) 修改云原生网关服务
  * @method Models\ModifyCloudNativeAPIGatewayServiceRateLimitResponse ModifyCloudNativeAPIGatewayServiceRateLimit(Models\ModifyCloudNativeAPIGatewayServiceRateLimitRequest $req) 修改云原生网关限流插件(服务)
  * @method Models\ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(Models\ModifyNativeGatewayServerGroupRequest $req) 修改云原生API网关实例分组基础信息
+ * @method Models\ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(Models\ModifyUpstreamNodeStatusRequest $req) 修改云原生网关上游实例节点健康状态
  * @method Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfo(Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest $req) 修改云原生网关证书信息
  * @method Models\UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpec(Models\UpdateCloudNativeAPIGatewaySpecRequest $req) 修改云原生API网关实例的节点规格信息，比如节点扩缩容或者升降配
  * @method Models\UpdateEngineInternetAccessResponse UpdateEngineInternetAccess(Models\UpdateEngineInternetAccessRequest $req) 修改引擎公网访问配置
+ * @method Models\UpdateUpstreamHealthCheckConfigResponse UpdateUpstreamHealthCheckConfig(Models\UpdateUpstreamHealthCheckConfigRequest $req) 更新云原生网关健康检查配置
  * @method Models\UpdateUpstreamTargetsResponse UpdateUpstreamTargets(Models\UpdateUpstreamTargetsRequest $req) 更新网关上游实例列表，仅支持IPList服务类型
  */
 

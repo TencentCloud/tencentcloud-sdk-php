@@ -24,6 +24,7 @@ use TencentCloud\Hai\V20230812\Models as Models;
 
 /**
  * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) 本接口 (RunInstances) 用于创建一个或多个指定配置的实例。
+ * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 本接口 (TerminateInstances) 用于主动退还实例。
  */
 
 class HaiClient extends AbstractClient

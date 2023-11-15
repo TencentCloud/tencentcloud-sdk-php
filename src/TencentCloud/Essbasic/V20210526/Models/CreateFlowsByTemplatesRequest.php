@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
  * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
  * @method array getFlowInfos() 获取要创建的合同信息列表，最多支持一次创建20个合同
  * @method void setFlowInfos(array $FlowInfos) 设置要创建的合同信息列表，最多支持一次创建20个合同
@@ -74,9 +74,9 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
      */
     public $Agent;
@@ -118,9 +118,9 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>
      * @param array $FlowInfos 要创建的合同信息列表，最多支持一次创建20个合同
      * @param boolean $NeedPreview 是否为预览模式，取值如下：

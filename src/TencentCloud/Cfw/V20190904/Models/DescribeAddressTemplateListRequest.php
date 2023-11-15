@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchValue(string $SearchValue) 设置搜索值
  * @method string getUuid() 获取检索地址模板唯一id
  * @method void setUuid(string $Uuid) 设置检索地址模板唯一id
+ * @method string getTemplateType() 获取1：ip模板，5：域名模板，6：协议端口模板
+ * @method void setTemplateType(string $TemplateType) 设置1：ip模板，5：域名模板，6：协议端口模板
+ * @method string getTemplateId() 获取模板Id
+ * @method void setTemplateId(string $TemplateId) 设置模板Id
  */
 class DescribeAddressTemplateListRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DescribeAddressTemplateListRequest extends AbstractModel
     public $Uuid;
 
     /**
+     * @var string 1：ip模板，5：域名模板，6：协议端口模板
+     */
+    public $TemplateType;
+
+    /**
+     * @var string 模板Id
+     */
+    public $TemplateId;
+
+    /**
      * @param integer $Offset 偏移量，分页用
      * @param integer $Limit 条数，分页用
      * @param string $By 排序字段，取值 'UpdateTime' | 'RulesNum'
      * @param string $Order 排序，取值 'asc'|'desc'
      * @param string $SearchValue 搜索值
      * @param string $Uuid 检索地址模板唯一id
+     * @param string $TemplateType 1：ip模板，5：域名模板，6：协议端口模板
+     * @param string $TemplateId 模板Id
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeAddressTemplateListRequest extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

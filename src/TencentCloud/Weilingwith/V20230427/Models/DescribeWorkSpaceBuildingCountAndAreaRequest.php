@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkSpaceBuildingCountAndArea请求参数结构体
  *
-
+ * @method array getWorkspaceIdList() 获取工作空间ID列表
+ * @method void setWorkspaceIdList(array $WorkspaceIdList) 设置工作空间ID列表
+ * @method string getApplicationToken() 获取应用token
+ * @method void setApplicationToken(string $ApplicationToken) 设置应用token
  */
 class DescribeWorkSpaceBuildingCountAndAreaRequest extends AbstractModel
 {
-
+    /**
+     * @var array 工作空间ID列表
+     */
+    public $WorkspaceIdList;
 
     /**
+     * @var string 应用token
+     */
+    public $ApplicationToken;
 
+    /**
+     * @param array $WorkspaceIdList 工作空间ID列表
+     * @param string $ApplicationToken 应用token
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeWorkSpaceBuildingCountAndAreaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("WorkspaceIdList",$param) and $param["WorkspaceIdList"] !== null) {
+            $this->WorkspaceIdList = $param["WorkspaceIdList"];
+        }
 
+        if (array_key_exists("ApplicationToken",$param) and $param["ApplicationToken"] !== null) {
+            $this->ApplicationToken = $param["ApplicationToken"];
+        }
     }
 }

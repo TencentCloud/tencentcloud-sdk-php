@@ -58,15 +58,17 @@ use TencentCloud\Common\AbstractModel;
 <li>您可以传递多种值，表示可用多种签名类型。</li></ul>
  * @method array getApproverSignTypes() 获取指定批量签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证(默认)，需进行人脸识别成功后才能签署合同</li>
+<li>**2**：密码认证(默认)，需校验成功后才能签署合同</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息(名字、手机号、证件号)校验一致才能成功进行合同签署。</li></ul>
 注：
-<ul><li>默认情况下，认证校验方式为人脸认证</li>
+<ul><li>默认情况下，认证校验方式为人脸和密码认证</li>
 <li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
  * @method void setApproverSignTypes(array $ApproverSignTypes) 设置指定批量签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证(默认)，需进行人脸识别成功后才能签署合同</li>
+<li>**2**：密码认证(默认)，需校验成功后才能签署合同</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息(名字、手机号、证件号)校验一致才能成功进行合同签署。</li></ul>
 注：
-<ul><li>默认情况下，认证校验方式为人脸认证</li>
+<ul><li>默认情况下，认证校验方式为人脸和密码认证</li>
 <li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
  */
 class CreateBatchQuickSignUrlRequest extends AbstractModel
@@ -116,9 +118,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     /**
      * @var array 指定批量签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证(默认)，需进行人脸识别成功后才能签署合同</li>
+<li>**2**：密码认证(默认)，需校验成功后才能签署合同</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息(名字、手机号、证件号)校验一致才能成功进行合同签署。</li></ul>
 注：
-<ul><li>默认情况下，认证校验方式为人脸认证</li>
+<ul><li>默认情况下，认证校验方式为人脸和密码认证</li>
 <li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
      */
     public $ApproverSignTypes;
@@ -144,9 +147,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 <li>您可以传递多种值，表示可用多种签名类型。</li></ul>
      * @param array $ApproverSignTypes 指定批量签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证(默认)，需进行人脸识别成功后才能签署合同</li>
+<li>**2**：密码认证(默认)，需校验成功后才能签署合同</li>
 <li>**3**：运营商三要素，需到运营商处比对手机号实名信息(名字、手机号、证件号)校验一致才能成功进行合同签署。</li></ul>
 注：
-<ul><li>默认情况下，认证校验方式为人脸认证</li>
+<ul><li>默认情况下，认证校验方式为人脸和密码认证</li>
 <li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
      */
     function __construct()

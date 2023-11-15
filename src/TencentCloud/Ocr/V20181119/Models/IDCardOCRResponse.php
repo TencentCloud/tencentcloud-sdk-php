@@ -68,6 +68,8 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 -9104	临时身份证告警，
 -9106	身份证疑似存在PS痕迹告警，
 -9107       身份证反光告警。
+ * @method array getReflectDetailInfos() 获取反光点覆盖区域详情结果，具体内容请点击左侧链接
+ * @method void setReflectDetailInfos(array $ReflectDetailInfos) 设置反光点覆盖区域详情结果，具体内容请点击左侧链接
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -134,6 +136,11 @@ WarnInfos，告警信息，Code 告警码列表和释义：
     public $AdvancedInfo;
 
     /**
+     * @var array 反光点覆盖区域详情结果，具体内容请点击左侧链接
+     */
+    public $ReflectDetailInfos;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -163,6 +170,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 -9104	临时身份证告警，
 -9106	身份证疑似存在PS痕迹告警，
 -9107       身份证反光告警。
+     * @param array $ReflectDetailInfos 反光点覆盖区域详情结果，具体内容请点击左侧链接
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -212,6 +220,15 @@ WarnInfos，告警信息，Code 告警码列表和释义：
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("ReflectDetailInfos",$param) and $param["ReflectDetailInfos"] !== null) {
+            $this->ReflectDetailInfos = [];
+            foreach ($param["ReflectDetailInfos"] as $key => $value){
+                $obj = new ReflectDetailInfo();
+                $obj->deserialize($value);
+                array_push($this->ReflectDetailInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

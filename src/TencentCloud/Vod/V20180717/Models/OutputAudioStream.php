@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 <li>1：单声道 。</li>
 <li>2：双声道</li>
 默认值：2。
+ * @method integer getBitrate() 获取音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。
+ * @method void setBitrate(integer $Bitrate) 设置音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。
  */
 class OutputAudioStream extends AbstractModel
 {
@@ -78,6 +82,12 @@ class OutputAudioStream extends AbstractModel
     public $AudioChannel;
 
     /**
+     * @var integer 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。
+     */
+    public $Bitrate;
+
+    /**
      * @param string $Codec 音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
 默认值：libfdk_aac。
@@ -92,6 +102,8 @@ class OutputAudioStream extends AbstractModel
 <li>1：单声道 。</li>
 <li>2：双声道</li>
 默认值：2。
+     * @param integer $Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，将自动设置音频码率。
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ class OutputAudioStream extends AbstractModel
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
         }
     }
 }

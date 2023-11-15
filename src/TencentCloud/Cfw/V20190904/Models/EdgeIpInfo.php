@@ -130,6 +130,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchWeight(integer $SwitchWeight) 设置开关权重
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomain() 获取域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeIpInfo extends AbstractModel
 {
@@ -273,6 +277,12 @@ class EdgeIpInfo extends AbstractModel
     public $SwitchWeight;
 
     /**
+     * @var string 域名化CLB的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
      * @param string $PublicIp 公网IP
      * @param integer $PublicIpType 公网 IP 类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -327,6 +337,8 @@ class EdgeIpInfo extends AbstractModel
 1 : 串行
 2 : 正在模式切换
      * @param integer $SwitchWeight 开关权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Domain 域名化CLB的域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -424,6 +436,10 @@ class EdgeIpInfo extends AbstractModel
 
         if (array_key_exists("SwitchWeight",$param) and $param["SwitchWeight"] !== null) {
             $this->SwitchWeight = $param["SwitchWeight"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

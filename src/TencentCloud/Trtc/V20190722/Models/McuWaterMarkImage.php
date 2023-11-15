@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationY(integer $LocationY) 设置水印在输出时的Y偏移。单位为像素值。
  * @method integer getZOrder() 获取水印在输出时的层级，不填默认为0。
  * @method void setZOrder(integer $ZOrder) 设置水印在输出时的层级，不填默认为0。
+ * @method integer getDynamicPosType() 获取动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+ * @method void setDynamicPosType(integer $DynamicPosType) 设置动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
  */
 class McuWaterMarkImage extends AbstractModel
 {
@@ -66,12 +68,18 @@ class McuWaterMarkImage extends AbstractModel
     public $ZOrder;
 
     /**
+     * @var integer 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+     */
+    public $DynamicPosType;
+
+    /**
      * @param string $WaterMarkUrl 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
      * @param integer $WaterMarkWidth 水印在输出时的宽。单位为像素值。
      * @param integer $WaterMarkHeight 水印在输出时的高。单位为像素值。
      * @param integer $LocationX 水印在输出时的X偏移。单位为像素值。
      * @param integer $LocationY 水印在输出时的Y偏移。单位为像素值。
      * @param integer $ZOrder 水印在输出时的层级，不填默认为0。
+     * @param integer $DynamicPosType 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class McuWaterMarkImage extends AbstractModel
 
         if (array_key_exists("ZOrder",$param) and $param["ZOrder"] !== null) {
             $this->ZOrder = $param["ZOrder"];
+        }
+
+        if (array_key_exists("DynamicPosType",$param) and $param["DynamicPosType"] !== null) {
+            $this->DynamicPosType = $param["DynamicPosType"];
         }
     }
 }

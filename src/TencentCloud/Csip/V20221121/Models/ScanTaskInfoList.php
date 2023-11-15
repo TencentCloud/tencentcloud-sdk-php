@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSelfDefiningAssets() 获取排除扫描资产信息
+ * @method array getSelfDefiningAssets() 获取自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSelfDefiningAssets(array $SelfDefiningAssets) 设置排除扫描资产信息
+ * @method void setSelfDefiningAssets(array $SelfDefiningAssets) 设置自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPredictTime() 获取预估时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,9 +80,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanItem(string $ScanItem) 设置port/poc/weakpass/webcontent/configrisk
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScanAssetType() 获取0-全扫，1-指定资产扫，2-排除资产扫
+ * @method integer getScanAssetType() 获取0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScanAssetType(integer $ScanAssetType) 设置0-全扫，1-指定资产扫，2-排除资产扫
+ * @method void setScanAssetType(integer $ScanAssetType) 设置0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVSSTaskId() 获取vss子任务id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -226,7 +226,7 @@ class ScanTaskInfoList extends AbstractModel
     public $TaskId;
 
     /**
-     * @var array 排除扫描资产信息
+     * @var array 自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfDefiningAssets;
@@ -274,7 +274,7 @@ class ScanTaskInfoList extends AbstractModel
     public $ScanItem;
 
     /**
-     * @var integer 0-全扫，1-指定资产扫，2-排除资产扫
+     * @var integer 0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanAssetType;
@@ -438,7 +438,7 @@ class ScanTaskInfoList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SelfDefiningAssets 排除扫描资产信息
+     * @param array $SelfDefiningAssets 自定义指定扫描资产信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PredictTime 预估时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -454,7 +454,7 @@ class ScanTaskInfoList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanItem port/poc/weakpass/webcontent/configrisk
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫
+     * @param integer $ScanAssetType 0-全扫，1-指定资产扫，2-排除资产扫，3-自定义指定资产扫描
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VSSTaskId vss子任务id
 注意：此字段可能返回 null，表示取不到有效值。

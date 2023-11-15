@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音频文本内容审核结果
  *
- * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeywords() 获取命中的关键词，为空则代表该违规内容出自于模型的判断；
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,10 +74,10 @@ use TencentCloud\Common\AbstractModel;
 class TextResult extends AbstractModel
 {
     /**
-     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
@@ -131,10 +131,10 @@ class TextResult extends AbstractModel
     public $SubLabel;
 
     /**
-     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
-如音频中无复杂类型「TextResults」的返回则代表改音频中无相关违规内容；
+如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keywords 命中的关键词，为空则代表该违规内容出自于模型的判断；
 注意：此字段可能返回 null，表示取不到有效值。

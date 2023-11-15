@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRequestNum(integer $MaxRequestNum) 设置请求配额总数，取值范围为-1或者[1, 99999999]，默认为-1，表示不开启。
  * @method integer getMaxRequestNumPreSec() 获取每秒请求限制数，取值范围为-1或者[1, 2000]，默认-1，表示不开启。
  * @method void setMaxRequestNumPreSec(integer $MaxRequestNumPreSec) 设置每秒请求限制数，取值范围为-1或者[1, 2000]，默认-1，表示不开启。
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class CreateUsagePlanRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateUsagePlanRequest extends AbstractModel
     public $MaxRequestNumPreSec;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $UsagePlanName 用户自定义的使用计划名称。
      * @param string $UsagePlanDesc 用户自定义的使用计划描述。
      * @param integer $MaxRequestNum 请求配额总数，取值范围为-1或者[1, 99999999]，默认为-1，表示不开启。
      * @param integer $MaxRequestNumPreSec 每秒请求限制数，取值范围为-1或者[1, 2000]，默认-1，表示不开启。
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreateUsagePlanRequest extends AbstractModel
 
         if (array_key_exists("MaxRequestNumPreSec",$param) and $param["MaxRequestNumPreSec"] !== null) {
             $this->MaxRequestNumPreSec = $param["MaxRequestNumPreSec"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

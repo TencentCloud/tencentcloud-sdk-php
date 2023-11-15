@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 呻吟低俗检测结果
  *
- * @method string getLabel() 获取固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表改音频中无呻吟/娇喘相关违规内容；
+ * @method string getLabel() 获取固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表改音频中无呻吟/娇喘相关违规内容；
+ * @method void setLabel(string $Label) 设置固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Moan 99，则该样本属于呻吟/娇喘的置信度非常高。）
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class MoanResult extends AbstractModel
 {
     /**
-     * @var string 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表改音频中无呻吟/娇喘相关违规内容；
+     * @var string 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
@@ -81,7 +81,7 @@ class MoanResult extends AbstractModel
     public $SubLabel;
 
     /**
-     * @param string $Label 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表改音频中无呻吟/娇喘相关违规内容；
+     * @param string $Label 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Moan 99，则该样本属于呻吟/娇喘的置信度非常高。）

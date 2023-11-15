@@ -54,9 +54,10 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeDatasetDetailStructuredResponse DescribeDatasetDetailStructured(Models\DescribeDatasetDetailStructuredRequest $req) 查询结构化数据集详情
  * @method Models\DescribeDatasetDetailUnstructuredResponse DescribeDatasetDetailUnstructured(Models\DescribeDatasetDetailUnstructuredRequest $req) 查询非结构化数据集详情
  * @method Models\DescribeDatasetsResponse DescribeDatasets(Models\DescribeDatasetsRequest $req) 查询数据集列表
+ * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
  * @method Models\DescribeInferTemplatesResponse DescribeInferTemplates(Models\DescribeInferTemplatesRequest $req) 查询推理镜像模板
  * @method Models\DescribeLatestTrainingMetricsResponse DescribeLatestTrainingMetrics(Models\DescribeLatestTrainingMetricsRequest $req) 查询最近上报的训练自定义指标
- * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 获取训练、推理、Notebook服务的日志 API
+ * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
  * @method Models\DescribeModelAccEngineVersionsResponse DescribeModelAccEngineVersions(Models\DescribeModelAccEngineVersionsRequest $req) 查询模型加速引擎版本列表
  * @method Models\DescribeModelAccelerateTaskResponse DescribeModelAccelerateTask(Models\DescribeModelAccelerateTaskRequest $req) 查询模型优化任务详情
  * @method Models\DescribeModelAccelerateTasksResponse DescribeModelAccelerateTasks(Models\DescribeModelAccelerateTasksRequest $req) 查询模型加速任务列表

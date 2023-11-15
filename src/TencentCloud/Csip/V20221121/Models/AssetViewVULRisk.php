@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) 设置首次识别时间
  * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略
  * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略
- * @method string getId() 获取资产唯一id
- * @method void setId(string $Id) 设置资产唯一id
+ * @method string getId() 获取风险ID
+ * @method void setId(string $Id) 设置风险ID
  * @method string getIndex() 获取前端索引
  * @method void setIndex(string $Index) 设置前端索引
  * @method string getInstanceId() 获取实例id
@@ -58,26 +58,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVULType(string $VULType) 设置漏洞类型
  * @method string getPort() 获取端口
  * @method void setPort(string $Port) 设置端口
- * @method string getDescribe() 获取描述
- * @method void setDescribe(string $Describe) 设置描述
- * @method string getAppName() 获取版本名
- * @method void setAppName(string $AppName) 设置版本名
- * @method string getReferences() 获取相关信息
- * @method void setReferences(string $References) 设置相关信息
- * @method string getAppVersion() 获取版本
- * @method void setAppVersion(string $AppVersion) 设置版本
- * @method string getVULURL() 获取漏洞url
- * @method void setVULURL(string $VULURL) 设置漏洞url
+ * @method string getDescribe() 获取漏洞描述
+ * @method void setDescribe(string $Describe) 设置漏洞描述
+ * @method string getAppName() 获取漏洞影响组件
+ * @method void setAppName(string $AppName) 设置漏洞影响组件
+ * @method string getReferences() 获取技术参考
+ * @method void setReferences(string $References) 设置技术参考
+ * @method string getAppVersion() 获取漏洞影响版本
+ * @method void setAppVersion(string $AppVersion) 设置漏洞影响版本
+ * @method string getVULURL() 获取风险点
+ * @method void setVULURL(string $VULURL) 设置风险点
  * @method string getVULName() 获取漏洞名称
  * @method void setVULName(string $VULName) 设置漏洞名称
  * @method string getCVE() 获取cve
  * @method void setCVE(string $CVE) 设置cve
- * @method string getFix() 获取修复建议
- * @method void setFix(string $Fix) 设置修复建议
+ * @method string getFix() 获取修复方案
+ * @method void setFix(string $Fix) 设置修复方案
  * @method string getPOCId() 获取pocid
  * @method void setPOCId(string $POCId) 设置pocid
- * @method string getFrom() 获取来源
- * @method void setFrom(string $From) 设置来源
+ * @method string getFrom() 获取扫描来源
+ * @method void setFrom(string $From) 设置扫描来源
  * @method integer getCWPVersion() 获取主机版本
  * @method void setCWPVersion(integer $CWPVersion) 设置主机版本
  * @method boolean getIsSupportRepair() 获取是否支持修复
@@ -86,8 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSupportDetect(boolean $IsSupportDetect) 设置是否支持扫描
  * @method string getInstanceUUID() 获取实例uuid
  * @method void setInstanceUUID(string $InstanceUUID) 设置实例uuid
- * @method string getPayload() 获取负载
- * @method void setPayload(string $Payload) 设置负载
+ * @method string getPayload() 获取攻击载荷
+ * @method void setPayload(string $Payload) 设置攻击载荷
  * @method integer getEMGCVulType() 获取应急漏洞类型，1-应急漏洞，0-非应急漏洞
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEMGCVulType(integer $EMGCVulType) 设置应急漏洞类型，1-应急漏洞，0-非应急漏洞
@@ -136,7 +136,7 @@ class AssetViewVULRisk extends AbstractModel
     public $Status;
 
     /**
-     * @var string 资产唯一id
+     * @var string 风险ID
      */
     public $Id;
 
@@ -183,27 +183,27 @@ class AssetViewVULRisk extends AbstractModel
     public $Port;
 
     /**
-     * @var string 描述
+     * @var string 漏洞描述
      */
     public $Describe;
 
     /**
-     * @var string 版本名
+     * @var string 漏洞影响组件
      */
     public $AppName;
 
     /**
-     * @var string 相关信息
+     * @var string 技术参考
      */
     public $References;
 
     /**
-     * @var string 版本
+     * @var string 漏洞影响版本
      */
     public $AppVersion;
 
     /**
-     * @var string 漏洞url
+     * @var string 风险点
      */
     public $VULURL;
 
@@ -218,7 +218,7 @@ class AssetViewVULRisk extends AbstractModel
     public $CVE;
 
     /**
-     * @var string 修复建议
+     * @var string 修复方案
      */
     public $Fix;
 
@@ -228,7 +228,7 @@ class AssetViewVULRisk extends AbstractModel
     public $POCId;
 
     /**
-     * @var string 来源
+     * @var string 扫描来源
      */
     public $From;
 
@@ -253,7 +253,7 @@ class AssetViewVULRisk extends AbstractModel
     public $InstanceUUID;
 
     /**
-     * @var string 负载
+     * @var string 攻击载荷
      */
     public $Payload;
 
@@ -272,7 +272,7 @@ class AssetViewVULRisk extends AbstractModel
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间
      * @param integer $Status 状态，0未处理、1已处置、2已忽略
-     * @param string $Id 资产唯一id
+     * @param string $Id 风险ID
      * @param string $Index 前端索引
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名
@@ -283,21 +283,21 @@ class AssetViewVULRisk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VULType 漏洞类型
      * @param string $Port 端口
-     * @param string $Describe 描述
-     * @param string $AppName 版本名
-     * @param string $References 相关信息
-     * @param string $AppVersion 版本
-     * @param string $VULURL 漏洞url
+     * @param string $Describe 漏洞描述
+     * @param string $AppName 漏洞影响组件
+     * @param string $References 技术参考
+     * @param string $AppVersion 漏洞影响版本
+     * @param string $VULURL 风险点
      * @param string $VULName 漏洞名称
      * @param string $CVE cve
-     * @param string $Fix 修复建议
+     * @param string $Fix 修复方案
      * @param string $POCId pocid
-     * @param string $From 来源
+     * @param string $From 扫描来源
      * @param integer $CWPVersion 主机版本
      * @param boolean $IsSupportRepair 是否支持修复
      * @param boolean $IsSupportDetect 是否支持扫描
      * @param string $InstanceUUID 实例uuid
-     * @param string $Payload 负载
+     * @param string $Payload 攻击载荷
      * @param integer $EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      */

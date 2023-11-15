@@ -86,6 +86,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormName(string $FormName) 设置发票联名
  * @method integer getCompanySealMark() 获取是否有公司印章（0：没有，1：有）
  * @method void setCompanySealMark(integer $CompanySealMark) 设置是否有公司印章（0：没有，1：有）
+ * @method string getAuctionOrgName() 获取经营拍卖单位
+ * @method void setAuctionOrgName(string $AuctionOrgName) 设置经营拍卖单位
+ * @method string getAuctionOrgAddress() 获取经营拍卖单位地址
+ * @method void setAuctionOrgAddress(string $AuctionOrgAddress) 设置经营拍卖单位地址
+ * @method string getAuctionOrgTaxID() 获取经营拍卖单位纳税人识别号
+ * @method void setAuctionOrgTaxID(string $AuctionOrgTaxID) 设置经营拍卖单位纳税人识别号
+ * @method string getAuctionOrgBankAccount() 获取经营拍卖单位开户银行账号
+ * @method void setAuctionOrgBankAccount(string $AuctionOrgBankAccount) 设置经营拍卖单位开户银行账号
+ * @method string getAuctionOrgPhone() 获取经营拍卖单位电话
+ * @method void setAuctionOrgPhone(string $AuctionOrgPhone) 设置经营拍卖单位电话
+ * @method string getIssuer() 获取开票人
+ * @method void setIssuer(string $Issuer) 设置开票人
+ * @method string getTaxCode() 获取税控码
+ * @method void setTaxCode(string $TaxCode) 设置税控码
+ * @method string getMachineSerialNumber() 获取机器编号
+ * @method void setMachineSerialNumber(string $MachineSerialNumber) 设置机器编号
+ * @method string getMachineCode() 获取机打发票代码
+ * @method void setMachineCode(string $MachineCode) 设置机打发票代码
+ * @method string getMachineNumber() 获取机打发票号码
+ * @method void setMachineNumber(string $MachineNumber) 设置机打发票号码
  */
 class UsedCarPurchaseInvoice extends AbstractModel
 {
@@ -255,6 +275,56 @@ class UsedCarPurchaseInvoice extends AbstractModel
     public $CompanySealMark;
 
     /**
+     * @var string 经营拍卖单位
+     */
+    public $AuctionOrgName;
+
+    /**
+     * @var string 经营拍卖单位地址
+     */
+    public $AuctionOrgAddress;
+
+    /**
+     * @var string 经营拍卖单位纳税人识别号
+     */
+    public $AuctionOrgTaxID;
+
+    /**
+     * @var string 经营拍卖单位开户银行账号
+     */
+    public $AuctionOrgBankAccount;
+
+    /**
+     * @var string 经营拍卖单位电话
+     */
+    public $AuctionOrgPhone;
+
+    /**
+     * @var string 开票人
+     */
+    public $Issuer;
+
+    /**
+     * @var string 税控码
+     */
+    public $TaxCode;
+
+    /**
+     * @var string 机器编号
+     */
+    public $MachineSerialNumber;
+
+    /**
+     * @var string 机打发票代码
+     */
+    public $MachineCode;
+
+    /**
+     * @var string 机打发票号码
+     */
+    public $MachineNumber;
+
+    /**
      * @param string $Title 发票名称
      * @param integer $QRCodeMark 是否存在二维码（0：没有，1：有）
      * @param string $Code 发票代码
@@ -288,6 +358,16 @@ class UsedCarPurchaseInvoice extends AbstractModel
      * @param string $FormType 发票联次
      * @param string $FormName 发票联名
      * @param integer $CompanySealMark 是否有公司印章（0：没有，1：有）
+     * @param string $AuctionOrgName 经营拍卖单位
+     * @param string $AuctionOrgAddress 经营拍卖单位地址
+     * @param string $AuctionOrgTaxID 经营拍卖单位纳税人识别号
+     * @param string $AuctionOrgBankAccount 经营拍卖单位开户银行账号
+     * @param string $AuctionOrgPhone 经营拍卖单位电话
+     * @param string $Issuer 开票人
+     * @param string $TaxCode 税控码
+     * @param string $MachineSerialNumber 机器编号
+     * @param string $MachineCode 机打发票代码
+     * @param string $MachineNumber 机打发票号码
      */
     function __construct()
     {
@@ -432,6 +512,46 @@ class UsedCarPurchaseInvoice extends AbstractModel
 
         if (array_key_exists("CompanySealMark",$param) and $param["CompanySealMark"] !== null) {
             $this->CompanySealMark = $param["CompanySealMark"];
+        }
+
+        if (array_key_exists("AuctionOrgName",$param) and $param["AuctionOrgName"] !== null) {
+            $this->AuctionOrgName = $param["AuctionOrgName"];
+        }
+
+        if (array_key_exists("AuctionOrgAddress",$param) and $param["AuctionOrgAddress"] !== null) {
+            $this->AuctionOrgAddress = $param["AuctionOrgAddress"];
+        }
+
+        if (array_key_exists("AuctionOrgTaxID",$param) and $param["AuctionOrgTaxID"] !== null) {
+            $this->AuctionOrgTaxID = $param["AuctionOrgTaxID"];
+        }
+
+        if (array_key_exists("AuctionOrgBankAccount",$param) and $param["AuctionOrgBankAccount"] !== null) {
+            $this->AuctionOrgBankAccount = $param["AuctionOrgBankAccount"];
+        }
+
+        if (array_key_exists("AuctionOrgPhone",$param) and $param["AuctionOrgPhone"] !== null) {
+            $this->AuctionOrgPhone = $param["AuctionOrgPhone"];
+        }
+
+        if (array_key_exists("Issuer",$param) and $param["Issuer"] !== null) {
+            $this->Issuer = $param["Issuer"];
+        }
+
+        if (array_key_exists("TaxCode",$param) and $param["TaxCode"] !== null) {
+            $this->TaxCode = $param["TaxCode"];
+        }
+
+        if (array_key_exists("MachineSerialNumber",$param) and $param["MachineSerialNumber"] !== null) {
+            $this->MachineSerialNumber = $param["MachineSerialNumber"];
+        }
+
+        if (array_key_exists("MachineCode",$param) and $param["MachineCode"] !== null) {
+            $this->MachineCode = $param["MachineCode"];
+        }
+
+        if (array_key_exists("MachineNumber",$param) and $param["MachineNumber"] !== null) {
+            $this->MachineNumber = $param["MachineNumber"];
         }
     }
 }

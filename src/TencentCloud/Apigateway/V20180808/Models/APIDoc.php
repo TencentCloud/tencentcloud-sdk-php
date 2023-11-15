@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiDocName(string $ApiDocName) 设置API文档名称
  * @method string getApiDocStatus() 获取API文档构建状态
  * @method void setApiDocStatus(string $ApiDocStatus) 设置API文档构建状态
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class APIDoc extends AbstractModel
 {
@@ -45,9 +49,17 @@ class APIDoc extends AbstractModel
     public $ApiDocStatus;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $ApiDocId API文档ID
      * @param string $ApiDocName API文档名称
      * @param string $ApiDocStatus API文档构建状态
+     * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,15 @@ class APIDoc extends AbstractModel
 
         if (array_key_exists("ApiDocStatus",$param) and $param["ApiDocStatus"] !== null) {
             $this->ApiDocStatus = $param["ApiDocStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

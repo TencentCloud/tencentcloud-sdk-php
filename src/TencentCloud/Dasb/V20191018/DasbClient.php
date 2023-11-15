@@ -67,6 +67,7 @@ use TencentCloud\Dasb\V20191018\Models as Models;
  * @method Models\ModifyDeviceGroupResponse ModifyDeviceGroup(Models\ModifyDeviceGroupRequest $req) 修改资产组
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 资源变配
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
+ * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 修改用户组
  * @method Models\ResetDeviceAccountPasswordResponse ResetDeviceAccountPassword(Models\ResetDeviceAccountPasswordRequest $req) 清除设备账号绑定密码
  * @method Models\ResetDeviceAccountPrivateKeyResponse ResetDeviceAccountPrivateKey(Models\ResetDeviceAccountPrivateKeyRequest $req) 清除设备账号绑定的密钥
  * @method Models\ResetUserResponse ResetUser(Models\ResetUserRequest $req) 重置用户

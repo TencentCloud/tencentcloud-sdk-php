@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCodecs() 获取该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
  * @method void setCodecs(string $Codecs) 设置该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
- * @method integer getDuration() 获取该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
- * @method void setDuration(integer $Duration) 设置该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
+ * @method integer getDuration() 获取该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为毫秒。**默认值为15秒**，支持用户自定义配置。
+ * @method void setDuration(integer $Duration) 设置该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为毫秒。**默认值为15秒**，支持用户自定义配置。
  * @method integer getWidth() 获取*内测中，敬请期待*
  * @method void setWidth(integer $Width) 设置*内测中，敬请期待*
  * @method integer getHeight() 获取*内测中，敬请期待*
@@ -39,7 +39,7 @@ class MediaInfo extends AbstractModel
     public $Codecs;
 
     /**
-     * @var integer 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
+     * @var integer 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为毫秒。**默认值为15秒**，支持用户自定义配置。
      */
     public $Duration;
 
@@ -60,7 +60,7 @@ class MediaInfo extends AbstractModel
 
     /**
      * @param string $Codecs 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
-     * @param integer $Duration 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
+     * @param integer $Duration 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为毫秒。**默认值为15秒**，支持用户自定义配置。
      * @param integer $Width *内测中，敬请期待*
      * @param integer $Height *内测中，敬请期待*
      * @param string $Thumbnail *内测中，敬请期待*

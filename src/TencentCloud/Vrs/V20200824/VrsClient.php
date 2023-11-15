@@ -39,6 +39,7 @@ use TencentCloud\Vrs\V20200824\Models as Models;
  * @method Models\GetTrainingTextResponse GetTrainingText(Models\GetTrainingTextRequest $req) 本接口用于获取声音复刻训练文本信息。
  请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
 • 签名方法参考 公共参数 中签名方法v3。
+ * @method Models\GetVRSVoiceTypesResponse GetVRSVoiceTypes(Models\GetVRSVoiceTypesRequest $req) 查询复刻音色
  */
 
 class VrsClient extends AbstractClient

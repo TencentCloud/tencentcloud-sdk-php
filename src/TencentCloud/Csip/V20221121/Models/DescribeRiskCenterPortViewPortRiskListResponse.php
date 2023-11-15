@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取总条数
  * @method void setTotalCount(integer $TotalCount) 设置总条数
- * @method array getData() 获取资产视角的端口风险列表
- * @method void setData(array $Data) 设置资产视角的端口风险列表
+ * @method array getData() 获取端口视角的端口风险列表
+ * @method void setData(array $Data) 设置端口视角的端口风险列表
  * @method array getLevelLists() 获取危险等级列表
  * @method void setLevelLists(array $LevelLists) 设置危险等级列表
  * @method array getSuggestionLists() 获取处置建议列表
@@ -41,7 +41,7 @@ class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 资产视角的端口风险列表
+     * @var array 端口视角的端口风险列表
      */
     public $Data;
 
@@ -67,7 +67,7 @@ class DescribeRiskCenterPortViewPortRiskListResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 总条数
-     * @param array $Data 资产视角的端口风险列表
+     * @param array $Data 端口视角的端口风险列表
      * @param array $LevelLists 危险等级列表
      * @param array $SuggestionLists 处置建议列表
      * @param array $FromLists 来源列表

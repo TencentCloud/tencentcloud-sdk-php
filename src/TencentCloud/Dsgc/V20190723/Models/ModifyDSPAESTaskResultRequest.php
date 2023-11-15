@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestCategoryId(integer $DestCategoryId) 设置调整后新的分类ID
  * @method integer getDestLevelId() 获取调整后新的分级ID
  * @method void setDestLevelId(integer $DestLevelId) 设置调整后新的分级ID
+ * @method integer getSrcRuleId() 获取调整前的规则id（系统识别的id）
+ * @method void setSrcRuleId(integer $SrcRuleId) 设置调整前的规则id（系统识别的id）
+ * @method integer getSrcCategoryId() 获取调整前的规则id（系统识别的id）
+ * @method void setSrcCategoryId(integer $SrcCategoryId) 设置调整前的规则id（系统识别的id）
+ * @method integer getSrcLevelId() 获取调整前的等级id
+ * @method void setSrcLevelId(integer $SrcLevelId) 设置调整前的等级id
+ * @method integer getIdentifyType() 获取0系统识别，1人工打标
+ * @method void setIdentifyType(integer $IdentifyType) 设置0系统识别，1人工打标
  */
 class ModifyDSPAESTaskResultRequest extends AbstractModel
 {
@@ -73,6 +81,26 @@ class ModifyDSPAESTaskResultRequest extends AbstractModel
     public $DestLevelId;
 
     /**
+     * @var integer 调整前的规则id（系统识别的id）
+     */
+    public $SrcRuleId;
+
+    /**
+     * @var integer 调整前的规则id（系统识别的id）
+     */
+    public $SrcCategoryId;
+
+    /**
+     * @var integer 调整前的等级id
+     */
+    public $SrcLevelId;
+
+    /**
+     * @var integer 0系统识别，1人工打标
+     */
+    public $IdentifyType;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $FieldResultId 字段扫描结果ID
      * @param integer $ComplianceId 合规组ID
@@ -80,6 +108,10 @@ class ModifyDSPAESTaskResultRequest extends AbstractModel
      * @param integer $DestRuleId 调整后新的规则ID
      * @param integer $DestCategoryId 调整后新的分类ID
      * @param integer $DestLevelId 调整后新的分级ID
+     * @param integer $SrcRuleId 调整前的规则id（系统识别的id）
+     * @param integer $SrcCategoryId 调整前的规则id（系统识别的id）
+     * @param integer $SrcLevelId 调整前的等级id
+     * @param integer $IdentifyType 0系统识别，1人工打标
      */
     function __construct()
     {
@@ -120,6 +152,22 @@ class ModifyDSPAESTaskResultRequest extends AbstractModel
 
         if (array_key_exists("DestLevelId",$param) and $param["DestLevelId"] !== null) {
             $this->DestLevelId = $param["DestLevelId"];
+        }
+
+        if (array_key_exists("SrcRuleId",$param) and $param["SrcRuleId"] !== null) {
+            $this->SrcRuleId = $param["SrcRuleId"];
+        }
+
+        if (array_key_exists("SrcCategoryId",$param) and $param["SrcCategoryId"] !== null) {
+            $this->SrcCategoryId = $param["SrcCategoryId"];
+        }
+
+        if (array_key_exists("SrcLevelId",$param) and $param["SrcLevelId"] !== null) {
+            $this->SrcLevelId = $param["SrcLevelId"];
+        }
+
+        if (array_key_exists("IdentifyType",$param) and $param["IdentifyType"] !== null) {
+            $this->IdentifyType = $param["IdentifyType"];
         }
     }
 }

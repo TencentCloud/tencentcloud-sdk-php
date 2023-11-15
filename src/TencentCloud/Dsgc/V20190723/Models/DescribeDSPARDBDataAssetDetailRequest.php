@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置DSPA实例Id
  * @method integer getComplianceId() 获取合规组Id
  * @method void setComplianceId(integer $ComplianceId) 设置合规组Id
+ * @method string getCreditScore() 获取可信分排序，ASC-升序
+DESC降序
+ * @method void setCreditScore(string $CreditScore) 设置可信分排序，ASC-升序
+DESC降序
  */
 class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel
 {
@@ -38,8 +42,16 @@ class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel
     public $ComplianceId;
 
     /**
+     * @var string 可信分排序，ASC-升序
+DESC降序
+     */
+    public $CreditScore;
+
+    /**
      * @param string $DspaId DSPA实例Id
      * @param integer $ComplianceId 合规组Id
+     * @param string $CreditScore 可信分排序，ASC-升序
+DESC降序
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel
 
         if (array_key_exists("ComplianceId",$param) and $param["ComplianceId"] !== null) {
             $this->ComplianceId = $param["ComplianceId"];
+        }
+
+        if (array_key_exists("CreditScore",$param) and $param["CreditScore"] !== null) {
+            $this->CreditScore = $param["CreditScore"];
         }
     }
 }

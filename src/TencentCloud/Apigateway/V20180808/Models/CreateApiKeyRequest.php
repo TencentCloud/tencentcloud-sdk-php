@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessKeyId(string $AccessKeyId) 设置用户自定义密钥 ID，AccessKeyType 为 manual 时必传。长度为5 - 50字符，由字母、数字、英文下划线组成。
  * @method string getAccessKeySecret() 获取用户自定义密钥 Key，AccessKeyType 为 manual 时必传。长度为10 - 50字符，由字母、数字、英文下划线。
  * @method void setAccessKeySecret(string $AccessKeySecret) 设置用户自定义密钥 Key，AccessKeyType 为 manual 时必传。长度为10 - 50字符，由字母、数字、英文下划线。
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class CreateApiKeyRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateApiKeyRequest extends AbstractModel
     public $AccessKeySecret;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $SecretName 用户自定义密钥名称。
      * @param string $AccessKeyType 密钥类型，支持 auto 和 manual（自定义密钥），默认为 auto。
      * @param string $AccessKeyId 用户自定义密钥 ID，AccessKeyType 为 manual 时必传。长度为5 - 50字符，由字母、数字、英文下划线组成。
      * @param string $AccessKeySecret 用户自定义密钥 Key，AccessKeyType 为 manual 时必传。长度为10 - 50字符，由字母、数字、英文下划线。
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreateApiKeyRequest extends AbstractModel
 
         if (array_key_exists("AccessKeySecret",$param) and $param["AccessKeySecret"] !== null) {
             $this->AccessKeySecret = $param["AccessKeySecret"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

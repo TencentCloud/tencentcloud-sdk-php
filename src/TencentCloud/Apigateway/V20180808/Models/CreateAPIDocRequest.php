@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironment(string $Environment) 设置环境名称
  * @method array getApiIds() 获取生成文档的API列表
  * @method void setApiIds(array $ApiIds) 设置生成文档的API列表
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class CreateAPIDocRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateAPIDocRequest extends AbstractModel
     public $ApiIds;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $ApiDocName API文档名称
      * @param string $ServiceId 服务名称
      * @param string $Environment 环境名称
      * @param array $ApiIds 生成文档的API列表
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreateAPIDocRequest extends AbstractModel
 
         if (array_key_exists("ApiIds",$param) and $param["ApiIds"] !== null) {
             $this->ApiIds = $param["ApiIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置密钥状态。0表示禁用，1表示启用。
  * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiKey extends AbstractModel
 {
@@ -73,6 +77,12 @@ class ApiKey extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $AccessKeyId 创建的 API 密钥 ID 。
      * @param string $AccessKeySecret 创建的 API 密钥 Key。
      * @param string $AccessKeyType 密钥类型，auto 或者 manual。
@@ -80,6 +90,8 @@ class ApiKey extends AbstractModel
      * @param string $ModifiedTime 最后一次修改时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      * @param integer $Status 密钥状态。0表示禁用，1表示启用。
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,15 @@ class ApiKey extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

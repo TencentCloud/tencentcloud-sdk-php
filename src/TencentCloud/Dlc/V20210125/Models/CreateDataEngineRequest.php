@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置集群规模
  * @method integer getPayMode() 获取计费类型，后付费：0，预付费：1。当前只支持后付费，不填默认为后付费。
  * @method void setPayMode(integer $PayMode) 设置计费类型，后付费：0，预付费：1。当前只支持后付费，不填默认为后付费。
- * @method integer getTimeSpan() 获取资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认3600
- * @method void setTimeSpan(integer $TimeSpan) 设置资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认3600
+ * @method integer getTimeSpan() 获取资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+ * @method void setTimeSpan(integer $TimeSpan) 设置资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
  * @method string getTimeUnit() 获取资源使用时长的单位，后付费：s，预付费：m。默认为s
  * @method void setTimeUnit(string $TimeUnit) 设置资源使用时长的单位，后付费：s，预付费：m。默认为s
  * @method integer getAutoRenew() 获取资源的自动续费标志。后付费无需续费，固定填0；预付费下：0表示手动续费、1代表自动续费、2代表不续费，在0下如果是大客户，会自动帮大客户续费。默认为0
@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置spark作业集群session资源配置模板
  * @method boolean getAutoAuthorization() 获取自动授权
  * @method void setAutoAuthorization(boolean $AutoAuthorization) 设置自动授权
+ * @method string getEngineNetworkId() 获取引擎网络ID
+ * @method void setEngineNetworkId(string $EngineNetworkId) 设置引擎网络ID
+ * @method string getEngineGeneration() 获取引擎世代，SuperSQL：代表supersql引擎，Native：代表标准引擎。默认值为SuperSQL
+ * @method void setEngineGeneration(string $EngineGeneration) 设置引擎世代，SuperSQL：代表supersql引擎，Native：代表标准引擎。默认值为SuperSQL
  */
 class CreateDataEngineRequest extends AbstractModel
 {
@@ -147,7 +151,7 @@ class CreateDataEngineRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认3600
+     * @var integer 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
      */
     public $TimeSpan;
 
@@ -242,6 +246,16 @@ class CreateDataEngineRequest extends AbstractModel
     public $AutoAuthorization;
 
     /**
+     * @var string 引擎网络ID
+     */
+    public $EngineNetworkId;
+
+    /**
+     * @var string 引擎世代，SuperSQL：代表supersql引擎，Native：代表标准引擎。默认值为SuperSQL
+     */
+    public $EngineGeneration;
+
+    /**
      * @param string $EngineType 引擎类型spark/presto
      * @param string $DataEngineName 虚拟集群名称
      * @param string $ClusterType 集群类型 spark_private/presto_private/presto_cu/spark_cu
@@ -254,7 +268,7 @@ class CreateDataEngineRequest extends AbstractModel
      * @param string $Message 描述信息
      * @param integer $Size 集群规模
      * @param integer $PayMode 计费类型，后付费：0，预付费：1。当前只支持后付费，不填默认为后付费。
-     * @param integer $TimeSpan 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认3600
+     * @param integer $TimeSpan 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
      * @param string $TimeUnit 资源使用时长的单位，后付费：s，预付费：m。默认为s
      * @param integer $AutoRenew 资源的自动续费标志。后付费无需续费，固定填0；预付费下：0表示手动续费、1代表自动续费、2代表不续费，在0下如果是大客户，会自动帮大客户续费。默认为0
      * @param array $Tags 创建资源的时候需要绑定的标签信息
@@ -273,6 +287,8 @@ class CreateDataEngineRequest extends AbstractModel
      * @param integer $ElasticLimit spark jar 包年包月集群弹性上限
      * @param SessionResourceTemplate $SessionResourceTemplate spark作业集群session资源配置模板
      * @param boolean $AutoAuthorization 自动授权
+     * @param string $EngineNetworkId 引擎网络ID
+     * @param string $EngineGeneration 引擎世代，SuperSQL：代表supersql引擎，Native：代表标准引擎。默认值为SuperSQL
      */
     function __construct()
     {
@@ -421,6 +437,14 @@ class CreateDataEngineRequest extends AbstractModel
 
         if (array_key_exists("AutoAuthorization",$param) and $param["AutoAuthorization"] !== null) {
             $this->AutoAuthorization = $param["AutoAuthorization"];
+        }
+
+        if (array_key_exists("EngineNetworkId",$param) and $param["EngineNetworkId"] !== null) {
+            $this->EngineNetworkId = $param["EngineNetworkId"];
+        }
+
+        if (array_key_exists("EngineGeneration",$param) and $param["EngineGeneration"] !== null) {
+            $this->EngineGeneration = $param["EngineGeneration"];
         }
     }
 }

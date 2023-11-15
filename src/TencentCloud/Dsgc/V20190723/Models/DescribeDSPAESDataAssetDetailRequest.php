@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制条目数
  * @method array getFilters() 获取过滤条件
  * @method void setFilters(array $Filters) 设置过滤条件
+ * @method string getCreditScore() 获取可信分排序，ASC升序
+DESC降序
+ * @method void setCreditScore(string $CreditScore) 设置可信分排序，ASC升序
+DESC降序
  */
 class DescribeDSPAESDataAssetDetailRequest extends AbstractModel
 {
@@ -59,11 +63,19 @@ class DescribeDSPAESDataAssetDetailRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 可信分排序，ASC升序
+DESC降序
+     */
+    public $CreditScore;
+
+    /**
      * @param string $DspaId dspa实例id
      * @param integer $ComplianceId 合规组id
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制条目数
      * @param array $Filters 过滤条件
+     * @param string $CreditScore 可信分排序，ASC升序
+DESC降序
      */
     function __construct()
     {
@@ -101,6 +113,10 @@ class DescribeDSPAESDataAssetDetailRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("CreditScore",$param) and $param["CreditScore"] !== null) {
+            $this->CreditScore = $param["CreditScore"];
         }
     }
 }

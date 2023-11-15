@@ -92,8 +92,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormName(string $FormName) 设置发票联名
  * @method string getIssuer() 获取开票人
  * @method void setIssuer(string $Issuer) 设置开票人
- * @method string getTaxNum() 获取完税凭证号码
- * @method void setTaxNum(string $TaxNum) 设置完税凭证号码
+ * @method string getTaxNum() 获取进口证明书号
+ * @method void setTaxNum(string $TaxNum) 设置进口证明书号
+ * @method string getTaxPayNum() 获取完税凭证号码
+ * @method void setTaxPayNum(string $TaxPayNum) 设置完税凭证号码
+ * @method string getTaxCode() 获取税控码
+ * @method void setTaxCode(string $TaxCode) 设置税控码
  * @method string getMaxPeopleNum() 获取限乘人数
  * @method void setMaxPeopleNum(string $MaxPeopleNum) 设置限乘人数
  * @method string getOrigin() 获取产地
@@ -288,9 +292,19 @@ class MotorVehicleSaleInvoice extends AbstractModel
     public $Issuer;
 
     /**
-     * @var string 完税凭证号码
+     * @var string 进口证明书号
      */
     public $TaxNum;
+
+    /**
+     * @var string 完税凭证号码
+     */
+    public $TaxPayNum;
+
+    /**
+     * @var string 税控码
+     */
+    public $TaxCode;
 
     /**
      * @var string 限乘人数
@@ -354,7 +368,9 @@ class MotorVehicleSaleInvoice extends AbstractModel
      * @param string $FormType 发票联次
      * @param string $FormName 发票联名
      * @param string $Issuer 开票人
-     * @param string $TaxNum 完税凭证号码
+     * @param string $TaxNum 进口证明书号
+     * @param string $TaxPayNum 完税凭证号码
+     * @param string $TaxCode 税控码
      * @param string $MaxPeopleNum 限乘人数
      * @param string $Origin 产地
      * @param string $MachineCode 机打发票代码
@@ -520,6 +536,14 @@ class MotorVehicleSaleInvoice extends AbstractModel
 
         if (array_key_exists("TaxNum",$param) and $param["TaxNum"] !== null) {
             $this->TaxNum = $param["TaxNum"];
+        }
+
+        if (array_key_exists("TaxPayNum",$param) and $param["TaxPayNum"] !== null) {
+            $this->TaxPayNum = $param["TaxPayNum"];
+        }
+
+        if (array_key_exists("TaxCode",$param) and $param["TaxCode"] !== null) {
+            $this->TaxCode = $param["TaxCode"];
         }
 
         if (array_key_exists("MaxPeopleNum",$param) and $param["MaxPeopleNum"] !== null) {

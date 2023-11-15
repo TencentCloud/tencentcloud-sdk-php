@@ -103,6 +103,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口（DescribeTables）用于查询数据表列表。
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询任务结果
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 该接口（DescribleTasks）用于查询任务列表
+ * @method Models\DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEngines(Models\DescribeUpdatableDataEnginesRequest $req) 查询可更新配置的引擎列表
  * @method Models\DescribeUserDataEngineConfigResponse DescribeUserDataEngineConfig(Models\DescribeUserDataEngineConfigRequest $req) 查询用户自定义引擎参数
  * @method Models\DescribeUserInfoResponse DescribeUserInfo(Models\DescribeUserInfoRequest $req) 获取用户详细信息
  * @method Models\DescribeUserRolesResponse DescribeUserRoles(Models\DescribeUserRolesRequest $req) 列举用户角色信息

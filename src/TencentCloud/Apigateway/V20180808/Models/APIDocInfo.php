@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceName(string $ServiceName) 设置服务名称
  * @method array getApiNames() 获取生成API文档的API名称
  * @method void setApiNames(array $ApiNames) 设置生成API文档的API名称
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class APIDocInfo extends AbstractModel
 {
@@ -122,6 +126,12 @@ class APIDocInfo extends AbstractModel
     public $ApiNames;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $ApiDocId API文档ID
      * @param string $ApiDocName API文档名称
      * @param string $ApiDocStatus API文档构建状态
@@ -136,6 +146,8 @@ class APIDocInfo extends AbstractModel
      * @param array $ApiIds 生成API文档的API ID
      * @param string $ServiceName 服务名称
      * @param array $ApiNames 生成API文档的API名称
+     * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +216,15 @@ class APIDocInfo extends AbstractModel
 
         if (array_key_exists("ApiNames",$param) and $param["ApiNames"] !== null) {
             $this->ApiNames = $param["ApiNames"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

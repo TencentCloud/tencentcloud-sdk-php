@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIdentifyType() 获取0系统识别，1人工打标
+ * @method void setIdentifyType(integer $IdentifyType) 设置0系统识别，1人工打标
+ * @method integer getCheckStatus() 获取0未核查，1已核查
+ * @method void setCheckStatus(integer $CheckStatus) 设置0未核查，1已核查
  */
 class ESDataAssetDetail extends AbstractModel
 {
@@ -184,6 +188,16 @@ class ESDataAssetDetail extends AbstractModel
     public $RuleName;
 
     /**
+     * @var integer 0系统识别，1人工打标
+     */
+    public $IdentifyType;
+
+    /**
+     * @var integer 0未核查，1已核查
+     */
+    public $CheckStatus;
+
+    /**
      * @param integer $FieldResultId id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceId 数据源id
@@ -216,6 +230,8 @@ class ESDataAssetDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IdentifyType 0系统识别，1人工打标
+     * @param integer $CheckStatus 0未核查，1已核查
      */
     function __construct()
     {
@@ -292,6 +308,14 @@ class ESDataAssetDetail extends AbstractModel
 
         if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
             $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("IdentifyType",$param) and $param["IdentifyType"] !== null) {
+            $this->IdentifyType = $param["IdentifyType"];
+        }
+
+        if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
+            $this->CheckStatus = $param["CheckStatus"];
         }
     }
 }

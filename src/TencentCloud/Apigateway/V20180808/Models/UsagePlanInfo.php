@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindEnvironments(array $BindEnvironments) 设置绑定环境详情。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UsagePlanInfo extends AbstractModel
 {
@@ -134,6 +138,12 @@ class UsagePlanInfo extends AbstractModel
     public $BindEnvironments;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $UsagePlanId 使用计划唯一 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UsagePlanName 使用计划名称。
@@ -155,6 +165,8 @@ class UsagePlanInfo extends AbstractModel
      * @param integer $BindEnvironmentTotalCount 绑定环境数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BindEnvironments 绑定环境详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -216,6 +228,15 @@ class UsagePlanInfo extends AbstractModel
                 $obj = new UsagePlanBindEnvironment();
                 $obj->deserialize($value);
                 array_push($this->BindEnvironments, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

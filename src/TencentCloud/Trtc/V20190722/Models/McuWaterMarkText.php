@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontColor(string $FontColor) 设置字体颜色，默认为白色。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
  * @method string getBackGroundColor() 获取字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
  * @method void setBackGroundColor(string $BackGroundColor) 设置字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
+ * @method integer getDynamicPosType() 获取动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+ * @method void setDynamicPosType(integer $DynamicPosType) 设置动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
  */
 class McuWaterMarkText extends AbstractModel
 {
@@ -80,6 +82,11 @@ class McuWaterMarkText extends AbstractModel
     public $BackGroundColor;
 
     /**
+     * @var integer 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
+     */
+    public $DynamicPosType;
+
+    /**
      * @param string $Text 文字水印内容。
      * @param integer $WaterMarkWidth 水印在输出时的宽。单位为像素值。
      * @param integer $WaterMarkHeight 水印在输出时的高。单位为像素值。
@@ -88,6 +95,7 @@ class McuWaterMarkText extends AbstractModel
      * @param integer $FontSize 字体大小
      * @param string $FontColor 字体颜色，默认为白色。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
      * @param string $BackGroundColor 字体背景色，不配置默认为透明。常用的颜色有： 红色：0xcc0033。 黄色：0xcc9900。 绿色：0xcccc33。 蓝色：0x99CCFF。 黑色：0x000000。 白色：0xFFFFFF。 灰色：0x999999。	
+     * @param integer $DynamicPosType 动态水印类型，默认为0。0:关闭；1:随机位置，每秒变动一次；2:边界扫描反弹，每帧变动一次。
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class McuWaterMarkText extends AbstractModel
 
         if (array_key_exists("BackGroundColor",$param) and $param["BackGroundColor"] !== null) {
             $this->BackGroundColor = $param["BackGroundColor"];
+        }
+
+        if (array_key_exists("DynamicPosType",$param) and $param["DynamicPosType"] !== null) {
+            $this->DynamicPosType = $param["DynamicPosType"];
         }
     }
 }

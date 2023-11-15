@@ -76,6 +76,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryFullPath(string $CategoryFullPath) 设置分类路径
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIdentifyType() 获取0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIdentifyType(integer $IdentifyType) 设置0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCheckStatus() 获取0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckStatus(integer $CheckStatus) 设置0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSensitiveData() 获取0非敏感，1敏感
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSensitiveData(integer $IsSensitiveData) 设置0非敏感，1敏感
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaRDBDataAssetDetail extends AbstractModel
 {
@@ -180,6 +192,24 @@ class DspaRDBDataAssetDetail extends AbstractModel
     public $CategoryFullPath;
 
     /**
+     * @var integer 0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IdentifyType;
+
+    /**
+     * @var integer 0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckStatus;
+
+    /**
+     * @var integer 0非敏感，1敏感
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSensitiveData;
+
+    /**
      * @param string $DataSourceId 数据源ID
      * @param string $DbType 数据库类型
      * @param string $DbName 数据库名称
@@ -207,6 +237,12 @@ class DspaRDBDataAssetDetail extends AbstractModel
      * @param DspaSafeGuard $SafeGuard 保护措施
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryFullPath 分类路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IdentifyType 0.系统识别，1人工打标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CheckStatus 0未核查 1已核查
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSensitiveData 0非敏感，1敏感
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +329,18 @@ class DspaRDBDataAssetDetail extends AbstractModel
 
         if (array_key_exists("CategoryFullPath",$param) and $param["CategoryFullPath"] !== null) {
             $this->CategoryFullPath = $param["CategoryFullPath"];
+        }
+
+        if (array_key_exists("IdentifyType",$param) and $param["IdentifyType"] !== null) {
+            $this->IdentifyType = $param["IdentifyType"];
+        }
+
+        if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
+            $this->CheckStatus = $param["CheckStatus"];
+        }
+
+        if (array_key_exists("IsSensitiveData",$param) and $param["IsSensitiveData"] !== null) {
+            $this->IsSensitiveData = $param["IsSensitiveData"];
         }
     }
 }

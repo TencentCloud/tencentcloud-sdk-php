@@ -34,6 +34,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置数据源
  * @method string getTsVersion() 获取更新时间戳
  * @method void setTsVersion(string $TsVersion) 设置更新时间戳
+ * @method integer getSessionId() 获取SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(integer $SessionId) 设置SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionName() 获取Session名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionName(string $SessionName) 设置Session名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSessionInUsed() 获取Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionInUsed(boolean $SessionInUsed) 设置Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRelatedRuleID() 获取Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRelatedRuleID(array $RelatedRuleID) 设置Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SessionItem extends AbstractModel
 {
@@ -73,6 +89,30 @@ class SessionItem extends AbstractModel
     public $TsVersion;
 
     /**
+     * @var integer SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
+
+    /**
+     * @var string Session名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionName;
+
+    /**
+     * @var boolean Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionInUsed;
+
+    /**
+     * @var array Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RelatedRuleID;
+
+    /**
      * @param string $Category 匹配类型
      * @param string $KeyOrStartMat 起始模式
      * @param string $EndMat 结束模式
@@ -80,6 +120,14 @@ class SessionItem extends AbstractModel
      * @param string $EndOffset 结束偏移
      * @param string $Source 数据源
      * @param string $TsVersion 更新时间戳
+     * @param integer $SessionId SessionID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionName Session名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SessionInUsed Session是否正在被启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RelatedRuleID Session关联的CC规则ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +168,22 @@ class SessionItem extends AbstractModel
 
         if (array_key_exists("TsVersion",$param) and $param["TsVersion"] !== null) {
             $this->TsVersion = $param["TsVersion"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("SessionName",$param) and $param["SessionName"] !== null) {
+            $this->SessionName = $param["SessionName"];
+        }
+
+        if (array_key_exists("SessionInUsed",$param) and $param["SessionInUsed"] !== null) {
+            $this->SessionInUsed = $param["SessionInUsed"];
+        }
+
+        if (array_key_exists("RelatedRuleID",$param) and $param["RelatedRuleID"] !== null) {
+            $this->RelatedRuleID = $param["RelatedRuleID"];
         }
     }
 }

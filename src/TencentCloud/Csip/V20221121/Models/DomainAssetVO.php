@@ -120,9 +120,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeverIp(array $SeverIp) 设置解析ip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBotCount() 获取boi访问数量
+ * @method integer getBotCount() 获取bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBotCount(integer $BotCount) 设置boi访问数量
+ * @method void setBotCount(integer $BotCount) 设置bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeakPassword() 获取弱口令风险
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,9 +172,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyStatus(integer $VerifyStatus) 设置待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBotAccessCount() 获取bot访问数据
+ * @method integer getBotAccessCount() 获取bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBotAccessCount(integer $BotAccessCount) 设置bot访问数据
+ * @method void setBotAccessCount(integer $BotAccessCount) 设置bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainAssetVO extends AbstractModel
@@ -330,7 +330,7 @@ class DomainAssetVO extends AbstractModel
     public $SeverIp;
 
     /**
-     * @var integer boi访问数量
+     * @var integer bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotCount;
@@ -408,7 +408,7 @@ class DomainAssetVO extends AbstractModel
     public $VerifyStatus;
 
     /**
-     * @var integer bot访问数据
+     * @var integer bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotAccessCount;
@@ -464,7 +464,7 @@ class DomainAssetVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SeverIp 解析ip
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BotCount boi访问数量
+     * @param integer $BotCount bot攻击数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WeakPassword 弱口令风险
 注意：此字段可能返回 null，表示取不到有效值。
@@ -490,7 +490,7 @@ class DomainAssetVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VerifyStatus 待确认资产的认证状态，0-待认证，1-认证成功，2-认证中，3-txt认证失败，4-人工认证失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BotAccessCount bot访问数据
+     * @param integer $BotAccessCount bot访问数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

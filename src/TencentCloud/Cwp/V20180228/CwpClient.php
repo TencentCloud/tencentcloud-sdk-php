@@ -527,7 +527,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ScanAssetResponse ScanAsset(Models\ScanAssetRequest $req) 资产指纹启动扫描
  * @method Models\ScanBaselineResponse ScanBaseline(Models\ScanBaselineRequest $req) 基线检测与基线重新检测接口
  * @method Models\ScanTaskAgainResponse ScanTaskAgain(Models\ScanTaskAgainRequest $req) ScanTaskAgain  重新开始扫描任务，可以指定机器
- * @method Models\ScanVulResponse ScanVul(Models\ScanVulRequest $req)  一键检测
+ * @method Models\ScanVulResponse ScanVul(Models\ScanVulRequest $req) 漏洞一键检测
  * @method Models\ScanVulAgainResponse ScanVulAgain(Models\ScanVulAgainRequest $req) 漏洞管理-重新检测接口
  * @method Models\ScanVulSettingResponse ScanVulSetting(Models\ScanVulSettingRequest $req) 定期扫描漏洞设置
  * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 查询日志

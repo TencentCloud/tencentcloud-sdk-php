@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetention(integer $Retention) 设置实例消息保留时间，小时为单位
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAclEnabled() 获取是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAclEnabled(boolean $AclEnabled) 设置是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDestroyTime() 获取销毁时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDestroyTime(integer $DestroyTime) 设置销毁时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQVipInstance extends AbstractModel
 {
@@ -158,6 +166,18 @@ class RocketMQVipInstance extends AbstractModel
     public $Retention;
 
     /**
+     * @var boolean 是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AclEnabled;
+
+    /**
+     * @var integer 销毁时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DestroyTime;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -179,6 +199,10 @@ class RocketMQVipInstance extends AbstractModel
      * @param integer $MinRetention 最小可设置消息保留时间，小时为单位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Retention 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AclEnabled 是否开启ACL鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DestroyTime 销毁时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +284,14 @@ class RocketMQVipInstance extends AbstractModel
 
         if (array_key_exists("Retention",$param) and $param["Retention"] !== null) {
             $this->Retention = $param["Retention"];
+        }
+
+        if (array_key_exists("AclEnabled",$param) and $param["AclEnabled"] !== null) {
+            $this->AclEnabled = $param["AclEnabled"];
+        }
+
+        if (array_key_exists("DestroyTime",$param) and $param["DestroyTime"] !== null) {
+            $this->DestroyTime = $param["DestroyTime"];
         }
     }
 }

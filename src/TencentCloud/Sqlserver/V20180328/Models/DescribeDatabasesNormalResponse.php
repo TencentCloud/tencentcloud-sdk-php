@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lcic\V20220817\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * LoginUser返回参数结构体
+ * DescribeDatabasesNormal返回参数结构体
  *
- * @method string getUserId() 获取用户Id。
- * @method void setUserId(string $UserId) 设置用户Id。
- * @method string getToken() 获取注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
- * @method void setToken(string $Token) 设置注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
+ * @method integer getTotalCount() 获取表示当前实例下的数据库总个数
+ * @method void setTotalCount(integer $TotalCount) 设置表示当前实例下的数据库总个数
+ * @method array getDBList() 获取返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
+ * @method void setDBList(array $DBList) 设置返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class LoginUserResponse extends AbstractModel
+class DescribeDatabasesNormalResponse extends AbstractModel
 {
     /**
-     * @var string 用户Id。
+     * @var integer 表示当前实例下的数据库总个数
      */
-    public $UserId;
+    public $TotalCount;
 
     /**
-     * @var string 注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
+     * @var array 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
      */
-    public $Token;
+    public $DBList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class LoginUserResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $UserId 用户Id。
-     * @param string $Token 注册成功后返回登录态token，有效期7天。token过期后可以通过调用“登录”或“源账号登录”进行更新。
+     * @param integer $TotalCount 表示当前实例下的数据库总个数
+     * @param array $DBList 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class LoginUserResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
-            $this->UserId = $param["UserId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists("DBList",$param) and $param["DBList"] !== null) {
+            $this->DBList = [];
+            foreach ($param["DBList"] as $key => $value){
+                $obj = new DbNormalDetail();
+                $obj->deserialize($value);
+                array_push($this->DBList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

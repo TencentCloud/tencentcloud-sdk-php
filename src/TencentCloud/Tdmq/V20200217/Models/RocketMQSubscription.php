@@ -94,6 +94,10 @@ DeadLetter 死信
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientProtocol() 获取协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientProtocol(string $ClientProtocol) 设置协议类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQSubscription extends AbstractModel
 {
@@ -191,6 +195,12 @@ DeadLetter 死信
     public $MaxRetryTimes;
 
     /**
+     * @var string 协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientProtocol;
+
+    /**
      * @param string $Topic 主题名称
      * @param string $Type 主题类型：
 Normal 普通,
@@ -227,6 +237,8 @@ DeadLetter 死信
      * @param integer $LastUpdateTime 最后消费进度更新时间，秒为单位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRetryTimes 最大重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientProtocol 协议类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -296,6 +308,10 @@ DeadLetter 死信
 
         if (array_key_exists("MaxRetryTimes",$param) and $param["MaxRetryTimes"] !== null) {
             $this->MaxRetryTimes = $param["MaxRetryTimes"];
+        }
+
+        if (array_key_exists("ClientProtocol",$param) and $param["ClientProtocol"] !== null) {
+            $this->ClientProtocol = $param["ClientProtocol"];
         }
     }
 }

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 热Key详细信息
  *
- * @method string getKey() 获取热Key
- * @method void setKey(string $Key) 设置热Key
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
- * @method integer getCount() 获取数量
- * @method void setCount(integer $Count) 设置数量
+ * @method string getKey() 获取热 Key 的名称。
+ * @method void setKey(string $Key) 设置热 Key 的名称。
+ * @method string getType() 获取Key 类型。
+ * @method void setType(string $Type) 设置Key 类型。
+ * @method integer getCount() 获取某段时间内热 Key 的访问次数
+ * @method void setCount(integer $Count) 设置某段时间内热 Key 的访问次数
  */
 class HotKeyInfo extends AbstractModel
 {
     /**
-     * @var string 热Key
+     * @var string 热 Key 的名称。
      */
     public $Key;
 
     /**
-     * @var string 类型
+     * @var string Key 类型。
      */
     public $Type;
 
     /**
-     * @var integer 数量
+     * @var integer 某段时间内热 Key 的访问次数
      */
     public $Count;
 
     /**
-     * @param string $Key 热Key
-     * @param string $Type 类型
-     * @param integer $Count 数量
+     * @param string $Key 热 Key 的名称。
+     * @param string $Type Key 类型。
+     * @param integer $Count 某段时间内热 Key 的访问次数
      */
     function __construct()
     {

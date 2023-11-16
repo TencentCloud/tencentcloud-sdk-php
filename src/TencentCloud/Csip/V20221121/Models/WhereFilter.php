@@ -26,11 +26,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValues(array $Values) 设置过滤的值
  * @method integer getOperatorType() 获取中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
-精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+精确匹配填 7 模糊匹配填9 
 
  * @method void setOperatorType(integer $OperatorType) 设置中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
-精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+精确匹配填 7 模糊匹配填9 
  */
 class WhereFilter extends AbstractModel
 {
@@ -47,7 +47,7 @@ class WhereFilter extends AbstractModel
     /**
      * @var integer 中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
-精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+精确匹配填 7 模糊匹配填9 
 
      */
     public $OperatorType;
@@ -57,7 +57,7 @@ class WhereFilter extends AbstractModel
      * @param array $Values 过滤的值
      * @param integer $OperatorType 中台定义：
 1等于 2大于 3小于 4大于等于 5小于等于 6不等于 9模糊匹配 13非模糊匹配 14按位与
-精确匹配填 7 模糊匹配填9 兼容 中台定的结构
+精确匹配填 7 模糊匹配填9 
      */
     function __construct()
     {

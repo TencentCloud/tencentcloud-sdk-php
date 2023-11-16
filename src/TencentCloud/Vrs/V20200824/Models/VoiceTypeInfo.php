@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 复刻音色详情
  *
  * @method integer getVoiceType() 获取音色id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceType(integer $VoiceType) 设置音色id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVoiceName() 获取音色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceName(string $VoiceName) 设置音色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVoiceGender() 获取音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceGender(integer $VoiceGender) 设置音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskType() 获取复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskType(integer $TaskType) 设置复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskID() 获取复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskID(string $TaskID) 设置复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDateCreated() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDateCreated(string $DateCreated) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VoiceTypeInfo extends AbstractModel
 {
     /**
      * @var integer 音色id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceType;
 
     /**
      * @var string 音色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceName;
 
     /**
      * @var integer 音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceGender;
 
     /**
      * @var integer 复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
      * @var string 复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskID;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DateCreated;
 
     /**
      * @param integer $VoiceType 音色id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VoiceName 音色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VoiceGender 音色性别: 1-male 2-female
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskType 复刻类型: 0-轻量版复刻 1-基础版复刻
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskID 复刻任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DateCreated 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

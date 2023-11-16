@@ -66,6 +66,8 @@ POSTPAID_BY_HOUR 按量计费
  * @method void setDataSource(string $DataSource) 设置数据来源，eg：DATASET、COS、CFS、HDFS
  * @method string getCallbackUrl() 获取回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
+ * @method PreTrainModel getPreTrainModel() 获取太极预训练模型ID
+ * @method void setPreTrainModel(PreTrainModel $PreTrainModel) 设置太极预训练模型ID
  */
 class CreateTrainingTaskRequest extends AbstractModel
 {
@@ -181,6 +183,11 @@ POSTPAID_BY_HOUR 按量计费
     public $CallbackUrl;
 
     /**
+     * @var PreTrainModel 太极预训练模型ID
+     */
+    public $PreTrainModel;
+
+    /**
      * @param string $Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
 POSTPAID_BY_HOUR 按量计费
@@ -204,6 +211,7 @@ POSTPAID_BY_HOUR 按量计费
      * @param string $Remark 备注，最多500个字
      * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
      * @param string $CallbackUrl 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
+     * @param PreTrainModel $PreTrainModel 太极预训练模型ID
      */
     function __construct()
     {
@@ -324,6 +332,11 @@ POSTPAID_BY_HOUR 按量计费
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("PreTrainModel",$param) and $param["PreTrainModel"] !== null) {
+            $this->PreTrainModel = new PreTrainModel();
+            $this->PreTrainModel->deserialize($param["PreTrainModel"]);
         }
     }
 }

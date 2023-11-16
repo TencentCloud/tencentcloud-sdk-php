@@ -14,51 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfg\V20210820\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 应用性能监控产品中应用信息
+ * 太极任务预训练模型信息
  *
- * @method string getInstanceId() 获取业务ID
+ * @method string getModelId() 获取模型ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置业务ID
+ * @method void setModelId(string $ModelId) 设置模型ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getServiceNameList() 获取应用名称
+ * @method string getModelName() 获取模型名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceNameList(array $ServiceNameList) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionId(integer $RegionId) 设置地域ID
+ * @method void setModelName(string $ModelName) 设置模型名称
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class ApmServiceInfo extends AbstractModel
+class PreTrainModel extends AbstractModel
 {
     /**
-     * @var string 业务ID
+     * @var string 模型ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $InstanceId;
+    public $ModelId;
 
     /**
-     * @var array 应用名称
+     * @var string 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ServiceNameList;
+    public $ModelName;
 
     /**
-     * @var integer 地域ID
+     * @param string $ModelId 模型ID
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $RegionId;
-
-    /**
-     * @param string $InstanceId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ServiceNameList 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RegionId 地域ID
+     * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,16 +62,12 @@ class ApmServiceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+            $this->ModelId = $param["ModelId"];
         }
 
-        if (array_key_exists("ServiceNameList",$param) and $param["ServiceNameList"] !== null) {
-            $this->ServiceNameList = $param["ServiceNameList"];
-        }
-
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
+            $this->ModelName = $param["ModelName"];
         }
     }
 }

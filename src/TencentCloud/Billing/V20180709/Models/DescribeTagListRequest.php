@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTagList请求参数结构体
  *
- * @method integer getLimit() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
- * @method void setLimit(integer $Limit) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
- * @method integer getOffset() 获取数量，最大值为1000
- * @method void setOffset(integer $Offset) 设置数量，最大值为1000
+ * @method integer getLimit() 获取数量，最大值为1000
+ * @method void setLimit(integer $Limit) 设置数量，最大值为1000
+ * @method integer getOffset() 获取分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+ * @method void setOffset(integer $Offset) 设置分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
  * @method string getTagKey() 获取分账标签键，用作模糊搜索
  * @method void setTagKey(string $TagKey) 设置分账标签键，用作模糊搜索
  * @method integer getStatus() 获取标签类型，枚举值：0普通标签，1分账标签，用作筛选，不传获取全部标签键
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTagListRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
+     * @var integer 数量，最大值为1000
      */
     public $Limit;
 
     /**
-     * @var integer 数量，最大值为1000
+     * @var integer 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
      */
     public $Offset;
 
@@ -59,8 +59,8 @@ class DescribeTagListRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @param integer $Limit 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
-     * @param integer $Offset 数量，最大值为1000
+     * @param integer $Limit 数量，最大值为1000
+     * @param integer $Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推
      * @param string $TagKey 分账标签键，用作模糊搜索
      * @param integer $Status 标签类型，枚举值：0普通标签，1分账标签，用作筛选，不传获取全部标签键
      * @param string $OrderType 排序方式，枚举值：asc排升序，desc排降序

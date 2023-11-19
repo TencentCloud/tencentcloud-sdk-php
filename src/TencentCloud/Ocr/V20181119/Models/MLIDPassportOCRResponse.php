@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MLIDPassportOCR返回参数结构体
  *
- * @method string getID() 获取护照ID
- * @method void setID(string $ID) 设置护照ID
- * @method string getName() 获取姓名
- * @method void setName(string $Name) 设置姓名
- * @method string getDateOfBirth() 获取出生日期
- * @method void setDateOfBirth(string $DateOfBirth) 设置出生日期
- * @method string getSex() 获取性别（F女，M男）
- * @method void setSex(string $Sex) 设置性别（F女，M男）
- * @method string getDateOfExpiration() 获取有效期
- * @method void setDateOfExpiration(string $DateOfExpiration) 设置有效期
- * @method string getIssuingCountry() 获取发行国
- * @method void setIssuingCountry(string $IssuingCountry) 设置发行国
- * @method string getNationality() 获取国家地区代码
- * @method void setNationality(string $Nationality) 设置国家地区代码
- * @method array getWarn() 获取告警码
+ * @method string getID() 获取护照ID（机读码区的解析结果）
+ * @method void setID(string $ID) 设置护照ID（机读码区的解析结果）
+ * @method string getName() 获取姓名（机读码区的解析结果）
+ * @method void setName(string $Name) 设置姓名（机读码区的解析结果）
+ * @method string getDateOfBirth() 获取出生日期（机读码区的解析结果）
+ * @method void setDateOfBirth(string $DateOfBirth) 设置出生日期（机读码区的解析结果）
+ * @method string getSex() 获取性别（F女，M男）（机读码区的解析结果）
+ * @method void setSex(string $Sex) 设置性别（F女，M男）（机读码区的解析结果）
+ * @method string getDateOfExpiration() 获取有效期（机读码区的解析结果）
+ * @method void setDateOfExpiration(string $DateOfExpiration) 设置有效期（机读码区的解析结果）
+ * @method string getIssuingCountry() 获取发行国（机读码区的解析结果）
+ * @method void setIssuingCountry(string $IssuingCountry) 设置发行国（机读码区的解析结果）
+ * @method string getNationality() 获取国家地区代码（机读码区的解析结果）
+ * @method void setNationality(string $Nationality) 设置国家地区代码（机读码区的解析结果）
+ * @method array getWarn() 获取告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
- * @method void setWarn(array $Warn) 设置告警码
+ * @method void setWarn(array $Warn) 设置告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
@@ -66,56 +66,60 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeSet(string $CodeSet) 设置最下方第一行 MRZ Code 序列
  * @method string getCodeCrc() 获取最下方第二行 MRZ Code 序列
  * @method void setCodeCrc(string $CodeCrc) 设置最下方第二行 MRZ Code 序列
- * @method string getSurname() 获取姓
+ * @method string getSurname() 获取姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSurname(string $Surname) 设置姓
+ * @method void setSurname(string $Surname) 设置姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGivenName() 获取名
+ * @method string getGivenName() 获取名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGivenName(string $GivenName) 设置名
+ * @method void setGivenName(string $GivenName) 设置名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取类型（机读码区的解析结果）
+ * @method void setType(string $Type) 设置类型（机读码区的解析结果）
+ * @method PassportRecognizeInfos getPassportRecognizeInfos() 获取信息区证件内容
+ * @method void setPassportRecognizeInfos(PassportRecognizeInfos $PassportRecognizeInfos) 设置信息区证件内容
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class MLIDPassportOCRResponse extends AbstractModel
 {
     /**
-     * @var string 护照ID
+     * @var string 护照ID（机读码区的解析结果）
      */
     public $ID;
 
     /**
-     * @var string 姓名
+     * @var string 姓名（机读码区的解析结果）
      */
     public $Name;
 
     /**
-     * @var string 出生日期
+     * @var string 出生日期（机读码区的解析结果）
      */
     public $DateOfBirth;
 
     /**
-     * @var string 性别（F女，M男）
+     * @var string 性别（F女，M男）（机读码区的解析结果）
      */
     public $Sex;
 
     /**
-     * @var string 有效期
+     * @var string 有效期（机读码区的解析结果）
      */
     public $DateOfExpiration;
 
     /**
-     * @var string 发行国
+     * @var string 发行国（机读码区的解析结果）
      */
     public $IssuingCountry;
 
     /**
-     * @var string 国家地区代码
+     * @var string 国家地区代码（机读码区的解析结果）
      */
     public $Nationality;
 
     /**
-     * @var array 告警码
+     * @var array 告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
@@ -151,16 +155,26 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $CodeCrc;
 
     /**
-     * @var string 姓
+     * @var string 姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Surname;
 
     /**
-     * @var string 名
+     * @var string 名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GivenName;
+
+    /**
+     * @var string 类型（机读码区的解析结果）
+     */
+    public $Type;
+
+    /**
+     * @var PassportRecognizeInfos 信息区证件内容
+     */
+    public $PassportRecognizeInfos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -168,14 +182,14 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ID 护照ID
-     * @param string $Name 姓名
-     * @param string $DateOfBirth 出生日期
-     * @param string $Sex 性别（F女，M男）
-     * @param string $DateOfExpiration 有效期
-     * @param string $IssuingCountry 发行国
-     * @param string $Nationality 国家地区代码
-     * @param array $Warn 告警码
+     * @param string $ID 护照ID（机读码区的解析结果）
+     * @param string $Name 姓名（机读码区的解析结果）
+     * @param string $DateOfBirth 出生日期（机读码区的解析结果）
+     * @param string $Sex 性别（F女，M男）（机读码区的解析结果）
+     * @param string $DateOfExpiration 有效期（机读码区的解析结果）
+     * @param string $IssuingCountry 发行国（机读码区的解析结果）
+     * @param string $Nationality 国家地区代码（机读码区的解析结果）
+     * @param array $Warn 告警码：
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
@@ -191,10 +205,12 @@ class MLIDPassportOCRResponse extends AbstractModel
 }
      * @param string $CodeSet 最下方第一行 MRZ Code 序列
      * @param string $CodeCrc 最下方第二行 MRZ Code 序列
-     * @param string $Surname 姓
+     * @param string $Surname 姓（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GivenName 名
+     * @param string $GivenName 名（机读码区的解析结果）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type 类型（机读码区的解析结果）
+     * @param PassportRecognizeInfos $PassportRecognizeInfos 信息区证件内容
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -264,6 +280,15 @@ class MLIDPassportOCRResponse extends AbstractModel
 
         if (array_key_exists("GivenName",$param) and $param["GivenName"] !== null) {
             $this->GivenName = $param["GivenName"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("PassportRecognizeInfos",$param) and $param["PassportRecognizeInfos"] !== null) {
+            $this->PassportRecognizeInfos = new PassportRecognizeInfos();
+            $this->PassportRecognizeInfos->deserialize($param["PassportRecognizeInfos"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

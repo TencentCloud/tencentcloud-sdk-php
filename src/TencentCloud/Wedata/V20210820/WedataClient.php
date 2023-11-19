@@ -24,6 +24,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 
 /**
  * @method Models\BatchCreateIntegrationTaskAlarmsResponse BatchCreateIntegrationTaskAlarms(Models\BatchCreateIntegrationTaskAlarmsRequest $req) 批量创建任务告警规则
+ * @method Models\BatchCreateTaskVersionDsResponse BatchCreateTaskVersionDs(Models\BatchCreateTaskVersionDsRequest $req) 批量创建任务版本Ds
  * @method Models\BatchDeleteIntegrationTasksResponse BatchDeleteIntegrationTasks(Models\BatchDeleteIntegrationTasksRequest $req) 批量删除集成任务
  * @method Models\BatchDeleteOpsTasksResponse BatchDeleteOpsTasks(Models\BatchDeleteOpsTasksRequest $req) 智能运维-批量删除任务
  * @method Models\BatchDeleteTasksDsResponse BatchDeleteTasksDs(Models\BatchDeleteTasksDsRequest $req) Ds批量删除任务，仅对任务状态为”已停止“有效；
@@ -79,6 +80,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建任务
  * @method Models\CreateTaskAlarmRegularResponse CreateTaskAlarmRegular(Models\CreateTaskAlarmRegularRequest $req) 创建任务告警规则
+ * @method Models\CreateTaskVersionDsResponse CreateTaskVersionDs(Models\CreateTaskVersionDsRequest $req) 创建任务版本
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建工作流
  * @method Models\DagInstancesResponse DagInstances(Models\DagInstancesRequest $req) 拉取dag实例
@@ -111,6 +113,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeAllByFolderNewResponse DescribeAllByFolderNew(Models\DescribeAllByFolderNewRequest $req) 查询父目录下所有子文件夹+工作流
  * @method Models\DescribeAllTaskTypeResponse DescribeAllTaskType(Models\DescribeAllTaskTypeRequest $req) 获取所有任务类型
  * @method Models\DescribeAllUsedVersionSonResponse DescribeAllUsedVersionSon(Models\DescribeAllUsedVersionSonRequest $req) 根据任务Id查找生产态子任务
+ * @method Models\DescribeApproveListResponse DescribeApproveList(Models\DescribeApproveListRequest $req) 获取待审批列表
  * @method Models\DescribeBaselineAllTaskDagResponse DescribeBaselineAllTaskDag(Models\DescribeBaselineAllTaskDagRequest $req) 查询基线DAG
  * @method Models\DescribeBaselineByIdResponse DescribeBaselineById(Models\DescribeBaselineByIdRequest $req) 基线列表
  * @method Models\DescribeBaselineInstanceDagResponse DescribeBaselineInstanceDag(Models\DescribeBaselineInstanceDagRequest $req) 查询基线实例DAG
@@ -314,6 +317,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 
  * @method Models\MakeUpWorkflowNewResponse MakeUpWorkflowNew(Models\MakeUpWorkflowNewRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 工作流下所有任务的补录
+ * @method Models\ModifyApproveStatusResponse ModifyApproveStatus(Models\ModifyApproveStatusRequest $req) 修改审批单状态
  * @method Models\ModifyBaselineAlarmStatusResponse ModifyBaselineAlarmStatus(Models\ModifyBaselineAlarmStatusRequest $req) 编辑基线告警状态
  * @method Models\ModifyBaselineTaskAlarmStatusResponse ModifyBaselineTaskAlarmStatus(Models\ModifyBaselineTaskAlarmStatusRequest $req) 编辑基线实例中任务告警状态
  * @method Models\ModifyDataSourceResponse ModifyDataSource(Models\ModifyDataSourceRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>

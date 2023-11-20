@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskID(string $TaskID) 设置复刻任务 ID
  * @method string getDateCreated() 获取创建时间
  * @method void setDateCreated(string $DateCreated) 设置创建时间
+ * @method boolean getIsDeployed() 获取部署状态。若已部署，则可通过语音合成接口调用该音色
+ * @method void setIsDeployed(boolean $IsDeployed) 设置部署状态。若已部署，则可通过语音合成接口调用该音色
  */
 class VoiceTypeInfo extends AbstractModel
 {
@@ -66,12 +68,18 @@ class VoiceTypeInfo extends AbstractModel
     public $DateCreated;
 
     /**
+     * @var boolean 部署状态。若已部署，则可通过语音合成接口调用该音色
+     */
+    public $IsDeployed;
+
+    /**
      * @param integer $VoiceType 音色id
      * @param string $VoiceName 音色名称
      * @param integer $VoiceGender 音色性别: 1-male 2-female
      * @param integer $TaskType 复刻类型: 0-轻量版复刻 1-基础版复刻
      * @param string $TaskID 复刻任务 ID
      * @param string $DateCreated 创建时间
+     * @param boolean $IsDeployed 部署状态。若已部署，则可通过语音合成接口调用该音色
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class VoiceTypeInfo extends AbstractModel
 
         if (array_key_exists("DateCreated",$param) and $param["DateCreated"] !== null) {
             $this->DateCreated = $param["DateCreated"];
+        }
+
+        if (array_key_exists("IsDeployed",$param) and $param["IsDeployed"] !== null) {
+            $this->IsDeployed = $param["IsDeployed"];
         }
     }
 }

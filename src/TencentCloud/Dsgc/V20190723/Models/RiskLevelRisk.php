@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevelDescription(string $RiskLevelDescription) 设置风险级别描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdentifyComplianceName() 获取引用的分类分级模版
+ * @method string getIdentifyComplianceName() 获取引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentifyComplianceName(string $IdentifyComplianceName) 设置引用的分类分级模版
+ * @method void setIdentifyComplianceName(string $IdentifyComplianceName) 设置引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取类型，区分自定义还是系统内置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,7 +62,7 @@ class RiskLevelRisk extends AbstractModel
     public $RiskLevelDescription;
 
     /**
-     * @var string 引用的分类分级模版
+     * @var string 引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentifyComplianceName;
@@ -80,7 +80,7 @@ class RiskLevelRisk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevelDescription 风险级别描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdentifyComplianceName 引用的分类分级模版
+     * @param string $IdentifyComplianceName 引用的分类分级模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型，区分自定义还是系统内置
 注意：此字段可能返回 null，表示取不到有效值。

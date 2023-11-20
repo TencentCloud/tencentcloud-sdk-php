@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度 0-3
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLayerInfos() 获取镜像层信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLayerInfos(array $LayerInfos) 设置镜像层信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageVul extends AbstractModel
 {
@@ -224,6 +228,12 @@ class ImageVul extends AbstractModel
     public $AttackLevel;
 
     /**
+     * @var array 镜像层信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LayerInfos;
+
+    /**
      * @param string $CVEID 漏洞id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $POCID 观点验证程序id
@@ -263,6 +273,8 @@ class ImageVul extends AbstractModel
      * @param string $Version 组件版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackLevel 攻击热度 0-3
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LayerInfos 镜像层信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -361,6 +373,15 @@ class ImageVul extends AbstractModel
 
         if (array_key_exists("AttackLevel",$param) and $param["AttackLevel"] !== null) {
             $this->AttackLevel = $param["AttackLevel"];
+        }
+
+        if (array_key_exists("LayerInfos",$param) and $param["LayerInfos"] !== null) {
+            $this->LayerInfos = [];
+            foreach ($param["LayerInfos"] as $key => $value){
+                $obj = new ImageVulLayerInfo();
+                $obj->deserialize($value);
+                array_push($this->LayerInfos, $obj);
+            }
         }
     }
 }

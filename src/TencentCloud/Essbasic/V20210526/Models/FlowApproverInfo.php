@@ -195,9 +195,9 @@ RecipientId参数获取：
 </ul>
  * @method string getJumpUrl() 获取签署完前端跳转的url，此字段的用法场景请联系客户经理确认
  * @method void setJumpUrl(string $JumpUrl) 设置签署完前端跳转的url，此字段的用法场景请联系客户经理确认
- * @method ApproverOption getApproverOption() 获取可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+ * @method ApproverOption getApproverOption() 获取可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
- * @method void setApproverOption(ApproverOption $ApproverOption) 设置可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+ * @method void setApproverOption(ApproverOption $ApproverOption) 设置可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
  * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要
  * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要
@@ -387,7 +387,7 @@ class FlowApproverInfo extends AbstractModel
     public $JumpUrl;
 
     /**
-     * @var ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+     * @var ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
      */
     public $ApproverOption;
@@ -510,7 +510,7 @@ class FlowApproverInfo extends AbstractModel
 <li>合同页数大于等于6页，阅读时间为10秒。</li>
 </ul>
      * @param string $JumpUrl 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
-     * @param ApproverOption $ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人等。
+     * @param ApproverOption $ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
      * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
      * @param array $ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:

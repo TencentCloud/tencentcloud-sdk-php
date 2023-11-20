@@ -101,6 +101,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterEndpointStatusResponse DescribeClusterEndpointStatus(Models\DescribeClusterEndpointStatusRequest $req) 查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
  * @method Models\DescribeClusterEndpointVipStatusResponse DescribeClusterEndpointVipStatus(Models\DescribeClusterEndpointVipStatusRequest $req) 查询集群开启端口流程状态(仅支持托管集群外网端口)
  * @method Models\DescribeClusterEndpointsResponse DescribeClusterEndpoints(Models\DescribeClusterEndpointsRequest $req) 获取集群的访问地址，包括内网地址，外网地址，外网域名，外网访问安全策略
+ * @method Models\DescribeClusterExtraArgsResponse DescribeClusterExtraArgs(Models\DescribeClusterExtraArgsRequest $req) 查询集群自定义参数
  * @method Models\DescribeClusterInspectionResultsOverviewResponse DescribeClusterInspectionResultsOverview(Models\DescribeClusterInspectionResultsOverviewRequest $req) 查询用户单个Region下的所有集群巡检结果概览信息
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群下节点实例信息
  * @method Models\DescribeClusterKubeconfigResponse DescribeClusterKubeconfig(Models\DescribeClusterKubeconfigRequest $req) 获取集群的kubeconfig文件，不同子账户获取自己的kubeconfig文件，该文件中有每个子账户自己的kube-apiserver的客户端证书，默认首次调此接口时候创建客户端证书，时效20年，未授予任何权限，如果是集群所有者或者主账户，则默认是cluster-admin权限。
@@ -136,6 +137,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeEncryptionStatusResponse DescribeEncryptionStatus(Models\DescribeEncryptionStatusRequest $req) 查询etcd数据是否进行加密
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) 查询已经存在的节点，判断是否可以加入集群
  * @method Models\DescribeExternalClusterSpecResponse DescribeExternalClusterSpec(Models\DescribeExternalClusterSpecRequest $req) 获取导入第三方集群YAML定义
+ * @method Models\DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfig(Models\DescribeExternalNodeSupportConfigRequest $req) 查看开启第三方节点池配置信息
+ * @method Models\DescribeIPAMDResponse DescribeIPAMD(Models\DescribeIPAMDRequest $req) 获取eniipamd组件信息
  * @method Models\DescribeImageCachesResponse DescribeImageCaches(Models\DescribeImageCachesRequest $req) 查询镜像缓存信息接口
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取镜像信息
  * @method Models\DescribePodDeductionRateResponse DescribePodDeductionRate(Models\DescribePodDeductionRateRequest $req) 查询各个规格的 Pod 的抵扣率

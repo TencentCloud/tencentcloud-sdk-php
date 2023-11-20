@@ -122,9 +122,9 @@ FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxOutBandwidth(string $MaxOutBandwidth) 设置公网出带宽上限，默认5Mbps
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMaxFreeTraffic() 获取每月免费流量，默认1000G
+ * @method string getMaxFreeTraffic() 获取每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxFreeTraffic(string $MaxFreeTraffic) 设置每月免费流量，默认1000G
+ * @method void setMaxFreeTraffic(string $MaxFreeTraffic) 设置每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigurationEnvironment() 获取应用配置环境
 注意：此字段可能返回 null，表示取不到有效值。
@@ -261,7 +261,7 @@ FAILED：表示操作失败
     public $MaxOutBandwidth;
 
     /**
-     * @var string 每月免费流量，默认1000G
+     * @var string 每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxFreeTraffic;
@@ -330,7 +330,7 @@ FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MaxOutBandwidth 公网出带宽上限，默认5Mbps
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MaxFreeTraffic 每月免费流量，默认1000G
+     * @param string $MaxFreeTraffic 每月免费流量，默认500G
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigurationEnvironment 应用配置环境
 注意：此字段可能返回 null，表示取不到有效值。

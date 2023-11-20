@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置续费时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
  * @method string getModifyPayType() 获取如果需要将按量计费实例续费为包年包月的实例，该入参的值需要指定为 "PREPAID" 。
  * @method void setModifyPayType(string $ModifyPayType) 设置如果需要将按量计费实例续费为包年包月的实例，该入参的值需要指定为 "PREPAID" 。
+ * @method integer getAutoRenew() 获取自动续费标记，0表示不自动续费，1表示进行自动续费
+ * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标记，0表示不自动续费，1表示进行自动续费
  */
 class RenewDBInstanceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class RenewDBInstanceRequest extends AbstractModel
     public $ModifyPayType;
 
     /**
+     * @var integer 自动续费标记，0表示不自动续费，1表示进行自动续费
+     */
+    public $AutoRenew;
+
+    /**
      * @param string $InstanceId 待续费的实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872)。
      * @param integer $TimeSpan 续费时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      * @param string $ModifyPayType 如果需要将按量计费实例续费为包年包月的实例，该入参的值需要指定为 "PREPAID" 。
+     * @param integer $AutoRenew 自动续费标记，0表示不自动续费，1表示进行自动续费
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class RenewDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("ModifyPayType",$param) and $param["ModifyPayType"] !== null) {
             $this->ModifyPayType = $param["ModifyPayType"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
     }
 }

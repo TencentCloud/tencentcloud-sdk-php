@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllImages(boolean $AllImages) 设置是否全部未授权镜像
  * @method array getImageIds() 获取镜像ids
  * @method void setImageIds(array $ImageIds) 设置镜像ids
+ * @method boolean getNeedScan() 获取是否授权后自动扫描
+ * @method void setNeedScan(boolean $NeedScan) 设置是否授权后自动扫描
+ * @method array getScanType() 获取扫描类型
+ * @method void setScanType(array $ScanType) 设置扫描类型
  */
 class RenewImageAuthorizeStateRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class RenewImageAuthorizeStateRequest extends AbstractModel
     public $ImageIds;
 
     /**
+     * @var boolean 是否授权后自动扫描
+     */
+    public $NeedScan;
+
+    /**
+     * @var array 扫描类型
+     */
+    public $ScanType;
+
+    /**
      * @param boolean $AllImages 是否全部未授权镜像
      * @param array $ImageIds 镜像ids
+     * @param boolean $NeedScan 是否授权后自动扫描
+     * @param array $ScanType 扫描类型
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class RenewImageAuthorizeStateRequest extends AbstractModel
 
         if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
             $this->ImageIds = $param["ImageIds"];
+        }
+
+        if (array_key_exists("NeedScan",$param) and $param["NeedScan"] !== null) {
+            $this->NeedScan = $param["NeedScan"];
+        }
+
+        if (array_key_exists("ScanType",$param) and $param["ScanType"] !== null) {
+            $this->ScanType = $param["ScanType"];
         }
     }
 }

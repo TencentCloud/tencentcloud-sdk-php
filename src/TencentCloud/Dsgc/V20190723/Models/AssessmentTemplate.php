@@ -24,26 +24,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateId() 获取评估模版Id
- * @method void setTemplateId(string $TemplateId) 设置评估模版Id
- * @method string getTemplateName() 获取评估模版名称
- * @method void setTemplateName(string $TemplateName) 设置评估模版名称
+ * @method string getTemplateId() 获取评估模板Id
+ * @method void setTemplateId(string $TemplateId) 设置评估模板Id
+ * @method string getTemplateName() 获取评估模板名称
+ * @method void setTemplateName(string $TemplateName) 设置评估模板名称
  * @method string getDescription() 获取描述信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSource() 获取模版来源，内置/用户自定，取值（system，user）
- * @method void setSource(string $Source) 设置模版来源，内置/用户自定，取值（system，user）
- * @method string getUseType() 获取模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
- * @method void setUseType(string $UseType) 设置模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
- * @method string getCreatedTime() 获取评估模版创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置评估模版创建时间
- * @method integer getControlItemCount() 获取模版关联的评估项数量
- * @method void setControlItemCount(integer $ControlItemCount) 设置模版关联的评估项数量
- * @method integer getAppliedItemCount() 获取模版已启用的评估项数量
- * @method void setAppliedItemCount(integer $AppliedItemCount) 设置模版已启用的评估项数量
- * @method string getStatus() 获取模版启用状态，草稿/已启用，取值draft / launched
- * @method void setStatus(string $Status) 设置模版启用状态，草稿/已启用，取值draft / launched
+ * @method string getSource() 获取模板来源，内置/用户自定，取值（system，user）
+ * @method void setSource(string $Source) 设置模板来源，内置/用户自定，取值（system，user）
+ * @method string getUseType() 获取模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+ * @method void setUseType(string $UseType) 设置模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+ * @method string getCreatedTime() 获取评估模板创建时间
+ * @method void setCreatedTime(string $CreatedTime) 设置评估模板创建时间
+ * @method integer getControlItemCount() 获取模板关联的评估项数量
+ * @method void setControlItemCount(integer $ControlItemCount) 设置模板关联的评估项数量
+ * @method integer getAppliedItemCount() 获取模板已启用的评估项数量
+ * @method void setAppliedItemCount(integer $AppliedItemCount) 设置模板已启用的评估项数量
+ * @method string getStatus() 获取模板启用状态，草稿/已启用，取值draft / launched
+ * @method void setStatus(string $Status) 设置模板启用状态，草稿/已启用，取值draft / launched
  * @method array getSupportDataSource() 获取支持的数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDataSource(array $SupportDataSource) 设置支持的数据源类型
@@ -66,12 +66,12 @@ class AssessmentTemplate extends AbstractModel
     public $Id;
 
     /**
-     * @var string 评估模版Id
+     * @var string 评估模板Id
      */
     public $TemplateId;
 
     /**
-     * @var string 评估模版名称
+     * @var string 评估模板名称
      */
     public $TemplateName;
 
@@ -82,32 +82,32 @@ class AssessmentTemplate extends AbstractModel
     public $Description;
 
     /**
-     * @var string 模版来源，内置/用户自定，取值（system，user）
+     * @var string 模板来源，内置/用户自定，取值（system，user）
      */
     public $Source;
 
     /**
-     * @var string 模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+     * @var string 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
      */
     public $UseType;
 
     /**
-     * @var string 评估模版创建时间
+     * @var string 评估模板创建时间
      */
     public $CreatedTime;
 
     /**
-     * @var integer 模版关联的评估项数量
+     * @var integer 模板关联的评估项数量
      */
     public $ControlItemCount;
 
     /**
-     * @var integer 模版已启用的评估项数量
+     * @var integer 模板已启用的评估项数量
      */
     public $AppliedItemCount;
 
     /**
-     * @var string 模版启用状态，草稿/已启用，取值draft / launched
+     * @var string 模板启用状态，草稿/已启用，取值draft / launched
      */
     public $Status;
 
@@ -132,16 +132,16 @@ class AssessmentTemplate extends AbstractModel
     /**
      * @param integer $Id id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateId 评估模版Id
-     * @param string $TemplateName 评估模版名称
+     * @param string $TemplateId 评估模板Id
+     * @param string $TemplateName 评估模板名称
      * @param string $Description 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Source 模版来源，内置/用户自定，取值（system，user）
-     * @param string $UseType 模版类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
-     * @param string $CreatedTime 评估模版创建时间
-     * @param integer $ControlItemCount 模版关联的评估项数量
-     * @param integer $AppliedItemCount 模版已启用的评估项数量
-     * @param string $Status 模版启用状态，草稿/已启用，取值draft / launched
+     * @param string $Source 模板来源，内置/用户自定，取值（system，user）
+     * @param string $UseType 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
+     * @param string $CreatedTime 评估模板创建时间
+     * @param integer $ControlItemCount 模板关联的评估项数量
+     * @param integer $AppliedItemCount 模板已启用的评估项数量
+     * @param string $Status 模板启用状态，草稿/已启用，取值draft / launched
      * @param array $SupportDataSource 支持的数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsASMTemplate 是否包含攻击面风险

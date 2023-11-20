@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setACL(integer $ACL) 设置访问控制 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWxAccess() 获取小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWxAccess(integer $WxAccess) 设置小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PeakPointsItem extends AbstractModel
 {
@@ -183,6 +187,12 @@ class PeakPointsItem extends AbstractModel
     public $ACL;
 
     /**
+     * @var integer 小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WxAccess;
+
+    /**
      * @param integer $Time 秒级别时间戳
      * @param integer $Access QPS
      * @param integer $Up 上行带宽峰值，单位B
@@ -211,6 +221,8 @@ class PeakPointsItem extends AbstractModel
      * @param integer $Leak 信息防泄露次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ACL 访问控制 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WxAccess 小程序 qps
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -296,6 +308,10 @@ class PeakPointsItem extends AbstractModel
 
         if (array_key_exists("ACL",$param) and $param["ACL"] !== null) {
             $this->ACL = $param["ACL"];
+        }
+
+        if (array_key_exists("WxAccess",$param) and $param["WxAccess"] !== null) {
+            $this->WxAccess = $param["WxAccess"];
         }
     }
 }

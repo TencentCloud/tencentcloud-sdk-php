@@ -120,7 +120,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\GetAttackHistogramResponse GetAttackHistogram(Models\GetAttackHistogramRequest $req) 生成攻击日志的产生时间柱状图
  * @method Models\GetAttackTotalCountResponse GetAttackTotalCount(Models\GetAttackTotalCountRequest $req) 按照条件查询展示攻击总次数
  * @method Models\GetInstanceQpsLimitResponse GetInstanceQpsLimit(Models\GetInstanceQpsLimitRequest $req) 获取套餐实例的弹性qps上限
- * @method Models\ModifyAccessPeriodResponse ModifyAccessPeriod(Models\ModifyAccessPeriodRequest $req) 本接口用于修改访问日志保存期限及大字段是否存储
+ * @method Models\ModifyAccessPeriodResponse ModifyAccessPeriod(Models\ModifyAccessPeriodRequest $req) 本接口用于修改访问日志保存期限等字段信息
  * @method Models\ModifyAntiFakeUrlResponse ModifyAntiFakeUrl(Models\ModifyAntiFakeUrlRequest $req) 编辑防篡改url
  * @method Models\ModifyAntiFakeUrlStatusResponse ModifyAntiFakeUrlStatus(Models\ModifyAntiFakeUrlStatusRequest $req) 切换防篡改开关
  * @method Models\ModifyAntiInfoLeakRuleStatusResponse ModifyAntiInfoLeakRuleStatus(Models\ModifyAntiInfoLeakRuleStatusRequest $req) 信息防泄漏切换规则开关

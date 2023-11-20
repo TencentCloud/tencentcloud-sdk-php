@@ -40,20 +40,22 @@ use TencentCloud\Common\AbstractModel;
 - 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充；
 
 - 如果不指定，则使用姓名和手机号进行补充。
+ * @method integer getFillApproverType() 获取签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+ * @method void setFillApproverType(integer $FillApproverType) 设置签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
  * @method string getInitiator() 获取在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
  * @method void setInitiator(string $Initiator) 设置在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method integer getFillApproverType() 获取签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
- * @method void setFillApproverType(integer $FillApproverType) 设置签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
  */
 class CreateFlowApproversRequest extends AbstractModel
 {
@@ -80,6 +82,15 @@ class CreateFlowApproversRequest extends AbstractModel
     public $Approvers;
 
     /**
+     * @var integer 签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     */
+    public $FillApproverType;
+
+    /**
      * @var string 在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
      */
     public $Initiator;
@@ -89,14 +100,6 @@ class CreateFlowApproversRequest extends AbstractModel
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */
     public $Agent;
-
-    /**
-     * @var integer 签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-     */
-    public $FillApproverType;
 
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
@@ -109,13 +112,14 @@ class CreateFlowApproversRequest extends AbstractModel
 - 如果发起方指定的补充签署人是企业微信签署人（ApproverSource=WEWORKAPP），则需要提供企业微信UserId进行补充；
 
 - 如果不指定，则使用姓名和手机号进行补充。
+     * @param integer $FillApproverType 签署人信息补充方式
+
+<ul><li>**0**: 添加或签人候选人，或签支持一个节点传多个签署人，不传值默认或签。
+注: `或签只支持企业签署方`</li>
+<li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
      * @param string $Initiator 在可定制的企业微信通知中，发起人可以根据具体需求进行自定义设置。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param integer $FillApproverType 签署人信息补充方式
-
-<ul><li>**0**: 补充或签人，支持补充多个企业经办签署人（默认）注: `不可补充个人签署人`</li>
-<li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
      */
     function __construct()
     {
@@ -148,6 +152,10 @@ class CreateFlowApproversRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("FillApproverType",$param) and $param["FillApproverType"] !== null) {
+            $this->FillApproverType = $param["FillApproverType"];
+        }
+
         if (array_key_exists("Initiator",$param) and $param["Initiator"] !== null) {
             $this->Initiator = $param["Initiator"];
         }
@@ -155,10 +163,6 @@ class CreateFlowApproversRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
-        }
-
-        if (array_key_exists("FillApproverType",$param) and $param["FillApproverType"] !== null) {
-            $this->FillApproverType = $param["FillApproverType"];
         }
     }
 }

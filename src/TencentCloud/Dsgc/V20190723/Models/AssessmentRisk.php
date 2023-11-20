@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskDescription(string $RiskDescription) 设置风险项描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateId() 获取评估模版Id
- * @method void setTemplateId(string $TemplateId) 设置评估模版Id
- * @method string getTemplateName() 获取评估模版名称
- * @method void setTemplateName(string $TemplateName) 设置评估模版名称
+ * @method string getTemplateId() 获取评估模板Id
+ * @method void setTemplateId(string $TemplateId) 设置评估模板Id
+ * @method string getTemplateName() 获取评估模板名称
+ * @method void setTemplateName(string $TemplateName) 设置评估模板名称
  * @method string getControlItemId() 获取评估项Id
  * @method void setControlItemId(string $ControlItemId) 设置评估项Id
  * @method string getControlItemName() 获取评估项名称
@@ -91,12 +91,12 @@ class AssessmentRisk extends AbstractModel
     public $RiskDescription;
 
     /**
-     * @var string 评估模版Id
+     * @var string 评估模板Id
      */
     public $TemplateId;
 
     /**
-     * @var string 评估模版名称
+     * @var string 评估模板名称
      */
     public $TemplateName;
 
@@ -191,8 +191,8 @@ class AssessmentRisk extends AbstractModel
      * @param string $RiskId 风险项Id
      * @param string $RiskDescription 风险项描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateId 评估模版Id
-     * @param string $TemplateName 评估模版名称
+     * @param string $TemplateId 评估模板Id
+     * @param string $TemplateName 评估模板名称
      * @param string $ControlItemId 评估项Id
      * @param string $ControlItemName 评估项名称
      * @param string $ControlItemDesc 评估描述

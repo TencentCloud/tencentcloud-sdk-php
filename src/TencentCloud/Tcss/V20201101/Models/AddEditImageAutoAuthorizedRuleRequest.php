@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIdFilters(array $HostIdFilters) 设置根据条件过滤，当授权范围为MANUAL:自选主机时且HostIdSet为空时，必填
  * @method array getExcludeHostIdSet() 获取根据条件过滤而且排除指定主机id
  * @method void setExcludeHostIdSet(array $ExcludeHostIdSet) 设置根据条件过滤而且排除指定主机id
+ * @method integer getAutoScanEnabled() 获取自动扫描开关
+ * @method void setAutoScanEnabled(integer $AutoScanEnabled) 设置自动扫描开关
+ * @method array getScanType() 获取自动扫描范围
+ * @method void setScanType(array $ScanType) 设置自动扫描范围
  */
 class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel
     public $ExcludeHostIdSet;
 
     /**
+     * @var integer 自动扫描开关
+     */
+    public $AutoScanEnabled;
+
+    /**
+     * @var array 自动扫描范围
+     */
+    public $ScanType;
+
+    /**
      * @param string $RangeType 授权范围类别，MANUAL:自选主机节点，ALL:全部镜像
      * @param integer $MaxDailyCount 每天最大的镜像授权数限制, 0表示无限制
      * @param integer $IsEnabled 规则是否生效，0:不生效，1:已生效
@@ -80,6 +94,8 @@ class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel
      * @param integer $RuleId 规则id，在编辑时，必填
      * @param array $HostIdFilters 根据条件过滤，当授权范围为MANUAL:自选主机时且HostIdSet为空时，必填
      * @param array $ExcludeHostIdSet 根据条件过滤而且排除指定主机id
+     * @param integer $AutoScanEnabled 自动扫描开关
+     * @param array $ScanType 自动扫描范围
      */
     function __construct()
     {
@@ -125,6 +141,14 @@ class AddEditImageAutoAuthorizedRuleRequest extends AbstractModel
 
         if (array_key_exists("ExcludeHostIdSet",$param) and $param["ExcludeHostIdSet"] !== null) {
             $this->ExcludeHostIdSet = $param["ExcludeHostIdSet"];
+        }
+
+        if (array_key_exists("AutoScanEnabled",$param) and $param["AutoScanEnabled"] !== null) {
+            $this->AutoScanEnabled = $param["AutoScanEnabled"];
+        }
+
+        if (array_key_exists("ScanType",$param) and $param["ScanType"] !== null) {
+            $this->ScanType = $param["ScanType"];
         }
     }
 }

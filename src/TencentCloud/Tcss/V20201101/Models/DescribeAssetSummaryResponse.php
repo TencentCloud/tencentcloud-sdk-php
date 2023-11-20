@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuperNodeCnt(integer $SuperNodeCnt) 设置超级节点个数
  * @method integer getSuperNodeRunningCnt() 获取超级节点运行个数
  * @method void setSuperNodeRunningCnt(integer $SuperNodeRunningCnt) 设置超级节点运行个数
+ * @method integer getTodayNewImageCnt() 获取今日新增镜像个数
+ * @method void setTodayNewImageCnt(integer $TodayNewImageCnt) 设置今日新增镜像个数
+ * @method integer getTodayUnsafeImageCnt() 获取今日新增风险镜像个数
+ * @method void setTodayUnsafeImageCnt(integer $TodayUnsafeImageCnt) 设置今日新增风险镜像个数
+ * @method integer getRecommendedFixImageCnt() 获取推荐处置镜像个数
+ * @method void setRecommendedFixImageCnt(integer $RecommendedFixImageCnt) 设置推荐处置镜像个数
+ * @method integer getScannedImageCnt() 获取已扫描镜像个数
+ * @method void setScannedImageCnt(integer $ScannedImageCnt) 设置已扫描镜像个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -180,6 +188,26 @@ class DescribeAssetSummaryResponse extends AbstractModel
     public $SuperNodeRunningCnt;
 
     /**
+     * @var integer 今日新增镜像个数
+     */
+    public $TodayNewImageCnt;
+
+    /**
+     * @var integer 今日新增风险镜像个数
+     */
+    public $TodayUnsafeImageCnt;
+
+    /**
+     * @var integer 推荐处置镜像个数
+     */
+    public $RecommendedFixImageCnt;
+
+    /**
+     * @var integer 已扫描镜像个数
+     */
+    public $ScannedImageCnt;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -207,6 +235,10 @@ class DescribeAssetSummaryResponse extends AbstractModel
      * @param integer $HostUnInstallCnt 主机未安装agent数量
      * @param integer $SuperNodeCnt 超级节点个数
      * @param integer $SuperNodeRunningCnt 超级节点运行个数
+     * @param integer $TodayNewImageCnt 今日新增镜像个数
+     * @param integer $TodayUnsafeImageCnt 今日新增风险镜像个数
+     * @param integer $RecommendedFixImageCnt 推荐处置镜像个数
+     * @param integer $ScannedImageCnt 已扫描镜像个数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -308,6 +340,22 @@ class DescribeAssetSummaryResponse extends AbstractModel
 
         if (array_key_exists("SuperNodeRunningCnt",$param) and $param["SuperNodeRunningCnt"] !== null) {
             $this->SuperNodeRunningCnt = $param["SuperNodeRunningCnt"];
+        }
+
+        if (array_key_exists("TodayNewImageCnt",$param) and $param["TodayNewImageCnt"] !== null) {
+            $this->TodayNewImageCnt = $param["TodayNewImageCnt"];
+        }
+
+        if (array_key_exists("TodayUnsafeImageCnt",$param) and $param["TodayUnsafeImageCnt"] !== null) {
+            $this->TodayUnsafeImageCnt = $param["TodayUnsafeImageCnt"];
+        }
+
+        if (array_key_exists("RecommendedFixImageCnt",$param) and $param["RecommendedFixImageCnt"] !== null) {
+            $this->RecommendedFixImageCnt = $param["RecommendedFixImageCnt"];
+        }
+
+        if (array_key_exists("ScannedImageCnt",$param) and $param["ScannedImageCnt"] !== null) {
+            $this->ScannedImageCnt = $param["ScannedImageCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

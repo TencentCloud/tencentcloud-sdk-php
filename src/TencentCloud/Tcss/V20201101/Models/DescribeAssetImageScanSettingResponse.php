@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAll(boolean $All) 设置扫描全部镜像
  * @method array getImages() 获取自定义扫描镜像
  * @method void setImages(array $Images) 设置自定义扫描镜像
+ * @method boolean getContainerRunning() 获取镜像是否存在运行中的容器
+ * @method void setContainerRunning(boolean $ContainerRunning) 设置镜像是否存在运行中的容器
+ * @method integer getScanScope() 获取扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+ * @method void setScanScope(integer $ScanScope) 设置扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+ * @method string getScanEndTime() 获取扫描结束时间 02:00 时分
+ * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间 02:00 时分
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,6 +79,7 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
 
     /**
      * @var boolean 扫描全部镜像
+     * @deprecated
      */
     public $All;
 
@@ -80,6 +87,21 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
      * @var array 自定义扫描镜像
      */
     public $Images;
+
+    /**
+     * @var boolean 镜像是否存在运行中的容器
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var integer 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     */
+    public $ScanScope;
+
+    /**
+     * @var string 扫描结束时间 02:00 时分
+     */
+    public $ScanEndTime;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -95,6 +117,9 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
      * @param boolean $ScanVul 扫描漏洞
      * @param boolean $All 扫描全部镜像
      * @param array $Images 自定义扫描镜像
+     * @param boolean $ContainerRunning 镜像是否存在运行中的容器
+     * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * @param string $ScanEndTime 扫描结束时间 02:00 时分
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +165,18 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
 
         if (array_key_exists("Images",$param) and $param["Images"] !== null) {
             $this->Images = $param["Images"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
+            $this->ScanEndTime = $param["ScanEndTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

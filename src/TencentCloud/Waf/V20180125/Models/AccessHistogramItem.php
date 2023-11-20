@@ -24,11 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBTime(integer $BTime) 设置时间，单位ms
  * @method integer getCount() 获取日志条数
  * @method void setCount(integer $Count) 设置日志条数
+ * @method integer getBeginTime() 获取时间，单位ms
+ * @method void setBeginTime(integer $BeginTime) 设置时间，单位ms
  */
 class AccessHistogramItem extends AbstractModel
 {
     /**
      * @var integer 时间，单位ms
+     * @deprecated
      */
     public $BTime;
 
@@ -38,8 +41,14 @@ class AccessHistogramItem extends AbstractModel
     public $Count;
 
     /**
+     * @var integer 时间，单位ms
+     */
+    public $BeginTime;
+
+    /**
      * @param integer $BTime 时间，单位ms
      * @param integer $Count 日志条数
+     * @param integer $BeginTime 时间，单位ms
      */
     function __construct()
     {
@@ -60,6 +69,10 @@ class AccessHistogramItem extends AbstractModel
 
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
+            $this->BeginTime = $param["BeginTime"];
         }
     }
 }

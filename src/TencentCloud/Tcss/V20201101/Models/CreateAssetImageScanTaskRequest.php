@@ -34,11 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
  * @method array getExcludeImageIds() 获取根据过滤条件筛选出镜像，再排除个别镜像
  * @method void setExcludeImageIds(array $ExcludeImageIds) 设置根据过滤条件筛选出镜像，再排除个别镜像
+ * @method boolean getContainerRunning() 获取镜像是否存在运行中的容器
+ * @method void setContainerRunning(boolean $ContainerRunning) 设置镜像是否存在运行中的容器
+ * @method integer getScanScope() 获取扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+ * @method void setScanScope(integer $ScanScope) 设置扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+ * @method integer getTimeout() 获取任务超时时长单位秒，默认1小时
+ * @method void setTimeout(integer $Timeout) 设置任务超时时长单位秒，默认1小时
  */
 class CreateAssetImageScanTaskRequest extends AbstractModel
 {
     /**
      * @var boolean 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @deprecated
      */
     public $All;
 
@@ -73,6 +80,21 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
     public $ExcludeImageIds;
 
     /**
+     * @var boolean 镜像是否存在运行中的容器
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var integer 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     */
+    public $ScanScope;
+
+    /**
+     * @var integer 任务超时时长单位秒，默认1小时
+     */
+    public $Timeout;
+
+    /**
      * @param boolean $All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
      * @param array $Images 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
      * @param boolean $ScanVul 扫描漏洞；漏洞，木马和风险需选其一
@@ -80,6 +102,9 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
      * @param boolean $ScanRisk 扫描风险；漏洞，木马和风险需选其一
      * @param array $Filters 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
      * @param array $ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
+     * @param boolean $ContainerRunning 镜像是否存在运行中的容器
+     * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * @param integer $Timeout 任务超时时长单位秒，默认1小时
      */
     function __construct()
     {
@@ -125,6 +150,18 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
 
         if (array_key_exists("ExcludeImageIds",$param) and $param["ExcludeImageIds"] !== null) {
             $this->ExcludeImageIds = $param["ExcludeImageIds"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

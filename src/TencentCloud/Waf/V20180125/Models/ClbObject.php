@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPostCLSStatus(integer $PostCLSStatus) 设置clb投递开关
  * @method integer getPostCKafkaStatus() 获取kafka投递开关
  * @method void setPostCKafkaStatus(integer $PostCKafkaStatus) 设置kafka投递开关
+ * @method string getType() 获取对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取对象地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置对象地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClbObject extends AbstractModel
 {
@@ -129,6 +137,18 @@ class ClbObject extends AbstractModel
     public $PostCKafkaStatus;
 
     /**
+     * @var string 对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
+     * @var string 对象地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
      * @param string $ObjectId 对象ID
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -144,6 +164,10 @@ class ClbObject extends AbstractModel
      * @param integer $InstanceLevel waf实例等级，如果未绑定实例为0
      * @param integer $PostCLSStatus clb投递开关
      * @param integer $PostCKafkaStatus kafka投递开关
+     * @param string $Type 对象类型：CLB:负载均衡器，TSE:云原生网关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 对象地域
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -216,6 +240,14 @@ class ClbObject extends AbstractModel
 
         if (array_key_exists("PostCKafkaStatus",$param) and $param["PostCKafkaStatus"] !== null) {
             $this->PostCKafkaStatus = $param["PostCKafkaStatus"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

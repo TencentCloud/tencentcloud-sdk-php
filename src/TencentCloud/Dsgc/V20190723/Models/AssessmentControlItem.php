@@ -38,9 +38,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置评估项创建时间
  * @method string getStatus() 获取评估项启用状态，启用/未启用，取值draft / launched
  * @method void setStatus(string $Status) 设置评估项启用状态，启用/未启用，取值draft / launched
- * @method integer getTemplateCount() 获取评估项关联的模版数量
+ * @method integer getTemplateCount() 获取评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateCount(integer $TemplateCount) 设置评估项关联的模版数量
+ * @method void setTemplateCount(integer $TemplateCount) 设置评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentControlItem extends AbstractModel
@@ -87,7 +87,7 @@ class AssessmentControlItem extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 评估项关联的模版数量
+     * @var integer 评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateCount;
@@ -102,7 +102,7 @@ class AssessmentControlItem extends AbstractModel
      * @param string $ItemSubType 评估项子类型，单选/多选/时间/文本/AKSK等，取值（singlechoice，multichoice，date，text，AKSK……等）
      * @param string $CreatedTime 评估项创建时间
      * @param string $Status 评估项启用状态，启用/未启用，取值draft / launched
-     * @param integer $TemplateCount 评估项关联的模版数量
+     * @param integer $TemplateCount 评估项关联的模板数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

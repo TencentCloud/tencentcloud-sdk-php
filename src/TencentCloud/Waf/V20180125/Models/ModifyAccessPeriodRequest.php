@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAccessPeriod请求参数结构体
  *
- * @method integer getPeriod() 获取访问日志保存期限，范围为[1, 30]
- * @method void setPeriod(integer $Period) 设置访问日志保存期限，范围为[1, 30]
- * @method string getTopicId() 获取日志主题
- * @method void setTopicId(string $TopicId) 设置日志主题
+ * @method integer getPeriod() 获取访问日志保存期限，范围为[1, 180]
+ * @method void setPeriod(integer $Period) 设置访问日志保存期限，范围为[1, 180]
+ * @method string getTopicId() 获取日志主题，新版本不需要再传
+ * @method void setTopicId(string $TopicId) 设置日志主题，新版本不需要再传
  */
 class ModifyAccessPeriodRequest extends AbstractModel
 {
     /**
-     * @var integer 访问日志保存期限，范围为[1, 30]
+     * @var integer 访问日志保存期限，范围为[1, 180]
      */
     public $Period;
 
     /**
-     * @var string 日志主题
+     * @var string 日志主题，新版本不需要再传
      */
     public $TopicId;
 
     /**
-     * @param integer $Period 访问日志保存期限，范围为[1, 30]
-     * @param string $TopicId 日志主题
+     * @param integer $Period 访问日志保存期限，范围为[1, 180]
+     * @param string $TopicId 日志主题，新版本不需要再传
      */
     function __construct()
     {

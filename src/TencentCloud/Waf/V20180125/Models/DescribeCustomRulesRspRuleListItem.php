@@ -44,6 +44,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(string $EventId) 设置事件id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifyTime() 获取修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getValidStatus() 获取生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValidStatus(integer $ValidStatus) 设置生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSource() 获取来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSource(string $Source) 设置来源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeCustomRulesRspRuleListItem extends AbstractModel
 {
@@ -104,6 +116,24 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
     public $EventId;
 
     /**
+     * @var string 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyTime;
+
+    /**
+     * @var integer 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValidStatus;
+
+    /**
+     * @var string 来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Source;
+
+    /**
      * @param string $ActionType 动作类型
      * @param string $Bypass 跳过的策略
      * @param string $CreateTime 创建时间
@@ -115,6 +145,12 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
      * @param string $Status 状态
      * @param array $Strategies 策略详情
      * @param string $EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ValidStatus 生效状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Source 来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -177,6 +213,18 @@ class DescribeCustomRulesRspRuleListItem extends AbstractModel
 
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
+            $this->ValidStatus = $param["ValidStatus"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbTotalQuota(integer $DbTotalQuota) 设置DB已购配额。
  * @method integer getCosTotalQuota() 获取COS已购配额。
  * @method void setCosTotalQuota(integer $CosTotalQuota) 设置COS已购配额。
- * @method string getCosQuotaUnit() 获取COS配额单位，比如TB。
- * @method void setCosQuotaUnit(string $CosQuotaUnit) 设置COS配额单位，比如TB。
+ * @method string getCosQuotaUnit() 获取COS配额单位，例如:TB。
+ * @method void setCosQuotaUnit(string $CosQuotaUnit) 设置COS配额单位，例如:TB。
  * @method integer getRenewFlag() 获取0: 默认状态(用户未设置)
 1: 开启自动续费
 2: 明确不自动续费
@@ -123,7 +123,7 @@ class DspaInstance extends AbstractModel
     public $CosTotalQuota;
 
     /**
-     * @var string COS配额单位，比如TB。
+     * @var string COS配额单位，例如:TB。
      */
     public $CosQuotaUnit;
 
@@ -148,7 +148,7 @@ class DspaInstance extends AbstractModel
      * @param integer $TrialEndAt 体验版本过期时间戳。
      * @param integer $DbTotalQuota DB已购配额。
      * @param integer $CosTotalQuota COS已购配额。
-     * @param string $CosQuotaUnit COS配额单位，比如TB。
+     * @param string $CosQuotaUnit COS配额单位，例如:TB。
      * @param integer $RenewFlag 0: 默认状态(用户未设置)
 1: 开启自动续费
 2: 明确不自动续费

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsecure(integer $Insecure) 设置安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
  * @method array getConnDetectConfig() 获取联通性检测的记录ID
  * @method void setConnDetectConfig(array $ConnDetectConfig) 设置联通性检测的记录ID
+ * @method boolean getNeedScan() 获取”授权&扫描"开关
+ * @method void setNeedScan(boolean $NeedScan) 设置”授权&扫描"开关
  */
 class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $ConnDetectConfig;
 
     /**
+     * @var boolean ”授权&扫描"开关
+     */
+    public $NeedScan;
+
+    /**
      * @param string $Name 仓库名
      * @param string $Username 用户名
      * @param string $Password 密码
@@ -112,6 +119,7 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
      * @param integer $SpeedLimit 限速
      * @param integer $Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
      * @param array $ConnDetectConfig 联通性检测的记录ID
+     * @param boolean $NeedScan ”授权&扫描"开关
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ConnDetectConfig, $obj);
             }
+        }
+
+        if (array_key_exists("NeedScan",$param) and $param["NeedScan"] !== null) {
+            $this->NeedScan = $param["NeedScan"];
         }
     }
 }

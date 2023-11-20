@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroup(string $SecurityGroup) 设置外网安全组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterIntranetSubnetId() 获取内网访问所属子网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterIntranetSubnetId(string $ClusterIntranetSubnetId) 设置内网访问所属子网
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -97,6 +101,12 @@ class DescribeClusterEndpointsResponse extends AbstractModel
     public $SecurityGroup;
 
     /**
+     * @var string 内网访问所属子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterIntranetSubnetId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -114,6 +124,8 @@ class DescribeClusterEndpointsResponse extends AbstractModel
      * @param string $ClusterIntranetDomain 内网域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroup 外网安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterIntranetSubnetId 内网访问所属子网
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -160,6 +172,10 @@ class DescribeClusterEndpointsResponse extends AbstractModel
 
         if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
             $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("ClusterIntranetSubnetId",$param) and $param["ClusterIntranetSubnetId"] !== null) {
+            $this->ClusterIntranetSubnetId = $param["ClusterIntranetSubnetId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

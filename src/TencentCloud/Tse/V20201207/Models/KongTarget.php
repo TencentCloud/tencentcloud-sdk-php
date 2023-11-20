@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置Target的来源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCvmInstanceId() 获取CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCvmInstanceId(string $CvmInstanceId) 设置CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCvmInstanceName() 获取CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCvmInstanceName(string $CvmInstanceName) 设置CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongTarget extends AbstractModel
 {
@@ -84,6 +92,18 @@ class KongTarget extends AbstractModel
     public $Source;
 
     /**
+     * @var string CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CvmInstanceId;
+
+    /**
+     * @var string CVM实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CvmInstanceName;
+
+    /**
      * @param string $Host Host
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
@@ -95,6 +115,10 @@ class KongTarget extends AbstractModel
      * @param string $CreatedTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source Target的来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CvmInstanceId CVM实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CvmInstanceName CVM实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +156,14 @@ class KongTarget extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("CvmInstanceId",$param) and $param["CvmInstanceId"] !== null) {
+            $this->CvmInstanceId = $param["CvmInstanceId"];
+        }
+
+        if (array_key_exists("CvmInstanceName",$param) and $param["CvmInstanceName"] !== null) {
+            $this->CvmInstanceName = $param["CvmInstanceName"];
         }
     }
 }

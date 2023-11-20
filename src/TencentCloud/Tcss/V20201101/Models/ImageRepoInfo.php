@@ -136,6 +136,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveInfoCnt(integer $SensitiveInfoCnt) 设置敏感信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRecommendedFix() 获取是否推荐处置
+ * @method void setRecommendedFix(boolean $RecommendedFix) 设置是否推荐处置
  */
 class ImageRepoInfo extends AbstractModel
 {
@@ -371,6 +373,11 @@ class ImageRepoInfo extends AbstractModel
     public $SensitiveInfoCnt;
 
     /**
+     * @var boolean 是否推荐处置
+     */
+    public $RecommendedFix;
+
+    /**
      * @param string $ImageDigest 镜像Digest
      * @param string $ImageRepoAddress 镜像仓库地址
      * @param string $RegistryType 仓库类型
@@ -429,6 +436,7 @@ class ImageRepoInfo extends AbstractModel
      * @param boolean $HasNeedFixVul 是否存在必修漏洞
      * @param integer $SensitiveInfoCnt 敏感信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RecommendedFix 是否推荐处置
      */
     function __construct()
     {
@@ -613,6 +621,10 @@ class ImageRepoInfo extends AbstractModel
 
         if (array_key_exists("SensitiveInfoCnt",$param) and $param["SensitiveInfoCnt"] !== null) {
             $this->SensitiveInfoCnt = $param["SensitiveInfoCnt"];
+        }
+
+        if (array_key_exists("RecommendedFix",$param) and $param["RecommendedFix"] !== null) {
+            $this->RecommendedFix = $param["RecommendedFix"];
         }
     }
 }

@@ -50,14 +50,14 @@ use TencentCloud\Common\AbstractModel;
 - 如果发起方指定的补充签署人是企业签署人，则需要提供企业名称或者企业OpenId；
 
 - 如果不指定，则使用姓名和手机号进行补充。
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
  * @method integer getFillApproverType() 获取签署人信息补充方式
 
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
  * @method void setFillApproverType(integer $FillApproverType) 设置签署人信息补充方式
 
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+ * @method UserInfo getOperator() 获取操作人信息
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息
  */
 class ChannelCreateFlowApproversRequest extends AbstractModel
 {
@@ -89,16 +89,16 @@ class ChannelCreateFlowApproversRequest extends AbstractModel
     public $Approvers;
 
     /**
+     * @var integer 签署人信息补充方式
+
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     */
+    public $FillApproverType;
+
+    /**
      * @var UserInfo 操作人信息
      */
     public $Operator;
-
-    /**
-     * @var integer 签署人信息补充方式
-
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
-     */
-    public $FillApproverType;
 
     /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
@@ -116,10 +116,10 @@ class ChannelCreateFlowApproversRequest extends AbstractModel
 - 如果发起方指定的补充签署人是企业签署人，则需要提供企业名称或者企业OpenId；
 
 - 如果不指定，则使用姓名和手机号进行补充。
-     * @param UserInfo $Operator 操作人信息
      * @param integer $FillApproverType 签署人信息补充方式
 
-<ul><li>**1**: 补充动态签署人，可补充企业和个人签署人。注: `每个签署方节点签署人是唯一的，一个节点只支持传入一个签署人信息`</li></ul>
+<ul><li>**1**: 表示往未指定签署人的节点，添加一个明确的签署人，支持企业或个人签署方。</li></ul>
+     * @param UserInfo $Operator 操作人信息
      */
     function __construct()
     {
@@ -152,13 +152,13 @@ class ChannelCreateFlowApproversRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("FillApproverType",$param) and $param["FillApproverType"] !== null) {
+            $this->FillApproverType = $param["FillApproverType"];
+        }
+
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("FillApproverType",$param) and $param["FillApproverType"] !== null) {
-            $this->FillApproverType = $param["FillApproverType"];
         }
     }
 }

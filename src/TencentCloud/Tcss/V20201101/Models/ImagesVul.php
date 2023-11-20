@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAttackLevel() 获取攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImagesVul extends AbstractModel
 {
@@ -149,6 +153,12 @@ class ImagesVul extends AbstractModel
     public $Tag;
 
     /**
+     * @var integer 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttackLevel;
+
+    /**
      * @param string $CVEID 漏洞id
      * @param string $Name 漏洞名称
      * @param string $Component 组件
@@ -167,6 +177,8 @@ class ImagesVul extends AbstractModel
      * @param string $FixedVersions 修复版本号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AttackLevel 攻击热度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -248,6 +260,10 @@ class ImagesVul extends AbstractModel
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("AttackLevel",$param) and $param["AttackLevel"] !== null) {
+            $this->AttackLevel = $param["AttackLevel"];
         }
     }
 }

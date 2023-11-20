@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScenes请求参数结构体
  *
- * @method array getSceneIds() 获取["sc-abcdefgh"]
- * @method void setSceneIds(array $SceneIds) 设置["sc-abcdefgh"]
+ * @method array getSceneIds() 获取场景id列表
+ * @method void setSceneIds(array $SceneIds) 设置场景id列表
  */
 class DescribeScenesRequest extends AbstractModel
 {
     /**
-     * @var array ["sc-abcdefgh"]
+     * @var array 场景id列表
      */
     public $SceneIds;
 
     /**
-     * @param array $SceneIds ["sc-abcdefgh"]
+     * @param array $SceneIds 场景id列表
      */
     function __construct()
     {

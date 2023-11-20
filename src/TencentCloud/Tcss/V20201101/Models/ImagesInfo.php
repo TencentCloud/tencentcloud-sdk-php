@@ -62,6 +62,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAuthorized(integer $IsAuthorized) 设置是否授权，1是0否
  * @method integer getComponentCnt() 获取组件个数
  * @method void setComponentCnt(integer $ComponentCnt) 设置组件个数
+ * @method integer getCriticalLevelVulCnt() 获取严重漏洞数
+ * @method void setCriticalLevelVulCnt(integer $CriticalLevelVulCnt) 设置严重漏洞数
+ * @method integer getHighLevelVulCnt() 获取高危漏洞数
+ * @method void setHighLevelVulCnt(integer $HighLevelVulCnt) 设置高危漏洞数
+ * @method integer getMediumLevelVulCnt() 获取中危漏洞数
+ * @method void setMediumLevelVulCnt(integer $MediumLevelVulCnt) 设置中危漏洞数
+ * @method integer getLowLevelVulCnt() 获取低危漏洞数
+ * @method void setLowLevelVulCnt(integer $LowLevelVulCnt) 设置低危漏洞数
+ * @method boolean getIsLatestImage() 获取是否最新版本镜像
+ * @method void setIsLatestImage(boolean $IsLatestImage) 设置是否最新版本镜像
+ * @method boolean getRecommendedFix() 获取是否推荐处置
+ * @method void setRecommendedFix(boolean $RecommendedFix) 设置是否推荐处置
  */
 class ImagesInfo extends AbstractModel
 {
@@ -171,6 +183,36 @@ class ImagesInfo extends AbstractModel
     public $ComponentCnt;
 
     /**
+     * @var integer 严重漏洞数
+     */
+    public $CriticalLevelVulCnt;
+
+    /**
+     * @var integer 高危漏洞数
+     */
+    public $HighLevelVulCnt;
+
+    /**
+     * @var integer 中危漏洞数
+     */
+    public $MediumLevelVulCnt;
+
+    /**
+     * @var integer 低危漏洞数
+     */
+    public $LowLevelVulCnt;
+
+    /**
+     * @var boolean 是否最新版本镜像
+     */
+    public $IsLatestImage;
+
+    /**
+     * @var boolean 是否推荐处置
+     */
+    public $RecommendedFix;
+
+    /**
      * @param string $ImageID 镜像id
      * @param string $ImageName 镜像名称
      * @param string $CreateTime 创建时间
@@ -192,6 +234,12 @@ class ImagesInfo extends AbstractModel
      * @param integer $IsSuggest 是否是重点关注镜像，为0不是，非0是
      * @param integer $IsAuthorized 是否授权，1是0否
      * @param integer $ComponentCnt 组件个数
+     * @param integer $CriticalLevelVulCnt 严重漏洞数
+     * @param integer $HighLevelVulCnt 高危漏洞数
+     * @param integer $MediumLevelVulCnt 中危漏洞数
+     * @param integer $LowLevelVulCnt 低危漏洞数
+     * @param boolean $IsLatestImage 是否最新版本镜像
+     * @param boolean $RecommendedFix 是否推荐处置
      */
     function __construct()
     {
@@ -288,6 +336,30 @@ class ImagesInfo extends AbstractModel
 
         if (array_key_exists("ComponentCnt",$param) and $param["ComponentCnt"] !== null) {
             $this->ComponentCnt = $param["ComponentCnt"];
+        }
+
+        if (array_key_exists("CriticalLevelVulCnt",$param) and $param["CriticalLevelVulCnt"] !== null) {
+            $this->CriticalLevelVulCnt = $param["CriticalLevelVulCnt"];
+        }
+
+        if (array_key_exists("HighLevelVulCnt",$param) and $param["HighLevelVulCnt"] !== null) {
+            $this->HighLevelVulCnt = $param["HighLevelVulCnt"];
+        }
+
+        if (array_key_exists("MediumLevelVulCnt",$param) and $param["MediumLevelVulCnt"] !== null) {
+            $this->MediumLevelVulCnt = $param["MediumLevelVulCnt"];
+        }
+
+        if (array_key_exists("LowLevelVulCnt",$param) and $param["LowLevelVulCnt"] !== null) {
+            $this->LowLevelVulCnt = $param["LowLevelVulCnt"];
+        }
+
+        if (array_key_exists("IsLatestImage",$param) and $param["IsLatestImage"] !== null) {
+            $this->IsLatestImage = $param["IsLatestImage"];
+        }
+
+        if (array_key_exists("RecommendedFix",$param) and $param["RecommendedFix"] !== null) {
+            $this->RecommendedFix = $param["RecommendedFix"];
         }
     }
 }

@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEdition(string $Edition) 设置只有两个值有效，sparta-waf，clb-waf，不传则不过滤
  * @method string getInstanceID() 获取WAF实例ID，不传则不过滤
  * @method void setInstanceID(string $InstanceID) 设置WAF实例ID，不传则不过滤
- * @method string getMetricName() 获取十一个值可选：
+ * @method string getMetricName() 获取十二个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
@@ -42,7 +42,8 @@ tamper-防篡改攻击总数趋势图
 leak-防泄露攻击总数趋势图
 acl-访问控制攻击总数趋势图
 http_status-状态码各次数趋势图
- * @method void setMetricName(string $MetricName) 设置十一个值可选：
+wx_access-微信小程序峰值qps趋势图
+ * @method void setMetricName(string $MetricName) 设置十二个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
@@ -54,6 +55,7 @@ tamper-防篡改攻击总数趋势图
 leak-防泄露攻击总数趋势图
 acl-访问控制攻击总数趋势图
 http_status-状态码各次数趋势图
+wx_access-微信小程序峰值qps趋势图
  */
 class DescribePeakPointsRequest extends AbstractModel
 {
@@ -83,7 +85,7 @@ class DescribePeakPointsRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string 十一个值可选：
+     * @var string 十二个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
@@ -95,6 +97,7 @@ tamper-防篡改攻击总数趋势图
 leak-防泄露攻击总数趋势图
 acl-访问控制攻击总数趋势图
 http_status-状态码各次数趋势图
+wx_access-微信小程序峰值qps趋势图
      */
     public $MetricName;
 
@@ -104,7 +107,7 @@ http_status-状态码各次数趋势图
      * @param string $Domain 查询的域名，如果查询所有域名数据，该参数不填写
      * @param string $Edition 只有两个值有效，sparta-waf，clb-waf，不传则不过滤
      * @param string $InstanceID WAF实例ID，不传则不过滤
-     * @param string $MetricName 十一个值可选：
+     * @param string $MetricName 十二个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
@@ -116,6 +119,7 @@ tamper-防篡改攻击总数趋势图
 leak-防泄露攻击总数趋势图
 acl-访问控制攻击总数趋势图
 http_status-状态码各次数趋势图
+wx_access-微信小程序峰值qps趋势图
      */
     function __construct()
     {

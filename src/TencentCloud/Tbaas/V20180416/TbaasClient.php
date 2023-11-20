@@ -25,6 +25,8 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
 /**
  * @method Models\ApplyChainMakerBatchUserCertResponse ApplyChainMakerBatchUserCert(Models\ApplyChainMakerBatchUserCertRequest $req) 批量申请长安链用户签名证书
  * @method Models\ApplyUserCertResponse ApplyUserCert(Models\ApplyUserCertRequest $req) 申请用户证书
+ * @method Models\DescribeFabricBlockResponse DescribeFabricBlock(Models\DescribeFabricBlockRequest $req) 获取Fabric某区块的详细信息
+ * @method Models\DescribeFabricTransactionResponse DescribeFabricTransaction(Models\DescribeFabricTransactionRequest $req) 获取Fabric交易的详细信息
  * @method Models\DownloadUserCertResponse DownloadUserCert(Models\DownloadUserCertRequest $req) 下载用户证书
  * @method Models\GetBlockListResponse GetBlockList(Models\GetBlockListRequest $req) 查看当前网络下的所有区块列表，分页展示
  * @method Models\GetBlockTransactionListForUserResponse GetBlockTransactionListForUser(Models\GetBlockTransactionListForUserRequest $req) 获取区块内的交易列表
@@ -36,6 +38,7 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易
  * @method Models\InvokeChainMakerContractResponse InvokeChainMakerContract(Models\InvokeChainMakerContractRequest $req) 调用长安链合约执行交易
  * @method Models\InvokeChainMakerDemoContractResponse InvokeChainMakerDemoContract(Models\InvokeChainMakerDemoContractRequest $req) 调用长安链体验网络合约执行交易
+ * @method Models\InvokeFabricChaincodeResponse InvokeFabricChaincode(Models\InvokeFabricChaincodeRequest $req) 调用Fabric用户合约执行交易
  * @method Models\QueryResponse Query(Models\QueryRequest $req) 查询交易
  * @method Models\QueryChainMakerBlockTransactionResponse QueryChainMakerBlockTransaction(Models\QueryChainMakerBlockTransactionRequest $req) 查询长安链指定高度区块的交易
  * @method Models\QueryChainMakerContractResponse QueryChainMakerContract(Models\QueryChainMakerContractRequest $req) 调用长安链合约查询
@@ -43,6 +46,7 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
  * @method Models\QueryChainMakerDemoContractResponse QueryChainMakerDemoContract(Models\QueryChainMakerDemoContractRequest $req) 调用长安链体验网络合约查询
  * @method Models\QueryChainMakerDemoTransactionResponse QueryChainMakerDemoTransaction(Models\QueryChainMakerDemoTransactionRequest $req) 通过交易ID查询长安链体验网络交易
  * @method Models\QueryChainMakerTransactionResponse QueryChainMakerTransaction(Models\QueryChainMakerTransactionRequest $req) 通过交易ID查询长安链交易
+ * @method Models\QueryFabricChaincodeResponse QueryFabricChaincode(Models\QueryFabricChaincodeRequest $req) 调用Fabric用户合约查询
  * @method Models\SrvInvokeResponse SrvInvoke(Models\SrvInvokeRequest $req) trustsql服务统一接口
  */
 

@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(string $RiskType) 设置风险类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReferTemplateCount() 获取关联模版个数
+ * @method integer getReferTemplateCount() 获取关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReferTemplateCount(integer $ReferTemplateCount) 设置关联模版个数
+ * @method void setReferTemplateCount(integer $ReferTemplateCount) 设置关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSupportDataSource() 获取支持的数据源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskSide(string $RiskSide) 设置风险面
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getReferTemplateList() 获取关联模版列表
+ * @method array getReferTemplateList() 获取关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReferTemplateList(array $ReferTemplateList) 设置关联模版列表
+ * @method void setReferTemplateList(array $ReferTemplateList) 设置关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentRiskItem extends AbstractModel
@@ -90,7 +90,7 @@ class AssessmentRiskItem extends AbstractModel
     public $RiskType;
 
     /**
-     * @var integer 关联模版个数
+     * @var integer 关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReferTemplateCount;
@@ -108,7 +108,7 @@ class AssessmentRiskItem extends AbstractModel
     public $RiskSide;
 
     /**
-     * @var array 关联模版列表
+     * @var array 关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReferTemplateList;
@@ -124,13 +124,13 @@ class AssessmentRiskItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskType 风险类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReferTemplateCount 关联模版个数
+     * @param integer $ReferTemplateCount 关联模板个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SupportDataSource 支持的数据源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskSide 风险面
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ReferTemplateList 关联模版列表
+     * @param array $ReferTemplateList 关联模板列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

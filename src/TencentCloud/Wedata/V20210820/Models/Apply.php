@@ -50,6 +50,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置状态
  * @method string getApproveTypeName() 获取审批类型名称
  * @method void setApproveTypeName(string $ApproveTypeName) 设置审批类型名称
+ * @method string getErrorMessage() 获取审批异常或者失败信息
+ * @method void setErrorMessage(string $ErrorMessage) 设置审批异常或者失败信息
+ * @method string getApplyName() 获取申请名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplyName(string $ApplyName) 设置申请名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproverId() 获取审批人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproverId(string $ApproverId) 设置审批人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproverName() 获取审批人名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproverName(string $ApproverName) 设置审批人名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproveProjectName() 获取审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApproveProjectName(string $ApproveProjectName) 设置审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Apply extends AbstractModel
 {
@@ -117,6 +135,35 @@ class Apply extends AbstractModel
     public $ApproveTypeName;
 
     /**
+     * @var string 审批异常或者失败信息
+     */
+    public $ErrorMessage;
+
+    /**
+     * @var string 申请名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplyName;
+
+    /**
+     * @var string 审批人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproverId;
+
+    /**
+     * @var string 审批人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproverName;
+
+    /**
+     * @var string 审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApproveProjectName;
+
+    /**
      * @param string $ApplicantId 申请人id
      * @param string $ApplicantName 申请人名称
      * @param string $Remark 审批备注
@@ -132,6 +179,15 @@ class Apply extends AbstractModel
      * @param string $ApproveClassificationName 审批分类名称
      * @param string $Status 状态
      * @param string $ApproveTypeName 审批类型名称
+     * @param string $ErrorMessage 审批异常或者失败信息
+     * @param string $ApplyName 申请名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproverId 审批人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproverName 审批人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproveProjectName 审批所属项目
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +248,26 @@ class Apply extends AbstractModel
 
         if (array_key_exists("ApproveTypeName",$param) and $param["ApproveTypeName"] !== null) {
             $this->ApproveTypeName = $param["ApproveTypeName"];
+        }
+
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
+        }
+
+        if (array_key_exists("ApplyName",$param) and $param["ApplyName"] !== null) {
+            $this->ApplyName = $param["ApplyName"];
+        }
+
+        if (array_key_exists("ApproverId",$param) and $param["ApproverId"] !== null) {
+            $this->ApproverId = $param["ApproverId"];
+        }
+
+        if (array_key_exists("ApproverName",$param) and $param["ApproverName"] !== null) {
+            $this->ApproverName = $param["ApproverName"];
+        }
+
+        if (array_key_exists("ApproveProjectName",$param) and $param["ApproveProjectName"] !== null) {
+            $this->ApproveProjectName = $param["ApproveProjectName"];
         }
     }
 }

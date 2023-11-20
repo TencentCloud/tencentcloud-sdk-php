@@ -42,14 +42,14 @@ use TencentCloud\Common\AbstractModel;
 0: false，关闭自动按月续费
  * @method integer getTimeSpan() 获取购买时长，取值范围：1～50
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长，取值范围：1～50
- * @method array getTags() 获取集群的标签列表(已废弃)
- * @method void setTags(array $Tags) 设置集群的标签列表(已废弃)
  * @method string getClusterName() 获取集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
  * @method void setClusterName(string $ClusterName) 设置集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
  * @method VpcInfo getVpcs() 获取vpc网络标签
  * @method void setVpcs(VpcInfo $Vpcs) 设置vpc网络标签
+ * @method array getTags() 获取集群的标签列表(已废弃)
+ * @method void setTags(array $Tags) 设置集群的标签列表(已废弃)
  */
 class CreateProClusterRequest extends AbstractModel
 {
@@ -85,11 +85,6 @@ class CreateProClusterRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var array 集群的标签列表(已废弃)
-     */
-    public $Tags;
-
-    /**
      * @var string 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      */
     public $ClusterName;
@@ -105,6 +100,11 @@ class CreateProClusterRequest extends AbstractModel
     public $Vpcs;
 
     /**
+     * @var array 集群的标签列表(已废弃)
+     */
+    public $Tags;
+
+    /**
      * @param string $ZoneIds 多可用区部署选择三个可用区，示例"200002","200003","200004"
 
 单可用区部署选择一个可用区，示例"200002"
@@ -116,10 +116,10 @@ class CreateProClusterRequest extends AbstractModel
 
 0: false，关闭自动按月续费
      * @param integer $TimeSpan 购买时长，取值范围：1～50
-     * @param array $Tags 集群的标签列表(已废弃)
      * @param string $ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param VpcInfo $Vpcs vpc网络标签
+     * @param array $Tags 集群的标签列表(已废弃)
      */
     function __construct()
     {
@@ -154,15 +154,6 @@ class CreateProClusterRequest extends AbstractModel
             $this->TimeSpan = $param["TimeSpan"];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new Tag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
-        }
-
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
         }
@@ -174,6 +165,15 @@ class CreateProClusterRequest extends AbstractModel
         if (array_key_exists("Vpcs",$param) and $param["Vpcs"] !== null) {
             $this->Vpcs = new VpcInfo();
             $this->Vpcs->deserialize($param["Vpcs"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

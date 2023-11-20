@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnable() 获取开关
  * @method void setEnable(boolean $Enable) 设置开关
- * @method string getScanTime() 获取扫描时间
- * @method void setScanTime(string $ScanTime) 设置扫描时间
+ * @method string getScanTime() 获取扫描开始时间
+01:00 时分
+ * @method void setScanTime(string $ScanTime) 设置扫描开始时间
+01:00 时分
  * @method integer getScanPeriod() 获取扫描周期
  * @method void setScanPeriod(integer $ScanPeriod) 设置扫描周期
  * @method boolean getScanVirus() 获取扫描木马
@@ -36,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAll(boolean $All) 设置全部镜像
  * @method array getImages() 获取自定义镜像
  * @method void setImages(array $Images) 设置自定义镜像
+ * @method boolean getContainerRunning() 获取镜像是否存在运行中的容器
+ * @method void setContainerRunning(boolean $ContainerRunning) 设置镜像是否存在运行中的容器
+ * @method integer getScanScope() 获取扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+ * @method void setScanScope(integer $ScanScope) 设置扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+ * @method string getScanEndTime() 获取扫描结束时间
+02:00 时分
+ * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间
+02:00 时分
  */
 class CreateAssetImageScanSettingRequest extends AbstractModel
 {
@@ -45,7 +55,8 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var string 扫描时间
+     * @var string 扫描开始时间
+01:00 时分
      */
     public $ScanTime;
 
@@ -71,6 +82,7 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
 
     /**
      * @var boolean 全部镜像
+     * @deprecated
      */
     public $All;
 
@@ -80,14 +92,35 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
     public $Images;
 
     /**
+     * @var boolean 镜像是否存在运行中的容器
+     */
+    public $ContainerRunning;
+
+    /**
+     * @var integer 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     */
+    public $ScanScope;
+
+    /**
+     * @var string 扫描结束时间
+02:00 时分
+     */
+    public $ScanEndTime;
+
+    /**
      * @param boolean $Enable 开关
-     * @param string $ScanTime 扫描时间
+     * @param string $ScanTime 扫描开始时间
+01:00 时分
      * @param integer $ScanPeriod 扫描周期
      * @param boolean $ScanVirus 扫描木马
      * @param boolean $ScanRisk 扫描敏感信息
      * @param boolean $ScanVul 扫描漏洞
      * @param boolean $All 全部镜像
      * @param array $Images 自定义镜像
+     * @param boolean $ContainerRunning 镜像是否存在运行中的容器
+     * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
+     * @param string $ScanEndTime 扫描结束时间
+02:00 时分
      */
     function __construct()
     {
@@ -132,6 +165,18 @@ class CreateAssetImageScanSettingRequest extends AbstractModel
 
         if (array_key_exists("Images",$param) and $param["Images"] !== null) {
             $this->Images = $param["Images"];
+        }
+
+        if (array_key_exists("ContainerRunning",$param) and $param["ContainerRunning"] !== null) {
+            $this->ContainerRunning = $param["ContainerRunning"];
+        }
+
+        if (array_key_exists("ScanScope",$param) and $param["ScanScope"] !== null) {
+            $this->ScanScope = $param["ScanScope"];
+        }
+
+        if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
+            $this->ScanEndTime = $param["ScanEndTime"];
         }
     }
 }

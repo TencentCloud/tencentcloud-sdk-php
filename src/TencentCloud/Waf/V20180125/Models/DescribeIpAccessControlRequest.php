@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置ip
  * @method integer getValidStatus() 获取生效状态
  * @method void setValidStatus(integer $ValidStatus) 设置生效状态
+ * @method string getValidTimeStampMin() 获取最小有效时间的时间戳
+ * @method void setValidTimeStampMin(string $ValidTimeStampMin) 设置最小有效时间的时间戳
+ * @method string getValidTimeStampMax() 获取最大有效时间的时间戳
+ * @method void setValidTimeStampMax(string $ValidTimeStampMax) 设置最大有效时间的时间戳
  */
 class DescribeIpAccessControlRequest extends AbstractModel
 {
@@ -66,11 +70,13 @@ class DescribeIpAccessControlRequest extends AbstractModel
 
     /**
      * @var integer 最小有效时间的时间戳
+     * @deprecated
      */
     public $VtsMin;
 
     /**
      * @var integer 最大有效时间的时间戳
+     * @deprecated
      */
     public $VtsMax;
 
@@ -115,6 +121,16 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $ValidStatus;
 
     /**
+     * @var string 最小有效时间的时间戳
+     */
+    public $ValidTimeStampMin;
+
+    /**
+     * @var string 最大有效时间的时间戳
+     */
+    public $ValidTimeStampMax;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Count 计数标识
      * @param integer $ActionType 动作，40表示查询白名单，42表示查询黑名单
@@ -128,6 +144,8 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param string $Sort 排序参数
      * @param string $Ip ip
      * @param integer $ValidStatus 生效状态
+     * @param string $ValidTimeStampMin 最小有效时间的时间戳
+     * @param string $ValidTimeStampMax 最大有效时间的时间戳
      */
     function __construct()
     {
@@ -192,6 +210,14 @@ class DescribeIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
             $this->ValidStatus = $param["ValidStatus"];
+        }
+
+        if (array_key_exists("ValidTimeStampMin",$param) and $param["ValidTimeStampMin"] !== null) {
+            $this->ValidTimeStampMin = $param["ValidTimeStampMin"];
+        }
+
+        if (array_key_exists("ValidTimeStampMax",$param) and $param["ValidTimeStampMax"] !== null) {
+            $this->ValidTimeStampMax = $param["ValidTimeStampMax"];
         }
     }
 }

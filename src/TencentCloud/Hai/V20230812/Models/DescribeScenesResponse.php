@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScenes返回参数结构体
  *
- * @method array getSceneSet() 获取scene info
+ * @method array getSceneSet() 获取场景详情
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSceneSet(array $SceneSet) 设置scene info
+ * @method void setSceneSet(array $SceneSet) 设置场景详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScenesResponse extends AbstractModel
 {
     /**
-     * @var array scene info
+     * @var array 场景详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneSet;
@@ -41,7 +41,7 @@ class DescribeScenesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SceneSet scene info
+     * @param array $SceneSet 场景详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

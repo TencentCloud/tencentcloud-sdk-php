@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSort(string $Sort) 设置排序参数
  * @method string getIp() 获取IP
  * @method void setIp(string $Ip) 设置IP
+ * @method integer getValidTimeStampMin() 获取有效时间最小时间戳
+ * @method void setValidTimeStampMin(integer $ValidTimeStampMin) 设置有效时间最小时间戳
+ * @method integer getValidTimeStampMax() 获取有效时间最大时间戳
+ * @method void setValidTimeStampMax(integer $ValidTimeStampMax) 设置有效时间最大时间戳
  */
 class DescribeIpHitItemsRequest extends AbstractModel
 {
@@ -64,11 +68,13 @@ class DescribeIpHitItemsRequest extends AbstractModel
 
     /**
      * @var integer 有效时间最小时间戳
+     * @deprecated
      */
     public $VtsMin;
 
     /**
      * @var integer 有效时间最大时间戳
+     * @deprecated
      */
     public $VtsMax;
 
@@ -108,6 +114,16 @@ class DescribeIpHitItemsRequest extends AbstractModel
     public $Ip;
 
     /**
+     * @var integer 有效时间最小时间戳
+     */
+    public $ValidTimeStampMin;
+
+    /**
+     * @var integer 有效时间最大时间戳
+     */
+    public $ValidTimeStampMax;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Count 计数标识
      * @param string $Category 类别
@@ -120,6 +136,8 @@ class DescribeIpHitItemsRequest extends AbstractModel
      * @param string $Name 策略名称
      * @param string $Sort 排序参数
      * @param string $Ip IP
+     * @param integer $ValidTimeStampMin 有效时间最小时间戳
+     * @param integer $ValidTimeStampMax 有效时间最大时间戳
      */
     function __construct()
     {
@@ -180,6 +198,14 @@ class DescribeIpHitItemsRequest extends AbstractModel
 
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
             $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("ValidTimeStampMin",$param) and $param["ValidTimeStampMin"] !== null) {
+            $this->ValidTimeStampMin = $param["ValidTimeStampMin"];
+        }
+
+        if (array_key_exists("ValidTimeStampMax",$param) and $param["ValidTimeStampMax"] !== null) {
+            $this->ValidTimeStampMax = $param["ValidTimeStampMax"];
         }
     }
 }

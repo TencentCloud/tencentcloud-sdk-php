@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageID(string $ImageID) 设置镜像ID
  * @method string getImageName() 获取镜像名称
  * @method void setImageName(string $ImageName) 设置镜像名称
+ * @method string getImageDigest() 获取镜像摘要
+ * @method void setImageDigest(string $ImageDigest) 设置镜像摘要
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method integer getSize() 获取镜像大小
@@ -132,6 +134,11 @@ class DescribeAssetImageDetailResponse extends AbstractModel
      * @var string 镜像名称
      */
     public $ImageName;
+
+    /**
+     * @var string 镜像摘要
+     */
+    public $ImageDigest;
 
     /**
      * @var string 创建时间
@@ -292,6 +299,7 @@ class DescribeAssetImageDetailResponse extends AbstractModel
     /**
      * @param string $ImageID 镜像ID
      * @param string $ImageName 镜像名称
+     * @param string $ImageDigest 镜像摘要
      * @param string $CreateTime 创建时间
      * @param integer $Size 镜像大小
      * @param integer $HostCnt 关联主机个数
@@ -360,6 +368,10 @@ class DescribeAssetImageDetailResponse extends AbstractModel
 
         if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
             $this->ImageName = $param["ImageName"];
+        }
+
+        if (array_key_exists("ImageDigest",$param) and $param["ImageDigest"] !== null) {
+            $this->ImageDigest = $param["ImageDigest"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

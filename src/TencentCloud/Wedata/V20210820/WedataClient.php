@@ -114,6 +114,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeAllTaskTypeResponse DescribeAllTaskType(Models\DescribeAllTaskTypeRequest $req) 获取所有任务类型
  * @method Models\DescribeAllUsedVersionSonResponse DescribeAllUsedVersionSon(Models\DescribeAllUsedVersionSonRequest $req) 根据任务Id查找生产态子任务
  * @method Models\DescribeApproveListResponse DescribeApproveList(Models\DescribeApproveListRequest $req) 获取待审批列表
+ * @method Models\DescribeApproveTypeListResponse DescribeApproveTypeList(Models\DescribeApproveTypeListRequest $req) 获取审批分类列表
  * @method Models\DescribeBaselineAllTaskDagResponse DescribeBaselineAllTaskDag(Models\DescribeBaselineAllTaskDagRequest $req) 查询基线DAG
  * @method Models\DescribeBaselineByIdResponse DescribeBaselineById(Models\DescribeBaselineByIdRequest $req) 基线列表
  * @method Models\DescribeBaselineInstanceDagResponse DescribeBaselineInstanceDag(Models\DescribeBaselineInstanceDagRequest $req) 查询基线实例DAG

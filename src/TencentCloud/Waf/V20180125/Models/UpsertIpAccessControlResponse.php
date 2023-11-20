@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedCount(integer $FailedCount) 设置添加或修改失败的数目
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIds() 获取添加或修改的IP数据Id列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIds(array $Ids) 设置添加或修改的IP数据Id列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +50,12 @@ class UpsertIpAccessControlResponse extends AbstractModel
     public $FailedCount;
 
     /**
+     * @var array 添加或修改的IP数据Id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ids;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +64,8 @@ class UpsertIpAccessControlResponse extends AbstractModel
      * @param string $FailedItems 添加或修改失败的条目
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailedCount 添加或修改失败的数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Ids 添加或修改的IP数据Id列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -76,6 +88,10 @@ class UpsertIpAccessControlResponse extends AbstractModel
 
         if (array_key_exists("FailedCount",$param) and $param["FailedCount"] !== null) {
             $this->FailedCount = $param["FailedCount"];
+        }
+
+        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
+            $this->Ids = $param["Ids"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAntiTamper(integer $AntiTamper) 设置防篡改模块开关，0或者1
  * @method integer getAntiLeakage() 获取防泄漏模块开关，0或者1
  * @method void setAntiLeakage(integer $AntiLeakage) 设置防泄漏模块开关，0或者1
+ * @method integer getRateLimit() 获取限流模块开关，0或1
+ * @method void setRateLimit(integer $RateLimit) 设置限流模块开关，0或1
  */
 class ModifyModuleStatusRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyModuleStatusRequest extends AbstractModel
     public $AntiLeakage;
 
     /**
+     * @var integer 限流模块开关，0或1
+     */
+    public $RateLimit;
+
+    /**
      * @param string $Domain 需要设置的domain
      * @param integer $WebSecurity WEB 安全模块开关，0或1
      * @param integer $AccessControl 访问控制模块开关，0或者1
@@ -80,6 +87,7 @@ class ModifyModuleStatusRequest extends AbstractModel
      * @param integer $ApiProtection API安全模块开关，0或者1
      * @param integer $AntiTamper 防篡改模块开关，0或者1
      * @param integer $AntiLeakage 防泄漏模块开关，0或者1
+     * @param integer $RateLimit 限流模块开关，0或1
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyModuleStatusRequest extends AbstractModel
 
         if (array_key_exists("AntiLeakage",$param) and $param["AntiLeakage"] !== null) {
             $this->AntiLeakage = $param["AntiLeakage"];
+        }
+
+        if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {
+            $this->RateLimit = $param["RateLimit"];
         }
     }
 }

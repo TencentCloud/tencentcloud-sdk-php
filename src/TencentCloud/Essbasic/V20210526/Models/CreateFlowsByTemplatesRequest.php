@@ -55,12 +55,12 @@ use TencentCloud\Common\AbstractModel;
 `如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过回调通知的方式或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询得到`
 
  * @method integer getPreviewType() 获取预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
 
  * @method void setPreviewType(integer $PreviewType) 设置预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
 
@@ -100,7 +100,7 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
 
     /**
      * @var integer 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
 
@@ -132,7 +132,7 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
 `如果预览的文件中指定了动态表格控件，此时此接口返回的是合成前的文档预览链接，合成完成后的文档预览链接需要通过回调通知的方式或使用返回的TaskInfo中的TaskId通过ChannelGetTaskResultApi接口查询得到`
 
      * @param integer $PreviewType 预览模式下产生的预览链接类型 
-<ul><li> **0** :(默认) 文件流 ,点开后后下载预览的合同PDF文件 </li>
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
 <li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
 注: `此参数在NeedPreview 为true时有效`
 

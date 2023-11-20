@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则id，用未设置时为0
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoScanEnabled() 获取自动扫描开关，0：关闭，1：开启
+ * @method void setAutoScanEnabled(integer $AutoScanEnabled) 设置自动扫描开关，0：关闭，1：开启
+ * @method array getScanType() 获取自动扫描范围
+ * @method void setScanType(array $ScanType) 设置自动扫描范围
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,6 +77,16 @@ class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel
     public $RuleId;
 
     /**
+     * @var integer 自动扫描开关，0：关闭，1：开启
+     */
+    public $AutoScanEnabled;
+
+    /**
+     * @var array 自动扫描范围
+     */
+    public $ScanType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +101,8 @@ class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 规则id，用未设置时为0
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoScanEnabled 自动扫描开关，0：关闭，1：开启
+     * @param array $ScanType 自动扫描范围
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -120,6 +136,14 @@ class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("AutoScanEnabled",$param) and $param["AutoScanEnabled"] !== null) {
+            $this->AutoScanEnabled = $param["AutoScanEnabled"];
+        }
+
+        if (array_key_exists("ScanType",$param) and $param["ScanType"] !== null) {
+            $this->ScanType = $param["ScanType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

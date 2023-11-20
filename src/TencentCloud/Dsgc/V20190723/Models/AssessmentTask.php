@@ -36,14 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessDept(string $BusinessDept) 设置业务所属部门
  * @method string getBusinessOwner() 获取业务负责人
  * @method void setBusinessOwner(string $BusinessOwner) 设置业务负责人
- * @method string getTemplateId() 获取评估模版Id
- * @method void setTemplateId(string $TemplateId) 设置评估模版Id
- * @method string getTemplateName() 获取评估模版名称
- * @method void setTemplateName(string $TemplateName) 设置评估模版名称
- * @method integer getComplianceGroupId() 获取分类分级模版Id
- * @method void setComplianceGroupId(integer $ComplianceGroupId) 设置分类分级模版Id
- * @method string getComplianceGroupName() 获取分类分级模版名称
- * @method void setComplianceGroupName(string $ComplianceGroupName) 设置分类分级模版名称
+ * @method string getTemplateId() 获取评估模板Id
+ * @method void setTemplateId(string $TemplateId) 设置评估模板Id
+ * @method string getTemplateName() 获取评估模板名称
+ * @method void setTemplateName(string $TemplateName) 设置评估模板名称
+ * @method integer getComplianceGroupId() 获取分类分级模板Id
+ * @method void setComplianceGroupId(integer $ComplianceGroupId) 设置分类分级模板Id
+ * @method string getComplianceGroupName() 获取分类分级模板名称
+ * @method void setComplianceGroupName(string $ComplianceGroupName) 设置分类分级模板名称
  * @method integer getControlItemCount() 获取评估项数量
  * @method void setControlItemCount(integer $ControlItemCount) 设置评估项数量
  * @method integer getRiskCount() 获取风险项数量（仅状态为finished的风险项不计入总数，其余状态均算入该数量）
@@ -64,9 +64,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorInfo() 获取评估任务失败信息
  * @method void setErrorInfo(string $ErrorInfo) 设置评估任务失败信息
- * @method integer getTemplateUid() 获取模版主键id
+ * @method integer getTemplateUid() 获取模板主键id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateUid(integer $TemplateUid) 设置模版主键id
+ * @method void setTemplateUid(integer $TemplateUid) 设置模板主键id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgressPercent() 获取进度百分比
 注意：此字段可能返回 null，表示取不到有效值。
@@ -108,22 +108,22 @@ class AssessmentTask extends AbstractModel
     public $BusinessOwner;
 
     /**
-     * @var string 评估模版Id
+     * @var string 评估模板Id
      */
     public $TemplateId;
 
     /**
-     * @var string 评估模版名称
+     * @var string 评估模板名称
      */
     public $TemplateName;
 
     /**
-     * @var integer 分类分级模版Id
+     * @var integer 分类分级模板Id
      */
     public $ComplianceGroupId;
 
     /**
-     * @var string 分类分级模版名称
+     * @var string 分类分级模板名称
      */
     public $ComplianceGroupName;
 
@@ -170,7 +170,7 @@ class AssessmentTask extends AbstractModel
     public $ErrorInfo;
 
     /**
-     * @var integer 模版主键id
+     * @var integer 模板主键id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateUid;
@@ -190,10 +190,10 @@ class AssessmentTask extends AbstractModel
      * @param string $BusinessName 业务名称
      * @param string $BusinessDept 业务所属部门
      * @param string $BusinessOwner 业务负责人
-     * @param string $TemplateId 评估模版Id
-     * @param string $TemplateName 评估模版名称
-     * @param integer $ComplianceGroupId 分类分级模版Id
-     * @param string $ComplianceGroupName 分类分级模版名称
+     * @param string $TemplateId 评估模板Id
+     * @param string $TemplateName 评估模板名称
+     * @param integer $ComplianceGroupId 分类分级模板Id
+     * @param string $ComplianceGroupName 分类分级模板名称
      * @param integer $ControlItemCount 评估项数量
      * @param integer $RiskCount 风险项数量（仅状态为finished的风险项不计入总数，其余状态均算入该数量）
      * @param string $FinishedTime 评估任务完成时间
@@ -204,7 +204,7 @@ class AssessmentTask extends AbstractModel
      * @param DiscoveryCondition $DiscoveryCondition 数据源信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorInfo 评估任务失败信息
-     * @param integer $TemplateUid 模版主键id
+     * @param integer $TemplateUid 模板主键id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProgressPercent 进度百分比
 注意：此字段可能返回 null，表示取不到有效值。

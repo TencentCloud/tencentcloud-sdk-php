@@ -124,6 +124,7 @@ class DescribeBillResourceSummaryForOrganizationRequest extends AbstractModel
 
     /**
      * @var string 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * @deprecated
      */
     public $PeriodType;
 

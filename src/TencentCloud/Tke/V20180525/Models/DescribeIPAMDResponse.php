@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(array $SubnetIds) 设置子网信息，已安装eniipamd组件才会有值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClaimExpiredDuration() 获取固定ip回收时间，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClaimExpiredDuration(string $ClaimExpiredDuration) 设置固定ip回收时间，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -83,6 +87,12 @@ class DescribeIPAMDResponse extends AbstractModel
     public $SubnetIds;
 
     /**
+     * @var string 固定ip回收时间，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClaimExpiredDuration;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -98,6 +108,8 @@ class DescribeIPAMDResponse extends AbstractModel
      * @param string $Reason 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetIds 子网信息，已安装eniipamd组件才会有值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClaimExpiredDuration 固定ip回收时间，已安装eniipamd组件才会有值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -136,6 +148,10 @@ class DescribeIPAMDResponse extends AbstractModel
 
         if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
             $this->SubnetIds = $param["SubnetIds"];
+        }
+
+        if (array_key_exists("ClaimExpiredDuration",$param) and $param["ClaimExpiredDuration"] !== null) {
+            $this->ClaimExpiredDuration = $param["ClaimExpiredDuration"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

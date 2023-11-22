@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
- * @method VpcInfo getVpcs() 获取vpc网络标签
- * @method void setVpcs(VpcInfo $Vpcs) 设置vpc网络标签
+ * @method VpcInfo getVpc() 获取vpc网络标签
+ * @method void setVpc(VpcInfo $Vpc) 设置vpc网络标签
  * @method array getTags() 获取集群的标签列表(已废弃)
  * @method void setTags(array $Tags) 设置集群的标签列表(已废弃)
  */
@@ -97,7 +97,7 @@ class CreateProClusterRequest extends AbstractModel
     /**
      * @var VpcInfo vpc网络标签
      */
-    public $Vpcs;
+    public $Vpc;
 
     /**
      * @var array 集群的标签列表(已废弃)
@@ -118,7 +118,7 @@ class CreateProClusterRequest extends AbstractModel
      * @param integer $TimeSpan 购买时长，取值范围：1～50
      * @param string $ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
-     * @param VpcInfo $Vpcs vpc网络标签
+     * @param VpcInfo $Vpc vpc网络标签
      * @param array $Tags 集群的标签列表(已废弃)
      */
     function __construct()
@@ -162,9 +162,9 @@ class CreateProClusterRequest extends AbstractModel
             $this->AutoVoucher = $param["AutoVoucher"];
         }
 
-        if (array_key_exists("Vpcs",$param) and $param["Vpcs"] !== null) {
-            $this->Vpcs = new VpcInfo();
-            $this->Vpcs->deserialize($param["Vpcs"]);
+        if (array_key_exists("Vpc",$param) and $param["Vpc"] !== null) {
+            $this->Vpc = new VpcInfo();
+            $this->Vpc->deserialize($param["Vpc"]);
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tse\V20201207\Models as Models;
 
 /**
+ * @method Models\CloseWafProtectionResponse CloseWafProtection(Models\CloseWafProtectionRequest $req) 关闭 WAF 防护
  * @method Models\CreateCloudNativeAPIGatewayResponse CreateCloudNativeAPIGateway(Models\CreateCloudNativeAPIGatewayRequest $req) 创建云原生API网关实例
  * @method Models\CreateCloudNativeAPIGatewayCanaryRuleResponse CreateCloudNativeAPIGatewayCanaryRule(Models\CreateCloudNativeAPIGatewayCanaryRuleRequest $req) 创建云原生网关的灰度规则
  * @method Models\CreateCloudNativeAPIGatewayCertificateResponse CreateCloudNativeAPIGatewayCertificate(Models\CreateCloudNativeAPIGatewayCertificateRequest $req) 创建云原生网关证书
@@ -32,6 +33,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\CreateCloudNativeAPIGatewayServiceRateLimitResponse CreateCloudNativeAPIGatewayServiceRateLimit(Models\CreateCloudNativeAPIGatewayServiceRateLimitRequest $req) 创建云原生网关限流插件(服务)
  * @method Models\CreateEngineResponse CreateEngine(Models\CreateEngineRequest $req) 创建引擎实例
  * @method Models\CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroup(Models\CreateNativeGatewayServerGroupRequest $req) 创建云原生网关引擎分组
+ * @method Models\CreateWafDomainsResponse CreateWafDomains(Models\CreateWafDomainsRequest $req) 新建 WAF 防护域名
  * @method Models\DeleteCloudNativeAPIGatewayResponse DeleteCloudNativeAPIGateway(Models\DeleteCloudNativeAPIGatewayRequest $req) 删除云原生API网关实例
  * @method Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse DeleteCloudNativeAPIGatewayCanaryRule(Models\DeleteCloudNativeAPIGatewayCanaryRuleRequest $req) 删除云原生网关的灰度规则
  * @method Models\DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificate(Models\DeleteCloudNativeAPIGatewayCertificateRequest $req) 删除云原生网关证书
@@ -72,6 +74,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyCloudNativeAPIGatewayServiceRateLimitResponse ModifyCloudNativeAPIGatewayServiceRateLimit(Models\ModifyCloudNativeAPIGatewayServiceRateLimitRequest $req) 修改云原生网关限流插件(服务)
  * @method Models\ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(Models\ModifyNativeGatewayServerGroupRequest $req) 修改云原生API网关实例分组基础信息
  * @method Models\ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(Models\ModifyUpstreamNodeStatusRequest $req) 修改云原生网关上游实例节点健康状态
+ * @method Models\OpenWafProtectionResponse OpenWafProtection(Models\OpenWafProtectionRequest $req) 开启 WAF 防护
  * @method Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfo(Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest $req) 修改云原生网关证书信息
  * @method Models\UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpec(Models\UpdateCloudNativeAPIGatewaySpecRequest $req) 修改云原生API网关实例的节点规格信息，比如节点扩缩容或者升降配
  * @method Models\UpdateEngineInternetAccessResponse UpdateEngineInternetAccess(Models\UpdateEngineInternetAccessRequest $req) 修改引擎公网访问配置

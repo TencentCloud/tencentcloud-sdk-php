@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>l7Cache_outFlux：响应流量；</li>
 <li>l7Cache_request：响应请求数；</li>
 <li> l7Cache_outBandwidth：响应带宽。</li>
- * @method array getZoneIds() 获取站点集合，不填默认选择全部站点。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合，不填默认选择全部站点。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数必填。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。
  * @method array getFilters() 获取过滤条件，详细的过滤条件如下：
 <li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
 <li>url<br>   按照【<strong>URL</strong>】进行过滤，此参数只支持30天的时间范围，URL形如：/content。<br>   类型：String<br>   必选：否</li>
@@ -90,7 +90,7 @@ class DescribeTimingL7CacheDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array 站点集合，不填默认选择全部站点。
+     * @var array 站点 ID 集合，此参数必填。
      */
     public $ZoneIds;
 
@@ -130,7 +130,7 @@ class DescribeTimingL7CacheDataRequest extends AbstractModel
 <li>l7Cache_outFlux：响应流量；</li>
 <li>l7Cache_request：响应请求数；</li>
 <li> l7Cache_outBandwidth：响应带宽。</li>
-     * @param array $ZoneIds 站点集合，不填默认选择全部站点。
+     * @param array $ZoneIds 站点 ID 集合，此参数必填。
      * @param array $Filters 过滤条件，详细的过滤条件如下：
 <li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
 <li>url<br>   按照【<strong>URL</strong>】进行过滤，此参数只支持30天的时间范围，URL形如：/content。<br>   类型：String<br>   必选：否</li>

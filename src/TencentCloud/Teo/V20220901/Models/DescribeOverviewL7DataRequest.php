@@ -42,12 +42,10 @@ use TencentCloud\Common\AbstractModel;
 <li>l7Flow_request: 访问请求数；</li>
 <li>l7Flow_flux: 访问请求上行+下行流量；</li>
 <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
- * @method array getZoneIds() 获取站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
- * @method array getDomains() 获取查询的域名集合，不填默认查询所有子域名。
- * @method void setDomains(array $Domains) 设置查询的域名集合，不填默认查询所有子域名。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数必填。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。
+ * @method array getDomains() 获取查询的域名集合，此参数已经废弃。
+ * @method void setDomains(array $Domains) 设置查询的域名集合，此参数已经废弃。
  * @method string getProtocol() 获取查询的协议类型，取值有：
 <li>http: http协议；</li>
 <li>https: https协议；</li>
@@ -70,10 +68,12 @@ use TencentCloud\Common\AbstractModel;
 <li>day：1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
  * @method array getFilters() 获取过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
  * @method string getArea() 获取数据归属地区，取值有：
@@ -111,13 +111,12 @@ class DescribeOverviewL7DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+     * @var array 站点 ID 集合，此参数必填。
      */
     public $ZoneIds;
 
     /**
-     * @var array 查询的域名集合，不填默认查询所有子域名。
+     * @var array 查询的域名集合，此参数已经废弃。
      */
     public $Domains;
 
@@ -142,6 +141,7 @@ class DescribeOverviewL7DataRequest extends AbstractModel
     /**
      * @var array 过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
      */
@@ -167,9 +167,8 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 <li>l7Flow_request: 访问请求数；</li>
 <li>l7Flow_flux: 访问请求上行+下行流量；</li>
 <li>l7Flow_bandwidth：访问请求上行+下行带宽。</li>
-     * @param array $ZoneIds 站点集合。
-若不填写，默认选择全部站点，且最多只能查询近30天的数据；若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
-     * @param array $Domains 查询的域名集合，不填默认查询所有子域名。
+     * @param array $ZoneIds 站点 ID 集合，此参数必填。
+     * @param array $Domains 查询的域名集合，此参数已经废弃。
      * @param string $Protocol 查询的协议类型，取值有：
 <li>http: http协议；</li>
 <li>https: https协议；</li>
@@ -182,6 +181,7 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 <li>day：1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
      * @param array $Filters 过滤条件，详细的过滤条件Key值如下：
 <li>socket<br>   按照【<strong>HTTP协议类型</strong>】进行过滤。<br>   对应的Value可选项如下：<br>   HTTP：HTTP 协议；<br>   HTTPS：HTTPS协议；<br>   QUIC：QUIC协议。</li>
+<li>domain<br>   按照【<strong>域名</strong>】进行过滤。</li>
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。</li>
      * @param string $Area 数据归属地区，取值有：

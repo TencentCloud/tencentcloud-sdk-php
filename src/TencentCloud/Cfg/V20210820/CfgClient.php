@@ -28,11 +28,13 @@ use TencentCloud\Cfg\V20210820\Models as Models;
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 查询任务
  * @method Models\DescribeTaskExecuteLogsResponse DescribeTaskExecuteLogs(Models\DescribeTaskExecuteLogsRequest $req) 获取演练过程中的所有日志
  * @method Models\DescribeTaskListResponse DescribeTaskList(Models\DescribeTaskListRequest $req) 查询任务列表
+ * @method Models\DescribeTaskPolicyTriggerLogResponse DescribeTaskPolicyTriggerLog(Models\DescribeTaskPolicyTriggerLogRequest $req) 获取护栏触发日志
  * @method Models\DescribeTemplateResponse DescribeTemplate(Models\DescribeTemplateRequest $req) 查询经验库
  * @method Models\DescribeTemplateListResponse DescribeTemplateList(Models\DescribeTemplateListRequest $req) 查询经验库列表
  * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 执行任务
  * @method Models\ExecuteTaskInstanceResponse ExecuteTaskInstance(Models\ExecuteTaskInstanceRequest $req) 触发混沌演练任务的动作，对于实例进行演练操作
  * @method Models\ModifyTaskRunStatusResponse ModifyTaskRunStatus(Models\ModifyTaskRunStatusRequest $req) 修改任务运行状态
+ * @method Models\TriggerPolicyResponse TriggerPolicy(Models\TriggerPolicyRequest $req) 用于触发混沌演练护栏（类型为触发和恢复2种）
  */
 
 class CfgClient extends AbstractClient

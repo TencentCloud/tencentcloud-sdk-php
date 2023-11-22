@@ -108,6 +108,14 @@ use TencentCloud\Common\AbstractModel;
 0: 按量计费
 1: 包年包月
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProjectId() 获取项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取项目名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置项目名字
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -264,6 +272,18 @@ class Cluster extends AbstractModel
     public $PayMode;
 
     /**
+     * @var integer 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 项目名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -307,6 +327,10 @@ class Cluster extends AbstractModel
      * @param integer $PayMode 计费模式：
 0: 按量计费
 1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName 项目名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -433,6 +457,14 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
         }
     }
 }

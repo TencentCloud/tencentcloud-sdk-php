@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
 <li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
 
- * @method array getZoneIds() 获取站点集合，此参数必填，不填默认查询为空。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合，此参数必填，不填默认查询为空。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数必填。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。
  * @method integer getLimit() 获取查询前多少个数据，最大值为1000，不填默认默认为: 10， 表示查询前top10的数据。
  * @method void setLimit(integer $Limit) 设置查询前多少个数据，最大值为1000，不填默认默认为: 10， 表示查询前top10的数据。
  * @method array getFilters() 获取过滤条件，详细的过滤条件Key值如下：
@@ -166,7 +166,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array 站点集合，此参数必填，不填默认查询为空。
+     * @var array 站点 ID 集合，此参数必填。
      */
     public $ZoneIds;
 
@@ -239,7 +239,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
 <li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
 
-     * @param array $ZoneIds 站点集合，此参数必填，不填默认查询为空。
+     * @param array $ZoneIds 站点 ID 集合，此参数必填。
      * @param integer $Limit 查询前多少个数据，最大值为1000，不填默认默认为: 10， 表示查询前top10的数据。
      * @param array $Filters 过滤条件，详细的过滤条件Key值如下：
 <li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循 <a href="https://baike.baidu.com/item/ISO%203166-1/5269555">ISO 3166</a> 规范。</li>

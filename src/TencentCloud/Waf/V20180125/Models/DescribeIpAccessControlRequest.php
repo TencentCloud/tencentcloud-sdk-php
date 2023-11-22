@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCtsMin(integer $CtsMin) 设置最小创建时间的时间戳
  * @method integer getCtsMax() 获取最大创建时间的时间戳
  * @method void setCtsMax(integer $CtsMax) 设置最大创建时间的时间戳
- * @method integer getOffSet() 获取分页开始条数
- * @method void setOffSet(integer $OffSet) 设置分页开始条数
- * @method integer getLimit() 获取每页的条数
- * @method void setLimit(integer $Limit) 设置每页的条数
+ * @method integer getOffSet() 获取分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+ * @method void setOffSet(integer $OffSet) 设置分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+ * @method integer getLimit() 获取每页返回的数量
+ * @method void setLimit(integer $Limit) 设置每页返回的数量
  * @method string getSource() 获取来源
  * @method void setSource(string $Source) 设置来源
  * @method string getSort() 获取排序参数
@@ -91,12 +91,12 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $CtsMax;
 
     /**
-     * @var integer 分页开始条数
+     * @var integer 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
      */
     public $OffSet;
 
     /**
-     * @var integer 每页的条数
+     * @var integer 每页返回的数量
      */
     public $Limit;
 
@@ -138,8 +138,8 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param integer $VtsMax 最大有效时间的时间戳
      * @param integer $CtsMin 最小创建时间的时间戳
      * @param integer $CtsMax 最大创建时间的时间戳
-     * @param integer $OffSet 分页开始条数
-     * @param integer $Limit 每页的条数
+     * @param integer $OffSet 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
+     * @param integer $Limit 每页返回的数量
      * @param string $Source 来源
      * @param string $Sort 排序参数
      * @param string $Ip ip

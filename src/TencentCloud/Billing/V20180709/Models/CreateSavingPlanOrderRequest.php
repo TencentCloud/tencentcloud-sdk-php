@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPromiseUseAmount(integer $PromiseUseAmount) 设置承诺时长内的小额金额（单位：分）
  * @method string getSpecifyEffectTime() 获取节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
  * @method void setSpecifyEffectTime(string $SpecifyEffectTime) 设置节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
+ * @method string getClientToken() 获取可重入ID
+ * @method void setClientToken(string $ClientToken) 设置可重入ID
  */
 class CreateSavingPlanOrderRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateSavingPlanOrderRequest extends AbstractModel
     public $SpecifyEffectTime;
 
     /**
+     * @var string 可重入ID
+     */
+    public $ClientToken;
+
+    /**
      * @param integer $RegionId 地域编码
      * @param integer $ZoneId 区域编码
      * @param string $PrePayType 预付费类型
@@ -88,6 +95,7 @@ class CreateSavingPlanOrderRequest extends AbstractModel
      * @param string $CommodityCode 商品唯一标识
      * @param integer $PromiseUseAmount 承诺时长内的小额金额（单位：分）
      * @param string $SpecifyEffectTime 节省计划的指定生效时间，若不传则为当前下单时间。传参数格式:"2023-10-01 00:00:00"，仅支持指定日期的0点时刻
+     * @param string $ClientToken 可重入ID
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateSavingPlanOrderRequest extends AbstractModel
 
         if (array_key_exists("SpecifyEffectTime",$param) and $param["SpecifyEffectTime"] !== null) {
             $this->SpecifyEffectTime = $param["SpecifyEffectTime"];
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

@@ -28,7 +28,9 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CheckInstanceResponse CheckInstance(Models\CheckInstanceRequest $req) 用于校验企业版实例信息
  * @method Models\CheckInstanceNameResponse CheckInstanceName(Models\CheckInstanceNameRequest $req) 检查待创建的实例名称是否符合规范
  * @method Models\CreateApplicationTriggerPersonalResponse CreateApplicationTriggerPersonal(Models\CreateApplicationTriggerPersonalRequest $req) 用于创建应用更新触发器
- * @method Models\CreateCustomAccountResponse CreateCustomAccount(Models\CreateCustomAccountRequest $req) 创建自定义账户
+ * @method Models\CreateCustomAccountResponse CreateCustomAccount(Models\CreateCustomAccountRequest $req) 接口未使用
+
+创建自定义账户
  * @method Models\CreateImageAccelerationServiceResponse CreateImageAccelerationService(Models\CreateImageAccelerationServiceRequest $req) 创建镜像加速服务
  * @method Models\CreateImmutableTagRulesResponse CreateImmutableTagRules(Models\CreateImmutableTagRulesRequest $req) 创建镜像不可变规则
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建实例
@@ -50,7 +52,9 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateUserPersonalResponse CreateUserPersonal(Models\CreateUserPersonalRequest $req) 创建个人用户
  * @method Models\CreateWebhookTriggerResponse CreateWebhookTrigger(Models\CreateWebhookTriggerRequest $req) 创建触发器
  * @method Models\DeleteApplicationTriggerPersonalResponse DeleteApplicationTriggerPersonal(Models\DeleteApplicationTriggerPersonalRequest $req) 用于删除应用更新触发器
- * @method Models\DeleteCustomAccountResponse DeleteCustomAccount(Models\DeleteCustomAccountRequest $req) 删除自定义账号
+ * @method Models\DeleteCustomAccountResponse DeleteCustomAccount(Models\DeleteCustomAccountRequest $req) 接口未使用
+
+删除自定义账号
  * @method Models\DeleteImageResponse DeleteImage(Models\DeleteImageRequest $req) 删除指定镜像
  * @method Models\DeleteImageAccelerateServiceResponse DeleteImageAccelerateService(Models\DeleteImageAccelerateServiceRequest $req) 删除镜像加速服务
  * @method Models\DeleteImageLifecycleGlobalPersonalResponse DeleteImageLifecycleGlobalPersonal(Models\DeleteImageLifecycleGlobalPersonalRequest $req) 用于删除个人版全局镜像版本自动清理策略
@@ -77,7 +81,9 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeApplicationTriggerLogPersonalResponse DescribeApplicationTriggerLogPersonal(Models\DescribeApplicationTriggerLogPersonalRequest $req) 用于查询应用更新触发器触发日志
  * @method Models\DescribeApplicationTriggerPersonalResponse DescribeApplicationTriggerPersonal(Models\DescribeApplicationTriggerPersonalRequest $req) 用于查询应用更新触发器
  * @method Models\DescribeChartDownloadInfoResponse DescribeChartDownloadInfo(Models\DescribeChartDownloadInfoRequest $req) 用于在企业版中返回Chart的下载信息
- * @method Models\DescribeCustomAccountsResponse DescribeCustomAccounts(Models\DescribeCustomAccountsRequest $req) 查询自定义账号
+ * @method Models\DescribeCustomAccountsResponse DescribeCustomAccounts(Models\DescribeCustomAccountsRequest $req) 接口未使用
+
+查询自定义账号
  * @method Models\DescribeExternalEndpointStatusResponse DescribeExternalEndpointStatus(Models\DescribeExternalEndpointStatusRequest $req) 查询实例公网访问入口状态
  * @method Models\DescribeFavorRepositoryPersonalResponse DescribeFavorRepositoryPersonal(Models\DescribeFavorRepositoryPersonalRequest $req) 查询个人收藏仓库
  * @method Models\DescribeGCJobsResponse DescribeGCJobs(Models\DescribeGCJobsRequest $req) GC 最近10条历史
@@ -122,7 +128,9 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\ManageInternalEndpointResponse ManageInternalEndpoint(Models\ManageInternalEndpointRequest $req) 管理实例内网访问VPC链接
  * @method Models\ManageReplicationResponse ManageReplication(Models\ManageReplicationRequest $req) 管理实例同步
  * @method Models\ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonal(Models\ModifyApplicationTriggerPersonalRequest $req) 用于修改应用更新触发器
- * @method Models\ModifyCustomAccountResponse ModifyCustomAccount(Models\ModifyCustomAccountRequest $req) 更新自定义账户
+ * @method Models\ModifyCustomAccountResponse ModifyCustomAccount(Models\ModifyCustomAccountRequest $req) 接口未使用
+
+更新自定义账户
  * @method Models\ModifyImmutableTagRulesResponse ModifyImmutableTagRules(Models\ModifyImmutableTagRulesRequest $req) 更新镜像不可变规则
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 更新实例信息
  * @method Models\ModifyInstanceTokenResponse ModifyInstanceToken(Models\ModifyInstanceTokenRequest $req) 更新实例内指定长期访问凭证的启用状态

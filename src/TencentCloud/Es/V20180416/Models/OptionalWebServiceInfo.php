@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivateVip() 获取web服务内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivateVip(string $PrivateVip) 设置web服务内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCustomPrivateUrl() 获取自定义cerebro内网url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomPrivateUrl(string $CustomPrivateUrl) 设置自定义cerebro内网url
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OptionalWebServiceInfo extends AbstractModel
 {
@@ -94,6 +102,18 @@ class OptionalWebServiceInfo extends AbstractModel
     public $Version;
 
     /**
+     * @var string web服务内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrivateVip;
+
+    /**
+     * @var string 自定义cerebro内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomPrivateUrl;
+
+    /**
      * @param string $Type 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
@@ -107,6 +127,10 @@ class OptionalWebServiceInfo extends AbstractModel
      * @param string $PrivateAccess 内网访问权限
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PrivateVip web服务内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CustomPrivateUrl 自定义cerebro内网url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +172,14 @@ class OptionalWebServiceInfo extends AbstractModel
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {
             $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("PrivateVip",$param) and $param["PrivateVip"] !== null) {
+            $this->PrivateVip = $param["PrivateVip"];
+        }
+
+        if (array_key_exists("CustomPrivateUrl",$param) and $param["CustomPrivateUrl"] !== null) {
+            $this->CustomPrivateUrl = $param["CustomPrivateUrl"];
         }
     }
 }

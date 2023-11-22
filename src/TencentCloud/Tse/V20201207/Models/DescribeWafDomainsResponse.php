@@ -14,38 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tbaas\V20180416\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DownloadUserCert返回参数结构体
+ * DescribeWafDomains返回参数结构体
  *
- * @method string getCertName() 获取证书名称
- * @method void setCertName(string $CertName) 设置证书名称
- * @method string getCertCtx() 获取证书内容
- * @method void setCertCtx(string $CertCtx) 设置证书内容
- * @method string getCert() 获取证书内容
- * @method void setCert(string $Cert) 设置证书内容
+ * @method DescribeWafDomainsResult getResult() 获取已被 WAF 防护域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(DescribeWafDomainsResult $Result) 设置已被 WAF 防护域名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DownloadUserCertResponse extends AbstractModel
+class DescribeWafDomainsResponse extends AbstractModel
 {
     /**
-     * @var string 证书名称
+     * @var DescribeWafDomainsResult 已被 WAF 防护域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CertName;
-
-    /**
-     * @var string 证书内容
-     * @deprecated
-     */
-    public $CertCtx;
-
-    /**
-     * @var string 证书内容
-     */
-    public $Cert;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -53,9 +41,8 @@ class DownloadUserCertResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CertName 证书名称
-     * @param string $CertCtx 证书内容
-     * @param string $Cert 证书内容
+     * @param DescribeWafDomainsResult $Result 已被 WAF 防护域名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -71,16 +58,9 @@ class DownloadUserCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
-            $this->CertName = $param["CertName"];
-        }
-
-        if (array_key_exists("CertCtx",$param) and $param["CertCtx"] !== null) {
-            $this->CertCtx = $param["CertCtx"];
-        }
-
-        if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
-            $this->Cert = $param["Cert"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new DescribeWafDomainsResult();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

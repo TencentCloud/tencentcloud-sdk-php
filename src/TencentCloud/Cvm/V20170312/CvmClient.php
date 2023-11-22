@@ -241,6 +241,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 修改密钥对ID所指定的密钥对的名称和描述信息。
 * 密钥对名称不能和已经存在的密钥对的名称重复。
 * 密钥对ID是密钥对的唯一标识，不可修改。
+* 密钥对名称和描述信息必须指定其中之一，也支持同时指定。
  * @method Models\ModifyLaunchTemplateDefaultVersionResponse ModifyLaunchTemplateDefaultVersion(Models\ModifyLaunchTemplateDefaultVersionRequest $req) 本接口（ModifyLaunchTemplateDefaultVersion）用于修改实例启动模板默认版本。
  * @method Models\ProgramFpgaImageResponse ProgramFpgaImage(Models\ProgramFpgaImageRequest $req) 本接口(ProgramFpgaImage)用于在线烧录由客户提供的FPGA镜像文件到指定实例的指定FPGA卡上。
 * 只支持对单个实例发起在线烧录FPGA镜像的操作。

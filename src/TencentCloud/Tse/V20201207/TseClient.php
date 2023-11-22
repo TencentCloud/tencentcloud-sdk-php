@@ -43,6 +43,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DeleteCloudNativeAPIGatewayServiceRateLimitResponse DeleteCloudNativeAPIGatewayServiceRateLimit(Models\DeleteCloudNativeAPIGatewayServiceRateLimitRequest $req) 删除云原生网关的限流插件(服务)
  * @method Models\DeleteEngineResponse DeleteEngine(Models\DeleteEngineRequest $req) 删除引擎实例
  * @method Models\DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroup(Models\DeleteNativeGatewayServerGroupRequest $req) 删除网关实例分组
+ * @method Models\DeleteWafDomainsResponse DeleteWafDomains(Models\DeleteWafDomainsRequest $req) 删除 WAF 防护域名
  * @method Models\DescribeCloudNativeAPIGatewayResponse DescribeCloudNativeAPIGateway(Models\DescribeCloudNativeAPIGatewayRequest $req) 获取云原生API网关实例信息
  * @method Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse DescribeCloudNativeAPIGatewayCanaryRules(Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest $req) 查询云原生网关灰度规则列表
  * @method Models\DescribeCloudNativeAPIGatewayCertificateDetailsResponse DescribeCloudNativeAPIGatewayCertificateDetails(Models\DescribeCloudNativeAPIGatewayCertificateDetailsRequest $req) 查询云原生网关单个证书详情
@@ -63,6 +64,8 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(Models\DescribeSREInstanceAccessAddressRequest $req) 查询引擎实例访问地址
  * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询引擎实例列表
  * @method Models\DescribeUpstreamHealthCheckConfigResponse DescribeUpstreamHealthCheckConfig(Models\DescribeUpstreamHealthCheckConfigRequest $req) 获取云原生网关服务健康检查配置
+ * @method Models\DescribeWafDomainsResponse DescribeWafDomains(Models\DescribeWafDomainsRequest $req) 获取 WAF 防护域名
+ * @method Models\DescribeWafProtectionResponse DescribeWafProtection(Models\DescribeWafProtectionRequest $req) 获取 WAF 防护状态
  * @method Models\DescribeZookeeperReplicasResponse DescribeZookeeperReplicas(Models\DescribeZookeeperReplicasRequest $req) 查询Zookeeper类型注册引擎实例副本信息
  * @method Models\DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(Models\DescribeZookeeperServerInterfacesRequest $req) 查询zookeeper服务接口列表
  * @method Models\ModifyCloudNativeAPIGatewayResponse ModifyCloudNativeAPIGateway(Models\ModifyCloudNativeAPIGatewayRequest $req) 修改云原生API网关实例基础信息

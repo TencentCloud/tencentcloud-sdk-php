@@ -33,11 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，取值范围：30-3600，单位：秒。
 不填写保持原有配置。
  * @method string getProxyType() 获取四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写保持原有配置。
+<li>instance：表示实例模式。</li>不填写使用默认值instance。
  * @method void setProxyType(string $ProxyType) 设置四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写保持原有配置。
+<li>instance：表示实例模式。</li>不填写使用默认值instance。
  * @method Ipv6 getIpv6() 获取Ipv6 访问配置，不填写保持原有配置。
  * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6 访问配置，不填写保持原有配置。
  * @method AccelerateMainland getAccelerateMainland() 获取中国大陆加速优化配置。 不填写表示保持原有配置。
@@ -69,8 +67,7 @@ class ModifyApplicationProxyRequest extends AbstractModel
 
     /**
      * @var string 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写保持原有配置。
+<li>instance：表示实例模式。</li>不填写使用默认值instance。
      */
     public $ProxyType;
 
@@ -92,8 +89,7 @@ class ModifyApplicationProxyRequest extends AbstractModel
      * @param integer $SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒。
 不填写保持原有配置。
      * @param string $ProxyType 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写保持原有配置。
+<li>instance：表示实例模式。</li>不填写使用默认值instance。
      * @param Ipv6 $Ipv6 Ipv6 访问配置，不填写保持原有配置。
      * @param AccelerateMainland $AccelerateMainland 中国大陆加速优化配置。 不填写表示保持原有配置。
      */

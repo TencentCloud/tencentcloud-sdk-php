@@ -35,8 +35,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationName(string $OrganizationName) 设置企业名称
  * @method string getOrganizationOpenId() 获取企业OpenId
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业OpenId
- * @method string getNotChannelOrganization() 获取签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
- * @method void setNotChannelOrganization(string $NotChannelOrganization) 设置签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
+ * @method boolean getNotChannelOrganization() 获取签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
+ * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
  */
 class FillApproverInfo extends AbstractModel
 {
@@ -72,7 +72,7 @@ class FillApproverInfo extends AbstractModel
     public $OrganizationOpenId;
 
     /**
-     * @var string 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
+     * @var boolean 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
      */
     public $NotChannelOrganization;
 
@@ -84,7 +84,7 @@ class FillApproverInfo extends AbstractModel
      * @param string $ApproverMobile 签署人手机号码
      * @param string $OrganizationName 企业名称
      * @param string $OrganizationOpenId 企业OpenId
-     * @param string $NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，organization_open_id+open_id 必传
+     * @param boolean $NotChannelOrganization 签署企业非渠道子客，默认为false，即表示同一渠道下的企业；如果为true，则目前表示接收方企业为SaaS企业, 为渠道子客时，OrganizationOpenId 必传
      */
     function __construct()
     {

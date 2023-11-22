@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置Debug 功能开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
- * @method array getAllowClientIPList() 获取允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
- * @method void setAllowClientIPList(array $AllowClientIPList) 设置允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
+ * @method array getAllowClientIPList() 获取允许的客户端来源。支持填写 IPv4 以及 IPv6 的 IP/IP 段。0.0.0.0/0 表示允许所有 IPv4 客户端进行调试，::/0 表示允许所有 IPv6 客户端进行调试。
+ * @method void setAllowClientIPList(array $AllowClientIPList) 设置允许的客户端来源。支持填写 IPv4 以及 IPv6 的 IP/IP 段。0.0.0.0/0 表示允许所有 IPv4 客户端进行调试，::/0 表示允许所有 IPv6 客户端进行调试。
  * @method string getExpireTime() 获取Debug 功能到期时间。超出设置的时间，则功能失效。
  * @method void setExpireTime(string $ExpireTime) 设置Debug 功能到期时间。超出设置的时间，则功能失效。
  */
@@ -41,7 +41,7 @@ class StandardDebug extends AbstractModel
     public $Switch;
 
     /**
-     * @var array 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
+     * @var array 允许的客户端来源。支持填写 IPv4 以及 IPv6 的 IP/IP 段。0.0.0.0/0 表示允许所有 IPv4 客户端进行调试，::/0 表示允许所有 IPv6 客户端进行调试。
      */
     public $AllowClientIPList;
 
@@ -54,7 +54,7 @@ class StandardDebug extends AbstractModel
      * @param string $Switch Debug 功能开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-     * @param array $AllowClientIPList 允许的客户端来源。支持填写 IPV4 以及 IPV6 的 IP/IP 段。
+     * @param array $AllowClientIPList 允许的客户端来源。支持填写 IPv4 以及 IPv6 的 IP/IP 段。0.0.0.0/0 表示允许所有 IPv4 客户端进行调试，::/0 表示允许所有 IPv6 客户端进行调试。
      * @param string $ExpireTime Debug 功能到期时间。超出设置的时间，则功能失效。
      */
     function __construct()

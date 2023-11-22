@@ -38,11 +38,11 @@ use TencentCloud\Common\AbstractModel;
 <li> **true** :不可以转他人处理</li></ul>
  * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul>
  * @method void setFillType(integer $FillType) 设置签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul>
  * @method string getFlowReadLimit() 获取签署人阅读合同限制参数
  <br/>取值：
@@ -82,7 +82,7 @@ class ApproverOption extends AbstractModel
     /**
      * @var integer 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul>
      */
     public $FillType;
@@ -110,7 +110,7 @@ class ApproverOption extends AbstractModel
 <li> **true** :不可以转他人处理</li></ul>
      * @param integer $FillType 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）</li>
+<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li>
 </ul>
      * @param string $FlowReadLimit 签署人阅读合同限制参数
  <br/>取值：

@@ -125,6 +125,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeBelongToResponse DescribeBelongTo(Models\DescribeBelongToRequest $req) 智能运维-事件列表-所属任务/基线过滤列表
  * @method Models\DescribeClusterNamespaceListResponse DescribeClusterNamespaceList(Models\DescribeClusterNamespaceListRequest $req) 获取集群命名空间列表
  * @method Models\DescribeColumnLineageResponse DescribeColumnLineage(Models\DescribeColumnLineageRequest $req) 列出字段血缘信息
+ * @method Models\DescribeColumnsMetaResponse DescribeColumnsMeta(Models\DescribeColumnsMetaRequest $req) 查询表的所有列元数据
  * @method Models\DescribeDataBasesResponse DescribeDataBases(Models\DescribeDataBasesRequest $req) 查询数据来源列表
  * @method Models\DescribeDataCheckStatResponse DescribeDataCheckStat(Models\DescribeDataCheckStatRequest $req) 数据质量的概览页面数据监测情况接口
  * @method Models\DescribeDataObjectsResponse DescribeDataObjects(Models\DescribeDataObjectsRequest $req) 查询规则组数据对象列表

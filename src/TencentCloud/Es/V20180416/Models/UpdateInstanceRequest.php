@@ -120,6 +120,10 @@ CLOSE 关闭
  * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置是否开启Alerting 外网告警输出：
 OPEN 开启
 CLOSE 关闭
+ * @method string getKibanaPrivateDomain() 获取kibana内网自定义域名
+ * @method void setKibanaPrivateDomain(string $KibanaPrivateDomain) 设置kibana内网自定义域名
+ * @method string getCerebroPrivateDomain() 获取cerebro内网自定义域名
+ * @method void setCerebroPrivateDomain(string $CerebroPrivateDomain) 设置cerebro内网自定义域名
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -302,6 +306,16 @@ CLOSE 关闭
     public $KibanaAlteringPublicAccess;
 
     /**
+     * @var string kibana内网自定义域名
+     */
+    public $KibanaPrivateDomain;
+
+    /**
+     * @var string cerebro内网自定义域名
+     */
+    public $CerebroPrivateDomain;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -352,6 +366,8 @@ CLOSE 关闭
      * @param string $KibanaAlteringPublicAccess 是否开启Alerting 外网告警输出：
 OPEN 开启
 CLOSE 关闭
+     * @param string $KibanaPrivateDomain kibana内网自定义域名
+     * @param string $CerebroPrivateDomain cerebro内网自定义域名
      */
     function __construct()
     {
@@ -508,6 +524,14 @@ CLOSE 关闭
 
         if (array_key_exists("KibanaAlteringPublicAccess",$param) and $param["KibanaAlteringPublicAccess"] !== null) {
             $this->KibanaAlteringPublicAccess = $param["KibanaAlteringPublicAccess"];
+        }
+
+        if (array_key_exists("KibanaPrivateDomain",$param) and $param["KibanaPrivateDomain"] !== null) {
+            $this->KibanaPrivateDomain = $param["KibanaPrivateDomain"];
+        }
+
+        if (array_key_exists("CerebroPrivateDomain",$param) and $param["CerebroPrivateDomain"] !== null) {
+            $this->CerebroPrivateDomain = $param["CerebroPrivateDomain"];
         }
     }
 }

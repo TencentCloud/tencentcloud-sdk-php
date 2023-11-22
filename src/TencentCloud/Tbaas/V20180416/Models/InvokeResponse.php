@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTxid(string $Txid) 设置交易ID
  * @method string getEvents() 获取交易执行结果
  * @method void setEvents(string $Events) 设置交易执行结果
+ * @method string getTxId() 获取交易ID
+ * @method void setTxId(string $TxId) 设置交易ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,6 +33,7 @@ class InvokeResponse extends AbstractModel
 {
     /**
      * @var string 交易ID
+     * @deprecated
      */
     public $Txid;
 
@@ -40,6 +43,11 @@ class InvokeResponse extends AbstractModel
     public $Events;
 
     /**
+     * @var string 交易ID
+     */
+    public $TxId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +55,7 @@ class InvokeResponse extends AbstractModel
     /**
      * @param string $Txid 交易ID
      * @param string $Events 交易执行结果
+     * @param string $TxId 交易ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +77,10 @@ class InvokeResponse extends AbstractModel
 
         if (array_key_exists("Events",$param) and $param["Events"] !== null) {
             $this->Events = $param["Events"];
+        }
+
+        if (array_key_exists("TxId",$param) and $param["TxId"] !== null) {
+            $this->TxId = $param["TxId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

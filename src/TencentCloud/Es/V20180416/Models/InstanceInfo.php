@@ -140,9 +140,9 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区网络信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeployMode() 获取部署模式<li>0：单可用区</li><li>1：多可用区</li>
+ * @method integer getDeployMode() 获取部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeployMode(integer $DeployMode) 设置部署模式<li>0：单可用区</li><li>1：多可用区</li>
+ * @method void setDeployMode(integer $DeployMode) 设置部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicAccess() 获取ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -278,9 +278,9 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessPercent(float $ProcessPercent) 设置流程进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKibanaAlteringPublicAccess() 获取Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method string getKibanaAlteringPublicAccess() 获取Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasKernelUpgrade() 获取本月是否有内核可以更新：false-无，true-有
 注意：此字段可能返回 null，表示取不到有效值。
@@ -289,6 +289,14 @@ RENEW_FLAG_DEFAULT：不自动续费
  * @method string getCdcId() 获取cdcId，使用cdc子网时传递
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKibanaPrivateVip() 获取kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKibanaPrivateVip(string $KibanaPrivateVip) 设置kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCustomKibanaPrivateUrl() 获取自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomKibanaPrivateUrl(string $CustomKibanaPrivateUrl) 设置自定义kibana内网url
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
@@ -534,7 +542,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $MultiZoneInfo;
 
     /**
-     * @var integer 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+     * @var integer 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployMode;
@@ -743,7 +751,7 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $ProcessPercent;
 
     /**
-     * @var string Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * @var string Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KibanaAlteringPublicAccess;
@@ -759,6 +767,18 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
+
+    /**
+     * @var string kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KibanaPrivateVip;
+
+    /**
+     * @var string 自定义kibana内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomKibanaPrivateUrl;
 
     /**
      * @param string $InstanceId 实例ID
@@ -821,7 +841,7 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MultiZoneInfo 多可用区网络信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区</li>
+     * @param integer $DeployMode 部署模式<li>0：单可用区</li><li>1：多可用区，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicAccess ES公网访问状态<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -890,11 +910,15 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ProcessPercent 流程进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KibanaAlteringPublicAccess Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+     * @param string $KibanaAlteringPublicAccess Kibana的alerting外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasKernelUpgrade 本月是否有内核可以更新：false-无，true-有
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcId cdcId，使用cdc子网时传递
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KibanaPrivateVip kibana内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CustomKibanaPrivateUrl 自定义kibana内网url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1273,6 +1297,14 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
             $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("KibanaPrivateVip",$param) and $param["KibanaPrivateVip"] !== null) {
+            $this->KibanaPrivateVip = $param["KibanaPrivateVip"];
+        }
+
+        if (array_key_exists("CustomKibanaPrivateUrl",$param) and $param["CustomKibanaPrivateUrl"] !== null) {
+            $this->CustomKibanaPrivateUrl = $param["CustomKibanaPrivateUrl"];
         }
     }
 }

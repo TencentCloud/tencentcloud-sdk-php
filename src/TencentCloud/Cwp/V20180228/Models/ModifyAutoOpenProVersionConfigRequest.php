@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRepurchaseSwitch(integer $AutoRepurchaseSwitch) 设置自动加购/扩容授权开关,默认 1, 0关闭, 1开启
  * @method integer getAutoRepurchaseRenewSwitch() 获取自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
  * @method void setAutoRepurchaseRenewSwitch(integer $AutoRepurchaseRenewSwitch) 设置自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
+ * @method integer getRepurchaseRenewSwitch() 获取手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+ * @method void setRepurchaseRenewSwitch(integer $RepurchaseRenewSwitch) 设置手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
  */
 class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
     public $AutoRepurchaseRenewSwitch;
 
     /**
+     * @var integer 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+     */
+    public $RepurchaseRenewSwitch;
+
+    /**
      * @param string $Status 设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
      * @param integer $AutoRepurchaseSwitch 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
      * @param integer $AutoRepurchaseRenewSwitch 自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
+     * @param integer $RepurchaseRenewSwitch 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
 
         if (array_key_exists("AutoRepurchaseRenewSwitch",$param) and $param["AutoRepurchaseRenewSwitch"] !== null) {
             $this->AutoRepurchaseRenewSwitch = $param["AutoRepurchaseRenewSwitch"];
+        }
+
+        if (array_key_exists("RepurchaseRenewSwitch",$param) and $param["RepurchaseRenewSwitch"] !== null) {
+            $this->RepurchaseRenewSwitch = $param["RepurchaseRenewSwitch"];
         }
     }
 }

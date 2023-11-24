@@ -20,40 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateProbeTaskConfigurationList请求参数结构体
  *
- * @method array getTaskIds() 获取任务 ID
- * @method void setTaskIds(array $TaskIds) 设置任务 ID
- * @method array getNodes() 获取拨测节点
- * @method void setNodes(array $Nodes) 设置拨测节点
- * @method integer getInterval() 获取拨测间隔
- * @method void setInterval(integer $Interval) 设置拨测间隔
- * @method string getParameters() 获取拨测参数
- * @method void setParameters(string $Parameters) 设置拨测参数
+ * @method array getTaskIds() 获取任务 ID，如task-n1wchki8
+ * @method void setTaskIds(array $TaskIds) 设置任务 ID，如task-n1wchki8
+ * @method array getNodes() 获取拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
+ * @method void setNodes(array $Nodes) 设置拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
+ * @method integer getInterval() 获取拨测间隔，如30，单位为分钟。
+ * @method void setInterval(integer $Interval) 设置拨测间隔，如30，单位为分钟。
+ * @method string getParameters() 获取拨测参数，详细参数配置可参考云拨测官网文档。
+ * @method void setParameters(string $Parameters) 设置拨测参数，详细参数配置可参考云拨测官网文档。
  * @method string getCron() 获取定时任务cron表达式
  * @method void setCron(string $Cron) 设置定时任务cron表达式
  * @method array getResourceIDs() 获取预付费套餐id
 需要与taskId对应
  * @method void setResourceIDs(array $ResourceIDs) 设置预付费套餐id
 需要与taskId对应
+ * @method integer getNodeIpType() 获取拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+ * @method void setNodeIpType(integer $NodeIpType) 设置拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
  */
 class UpdateProbeTaskConfigurationListRequest extends AbstractModel
 {
     /**
-     * @var array 任务 ID
+     * @var array 任务 ID，如task-n1wchki8
      */
     public $TaskIds;
 
     /**
-     * @var array 拨测节点
+     * @var array 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
      */
     public $Nodes;
 
     /**
-     * @var integer 拨测间隔
+     * @var integer 拨测间隔，如30，单位为分钟。
      */
     public $Interval;
 
     /**
-     * @var string 拨测参数
+     * @var string 拨测参数，详细参数配置可参考云拨测官网文档。
      */
     public $Parameters;
 
@@ -69,13 +71,19 @@ class UpdateProbeTaskConfigurationListRequest extends AbstractModel
     public $ResourceIDs;
 
     /**
-     * @param array $TaskIds 任务 ID
-     * @param array $Nodes 拨测节点
-     * @param integer $Interval 拨测间隔
-     * @param string $Parameters 拨测参数
+     * @var integer 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+     */
+    public $NodeIpType;
+
+    /**
+     * @param array $TaskIds 任务 ID，如task-n1wchki8
+     * @param array $Nodes 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
+     * @param integer $Interval 拨测间隔，如30，单位为分钟。
+     * @param string $Parameters 拨测参数，详细参数配置可参考云拨测官网文档。
      * @param string $Cron 定时任务cron表达式
      * @param array $ResourceIDs 预付费套餐id
 需要与taskId对应
+     * @param integer $NodeIpType 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class UpdateProbeTaskConfigurationListRequest extends AbstractModel
 
         if (array_key_exists("ResourceIDs",$param) and $param["ResourceIDs"] !== null) {
             $this->ResourceIDs = $param["ResourceIDs"];
+        }
+
+        if (array_key_exists("NodeIpType",$param) and $param["NodeIpType"] !== null) {
+            $this->NodeIpType = $param["NodeIpType"];
         }
     }
 }

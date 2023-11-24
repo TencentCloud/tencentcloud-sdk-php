@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDocumentId() 获取合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
  * @method void setDocumentId(string $DocumentId) 设置合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
  * @method string getPreviewFileUrl() 获取合同预览链接URL。
 
 注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`
@@ -51,7 +51,7 @@ class CreateDocumentResponse extends AbstractModel
      * @var string 合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
      */
     public $DocumentId;
 
@@ -79,7 +79,7 @@ class CreateDocumentResponse extends AbstractModel
      * @param string $DocumentId 合同流程的底层电子文档ID，为32位字符串。
 
 注:
-后续需用同样的FlowId再次调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/StartFlow" target="_blank">发起签署流程</a>，合同才能进入签署环节
+后续需用同样的FlowId再次调用[发起签署流程](https://qian.tencent.com/developers/companyApis/startFlows/StartFlow)，合同才能进入签署环节
      * @param string $PreviewFileUrl 合同预览链接URL。
 
 注: `1.如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL`

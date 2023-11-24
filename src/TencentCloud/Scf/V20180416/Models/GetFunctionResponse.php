@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTraceEnable(string $TraceEnable) 设置是否开启事件追踪
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageConfig getImageConfig() 获取镜像配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageConfig(ImageConfig $ImageConfig) 设置镜像配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocolType() 获取HTTP函数支持的访问协议。当前支持WebSockets协议。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolType(string $ProtocolType) 设置HTTP函数支持的访问协议。当前支持WebSockets协议。
@@ -129,6 +133,14 @@ use TencentCloud\Common\AbstractModel;
  * @method ProtocolParams getProtocolParams() 获取HTTP函数配置ProtocolType访问协议，当前协议配置的参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolParams(ProtocolParams $ProtocolParams) 设置HTTP函数配置ProtocolType访问协议，当前协议配置的参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDnsCache() 获取是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDnsCache(string $DnsCache) 设置是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method IntranetConfigOut getIntranetConfig() 获取内网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntranetConfig(IntranetConfigOut $IntranetConfig) 设置内网访问配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -355,6 +367,12 @@ class GetFunctionResponse extends AbstractModel
     public $TraceEnable;
 
     /**
+     * @var ImageConfig 镜像配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageConfig;
+
+    /**
      * @var string HTTP函数支持的访问协议。当前支持WebSockets协议。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -365,6 +383,18 @@ class GetFunctionResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolParams;
+
+    /**
+     * @var string 是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DnsCache;
+
+    /**
+     * @var IntranetConfigOut 内网访问配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntranetConfig;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -423,9 +453,15 @@ class GetFunctionResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TraceEnable 是否开启事件追踪
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageConfig $ImageConfig 镜像配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtocolType HTTP函数支持的访问协议。当前支持WebSockets协议。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtocolParams $ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议配置的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DnsCache 是否开启DNS缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntranetConfigOut $IntranetConfig 内网访问配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -637,6 +673,11 @@ class GetFunctionResponse extends AbstractModel
             $this->TraceEnable = $param["TraceEnable"];
         }
 
+        if (array_key_exists("ImageConfig",$param) and $param["ImageConfig"] !== null) {
+            $this->ImageConfig = new ImageConfig();
+            $this->ImageConfig->deserialize($param["ImageConfig"]);
+        }
+
         if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
             $this->ProtocolType = $param["ProtocolType"];
         }
@@ -644,6 +685,15 @@ class GetFunctionResponse extends AbstractModel
         if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
             $this->ProtocolParams = new ProtocolParams();
             $this->ProtocolParams->deserialize($param["ProtocolParams"]);
+        }
+
+        if (array_key_exists("DnsCache",$param) and $param["DnsCache"] !== null) {
+            $this->DnsCache = $param["DnsCache"];
+        }
+
+        if (array_key_exists("IntranetConfig",$param) and $param["IntranetConfig"] !== null) {
+            $this->IntranetConfig = new IntranetConfigOut();
+            $this->IntranetConfig->deserialize($param["IntranetConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

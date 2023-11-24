@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskPauseDuration(integer $TaskPauseDuration) 设置演练自动暂停时间，单位分钟, 不填则默认取经验自动暂停时间
  * @method array getTags() 获取演练标签信息，不填则默认取经验标签
  * @method void setTags(array $Tags) 设置演练标签信息，不填则默认取经验标签
+ * @method integer getPolicyDealType() 获取护栏处理方式，1--顺序回滚，2--演练暂停
+ * @method void setPolicyDealType(integer $PolicyDealType) 设置护栏处理方式，1--顺序回滚，2--演练暂停
  */
 class TaskConfig extends AbstractModel
 {
@@ -66,12 +68,18 @@ class TaskConfig extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 护栏处理方式，1--顺序回滚，2--演练暂停
+     */
+    public $PolicyDealType;
+
+    /**
      * @param array $TaskGroupsConfig 动作组配置，需要保证配置个数和经验中的动作组个数一致
      * @param string $TaskTitle 更改后的演练名称，不填则默认取经验名称
      * @param string $TaskDescription 更改后的演练描述，不填则默认取经验描述
      * @param integer $TaskMode 演练执行模式：1----手工执行/ 2 ---自动执行，不填则默认取经验执行模式
      * @param integer $TaskPauseDuration 演练自动暂停时间，单位分钟, 不填则默认取经验自动暂停时间
      * @param array $Tags 演练标签信息，不填则默认取经验标签
+     * @param integer $PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class TaskConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyDealType",$param) and $param["PolicyDealType"] !== null) {
+            $this->PolicyDealType = $param["PolicyDealType"];
         }
     }
 }

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getBatchTasks() 获取批量任务名-地址
  * @method void setBatchTasks(array $BatchTasks) 设置批量任务名-地址
- * @method integer getTaskType() 获取任务类型
- * @method void setTaskType(integer $TaskType) 设置任务类型
- * @method array getNodes() 获取拨测节点
- * @method void setNodes(array $Nodes) 设置拨测节点
+ * @method integer getTaskType() 获取任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
+ * @method void setTaskType(integer $TaskType) 设置任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
+ * @method array getNodes() 获取拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
+ * @method void setNodes(array $Nodes) 设置拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
  * @method integer getInterval() 获取拨测间隔
  * @method void setInterval(integer $Interval) 设置拨测间隔
- * @method string getParameters() 获取拨测参数
- * @method void setParameters(string $Parameters) 设置拨测参数
+ * @method string getParameters() 获取拨测参数，如{}，详细可参考云拨测官方文档。
+ * @method void setParameters(string $Parameters) 设置拨测参数，如{}，详细可参考云拨测官方文档。
  * @method integer getTaskCategory() 获取任务分类
 <li>1 = PC</li>
 <li> 2 = Mobile </li>
@@ -40,12 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCron(string $Cron) 设置定时任务cron表达式
  * @method array getTag() 获取资源标签值
  * @method void setTag(array $Tag) 设置资源标签值
- * @method integer getProbeType() 获取测试类型，包含定时测试与即时测试
- * @method void setProbeType(integer $ProbeType) 设置测试类型，包含定时测试与即时测试
- * @method string getPluginSource() 获取插件类型
- * @method void setPluginSource(string $PluginSource) 设置插件类型
+ * @method integer getProbeType() 获取测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+ * @method void setProbeType(integer $ProbeType) 设置测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+ * @method string getPluginSource() 获取插件类型，如CDN，详情参考云拨测官方文档。
+ * @method void setPluginSource(string $PluginSource) 设置插件类型，如CDN，详情参考云拨测官方文档。
  * @method string getClientNum() 获取客户端ID
  * @method void setClientNum(string $ClientNum) 设置客户端ID
+ * @method integer getNodeIpType() 获取拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+ * @method void setNodeIpType(integer $NodeIpType) 设置拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
  */
 class CreateProbeTasksRequest extends AbstractModel
 {
@@ -55,12 +57,12 @@ class CreateProbeTasksRequest extends AbstractModel
     public $BatchTasks;
 
     /**
-     * @var integer 任务类型
+     * @var integer 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
      */
     public $TaskType;
 
     /**
-     * @var array 拨测节点
+     * @var array 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
      */
     public $Nodes;
 
@@ -70,7 +72,7 @@ class CreateProbeTasksRequest extends AbstractModel
     public $Interval;
 
     /**
-     * @var string 拨测参数
+     * @var string 拨测参数，如{}，详细可参考云拨测官方文档。
      */
     public $Parameters;
 
@@ -92,12 +94,12 @@ class CreateProbeTasksRequest extends AbstractModel
     public $Tag;
 
     /**
-     * @var integer 测试类型，包含定时测试与即时测试
+     * @var integer 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
      */
     public $ProbeType;
 
     /**
-     * @var string 插件类型
+     * @var string 插件类型，如CDN，详情参考云拨测官方文档。
      */
     public $PluginSource;
 
@@ -107,19 +109,25 @@ class CreateProbeTasksRequest extends AbstractModel
     public $ClientNum;
 
     /**
+     * @var integer 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+     */
+    public $NodeIpType;
+
+    /**
      * @param array $BatchTasks 批量任务名-地址
-     * @param integer $TaskType 任务类型
-     * @param array $Nodes 拨测节点
+     * @param integer $TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
+     * @param array $Nodes 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
      * @param integer $Interval 拨测间隔
-     * @param string $Parameters 拨测参数
+     * @param string $Parameters 拨测参数，如{}，详细可参考云拨测官方文档。
      * @param integer $TaskCategory 任务分类
 <li>1 = PC</li>
 <li> 2 = Mobile </li>
      * @param string $Cron 定时任务cron表达式
      * @param array $Tag 资源标签值
-     * @param integer $ProbeType 测试类型，包含定时测试与即时测试
-     * @param string $PluginSource 插件类型
+     * @param integer $ProbeType 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+     * @param string $PluginSource 插件类型，如CDN，详情参考云拨测官方文档。
      * @param string $ClientNum 客户端ID
+     * @param integer $NodeIpType 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class CreateProbeTasksRequest extends AbstractModel
 
         if (array_key_exists("ClientNum",$param) and $param["ClientNum"] !== null) {
             $this->ClientNum = $param["ClientNum"];
+        }
+
+        if (array_key_exists("NodeIpType",$param) and $param["NodeIpType"] !== null) {
+            $this->NodeIpType = $param["NodeIpType"];
         }
     }
 }

@@ -72,6 +72,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHotPeriod(integer $HotPeriod) 设置开启日志沉降，热存储的生命周期， hotPeriod < Period。
 热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBizType() 获取主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBizType(integer $BizType) 设置主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsWebTracking() 获取免鉴权开关。
+- false: 关闭
+- true: 开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。
+- false: 关闭
+- true: 开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
 {
@@ -166,6 +182,22 @@ class TopicInfo extends AbstractModel
     public $HotPeriod;
 
     /**
+     * @var integer 主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BizType;
+
+    /**
+     * @var boolean 免鉴权开关。
+- false: 关闭
+- true: 开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsWebTracking;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
@@ -191,6 +223,14 @@ class TopicInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HotPeriod 开启日志沉降，热存储的生命周期， hotPeriod < Period。
 热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BizType 主题类型。
+- 0: 日志主题 
+- 1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsWebTracking 免鉴权开关。
+- false: 关闭
+- true: 开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -273,6 +313,14 @@ class TopicInfo extends AbstractModel
 
         if (array_key_exists("HotPeriod",$param) and $param["HotPeriod"] !== null) {
             $this->HotPeriod = $param["HotPeriod"];
+        }
+
+        if (array_key_exists("BizType",$param) and $param["BizType"] !== null) {
+            $this->BizType = $param["BizType"];
+        }
+
+        if (array_key_exists("IsWebTracking",$param) and $param["IsWebTracking"] !== null) {
+            $this->IsWebTracking = $param["IsWebTracking"];
         }
     }
 }

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
  * @method boolean getStatus() 获取是否开启告警策略。
  * @method void setStatus(boolean $Status) 设置是否开启告警策略。
+ * @method boolean getEnable() 获取是否开启告警策略。默认值为true
+ * @method void setEnable(boolean $Enable) 设置是否开启告警策略。默认值为true
  * @method string getMessageTemplate() 获取用户自定义告警内容
  * @method void setMessageTemplate(string $MessageTemplate) 设置用户自定义告警内容
  * @method CallBackInfo getCallBack() 获取用户自定义回调
@@ -74,11 +76,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。true：开启，false：关闭（默认）
  * @method array getGroupTriggerCondition() 获取分组触发条件。
  * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置分组触发条件。
+ * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
+ * @method void setTags(array $Tags) 设置标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
  * @method integer getMonitorObjectType() 获取监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
  * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+ * @method array getClassifications() 获取告警附加分类信息列表。
+Classifications元素个数不能超过20个。
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
+Classifications元素的Value长度不能超过200个字符。
+ * @method void setClassifications(array $Classifications) 设置告警附加分类信息列表。
+Classifications元素个数不能超过20个。
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
+Classifications元素的Value长度不能超过200个字符。
  */
 class ModifyAlarmRequest extends AbstractModel
 {
@@ -149,6 +162,11 @@ class ModifyAlarmRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var boolean 是否开启告警策略。默认值为true
+     */
+    public $Enable;
+
+    /**
      * @var string 用户自定义告警内容
      */
     public $MessageTemplate;
@@ -174,11 +192,24 @@ class ModifyAlarmRequest extends AbstractModel
     public $GroupTriggerCondition;
 
     /**
+     * @var array 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
+     */
+    public $Tags;
+
+    /**
      * @var integer 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
      */
     public $MonitorObjectType;
+
+    /**
+     * @var array 告警附加分类信息列表。
+Classifications元素个数不能超过20个。
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
+Classifications元素的Value长度不能超过200个字符。
+     */
+    public $Classifications;
 
     /**
      * @param string $AlarmId 告警策略ID。
@@ -203,13 +234,20 @@ class ModifyAlarmRequest extends AbstractModel
      * @param array $AlarmNoticeIds 关联的告警通知模板列表。
      * @param array $AlarmTargets 监控对象列表。
      * @param boolean $Status 是否开启告警策略。
+     * @param boolean $Enable 是否开启告警策略。默认值为true
      * @param string $MessageTemplate 用户自定义告警内容
      * @param CallBackInfo $CallBack 用户自定义回调
      * @param array $Analysis 多维分析
      * @param boolean $GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
      * @param array $GroupTriggerCondition 分组触发条件。
+     * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
      * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-<li> 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+     * @param array $Classifications 告警附加分类信息列表。
+Classifications元素个数不能超过20个。
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
+Classifications元素的Value长度不能超过200个字符。
      */
     function __construct()
     {
@@ -279,6 +317,10 @@ class ModifyAlarmRequest extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
+        }
+
         if (array_key_exists("MessageTemplate",$param) and $param["MessageTemplate"] !== null) {
             $this->MessageTemplate = $param["MessageTemplate"];
         }
@@ -305,8 +347,26 @@ class ModifyAlarmRequest extends AbstractModel
             $this->GroupTriggerCondition = $param["GroupTriggerCondition"];
         }
 
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
         if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
             $this->MonitorObjectType = $param["MonitorObjectType"];
+        }
+
+        if (array_key_exists("Classifications",$param) and $param["Classifications"] !== null) {
+            $this->Classifications = [];
+            foreach ($param["Classifications"] as $key => $value){
+                $obj = new AlarmClassification();
+                $obj->deserialize($value);
+                array_push($this->Classifications, $obj);
+            }
         }
     }
 }

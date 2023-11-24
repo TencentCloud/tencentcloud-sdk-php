@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(boolean $Status) 设置是否开启告警策略。
 
 默认值为true
+ * @method boolean getEnable() 获取是否开启告警策略。默认值为true
+ * @method void setEnable(boolean $Enable) 设置是否开启告警策略。默认值为true
  * @method string getMessageTemplate() 获取用户自定义告警内容
  * @method void setMessageTemplate(string $MessageTemplate) 设置用户自定义告警内容
  * @method CallBackInfo getCallBack() 获取用户自定义回调
@@ -117,6 +119,21 @@ use TencentCloud\Common\AbstractModel;
 不填则默认为0。
 
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+ * @method array getClassifications() 获取告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。
+ * @method void setClassifications(array $Classifications) 设置告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。
  */
 class CreateAlarmRequest extends AbstractModel
 {
@@ -194,6 +211,11 @@ class CreateAlarmRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var boolean 是否开启告警策略。默认值为true
+     */
+    public $Enable;
+
+    /**
      * @var string 用户自定义告警内容
      */
     public $MessageTemplate;
@@ -238,6 +260,17 @@ class CreateAlarmRequest extends AbstractModel
     public $MonitorObjectType;
 
     /**
+     * @var array 告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。
+     */
+    public $Classifications;
+
+    /**
      * @param string $Name 告警策略名称
      * @param array $AlarmTargets 监控对象列表。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
@@ -271,6 +304,7 @@ class CreateAlarmRequest extends AbstractModel
      * @param boolean $Status 是否开启告警策略。
 
 默认值为true
+     * @param boolean $Enable 是否开启告警策略。默认值为true
      * @param string $MessageTemplate 用户自定义告警内容
      * @param CallBackInfo $CallBack 用户自定义回调
      * @param array $Analysis 多维分析
@@ -286,6 +320,14 @@ class CreateAlarmRequest extends AbstractModel
 不填则默认为0。
 
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
+
+     * @param array $Classifications 告警附加分类信息列表。
+
+Classifications元素个数不能超过20个。
+
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
+
+Classifications元素的Value长度不能超过200个字符。
      */
     function __construct()
     {
@@ -351,6 +393,10 @@ class CreateAlarmRequest extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
+        }
+
         if (array_key_exists("MessageTemplate",$param) and $param["MessageTemplate"] !== null) {
             $this->MessageTemplate = $param["MessageTemplate"];
         }
@@ -388,6 +434,15 @@ class CreateAlarmRequest extends AbstractModel
 
         if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
             $this->MonitorObjectType = $param["MonitorObjectType"];
+        }
+
+        if (array_key_exists("Classifications",$param) and $param["Classifications"] !== null) {
+            $this->Classifications = [];
+            foreach ($param["Classifications"] as $key => $value){
+                $obj = new AlarmClassification();
+                $obj->deserialize($value);
+                array_push($this->Classifications, $obj);
+            }
         }
     }
 }

@@ -142,9 +142,11 @@ use TencentCloud\Common\AbstractModel;
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
 示例值：1604912664
  * @method string getTemplateId() 获取用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
  * @method void setTemplateId(string $TemplateId) 设置用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
  * @method array getFlowApprovers() 获取多个签署人信息，最大支持50个签署方
@@ -248,6 +250,7 @@ class FlowInfo extends AbstractModel
 
     /**
      * @var string 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
      */
@@ -345,6 +348,7 @@ class FlowInfo extends AbstractModel
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
 示例值：1604912664
      * @param string $TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
      * @param array $FlowApprovers 多个签署人信息，最大支持50个签署方

@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyId(integer $VerifyId) 设置关联的隐患验证项ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPolicyDealType() 获取护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyDealType(integer $PolicyDealType) 设置护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Task extends AbstractModel
 {
@@ -271,6 +275,12 @@ class Task extends AbstractModel
     public $VerifyId;
 
     /**
+     * @var integer 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyDealType;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -315,6 +325,8 @@ class Task extends AbstractModel
      * @param array $ApmServiceList 关联的APM服务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VerifyId 关联的隐患验证项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -461,6 +473,10 @@ class Task extends AbstractModel
 
         if (array_key_exists("VerifyId",$param) and $param["VerifyId"] !== null) {
             $this->VerifyId = $param["VerifyId"];
+        }
+
+        if (array_key_exists("PolicyDealType",$param) and $param["PolicyDealType"] !== null) {
+            $this->PolicyDealType = $param["PolicyDealType"];
         }
     }
 }

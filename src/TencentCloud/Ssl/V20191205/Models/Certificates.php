@@ -124,9 +124,9 @@ null = 用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsVulnerability(boolean $IsVulnerability) 设置是否启用了漏洞扫描功能。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getRenewAble() 获取是否可重颁发证书。
+ * @method boolean getRenewAble() 获取是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewAble(boolean $RenewAble) 设置是否可重颁发证书。
+ * @method void setRenewAble(boolean $RenewAble) 设置是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ProjectInfo getProjectInfo() 获取项目信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,6 +187,38 @@ null = 用户上传证书（没有套餐类型），
  * @method string getHostingRenewCertId() 获取托管新证书ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostingRenewCertId(string $HostingRenewCertId) 设置托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHasRenewOrder() 获取存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasRenewOrder(string $HasRenewOrder) 设置存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getReplaceOriCertIsDelete() 获取重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplaceOriCertIsDelete(boolean $ReplaceOriCertIsDelete) 设置重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsExpiring() 获取是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsExpiring(boolean $IsExpiring) 设置是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDVAuthDeadline() 获取DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDVAuthDeadline(string $DVAuthDeadline) 设置DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValidationPassedTime() 获取域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValidationPassedTime(string $ValidationPassedTime) 设置域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCertSANs() 获取证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertSANs(array $CertSANs) 设置证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAwaitingValidationMsg() 获取域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAwaitingValidationMsg(string $AwaitingValidationMsg) 设置域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAllowDownload() 获取是否允许下载
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllowDownload(boolean $AllowDownload) 设置是否允许下载
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
@@ -344,7 +376,7 @@ null = 用户上传证书（没有套餐类型），
     public $IsVulnerability;
 
     /**
-     * @var boolean 是否可重颁发证书。
+     * @var boolean 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewAble;
@@ -440,6 +472,54 @@ null = 用户上传证书（没有套餐类型），
     public $HostingRenewCertId;
 
     /**
+     * @var string 存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasRenewOrder;
+
+    /**
+     * @var boolean 重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplaceOriCertIsDelete;
+
+    /**
+     * @var boolean 是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsExpiring;
+
+    /**
+     * @var string DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DVAuthDeadline;
+
+    /**
+     * @var string 域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValidationPassedTime;
+
+    /**
+     * @var array 证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertSANs;
+
+    /**
+     * @var string 域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AwaitingValidationMsg;
+
+    /**
+     * @var boolean 是否允许下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllowDownload;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -492,7 +572,7 @@ null = 用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsVulnerability 是否启用了漏洞扫描功能。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $RenewAble 是否可重颁发证书。
+     * @param boolean $RenewAble 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectInfo $ProjectInfo 项目信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -523,6 +603,22 @@ null = 用户上传证书（没有套餐类型），
      * @param string $HostingCompleteTime 托管完成时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostingRenewCertId 托管新证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HasRenewOrder 存在的续费证书ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ReplaceOriCertIsDelete 重颁发证书原证书是否删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsExpiring 是否即将过期， 证书即将到期的30天内为即将过期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DVAuthDeadline DV证书添加验证截止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ValidationPassedTime 域名验证通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CertSANs 证书关联的多域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AwaitingValidationMsg 域名验证驳回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AllowDownload 是否允许下载
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -708,6 +804,38 @@ null = 用户上传证书（没有套餐类型），
 
         if (array_key_exists("HostingRenewCertId",$param) and $param["HostingRenewCertId"] !== null) {
             $this->HostingRenewCertId = $param["HostingRenewCertId"];
+        }
+
+        if (array_key_exists("HasRenewOrder",$param) and $param["HasRenewOrder"] !== null) {
+            $this->HasRenewOrder = $param["HasRenewOrder"];
+        }
+
+        if (array_key_exists("ReplaceOriCertIsDelete",$param) and $param["ReplaceOriCertIsDelete"] !== null) {
+            $this->ReplaceOriCertIsDelete = $param["ReplaceOriCertIsDelete"];
+        }
+
+        if (array_key_exists("IsExpiring",$param) and $param["IsExpiring"] !== null) {
+            $this->IsExpiring = $param["IsExpiring"];
+        }
+
+        if (array_key_exists("DVAuthDeadline",$param) and $param["DVAuthDeadline"] !== null) {
+            $this->DVAuthDeadline = $param["DVAuthDeadline"];
+        }
+
+        if (array_key_exists("ValidationPassedTime",$param) and $param["ValidationPassedTime"] !== null) {
+            $this->ValidationPassedTime = $param["ValidationPassedTime"];
+        }
+
+        if (array_key_exists("CertSANs",$param) and $param["CertSANs"] !== null) {
+            $this->CertSANs = $param["CertSANs"];
+        }
+
+        if (array_key_exists("AwaitingValidationMsg",$param) and $param["AwaitingValidationMsg"] !== null) {
+            $this->AwaitingValidationMsg = $param["AwaitingValidationMsg"];
+        }
+
+        if (array_key_exists("AllowDownload",$param) and $param["AllowDownload"] !== null) {
+            $this->AllowDownload = $param["AllowDownload"];
         }
     }
 }

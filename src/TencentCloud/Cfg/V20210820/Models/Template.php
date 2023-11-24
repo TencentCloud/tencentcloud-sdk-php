@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmPolicy(array $AlarmPolicy) 设置告警指标
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPolicyDealType() 获取护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyDealType(integer $PolicyDealType) 设置护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -168,6 +172,12 @@ class Template extends AbstractModel
     public $AlarmPolicy;
 
     /**
+     * @var integer 护栏处理方式，1--顺序回滚，2--演练暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyDealType;
+
+    /**
      * @param integer $TemplateId 经验库ID
      * @param string $TemplateTitle 经验库标题
      * @param string $TemplateDescription 经验库描述
@@ -191,6 +201,8 @@ class Template extends AbstractModel
      * @param array $ApmServiceList apm应用信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlarmPolicy 告警指标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +309,10 @@ class Template extends AbstractModel
 
         if (array_key_exists("AlarmPolicy",$param) and $param["AlarmPolicy"] !== null) {
             $this->AlarmPolicy = $param["AlarmPolicy"];
+        }
+
+        if (array_key_exists("PolicyDealType",$param) and $param["PolicyDealType"] !== null) {
+            $this->PolicyDealType = $param["PolicyDealType"];
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDTSParams(DTSParams $DTSParams) 设置data transfer service (DTS)参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TDMQParams getTDMQParams() 获取tdmq参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTDMQParams(TDMQParams $TDMQParams) 设置tdmq参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConnectionDescription extends AbstractModel
 {
@@ -61,12 +65,20 @@ class ConnectionDescription extends AbstractModel
     public $DTSParams;
 
     /**
+     * @var TDMQParams tdmq参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TDMQParams;
+
+    /**
      * @param string $ResourceDescription 资源qcs六段式，更多参考 [资源六段式](https://cloud.tencent.com/document/product/598/10606)
      * @param APIGWParams $APIGWParams apigw参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CkafkaParams $CkafkaParams ckafka参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DTSParams $DTSParams data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TDMQParams $TDMQParams tdmq参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -99,6 +111,11 @@ class ConnectionDescription extends AbstractModel
         if (array_key_exists("DTSParams",$param) and $param["DTSParams"] !== null) {
             $this->DTSParams = new DTSParams();
             $this->DTSParams->deserialize($param["DTSParams"]);
+        }
+
+        if (array_key_exists("TDMQParams",$param) and $param["TDMQParams"] !== null) {
+            $this->TDMQParams = new TDMQParams();
+            $this->TDMQParams->deserialize($param["TDMQParams"]);
         }
     }
 }

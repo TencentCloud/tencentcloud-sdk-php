@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
  * @method UserInfo getOperator() 获取操作人信息
  * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method string getSceneKey() 获取自动签场景: E_PRESCRIPTION_AUTO_SIGN 电子处方
- * @method void setSceneKey(string $SceneKey) 设置自动签场景: E_PRESCRIPTION_AUTO_SIGN 电子处方
+ * @method string getSceneKey() 获取自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+ * @method void setSceneKey(string $SceneKey) 设置自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
  * @method UserThreeFactor getUserInfo() 获取指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
  * @method void setUserInfo(UserThreeFactor $UserInfo) 设置指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
  */
@@ -42,7 +44,8 @@ class ChannelCancelUserAutoSignEnableUrlRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 自动签场景: E_PRESCRIPTION_AUTO_SIGN 电子处方
+     * @var string 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */
     public $SceneKey;
 
@@ -54,7 +57,8 @@ class ChannelCancelUserAutoSignEnableUrlRequest extends AbstractModel
     /**
      * @param Agent $Agent 渠道应用相关信息
      * @param UserInfo $Operator 操作人信息
-     * @param string $SceneKey 自动签场景: E_PRESCRIPTION_AUTO_SIGN 电子处方
+     * @param string $SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      * @param UserThreeFactor $UserInfo 指定撤销链接的用户信息，包含姓名、证件类型、证件号码。
      */
     function __construct()

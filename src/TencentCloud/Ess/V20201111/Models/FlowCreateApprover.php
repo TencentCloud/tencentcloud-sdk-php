@@ -130,8 +130,8 @@ use TencentCloud\Common\AbstractModel;
 如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
  * @method RegisterInfo getRegisterInfo() 获取已经废弃, 快速注册相关信息
  * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置已经废弃, 快速注册相关信息
- * @method ApproverOption getApproverOption() 获取签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
- * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
+ * @method ApproverOption getApproverOption() 获取签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
+ * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
  * @method string getJumpUrl() 获取签署完前端跳转的url，暂未使用
  * @method void setJumpUrl(string $JumpUrl) 设置签署完前端跳转的url，暂未使用
  * @method string getSignId() 获取签署ID
@@ -369,7 +369,7 @@ class FlowCreateApprover extends AbstractModel
     public $RegisterInfo;
 
     /**
-     * @var ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
+     * @var ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
      */
     public $ApproverOption;
 
@@ -519,7 +519,7 @@ class FlowCreateApprover extends AbstractModel
 注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
 如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
      * @param RegisterInfo $RegisterInfo 已经废弃, 快速注册相关信息
-     * @param ApproverOption $ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签等功能开关。
+     * @param ApproverOption $ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用
      * @param string $SignId 签署ID
 - 发起流程时系统自动补充

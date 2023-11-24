@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateServiceLinkedRole请求参数结构体
  *
- * @method array getQCSServiceName() 获取授权服务，附加了此角色的腾讯云服务主体。
- * @method void setQCSServiceName(array $QCSServiceName) 设置授权服务，附加了此角色的腾讯云服务主体。
+ * @method array getQCSServiceName() 获取填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165
+ * @method void setQCSServiceName(array $QCSServiceName) 设置填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165
  * @method string getCustomSuffix() 获取自定义后缀，根据您提供的字符串，与服务提供的前缀组合在一起以形成完整的角色名称。
  * @method void setCustomSuffix(string $CustomSuffix) 设置自定义后缀，根据您提供的字符串，与服务提供的前缀组合在一起以形成完整的角色名称。
  * @method string getDescription() 获取角色说明。
@@ -32,7 +34,8 @@ use TencentCloud\Common\AbstractModel;
 class CreateServiceLinkedRoleRequest extends AbstractModel
 {
     /**
-     * @var array 授权服务，附加了此角色的腾讯云服务主体。
+     * @var array 填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165
      */
     public $QCSServiceName;
 
@@ -52,7 +55,8 @@ class CreateServiceLinkedRoleRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param array $QCSServiceName 授权服务，附加了此角色的腾讯云服务主体。
+     * @param array $QCSServiceName 填写此角色的腾讯云服务载体，具体可查询文档（角色载体）字段
+https://cloud.tencent.com/document/product/598/85165
      * @param string $CustomSuffix 自定义后缀，根据您提供的字符串，与服务提供的前缀组合在一起以形成完整的角色名称。
      * @param string $Description 角色说明。
      * @param array $Tags 角色绑定标签。

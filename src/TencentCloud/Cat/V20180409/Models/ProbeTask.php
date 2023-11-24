@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 即时拨测只支持页面浏览，网络质量，文件下载
  * @method array getNodes() 获取拨测节点列表
  * @method void setNodes(array $Nodes) 设置拨测节点列表
+ * @method integer getNodeIpType() 获取拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeIpType(integer $NodeIpType) 设置拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInterval() 获取拨测间隔
  * @method void setInterval(integer $Interval) 设置拨测间隔
  * @method string getParameters() 获取拨测参数
@@ -143,6 +147,12 @@ class ProbeTask extends AbstractModel
     public $Nodes;
 
     /**
+     * @var integer 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeIpType;
+
+    /**
      * @var integer 拨测间隔
      */
     public $Interval;
@@ -232,6 +242,8 @@ class ProbeTask extends AbstractModel
 
 即时拨测只支持页面浏览，网络质量，文件下载
      * @param array $Nodes 拨测节点列表
+     * @param integer $NodeIpType 拨测任务所选的拨测点IP类型，0-不限，1-IPv4，2-IPv6
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Interval 拨测间隔
      * @param string $Parameters 拨测参数
      * @param integer $Status 任务状态
@@ -292,6 +304,10 @@ class ProbeTask extends AbstractModel
 
         if (array_key_exists("Nodes",$param) and $param["Nodes"] !== null) {
             $this->Nodes = $param["Nodes"];
+        }
+
+        if (array_key_exists("NodeIpType",$param) and $param["NodeIpType"] !== null) {
+            $this->NodeIpType = $param["NodeIpType"];
         }
 
         if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {

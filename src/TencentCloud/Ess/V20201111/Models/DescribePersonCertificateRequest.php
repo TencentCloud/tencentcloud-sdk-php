@@ -37,11 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method string getSceneKey() 获取证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
-注: `现在仅支持电子处方场景`
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
  * @method void setSceneKey(string $SceneKey) 设置证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
-注: `现在仅支持电子处方场景`
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
  */
 class DescribePersonCertificateRequest extends AbstractModel
 {
@@ -67,8 +65,7 @@ class DescribePersonCertificateRequest extends AbstractModel
 
     /**
      * @var string 证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
-注: `现在仅支持电子处方场景`
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */
     public $SceneKey;
 
@@ -82,8 +79,7 @@ class DescribePersonCertificateRequest extends AbstractModel
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param string $SceneKey 证书使用场景，可以选择的场景值如下:
-<ul><li> **E_PRESCRIPTION_AUTO_SIGN** : 电子处方场景</li></ul>
-注: `现在仅支持电子处方场景`
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */
     function __construct()
     {

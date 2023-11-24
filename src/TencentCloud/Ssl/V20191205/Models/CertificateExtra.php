@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSMCert(integer $SMCert) 设置是否是国密证书
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCompanyType() 获取公司类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCompanyType(integer $CompanyType) 设置公司类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CertificateExtra extends AbstractModel
 {
@@ -84,6 +88,12 @@ class CertificateExtra extends AbstractModel
     public $SMCert;
 
     /**
+     * @var integer 公司类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CompanyType;
+
+    /**
      * @param string $DomainNumber 证书可配置域名数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginCertificateId 原始证书 ID。
@@ -95,6 +105,8 @@ class CertificateExtra extends AbstractModel
      * @param string $RenewOrder 新订单证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SMCert 是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CompanyType 公司类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class CertificateExtra extends AbstractModel
 
         if (array_key_exists("SMCert",$param) and $param["SMCert"] !== null) {
             $this->SMCert = $param["SMCert"];
+        }
+
+        if (array_key_exists("CompanyType",$param) and $param["CompanyType"] !== null) {
+            $this->CompanyType = $param["CompanyType"];
         }
     }
 }

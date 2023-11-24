@@ -28,14 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置个人用户名称
  * @method string getIdCardType() 获取证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method void setIdCardType(string $IdCardType) 设置证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method string getIdCardNumber() 获取证件号码，应符合以下规则
@@ -50,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getSceneKey() 获取自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+ * @method void setSceneKey(string $SceneKey) 设置自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
  */
 class CreatePersonAuthCertificateImageRequest extends AbstractModel
 {
@@ -67,8 +71,6 @@ class CreatePersonAuthCertificateImageRequest extends AbstractModel
     /**
      * @var string 证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
@@ -89,13 +91,19 @@ class CreatePersonAuthCertificateImageRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var string 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
+     */
+    public $SceneKey;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $UserName 个人用户名称
      * @param string $IdCardType 证件类型，支持以下类型
 <ul><li> ID_CARD  : 居民身份证 (默认值)</li>
-<li> PASSPORT  : 护照</li>
-<li> FOREIGN_ID_CARD  : 外国人永久居留身份证</li>
 <li> HONGKONG_AND_MACAO  : 港澳居民来往内地通行证</li>
 <li> HONGKONG_MACAO_AND_TAIWAN  : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param string $IdCardNumber 证件号码，应符合以下规则
@@ -104,6 +112,10 @@ class CreatePersonAuthCertificateImageRequest extends AbstractModel
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $SceneKey 自动签使用的场景值, 可以选择的场景值如下:
+<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+
+注: `不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN`
      */
     function __construct()
     {
@@ -138,6 +150,10 @@ class CreatePersonAuthCertificateImageRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("SceneKey",$param) and $param["SceneKey"] !== null) {
+            $this->SceneKey = $param["SceneKey"];
         }
     }
 }

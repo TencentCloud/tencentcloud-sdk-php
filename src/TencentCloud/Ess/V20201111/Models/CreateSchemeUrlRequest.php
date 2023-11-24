@@ -35,11 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMobile() 获取合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
  * @method void setMobile(string $Mobile) 设置合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
  * @method string getIdCardType() 获取证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method void setIdCardType(string $IdCardType) 设置证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method string getIdCardNumber() 获取证件号码，应符合以下规则
@@ -138,7 +138,7 @@ class CreateSchemeUrlRequest extends AbstractModel
 
     /**
      * @var string 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      */
@@ -223,7 +223,7 @@ class CreateSchemeUrlRequest extends AbstractModel
 
      * @param string $Mobile 合同流程里边签署方经办人手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
      * @param string $IdCardType 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
+<ul><li>ID_CARD : 居民身份证</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param string $IdCardNumber 证件号码，应符合以下规则

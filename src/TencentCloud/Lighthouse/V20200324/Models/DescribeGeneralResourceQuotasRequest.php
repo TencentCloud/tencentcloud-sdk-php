@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
 - STARTER_BUNDLE_INSTANCE 入门型套餐实例
-- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 中国香港专属型套餐实例
 - CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
 - STARTER_BUNDLE_INSTANCE 入门型套餐实例
-- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 中国香港专属型套餐实例
 - CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照
@@ -61,7 +61,7 @@ class DescribeGeneralResourceQuotasRequest extends AbstractModel
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
 - STARTER_BUNDLE_INSTANCE 入门型套餐实例
-- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 中国香港专属型套餐实例
 - CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照
@@ -80,7 +80,7 @@ class DescribeGeneralResourceQuotasRequest extends AbstractModel
 - EXCLUSIVE_BUNDLE_INSTANCE 专属型套餐实例
 - BEFAST_BUNDLE_INSTANCE 蜂驰型套餐实例
 - STARTER_BUNDLE_INSTANCE 入门型套餐实例
-- HK_EXCLUSIVE_BUNDLE_INSTANCE 香港专属型套餐实例
+- HK_EXCLUSIVE_BUNDLE_INSTANCE 中国香港专属型套餐实例
 - CAREFREE_BUNDLE_INSTANCE 无忧型套餐实例
 - USER_KEY_PAIR 密钥对
 - SNAPSHOT 快照

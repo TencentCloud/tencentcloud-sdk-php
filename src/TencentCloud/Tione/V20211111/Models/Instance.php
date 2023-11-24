@@ -86,6 +86,8 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecFeatures(array $SpecFeatures) 设置计费项特性列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCvmInstanceId() 获取纳管cvmid
+ * @method void setCvmInstanceId(string $CvmInstanceId) 设置纳管cvmid
  */
 class Instance extends AbstractModel
 {
@@ -167,6 +169,11 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
     public $SpecFeatures;
 
     /**
+     * @var string 纳管cvmid
+     */
+    public $CvmInstanceId;
+
+    /**
      * @param string $InstanceId 资源组节点id
      * @param ResourceInfo $UsedResource 节点已用资源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -200,6 +207,7 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
      * @param string $SpecAlias 计费项别名
      * @param array $SpecFeatures 计费项特性列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CvmInstanceId 纳管cvmid
      */
     function __construct()
     {
@@ -258,6 +266,10 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：手动续费(取消自动续费)且到期不�
 
         if (array_key_exists("SpecFeatures",$param) and $param["SpecFeatures"] !== null) {
             $this->SpecFeatures = $param["SpecFeatures"];
+        }
+
+        if (array_key_exists("CvmInstanceId",$param) and $param["CvmInstanceId"] !== null) {
+            $this->CvmInstanceId = $param["CvmInstanceId"];
         }
     }
 }

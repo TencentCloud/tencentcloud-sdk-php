@@ -45,14 +45,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerImageAccelerate(boolean $ContainerImageAccelerate) 设置镜像加速开关，默认False
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getImagePort() 获取镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImagePort(integer $ImagePort) 设置镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageConfig extends AbstractModel
@@ -99,9 +99,9 @@ class ImageConfig extends AbstractModel
 
     /**
      * @var integer 镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImagePort;
@@ -120,9 +120,9 @@ class ImageConfig extends AbstractModel
      * @param boolean $ContainerImageAccelerate 镜像加速开关，默认False
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ImagePort 镜像函数端口设置
+默认值: 9000
 -1: 无端口镜像函数
-0: 默认端口，当前默认端口是9000
-其他: 特殊端口
+其他: 取值范围 0 ~ 65535
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

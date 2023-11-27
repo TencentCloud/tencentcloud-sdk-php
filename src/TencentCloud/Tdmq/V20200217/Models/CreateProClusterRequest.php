@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProCluster请求参数结构体
  *
- * @method string getZoneIds() 获取多可用区部署选择三个可用区，示例"200002","200003","200004"
+ * @method array getZoneIds() 获取多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002"
- * @method void setZoneIds(string $ZoneIds) 设置多可用区部署选择三个可用区，示例"200002","200003","200004"
+单可用区部署选择一个可用区，示例[200002]
+ * @method void setZoneIds(array $ZoneIds) 设置多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002"
+单可用区部署选择一个可用区，示例[200002]
  * @method string getProductName() 获取集群规格代号
 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
  * @method void setProductName(string $ProductName) 设置集群规格代号
@@ -54,9 +54,9 @@ use TencentCloud\Common\AbstractModel;
 class CreateProClusterRequest extends AbstractModel
 {
     /**
-     * @var string 多可用区部署选择三个可用区，示例"200002","200003","200004"
+     * @var array 多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002"
+单可用区部署选择一个可用区，示例[200002]
      */
     public $ZoneIds;
 
@@ -105,9 +105,9 @@ class CreateProClusterRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ZoneIds 多可用区部署选择三个可用区，示例"200002","200003","200004"
+     * @param array $ZoneIds 多可用区部署选择三个可用区，示例[200002,200003,200004]
 
-单可用区部署选择一个可用区，示例"200002"
+单可用区部署选择一个可用区，示例[200002]
      * @param string $ProductName 集群规格代号
 参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
      * @param integer $StorageSize 存储规格

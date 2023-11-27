@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
  * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间。
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+ * @method string getCloudCertId() 获取腾讯云 SSL 产品中的证书 ID。
+ * @method void setCloudCertId(string $CloudCertId) 设置腾讯云 SSL 产品中的证书 ID。
  */
 class DomainHTTPSConfig extends AbstractModel
 {
@@ -34,8 +36,14 @@ class DomainHTTPSConfig extends AbstractModel
     public $CertExpireTime;
 
     /**
+     * @var string 腾讯云 SSL 产品中的证书 ID。
+     */
+    public $CloudCertId;
+
+    /**
      * @param string $CertExpireTime 证书过期时间。
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。</li>
+     * @param string $CloudCertId 腾讯云 SSL 产品中的证书 ID。
      */
     function __construct()
     {
@@ -52,6 +60,10 @@ class DomainHTTPSConfig extends AbstractModel
         }
         if (array_key_exists("CertExpireTime",$param) and $param["CertExpireTime"] !== null) {
             $this->CertExpireTime = $param["CertExpireTime"];
+        }
+
+        if (array_key_exists("CloudCertId",$param) and $param["CloudCertId"] !== null) {
+            $this->CloudCertId = $param["CloudCertId"];
         }
     }
 }

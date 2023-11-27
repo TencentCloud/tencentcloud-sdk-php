@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdList(array $IdList) 设置域名化资源传id
  * @method integer getFilterRegion() 获取地域名称
  * @method void setFilterRegion(integer $FilterRegion) 设置地域名称
+ * @method array getCnameWafIdList() 获取cnameWaf资源
+ * @method void setCnameWafIdList(array $CnameWafIdList) 设置cnameWaf资源
  */
 class DescribeBasicDeviceStatusRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeBasicDeviceStatusRequest extends AbstractModel
     public $FilterRegion;
 
     /**
+     * @var array cnameWaf资源
+     */
+    public $CnameWafIdList;
+
+    /**
      * @param array $IpList IP 资源列表
      * @param array $IdList 域名化资源传id
      * @param integer $FilterRegion 地域名称
+     * @param array $CnameWafIdList cnameWaf资源
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeBasicDeviceStatusRequest extends AbstractModel
 
         if (array_key_exists("FilterRegion",$param) and $param["FilterRegion"] !== null) {
             $this->FilterRegion = $param["FilterRegion"];
+        }
+
+        if (array_key_exists("CnameWafIdList",$param) and $param["CnameWafIdList"] !== null) {
+            $this->CnameWafIdList = $param["CnameWafIdList"];
         }
     }
 }

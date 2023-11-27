@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckpointRetainedNum(integer $CheckpointRetainedNum) 设置checkpoint保留个数
  * @method JobGraph getJobGraph() 获取算子拓扑图
  * @method void setJobGraph(JobGraph $JobGraph) 设置算子拓扑图
+ * @method string getEsServerlessIndex() 获取es索引名称
+ * @method void setEsServerlessIndex(string $EsServerlessIndex) 设置es索引名称
+ * @method string getEsServerlessSpace() 获取es索引空间
+ * @method void setEsServerlessSpace(string $EsServerlessSpace) 设置es索引空间
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -206,6 +210,16 @@ class CreateJobConfigRequest extends AbstractModel
     public $JobGraph;
 
     /**
+     * @var string es索引名称
+     */
+    public $EsServerlessIndex;
+
+    /**
+     * @var string es索引空间
+     */
+    public $EsServerlessSpace;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -232,6 +246,8 @@ class CreateJobConfigRequest extends AbstractModel
      * @param TraceModeConfiguration $TraceModeConfiguration trace链路配置
      * @param integer $CheckpointRetainedNum checkpoint保留个数
      * @param JobGraph $JobGraph 算子拓扑图
+     * @param string $EsServerlessIndex es索引名称
+     * @param string $EsServerlessSpace es索引空间
      */
     function __construct()
     {
@@ -366,6 +382,14 @@ class CreateJobConfigRequest extends AbstractModel
         if (array_key_exists("JobGraph",$param) and $param["JobGraph"] !== null) {
             $this->JobGraph = new JobGraph();
             $this->JobGraph->deserialize($param["JobGraph"]);
+        }
+
+        if (array_key_exists("EsServerlessIndex",$param) and $param["EsServerlessIndex"] !== null) {
+            $this->EsServerlessIndex = $param["EsServerlessIndex"];
+        }
+
+        if (array_key_exists("EsServerlessSpace",$param) and $param["EsServerlessSpace"] !== null) {
+            $this->EsServerlessSpace = $param["EsServerlessSpace"];
         }
     }
 }

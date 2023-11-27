@@ -43,6 +43,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method void setEngSerViceType(string $EngSerViceType) 设置引擎模型类型。
 电话场景：
@@ -67,6 +68,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
@@ -147,6 +149,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      */
     public $EngSerViceType;
@@ -276,6 +279,7 @@ hotword_list：临时热词表。每次请求时直接传入临时热词表来�
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。

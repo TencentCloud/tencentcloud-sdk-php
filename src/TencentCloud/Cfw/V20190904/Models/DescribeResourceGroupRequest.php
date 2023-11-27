@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryType(string $QueryType) 设置查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
  * @method string getGroupId() 获取资产组id  全部传0
  * @method void setGroupId(string $GroupId) 设置资产组id  全部传0
+ * @method string getShowType() 获取all  包含子组 own自己
+ * @method void setShowType(string $ShowType) 设置all  包含子组 own自己
  */
 class DescribeResourceGroupRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeResourceGroupRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var string all  包含子组 own自己
+     */
+    public $ShowType;
+
+    /**
      * @param string $QueryType 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
      * @param string $GroupId 资产组id  全部传0
+     * @param string $ShowType all  包含子组 own自己
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeResourceGroupRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("ShowType",$param) and $param["ShowType"] !== null) {
+            $this->ShowType = $param["ShowType"];
         }
     }
 }

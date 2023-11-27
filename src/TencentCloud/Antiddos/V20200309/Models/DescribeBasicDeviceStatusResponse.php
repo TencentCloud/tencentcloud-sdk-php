@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLBData(array $CLBData) 设置域名化资产的名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCnameWafData() 获取cnamewaf资源状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCnameWafData(array $CnameWafData) 设置cnamewaf资源状态
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -52,6 +56,12 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
     public $CLBData;
 
     /**
+     * @var array cnamewaf资源状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CnameWafData;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -62,6 +72,8 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
 2 - 正常状态
 3 - 攻击状态
      * @param array $CLBData 域名化资产的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CnameWafData cnamewaf资源状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -93,6 +105,15 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
                 $obj = new KeyValue();
                 $obj->deserialize($value);
                 array_push($this->CLBData, $obj);
+            }
+        }
+
+        if (array_key_exists("CnameWafData",$param) and $param["CnameWafData"] !== null) {
+            $this->CnameWafData = [];
+            foreach ($param["CnameWafData"] as $key => $value){
+                $obj = new KeyValue();
+                $obj->deserialize($value);
+                array_push($this->CnameWafData, $obj);
             }
         }
 

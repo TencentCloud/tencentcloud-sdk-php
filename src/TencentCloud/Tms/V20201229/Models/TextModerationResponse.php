@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContextText(string $ContextText) 设置该字段用于返回上下文关联文本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SentimentAnalysis getSentimentAnalysis() 获取情感分析结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSentimentAnalysis(SentimentAnalysis $SentimentAnalysis) 设置情感分析结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -124,6 +128,12 @@ class TextModerationResponse extends AbstractModel
     public $ContextText;
 
     /**
+     * @var SentimentAnalysis 情感分析结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SentimentAnalysis;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -146,6 +156,8 @@ class TextModerationResponse extends AbstractModel
      * @param string $SubLabel 该字段用于返回当前标签（Label）下的二级标签。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContextText 该字段用于返回上下文关联文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SentimentAnalysis $SentimentAnalysis 情感分析结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -214,6 +226,11 @@ class TextModerationResponse extends AbstractModel
 
         if (array_key_exists("ContextText",$param) and $param["ContextText"] !== null) {
             $this->ContextText = $param["ContextText"];
+        }
+
+        if (array_key_exists("SentimentAnalysis",$param) and $param["SentimentAnalysis"] !== null) {
+            $this->SentimentAnalysis = new SentimentAnalysis();
+            $this->SentimentAnalysis->deserialize($param["SentimentAnalysis"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -47,6 +47,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型
 
@@ -75,6 +76,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎
  * @method integer getChannelNum() 获取识别声道数
 1：单声道（16k音频仅支持单声道，**请勿**设置为双声道）；
@@ -315,6 +317,7 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎
      */
     public $EngineModelType;
@@ -531,6 +534,7 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_ar：阿拉伯语；
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
+• 16k_fr：法语；
 • 16k_zh_medical：中文医疗引擎
      * @param integer $ChannelNum 识别声道数
 1：单声道（16k音频仅支持单声道，**请勿**设置为双声道）；

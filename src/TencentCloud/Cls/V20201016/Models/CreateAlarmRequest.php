@@ -28,66 +28,46 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMonitorTime(MonitorTime $MonitorTime) 设置监控任务运行时间点。
  * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
  * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
- * @method integer getAlarmPeriod() 获取告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。
- * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。
+ * @method integer getAlarmPeriod() 获取告警重复的周期，单位是分钟。取值范围是0~1440。
+ * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期，单位是分钟。取值范围是0~1440。
  * @method array getAlarmNoticeIds() 获取关联的告警通知模板列表。
  * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知模板列表。
- * @method string getCondition() 获取触发条件。
-
+ * @method string getCondition() 获取触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
- * @method void setCondition(string $Condition) 设置触发条件。
-
+ * @method void setCondition(string $Condition) 设置触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
- * @method integer getAlarmLevel() 获取告警级别。
-
+ * @method integer getAlarmLevel() 获取告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。
-
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method array getMultiConditions() 获取多触发条件。
-
+ * @method array getMultiConditions() 获取多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
 
 
- * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。
-
+ * @method void setMultiConditions(array $MultiConditions) 设置多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
 
 
  * @method boolean getStatus() 获取是否开启告警策略。
-
 默认值为true
  * @method void setStatus(boolean $Status) 设置是否开启告警策略。
-
 默认值为true
- * @method boolean getEnable() 获取是否开启告警策略。默认值为true
- * @method void setEnable(boolean $Enable) 设置是否开启告警策略。默认值为true
+ * @method boolean getEnable() 获取该参数已废弃，请使用Status参数控制是否开启告警策略。
+ * @method void setEnable(boolean $Enable) 设置该参数已废弃，请使用Status参数控制是否开启告警策略。
  * @method string getMessageTemplate() 获取用户自定义告警内容
  * @method void setMessageTemplate(string $MessageTemplate) 设置用户自定义告警内容
  * @method CallBackInfo getCallBack() 获取用户自定义回调
@@ -95,10 +75,8 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAnalysis() 获取多维分析
  * @method void setAnalysis(array $Analysis) 设置多维分析
  * @method boolean getGroupTriggerStatus() 获取分组触发状态。
-
 默认值false
  * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。
-
 默认值false
  * @method array getGroupTriggerCondition() 获取分组触发条件。
  * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置分组触发条件。
@@ -109,30 +87,20 @@ use TencentCloud\Common\AbstractModel;
 
 最大支持10个标签键值对，并且不能有重复的键值对。
  * @method integer getMonitorObjectType() 获取监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
  * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
  * @method array getClassifications() 获取告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。
  * @method void setClassifications(array $Classifications) 设置告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。
  */
 class CreateAlarmRequest extends AbstractModel
@@ -158,11 +126,7 @@ class CreateAlarmRequest extends AbstractModel
     public $TriggerCount;
 
     /**
-     * @var integer 告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。
+     * @var integer 告警重复的周期，单位是分钟。取值范围是0~1440。
      */
     public $AlarmPeriod;
 
@@ -172,20 +136,16 @@ class CreateAlarmRequest extends AbstractModel
     public $AlarmNoticeIds;
 
     /**
-     * @var string 触发条件。
-
+     * @var string 触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
      */
     public $Condition;
 
     /**
-     * @var integer 告警级别。
-
+     * @var integer 告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
@@ -193,8 +153,7 @@ class CreateAlarmRequest extends AbstractModel
     public $AlarmLevel;
 
     /**
-     * @var array 多触发条件。
-
+     * @var array 多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
@@ -205,13 +164,12 @@ class CreateAlarmRequest extends AbstractModel
 
     /**
      * @var boolean 是否开启告警策略。
-
 默认值为true
      */
     public $Status;
 
     /**
-     * @var boolean 是否开启告警策略。默认值为true
+     * @var boolean 该参数已废弃，请使用Status参数控制是否开启告警策略。
      */
     public $Enable;
 
@@ -232,7 +190,6 @@ class CreateAlarmRequest extends AbstractModel
 
     /**
      * @var boolean 分组触发状态。
-
 默认值false
      */
     public $GroupTriggerStatus;
@@ -251,9 +208,7 @@ class CreateAlarmRequest extends AbstractModel
 
     /**
      * @var integer 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
      */
@@ -261,11 +216,8 @@ class CreateAlarmRequest extends AbstractModel
 
     /**
      * @var array 告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。
      */
     public $Classifications;
@@ -275,58 +227,42 @@ Classifications元素的Value长度不能超过200个字符。
      * @param array $AlarmTargets 监控对象列表。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
      * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
-     * @param integer $AlarmPeriod 告警重复的周期。
-
-单位是分钟。
-
-取值范围是0~1440。
+     * @param integer $AlarmPeriod 告警重复的周期，单位是分钟。取值范围是0~1440。
      * @param array $AlarmNoticeIds 关联的告警通知模板列表。
-     * @param string $Condition 触发条件。
-
+     * @param string $Condition 触发条件
  注意:  
-
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
-     * @param integer $AlarmLevel 告警级别。
-
+     * @param integer $AlarmLevel 告警级别
 0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)。
-
 注意:  
 - 不填则默认为0。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param array $MultiConditions 多触发条件。
-
+     * @param array $MultiConditions 多触发条件
  注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
 
 
 
      * @param boolean $Status 是否开启告警策略。
-
 默认值为true
-     * @param boolean $Enable 是否开启告警策略。默认值为true
+     * @param boolean $Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
      * @param string $MessageTemplate 用户自定义告警内容
      * @param CallBackInfo $CallBack 用户自定义回调
      * @param array $Analysis 多维分析
      * @param boolean $GroupTriggerStatus 分组触发状态。
-
 默认值false
      * @param array $GroupTriggerCondition 分组触发条件。
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。
 
 最大支持10个标签键值对，并且不能有重复的键值对。
      * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-
 不填则默认为0。
-
 当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
 
      * @param array $Classifications 告警附加分类信息列表。
-
 Classifications元素个数不能超过20个。
-
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，字符规则 ^[a-z]([a-z0-9_]{0,49})$。
-
+Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
 Classifications元素的Value长度不能超过200个字符。
      */
     function __construct()

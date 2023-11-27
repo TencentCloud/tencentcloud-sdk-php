@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSecurityType() 获取安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹
  * @method void setSecurityType(integer $SecurityType) 设置安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹
- * @method array getLogType() 获取安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
- * @method void setLogType(array $LogType) 设置安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+ * @method array getLogType() 获取安全模块下的日志类型，
+ * @method void setLogType(array $LogType) 设置安全模块下的日志类型，
  * @method integer getSwitch() 获取投递开关 0关闭 1开启
  * @method void setSwitch(integer $Switch) 设置投递开关 0关闭 1开启
  * @method string getTopicId() 获取kafka topic id
@@ -39,7 +39,7 @@ class ModifyLogKafkaDeliverTypeRequest extends AbstractModel
     public $SecurityType;
 
     /**
-     * @var array 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+     * @var array 安全模块下的日志类型，
      */
     public $LogType;
 
@@ -60,7 +60,7 @@ class ModifyLogKafkaDeliverTypeRequest extends AbstractModel
 
     /**
      * @param integer $SecurityType 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹
-     * @param array $LogType 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+     * @param array $LogType 安全模块下的日志类型，
      * @param integer $Switch 投递开关 0关闭 1开启
      * @param string $TopicId kafka topic id
      * @param string $TopicName kafka topic name

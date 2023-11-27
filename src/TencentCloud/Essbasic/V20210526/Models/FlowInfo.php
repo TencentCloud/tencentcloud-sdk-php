@@ -202,11 +202,7 @@ use TencentCloud\Common\AbstractModel;
 
 
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
-
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method void setCcInfos(array $CcInfos) 设置合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
-
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method boolean getNeedSignReview() 获取发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
 <ul><li> **false**：（默认）不需要审批，直接签署。</li>
 <li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
@@ -312,8 +308,6 @@ class FlowInfo extends AbstractModel
 
     /**
      * @var array 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
-
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public $CcInfos;
 
@@ -378,8 +372,6 @@ class FlowInfo extends AbstractModel
 
 
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
-
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param boolean $NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
 <ul><li> **false**：（默认）不需要审批，直接签署。</li>
 <li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>

@@ -23,7 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mna\V20210119\Models as Models;
 
 /**
+ * @method Models\ActivateHardwareResponse ActivateHardware(Models\ActivateHardwareRequest $req) 激活硬件设备
  * @method Models\AddDeviceResponse AddDevice(Models\AddDeviceRequest $req) 新建设备记录
+ * @method Models\AddHardwareResponse AddHardware(Models\AddHardwareRequest $req) 添加硬件设备，生成未激活的硬件设备，可支持批量添加
  * @method Models\CreateEncryptedKeyResponse CreateEncryptedKey(Models\CreateEncryptedKeyRequest $req) 通过此接口设置和更新预置密钥
  * @method Models\CreateQosResponse CreateQos(Models\CreateQosRequest $req) 移动网络发起Qos加速过程
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 删除设备信息
@@ -32,11 +34,14 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\GetDeviceResponse GetDevice(Models\GetDeviceRequest $req) 通过指定设备的ID查找设备详细信息
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 获取设备信息列表
  * @method Models\GetFlowStatisticResponse GetFlowStatistic(Models\GetFlowStatisticRequest $req) 获取指定设备Id，指定时间点数据流量使用情况
+ * @method Models\GetHardwareListResponse GetHardwareList(Models\GetHardwareListRequest $req) 租户获取厂商硬件列表
  * @method Models\GetMultiFlowStatisticResponse GetMultiFlowStatistic(Models\GetMultiFlowStatisticRequest $req) 批量获取设备流量统计曲线
  * @method Models\GetNetMonitorResponse GetNetMonitor(Models\GetNetMonitorRequest $req) 获取单设备的实时流量统计指标
  * @method Models\GetPublicKeyResponse GetPublicKey(Models\GetPublicKeyRequest $req) 获取公钥用于验签
  * @method Models\GetStatisticDataResponse GetStatisticData(Models\GetStatisticDataRequest $req) 在用量统计页面下载流量数据
+ * @method Models\GetVendorHardwareResponse GetVendorHardware(Models\GetVendorHardwareRequest $req) 获取厂商硬件设备列表
  * @method Models\UpdateDeviceResponse UpdateDevice(Models\UpdateDeviceRequest $req) 更新设备信息
+ * @method Models\UpdateHardwareResponse UpdateHardware(Models\UpdateHardwareRequest $req) 更新硬件信息
  */
 
 class MnaClient extends AbstractClient

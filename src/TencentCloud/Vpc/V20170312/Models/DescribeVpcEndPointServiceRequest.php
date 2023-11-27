@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单页返回数量，默认为20，最大值为100。
  * @method array getEndPointServiceIds() 获取终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
  * @method void setEndPointServiceIds(array $EndPointServiceIds) 设置终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
- * @method boolean getIsListAuthorizedEndPointService() 获取<li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
- * @method void setIsListAuthorizedEndPointService(boolean $IsListAuthorizedEndPointService) 设置<li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+ * @method boolean getIsListAuthorizedEndPointService() 获取<li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+ * @method void setIsListAuthorizedEndPointService(boolean $IsListAuthorizedEndPointService) 设置<li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
  */
 class DescribeVpcEndPointServiceRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
     public $EndPointServiceIds;
 
     /**
-     * @var boolean <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+     * @var boolean <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
      */
     public $IsListAuthorizedEndPointService;
 
@@ -79,7 +79,7 @@ class DescribeVpcEndPointServiceRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 单页返回数量，默认为20，最大值为100。
      * @param array $EndPointServiceIds 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
-     * @param boolean $IsListAuthorizedEndPointService <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+     * @param boolean $IsListAuthorizedEndPointService <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
      */
     function __construct()
     {

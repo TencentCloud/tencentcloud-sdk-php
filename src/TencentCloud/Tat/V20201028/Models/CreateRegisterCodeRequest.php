@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDescription() 获取注册码描述。
  * @method void setDescription(string $Description) 设置注册码描述。
- * @method string getInstanceNamePrefix() 获取注册实列名称前缀。
- * @method void setInstanceNamePrefix(string $InstanceNamePrefix) 设置注册实列名称前缀。
- * @method integer getRegisterLimit() 获取该注册码允许注册的实列数目。默认限制为10个。
- * @method void setRegisterLimit(integer $RegisterLimit) 设置该注册码允许注册的实列数目。默认限制为10个。
+ * @method string getInstanceNamePrefix() 获取注册实例名称前缀。
+ * @method void setInstanceNamePrefix(string $InstanceNamePrefix) 设置注册实例名称前缀。
+ * @method integer getRegisterLimit() 获取该注册码允许注册的实例数目。默认限制为10个。
+ * @method void setRegisterLimit(integer $RegisterLimit) 设置该注册码允许注册的实例数目。默认限制为10个。
  * @method integer getEffectiveTime() 获取该注册码的有效时间，单位为小时。默认为4小时。
  * @method void setEffectiveTime(integer $EffectiveTime) 设置该注册码的有效时间，单位为小时。默认为4小时。
  * @method string getIpAddressRange() 获取该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
@@ -39,12 +39,12 @@ class CreateRegisterCodeRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 注册实列名称前缀。
+     * @var string 注册实例名称前缀。
      */
     public $InstanceNamePrefix;
 
     /**
-     * @var integer 该注册码允许注册的实列数目。默认限制为10个。
+     * @var integer 该注册码允许注册的实例数目。默认限制为10个。
      */
     public $RegisterLimit;
 
@@ -60,8 +60,8 @@ class CreateRegisterCodeRequest extends AbstractModel
 
     /**
      * @param string $Description 注册码描述。
-     * @param string $InstanceNamePrefix 注册实列名称前缀。
-     * @param integer $RegisterLimit 该注册码允许注册的实列数目。默认限制为10个。
+     * @param string $InstanceNamePrefix 注册实例名称前缀。
+     * @param integer $RegisterLimit 该注册码允许注册的实例数目。默认限制为10个。
      * @param integer $EffectiveTime 该注册码的有效时间，单位为小时。默认为4小时。
      * @param string $IpAddressRange 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
      */

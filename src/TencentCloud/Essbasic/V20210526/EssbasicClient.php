@@ -375,7 +375,8 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 <li>链接有效期默认7天，<code>最多30天</code>。</li>
 <li>该接口的链接适用于<code>小程序</code>端。</li>
 <li>该接口不会扣除您的合同套餐，暂不参与计费。</li></ul>
- * @method Models\ChannelCreateUserRolesResponse ChannelCreateUserRoles(Models\ChannelCreateUserRolesRequest $req) 通过此接口，绑定员工角色，支持以电子签userId、客户系统userId两种方式调用。
+ * @method Models\ChannelCreateUserRolesResponse ChannelCreateUserRoles(Models\ChannelCreateUserRolesRequest $req) 使用此接口，用来绑定企业实名员工的角色，
+支持以电子签userId、客户系统openId两种方式进行绑定。
  * @method Models\ChannelCreateWebThemeConfigResponse ChannelCreateWebThemeConfig(Models\ChannelCreateWebThemeConfigRequest $req) 用来创建嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），该接口配合其他所有可嵌入页面接口使用
 创建配置对当前第三方应用全局生效，如果多次调用，会以最后一次的配置为准
  * @method Models\ChannelDeleteRoleResponse ChannelDeleteRole(Models\ChannelDeleteRoleRequest $req) 此接口（ChannelDeleteRole）用来删除企业自定义角色。

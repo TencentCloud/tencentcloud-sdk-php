@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getServiceType() 获取挂载的PAAS服务类型，CLB,CDB,CRS
  * @method void setServiceType(string $ServiceType) 设置挂载的PAAS服务类型，CLB,CDB,CRS
+ * @method string getServiceUin() 获取Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceUin(string $ServiceUin) 设置Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBusinessIpType() 获取服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBusinessIpType(integer $BusinessIpType) 设置服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EndPointService extends AbstractModel
 {
@@ -107,6 +115,18 @@ class EndPointService extends AbstractModel
     public $ServiceType;
 
     /**
+     * @var string Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceUin;
+
+    /**
+     * @var integer 服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BusinessIpType;
+
+    /**
      * @param string $EndPointServiceId 终端节点服务ID
      * @param string $VpcId VPCID。
      * @param string $ServiceOwner APPID。
@@ -120,6 +140,10 @@ class EndPointService extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
      * @param string $ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS
+     * @param string $ServiceUin Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BusinessIpType 服务IP类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -181,6 +205,14 @@ class EndPointService extends AbstractModel
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
             $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("ServiceUin",$param) and $param["ServiceUin"] !== null) {
+            $this->ServiceUin = $param["ServiceUin"];
+        }
+
+        if (array_key_exists("BusinessIpType",$param) and $param["BusinessIpType"] !== null) {
+            $this->BusinessIpType = $param["BusinessIpType"];
         }
     }
 }

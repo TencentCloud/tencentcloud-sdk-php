@@ -26,13 +26,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(integer $BeginTime) 设置⽂本对应tts语⾳开始时间戳，单位ms。
  * @method integer getEndTime() 获取⽂本对应tts语⾳结束时间戳，单位ms。
  * @method void setEndTime(integer $EndTime) 设置⽂本对应tts语⾳结束时间戳，单位ms。
- * @method integer getBeginIndex() 获取该字在整句中的开始位置，从0开始。
- * @method void setBeginIndex(integer $BeginIndex) 设置该字在整句中的开始位置，从0开始。
- * @method integer getEndIndex() 获取该字在整句中的结束位置，从0开始。
- * @method void setEndIndex(integer $EndIndex) 设置该字在整句中的结束位置，从0开始。
- * @method string getPhoneme() 获取该字的音素
+ * @method integer getBeginIndex() 获取该文本在时间戳数组中的开始位置，从0开始。
+ * @method void setBeginIndex(integer $BeginIndex) 设置该文本在时间戳数组中的开始位置，从0开始。
+ * @method integer getEndIndex() 获取该文本在时间戳数组中的结束位置，从0开始。
+ * @method void setEndIndex(integer $EndIndex) 设置该文本在时间戳数组中的结束位置，从0开始。
+ * @method string getPhoneme() 获取该字的音素。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhoneme(string $Phoneme) 设置该字的音素
+ * @method void setPhoneme(string $Phoneme) 设置该字的音素。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subtitle extends AbstractModel
@@ -53,17 +53,17 @@ class Subtitle extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 该字在整句中的开始位置，从0开始。
+     * @var integer 该文本在时间戳数组中的开始位置，从0开始。
      */
     public $BeginIndex;
 
     /**
-     * @var integer 该字在整句中的结束位置，从0开始。
+     * @var integer 该文本在时间戳数组中的结束位置，从0开始。
      */
     public $EndIndex;
 
     /**
-     * @var string 该字的音素
+     * @var string 该字的音素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phoneme;
@@ -72,9 +72,9 @@ class Subtitle extends AbstractModel
      * @param string $Text ⽂本信息。
      * @param integer $BeginTime ⽂本对应tts语⾳开始时间戳，单位ms。
      * @param integer $EndTime ⽂本对应tts语⾳结束时间戳，单位ms。
-     * @param integer $BeginIndex 该字在整句中的开始位置，从0开始。
-     * @param integer $EndIndex 该字在整句中的结束位置，从0开始。
-     * @param string $Phoneme 该字的音素
+     * @param integer $BeginIndex 该文本在时间戳数组中的开始位置，从0开始。
+     * @param integer $EndIndex 该文本在时间戳数组中的结束位置，从0开始。
+     * @param string $Phoneme 该字的音素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

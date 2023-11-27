@@ -20,20 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreatePrepareFlow请求参数结构体
  *
- * @method string getResourceId() 获取资源id，与ResourceType对应
- * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType对应
- * @method integer getResourceType() 获取资源类型，与ResourceId对应1：模板   2: 文件
- * @method void setResourceType(integer $ResourceType) 设置资源类型，与ResourceId对应1：模板   2: 文件
- * @method BaseFlowInfo getFlowInfo() 获取合同流程基础信息
- * @method void setFlowInfo(BaseFlowInfo $FlowInfo) 设置合同流程基础信息
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
- * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化
- * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化
+ * @method string getResourceId() 获取合同模板ID，为32位字符串。
+ * @method void setResourceId(string $ResourceId) 设置合同模板ID，为32位字符串。
+ * @method integer getResourceType() 获取资源类型，此接口固定为**1**表示为用模板发起
+ * @method void setResourceType(integer $ResourceType) 设置资源类型，此接口固定为**1**表示为用模板发起
+ * @method BaseFlowInfo getFlowInfo() 获取要创建的合同信息
+ * @method void setFlowInfo(BaseFlowInfo $FlowInfo) 设置要创建的合同信息
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
+ * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
  * @method array getFlowApproverList() 获取合同签署人信息
  * @method void setFlowApproverList(array $FlowApproverList) 设置合同签署人信息
- * @method string getFlowId() 获取通过flowid快速获得之前成功通过页面发起的合同生成链接
- * @method void setFlowId(string $FlowId) 设置通过flowid快速获得之前成功通过页面发起的合同生成链接
+ * @method string getFlowId() 获取用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
+ * @method void setFlowId(string $FlowId) 设置用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
  * @method boolean getNeedPreview() 获取该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
  * @method void setNeedPreview(boolean $NeedPreview) 设置该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
  * @method OrganizationInfo getOrganization() 获取企业机构信息，不用传
@@ -44,27 +60,35 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreatePrepareFlowRequest extends AbstractModel
 {
     /**
-     * @var string 资源id，与ResourceType对应
+     * @var string 合同模板ID，为32位字符串。
      */
     public $ResourceId;
 
     /**
-     * @var integer 资源类型，与ResourceId对应1：模板   2: 文件
+     * @var integer 资源类型，此接口固定为**1**表示为用模板发起
      */
     public $ResourceType;
 
     /**
-     * @var BaseFlowInfo 合同流程基础信息
+     * @var BaseFlowInfo 要创建的合同信息
      */
     public $FlowInfo;
 
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
     /**
-     * @var CreateFlowOption 合同流程配置信息，用于配置发起合同时定制化
+     * @var CreateFlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
      */
     public $FlowOption;
 
@@ -74,7 +98,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $FlowApproverList;
 
     /**
-     * @var string 通过flowid快速获得之前成功通过页面发起的合同生成链接
+     * @var string 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
      */
     public $FlowId;
 
@@ -97,13 +121,21 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param string $ResourceId 资源id，与ResourceType对应
-     * @param integer $ResourceType 资源类型，与ResourceId对应1：模板   2: 文件
-     * @param BaseFlowInfo $FlowInfo 合同流程基础信息
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
-     * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化
+     * @param string $ResourceId 合同模板ID，为32位字符串。
+     * @param integer $ResourceType 资源类型，此接口固定为**1**表示为用模板发起
+     * @param BaseFlowInfo $FlowInfo 要创建的合同信息
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+     * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
      * @param array $FlowApproverList 合同签署人信息
-     * @param string $FlowId 通过flowid快速获得之前成功通过页面发起的合同生成链接
+     * @param string $FlowId 用过去已经通过此接口发起的合同的ID复制个新的合同创建链接
      * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
      * @param OrganizationInfo $Organization 企业机构信息，不用传
      * @param UserInfo $Operator 操作人（用户）信息，不用传

@@ -100,8 +100,13 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 1. `支持的文件类型有doc、docx、xls、xlsx、html、jpg、jpeg、png、bmp、txt`
 2. `可通过发起合同时设置预览来检查转换文件是否达到预期效果`
  * @method Models\ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(Models\ChannelCreateEmbedWebUrlRequest $req) 本接口（ChannelCreateEmbedWebUrl）用于创建常规模块嵌入web的链接
-本接口支持创建：创建印章，创建模板，修改模板，预览模板，预览合同流程的web链接
-进入web连接后与当前控制台操作保持一致
+
+本接口下面功能的签署页面链接的生成
+- 创建印章
+- 创建模板
+- 修改模板
+- 预览模板
+- 预览合同流程
  * @method Models\ChannelCreateFlowApproversResponse ChannelCreateFlowApprovers(Models\ChannelCreateFlowApproversRequest $req) 适用场景：
 当通过模板或文件发起合同时，若未指定企业签署人信息，则可调用此接口动态补充签署人。同一签署人只允许补充一人，最终实际签署人取决于谁先领取合同完成签署。
 
@@ -334,11 +339,14 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 - 仅支持传入待签署或者待领取的合同，待填写暂不支持。
 - 员工批量签署，支持多种签名方式，包括手写签名、临摹签名、系统签名、个人印章、签批控件等。
  * @method Models\ChannelCreateOrganizationModifyQrCodeResponse ChannelCreateOrganizationModifyQrCode(Models\ChannelCreateOrganizationModifyQrCodeRequest $req) 生成渠道子客编辑企业信息二维码
- * @method Models\ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlow(Models\ChannelCreatePrepareFlowRequest $req) 创建预发起合同
-通过此接口指定：合同，签署人，填写控件信息，生成预创建合同链接，点击后跳转到web页面完成合同创建并发起
-可指定合同信息不可更改，签署人信息不可更改
-合同发起后，填写及签署流程与现有操作流程一致
-注意：目前仅支持模板发起
+ * @method Models\ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlow(Models\ChannelCreatePrepareFlowRequest $req) 通过此接口指定合同、签署人、填写控件等信息，生成嵌入式链接，此链接可以嵌入到其他网页或者直接打开，打开后进入发起页面。在此页面上，合同信息和签署人信息均不可更改。
+
+注意：
+1. **仅支持模板**发起
+2. 只支持PC浏览器操作使用
+
+嵌入的页面样式如下：
+![image](https://qcloudimg.tencent-cloud.cn/raw/b2ae013fb4d747891dd3815bbe897208.png)
  * @method Models\ChannelCreatePreparedPersonalEsignResponse ChannelCreatePreparedPersonalEsign(Models\ChannelCreatePreparedPersonalEsignRequest $req) 本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章（处方单场景专用，使用此接口请与客户经理确认）。
  * @method Models\ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlow(Models\ChannelCreateReleaseFlowRequest $req) 发起解除协议的主要应用场景为：基于一份已经签署的合同(签署流程)，进行解除操作。
 解除协议的模板是官方提供，经过提供法务审核，暂不支持自定义。
@@ -477,6 +485,11 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 <li>印章:   会删除所有的印章所有的机构公章和合同专用章,  然后用新企业名称生成新的机构公章 和合同专用章,  而法人章, 财务专用章和人事专用章不会处理</li>
 <li>证书:   企业证书会重新请求CA机构用新企业名称生成新的证书</li>
 </ul>
+
+
+注意： 
+1. 生成的电子签小程序链接<font color='red'>只能由企业的法人或者超管</font>点击后进行操作， 其他员工打开后会提示“无权查看该内容”
+2. 法人可以无需生成链接，直接在电子签小程序中更换本企业的超管
  * @method Models\CreateConsoleLoginUrlResponse CreateConsoleLoginUrl(Models\CreateConsoleLoginUrlRequest $req) 此接口（CreateConsoleLoginUrl）用于创建第三方平台子客企业控制台Web/移动登录链接。支持web控制台、电子签小程序和H5链接。登录链接是进入子客web企业控制台的唯一入口。
 
 Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表示**)和员工(**Agent中OpenId表示**)的状态，进入不同的流程，主要情况分类如下：

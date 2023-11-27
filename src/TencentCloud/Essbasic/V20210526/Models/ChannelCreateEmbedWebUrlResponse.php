@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateEmbedWebUrl返回参数结构体
  *
- * @method string getWebUrl() 获取嵌入的web链接
- * @method void setWebUrl(string $WebUrl) 设置嵌入的web链接
+ * @method string getWebUrl() 获取嵌入的web链接，5分钟有效
+ * @method void setWebUrl(string $WebUrl) 设置嵌入的web链接，5分钟有效
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreateEmbedWebUrlResponse extends AbstractModel
 {
     /**
-     * @var string 嵌入的web链接
+     * @var string 嵌入的web链接，5分钟有效
      */
     public $WebUrl;
 
@@ -38,7 +38,7 @@ class ChannelCreateEmbedWebUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $WebUrl 嵌入的web链接
+     * @param string $WebUrl 嵌入的web链接，5分钟有效
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

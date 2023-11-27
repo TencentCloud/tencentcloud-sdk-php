@@ -26,7 +26,7 @@ use TencentCloud\Weilingwith\V20230427\Models as Models;
  * @method Models\AddAlarmProcessRecordResponse AddAlarmProcessRecord(Models\AddAlarmProcessRecordRequest $req) 添加告警处理记录
  * @method Models\BatchCreateDeviceResponse BatchCreateDevice(Models\BatchCreateDeviceRequest $req) 单个/批量新增设备
  * @method Models\BatchKillAlarmResponse BatchKillAlarm(Models\BatchKillAlarmRequest $req) 批量消警
- * @method Models\BatchReportAppMessageResponse BatchReportAppMessage(Models\BatchReportAppMessageRequest $req) 批量消息上报
+ * @method Models\BatchReportAppMessageResponse BatchReportAppMessage(Models\BatchReportAppMessageRequest $req) 批量上报应用消息
  * @method Models\ChangeAlarmStatusResponse ChangeAlarmStatus(Models\ChangeAlarmStatusRequest $req) 变更告警状态
  * @method Models\ControlCameraPTZResponse ControlCameraPTZ(Models\ControlCameraPTZRequest $req) 云台控制
  * @method Models\ControlDeviceResponse ControlDevice(Models\ControlDeviceRequest $req) 设备控制（单个、批量控制）
@@ -77,7 +77,7 @@ use TencentCloud\Weilingwith\V20230427\Models as Models;
  * @method Models\DescribeWorkspaceListResponse DescribeWorkspaceList(Models\DescribeWorkspaceListRequest $req) 获取租户下的空间列表
  * @method Models\DescribeWorkspaceUserListResponse DescribeWorkspaceUserList(Models\DescribeWorkspaceUserListRequest $req) 查询项目空间人员列表
  * @method Models\ModifyDeviceNameResponse ModifyDeviceName(Models\ModifyDeviceNameRequest $req) 批量修改设备名字
- * @method Models\ReportAppMessageResponse ReportAppMessage(Models\ReportAppMessageRequest $req) 单条消息上报
+ * @method Models\ReportAppMessageResponse ReportAppMessage(Models\ReportAppMessageRequest $req) 上报应用消息
  * @method Models\StopVideoStreamingResponse StopVideoStreaming(Models\StopVideoStreamingRequest $req) 断流接口
  * @method Models\UpdateWorkspaceParkAttributesResponse UpdateWorkspaceParkAttributes(Models\UpdateWorkspaceParkAttributesRequest $req) 修改工作空间园区属性
  */

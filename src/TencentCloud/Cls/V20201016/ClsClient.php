@@ -35,6 +35,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 本接口用于创建投递任务
  * @method Models\CreateCosRechargeResponse CreateCosRecharge(Models\CreateCosRechargeRequest $req) 本接口用于创建cos导入任务
  * @method Models\CreateDataTransformResponse CreateDataTransform(Models\CreateDataTransformRequest $req) 本接口用于创建数据加工任务。
+ * @method Models\CreateDeliverCloudFunctionResponse CreateDeliverCloudFunction(Models\CreateDeliverCloudFunctionRequest $req) 本接口用于创建投递SCF任务
  * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 本接口用于创建索引
  * @method Models\CreateKafkaRechargeResponse CreateKafkaRecharge(Models\CreateKafkaRechargeRequest $req) 本接口用于创建Kafka数据订阅任务

@@ -126,6 +126,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobGraph(JobGraph $JobGraph) 设置算子拓扑图
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEsServerlessIndex() 获取es索引
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsServerlessIndex(string $EsServerlessIndex) 设置es索引
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEsServerlessSpace() 获取es空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsServerlessSpace(string $EsServerlessSpace) 设置es空间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -295,6 +303,18 @@ class JobConfig extends AbstractModel
     public $JobGraph;
 
     /**
+     * @var string es索引
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsServerlessIndex;
+
+    /**
+     * @var string es空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsServerlessSpace;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -347,6 +367,10 @@ class JobConfig extends AbstractModel
      * @param integer $CheckpointRetainedNum checkpoint保留个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JobGraph $JobGraph 算子拓扑图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EsServerlessIndex es索引
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EsServerlessSpace es空间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -490,6 +514,14 @@ class JobConfig extends AbstractModel
         if (array_key_exists("JobGraph",$param) and $param["JobGraph"] !== null) {
             $this->JobGraph = new JobGraph();
             $this->JobGraph->deserialize($param["JobGraph"]);
+        }
+
+        if (array_key_exists("EsServerlessIndex",$param) and $param["EsServerlessIndex"] !== null) {
+            $this->EsServerlessIndex = $param["EsServerlessIndex"];
+        }
+
+        if (array_key_exists("EsServerlessSpace",$param) and $param["EsServerlessSpace"] !== null) {
+            $this->EsServerlessSpace = $param["EsServerlessSpace"];
         }
     }
 }

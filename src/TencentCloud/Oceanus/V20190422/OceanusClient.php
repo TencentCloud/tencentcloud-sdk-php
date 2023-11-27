@@ -61,8 +61,6 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
 如果MaxParallelism变大，则要求入参RestartAllowed必须为True
 假设作业运行状态，则先停止作业，再启动作业，中间状态丢失
 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
-
-
  * @method Models\ModifyWorkSpaceResponse ModifyWorkSpace(Models\ModifyWorkSpaceRequest $req) 修改工作空间
  * @method Models\RunJobsResponse RunJobs(Models\RunJobsRequest $req) 批量启动或者恢复作业，批量操作数量上限20
  * @method Models\RunSqlGatewayStatementResponse RunSqlGatewayStatement(Models\RunSqlGatewayStatementRequest $req) 通过Sql gateway执行satement

@@ -25,6 +25,7 @@ use TencentCloud\Config\V20220802\Models as Models;
 /**
  * @method Models\ListAggregateConfigRulesResponse ListAggregateConfigRules(Models\ListAggregateConfigRulesRequest $req) 账号组获取规则列表
  * @method Models\ListConfigRulesResponse ListConfigRules(Models\ListConfigRulesRequest $req) 获取规则列表
+ * @method Models\PutEvaluationsResponse PutEvaluations(Models\PutEvaluationsRequest $req) 上报自定义规则评估结果
  */
 
 class ConfigClient extends AbstractClient

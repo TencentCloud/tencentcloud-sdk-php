@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseType(string $DatabaseType) 设置实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeType() 获取节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
+ * @method string getNodeType() 获取节点类型，为空或者simple表示普通节点、cluster表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)；对于redis实例，为空或simple(单节点)、cluster(集群)、cluster-cache(cache集群)、cluster-proxy(代理集群)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeType(string $NodeType) 设置节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
+ * @method void setNodeType(string $NodeType) 设置节点类型，为空或者simple表示普通节点、cluster表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)；对于redis实例，为空或simple(单节点)、cluster(集群)、cluster-cache(cache集群)、cluster-proxy(代理集群)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInfo() 获取数据库信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -76,7 +76,7 @@ class DBEndpointInfo extends AbstractModel
     public $DatabaseType;
 
     /**
-     * @var string 节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
+     * @var string 节点类型，为空或者simple表示普通节点、cluster表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)；对于redis实例，为空或simple(单节点)、cluster(集群)、cluster-cache(cache集群)、cluster-proxy(代理集群)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeType;
@@ -113,7 +113,7 @@ class DBEndpointInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseType 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeType 节点类型，为空或者"simple"表示普通节点、"cluster"表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)
+     * @param string $NodeType 节点类型，为空或者simple表示普通节点、cluster表示集群节点；对于mongo业务，取值为replicaset(mongodb副本集)、standalone(mongodb单节点)、cluster(mongodb集群)；对于redis实例，为空或simple(单节点)、cluster(集群)、cluster-cache(cache集群)、cluster-proxy(代理集群)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Info 数据库信息
 注意：此字段可能返回 null，表示取不到有效值。

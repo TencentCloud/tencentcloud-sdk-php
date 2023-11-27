@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>渠道应用标识:  Agent.AppId</li>
 <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOrganizationOpenId</li>
 </ul>
  * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>渠道应用标识:  Agent.AppId</li>
 <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOrganizationOpenId</li>
 </ul>
  * @method integer getChangeType() 获取企业信息变更类型，可选类型如下：
 <ul><li>**1**：企业超管变更, 可以将超管换成同企业的其他员工</li>
@@ -50,9 +50,9 @@ class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>渠道应用标识:  Agent.AppId</li>
 <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOrganizationOpenId</li>
 </ul>
      */
     public $Agent;
@@ -69,9 +69,9 @@ class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
 
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.ProxyOrganizationOpenId</li>
+<li>渠道应用标识:  Agent.AppId</li>
 <li>第三方平台子客企业标识: Agent. ProxyOperator.OpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>第三方平台子客企业中的员工标识: Agent.ProxyOrganizationOpenId</li>
 </ul>
      * @param integer $ChangeType 企业信息变更类型，可选类型如下：
 <ul><li>**1**：企业超管变更, 可以将超管换成同企业的其他员工</li>

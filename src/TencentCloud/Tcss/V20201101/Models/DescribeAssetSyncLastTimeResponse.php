@@ -22,6 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAssetSyncLastTime() 获取资产最近同步时间
  * @method void setAssetSyncLastTime(string $AssetSyncLastTime) 设置资产最近同步时间
+ * @method string getTaskStatus() 获取任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成
+ * @method void setTaskStatus(string $TaskStatus) 设置任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成
+ * @method integer getTaskProcess() 获取任务进度(百分比)
+ * @method void setTaskProcess(integer $TaskProcess) 设置任务进度(百分比)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +43,30 @@ class DescribeAssetSyncLastTimeResponse extends AbstractModel
     public $AssetSyncLastTime;
 
     /**
+     * @var string 任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成
+     */
+    public $TaskStatus;
+
+    /**
+     * @var integer 任务进度(百分比)
+     */
+    public $TaskProcess;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $AssetSyncLastTime 资产最近同步时间
+     * @param string $TaskStatus 任务状态
+PENDING:待处理
+PROCESSING:处理中
+PROCESSED:已完成
+     * @param integer $TaskProcess 任务进度(百分比)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +84,14 @@ class DescribeAssetSyncLastTimeResponse extends AbstractModel
         }
         if (array_key_exists("AssetSyncLastTime",$param) and $param["AssetSyncLastTime"] !== null) {
             $this->AssetSyncLastTime = $param["AssetSyncLastTime"];
+        }
+
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("TaskProcess",$param) and $param["TaskProcess"] !== null) {
+            $this->TaskProcess = $param["TaskProcess"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

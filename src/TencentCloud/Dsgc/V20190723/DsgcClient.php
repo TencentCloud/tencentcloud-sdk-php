@@ -26,12 +26,12 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\AuthorizeDSPAMetaResourcesResponse AuthorizeDSPAMetaResources(Models\AuthorizeDSPAMetaResourcesRequest $req) 授权用户云资源
  * @method Models\BindDSPAResourceCosBucketsResponse BindDSPAResourceCosBuckets(Models\BindDSPAResourceCosBucketsRequest $req) 绑定或解绑COS桶
  * @method Models\BindDSPAResourceDatabasesResponse BindDSPAResourceDatabases(Models\BindDSPAResourceDatabasesRequest $req) 绑定或解绑数据库实例DB
- * @method Models\CopyDSPATemplateResponse CopyDSPATemplate(Models\CopyDSPATemplateRequest $req) 复制合规组模版
+ * @method Models\CopyDSPATemplateResponse CopyDSPATemplate(Models\CopyDSPATemplateRequest $req) 复制合规组模板
  * @method Models\CreateAssetSortingReportRetryTaskResponse CreateAssetSortingReportRetryTask(Models\CreateAssetSortingReportRetryTaskRequest $req) 创建资产梳理报表导出重试任务
  * @method Models\CreateAssetSortingReportTaskResponse CreateAssetSortingReportTask(Models\CreateAssetSortingReportTaskRequest $req) 创建资产梳理报告任务
  * @method Models\CreateClassificationRuleResponse CreateClassificationRule(Models\CreateClassificationRuleRequest $req) 创建识别规则
  * @method Models\CreateDSPAAssessmentRiskLevelResponse CreateDSPAAssessmentRiskLevel(Models\CreateDSPAAssessmentRiskLevelRequest $req) 风险项页面---创建风险等级
- * @method Models\CreateDSPAAssessmentRiskTemplateResponse CreateDSPAAssessmentRiskTemplate(Models\CreateDSPAAssessmentRiskTemplateRequest $req) 风险评估模版---创建风险评估模版
+ * @method Models\CreateDSPAAssessmentRiskTemplateResponse CreateDSPAAssessmentRiskTemplate(Models\CreateDSPAAssessmentRiskTemplateRequest $req) 风险评估模板---创建风险评估模板
  * @method Models\CreateDSPAAssessmentTaskResponse CreateDSPAAssessmentTask(Models\CreateDSPAAssessmentTaskRequest $req) 新建DSPA风险评估任务
  * @method Models\CreateDSPACOSDiscoveryTaskResponse CreateDSPACOSDiscoveryTask(Models\CreateDSPACOSDiscoveryTaskRequest $req) 新增COS分类分级扫描任务，单个用户最多允许创建100个任务。
  * @method Models\CreateDSPACategoryResponse CreateDSPACategory(Models\CreateDSPACategoryRequest $req) 新增分类，单个用户最多允许创建100个数据分类。
@@ -91,8 +91,8 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPAAssessmentRiskProcessHistoryResponse DescribeDSPAAssessmentRiskProcessHistory(Models\DescribeDSPAAssessmentRiskProcessHistoryRequest $req) 修改最新评估风险项状态
  * @method Models\DescribeDSPAAssessmentRiskSideDistributedResponse DescribeDSPAAssessmentRiskSideDistributed(Models\DescribeDSPAAssessmentRiskSideDistributedRequest $req) 风险评估概览页，查询风险面的分布
  * @method Models\DescribeDSPAAssessmentRiskSideListResponse DescribeDSPAAssessmentRiskSideList(Models\DescribeDSPAAssessmentRiskSideListRequest $req) 风险评估概览页，查询风险面的分布
- * @method Models\DescribeDSPAAssessmentRiskTemplateDetailResponse DescribeDSPAAssessmentRiskTemplateDetail(Models\DescribeDSPAAssessmentRiskTemplateDetailRequest $req) 风险项页面--查看评估模版详情
- * @method Models\DescribeDSPAAssessmentRiskTemplateVulnerableListResponse DescribeDSPAAssessmentRiskTemplateVulnerableList(Models\DescribeDSPAAssessmentRiskTemplateVulnerableListRequest $req) 风险模版页面--查询风险模版中的脆弱项配置
+ * @method Models\DescribeDSPAAssessmentRiskTemplateDetailResponse DescribeDSPAAssessmentRiskTemplateDetail(Models\DescribeDSPAAssessmentRiskTemplateDetailRequest $req) 风险项页面--查看评估模板详情
+ * @method Models\DescribeDSPAAssessmentRiskTemplateVulnerableListResponse DescribeDSPAAssessmentRiskTemplateVulnerableList(Models\DescribeDSPAAssessmentRiskTemplateVulnerableListRequest $req) 风险模板页面--查询风险模板中的脆弱项配置
  * @method Models\DescribeDSPAAssessmentRisksResponse DescribeDSPAAssessmentRisks(Models\DescribeDSPAAssessmentRisksRequest $req) 获取DSPA评估风险项列表
  * @method Models\DescribeDSPAAssessmentTasksResponse DescribeDSPAAssessmentTasks(Models\DescribeDSPAAssessmentTasksRequest $req) 获取DSPA评估任务列表
  * @method Models\DescribeDSPAAssessmentTemplateControlItemsResponse DescribeDSPAAssessmentTemplateControlItems(Models\DescribeDSPAAssessmentTemplateControlItemsRequest $req) 获取DSPA评估模版关联的评估控制项列表
@@ -168,7 +168,7 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\ModifyDSPAAssessmentRiskResponse ModifyDSPAAssessmentRisk(Models\ModifyDSPAAssessmentRiskRequest $req) 修改DSPA评估风险项，支持修改Status
  * @method Models\ModifyDSPAAssessmentRiskLatestResponse ModifyDSPAAssessmentRiskLatest(Models\ModifyDSPAAssessmentRiskLatestRequest $req) 修改最新评估风险项状态
  * @method Models\ModifyDSPAAssessmentRiskLevelResponse ModifyDSPAAssessmentRiskLevel(Models\ModifyDSPAAssessmentRiskLevelRequest $req) 风险项页面----修改风险等级的详情数据
- * @method Models\ModifyDSPAAssessmentRiskTemplateResponse ModifyDSPAAssessmentRiskTemplate(Models\ModifyDSPAAssessmentRiskTemplateRequest $req) 风险模版---修改风险模版
+ * @method Models\ModifyDSPAAssessmentRiskTemplateResponse ModifyDSPAAssessmentRiskTemplate(Models\ModifyDSPAAssessmentRiskTemplateRequest $req) 风险模板---修改风险模板
  * @method Models\ModifyDSPACOSDiscoveryTaskResponse ModifyDSPACOSDiscoveryTask(Models\ModifyDSPACOSDiscoveryTaskRequest $req) 修改COS分类分级任务，该接口只有在任务状态为以下状态时才支持正确修改：
 0 待扫描，
 2 扫描终止， 

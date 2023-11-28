@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifyComplianceId(integer $IdentifyComplianceId) 设置分类分级id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdentifyComplianceName() 获取分类分级模版名称
- * @method void setIdentifyComplianceName(string $IdentifyComplianceName) 设置分类分级模版名称
+ * @method string getIdentifyComplianceName() 获取分类分级模板名称
+ * @method void setIdentifyComplianceName(string $IdentifyComplianceName) 设置分类分级模板名称
  * @method array getRiskLevelMatrix() 获取风险数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevelMatrix(array $RiskLevelMatrix) 设置风险数据
@@ -59,7 +59,7 @@ class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
     public $IdentifyComplianceId;
 
     /**
-     * @var string 分类分级模版名称
+     * @var string 分类分级模板名称
      */
     public $IdentifyComplianceName;
 
@@ -80,7 +80,7 @@ class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentifyComplianceId 分类分级id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdentifyComplianceName 分类分级模版名称
+     * @param string $IdentifyComplianceName 分类分级模板名称
      * @param array $RiskLevelMatrix 风险数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDSPAAssessmentRiskTemplateDetail返回参数结构体
  *
- * @method integer getTemplateId() 获取模版id
- * @method void setTemplateId(integer $TemplateId) 设置模版id
- * @method string getTemplateName() 获取模版名称
- * @method void setTemplateName(string $TemplateName) 设置模版名称
- * @method string getTemplateDescription() 获取模版的描述
+ * @method integer getTemplateId() 获取模板id
+ * @method void setTemplateId(integer $TemplateId) 设置模板id
+ * @method string getTemplateName() 获取模板名称
+ * @method void setTemplateName(string $TemplateName) 设置模板名称
+ * @method string getTemplateDescription() 获取模板的描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateDescription(string $TemplateDescription) 设置模版的描述
+ * @method void setTemplateDescription(string $TemplateDescription) 设置模板的描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskLevelId() 获取风险等级
  * @method void setRiskLevelId(integer $RiskLevelId) 设置风险等级
@@ -50,17 +50,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 模版id
+     * @var integer 模板id
      */
     public $TemplateId;
 
     /**
-     * @var string 模版名称
+     * @var string 模板名称
      */
     public $TemplateName;
 
     /**
-     * @var string 模版的描述
+     * @var string 模板的描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateDescription;
@@ -99,9 +99,9 @@ class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TemplateId 模版id
-     * @param string $TemplateName 模版名称
-     * @param string $TemplateDescription 模版的描述
+     * @param integer $TemplateId 模板id
+     * @param string $TemplateName 模板名称
+     * @param string $TemplateDescription 模板的描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskLevelId 风险等级
      * @param string $RiskLevelName 风险等级名称

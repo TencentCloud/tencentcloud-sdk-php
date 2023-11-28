@@ -441,6 +441,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 - （不推荐：应使用 CreateTime 替代）指定单个起始创建时间 StartTime 进行搜索。
 - （不推荐：应使用 CreateTime 替代）指定单个结尾创建时间 EndTime 进行搜索。
  * @method Models\SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(Models\SetDrmKeyProviderInfoRequest $req) 设置 DRM 密钥提供商信息。
+ * @method Models\SetVodDomainCertificateResponse SetVodDomainCertificate(Models\SetVodDomainCertificateRequest $req) 设置点播域名 HTTPS 证书。
  * @method Models\SimpleHlsClipResponse SimpleHlsClip(Models\SimpleHlsClipRequest $req) 对 HLS 视频进行按时间段裁剪，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
 腾讯云点播支持两种剪辑模式：

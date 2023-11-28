@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopyDSPATemplate返回参数结构体
  *
- * @method integer getTemplateId() 获取模版id
- * @method void setTemplateId(integer $TemplateId) 设置模版id
+ * @method integer getTemplateId() 获取模板id
+ * @method void setTemplateId(integer $TemplateId) 设置模板id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CopyDSPATemplateResponse extends AbstractModel
 {
     /**
-     * @var integer 模版id
+     * @var integer 模板id
      */
     public $TemplateId;
 
@@ -38,7 +38,7 @@ class CopyDSPATemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TemplateId 模版id
+     * @param integer $TemplateId 模板id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

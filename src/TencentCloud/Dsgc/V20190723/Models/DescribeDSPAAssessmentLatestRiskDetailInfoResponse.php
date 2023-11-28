@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetName(string $AssetName) 设置资产对象名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAssessmentTemplateId() 获取风险评估模版id
+ * @method integer getAssessmentTemplateId() 获取风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAssessmentTemplateId(integer $AssessmentTemplateId) 设置风险评估模版id
+ * @method void setAssessmentTemplateId(integer $AssessmentTemplateId) 设置风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIdentifyTemplateId() 获取分类分级的模版id
+ * @method integer getIdentifyTemplateId() 获取分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdentifyTemplateId(integer $IdentifyTemplateId) 设置分类分级的模版id
+ * @method void setIdentifyTemplateId(integer $IdentifyTemplateId) 设置分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskType() 获取风险类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,13 +120,13 @@ class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends AbstractModel
     public $AssetName;
 
     /**
-     * @var integer 风险评估模版id
+     * @var integer 风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssessmentTemplateId;
 
     /**
-     * @var integer 分类分级的模版id
+     * @var integer 分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentifyTemplateId;
@@ -227,9 +227,9 @@ class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产对象名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AssessmentTemplateId 风险评估模版id
+     * @param integer $AssessmentTemplateId 风险评估模板id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IdentifyTemplateId 分类分级的模版id
+     * @param integer $IdentifyTemplateId 分类分级的模板id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskType 风险类型
 注意：此字段可能返回 null，表示取不到有效值。

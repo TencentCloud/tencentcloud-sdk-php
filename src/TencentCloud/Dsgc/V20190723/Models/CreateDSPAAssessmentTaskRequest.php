@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置DSPA实例Id，格式“dspa-xxxxxxxx”
  * @method string getName() 获取评估任务名称。1-20个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method void setName(string $Name) 设置评估任务名称。1-20个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
- * @method string getTemplateId() 获取评估模版Id，格式“template-xxxxxxxx”
- * @method void setTemplateId(string $TemplateId) 设置评估模版Id，格式“template-xxxxxxxx”
+ * @method string getTemplateId() 获取评估模板Id，格式“template-xxxxxxxx”
+ * @method void setTemplateId(string $TemplateId) 设置评估模板Id，格式“template-xxxxxxxx”
  * @method string getBusinessName() 获取评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method void setBusinessName(string $BusinessName) 设置评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method string getBusinessDept() 获取业务所属部门。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method void setBusinessDept(string $BusinessDept) 设置业务所属部门。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method string getBusinessOwner() 获取业务负责人。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
  * @method void setBusinessOwner(string $BusinessOwner) 设置业务负责人。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
- * @method integer getComplianceId() 获取分类分级模版Id
- * @method void setComplianceId(integer $ComplianceId) 设置分类分级模版Id
+ * @method integer getComplianceId() 获取分类分级模板Id
+ * @method void setComplianceId(integer $ComplianceId) 设置分类分级模板Id
  * @method DiscoveryCondition getDiscoveryCondition() 获取敏感数据扫描数据源条件。
  * @method void setDiscoveryCondition(DiscoveryCondition $DiscoveryCondition) 设置敏感数据扫描数据源条件。
  * @method string getDescription() 获取说明
@@ -52,7 +52,7 @@ class CreateDSPAAssessmentTaskRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 评估模版Id，格式“template-xxxxxxxx”
+     * @var string 评估模板Id，格式“template-xxxxxxxx”
      */
     public $TemplateId;
 
@@ -75,7 +75,7 @@ class CreateDSPAAssessmentTaskRequest extends AbstractModel
     public $BusinessOwner;
 
     /**
-     * @var integer 分类分级模版Id
+     * @var integer 分类分级模板Id
      */
     public $ComplianceId;
 
@@ -92,11 +92,11 @@ class CreateDSPAAssessmentTaskRequest extends AbstractModel
     /**
      * @param string $DspaId DSPA实例Id，格式“dspa-xxxxxxxx”
      * @param string $Name 评估任务名称。1-20个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
-     * @param string $TemplateId 评估模版Id，格式“template-xxxxxxxx”
+     * @param string $TemplateId 评估模板Id，格式“template-xxxxxxxx”
      * @param string $BusinessName 评估业务名称。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
      * @param string $BusinessDept 业务所属部门。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
      * @param string $BusinessOwner 业务负责人。1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字
-     * @param integer $ComplianceId 分类分级模版Id
+     * @param integer $ComplianceId 分类分级模板Id
      * @param DiscoveryCondition $DiscoveryCondition 敏感数据扫描数据源条件。
      * @param string $Description 说明
      */

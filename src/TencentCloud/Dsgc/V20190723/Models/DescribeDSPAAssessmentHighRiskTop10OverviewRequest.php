@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDspaId() 获取dspa实例Id
  * @method void setDspaId(string $DspaId) 设置dspa实例Id
- * @method integer getTemplateId() 获取评估模版id
- * @method void setTemplateId(integer $TemplateId) 设置评估模版id
+ * @method integer getTemplateId() 获取评估模板id
+ * @method void setTemplateId(integer $TemplateId) 设置评估模板id
  * @method string getFilter() 获取过滤条件， rdb（数据库）cos（对象存储）
 不传就是全部
  * @method void setFilter(string $Filter) 设置过滤条件， rdb（数据库）cos（对象存储）
@@ -37,7 +37,7 @@ class DescribeDSPAAssessmentHighRiskTop10OverviewRequest extends AbstractModel
     public $DspaId;
 
     /**
-     * @var integer 评估模版id
+     * @var integer 评估模板id
      */
     public $TemplateId;
 
@@ -49,7 +49,7 @@ class DescribeDSPAAssessmentHighRiskTop10OverviewRequest extends AbstractModel
 
     /**
      * @param string $DspaId dspa实例Id
-     * @param integer $TemplateId 评估模版id
+     * @param integer $TemplateId 评估模板id
      * @param string $Filter 过滤条件， rdb（数据库）cos（对象存储）
 不传就是全部
      */

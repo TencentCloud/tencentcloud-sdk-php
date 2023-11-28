@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDspaId() 获取dspa实例Id
  * @method void setDspaId(string $DspaId) 设置dspa实例Id
- * @method integer getTemplateId() 获取评估模版id
- * @method void setTemplateId(integer $TemplateId) 设置评估模版id
+ * @method integer getTemplateId() 获取评估模板id
+ * @method void setTemplateId(integer $TemplateId) 设置评估模板id
  * @method integer getLimit() 获取限制条数
  * @method void setLimit(integer $Limit) 设置限制条数
  * @method string getOffset() 获取分页偏移量
@@ -55,7 +55,7 @@ class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
     public $DspaId;
 
     /**
-     * @var integer 评估模版id
+     * @var integer 评估模板id
      */
     public $TemplateId;
 
@@ -116,7 +116,7 @@ class DescribeDSPAAssessmentLatestRiskListRequest extends AbstractModel
 
     /**
      * @param string $DspaId dspa实例Id
-     * @param integer $TemplateId 评估模版id
+     * @param integer $TemplateId 评估模板id
      * @param integer $Limit 限制条数
      * @param string $Offset 分页偏移量
      * @param string $DataSourceId 资产名称，数据源id

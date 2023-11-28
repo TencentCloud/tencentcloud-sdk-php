@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dsgc\V20190723\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDSPAAssessmentTemplateControlItems返回参数结构体
+ * DescribeChannelSealPolicyWorkflowUrl返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的评估项数目
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的评估项数目
- * @method array getItems() 获取模板关联的评估项列表
- * @method void setItems(array $Items) 设置模板关联的评估项列表
+ * @method string getWorkflowUrl() 获取用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
+ * @method void setWorkflowUrl(string $WorkflowUrl) 设置用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDSPAAssessmentTemplateControlItemsResponse extends AbstractModel
+class DescribeChannelSealPolicyWorkflowUrlResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的评估项数目
+     * @var string 用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
      */
-    public $TotalCount;
-
-    /**
-     * @var array 模板关联的评估项列表
-     */
-    public $Items;
+    public $WorkflowUrl;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeDSPAAssessmentTemplateControlItemsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的评估项数目
-     * @param array $Items 模板关联的评估项列表
+     * @param string $WorkflowUrl 用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeDSPAAssessmentTemplateControlItemsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new AssessmentControlItem();
-                $obj->deserialize($value);
-                array_push($this->Items, $obj);
-            }
+        if (array_key_exists("WorkflowUrl",$param) and $param["WorkflowUrl"] !== null) {
+            $this->WorkflowUrl = $param["WorkflowUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

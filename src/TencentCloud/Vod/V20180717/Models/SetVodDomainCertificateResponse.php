@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dsgc\V20190723\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDSPAAssessmentPendingRiskOverview请求参数结构体
+ * SetVodDomainCertificate返回参数结构体
  *
- * @method string getDspaId() 获取dspa实例id
- * @method void setDspaId(string $DspaId) 设置dspa实例id
- * @method integer getTemplateId() 获取评估模板id
- * @method void setTemplateId(integer $TemplateId) 设置评估模板id
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDSPAAssessmentPendingRiskOverviewRequest extends AbstractModel
+class SetVodDomainCertificateResponse extends AbstractModel
 {
     /**
-     * @var string dspa实例id
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $DspaId;
+    public $RequestId;
 
     /**
-     * @var integer 评估模板id
-     */
-    public $TemplateId;
-
-    /**
-     * @param string $DspaId dspa实例id
-     * @param integer $TemplateId 评估模板id
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeDSPAAssessmentPendingRiskOverviewRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DspaId",$param) and $param["DspaId"] !== null) {
-            $this->DspaId = $param["DspaId"];
-        }
-
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

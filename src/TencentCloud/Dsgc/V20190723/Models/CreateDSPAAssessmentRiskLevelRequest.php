@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置dspa实例id
  * @method string getRiskLevelName() 获取风险等级名称
  * @method void setRiskLevelName(string $RiskLevelName) 设置风险等级名称
- * @method integer getIdentifyComplianceId() 获取识别模版
- * @method void setIdentifyComplianceId(integer $IdentifyComplianceId) 设置识别模版
+ * @method integer getIdentifyComplianceId() 获取识别模板
+ * @method void setIdentifyComplianceId(integer $IdentifyComplianceId) 设置识别模板
  * @method array getRiskLevelRule() 获取风险等级矩阵
  * @method void setRiskLevelRule(array $RiskLevelRule) 设置风险等级矩阵
  * @method string getRiskLevelDescription() 获取风险等级的描述
@@ -44,7 +44,7 @@ class CreateDSPAAssessmentRiskLevelRequest extends AbstractModel
     public $RiskLevelName;
 
     /**
-     * @var integer 识别模版
+     * @var integer 识别模板
      */
     public $IdentifyComplianceId;
 
@@ -61,7 +61,7 @@ class CreateDSPAAssessmentRiskLevelRequest extends AbstractModel
     /**
      * @param string $DspaId dspa实例id
      * @param string $RiskLevelName 风险等级名称
-     * @param integer $IdentifyComplianceId 识别模版
+     * @param integer $IdentifyComplianceId 识别模板
      * @param array $RiskLevelRule 风险等级矩阵
      * @param string $RiskLevelDescription 风险等级的描述
      */

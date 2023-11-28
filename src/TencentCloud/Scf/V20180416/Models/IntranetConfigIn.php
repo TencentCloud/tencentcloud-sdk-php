@@ -14,32 +14,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dsgc\V20190723\Models;
+namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDSPAAssessmentPendingRiskOverview请求参数结构体
+ * 内网配置
  *
- * @method string getDspaId() 获取dspa实例id
- * @method void setDspaId(string $DspaId) 设置dspa实例id
- * @method integer getTemplateId() 获取评估模板id
- * @method void setTemplateId(integer $TemplateId) 设置评估模板id
+ * @method string getIpFixed() 获取是否开启固定内网IP
+ENABLE 为开启
+DISABLE 为不开启
+
+ * @method void setIpFixed(string $IpFixed) 设置是否开启固定内网IP
+ENABLE 为开启
+DISABLE 为不开启
  */
-class DescribeDSPAAssessmentPendingRiskOverviewRequest extends AbstractModel
+class IntranetConfigIn extends AbstractModel
 {
     /**
-     * @var string dspa实例id
+     * @var string 是否开启固定内网IP
+ENABLE 为开启
+DISABLE 为不开启
+
      */
-    public $DspaId;
+    public $IpFixed;
 
     /**
-     * @var integer 评估模板id
-     */
-    public $TemplateId;
-
-    /**
-     * @param string $DspaId dspa实例id
-     * @param integer $TemplateId 评估模板id
+     * @param string $IpFixed 是否开启固定内网IP
+ENABLE 为开启
+DISABLE 为不开启
      */
     function __construct()
     {
@@ -54,12 +56,8 @@ class DescribeDSPAAssessmentPendingRiskOverviewRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DspaId",$param) and $param["DspaId"] !== null) {
-            $this->DspaId = $param["DspaId"];
-        }
-
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("IpFixed",$param) and $param["IpFixed"] !== null) {
+            $this->IpFixed = $param["IpFixed"];
         }
     }
 }

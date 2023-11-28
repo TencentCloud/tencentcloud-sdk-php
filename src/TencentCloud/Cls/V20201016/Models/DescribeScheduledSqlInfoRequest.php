@@ -28,8 +28,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置任务名称
  * @method string getTaskId() 获取任务id
  * @method void setTaskId(string $TaskId) 设置任务id
- * @method array getFilters() 获取<li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。
- * @method void setFilters(array $Filters) 设置<li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。
+ * @method array getFilters() 获取<li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
+<li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
+<li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否</li>
+<li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否</li>
+<li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,。类型：String必选：否</li>
+<li>status按照【任务状态】进行过滤。类型：String必选：否</li>
+<li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否</li>
+<li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否</li>
+
+ * @method void setFilters(array $Filters) 设置<li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
+<li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
+<li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否</li>
+<li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否</li>
+<li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,。类型：String必选：否</li>
+<li>status按照【任务状态】进行过滤。类型：String必选：否</li>
+<li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否</li>
+<li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否</li>
  */
 class DescribeScheduledSqlInfoRequest extends AbstractModel
 {
@@ -54,7 +69,15 @@ class DescribeScheduledSqlInfoRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var array <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @var array <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
+<li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
+<li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否</li>
+<li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否</li>
+<li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,。类型：String必选：否</li>
+<li>status按照【任务状态】进行过滤。类型：String必选：否</li>
+<li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否</li>
+<li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否</li>
+
      */
     public $Filters;
 
@@ -63,7 +86,14 @@ class DescribeScheduledSqlInfoRequest extends AbstractModel
      * @param integer $Limit 分页单页限制数目，默认值为20，最大值100。
      * @param string $Name 任务名称
      * @param string $TaskId 任务id
-     * @param array $Filters <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否<br><li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否<br><li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否<br><li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,，。类型：String必选：否<br><li>status按照【任务状态】进行过滤。类型：String必选：否<br><li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否<br><li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @param array $Filters <li>srcTopicName按照【源日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
+<li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配，类型：String必选：否</li>
+<li>srcTopicId按照【源日志主题ID】进行过滤。类型：String必选：否</li>
+<li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String必选：否</li>
+<li>bizType按照【主题类型】进行过滤,0日志主题1指标主题,。类型：String必选：否</li>
+<li>status按照【任务状态】进行过滤。类型：String必选：否</li>
+<li>taskName按照【任务名称】进行过滤，模糊匹配，。类型：String必选：否</li>
+<li>taskId按照【任务ID】进行过滤，模糊匹配，。类型：String必选：否</li>
      */
     function __construct()
     {

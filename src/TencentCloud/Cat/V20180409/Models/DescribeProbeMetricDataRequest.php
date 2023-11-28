@@ -32,10 +32,10 @@ AnalyzeTaskType_Browse：页面性能
 AnalyzeTaskType_Transport：端口性能
 AnalyzeTaskType_UploadDownload：文件传输
 AnalyzeTaskType_MediaStream：音视频体验
- * @method string getMetricType() 获取指标类型，指标查询默认传gauge
- * @method void setMetricType(string $MetricType) 设置指标类型，指标查询默认传gauge
- * @method string getField() 获取指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
- * @method void setField(string $Field) 设置指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
+ * @method string getMetricType() 获取指标类型（counter、gauge以及histogram），指标查询默认传gauge
+ * @method void setMetricType(string $MetricType) 设置指标类型（counter、gauge以及histogram），指标查询默认传gauge
+ * @method string getField() 获取指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。
+ * @method void setField(string $Field) 设置指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。
  * @method string getFilter() 获取过滤条件可以传单个过滤条件也可以拼接多个参数
  * @method void setFilter(string $Filter) 设置过滤条件可以传单个过滤条件也可以拼接多个参数
  * @method string getGroupBy() 获取聚合时间, 1m、1d、30d 等等
@@ -58,12 +58,12 @@ AnalyzeTaskType_MediaStream：音视频体验
     public $AnalyzeTaskType;
 
     /**
-     * @var string 指标类型，指标查询默认传gauge
+     * @var string 指标类型（counter、gauge以及histogram），指标查询默认传gauge
      */
     public $MetricType;
 
     /**
-     * @var string 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
+     * @var string 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。
      */
     public $Field;
 
@@ -90,8 +90,8 @@ AnalyzeTaskType_Browse：页面性能
 AnalyzeTaskType_Transport：端口性能
 AnalyzeTaskType_UploadDownload：文件传输
 AnalyzeTaskType_MediaStream：音视频体验
-     * @param string $MetricType 指标类型，指标查询默认传gauge
-     * @param string $Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)
+     * @param string $MetricType 指标类型（counter、gauge以及histogram），指标查询默认传gauge
+     * @param string $Field 指标详细字段，可以传递传具体的指标也可以对指标进行聚合查询例如："avg(ping_time)"代表整体时延(ms)；不同的任务类型支持不同的field查询，以及聚合规则，详情可联系云拨测。
      * @param string $Filter 过滤条件可以传单个过滤条件也可以拼接多个参数
      * @param string $GroupBy 聚合时间, 1m、1d、30d 等等
      * @param array $Filters 多条件过滤，支持多个过滤条件组合查询

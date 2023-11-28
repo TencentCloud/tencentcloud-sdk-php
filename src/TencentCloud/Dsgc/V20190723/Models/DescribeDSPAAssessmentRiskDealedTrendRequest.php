@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始日期
  * @method string getEndTime() 获取结束日期
  * @method void setEndTime(string $EndTime) 设置结束日期
- * @method string getTemplateId() 获取评估模版id
- * @method void setTemplateId(string $TemplateId) 设置评估模版id
+ * @method string getTemplateId() 获取评估模板id
+ * @method void setTemplateId(string $TemplateId) 设置评估模板id
  */
 class DescribeDSPAAssessmentRiskDealedTrendRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDSPAAssessmentRiskDealedTrendRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 评估模版id
+     * @var string 评估模板id
      */
     public $TemplateId;
 
@@ -55,7 +55,7 @@ class DescribeDSPAAssessmentRiskDealedTrendRequest extends AbstractModel
      * @param string $DspaId dspa实例id
      * @param string $StartTime 开始日期
      * @param string $EndTime 结束日期
-     * @param string $TemplateId 评估模版id
+     * @param string $TemplateId 评估模板id
      */
     function __construct()
     {

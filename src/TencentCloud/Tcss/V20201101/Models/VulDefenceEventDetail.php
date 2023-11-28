@@ -176,6 +176,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterID(string $ClusterID) 设置集群ID
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getNamespace() 获取Namespace
+ * @method void setNamespace(string $Namespace) 设置Namespace
+ * @method string getWorkloadType() 获取工作负载
+ * @method void setWorkloadType(string $WorkloadType) 设置工作负载
  */
 class VulDefenceEventDetail extends AbstractModel
 {
@@ -434,6 +438,16 @@ class VulDefenceEventDetail extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var string Namespace
+     */
+    public $Namespace;
+
+    /**
+     * @var string 工作负载
+     */
+    public $WorkloadType;
+
+    /**
      * @param string $CVEID 漏洞CVEID
      * @param string $VulName 漏洞名称
      * @param string $PocID 漏洞PocID
@@ -512,6 +526,8 @@ class VulDefenceEventDetail extends AbstractModel
      * @param string $NodeSubNetID 超级节点子网ID
      * @param string $ClusterID 集群ID
      * @param string $ClusterName 集群名称
+     * @param string $Namespace Namespace
+     * @param string $WorkloadType 工作负载
      */
     function __construct()
     {
@@ -705,6 +721,14 @@ class VulDefenceEventDetail extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
+            $this->WorkloadType = $param["WorkloadType"];
         }
     }
 }

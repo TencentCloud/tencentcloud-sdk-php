@@ -119,11 +119,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
-
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method void setCcInfos(array $CcInfos) 设置合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
-
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method string getAutoSignScene() 获取个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
 <ul><li> **E_PRESCRIPTION_AUTO_SIGN**：处方单（医疗自动签）  </li></ul>
 注: `个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。`
@@ -240,8 +236,6 @@ class CreateFlowRequest extends AbstractModel
 
     /**
      * @var array 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
-
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      */
     public $CcInfos;
 
@@ -315,8 +309,6 @@ class CreateFlowRequest extends AbstractModel
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
-
-注:`此功能为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param string $AutoSignScene 个人自动签名的使用场景包括以下, 个人自动签署(即ApproverType设置成个人自动签署时)业务此值必传：
 <ul><li> **E_PRESCRIPTION_AUTO_SIGN**：处方单（医疗自动签）  </li></ul>
 注: `个人自动签名场景是白名单功能，使用前请与对接的客户经理联系沟通。`

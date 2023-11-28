@@ -186,6 +186,10 @@ EVENT_ADD_WHITE：已加白
  * @method void setNodeID(string $NodeID) 设置节点ID名称
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getNamespace() 获取Namespace
+ * @method void setNamespace(string $Namespace) 设置Namespace
+ * @method string getWorkloadType() 获取工作负载类型
+ * @method void setWorkloadType(string $WorkloadType) 设置工作负载类型
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -491,6 +495,16 @@ EVENT_ADD_WHITE：已加白
     public $ClusterName;
 
     /**
+     * @var string Namespace
+     */
+    public $Namespace;
+
+    /**
+     * @var string 工作负载类型
+     */
+    public $WorkloadType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -579,6 +593,8 @@ EVENT_ADD_WHITE：已加白
      * @param string $NodeUniqueID 节点唯一id
      * @param string $NodeID 节点ID名称
      * @param string $ClusterName 集群名称
+     * @param string $Namespace Namespace
+     * @param string $WorkloadType 工作负载类型
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -808,6 +824,14 @@ EVENT_ADD_WHITE：已加白
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
+            $this->WorkloadType = $param["WorkloadType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

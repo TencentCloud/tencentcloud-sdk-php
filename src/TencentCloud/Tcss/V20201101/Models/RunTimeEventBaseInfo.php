@@ -146,6 +146,10 @@ MountNamespace逃逸、
  * @method void setNodeUniqueID(string $NodeUniqueID) 设置节点唯一id
  * @method string getHostID() 获取uuid
  * @method void setHostID(string $HostID) 设置uuid
+ * @method string getNamespace() 获取Namespace
+ * @method void setNamespace(string $Namespace) 设置Namespace
+ * @method string getWorkloadType() 获取WorkloadType
+ * @method void setWorkloadType(string $WorkloadType) 设置WorkloadType
  */
 class RunTimeEventBaseInfo extends AbstractModel
 {
@@ -329,6 +333,16 @@ MountNamespace逃逸、
     public $HostID;
 
     /**
+     * @var string Namespace
+     */
+    public $Namespace;
+
+    /**
+     * @var string WorkloadType
+     */
+    public $WorkloadType;
+
+    /**
      * @param string $EventId 事件唯一ID
      * @param string $FoundTime 事件发现时间
      * @param string $ContainerId 容器id
@@ -392,6 +406,8 @@ MountNamespace逃逸、
      * @param string $ClusterName 集群名称
      * @param string $NodeUniqueID 节点唯一id
      * @param string $HostID uuid
+     * @param string $Namespace Namespace
+     * @param string $WorkloadType WorkloadType
      */
     function __construct()
     {
@@ -520,6 +536,14 @@ MountNamespace逃逸、
 
         if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
             $this->HostID = $param["HostID"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
+            $this->WorkloadType = $param["WorkloadType"];
         }
     }
 }

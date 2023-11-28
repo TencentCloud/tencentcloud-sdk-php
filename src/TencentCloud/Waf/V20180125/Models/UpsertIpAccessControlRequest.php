@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpsertIpAccessControl请求参数结构体
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
+ * @method string getDomain() 获取具体域名如：test.qcloudwaf.com
+全局域名为：global
+ * @method void setDomain(string $Domain) 设置具体域名如：test.qcloudwaf.com
+全局域名为：global
  * @method array getItems() 获取ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
  * @method void setItems(array $Items) 设置ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
  * @method string getInstanceId() 获取实例Id
@@ -34,7 +36,8 @@ use TencentCloud\Common\AbstractModel;
 class UpsertIpAccessControlRequest extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string 具体域名如：test.qcloudwaf.com
+全局域名为：global
      */
     public $Domain;
 
@@ -59,7 +62,8 @@ class UpsertIpAccessControlRequest extends AbstractModel
     public $SourceType;
 
     /**
-     * @param string $Domain 域名
+     * @param string $Domain 具体域名如：test.qcloudwaf.com
+全局域名为：global
      * @param array $Items ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param string $InstanceId 实例Id
      * @param string $Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF

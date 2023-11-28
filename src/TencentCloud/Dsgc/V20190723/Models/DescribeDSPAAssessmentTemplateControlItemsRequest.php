@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDspaId() 获取DSPA实例Id。格式“dspa-xxxxxxxx”
  * @method void setDspaId(string $DspaId) 设置DSPA实例Id。格式“dspa-xxxxxxxx”
- * @method string getTemplateId() 获取评估模版Id。格式“template-xxxxxxxx”
- * @method void setTemplateId(string $TemplateId) 设置评估模版Id。格式“template-xxxxxxxx”
+ * @method string getTemplateId() 获取评估模板Id。格式“template-xxxxxxxx”
+ * @method void setTemplateId(string $TemplateId) 设置评估模板Id。格式“template-xxxxxxxx”
  * @method integer getOffset() 获取偏移量。默认为0
  * @method void setOffset(integer $Offset) 设置偏移量。默认为0
  * @method integer getLimit() 获取结果集个数限制。默认为20，最大值为100
@@ -51,7 +51,7 @@ class DescribeDSPAAssessmentTemplateControlItemsRequest extends AbstractModel
     public $DspaId;
 
     /**
-     * @var string 评估模版Id。格式“template-xxxxxxxx”
+     * @var string 评估模板Id。格式“template-xxxxxxxx”
      */
     public $TemplateId;
 
@@ -78,7 +78,7 @@ Status：评估项启用状态，draft / launched
 
     /**
      * @param string $DspaId DSPA实例Id。格式“dspa-xxxxxxxx”
-     * @param string $TemplateId 评估模版Id。格式“template-xxxxxxxx”
+     * @param string $TemplateId 评估模板Id。格式“template-xxxxxxxx”
      * @param integer $Offset 偏移量。默认为0
      * @param integer $Limit 结果集个数限制。默认为20，最大值为100
      * @param array $Filters 过滤项。

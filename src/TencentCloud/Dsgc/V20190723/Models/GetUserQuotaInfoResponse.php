@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbRemainQuota(integer $DbRemainQuota) 设置用户可用的DB配额。
  * @method float getCosRemainQuota() 获取用户可用的COS存储量配额。
  * @method void setCosRemainQuota(float $CosRemainQuota) 设置用户可用的COS存储量配额。
- * @method string getCosQuotaUnit() 获取COS存储量单位，比如TB。
- * @method void setCosQuotaUnit(string $CosQuotaUnit) 设置COS存储量单位，比如TB。
+ * @method string getCosQuotaUnit() 获取COS存储量单位，例如TB。
+ * @method void setCosQuotaUnit(string $CosQuotaUnit) 设置COS存储量单位，例如TB。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,7 +63,7 @@ class GetUserQuotaInfoResponse extends AbstractModel
     public $CosRemainQuota;
 
     /**
-     * @var string COS存储量单位，比如TB。
+     * @var string COS存储量单位，例如TB。
      */
     public $CosQuotaUnit;
 
@@ -78,7 +78,7 @@ class GetUserQuotaInfoResponse extends AbstractModel
      * @param integer $CosTotalQuota 用户购买的COS存储量配额。
      * @param integer $DbRemainQuota 用户可用的DB配额。
      * @param float $CosRemainQuota 用户可用的COS存储量配额。
-     * @param string $CosQuotaUnit COS存储量单位，比如TB。
+     * @param string $CosQuotaUnit COS存储量单位，例如TB。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

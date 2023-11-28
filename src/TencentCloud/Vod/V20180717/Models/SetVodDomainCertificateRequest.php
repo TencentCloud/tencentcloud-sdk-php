@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dsgc\V20190723\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDSPAAssessmentRiskSideList请求参数结构体
+ * SetVodDomainCertificate请求参数结构体
  *
- * @method string getDspaId() 获取DSPA实例ID
- * @method void setDspaId(string $DspaId) 设置DSPA实例ID
- * @method integer getTemplateId() 获取评估模板id
- * @method void setTemplateId(integer $TemplateId) 设置评估模板id
+
  */
-class DescribeDSPAAssessmentRiskSideListRequest extends AbstractModel
+class SetVodDomainCertificateRequest extends AbstractModel
 {
-    /**
-     * @var string DSPA实例ID
-     */
-    public $DspaId;
+
 
     /**
-     * @var integer 评估模板id
-     */
-    public $TemplateId;
 
-    /**
-     * @param string $DspaId DSPA实例ID
-     * @param integer $TemplateId 评估模板id
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class DescribeDSPAAssessmentRiskSideListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DspaId",$param) and $param["DspaId"] !== null) {
-            $this->DspaId = $param["DspaId"];
-        }
 
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
-        }
     }
 }

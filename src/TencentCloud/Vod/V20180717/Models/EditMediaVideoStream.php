@@ -20,6 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频流配置信息
  *
+ * @method string getCodec() 获取视频流的编码格式，可选值：
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+ * @method void setCodec(string $Codec) 设置视频流的编码格式，可选值：
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+ * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+当取值为 0 或不填时，表示自动选择最佳视频码率。
+ * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+当取值为 0 或不填时，表示自动选择最佳视频码率。
  * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -62,6 +76,21 @@ use TencentCloud\Common\AbstractModel;
 class EditMediaVideoStream extends AbstractModel
 {
     /**
+     * @var string 视频流的编码格式，可选值：
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+     */
+    public $Codec;
+
+    /**
+     * @var integer 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+当取值为 0 或不填时，表示自动选择最佳视频码率。
+     */
+    public $Bitrate;
+
+    /**
      * @var string 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -97,6 +126,13 @@ class EditMediaVideoStream extends AbstractModel
     public $Fps;
 
     /**
+     * @param string $Codec 视频流的编码格式，可选值：
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+     * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+当取值为 0 或不填时，表示自动选择最佳视频码率。
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -130,6 +166,14 @@ class EditMediaVideoStream extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
+            $this->Codec = $param["Codec"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
+        }
+
         if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
             $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
         }

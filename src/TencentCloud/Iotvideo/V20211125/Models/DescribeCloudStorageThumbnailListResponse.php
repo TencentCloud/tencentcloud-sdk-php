@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dsgc\V20190723\Models;
+namespace TencentCloud\Iotvideo\V20211125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDSPAAssessmentTemplateControlItems返回参数结构体
+ * DescribeCloudStorageThumbnailList返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的评估项数目
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的评估项数目
- * @method array getItems() 获取模板关联的评估项列表
- * @method void setItems(array $Items) 设置模板关联的评估项列表
+ * @method array getThumbnailURLInfoList() 获取缩略图访问地址
+ * @method void setThumbnailURLInfoList(array $ThumbnailURLInfoList) 设置缩略图访问地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDSPAAssessmentTemplateControlItemsResponse extends AbstractModel
+class DescribeCloudStorageThumbnailListResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的评估项数目
+     * @var array 缩略图访问地址
      */
-    public $TotalCount;
-
-    /**
-     * @var array 模板关联的评估项列表
-     */
-    public $Items;
+    public $ThumbnailURLInfoList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeDSPAAssessmentTemplateControlItemsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的评估项数目
-     * @param array $Items 模板关联的评估项列表
+     * @param array $ThumbnailURLInfoList 缩略图访问地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeDSPAAssessmentTemplateControlItemsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new AssessmentControlItem();
+        if (array_key_exists("ThumbnailURLInfoList",$param) and $param["ThumbnailURLInfoList"] !== null) {
+            $this->ThumbnailURLInfoList = [];
+            foreach ($param["ThumbnailURLInfoList"] as $key => $value){
+                $obj = new ThumbnailURLInfoList();
                 $obj->deserialize($value);
-                array_push($this->Items, $obj);
+                array_push($this->ThumbnailURLInfoList, $obj);
             }
         }
 

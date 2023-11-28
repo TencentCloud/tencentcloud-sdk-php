@@ -65,6 +65,7 @@ use TencentCloud\Iotvideo\V20211125\Models as Models;
  * @method Models\DescribeCloudStoragePackageConsumeStatsResponse DescribeCloudStoragePackageConsumeStats(Models\DescribeCloudStoragePackageConsumeStatsRequest $req) 获取云存套餐包消耗统计
  * @method Models\DescribeCloudStorageStreamDataResponse DescribeCloudStorageStreamData(Models\DescribeCloudStorageStreamDataRequest $req) 获取设备图片流数据
  * @method Models\DescribeCloudStorageThumbnailResponse DescribeCloudStorageThumbnail(Models\DescribeCloudStorageThumbnailRequest $req) 拉取云存事件缩略图
+ * @method Models\DescribeCloudStorageThumbnailListResponse DescribeCloudStorageThumbnailList(Models\DescribeCloudStorageThumbnailListRequest $req) 批量拉取云存事件缩略图
  * @method Models\DescribeCloudStorageTimeResponse DescribeCloudStorageTime(Models\DescribeCloudStorageTimeRequest $req) 获取某一天云存时间轴
  * @method Models\DescribeCloudStorageUsersResponse DescribeCloudStorageUsers(Models\DescribeCloudStorageUsersRequest $req) 拉取云存用户列表
  * @method Models\DescribeDataForwardListResponse DescribeDataForwardList(Models\DescribeDataForwardListRequest $req) 获取数据转发列表

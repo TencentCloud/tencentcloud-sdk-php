@@ -33,7 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFileNames() 获取文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
  * @method void setFileNames(array $FileNames) 设置文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
  * @method array getFormFields() 获取电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul>
  * @method void setFormFields(array $FormFields) 设置电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul>
  * @method boolean getNeedPreview() 获取是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
 <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
@@ -85,6 +91,9 @@ class CreateDocumentRequest extends AbstractModel
 
     /**
      * @var array 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul>
      */
     public $FormFields;
 
@@ -124,6 +133,9 @@ class CreateDocumentRequest extends AbstractModel
 可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      * @param array $FileNames 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
      * @param array $FormFields 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
+<ul>
+<li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
+</ul>
      * @param boolean $NeedPreview 是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
 <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>

@@ -220,6 +220,22 @@ null = 用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowDownload(boolean $AllowDownload) 设置是否允许下载
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsDNSPODResolve() 获取证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDNSPODResolve(boolean $IsDNSPODResolve) 设置证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsPackage() 获取是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsPackage(boolean $IsPackage) 设置是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getKeyPasswordCustomFlag() 获取是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeyPasswordCustomFlag(boolean $KeyPasswordCustomFlag) 设置是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SupportDownloadType getSupportDownloadType() 获取支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportDownloadType(SupportDownloadType $SupportDownloadType) 设置支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -520,6 +536,30 @@ null = 用户上传证书（没有套餐类型），
     public $AllowDownload;
 
     /**
+     * @var boolean 证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDNSPODResolve;
+
+    /**
+     * @var boolean 是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsPackage;
+
+    /**
+     * @var boolean 是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeyPasswordCustomFlag;
+
+    /**
+     * @var SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportDownloadType;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -619,6 +659,14 @@ null = 用户上传证书（没有套餐类型），
      * @param string $AwaitingValidationMsg 域名验证驳回信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllowDownload 是否允许下载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsDNSPODResolve 证书域名是否全部在DNSPOD托管解析
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsPackage 是否是权益点购买的证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $KeyPasswordCustomFlag 是否存在私钥密码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportDownloadType $SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -836,6 +884,23 @@ null = 用户上传证书（没有套餐类型），
 
         if (array_key_exists("AllowDownload",$param) and $param["AllowDownload"] !== null) {
             $this->AllowDownload = $param["AllowDownload"];
+        }
+
+        if (array_key_exists("IsDNSPODResolve",$param) and $param["IsDNSPODResolve"] !== null) {
+            $this->IsDNSPODResolve = $param["IsDNSPODResolve"];
+        }
+
+        if (array_key_exists("IsPackage",$param) and $param["IsPackage"] !== null) {
+            $this->IsPackage = $param["IsPackage"];
+        }
+
+        if (array_key_exists("KeyPasswordCustomFlag",$param) and $param["KeyPasswordCustomFlag"] !== null) {
+            $this->KeyPasswordCustomFlag = $param["KeyPasswordCustomFlag"];
+        }
+
+        if (array_key_exists("SupportDownloadType",$param) and $param["SupportDownloadType"] !== null) {
+            $this->SupportDownloadType = new SupportDownloadType();
+            $this->SupportDownloadType->deserialize($param["SupportDownloadType"]);
         }
     }
 }

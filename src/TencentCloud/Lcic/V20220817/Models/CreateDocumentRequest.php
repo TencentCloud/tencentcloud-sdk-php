@@ -29,13 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOwner() 获取文档所有者的Id
  * @method void setOwner(string $Owner) 设置文档所有者的Id
  * @method integer getTranscodeType() 获取转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
  * @method void setTranscodeType(integer $TranscodeType) 设置转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
  * @method integer getPermission() 获取权限，可以有如下取值：
@@ -83,8 +83,8 @@ class CreateDocumentRequest extends AbstractModel
 
     /**
      * @var integer 转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
      */
@@ -122,8 +122,8 @@ class CreateDocumentRequest extends AbstractModel
      * @param string $DocumentName 文档名称。
      * @param string $Owner 文档所有者的Id
      * @param integer $TranscodeType 转码类型，可以有如下取值：
-0 无需转码（默认）
-1 需要转码的文档，ppt，pptx，pdf，doc，docx
+0 无需转码（默认），bmp，jpg，jpeg，png，gif
+1 需要转码的文档，ppt，pptx，pdf，doc，docx，xls，xlsx
 2 需要转码的视频，mp4，3pg，mpeg，avi，flv，wmv，rm，h264等
 2 需要转码的音频，mp3，wav，wma，aac，flac，opus
      * @param integer $Permission 权限，可以有如下取值：

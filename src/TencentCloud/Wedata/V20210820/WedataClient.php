@@ -380,6 +380,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 提交工作流
  * @method Models\SuspendIntegrationTaskResponse SuspendIntegrationTask(Models\SuspendIntegrationTaskRequest $req) 暂停集成任务
  * @method Models\TaskLogResponse TaskLog(Models\TaskLogRequest $req) 查询Inlong manager日志
+ * @method Models\TriggerDsEventResponse TriggerDsEvent(Models\TriggerDsEventRequest $req) 事件管理-触发事件
  * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 触发事件
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务

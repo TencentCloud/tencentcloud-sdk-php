@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置修改后的私有网络 ID。
  * @method string getVip() 获取修改后的 VIP 地址。
  * @method void setVip(string $Vip) 设置修改后的 VIP 地址。
+ * @method integer getTaskId() 获取任务ID。
+ * @method void setTaskId(integer $TaskId) 设置任务ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class ModifyNetworkConfigResponse extends AbstractModel
     public $Vip;
 
     /**
+     * @var integer 任务ID。
+     */
+    public $TaskId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class ModifyNetworkConfigResponse extends AbstractModel
      * @param string $SubnetId 修改后的子网 ID。
      * @param string $VpcId 修改后的私有网络 ID。
      * @param string $Vip 修改后的 VIP 地址。
+     * @param integer $TaskId 任务ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,10 @@ class ModifyNetworkConfigResponse extends AbstractModel
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

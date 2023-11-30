@@ -20,6 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 电子文档的控件填充信息。按照控件类型进行相应的填充。
 
+当控件的 ComponentType=‘SIGN_SEAL'时，FormField.ComponentValue填入印章id。
+```
+FormField输入示例：
+{
+    "ComponentId": "componentId1",
+    "ComponentValue": "sealId（印章id）"
+}
+```
 当控件的 ComponentType='TEXT'时，FormField.ComponentValue填入文本内容
 ```
 FormField输入示例：

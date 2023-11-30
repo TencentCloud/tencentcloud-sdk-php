@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyLane返回参数结构体
+ * DescribeLogSwitches返回参数结构体
  *
- * @method boolean getResult() 获取编辑成功: true / 编辑失败: false
- * @method void setResult(boolean $Result) 设置编辑成功: true / 编辑失败: false
+ * @method array getSwitchSet() 获取集群日志开关集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSwitchSet(array $SwitchSet) 设置集群日志开关集合
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyLaneResponse extends AbstractModel
+class DescribeLogSwitchesResponse extends AbstractModel
 {
     /**
-     * @var boolean 编辑成功: true / 编辑失败: false
+     * @var array 集群日志开关集合
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $SwitchSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class ModifyLaneResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result 编辑成功: true / 编辑失败: false
+     * @param array $SwitchSet 集群日志开关集合
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +58,13 @@ class ModifyLaneResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("SwitchSet",$param) and $param["SwitchSet"] !== null) {
+            $this->SwitchSet = [];
+            foreach ($param["SwitchSet"] as $key => $value){
+                $obj = new Switch();
+                $obj->deserialize($value);
+                array_push($this->SwitchSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

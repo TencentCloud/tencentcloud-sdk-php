@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeployStatus() 获取部署状态，1表示部署成功，0表示部署失败
  * @method void setDeployStatus(integer $DeployStatus) 设置部署状态，1表示部署成功，0表示部署失败
+ * @method array getUpdateSyncProgress() 获取更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateSyncProgress(array $UpdateSyncProgress) 设置更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,6 +47,12 @@ class UpdateCertificateInstanceResponse extends AbstractModel
     public $DeployStatus;
 
     /**
+     * @var array 更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateSyncProgress;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -51,6 +61,8 @@ class UpdateCertificateInstanceResponse extends AbstractModel
      * @param integer $DeployRecordId 云资源部署任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeployStatus 部署状态，1表示部署成功，0表示部署失败
+     * @param array $UpdateSyncProgress 更新异步创建任务进度详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +84,15 @@ class UpdateCertificateInstanceResponse extends AbstractModel
 
         if (array_key_exists("DeployStatus",$param) and $param["DeployStatus"] !== null) {
             $this->DeployStatus = $param["DeployStatus"];
+        }
+
+        if (array_key_exists("UpdateSyncProgress",$param) and $param["UpdateSyncProgress"] !== null) {
+            $this->UpdateSyncProgress = [];
+            foreach ($param["UpdateSyncProgress"] as $key => $value){
+                $obj = new UpdateSyncProgress();
+                $obj->deserialize($value);
+                array_push($this->UpdateSyncProgress, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

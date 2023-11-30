@@ -14,52 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mrs\V20200910\Models;
+namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 检验报告v3
+ * 更新异步任务进度
  *
- * @method array getTableIndictors() 获取检验报告V3结论
+ * @method string getResourceType() 获取资源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableIndictors(array $TableIndictors) 设置检验报告V3结论
+ * @method void setResourceType(string $ResourceType) 设置资源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取版本号
+ * @method array getUpdateSyncProgressRegions() 获取地域结果列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置版本号
+ * @method void setUpdateSyncProgressRegions(array $UpdateSyncProgressRegions) 设置地域结果列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTableIndicators() 获取检验报告V3结论
+ * @method integer getStatus() 获取异步更新进度状态：0， 待处理， 1 已处理， 3 处理中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableIndicators(array $TableIndicators) 设置检验报告V3结论
+ * @method void setStatus(integer $Status) 设置异步更新进度状态：0， 待处理， 1 已处理， 3 处理中
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class IndicatorV3 extends AbstractModel
+class UpdateSyncProgress extends AbstractModel
 {
     /**
-     * @var array 检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
-     * @deprecated
-     */
-    public $TableIndictors;
-
-    /**
-     * @var string 版本号
+     * @var string 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Version;
+    public $ResourceType;
 
     /**
-     * @var array 检验报告V3结论
+     * @var array 地域结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TableIndicators;
+    public $UpdateSyncProgressRegions;
 
     /**
-     * @param array $TableIndictors 检验报告V3结论
+     * @var integer 异步更新进度状态：0， 待处理， 1 已处理， 3 处理中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 版本号
+     */
+    public $Status;
+
+    /**
+     * @param string $ResourceType 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TableIndicators 检验报告V3结论
+     * @param array $UpdateSyncProgressRegions 地域结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 异步更新进度状态：0， 待处理， 1 已处理， 3 处理中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -75,26 +74,21 @@ class IndicatorV3 extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TableIndictors",$param) and $param["TableIndictors"] !== null) {
-            $this->TableIndictors = [];
-            foreach ($param["TableIndictors"] as $key => $value){
-                $obj = new TableIndicators();
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("UpdateSyncProgressRegions",$param) and $param["UpdateSyncProgressRegions"] !== null) {
+            $this->UpdateSyncProgressRegions = [];
+            foreach ($param["UpdateSyncProgressRegions"] as $key => $value){
+                $obj = new UpdateSyncProgressRegion();
                 $obj->deserialize($value);
-                array_push($this->TableIndictors, $obj);
+                array_push($this->UpdateSyncProgressRegions, $obj);
             }
         }
 
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
-        }
-
-        if (array_key_exists("TableIndicators",$param) and $param["TableIndicators"] !== null) {
-            $this->TableIndicators = [];
-            foreach ($param["TableIndicators"] as $key => $value){
-                $obj = new TableIndicators();
-                $obj->deserialize($value);
-                array_push($this->TableIndicators, $obj);
-            }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

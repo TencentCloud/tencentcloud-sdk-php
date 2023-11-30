@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeInstruction(string $DischargeInstruction) 设置出院医嘱
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdmissionDiagnosis() 获取入院诊断
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdmissionDiagnosis(string $AdmissionDiagnosis) 设置入院诊断
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Hospitalization extends AbstractModel
 {
@@ -76,6 +80,7 @@ class Hospitalization extends AbstractModel
     /**
      * @var string 入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $AdmissionDignosis;
 
@@ -104,6 +109,12 @@ class Hospitalization extends AbstractModel
     public $DischargeInstruction;
 
     /**
+     * @var string 入院诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdmissionDiagnosis;
+
+    /**
      * @param string $AdmissionTime 入院时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DischargeTime 出院时间
@@ -119,6 +130,8 @@ class Hospitalization extends AbstractModel
      * @param string $DischargeDiagnosis 出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DischargeInstruction 出院医嘱
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdmissionDiagnosis 入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +177,10 @@ class Hospitalization extends AbstractModel
 
         if (array_key_exists("DischargeInstruction",$param) and $param["DischargeInstruction"] !== null) {
             $this->DischargeInstruction = $param["DischargeInstruction"];
+        }
+
+        if (array_key_exists("AdmissionDiagnosis",$param) and $param["AdmissionDiagnosis"] !== null) {
+            $this->AdmissionDiagnosis = $param["AdmissionDiagnosis"];
         }
     }
 }

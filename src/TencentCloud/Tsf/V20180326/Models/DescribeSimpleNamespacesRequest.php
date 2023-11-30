@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceTypeList(array $NamespaceTypeList) 设置查询的命名空间类型列表
  * @method string getNamespaceName() 获取通过命名空间名精确过滤
  * @method void setNamespaceName(string $NamespaceName) 设置通过命名空间名精确过滤
- * @method string getIsDefault() 获取通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
- * @method void setIsDefault(string $IsDefault) 设置通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+ * @method string getIsDefault() 获取通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
+ * @method void setIsDefault(string $IsDefault) 设置通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
  * @method boolean getDisableProgramAuthCheck() 获取无
  * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
  */
@@ -91,7 +91,7 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
     public $NamespaceName;
 
     /**
-     * @var string 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+     * @var string 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
      */
     public $IsDefault;
 
@@ -110,7 +110,7 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
      * @param string $SearchWord 通过id和name进行过滤
      * @param array $NamespaceTypeList 查询的命名空间类型列表
      * @param string $NamespaceName 通过命名空间名精确过滤
-     * @param string $IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认，命名空间。1：非默认命名空间
+     * @param string $IsDefault 通过是否是默认命名空间过滤，不传表示拉取全部命名空间。0：默认命名空间。1：非默认命名空间
      * @param boolean $DisableProgramAuthCheck 无
      */
     function __construct()

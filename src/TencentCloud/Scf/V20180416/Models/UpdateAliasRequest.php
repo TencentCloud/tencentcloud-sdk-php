@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionVersion(string $FunctionVersion) 设置别名指向的主版本
  * @method string getNamespace() 获取函数所在的命名空间
  * @method void setNamespace(string $Namespace) 设置函数所在的命名空间
- * @method RoutingConfig getRoutingConfig() 获取别名的路由信息，需要为别名指定附加版本时，必须提供此参数
- * @method void setRoutingConfig(RoutingConfig $RoutingConfig) 设置别名的路由信息，需要为别名指定附加版本时，必须提供此参数
+ * @method RoutingConfig getRoutingConfig() 获取别名的路由信息，需要为别名指定附加版本时，必须提供此参数；	  附加版本指的是：除主版本 FunctionVersion 外，为此别名再指定一个函数可正常使用的版本；   这里附加版本中的 Version 值 不能是别名指向的主版本；  要注意的是：如果想要某个版本的流量全部指向这个别名，不需配置此参数； 目前一个别名最多只能指定一个附加版本
+ * @method void setRoutingConfig(RoutingConfig $RoutingConfig) 设置别名的路由信息，需要为别名指定附加版本时，必须提供此参数；	  附加版本指的是：除主版本 FunctionVersion 外，为此别名再指定一个函数可正常使用的版本；   这里附加版本中的 Version 值 不能是别名指向的主版本；  要注意的是：如果想要某个版本的流量全部指向这个别名，不需配置此参数； 目前一个别名最多只能指定一个附加版本
  * @method string getDescription() 获取别名的描述
  * @method void setDescription(string $Description) 设置别名的描述
  */
@@ -56,7 +56,7 @@ class UpdateAliasRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var RoutingConfig 别名的路由信息，需要为别名指定附加版本时，必须提供此参数
+     * @var RoutingConfig 别名的路由信息，需要为别名指定附加版本时，必须提供此参数；	  附加版本指的是：除主版本 FunctionVersion 外，为此别名再指定一个函数可正常使用的版本；   这里附加版本中的 Version 值 不能是别名指向的主版本；  要注意的是：如果想要某个版本的流量全部指向这个别名，不需配置此参数； 目前一个别名最多只能指定一个附加版本
      */
     public $RoutingConfig;
 
@@ -70,7 +70,7 @@ class UpdateAliasRequest extends AbstractModel
      * @param string $Name 别名的名称
      * @param string $FunctionVersion 别名指向的主版本
      * @param string $Namespace 函数所在的命名空间
-     * @param RoutingConfig $RoutingConfig 别名的路由信息，需要为别名指定附加版本时，必须提供此参数
+     * @param RoutingConfig $RoutingConfig 别名的路由信息，需要为别名指定附加版本时，必须提供此参数；	  附加版本指的是：除主版本 FunctionVersion 外，为此别名再指定一个函数可正常使用的版本；   这里附加版本中的 Version 值 不能是别名指向的主版本；  要注意的是：如果想要某个版本的流量全部指向这个别名，不需配置此参数； 目前一个别名最多只能指定一个附加版本
      * @param string $Description 别名的描述
      */
     function __construct()

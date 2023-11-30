@@ -120,6 +120,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVatSalesList(VatInvoiceInfo $VatSalesList) 设置增值税销货清单
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ElectronicTrainTicketFull getElectronicTrainTicketFull() 获取电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElectronicTrainTicketFull(ElectronicTrainTicketFull $ElectronicTrainTicketFull) 设置电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ElectronicFlightTicketFull getElectronicFlightTicketFull() 获取电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElectronicFlightTicketFull(ElectronicFlightTicketFull $ElectronicFlightTicketFull) 设置电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SingleInvoiceItem extends AbstractModel
 {
@@ -274,6 +282,18 @@ class SingleInvoiceItem extends AbstractModel
     public $VatSalesList;
 
     /**
+     * @var ElectronicTrainTicketFull 电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElectronicTrainTicketFull;
+
+    /**
+     * @var ElectronicFlightTicketFull 电子发票（机票行程单）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElectronicFlightTicketFull;
+
+    /**
      * @param VatInvoiceInfo $VatSpecialInvoice 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VatInvoiceInfo $VatCommonInvoice 增值税普通发票
@@ -323,6 +343,10 @@ class SingleInvoiceItem extends AbstractModel
      * @param MedicalInvoice $MedicalHospitalizedInvoice 医疗住院收费票据（电子）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VatInvoiceInfo $VatSalesList 增值税销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElectronicTrainTicketFull $ElectronicTrainTicketFull 电子发票（火车票）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElectronicFlightTicketFull $ElectronicFlightTicketFull 电子发票（机票行程单）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -461,6 +485,16 @@ class SingleInvoiceItem extends AbstractModel
         if (array_key_exists("VatSalesList",$param) and $param["VatSalesList"] !== null) {
             $this->VatSalesList = new VatInvoiceInfo();
             $this->VatSalesList->deserialize($param["VatSalesList"]);
+        }
+
+        if (array_key_exists("ElectronicTrainTicketFull",$param) and $param["ElectronicTrainTicketFull"] !== null) {
+            $this->ElectronicTrainTicketFull = new ElectronicTrainTicketFull();
+            $this->ElectronicTrainTicketFull->deserialize($param["ElectronicTrainTicketFull"]);
+        }
+
+        if (array_key_exists("ElectronicFlightTicketFull",$param) and $param["ElectronicFlightTicketFull"] !== null) {
+            $this->ElectronicFlightTicketFull = new ElectronicFlightTicketFull();
+            $this->ElectronicFlightTicketFull->deserialize($param["ElectronicFlightTicketFull"]);
         }
     }
 }

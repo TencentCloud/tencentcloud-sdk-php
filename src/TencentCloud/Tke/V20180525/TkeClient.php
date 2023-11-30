@@ -141,6 +141,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeIPAMDResponse DescribeIPAMD(Models\DescribeIPAMDRequest $req) 获取eniipamd组件信息
  * @method Models\DescribeImageCachesResponse DescribeImageCaches(Models\DescribeImageCachesRequest $req) 查询镜像缓存信息接口
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取镜像信息
+ * @method Models\DescribeLogSwitchesResponse DescribeLogSwitches(Models\DescribeLogSwitchesRequest $req) 查询集群日志（审计、事件、普通日志）开关列表
  * @method Models\DescribePodDeductionRateResponse DescribePodDeductionRate(Models\DescribePodDeductionRateRequest $req) 查询各个规格的 Pod 的抵扣率
  * @method Models\DescribePodsBySpecResponse DescribePodsBySpec(Models\DescribePodsBySpecRequest $req) 查询可以用预留券抵扣的 Pod 信息。
  * @method Models\DescribePostNodeResourcesResponse DescribePostNodeResources(Models\DescribePostNodeResourcesRequest $req) 包括 Pod 资源统计和绑定的预留券资源统计。

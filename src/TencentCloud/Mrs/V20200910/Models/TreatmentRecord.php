@@ -128,12 +128,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObservationDays(string $ObservationDays) 设置观测天数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdmissionCondition() 获取入院
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdmissionCondition(string $AdmissionCondition) 设置入院
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TreatmentRecord extends AbstractModel
 {
     /**
      * @var string 入院
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DmissionCondition;
 
@@ -294,6 +299,12 @@ class TreatmentRecord extends AbstractModel
     public $ObservationDays;
 
     /**
+     * @var string 入院
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdmissionCondition;
+
+    /**
      * @param string $DmissionCondition 入院
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChiefComplaint 主诉
@@ -347,6 +358,8 @@ class TreatmentRecord extends AbstractModel
      * @param string $RelapseDate 复发日期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ObservationDays 观测天数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdmissionCondition 入院
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -468,6 +481,10 @@ class TreatmentRecord extends AbstractModel
 
         if (array_key_exists("ObservationDays",$param) and $param["ObservationDays"] !== null) {
             $this->ObservationDays = $param["ObservationDays"];
+        }
+
+        if (array_key_exists("AdmissionCondition",$param) and $param["AdmissionCondition"] !== null) {
+            $this->AdmissionCondition = $param["AdmissionCondition"];
         }
     }
 }

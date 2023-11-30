@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInNetLimit(integer $InNetLimit) 设置单分片入流量带宽限制，单位：MB。
  * @method integer getOutNetLimit() 获取单分片出流量带宽限制，单位：MB。
  * @method void setOutNetLimit(integer $OutNetLimit) 设置单分片出流量带宽限制，单位：MB。
- * @method integer getClientLimit() 获取单分片连接数限制。
- * @method void setClientLimit(integer $ClientLimit) 设置单分片连接数限制。
+ * @method integer getClientLimit() 获取实例当前单分片连接数限制。
+ * @method void setClientLimit(integer $ClientLimit) 设置实例当前单分片连接数限制。
+ * @method integer getClientLimitMin() 获取单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientLimitMin(integer $ClientLimitMin) 设置单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClientLimitMax() 获取单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientLimitMax(integer $ClientLimitMax) 设置单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,9 +50,21 @@ class DescribeConnectionConfigResponse extends AbstractModel
     public $OutNetLimit;
 
     /**
-     * @var integer 单分片连接数限制。
+     * @var integer 实例当前单分片连接数限制。
      */
     public $ClientLimit;
+
+    /**
+     * @var integer 单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientLimitMin;
+
+    /**
+     * @var integer 单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientLimitMax;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,7 +74,11 @@ class DescribeConnectionConfigResponse extends AbstractModel
     /**
      * @param integer $InNetLimit 单分片入流量带宽限制，单位：MB。
      * @param integer $OutNetLimit 单分片出流量带宽限制，单位：MB。
-     * @param integer $ClientLimit 单分片连接数限制。
+     * @param integer $ClientLimit 实例当前单分片连接数限制。
+     * @param integer $ClientLimitMin 单分片连接数限制最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientLimitMax 单分片连接数限制最大值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +104,14 @@ class DescribeConnectionConfigResponse extends AbstractModel
 
         if (array_key_exists("ClientLimit",$param) and $param["ClientLimit"] !== null) {
             $this->ClientLimit = $param["ClientLimit"];
+        }
+
+        if (array_key_exists("ClientLimitMin",$param) and $param["ClientLimitMin"] !== null) {
+            $this->ClientLimitMin = $param["ClientLimitMin"];
+        }
+
+        if (array_key_exists("ClientLimitMax",$param) and $param["ClientLimitMax"] !== null) {
+            $this->ClientLimitMax = $param["ClientLimitMax"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

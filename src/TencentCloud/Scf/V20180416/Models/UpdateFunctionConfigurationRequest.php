@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocolParams(ProtocolParams $ProtocolParams) 设置HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
  * @method InstanceConcurrencyConfig getInstanceConcurrencyConfig() 获取单实例多并发配置。只支持Web函数。
  * @method void setInstanceConcurrencyConfig(InstanceConcurrencyConfig $InstanceConcurrencyConfig) 设置单实例多并发配置。只支持Web函数。
+ * @method string getDnsCache() 获取是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+ * @method void setDnsCache(string $DnsCache) 设置是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+ * @method IntranetConfigIn getIntranetConfig() 获取内网访问配置
+ * @method void setIntranetConfig(IntranetConfigIn $IntranetConfig) 设置内网访问配置
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -174,6 +178,16 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $InstanceConcurrencyConfig;
 
     /**
+     * @var string 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+     */
+    public $DnsCache;
+
+    /**
+     * @var IntranetConfigIn 内网访问配置
+     */
+    public $IntranetConfig;
+
+    /**
      * @param string $FunctionName 要修改的函数名称
      * @param string $Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
      * @param integer $MemorySize 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。
@@ -196,6 +210,8 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param integer $InitTimeout 函数初始化执行超时时间
      * @param ProtocolParams $ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
      * @param InstanceConcurrencyConfig $InstanceConcurrencyConfig 单实例多并发配置。只支持Web函数。
+     * @param string $DnsCache 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
+     * @param IntranetConfigIn $IntranetConfig 内网访问配置
      */
     function __construct()
     {
@@ -304,6 +320,15 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
         if (array_key_exists("InstanceConcurrencyConfig",$param) and $param["InstanceConcurrencyConfig"] !== null) {
             $this->InstanceConcurrencyConfig = new InstanceConcurrencyConfig();
             $this->InstanceConcurrencyConfig->deserialize($param["InstanceConcurrencyConfig"]);
+        }
+
+        if (array_key_exists("DnsCache",$param) and $param["DnsCache"] !== null) {
+            $this->DnsCache = $param["DnsCache"];
+        }
+
+        if (array_key_exists("IntranetConfig",$param) and $param["IntranetConfig"] !== null) {
+            $this->IntranetConfig = new IntranetConfigIn();
+            $this->IntranetConfig->deserialize($param["IntranetConfig"]);
         }
     }
 }

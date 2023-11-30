@@ -139,15 +139,15 @@ cdn-waf：CDN上的Web防护能力
  * @method integer getTLSVersion() 获取TLS版本信息
  * @method void setTLSVersion(integer $TLSVersion) 设置TLS版本信息
  * @method integer getCipherTemplate() 获取加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
  * @method void setCipherTemplate(integer $CipherTemplate) 设置加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
  * @method array getCiphers() 获取自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
  * @method void setCiphers(array $Ciphers) 设置自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
  * @method integer getProxyReadTimeout() 获取WAF与源站的读超时时间，默认300s。
@@ -344,10 +344,10 @@ cdn-waf：CDN上的Web防护能力
 
     /**
      * @var integer 加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
      */
     public $CipherTemplate;
 
@@ -448,10 +448,10 @@ cdn-waf：CDN上的Web防护能力
 1：开启
      * @param integer $TLSVersion TLS版本信息
      * @param integer $CipherTemplate 加密套件模板。
-0：不支持选择，使用默认模版  
-1：通用型模版 
-2：安全型模版 
-3：自定义模版
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
      * @param array $Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
      * @param integer $ProxyReadTimeout WAF与源站的读超时时间，默认300s。
      * @param integer $ProxySendTimeout WAF与源站的写超时时间，默认300s。

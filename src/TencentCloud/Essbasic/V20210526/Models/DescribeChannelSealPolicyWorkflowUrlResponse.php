@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeChannelSealPolicyWorkflowUrl返回参数结构体
  *
- * @method string getWorkflowUrl() 获取用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
- * @method void setWorkflowUrl(string $WorkflowUrl) 设置用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
+ * @method string getWorkflowUrl() 获取用印审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转方式查看）。
+ * @method void setWorkflowUrl(string $WorkflowUrl) 设置用印审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转方式查看）。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeChannelSealPolicyWorkflowUrlResponse extends AbstractModel
 {
     /**
-     * @var string 用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
+     * @var string 用印审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转方式查看）。
      */
     public $WorkflowUrl;
 
@@ -38,7 +38,7 @@ class DescribeChannelSealPolicyWorkflowUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $WorkflowUrl 用印审批小程序链接，链接类型（通过H5唤起小程序方式查看），一年内有效。
+     * @param string $WorkflowUrl 用印审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转方式查看）。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

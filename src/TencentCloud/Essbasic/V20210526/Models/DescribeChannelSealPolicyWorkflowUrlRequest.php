@@ -38,6 +38,16 @@ use TencentCloud\Common\AbstractModel;
 第三方平台子客企业和员工必须已经经过实名认证
  * @method string getWorkflowInstanceId() 获取用印审批单的ID，可通过用印申请回调获取。
  * @method void setWorkflowInstanceId(string $WorkflowInstanceId) 设置用印审批单的ID，可通过用印申请回调获取。
+ * @method string getEndpoint() 获取生成链接的类型：
+生成链接的类型
+<ul><li>**LongLink**：(默认)长链接，H5跳转到电子签小程序链接，链接有效期为1年</li>
+<li>**ShortLink**：H5跳转到电子签小程序链接，一般用于发送短信中带的链接，打开后进入腾讯电子签小程序，链接有效期为7天</li>
+<li>**App**：第三方APP或小程序跳转电子签小程序链接，一般用于贵方小程序或者APP跳转过来，打开后进入腾讯电子签小程序，链接有效期为1年</li></ul>
+ * @method void setEndpoint(string $Endpoint) 设置生成链接的类型：
+生成链接的类型
+<ul><li>**LongLink**：(默认)长链接，H5跳转到电子签小程序链接，链接有效期为1年</li>
+<li>**ShortLink**：H5跳转到电子签小程序链接，一般用于发送短信中带的链接，打开后进入腾讯电子签小程序，链接有效期为7天</li>
+<li>**App**：第三方APP或小程序跳转电子签小程序链接，一般用于贵方小程序或者APP跳转过来，打开后进入腾讯电子签小程序，链接有效期为1年</li></ul>
  */
 class DescribeChannelSealPolicyWorkflowUrlRequest extends AbstractModel
 {
@@ -59,6 +69,15 @@ class DescribeChannelSealPolicyWorkflowUrlRequest extends AbstractModel
     public $WorkflowInstanceId;
 
     /**
+     * @var string 生成链接的类型：
+生成链接的类型
+<ul><li>**LongLink**：(默认)长链接，H5跳转到电子签小程序链接，链接有效期为1年</li>
+<li>**ShortLink**：H5跳转到电子签小程序链接，一般用于发送短信中带的链接，打开后进入腾讯电子签小程序，链接有效期为7天</li>
+<li>**App**：第三方APP或小程序跳转电子签小程序链接，一般用于贵方小程序或者APP跳转过来，打开后进入腾讯电子签小程序，链接有效期为1年</li></ul>
+     */
+    public $Endpoint;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -68,6 +87,11 @@ class DescribeChannelSealPolicyWorkflowUrlRequest extends AbstractModel
 第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId
 第三方平台子客企业和员工必须已经经过实名认证
      * @param string $WorkflowInstanceId 用印审批单的ID，可通过用印申请回调获取。
+     * @param string $Endpoint 生成链接的类型：
+生成链接的类型
+<ul><li>**LongLink**：(默认)长链接，H5跳转到电子签小程序链接，链接有效期为1年</li>
+<li>**ShortLink**：H5跳转到电子签小程序链接，一般用于发送短信中带的链接，打开后进入腾讯电子签小程序，链接有效期为7天</li>
+<li>**App**：第三方APP或小程序跳转电子签小程序链接，一般用于贵方小程序或者APP跳转过来，打开后进入腾讯电子签小程序，链接有效期为1年</li></ul>
      */
     function __construct()
     {
@@ -89,6 +113,10 @@ class DescribeChannelSealPolicyWorkflowUrlRequest extends AbstractModel
 
         if (array_key_exists("WorkflowInstanceId",$param) and $param["WorkflowInstanceId"] !== null) {
             $this->WorkflowInstanceId = $param["WorkflowInstanceId"];
+        }
+
+        if (array_key_exists("Endpoint",$param) and $param["Endpoint"] !== null) {
+            $this->Endpoint = $param["Endpoint"];
         }
     }
 }

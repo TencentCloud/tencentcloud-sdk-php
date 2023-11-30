@@ -19,6 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 别名的版本路由配置
+其中：随机权重路由附加版本和规则路由附加版本不可以同时配置
  *
  * @method array getAdditionalVersionWeights() 获取随机权重路由附加版本
  * @method void setAdditionalVersionWeights(array $AdditionalVersionWeights) 设置随机权重路由附加版本

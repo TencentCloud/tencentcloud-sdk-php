@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置指标id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAlarmIndicator() 获取告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+ * @method integer getAlarmIndicator() 获取告警指标,0任务失败,1任务运行超时,2任务停止,3任务暂停, 4读取速度,5写入速度,6读取吞吐 7写入吞吐, 8脏数据字节数,9脏数据条数,10任务异常,11任务检测异常, 12重启次数, 13任务延时, 14近20分内的重启次数 15传输延迟,16业务延迟, 50离线包CPU使用率, 51离线包内存使用率, 52离线包并行度使用率, 53离线包排队中的实例数, 54实时包资源使用率, 55实时包运行中的任务数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlarmIndicator(integer $AlarmIndicator) 设置告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+ * @method void setAlarmIndicator(integer $AlarmIndicator) 设置告警指标,0任务失败,1任务运行超时,2任务停止,3任务暂停, 4读取速度,5写入速度,6读取吞吐 7写入吞吐, 8脏数据字节数,9脏数据条数,10任务异常,11任务检测异常, 12重启次数, 13任务延时, 14近20分内的重启次数 15传输延迟,16业务延迟, 50离线包CPU使用率, 51离线包内存使用率, 52离线包并行度使用率, 53离线包排队中的实例数, 54实时包资源使用率, 55实时包运行中的任务数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlarmIndicatorDesc() 获取告警指标描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEstimatedTime(integer $EstimatedTime) 设置预计的超时时间，分钟级别
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperator() 获取实时任务告警需要的参数
+ * @method integer getOperator() 获取告警阈值的算子,1 大于,2 小于
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperator(integer $Operator) 设置实时任务告警需要的参数
+ * @method void setOperator(integer $Operator) 设置告警阈值的算子,1 大于,2 小于
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlarmIndicatorUnit() 获取告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,10 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取告警周期
  * @method void setDuration(integer $Duration) 设置告警周期
- * @method string getDurationUnit() 获取告警周期单位
- * @method void setDurationUnit(string $DurationUnit) 设置告警周期单位
+ * @method string getDurationUnit() 获取告警周期单位:hour,minute,day
+ * @method void setDurationUnit(string $DurationUnit) 设置告警周期单位:hour,minute,day
  * @method integer getMaxTimes() 获取周期内最多告警次数
  * @method void setMaxTimes(integer $MaxTimes) 设置周期内最多告警次数
+ * @method float getThreshold() 获取指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setThreshold(float $Threshold) 设置指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmIndicatorInfo extends AbstractModel
 {
@@ -64,7 +68,7 @@ class AlarmIndicatorInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var integer 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+     * @var integer 告警指标,0任务失败,1任务运行超时,2任务停止,3任务暂停, 4读取速度,5写入速度,6读取吞吐 7写入吞吐, 8脏数据字节数,9脏数据条数,10任务异常,11任务检测异常, 12重启次数, 13任务延时, 14近20分内的重启次数 15传输延迟,16业务延迟, 50离线包CPU使用率, 51离线包内存使用率, 52离线包并行度使用率, 53离线包排队中的实例数, 54实时包资源使用率, 55实时包运行中的任务数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmIndicator;
@@ -88,7 +92,7 @@ class AlarmIndicatorInfo extends AbstractModel
     public $EstimatedTime;
 
     /**
-     * @var integer 实时任务告警需要的参数
+     * @var integer 告警阈值的算子,1 大于,2 小于
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
@@ -105,7 +109,7 @@ class AlarmIndicatorInfo extends AbstractModel
     public $Duration;
 
     /**
-     * @var string 告警周期单位
+     * @var string 告警周期单位:hour,minute,day
      */
     public $DurationUnit;
 
@@ -115,9 +119,15 @@ class AlarmIndicatorInfo extends AbstractModel
     public $MaxTimes;
 
     /**
+     * @var float 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Threshold;
+
+    /**
      * @param string $Id 指标id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+     * @param integer $AlarmIndicator 告警指标,0任务失败,1任务运行超时,2任务停止,3任务暂停, 4读取速度,5写入速度,6读取吞吐 7写入吞吐, 8脏数据字节数,9脏数据条数,10任务异常,11任务检测异常, 12重启次数, 13任务延时, 14近20分内的重启次数 15传输延迟,16业务延迟, 50离线包CPU使用率, 51离线包内存使用率, 52离线包并行度使用率, 53离线包排队中的实例数, 54实时包资源使用率, 55实时包运行中的任务数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmIndicatorDesc 告警指标描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -125,13 +135,15 @@ class AlarmIndicatorInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EstimatedTime 预计的超时时间，分钟级别
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Operator 实时任务告警需要的参数
+     * @param integer $Operator 告警阈值的算子,1 大于,2 小于
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmIndicatorUnit 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 告警周期
-     * @param string $DurationUnit 告警周期单位
+     * @param string $DurationUnit 告警周期单位:hour,minute,day
      * @param integer $MaxTimes 周期内最多告警次数
+     * @param float $Threshold 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -184,6 +196,10 @@ class AlarmIndicatorInfo extends AbstractModel
 
         if (array_key_exists("MaxTimes",$param) and $param["MaxTimes"] !== null) {
             $this->MaxTimes = $param["MaxTimes"];
+        }
+
+        if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
+            $this->Threshold = $param["Threshold"];
         }
     }
 }

@@ -14,21 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Weilingwith\V20230427\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAlarmStatusList返回参数结构体
+ * GetDevicePayMode返回参数结构体
  *
- * @method DescribeAlarmStatusListRes getResult() 获取告警状态返回结构
- * @method void setResult(DescribeAlarmStatusListRes $Result) 设置告警状态返回结构
+ * @method array getResult() 获取结果信息
+ * @method void setResult(array $Result) 设置结果信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAlarmStatusListResponse extends AbstractModel
+class GetDevicePayModeResponse extends AbstractModel
 {
     /**
-     * @var DescribeAlarmStatusListRes 告警状态返回结构
+     * @var array 结果信息
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeAlarmStatusListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeAlarmStatusListRes $Result 告警状态返回结构
+     * @param array $Result 结果信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,8 +55,12 @@ class DescribeAlarmStatusListResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new DescribeAlarmStatusListRes();
-            $this->Result->deserialize($param["Result"]);
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
+                $obj = new DevicePayModeInfo();
+                $obj->deserialize($value);
+                array_push($this->Result, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

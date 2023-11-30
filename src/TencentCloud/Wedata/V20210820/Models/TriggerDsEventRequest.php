@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method array getEventCaseList() 获取事件实例信息
  * @method void setEventCaseList(array $EventCaseList) 设置事件实例信息
+ * @method array getEventBatchCaseList() 获取事件实例信息(连续时间)
+ * @method void setEventBatchCaseList(array $EventBatchCaseList) 设置事件实例信息(连续时间)
  */
 class TriggerDsEventRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class TriggerDsEventRequest extends AbstractModel
     public $EventCaseList;
 
     /**
+     * @var array 事件实例信息(连续时间)
+     */
+    public $EventBatchCaseList;
+
+    /**
      * @param string $ProjectId 项目id
      * @param array $EventCaseList 事件实例信息
+     * @param array $EventBatchCaseList 事件实例信息(连续时间)
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class TriggerDsEventRequest extends AbstractModel
                 $obj = new EventCaseDTO();
                 $obj->deserialize($value);
                 array_push($this->EventCaseList, $obj);
+            }
+        }
+
+        if (array_key_exists("EventBatchCaseList",$param) and $param["EventBatchCaseList"] !== null) {
+            $this->EventBatchCaseList = [];
+            foreach ($param["EventBatchCaseList"] as $key => $value){
+                $obj = new EventBatchCaseDTO();
+                $obj->deserialize($value);
+                array_push($this->EventBatchCaseList, $obj);
             }
         }
     }

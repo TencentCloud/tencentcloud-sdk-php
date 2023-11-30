@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tiw\V20190919\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOfflineRecordCallback请求参数结构体
+ * ModifyPackageRenewFlag返回参数结构体
  *
- * @method integer getSdkAppId() 获取应用的SdkAppId
- * @method void setSdkAppId(integer $SdkAppId) 设置应用的SdkAppId
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeOfflineRecordCallbackRequest extends AbstractModel
+class ModifyPackageRenewFlagResponse extends AbstractModel
 {
     /**
-     * @var integer 应用的SdkAppId
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $SdkAppId;
+    public $RequestId;
 
     /**
-     * @param integer $SdkAppId 应用的SdkAppId
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeOfflineRecordCallbackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

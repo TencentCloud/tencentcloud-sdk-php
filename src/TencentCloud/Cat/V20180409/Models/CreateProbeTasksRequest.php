@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCron(string $Cron) 设置定时任务cron表达式
  * @method array getTag() 获取资源标签值
  * @method void setTag(array $Tag) 设置资源标签值
- * @method integer getProbeType() 获取测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
- * @method void setProbeType(integer $ProbeType) 设置测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+ * @method integer getProbeType() 获取测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+ * @method void setProbeType(integer $ProbeType) 设置测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
  * @method string getPluginSource() 获取插件类型，如CDN，详情参考云拨测官方文档。
  * @method void setPluginSource(string $PluginSource) 设置插件类型，如CDN，详情参考云拨测官方文档。
  * @method string getClientNum() 获取客户端ID
@@ -94,7 +94,7 @@ class CreateProbeTasksRequest extends AbstractModel
     public $Tag;
 
     /**
-     * @var integer 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+     * @var integer 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
      */
     public $ProbeType;
 
@@ -124,7 +124,7 @@ class CreateProbeTasksRequest extends AbstractModel
 <li> 2 = Mobile </li>
      * @param string $Cron 定时任务cron表达式
      * @param array $Tag 资源标签值
-     * @param integer $ProbeType 测试类型，包含定时测试与即时测试。1-定时拨测，其它表示即时拨测。
+     * @param integer $ProbeType 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
      * @param string $PluginSource 插件类型，如CDN，详情参考云拨测官方文档。
      * @param string $ClientNum 客户端ID
      * @param integer $NodeIpType 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6

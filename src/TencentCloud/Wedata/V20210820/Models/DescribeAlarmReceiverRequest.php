@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmRecipientName(string $AlarmRecipientName) 设置告警接收人姓名(逗号分隔)
  * @method string getAlarmTime() 获取告警时间
  * @method void setAlarmTime(string $AlarmTime) 设置告警时间
+ * @method integer getMonitorType() 获取监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+ * @method void setMonitorType(integer $MonitorType) 设置监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
  */
 class DescribeAlarmReceiverRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeAlarmReceiverRequest extends AbstractModel
     public $AlarmTime;
 
     /**
+     * @var integer 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     */
+    public $MonitorType;
+
+    /**
      * @param string $AlarmId 告警ID
      * @param integer $PageNumber 当前页
      * @param integer $PageSize 每页记录数
@@ -96,6 +103,7 @@ class DescribeAlarmReceiverRequest extends AbstractModel
      * @param string $AlarmRecipient 告警接收人ID(逗号分隔)
      * @param string $AlarmRecipientName 告警接收人姓名(逗号分隔)
      * @param string $AlarmTime 告警时间
+     * @param integer $MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeAlarmReceiverRequest extends AbstractModel
 
         if (array_key_exists("AlarmTime",$param) and $param["AlarmTime"] !== null) {
             $this->AlarmTime = $param["AlarmTime"];
+        }
+
+        if (array_key_exists("MonitorType",$param) and $param["MonitorType"] !== null) {
+            $this->MonitorType = $param["MonitorType"];
         }
     }
 }

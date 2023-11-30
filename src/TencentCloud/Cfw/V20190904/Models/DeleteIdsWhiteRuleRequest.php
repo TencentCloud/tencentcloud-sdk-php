@@ -14,32 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tiw\V20190919\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOfflineRecord请求参数结构体
+ * DeleteIdsWhiteRule请求参数结构体
  *
- * @method integer getSdkAppId() 获取客户的SdkAppId
- * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
- * @method string getTaskId() 获取课后录制任务的Id
- * @method void setTaskId(string $TaskId) 设置课后录制任务的Id
+ * @method integer getId() 获取入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段
+ * @method void setId(integer $Id) 设置入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段
  */
-class DescribeOfflineRecordRequest extends AbstractModel
+class DeleteIdsWhiteRuleRequest extends AbstractModel
 {
     /**
-     * @var integer 客户的SdkAppId
+     * @var integer 入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段
      */
-    public $SdkAppId;
+    public $Id;
 
     /**
-     * @var string 课后录制任务的Id
-     */
-    public $TaskId;
-
-    /**
-     * @param integer $SdkAppId 客户的SdkAppId
-     * @param string $TaskId 课后录制任务的Id
+     * @param integer $Id 入侵防御白名单id
+参考DescribeIdsWhiteRule接口返回的Id字段
      */
     function __construct()
     {
@@ -54,12 +50,8 @@ class DescribeOfflineRecordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
-            $this->SdkAppId = $param["SdkAppId"];
-        }
-
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
 （InputBase64和InputCosUri必选其一）
  * @method void setInputCosUri(string $InputCosUri) 设置任务输入COS地址。
 （InputBase64和InputCosUri必选其一）
- * @method integer getCacheClearDelay() 获取任务缓存清理时间。不填表示不清理。
- * @method void setCacheClearDelay(integer $CacheClearDelay) 设置任务缓存清理时间。不填表示不清理。
+ * @method integer getCacheClearDelay() 获取任务缓存清理时间（小时）。不填表示不清理。
+ * @method void setCacheClearDelay(integer $CacheClearDelay) 设置任务缓存清理时间（小时）。不填表示不清理。
  */
 class RunWorkflowRequest extends AbstractModel
 {
@@ -107,7 +107,7 @@ class RunWorkflowRequest extends AbstractModel
     public $InputCosUri;
 
     /**
-     * @var integer 任务缓存清理时间。不填表示不清理。
+     * @var integer 任务缓存清理时间（小时）。不填表示不清理。
      */
     public $CacheClearDelay;
 
@@ -127,7 +127,7 @@ class RunWorkflowRequest extends AbstractModel
 （InputBase64和InputCosUri必选其一）
      * @param string $InputCosUri 任务输入COS地址。
 （InputBase64和InputCosUri必选其一）
-     * @param integer $CacheClearDelay 任务缓存清理时间。不填表示不清理。
+     * @param integer $CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
      */
     function __construct()
     {

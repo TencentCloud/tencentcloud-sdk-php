@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 
 **true**：禁止编辑填写控件
 **false**：（默认）允许编辑填写控件
+ * @method string getSkipUploadFile() 获取跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId
+ * @method void setSkipUploadFile(string $SkipUploadFile) 设置跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -112,6 +120,14 @@ class CreateFlowOption extends AbstractModel
     public $ForbidEditFillComponent;
 
     /**
+     * @var string 跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId
+     */
+    public $SkipUploadFile;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以
@@ -132,6 +148,10 @@ class CreateFlowOption extends AbstractModel
 
 **true**：禁止编辑填写控件
 **false**：（默认）允许编辑填写控件
+     * @param string $SkipUploadFile 跳过上传文件步骤
+
+**true**：跳过
+**false**：（默认）不跳过，需要传ResourceId
      */
     function __construct()
     {
@@ -172,6 +192,10 @@ class CreateFlowOption extends AbstractModel
 
         if (array_key_exists("ForbidEditFillComponent",$param) and $param["ForbidEditFillComponent"] !== null) {
             $this->ForbidEditFillComponent = $param["ForbidEditFillComponent"];
+        }
+
+        if (array_key_exists("SkipUploadFile",$param) and $param["SkipUploadFile"] !== null) {
+            $this->SkipUploadFile = $param["SkipUploadFile"];
         }
     }
 }

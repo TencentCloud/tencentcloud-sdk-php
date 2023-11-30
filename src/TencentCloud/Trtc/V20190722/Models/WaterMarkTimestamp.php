@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPos(integer $Pos) 设置时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
  * @method integer getTimeZone() 获取显示时间戳的时区，默认东八区
  * @method void setTimeZone(integer $TimeZone) 设置显示时间戳的时区，默认东八区
+ * @method string getFont() 获取文字水印的字体，支持设置以下值：
+1. Tencent （默认）
+2. SourceHanSans
+ * @method void setFont(string $Font) 设置文字水印的字体，支持设置以下值：
+1. Tencent （默认）
+2. SourceHanSans
  */
 class WaterMarkTimestamp extends AbstractModel
 {
@@ -38,8 +44,18 @@ class WaterMarkTimestamp extends AbstractModel
     public $TimeZone;
 
     /**
+     * @var string 文字水印的字体，支持设置以下值：
+1. Tencent （默认）
+2. SourceHanSans
+     */
+    public $Font;
+
+    /**
      * @param integer $Pos 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
      * @param integer $TimeZone 显示时间戳的时区，默认东八区
+     * @param string $Font 文字水印的字体，支持设置以下值：
+1. Tencent （默认）
+2. SourceHanSans
      */
     function __construct()
     {
@@ -60,6 +76,10 @@ class WaterMarkTimestamp extends AbstractModel
 
         if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
             $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("Font",$param) and $param["Font"] !== null) {
+            $this->Font = $param["Font"];
         }
     }
 }

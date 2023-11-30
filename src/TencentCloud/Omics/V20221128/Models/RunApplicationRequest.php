@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置投递环境ID。
  * @method string getInputBase64() 获取任务输入JSON。需要进行base64编码。
  * @method void setInputBase64(string $InputBase64) 设置任务输入JSON。需要进行base64编码。
- * @method integer getCacheClearDelay() 获取任务缓存清理时间。不填表示不清理。
- * @method void setCacheClearDelay(integer $CacheClearDelay) 设置任务缓存清理时间。不填表示不清理。
+ * @method integer getCacheClearDelay() 获取任务缓存清理时间（小时）。不填表示不清理。
+ * @method void setCacheClearDelay(integer $CacheClearDelay) 设置任务缓存清理时间（小时）。不填表示不清理。
  * @method RunOption getOption() 获取运行选项。
  * @method void setOption(RunOption $Option) 设置运行选项。
  * @method string getDescription() 获取任务批次描述。
@@ -71,7 +71,7 @@ class RunApplicationRequest extends AbstractModel
     public $InputBase64;
 
     /**
-     * @var integer 任务缓存清理时间。不填表示不清理。
+     * @var integer 任务缓存清理时间（小时）。不填表示不清理。
      */
     public $CacheClearDelay;
 
@@ -106,7 +106,7 @@ class RunApplicationRequest extends AbstractModel
      * @param string $Name 任务批次名称。
      * @param string $EnvironmentId 投递环境ID。
      * @param string $InputBase64 任务输入JSON。需要进行base64编码。
-     * @param integer $CacheClearDelay 任务缓存清理时间。不填表示不清理。
+     * @param integer $CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
      * @param RunOption $Option 运行选项。
      * @param string $Description 任务批次描述。
      * @param string $TableId 批量投递表格ID，不填表示单例投递。

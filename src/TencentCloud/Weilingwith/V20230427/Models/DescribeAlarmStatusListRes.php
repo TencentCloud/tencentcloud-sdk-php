@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Weilingwith\V20230427\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeConfigTemplate请求参数结构体
+ * 告警状态列表返回
  *
- * @method string getConfigTemplateId() 获取配置模板Id
- * @method void setConfigTemplateId(string $ConfigTemplateId) 设置配置模板Id
+ * @method array getList() 获取告警状态返回结构
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setList(array $List) 设置告警状态返回结构
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DescribeConfigTemplateRequest extends AbstractModel
+class DescribeAlarmStatusListRes extends AbstractModel
 {
     /**
-     * @var string 配置模板Id
+     * @var array 告警状态返回结构
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ConfigTemplateId;
+    public $List;
 
     /**
-     * @param string $ConfigTemplateId 配置模板Id
+     * @param array $List 告警状态返回结构
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,13 @@ class DescribeConfigTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigTemplateId",$param) and $param["ConfigTemplateId"] !== null) {
-            $this->ConfigTemplateId = $param["ConfigTemplateId"];
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new AlarmStatusData();
+                $obj->deserialize($value);
+                array_push($this->List, $obj);
+            }
         }
     }
 }

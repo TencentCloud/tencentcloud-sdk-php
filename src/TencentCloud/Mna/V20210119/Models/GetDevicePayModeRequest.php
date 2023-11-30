@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeConfigTemplate请求参数结构体
+ * GetDevicePayMode请求参数结构体
  *
- * @method string getConfigTemplateId() 获取配置模板Id
- * @method void setConfigTemplateId(string $ConfigTemplateId) 设置配置模板Id
+ * @method array getDeviceIdList() 获取设备ID列表
+ * @method void setDeviceIdList(array $DeviceIdList) 设置设备ID列表
  */
-class DescribeConfigTemplateRequest extends AbstractModel
+class GetDevicePayModeRequest extends AbstractModel
 {
     /**
-     * @var string 配置模板Id
+     * @var array 设备ID列表
      */
-    public $ConfigTemplateId;
+    public $DeviceIdList;
 
     /**
-     * @param string $ConfigTemplateId 配置模板Id
+     * @param array $DeviceIdList 设备ID列表
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeConfigTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ConfigTemplateId",$param) and $param["ConfigTemplateId"] !== null) {
-            $this->ConfigTemplateId = $param["ConfigTemplateId"];
+        if (array_key_exists("DeviceIdList",$param) and $param["DeviceIdList"] !== null) {
+            $this->DeviceIdList = $param["DeviceIdList"];
         }
     }
 }

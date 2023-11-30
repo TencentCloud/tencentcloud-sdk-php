@@ -47,11 +47,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBusinessId() 获取WEB嵌入的业务资源ID
 <ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
 <li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
+<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
+</ul>
  * @method void setBusinessId(string $BusinessId) 设置WEB嵌入的业务资源ID
 <ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
 <li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
+<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
+</ul>
  * @method Agent getAgent() 获取代理企业和员工的信息。
 <br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -60,6 +62,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReviewer(ReviewerInfo $Reviewer) 设置抄送方信息
  * @method EmbedUrlOption getOption() 获取个性化参数，用于控制页面展示内容
  * @method void setOption(EmbedUrlOption $Option) 设置个性化参数，用于控制页面展示内容
+ * @method string getUserData() 获取用户自定义参数
+<ul>
+<li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
+<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>支持的格式：json字符串的BASE64编码字符串</li>
+<li>示例：<ul>
+                 <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
+                 <li>eyJDb21lRnJvbSI6Inh4eCJ9，为符合要求的userData数据格式</li>
+</ul>
+</li>
+</ul>
+ * @method void setUserData(string $UserData) 设置用户自定义参数
+<ul>
+<li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
+<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>支持的格式：json字符串的BASE64编码字符串</li>
+<li>示例：<ul>
+                 <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
+                 <li>eyJDb21lRnJvbSI6Inh4eCJ9，为符合要求的userData数据格式</li>
+</ul>
+</li>
+</ul>
  */
 class CreateEmbedWebUrlRequest extends AbstractModel
 {
@@ -87,7 +111,8 @@ class CreateEmbedWebUrlRequest extends AbstractModel
      * @var string WEB嵌入的业务资源ID
 <ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
 <li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
+<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
+</ul>
      */
     public $BusinessId;
 
@@ -108,6 +133,21 @@ class CreateEmbedWebUrlRequest extends AbstractModel
     public $Option;
 
     /**
+     * @var string 用户自定义参数
+<ul>
+<li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
+<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>支持的格式：json字符串的BASE64编码字符串</li>
+<li>示例：<ul>
+                 <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
+                 <li>eyJDb21lRnJvbSI6Inh4eCJ9，为符合要求的userData数据格式</li>
+</ul>
+</li>
+</ul>
+     */
+    public $UserData;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 <br/>注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
      * @param string $EmbedType WEB嵌入资源类型，支持以下类型
@@ -123,11 +163,23 @@ class CreateEmbedWebUrlRequest extends AbstractModel
      * @param string $BusinessId WEB嵌入的业务资源ID
 <ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
 <li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li><ul>
+<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
+</ul>
      * @param Agent $Agent 代理企业和员工的信息。
 <br/>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param ReviewerInfo $Reviewer 抄送方信息
      * @param EmbedUrlOption $Option 个性化参数，用于控制页面展示内容
+     * @param string $UserData 用户自定义参数
+<ul>
+<li>目前仅支持EmbedType=CREATE_TEMPLATE时传入</li>
+<li>指定后，创建，编辑，删除模版时，回调都会携带该userData</li>
+<li>支持的格式：json字符串的BASE64编码字符串</li>
+<li>示例：<ul>
+                 <li>json字符串：{"ComeFrom":"xxx"}，BASE64编码：eyJDb21lRnJvbSI6Inh4eCJ9</li>
+                 <li>eyJDb21lRnJvbSI6Inh4eCJ9，为符合要求的userData数据格式</li>
+</ul>
+</li>
+</ul>
      */
     function __construct()
     {
@@ -168,6 +220,10 @@ class CreateEmbedWebUrlRequest extends AbstractModel
         if (array_key_exists("Option",$param) and $param["Option"] !== null) {
             $this->Option = new EmbedUrlOption();
             $this->Option->deserialize($param["Option"]);
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
     }
 }

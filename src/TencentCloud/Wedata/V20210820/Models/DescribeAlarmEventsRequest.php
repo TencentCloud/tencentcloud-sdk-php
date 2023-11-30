@@ -20,6 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmEvents请求参数结构体
  *
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method integer getPageNumber() 获取当前页
+ * @method void setPageNumber(integer $PageNumber) 设置当前页
+ * @method integer getPageSize() 获取每页记录数
+ * @method void setPageSize(integer $PageSize) 设置每页记录数
  * @method array getFilters() 获取过滤条件(key可以是：AlarmLevel,AlarmIndicator,KeyWord)
  * @method void setFilters(array $Filters) 设置过滤条件(key可以是：AlarmLevel,AlarmIndicator,KeyWord)
  * @method array getOrderFields() 获取排序字段（AlarmTime）
@@ -30,15 +36,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method integer getPageNumber() 获取当前页
- * @method void setPageNumber(integer $PageNumber) 设置当前页
- * @method integer getPageSize() 获取每页记录数
- * @method void setPageSize(integer $PageSize) 设置每页记录数
+ * @method integer getMonitorType() 获取监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+ * @method void setMonitorType(integer $MonitorType) 设置监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
  */
 class DescribeAlarmEventsRequest extends AbstractModel
 {
+    /**
+     * @var string 项目ID
+     */
+    public $ProjectId;
+
+    /**
+     * @var integer 当前页
+     */
+    public $PageNumber;
+
+    /**
+     * @var integer 每页记录数
+     */
+    public $PageSize;
+
     /**
      * @var array 过滤条件(key可以是：AlarmLevel,AlarmIndicator,KeyWord)
      */
@@ -65,29 +82,20 @@ class DescribeAlarmEventsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 项目ID
+     * @var integer 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
      */
-    public $ProjectId;
+    public $MonitorType;
 
     /**
-     * @var integer 当前页
-     */
-    public $PageNumber;
-
-    /**
-     * @var integer 每页记录数
-     */
-    public $PageSize;
-
-    /**
+     * @param string $ProjectId 项目ID
+     * @param integer $PageNumber 当前页
+     * @param integer $PageSize 每页记录数
      * @param array $Filters 过滤条件(key可以是：AlarmLevel,AlarmIndicator,KeyWord)
      * @param array $OrderFields 排序字段（AlarmTime）
      * @param integer $TaskType 类型(201表示实时，202表示离线)
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
-     * @param string $ProjectId 项目ID
-     * @param integer $PageNumber 当前页
-     * @param integer $PageSize 每页记录数
+     * @param integer $MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
      */
     function __construct()
     {
@@ -102,6 +110,18 @@ class DescribeAlarmEventsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -132,16 +152,8 @@ class DescribeAlarmEventsRequest extends AbstractModel
             $this->EndTime = $param["EndTime"];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
-            $this->PageNumber = $param["PageNumber"];
-        }
-
-        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
-            $this->PageSize = $param["PageSize"];
+        if (array_key_exists("MonitorType",$param) and $param["MonitorType"] !== null) {
+            $this->MonitorType = $param["MonitorType"];
         }
     }
 }

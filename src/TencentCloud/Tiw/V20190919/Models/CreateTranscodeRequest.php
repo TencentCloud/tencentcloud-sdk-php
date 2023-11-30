@@ -82,6 +82,8 @@ tar.gz： 生成`.tar.gz`压缩包
 1. 墨迹：移除不支持的墨迹（比如使用WPS画的）
 2. 自动翻页：移除PPT上所有的自动翻页设置，并设置为单击鼠标翻页
 3. 已损坏音视频：移除PPT上对损坏音视频的引用
+ * @method ExcelParam getExcelParam() 获取Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
+ * @method void setExcelParam(ExcelParam $ExcelParam) 设置Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
  */
 class CreateTranscodeRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ tar.gz： 生成`.tar.gz`压缩包
     public $AutoHandleUnsupportedElement;
 
     /**
+     * @var ExcelParam Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
+     */
+    public $ExcelParam;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $Url 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
      * @param boolean $IsStaticPPT 是否为静态PPT，默认为False；
@@ -188,6 +195,7 @@ tar.gz： 生成`.tar.gz`压缩包
 1. 墨迹：移除不支持的墨迹（比如使用WPS画的）
 2. 自动翻页：移除PPT上所有的自动翻页设置，并设置为单击鼠标翻页
 3. 已损坏音视频：移除PPT上对损坏音视频的引用
+     * @param ExcelParam $ExcelParam Excel表格转码参数，可设置转码时表格纸张大小及纸张方向等参数（仅对转码文件为Excel表格文件的静态转码任务生效）
      */
     function __construct()
     {
@@ -240,6 +248,11 @@ tar.gz： 生成`.tar.gz`压缩包
 
         if (array_key_exists("AutoHandleUnsupportedElement",$param) and $param["AutoHandleUnsupportedElement"] !== null) {
             $this->AutoHandleUnsupportedElement = $param["AutoHandleUnsupportedElement"];
+        }
+
+        if (array_key_exists("ExcelParam",$param) and $param["ExcelParam"] !== null) {
+            $this->ExcelParam = new ExcelParam();
+            $this->ExcelParam->deserialize($param["ExcelParam"]);
         }
     }
 }

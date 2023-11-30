@@ -92,6 +92,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormulaUrl(string $FormulaUrl) 设置计费规则：各产品详细的计费规则官网说明链接
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillMonth() 获取账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillMonth(string $BillMonth) 设置账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillDay() 获取账单归属日
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillDay(string $BillDay) 设置账单归属日
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DistributionBillDetail extends AbstractModel
 {
@@ -240,6 +248,18 @@ class DistributionBillDetail extends AbstractModel
     public $FormulaUrl;
 
     /**
+     * @var string 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillMonth;
+
+    /**
+     * @var string 账单归属日
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillDay;
+
+    /**
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      * @param string $PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
@@ -275,6 +295,10 @@ class DistributionBillDetail extends AbstractModel
      * @param string $Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillMonth 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillDay 账单归属日
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -407,6 +431,14 @@ class DistributionBillDetail extends AbstractModel
 
         if (array_key_exists("FormulaUrl",$param) and $param["FormulaUrl"] !== null) {
             $this->FormulaUrl = $param["FormulaUrl"];
+        }
+
+        if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
+            $this->BillMonth = $param["BillMonth"];
+        }
+
+        if (array_key_exists("BillDay",$param) and $param["BillDay"] !== null) {
+            $this->BillDay = $param["BillDay"];
         }
     }
 }

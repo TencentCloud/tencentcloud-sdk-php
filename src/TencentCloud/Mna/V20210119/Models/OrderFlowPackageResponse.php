@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tiw\V20190919\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateOfflineRecord返回参数结构体
+ * OrderFlowPackage返回参数结构体
  *
+ * @method string getResourceId() 获取流量包的唯一资源ID
+ * @method void setResourceId(string $ResourceId) 设置流量包的唯一资源ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateOfflineRecordResponse extends AbstractModel
+class OrderFlowPackageResponse extends AbstractModel
 {
+    /**
+     * @var string 流量包的唯一资源ID
+     */
+    public $ResourceId;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $ResourceId 流量包的唯一资源ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateOfflineRecordResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

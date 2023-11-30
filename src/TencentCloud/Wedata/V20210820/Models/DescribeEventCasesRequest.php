@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getCategory() 获取事件实例目录
- * @method void setCategory(string $Category) 设置事件实例目录
+ * @method string getCategory() 获取事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+
+ * @method void setCategory(string $Category) 设置事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+
  * @method integer getPageNumber() 获取页码
  * @method void setPageNumber(integer $PageNumber) 设置页码
  * @method integer getPageSize() 获取每页数目
@@ -36,8 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventSubType(string $EventSubType) 设置事件分割类型
  * @method string getEventBroadcastType() 获取事件广播类型
  * @method void setEventBroadcastType(string $EventBroadcastType) 设置事件广播类型
- * @method string getStatus() 获取事件实例状态
- * @method void setStatus(string $Status) 设置事件实例状态
+ * @method string getStatus() 获取事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING
+ * @method void setStatus(string $Status) 设置事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING
  * @method string getCreationTimeStart() 获取事件实例最小创建时间
  * @method void setCreationTimeStart(string $CreationTimeStart) 设置事件实例最小创建时间
  * @method string getCreationTimeEnd() 获取事件实例最大创建时间
@@ -52,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogTimeEnd(string $LogTimeEnd) 设置事件实例最大消费时间
  * @method string getDimension() 获取事件实例数据时间
  * @method void setDimension(string $Dimension) 设置事件实例数据时间
+ * @method string getTimeToLive() 获取事件实例有效时间
+ * @method void setTimeToLive(string $TimeToLive) 设置事件实例有效时间
+ * @method string getSortItem() 获取排序字段
+ * @method void setSortItem(string $SortItem) 设置排序字段
+ * @method string getSortType() 获取排序顺序
+ * @method void setSortType(string $SortType) 设置排序顺序
  */
 class DescribeEventCasesRequest extends AbstractModel
 {
@@ -61,7 +83,11 @@ class DescribeEventCasesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 事件实例目录
+     * @var string 事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+
      */
     public $Category;
 
@@ -82,6 +108,7 @@ class DescribeEventCasesRequest extends AbstractModel
 
     /**
      * @var string 事件类型
+     * @deprecated
      */
     public $EventType;
 
@@ -92,11 +119,17 @@ class DescribeEventCasesRequest extends AbstractModel
 
     /**
      * @var string 事件广播类型
+     * @deprecated
      */
     public $EventBroadcastType;
 
     /**
-     * @var string 事件实例状态
+     * @var string 事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING
+     * @deprecated
      */
     public $Status;
 
@@ -136,15 +169,38 @@ class DescribeEventCasesRequest extends AbstractModel
     public $Dimension;
 
     /**
+     * @var string 事件实例有效时间
+     */
+    public $TimeToLive;
+
+    /**
+     * @var string 排序字段
+     */
+    public $SortItem;
+
+    /**
+     * @var string 排序顺序
+     */
+    public $SortType;
+
+    /**
      * @param string $ProjectId 项目ID
-     * @param string $Category 事件实例目录
+     * @param string $Category 事件实例目录,示例取值:
+- 已过期: expired
+- 未过期: consuming
+- 全部: all
+
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数目
      * @param string $EventName 事件名称
      * @param string $EventType 事件类型
      * @param string $EventSubType 事件分割类型
      * @param string $EventBroadcastType 事件广播类型
-     * @param string $Status 事件实例状态
+     * @param string $Status 事件实例状态,示例取值:
+- 已消费: COMSUMED
+- 已过期: EXPIRED
+- 待消费: ACTIVE
+- 消费中: CONSUMING
      * @param string $CreationTimeStart 事件实例最小创建时间
      * @param string $CreationTimeEnd 事件实例最大创建时间
      * @param string $EventTriggeredTimeStart 事件实例最小触发时间
@@ -152,6 +208,9 @@ class DescribeEventCasesRequest extends AbstractModel
      * @param string $LogTimeStart 事件实例最小消费时间
      * @param string $LogTimeEnd 事件实例最大消费时间
      * @param string $Dimension 事件实例数据时间
+     * @param string $TimeToLive 事件实例有效时间
+     * @param string $SortItem 排序字段
+     * @param string $SortType 排序顺序
      */
     function __construct()
     {
@@ -228,6 +287,18 @@ class DescribeEventCasesRequest extends AbstractModel
 
         if (array_key_exists("Dimension",$param) and $param["Dimension"] !== null) {
             $this->Dimension = $param["Dimension"];
+        }
+
+        if (array_key_exists("TimeToLive",$param) and $param["TimeToLive"] !== null) {
+            $this->TimeToLive = $param["TimeToLive"];
+        }
+
+        if (array_key_exists("SortItem",$param) and $param["SortItem"] !== null) {
+            $this->SortItem = $param["SortItem"];
+        }
+
+        if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
+            $this->SortType = $param["SortType"];
         }
     }
 }

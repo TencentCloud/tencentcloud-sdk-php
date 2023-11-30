@@ -14,23 +14,55 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Weilingwith\V20230427\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAlarmStatusList返回参数结构体
+ * DeleteIdsWhiteRule返回参数结构体
  *
- * @method DescribeAlarmStatusListRes getResult() 获取告警状态返回结构
- * @method void setResult(DescribeAlarmStatusListRes $Result) 设置告警状态返回结构
+ * @method integer getReturnCode() 获取返回状态码：
+0 成功
+非0 失败
+ * @method void setReturnCode(integer $ReturnCode) 设置返回状态码：
+0 成功
+非0 失败
+ * @method string getReturnMsg() 获取返回信息：
+success 成功
+其他
+ * @method void setReturnMsg(string $ReturnMsg) 设置返回信息：
+success 成功
+其他
+ * @method integer getStatus() 获取返回状态码：
+0  处置成功
+-1 通用错误，不用处理
+ * @method void setStatus(integer $Status) 设置返回状态码：
+0  处置成功
+-1 通用错误，不用处理
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAlarmStatusListResponse extends AbstractModel
+class DeleteIdsWhiteRuleResponse extends AbstractModel
 {
     /**
-     * @var DescribeAlarmStatusListRes 告警状态返回结构
+     * @var integer 返回状态码：
+0 成功
+非0 失败
      */
-    public $Result;
+    public $ReturnCode;
+
+    /**
+     * @var string 返回信息：
+success 成功
+其他
+     */
+    public $ReturnMsg;
+
+    /**
+     * @var integer 返回状态码：
+0  处置成功
+-1 通用错误，不用处理
+     */
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +70,15 @@ class DescribeAlarmStatusListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeAlarmStatusListRes $Result 告警状态返回结构
+     * @param integer $ReturnCode 返回状态码：
+0 成功
+非0 失败
+     * @param string $ReturnMsg 返回信息：
+success 成功
+其他
+     * @param integer $Status 返回状态码：
+0  处置成功
+-1 通用错误，不用处理
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +94,16 @@ class DescribeAlarmStatusListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new DescribeAlarmStatusListRes();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
+        }
+
+        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
+            $this->ReturnMsg = $param["ReturnMsg"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

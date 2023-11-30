@@ -14,23 +14,47 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tiw\V20190919\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SetOfflineRecordCallback返回参数结构体
+ * DescribeIdsWhiteRule返回参数结构体
  *
+ * @method integer getTotal() 获取总条数
+ * @method void setTotal(integer $Total) 设置总条数
+ * @method integer getReturnCode() 获取返回状态码 0 成功 非0不成功
+ * @method void setReturnCode(integer $ReturnCode) 设置返回状态码 0 成功 非0不成功
+ * @method string getReturnMsg() 获取返回信息  success 成功 其他 不成功
+ * @method void setReturnMsg(string $ReturnMsg) 设置返回信息  success 成功 其他 不成功
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SetOfflineRecordCallbackResponse extends AbstractModel
+class DescribeIdsWhiteRuleResponse extends AbstractModel
 {
+    /**
+     * @var integer 总条数
+     */
+    public $Total;
+
+    /**
+     * @var integer 返回状态码 0 成功 非0不成功
+     */
+    public $ReturnCode;
+
+    /**
+     * @var string 返回信息  success 成功 其他 不成功
+     */
+    public $ReturnMsg;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $Total 总条数
+     * @param integer $ReturnCode 返回状态码 0 成功 非0不成功
+     * @param string $ReturnMsg 返回信息  success 成功 其他 不成功
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +70,18 @@ class SetOfflineRecordCallbackResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
+        }
+
+        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
+            $this->ReturnMsg = $param["ReturnMsg"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

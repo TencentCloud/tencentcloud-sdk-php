@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigTemplate返回参数结构体
  *
- * @method ConfigTemplate getResult() 获取Result
+ * @method ConfigTemplate getResult() 获取导入结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(ConfigTemplate $Result) 设置Result
+ * @method void setResult(ConfigTemplate $Result) 设置导入结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConfigTemplateResponse extends AbstractModel
 {
     /**
-     * @var ConfigTemplate Result
+     * @var ConfigTemplate 导入结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
@@ -41,7 +41,7 @@ class DescribeConfigTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ConfigTemplate $Result Result
+     * @param ConfigTemplate $Result 导入结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

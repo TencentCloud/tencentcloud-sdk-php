@@ -130,6 +130,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyDBInstanceNoteResponse ModifyDBInstanceNote(Models\ModifyDBInstanceNoteRequest $req) 本接口（ModifyDBInstanceNote）用于修改实例备注信息。
  * @method Models\ModifyDBInstanceProjectResponse ModifyDBInstanceProject(Models\ModifyDBInstanceProjectRequest $req) 本接口（ModifyDBInstanceProject）用于修改数据库实例所属项目。
  * @method Models\ModifyDBInstanceRenewFlagResponse ModifyDBInstanceRenewFlag(Models\ModifyDBInstanceRenewFlagRequest $req) 本接口（ModifyDBInstanceRenewFlag）用于修改实例续费标记
+ * @method Models\ModifyDBInstanceSSLResponse ModifyDBInstanceSSL(Models\ModifyDBInstanceSSLRequest $req) 本接口（DescribeDBInstancesAttribute）用于开启\关闭\更新SSL加密
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
  * @method Models\ModifyDBNameResponse ModifyDBName(Models\ModifyDBNameRequest $req) 本接口（ModifyDBName）用于更新数据库名。
  * @method Models\ModifyDBRemarkResponse ModifyDBRemark(Models\ModifyDBRemarkRequest $req) 本接口（ModifyDBRemark）用于修改数据库备注。

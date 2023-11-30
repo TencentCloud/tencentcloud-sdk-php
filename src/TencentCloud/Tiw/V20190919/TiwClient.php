@@ -25,9 +25,6 @@ use TencentCloud\Tiw\V20190919\Models as Models;
 /**
  * @method Models\ApplyTiwTrialResponse ApplyTiwTrial(Models\ApplyTiwTrialRequest $req) 申请互动白板试用，默认15天
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 创建白板应用
- * @method Models\CreateOfflineRecordResponse CreateOfflineRecord(Models\CreateOfflineRecordRequest $req) 课后录制服务已下线
-
-创建课后录制任务
  * @method Models\CreatePPTCheckTaskResponse CreatePPTCheckTask(Models\CreatePPTCheckTaskRequest $req) 检测PPT文件，识别PPT中包含的动态转码任务（Transcode）不支持的元素
  * @method Models\CreateSnapshotTaskResponse CreateSnapshotTask(Models\CreateSnapshotTaskRequest $req) 创建白板板书生成任务, 在任务结束后，如果提供了回调地址，将通过回调地址通知板书生成结果
  * @method Models\CreateTranscodeResponse CreateTranscode(Models\CreateTranscodeRequest $req) 创建一个文档转码任务
@@ -37,12 +34,6 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\DescribeApplicationUsageResponse DescribeApplicationUsage(Models\DescribeApplicationUsageRequest $req) 查询互动白板各个子产品用量
  * @method Models\DescribeBoardSDKLogResponse DescribeBoardSDKLog(Models\DescribeBoardSDKLogRequest $req) 查询客户端白板日志
  * @method Models\DescribeIMApplicationsResponse DescribeIMApplications(Models\DescribeIMApplicationsRequest $req) 查询可用于创建白板应用的IM应用列表
- * @method Models\DescribeOfflineRecordResponse DescribeOfflineRecord(Models\DescribeOfflineRecordRequest $req) 课后录制服务已下线
-
-查询课后录制任务的进度与录制结果等相关信息
- * @method Models\DescribeOfflineRecordCallbackResponse DescribeOfflineRecordCallback(Models\DescribeOfflineRecordCallbackRequest $req) 课后录制服务已下线
-
-查询课后录制回调地址
  * @method Models\DescribeOnlineRecordResponse DescribeOnlineRecord(Models\DescribeOnlineRecordRequest $req) 查询录制任务状态与结果
  * @method Models\DescribeOnlineRecordCallbackResponse DescribeOnlineRecordCallback(Models\DescribeOnlineRecordCallbackRequest $req) 查询实时录制回调地址
  * @method Models\DescribePPTCheckResponse DescribePPTCheck(Models\DescribePPTCheckRequest $req) 查询PPT检测任务的执行进度或结果，支持查询最近半年内的任务结果
@@ -84,9 +75,6 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\ModifyWhiteboardBucketConfigResponse ModifyWhiteboardBucketConfig(Models\ModifyWhiteboardBucketConfigRequest $req) 设置文档转码，实时录制存储桶的配置
  * @method Models\PauseOnlineRecordResponse PauseOnlineRecord(Models\PauseOnlineRecordRequest $req) 暂停实时录制
  * @method Models\ResumeOnlineRecordResponse ResumeOnlineRecord(Models\ResumeOnlineRecordRequest $req) 恢复实时录制
- * @method Models\SetOfflineRecordCallbackResponse SetOfflineRecordCallback(Models\SetOfflineRecordCallbackRequest $req) 课后录制服务已下线
-
-设置课后录制回调地址
  * @method Models\SetOnlineRecordCallbackResponse SetOnlineRecordCallback(Models\SetOnlineRecordCallbackRequest $req) 设置实时录制回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40258
  * @method Models\SetOnlineRecordCallbackKeyResponse SetOnlineRecordCallbackKey(Models\SetOnlineRecordCallbackKeyRequest $req) 设置实时录制回调鉴权密钥，回调鉴权方式请参考文档：https://cloud.tencent.com/document/product/1137/40257
  * @method Models\SetPPTCheckCallbackResponse SetPPTCheckCallback(Models\SetPPTCheckCallbackRequest $req) 设置PPT检测任务回调地址，回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/40260#c9cbe05f-fe1a-4410-b4dc-40cc301c7b81

@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFontColor(string $FontColor) 设置水印文字的颜色，默认白色
  * @method string getBackGroundColor() 获取水印文字的背景色，为空代表背景透明，默认为空
  * @method void setBackGroundColor(string $BackGroundColor) 设置水印文字的背景色，为空代表背景透明，默认为空
+ * @method string getFont() 获取文字水印的字体，支持设置以下值：
+1. Tencent （默认）
+2. SourceHanSans
+ * @method void setFont(string $Font) 设置文字水印的字体，支持设置以下值：
+1. Tencent （默认）
+2. SourceHanSans
  */
 class WaterMarkChar extends AbstractModel
 {
@@ -80,6 +86,13 @@ class WaterMarkChar extends AbstractModel
     public $BackGroundColor;
 
     /**
+     * @var string 文字水印的字体，支持设置以下值：
+1. Tencent （默认）
+2. SourceHanSans
+     */
+    public $Font;
+
+    /**
      * @param integer $Top 文字水印的起始坐标Y值，从左上角开始
      * @param integer $Left 文字水印的起始坐标X值，从左上角开始
      * @param integer $Width 文字水印的宽度，单位像素值
@@ -88,6 +101,9 @@ class WaterMarkChar extends AbstractModel
      * @param integer $FontSize 水印文字的大小，单位像素，默认14
      * @param string $FontColor 水印文字的颜色，默认白色
      * @param string $BackGroundColor 水印文字的背景色，为空代表背景透明，默认为空
+     * @param string $Font 文字水印的字体，支持设置以下值：
+1. Tencent （默认）
+2. SourceHanSans
      */
     function __construct()
     {
@@ -132,6 +148,10 @@ class WaterMarkChar extends AbstractModel
 
         if (array_key_exists("BackGroundColor",$param) and $param["BackGroundColor"] !== null) {
             $this->BackGroundColor = $param["BackGroundColor"];
+        }
+
+        if (array_key_exists("Font",$param) and $param["Font"] !== null) {
+            $this->Font = $param["Font"];
         }
     }
 }

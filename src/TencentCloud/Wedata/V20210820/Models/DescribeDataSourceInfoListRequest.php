@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDataSourceInfoList请求参数结构体
  *
- * @method string getProjectId() 获取工作空间id
- * @method void setProjectId(string $ProjectId) 设置工作空间id
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
  * @method integer getPageNumber() 获取页码
  * @method void setPageNumber(integer $PageNumber) 设置页码
  * @method integer getPageSize() 获取页数
  * @method void setPageSize(integer $PageSize) 设置页数
- * @method Filter getFilters() 获取可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
- * @method void setFilters(Filter $Filters) 设置可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+ * @method Filter getFilters() 获取过滤条件（暂不支持）
+ * @method void setFilters(Filter $Filters) 设置过滤条件（暂不支持）
  * @method OrderField getOrderFields() 获取排序配置
  * @method void setOrderFields(OrderField $OrderFields) 设置排序配置
- * @method string getType() 获取数据源类型
- * @method void setType(string $Type) 设置数据源类型
- * @method string getDatasourceName() 获取数据源名称过滤用
- * @method void setDatasourceName(string $DatasourceName) 设置数据源名称过滤用
+ * @method string getType() 获取数据源类型，必选（如MYSQL、DLC等）
+ * @method void setType(string $Type) 设置数据源类型，必选（如MYSQL、DLC等）
+ * @method string getDatasourceName() 获取数据源名称过滤
+ * @method void setDatasourceName(string $DatasourceName) 设置数据源名称过滤
  */
 class DescribeDataSourceInfoListRequest extends AbstractModel
 {
     /**
-     * @var string 工作空间id
+     * @var string 项目id
      */
     public $ProjectId;
 
@@ -53,7 +53,7 @@ class DescribeDataSourceInfoListRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @var Filter 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+     * @var Filter 过滤条件（暂不支持）
      */
     public $Filters;
 
@@ -63,23 +63,23 @@ class DescribeDataSourceInfoListRequest extends AbstractModel
     public $OrderFields;
 
     /**
-     * @var string 数据源类型
+     * @var string 数据源类型，必选（如MYSQL、DLC等）
      */
     public $Type;
 
     /**
-     * @var string 数据源名称过滤用
+     * @var string 数据源名称过滤
      */
     public $DatasourceName;
 
     /**
-     * @param string $ProjectId 工作空间id
+     * @param string $ProjectId 项目id
      * @param integer $PageNumber 页码
      * @param integer $PageSize 页数
-     * @param Filter $Filters 可选过滤条件，Filter可选配置(参考): "Name": { "type": "string", "description": "数据源名称" }, "Type": { "type": "string", "description": "类型" }, "ClusterId": { "type": "string", "description": "集群id" }, "CategoryId": { "type": "string", "description": "分类，项目或空间id" }
+     * @param Filter $Filters 过滤条件（暂不支持）
      * @param OrderField $OrderFields 排序配置
-     * @param string $Type 数据源类型
-     * @param string $DatasourceName 数据源名称过滤用
+     * @param string $Type 数据源类型，必选（如MYSQL、DLC等）
+     * @param string $DatasourceName 数据源名称过滤
      */
     function __construct()
     {

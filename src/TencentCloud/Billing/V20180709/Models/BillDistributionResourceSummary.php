@@ -98,6 +98,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSPDeduction(string $SPDeduction) 设置节省计划抵扣金额（已废弃）
  * @method string getOriginalCostWithSP() 获取节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
  * @method void setOriginalCostWithSP(string $OriginalCostWithSP) 设置节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
+ * @method string getBillMonth() 获取账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillMonth(string $BillMonth) 设置账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillDistributionResourceSummary extends AbstractModel
 {
@@ -290,6 +294,12 @@ class BillDistributionResourceSummary extends AbstractModel
     public $OriginalCostWithSP;
 
     /**
+     * @var string 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillMonth;
+
+    /**
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      * @param string $PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
@@ -329,6 +339,8 @@ class BillDistributionResourceSummary extends AbstractModel
      * @param string $OriginalCostWithRI 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额	
      * @param string $SPDeduction 节省计划抵扣金额（已废弃）
      * @param string $OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
+     * @param string $BillMonth 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -494,6 +506,10 @@ class BillDistributionResourceSummary extends AbstractModel
 
         if (array_key_exists("OriginalCostWithSP",$param) and $param["OriginalCostWithSP"] !== null) {
             $this->OriginalCostWithSP = $param["OriginalCostWithSP"];
+        }
+
+        if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
+            $this->BillMonth = $param["BillMonth"];
         }
     }
 }

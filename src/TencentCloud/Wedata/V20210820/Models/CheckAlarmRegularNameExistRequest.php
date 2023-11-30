@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置主键ID
  * @method integer getTaskType() 获取任务类型:201.实时,202.离线
  * @method void setTaskType(integer $TaskType) 设置任务类型:201.实时,202.离线
+ * @method integer getMonitorType() 获取监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+ * @method void setMonitorType(integer $MonitorType) 设置监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
  */
 class CheckAlarmRegularNameExistRequest extends AbstractModel
 {
@@ -60,11 +62,17 @@ class CheckAlarmRegularNameExistRequest extends AbstractModel
     public $TaskType;
 
     /**
+     * @var integer 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
+     */
+    public $MonitorType;
+
+    /**
      * @param string $ProjectId 项目名称
      * @param string $AlarmRegularName 规则名称
      * @param string $TaskId 任务ID
      * @param string $Id 主键ID
      * @param integer $TaskType 任务类型:201.实时,202.离线
+     * @param integer $MonitorType 监控对象类型(1:所有任务,2:指定任务,3:指定责任人,4:指定资源组)
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class CheckAlarmRegularNameExistRequest extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("MonitorType",$param) and $param["MonitorType"] !== null) {
+            $this->MonitorType = $param["MonitorType"];
         }
     }
 }

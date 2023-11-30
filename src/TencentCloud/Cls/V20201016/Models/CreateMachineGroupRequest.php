@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceLogging(boolean $ServiceLogging) 设置是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
  * @method array getMetaTags() 获取机器组元数据信息列表
  * @method void setMetaTags(array $MetaTags) 设置机器组元数据信息列表
- * @method integer getOSType() 获取系统类型，默认0，0：Linux，1: windows
- * @method void setOSType(integer $OSType) 设置系统类型，默认0，0：Linux，1: windows
+ * @method integer getOSType() 获取系统类型，默认0，0：Linux，1: Windows
+ * @method void setOSType(integer $OSType) 设置系统类型，默认0，0：Linux，1: Windows
  */
 class CreateMachineGroupRequest extends AbstractModel
 {
@@ -82,7 +82,7 @@ class CreateMachineGroupRequest extends AbstractModel
     public $MetaTags;
 
     /**
-     * @var integer 系统类型，默认0，0：Linux，1: windows
+     * @var integer 系统类型，默认0，0：Linux，1: Windows
      */
     public $OSType;
 
@@ -95,7 +95,7 @@ class CreateMachineGroupRequest extends AbstractModel
      * @param string $UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
      * @param boolean $ServiceLogging 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
      * @param array $MetaTags 机器组元数据信息列表
-     * @param integer $OSType 系统类型，默认0，0：Linux，1: windows
+     * @param integer $OSType 系统类型，默认0，0：Linux，1: Windows
      */
     function __construct()
     {

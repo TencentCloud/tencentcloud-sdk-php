@@ -86,6 +86,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSendResult(string $SendResult) 设置发送结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMonitorObjectId() 获取监控对象id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorObjectId(string $MonitorObjectId) 设置监控对象id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMonitorObjectName() 获取监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorObjectName(string $MonitorObjectName) 设置监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getThreshold() 获取指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setThreshold(float $Threshold) 设置指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmEventInfo extends AbstractModel
 {
@@ -207,6 +219,24 @@ class AlarmEventInfo extends AbstractModel
     public $SendResult;
 
     /**
+     * @var string 监控对象id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorObjectId;
+
+    /**
+     * @var string 监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorObjectName;
+
+    /**
+     * @var float 指标阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Threshold;
+
+    /**
      * @param string $AlarmId 告警ID
      * @param string $AlarmTime 告警时间
      * @param string $TaskId 任务ID
@@ -239,6 +269,12 @@ class AlarmEventInfo extends AbstractModel
      * @param integer $TaskType 告警任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SendResult 发送结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MonitorObjectId 监控对象id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MonitorObjectName 监控对象名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Threshold 指标阈值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -336,6 +372,18 @@ class AlarmEventInfo extends AbstractModel
 
         if (array_key_exists("SendResult",$param) and $param["SendResult"] !== null) {
             $this->SendResult = $param["SendResult"];
+        }
+
+        if (array_key_exists("MonitorObjectId",$param) and $param["MonitorObjectId"] !== null) {
+            $this->MonitorObjectId = $param["MonitorObjectId"];
+        }
+
+        if (array_key_exists("MonitorObjectName",$param) and $param["MonitorObjectName"] !== null) {
+            $this->MonitorObjectName = $param["MonitorObjectName"];
+        }
+
+        if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
+            $this->Threshold = $param["Threshold"];
         }
     }
 }

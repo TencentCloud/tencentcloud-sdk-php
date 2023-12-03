@@ -33,12 +33,13 @@ use TencentCloud\Common\AbstractModel;
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件。</li>
+<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成。</li>
+<li>QualityInspectComplete：音画质检测完成；</li>
+<li>QualityEnhanceComplete：音画质重生任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -56,12 +57,13 @@ use TencentCloud\Common\AbstractModel;
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件。</li>
+<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成。</li>
+<li>QualityInspectComplete：音画质检测完成；</li>
+<li>QualityEnhanceComplete：音画质重生任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -160,6 +162,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityInspectCompleteEvent(QualityInspectTask $QualityInspectCompleteEvent) 设置音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method QualityEnhanceTask getQualityEnhanceCompleteEvent() 获取音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualityEnhanceCompleteEvent(QualityEnhanceTask $QualityEnhanceCompleteEvent) 设置音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventContent extends AbstractModel
 {
@@ -180,12 +186,13 @@ class EventContent extends AbstractModel
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件。</li>
+<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成。</li>
+<li>QualityInspectComplete：音画质检测完成；</li>
+<li>QualityEnhanceComplete：音画质重生任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -334,6 +341,12 @@ class EventContent extends AbstractModel
     public $QualityInspectCompleteEvent;
 
     /**
+     * @var QualityEnhanceTask 音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QualityEnhanceCompleteEvent;
+
+    /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param string $EventType <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
@@ -346,12 +359,13 @@ class EventContent extends AbstractModel
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <li>RemoveWatermark：智能去除水印完成。</li>
-<li>RebuildMediaComplete：音画质重生完成事件。</li>
+<li>RebuildMediaComplete：音画质重生完成事件（不推荐使用）。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
-<li>QualityInspectComplete：音画质检测完成。</li>
+<li>QualityInspectComplete：音画质检测完成；</li>
+<li>QualityEnhanceComplete：音画质重生任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -403,6 +417,8 @@ class EventContent extends AbstractModel
      * @param DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent 获取文件属性完成事件，当事件类型为 DescribeFileAttributesComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityInspectTask $QualityInspectCompleteEvent 音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityEnhanceTask $QualityEnhanceCompleteEvent 音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -539,6 +555,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("QualityInspectCompleteEvent",$param) and $param["QualityInspectCompleteEvent"] !== null) {
             $this->QualityInspectCompleteEvent = new QualityInspectTask();
             $this->QualityInspectCompleteEvent->deserialize($param["QualityInspectCompleteEvent"]);
+        }
+
+        if (array_key_exists("QualityEnhanceCompleteEvent",$param) and $param["QualityEnhanceCompleteEvent"] !== null) {
+            $this->QualityEnhanceCompleteEvent = new QualityEnhanceTask();
+            $this->QualityEnhanceCompleteEvent->deserialize($param["QualityEnhanceCompleteEvent"]);
         }
     }
 }

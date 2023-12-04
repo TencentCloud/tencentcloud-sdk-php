@@ -47,9 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeType(string $NodeType) 设置已废弃请使用NodeInfoList
 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
  * @method string getDiskType() 获取已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
  * @method void setDiskType(string $DiskType) 设置已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
  * @method integer getDiskSize() 获取已废弃请使用NodeInfoList
 节点磁盘容量（单位GB）
  * @method void setDiskSize(integer $DiskSize) 设置已废弃请使用NodeInfoList
@@ -78,8 +78,8 @@ use TencentCloud\Common\AbstractModel;
 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
  * @method string getClusterNameInConf() 获取集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
  * @method void setClusterNameInConf(string $ClusterNameInConf) 设置集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
- * @method integer getDeployMode() 获取集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
- * @method void setDeployMode(integer $DeployMode) 设置集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
+ * @method integer getDeployMode() 获取集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
+ * @method void setDeployMode(integer $DeployMode) 设置集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
  * @method array getMultiZoneInfo() 获取多可用区部署时可用区的详细信息(DeployMode为1时必传)
  * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区部署时可用区的详细信息(DeployMode为1时必传)
  * @method string getLicenseType() 获取License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
@@ -168,7 +168,7 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @var string 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
      */
     public $DiskType;
 
@@ -223,7 +223,7 @@ class CreateInstanceRequest extends AbstractModel
     public $ClusterNameInConf;
 
     /**
-     * @var integer 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
+     * @var integer 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
      */
     public $DeployMode;
 
@@ -307,7 +307,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $NodeType 已废弃请使用NodeInfoList
 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param string $DiskType 已废弃请使用NodeInfoList
-节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li>默认值CLOUD_SSD
+节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li> CLOUD_HSSD：增强型SSD云硬盘</li><li> CLOUD_BSSD：通用型SSD云硬盘</li>默认值CLOUD_SSD
      * @param integer $DiskSize 已废弃请使用NodeInfoList
 节点磁盘容量（单位GB）
      * @param string $TimeUnit 计费时长单位（ChargeType为PREPAID时需要设置，默认值为“m”，表示月，当前只支持“m”）
@@ -322,7 +322,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param integer $MasterNodeDiskSize 已废弃请使用NodeInfoList
 专用主节点磁盘大小（单位GB，非必传，若传递则必须为50，暂不支持自定义）
      * @param string $ClusterNameInConf 集群配置文件中的ClusterName（系统默认配置为实例ID，暂不支持自定义）
-     * @param integer $DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署</li>默认为0
+     * @param integer $DeployMode 集群部署方式<li>0：单可用区部署</li><li>1：多可用区部署，北京、上海、上海金融、广州、南京、香港、新加坡、法兰克福（白名单控制）</li>默认为0
      * @param array $MultiZoneInfo 多可用区部署时可用区的详细信息(DeployMode为1时必传)
      * @param string $LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      * @param array $NodeInfoList 节点信息列表， 用于描述集群各类节点的规格信息如节点类型，节点个数，节点规格，磁盘类型，磁盘大小等

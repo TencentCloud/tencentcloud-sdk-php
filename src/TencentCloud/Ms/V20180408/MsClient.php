@@ -50,6 +50,8 @@ use TencentCloud\Ms\V20180408\Models as Models;
  * @method Models\DescribeShieldResultResponse DescribeShieldResult(Models\DescribeShieldResultRequest $req) 通过唯一标识获取加固的结果。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DescribeUrlDetectionResultResponse DescribeUrlDetectionResult(Models\DescribeUrlDetectionResultRequest $req) 移动安全-网址检测服务
  * @method Models\DescribeUserBaseInfoInstanceResponse DescribeUserBaseInfoInstance(Models\DescribeUserBaseInfoInstanceRequest $req) 获取用户基础信息
+ * @method Models\DestroyResourceInstancesResponse DestroyResourceInstances(Models\DestroyResourceInstancesRequest $req) 渠道合作资源销毁
+安卓应用加固-按年收费资源销毁，其他类型暂不支持
  * @method Models\RequestLocalTaskResponse RequestLocalTask(Models\RequestLocalTaskRequest $req) client任务请求
  * @method Models\UpdateClientStateResponse UpdateClientState(Models\UpdateClientStateRequest $req) 更新client状态，需要白名单
  * @method Models\UpdateLocalTaskResultResponse UpdateLocalTaskResult(Models\UpdateLocalTaskResultRequest $req) 更新本地任务执行结果

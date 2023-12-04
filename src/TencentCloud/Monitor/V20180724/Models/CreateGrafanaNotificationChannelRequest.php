@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
  * @method string getChannelName() 获取告警通道名称，例如：test
  * @method void setChannelName(string $ChannelName) 设置告警通道名称，例如：test
- * @method integer getOrgId() 获取默认为1，建议使用 OrganizationIds
- * @method void setOrgId(integer $OrgId) 设置默认为1，建议使用 OrganizationIds
  * @method array getReceivers() 获取接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
  * @method void setReceivers(array $Receivers) 设置接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
+ * @method integer getOrgId() 获取默认为1，建议使用 OrganizationIds
+ * @method void setOrgId(integer $OrgId) 设置默认为1，建议使用 OrganizationIds
  * @method array getExtraOrgIds() 获取额外组织 ID 数组，已废弃，请使用 OrganizationIds
  * @method void setExtraOrgIds(array $ExtraOrgIds) 设置额外组织 ID 数组，已废弃，请使用 OrganizationIds
  * @method array getOrganizationIds() 获取生效的所有组织 ID 数组，默认为 ["1"]
@@ -46,14 +46,14 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     public $ChannelName;
 
     /**
-     * @var integer 默认为1，建议使用 OrganizationIds
-     */
-    public $OrgId;
-
-    /**
      * @var array 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
      */
     public $Receivers;
+
+    /**
+     * @var integer 默认为1，建议使用 OrganizationIds
+     */
+    public $OrgId;
 
     /**
      * @var array 额外组织 ID 数组，已废弃，请使用 OrganizationIds
@@ -68,8 +68,8 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     /**
      * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      * @param string $ChannelName 告警通道名称，例如：test
-     * @param integer $OrgId 默认为1，建议使用 OrganizationIds
      * @param array $Receivers 接受告警通道 ID 数组，值为告警管理/基础配置/通知模板中的模板 ID 
+     * @param integer $OrgId 默认为1，建议使用 OrganizationIds
      * @param array $ExtraOrgIds 额外组织 ID 数组，已废弃，请使用 OrganizationIds
      * @param array $OrganizationIds 生效的所有组织 ID 数组，默认为 ["1"]
      */
@@ -94,12 +94,12 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
             $this->ChannelName = $param["ChannelName"];
         }
 
-        if (array_key_exists("OrgId",$param) and $param["OrgId"] !== null) {
-            $this->OrgId = $param["OrgId"];
-        }
-
         if (array_key_exists("Receivers",$param) and $param["Receivers"] !== null) {
             $this->Receivers = $param["Receivers"];
+        }
+
+        if (array_key_exists("OrgId",$param) and $param["OrgId"] !== null) {
+            $this->OrgId = $param["OrgId"];
         }
 
         if (array_key_exists("ExtraOrgIds",$param) and $param["ExtraOrgIds"] !== null) {

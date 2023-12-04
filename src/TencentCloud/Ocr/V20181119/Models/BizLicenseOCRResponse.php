@@ -56,6 +56,12 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
  * @method void setIsDuplication(integer $IsDuplication) 设置是否为副本。1为是，-1为不是。
  * @method string getRegistrationDate() 获取登记日期
  * @method void setRegistrationDate(string $RegistrationDate) 设置登记日期
+ * @method float getAngle() 获取 图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+
+ * @method void setAngle(float $Angle) 设置 图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -136,6 +142,13 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
     public $RegistrationDate;
 
     /**
+     * @var float  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+
+     */
+    public $Angle;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -159,6 +172,9 @@ WARN_COPY_CARD 黑白复印件告警
 WARN_RESHOOT_SCREENED_CARD 翻拍件告警
      * @param integer $IsDuplication 是否为副本。1为是，-1为不是。
      * @param string $RegistrationDate 登记日期
+     * @param float $Angle  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度
+
+
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -228,6 +244,10 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
 
         if (array_key_exists("RegistrationDate",$param) and $param["RegistrationDate"] !== null) {
             $this->RegistrationDate = $param["RegistrationDate"];
+        }
+
+        if (array_key_exists("Angle",$param) and $param["Angle"] !== null) {
+            $this->Angle = $param["Angle"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CDC宿主机的详细信息
  *
- * @method string getHostIp() 获取宿主机IP
- * @method void setHostIp(string $HostIp) 设置宿主机IP
+ * @method string getHostIp() 获取宿主机IP（废弃）
+ * @method void setHostIp(string $HostIp) 设置宿主机IP（废弃）
  * @method string getServiceType() 获取云服务类型
  * @method void setServiceType(string $ServiceType) 设置云服务类型
  * @method string getHostStatus() 获取宿主机运行状态
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class HostInfo extends AbstractModel
 {
     /**
-     * @var string 宿主机IP
+     * @var string 宿主机IP（废弃）
      */
     public $HostIp;
 
@@ -104,7 +104,7 @@ class HostInfo extends AbstractModel
     public $HostId;
 
     /**
-     * @param string $HostIp 宿主机IP
+     * @param string $HostIp 宿主机IP（废弃）
      * @param string $ServiceType 云服务类型
      * @param string $HostStatus 宿主机运行状态
      * @param string $HostType 宿主机类型

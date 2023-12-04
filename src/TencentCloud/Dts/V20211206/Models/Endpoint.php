@@ -104,17 +104,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleExternalId(string $RoleExternalId) 设置外部角色id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpSecretId() 获取临时密钥Id，如果为跨账号实例此项必填
+ * @method string getTmpSecretId() 获取临时密钥Id，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id，如果为跨账号实例此项必填
+ * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpSecretKey() 获取临时密钥Key，如果为跨账号实例此项必填
+ * @method string getTmpSecretKey() 获取临时密钥Key，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Key，如果为跨账号实例此项必填
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Key，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpToken() 获取临时Token，如果为跨账号实例此项必填
+ * @method string getTmpToken() 获取临时Token，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpToken(string $TmpToken) 设置临时Token，如果为跨账号实例此项必填
+ * @method void setTmpToken(string $TmpToken) 设置临时Token，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncryptConn() 获取是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
@@ -258,19 +258,19 @@ class Endpoint extends AbstractModel
     public $RoleExternalId;
 
     /**
-     * @var string 临时密钥Id，如果为跨账号实例此项必填
+     * @var string 临时密钥Id，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时密钥Key，如果为跨账号实例此项必填
+     * @var string 临时密钥Key，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpSecretKey;
 
     /**
-     * @var string 临时Token，如果为跨账号实例此项必填
+     * @var string 临时Token，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpToken;
@@ -336,11 +336,11 @@ class Endpoint extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleExternalId 外部角色id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpSecretId 临时密钥Id，如果为跨账号实例此项必填
+     * @param string $TmpSecretId 临时密钥Id，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpSecretKey 临时密钥Key，如果为跨账号实例此项必填
+     * @param string $TmpSecretKey 临时密钥Key，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpToken 临时Token，如果为跨账号实例此项必填
+     * @param string $TmpToken 临时Token，可通过获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195，，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。

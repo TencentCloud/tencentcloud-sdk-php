@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelId(string $ChannelId) 设置通道 ID，例如：nchannel-abcd1234
  * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
  * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
- * @method string getChannelName() 获取告警通道名称，例如：test
- * @method void setChannelName(string $ChannelName) 设置告警通道名称，例如：test
  * @method array getReceivers() 获取接受告警通道 ID 数组
  * @method void setReceivers(array $Receivers) 设置接受告警通道 ID 数组
+ * @method string getChannelName() 获取告警通道名称，已废弃，名称不可修改。
+ * @method void setChannelName(string $ChannelName) 设置告警通道名称，已废弃，名称不可修改。
  * @method array getExtraOrgIds() 获取已废弃，请使用 OrganizationIds
  * @method void setExtraOrgIds(array $ExtraOrgIds) 设置已废弃，请使用 OrganizationIds
  * @method array getOrganizationIds() 获取生效的组织 ID 数组
@@ -46,14 +46,14 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 告警通道名称，例如：test
-     */
-    public $ChannelName;
-
-    /**
      * @var array 接受告警通道 ID 数组
      */
     public $Receivers;
+
+    /**
+     * @var string 告警通道名称，已废弃，名称不可修改。
+     */
+    public $ChannelName;
 
     /**
      * @var array 已废弃，请使用 OrganizationIds
@@ -68,8 +68,8 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     /**
      * @param string $ChannelId 通道 ID，例如：nchannel-abcd1234
      * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
-     * @param string $ChannelName 告警通道名称，例如：test
      * @param array $Receivers 接受告警通道 ID 数组
+     * @param string $ChannelName 告警通道名称，已废弃，名称不可修改。
      * @param array $ExtraOrgIds 已废弃，请使用 OrganizationIds
      * @param array $OrganizationIds 生效的组织 ID 数组
      */
@@ -94,12 +94,12 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("ChannelName",$param) and $param["ChannelName"] !== null) {
-            $this->ChannelName = $param["ChannelName"];
-        }
-
         if (array_key_exists("Receivers",$param) and $param["Receivers"] !== null) {
             $this->Receivers = $param["Receivers"];
+        }
+
+        if (array_key_exists("ChannelName",$param) and $param["ChannelName"] !== null) {
+            $this->ChannelName = $param["ChannelName"];
         }
 
         if (array_key_exists("ExtraOrgIds",$param) and $param["ExtraOrgIds"] !== null) {

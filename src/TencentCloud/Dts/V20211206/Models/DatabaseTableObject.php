@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabases(array $Databases) 设置迁移对象，当 ObjectMode 为 partial 时，不为空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAdvancedObjects() 获取高级对象类型，如trigger、function、procedure、event
+ * @method array getAdvancedObjects() 获取高级对象类型，如trigger、function、procedure、event。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvancedObjects(array $AdvancedObjects) 设置高级对象类型，如trigger、function、procedure、event
+ * @method void setAdvancedObjects(array $AdvancedObjects) 设置高级对象类型，如trigger、function、procedure、event。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseTableObject extends AbstractModel
@@ -48,7 +48,7 @@ class DatabaseTableObject extends AbstractModel
     public $Databases;
 
     /**
-     * @var array 高级对象类型，如trigger、function、procedure、event
+     * @var array 高级对象类型，如trigger、function、procedure、event。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvancedObjects;
@@ -58,7 +58,7 @@ class DatabaseTableObject extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Databases 迁移对象，当 ObjectMode 为 partial 时，不为空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AdvancedObjects 高级对象类型，如trigger、function、procedure、event
+     * @param array $AdvancedObjects 高级对象类型，如trigger、function、procedure、event。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

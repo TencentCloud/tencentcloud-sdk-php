@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIp(string $UserIp) 设置用户IP，用户客户端的公网IP，用于就近调度
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getApplicationVersionId() 获取应用版本ID
- * @method void setApplicationVersionId(string $ApplicationVersionId) 设置应用版本ID
+ * @method string getApplicationVersionId() 获取应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。
+ * @method void setApplicationVersionId(string $ApplicationVersionId) 设置应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。
  * @method string getApplicationId() 获取应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。
  * @method void setApplicationId(string $ApplicationId) 设置应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。
  */
@@ -49,7 +49,7 @@ class ApplyConcurrentRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 应用版本ID
+     * @var string 应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。
      */
     public $ApplicationVersionId;
 
@@ -62,7 +62,7 @@ class ApplyConcurrentRequest extends AbstractModel
      * @param string $UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      * @param string $UserIp 用户IP，用户客户端的公网IP，用于就近调度
      * @param string $ProjectId 项目ID
-     * @param string $ApplicationVersionId 应用版本ID
+     * @param string $ApplicationVersionId 应用版本ID。如果请求应用的当前版本，可以不用填写该字段。如果请求应用的其它版本时，才需要通过该字段来指定应用的版本。
      * @param string $ApplicationId 应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。
      */
     function __construct()

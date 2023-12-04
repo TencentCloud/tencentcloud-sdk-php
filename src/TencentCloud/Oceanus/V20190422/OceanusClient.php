@@ -39,6 +39,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DeleteTableConfigResponse DeleteTableConfig(Models\DeleteTableConfigRequest $req) 删除作业表配置
  * @method Models\DeleteWorkSpaceResponse DeleteWorkSpace(Models\DeleteWorkSpaceRequest $req) 删除工作空间
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询集群
+ * @method Models\DescribeFolderResponse DescribeFolder(Models\DescribeFolderRequest $req) 查询指定文件夹及其相应的子文件夹信息
  * @method Models\DescribeJobConfigsResponse DescribeJobConfigs(Models\DescribeJobConfigsRequest $req) 查询作业配置列表，一次最多查询100个
  * @method Models\DescribeJobSavepointResponse DescribeJobSavepoint(Models\DescribeJobSavepointRequest $req) 查找Savepoint列表
  * @method Models\DescribeJobSubmissionLogResponse DescribeJobSubmissionLog(Models\DescribeJobSubmissionLogRequest $req) 查询作业实例启动日志

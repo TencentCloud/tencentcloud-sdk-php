@@ -22,7 +22,7 @@ use TencentCloud\Common\AbstractModel;
 
 当控件的 ComponentType=‘SIGN_SEAL'时，FormField.ComponentValue填入印章id。
 
-* 可用于指定自动签模版未设置自动签印章时，可由接口传入自动签印章
+* 可用于指定自动签模板未设置自动签印章时，可由接口传入自动签印章
 * 若指定的控件上已设置ComponentValue，那以已经设置的ComponentValue为准
 
 ```

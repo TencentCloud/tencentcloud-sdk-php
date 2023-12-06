@@ -33,6 +33,9 @@ use TencentCloud\Common\AbstractModel;
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
 <li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
  * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values 的上限为 20。该参数不填写时，返回当前 zone-id 下所有域名信息。详细的过滤条件如下：
 <li>domain-name：按照加速域名进行过滤；</li>
 <li>origin-type：按照源站类型进行过滤；</li>
@@ -40,6 +43,9 @@ use TencentCloud\Common\AbstractModel;
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
 <li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
  * @method string getOrder() 获取可根据该字段对返回结果进行排序，取值有：
 <li>created_on：加速域名创建时间；</li>
 <li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。
@@ -84,6 +90,9 @@ class DescribeAccelerationDomainsRequest extends AbstractModel
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
 <li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
      */
     public $Filters;
 
@@ -119,6 +128,9 @@ class DescribeAccelerationDomainsRequest extends AbstractModel
 <li>backup-origin： 按照备用源站地址进行过滤；</li>
 <li>domain-cname：按照 CNAME 进行过滤；</li>
 <li>share-cname：按照共享 CNAME 进行过滤；</li>
+<li>vodeo-sub-app-id：按照【 vodeo 子应用 ID】进行过滤；</li>
+<li>vodeo-distribution-range：按照【 vodeo 分发范围】进行过滤；</li>
+<li>vodeo-bucket-id：按照【vodeo 存储桶 ID】进行过滤；</li>
      * @param string $Order 可根据该字段对返回结果进行排序，取值有：
 <li>created_on：加速域名创建时间；</li>
 <li>domain-name：加速域名。</li>不填写时，默认对返回结果按照 domain-name 排序。

@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
 <li>off：不使用私有鉴权。</li>默认值：off。
  * @method array getPrivateParameters() 获取私有鉴权使用参数，当源站类型 PrivateAccess=on 时有效。
  * @method void setPrivateParameters(array $PrivateParameters) 设置私有鉴权使用参数，当源站类型 PrivateAccess=on 时有效。
+ * @method integer getVodeoSubAppId() 获取MO 子应用 ID
+ * @method void setVodeoSubAppId(integer $VodeoSubAppId) 设置MO 子应用 ID
+ * @method string getVodeoDistributionRange() 获取MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+ * @method void setVodeoDistributionRange(string $VodeoDistributionRange) 设置MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+ * @method string getVodeoBucketId() 获取MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
+ * @method void setVodeoBucketId(string $VodeoBucketId) 设置MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
  */
 class OriginInfo extends AbstractModel
 {
@@ -83,6 +89,21 @@ class OriginInfo extends AbstractModel
     public $PrivateParameters;
 
     /**
+     * @var integer MO 子应用 ID
+     */
+    public $VodeoSubAppId;
+
+    /**
+     * @var string MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     */
+    public $VodeoDistributionRange;
+
+    /**
+     * @var string MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
+     */
+    public $VodeoBucketId;
+
+    /**
      * @param string $OriginType 源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6 或域名类型源站；</li>
 <li>COS：COS 源；</li>
@@ -96,6 +117,9 @@ class OriginInfo extends AbstractModel
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>默认值：off。
      * @param array $PrivateParameters 私有鉴权使用参数，当源站类型 PrivateAccess=on 时有效。
+     * @param integer $VodeoSubAppId MO 子应用 ID
+     * @param string $VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     * @param string $VodeoBucketId MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填	
      */
     function __construct()
     {
@@ -133,6 +157,18 @@ class OriginInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PrivateParameters, $obj);
             }
+        }
+
+        if (array_key_exists("VodeoSubAppId",$param) and $param["VodeoSubAppId"] !== null) {
+            $this->VodeoSubAppId = $param["VodeoSubAppId"];
+        }
+
+        if (array_key_exists("VodeoDistributionRange",$param) and $param["VodeoDistributionRange"] !== null) {
+            $this->VodeoDistributionRange = $param["VodeoDistributionRange"];
+        }
+
+        if (array_key_exists("VodeoBucketId",$param) and $param["VodeoBucketId"] !== null) {
+            $this->VodeoBucketId = $param["VodeoBucketId"];
         }
     }
 }

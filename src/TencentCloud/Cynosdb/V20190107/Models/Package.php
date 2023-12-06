@@ -84,6 +84,10 @@ refund-已退费。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置失效时间：2022-08-01 00:00:00
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHistoryBindResourceInfos() 获取资源包历史绑定（已解绑）实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHistoryBindResourceInfos(array $HistoryBindResourceInfos) 设置资源包历史绑定（已解绑）实例信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Package extends AbstractModel
 {
@@ -168,6 +172,12 @@ refund-已退费。
     public $ExpireTime;
 
     /**
+     * @var array 资源包历史绑定（已解绑）实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HistoryBindResourceInfos;
+
+    /**
      * @param integer $AppId AppID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageId 资源包唯一ID
@@ -199,6 +209,8 @@ refund-已退费。
      * @param string $StartTime 生效时间：2022-07-01 00:00:00
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 失效时间：2022-08-01 00:00:00
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HistoryBindResourceInfos 资源包历史绑定（已解绑）实例信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +277,15 @@ refund-已退费。
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("HistoryBindResourceInfos",$param) and $param["HistoryBindResourceInfos"] !== null) {
+            $this->HistoryBindResourceInfos = [];
+            foreach ($param["HistoryBindResourceInfos"] as $key => $value){
+                $obj = new BindInstanceInfo();
+                $obj->deserialize($value);
+                array_push($this->HistoryBindResourceInfos, $obj);
+            }
         }
     }
 }

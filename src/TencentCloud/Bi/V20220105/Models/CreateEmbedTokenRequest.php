@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserCorpId(string $UserCorpId) 设置使用者企业Id(仅用于多用户)
  * @method string getUserId() 获取使用者Id(仅用于多用户)
  * @method void setUserId(string $UserId) 设置使用者Id(仅用于多用户)
+ * @method integer getTicketNum() 获取访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+ * @method void setTicketNum(integer $TicketNum) 设置访问次数限制，限制范围1-99999，为空则不设置访问次数限制
  */
 class CreateEmbedTokenRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateEmbedTokenRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+     */
+    public $TicketNum;
+
+    /**
      * @param integer $ProjectId 分享项目id
      * @param integer $PageId 分享页面id，嵌出看板时此为空值0
      * @param string $Scope page表示嵌出页面，panel表嵌出整个看板
@@ -80,6 +87,7 @@ class CreateEmbedTokenRequest extends AbstractModel
      * @param string $ExtraParam 备用字段
      * @param string $UserCorpId 使用者企业Id(仅用于多用户)
      * @param string $UserId 使用者Id(仅用于多用户)
+     * @param integer $TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateEmbedTokenRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("TicketNum",$param) and $param["TicketNum"] !== null) {
+            $this->TicketNum = $param["TicketNum"];
         }
     }
 }

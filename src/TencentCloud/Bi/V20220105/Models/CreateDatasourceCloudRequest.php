@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataOriginProjectId(string $DataOriginProjectId) 设置第三方项目id
  * @method string getDataOriginDatasourceId() 获取第三方数据源id
  * @method void setDataOriginDatasourceId(string $DataOriginDatasourceId) 设置第三方数据源id
+ * @method string getClusterId() 获取集群id
+ * @method void setClusterId(string $ClusterId) 设置集群id
  */
 class CreateDatasourceCloudRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateDatasourceCloudRequest extends AbstractModel
     public $DataOriginDatasourceId;
 
     /**
+     * @var string 集群id
+     */
+    public $ClusterId;
+
+    /**
      * @param string $ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
      * @param string $DbType 驱动
      * @param string $Charset 数据库编码
@@ -176,6 +183,7 @@ class CreateDatasourceCloudRequest extends AbstractModel
      * @param string $DataOrigin 第三方数据源标识
      * @param string $DataOriginProjectId 第三方项目id
      * @param string $DataOriginDatasourceId 第三方数据源id
+     * @param string $ClusterId 集群id
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class CreateDatasourceCloudRequest extends AbstractModel
 
         if (array_key_exists("DataOriginDatasourceId",$param) and $param["DataOriginDatasourceId"] !== null) {
             $this->DataOriginDatasourceId = $param["DataOriginDatasourceId"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置使用者Id(仅用于多用户)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTicketNum() 获取访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTicketNum(integer $TicketNum) 设置访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmbedTokenInfo extends AbstractModel
 {
@@ -154,6 +158,12 @@ class EmbedTokenInfo extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TicketNum;
+
+    /**
      * @param integer $Id 信息标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BIToken 令牌
@@ -179,6 +189,8 @@ class EmbedTokenInfo extends AbstractModel
      * @param string $UserCorpId 使用者企业Id(仅用于多用户)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserId 使用者Id(仅用于多用户)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TicketNum 访问次数限制，限制范围1-99999，为空则不设置访问次数限制
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class EmbedTokenInfo extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("TicketNum",$param) and $param["TicketNum"] !== null) {
+            $this->TicketNum = $param["TicketNum"];
         }
     }
 }

@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneNumber(integer $ZoneNumber) 设置当前资源绑定的站点数量。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取资源标记类型，取值有：
+<li>vodeo：vodeo资源。</li>
+ * @method void setType(string $Type) 设置资源标记类型，取值有：
+<li>vodeo：vodeo资源。</li>
  */
 class Resource extends AbstractModel
 {
@@ -153,6 +157,12 @@ class Resource extends AbstractModel
     public $ZoneNumber;
 
     /**
+     * @var string 资源标记类型，取值有：
+<li>vodeo：vodeo资源。</li>
+     */
+    public $Type;
+
+    /**
      * @param string $Id 资源 ID。
      * @param integer $PayMode 付费模式，取值有：
 <li>0：后付费。</li>
@@ -180,6 +190,8 @@ class Resource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneNumber 当前资源绑定的站点数量。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type 资源标记类型，取值有：
+<li>vodeo：vodeo资源。</li>
      */
     function __construct()
     {
@@ -245,6 +257,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("ZoneNumber",$param) and $param["ZoneNumber"] !== null) {
             $this->ZoneNumber = $param["ZoneNumber"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -26,12 +26,16 @@ use TencentCloud\Common\AbstractModel;
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li>
  * @method void setType(string $Type) 设置任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li>
  * @method AiAnalysisTaskClassificationResult getClassificationTask() 获取视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassificationTask(AiAnalysisTaskClassificationResult $ClassificationTask) 设置视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
@@ -56,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeLogoTask(AiAnalysisTaskDelLogoResult $DeLogoTask) 设置视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiAnalysisTaskDescriptionResult getDescriptionTask() 获取视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescriptionTask(AiAnalysisTaskDescriptionResult $DescriptionTask) 设置视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisResult extends AbstractModel
 {
@@ -66,6 +74,8 @@ class AiAnalysisResult extends AbstractModel
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li>
      */
     public $Type;
 
@@ -106,12 +116,20 @@ class AiAnalysisResult extends AbstractModel
     public $DeLogoTask;
 
     /**
+     * @var AiAnalysisTaskDescriptionResult 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DescriptionTask;
+
+    /**
      * @param string $Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
 <li>Tag：智能标签</li>
 <li>FrameTag：智能按帧标签</li>
 <li>Highlight：智能精彩集锦</li>
+<li>DeLogo：智能去水印</li>
+<li>Description：大模型摘要</li>
      * @param AiAnalysisTaskClassificationResult $ClassificationTask 视频内容分析智能分类任务的查询结果，当任务类型为 Classification 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskCoverResult $CoverTask 视频内容分析智能封面任务的查询结果，当任务类型为 Cover 时有效。
@@ -123,6 +141,8 @@ class AiAnalysisResult extends AbstractModel
      * @param AiAnalysisTaskHighlightResult $HighlightTask 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskDelLogoResult $DeLogoTask 视频内容分析去水印任务的查询结果，当任务类型为 DeLogo 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisTaskDescriptionResult $DescriptionTask 视频内容分析摘要任务的查询结果，当任务类型为 Description 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -170,6 +190,11 @@ class AiAnalysisResult extends AbstractModel
         if (array_key_exists("DeLogoTask",$param) and $param["DeLogoTask"] !== null) {
             $this->DeLogoTask = new AiAnalysisTaskDelLogoResult();
             $this->DeLogoTask->deserialize($param["DeLogoTask"]);
+        }
+
+        if (array_key_exists("DescriptionTask",$param) and $param["DescriptionTask"] !== null) {
+            $this->DescriptionTask = new AiAnalysisTaskDescriptionResult();
+            $this->DescriptionTask->deserialize($param["DescriptionTask"]);
         }
     }
 }

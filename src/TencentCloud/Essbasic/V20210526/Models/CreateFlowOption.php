@@ -60,11 +60,11 @@ use TencentCloud\Common\AbstractModel;
 
 **true**：禁止编辑填写控件
 **false**：（默认）允许编辑填写控件
- * @method string getSkipUploadFile() 获取跳过上传文件步骤
+ * @method boolean getSkipUploadFile() 获取跳过上传文件步骤
 
 **true**：跳过
 **false**：（默认）不跳过，需要传ResourceId
- * @method void setSkipUploadFile(string $SkipUploadFile) 设置跳过上传文件步骤
+ * @method void setSkipUploadFile(boolean $SkipUploadFile) 设置跳过上传文件步骤
 
 **true**：跳过
 **false**：（默认）不跳过，需要传ResourceId
@@ -120,7 +120,7 @@ class CreateFlowOption extends AbstractModel
     public $ForbidEditFillComponent;
 
     /**
-     * @var string 跳过上传文件步骤
+     * @var boolean 跳过上传文件步骤
 
 **true**：跳过
 **false**：（默认）不跳过，需要传ResourceId
@@ -148,7 +148,7 @@ class CreateFlowOption extends AbstractModel
 
 **true**：禁止编辑填写控件
 **false**：（默认）允许编辑填写控件
-     * @param string $SkipUploadFile 跳过上传文件步骤
+     * @param boolean $SkipUploadFile 跳过上传文件步骤
 
 **true**：跳过
 **false**：（默认）不跳过，需要传ResourceId

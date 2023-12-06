@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessType(integer $ProcessType) 设置调度类型，1:持续运行 2:指定时间范围
  * @method integer getProcessPeriod() 获取调度周期(分钟)
  * @method void setProcessPeriod(integer $ProcessPeriod) 设置调度周期(分钟)
- * @method string getProcessTimeWindow() 获取单次查询的时间窗口
- * @method void setProcessTimeWindow(string $ProcessTimeWindow) 设置单次查询的时间窗口
+ * @method string getProcessTimeWindow() 获取单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
+ * @method void setProcessTimeWindow(string $ProcessTimeWindow) 设置单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
  * @method integer getProcessDelay() 获取执行延迟(秒)
  * @method void setProcessDelay(integer $ProcessDelay) 设置执行延迟(秒)
  * @method string getSrcTopicRegion() 获取源topicId的地域信息
@@ -90,7 +90,7 @@ class CreateScheduledSqlRequest extends AbstractModel
     public $ProcessPeriod;
 
     /**
-     * @var string 单次查询的时间窗口
+     * @var string 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
      */
     public $ProcessTimeWindow;
 
@@ -123,7 +123,7 @@ class CreateScheduledSqlRequest extends AbstractModel
      * @param integer $ProcessStartTime 调度开始时间,Unix时间戳，单位ms
      * @param integer $ProcessType 调度类型，1:持续运行 2:指定时间范围
      * @param integer $ProcessPeriod 调度周期(分钟)
-     * @param string $ProcessTimeWindow 单次查询的时间窗口
+     * @param string $ProcessTimeWindow 单次查询的时间窗口,如果您的目标主题为指标主题，建议该参数的大小不超过30分钟，否则可能转指标失败。 
      * @param integer $ProcessDelay 执行延迟(秒)
      * @param string $SrcTopicRegion 源topicId的地域信息
      * @param integer $ProcessEndTime 调度结束时间，当ProcessType=2时为必传字段, Unix时间戳，单位ms

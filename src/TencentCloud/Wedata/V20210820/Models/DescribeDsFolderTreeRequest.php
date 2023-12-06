@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeTask(boolean $IncludeTask) 设置是否包含任务
  * @method boolean getIncludeVirtualTask() 获取是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
  * @method void setIncludeVirtualTask(boolean $IncludeVirtualTask) 设置是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
+ * @method string getTaskFolderId() 获取任务目录id
+ * @method void setTaskFolderId(string $TaskFolderId) 设置任务目录id
+ * @method string getDisplayType() 获取classification.分类展示  catalog.目录展示
+ * @method void setDisplayType(string $DisplayType) 设置classification.分类展示  catalog.目录展示
+ * @method boolean getIncludeTaskFolder() 获取是否包含任务目录
+ * @method void setIncludeTaskFolder(boolean $IncludeTaskFolder) 设置是否包含任务目录
  */
 class DescribeDsFolderTreeRequest extends AbstractModel
 {
@@ -80,6 +86,21 @@ class DescribeDsFolderTreeRequest extends AbstractModel
     public $IncludeVirtualTask;
 
     /**
+     * @var string 任务目录id
+     */
+    public $TaskFolderId;
+
+    /**
+     * @var string classification.分类展示  catalog.目录展示
+     */
+    public $DisplayType;
+
+    /**
+     * @var boolean 是否包含任务目录
+     */
+    public $IncludeTaskFolder;
+
+    /**
      * @param string $ProjectId 项目id
      * @param boolean $FirstLevelPull 是否一级拉取
      * @param string $FolderId 文件夹ID
@@ -88,6 +109,9 @@ class DescribeDsFolderTreeRequest extends AbstractModel
      * @param boolean $IncludeWorkflow 是否包含工作流
      * @param boolean $IncludeTask 是否包含任务
      * @param boolean $IncludeVirtualTask 是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
+     * @param string $TaskFolderId 任务目录id
+     * @param string $DisplayType classification.分类展示  catalog.目录展示
+     * @param boolean $IncludeTaskFolder 是否包含任务目录
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class DescribeDsFolderTreeRequest extends AbstractModel
 
         if (array_key_exists("IncludeVirtualTask",$param) and $param["IncludeVirtualTask"] !== null) {
             $this->IncludeVirtualTask = $param["IncludeVirtualTask"];
+        }
+
+        if (array_key_exists("TaskFolderId",$param) and $param["TaskFolderId"] !== null) {
+            $this->TaskFolderId = $param["TaskFolderId"];
+        }
+
+        if (array_key_exists("DisplayType",$param) and $param["DisplayType"] !== null) {
+            $this->DisplayType = $param["DisplayType"];
+        }
+
+        if (array_key_exists("IncludeTaskFolder",$param) and $param["IncludeTaskFolder"] !== null) {
+            $this->IncludeTaskFolder = $param["IncludeTaskFolder"];
         }
     }
 }

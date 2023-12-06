@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRecordingRules请求参数结构体
  *
- * @method array getRuleIds() 获取规则 ID 列表
- * @method void setRuleIds(array $RuleIds) 设置规则 ID 列表
+ * @method array getRuleIds() 获取规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
+ * @method void setRuleIds(array $RuleIds) 设置规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
  * @method string getInstanceId() 获取Prometheus 实例 ID
  * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
  */
 class DeleteRecordingRulesRequest extends AbstractModel
 {
     /**
-     * @var array 规则 ID 列表
+     * @var array 规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
      */
     public $RuleIds;
 
@@ -38,7 +38,7 @@ class DeleteRecordingRulesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param array $RuleIds 规则 ID 列表
+     * @param array $RuleIds 规则 ID 列表(规则 ID 可通过 DescribeRecordingRules 接口获取)
      * @param string $InstanceId Prometheus 实例 ID
      */
     function __construct()

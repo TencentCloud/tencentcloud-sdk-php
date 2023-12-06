@@ -29,7 +29,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
 调用该接口时，请注意：
 账号要进行实名认证，否则不允许申请物理专线；
 若账户下存在欠费状态的物理专线，则不能申请更多的物理专线。
- * @method Models\CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(Models\CreateDirectConnectTunnelRequest $req) 用于创建专用通道的接口
+ * @method Models\CreateDirectConnectTunnelResponse CreateDirectConnectTunnel(Models\CreateDirectConnectTunnelRequest $req) 创建专用通道。
  * @method Models\DeleteDirectConnectResponse DeleteDirectConnect(Models\DeleteDirectConnectRequest $req) 删除物理专线。
 只能删除处于已连接状态的物理专线。
  * @method Models\DeleteDirectConnectTunnelResponse DeleteDirectConnectTunnel(Models\DeleteDirectConnectTunnelRequest $req) 删除专用通道

@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method integer getKubeType() 获取Kubernetes 集群类型，取值如下：
+ * @method integer getKubeType() 获取Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
- * @method void setKubeType(integer $KubeType) 设置Kubernetes 集群类型，取值如下：
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+ * @method void setKubeType(integer $KubeType) 设置Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
- * @method string getClusterId() 获取集群 ID
- * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getKind() 获取类型
- * @method void setKind(string $Kind) 设置类型
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+ * @method string getClusterId() 获取集群 ID，可不填
+ * @method void setClusterId(string $ClusterId) 设置集群 ID，可不填
+ * @method string getKind() 获取类型(不填返回全部集成。可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
+ * @method void setKind(string $Kind) 设置类型(不填返回全部集成。可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
  * @method string getName() 获取名字
  * @method void setName(string $Name) 设置名字
  */
@@ -45,20 +45,20 @@ class DescribeExporterIntegrationsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Kubernetes 集群类型，取值如下：
+     * @var integer Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
      */
     public $KubeType;
 
     /**
-     * @var string 集群 ID
+     * @var string 集群 ID，可不填
      */
     public $ClusterId;
 
     /**
-     * @var string 类型
+     * @var string 类型(不填返回全部集成。可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
      */
     public $Kind;
 
@@ -69,12 +69,12 @@ class DescribeExporterIntegrationsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID
-     * @param integer $KubeType Kubernetes 集群类型，取值如下：
+     * @param integer $KubeType Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
-     * @param string $ClusterId 集群 ID
-     * @param string $Kind 类型
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+     * @param string $ClusterId 集群 ID，可不填
+     * @param string $Kind 类型(不填返回全部集成。可通过 DescribePrometheusIntegrations 接口获取，取每一项中的 ExporterType 字段)
      * @param string $Name 名字
      */
     function __construct()

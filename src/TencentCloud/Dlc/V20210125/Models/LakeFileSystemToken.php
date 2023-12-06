@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LakeFileSystem使用的临时token
  *
- * @method string getSecretId() 获取Token使用的临时秘钥的ID
- * @method void setSecretId(string $SecretId) 设置Token使用的临时秘钥的ID
- * @method string getSecretKey() 获取Token使用的临时秘钥
- * @method void setSecretKey(string $SecretKey) 设置Token使用的临时秘钥
+ * @method string getSecretId() 获取Token使用的临时密钥的ID
+ * @method void setSecretId(string $SecretId) 设置Token使用的临时密钥的ID
+ * @method string getSecretKey() 获取Token使用的临时密钥
+ * @method void setSecretKey(string $SecretKey) 设置Token使用的临时密钥
  * @method string getToken() 获取Token信息
  * @method void setToken(string $Token) 设置Token信息
  * @method integer getExpiredTime() 获取过期时间
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class LakeFileSystemToken extends AbstractModel
 {
     /**
-     * @var string Token使用的临时秘钥的ID
+     * @var string Token使用的临时密钥的ID
      */
     public $SecretId;
 
     /**
-     * @var string Token使用的临时秘钥
+     * @var string Token使用的临时密钥
      */
     public $SecretKey;
 
@@ -59,8 +59,8 @@ class LakeFileSystemToken extends AbstractModel
     public $IssueTime;
 
     /**
-     * @param string $SecretId Token使用的临时秘钥的ID
-     * @param string $SecretKey Token使用的临时秘钥
+     * @param string $SecretId Token使用的临时密钥的ID
+     * @param string $SecretKey Token使用的临时密钥
      * @param string $Token Token信息
      * @param integer $ExpiredTime 过期时间
      * @param integer $IssueTime 颁布时间

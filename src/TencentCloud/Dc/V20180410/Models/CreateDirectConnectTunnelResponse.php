@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDirectConnectTunnel返回参数结构体
  *
- * @method array getDirectConnectTunnelIdSet() 获取专用通道ID
- * @method void setDirectConnectTunnelIdSet(array $DirectConnectTunnelIdSet) 设置专用通道ID
+ * @method array getDirectConnectTunnelIdSet() 获取专用通道ID。
+ * @method void setDirectConnectTunnelIdSet(array $DirectConnectTunnelIdSet) 设置专用通道ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateDirectConnectTunnelResponse extends AbstractModel
 {
     /**
-     * @var array 专用通道ID
+     * @var array 专用通道ID。
      */
     public $DirectConnectTunnelIdSet;
 
@@ -38,7 +38,7 @@ class CreateDirectConnectTunnelResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DirectConnectTunnelIdSet 专用通道ID
+     * @param array $DirectConnectTunnelIdSet 专用通道ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

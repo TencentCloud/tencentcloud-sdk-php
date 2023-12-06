@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
  * @method string getTaskId() 获取任务id
  * @method void setTaskId(string $TaskId) 设置任务id
+ * @method string getDisplayType() 获取 classification:分类展示  catalog:目录展示
+ * @method void setDisplayType(string $DisplayType) 设置 classification:分类展示  catalog:目录展示
  */
 class DescribeDsParentFolderTreeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeDsParentFolderTreeRequest extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string  classification:分类展示  catalog:目录展示
+     */
+    public $DisplayType;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderId 文件夹ID
      * @param string $WorkflowId 工作流ID
      * @param string $TaskId 任务id
+     * @param string $DisplayType  classification:分类展示  catalog:目录展示
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeDsParentFolderTreeRequest extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("DisplayType",$param) and $param["DisplayType"] !== null) {
+            $this->DisplayType = $param["DisplayType"];
         }
     }
 }

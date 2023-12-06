@@ -32,12 +32,14 @@ use TencentCloud\Common\AbstractModel;
 BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
  * @method void setMetricNames(array $MetricNames) 设置指标名称
 BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
- * @method array getMetricLabels() 获取指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
- * @method void setMetricLabels(array $MetricLabels) 设置指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
+ * @method array getMetricLabels() 获取指标维度，不接受时间类型。
+ * @method void setMetricLabels(array $MetricLabels) 设置指标维度，不接受时间类型。
  * @method string getCustomTime() 获取指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
  * @method void setCustomTime(string $CustomTime) 设置指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
- * @method array getCustomMetricLabels() 获取除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
- * @method void setCustomMetricLabels(array $CustomMetricLabels) 设置除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
+ * @method array getCustomMetricLabels() 获取除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
+ * @method void setCustomMetricLabels(array $CustomMetricLabels) 设置除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
  */
 class ScheduledSqlResouceInfo extends AbstractModel
 {
@@ -68,7 +70,7 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     public $MetricNames;
 
     /**
-     * @var array 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
+     * @var array 指标维度，不接受时间类型。
      */
     public $MetricLabels;
 
@@ -78,7 +80,8 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     public $CustomTime;
 
     /**
-     * @var array 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
+     * @var array 除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
      */
     public $CustomMetricLabels;
 
@@ -89,9 +92,10 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
      * @param string $MetricName 指标名称
      * @param array $MetricNames 指标名称
 BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
-     * @param array $MetricLabels 指标标签，从SQL结果字段中选择，一般是分组(group by) 的字段。
+     * @param array $MetricLabels 指标维度，不接受时间类型。
      * @param string $CustomTime 指标时间戳，默认值为SQL查询时间范围的左侧时间点，您也可以指定其他字段（类型为uinx时间，精度毫秒）为指标时间戳。
-     * @param array $CustomMetricLabels 除了MetricLabels，您还可以使用该参数，为指标补充静态的标签。
+     * @param array $CustomMetricLabels 除了MetricLabels，您还可以使用该参数，为指标补充静态的维度。
+维度名以字母或下划线开头，后面可以跟字母、数字或下划线，长度小于等于1024 字节
      */
     function __construct()
     {

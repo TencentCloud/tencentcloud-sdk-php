@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDataEngineConfigPairs() 获取用户自定义配置项集合
  * @method void setDataEngineConfigPairs(array $DataEngineConfigPairs) 设置用户自定义配置项集合
- * @method SessionResourceTemplate getSessionResourceTemplate() 获取作业集群资源参数配置模版
- * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置作业集群资源参数配置模版
+ * @method SessionResourceTemplate getSessionResourceTemplate() 获取作业集群资源参数配置模板
+ * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置作业集群资源参数配置模板
  */
 class DataEngineConfigInstanceInfo extends AbstractModel
 {
@@ -43,7 +43,7 @@ class DataEngineConfigInstanceInfo extends AbstractModel
     public $DataEngineConfigPairs;
 
     /**
-     * @var SessionResourceTemplate 作业集群资源参数配置模版
+     * @var SessionResourceTemplate 作业集群资源参数配置模板
      */
     public $SessionResourceTemplate;
 
@@ -51,7 +51,7 @@ class DataEngineConfigInstanceInfo extends AbstractModel
      * @param string $DataEngineId 引擎ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataEngineConfigPairs 用户自定义配置项集合
-     * @param SessionResourceTemplate $SessionResourceTemplate 作业集群资源参数配置模版
+     * @param SessionResourceTemplate $SessionResourceTemplate 作业集群资源参数配置模板
      */
     function __construct()
     {

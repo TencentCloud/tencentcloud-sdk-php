@@ -150,6 +150,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) 设置presto任务指标数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResultFormat() 获取结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResultFormat(string $ResultFormat) 设置结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -379,6 +383,12 @@ class TaskResponseInfo extends AbstractModel
     public $PrestoMonitorMetrics;
 
     /**
+     * @var string 结果文件格式：默认为csv
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResultFormat;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -443,6 +453,8 @@ class TaskResponseInfo extends AbstractModel
      * @param SparkMonitorMetrics $SparkMonitorMetrics spark任务指标数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PrestoMonitorMetrics $PrestoMonitorMetrics presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResultFormat 结果文件格式：默认为csv
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -619,6 +631,10 @@ class TaskResponseInfo extends AbstractModel
         if (array_key_exists("PrestoMonitorMetrics",$param) and $param["PrestoMonitorMetrics"] !== null) {
             $this->PrestoMonitorMetrics = new PrestoMonitorMetrics();
             $this->PrestoMonitorMetrics->deserialize($param["PrestoMonitorMetrics"]);
+        }
+
+        if (array_key_exists("ResultFormat",$param) and $param["ResultFormat"] !== null) {
+            $this->ResultFormat = $param["ResultFormat"];
         }
     }
 }

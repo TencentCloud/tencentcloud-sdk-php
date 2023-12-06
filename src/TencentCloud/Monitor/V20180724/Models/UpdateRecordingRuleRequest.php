@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置聚合规则名称
  * @method string getGroup() 获取聚合规则组内容，格式为 yaml，通过 base64 进行编码。
  * @method void setGroup(string $Group) 设置聚合规则组内容，格式为 yaml，通过 base64 进行编码。
- * @method string getInstanceId() 获取Prometheus 实例 ID
- * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
- * @method string getRuleId() 获取Prometheus 聚合规则 ID
- * @method void setRuleId(string $RuleId) 设置Prometheus 聚合规则 ID
+ * @method string getInstanceId() 获取Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
+ * @method string getRuleId() 获取Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
+ * @method void setRuleId(string $RuleId) 设置Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
  * @method integer getRuleState() 获取规则状态码，取值如下：
 <li>1=RuleDeleted</li>
 <li>2=RuleEnabled</li>
@@ -52,12 +52,12 @@ class UpdateRecordingRuleRequest extends AbstractModel
     public $Group;
 
     /**
-     * @var string Prometheus 实例 ID
+     * @var string Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public $InstanceId;
 
     /**
-     * @var string Prometheus 聚合规则 ID
+     * @var string Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
      */
     public $RuleId;
 
@@ -73,8 +73,8 @@ class UpdateRecordingRuleRequest extends AbstractModel
     /**
      * @param string $Name 聚合规则名称
      * @param string $Group 聚合规则组内容，格式为 yaml，通过 base64 进行编码。
-     * @param string $InstanceId Prometheus 实例 ID
-     * @param string $RuleId Prometheus 聚合规则 ID
+     * @param string $InstanceId Prometheus 实例 ID(可通过 DescribePrometheusInstances 接口获取)
+     * @param string $RuleId Prometheus 聚合规则 ID(可通过 DescribeRecordingRules 接口获取)
      * @param integer $RuleState 规则状态码，取值如下：
 <li>1=RuleDeleted</li>
 <li>2=RuleEnabled</li>

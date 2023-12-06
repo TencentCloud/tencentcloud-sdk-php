@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcSet(array $VpcSet) 设置本次删除的VPC
  * @method array getAccountVpcSet() 获取本次删除的关联账户的VPC
  * @method void setAccountVpcSet(array $AccountVpcSet) 设置本次删除的关联账户的VPC
+ * @method string getUniqId() 获取唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUniqId(string $UniqId) 设置唯一id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +51,12 @@ class DeleteSpecifyPrivateZoneVpcResponse extends AbstractModel
     public $AccountVpcSet;
 
     /**
+     * @var string 唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UniqId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +65,8 @@ class DeleteSpecifyPrivateZoneVpcResponse extends AbstractModel
      * @param string $ZoneId 私有域id
      * @param array $VpcSet 本次删除的VPC
      * @param array $AccountVpcSet 本次删除的关联账户的VPC
+     * @param string $UniqId 唯一id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -90,6 +102,10 @@ class DeleteSpecifyPrivateZoneVpcResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AccountVpcSet, $obj);
             }
+        }
+
+        if (array_key_exists("UniqId",$param) and $param["UniqId"] !== null) {
+            $this->UniqId = $param["UniqId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

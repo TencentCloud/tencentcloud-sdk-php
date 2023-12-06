@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcSet(array $VpcSet) 设置本次新增的vpc信息
  * @method array getAccountVpcSet() 获取本次新增关联账户vpc信息
  * @method void setAccountVpcSet(array $AccountVpcSet) 设置本次新增关联账户vpc信息
+ * @method boolean getSync() 获取是否为同步操作
+ * @method void setSync(boolean $Sync) 设置是否为同步操作
  */
 class AddSpecifyPrivateZoneVpcRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddSpecifyPrivateZoneVpcRequest extends AbstractModel
     public $AccountVpcSet;
 
     /**
+     * @var boolean 是否为同步操作
+     */
+    public $Sync;
+
+    /**
      * @param string $ZoneId 私有域id
      * @param array $VpcSet 本次新增的vpc信息
      * @param array $AccountVpcSet 本次新增关联账户vpc信息
+     * @param boolean $Sync 是否为同步操作
      */
     function __construct()
     {
@@ -82,6 +90,10 @@ class AddSpecifyPrivateZoneVpcRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AccountVpcSet, $obj);
             }
+        }
+
+        if (array_key_exists("Sync",$param) and $param["Sync"] !== null) {
+            $this->Sync = $param["Sync"];
         }
     }
 }

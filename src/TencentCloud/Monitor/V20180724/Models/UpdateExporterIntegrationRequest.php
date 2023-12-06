@@ -20,62 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateExporterIntegration请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getKind() 获取类型
- * @method void setKind(string $Kind) 设置类型
- * @method string getContent() 获取配置内容
- * @method void setContent(string $Content) 设置配置内容
- * @method integer getKubeType() 获取Kubernetes 集群类型，取值如下：
+ * @method string getInstanceId() 获取Prometheus 实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
+ * @method string getKind() 获取类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
+ * @method void setKind(string $Kind) 设置类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
+ * @method string getContent() 获取配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
+ * @method void setContent(string $Content) 设置配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
+ * @method integer getKubeType() 获取Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
- * @method void setKubeType(integer $KubeType) 设置Kubernetes 集群类型，取值如下：
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+ * @method void setKubeType(integer $KubeType) 设置Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
- * @method string getClusterId() 获取集群 ID
- * @method void setClusterId(string $ClusterId) 设置集群 ID
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+ * @method string getClusterId() 获取集群 ID，可不填
+ * @method void setClusterId(string $ClusterId) 设置集群 ID，可不填
  */
 class UpdateExporterIntegrationRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Prometheus 实例 ID
      */
     public $InstanceId;
 
     /**
-     * @var string 类型
+     * @var string 类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
      */
     public $Kind;
 
     /**
-     * @var string 配置内容
+     * @var string 配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
      */
     public $Content;
 
     /**
-     * @var integer Kubernetes 集群类型，取值如下：
+     * @var integer Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
      */
     public $KubeType;
 
     /**
-     * @var string 集群 ID
+     * @var string 集群 ID，可不填
      */
     public $ClusterId;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $Kind 类型
-     * @param string $Content 配置内容
-     * @param integer $KubeType Kubernetes 集群类型，取值如下：
+     * @param string $InstanceId Prometheus 实例 ID
+     * @param string $Kind 类型(可通过 DescribeExporterIntegrations 获取对应集成的 Kind)
+     * @param string $Content 配置内容(可通过 DescribeExporterIntegrations 接口获取对应集成的 Content，并在此基础上做修改)
+     * @param integer $KubeType Kubernetes 集群类型，可不填。取值如下：
 <li> 1= 容器集群(TKE) </li>
-<li> 2=弹性集群<EKS> </li>
-<li> 3= Prometheus管理的弹性集群<MEKS> </li>
-     * @param string $ClusterId 集群 ID
+<li> 2=弹性集群(EKS) </li>
+<li> 3= Prometheus管理的弹性集群(MEKS) </li>
+     * @param string $ClusterId 集群 ID，可不填
      */
     function __construct()
     {

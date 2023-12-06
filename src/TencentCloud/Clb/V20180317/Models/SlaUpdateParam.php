@@ -23,7 +23,6 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLoadBalancerId() 获取lb的字符串ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置lb的字符串ID
  * @method string getSlaType() 获取性能容量型规格，取值范围：
-<li> SLA：超强型4规格 </li>
 <li> clb.c2.medium：标准型规格 </li>
 <li> clb.c3.small：高阶型1规格 </li>
 <li> clb.c3.medium：高阶型2规格 </li>
@@ -32,7 +31,6 @@ use TencentCloud\Common\AbstractModel;
 <li> clb.c4.large：超强型3规格 </li>
 <li> clb.c4.xlarge：超强型4规格 </li>如需了解规格详情，请参见[实例规格对比](https://cloud.tencent.com/document/product/214/84689)
  * @method void setSlaType(string $SlaType) 设置性能容量型规格，取值范围：
-<li> SLA：超强型4规格 </li>
 <li> clb.c2.medium：标准型规格 </li>
 <li> clb.c3.small：高阶型1规格 </li>
 <li> clb.c3.medium：高阶型2规格 </li>
@@ -50,7 +48,6 @@ class SlaUpdateParam extends AbstractModel
 
     /**
      * @var string 性能容量型规格，取值范围：
-<li> SLA：超强型4规格 </li>
 <li> clb.c2.medium：标准型规格 </li>
 <li> clb.c3.small：高阶型1规格 </li>
 <li> clb.c3.medium：高阶型2规格 </li>
@@ -64,7 +61,6 @@ class SlaUpdateParam extends AbstractModel
     /**
      * @param string $LoadBalancerId lb的字符串ID
      * @param string $SlaType 性能容量型规格，取值范围：
-<li> SLA：超强型4规格 </li>
 <li> clb.c2.medium：标准型规格 </li>
 <li> clb.c3.small：高阶型1规格 </li>
 <li> clb.c3.medium：高阶型2规格 </li>

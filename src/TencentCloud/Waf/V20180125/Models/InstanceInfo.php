@@ -20,40 +20,60 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 一个实例的详细信息
  *
- * @method string getInstanceId() 获取id
- * @method void setInstanceId(string $InstanceId) 设置id
- * @method string getInstanceName() 获取Name
- * @method void setInstanceName(string $InstanceName) 设置Name
- * @method string getResourceIds() 获取资源id
- * @method void setResourceIds(string $ResourceIds) 设置资源id
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
+ * @method string getInstanceId() 获取实例唯一ID
+ * @method void setInstanceId(string $InstanceId) 设置实例唯一ID
+ * @method string getInstanceName() 获取实例名称
+ * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method string getResourceIds() 获取实例对应资源ID，计费使用
+ * @method void setResourceIds(string $ResourceIds) 设置实例对应资源ID，计费使用
+ * @method string getRegion() 获取实例所属地域
+ * @method void setRegion(string $Region) 设置实例所属地域
  * @method integer getPayMode() 获取付费模式
  * @method void setPayMode(integer $PayMode) 设置付费模式
- * @method integer getRenewFlag() 获取自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置自动续费
- * @method integer getMode() 获取弹性计费
- * @method void setMode(integer $Mode) 设置弹性计费
- * @method integer getLevel() 获取套餐版本
- * @method void setLevel(integer $Level) 设置套餐版本
- * @method string getValidTime() 获取过期时间
- * @method void setValidTime(string $ValidTime) 设置过期时间
- * @method string getBeginTime() 获取开始时间
- * @method void setBeginTime(string $BeginTime) 设置开始时间
- * @method integer getDomainCount() 获取已用
- * @method void setDomainCount(integer $DomainCount) 设置已用
- * @method integer getSubDomainLimit() 获取上限
- * @method void setSubDomainLimit(integer $SubDomainLimit) 设置上限
- * @method integer getMainDomainCount() 获取已用
- * @method void setMainDomainCount(integer $MainDomainCount) 设置已用
- * @method integer getMainDomainLimit() 获取上限
- * @method void setMainDomainLimit(integer $MainDomainLimit) 设置上限
- * @method integer getMaxQPS() 获取峰值
- * @method void setMaxQPS(integer $MaxQPS) 设置峰值
- * @method QPSPackageNew getQPS() 获取qps套餐
- * @method void setQPS(QPSPackageNew $QPS) 设置qps套餐
- * @method DomainPackageNew getDomainPkg() 获取域名套餐
- * @method void setDomainPkg(DomainPackageNew $DomainPkg) 设置域名套餐
+ * @method integer getRenewFlag() 获取自动续费标识。
+0：关闭
+1：开启
+ * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标识。
+0：关闭
+1：开启
+ * @method integer getMode() 获取弹性计费开关。
+0：关闭
+1：开启
+ * @method void setMode(integer $Mode) 设置弹性计费开关。
+0：关闭
+1：开启
+ * @method integer getLevel() 获取实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
+ * @method void setLevel(integer $Level) 设置实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
+ * @method string getValidTime() 获取实例过期时间
+ * @method void setValidTime(string $ValidTime) 设置实例过期时间
+ * @method string getBeginTime() 获取实例开始时间
+ * @method void setBeginTime(string $BeginTime) 设置实例开始时间
+ * @method integer getDomainCount() 获取已配置域名个数
+ * @method void setDomainCount(integer $DomainCount) 设置已配置域名个数
+ * @method integer getSubDomainLimit() 获取域名数量上限
+ * @method void setSubDomainLimit(integer $SubDomainLimit) 设置域名数量上限
+ * @method integer getMainDomainCount() 获取已配置主域名个数
+ * @method void setMainDomainCount(integer $MainDomainCount) 设置已配置主域名个数
+ * @method integer getMainDomainLimit() 获取主域名数量上限
+ * @method void setMainDomainLimit(integer $MainDomainLimit) 设置主域名数量上限
+ * @method integer getMaxQPS() 获取实例30天内QPS峰值
+ * @method void setMaxQPS(integer $MaxQPS) 设置实例30天内QPS峰值
+ * @method QPSPackageNew getQPS() 获取qps扩展包信息
+ * @method void setQPS(QPSPackageNew $QPS) 设置qps扩展包信息
+ * @method DomainPackageNew getDomainPkg() 获取域名扩展包信息
+ * @method void setDomainPkg(DomainPackageNew $DomainPkg) 设置域名扩展包信息
  * @method integer getAppId() 获取用户appid
  * @method void setAppId(integer $AppId) 设置用户appid
  * @method string getEdition() 获取clb或saas
@@ -96,9 +116,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置实例状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSandboxQps() 获取实例沙箱值
+ * @method integer getSandboxQps() 获取实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSandboxQps(integer $SandboxQps) 设置实例沙箱值
+ * @method void setSandboxQps(integer $SandboxQps) 设置实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAPISecurityTrial() 获取是否api 安全试用
 注意：此字段可能返回 null，表示取不到有效值。
@@ -116,26 +136,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiPkg(ApiPkg $ApiPkg) 设置API安全资源包
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MiniPkg getMiniPkg() 获取小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMiniPkg(MiniPkg $MiniPkg) 设置小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMiniQpsStandard() 获取小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMiniQpsStandard(integer $MiniQpsStandard) 设置小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMiniMaxQPS() 获取小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMiniMaxQPS(integer $MiniMaxQPS) 设置小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
     /**
-     * @var string id
+     * @var string 实例唯一ID
      */
     public $InstanceId;
 
     /**
-     * @var string Name
+     * @var string 实例名称
      */
     public $InstanceName;
 
     /**
-     * @var string 资源id
+     * @var string 实例对应资源ID，计费使用
      */
     public $ResourceIds;
 
     /**
-     * @var string 地域
+     * @var string 实例所属地域
      */
     public $Region;
 
@@ -145,62 +177,72 @@ class InstanceInfo extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer 自动续费
+     * @var integer 自动续费标识。
+0：关闭
+1：开启
      */
     public $RenewFlag;
 
     /**
-     * @var integer 弹性计费
+     * @var integer 弹性计费开关。
+0：关闭
+1：开启
      */
     public $Mode;
 
     /**
-     * @var integer 套餐版本
+     * @var integer 实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
      */
     public $Level;
 
     /**
-     * @var string 过期时间
+     * @var string 实例过期时间
      */
     public $ValidTime;
 
     /**
-     * @var string 开始时间
+     * @var string 实例开始时间
      */
     public $BeginTime;
 
     /**
-     * @var integer 已用
+     * @var integer 已配置域名个数
      */
     public $DomainCount;
 
     /**
-     * @var integer 上限
+     * @var integer 域名数量上限
      */
     public $SubDomainLimit;
 
     /**
-     * @var integer 已用
+     * @var integer 已配置主域名个数
      */
     public $MainDomainCount;
 
     /**
-     * @var integer 上限
+     * @var integer 主域名数量上限
      */
     public $MainDomainLimit;
 
     /**
-     * @var integer 峰值
+     * @var integer 实例30天内QPS峰值
      */
     public $MaxQPS;
 
     /**
-     * @var QPSPackageNew qps套餐
+     * @var QPSPackageNew qps扩展包信息
      */
     public $QPS;
 
     /**
-     * @var DomainPackageNew 域名套餐
+     * @var DomainPackageNew 域名扩展包信息
      */
     public $DomainPkg;
 
@@ -274,7 +316,7 @@ class InstanceInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 实例沙箱值
+     * @var integer 实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SandboxQps;
@@ -304,23 +346,51 @@ class InstanceInfo extends AbstractModel
     public $ApiPkg;
 
     /**
-     * @param string $InstanceId id
-     * @param string $InstanceName Name
-     * @param string $ResourceIds 资源id
-     * @param string $Region 地域
+     * @var MiniPkg 小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MiniPkg;
+
+    /**
+     * @var integer 小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MiniQpsStandard;
+
+    /**
+     * @var integer 小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MiniMaxQPS;
+
+    /**
+     * @param string $InstanceId 实例唯一ID
+     * @param string $InstanceName 实例名称
+     * @param string $ResourceIds 实例对应资源ID，计费使用
+     * @param string $Region 实例所属地域
      * @param integer $PayMode 付费模式
-     * @param integer $RenewFlag 自动续费
-     * @param integer $Mode 弹性计费
-     * @param integer $Level 套餐版本
-     * @param string $ValidTime 过期时间
-     * @param string $BeginTime 开始时间
-     * @param integer $DomainCount 已用
-     * @param integer $SubDomainLimit 上限
-     * @param integer $MainDomainCount 已用
-     * @param integer $MainDomainLimit 上限
-     * @param integer $MaxQPS 峰值
-     * @param QPSPackageNew $QPS qps套餐
-     * @param DomainPackageNew $DomainPkg 域名套餐
+     * @param integer $RenewFlag 自动续费标识。
+0：关闭
+1：开启
+     * @param integer $Mode 弹性计费开关。
+0：关闭
+1：开启
+     * @param integer $Level 实例套餐版本。
+101：小微版
+102：超轻版
+2：高级版
+3：企业版
+4：旗舰版
+6：独享版
+     * @param string $ValidTime 实例过期时间
+     * @param string $BeginTime 实例开始时间
+     * @param integer $DomainCount 已配置域名个数
+     * @param integer $SubDomainLimit 域名数量上限
+     * @param integer $MainDomainCount 已配置主域名个数
+     * @param integer $MainDomainLimit 主域名数量上限
+     * @param integer $MaxQPS 实例30天内QPS峰值
+     * @param QPSPackageNew $QPS qps扩展包信息
+     * @param DomainPackageNew $DomainPkg 域名扩展包信息
      * @param integer $AppId 用户appid
      * @param string $Edition clb或saas
      * @param FraudPkg $FraudPkg 业务安全包
@@ -342,7 +412,7 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 实例状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SandboxQps 实例沙箱值
+     * @param integer $SandboxQps 实例沙箱qps值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAPISecurityTrial 是否api 安全试用
 注意：此字段可能返回 null，表示取不到有效值。
@@ -351,6 +421,12 @@ class InstanceInfo extends AbstractModel
      * @param HybridPkg $HybridPkg 混合云子节点包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiPkg $ApiPkg API安全资源包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MiniPkg $MiniPkg 小程序安全加速包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MiniQpsStandard 小程序qps规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MiniMaxQPS 小程序qps峰值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -508,6 +584,19 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("ApiPkg",$param) and $param["ApiPkg"] !== null) {
             $this->ApiPkg = new ApiPkg();
             $this->ApiPkg->deserialize($param["ApiPkg"]);
+        }
+
+        if (array_key_exists("MiniPkg",$param) and $param["MiniPkg"] !== null) {
+            $this->MiniPkg = new MiniPkg();
+            $this->MiniPkg->deserialize($param["MiniPkg"]);
+        }
+
+        if (array_key_exists("MiniQpsStandard",$param) and $param["MiniQpsStandard"] !== null) {
+            $this->MiniQpsStandard = $param["MiniQpsStandard"];
+        }
+
+        if (array_key_exists("MiniMaxQPS",$param) and $param["MiniMaxQPS"] !== null) {
+            $this->MiniMaxQPS = $param["MiniMaxQPS"];
         }
     }
 }

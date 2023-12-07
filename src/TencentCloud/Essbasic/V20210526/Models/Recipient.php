@@ -56,6 +56,22 @@ false-否
  * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起方，
 true-是 
 false-否
+ * @method array getApproverVerifyTypes() 获取签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul>
+ * @method void setApproverVerifyTypes(array $ApproverVerifyTypes) 设置签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul>
+ * @method array getApproverSignTypes() 获取签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul>
+ * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul>
  */
 class Recipient extends AbstractModel
 {
@@ -114,6 +130,22 @@ false-否
     public $IsPromoter;
 
     /**
+     * @var array 签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul>
+     */
+    public $ApproverVerifyTypes;
+
+    /**
+     * @var array 签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul>
+     */
+    public $ApproverSignTypes;
+
+    /**
      * @param string $RecipientId 合同参与方的角色ID
      * @param string $RecipientType 参与者类型, 可以选择的类型如下:
 <ul><li> **ENTERPRISE** :此角色为企业参与方</li>
@@ -132,6 +164,14 @@ false-否
      * @param boolean $IsPromoter 是否是发起方，
 true-是 
 false-否
+     * @param array $ApproverVerifyTypes 签署人查看合同校验方式, 支持的类型如下:
+<ul><li> 1 :实名认证查看</li>
+<li> 2 :手机号校验查看</li></ul>
+     * @param array $ApproverSignTypes 签署人进行合同签署时的认证方式，支持的类型如下:
+<ul><li> 1 :人脸认证</li>
+<li> 2 :签署密码</li>
+<li> 3 :运营商三要素认证</li>
+<li> 4 :UKey认证</li></ul>
      */
     function __construct()
     {
@@ -180,6 +220,14 @@ false-否
 
         if (array_key_exists("IsPromoter",$param) and $param["IsPromoter"] !== null) {
             $this->IsPromoter = $param["IsPromoter"];
+        }
+
+        if (array_key_exists("ApproverVerifyTypes",$param) and $param["ApproverVerifyTypes"] !== null) {
+            $this->ApproverVerifyTypes = $param["ApproverVerifyTypes"];
+        }
+
+        if (array_key_exists("ApproverSignTypes",$param) and $param["ApproverSignTypes"] !== null) {
+            $this->ApproverSignTypes = $param["ApproverSignTypes"];
         }
     }
 }

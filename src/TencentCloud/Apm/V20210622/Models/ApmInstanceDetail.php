@@ -124,6 +124,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomShowTags(array $CustomShowTags) 设置用户自定义展示标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPayMode() 获取实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMode(integer $PayMode) 设置实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPayModeEffective() 获取实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayModeEffective(boolean $PayModeEffective) 设置实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -288,6 +300,20 @@ class ApmInstanceDetail extends AbstractModel
     public $CustomShowTags;
 
     /**
+     * @var integer 实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMode;
+
+    /**
+     * @var boolean 实例计费模式是否生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayModeEffective;
+
+    /**
      * @param float $AmountOfUsedStorage 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例名
@@ -339,6 +365,12 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $MetricDuration Metric数据保存时长
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomShowTags 用户自定义展示标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PayMode 实例计费模式
+1为预付费
+0为按量付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $PayModeEffective 实例计费模式是否生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -465,6 +497,14 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("CustomShowTags",$param) and $param["CustomShowTags"] !== null) {
             $this->CustomShowTags = $param["CustomShowTags"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("PayModeEffective",$param) and $param["PayModeEffective"] !== null) {
+            $this->PayModeEffective = $param["PayModeEffective"];
         }
     }
 }

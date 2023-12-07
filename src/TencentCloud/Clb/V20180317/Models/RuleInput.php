@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置转发规则的路径。长度限制为：1~200。
  * @method string getDomain() 获取转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
  * @method void setDomain(string $Domain) 设置转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
- * @method integer getSessionExpireTime() 获取会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+ * @method integer getSessionExpireTime() 获取会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
+ * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
  * @method HealthCheck getHealthCheck() 获取健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
  * @method CertificateInput getCertificate() 获取证书信息；此参数和MultiCertInfo不能同时传入。
@@ -66,7 +66,7 @@ class RuleInput extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+     * @var integer 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
      */
     public $SessionExpireTime;
 
@@ -134,7 +134,7 @@ class RuleInput extends AbstractModel
     /**
      * @param string $Url 转发规则的路径。长度限制为：1~200。
      * @param string $Domain 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
-     * @param integer $SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+     * @param integer $SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~86400，单位：秒。
      * @param HealthCheck $HealthCheck 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
      * @param CertificateInput $Certificate 证书信息；此参数和MultiCertInfo不能同时传入。
      * @param string $Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH

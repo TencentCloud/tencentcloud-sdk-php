@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源删除选项
  *
- * @method string getResourceType() 获取资源类型，例如CBS
- * @method void setResourceType(string $ResourceType) 设置资源类型，例如CBS
- * @method string getDeleteMode() 获取集群删除时资源的删除模式：terminate（销毁），retain （保留）
- * @method void setDeleteMode(string $DeleteMode) 设置集群删除时资源的删除模式：terminate（销毁），retain （保留）
+ * @method string getResourceType() 获取资源类型，例如CBS、CLB、CVM
+ * @method void setResourceType(string $ResourceType) 设置资源类型，例如CBS、CLB、CVM
+ * @method string getDeleteMode() 获取集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
+ * @method void setDeleteMode(string $DeleteMode) 设置集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
+ * @method boolean getSkipDeletionProtection() 获取是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
+ * @method void setSkipDeletionProtection(boolean $SkipDeletionProtection) 设置是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
  */
 class ResourceDeleteOption extends AbstractModel
 {
     /**
-     * @var string 资源类型，例如CBS
+     * @var string 资源类型，例如CBS、CLB、CVM
      */
     public $ResourceType;
 
     /**
-     * @var string 集群删除时资源的删除模式：terminate（销毁），retain （保留）
+     * @var string 集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
      */
     public $DeleteMode;
 
     /**
-     * @param string $ResourceType 资源类型，例如CBS
-     * @param string $DeleteMode 集群删除时资源的删除模式：terminate（销毁），retain （保留）
+     * @var boolean 是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
+     */
+    public $SkipDeletionProtection;
+
+    /**
+     * @param string $ResourceType 资源类型，例如CBS、CLB、CVM
+     * @param string $DeleteMode 集群删除时CBS资源的删除模式：terminate（销毁），retain （保留）。其他资源默认为销毁。
+     * @param boolean $SkipDeletionProtection 是否跳过开启删除保护的资源，默认false，设置为true时不清理开启了删除保护的资源，clb有终端节点的情况也属于开了删除保护。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ResourceDeleteOption extends AbstractModel
 
         if (array_key_exists("DeleteMode",$param) and $param["DeleteMode"] !== null) {
             $this->DeleteMode = $param["DeleteMode"];
+        }
+
+        if (array_key_exists("SkipDeletionProtection",$param) and $param["SkipDeletionProtection"] !== null) {
+            $this->SkipDeletionProtection = $param["SkipDeletionProtection"];
         }
     }
 }

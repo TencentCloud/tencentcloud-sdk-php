@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogSource(string $LogSource) 设置CLS | ES
  * @method array getCustomShowTags() 获取用户自定义展示标签列表
  * @method void setCustomShowTags(array $CustomShowTags) 设置用户自定义展示标签列表
+ * @method integer getPayMode() 获取修改计费模式
+1为预付费
+0为按量付费
+ * @method void setPayMode(integer $PayMode) 设置修改计费模式
+1为预付费
+0为按量付费
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -143,6 +149,13 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $CustomShowTags;
 
     /**
+     * @var integer 修改计费模式
+1为预付费
+0为按量付费
+     */
+    public $PayMode;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名
      * @param array $Tags 标签列表
@@ -160,6 +173,9 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param string $LogSet CLS日志集 | ES集群ID
      * @param string $LogSource CLS | ES
      * @param array $CustomShowTags 用户自定义展示标签列表
+     * @param integer $PayMode 修改计费模式
+1为预付费
+0为按量付费
      */
     function __construct()
     {
@@ -245,6 +261,10 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("CustomShowTags",$param) and $param["CustomShowTags"] !== null) {
             $this->CustomShowTags = $param["CustomShowTags"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

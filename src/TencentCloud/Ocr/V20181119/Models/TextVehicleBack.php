@@ -64,6 +64,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubPageCode(string $SubPageCode) 设置副页编码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFuelType() 获取燃料种类
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFuelType(string $FuelType) 设置燃料种类
+
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextVehicleBack extends AbstractModel
 {
@@ -134,6 +140,13 @@ class TextVehicleBack extends AbstractModel
     public $SubPageCode;
 
     /**
+     * @var string 燃料种类
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FuelType;
+
+    /**
      * @param string $PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileNo 档案编号
@@ -155,6 +168,9 @@ class TextVehicleBack extends AbstractModel
      * @param string $TotalQuasiMass 准牵引总质量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubPageCode 副页编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FuelType 燃料种类
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +228,10 @@ class TextVehicleBack extends AbstractModel
 
         if (array_key_exists("SubPageCode",$param) and $param["SubPageCode"] !== null) {
             $this->SubPageCode = $param["SubPageCode"];
+        }
+
+        if (array_key_exists("FuelType",$param) and $param["FuelType"] !== null) {
+            $this->FuelType = $param["FuelType"];
         }
     }
 }

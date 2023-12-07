@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserType(integer $UserType) 设置用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
  * @method string getLastLoginIp() 获取最近登录IP
  * @method void setLastLoginIp(string $LastLoginIp) 设置最近登录IP
- * @method string getLastLoginTime() 获取最近登录时间
+ * @method string getLastLoginTime() 获取最近登录时间，回参为空，即为未登录过控制台
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastLoginTime(string $LastLoginTime) 设置最近登录时间
+ * @method void setLastLoginTime(string $LastLoginTime) 设置最近登录时间，回参为空，即为未登录过控制台
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubAccountUser extends AbstractModel
@@ -80,7 +80,7 @@ class SubAccountUser extends AbstractModel
     public $LastLoginIp;
 
     /**
-     * @var string 最近登录时间
+     * @var string 最近登录时间，回参为空，即为未登录过控制台
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastLoginTime;
@@ -94,7 +94,7 @@ class SubAccountUser extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UserType 用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
      * @param string $LastLoginIp 最近登录IP
-     * @param string $LastLoginTime 最近登录时间
+     * @param string $LastLoginTime 最近登录时间，回参为空，即为未登录过控制台
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签列表
  * @method integer getSpanDailyCounters() 获取实例上报额度值
  * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置实例上报额度值
+ * @method integer getPayMode() 获取实例的计费模式
+ * @method void setPayMode(integer $PayMode) 设置实例的计费模式
  */
 class CreateApmInstanceRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateApmInstanceRequest extends AbstractModel
     public $SpanDailyCounters;
 
     /**
+     * @var integer 实例的计费模式
+     */
+    public $PayMode;
+
+    /**
      * @param string $Name 实例名
      * @param string $Description 实例描述信息
      * @param integer $TraceDuration Trace数据保存时长
      * @param array $Tags 标签列表
      * @param integer $SpanDailyCounters 实例上报额度值
+     * @param integer $PayMode 实例的计费模式
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class CreateApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("SpanDailyCounters",$param) and $param["SpanDailyCounters"] !== null) {
             $this->SpanDailyCounters = $param["SpanDailyCounters"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

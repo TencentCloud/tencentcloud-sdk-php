@@ -142,6 +142,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagInstances(array $TagInstances) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AlarmConditionFilter getFilter() 获取过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFilter(AlarmConditionFilter $Filter) 设置过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getGroupBy() 获取聚合条件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupBy(array $GroupBy) 设置聚合条件
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFilterDimensionsParam() 获取策略关联的过滤维度信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterDimensionsParam(string $FilterDimensionsParam) 设置策略关联的过滤维度信息
@@ -351,6 +359,18 @@ class AlarmPolicy extends AbstractModel
     public $TagInstances;
 
     /**
+     * @var AlarmConditionFilter 过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Filter;
+
+    /**
+     * @var array 聚合条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupBy;
+
+    /**
      * @var string 策略关联的过滤维度信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -453,6 +473,10 @@ class AlarmPolicy extends AbstractModel
      * @param string $OriginId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagInstances 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmConditionFilter $Filter 过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $GroupBy 聚合条件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FilterDimensionsParam 策略关联的过滤维度信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -613,6 +637,20 @@ class AlarmPolicy extends AbstractModel
                 $obj = new TagInstance();
                 $obj->deserialize($value);
                 array_push($this->TagInstances, $obj);
+            }
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = new AlarmConditionFilter();
+            $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = [];
+            foreach ($param["GroupBy"] as $key => $value){
+                $obj = new AlarmGroupByItem();
+                $obj->deserialize($value);
+                array_push($this->GroupBy, $obj);
             }
         }
 

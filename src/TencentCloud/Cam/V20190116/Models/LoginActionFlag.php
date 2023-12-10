@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWechat(integer $Wechat) 设置微信
  * @method integer getCustom() 获取自定义
  * @method void setCustom(integer $Custom) 设置自定义
+ * @method integer getMail() 获取邮箱
+ * @method void setMail(integer $Mail) 设置邮箱
  */
 class LoginActionFlag extends AbstractModel
 {
@@ -59,11 +61,17 @@ class LoginActionFlag extends AbstractModel
     public $Custom;
 
     /**
+     * @var integer 邮箱
+     */
+    public $Mail;
+
+    /**
      * @param integer $Phone 手机
      * @param integer $Token 硬token
      * @param integer $Stoken 软token
      * @param integer $Wechat 微信
      * @param integer $Custom 自定义
+     * @param integer $Mail 邮箱
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class LoginActionFlag extends AbstractModel
 
         if (array_key_exists("Custom",$param) and $param["Custom"] !== null) {
             $this->Custom = $param["Custom"];
+        }
+
+        if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {
+            $this->Mail = $param["Mail"];
         }
     }
 }

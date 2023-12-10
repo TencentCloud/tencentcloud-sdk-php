@@ -46,6 +46,7 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\ModifyPrivateZoneRecordResponse ModifyPrivateZoneRecord(Models\ModifyPrivateZoneRecordRequest $req) 修改私有域解析记录
  * @method Models\ModifyPrivateZoneVpcResponse ModifyPrivateZoneVpc(Models\ModifyPrivateZoneVpcRequest $req) 修改私有域关联的VPC
  * @method Models\ModifyRecordsStatusResponse ModifyRecordsStatus(Models\ModifyRecordsStatusRequest $req) 修改解析记录状态
+ * @method Models\QueryAsyncBindVpcStatusResponse QueryAsyncBindVpcStatus(Models\QueryAsyncBindVpcStatusRequest $req) 查询异步绑定vpc操作状态
  * @method Models\SubscribePrivateZoneServiceResponse SubscribePrivateZoneService(Models\SubscribePrivateZoneServiceRequest $req) 开通私有域解析
  */
 

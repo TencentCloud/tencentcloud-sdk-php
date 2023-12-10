@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOriginProtection请求参数结构体
  *
- * @method array getZoneIds() 获取查询的站点集合，不填默认查询所有站点。
- * @method void setZoneIds(array $ZoneIds) 设置查询的站点集合，不填默认查询所有站点。
+ * @method array getZoneIds() 获取查询的站点ID集合。该参数必填。
+ * @method void setZoneIds(array $ZoneIds) 设置查询的站点ID集合。该参数必填。
  * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>need-update<br>   按照【<strong>站点是否需要更新源站防护IP白名单</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：需要更新<br>   false：无需更新<br></li>
 <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOriginProtectionRequest extends AbstractModel
 {
     /**
-     * @var array 查询的站点集合，不填默认查询所有站点。
+     * @var array 查询的站点ID集合。该参数必填。
      */
     public $ZoneIds;
 
@@ -58,7 +58,7 @@ class DescribeOriginProtectionRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $ZoneIds 查询的站点集合，不填默认查询所有站点。
+     * @param array $ZoneIds 查询的站点ID集合。该参数必填。
      * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>need-update<br>   按照【<strong>站点是否需要更新源站防护IP白名单</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：需要更新<br>   false：无需更新<br></li>
 <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>

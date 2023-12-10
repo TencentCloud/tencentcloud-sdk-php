@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxBandWidth() 获取峰值带宽。单位：mbps
  * @method void setMaxBandWidth(integer $MaxBandWidth) 设置峰值带宽。单位：mbps
+ * @method array getTags() 获取集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarProInstance extends AbstractModel
 {
@@ -148,6 +156,18 @@ class PulsarProInstance extends AbstractModel
     public $MaxBandWidth;
 
     /**
+     * @var array 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -168,6 +188,10 @@ class PulsarProInstance extends AbstractModel
      * @param string $SubnetId 子网id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxBandWidth 峰值带宽。单位：mbps
+     * @param array $Tags 集群的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -244,6 +268,19 @@ class PulsarProInstance extends AbstractModel
 
         if (array_key_exists("MaxBandWidth",$param) and $param["MaxBandWidth"] !== null) {
             $this->MaxBandWidth = $param["MaxBandWidth"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

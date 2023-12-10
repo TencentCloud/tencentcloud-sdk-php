@@ -614,6 +614,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 - 需调用创建并返回出证报告接口<a href="https://qian.tencent.com/developers/partnerApis/certificate/CreateChannelFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>获取报告编号后调用当前接口获取报告链接。
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/1b4307ed143a992940c41d61192d3a0f/channel_CreateChannelFlowEvidenceReport.png)
+ * @method Models\DescribeChannelOrganizationsResponse DescribeChannelOrganizations(Models\DescribeChannelOrganizationsRequest $req) 查询渠道子客企业信息
  * @method Models\DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrl(Models\DescribeChannelSealPolicyWorkflowUrlRequest $req) 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转的方式查看）
  * @method Models\DescribeExtendedServiceAuthInfoResponse DescribeExtendedServiceAuthInfo(Models\DescribeExtendedServiceAuthInfoRequest $req) 查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
 1. 企业自动签

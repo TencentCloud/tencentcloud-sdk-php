@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AbortJob请求参数结构体
  *
- * @method string getJobId() 获取任务ID
- * @method void setJobId(string $JobId) 设置任务ID
+ * @method string getJobId() 获取待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
+ * @method void setJobId(string $JobId) 设置待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getScenarioId() 获取场景ID
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class AbortJobRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
      */
     public $JobId;
 
@@ -52,7 +52,7 @@ class AbortJobRequest extends AbstractModel
     public $AbortReason;
 
     /**
-     * @param string $JobId 任务ID
+     * @param string $JobId 待停止的压测任务的 ID（所有的压测任务 ID 可以从 DescribeJobs 接口获取）
      * @param string $ProjectId 项目ID
      * @param string $ScenarioId 场景ID
      * @param integer $AbortReason 中断原因

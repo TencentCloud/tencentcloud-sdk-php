@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteJobs请求参数结构体
  *
- * @method array getJobIds() 获取任务ID数组
- * @method void setJobIds(array $JobIds) 设置任务ID数组
+ * @method array getJobIds() 获取待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
+ * @method void setJobIds(array $JobIds) 设置待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method array getScenarioIds() 获取场景ID数组
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteJobsRequest extends AbstractModel
 {
     /**
-     * @var array 任务ID数组
+     * @var array 待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
      */
     public $JobIds;
 
@@ -45,7 +45,7 @@ class DeleteJobsRequest extends AbstractModel
     public $ScenarioIds;
 
     /**
-     * @param array $JobIds 任务ID数组
+     * @param array $JobIds 待删除的任务的 ID（所有任务的 ID 可以从 DescribeJobs 获取）
      * @param string $ProjectId 项目ID
      * @param array $ScenarioIds 场景ID数组
      */

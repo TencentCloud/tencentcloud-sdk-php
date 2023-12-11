@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceName() 获取实例名
  * @method void setInstanceName(string $InstanceName) 设置实例名
- * @method string getVpcId() 获取VPC ID
- * @method void setVpcId(string $VpcId) 设置VPC ID
- * @method string getSubnetId() 获取子网 ID
- * @method void setSubnetId(string $SubnetId) 设置子网 ID
+ * @method string getVpcId() 获取VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
+ * @method void setVpcId(string $VpcId) 设置VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
+ * @method string getSubnetId() 获取子网 ID(可通过 vpc:DescribeSubnets 接口获取)
+ * @method void setSubnetId(string $SubnetId) 设置子网 ID(可通过 vpc:DescribeSubnets 接口获取)
  * @method integer getDataRetentionTime() 获取数据存储时间（单位天），限制值为15，30，45之一
  * @method void setDataRetentionTime(integer $DataRetentionTime) 设置数据存储时间（单位天），限制值为15，30，45之一
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
+ * @method string getZone() 获取可用区(与子网同可用区)
+ * @method void setZone(string $Zone) 设置可用区(与子网同可用区)
  * @method array getTagSpecification() 获取实例的标签
  * @method void setTagSpecification(array $TagSpecification) 设置实例的标签
  * @method string getGrafanaInstanceId() 获取需要关联的 Grafana 实例
@@ -43,12 +43,12 @@ class CreatePrometheusMultiTenantInstancePostPayModeRequest extends AbstractMode
     public $InstanceName;
 
     /**
-     * @var string VPC ID
+     * @var string VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
      */
     public $VpcId;
 
     /**
-     * @var string 子网 ID
+     * @var string 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
      */
     public $SubnetId;
 
@@ -58,7 +58,7 @@ class CreatePrometheusMultiTenantInstancePostPayModeRequest extends AbstractMode
     public $DataRetentionTime;
 
     /**
-     * @var string 可用区
+     * @var string 可用区(与子网同可用区)
      */
     public $Zone;
 
@@ -74,10 +74,10 @@ class CreatePrometheusMultiTenantInstancePostPayModeRequest extends AbstractMode
 
     /**
      * @param string $InstanceName 实例名
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId 子网 ID
+     * @param string $VpcId VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
+     * @param string $SubnetId 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
      * @param integer $DataRetentionTime 数据存储时间（单位天），限制值为15，30，45之一
-     * @param string $Zone 可用区
+     * @param string $Zone 可用区(与子网同可用区)
      * @param array $TagSpecification 实例的标签
      * @param string $GrafanaInstanceId 需要关联的 Grafana 实例
      */

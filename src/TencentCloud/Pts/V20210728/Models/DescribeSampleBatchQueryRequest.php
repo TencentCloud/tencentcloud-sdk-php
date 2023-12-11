@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSampleBatchQuery请求参数结构体
  *
- * @method string getJobId() 获取job id
- * @method void setJobId(string $JobId) 设置job id
- * @method string getScenarioId() 获取场景id
- * @method void setScenarioId(string $ScenarioId) 设置场景id
+ * @method string getJobId() 获取压测任务的 ID
+ * @method void setJobId(string $JobId) 设置压测任务的 ID
+ * @method string getScenarioId() 获取场景的 ID
+ * @method void setScenarioId(string $ScenarioId) 设置场景的 ID
  * @method array getQueries() 获取查询指标数组
  * @method void setQueries(array $Queries) 设置查询指标数组
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getProjectId() 获取项目的 ID
+ * @method void setProjectId(string $ProjectId) 设置项目的 ID
  */
 class DescribeSampleBatchQueryRequest extends AbstractModel
 {
     /**
-     * @var string job id
+     * @var string 压测任务的 ID
      */
     public $JobId;
 
     /**
-     * @var string 场景id
+     * @var string 场景的 ID
      */
     public $ScenarioId;
 
@@ -47,15 +47,15 @@ class DescribeSampleBatchQueryRequest extends AbstractModel
     public $Queries;
 
     /**
-     * @var string 项目ID
+     * @var string 项目的 ID
      */
     public $ProjectId;
 
     /**
-     * @param string $JobId job id
-     * @param string $ScenarioId 场景id
+     * @param string $JobId 压测任务的 ID
+     * @param string $ScenarioId 场景的 ID
      * @param array $Queries 查询指标数组
-     * @param string $ProjectId 项目ID
+     * @param string $ProjectId 项目的 ID
      */
     function __construct()
     {

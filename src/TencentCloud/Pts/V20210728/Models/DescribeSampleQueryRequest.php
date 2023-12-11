@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置job id
  * @method string getScenarioId() 获取场景Id
  * @method void setScenarioId(string $ScenarioId) 设置场景Id
- * @method string getMetric() 获取指标名
- * @method void setMetric(string $Metric) 设置指标名
- * @method string getAggregation() 获取聚合条件
- * @method void setAggregation(string $Aggregation) 设置聚合条件
+ * @method string getMetric() 获取指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+ * @method void setMetric(string $Metric) 设置指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+ * @method string getAggregation() 获取聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
+ * @method void setAggregation(string $Aggregation) 设置聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method array getLabels() 获取过滤条件
- * @method void setLabels(array $Labels) 设置过滤条件
+ * @method array getLabels() 获取标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
+ * @method void setLabels(array $Labels) 设置标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
  */
 class DescribeSampleQueryRequest extends AbstractModel
 {
@@ -46,12 +46,12 @@ class DescribeSampleQueryRequest extends AbstractModel
     public $ScenarioId;
 
     /**
-     * @var string 指标名
+     * @var string 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
      */
     public $Metric;
 
     /**
-     * @var string 聚合条件
+     * @var string 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public $Aggregation;
 
@@ -61,17 +61,17 @@ class DescribeSampleQueryRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 过滤条件
+     * @var array 标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
      */
     public $Labels;
 
     /**
      * @param string $JobId job id
      * @param string $ScenarioId 场景Id
-     * @param string $Metric 指标名
-     * @param string $Aggregation 聚合条件
+     * @param string $Metric 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+     * @param string $Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      * @param string $ProjectId 项目ID
-     * @param array $Labels 过滤条件
+     * @param array $Labels 标签过滤条件。各指标支持的标签参见 DescribeMetricLabelWithValues 接口返回的所有指标及其支持的标签
      */
     function __construct()
     {

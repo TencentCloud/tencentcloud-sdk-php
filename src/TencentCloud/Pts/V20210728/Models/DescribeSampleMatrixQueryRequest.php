@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getScenarioId() 获取场景ID
  * @method void setScenarioId(string $ScenarioId) 设置场景ID
- * @method string getMetric() 获取指标名字
- * @method void setMetric(string $Metric) 设置指标名字
- * @method string getAggregation() 获取聚合函数
- * @method void setAggregation(string $Aggregation) 设置聚合函数
- * @method array getFilters() 获取指标过滤
- * @method void setFilters(array $Filters) 设置指标过滤
+ * @method string getMetric() 获取指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+ * @method void setMetric(string $Metric) 设置指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+ * @method string getAggregation() 获取聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
+ * @method void setAggregation(string $Aggregation) 设置聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
+ * @method array getFilters() 获取用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
+ * @method void setFilters(array $Filters) 设置用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
  * @method array getGroupBy() 获取分组
  * @method void setGroupBy(array $GroupBy) 设置分组
  */
@@ -53,17 +53,17 @@ class DescribeSampleMatrixQueryRequest extends AbstractModel
     public $ScenarioId;
 
     /**
-     * @var string 指标名字
+     * @var string 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
      */
     public $Metric;
 
     /**
-     * @var string 聚合函数
+     * @var string 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public $Aggregation;
 
     /**
-     * @var array 指标过滤
+     * @var array 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      */
     public $Filters;
 
@@ -76,9 +76,9 @@ class DescribeSampleMatrixQueryRequest extends AbstractModel
      * @param string $JobId 任务ID
      * @param string $ProjectId 项目ID
      * @param string $ScenarioId 场景ID
-     * @param string $Metric 指标名字
-     * @param string $Aggregation 聚合函数
-     * @param array $Filters 指标过滤
+     * @param string $Metric 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+     * @param string $Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
+     * @param array $Filters 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      * @param array $GroupBy 分组
      */
     function __construct()

@@ -23,6 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method array getIntegrationCodes() 获取Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -40,7 +47,16 @@ use TencentCloud\Common\AbstractModel;
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+<li>pts</li>
+<li>kong</li>
  * @method void setIntegrationCodes(array $IntegrationCodes) 设置Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -58,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+<li>pts</li>
+<li>kong</li>
  */
 class UpgradeGrafanaDashboardRequest extends AbstractModel
 {
@@ -68,6 +86,13 @@ class UpgradeGrafanaDashboardRequest extends AbstractModel
 
     /**
      * @var array Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -85,12 +110,21 @@ class UpgradeGrafanaDashboardRequest extends AbstractModel
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+<li>pts</li>
+<li>kong</li>
      */
     public $IntegrationCodes;
 
     /**
      * @param string $InstanceId 实例 ID
      * @param array $IntegrationCodes Prometheus 集成项 Code，升级对应的 Dashboard，取值如下：
+<li>qcloud</li>
+<li>cvm_process_exporter</li>
+<li>cvm_node_exporter</li>
+<li>cvm</li>
+<li>kubernetes</li>
+<li>cdwch</li>
+<li>rocketmq</li>
 <li>spring_mvc</li>
 <li>mysql</li>
 <li>go</li>
@@ -108,6 +142,8 @@ class UpgradeGrafanaDashboardRequest extends AbstractModel
 <li>tps</li>
 <li>istio</li>
 <li>etcd</li>
+<li>pts</li>
+<li>kong</li>
      */
     function __construct()
     {

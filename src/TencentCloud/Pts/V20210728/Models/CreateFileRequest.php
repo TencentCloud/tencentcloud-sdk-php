@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFile请求参数结构体
  *
- * @method string getFileId() 获取文件 ID
- * @method void setFileId(string $FileId) 设置文件 ID
+ * @method string getFileId() 获取文件 ID。其值应为前序步骤上传该文件到 cos 桶后，文件在 cos 桶中的相应目录
+ * @method void setFileId(string $FileId) 设置文件 ID。其值应为前序步骤上传该文件到 cos 桶后，文件在 cos 桶中的相应目录
  * @method string getProjectId() 获取项目 ID
  * @method void setProjectId(string $ProjectId) 设置项目 ID
  * @method integer getKind() 获取文件种类，参数文件-1，协议文件-2，请求文件-3
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateFileRequest extends AbstractModel
 {
     /**
-     * @var string 文件 ID
+     * @var string 文件 ID。其值应为前序步骤上传该文件到 cos 桶后，文件在 cos 桶中的相应目录
      */
     public $FileId;
 
@@ -108,7 +108,7 @@ class CreateFileRequest extends AbstractModel
     public $FileInfos;
 
     /**
-     * @param string $FileId 文件 ID
+     * @param string $FileId 文件 ID。其值应为前序步骤上传该文件到 cos 桶后，文件在 cos 桶中的相应目录
      * @param string $ProjectId 项目 ID
      * @param integer $Kind 文件种类，参数文件-1，协议文件-2，请求文件-3
      * @param string $Name 文件名

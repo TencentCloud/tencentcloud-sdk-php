@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置场景名
  * @method string getDescription() 获取场景描述
  * @method void setDescription(string $Description) 设置场景描述
- * @method string getType() 获取压测引擎类型
- * @method void setType(string $Type) 设置压测引擎类型
+ * @method string getType() 获取压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
+ * @method void setType(string $Type) 设置压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
  * @method Load getLoad() 获取施压配置
  * @method void setLoad(Load $Load) 设置施压配置
  * @method string getEncodedScripts() 获取deprecated
@@ -83,7 +83,7 @@ class UpdateScenarioRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 压测引擎类型
+     * @var string 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
      */
     public $Type;
 
@@ -181,7 +181,7 @@ class UpdateScenarioRequest extends AbstractModel
      * @param string $ScenarioId 场景ID
      * @param string $Name 场景名
      * @param string $Description 场景描述
-     * @param string $Type 压测引擎类型
+     * @param string $Type 压测场景的模式类型。取值范围：pts-http 代表简单模式，pts-js 代表脚本模式，pts-jmeter 代表 JMeter 模式。
      * @param Load $Load 施压配置
      * @param string $EncodedScripts deprecated
      * @param array $Configs deprecated

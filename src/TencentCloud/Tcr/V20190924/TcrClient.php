@@ -75,9 +75,6 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeApplicationTriggerLogPersonalResponse DescribeApplicationTriggerLogPersonal(Models\DescribeApplicationTriggerLogPersonalRequest $req) 用于查询应用更新触发器触发日志
  * @method Models\DescribeApplicationTriggerPersonalResponse DescribeApplicationTriggerPersonal(Models\DescribeApplicationTriggerPersonalRequest $req) 用于查询应用更新触发器
  * @method Models\DescribeChartDownloadInfoResponse DescribeChartDownloadInfo(Models\DescribeChartDownloadInfoRequest $req) 用于在企业版中返回Chart的下载信息
- * @method Models\DescribeCustomAccountsResponse DescribeCustomAccounts(Models\DescribeCustomAccountsRequest $req) 接口未使用
-
-查询自定义账号
  * @method Models\DescribeExternalEndpointStatusResponse DescribeExternalEndpointStatus(Models\DescribeExternalEndpointStatusRequest $req) 查询实例公网访问入口状态
  * @method Models\DescribeFavorRepositoryPersonalResponse DescribeFavorRepositoryPersonal(Models\DescribeFavorRepositoryPersonalRequest $req) 查询个人收藏仓库
  * @method Models\DescribeGCJobsResponse DescribeGCJobs(Models\DescribeGCJobsRequest $req) GC 最近10条历史

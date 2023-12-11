@@ -20,10 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBatchQuickSignUrl请求参数结构体
  *
- * @method array getFlowIds() 获取批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
- * @method void setFlowIds(array $FlowIds) 设置批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
  * @method FlowCreateApprover getFlowApproverInfo() 获取批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 注:
 `1. ApproverType目前只支持个人类型的签署人。`
@@ -42,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method array getFlowIds() 获取批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+ * @method void setFlowIds(array $FlowIds) 设置批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+ * @method string getFlowGroupId() 获取合同组编号
+注：`该参数和合同流程ID数组必须二选一`
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组编号
+注：`该参数和合同流程ID数组必须二选一`
  * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
  * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
  * @method array getSignatureTypes() 获取指定批量签署合同的签名类型，可传递以下值：
@@ -74,12 +78,6 @@ use TencentCloud\Common\AbstractModel;
 class CreateBatchQuickSignUrlRequest extends AbstractModel
 {
     /**
-     * @var array 批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
-     */
-    public $FlowIds;
-
-    /**
      * @var FlowCreateApprover 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 注:
 `1. ApproverType目前只支持个人类型的签署人。`
@@ -99,6 +97,18 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
     public $Operator;
+
+    /**
+     * @var array 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+     */
+    public $FlowIds;
+
+    /**
+     * @var string 合同组编号
+注：`该参数和合同流程ID数组必须二选一`
+     */
+    public $FlowGroupId;
 
     /**
      * @var string 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
@@ -127,8 +137,6 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     public $ApproverSignTypes;
 
     /**
-     * @param array $FlowIds 批量签署的合同流程ID数组。
-注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
      * @param FlowCreateApprover $FlowApproverInfo 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 注:
 `1. ApproverType目前只支持个人类型的签署人。`
@@ -138,6 +146,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId(子企业的组织ID)为必填项。
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param array $FlowIds 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+     * @param string $FlowGroupId 合同组编号
+注：`该参数和合同流程ID数组必须二选一`
      * @param string $JumpUrl 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
      * @param array $SignatureTypes 指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
@@ -166,10 +178,6 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
-            $this->FlowIds = $param["FlowIds"];
-        }
-
         if (array_key_exists("FlowApproverInfo",$param) and $param["FlowApproverInfo"] !== null) {
             $this->FlowApproverInfo = new FlowCreateApprover();
             $this->FlowApproverInfo->deserialize($param["FlowApproverInfo"]);
@@ -183,6 +191,14 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
+            $this->FlowIds = $param["FlowIds"];
+        }
+
+        if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
+            $this->FlowGroupId = $param["FlowGroupId"];
         }
 
         if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {

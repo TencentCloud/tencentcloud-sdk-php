@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() 获取任务ID
  * @method void setJobId(string $JobId) 设置任务ID
- * @method integer getTargetRequestsPerSecond() 获取目标RPS
- * @method void setTargetRequestsPerSecond(integer $TargetRequestsPerSecond) 设置目标RPS
+ * @method integer getTargetRequestsPerSecond() 获取目标 RPS。其取值应大于起始 RPS，并且小于最大 RPS
+ * @method void setTargetRequestsPerSecond(integer $TargetRequestsPerSecond) 设置目标 RPS。其取值应大于起始 RPS，并且小于最大 RPS
  */
 class AdjustJobSpeedRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AdjustJobSpeedRequest extends AbstractModel
     public $JobId;
 
     /**
-     * @var integer 目标RPS
+     * @var integer 目标 RPS。其取值应大于起始 RPS，并且小于最大 RPS
      */
     public $TargetRequestsPerSecond;
 
     /**
      * @param string $JobId 任务ID
-     * @param integer $TargetRequestsPerSecond 目标RPS
+     * @param integer $TargetRequestsPerSecond 目标 RPS。其取值应大于起始 RPS，并且小于最大 RPS
      */
     function __construct()
     {

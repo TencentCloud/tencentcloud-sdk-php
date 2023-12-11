@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAutoSign(boolean $EnableAutoSign) 设置是否开通自动签，该功能需联系运营工作人员开通后使用
  * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
  * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+ * @method string getSceneKey() 获取<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+ * @method void setSceneKey(string $SceneKey) 设置<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
  */
 class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
 {
@@ -140,6 +142,11 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
     public $LicenseType;
 
     /**
+     * @var string <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
+     */
+    public $SceneKey;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      * @param string $UserName 个人用户姓名
      * @param string $IdCardNumber 证件号码, 应符合以下规则
@@ -164,6 +171,7 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
      * @param string $Mobile 手机号码；当需要开通自动签时，该参数必传
      * @param boolean $EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用
      * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
+     * @param string $SceneKey <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */
     function __construct()
     {
@@ -222,6 +230,10 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("SceneKey",$param) and $param["SceneKey"] !== null) {
+            $this->SceneKey = $param["SceneKey"];
         }
     }
 }

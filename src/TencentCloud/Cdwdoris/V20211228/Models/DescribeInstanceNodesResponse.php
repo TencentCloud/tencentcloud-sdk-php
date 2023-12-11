@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcr\V20190924\Models;
+namespace TencentCloud\Cdwdoris\V20211228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCustomAccounts返回参数结构体
+ * DescribeInstanceNodes返回参数结构体
  *
- * @method array getCustomAccounts() 获取自定义账户列表
+ * @method integer getTotalCount() 获取总数
+ * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method array getInstanceNodesList() 获取实例节点总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomAccounts(array $CustomAccounts) 设置自定义账户列表
+ * @method void setInstanceNodesList(array $InstanceNodesList) 设置实例节点总数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取自定义账户数量
- * @method void setTotalCount(integer $TotalCount) 设置自定义账户数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeCustomAccountsResponse extends AbstractModel
+class DescribeInstanceNodesResponse extends AbstractModel
 {
     /**
-     * @var array 自定义账户列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CustomAccounts;
-
-    /**
-     * @var integer 自定义账户数量
+     * @var integer 总数
      */
     public $TotalCount;
+
+    /**
+     * @var array 实例节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceNodesList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +48,9 @@ class DescribeCustomAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CustomAccounts 自定义账户列表
+     * @param integer $TotalCount 总数
+     * @param array $InstanceNodesList 实例节点总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 自定义账户数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +66,17 @@ class DescribeCustomAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CustomAccounts",$param) and $param["CustomAccounts"] !== null) {
-            $this->CustomAccounts = [];
-            foreach ($param["CustomAccounts"] as $key => $value){
-                $obj = new CustomAccount();
-                $obj->deserialize($value);
-                array_push($this->CustomAccounts, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("InstanceNodesList",$param) and $param["InstanceNodesList"] !== null) {
+            $this->InstanceNodesList = [];
+            foreach ($param["InstanceNodesList"] as $key => $value){
+                $obj = new InstanceNode();
+                $obj->deserialize($value);
+                array_push($this->InstanceNodesList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

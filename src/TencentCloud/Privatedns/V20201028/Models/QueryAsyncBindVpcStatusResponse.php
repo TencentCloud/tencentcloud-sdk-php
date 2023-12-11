@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * QueryAsyncBindVpcStatus返回参数结构体
  *
  * @method string getStatus() 获取processing 处理中，success 执行成功，
-fail 执行失败
+failed 执行失败
  * @method void setStatus(string $Status) 设置processing 处理中，success 执行成功，
-fail 执行失败
+failed 执行失败
  * @method string getErrorMsg() 获取错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
@@ -35,7 +35,7 @@ class QueryAsyncBindVpcStatusResponse extends AbstractModel
 {
     /**
      * @var string processing 处理中，success 执行成功，
-fail 执行失败
+failed 执行失败
      */
     public $Status;
 
@@ -52,7 +52,7 @@ fail 执行失败
 
     /**
      * @param string $Status processing 处理中，success 执行成功，
-fail 执行失败
+failed 执行失败
      * @param string $ErrorMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

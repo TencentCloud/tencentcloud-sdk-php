@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目 ID
  * @method void setProjectId(string $ProjectId) 设置项目 ID
- * @method array getFileIds() 获取文件 ID 数组
- * @method void setFileIds(array $FileIds) 设置文件 ID 数组
+ * @method array getFileIds() 获取待删除的文件的 ID（所有文件 ID 可从接口 DescribeFiles 获取）
+ * @method void setFileIds(array $FileIds) 设置待删除的文件的 ID（所有文件 ID 可从接口 DescribeFiles 获取）
  */
 class DeleteFilesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteFilesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 文件 ID 数组
+     * @var array 待删除的文件的 ID（所有文件 ID 可从接口 DescribeFiles 获取）
      */
     public $FileIds;
 
     /**
      * @param string $ProjectId 项目 ID
-     * @param array $FileIds 文件 ID 数组
+     * @param array $FileIds 待删除的文件的 ID（所有文件 ID 可从接口 DescribeFiles 获取）
      */
     function __construct()
     {

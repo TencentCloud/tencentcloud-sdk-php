@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMetric() 获取指标名
  * @method void setMetric(string $Metric) 设置指标名
- * @method string getAggregation() 获取聚合函数
- * @method void setAggregation(string $Aggregation) 设置聚合函数
+ * @method string getAggregation() 获取聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
+ * @method void setAggregation(string $Aggregation) 设置聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
  * @method array getLabels() 获取deprecated, 请使用Filters
  * @method void setLabels(array $Labels) 设置deprecated, 请使用Filters
- * @method array getFilters() 获取指标过滤
- * @method void setFilters(array $Filters) 设置指标过滤
+ * @method array getFilters() 获取用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
+ * @method void setFilters(array $Filters) 设置用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
  * @method array getGroupBy() 获取指标分组
  * @method void setGroupBy(array $GroupBy) 设置指标分组
  */
@@ -39,7 +39,7 @@ class InternalMetricQuery extends AbstractModel
     public $Metric;
 
     /**
-     * @var string 聚合函数
+     * @var string 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      */
     public $Aggregation;
 
@@ -49,7 +49,7 @@ class InternalMetricQuery extends AbstractModel
     public $Labels;
 
     /**
-     * @var array 指标过滤
+     * @var array 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      */
     public $Filters;
 
@@ -60,9 +60,9 @@ class InternalMetricQuery extends AbstractModel
 
     /**
      * @param string $Metric 指标名
-     * @param string $Aggregation 聚合函数
+     * @param string $Aggregation 聚合函数。取值范围：Rate,Count,Avg,P90,P95,P99,Gauge
      * @param array $Labels deprecated, 请使用Filters
-     * @param array $Filters 指标过滤
+     * @param array $Filters 用标签过滤规则来过滤指标，规则中包含标签名 LabelName、标签值 LabelValue、操作符 Operator（0代表相等，1代表不等）
      * @param array $GroupBy 指标分组
      */
     function __construct()

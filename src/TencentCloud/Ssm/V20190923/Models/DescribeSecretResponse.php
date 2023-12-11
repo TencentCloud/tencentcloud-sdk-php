@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteTime(integer $DeleteTime) 设置删除日期，uinx 时间戳，非计划删除状态的凭据为0。
  * @method integer getCreateTime() 获取创建日期。
  * @method void setCreateTime(integer $CreateTime) 设置创建日期。
- * @method integer getSecretType() 获取0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+ * @method integer getSecretType() 获取0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretType(integer $SecretType) 设置0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+ * @method void setSecretType(integer $SecretType) 设置0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取云产品名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,7 +115,7 @@ class DescribeSecretResponse extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+     * @var integer 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretType;
@@ -187,7 +187,7 @@ class DescribeSecretResponse extends AbstractModel
      * @param string $Status 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
      * @param integer $DeleteTime 删除日期，uinx 时间戳，非计划删除状态的凭据为0。
      * @param integer $CreateTime 创建日期。
-     * @param integer $SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
+     * @param integer $SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型；3 -- 云API密钥（AKSK）凭据类型（使用此功能需要联系云助手单独开启白名单）；4 -- Redis类型凭据。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 云产品名称。
 注意：此字段可能返回 null，表示取不到有效值。

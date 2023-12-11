@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 包含labelName 和labelValue
  *
- * @method string getLabelName() 获取label名字
- * @method void setLabelName(string $LabelName) 设置label名字
- * @method string getLabelValue() 获取label值
- * @method void setLabelValue(string $LabelValue) 设置label值
+ * @method string getLabelName() 获取标签名
+ * @method void setLabelName(string $LabelName) 设置标签名
+ * @method string getLabelValue() 获取标签值
+ * @method void setLabelValue(string $LabelValue) 设置标签值
  */
 class Label extends AbstractModel
 {
     /**
-     * @var string label名字
+     * @var string 标签名
      */
     public $LabelName;
 
     /**
-     * @var string label值
+     * @var string 标签值
      */
     public $LabelValue;
 
     /**
-     * @param string $LabelName label名字
-     * @param string $LabelValue label值
+     * @param string $LabelName 标签名
+     * @param string $LabelValue 标签值
      */
     function __construct()
     {

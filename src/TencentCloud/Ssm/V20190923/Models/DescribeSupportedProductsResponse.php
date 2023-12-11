@@ -20,8 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSupportedProducts返回参数结构体
  *
- * @method array getProducts() 获取支持的产品列表。
- * @method void setProducts(array $Products) 设置支持的产品列表。
+ * @method array getProducts() 获取支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。
+ * @method void setProducts(array $Products) 设置支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。
  * @method integer getTotalCount() 获取支持的产品个数
  * @method void setTotalCount(integer $TotalCount) 设置支持的产品个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSupportedProductsResponse extends AbstractModel
 {
     /**
-     * @var array 支持的产品列表。
+     * @var array 支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。
      */
     public $Products;
 
@@ -45,7 +60,12 @@ class DescribeSupportedProductsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Products 支持的产品列表。
+     * @param array $Products 支持的所有云产品列表。
+每种云产品与凭据类型的对应关系如下：
+当SecretType为1时，支持的云产品列表包括：Mysql、Tdsql-mysql、Tdsql_C_Mysql；
+当SecretType为2时，支持的产品列表为：Cvm；
+当SecretType为3时，支持的产品列表为：Cam（此功能的使用需要联系云助手单独开始白名单）；
+当SecretType为4时，支持的产品列表为：Redis。
      * @param integer $TotalCount 支持的产品个数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

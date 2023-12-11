@@ -20,42 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 渠道企业信息
  *
- * @method string getOrganizationId() 获取电子签企业Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationId(string $OrganizationId) 设置电子签企业Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrganizationOpenId() 获取电子签企业OpenId
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置电子签企业OpenId
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrganizationName() 获取企业名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationName(string $OrganizationName) 设置企业名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnifiedSocialCreditCode() 获取企业信用代码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnifiedSocialCreditCode(string $UnifiedSocialCreditCode) 设置企业信用代码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLegalName() 获取法人姓名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLegalName(string $LegalName) 设置法人姓名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLegalOpenId() 获取法人OpenId
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLegalOpenId(string $LegalOpenId) 设置法人OpenId
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAdminName() 获取超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdminName(string $AdminName) 设置超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAdminOpenId() 获取超管OpenId
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdminOpenId(string $AdminOpenId) 设置超管OpenId
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAdminMobile() 获取超管手机号，脱敏后返回
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdminMobile(string $AdminMobile) 设置超管手机号，脱敏后返回
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrganizationId() 获取电子签平台给企业分配的ID（在不同应用下同一个企业会分配通用的ID）
+ * @method void setOrganizationId(string $OrganizationId) 设置电子签平台给企业分配的ID（在不同应用下同一个企业会分配通用的ID）
+ * @method string getOrganizationOpenId() 获取第三方平台子客企业的唯一标识
+ * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置第三方平台子客企业的唯一标识
+ * @method string getOrganizationName() 获取第三方平台子客企业名称
+ * @method void setOrganizationName(string $OrganizationName) 设置第三方平台子客企业名称
+ * @method string getUnifiedSocialCreditCode() 获取企业的统一社会信用代码
+ * @method void setUnifiedSocialCreditCode(string $UnifiedSocialCreditCode) 设置企业的统一社会信用代码
+ * @method string getLegalName() 获取企业法定代表人的姓名
+ * @method void setLegalName(string $LegalName) 设置企业法定代表人的姓名
+ * @method string getLegalOpenId() 获取企业法定代表人作为第三方平台子客企业员工的唯一标识
+ * @method void setLegalOpenId(string $LegalOpenId) 设置企业法定代表人作为第三方平台子客企业员工的唯一标识
+ * @method string getAdminName() 获取企业超级管理员的姓名
+ * @method void setAdminName(string $AdminName) 设置企业超级管理员的姓名
+ * @method string getAdminOpenId() 获取企业超级管理员作为第三方平台子客企业员工的唯一标识
+ * @method void setAdminOpenId(string $AdminOpenId) 设置企业超级管理员作为第三方平台子客企业员工的唯一标识
+ * @method string getAdminMobile() 获取企业超级管理员的手机号码
+**注**：`手机号码脱敏（隐藏部分用*替代）`
+ * @method void setAdminMobile(string $AdminMobile) 设置企业超级管理员的手机号码
+**注**：`手机号码脱敏（隐藏部分用*替代）`
  * @method string getAuthorizationStatus() 获取企业认证状态字段。值如下：
 <ul>
   <li>**"UNVERIFIED"**： 未认证的企业</li>
@@ -65,7 +49,6 @@ use TencentCloud\Common\AbstractModel;
   <li>**"VERIFYING"**： 认证中的企业</li>
   <li>**"VERIFIED"**： 已认证的企业</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizationStatus(string $AuthorizationStatus) 设置企业认证状态字段。值如下：
 <ul>
   <li>**"UNVERIFIED"**： 未认证的企业</li>
@@ -75,7 +58,6 @@ use TencentCloud\Common\AbstractModel;
   <li>**"VERIFYING"**： 认证中的企业</li>
   <li>**"VERIFIED"**： 已认证的企业</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthorizationType() 获取企业认证方式字段。值如下：
 <ul>
   <li>**"AuthorizationInit"**： 暂未选择授权方式</li>
@@ -83,7 +65,6 @@ use TencentCloud\Common\AbstractModel;
   <li>**"AuthorizationLegalPerson"**： 法人授权超管</li>
   <li>**"AuthorizationLegalIdentity"**： 法人直接认证</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizationType(string $AuthorizationType) 设置企业认证方式字段。值如下：
 <ul>
   <li>**"AuthorizationInit"**： 暂未选择授权方式</li>
@@ -91,61 +72,52 @@ use TencentCloud\Common\AbstractModel;
   <li>**"AuthorizationLegalPerson"**： 法人授权超管</li>
   <li>**"AuthorizationLegalIdentity"**： 法人直接认证</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChannelOrganizationInfo extends AbstractModel
 {
     /**
-     * @var string 电子签企业Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 电子签平台给企业分配的ID（在不同应用下同一个企业会分配通用的ID）
      */
     public $OrganizationId;
 
     /**
-     * @var string 电子签企业OpenId
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 第三方平台子客企业的唯一标识
      */
     public $OrganizationOpenId;
 
     /**
-     * @var string 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 第三方平台子客企业名称
      */
     public $OrganizationName;
 
     /**
-     * @var string 企业信用代码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 企业的统一社会信用代码
      */
     public $UnifiedSocialCreditCode;
 
     /**
-     * @var string 法人姓名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 企业法定代表人的姓名
      */
     public $LegalName;
 
     /**
-     * @var string 法人OpenId
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 企业法定代表人作为第三方平台子客企业员工的唯一标识
      */
     public $LegalOpenId;
 
     /**
-     * @var string 超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 企业超级管理员的姓名
      */
     public $AdminName;
 
     /**
-     * @var string 超管OpenId
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 企业超级管理员作为第三方平台子客企业员工的唯一标识
      */
     public $AdminOpenId;
 
     /**
-     * @var string 超管手机号，脱敏后返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 企业超级管理员的手机号码
+**注**：`手机号码脱敏（隐藏部分用*替代）`
      */
     public $AdminMobile;
 
@@ -159,7 +131,6 @@ class ChannelOrganizationInfo extends AbstractModel
   <li>**"VERIFYING"**： 认证中的企业</li>
   <li>**"VERIFIED"**： 已认证的企业</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizationStatus;
 
@@ -171,29 +142,20 @@ class ChannelOrganizationInfo extends AbstractModel
   <li>**"AuthorizationLegalPerson"**： 法人授权超管</li>
   <li>**"AuthorizationLegalIdentity"**： 法人直接认证</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizationType;
 
     /**
-     * @param string $OrganizationId 电子签企业Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrganizationOpenId 电子签企业OpenId
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrganizationName 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UnifiedSocialCreditCode 企业信用代码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LegalName 法人姓名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LegalOpenId 法人OpenId
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AdminName 超管姓名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AdminOpenId 超管OpenId
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AdminMobile 超管手机号，脱敏后返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrganizationId 电子签平台给企业分配的ID（在不同应用下同一个企业会分配通用的ID）
+     * @param string $OrganizationOpenId 第三方平台子客企业的唯一标识
+     * @param string $OrganizationName 第三方平台子客企业名称
+     * @param string $UnifiedSocialCreditCode 企业的统一社会信用代码
+     * @param string $LegalName 企业法定代表人的姓名
+     * @param string $LegalOpenId 企业法定代表人作为第三方平台子客企业员工的唯一标识
+     * @param string $AdminName 企业超级管理员的姓名
+     * @param string $AdminOpenId 企业超级管理员作为第三方平台子客企业员工的唯一标识
+     * @param string $AdminMobile 企业超级管理员的手机号码
+**注**：`手机号码脱敏（隐藏部分用*替代）`
      * @param string $AuthorizationStatus 企业认证状态字段。值如下：
 <ul>
   <li>**"UNVERIFIED"**： 未认证的企业</li>
@@ -203,7 +165,6 @@ class ChannelOrganizationInfo extends AbstractModel
   <li>**"VERIFYING"**： 认证中的企业</li>
   <li>**"VERIFIED"**： 已认证的企业</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthorizationType 企业认证方式字段。值如下：
 <ul>
   <li>**"AuthorizationInit"**： 暂未选择授权方式</li>
@@ -211,7 +172,6 @@ class ChannelOrganizationInfo extends AbstractModel
   <li>**"AuthorizationLegalPerson"**： 法人授权超管</li>
   <li>**"AuthorizationLegalIdentity"**： 法人直接认证</li>
 </ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

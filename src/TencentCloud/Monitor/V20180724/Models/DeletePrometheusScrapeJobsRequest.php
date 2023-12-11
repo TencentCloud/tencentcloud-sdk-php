@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getAgentId() 获取Agent ID
- * @method void setAgentId(string $AgentId) 设置Agent ID
- * @method array getJobIds() 获取任务 ID 列表
- * @method void setJobIds(array $JobIds) 设置任务 ID 列表
+ * @method string getAgentId() 获取Agent ID(可通过 DescribePrometheusAgents 接口获取)
+ * @method void setAgentId(string $AgentId) 设置Agent ID(可通过 DescribePrometheusAgents 接口获取)
+ * @method array getJobIds() 获取任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
+ * @method void setJobIds(array $JobIds) 设置任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
  */
 class DeletePrometheusScrapeJobsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeletePrometheusScrapeJobsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Agent ID
+     * @var string Agent ID(可通过 DescribePrometheusAgents 接口获取)
      */
     public $AgentId;
 
     /**
-     * @var array 任务 ID 列表
+     * @var array 任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
      */
     public $JobIds;
 
     /**
      * @param string $InstanceId 实例 ID
-     * @param string $AgentId Agent ID
-     * @param array $JobIds 任务 ID 列表
+     * @param string $AgentId Agent ID(可通过 DescribePrometheusAgents 接口获取)
+     * @param array $JobIds 任务 ID 列表(可通过 DescribePrometheusScrapeJobs 接口获取)
      */
     function __construct()
     {

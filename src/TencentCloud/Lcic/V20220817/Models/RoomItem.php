@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoomId(integer $RoomId) 设置房间ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取房间状态。0 未开始 ；1进行中  ；2 已结束
+ * @method integer getStatus() 获取房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置房间状态。0 未开始 ；1进行中  ；2 已结束
+ * @method void setStatus(integer $Status) 设置房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取开始时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecordBackground() 获取录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomItem extends AbstractModel
 {
@@ -124,7 +128,7 @@ class RoomItem extends AbstractModel
     public $RoomId;
 
     /**
-     * @var integer 房间状态。0 未开始 ；1进行中  ；2 已结束
+     * @var integer 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -240,11 +244,17 @@ class RoomItem extends AbstractModel
     public $EnableAutoStart;
 
     /**
+     * @var string 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordBackground;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomId 房间ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 房间状态。0 未开始 ；1进行中  ；2 已结束
+     * @param integer $Status 房间状态。0 未开始 ；1进行中  ；2 已结束；3已过期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,6 +293,8 @@ class RoomItem extends AbstractModel
      * @param string $RecordLiveUrl 伪直播回放链接	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -380,6 +392,10 @@ class RoomItem extends AbstractModel
 
         if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
             $this->EnableAutoStart = $param["EnableAutoStart"];
+        }
+
+        if (array_key_exists("RecordBackground",$param) and $param["RecordBackground"] !== null) {
+            $this->RecordBackground = $param["RecordBackground"];
         }
     }
 }

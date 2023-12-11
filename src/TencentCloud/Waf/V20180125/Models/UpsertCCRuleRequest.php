@@ -26,26 +26,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置名称
  * @method integer getStatus() 获取状态
  * @method void setStatus(integer $Status) 设置状态
- * @method string getAdvance() 获取高级模式
- * @method void setAdvance(string $Advance) 设置高级模式
+ * @method string getAdvance() 获取高级模式（是否使用Session检测），0表示不启用，1表示启用
+ * @method void setAdvance(string $Advance) 设置高级模式（是否使用Session检测），0表示不启用，1表示启用
  * @method string getLimit() 获取CC检测阈值
  * @method void setLimit(string $Limit) 设置CC检测阈值
  * @method string getInterval() 获取CC检测周期
  * @method void setInterval(string $Interval) 设置CC检测周期
  * @method string getUrl() 获取检测Url
  * @method void setUrl(string $Url) 设置检测Url
- * @method integer getMatchFunc() 获取匹配方法
- * @method void setMatchFunc(integer $MatchFunc) 设置匹配方法
- * @method string getActionType() 获取动作
- * @method void setActionType(string $ActionType) 设置动作
+ * @method integer getMatchFunc() 获取匹配方法，0表示等于，1表示前缀匹配，2表示包含
+ * @method void setMatchFunc(integer $MatchFunc) 设置匹配方法，0表示等于，1表示前缀匹配，2表示包含
+ * @method string getActionType() 获取动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+ * @method void setActionType(string $ActionType) 设置动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
  * @method integer getPriority() 获取优先级
  * @method void setPriority(integer $Priority) 设置优先级
  * @method integer getValidTime() 获取动作有效时间
  * @method void setValidTime(integer $ValidTime) 设置动作有效时间
  * @method string getOptionsArr() 获取附加参数
  * @method void setOptionsArr(string $OptionsArr) 设置附加参数
- * @method string getEdition() 获取waf版本
- * @method void setEdition(string $Edition) 设置waf版本
+ * @method string getEdition() 获取waf版本，sparta-waf或者clb-waf
+ * @method void setEdition(string $Edition) 设置waf版本，sparta-waf或者clb-waf
  * @method integer getType() 获取操作类型
  * @method void setType(integer $Type) 设置操作类型
  * @method string getEventId() 获取添加规则的来源事件id
@@ -73,7 +73,7 @@ class UpsertCCRuleRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 高级模式
+     * @var string 高级模式（是否使用Session检测），0表示不启用，1表示启用
      */
     public $Advance;
 
@@ -93,12 +93,12 @@ class UpsertCCRuleRequest extends AbstractModel
     public $Url;
 
     /**
-     * @var integer 匹配方法
+     * @var integer 匹配方法，0表示等于，1表示前缀匹配，2表示包含
      */
     public $MatchFunc;
 
     /**
-     * @var string 动作
+     * @var string 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
      */
     public $ActionType;
 
@@ -118,7 +118,7 @@ class UpsertCCRuleRequest extends AbstractModel
     public $OptionsArr;
 
     /**
-     * @var string waf版本
+     * @var string waf版本，sparta-waf或者clb-waf
      */
     public $Edition;
 
@@ -146,16 +146,16 @@ class UpsertCCRuleRequest extends AbstractModel
      * @param string $Domain 域名
      * @param string $Name 名称
      * @param integer $Status 状态
-     * @param string $Advance 高级模式
+     * @param string $Advance 高级模式（是否使用Session检测），0表示不启用，1表示启用
      * @param string $Limit CC检测阈值
      * @param string $Interval CC检测周期
      * @param string $Url 检测Url
-     * @param integer $MatchFunc 匹配方法
-     * @param string $ActionType 动作
+     * @param integer $MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含
+     * @param string $ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
      * @param integer $Priority 优先级
      * @param integer $ValidTime 动作有效时间
      * @param string $OptionsArr 附加参数
-     * @param string $Edition waf版本
+     * @param string $Edition waf版本，sparta-waf或者clb-waf
      * @param integer $Type 操作类型
      * @param string $EventId 添加规则的来源事件id
      * @param array $SessionApplied 规则需要启用的SessionID

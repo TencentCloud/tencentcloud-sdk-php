@@ -70,7 +70,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 注：
 - 参与人点击链接后需短信验证码才能查看合同内容。
-- 企业用户批量签署，需要传OrganizationName（参与方所在企业名称）参数生成签署链接，`请确保此企业已完成腾讯电子签企业认证`。
+- 企业用户批量签署，需要传OrganizationName（参与方所在企业名称）参数生成签署链接，`请确保此企业已完成腾讯电子签企业认证`。若为子客企业，请确保员工已经加入企业。
 - 个人批量签署，签名区`仅支持手写签名`。
  * @method Models\ChannelCreateBoundFlowsResponse ChannelCreateBoundFlows(Models\ChannelCreateBoundFlowsRequest $req) 此接口（ChannelCreateBoundFlows）用于子客企业领取未归属给员工的合同，将合同领取给当前员工，合同不能重复领取。
 
@@ -614,7 +614,10 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 - 需调用创建并返回出证报告接口<a href="https://qian.tencent.com/developers/partnerApis/certificate/CreateChannelFlowEvidenceReport" target="_blank">提交申请出证报告任务</a>获取报告编号后调用当前接口获取报告链接。
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/1b4307ed143a992940c41d61192d3a0f/channel_CreateChannelFlowEvidenceReport.png)
- * @method Models\DescribeChannelOrganizationsResponse DescribeChannelOrganizations(Models\DescribeChannelOrganizationsRequest $req) 查询渠道子客企业信息
+ * @method Models\DescribeChannelOrganizationsResponse DescribeChannelOrganizations(Models\DescribeChannelOrganizationsRequest $req) 查询渠道子客企业信息时，可以支持单个子客和整个应用下所有子客的查询。返回的信息包括超管、法人的信息以及当前企业的认证状态等信息。
+
+- 对于单个企业的查询，通过**指定子客的唯一标识**来查询该子客的企业信息
+- 对于整个应用下所有企业的查询，**不需要指定子客的唯一标识**，直接查询整个应用下所有子客企业的企业信息
  * @method Models\DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrl(Models\DescribeChannelSealPolicyWorkflowUrlRequest $req) 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转的方式查看）
  * @method Models\DescribeExtendedServiceAuthInfoResponse DescribeExtendedServiceAuthInfo(Models\DescribeExtendedServiceAuthInfoRequest $req) 查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
 1. 企业自动签

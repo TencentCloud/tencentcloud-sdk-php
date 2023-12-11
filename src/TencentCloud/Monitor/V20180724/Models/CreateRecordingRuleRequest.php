@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取聚合规则名称
  * @method void setName(string $Name) 设置聚合规则名称
- * @method string getGroup() 获取聚合规则组内容，格式为 yaml
- * @method void setGroup(string $Group) 设置聚合规则组内容，格式为 yaml
+ * @method string getGroup() 获取聚合规则组内容，格式为 yaml，通过 base64 进行编码。
+ * @method void setGroup(string $Group) 设置聚合规则组内容，格式为 yaml，通过 base64 进行编码。
  * @method string getInstanceId() 获取Prometheus 实例 ID
  * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
  * @method integer getRuleState() 获取规则状态码，取值如下：
@@ -45,7 +45,7 @@ class CreateRecordingRuleRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 聚合规则组内容，格式为 yaml
+     * @var string 聚合规则组内容，格式为 yaml，通过 base64 进行编码。
      */
     public $Group;
 
@@ -65,7 +65,7 @@ class CreateRecordingRuleRequest extends AbstractModel
 
     /**
      * @param string $Name 聚合规则名称
-     * @param string $Group 聚合规则组内容，格式为 yaml
+     * @param string $Group 聚合规则组内容，格式为 yaml，通过 base64 进行编码。
      * @param string $InstanceId Prometheus 实例 ID
      * @param integer $RuleState 规则状态码，取值如下：
 <li>1=RuleDeleted</li>

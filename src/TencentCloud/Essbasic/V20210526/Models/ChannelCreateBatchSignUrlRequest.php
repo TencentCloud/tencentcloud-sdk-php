@@ -89,6 +89,7 @@ use TencentCloud\Common\AbstractModel;
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
+<li>若为子客企业，请确保员工已经加入企业。</li>
 </ul>
  * @method void setOrganizationName(string $OrganizationName) 设置目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
 
@@ -97,6 +98,7 @@ use TencentCloud\Common\AbstractModel;
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
+<li>若为子客企业，请确保员工已经加入企业。</li>
 </ul>
  * @method boolean getJumpToDetail() 获取是否直接跳转至合同内容页面进行签署
 <ul>
@@ -182,6 +184,7 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
+<li>若为子客企业，请确保员工已经加入企业。</li>
 </ul>
      */
     public $OrganizationName;
@@ -234,6 +237,7 @@ class ChannelCreateBatchSignUrlRequest extends AbstractModel
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
+<li>若为子客企业，请确保员工已经加入企业。</li>
 </ul>
      * @param boolean $JumpToDetail 是否直接跳转至合同内容页面进行签署
 <ul>

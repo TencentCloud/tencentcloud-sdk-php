@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlertChannel请求参数结构体
  *
- * @method string getNoticeId() 获取Notice ID
- * @method void setNoticeId(string $NoticeId) 设置Notice ID
+ * @method string getNoticeId() 获取monitor 服务的告警通知模板的 NoticeId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 Id 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
+ * @method void setNoticeId(string $NoticeId) 设置monitor 服务的告警通知模板的 NoticeId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 Id 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
  * @method string getProjectId() 获取项目 ID
  * @method void setProjectId(string $ProjectId) 设置项目 ID
- * @method string getAMPConsumerId() 获取AMP Consumer ID
- * @method void setAMPConsumerId(string $AMPConsumerId) 设置AMP Consumer ID
+ * @method string getAMPConsumerId() 获取monitor 服务的告警通知模板的 AMPConsumerId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 AMPConsumerId 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
+ * @method void setAMPConsumerId(string $AMPConsumerId) 设置monitor 服务的告警通知模板的 AMPConsumerId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 AMPConsumerId 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
  */
 class CreateAlertChannelRequest extends AbstractModel
 {
     /**
-     * @var string Notice ID
+     * @var string monitor 服务的告警通知模板的 NoticeId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 Id 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
      */
     public $NoticeId;
 
@@ -40,14 +40,14 @@ class CreateAlertChannelRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string AMP Consumer ID
+     * @var string monitor 服务的告警通知模板的 AMPConsumerId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 AMPConsumerId 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
      */
     public $AMPConsumerId;
 
     /**
-     * @param string $NoticeId Notice ID
+     * @param string $NoticeId monitor 服务的告警通知模板的 NoticeId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 Id 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
      * @param string $ProjectId 项目 ID
-     * @param string $AMPConsumerId AMP Consumer ID
+     * @param string $AMPConsumerId monitor 服务的告警通知模板的 AMPConsumerId，可从 monitor 服务的云 API 的 DescribeAlarmNotices 接口响应里的 AMPConsumerId 字段获取。（CreateAlertChannel 接口的入参里用于标识一个告警通知模板的 AMPConsumerId 与 NoticeId 二选一即可）
      */
     function __construct()
     {

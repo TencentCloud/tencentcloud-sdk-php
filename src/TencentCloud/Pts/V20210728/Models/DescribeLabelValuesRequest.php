@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置任务ID
  * @method string getScenarioId() 获取场景ID
  * @method void setScenarioId(string $ScenarioId) 设置场景ID
- * @method string getMetric() 获取指标名称
- * @method void setMetric(string $Metric) 设置指标名称
- * @method string getLabelName() 获取查询标签名称
- * @method void setLabelName(string $LabelName) 设置查询标签名称
+ * @method string getMetric() 获取指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+ * @method void setMetric(string $Metric) 设置指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+ * @method string getLabelName() 获取标签名。取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
+ * @method void setLabelName(string $LabelName) 设置标签名。取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  */
@@ -44,12 +44,12 @@ class DescribeLabelValuesRequest extends AbstractModel
     public $ScenarioId;
 
     /**
-     * @var string 指标名称
+     * @var string 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
      */
     public $Metric;
 
     /**
-     * @var string 查询标签名称
+     * @var string 标签名。取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
      */
     public $LabelName;
 
@@ -61,8 +61,8 @@ class DescribeLabelValuesRequest extends AbstractModel
     /**
      * @param string $JobId 任务ID
      * @param string $ScenarioId 场景ID
-     * @param string $Metric 指标名称
-     * @param string $LabelName 查询标签名称
+     * @param string $Metric 指标名。取值范围参见 DescribeMetricLabelWithValues 接口返回的所有指标名
+     * @param string $LabelName 标签名。取值范围参见 DescribeMetricLabelWithValues 接口返回的指标及其支持的标签名
      * @param string $ProjectId 项目ID
      */
     function __construct()

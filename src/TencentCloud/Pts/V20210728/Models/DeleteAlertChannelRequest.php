@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目 ID
  * @method void setProjectId(string $ProjectId) 设置项目 ID
- * @method string getNoticeId() 获取Notice ID
- * @method void setNoticeId(string $NoticeId) 设置Notice ID
+ * @method string getNoticeId() 获取待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
+ * @method void setNoticeId(string $NoticeId) 设置待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
  */
 class DeleteAlertChannelRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteAlertChannelRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string Notice ID
+     * @var string 待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
      */
     public $NoticeId;
 
     /**
      * @param string $ProjectId 项目 ID
-     * @param string $NoticeId Notice ID
+     * @param string $NoticeId 待删除的通知渠道的 Notice ID（所有通知渠道的 Notice ID 可以从 DescribeAlertChannels 接口获取）
      */
     function __construct()
     {

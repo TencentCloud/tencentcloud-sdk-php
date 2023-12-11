@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeChannelOrganizations返回参数结构体
  *
- * @method array getChannelOrganizationInfos() 获取企业企业信息列表。
- * @method void setChannelOrganizationInfos(array $ChannelOrganizationInfos) 设置企业企业信息列表。
+ * @method array getChannelOrganizationInfos() 获取满足查询条件的企业信息列表。
+ * @method void setChannelOrganizationInfos(array $ChannelOrganizationInfos) 设置满足查询条件的企业信息列表。
  * @method integer getOffset() 获取指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
  * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
  * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 200。
  * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 200。
- * @method integer getTotal() 获取符合条件的企业数量。
- * @method void setTotal(integer $Total) 设置符合条件的企业数量。
+ * @method integer getTotal() 获取满足查询条件的企业总数量。
+ * @method void setTotal(integer $Total) 设置满足查询条件的企业总数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeChannelOrganizationsResponse extends AbstractModel
 {
     /**
-     * @var array 企业企业信息列表。
+     * @var array 满足查询条件的企业信息列表。
      */
     public $ChannelOrganizationInfos;
 
@@ -49,7 +49,7 @@ class DescribeChannelOrganizationsResponse extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 符合条件的企业数量。
+     * @var integer 满足查询条件的企业总数量。
      */
     public $Total;
 
@@ -59,10 +59,10 @@ class DescribeChannelOrganizationsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ChannelOrganizationInfos 企业企业信息列表。
+     * @param array $ChannelOrganizationInfos 满足查询条件的企业信息列表。
      * @param integer $Offset 指定分页返回第几页的数据。页码从 0 开始，即首页为 0，最大20000。
      * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 200。
-     * @param integer $Total 符合条件的企业数量。
+     * @param integer $Total 满足查询条件的企业总数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

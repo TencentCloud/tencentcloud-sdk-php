@@ -40,6 +40,16 @@ use TencentCloud\Common\AbstractModel;
 0：支撑网接入点 
 1：VPC接入点 
 2：公网接入点
+ * @method integer getOperationType() 获取0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationType(integer $OperationType) 设置0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarNetworkAccessPointInfo extends AbstractModel
 {
@@ -74,6 +84,15 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
     public $RouteType;
 
     /**
+     * @var integer 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationType;
+
+    /**
      * @param string $VpcId vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id，支撑网和公网接入点，该字段为空
@@ -84,6 +103,11 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 0：支撑网接入点 
 1：VPC接入点 
 2：公网接入点
+     * @param integer $OperationType 0：本地域访问，由于并没有配置跨地域容灾，所该类型的接入点，无法进行异地切换、异地访问切回；
+1：本地域访问，由于配置了跨地域容灾，随时可以进行异地切换，该状态用于主集群的接入点
+2：跨地域访问，已经完成了异地切换，该状态用于源集群的接入点，该状态下的接入点不可删除
+3：跨地域访问，随时可以进行异地访问切回，该状态用于目标集群的接入点，该状态下的接入点不可删除
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -116,6 +140,10 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 
         if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
             $this->RouteType = $param["RouteType"];
+        }
+
+        if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
+            $this->OperationType = $param["OperationType"];
         }
     }
 }

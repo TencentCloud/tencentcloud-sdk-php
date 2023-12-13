@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
  * @method integer getBackupId() 获取实例的备份ID，可通过DescribeBackups接口查询备份的ID。
  * @method void setBackupId(integer $BackupId) 设置实例的备份ID，可通过DescribeBackups接口查询备份的ID。
+ * @method string getBackupType() 获取备份类型 data: 数据备份 binlog:日志备份，默认为data
+ * @method void setBackupType(string $BackupType) 设置备份类型 data: 数据备份 binlog:日志备份，默认为data
  */
 class DescribeBackupDecryptionKeyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeBackupDecryptionKeyRequest extends AbstractModel
     public $BackupId;
 
     /**
+     * @var string 备份类型 data: 数据备份 binlog:日志备份，默认为data
+     */
+    public $BackupType;
+
+    /**
      * @param string $InstanceId 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $BackupId 实例的备份ID，可通过DescribeBackups接口查询备份的ID。
+     * @param string $BackupType 备份类型 data: 数据备份 binlog:日志备份，默认为data
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeBackupDecryptionKeyRequest extends AbstractModel
 
         if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
             $this->BackupId = $param["BackupId"];
+        }
+
+        if (array_key_exists("BackupType",$param) and $param["BackupType"] !== null) {
+            $this->BackupType = $param["BackupType"];
         }
     }
 }

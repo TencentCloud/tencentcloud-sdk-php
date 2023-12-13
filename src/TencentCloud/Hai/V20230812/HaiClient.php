@@ -31,6 +31,8 @@ use TencentCloud\Hai\V20230812\Models as Models;
  * @method Models\DescribeServiceLoginSettingsResponse DescribeServiceLoginSettings(Models\DescribeServiceLoginSettingsRequest $req) 查询服务登录配置
  * @method Models\InquirePriceRunInstancesResponse InquirePriceRunInstances(Models\InquirePriceRunInstancesRequest $req) 本接口 (InquirePriceRunInstances) 用于实例询价。
  * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) 本接口 (RunInstances) 用于创建一个或多个指定配置的实例。
+ * @method Models\StartInstanceResponse StartInstance(Models\StartInstanceRequest $req) 本接口 (StartInstance) 用于主动启动实例。
+ * @method Models\StopInstanceResponse StopInstance(Models\StopInstanceRequest $req) 本接口 (StopInstance) 用于主动关闭实例。
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 本接口 (TerminateInstances) 用于主动退还实例。
  */
 

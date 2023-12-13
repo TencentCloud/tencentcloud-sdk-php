@@ -31,7 +31,7 @@ use TencentCloud\Omics\V20221128\Models as Models;
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 查询表格。
  * @method Models\DescribeTablesRowsResponse DescribeTablesRows(Models\DescribeTablesRowsRequest $req) 查询表格行数据。
  * @method Models\GetRunCallsResponse GetRunCalls(Models\GetRunCallsRequest $req) 查询作业详情。
- * @method Models\GetRunMetadataFileResponse GetRunMetadataFile(Models\GetRunMetadataFileRequest $req) 查询任务详情文件。
+ * @method Models\GetRunMetadataFileResponse GetRunMetadataFile(Models\GetRunMetadataFileRequest $req) 获取任务详情文件。
  * @method Models\GetRunStatusResponse GetRunStatus(Models\GetRunStatusRequest $req) 查询任务详情。
  * @method Models\ImportTableFileResponse ImportTableFile(Models\ImportTableFileRequest $req) 导入表格文件。
  * @method Models\RetryRunsResponse RetryRuns(Models\RetryRunsRequest $req) 重试任务。

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
  * @method string getBlueprintId() 获取镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
  * @method void setBlueprintId(string $BlueprintId) 设置镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
+ * @method array getContainers() 获取要创建的容器配置列表。
+ * @method void setContainers(array $Containers) 设置要创建的容器配置列表。
+ * @method LoginConfiguration getLoginConfiguration() 获取实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
+ * @method void setLoginConfiguration(LoginConfiguration $LoginConfiguration) 设置实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
  */
 class ResetInstanceRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ResetInstanceRequest extends AbstractModel
     public $BlueprintId;
 
     /**
+     * @var array 要创建的容器配置列表。
+     */
+    public $Containers;
+
+    /**
+     * @var LoginConfiguration 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
+     */
+    public $LoginConfiguration;
+
+    /**
      * @param string $InstanceId 实例 ID。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      * @param string $BlueprintId 镜像 ID。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
+     * @param array $Containers 要创建的容器配置列表。
+     * @param LoginConfiguration $LoginConfiguration 实例登录信息配置。默认缺失情况下代表用户选择实例创建后设置登录密码或绑定密钥。
      */
     function __construct()
     {
@@ -60,6 +76,20 @@ class ResetInstanceRequest extends AbstractModel
 
         if (array_key_exists("BlueprintId",$param) and $param["BlueprintId"] !== null) {
             $this->BlueprintId = $param["BlueprintId"];
+        }
+
+        if (array_key_exists("Containers",$param) and $param["Containers"] !== null) {
+            $this->Containers = [];
+            foreach ($param["Containers"] as $key => $value){
+                $obj = new DockerContainerConfiguration();
+                $obj->deserialize($value);
+                array_push($this->Containers, $obj);
+            }
+        }
+
+        if (array_key_exists("LoginConfiguration",$param) and $param["LoginConfiguration"] !== null) {
+            $this->LoginConfiguration = new LoginConfiguration();
+            $this->LoginConfiguration->deserialize($param["LoginConfiguration"]);
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateInstances请求参数结构体
  *
- * @method array getInstanceIds() 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
- * @method void setInstanceIds(array $InstanceIds) 设置一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
- * @method boolean getReleasePrepaidDataDisks() 获取释放实例挂载的包年包月数据盘。
- * @method void setReleasePrepaidDataDisks(boolean $ReleasePrepaidDataDisks) 设置释放实例挂载的包年包月数据盘。
+ * @method array getInstanceIds() 获取一个或多个待操作的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+ * @method void setInstanceIds(array $InstanceIds) 设置一个或多个待操作的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+ * @method boolean getReleasePrepaidDataDisks() 获取释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
+ * @method void setReleasePrepaidDataDisks(boolean $ReleasePrepaidDataDisks) 设置释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
  */
 class TerminateInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+     * @var array 一个或多个待操作的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
      */
     public $InstanceIds;
 
     /**
-     * @var boolean 释放实例挂载的包年包月数据盘。
+     * @var boolean 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
      */
     public $ReleasePrepaidDataDisks;
 
     /**
-     * @param array $InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
-     * @param boolean $ReleasePrepaidDataDisks 释放实例挂载的包年包月数据盘。
+     * @param array $InstanceIds 一个或多个待操作的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+     * @param boolean $ReleasePrepaidDataDisks 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
      */
     function __construct()
     {

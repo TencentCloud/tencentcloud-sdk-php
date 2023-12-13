@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRunUuid() 获取任务Uuid。
  * @method void setRunUuid(string $RunUuid) 设置任务Uuid。
+ * @method string getProjectId() 获取项目ID。
+（不填使用指定地域下的默认项目）
+ * @method void setProjectId(string $ProjectId) 设置项目ID。
+（不填使用指定地域下的默认项目）
  * @method string getKey() 获取需要获取的文件名。
 
 默认支持以下文件：
@@ -42,10 +46,26 @@ use TencentCloud\Common\AbstractModel;
 - execution_timeline.html
 - execution_trace.txt
 - pipeline_dag.html
- * @method string getProjectId() 获取项目ID。
-（不填使用指定地域下的默认项目）
- * @method void setProjectId(string $ProjectId) 设置项目ID。
-（不填使用指定地域下的默认项目）
+ * @method array getKeys() 获取需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html
+ * @method void setKeys(array $Keys) 设置需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html
  */
 class GetRunMetadataFileRequest extends AbstractModel
 {
@@ -53,6 +73,12 @@ class GetRunMetadataFileRequest extends AbstractModel
      * @var string 任务Uuid。
      */
     public $RunUuid;
+
+    /**
+     * @var string 项目ID。
+（不填使用指定地域下的默认项目）
+     */
+    public $ProjectId;
 
     /**
      * @var string 需要获取的文件名。
@@ -69,13 +95,23 @@ class GetRunMetadataFileRequest extends AbstractModel
     public $Key;
 
     /**
-     * @var string 项目ID。
-（不填使用指定地域下的默认项目）
+     * @var array 需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html
      */
-    public $ProjectId;
+    public $Keys;
 
     /**
      * @param string $RunUuid 任务Uuid。
+     * @param string $ProjectId 项目ID。
+（不填使用指定地域下的默认项目）
      * @param string $Key 需要获取的文件名。
 
 默认支持以下文件：
@@ -86,8 +122,16 @@ class GetRunMetadataFileRequest extends AbstractModel
 - execution_timeline.html
 - execution_trace.txt
 - pipeline_dag.html
-     * @param string $ProjectId 项目ID。
-（不填使用指定地域下的默认项目）
+     * @param array $Keys 需要批量获取的文件名。
+
+默认支持以下文件：
+- nextflow.log
+
+提交时NFOption中report指定为true时，额外支持以下文件：
+- execution_report.html
+- execution_timeline.html
+- execution_trace.txt
+- pipeline_dag.html
      */
     function __construct()
     {
@@ -106,12 +150,16 @@ class GetRunMetadataFileRequest extends AbstractModel
             $this->RunUuid = $param["RunUuid"];
         }
 
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
         if (array_key_exists("Key",$param) and $param["Key"] !== null) {
             $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
+            $this->Keys = $param["Keys"];
         }
     }
 }

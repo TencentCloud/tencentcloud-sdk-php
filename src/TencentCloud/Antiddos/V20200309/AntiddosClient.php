@@ -30,7 +30,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(Models\CreateCCPrecisionPolicyRequest $req) 新增CC精准防护策略
  * @method Models\CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicy(Models\CreateCCReqLimitPolicyRequest $req) 新增CC频率限制策略
  * @method Models\CreateCcBlackWhiteIpListResponse CreateCcBlackWhiteIpList(Models\CreateCcBlackWhiteIpListRequest $req) 新建CC四层黑白名单
- * @method Models\CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfig(Models\CreateCcGeoIPBlockConfigRequest $req) 新建cc防护的地域封禁配置
+ * @method Models\CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfig(Models\CreateCcGeoIPBlockConfigRequest $req) 新建CC防护的地域封禁配置
  * @method Models\CreateDDoSAIResponse CreateDDoSAI(Models\CreateDDoSAIRequest $req) 设置DDoS防护的AI防护开关
  * @method Models\CreateDDoSBlackWhiteIpListResponse CreateDDoSBlackWhiteIpList(Models\CreateDDoSBlackWhiteIpListRequest $req) 添加DDoS防护的IP网段黑白名单
  * @method Models\CreateDDoSConnectLimitResponse CreateDDoSConnectLimit(Models\CreateDDoSConnectLimitRequest $req) 配置DDoS连接抑制选项
@@ -80,6 +80,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeDDoSConnectLimitListResponse DescribeDDoSConnectLimitList(Models\DescribeDDoSConnectLimitListRequest $req) 获取DDoS连接抑制配置列表
  * @method Models\DescribeDDoSTrendResponse DescribeDDoSTrend(Models\DescribeDDoSTrendRequest $req) 获取DDoS攻击流量带宽和攻击包速率数据
  * @method Models\DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(Models\DescribeDefaultAlarmThresholdRequest $req) 获取单IP默认告警阈值配置
+ * @method Models\DescribeIpBlockListResponse DescribeIpBlockList(Models\DescribeIpBlockListRequest $req) 获取IP封堵列表
  * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) 查询与证书ID对于域名匹配的七层规则
  * @method Models\DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(Models\DescribeListBGPIPInstancesRequest $req) 获取高防IP资产实例列表
 

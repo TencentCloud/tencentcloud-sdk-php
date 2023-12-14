@@ -69,6 +69,7 @@ use TencentCloud\Common\AbstractModel;
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
  * @method void setSealType(string $SealType) 设置电子印章类型 , 可选类型如下: 
@@ -76,6 +77,7 @@ use TencentCloud\Common\AbstractModel;
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
  * @method string getSealHorizontalText() 获取企业印章横向文字，最多可填15个汉字  (若超过印章最大宽度，优先压缩字间距，其次缩小字号)
@@ -102,6 +104,12 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
 <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+ * @method string getTaxIdentifyCode() 获取企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+ * @method void setTaxIdentifyCode(string $TaxIdentifyCode) 设置企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
  */
 class CreateSealByImageRequest extends AbstractModel
 {
@@ -154,6 +162,7 @@ class CreateSealByImageRequest extends AbstractModel
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
      */
@@ -184,6 +193,13 @@ class CreateSealByImageRequest extends AbstractModel
     public $SealSize;
 
     /**
+     * @var string 企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
+     */
+    public $TaxIdentifyCode;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -211,6 +227,7 @@ class CreateSealByImageRequest extends AbstractModel
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
+<li>**INVOICE**: 发票专用章</li>
 </ul>
 注: `同企业下只能有一个公章, 重复创建会报错`
      * @param string $SealHorizontalText 企业印章横向文字，最多可填15个汉字  (若超过印章最大宽度，优先压缩字间距，其次缩小字号)
@@ -225,6 +242,9 @@ class CreateSealByImageRequest extends AbstractModel
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
 <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+     * @param string $TaxIdentifyCode 企业税号
+注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
+`2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
      */
     function __construct()
     {
@@ -275,6 +295,10 @@ class CreateSealByImageRequest extends AbstractModel
 
         if (array_key_exists("SealSize",$param) and $param["SealSize"] !== null) {
             $this->SealSize = $param["SealSize"];
+        }
+
+        if (array_key_exists("TaxIdentifyCode",$param) and $param["TaxIdentifyCode"] !== null) {
+            $this->TaxIdentifyCode = $param["TaxIdentifyCode"];
         }
     }
 }

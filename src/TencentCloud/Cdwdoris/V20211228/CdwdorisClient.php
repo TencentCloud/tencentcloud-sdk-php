@@ -25,7 +25,7 @@ use TencentCloud\Cdwdoris\V20211228\Models as Models;
 /**
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 根据实例ID查询某个实例的具体信息
  * @method Models\DescribeInstanceNodesResponse DescribeInstanceNodes(Models\DescribeInstanceNodesRequest $req) 获取实例节点信息列表
- * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 获取实例列表
+ * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 获取集群列表
  */
 
 class CdwdorisClient extends AbstractClient

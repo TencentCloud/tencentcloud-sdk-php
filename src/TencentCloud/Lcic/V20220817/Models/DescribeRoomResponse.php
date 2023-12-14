@@ -108,6 +108,8 @@ video 纯视频
  * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播链接
  * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+ * @method string getRecordBackground() 获取录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+ * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -262,6 +264,11 @@ video 纯视频
     public $EnableAutoStart;
 
     /**
+     * @var string 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     */
+    public $RecordBackground;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -311,6 +318,7 @@ video 纯视频
      * @param integer $LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
      * @param string $RecordLiveUrl 伪直播链接
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -428,6 +436,10 @@ video 纯视频
 
         if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
             $this->EnableAutoStart = $param["EnableAutoStart"];
+        }
+
+        if (array_key_exists("RecordBackground",$param) and $param["RecordBackground"] !== null) {
+            $this->RecordBackground = $param["RecordBackground"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -18,17 +18,17 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 对象存储源站记录私有鉴权参数
+ * 对象存储源站私有鉴权参数
  *
  * @method string getName() 获取私有鉴权参数名称，取值有：
-<li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
-<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>AccessKeyId：鉴权参数 Access Key ID；</li>
+<li>SecretAccessKey：鉴权参数 Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2 或者 v4；</li>
 <li>Region：存储桶地域。</li>
  * @method void setName(string $Name) 设置私有鉴权参数名称，取值有：
-<li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
-<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>AccessKeyId：鉴权参数 Access Key ID；</li>
+<li>SecretAccessKey：鉴权参数 Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2 或者 v4；</li>
 <li>Region：存储桶地域。</li>
  * @method string getValue() 获取私有鉴权参数值。
  * @method void setValue(string $Value) 设置私有鉴权参数值。
@@ -37,9 +37,9 @@ class PrivateParameter extends AbstractModel
 {
     /**
      * @var string 私有鉴权参数名称，取值有：
-<li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
-<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>AccessKeyId：鉴权参数 Access Key ID；</li>
+<li>SecretAccessKey：鉴权参数 Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2 或者 v4；</li>
 <li>Region：存储桶地域。</li>
      */
     public $Name;
@@ -51,9 +51,9 @@ class PrivateParameter extends AbstractModel
 
     /**
      * @param string $Name 私有鉴权参数名称，取值有：
-<li>AccessKeyId：鉴权参数Access Key ID；</li>
-<li>SecretAccessKey：鉴权参数Secret Access Key；</li>
-<li>SignatureVersion：鉴权版本，v2或者v4；</li>
+<li>AccessKeyId：鉴权参数 Access Key ID；</li>
+<li>SecretAccessKey：鉴权参数 Secret Access Key；</li>
+<li>SignatureVersion：鉴权版本，v2 或者 v4；</li>
 <li>Region：存储桶地域。</li>
      * @param string $Value 私有鉴权参数值。
      */

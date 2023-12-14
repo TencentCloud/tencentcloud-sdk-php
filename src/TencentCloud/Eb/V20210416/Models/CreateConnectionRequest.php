@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述
  * @method boolean getEnable() 获取使能开关
  * @method void setEnable(boolean $Enable) 设置使能开关
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
+ * @method string getType() 获取连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
+ * @method void setType(string $Type) 设置连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
  */
 class CreateConnectionRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateConnectionRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var string 类型
+     * @var string 连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
      */
     public $Type;
 
@@ -71,7 +71,7 @@ class CreateConnectionRequest extends AbstractModel
      * @param string $ConnectionName 连接器名称
      * @param string $Description 描述
      * @param boolean $Enable 使能开关
-     * @param string $Type 类型
+     * @param string $Type 连接器类型，目前支持以下类型:apigw/ckafka/dts/tdmq
      */
     function __construct()
     {

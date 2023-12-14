@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeliveryConfigByGroupId返回参数结构体
  *
- * @method SimpleKafkaDeliveryConfig getResult() 获取投递kafak配置项
- * @method void setResult(SimpleKafkaDeliveryConfig $Result) 设置投递kafak配置项
+ * @method SimpleKafkaDeliveryConfig getResult() 获取投递kafka配置项
+ * @method void setResult(SimpleKafkaDeliveryConfig $Result) 设置投递kafka配置项
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDeliveryConfigByGroupIdResponse extends AbstractModel
 {
     /**
-     * @var SimpleKafkaDeliveryConfig 投递kafak配置项
+     * @var SimpleKafkaDeliveryConfig 投递kafka配置项
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeDeliveryConfigByGroupIdResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SimpleKafkaDeliveryConfig $Result 投递kafak配置项
+     * @param SimpleKafkaDeliveryConfig $Result 投递kafka配置项
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置查询结束时间
  * @method integer getPeriod() 获取查询时间粒度，单位秒。可选值：60、3600、86400。
  * @method void setPeriod(integer $Period) 设置查询时间粒度，单位秒。可选值：60、3600、86400。
- * @method array getMetricDimensions() 获取查询指标维度
- * @method void setMetricDimensions(array $MetricDimensions) 设置查询指标维度
- * @method array getMetrics() 获取查询指标名
- * @method void setMetrics(array $Metrics) 设置查询指标名
+ * @method array getMetricDimensions() 获取查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
+ * @method void setMetricDimensions(array $MetricDimensions) 设置查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
+ * @method array getMetrics() 获取查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
+ * @method void setMetrics(array $Metrics) 设置查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
  * @method string getKind() 获取视图视角。可选值：SERVER, CLIENT。默认为SERVER
  * @method void setKind(string $Kind) 设置视图视角。可选值：SERVER, CLIENT。默认为SERVER
  */
@@ -51,12 +51,12 @@ class DescribeInvocationMetricScatterPlotRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var array 查询指标维度
+     * @var array 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
      */
     public $MetricDimensions;
 
     /**
-     * @var array 查询指标名
+     * @var array 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
      */
     public $Metrics;
 
@@ -69,8 +69,8 @@ class DescribeInvocationMetricScatterPlotRequest extends AbstractModel
      * @param string $StartTime 查询开始时间
      * @param string $EndTime 查询结束时间
      * @param integer $Period 查询时间粒度，单位秒。可选值：60、3600、86400。
-     * @param array $MetricDimensions 查询指标维度
-     * @param array $Metrics 查询指标名
+     * @param array $MetricDimensions 查询指标维度, 不能为空。可选 NamespaceId, GroupId, InstanceId, OperationName, ServiceName, PeerServiceName, PeerOperationName
+     * @param array $Metrics 查询指标名， 不能为空。仅支持 range_count_duratioin 为 key 下的 sum 方法
      * @param string $Kind 视图视角。可选值：SERVER, CLIENT。默认为SERVER
      */
     function __construct()

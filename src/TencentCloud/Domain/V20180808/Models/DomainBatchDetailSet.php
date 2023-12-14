@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取详情ID
  * @method void setId(integer $Id) 设置详情ID
+ * @method string getAction() 获取类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+ * @method void setAction(string $Action) 设置类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getStatus() 获取执行状态：
@@ -40,6 +42,10 @@ success  操作成功。
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
  * @method string getUpdatedOn() 获取更新时间
  * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间
+ * @method string getBigDealId() 获取订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBigDealId(string $BigDealId) 设置订单号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainBatchDetailSet extends AbstractModel
 {
@@ -47,6 +53,11 @@ class DomainBatchDetailSet extends AbstractModel
      * @var integer 详情ID
      */
     public $Id;
+
+    /**
+     * @var string 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+     */
+    public $Action;
 
     /**
      * @var string 域名
@@ -78,7 +89,14 @@ success  操作成功。
     public $UpdatedOn;
 
     /**
+     * @var string 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BigDealId;
+
+    /**
      * @param integer $Id 详情ID
+     * @param string $Action 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
      * @param string $Domain 域名
      * @param string $Status 执行状态：
 doing 执行中。
@@ -88,6 +106,8 @@ success  操作成功。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedOn 创建时间
      * @param string $UpdatedOn 更新时间
+     * @param string $BigDealId 订单号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -104,6 +124,10 @@ success  操作成功。
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            $this->Action = $param["Action"];
         }
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
@@ -124,6 +148,10 @@ success  操作成功。
 
         if (array_key_exists("UpdatedOn",$param) and $param["UpdatedOn"] !== null) {
             $this->UpdatedOn = $param["UpdatedOn"];
+        }
+
+        if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
+            $this->BigDealId = $param["BigDealId"];
         }
     }
 }

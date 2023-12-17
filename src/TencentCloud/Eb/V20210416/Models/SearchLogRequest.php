@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置页码
  * @method integer getLimit() 获取每页数据大小
  * @method void setLimit(integer $Limit) 设置每页数据大小
- * @method array getFilter() 获取筛选条件
- * @method void setFilter(array $Filter) 设置筛选条件
- * @method array getOrderFields() 获取排序数组
- * @method void setOrderFields(array $OrderFields) 设置排序数组
+ * @method array getFilter() 获取事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
+ * @method void setFilter(array $Filter) 设置事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
+ * @method array getOrderFields() 获取事件查询结果排序，["timestamp","subject"]
+ * @method void setOrderFields(array $OrderFields) 设置事件查询结果排序，["timestamp","subject"]
  * @method string getOrderBy() 获取排序方式，asc 从旧到新，desc 从新到旧
  * @method void setOrderBy(string $OrderBy) 设置排序方式，asc 从旧到新，desc 从新到旧
  */
@@ -65,12 +65,12 @@ class SearchLogRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 筛选条件
+     * @var array 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
      */
     public $Filter;
 
     /**
-     * @var array 排序数组
+     * @var array 事件查询结果排序，["timestamp","subject"]
      */
     public $OrderFields;
 
@@ -85,8 +85,8 @@ class SearchLogRequest extends AbstractModel
      * @param string $EventBusId 事件集ID
      * @param integer $Page 页码
      * @param integer $Limit 每页数据大小
-     * @param array $Filter 筛选条件
-     * @param array $OrderFields 排序数组
+     * @param array $Filter 事件查询筛选条件；示例如下：[{"key":"host","operator":"eq","value":"106.53.106.243"},{"type":"AND","filters":[{"key":"region","operator":"like","value":"*guangzhou*"},{"key":"type","operator":"eq","value":"cvm:ErrorEvent:GuestReboot"}]},{"type":"OR","filters":[{"key":"field1","operator":"like","value":"*access*"},{"key":"field2","operator":"eq","value":"custorm"}]}]
+     * @param array $OrderFields 事件查询结果排序，["timestamp","subject"]
      * @param string $OrderBy 排序方式，asc 从旧到新，desc 从新到旧
      */
     function __construct()

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRawJobs(array $RawJobs) 设置原生Job
  * @method array getProbes() 获取Probes
  * @method void setProbes(array $Probes) 设置Probes
+ * @method boolean getImageNeedUpdate() 获取实例组件是否需要升级
+ * @method void setImageNeedUpdate(boolean $ImageNeedUpdate) 设置实例组件是否需要升级
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribePrometheusConfigResponse extends AbstractModel
     public $Probes;
 
     /**
+     * @var boolean 实例组件是否需要升级
+     */
+    public $ImageNeedUpdate;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribePrometheusConfigResponse extends AbstractModel
      * @param array $PodMonitors PodMonitor配置
      * @param array $RawJobs 原生Job
      * @param array $Probes Probes
+     * @param boolean $ImageNeedUpdate 实例组件是否需要升级
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -124,6 +132,10 @@ class DescribePrometheusConfigResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Probes, $obj);
             }
+        }
+
+        if (array_key_exists("ImageNeedUpdate",$param) and $param["ImageNeedUpdate"] !== null) {
+            $this->ImageNeedUpdate = $param["ImageNeedUpdate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

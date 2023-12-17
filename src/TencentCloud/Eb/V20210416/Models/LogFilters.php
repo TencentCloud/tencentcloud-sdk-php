@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 日志存储过滤条件
  *
- * @method string getKey() 获取过滤字段名称
- * @method void setKey(string $Key) 设置过滤字段名称
+ * @method string getKey() 获取过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
+ * @method void setKey(string $Key) 设置过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
  * @method string getOperator() 获取运算符, 全等 eq，不等 neq，相似 like，排除相似 not like,  小于 lt，小于且等于 lte，大于 gt，大于且等于 gte，在范围内 range，不在范围内 norange
  * @method void setOperator(string $Operator) 设置运算符, 全等 eq，不等 neq，相似 like，排除相似 not like,  小于 lt，小于且等于 lte，大于 gt，大于且等于 gte，在范围内 range，不在范围内 norange
  * @method string getValue() 获取过滤值，范围运算需要同时输入两个值，以英文逗号分隔
@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
 class LogFilters extends AbstractModel
 {
     /**
-     * @var string 过滤字段名称
+     * @var string 过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
      */
     public $Key;
 
@@ -47,7 +47,7 @@ class LogFilters extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Key 过滤字段名称
+     * @param string $Key 过滤字段名称，取值范围如下:region(地域)，type(事件类型)，source(事件源)，status(事件状态)
      * @param string $Operator 运算符, 全等 eq，不等 neq，相似 like，排除相似 not like,  小于 lt，小于且等于 lte，大于 gt，大于且等于 gte，在范围内 range，不在范围内 norange
      * @param string $Value 过滤值，范围运算需要同时输入两个值，以英文逗号分隔
      */

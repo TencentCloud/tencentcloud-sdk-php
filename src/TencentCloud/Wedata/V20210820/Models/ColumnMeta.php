@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnFamiliesFieldSet(array $ColumnFamiliesFieldSet) 设置HBase列簇属性集合
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDictionaryId() 获取对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDictionaryId(string $DictionaryId) 设置对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDictionaryName() 获取对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDictionaryName(string $DictionaryName) 设置对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ColumnMeta extends AbstractModel
 {
@@ -104,6 +112,18 @@ class ColumnMeta extends AbstractModel
     public $ColumnFamiliesFieldSet;
 
     /**
+     * @var string 对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DictionaryId;
+
+    /**
+     * @var string 对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DictionaryName;
+
+    /**
      * @param string $NameEn 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameCn 字段中文名称
@@ -119,6 +139,10 @@ class ColumnMeta extends AbstractModel
      * @param string $Name 字段名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ColumnFamiliesFieldSet HBase列簇属性集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DictionaryId 对应码表字典ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DictionaryName 对应码表字典名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -169,6 +193,14 @@ class ColumnMeta extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ColumnFamiliesFieldSet, $obj);
             }
+        }
+
+        if (array_key_exists("DictionaryId",$param) and $param["DictionaryId"] !== null) {
+            $this->DictionaryId = $param["DictionaryId"];
+        }
+
+        if (array_key_exists("DictionaryName",$param) and $param["DictionaryName"] !== null) {
+            $this->DictionaryName = $param["DictionaryName"];
         }
     }
 }

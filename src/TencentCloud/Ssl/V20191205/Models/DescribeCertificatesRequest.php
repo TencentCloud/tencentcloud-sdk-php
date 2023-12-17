@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterExpiring(integer $FilterExpiring) 设置筛选证书是否即将过期，传1是筛选，0不筛选
  * @method integer getHostable() 获取是否可托管，可选值：1 = 可托管，0 =  不可托管。
  * @method void setHostable(integer $Hostable) 设置是否可托管，可选值：1 = 可托管，0 =  不可托管。
+ * @method array getTags() 获取筛选指定标签的证书
+ * @method void setTags(array $Tags) 设置筛选指定标签的证书
+ * @method integer getIsPendingIssue() 获取//是否筛选等待签发的证书，传1是筛选，0和null不筛选
+ * @method void setIsPendingIssue(integer $IsPendingIssue) 设置//是否筛选等待签发的证书，传1是筛选，0和null不筛选
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Hostable;
 
     /**
+     * @var array 筛选指定标签的证书
+     */
+    public $Tags;
+
+    /**
+     * @var integer //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     */
+    public $IsPendingIssue;
+
+    /**
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认20。最大1000
      * @param string $SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
@@ -136,6 +150,8 @@ class DescribeCertificatesRequest extends AbstractModel
      * @param integer $IsSM 是否筛选国密证书。1:筛选  0:不筛选
      * @param integer $FilterExpiring 筛选证书是否即将过期，传1是筛选，0不筛选
      * @param integer $Hostable 是否可托管，可选值：1 = 可托管，0 =  不可托管。
+     * @param array $Tags 筛选指定标签的证书
+     * @param integer $IsPendingIssue //是否筛选等待签发的证书，传1是筛选，0和null不筛选
      */
     function __construct()
     {
@@ -204,6 +220,19 @@ class DescribeCertificatesRequest extends AbstractModel
 
         if (array_key_exists("Hostable",$param) and $param["Hostable"] !== null) {
             $this->Hostable = $param["Hostable"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("IsPendingIssue",$param) and $param["IsPendingIssue"] !== null) {
+            $this->IsPendingIssue = $param["IsPendingIssue"];
         }
     }
 }

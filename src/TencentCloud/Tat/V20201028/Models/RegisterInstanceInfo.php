@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystemName(string $SystemName) 设置系统名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHostName() 获取主机IP。
+ * @method string getHostName() 获取主机名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostName(string $HostName) 设置主机IP。
+ * @method void setHostName(string $HostName) 设置主机名。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalIp() 获取内网IP。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,7 +98,7 @@ class RegisterInstanceInfo extends AbstractModel
     public $SystemName;
 
     /**
-     * @var string 主机IP。
+     * @var string 主机名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
@@ -144,7 +144,7 @@ class RegisterInstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SystemName 系统名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HostName 主机IP。
+     * @param string $HostName 主机名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalIp 内网IP。
 注意：此字段可能返回 null，表示取不到有效值。

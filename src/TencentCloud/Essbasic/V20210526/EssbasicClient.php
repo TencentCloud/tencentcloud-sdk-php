@@ -597,6 +597,14 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 **注**: 
 `1. 发起合同时候,  作为发起方的第三方子企业A员工的企业和员工必须经过实名, 而作为签署方的第三方子企业A员工/个人/自然人/SaaS平台企业员工/第三方子企业B员工企业中的企业和个人/员工可以未实名`
 `2. 不同类型的签署方传参不同, 可以参考开发者中心的FlowApproverInfo结构体说明`
+ * @method Models\CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(Models\CreatePartnerAutoSignAuthUrlRequest $req) 创建他方自动签授权链接，通过该链接可进入小程序进行合作方企业的自动签授权，若当前企业未开通企业自动签，通过该链接会先引导开通本企业自动签。
+该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权
+
+
+
+注: 
+1. <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
+2. 已经在授权中或者授权成功的企业，无法重复授权
  * @method Models\CreateSealByImageResponse CreateSealByImage(Models\CreateSealByImageRequest $req) 1. 可以**通过图片**为子客企业代创建印章，图片最大5MB
 
 2. 可以**系统创建**子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)
@@ -641,6 +649,13 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 - 对于单个企业的查询，通过**指定子客的唯一标识**来查询该子客的企业信息
 - 对于整个应用下所有企业的查询，**不需要指定子客的唯一标识**，直接查询整个应用下所有子客企业的企业信息
  * @method Models\DescribeChannelSealPolicyWorkflowUrlResponse DescribeChannelSealPolicyWorkflowUrl(Models\DescribeChannelSealPolicyWorkflowUrlRequest $req) 生成渠道子客用印申请审批小程序链接，链接类型（通过H5唤起小程序或通过APP跳转的方式查看）
+ * @method Models\DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetail(Models\DescribeExtendedServiceAuthDetailRequest $req) 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
+
+1. **企业自动签**
+2. **批量签署**
+
+
+注: <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Agent.ProxyOperator.OpenId 需要传递超管或者法人的OpenId)
  * @method Models\DescribeExtendedServiceAuthInfoResponse DescribeExtendedServiceAuthInfo(Models\DescribeExtendedServiceAuthInfoRequest $req) 查询企业扩展服务的开通和授权情况，当前支持查询以下内容：
 1. 企业自动签
 2. 企业与港澳台居民签署合同

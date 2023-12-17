@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getContent() 获取Base64编码后的命令内容，长度不可超过64KB。
  * @method void setContent(string $Content) 设置Base64编码后的命令内容，长度不可超过64KB。
  * @method array getInstanceIds() 获取待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
  * @method void setInstanceIds(array $InstanceIds) 设置待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
  * @method string getCommandName() 获取命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
  * @method void setCommandName(string $CommandName) 设置命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
  * @method string getDescription() 获取命令描述。不超过120字符。
@@ -39,25 +39,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTimeout() 获取命令超时时间，默认60秒。取值范围[1, 86400]。
  * @method void setTimeout(integer $Timeout) 设置命令超时时间，默认60秒。取值范围[1, 86400]。
  * @method boolean getSaveCommand() 获取是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。
  * @method void setSaveCommand(boolean $SaveCommand) 设置是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。
  * @method boolean getEnableParameter() 获取是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。 
  * @method void setEnableParameter(boolean $EnableParameter) 设置是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。 
  * @method string getDefaultParameters() 获取启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果 Parameters 未提供，将使用这里的默认值进行替换。
@@ -106,8 +106,8 @@ class RunCommandRequest extends AbstractModel
 
     /**
      * @var array 待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      */
     public $InstanceIds;
 
@@ -138,8 +138,8 @@ class RunCommandRequest extends AbstractModel
 
     /**
      * @var boolean 是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。
      */
     public $SaveCommand;
@@ -148,9 +148,9 @@ class RunCommandRequest extends AbstractModel
      * @var boolean 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。 
      */
     public $EnableParameter;
 
@@ -204,23 +204,23 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
      * @param array $InstanceIds 待执行命令的实例ID列表，上限200。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      * @param string $CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
      * @param string $Description 命令描述。不超过120字符。
      * @param string $CommandType 命令类型，目前支持取值：SHELL、POWERSHELL。默认：SHELL。
      * @param string $WorkingDirectory 命令执行路径，对于 SHELL 命令默认为 /root，对于 POWERSHELL 命令默认为 C:\Program Files\qcloud\tat_agent\workdir。
      * @param integer $Timeout 命令超时时间，默认60秒。取值范围[1, 86400]。
      * @param boolean $SaveCommand 是否保存命令，取值范围：
-<li> true：保存
-<li> false：不保存
+<li> true：保存</li>
+<li> false：不保存</li>
 默认为 false。
      * @param boolean $EnableParameter 是否启用自定义参数功能。
 一旦创建，此值不提供修改。
 取值范围：
-<li> true：启用
-<li> false：不启用
-默认值：false。
+<li> true：启用 </li>
+<li> false：不启用 </li>
+默认值：false。 
      * @param string $DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果 Parameters 未提供，将使用这里的默认值进行替换。

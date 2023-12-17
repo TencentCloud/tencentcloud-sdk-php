@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method ScriptRequestInfo getScriptRequestInfo() 获取脚本上传信息
  * @method void setScriptRequestInfo(ScriptRequestInfo $ScriptRequestInfo) 设置脚本上传信息
+ * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
+ * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
  */
 class UploadContentRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class UploadContentRequest extends AbstractModel
     public $ScriptRequestInfo;
 
     /**
+     * @var string 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public $RequestFromSource;
+
+    /**
      * @param ScriptRequestInfo $ScriptRequestInfo 脚本上传信息
+     * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class UploadContentRequest extends AbstractModel
         if (array_key_exists("ScriptRequestInfo",$param) and $param["ScriptRequestInfo"] !== null) {
             $this->ScriptRequestInfo = new ScriptRequestInfo();
             $this->ScriptRequestInfo->deserialize($param["ScriptRequestInfo"]);
+        }
+
+        if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
+            $this->RequestFromSource = $param["RequestFromSource"];
         }
     }
 }

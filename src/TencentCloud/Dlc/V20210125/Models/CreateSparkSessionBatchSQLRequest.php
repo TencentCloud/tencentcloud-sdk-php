@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
  * @method integer getIsInherit() 获取是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
  * @method void setIsInherit(integer $IsInherit) 设置是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
+ * @method string getCustomKey() 获取用户自定义主键，需唯一
+ * @method void setCustomKey(string $CustomKey) 设置用户自定义主键，需唯一
  */
 class CreateSparkSessionBatchSQLRequest extends AbstractModel
 {
@@ -107,6 +109,11 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
     public $IsInherit;
 
     /**
+     * @var string 用户自定义主键，需唯一
+     */
+    public $CustomKey;
+
+    /**
      * @param string $DataEngineName DLC Spark作业引擎名称
      * @param string $ExecuteSQL 运行sql，需要base64编码。
      * @param string $DriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
@@ -120,6 +127,7 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
 2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
 3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
      * @param integer $IsInherit 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
+     * @param string $CustomKey 用户自定义主键，需唯一
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
 
         if (array_key_exists("IsInherit",$param) and $param["IsInherit"] !== null) {
             $this->IsInherit = $param["IsInherit"];
+        }
+
+        if (array_key_exists("CustomKey",$param) and $param["CustomKey"] !== null) {
+            $this->CustomKey = $param["CustomKey"];
         }
     }
 }

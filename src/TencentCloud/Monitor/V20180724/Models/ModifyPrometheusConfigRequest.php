@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodMonitors(array $PodMonitors) 设置PodMonitors配置
  * @method array getRawJobs() 获取prometheus原生Job配置
  * @method void setRawJobs(array $RawJobs) 设置prometheus原生Job配置
+ * @method integer getUpdateImage() 获取0: 更新实例组件镜像版本；
+1: 不更新实例组件镜像版本
+ * @method void setUpdateImage(integer $UpdateImage) 设置0: 更新实例组件镜像版本；
+1: 不更新实例组件镜像版本
  */
 class ModifyPrometheusConfigRequest extends AbstractModel
 {
@@ -66,12 +70,20 @@ class ModifyPrometheusConfigRequest extends AbstractModel
     public $RawJobs;
 
     /**
+     * @var integer 0: 更新实例组件镜像版本；
+1: 不更新实例组件镜像版本
+     */
+    public $UpdateImage;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群id
      * @param array $ServiceMonitors ServiceMonitors配置
      * @param array $PodMonitors PodMonitors配置
      * @param array $RawJobs prometheus原生Job配置
+     * @param integer $UpdateImage 0: 更新实例组件镜像版本；
+1: 不更新实例组件镜像版本
      */
     function __construct()
     {
@@ -123,6 +135,10 @@ class ModifyPrometheusConfigRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RawJobs, $obj);
             }
+        }
+
+        if (array_key_exists("UpdateImage",$param) and $param["UpdateImage"] !== null) {
+            $this->UpdateImage = $param["UpdateImage"];
         }
     }
 }

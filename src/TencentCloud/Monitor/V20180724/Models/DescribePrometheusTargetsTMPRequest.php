@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getClusterId() 获取集成容器服务填绑定的集群id；
+集成中心填 non-cluster
+ * @method void setClusterId(string $ClusterId) 设置集成容器服务填绑定的集群id；
+集成中心填 non-cluster
+ * @method string getClusterType() 获取集群类型(可不填)
+ * @method void setClusterType(string $ClusterType) 设置集群类型(可不填)
  * @method array getFilters() 获取过滤条件，当前支持
 Name=state
 Value=up, down, unknown
@@ -41,14 +43,15 @@ class DescribePrometheusTargetsTMPRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 集群类型
-     */
-    public $ClusterType;
-
-    /**
-     * @var string 集群id
+     * @var string 集成容器服务填绑定的集群id；
+集成中心填 non-cluster
      */
     public $ClusterId;
+
+    /**
+     * @var string 集群类型(可不填)
+     */
+    public $ClusterType;
 
     /**
      * @var array 过滤条件，当前支持
@@ -59,8 +62,9 @@ Value=up, down, unknown
 
     /**
      * @param string $InstanceId 实例id
-     * @param string $ClusterType 集群类型
-     * @param string $ClusterId 集群id
+     * @param string $ClusterId 集成容器服务填绑定的集群id；
+集成中心填 non-cluster
+     * @param string $ClusterType 集群类型(可不填)
      * @param array $Filters 过滤条件，当前支持
 Name=state
 Value=up, down, unknown
@@ -82,12 +86,12 @@ Value=up, down, unknown
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
-            $this->ClusterType = $param["ClusterType"];
-        }
-
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

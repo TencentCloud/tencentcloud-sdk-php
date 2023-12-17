@@ -24,11 +24,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSucFaceNum(integer $SucFaceNum) 设置加入成功的人脸数量
  * @method array getSucFaceIds() 获取加入成功的人脸ID列表
  * @method void setSucFaceIds(array $SucFaceIds) 设置加入成功的人脸ID列表
- * @method array getRetCode() 获取每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
+ * @method array getRetCode() 获取每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，-1109 代表图片尺寸过大或者过小， 
 -1601代表不符合图片质量控制要求, -1604 代表人脸相似度没有超过FaceMatchThreshold。 
 其他非 0 值代表算法服务异常。 
 RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
- * @method void setRetCode(array $RetCode) 设置每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
+ * @method void setRetCode(array $RetCode) 设置每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，-1109 代表图片尺寸过大或者过小， 
 -1601代表不符合图片质量控制要求, -1604 代表人脸相似度没有超过FaceMatchThreshold。 
 其他非 0 值代表算法服务异常。 
 RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
@@ -56,7 +56,7 @@ class CreateFaceResponse extends AbstractModel
     public $SucFaceIds;
 
     /**
-     * @var array 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
+     * @var array 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，-1109 代表图片尺寸过大或者过小， 
 -1601代表不符合图片质量控制要求, -1604 代表人脸相似度没有超过FaceMatchThreshold。 
 其他非 0 值代表算法服务异常。 
 RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
@@ -87,7 +87,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     /**
      * @param integer $SucFaceNum 加入成功的人脸数量
      * @param array $SucFaceIds 加入成功的人脸ID列表
-     * @param array $RetCode 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
+     * @param array $RetCode 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败，-1109 代表图片尺寸过大或者过小， 
 -1601代表不符合图片质量控制要求, -1604 代表人脸相似度没有超过FaceMatchThreshold。 
 其他非 0 值代表算法服务异常。 
 RetCode的顺序和入参中 Images 或 Urls 的顺序一致。

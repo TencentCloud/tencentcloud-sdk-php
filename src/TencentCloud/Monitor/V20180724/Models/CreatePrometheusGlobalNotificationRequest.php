@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheusGlobalNotification请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取实例ID(可通过 DescribePrometheusInstances 接口获取)
+ * @method void setInstanceId(string $InstanceId) 设置实例ID(可通过 DescribePrometheusInstances 接口获取)
  * @method PrometheusNotificationItem getNotification() 获取告警通知渠道
  * @method void setNotification(PrometheusNotificationItem $Notification) 设置告警通知渠道
  */
 class CreatePrometheusGlobalNotificationRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class CreatePrometheusGlobalNotificationRequest extends AbstractModel
     public $Notification;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 实例ID(可通过 DescribePrometheusInstances 接口获取)
      * @param PrometheusNotificationItem $Notification 告警通知渠道
      */
     function __construct()

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBatchId() 获取批任务唯一标识
  * @method void setBatchId(string $BatchId) 设置批任务唯一标识
+ * @method string getCustomKey() 获取用户自定义主键，若不为空，则使用该值进行查询
+ * @method void setCustomKey(string $CustomKey) 设置用户自定义主键，若不为空，则使用该值进行查询
  */
 class CancelSparkSessionBatchSQLRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CancelSparkSessionBatchSQLRequest extends AbstractModel
     public $BatchId;
 
     /**
+     * @var string 用户自定义主键，若不为空，则使用该值进行查询
+     */
+    public $CustomKey;
+
+    /**
      * @param string $BatchId 批任务唯一标识
+     * @param string $CustomKey 用户自定义主键，若不为空，则使用该值进行查询
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CancelSparkSessionBatchSQLRequest extends AbstractModel
         }
         if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
             $this->BatchId = $param["BatchId"];
+        }
+
+        if (array_key_exists("CustomKey",$param) and $param["CustomKey"] !== null) {
+            $this->CustomKey = $param["CustomKey"];
         }
     }
 }

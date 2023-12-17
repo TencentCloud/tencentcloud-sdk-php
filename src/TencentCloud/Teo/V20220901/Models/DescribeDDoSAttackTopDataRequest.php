@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>ddos_attackNum_sregion：按攻击源地区的攻击数量排行；</li>
 <li>ddos_attackFlux_sip：按攻击源IP的攻击数量排行；</li>
 <li>ddos_attackFlux_sregion：按攻击源地区的攻击数量排行。</li>
- * @method array getZoneIds() 获取站点ID集合，不填默认选择全部站点。
- * @method void setZoneIds(array $ZoneIds) 设置站点ID集合，不填默认选择全部站点。
+ * @method array getZoneIds() 获取站点ID集合，此参数必填。
+ * @method void setZoneIds(array $ZoneIds) 设置站点ID集合，此参数必填。
  * @method array getPolicyIds() 获取DDoS策略组ID集合，不填默认选择全部策略ID。
  * @method void setPolicyIds(array $PolicyIds) 设置DDoS策略组ID集合，不填默认选择全部策略ID。
  * @method string getAttackType() 获取攻击类型，取值有：
@@ -93,7 +93,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array 站点ID集合，不填默认选择全部站点。
+     * @var array 站点ID集合，此参数必填。
      */
     public $ZoneIds;
 
@@ -145,7 +145,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
 <li>ddos_attackNum_sregion：按攻击源地区的攻击数量排行；</li>
 <li>ddos_attackFlux_sip：按攻击源IP的攻击数量排行；</li>
 <li>ddos_attackFlux_sregion：按攻击源地区的攻击数量排行。</li>
-     * @param array $ZoneIds 站点ID集合，不填默认选择全部站点。
+     * @param array $ZoneIds 站点ID集合，此参数必填。
      * @param array $PolicyIds DDoS策略组ID集合，不填默认选择全部策略ID。
      * @param string $AttackType 攻击类型，取值有：
 <li>flood：洪泛攻击；</li>

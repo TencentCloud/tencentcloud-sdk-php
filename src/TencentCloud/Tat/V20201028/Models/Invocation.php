@@ -25,19 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCommandId() 获取命令ID。
  * @method void setCommandId(string $CommandId) 设置命令ID。
  * @method string getInvocationStatus() 获取执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令失败
-<li> TIMEOUT：命令超时
-<li> PARTIAL_FAILED：命令部分失败
+
+<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> </ul>
  * @method void setInvocationStatus(string $InvocationStatus) 设置执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令失败
-<li> TIMEOUT：命令超时
-<li> PARTIAL_FAILED：命令部分失败
+
+<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> </ul>
  * @method array getInvocationTaskBasicInfoSet() 获取执行任务信息列表。
  * @method void setInvocationTaskBasicInfoSet(array $InvocationTaskBasicInfoSet) 设置执行任务信息列表。
  * @method string getDescription() 获取执行活动描述。
@@ -87,12 +79,8 @@ class Invocation extends AbstractModel
 
     /**
      * @var string 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令失败
-<li> TIMEOUT：命令超时
-<li> PARTIAL_FAILED：命令部分失败
+
+<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> </ul>
      */
     public $InvocationStatus;
 
@@ -185,12 +173,8 @@ class Invocation extends AbstractModel
      * @param string $InvocationId 执行活动ID。
      * @param string $CommandId 命令ID。
      * @param string $InvocationStatus 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令失败
-<li> TIMEOUT：命令超时
-<li> PARTIAL_FAILED：命令部分失败
+
+<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> </ul>
      * @param array $InvocationTaskBasicInfoSet 执行任务信息列表。
      * @param string $Description 执行活动描述。
      * @param string $StartTime 执行活动开始时间。

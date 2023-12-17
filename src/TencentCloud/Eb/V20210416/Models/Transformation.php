@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 一个转换器
  *
- * @method Extraction getExtraction() 获取描述如何提取数据
+ * @method Extraction getExtraction() 获取描述如何提取数据，{"ExtractionInputPath":"$.data.payload","Format":"JSON"}
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraction(Extraction $Extraction) 设置描述如何提取数据
+ * @method void setExtraction(Extraction $Extraction) 设置描述如何提取数据，{"ExtractionInputPath":"$.data.payload","Format":"JSON"}
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EtlFilter getEtlFilter() 获取描述如何过滤数据
+ * @method EtlFilter getEtlFilter() 获取描述如何过滤数据;{"Filter":"{\"source\":\"ckafka.cloud.tencent\"}"}
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEtlFilter(EtlFilter $EtlFilter) 设置描述如何过滤数据
+ * @method void setEtlFilter(EtlFilter $EtlFilter) 设置描述如何过滤数据;{"Filter":"{\"source\":\"ckafka.cloud.tencent\"}"}
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Transform getTransform() 获取描述如何数据转换
+ * @method Transform getTransform() 获取描述如何数据转换;"OutputStructs":[{"Key":"op","Value":"$.op","ValueType":"JSONPATH"}]
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTransform(Transform $Transform) 设置描述如何数据转换
+ * @method void setTransform(Transform $Transform) 设置描述如何数据转换;"OutputStructs":[{"Key":"op","Value":"$.op","ValueType":"JSONPATH"}]
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Transformation extends AbstractModel
 {
     /**
-     * @var Extraction 描述如何提取数据
+     * @var Extraction 描述如何提取数据，{"ExtractionInputPath":"$.data.payload","Format":"JSON"}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extraction;
 
     /**
-     * @var EtlFilter 描述如何过滤数据
+     * @var EtlFilter 描述如何过滤数据;{"Filter":"{\"source\":\"ckafka.cloud.tencent\"}"}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EtlFilter;
 
     /**
-     * @var Transform 描述如何数据转换
+     * @var Transform 描述如何数据转换;"OutputStructs":[{"Key":"op","Value":"$.op","ValueType":"JSONPATH"}]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Transform;
 
     /**
-     * @param Extraction $Extraction 描述如何提取数据
+     * @param Extraction $Extraction 描述如何提取数据，{"ExtractionInputPath":"$.data.payload","Format":"JSON"}
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EtlFilter $EtlFilter 描述如何过滤数据
+     * @param EtlFilter $EtlFilter 描述如何过滤数据;{"Filter":"{\"source\":\"ckafka.cloud.tencent\"}"}
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Transform $Transform 描述如何数据转换
+     * @param Transform $Transform 描述如何数据转换;"OutputStructs":[{"Key":"op","Value":"$.op","ValueType":"JSONPATH"}]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 默认为minimalist_log
  * @method void setLogType(string $LogType) 设置采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
- * @method string getCompress() 获取supported: "", "gzip", "lzop", "snappy”; 默认空
- * @method void setCompress(string $Compress) 设置supported: "", "gzip", "lzop", "snappy”; 默认空
+ * @method string getCompress() 获取supported: "", "gzip", "lzop", "snappy"; 默认空
+ * @method void setCompress(string $Compress) 设置supported: "", "gzip", "lzop", "snappy"; 默认空
  * @method ExtractRuleInfo getExtractRuleInfo() 获取提取规则，如果设置了ExtractRule，则必须设置LogType
  * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) 设置提取规则，如果设置了ExtractRule，则必须设置LogType
  */
@@ -80,7 +80,7 @@ class CreateCosRechargeRequest extends AbstractModel
     public $LogType;
 
     /**
-     * @var string supported: "", "gzip", "lzop", "snappy”; 默认空
+     * @var string supported: "", "gzip", "lzop", "snappy"; 默认空
      */
     public $Compress;
 
@@ -98,7 +98,7 @@ class CreateCosRechargeRequest extends AbstractModel
      * @param string $Prefix COS文件所在文件夹的前缀
      * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
-     * @param string $Compress supported: "", "gzip", "lzop", "snappy”; 默认空
+     * @param string $Compress supported: "", "gzip", "lzop", "snappy"; 默认空
      * @param ExtractRuleInfo $ExtractRuleInfo 提取规则，如果设置了ExtractRule，则必须设置LogType
      */
     function __construct()

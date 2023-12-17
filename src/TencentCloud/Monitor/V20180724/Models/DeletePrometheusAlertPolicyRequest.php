@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePrometheusAlertPolicy请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method array getAlertIds() 获取告警策略id列表
- * @method void setAlertIds(array $AlertIds) 设置告警策略id列表
- * @method array getNames() 获取告警策略名称
- * @method void setNames(array $Names) 设置告警策略名称
+ * @method string getInstanceId() 获取实例ID(可通过 DescribePrometheusInstances 接口获取)
+ * @method void setInstanceId(string $InstanceId) 设置实例ID(可通过 DescribePrometheusInstances 接口获取)
+ * @method array getAlertIds() 获取告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
+ * @method void setAlertIds(array $AlertIds) 设置告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
+ * @method array getNames() 获取告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
+ * @method void setNames(array $Names) 设置告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
  */
 class DeletePrometheusAlertPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 实例ID(可通过 DescribePrometheusInstances 接口获取)
      */
     public $InstanceId;
 
     /**
-     * @var array 告警策略id列表
+     * @var array 告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
      */
     public $AlertIds;
 
     /**
-     * @var array 告警策略名称
+     * @var array 告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
      */
     public $Names;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param array $AlertIds 告警策略id列表
-     * @param array $Names 告警策略名称
+     * @param string $InstanceId 实例ID(可通过 DescribePrometheusInstances 接口获取)
+     * @param array $AlertIds 告警策略ID列表(可通过 DescribePrometheusAlertPolicy 接口获取)
+     * @param array $Names 告警策略名称(可通过 DescribePrometheusAlertPolicy 接口获取)，名称完全相同的告警策略才会删除
      */
     function __construct()
     {

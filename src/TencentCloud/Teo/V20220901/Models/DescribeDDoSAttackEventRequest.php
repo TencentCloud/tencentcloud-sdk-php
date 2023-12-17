@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDoSAttackEvent请求参数结构体
  *
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getStartTime() 获取开始时间，时间范围为 30 天。
+ * @method void setStartTime(string $StartTime) 设置开始时间，时间范围为 30 天。
+ * @method string getEndTime() 获取结束时间，时间范围为 30 天。
+ * @method void setEndTime(string $EndTime) 设置结束时间，时间范围为 30 天。
  * @method array getPolicyIds() 获取ddos策略组集合，不填默认选择全部策略。
  * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组集合，不填默认选择全部策略。
- * @method array getZoneIds() 获取站点集合，此参数必填，不填默认查询为空。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合，此参数必填，不填默认查询为空。
+ * @method array getZoneIds() 获取站点集合，此参数必填。
+ * @method void setZoneIds(array $ZoneIds) 设置站点集合，此参数必填。
  * @method integer getLimit() 获取分页查询的限制数目，默认值为20，最大查询条目为1000。
  * @method void setLimit(integer $Limit) 设置分页查询的限制数目，默认值为20，最大查询条目为1000。
  * @method integer getOffset() 获取分页的偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
- * @method boolean getShowDetail() 获取是否展示详细信息。
- * @method void setShowDetail(boolean $ShowDetail) 设置是否展示详细信息。
+ * @method boolean getShowDetail() 获取展示攻击详情的参数，若填false，默认只返回攻击次数，不返回攻击详情；若填true，返回攻击详情。
+ * @method void setShowDetail(boolean $ShowDetail) 设置展示攻击详情的参数，若填false，默认只返回攻击次数，不返回攻击详情；若填true，返回攻击详情。
  * @method string getArea() 获取数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
 <li>mainland：中国大陆地区数据；</li>
@@ -58,12 +58,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDDoSAttackEventRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间。
+     * @var string 开始时间，时间范围为 30 天。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间，时间范围为 30 天。
      */
     public $EndTime;
 
@@ -73,7 +73,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $PolicyIds;
 
     /**
-     * @var array 站点集合，此参数必填，不填默认查询为空。
+     * @var array 站点集合，此参数必填。
      */
     public $ZoneIds;
 
@@ -88,7 +88,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var boolean 是否展示详细信息。
+     * @var boolean 展示攻击详情的参数，若填false，默认只返回攻击次数，不返回攻击详情；若填true，返回攻击详情。
      */
     public $ShowDetail;
 
@@ -115,13 +115,13 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $StartTime 开始时间，时间范围为 30 天。
+     * @param string $EndTime 结束时间，时间范围为 30 天。
      * @param array $PolicyIds ddos策略组集合，不填默认选择全部策略。
-     * @param array $ZoneIds 站点集合，此参数必填，不填默认查询为空。
+     * @param array $ZoneIds 站点集合，此参数必填。
      * @param integer $Limit 分页查询的限制数目，默认值为20，最大查询条目为1000。
      * @param integer $Offset 分页的偏移量，默认值为0。
-     * @param boolean $ShowDetail 是否展示详细信息。
+     * @param boolean $ShowDetail 展示攻击详情的参数，若填false，默认只返回攻击次数，不返回攻击详情；若填true，返回攻击详情。
      * @param string $Area 数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
 <li>mainland：中国大陆地区数据；</li>

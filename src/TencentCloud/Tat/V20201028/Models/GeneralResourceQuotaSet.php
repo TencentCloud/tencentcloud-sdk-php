@@ -18,7 +18,7 @@ namespace TencentCloud\Tat\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GeneralResourceQuotaSet数据结构
+ * 用户配额信息。
  *
  * @method string getResourceName() 获取资源名称
 注意：此字段可能返回 null，表示取不到有效值。

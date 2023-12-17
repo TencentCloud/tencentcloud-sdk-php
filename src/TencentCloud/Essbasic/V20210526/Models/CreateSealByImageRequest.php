@@ -99,11 +99,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSealSize() 获取印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
  * @method void setSealSize(string $SealSize) 设置印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
  * @method string getTaxIdentifyCode() 获取企业税号
 注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
 `2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`
@@ -188,7 +190,8 @@ class CreateSealByImageRequest extends AbstractModel
      * @var string 印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
      */
     public $SealSize;
 
@@ -241,7 +244,8 @@ class CreateSealByImageRequest extends AbstractModel
      * @param string $SealSize 印章尺寸取值描述, 可以选择的尺寸如下: 
 <ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
 <li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
+<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
      * @param string $TaxIdentifyCode 企业税号
 注: `1.印章类型SealType是INVOICE类型时，此参数才会生效`
 `2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号`

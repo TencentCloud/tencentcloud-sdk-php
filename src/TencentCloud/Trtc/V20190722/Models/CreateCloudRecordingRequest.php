@@ -25,9 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRoomId() 获取TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
  * @method void setRoomId(string $RoomId) 设置TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
  * @method string getUserId() 获取录制机器人的UserId，用于进房发起录制任务。
-【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复，也不可能指定相同的录制机器人UserId同时进房。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
+【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个录制任务时，机器人的userid也不能相互重复，否则会中断前一个录制任务。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
  * @method void setUserId(string $UserId) 设置录制机器人的UserId，用于进房发起录制任务。
-【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复，也不可能指定相同的录制机器人UserId同时进房。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
+【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个录制任务时，机器人的userid也不能相互重复，否则会中断前一个录制任务。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
  * @method string getUserSig() 获取录制机器人UserId对应的校验签名，即UserId和UserSig相当于录制机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
  * @method void setUserSig(string $UserSig) 设置录制机器人UserId对应的校验签名，即UserId和UserSig相当于录制机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
  * @method RecordParams getRecordParams() 获取云端录制控制参数。
@@ -65,7 +65,7 @@ class CreateCloudRecordingRequest extends AbstractModel
 
     /**
      * @var string 录制机器人的UserId，用于进房发起录制任务。
-【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复，也不可能指定相同的录制机器人UserId同时进房。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
+【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个录制任务时，机器人的userid也不能相互重复，否则会中断前一个录制任务。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
      */
     public $UserId;
 
@@ -116,7 +116,7 @@ class CreateCloudRecordingRequest extends AbstractModel
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和录制的房间所对应的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
      * @param string $UserId 录制机器人的UserId，用于进房发起录制任务。
-【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复，也不可能指定相同的录制机器人UserId同时进房。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
+【*注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个录制任务时，机器人的userid也不能相互重复，否则会中断前一个录制任务。建议可以把房间ID作为UserId的标识的一部分，即录制机器人UserId在房间内唯一。
      * @param string $UserSig 录制机器人UserId对应的校验签名，即UserId和UserSig相当于录制机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
      * @param RecordParams $RecordParams 云端录制控制参数。
      * @param StorageParams $StorageParams 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。点播和对象存储的参数必填其中之一，不支持同时设置点播和对象存储。

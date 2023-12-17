@@ -41,6 +41,12 @@ use TencentCloud\Common\AbstractModel;
 按照【注册码ID】进行过滤。
 类型：String
 必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
+类型：String
+必选：否
  * @method void setFilters(array $Filters) 设置过滤器列表。
 
 - instance-name
@@ -58,6 +64,12 @@ use TencentCloud\Common\AbstractModel;
 - register-code-id
 
 按照【注册码ID】进行过滤。
+类型：String
+必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
  * @method integer getOffset() 获取偏移量，默认为 0。
@@ -92,6 +104,12 @@ class DescribeRegisterInstancesRequest extends AbstractModel
 按照【注册码ID】进行过滤。
 类型：String
 必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
+类型：String
+必选：否
      */
     public $Filters;
 
@@ -124,6 +142,12 @@ class DescribeRegisterInstancesRequest extends AbstractModel
 - register-code-id
 
 按照【注册码ID】进行过滤。
+类型：String
+必选：否
+
+- sys-name
+
+按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
      * @param integer $Offset 偏移量，默认为 0。

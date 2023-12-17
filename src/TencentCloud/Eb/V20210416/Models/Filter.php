@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getValues() 获取一个或者多个过滤值。
  * @method void setValues(array $Values) 设置一个或者多个过滤值。
- * @method string getName() 获取过滤键的名称。
- * @method void setName(string $Name) 设置过滤键的名称。
+ * @method string getName() 获取过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
+ * @method void setName(string $Name) 设置过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
  */
 class Filter extends AbstractModel
 {
@@ -35,13 +35,13 @@ class Filter extends AbstractModel
     public $Values;
 
     /**
-     * @var string 过滤键的名称。
+     * @var string 过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
      */
     public $Name;
 
     /**
      * @param array $Values 一个或者多个过滤值。
-     * @param string $Name 过滤键的名称。
+     * @param string $Name 过滤键的名称。EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)
      */
     function __construct()
     {

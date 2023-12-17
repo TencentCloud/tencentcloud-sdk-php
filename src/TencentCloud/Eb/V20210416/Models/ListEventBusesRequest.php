@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
  * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
- * @method array getFilters() 获取过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。
- * @method void setFilters(array $Filters) 设置过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。
+ * @method array getFilters() 获取过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{"Name":"Type","Values":["Cloud","Platform"]}]
+ * @method void setFilters(array $Filters) 设置过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{"Name":"Type","Values":["Cloud","Platform"]}]
  * @method integer getOffset() 获取分页偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0。
  */
@@ -49,7 +49,7 @@ class ListEventBusesRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var array 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。
+     * @var array 过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{"Name":"Type","Values":["Cloud","Platform"]}]
      */
     public $Filters;
 
@@ -62,7 +62,7 @@ class ListEventBusesRequest extends AbstractModel
      * @param string $OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC（升序） 和 DESC（降序）
-     * @param array $Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。
+     * @param array $Filters 过滤字段范围: EventBusName(事件集名称)/EventBusId(事件集Id)/Type(事件集类型:Cloud(云服务);Platform(平台型);Custom(自定义))/TagKey(标签键)。每次请求的Filters的上限为10，Filter.Values的上限为5。[{"Name":"Type","Values":["Cloud","Platform"]}]
      * @param integer $Offset 分页偏移量，默认为0。
      */
     function __construct()

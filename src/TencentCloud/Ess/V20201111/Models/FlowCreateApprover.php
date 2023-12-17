@@ -246,6 +246,16 @@ use TencentCloud\Common\AbstractModel;
 
 注:
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
+ * @method integer getSignTypeSelector() 获取生成H5签署链接时，你可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+ * @method void setSignTypeSelector(integer $SignTypeSelector) 设置生成H5签署链接时，你可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -464,6 +474,15 @@ class FlowCreateApprover extends AbstractModel
     public $ApproverSignTypes;
 
     /**
+     * @var integer 生成H5签署链接时，你可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
+     */
+    public $SignTypeSelector;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
@@ -577,6 +596,11 @@ class FlowCreateApprover extends AbstractModel
 
 注:
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
+     * @param integer $SignTypeSelector 生成H5签署链接时，你可以指定签署方签署合同的认证校验方式的选择模式，可传递一下值：
+<ul><li>**0**：签署方自行选择，签署方可以从预先指定的认证方式中自由选择；</li>
+<li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
+注：
+`不指定该值时，默认为签署方自行选择。`
      */
     function __construct()
     {
@@ -701,6 +725,10 @@ class FlowCreateApprover extends AbstractModel
 
         if (array_key_exists("ApproverSignTypes",$param) and $param["ApproverSignTypes"] !== null) {
             $this->ApproverSignTypes = $param["ApproverSignTypes"];
+        }
+
+        if (array_key_exists("SignTypeSelector",$param) and $param["SignTypeSelector"] !== null) {
+            $this->SignTypeSelector = $param["SignTypeSelector"];
         }
     }
 }

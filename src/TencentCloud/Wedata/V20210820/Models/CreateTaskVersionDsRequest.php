@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRun(boolean $AutoRun) 设置是否自动运行
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
+ * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
  * @method string getAlarmWays() 获取告警方式:email-邮件;sms-短信;wecom-企业微信
  * @method void setAlarmWays(string $AlarmWays) 设置告警方式:email-邮件;sms-短信;wecom-企业微信
  * @method string getAlarmRecipientTypes() 获取告警对象:1-项目管理员，2-任务责任人
@@ -56,6 +58,11 @@ class CreateTaskVersionDsRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public $RequestFromSource;
+
+    /**
      * @var string 告警方式:email-邮件;sms-短信;wecom-企业微信
      */
     public $AlarmWays;
@@ -70,6 +77,7 @@ class CreateTaskVersionDsRequest extends AbstractModel
      * @param boolean $NeedCheckParentSubmitted 是否需要校验父任务已经提交到调度
      * @param boolean $AutoRun 是否自动运行
      * @param string $ProjectId 项目ID
+     * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      * @param string $AlarmWays 告警方式:email-邮件;sms-短信;wecom-企业微信
      * @param string $AlarmRecipientTypes 告警对象:1-项目管理员，2-任务责任人
      */
@@ -101,6 +109,10 @@ class CreateTaskVersionDsRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
+            $this->RequestFromSource = $param["RequestFromSource"];
         }
 
         if (array_key_exists("AlarmWays",$param) and $param["AlarmWays"] !== null) {

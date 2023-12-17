@@ -106,25 +106,25 @@ timeRollback，时间点回档
 当DbType为MYSQL时可选(默认NORMAL)：
 <li>NORMAL</li>
 <li>SERVERLESS</li>
- * @method float getMinCpu() 获取当DbMode为SEVERLESS时必填
+ * @method float getMinCpu() 获取当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMinCpu(float $MinCpu) 设置当DbMode为SEVERLESS时必填
+ * @method void setMinCpu(float $MinCpu) 设置当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method float getMaxCpu() 获取当DbMode为SEVERLESS时必填：
+ * @method float getMaxCpu() 获取当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method void setMaxCpu(float $MaxCpu) 设置当DbMode为SEVERLESS时必填：
+ * @method void setMaxCpu(float $MaxCpu) 设置当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
- * @method string getAutoPause() 获取当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+ * @method string getAutoPause() 获取当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes
- * @method void setAutoPause(string $AutoPause) 设置当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+ * @method void setAutoPause(string $AutoPause) 设置当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes
- * @method integer getAutoPauseDelay() 获取当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+ * @method integer getAutoPauseDelay() 获取当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
- * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+ * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
  * @method integer getStoragePayMode() 获取集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
 当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
@@ -309,19 +309,19 @@ timeRollback，时间点回档
     public $DbMode;
 
     /**
-     * @var float 当DbMode为SEVERLESS时必填
+     * @var float 当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public $MinCpu;
 
     /**
-     * @var float 当DbMode为SEVERLESS时必填：
+     * @var float 当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public $MaxCpu;
 
     /**
-     * @var string 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+     * @var string 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes
@@ -329,7 +329,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $AutoPause;
 
     /**
-     * @var integer 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+     * @var integer 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
      */
     public $AutoPauseDelay;
@@ -420,15 +420,15 @@ timeRollback，时间点回档
 当DbType为MYSQL时可选(默认NORMAL)：
 <li>NORMAL</li>
 <li>SERVERLESS</li>
-     * @param float $MinCpu 当DbMode为SEVERLESS时必填
+     * @param float $MinCpu 当DbMode为SERVERLESS时必填
 cpu最小值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param float $MaxCpu 当DbMode为SEVERLESS时必填：
+     * @param float $MaxCpu 当DbMode为SERVERLESS时必填：
 cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
-     * @param string $AutoPause 当DbMode为SEVERLESS时，指定集群是否自动暂停，可选范围
+     * @param string $AutoPause 当DbMode为SERVERLESS时，指定集群是否自动暂停，可选范围
 <li>yes</li>
 <li>no</li>
 默认值:yes
-     * @param integer $AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
+     * @param integer $AutoPauseDelay 当DbMode为SERVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
      * @param integer $StoragePayMode 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
 当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费

@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInvocationId() 获取执行活动ID
  * @method void setInvocationId(string $InvocationId) 设置执行活动ID
  * @method array getInstanceIds() 获取实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
  */
 class CancelInvocationRequest extends AbstractModel
 {
@@ -38,16 +38,16 @@ class CancelInvocationRequest extends AbstractModel
 
     /**
      * @var array 实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      */
     public $InstanceIds;
 
     /**
      * @param string $InvocationId 执行活动ID
      * @param array $InstanceIds 实例ID列表，上限100。支持实例类型：
-<li> CVM
-<li> LIGHTHOUSE
+<li> CVM </li>
+<li> LIGHTHOUSE </li>
      */
     function __construct()
     {

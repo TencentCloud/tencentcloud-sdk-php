@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgents(array $Agents) 设置被关联集群信息
  * @method integer getTotal() 获取被关联集群总量
  * @method void setTotal(integer $Total) 设置被关联集群总量
- * @method boolean getIsFirstBind() 获取是否为首次绑定，需要安装预聚合规则
- * @method void setIsFirstBind(boolean $IsFirstBind) 设置是否为首次绑定，需要安装预聚合规则
+ * @method boolean getIsFirstBind() 获取是否为首次绑定，如果是首次绑定则需要安装预聚合规则
+ * @method void setIsFirstBind(boolean $IsFirstBind) 设置是否为首次绑定，如果是首次绑定则需要安装预聚合规则
+ * @method boolean getImageNeedUpdate() 获取实例组件是否需要更新镜像版本
+ * @method void setImageNeedUpdate(boolean $ImageNeedUpdate) 设置实例组件是否需要更新镜像版本
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,9 +44,14 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
     public $Total;
 
     /**
-     * @var boolean 是否为首次绑定，需要安装预聚合规则
+     * @var boolean 是否为首次绑定，如果是首次绑定则需要安装预聚合规则
      */
     public $IsFirstBind;
+
+    /**
+     * @var boolean 实例组件是否需要更新镜像版本
+     */
+    public $ImageNeedUpdate;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,7 +61,8 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
     /**
      * @param array $Agents 被关联集群信息
      * @param integer $Total 被关联集群总量
-     * @param boolean $IsFirstBind 是否为首次绑定，需要安装预聚合规则
+     * @param boolean $IsFirstBind 是否为首次绑定，如果是首次绑定则需要安装预聚合规则
+     * @param boolean $ImageNeedUpdate 实例组件是否需要更新镜像版本
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -85,6 +93,10 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
 
         if (array_key_exists("IsFirstBind",$param) and $param["IsFirstBind"] !== null) {
             $this->IsFirstBind = $param["IsFirstBind"];
+        }
+
+        if (array_key_exists("ImageNeedUpdate",$param) and $param["ImageNeedUpdate"] !== null) {
+            $this->ImageNeedUpdate = $param["ImageNeedUpdate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

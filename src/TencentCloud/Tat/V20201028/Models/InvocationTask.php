@@ -27,33 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCommandId() 获取命令ID。
  * @method void setCommandId(string $CommandId) 设置命令ID。
  * @method string getTaskStatus() 获取执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消）
+
+<ul> <li>PENDING：等待下发</li> <li>DELIVERING：下发中</li> <li>DELIVER_DELAYED：延时下发</li> <li>DELIVER_FAILED：下发失败</li> <li>START_FAILED：命令启动失败</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令执行失败，执行完退出码不为 0</li> <li>TIMEOUT：命令超时</li> <li>TASK_TIMEOUT：执行任务超时</li> <li>CANCELLING：取消中</li> <li>CANCELLED：已取消（命令启动前就被取消）</li> <li>TERMINATED：已中止（命令执行期间被取消）</li> </ul>
  * @method void setTaskStatus(string $TaskStatus) 设置执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消）
+
+<ul> <li>PENDING：等待下发</li> <li>DELIVERING：下发中</li> <li>DELIVER_DELAYED：延时下发</li> <li>DELIVER_FAILED：下发失败</li> <li>START_FAILED：命令启动失败</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令执行失败，执行完退出码不为 0</li> <li>TIMEOUT：命令超时</li> <li>TASK_TIMEOUT：执行任务超时</li> <li>CANCELLING：取消中</li> <li>CANCELLED：已取消（命令启动前就被取消）</li> <li>TERMINATED：已中止（命令执行期间被取消）</li> </ul>
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method TaskResult getTaskResult() 获取执行结果。
@@ -96,19 +74,8 @@ class InvocationTask extends AbstractModel
 
     /**
      * @var string 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消）
+
+<ul> <li>PENDING：等待下发</li> <li>DELIVERING：下发中</li> <li>DELIVER_DELAYED：延时下发</li> <li>DELIVER_FAILED：下发失败</li> <li>START_FAILED：命令启动失败</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令执行失败，执行完退出码不为 0</li> <li>TIMEOUT：命令超时</li> <li>TASK_TIMEOUT：执行任务超时</li> <li>CANCELLING：取消中</li> <li>CANCELLED：已取消（命令启动前就被取消）</li> <li>TERMINATED：已中止（命令执行期间被取消）</li> </ul>
      */
     public $TaskStatus;
 
@@ -164,19 +131,8 @@ class InvocationTask extends AbstractModel
      * @param string $InvocationTaskId 执行任务ID。
      * @param string $CommandId 命令ID。
      * @param string $TaskStatus 执行任务状态。取值范围：
-<li> PENDING：等待下发 
-<li> DELIVERING：下发中
-<li> DELIVER_DELAYED：延时下发 
-<li> DELIVER_FAILED：下发失败
-<li> START_FAILED：命令启动失败
-<li> RUNNING：命令运行中
-<li> SUCCESS：命令成功
-<li> FAILED：命令执行失败，执行完退出码不为 0
-<li> TIMEOUT：命令超时
-<li> TASK_TIMEOUT：执行任务超时
-<li> CANCELLING：取消中
-<li> CANCELLED：已取消（命令启动前就被取消）
-<li> TERMINATED：已中止（命令执行期间被取消）
+
+<ul> <li>PENDING：等待下发</li> <li>DELIVERING：下发中</li> <li>DELIVER_DELAYED：延时下发</li> <li>DELIVER_FAILED：下发失败</li> <li>START_FAILED：命令启动失败</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令执行失败，执行完退出码不为 0</li> <li>TIMEOUT：命令超时</li> <li>TASK_TIMEOUT：执行任务超时</li> <li>CANCELLING：取消中</li> <li>CANCELLED：已取消（命令启动前就被取消）</li> <li>TERMINATED：已中止（命令执行期间被取消）</li> </ul>
      * @param string $InstanceId 实例ID。
      * @param TaskResult $TaskResult 执行结果。
      * @param string $StartTime 执行任务开始时间。

@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * prometheus一个job的targets
  *
-
+ * @method array getTargets() 获取该Job的targets列表
+ * @method void setTargets(array $Targets) 设置该Job的targets列表
+ * @method string getJobName() 获取job的名称
+ * @method void setJobName(string $JobName) 设置job的名称
+ * @method integer getTotal() 获取targets总数
+ * @method void setTotal(integer $Total) 设置targets总数
+ * @method integer getUp() 获取健康的target总数
+ * @method void setUp(integer $Up) 设置健康的target总数
  */
 class PrometheusJobTargets extends AbstractModel
 {
-
+    /**
+     * @var array 该Job的targets列表
+     */
+    public $Targets;
 
     /**
+     * @var string job的名称
+     */
+    public $JobName;
 
+    /**
+     * @var integer targets总数
+     */
+    public $Total;
+
+    /**
+     * @var integer 健康的target总数
+     */
+    public $Up;
+
+    /**
+     * @param array $Targets 该Job的targets列表
+     * @param string $JobName job的名称
+     * @param integer $Total targets总数
+     * @param integer $Up 健康的target总数
      */
     function __construct()
     {
@@ -42,6 +70,25 @@ class PrometheusJobTargets extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+            $this->Targets = [];
+            foreach ($param["Targets"] as $key => $value){
+                $obj = new PrometheusTarget();
+                $obj->deserialize($value);
+                array_push($this->Targets, $obj);
+            }
+        }
 
+        if (array_key_exists("JobName",$param) and $param["JobName"] !== null) {
+            $this->JobName = $param["JobName"];
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Up",$param) and $param["Up"] !== null) {
+            $this->Up = $param["Up"];
+        }
     }
 }

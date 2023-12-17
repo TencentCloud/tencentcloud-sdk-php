@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPaging(Paging $Paging) 设置数据分页信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getItems() 获取业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItems(array $Items) 设置业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDevicesPageRsp extends AbstractModel
 {
@@ -34,7 +38,15 @@ class DescribeDevicesPageRsp extends AbstractModel
     public $Paging;
 
     /**
+     * @var array 业务响应数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Items;
+
+    /**
      * @param Paging $Paging 数据分页信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Items 业务响应数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -53,6 +65,15 @@ class DescribeDevicesPageRsp extends AbstractModel
         if (array_key_exists("Paging",$param) and $param["Paging"] !== null) {
             $this->Paging = new Paging();
             $this->Paging->deserialize($param["Paging"]);
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new DeviceDetail();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
     }
 }

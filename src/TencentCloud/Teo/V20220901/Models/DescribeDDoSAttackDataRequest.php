@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
 <li>ddos_attackBandwidth：攻击带宽曲线；</li>
 <li>ddos_attackPackageRate：攻击包速率曲线。</li>
- * @method array getZoneIds() 获取站点集合，不填默认选择全部站点。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合，不填默认选择全部站点。
+ * @method array getZoneIds() 获取站点集合，此参数必填。
+ * @method void setZoneIds(array $ZoneIds) 设置站点集合，此参数必填。
  * @method array getPolicyIds() 获取DDoS策略组ID列表，不填默认选择全部策略ID。
  * @method void setPolicyIds(array $PolicyIds) 设置DDoS策略组ID列表，不填默认选择全部策略ID。
  * @method string getInterval() 获取查询时间粒度，取值有：
@@ -79,7 +79,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array 站点集合，不填默认选择全部站点。
+     * @var array 站点集合，此参数必填。
      */
     public $ZoneIds;
 
@@ -113,7 +113,7 @@ class DescribeDDoSAttackDataRequest extends AbstractModel
 <li>ddos_attackMaxPackageRate：攻击包速率峰值 ；</li>
 <li>ddos_attackBandwidth：攻击带宽曲线；</li>
 <li>ddos_attackPackageRate：攻击包速率曲线。</li>
-     * @param array $ZoneIds 站点集合，不填默认选择全部站点。
+     * @param array $ZoneIds 站点集合，此参数必填。
      * @param array $PolicyIds DDoS策略组ID列表，不填默认选择全部策略ID。
      * @param string $Interval 查询时间粒度，取值有：
 <li>min：1分钟；</li>

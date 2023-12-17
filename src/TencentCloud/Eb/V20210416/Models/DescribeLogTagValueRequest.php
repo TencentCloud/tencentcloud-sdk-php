@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method string getEventBusId() 获取事件集ID
  * @method void setEventBusId(string $EventBusId) 设置事件集ID
- * @method string getGroupField() 获取聚合字段
- * @method void setGroupField(string $GroupField) 设置聚合字段
+ * @method string getGroupField() 获取聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
+ * @method void setGroupField(string $GroupField) 设置聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
  * @method integer getPage() 获取页数
  * @method void setPage(integer $Page) 设置页数
  * @method integer getLimit() 获取每页数据大小
@@ -53,7 +53,7 @@ class DescribeLogTagValueRequest extends AbstractModel
     public $EventBusId;
 
     /**
-     * @var string 聚合字段
+     * @var string 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
      */
     public $GroupField;
 
@@ -76,7 +76,7 @@ class DescribeLogTagValueRequest extends AbstractModel
      * @param integer $StartTime 起始时间
      * @param integer $EndTime 结束时间
      * @param string $EventBusId 事件集ID
-     * @param string $GroupField 聚合字段
+     * @param string $GroupField 聚合字段,取值范围如下：Source(事件源),RuleIds(命中规则),Subject(实例ID),Region(地域)
      * @param integer $Page 页数
      * @param integer $Limit 每页数据大小
      * @param array $Filter 筛选条件

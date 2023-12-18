@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGatewayAssets请求参数结构体
  *
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  * @method Filter getFilter() 获取过滤参数
  * @method void setFilter(Filter $Filter) 设置过滤参数
  */
 class DescribeGatewayAssetsRequest extends AbstractModel
 {
     /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
+    /**
      * @var Filter 过滤参数
      */
     public $Filter;
 
     /**
+     * @param array $MemberId 集团账号的成员id
      * @param Filter $Filter 过滤参数
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeGatewayAssetsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);

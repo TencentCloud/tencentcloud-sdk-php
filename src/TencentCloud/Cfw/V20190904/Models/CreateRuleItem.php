@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleSource(integer $RuleSource) 设置0，正常规则添加；1，入侵检测添加
  * @method string getLogId() 获取告警Id
  * @method void setLogId(string $LogId) 设置告警Id
+ * @method string getParamTemplateId() 获取端都协议组ID
+ * @method void setParamTemplateId(string $ParamTemplateId) 设置端都协议组ID
  */
 class CreateRuleItem extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateRuleItem extends AbstractModel
     public $LogId;
 
     /**
+     * @var string 端都协议组ID
+     */
+    public $ParamTemplateId;
+
+    /**
      * @param string $SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
      * @param string $SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
      * @param string $TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
@@ -144,6 +151,7 @@ class CreateRuleItem extends AbstractModel
      * @param string $Scope all
      * @param integer $RuleSource 0，正常规则添加；1，入侵检测添加
      * @param string $LogId 告警Id
+     * @param string $ParamTemplateId 端都协议组ID
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class CreateRuleItem extends AbstractModel
 
         if (array_key_exists("LogId",$param) and $param["LogId"] !== null) {
             $this->LogId = $param["LogId"];
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
         }
     }
 }

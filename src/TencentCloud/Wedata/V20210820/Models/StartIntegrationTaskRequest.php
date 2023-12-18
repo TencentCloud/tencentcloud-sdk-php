@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvent(string $Event) 设置事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
  * @method array getExtConfig() 获取额外参数
  * @method void setExtConfig(array $ExtConfig) 设置额外参数
+ * @method string getEventDesc() 获取操作类型描述
+ * @method void setEventDesc(string $EventDesc) 设置操作类型描述
  */
 class StartIntegrationTaskRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class StartIntegrationTaskRequest extends AbstractModel
     public $ExtConfig;
 
     /**
+     * @var string 操作类型描述
+     */
+    public $EventDesc;
+
+    /**
      * @param string $TaskId 任务id
      * @param string $ProjectId 项目id
      * @param string $Event 事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
      * @param array $ExtConfig 额外参数
+     * @param string $EventDesc 操作类型描述
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class StartIntegrationTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExtConfig, $obj);
             }
+        }
+
+        if (array_key_exists("EventDesc",$param) and $param["EventDesc"] !== null) {
+            $this->EventDesc = $param["EventDesc"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterType(array $FilterType) 设置按主题类型过滤查询结果，可选择Normal, GlobalOrder, PartitionedOrder, Transaction
  * @method string getFilterName() 获取按主题名称搜索，支持模糊查询
  * @method void setFilterName(string $FilterName) 设置按主题名称搜索，支持模糊查询
+ * @method string getFilterGroup() 获取按订阅消费组名称过滤
+ * @method void setFilterGroup(string $FilterGroup) 设置按订阅消费组名称过滤
  */
 class DescribeRocketMQTopicsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
     public $FilterName;
 
     /**
+     * @var string 按订阅消费组名称过滤
+     */
+    public $FilterGroup;
+
+    /**
      * @param integer $Offset 查询偏移量
      * @param integer $Limit 查询限制数
      * @param string $ClusterId 集群ID
      * @param string $NamespaceId 命名空间
      * @param array $FilterType 按主题类型过滤查询结果，可选择Normal, GlobalOrder, PartitionedOrder, Transaction
      * @param string $FilterName 按主题名称搜索，支持模糊查询
+     * @param string $FilterGroup 按订阅消费组名称过滤
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
 
         if (array_key_exists("FilterName",$param) and $param["FilterName"] !== null) {
             $this->FilterName = $param["FilterName"];
+        }
+
+        if (array_key_exists("FilterGroup",$param) and $param["FilterGroup"] !== null) {
+            $this->FilterGroup = $param["FilterGroup"];
         }
     }
 }

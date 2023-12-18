@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目标端为kakfa时添加的同步选项字段
  *
- * @method string getDataType() 获取投递到kafka的数据类型，如Avro,Json
- * @method void setDataType(string $DataType) 设置投递到kafka的数据类型，如Avro,Json
+ * @method string getDataType() 获取投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
+ * @method void setDataType(string $DataType) 设置投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
  * @method string getTopicType() 获取同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
  * @method void setTopicType(string $TopicType) 设置同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
  * @method string getDDLTopicName() 获取用于存储ddl的topic
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class KafkaOption extends AbstractModel
 {
     /**
-     * @var string 投递到kafka的数据类型，如Avro,Json
+     * @var string 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
      */
     public $DataType;
 
@@ -52,7 +52,7 @@ class KafkaOption extends AbstractModel
     public $TopicRules;
 
     /**
-     * @param string $DataType 投递到kafka的数据类型，如Avro,Json
+     * @param string $DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
      * @param string $TopicType 同步topic策略，如Single（集中投递到单topic）,Multi (自定义topic名称)
      * @param string $DDLTopicName 用于存储ddl的topic
      * @param array $TopicRules 单topic和自定义topic的描述

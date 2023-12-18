@@ -25,19 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuestion() 获取问题描述
  * @method void setQuestion(string $Question) 设置问题描述
  * @method string getModelVersion() 获取会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。
  * @method void setModelVersion(string $ModelVersion) 设置会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。
- * @method string getMode() 获取使用模式(仅多场景客服大模型支持)。
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。
+ * @method string getMode() 获取使用模式。
 通用问答：填写General。
 搜索增强问答：填写WithSearchPlugin。
 默认为General，即通用问答。
- * @method void setMode(string $Mode) 设置使用模式(仅多场景客服大模型支持)。
+当前可体验模型仅支持General。
+ * @method void setMode(string $Mode) 设置使用模式。
 通用问答：填写General。
 搜索增强问答：填写WithSearchPlugin。
 默认为General，即通用问答。
+当前可体验模型仅支持General。
  * @method string getSearchSource() 获取搜索来源。仅当Mode为WithSearchPlugin时生效。
 预置文稿库：填写Preset。自定义：填写Custom。
  * @method void setSearchSource(string $SearchSource) 设置搜索来源。仅当Mode为WithSearchPlugin时生效。
@@ -57,16 +59,17 @@ class SendChatMessageRequest extends AbstractModel
 
     /**
      * @var string 会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。
      */
     public $ModelVersion;
 
     /**
-     * @var string 使用模式(仅多场景客服大模型支持)。
+     * @var string 使用模式。
 通用问答：填写General。
 搜索增强问答：填写WithSearchPlugin。
 默认为General，即通用问答。
+当前可体验模型仅支持General。
      */
     public $Mode;
 
@@ -80,12 +83,13 @@ class SendChatMessageRequest extends AbstractModel
      * @param string $SessionId 会话id，标识一组对话的唯一id，id变更则重置会话
      * @param string $Question 问题描述
      * @param string $ModelVersion 会话模型版本。
-多行业客服大模型：填写demo_big_model_version_id。
-默认为demo_big_model_version_id，即多行业客服大模型。
-     * @param string $Mode 使用模式(仅多场景客服大模型支持)。
+金融大模型：填写sn-finllm-13b-chat-v1。
+默认为sn-finllm-13b-chat-v1，即金融大模型。
+     * @param string $Mode 使用模式。
 通用问答：填写General。
 搜索增强问答：填写WithSearchPlugin。
 默认为General，即通用问答。
+当前可体验模型仅支持General。
      * @param string $SearchSource 搜索来源。仅当Mode为WithSearchPlugin时生效。
 预置文稿库：填写Preset。自定义：填写Custom。
      */

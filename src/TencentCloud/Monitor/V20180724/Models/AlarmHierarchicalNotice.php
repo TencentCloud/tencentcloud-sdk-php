@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassification(array $Classification) 设置通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPolicyId() 获取模板对应的策略id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyId(string $PolicyId) 设置模板对应的策略id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmHierarchicalNotice extends AbstractModel
 {
@@ -44,9 +48,17 @@ class AlarmHierarchicalNotice extends AbstractModel
     public $Classification;
 
     /**
+     * @var string 模板对应的策略id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyId;
+
+    /**
      * @param string $NoticeId 通知模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Classification 通知等级列表，["Remind","Serious"]表示该通知模板仅接收提醒和严重类别的告警
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PolicyId 模板对应的策略id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class AlarmHierarchicalNotice extends AbstractModel
 
         if (array_key_exists("Classification",$param) and $param["Classification"] !== null) {
             $this->Classification = $param["Classification"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListenerList请求参数结构体
  *
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  * @method Filter getFilter() 获取-
  * @method void setFilter(Filter $Filter) 设置-
  */
 class DescribeListenerListRequest extends AbstractModel
 {
     /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
+    /**
      * @var Filter -
      */
     public $Filter;
 
     /**
+     * @param array $MemberId 集团账号的成员id
      * @param Filter $Filter -
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeListenerListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = new Filter();
             $this->Filter->deserialize($param["Filter"]);

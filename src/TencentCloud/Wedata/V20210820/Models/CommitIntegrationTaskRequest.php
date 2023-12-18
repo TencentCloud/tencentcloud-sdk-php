@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionDesc(string $VersionDesc) 设置提交版本描述
  * @method integer getInstanceVersion() 获取提交版本号
  * @method void setInstanceVersion(integer $InstanceVersion) 设置提交版本号
+ * @method string getEventDesc() 获取前端操作类型描述
+ * @method void setEventDesc(string $EventDesc) 设置前端操作类型描述
  */
 class CommitIntegrationTaskRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CommitIntegrationTaskRequest extends AbstractModel
     public $InstanceVersion;
 
     /**
+     * @var string 前端操作类型描述
+     */
+    public $EventDesc;
+
+    /**
      * @param string $TaskId 任务id
      * @param string $ProjectId 项目id
      * @param integer $CommitType 0.仅提交，1.立即启动，2.停止线上作业，丢弃作业状态数据，重新启动运行，3.暂停线上作业，保留作业状态数据，继续运行，4.保留作业状态数据，继续运行
@@ -80,6 +87,7 @@ class CommitIntegrationTaskRequest extends AbstractModel
      * @param array $ExtConfig 额外参数
      * @param string $VersionDesc 提交版本描述
      * @param integer $InstanceVersion 提交版本号
+     * @param string $EventDesc 前端操作类型描述
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CommitIntegrationTaskRequest extends AbstractModel
 
         if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
             $this->InstanceVersion = $param["InstanceVersion"];
+        }
+
+        if (array_key_exists("EventDesc",$param) and $param["EventDesc"] !== null) {
+            $this->EventDesc = $param["EventDesc"];
         }
     }
 }

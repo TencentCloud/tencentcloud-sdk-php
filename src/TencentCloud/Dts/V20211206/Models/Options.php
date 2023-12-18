@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaOption(KafkaOption $KafkaOption) 设置kafka同步选项
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RateLimitOption getRateLimitOption() 获取任务限速信息、该字段仅用作出参、入参该字段无效
+ * @method RateLimitOption getRateLimitOption() 获取任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRateLimitOption(RateLimitOption $RateLimitOption) 设置任务限速信息、该字段仅用作出参、入参该字段无效
+ * @method void setRateLimitOption(RateLimitOption $RateLimitOption) 设置任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试的时间窗口设置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,7 +112,7 @@ class Options extends AbstractModel
     public $KafkaOption;
 
     /**
-     * @var RateLimitOption 任务限速信息、该字段仅用作出参、入参该字段无效
+     * @var RateLimitOption 任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RateLimitOption;
@@ -140,7 +140,7 @@ class Options extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaOption $KafkaOption kafka同步选项
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RateLimitOption $RateLimitOption 任务限速信息、该字段仅用作出参、入参该字段无效
+     * @param RateLimitOption $RateLimitOption 任务限速信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
 注意：此字段可能返回 null，表示取不到有效值。

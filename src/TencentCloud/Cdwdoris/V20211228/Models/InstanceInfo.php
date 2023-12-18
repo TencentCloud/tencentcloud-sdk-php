@@ -176,6 +176,10 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponents(string $Components) 设置组件信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIfExistCatalog() 获取判断审计日志表是否有catalog字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIfExistCatalog(integer $IfExistCatalog) 设置判断审计日志表是否有catalog字段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -402,6 +406,12 @@ Modify 集群变更中；
     public $Components;
 
     /**
+     * @var integer 判断审计日志表是否有catalog字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IfExistCatalog;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -479,6 +489,8 @@ Modify 集群变更中；
      * @param string $BuildVersion 小版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Components 组件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IfExistCatalog 判断审计日志表是否有catalog字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -643,6 +655,10 @@ Modify 集群变更中；
 
         if (array_key_exists("Components",$param) and $param["Components"] !== null) {
             $this->Components = $param["Components"];
+        }
+
+        if (array_key_exists("IfExistCatalog",$param) and $param["IfExistCatalog"] !== null) {
+            $this->IfExistCatalog = $param["IfExistCatalog"];
         }
     }
 }

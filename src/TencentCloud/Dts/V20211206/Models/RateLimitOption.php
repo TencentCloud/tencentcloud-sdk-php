@@ -20,141 +20,141 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 迁移和同步任务限速的详细信息
  *
- * @method integer getCurrentDumpThread() 获取当前生效的全量导出线程数
+ * @method integer getCurrentDumpThread() 获取当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentDumpThread(integer $CurrentDumpThread) 设置当前生效的全量导出线程数
+ * @method void setCurrentDumpThread(integer $CurrentDumpThread) 设置当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDefaultDumpThread() 获取默认的全量导出线程数
+ * @method integer getDefaultDumpThread() 获取默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultDumpThread(integer $DefaultDumpThread) 设置默认的全量导出线程数
+ * @method void setDefaultDumpThread(integer $DefaultDumpThread) 设置默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCurrentDumpRps() 获取当前生效的全量导出Rps	
+ * @method integer getCurrentDumpRps() 获取当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentDumpRps(integer $CurrentDumpRps) 设置当前生效的全量导出Rps	
+ * @method void setCurrentDumpRps(integer $CurrentDumpRps) 设置当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDefaultDumpRps() 获取默认的全量导出Rps	
+ * @method integer getDefaultDumpRps() 获取默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultDumpRps(integer $DefaultDumpRps) 设置默认的全量导出Rps	
+ * @method void setDefaultDumpRps(integer $DefaultDumpRps) 设置默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCurrentLoadThread() 获取当前生效的全量导入线程数
+ * @method integer getCurrentLoadThread() 获取当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentLoadThread(integer $CurrentLoadThread) 设置当前生效的全量导入线程数
+ * @method void setCurrentLoadThread(integer $CurrentLoadThread) 设置当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDefaultLoadThread() 获取默认的全量导入线程数
+ * @method integer getDefaultLoadThread() 获取默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultLoadThread(integer $DefaultLoadThread) 设置默认的全量导入线程数
+ * @method void setDefaultLoadThread(integer $DefaultLoadThread) 设置默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCurrentLoadRps() 获取当前生效的全量导入Rps	
+ * @method integer getCurrentLoadRps() 获取当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentLoadRps(integer $CurrentLoadRps) 设置当前生效的全量导入Rps	
+ * @method void setCurrentLoadRps(integer $CurrentLoadRps) 设置当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDefaultLoadRps() 获取默认的全量导入Rps	
+ * @method integer getDefaultLoadRps() 获取默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultLoadRps(integer $DefaultLoadRps) 设置默认的全量导入Rps	
+ * @method void setDefaultLoadRps(integer $DefaultLoadRps) 设置默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCurrentSinkerThread() 获取当前生效的增量导入线程数
+ * @method integer getCurrentSinkerThread() 获取当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentSinkerThread(integer $CurrentSinkerThread) 设置当前生效的增量导入线程数
+ * @method void setCurrentSinkerThread(integer $CurrentSinkerThread) 设置当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDefaultSinkerThread() 获取默认的增量导入线程数
+ * @method integer getDefaultSinkerThread() 获取默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefaultSinkerThread(integer $DefaultSinkerThread) 设置默认的增量导入线程数
+ * @method void setDefaultSinkerThread(integer $DefaultSinkerThread) 设置默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHasUserSetRateLimit() 获取enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+ * @method string getHasUserSetRateLimit() 获取enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHasUserSetRateLimit(string $HasUserSetRateLimit) 设置enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+ * @method void setHasUserSetRateLimit(string $HasUserSetRateLimit) 设置enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitOption extends AbstractModel
 {
     /**
-     * @var integer 当前生效的全量导出线程数
+     * @var integer 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentDumpThread;
 
     /**
-     * @var integer 默认的全量导出线程数
+     * @var integer 默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultDumpThread;
 
     /**
-     * @var integer 当前生效的全量导出Rps	
+     * @var integer 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentDumpRps;
 
     /**
-     * @var integer 默认的全量导出Rps	
+     * @var integer 默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultDumpRps;
 
     /**
-     * @var integer 当前生效的全量导入线程数
+     * @var integer 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentLoadThread;
 
     /**
-     * @var integer 默认的全量导入线程数
+     * @var integer 默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultLoadThread;
 
     /**
-     * @var integer 当前生效的全量导入Rps	
+     * @var integer 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentLoadRps;
 
     /**
-     * @var integer 默认的全量导入Rps	
+     * @var integer 默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultLoadRps;
 
     /**
-     * @var integer 当前生效的增量导入线程数
+     * @var integer 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentSinkerThread;
 
     /**
-     * @var integer 默认的增量导入线程数
+     * @var integer 默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultSinkerThread;
 
     /**
-     * @var string enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+     * @var string enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasUserSetRateLimit;
 
     /**
-     * @param integer $CurrentDumpThread 当前生效的全量导出线程数
+     * @param integer $CurrentDumpThread 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DefaultDumpThread 默认的全量导出线程数
+     * @param integer $DefaultDumpThread 默认的全量导出线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CurrentDumpRps 当前生效的全量导出Rps	
+     * @param integer $CurrentDumpRps 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DefaultDumpRps 默认的全量导出Rps	
+     * @param integer $DefaultDumpRps 默认的全量导出Rps，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CurrentLoadThread 当前生效的全量导入线程数
+     * @param integer $CurrentLoadThread 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DefaultLoadThread 默认的全量导入线程数
+     * @param integer $DefaultLoadThread 默认的全量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CurrentLoadRps 当前生效的全量导入Rps	
+     * @param integer $CurrentLoadRps 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DefaultLoadRps 默认的全量导入Rps	
+     * @param integer $DefaultLoadRps 默认的全量导入Rps，该字段仅在出参有意义	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CurrentSinkerThread 当前生效的增量导入线程数
+     * @param integer $CurrentSinkerThread 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DefaultSinkerThread 默认的增量导入线程数
+     * @param integer $DefaultSinkerThread 默认的增量导入线程数，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HasUserSetRateLimit enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速
+     * @param string $HasUserSetRateLimit enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

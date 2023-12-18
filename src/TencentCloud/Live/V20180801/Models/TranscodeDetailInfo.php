@@ -32,12 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
  * @method string getModuleCodec() 获取编码方式，带模块，
 示例：
+liveprocessor_ACC:  音频转码，
 liveprocessor_H264：直播转码-H264，
 liveprocessor_H265： 直播转码-H265，
 topspeed_H264：极速高清-H264，
 topspeed_H265：极速高清-H265。
  * @method void setModuleCodec(string $ModuleCodec) 设置编码方式，带模块，
 示例：
+liveprocessor_ACC:  音频转码，
 liveprocessor_H264：直播转码-H264，
 liveprocessor_H265： 直播转码-H265，
 topspeed_H264：极速高清-H264，
@@ -83,6 +85,7 @@ class TranscodeDetailInfo extends AbstractModel
     /**
      * @var string 编码方式，带模块，
 示例：
+liveprocessor_ACC:  音频转码，
 liveprocessor_H264：直播转码-H264，
 liveprocessor_H265： 直播转码-H265，
 topspeed_H264：极速高清-H264，
@@ -125,6 +128,7 @@ Overseas：海外。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
      * @param string $ModuleCodec 编码方式，带模块，
 示例：
+liveprocessor_ACC:  音频转码，
 liveprocessor_H264：直播转码-H264，
 liveprocessor_H265： 直播转码-H265，
 topspeed_H264：极速高清-H264，

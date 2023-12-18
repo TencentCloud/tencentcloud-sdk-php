@@ -124,6 +124,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置告警规则描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLarkWebHooks() 获取飞书群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLarkWebHooks(string $LarkWebHooks) 设置飞书群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskAlarmInfo extends AbstractModel
 {
@@ -300,6 +304,12 @@ class TaskAlarmInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var string 飞书群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LarkWebHooks;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $RegularName 规则名称
      * @param integer $RegularStatus 规则状态(0表示关闭，1表示打开)
@@ -351,6 +361,8 @@ class TaskAlarmInfo extends AbstractModel
      * @param string $LatestAlarmTime 最近一次告警时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LarkWebHooks 飞书群Hook地址，多个hook地址使用,隔开
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -489,6 +501,10 @@ class TaskAlarmInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("LarkWebHooks",$param) and $param["LarkWebHooks"] !== null) {
+            $this->LarkWebHooks = $param["LarkWebHooks"];
         }
     }
 }

@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
 请确认该企业注册地址与企业营业执照中注册的地址一致。
  * @method string getAdminName() 获取组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果法人作为超管管理组织机构,超管姓名就是法人姓名
  * @method void setAdminName(string $AdminName) 设置组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果法人作为超管管理组织机构,超管姓名就是法人姓名
  * @method string getAdminMobile() 获取组织机构超管姓名。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
  * @method void setAdminMobile(string $AdminMobile) 设置组织机构超管姓名。
@@ -113,7 +113,7 @@ class RegistrationOrganizationInfo extends AbstractModel
     /**
      * @var string 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果法人作为超管管理组织机构,超管姓名就是法人姓名
      */
     public $AdminName;
 
@@ -150,7 +150,7 @@ class RegistrationOrganizationInfo extends AbstractModel
 请确认该企业注册地址与企业营业执照中注册的地址一致。
      * @param string $AdminName 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果法人作为超管管理组织机构,超管姓名就是法人姓名
      * @param string $AdminMobile 组织机构超管姓名。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
      * @param array $AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:

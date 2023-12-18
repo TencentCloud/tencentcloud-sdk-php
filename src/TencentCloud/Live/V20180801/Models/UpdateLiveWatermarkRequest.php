@@ -35,9 +35,9 @@ URL中禁止包含的字符：
  * @method integer getYPosition() 获取显示位置，Y轴偏移，单位是百分比，默认 0。
  * @method void setYPosition(integer $YPosition) 设置显示位置，Y轴偏移，单位是百分比，默认 0。
  * @method string getWatermarkName() 获取水印名称。
-最长16字节。
+最长30字节。
  * @method void setWatermarkName(string $WatermarkName) 设置水印名称。
-最长16字节。
+最长30字节。
  * @method integer getWidth() 获取水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
  * @method void setWidth(integer $Width) 设置水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
  * @method integer getHeight() 获取水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
@@ -74,7 +74,7 @@ URL中禁止包含的字符：
 
     /**
      * @var string 水印名称。
-最长16字节。
+最长30字节。
      */
     public $WatermarkName;
 
@@ -107,7 +107,7 @@ URL中禁止包含的字符：
      * @param integer $XPosition 显示位置，X轴偏移，单位是百分比，默认 0。
      * @param integer $YPosition 显示位置，Y轴偏移，单位是百分比，默认 0。
      * @param string $WatermarkName 水印名称。
-最长16字节。
+最长30字节。
      * @param integer $Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始宽度。
      * @param integer $Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。默认原始高度。
      * @param integer $BackgroundWidth 背景水印宽度。默认宽度1920。

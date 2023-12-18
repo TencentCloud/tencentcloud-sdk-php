@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWecomGroup(integer $WecomGroup) 设置企业微信群，0：未设置，1：成功，2：失败
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLarkGroup() 获取飞书群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLarkGroup(integer $LarkGroup) 设置飞书群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmReceiverInfo extends AbstractModel
 {
@@ -90,6 +94,12 @@ class AlarmReceiverInfo extends AbstractModel
     public $WecomGroup;
 
     /**
+     * @var integer 飞书群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LarkGroup;
+
+    /**
      * @param string $AlarmId 告警ID
      * @param string $AlarmReceiver 告警接收人ID
      * @param integer $Email 邮件，0：未设置，1：成功，2：失败
@@ -99,6 +109,8 @@ class AlarmReceiverInfo extends AbstractModel
      * @param integer $Wecom 企业微信，0：未设置，1：成功，2：失败
      * @param integer $Http http，0：未设置，1：成功，2：失败
      * @param integer $WecomGroup 企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LarkGroup 飞书群，0：未设置，1：成功，2：失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class AlarmReceiverInfo extends AbstractModel
 
         if (array_key_exists("WecomGroup",$param) and $param["WecomGroup"] !== null) {
             $this->WecomGroup = $param["WecomGroup"];
+        }
+
+        if (array_key_exists("LarkGroup",$param) and $param["LarkGroup"] !== null) {
+            $this->LarkGroup = $param["LarkGroup"];
         }
     }
 }

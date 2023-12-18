@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosSecretKey(string $CosSecretKey) 设置Cos的SecretKey
  * @method string getAppId() 获取cos的appid，已废弃
  * @method void setAppId(string $AppId) 设置cos的appid，已废弃
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
  */
 class PreExecuteFileSettings extends AbstractModel
 {
@@ -108,6 +110,11 @@ class PreExecuteFileSettings extends AbstractModel
     public $AppId;
 
     /**
+     * @var string 备注
+     */
+    public $Remark;
+
+    /**
      * @param string $Path 脚本在COS上路径，已废弃
      * @param array $Args 执行脚本参数
      * @param string $Bucket COS的Bucket名称，已废弃
@@ -120,6 +127,7 @@ class PreExecuteFileSettings extends AbstractModel
      * @param string $CosSecretId cos的SecretId
      * @param string $CosSecretKey Cos的SecretKey
      * @param string $AppId cos的appid，已废弃
+     * @param string $Remark 备注
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class PreExecuteFileSettings extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

@@ -124,6 +124,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetBorderUuid(string $InternetBorderUuid) 设置互联网边界防火墙使用的内部规则id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParamTemplateName() 获取协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParamTemplateName(string $ParamTemplateName) 设置协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParamTemplateId() 获取协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParamTemplateId(string $ParamTemplateId) 设置协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescAcItem extends AbstractModel
 {
@@ -288,6 +296,18 @@ class DescAcItem extends AbstractModel
     public $InternetBorderUuid;
 
     /**
+     * @var string 协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParamTemplateName;
+
+    /**
+     * @var string 协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParamTemplateId;
+
+    /**
      * @param string $SourceContent 访问源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetContent 访问目的
@@ -339,6 +359,10 @@ class DescAcItem extends AbstractModel
      * @param string $Scope 生效范围：serial，串行；side，旁路；all，全局
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InternetBorderUuid 互联网边界防火墙使用的内部规则id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParamTemplateName 协议端口组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParamTemplateId 协议端口组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -465,6 +489,14 @@ class DescAcItem extends AbstractModel
 
         if (array_key_exists("InternetBorderUuid",$param) and $param["InternetBorderUuid"] !== null) {
             $this->InternetBorderUuid = $param["InternetBorderUuid"];
+        }
+
+        if (array_key_exists("ParamTemplateName",$param) and $param["ParamTemplateName"] !== null) {
+            $this->ParamTemplateName = $param["ParamTemplateName"];
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
         }
     }
 }

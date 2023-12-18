@@ -110,6 +110,14 @@ log：观察
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBetaList(array $BetaList) 设置beta任务详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParamTemplateId() 获取端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParamTemplateId(string $ParamTemplateId) 设置端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParamTemplateName() 获取端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParamTemplateName(string $ParamTemplateName) 设置端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcRuleItem extends AbstractModel
 {
@@ -235,6 +243,18 @@ log：观察
     public $BetaList;
 
     /**
+     * @var string 端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParamTemplateId;
+
+    /**
+     * @var string 端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParamTemplateName;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
      * @param string $SourceType 访问源类型，类型可以为：net
@@ -279,6 +299,10 @@ log：观察
      * @param string $FwGroupName 防火墙名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BetaList beta任务详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParamTemplateId 端口协议组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParamTemplateName 端口协议组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -373,6 +397,14 @@ log：观察
                 $obj->deserialize($value);
                 array_push($this->BetaList, $obj);
             }
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
+        }
+
+        if (array_key_exists("ParamTemplateName",$param) and $param["ParamTemplateName"] !== null) {
+            $this->ParamTemplateName = $param["ParamTemplateName"];
         }
     }
 }

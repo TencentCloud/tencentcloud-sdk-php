@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(integer $TaskType) 设置任务类型
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method string getEvent() 获取事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	
+ * @method void setEvent(string $Event) 设置事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	
  */
 class BatchSuspendIntegrationTasksRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BatchSuspendIntegrationTasksRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	
+     */
+    public $Event;
+
+    /**
      * @param array $TaskIds 任务id
      * @param integer $TaskType 任务类型
      * @param string $ProjectId 项目id
+     * @param string $Event 事件类型(START, STOP, SUSPEND, SUSPEND_WITHOUT_SP,RESUME, COMMIT, TIMESTAMP)	
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class BatchSuspendIntegrationTasksRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Event",$param) and $param["Event"] !== null) {
+            $this->Event = $param["Event"];
         }
     }
 }

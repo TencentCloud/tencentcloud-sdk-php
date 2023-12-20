@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
 <li> **DownloadFailed** : 下载失败</li>
 <li> **ProcessFailed** : 转换失败</li>
 <li> **ProcessTimeout** : 转换文件超时</li></ul>
- * @method string getResourceId() 获取资源Id，也是FileId，用于文件发起时使用
- * @method void setResourceId(string $ResourceId) 设置资源Id，也是FileId，用于文件发起时使用
+ * @method string getResourceId() 获取资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
+ * @method void setResourceId(string $ResourceId) 设置资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
  * @method string getPreviewUrl() 获取预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,7 +91,7 @@ class ChannelGetTaskResultApiResponse extends AbstractModel
     public $TaskMessage;
 
     /**
-     * @var string 资源Id，也是FileId，用于文件发起时使用
+     * @var string 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
      */
     public $ResourceId;
 
@@ -124,7 +124,7 @@ class ChannelGetTaskResultApiResponse extends AbstractModel
 <li> **DownloadFailed** : 下载失败</li>
 <li> **ProcessFailed** : 转换失败</li>
 <li> **ProcessTimeout** : 转换文件超时</li></ul>
-     * @param string $ResourceId 资源Id，也是FileId，用于文件发起时使用
+     * @param string $ResourceId 资源Id（即FileId），用于[用PDF文件创建签署流程](https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles)
      * @param string $PreviewUrl 预览文件Url，有效期30分钟 
 当前字段返回为空，发起的时候，将ResourceId 放入发起即可
 注意：此字段可能返回 null，表示取不到有效值。

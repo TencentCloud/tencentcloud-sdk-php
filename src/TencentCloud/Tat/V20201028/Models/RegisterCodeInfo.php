@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceNamePrefix(string $InstanceNamePrefix) 设置注册实例名称前缀。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRegisterLimit() 获取该注册码允许注册的实列数目。
+ * @method integer getRegisterLimit() 获取该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegisterLimit(integer $RegisterLimit) 设置该注册码允许注册的实列数目。
+ * @method void setRegisterLimit(integer $RegisterLimit) 设置该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpiredTime() 获取该注册码的过期时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
@@ -94,7 +94,7 @@ class RegisterCodeInfo extends AbstractModel
     public $InstanceNamePrefix;
 
     /**
-     * @var integer 该注册码允许注册的实列数目。
+     * @var integer 该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegisterLimit;
@@ -148,7 +148,7 @@ class RegisterCodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceNamePrefix 注册实例名称前缀。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RegisterLimit 该注册码允许注册的实列数目。
+     * @param integer $RegisterLimit 该注册码允许注册的实例数目。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpiredTime 该注册码的过期时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。

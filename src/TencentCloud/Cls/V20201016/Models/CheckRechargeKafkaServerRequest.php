@@ -22,14 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getKafkaType() 获取导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
  * @method void setKafkaType(integer $KafkaType) 设置导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
- * @method string getKafkaInstance() 获取腾讯云CKafka实例ID，KafkaType为0时必填
- * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID，KafkaType为0时必填
- * @method string getServerAddr() 获取服务地址
- * @method void setServerAddr(string $ServerAddr) 设置服务地址
+ * @method string getKafkaInstance() 获取腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填
+ * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填
+ * @method string getServerAddr() 获取服务地址。
+KafkaType为1时，ServerAddr必填
+ * @method void setServerAddr(string $ServerAddr) 设置服务地址。
+KafkaType为1时，ServerAddr必填
  * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接
  * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接
- * @method KafkaProtocolInfo getProtocol() 获取加密访问协议，IsEncryptionAddr参数为true时必填
- * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议，IsEncryptionAddr参数为true时必填
+ * @method KafkaProtocolInfo getProtocol() 获取加密访问协议。IsEncryptionAddr参数为true时必填
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议。IsEncryptionAddr参数为true时必填
  */
 class CheckRechargeKafkaServerRequest extends AbstractModel
 {
@@ -39,12 +43,14 @@ class CheckRechargeKafkaServerRequest extends AbstractModel
     public $KafkaType;
 
     /**
-     * @var string 腾讯云CKafka实例ID，KafkaType为0时必填
+     * @var string 腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填
      */
     public $KafkaInstance;
 
     /**
-     * @var string 服务地址
+     * @var string 服务地址。
+KafkaType为1时，ServerAddr必填
      */
     public $ServerAddr;
 
@@ -54,16 +60,18 @@ class CheckRechargeKafkaServerRequest extends AbstractModel
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo 加密访问协议，IsEncryptionAddr参数为true时必填
+     * @var KafkaProtocolInfo 加密访问协议。IsEncryptionAddr参数为true时必填
      */
     public $Protocol;
 
     /**
      * @param integer $KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
-     * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
-     * @param string $ServerAddr 服务地址
+     * @param string $KafkaInstance 腾讯云CKafka实例ID。
+KafkaType为0时，KafkaInstance必填
+     * @param string $ServerAddr 服务地址。
+KafkaType为1时，ServerAddr必填
      * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接
-     * @param KafkaProtocolInfo $Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
+     * @param KafkaProtocolInfo $Protocol 加密访问协议。IsEncryptionAddr参数为true时必填
      */
     function __construct()
     {

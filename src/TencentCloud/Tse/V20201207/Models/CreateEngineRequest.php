@@ -146,11 +146,11 @@ polarismesh - STANDARD版本
 - SubnetId：子网 ID。参考值：subnet-ahde9me9
  * @method array getEngineTags() 获取引擎的标签列表。用户自定义的key/value形式，无参考值
  * @method void setEngineTags(array $EngineTags) 设置引擎的标签列表。用户自定义的key/value形式，无参考值
- * @method EngineAdmin getEngineAdmin() 获取引擎的初始帐号信息。可设置参数：
+ * @method EngineAdmin getEngineAdmin() 获取引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token
- * @method void setEngineAdmin(EngineAdmin $EngineAdmin) 设置引擎的初始帐号信息。可设置参数：
+ * @method void setEngineAdmin(EngineAdmin $EngineAdmin) 设置引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token
@@ -279,7 +279,7 @@ polarismesh - STANDARD版本
     public $EngineTags;
 
     /**
-     * @var EngineAdmin 引擎的初始帐号信息。可设置参数：
+     * @var EngineAdmin 引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token
@@ -367,7 +367,7 @@ polarismesh - STANDARD版本
 - VpcId：VPC ID。参考值：vpc-conz6aix
 - SubnetId：子网 ID。参考值：subnet-ahde9me9
      * @param array $EngineTags 引擎的标签列表。用户自定义的key/value形式，无参考值
-     * @param EngineAdmin $EngineAdmin 引擎的初始帐号信息。可设置参数：
+     * @param EngineAdmin $EngineAdmin 引擎的初始账号信息。可设置参数：
 - Name：控制台初始用户名
 - Password：控制台初始密码
 - Token：引擎接口的管理员 Token

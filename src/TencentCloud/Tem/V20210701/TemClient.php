@@ -27,7 +27,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\CreateApplicationAutoscalerResponse CreateApplicationAutoscaler(Models\CreateApplicationAutoscalerRequest $req) 创建弹性伸缩策略组合
  * @method Models\CreateApplicationServiceResponse CreateApplicationService(Models\CreateApplicationServiceRequest $req) 新增访问方式
  * @method Models\CreateConfigDataResponse CreateConfigData(Models\CreateConfigDataRequest $req) 创建配置
- * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) 生成Cos临时秘钥
+ * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) 生成Cos临时密钥
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建环境
  * @method Models\CreateLogConfigResponse CreateLogConfig(Models\CreateLogConfigRequest $req) 创建日志收集配置
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 绑定云资源

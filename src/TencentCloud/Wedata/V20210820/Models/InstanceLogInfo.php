@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态 COMPLETED 完成 FAILED失败重试 EXPIRED失败 RUNNING运行中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCodeFileName() 获取实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCodeFileName(string $CodeFileName) 设置实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLogInfo extends AbstractModel
 {
@@ -144,6 +148,12 @@ class InstanceLogInfo extends AbstractModel
     public $InstanceStatus;
 
     /**
+     * @var string 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CodeFileName;
+
+    /**
      * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurRunDate 数据时间
@@ -167,6 +177,8 @@ class InstanceLogInfo extends AbstractModel
      * @param string $CostTime 运行耗时
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceStatus 实例状态 COMPLETED 完成 FAILED失败重试 EXPIRED失败 RUNNING运行中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CodeFileName 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +240,10 @@ class InstanceLogInfo extends AbstractModel
 
         if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
             $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("CodeFileName",$param) and $param["CodeFileName"] !== null) {
+            $this->CodeFileName = $param["CodeFileName"];
         }
     }
 }

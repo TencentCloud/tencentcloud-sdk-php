@@ -36,12 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerAddr(string $ServerAddr) 设置服务地址，KafkaType为1时必填
  * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接，KafkaType为1时必填
  * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接，KafkaType为1时必填
- * @method KafkaProtocolInfo getProtocol() 获取加密访问协议，IsEncryptionAddr参数为true时必填
- * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议，IsEncryptionAddr参数为true时必填
+ * @method KafkaProtocolInfo getProtocol() 获取加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填
+ * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填
  * @method string getConsumerGroupName() 获取用户Kafka消费组名称
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称
- * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则
- * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则
+ * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则。
+必填字段。
+ * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则。
+必填字段。
  */
 class CreateKafkaRechargeRequest extends AbstractModel
 {
@@ -86,7 +90,8 @@ class CreateKafkaRechargeRequest extends AbstractModel
     public $IsEncryptionAddr;
 
     /**
-     * @var KafkaProtocolInfo 加密访问协议，IsEncryptionAddr参数为true时必填
+     * @var KafkaProtocolInfo 加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填
      */
     public $Protocol;
 
@@ -96,7 +101,8 @@ class CreateKafkaRechargeRequest extends AbstractModel
     public $ConsumerGroupName;
 
     /**
-     * @var LogRechargeRuleInfo 日志导入规则
+     * @var LogRechargeRuleInfo 日志导入规则。
+必填字段。
      */
     public $LogRechargeRule;
 
@@ -109,9 +115,11 @@ class CreateKafkaRechargeRequest extends AbstractModel
      * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
      * @param string $ServerAddr 服务地址，KafkaType为1时必填
      * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填
-     * @param KafkaProtocolInfo $Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
+     * @param KafkaProtocolInfo $Protocol 加密访问协议。
+KafkaType为1并且IsEncryptionAddr为true时Protocol必填
      * @param string $ConsumerGroupName 用户Kafka消费组名称
-     * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则
+     * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则。
+必填字段。
      */
     function __construct()
     {

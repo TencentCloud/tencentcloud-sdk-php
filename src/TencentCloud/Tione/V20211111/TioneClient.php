@@ -62,6 +62,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeModelAccEngineVersionsResponse DescribeModelAccEngineVersions(Models\DescribeModelAccEngineVersionsRequest $req) 查询模型加速引擎版本列表
  * @method Models\DescribeModelAccelerateTaskResponse DescribeModelAccelerateTask(Models\DescribeModelAccelerateTaskRequest $req) 查询模型优化任务详情
  * @method Models\DescribeModelAccelerateTasksResponse DescribeModelAccelerateTasks(Models\DescribeModelAccelerateTasksRequest $req) 查询模型加速任务列表
+ * @method Models\DescribeModelAccelerateVersionsResponse DescribeModelAccelerateVersions(Models\DescribeModelAccelerateVersionsRequest $req) 模型加速之后的模型版本列表
  * @method Models\DescribeModelServiceResponse DescribeModelService(Models\DescribeModelServiceRequest $req) 查询单个服务
  * @method Models\DescribeModelServiceCallInfoResponse DescribeModelServiceCallInfo(Models\DescribeModelServiceCallInfoRequest $req) 展示服务的调用信息
  * @method Models\DescribeModelServiceGroupResponse DescribeModelServiceGroup(Models\DescribeModelServiceGroupRequest $req) 查询单个服务组

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
  * @method MonitorTime getMonitorTime() 获取监控任务运行时间点。
  * @method void setMonitorTime(MonitorTime $MonitorTime) 设置监控任务运行时间点。
- * @method string getCondition() 获取触发条件。
- * @method void setCondition(string $Condition) 设置触发条件。
+ * @method string getCondition() 获取单触发条件。与MultiConditions参数互斥。
+ * @method void setCondition(string $Condition) 设置单触发条件。与MultiConditions参数互斥。
  * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
  * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
  * @method integer getAlarmPeriod() 获取告警重复的周期。单位是min。取值范围是0~1440。
@@ -70,11 +70,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMultiConditions() 获取多触发条件。
-
+ * @method array getMultiConditions() 获取多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。
-
+ * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmInfo extends AbstractModel
@@ -95,7 +95,7 @@ class AlarmInfo extends AbstractModel
     public $MonitorTime;
 
     /**
-     * @var string 触发条件。
+     * @var string 单触发条件。与MultiConditions参数互斥。
      */
     public $Condition;
 
@@ -177,8 +177,8 @@ class AlarmInfo extends AbstractModel
     public $AlarmLevel;
 
     /**
-     * @var array 多触发条件。
-
+     * @var array 多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiConditions;
@@ -187,7 +187,7 @@ class AlarmInfo extends AbstractModel
      * @param string $Name 告警策略名称。
      * @param array $AlarmTargets 监控对象列表。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
-     * @param string $Condition 触发条件。
+     * @param string $Condition 单触发条件。与MultiConditions参数互斥。
      * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
      * @param integer $AlarmPeriod 告警重复的周期。单位是min。取值范围是0~1440。
      * @param array $AlarmNoticeIds 关联的告警通知模板列表。
@@ -209,8 +209,8 @@ class AlarmInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MultiConditions 多触发条件。
-
+     * @param array $MultiConditions 多触发条件。与
+Condition互斥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

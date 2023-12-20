@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置主题的地域信息
  * @method integer getBizType() 获取主题类型：0为日志主题，1为指标主题
  * @method void setBizType(integer $BizType) 设置主题类型：0为日志主题，1为指标主题
- * @method string getMetricName() 获取指标名称
- * @method void setMetricName(string $MetricName) 设置指标名称
+ * @method string getMetricName() 获取指标名称。当BizType为1时，MetricName需要填写
+ * @method void setMetricName(string $MetricName) 设置指标名称。当BizType为1时，MetricName需要填写
  * @method array getMetricNames() 获取指标名称
 BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
  * @method void setMetricNames(array $MetricNames) 设置指标名称
@@ -59,7 +59,7 @@ class ScheduledSqlResouceInfo extends AbstractModel
     public $BizType;
 
     /**
-     * @var string 指标名称
+     * @var string 指标名称。当BizType为1时，MetricName需要填写
      */
     public $MetricName;
 
@@ -89,7 +89,7 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
      * @param string $TopicId 目标主题id
      * @param string $Region 主题的地域信息
      * @param integer $BizType 主题类型：0为日志主题，1为指标主题
-     * @param string $MetricName 指标名称
+     * @param string $MetricName 指标名称。当BizType为1时，MetricName需要填写
      * @param array $MetricNames 指标名称
 BizType为1时，优先使用MetricNames字段多指标只能填充到MetricNames字段，单指标建议填充到MetricName字段
      * @param array $MetricLabels 指标维度，不接受时间类型。

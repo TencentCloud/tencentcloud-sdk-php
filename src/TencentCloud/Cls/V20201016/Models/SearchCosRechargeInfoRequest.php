@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
  * @method string getName() 获取投递任务名称
  * @method void setName(string $Name) 设置投递任务名称
- * @method string getBucket() 获取存储桶
- * @method void setBucket(string $Bucket) 设置存储桶
- * @method string getBucketRegion() 获取存储桶所在地域
- * @method void setBucketRegion(string $BucketRegion) 设置存储桶所在地域
+ * @method string getBucket() 获取存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
+ * @method void setBucket(string $Bucket) 设置存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
+ * @method string getBucketRegion() 获取存储桶所在地域。
+地域和访问域名：https://cloud.tencent.com/document/product/436/6224
+ * @method void setBucketRegion(string $BucketRegion) 设置存储桶所在地域。
+地域和访问域名：https://cloud.tencent.com/document/product/436/6224
  * @method string getPrefix() 获取cos文件所在文件夹的前缀
  * @method void setPrefix(string $Prefix) 设置cos文件所在文件夹的前缀
  * @method string getCompress() 获取压缩模式:   "", "gzip", "lzop", "snappy”;   默认""
@@ -53,12 +57,14 @@ class SearchCosRechargeInfoRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 存储桶
+     * @var string 存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
      */
     public $Bucket;
 
     /**
-     * @var string 存储桶所在地域
+     * @var string 存储桶所在地域。
+地域和访问域名：https://cloud.tencent.com/document/product/436/6224
      */
     public $BucketRegion;
 
@@ -76,8 +82,10 @@ class SearchCosRechargeInfoRequest extends AbstractModel
      * @param string $TopicId 日志主题 ID
      * @param string $LogsetId 日志集ID
      * @param string $Name 投递任务名称
-     * @param string $Bucket 存储桶
-     * @param string $BucketRegion 存储桶所在地域
+     * @param string $Bucket 存储桶。
+存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
+     * @param string $BucketRegion 存储桶所在地域。
+地域和访问域名：https://cloud.tencent.com/document/product/436/6224
      * @param string $Prefix cos文件所在文件夹的前缀
      * @param string $Compress 压缩模式:   "", "gzip", "lzop", "snappy”;   默认""
      */

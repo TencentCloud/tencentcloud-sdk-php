@@ -41,6 +41,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询集群
  * @method Models\DescribeFolderResponse DescribeFolder(Models\DescribeFolderRequest $req) 查询指定文件夹及其相应的子文件夹信息
  * @method Models\DescribeJobConfigsResponse DescribeJobConfigs(Models\DescribeJobConfigsRequest $req) 查询作业配置列表，一次最多查询100个
+ * @method Models\DescribeJobEventsResponse DescribeJobEvents(Models\DescribeJobEventsRequest $req) 获取指定作业的事件，包括作业启动停止、运行失败、快照失败、作业异常等各种事件类型
  * @method Models\DescribeJobSavepointResponse DescribeJobSavepoint(Models\DescribeJobSavepointRequest $req) 查找Savepoint列表
  * @method Models\DescribeJobSubmissionLogResponse DescribeJobSubmissionLog(Models\DescribeJobSubmissionLogRequest $req) 查询作业实例启动日志
  * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 查询作业

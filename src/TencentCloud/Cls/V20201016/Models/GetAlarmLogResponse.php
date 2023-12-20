@@ -26,17 +26,27 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListOver(boolean $ListOver) 设置指定时间范围内的告警执行详情是否完整返回
  * @method boolean getAnalysis() 获取返回的结果是否为SQL分析结果
  * @method void setAnalysis(boolean $Analysis) 设置返回的结果是否为SQL分析结果
- * @method array getColNames() 获取如果Analysis为True，则返回分析结果的列名，否则为空
+ * @method array getColNames() 获取分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColNames(array $ColNames) 设置如果Analysis为True，则返回分析结果的列名，否则为空
+ * @method void setColNames(array $ColNames) 设置分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResults() 获取执行详情查询结果；当Analysis为True时，可能返回为null
+ * @method array getResults() 获取执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置执行详情查询结果；当Analysis为True时，可能返回为null
+ * @method void setResults(array $Results) 设置执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisResults() 获取执行详情统计分析结果；当Analysis为False时，可能返回为null
+ * @method array getAnalysisResults() 获取执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisResults(array $AnalysisResults) 设置执行详情统计分析结果；当Analysis为False时，可能返回为null
+ * @method void setAnalysisResults(array $AnalysisResults) 设置执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAnalysisRecords() 获取执行详情统计分析结果; UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,19 +77,24 @@ class GetAlarmLogResponse extends AbstractModel
     public $Analysis;
 
     /**
-     * @var array 如果Analysis为True，则返回分析结果的列名，否则为空
+     * @var array 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColNames;
 
     /**
-     * @var array 执行详情查询结果；当Analysis为True时，可能返回为null
+     * @var array 执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
     /**
-     * @var array 执行详情统计分析结果；当Analysis为False时，可能返回为null
+     * @var array 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisResults;
@@ -105,11 +120,16 @@ class GetAlarmLogResponse extends AbstractModel
      * @param string $Context 加载后续详情的Context
      * @param boolean $ListOver 指定时间范围内的告警执行详情是否完整返回
      * @param boolean $Analysis 返回的结果是否为SQL分析结果
-     * @param array $ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
+     * @param array $ColNames 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
+否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Results 执行详情查询结果；当Analysis为True时，可能返回为null
+     * @param array $Results 执行详情查询结果。
+
+当Query字段无SQL语句时，返回查询结果。
+当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisResults 执行详情统计分析结果；当Analysis为False时，可能返回为null
+     * @param array $AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AnalysisRecords 执行详情统计分析结果; UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。

@@ -64,12 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomType(integer $RoomType) 设置房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
  * @method integer getEndDelayTime() 获取拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
  * @method void setEndDelayTime(integer $EndDelayTime) 设置拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
- * @method integer getLiveType() 获取直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
- * @method void setLiveType(integer $LiveType) 设置直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+ * @method integer getLiveType() 获取直播类型：0 常规（默认）1 伪直播
+ * @method void setLiveType(integer $LiveType) 设置直播类型：0 常规（默认）1 伪直播
  * @method string getRecordLiveUrl() 获取伪直播回放链接
  * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播回放链接
  * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+ * @method string getRecordBackground() 获取录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+ * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
  */
 class RoomInfo extends AbstractModel
 {
@@ -184,7 +186,7 @@ class RoomInfo extends AbstractModel
     public $EndDelayTime;
 
     /**
-     * @var integer 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * @var integer 直播类型：0 常规（默认）1 伪直播
      */
     public $LiveType;
 
@@ -197,6 +199,11 @@ class RoomInfo extends AbstractModel
      * @var integer 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
      */
     public $EnableAutoStart;
+
+    /**
+     * @var string 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     */
+    public $RecordBackground;
 
     /**
      * @param string $Name 房间名称。
@@ -221,9 +228,10 @@ class RoomInfo extends AbstractModel
      * @param integer $IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
      * @param integer $RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
      * @param integer $EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
-     * @param integer $LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
+     * @param integer $LiveType 直播类型：0 常规（默认）1 伪直播
      * @param string $RecordLiveUrl 伪直播回放链接
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
             $this->EnableAutoStart = $param["EnableAutoStart"];
+        }
+
+        if (array_key_exists("RecordBackground",$param) and $param["RecordBackground"] !== null) {
+            $this->RecordBackground = $param["RecordBackground"];
         }
     }
 }

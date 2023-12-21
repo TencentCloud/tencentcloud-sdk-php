@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取记录条数
  * @method void setTotalCount(integer $TotalCount) 设置记录条数
- * @method array getBundleSet() 获取bundle列表
- * @method void setBundleSet(array $BundleSet) 设置bundle列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,18 +33,12 @@ class DescribeNamespaceBundlesOptResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array bundle列表
-     */
-    public $BundleSet;
-
-    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $TotalCount 记录条数
-     * @param array $BundleSet bundle列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -64,15 +56,6 @@ class DescribeNamespaceBundlesOptResponse extends AbstractModel
         }
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("BundleSet",$param) and $param["BundleSet"] !== null) {
-            $this->BundleSet = [];
-            foreach ($param["BundleSet"] as $key => $value){
-                $obj = new BundleSetOpt();
-                $obj->deserialize($value);
-                array_push($this->BundleSet, $obj);
-            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

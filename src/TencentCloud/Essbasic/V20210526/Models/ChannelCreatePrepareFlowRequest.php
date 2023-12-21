@@ -20,16 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreatePrepareFlow请求参数结构体
  *
- * @method string getResourceId() 获取资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul>
- * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul>
  * @method integer getResourceType() 获取资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>
@@ -56,6 +46,16 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
+ * @method string getResourceId() 获取资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
+ * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
  * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
  * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
  * @method array getFlowApproverList() 获取合同签署人信息
@@ -73,15 +73,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class ChannelCreatePrepareFlowRequest extends AbstractModel
 {
-    /**
-     * @var string 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul>
-     */
-    public $ResourceId;
-
     /**
      * @var integer 资源类型，取值有：
 <ul><li> **1**：模板</li>
@@ -106,6 +97,15 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
+
+    /**
+     * @var string 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
+     */
+    public $ResourceId;
 
     /**
      * @var CreateFlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
@@ -142,11 +142,6 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param string $ResourceId 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
-</ul>
      * @param integer $ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>
@@ -160,6 +155,11 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
+     * @param string $ResourceId 资源id，与ResourceType相对应，取值范围：
+<ul>
+<li>文件Id（通过UploadFiles获取文件资源Id）</li>
+<li>模板Id</li>
+</ul>
      * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
      * @param array $FlowApproverList 合同签署人信息
      * @param string $FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
@@ -181,10 +181,6 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
-        }
-
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
         }
@@ -197,6 +193,10 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
 
         if (array_key_exists("FlowOption",$param) and $param["FlowOption"] !== null) {

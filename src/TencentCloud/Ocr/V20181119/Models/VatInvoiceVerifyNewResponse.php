@@ -20,38 +20,55 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VatInvoiceVerifyNew返回参数结构体
  *
- * @method VatInvoice getInvoice() 获取增值税发票信息，详情请点击左侧链接。
- * @method void setInvoice(VatInvoice $Invoice) 设置增值税发票信息，详情请点击左侧链接。
- * @method VehicleInvoiceInfo getVehicleInvoiceInfo() 获取机动车销售统一发票信息
- * @method void setVehicleInvoiceInfo(VehicleInvoiceInfo $VehicleInvoiceInfo) 设置机动车销售统一发票信息
- * @method UsedVehicleInvoiceInfo getUsedVehicleInvoiceInfo() 获取二手车销售统一发票信息
- * @method void setUsedVehicleInvoiceInfo(UsedVehicleInvoiceInfo $UsedVehicleInvoiceInfo) 设置二手车销售统一发票信息
- * @method array getPassInvoiceInfoList() 获取通行费发票信息
- * @method void setPassInvoiceInfoList(array $PassInvoiceInfoList) 设置通行费发票信息
+ * @method VatInvoice getInvoice() 获取增值税发票、购车发票、全电发票的基础要素字段信息。
+ * @method void setInvoice(VatInvoice $Invoice) 设置增值税发票、购车发票、全电发票的基础要素字段信息。
+ * @method VehicleInvoiceInfo getVehicleInvoiceInfo() 获取机动车销售统一发票详细字段信息。
+ * @method void setVehicleInvoiceInfo(VehicleInvoiceInfo $VehicleInvoiceInfo) 设置机动车销售统一发票详细字段信息。
+ * @method UsedVehicleInvoiceInfo getUsedVehicleInvoiceInfo() 获取二手车销售统一发票详细字段信息。
+ * @method void setUsedVehicleInvoiceInfo(UsedVehicleInvoiceInfo $UsedVehicleInvoiceInfo) 设置二手车销售统一发票详细字段信息。
+ * @method array getPassInvoiceInfoList() 获取通行费发票详细字段信息。
+ * @method void setPassInvoiceInfoList(array $PassInvoiceInfoList) 设置通行费发票详细字段信息。
+ * @method ElectronicTrainTicket getElectronicTrainTicket() 获取全电发票（铁路电子客票）详细字段信息。
+
+ * @method void setElectronicTrainTicket(ElectronicTrainTicket $ElectronicTrainTicket) 设置全电发票（铁路电子客票）详细字段信息。
+
+ * @method ElectronicAirTransport getElectronicAirTransport() 获取全电发票（航空运输电子客票行程单）详细字段信息。
+ * @method void setElectronicAirTransport(ElectronicAirTransport $ElectronicAirTransport) 设置全电发票（航空运输电子客票行程单）详细字段信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class VatInvoiceVerifyNewResponse extends AbstractModel
 {
     /**
-     * @var VatInvoice 增值税发票信息，详情请点击左侧链接。
+     * @var VatInvoice 增值税发票、购车发票、全电发票的基础要素字段信息。
      */
     public $Invoice;
 
     /**
-     * @var VehicleInvoiceInfo 机动车销售统一发票信息
+     * @var VehicleInvoiceInfo 机动车销售统一发票详细字段信息。
      */
     public $VehicleInvoiceInfo;
 
     /**
-     * @var UsedVehicleInvoiceInfo 二手车销售统一发票信息
+     * @var UsedVehicleInvoiceInfo 二手车销售统一发票详细字段信息。
      */
     public $UsedVehicleInvoiceInfo;
 
     /**
-     * @var array 通行费发票信息
+     * @var array 通行费发票详细字段信息。
      */
     public $PassInvoiceInfoList;
+
+    /**
+     * @var ElectronicTrainTicket 全电发票（铁路电子客票）详细字段信息。
+
+     */
+    public $ElectronicTrainTicket;
+
+    /**
+     * @var ElectronicAirTransport 全电发票（航空运输电子客票行程单）详细字段信息。
+     */
+    public $ElectronicAirTransport;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +76,13 @@ class VatInvoiceVerifyNewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param VatInvoice $Invoice 增值税发票信息，详情请点击左侧链接。
-     * @param VehicleInvoiceInfo $VehicleInvoiceInfo 机动车销售统一发票信息
-     * @param UsedVehicleInvoiceInfo $UsedVehicleInvoiceInfo 二手车销售统一发票信息
-     * @param array $PassInvoiceInfoList 通行费发票信息
+     * @param VatInvoice $Invoice 增值税发票、购车发票、全电发票的基础要素字段信息。
+     * @param VehicleInvoiceInfo $VehicleInvoiceInfo 机动车销售统一发票详细字段信息。
+     * @param UsedVehicleInvoiceInfo $UsedVehicleInvoiceInfo 二手车销售统一发票详细字段信息。
+     * @param array $PassInvoiceInfoList 通行费发票详细字段信息。
+     * @param ElectronicTrainTicket $ElectronicTrainTicket 全电发票（铁路电子客票）详细字段信息。
+
+     * @param ElectronicAirTransport $ElectronicAirTransport 全电发票（航空运输电子客票行程单）详细字段信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -100,6 +120,16 @@ class VatInvoiceVerifyNewResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PassInvoiceInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("ElectronicTrainTicket",$param) and $param["ElectronicTrainTicket"] !== null) {
+            $this->ElectronicTrainTicket = new ElectronicTrainTicket();
+            $this->ElectronicTrainTicket->deserialize($param["ElectronicTrainTicket"]);
+        }
+
+        if (array_key_exists("ElectronicAirTransport",$param) and $param["ElectronicAirTransport"] !== null) {
+            $this->ElectronicAirTransport = new ElectronicAirTransport();
+            $this->ElectronicAirTransport->deserialize($param["ElectronicAirTransport"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

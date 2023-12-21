@@ -278,13 +278,13 @@ use TencentCloud\Common\AbstractModel;
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
- * @method integer getSentenceMaxLength() 获取单标点最多字数
+ * @method integer getSentenceMaxLength() 获取单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
 
 注意：需设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果
- * @method void setSentenceMaxLength(integer $SentenceMaxLength) 设置单标点最多字数
+ * @method void setSentenceMaxLength(integer $SentenceMaxLength) 设置单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
@@ -501,7 +501,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterModal;
 
     /**
-     * @var integer 单标点最多字数
+     * @var integer 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0
@@ -645,7 +645,7 @@ class CreateRecTaskRequest extends AbstractModel
 1：过滤部分语气词；
 2：严格过滤语气词；
 默认值为 0
-     * @param integer $SentenceMaxLength 单标点最多字数
+     * @param integer $SentenceMaxLength 单标点最多字数（目前仅支持8k_zh/16k_zh引擎）
 **可控制单行字幕最大字数，适用于字幕生成场景**，取值范围：[6，40]
 0：不开启该功能；
 默认值为0

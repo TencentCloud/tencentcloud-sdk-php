@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询偏移量
  * @method string getBundle() 获取过滤的 bundle
  * @method void setBundle(string $Bundle) 设置过滤的 bundle
- * @method string getOwnerBroker() 获取bundle 所属的 broker ip 地址，支持模糊查询
- * @method void setOwnerBroker(string $OwnerBroker) 设置bundle 所属的 broker ip 地址，支持模糊查询
+ * @method string getOwnerBroker() 获取bundle 所属的 broker IP 地址，支持模糊查询
+ * @method void setOwnerBroker(string $OwnerBroker) 设置bundle 所属的 broker IP 地址，支持模糊查询
  */
 class DescribeNamespaceBundlesOptRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class DescribeNamespaceBundlesOptRequest extends AbstractModel
     public $Bundle;
 
     /**
-     * @var string bundle 所属的 broker ip 地址，支持模糊查询
+     * @var string bundle 所属的 broker IP 地址，支持模糊查询
      */
     public $OwnerBroker;
 
@@ -87,7 +87,7 @@ class DescribeNamespaceBundlesOptRequest extends AbstractModel
      * @param integer $Limit 查询限制条数
      * @param integer $Offset 查询偏移量
      * @param string $Bundle 过滤的 bundle
-     * @param string $OwnerBroker bundle 所属的 broker ip 地址，支持模糊查询
+     * @param string $OwnerBroker bundle 所属的 broker IP 地址，支持模糊查询
      */
     function __construct()
     {

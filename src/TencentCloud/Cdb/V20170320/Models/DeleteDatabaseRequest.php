@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getDBName() 获取数据库名称。
- * @method void setDBName(string $DBName) 设置数据库名称。
+ * @method string getDBName() 获取数据库名称，长度不超过64。
+ * @method void setDBName(string $DBName) 设置数据库名称，长度不超过64。
  */
 class DeleteDatabaseRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteDatabaseRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 数据库名称。
+     * @var string 数据库名称，长度不超过64。
      */
     public $DBName;
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $DBName 数据库名称。
+     * @param string $DBName 数据库名称，长度不超过64。
      */
     function __construct()
     {

@@ -184,6 +184,10 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCharacteristic(array $Characteristic) 设置页面特性，用于前端屏蔽一些页面入口
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRestartTimeout() 获取超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRestartTimeout(string $RestartTimeout) 设置超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -423,6 +427,12 @@ Modify 集群变更中；
     public $Characteristic;
 
     /**
+     * @var string 超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RestartTimeout;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -504,6 +514,8 @@ Modify 集群变更中；
      * @param integer $IfExistCatalog 判断审计日志表是否有catalog字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Characteristic 页面特性，用于前端屏蔽一些页面入口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RestartTimeout 超时时间 单位s
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -676,6 +688,10 @@ Modify 集群变更中；
 
         if (array_key_exists("Characteristic",$param) and $param["Characteristic"] !== null) {
             $this->Characteristic = $param["Characteristic"];
+        }
+
+        if (array_key_exists("RestartTimeout",$param) and $param["RestartTimeout"] !== null) {
+            $this->RestartTimeout = $param["RestartTimeout"];
         }
     }
 }

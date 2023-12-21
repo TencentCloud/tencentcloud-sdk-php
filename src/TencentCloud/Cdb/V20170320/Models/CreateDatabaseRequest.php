@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getDBName() 获取数据库名称。
- * @method void setDBName(string $DBName) 设置数据库名称。
+ * @method string getDBName() 获取数据库名称，长度不超过64。
+ * @method void setDBName(string $DBName) 设置数据库名称，长度不超过64。
  * @method string getCharacterSetName() 获取字符集，可选值：utf8，gbk，latin1，utf8mb4。
  * @method void setCharacterSetName(string $CharacterSetName) 设置字符集，可选值：utf8，gbk，latin1，utf8mb4。
  */
@@ -35,7 +35,7 @@ class CreateDatabaseRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 数据库名称。
+     * @var string 数据库名称，长度不超过64。
      */
     public $DBName;
 
@@ -46,7 +46,7 @@ class CreateDatabaseRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $DBName 数据库名称。
+     * @param string $DBName 数据库名称，长度不超过64。
      * @param string $CharacterSetName 字符集，可选值：utf8，gbk，latin1，utf8mb4。
      */
     function __construct()

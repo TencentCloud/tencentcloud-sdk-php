@@ -50,13 +50,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
  * @method array getSignatureTypes() 获取指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
-<li>**1**：OCR楷体</li></ul>
+<li>**1**：OCR楷体</li>
+<li>**2**：姓名印章</li>
+<li>**3**：图片印章</li>
+<li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li></ul>
  * @method void setSignatureTypes(array $SignatureTypes) 设置指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
-<li>**1**：OCR楷体</li></ul>
+<li>**1**：OCR楷体</li>
+<li>**2**：姓名印章</li>
+<li>**3**：图片印章</li>
+<li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li></ul>
@@ -128,7 +134,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     /**
      * @var array 指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
-<li>**1**：OCR楷体</li></ul>
+<li>**1**：OCR楷体</li>
+<li>**2**：姓名印章</li>
+<li>**3**：图片印章</li>
+<li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li></ul>
@@ -172,7 +181,10 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
      * @param string $JumpUrl 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
      * @param array $SignatureTypes 指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
-<li>**1**：OCR楷体</li></ul>
+<li>**1**：OCR楷体</li>
+<li>**2**：姓名印章</li>
+<li>**3**：图片印章</li>
+<li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li></ul>

@@ -34,8 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
  * @method integer getOffset() 获取慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method void setOffset(integer $Offset) 设置慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method string getRole() 获取节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
- * @method void setRole(string $Role) 设置节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+ * @method string getRole() 获取节点所属角色。
+- master：主节点。
+- slave：从节点。
+ * @method void setRole(string $Role) 设置节点所属角色。
+- master：主节点。
+- slave：从节点。
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
@@ -71,7 +75,9 @@ class DescribeSlowLogRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+     * @var string 节点所属角色。
+- master：主节点。
+- slave：从节点。
      */
     public $Role;
 
@@ -83,7 +89,9 @@ class DescribeSlowLogRequest extends AbstractModel
      * @param integer $MinQueryTime 慢查询平均执行时间阈值，单位：毫秒。
      * @param integer $Limit 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
      * @param integer $Offset 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
-     * @param string $Role 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+     * @param string $Role 节点所属角色。
+- master：主节点。
+- slave：从节点。
      */
     function __construct()
     {

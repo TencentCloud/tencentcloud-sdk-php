@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallbackUrl(string $CallbackUrl) 设置接收审核信息回调地址，如果设置，则审核过程中产生的违规音频片段和画面截帧发送此接口
  * @method integer getPriority() 获取审核排队优先级。当您有多个视频审核任务排队时，可以根据这个参数控制排队优先级。用于处理插队等逻辑。默认该参数为0
  * @method void setPriority(integer $Priority) 设置审核排队优先级。当您有多个视频审核任务排队时，可以根据这个参数控制排队优先级。用于处理插队等逻辑。默认该参数为0
+ * @method User getUser() 获取该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
+ * @method void setUser(User $User) 设置该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
  */
 class CreateVideoModerationTaskRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ class CreateVideoModerationTaskRequest extends AbstractModel
     public $Priority;
 
     /**
+     * @var User 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
+     */
+    public $User;
+
+    /**
      * @param string $BizType 该字段表示策略的具体编号，用于接口调度，在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。
 备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      * @param string $Type 任务类型：可选VIDEO（点播视频），LIVE_VIDEO（直播视频）
@@ -76,6 +83,7 @@ class CreateVideoModerationTaskRequest extends AbstractModel
      * @param string $Seed 回调签名key，具体可以查看签名文档。
      * @param string $CallbackUrl 接收审核信息回调地址，如果设置，则审核过程中产生的违规音频片段和画面截帧发送此接口
      * @param integer $Priority 审核排队优先级。当您有多个视频审核任务排队时，可以根据这个参数控制排队优先级。用于处理插队等逻辑。默认该参数为0
+     * @param User $User 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户
      */
     function __construct()
     {
@@ -117,6 +125,11 @@ class CreateVideoModerationTaskRequest extends AbstractModel
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("User",$param) and $param["User"] !== null) {
+            $this->User = new User();
+            $this->User->deserialize($param["User"]);
         }
     }
 }

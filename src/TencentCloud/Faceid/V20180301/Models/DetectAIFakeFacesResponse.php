@@ -34,6 +34,8 @@ High：高度疑似攻击
  * @method void setAttackRiskDetailList(array $AttackRiskDetailList) 设置检测到疑似的攻击痕迹列表
 说明：未检测到攻击痕迹时，返回空数组
 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+ * @method ExtraInfo getExtraInfo() 获取额外信息
+ * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置额外信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,6 +57,11 @@ High：高度疑似攻击
     public $AttackRiskDetailList;
 
     /**
+     * @var ExtraInfo 额外信息
+     */
+    public $ExtraInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +74,7 @@ High：高度疑似攻击
      * @param array $AttackRiskDetailList 检测到疑似的攻击痕迹列表
 说明：未检测到攻击痕迹时，返回空数组
 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+     * @param ExtraInfo $ExtraInfo 额外信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -93,6 +101,11 @@ High：高度疑似攻击
                 $obj->deserialize($value);
                 array_push($this->AttackRiskDetailList, $obj);
             }
+        }
+
+        if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
+            $this->ExtraInfo = new ExtraInfo();
+            $this->ExtraInfo->deserialize($param["ExtraInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

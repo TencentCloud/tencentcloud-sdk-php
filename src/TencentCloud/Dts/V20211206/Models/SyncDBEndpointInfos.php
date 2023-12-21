@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseType(string $DatabaseType) 设置实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInfo() 获取数据库信息
+ * @method array getInfo() 获取数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInfo(array $Info) 设置数据库信息
+ * @method void setInfo(array $Info) 设置数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SyncDBEndpointInfos extends AbstractModel
@@ -58,7 +58,7 @@ class SyncDBEndpointInfos extends AbstractModel
     public $DatabaseType;
 
     /**
-     * @var array 数据库信息
+     * @var array 数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Info;
@@ -70,7 +70,7 @@ class SyncDBEndpointInfos extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseType 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Info 数据库信息
+     * @param array $Info 数据库信息。注意：如果数据类型为tdsqlmysql，此处Endpoint数组的顺序应该与set顺序对应，第一个分片（shardkey范围起始为0的分片）必须要输入在第一个位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

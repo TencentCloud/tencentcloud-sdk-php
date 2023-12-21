@@ -188,6 +188,7 @@ class CodeBatch extends AbstractModel
     /**
      * @var Ext 未使用
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Ext;
 

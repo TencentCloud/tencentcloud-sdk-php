@@ -106,6 +106,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSearchEnginePush() 获取是否启用搜索引擎推送
  * @method void setSearchEnginePush(string $SearchEnginePush) 设置是否启用搜索引擎推送
+ * @method string getSlaveDNS() 获取是否开启辅助 DNS
+ * @method void setSlaveDNS(string $SlaveDNS) 设置是否开启辅助 DNS
  */
 class DomainInfo extends AbstractModel
 {
@@ -281,6 +283,11 @@ class DomainInfo extends AbstractModel
     public $SearchEnginePush;
 
     /**
+     * @var string 是否开启辅助 DNS
+     */
+    public $SlaveDNS;
+
+    /**
      * @param integer $DomainId 域名ID
      * @param string $Status 域名状态
      * @param string $Grade 域名套餐等级
@@ -324,6 +331,7 @@ class DomainInfo extends AbstractModel
      * @param array $TagList 域名关联的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SearchEnginePush 是否启用搜索引擎推送
+     * @param string $SlaveDNS 是否开启辅助 DNS
      */
     function __construct()
     {
@@ -469,6 +477,10 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("SearchEnginePush",$param) and $param["SearchEnginePush"] !== null) {
             $this->SearchEnginePush = $param["SearchEnginePush"];
+        }
+
+        if (array_key_exists("SlaveDNS",$param) and $param["SlaveDNS"] !== null) {
+            $this->SlaveDNS = $param["SlaveDNS"];
         }
     }
 }

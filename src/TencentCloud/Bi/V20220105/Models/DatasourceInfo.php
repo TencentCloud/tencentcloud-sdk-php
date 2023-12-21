@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataOriginDatasourceId(string $DataOriginDatasourceId) 设置第三方数据源id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterId() 获取集群id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterId(string $ClusterId) 设置集群id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceInfo extends AbstractModel
 {
@@ -334,6 +338,12 @@ class DatasourceInfo extends AbstractModel
     public $DataOriginDatasourceId;
 
     /**
+     * @var string 集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterId;
+
+    /**
      * @param integer $Id 数据库ID
      * @param string $DbName 数据库名称
      * @param string $ServiceType 域类型，1、腾讯云，2、本地
@@ -391,6 +401,8 @@ class DatasourceInfo extends AbstractModel
      * @param string $DataOriginProjectId 第三方项目id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataOriginDatasourceId 第三方数据源id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterId 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -546,6 +558,10 @@ class DatasourceInfo extends AbstractModel
 
         if (array_key_exists("DataOriginDatasourceId",$param) and $param["DataOriginDatasourceId"] !== null) {
             $this->DataOriginDatasourceId = $param["DataOriginDatasourceId"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

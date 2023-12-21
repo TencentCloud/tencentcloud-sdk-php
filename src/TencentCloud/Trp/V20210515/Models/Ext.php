@@ -20,14 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 预留字段
  *
-
+ * @method string getValue() 获取字符串
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(string $Value) 设置字符串
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Ext extends AbstractModel
 {
-
+    /**
+     * @var string 字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $Value;
 
     /**
-
+     * @param string $Value 字符串
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +51,8 @@ class Ext extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
+        }
     }
 }

@@ -1,0 +1,153 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Trp\V20210515\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 安心计划二维码扫码记录
+ *
+ * @method string getUrl() 获取二维码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrl(string $Url) 设置二维码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOpenId() 获取OpenID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOpenId(string $OpenId) 设置OpenID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScanTime() 获取扫码时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScanTime(string $ScanTime) 设置扫码时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIp() 获取IP 地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIp(string $Ip) 设置IP 地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCountry() 获取国家
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCountry(string $Country) 设置国家
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProvince() 获取省份
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProvince(string $Province) 设置省份
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCity() 获取城市
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCity(string $City) 设置城市
+注意：此字段可能返回 null，表示取不到有效值。
+ */
+class PlanQRCodeRecord extends AbstractModel
+{
+    /**
+     * @var string 二维码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Url;
+
+    /**
+     * @var string OpenID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OpenId;
+
+    /**
+     * @var string 扫码时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScanTime;
+
+    /**
+     * @var string IP 地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ip;
+
+    /**
+     * @var string 国家
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Country;
+
+    /**
+     * @var string 省份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Province;
+
+    /**
+     * @var string 城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $City;
+
+    /**
+     * @param string $Url 二维码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OpenId OpenID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScanTime 扫码时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ip IP 地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Country 国家
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Province 省份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $City 城市
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
+            $this->OpenId = $param["OpenId"];
+        }
+
+        if (array_key_exists("ScanTime",$param) and $param["ScanTime"] !== null) {
+            $this->ScanTime = $param["ScanTime"];
+        }
+
+        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
+            $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("Country",$param) and $param["Country"] !== null) {
+            $this->Country = $param["Country"];
+        }
+
+        if (array_key_exists("Province",$param) and $param["Province"] !== null) {
+            $this->Province = $param["Province"];
+        }
+
+        if (array_key_exists("City",$param) and $param["City"] !== null) {
+            $this->City = $param["City"];
+        }
+    }
+}

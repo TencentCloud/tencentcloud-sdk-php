@@ -91,7 +91,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 可以<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录控制台查看带领取的合同
 ![image](https://qcloudimg.tencent-cloud.cn/raw/a34d0cc56ec871613e94dfc6252bc072.png)
 
-注: `支持批量领取,  如果有一个合同流程无法领取会导致接口报错,  使得所有合同都领取失败`
+注: 
+1. 支持批量领取,  如果有一个合同流程无法领取会导致接口报错,  使得所有合同都领取失败
+2. 只有企业的<font color="red">超管或者法人</font>才能进行合同的领取
  * @method Models\ChannelCreateConvertTaskApiResponse ChannelCreateConvertTaskApi(Models\ChannelCreateConvertTaskApiRequest $req) 此接口（ChannelCreateConvertTaskApi）用来将word、excel、html、图片、txt类型文件转换为PDF文件。<br />
 前提条件：源文件已经通过 <a href="https://qian.tencent.com/developers/partnerApis/files/UploadFiles" target="_blank">文件上传接口</a>完成上传，并得到了源文件的资源Id。<br />
 适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同

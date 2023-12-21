@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
                          
 电话呼出             201            unknown	未知状态
 
+电话呼出             202            notAnswer	未接听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -107,6 +109,8 @@ use TencentCloud\Common\AbstractModel;
 电话呼出               2	              unconnected	未接通
                          
 电话呼出             201            unknown	未知状态
+
+电话呼出             202            notAnswer	未接听
 
 电话呼出            203	    userReject	拒接挂断
 
@@ -188,6 +192,8 @@ use TencentCloud\Common\AbstractModel;
                          
 电话呼出             201            unknown	未知状态
 
+电话呼出             202            notAnswer	未接听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -205,7 +211,6 @@ use TencentCloud\Common\AbstractModel;
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndStatusString(string $EndStatusString) 设置EndStatus与EndStatusString一一对应，具体枚举如下：
@@ -234,6 +239,8 @@ use TencentCloud\Common\AbstractModel;
                          
 电话呼出             201            unknown	未知状态
 
+电话呼出             202            notAnswer	未接听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -251,7 +258,6 @@ use TencentCloud\Common\AbstractModel;
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTimestamp() 获取会话开始时间戳，UNIX 秒级时间戳
@@ -389,6 +395,8 @@ class TelCdrInfo extends AbstractModel
                          
 电话呼出             201            unknown	未知状态
 
+电话呼出             202            notAnswer	未接听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -495,6 +503,8 @@ class TelCdrInfo extends AbstractModel
                          
 电话呼出             201            unknown	未知状态
 
+电话呼出             202            notAnswer	未接听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -512,7 +522,6 @@ class TelCdrInfo extends AbstractModel
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -651,6 +660,8 @@ class TelCdrInfo extends AbstractModel
                          
 电话呼出             201            unknown	未知状态
 
+电话呼出             202            notAnswer	未接听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -713,6 +724,8 @@ class TelCdrInfo extends AbstractModel
                          
 电话呼出             201            unknown	未知状态
 
+电话呼出             202            notAnswer	未接听
+
 电话呼出            203	    userReject	拒接挂断
 
 电话呼出	          204	    powerOff	关机
@@ -730,7 +743,6 @@ class TelCdrInfo extends AbstractModel
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTimestamp 会话开始时间戳，UNIX 秒级时间戳

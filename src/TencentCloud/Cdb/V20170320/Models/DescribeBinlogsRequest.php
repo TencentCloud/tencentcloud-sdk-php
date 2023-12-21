@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinStartTime(string $MinStartTime) 设置binlog最早开始时间，时间格式：2016-03-17 02:10:37
  * @method string getMaxStartTime() 获取binlog最晚开始时间，时间格式：2016-03-17 02:10:37
  * @method void setMaxStartTime(string $MaxStartTime) 设置binlog最晚开始时间，时间格式：2016-03-17 02:10:37
+ * @method boolean getContainsMinStartTime() 获取返回binlog列表是否包含MinStartTime起始节点，默认为否
+ * @method void setContainsMinStartTime(boolean $ContainsMinStartTime) 设置返回binlog列表是否包含MinStartTime起始节点，默认为否
  */
 class DescribeBinlogsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeBinlogsRequest extends AbstractModel
     public $MaxStartTime;
 
     /**
+     * @var boolean 返回binlog列表是否包含MinStartTime起始节点，默认为否
+     */
+    public $ContainsMinStartTime;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $Offset 偏移量，最小值为0。
      * @param integer $Limit 分页大小，默认值为20，最小值为1，最大值为100。
      * @param string $MinStartTime binlog最早开始时间，时间格式：2016-03-17 02:10:37
      * @param string $MaxStartTime binlog最晚开始时间，时间格式：2016-03-17 02:10:37
+     * @param boolean $ContainsMinStartTime 返回binlog列表是否包含MinStartTime起始节点，默认为否
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeBinlogsRequest extends AbstractModel
 
         if (array_key_exists("MaxStartTime",$param) and $param["MaxStartTime"] !== null) {
             $this->MaxStartTime = $param["MaxStartTime"];
+        }
+
+        if (array_key_exists("ContainsMinStartTime",$param) and $param["ContainsMinStartTime"] !== null) {
+            $this->ContainsMinStartTime = $param["ContainsMinStartTime"];
         }
     }
 }

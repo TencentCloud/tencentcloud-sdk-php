@@ -55,6 +55,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeJobFileUrlResponse DescribeJobFileUrl(Models\DescribeJobFileUrlRequest $req) 获取异步任务的输出地址
  * @method Models\DescribeMerchantByIdResponse DescribeMerchantById(Models\DescribeMerchantByIdRequest $req) 查询商户信息
  * @method Models\DescribeMerchantsResponse DescribeMerchants(Models\DescribeMerchantsRequest $req) 查询商户列表
+ * @method Models\DescribePlanQRCodeScanRecordsResponse DescribePlanQRCodeScanRecords(Models\DescribePlanQRCodeScanRecordsRequest $req) 查询安心计划二维码扫码记录
  * @method Models\DescribePlanQRCodesResponse DescribePlanQRCodes(Models\DescribePlanQRCodesRequest $req) 查询安心计划二维码列表
  * @method Models\DescribeProductByIdResponse DescribeProductById(Models\DescribeProductByIdRequest $req) 查询商品信息
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 查询商品列表

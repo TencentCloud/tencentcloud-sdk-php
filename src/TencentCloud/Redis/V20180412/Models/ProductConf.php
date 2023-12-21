@@ -72,12 +72,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置支持的计费模式。
 - 1：包年包月。
 - 0：按量计费。
- * @method boolean getEnableRepicaReadOnly() 获取是否支持副本只读。
+ * @method boolean getEnableRepicaReadOnly() 获取该参数名因存在拼写不规范的问题，建议使用**EnableReplicaReadOnly**参数取代。其含义为是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
- * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) 设置是否支持副本只读。
+ * @method void setEnableRepicaReadOnly(boolean $EnableRepicaReadOnly) 设置该参数名因存在拼写不规范的问题，建议使用**EnableReplicaReadOnly**参数取代。其含义为是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
+ * @method boolean getEnableReplicaReadOnly() 获取是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableReplicaReadOnly(boolean $EnableReplicaReadOnly) 设置是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductConf extends AbstractModel
 {
@@ -156,11 +164,19 @@ class ProductConf extends AbstractModel
     public $PayMode;
 
     /**
-     * @var boolean 是否支持副本只读。
+     * @var boolean 该参数名因存在拼写不规范的问题，建议使用**EnableReplicaReadOnly**参数取代。其含义为是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
      */
     public $EnableRepicaReadOnly;
+
+    /**
+     * @var boolean 是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableReplicaReadOnly;
 
     /**
      * @param integer $Type 产品类型。
@@ -189,9 +205,13 @@ class ProductConf extends AbstractModel
      * @param string $PayMode 支持的计费模式。
 - 1：包年包月。
 - 0：按量计费。
-     * @param boolean $EnableRepicaReadOnly 是否支持副本只读。
+     * @param boolean $EnableRepicaReadOnly 该参数名因存在拼写不规范的问题，建议使用**EnableReplicaReadOnly**参数取代。其含义为是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
+     * @param boolean $EnableReplicaReadOnly 是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -256,6 +276,10 @@ class ProductConf extends AbstractModel
 
         if (array_key_exists("EnableRepicaReadOnly",$param) and $param["EnableRepicaReadOnly"] !== null) {
             $this->EnableRepicaReadOnly = $param["EnableRepicaReadOnly"];
+        }
+
+        if (array_key_exists("EnableReplicaReadOnly",$param) and $param["EnableReplicaReadOnly"] !== null) {
+            $this->EnableReplicaReadOnly = $param["EnableReplicaReadOnly"];
         }
     }
 }

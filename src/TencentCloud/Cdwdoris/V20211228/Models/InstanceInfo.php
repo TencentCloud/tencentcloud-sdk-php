@@ -188,6 +188,14 @@ Modify 集群变更中；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestartTimeout(string $RestartTimeout) 设置超时时间 单位s
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGraceShutdownWaitSeconds() 获取内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGraceShutdownWaitSeconds(string $GraceShutdownWaitSeconds) 设置内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCaseSensitive() 获取表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCaseSensitive(integer $CaseSensitive) 设置表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -433,6 +441,18 @@ Modify 集群变更中；
     public $RestartTimeout;
 
     /**
+     * @var string 内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GraceShutdownWaitSeconds;
+
+    /**
+     * @var integer 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CaseSensitive;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群实例名称
@@ -516,6 +536,10 @@ Modify 集群变更中；
      * @param array $Characteristic 页面特性，用于前端屏蔽一些页面入口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RestartTimeout 超时时间 单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GraceShutdownWaitSeconds 内核优雅重启超时时间，如果为-1说明未设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -692,6 +716,14 @@ Modify 集群变更中；
 
         if (array_key_exists("RestartTimeout",$param) and $param["RestartTimeout"] !== null) {
             $this->RestartTimeout = $param["RestartTimeout"];
+        }
+
+        if (array_key_exists("GraceShutdownWaitSeconds",$param) and $param["GraceShutdownWaitSeconds"] !== null) {
+            $this->GraceShutdownWaitSeconds = $param["GraceShutdownWaitSeconds"];
+        }
+
+        if (array_key_exists("CaseSensitive",$param) and $param["CaseSensitive"] !== null) {
+            $this->CaseSensitive = $param["CaseSensitive"];
         }
     }
 }

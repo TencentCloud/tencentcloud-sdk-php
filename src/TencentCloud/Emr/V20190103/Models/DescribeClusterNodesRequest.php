@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>recyle：表示获取回收站隔离中的节点信息，包括cdb信息。</li>
 <li>renew：表示获取所有待续费的节点信息，包括cdb信息，自动续费节点不会返回。</li>
 注意：现在只支持以上取值，输入其他值会导致错误。
+ * @method boolean getExportDb() 获取导出全部节点信息csv时是否携带cdb信息
+ * @method void setExportDb(boolean $ExportDb) 设置导出全部节点信息csv时是否携带cdb信息
  * @method integer getOffset() 获取页编号，默认值为0，表示第一页。
  * @method void setOffset(integer $Offset) 设置页编号，默认值为0，表示第一页。
  * @method integer getLimit() 获取每页返回数量，默认值为100，最大值为100。
@@ -78,6 +80,11 @@ class DescribeClusterNodesRequest extends AbstractModel
 注意：现在只支持以上取值，输入其他值会导致错误。
      */
     public $NodeFlag;
+
+    /**
+     * @var boolean 导出全部节点信息csv时是否携带cdb信息
+     */
+    public $ExportDb;
 
     /**
      * @var integer 页编号，默认值为0，表示第一页。
@@ -122,6 +129,7 @@ class DescribeClusterNodesRequest extends AbstractModel
 <li>recyle：表示获取回收站隔离中的节点信息，包括cdb信息。</li>
 <li>renew：表示获取所有待续费的节点信息，包括cdb信息，自动续费节点不会返回。</li>
 注意：现在只支持以上取值，输入其他值会导致错误。
+     * @param boolean $ExportDb 导出全部节点信息csv时是否携带cdb信息
      * @param integer $Offset 页编号，默认值为0，表示第一页。
      * @param integer $Limit 每页返回数量，默认值为100，最大值为100。
      * @param string $HardwareResourceType 资源类型:支持all/host/pod，默认为all
@@ -148,6 +156,10 @@ class DescribeClusterNodesRequest extends AbstractModel
 
         if (array_key_exists("NodeFlag",$param) and $param["NodeFlag"] !== null) {
             $this->NodeFlag = $param["NodeFlag"];
+        }
+
+        if (array_key_exists("ExportDb",$param) and $param["ExportDb"] !== null) {
+            $this->ExportDb = $param["ExportDb"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

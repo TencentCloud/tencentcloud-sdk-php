@@ -36,10 +36,14 @@ use TencentCloud\Common\AbstractModel;
 <ul>
 <li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
 </ul>
+注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。
+![image](https://qcloudimg.tencent-cloud.cn/raw/a54a76a58c454593d06d8e9883ecc9b3.png)
  * @method void setFormFields(array $FormFields) 设置电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
 <ul>
 <li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
 </ul>
+注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。
+![image](https://qcloudimg.tencent-cloud.cn/raw/a54a76a58c454593d06d8e9883ecc9b3.png)
  * @method boolean getNeedPreview() 获取是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
 <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
@@ -94,6 +98,8 @@ class CreateDocumentRequest extends AbstractModel
 <ul>
 <li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
 </ul>
+注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。
+![image](https://qcloudimg.tencent-cloud.cn/raw/a54a76a58c454593d06d8e9883ecc9b3.png)
      */
     public $FormFields;
 
@@ -136,6 +142,8 @@ class CreateDocumentRequest extends AbstractModel
 <ul>
 <li>支持自动签传递印章，可通过指定自动签控件id，指定印章id来完成</li>
 </ul>
+注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。
+![image](https://qcloudimg.tencent-cloud.cn/raw/a54a76a58c454593d06d8e9883ecc9b3.png)
      * @param boolean $NeedPreview 是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
 <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>

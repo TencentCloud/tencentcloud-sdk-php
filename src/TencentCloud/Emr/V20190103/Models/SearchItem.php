@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 搜索字段
  *
  * @method string getSearchType() 获取支持搜索的类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSearchType(string $SearchType) 设置支持搜索的类型
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSearchValue() 获取支持搜索的值
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSearchValue(string $SearchValue) 设置支持搜索的值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchItem extends AbstractModel
 {
     /**
      * @var string 支持搜索的类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SearchType;
 
     /**
      * @var string 支持搜索的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SearchValue;
 
     /**
      * @param string $SearchType 支持搜索的类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SearchValue 支持搜索的值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

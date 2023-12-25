@@ -71,8 +71,6 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
 <li> <b>SIGN_OPINION</b> : 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认；</li>
 <li> <b>SIGN_LEGAL_PERSON_SEAL</b> : 企业法定代表人控件。</li></ul>
 注：` 表单域的控件不能作为印章和签名控件`
- * @method integer getFileIndex() 获取<font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
- * @method void setFileIndex(integer $FileIndex) 设置<font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
  * @method float getComponentHeight() 获取**在绝对定位方式和关键字定位方式下**，指定控件的高度， 控件高度是指控件在PDF文件中的高度，单位为pt（点）。
 
  * @method void setComponentHeight(float $ComponentHeight) 设置**在绝对定位方式和关键字定位方式下**，指定控件的高度， 控件高度是指控件在PDF文件中的高度，单位为pt（点）。
@@ -95,6 +93,16 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
  * @method void setComponentPosX(float $ComponentPosX) 设置**在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
  * @method float getComponentPosY() 获取**在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
  * @method void setComponentPosY(float $ComponentPosY) 设置**在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+ * @method integer getFileIndex() 获取<font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+ * @method void setFileIndex(integer $FileIndex) 设置<font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+ * @method string getGenerateMode() 获取控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
+ * @method void setGenerateMode(string $GenerateMode) 设置控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
  * @method string getComponentId() 获取控件唯一ID。
 
 **在绝对定位方式方式下**，ComponentId为控件的ID，长度不能超过30，只能由中文、字母、数字和下划线组成，可以在后续的操作中使用该名称来引用控件。
@@ -255,18 +263,6 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
 <b>控件值约束说明</b>：
 <table> <thead> <tr> <th>特殊控件</th> <th>填写约束</th> </tr> </thead> <tbody> <tr> <td>企业全称控件</td> <td>企业名称中文字符中文括号</td> </tr> <tr> <td>统一社会信用代码控件</td> <td>企业注册的统一社会信用代码</td> </tr> <tr> <td>法人名称控件</td> <td>最大50个字符，2到25个汉字或者1到50个字母</td> </tr> <tr> <td>签署意见控件</td> <td>签署意见最大长度为50字符</td> </tr> <tr> <td>签署人手机号控件</td> <td>国内手机号 13,14,15,16,17,18,19号段长度11位</td> </tr> <tr> <td>签署人身份证控件</td> <td>合法的身份证号码检查</td> </tr> <tr> <td>控件名称</td> <td>控件名称最大长度为20字符，不支持表情</td> </tr> <tr> <td>单行文本控件</td> <td>只允许输入中文，英文，数字，中英文标点符号，不支持表情</td> </tr> <tr> <td>多行文本控件</td> <td>只允许输入中文，英文，数字，中英文标点符号，不支持表情</td> </tr> <tr> <td>勾选框控件</td> <td>选择填字符串true，不选填字符串false</td> </tr> <tr> <td>选择器控件</td> <td>同单行文本控件约束，填写选择值中的字符串</td> </tr> <tr> <td>数字控件</td> <td>请输入有效的数字(可带小数点)</td> </tr> <tr> <td>日期控件</td> <td>格式：yyyy年mm月dd日</td> </tr> <tr> <td>附件控件</td> <td>JPG或PNG图片，上传数量限制，1到6个，最大6个附件，填写上传的资源ID</td> </tr> <tr> <td>图片控件</td> <td>JPG或PNG图片，填写上传的图片资源ID</td> </tr> <tr> <td>邮箱控件</td> <td>有效的邮箱地址, w3c标准</td> </tr> <tr> <td>地址控件</td> <td>只允许输入中文，英文，数字，中英文标点符号，不支持表情</td> </tr> <tr> <td>省市区控件</td> <td>只允许输入中文，英文，数字，中英文标点符号，不支持表情</td> </tr> <tr> <td>性别控件</td> <td>选择值中的字符串</td> </tr> <tr> <td>学历控件</td> <td>选择值中的字符串</td> </tr> </tbody> </table>
 注：   `部分特殊控件需要在控制台配置模板形式创建`
- * @method string getGenerateMode() 获取控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
- * @method void setGenerateMode(string $GenerateMode) 设置控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
- * @method integer getComponentDateFontSize() 获取<font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
- * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置<font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
- * @method string getChannelComponentId() 获取<font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
- * @method void setChannelComponentId(string $ChannelComponentId) 设置<font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
  * @method float getOffsetX() 获取**如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,12 +275,6 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
  * @method void setOffsetY(float $OffsetY) 设置**如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getChannelComponentSource() 获取<font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul>
- * @method void setChannelComponentSource(integer $ChannelComponentSource) 设置<font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul>
  * @method string getKeywordOrder() 获取**如果控件是关键字定位方式**，指定关键字排序规则时，可以选择Positive或Reverse两种排序方式。
 <ul><li> <b>Positive</b> :表示正序，即根据关键字在PDF文件内的顺序进行排列</li>
 <li> <b>Reverse</b> :表示倒序，即根据关键字在PDF文件内的反序进行排列</li></ul>
@@ -333,6 +323,16 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getComponentDateFontSize() 获取<font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+ * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置<font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+ * @method string getChannelComponentId() 获取<font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+ * @method void setChannelComponentId(string $ChannelComponentId) 设置<font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+ * @method integer getChannelComponentSource() 获取<font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul>
+ * @method void setChannelComponentSource(integer $ChannelComponentSource) 设置<font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul>
  */
 class Component extends AbstractModel
 {
@@ -361,11 +361,6 @@ class Component extends AbstractModel
 注：` 表单域的控件不能作为印章和签名控件`
      */
     public $ComponentType;
-
-    /**
-     * @var integer <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
-     */
-    public $FileIndex;
 
     /**
      * @var float **在绝对定位方式和关键字定位方式下**，指定控件的高度， 控件高度是指控件在PDF文件中的高度，单位为pt（点）。
@@ -397,6 +392,19 @@ class Component extends AbstractModel
      * @var float **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
      */
     public $ComponentPosY;
+
+    /**
+     * @var integer <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+     */
+    public $FileIndex;
+
+    /**
+     * @var string 控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
+     */
+    public $GenerateMode;
 
     /**
      * @var string 控件唯一ID。
@@ -507,24 +515,6 @@ class Component extends AbstractModel
     public $ComponentValue;
 
     /**
-     * @var string 控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
-     */
-    public $GenerateMode;
-
-    /**
-     * @var integer <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
-     */
-    public $ComponentDateFontSize;
-
-    /**
-     * @var string <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
-     */
-    public $ChannelComponentId;
-
-    /**
      * @var float **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -537,13 +527,6 @@ class Component extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetY;
-
-    /**
-     * @var integer <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul>
-     */
-    public $ChannelComponentSource;
 
     /**
      * @var string **如果控件是关键字定位方式**，指定关键字排序规则时，可以选择Positive或Reverse两种排序方式。
@@ -594,6 +577,23 @@ class Component extends AbstractModel
     public $ForbidMoveAndDelete;
 
     /**
+     * @var integer <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+     */
+    public $ComponentDateFontSize;
+
+    /**
+     * @var string <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+     */
+    public $ChannelComponentId;
+
+    /**
+     * @var integer <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul>
+     */
+    public $ChannelComponentSource;
+
+    /**
      * @param string $ComponentType **如果是Component填写控件类型，则可选的字段为**：
 
 <ul><li> <b>TEXT</b> : 普通文本控件，输入文本字符串；</li>
@@ -616,7 +616,6 @@ class Component extends AbstractModel
 <li> <b>SIGN_OPINION</b> : 签署意见控件，用户需要根据配置的签署意见内容，完成对意见内容的确认；</li>
 <li> <b>SIGN_LEGAL_PERSON_SEAL</b> : 企业法定代表人控件。</li></ul>
 注：` 表单域的控件不能作为印章和签名控件`
-     * @param integer $FileIndex <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
      * @param float $ComponentHeight **在绝对定位方式和关键字定位方式下**，指定控件的高度， 控件高度是指控件在PDF文件中的高度，单位为pt（点）。
 
      * @param float $ComponentWidth **在绝对定位方式和关键字定位方式下**，指定控件宽度，控件宽度是指控件在PDF文件中的宽度，单位为pt（点）。
@@ -628,6 +627,11 @@ class Component extends AbstractModel
 2.  <font color="red">页面编号不能超过PDF文件的页码总数</font>。如果指定的页码超过了PDF文件的页码总数，在填写和签署时会出现错误，导致无法正常进行操作。
      * @param float $ComponentPosX **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
      * @param float $ComponentPosY **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+     * @param integer $FileIndex <font color="red">【暂未使用】</font>控件所属文件的序号（取值为：0-N）。 目前单文件的情况下，值一直为0
+     * @param string $GenerateMode 控件生成的方式：
+<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
+<li> <b>FIELD</b> : 表单域</li>
+<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
      * @param string $ComponentId 控件唯一ID。
 
 **在绝对定位方式方式下**，ComponentId为控件的ID，长度不能超过30，只能由中文、字母、数字和下划线组成，可以在后续的操作中使用该名称来引用控件。
@@ -708,21 +712,12 @@ class Component extends AbstractModel
 <b>控件值约束说明</b>：
 <table> <thead> <tr> <th>特殊控件</th> <th>填写约束</th> </tr> </thead> <tbody> <tr> <td>企业全称控件</td> <td>企业名称中文字符中文括号</td> </tr> <tr> <td>统一社会信用代码控件</td> <td>企业注册的统一社会信用代码</td> </tr> <tr> <td>法人名称控件</td> <td>最大50个字符，2到25个汉字或者1到50个字母</td> </tr> <tr> <td>签署意见控件</td> <td>签署意见最大长度为50字符</td> </tr> <tr> <td>签署人手机号控件</td> <td>国内手机号 13,14,15,16,17,18,19号段长度11位</td> </tr> <tr> <td>签署人身份证控件</td> <td>合法的身份证号码检查</td> </tr> <tr> <td>控件名称</td> <td>控件名称最大长度为20字符，不支持表情</td> </tr> <tr> <td>单行文本控件</td> <td>只允许输入中文，英文，数字，中英文标点符号，不支持表情</td> </tr> <tr> <td>多行文本控件</td> <td>只允许输入中文，英文，数字，中英文标点符号，不支持表情</td> </tr> <tr> <td>勾选框控件</td> <td>选择填字符串true，不选填字符串false</td> </tr> <tr> <td>选择器控件</td> <td>同单行文本控件约束，填写选择值中的字符串</td> </tr> <tr> <td>数字控件</td> <td>请输入有效的数字(可带小数点)</td> </tr> <tr> <td>日期控件</td> <td>格式：yyyy年mm月dd日</td> </tr> <tr> <td>附件控件</td> <td>JPG或PNG图片，上传数量限制，1到6个，最大6个附件，填写上传的资源ID</td> </tr> <tr> <td>图片控件</td> <td>JPG或PNG图片，填写上传的图片资源ID</td> </tr> <tr> <td>邮箱控件</td> <td>有效的邮箱地址, w3c标准</td> </tr> <tr> <td>地址控件</td> <td>只允许输入中文，英文，数字，中英文标点符号，不支持表情</td> </tr> <tr> <td>省市区控件</td> <td>只允许输入中文，英文，数字，中英文标点符号，不支持表情</td> </tr> <tr> <td>性别控件</td> <td>选择值中的字符串</td> </tr> <tr> <td>学历控件</td> <td>选择值中的字符串</td> </tr> </tbody> </table>
 注：   `部分特殊控件需要在控制台配置模板形式创建`
-     * @param string $GenerateMode 控件生成的方式：
-<ul><li> <b>NORMAL</b> : 绝对定位控件</li>
-<li> <b>FIELD</b> : 表单域</li>
-<li> <b>KEYWORD</b> : 关键字（设置关键字时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找）</li></ul>
-     * @param integer $ComponentDateFontSize <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
-     * @param string $ChannelComponentId <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
      * @param float $OffsetX **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行横坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏左或偏右，可以通过调整横坐标方向的参数来使控件位置更加准确。
 注意： `向左调整设置为负数， 向右调整设置成正数`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OffsetY **如果控件是关键字定位方式**，可以对关键字定位出来的区域进行纵坐标方向的调整，单位为pt（点）。例如，如果关键字定位出来的区域偏上或偏下，可以通过调整纵坐标方向的参数来使控件位置更加准确。
 注意： `向上调整设置为负数， 向下调整设置成正数`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ChannelComponentSource <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
-<ul><li> <b>0</b> :平台指定；</li>
-<li> <b>1</b> :用户自定义</li></ul>
      * @param string $KeywordOrder **如果控件是关键字定位方式**，指定关键字排序规则时，可以选择Positive或Reverse两种排序方式。
 <ul><li> <b>Positive</b> :表示正序，即根据关键字在PDF文件内的顺序进行排列</li>
 <li> <b>Reverse</b> :表示倒序，即根据关键字在PDF文件内的反序进行排列</li></ul>
@@ -747,6 +742,11 @@ class Component extends AbstractModel
 <ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
 <li> <b>true</b> : 可以移动和删除控件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ComponentDateFontSize <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
+     * @param string $ChannelComponentId <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
+     * @param integer $ChannelComponentSource <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。
+<ul><li> <b>0</b> :平台指定；</li>
+<li> <b>1</b> :用户自定义</li></ul>
      */
     function __construct()
     {
@@ -763,10 +763,6 @@ class Component extends AbstractModel
         }
         if (array_key_exists("ComponentType",$param) and $param["ComponentType"] !== null) {
             $this->ComponentType = $param["ComponentType"];
-        }
-
-        if (array_key_exists("FileIndex",$param) and $param["FileIndex"] !== null) {
-            $this->FileIndex = $param["FileIndex"];
         }
 
         if (array_key_exists("ComponentHeight",$param) and $param["ComponentHeight"] !== null) {
@@ -787,6 +783,14 @@ class Component extends AbstractModel
 
         if (array_key_exists("ComponentPosY",$param) and $param["ComponentPosY"] !== null) {
             $this->ComponentPosY = $param["ComponentPosY"];
+        }
+
+        if (array_key_exists("FileIndex",$param) and $param["FileIndex"] !== null) {
+            $this->FileIndex = $param["FileIndex"];
+        }
+
+        if (array_key_exists("GenerateMode",$param) and $param["GenerateMode"] !== null) {
+            $this->GenerateMode = $param["GenerateMode"];
         }
 
         if (array_key_exists("ComponentId",$param) and $param["ComponentId"] !== null) {
@@ -817,28 +821,12 @@ class Component extends AbstractModel
             $this->ComponentValue = $param["ComponentValue"];
         }
 
-        if (array_key_exists("GenerateMode",$param) and $param["GenerateMode"] !== null) {
-            $this->GenerateMode = $param["GenerateMode"];
-        }
-
-        if (array_key_exists("ComponentDateFontSize",$param) and $param["ComponentDateFontSize"] !== null) {
-            $this->ComponentDateFontSize = $param["ComponentDateFontSize"];
-        }
-
-        if (array_key_exists("ChannelComponentId",$param) and $param["ChannelComponentId"] !== null) {
-            $this->ChannelComponentId = $param["ChannelComponentId"];
-        }
-
         if (array_key_exists("OffsetX",$param) and $param["OffsetX"] !== null) {
             $this->OffsetX = $param["OffsetX"];
         }
 
         if (array_key_exists("OffsetY",$param) and $param["OffsetY"] !== null) {
             $this->OffsetY = $param["OffsetY"];
-        }
-
-        if (array_key_exists("ChannelComponentSource",$param) and $param["ChannelComponentSource"] !== null) {
-            $this->ChannelComponentSource = $param["ChannelComponentSource"];
         }
 
         if (array_key_exists("KeywordOrder",$param) and $param["KeywordOrder"] !== null) {
@@ -863,6 +851,18 @@ class Component extends AbstractModel
 
         if (array_key_exists("ForbidMoveAndDelete",$param) and $param["ForbidMoveAndDelete"] !== null) {
             $this->ForbidMoveAndDelete = $param["ForbidMoveAndDelete"];
+        }
+
+        if (array_key_exists("ComponentDateFontSize",$param) and $param["ComponentDateFontSize"] !== null) {
+            $this->ComponentDateFontSize = $param["ComponentDateFontSize"];
+        }
+
+        if (array_key_exists("ChannelComponentId",$param) and $param["ChannelComponentId"] !== null) {
+            $this->ChannelComponentId = $param["ChannelComponentId"];
+        }
+
+        if (array_key_exists("ChannelComponentSource",$param) and $param["ChannelComponentSource"] !== null) {
+            $this->ChannelComponentSource = $param["ChannelComponentSource"];
         }
     }
 }

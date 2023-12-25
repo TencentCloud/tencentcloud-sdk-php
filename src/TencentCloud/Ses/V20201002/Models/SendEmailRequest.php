@@ -20,12 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail请求参数结构体
  *
- * @method string getFromEmailAddress() 获取发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
- * @method void setFromEmailAddress(string $FromEmailAddress) 设置发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
+ * @method string getFromEmailAddress() 获取发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
+ * @method void setFromEmailAddress(string $FromEmailAddress) 设置发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
  * @method array getDestination() 获取收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
  * @method void setDestination(array $Destination) 设置收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
  * @method string getSubject() 获取邮件主题
@@ -54,9 +52,8 @@ use TencentCloud\Common\AbstractModel;
 class SendEmailRequest extends AbstractModel
 {
     /**
-     * @var string 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
+     * @var string 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
      */
     public $FromEmailAddress;
 
@@ -113,9 +110,8 @@ class SendEmailRequest extends AbstractModel
     public $TriggerType;
 
     /**
-     * @param string $FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）： 
-别名 <邮箱地址>，例如：QCLOUDTEAM <noreply@mail.qcloud.com>
+     * @param string $FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
      * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      * @param string $Subject 邮件主题
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。

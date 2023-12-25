@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompensateCount(integer $CompensateCount) 设置补偿次数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetryCount() 获取重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryCount(integer $RetryCount) 设置重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRetryInfo() 获取重试信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryInfo(string $RetryInfo) 设置重试信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScaleRecord extends AbstractModel
 {
@@ -107,6 +115,18 @@ class AutoScaleRecord extends AbstractModel
     public $CompensateCount;
 
     /**
+     * @var integer 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryCount;
+
+    /**
+     * @var string 重试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryInfo;
+
+    /**
      * @param string $StrategyName 扩缩容规则名。
      * @param string $ScaleAction "SCALE_OUT"和"SCALE_IN"，分别表示扩容和缩容。
      * @param string $ActionStatus 取值为"SUCCESS","FAILED","PART_SUCCESS","IN_PROCESS"，分别表示成功、失败、部分成功和流程中。
@@ -119,6 +139,10 @@ class AutoScaleRecord extends AbstractModel
      * @param integer $CompensateFlag 补偿扩容，0表示不开启，1表示开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CompensateCount 补偿次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetryCount 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RetryInfo 重试信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +200,14 @@ class AutoScaleRecord extends AbstractModel
 
         if (array_key_exists("CompensateCount",$param) and $param["CompensateCount"] !== null) {
             $this->CompensateCount = $param["CompensateCount"];
+        }
+
+        if (array_key_exists("RetryCount",$param) and $param["RetryCount"] !== null) {
+            $this->RetryCount = $param["RetryCount"];
+        }
+
+        if (array_key_exists("RetryInfo",$param) and $param["RetryInfo"] !== null) {
+            $this->RetryInfo = $param["RetryInfo"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArgs(array $Args) 设置执行脚本参数，参数格式请遵循标准Shell规范
  * @method string getCosFileName() 获取脚本文件名
  * @method void setCosFileName(string $CosFileName) 设置脚本文件名
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
  */
 class ScriptBootstrapActionConfig extends AbstractModel
 {
@@ -61,6 +63,11 @@ class ScriptBootstrapActionConfig extends AbstractModel
     public $CosFileName;
 
     /**
+     * @var string 备注
+     */
+    public $Remark;
+
+    /**
      * @param string $CosFileURI 脚本的cos地址，参照格式：https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh查询cos存储桶列表：[存储桶列表](https://console.cloud.tencent.com/cos/bucket)
      * @param string $ExecutionMoment 引导脚步执行时机范围
 <li>resourceAfter：节点初始化后</li>
@@ -68,6 +75,7 @@ class ScriptBootstrapActionConfig extends AbstractModel
 <li>clusterBefore：集群启动前</li>
      * @param array $Args 执行脚本参数，参数格式请遵循标准Shell规范
      * @param string $CosFileName 脚本文件名
+     * @param string $Remark 备注
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ScriptBootstrapActionConfig extends AbstractModel
 
         if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
             $this->CosFileName = $param["CosFileName"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

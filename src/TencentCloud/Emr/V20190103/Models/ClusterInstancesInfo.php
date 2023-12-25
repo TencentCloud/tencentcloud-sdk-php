@@ -242,6 +242,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCvmReplace(boolean $IsCvmReplace) 设置是否开通异常节点自动补偿
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterTitle() 获取标题
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterTitle(string $ClusterTitle) 设置标题
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method EmrProductConfigDetail getConfigDetail() 获取集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigDetail(EmrProductConfigDetail $ConfigDetail) 设置集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -260,6 +268,7 @@ class ClusterInstancesInfo extends AbstractModel
     /**
      * @var string 标题
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Ftitle;
 
@@ -359,6 +368,7 @@ class ClusterInstancesInfo extends AbstractModel
     /**
      * @var EmrProductConfigOutter 集群产品配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Config;
 
@@ -525,6 +535,18 @@ class ClusterInstancesInfo extends AbstractModel
     public $IsCvmReplace;
 
     /**
+     * @var string 标题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterTitle;
+
+    /**
+     * @var EmrProductConfigDetail 集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigDetail;
+
+    /**
      * @param integer $Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
@@ -635,6 +657,10 @@ class ClusterInstancesInfo extends AbstractModel
      * @param boolean $IsMultiZoneCluster 是否是跨AZ集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsCvmReplace 是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterTitle 标题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmrProductConfigDetail $ConfigDetail 集群产品配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -832,6 +858,15 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("IsCvmReplace",$param) and $param["IsCvmReplace"] !== null) {
             $this->IsCvmReplace = $param["IsCvmReplace"];
+        }
+
+        if (array_key_exists("ClusterTitle",$param) and $param["ClusterTitle"] !== null) {
+            $this->ClusterTitle = $param["ClusterTitle"];
+        }
+
+        if (array_key_exists("ConfigDetail",$param) and $param["ConfigDetail"] !== null) {
+            $this->ConfigDetail = new EmrProductConfigDetail();
+            $this->ConfigDetail->deserialize($param["ConfigDetail"]);
         }
     }
 }

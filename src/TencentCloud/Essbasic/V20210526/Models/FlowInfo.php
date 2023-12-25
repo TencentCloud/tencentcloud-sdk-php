@@ -38,8 +38,14 @@ use TencentCloud\Common\AbstractModel;
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
  * @method array getFlowApprovers() 获取多个签署人信息，最大支持50个签署方
  * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息，最大支持50个签署方
- * @method array getFormFields() 获取表单K-V对列表
- * @method void setFormFields(array $FormFields) 设置表单K-V对列表
+ * @method array getFormFields() 获取发起方角色的填写控件的填充内容。
+
+注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。(<font color="red">白名单功能需要联系对接经理开通，否则模板编辑时无法将填写控件分配给发起方</font>)。
+![image](https://qcloudimg.tencent-cloud.cn/raw/b1d3978140ee2b44e2c9fdc96e467a5d.png)
+ * @method void setFormFields(array $FormFields) 设置发起方角色的填写控件的填充内容。
+
+注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。(<font color="red">白名单功能需要联系对接经理开通，否则模板编辑时无法将填写控件分配给发起方</font>)。
+![image](https://qcloudimg.tencent-cloud.cn/raw/b1d3978140ee2b44e2c9fdc96e467a5d.png)
  * @method string getCallbackUrl() 获取合同状态变动结的通知回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性，最大长度1000个字符。
 
 腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
@@ -145,7 +151,10 @@ class FlowInfo extends AbstractModel
     public $FlowApprovers;
 
     /**
-     * @var array 表单K-V对列表
+     * @var array 发起方角色的填写控件的填充内容。
+
+注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。(<font color="red">白名单功能需要联系对接经理开通，否则模板编辑时无法将填写控件分配给发起方</font>)。
+![image](https://qcloudimg.tencent-cloud.cn/raw/b1d3978140ee2b44e2c9fdc96e467a5d.png)
      */
     public $FormFields;
 
@@ -233,7 +242,10 @@ class FlowInfo extends AbstractModel
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
      * @param array $FlowApprovers 多个签署人信息，最大支持50个签署方
-     * @param array $FormFields 表单K-V对列表
+     * @param array $FormFields 发起方角色的填写控件的填充内容。
+
+注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。(<font color="red">白名单功能需要联系对接经理开通，否则模板编辑时无法将填写控件分配给发起方</font>)。
+![image](https://qcloudimg.tencent-cloud.cn/raw/b1d3978140ee2b44e2c9fdc96e467a5d.png)
      * @param string $CallbackUrl 合同状态变动结的通知回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性，最大长度1000个字符。
 
 腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。

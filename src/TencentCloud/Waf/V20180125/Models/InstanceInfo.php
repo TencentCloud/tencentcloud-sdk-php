@@ -148,6 +148,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniMaxQPS(integer $MiniMaxQPS) 设置小程序qps峰值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastQpsExceedTime() 获取最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastQpsExceedTime(string $LastQpsExceedTime) 设置最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -364,6 +368,12 @@ class InstanceInfo extends AbstractModel
     public $MiniMaxQPS;
 
     /**
+     * @var string 最近一次超量时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastQpsExceedTime;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -427,6 +437,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $MiniQpsStandard 小程序qps规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MiniMaxQPS 小程序qps峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastQpsExceedTime 最近一次超量时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -597,6 +609,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("MiniMaxQPS",$param) and $param["MiniMaxQPS"] !== null) {
             $this->MiniMaxQPS = $param["MiniMaxQPS"];
+        }
+
+        if (array_key_exists("LastQpsExceedTime",$param) and $param["LastQpsExceedTime"] !== null) {
+            $this->LastQpsExceedTime = $param["LastQpsExceedTime"];
         }
     }
 }

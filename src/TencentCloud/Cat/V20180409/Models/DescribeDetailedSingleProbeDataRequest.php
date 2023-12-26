@@ -44,8 +44,8 @@ AnalyzeTaskType_MediaStream：音视频体验
 也可填写SelectedFields 中的选中字段
  * @method boolean getAscending() 获取true表示升序
  * @method void setAscending(boolean $Ascending) 设置true表示升序
- * @method array getSelectedFields() 获取选中字段
- * @method void setSelectedFields(array $SelectedFields) 设置选中字段
+ * @method array getSelectedFields() 获取选中字段，如ProbeTime、TransferTime、TransferSize等。
+ * @method void setSelectedFields(array $SelectedFields) 设置选中字段，如ProbeTime、TransferTime、TransferSize等。
  * @method integer getOffset() 获取起始取数位置
  * @method void setOffset(integer $Offset) 设置起始取数位置
  * @method integer getLimit() 获取取数数量
@@ -102,6 +102,8 @@ AnalyzeTaskType_MediaStream：音视频体验
 多伦多
  * @method string getScrollID() 获取es scroll查询id
  * @method void setScrollID(string $ScrollID) 设置es scroll查询id
+ * @method string getQueryFlag() 获取详情数据下载
+ * @method void setQueryFlag(string $QueryFlag) 设置详情数据下载
  */
 class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 {
@@ -138,7 +140,7 @@ AnalyzeTaskType_MediaStream：音视频体验
     public $Ascending;
 
     /**
-     * @var array 选中字段
+     * @var array 选中字段，如ProbeTime、TransferTime、TransferSize等。
      */
     public $SelectedFields;
 
@@ -203,6 +205,11 @@ AnalyzeTaskType_MediaStream：音视频体验
     public $ScrollID;
 
     /**
+     * @var string 详情数据下载
+     */
+    public $QueryFlag;
+
+    /**
      * @param integer $BeginTime 开始时间戳（毫秒级）
      * @param integer $EndTime 结束时间戳（毫秒级）
      * @param string $TaskType 任务类型
@@ -215,7 +222,7 @@ AnalyzeTaskType_MediaStream：音视频体验
 可以填写 ProbeTime 拨测时间排序
 也可填写SelectedFields 中的选中字段
      * @param boolean $Ascending true表示升序
-     * @param array $SelectedFields 选中字段
+     * @param array $SelectedFields 选中字段，如ProbeTime、TransferTime、TransferSize等。
      * @param integer $Offset 起始取数位置
      * @param integer $Limit 取数数量
      * @param array $TaskID 任务ID
@@ -244,6 +251,7 @@ AnalyzeTaskType_MediaStream：音视频体验
 首尔
 多伦多
      * @param string $ScrollID es scroll查询id
+     * @param string $QueryFlag 详情数据下载
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ AnalyzeTaskType_MediaStream：音视频体验
 
         if (array_key_exists("ScrollID",$param) and $param["ScrollID"] !== null) {
             $this->ScrollID = $param["ScrollID"];
+        }
+
+        if (array_key_exists("QueryFlag",$param) and $param["QueryFlag"] !== null) {
+            $this->QueryFlag = $param["QueryFlag"];
         }
     }
 }

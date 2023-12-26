@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置模板描述信息
  * @method array getComponents() 获取模板的填充控件列表
  * @method void setComponents(array $Components) 设置模板的填充控件列表
- * @method array getRecipients() 获取模板中的签署参与方列表
- * @method void setRecipients(array $Recipients) 设置模板中的签署参与方列表
- * @method array getSignComponents() 获取模板中的签署控件列表
- * @method void setSignComponents(array $SignComponents) 设置模板中的签署控件列表
+ * @method array getRecipients() 获取此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+ * @method void setRecipients(array $Recipients) 设置此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+ * @method array getSignComponents() 获取此模版中的签署控件列表
+ * @method void setSignComponents(array $SignComponents) 设置此模版中的签署控件列表
  * @method integer getTemplateType() 获取模板类型：1-静默签；3-普通模板
  * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；3-普通模板
  * @method boolean getIsPromoter() 获取是否是发起人 ,已弃用
@@ -50,11 +50,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳，格式为Unix标准时间戳（秒）
  * @method string getPreviewUrl() 获取模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPdfUrl() 获取第三方应用集成-模板PDF文件链接，有效期5分钟。
 请求参数WithPdfUrl=true时返回
@@ -76,19 +74,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelAutoSave(integer $ChannelAutoSave) 设置0-需要子客企业手动领取平台企业的模板(默认); 
 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateVersion() 获取模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+ * @method string getTemplateVersion() 获取模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+ * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAvailable() 获取模板可用状态：
-1启用（默认）
-2停用
+ * @method integer getAvailable() 获取模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAvailable(integer $Available) 设置模板可用状态：
-1启用（默认）
-2停用
+ * @method void setAvailable(integer $Available) 设置模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
@@ -114,12 +114,12 @@ class TemplateInfo extends AbstractModel
     public $Components;
 
     /**
-     * @var array 模板中的签署参与方列表
+     * @var array 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
      */
     public $Recipients;
 
     /**
-     * @var array 模板中的签署控件列表
+     * @var array 此模版中的签署控件列表
      */
     public $SignComponents;
 
@@ -147,7 +147,6 @@ class TemplateInfo extends AbstractModel
     /**
      * @var string 模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
@@ -179,16 +178,17 @@ class TemplateInfo extends AbstractModel
     public $ChannelAutoSave;
 
     /**
-     * @var string 模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+     * @var string 模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateVersion;
 
     /**
-     * @var integer 模板可用状态：
-1启用（默认）
-2停用
+     * @var integer 模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Available;
@@ -198,15 +198,14 @@ class TemplateInfo extends AbstractModel
      * @param string $TemplateName 模板名
      * @param string $Description 模板描述信息
      * @param array $Components 模板的填充控件列表
-     * @param array $Recipients 模板中的签署参与方列表
-     * @param array $SignComponents 模板中的签署控件列表
+     * @param array $Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+     * @param array $SignComponents 此模版中的签署控件列表
      * @param integer $TemplateType 模板类型：1-静默签；3-普通模板
      * @param boolean $IsPromoter 是否是发起人 ,已弃用
      * @param string $Creator 模板的创建者信息，电子签系统用户ID
      * @param integer $CreatedOn 模板创建的时间戳，格式为Unix标准时间戳（秒）
      * @param string $PreviewUrl 模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-（此功能开放需要联系客户经理）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PdfUrl 第三方应用集成-模板PDF文件链接，有效期5分钟。
 请求参数WithPdfUrl=true时返回
@@ -218,12 +217,13 @@ class TemplateInfo extends AbstractModel
      * @param integer $ChannelAutoSave 0-需要子客企业手动领取平台企业的模板(默认); 
 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateVersion 模板版本，全数字字符。
-默认为空，初始版本为yyyyMMdd001。
+     * @param string $TemplateVersion 模板版本，由全数字字符组成。
+默认为空，模板版本号由日期和序号组成，初始版本为yyyyMMdd001，yyyyMMdd002表示第二个版本，以此类推。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Available 模板可用状态：
-1启用（默认）
-2停用
+     * @param integer $Available 模板可用状态的取值通常为以下两种：
+
+<ul><li>1：启用（默认），表示模板处于启用状态，可以被用户正常使用。</li>
+<li>2：停用，表示模板处于停用状态，禁止用户使用该模板。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

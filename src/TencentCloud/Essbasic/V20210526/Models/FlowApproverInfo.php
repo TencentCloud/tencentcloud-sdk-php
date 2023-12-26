@@ -128,9 +128,15 @@ RecipientId参数获取：
  * @method string getOpenId() 获取第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
  * @method void setOpenId(string $OpenId) 设置第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
  * @method string getOrganizationOpenId() 获取同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符
  * @method string getApproverType() 获取在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
@@ -328,6 +334,9 @@ class FlowApproverInfo extends AbstractModel
      * @var string 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
      */
     public $OpenId;
 
@@ -503,6 +512,9 @@ class FlowApproverInfo extends AbstractModel
      * @param string $OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成
 
 当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
      * @param string $OrganizationOpenId 同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符
      * @param string $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 <ul><li> **PERSON** :个人/自然人</li>

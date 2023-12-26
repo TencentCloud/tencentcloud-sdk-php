@@ -28,6 +28,7 @@ use TencentCloud\Yinsuda\V20220527\Models as Models;
  * @method Models\CreateKTVRobotResponse CreateKTVRobot(Models\CreateKTVRobotRequest $req) 创建机器人，支持进入 RTC 房间，播放曲库歌曲。
  * @method Models\DescribeKTVMatchMusicsResponse DescribeKTVMatchMusics(Models\DescribeKTVMatchMusicsRequest $req) 根据输入的规则匹配曲库中的歌曲。
  * @method Models\DescribeKTVMusicAccompanySegmentUrlResponse DescribeKTVMusicAccompanySegmentUrl(Models\DescribeKTVMusicAccompanySegmentUrlRequest $req) 获取歌曲伴奏片段链接，可用于抢唱
+ * @method Models\DescribeKTVMusicAccompanySegmentUrlVipResponse DescribeKTVMusicAccompanySegmentUrlVip(Models\DescribeKTVMusicAccompanySegmentUrlVipRequest $req) 获取歌曲伴奏高潮的开始、结束时间，可用于抢唱
  * @method Models\DescribeKTVMusicsByTagResponse DescribeKTVMusicsByTag(Models\DescribeKTVMusicsByTagRequest $req) 通过标签过滤歌曲列表。
  * @method Models\DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(Models\DescribeKTVPlaylistDetailRequest $req) 根据歌单 Id 获取歌单详情。
  * @method Models\DescribeKTVPlaylistsResponse DescribeKTVPlaylists(Models\DescribeKTVPlaylistsRequest $req) 获取歌单列表。
@@ -36,8 +37,10 @@ use TencentCloud\Yinsuda\V20220527\Models as Models;
  * @method Models\DescribeKTVTagsResponse DescribeKTVTags(Models\DescribeKTVTagsRequest $req) 获取标签分组及分组下的标签列表信息。
  * @method Models\DescribeLiveVipTradeInfosResponse DescribeLiveVipTradeInfos(Models\DescribeLiveVipTradeInfosRequest $req) 批量获取直播会员充值流水详细信息，包括：流水号，订单状态，下订单时间等
  * @method Models\DescribeUserInfoResponse DescribeUserInfo(Models\DescribeUserInfoRequest $req) 获取用户信息，包括是否为直播会员，及直播会员信息等
+ * @method Models\DescribeVipUserInfoResponse DescribeVipUserInfo(Models\DescribeVipUserInfoRequest $req) 获取会员信息：获取用户是否开通会员
  * @method Models\DestroyKTVRobotResponse DestroyKTVRobot(Models\DestroyKTVRobotRequest $req) 销毁机器人，机器人退出 RTC 房间。
  * @method Models\RechargeLiveVipResponse RechargeLiveVip(Models\RechargeLiveVipRequest $req) 充值直播会员，使该用户可以在直播场景使用
+ * @method Models\RechargeVipResponse RechargeVip(Models\RechargeVipRequest $req) 充值会员
  * @method Models\SearchKTVMusicsResponse SearchKTVMusics(Models\SearchKTVMusicsRequest $req) 根据关键词搜索歌曲，返回相关歌曲列表。
  * @method Models\SyncKTVRobotCommandResponse SyncKTVRobotCommand(Models\SyncKTVRobotCommandRequest $req) 下发操作机器人指令，支持播放、暂停、恢复、歌单设置等操作指令，实现对机器人行为的控制。
  */

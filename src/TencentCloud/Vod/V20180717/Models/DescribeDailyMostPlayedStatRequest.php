@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
 默认值为Traffic。
- * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  */
 class DescribeDailyMostPlayedStatRequest extends AbstractModel
 {
@@ -56,7 +56,7 @@ class DescribeDailyMostPlayedStatRequest extends AbstractModel
     public $Metric;
 
     /**
-     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     public $SubAppId;
 
@@ -67,7 +67,7 @@ class DescribeDailyMostPlayedStatRequest extends AbstractModel
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
 默认值为Traffic。
-     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     function __construct()
     {

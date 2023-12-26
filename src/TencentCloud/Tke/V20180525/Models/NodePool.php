@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置Labels 标签
  * @method array getTaints() 获取Taints 污点标记
  * @method void setTaints(array $Taints) 设置Taints 污点标记
+ * @method array getAnnotations() 获取节点 Annotation 列表
+ * @method void setAnnotations(array $Annotations) 设置节点 Annotation 列表
  * @method NodeCountSummary getNodeCountSummary() 获取NodeCountSummary 节点列表
  * @method void setNodeCountSummary(NodeCountSummary $NodeCountSummary) 设置NodeCountSummary 节点列表
  * @method string getAutoscalingGroupStatus() 获取状态信息
@@ -148,6 +150,11 @@ class NodePool extends AbstractModel
      * @var array Taints 污点标记
      */
     public $Taints;
+
+    /**
+     * @var array 节点 Annotation 列表
+     */
+    public $Annotations;
 
     /**
      * @var NodeCountSummary NodeCountSummary 节点列表
@@ -265,6 +272,7 @@ class NodePool extends AbstractModel
      * @param string $AutoscalingGroupId AutoscalingGroupId 分组id
      * @param array $Labels Labels 标签
      * @param array $Taints Taints 污点标记
+     * @param array $Annotations 节点 Annotation 列表
      * @param NodeCountSummary $NodeCountSummary NodeCountSummary 节点列表
      * @param string $AutoscalingGroupStatus 状态信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -353,6 +361,15 @@ class NodePool extends AbstractModel
                 $obj = new Taint();
                 $obj->deserialize($value);
                 array_push($this->Taints, $obj);
+            }
+        }
+
+        if (array_key_exists("Annotations",$param) and $param["Annotations"] !== null) {
+            $this->Annotations = [];
+            foreach ($param["Annotations"] as $key => $value){
+                $obj = new AnnotationValue();
+                $obj->deserialize($value);
+                array_push($this->Annotations, $obj);
             }
         }
 

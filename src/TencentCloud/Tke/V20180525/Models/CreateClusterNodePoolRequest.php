@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupPara(string $AutoScalingGroupPara) 设置AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
  * @method string getLaunchConfigurePara() 获取LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
  * @method void setLaunchConfigurePara(string $LaunchConfigurePara) 设置LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取InstanceAdvancedSettings 示例参数
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置InstanceAdvancedSettings 示例参数
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取InstanceAdvancedSettings
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置InstanceAdvancedSettings
  * @method boolean getEnableAutoscale() 获取是否启用自动伸缩
  * @method void setEnableAutoscale(boolean $EnableAutoscale) 设置是否启用自动伸缩
  * @method string getName() 获取节点池名称
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置Labels标签
  * @method array getTaints() 获取Taints互斥
  * @method void setTaints(array $Taints) 设置Taints互斥
+ * @method array getAnnotations() 获取节点Annotation 列表
+ * @method void setAnnotations(array $Annotations) 设置节点Annotation 列表
  * @method string getContainerRuntime() 获取节点池纬度运行时类型及版本
  * @method void setContainerRuntime(string $ContainerRuntime) 设置节点池纬度运行时类型及版本
  * @method string getRuntimeVersion() 获取运行时版本
@@ -67,7 +69,7 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $LaunchConfigurePara;
 
     /**
-     * @var InstanceAdvancedSettings InstanceAdvancedSettings 示例参数
+     * @var InstanceAdvancedSettings InstanceAdvancedSettings
      */
     public $InstanceAdvancedSettings;
 
@@ -90,6 +92,11 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @var array Taints互斥
      */
     public $Taints;
+
+    /**
+     * @var array 节点Annotation 列表
+     */
+    public $Annotations;
 
     /**
      * @var string 节点池纬度运行时类型及版本
@@ -125,11 +132,12 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param string $ClusterId cluster id
      * @param string $AutoScalingGroupPara AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
      * @param string $LaunchConfigurePara LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings InstanceAdvancedSettings 示例参数
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings InstanceAdvancedSettings
      * @param boolean $EnableAutoscale 是否启用自动伸缩
      * @param string $Name 节点池名称
      * @param array $Labels Labels标签
      * @param array $Taints Taints互斥
+     * @param array $Annotations 节点Annotation 列表
      * @param string $ContainerRuntime 节点池纬度运行时类型及版本
      * @param string $RuntimeVersion 运行时版本
      * @param string $NodePoolOs 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
@@ -190,6 +198,15 @@ class CreateClusterNodePoolRequest extends AbstractModel
                 $obj = new Taint();
                 $obj->deserialize($value);
                 array_push($this->Taints, $obj);
+            }
+        }
+
+        if (array_key_exists("Annotations",$param) and $param["Annotations"] !== null) {
+            $this->Annotations = [];
+            foreach ($param["Annotations"] as $key => $value){
+                $obj = new AnnotationValue();
+                $obj->deserialize($value);
+                array_push($this->Annotations, $obj);
             }
         }
 

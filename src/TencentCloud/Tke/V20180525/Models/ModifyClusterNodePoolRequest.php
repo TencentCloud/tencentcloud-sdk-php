@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置标签
  * @method array getTaints() 获取污点
  * @method void setTaints(array $Taints) 设置污点
+ * @method array getAnnotations() 获取节点 Annotation 列表
+ * @method void setAnnotations(array $Annotations) 设置节点 Annotation 列表
  * @method boolean getEnableAutoscale() 获取是否开启伸缩
  * @method void setEnableAutoscale(boolean $EnableAutoscale) 设置是否开启伸缩
  * @method string getOsName() 获取操作系统名称
@@ -95,6 +97,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @var array 污点
      */
     public $Taints;
+
+    /**
+     * @var array 节点 Annotation 列表
+     */
+    public $Annotations;
 
     /**
      * @var boolean 是否开启伸缩
@@ -164,6 +171,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param integer $MinNodesNum 最小节点数
      * @param array $Labels 标签
      * @param array $Taints 污点
+     * @param array $Annotations 节点 Annotation 列表
      * @param boolean $EnableAutoscale 是否开启伸缩
      * @param string $OsName 操作系统名称
      * @param string $OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
@@ -225,6 +233,15 @@ class ModifyClusterNodePoolRequest extends AbstractModel
                 $obj = new Taint();
                 $obj->deserialize($value);
                 array_push($this->Taints, $obj);
+            }
+        }
+
+        if (array_key_exists("Annotations",$param) and $param["Annotations"] !== null) {
+            $this->Annotations = [];
+            foreach ($param["Annotations"] as $key => $value){
+                $obj = new AnnotationValue();
+                $obj->deserialize($value);
+                array_push($this->Annotations, $obj);
             }
         }
 

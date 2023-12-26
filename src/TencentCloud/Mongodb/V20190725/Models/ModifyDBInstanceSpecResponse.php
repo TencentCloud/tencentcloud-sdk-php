@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSpec返回参数结构体
  *
- * @method string getDealId() 获取订单ID
- * @method void setDealId(string $DealId) 设置订单ID
+ * @method string getDealId() 获取订单 ID。
+ * @method void setDealId(string $DealId) 设置订单 ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyDBInstanceSpecResponse extends AbstractModel
 {
     /**
-     * @var string 订单ID
+     * @var string 订单 ID。
      */
     public $DealId;
 
@@ -38,7 +38,7 @@ class ModifyDBInstanceSpecResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DealId 订单ID
+     * @param string $DealId 订单 ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

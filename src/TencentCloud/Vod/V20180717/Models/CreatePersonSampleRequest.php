@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容不适宜，等价于 Review.Face。
 3. All：包含以上全部，等价于 1+2。
- * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method string getDescription() 获取素材描述，长度限制：1024 个字符。
  * @method void setDescription(string $Description) 设置素材描述，长度限制：1024 个字符。
  * @method array getFaceContents() 获取素材图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
@@ -61,7 +61,7 @@ class CreatePersonSampleRequest extends AbstractModel
     public $Usages;
 
     /**
-     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     public $SubAppId;
 
@@ -89,7 +89,7 @@ class CreatePersonSampleRequest extends AbstractModel
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容不适宜，等价于 Review.Face。
 3. All：包含以上全部，等价于 1+2。
-     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $Description 素材描述，长度限制：1024 个字符。
      * @param array $FaceContents 素材图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
 注意：图片必须是单人像五官较清晰的照片，像素不低于 200*200。

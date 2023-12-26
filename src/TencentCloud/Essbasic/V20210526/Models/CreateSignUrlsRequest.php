@@ -113,7 +113,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置第三方平台子客企业的企业的标识, 即OrganizationOpenId
 注: `GenerateType为"CHANNEL"时必填`
  * @method string getOpenId() 获取第三方平台子客企业员工的标识OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
  * @method void setOpenId(string $OpenId) 设置第三方平台子客企业员工的标识OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
  * @method boolean getAutoJumpBack() 获取Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后自动回跳至调用方小程序
  * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后自动回跳至调用方小程序
  * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
@@ -237,6 +243,9 @@ class CreateSignUrlsRequest extends AbstractModel
 
     /**
      * @var string 第三方平台子客企业员工的标识OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
      */
     public $OpenId;
 
@@ -323,6 +332,9 @@ class CreateSignUrlsRequest extends AbstractModel
      * @param string $OrganizationOpenId 第三方平台子客企业的企业的标识, 即OrganizationOpenId
 注: `GenerateType为"CHANNEL"时必填`
      * @param string $OpenId 第三方平台子客企业员工的标识OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+
+注： 
+如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）
      * @param boolean $AutoJumpBack Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后自动回跳至调用方小程序
      * @param string $JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
      * @param UserInfo $Operator 暂未开放

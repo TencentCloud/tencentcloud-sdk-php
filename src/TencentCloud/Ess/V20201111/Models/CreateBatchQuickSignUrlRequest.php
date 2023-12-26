@@ -56,7 +56,9 @@ use TencentCloud\Common\AbstractModel;
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
+</ul>
  * @method void setSignatureTypes(array $SignatureTypes) 设置指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
 <li>**1**：OCR楷体</li>
@@ -65,7 +67,9 @@ use TencentCloud\Common\AbstractModel;
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
+</ul>
  * @method array getApproverSignTypes() 获取指定批量签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证(默认)，需进行人脸识别成功后才能签署合同</li>
 <li>**2**：密码认证(默认)，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署</li>
@@ -140,7 +144,9 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
+</ul>
      */
     public $SignatureTypes;
 
@@ -187,7 +193,9 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 <li>**4**：系统签名</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
-<li>您可以传递多种值，表示可用多种签名类型。</li></ul>
+<li>您可以传递多种值，表示可用多种签名类型。</li>
+<li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
+</ul>
      * @param array $ApproverSignTypes 指定批量签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证(默认)，需进行人脸识别成功后才能签署合同</li>
 <li>**2**：密码认证(默认)，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署</li>

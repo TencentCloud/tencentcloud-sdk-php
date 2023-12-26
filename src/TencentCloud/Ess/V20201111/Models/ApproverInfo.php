@@ -124,10 +124,12 @@ use TencentCloud\Common\AbstractModel;
 <li>合同页数大于等于6页，阅读时间为10秒。</li></ul>
  * @method string getUserId() 获取签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
  * @method void setUserId(string $UserId) 设置签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
  * @method string getApproverSource() 获取在企微场景下使用，需设置参数为**WEWORKAPP**，以表明合同来源于企微。
  * @method void setApproverSource(string $ApproverSource) 设置在企微场景下使用，需设置参数为**WEWORKAPP**，以表明合同来源于企微。
  * @method string getCustomApproverTag() 获取在企业微信场景下，表明该合同流程为或签，其最大长度为64位字符串。
@@ -303,7 +305,8 @@ class ApproverInfo extends AbstractModel
     /**
      * @var string 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
      */
     public $UserId;
 
@@ -428,7 +431,8 @@ class ApproverInfo extends AbstractModel
 <li>合同页数大于等于6页，阅读时间为10秒。</li></ul>
      * @param string $UserId 签署人userId，仅支持本企业的员工userid， 可在控制台组织管理处获得
 
-注: `若传此字段 则以userid的信息为主，会覆盖传递过来的签署人基本信息， 包括姓名，手机号，证件类型等信息`
+注： 
+如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
      * @param string $ApproverSource 在企微场景下使用，需设置参数为**WEWORKAPP**，以表明合同来源于企微。
      * @param string $CustomApproverTag 在企业微信场景下，表明该合同流程为或签，其最大长度为64位字符串。
 所有参与或签的人员均需具备该标识。

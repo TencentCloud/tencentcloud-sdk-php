@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 <b>说明</b>：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。</li></ul>
  * @method void setInMaintenance(integer $InMaintenance) 设置实例配置变更的切换时间。<ul><li>0：调整完成时，立即执行变配任务。默认为0。</li><li>1：在维护时间窗内，执行变配任务。
 <b>说明</b>：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。</li></ul>
+ * @method array getAddNodeList() 获取新增节点属性列表。
+ * @method void setAddNodeList(array $AddNodeList) 设置新增节点属性列表。
+ * @method array getRemoveNodeList() 获取删除节点属性列表。
+ * @method void setRemoveNodeList(array $RemoveNodeList) 设置删除节点属性列表。
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -100,6 +104,16 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $InMaintenance;
 
     /**
+     * @var array 新增节点属性列表。
+     */
+    public $AddNodeList;
+
+    /**
+     * @var array 删除节点属性列表。
+     */
+    public $RemoveNodeList;
+
+    /**
      * @param string $InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
 
      * @param integer $Memory 实例配置变更后的内存大小。
@@ -116,6 +130,8 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
      * @param integer $ReplicateSetNum 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格（DescribeSpecInfo）接口返回的参数MinReplicateSetNum与MaxReplicateSetNum获取。</li><li>该参数只能增加不能减少。</li></ul>
      * @param integer $InMaintenance 实例配置变更的切换时间。<ul><li>0：调整完成时，立即执行变配任务。默认为0。</li><li>1：在维护时间窗内，执行变配任务。
 <b>说明</b>：调整节点数和分片数不支持在<b>维护时间窗内</b>变更。</li></ul>
+     * @param array $AddNodeList 新增节点属性列表。
+     * @param array $RemoveNodeList 删除节点属性列表。
      */
     function __construct()
     {
@@ -156,6 +172,24 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("InMaintenance",$param) and $param["InMaintenance"] !== null) {
             $this->InMaintenance = $param["InMaintenance"];
+        }
+
+        if (array_key_exists("AddNodeList",$param) and $param["AddNodeList"] !== null) {
+            $this->AddNodeList = [];
+            foreach ($param["AddNodeList"] as $key => $value){
+                $obj = new AddNodeList();
+                $obj->deserialize($value);
+                array_push($this->AddNodeList, $obj);
+            }
+        }
+
+        if (array_key_exists("RemoveNodeList",$param) and $param["RemoveNodeList"] !== null) {
+            $this->RemoveNodeList = [];
+            foreach ($param["RemoveNodeList"] as $key => $value){
+                $obj = new RemoveNodeList();
+                $obj->deserialize($value);
+                array_push($this->RemoveNodeList, $obj);
+            }
         }
     }
 }

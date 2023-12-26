@@ -22,32 +22,42 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
  * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method string getFlowId() 获取签署流程编号
- * @method void setFlowId(string $FlowId) 设置签署流程编号
+ * @method string getFlowId() 获取合同流程ID，为32位字符串。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
+ * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
  * @method string getReviewType() 获取企业内部审核结果
-PASS: 通过
-REJECT: 拒绝
-SIGN_REJECT:拒签(流程结束)
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
  * @method void setReviewType(string $ReviewType) 设置企业内部审核结果
-PASS: 通过
-REJECT: 拒绝
-SIGN_REJECT:拒签(流程结束)
- * @method string getReviewMessage() 获取审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
- * @method void setReviewMessage(string $ReviewMessage) 设置审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
- * @method string getRecipientId() 获取签署节点审核时需要指定，给个人审核时必填。
- * @method void setRecipientId(string $RecipientId) 设置签署节点审核时需要指定，给个人审核时必填。
- * @method string getOperateType() 获取操作类型，默认：SignReview；SignReview:签署审核，CreateReview：发起审核
-注：接口通过该字段区分操作类型
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若想使用发起审核，请指定该字段为：CreateReview
-若发起个人审核，则指定该字段为：SignReview
- * @method void setOperateType(string $OperateType) 设置操作类型，默认：SignReview；SignReview:签署审核，CreateReview：发起审核
-注：接口通过该字段区分操作类型
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若想使用发起审核，请指定该字段为：CreateReview
-若发起个人审核，则指定该字段为：SignReview
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
+ * @method string getReviewMessage() 获取审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+ * @method void setReviewMessage(string $ReviewMessage) 设置审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+ * @method string getRecipientId() 获取审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
+ * @method void setRecipientId(string $RecipientId) 设置审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
+ * @method string getOperateType() 获取流程审核操作类型，取值如下：
+<ul><li>**SignReview**：（默认）签署审核</li>
+<li>**CreateReview**：发起审核</li>
+<li>注意：`该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程`</li></ul>
+
+
+ * @method void setOperateType(string $OperateType) 设置流程审核操作类型，取值如下：
+<ul><li>**SignReview**：（默认）签署审核</li>
+<li>**CreateReview**：发起审核</li>
+<li>注意：`该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程`</li></ul>
  */
 class ChannelCreateFlowSignReviewRequest extends AbstractModel
 {
@@ -57,53 +67,63 @@ class ChannelCreateFlowSignReviewRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 签署流程编号
+     * @var string 合同流程ID，为32位字符串。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
      */
     public $FlowId;
 
     /**
      * @var string 企业内部审核结果
-PASS: 通过
-REJECT: 拒绝
-SIGN_REJECT:拒签(流程结束)
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
      */
     public $ReviewType;
 
     /**
-     * @var string 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+     * @var string 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
      */
     public $ReviewMessage;
 
     /**
-     * @var string 签署节点审核时需要指定，给个人审核时必填。
+     * @var string 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
      */
     public $RecipientId;
 
     /**
-     * @var string 操作类型，默认：SignReview；SignReview:签署审核，CreateReview：发起审核
-注：接口通过该字段区分操作类型
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若想使用发起审核，请指定该字段为：CreateReview
-若发起个人审核，则指定该字段为：SignReview
+     * @var string 流程审核操作类型，取值如下：
+<ul><li>**SignReview**：（默认）签署审核</li>
+<li>**CreateReview**：发起审核</li>
+<li>注意：`该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程`</li></ul>
+
+
      */
     public $OperateType;
 
     /**
      * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
-     * @param string $FlowId 签署流程编号
+     * @param string $FlowId 合同流程ID，为32位字符串。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
      * @param string $ReviewType 企业内部审核结果
-PASS: 通过
-REJECT: 拒绝
-SIGN_REJECT:拒签(流程结束)
-     * @param string $ReviewMessage 审核原因 
-当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
-     * @param string $RecipientId 签署节点审核时需要指定，给个人审核时必填。
-     * @param string $OperateType 操作类型，默认：SignReview；SignReview:签署审核，CreateReview：发起审核
-注：接口通过该字段区分操作类型
-该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程
-若想使用发起审核，请指定该字段为：CreateReview
-若发起个人审核，则指定该字段为：SignReview
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
+     * @param string $ReviewMessage 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+     * @param string $RecipientId 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
+     * @param string $OperateType 流程审核操作类型，取值如下：
+<ul><li>**SignReview**：（默认）签署审核</li>
+<li>**CreateReview**：发起审核</li>
+<li>注意：`该字段不传或者为空，则默认为SignReview签署审核，走签署审核流程`</li></ul>
      */
     function __construct()
     {

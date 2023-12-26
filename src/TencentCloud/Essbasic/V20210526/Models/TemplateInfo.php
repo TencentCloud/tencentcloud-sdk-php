@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；3-普通模板
  * @method boolean getIsPromoter() 获取是否是发起人 ,已弃用
  * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起人 ,已弃用
- * @method string getCreator() 获取模板的创建者信息，电子签系统用户ID
- * @method void setCreator(string $Creator) 设置模板的创建者信息，电子签系统用户ID
+ * @method string getCreator() 获取模板的创建者名字
+ * @method void setCreator(string $Creator) 设置模板的创建者名字
  * @method integer getCreatedOn() 获取模板创建的时间戳，格式为Unix标准时间戳（秒）
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳，格式为Unix标准时间戳（秒）
  * @method string getPreviewUrl() 获取模板的H5预览链接,有效期5分钟。
@@ -135,7 +135,7 @@ class TemplateInfo extends AbstractModel
     public $IsPromoter;
 
     /**
-     * @var string 模板的创建者信息，电子签系统用户ID
+     * @var string 模板的创建者名字
      */
     public $Creator;
 
@@ -202,7 +202,7 @@ class TemplateInfo extends AbstractModel
      * @param array $SignComponents 此模版中的签署控件列表
      * @param integer $TemplateType 模板类型：1-静默签；3-普通模板
      * @param boolean $IsPromoter 是否是发起人 ,已弃用
-     * @param string $Creator 模板的创建者信息，电子签系统用户ID
+     * @param string $Creator 模板的创建者名字
      * @param integer $CreatedOn 模板创建的时间戳，格式为Unix标准时间戳（秒）
      * @param string $PreviewUrl 模板的H5预览链接,有效期5分钟。
 可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。

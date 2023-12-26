@@ -35,7 +35,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块
+coremodule:内核模块
  * @method void setTypes(array $Types) 设置各项资源数量
 system : 资源监控
 account: 账号
@@ -51,7 +51,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块
+coremodule:内核模块
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,7 +73,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块
+coremodule:内核模块
      */
     public $Types;
 
@@ -98,7 +98,7 @@ jar: Jar包
 initservice: 启动服务
 planTask:计划任务
 env:环境变量
-coremoudle:内核模块
+coremodule:内核模块
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

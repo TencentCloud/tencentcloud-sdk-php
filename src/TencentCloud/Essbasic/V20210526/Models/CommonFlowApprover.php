@@ -108,8 +108,8 @@ use TencentCloud\Common\AbstractModel;
 <li> **NONE** : 不通知</li></ul>
 
 注: `签署方为第三方子客企业时会被置为NONE,   不会发短信通知`
- * @method CommonApproverOption getApproverOption() 获取签署人配置
- * @method void setApproverOption(CommonApproverOption $ApproverOption) 设置签署人配置
+ * @method CommonApproverOption getApproverOption() 获取签署人配置，用于控制签署人相关属性
+ * @method void setApproverOption(CommonApproverOption $ApproverOption) 设置签署人配置，用于控制签署人相关属性
  * @method array getSignComponents() 获取使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
  * @method void setSignComponents(array $SignComponents) 设置使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
  * @method array getApproverVerifyTypes() 获取指定个人签署方查看合同的校验方式,可以传值如下:
@@ -254,7 +254,7 @@ class CommonFlowApprover extends AbstractModel
     public $NotifyType;
 
     /**
-     * @var CommonApproverOption 签署人配置
+     * @var CommonApproverOption 签署人配置，用于控制签署人相关属性
      */
     public $ApproverOption;
 
@@ -333,7 +333,7 @@ class CommonFlowApprover extends AbstractModel
 <li> **NONE** : 不通知</li></ul>
 
 注: `签署方为第三方子客企业时会被置为NONE,   不会发短信通知`
-     * @param CommonApproverOption $ApproverOption 签署人配置
+     * @param CommonApproverOption $ApproverOption 签署人配置，用于控制签署人相关属性
      * @param array $SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
      * @param array $ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>

@@ -25,33 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method string getFlowId() 获取合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
- * @method string getReviewType() 获取企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul>
- * @method void setReviewType(string $ReviewType) 设置企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul>
- * @method string getReviewMessage() 获取审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
-
- * @method void setReviewMessage(string $ReviewMessage) 设置审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
-
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
+ * @method string getReviewType() 获取企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
+ * @method void setReviewType(string $ReviewType) 设置企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
  * @method Agent getAgent() 获取代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
  * @method void setAgent(Agent $Agent) 设置代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
- * @method string getRecipientId() 获取审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。
- * @method void setRecipientId(string $RecipientId) 设置审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。
+ * @method string getRecipientId() 获取审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
+ * @method void setRecipientId(string $RecipientId) 设置审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
  * @method string getOperateType() 获取操作类型：（接口通过该字段区分不同的操作类型）
 
 <ul><li>SignReview: 签署审核（默认）</li>
@@ -64,6 +56,16 @@ use TencentCloud\Common\AbstractModel;
 <li>CreateReview: 创建审核</li></ul>
 
 如果审核节点是个人，则操作类型只能为SignReview。
+ * @method string getReviewMessage() 获取审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+
+
+ * @method void setReviewMessage(string $ReviewMessage) 设置审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
  */
 class CreateFlowSignReviewRequest extends AbstractModel
 {
@@ -75,25 +77,18 @@ class CreateFlowSignReviewRequest extends AbstractModel
 
     /**
      * @var string 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
      */
     public $FlowId;
 
     /**
-     * @var string 企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul>
+     * @var string 企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
      */
     public $ReviewType;
-
-    /**
-     * @var string 审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
-
-     */
-    public $ReviewMessage;
 
     /**
      * @var Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -101,9 +96,8 @@ class CreateFlowSignReviewRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。
+     * @var string 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
      */
     public $RecipientId;
 
@@ -118,28 +112,38 @@ class CreateFlowSignReviewRequest extends AbstractModel
     public $OperateType;
 
     /**
+     * @var string 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
+
+
+     */
+    public $ReviewMessage;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-     * @param string $ReviewType 企业审核结果
-<ul><li>PASS: 通过</li> 
-<li>REJECT: 拒绝</li></ul>
-     * @param string $ReviewMessage 审核结果原因，
-字符串长度不超过200
-当ReviewType 是拒绝（REJECT） 时此字段必填。
-
+<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
+<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
+     * @param string $ReviewType 企业内部审核结果
+<ul><li>PASS: 审核通过</li>
+<li>REJECT: 审核拒绝</li>
+<li>SIGN_REJECT:拒签(流程结束)</li></ul>
      * @param Agent $Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param string $RecipientId 审核签署节点人标识，
-用来标识审核的签署方。
-如果签署审核节点是个人， 此参数必填。
+     * @param string $RecipientId 审核节点的签署人标志，用于指定当前审核的签署方
+<ul><li>**如果签署审核节点是个人， 此参数必填**。</li></ul>
      * @param string $OperateType 操作类型：（接口通过该字段区分不同的操作类型）
 
 <ul><li>SignReview: 签署审核（默认）</li>
 <li>CreateReview: 创建审核</li></ul>
 
 如果审核节点是个人，则操作类型只能为SignReview。
+     * @param string $ReviewMessage 审核结果原因
+<ul><li>字符串长度不超过200</li>
+<li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
+<li>当ReviewType 是拒绝（SIGN_REJECT） 时此字段必填。</li></ul>
      */
     function __construct()
     {
@@ -167,10 +171,6 @@ class CreateFlowSignReviewRequest extends AbstractModel
             $this->ReviewType = $param["ReviewType"];
         }
 
-        if (array_key_exists("ReviewMessage",$param) and $param["ReviewMessage"] !== null) {
-            $this->ReviewMessage = $param["ReviewMessage"];
-        }
-
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
@@ -182,6 +182,10 @@ class CreateFlowSignReviewRequest extends AbstractModel
 
         if (array_key_exists("OperateType",$param) and $param["OperateType"] !== null) {
             $this->OperateType = $param["OperateType"];
+        }
+
+        if (array_key_exists("ReviewMessage",$param) and $param["ReviewMessage"] !== null) {
+            $this->ReviewMessage = $param["ReviewMessage"];
         }
     }
 }

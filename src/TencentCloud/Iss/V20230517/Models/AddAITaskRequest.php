@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplates(array $Templates) 设置AI 配置列表
  * @method string getDesc() 获取AI 任务描述。仅支持中文、英文、数字、_、-，长度不超过128个字符
  * @method void setDesc(string $Desc) 设置AI 任务描述。仅支持中文、英文、数字、_、-，长度不超过128个字符
- * @method string getCallbackUrl() 获取AI 结果回调地址。类似 "http://ip:port/xxx或者https://domain/xxx
- * @method void setCallbackUrl(string $CallbackUrl) 设置AI 结果回调地址。类似 "http://ip:port/xxx或者https://domain/xxx
+ * @method string getCallbackUrl() 获取AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
+ * @method void setCallbackUrl(string $CallbackUrl) 设置AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
  * @method boolean getIsStartTheTask() 获取是否立即开启 AI 任务。"true"代表立即开启 AI 任务，"false"代表暂不开启 AI 任务，默认为 false。
  * @method void setIsStartTheTask(boolean $IsStartTheTask) 设置是否立即开启 AI 任务。"true"代表立即开启 AI 任务，"false"代表暂不开启 AI 任务，默认为 false。
  */
@@ -56,7 +56,7 @@ class AddAITaskRequest extends AbstractModel
     public $Desc;
 
     /**
-     * @var string AI 结果回调地址。类似 "http://ip:port/xxx或者https://domain/xxx
+     * @var string AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
      */
     public $CallbackUrl;
 
@@ -70,7 +70,7 @@ class AddAITaskRequest extends AbstractModel
      * @param array $ChannelList 通道 ID 列表。不能添加存在于其他 AI 任务的通道，限制1000个通道。
      * @param array $Templates AI 配置列表
      * @param string $Desc AI 任务描述。仅支持中文、英文、数字、_、-，长度不超过128个字符
-     * @param string $CallbackUrl AI 结果回调地址。类似 "http://ip:port/xxx或者https://domain/xxx
+     * @param string $CallbackUrl AI 结果回调地址。类似 "http://ip:port/***或者https://domain/***
      * @param boolean $IsStartTheTask 是否立即开启 AI 任务。"true"代表立即开启 AI 任务，"false"代表暂不开启 AI 任务，默认为 false。
      */
     function __construct()

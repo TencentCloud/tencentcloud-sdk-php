@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMediaByUrl请求参数结构体
  *
+ * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method MediaInputInfo getInputInfo() 获取API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
  * @method void setInputInfo(MediaInputInfo $InputInfo) 设置API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
  * @method MediaOutputInfo getOutputInfo() 获取输出文件 COS 路径信息。
@@ -38,11 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method string getSessionId() 获取用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class ProcessMediaByUrlRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     */
+    public $SubAppId;
+
     /**
      * @var MediaInputInfo API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
      */
@@ -89,11 +94,7 @@ class ProcessMediaByUrlRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param MediaInputInfo $InputInfo API 已经<font color='red'>不再维护</font>。推荐使用的替代 API 请参考接口描述。
      * @param MediaOutputInfo $OutputInfo 输出文件 COS 路径信息。
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
@@ -103,7 +104,6 @@ class ProcessMediaByUrlRequest extends AbstractModel
      * @param string $TasksNotifyMode 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -118,6 +118,10 @@ class ProcessMediaByUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("InputInfo",$param) and $param["InputInfo"] !== null) {
             $this->InputInfo = new MediaInputInfo();
             $this->InputInfo->deserialize($param["InputInfo"]);
@@ -157,10 +161,6 @@ class ProcessMediaByUrlRequest extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeviceId() 获取设备 ID
  * @method void setDeviceId(string $DeviceId) 设置设备 ID
- * @method string getCode() 获取设备国标编码
- * @method void setCode(string $Code) 设置设备国标编码
+ * @method string getCode() 获取设备编码
+ * @method void setCode(string $Code) 设置设备编码
  * @method integer getStatus() 获取设备状态。0:未注册，1:在线，2:离线，3:禁用
  * @method void setStatus(integer $Status) 设置设备状态。0:未注册，1:在线，2:离线，3:禁用
  * @method integer getTransportProtocol() 获取设备流传输协议。1:UDP,2:TCP
@@ -55,7 +55,7 @@ class ListDeviceInfo extends AbstractModel
     public $DeviceId;
 
     /**
-     * @var string 设备国标编码
+     * @var string 设备编码
      */
     public $Code;
 
@@ -116,7 +116,7 @@ class ListDeviceInfo extends AbstractModel
 
     /**
      * @param string $DeviceId 设备 ID
-     * @param string $Code 设备国标编码
+     * @param string $Code 设备编码
      * @param integer $Status 设备状态。0:未注册，1:在线，2:离线，3:禁用
      * @param integer $TransportProtocol 设备流传输协议。1:UDP,2:TCP
      * @param string $Name 设备名称

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
@@ -40,7 +40,7 @@ class DescribeFileTamperRulesRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
      */
     public $Filters;
 
@@ -67,7 +67,7 @@ class DescribeFileTamperRulesRequest extends AbstractModel
     /**
      * @param array $Filters 过滤条件。
 <li>RuleCategory- string- 规则类别  0=系统规则，1=用户规则</li>
-<li>Name- String - 规则名称/li>
+<li>Name- String - 规则名称</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param string $Order 排序方式 ASC,DESC

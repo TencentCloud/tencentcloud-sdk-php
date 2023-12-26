@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInputType() 获取输入视频的类型，可以取的值为  File，Stream 两种。
  * @method void setInputType(string $InputType) 设置输入视频的类型，可以取的值为  File，Stream 两种。
- * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method array getFileInfos() 获取输入的视频文件信息，当 InputType 为 File 时必填。
  * @method void setFileInfos(array $FileInfos) 设置输入的视频文件信息，当 InputType 为 File 时必填。
  * @method array getStreamInfos() 获取输入的流信息，当 InputType 为 Stream 时必填。
@@ -55,7 +55,7 @@ class EditMediaRequest extends AbstractModel
     public $InputType;
 
     /**
-     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     public $SubAppId;
 
@@ -108,7 +108,7 @@ class EditMediaRequest extends AbstractModel
 
     /**
      * @param string $InputType 输入视频的类型，可以取的值为  File，Stream 两种。
-     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param array $FileInfos 输入的视频文件信息，当 InputType 为 File 时必填。
      * @param array $StreamInfos 输入的流信息，当 InputType 为 Stream 时必填。
      * @param integer $Definition 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。

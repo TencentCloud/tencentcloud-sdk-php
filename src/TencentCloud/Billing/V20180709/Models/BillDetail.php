@@ -102,6 +102,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillMonth(string $BillMonth) 设置账单归属月
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getId() 获取账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillDetail extends AbstractModel
 {
@@ -267,6 +271,12 @@ class BillDetail extends AbstractModel
     public $BillMonth;
 
     /**
+     * @var string 账单记录ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
+    /**
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      * @param string $PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
@@ -307,6 +317,8 @@ class BillDetail extends AbstractModel
      * @param string $BillDay 账单归属日
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillMonth 账单归属月
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Id 账单记录ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -451,6 +463,10 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
             $this->BillMonth = $param["BillMonth"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

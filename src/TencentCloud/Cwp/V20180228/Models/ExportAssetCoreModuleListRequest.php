@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuuid(string $Quuid) 设置服务器Quuid
  * @method array getFilters() 获取过滤条件。
 <li>Name- string - 是否必填：否 - 包名</li>
-<li>User- string - 是否必填：否 - 用户</li>
+<li>User- string - 是否必填：否 - 用户名</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Name- string - 是否必填：否 - 包名</li>
-<li>User- string - 是否必填：否 - 用户</li>
+<li>User- string - 是否必填：否 - 用户名</li>
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
  * @method string getBy() 获取排序依据[FirstTime|Size|ProcessCount|ModuleCount]
@@ -50,7 +50,7 @@ class ExportAssetCoreModuleListRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>Name- string - 是否必填：否 - 包名</li>
-<li>User- string - 是否必填：否 - 用户</li>
+<li>User- string - 是否必填：否 - 用户名</li>
      */
     public $Filters;
 
@@ -69,7 +69,7 @@ class ExportAssetCoreModuleListRequest extends AbstractModel
      * @param string $Quuid 服务器Quuid
      * @param array $Filters 过滤条件。
 <li>Name- string - 是否必填：否 - 包名</li>
-<li>User- string - 是否必填：否 - 用户</li>
+<li>User- string - 是否必填：否 - 用户名</li>
      * @param string $Order 排序方式，asc升序 或 desc降序
      * @param string $By 排序依据[FirstTime|Size|ProcessCount|ModuleCount]
      */

@@ -205,8 +205,22 @@ RecipientId参数获取：
 详细操作可以参考开发者中心的ApproverOption结构体。
  * @method void setApproverOption(ApproverOption $ApproverOption) 设置可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
- * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要
- * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+ * @method boolean getApproverNeedSignReview() 获取发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+ * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
  * @method array getApproverVerifyTypes() 获取指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）
@@ -416,7 +430,14 @@ class FlowApproverInfo extends AbstractModel
     public $ApproverOption;
 
     /**
-     * @var boolean 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     * @var boolean 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
      */
     public $ApproverNeedSignReview;
 
@@ -549,7 +570,14 @@ class FlowApproverInfo extends AbstractModel
      * @param string $JumpUrl 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
      * @param ApproverOption $ApproverOption 可以控制签署方在签署合同时能否进行某些操作，例如拒签、转交他人、是否为动态补充签署人等。
 详细操作可以参考开发者中心的ApproverOption结构体。
-     * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     * @param boolean $ApproverNeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+<ul><li>**false**：（默认）不需要审批，直接签署。</li>
+<li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
+企业可以通过ChannelCreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
+<ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
+<li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
+
+注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
      * @param array $ApproverVerifyTypes 指定个人签署方查看合同的校验方式,可以传值如下:
 <ul><li>  **1**   : （默认）人脸识别,人脸识别后才能合同内容</li>
 <li>  **2**  : 手机号验证, 用户手机号和参与方手机号(ApproverMobile)相同即可查看合同内容（当手写签名方式为OCR_ESIGN时，该校验方式无效，因为这种签名方式依赖实名认证）

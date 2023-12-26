@@ -24,16 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationId(string $OrganizationId) 设置组织ID
  * @method boolean getIsContainSubLevel() 获取是否获取当前层级及子层级的设备列表，默认false
  * @method void setIsContainSubLevel(boolean $IsContainSubLevel) 设置是否获取当前层级及子层级的设备列表，默认false
- * @method integer getAccessProtocol() 获取设备接入协议。1:RTMP，2:GB，3:GW
- * @method void setAccessProtocol(integer $AccessProtocol) 设置设备接入协议。1:RTMP，2:GB，3:GW
+ * @method boolean getIsContainUser() 获取是否包含当前用户已关联的设备，默认false
+ * @method void setIsContainUser(boolean $IsContainUser) 设置是否包含当前用户已关联的设备，默认false
+ * @method integer getAccessProtocol() 获取设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
+ * @method void setAccessProtocol(integer $AccessProtocol) 设置设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
  * @method integer getType() 获取设备类型。1:IPC，2:NVR
  * @method void setType(integer $Type) 设置设备类型。1:IPC，2:NVR
  * @method integer getStatus() 获取设备状态。0:未注册，1:在线，2:离线，3:禁用	
  * @method void setStatus(integer $Status) 设置设备状态。0:未注册，1:在线，2:离线，3:禁用	
  * @method string getClusterId() 获取服务节点ID
  * @method void setClusterId(string $ClusterId) 设置服务节点ID
- * @method string getKeyword() 获取模糊搜索设备关键字
- * @method void setKeyword(string $Keyword) 设置模糊搜索设备关键字
+ * @method string getKeyword() 获取模糊搜索设备的关键字
+ * @method void setKeyword(string $Keyword) 设置模糊搜索设备的关键字
  * @method integer getCurrentUin() 获取当前用户Uin
  * @method void setCurrentUin(integer $CurrentUin) 设置当前用户Uin
  * @method integer getPageNumber() 获取页码，默认为1。
@@ -54,7 +56,12 @@ class ListDevicesRequest extends AbstractModel
     public $IsContainSubLevel;
 
     /**
-     * @var integer 设备接入协议。1:RTMP，2:GB，3:GW
+     * @var boolean 是否包含当前用户已关联的设备，默认false
+     */
+    public $IsContainUser;
+
+    /**
+     * @var integer 设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
      */
     public $AccessProtocol;
 
@@ -74,7 +81,7 @@ class ListDevicesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 模糊搜索设备关键字
+     * @var string 模糊搜索设备的关键字
      */
     public $Keyword;
 
@@ -96,11 +103,12 @@ class ListDevicesRequest extends AbstractModel
     /**
      * @param string $OrganizationId 组织ID
      * @param boolean $IsContainSubLevel 是否获取当前层级及子层级的设备列表，默认false
-     * @param integer $AccessProtocol 设备接入协议。1:RTMP，2:GB，3:GW
+     * @param boolean $IsContainUser 是否包含当前用户已关联的设备，默认false
+     * @param integer $AccessProtocol 设备接入协议。1:RTMP，2:GB，3:GW，4:IVCP(私有协议)
      * @param integer $Type 设备类型。1:IPC，2:NVR
      * @param integer $Status 设备状态。0:未注册，1:在线，2:离线，3:禁用	
      * @param string $ClusterId 服务节点ID
-     * @param string $Keyword 模糊搜索设备关键字
+     * @param string $Keyword 模糊搜索设备的关键字
      * @param integer $CurrentUin 当前用户Uin
      * @param integer $PageNumber 页码，默认为1。
      * @param integer $PageSize 每页数量，默认为20。
@@ -124,6 +132,10 @@ class ListDevicesRequest extends AbstractModel
 
         if (array_key_exists("IsContainSubLevel",$param) and $param["IsContainSubLevel"] !== null) {
             $this->IsContainSubLevel = $param["IsContainSubLevel"];
+        }
+
+        if (array_key_exists("IsContainUser",$param) and $param["IsContainUser"] !== null) {
+            $this->IsContainUser = $param["IsContainUser"];
         }
 
         if (array_key_exists("AccessProtocol",$param) and $param["AccessProtocol"] !== null) {

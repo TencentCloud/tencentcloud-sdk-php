@@ -42,6 +42,8 @@ cdn业务：
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
+
+仅支持以上产品
  * @method void setProductCode(string $ProductCode) 设置互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
@@ -60,6 +62,8 @@ cdn业务：
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
+
+仅支持以上产品
  * @method string getDomain() 获取查询域名 例如 www.qq.com
 非CDN业务查询时传入空字符串，返回的值为空
  * @method void setDomain(string $Domain) 设置查询域名 例如 www.qq.com
@@ -68,6 +72,8 @@ cdn业务：
 2、如果传入实例名，则返回该实例明细
  * @method void setInstanceID(string $InstanceID) 设置1、如果为空，则返回EIP或CLB所有实例的明细；
 2、如果传入实例名，则返回该实例明细
+ * @method string getPayerUin() 获取支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+ * @method void setPayerUin(string $PayerUin) 设置支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
  */
 class DescribeDosageDetailByDateRequest extends AbstractModel
 {
@@ -100,6 +106,8 @@ cdn业务：
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
+
+仅支持以上产品
      */
     public $ProductCode;
 
@@ -114,6 +122,11 @@ cdn业务：
 2、如果传入实例名，则返回该实例明细
      */
     public $InstanceID;
+
+    /**
+     * @var string 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     */
+    public $PayerUin;
 
     /**
      * @param string $StartDate 查询账单开始日期，如 2019-01-01
@@ -136,10 +149,13 @@ cdn业务：
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
+
+仅支持以上产品
      * @param string $Domain 查询域名 例如 www.qq.com
 非CDN业务查询时传入空字符串，返回的值为空
      * @param string $InstanceID 1、如果为空，则返回EIP或CLB所有实例的明细；
 2、如果传入实例名，则返回该实例明细
+     * @param string $PayerUin 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
      */
     function __construct()
     {
@@ -172,6 +188,10 @@ cdn业务：
 
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
+            $this->PayerUin = $param["PayerUin"];
         }
     }
 }

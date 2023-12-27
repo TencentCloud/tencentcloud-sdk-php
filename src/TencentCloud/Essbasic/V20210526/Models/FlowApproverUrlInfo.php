@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 签署人签署链接信息。
  *
- * @method string getSignUrl() 获取签署短链接。</br>
+ * @method string getSignUrl() 获取签署短链接。
+
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
- * @method void setSignUrl(string $SignUrl) 设置签署短链接。</br>
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
+ * @method void setSignUrl(string $SignUrl) 设置签署短链接。
+
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
  * @method string getApproverType() 获取签署人类型。
 - **PERSON**: 个人
  * @method void setApproverType(string $ApproverType) 设置签署人类型。
@@ -36,24 +40,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置签署人姓名。
  * @method string getMobile() 获取签署人手机号。
  * @method void setMobile(string $Mobile) 设置签署人手机号。
- * @method string getLongUrl() 获取签署长链接。</br>
+ * @method string getLongUrl() 获取签署长链接。
+
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLongUrl(string $LongUrl) 设置签署长链接。</br>
+ * @method void setLongUrl(string $LongUrl) 设置签署长链接。
+
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowApproverUrlInfo extends AbstractModel
 {
     /**
-     * @var string 签署短链接。</br>
+     * @var string 签署短链接。
+
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public $SignUrl;
 
@@ -74,27 +84,33 @@ class FlowApproverUrlInfo extends AbstractModel
     public $Mobile;
 
     /**
-     * @var string 签署长链接。</br>
+     * @var string 签署长链接。
+
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LongUrl;
 
     /**
-     * @param string $SignUrl 签署短链接。</br>
+     * @param string $SignUrl 签署短链接。
+
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      * @param string $ApproverType 签署人类型。
 - **PERSON**: 个人
      * @param string $Name 签署人姓名。
      * @param string $Mobile 签署人手机号。
-     * @param string $LongUrl 签署长链接。</br>
+     * @param string $LongUrl 签署长链接。
+
 注意:
-- 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
-- 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+1. 该链接有效期为**30分钟**，同时需要注意保密，不要外泄给无关用户。
+2. 该链接不支持小程序嵌入，仅支持**移动端浏览器**打开。
+3. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

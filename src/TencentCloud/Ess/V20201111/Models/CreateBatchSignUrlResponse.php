@@ -22,18 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSignUrl() 获取批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用`
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
  * @method void setSignUrl(string $SignUrl) 设置批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用`
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
  * @method integer getExpiredTime() 获取链接过期时间以 Unix 时间戳格式表示，默认生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
  * @method void setExpiredTime(integer $ExpiredTime) 设置链接过期时间以 Unix 时间戳格式表示，默认生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
  * @method string getMiniAppPath() 获取从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用`
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
  * @method void setMiniAppPath(string $MiniAppPath) 设置从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用`
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,7 +50,9 @@ class CreateBatchSignUrlResponse extends AbstractModel
     /**
      * @var string 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用`
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public $SignUrl;
 
@@ -54,7 +64,9 @@ class CreateBatchSignUrlResponse extends AbstractModel
     /**
      * @var string 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用`
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public $MiniAppPath;
 
@@ -66,11 +78,15 @@ class CreateBatchSignUrlResponse extends AbstractModel
     /**
      * @param string $SignUrl 批量签署链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
 
-注: `非小程序和APP集成使用`
+注: 
+1. 非小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      * @param integer $ExpiredTime 链接过期时间以 Unix 时间戳格式表示，默认生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。
      * @param string $MiniAppPath 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
-注: `小程序和APP集成使用`
+注: 
+1. 小程序和APP集成使用
+2. <font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

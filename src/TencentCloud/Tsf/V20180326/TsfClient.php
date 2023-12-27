@@ -39,7 +39,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建集群
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建配置项
  * @method Models\CreateConfigTemplateResponse CreateConfigTemplate(Models\CreateConfigTemplateRequest $req) 创建参数模板
- * @method Models\CreateConfigTemplateWithDetailRespResponse CreateConfigTemplateWithDetailResp(Models\CreateConfigTemplateWithDetailRespRequest $req) 创建参数模版，并返回模版详细信息
+ * @method Models\CreateConfigTemplateWithDetailRespResponse CreateConfigTemplateWithDetailResp(Models\CreateConfigTemplateWithDetailRespRequest $req) 创建参数模板，并返回模板详细信息
  * @method Models\CreateConfigWithDetailRespResponse CreateConfigWithDetailResp(Models\CreateConfigWithDetailRespRequest $req) 创建配置项，返回详细信息
  * @method Models\CreateContainGroupResponse CreateContainGroup(Models\CreateContainGroupRequest $req) （已废弃，请使用 CreateGroup 和 DeployContainerGroup 创建和部署容器部署组）创建容器部署组
  * @method Models\CreateFileConfigResponse CreateFileConfig(Models\CreateFileConfigRequest $req) 创建文件配置项

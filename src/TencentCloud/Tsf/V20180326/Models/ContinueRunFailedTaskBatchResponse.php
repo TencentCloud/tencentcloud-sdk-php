@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ContinueRunFailedTaskBatch返回参数结构体
  *
- * @method boolean getResult() 获取成功或失败
- * @method void setResult(boolean $Result) 设置成功或失败
+ * @method boolean getResult() 获取true：操作成功、false：操作失败
+ * @method void setResult(boolean $Result) 设置true：操作成功、false：操作失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ContinueRunFailedTaskBatchResponse extends AbstractModel
 {
     /**
-     * @var boolean 成功或失败
+     * @var boolean true：操作成功、false：操作失败
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class ContinueRunFailedTaskBatchResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result 成功或失败
+     * @param boolean $Result true：操作成功、false：操作失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

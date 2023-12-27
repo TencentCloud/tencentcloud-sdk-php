@@ -21,8 +21,12 @@ use TencentCloud\Common\AbstractModel;
  * 签署链接内容
  *
  * @method string getSignUrl() 获取签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignUrl(string $SignUrl) 设置签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeadline() 获取合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
@@ -85,6 +89,8 @@ class SignUrlInfo extends AbstractModel
 {
     /**
      * @var string 签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignUrl;
@@ -172,6 +178,8 @@ class SignUrlInfo extends AbstractModel
 
     /**
      * @param string $SignUrl 签署链接，过期时间为90天
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deadline 合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。

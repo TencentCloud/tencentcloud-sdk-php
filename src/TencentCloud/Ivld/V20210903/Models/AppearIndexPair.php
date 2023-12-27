@@ -33,8 +33,8 @@ AppearIndex可选值定义如下：
  *
  * @method integer getAppearIndex() 获取出现信息，取值范围为[1，3]
  * @method void setAppearIndex(integer $AppearIndex) 设置出现信息，取值范围为[1，3]
- * @method integer getIndex() 获取AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
- * @method void setIndex(integer $Index) 设置AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
+ * @method integer getIndex() 获取AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
+ * @method void setIndex(integer $Index) 设置AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
  */
 class AppearIndexPair extends AbstractModel
 {
@@ -44,13 +44,13 @@ class AppearIndexPair extends AbstractModel
     public $AppearIndex;
 
     /**
-     * @var integer AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
+     * @var integer AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
      */
     public $Index;
 
     /**
      * @param integer $AppearIndex 出现信息，取值范围为[1，3]
-     * @param integer $Index AppearInfo中AppearIndex对应元素的第Index元素，从0开始技术
+     * @param integer $Index AppearInfo中AppearIndex对应元素的第Index元素，从0开始计数
      */
     function __construct()
     {

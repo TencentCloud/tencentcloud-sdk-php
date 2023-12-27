@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * ChannelCreateBatchCancelFlowUrl返回参数结构体
  *
  * @method string getBatchCancelFlowUrl() 获取批量撤销合同的URL链接, 需要在手机端打开, 有效期24小时
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
  * @method void setBatchCancelFlowUrl(string $BatchCancelFlowUrl) 设置批量撤销合同的URL链接, 需要在手机端打开, 有效期24小时
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
  * @method array getFailMessages() 获取与入参的FlowIds数组一致,   成功生成到撤销链接中,则为"",   不能撤销合同则为失败原因
  * @method void setFailMessages(array $FailMessages) 设置与入参的FlowIds数组一致,   成功生成到撤销链接中,则为"",   不能撤销合同则为失败原因
  * @method string getUrlExpireOn() 获取签署撤销链接的过期时间(格式为:年-月-日 时:分:秒), 默认是生成链接的24小时后失效
@@ -37,6 +41,8 @@ class ChannelCreateBatchCancelFlowUrlResponse extends AbstractModel
 {
     /**
      * @var string 批量撤销合同的URL链接, 需要在手机端打开, 有效期24小时
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      */
     public $BatchCancelFlowUrl;
 
@@ -59,6 +65,8 @@ class ChannelCreateBatchCancelFlowUrlResponse extends AbstractModel
 
     /**
      * @param string $BatchCancelFlowUrl 批量撤销合同的URL链接, 需要在手机端打开, 有效期24小时
+
+注：<font color="red">生成的链路后面不能再增加参数</font>（会出现覆盖链接中已有参数导致错误）
      * @param array $FailMessages 与入参的FlowIds数组一致,   成功生成到撤销链接中,则为"",   不能撤销合同则为失败原因
      * @param string $UrlExpireOn 签署撤销链接的过期时间(格式为:年-月-日 时:分:秒), 默认是生成链接的24小时后失效
 

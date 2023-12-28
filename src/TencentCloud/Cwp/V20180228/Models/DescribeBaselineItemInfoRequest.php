@@ -20,13 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBaselineItemInfo请求参数结构体
  *
- * @method array getFilters() 获取<li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>PolicyId - int64 - 是否必填：否 - 项Id</i>
+ * @method array getFilters() 获取<li>ItemId - int64 - 是否必填：否 - 项Id</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
 <li>ItemName - string - 是否必填：否 - 检测项名字</li>
 <li>RuleId - int - 是否必填：否 - 规则Id</li>
- * @method void setFilters(array $Filters) 设置<li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>PolicyId - int64 - 是否必填：否 - 项Id</i>
+ * @method void setFilters(array $Filters) 设置<li>ItemId - int64 - 是否必填：否 - 项Id</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
 <li>ItemName - string - 是否必填：否 - 检测项名字</li>
 <li>RuleId - int - 是否必填：否 - 规则Id</li>
@@ -42,8 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBaselineItemInfoRequest extends AbstractModel
 {
     /**
-     * @var array <li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>PolicyId - int64 - 是否必填：否 - 项Id</i>
+     * @var array <li>ItemId - int64 - 是否必填：否 - 项Id</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
 <li>ItemName - string - 是否必填：否 - 检测项名字</li>
 <li>RuleId - int - 是否必填：否 - 规则Id</li>
@@ -71,8 +68,7 @@ class DescribeBaselineItemInfoRequest extends AbstractModel
     public $By;
 
     /**
-     * @param array $Filters <li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>PolicyId - int64 - 是否必填：否 - 项Id</i>
+     * @param array $Filters <li>ItemId - int64 - 是否必填：否 - 项Id</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
 <li>ItemName - string - 是否必填：否 - 检测项名字</li>
 <li>RuleId - int - 是否必填：否 - 规则Id</li>

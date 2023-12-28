@@ -18,23 +18,23 @@ namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 地址模版列表数据
+ * 地址模板列表数据
  *
- * @method string getUuid() 获取模版ID
+ * @method string getUuid() 获取模板ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUuid(string $Uuid) 设置模版ID
+ * @method void setUuid(string $Uuid) 设置模板ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取模版名称
+ * @method string getName() 获取模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置模版名称
+ * @method void setName(string $Name) 设置模板名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetail() 获取描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(string $Detail) 设置描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIpString() 获取IP模版
+ * @method string getIpString() 获取IP模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpString(string $IpString) 设置IP模版
+ * @method void setIpString(string $IpString) 设置IP模板
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInsertTime() 获取插入时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置修改时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取模版类型
+ * @method integer getType() 获取模板类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置模版类型
+ * @method void setType(integer $Type) 设置模板类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRulesNum() 获取关联规则条数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,13 +64,13 @@ use TencentCloud\Common\AbstractModel;
 class TemplateListInfo extends AbstractModel
 {
     /**
-     * @var string 模版ID
+     * @var string 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
-     * @var string 模版名称
+     * @var string 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
@@ -82,7 +82,7 @@ class TemplateListInfo extends AbstractModel
     public $Detail;
 
     /**
-     * @var string IP模版
+     * @var string IP模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpString;
@@ -100,7 +100,7 @@ class TemplateListInfo extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer 模版类型
+     * @var integer 模板类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -124,19 +124,19 @@ class TemplateListInfo extends AbstractModel
     public $ProtocolType;
 
     /**
-     * @param string $Uuid 模版ID
+     * @param string $Uuid 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 模版名称
+     * @param string $Name 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Detail 描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IpString IP模版
+     * @param string $IpString IP模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InsertTime 插入时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 模版类型
+     * @param integer $Type 模板类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RulesNum 关联规则条数
 注意：此字段可能返回 null，表示取不到有效值。

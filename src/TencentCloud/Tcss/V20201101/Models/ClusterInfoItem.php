@@ -60,9 +60,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckStatus(string $CheckStatus) 设置检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
  * @method string getTaskCreateTime() 获取任务创建时间,检查时间
  * @method void setTaskCreateTime(string $TaskCreateTime) 设置任务创建时间,检查时间
- * @method string getAccessedStatus() 获取接入状态
+ * @method string getAccessedStatus() 获取接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessedStatus(string $AccessedStatus) 设置接入状态
+ * @method void setAccessedStatus(string $AccessedStatus) 设置接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessedSubStatus() 获取接入失败原因
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,6 +95,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUnInstallAgentNodeCount() 获取未安装agent节点数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnInstallAgentNodeCount(integer $UnInstallAgentNodeCount) 设置未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getChargeCoresCnt() 获取计费核数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfoItem extends AbstractModel
@@ -184,7 +204,15 @@ class ClusterInfoItem extends AbstractModel
     public $TaskCreateTime;
 
     /**
-     * @var string 接入状态
+     * @var string 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessedStatus;
@@ -214,6 +242,12 @@ class ClusterInfoItem extends AbstractModel
     public $UnInstallAgentNodeCount;
 
     /**
+     * @var integer 计费核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChargeCoresCnt;
+
+    /**
      * @param string $ClusterId 集群id
      * @param string $ClusterName 集群名字
      * @param string $ClusterVersion 集群版本
@@ -234,7 +268,15 @@ class ClusterInfoItem extends AbstractModel
      * @param string $CheckFailReason 检查失败原因
      * @param string $CheckStatus 检查状态,为Task_Running, NoRisk, HasRisk, Uncheck, Task_Error
      * @param string $TaskCreateTime 任务创建时间,检查时间
-     * @param string $AccessedStatus 接入状态
+     * @param string $AccessedStatus 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessedSubStatus 接入失败原因
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,6 +285,8 @@ class ClusterInfoItem extends AbstractModel
      * @param integer $OffLineNodeCount 离线节点数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnInstallAgentNodeCount 未安装agent节点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ChargeCoresCnt 计费核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -356,6 +400,10 @@ class ClusterInfoItem extends AbstractModel
 
         if (array_key_exists("UnInstallAgentNodeCount",$param) and $param["UnInstallAgentNodeCount"] !== null) {
             $this->UnInstallAgentNodeCount = $param["UnInstallAgentNodeCount"];
+        }
+
+        if (array_key_exists("ChargeCoresCnt",$param) and $param["ChargeCoresCnt"] !== null) {
+            $this->ChargeCoresCnt = $param["ChargeCoresCnt"];
         }
     }
 }

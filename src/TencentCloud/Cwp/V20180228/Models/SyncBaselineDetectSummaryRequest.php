@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncBaselineDetectSummary请求参数结构体
  *
-
+ * @method array getTaskIds() 获取用于计算检测中和进度的任务ID集合，一般不用传入
+ * @method void setTaskIds(array $TaskIds) 设置用于计算检测中和进度的任务ID集合，一般不用传入
  */
 class SyncBaselineDetectSummaryRequest extends AbstractModel
 {
-
+    /**
+     * @var array 用于计算检测中和进度的任务ID集合，一般不用传入
+     */
+    public $TaskIds;
 
     /**
-
+     * @param array $TaskIds 用于计算检测中和进度的任务ID集合，一般不用传入
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class SyncBaselineDetectSummaryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
+            $this->TaskIds = $param["TaskIds"];
+        }
     }
 }

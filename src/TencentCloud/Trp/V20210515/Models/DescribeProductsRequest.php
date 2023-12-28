@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMerchantId(string $MerchantId) 设置商品ID
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
+ * @method integer getCertState() 获取认证状态
+ * @method void setCertState(integer $CertState) 设置认证状态
  */
 class DescribeProductsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeProductsRequest extends AbstractModel
     public $CorpId;
 
     /**
+     * @var integer 认证状态
+     */
+    public $CertState;
+
+    /**
      * @param string $Name 商品名称
      * @param integer $PageSize 条数
      * @param integer $PageNumber 页数
      * @param string $MerchantId 商品ID
      * @param integer $CorpId 企业ID
+     * @param integer $CertState 认证状态
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeProductsRequest extends AbstractModel
 
         if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
             $this->CorpId = $param["CorpId"];
+        }
+
+        if (array_key_exists("CertState",$param) and $param["CertState"] !== null) {
+            $this->CertState = $param["CertState"];
         }
     }
 }

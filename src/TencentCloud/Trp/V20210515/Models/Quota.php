@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProductCertify() 获取是否开启企业认证
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductCertify(integer $ProductCertify) 设置是否开启企业认证
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Quota extends AbstractModel
 {
@@ -154,6 +158,12 @@ class Quota extends AbstractModel
     public $Version;
 
     /**
+     * @var integer 是否开启企业认证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductCertify;
+
+    /**
      * @param string $StartTime 服务开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 服务结束时间
@@ -179,6 +189,8 @@ class Quota extends AbstractModel
      * @param integer $TrackType 溯源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 开通版本 lite:轻量版, basic:基础版, standard:标准版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProductCertify 是否开启企业认证
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,10 @@ class Quota extends AbstractModel
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {
             $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("ProductCertify",$param) and $param["ProductCertify"] !== null) {
+            $this->ProductCertify = $param["ProductCertify"];
         }
     }
 }

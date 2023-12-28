@@ -44,7 +44,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeCodeBatchesResponse DescribeCodeBatches(Models\DescribeCodeBatchesRequest $req) 查询批次列表
  * @method Models\DescribeCodeBatchsResponse DescribeCodeBatchs(Models\DescribeCodeBatchsRequest $req) 查询批次列表
 
-旧版接口已经弃用，新业务请使用用新版的接口 DescribeCodeBatches
+旧版接口已经弃用，新业务请使用新版的接口 DescribeCodeBatches
  * @method Models\DescribeCodePackStatusResponse DescribeCodePackStatus(Models\DescribeCodePackStatusRequest $req) 查询码包状态
  * @method Models\DescribeCodePackUrlResponse DescribeCodePackUrl(Models\DescribeCodePackUrlRequest $req) 查询码包地址
  * @method Models\DescribeCodePacksResponse DescribeCodePacks(Models\DescribeCodePacksRequest $req) 查询码包列表

@@ -53,6 +53,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeTreeResourcesResponse DescribeTreeResources(Models\DescribeTreeResourcesRequest $req) 查询树状结构资源列表
  * @method Models\DescribeWorkSpacesResponse DescribeWorkSpaces(Models\DescribeWorkSpacesRequest $req) 授权工作空间列表
  * @method Models\FetchSqlGatewayStatementResultResponse FetchSqlGatewayStatementResult(Models\FetchSqlGatewayStatementResultRequest $req) 查询Sql Gateway的Statement执行结果
+ * @method Models\GetMetaTableResponse GetMetaTable(Models\GetMetaTableRequest $req) 查询元数据表
  * @method Models\ModifyFolderResponse ModifyFolder(Models\ModifyFolderRequest $req) 自定义树状结构页面拖拽文件夹
  * @method Models\ModifyJobResponse ModifyJob(Models\ModifyJobRequest $req) 更新作业属性，仅允许以下3种操作，不支持组合操作：
 (1)	更新作业名称

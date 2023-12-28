@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFunction请求参数结构体
  *
- * @method string getFunctionName() 获取需要获取详情的函数名称
- * @method void setFunctionName(string $FunctionName) 设置需要获取详情的函数名称
+ * @method string getFunctionName() 获取需要获取详情的函数名称，ResourceId和FunctionName只能传一个
+ * @method void setFunctionName(string $FunctionName) 设置需要获取详情的函数名称，ResourceId和FunctionName只能传一个
  * @method string getQualifier() 获取函数的版本号
 默认值: $LATEST
  * @method void setQualifier(string $Qualifier) 设置函数的版本号
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class GetFunctionRequest extends AbstractModel
 {
     /**
-     * @var string 需要获取详情的函数名称
+     * @var string 需要获取详情的函数名称，ResourceId和FunctionName只能传一个
      */
     public $FunctionName;
 
@@ -58,7 +58,7 @@ class GetFunctionRequest extends AbstractModel
     public $ShowCode;
 
     /**
-     * @param string $FunctionName 需要获取详情的函数名称
+     * @param string $FunctionName 需要获取详情的函数名称，ResourceId和FunctionName只能传一个
      * @param string $Qualifier 函数的版本号
 默认值: $LATEST
      * @param string $Namespace 函数所属命名空间

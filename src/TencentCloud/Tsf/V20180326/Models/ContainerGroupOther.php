@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNum(integer $InstanceNum) 设置实例总数
  * @method integer getCurrentNum() 获取已启动实例总数
  * @method void setCurrentNum(integer $CurrentNum) 设置已启动实例总数
+ * @method string getLbDns() 获取负载均衡DNS地址
+ * @method void setLbDns(string $LbDns) 设置负载均衡DNS地址
  * @method string getLbIp() 获取负载均衡ip
  * @method void setLbIp(string $LbIp) 设置负载均衡ip
  * @method string getClusterIp() 获取Service ip
  * @method void setClusterIp(string $ClusterIp) 设置Service ip
- * @method string getStatus() 获取服务状态，请参考后面的的状态定义
- * @method void setStatus(string $Status) 设置服务状态，请参考后面的的状态定义
- * @method string getMessage() 获取服务状态，请参考后面的的状态定义
- * @method void setMessage(string $Message) 设置服务状态，请参考后面的的状态定义
+ * @method string getStatus() 获取服务状态，请参考后面的状态定义
+ * @method void setStatus(string $Status) 设置服务状态，请参考后面的状态定义
+ * @method string getMessage() 获取服务状态，请参考后面的状态定义
+ * @method void setMessage(string $Message) 设置服务状态，请参考后面的状态定义
  * @method array getEnvs() 获取环境变量
  * @method void setEnvs(array $Envs) 设置环境变量
  * @method integer getNodePort() 获取Service NodePort
@@ -64,6 +66,11 @@ class ContainerGroupOther extends AbstractModel
     public $CurrentNum;
 
     /**
+     * @var string 负载均衡DNS地址
+     */
+    public $LbDns;
+
+    /**
      * @var string 负载均衡ip
      */
     public $LbIp;
@@ -74,12 +81,12 @@ class ContainerGroupOther extends AbstractModel
     public $ClusterIp;
 
     /**
-     * @var string 服务状态，请参考后面的的状态定义
+     * @var string 服务状态，请参考后面的状态定义
      */
     public $Status;
 
     /**
-     * @var string 服务状态，请参考后面的的状态定义
+     * @var string 服务状态，请参考后面的状态定义
      */
     public $Message;
 
@@ -115,10 +122,11 @@ class ContainerGroupOther extends AbstractModel
     /**
      * @param integer $InstanceNum 实例总数
      * @param integer $CurrentNum 已启动实例总数
+     * @param string $LbDns 负载均衡DNS地址
      * @param string $LbIp 负载均衡ip
      * @param string $ClusterIp Service ip
-     * @param string $Status 服务状态，请参考后面的的状态定义
-     * @param string $Message 服务状态，请参考后面的的状态定义
+     * @param string $Status 服务状态，请参考后面的状态定义
+     * @param string $Message 服务状态，请参考后面的状态定义
      * @param array $Envs 环境变量
      * @param integer $NodePort Service NodePort
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,6 +156,10 @@ class ContainerGroupOther extends AbstractModel
 
         if (array_key_exists("CurrentNum",$param) and $param["CurrentNum"] !== null) {
             $this->CurrentNum = $param["CurrentNum"];
+        }
+
+        if (array_key_exists("LbDns",$param) and $param["LbDns"] !== null) {
+            $this->LbDns = $param["LbDns"];
         }
 
         if (array_key_exists("LbIp",$param) and $param["LbIp"] !== null) {

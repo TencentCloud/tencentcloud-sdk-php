@@ -21,25 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 扩展服务开通和授权的详细信息
  *
  * @method string getType() 获取扩展服务的类型，可能是以下值：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>BATCH_SIGN：批量签署</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
+<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
+<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
+<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
+<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
  * @method void setType(string $Type) 设置扩展服务的类型，可能是以下值：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>BATCH_SIGN：批量签署</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
+<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
+<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
+<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
+<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
  * @method string getName() 获取扩展服务的名称
  * @method void setName(string $Name) 设置扩展服务的名称
  * @method string getStatus() 获取扩展服务的开通状态：
-ENABLE：开通
-DISABLE：未开通
+<ul>
+<li>ENABLE : 已开通</li>
+<li>DISABLE : 未开通</li>
+</ul>
  * @method void setStatus(string $Status) 设置扩展服务的开通状态：
-ENABLE：开通
-DISABLE：未开通
+<ul>
+<li>ENABLE : 已开通</li>
+<li>DISABLE : 未开通</li>
+</ul>
  * @method string getOperatorUserId() 获取操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperatorUserId(string $OperatorUserId) 设置操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
@@ -57,11 +73,17 @@ class ExtendAuthInfo extends AbstractModel
 {
     /**
      * @var string 扩展服务的类型，可能是以下值：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>BATCH_SIGN：批量签署</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
+<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
+<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
+<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
+<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
      */
     public $Type;
 
@@ -72,8 +94,10 @@ class ExtendAuthInfo extends AbstractModel
 
     /**
      * @var string 扩展服务的开通状态：
-ENABLE：开通
-DISABLE：未开通
+<ul>
+<li>ENABLE : 已开通</li>
+<li>DISABLE : 未开通</li>
+</ul>
      */
     public $Status;
 
@@ -97,15 +121,23 @@ DISABLE：未开通
 
     /**
      * @param string $Type 扩展服务的类型，可能是以下值：
-<ul><li>OPEN_SERVER_SIGN：企业静默签署</li>
+<ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>BATCH_SIGN：批量签署</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
-<li>MOBILE_CHECK_APPROVER：使用手机号验证签署方身份</li>
+<li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
+<li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
+<li>HIDE_OPERATOR_DISPLAY：隐藏合同经办人姓名</li>
+<li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
+<li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
+<li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
 <li>PAGING_SEAL：骑缝章</li>
-<li>BATCH_SIGN：批量签署</li></ul>
+<li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
      * @param string $Name 扩展服务的名称
      * @param string $Status 扩展服务的开通状态：
-ENABLE：开通
-DISABLE：未开通
+<ul>
+<li>ENABLE : 已开通</li>
+<li>DISABLE : 未开通</li>
+</ul>
      * @param string $OperatorUserId 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。

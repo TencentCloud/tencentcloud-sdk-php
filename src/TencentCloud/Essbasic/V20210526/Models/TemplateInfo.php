@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponents(array $Components) 设置模板的填充控件列表
  * @method array getRecipients() 获取此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
  * @method void setRecipients(array $Recipients) 设置此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
- * @method array getSignComponents() 获取此模版中的签署控件列表
- * @method void setSignComponents(array $SignComponents) 设置此模版中的签署控件列表
+ * @method array getSignComponents() 获取此模板中的签署控件列表
+ * @method void setSignComponents(array $SignComponents) 设置此模板中的签署控件列表
  * @method integer getTemplateType() 获取模板类型：1-静默签；3-普通模板
  * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；3-普通模板
  * @method boolean getIsPromoter() 获取是否是发起人 ,已弃用
@@ -119,7 +119,7 @@ class TemplateInfo extends AbstractModel
     public $Recipients;
 
     /**
-     * @var array 此模版中的签署控件列表
+     * @var array 此模板中的签署控件列表
      */
     public $SignComponents;
 
@@ -199,7 +199,7 @@ class TemplateInfo extends AbstractModel
      * @param string $Description 模板描述信息
      * @param array $Components 模板的填充控件列表
      * @param array $Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
-     * @param array $SignComponents 此模版中的签署控件列表
+     * @param array $SignComponents 此模板中的签署控件列表
      * @param integer $TemplateType 模板类型：1-静默签；3-普通模板
      * @param boolean $IsPromoter 是否是发起人 ,已弃用
      * @param string $Creator 模板的创建者名字

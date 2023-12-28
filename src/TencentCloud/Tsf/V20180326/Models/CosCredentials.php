@@ -18,7 +18,7 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * cos临时帐号信息
+ * cos临时账号信息
  *
  * @method string getSessionToken() 获取会话Token
 注意：此字段可能返回 null，表示取不到有效值。

@@ -22,11 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取过滤条件。
 <li>ExportStatus- string -是否必填: 否 - 导出状态 RUNNING: 导出中 SUCCESS:导出完成 FAILURE:失败
-<li>ExportSource- string -是否必填: 否 - 导出来源 LocalImage: 本地镜像
+</li>
+<li>ExportSource- string -是否必填: 否 - 导出来源 LocalImage: 本地镜像 RegistryImage: 仓库镜像
 </li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>ExportStatus- string -是否必填: 否 - 导出状态 RUNNING: 导出中 SUCCESS:导出完成 FAILURE:失败
-<li>ExportSource- string -是否必填: 否 - 导出来源 LocalImage: 本地镜像
+</li>
+<li>ExportSource- string -是否必填: 否 - 导出来源 LocalImage: 本地镜像 RegistryImage: 仓库镜像
 </li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
@@ -44,7 +46,8 @@ class DescribeExportJobManageListRequest extends AbstractModel
     /**
      * @var array 过滤条件。
 <li>ExportStatus- string -是否必填: 否 - 导出状态 RUNNING: 导出中 SUCCESS:导出完成 FAILURE:失败
-<li>ExportSource- string -是否必填: 否 - 导出来源 LocalImage: 本地镜像
+</li>
+<li>ExportSource- string -是否必填: 否 - 导出来源 LocalImage: 本地镜像 RegistryImage: 仓库镜像
 </li>
      */
     public $Filters;
@@ -73,7 +76,8 @@ InsertTime: 创建时间
     /**
      * @param array $Filters 过滤条件。
 <li>ExportStatus- string -是否必填: 否 - 导出状态 RUNNING: 导出中 SUCCESS:导出完成 FAILURE:失败
-<li>ExportSource- string -是否必填: 否 - 导出来源 LocalImage: 本地镜像
+</li>
+<li>ExportSource- string -是否必填: 否 - 导出来源 LocalImage: 本地镜像 RegistryImage: 仓库镜像
 </li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100

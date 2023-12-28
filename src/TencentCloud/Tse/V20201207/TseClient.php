@@ -27,6 +27,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\CreateCloudNativeAPIGatewayResponse CreateCloudNativeAPIGateway(Models\CreateCloudNativeAPIGatewayRequest $req) 创建云原生API网关实例
  * @method Models\CreateCloudNativeAPIGatewayCanaryRuleResponse CreateCloudNativeAPIGatewayCanaryRule(Models\CreateCloudNativeAPIGatewayCanaryRuleRequest $req) 创建云原生网关的灰度规则
  * @method Models\CreateCloudNativeAPIGatewayCertificateResponse CreateCloudNativeAPIGatewayCertificate(Models\CreateCloudNativeAPIGatewayCertificateRequest $req) 创建云原生网关证书
+ * @method Models\CreateCloudNativeAPIGatewayPublicNetworkResponse CreateCloudNativeAPIGatewayPublicNetwork(Models\CreateCloudNativeAPIGatewayPublicNetworkRequest $req) 创建公网网络配置
  * @method Models\CreateCloudNativeAPIGatewayRouteResponse CreateCloudNativeAPIGatewayRoute(Models\CreateCloudNativeAPIGatewayRouteRequest $req) 创建云原生网关路由
  * @method Models\CreateCloudNativeAPIGatewayRouteRateLimitResponse CreateCloudNativeAPIGatewayRouteRateLimit(Models\CreateCloudNativeAPIGatewayRouteRateLimitRequest $req) 创建云原生网关限流插件(路由)
  * @method Models\CreateCloudNativeAPIGatewayServiceResponse CreateCloudNativeAPIGatewayService(Models\CreateCloudNativeAPIGatewayServiceRequest $req) 创建云原生网关服务
@@ -37,6 +38,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DeleteCloudNativeAPIGatewayResponse DeleteCloudNativeAPIGateway(Models\DeleteCloudNativeAPIGatewayRequest $req) 删除云原生API网关实例
  * @method Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse DeleteCloudNativeAPIGatewayCanaryRule(Models\DeleteCloudNativeAPIGatewayCanaryRuleRequest $req) 删除云原生网关的灰度规则
  * @method Models\DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificate(Models\DeleteCloudNativeAPIGatewayCertificateRequest $req) 删除云原生网关证书
+ * @method Models\DeleteCloudNativeAPIGatewayPublicNetworkResponse DeleteCloudNativeAPIGatewayPublicNetwork(Models\DeleteCloudNativeAPIGatewayPublicNetworkRequest $req) 删除公网网络配置
  * @method Models\DeleteCloudNativeAPIGatewayRouteResponse DeleteCloudNativeAPIGatewayRoute(Models\DeleteCloudNativeAPIGatewayRouteRequest $req) 删除云原生网关路由
  * @method Models\DeleteCloudNativeAPIGatewayRouteRateLimitResponse DeleteCloudNativeAPIGatewayRouteRateLimit(Models\DeleteCloudNativeAPIGatewayRouteRateLimitRequest $req) 删除云原生网关的限流插件(路由)
  * @method Models\DeleteCloudNativeAPIGatewayServiceResponse DeleteCloudNativeAPIGatewayService(Models\DeleteCloudNativeAPIGatewayServiceRequest $req) 删除云原生网关服务
@@ -75,7 +77,10 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyCloudNativeAPIGatewayRouteRateLimitResponse ModifyCloudNativeAPIGatewayRouteRateLimit(Models\ModifyCloudNativeAPIGatewayRouteRateLimitRequest $req) 修改云原生网关限流插件(路由)
  * @method Models\ModifyCloudNativeAPIGatewayServiceResponse ModifyCloudNativeAPIGatewayService(Models\ModifyCloudNativeAPIGatewayServiceRequest $req) 修改云原生网关服务
  * @method Models\ModifyCloudNativeAPIGatewayServiceRateLimitResponse ModifyCloudNativeAPIGatewayServiceRateLimit(Models\ModifyCloudNativeAPIGatewayServiceRateLimitRequest $req) 修改云原生网关限流插件(服务)
+ * @method Models\ModifyConsoleNetworkResponse ModifyConsoleNetwork(Models\ModifyConsoleNetworkRequest $req) 修改网关实例Konga网络配置
  * @method Models\ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(Models\ModifyNativeGatewayServerGroupRequest $req) 修改云原生API网关实例分组基础信息
+ * @method Models\ModifyNetworkAccessStrategyResponse ModifyNetworkAccessStrategy(Models\ModifyNetworkAccessStrategyRequest $req) 修改云原生API网关实例Kong访问策略，支持白名单或者黑名单。
+ * @method Models\ModifyNetworkBasicInfoResponse ModifyNetworkBasicInfo(Models\ModifyNetworkBasicInfoRequest $req) 修改云原生API网关实例网络基本信息，比如带宽以及描述，只支持修改客户端公网/内网的信息。
  * @method Models\ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(Models\ModifyUpstreamNodeStatusRequest $req) 修改云原生网关上游实例节点健康状态
  * @method Models\OpenWafProtectionResponse OpenWafProtection(Models\OpenWafProtectionRequest $req) 开启 WAF 防护
  * @method Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfo(Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest $req) 修改云原生网关证书信息

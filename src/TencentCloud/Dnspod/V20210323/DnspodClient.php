@@ -32,6 +32,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateDomainCustomLineResponse CreateDomainCustomLine(Models\CreateDomainCustomLineRequest $req) 创建域名的自定义线路
  * @method Models\CreateDomainGroupResponse CreateDomainGroup(Models\CreateDomainGroupRequest $req) 创建域名分组
  * @method Models\CreateRecordResponse CreateRecord(Models\CreateRecordRequest $req) 添加记录
+备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
  * @method Models\CreateRecordBatchResponse CreateRecordBatch(Models\CreateRecordBatchRequest $req) 批量添加记录
  * @method Models\CreateRecordGroupResponse CreateRecordGroup(Models\CreateRecordGroupRequest $req) 添加记录分组
  * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) 创建快照
@@ -50,6 +51,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainAnalyticsResponse DescribeDomainAnalytics(Models\DescribeDomainAnalyticsRequest $req) 统计各个域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况
  * @method Models\DescribeDomainCustomLineListResponse DescribeDomainCustomLineList(Models\DescribeDomainCustomLineListRequest $req) 获取域名的自定义线路列表
  * @method Models\DescribeDomainFilterListResponse DescribeDomainFilterList(Models\DescribeDomainFilterListRequest $req) 获取域名筛选列表
+备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
  * @method Models\DescribeDomainGroupListResponse DescribeDomainGroupList(Models\DescribeDomainGroupListRequest $req) 获取域名分组列表
  * @method Models\DescribeDomainListResponse DescribeDomainList(Models\DescribeDomainListRequest $req) 获取域名列表
  * @method Models\DescribeDomainLogListResponse DescribeDomainLogList(Models\DescribeDomainLogListRequest $req) 获取域名日志
@@ -64,6 +66,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeRecordGroupListResponse DescribeRecordGroupList(Models\DescribeRecordGroupListRequest $req) 查询解析记录分组列表
  * @method Models\DescribeRecordLineListResponse DescribeRecordLineList(Models\DescribeRecordLineListRequest $req) 获取等级允许的线路
  * @method Models\DescribeRecordListResponse DescribeRecordList(Models\DescribeRecordListRequest $req) 获取某个域名下的解析记录列表
+备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
  * @method Models\DescribeRecordSnapshotRollbackResultResponse DescribeRecordSnapshotRollbackResult(Models\DescribeRecordSnapshotRollbackResultRequest $req) 查询解析记录重新回滚的结果
  * @method Models\DescribeRecordTypeResponse DescribeRecordType(Models\DescribeRecordTypeRequest $req) 获取等级允许的记录类型
  * @method Models\DescribeSnapshotConfigResponse DescribeSnapshotConfig(Models\DescribeSnapshotConfigRequest $req) 查询解析快照配置

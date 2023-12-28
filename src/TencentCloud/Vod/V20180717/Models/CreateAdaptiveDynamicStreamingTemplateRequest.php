@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
  * @method void setStreamInfos(array $StreamInfos) 设置自适应转码输出子流参数信息，最多输出10路子流。
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
- * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method string getName() 获取模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置模板名称，长度限制：64 个字符。
  * @method string getDrmType() 获取DRM 方案类型，取值范围：
@@ -95,7 +95,7 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $StreamInfos;
 
     /**
-     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     public $SubAppId;
 
@@ -156,7 +156,7 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 <li>MPEG-DASH。</li>
      * @param array $StreamInfos 自适应转码输出子流参数信息，最多输出10路子流。
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
-     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $Name 模板名称，长度限制：64 个字符。
      * @param string $DrmType DRM 方案类型，取值范围：
 <li>SimpleAES</li>

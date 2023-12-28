@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMerchantName() 获取商户名称
  * @method void setMerchantName(string $MerchantName) 设置商户名称
+ * @method integer getCertState() 获取认证状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertState(integer $CertState) 设置认证状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Product extends AbstractModel
 {
@@ -120,6 +124,12 @@ class Product extends AbstractModel
     public $MerchantName;
 
     /**
+     * @var integer 认证状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertState;
+
+    /**
      * @param string $MerchantId 商户标识码
      * @param string $Name 商品名称
      * @param string $ProductId 商品id
@@ -136,6 +146,8 @@ class Product extends AbstractModel
      * @param Ext $Ext 预留字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MerchantName 商户名称
+     * @param integer $CertState 认证状态
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -197,6 +209,10 @@ class Product extends AbstractModel
 
         if (array_key_exists("MerchantName",$param) and $param["MerchantName"] !== null) {
             $this->MerchantName = $param["MerchantName"];
+        }
+
+        if (array_key_exists("CertState",$param) and $param["CertState"] !== null) {
+            $this->CertState = $param["CertState"];
         }
     }
 }

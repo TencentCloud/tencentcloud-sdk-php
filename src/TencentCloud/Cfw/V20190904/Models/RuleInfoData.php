@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置协议
  * @method string getStrategy() 获取策略, 0：观察，1：阻断，2：放行
  * @method void setStrategy(string $Strategy) 设置策略, 0：观察，1：阻断，2：放行
- * @method integer getSourceType() 获取访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
- * @method void setSourceType(integer $SourceType) 设置访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+ * @method integer getSourceType() 获取访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
+ * @method void setSourceType(integer $SourceType) 设置访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
  * @method integer getDirection() 获取方向，0：出站，1：入站
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站
  * @method string getDetail() 获取描述
  * @method void setDetail(string $Detail) 设置描述
- * @method integer getTargetType() 获取访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
- * @method void setTargetType(integer $TargetType) 设置访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+ * @method integer getTargetType() 获取访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
+ * @method void setTargetType(integer $TargetType) 设置访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
  * @method string getPort() 获取端口
  * @method void setPort(string $Port) 设置端口
  * @method integer getId() 获取id值
@@ -87,7 +87,7 @@ class RuleInfoData extends AbstractModel
     public $Strategy;
 
     /**
-     * @var integer 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * @var integer 访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
      */
     public $SourceType;
 
@@ -102,7 +102,7 @@ class RuleInfoData extends AbstractModel
     public $Detail;
 
     /**
-     * @var integer 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * @var integer 访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
      */
     public $TargetType;
 
@@ -162,10 +162,10 @@ class RuleInfoData extends AbstractModel
      * @param string $TargetIp 访问目的
      * @param string $Protocol 协议
      * @param string $Strategy 策略, 0：观察，1：阻断，2：放行
-     * @param integer $SourceType 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * @param integer $SourceType 访问源类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
      * @param integer $Direction 方向，0：出站，1：入站
      * @param string $Detail 描述
-     * @param integer $TargetType 访问目的类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
+     * @param integer $TargetType 访问目的类型，1是IP，3是域名，4是IP地址模板，5是域名地址模板
      * @param string $Port 端口
      * @param integer $Id id值
      * @param string $LogId 日志id，从告警处创建必传，其它为空

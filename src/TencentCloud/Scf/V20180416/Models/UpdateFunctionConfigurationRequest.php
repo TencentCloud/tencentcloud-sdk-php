@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsCache(string $DnsCache) 设置是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
  * @method IntranetConfigIn getIntranetConfig() 获取内网访问配置
  * @method void setIntranetConfig(IntranetConfigIn $IntranetConfig) 设置内网访问配置
+ * @method boolean getIgnoreSysLog() 获取忽略系统日志上报
+ * @method void setIgnoreSysLog(boolean $IgnoreSysLog) 设置忽略系统日志上报
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -188,6 +190,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $IntranetConfig;
 
     /**
+     * @var boolean 忽略系统日志上报
+     */
+    public $IgnoreSysLog;
+
+    /**
      * @param string $FunctionName 要修改的函数名称
      * @param string $Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
      * @param integer $MemorySize 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。
@@ -212,6 +219,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param InstanceConcurrencyConfig $InstanceConcurrencyConfig 单实例多并发配置。只支持Web函数。
      * @param string $DnsCache 是否开启Dns缓存能力。只支持EVENT函数。默认为FALSE，TRUE 为开启，FALSE为关闭
      * @param IntranetConfigIn $IntranetConfig 内网访问配置
+     * @param boolean $IgnoreSysLog 忽略系统日志上报
      */
     function __construct()
     {
@@ -329,6 +337,10 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
         if (array_key_exists("IntranetConfig",$param) and $param["IntranetConfig"] !== null) {
             $this->IntranetConfig = new IntranetConfigIn();
             $this->IntranetConfig->deserialize($param["IntranetConfig"]);
+        }
+
+        if (array_key_exists("IgnoreSysLog",$param) and $param["IgnoreSysLog"] !== null) {
+            $this->IgnoreSysLog = $param["IgnoreSysLog"];
         }
     }
 }

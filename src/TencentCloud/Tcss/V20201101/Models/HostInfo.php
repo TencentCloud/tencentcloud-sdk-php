@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getClusterAccessedStatus() 获取集群接入状态
  * @method void setClusterAccessedStatus(string $ClusterAccessedStatus) 设置集群接入状态
+ * @method integer getChargeCoresCnt() 获取计费核数
+ * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数
+ * @method string getDefendStatus() 获取防护状态:
+已防护: Defended
+未防护: UnDefended
+ * @method void setDefendStatus(string $DefendStatus) 设置防护状态:
+已防护: Defended
+未防护: UnDefended
  */
 class HostInfo extends AbstractModel
 {
@@ -170,6 +178,18 @@ class HostInfo extends AbstractModel
     public $ClusterAccessedStatus;
 
     /**
+     * @var integer 计费核数
+     */
+    public $ChargeCoresCnt;
+
+    /**
+     * @var string 防护状态:
+已防护: Defended
+未防护: UnDefended
+     */
+    public $DefendStatus;
+
+    /**
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip即内网ip
      * @param string $HostName 主机名称
@@ -192,6 +212,10 @@ class HostInfo extends AbstractModel
      * @param string $ClusterID 集群id
      * @param string $ClusterName 集群名称
      * @param string $ClusterAccessedStatus 集群接入状态
+     * @param integer $ChargeCoresCnt 计费核数
+     * @param string $DefendStatus 防护状态:
+已防护: Defended
+未防护: UnDefended
      */
     function __construct()
     {
@@ -290,6 +314,14 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("ClusterAccessedStatus",$param) and $param["ClusterAccessedStatus"] !== null) {
             $this->ClusterAccessedStatus = $param["ClusterAccessedStatus"];
+        }
+
+        if (array_key_exists("ChargeCoresCnt",$param) and $param["ChargeCoresCnt"] !== null) {
+            $this->ChargeCoresCnt = $param["ChargeCoresCnt"];
+        }
+
+        if (array_key_exists("DefendStatus",$param) and $param["DefendStatus"] !== null) {
+            $this->DefendStatus = $param["DefendStatus"];
         }
     }
 }

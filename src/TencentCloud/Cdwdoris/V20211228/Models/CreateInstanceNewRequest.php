@@ -42,8 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDorisUserPwd(string $DorisUserPwd) 设置数据库密码
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
- * @method integer getHaType() 获取高可用类型：0：非高可用，1：读高可用，2：读写高可用。
- * @method void setHaType(integer $HaType) 设置高可用类型：0：非高可用，1：读高可用，2：读写高可用。
+ * @method integer getHaType() 获取高可用类型：
+0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
+1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
+2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
+ * @method void setHaType(integer $HaType) 设置高可用类型：
+0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
+1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
+2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
  * @method integer getCaseSensitive() 获取表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
  * @method void setCaseSensitive(integer $CaseSensitive) 设置表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
  */
@@ -105,7 +111,10 @@ class CreateInstanceNewRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 高可用类型：0：非高可用，1：读高可用，2：读写高可用。
+     * @var integer 高可用类型：
+0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
+1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
+2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
      */
     public $HaType;
 
@@ -126,7 +135,10 @@ class CreateInstanceNewRequest extends AbstractModel
      * @param string $InstanceName 实例名字
      * @param string $DorisUserPwd 数据库密码
      * @param array $Tags 标签列表
-     * @param integer $HaType 高可用类型：0：非高可用，1：读高可用，2：读写高可用。
+     * @param integer $HaType 高可用类型：
+0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
+1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
+2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
      * @param integer $CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
      */
     function __construct()

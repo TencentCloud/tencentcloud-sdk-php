@@ -43,13 +43,13 @@ use TencentCloud\Common\AbstractModel;
 2、确定的机架位置包含:
 温度范围为 41 到 104°F (5 到 40°C)。
 湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
+机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
  * @method void setConditionRequirement(boolean $ConditionRequirement) 设置是否满足下面环境条件：
 1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
 2、确定的机架位置包含:
 温度范围为 41 到 104°F (5 到 40°C)。
 湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
+机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
  * @method boolean getDimensionRequirement() 获取是否满足下面的尺寸条件：
 您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
 您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
 您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
 您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
 在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
- * @method boolean getRedundantNetworking() 获取是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
- * @method void setRedundantNetworking(boolean $RedundantNetworking) 设置是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
+ * @method boolean getRedundantNetworking() 获取是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
+ * @method void setRedundantNetworking(boolean $RedundantNetworking) 设置是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
  * @method boolean getNeedHelp() 获取是否需要腾讯云团队协助完成机架支撑工作
  * @method void setNeedHelp(boolean $NeedHelp) 设置是否需要腾讯云团队协助完成机架支撑工作
  * @method boolean getRedundantPower() 获取是否电源冗余
@@ -120,7 +120,7 @@ class ModifySiteDeviceInfoRequest extends AbstractModel
 2、确定的机架位置包含:
 温度范围为 41 到 104°F (5 到 40°C)。
 湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
+机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
      */
     public $ConditionRequirement;
 
@@ -133,7 +133,7 @@ class ModifySiteDeviceInfoRequest extends AbstractModel
     public $DimensionRequirement;
 
     /**
-     * @var boolean 是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
+     * @var boolean 是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
      */
     public $RedundantNetworking;
 
@@ -167,12 +167,12 @@ class ModifySiteDeviceInfoRequest extends AbstractModel
 2、确定的机架位置包含:
 温度范围为 41 到 104°F (5 到 40°C)。
 湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
+机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)，散热功率须达到CDC运行功率值的 145.8 倍以上。
      * @param boolean $DimensionRequirement 是否满足下面的尺寸条件：
 您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
 您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
 在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
-     * @param boolean $RedundantNetworking 是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
+     * @param boolean $RedundantNetworking 是否提供冗余的上游设备(交换机或路由器)，以便实现网络出口的高可用。
      * @param boolean $NeedHelp 是否需要腾讯云团队协助完成机架支撑工作
      * @param boolean $RedundantPower 是否电源冗余
      * @param boolean $BreakerRequirement 上游断路器是否具备

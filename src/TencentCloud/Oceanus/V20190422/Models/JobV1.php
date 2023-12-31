@@ -148,6 +148,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置作业标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method JobEventInfo getEventInfo() 获取作业异常事件信息	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventInfo(JobEventInfo $EventInfo) 设置作业异常事件信息	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobV1 extends AbstractModel
 {
@@ -344,6 +348,12 @@ class JobV1 extends AbstractModel
     public $Tags;
 
     /**
+     * @var JobEventInfo 作业异常事件信息	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventInfo;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -407,6 +417,8 @@ class JobV1 extends AbstractModel
      * @param string $WorkSpaceName 工作空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 作业标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobEventInfo $EventInfo 作业异常事件信息	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -553,6 +565,11 @@ class JobV1 extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EventInfo",$param) and $param["EventInfo"] !== null) {
+            $this->EventInfo = new JobEventInfo();
+            $this->EventInfo->deserialize($param["EventInfo"]);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Cdc\V20201214\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 带有时间的详细数据。
+ * 带有时间戳的详细数据。
  *
  * @method array getTimestamps() 获取时间戳
 注意：此字段可能返回 null，表示取不到有效值。

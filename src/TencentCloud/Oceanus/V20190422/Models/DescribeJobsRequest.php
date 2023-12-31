@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页大小，默认为20，最大值为100
  * @method string getWorkSpaceId() 获取工作空间 SerialId
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method array getExtraResult() 获取查询额外的作业信息,例如 JobEventInfo	
+ * @method void setExtraResult(array $ExtraResult) 设置查询额外的作业信息,例如 JobEventInfo	
  */
 class DescribeJobsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeJobsRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
+     * @var array 查询额外的作业信息,例如 JobEventInfo	
+     */
+    public $ExtraResult;
+
+    /**
      * @param array $JobIds 按照一个或者多个作业ID查询。作业ID形如：cql-11112222，每次请求的作业上限为100。参数不支持同时指定JobIds和Filters。
      * @param array $Filters 过滤条件，支持的 Filter.Name 为：作业名 Name、作业状态 Status、所属集群 ClusterId、作业id JobId、集群名称 ClusterName。 每次请求的 Filters 个数的上限为 5，Filter.Values 的个数上限为 5。参数不支持同时指定 JobIds 和 Filters。
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 分页大小，默认为20，最大值为100
      * @param string $WorkSpaceId 工作空间 SerialId
+     * @param array $ExtraResult 查询额外的作业信息,例如 JobEventInfo	
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class DescribeJobsRequest extends AbstractModel
 
         if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
             $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("ExtraResult",$param) and $param["ExtraResult"] !== null) {
+            $this->ExtraResult = $param["ExtraResult"];
         }
     }
 }

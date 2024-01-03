@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置计费类型，PREPAID 包年包月，POSTPAID_BY_HOUR 按量计费
  * @method boolean getIsElastic() 获取是否弹性ck
  * @method void setIsElastic(boolean $IsElastic) 设置是否弹性ck
+ * @method integer getCaseType() 获取是否是购买页面需要的spec
+ * @method void setCaseType(integer $CaseType) 设置是否是购买页面需要的spec
  */
 class DescribeSpecRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeSpecRequest extends AbstractModel
     public $IsElastic;
 
     /**
+     * @var integer 是否是购买页面需要的spec
+     */
+    public $CaseType;
+
+    /**
      * @param string $Zone 地域信息，例如"ap-guangzhou-1"
      * @param string $PayMode 计费类型，PREPAID 包年包月，POSTPAID_BY_HOUR 按量计费
      * @param boolean $IsElastic 是否弹性ck
+     * @param integer $CaseType 是否是购买页面需要的spec
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeSpecRequest extends AbstractModel
 
         if (array_key_exists("IsElastic",$param) and $param["IsElastic"] !== null) {
             $this->IsElastic = $param["IsElastic"];
+        }
+
+        if (array_key_exists("CaseType",$param) and $param["CaseType"] !== null) {
+            $this->CaseType = $param["CaseType"];
         }
     }
 }

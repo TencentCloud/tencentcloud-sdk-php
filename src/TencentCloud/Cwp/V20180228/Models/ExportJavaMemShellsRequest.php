@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportJavaMemShells请求参数结构体
  *
- * @method array getFilters() 获取过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
- * @method void setFilters(array $Filters) 设置过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+ * @method array getFilters() 获取过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+ * @method void setFilters(array $Filters) 设置过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
  * @method array getWhere() 获取导出字段
  * @method void setWhere(array $Where) 设置导出字段
  */
 class ExportJavaMemShellsRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+     * @var array 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
      */
     public $Filters;
 
@@ -38,7 +44,9 @@ class ExportJavaMemShellsRequest extends AbstractModel
     public $Where;
 
     /**
-     * @param array $Filters 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+     * @param array $Filters 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
      * @param array $Where 导出字段
      */
     function __construct()

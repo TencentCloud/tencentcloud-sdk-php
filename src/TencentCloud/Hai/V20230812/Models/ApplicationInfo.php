@@ -44,6 +44,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinSystemDiskSize(integer $MinSystemDiskSize) 设置系统盘大小下限
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationType() 获取应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationType(string $ApplicationType) 设置应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationState() 获取应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationState(string $ApplicationState) 设置应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getApplicationSize() 获取应用大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationSize(integer $ApplicationSize) 设置应用大小
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationInfo extends AbstractModel
 {
@@ -80,6 +98,31 @@ class ApplicationInfo extends AbstractModel
     public $MinSystemDiskSize;
 
     /**
+     * @var string 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationType;
+
+    /**
+     * @var string 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationState;
+
+    /**
+     * @var string 应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 应用大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationSize;
+
+    /**
      * @param string $ApplicationId 应用id
 
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,6 +134,15 @@ class ApplicationInfo extends AbstractModel
      * @param string $ConfigEnvironment 应用的环境配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinSystemDiskSize 系统盘大小下限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationType 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationState 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
+示例值：ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 应用创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ApplicationSize 应用大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +176,22 @@ class ApplicationInfo extends AbstractModel
 
         if (array_key_exists("MinSystemDiskSize",$param) and $param["MinSystemDiskSize"] !== null) {
             $this->MinSystemDiskSize = $param["MinSystemDiskSize"];
+        }
+
+        if (array_key_exists("ApplicationType",$param) and $param["ApplicationType"] !== null) {
+            $this->ApplicationType = $param["ApplicationType"];
+        }
+
+        if (array_key_exists("ApplicationState",$param) and $param["ApplicationState"] !== null) {
+            $this->ApplicationState = $param["ApplicationState"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ApplicationSize",$param) and $param["ApplicationSize"] !== null) {
+            $this->ApplicationSize = $param["ApplicationSize"];
         }
     }
 }

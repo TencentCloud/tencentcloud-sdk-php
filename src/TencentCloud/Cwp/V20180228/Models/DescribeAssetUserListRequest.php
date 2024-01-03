@@ -70,10 +70,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
- * @method string getBy() 获取可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays
- * @method void setBy(string $By) 设置可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays
+ * @method string getBy() 获取可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
+
+ * @method void setBy(string $By) 设置可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
  */
 class DescribeAssetUserListRequest extends AbstractModel
 {
@@ -123,8 +122,8 @@ class DescribeAssetUserListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays
+     * @var string 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
+
      */
     public $By;
 
@@ -154,8 +153,7 @@ PasswordLockDays
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
      * @param string $Order 排序方式，asc升序 或 desc降序
-     * @param string $By 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime]
-PasswordLockDays
+     * @param string $By 可选排序：[FirstTime|LoginTime|PasswordChangeTime|PasswordDuaTime|PasswordLockDays]
      */
     function __construct()
     {

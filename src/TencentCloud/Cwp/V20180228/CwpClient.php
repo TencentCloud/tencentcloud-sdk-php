@@ -254,7 +254,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeLoginWhiteListResponse DescribeLoginWhiteList(Models\DescribeLoginWhiteListRequest $req) 获取异地登录白名单列表
  * @method Models\DescribeMachineClearHistoryResponse DescribeMachineClearHistory(Models\DescribeMachineClearHistoryRequest $req) 查询机器清理历史记录
  * @method Models\DescribeMachineDefenseCntResponse DescribeMachineDefenseCnt(Models\DescribeMachineDefenseCntRequest $req) 查询主机高级防御事件数统计
- * @method Models\DescribeMachineFileTamperRulesResponse DescribeMachineFileTamperRules(Models\DescribeMachineFileTamperRulesRequest $req) 查询主机相关核心文件监控规则列 表   
+ * @method Models\DescribeMachineFileTamperRulesResponse DescribeMachineFileTamperRules(Models\DescribeMachineFileTamperRulesRequest $req) 查询主机相关核心文件监控规则列表
  * @method Models\DescribeMachineGeneralResponse DescribeMachineGeneral(Models\DescribeMachineGeneralRequest $req) 查询主机概览信息
  * @method Models\DescribeMachineInfoResponse DescribeMachineInfo(Models\DescribeMachineInfoRequest $req) 本接口（DescribeMachineInfo）用于获取机器详细信息。
  * @method Models\DescribeMachineLicenseDetailResponse DescribeMachineLicenseDetail(Models\DescribeMachineLicenseDetailRequest $req) 本接口 (DescribeMachineLicenseDetail)查询机器授权信息

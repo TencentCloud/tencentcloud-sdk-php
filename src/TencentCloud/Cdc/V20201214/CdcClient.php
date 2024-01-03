@@ -30,10 +30,10 @@ use TencentCloud\Cdc\V20201214\Models as Models;
  * @method Models\DeleteSitesResponse DeleteSites(Models\DeleteSitesRequest $req) 删除站点
  * @method Models\DescribeDedicatedClusterCosCapacityResponse DescribeDedicatedClusterCosCapacity(Models\DescribeDedicatedClusterCosCapacityRequest $req) 查询专用集群内cos的容量信息
  * @method Models\DescribeDedicatedClusterHostStatisticsResponse DescribeDedicatedClusterHostStatistics(Models\DescribeDedicatedClusterHostStatisticsRequest $req) 查询专用集群内宿主机的统计信息
- * @method Models\DescribeDedicatedClusterHostsResponse DescribeDedicatedClusterHosts(Models\DescribeDedicatedClusterHostsRequest $req) 专用集群宿主机信息
+ * @method Models\DescribeDedicatedClusterHostsResponse DescribeDedicatedClusterHosts(Models\DescribeDedicatedClusterHostsRequest $req) 查询专用集群宿主机信息
  * @method Models\DescribeDedicatedClusterInstanceTypesResponse DescribeDedicatedClusterInstanceTypes(Models\DescribeDedicatedClusterInstanceTypesRequest $req) 查询专用集群支持的实例规格列表
  * @method Models\DescribeDedicatedClusterOrdersResponse DescribeDedicatedClusterOrders(Models\DescribeDedicatedClusterOrdersRequest $req) 查询专用集群订单列表
- * @method Models\DescribeDedicatedClusterOverviewResponse DescribeDedicatedClusterOverview(Models\DescribeDedicatedClusterOverviewRequest $req) 专用集群概览信息
+ * @method Models\DescribeDedicatedClusterOverviewResponse DescribeDedicatedClusterOverview(Models\DescribeDedicatedClusterOverviewRequest $req) 查询专用集群概览信息
  * @method Models\DescribeDedicatedClusterTypesResponse DescribeDedicatedClusterTypes(Models\DescribeDedicatedClusterTypesRequest $req) 查询专有集群配置列表
  * @method Models\DescribeDedicatedClustersResponse DescribeDedicatedClusters(Models\DescribeDedicatedClustersRequest $req) 查询专用集群列表
  * @method Models\DescribeDedicatedSupportedZonesResponse DescribeDedicatedSupportedZones(Models\DescribeDedicatedSupportedZonesRequest $req) 查询专用集群支持的可用区列表

@@ -160,11 +160,13 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAssetPortListResponse DescribeAssetPortList(Models\DescribeAssetPortListRequest $req) 容器安全搜索查询端口占用列表
  * @method Models\DescribeAssetProcessListResponse DescribeAssetProcessList(Models\DescribeAssetProcessListRequest $req) 容器安全搜索查询进程列表
  * @method Models\DescribeAssetSummaryResponse DescribeAssetSummary(Models\DescribeAssetSummaryRequest $req) 查询账户容器、镜像等统计信息
+ * @method Models\DescribeAssetSuperNodeListResponse DescribeAssetSuperNodeList(Models\DescribeAssetSuperNodeListRequest $req) 查询超级节点列表
  * @method Models\DescribeAssetSyncLastTimeResponse DescribeAssetSyncLastTime(Models\DescribeAssetSyncLastTimeRequest $req) 查询资产同步最近时间
  * @method Models\DescribeAssetWebServiceListResponse DescribeAssetWebServiceList(Models\DescribeAssetWebServiceListRequest $req) 容器安全查询web服务列表
  * @method Models\DescribeAutoAuthorizedRuleHostResponse DescribeAutoAuthorizedRuleHost(Models\DescribeAutoAuthorizedRuleHostRequest $req) 查询自动授权规则授权范围主机信息
  * @method Models\DescribeCheckItemListResponse DescribeCheckItemList(Models\DescribeCheckItemListRequest $req) 查询所有检查项接口，返回总数和检查项列表
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 查询单个集群的详细信息
+ * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询集群节点信息
  * @method Models\DescribeClusterSummaryResponse DescribeClusterSummary(Models\DescribeClusterSummaryRequest $req) 查询用户集群资产总览
  * @method Models\DescribeComplianceAssetDetailInfoResponse DescribeComplianceAssetDetailInfo(Models\DescribeComplianceAssetDetailInfoRequest $req) 查询某个资产的详情
  * @method Models\DescribeComplianceAssetListResponse DescribeComplianceAssetList(Models\DescribeComplianceAssetListRequest $req) 查询某类资产的列表
@@ -259,6 +261,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeSecLogJoinTypeListResponse DescribeSecLogJoinTypeList(Models\DescribeSecLogJoinTypeListRequest $req) 查询安全日志接入列表
  * @method Models\DescribeSecLogKafkaUINResponse DescribeSecLogKafkaUIN(Models\DescribeSecLogKafkaUINRequest $req) 查询安全日志KafkaUIN
  * @method Models\DescribeSecLogVasInfoResponse DescribeSecLogVasInfo(Models\DescribeSecLogVasInfoRequest $req) 查询安全日志商品信息
+ * @method Models\DescribeSuperNodePodListResponse DescribeSuperNodePodList(Models\DescribeSuperNodePodListRequest $req) 查询超级节点pod列表
  * @method Models\DescribeSupportDefenceVulResponse DescribeSupportDefenceVul(Models\DescribeSupportDefenceVulRequest $req) 查询支持防御的漏洞列表
  * @method Models\DescribeSystemVulListResponse DescribeSystemVulList(Models\DescribeSystemVulListRequest $req) 查询系统漏洞列表
  * @method Models\DescribeTaskResultSummaryResponse DescribeTaskResultSummary(Models\DescribeTaskResultSummaryRequest $req) 查询检查结果总览，返回受影响的节点数量，返回7天的数据，总共7个
@@ -266,6 +269,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeUnauthorizedCoresTendencyResponse DescribeUnauthorizedCoresTendency(Models\DescribeUnauthorizedCoresTendencyRequest $req) 查询当天未授权核数趋势
  * @method Models\DescribeUnfinishRefreshTaskResponse DescribeUnfinishRefreshTask(Models\DescribeUnfinishRefreshTaskRequest $req) 查询未完成的刷新资产任务信息
  * @method Models\DescribeUserClusterResponse DescribeUserCluster(Models\DescribeUserClusterRequest $req) 安全概览和集群安全页进入调用该接口，查询用户集群相关信息。
+ * @method Models\DescribeUserPodListResponse DescribeUserPodList(Models\DescribeUserPodListRequest $req) 获取用户的pod列表
  * @method Models\DescribeValueAddedSrvInfoResponse DescribeValueAddedSrvInfo(Models\DescribeValueAddedSrvInfoRequest $req) DescribeValueAddedSrvInfo查询增值服务需购买信息
  * @method Models\DescribeVirusAutoIsolateSampleDetailResponse DescribeVirusAutoIsolateSampleDetail(Models\DescribeVirusAutoIsolateSampleDetailRequest $req) 查询木马自动隔离样本详情
  * @method Models\DescribeVirusAutoIsolateSampleDownloadURLResponse DescribeVirusAutoIsolateSampleDownloadURL(Models\DescribeVirusAutoIsolateSampleDownloadURLRequest $req) 查询木马自动隔离样本下载链接

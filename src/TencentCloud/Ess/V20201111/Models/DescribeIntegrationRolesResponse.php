@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntegrationRoles返回参数结构体
  *
- * @method integer getOffset() 获取指定分页返回的页码。页码从0开始，最大为2000。
- * @method void setOffset(integer $Offset) 设置指定分页返回的页码。页码从0开始，最大为2000。
+ * @method integer getOffset() 获取OFFSET 用于指定查询结果的偏移量，如果不传默认偏移为0, 最大为2000
+分页参数, 需要limit, offset 配合使用
+例如:
+您希望得到第三页的数据, 且每页限制最多10条
+你可以使用 LIMIT 10 OFFSET 20
+ * @method void setOffset(integer $Offset) 设置OFFSET 用于指定查询结果的偏移量，如果不传默认偏移为0, 最大为2000
+分页参数, 需要limit, offset 配合使用
+例如:
+您希望得到第三页的数据, 且每页限制最多10条
+你可以使用 LIMIT 10 OFFSET 20
  * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 200。
  * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 200。
  * @method integer getTotalCount() 获取符合查询条件的总角色数。
@@ -34,7 +42,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIntegrationRolesResponse extends AbstractModel
 {
     /**
-     * @var integer 指定分页返回的页码。页码从0开始，最大为2000。
+     * @var integer OFFSET 用于指定查询结果的偏移量，如果不传默认偏移为0, 最大为2000
+分页参数, 需要limit, offset 配合使用
+例如:
+您希望得到第三页的数据, 且每页限制最多10条
+你可以使用 LIMIT 10 OFFSET 20
      */
     public $Offset;
 
@@ -59,7 +71,11 @@ class DescribeIntegrationRolesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Offset 指定分页返回的页码。页码从0开始，最大为2000。
+     * @param integer $Offset OFFSET 用于指定查询结果的偏移量，如果不传默认偏移为0, 最大为2000
+分页参数, 需要limit, offset 配合使用
+例如:
+您希望得到第三页的数据, 且每页限制最多10条
+你可以使用 LIMIT 10 OFFSET 20
      * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 200。
      * @param integer $TotalCount 符合查询条件的总角色数。
      * @param array $IntegrateRoles 企业角色信息列表。

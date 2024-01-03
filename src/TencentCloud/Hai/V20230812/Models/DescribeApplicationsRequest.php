@@ -23,13 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getApplicationIds() 获取应用id列表
  * @method void setApplicationIds(array $ApplicationIds) 设置应用id列表
  * @method array getFilters() 获取过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配;
  * @method void setFilters(array $Filters) 设置过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配;
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回量，默认为20
@@ -39,6 +41,11 @@ MC：1000
  * @method void setLimit(integer $Limit) 设置返回量，默认为20
 MC：1000
 用户：100
+
+ * @method string getOrderField() 获取应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。
+ * @method void setOrderField(string $OrderField) 设置应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。
+ * @method string getOrder() 获取输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
+ * @method void setOrder(string $Order) 设置输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
  */
 class DescribeApplicationsRequest extends AbstractModel
 {
@@ -49,9 +56,10 @@ class DescribeApplicationsRequest extends AbstractModel
 
     /**
      * @var array 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配;
      */
     public $Filters;
 
@@ -69,15 +77,29 @@ MC：1000
     public $Limit;
 
     /**
+     * @var string 应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。
+     */
+    public $OrderField;
+
+    /**
+     * @var string 输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
+     */
+    public $Order;
+
+    /**
      * @param array $ApplicationIds 应用id列表
      * @param array $Filters 过滤器，跟ApplicationIds不能共用，支持的filter主要有：
-application-id，精确匹配
-scene-id，精确匹配
-application-name，模糊匹配
+application-id: 精确匹配;
+scene-id: 精确匹配;
+application-name: 模糊匹配;
+application-type: 精确匹配;
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回量，默认为20
 MC：1000
 用户：100
+
+     * @param string $OrderField 应用列表排序的依据字段。取值范围："CREATED_TIME"：依据应用的创建时间排序。 "APPLICATION_SIZE"：依据应用的大小排序。默认按应用的创建时间排序。
+     * @param string $Order 输出应用列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
      */
     function __construct()
     {
@@ -111,6 +133,14 @@ MC：1000
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
         }
     }
 }

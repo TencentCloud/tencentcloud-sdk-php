@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
 
 此接口下面信息必填。
 <ul>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识: Agent.AppId</li>
 </ul>
  * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
 <ul>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识: Agent.AppId</li>
 </ul>
  * @method string getOperateType() 获取操作类型，可取值如下:
 <ul>
@@ -96,7 +96,7 @@ class OperateChannelTemplateRequest extends AbstractModel
 
 此接口下面信息必填。
 <ul>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识: Agent.AppId</li>
 </ul>
      */
     public $Agent;
@@ -159,7 +159,7 @@ class OperateChannelTemplateRequest extends AbstractModel
 
 此接口下面信息必填。
 <ul>
-<li>第三方平台子客企业中的员工标识: Agent.AppId</li>
+<li>渠道应用标识: Agent.AppId</li>
 </ul>
      * @param string $OperateType 操作类型，可取值如下:
 <ul>

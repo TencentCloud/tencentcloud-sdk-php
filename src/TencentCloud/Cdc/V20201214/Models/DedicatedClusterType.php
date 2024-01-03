@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) 设置地板承重要求(KG)
  * @method float getPowerDrawKva() 获取功率要求(KW)
  * @method void setPowerDrawKva(float $PowerDrawKva) 设置功率要求(KW)
- * @method string getComputeFormatDesc() 获取显示计算资源规格详情，存储等资源不显示；对应规格
- * @method void setComputeFormatDesc(string $ComputeFormatDesc) 设置显示计算资源规格详情，存储等资源不显示；对应规格
+ * @method string getComputeFormatDesc() 获取显示计算资源规格详情，存储等资源不显示
+ * @method void setComputeFormatDesc(string $ComputeFormatDesc) 设置显示计算资源规格详情，存储等资源不显示
  */
 class DedicatedClusterType extends AbstractModel
 {
@@ -92,7 +92,7 @@ class DedicatedClusterType extends AbstractModel
     public $PowerDrawKva;
 
     /**
-     * @var string 显示计算资源规格详情，存储等资源不显示；对应规格
+     * @var string 显示计算资源规格详情，存储等资源不显示
      */
     public $ComputeFormatDesc;
 
@@ -107,7 +107,7 @@ class DedicatedClusterType extends AbstractModel
      * @param array $SupportedInstanceFamily 支持的实例族列表
      * @param integer $Weight 地板承重要求(KG)
      * @param float $PowerDrawKva 功率要求(KW)
-     * @param string $ComputeFormatDesc 显示计算资源规格详情，存储等资源不显示；对应规格
+     * @param string $ComputeFormatDesc 显示计算资源规格详情，存储等资源不显示
      */
     function __construct()
     {

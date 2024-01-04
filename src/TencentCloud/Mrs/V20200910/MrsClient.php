@@ -24,6 +24,8 @@ use TencentCloud\Mrs\V20200910\Models as Models;
 
 /**
  * @method Models\ImageMaskResponse ImageMask(Models\ImageMaskRequest $req) 医疗报告图片脱敏接口
+ * @method Models\ImageMaskAsyncResponse ImageMaskAsync(Models\ImageMaskAsyncRequest $req) 图片脱敏-异步接口
+ * @method Models\ImageMaskAsyncGetResultResponse ImageMaskAsyncGetResult(Models\ImageMaskAsyncGetResultRequest $req) 图片脱敏-异步获取结果接口
  * @method Models\ImageToClassResponse ImageToClass(Models\ImageToClassRequest $req) 图片分类
  * @method Models\ImageToObjectResponse ImageToObject(Models\ImageToObjectRequest $req) 图片转结构化对象
  * @method Models\TextToClassResponse TextToClass(Models\TextToClassRequest $req) 文本分类

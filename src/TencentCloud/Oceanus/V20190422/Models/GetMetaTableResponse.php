@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSerialId() 获取元数据表唯一标识
  * @method void setSerialId(string $SerialId) 设置元数据表唯一标识
- * @method string getCatalog() 获取Catalog名
- * @method void setCatalog(string $Catalog) 设置Catalog名
- * @method string getDatabase() 获取Database名
- * @method void setDatabase(string $Database) 设置Database名
- * @method string getTable() 获取Table名
- * @method void setTable(string $Table) 设置Table名
+ * @method string getCatalog() 获取目录名
+ * @method void setCatalog(string $Catalog) 设置目录名
+ * @method string getDatabase() 获取库名
+ * @method void setDatabase(string $Database) 设置库名
+ * @method string getTable() 获取表名
+ * @method void setTable(string $Table) 设置表名
  * @method string getDDL() 获取建表语句,使用 Base64 编码。
 例如
 Q1JFQVRFIFRBQkxFIGRhdGFnZW5fc291cmNlX3RhYmxlICggCiAgICBpZCBJTlQsIAogICAgbmFtZSBTVFJJTkcgCikgV0lUSCAoCidjb25uZWN0b3InPSdkYXRhZ2VuJywKJ3Jvd3MtcGVyLXNlY29uZCcgPSAnMScKKTs=
  * @method void setDDL(string $DDL) 设置建表语句,使用 Base64 编码。
 例如
 Q1JFQVRFIFRBQkxFIGRhdGFnZW5fc291cmNlX3RhYmxlICggCiAgICBpZCBJTlQsIAogICAgbmFtZSBTVFJJTkcgCikgV0lUSCAoCidjb25uZWN0b3InPSdkYXRhZ2VuJywKJ3Jvd3MtcGVyLXNlY29uZCcgPSAnMScKKTs=
- * @method string getCreateTime() 获取场景时间
- * @method void setCreateTime(string $CreateTime) 设置场景时间
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,17 +47,17 @@ class GetMetaTableResponse extends AbstractModel
     public $SerialId;
 
     /**
-     * @var string Catalog名
+     * @var string 目录名
      */
     public $Catalog;
 
     /**
-     * @var string Database名
+     * @var string 库名
      */
     public $Database;
 
     /**
-     * @var string Table名
+     * @var string 表名
      */
     public $Table;
 
@@ -69,7 +69,7 @@ Q1JFQVRFIFRBQkxFIGRhdGFnZW5fc291cmNlX3RhYmxlICggCiAgICBpZCBJTlQsIAogICAgbmFtZSBT
     public $DDL;
 
     /**
-     * @var string 场景时间
+     * @var string 创建时间
      */
     public $CreateTime;
 
@@ -80,13 +80,13 @@ Q1JFQVRFIFRBQkxFIGRhdGFnZW5fc291cmNlX3RhYmxlICggCiAgICBpZCBJTlQsIAogICAgbmFtZSBT
 
     /**
      * @param string $SerialId 元数据表唯一标识
-     * @param string $Catalog Catalog名
-     * @param string $Database Database名
-     * @param string $Table Table名
+     * @param string $Catalog 目录名
+     * @param string $Database 库名
+     * @param string $Table 表名
      * @param string $DDL 建表语句,使用 Base64 编码。
 例如
 Q1JFQVRFIFRBQkxFIGRhdGFnZW5fc291cmNlX3RhYmxlICggCiAgICBpZCBJTlQsIAogICAgbmFtZSBTVFJJTkcgCikgV0lUSCAoCidjb25uZWN0b3InPSdkYXRhZ2VuJywKJ3Jvd3MtcGVyLXNlY29uZCcgPSAnMScKKTs=
-     * @param string $CreateTime 场景时间
+     * @param string $CreateTime 创建时间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

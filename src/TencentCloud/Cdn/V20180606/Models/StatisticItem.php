@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBpsThreshold(integer $BpsThreshold) 设置带宽、流量阈值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCounterMeasure() 获取关闭方式 返回404:RETURN_404, dns回源：RESOLVE_DNS_TO_ORIGIN
+ * @method string getCounterMeasure() 获取关闭方式 返回404:RETURN_404
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCounterMeasure(string $CounterMeasure) 设置关闭方式 返回404:RETURN_404, dns回源：RESOLVE_DNS_TO_ORIGIN
+ * @method void setCounterMeasure(string $CounterMeasure) 设置关闭方式 返回404:RETURN_404
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAlertPercentage() 获取触发提醒阈值百分比
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ class StatisticItem extends AbstractModel
     public $BpsThreshold;
 
     /**
-     * @var string 关闭方式 返回404:RETURN_404, dns回源：RESOLVE_DNS_TO_ORIGIN
+     * @var string 关闭方式 返回404:RETURN_404
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CounterMeasure;
@@ -132,7 +132,7 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BpsThreshold 带宽、流量阈值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CounterMeasure 关闭方式 返回404:RETURN_404, dns回源：RESOLVE_DNS_TO_ORIGIN
+     * @param string $CounterMeasure 关闭方式 返回404:RETURN_404
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlertPercentage 触发提醒阈值百分比
 注意：此字段可能返回 null，表示取不到有效值。

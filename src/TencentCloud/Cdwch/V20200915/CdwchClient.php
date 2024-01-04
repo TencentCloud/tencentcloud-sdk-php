@@ -36,6 +36,7 @@ use TencentCloud\Cdwch\V20200915\Models as Models;
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 根据实例ID查询某个实例的具体信息
  * @method Models\DescribeInstanceClustersResponse DescribeInstanceClusters(Models\DescribeInstanceClustersRequest $req) 集群vcluster列表
  * @method Models\DescribeInstanceKeyValConfigsResponse DescribeInstanceKeyValConfigs(Models\DescribeInstanceKeyValConfigsRequest $req) 在集群详情页面获取所有参数列表
+ * @method Models\DescribeInstanceNodesResponse DescribeInstanceNodes(Models\DescribeInstanceNodesRequest $req) 获取实例节点信息列表
  * @method Models\DescribeInstanceShardsResponse DescribeInstanceShards(Models\DescribeInstanceShardsRequest $req) 获取实例shard信息列表
  * @method Models\DescribeInstanceStateResponse DescribeInstanceState(Models\DescribeInstanceStateRequest $req) 集群详情页中显示集群状态、流程进度等
  * @method Models\DescribeInstancesNewResponse DescribeInstancesNew(Models\DescribeInstancesNewRequest $req) 获取实例列表，供外部sdk使用

@@ -33,6 +33,7 @@ use TencentCloud\Hunyuan\V20230901\Models as Models;
  1.本接口暂不支持返回图片内容。
  2.默认单账号限制并发数为5路，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  3.请使用SDK调用本接口 ，SDK GitHub仓库examples/hunyuan/v20230901/目录有提供[参考示例](https://github.com/TencentCloud/tencentcloud-sdk-python/blob/master/examples/hunyuan/v20230901/chat_std.py)。
+ * @method Models\GetEmbeddingResponse GetEmbedding(Models\GetEmbeddingRequest $req) 腾讯混元-Embedding接口，可以将文本转化为高质量的向量数据。
  * @method Models\GetTokenCountResponse GetTokenCount(Models\GetTokenCountRequest $req) 该接口用于计算文本对应Token数、字符数。
  */
 

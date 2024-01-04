@@ -120,9 +120,6 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
  * @method Models\ModifyNatFwVpcDnsSwitchResponse ModifyNatFwVpcDnsSwitch(Models\ModifyNatFwVpcDnsSwitchRequest $req) nat 防火墙VPC DNS 开关切换
  * @method Models\ModifyNatInstanceResponse ModifyNatInstance(Models\ModifyNatInstanceRequest $req) 编辑NAT防火墙
  * @method Models\ModifyNatSequenceRulesResponse ModifyNatSequenceRules(Models\ModifyNatSequenceRulesRequest $req) NAT防火墙规则快速排序
- * @method Models\ModifyPublicIPSwitchStatusResponse ModifyPublicIPSwitchStatus(Models\ModifyPublicIPSwitchStatusRequest $req) 已上新接口，支持串行
-
-单个修改互联网边界防火墙开关
  * @method Models\ModifyResourceGroupResponse ModifyResourceGroup(Models\ModifyResourceGroupRequest $req) ModifyResourceGroup-资产中心资产组信息修改
 
 

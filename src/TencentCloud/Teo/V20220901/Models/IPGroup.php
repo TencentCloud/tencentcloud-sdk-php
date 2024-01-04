@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置组 Id，创建时填 0 即可。
  * @method string getName() 获取组名称。
  * @method void setName(string $Name) 设置组名称。
- * @method array getContent() 获取IP 组内容，可以填入 IP 及 IP 掩码。
- * @method void setContent(array $Content) 设置IP 组内容，可以填入 IP 及 IP 掩码。
+ * @method array getContent() 获取IP 组内容，仅支持 IP 及 IP 掩码。
+ * @method void setContent(array $Content) 设置IP 组内容，仅支持 IP 及 IP 掩码。
  */
 class IPGroup extends AbstractModel
 {
@@ -40,14 +40,14 @@ class IPGroup extends AbstractModel
     public $Name;
 
     /**
-     * @var array IP 组内容，可以填入 IP 及 IP 掩码。
+     * @var array IP 组内容，仅支持 IP 及 IP 掩码。
      */
     public $Content;
 
     /**
      * @param integer $GroupId 组 Id，创建时填 0 即可。
      * @param string $Name 组名称。
-     * @param array $Content IP 组内容，可以填入 IP 及 IP 掩码。
+     * @param array $Content IP 组内容，仅支持 IP 及 IP 掩码。
      */
     function __construct()
     {

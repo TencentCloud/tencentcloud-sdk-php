@@ -64,6 +64,10 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
  * @method void setSubState(string $SubState) 设置子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInquireKey() 获取计费key
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInquireKey(string $InquireKey) 设置计费key
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -136,6 +140,12 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     public $SubState;
 
     /**
+     * @var string 计费key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InquireKey;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -162,6 +172,8 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubState 子状态(具体意义依据State字段而定)
 State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InquireKey 计费key
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -220,6 +232,10 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
         if (array_key_exists("SubState",$param) and $param["SubState"] !== null) {
             $this->SubState = $param["SubState"];
+        }
+
+        if (array_key_exists("InquireKey",$param) and $param["InquireKey"] !== null) {
+            $this->InquireKey = $param["InquireKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigAssociatedGroups(array $ConfigAssociatedGroups) 设置配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getConfigAssociatedGroupList() 获取配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigAssociatedGroupList(array $ConfigAssociatedGroupList) 设置配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BusinessLogConfig extends AbstractModel
 {
@@ -114,8 +118,15 @@ class BusinessLogConfig extends AbstractModel
     /**
      * @var array 配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ConfigAssociatedGroups;
+
+    /**
+     * @var array 配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigAssociatedGroupList;
 
     /**
      * @param string $ConfigId 配置项ID
@@ -135,6 +146,8 @@ class BusinessLogConfig extends AbstractModel
      * @param BusinessLogConfigSchema $ConfigSchema 配置项解析规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConfigAssociatedGroups 配置项关联部署组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ConfigAssociatedGroupList 配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -193,6 +206,15 @@ class BusinessLogConfig extends AbstractModel
                 $obj = new BusinesLogConfigAssociatedGroup();
                 $obj->deserialize($value);
                 array_push($this->ConfigAssociatedGroups, $obj);
+            }
+        }
+
+        if (array_key_exists("ConfigAssociatedGroupList",$param) and $param["ConfigAssociatedGroupList"] !== null) {
+            $this->ConfigAssociatedGroupList = [];
+            foreach ($param["ConfigAssociatedGroupList"] as $key => $value){
+                $obj = new BusinessLogConfigAssociatedGroup();
+                $obj->deserialize($value);
+                array_push($this->ConfigAssociatedGroupList, $obj);
             }
         }
     }

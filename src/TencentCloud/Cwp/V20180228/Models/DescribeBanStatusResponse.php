@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBanStatus返回参数结构体
  *
- * @method integer getStatus() 获取阻断开关状态 0:关闭 1:开启
- * @method void setStatus(integer $Status) 设置阻断开关状态 0:关闭 1:开启
+ * @method integer getStatus() 获取阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip)
+ * @method void setStatus(integer $Status) 设置阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip)
  * @method boolean getShowTips() 获取是否弹窗提示信息 false: 关闭，true: 开启
  * @method void setShowTips(boolean $ShowTips) 设置是否弹窗提示信息 false: 关闭，true: 开启
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBanStatusResponse extends AbstractModel
 {
     /**
-     * @var integer 阻断开关状态 0:关闭 1:开启
+     * @var integer 阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip)
      */
     public $Status;
 
@@ -45,7 +54,10 @@ class DescribeBanStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 阻断开关状态 0:关闭 1:开启
+     * @param integer $Status 阻断开关状态:
+ 0 -- 关闭 
+ 1 -- 高级阻断
+ 2 -- 基础阻断(只阻断情报库黑ip)
      * @param boolean $ShowTips 是否弹窗提示信息 false: 关闭，true: 开启
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getApplicationId() 获取应用ID。
  * @method void setApplicationId(string $ApplicationId) 设置应用ID。
- * @method string getProjectId() 获取项目ID。
- * @method void setProjectId(string $ProjectId) 设置项目ID。
  * @method string getName() 获取任务批次名称。
  * @method void setName(string $Name) 设置任务批次名称。
  * @method string getEnvironmentId() 获取投递环境ID。
@@ -32,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputBase64(string $InputBase64) 设置任务输入JSON。需要进行base64编码。
  * @method integer getCacheClearDelay() 获取任务缓存清理时间（小时）。不填表示不清理。
  * @method void setCacheClearDelay(integer $CacheClearDelay) 设置任务缓存清理时间（小时）。不填表示不清理。
- * @method RunOption getOption() 获取运行选项。
- * @method void setOption(RunOption $Option) 设置运行选项。
+ * @method string getProjectId() 获取项目ID。（不填使用指定地域下的默认项目）
+ * @method void setProjectId(string $ProjectId) 设置项目ID。（不填使用指定地域下的默认项目）
  * @method string getDescription() 获取任务批次描述。
  * @method void setDescription(string $Description) 设置任务批次描述。
  * @method string getTableId() 获取批量投递表格ID，不填表示单例投递。
@@ -42,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableRowUuids(array $TableRowUuids) 设置批量投递表格行UUID。不填表示表格全部行。
  * @method string getApplicationVersionId() 获取应用版本ID。不填表示使用当前最新版本。
  * @method void setApplicationVersionId(string $ApplicationVersionId) 设置应用版本ID。不填表示使用当前最新版本。
+ * @method RunOption getOption() 获取WDL运行选项。
+ * @method void setOption(RunOption $Option) 设置WDL运行选项。
+ * @method NFOption getNFOption() 获取Nextflow运行选项。
+ * @method void setNFOption(NFOption $NFOption) 设置Nextflow运行选项。
  */
 class RunApplicationRequest extends AbstractModel
 {
@@ -49,11 +51,6 @@ class RunApplicationRequest extends AbstractModel
      * @var string 应用ID。
      */
     public $ApplicationId;
-
-    /**
-     * @var string 项目ID。
-     */
-    public $ProjectId;
 
     /**
      * @var string 任务批次名称。
@@ -76,9 +73,9 @@ class RunApplicationRequest extends AbstractModel
     public $CacheClearDelay;
 
     /**
-     * @var RunOption 运行选项。
+     * @var string 项目ID。（不填使用指定地域下的默认项目）
      */
-    public $Option;
+    public $ProjectId;
 
     /**
      * @var string 任务批次描述。
@@ -101,17 +98,28 @@ class RunApplicationRequest extends AbstractModel
     public $ApplicationVersionId;
 
     /**
+     * @var RunOption WDL运行选项。
+     */
+    public $Option;
+
+    /**
+     * @var NFOption Nextflow运行选项。
+     */
+    public $NFOption;
+
+    /**
      * @param string $ApplicationId 应用ID。
-     * @param string $ProjectId 项目ID。
      * @param string $Name 任务批次名称。
      * @param string $EnvironmentId 投递环境ID。
      * @param string $InputBase64 任务输入JSON。需要进行base64编码。
      * @param integer $CacheClearDelay 任务缓存清理时间（小时）。不填表示不清理。
-     * @param RunOption $Option 运行选项。
+     * @param string $ProjectId 项目ID。（不填使用指定地域下的默认项目）
      * @param string $Description 任务批次描述。
      * @param string $TableId 批量投递表格ID，不填表示单例投递。
      * @param array $TableRowUuids 批量投递表格行UUID。不填表示表格全部行。
      * @param string $ApplicationVersionId 应用版本ID。不填表示使用当前最新版本。
+     * @param RunOption $Option WDL运行选项。
+     * @param NFOption $NFOption Nextflow运行选项。
      */
     function __construct()
     {
@@ -130,10 +138,6 @@ class RunApplicationRequest extends AbstractModel
             $this->ApplicationId = $param["ApplicationId"];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -150,9 +154,8 @@ class RunApplicationRequest extends AbstractModel
             $this->CacheClearDelay = $param["CacheClearDelay"];
         }
 
-        if (array_key_exists("Option",$param) and $param["Option"] !== null) {
-            $this->Option = new RunOption();
-            $this->Option->deserialize($param["Option"]);
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
@@ -169,6 +172,16 @@ class RunApplicationRequest extends AbstractModel
 
         if (array_key_exists("ApplicationVersionId",$param) and $param["ApplicationVersionId"] !== null) {
             $this->ApplicationVersionId = $param["ApplicationVersionId"];
+        }
+
+        if (array_key_exists("Option",$param) and $param["Option"] !== null) {
+            $this->Option = new RunOption();
+            $this->Option->deserialize($param["Option"]);
+        }
+
+        if (array_key_exists("NFOption",$param) and $param["NFOption"] !== null) {
+            $this->NFOption = new NFOption();
+            $this->NFOption->deserialize($param["NFOption"]);
         }
     }
 }

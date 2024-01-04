@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetMetaTable请求参数结构体
  *
- * @method string getCatalog() 获取Catalog名
- * @method void setCatalog(string $Catalog) 设置Catalog名
- * @method string getDatabase() 获取Database名
- * @method void setDatabase(string $Database) 设置Database名
- * @method string getTable() 获取Table名
- * @method void setTable(string $Table) 设置Table名
+ * @method string getCatalog() 获取目录名
+ * @method void setCatalog(string $Catalog) 设置目录名
+ * @method string getDatabase() 获取库名
+ * @method void setDatabase(string $Database) 设置库名
+ * @method string getTable() 获取表名
+ * @method void setTable(string $Table) 设置表名
  * @method string getWorkSpaceId() 获取空间唯一标识
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置空间唯一标识
  */
 class GetMetaTableRequest extends AbstractModel
 {
     /**
-     * @var string Catalog名
+     * @var string 目录名
      */
     public $Catalog;
 
     /**
-     * @var string Database名
+     * @var string 库名
      */
     public $Database;
 
     /**
-     * @var string Table名
+     * @var string 表名
      */
     public $Table;
 
@@ -52,9 +52,9 @@ class GetMetaTableRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
-     * @param string $Catalog Catalog名
-     * @param string $Database Database名
-     * @param string $Table Table名
+     * @param string $Catalog 目录名
+     * @param string $Database 库名
+     * @param string $Table 表名
      * @param string $WorkSpaceId 空间唯一标识
      */
     function __construct()

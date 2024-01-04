@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
- * @method string getQrCodeId() 获取需要取消签署的二维码ID，为32位字符串。由[创建一码多扫流程签署二维码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
- * @method void setQrCodeId(string $QrCodeId) 设置需要取消签署的二维码ID，为32位字符串。由[创建一码多扫流程签署二维码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
+ * @method string getQrCodeId() 获取需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
+ * @method void setQrCodeId(string $QrCodeId) 设置需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
@@ -59,7 +59,7 @@ class ChannelCancelMultiFlowSignQRCodeRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 需要取消签署的二维码ID，为32位字符串。由[创建一码多扫流程签署二维码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
+     * @var string 需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
      */
     public $QrCodeId;
 
@@ -79,7 +79,7 @@ class ChannelCancelMultiFlowSignQRCodeRequest extends AbstractModel
 <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
 </ul>
 第三方平台子客企业和员工必须已经经过实名认证
-     * @param string $QrCodeId 需要取消签署的二维码ID，为32位字符串。由[创建一码多扫流程签署二维码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
+     * @param string $QrCodeId 需要取消的签署码ID，为32位字符串。由[创建一码多签签署码](https://qian.tencent.com/developers/partnerApis/templates/ChannelCreateMultiFlowSignQRCode)返回
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

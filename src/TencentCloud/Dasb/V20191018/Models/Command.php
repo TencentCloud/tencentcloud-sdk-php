@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置设备部门name
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSize() 获取会话大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSize(integer $Size) 设置会话大小
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Command extends AbstractModel
 {
@@ -173,6 +177,12 @@ class Command extends AbstractModel
     public $DeviceDepartmentName;
 
     /**
+     * @var integer 会话大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Size;
+
+    /**
      * @param string $Cmd 命令
      * @param string $Time 命令输入的时间
      * @param integer $TimeOffset 命令执行时间相对于所属会话开始时间的偏移量，单位ms
@@ -200,6 +210,8 @@ class Command extends AbstractModel
      * @param string $DeviceDepartmentId 设备部门id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceDepartmentName 设备部门name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Size 会话大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -277,6 +289,10 @@ class Command extends AbstractModel
 
         if (array_key_exists("DeviceDepartmentName",$param) and $param["DeviceDepartmentName"] !== null) {
             $this->DeviceDepartmentName = $param["DeviceDepartmentName"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
     }
 }

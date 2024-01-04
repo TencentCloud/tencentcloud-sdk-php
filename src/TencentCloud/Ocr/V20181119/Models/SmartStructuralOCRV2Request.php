@@ -62,6 +62,8 @@ RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
 InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别
  * @method void setConfigId(string $ConfigId) 设置配置id支持：
 General -- 通用场景
 OnlineTaxiItinerary -- 网约车行程单
@@ -70,6 +72,10 @@ RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
 InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别
+ * @method boolean getEnableSealRecognize() 获取是否打开印章识别
+ * @method void setEnableSealRecognize(boolean $EnableSealRecognize) 设置是否打开印章识别
  */
 class SmartStructuralOCRV2Request extends AbstractModel
 {
@@ -123,8 +129,15 @@ RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
 InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别
      */
     public $ConfigId;
+
+    /**
+     * @var boolean 是否打开印章识别
+     */
+    public $EnableSealRecognize;
 
     /**
      * @param string $ImageUrl 图片的 Url 地址。
@@ -152,6 +165,9 @@ RideHailingTransportLicense -- 网约车运输证
 WayBill -- 快递运单
 AccountOpeningPermit -- 银行开户许可证
 InvoiceEng -- 海外发票模版
+Coin --钱币识别模板
+OnboardingDocuments -- 入职材料识别
+     * @param boolean $EnableSealRecognize 是否打开印章识别
      */
     function __construct()
     {
@@ -192,6 +208,10 @@ InvoiceEng -- 海外发票模版
 
         if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
             $this->ConfigId = $param["ConfigId"];
+        }
+
+        if (array_key_exists("EnableSealRecognize",$param) and $param["EnableSealRecognize"] !== null) {
+            $this->EnableSealRecognize = $param["EnableSealRecognize"];
         }
     }
 }

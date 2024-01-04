@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMultiFlowSignQRCode返回参数结构体
  *
- * @method SignQrCode getQrCode() 获取签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。
- * @method void setQrCode(SignQrCode $QrCode) 设置签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。
- * @method SignUrl getSignUrls() 获取流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
- * @method void setSignUrls(SignUrl $SignUrls) 设置流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
+ * @method SignQrCode getQrCode() 获取一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。
+ * @method void setQrCode(SignQrCode $QrCode) 设置一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。
+ * @method SignUrl getSignUrls() 获取一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
+ * @method void setSignUrls(SignUrl $SignUrls) 设置一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateMultiFlowSignQRCodeResponse extends AbstractModel
 {
     /**
-     * @var SignQrCode 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。
+     * @var SignQrCode 一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。
      */
     public $QrCode;
 
     /**
-     * @var SignUrl 流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
+     * @var SignUrl 一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
      */
     public $SignUrls;
 
@@ -45,8 +45,8 @@ class CreateMultiFlowSignQRCodeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SignQrCode $QrCode 签署二维码的基本信息，用于创建二维码，用户可扫描该二维码进行签署操作。
-     * @param SignUrl $SignUrls 流程签署二维码的签署信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
+     * @param SignQrCode $QrCode 一码多签签署码的基本信息，用户可扫描该二维码进行签署操作。
+     * @param SignUrl $SignUrls 一码多签签署码的链接信息，适用于客户系统整合二维码功能。通过链接，用户可直接访问电子签名小程序并签署合同。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

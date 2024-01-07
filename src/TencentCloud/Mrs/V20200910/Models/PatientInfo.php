@@ -88,9 +88,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgeNorm(string $AgeNorm) 设置标准化年龄
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNation() 获取民族
+ * @method string getNation() 获取民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNation(string $Nation) 设置民族
+ * @method void setNation(string $Nation) 设置民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMarriedCode() 获取婚姻代码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -214,8 +214,9 @@ class PatientInfo extends AbstractModel
     public $AgeNorm;
 
     /**
-     * @var string 民族
+     * @var string 民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Nation;
 
@@ -278,7 +279,7 @@ class PatientInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AgeNorm 标准化年龄
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Nation 民族
+     * @param string $Nation 民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MarriedCode 婚姻代码
 注意：此字段可能返回 null，表示取不到有效值。

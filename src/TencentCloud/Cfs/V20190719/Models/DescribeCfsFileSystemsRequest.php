@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置Offset 分页码
  * @method integer getLimit() 获取Limit 页面大小
  * @method void setLimit(integer $Limit) 设置Limit 页面大小
+ * @method string getCreationToken() 获取用户自定义名称
+ * @method void setCreationToken(string $CreationToken) 设置用户自定义名称
  */
 class DescribeCfsFileSystemsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 用户自定义名称
+     */
+    public $CreationToken;
+
+    /**
      * @param string $FileSystemId 文件系统 ID
      * @param string $VpcId 私有网络（VPC） ID
      * @param string $SubnetId 子网 ID
      * @param integer $Offset Offset 分页码
      * @param integer $Limit Limit 页面大小
+     * @param string $CreationToken 用户自定义名称
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("CreationToken",$param) and $param["CreationToken"] !== null) {
+            $this->CreationToken = $param["CreationToken"];
         }
     }
 }

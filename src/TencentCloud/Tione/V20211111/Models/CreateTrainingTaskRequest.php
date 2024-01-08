@@ -46,8 +46,8 @@ POSTPAID_BY_HOUR 按量计费
  * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置启动命令信息，默认为sh start.sh
  * @method string getTrainingMode() 获取训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
  * @method void setTrainingMode(string $TrainingMode) 设置训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
- * @method array getDataConfigs() 获取数据配置，依赖DataSource字段
- * @method void setDataConfigs(array $DataConfigs) 设置数据配置，依赖DataSource字段
+ * @method array getDataConfigs() 获取数据配置，依赖DataSource字段，数量不超过10个
+ * @method void setDataConfigs(array $DataConfigs) 设置数据配置，依赖DataSource字段，数量不超过10个
  * @method string getVpcId() 获取VPC Id
  * @method void setVpcId(string $VpcId) 设置VPC Id
  * @method string getSubnetId() 获取子网Id
@@ -56,14 +56,14 @@ POSTPAID_BY_HOUR 按量计费
  * @method void setOutput(CosPathInfo $Output) 设置COS训练输出路径
  * @method LogConfig getLogConfig() 获取CLS日志配置
  * @method void setLogConfig(LogConfig $LogConfig) 设置CLS日志配置
- * @method string getTuningParameters() 获取调优参数
- * @method void setTuningParameters(string $TuningParameters) 设置调优参数
+ * @method string getTuningParameters() 获取调优参数，不超过2048个字符
+ * @method void setTuningParameters(string $TuningParameters) 设置调优参数，不超过2048个字符
  * @method boolean getLogEnable() 获取是否上报日志
  * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
- * @method string getRemark() 获取备注，最多500个字
- * @method void setRemark(string $Remark) 设置备注，最多500个字
- * @method string getDataSource() 获取数据来源，eg：DATASET、COS、CFS、HDFS
- * @method void setDataSource(string $DataSource) 设置数据来源，eg：DATASET、COS、CFS、HDFS
+ * @method string getRemark() 获取备注，不超过1024个字符
+ * @method void setRemark(string $Remark) 设置备注，不超过1024个字符
+ * @method string getDataSource() 获取数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
+ * @method void setDataSource(string $DataSource) 设置数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
  * @method string getCallbackUrl() 获取回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
  * @method PreTrainModel getPreTrainModel() 获取太极预训练模型ID
@@ -133,7 +133,7 @@ POSTPAID_BY_HOUR 按量计费
     public $TrainingMode;
 
     /**
-     * @var array 数据配置，依赖DataSource字段
+     * @var array 数据配置，依赖DataSource字段，数量不超过10个
      */
     public $DataConfigs;
 
@@ -158,7 +158,7 @@ POSTPAID_BY_HOUR 按量计费
     public $LogConfig;
 
     /**
-     * @var string 调优参数
+     * @var string 调优参数，不超过2048个字符
      */
     public $TuningParameters;
 
@@ -168,12 +168,12 @@ POSTPAID_BY_HOUR 按量计费
     public $LogEnable;
 
     /**
-     * @var string 备注，最多500个字
+     * @var string 备注，不超过1024个字符
      */
     public $Remark;
 
     /**
-     * @var string 数据来源，eg：DATASET、COS、CFS、HDFS
+     * @var string 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
      */
     public $DataSource;
 
@@ -201,15 +201,15 @@ POSTPAID_BY_HOUR 按量计费
      * @param CosPathInfo $CodePackagePath COS代码包路径
      * @param StartCmdInfo $StartCmdInfo 启动命令信息，默认为sh start.sh
      * @param string $TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     * @param array $DataConfigs 数据配置，依赖DataSource字段
+     * @param array $DataConfigs 数据配置，依赖DataSource字段，数量不超过10个
      * @param string $VpcId VPC Id
      * @param string $SubnetId 子网Id
      * @param CosPathInfo $Output COS训练输出路径
      * @param LogConfig $LogConfig CLS日志配置
-     * @param string $TuningParameters 调优参数
+     * @param string $TuningParameters 调优参数，不超过2048个字符
      * @param boolean $LogEnable 是否上报日志
-     * @param string $Remark 备注，最多500个字
-     * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
+     * @param string $Remark 备注，不超过1024个字符
+     * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
      * @param string $CallbackUrl 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
      * @param PreTrainModel $PreTrainModel 太极预训练模型ID
      */

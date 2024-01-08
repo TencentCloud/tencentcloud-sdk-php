@@ -21,6 +21,8 @@ use TencentCloud\Common\AbstractModel;
  * 音频流配置参数
  *
  * @method string getCodec() 获取音频流的编码格式。
+当不需要对音频进行转码时，可选值为：
+<li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
@@ -38,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 <li>libmp3lame。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodec(string $Codec) 设置音频流的编码格式。
+当不需要对音频进行转码时，可选值为：
+<li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
@@ -91,6 +95,8 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 {
     /**
      * @var string 音频流的编码格式。
+当不需要对音频进行转码时，可选值为：
+<li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
@@ -144,6 +150,8 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 
     /**
      * @param string $Codec 音频流的编码格式。
+当不需要对音频进行转码时，可选值为：
+<li>copy。</li>
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：

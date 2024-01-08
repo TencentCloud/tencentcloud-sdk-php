@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 训练数据
  *
-
+ * @method integer getTimestamp() 获取时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimestamp(integer $Timestamp) 设置时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getValue() 获取训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(float $Value) 设置训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingDataPoint extends AbstractModel
 {
-
+    /**
+     * @var integer 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Timestamp;
 
     /**
+     * @var float 训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Value;
 
+    /**
+     * @param integer $Timestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Value 训练上报的值。可以为训练指标（双精度浮点数，也可以为Epoch/Step（两者皆保证是整数）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +62,12 @@ class TrainingDataPoint extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
+            $this->Timestamp = $param["Timestamp"];
+        }
 
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
+        }
     }
 }

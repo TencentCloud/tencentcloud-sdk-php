@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
  * @method void setFilters(array $Filters) 设置过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
@@ -33,7 +35,9 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
  * @method array getTagFilters() 获取标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
@@ -44,8 +48,8 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大为50
  * @method string getOrder() 获取输出列表的排列顺序。取值范围：ASC（升序排列）/ DESC（降序排列），默认为DESC
  * @method void setOrder(string $Order) 设置输出列表的排列顺序。取值范围：ASC（升序排列）/ DESC（降序排列），默认为DESC
- * @method string getOrderField() 获取排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
- * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+ * @method string getOrderField() 获取排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime
+ * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime
  */
 class DescribeTrainingTasksRequest extends AbstractModel
 {
@@ -55,7 +59,9 @@ class DescribeTrainingTasksRequest extends AbstractModel
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
      */
@@ -82,7 +88,7 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     public $Order;
 
     /**
-     * @var string 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * @var string 排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime
      */
     public $OrderField;
 
@@ -92,14 +98,16 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 取值范围：
 Name（名称）：task1
 Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+Status（状态）：SUBMITTING/PENDING/STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
+ResourceGroupId（资源组 Id）：trsg-kvvfrwl7
+Creator（创建者 uin）：100014761913
 ChargeType（计费类型）：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）
 CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
      * @param array $TagFilters 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为10，最大为50
      * @param string $Order 输出列表的排列顺序。取值范围：ASC（升序排列）/ DESC（降序排列），默认为DESC
-     * @param string $OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * @param string $OrderField 排序的依据字段， 取值范围 "CreateTime" 、"UpdateTime"、"StartTime"，默认为UpdateTime
      */
     function __construct()
     {

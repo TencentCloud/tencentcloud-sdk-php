@@ -47,6 +47,8 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义音视频内容识别模板，数量上限：50。
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) 创建用户自定义转动图模板，数量上限：16。
+ * @method Models\CreateCLSLogsetResponse CreateCLSLogset(Models\CreateCLSLogsetRequest $req) 由 VOD 创建新的日志集。
+ * @method Models\CreateCLSTopicResponse CreateCLSTopic(Models\CreateCLSTopicRequest $req) 创建 VOD 下新的 CLS 日志主题
  * @method Models\CreateClassResponse CreateClass(Models\CreateClassRequest $req) * 用于对媒体进行分类管理；
 * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
 * 分类层次不可超过 4 层。
@@ -90,6 +92,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\DeleteAIRecognitionTemplateResponse DeleteAIRecognitionTemplate(Models\DeleteAIRecognitionTemplateRequest $req) 删除用户自定义音视频内容识别模板。
  * @method Models\DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(Models\DeleteAdaptiveDynamicStreamingTemplateRequest $req) 删除转自适应码流模板
  * @method Models\DeleteAnimatedGraphicsTemplateResponse DeleteAnimatedGraphicsTemplate(Models\DeleteAnimatedGraphicsTemplateRequest $req) 删除用户自定义转动图模板。
+ * @method Models\DeleteCLSTopicResponse DeleteCLSTopic(Models\DeleteCLSTopicRequest $req) 删除点播开通的日志主题。
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) * 仅当待删分类无子分类且无媒体关联情况下，可删除分类；
 * 否则，请先执行[删除媒体](/document/product/266/31764)及子分类，再删除该分类；
  * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [删除审核模板](https://cloud.tencent.com/document/api/266/84390)。
@@ -135,6 +138,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
    2.  查询时间跨度不超过90天。
    3. 可以指定用量数据的时间粒度，支持5分钟、1小时、1天的时间粒度。
    4.  流量为查询时间粒度内的总流量，带宽为查询时间粒度内的峰值带宽。
+ * @method Models\DescribeCLSLogsetsResponse DescribeCLSLogsets(Models\DescribeCLSLogsetsRequest $req) 查询 VOD 创建的 CLS 日志集。
+ * @method Models\DescribeCLSPushTargetsResponse DescribeCLSPushTargets(Models\DescribeCLSPushTargetsRequest $req) 查询点播域名下日志投递的目标主题。
+ * @method Models\DescribeCLSTopicsResponse DescribeCLSTopics(Models\DescribeCLSTopicsRequest $req) 查询 VOD 创建的 CLS 日志主题列表。
  * @method Models\DescribeCdnLogsResponse DescribeCdnLogs(Models\DescribeCdnLogsRequest $req) 查询点播域名的 CDN 访问日志的下载链接。
     1. 可以查询最近30天内的 CDN 日志下载链接。
     2. 默认情况下 CDN 每小时生成一个日志文件，如果某一个小时没有 CDN 访问，不会生成日志文件。    
@@ -453,6 +459,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 - （不推荐：应使用 StreamIds 替代）指定单个推流直播码 StreamId 进行搜索。
 - （不推荐：应使用 CreateTime 替代）指定单个起始创建时间 StartTime 进行搜索。
 - （不推荐：应使用 CreateTime 替代）指定单个结尾创建时间 EndTime 进行搜索。
+ * @method Models\SetCLSPushTargetResponse SetCLSPushTarget(Models\SetCLSPushTargetRequest $req) 为点播域名设置投递 CLS 的目标。
  * @method Models\SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(Models\SetDrmKeyProviderInfoRequest $req) 设置 DRM 密钥提供商信息。
  * @method Models\SetVodDomainCertificateResponse SetVodDomainCertificate(Models\SetVodDomainCertificateRequest $req) 设置点播域名 HTTPS 证书。
  * @method Models\SimpleHlsClipResponse SimpleHlsClip(Models\SimpleHlsClipRequest $req) 对 HLS 视频进行按时间段裁剪，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() 获取notebook id
  * @method void setId(string $Id) 设置notebook id
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method string getChargeType() 获取计算资源付费模式 ，可选值为：
+ * @method string getName() 获取名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+ * @method void setName(string $Name) 设置名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+ * @method string getChargeType() 获取（不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费
- * @method void setChargeType(string $ChargeType) 设置计算资源付费模式 ，可选值为：
+ * @method void setChargeType(string $ChargeType) 设置（不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费
  * @method ResourceConf getResourceConf() 获取计算资源配置
@@ -42,24 +42,24 @@ POSTPAID_BY_HOUR：按小时后付费
  * @method void setRootAccess(boolean $RootAccess) 设置是否ROOT权限
  * @method string getResourceGroupId() 获取资源组ID(for预付费)
  * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组ID(for预付费)
- * @method string getVpcId() 获取Vpc-Id
- * @method void setVpcId(string $VpcId) 设置Vpc-Id
- * @method string getSubnetId() 获取子网Id
- * @method void setSubnetId(string $SubnetId) 设置子网Id
+ * @method string getVpcId() 获取（不允许修改）Vpc-Id
+ * @method void setVpcId(string $VpcId) 设置（不允许修改）Vpc-Id
+ * @method string getSubnetId() 获取（不允许修改）子网Id
+ * @method void setSubnetId(string $SubnetId) 设置（不允许修改）子网Id
  * @method integer getVolumeSizeInGB() 获取存储卷大小，单位GB
  * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置存储卷大小，单位GB
- * @method string getVolumeSourceType() 获取存储的类型。取值包含： 
+ * @method string getVolumeSourceType() 获取（不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
     CFS:     CFS存储，包含NFS和turbo
- * @method void setVolumeSourceType(string $VolumeSourceType) 设置存储的类型。取值包含： 
+ * @method void setVolumeSourceType(string $VolumeSourceType) 设置（不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
     CFS:     CFS存储，包含NFS和turbo
- * @method CFSConfig getVolumeSourceCFS() 获取CFS存储的配置
- * @method void setVolumeSourceCFS(CFSConfig $VolumeSourceCFS) 设置CFS存储的配置
+ * @method CFSConfig getVolumeSourceCFS() 获取（不允许修改）CFS存储的配置
+ * @method void setVolumeSourceCFS(CFSConfig $VolumeSourceCFS) 设置（不允许修改）CFS存储的配置
  * @method LogConfig getLogConfig() 获取日志配置
  * @method void setLogConfig(LogConfig $LogConfig) 设置日志配置
  * @method string getLifecycleScriptId() 获取生命周期脚本的ID
@@ -72,12 +72,12 @@ POSTPAID_BY_HOUR：按小时后付费
  * @method void setAutomaticStopTime(integer $AutomaticStopTime) 设置自动停止时间，单位小时
  * @method array getTags() 获取标签配置
  * @method void setTags(array $Tags) 设置标签配置
- * @method array getDataConfigs() 获取数据配置
- * @method void setDataConfigs(array $DataConfigs) 设置数据配置
+ * @method array getDataConfigs() 获取数据配置，只支持WEDATA_HDFS
+ * @method void setDataConfigs(array $DataConfigs) 设置数据配置，只支持WEDATA_HDFS
  * @method ImageInfo getImageInfo() 获取镜像信息
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
- * @method string getImageType() 获取镜像类型
- * @method void setImageType(string $ImageType) 设置镜像类型
+ * @method string getImageType() 获取镜像类型，包括SYSTEM、TCR、CCR
+ * @method void setImageType(string $ImageType) 设置镜像类型，包括SYSTEM、TCR、CCR
  * @method SSHConfig getSSHConfig() 获取SSH配置
  * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置
  */
@@ -89,12 +89,12 @@ class ModifyNotebookRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string 名称
+     * @var string 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
     public $Name;
 
     /**
-     * @var string 计算资源付费模式 ，可选值为：
+     * @var string （不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费
      */
@@ -131,12 +131,12 @@ POSTPAID_BY_HOUR：按小时后付费
     public $ResourceGroupId;
 
     /**
-     * @var string Vpc-Id
+     * @var string （不允许修改）Vpc-Id
      */
     public $VpcId;
 
     /**
-     * @var string 子网Id
+     * @var string （不允许修改）子网Id
      */
     public $SubnetId;
 
@@ -146,7 +146,7 @@ POSTPAID_BY_HOUR：按小时后付费
     public $VolumeSizeInGB;
 
     /**
-     * @var string 存储的类型。取值包含： 
+     * @var string （不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
@@ -155,7 +155,7 @@ POSTPAID_BY_HOUR：按小时后付费
     public $VolumeSourceType;
 
     /**
-     * @var CFSConfig CFS存储的配置
+     * @var CFSConfig （不允许修改）CFS存储的配置
      */
     public $VolumeSourceCFS;
 
@@ -190,7 +190,7 @@ POSTPAID_BY_HOUR：按小时后付费
     public $Tags;
 
     /**
-     * @var array 数据配置
+     * @var array 数据配置，只支持WEDATA_HDFS
      */
     public $DataConfigs;
 
@@ -200,7 +200,7 @@ POSTPAID_BY_HOUR：按小时后付费
     public $ImageInfo;
 
     /**
-     * @var string 镜像类型
+     * @var string 镜像类型，包括SYSTEM、TCR、CCR
      */
     public $ImageType;
 
@@ -211,8 +211,8 @@ POSTPAID_BY_HOUR：按小时后付费
 
     /**
      * @param string $Id notebook id
-     * @param string $Name 名称
-     * @param string $ChargeType 计算资源付费模式 ，可选值为：
+     * @param string $Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * @param string $ChargeType （不允许修改）计算资源付费模式 ，可选值为：
 PREPAID：预付费，即包年包月
 POSTPAID_BY_HOUR：按小时后付费
      * @param ResourceConf $ResourceConf 计算资源配置
@@ -221,24 +221,24 @@ POSTPAID_BY_HOUR：按小时后付费
      * @param boolean $DirectInternetAccess 是否访问公网
      * @param boolean $RootAccess 是否ROOT权限
      * @param string $ResourceGroupId 资源组ID(for预付费)
-     * @param string $VpcId Vpc-Id
-     * @param string $SubnetId 子网Id
+     * @param string $VpcId （不允许修改）Vpc-Id
+     * @param string $SubnetId （不允许修改）子网Id
      * @param integer $VolumeSizeInGB 存储卷大小，单位GB
-     * @param string $VolumeSourceType 存储的类型。取值包含： 
+     * @param string $VolumeSourceType （不允许修改）存储的类型。取值包含： 
     FREE:    预付费的免费存储
     CLOUD_PREMIUM： 高性能云硬盘
     CLOUD_SSD： SSD云硬盘
     CFS:     CFS存储，包含NFS和turbo
-     * @param CFSConfig $VolumeSourceCFS CFS存储的配置
+     * @param CFSConfig $VolumeSourceCFS （不允许修改）CFS存储的配置
      * @param LogConfig $LogConfig 日志配置
      * @param string $LifecycleScriptId 生命周期脚本的ID
      * @param string $DefaultCodeRepoId 默认GIT存储库的ID
      * @param array $AdditionalCodeRepoIds 其他GIT存储库的ID，最多3个
      * @param integer $AutomaticStopTime 自动停止时间，单位小时
      * @param array $Tags 标签配置
-     * @param array $DataConfigs 数据配置
+     * @param array $DataConfigs 数据配置，只支持WEDATA_HDFS
      * @param ImageInfo $ImageInfo 镜像信息
-     * @param string $ImageType 镜像类型
+     * @param string $ImageType 镜像类型，包括SYSTEM、TCR、CCR
      * @param SSHConfig $SSHConfig SSH配置
      */
     function __construct()

@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(integer $Memory) 设置memory 内存资源, 单位为1M (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGpu() 获取gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+ * @method integer getGpu() 获取gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGpu(integer $Gpu) 设置gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+ * @method void setGpu(integer $Gpu) 设置gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGpuType() 获取GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+ * @method string getGpuType() 获取GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGpuType(string $GpuType) 设置GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+ * @method void setGpuType(string $GpuType) 设置GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取计算规格 (for后付费)，可选值如下：
 TI.S.LARGE.POST: 4C8G 
@@ -88,13 +88,13 @@ class ResourceConf extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+     * @var integer gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gpu;
 
     /**
-     * @var string GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+     * @var string GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GpuType;
@@ -126,9 +126,9 @@ TI.GN7.20XLARGE320.POST: 80C320G T4*4
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Memory memory 内存资源, 单位为1M (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Gpu gpu Gpu卡资源，单位为1单位的GpuType，例如GpuType=T4时，1 Gpu = 1/100 T4卡，GpuType=vcuda时，1 Gpu = 1/100 vcuda-core (for预付费)
+     * @param integer $Gpu gpu Gpu卡资源，单位为1/100卡，例如GpuType=T4时，1 Gpu = 1/100 T4卡 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GpuType GpuType 卡类型 vcuda, T4,P4,V100等 (for预付费)
+     * @param string $GpuType GpuType 卡类型，参考资源组上对应的卡类型。eg: H800,A800,A100,T4,P4,V100等 (for预付费)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 计算规格 (for后付费)，可选值如下：
 TI.S.LARGE.POST: 4C8G 

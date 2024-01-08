@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method GooseFS getVolumeSourceGooseFS() 获取GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookSetItem extends AbstractModel
 {
@@ -272,6 +276,12 @@ class NotebookSetItem extends AbstractModel
     public $SSHConfig;
 
     /**
+     * @var GooseFS GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VolumeSourceGooseFS;
+
+    /**
      * @param string $Id notebook ID
      * @param string $Name notebook 名称
      * @param string $ChargeType 计费模式
@@ -319,6 +329,8 @@ class NotebookSetItem extends AbstractModel
      * @param array $UserTypes notebook用户类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SSHConfig $SSHConfig SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GooseFS $VolumeSourceGooseFS GooseFS存储配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -444,6 +456,11 @@ class NotebookSetItem extends AbstractModel
         if (array_key_exists("SSHConfig",$param) and $param["SSHConfig"] !== null) {
             $this->SSHConfig = new SSHConfig();
             $this->SSHConfig->deserialize($param["SSHConfig"]);
+        }
+
+        if (array_key_exists("VolumeSourceGooseFS",$param) and $param["VolumeSourceGooseFS"] !== null) {
+            $this->VolumeSourceGooseFS = new GooseFS();
+            $this->VolumeSourceGooseFS->deserialize($param["VolumeSourceGooseFS"]);
         }
     }
 }

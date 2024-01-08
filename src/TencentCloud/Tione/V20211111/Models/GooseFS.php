@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置goosefs实例id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPath() 获取GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPath(string $Path) 设置GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GooseFS extends AbstractModel
 {
@@ -34,7 +42,23 @@ class GooseFS extends AbstractModel
     public $Id;
 
     /**
+     * @var string GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
+     * @var string GooseFSx实例需要挂载的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Path;
+
+    /**
      * @param string $Id goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type GooseFS类型，包括GooseFS和GooseFSx
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Path GooseFSx实例需要挂载的路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +76,14 @@ class GooseFS extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
     }
 }

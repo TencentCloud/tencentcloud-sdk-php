@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIP(string $IP) 设置pod的IP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取pod状态
+ * @method string getStatus() 获取pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置pod状态
+ * @method void setStatus(string $Status) 设置pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取pod启动时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,7 +60,7 @@ class PodInfo extends AbstractModel
     public $IP;
 
     /**
-     * @var string pod状态
+     * @var string pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -88,7 +88,7 @@ class PodInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IP pod的IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status pod状态
+     * @param string $Status pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime pod启动时间
 注意：此字段可能返回 null，表示取不到有效值。

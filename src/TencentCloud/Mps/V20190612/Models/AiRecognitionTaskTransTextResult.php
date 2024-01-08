@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiRecognitionTaskTransTextResultOutput $Output) 设置翻译任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProgress() 获取任务进度。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProgress(integer $Progress) 设置任务进度。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiRecognitionTaskTransTextResult extends AbstractModel
 {
@@ -69,12 +73,20 @@ class AiRecognitionTaskTransTextResult extends AbstractModel
     public $Output;
 
     /**
+     * @var integer 任务进度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Progress;
+
+    /**
      * @param string $Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
      * @param string $Message 错误信息。
      * @param AiRecognitionTaskTransTextResultInput $Input 翻译任务输入信息。
      * @param AiRecognitionTaskTransTextResultOutput $Output 翻译任务输出信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Progress 任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -114,6 +126,10 @@ class AiRecognitionTaskTransTextResult extends AbstractModel
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new AiRecognitionTaskTransTextResultOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

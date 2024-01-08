@@ -152,6 +152,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageType(string $ImageType) 设置镜像类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SSHConfig getSSHConfig() 获取SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method GooseFS getVolumeSourceGooseFS() 获取GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookDetail extends AbstractModel
 {
@@ -370,6 +378,18 @@ class NotebookDetail extends AbstractModel
     public $ImageType;
 
     /**
+     * @var SSHConfig SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SSHConfig;
+
+    /**
+     * @var GooseFS GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VolumeSourceGooseFS;
+
+    /**
      * @param string $Id notebook  ID
      * @param string $Name notebook 名称
      * @param string $LifecycleScriptId 生命周期脚本
@@ -435,6 +455,10 @@ class NotebookDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageInfo $ImageInfo 镜像信息
      * @param string $ImageType 镜像类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SSHConfig $SSHConfig SSH配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GooseFS $VolumeSourceGooseFS GooseFS存储配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -610,6 +634,16 @@ class NotebookDetail extends AbstractModel
 
         if (array_key_exists("ImageType",$param) and $param["ImageType"] !== null) {
             $this->ImageType = $param["ImageType"];
+        }
+
+        if (array_key_exists("SSHConfig",$param) and $param["SSHConfig"] !== null) {
+            $this->SSHConfig = new SSHConfig();
+            $this->SSHConfig->deserialize($param["SSHConfig"]);
+        }
+
+        if (array_key_exists("VolumeSourceGooseFS",$param) and $param["VolumeSourceGooseFS"] !== null) {
+            $this->VolumeSourceGooseFS = new GooseFS();
+            $this->VolumeSourceGooseFS->deserialize($param["VolumeSourceGooseFS"]);
         }
     }
 }

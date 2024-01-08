@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 图片水印参数。
  *
  * @method string getWaterMarkUrl() 获取水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
  * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
  * @method integer getWaterMarkWidth() 获取水印在输出时的宽。单位为像素值。
  * @method void setWaterMarkWidth(integer $WaterMarkWidth) 设置水印在输出时的宽。单位为像素值。
  * @method integer getWaterMarkHeight() 获取水印在输出时的高。单位为像素值。
@@ -39,6 +41,7 @@ class McuWaterMarkImage extends AbstractModel
 {
     /**
      * @var string 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
      */
     public $WaterMarkUrl;
 
@@ -74,6 +77,7 @@ class McuWaterMarkImage extends AbstractModel
 
     /**
      * @param string $WaterMarkUrl 水印图片URL地址，支持png、jpg、jpeg格式。图片大小限制不超过5MB。
+注：您需要确保图片链接的可访问性，后台单次下载超时时间为10秒，最多重试3次，若最终图片下载失败，水印图片将不会生效。
      * @param integer $WaterMarkWidth 水印在输出时的宽。单位为像素值。
      * @param integer $WaterMarkHeight 水印在输出时的高。单位为像素值。
      * @param integer $LocationX 水印在输出时的X偏移。单位为像素值。

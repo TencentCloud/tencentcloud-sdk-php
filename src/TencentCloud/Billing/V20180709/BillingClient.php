@@ -52,6 +52,7 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\DescribeDealsByCondResponse DescribeDealsByCond(Models\DescribeDealsByCondRequest $req) 查询订单
  * @method Models\DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(Models\DescribeDosageCosDetailByDateRequest $req) 获取COS产品用量明细
  * @method Models\DescribeDosageDetailByDateResponse DescribeDosageDetailByDate(Models\DescribeDosageDetailByDateRequest $req) 按日期获取产品用量明细
+ * @method Models\DescribeDosageDetailListResponse DescribeDosageDetailList(Models\DescribeDosageDetailListRequest $req) 获取已接入标准用量明细模板产品的用量明细数据，目前已接入并支持查询的产品包括：云联络中心、实时音视频、实时音视频、智能媒资托管、CODING DevOps、全球IP应用加速
  * @method Models\DescribeSavingPlanCoverageResponse DescribeSavingPlanCoverage(Models\DescribeSavingPlanCoverageRequest $req) 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
  * @method Models\DescribeSavingPlanOverviewResponse DescribeSavingPlanOverview(Models\DescribeSavingPlanOverviewRequest $req) 查用当前用户明细节省计划总览查询时段内的使用情况
  * @method Models\DescribeSavingPlanUsageResponse DescribeSavingPlanUsage(Models\DescribeSavingPlanUsageRequest $req) 查用当前用户明细节省计划查询时段内的使用情况

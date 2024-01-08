@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioChannel(integer $AudioChannel) 设置声道数，可选值：
 <li>1：单声道 。</li>
 <li>2：双声道（默认）。</li>
+ * @method integer getBitrate() 获取参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。
+ * @method void setBitrate(integer $Bitrate) 设置参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。
  */
 class ComposeAudioStream extends AbstractModel
 {
@@ -69,6 +75,13 @@ class ComposeAudioStream extends AbstractModel
     public $AudioChannel;
 
     /**
+     * @var integer 参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。
+     */
+    public $Bitrate;
+
+    /**
      * @param string $Codec 音频流的编码方式，可选值：
 <li>AAC：AAC 编码（默认），用于容器为 mp4。</li>
 <li>MP3：mp3 编码，用于容器为 mp3。</li>
@@ -80,6 +93,9 @@ class ComposeAudioStream extends AbstractModel
      * @param integer $AudioChannel 声道数，可选值：
 <li>1：单声道 。</li>
 <li>2：双声道（默认）。</li>
+     * @param integer $Bitrate 参考码率，单位 kbps，范围：26~10000。
+如果设置，编码时会尽量按该码率进行编码。
+如果不设置，服务将根据音频参数自动采用合适的码率。
      */
     function __construct()
     {
@@ -104,6 +120,10 @@ class ComposeAudioStream extends AbstractModel
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("Bitrate",$param) and $param["Bitrate"] !== null) {
+            $this->Bitrate = $param["Bitrate"];
         }
     }
 }

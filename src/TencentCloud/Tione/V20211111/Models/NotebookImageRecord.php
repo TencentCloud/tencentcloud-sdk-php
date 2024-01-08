@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageUrl(string $ImageUrl) 设置镜像地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取状态
+ * @method string getStatus() 获取状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置状态
+ * @method void setStatus(string $Status) 设置状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,7 +64,7 @@ class NotebookImageRecord extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var string 状态
+     * @var string 状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -98,7 +98,7 @@ class NotebookImageRecord extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageUrl 镜像地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 状态
+     * @param string $Status 状态。eg：creating导出中/success已完成/stopped已停止/fail异常
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。

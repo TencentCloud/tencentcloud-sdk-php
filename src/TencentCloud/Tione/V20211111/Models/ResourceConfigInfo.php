@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRole() 获取角色，eg：PS、WORKER、DRIVER、EXECUTOR
  * @method void setRole(string $Role) 设置角色，eg：PS、WORKER、DRIVER、EXECUTOR
- * @method integer getCpu() 获取cpu核数，1000=1核
- * @method void setCpu(integer $Cpu) 设置cpu核数，1000=1核
- * @method integer getMemory() 获取内存，单位为MB
- * @method void setMemory(integer $Memory) 设置内存，单位为MB
- * @method string getGpuType() 获取gpu卡类型
- * @method void setGpuType(string $GpuType) 设置gpu卡类型
- * @method integer getGpu() 获取gpu数
- * @method void setGpu(integer $Gpu) 设置gpu数
+ * @method integer getCpu() 获取cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
+ * @method void setCpu(integer $Cpu) 设置cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
+ * @method integer getMemory() 获取内存，使用资源组时需配置。单位为MB
+ * @method void setMemory(integer $Memory) 设置内存，使用资源组时需配置。单位为MB
+ * @method string getGpuType() 获取gpu卡类型，使用资源组时需配置
+ * @method void setGpuType(string $GpuType) 设置gpu卡类型，使用资源组时需配置
+ * @method integer getGpu() 获取gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
+ * @method void setGpu(integer $Gpu) 设置gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
  * @method string getInstanceType() 获取算力规格ID
 计算规格 (for后付费)，可选值如下：
 TI.S.LARGE.POST: 4C8G 
@@ -117,22 +117,22 @@ class ResourceConfigInfo extends AbstractModel
     public $Role;
 
     /**
-     * @var integer cpu核数，1000=1核
+     * @var integer cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
      */
     public $Cpu;
 
     /**
-     * @var integer 内存，单位为MB
+     * @var integer 内存，使用资源组时需配置。单位为MB
      */
     public $Memory;
 
     /**
-     * @var string gpu卡类型
+     * @var string gpu卡类型，使用资源组时需配置
      */
     public $GpuType;
 
     /**
-     * @var integer gpu数
+     * @var integer gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
      */
     public $Gpu;
 
@@ -193,10 +193,10 @@ TI.GN7.20XLARGE320.POST: 80C32
 
     /**
      * @param string $Role 角色，eg：PS、WORKER、DRIVER、EXECUTOR
-     * @param integer $Cpu cpu核数，1000=1核
-     * @param integer $Memory 内存，单位为MB
-     * @param string $GpuType gpu卡类型
-     * @param integer $Gpu gpu数
+     * @param integer $Cpu cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
+     * @param integer $Memory 内存，使用资源组时需配置。单位为MB
+     * @param string $GpuType gpu卡类型，使用资源组时需配置
+     * @param integer $Gpu gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
      * @param string $InstanceType 算力规格ID
 计算规格 (for后付费)，可选值如下：
 TI.S.LARGE.POST: 4C8G 

@@ -45,17 +45,21 @@ POSTPAID_BY_HOUR：按小时后付费
  * @method string getSubnetId() 获取子网Id
  * @method void setSubnetId(string $SubnetId) 设置子网Id
  * @method string getVolumeSourceType() 获取存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+FREE：预付费的免费存储
+CLOUD_PREMIUM：高性能云硬盘
+CLOUD_SSD：SSD云硬盘
+CFS：CFS存储
+CFS_TURBO：CFS Turbo存储
+GooseFSx：GooseFSx存储
  * @method void setVolumeSourceType(string $VolumeSourceType) 设置存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
- * @method integer getVolumeSizeInGB() 获取存储卷大小，单位GB
- * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置存储卷大小，单位GB
+FREE：预付费的免费存储
+CLOUD_PREMIUM：高性能云硬盘
+CLOUD_SSD：SSD云硬盘
+CFS：CFS存储
+CFS_TURBO：CFS Turbo存储
+GooseFSx：GooseFSx存储
+ * @method integer getVolumeSizeInGB() 获取云硬盘存储卷大小，单位GB
+ * @method void setVolumeSizeInGB(integer $VolumeSizeInGB) 设置云硬盘存储卷大小，单位GB
  * @method CFSConfig getVolumeSourceCFS() 获取CFS存储的配置
  * @method void setVolumeSourceCFS(CFSConfig $VolumeSourceCFS) 设置CFS存储的配置
  * @method LogConfig getLogConfig() 获取日志配置
@@ -70,14 +74,16 @@ POSTPAID_BY_HOUR：按小时后付费
  * @method void setAutomaticStopTime(integer $AutomaticStopTime) 设置自动停止时间，单位小时
  * @method array getTags() 获取标签配置
  * @method void setTags(array $Tags) 设置标签配置
- * @method array getDataConfigs() 获取数据配置
- * @method void setDataConfigs(array $DataConfigs) 设置数据配置
+ * @method array getDataConfigs() 获取数据配置，只支持WEDATA_HDFS存储类型
+ * @method void setDataConfigs(array $DataConfigs) 设置数据配置，只支持WEDATA_HDFS存储类型
  * @method ImageInfo getImageInfo() 获取镜像信息
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
- * @method string getImageType() 获取镜像类型
- * @method void setImageType(string $ImageType) 设置镜像类型
+ * @method string getImageType() 获取镜像类型，包括SYSTEM、TCR、CCR
+ * @method void setImageType(string $ImageType) 设置镜像类型，包括SYSTEM、TCR、CCR
  * @method SSHConfig getSSHConfig() 获取SSH配置信息
  * @method void setSSHConfig(SSHConfig $SSHConfig) 设置SSH配置信息
+ * @method GooseFS getVolumeSourceGooseFS() 获取GooseFS存储配置
+ * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置GooseFS存储配置
  */
 class CreateNotebookRequest extends AbstractModel
 {
@@ -135,15 +141,17 @@ POSTPAID_BY_HOUR：按小时后付费
 
     /**
      * @var string 存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+FREE：预付费的免费存储
+CLOUD_PREMIUM：高性能云硬盘
+CLOUD_SSD：SSD云硬盘
+CFS：CFS存储
+CFS_TURBO：CFS Turbo存储
+GooseFSx：GooseFSx存储
      */
     public $VolumeSourceType;
 
     /**
-     * @var integer 存储卷大小，单位GB
+     * @var integer 云硬盘存储卷大小，单位GB
      */
     public $VolumeSizeInGB;
 
@@ -183,7 +191,7 @@ POSTPAID_BY_HOUR：按小时后付费
     public $Tags;
 
     /**
-     * @var array 数据配置
+     * @var array 数据配置，只支持WEDATA_HDFS存储类型
      */
     public $DataConfigs;
 
@@ -193,7 +201,7 @@ POSTPAID_BY_HOUR：按小时后付费
     public $ImageInfo;
 
     /**
-     * @var string 镜像类型
+     * @var string 镜像类型，包括SYSTEM、TCR、CCR
      */
     public $ImageType;
 
@@ -201,6 +209,11 @@ POSTPAID_BY_HOUR：按小时后付费
      * @var SSHConfig SSH配置信息
      */
     public $SSHConfig;
+
+    /**
+     * @var GooseFS GooseFS存储配置
+     */
+    public $VolumeSourceGooseFS;
 
     /**
      * @param string $Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
@@ -216,11 +229,13 @@ POSTPAID_BY_HOUR：按小时后付费
      * @param string $VpcId Vpc-Id
      * @param string $SubnetId 子网Id
      * @param string $VolumeSourceType 存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
-     * @param integer $VolumeSizeInGB 存储卷大小，单位GB
+FREE：预付费的免费存储
+CLOUD_PREMIUM：高性能云硬盘
+CLOUD_SSD：SSD云硬盘
+CFS：CFS存储
+CFS_TURBO：CFS Turbo存储
+GooseFSx：GooseFSx存储
+     * @param integer $VolumeSizeInGB 云硬盘存储卷大小，单位GB
      * @param CFSConfig $VolumeSourceCFS CFS存储的配置
      * @param LogConfig $LogConfig 日志配置
      * @param string $LifecycleScriptId 生命周期脚本的ID
@@ -228,10 +243,11 @@ POSTPAID_BY_HOUR：按小时后付费
      * @param array $AdditionalCodeRepoIds 其他GIT存储库的ID，最多3个
      * @param integer $AutomaticStopTime 自动停止时间，单位小时
      * @param array $Tags 标签配置
-     * @param array $DataConfigs 数据配置
+     * @param array $DataConfigs 数据配置，只支持WEDATA_HDFS存储类型
      * @param ImageInfo $ImageInfo 镜像信息
-     * @param string $ImageType 镜像类型
+     * @param string $ImageType 镜像类型，包括SYSTEM、TCR、CCR
      * @param SSHConfig $SSHConfig SSH配置信息
+     * @param GooseFS $VolumeSourceGooseFS GooseFS存储配置
      */
     function __construct()
     {
@@ -351,6 +367,11 @@ POSTPAID_BY_HOUR：按小时后付费
         if (array_key_exists("SSHConfig",$param) and $param["SSHConfig"] !== null) {
             $this->SSHConfig = new SSHConfig();
             $this->SSHConfig->deserialize($param["SSHConfig"]);
+        }
+
+        if (array_key_exists("VolumeSourceGooseFS",$param) and $param["VolumeSourceGooseFS"] !== null) {
+            $this->VolumeSourceGooseFS = new GooseFS();
+            $this->VolumeSourceGooseFS->deserialize($param["VolumeSourceGooseFS"]);
         }
     }
 }

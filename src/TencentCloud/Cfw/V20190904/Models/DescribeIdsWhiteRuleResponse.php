@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotal() 获取总条数
  * @method void setTotal(integer $Total) 设置总条数
+ * @method array getData() 获取规则详情
+ * @method void setData(array $Data) 设置规则详情
  * @method integer getReturnCode() 获取返回状态码 0 成功 非0不成功
  * @method void setReturnCode(integer $ReturnCode) 设置返回状态码 0 成功 非0不成功
  * @method string getReturnMsg() 获取返回信息  success 成功 其他 不成功
@@ -35,6 +37,11 @@ class DescribeIdsWhiteRuleResponse extends AbstractModel
      * @var integer 总条数
      */
     public $Total;
+
+    /**
+     * @var array 规则详情
+     */
+    public $Data;
 
     /**
      * @var integer 返回状态码 0 成功 非0不成功
@@ -53,6 +60,7 @@ class DescribeIdsWhiteRuleResponse extends AbstractModel
 
     /**
      * @param integer $Total 总条数
+     * @param array $Data 规则详情
      * @param integer $ReturnCode 返回状态码 0 成功 非0不成功
      * @param string $ReturnMsg 返回信息  success 成功 其他 不成功
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -72,6 +80,15 @@ class DescribeIdsWhiteRuleResponse extends AbstractModel
         }
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new IdsWhiteInfo();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {

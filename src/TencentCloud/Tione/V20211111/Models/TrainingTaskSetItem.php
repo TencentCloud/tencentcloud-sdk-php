@@ -50,8 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainingMode(string $TrainingMode) 设置训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
- * @method void setStatus(string $Status) 设置任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+ * @method string getStatus() 获取任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+ * @method void setStatus(string $Status) 设置任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
  * @method integer getRuntimeInSeconds() 获取运行时长
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置运行时长
@@ -153,7 +155,8 @@ class TrainingTaskSetItem extends AbstractModel
     public $TrainingMode;
 
     /**
-     * @var string 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * @var string 任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      */
     public $Status;
 
@@ -246,7 +249,8 @@ class TrainingTaskSetItem extends AbstractModel
      * @param array $ResourceConfigInfos 资源配置
      * @param string $TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * @param string $Status 任务状态，eg：SUBMITTING提交中、PENDING排队中、
+STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      * @param integer $RuntimeInSeconds 运行时长
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间

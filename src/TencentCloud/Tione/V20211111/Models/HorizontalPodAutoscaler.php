@@ -28,9 +28,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxReplicas(integer $MaxReplicas) 设置最大实例数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getHpaMetrics() 获取扩缩容指标
+ * @method array getHpaMetrics() 获取支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHpaMetrics(array $HpaMetrics) 设置扩缩容指标
+ * @method void setHpaMetrics(array $HpaMetrics) 设置支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class HorizontalPodAutoscaler extends AbstractModel
@@ -48,7 +52,9 @@ class HorizontalPodAutoscaler extends AbstractModel
     public $MaxReplicas;
 
     /**
-     * @var array 扩缩容指标
+     * @var array 支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HpaMetrics;
@@ -58,7 +64,9 @@ class HorizontalPodAutoscaler extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxReplicas 最大实例数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $HpaMetrics 扩缩容指标
+     * @param array $HpaMetrics 支持：
+"gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
+"concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableInstanceRpsLimit(boolean $EnableInstanceRpsLimit) 设置是否开启实例层面限流限速，true or false。true 则 InstanceRpsLimit 必填， false 则 InstanceRpsLimit 不生效
  * @method integer getInstanceRpsLimit() 获取每个服务实例的 request per second 限速, 0 为不限流
  * @method void setInstanceRpsLimit(integer $InstanceRpsLimit) 设置每个服务实例的 request per second 限速, 0 为不限流
+ * @method boolean getEnableInstanceReqLimit() 获取是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+ * @method void setEnableInstanceReqLimit(boolean $EnableInstanceReqLimit) 设置是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+ * @method integer getInstanceReqLimit() 获取每个服务实例的最大并发
+ * @method void setInstanceReqLimit(integer $InstanceReqLimit) 设置每个服务实例的最大并发
  */
 class ServiceLimit extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ServiceLimit extends AbstractModel
     public $InstanceRpsLimit;
 
     /**
+     * @var boolean 是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+     */
+    public $EnableInstanceReqLimit;
+
+    /**
+     * @var integer 每个服务实例的最大并发
+     */
+    public $InstanceReqLimit;
+
+    /**
      * @param boolean $EnableInstanceRpsLimit 是否开启实例层面限流限速，true or false。true 则 InstanceRpsLimit 必填， false 则 InstanceRpsLimit 不生效
      * @param integer $InstanceRpsLimit 每个服务实例的 request per second 限速, 0 为不限流
+     * @param boolean $EnableInstanceReqLimit 是否开启单实例最大并发数限制，true or false。true 则 InstanceReqLimit 必填， false 则 InstanceReqLimit 不生效
+     * @param integer $InstanceReqLimit 每个服务实例的最大并发
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ServiceLimit extends AbstractModel
 
         if (array_key_exists("InstanceRpsLimit",$param) and $param["InstanceRpsLimit"] !== null) {
             $this->InstanceRpsLimit = $param["InstanceRpsLimit"];
+        }
+
+        if (array_key_exists("EnableInstanceReqLimit",$param) and $param["EnableInstanceReqLimit"] !== null) {
+            $this->EnableInstanceReqLimit = $param["EnableInstanceReqLimit"];
+        }
+
+        if (array_key_exists("InstanceReqLimit",$param) and $param["InstanceReqLimit"] !== null) {
+            $this->InstanceReqLimit = $param["InstanceReqLimit"];
         }
     }
 }

@@ -49,13 +49,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceId() 获取资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
  * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
  * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
  * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
  * @method array getFlowApproverList() 获取合同签署人信息
@@ -102,8 +104,9 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
      * @var string 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
      */
     public $ResourceId;
 
@@ -158,8 +161,9 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
      * @param string $ResourceId 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
      * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
      * @param array $FlowApproverList 合同签署人信息
      * @param string $FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接

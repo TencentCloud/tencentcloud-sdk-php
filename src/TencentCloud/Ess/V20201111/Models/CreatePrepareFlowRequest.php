@@ -31,17 +31,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceId() 获取资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
  * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
  * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
 
  * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
 
+ * @method integer getResourceType() 获取资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
+ * @method void setResourceType(integer $ResourceType) 设置资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
  * @method boolean getUnordered() 获取合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
@@ -74,12 +82,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntelligentStatus(string $IntelligentStatus) 设置开启或者关闭智能添加填写区：
 <ul><li> **OPEN**：开启（默认值）</li>
 <li> **CLOSE**：关闭</li></ul>
- * @method integer getResourceType() 获取资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
- * @method void setResourceType(integer $ResourceType) 设置资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
  * @method Component getComponents() 获取该字段已废弃，请使用InitiatorComponents
  * @method void setComponents(Component $Components) 设置该字段已废弃，请使用InitiatorComponents
  * @method CreateFlowOption getFlowOption() 获取发起合同个性化参数
@@ -148,8 +150,9 @@ class CreatePrepareFlowRequest extends AbstractModel
      * @var string 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
      */
     public $ResourceId;
 
@@ -158,6 +161,13 @@ class CreatePrepareFlowRequest extends AbstractModel
 
      */
     public $FlowName;
+
+    /**
+     * @var integer 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
+     */
+    public $ResourceType;
 
     /**
      * @var boolean 合同流程的签署顺序类型：
@@ -198,13 +208,6 @@ class CreatePrepareFlowRequest extends AbstractModel
 <li> **CLOSE**：关闭</li></ul>
      */
     public $IntelligentStatus;
-
-    /**
-     * @var integer 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
-     */
-    public $ResourceType;
 
     /**
      * @var Component 该字段已废弃，请使用InitiatorComponents
@@ -277,10 +280,14 @@ class CreatePrepareFlowRequest extends AbstractModel
      * @param string $ResourceId 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id</li>
+<li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
+注意：需要同时设置 ResourceType 参数指定资源类型
      * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
 
+     * @param integer $ResourceType 资源类型，取值有：
+<ul><li> **1**：模板</li>
+<li> **2**：文件（默认值）</li></ul>
      * @param boolean $Unordered 合同流程的签署顺序类型：
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
@@ -297,9 +304,6 @@ class CreatePrepareFlowRequest extends AbstractModel
      * @param string $IntelligentStatus 开启或者关闭智能添加填写区：
 <ul><li> **OPEN**：开启（默认值）</li>
 <li> **CLOSE**：关闭</li></ul>
-     * @param integer $ResourceType 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
      * @param Component $Components 该字段已废弃，请使用InitiatorComponents
      * @param CreateFlowOption $FlowOption 发起合同个性化参数
 用于满足创建及页面操作过程中的个性化要求
@@ -353,6 +357,10 @@ class CreatePrepareFlowRequest extends AbstractModel
             $this->FlowName = $param["FlowName"];
         }
 
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
         if (array_key_exists("Unordered",$param) and $param["Unordered"] !== null) {
             $this->Unordered = $param["Unordered"];
         }
@@ -380,10 +388,6 @@ class CreatePrepareFlowRequest extends AbstractModel
 
         if (array_key_exists("IntelligentStatus",$param) and $param["IntelligentStatus"] !== null) {
             $this->IntelligentStatus = $param["IntelligentStatus"];
-        }
-
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
         }
 
         if (array_key_exists("Components",$param) and $param["Components"] !== null) {

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOfflineLogRecords请求参数结构体
+ * StartSubscribe返回参数结构体
  *
- * @method string getProjectKey() 获取项目唯一上报 key
- * @method void setProjectKey(string $ProjectKey) 设置项目唯一上报 key
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeOfflineLogRecordsRequest extends AbstractModel
+class StartSubscribeResponse extends AbstractModel
 {
     /**
-     * @var string 项目唯一上报 key
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $ProjectKey;
+    public $RequestId;
 
     /**
-     * @param string $ProjectKey 项目唯一上报 key
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeOfflineLogRecordsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectKey",$param) and $param["ProjectKey"] !== null) {
-            $this->ProjectKey = $param["ProjectKey"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

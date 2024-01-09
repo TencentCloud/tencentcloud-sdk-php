@@ -150,6 +150,10 @@ pause
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIndexMode(string $InstanceIndexMode) 设置实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceAbility getInstanceAbility() 获取当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceAbility(InstanceAbility $InstanceAbility) 设置当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -431,6 +435,12 @@ pause
     public $InstanceIndexMode;
 
     /**
+     * @var InstanceAbility 当前实例支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceAbility;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -495,6 +505,8 @@ pause
      * @param array $ResourcePackages 实例绑定资源包信息（此处只返回计算资源包，即packageType=CCU）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceIndexMode 实例索引形态,可选值【mixedRowColumn（行列混存），onlyRowIndex（仅行存）】
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceAbility $InstanceAbility 当前实例支持的能力
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -740,6 +752,11 @@ pause
 
         if (array_key_exists("InstanceIndexMode",$param) and $param["InstanceIndexMode"] !== null) {
             $this->InstanceIndexMode = $param["InstanceIndexMode"];
+        }
+
+        if (array_key_exists("InstanceAbility",$param) and $param["InstanceAbility"] !== null) {
+            $this->InstanceAbility = new InstanceAbility();
+            $this->InstanceAbility->deserialize($param["InstanceAbility"]);
         }
     }
 }

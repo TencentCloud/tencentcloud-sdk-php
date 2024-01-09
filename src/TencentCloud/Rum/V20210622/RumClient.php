@@ -28,7 +28,6 @@ use TencentCloud\Rum\V20210622\Models as Models;
 本接口用于创建日志下载任务
 
 默认接口请求频率限制：20次/秒。
- * @method Models\CreateOfflineLogConfigResponse CreateOfflineLogConfig(Models\CreateOfflineLogConfigRequest $req) 创建离线日志监听，对应用户的离线日志将上报
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建 RUM 应用（归属于某个团队）
  * @method Models\CreateReleaseFileResponse CreateReleaseFile(Models\CreateReleaseFileRequest $req) 创建对应项目的文件记录
  * @method Models\CreateStarProjectResponse CreateStarProject(Models\CreateStarProjectRequest $req) 个人用户添加星标项目
@@ -77,8 +76,6 @@ use TencentCloud\Rum\V20210622\Models as Models;
 默认接口请求频率限制：20次/秒
  * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) (已下线，请用DescribeRumLogList)
  * @method Models\DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(Models\DescribeOfflineLogConfigsRequest $req) 获取设置的离线日志监听配置 - 返回设置的用户唯一标识
- * @method Models\DescribeOfflineLogRecordsResponse DescribeOfflineLogRecords(Models\DescribeOfflineLogRecordsRequest $req) 获取所有离线日志记录(最多100条)
- * @method Models\DescribeOfflineLogsResponse DescribeOfflineLogs(Models\DescribeOfflineLogsRequest $req) 获取对应离线日志
  * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) 获取应用上报抽样信息
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 获取项目列表（实例创建的团队下的项目列表）
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) 获取项目下的PV列表

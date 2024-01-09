@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIdList(array $InstanceIdList) 设置实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
  * @method string getDbType() 获取该参数已废弃
  * @method void setDbType(string $DbType) 设置该参数已废弃
+ * @method array getIsolateReasonTypes() 获取实例退还原因类型
+ * @method void setIsolateReasonTypes(array $IsolateReasonTypes) 设置实例退还原因类型
+ * @method string getIsolateReason() 获取实例退还原因补充
+ * @method void setIsolateReason(string $IsolateReason) 设置实例退还原因补充
  */
 class IsolateInstanceRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class IsolateInstanceRequest extends AbstractModel
     public $DbType;
 
     /**
+     * @var array 实例退还原因类型
+     */
+    public $IsolateReasonTypes;
+
+    /**
+     * @var string 实例退还原因补充
+     */
+    public $IsolateReason;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIdList 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
      * @param string $DbType 该参数已废弃
+     * @param array $IsolateReasonTypes 实例退还原因类型
+     * @param string $IsolateReason 实例退还原因补充
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class IsolateInstanceRequest extends AbstractModel
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("IsolateReasonTypes",$param) and $param["IsolateReasonTypes"] !== null) {
+            $this->IsolateReasonTypes = $param["IsolateReasonTypes"];
+        }
+
+        if (array_key_exists("IsolateReason",$param) and $param["IsolateReason"] !== null) {
+            $this->IsolateReason = $param["IsolateReason"];
         }
     }
 }

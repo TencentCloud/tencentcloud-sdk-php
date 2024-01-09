@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGrafanaInitPassword(string $GrafanaInitPassword) 设置Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
  * @method array getTagSpecification() 获取标签
  * @method void setTagSpecification(array $TagSpecification) 设置标签
+ * @method boolean getAutoVoucher() 获取是否自动选择代金券，默认为 false
+ * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动选择代金券，默认为 false
  */
 class CreateGrafanaInstanceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateGrafanaInstanceRequest extends AbstractModel
     public $TagSpecification;
 
     /**
+     * @var boolean 是否自动选择代金券，默认为 false
+     */
+    public $AutoVoucher;
+
+    /**
      * @param string $InstanceName 实例名
      * @param string $VpcId VPC ID (私有网络 ID)
      * @param array $SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
      * @param boolean $EnableInternet 是否启用外网
      * @param string $GrafanaInitPassword Grafana 初始密码(国际站用户必填，国内站用户可不填，不填时会生成随机密码并给主账号发送通知)
      * @param array $TagSpecification 标签
+     * @param boolean $AutoVoucher 是否自动选择代金券，默认为 false
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateGrafanaInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
+        }
+
+        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
+            $this->AutoVoucher = $param["AutoVoucher"];
         }
     }
 }

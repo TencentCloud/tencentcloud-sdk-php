@@ -47,12 +47,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndpoint() 获取变更链接类型：
 <ul>
 <li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
-<li>**APP** : 创建变更小程序链接，可从第三方App跳转到微信腾讯电子签小程序进行更换。</li>
+<li>**APP** : 创建变更小程序链接，可从第三方App或者小程序跳转到微信腾讯电子签小程序进行更换。</li>
 </ul>
  * @method void setEndpoint(string $Endpoint) 设置变更链接类型：
 <ul>
 <li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
-<li>**APP** : 创建变更小程序链接，可从第三方App跳转到微信腾讯电子签小程序进行更换。</li>
+<li>**APP** : 创建变更小程序链接，可从第三方App或者小程序跳转到微信腾讯电子签小程序进行更换。</li>
 </ul>
  */
 class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
@@ -81,7 +81,7 @@ class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
      * @var string 变更链接类型：
 <ul>
 <li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
-<li>**APP** : 创建变更小程序链接，可从第三方App跳转到微信腾讯电子签小程序进行更换。</li>
+<li>**APP** : 创建变更小程序链接，可从第三方App或者小程序跳转到微信腾讯电子签小程序进行更换。</li>
 </ul>
      */
     public $Endpoint;
@@ -102,7 +102,7 @@ class CreateChannelOrganizationInfoChangeUrlRequest extends AbstractModel
      * @param string $Endpoint 变更链接类型：
 <ul>
 <li>**WEIXINAPP** : 创建变更短链。需要在移动端打开，会跳转到微信腾讯电子签小程序进行更换。（默认）</li>
-<li>**APP** : 创建变更小程序链接，可从第三方App跳转到微信腾讯电子签小程序进行更换。</li>
+<li>**APP** : 创建变更小程序链接，可从第三方App或者小程序跳转到微信腾讯电子签小程序进行更换。</li>
 </ul>
      */
     function __construct()

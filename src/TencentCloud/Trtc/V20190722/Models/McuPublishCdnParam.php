@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转推参数。
  *
- * @method string getPublishCdnUrl() 获取CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。
- * @method void setPublishCdnUrl(string $PublishCdnUrl) 设置CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。
+ * @method string getPublishCdnUrl() 获取CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。
+ * @method void setPublishCdnUrl(string $PublishCdnUrl) 设置CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。
  * @method integer getIsTencentCdn() 获取是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
  * @method void setIsTencentCdn(integer $IsTencentCdn) 设置是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
  */
 class McuPublishCdnParam extends AbstractModel
 {
     /**
-     * @var string CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。
+     * @var string CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。
      */
     public $PublishCdnUrl;
 
@@ -38,7 +41,8 @@ class McuPublishCdnParam extends AbstractModel
     public $IsTencentCdn;
 
     /**
-     * @param string $PublishCdnUrl CDN转推URL。注：若更新转推时，URL有任何变化，都会断流重推。
+     * @param string $PublishCdnUrl CDN转推URL，只支持rtmp链接。
+注：若更新转推时，URL有任何变化，都会断流重推。
      * @param integer $IsTencentCdn 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
      */
     function __construct()

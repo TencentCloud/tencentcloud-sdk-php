@@ -23,46 +23,15 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tdid\V20210519\Models as Models;
 
 /**
- * @method Models\CheckChainResponse CheckChain(Models\CheckChainRequest $req) 该接口不再使用
-
-检查区块链信息
- * @method Models\CreateCredentialResponse CreateCredential(Models\CreateCredentialRequest $req) 该接口不再使用
-
-创建凭证
- * @method Models\CreateSelectiveCredentialResponse CreateSelectiveCredential(Models\CreateSelectiveCredentialRequest $req) 该接口不再使用
-
-创建选择性批露凭证
- * @method Models\CreateTDidResponse CreateTDid(Models\CreateTDidRequest $req) 该接口不再使用
-
-创建机构DID
- * @method Models\CreateTDidByPrivateKeyResponse CreateTDidByPrivateKey(Models\CreateTDidByPrivateKeyRequest $req) 该接口不再使用
-
-新建DID根据私钥生成Tdid
- * @method Models\CreateTDidByPublicKeyResponse CreateTDidByPublicKey(Models\CreateTDidByPublicKeyRequest $req) 该接口不再使用
-
- 新建DID根据公钥生成Tdid
- * @method Models\GetAuthorityIssuerResponse GetAuthorityIssuer(Models\GetAuthorityIssuerRequest $req) 该接口不再使用
-
-获取权威机构信息
- * @method Models\GetCptInfoResponse GetCptInfo(Models\GetCptInfoRequest $req) 该接口不再使用
-
-凭证模版详情
- * @method Models\GetCredentialStatusResponse GetCredentialStatus(Models\GetCredentialStatusRequest $req) 该接口不再使用
-
-获取凭证链上状态信息
- * @method Models\GetDidDocumentResponse GetDidDocument(Models\GetDidDocumentRequest $req) 该接口不再使用
-
-查看DID文档
-
- * @method Models\RegisterCptResponse RegisterCpt(Models\RegisterCptRequest $req) 该接口不再使用
-
-凭证模版新建
- * @method Models\SetCredentialStatusResponse SetCredentialStatus(Models\SetCredentialStatusRequest $req) 该接口不再使用
-
-设置凭证链上状态
- * @method Models\VerifyCredentialResponse VerifyCredential(Models\VerifyCredentialRequest $req) 该接口不再使用
-
-验证凭证
+ * @method Models\CheckNewPurchaseResponse CheckNewPurchase(Models\CheckNewPurchaseRequest $req) 检查用户套餐购买状态
+ * @method Models\CreateTDidByHostResponse CreateTDidByHost(Models\CreateTDidByHostRequest $req) 自动生成公私钥对托管在DID平台，并注册DID标识
+ * @method Models\CreateTDidByPubKeyResponse CreateTDidByPubKey(Models\CreateTDidByPubKeyRequest $req) 使用导入的公钥文件注册DID标识
+ * @method Models\DeactivateTDidResponse DeactivateTDid(Models\DeactivateTDidRequest $req) 更新DID标识的禁用状态
+ * @method Models\GetCredentialStateResponse GetCredentialState(Models\GetCredentialStateRequest $req) 获取凭证链上状态信息
+ * @method Models\GetTDidDocumentResponse GetTDidDocument(Models\GetTDidDocumentRequest $req) 获取DID标识的文档
+ * @method Models\IssueCredentialResponse IssueCredential(Models\IssueCredentialRequest $req) 颁发可验证凭证
+ * @method Models\UpdateCredentialStateResponse UpdateCredentialState(Models\UpdateCredentialStateRequest $req) 更新凭证的链上状态
+ * @method Models\VerifyCredentialsResponse VerifyCredentials(Models\VerifyCredentialsRequest $req) 验证已签名的可验证凭证
  */
 
 class TdidClient extends AbstractClient

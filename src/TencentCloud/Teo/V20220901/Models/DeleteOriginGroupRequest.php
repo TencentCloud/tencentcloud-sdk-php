@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteOriginGroup请求参数结构体
  *
- * @method string getZoneId() 获取站点ID。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
- * @method string getGroupId() 获取源站组ID，此参数必填。
- * @method void setGroupId(string $GroupId) 设置源站组ID，此参数必填。
+ * @method string getZoneId() 获取站点 ID
+ * @method void setZoneId(string $ZoneId) 设置站点 ID
+ * @method string getGroupId() 获取源站组 ID，此参数必填。
+ * @method void setGroupId(string $GroupId) 设置源站组 ID，此参数必填。
  */
 class DeleteOriginGroupRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID。
+     * @var string 站点 ID
      */
     public $ZoneId;
 
     /**
-     * @var string 源站组ID，此参数必填。
+     * @var string 源站组 ID，此参数必填。
      */
     public $GroupId;
 
     /**
-     * @param string $ZoneId 站点ID。
-     * @param string $GroupId 源站组ID，此参数必填。
+     * @param string $ZoneId 站点 ID
+     * @param string $GroupId 源站组 ID，此参数必填。
      */
     function __construct()
     {

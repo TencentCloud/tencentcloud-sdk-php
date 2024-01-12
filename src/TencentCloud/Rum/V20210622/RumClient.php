@@ -39,8 +39,6 @@ use TencentCloud\Rum\V20210622\Models as Models;
 本接口用于删除日志下载任务
 
 默认接口请求频率限制：20次/秒。
- * @method Models\DeleteOfflineLogConfigResponse DeleteOfflineLogConfig(Models\DeleteOfflineLogConfigRequest $req) 删除 rum 离线日志监听 - 对应用户的离线日志将不会上报
- * @method Models\DeleteOfflineLogRecordResponse DeleteOfflineLogRecord(Models\DeleteOfflineLogRecordRequest $req) 删除对应的离线日志记录
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除给定的 rum 的项目
  * @method Models\DeleteReleaseFileResponse DeleteReleaseFile(Models\DeleteReleaseFileRequest $req) 将对应 sourcemap 文件删除
  * @method Models\DeleteStarProjectResponse DeleteStarProject(Models\DeleteStarProjectRequest $req) 删除用户名下的星标项目
@@ -75,7 +73,6 @@ use TencentCloud\Rum\V20210622\Models as Models;
 
 默认接口请求频率限制：20次/秒
  * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) (已下线，请用DescribeRumLogList)
- * @method Models\DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(Models\DescribeOfflineLogConfigsRequest $req) 获取设置的离线日志监听配置 - 返回设置的用户唯一标识
  * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) 获取应用上报抽样信息
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 获取项目列表（实例创建的团队下的项目列表）
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) 获取项目下的PV列表

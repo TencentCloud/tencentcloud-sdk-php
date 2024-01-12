@@ -119,6 +119,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeSubscriptionsResponse DescribeSubscriptions(Models\DescribeSubscriptionsRequest $req) 查询指定环境和主题下的订阅者列表
  * @method Models\DescribeTopicMsgsResponse DescribeTopicMsgs(Models\DescribeTopicMsgsRequest $req) 消息查询
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) 获取环境下主题列表
+ * @method Models\ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetail(Models\ExportRocketMQMessageDetailRequest $req) 导出RocketMQ消息详情
  * @method Models\ImportRocketMQConsumerGroupsResponse ImportRocketMQConsumerGroups(Models\ImportRocketMQConsumerGroupsRequest $req) 输入迁移任务id和要导入的Group，导入后台
  * @method Models\ImportRocketMQTopicsResponse ImportRocketMQTopics(Models\ImportRocketMQTopicsRequest $req) 导入topic列表
  * @method Models\ModifyAMQPClusterResponse ModifyAMQPCluster(Models\ModifyAMQPClusterRequest $req) 更新Amqp集群信息

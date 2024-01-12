@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 服务统计结果
  *
- * @method string getPath() 获取请求模版路径:type为接口时返回，服务时不返回
+ * @method string getPath() 获取请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置请求模版路径:type为接口时返回，服务时不返回
+ * @method void setPath(string $Path) 设置请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMethod() 获取请求方法:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,7 +132,7 @@ use TencentCloud\Common\AbstractModel;
 class ServiceStatisticsResult extends AbstractModel
 {
     /**
-     * @var string 请求模版路径:type为接口时返回，服务时不返回
+     * @var string 请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
@@ -306,7 +306,7 @@ class ServiceStatisticsResult extends AbstractModel
     public $ApdexLevel;
 
     /**
-     * @param string $Path 请求模版路径:type为接口时返回，服务时不返回
+     * @param string $Path 请求模板路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Method 请求方法:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。

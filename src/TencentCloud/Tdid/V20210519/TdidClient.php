@@ -23,15 +23,24 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tdid\V20210519\Models as Models;
 
 /**
- * @method Models\CheckNewPurchaseResponse CheckNewPurchase(Models\CheckNewPurchaseRequest $req) 检查用户套餐购买状态
+ * @method Models\CreateDisclosedCredentialResponse CreateDisclosedCredential(Models\CreateDisclosedCredentialRequest $req) 根据披露策略创建选择性披露凭证
+ * @method Models\CreatePresentationResponse CreatePresentation(Models\CreatePresentationRequest $req) 创建凭证持有人的可验证表达
  * @method Models\CreateTDidByHostResponse CreateTDidByHost(Models\CreateTDidByHostRequest $req) 自动生成公私钥对托管在DID平台，并注册DID标识
  * @method Models\CreateTDidByPubKeyResponse CreateTDidByPubKey(Models\CreateTDidByPubKeyRequest $req) 使用导入的公钥文件注册DID标识
  * @method Models\DeactivateTDidResponse DeactivateTDid(Models\DeactivateTDidRequest $req) 更新DID标识的禁用状态
+ * @method Models\GetAppSummaryResponse GetAppSummary(Models\GetAppSummaryRequest $req) 获取某个应用关键指标统计数据
  * @method Models\GetCredentialStateResponse GetCredentialState(Models\GetCredentialStateRequest $req) 获取凭证链上状态信息
+ * @method Models\GetOverSummaryResponse GetOverSummary(Models\GetOverSummaryRequest $req) 获取某个应用关键指标统计数据
+ * @method Models\GetTDidByObjectIdResponse GetTDidByObjectId(Models\GetTDidByObjectIdRequest $req) 通过业务层绑定的对象ID获取DID标识
  * @method Models\GetTDidDocumentResponse GetTDidDocument(Models\GetTDidDocumentRequest $req) 获取DID标识的文档
+ * @method Models\GetTDidPubKeyResponse GetTDidPubKey(Models\GetTDidPubKeyRequest $req) 查询DID标识的认证公钥
  * @method Models\IssueCredentialResponse IssueCredential(Models\IssueCredentialRequest $req) 颁发可验证凭证
+ * @method Models\QueryAuthorityInfoResponse QueryAuthorityInfo(Models\QueryAuthorityInfoRequest $req) 查询权威机构信息
+ * @method Models\QueryCPTResponse QueryCPT(Models\QueryCPTRequest $req) 查询凭证模版内容
+ * @method Models\SetTDidAttributeResponse SetTDidAttribute(Models\SetTDidAttributeRequest $req) 设置DID文档的自定义属性
  * @method Models\UpdateCredentialStateResponse UpdateCredentialState(Models\UpdateCredentialStateRequest $req) 更新凭证的链上状态
  * @method Models\VerifyCredentialsResponse VerifyCredentials(Models\VerifyCredentialsRequest $req) 验证已签名的可验证凭证
+ * @method Models\VerifyPresentationResponse VerifyPresentation(Models\VerifyPresentationRequest $req) 验证可验证表达的内容
  */
 
 class TdidClient extends AbstractClient

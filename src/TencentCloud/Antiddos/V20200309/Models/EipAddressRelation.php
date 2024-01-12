@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 高防弹性公网IP关联信息
  *
- * @method string getEipAddressRegion() 获取高防弹性公网IP绑定的实例地区，例如hk代表香港
+ * @method string getEipAddressRegion() 获取高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEipAddressRegion(string $EipAddressRegion) 设置高防弹性公网IP绑定的实例地区，例如hk代表香港
+ * @method void setEipAddressRegion(string $EipAddressRegion) 设置高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEipBoundRscIns() 获取绑定的资源实例ID。可能是一个CVM。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class EipAddressRelation extends AbstractModel
 {
     /**
-     * @var string 高防弹性公网IP绑定的实例地区，例如hk代表香港
+     * @var string 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EipAddressRegion;
@@ -74,7 +74,7 @@ class EipAddressRelation extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @param string $EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表香港
+     * @param string $EipAddressRegion 高防弹性公网IP绑定的实例地区，例如hk代表中国香港
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EipBoundRscIns 绑定的资源实例ID。可能是一个CVM。
 注意：此字段可能返回 null，表示取不到有效值。

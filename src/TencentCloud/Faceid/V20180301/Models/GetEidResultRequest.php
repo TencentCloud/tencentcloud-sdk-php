@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 默认值：0
  * @method integer getBestFramesCount() 获取从活体视频中截取一定张数的最佳帧。默认为0，最大为3，超出3的最多只给3张。（InfoType需要包含3）
  * @method void setBestFramesCount(integer $BestFramesCount) 设置从活体视频中截取一定张数的最佳帧。默认为0，最大为3，超出3的最多只给3张。（InfoType需要包含3）
+ * @method boolean getIsCutIdCardImage() 获取是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+ * @method void setIsCutIdCardImage(boolean $IsCutIdCardImage) 设置是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+ * @method boolean getIsNeedIdCardAvatar() 获取是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+ * @method void setIsNeedIdCardAvatar(boolean $IsNeedIdCardAvatar) 设置是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
  */
 class GetEidResultRequest extends AbstractModel
 {
@@ -51,11 +55,23 @@ class GetEidResultRequest extends AbstractModel
     public $BestFramesCount;
 
     /**
+     * @var boolean 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+     */
+    public $IsCutIdCardImage;
+
+    /**
+     * @var boolean 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+     */
+    public $IsNeedIdCardAvatar;
+
+    /**
      * @param string $EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
      * @param string $InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息；5：意愿核身朗读模式相关结果；6：意愿核身问答模式相关结果）。
 如 13表示拉取文本类、最佳截图信息。
 默认值：0
      * @param integer $BestFramesCount 从活体视频中截取一定张数的最佳帧。默认为0，最大为3，超出3的最多只给3张。（InfoType需要包含3）
+     * @param boolean $IsCutIdCardImage 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+     * @param boolean $IsNeedIdCardAvatar 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
      */
     function __construct()
     {
@@ -80,6 +96,14 @@ class GetEidResultRequest extends AbstractModel
 
         if (array_key_exists("BestFramesCount",$param) and $param["BestFramesCount"] !== null) {
             $this->BestFramesCount = $param["BestFramesCount"];
+        }
+
+        if (array_key_exists("IsCutIdCardImage",$param) and $param["IsCutIdCardImage"] !== null) {
+            $this->IsCutIdCardImage = $param["IsCutIdCardImage"];
+        }
+
+        if (array_key_exists("IsNeedIdCardAvatar",$param) and $param["IsNeedIdCardAvatar"] !== null) {
+            $this->IsNeedIdCardAvatar = $param["IsNeedIdCardAvatar"];
         }
     }
 }

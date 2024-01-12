@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasicPlusFlag(integer $BasicPlusFlag) 设置是否是基础防护加强版 0: 不是 1: 是
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPlanCntFlag() 获取是否是商业模式优化-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPlanCntFlag(integer $PlanCntFlag) 设置是否是商业模式优化-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstance extends AbstractModel
 {
@@ -226,6 +230,12 @@ class BGPInstance extends AbstractModel
     public $BasicPlusFlag;
 
     /**
+     * @var integer 是否是商业模式优化-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PlanCntFlag;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPInstanceUsages $Usage 资产实例的使用统计信息
@@ -263,6 +273,8 @@ class BGPInstance extends AbstractModel
      * @param string $ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BasicPlusFlag 是否是基础防护加强版 0: 不是 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PlanCntFlag 是否是商业模式优化-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -379,6 +391,10 @@ class BGPInstance extends AbstractModel
 
         if (array_key_exists("BasicPlusFlag",$param) and $param["BasicPlusFlag"] !== null) {
             $this->BasicPlusFlag = $param["BasicPlusFlag"];
+        }
+
+        if (array_key_exists("PlanCntFlag",$param) and $param["PlanCntFlag"] !== null) {
+            $this->PlanCntFlag = $param["PlanCntFlag"];
         }
     }
 }

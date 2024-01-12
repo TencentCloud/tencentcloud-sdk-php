@@ -18,7 +18,7 @@ namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 引擎的初始管理账号
+ * 引擎的初始管理账号，当前仅支持Apollo引擎
  *
  * @method string getName() 获取控制台初始用户名
  * @method void setName(string $Name) 设置控制台初始用户名

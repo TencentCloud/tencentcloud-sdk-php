@@ -21,49 +21,69 @@ use TencentCloud\Common\AbstractModel;
  * nfs挂载资源
  *
  * @method string getServer() 获取NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServer(string $Server) 设置NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPath() 获取Server路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置Server路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getReadOnly() 获取是否只读
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadOnly(boolean $ReadOnly) 设置是否只读
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecretName() 获取secret名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretName(string $SecretName) 设置secret名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableEmptyDirVolume() 获取临时目录
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableEmptyDirVolume(boolean $EnableEmptyDirVolume) 设置临时目录
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunNfsVolumeSource extends AbstractModel
 {
     /**
      * @var string NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Server;
 
     /**
      * @var string Server路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var boolean 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadOnly;
 
     /**
      * @var string secret名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretName;
 
     /**
      * @var boolean 临时目录
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableEmptyDirVolume;
 
     /**
      * @param string $Server NFS挂载Server
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path Server路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ReadOnly 是否只读
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretName secret名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableEmptyDirVolume 临时目录
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

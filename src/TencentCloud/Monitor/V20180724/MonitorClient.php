@@ -39,6 +39,10 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(Models\CreateGrafanaNotificationChannelRequest $req) 创建 Grafana 告警通道
  * @method Models\CreatePolicyGroupResponse CreatePolicyGroup(Models\CreatePolicyGroupRequest $req) 增加策略组
  * @method Models\CreatePrometheusAgentResponse CreatePrometheusAgent(Models\CreatePrometheusAgentRequest $req) 创建 Prometheus CVM Agent
+ * @method Models\CreatePrometheusAlertGroupResponse CreatePrometheusAlertGroup(Models\CreatePrometheusAlertGroupRequest $req) 创建Prometheus告警规则分组
+
+告警分组中可包含多条告警规则，分组内告警消息通过告警分组的通知模板发送。
+支持单个告警分组下分别创建启用/禁用的告警规则。
  * @method Models\CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(Models\CreatePrometheusAlertPolicyRequest $req) 创建 Prometheus 告警策略(将逐步废弃，建议使用 CreatePrometheusAlertGroup 创建告警策略)
  * @method Models\CreatePrometheusClusterAgentResponse CreatePrometheusClusterAgent(Models\CreatePrometheusClusterAgentRequest $req) 与腾讯云可观测融合的2.0实例关联集群
  * @method Models\CreatePrometheusConfigResponse CreatePrometheusConfig(Models\CreatePrometheusConfigRequest $req) 创建prometheus配置
@@ -60,6 +64,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(Models\DeleteGrafanaIntegrationRequest $req) 删除 Grafana 集成配置
  * @method Models\DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(Models\DeleteGrafanaNotificationChannelRequest $req) 删除 Grafana 告警通道
  * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) 删除告警策略组
+ * @method Models\DeletePrometheusAlertGroupsResponse DeletePrometheusAlertGroups(Models\DeletePrometheusAlertGroupsRequest $req) 删除Prometheus告警规则分组
  * @method Models\DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(Models\DeletePrometheusAlertPolicyRequest $req) 删除2.0实例告警策略
  * @method Models\DeletePrometheusClusterAgentResponse DeletePrometheusClusterAgent(Models\DeletePrometheusClusterAgentRequest $req) 解除TMP实例的集群关联
  * @method Models\DeletePrometheusConfigResponse DeletePrometheusConfig(Models\DeletePrometheusConfigRequest $req) 删除Prometheus配置，如果目标不存在，将返回成功
@@ -109,6 +114,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeProductListResponse DescribeProductList(Models\DescribeProductListRequest $req) 查询腾讯云可观测平台云产品列表，支持云服务器CVM、云数据库、云消息队列、负载均衡、容器服务、专线等云产品。
  * @method Models\DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(Models\DescribePrometheusAgentInstancesRequest $req) 获取关联目标集群的实例列表
  * @method Models\DescribePrometheusAgentsResponse DescribePrometheusAgents(Models\DescribePrometheusAgentsRequest $req) 列出 Prometheus CVM Agent
+ * @method Models\DescribePrometheusAlertGroupsResponse DescribePrometheusAlertGroups(Models\DescribePrometheusAlertGroupsRequest $req) 查询给定prometheus下的告警分组
  * @method Models\DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(Models\DescribePrometheusAlertPolicyRequest $req) 获取2.0实例告警策略列表
  * @method Models\DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(Models\DescribePrometheusClusterAgentsRequest $req) 获取TMP实例关联集群列表
  * @method Models\DescribePrometheusConfigResponse DescribePrometheusConfig(Models\DescribePrometheusConfigRequest $req) 拉取Prometheus配置
@@ -190,6 +196,8 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\UpdateGrafanaNotificationChannelResponse UpdateGrafanaNotificationChannel(Models\UpdateGrafanaNotificationChannelRequest $req) 更新 Grafana 告警通道
  * @method Models\UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteList(Models\UpdateGrafanaWhiteListRequest $req) 更新 Grafana 白名单
  * @method Models\UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatus(Models\UpdatePrometheusAgentStatusRequest $req) 更新 Prometheus CVM Agent 状态
+ * @method Models\UpdatePrometheusAlertGroupResponse UpdatePrometheusAlertGroup(Models\UpdatePrometheusAlertGroupRequest $req) 更新Prometheus告警规则分组
+ * @method Models\UpdatePrometheusAlertGroupStateResponse UpdatePrometheusAlertGroupState(Models\UpdatePrometheusAlertGroupStateRequest $req) 批量更新告警分组状态，将分组中全部告警规则更新为目标状态
  * @method Models\UpdatePrometheusScrapeJobResponse UpdatePrometheusScrapeJob(Models\UpdatePrometheusScrapeJobRequest $req) 更新 Prometheus Agent 抓取任务
  * @method Models\UpdateRecordingRuleResponse UpdateRecordingRule(Models\UpdateRecordingRuleRequest $req) 更新 Prometheus 的预聚合规则
  * @method Models\UpdateSSOAccountResponse UpdateSSOAccount(Models\UpdateSSOAccountRequest $req) 更新已授权账号的备注、权限信息，会直接覆盖原有的信息，不传则不会更新。

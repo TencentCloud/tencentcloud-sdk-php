@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyDelimiters(array $KeyDelimiters) 设置redis大key分析的自定义分割符，仅redis使用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShardNum() 获取分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShardNum(string $ShardNum) 设置分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceConfs extends AbstractModel
 {
@@ -48,9 +52,17 @@ class InstanceConfs extends AbstractModel
     public $KeyDelimiters;
 
     /**
+     * @var string 分片节点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShardNum;
+
+    /**
      * @param string $DailyInspection 数据库巡检开关, Yes/No。
      * @param string $OverviewDisplay 实例概览开关，Yes/No。
      * @param array $KeyDelimiters redis大key分析的自定义分割符，仅redis使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShardNum 分片节点数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -76,6 +88,10 @@ class InstanceConfs extends AbstractModel
 
         if (array_key_exists("KeyDelimiters",$param) and $param["KeyDelimiters"] !== null) {
             $this->KeyDelimiters = $param["KeyDelimiters"];
+        }
+
+        if (array_key_exists("ShardNum",$param) and $param["ShardNum"] !== null) {
+            $this->ShardNum = $param["ShardNum"];
         }
     }
 }

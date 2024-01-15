@@ -26,16 +26,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
- * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
- * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
  * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
@@ -44,10 +34,32 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+ * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
  * @method OrganizationInfo getOrganization() 获取机构信息，暂未开放
  * @method void setOrganization(OrganizationInfo $Organization) 设置机构信息，暂未开放
  * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
  * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
+ * @method integer getUrlType() 获取链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+ * @method void setUrlType(integer $UrlType) 设置链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
  */
 class CreateFlowSignUrlRequest extends AbstractModel
 {
@@ -57,15 +69,6 @@ class CreateFlowSignUrlRequest extends AbstractModel
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      */
     public $FlowId;
-
-    /**
-     * @var array 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
-     */
-    public $FlowApproverInfos;
 
     /**
      * @var UserInfo 执行本接口操作的员工信息。
@@ -80,6 +83,15 @@ class CreateFlowSignUrlRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var array 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+     */
+    public $FlowApproverInfos;
+
+    /**
      * @var OrganizationInfo 机构信息，暂未开放
      * @deprecated
      */
@@ -91,20 +103,36 @@ class CreateFlowSignUrlRequest extends AbstractModel
     public $JumpUrl;
 
     /**
+     * @var integer 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+     */
+    public $UrlType;
+
+    /**
      * @param string $FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-     * @param array $FlowApproverInfos 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，其他可不传，
-
-注:
-`1. ApproverType目前只支持个人类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param array $FlowApproverInfos 流程签署人列表，其中结构体的ApproverName，ApproverMobile和ApproverType必传，企业签署人则需传OrganizationName，其他可不传。
+
+注:
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
      * @param OrganizationInfo $Organization 机构信息，暂未开放
      * @param string $JumpUrl 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
+     * @param integer $UrlType 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
      */
     function __construct()
     {
@@ -123,15 +151,6 @@ class CreateFlowSignUrlRequest extends AbstractModel
             $this->FlowId = $param["FlowId"];
         }
 
-        if (array_key_exists("FlowApproverInfos",$param) and $param["FlowApproverInfos"] !== null) {
-            $this->FlowApproverInfos = [];
-            foreach ($param["FlowApproverInfos"] as $key => $value){
-                $obj = new FlowCreateApprover();
-                $obj->deserialize($value);
-                array_push($this->FlowApproverInfos, $obj);
-            }
-        }
-
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
@@ -142,6 +161,15 @@ class CreateFlowSignUrlRequest extends AbstractModel
             $this->Agent->deserialize($param["Agent"]);
         }
 
+        if (array_key_exists("FlowApproverInfos",$param) and $param["FlowApproverInfos"] !== null) {
+            $this->FlowApproverInfos = [];
+            foreach ($param["FlowApproverInfos"] as $key => $value){
+                $obj = new FlowCreateApprover();
+                $obj->deserialize($value);
+                array_push($this->FlowApproverInfos, $obj);
+            }
+        }
+
         if (array_key_exists("Organization",$param) and $param["Organization"] !== null) {
             $this->Organization = new OrganizationInfo();
             $this->Organization->deserialize($param["Organization"]);
@@ -149,6 +177,10 @@ class CreateFlowSignUrlRequest extends AbstractModel
 
         if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
             $this->JumpUrl = $param["JumpUrl"];
+        }
+
+        if (array_key_exists("UrlType",$param) and $param["UrlType"] !== null) {
+            $this->UrlType = $param["UrlType"];
         }
     }
 }

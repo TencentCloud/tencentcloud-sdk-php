@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getInvitationNotifyType() 获取员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递
+ * @method void setInvitationNotifyType(string $InvitationNotifyType) 设置员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递
+ * @method string getJumpUrl() 获取回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置。
+ * @method void setJumpUrl(string $JumpUrl) 设置回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置。
  */
 class UpdateIntegrationEmployeesRequest extends AbstractModel
 {
@@ -57,6 +69,20 @@ class UpdateIntegrationEmployeesRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var string 员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递
+     */
+    public $InvitationNotifyType;
+
+    /**
+     * @var string 回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置。
+     */
+    public $JumpUrl;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息,UserId必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param array $Employees 员工信息，不超过100个。
@@ -64,6 +90,12 @@ class UpdateIntegrationEmployeesRequest extends AbstractModel
 可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $InvitationNotifyType 员工邀请方式
+如果是来自H5的，参数需要传递H5
+短信或者企微 请传递SMS，或者不传递
+     * @param string $JumpUrl 回跳地址，
+在认证成功之后，进行回跳，请保证回跳地址的可用性。
+使用前请联系对接的客户经理沟通，提供回跳地址的域名，进行域名配置。
      */
     function __construct()
     {
@@ -95,6 +127,14 @@ class UpdateIntegrationEmployeesRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("InvitationNotifyType",$param) and $param["InvitationNotifyType"] !== null) {
+            $this->InvitationNotifyType = $param["InvitationNotifyType"];
+        }
+
+        if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
+            $this->JumpUrl = $param["JumpUrl"];
         }
     }
 }

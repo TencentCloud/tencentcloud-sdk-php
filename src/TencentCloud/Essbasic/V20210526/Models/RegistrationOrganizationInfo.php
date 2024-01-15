@@ -70,6 +70,18 @@ use TencentCloud\Common\AbstractModel;
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+ * @method string getAdminIdCardType() 获取经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+
+ * @method void setAdminIdCardType(string $AdminIdCardType) 设置经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+
+ * @method string getAdminIdCardNumber() 获取经办人的证件号
+ * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置经办人的证件号
  */
 class RegistrationOrganizationInfo extends AbstractModel
 {
@@ -135,6 +147,20 @@ class RegistrationOrganizationInfo extends AbstractModel
     public $AuthorizationTypes;
 
     /**
+     * @var string 经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+
+     */
+    public $AdminIdCardType;
+
+    /**
+     * @var string 经办人的证件号
+     */
+    public $AdminIdCardNumber;
+
+    /**
      * @param string $OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
@@ -160,6 +186,12 @@ class RegistrationOrganizationInfo extends AbstractModel
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+     * @param string $AdminIdCardType 经办人的证件类型，支持以下类型
+<ul><li>ID_CARD : 居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+
+     * @param string $AdminIdCardNumber 经办人的证件号
      */
     function __construct()
     {
@@ -208,6 +240,14 @@ class RegistrationOrganizationInfo extends AbstractModel
 
         if (array_key_exists("AuthorizationTypes",$param) and $param["AuthorizationTypes"] !== null) {
             $this->AuthorizationTypes = $param["AuthorizationTypes"];
+        }
+
+        if (array_key_exists("AdminIdCardType",$param) and $param["AdminIdCardType"] !== null) {
+            $this->AdminIdCardType = $param["AdminIdCardType"];
+        }
+
+        if (array_key_exists("AdminIdCardNumber",$param) and $param["AdminIdCardNumber"] !== null) {
+            $this->AdminIdCardNumber = $param["AdminIdCardNumber"];
         }
     }
 }

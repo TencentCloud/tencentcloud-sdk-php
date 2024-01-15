@@ -44,20 +44,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
- * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，其他可不传。
+ * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+
 注:
-`1. ApproverType目前只支持个人(PERSON)类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
- * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，其他可不传。
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
+ * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+
 注:
-`1. ApproverType目前只支持个人(PERSON)类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
  * @method UserInfo getOperator() 获取用户信息，暂未开放
  * @method void setOperator(UserInfo $Operator) 设置用户信息，暂未开放
  * @method OrganizationInfo getOrganization() 获取机构信息，暂未开放
  * @method void setOrganization(OrganizationInfo $Organization) 设置机构信息，暂未开放
  * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
  * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
+ * @method integer getUrlType() 获取链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+ * @method void setUrlType(integer $UrlType) 设置链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
  */
 class ChannelCreateFlowSignUrlRequest extends AbstractModel
 {
@@ -82,10 +96,11 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
     public $FlowId;
 
     /**
-     * @var array 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，其他可不传。
+     * @var array 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+
 注:
-`1. ApproverType目前只支持个人(PERSON)类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
      */
     public $FlowApproverInfos;
 
@@ -107,6 +122,16 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
     public $JumpUrl;
 
     /**
+     * @var integer 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
+     */
+    public $UrlType;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -119,13 +144,20 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
      * @param string $FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
-     * @param array $FlowApproverInfos 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，其他可不传。
+     * @param array $FlowApproverInfos 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+
 注:
-`1. ApproverType目前只支持个人(PERSON)类型的签署人。`
-`2. 签署人只能有手写签名和时间类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`1. 签署人只能有手写签名、时间类型和印章类型的签署控件，其他类型的填写控件和签署控件暂时都未支持。`
+`2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
      * @param UserInfo $Operator 用户信息，暂未开放
      * @param OrganizationInfo $Organization 机构信息，暂未开放
      * @param string $JumpUrl 签署完之后的H5页面的跳转链接，此链接及支持http://和https://，最大长度1000个字符。(建议https协议)
+     * @param integer $UrlType 链接类型，支持指定以下类型
+<ul><li>0 : 签署链接 (默认值)</li>
+<li>1 : 预览链接</li></ul>
+注:
+`1. 当指定链接类型为1时，链接为预览链接，打开链接无法签署仅支持预览以及查看当前合同状态。`
+`2. 如需生成发起方预览链接，则签署方信息传空，即FlowApproverInfos传空或者不传。`
      */
     function __construct()
     {
@@ -170,6 +202,10 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
 
         if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
             $this->JumpUrl = $param["JumpUrl"];
+        }
+
+        if (array_key_exists("UrlType",$param) and $param["UrlType"] !== null) {
+            $this->UrlType = $param["UrlType"];
         }
     }
 }

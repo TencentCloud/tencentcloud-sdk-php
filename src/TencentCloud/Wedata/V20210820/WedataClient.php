@@ -193,9 +193,6 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeIntegrationTaskResponse DescribeIntegrationTask(Models\DescribeIntegrationTaskRequest $req) 查询集成任务
  * @method Models\DescribeIntegrationTasksResponse DescribeIntegrationTasks(Models\DescribeIntegrationTasksRequest $req) 查询集成任务列表
  * @method Models\DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfo(Models\DescribeIntegrationVersionNodesInfoRequest $req) 查询集成任务版本节点信息
- * @method Models\DescribeKafkaTopicInfoResponse DescribeKafkaTopicInfo(Models\DescribeKafkaTopicInfoRequest $req) 没用到
-
-获取kafka的topic信息
  * @method Models\DescribeMonitorsByPageResponse DescribeMonitorsByPage(Models\DescribeMonitorsByPageRequest $req) 分页查询质量监控组
  * @method Models\DescribeOfflineTaskTokenResponse DescribeOfflineTaskToken(Models\DescribeOfflineTaskTokenRequest $req) 获取离线任务长连接Token
  * @method Models\DescribeOperateOpsTaskDatasourceResponse DescribeOperateOpsTaskDatasource(Models\DescribeOperateOpsTaskDatasourceRequest $req) 任务运维搜索 查询生产态任务数据源列表

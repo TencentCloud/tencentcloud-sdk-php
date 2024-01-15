@@ -44,12 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccelerateType(integer $AccelerateType) 设置是否开启加速，取值有：
 <li>0：关闭加速；</li>
 <li>1：开启加速。</li>
- * @method string getProxyType() 获取四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。
- * @method void setProxyType(string $ProxyType) 设置四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。
+ * @method string getProxyType() 获取四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。
+ * @method void setProxyType(string $ProxyType) 设置四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。
  * @method integer getSessionPersistTime() 获取会话保持时间，取值范围：30-3600，单位：秒。
 不填写使用默认值600。
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，取值范围：30-3600，单位：秒。
@@ -100,9 +96,7 @@ class CreateApplicationProxyRequest extends AbstractModel
     public $AccelerateType;
 
     /**
-     * @var string 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。
+     * @var string 四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。
      */
     public $ProxyType;
 
@@ -142,9 +136,7 @@ class CreateApplicationProxyRequest extends AbstractModel
      * @param integer $AccelerateType 是否开启加速，取值有：
 <li>0：关闭加速；</li>
 <li>1：开启加速。</li>
-     * @param string $ProxyType 四层代理模式，取值有：
-<li>hostname：表示子域名模式；</li>
-<li>instance：表示实例模式。</li>不填写使用默认值instance。
+     * @param string $ProxyType 四层代理模式，取值有： <li>instance：表示实例模式。</li>不填写使用默认值instance。
      * @param integer $SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒。
 不填写使用默认值600。
      * @param Ipv6 $Ipv6 Ipv6 访问配置。

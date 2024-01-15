@@ -36,15 +36,19 @@ use TencentCloud\Common\AbstractModel;
 注意：一条规则最多可填写20个端口。
  * @method string getOriginType() 获取源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li>
  * @method void setOriginType(string $OriginType) 设置源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li>
  * @method array getOriginValue() 获取源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
  * @method void setOriginValue(array $OriginValue) 设置源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
  * @method string getRuleId() 获取规则ID。
  * @method void setRuleId(string $RuleId) 设置规则ID。
@@ -111,6 +115,7 @@ class ApplicationProxyRule extends AbstractModel
     /**
      * @var string 源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li>
      */
     public $OriginType;
@@ -118,6 +123,7 @@ class ApplicationProxyRule extends AbstractModel
     /**
      * @var array 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      */
     public $OriginValue;
@@ -182,9 +188,11 @@ class ApplicationProxyRule extends AbstractModel
 注意：一条规则最多可填写20个端口。
      * @param string $OriginType 源站类型，取值有：
 <li>custom：手动添加；</li>
+<li>loadbalancer：负载均衡；</li>
 <li>origins：源站组。</li>
      * @param array $OriginValue 源站信息：
 <li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 loadbalancer 时，表示一个负载均衡，如`["lb-xdffsfasdfs"]`；</li>
 <li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
      * @param string $RuleId 规则ID。
      * @param string $Status 状态，取值有：

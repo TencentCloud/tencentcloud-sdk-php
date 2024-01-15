@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceIdList(array $NamespaceIdList) 设置泳道已经关联部署组的命名空间列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLaneGroupId() 获取泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLaneGroupId(string $LaneGroupId) 设置泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LaneInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ class LaneInfo extends AbstractModel
     public $NamespaceIdList;
 
     /**
+     * @var string 泳道部署组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LaneGroupId;
+
+    /**
      * @param string $LaneId 泳道ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaneName 泳道名称
@@ -119,6 +129,8 @@ class LaneInfo extends AbstractModel
      * @param boolean $Entrance 是否入口应用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NamespaceIdList 泳道已经关联部署组的命名空间列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LaneGroupId 泳道部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -169,6 +181,10 @@ class LaneInfo extends AbstractModel
 
         if (array_key_exists("NamespaceIdList",$param) and $param["NamespaceIdList"] !== null) {
             $this->NamespaceIdList = $param["NamespaceIdList"];
+        }
+
+        if (array_key_exists("LaneGroupId",$param) and $param["LaneGroupId"] !== null) {
+            $this->LaneGroupId = $param["LaneGroupId"];
         }
     }
 }

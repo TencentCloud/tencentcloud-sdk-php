@@ -24,10 +24,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetastoreType(string $MetastoreType) 设置元数据类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPrefixPath() 获取由中心节点到该节点的路径
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrefixPath(string $PrefixPath) 设置由中心节点到该节点的路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectId() 获取空间id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置空间id
@@ -84,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置血缘描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrefixPath() 获取由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrefixPath(string $PrefixPath) 设置由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取血缘创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置血缘创建时间
@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTasks(array $Tasks) 设置修改血缘的任务id列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannelType() 获取模块/应用类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelType(string $ChannelType) 设置模块/应用类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableLineageInfo extends AbstractModel
 {
@@ -104,12 +108,6 @@ class TableLineageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetastoreType;
-
-    /**
-     * @var string 由中心节点到该节点的路径
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PrefixPath;
 
     /**
      * @var string 空间id
@@ -196,6 +194,12 @@ class TableLineageInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var string 由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrefixPath;
+
+    /**
      * @var string 血缘创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -214,9 +218,13 @@ class TableLineageInfo extends AbstractModel
     public $Tasks;
 
     /**
-     * @param string $MetastoreType 元数据类型
+     * @var string 模块/应用类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PrefixPath 由中心节点到该节点的路径
+     */
+    public $ChannelType;
+
+    /**
+     * @param string $MetastoreType 元数据类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 空间id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -246,11 +254,15 @@ class TableLineageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 血缘描述
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PrefixPath 由中心节点到该节点的路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 血缘创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 血缘更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tasks 修改血缘的任务id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChannelType 模块/应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -268,10 +280,6 @@ class TableLineageInfo extends AbstractModel
         }
         if (array_key_exists("MetastoreType",$param) and $param["MetastoreType"] !== null) {
             $this->MetastoreType = $param["MetastoreType"];
-        }
-
-        if (array_key_exists("PrefixPath",$param) and $param["PrefixPath"] !== null) {
-            $this->PrefixPath = $param["PrefixPath"];
         }
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
@@ -340,6 +348,10 @@ class TableLineageInfo extends AbstractModel
             $this->Description = $param["Description"];
         }
 
+        if (array_key_exists("PrefixPath",$param) and $param["PrefixPath"] !== null) {
+            $this->PrefixPath = $param["PrefixPath"];
+        }
+
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
         }
@@ -350,6 +362,10 @@ class TableLineageInfo extends AbstractModel
 
         if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
             $this->Tasks = $param["Tasks"];
+        }
+
+        if (array_key_exists("ChannelType",$param) and $param["ChannelType"] !== null) {
+            $this->ChannelType = $param["ChannelType"];
         }
     }
 }

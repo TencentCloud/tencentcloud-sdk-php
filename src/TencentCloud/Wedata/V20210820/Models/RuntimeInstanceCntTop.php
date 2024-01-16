@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurRunTime(string $CurRunTime) 设置实例运行时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWaitScheduleTime() 获取等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaitScheduleTime(integer $WaitScheduleTime) 设置等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuntimeInstanceCntTop extends AbstractModel
 {
@@ -94,6 +98,12 @@ class RuntimeInstanceCntTop extends AbstractModel
     public $CurRunTime;
 
     /**
+     * @var integer 等待调度耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WaitScheduleTime;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 1
@@ -107,6 +117,8 @@ class RuntimeInstanceCntTop extends AbstractModel
      * @param integer $RunTime 耗时
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurRunTime 实例运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WaitScheduleTime 等待调度耗时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class RuntimeInstanceCntTop extends AbstractModel
 
         if (array_key_exists("CurRunTime",$param) and $param["CurRunTime"] !== null) {
             $this->CurRunTime = $param["CurRunTime"];
+        }
+
+        if (array_key_exists("WaitScheduleTime",$param) and $param["WaitScheduleTime"] !== null) {
+            $this->WaitScheduleTime = $param["WaitScheduleTime"];
         }
     }
 }

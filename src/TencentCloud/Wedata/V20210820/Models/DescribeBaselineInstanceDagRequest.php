@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpstreamInstanceIds(string $UpstreamInstanceIds) 设置要展开的上游实例id，格式为 taskIdA_curRunDate1,taskIdB_curRunDate2
  * @method integer getLevel() 获取向上展开层级
  * @method void setLevel(integer $Level) 设置向上展开层级
+ * @method string getPromiseTaskId() 获取保障任务id
+ * @method void setPromiseTaskId(string $PromiseTaskId) 设置保障任务id
  */
 class DescribeBaselineInstanceDagRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeBaselineInstanceDagRequest extends AbstractModel
     public $Level;
 
     /**
+     * @var string 保障任务id
+     */
+    public $PromiseTaskId;
+
+    /**
      * @param integer $BaselineInstanceId 基线实例id
      * @param string $ProjectId 项目id
      * @param string $UpstreamInstanceIds 要展开的上游实例id，格式为 taskIdA_curRunDate1,taskIdB_curRunDate2
      * @param integer $Level 向上展开层级
+     * @param string $PromiseTaskId 保障任务id
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeBaselineInstanceDagRequest extends AbstractModel
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {
             $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("PromiseTaskId",$param) and $param["PromiseTaskId"] !== null) {
+            $this->PromiseTaskId = $param["PromiseTaskId"];
         }
     }
 }

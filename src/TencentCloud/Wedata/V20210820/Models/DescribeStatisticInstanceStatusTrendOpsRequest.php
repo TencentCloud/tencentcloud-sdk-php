@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAggregationUnit(string $AggregationUnit) 设置D代表天，H代表小时
  * @method integer getAverageWindowSize() 获取1
  * @method void setAverageWindowSize(integer $AverageWindowSize) 设置1
+ * @method string getWorkflowId() 获取工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
  */
 class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
     public $AverageWindowSize;
 
     /**
+     * @var string 工作流ID
+     */
+    public $WorkflowId;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskTypeId 任务类型Id
      * @param string $TimeType 时间类型
@@ -128,6 +135,7 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
      * @param array $StateList 1
      * @param string $AggregationUnit D代表天，H代表小时
      * @param integer $AverageWindowSize 1
+     * @param string $WorkflowId 工作流ID
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeStatisticInstanceStatusTrendOpsRequest extends AbstractModel
 
         if (array_key_exists("AverageWindowSize",$param) and $param["AverageWindowSize"] !== null) {
             $this->AverageWindowSize = $param["AverageWindowSize"];
+        }
+
+        if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
+            $this->WorkflowId = $param["WorkflowId"];
         }
     }
 }

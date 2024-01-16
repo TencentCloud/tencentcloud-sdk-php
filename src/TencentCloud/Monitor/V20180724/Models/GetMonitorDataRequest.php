@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间，如2018-09-22T19:51:23+08:00
  * @method string getEndTime() 获取结束时间，如2018-09-22T20:51:23+08:00，默认为当前时间。 EndTime不能小于StartTime
  * @method void setEndTime(string $EndTime) 设置结束时间，如2018-09-22T20:51:23+08:00，默认为当前时间。 EndTime不能小于StartTime
+ * @method integer getSpecifyStatistics() 获取返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+ * @method void setSpecifyStatistics(integer $SpecifyStatistics) 设置返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
  */
 class GetMonitorDataRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class GetMonitorDataRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var integer 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+     */
+    public $SpecifyStatistics;
+
+    /**
      * @param string $Namespace 命名空间，如QCE/CVM。各个云产品的详细命名空间说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档
      * @param string $MetricName 指标名称，如CPUUsage，仅支持单指标拉取。各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档，对应的指标英文名即为MetricName
      * @param array $Instances 实例对象的维度组合，格式为key-value键值对形式的集合。不同类型的实例字段完全不同，如CVM为[{"Name":"InstanceId","Value":"ins-j0hk02zo"}]，Ckafka为[{"Name":"instanceId","Value":"ckafka-l49k54dd"}]，COS为[{"Name":"appid","Value":"1258344699"},{"Name":"bucket","Value":"rig-1258344699"}]。各个云产品的维度请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档，对应的维度列即为维度组合的key，value为key对应的值。单请求最多支持批量拉取10个实例的监控数据。
      * @param integer $Period 监控统计周期，如60。默认为取值为300，单位为s。每个指标支持的统计周期不一定相同，各个云产品支持的统计周期请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档，对应的统计周期列即为支持的统计周期。单请求的数据点数限制为1440个。
      * @param string $StartTime 起始时间，如2018-09-22T19:51:23+08:00
      * @param string $EndTime 结束时间，如2018-09-22T20:51:23+08:00，默认为当前时间。 EndTime不能小于StartTime
+     * @param integer $SpecifyStatistics 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class GetMonitorDataRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("SpecifyStatistics",$param) and $param["SpecifyStatistics"] !== null) {
+            $this->SpecifyStatistics = $param["SpecifyStatistics"];
         }
     }
 }

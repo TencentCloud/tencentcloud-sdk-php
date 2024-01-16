@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaselineId(string $BaselineId) 设置基线id
  * @method string getProjectId() 获取1
  * @method void setProjectId(string $ProjectId) 设置1
+ * @method string getBaselineTaskId() 获取1
+ * @method void setBaselineTaskId(string $BaselineTaskId) 设置1
  */
 class DescribeBaselineAllTaskDagRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeBaselineAllTaskDagRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 1
+     */
+    public $BaselineTaskId;
+
+    /**
      * @param string $BaselineId 基线id
      * @param string $ProjectId 1
+     * @param string $BaselineTaskId 1
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeBaselineAllTaskDagRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("BaselineTaskId",$param) and $param["BaselineTaskId"] !== null) {
+            $this->BaselineTaskId = $param["BaselineTaskId"];
         }
     }
 }

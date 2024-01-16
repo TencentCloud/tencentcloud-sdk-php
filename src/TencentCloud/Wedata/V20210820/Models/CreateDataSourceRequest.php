@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCOSBucket(string $COSBucket) 设置cos桶信息
  * @method string getCOSRegion() 获取cos region
  * @method void setCOSRegion(string $COSRegion) 设置cos region
+ * @method string getConnectResult() 获取连接测试结果
+ * @method void setConnectResult(string $ConnectResult) 设置连接测试结果
  */
 class CreateDataSourceRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateDataSourceRequest extends AbstractModel
     public $COSRegion;
 
     /**
+     * @var string 连接测试结果
+     */
+    public $ConnectResult;
+
+    /**
      * @param string $Name 数据源名称，在相同SpaceName下，数据源名称不能为空
      * @param string $Category 数据源类别：绑定引擎、绑定数据库
      * @param string $Type 数据源类型:枚举值
@@ -160,6 +167,7 @@ class CreateDataSourceRequest extends AbstractModel
      * @param string $Collect 是否采集
      * @param string $COSBucket cos桶信息
      * @param string $COSRegion cos region
+     * @param string $ConnectResult 连接测试结果
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class CreateDataSourceRequest extends AbstractModel
 
         if (array_key_exists("COSRegion",$param) and $param["COSRegion"] !== null) {
             $this->COSRegion = $param["COSRegion"];
+        }
+
+        if (array_key_exists("ConnectResult",$param) and $param["ConnectResult"] !== null) {
+            $this->ConnectResult = $param["ConnectResult"];
         }
     }
 }

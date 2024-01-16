@@ -35,7 +35,7 @@ use TencentCloud\Eb\V20210416\Models as Models;
  * @method Models\DeleteRuleResponse DeleteRule(Models\DeleteRuleRequest $req) 删除事件规则
  * @method Models\DeleteTargetResponse DeleteTarget(Models\DeleteTargetRequest $req) 删除事件目标
  * @method Models\DeleteTransformationResponse DeleteTransformation(Models\DeleteTransformationRequest $req) 用于删除转换器
- * @method Models\DescribeLogTagValueResponse DescribeLogTagValue(Models\DescribeLogTagValueRequest $req) 查询日志索引维度值
+ * @method Models\DescribeLogTagValueResponse DescribeLogTagValue(Models\DescribeLogTagValueRequest $req) 前置条件：需开启事件存储；事件查询维度值
  * @method Models\GetEventBusResponse GetEventBus(Models\GetEventBusRequest $req) 获取事件集详情
  * @method Models\GetPlatformEventTemplateResponse GetPlatformEventTemplate(Models\GetPlatformEventTemplateRequest $req) 获取平台产品事件模板
  * @method Models\GetRuleResponse GetRule(Models\GetRuleRequest $req) 获取事件规则详情
@@ -49,7 +49,7 @@ use TencentCloud\Eb\V20210416\Models as Models;
  * @method Models\ListTargetsResponse ListTargets(Models\ListTargetsRequest $req) 获取事件目标列表
  * @method Models\PublishEventResponse PublishEvent(Models\PublishEventRequest $req) （已废弃）用于Event事件投递
  * @method Models\PutEventsResponse PutEvents(Models\PutEventsRequest $req) 用于Event事件投递
- * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 日志检索
+ * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 前置条件：开启事件存储；查询历史推送事件
  * @method Models\UpdateConnectionResponse UpdateConnection(Models\UpdateConnectionRequest $req) 更新事件连接器
  * @method Models\UpdateEventBusResponse UpdateEventBus(Models\UpdateEventBusRequest $req) 更新事件集
  * @method Models\UpdateRuleResponse UpdateRule(Models\UpdateRuleRequest $req) 更新事件规则

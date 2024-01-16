@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置需要开通服务的VPC对应的网段
  * @method string getSubnetName() 获取需要开通服务的子网名称
  * @method void setSubnetName(string $SubnetName) 设置需要开通服务的子网名称
+ * @method string getCdcClusterId() 获取需要开通实例所属的CDC集群ID
+ * @method void setCdcClusterId(string $CdcClusterId) 设置需要开通实例所属的CDC集群ID
  */
 class DeployResourceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DeployResourceRequest extends AbstractModel
     public $SubnetName;
 
     /**
+     * @var string 需要开通实例所属的CDC集群ID
+     */
+    public $CdcClusterId;
+
+    /**
      * @param string $ResourceId 需要开通服务的资源ID
      * @param string $ApCode 需要开通服务的地域
      * @param string $Zone 子网所在可用区
@@ -96,6 +103,7 @@ class DeployResourceRequest extends AbstractModel
      * @param string $VpcName 需要开通服务的VPC名称
      * @param string $VpcCidrBlock 需要开通服务的VPC对应的网段
      * @param string $SubnetName 需要开通服务的子网名称
+     * @param string $CdcClusterId 需要开通实例所属的CDC集群ID
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DeployResourceRequest extends AbstractModel
 
         if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
             $this->SubnetName = $param["SubnetName"];
+        }
+
+        if (array_key_exists("CdcClusterId",$param) and $param["CdcClusterId"] !== null) {
+            $this->CdcClusterId = $param["CdcClusterId"];
         }
     }
 }

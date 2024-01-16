@@ -130,6 +130,10 @@ WAITINT_TO_RUN:等待运行 / RUNNING: 正在运行 / COMPLETED: 执行成功 / 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置租户id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCriticalDependency() 获取关键路径依赖
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCriticalDependency(string $CriticalDependency) 设置关键路径依赖
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineTaskInstanceDto extends AbstractModel
 {
@@ -297,6 +301,12 @@ WAITINT_TO_RUN:等待运行 / RUNNING: 正在运行 / COMPLETED: 执行成功 / 
     public $AppId;
 
     /**
+     * @var string 关键路径依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CriticalDependency;
+
+    /**
      * @param integer $Id 任务实例变更记录id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BaselineInstanceId 基线实例id
@@ -351,6 +361,8 @@ WAITINT_TO_RUN:等待运行 / RUNNING: 正在运行 / COMPLETED: 执行成功 / 
      * @param string $OwnerUin 主账号uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 租户id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CriticalDependency 关键路径依赖
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -472,6 +484,10 @@ WAITINT_TO_RUN:等待运行 / RUNNING: 正在运行 / COMPLETED: 执行成功 / 
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("CriticalDependency",$param) and $param["CriticalDependency"] !== null) {
+            $this->CriticalDependency = $param["CriticalDependency"];
         }
     }
 }

@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimestamps(array $Timestamps) 设置时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
  * @method array getValues() 获取监控值数组，该数组和Timestamps一一对应
  * @method void setValues(array $Values) 设置监控值数组，该数组和Timestamps一一对应
+ * @method array getMaxValues() 获取监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxValues(array $MaxValues) 设置监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMinValues() 获取监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinValues(array $MinValues) 设置监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAvgValues() 获取监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvgValues(array $AvgValues) 设置监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataPoint extends AbstractModel
 {
@@ -45,9 +57,33 @@ class DataPoint extends AbstractModel
     public $Values;
 
     /**
+     * @var array 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxValues;
+
+    /**
+     * @var array 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MinValues;
+
+    /**
+     * @var array 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvgValues;
+
+    /**
      * @param array $Dimensions 实例对象维度组合
      * @param array $Timestamps 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
      * @param array $Values 监控值数组，该数组和Timestamps一一对应
+     * @param array $MaxValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MinValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AvgValues 监控值数组，该数组和Timestamps一一对应
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -77,6 +113,18 @@ class DataPoint extends AbstractModel
 
         if (array_key_exists("Values",$param) and $param["Values"] !== null) {
             $this->Values = $param["Values"];
+        }
+
+        if (array_key_exists("MaxValues",$param) and $param["MaxValues"] !== null) {
+            $this->MaxValues = $param["MaxValues"];
+        }
+
+        if (array_key_exists("MinValues",$param) and $param["MinValues"] !== null) {
+            $this->MinValues = $param["MinValues"];
+        }
+
+        if (array_key_exists("AvgValues",$param) and $param["AvgValues"] !== null) {
+            $this->AvgValues = $param["AvgValues"];
         }
     }
 }

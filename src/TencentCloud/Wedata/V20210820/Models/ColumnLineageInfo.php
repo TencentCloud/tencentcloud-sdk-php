@@ -24,10 +24,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置血缘id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPrefixPath() 获取由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrefixPath(string $PrefixPath) 设置由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatasourceId() 获取数据源ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceId(string $DatasourceId) 设置数据源ID
@@ -88,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrefixPath() 获取由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrefixPath(string $PrefixPath) 设置由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
@@ -120,12 +120,6 @@ class ColumnLineageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
-
-    /**
-     * @var string 由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PrefixPath;
 
     /**
      * @var string 数据源ID
@@ -218,6 +212,12 @@ class ColumnLineageInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var string 由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrefixPath;
+
+    /**
      * @var string 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -256,8 +256,6 @@ class ColumnLineageInfo extends AbstractModel
     /**
      * @param string $Id 血缘id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PrefixPath 由中心节点出发的路径信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableId 表ID
@@ -288,6 +286,8 @@ class ColumnLineageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PrefixPath 由中心节点出发的路径信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新时间
@@ -316,10 +316,6 @@ class ColumnLineageInfo extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
-        }
-
-        if (array_key_exists("PrefixPath",$param) and $param["PrefixPath"] !== null) {
-            $this->PrefixPath = $param["PrefixPath"];
         }
 
         if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
@@ -380,6 +376,10 @@ class ColumnLineageInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("PrefixPath",$param) and $param["PrefixPath"] !== null) {
+            $this->PrefixPath = $param["PrefixPath"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

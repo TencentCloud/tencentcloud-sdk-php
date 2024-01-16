@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogTagValue返回参数结构体
  *
- * @method array getResults() 获取索引检索维度值
+ * @method array getResults() 获取事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置索引检索维度值
+ * @method void setResults(array $Results) 设置事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLogTagValueResponse extends AbstractModel
 {
     /**
-     * @var array 索引检索维度值
+     * @var array 事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
@@ -41,7 +41,7 @@ class DescribeLogTagValueResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Results 索引检索维度值
+     * @param array $Results 事件查询维度值结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

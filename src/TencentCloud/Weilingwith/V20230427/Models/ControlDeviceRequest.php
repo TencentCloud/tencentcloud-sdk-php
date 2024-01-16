@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setControlData(string $ControlData) 设置控制内容
  * @method string getApplicationToken() 获取应用token
  * @method void setApplicationToken(string $ApplicationToken) 设置应用token
+ * @method boolean getIsSynchronized() 获取是否同步返回设备下控ack结果
+ * @method void setIsSynchronized(boolean $IsSynchronized) 设置是否同步返回设备下控ack结果
  */
 class ControlDeviceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ControlDeviceRequest extends AbstractModel
     public $ApplicationToken;
 
     /**
+     * @var boolean 是否同步返回设备下控ack结果
+     */
+    public $IsSynchronized;
+
+    /**
      * @param integer $WorkspaceId 工作空间id
      * @param array $WIDSet 设备wid，最大100个
      * @param string $ControlData 控制内容
      * @param string $ApplicationToken 应用token
+     * @param boolean $IsSynchronized 是否同步返回设备下控ack结果
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ControlDeviceRequest extends AbstractModel
 
         if (array_key_exists("ApplicationToken",$param) and $param["ApplicationToken"] !== null) {
             $this->ApplicationToken = $param["ApplicationToken"];
+        }
+
+        if (array_key_exists("IsSynchronized",$param) and $param["IsSynchronized"] !== null) {
+            $this->IsSynchronized = $param["IsSynchronized"];
         }
     }
 }

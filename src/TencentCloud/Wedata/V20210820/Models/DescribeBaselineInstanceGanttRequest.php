@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaselineInstanceId(integer $BaselineInstanceId) 设置基线实例id
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method string getPromiseTaskId() 获取保障任务id
+ * @method void setPromiseTaskId(string $PromiseTaskId) 设置保障任务id
  */
 class DescribeBaselineInstanceGanttRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeBaselineInstanceGanttRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 保障任务id
+     */
+    public $PromiseTaskId;
+
+    /**
      * @param integer $BaselineInstanceId 基线实例id
      * @param string $ProjectId 项目id
+     * @param string $PromiseTaskId 保障任务id
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeBaselineInstanceGanttRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("PromiseTaskId",$param) and $param["PromiseTaskId"] !== null) {
+            $this->PromiseTaskId = $param["PromiseTaskId"];
         }
     }
 }

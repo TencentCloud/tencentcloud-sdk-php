@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(integer $TaskType) 设置1
  * @method string getInCharge() 获取1
  * @method void setInCharge(string $InCharge) 设置1
+ * @method string getWorkflowId() 获取工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method string getSortItem() 获取排序字段
+ * @method void setSortItem(string $SortItem) 设置排序字段
+ * @method string getSortType() 获取升序降序
+ * @method void setSortType(string $SortType) 设置升序降序
  */
 class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
     public $InCharge;
 
     /**
+     * @var string 工作流ID
+     */
+    public $WorkflowId;
+
+    /**
+     * @var string 排序字段
+     */
+    public $SortItem;
+
+    /**
+     * @var string 升序降序
+     */
+    public $SortType;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $CycleUnit 周期类型
      * @param string $TimeUnit 时间单元 eg: 12h
@@ -80,6 +101,9 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
      * @param string $EndTime 结束日前：2023-03-20
      * @param integer $TaskType 1
      * @param string $InCharge 1
+     * @param string $WorkflowId 工作流ID
+     * @param string $SortItem 排序字段
+     * @param string $SortType 升序降序
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends AbstractModel
 
         if (array_key_exists("InCharge",$param) and $param["InCharge"] !== null) {
             $this->InCharge = $param["InCharge"];
+        }
+
+        if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
+            $this->WorkflowId = $param["WorkflowId"];
+        }
+
+        if (array_key_exists("SortItem",$param) and $param["SortItem"] !== null) {
+            $this->SortItem = $param["SortItem"];
+        }
+
+        if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
+            $this->SortType = $param["SortType"];
         }
     }
 }

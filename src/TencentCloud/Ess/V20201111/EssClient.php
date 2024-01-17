@@ -117,6 +117,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/06f2bc0f1772d8deac2f92b5df61a5ac.png)
 
 注：**静默（自动）签署不支持合同签署方存在填写**功能
+<br>
+**相关视频指引**
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/createflow_seversign.mp4" target="_blank">创建静默（自动）签署模板和开通自动签署</a>
  * @method Models\CreateFlowApproversResponse CreateFlowApprovers(Models\CreateFlowApproversRequest $req) 适用场景：
 当通过模板或文件发起合同时，若未指定企业签署人信息，则可调用此接口补充或添加签署人。同一签署人可补充多个员工作为或签署人，最终实际签署人取决于谁先领取合同完成签署。
 
@@ -162,7 +165,6 @@ use TencentCloud\Ess\V20201111\Models as Models;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/f097a74b289e3e1acd740936bdfe9843.png)
 
 注：
-- 不同类型的签署方传参不同, 可以参考开发者中心的ApproverInfo结构体说明
 -  合同**发起后就会扣减合同的额度**, 如果未签署完成时撤销合同会返还此额度（**过期，拒签，签署完成，解除完成等状态不会返还额度**）
 - **静默（自动）签署不支持合同签署方存在填写**功能
  * @method Models\CreateFlowEvidenceReportResponse CreateFlowEvidenceReport(Models\CreateFlowEvidenceReportRequest $req) 提交申请出证报告任务并返回报告ID。
@@ -305,6 +307,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 附注：
 - 员工必须在企业下完成实名认证，且需作为批量签署合同的签署方。
 - 如有UserId，应以UserId为主要标识；如果没有UserId，则必须填写Name和Mobile信息。
+- 仅支持待签署状态的合同生成签署链接。
  * @method Models\CreateOrganizationInfoChangeUrlResponse CreateOrganizationInfoChangeUrl(Models\CreateOrganizationInfoChangeUrlRequest $req) 此接口（CreateOrganizationInfoChangeUrl）用于创建企业信息变更链接，支持创建企业超管变更链接或企业基础信息变更链接，通过入参ChangeType指定。
 
 
@@ -553,8 +556,11 @@ use TencentCloud\Ess\V20201111\Models as Models;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/06f2bc0f1772d8deac2f92b5df61a5ac.png)
 
 注：
-- **合同发起后就会扣减合同的额度**, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度）
-- **静默（自动）签署不支持合同签署方存在填写**功能
+1.<font color="red">合同发起后就会扣减合同的额度</font>, 如果未签署完成时撤销合同会返还此额度（过期，拒签，签署完成，解除完成等状态不会返还额度）
+
+2.<font color="red">静默（自动）签署不支持合同签署方存在填写</font>功能
+
+3.<font color="red">在发起签署流程之前，建议等待 [PDF合成完成的回调](https://qian.tencent.com/developers/company/callback_types_file_resources)</font>，尤其是当模板中存在动态表格等复杂填写控件时，因为合成过程可能会耗费秒级别的时间。
  * @method Models\UnbindEmployeeUserIdWithClientOpenIdResponse UnbindEmployeeUserIdWithClientOpenId(Models\UnbindEmployeeUserIdWithClientOpenIdRequest $req) 此接口（UnbindEmployeeUserIdWithClientOpenId）用于解除电子签系统员工UserId与客户系统员工OpenId之间的绑定关系。
 
 注：`在调用此接口时，需确保OpenId已通过调用`<a href="https://qian.tencent.com/developers/companyApis/staffs/BindEmployeeUserIdWithClientOpenId" target="_blank">BindEmployeeUserIdWithClientOpenId</a>`接口与电子签系统的UserId绑定过。若OpenId未经过绑定，则无法使用此接口进行解绑操作。`

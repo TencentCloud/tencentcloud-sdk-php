@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setByteSpeed(float $ByteSpeed) 设置吞吐（Byte/秒）
  * @method integer getTotalErrorRecords() 获取脏数据条数
  * @method void setTotalErrorRecords(integer $TotalErrorRecords) 设置脏数据条数
+ * @method float getWaitWriterTime() 获取等待数据发送到下游的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaitWriterTime(float $WaitWriterTime) 设置等待数据发送到下游的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceReportReadNode extends AbstractModel
 {
@@ -73,6 +77,12 @@ class InstanceReportReadNode extends AbstractModel
     public $TotalErrorRecords;
 
     /**
+     * @var float 等待数据发送到下游的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WaitWriterTime;
+
+    /**
      * @param string $NodeName 节点名称
      * @param string $DataSource 数据来源
      * @param integer $TotalReadRecords 总条数
@@ -80,6 +90,8 @@ class InstanceReportReadNode extends AbstractModel
      * @param integer $RecordSpeed 速度（条/秒）
      * @param float $ByteSpeed 吞吐（Byte/秒）
      * @param integer $TotalErrorRecords 脏数据条数
+     * @param float $WaitWriterTime 等待数据发送到下游的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class InstanceReportReadNode extends AbstractModel
 
         if (array_key_exists("TotalErrorRecords",$param) and $param["TotalErrorRecords"] !== null) {
             $this->TotalErrorRecords = $param["TotalErrorRecords"];
+        }
+
+        if (array_key_exists("WaitWriterTime",$param) and $param["WaitWriterTime"] !== null) {
+            $this->WaitWriterTime = $param["WaitWriterTime"];
         }
     }
 }

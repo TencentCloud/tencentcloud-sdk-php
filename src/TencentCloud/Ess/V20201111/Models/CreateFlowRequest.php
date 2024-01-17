@@ -70,7 +70,7 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
 注：`请和模板中的配置保持一致`
- * @method string getCustomShowMap() 获取您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+ * @method string getCustomShowMap() 获取您可以自定义**腾讯电子签小程序合同列表页**展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
 <li>{发起方企业} </li>
 <li>{发起方姓名} </li>
@@ -84,8 +84,10 @@ use TencentCloud\Common\AbstractModel;
 发起方：腾讯公司(张三) 
 签署方：李四
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
- * @method void setCustomShowMap(string $CustomShowMap) 设置您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+
+ * @method void setCustomShowMap(string $CustomShowMap) 设置您可以自定义**腾讯电子签小程序合同列表页**展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
 <li>{发起方企业} </li>
 <li>{发起方姓名} </li>
@@ -98,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
 合同名称：租房合同 
 发起方：腾讯公司(张三) 
 签署方：李四
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
 
  * @method boolean getNeedSignReview() 获取发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
@@ -199,7 +203,7 @@ class CreateFlowRequest extends AbstractModel
     public $Unordered;
 
     /**
-     * @var string 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+     * @var string 您可以自定义**腾讯电子签小程序合同列表页**展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
 <li>{发起方企业} </li>
 <li>{发起方姓名} </li>
@@ -212,6 +216,8 @@ class CreateFlowRequest extends AbstractModel
 合同名称：租房合同 
 发起方：腾讯公司(张三) 
 签署方：李四
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
 
      */
@@ -284,7 +290,7 @@ class CreateFlowRequest extends AbstractModel
 <ul><li> **false**：(默认)有序签署, 本合同多个参与人需要依次签署 </li>
 <li> **true**：无序签署, 本合同多个参与人没有先后签署限制</li></ul>
 注：`请和模板中的配置保持一致`
-     * @param string $CustomShowMap 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
+     * @param string $CustomShowMap 您可以自定义**腾讯电子签小程序合同列表页**展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
 <li>{发起方企业} </li>
 <li>{发起方姓名} </li>
@@ -297,6 +303,8 @@ class CreateFlowRequest extends AbstractModel
 合同名称：租房合同 
 发起方：腾讯公司(张三) 
 签署方：李四
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
 
      * @param boolean $NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：

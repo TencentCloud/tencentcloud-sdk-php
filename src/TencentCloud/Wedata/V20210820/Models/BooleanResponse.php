@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBaselineId(integer $BaselineId) 设置基线Id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCode() 获取错误码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCode(string $Code) 设置错误码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BooleanResponse extends AbstractModel
 {
@@ -51,10 +55,18 @@ class BooleanResponse extends AbstractModel
     public $BaselineId;
 
     /**
+     * @var string 错误码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Code;
+
+    /**
      * @param boolean $Success 是否成功
      * @param string $Message 失败返回提示信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BaselineId 基线Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Code 错误码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -80,6 +92,10 @@ class BooleanResponse extends AbstractModel
 
         if (array_key_exists("BaselineId",$param) and $param["BaselineId"] !== null) {
             $this->BaselineId = $param["BaselineId"];
+        }
+
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
     }
 }

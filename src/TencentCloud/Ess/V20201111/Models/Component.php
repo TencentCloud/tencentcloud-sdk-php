@@ -133,6 +133,8 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
 
 注：`控件ID可以在一个PDF中不可重复`
 
+<a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentId在模板编辑页面的位置</a>
+
  * @method void setComponentId(string $ComponentId) 设置控件唯一ID。
 
 **在绝对定位方式方式下**，ComponentId为控件的ID，长度不能超过30，只能由中文、字母、数字和下划线组成，可以在后续的操作中使用该名称来引用控件。
@@ -149,18 +151,22 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
 
 注：`控件ID可以在一个PDF中不可重复`
 
+<a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentId在模板编辑页面的位置</a>
+
  * @method string getComponentName() 获取**在绝对定位方式方式下**，ComponentName为控件名，长度不能超过20，只能由中文、字母、数字和下划线组成，可以在后续的操作中使用该名称来引用控件。
 
 **在表单域定位方式下**，ComponentName不仅为控件名，也是表单域名称。
 
 注：`控件名可以在一个PDF中可以重复`
 
+<a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentName在模板页面的位置</a>
  * @method void setComponentName(string $ComponentName) 设置**在绝对定位方式方式下**，ComponentName为控件名，长度不能超过20，只能由中文、字母、数字和下划线组成，可以在后续的操作中使用该名称来引用控件。
 
 **在表单域定位方式下**，ComponentName不仅为控件名，也是表单域名称。
 
 注：`控件名可以在一个PDF中可以重复`
 
+<a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentName在模板页面的位置</a>
  * @method boolean getComponentRequired() 获取如果是<b>填写控件</b>，ComponentRequired表示在填写页面此控件是否必填
 <ul><li>false（默认）：可以不填写</li>
 <li>true ：必须填写此填写控件</li></ul>
@@ -456,6 +462,8 @@ class Component extends AbstractModel
 
 注：`控件ID可以在一个PDF中不可重复`
 
+<a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentId在模板编辑页面的位置</a>
+
      */
     public $ComponentId;
 
@@ -466,6 +474,7 @@ class Component extends AbstractModel
 
 注：`控件名可以在一个PDF中可以重复`
 
+<a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentName在模板页面的位置</a>
      */
     public $ComponentName;
 
@@ -694,12 +703,15 @@ class Component extends AbstractModel
 
 注：`控件ID可以在一个PDF中不可重复`
 
+<a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentId在模板编辑页面的位置</a>
+
      * @param string $ComponentName **在绝对定位方式方式下**，ComponentName为控件名，长度不能超过20，只能由中文、字母、数字和下划线组成，可以在后续的操作中使用该名称来引用控件。
 
 **在表单域定位方式下**，ComponentName不仅为控件名，也是表单域名称。
 
 注：`控件名可以在一个PDF中可以重复`
 
+<a href="https://qcloudimg.tencent-cloud.cn/raw/93178569d07b4d7dbbe0967ae679e35c.png" target="_blank">点击查看ComponentName在模板页面的位置</a>
      * @param boolean $ComponentRequired 如果是<b>填写控件</b>，ComponentRequired表示在填写页面此控件是否必填
 <ul><li>false（默认）：可以不填写</li>
 <li>true ：必须填写此填写控件</li></ul>

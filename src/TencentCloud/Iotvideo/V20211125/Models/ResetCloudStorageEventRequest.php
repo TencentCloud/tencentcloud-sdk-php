@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
+ * @method integer getChannelId() 获取通道ID
+ * @method void setChannelId(integer $ChannelId) 设置通道ID
  */
 class ResetCloudStorageEventRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ResetCloudStorageEventRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 通道ID
+     */
+    public $ChannelId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $UserId 用户ID
+     * @param integer $ChannelId 通道ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ResetCloudStorageEventRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

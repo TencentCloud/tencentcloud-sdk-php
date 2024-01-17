@@ -23,13 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取通知渠道组名称。
  * @method void setName(string $Name) 设置通知渠道组名称。
  * @method string getType() 获取通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li>
  * @method void setType(string $Type) 设置通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li>
  * @method array getNoticeReceivers() 获取通知接收对象。
  * @method void setNoticeReceivers(array $NoticeReceivers) 设置通知接收对象。
  * @method array getWebCallbacks() 获取接口回调信息（包括企业微信）。
@@ -56,9 +56,9 @@ class CreateAlarmNoticeRequest extends AbstractModel
 
     /**
      * @var string 通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li>
      */
     public $Type;
 
@@ -86,9 +86,9 @@ class CreateAlarmNoticeRequest extends AbstractModel
     /**
      * @param string $Name 通知渠道组名称。
      * @param string $Type 通知类型。可选值：
-<li> Trigger - 告警触发
-<li> Recovery - 告警恢复
-<li> All - 告警触发和告警恢复
+<li> Trigger - 告警触发 </li>
+<li> Recovery - 告警恢复</li>
+<li> All - 告警触发和告警恢复</li>
      * @param array $NoticeReceivers 通知接收对象。
      * @param array $WebCallbacks 接口回调信息（包括企业微信）。
      * @param array $NoticeRules 通知规则。

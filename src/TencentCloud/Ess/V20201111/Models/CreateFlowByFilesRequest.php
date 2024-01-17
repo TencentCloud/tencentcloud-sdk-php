@@ -139,6 +139,9 @@ use TencentCloud\Common\AbstractModel;
 签署方：李四
 
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
+
+
  * @method void setCustomShowMap(string $CustomShowMap) 设置您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
 <li>{发起方企业} </li>
@@ -152,6 +155,9 @@ use TencentCloud\Common\AbstractModel;
 合同名称：租房合同 
 发起方：腾讯公司(张三) 
 签署方：李四
+
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
 
  * @method Agent getAgent() 获取代理企业和员工的信息。
@@ -317,6 +323,9 @@ class CreateFlowByFilesRequest extends AbstractModel
 签署方：李四
 
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
+
+
      */
     public $CustomShowMap;
 
@@ -410,6 +419,9 @@ class CreateFlowByFilesRequest extends AbstractModel
 合同名称：租房合同 
 发起方：腾讯公司(张三) 
 签署方：李四
+
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/628f0928cac15d2e3bfa6088f53f5998.png)
 
 
      * @param Agent $Agent 代理企业和员工的信息。

@@ -202,6 +202,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceVersion(integer $InstanceVersion) 设置版本号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArrangeSpaceTaskId() 获取离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArrangeSpaceTaskId(string $ArrangeSpaceTaskId) 设置离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOfflineTaskStatus() 获取离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOfflineTaskStatus(integer $OfflineTaskStatus) 设置离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationTaskInfo extends AbstractModel
 {
@@ -485,6 +493,18 @@ class IntegrationTaskInfo extends AbstractModel
     public $InstanceVersion;
 
     /**
+     * @var string 离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ArrangeSpaceTaskId;
+
+    /**
+     * @var integer 离线任务状态区分1.未提交2.已提交3.已导出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OfflineTaskStatus;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -575,6 +595,10 @@ class IntegrationTaskInfo extends AbstractModel
      * @param integer $ReadPhase 读取阶段：0：全部全量,1：部分全量,2：全部增量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceVersion 版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ArrangeSpaceTaskId 离线任务导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OfflineTaskStatus 离线任务状态区分1.未提交2.已提交3.已导出
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -802,6 +826,14 @@ class IntegrationTaskInfo extends AbstractModel
 
         if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
             $this->InstanceVersion = $param["InstanceVersion"];
+        }
+
+        if (array_key_exists("ArrangeSpaceTaskId",$param) and $param["ArrangeSpaceTaskId"] !== null) {
+            $this->ArrangeSpaceTaskId = $param["ArrangeSpaceTaskId"];
+        }
+
+        if (array_key_exists("OfflineTaskStatus",$param) and $param["OfflineTaskStatus"] !== null) {
+            $this->OfflineTaskStatus = $param["OfflineTaskStatus"];
         }
     }
 }

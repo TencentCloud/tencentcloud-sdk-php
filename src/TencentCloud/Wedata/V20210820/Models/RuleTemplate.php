@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubQualityDim(integer $SubQualityDim) 设置模版子维度，0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SqlExpression getResolvedSqlExpression() 获取sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResolvedSqlExpression(SqlExpression $ResolvedSqlExpression) 设置sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDatasourceTypes() 获取支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceTypes(array $DatasourceTypes) 设置支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleTemplate extends AbstractModel
 {
@@ -186,6 +194,18 @@ class RuleTemplate extends AbstractModel
     public $SubQualityDim;
 
     /**
+     * @var SqlExpression sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResolvedSqlExpression;
+
+    /**
+     * @var array 支持的数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceTypes;
+
+    /**
      * @param integer $RuleTemplateId 规则模版ID
      * @param string $Name 规则模版名称
      * @param string $Description 规则模版描述
@@ -215,6 +235,10 @@ class RuleTemplate extends AbstractModel
      * @param string $SqlExpression 自定义模板SQL表达式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubQualityDim 模版子维度，0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SqlExpression $ResolvedSqlExpression sql表达式解析对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DatasourceTypes 支持的数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -300,6 +324,15 @@ class RuleTemplate extends AbstractModel
 
         if (array_key_exists("SubQualityDim",$param) and $param["SubQualityDim"] !== null) {
             $this->SubQualityDim = $param["SubQualityDim"];
+        }
+
+        if (array_key_exists("ResolvedSqlExpression",$param) and $param["ResolvedSqlExpression"] !== null) {
+            $this->ResolvedSqlExpression = new SqlExpression();
+            $this->ResolvedSqlExpression->deserialize($param["ResolvedSqlExpression"]);
+        }
+
+        if (array_key_exists("DatasourceTypes",$param) and $param["DatasourceTypes"] !== null) {
+            $this->DatasourceTypes = $param["DatasourceTypes"];
         }
     }
 }

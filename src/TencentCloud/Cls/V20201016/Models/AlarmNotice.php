@@ -23,13 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取告警通知模板名称。
  * @method void setName(string $Name) 设置告警通知模板名称。
  * @method string getType() 获取告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li>
  * @method void setType(string $Type) 设置告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li>
  * @method array getNoticeReceivers() 获取告警通知模板接收者信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeReceivers(array $NoticeReceivers) 设置告警通知模板接收者信息。
@@ -64,9 +64,9 @@ class AlarmNotice extends AbstractModel
 
     /**
      * @var string 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li>
      */
     public $Type;
 
@@ -109,9 +109,9 @@ class AlarmNotice extends AbstractModel
     /**
      * @param string $Name 告警通知模板名称。
      * @param string $Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+<br><li> Trigger - 告警触发</li>
+<br><li> Recovery - 告警恢复</li>
+<br><li> All - 告警触发和告警恢复</li>
      * @param array $NoticeReceivers 告警通知模板接收者信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebCallbacks 告警通知模板回调信息。

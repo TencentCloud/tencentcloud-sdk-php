@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 0：等待生效
 1: 已过期
 2:生效
+ * @method integer getChannelId() 获取通道id
+ * @method void setChannelId(integer $ChannelId) 设置通道id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,6 +74,11 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 通道id
+     */
+    public $ChannelId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +94,7 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
 0：等待生效
 1: 已过期
 2:生效
+     * @param integer $ChannelId 通道id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +124,10 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

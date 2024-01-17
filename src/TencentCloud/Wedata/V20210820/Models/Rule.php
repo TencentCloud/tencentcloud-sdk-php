@@ -160,6 +160,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置源端对应的引擎类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTableName() 获取表名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableName(string $TableName) 设置表名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTableOwnerName() 获取表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableOwnerName(string $TableOwnerName) 设置表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method RuleGroupExecStrategy getExecStrategy() 获取执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecStrategy(RuleGroupExecStrategy $ExecStrategy) 设置执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method RuleGroupSubscribe getSubscription() 获取订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubscription(RuleGroupSubscribe $Subscription) 设置订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDatasourceId() 获取数据源 id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceId(integer $DatasourceId) 设置数据源 id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseId() 获取数据库 id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseId(string $DatabaseId) 设置数据库 id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMonitorStatus() 获取监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorStatus(integer $MonitorStatus) 设置监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -374,6 +406,54 @@ class Rule extends AbstractModel
     public $SourceEngineTypes;
 
     /**
+     * @var string 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableName;
+
+    /**
+     * @var string 表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableOwnerName;
+
+    /**
+     * @var RuleGroupExecStrategy 执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecStrategy;
+
+    /**
+     * @var RuleGroupSubscribe 订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Subscription;
+
+    /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 数据源 id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceId;
+
+    /**
+     * @var string 数据库 id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseId;
+
+    /**
+     * @var integer 监控是否开启.0false,1true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorStatus;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -443,6 +523,22 @@ class Rule extends AbstractModel
      * @param string $TargetObjectValue 目标字段名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SourceEngineTypes 源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TableOwnerName 表负责人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupExecStrategy $ExecStrategy 执行策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupSubscribe $Subscription 订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DatasourceId 数据源 id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseId 数据库 id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MonitorStatus 监控是否开启.0false,1true
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -598,6 +694,40 @@ class Rule extends AbstractModel
 
         if (array_key_exists("SourceEngineTypes",$param) and $param["SourceEngineTypes"] !== null) {
             $this->SourceEngineTypes = $param["SourceEngineTypes"];
+        }
+
+        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
+            $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("TableOwnerName",$param) and $param["TableOwnerName"] !== null) {
+            $this->TableOwnerName = $param["TableOwnerName"];
+        }
+
+        if (array_key_exists("ExecStrategy",$param) and $param["ExecStrategy"] !== null) {
+            $this->ExecStrategy = new RuleGroupExecStrategy();
+            $this->ExecStrategy->deserialize($param["ExecStrategy"]);
+        }
+
+        if (array_key_exists("Subscription",$param) and $param["Subscription"] !== null) {
+            $this->Subscription = new RuleGroupSubscribe();
+            $this->Subscription->deserialize($param["Subscription"]);
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
+            $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("DatabaseId",$param) and $param["DatabaseId"] !== null) {
+            $this->DatabaseId = $param["DatabaseId"];
+        }
+
+        if (array_key_exists("MonitorStatus",$param) and $param["MonitorStatus"] !== null) {
+            $this->MonitorStatus = $param["MonitorStatus"];
         }
     }
 }

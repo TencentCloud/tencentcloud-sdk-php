@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebHooks(array $WebHooks) 设置群机器人配置的webhook信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleId() 获取规则Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleId(integer $RuleId) 设置规则Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleName() 获取规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleName(string $RuleName) 设置规则名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupSubscribe extends AbstractModel
 {
@@ -64,6 +72,18 @@ class RuleGroupSubscribe extends AbstractModel
     public $WebHooks;
 
     /**
+     * @var integer 规则Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleId;
+
+    /**
+     * @var string 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleName;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Receivers 订阅接收人列表
@@ -71,6 +91,10 @@ class RuleGroupSubscribe extends AbstractModel
      * @param array $SubscribeType 订阅方式 1.邮件email  2.短信sms
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebHooks 群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleId 规则Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleName 规则名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -110,6 +134,14 @@ class RuleGroupSubscribe extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WebHooks, $obj);
             }
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
         }
     }
 }

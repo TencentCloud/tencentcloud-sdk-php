@@ -148,8 +148,14 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 注意：该配置生效仅对变更前拉流源为点播时生效。
  * @method string getCallbackUrl() 获取自定义回调地址。
 拉流转推任务相关事件会回调到该地址。
+回调事件使用方法请查看：
+https://cloud.tencent.com/document/product/267/32744
+https://cloud.tencent.com/document/product/267/56208
  * @method void setCallbackUrl(string $CallbackUrl) 设置自定义回调地址。
 拉流转推任务相关事件会回调到该地址。
+回调事件使用方法请查看：
+https://cloud.tencent.com/document/product/267/32744
+https://cloud.tencent.com/document/product/267/56208
  * @method string getExtraCmd() 获取其他参数。
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
  * @method void setExtraCmd(string $ExtraCmd) 设置其他参数。
@@ -335,6 +341,9 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
     /**
      * @var string 自定义回调地址。
 拉流转推任务相关事件会回调到该地址。
+回调事件使用方法请查看：
+https://cloud.tencent.com/document/product/267/32744
+https://cloud.tencent.com/document/product/267/56208
      */
     public $CallbackUrl;
 
@@ -478,6 +487,9 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 注意：该配置生效仅对变更前拉流源为点播时生效。
      * @param string $CallbackUrl 自定义回调地址。
 拉流转推任务相关事件会回调到该地址。
+回调事件使用方法请查看：
+https://cloud.tencent.com/document/product/267/32744
+https://cloud.tencent.com/document/product/267/56208
      * @param string $ExtraCmd 其他参数。
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
      * @param string $SpecifyTaskId 自定义任务 ID。

@@ -22,16 +22,33 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceGrpId() 获取实例组id
  * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组id
+ * @method string getInstanceGroupId() 获取实例组id
+ * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组id
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
  */
 class CloseWanRequest extends AbstractModel
 {
     /**
      * @var string 实例组id
+     * @deprecated
      */
     public $InstanceGrpId;
 
     /**
+     * @var string 实例组id
+     */
+    public $InstanceGroupId;
+
+    /**
+     * @var string 实例id
+     */
+    public $InstanceId;
+
+    /**
      * @param string $InstanceGrpId 实例组id
+     * @param string $InstanceGroupId 实例组id
+     * @param string $InstanceId 实例id
      */
     function __construct()
     {
@@ -48,6 +65,14 @@ class CloseWanRequest extends AbstractModel
         }
         if (array_key_exists("InstanceGrpId",$param) and $param["InstanceGrpId"] !== null) {
             $this->InstanceGrpId = $param["InstanceGrpId"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

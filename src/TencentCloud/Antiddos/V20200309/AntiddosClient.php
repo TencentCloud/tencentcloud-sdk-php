@@ -60,6 +60,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DeletePortAclConfigResponse DeletePortAclConfig(Models\DeletePortAclConfigRequest $req) 删除DDoS防护的端口acl策略
  * @method Models\DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(Models\DeleteWaterPrintConfigRequest $req) 删除DDoS防护的水印防护配置
  * @method Models\DeleteWaterPrintKeyResponse DeleteWaterPrintKey(Models\DeleteWaterPrintKeyRequest $req) 删除DDoS防护的水印防护密钥
+ * @method Models\DescribeBGPIPL7RulesResponse DescribeBGPIPL7Rules(Models\DescribeBGPIPL7RulesRequest $req) 高防IP获取7层规则
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) 获取基础防护攻击状态
  * @method Models\DescribeBgpBizTrendResponse DescribeBgpBizTrend(Models\DescribeBgpBizTrendRequest $req) 获取高防包流量折线图
  * @method Models\DescribeBizHttpStatusResponse DescribeBizHttpStatus(Models\DescribeBizHttpStatusRequest $req) 获取业务流量状态码统计列表

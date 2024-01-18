@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNonsupportRoReason(string $NonsupportRoReason) 设置不支持RO实例的原因
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsSupportManualSnapshot() 获取是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportManualSnapshot(string $IsSupportManualSnapshot) 设置是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Ability extends AbstractModel
 {
@@ -58,11 +62,19 @@ class Ability extends AbstractModel
     public $NonsupportRoReason;
 
     /**
+     * @var string 是否支持手动发起快照备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportManualSnapshot;
+
+    /**
      * @param string $IsSupportSlaveZone 是否支持从可用区
      * @param string $NonsupportSlaveZoneReason 不支持从可用区的原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsSupportRo 是否支持RO实例
      * @param string $NonsupportRoReason 不支持RO实例的原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsSupportManualSnapshot 是否支持手动发起快照备份
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -92,6 +104,10 @@ class Ability extends AbstractModel
 
         if (array_key_exists("NonsupportRoReason",$param) and $param["NonsupportRoReason"] !== null) {
             $this->NonsupportRoReason = $param["NonsupportRoReason"];
+        }
+
+        if (array_key_exists("IsSupportManualSnapshot",$param) and $param["IsSupportManualSnapshot"] !== null) {
+            $this->IsSupportManualSnapshot = $param["IsSupportManualSnapshot"];
         }
     }
 }

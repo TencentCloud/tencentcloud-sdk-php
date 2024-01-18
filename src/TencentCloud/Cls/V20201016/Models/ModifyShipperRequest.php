@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
  * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
  * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+ * @method string getStorageType() 获取cos桶类型
+ * @method void setStorageType(string $StorageType) 设置cos桶类型
  */
 class ModifyShipperRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ModifyShipperRequest extends AbstractModel
     public $FilenameMode;
 
     /**
+     * @var string cos桶类型
+     */
+    public $StorageType;
+
+    /**
      * @param string $ShipperId 投递规则ID
      * @param string $Bucket 投递规则投递的新的bucket
      * @param string $Prefix 投递规则投递的新的目录前缀
@@ -120,6 +127,7 @@ class ModifyShipperRequest extends AbstractModel
      * @param CompressInfo $Compress 投递日志的压缩配置
      * @param ContentInfo $Content 投递日志的内容格式配置
      * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * @param string $StorageType cos桶类型
      */
     function __construct()
     {
@@ -187,6 +195,10 @@ class ModifyShipperRequest extends AbstractModel
 
         if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
             $this->FilenameMode = $param["FilenameMode"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

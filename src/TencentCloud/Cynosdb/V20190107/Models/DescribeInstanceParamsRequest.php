@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID，支持批量查询
  * @method string getParamKeyword() 获取参数名搜索条件，支持模糊匹配
  * @method void setParamKeyword(string $ParamKeyword) 设置参数名搜索条件，支持模糊匹配
+ * @method string getIsGlobal() 获取是否为全局参数
+ * @method void setIsGlobal(string $IsGlobal) 设置是否为全局参数
  */
 class DescribeInstanceParamsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeInstanceParamsRequest extends AbstractModel
     public $ParamKeyword;
 
     /**
+     * @var string 是否为全局参数
+     */
+    public $IsGlobal;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 实例ID，支持批量查询
      * @param string $ParamKeyword 参数名搜索条件，支持模糊匹配
+     * @param string $IsGlobal 是否为全局参数
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeInstanceParamsRequest extends AbstractModel
 
         if (array_key_exists("ParamKeyword",$param) and $param["ParamKeyword"] !== null) {
             $this->ParamKeyword = $param["ParamKeyword"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
         }
     }
 }

@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcSet() 获取绑定的Vpc列表
  * @method void setVpcSet(array $VpcSet) 设置绑定的Vpc列表
- * @method string getStatus() 获取私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
- * @method void setStatus(string $Status) 设置私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
+ * @method string getStatus() 获取私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED
+ * @method void setStatus(string $Status) 设置私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED
  * @method string getDnsForwardStatus() 获取域名递归解析状态：开通：ENABLED, 关闭，DISABLED
  * @method void setDnsForwardStatus(string $DnsForwardStatus) 设置域名递归解析状态：开通：ENABLED, 关闭，DISABLED
  * @method array getTags() 获取标签键值对集合
@@ -69,6 +71,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndPointName() 获取终端节点名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndPointName(string $EndPointName) 设置终端节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDeletedVpcSet() 获取已删除的vpc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeletedVpcSet(array $DeletedVpcSet) 设置已删除的vpc
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivateZone extends AbstractModel
@@ -115,7 +121,8 @@ class PrivateZone extends AbstractModel
     public $VpcSet;
 
     /**
-     * @var string 私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
+     * @var string 私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED
      */
     public $Status;
 
@@ -171,6 +178,12 @@ class PrivateZone extends AbstractModel
     public $EndPointName;
 
     /**
+     * @var array 已删除的vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeletedVpcSet;
+
+    /**
      * @param string $ZoneId 私有域id: zone-xxxxxxxx
      * @param integer $OwnerUin 域名所有者uin
      * @param string $Domain 私有域名
@@ -180,7 +193,8 @@ class PrivateZone extends AbstractModel
      * @param string $Remark 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VpcSet 绑定的Vpc列表
-     * @param string $Status 私有域状态：正常解析：ENABLED, 暂停解析：SUSPEND, 锁定：FROZEN
+     * @param string $Status 私有域绑定VPC状态，未关联vpc：SUSPEND，已关联VPC：ENABLED
+，关联VPC失败：FAILED
      * @param string $DnsForwardStatus 域名递归解析状态：开通：ENABLED, 关闭，DISABLED
      * @param array $Tags 标签键值对集合
      * @param array $AccountVpcSet 绑定的关联账号的vpc列表
@@ -195,6 +209,8 @@ class PrivateZone extends AbstractModel
      * @param string $ForwardAddress 转发的地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndPointName 终端节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DeletedVpcSet 已删除的vpc
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -295,6 +311,15 @@ class PrivateZone extends AbstractModel
 
         if (array_key_exists("EndPointName",$param) and $param["EndPointName"] !== null) {
             $this->EndPointName = $param["EndPointName"];
+        }
+
+        if (array_key_exists("DeletedVpcSet",$param) and $param["DeletedVpcSet"] !== null) {
+            $this->DeletedVpcSet = [];
+            foreach ($param["DeletedVpcSet"] as $key => $value){
+                $obj = new VpcInfo();
+                $obj->deserialize($value);
+                array_push($this->DeletedVpcSet, $obj);
+            }
         }
     }
 }

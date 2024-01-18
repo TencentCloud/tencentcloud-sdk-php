@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getParamName() 获取参数名字
  * @method void setParamName(string $ParamName) 设置参数名字
+ * @method string getIsGlobal() 获取是否为全局参数
+ * @method void setIsGlobal(string $IsGlobal) 设置是否为全局参数
  */
 class DescribeClusterParamsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeClusterParamsRequest extends AbstractModel
     public $ParamName;
 
     /**
+     * @var string 是否为全局参数
+     */
+    public $IsGlobal;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ParamName 参数名字
+     * @param string $IsGlobal 是否为全局参数
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeClusterParamsRequest extends AbstractModel
 
         if (array_key_exists("ParamName",$param) and $param["ParamName"] !== null) {
             $this->ParamName = $param["ParamName"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
         }
     }
 }

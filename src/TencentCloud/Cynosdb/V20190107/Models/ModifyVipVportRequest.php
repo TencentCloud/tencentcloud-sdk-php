@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群id
  * @method string getInstanceGrpId() 获取实例组id
  * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组id
+ * @method string getInstanceGroupId() 获取实例组id
+ * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组id
  * @method string getVip() 获取需要修改的目的ip
  * @method void setVip(string $Vip) 设置需要修改的目的ip
  * @method integer getVport() 获取需要修改的目的端口
@@ -44,8 +46,14 @@ class ModifyVipVportRequest extends AbstractModel
 
     /**
      * @var string 实例组id
+     * @deprecated
      */
     public $InstanceGrpId;
+
+    /**
+     * @var string 实例组id
+     */
+    public $InstanceGroupId;
 
     /**
      * @var string 需要修改的目的ip
@@ -71,6 +79,7 @@ class ModifyVipVportRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群id
      * @param string $InstanceGrpId 实例组id
+     * @param string $InstanceGroupId 实例组id
      * @param string $Vip 需要修改的目的ip
      * @param integer $Vport 需要修改的目的端口
      * @param string $DbType 数据库类型，取值范围: 
@@ -96,6 +105,10 @@ class ModifyVipVportRequest extends AbstractModel
 
         if (array_key_exists("InstanceGrpId",$param) and $param["InstanceGrpId"] !== null) {
             $this->InstanceGrpId = $param["InstanceGrpId"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {

@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 3：任务运行异常
 4：任务运行结束
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStorageType() 获取cos桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageType(string $StorageType) 设置cos桶类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ShipperInfo extends AbstractModel
 {
@@ -199,6 +203,12 @@ class ShipperInfo extends AbstractModel
     public $HistoryStatus;
 
     /**
+     * @var string cos桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageType;
+
+    /**
      * @param string $ShipperId 投递规则ID
      * @param string $TopicId 日志主题ID
      * @param string $Bucket 投递的bucket地址
@@ -231,6 +241,8 @@ class ShipperInfo extends AbstractModel
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StorageType cos桶类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -327,6 +339,10 @@ class ShipperInfo extends AbstractModel
 
         if (array_key_exists("HistoryStatus",$param) and $param["HistoryStatus"] !== null) {
             $this->HistoryStatus = $param["HistoryStatus"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

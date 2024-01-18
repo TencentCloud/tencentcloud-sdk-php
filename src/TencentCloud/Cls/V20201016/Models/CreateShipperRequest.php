@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
  * @method integer getEndTime() 获取投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
  * @method void setEndTime(integer $EndTime) 设置投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+ * @method string getStorageType() 获取cos桶存储类型
+ * @method void setStorageType(string $StorageType) 设置cos桶存储类型
  */
 class CreateShipperRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateShipperRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string cos桶存储类型
+     */
+    public $StorageType;
+
+    /**
      * @param string $TopicId 创建的投递规则所属的日志主题ID
      * @param string $Bucket 创建的投递规则投递的bucket
      * @param string $Prefix 创建的投递规则投递目录的前缀
@@ -128,6 +135,7 @@ class CreateShipperRequest extends AbstractModel
      * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
      * @param integer $StartTime 投递数据范围的开始时间点，不能超出日志主题的生命周期起点。如果用户不填写，默认为用户新建投递任务的时间。
      * @param integer $EndTime 投递数据范围的结束时间点，不能填写未来时间。如果用户不填写，默认为持续投递，即无限。
+     * @param string $StorageType cos桶存储类型
      */
     function __construct()
     {
@@ -199,6 +207,10 @@ class CreateShipperRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

@@ -134,6 +134,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsServerlessSpace(string $EsServerlessSpace) 设置es空间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexName() 获取es索引中文
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexName(string $IndexName) 设置es索引中文
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkspaceName() 获取es空间中文
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkspaceName(string $WorkspaceName) 设置es空间中文
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -315,6 +323,18 @@ class JobConfig extends AbstractModel
     public $EsServerlessSpace;
 
     /**
+     * @var string es索引中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexName;
+
+    /**
+     * @var string es空间中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkspaceName;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -371,6 +391,10 @@ class JobConfig extends AbstractModel
      * @param string $EsServerlessIndex es索引
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EsServerlessSpace es空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexName es索引中文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkspaceName es空间中文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -522,6 +546,14 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("EsServerlessSpace",$param) and $param["EsServerlessSpace"] !== null) {
             $this->EsServerlessSpace = $param["EsServerlessSpace"];
+        }
+
+        if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
+            $this->IndexName = $param["IndexName"];
+        }
+
+        if (array_key_exists("WorkspaceName",$param) and $param["WorkspaceName"] !== null) {
+            $this->WorkspaceName = $param["WorkspaceName"];
         }
     }
 }

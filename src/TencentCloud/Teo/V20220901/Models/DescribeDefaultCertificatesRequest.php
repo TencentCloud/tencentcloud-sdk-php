@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefaultCertificates请求参数结构体
  *
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
  * @method array getFilters() 获取过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
 <li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li>
  * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
@@ -31,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeDefaultCertificatesRequest extends AbstractModel
 {
+    /**
+     * @var string 站点 ID。
+     */
+    public $ZoneId;
+
     /**
      * @var array 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
 <li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li>
@@ -48,6 +55,7 @@ class DescribeDefaultCertificatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @param string $ZoneId 站点 ID。
      * @param array $Filters 过滤条件，Filters.Values的上限为5。详细的过滤条件如下：
 <li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：是 </li>
      * @param integer $Offset 分页查询偏移量。默认值：0。
@@ -66,6 +74,10 @@ class DescribeDefaultCertificatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){

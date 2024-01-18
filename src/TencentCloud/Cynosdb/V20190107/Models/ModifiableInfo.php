@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 参数是否可修改的详细信息
  *
-
+ * @method integer getIsModifiable() 获取参数是否可被修改, 1:可以 0:不可以
+ * @method void setIsModifiable(integer $IsModifiable) 设置参数是否可被修改, 1:可以 0:不可以
  */
 class ModifiableInfo extends AbstractModel
 {
-
+    /**
+     * @var integer 参数是否可被修改, 1:可以 0:不可以
+     */
+    public $IsModifiable;
 
     /**
-
+     * @param integer $IsModifiable 参数是否可被修改, 1:可以 0:不可以
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class ModifiableInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("IsModifiable",$param) and $param["IsModifiable"] !== null) {
+            $this->IsModifiable = $param["IsModifiable"];
+        }
     }
 }

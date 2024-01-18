@@ -20,18 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBSecurityGroups请求参数结构体
  *
- * @method string getInstanceId() 获取实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
- * @method void setInstanceId(string $InstanceId) 设置实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceGroupId() 获取实例组ID
+ * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组ID
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
+     * @var string 实例ID
+     * @deprecated
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例组ID。可以通过接口DescribeClusterInstanceGrps获取。
+     * @var string 实例组ID
+     */
+    public $InstanceGroupId;
+
+    /**
+     * @param string $InstanceId 实例ID
+     * @param string $InstanceGroupId 实例组ID
      */
     function __construct()
     {
@@ -48,6 +57,10 @@ class DescribeDBSecurityGroupsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
     }
 }

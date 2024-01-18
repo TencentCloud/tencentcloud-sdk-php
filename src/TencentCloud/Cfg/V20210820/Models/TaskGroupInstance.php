@@ -28,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskGroupInstanceStatus() 获取实例动作执行状态
  * @method void setTaskGroupInstanceStatus(integer $TaskGroupInstanceStatus) 设置实例动作执行状态
- * @method string getTaskGroupInstanceExecuteLog() 获取实例动作执行日志
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskGroupInstanceExecuteLog(string $TaskGroupInstanceExecuteLog) 设置实例动作执行日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskGroupInstanceCreateTime() 获取实例创建时间
  * @method void setTaskGroupInstanceCreateTime(string $TaskGroupInstanceCreateTime) 设置实例创建时间
  * @method string getTaskGroupInstanceUpdateTime() 获取实例更新时间
@@ -45,6 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskGroupInstanceEndTime() 获取执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupInstanceEndTime(string $TaskGroupInstanceEndTime) 设置执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskGroupInstanceExecuteLog() 获取实例动作执行日志
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskGroupInstanceExecuteLog(string $TaskGroupInstanceExecuteLog) 设置实例动作执行日志
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTaskGroupInstanceIsRedo() 获取实例是否可重试
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,12 +74,6 @@ class TaskGroupInstance extends AbstractModel
     public $TaskGroupInstanceStatus;
 
     /**
-     * @var string 实例动作执行日志
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TaskGroupInstanceExecuteLog;
-
-    /**
      * @var string 实例创建时间
      */
     public $TaskGroupInstanceCreateTime;
@@ -107,6 +101,13 @@ class TaskGroupInstance extends AbstractModel
     public $TaskGroupInstanceEndTime;
 
     /**
+     * @var string 实例动作执行日志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $TaskGroupInstanceExecuteLog;
+
+    /**
      * @var boolean 实例是否可重试
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -123,14 +124,14 @@ class TaskGroupInstance extends AbstractModel
      * @param string $TaskGroupInstanceObjectId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskGroupInstanceStatus 实例动作执行状态
-     * @param string $TaskGroupInstanceExecuteLog 实例动作执行日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskGroupInstanceCreateTime 实例创建时间
      * @param string $TaskGroupInstanceUpdateTime 实例更新时间
      * @param integer $TaskGroupInstanceStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
      * @param string $TaskGroupInstanceStartTime 执行开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskGroupInstanceEndTime 执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskGroupInstanceExecuteLog 实例动作执行日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TaskGroupInstanceIsRedo 实例是否可重试
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,10 +163,6 @@ class TaskGroupInstance extends AbstractModel
             $this->TaskGroupInstanceStatus = $param["TaskGroupInstanceStatus"];
         }
 
-        if (array_key_exists("TaskGroupInstanceExecuteLog",$param) and $param["TaskGroupInstanceExecuteLog"] !== null) {
-            $this->TaskGroupInstanceExecuteLog = $param["TaskGroupInstanceExecuteLog"];
-        }
-
         if (array_key_exists("TaskGroupInstanceCreateTime",$param) and $param["TaskGroupInstanceCreateTime"] !== null) {
             $this->TaskGroupInstanceCreateTime = $param["TaskGroupInstanceCreateTime"];
         }
@@ -184,6 +181,10 @@ class TaskGroupInstance extends AbstractModel
 
         if (array_key_exists("TaskGroupInstanceEndTime",$param) and $param["TaskGroupInstanceEndTime"] !== null) {
             $this->TaskGroupInstanceEndTime = $param["TaskGroupInstanceEndTime"];
+        }
+
+        if (array_key_exists("TaskGroupInstanceExecuteLog",$param) and $param["TaskGroupInstanceExecuteLog"] !== null) {
+            $this->TaskGroupInstanceExecuteLog = $param["TaskGroupInstanceExecuteLog"];
         }
 
         if (array_key_exists("TaskGroupInstanceIsRedo",$param) and $param["TaskGroupInstanceIsRedo"] !== null) {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置内存，单位为GB
  * @method integer getReadOnlyCount() 获取新增只读实例数，取值范围为(0,15]
  * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置新增只读实例数，取值范围为(0,15]
- * @method string getInstanceGrpId() 获取实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
- * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
+ * @method string getInstanceGrpId() 获取实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+ * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
  * @method string getVpcId() 获取所属VPC网络ID。
  * @method void setVpcId(string $VpcId) 设置所属VPC网络ID。
  * @method string getSubnetId() 获取所属子网ID，如果设置了VpcId，则SubnetId必填。
@@ -78,7 +78,8 @@ class AddInstancesRequest extends AbstractModel
     public $ReadOnlyCount;
 
     /**
-     * @var string 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
+     * @var string 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * @deprecated
      */
     public $InstanceGrpId;
 
@@ -143,7 +144,7 @@ class AddInstancesRequest extends AbstractModel
      * @param integer $Cpu Cpu核数
      * @param integer $Memory 内存，单位为GB
      * @param integer $ReadOnlyCount 新增只读实例数，取值范围为(0,15]
-     * @param string $InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
+     * @param string $InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
      * @param string $VpcId 所属VPC网络ID。
      * @param string $SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。
      * @param integer $Port 新增RO组时使用的Port，取值范围为[0,65535)

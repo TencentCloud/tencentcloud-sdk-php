@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置实例组个数
  * @method array getInstanceGrpInfoList() 获取实例组列表
  * @method void setInstanceGrpInfoList(array $InstanceGrpInfoList) 设置实例组列表
+ * @method array getInstanceGroupInfoList() 获取实例组列表
+ * @method void setInstanceGroupInfoList(array $InstanceGroupInfoList) 设置实例组列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,8 +38,14 @@ class DescribeClusterInstanceGrpsResponse extends AbstractModel
 
     /**
      * @var array 实例组列表
+     * @deprecated
      */
     public $InstanceGrpInfoList;
+
+    /**
+     * @var array 实例组列表
+     */
+    public $InstanceGroupInfoList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,6 +55,7 @@ class DescribeClusterInstanceGrpsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 实例组个数
      * @param array $InstanceGrpInfoList 实例组列表
+     * @param array $InstanceGroupInfoList 实例组列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +81,15 @@ class DescribeClusterInstanceGrpsResponse extends AbstractModel
                 $obj = new CynosdbInstanceGrp();
                 $obj->deserialize($value);
                 array_push($this->InstanceGrpInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceGroupInfoList",$param) and $param["InstanceGroupInfoList"] !== null) {
+            $this->InstanceGroupInfoList = [];
+            foreach ($param["InstanceGroupInfoList"] as $key => $value){
+                $obj = new CynosdbInstanceGroup();
+                $obj->deserialize($value);
+                array_push($this->InstanceGroupInfoList, $obj);
             }
         }
 

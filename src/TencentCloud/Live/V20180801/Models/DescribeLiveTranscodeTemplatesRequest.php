@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeTemplates请求参数结构体
  *
-
+ * @method integer getTemplateType() 获取转码模板类型，默认0。
+0：普通转码模板。
+1：自适应码率转码模板。
+ * @method void setTemplateType(integer $TemplateType) 设置转码模板类型，默认0。
+0：普通转码模板。
+1：自适应码率转码模板。
  */
 class DescribeLiveTranscodeTemplatesRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 转码模板类型，默认0。
+0：普通转码模板。
+1：自适应码率转码模板。
+     */
+    public $TemplateType;
 
     /**
-
+     * @param integer $TemplateType 转码模板类型，默认0。
+0：普通转码模板。
+1：自适应码率转码模板。
      */
     function __construct()
     {
@@ -42,6 +54,8 @@ class DescribeLiveTranscodeTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
+        }
     }
 }

@@ -118,7 +118,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 注：**静默（自动）签署不支持合同签署方存在填写**功能
 <br>
-**相关视频指引**
+
+<font color="red">相关视频指引</font>
 <a href="https://dyn.ess.tencent.cn/guide/apivideo/createflow_seversign.mp4" target="_blank">创建静默（自动）签署模板和开通自动签署</a>
  * @method Models\CreateFlowApproversResponse CreateFlowApprovers(Models\CreateFlowApproversRequest $req) 适用场景：
 当通过模板或文件发起合同时，若未指定企业签署人信息，则可调用此接口补充或添加签署人。同一签署人可补充多个员工作为或签署人，最终实际签署人取决于谁先领取合同完成签署。

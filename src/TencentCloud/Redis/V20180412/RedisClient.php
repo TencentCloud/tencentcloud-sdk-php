@@ -34,7 +34,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ClearInstanceResponse ClearInstance(Models\ClearInstanceRequest $req) 清空Redis实例的实例数据。
  * @method Models\CloneInstancesResponse CloneInstances(Models\CloneInstancesRequest $req) 本接口（CloneInstances）用于基于当前实例的备份文件克隆一个完整的新实例。
  * @method Models\CloseSSLResponse CloseSSL(Models\CloseSSLRequest $req) 关闭SSL
- * @method Models\CreateInstanceAccountResponse CreateInstanceAccount(Models\CreateInstanceAccountRequest $req) 创建实例子账号
+ * @method Models\CreateInstanceAccountResponse CreateInstanceAccount(Models\CreateInstanceAccountRequest $req) 该接口（CreateInstanceAccount）用于自定义访问实例的账号。
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 本接口（CreateInstances）用于创建 Redis 实例。
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 创建参数模板。
  * @method Models\CreateReplicationGroupResponse CreateReplicationGroup(Models\CreateReplicationGroupRequest $req) 该接口（CreateReplicationGroup）用于创建复制组。

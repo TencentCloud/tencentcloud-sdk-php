@@ -126,6 +126,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildPercent(integer $BuildPercent) 设置ci部署进度（%）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUin() 获取Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBuildFinishTime() 获取BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBuildFinishTime(string $BuildFinishTime) 设置BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployFinishTime() 获取DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployFinishTime(string $DeployFinishTime) 设置DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBuildId() 获取BuildId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBuildId(string $BuildId) 设置BuildId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSourceUrl() 获取SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceUrl(string $SourceUrl) 设置SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFailReasonShort() 获取FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailReasonShort(string $FailReasonShort) 设置FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFirstInitRepo() 获取FirstInitRepo
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirstInitRepo(string $FirstInitRepo) 设置FirstInitRepo
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseProjectVersion extends AbstractModel
 {
@@ -271,6 +299,48 @@ class CloudBaseProjectVersion extends AbstractModel
     public $BuildPercent;
 
     /**
+     * @var string Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uin;
+
+    /**
+     * @var string BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BuildFinishTime;
+
+    /**
+     * @var string DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployFinishTime;
+
+    /**
+     * @var string BuildId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BuildId;
+
+    /**
+     * @var string SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceUrl;
+
+    /**
+     * @var string FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailReasonShort;
+
+    /**
+     * @var string FirstInitRepo
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirstInitRepo;
+
+    /**
      * @param string $Name 项目名
      * @param string $Sam SAM json
 注意：此字段可能返回 null，表示取不到有效值。
@@ -323,6 +393,20 @@ class CloudBaseProjectVersion extends AbstractModel
      * @param boolean $AutoDeployOnCodeChange 是否私有仓库代码变更触发自动部署
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BuildPercent ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uin Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BuildFinishTime BuildFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployFinishTime DeployFinishTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BuildId BuildId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceUrl SourceUrl
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FailReasonShort FailReasonShort
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FirstInitRepo FirstInitRepo
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -430,6 +514,34 @@ class CloudBaseProjectVersion extends AbstractModel
 
         if (array_key_exists("BuildPercent",$param) and $param["BuildPercent"] !== null) {
             $this->BuildPercent = $param["BuildPercent"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("BuildFinishTime",$param) and $param["BuildFinishTime"] !== null) {
+            $this->BuildFinishTime = $param["BuildFinishTime"];
+        }
+
+        if (array_key_exists("DeployFinishTime",$param) and $param["DeployFinishTime"] !== null) {
+            $this->DeployFinishTime = $param["DeployFinishTime"];
+        }
+
+        if (array_key_exists("BuildId",$param) and $param["BuildId"] !== null) {
+            $this->BuildId = $param["BuildId"];
+        }
+
+        if (array_key_exists("SourceUrl",$param) and $param["SourceUrl"] !== null) {
+            $this->SourceUrl = $param["SourceUrl"];
+        }
+
+        if (array_key_exists("FailReasonShort",$param) and $param["FailReasonShort"] !== null) {
+            $this->FailReasonShort = $param["FailReasonShort"];
+        }
+
+        if (array_key_exists("FirstInitRepo",$param) and $param["FirstInitRepo"] !== null) {
+            $this->FirstInitRepo = $param["FirstInitRepo"];
         }
     }
 }

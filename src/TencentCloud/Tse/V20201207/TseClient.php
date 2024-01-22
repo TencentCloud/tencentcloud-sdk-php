@@ -80,11 +80,11 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyConsoleNetworkResponse ModifyConsoleNetwork(Models\ModifyConsoleNetworkRequest $req) 修改网关实例Konga网络配置
  * @method Models\ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(Models\ModifyNativeGatewayServerGroupRequest $req) 修改云原生API网关实例分组基础信息
  * @method Models\ModifyNetworkAccessStrategyResponse ModifyNetworkAccessStrategy(Models\ModifyNetworkAccessStrategyRequest $req) 修改云原生API网关实例Kong访问策略，支持白名单或者黑名单。
- * @method Models\ModifyNetworkBasicInfoResponse ModifyNetworkBasicInfo(Models\ModifyNetworkBasicInfoRequest $req) 修改云原生API网关实例网络基本信息，比如带宽以及描述，只支持修改客户端公网/内网的信息。
+ * @method Models\ModifyNetworkBasicInfoResponse ModifyNetworkBasicInfo(Models\ModifyNetworkBasicInfoRequest $req) 修改云原生API网关实例网络基本信息，例如带宽以及描述，只支持修改客户端公网/内网的信息。
  * @method Models\ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(Models\ModifyUpstreamNodeStatusRequest $req) 修改云原生网关上游实例节点健康状态
  * @method Models\OpenWafProtectionResponse OpenWafProtection(Models\OpenWafProtectionRequest $req) 开启 WAF 防护
  * @method Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfo(Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest $req) 修改云原生网关证书信息
- * @method Models\UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpec(Models\UpdateCloudNativeAPIGatewaySpecRequest $req) 修改云原生API网关实例的节点规格信息，比如节点扩缩容或者升降配
+ * @method Models\UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpec(Models\UpdateCloudNativeAPIGatewaySpecRequest $req) 修改云原生API网关实例的节点规格信息，例如节点扩缩容或者升降配
  * @method Models\UpdateEngineInternetAccessResponse UpdateEngineInternetAccess(Models\UpdateEngineInternetAccessRequest $req) 修改引擎公网访问配置
  * @method Models\UpdateUpstreamHealthCheckConfigResponse UpdateUpstreamHealthCheckConfig(Models\UpdateUpstreamHealthCheckConfigRequest $req) 更新云原生网关健康检查配置
  * @method Models\UpdateUpstreamTargetsResponse UpdateUpstreamTargets(Models\UpdateUpstreamTargetsRequest $req) 更新网关上游实例列表，仅支持IPList服务类型

@@ -43,7 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMaxNum() 获取最大副本数
  * @method void setMaxNum(string $MaxNum) 设置最大副本数
  * @method string getPolicyType() 获取策略类型
+cpu/mem
  * @method void setPolicyType(string $PolicyType) 设置策略类型
+cpu/mem
  * @method string getPolicyThreshold() 获取策略阈值
  * @method void setPolicyThreshold(string $PolicyThreshold) 设置策略阈值
  * @method string getEnvParams() 获取环境变量
@@ -148,6 +150,7 @@ class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
 
     /**
      * @var string 策略类型
+cpu/mem
      */
     public $PolicyType;
 
@@ -274,6 +277,7 @@ class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param string $MinNum 最小副本数，最小值：0
      * @param string $MaxNum 最大副本数
      * @param string $PolicyType 策略类型
+cpu/mem
      * @param string $PolicyThreshold 策略阈值
      * @param string $EnvParams 环境变量
      * @param integer $ContainerPort 容器端口

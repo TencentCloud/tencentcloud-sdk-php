@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUploadUrl() 获取上传url
  * @method void setUploadUrl(string $UploadUrl) 设置上传url
- * @method array getUploadHeaders() 获取上传heder
- * @method void setUploadHeaders(array $UploadHeaders) 设置上传heder
+ * @method array getUploadHeaders() 获取上传header
+ * @method void setUploadHeaders(array $UploadHeaders) 设置上传header
  * @method string getPackageName() 获取包名
  * @method void setPackageName(string $PackageName) 设置包名
  * @method string getPackageVersion() 获取包版本
@@ -51,7 +51,7 @@ class DescribeCloudBaseBuildServiceResponse extends AbstractModel
     public $UploadUrl;
 
     /**
-     * @var array 上传heder
+     * @var array 上传header
      */
     public $UploadHeaders;
 
@@ -90,7 +90,7 @@ class DescribeCloudBaseBuildServiceResponse extends AbstractModel
 
     /**
      * @param string $UploadUrl 上传url
-     * @param array $UploadHeaders 上传heder
+     * @param array $UploadHeaders 上传header
      * @param string $PackageName 包名
      * @param string $PackageVersion 包版本
      * @param string $DownloadUrl 下载链接

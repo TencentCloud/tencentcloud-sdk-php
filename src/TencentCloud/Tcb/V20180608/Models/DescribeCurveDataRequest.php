@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li> FunctionDuration: 云函数运行时间, 单位毫秒 </li>
 <li> DbRead: 数据库读请求数 </li>
 <li> DbWrite: 数据库写请求数 </li>
-<li> DbCostTime10ms: 数据库耗时在10ms~50ms请求数 </li>
-<li> DbCostTime50ms: 数据库耗时在50ms~100ms请求数 </li>
+<li> DbCostTime10ms: 数据库耗时在10ms-50ms请求数 </li>
+<li> DbCostTime50ms: 数据库耗时在50ms-100ms请求数 </li>
 <li> DbCostTime100ms: 数据库耗时在100ms以上请求数 </li>
 <li> TkeCpuRatio: 容器CPU占用率 </li>
 <li> TkeMemRatio: 容器内存占用率 </li>
@@ -59,8 +59,8 @@ use TencentCloud\Common\AbstractModel;
 <li> FunctionDuration: 云函数运行时间, 单位毫秒 </li>
 <li> DbRead: 数据库读请求数 </li>
 <li> DbWrite: 数据库写请求数 </li>
-<li> DbCostTime10ms: 数据库耗时在10ms~50ms请求数 </li>
-<li> DbCostTime50ms: 数据库耗时在50ms~100ms请求数 </li>
+<li> DbCostTime10ms: 数据库耗时在10ms-50ms请求数 </li>
+<li> DbCostTime50ms: 数据库耗时在50ms-100ms请求数 </li>
 <li> DbCostTime100ms: 数据库耗时在100ms以上请求数 </li>
 <li> TkeCpuRatio: 容器CPU占用率 </li>
 <li> TkeMemRatio: 容器内存占用率 </li>
@@ -99,8 +99,8 @@ class DescribeCurveDataRequest extends AbstractModel
 <li> FunctionDuration: 云函数运行时间, 单位毫秒 </li>
 <li> DbRead: 数据库读请求数 </li>
 <li> DbWrite: 数据库写请求数 </li>
-<li> DbCostTime10ms: 数据库耗时在10ms~50ms请求数 </li>
-<li> DbCostTime50ms: 数据库耗时在50ms~100ms请求数 </li>
+<li> DbCostTime10ms: 数据库耗时在10ms-50ms请求数 </li>
+<li> DbCostTime50ms: 数据库耗时在50ms-100ms请求数 </li>
 <li> DbCostTime100ms: 数据库耗时在100ms以上请求数 </li>
 <li> TkeCpuRatio: 容器CPU占用率 </li>
 <li> TkeMemRatio: 容器内存占用率 </li>
@@ -144,8 +144,8 @@ class DescribeCurveDataRequest extends AbstractModel
 <li> FunctionDuration: 云函数运行时间, 单位毫秒 </li>
 <li> DbRead: 数据库读请求数 </li>
 <li> DbWrite: 数据库写请求数 </li>
-<li> DbCostTime10ms: 数据库耗时在10ms~50ms请求数 </li>
-<li> DbCostTime50ms: 数据库耗时在50ms~100ms请求数 </li>
+<li> DbCostTime10ms: 数据库耗时在10ms-50ms请求数 </li>
+<li> DbCostTime50ms: 数据库耗时在50ms-100ms请求数 </li>
 <li> DbCostTime100ms: 数据库耗时在100ms以上请求数 </li>
 <li> TkeCpuRatio: 容器CPU占用率 </li>
 <li> TkeMemRatio: 容器内存占用率 </li>

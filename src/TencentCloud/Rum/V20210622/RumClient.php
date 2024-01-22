@@ -23,22 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Rum\V20210622\Models as Models;
 
 /**
- * @method Models\CreateLogExportResponse CreateLogExport(Models\CreateLogExportRequest $req) 接口请求域名： rum.tencentcloudapi.com 。
-
-本接口用于创建日志下载任务
-
-默认接口请求频率限制：20次/秒。
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建 RUM 应用（归属于某个团队）
  * @method Models\CreateReleaseFileResponse CreateReleaseFile(Models\CreateReleaseFileRequest $req) 创建对应项目的文件记录
  * @method Models\CreateStarProjectResponse CreateStarProject(Models\CreateStarProjectRequest $req) 个人用户添加星标项目
  * @method Models\CreateTawInstanceResponse CreateTawInstance(Models\CreateTawInstanceRequest $req) 创建 RUM 业务系统
  * @method Models\CreateWhitelistResponse CreateWhitelist(Models\CreateWhitelistRequest $req) 创建白名单
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除实例，谨慎操作，不可恢复
- * @method Models\DeleteLogExportResponse DeleteLogExport(Models\DeleteLogExportRequest $req) 接口请求域名： rum.tencentcloudapi.com 。
-
-本接口用于删除日志下载任务
-
-默认接口请求频率限制：20次/秒。
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除给定的 rum 的项目
  * @method Models\DeleteReleaseFileResponse DeleteReleaseFile(Models\DeleteReleaseFileRequest $req) 将对应 sourcemap 文件删除
  * @method Models\DeleteStarProjectResponse DeleteStarProject(Models\DeleteStarProjectRequest $req) 删除用户名下的星标项目
@@ -67,12 +57,6 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeDataWebVitalsPageResponse DescribeDataWebVitalsPage(Models\DescribeDataWebVitalsPageRequest $req) 获取DescribeDataWebVitalsPage信息，用户核心活动信息
 页面加载性能之Web Vitals。性能关键点
  * @method Models\DescribeErrorResponse DescribeError(Models\DescribeErrorRequest $req) 获取首页错误信息
- * @method Models\DescribeLogExportsResponse DescribeLogExports(Models\DescribeLogExportsRequest $req) 接口请求域名： rum.tencentcloudapi.com 。
-
-本接口用于获取日志下载任务列表
-
-默认接口请求频率限制：20次/秒
- * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) (已下线，请用DescribeRumLogList)
  * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) 获取应用上报抽样信息
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 获取项目列表（实例创建的团队下的项目列表）
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) 获取项目下的PV列表

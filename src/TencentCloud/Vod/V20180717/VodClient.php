@@ -323,6 +323,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\ModifyHeadTailTemplateResponse ModifyHeadTailTemplate(Models\ModifyHeadTailTemplateRequest $req) 修改片头片尾模板。
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) 修改用户自定义雪碧图模板。
  * @method Models\ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplate(Models\ModifyJustInTimeTranscodeTemplateRequest $req) 修改即时转码模板。
+- 注意：即时转码模板创建后，不推荐修改，如需修改参数，推荐使用新增模板。
  * @method Models\ModifyMediaInfoResponse ModifyMediaInfo(Models\ModifyMediaInfoRequest $req) 修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面、字幕信息等。
  * @method Models\ModifyMediaStorageClassResponse ModifyMediaStorageClass(Models\ModifyMediaStorageClassRequest $req) 修改媒体文件的存储类型。
 当媒体文件的存储类型为标准存储时，可以修改为以下类型：

@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefundMap(array $RefundMap) 设置退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubGoodsName() 获取子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubGoodsName(string $SubGoodsName) 设置子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentDealNewElem extends AbstractModel
 {
@@ -312,6 +316,12 @@ class AgentDealNewElem extends AbstractModel
     public $RefundMap;
 
     /**
+     * @var string 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubGoodsName;
+
+    /**
      * @param string $DealId 订单自增 ID【请勿依赖该字段作为唯一标识】
      * @param string $DealName 订单号【订单唯一键】
      * @param string $GoodsCategoryId 商品类型 ID
@@ -367,6 +377,8 @@ class AgentDealNewElem extends AbstractModel
      * @param array $ResourceIds 资源id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RefundMap 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubGoodsName 子产品名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -511,6 +523,10 @@ class AgentDealNewElem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RefundMap, $obj);
             }
+        }
+
+        if (array_key_exists("SubGoodsName",$param) and $param["SubGoodsName"] !== null) {
+            $this->SubGoodsName = $param["SubGoodsName"];
         }
     }
 }

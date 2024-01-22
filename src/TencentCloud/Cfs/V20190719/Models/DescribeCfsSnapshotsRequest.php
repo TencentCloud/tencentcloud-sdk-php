@@ -24,12 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
  * @method string getSnapshotId() 获取快照ID
  * @method void setSnapshotId(string $SnapshotId) 设置快照ID
- * @method integer getOffset() 获取分页起始位置
- * @method void setOffset(integer $Offset) 设置分页起始位置
- * @method integer getLimit() 获取页面长度
- * @method void setLimit(integer $Limit) 设置页面长度
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method integer getOffset() 获取分页起始位置，默认为0
+ * @method void setOffset(integer $Offset) 设置分页起始位置，默认为0
+ * @method integer getLimit() 获取页面长度，默认为20
+ * @method void setLimit(integer $Limit) 设置页面长度，默认为20
+ * @method array getFilters() 获取过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
+ * @method void setFilters(array $Filters) 设置过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
  * @method string getOrderField() 获取排序取值
  * @method void setOrderField(string $OrderField) 设置排序取值
  * @method string getOrder() 获取排序 升序或者降序
@@ -48,17 +62,24 @@ class DescribeCfsSnapshotsRequest extends AbstractModel
     public $SnapshotId;
 
     /**
-     * @var integer 分页起始位置
+     * @var integer 分页起始位置，默认为0
      */
     public $Offset;
 
     /**
-     * @var integer 页面长度
+     * @var integer 页面长度，默认为20
      */
     public $Limit;
 
     /**
-     * @var array 过滤条件
+     * @var array 过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
      */
     public $Filters;
 
@@ -75,9 +96,16 @@ class DescribeCfsSnapshotsRequest extends AbstractModel
     /**
      * @param string $FileSystemId 文件系统ID
      * @param string $SnapshotId 快照ID
-     * @param integer $Offset 分页起始位置
-     * @param integer $Limit 页面长度
-     * @param array $Filters 过滤条件
+     * @param integer $Offset 分页起始位置，默认为0
+     * @param integer $Limit 页面长度，默认为20
+     * @param array $Filters 过滤条件。
+<br>SnapshotId - Array of String - 是否必填：否 -（过滤条件）按快照ID过滤。
+<br>SnapshotName - Array of String - 是否必填：否 -（过滤条件）按照快照名称过滤。
+<br>FileSystemId - Array of String - 是否必填：否 -（过滤条件）按文件系统ID过滤。
+<br>FsName - Array of String - 是否必填：否 -（过滤条件）按文件系统名过滤。
+<br>Status - Array of String - 是否必填：否 -（过滤条件）按按照快照状态过滤。(creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中。
+<br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
+<br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
      * @param string $OrderField 排序取值
      * @param string $Order 排序 升序或者降序
      */

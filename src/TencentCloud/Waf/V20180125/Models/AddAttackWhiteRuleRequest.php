@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getSignatureId() 获取规则Id
- * @method void setSignatureId(string $SignatureId) 设置规则Id
  * @method integer getStatus() 获取规则状态
  * @method void setStatus(integer $Status) 设置规则状态
  * @method array getRules() 获取匹配规则项列表
  * @method void setRules(array $Rules) 设置匹配规则项列表
  * @method integer getRuleId() 获取规则序号
  * @method void setRuleId(integer $RuleId) 设置规则序号
+ * @method string getSignatureId() 获取规则Id
+ * @method void setSignatureId(string $SignatureId) 设置规则Id
+ * @method array getSignatureIds() 获取加白的规则ID列表
+ * @method void setSignatureIds(array $SignatureIds) 设置加白的规则ID列表
  */
 class AddAttackWhiteRuleRequest extends AbstractModel
 {
@@ -37,11 +39,6 @@ class AddAttackWhiteRuleRequest extends AbstractModel
      * @var string 域名
      */
     public $Domain;
-
-    /**
-     * @var string 规则Id
-     */
-    public $SignatureId;
 
     /**
      * @var integer 规则状态
@@ -59,11 +56,22 @@ class AddAttackWhiteRuleRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var string 规则Id
+     */
+    public $SignatureId;
+
+    /**
+     * @var array 加白的规则ID列表
+     */
+    public $SignatureIds;
+
+    /**
      * @param string $Domain 域名
-     * @param string $SignatureId 规则Id
      * @param integer $Status 规则状态
      * @param array $Rules 匹配规则项列表
      * @param integer $RuleId 规则序号
+     * @param string $SignatureId 规则Id
+     * @param array $SignatureIds 加白的规则ID列表
      */
     function __construct()
     {
@@ -82,10 +90,6 @@ class AddAttackWhiteRuleRequest extends AbstractModel
             $this->Domain = $param["Domain"];
         }
 
-        if (array_key_exists("SignatureId",$param) and $param["SignatureId"] !== null) {
-            $this->SignatureId = $param["SignatureId"];
-        }
-
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
         }
@@ -101,6 +105,14 @@ class AddAttackWhiteRuleRequest extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("SignatureId",$param) and $param["SignatureId"] !== null) {
+            $this->SignatureId = $param["SignatureId"];
+        }
+
+        if (array_key_exists("SignatureIds",$param) and $param["SignatureIds"] !== null) {
+            $this->SignatureIds = $param["SignatureIds"];
         }
     }
 }

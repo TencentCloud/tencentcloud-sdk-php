@@ -200,6 +200,12 @@ use TencentCloud\Common\AbstractModel;
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
  * @method string getSignInstructionContent() 获取签署须知：支持传入富文本，最长字数：500个中文字符
  * @method void setSignInstructionContent(string $SignInstructionContent) 设置签署须知：支持传入富文本，最长字数：500个中文字符
+ * @method integer getDeadline() 获取签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+ * @method void setDeadline(integer $Deadline) 设置签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
  */
 class ApproverInfo extends AbstractModel
 {
@@ -378,6 +384,13 @@ class ApproverInfo extends AbstractModel
     public $SignInstructionContent;
 
     /**
+     * @var integer 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     */
+    public $Deadline;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -468,6 +481,9 @@ class ApproverInfo extends AbstractModel
 
 注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个），他方企业或个人只支持限制控件类型。`
      * @param string $SignInstructionContent 签署须知：支持传入富文本，最长字数：500个中文字符
+     * @param integer $Deadline 签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
      */
     function __construct()
     {
@@ -575,6 +591,10 @@ class ApproverInfo extends AbstractModel
 
         if (array_key_exists("SignInstructionContent",$param) and $param["SignInstructionContent"] !== null) {
             $this->SignInstructionContent = $param["SignInstructionContent"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
     }
 }

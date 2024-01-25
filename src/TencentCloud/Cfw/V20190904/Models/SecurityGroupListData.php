@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterName(string $ParameterName) 设置模板名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocolPortName() 获取端口协议类型参数模板名称
+ * @method void setProtocolPortName(string $ProtocolPortName) 设置端口协议类型参数模板名称
  */
 class SecurityGroupListData extends AbstractModel
 {
@@ -259,6 +261,11 @@ class SecurityGroupListData extends AbstractModel
     public $ParameterName;
 
     /**
+     * @var string 端口协议类型参数模板名称
+     */
+    public $ProtocolPortName;
+
+    /**
      * @param integer $OrderIndex 执行顺序
      * @param string $SourceId 访问源
      * @param integer $SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
@@ -300,6 +307,7 @@ class SecurityGroupListData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProtocolPortName 端口协议类型参数模板名称
      */
     function __construct()
     {
@@ -429,6 +437,10 @@ class SecurityGroupListData extends AbstractModel
 
         if (array_key_exists("ParameterName",$param) and $param["ParameterName"] !== null) {
             $this->ParameterName = $param["ParameterName"];
+        }
+
+        if (array_key_exists("ProtocolPortName",$param) and $param["ProtocolPortName"] !== null) {
+            $this->ProtocolPortName = $param["ProtocolPortName"];
         }
     }
 }

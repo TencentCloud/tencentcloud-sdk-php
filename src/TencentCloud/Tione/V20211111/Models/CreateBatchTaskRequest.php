@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBatchTask请求参数结构体
  *
- * @method string getBatchTaskName() 获取跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
- * @method void setBatchTaskName(string $BatchTaskName) 设置跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+ * @method string getBatchTaskName() 获取批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+ * @method void setBatchTaskName(string $BatchTaskName) 设置批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
  * @method string getChargeType() 获取计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
  * @method void setChargeType(string $ChargeType) 设置计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
  * @method ResourceConfigInfo getResourceConfigInfo() 获取资源配置
  * @method void setResourceConfigInfo(ResourceConfigInfo $ResourceConfigInfo) 设置资源配置
- * @method array getOutputs() 获取结果输出
- * @method void setOutputs(array $Outputs) 设置结果输出
+ * @method array getOutputs() 获取结果输出存储信息
+ * @method void setOutputs(array $Outputs) 设置结果输出存储信息
  * @method boolean getLogEnable() 获取是否上报日志
  * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
  * @method integer getJobType() 获取工作类型 1:单次 2:周期
@@ -62,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateBatchTaskRequest extends AbstractModel
 {
     /**
-     * @var string 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * @var string 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
     public $BatchTaskName;
 
@@ -77,7 +77,7 @@ class CreateBatchTaskRequest extends AbstractModel
     public $ResourceConfigInfo;
 
     /**
-     * @var array 结果输出
+     * @var array 结果输出存储信息
      */
     public $Outputs;
 
@@ -88,11 +88,13 @@ class CreateBatchTaskRequest extends AbstractModel
 
     /**
      * @var integer 工作类型 1:单次 2:周期
+     * @deprecated
      */
     public $JobType;
 
     /**
      * @var CronInfo 任务周期描述
+     * @deprecated
      */
     public $CronInfo;
 
@@ -157,10 +159,10 @@ class CreateBatchTaskRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @param string $BatchTaskName 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * @param string $BatchTaskName 批量预测任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
      * @param ResourceConfigInfo $ResourceConfigInfo 资源配置
-     * @param array $Outputs 结果输出
+     * @param array $Outputs 结果输出存储信息
      * @param boolean $LogEnable 是否上报日志
      * @param integer $JobType 工作类型 1:单次 2:周期
      * @param CronInfo $CronInfo 任务周期描述

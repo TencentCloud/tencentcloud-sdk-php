@@ -38,6 +38,10 @@ running 初始化完成，运行中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEksClusterId(string $EksClusterId) 设置实例eks集群ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSecurityGroupId() 获取eks集群内pod的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置eks集群内pod的安全组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -65,6 +69,12 @@ running 初始化完成，运行中
     public $EksClusterId;
 
     /**
+     * @var string eks集群内pod的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroupId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +88,8 @@ running 初始化完成，运行中
      * @param array $Steps 初始化任务步骤
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EksClusterId 实例eks集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SecurityGroupId eks集群内pod的安全组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +121,10 @@ running 初始化完成，运行中
 
         if (array_key_exists("EksClusterId",$param) and $param["EksClusterId"] !== null) {
             $this->EksClusterId = $param["EksClusterId"];
+        }
+
+        if (array_key_exists("SecurityGroupId",$param) and $param["SecurityGroupId"] !== null) {
+            $this->SecurityGroupId = $param["SecurityGroupId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

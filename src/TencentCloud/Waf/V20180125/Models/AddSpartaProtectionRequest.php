@@ -82,20 +82,20 @@ https：使用https协议回源
  * @method void setIsGray(integer $IsGray) 设置待废弃，可不填。是否开启灰度，0表示不开启灰度。
  * @method array getGrayAreas() 获取待废弃，可不填。灰度的地区
  * @method void setGrayAreas(array $GrayAreas) 设置待废弃，可不填。灰度的地区
- * @method integer getHttpsRewrite() 获取是否开启HTTP强制跳转到HTTPS。
+ * @method integer getHttpsRewrite() 获取必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
- * @method void setHttpsRewrite(integer $HttpsRewrite) 设置是否开启HTTP强制跳转到HTTPS。
+ * @method void setHttpsRewrite(integer $HttpsRewrite) 设置必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
  * @method string getUpstreamDomain() 获取域名回源时的回源域名。UpstreamType为1时，需要填充此字段
  * @method void setUpstreamDomain(string $UpstreamDomain) 设置域名回源时的回源域名。UpstreamType为1时，需要填充此字段
  * @method array getSrcList() 获取IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
  * @method void setSrcList(array $SrcList) 设置IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
- * @method integer getIsHttp2() 获取是否开启HTTP2，需要开启HTTPS协议支持。
+ * @method integer getIsHttp2() 获取必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
- * @method void setIsHttp2(integer $IsHttp2) 设置是否开启HTTP2，需要开启HTTPS协议支持。
+ * @method void setIsHttp2(integer $IsHttp2) 设置必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
  * @method array getPorts() 获取服务端口列表配置。
@@ -118,32 +118,32 @@ cdn-waf：CDN上的Web防护能力
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
- * @method string getIsKeepAlive() 获取是否开启长连接。
+ * @method string getIsKeepAlive() 获取必填项，是否开启长连接。
 0： 短连接
 1： 长连接
- * @method void setIsKeepAlive(string $IsKeepAlive) 设置是否开启长连接。
+ * @method void setIsKeepAlive(string $IsKeepAlive) 设置必填项，是否开启长连接。
 0： 短连接
 1： 长连接
- * @method string getInstanceID() 获取域名所属实例id
- * @method void setInstanceID(string $InstanceID) 设置域名所属实例id
+ * @method string getInstanceID() 获取必填项，域名所属实例id
+ * @method void setInstanceID(string $InstanceID) 设置必填项，域名所属实例id
  * @method integer getAnycast() 获取待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method void setAnycast(integer $Anycast) 设置待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method array getWeights() 获取回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
  * @method void setWeights(array $Weights) 设置回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
- * @method integer getActiveCheck() 获取是否开启主动健康检测。
+ * @method integer getActiveCheck() 获取必填项，是否开启主动健康检测。
 0：不开启
 1：开启
- * @method void setActiveCheck(integer $ActiveCheck) 设置是否开启主动健康检测。
+ * @method void setActiveCheck(integer $ActiveCheck) 设置必填项，是否开启主动健康检测。
 0：不开启
 1：开启
  * @method integer getTLSVersion() 获取TLS版本信息
  * @method void setTLSVersion(integer $TLSVersion) 设置TLS版本信息
- * @method integer getCipherTemplate() 获取加密套件模板。
+ * @method integer getCipherTemplate() 获取必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
 3：自定义模板
- * @method void setCipherTemplate(integer $CipherTemplate) 设置加密套件模板。
+ * @method void setCipherTemplate(integer $CipherTemplate) 设置必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
@@ -172,6 +172,10 @@ cdn-waf：CDN上的Web防护能力
  * @method void setXFFReset(integer $XFFReset) 设置是否开启XFF重置。
 0：关闭
 1：开启
+ * @method string getNote() 获取域名备注信息
+ * @method void setNote(string $Note) 设置域名备注信息
+ * @method string getUpstreamHost() 获取自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+ * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -267,7 +271,7 @@ https：使用https协议回源
     public $GrayAreas;
 
     /**
-     * @var integer 是否开启HTTP强制跳转到HTTPS。
+     * @var integer 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
      */
@@ -284,7 +288,7 @@ https：使用https协议回源
     public $SrcList;
 
     /**
-     * @var integer 是否开启HTTP2，需要开启HTTPS协议支持。
+     * @var integer 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
      */
@@ -309,14 +313,14 @@ cdn-waf：CDN上的Web防护能力
     public $Edition;
 
     /**
-     * @var string 是否开启长连接。
+     * @var string 必填项，是否开启长连接。
 0： 短连接
 1： 长连接
      */
     public $IsKeepAlive;
 
     /**
-     * @var string 域名所属实例id
+     * @var string 必填项，域名所属实例id
      */
     public $InstanceID;
 
@@ -331,7 +335,7 @@ cdn-waf：CDN上的Web防护能力
     public $Weights;
 
     /**
-     * @var integer 是否开启主动健康检测。
+     * @var integer 必填项，是否开启主动健康检测。
 0：不开启
 1：开启
      */
@@ -343,7 +347,7 @@ cdn-waf：CDN上的Web防护能力
     public $TLSVersion;
 
     /**
-     * @var integer 加密套件模板。
+     * @var integer 必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
@@ -388,6 +392,16 @@ cdn-waf：CDN上的Web防护能力
     public $XFFReset;
 
     /**
+     * @var string 域名备注信息
+     */
+    public $Note;
+
+    /**
+     * @var string 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+     */
+    public $UpstreamHost;
+
+    /**
      * @param string $Domain 需要防护的域名
      * @param integer $CertType 证书类型。
 0：仅配置HTTP监听端口，没有证书
@@ -419,12 +433,12 @@ https：使用https协议回源
      * @param string $HttpsUpstreamPort HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
      * @param integer $IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
      * @param array $GrayAreas 待废弃，可不填。灰度的地区
-     * @param integer $HttpsRewrite 是否开启HTTP强制跳转到HTTPS。
+     * @param integer $HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
      * @param string $UpstreamDomain 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
      * @param array $SrcList IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
-     * @param integer $IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。
+     * @param integer $IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
      * @param array $Ports 服务端口列表配置。
@@ -437,17 +451,17 @@ UpstreamProtocol：与Protocol相同
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
-     * @param string $IsKeepAlive 是否开启长连接。
+     * @param string $IsKeepAlive 必填项，是否开启长连接。
 0： 短连接
 1： 长连接
-     * @param string $InstanceID 域名所属实例id
+     * @param string $InstanceID 必填项，域名所属实例id
      * @param integer $Anycast 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      * @param array $Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
-     * @param integer $ActiveCheck 是否开启主动健康检测。
+     * @param integer $ActiveCheck 必填项，是否开启主动健康检测。
 0：不开启
 1：开启
      * @param integer $TLSVersion TLS版本信息
-     * @param integer $CipherTemplate 加密套件模板。
+     * @param integer $CipherTemplate 必填项，加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
@@ -464,6 +478,8 @@ cdn-waf：CDN上的Web防护能力
      * @param integer $XFFReset 是否开启XFF重置。
 0：关闭
 1：开启
+     * @param string $Note 域名备注信息
+     * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
      */
     function __construct()
     {
@@ -617,6 +633,14 @@ cdn-waf：CDN上的Web防护能力
 
         if (array_key_exists("XFFReset",$param) and $param["XFFReset"] !== null) {
             $this->XFFReset = $param["XFFReset"];
+        }
+
+        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
+            $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("UpstreamHost",$param) and $param["UpstreamHost"] !== null) {
+            $this->UpstreamHost = $param["UpstreamHost"];
         }
     }
 }

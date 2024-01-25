@@ -26,14 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置页偏移量
  * @method string getDirection() 获取方向：1互联网入站，0互联网出站，3内网，空 全部方向
  * @method void setDirection(string $Direction) 设置方向：1互联网入站，0互联网出站，3内网，空 全部方向
- * @method integer getRuleType() 获取规则类型：1封禁，2放通
- * @method void setRuleType(integer $RuleType) 设置规则类型：1封禁，2放通
  * @method string getOrder() 获取排序类型：desc降序，asc正序
  * @method void setOrder(string $Order) 设置排序类型：desc降序，asc正序
  * @method string getBy() 获取排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
  * @method void setBy(string $By) 设置排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
  * @method string getSearchValue() 获取搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
  * @method void setSearchValue(string $SearchValue) 设置搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
+ * @method integer getRuleType() 获取规则类型：1封禁，2放通
+ * @method void setRuleType(integer $RuleType) 设置规则类型：1封禁，2放通
+ * @method string getShowType() 获取blocklist 封禁列表
+whitelist 白名单列表
+ * @method void setShowType(string $ShowType) 设置blocklist 封禁列表
+whitelist 白名单列表
  */
 class DescribeBlockIgnoreListRequest extends AbstractModel
 {
@@ -53,11 +57,6 @@ class DescribeBlockIgnoreListRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @var integer 规则类型：1封禁，2放通
-     */
-    public $RuleType;
-
-    /**
      * @var string 排序类型：desc降序，asc正序
      */
     public $Order;
@@ -73,13 +72,26 @@ class DescribeBlockIgnoreListRequest extends AbstractModel
     public $SearchValue;
 
     /**
+     * @var integer 规则类型：1封禁，2放通
+     */
+    public $RuleType;
+
+    /**
+     * @var string blocklist 封禁列表
+whitelist 白名单列表
+     */
+    public $ShowType;
+
+    /**
      * @param integer $Limit 单页数量
      * @param integer $Offset 页偏移量
      * @param string $Direction 方向：1互联网入站，0互联网出站，3内网，空 全部方向
-     * @param integer $RuleType 规则类型：1封禁，2放通
      * @param string $Order 排序类型：desc降序，asc正序
      * @param string $By 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
      * @param string $SearchValue 搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
+     * @param integer $RuleType 规则类型：1封禁，2放通
+     * @param string $ShowType blocklist 封禁列表
+whitelist 白名单列表
      */
     function __construct()
     {
@@ -106,10 +118,6 @@ class DescribeBlockIgnoreListRequest extends AbstractModel
             $this->Direction = $param["Direction"];
         }
 
-        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
-            $this->RuleType = $param["RuleType"];
-        }
-
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
         }
@@ -120,6 +128,14 @@ class DescribeBlockIgnoreListRequest extends AbstractModel
 
         if (array_key_exists("SearchValue",$param) and $param["SearchValue"] !== null) {
             $this->SearchValue = $param["SearchValue"];
+        }
+
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("ShowType",$param) and $param["ShowType"] !== null) {
+            $this->ShowType = $param["ShowType"];
         }
     }
 }

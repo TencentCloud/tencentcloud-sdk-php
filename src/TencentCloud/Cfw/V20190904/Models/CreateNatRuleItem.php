@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述
  * @method string getParamTemplateId() 获取端口协议组ID
  * @method void setParamTemplateId(string $ParamTemplateId) 设置端口协议组ID
+ * @method integer getInternalUuid() 获取内部id
+ * @method void setInternalUuid(integer $InternalUuid) 设置内部id
  */
 class CreateNatRuleItem extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CreateNatRuleItem extends AbstractModel
     public $ParamTemplateId;
 
     /**
+     * @var integer 内部id
+     */
+    public $InternalUuid;
+
+    /**
      * @param string $SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
      * @param string $SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
      * @param string $TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
@@ -128,6 +135,7 @@ class CreateNatRuleItem extends AbstractModel
      * @param integer $Uuid 规则对应的唯一id，创建规则时无需填写
      * @param string $Description 描述
      * @param string $ParamTemplateId 端口协议组ID
+     * @param integer $InternalUuid 内部id
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CreateNatRuleItem extends AbstractModel
 
         if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
             $this->ParamTemplateId = $param["ParamTemplateId"];
+        }
+
+        if (array_key_exists("InternalUuid",$param) and $param["InternalUuid"] !== null) {
+            $this->InternalUuid = $param["InternalUuid"];
         }
     }
 }

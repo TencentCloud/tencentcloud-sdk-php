@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getWorkflowId() 获取工作流ID
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method string getDeleteScript() 获取是否删除脚本
+ * @method void setDeleteScript(string $DeleteScript) 设置是否删除脚本
+ * @method string getOperateIsInform() 获取删除是否通知下游
+ * @method void setOperateIsInform(string $OperateIsInform) 设置删除是否通知下游
+ * @method string getDeleteMode() 获取是否终止进行中的任务
+ * @method void setDeleteMode(string $DeleteMode) 设置是否终止进行中的任务
  */
 class RemoveWorkflowDsRequest extends AbstractModel
 {
@@ -38,8 +44,26 @@ class RemoveWorkflowDsRequest extends AbstractModel
     public $WorkflowId;
 
     /**
+     * @var string 是否删除脚本
+     */
+    public $DeleteScript;
+
+    /**
+     * @var string 删除是否通知下游
+     */
+    public $OperateIsInform;
+
+    /**
+     * @var string 是否终止进行中的任务
+     */
+    public $DeleteMode;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $WorkflowId 工作流ID
+     * @param string $DeleteScript 是否删除脚本
+     * @param string $OperateIsInform 删除是否通知下游
+     * @param string $DeleteMode 是否终止进行中的任务
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class RemoveWorkflowDsRequest extends AbstractModel
 
         if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
             $this->WorkflowId = $param["WorkflowId"];
+        }
+
+        if (array_key_exists("DeleteScript",$param) and $param["DeleteScript"] !== null) {
+            $this->DeleteScript = $param["DeleteScript"];
+        }
+
+        if (array_key_exists("OperateIsInform",$param) and $param["OperateIsInform"] !== null) {
+            $this->OperateIsInform = $param["OperateIsInform"];
+        }
+
+        if (array_key_exists("DeleteMode",$param) and $param["DeleteMode"] !== null) {
+            $this->DeleteMode = $param["DeleteMode"];
         }
     }
 }

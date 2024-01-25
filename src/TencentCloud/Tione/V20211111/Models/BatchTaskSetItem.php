@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 出参类型
  *
- * @method string getBatchTaskId() 获取跑批任务ID
- * @method void setBatchTaskId(string $BatchTaskId) 设置跑批任务ID
- * @method string getBatchTaskName() 获取跑批任务名称
- * @method void setBatchTaskName(string $BatchTaskName) 设置跑批任务名称
+ * @method string getBatchTaskId() 获取批量预测任务ID
+ * @method void setBatchTaskId(string $BatchTaskId) 设置批量预测任务ID
+ * @method string getBatchTaskName() 获取批量预测任务名称
+ * @method void setBatchTaskName(string $BatchTaskName) 设置批量预测任务名称
  * @method ModelInfo getModelInfo() 获取模型信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelInfo(ModelInfo $ModelInfo) 设置模型信息
@@ -32,8 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
  * @method string getChargeType() 获取计费模式
  * @method void setChargeType(string $ChargeType) 设置计费模式
- * @method string getChargeStatus() 获取计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
- * @method void setChargeStatus(string $ChargeStatus) 设置计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+ * @method string getChargeStatus() 获取计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
+ * @method void setChargeStatus(string $ChargeStatus) 设置计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
  * @method string getResourceGroupId() 获取包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupId(string $ResourceGroupId) 设置包年包月资源组ID
@@ -44,25 +54,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取任务状态
- * @method void setStatus(string $Status) 设置任务状态
+ * @method string getStatus() 获取任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
+ * @method void setStatus(string $Status) 设置任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
  * @method integer getRuntimeInSeconds() 获取运行时长
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeInSeconds(integer $RuntimeInSeconds) 设置运行时长
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getStartTime() 获取开始时间
+ * @method string getCreateTime() 获取任务创建时间
+ * @method void setCreateTime(string $CreateTime) 设置任务创建时间
+ * @method string getStartTime() 获取任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method void setStartTime(string $StartTime) 设置任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取结束时间
+ * @method string getEndTime() 获取任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method void setEndTime(string $EndTime) 设置任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOutputs() 获取输出
  * @method void setOutputs(array $Outputs) 设置输出
@@ -72,18 +84,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailureReason() 获取失败原因
  * @method void setFailureReason(string $FailureReason) 设置失败原因
- * @method string getBillingInfo() 获取计费金额信息，eg：2.00元/小时 (for 按量计费)
- * @method void setBillingInfo(string $BillingInfo) 设置计费金额信息，eg：2.00元/小时 (for 按量计费)
+ * @method string getBillingInfo() 获取按量计费信息
+ * @method void setBillingInfo(string $BillingInfo) 设置按量计费信息
  */
 class BatchTaskSetItem extends AbstractModel
 {
     /**
-     * @var string 跑批任务ID
+     * @var string 批量预测任务ID
      */
     public $BatchTaskId;
 
     /**
-     * @var string 跑批任务名称
+     * @var string 批量预测任务名称
      */
     public $BatchTaskName;
 
@@ -104,7 +116,12 @@ class BatchTaskSetItem extends AbstractModel
     public $ChargeType;
 
     /**
-     * @var string 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @var string 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
      */
     public $ChargeStatus;
 
@@ -126,7 +143,8 @@ class BatchTaskSetItem extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 任务状态
+     * @var string 任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
      */
     public $Status;
 
@@ -137,24 +155,24 @@ class BatchTaskSetItem extends AbstractModel
     public $RuntimeInSeconds;
 
     /**
-     * @var string 创建时间
+     * @var string 任务创建时间
      */
     public $CreateTime;
 
     /**
-     * @var string 开始时间
+     * @var string 任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 更新时间
+     * @var string 任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
@@ -176,38 +194,44 @@ class BatchTaskSetItem extends AbstractModel
     public $FailureReason;
 
     /**
-     * @var string 计费金额信息，eg：2.00元/小时 (for 按量计费)
+     * @var string 按量计费信息
      */
     public $BillingInfo;
 
     /**
-     * @param string $BatchTaskId 跑批任务ID
-     * @param string $BatchTaskName 跑批任务名称
+     * @param string $BatchTaskId 批量预测任务ID
+     * @param string $BatchTaskName 批量预测任务名称
      * @param ModelInfo $ModelInfo 模型信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageInfo $ImageInfo 镜像信息
      * @param string $ChargeType 计费模式
-     * @param string $ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @param string $ChargeStatus 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
      * @param string $ResourceGroupId 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceConfigInfo $ResourceConfigInfo 资源配置
      * @param array $Tags 标签配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 任务状态
+     * @param string $Status 任务状态, 取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
      * @param integer $RuntimeInSeconds 运行时长
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-     * @param string $StartTime 开始时间
+     * @param string $CreateTime 任务创建时间
+     * @param string $StartTime 任务开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 结束时间
+     * @param string $EndTime 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime 任务更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Outputs 输出
      * @param string $ResourceGroupName 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailureReason 失败原因
-     * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
+     * @param string $BillingInfo 按量计费信息
      */
     function __construct()
     {

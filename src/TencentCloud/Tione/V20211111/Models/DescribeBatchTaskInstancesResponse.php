@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBatchTaskInstances返回参数结构体
  *
- * @method array getBatchInstances() 获取实例集
+ * @method array getBatchInstances() 获取批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBatchInstances(array $BatchInstances) 设置实例集
+ * @method void setBatchInstances(array $BatchInstances) 设置批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBatchTaskInstancesResponse extends AbstractModel
 {
     /**
-     * @var array 实例集
+     * @var array 批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchInstances;
@@ -41,7 +41,7 @@ class DescribeBatchTaskInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $BatchInstances 实例集
+     * @param array $BatchInstances 批量预测实例结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

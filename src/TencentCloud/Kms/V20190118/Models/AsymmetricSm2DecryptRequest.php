@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() 获取CMK的唯一标识
  * @method void setKeyId(string $KeyId) 设置CMK的唯一标识
- * @method string getCiphertext() 获取使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
- * @method void setCiphertext(string $Ciphertext) 设置使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+ * @method string getCiphertext() 获取使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
+ * @method void setCiphertext(string $Ciphertext) 设置使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
  */
 class AsymmetricSm2DecryptRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AsymmetricSm2DecryptRequest extends AbstractModel
     public $KeyId;
 
     /**
-     * @var string 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+     * @var string 使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
      */
     public $Ciphertext;
 
     /**
      * @param string $KeyId CMK的唯一标识
-     * @param string $Ciphertext 使用PublicKey加密的密文，Base64编码。密文长度不能超过256字节。
+     * @param string $Ciphertext 使用PublicKey加密的密文，Base64编码，原始密文格式需要为C1C3C2_ASN1。原始密文长度不能超过256字节。
      */
     function __construct()
     {

@@ -74,7 +74,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 1.该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
 2.该接口目前免费提供中，监控仪表盘商业化计费后该接口需要订阅付费版后方可调用，仪表盘商业化说明请见：https://cloud.tencent.com/document/product/647/77735
  * @method Models\DescribeScaleInfoResponse DescribeScaleInfo(Models\DescribeScaleInfoRequest $req) 可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数。（同老接口DescribeHistoryScale）
- * @method Models\DescribeStreamIngestResponse DescribeStreamIngest(Models\DescribeStreamIngestRequest $req) 您可以查询转推任务的状态。
+ * @method Models\DescribeStreamIngestResponse DescribeStreamIngest(Models\DescribeStreamIngestRequest $req) 您可以查询输入在线媒体流任务的状态。
  * @method Models\DescribeTRTCMarketQualityDataResponse DescribeTRTCMarketQualityData(Models\DescribeTRTCMarketQualityDataRequest $req) 查询TRTC监控仪表盘-数据大盘质量指标（包括下列指标）
 joinSuccessRate：加入频道成功率。
 joinSuccessIn5sRate：5s内加入频道成功率。
@@ -310,7 +310,7 @@ ver：可以忽略。
  * @method Models\StopMCUMixTranscodeResponse StopMCUMixTranscode(Models\StopMCUMixTranscodeRequest $req) 接口说明：结束云端混流
  * @method Models\StopMCUMixTranscodeByStrRoomIdResponse StopMCUMixTranscodeByStrRoomId(Models\StopMCUMixTranscodeByStrRoomIdRequest $req) 接口说明：结束云端混流
  * @method Models\StopPublishCdnStreamResponse StopPublishCdnStream(Models\StopPublishCdnStreamRequest $req) 停止转推任务。
- * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) 停止一个拉流转推任务。
+ * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) 停止一个输入在线媒体流任务。
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) 更新转推任务。
 注：请参见启动转推任务的接口说明和使用说明。
  */

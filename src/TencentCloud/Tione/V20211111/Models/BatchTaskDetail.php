@@ -18,12 +18,12 @@ namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 跑批任务详情
+ * 批量预测任务详情
  *
- * @method string getBatchTaskId() 获取跑批任务ID
- * @method void setBatchTaskId(string $BatchTaskId) 设置跑批任务ID
- * @method string getBatchTaskName() 获取跑批任务名称
- * @method void setBatchTaskName(string $BatchTaskName) 设置跑批任务名称
+ * @method string getBatchTaskId() 获取批量预测任务ID
+ * @method void setBatchTaskId(string $BatchTaskId) 设置批量预测任务ID
+ * @method string getBatchTaskName() 获取批量预测任务名称
+ * @method void setBatchTaskName(string $BatchTaskName) 设置批量预测任务名称
  * @method string getUin() 获取主账号uin
  * @method void setUin(string $Uin) 设置主账号uin
  * @method string getSubUin() 获取子账号uin
@@ -100,8 +100,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeStatus() 获取计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
- * @method void setChargeStatus(string $ChargeStatus) 设置计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+ * @method string getChargeStatus() 获取计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
+ * @method void setChargeStatus(string $ChargeStatus) 设置计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
  * @method string getLatestInstanceId() 获取最近一次实例ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestInstanceId(string $LatestInstanceId) 设置最近一次实例ID
@@ -130,12 +140,12 @@ use TencentCloud\Common\AbstractModel;
 class BatchTaskDetail extends AbstractModel
 {
     /**
-     * @var string 跑批任务ID
+     * @var string 批量预测任务ID
      */
     public $BatchTaskId;
 
     /**
-     * @var string 跑批任务名称
+     * @var string 批量预测任务名称
      */
     public $BatchTaskName;
 
@@ -274,7 +284,12 @@ class BatchTaskDetail extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @var string 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
      */
     public $ChargeStatus;
 
@@ -315,8 +330,8 @@ class BatchTaskDetail extends AbstractModel
     public $ModelInferenceCodeInfo;
 
     /**
-     * @param string $BatchTaskId 跑批任务ID
-     * @param string $BatchTaskName 跑批任务名称
+     * @param string $BatchTaskId 批量预测任务ID
+     * @param string $BatchTaskName 批量预测任务名称
      * @param string $Uin 主账号uin
      * @param string $SubUin 子账号uin
      * @param string $Region 地域
@@ -355,7 +370,12 @@ class BatchTaskDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * @param string $ChargeStatus 计费状态，取值范围:
+BILLING: 计费中
+NOT_BILLING: 未计费
+WHITELIST_USING: 白名单使用中
+WHITELIST_STOP: 白名单到期
+ARREARS_STOP: 欠费停止
      * @param string $LatestInstanceId 最近一次实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注

@@ -166,6 +166,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityEnhanceCompleteEvent(QualityEnhanceTask $QualityEnhanceCompleteEvent) 设置音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaCastEvent getMediaCastStatusChangedEvent() 获取媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMediaCastStatusChangedEvent(MediaCastEvent $MediaCastStatusChangedEvent) 设置媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventContent extends AbstractModel
 {
@@ -347,6 +351,12 @@ class EventContent extends AbstractModel
     public $QualityEnhanceCompleteEvent;
 
     /**
+     * @var MediaCastEvent 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MediaCastStatusChangedEvent;
+
+    /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param string $EventType <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
@@ -419,6 +429,8 @@ class EventContent extends AbstractModel
      * @param QualityInspectTask $QualityInspectCompleteEvent 音画质检测完成事件，当事件类型为 QualityInspectComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityEnhanceTask $QualityEnhanceCompleteEvent 音画质重生完成事件，当事件类型为 QualityEnhanceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaCastEvent $MediaCastStatusChangedEvent 媒体转推状态变化事件，当事件类型为 MediaCastStatusChanged 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -560,6 +572,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("QualityEnhanceCompleteEvent",$param) and $param["QualityEnhanceCompleteEvent"] !== null) {
             $this->QualityEnhanceCompleteEvent = new QualityEnhanceTask();
             $this->QualityEnhanceCompleteEvent->deserialize($param["QualityEnhanceCompleteEvent"]);
+        }
+
+        if (array_key_exists("MediaCastStatusChangedEvent",$param) and $param["MediaCastStatusChangedEvent"] !== null) {
+            $this->MediaCastStatusChangedEvent = new MediaCastEvent();
+            $this->MediaCastStatusChangedEvent->deserialize($param["MediaCastStatusChangedEvent"]);
         }
     }
 }

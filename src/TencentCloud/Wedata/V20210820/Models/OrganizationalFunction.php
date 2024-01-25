@@ -96,6 +96,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmitErrorMsg(string $SubmitErrorMsg) 设置提交失败错误信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaName() 获取模式名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchemaName(string $SchemaName) 设置模式名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCommandFormat() 获取函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCommandFormat(string $CommandFormat) 设置函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerName() 获取名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerName(string $OwnerName) 设置名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubmitTimestamp() 获取时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubmitTimestamp(string $SubmitTimestamp) 设置时间戳
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrganizationalFunction extends AbstractModel
 {
@@ -222,6 +238,30 @@ class OrganizationalFunction extends AbstractModel
     public $SubmitErrorMsg;
 
     /**
+     * @var string 模式名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SchemaName;
+
+    /**
+     * @var string 函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CommandFormat;
+
+    /**
+     * @var string 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerName;
+
+    /**
+     * @var string 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubmitTimestamp;
+
+    /**
      * @param string $Name 名称
      * @param string $DisplayName 展示名称
      * @param string $LayerPath 层级路径
@@ -259,6 +299,14 @@ class OrganizationalFunction extends AbstractModel
      * @param string $DbName 数据库名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubmitErrorMsg 提交失败错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaName 模式名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CommandFormat 函数命令格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerName 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubmitTimestamp 时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -361,6 +409,22 @@ class OrganizationalFunction extends AbstractModel
 
         if (array_key_exists("SubmitErrorMsg",$param) and $param["SubmitErrorMsg"] !== null) {
             $this->SubmitErrorMsg = $param["SubmitErrorMsg"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("CommandFormat",$param) and $param["CommandFormat"] !== null) {
+            $this->CommandFormat = $param["CommandFormat"];
+        }
+
+        if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
+            $this->OwnerName = $param["OwnerName"];
+        }
+
+        if (array_key_exists("SubmitTimestamp",$param) and $param["SubmitTimestamp"] !== null) {
+            $this->SubmitTimestamp = $param["SubmitTimestamp"];
         }
     }
 }

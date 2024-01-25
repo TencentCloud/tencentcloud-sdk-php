@@ -25,7 +25,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
 /**
  * @method Models\ChatCompletionResponse ChatCompletion(Models\ChatCompletionRequest $req) 该接口支持与自行部署的大模型的聊天。
  * @method Models\CreateBatchModelAccTasksResponse CreateBatchModelAccTasks(Models\CreateBatchModelAccTasksRequest $req) 批量创建模型加速任务
- * @method Models\CreateBatchTaskResponse CreateBatchTask(Models\CreateBatchTaskRequest $req) 创建跑批任务
+ * @method Models\CreateBatchTaskResponse CreateBatchTask(Models\CreateBatchTaskRequest $req) 创建批量预测任务
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集
  * @method Models\CreateModelServiceResponse CreateModelService(Models\CreateModelServiceRequest $req) 用于创建、发布一个新的模型服务
  * @method Models\CreateNotebookResponse CreateNotebook(Models\CreateNotebookRequest $req) 创建Notebook
@@ -33,7 +33,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\CreateOptimizedModelResponse CreateOptimizedModel(Models\CreateOptimizedModelRequest $req) 保存优化模型
  * @method Models\CreateTrainingModelResponse CreateTrainingModel(Models\CreateTrainingModelRequest $req) 导入模型
  * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) 创建模型训练任务
- * @method Models\DeleteBatchTaskResponse DeleteBatchTask(Models\DeleteBatchTaskRequest $req) 删除跑批任务
+ * @method Models\DeleteBatchTaskResponse DeleteBatchTask(Models\DeleteBatchTaskRequest $req) 删除批量预测任务
  * @method Models\DeleteDatasetResponse DeleteDataset(Models\DeleteDatasetRequest $req) 删除数据集
  * @method Models\DeleteModelAccelerateTaskResponse DeleteModelAccelerateTask(Models\DeleteModelAccelerateTaskRequest $req) 删除模型加速任务
  * @method Models\DeleteModelServiceResponse DeleteModelService(Models\DeleteModelServiceRequest $req) 根据服务id删除模型服务
@@ -44,9 +44,9 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DeleteTrainingModelVersionResponse DeleteTrainingModelVersion(Models\DeleteTrainingModelVersionRequest $req) 删除模型版本
  * @method Models\DeleteTrainingTaskResponse DeleteTrainingTask(Models\DeleteTrainingTaskRequest $req) 删除训练任务
  * @method Models\DescribeAPIConfigsResponse DescribeAPIConfigs(Models\DescribeAPIConfigsRequest $req) 列举API
- * @method Models\DescribeBatchTaskResponse DescribeBatchTask(Models\DescribeBatchTaskRequest $req) 查询跑批任务
- * @method Models\DescribeBatchTaskInstancesResponse DescribeBatchTaskInstances(Models\DescribeBatchTaskInstancesRequest $req) 查询跑批实例列表
- * @method Models\DescribeBatchTasksResponse DescribeBatchTasks(Models\DescribeBatchTasksRequest $req) 批量预测任务列表信息
+ * @method Models\DescribeBatchTaskResponse DescribeBatchTask(Models\DescribeBatchTaskRequest $req) 查询批量预测任务
+ * @method Models\DescribeBatchTaskInstancesResponse DescribeBatchTaskInstances(Models\DescribeBatchTaskInstancesRequest $req) 查询批量预测任务实例列表
+ * @method Models\DescribeBatchTasksResponse DescribeBatchTasks(Models\DescribeBatchTasksRequest $req) 查询批量预测任务列表信息
  * @method Models\DescribeBillingResourceGroupResponse DescribeBillingResourceGroup(Models\DescribeBillingResourceGroupRequest $req) 查询资源组节点列表
  * @method Models\DescribeBillingResourceGroupsResponse DescribeBillingResourceGroups(Models\DescribeBillingResourceGroupsRequest $req) 查询资源组详情
  * @method Models\DescribeBillingResourceInstanceRunningJobsResponse DescribeBillingResourceInstanceRunningJobs(Models\DescribeBillingResourceInstanceRunningJobsRequest $req) 查询资源组节点运行中的任务
@@ -92,7 +92,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\SendChatMessageResponse SendChatMessage(Models\SendChatMessageRequest $req) 这是一个供您体验大模型聊天的接口。
  * @method Models\StartNotebookResponse StartNotebook(Models\StartNotebookRequest $req) 启动Notebook
  * @method Models\StartTrainingTaskResponse StartTrainingTask(Models\StartTrainingTaskRequest $req) 启动模型训练任务
- * @method Models\StopBatchTaskResponse StopBatchTask(Models\StopBatchTaskRequest $req) 停止跑批任务
+ * @method Models\StopBatchTaskResponse StopBatchTask(Models\StopBatchTaskRequest $req) 停止批量预测任务
  * @method Models\StopCreatingImageResponse StopCreatingImage(Models\StopCreatingImageRequest $req) 停止保存镜像
  * @method Models\StopModelAccelerateTaskResponse StopModelAccelerateTask(Models\StopModelAccelerateTaskRequest $req) 停止模型加速任务
  * @method Models\StopNotebookResponse StopNotebook(Models\StopNotebookRequest $req) 停止Notebook

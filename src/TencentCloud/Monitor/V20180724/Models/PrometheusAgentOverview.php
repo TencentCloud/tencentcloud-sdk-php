@@ -54,6 +54,10 @@ abnormal = 异常
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置agent名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableExternal() 获取是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableExternal(boolean $EnableExternal) 设置是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusAgentOverview extends AbstractModel
 {
@@ -111,6 +115,12 @@ abnormal = 异常
     public $Name;
 
     /**
+     * @var boolean 是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableExternal;
+
+    /**
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群id
      * @param string $Status agent状态
@@ -127,6 +137,8 @@ abnormal = 异常
      * @param string $FailedReason 记录关联等操作的失败信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name agent名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableExternal 是否已开启公网访问，true 开启，false 未开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -181,6 +193,10 @@ abnormal = 异常
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("EnableExternal",$param) and $param["EnableExternal"] !== null) {
+            $this->EnableExternal = $param["EnableExternal"];
         }
     }
 }

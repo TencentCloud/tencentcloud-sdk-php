@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBatchTask返回参数结构体
  *
- * @method string getBatchTaskId() 获取跑批任务ID
- * @method void setBatchTaskId(string $BatchTaskId) 设置跑批任务ID
+ * @method string getBatchTaskId() 获取批量预测任务ID
+ * @method void setBatchTaskId(string $BatchTaskId) 设置批量预测任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateBatchTaskResponse extends AbstractModel
 {
     /**
-     * @var string 跑批任务ID
+     * @var string 批量预测任务ID
      */
     public $BatchTaskId;
 
@@ -38,7 +38,7 @@ class CreateBatchTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BatchTaskId 跑批任务ID
+     * @param string $BatchTaskId 批量预测任务ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

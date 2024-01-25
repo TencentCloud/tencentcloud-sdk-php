@@ -20,49 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBatchTasks请求参数结构体
  *
- * @method array getFilters() 获取过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+ * @method array getFilters() 获取过滤器
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
- * @method void setFilters(array $Filters) 设置过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
- * @method array getTagFilters() 获取标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
- * @method void setTagFilters(array $TagFilters) 设置标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
+ * @method void setFilters(array $Filters) 设置过滤器
+
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
+
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
+ * @method array getTagFilters() 获取标签过滤器
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤器
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
- * @method integer getLimit() 获取返回数量，默认为10，最大为50
- * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大为50
+ * @method integer getLimit() 获取限制数目，默认为20
+ * @method void setLimit(integer $Limit) 设置限制数目，默认为20
  * @method string getOrder() 获取输出列表的排列顺序。取值范围：ASC（升序排列）/ DESC（降序排列），默认为DESC
  * @method void setOrder(string $Order) 设置输出列表的排列顺序。取值范围：ASC（升序排列）/ DESC（降序排列），默认为DESC
- * @method string getOrderField() 获取排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
- * @method void setOrderField(string $OrderField) 设置排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+ * @method string getOrderField() 获取排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回
+ * @method void setOrderField(string $OrderField) 设置排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回
  */
 class DescribeBatchTasksRequest extends AbstractModel
 {
     /**
-     * @var array 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+     * @var array 过滤器
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
+
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
      */
     public $Filters;
 
     /**
-     * @var array 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
+     * @var array 标签过滤器
      */
     public $TagFilters;
 
@@ -72,7 +71,7 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为10，最大为50
+     * @var integer 限制数目，默认为20
      */
     public $Limit;
 
@@ -82,24 +81,25 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     public $Order;
 
     /**
-     * @var string 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * @var string 排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回
      */
     public $OrderField;
 
     /**
-     * @param array $Filters 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
+     * @param array $Filters 过滤器
 
-取值范围：
-Name（名称）：task1
-Id（task ID）：train-23091792777383936
-Status（状态）：STARTING / RUNNING / STOPPING / STOPPED / FAILED / SUCCEED / SUBMIT_FAILED
-ChargeType（计费类型）：PREPAID 包年包月 / POSTPAID_BY_HOUR 按量计费
-CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（计费中）/ ARREARS_STOP（欠费停止）
-     * @param array $TagFilters 标签过滤器，eg：[{ "TagKey": "TagKeyA", "TagValue": ["TagValueA"] }]
+Name支持的取值范围：
+BatchTaskId, BatchTaskName, Status, ModelVersionId
+
+其中Status 的有效取值范围:
+INIT, STARTING, RUNNING, FAILED, STOPPING, STOPPED, SUCCEED
+     * @param array $TagFilters 标签过滤器
      * @param integer $Offset 偏移量，默认为0
-     * @param integer $Limit 返回数量，默认为10，最大为50
+     * @param integer $Limit 限制数目，默认为20
      * @param string $Order 输出列表的排列顺序。取值范围：ASC（升序排列）/ DESC（降序排列），默认为DESC
-     * @param string $OrderField 排序的依据字段， 取值范围 "CreateTime" "UpdateTime"
+     * @param string $OrderField 排序字段。当前仅支持 "CreateTime"。
+不传此字段则按照DB默认排序结果返回
      */
     function __construct()
     {

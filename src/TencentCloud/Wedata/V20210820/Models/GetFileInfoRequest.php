@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getFilePath() 获取文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql
  * @method void setFilePath(string $FilePath) 设置文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql
  */
 class GetFileInfoRequest extends AbstractModel
 {
@@ -34,12 +36,14 @@ class GetFileInfoRequest extends AbstractModel
 
     /**
      * @var string 文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql
      */
     public $FilePath;
 
     /**
      * @param string $ProjectId 项目ID
      * @param string $FilePath 文件路径
+项目区1470575647377821696项目，f1目录下： /datastudio/project/1470575647377821696/f1/sql1234.sql 个人区： /datastudio/personal/sqlTTT.sql
      */
     function __construct()
     {

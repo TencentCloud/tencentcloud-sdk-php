@@ -20,26 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBotStatus请求参数结构体
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
  * @method string getCategory() 获取类别
  * @method void setCategory(string $Category) 设置类别
  * @method string getStatus() 获取状态
  * @method void setStatus(string $Status) 设置状态
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
  * @method string getInstanceID() 获取实例id
  * @method void setInstanceID(string $InstanceID) 设置实例id
  * @method boolean getIsVersionFour() 获取是否是bot4.0版本
  * @method void setIsVersionFour(boolean $IsVersionFour) 设置是否是bot4.0版本
  * @method string getBotVersion() 获取传入Bot版本号，场景化版本为"4.1.0"
  * @method void setBotVersion(string $BotVersion) 设置传入Bot版本号，场景化版本为"4.1.0"
+ * @method array getDomainList() 获取批量开启BOT开关的域名列表
+ * @method void setDomainList(array $DomainList) 设置批量开启BOT开关的域名列表
  */
 class ModifyBotStatusRequest extends AbstractModel
 {
-    /**
-     * @var string 域名
-     */
-    public $Domain;
-
     /**
      * @var string 类别
      */
@@ -49,6 +46,11 @@ class ModifyBotStatusRequest extends AbstractModel
      * @var string 状态
      */
     public $Status;
+
+    /**
+     * @var string 域名
+     */
+    public $Domain;
 
     /**
      * @var string 实例id
@@ -66,12 +68,18 @@ class ModifyBotStatusRequest extends AbstractModel
     public $BotVersion;
 
     /**
-     * @param string $Domain 域名
+     * @var array 批量开启BOT开关的域名列表
+     */
+    public $DomainList;
+
+    /**
      * @param string $Category 类别
      * @param string $Status 状态
+     * @param string $Domain 域名
      * @param string $InstanceID 实例id
      * @param boolean $IsVersionFour 是否是bot4.0版本
      * @param string $BotVersion 传入Bot版本号，场景化版本为"4.1.0"
+     * @param array $DomainList 批量开启BOT开关的域名列表
      */
     function __construct()
     {
@@ -86,16 +94,16 @@ class ModifyBotStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
-        }
-
         if (array_key_exists("Category",$param) and $param["Category"] !== null) {
             $this->Category = $param["Category"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
@@ -108,6 +116,10 @@ class ModifyBotStatusRequest extends AbstractModel
 
         if (array_key_exists("BotVersion",$param) and $param["BotVersion"] !== null) {
             $this->BotVersion = $param["BotVersion"];
+        }
+
+        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
+            $this->DomainList = $param["DomainList"];
         }
     }
 }

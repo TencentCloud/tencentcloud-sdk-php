@@ -18,105 +18,207 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * saas域名详情
+ * SaaS型WAF域名详情
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getDomainId() 获取域名id
- * @method void setDomainId(string $DomainId) 设置域名id
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getEdition() 获取类型
- * @method void setEdition(string $Edition) 设置类型
- * @method string getInstanceName() 获取实例名
- * @method void setInstanceName(string $InstanceName) 设置实例名
+ * @method string getDomainId() 获取域名唯一ID
+ * @method void setDomainId(string $DomainId) 设置域名唯一ID
+ * @method string getInstanceId() 获取域名所属实例唯一ID
+ * @method void setInstanceId(string $InstanceId) 设置域名所属实例唯一ID
+ * @method string getEdition() 获取域名所属实例类型
+ * @method void setEdition(string $Edition) 设置域名所属实例类型
+ * @method string getInstanceName() 获取域名所属实例名
+ * @method void setInstanceName(string $InstanceName) 设置域名所属实例名
  * @method string getCert() 获取证书
  * @method void setCert(string $Cert) 设置证书
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getEngine() 获取AI防御模式
- * @method void setEngine(integer $Engine) 设置AI防御模式
- * @method integer getHttpsRewrite() 获取是否开启httpRewrite
- * @method void setHttpsRewrite(integer $HttpsRewrite) 设置是否开启httpRewrite
- * @method string getHttpsUpstreamPort() 获取https回源端口
- * @method void setHttpsUpstreamPort(string $HttpsUpstreamPort) 设置https回源端口
- * @method integer getIsCdn() 获取是否是cdn
- * @method void setIsCdn(integer $IsCdn) 设置是否是cdn
- * @method integer getIsGray() 获取是否开启gray
- * @method void setIsGray(integer $IsGray) 设置是否开启gray
- * @method integer getIsHttp2() 获取是否是http2
- * @method void setIsHttp2(integer $IsHttp2) 设置是否是http2
- * @method integer getIsWebsocket() 获取是否开启websocket
- * @method void setIsWebsocket(integer $IsWebsocket) 设置是否开启websocket
- * @method integer getLoadBalance() 获取负载均衡
- * @method void setLoadBalance(integer $LoadBalance) 设置负载均衡
- * @method integer getMode() 获取防御模式
- * @method void setMode(integer $Mode) 设置防御模式
- * @method string getPrivateKey() 获取私钥
- * @method void setPrivateKey(string $PrivateKey) 设置私钥
- * @method string getSSLId() 获取ssl id
- * @method void setSSLId(string $SSLId) 设置ssl id
- * @method string getUpstreamDomain() 获取回源域名
- * @method void setUpstreamDomain(string $UpstreamDomain) 设置回源域名
- * @method integer getUpstreamType() 获取回源类型
- * @method void setUpstreamType(integer $UpstreamType) 设置回源类型
- * @method array getSrcList() 获取回源ip
- * @method void setSrcList(array $SrcList) 设置回源ip
- * @method array getPorts() 获取服务端口配置
- * @method void setPorts(array $Ports) 设置服务端口配置
- * @method integer getCertType() 获取证书类型
- * @method void setCertType(integer $CertType) 设置证书类型
- * @method string getUpstreamScheme() 获取回源方式
- * @method void setUpstreamScheme(string $UpstreamScheme) 设置回源方式
- * @method integer getCls() 获取日志包
- * @method void setCls(integer $Cls) 设置日志包
- * @method string getCname() 获取一级cname
- * @method void setCname(string $Cname) 设置一级cname
- * @method integer getIsKeepAlive() 获取是否长连接
- * @method void setIsKeepAlive(integer $IsKeepAlive) 设置是否长连接
- * @method integer getActiveCheck() 获取是否开启主动健康检测，1表示开启，0表示不开启
+ * @method integer getEngine() 获取规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
+ * @method void setEngine(integer $Engine) 设置规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
+ * @method integer getHttpsRewrite() 获取是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
+ * @method void setHttpsRewrite(integer $HttpsRewrite) 设置是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
+ * @method string getHttpsUpstreamPort() 获取HTTPS回源端口
+ * @method void setHttpsUpstreamPort(string $HttpsUpstreamPort) 设置HTTPS回源端口
+ * @method integer getIsCdn() 获取waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+ * @method void setIsCdn(integer $IsCdn) 设置waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+ * @method integer getIsGray() 获取是否开启灰度，已废弃。
+ * @method void setIsGray(integer $IsGray) 设置是否开启灰度，已废弃。
+ * @method integer getIsHttp2() 获取是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
+ * @method void setIsHttp2(integer $IsHttp2) 设置是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
+ * @method integer getIsWebsocket() 获取是否开启WebSocket支持。
+0：关闭
+1：开启
+ * @method void setIsWebsocket(integer $IsWebsocket) 设置是否开启WebSocket支持。
+0：关闭
+1：开启
+ * @method integer getLoadBalance() 获取回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询
+ * @method void setLoadBalance(integer $LoadBalance) 设置回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询
+ * @method integer getMode() 获取防护模式。
+0：观察模式
+1：拦截模式
+ * @method void setMode(integer $Mode) 设置防护模式。
+0：观察模式
+1：拦截模式
+ * @method string getPrivateKey() 获取自有证书的私钥
+ * @method void setPrivateKey(string $PrivateKey) 设置自有证书的私钥
+ * @method string getSSLId() 获取CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+ * @method void setSSLId(string $SSLId) 设置CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+ * @method string getUpstreamDomain() 获取域名回源时的回源域名。UpstreamType为1时，需要填充此字段
+ * @method void setUpstreamDomain(string $UpstreamDomain) 设置域名回源时的回源域名。UpstreamType为1时，需要填充此字段
+ * @method integer getUpstreamType() 获取回源类型。
+0：通过IP回源
+1：通过域名回源
+ * @method void setUpstreamType(integer $UpstreamType) 设置回源类型。
+0：通过IP回源
+1：通过域名回源
+ * @method array getSrcList() 获取IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
+ * @method void setSrcList(array $SrcList) 设置IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
+ * @method array getPorts() 获取域名端口配置
+ * @method void setPorts(array $Ports) 设置域名端口配置
+ * @method integer getCertType() 获取证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书
+ * @method void setCertType(integer $CertType) 设置证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书
+ * @method string getUpstreamScheme() 获取服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源
+ * @method void setUpstreamScheme(string $UpstreamScheme) 设置服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源
+ * @method integer getCls() 获取日志包是否开启。
+0：关闭
+1：开启
+ * @method void setCls(integer $Cls) 设置日志包是否开启。
+0：关闭
+1：开启
+ * @method string getCname() 获取接入Cname，SaaS型域名使用此Cname进行接入
+ * @method void setCname(string $Cname) 设置接入Cname，SaaS型域名使用此Cname进行接入
+ * @method integer getIsKeepAlive() 获取是否开启长连接。
+0： 短连接
+1： 长连接
+ * @method void setIsKeepAlive(integer $IsKeepAlive) 设置是否开启长连接。
+0： 短连接
+1： 长连接
+ * @method integer getActiveCheck() 获取是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setActiveCheck(integer $ActiveCheck) 设置是否开启主动健康检测，1表示开启，0表示不开启
+ * @method void setActiveCheck(integer $ActiveCheck) 设置是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTLSVersion() 获取TLS版本信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTLSVersion(integer $TLSVersion) 设置TLS版本信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCiphers() 获取加密套件信息
+ * @method array getCiphers() 获取自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCiphers(array $Ciphers) 设置加密套件信息
+ * @method void setCiphers(array $Ciphers) 设置自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCipherTemplate() 获取模板
+ * @method integer getCipherTemplate() 获取加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCipherTemplate(integer $CipherTemplate) 设置模板
+ * @method void setCipherTemplate(integer $CipherTemplate) 设置加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProxyReadTimeout() 获取300s
+ * @method integer getProxyReadTimeout() 获取WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置300s
+ * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProxySendTimeout() 获取300s
+ * @method integer getProxySendTimeout() 获取WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxySendTimeout(integer $ProxySendTimeout) 设置300s
+ * @method void setProxySendTimeout(integer $ProxySendTimeout) 设置WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSniType() 获取0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+ * @method integer getSniType() 获取WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSniType(integer $SniType) 设置0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+ * @method void setSniType(integer $SniType) 设置WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSniHost() 获取SniType=3时，需要填此参数，表示自定义的host；
+ * @method string getSniHost() 获取SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSniHost(string $SniHost) 设置SniType=3时，需要填此参数，表示自定义的host；
+ * @method void setSniHost(string $SniHost) 设置SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWeights() 获取无
+ * @method array getWeights() 获取回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeights(array $Weights) 设置无
+ * @method void setWeights(array $Weights) 设置回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpHeaders() 获取IsCdn=3时，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getXFFReset() 获取0:关闭xff重置；1:开启xff重置
+ * @method integer getXFFReset() 获取是否开启XFF重置。
+0：关闭
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setXFFReset(integer $XFFReset) 设置0:关闭xff重置；1:开启xff重置
+ * @method void setXFFReset(integer $XFFReset) 设置是否开启XFF重置。
+0：关闭
+1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNote() 获取域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNote(string $Note) 设置域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpstreamHost() 获取自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLevel() 获取防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLevel(string $Level) 设置防护规则
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainsPartInfo extends AbstractModel
@@ -127,22 +229,22 @@ class DomainsPartInfo extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 域名id
+     * @var string 域名唯一ID
      */
     public $DomainId;
 
     /**
-     * @var string 实例id
+     * @var string 域名所属实例唯一ID
      */
     public $InstanceId;
 
     /**
-     * @var string 类型
+     * @var string 域名所属实例类型
      */
     public $Edition;
 
     /**
-     * @var string 实例名
+     * @var string 域名所属实例名
      */
     public $InstanceName;
 
@@ -157,107 +259,142 @@ class DomainsPartInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer AI防御模式
+     * @var integer 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
      */
     public $Engine;
 
     /**
-     * @var integer 是否开启httpRewrite
+     * @var integer 是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
      */
     public $HttpsRewrite;
 
     /**
-     * @var string https回源端口
+     * @var string HTTPS回源端口
      */
     public $HttpsUpstreamPort;
 
     /**
-     * @var integer 是否是cdn
+     * @var integer waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public $IsCdn;
 
     /**
-     * @var integer 是否开启gray
+     * @var integer 是否开启灰度，已废弃。
      */
     public $IsGray;
 
     /**
-     * @var integer 是否是http2
+     * @var integer 是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
      */
     public $IsHttp2;
 
     /**
-     * @var integer 是否开启websocket
+     * @var integer 是否开启WebSocket支持。
+0：关闭
+1：开启
      */
     public $IsWebsocket;
 
     /**
-     * @var integer 负载均衡
+     * @var integer 回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询
      */
     public $LoadBalance;
 
     /**
-     * @var integer 防御模式
+     * @var integer 防护模式。
+0：观察模式
+1：拦截模式
      */
     public $Mode;
 
     /**
-     * @var string 私钥
+     * @var string 自有证书的私钥
      */
     public $PrivateKey;
 
     /**
-     * @var string ssl id
+     * @var string CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      */
     public $SSLId;
 
     /**
-     * @var string 回源域名
+     * @var string 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
      */
     public $UpstreamDomain;
 
     /**
-     * @var integer 回源类型
+     * @var integer 回源类型。
+0：通过IP回源
+1：通过域名回源
      */
     public $UpstreamType;
 
     /**
-     * @var array 回源ip
+     * @var array IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
      */
     public $SrcList;
 
     /**
-     * @var array 服务端口配置
+     * @var array 域名端口配置
      */
     public $Ports;
 
     /**
-     * @var integer 证书类型
+     * @var integer 证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书
      */
     public $CertType;
 
     /**
-     * @var string 回源方式
+     * @var string 服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源
      */
     public $UpstreamScheme;
 
     /**
-     * @var integer 日志包
+     * @var integer 日志包是否开启。
+0：关闭
+1：开启
      */
     public $Cls;
 
     /**
-     * @var string 一级cname
+     * @var string 接入Cname，SaaS型域名使用此Cname进行接入
      */
     public $Cname;
 
     /**
-     * @var integer 是否长连接
+     * @var integer 是否开启长连接。
+0： 短连接
+1： 长连接
      */
     public $IsKeepAlive;
 
     /**
-     * @var integer 是否开启主动健康检测，1表示开启，0表示不开启
+     * @var integer 是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActiveCheck;
@@ -269,43 +406,51 @@ class DomainsPartInfo extends AbstractModel
     public $TLSVersion;
 
     /**
-     * @var array 加密套件信息
+     * @var array 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ciphers;
 
     /**
-     * @var integer 模板
+     * @var integer 加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CipherTemplate;
 
     /**
-     * @var integer 300s
+     * @var integer WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyReadTimeout;
 
     /**
-     * @var integer 300s
+     * @var integer WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxySendTimeout;
 
     /**
-     * @var integer 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     * @var integer WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SniType;
 
     /**
-     * @var string SniType=3时，需要填此参数，表示自定义的host；
+     * @var string SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SniHost;
 
     /**
-     * @var array 无
+     * @var array 回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weights;
@@ -317,60 +462,131 @@ class DomainsPartInfo extends AbstractModel
     public $IpHeaders;
 
     /**
-     * @var integer 0:关闭xff重置；1:开启xff重置
+     * @var integer 是否开启XFF重置。
+0：关闭
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $XFFReset;
 
     /**
+     * @var string 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Note;
+
+    /**
+     * @var string 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpstreamHost;
+
+    /**
+     * @var string 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Level;
+
+    /**
      * @param string $Domain 域名
-     * @param string $DomainId 域名id
-     * @param string $InstanceId 实例id
-     * @param string $Edition 类型
-     * @param string $InstanceName 实例名
+     * @param string $DomainId 域名唯一ID
+     * @param string $InstanceId 域名所属实例唯一ID
+     * @param string $Edition 域名所属实例类型
+     * @param string $InstanceName 域名所属实例名
      * @param string $Cert 证书
      * @param string $CreateTime 创建时间
-     * @param integer $Engine AI防御模式
-     * @param integer $HttpsRewrite 是否开启httpRewrite
-     * @param string $HttpsUpstreamPort https回源端口
-     * @param integer $IsCdn 是否是cdn
-     * @param integer $IsGray 是否开启gray
-     * @param integer $IsHttp2 是否是http2
-     * @param integer $IsWebsocket 是否开启websocket
-     * @param integer $LoadBalance 负载均衡
-     * @param integer $Mode 防御模式
-     * @param string $PrivateKey 私钥
-     * @param string $SSLId ssl id
-     * @param string $UpstreamDomain 回源域名
-     * @param integer $UpstreamType 回源类型
-     * @param array $SrcList 回源ip
-     * @param array $Ports 服务端口配置
-     * @param integer $CertType 证书类型
-     * @param string $UpstreamScheme 回源方式
-     * @param integer $Cls 日志包
-     * @param string $Cname 一级cname
-     * @param integer $IsKeepAlive 是否长连接
-     * @param integer $ActiveCheck 是否开启主动健康检测，1表示开启，0表示不开启
+     * @param integer $Engine 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
+     * @param integer $HttpsRewrite 是否开启HTTP强制跳转到HTTPS。
+0：不强制跳转
+1：开启强制跳转
+     * @param string $HttpsUpstreamPort HTTPS回源端口
+     * @param integer $IsCdn waf前是否部署有七层代理服务。
+0：没有部署代理服务
+1：有部署代理服务，waf将使用XFF获取客户端IP
+2：有部署代理服务，waf将使用remote_addr获取客户端IP
+3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * @param integer $IsGray 是否开启灰度，已废弃。
+     * @param integer $IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。
+0：关闭
+1：开启
+     * @param integer $IsWebsocket 是否开启WebSocket支持。
+0：关闭
+1：开启
+     * @param integer $LoadBalance 回源负载均衡策略。
+0：轮询
+1：IP hash
+2：加权轮询
+     * @param integer $Mode 防护模式。
+0：观察模式
+1：拦截模式
+     * @param string $PrivateKey 自有证书的私钥
+     * @param string $SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * @param string $UpstreamDomain 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
+     * @param integer $UpstreamType 回源类型。
+0：通过IP回源
+1：通过域名回源
+     * @param array $SrcList IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
+     * @param array $Ports 域名端口配置
+     * @param integer $CertType 证书类型。
+0：仅配置HTTP监听端口，没有证书
+1：证书来源为自有证书
+2：证书来源为托管证书
+     * @param string $UpstreamScheme 服务配置有HTTPS端口时，HTTPS的回源协议。
+http：使用http协议回源，和HttpsUpstreamPort配合使用
+https：使用https协议回源
+     * @param integer $Cls 日志包是否开启。
+0：关闭
+1：开启
+     * @param string $Cname 接入Cname，SaaS型域名使用此Cname进行接入
+     * @param integer $IsKeepAlive 是否开启长连接。
+0： 短连接
+1： 长连接
+     * @param integer $ActiveCheck 是否开启主动健康检测。
+0：不开启
+1：开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TLSVersion TLS版本信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Ciphers 加密套件信息
+     * @param array $Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CipherTemplate 模板
+     * @param integer $CipherTemplate 加密套件模板。
+0：不支持选择，使用默认模板  
+1：通用型模板 
+2：安全型模板
+3：自定义模板
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProxyReadTimeout 300s
+     * @param integer $ProxyReadTimeout WAF与源站的读超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProxySendTimeout 300s
+     * @param integer $ProxySendTimeout WAF与源站的写超时时间，默认300s。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     * @param integer $SniType WAF回源时的SNI类型。
+0：关闭SNI，不配置client_hello中的server_name
+1：开启SNI，client_hello中的server_name为防护域名
+2：开启SNI，SNI为域名回源时的源站域名
+3：开启SNI，SNI为自定义域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SniHost SniType=3时，需要填此参数，表示自定义的host；
+     * @param string $SniHost SniType为3时，需要填此参数，表示自定义的SNI；
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Weights 无
+     * @param array $Weights 回源IP权重
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpHeaders IsCdn=3时，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $XFFReset 0:关闭xff重置；1:开启xff重置
+     * @param integer $XFFReset 是否开启XFF重置。
+0：关闭
+1：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Note 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Level 防护规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -541,6 +757,18 @@ class DomainsPartInfo extends AbstractModel
 
         if (array_key_exists("XFFReset",$param) and $param["XFFReset"] !== null) {
             $this->XFFReset = $param["XFFReset"];
+        }
+
+        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
+            $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("UpstreamHost",$param) and $param["UpstreamHost"] !== null) {
+            $this->UpstreamHost = $param["UpstreamHost"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
     }
 }

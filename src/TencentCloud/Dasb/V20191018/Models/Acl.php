@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setACTemplateSet(array $ACTemplateSet) 设置关联的数据库高危命令列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWhiteCmds() 获取关联的白命令命令
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWhiteCmds(array $WhiteCmds) 设置关联的白命令命令
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Acl extends AbstractModel
 {
@@ -242,6 +246,12 @@ class Acl extends AbstractModel
     public $ACTemplateSet;
 
     /**
+     * @var array 关联的白命令命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WhiteCmds;
+
+    /**
      * @param integer $Id 访问权限ID
      * @param string $Name 访问权限名称
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
@@ -275,6 +285,8 @@ class Acl extends AbstractModel
      * @param boolean $AllowAccessCredential 是否允许使用访问串，默认允许
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ACTemplateSet 关联的数据库高危命令列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WhiteCmds 关联的白命令命令
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -435,6 +447,10 @@ class Acl extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ACTemplateSet, $obj);
             }
+        }
+
+        if (array_key_exists("WhiteCmds",$param) and $param["WhiteCmds"] !== null) {
+            $this->WhiteCmds = $param["WhiteCmds"];
         }
     }
 }

@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
  * @method string getClientToken() 获取保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
  * @method void setClientToken(string $ClientToken) 设置保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
- * @method integer getIsDelay() 获取是否延迟下发，1则延迟下发，否则立即下发
- * @method void setIsDelay(integer $IsDelay) 设置是否延迟下发，1则延迟下发，否则立即下发
+ * @method integer getIsDelay() 获取（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+ * @method void setIsDelay(integer $IsDelay) 设置（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+ * @method string getFrom() 获取来源 默认空 覆盖导入是 batch_import_cover
+ * @method void setFrom(string $From) 设置来源 默认空 覆盖导入是 batch_import_cover
+ * @method integer getIsUseId() 获取是否使用id 默认不需要
+ * @method void setIsUseId(integer $IsUseId) 设置是否使用id 默认不需要
  */
 class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
 {
@@ -47,15 +51,27 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var integer 是否延迟下发，1则延迟下发，否则立即下发
+     * @var integer （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
      */
     public $IsDelay;
+
+    /**
+     * @var string 来源 默认空 覆盖导入是 batch_import_cover
+     */
+    public $From;
+
+    /**
+     * @var integer 是否使用id 默认不需要
+     */
+    public $IsUseId;
 
     /**
      * @param array $Data 创建规则数据
      * @param integer $Type 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
      * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
-     * @param integer $IsDelay 是否延迟下发，1则延迟下发，否则立即下发
+     * @param integer $IsDelay （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
+     * @param string $From 来源 默认空 覆盖导入是 batch_import_cover
+     * @param integer $IsUseId 是否使用id 默认不需要
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
 
         if (array_key_exists("IsDelay",$param) and $param["IsDelay"] !== null) {
             $this->IsDelay = $param["IsDelay"];
+        }
+
+        if (array_key_exists("From",$param) and $param["From"] !== null) {
+            $this->From = $param["From"];
+        }
+
+        if (array_key_exists("IsUseId",$param) and $param["IsUseId"] !== null) {
+            $this->IsUseId = $param["IsUseId"];
         }
     }
 }

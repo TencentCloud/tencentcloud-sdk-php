@@ -48,6 +48,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsQuery(integer $IsQuery) 设置是否是查询，0：否，1：查询语句
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getResultBytesMB() 获取ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResultBytesMB(float $ResultBytesMB) 设置ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getMemoryUsageMB() 获取MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemoryUsageMB(float $MemoryUsageMB) 设置MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getDurationSec() 获取DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDurationSec(float $DurationSec) 设置DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlowQueryRecord extends AbstractModel
 {
@@ -114,6 +126,24 @@ class SlowQueryRecord extends AbstractModel
     public $IsQuery;
 
     /**
+     * @var float ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResultBytesMB;
+
+    /**
+     * @var float MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemoryUsageMB;
+
+    /**
+     * @var float DurationMs的秒表示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DurationSec;
+
+    /**
      * @param string $OsUser 查询用户
      * @param string $InitialQueryId 查询ID
      * @param string $Sql SQL语句
@@ -127,6 +157,12 @@ class SlowQueryRecord extends AbstractModel
      * @param string $DbName 数据库名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsQuery 是否是查询，0：否，1：查询语句
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $ResultBytesMB ResultBytes的MB格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $MemoryUsageMB MemoryUsage的MB表示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $DurationSec DurationMs的秒表示
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +224,18 @@ class SlowQueryRecord extends AbstractModel
 
         if (array_key_exists("IsQuery",$param) and $param["IsQuery"] !== null) {
             $this->IsQuery = $param["IsQuery"];
+        }
+
+        if (array_key_exists("ResultBytesMB",$param) and $param["ResultBytesMB"] !== null) {
+            $this->ResultBytesMB = $param["ResultBytesMB"];
+        }
+
+        if (array_key_exists("MemoryUsageMB",$param) and $param["MemoryUsageMB"] !== null) {
+            $this->MemoryUsageMB = $param["MemoryUsageMB"];
+        }
+
+        if (array_key_exists("DurationSec",$param) and $param["DurationSec"] !== null) {
+            $this->DurationSec = $param["DurationSec"];
         }
     }
 }

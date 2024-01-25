@@ -124,6 +124,8 @@ CLOSE 关闭
  * @method void setKibanaPrivateDomain(string $KibanaPrivateDomain) 设置kibana内网自定义域名
  * @method string getCerebroPrivateDomain() 获取cerebro内网自定义域名
  * @method void setCerebroPrivateDomain(string $CerebroPrivateDomain) 设置cerebro内网自定义域名
+ * @method string getProtocol() 获取变更为https集群，默认是http
+ * @method void setProtocol(string $Protocol) 设置变更为https集群，默认是http
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -316,6 +318,11 @@ CLOSE 关闭
     public $CerebroPrivateDomain;
 
     /**
+     * @var string 变更为https集群，默认是http
+     */
+    public $Protocol;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -368,6 +375,7 @@ OPEN 开启
 CLOSE 关闭
      * @param string $KibanaPrivateDomain kibana内网自定义域名
      * @param string $CerebroPrivateDomain cerebro内网自定义域名
+     * @param string $Protocol 变更为https集群，默认是http
      */
     function __construct()
     {
@@ -532,6 +540,10 @@ CLOSE 关闭
 
         if (array_key_exists("CerebroPrivateDomain",$param) and $param["CerebroPrivateDomain"] !== null) {
             $this->CerebroPrivateDomain = $param["CerebroPrivateDomain"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置正常情况为null
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getUnSupportedList() 获取未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnSupportedList(array $UnSupportedList) 设置未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFailDomainList() 获取已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailDomainList(array $FailDomainList) 设置已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCount() 获取成功数目
+ * @method void setCount(integer $Count) 设置成功数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,6 +46,23 @@ class ModifyBotStatusResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var array 未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnSupportedList;
+
+    /**
+     * @var array 已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailDomainList;
+
+    /**
+     * @var integer 成功数目
+     */
+    public $Count;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -43,6 +70,11 @@ class ModifyBotStatusResponse extends AbstractModel
     /**
      * @param string $Data 正常情况为null
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $UnSupportedList 未购买BOT的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FailDomainList 已购买但操作失败的域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Count 成功数目
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +92,18 @@ class ModifyBotStatusResponse extends AbstractModel
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("UnSupportedList",$param) and $param["UnSupportedList"] !== null) {
+            $this->UnSupportedList = $param["UnSupportedList"];
+        }
+
+        if (array_key_exists("FailDomainList",$param) and $param["FailDomainList"] !== null) {
+            $this->FailDomainList = $param["FailDomainList"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

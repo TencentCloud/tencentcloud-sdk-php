@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveWorkflowDs返回参数结构体
  *
- * @method boolean getData() 获取工作流ID
- * @method void setData(boolean $Data) 设置工作流ID
+ * @method boolean getData() 获取是否删除成功
+ * @method void setData(boolean $Data) 设置是否删除成功
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class RemoveWorkflowDsResponse extends AbstractModel
 {
     /**
-     * @var boolean 工作流ID
+     * @var boolean 是否删除成功
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class RemoveWorkflowDsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Data 工作流ID
+     * @param boolean $Data 是否删除成功
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

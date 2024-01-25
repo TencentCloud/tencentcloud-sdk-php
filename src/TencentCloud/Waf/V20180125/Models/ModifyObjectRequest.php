@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getObjectId() 获取修改对象标识
  * @method void setObjectId(string $ObjectId) 设置修改对象标识
- * @method string getOpType() 获取改动作类型:Status修改开关，InstanceId绑定实例
- * @method void setOpType(string $OpType) 设置改动作类型:Status修改开关，InstanceId绑定实例
+ * @method string getOpType() 获取改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
+ * @method void setOpType(string $OpType) 设置改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
  * @method integer getStatus() 获取新的Waf开关状态，如果和已有状态相同认为修改成功
  * @method void setStatus(integer $Status) 设置新的Waf开关状态，如果和已有状态相同认为修改成功
  * @method string getInstanceId() 获取新的实例ID，如果和已绑定的实例相同认为修改成功
  * @method void setInstanceId(string $InstanceId) 设置新的实例ID，如果和已绑定的实例相同认为修改成功
+ * @method integer getProxy() 获取是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+ * @method void setProxy(integer $Proxy) 设置是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+ * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+ * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
  */
 class ModifyObjectRequest extends AbstractModel
 {
@@ -37,7 +41,7 @@ class ModifyObjectRequest extends AbstractModel
     public $ObjectId;
 
     /**
-     * @var string 改动作类型:Status修改开关，InstanceId绑定实例
+     * @var string 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
      */
     public $OpType;
 
@@ -52,10 +56,22 @@ class ModifyObjectRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+     */
+    public $Proxy;
+
+    /**
+     * @var array IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
+     */
+    public $IpHeaders;
+
+    /**
      * @param string $ObjectId 修改对象标识
-     * @param string $OpType 改动作类型:Status修改开关，InstanceId绑定实例
+     * @param string $OpType 改动作类型:Status修改开关，InstanceId绑定实例, Proxy设置代理状态
      * @param integer $Status 新的Waf开关状态，如果和已有状态相同认为修改成功
      * @param string $InstanceId 新的实例ID，如果和已绑定的实例相同认为修改成功
+     * @param integer $Proxy 是否开启代理，0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出(OpType为Status或Proxy时，该值有效)
+     * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header(OpType为Status或Proxy时，该值有效)
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class ModifyObjectRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Proxy",$param) and $param["Proxy"] !== null) {
+            $this->Proxy = $param["Proxy"];
+        }
+
+        if (array_key_exists("IpHeaders",$param) and $param["IpHeaders"] !== null) {
+            $this->IpHeaders = $param["IpHeaders"];
         }
     }
 }

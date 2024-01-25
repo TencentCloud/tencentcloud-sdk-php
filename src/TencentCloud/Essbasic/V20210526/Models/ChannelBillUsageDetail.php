@@ -71,6 +71,7 @@ use TencentCloud\Common\AbstractModel;
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
  * @method void setQuotaType(string $QuotaType) 设置查询的套餐类型
 对应关系如下:
@@ -89,6 +90,7 @@ use TencentCloud\Common\AbstractModel;
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
  * @method integer getUseCount() 获取合同使用量
 注: `如果消耗类型是撤销返还，此值为负值代表返还的合同数量`
@@ -164,6 +166,7 @@ class ChannelBillUsageDetail extends AbstractModel
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
      */
     public $QuotaType;
@@ -231,6 +234,7 @@ class ChannelBillUsageDetail extends AbstractModel
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
      * @param integer $UseCount 合同使用量
 注: `如果消耗类型是撤销返还，此值为负值代表返还的合同数量`

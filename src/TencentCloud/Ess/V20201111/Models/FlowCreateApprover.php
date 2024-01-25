@@ -256,6 +256,14 @@ use TencentCloud\Common\AbstractModel;
 <li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
 注：
 `不指定该值时，默认为签署方自行选择。`
+ * @method integer getDeadline() 获取Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+ * @method void setDeadline(integer $Deadline) 设置Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -483,6 +491,14 @@ class FlowCreateApprover extends AbstractModel
     public $SignTypeSelector;
 
     /**
+     * @var integer Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     */
+    public $Deadline;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
@@ -601,6 +617,10 @@ class FlowCreateApprover extends AbstractModel
 <li>**1**：自动按顺序首位推荐，签署方无需选择，系统会优先推荐使用第一种认证方式。</li></ul>
 注：
 `不指定该值时，默认为签署方自行选择。`
+     * @param integer $Deadline Deadline
+签署人的签署截止时间，格式为Unix标准时间戳（秒）
+
+注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
      */
     function __construct()
     {
@@ -729,6 +749,10 @@ class FlowCreateApprover extends AbstractModel
 
         if (array_key_exists("SignTypeSelector",$param) and $param["SignTypeSelector"] !== null) {
             $this->SignTypeSelector = $param["SignTypeSelector"];
+        }
+
+        if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
+            $this->Deadline = $param["Deadline"];
         }
     }
 }

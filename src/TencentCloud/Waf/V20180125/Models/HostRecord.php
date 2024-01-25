@@ -18,57 +18,117 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * clb-waf防护域名
+ * 负载均衡型WAF域名信息
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getDomainId() 获取域名ID
- * @method void setDomainId(string $DomainId) 设置域名ID
+ * @method string getDomainId() 获取域名唯一ID
+ * @method void setDomainId(string $DomainId) 设置域名唯一ID
  * @method string getMainDomain() 获取主域名，入参时为空
  * @method void setMainDomain(string $MainDomain) 设置主域名，入参时为空
- * @method integer getMode() 获取规则引擎防护模式，0 观察模式，1拦截模式
- * @method void setMode(integer $Mode) 设置规则引擎防护模式，0 观察模式，1拦截模式
- * @method integer getStatus() 获取waf和LD的绑定，0：没有绑定，1：绑定
- * @method void setStatus(integer $Status) 设置waf和LD的绑定，0：没有绑定，1：绑定
- * @method integer getState() 获取域名状态，0：正常，1：未检测到流量，2：即将过期，3：过期
- * @method void setState(integer $State) 设置域名状态，0：正常，1：未检测到流量，2：即将过期，3：过期
- * @method integer getEngine() 获取规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
- * @method void setEngine(integer $Engine) 设置规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
- * @method integer getIsCdn() 获取是否开启代理，0：不开启，1：开启
- * @method void setIsCdn(integer $IsCdn) 设置是否开启代理，0：不开启，1：开启
- * @method array getLoadBalancerSet() 获取绑定的LB列表
- * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置绑定的LB列表
- * @method string getRegion() 获取域名绑定的LB的地域，以,分割多个地域
- * @method void setRegion(string $Region) 设置域名绑定的LB的地域，以,分割多个地域
- * @method string getEdition() 获取产品分类，取值为：sparta-waf、clb-waf、cdn-waf
- * @method void setEdition(string $Edition) 设置产品分类，取值为：sparta-waf、clb-waf、cdn-waf
- * @method integer getFlowMode() 获取WAF的流量模式，1：清洗模式，0：镜像模式
- * @method void setFlowMode(integer $FlowMode) 设置WAF的流量模式，1：清洗模式，0：镜像模式
- * @method integer getClsStatus() 获取是否开启访问日志，1：开启，0：关闭
- * @method void setClsStatus(integer $ClsStatus) 设置是否开启访问日志，1：开启，0：关闭
+ * @method integer getMode() 获取规则引擎防护模式。
+0：观察模式
+1：拦截模式
+ * @method void setMode(integer $Mode) 设置规则引擎防护模式。
+0：观察模式
+1：拦截模式
+ * @method integer getStatus() 获取waf和负载均衡器的绑定关系。
+0：未绑定
+1：已绑定
+ * @method void setStatus(integer $Status) 设置waf和负载均衡器的绑定关系。
+0：未绑定
+1：已绑定
+ * @method integer getState() 获取clbwaf域名监听器状态。
+0：操作成功
+4：正在绑定LB
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+ * @method void setState(integer $State) 设置clbwaf域名监听器状态。
+0：操作成功
+4：正在绑定LB
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+ * @method integer getEngine() 获取规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
+ * @method void setEngine(integer $Engine) 设置规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
+ * @method integer getIsCdn() 获取waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+ * @method void setIsCdn(integer $IsCdn) 设置waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+ * @method array getLoadBalancerSet() 获取绑定的负载均衡器信息列表
+ * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置绑定的负载均衡器信息列表
+ * @method string getRegion() 获取域名绑定的LB的地域，以逗号分割多个地域
+ * @method void setRegion(string $Region) 设置域名绑定的LB的地域，以逗号分割多个地域
+ * @method string getEdition() 获取域名所属实例类型。负载均衡型WAF为"clb-waf"
+ * @method void setEdition(string $Edition) 设置域名所属实例类型。负载均衡型WAF为"clb-waf"
+ * @method integer getFlowMode() 获取负载均衡型WAF域名的流量模式。
+1：清洗模式
+0：镜像模式
+ * @method void setFlowMode(integer $FlowMode) 设置负载均衡型WAF域名的流量模式。
+1：清洗模式
+0：镜像模式
+ * @method integer getClsStatus() 获取是否开启访问日志。
+1：开启
+0：关闭
+ * @method void setClsStatus(integer $ClsStatus) 设置是否开启访问日志。
+1：开启
+0：关闭
  * @method integer getLevel() 获取防护等级，可选值100,200,300
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置防护等级，可选值100,200,300
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCdcClusters() 获取域名需要下发到的cdc集群列表
+ * @method array getCdcClusters() 获取域名需要下发到的cdc集群列表。仅CDC场景下填充
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCdcClusters(array $CdcClusters) 设置域名需要下发到的cdc集群列表
+ * @method void setCdcClusters(array $CdcClusters) 设置域名需要下发到的cdc集群列表。仅CDC场景下填充
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlbType() 获取应用型负载均衡类型: clb或者apisix，默认clb
+ * @method string getAlbType() 获取应用型负载均衡类型，默认clb。 
+clb：七层负载均衡器类型 
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlbType(string $AlbType) 设置应用型负载均衡类型: clb或者apisix，默认clb
+ * @method void setAlbType(string $AlbType) 设置应用型负载均衡类型，默认clb。 
+clb：七层负载均衡器类型 
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEngineType() 获取规则引擎类型， 1: menshen,   2:tiga
+ * @method integer getEngineType() 获取规则引擎类型。
+1: menshen
+2: tiga
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineType(integer $EngineType) 设置规则引擎类型， 1: menshen,   2:tiga
+ * @method void setEngineType(integer $EngineType) 设置规则引擎类型。
+1: menshen
+2: tiga
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCloudType() 获取云类型:public:公有云；private:私有云;hybrid:混合云
+ * @method string getCloudType() 获取云类型。
+public:公有云
+private:私有云
+hybrid:混合云
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCloudType(string $CloudType) 设置云类型:public:公有云；private:私有云;hybrid:混合云
+ * @method void setCloudType(string $CloudType) 设置云类型。
+public:公有云
+private:私有云
+hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNote() 获取域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNote(string $Note) 设置域名备注信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostRecord extends AbstractModel
@@ -79,7 +139,7 @@ class HostRecord extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 域名ID
+     * @var string 域名唯一ID
      */
     public $DomainId;
 
@@ -89,52 +149,73 @@ class HostRecord extends AbstractModel
     public $MainDomain;
 
     /**
-     * @var integer 规则引擎防护模式，0 观察模式，1拦截模式
+     * @var integer 规则引擎防护模式。
+0：观察模式
+1：拦截模式
      */
     public $Mode;
 
     /**
-     * @var integer waf和LD的绑定，0：没有绑定，1：绑定
+     * @var integer waf和负载均衡器的绑定关系。
+0：未绑定
+1：已绑定
      */
     public $Status;
 
     /**
-     * @var integer 域名状态，0：正常，1：未检测到流量，2：即将过期，3：过期
+     * @var integer clbwaf域名监听器状态。
+0：操作成功
+4：正在绑定LB
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
      */
     public $State;
 
     /**
-     * @var integer 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * @var integer 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
      */
     public $Engine;
 
     /**
-     * @var integer 是否开启代理，0：不开启，1：开启
+     * @var integer waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public $IsCdn;
 
     /**
-     * @var array 绑定的LB列表
+     * @var array 绑定的负载均衡器信息列表
      */
     public $LoadBalancerSet;
 
     /**
-     * @var string 域名绑定的LB的地域，以,分割多个地域
+     * @var string 域名绑定的LB的地域，以逗号分割多个地域
      */
     public $Region;
 
     /**
-     * @var string 产品分类，取值为：sparta-waf、clb-waf、cdn-waf
+     * @var string 域名所属实例类型。负载均衡型WAF为"clb-waf"
      */
     public $Edition;
 
     /**
-     * @var integer WAF的流量模式，1：清洗模式，0：镜像模式
+     * @var integer 负载均衡型WAF域名的流量模式。
+1：清洗模式
+0：镜像模式
      */
     public $FlowMode;
 
     /**
-     * @var integer 是否开启访问日志，1：开启，0：关闭
+     * @var integer 是否开启访问日志。
+1：开启
+0：关闭
      */
     public $ClsStatus;
 
@@ -145,13 +226,15 @@ class HostRecord extends AbstractModel
     public $Level;
 
     /**
-     * @var array 域名需要下发到的cdc集群列表
+     * @var array 域名需要下发到的cdc集群列表。仅CDC场景下填充
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcClusters;
 
     /**
-     * @var string 应用型负载均衡类型: clb或者apisix，默认clb
+     * @var string 应用型负载均衡类型，默认clb。 
+clb：七层负载均衡器类型 
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlbType;
@@ -163,42 +246,83 @@ class HostRecord extends AbstractModel
     public $IpHeaders;
 
     /**
-     * @var integer 规则引擎类型， 1: menshen,   2:tiga
+     * @var integer 规则引擎类型。
+1: menshen
+2: tiga
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineType;
 
     /**
-     * @var string 云类型:public:公有云；private:私有云;hybrid:混合云
+     * @var string 云类型。
+public:公有云
+private:私有云
+hybrid:混合云
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudType;
 
     /**
+     * @var string 域名备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Note;
+
+    /**
      * @param string $Domain 域名
-     * @param string $DomainId 域名ID
+     * @param string $DomainId 域名唯一ID
      * @param string $MainDomain 主域名，入参时为空
-     * @param integer $Mode 规则引擎防护模式，0 观察模式，1拦截模式
-     * @param integer $Status waf和LD的绑定，0：没有绑定，1：绑定
-     * @param integer $State 域名状态，0：正常，1：未检测到流量，2：即将过期，3：过期
-     * @param integer $Engine 规则引擎和AI引擎防护模式联合状态,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
-     * @param integer $IsCdn 是否开启代理，0：不开启，1：开启
-     * @param array $LoadBalancerSet 绑定的LB列表
-     * @param string $Region 域名绑定的LB的地域，以,分割多个地域
-     * @param string $Edition 产品分类，取值为：sparta-waf、clb-waf、cdn-waf
-     * @param integer $FlowMode WAF的流量模式，1：清洗模式，0：镜像模式
-     * @param integer $ClsStatus 是否开启访问日志，1：开启，0：关闭
+     * @param integer $Mode 规则引擎防护模式。
+0：观察模式
+1：拦截模式
+     * @param integer $Status waf和负载均衡器的绑定关系。
+0：未绑定
+1：已绑定
+     * @param integer $State clbwaf域名监听器状态。
+0：操作成功
+4：正在绑定LB
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+     * @param integer $Engine 规则引擎和AI引擎防护模式联合状态。
+1:初始状态,规则引擎拦截&&AI引擎未操作开关状态
+10：规则引擎观察&&AI引擎关闭模式 
+11：规则引擎观察&&AI引擎观察模式 
+12：规则引擎观察&&AI引擎拦截模式 
+20：规则引擎拦截&&AI引擎关闭模式 
+21：规则引擎拦截&&AI引擎观察模式 
+22：规则引擎拦截&&AI引擎拦截模式
+     * @param integer $IsCdn waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * @param array $LoadBalancerSet 绑定的负载均衡器信息列表
+     * @param string $Region 域名绑定的LB的地域，以逗号分割多个地域
+     * @param string $Edition 域名所属实例类型。负载均衡型WAF为"clb-waf"
+     * @param integer $FlowMode 负载均衡型WAF域名的流量模式。
+1：清洗模式
+0：镜像模式
+     * @param integer $ClsStatus 是否开启访问日志。
+1：开启
+0：关闭
      * @param integer $Level 防护等级，可选值100,200,300
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CdcClusters 域名需要下发到的cdc集群列表
+     * @param array $CdcClusters 域名需要下发到的cdc集群列表。仅CDC场景下填充
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlbType 应用型负载均衡类型: clb或者apisix，默认clb
+     * @param string $AlbType 应用型负载均衡类型，默认clb。 
+clb：七层负载均衡器类型 
+apisix：apisix网关型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EngineType 规则引擎类型， 1: menshen,   2:tiga
+     * @param integer $EngineType 规则引擎类型。
+1: menshen
+2: tiga
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
+     * @param string $CloudType 云类型。
+public:公有云
+private:私有云
+hybrid:混合云
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Note 域名备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +417,10 @@ class HostRecord extends AbstractModel
 
         if (array_key_exists("CloudType",$param) and $param["CloudType"] !== null) {
             $this->CloudType = $param["CloudType"];
+        }
+
+        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
+            $this->Note = $param["Note"];
         }
     }
 }

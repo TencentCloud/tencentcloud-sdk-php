@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteAll(boolean $DeleteAll) 设置是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
  * @method string getSourceType() 获取是否为多域名黑白名单
  * @method void setSourceType(string $SourceType) 设置是否为多域名黑白名单
+ * @method integer getActionType() 获取IP黑白名单类型，40为IP白名单，42为IP黑名单
+ * @method void setActionType(integer $ActionType) 设置IP黑白名单类型，40为IP白名单，42为IP黑名单
  */
 class DeleteIpAccessControlRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DeleteIpAccessControlRequest extends AbstractModel
     public $SourceType;
 
     /**
+     * @var integer IP黑白名单类型，40为IP白名单，42为IP黑名单
+     */
+    public $ActionType;
+
+    /**
      * @param string $Domain 域名
      * @param array $Items 删除的ip数组
      * @param boolean $IsId 若IsId字段为True，则Items列表元素需为Id，否则为IP
      * @param boolean $DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
      * @param string $SourceType 是否为多域名黑白名单
+     * @param integer $ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DeleteIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
             $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
+            $this->ActionType = $param["ActionType"];
         }
     }
 }

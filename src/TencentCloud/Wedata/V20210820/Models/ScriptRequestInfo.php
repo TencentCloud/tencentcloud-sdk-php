@@ -21,7 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * 开发空间-上传脚本请求
  *
  * @method string getFilePath() 获取脚本路径
+项目区1470575647377821696项目，f1目录下：
+/datastudio/project/1470575647377821696/f1/sql1234.sql
+个人区：
+/datastudio/personal/sqlTTT.sql
  * @method void setFilePath(string $FilePath) 设置脚本路径
+项目区1470575647377821696项目，f1目录下：
+/datastudio/project/1470575647377821696/f1/sql1234.sql
+个人区：
+/datastudio/personal/sqlTTT.sql
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method string getVersion() 获取脚本版本
@@ -41,6 +49,10 @@ class ScriptRequestInfo extends AbstractModel
 {
     /**
      * @var string 脚本路径
+项目区1470575647377821696项目，f1目录下：
+/datastudio/project/1470575647377821696/f1/sql1234.sql
+个人区：
+/datastudio/personal/sqlTTT.sql
      */
     public $FilePath;
 
@@ -81,6 +93,10 @@ class ScriptRequestInfo extends AbstractModel
 
     /**
      * @param string $FilePath 脚本路径
+项目区1470575647377821696项目，f1目录下：
+/datastudio/project/1470575647377821696/f1/sql1234.sql
+个人区：
+/datastudio/personal/sqlTTT.sql
      * @param string $ProjectId 项目id
      * @param string $Version 脚本版本
      * @param string $Operation 操作类型

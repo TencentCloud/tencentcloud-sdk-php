@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogTopicId(string $LogTopicId) 设置日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClsRegion() 获取CLS服务所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClsRegion(string $ClsRegion) 设置CLS服务所在地域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogToCLSConfig extends AbstractModel
 {
@@ -54,11 +58,19 @@ class LogToCLSConfig extends AbstractModel
     public $LogTopicId;
 
     /**
+     * @var string CLS服务所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClsRegion;
+
+    /**
      * @param string $Status 投递状态打开或者关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogSetId CLS日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogTopicId 日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClsRegion CLS服务所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class LogToCLSConfig extends AbstractModel
 
         if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
             $this->LogTopicId = $param["LogTopicId"];
+        }
+
+        if (array_key_exists("ClsRegion",$param) and $param["ClsRegion"] !== null) {
+            $this->ClsRegion = $param["ClsRegion"];
         }
     }
 }

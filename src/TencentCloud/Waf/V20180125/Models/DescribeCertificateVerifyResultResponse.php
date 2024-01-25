@@ -20,15 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateVerifyResult返回参数结构体
  *
- * @method integer getStatus() 获取状态码
- * @method void setStatus(integer $Status) 设置状态码
+ * @method integer getStatus() 获取状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期
+ * @method void setStatus(integer $Status) 设置状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期
  * @method array getDetail() 获取错误详情
  * @method void setDetail(array $Detail) 设置错误详情
  * @method string getNotAfter() 获取过期时间
  * @method void setNotAfter(string $NotAfter) 设置过期时间
- * @method integer getChanged() 获取证书是否改变:1有改变，0没有改变
+ * @method integer getChanged() 获取证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChanged(integer $Changed) 设置证书是否改变:1有改变，0没有改变
+ * @method void setChanged(integer $Changed) 设置证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -36,7 +48,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCertificateVerifyResultResponse extends AbstractModel
 {
     /**
-     * @var integer 状态码
+     * @var integer 状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期
      */
     public $Status;
 
@@ -51,7 +67,9 @@ class DescribeCertificateVerifyResultResponse extends AbstractModel
     public $NotAfter;
 
     /**
-     * @var integer 证书是否改变:1有改变，0没有改变
+     * @var integer 证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Changed;
@@ -62,10 +80,16 @@ class DescribeCertificateVerifyResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 状态码
+     * @param integer $Status 状态码。
+0：证书正常
+310：证书异常
+311：证书过期
+312：证书即将过期
      * @param array $Detail 错误详情
      * @param string $NotAfter 过期时间
-     * @param integer $Changed 证书是否改变:1有改变，0没有改变
+     * @param integer $Changed 证书是否改变。
+0：未变化
+1：有变化
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

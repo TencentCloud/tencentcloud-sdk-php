@@ -59,6 +59,7 @@ use TencentCloud\Common\AbstractModel;
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
  * @method void setQuotaType(string $QuotaType) 设置查询的套餐类型 （选填 ）不传则查询所有套餐；
 目前支持:
@@ -77,6 +78,7 @@ use TencentCloud\Common\AbstractModel;
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
  * @method integer getOffset() 获取指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
  * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
@@ -126,6 +128,7 @@ class ChannelDescribeBillUsageDetailRequest extends AbstractModel
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
      */
     public $QuotaType;
@@ -169,6 +172,7 @@ class ChannelDescribeBillUsageDetailRequest extends AbstractModel
 <li>**OrgEssAuth**: 签署企业实名</li>
 <li>**FlowNotify**: 短信通知</li>
 <li>**AuthService**: 企业工商信息查询</li>
+<li>**NoAuthSign**: 形式签</li>
 </ul>
      * @param integer $Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
      * @param integer $Limit 指定分页每页返回的数据条数，如果不传默认为 50，单页最大支持 50。

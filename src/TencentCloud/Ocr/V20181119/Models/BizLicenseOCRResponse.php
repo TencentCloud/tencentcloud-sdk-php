@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
 -9104 翻拍件告警
  * @method array getRecognizeWarnMsg() 获取告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+WARN_RESHOOT_CARD翻拍件告警
  * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+WARN_RESHOOT_CARD翻拍件告警
  * @method integer getIsDuplication() 获取是否为副本。1为是，-1为不是。
  * @method void setIsDuplication(integer $IsDuplication) 设置是否为副本。1为是，-1为不是。
  * @method string getRegistrationDate() 获取登记日期
@@ -127,7 +127,7 @@ class BizLicenseOCRResponse extends AbstractModel
     /**
      * @var array 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+WARN_RESHOOT_CARD翻拍件告警
      */
     public $RecognizeWarnMsg;
 
@@ -169,7 +169,7 @@ WARN_RESHOOT_SCREENED_CARD 翻拍件告警
 -9104 翻拍件告警
      * @param array $RecognizeWarnMsg 告警码说明：
 WARN_COPY_CARD 黑白复印件告警
-WARN_RESHOOT_SCREENED_CARD 翻拍件告警
+WARN_RESHOOT_CARD翻拍件告警
      * @param integer $IsDuplication 是否为副本。1为是，-1为不是。
      * @param string $RegistrationDate 登记日期
      * @param float $Angle  图片旋转角度(角度制)，文本的水平方向为0度；顺时针为正，角度范围是0-360度

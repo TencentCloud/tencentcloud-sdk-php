@@ -22,26 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
- * @method boolean getFirstLevelPull() 获取是否一级拉取
- * @method void setFirstLevelPull(boolean $FirstLevelPull) 设置是否一级拉取
+ * @method boolean getFirstLevelPull() 获取是否一级拉取 true 是 
+false 否
+ * @method void setFirstLevelPull(boolean $FirstLevelPull) 设置是否一级拉取 true 是 
+false 否
  * @method string getFolderId() 获取文件夹ID
  * @method void setFolderId(string $FolderId) 设置文件夹ID
  * @method string getWorkflowId() 获取工作流ID
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
  * @method string getKeyword() 获取关键字搜索
  * @method void setKeyword(string $Keyword) 设置关键字搜索
- * @method boolean getIncludeWorkflow() 获取是否包含工作流
- * @method void setIncludeWorkflow(boolean $IncludeWorkflow) 设置是否包含工作流
- * @method boolean getIncludeTask() 获取是否包含任务
- * @method void setIncludeTask(boolean $IncludeTask) 设置是否包含任务
+ * @method boolean getIncludeWorkflow() 获取是否包含工作流 true 是 
+false 否
+ * @method void setIncludeWorkflow(boolean $IncludeWorkflow) 设置是否包含工作流 true 是 
+false 否
+ * @method boolean getIncludeTask() 获取是否包含任务 true 是 
+false 否
+ * @method void setIncludeTask(boolean $IncludeTask) 设置是否包含任务 true 是 
+false 否
  * @method boolean getIncludeVirtualTask() 获取是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
  * @method void setIncludeVirtualTask(boolean $IncludeVirtualTask) 设置是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
  * @method string getTaskFolderId() 获取任务目录id
  * @method void setTaskFolderId(string $TaskFolderId) 设置任务目录id
  * @method string getDisplayType() 获取classification.分类展示  catalog.目录展示
  * @method void setDisplayType(string $DisplayType) 设置classification.分类展示  catalog.目录展示
- * @method boolean getIncludeTaskFolder() 获取是否包含任务目录
- * @method void setIncludeTaskFolder(boolean $IncludeTaskFolder) 设置是否包含任务目录
+ * @method boolean getIncludeTaskFolder() 获取是否包含任务目录 true 是 
+false 否
+ * @method void setIncludeTaskFolder(boolean $IncludeTaskFolder) 设置是否包含任务目录 true 是 
+false 否
  */
 class DescribeDsFolderTreeRequest extends AbstractModel
 {
@@ -51,7 +59,8 @@ class DescribeDsFolderTreeRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var boolean 是否一级拉取
+     * @var boolean 是否一级拉取 true 是 
+false 否
      */
     public $FirstLevelPull;
 
@@ -71,12 +80,14 @@ class DescribeDsFolderTreeRequest extends AbstractModel
     public $Keyword;
 
     /**
-     * @var boolean 是否包含工作流
+     * @var boolean 是否包含工作流 true 是 
+false 否
      */
     public $IncludeWorkflow;
 
     /**
-     * @var boolean 是否包含任务
+     * @var boolean 是否包含任务 true 是 
+false 否
      */
     public $IncludeTask;
 
@@ -96,22 +107,27 @@ class DescribeDsFolderTreeRequest extends AbstractModel
     public $DisplayType;
 
     /**
-     * @var boolean 是否包含任务目录
+     * @var boolean 是否包含任务目录 true 是 
+false 否
      */
     public $IncludeTaskFolder;
 
     /**
      * @param string $ProjectId 项目id
-     * @param boolean $FirstLevelPull 是否一级拉取
+     * @param boolean $FirstLevelPull 是否一级拉取 true 是 
+false 否
      * @param string $FolderId 文件夹ID
      * @param string $WorkflowId 工作流ID
      * @param string $Keyword 关键字搜索
-     * @param boolean $IncludeWorkflow 是否包含工作流
-     * @param boolean $IncludeTask 是否包含任务
+     * @param boolean $IncludeWorkflow 是否包含工作流 true 是 
+false 否
+     * @param boolean $IncludeTask 是否包含任务 true 是 
+false 否
      * @param boolean $IncludeVirtualTask 是否包含虚拟任务，当 IncludeTask 为 true 的时候，该参数才生效，默认为 true
      * @param string $TaskFolderId 任务目录id
      * @param string $DisplayType classification.分类展示  catalog.目录展示
-     * @param boolean $IncludeTaskFolder 是否包含任务目录
+     * @param boolean $IncludeTaskFolder 是否包含任务目录 true 是 
+false 否
      */
     function __construct()
     {

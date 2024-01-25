@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBatchTasks返回参数结构体
  *
- * @method integer getTotalCount() 获取数量
- * @method void setTotalCount(integer $TotalCount) 设置数量
- * @method array getBatchTaskSet() 获取任务集
+ * @method integer getTotalCount() 获取批量预测任务总数
+ * @method void setTotalCount(integer $TotalCount) 设置批量预测任务总数
+ * @method array getBatchTaskSet() 获取批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBatchTaskSet(array $BatchTaskSet) 设置任务集
+ * @method void setBatchTaskSet(array $BatchTaskSet) 设置批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBatchTasksResponse extends AbstractModel
 {
     /**
-     * @var integer 数量
+     * @var integer 批量预测任务总数
      */
     public $TotalCount;
 
     /**
-     * @var array 任务集
+     * @var array 批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchTaskSet;
@@ -48,8 +48,8 @@ class DescribeBatchTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 数量
-     * @param array $BatchTaskSet 任务集
+     * @param integer $TotalCount 批量预测任务总数
+     * @param array $BatchTaskSet 批量预测任务列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

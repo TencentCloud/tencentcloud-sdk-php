@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method HostRecord getHost() 获取编辑的域名配置信息
  * @method void setHost(HostRecord $Host) 设置编辑的域名配置信息
- * @method string getInstanceID() 获取实例id
- * @method void setInstanceID(string $InstanceID) 设置实例id
+ * @method string getInstanceID() 获取实例唯一ID
+ * @method void setInstanceID(string $InstanceID) 设置实例唯一ID
  */
 class ModifyHostRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyHostRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string 实例id
+     * @var string 实例唯一ID
      */
     public $InstanceID;
 
     /**
      * @param HostRecord $Host 编辑的域名配置信息
-     * @param string $InstanceID 实例id
+     * @param string $InstanceID 实例唯一ID
      */
     function __construct()
     {

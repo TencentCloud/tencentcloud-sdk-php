@@ -82,6 +82,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWxAccess(integer $WxAccess) 设置小程序 qps
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWxCount() 获取小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWxCount(integer $WxCount) 设置小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWxUp() 获取小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWxUp(integer $WxUp) 设置小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWxDown() 获取小程序下行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWxDown(integer $WxDown) 设置小程序下行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PeakPointsItem extends AbstractModel
 {
@@ -193,6 +205,24 @@ class PeakPointsItem extends AbstractModel
     public $WxAccess;
 
     /**
+     * @var integer 小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WxCount;
+
+    /**
+     * @var integer 小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WxUp;
+
+    /**
+     * @var integer 小程序下行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WxDown;
+
+    /**
      * @param integer $Time 秒级别时间戳
      * @param integer $Access QPS
      * @param integer $Up 上行带宽峰值，单位B
@@ -223,6 +253,12 @@ class PeakPointsItem extends AbstractModel
      * @param integer $ACL 访问控制 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WxAccess 小程序 qps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WxCount 小程序请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WxUp 小程序上行带宽峰值，单位B
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WxDown 小程序下行带宽峰值，单位B
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -312,6 +348,18 @@ class PeakPointsItem extends AbstractModel
 
         if (array_key_exists("WxAccess",$param) and $param["WxAccess"] !== null) {
             $this->WxAccess = $param["WxAccess"];
+        }
+
+        if (array_key_exists("WxCount",$param) and $param["WxCount"] !== null) {
+            $this->WxCount = $param["WxCount"];
+        }
+
+        if (array_key_exists("WxUp",$param) and $param["WxUp"] !== null) {
+            $this->WxUp = $param["WxUp"];
+        }
+
+        if (array_key_exists("WxDown",$param) and $param["WxDown"] !== null) {
+            $this->WxDown = $param["WxDown"];
         }
     }
 }

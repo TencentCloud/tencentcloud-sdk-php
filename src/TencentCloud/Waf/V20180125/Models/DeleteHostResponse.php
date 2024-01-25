@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteHost返回参数结构体
  *
- * @method ResponseCode getSuccess() 获取操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
- * @method void setSuccess(ResponseCode $Success) 设置操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+ * @method ResponseCode getSuccess() 获取域名删除结果。Code表示状态码，Message表示详细信息。
+ * @method void setSuccess(ResponseCode $Success) 设置域名删除结果。Code表示状态码，Message表示详细信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteHostResponse extends AbstractModel
 {
     /**
-     * @var ResponseCode 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+     * @var ResponseCode 域名删除结果。Code表示状态码，Message表示详细信息。
      */
     public $Success;
 
@@ -38,7 +38,7 @@ class DeleteHostResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ResponseCode $Success 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+     * @param ResponseCode $Success 域名删除结果。Code表示状态码，Message表示详细信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

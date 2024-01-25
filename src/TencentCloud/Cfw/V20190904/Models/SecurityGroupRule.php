@@ -84,6 +84,8 @@ drop：拒绝
 规则状态，true表示启用，false表示禁用
  * @method void setEnable(string $Enable) 设置（入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
+ * @method string getUid() 获取规则对应的唯一内部id
+ * @method void setUid(string $Uid) 设置规则对应的唯一内部id
  */
 class SecurityGroupRule extends AbstractModel
 {
@@ -168,6 +170,11 @@ drop：拒绝
     public $Enable;
 
     /**
+     * @var string 规则对应的唯一内部id
+     */
+    public $Uid;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板id(ipm-dyodhpby)
@@ -200,6 +207,7 @@ drop：拒绝
      * @param string $Id （入参时无需填写，自动生成）规则对应的唯一id
      * @param string $Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
+     * @param string $Uid 规则对应的唯一内部id
      */
     function __construct()
     {
@@ -260,6 +268,10 @@ drop：拒绝
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
+            $this->Uid = $param["Uid"];
         }
     }
 }

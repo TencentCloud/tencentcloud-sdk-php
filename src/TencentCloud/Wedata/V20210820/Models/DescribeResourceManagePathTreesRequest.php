@@ -29,7 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFilePath() 获取文件路径
  * @method void setFilePath(string $FilePath) 设置文件路径
  * @method string getDirType() 获取文件夹类型
+personal 个人
+project 项目
+resource 资源
  * @method void setDirType(string $DirType) 设置文件夹类型
+personal 个人
+project 项目
+resource 资源
  */
 class DescribeResourceManagePathTreesRequest extends AbstractModel
 {
@@ -55,6 +61,9 @@ class DescribeResourceManagePathTreesRequest extends AbstractModel
 
     /**
      * @var string 文件夹类型
+personal 个人
+project 项目
+resource 资源
      */
     public $DirType;
 
@@ -64,6 +73,9 @@ class DescribeResourceManagePathTreesRequest extends AbstractModel
      * @param string $FileType 文件类型
      * @param string $FilePath 文件路径
      * @param string $DirType 文件夹类型
+personal 个人
+project 项目
+resource 资源
      */
     function __construct()
     {

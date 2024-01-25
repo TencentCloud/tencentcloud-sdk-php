@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态 与Filter中一致
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAclVersion() 获取权限版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAclVersion(integer $AclVersion) 设置权限版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class User extends AbstractModel
 {
@@ -150,6 +154,12 @@ class User extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 权限版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AclVersion;
+
+    /**
      * @param string $UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      * @param string $RealName 用户姓名， 最大20个字符，不能包含空白字符
      * @param integer $Id 用户ID
@@ -171,6 +181,8 @@ class User extends AbstractModel
      * @param integer $LockStatus 锁定状态 0 - 未锁定 1 - 锁定
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态 与Filter中一致
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AclVersion 权限版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -250,6 +262,10 @@ class User extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AclVersion",$param) and $param["AclVersion"] !== null) {
+            $this->AclVersion = $param["AclVersion"];
         }
     }
 }

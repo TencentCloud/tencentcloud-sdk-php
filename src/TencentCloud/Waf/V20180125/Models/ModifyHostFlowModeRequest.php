@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getDomainId() 获取域名ID
  * @method void setDomainId(string $DomainId) 设置域名ID
- * @method integer getFlowMode() 获取WAF流量模式，1：清洗模式，0：镜像模式（默认）
- * @method void setFlowMode(integer $FlowMode) 设置WAF流量模式，1：清洗模式，0：镜像模式（默认）
+ * @method integer getFlowMode() 获取WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式
+ * @method void setFlowMode(integer $FlowMode) 设置WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式
  * @method string getInstanceID() 获取实例ID
  * @method void setInstanceID(string $InstanceID) 设置实例ID
  */
@@ -42,7 +46,9 @@ class ModifyHostFlowModeRequest extends AbstractModel
     public $DomainId;
 
     /**
-     * @var integer WAF流量模式，1：清洗模式，0：镜像模式（默认）
+     * @var integer WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式
      */
     public $FlowMode;
 
@@ -54,7 +60,9 @@ class ModifyHostFlowModeRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
-     * @param integer $FlowMode WAF流量模式，1：清洗模式，0：镜像模式（默认）
+     * @param integer $FlowMode WAF流量模式。
+0：镜像模式（默认）
+1：清洗模式
      * @param string $InstanceID 实例ID
      */
     function __construct()

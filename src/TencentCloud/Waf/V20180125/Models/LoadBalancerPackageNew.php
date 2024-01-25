@@ -41,8 +41,64 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置协议
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地区
+"多伦多": "ca",
+    "广州": "gz",
+    "成都": "cd",
+    "福州": "fzec",
+    "深圳": "szx",
+    "印度": "in",
+    "济南": "jnec",
+    "重庆": "cq",
+    "天津": "tsn",
+    "欧洲东北": "ru",
+    "南京": "nj",
+    "美国硅谷": "usw",
+    "泰国": "th",
+    "广州Open": "gzopen",
+    "深圳金融": "szjr",
+    "法兰克福": "de",
+    "日本": "jp",
+    "弗吉尼亚": "use",
+    "北京": "bj",
+    "香港": "hk",
+    "杭州": "hzec",
+    "北京金融": "bjjr",
+    "上海金融": "shjr",
+    "台北": "tpe",
+    "首尔": "kr",
+    "上海": "sh",
+    "新加坡": "sg",
+    "清远": "qy"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地区
+"多伦多": "ca",
+    "广州": "gz",
+    "成都": "cd",
+    "福州": "fzec",
+    "深圳": "szx",
+    "印度": "in",
+    "济南": "jnec",
+    "重庆": "cq",
+    "天津": "tsn",
+    "欧洲东北": "ru",
+    "南京": "nj",
+    "美国硅谷": "usw",
+    "泰国": "th",
+    "广州Open": "gzopen",
+    "深圳金融": "szjr",
+    "法兰克福": "de",
+    "日本": "jp",
+    "弗吉尼亚": "use",
+    "北京": "bj",
+    "香港": "hk",
+    "杭州": "hzec",
+    "北京金融": "bjjr",
+    "上海金融": "shjr",
+    "台北": "tpe",
+    "首尔": "kr",
+    "上海": "sh",
+    "新加坡": "sg",
+    "清远": "qy"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip() 获取接入IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +159,34 @@ class LoadBalancerPackageNew extends AbstractModel
 
     /**
      * @var string 地区
+"多伦多": "ca",
+    "广州": "gz",
+    "成都": "cd",
+    "福州": "fzec",
+    "深圳": "szx",
+    "印度": "in",
+    "济南": "jnec",
+    "重庆": "cq",
+    "天津": "tsn",
+    "欧洲东北": "ru",
+    "南京": "nj",
+    "美国硅谷": "usw",
+    "泰国": "th",
+    "广州Open": "gzopen",
+    "深圳金融": "szjr",
+    "法兰克福": "de",
+    "日本": "jp",
+    "弗吉尼亚": "use",
+    "北京": "bj",
+    "香港": "hk",
+    "杭州": "hzec",
+    "北京金融": "bjjr",
+    "上海金融": "shjr",
+    "台北": "tpe",
+    "首尔": "kr",
+    "上海": "sh",
+    "新加坡": "sg",
+    "清远": "qy"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
@@ -155,6 +239,34 @@ class LoadBalancerPackageNew extends AbstractModel
      * @param string $Protocol 协议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地区
+"多伦多": "ca",
+    "广州": "gz",
+    "成都": "cd",
+    "福州": "fzec",
+    "深圳": "szx",
+    "印度": "in",
+    "济南": "jnec",
+    "重庆": "cq",
+    "天津": "tsn",
+    "欧洲东北": "ru",
+    "南京": "nj",
+    "美国硅谷": "usw",
+    "泰国": "th",
+    "广州Open": "gzopen",
+    "深圳金融": "szjr",
+    "法兰克福": "de",
+    "日本": "jp",
+    "弗吉尼亚": "use",
+    "北京": "bj",
+    "香港": "hk",
+    "杭州": "hzec",
+    "北京金融": "bjjr",
+    "上海金融": "shjr",
+    "台北": "tpe",
+    "首尔": "kr",
+    "上海": "sh",
+    "新加坡": "sg",
+    "清远": "qy"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip 接入IP
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitTaskTestRun请求参数结构体
  *
- * @method string getTaskIds() 获取无
- * @method void setTaskIds(string $TaskIds) 设置无
- * @method string getProjectId() 获取无
- * @method void setProjectId(string $ProjectId) 设置无
- * @method string getWorkFlowId() 获取无
- * @method void setWorkFlowId(string $WorkFlowId) 设置无
- * @method string getName() 获取无
- * @method void setName(string $Name) 设置无
- * @method array getTasks() 获取无
- * @method void setTasks(array $Tasks) 设置无
- * @method string getDescription() 获取无
- * @method void setDescription(string $Description) 设置无
- * @method string getRunParams() 获取无
- * @method void setRunParams(string $RunParams) 设置无
- * @method string getScriptContent() 获取无
- * @method void setScriptContent(string $ScriptContent) 设置无
- * @method string getVersionId() 获取无
- * @method void setVersionId(string $VersionId) 设置无
+ * @method string getTaskIds() 获取taskId列表
+ * @method void setTaskIds(string $TaskIds) 设置taskId列表
+ * @method string getProjectId() 获取项目Id
+ * @method void setProjectId(string $ProjectId) 设置项目Id
+ * @method string getWorkFlowId() 获取工作流id
+ * @method void setWorkFlowId(string $WorkFlowId) 设置工作流id
+ * @method string getName() 获取工作流名称
+ * @method void setName(string $Name) 设置工作流名称
+ * @method array getTasks() 获取工作流任务列表
+ * @method void setTasks(array $Tasks) 设置工作流任务列表
+ * @method string getDescription() 获取备注
+ * @method void setDescription(string $Description) 设置备注
+ * @method string getRunParams() 获取运行参数，map的Json形式
+ * @method void setRunParams(string $RunParams) 设置运行参数，map的Json形式
+ * @method string getScriptContent() 获取脚本内容
+ * @method void setScriptContent(string $ScriptContent) 设置脚本内容
+ * @method string getVersionId() 获取版本号
+ * @method void setVersionId(string $VersionId) 设置版本号
  */
 class SubmitTaskTestRunRequest extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string taskId列表
      */
     public $TaskIds;
 
     /**
-     * @var string 无
+     * @var string 项目Id
      */
     public $ProjectId;
 
     /**
-     * @var string 无
+     * @var string 工作流id
      */
     public $WorkFlowId;
 
     /**
-     * @var string 无
+     * @var string 工作流名称
      */
     public $Name;
 
     /**
-     * @var array 无
+     * @var array 工作流任务列表
      */
     public $Tasks;
 
     /**
-     * @var string 无
+     * @var string 备注
      */
     public $Description;
 
     /**
-     * @var string 无
+     * @var string 运行参数，map的Json形式
      */
     public $RunParams;
 
     /**
-     * @var string 无
+     * @var string 脚本内容
      */
     public $ScriptContent;
 
     /**
-     * @var string 无
+     * @var string 版本号
      */
     public $VersionId;
 
     /**
-     * @param string $TaskIds 无
-     * @param string $ProjectId 无
-     * @param string $WorkFlowId 无
-     * @param string $Name 无
-     * @param array $Tasks 无
-     * @param string $Description 无
-     * @param string $RunParams 无
-     * @param string $ScriptContent 无
-     * @param string $VersionId 无
+     * @param string $TaskIds taskId列表
+     * @param string $ProjectId 项目Id
+     * @param string $WorkFlowId 工作流id
+     * @param string $Name 工作流名称
+     * @param array $Tasks 工作流任务列表
+     * @param string $Description 备注
+     * @param string $RunParams 运行参数，map的Json形式
+     * @param string $ScriptContent 脚本内容
+     * @param string $VersionId 版本号
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBatchTaskInstances请求参数结构体
  *
- * @method string getBatchTaskId() 获取跑批任务id
- * @method void setBatchTaskId(string $BatchTaskId) 设置跑批任务id
+ * @method string getBatchTaskId() 获取批量预测任务id
+ * @method void setBatchTaskId(string $BatchTaskId) 设置批量预测任务id
  */
 class DescribeBatchTaskInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 跑批任务id
+     * @var string 批量预测任务id
      */
     public $BatchTaskId;
 
     /**
-     * @param string $BatchTaskId 跑批任务id
+     * @param string $BatchTaskId 批量预测任务id
      */
     function __construct()
     {

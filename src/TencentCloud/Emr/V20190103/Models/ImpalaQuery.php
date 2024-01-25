@@ -108,6 +108,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumRowsFetchedFromCache(integer $NumRowsFetchedFromCache) 设置从缓存中获取的数据行数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPerNodePeakMemoryBytesSum() 获取单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPerNodePeakMemoryBytesSum(integer $PerNodePeakMemoryBytesSum) 设置单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImpalaQuery extends AbstractModel
 {
@@ -244,6 +252,18 @@ class ImpalaQuery extends AbstractModel
     public $NumRowsFetchedFromCache;
 
     /**
+     * @var string 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
+
+    /**
+     * @var integer 单节点内存峰值和(Bytes)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PerNodePeakMemoryBytesSum;
+
+    /**
      * @param string $Statement 执行语句
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 查询ID
@@ -287,6 +307,10 @@ class ImpalaQuery extends AbstractModel
      * @param integer $EstimatedPerHostMemBytes 预估单节点内存
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NumRowsFetchedFromCache 从缓存中获取的数据行数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PerNodePeakMemoryBytesSum 单节点内存峰值和(Bytes)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -388,6 +412,14 @@ class ImpalaQuery extends AbstractModel
 
         if (array_key_exists("NumRowsFetchedFromCache",$param) and $param["NumRowsFetchedFromCache"] !== null) {
             $this->NumRowsFetchedFromCache = $param["NumRowsFetchedFromCache"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("PerNodePeakMemoryBytesSum",$param) and $param["PerNodePeakMemoryBytesSum"] !== null) {
+            $this->PerNodePeakMemoryBytesSum = $param["PerNodePeakMemoryBytesSum"];
         }
     }
 }

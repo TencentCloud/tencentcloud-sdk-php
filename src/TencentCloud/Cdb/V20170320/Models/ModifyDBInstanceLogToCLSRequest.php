@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getLogType() 获取日志类型：error/slowLog
- * @method void setLogType(string $LogType) 设置日志类型：error/slowLog
+ * @method string getLogType() 获取日志类型：error/slowlog
+ * @method void setLogType(string $LogType) 设置日志类型：error/slowlog
  * @method string getStatus() 获取投递状态：ON/OFF
  * @method void setStatus(string $Status) 设置投递状态：ON/OFF
  * @method boolean getCreateLogset() 获取是否需要创建日志集
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置日志主题有效期，不填写时，默认30天
  * @method boolean getCreateIndex() 获取创建日志主题时，是否创建索引
  * @method void setCreateIndex(boolean $CreateIndex) 设置创建日志主题时，是否创建索引
+ * @method string getClsRegion() 获取CLS所在地域
+ * @method void setClsRegion(string $ClsRegion) 设置CLS所在地域
  */
 class ModifyDBInstanceLogToCLSRequest extends AbstractModel
 {
@@ -47,7 +49,7 @@ class ModifyDBInstanceLogToCLSRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 日志类型：error/slowLog
+     * @var string 日志类型：error/slowlog
      */
     public $LogType;
 
@@ -87,8 +89,13 @@ class ModifyDBInstanceLogToCLSRequest extends AbstractModel
     public $CreateIndex;
 
     /**
+     * @var string CLS所在地域
+     */
+    public $ClsRegion;
+
+    /**
      * @param string $InstanceId 实例ID
-     * @param string $LogType 日志类型：error/slowLog
+     * @param string $LogType 日志类型：error/slowlog
      * @param string $Status 投递状态：ON/OFF
      * @param boolean $CreateLogset 是否需要创建日志集
      * @param string $Logset 需要创建日志集时为日志集名称；选择已有日志集时，为日志集ID
@@ -96,6 +103,7 @@ class ModifyDBInstanceLogToCLSRequest extends AbstractModel
      * @param string $LogTopic 需要创建日志主题时为日志主题名称；选择已有日志主题时，为日志主题ID
      * @param integer $Period 日志主题有效期，不填写时，默认30天
      * @param boolean $CreateIndex 创建日志主题时，是否创建索引
+     * @param string $ClsRegion CLS所在地域
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ModifyDBInstanceLogToCLSRequest extends AbstractModel
 
         if (array_key_exists("CreateIndex",$param) and $param["CreateIndex"] !== null) {
             $this->CreateIndex = $param["CreateIndex"];
+        }
+
+        if (array_key_exists("ClsRegion",$param) and $param["ClsRegion"] !== null) {
+            $this->ClsRegion = $param["ClsRegion"];
         }
     }
 }

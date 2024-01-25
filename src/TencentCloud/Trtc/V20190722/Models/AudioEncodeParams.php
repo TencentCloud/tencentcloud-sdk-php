@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(integer $Channel) 设置音频声道数，取值范围[1,2]，1表示音频为单声道，2表示音频为双声道。
  * @method integer getBitRate() 获取音频码率，取值范围[8,500]，单位为kbps。
  * @method void setBitRate(integer $BitRate) 设置音频码率，取值范围[8,500]，单位为kbps。
+ * @method integer getVolume() 获取音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
+ * @method void setVolume(integer $Volume) 设置音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
  */
 class AudioEncodeParams extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AudioEncodeParams extends AbstractModel
     public $BitRate;
 
     /**
+     * @var integer 音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
+     */
+    public $Volume;
+
+    /**
      * @param integer $SampleRate 音频采样率，取值为[48000, 44100]，单位是Hz。
      * @param integer $Channel 音频声道数，取值范围[1,2]，1表示音频为单声道，2表示音频为双声道。
      * @param integer $BitRate 音频码率，取值范围[8,500]，单位为kbps。
+     * @param integer $Volume 音量，取值范围[0,300]。默认100，表示原始音量；0表示静音。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AudioEncodeParams extends AbstractModel
 
         if (array_key_exists("BitRate",$param) and $param["BitRate"] !== null) {
             $this->BitRate = $param["BitRate"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = $param["Volume"];
         }
     }
 }

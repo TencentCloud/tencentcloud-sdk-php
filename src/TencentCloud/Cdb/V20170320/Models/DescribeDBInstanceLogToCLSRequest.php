@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getClsRegion() 获取CLS服务所在地域
+ * @method void setClsRegion(string $ClsRegion) 设置CLS服务所在地域
  */
 class DescribeDBInstanceLogToCLSRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeDBInstanceLogToCLSRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string CLS服务所在地域
+     */
+    public $ClsRegion;
+
+    /**
      * @param string $InstanceId 实例ID
+     * @param string $ClsRegion CLS服务所在地域
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeDBInstanceLogToCLSRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ClsRegion",$param) and $param["ClsRegion"] !== null) {
+            $this->ClsRegion = $param["ClsRegion"];
         }
     }
 }

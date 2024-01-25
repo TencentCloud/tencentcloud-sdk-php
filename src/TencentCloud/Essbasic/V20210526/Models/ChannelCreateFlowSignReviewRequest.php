@@ -20,22 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateFlowSignReview请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
  * @method string getFlowId() 获取合同流程ID，为32位字符串。
-<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
-<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
-<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
-<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
  * @method string getReviewType() 获取企业内部审核结果
-<ul><li>PASS: 审核通过</li>
-<li>REJECT: 审核拒绝</li>
-<li>SIGN_REJECT:拒签(流程结束)</li></ul>
+<ul><li>PASS: 审核通过（流程可以继续签署或者发起）</li>
+<li>REJECT: 审核拒绝（流程状态不变，可以继续调用审核接口通过审核）</li>
+<li>SIGN_REJECT:拒签(流程终止，流程状态变为拒签状态)</li></ul>
  * @method void setReviewType(string $ReviewType) 设置企业内部审核结果
-<ul><li>PASS: 审核通过</li>
-<li>REJECT: 审核拒绝</li>
-<li>SIGN_REJECT:拒签(流程结束)</li></ul>
+<ul><li>PASS: 审核通过（流程可以继续签署或者发起）</li>
+<li>REJECT: 审核拒绝（流程状态不变，可以继续调用审核接口通过审核）</li>
+<li>SIGN_REJECT:拒签(流程终止，流程状态变为拒签状态)</li></ul>
  * @method string getReviewMessage() 获取审核结果原因
 <ul><li>字符串长度不超过200</li>
 <li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>
@@ -62,22 +74,28 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreateFlowSignReviewRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
     /**
      * @var string 合同流程ID，为32位字符串。
-<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
-<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
      */
     public $FlowId;
 
     /**
      * @var string 企业内部审核结果
-<ul><li>PASS: 审核通过</li>
-<li>REJECT: 审核拒绝</li>
-<li>SIGN_REJECT:拒签(流程结束)</li></ul>
+<ul><li>PASS: 审核通过（流程可以继续签署或者发起）</li>
+<li>REJECT: 审核拒绝（流程状态不变，可以继续调用审核接口通过审核）</li>
+<li>SIGN_REJECT:拒签(流程终止，流程状态变为拒签状态)</li></ul>
      */
     public $ReviewType;
 
@@ -106,14 +124,20 @@ class ChannelCreateFlowSignReviewRequest extends AbstractModel
     public $OperateType;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      * @param string $FlowId 合同流程ID，为32位字符串。
-<ul><li>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</li>
-<li>可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。</li></ul>
      * @param string $ReviewType 企业内部审核结果
-<ul><li>PASS: 审核通过</li>
-<li>REJECT: 审核拒绝</li>
-<li>SIGN_REJECT:拒签(流程结束)</li></ul>
+<ul><li>PASS: 审核通过（流程可以继续签署或者发起）</li>
+<li>REJECT: 审核拒绝（流程状态不变，可以继续调用审核接口通过审核）</li>
+<li>SIGN_REJECT:拒签(流程终止，流程状态变为拒签状态)</li></ul>
      * @param string $ReviewMessage 审核结果原因
 <ul><li>字符串长度不超过200</li>
 <li>当ReviewType 是拒绝（REJECT） 时此字段必填。</li>

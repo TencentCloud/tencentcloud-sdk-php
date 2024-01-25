@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnMsg(string $ReturnMsg) 设置状态信息，success：查询成功，fail：查询失败
  * @method array getSourceList() 获取安全事件来源下拉框
  * @method void setSourceList(array $SourceList) 设置安全事件来源下拉框
+ * @method array getRuleTypeDataList() 获取对应规则类型的数量，示例：[0,122,30,55,12,232,0]，封禁0个，IP地址122个，域名30个，威胁情报55个，资产实例12个，自定义策略232个，入侵防御规则0个
+ * @method void setRuleTypeDataList(array $RuleTypeDataList) 设置对应规则类型的数量，示例：[0,122,30,55,12,232,0]，封禁0个，IP地址122个，域名30个，威胁情报55个，资产实例12个，自定义策略232个，入侵防御规则0个
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeBlockIgnoreListResponse extends AbstractModel
     public $SourceList;
 
     /**
+     * @var array 对应规则类型的数量，示例：[0,122,30,55,12,232,0]，封禁0个，IP地址122个，域名30个，威胁情报55个，资产实例12个，自定义策略232个，入侵防御规则0个
+     */
+    public $RuleTypeDataList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeBlockIgnoreListResponse extends AbstractModel
      * @param integer $ReturnCode 状态值，0：查询成功，非0：查询失败
      * @param string $ReturnMsg 状态信息，success：查询成功，fail：查询失败
      * @param array $SourceList 安全事件来源下拉框
+     * @param array $RuleTypeDataList 对应规则类型的数量，示例：[0,122,30,55,12,232,0]，封禁0个，IP地址122个，域名30个，威胁情报55个，资产实例12个，自定义策略232个，入侵防御规则0个
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +117,10 @@ class DescribeBlockIgnoreListResponse extends AbstractModel
 
         if (array_key_exists("SourceList",$param) and $param["SourceList"] !== null) {
             $this->SourceList = $param["SourceList"];
+        }
+
+        if (array_key_exists("RuleTypeDataList",$param) and $param["RuleTypeDataList"] !== null) {
+            $this->RuleTypeDataList = $param["RuleTypeDataList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

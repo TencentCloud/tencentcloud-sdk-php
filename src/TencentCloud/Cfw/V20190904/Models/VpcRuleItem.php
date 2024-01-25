@@ -118,6 +118,14 @@ log：观察
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamTemplateName(string $ParamTemplateName) 设置端口协议组名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetName() 获取访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetName(string $TargetName) 设置访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSourceName() 获取访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceName(string $SourceName) 设置访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcRuleItem extends AbstractModel
 {
@@ -255,6 +263,18 @@ log：观察
     public $ParamTemplateName;
 
     /**
+     * @var string 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetName;
+
+    /**
+     * @var string 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceName;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
      * @param string $SourceType 访问源类型，类型可以为：net
@@ -303,6 +323,10 @@ log：观察
      * @param string $ParamTemplateId 端口协议组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParamTemplateName 端口协议组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetName 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceName 访问源名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -405,6 +429,14 @@ log：观察
 
         if (array_key_exists("ParamTemplateName",$param) and $param["ParamTemplateName"] !== null) {
             $this->ParamTemplateName = $param["ParamTemplateName"];
+        }
+
+        if (array_key_exists("TargetName",$param) and $param["TargetName"] !== null) {
+            $this->TargetName = $param["TargetName"];
+        }
+
+        if (array_key_exists("SourceName",$param) and $param["SourceName"] !== null) {
+            $this->SourceName = $param["SourceName"];
         }
     }
 }

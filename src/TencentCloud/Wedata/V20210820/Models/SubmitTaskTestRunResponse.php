@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitTaskTestRun返回参数结构体
  *
- * @method integer getJobId() 获取无
- * @method void setJobId(integer $JobId) 设置无
- * @method array getRecordId() 获取无
- * @method void setRecordId(array $RecordId) 设置无
+ * @method integer getJobId() 获取提交运行jobid
+ * @method void setJobId(integer $JobId) 设置提交运行jobid
+ * @method array getRecordId() 获取运行记录id
+ * @method void setRecordId(array $RecordId) 设置运行记录id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class SubmitTaskTestRunResponse extends AbstractModel
 {
     /**
-     * @var integer 无
+     * @var integer 提交运行jobid
      */
     public $JobId;
 
     /**
-     * @var array 无
+     * @var array 运行记录id
      */
     public $RecordId;
 
@@ -45,8 +45,8 @@ class SubmitTaskTestRunResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $JobId 无
-     * @param array $RecordId 无
+     * @param integer $JobId 提交运行jobid
+     * @param array $RecordId 运行记录id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

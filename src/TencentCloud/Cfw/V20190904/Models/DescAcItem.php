@@ -132,6 +132,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamTemplateId(string $ParamTemplateId) 设置协议端口组ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSourceName() 获取访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceName(string $SourceName) 设置访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetName() 获取访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetName(string $TargetName) 设置访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescAcItem extends AbstractModel
 {
@@ -308,6 +316,18 @@ class DescAcItem extends AbstractModel
     public $ParamTemplateId;
 
     /**
+     * @var string 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceName;
+
+    /**
+     * @var string 访问目的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetName;
+
+    /**
      * @param string $SourceContent 访问源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetContent 访问目的
@@ -363,6 +383,10 @@ class DescAcItem extends AbstractModel
      * @param string $ParamTemplateName 协议端口组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParamTemplateId 协议端口组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceName 访问源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetName 访问目的名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -497,6 +521,14 @@ class DescAcItem extends AbstractModel
 
         if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
             $this->ParamTemplateId = $param["ParamTemplateId"];
+        }
+
+        if (array_key_exists("SourceName",$param) and $param["SourceName"] !== null) {
+            $this->SourceName = $param["SourceName"];
+        }
+
+        if (array_key_exists("TargetName",$param) and $param["TargetName"] !== null) {
+            $this->TargetName = $param["TargetName"];
         }
     }
 }

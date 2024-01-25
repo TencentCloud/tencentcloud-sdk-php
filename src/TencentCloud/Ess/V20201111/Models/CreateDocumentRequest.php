@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+ * @method string getTemplateId() 获取用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
+ * @method void setTemplateId(string $TemplateId) 设置用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
  * @method string getFlowId() 获取合同流程ID，为32位字符串。
 此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
 此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
- * @method string getTemplateId() 获取用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
- * @method void setTemplateId(string $TemplateId) 设置用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
  * @method array getFileNames() 获取文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
  * @method void setFileNames(array $FileNames) 设置文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
  * @method array getFormFields() 获取电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
@@ -79,16 +81,17 @@ class CreateDocumentRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
+     */
+    public $TemplateId;
+
+    /**
      * @var string 合同流程ID，为32位字符串。
 此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
      */
     public $FlowId;
-
-    /**
-     * @var string 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
-     */
-    public $TemplateId;
 
     /**
      * @var array 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
@@ -136,10 +139,11 @@ class CreateDocumentRequest extends AbstractModel
 
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * @param string $TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
+
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
      * @param string $FlowId 合同流程ID，为32位字符串。
 此接口的合同流程ID需要由[创建签署流程](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)接口创建得到。
-     * @param string $TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
-可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
      * @param array $FileNames 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起。设置后流程对应的文件名称当前设置的值。
      * @param array $FormFields 电子文档的填写控件的填充内容。具体方式可以参考[FormField](https://qian.tencent.com/developers/companyApis/dataTypes/#formfield)结构体的定义。
 <ul>
@@ -179,12 +183,12 @@ class CreateDocumentRequest extends AbstractModel
             $this->Operator->deserialize($param["Operator"]);
         }
 
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
-        }
-
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("FileNames",$param) and $param["FileNames"] !== null) {

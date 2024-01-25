@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowId() 获取合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
 
 注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
+
+[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
 
 注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
+
+[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
  * @method string getPreviewUrl() 获取合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
@@ -50,9 +52,10 @@ class CreateFlowByFilesResponse extends AbstractModel
     /**
      * @var string 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
 
 注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
+
+[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      */
     public $FlowId;
 
@@ -78,9 +81,10 @@ class CreateFlowByFilesResponse extends AbstractModel
     /**
      * @param string $FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
 
 注: 如果是预览模式(即NeedPreview设置为true)时, 此处不会有值返回。
+
+[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      * @param string $PreviewUrl 合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL

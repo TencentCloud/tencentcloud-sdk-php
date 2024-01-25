@@ -70,6 +70,10 @@ Disabled：已禁用。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最后编辑时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceId() 获取资源ID，对于没有关联资源ID的，用账号主资源ID填充。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceId(string $ResourceId) 设置资源ID，对于没有关联资源ID的，用账号主资源ID填充。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SchedulesInfo extends AbstractModel
 {
@@ -143,6 +147,12 @@ Disabled：已禁用。
     public $UpdateTime;
 
     /**
+     * @var string 资源ID，对于没有关联资源ID的，用账号主资源ID填充。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceId;
+
+    /**
      * @param integer $ScheduleId 编排唯一标识。
      * @param string $ScheduleName 编排名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,6 +177,8 @@ Disabled：已禁用。
      * @param string $CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最后编辑时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceId 资源ID，对于没有关联资源ID的，用账号主资源ID填充。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -232,6 +244,10 @@ Disabled：已禁用。
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

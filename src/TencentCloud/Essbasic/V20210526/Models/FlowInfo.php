@@ -32,10 +32,16 @@ use TencentCloud\Common\AbstractModel;
 如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
  * @method void setTemplateId(string $TemplateId) 设置用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
 如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
  * @method array getFlowApprovers() 获取多个签署人信息，最大支持50个签署方
  * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息，最大支持50个签署方
  * @method array getFormFields() 获取发起方角色的填写控件的填充内容。
@@ -144,6 +150,9 @@ class FlowInfo extends AbstractModel
 如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
      */
     public $TemplateId;
 
@@ -244,6 +253,9 @@ class FlowInfo extends AbstractModel
 如果使用模板发起接口，此参数为必填。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在**企业模板**中得到合同模板ID。
+
+[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+
      * @param array $FlowApprovers 多个签署人信息，最大支持50个签署方
      * @param array $FormFields 发起方角色的填写控件的填充内容。
 

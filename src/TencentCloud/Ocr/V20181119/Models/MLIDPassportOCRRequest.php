@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
  * @method boolean getRetImage() 获取是否返回图片，默认false
  * @method void setRetImage(boolean $RetImage) 设置是否返回图片，默认false
+ * @method string getImageUrl() 获取图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
+建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+ * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
+建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
  */
 class MLIDPassportOCRRequest extends AbstractModel
 {
@@ -38,8 +42,16 @@ class MLIDPassportOCRRequest extends AbstractModel
     public $RetImage;
 
     /**
+     * @var string 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
+建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
+     */
+    public $ImageUrl;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
      * @param boolean $RetImage 是否返回图片，默认false
+     * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
+建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class MLIDPassportOCRRequest extends AbstractModel
 
         if (array_key_exists("RetImage",$param) and $param["RetImage"] !== null) {
             $this->RetImage = $param["RetImage"];
+        }
+
+        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
+            $this->ImageUrl = $param["ImageUrl"];
         }
     }
 }

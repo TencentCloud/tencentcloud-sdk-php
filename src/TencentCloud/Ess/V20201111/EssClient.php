@@ -540,8 +540,8 @@ use TencentCloud\Ess\V20201111\Models as Models;
 | ------------ | ------------ | ------------ |
 | 腾讯电子签（正式版） | wxa023b292fd19d41d | gh_da88f6188665 |
 | 腾讯电子签Demo | wx371151823f6f3edf | gh_39a5d3de69fa |
- * @method Models\ModifyFlowDeadlineResponse ModifyFlowDeadline(Models\ModifyFlowDeadlineRequest $req) 在已发起的签署流程中，我们支持对签署截止日期进行延期操作，主要涉及以下两个维度：
-1. 合同（流程）维度：只需要传递流程ID，无需传递签署人ID。这将对尚未设定签署截止时间的合同（流程）和发起合同（流程）时的签署人进行延期操作。
+ * @method Models\ModifyFlowDeadlineResponse ModifyFlowDeadline(Models\ModifyFlowDeadlineRequest $req) 在已发起的签署流程中，支持对签署截止日期进行延期操作，主要涉及以下两个维度：
+1. 合同（流程）维度：只需要传递签署流程ID。这将对签署流程和发起时未单独设定签署截止时间的签署人进行延期操作。
 2. 签署人维度：需要传递流程ID和签署人ID。此操作将对签署人进行延期操作，尤其对于有序的合同（流程），签署截止时间不能超过后一位合同（流程）签署人的流程截止时间。
 
 此接口有如下限制条件：

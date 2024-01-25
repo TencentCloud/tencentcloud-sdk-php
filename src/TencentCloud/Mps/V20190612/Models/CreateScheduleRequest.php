@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 如果不填，表示与触发文件所在的目录一致。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知配置，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知配置，不填代表不获取事件通知。
+ * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+ * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
  */
 class CreateScheduleRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ class CreateScheduleRequest extends AbstractModel
     public $TaskNotifyConfig;
 
     /**
+     * @var string 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     */
+    public $ResourceId;
+
+    /**
      * @param string $ScheduleName 编排名称，最多128字符。同一个用户该名称唯一。
      * @param WorkflowTrigger $Trigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
      * @param array $Activities 编排任务列表。
@@ -76,6 +83,7 @@ class CreateScheduleRequest extends AbstractModel
      * @param string $OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
 如果不填，表示与触发文件所在的目录一致。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知配置，不填代表不获取事件通知。
+     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateScheduleRequest extends AbstractModel
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
             $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

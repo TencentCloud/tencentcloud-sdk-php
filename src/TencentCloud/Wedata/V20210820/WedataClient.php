@@ -59,6 +59,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\BatchUpdateIntegrationTasksResponse BatchUpdateIntegrationTasks(Models\BatchUpdateIntegrationTasksRequest $req) 批量更新集成任务（暂时仅支持批量更新责任人）
  * @method Models\BatchUpdateTasksDsResponse BatchUpdateTasksDs(Models\BatchUpdateTasksDsRequest $req) 批量更新任务Ds
  * @method Models\CheckAlarmRegularNameExistResponse CheckAlarmRegularNameExist(Models\CheckAlarmRegularNameExistRequest $req) 判断告警规则重名
+ * @method Models\CheckCustomFunctionPremiseResponse CheckCustomFunctionPremise(Models\CheckCustomFunctionPremiseRequest $req) 新建用户自定义函数组件检查
  * @method Models\CheckDuplicateRuleNameResponse CheckDuplicateRuleName(Models\CheckDuplicateRuleNameRequest $req) 检查规则名称是否重复
  * @method Models\CheckDuplicateTemplateNameResponse CheckDuplicateTemplateName(Models\CheckDuplicateTemplateNameRequest $req) 检查规则模板名称是否重复
  * @method Models\CheckIntegrationNodeNameExistsResponse CheckIntegrationNodeNameExists(Models\CheckIntegrationNodeNameExistsRequest $req) 判断集成节点名称是否存在
@@ -66,13 +67,18 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CheckTaskNameExistResponse CheckTaskNameExist(Models\CheckTaskNameExistRequest $req) 离线任务重名校验
  * @method Models\CheckTaskNameExistDsResponse CheckTaskNameExistDs(Models\CheckTaskNameExistDsRequest $req) 检查任务名称是否重复
  * @method Models\CheckTaskPriorityDsResponse CheckTaskPriorityDs(Models\CheckTaskPriorityDsRequest $req) 检查操作用户对所选任务是否有操作权限, 用于新建跨工作流任务场景中展示审批提示操作
+ * @method Models\ClearRecycleTaskResponse ClearRecycleTask(Models\ClearRecycleTaskRequest $req) 清空回收站任务
  * @method Models\CommitExportTaskResponse CommitExportTask(Models\CommitExportTaskRequest $req) 提交数据导出任务
  * @method Models\CommitIntegrationTaskResponse CommitIntegrationTask(Models\CommitIntegrationTaskRequest $req) 提交集成任务
  * @method Models\CommitRuleGroupExecResultResponse CommitRuleGroupExecResult(Models\CommitRuleGroupExecResultRequest $req) Runner 规则检测结果上报
  * @method Models\CommitRuleGroupTaskResponse CommitRuleGroupTask(Models\CommitRuleGroupTaskRequest $req) 提交规则组运行任务接口
+ * @method Models\CommitWorkflowResponse CommitWorkflow(Models\CommitWorkflowRequest $req) 工作流版本提交
+ * @method Models\CompareDsTaskVersionInfoResponse CompareDsTaskVersionInfo(Models\CompareDsTaskVersionInfoRequest $req) 对比任务版本
  * @method Models\CopyTaskDsResponse CopyTaskDs(Models\CopyTaskDsRequest $req) 复制任务Ds
+ * @method Models\CopyWorkflowDsResponse CopyWorkflowDs(Models\CopyWorkflowDsRequest $req) 复制工作流
  * @method Models\CountOpsInstanceStateResponse CountOpsInstanceState(Models\CountOpsInstanceStateRequest $req) 统计任务实例状态
  * @method Models\CreateBaselineResponse CreateBaseline(Models\CreateBaselineRequest $req) 创建基线
+ * @method Models\CreateBrowsingHistoryResponse CreateBrowsingHistory(Models\CreateBrowsingHistoryRequest $req) 创建用户数据开发浏览历史
  * @method Models\CreateCustomFunctionResponse CreateCustomFunction(Models\CreateCustomFunctionRequest $req) 创建用户自定义函数
  * @method Models\CreateDataSourceResponse CreateDataSource(Models\CreateDataSourceRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建数据源
@@ -85,11 +91,13 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateInLongAgentResponse CreateInLongAgent(Models\CreateInLongAgentRequest $req) 注册采集器
  * @method Models\CreateIntegrationNodeResponse CreateIntegrationNode(Models\CreateIntegrationNodeRequest $req) 创建集成节点
  * @method Models\CreateIntegrationTaskResponse CreateIntegrationTask(Models\CreateIntegrationTaskRequest $req) 创建集成任务
+ * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req) 创建任务连接
  * @method Models\CreateOfflineTaskResponse CreateOfflineTask(Models\CreateOfflineTaskRequest $req) 创建离线任务
  * @method Models\CreateOpsMakePlanResponse CreateOpsMakePlan(Models\CreateOpsMakePlanRequest $req) 补录任务
  * @method Models\CreateOrUpdateResourceResponse CreateOrUpdateResource(Models\CreateOrUpdateResourceRequest $req) 资源管理需要先将资源上传到cos中，然后调用该接口，将cos资源绑定到wedata
  * @method Models\CreatePathResponse CreatePath(Models\CreatePathRequest $req) 新建文件夹
  * @method Models\CreateProjectParamDsResponse CreateProjectParamDs(Models\CreateProjectParamDsRequest $req) 创建项目参数
+ * @method Models\CreateResourceDirectoryResponse CreateResourceDirectory(Models\CreateResourceDirectoryRequest $req) 资源管理-创建资源目录
  * @method Models\CreateResourcePathResponse CreateResourcePath(Models\CreateResourcePathRequest $req) 文件路径的根目录为 /datastudio/resource，如果要在根目录下创建 aaa 文件夹，FilePath的值应该为 /datastudio/resource，如果根目录下已经创建了 aaa 文件夹，要在 aaa 下创建  bbb 文件夹，FilePath的值应该为 /datastudio/resource/aaa
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) 创建质量规则接口
  * @method Models\CreateRuleTemplateResponse CreateRuleTemplate(Models\CreateRuleTemplateRequest $req) 创建规则模版
@@ -107,14 +115,18 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateTaskVersionDsResponse CreateTaskVersionDs(Models\CreateTaskVersionDsRequest $req) 创建任务版本
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建工作流
+ * @method Models\CreateWorkflowDsResponse CreateWorkflowDs(Models\CreateWorkflowDsRequest $req) 创建工作流
  * @method Models\DagInstancesResponse DagInstances(Models\DagInstancesRequest $req) 拉取dag实例
  * @method Models\DeleteBaselineResponse DeleteBaseline(Models\DeleteBaselineRequest $req) DeleteBaseline
+ * @method Models\DeleteBatchWorkflowDsResponse DeleteBatchWorkflowDs(Models\DeleteBatchWorkflowDsRequest $req) 批量删除工作流
  * @method Models\DeleteCustomFunctionResponse DeleteCustomFunction(Models\DeleteCustomFunctionRequest $req) 删除用户自定义函数
  * @method Models\DeleteDataSourcesResponse DeleteDataSources(Models\DeleteDataSourcesRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 删除数据源
+ * @method Models\DeleteDsEventResponse DeleteDsEvent(Models\DeleteDsEventRequest $req) 删除事件
  * @method Models\DeleteDsEventListenerResponse DeleteDsEventListener(Models\DeleteDsEventListenerRequest $req) 删除事件监听者
  * @method Models\DeleteDsEventPublisherResponse DeleteDsEventPublisher(Models\DeleteDsEventPublisherRequest $req) 删除事件发布者
  * @method Models\DeleteDsFolderResponse DeleteDsFolder(Models\DeleteDsFolderRequest $req) 编排空间-删除文件夹
+ * @method Models\DeleteEventListenerByTaskIdResponse DeleteEventListenerByTaskId(Models\DeleteEventListenerByTaskIdRequest $req) 通过任务ID删除所有事件
  * @method Models\DeleteFileResponse DeleteFile(Models\DeleteFileRequest $req) 删除文件
  * @method Models\DeleteFilePathResponse DeleteFilePath(Models\DeleteFilePathRequest $req) 开发空间-批量删除目录和文件
  * @method Models\DeleteFolderResponse DeleteFolder(Models\DeleteFolderRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
@@ -127,9 +139,12 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DeleteProjectParamDsResponse DeleteProjectParamDs(Models\DeleteProjectParamDsRequest $req) 删除项目参数
  * @method Models\DeleteProjectParamVersionDsResponse DeleteProjectParamVersionDs(Models\DeleteProjectParamVersionDsRequest $req) 删除项目参数版本
  * @method Models\DeleteProjectUsersResponse DeleteProjectUsers(Models\DeleteProjectUsersRequest $req) 删除项目用户
+ * @method Models\DeleteRecordListResponse DeleteRecordList(Models\DeleteRecordListRequest $req) 批量删除任务提交记录列表
+ * @method Models\DeleteRecycleTaskResponse DeleteRecycleTask(Models\DeleteRecycleTaskRequest $req) 删除回收站任务
  * @method Models\DeleteResourceResponse DeleteResource(Models\DeleteResourceRequest $req) 资源管理删除资源
  * @method Models\DeleteResourceFileResponse DeleteResourceFile(Models\DeleteResourceFileRequest $req) 资源管理-删除资源文件
  * @method Models\DeleteResourceFilesResponse DeleteResourceFiles(Models\DeleteResourceFilesRequest $req) 资源管理-批量删除资源文件
+ * @method Models\DeleteResourcePathResponse DeleteResourcePath(Models\DeleteResourcePathRequest $req) 资源管理-删除资源目录
  * @method Models\DeleteRuleResponse DeleteRule(Models\DeleteRuleRequest $req) 删除质量规则接口
  * @method Models\DeleteRuleTemplateResponse DeleteRuleTemplate(Models\DeleteRuleTemplateRequest $req) 删除规则模版
  * @method Models\DeleteTaskAlarmRegularResponse DeleteTaskAlarmRegular(Models\DeleteTaskAlarmRegularRequest $req) 删除任务告警规则
@@ -144,6 +159,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeAlarmEventsResponse DescribeAlarmEvents(Models\DescribeAlarmEventsRequest $req) 告警事件列表
  * @method Models\DescribeAlarmReceiverResponse DescribeAlarmReceiver(Models\DescribeAlarmReceiverRequest $req) 告警接收人详情
  * @method Models\DescribeAllByFolderNewResponse DescribeAllByFolderNew(Models\DescribeAllByFolderNewRequest $req) 查询父目录下所有子文件夹+工作流
+ * @method Models\DescribeAllParamDsResponse DescribeAllParamDs(Models\DescribeAllParamDsRequest $req) 查询所有参数
  * @method Models\DescribeAllTaskTypeResponse DescribeAllTaskType(Models\DescribeAllTaskTypeRequest $req) 获取所有任务类型
  * @method Models\DescribeAllUsedVersionSonResponse DescribeAllUsedVersionSon(Models\DescribeAllUsedVersionSonRequest $req) 根据任务Id查找生产态子任务
  * @method Models\DescribeApproveListResponse DescribeApproveList(Models\DescribeApproveListRequest $req) 获取待审批列表
@@ -155,6 +171,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeBaselineInstancesResponse DescribeBaselineInstances(Models\DescribeBaselineInstancesRequest $req) 查询基线实例列表
  * @method Models\DescribeBaselinesResponse DescribeBaselines(Models\DescribeBaselinesRequest $req) 基线列表
  * @method Models\DescribeBatchOperateTaskResponse DescribeBatchOperateTask(Models\DescribeBatchOperateTaskRequest $req) 批量操作任务列表
+ * @method Models\DescribeBatchTestRunResponse DescribeBatchTestRun(Models\DescribeBatchTestRunRequest $req) 批量获取etl测试运行任务执行状态和日志
  * @method Models\DescribeBelongToResponse DescribeBelongTo(Models\DescribeBelongToRequest $req) 智能运维-事件列表-所属任务/基线过滤列表
  * @method Models\DescribeBrowsingHistoriesResponse DescribeBrowsingHistories(Models\DescribeBrowsingHistoriesRequest $req) 查询用户数据开发浏览历史
  * @method Models\DescribeChildrenDsResponse DescribeChildrenDs(Models\DescribeChildrenDsRequest $req) 查询子任务信息Ds
@@ -170,6 +187,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeColumnLineageResponse DescribeColumnLineage(Models\DescribeColumnLineageRequest $req) 列出字段血缘信息
  * @method Models\DescribeColumnsMetaResponse DescribeColumnsMeta(Models\DescribeColumnsMetaRequest $req) 查询表的所有列元数据
  * @method Models\DescribeCrontabTopNDsResponse DescribeCrontabTopNDs(Models\DescribeCrontabTopNDsRequest $req) 获取 crontab topN 个数据时间周期
+ * @method Models\DescribeCustomFunctionVersionListResponse DescribeCustomFunctionVersionList(Models\DescribeCustomFunctionVersionListRequest $req) 查询函数版本列表
  * @method Models\DescribeDataBasesResponse DescribeDataBases(Models\DescribeDataBasesRequest $req) 查询数据来源列表
  * @method Models\DescribeDataCheckStatResponse DescribeDataCheckStat(Models\DescribeDataCheckStatRequest $req) 数据质量的概览页面数据监测情况接口
  * @method Models\DescribeDataDevelopTaskTypeResponse DescribeDataDevelopTaskType(Models\DescribeDataDevelopTaskTypeRequest $req) 获取数据开发任务类型
@@ -179,6 +197,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 数据源详情
  * @method Models\DescribeDataSourceWithoutInfoResponse DescribeDataSourceWithoutInfo(Models\DescribeDataSourceWithoutInfoRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 数据源列表
+ * @method Models\DescribeDataTableImportProgressResponse DescribeDataTableImportProgress(Models\DescribeDataTableImportProgressRequest $req) 获取数据表导入状态
  * @method Models\DescribeDataTypesResponse DescribeDataTypes(Models\DescribeDataTypesRequest $req) 获取字段类型列表
  * @method Models\DescribeDatabaseInfoListResponse DescribeDatabaseInfoList(Models\DescribeDatabaseInfoListRequest $req) 获取数据库信息
  * @method Models\DescribeDatabaseMetasResponse DescribeDatabaseMetas(Models\DescribeDatabaseMetasRequest $req) 查询数据库列表
@@ -199,9 +218,18 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeDrInstanceScriptContentResponse DescribeDrInstanceScriptContent(Models\DescribeDrInstanceScriptContentRequest $req) 查询试运行实例执行内容
  * @method Models\DescribeDrSonInstanceResponse DescribeDrSonInstance(Models\DescribeDrSonInstanceRequest $req) 查询试运行实例子实例列表
  * @method Models\DescribeDsEventResponse DescribeDsEvent(Models\DescribeDsEventRequest $req) 分页查询事件
+ * @method Models\DescribeDsEventDetailResponse DescribeDsEventDetail(Models\DescribeDsEventDetailRequest $req) 事件管理-查询事件详情
+ * @method Models\DescribeDsEventListenerResponse DescribeDsEventListener(Models\DescribeDsEventListenerRequest $req) 查询事件监听者信息
+ * @method Models\DescribeDsEventListenerListResponse DescribeDsEventListenerList(Models\DescribeDsEventListenerListRequest $req) 查询事件监听者列表
+ * @method Models\DescribeDsEventPublisherResponse DescribeDsEventPublisher(Models\DescribeDsEventPublisherRequest $req) 查询事件发布者信息
+ * @method Models\DescribeDsEventPublisherListResponse DescribeDsEventPublisherList(Models\DescribeDsEventPublisherListRequest $req) 查询事件发布者列表
  * @method Models\DescribeDsFolderTreeResponse DescribeDsFolderTree(Models\DescribeDsFolderTreeRequest $req) 查询目录树
  * @method Models\DescribeDsKettleServerFolderTreeResponse DescribeDsKettleServerFolderTree(Models\DescribeDsKettleServerFolderTreeRequest $req) 查询 kettle 资源服务器目录树
+ * @method Models\DescribeDsLatestTaskVersionInfoResponse DescribeDsLatestTaskVersionInfo(Models\DescribeDsLatestTaskVersionInfoRequest $req) 获取任务最新版本
+ * @method Models\DescribeDsNotSubmitTasksAndCanRunByWorkflowResponse DescribeDsNotSubmitTasksAndCanRunByWorkflow(Models\DescribeDsNotSubmitTasksAndCanRunByWorkflowRequest $req) 根据工作流id查询保存未提交任务
  * @method Models\DescribeDsParentFolderTreeResponse DescribeDsParentFolderTree(Models\DescribeDsParentFolderTreeRequest $req) 查询父目录树，用于工作流、任务定位
+ * @method Models\DescribeDsTaskVersionInfoResponse DescribeDsTaskVersionInfo(Models\DescribeDsTaskVersionInfoRequest $req) 查看任务版本详细信息
+ * @method Models\DescribeDsTaskVersionListResponse DescribeDsTaskVersionList(Models\DescribeDsTaskVersionListRequest $req) 拉取任务版本列表
  * @method Models\DescribeEtlTaskTypeResponse DescribeEtlTaskType(Models\DescribeEtlTaskTypeRequest $req) 获取数据同步任务类型
  * @method Models\DescribeEventResponse DescribeEvent(Models\DescribeEventRequest $req) 根据项目ID和事件名称查看事件详情
  * @method Models\DescribeEventCasesResponse DescribeEventCases(Models\DescribeEventCasesRequest $req) 根据条件查找事件实例
@@ -213,15 +241,18 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeEventTypesResponse DescribeEventTypes(Models\DescribeEventTypesRequest $req) 查询事件类型列表
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 智能运维事件查询列表
  * @method Models\DescribeExecStrategyResponse DescribeExecStrategy(Models\DescribeExecStrategyRequest $req) 查询规则组执行策略
+ * @method Models\DescribeExecutionLogResponse DescribeExecutionLog(Models\DescribeExecutionLogRequest $req) 获取执行日志
  * @method Models\DescribeFatherDatasourceInfoDsResponse DescribeFatherDatasourceInfoDs(Models\DescribeFatherDatasourceInfoDsRequest $req) 查询父任务数据源信息Ds
  * @method Models\DescribeFathersResponse DescribeFathers(Models\DescribeFathersRequest $req) 获取关联父实例
  * @method Models\DescribeFieldBasicInfoResponse DescribeFieldBasicInfo(Models\DescribeFieldBasicInfoRequest $req) 元数据模型-字段基础信息查询接口
+ * @method Models\DescribeFileVersionsResponse DescribeFileVersions(Models\DescribeFileVersionsRequest $req) 查询开发空间版本列表
  * @method Models\DescribeFolderListResponse DescribeFolderList(Models\DescribeFolderListRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 拉取文件夹目录
  * @method Models\DescribeFolderWorkflowListResponse DescribeFolderWorkflowList(Models\DescribeFolderWorkflowListRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 拉取文件夹下的工作流
  * @method Models\DescribeFunctionKindsResponse DescribeFunctionKinds(Models\DescribeFunctionKindsRequest $req) 查询函数分类
  * @method Models\DescribeFunctionTypesResponse DescribeFunctionTypes(Models\DescribeFunctionTypesRequest $req) 查询函数类型
+ * @method Models\DescribeGlobalWorkflowDsResponse DescribeGlobalWorkflowDs(Models\DescribeGlobalWorkflowDsRequest $req) 获取全局工作流信息，用于跨工作流节点拉取租户所有工作流列表
  * @method Models\DescribeImportableOfflineTaskResponse DescribeImportableOfflineTask(Models\DescribeImportableOfflineTaskRequest $req) 查询可导入的集成任务
  * @method Models\DescribeInLongAgentListResponse DescribeInLongAgentList(Models\DescribeInLongAgentListRequest $req) 获取采集器列表
  * @method Models\DescribeInLongAgentTaskListResponse DescribeInLongAgentTaskList(Models\DescribeInLongAgentTaskListRequest $req) 查询采集器关联的任务列表
@@ -252,6 +283,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfo(Models\DescribeIntegrationVersionNodesInfoRequest $req) 查询集成任务版本节点信息
  * @method Models\DescribeLockResponse DescribeLock(Models\DescribeLockRequest $req) 获取协同编辑资源锁
  * @method Models\DescribeMonitorsByPageResponse DescribeMonitorsByPage(Models\DescribeMonitorsByPageRequest $req) 分页查询质量监控组
+ * @method Models\DescribeNewSqlTaskResultResponse DescribeNewSqlTaskResult(Models\DescribeNewSqlTaskResultRequest $req) 新获取SQL执行结果
  * @method Models\DescribeOfflineTaskTokenResponse DescribeOfflineTaskToken(Models\DescribeOfflineTaskTokenRequest $req) 获取离线任务长连接Token
  * @method Models\DescribeOperateOpsTaskDatasourceResponse DescribeOperateOpsTaskDatasource(Models\DescribeOperateOpsTaskDatasourceRequest $req) 任务运维搜索 查询生产态任务数据源列表
  * @method Models\DescribeOperateOpsTaskDatasourceTypeResponse DescribeOperateOpsTaskDatasourceType(Models\DescribeOperateOpsTaskDatasourceTypeRequest $req) 任务运维-查询生产态任务数据源类型列表
@@ -266,14 +298,20 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeParentTaskResponse DescribeParentTask(Models\DescribeParentTaskRequest $req) 查询任务父依赖
  * @method Models\DescribePathTreesResponse DescribePathTrees(Models\DescribePathTreesRequest $req) 开发空间-拉取完整目录树
  * @method Models\DescribeProdTasksResponse DescribeProdTasks(Models\DescribeProdTasksRequest $req) 数据质量获取生产调度任务列表
+ * @method Models\DescribeProdWorkflowCanvasInfoDsResponse DescribeProdWorkflowCanvasInfoDs(Models\DescribeProdWorkflowCanvasInfoDsRequest $req) 获取工作流画布信息
  * @method Models\DescribeProjectResponse DescribeProject(Models\DescribeProjectRequest $req) 获取项目信息
+ * @method Models\DescribeProjectParamDsResponse DescribeProjectParamDs(Models\DescribeProjectParamDsRequest $req) 查询项目全局参数
  * @method Models\DescribeProjectParamDsPageResponse DescribeProjectParamDsPage(Models\DescribeProjectParamDsPageRequest $req) 查询项目全局参数
+ * @method Models\DescribeProjectParamVersionDsResponse DescribeProjectParamVersionDs(Models\DescribeProjectParamVersionDsRequest $req) 查询项目参数历史版本
  * @method Models\DescribeProjectParamVersionInfoDsResponse DescribeProjectParamVersionInfoDs(Models\DescribeProjectParamVersionInfoDsRequest $req) 拉取项目参数版本详情
  * @method Models\DescribeQualityScoreResponse DescribeQualityScore(Models\DescribeQualityScoreRequest $req) 质量报告-质量评分
  * @method Models\DescribeQualityScoreTrendResponse DescribeQualityScoreTrend(Models\DescribeQualityScoreTrendRequest $req) 质量报告-质量分周期趋势
  * @method Models\DescribeRealTimeTaskInstanceNodeInfoResponse DescribeRealTimeTaskInstanceNodeInfo(Models\DescribeRealTimeTaskInstanceNodeInfoRequest $req) 查询实时任务实例节点信息
  * @method Models\DescribeRealTimeTaskMetricOverviewResponse DescribeRealTimeTaskMetricOverview(Models\DescribeRealTimeTaskMetricOverviewRequest $req) 实时任务运行指标概览
  * @method Models\DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeed(Models\DescribeRealTimeTaskSpeedRequest $req) 实时任务同步速度趋势
+ * @method Models\DescribeRecordListResponse DescribeRecordList(Models\DescribeRecordListRequest $req) 即席分析-获取任务列表
+ * @method Models\DescribeRecycleTaskDetailResponse DescribeRecycleTaskDetail(Models\DescribeRecycleTaskDetailRequest $req) 获取回收站任务详情
+ * @method Models\DescribeRecycleTaskListResponse DescribeRecycleTaskList(Models\DescribeRecycleTaskListRequest $req) 查询回收站任务列表
  * @method Models\DescribeRelatedInstancesResponse DescribeRelatedInstances(Models\DescribeRelatedInstancesRequest $req) 查询任务实例的关联实例列表
  * @method Models\DescribeResourceManagePathTreesResponse DescribeResourceManagePathTrees(Models\DescribeResourceManagePathTreesRequest $req) 获取资源管理目录树
  * @method Models\DescribeRuleResponse DescribeRule(Models\DescribeRuleRequest $req) 查询规则详情
@@ -310,6 +348,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeSchedulerTaskTypeCntResponse DescribeSchedulerTaskTypeCnt(Models\DescribeSchedulerTaskTypeCntRequest $req) 运维大屏-任务状态分布
  * @method Models\DescribeScriptsImportTaskTypeResponse DescribeScriptsImportTaskType(Models\DescribeScriptsImportTaskTypeRequest $req) 获取脚本导出任务类型
  * @method Models\DescribeSonInstancesResponse DescribeSonInstances(Models\DescribeSonInstancesRequest $req) 获取关联子实例
+ * @method Models\DescribeSqlTaskResultResponse DescribeSqlTaskResult(Models\DescribeSqlTaskResultRequest $req) 获取SQL执行结果
  * @method Models\DescribeStandardRuleDetailInfoListResponse DescribeStandardRuleDetailInfoList(Models\DescribeStandardRuleDetailInfoListRequest $req) 获取数据标准规则详情
  * @method Models\DescribeStatisticInstanceStatusTrendOpsResponse DescribeStatisticInstanceStatusTrendOps(Models\DescribeStatisticInstanceStatusTrendOpsRequest $req) 任务状态趋势
  * @method Models\DescribeStreamTaskLogListResponse DescribeStreamTaskLogList(Models\DescribeStreamTaskLogListRequest $req) 查询实时任务日志列表
@@ -331,13 +370,16 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 查询任务具体详情
  * @method Models\DescribeTaskDetailDsResponse DescribeTaskDetailDs(Models\DescribeTaskDetailDsRequest $req) 查询任务具体详情Ds
+ * @method Models\DescribeTaskInParamDsResponse DescribeTaskInParamDs(Models\DescribeTaskInParamDsRequest $req) 查询任务输入参数
  * @method Models\DescribeTaskInstanceResponse DescribeTaskInstance(Models\DescribeTaskInstanceRequest $req) 离线任务实例详情
  * @method Models\DescribeTaskInstanceReportDetailResponse DescribeTaskInstanceReportDetail(Models\DescribeTaskInstanceReportDetailRequest $req) 离线任务实例统计明细
  * @method Models\DescribeTaskInstancesResponse DescribeTaskInstances(Models\DescribeTaskInstancesRequest $req) 查询任务实例列表
  * @method Models\DescribeTaskLatestRunTimeResponse DescribeTaskLatestRunTime(Models\DescribeTaskLatestRunTimeRequest $req) 通过指定基准时间，计算出最近一次任务基于该基准时间的运行时间
  * @method Models\DescribeTaskListByConditionDsResponse DescribeTaskListByConditionDs(Models\DescribeTaskListByConditionDsRequest $req) 基于条件翻页获取任务列表, 用于新建跨工作流任务场景中展示工作流列表操作
  * @method Models\DescribeTaskLockStatusResponse DescribeTaskLockStatus(Models\DescribeTaskLockStatusRequest $req) 查看任务锁状态信息
+ * @method Models\DescribeTaskOutParamDsResponse DescribeTaskOutParamDs(Models\DescribeTaskOutParamDsRequest $req) 查询任务输出参数
  * @method Models\DescribeTaskOutputRegistriesResponse DescribeTaskOutputRegistries(Models\DescribeTaskOutputRegistriesRequest $req) 获取指定任务产出登记列表
+ * @method Models\DescribeTaskParamDsResponse DescribeTaskParamDs(Models\DescribeTaskParamDsRequest $req) 查询任务引用参数
  * @method Models\DescribeTaskParentRunTimeResponse DescribeTaskParentRunTime(Models\DescribeTaskParentRunTimeRequest $req) 基于当前任务的数据时间计算依赖的上游任务数据时间
  * @method Models\DescribeTaskReportResponse DescribeTaskReport(Models\DescribeTaskReportRequest $req) 按起止日期统计离线任务的所有实例的运行指标总和
  * @method Models\DescribeTaskReportDetailListResponse DescribeTaskReportDetailList(Models\DescribeTaskReportDetailListRequest $req) 离线任务周期统计明细
@@ -350,21 +392,28 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeTasksForProjectCloneResponse DescribeTasksForProjectClone(Models\DescribeTasksForProjectCloneRequest $req) 任务信息查询-项目克隆使用
  * @method Models\DescribeTemplateDimCountResponse DescribeTemplateDimCount(Models\DescribeTemplateDimCountRequest $req) 查询规则模板维度分布情况
  * @method Models\DescribeTemplateHistoryResponse DescribeTemplateHistory(Models\DescribeTemplateHistoryRequest $req) 查询规则模板操作记录
+ * @method Models\DescribeTestRunResponse DescribeTestRun(Models\DescribeTestRunRequest $req) 获取etl测试运行任务执行状态和日志
  * @method Models\DescribeThirdTaskRunLogResponse DescribeThirdTaskRunLog(Models\DescribeThirdTaskRunLogRequest $req) 获取第三方运行日志
+ * @method Models\DescribeTokenResponse DescribeToken(Models\DescribeTokenRequest $req) 获取长连接Token
  * @method Models\DescribeTopTableStatResponse DescribeTopTableStat(Models\DescribeTopTableStatRequest $req) 数据质量概览页面表排行接口
  * @method Models\DescribeTrendStatResponse DescribeTrendStat(Models\DescribeTrendStatRequest $req) 数据质量概览页面趋势变化接口
+ * @method Models\DescribeWorkflowByFordIdsResponse DescribeWorkflowByFordIds(Models\DescribeWorkflowByFordIdsRequest $req) 根据文件夹查询工作流
  * @method Models\DescribeWorkflowCanvasInfoResponse DescribeWorkflowCanvasInfo(Models\DescribeWorkflowCanvasInfoRequest $req) 查询工作流画布
  * @method Models\DescribeWorkflowCanvasInfoDsResponse DescribeWorkflowCanvasInfoDs(Models\DescribeWorkflowCanvasInfoDsRequest $req) 数据开发-获取工作流画布信息
  * @method Models\DescribeWorkflowCanvasOpLogsResponse DescribeWorkflowCanvasOpLogs(Models\DescribeWorkflowCanvasOpLogsRequest $req) 获取工作流操作日志
+ * @method Models\DescribeWorkflowCanvasOperatorsResponse DescribeWorkflowCanvasOperators(Models\DescribeWorkflowCanvasOperatorsRequest $req) 获取工作流画布操作人列表
  * @method Models\DescribeWorkflowExecuteByIdResponse DescribeWorkflowExecuteById(Models\DescribeWorkflowExecuteByIdRequest $req) 查询工作流画布运行起止时间
  * @method Models\DescribeWorkflowForProjectCloneResponse DescribeWorkflowForProjectClone(Models\DescribeWorkflowForProjectCloneRequest $req) 工作流信息查询-项目克隆使用
  * @method Models\DescribeWorkflowInfoByIdResponse DescribeWorkflowInfoById(Models\DescribeWorkflowInfoByIdRequest $req) 通过工作流id，查询工作流详情
  * @method Models\DescribeWorkflowListByProjectIdResponse DescribeWorkflowListByProjectId(Models\DescribeWorkflowListByProjectIdRequest $req) 根据项目id 获取项目下所有工作流列表
  * @method Models\DescribeWorkflowOpsCanvasInfoResponse DescribeWorkflowOpsCanvasInfo(Models\DescribeWorkflowOpsCanvasInfoRequest $req) 查询运维画布信息，只需要获取边和节点
+ * @method Models\DescribeWorkflowParamDsResponse DescribeWorkflowParamDs(Models\DescribeWorkflowParamDsRequest $req) 查询工作流全局参数
  * @method Models\DescribeWorkflowSchedulerInfoDsResponse DescribeWorkflowSchedulerInfoDs(Models\DescribeWorkflowSchedulerInfoDsRequest $req) 获取工作流调度信息
  * @method Models\DescribeWorkflowTaskCountResponse DescribeWorkflowTaskCount(Models\DescribeWorkflowTaskCountRequest $req) 查询工作流任务数
  * @method Models\DescribeWorkflowTasksForProjectCloneResponse DescribeWorkflowTasksForProjectClone(Models\DescribeWorkflowTasksForProjectCloneRequest $req) 工作流任务信息查询-项目克隆使用
  * @method Models\DiagnosePlusResponse DiagnosePlus(Models\DiagnosePlusRequest $req) 实例诊断信息
+ * @method Models\DownloadNewSqlResultResponse DownloadNewSqlResult(Models\DownloadNewSqlResultRequest $req) 下载SQL执行结果
+ * @method Models\DownloadSqlResultResponse DownloadSqlResult(Models\DownloadSqlResultRequest $req) 下载SQL执行结果
  * @method Models\DryRunDIOfflineTaskResponse DryRunDIOfflineTask(Models\DryRunDIOfflineTaskRequest $req) 调试运行集成任务
  * @method Models\EditBaselineResponse EditBaseline(Models\EditBaselineRequest $req) 编辑基线
  * @method Models\ExportDsEventResponse ExportDsEvent(Models\ExportDsEventRequest $req) 事件管理-导出事件
@@ -376,6 +425,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\FindDependTaskListDsResponse FindDependTaskListDs(Models\FindDependTaskListDsRequest $req) 拉取下游依赖的任务列表Ds
  * @method Models\FindDependTaskListsDsResponse FindDependTaskListsDs(Models\FindDependTaskListsDsRequest $req) 批量拉取下游依赖的任务列表Ds
  * @method Models\FindFuzzyTasksDsResponse FindFuzzyTasksDs(Models\FindFuzzyTasksDsRequest $req) 编排空间-根据项目名称和任务名称模糊查询所有任务
+ * @method Models\FindTaskByRemotePathResponse FindTaskByRemotePath(Models\FindTaskByRemotePathRequest $req) 远端路径寻找任务
  * @method Models\ForceSucInstancesResponse ForceSucInstances(Models\ForceSucInstancesRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 实例批量置成功
  * @method Models\ForceSucScheduleInstancesResponse ForceSucScheduleInstances(Models\ForceSucScheduleInstancesRequest $req) 实例强制成功
@@ -391,9 +441,12 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\GetCosTokenResponse GetCosToken(Models\GetCosTokenRequest $req) 获取cos token
  * @method Models\GetFileInfoResponse GetFileInfo(Models\GetFileInfoRequest $req) 开发空间-获取数据开发脚本信息
  * @method Models\GetIntegrationNodeColumnSchemaResponse GetIntegrationNodeColumnSchema(Models\GetIntegrationNodeColumnSchemaRequest $req) 提取数据集成节点字段Schema
+ * @method Models\GetLatestAnalyseInfoResponse GetLatestAnalyseInfo(Models\GetLatestAnalyseInfoRequest $req) 开发空间获取最近一次测试运行记录信息
+ * @method Models\GetLatestTestRunInfoResponse GetLatestTestRunInfo(Models\GetLatestTestRunInfoRequest $req) 编排空间获取最近一次测试运行记录信息
  * @method Models\GetOfflineDIInstanceListResponse GetOfflineDIInstanceList(Models\GetOfflineDIInstanceListRequest $req) 获取离线任务实例列表(新)
  * @method Models\GetOfflineInstanceListResponse GetOfflineInstanceList(Models\GetOfflineInstanceListRequest $req) 获取离线任务实例
  * @method Models\GetPathTreesResponse GetPathTrees(Models\GetPathTreesRequest $req) 回收站脚本文件目录树
+ * @method Models\GetResourceCosPathResponse GetResourceCosPath(Models\GetResourceCosPathRequest $req) 资源管理-获取资源上传的可用 cos 路径
  * @method Models\GetResourcePathTreeResponse GetResourcePathTree(Models\GetResourcePathTreeRequest $req) 资源管理-拉取资源目录树
  * @method Models\GetRunSonListDsResponse GetRunSonListDs(Models\GetRunSonListDsRequest $req) 获取工作流运行任务下游Ds
  * @method Models\GetTestRunTaskInstancesStatusInfoResponse GetTestRunTaskInstancesStatusInfo(Models\GetTestRunTaskInstancesStatusInfoRequest $req) 获取调试任务实例状态信息
@@ -402,11 +455,16 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\ImportFilesResponse ImportFiles(Models\ImportFilesRequest $req) 批量导入文件
  * @method Models\ImportOfflineTaskResponse ImportOfflineTask(Models\ImportOfflineTaskRequest $req) 异步导入集成任务
  * @method Models\ImportProjectParamDsResponse ImportProjectParamDs(Models\ImportProjectParamDsRequest $req) 导入项目参数
+ * @method Models\ImportTableDataResponse ImportTableData(Models\ImportTableDataRequest $req) 创建数据表：HIVE
+ * @method Models\ImportWorkflowXmlResponse ImportWorkflowXml(Models\ImportWorkflowXmlRequest $req) 工作流导入（XML）
+ * @method Models\ImportWorkflowZipResponse ImportWorkflowZip(Models\ImportWorkflowZipRequest $req) 工作流导入（ZIP）
+ * @method Models\JudgeResourceFileResponse JudgeResourceFile(Models\JudgeResourceFileRequest $req) 资源管理-判断资源文件是否存在
  * @method Models\JudgeTaskListenEventResponse JudgeTaskListenEvent(Models\JudgeTaskListenEventRequest $req) 任务是否存在监听事件
  * @method Models\KillInstancesResponse KillInstances(Models\KillInstancesRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 实例批量终止操作
  * @method Models\KillOpsMakePlanInstancesResponse KillOpsMakePlanInstances(Models\KillOpsMakePlanInstancesRequest $req) 按补录计划批量终止实例。
  * @method Models\KillScheduleInstancesResponse KillScheduleInstances(Models\KillScheduleInstancesRequest $req) 批量kill实例
+ * @method Models\KillTasksTestRunResponse KillTasksTestRun(Models\KillTasksTestRunRequest $req) 停止试运行任务（多个）
  * @method Models\ListBatchDetailResponse ListBatchDetail(Models\ListBatchDetailRequest $req) 获取操作详情列表
  * @method Models\ListBatchJobResponse ListBatchJob(Models\ListBatchJobRequest $req) 获取操作历史列表
  * @method Models\LockIntegrationTaskResponse LockIntegrationTask(Models\LockIntegrationTaskRequest $req) 锁定集成任务
@@ -453,6 +511,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 更新工作流调度
  * @method Models\MoveFileResponse MoveFile(Models\MoveFileRequest $req) 移动文件
  * @method Models\MoveTasksToFolderResponse MoveTasksToFolder(Models\MoveTasksToFolderRequest $req) 编排空间-工作流-移动任务到工作流文件夹
+ * @method Models\PreviewDataTableCsvResponse PreviewDataTableCsv(Models\PreviewDataTableCsvRequest $req) 库表管理-新建数据表-csv预览，最多支持500行预览
+ * @method Models\QueryWorkflowVersionResponse QueryWorkflowVersion(Models\QueryWorkflowVersionRequest $req) 查询工作流版本信息
  * @method Models\RegisterDsEventResponse RegisterDsEvent(Models\RegisterDsEventRequest $req) 注册事件
  * @method Models\RegisterDsEventListenerResponse RegisterDsEventListener(Models\RegisterDsEventListenerRequest $req) 注册事件监听者
  * @method Models\RegisterDsEventPublisherResponse RegisterDsEventPublisher(Models\RegisterDsEventPublisherRequest $req) 注册事件发布者
@@ -465,18 +525,22 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\RenameFileResponse RenameFile(Models\RenameFileRequest $req) 重命名文件
  * @method Models\RenameResourceResponse RenameResource(Models\RenameResourceRequest $req) 资源管理-重命名资源
  * @method Models\RenameResourceFileResponse RenameResourceFile(Models\RenameResourceFileRequest $req) 资源管理-重命名资源文件
+ * @method Models\RenameResourcePathResponse RenameResourcePath(Models\RenameResourcePathRequest $req) 资源管理-重命名资源目录
  * @method Models\RenameTaskDsResponse RenameTaskDs(Models\RenameTaskDsRequest $req) RenameTaskDs
  * @method Models\RenewWorkflowDsResponse RenewWorkflowDs(Models\RenewWorkflowDsRequest $req) 更新工作流
  * @method Models\RenewWorkflowFolderDsResponse RenewWorkflowFolderDs(Models\RenewWorkflowFolderDsRequest $req) 移动文件夹
  * @method Models\RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(Models\RenewWorkflowOwnerDsRequest $req) 批量更新工作流下任务责任人
  * @method Models\RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(Models\RenewWorkflowSchedulerInfoDsRequest $req) 更新工作流下任务调度信息
+ * @method Models\ReplaceProjectParamVersionDsResponse ReplaceProjectParamVersionDs(Models\ReplaceProjectParamVersionDsRequest $req) 替换项目参数历史版本
  * @method Models\RerunInstancesResponse RerunInstances(Models\RerunInstancesRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 实例批量重跑
  * @method Models\RerunOpsMakePlanInstancesResponse RerunOpsMakePlanInstances(Models\RerunOpsMakePlanInstancesRequest $req) 按补录计划批量重跑/选择补录计划→补录任务→补录实例，点击重跑
  * @method Models\RerunScheduleInstancesResponse RerunScheduleInstances(Models\RerunScheduleInstancesRequest $req) 实例批量重跑
  * @method Models\RestartInLongAgentResponse RestartInLongAgent(Models\RestartInLongAgentRequest $req) 重启采集器
+ * @method Models\RestoreRecycleTaskResponse RestoreRecycleTask(Models\RestoreRecycleTaskRequest $req) 还原任务
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) 继续集成任务
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) 抢占锁定集成任务
+ * @method Models\RollbackCustomFunctionVersionResponse RollbackCustomFunctionVersion(Models\RollbackCustomFunctionVersionRequest $req) 回滚自定义函数版本
  * @method Models\RunForceSucScheduleInstancesResponse RunForceSucScheduleInstances(Models\RunForceSucScheduleInstancesRequest $req) 实例强制成功
  * @method Models\RunRerunScheduleInstancesResponse RunRerunScheduleInstances(Models\RunRerunScheduleInstancesRequest $req) 实例批量重跑
  * @method Models\RunTaskResponse RunTask(Models\RunTaskRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
@@ -488,10 +552,14 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\SetTaskAlarmNewResponse SetTaskAlarmNew(Models\SetTaskAlarmNewRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 设置任务告警，新建/更新告警信息（最新）
  * @method Models\StartIntegrationTaskResponse StartIntegrationTask(Models\StartIntegrationTaskRequest $req) 启动集成任务
+ * @method Models\StopAdhocTaskResponse StopAdhocTask(Models\StopAdhocTaskRequest $req) 即席分析终止任务接口
  * @method Models\StopBaselineResponse StopBaseline(Models\StopBaselineRequest $req) 提交基线
  * @method Models\StopIntegrationTaskResponse StopIntegrationTask(Models\StopIntegrationTaskRequest $req) 停止集成任务
+ * @method Models\StopTestRunResponse StopTestRun(Models\StopTestRunRequest $req) 终止etl测试运行任务
  * @method Models\SubmitBaselineResponse SubmitBaseline(Models\SubmitBaselineRequest $req) 提交基线
+ * @method Models\SubmitBatchTestRunResponse SubmitBatchTestRun(Models\SubmitBatchTestRunRequest $req) 批量提交etl测试运行任务
  * @method Models\SubmitCustomFunctionResponse SubmitCustomFunction(Models\SubmitCustomFunctionRequest $req) 提交自定义函数
+ * @method Models\SubmitIntegrationTaskResponse SubmitIntegrationTask(Models\SubmitIntegrationTaskRequest $req) 即席分析提交数据集成任务
  * @method Models\SubmitPySparkTaskResponse SubmitPySparkTask(Models\SubmitPySparkTaskRequest $req) 即席分析提交PySpark任务
  * @method Models\SubmitPythonTaskResponse SubmitPythonTask(Models\SubmitPythonTaskRequest $req) 即席分析提交PYTHON任务
  * @method Models\SubmitShellTaskResponse SubmitShellTask(Models\SubmitShellTaskRequest $req) 即席分析提交SHELL任务
@@ -499,6 +567,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\SubmitTaskResponse SubmitTask(Models\SubmitTaskRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 提交任务
  * @method Models\SubmitTaskTestRunResponse SubmitTaskTestRun(Models\SubmitTaskTestRunRequest $req) 无
+ * @method Models\SubmitTestRunResponse SubmitTestRun(Models\SubmitTestRunRequest $req) 提交etl测试运行任务
  * @method Models\SubmitWorkflowResponse SubmitWorkflow(Models\SubmitWorkflowRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 提交工作流
  * @method Models\SuspendIntegrationTaskResponse SuspendIntegrationTask(Models\SuspendIntegrationTaskRequest $req) 暂停集成任务
@@ -518,6 +587,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\UpdateEventListenerResponse UpdateEventListener(Models\UpdateEventListenerRequest $req) 更新事件监听
  * @method Models\UpdateInLongAgentResponse UpdateInLongAgent(Models\UpdateInLongAgentRequest $req) 更新采集器
  * @method Models\UpdateTaskDsResponse UpdateTaskDs(Models\UpdateTaskDsRequest $req) 更新任务Ds
+ * @method Models\UpdateWorkflowInfoResponse UpdateWorkflowInfo(Models\UpdateWorkflowInfoRequest $req) <p style="color:red;">[该接口为 ds 中开发]</p>
+更新工作流（包括工作流基本信息与工作流参数）
  * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) 修改工作流责任人
  * @method Models\UploadAdvanceRunParamsResponse UploadAdvanceRunParams(Models\UploadAdvanceRunParamsRequest $req) 保存高级运行用户自定义参数
  * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) 保存任务信息

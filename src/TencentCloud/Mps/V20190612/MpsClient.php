@@ -121,7 +121,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DisableScheduleResponse DisableSchedule(Models\DisableScheduleRequest $req) 禁用自动化触发编排任务。
  * @method Models\DisableWorkflowResponse DisableWorkflow(Models\DisableWorkflowRequest $req) 禁用工作流。
  * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) 对视频进行编辑，生成一个新的视频。编辑的功能包括：
-  
+ 
 
 一、**剪辑任务**：简单的视频剪辑，如剪辑、拼接等
 1. 对一个文件进行剪辑，生成一个新的视频；
@@ -177,8 +177,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
 5. 对视频截图雪碧图；
 6. 对视频转自适应码流；
 7. 智能内容审核（鉴黄、敏感信息检测）；
-8. 智能内容分析（标签、分类、封面、按帧标签、拆条、集锦、片头片尾）；
+8. 智能内容分析（标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）。
+10. 媒体质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）
  * @method Models\RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(Models\RecognizeMediaForZhiXueRequest $req) 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) 启动媒体传输流。

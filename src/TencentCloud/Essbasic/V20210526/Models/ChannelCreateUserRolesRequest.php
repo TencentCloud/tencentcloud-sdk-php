@@ -20,8 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateUserRoles请求参数结构体
  *
- * @method Agent getAgent() 获取应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
- * @method void setAgent(Agent $Agent) 设置应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+ * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
  * @method array getRoleIds() 获取绑定角色的角色id列表，最多 100 个
  * @method void setRoleIds(array $RoleIds) 设置绑定角色的角色id列表，最多 100 个
  * @method array getUserIds() 获取电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
@@ -34,7 +50,15 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreateUserRolesRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
@@ -60,7 +84,15 @@ class ChannelCreateUserRolesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+
+此接口下面信息必填。
+<ul>
+<li>渠道应用标识:  Agent.AppId</li>
+<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
+<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
+</ul>
+第三方平台子客企业和员工必须已经经过实名认证
      * @param array $RoleIds 绑定角色的角色id列表，最多 100 个
      * @param array $UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数，最多 100 个
      * @param array $OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数，最多 100 个

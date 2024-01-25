@@ -433,12 +433,18 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 <li>该接口不会扣除您的合同套餐，暂不参与计费。</li></ul>
  * @method Models\ChannelCreateUserRolesResponse ChannelCreateUserRoles(Models\ChannelCreateUserRolesRequest $req) 使用此接口，用来绑定企业实名员工的角色，
 支持以电子签userId、客户系统openId两种方式进行绑定。
+
+对应控制台的操作如下图
+![image](https://qcloudimg.tencent-cloud.cn/raw/5b41194d3cb3f2058ec0ba0fb5ebc6a6.png)
  * @method Models\ChannelCreateWebThemeConfigResponse ChannelCreateWebThemeConfig(Models\ChannelCreateWebThemeConfigRequest $req) 用来创建嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），该接口配合其他所有可嵌入页面接口使用
 创建配置对当前第三方应用全局生效，如果多次调用，会以最后一次的配置为准
  * @method Models\ChannelDeleteRoleResponse ChannelDeleteRole(Models\ChannelDeleteRoleRequest $req) 此接口（ChannelDeleteRole）用来删除企业自定义角色。
 
 注意：系统角色不可删除。
  * @method Models\ChannelDeleteRoleUsersResponse ChannelDeleteRoleUsers(Models\ChannelDeleteRoleUsersRequest $req) 通过此接口，删除员工绑定的角色，支持以电子签userId、客户系统userId两种方式调用。
+
+对应控制台的操作如下图
+![image](https://qcloudimg.tencent-cloud.cn/raw/5b41194d3cb3f2058ec0ba0fb5ebc6a6.png)
  * @method Models\ChannelDeleteSealPoliciesResponse ChannelDeleteSealPolicies(Models\ChannelDeleteSealPoliciesRequest $req) 此接口（ChannelDeleteSealPolicies）用于删除已指定员工印章授权信息，删除员工的印章授权后，该员工使用印章进行盖章时，将需要提交印章授权申请且通过审核后才能使用该印章进行签署。
  * @method Models\ChannelDescribeBillUsageDetailResponse ChannelDescribeBillUsageDetail(Models\ChannelDescribeBillUsageDetailRequest $req) 通过此接口（ChannelDescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。
  * @method Models\ChannelDescribeEmployeesResponse ChannelDescribeEmployees(Models\ChannelDescribeEmployeesRequest $req) 获取企业员工信息, 可以获取员工的名字,OpenId,UserId和简述的角色等信息，支持设置过滤条件以筛选员工查询结果。
@@ -467,7 +473,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelDescribeRolesResponse ChannelDescribeRoles(Models\ChannelDescribeRolesRequest $req) 分页查询企业角色列表，法人的角色是系统保留角色，不会返回，按照角色创建时间升序排列。
 
 
-<font color="red">**系统默认角色**</font>说明可参考下表
+<font color="red">系统默认角色</font>说明可参考下表
 
 | 角色名称| 建议授予对象 | 角色描述 |
 | --- | --- | --- |
@@ -475,6 +481,8 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 | **业务管理员**|IT 系统负责人，可以授权给CTO等 | 企业合同模块、印章模块、模板模块等全量功能及数据权限。 |
 | **经办人**|企业法务负责人等 | 发起合同、签署合同（含填写、拒签）、撤销合同、持有印章等权限能力，可查看企业所有合同数据。 |
 | **业务员**|销售员、采购员 等| 发起合同、签署合同（含填写、拒签）、撤销合同、持有印章等权限能力，可查看自己相关所有合同数据。 |
+
+附件：<a href="https://dyn.ess.tencent.cn/guide/apivideo/roles.xlsx" target="_blank">点击下载角色对应的权限点的excel文档</a>
  * @method Models\ChannelDescribeUserAutoSignStatusResponse ChannelDescribeUserAutoSignStatus(Models\ChannelDescribeUserAutoSignStatusRequest $req) 通过此接口获取个人用户自动签的开通状态。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
@@ -831,8 +839,8 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 | ------------ | ------------ | ------------ |
 | 腾讯电子签（正式版） | wxa023b292fd19d41d | gh_da88f6188665 |
 | 腾讯电子签Demo | wx371151823f6f3edf | gh_39a5d3de69fa |
- * @method Models\ModifyFlowDeadlineResponse ModifyFlowDeadline(Models\ModifyFlowDeadlineRequest $req) 在已发起的签署流程中，我们支持对签署截止日期进行延期操作，主要涉及以下两个维度：
-1. 合同（流程）维度：只需要传递流程ID。这将对尚未设定签署截止时间的合同（流程）和发起合同（流程）时的签署人进行延期操作。
+ * @method Models\ModifyFlowDeadlineResponse ModifyFlowDeadline(Models\ModifyFlowDeadlineRequest $req) 在已发起的签署流程中，支持对签署截止日期进行延期操作，主要涉及以下两个维度：
+1. 合同（流程）维度：只需要传递签署流程ID。这将对签署流程和发起时未单独设定签署截止时间的签署人进行延期操作。
 2. 签署人维度：需要传递流程ID和签署人ID。此操作将对签署人进行延期操作，尤其对于有序的合同（流程），签署截止时间不能超过后一位合同（流程）签署人的流程截止时间。
 
 此接口有如下限制条件：

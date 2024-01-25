@@ -23,17 +23,46 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
  * @method boolean getDeleteScript() 获取是否删除脚本
+true：删除
+false：不删除
+不传默认false
  * @method void setDeleteScript(boolean $DeleteScript) 设置是否删除脚本
- * @method boolean getOperateInform() 获取任务操作是否消息通知下游任务责任人
- * @method void setOperateInform(boolean $OperateInform) 设置任务操作是否消息通知下游任务责任人
+true：删除
+false：不删除
+不传默认false
+ * @method boolean getOperateInform() 获取任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false
+ * @method void setOperateInform(boolean $OperateInform) 设置任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false
  * @method string getTaskId() 获取任务ID
+和VirtualTaskId选填一个
  * @method void setTaskId(string $TaskId) 设置任务ID
+和VirtualTaskId选填一个
  * @method string getVirtualTaskId() 获取虚拟任务id
+和TaskId选填一个
+
  * @method void setVirtualTaskId(string $VirtualTaskId) 设置虚拟任务id
+和TaskId选填一个
+
  * @method boolean getVirtualFlag() 获取虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false
  * @method void setVirtualFlag(boolean $VirtualFlag) 设置虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false
  * @method boolean getDeleteMode() 获取任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
+
  * @method void setDeleteMode(boolean $DeleteMode) 设置任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
  */
 class DeleteTaskDsRequest extends AbstractModel
 {
@@ -44,42 +73,71 @@ class DeleteTaskDsRequest extends AbstractModel
 
     /**
      * @var boolean 是否删除脚本
+true：删除
+false：不删除
+不传默认false
      */
     public $DeleteScript;
 
     /**
-     * @var boolean 任务操作是否消息通知下游任务责任人
+     * @var boolean 任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false
      */
     public $OperateInform;
 
     /**
      * @var string 任务ID
+和VirtualTaskId选填一个
      */
     public $TaskId;
 
     /**
      * @var string 虚拟任务id
+和TaskId选填一个
+
      */
     public $VirtualTaskId;
 
     /**
      * @var boolean 虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false
      */
     public $VirtualFlag;
 
     /**
      * @var boolean 任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
+
      */
     public $DeleteMode;
 
     /**
      * @param string $ProjectId 项目Id
      * @param boolean $DeleteScript 是否删除脚本
-     * @param boolean $OperateInform 任务操作是否消息通知下游任务责任人
+true：删除
+false：不删除
+不传默认false
+     * @param boolean $OperateInform 任务操作是否消息通知下游任务责任人true：通知
+false：不通知
+不传默认false
      * @param string $TaskId 任务ID
+和VirtualTaskId选填一个
      * @param string $VirtualTaskId 虚拟任务id
+和TaskId选填一个
+
      * @param boolean $VirtualFlag 虚拟任务标记
+true：是虚拟任务
+false：不是虚拟任务
+不传默认false
      * @param boolean $DeleteMode 任务删除方式
+true：不针对下游任务实例进行强制失败
+false：针对下游任务实例进行强制失败
+不传默认false
      */
     function __construct()
     {

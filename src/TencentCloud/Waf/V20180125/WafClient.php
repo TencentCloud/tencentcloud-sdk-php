@@ -133,6 +133,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyCustomWhiteRuleResponse ModifyCustomWhiteRule(Models\ModifyCustomWhiteRuleRequest $req) 编辑精准白名单
  * @method Models\ModifyCustomWhiteRuleStatusResponse ModifyCustomWhiteRuleStatus(Models\ModifyCustomWhiteRuleStatusRequest $req) 开启或禁用精准白名单
  * @method Models\ModifyDomainIpv6StatusResponse ModifyDomainIpv6Status(Models\ModifyDomainIpv6StatusRequest $req) 切换ipv6开关
+ * @method Models\ModifyDomainPostActionResponse ModifyDomainPostAction(Models\ModifyDomainPostActionRequest $req) 修改域名投递状态
  * @method Models\ModifyDomainWhiteRuleResponse ModifyDomainWhiteRule(Models\ModifyDomainWhiteRuleRequest $req) 更改某一条规则
  * @method Models\ModifyDomainsCLSStatusResponse ModifyDomainsCLSStatus(Models\ModifyDomainsCLSStatusRequest $req) 修改域名列表的访问日志开关
  * @method Models\ModifyGenerateDealsResponse ModifyGenerateDeals(Models\ModifyGenerateDealsRequest $req) 提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单，计费侧接口：https://tcb.woa.com/magical-brush/docs/754661947

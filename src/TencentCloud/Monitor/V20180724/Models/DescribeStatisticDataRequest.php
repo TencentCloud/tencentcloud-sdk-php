@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置所属模块，固定值，为monitor
  * @method string getNamespace() 获取命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP
  * @method void setNamespace(string $Namespace) 设置命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP
- * @method array getMetricNames() 获取指标名列表
- * @method void setMetricNames(array $MetricNames) 设置指标名列表
+ * @method array getMetricNames() 获取指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458
+ * @method void setMetricNames(array $MetricNames) 设置指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458
  * @method array getConditions() 获取维度条件，操作符支持=、in
 配置文档参考：https://cloud.tencent.com/document/product/248/53821
  * @method void setConditions(array $Conditions) 设置维度条件，操作符支持=、in
@@ -62,7 +64,8 @@ class DescribeStatisticDataRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var array 指标名列表
+     * @var array 指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458
      */
     public $MetricNames;
 
@@ -100,7 +103,8 @@ class DescribeStatisticDataRequest extends AbstractModel
     /**
      * @param string $Module 所属模块，固定值，为monitor
      * @param string $Namespace 命名空间，目前支持QCE/TKE2(Conditions必填),QCE/KEEWIDB,QCE/CAMP
-     * @param array $MetricNames 指标名列表
+     * @param array $MetricNames 指标名列表，相关指标信息可参考对应 云产品指标文档
+https://cloud.tencent.com/document/product/248/62458
      * @param array $Conditions 维度条件，操作符支持=、in
 配置文档参考：https://cloud.tencent.com/document/product/248/53821
      * @param integer $Period 统计粒度。默认取值为300，单位为s；可选的值为60、300、3600、86400

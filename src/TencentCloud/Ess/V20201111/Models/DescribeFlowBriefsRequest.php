@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
 如果某个合同流程ID不存在，系统会跳过此ID的查询，继续查询剩余存在的合同流程。
 
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+
+[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
  * @method void setFlowIds(array $FlowIds) 设置查询的合同流程ID列表最多支持100个流程ID。 
 如果某个合同流程ID不存在，系统会跳过此ID的查询，继续查询剩余存在的合同流程。
 
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+
+[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -50,6 +54,8 @@ class DescribeFlowBriefsRequest extends AbstractModel
 如果某个合同流程ID不存在，系统会跳过此ID的查询，继续查询剩余存在的合同流程。
 
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+
+[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      */
     public $FlowIds;
 
@@ -66,6 +72,8 @@ class DescribeFlowBriefsRequest extends AbstractModel
 如果某个合同流程ID不存在，系统会跳过此ID的查询，继续查询剩余存在的合同流程。
 
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
+
+[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */

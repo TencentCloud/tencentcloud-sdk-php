@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页条数，固定值1000。
  * @method integer getOffset() 获取分页偏移量。
  * @method void setOffset(integer $Offset) 设置分页偏移量。
+ * @method integer getProjectId() 获取按项目ID筛选，大于0
+ * @method void setProjectId(integer $ProjectId) 设置按项目ID筛选，大于0
+ * @method string getProjectName() 获取按项目名称筛选
+ * @method void setProjectName(string $ProjectName) 设置按项目名称筛选
  */
 class DescribeProjectsRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeProjectsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var integer 按项目ID筛选，大于0
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 按项目名称筛选
+     */
+    public $ProjectName;
+
+    /**
      * @param integer $AllList 传1拉取所有项目（包括隐藏项目），传0拉取显示项目
      * @param integer $Limit 分页条数，固定值1000。
      * @param integer $Offset 分页偏移量。
+     * @param integer $ProjectId 按项目ID筛选，大于0
+     * @param string $ProjectName 按项目名称筛选
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeProjectsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
         }
     }
 }

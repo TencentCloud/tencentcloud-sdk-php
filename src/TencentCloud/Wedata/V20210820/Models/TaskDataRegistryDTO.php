@@ -64,23 +64,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置租户id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataFlowType() 获取输入输出表类型 /**
-     * 输入流
-     */
-    UPSTREAM,
-    /**
-     * 输出流
-     */
-    DOWNSTREAM;
+ * @method string getDataFlowType() 获取输入输出表类型
+      输入流
+ UPSTREAM,
+      输出流
+  DOWNSTREAM;
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataFlowType(string $DataFlowType) 设置输入输出表类型 /**
-     * 输入流
-     */
-    UPSTREAM,
-    /**
-     * 输出流
-     */
-    DOWNSTREAM;
+ * @method void setDataFlowType(string $DataFlowType) 设置输入输出表类型
+      输入流
+ UPSTREAM,
+      输出流
+  DOWNSTREAM;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,14 +166,11 @@ class TaskDataRegistryDTO extends AbstractModel
     public $AppId;
 
     /**
-     * @var string 输入输出表类型 /**
-     * 输入流
-     */
-    UPSTREAM,
-    /**
-     * 输出流
-     */
-    DOWNSTREAM;
+     * @var string 输入输出表类型
+      输入流
+ UPSTREAM,
+      输出流
+  DOWNSTREAM;
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataFlowType;
@@ -237,14 +228,11 @@ class TaskDataRegistryDTO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 租户id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataFlowType 输入输出表类型 /**
-     * 输入流
-     */
-    UPSTREAM,
-    /**
-     * 输出流
-     */
-    DOWNSTREAM;
+     * @param string $DataFlowType 输入输出表类型
+      输入流
+ UPSTREAM,
+      输出流
+  DOWNSTREAM;
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。

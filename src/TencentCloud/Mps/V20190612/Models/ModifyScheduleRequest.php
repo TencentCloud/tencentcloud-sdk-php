@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：如果设置为空，则表示取消老配置的OutputDir值。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知配置。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知配置。
+ * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。
+ * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。
  */
 class ModifyScheduleRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ class ModifyScheduleRequest extends AbstractModel
     public $TaskNotifyConfig;
 
     /**
+     * @var string 资源ID，需要保证对应资源是开启状态。
+     */
+    public $ResourceId;
+
+    /**
      * @param integer $ScheduleId 编排唯一标识。
      * @param string $ScheduleName 编排名称。
      * @param WorkflowTrigger $Trigger 编排绑定的触发规则。
@@ -88,6 +95,7 @@ class ModifyScheduleRequest extends AbstractModel
      * @param string $OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知配置。
+     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ class ModifyScheduleRequest extends AbstractModel
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {
             $this->TaskNotifyConfig = new TaskNotifyConfig();
             $this->TaskNotifyConfig->deserialize($param["TaskNotifyConfig"]);
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

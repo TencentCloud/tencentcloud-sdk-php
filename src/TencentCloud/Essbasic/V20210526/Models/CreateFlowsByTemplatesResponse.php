@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFlowIds() 获取生成的合同流程ID数组，合同流程ID为32位字符串。
 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
  * @method void setFlowIds(array $FlowIds) 设置生成的合同流程ID数组，合同流程ID为32位字符串。
 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
  * @method array getCustomerData() 获取第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
  * @method void setCustomerData(array $CustomerData) 设置第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
  * @method array getErrorMessages() 获取创建消息，对应多个合同ID，
@@ -50,6 +54,8 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
     /**
      * @var array 生成的合同流程ID数组，合同流程ID为32位字符串。
 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      */
     public $FlowIds;
 
@@ -90,6 +96,8 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
     /**
      * @param array $FlowIds 生成的合同流程ID数组，合同流程ID为32位字符串。
 建议开发者妥善保存此流程ID数组，以便于顺利进行后续操作。
+
+[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      * @param array $CustomerData 第三方应用平台的业务信息, 与创建合同的FlowInfos数组中的CustomerData一一对应
      * @param array $ErrorMessages 创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息

@@ -42,6 +42,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDateOfIssuance(string $DateOfIssuance) 设置发行日期（护照信息页识别结果）
  * @method string getDateOfExpiration() 获取截止日期（护照信息页识别结果）
  * @method void setDateOfExpiration(string $DateOfExpiration) 设置截止日期（护照信息页识别结果）
+ * @method string getSignature() 获取持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+ * @method void setSignature(string $Signature) 设置持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+ * @method string getIssuePlace() 获取签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+ * @method void setIssuePlace(string $IssuePlace) 设置签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+ * @method string getIssuingAuthority() 获取签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+ * @method void setIssuingAuthority(string $IssuingAuthority) 设置签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
  */
 class PassportRecognizeInfos extends AbstractModel
 {
@@ -101,6 +119,27 @@ class PassportRecognizeInfos extends AbstractModel
     public $DateOfExpiration;
 
     /**
+     * @var string 持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public $Signature;
+
+    /**
+     * @var string 签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public $IssuePlace;
+
+    /**
+     * @var string 签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     */
+    public $IssuingAuthority;
+
+    /**
      * @param string $Type 证件类型（护照信息页识别结果）
      * @param string $IssuingCountry 发行国家（护照信息页识别结果）
      * @param string $PassportID 护照号码（护照信息页识别结果）
@@ -112,6 +151,15 @@ class PassportRecognizeInfos extends AbstractModel
      * @param string $Sex 性别（护照信息页识别结果）
      * @param string $DateOfIssuance 发行日期（护照信息页识别结果）
      * @param string $DateOfExpiration 截止日期（护照信息页识别结果）
+     * @param string $Signature 持证人签名（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * @param string $IssuePlace 签发地点（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * @param string $IssuingAuthority 签发机关（护照信息页识别结果）
+
+仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
      */
     function __construct()
     {
@@ -168,6 +216,18 @@ class PassportRecognizeInfos extends AbstractModel
 
         if (array_key_exists("DateOfExpiration",$param) and $param["DateOfExpiration"] !== null) {
             $this->DateOfExpiration = $param["DateOfExpiration"];
+        }
+
+        if (array_key_exists("Signature",$param) and $param["Signature"] !== null) {
+            $this->Signature = $param["Signature"];
+        }
+
+        if (array_key_exists("IssuePlace",$param) and $param["IssuePlace"] !== null) {
+            $this->IssuePlace = $param["IssuePlace"];
+        }
+
+        if (array_key_exists("IssuingAuthority",$param) and $param["IssuingAuthority"] !== null) {
+            $this->IssuingAuthority = $param["IssuingAuthority"];
         }
     }
 }

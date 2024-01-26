@@ -33,51 +33,49 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
  * @method string getLinkDependencyType() 获取父子任务之间的依赖关系
-    /** 正常的依赖父任务全部实例  启用**/
+    正常的依赖父任务全部实例  启用
     normal_all(1),
-    normal_first_one(2),// 正常的依赖父任务 第一个
-    normal_last_one(3),// 正常的依赖父任务 最后一个
-    normal_any_one(4),// 正常的依赖父任务 任意一个
-    normal_specific_one(5),// 正常的依赖父任务 指定的一个
-    self(6),// 自身依赖，可能用不到
+    normal_first_one(2), 正常的依赖父任务 第一个
+    normal_last_one(3), 正常的依赖父任务 最后一个
+    normal_any_one(4), 正常的依赖父任务 任意一个
+    normal_specific_one(5), 正常的依赖父任务 指定的一个
+    self(6), 自身依赖，可能用不到
 
-    /** // 非正常的依赖父任务全部实例  启用（向前依赖  明天）**/
+     非正常的依赖父任务全部实例  启用（向前依赖  明天)
     non_normal_all_forward(11),
-    non_normal_first_one_forward(12),// 非正常的依赖父任务 第一个
-    non_normal_last_one_forward(13),// 非正常的依赖父任务 最后一个
-    non_normal_any_one_forward(14),// 非正常的依赖父任务 任意一个
-    non_normal_specific_one_forward(15),// 非正常的依赖父任务 指定一个
+    non_normal_first_one_forward(12), 非正常的依赖父任务 第一个
+    non_normal_last_one_forward(13), 非正常的依赖父任务 最后一个
+    non_normal_any_one_forward(14), 非正常的依赖父任务 任意一个
+    non_normal_specific_one_forward(15),非正常的依赖父任务 指定一个
 
-    /** // 非正常的依赖父任务全部实例  启用（向后依赖 昨天） **/
+    非正常的依赖父任务全部实例  启用（向后依赖 昨天）
     non_normal_all_backward(21),
-    non_normal_first_one_backward(22),// 非正常的依赖父任务 第一个
-    non_normal_last_one_backward(23),// 非正常的依赖父任务 最后一个
-    non_normal_any_one_backward(24),// 非正常的依赖父任务 任意一个
-    non_normal_specific_one_backward(25);// 非正常的依赖父任务 指定一个
-
-
+    non_normal_first_one_backward(22), 非正常的依赖父任务 第一个
+    non_normal_last_one_backward(23), 非正常的依赖父任务 最后一个
+    non_normal_any_one_backward(24), 非正常的依赖父任务 任意一个
+    non_normal_specific_one_backward(25) 非正常的依赖父任务 指定一个
  * @method void setLinkDependencyType(string $LinkDependencyType) 设置父子任务之间的依赖关系
-    /** 正常的依赖父任务全部实例  启用**/
+    正常的依赖父任务全部实例  启用
     normal_all(1),
-    normal_first_one(2),// 正常的依赖父任务 第一个
-    normal_last_one(3),// 正常的依赖父任务 最后一个
-    normal_any_one(4),// 正常的依赖父任务 任意一个
-    normal_specific_one(5),// 正常的依赖父任务 指定的一个
-    self(6),// 自身依赖，可能用不到
+    normal_first_one(2), 正常的依赖父任务 第一个
+    normal_last_one(3), 正常的依赖父任务 最后一个
+    normal_any_one(4), 正常的依赖父任务 任意一个
+    normal_specific_one(5), 正常的依赖父任务 指定的一个
+    self(6), 自身依赖，可能用不到
 
-    /** // 非正常的依赖父任务全部实例  启用（向前依赖  明天）**/
+     非正常的依赖父任务全部实例  启用（向前依赖  明天)
     non_normal_all_forward(11),
-    non_normal_first_one_forward(12),// 非正常的依赖父任务 第一个
-    non_normal_last_one_forward(13),// 非正常的依赖父任务 最后一个
-    non_normal_any_one_forward(14),// 非正常的依赖父任务 任意一个
-    non_normal_specific_one_forward(15),// 非正常的依赖父任务 指定一个
+    non_normal_first_one_forward(12), 非正常的依赖父任务 第一个
+    non_normal_last_one_forward(13), 非正常的依赖父任务 最后一个
+    non_normal_any_one_forward(14), 非正常的依赖父任务 任意一个
+    non_normal_specific_one_forward(15),非正常的依赖父任务 指定一个
 
-    /** // 非正常的依赖父任务全部实例  启用（向后依赖 昨天） **/
+    非正常的依赖父任务全部实例  启用（向后依赖 昨天）
     non_normal_all_backward(21),
-    non_normal_first_one_backward(22),// 非正常的依赖父任务 第一个
-    non_normal_last_one_backward(23),// 非正常的依赖父任务 最后一个
-    non_normal_any_one_backward(24),// 非正常的依赖父任务 任意一个
-    non_normal_specific_one_backward(25);// 非正常的依赖父任务 指定一个
+    non_normal_first_one_backward(22), 非正常的依赖父任务 第一个
+    non_normal_last_one_backward(23), 非正常的依赖父任务 最后一个
+    non_normal_any_one_backward(24), 非正常的依赖父任务 任意一个
+    non_normal_specific_one_backward(25) 非正常的依赖父任务 指定一个
  */
 class ModifyTaskLinksDsRequest extends AbstractModel
 {
@@ -113,29 +111,27 @@ class ModifyTaskLinksDsRequest extends AbstractModel
 
     /**
      * @var string 父子任务之间的依赖关系
-    /** 正常的依赖父任务全部实例  启用**/
+    正常的依赖父任务全部实例  启用
     normal_all(1),
-    normal_first_one(2),// 正常的依赖父任务 第一个
-    normal_last_one(3),// 正常的依赖父任务 最后一个
-    normal_any_one(4),// 正常的依赖父任务 任意一个
-    normal_specific_one(5),// 正常的依赖父任务 指定的一个
-    self(6),// 自身依赖，可能用不到
+    normal_first_one(2), 正常的依赖父任务 第一个
+    normal_last_one(3), 正常的依赖父任务 最后一个
+    normal_any_one(4), 正常的依赖父任务 任意一个
+    normal_specific_one(5), 正常的依赖父任务 指定的一个
+    self(6), 自身依赖，可能用不到
 
-    /** // 非正常的依赖父任务全部实例  启用（向前依赖  明天）**/
+     非正常的依赖父任务全部实例  启用（向前依赖  明天)
     non_normal_all_forward(11),
-    non_normal_first_one_forward(12),// 非正常的依赖父任务 第一个
-    non_normal_last_one_forward(13),// 非正常的依赖父任务 最后一个
-    non_normal_any_one_forward(14),// 非正常的依赖父任务 任意一个
-    non_normal_specific_one_forward(15),// 非正常的依赖父任务 指定一个
+    non_normal_first_one_forward(12), 非正常的依赖父任务 第一个
+    non_normal_last_one_forward(13), 非正常的依赖父任务 最后一个
+    non_normal_any_one_forward(14), 非正常的依赖父任务 任意一个
+    non_normal_specific_one_forward(15),非正常的依赖父任务 指定一个
 
-    /** // 非正常的依赖父任务全部实例  启用（向后依赖 昨天） **/
+    非正常的依赖父任务全部实例  启用（向后依赖 昨天）
     non_normal_all_backward(21),
-    non_normal_first_one_backward(22),// 非正常的依赖父任务 第一个
-    non_normal_last_one_backward(23),// 非正常的依赖父任务 最后一个
-    non_normal_any_one_backward(24),// 非正常的依赖父任务 任意一个
-    non_normal_specific_one_backward(25);// 非正常的依赖父任务 指定一个
-
-
+    non_normal_first_one_backward(22), 非正常的依赖父任务 第一个
+    non_normal_last_one_backward(23), 非正常的依赖父任务 最后一个
+    non_normal_any_one_backward(24), 非正常的依赖父任务 任意一个
+    non_normal_specific_one_backward(25) 非正常的依赖父任务 指定一个
      */
     public $LinkDependencyType;
 
@@ -147,27 +143,27 @@ class ModifyTaskLinksDsRequest extends AbstractModel
      * @param string $RealFromWorkflowId 父任务工作流
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      * @param string $LinkDependencyType 父子任务之间的依赖关系
-    /** 正常的依赖父任务全部实例  启用**/
+    正常的依赖父任务全部实例  启用
     normal_all(1),
-    normal_first_one(2),// 正常的依赖父任务 第一个
-    normal_last_one(3),// 正常的依赖父任务 最后一个
-    normal_any_one(4),// 正常的依赖父任务 任意一个
-    normal_specific_one(5),// 正常的依赖父任务 指定的一个
-    self(6),// 自身依赖，可能用不到
+    normal_first_one(2), 正常的依赖父任务 第一个
+    normal_last_one(3), 正常的依赖父任务 最后一个
+    normal_any_one(4), 正常的依赖父任务 任意一个
+    normal_specific_one(5), 正常的依赖父任务 指定的一个
+    self(6), 自身依赖，可能用不到
 
-    /** // 非正常的依赖父任务全部实例  启用（向前依赖  明天）**/
+     非正常的依赖父任务全部实例  启用（向前依赖  明天)
     non_normal_all_forward(11),
-    non_normal_first_one_forward(12),// 非正常的依赖父任务 第一个
-    non_normal_last_one_forward(13),// 非正常的依赖父任务 最后一个
-    non_normal_any_one_forward(14),// 非正常的依赖父任务 任意一个
-    non_normal_specific_one_forward(15),// 非正常的依赖父任务 指定一个
+    non_normal_first_one_forward(12), 非正常的依赖父任务 第一个
+    non_normal_last_one_forward(13), 非正常的依赖父任务 最后一个
+    non_normal_any_one_forward(14), 非正常的依赖父任务 任意一个
+    non_normal_specific_one_forward(15),非正常的依赖父任务 指定一个
 
-    /** // 非正常的依赖父任务全部实例  启用（向后依赖 昨天） **/
+    非正常的依赖父任务全部实例  启用（向后依赖 昨天）
     non_normal_all_backward(21),
-    non_normal_first_one_backward(22),// 非正常的依赖父任务 第一个
-    non_normal_last_one_backward(23),// 非正常的依赖父任务 最后一个
-    non_normal_any_one_backward(24),// 非正常的依赖父任务 任意一个
-    non_normal_specific_one_backward(25);// 非正常的依赖父任务 指定一个
+    non_normal_first_one_backward(22), 非正常的依赖父任务 第一个
+    non_normal_last_one_backward(23), 非正常的依赖父任务 最后一个
+    non_normal_any_one_backward(24), 非正常的依赖父任务 任意一个
+    non_normal_specific_one_backward(25) 非正常的依赖父任务 指定一个
      */
     function __construct()
     {

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthRequired(boolean $AuthRequired) 设置是否需要签名认证，True 表示需要，False 表示不需要。待废弃。
  * @method integer getServiceTimeout() 获取API 的后端服务超时时间，单位是秒。
  * @method void setServiceTimeout(integer $ServiceTimeout) 设置API 的后端服务超时时间，单位是秒。
- * @method string getProtocol() 获取API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
- * @method void setProtocol(string $Protocol) 设置API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+ * @method string getProtocol() 获取API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
+ * @method void setProtocol(string $Protocol) 设置API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
  * @method boolean getEnableCORS() 获取是否需要开启跨域，Ture 表示需要，False 表示不需要。
  * @method void setEnableCORS(boolean $EnableCORS) 设置是否需要开启跨域，Ture 表示需要，False 表示不需要。
  * @method array getConstantParameters() 获取常量参数。
@@ -184,7 +184,7 @@ class ModifyApiRequest extends AbstractModel
     public $ServiceTimeout;
 
     /**
-     * @var string API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+     * @var string API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
      */
     public $Protocol;
 
@@ -419,7 +419,7 @@ class ModifyApiRequest extends AbstractModel
      * @param string $AuthType API 鉴权类型。支持SECRET、NONE、OAUTH、APP。默认为NONE。
      * @param boolean $AuthRequired 是否需要签名认证，True 表示需要，False 表示不需要。待废弃。
      * @param integer $ServiceTimeout API 的后端服务超时时间，单位是秒。
-     * @param string $Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。
+     * @param string $Protocol API 的前端请求类型，如 HTTP 或 HTTPS 或者 HTTP 和 HTTPS。修改api时推荐必填
      * @param boolean $EnableCORS 是否需要开启跨域，Ture 表示需要，False 表示不需要。
      * @param array $ConstantParameters 常量参数。
      * @param array $RequestParameters 前端请求参数。

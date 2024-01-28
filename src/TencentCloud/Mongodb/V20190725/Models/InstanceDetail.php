@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置实例状态描述
  * @method string getRealInstanceId() 获取实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
  * @method void setRealInstanceId(string $RealInstanceId) 设置实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+ * @method array getZoneList() 获取实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneList(array $ZoneList) 设置实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongosNodeNum() 获取mongos节点个数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongosNodeNum(integer $MongosNodeNum) 设置mongos节点个数。
@@ -322,6 +326,12 @@ class InstanceDetail extends AbstractModel
     public $RealInstanceId;
 
     /**
+     * @var array 实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneList;
+
+    /**
      * @var integer mongos节点个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -408,6 +418,8 @@ class InstanceDetail extends AbstractModel
      * @param integer $InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      * @param string $InstanceStatusDesc 实例状态描述
      * @param string $RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * @param array $ZoneList 实例当前可用区信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongosNodeNum mongos节点个数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongosMemory mongos节点内存。
@@ -614,6 +626,10 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("RealInstanceId",$param) and $param["RealInstanceId"] !== null) {
             $this->RealInstanceId = $param["RealInstanceId"];
+        }
+
+        if (array_key_exists("ZoneList",$param) and $param["ZoneList"] !== null) {
+            $this->ZoneList = $param["ZoneList"];
         }
 
         if (array_key_exists("MongosNodeNum",$param) and $param["MongosNodeNum"] !== null) {

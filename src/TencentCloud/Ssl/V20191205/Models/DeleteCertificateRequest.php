@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
+ * @method boolean getIsCheckResource() 获取删除时是否检查证书关联了云资源。默认不检查。如选择检查(需要授权服务角色SSL_QCSLinkedRoleInReplaceLoadCertificate)删除将变成异步,接口会返回异步任务ID。需使用DescribeDeleteCertificatesTaskResult接口查询删除是否成功。
+ * @method void setIsCheckResource(boolean $IsCheckResource) 设置删除时是否检查证书关联了云资源。默认不检查。如选择检查(需要授权服务角色SSL_QCSLinkedRoleInReplaceLoadCertificate)删除将变成异步,接口会返回异步任务ID。需使用DescribeDeleteCertificatesTaskResult接口查询删除是否成功。
  */
 class DeleteCertificateRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteCertificateRequest extends AbstractModel
     public $CertificateId;
 
     /**
+     * @var boolean 删除时是否检查证书关联了云资源。默认不检查。如选择检查(需要授权服务角色SSL_QCSLinkedRoleInReplaceLoadCertificate)删除将变成异步,接口会返回异步任务ID。需使用DescribeDeleteCertificatesTaskResult接口查询删除是否成功。
+     */
+    public $IsCheckResource;
+
+    /**
      * @param string $CertificateId 证书 ID。
+     * @param boolean $IsCheckResource 删除时是否检查证书关联了云资源。默认不检查。如选择检查(需要授权服务角色SSL_QCSLinkedRoleInReplaceLoadCertificate)删除将变成异步,接口会返回异步任务ID。需使用DescribeDeleteCertificatesTaskResult接口查询删除是否成功。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteCertificateRequest extends AbstractModel
         }
         if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
             $this->CertificateId = $param["CertificateId"];
+        }
+
+        if (array_key_exists("IsCheckResource",$param) and $param["IsCheckResource"] !== null) {
+            $this->IsCheckResource = $param["IsCheckResource"];
         }
     }
 }

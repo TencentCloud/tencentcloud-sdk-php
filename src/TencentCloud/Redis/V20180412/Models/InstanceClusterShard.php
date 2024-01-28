@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) 设置已使用容量。
  * @method float getStorageSlope() 获取容量倾斜率。
  * @method void setStorageSlope(float $StorageSlope) 设置容量倾斜率。
- * @method string getRunid() 获取实例运行时节点 ID。
- * @method void setRunid(string $Runid) 设置实例运行时节点 ID。
+ * @method string getRunid() 获取该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
+ * @method void setRunid(string $Runid) 设置该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
+ * @method string getRunId() 获取实例运行时节点 ID。
+ * @method void setRunId(string $RunId) 设置实例运行时节点 ID。
  * @method integer getConnected() 获取服务状态。
 - 0：down。
 - 1：on。
@@ -87,9 +89,14 @@ class InstanceClusterShard extends AbstractModel
     public $StorageSlope;
 
     /**
-     * @var string 实例运行时节点 ID。
+     * @var string 该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
      */
     public $Runid;
+
+    /**
+     * @var string 实例运行时节点 ID。
+     */
+    public $RunId;
 
     /**
      * @var integer 服务状态。
@@ -108,7 +115,8 @@ class InstanceClusterShard extends AbstractModel
      * @param string $Slots Slot信息。
      * @param integer $Storage 已使用容量。
      * @param float $StorageSlope 容量倾斜率。
-     * @param string $Runid 实例运行时节点 ID。
+     * @param string $Runid 该字段因拼写不规范问题，建议使用RunId取代。含义：实例运行时节点 ID。
+     * @param string $RunId 实例运行时节点 ID。
      * @param integer $Connected 服务状态。
 - 0：down。
 - 1：on。
@@ -156,6 +164,10 @@ class InstanceClusterShard extends AbstractModel
 
         if (array_key_exists("Runid",$param) and $param["Runid"] !== null) {
             $this->Runid = $param["Runid"];
+        }
+
+        if (array_key_exists("RunId",$param) and $param["RunId"] !== null) {
+            $this->RunId = $param["RunId"];
         }
 
         if (array_key_exists("Connected",$param) and $param["Connected"] !== null) {

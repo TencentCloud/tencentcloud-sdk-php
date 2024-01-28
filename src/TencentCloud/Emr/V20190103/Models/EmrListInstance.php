@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportOutsideCluster(boolean $IsSupportOutsideCluster) 设置当前集群的应用场景是否支持体外客户端
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsDedicatedCluster() 获取是否专有集群场景集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDedicatedCluster(boolean $IsDedicatedCluster) 设置是否专有集群场景集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmrListInstance extends AbstractModel
 {
@@ -294,6 +298,12 @@ class EmrListInstance extends AbstractModel
     public $IsSupportOutsideCluster;
 
     /**
+     * @var boolean 是否专有集群场景集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDedicatedCluster;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -343,6 +353,8 @@ class EmrListInstance extends AbstractModel
      * @param array $OutSideSoftInfo 体外客户端组件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSupportOutsideCluster 当前集群的应用场景是否支持体外客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsDedicatedCluster 是否专有集群场景集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -486,6 +498,10 @@ class EmrListInstance extends AbstractModel
 
         if (array_key_exists("IsSupportOutsideCluster",$param) and $param["IsSupportOutsideCluster"] !== null) {
             $this->IsSupportOutsideCluster = $param["IsSupportOutsideCluster"];
+        }
+
+        if (array_key_exists("IsDedicatedCluster",$param) and $param["IsDedicatedCluster"] !== null) {
+            $this->IsDedicatedCluster = $param["IsDedicatedCluster"];
         }
     }
 }

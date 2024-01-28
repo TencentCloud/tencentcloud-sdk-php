@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getDeleteResult() 获取删除结果（true：删除成功，false：删除失败）
  * @method void setDeleteResult(boolean $DeleteResult) 设置删除结果（true：删除成功，false：删除失败）
+ * @method string getTaskId() 获取异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskId(string $TaskId) 设置异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class DeleteCertificateResponse extends AbstractModel
     public $DeleteResult;
 
     /**
+     * @var string 异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param boolean $DeleteResult 删除结果（true：删除成功，false：删除失败）
+     * @param string $TaskId 异步删除的任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,10 @@ class DeleteCertificateResponse extends AbstractModel
         }
         if (array_key_exists("DeleteResult",$param) and $param["DeleteResult"] !== null) {
             $this->DeleteResult = $param["DeleteResult"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

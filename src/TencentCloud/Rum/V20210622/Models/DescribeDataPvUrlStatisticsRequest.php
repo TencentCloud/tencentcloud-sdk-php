@@ -66,8 +66,10 @@ use TencentCloud\Common\AbstractModel;
  5:1d
  * @method void setGroupByType(integer $GroupByType) 设置group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
  5:1d
- * @method integer getIsNewData() 获取无需关注，是否查询zhiyan
- * @method void setIsNewData(integer $IsNewData) 设置无需关注，是否查询zhiyan
+ * @method integer getIsNewData() 获取1: 查询智研
+0: 走旧逻辑，已下线，勿使用
+ * @method void setIsNewData(integer $IsNewData) 设置1: 查询智研
+0: 走旧逻辑，已下线，勿使用
  */
 class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 {
@@ -183,7 +185,8 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
     public $GroupByType;
 
     /**
-     * @var integer 无需关注，是否查询zhiyan
+     * @var integer 1: 查询智研
+0: 走旧逻辑，已下线，勿使用
      */
     public $IsNewData;
 
@@ -211,7 +214,8 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
      * @param string $Env 环境
      * @param integer $GroupByType group by 参数值枚举1:1m  2:5m  3:30m  4:1h 
  5:1d
-     * @param integer $IsNewData 无需关注，是否查询zhiyan
+     * @param integer $IsNewData 1: 查询智研
+0: 走旧逻辑，已下线，勿使用
      */
     function __construct()
     {

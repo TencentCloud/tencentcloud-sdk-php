@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
- * @method string getClientToken() 获取客户端Token。
- * @method void setClientToken(string $ClientToken) 设置客户端Token。
+ * @method string getClientToken() 获取唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+ * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
  * @method array getPreExecutedFileSettings() 获取引导操作脚本设置。
  * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置引导操作脚本设置。
  * @method integer getTaskCount() 获取扩容的Task节点数量。
@@ -124,7 +124,7 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string 客户端Token。
+     * @var string 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
      */
     public $ClientToken;
 
@@ -249,7 +249,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param integer $PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
-     * @param string $ClientToken 客户端Token。
+     * @param string $ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
      * @param array $PreExecutedFileSettings 引导操作脚本设置。
      * @param integer $TaskCount 扩容的Task节点数量。
      * @param integer $CoreCount 扩容的Core节点数量。

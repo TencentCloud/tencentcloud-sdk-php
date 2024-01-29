@@ -274,13 +274,21 @@ style String 为字体风格设置 风格支持： font : 目前支持 黑体、
 
  * @method string getComponentId() 获取表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
+
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentId(string $ComponentId) 设置表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
+
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentName() 获取控件的名字，跟ComponentId二选一，不能全为空
+
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentName(string $ComponentName) 设置控件的名字，跟ComponentId二选一，不能全为空
+
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getLockComponentValue() 获取是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
 注意：此字段可能返回 null，表示取不到有效值。
@@ -308,12 +316,16 @@ class FormField extends AbstractModel
     /**
      * @var string 表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
+
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentId;
 
     /**
      * @var string 控件的名字，跟ComponentId二选一，不能全为空
+
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentName;
@@ -339,8 +351,12 @@ CreateFlowsByTemplates 接口不使用此字段。
 
      * @param string $ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空；
 CreateFlowsByTemplates 接口不使用此字段。
+
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件ID的获取方式</a>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentName 控件的名字，跟ComponentId二选一，不能全为空
+
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/channel_component_name.mp4" target="_blank">点击此处查看模板上控件名字的获取方式</a>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LockComponentValue 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
 注意：此字段可能返回 null，表示取不到有效值。

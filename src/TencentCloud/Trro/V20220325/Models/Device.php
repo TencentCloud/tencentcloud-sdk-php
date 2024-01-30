@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseIds(array $LicenseIds) 设置已经绑定licenseId列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMonthlyRemainTime() 获取每月license的限定时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonthlyRemainTime(integer $MonthlyRemainTime) 设置每月license的限定时长
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Device extends AbstractModel
 {
@@ -94,6 +98,12 @@ class Device extends AbstractModel
     public $LicenseIds;
 
     /**
+     * @var integer 每月license的限定时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonthlyRemainTime;
+
+    /**
      * @param string $DeviceId 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
@@ -107,6 +117,8 @@ class Device extends AbstractModel
      * @param string $Duration 服务时长：s
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LicenseIds 已经绑定licenseId列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MonthlyRemainTime 每月license的限定时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class Device extends AbstractModel
 
         if (array_key_exists("LicenseIds",$param) and $param["LicenseIds"] !== null) {
             $this->LicenseIds = $param["LicenseIds"];
+        }
+
+        if (array_key_exists("MonthlyRemainTime",$param) and $param["MonthlyRemainTime"] !== null) {
+            $this->MonthlyRemainTime = $param["MonthlyRemainTime"];
         }
     }
 }

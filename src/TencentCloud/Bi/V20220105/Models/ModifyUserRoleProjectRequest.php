@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmail(string $Email) 设置邮箱
  * @method string getUserName() 获取用户名
  * @method void setUserName(string $UserName) 设置用户名
+ * @method string getAppUserId() 获取企业微信应用用户id
+ * @method void setAppUserId(string $AppUserId) 设置企业微信应用用户id
  */
 class ModifyUserRoleProjectRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyUserRoleProjectRequest extends AbstractModel
     public $UserName;
 
     /**
+     * @var string 企业微信应用用户id
+     */
+    public $AppUserId;
+
+    /**
      * @param integer $ProjectId 项目ID
      * @param string $UserId 用户ID
      * @param array $RoleIdList 角色ID 列表
      * @param string $Email 邮箱
      * @param string $UserName 用户名
+     * @param string $AppUserId 企业微信应用用户id
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyUserRoleProjectRequest extends AbstractModel
 
         if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
             $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("AppUserId",$param) and $param["AppUserId"] !== null) {
+            $this->AppUserId = $param["AppUserId"];
         }
     }
 }

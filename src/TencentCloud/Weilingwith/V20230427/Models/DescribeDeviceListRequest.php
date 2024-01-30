@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setField(CustomField $Field) 设置自定义字段
  * @method array getGroupIdSet() 获取分组id列表，非必填
  * @method void setGroupIdSet(array $GroupIdSet) 设置分组id列表，非必填
+ * @method string getIsActive() 获取是否激活，默认全部，"1"激活，"0"未激活
+ * @method void setIsActive(string $IsActive) 设置是否激活，默认全部，"1"激活，"0"未激活
+ * @method string getIsCamera() 获取是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
+ * @method void setIsCamera(string $IsCamera) 设置是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
  */
 class DescribeDeviceListRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class DescribeDeviceListRequest extends AbstractModel
     public $GroupIdSet;
 
     /**
+     * @var string 是否激活，默认全部，"1"激活，"0"未激活
+     */
+    public $IsActive;
+
+    /**
+     * @var string 是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
+     */
+    public $IsCamera;
+
+    /**
      * @param integer $WorkspaceId 工作空间id
      * @param integer $PageNumber 分页查询，第几页，必传，大于0
      * @param integer $PageSize 每页条数，必传大于0
@@ -120,6 +134,8 @@ class DescribeDeviceListRequest extends AbstractModel
      * @param array $WIDSet 设备wid,非必填
      * @param CustomField $Field 自定义字段
      * @param array $GroupIdSet 分组id列表，非必填
+     * @param string $IsActive 是否激活，默认全部，"1"激活，"0"未激活
+     * @param string $IsCamera 是否为摄像头，默认全部，"true"摄像头，"false"非摄像头
      */
     function __construct()
     {
@@ -181,6 +197,14 @@ class DescribeDeviceListRequest extends AbstractModel
 
         if (array_key_exists("GroupIdSet",$param) and $param["GroupIdSet"] !== null) {
             $this->GroupIdSet = $param["GroupIdSet"];
+        }
+
+        if (array_key_exists("IsActive",$param) and $param["IsActive"] !== null) {
+            $this->IsActive = $param["IsActive"];
+        }
+
+        if (array_key_exists("IsCamera",$param) and $param["IsCamera"] !== null) {
+            $this->IsCamera = $param["IsCamera"];
         }
     }
 }

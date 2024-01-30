@@ -80,6 +80,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorpAdmin(boolean $CorpAdmin) 设置是否为企业管理员
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppUserId() 获取企微用户id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppUserId(string $AppUserId) 设置企微用户id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppUserAliasName() 获取昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppUserAliasName(string $AppUserAliasName) 设置昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppUserName() 获取应用用户名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppUserName(string $AppUserName) 设置应用用户名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getInValidateAppRange() 获取是否在可见范围内
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInValidateAppRange(boolean $InValidateAppRange) 设置是否在可见范围内
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserRoleListDataUserRoleInfo extends AbstractModel
 {
@@ -182,6 +198,30 @@ class UserRoleListDataUserRoleInfo extends AbstractModel
     public $CorpAdmin;
 
     /**
+     * @var string 企微用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppUserId;
+
+    /**
+     * @var string 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppUserAliasName;
+
+    /**
+     * @var string 应用用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppUserName;
+
+    /**
+     * @var boolean 是否在可见范围内
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InValidateAppRange;
+
+    /**
      * @param integer $Id 业务ID
      * @param array $RoleList 角色列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -211,6 +251,14 @@ class UserRoleListDataUserRoleInfo extends AbstractModel
      * @param boolean $RootAccount 是否为主账号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CorpAdmin 是否为企业管理员
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserId 企微用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserAliasName 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserName 应用用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $InValidateAppRange 是否在可见范围内
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +345,22 @@ class UserRoleListDataUserRoleInfo extends AbstractModel
 
         if (array_key_exists("CorpAdmin",$param) and $param["CorpAdmin"] !== null) {
             $this->CorpAdmin = $param["CorpAdmin"];
+        }
+
+        if (array_key_exists("AppUserId",$param) and $param["AppUserId"] !== null) {
+            $this->AppUserId = $param["AppUserId"];
+        }
+
+        if (array_key_exists("AppUserAliasName",$param) and $param["AppUserAliasName"] !== null) {
+            $this->AppUserAliasName = $param["AppUserAliasName"];
+        }
+
+        if (array_key_exists("AppUserName",$param) and $param["AppUserName"] !== null) {
+            $this->AppUserName = $param["AppUserName"];
+        }
+
+        if (array_key_exists("InValidateAppRange",$param) and $param["InValidateAppRange"] !== null) {
+            $this->InValidateAppRange = $param["InValidateAppRange"];
         }
     }
 }

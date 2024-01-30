@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductType(string $ProductType) 设置产品型号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProductAbility() 获取产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+ * @method integer getProductAbility() 获取产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductAbility(integer $ProductAbility) 设置产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+ * @method void setProductAbility(integer $ProductAbility) 设置产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getManufacturer() 获取生产厂商
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,7 +118,7 @@ class ProductInfo extends AbstractModel
     public $ProductType;
 
     /**
-     * @var integer 产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * @var integer 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductAbility;
@@ -168,7 +168,7 @@ class ProductInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductType 产品型号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProductAbility 产品能力:信令数据、音视频，用二进制表示，第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * @param integer $ProductAbility 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Manufacturer 生产厂商
 注意：此字段可能返回 null，表示取不到有效值。

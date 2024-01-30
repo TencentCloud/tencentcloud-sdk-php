@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置projectId
  * @method string getDeviceId() 获取DeviceId
  * @method void setDeviceId(string $DeviceId) 设置DeviceId
+ * @method integer getStatus() 获取license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
+ * @method void setStatus(integer $Status) 设置license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
  */
 class GetLicensesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class GetLicensesRequest extends AbstractModel
     public $DeviceId;
 
     /**
+     * @var integer license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
+     */
+    public $Status;
+
+    /**
      * @param integer $PageNum 页码
      * @param integer $PageSize 页面数量
      * @param string $ProjectId projectId
      * @param string $DeviceId DeviceId
+     * @param integer $Status license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class GetLicensesRequest extends AbstractModel
 
         if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
             $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

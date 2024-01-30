@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 扩容策略
  *
- * @method string getType() 获取类型，Pods或Percent
+ * @method string getType() 获取类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置类型，Pods或Percent
+ * @method void setType(string $Type) 设置类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValue() 获取数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class AutoScalerPolicy extends AbstractModel
 {
     /**
-     * @var string 类型，Pods或Percent
+     * @var string 类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -54,7 +54,7 @@ class AutoScalerPolicy extends AbstractModel
     public $PeriodSeconds;
 
     /**
-     * @param string $Type 类型，Pods或Percent
+     * @param string $Type 类型，Pods
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Value 数量
 注意：此字段可能返回 null，表示取不到有效值。

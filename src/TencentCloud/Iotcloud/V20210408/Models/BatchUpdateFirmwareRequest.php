@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceNames(array $DeviceNames) 设置需要升级的设备名称列表
  * @method integer getTimeoutInterval() 获取固件升级任务，默认超时时间。 最小取值60秒，最大为3600秒
  * @method void setTimeoutInterval(integer $TimeoutInterval) 设置固件升级任务，默认超时时间。 最小取值60秒，最大为3600秒
+ * @method integer getType() 获取固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
+ * @method void setType(integer $Type) 设置固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
  */
 class BatchUpdateFirmwareRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class BatchUpdateFirmwareRequest extends AbstractModel
     public $TimeoutInterval;
 
     /**
+     * @var integer 固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
+     */
+    public $Type;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $FirmwareVersion 固件新版本号
      * @param string $FirmwareOriVersion 固件原版本号，根据文件列表升级固件不需要填写此参数
@@ -96,6 +103,7 @@ class BatchUpdateFirmwareRequest extends AbstractModel
      * @param integer $FileSize 设备列表的文件大小值
      * @param array $DeviceNames 需要升级的设备名称列表
      * @param integer $TimeoutInterval 固件升级任务，默认超时时间。 最小取值60秒，最大为3600秒
+     * @param integer $Type 固件升级任务类型，默认静态升级值为空或1，动态升级值为7。
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class BatchUpdateFirmwareRequest extends AbstractModel
 
         if (array_key_exists("TimeoutInterval",$param) and $param["TimeoutInterval"] !== null) {
             $this->TimeoutInterval = $param["TimeoutInterval"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

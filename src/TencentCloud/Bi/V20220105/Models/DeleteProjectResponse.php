@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteProject返回参数结构体
  *
+ * @method ErrorInfo getErrorInfo() 获取自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtra() 获取”“
  * @method void setExtra(string $Extra) 设置”“
  * @method string getData() 获取""
@@ -35,6 +39,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class DeleteProjectResponse extends AbstractModel
 {
+    /**
+     * @var ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorInfo;
+
     /**
      * @var string ”“
      */
@@ -58,6 +68,8 @@ class DeleteProjectResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param ErrorInfo $ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra ”“
      * @param string $Data ""
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +90,11 @@ class DeleteProjectResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
+            $this->ErrorInfo = new ErrorInfo();
+            $this->ErrorInfo->deserialize($param["ErrorInfo"]);
+        }
+
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
         }

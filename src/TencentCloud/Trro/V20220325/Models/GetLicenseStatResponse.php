@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnBound(integer $UnBound) 设置未绑定授权
  * @method integer getExpire() 获取过期授权
  * @method void setExpire(integer $Expire) 设置过期授权
+ * @method integer getMonthlyExpire() 获取当月用量超时授权个数
+ * @method void setMonthlyExpire(integer $MonthlyExpire) 设置当月用量超时授权个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class GetLicenseStatResponse extends AbstractModel
     public $Expire;
 
     /**
+     * @var integer 当月用量超时授权个数
+     */
+    public $MonthlyExpire;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class GetLicenseStatResponse extends AbstractModel
      * @param integer $Bound 已绑定授权
      * @param integer $UnBound 未绑定授权
      * @param integer $Expire 过期授权
+     * @param integer $MonthlyExpire 当月用量超时授权个数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,10 @@ class GetLicenseStatResponse extends AbstractModel
 
         if (array_key_exists("Expire",$param) and $param["Expire"] !== null) {
             $this->Expire = $param["Expire"];
+        }
+
+        if (array_key_exists("MonthlyExpire",$param) and $param["MonthlyExpire"] !== null) {
+            $this->MonthlyExpire = $param["MonthlyExpire"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

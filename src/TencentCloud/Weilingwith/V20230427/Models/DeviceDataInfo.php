@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProductAbility() 获取产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+ * @method integer getProductAbility() 获取产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductAbility(integer $ProductAbility) 设置产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+ * @method void setProductAbility(integer $ProductAbility) 设置产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSpaceInfoSet() 获取设备位置信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,6 +100,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupInfo(string $GroupInfo) 设置分组信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceStatus() 获取通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceStatus(string $DeviceStatus) 设置通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取设备业务状态（normal、fault、offline）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置设备业务状态（normal、fault、offline）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceDataInfo extends AbstractModel
 {
@@ -140,7 +148,7 @@ class DeviceDataInfo extends AbstractModel
     public $ProductName;
 
     /**
-     * @var integer 产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * @var integer 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductAbility;
@@ -224,6 +232,18 @@ class DeviceDataInfo extends AbstractModel
     public $GroupInfo;
 
     /**
+     * @var string 通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceStatus;
+
+    /**
+     * @var string 设备业务状态（normal、fault、offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $WID 设备ID， wid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
@@ -236,7 +256,7 @@ class DeviceDataInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProductAbility 产品能力:信令数据、音视频。第0位表示信令数据、第1表示音视频 ，默认为1（信令数据）
+     * @param integer $ProductAbility 产品能力:信令数据、音视频。二进制数值中第0位表示信令数据、第1位表示音视频 。1（信令数据），3（具有信令数据以及音视频能力）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SpaceInfoSet 设备位置信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,6 +283,10 @@ class DeviceDataInfo extends AbstractModel
      * @param array $FieldList 自定义字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupInfo 分组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceStatus 通信在/离线状态（online=normal+fault，offline）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 设备业务状态（normal、fault、offline）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -367,6 +391,14 @@ class DeviceDataInfo extends AbstractModel
 
         if (array_key_exists("GroupInfo",$param) and $param["GroupInfo"] !== null) {
             $this->GroupInfo = $param["GroupInfo"];
+        }
+
+        if (array_key_exists("DeviceStatus",$param) and $param["DeviceStatus"] !== null) {
+            $this->DeviceStatus = $param["DeviceStatus"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

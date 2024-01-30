@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务高级配置
  *
+ * @method array getPortRisk() 获取端口风险高级配置
+ * @method void setPortRisk(array $PortRisk) 设置端口风险高级配置
  * @method array getVulRisk() 获取漏洞风险高级配置
  * @method void setVulRisk(array $VulRisk) 设置漏洞风险高级配置
  * @method array getWeakPwdRisk() 获取弱口令风险高级配置
@@ -29,6 +31,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class TaskAdvanceCFG extends AbstractModel
 {
+    /**
+     * @var array 端口风险高级配置
+     */
+    public $PortRisk;
+
     /**
      * @var array 漏洞风险高级配置
      */
@@ -45,6 +52,7 @@ class TaskAdvanceCFG extends AbstractModel
     public $CFGRisk;
 
     /**
+     * @param array $PortRisk 端口风险高级配置
      * @param array $VulRisk 漏洞风险高级配置
      * @param array $WeakPwdRisk 弱口令风险高级配置
      * @param array $CFGRisk 配置风险高级配置
@@ -62,6 +70,15 @@ class TaskAdvanceCFG extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PortRisk",$param) and $param["PortRisk"] !== null) {
+            $this->PortRisk = [];
+            foreach ($param["PortRisk"] as $key => $value){
+                $obj = new PortRiskAdvanceCFGParamItem();
+                $obj->deserialize($value);
+                array_push($this->PortRisk, $obj);
+            }
+        }
+
         if (array_key_exists("VulRisk",$param) and $param["VulRisk"] !== null) {
             $this->VulRisk = [];
             foreach ($param["VulRisk"] as $key => $value){

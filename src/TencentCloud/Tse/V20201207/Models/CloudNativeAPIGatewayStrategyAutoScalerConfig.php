@@ -70,6 +70,7 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
     /**
      * @var boolean 是否开启指标伸缩
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Enabled;
 

@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserProjectList返回参数结构体
  *
+ * @method ErrorInfo getErrorInfo() 获取自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CorpUserListData getData() 获取数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(CorpUserListData $Data) 设置数据
@@ -37,6 +41,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeUserProjectListResponse extends AbstractModel
 {
+    /**
+     * @var ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorInfo;
+
     /**
      * @var CorpUserListData 数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -61,6 +71,8 @@ class DescribeUserProjectListResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param ErrorInfo $ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CorpUserListData $Data 数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 扩展
@@ -82,6 +94,11 @@ class DescribeUserProjectListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
+            $this->ErrorInfo = new ErrorInfo();
+            $this->ErrorInfo->deserialize($param["ErrorInfo"]);
+        }
+
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new CorpUserListData();
             $this->Data->deserialize($param["Data"]);

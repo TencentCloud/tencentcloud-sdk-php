@@ -688,7 +688,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 4. <font color="red">静默（自动）签署不支持合同签署方存在填写</font>
 
-5.  <font color="red">在下一步创建签署链接前，建议等待DocumentFill </font>[PDF合成完成的回调](https://qian.tencent.com/developers/partner/callback_types_file_resources)或者睡眠几秒，尤其是当模板中存在动态表格等复杂填写控件时，因为合成过程可能会耗费秒级别的时间。
+5.  <font color="red">在下一步创建签署链接前，建议等待DocumentFill </font> <a href="https://qian.tencent.com/developers/partner/callback_types_file_resources">PDF合成完成的回调</a>或者睡眠几秒，尤其是当模板中存在动态表格等复杂填写控件时，因为合成过程可能会耗费秒级别的时间。
  * @method Models\CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(Models\CreatePartnerAutoSignAuthUrlRequest $req) 创建他方自动签授权链接，通过该链接可进入小程序进行合作方企业的自动签授权，若当前企业未开通企业自动签，通过该链接会先引导开通本企业自动签。
 该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权
 

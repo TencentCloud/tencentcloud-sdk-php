@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneNumber(string $PhoneNumber) 设置手机号
  * @method string getAreaCode() 获取手机区号
  * @method void setAreaCode(string $AreaCode) 设置手机区号
+ * @method string getAppUserId() 获取企业微信应用用户id
+ * @method void setAppUserId(string $AppUserId) 设置企业微信应用用户id
  */
 class ModifyUserRoleRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyUserRoleRequest extends AbstractModel
     public $AreaCode;
 
     /**
+     * @var string 企业微信应用用户id
+     */
+    public $AppUserId;
+
+    /**
      * @param string $UserId 用户ID
      * @param array $RoleIdList 角色ID 列表
      * @param string $Email 邮箱
      * @param string $UserName 用户名
      * @param string $PhoneNumber 手机号
      * @param string $AreaCode 手机区号
+     * @param string $AppUserId 企业微信应用用户id
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyUserRoleRequest extends AbstractModel
 
         if (array_key_exists("AreaCode",$param) and $param["AreaCode"] !== null) {
             $this->AreaCode = $param["AreaCode"];
+        }
+
+        if (array_key_exists("AppUserId",$param) and $param["AppUserId"] !== null) {
+            $this->AppUserId = $param["AppUserId"];
         }
     }
 }

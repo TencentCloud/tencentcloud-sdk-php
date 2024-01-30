@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatasourceList返回参数结构体
  *
+ * @method ErrorInfo getErrorInfo() 获取自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
  * @method DatasourceInfoData getData() 获取列表详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(DatasourceInfoData $Data) 设置列表详情
@@ -33,6 +37,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeDatasourceListResponse extends AbstractModel
 {
+    /**
+     * @var ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorInfo;
+
     /**
      * @var DatasourceInfoData 列表详情
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,6 +65,8 @@ class DescribeDatasourceListResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param ErrorInfo $ErrorInfo 自定义错误信息对象
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DatasourceInfoData $Data 列表详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 信息
@@ -74,6 +86,11 @@ class DescribeDatasourceListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
+            $this->ErrorInfo = new ErrorInfo();
+            $this->ErrorInfo->deserialize($param["ErrorInfo"]);
+        }
+
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new DatasourceInfoData();
             $this->Data->deserialize($param["Data"]);

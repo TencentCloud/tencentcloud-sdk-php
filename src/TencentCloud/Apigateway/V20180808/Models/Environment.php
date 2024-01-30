@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置发布状态，1 表示已发布，0 表示未发布。
  * @method string getVersionName() 获取运行版本。
  * @method void setVersionName(string $VersionName) 设置运行版本。
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Environment extends AbstractModel
 {
@@ -52,10 +56,18 @@ class Environment extends AbstractModel
     public $VersionName;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $EnvironmentName 环境名称。
      * @param string $Url 访问路径。
      * @param integer $Status 发布状态，1 表示已发布，0 表示未发布。
      * @param string $VersionName 运行版本。
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class Environment extends AbstractModel
 
         if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
             $this->VersionName = $param["VersionName"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

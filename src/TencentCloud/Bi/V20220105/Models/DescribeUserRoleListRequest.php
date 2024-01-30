@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyword(string $Keyword) 设置模糊搜索的关键字
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method boolean getIsOnlyBindAppUser() 获取是否只获取绑定企微应用的
+ * @method void setIsOnlyBindAppUser(boolean $IsOnlyBindAppUser) 设置是否只获取绑定企微应用的
  */
 class DescribeUserRoleListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeUserRoleListRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var boolean 是否只获取绑定企微应用的
+     */
+    public $IsOnlyBindAppUser;
+
+    /**
      * @param integer $PageNo 页码
      * @param integer $PageSize 页数
      * @param boolean $AllPage 全部页码
      * @param string $UserType 0 企业用户 1 访客 不填表示所有用户
      * @param string $Keyword 模糊搜索的关键字
      * @param string $ProjectId 项目id
+     * @param boolean $IsOnlyBindAppUser 是否只获取绑定企微应用的
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeUserRoleListRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("IsOnlyBindAppUser",$param) and $param["IsOnlyBindAppUser"] !== null) {
+            $this->IsOnlyBindAppUser = $param["IsOnlyBindAppUser"];
         }
     }
 }

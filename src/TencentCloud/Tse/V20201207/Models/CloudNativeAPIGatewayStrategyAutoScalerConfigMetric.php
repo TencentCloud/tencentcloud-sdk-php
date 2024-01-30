@@ -21,16 +21,20 @@ use TencentCloud\Common\AbstractModel;
  * 弹性伸缩配置指标
  *
  * @method string getType() 获取指标类型
-注意：此字段可能返回 null，表示取不到有效值。
+- Resource
  * @method void setType(string $Type) 设置指标类型
-注意：此字段可能返回 null，表示取不到有效值。
+- Resource
  * @method string getResourceName() 获取指标资源名称
+- cpu
+- memory
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置指标资源名称
+- cpu
+- memory
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetType() 获取指标目标类型
+ * @method string getTargetType() 获取指标目标类型，目前只支持百分比Utilization
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetType(string $TargetType) 设置指标目标类型
+ * @method void setTargetType(string $TargetType) 设置指标目标类型，目前只支持百分比Utilization
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetValue() 获取指标目标值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -41,18 +45,20 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends AbstractModel
 {
     /**
      * @var string 指标类型
-注意：此字段可能返回 null，表示取不到有效值。
+- Resource
      */
     public $Type;
 
     /**
      * @var string 指标资源名称
+- cpu
+- memory
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
-     * @var string 指标目标类型
+     * @var string 指标目标类型，目前只支持百分比Utilization
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
@@ -65,10 +71,12 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends AbstractModel
 
     /**
      * @param string $Type 指标类型
-注意：此字段可能返回 null，表示取不到有效值。
+- Resource
      * @param string $ResourceName 指标资源名称
+- cpu
+- memory
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetType 指标目标类型
+     * @param string $TargetType 指标目标类型，目前只支持百分比Utilization
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetValue 指标目标值
 注意：此字段可能返回 null，表示取不到有效值。

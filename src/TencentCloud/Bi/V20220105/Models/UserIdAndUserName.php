@@ -76,6 +76,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobile(string $Mobile) 设置手机号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppId() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(string $AppId) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppUserId() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppUserId(string $AppUserId) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppUserAliasName() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppUserAliasName(string $AppUserAliasName) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppUserName() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppUserName(string $AppUserName) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getInValidateAppRange() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInValidateAppRange(boolean $InValidateAppRange) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserIdAndUserName extends AbstractModel
 {
@@ -168,6 +188,36 @@ class UserIdAndUserName extends AbstractModel
     public $Mobile;
 
     /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppUserId;
+
+    /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppUserAliasName;
+
+    /**
+     * @var string 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppUserName;
+
+    /**
+     * @var boolean 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InValidateAppRange;
+
+    /**
      * @param string $UserId 用户ID
      * @param string $UserName 用户名
      * @param string $CorpId 企业ID
@@ -195,6 +245,16 @@ class UserIdAndUserName extends AbstractModel
      * @param string $GlobalUserName 全局角色
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mobile 手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserId 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserAliasName 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppUserName 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $InValidateAppRange 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -268,6 +328,26 @@ class UserIdAndUserName extends AbstractModel
 
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("AppUserId",$param) and $param["AppUserId"] !== null) {
+            $this->AppUserId = $param["AppUserId"];
+        }
+
+        if (array_key_exists("AppUserAliasName",$param) and $param["AppUserAliasName"] !== null) {
+            $this->AppUserAliasName = $param["AppUserAliasName"];
+        }
+
+        if (array_key_exists("AppUserName",$param) and $param["AppUserName"] !== null) {
+            $this->AppUserName = $param["AppUserName"];
+        }
+
+        if (array_key_exists("InValidateAppRange",$param) and $param["InValidateAppRange"] !== null) {
+            $this->InValidateAppRange = $param["InValidateAppRange"];
         }
     }
 }

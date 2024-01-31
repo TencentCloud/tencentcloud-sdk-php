@@ -4,7 +4,7 @@
 # 依赖环境
 1. PHP 5.6.0 版本及以上
 2. 从腾讯云控制台 开通相应产品
-3. 获取 SecretID、SecretKey 以及调用地址（endpoint），endpoint 一般形式为*.tencentcloudapi.com，如CVM 的调用地址为 cvm.tencentcloudapi.com，具体参考各产品说明。
+3. 获取 SecretID、SecretKey 以及调用地址（endpoint），endpoint 一般形式为 \*.tencentcloudapi.com，如CVM 的调用地址为 cvm.tencentcloudapi.com，具体参考各产品说明。
 
 # 获取安装
 安装 PHP SDK 前，先获取安全凭证。在第一次使用云API之前，用户首先需要在腾讯云控制台上申请安全凭证，安全凭证包括 SecretID 和 SecretKey， SecretID 是用于标识 API 调用者的身份，SecretKey是用于加密签名字符串和服务器端验证签名字符串的密钥。SecretKey 必须严格保管，避免泄露。
@@ -18,7 +18,7 @@
 
     > sudo mv composer.phar /usr/local/bin/composer
 2. 建议中国大陆地区的用户设置腾讯云镜像源：`composer config -g repos.packagist composer https://mirrors.tencent.com/composer/`
-3. 执行命令 `composer require tencentcloud/tencentcloud-sdk-php` 添加依赖。如果只想安装某个产品的，可以使用`composer require tencentcloud/产品名`，例如`composer require tencentcloud/cvm`。推荐使用固定的 SDK 版本开发测试和发布应用，例如 `composer require tencentcloud/tencentcloud-sdk-php=xx.yy.zz`
+3. 执行命令 `composer require tencentcloud/tencentcloud-sdk-php` 添加依赖。如果只想安装某个产品的，可以使用`composer require tencentcloud/产品名`，例如`composer require tencentcloud/cvm`。推荐使用固定的 SDK 版本开发测试和发布应用，例如 `composer require tencentcloud/tencentcloud-sdk-php=xx.yy.zz`。如果不需要 phpunit 等开发依赖，可以指定 `--update-no-dev` 选项。
 4. 在代码中添加以下引用代码。注意：如下仅为示例，composer 会在项目根目录下生成 vendor 目录，`/path/to/`为项目根目录的实际绝对路径，如果是在当前目录执行，可以省略绝对路径。
     
     > require '/path/to/vendor/autoload.php';

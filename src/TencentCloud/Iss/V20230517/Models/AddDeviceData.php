@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备iD
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCode() 获取设备编码（即我们为设备生成的20位国标编码）
+ * @method string getCode() 获取设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(string $Code) 设置设备编码（即我们为设备生成的20位国标编码）
+ * @method void setCode(string $Code) 设置设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取设备名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +104,7 @@ class AddDeviceData extends AbstractModel
     public $DeviceId;
 
     /**
-     * @var string 设备编码（即我们为设备生成的20位国标编码）
+     * @var string 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
@@ -209,7 +209,7 @@ class AddDeviceData extends AbstractModel
     /**
      * @param string $DeviceId 设备iD
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Code 设备编码（即我们为设备生成的20位国标编码）
+     * @param string $Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 设备名称
 注意：此字段可能返回 null，表示取不到有效值。

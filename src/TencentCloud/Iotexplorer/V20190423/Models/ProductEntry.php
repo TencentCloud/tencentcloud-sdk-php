@@ -66,6 +66,10 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindStrategy(integer $BindStrategy) 设置绑定策略（1：强踢；2：非强踢；0：表示无意义）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeviceCount() 获取设备数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceCount(integer $DeviceCount) 设置设备数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductEntry extends AbstractModel
 {
@@ -165,6 +169,12 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
     public $BindStrategy;
 
     /**
+     * @var integer 设备数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceCount;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param integer $CategoryId 产品分组模板ID
@@ -187,6 +197,8 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
      * @param string $CreatorNickName 创建者昵称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeviceCount 设备数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -272,6 +284,10 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
         if (array_key_exists("BindStrategy",$param) and $param["BindStrategy"] !== null) {
             $this->BindStrategy = $param["BindStrategy"];
+        }
+
+        if (array_key_exists("DeviceCount",$param) and $param["DeviceCount"] !== null) {
+            $this->DeviceCount = $param["DeviceCount"];
         }
     }
 }

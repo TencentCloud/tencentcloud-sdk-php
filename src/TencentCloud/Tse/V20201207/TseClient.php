@@ -23,7 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tse\V20201207\Models as Models;
 
 /**
+ * @method Models\BindAutoScalerResourceStrategyToGroupsResponse BindAutoScalerResourceStrategyToGroups(Models\BindAutoScalerResourceStrategyToGroupsRequest $req) 弹性伸缩策略批量绑定网关分组
  * @method Models\CloseWafProtectionResponse CloseWafProtection(Models\CloseWafProtectionRequest $req) 关闭 WAF 防护
+ * @method Models\CreateAutoScalerResourceStrategyResponse CreateAutoScalerResourceStrategy(Models\CreateAutoScalerResourceStrategyRequest $req) 创建弹性伸缩策略
  * @method Models\CreateCloudNativeAPIGatewayResponse CreateCloudNativeAPIGateway(Models\CreateCloudNativeAPIGatewayRequest $req) 创建云原生API网关实例
  * @method Models\CreateCloudNativeAPIGatewayCanaryRuleResponse CreateCloudNativeAPIGatewayCanaryRule(Models\CreateCloudNativeAPIGatewayCanaryRuleRequest $req) 创建云原生网关的灰度规则
  * @method Models\CreateCloudNativeAPIGatewayCertificateResponse CreateCloudNativeAPIGatewayCertificate(Models\CreateCloudNativeAPIGatewayCertificateRequest $req) 创建云原生网关证书
@@ -35,6 +37,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\CreateEngineResponse CreateEngine(Models\CreateEngineRequest $req) 创建引擎实例
  * @method Models\CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroup(Models\CreateNativeGatewayServerGroupRequest $req) 创建云原生网关引擎分组
  * @method Models\CreateWafDomainsResponse CreateWafDomains(Models\CreateWafDomainsRequest $req) 新建 WAF 防护域名
+ * @method Models\DeleteAutoScalerResourceStrategyResponse DeleteAutoScalerResourceStrategy(Models\DeleteAutoScalerResourceStrategyRequest $req) 删除弹性伸缩策略
  * @method Models\DeleteCloudNativeAPIGatewayResponse DeleteCloudNativeAPIGateway(Models\DeleteCloudNativeAPIGatewayRequest $req) 删除云原生API网关实例
  * @method Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse DeleteCloudNativeAPIGatewayCanaryRule(Models\DeleteCloudNativeAPIGatewayCanaryRuleRequest $req) 删除云原生网关的灰度规则
  * @method Models\DeleteCloudNativeAPIGatewayCertificateResponse DeleteCloudNativeAPIGatewayCertificate(Models\DeleteCloudNativeAPIGatewayCertificateRequest $req) 删除云原生网关证书
@@ -46,6 +49,8 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DeleteEngineResponse DeleteEngine(Models\DeleteEngineRequest $req) 删除引擎实例
  * @method Models\DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroup(Models\DeleteNativeGatewayServerGroupRequest $req) 删除网关实例分组
  * @method Models\DeleteWafDomainsResponse DeleteWafDomains(Models\DeleteWafDomainsRequest $req) 删除 WAF 防护域名
+ * @method Models\DescribeAutoScalerResourceStrategiesResponse DescribeAutoScalerResourceStrategies(Models\DescribeAutoScalerResourceStrategiesRequest $req) 查看弹性伸缩策略列表
+ * @method Models\DescribeAutoScalerResourceStrategyBindingGroupsResponse DescribeAutoScalerResourceStrategyBindingGroups(Models\DescribeAutoScalerResourceStrategyBindingGroupsRequest $req) 查看弹性伸缩策略绑定的网关分组
  * @method Models\DescribeCloudNativeAPIGatewayResponse DescribeCloudNativeAPIGateway(Models\DescribeCloudNativeAPIGatewayRequest $req) 获取云原生API网关实例信息
  * @method Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse DescribeCloudNativeAPIGatewayCanaryRules(Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest $req) 查询云原生网关灰度规则列表
  * @method Models\DescribeCloudNativeAPIGatewayCertificateDetailsResponse DescribeCloudNativeAPIGatewayCertificateDetails(Models\DescribeCloudNativeAPIGatewayCertificateDetailsRequest $req) 查询云原生网关单个证书详情
@@ -63,6 +68,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeNacosServerInterfacesResponse DescribeNacosServerInterfaces(Models\DescribeNacosServerInterfacesRequest $req) 查询nacos服务接口列表
  * @method Models\DescribeNativeGatewayServerGroupsResponse DescribeNativeGatewayServerGroups(Models\DescribeNativeGatewayServerGroupsRequest $req) 查询云原生网关分组信息
  * @method Models\DescribeOneCloudNativeAPIGatewayServiceResponse DescribeOneCloudNativeAPIGatewayService(Models\DescribeOneCloudNativeAPIGatewayServiceRequest $req) 获取云原生网关服务详情
+ * @method Models\DescribePublicNetworkResponse DescribePublicNetwork(Models\DescribePublicNetworkRequest $req) 查询云原生API网关实例公网详情
  * @method Models\DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(Models\DescribeSREInstanceAccessAddressRequest $req) 查询引擎实例访问地址
  * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询引擎实例列表
  * @method Models\DescribeUpstreamHealthCheckConfigResponse DescribeUpstreamHealthCheckConfig(Models\DescribeUpstreamHealthCheckConfigRequest $req) 获取云原生网关服务健康检查配置
@@ -70,6 +76,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeWafProtectionResponse DescribeWafProtection(Models\DescribeWafProtectionRequest $req) 获取 WAF 防护状态
  * @method Models\DescribeZookeeperReplicasResponse DescribeZookeeperReplicas(Models\DescribeZookeeperReplicasRequest $req) 查询Zookeeper类型注册引擎实例副本信息
  * @method Models\DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(Models\DescribeZookeeperServerInterfacesRequest $req) 查询zookeeper服务接口列表
+ * @method Models\ModifyAutoScalerResourceStrategyResponse ModifyAutoScalerResourceStrategy(Models\ModifyAutoScalerResourceStrategyRequest $req) 更新弹性伸缩策略
  * @method Models\ModifyCloudNativeAPIGatewayResponse ModifyCloudNativeAPIGateway(Models\ModifyCloudNativeAPIGatewayRequest $req) 修改云原生API网关实例基础信息
  * @method Models\ModifyCloudNativeAPIGatewayCanaryRuleResponse ModifyCloudNativeAPIGatewayCanaryRule(Models\ModifyCloudNativeAPIGatewayCanaryRuleRequest $req) 修改云原生网关的灰度规则
  * @method Models\ModifyCloudNativeAPIGatewayCertificateResponse ModifyCloudNativeAPIGatewayCertificate(Models\ModifyCloudNativeAPIGatewayCertificateRequest $req) 更新云原生网关证书
@@ -83,6 +90,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyNetworkBasicInfoResponse ModifyNetworkBasicInfo(Models\ModifyNetworkBasicInfoRequest $req) 修改云原生API网关实例网络基本信息，例如带宽以及描述，只支持修改客户端公网/内网的信息。
  * @method Models\ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(Models\ModifyUpstreamNodeStatusRequest $req) 修改云原生网关上游实例节点健康状态
  * @method Models\OpenWafProtectionResponse OpenWafProtection(Models\OpenWafProtectionRequest $req) 开启 WAF 防护
+ * @method Models\UnbindAutoScalerResourceStrategyFromGroupsResponse UnbindAutoScalerResourceStrategyFromGroups(Models\UnbindAutoScalerResourceStrategyFromGroupsRequest $req) 弹性伸缩策略批量解绑网关分组
  * @method Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse UpdateCloudNativeAPIGatewayCertificateInfo(Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest $req) 修改云原生网关证书信息
  * @method Models\UpdateCloudNativeAPIGatewaySpecResponse UpdateCloudNativeAPIGatewaySpec(Models\UpdateCloudNativeAPIGatewaySpecRequest $req) 修改云原生API网关实例的节点规格信息，例如节点扩缩容或者升降配
  * @method Models\UpdateEngineInternetAccessResponse UpdateEngineInternetAccess(Models\UpdateEngineInternetAccessRequest $req) 修改引擎公网访问配置

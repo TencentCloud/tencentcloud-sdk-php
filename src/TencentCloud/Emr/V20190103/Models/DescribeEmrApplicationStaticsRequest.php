@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAsc(integer $IsAsc) 设置是否顺序排序，0-逆序，1-正序
  * @method integer getOffset() 获取页号
  * @method void setOffset(integer $Offset) 设置页号
- * @method integer getLimit() 获取页容量
- * @method void setLimit(integer $Limit) 设置页容量
+ * @method integer getLimit() 获取页容量，范围为[10,100]
+ * @method void setLimit(integer $Limit) 设置页容量，范围为[10,100]
  */
 class DescribeEmrApplicationStaticsRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeEmrApplicationStaticsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 页容量
+     * @var integer 页容量，范围为[10,100]
      */
     public $Limit;
 
@@ -111,7 +111,7 @@ class DescribeEmrApplicationStaticsRequest extends AbstractModel
      * @param string $OrderBy 排序字段，可选：sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, sumHDFSBytesRead
      * @param integer $IsAsc 是否顺序排序，0-逆序，1-正序
      * @param integer $Offset 页号
-     * @param integer $Limit 页容量
+     * @param integer $Limit 页容量，范围为[10,100]
      */
     function __construct()
     {

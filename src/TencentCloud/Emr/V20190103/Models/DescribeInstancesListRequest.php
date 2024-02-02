@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayStrategy(string $DisplayStrategy) 设置集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
  * @method integer getOffset() 获取页编号，默认值为0，表示第一页。
  * @method void setOffset(integer $Offset) 设置页编号，默认值为0，表示第一页。
- * @method integer getLimit() 获取每页返回数量，默认值为10，最大值为100。
- * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为10，最大值为100。
+ * @method integer getLimit() 获取每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录；
+ * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录；
  * @method string getOrderField() 获取排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
  * @method void setOrderField(string $OrderField) 设置排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
  * @method integer getAsc() 获取按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
@@ -46,7 +48,8 @@ class DescribeInstancesListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 每页返回数量，默认值为10，最大值为100。
+     * @var integer 每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录；
      */
     public $Limit;
 
@@ -68,7 +71,8 @@ class DescribeInstancesListRequest extends AbstractModel
     /**
      * @param string $DisplayStrategy 集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
      * @param integer $Offset 页编号，默认值为0，表示第一页。
-     * @param integer $Limit 每页返回数量，默认值为10，最大值为100。
+     * @param integer $Limit 每页返回数量，默认值为100，最大值为100。
+如果limit和offset都为0，则查询全部记录；
      * @param string $OrderField 排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
      * @param integer $Asc 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示降序。</li><li>1：表示升序。</li>默认值为0。
      * @param array $Filters 自定义查询

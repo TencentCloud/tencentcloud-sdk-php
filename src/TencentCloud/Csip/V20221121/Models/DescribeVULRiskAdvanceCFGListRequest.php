@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVULRiskAdvanceCFGList请求参数结构体
  *
+ * @method array getMemberId() 获取集团账号的成员id
+ * @method void setMemberId(array $MemberId) 设置集团账号的成员id
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method Filter getFilter() 获取过滤条件
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel
 {
+    /**
+     * @var array 集团账号的成员id
+     */
+    public $MemberId;
+
     /**
      * @var string 任务ID
      */
@@ -38,6 +45,7 @@ class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel
     public $Filter;
 
     /**
+     * @param array $MemberId 集团账号的成员id
      * @param string $TaskId 任务ID
      * @param Filter $Filter 过滤条件
      */
@@ -54,6 +62,10 @@ class DescribeVULRiskAdvanceCFGListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
+            $this->MemberId = $param["MemberId"];
+        }
+
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
         }

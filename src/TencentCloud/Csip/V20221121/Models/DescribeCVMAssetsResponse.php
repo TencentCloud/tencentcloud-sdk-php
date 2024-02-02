@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsList(array $OsList) 设置os列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAssetMapInstanceTypeList() 获取资产类型和实例类型的对应关系
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssetMapInstanceTypeList(array $AssetMapInstanceTypeList) 设置资产类型和实例类型的对应关系
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -136,6 +140,12 @@ class DescribeCVMAssetsResponse extends AbstractModel
     public $OsList;
 
     /**
+     * @var array 资产类型和实例类型的对应关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssetMapInstanceTypeList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -162,6 +172,8 @@ class DescribeCVMAssetsResponse extends AbstractModel
      * @param array $ZoneList 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OsList os列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AssetMapInstanceTypeList 资产类型和实例类型的对应关系
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -269,6 +281,15 @@ class DescribeCVMAssetsResponse extends AbstractModel
                 $obj = new FilterDataObject();
                 $obj->deserialize($value);
                 array_push($this->OsList, $obj);
+            }
+        }
+
+        if (array_key_exists("AssetMapInstanceTypeList",$param) and $param["AssetMapInstanceTypeList"] !== null) {
+            $this->AssetMapInstanceTypeList = [];
+            foreach ($param["AssetMapInstanceTypeList"] as $key => $value){
+                $obj = new AssetInstanceTypeMap();
+                $obj->deserialize($value);
+                array_push($this->AssetMapInstanceTypeList, $obj);
             }
         }
 

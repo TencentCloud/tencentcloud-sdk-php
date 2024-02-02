@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuditStatus(integer $AuditStatus) 设置审核状态：0-未审核 1-审核中 2-审核成功 3-审核失败
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOfflineTime() 获取下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOfflineTime(string $OfflineTime) 设置下线时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FakeURLData extends AbstractModel
 {
@@ -254,6 +258,12 @@ class FakeURLData extends AbstractModel
     public $AuditStatus;
 
     /**
+     * @var string 下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OfflineTime;
+
+    /**
      * @param integer $FakeURLId 仿冒网址id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BrandName 品牌名称
@@ -299,6 +309,8 @@ class FakeURLData extends AbstractModel
      * @param integer $AccountStatus 账户资源状态：0-不可用 1-可用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuditStatus 审核状态：0-未审核 1-审核中 2-审核成功 3-审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OfflineTime 下线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -404,6 +416,10 @@ class FakeURLData extends AbstractModel
 
         if (array_key_exists("AuditStatus",$param) and $param["AuditStatus"] !== null) {
             $this->AuditStatus = $param["AuditStatus"];
+        }
+
+        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
+            $this->OfflineTime = $param["OfflineTime"];
         }
     }
 }

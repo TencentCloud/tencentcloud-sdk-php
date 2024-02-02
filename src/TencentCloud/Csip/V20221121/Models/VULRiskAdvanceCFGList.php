@@ -62,6 +62,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImpactComponent(string $ImpactComponent) 设置影响组件
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayload() 获取漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayload(string $Payload) 设置漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReferences() 获取技术参考
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReferences(string $References) 设置技术参考
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCVSS() 获取cvss评分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCVSS(string $CVSS) 设置cvss评分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAttackHeat() 获取攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackHeat(string $AttackHeat) 设置攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServiceSupport() 获取安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceSupport(array $ServiceSupport) 设置安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecentScanTime() 获取最新检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecentScanTime(string $RecentScanTime) 设置最新检测时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VULRiskAdvanceCFGList extends AbstractModel
 {
@@ -143,6 +167,42 @@ class VULRiskAdvanceCFGList extends AbstractModel
     public $ImpactComponent;
 
     /**
+     * @var string 漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Payload;
+
+    /**
+     * @var string 技术参考
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $References;
+
+    /**
+     * @var string cvss评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CVSS;
+
+    /**
+     * @var string 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttackHeat;
+
+    /**
+     * @var array 安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceSupport;
+
+    /**
+     * @var string 最新检测时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecentScanTime;
+
+    /**
      * @param string $RiskId 风险ID
      * @param string $VULName 漏洞名称
      * @param string $RiskLevel 风险等级
@@ -163,6 +223,18 @@ class VULRiskAdvanceCFGList extends AbstractModel
      * @param string $VULDescribe 漏洞描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImpactComponent 影响组件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Payload 漏洞Payload
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $References 技术参考
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CVSS cvss评分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AttackHeat 攻击热度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServiceSupport 安全产品支持情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecentScanTime 最新检测时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -232,6 +304,35 @@ class VULRiskAdvanceCFGList extends AbstractModel
 
         if (array_key_exists("ImpactComponent",$param) and $param["ImpactComponent"] !== null) {
             $this->ImpactComponent = $param["ImpactComponent"];
+        }
+
+        if (array_key_exists("Payload",$param) and $param["Payload"] !== null) {
+            $this->Payload = $param["Payload"];
+        }
+
+        if (array_key_exists("References",$param) and $param["References"] !== null) {
+            $this->References = $param["References"];
+        }
+
+        if (array_key_exists("CVSS",$param) and $param["CVSS"] !== null) {
+            $this->CVSS = $param["CVSS"];
+        }
+
+        if (array_key_exists("AttackHeat",$param) and $param["AttackHeat"] !== null) {
+            $this->AttackHeat = $param["AttackHeat"];
+        }
+
+        if (array_key_exists("ServiceSupport",$param) and $param["ServiceSupport"] !== null) {
+            $this->ServiceSupport = [];
+            foreach ($param["ServiceSupport"] as $key => $value){
+                $obj = new ServiceSupport();
+                $obj->deserialize($value);
+                array_push($this->ServiceSupport, $obj);
+            }
+        }
+
+        if (array_key_exists("RecentScanTime",$param) and $param["RecentScanTime"] !== null) {
+            $this->RecentScanTime = $param["RecentScanTime"];
         }
     }
 }

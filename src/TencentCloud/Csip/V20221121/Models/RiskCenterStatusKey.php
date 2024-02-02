@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() 获取风险ID
  * @method void setId(string $Id) 设置风险ID
- * @method string getAppId() 获取APP ID
- * @method void setAppId(string $AppId) 设置APP ID
  * @method string getPublicIPDomain() 获取公网IP/域名
  * @method void setPublicIPDomain(string $PublicIPDomain) 设置公网IP/域名
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getAppId() 获取APP ID
+ * @method void setAppId(string $AppId) 设置APP ID
  */
 class RiskCenterStatusKey extends AbstractModel
 {
@@ -35,11 +35,6 @@ class RiskCenterStatusKey extends AbstractModel
      * @var string 风险ID
      */
     public $Id;
-
-    /**
-     * @var string APP ID
-     */
-    public $AppId;
 
     /**
      * @var string 公网IP/域名
@@ -52,10 +47,15 @@ class RiskCenterStatusKey extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string APP ID
+     */
+    public $AppId;
+
+    /**
      * @param string $Id 风险ID
-     * @param string $AppId APP ID
      * @param string $PublicIPDomain 公网IP/域名
      * @param string $InstanceId 实例ID
+     * @param string $AppId APP ID
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class RiskCenterStatusKey extends AbstractModel
             $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
-        }
-
         if (array_key_exists("PublicIPDomain",$param) and $param["PublicIPDomain"] !== null) {
             $this->PublicIPDomain = $param["PublicIPDomain"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

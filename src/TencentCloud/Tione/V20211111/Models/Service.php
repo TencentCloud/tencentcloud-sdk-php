@@ -94,13 +94,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessStatus(string $BusinessStatus) 设置服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ServiceLimit getServiceLimit() 获取已废弃
+ * @method ServiceLimit getServiceLimit() 获取已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置已废弃
+ * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScheduledAction getScheduledAction() 获取已废弃
+ * @method ScheduledAction getScheduledAction() 获取已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置已废弃
+ * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateFailedReason() 获取服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
 注意：此字段可能返回 null，表示取不到有效值。
@@ -149,6 +149,10 @@ DEFAULT: 其他来源
  * @method string getLatestVersion() 获取服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestVersion(string $LatestVersion) 设置服务组下服务的最高版本号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupSWType() 获取资源组类别 托管 NORMAL，纳管 SW
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupSWType(string $ResourceGroupSWType) 设置资源组类别 托管 NORMAL，纳管 SW
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Service extends AbstractModel
@@ -271,14 +275,16 @@ class Service extends AbstractModel
     public $BusinessStatus;
 
     /**
-     * @var ServiceLimit 已废弃
+     * @var ServiceLimit 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ServiceLimit;
 
     /**
-     * @var ScheduledAction 已废弃
+     * @var ScheduledAction 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ScheduledAction;
 
@@ -335,6 +341,12 @@ DEFAULT: 其他来源
     public $LatestVersion;
 
     /**
+     * @var string 资源组类别 托管 NORMAL，纳管 SW
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupSWType;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceId 服务id
      * @param string $ServiceGroupName 服务组名
@@ -372,9 +384,9 @@ DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessStatus 服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceLimit $ServiceLimit 已废弃
+     * @param ServiceLimit $ServiceLimit 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduledAction $ScheduledAction 已废弃
+     * @param ScheduledAction $ScheduledAction 已废弃,以ServiceInfo中的对应为准
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
 注意：此字段可能返回 null，表示取不到有效值。
@@ -399,6 +411,8 @@ DEFAULT: 其他来源
      * @param string $Version 版本号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestVersion 服务组下服务的最高版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupSWType 资源组类别 托管 NORMAL，纳管 SW
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -536,6 +550,10 @@ DEFAULT: 其他来源
 
         if (array_key_exists("LatestVersion",$param) and $param["LatestVersion"] !== null) {
             $this->LatestVersion = $param["LatestVersion"];
+        }
+
+        if (array_key_exists("ResourceGroupSWType",$param) and $param["ResourceGroupSWType"] !== null) {
+            $this->ResourceGroupSWType = $param["ResourceGroupSWType"];
         }
     }
 }

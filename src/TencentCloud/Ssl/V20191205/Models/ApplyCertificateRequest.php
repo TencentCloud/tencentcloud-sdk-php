@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageId(string $PackageId) 设置权益包ID，用于免费证书扩容包使用
  * @method boolean getDeleteDnsAutoRecord() 获取签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参
  * @method void setDeleteDnsAutoRecord(boolean $DeleteDnsAutoRecord) 设置签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参
+ * @method array getDnsNames() 获取域名数组（多域名证书可以上传）。	
+ * @method void setDnsNames(array $DnsNames) 设置域名数组（多域名证书可以上传）。	
  */
 class ApplyCertificateRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class ApplyCertificateRequest extends AbstractModel
     public $DeleteDnsAutoRecord;
 
     /**
+     * @var array 域名数组（多域名证书可以上传）。	
+     */
+    public $DnsNames;
+
+    /**
      * @param string $DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $DomainName 域名。
      * @param integer $ProjectId 项目 ID。
@@ -136,6 +143,7 @@ class ApplyCertificateRequest extends AbstractModel
      * @param string $OldCertificateId 原证书 ID，用于重新申请。
      * @param string $PackageId 权益包ID，用于免费证书扩容包使用
      * @param boolean $DeleteDnsAutoRecord 签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参
+     * @param array $DnsNames 域名数组（多域名证书可以上传）。	
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class ApplyCertificateRequest extends AbstractModel
 
         if (array_key_exists("DeleteDnsAutoRecord",$param) and $param["DeleteDnsAutoRecord"] !== null) {
             $this->DeleteDnsAutoRecord = $param["DeleteDnsAutoRecord"];
+        }
+
+        if (array_key_exists("DnsNames",$param) and $param["DnsNames"] !== null) {
+            $this->DnsNames = $param["DnsNames"];
         }
     }
 }

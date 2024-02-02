@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 3. 每次请求的Filters的上限为10，Filter.Values的上限为100
  * @method integer getOffset() 获取分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10....即每页左边为闭区间; 默认0
  * @method void setOffset(integer $Offset) 设置分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10....即每页左边为闭区间; 默认0
- * @method integer getLimit() 获取分页查询每页大小，最大30; 默认20
- * @method void setLimit(integer $Limit) 设置分页查询每页大小，最大30; 默认20
+ * @method integer getLimit() 获取分页查询每页大小，默认20
+ * @method void setLimit(integer $Limit) 设置分页查询每页大小，默认20
  * @method string getOrder() 获取排序方向; 枚举值: ASC | DESC；默认DESC
  * @method void setOrder(string $Order) 设置排序方向; 枚举值: ASC | DESC；默认DESC
  * @method string getOrderField() 获取排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
@@ -69,7 +69,7 @@ class DescribeBillingResourceGroupRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页查询每页大小，最大30; 默认20
+     * @var integer 分页查询每页大小，默认20
      */
     public $Limit;
 
@@ -93,7 +93,7 @@ class DescribeBillingResourceGroupRequest extends AbstractModel
 2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
 3. 每次请求的Filters的上限为10，Filter.Values的上限为100
      * @param integer $Offset 分页查询起始位置，如：Limit为10，第一页Offset为0，第二页Offset为10....即每页左边为闭区间; 默认0
-     * @param integer $Limit 分页查询每页大小，最大30; 默认20
+     * @param integer $Limit 分页查询每页大小，默认20
      * @param string $Order 排序方向; 枚举值: ASC | DESC；默认DESC
      * @param string $OrderField 排序字段; 枚举值: CreateTime (创建时间) ｜ ExpireTime (到期时间)；默认CreateTime
      */

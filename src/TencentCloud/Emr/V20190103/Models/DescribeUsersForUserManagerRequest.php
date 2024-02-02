@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID
  * @method integer getPageNo() 获取页码
  * @method void setPageNo(integer $PageNo) 设置页码
- * @method integer getPageSize() 获取分页的大小
- * @method void setPageSize(integer $PageSize) 设置分页的大小
+ * @method integer getPageSize() 获取分页的大小。
+默认查询全部；PageNo和PageSize不合理的设置，都是查询全部
+ * @method void setPageSize(integer $PageSize) 设置分页的大小。
+默认查询全部；PageNo和PageSize不合理的设置，都是查询全部
  * @method UserManagerFilter getUserManagerFilter() 获取查询用户列表过滤器
  * @method void setUserManagerFilter(UserManagerFilter $UserManagerFilter) 设置查询用户列表过滤器
  * @method boolean getNeedKeytabInfo() 获取是否需要keytab文件的信息，仅对开启kerberos的集群有效，默认为false
@@ -44,7 +46,8 @@ class DescribeUsersForUserManagerRequest extends AbstractModel
     public $PageNo;
 
     /**
-     * @var integer 分页的大小
+     * @var integer 分页的大小。
+默认查询全部；PageNo和PageSize不合理的设置，都是查询全部
      */
     public $PageSize;
 
@@ -61,7 +64,8 @@ class DescribeUsersForUserManagerRequest extends AbstractModel
     /**
      * @param string $InstanceId 集群实例ID
      * @param integer $PageNo 页码
-     * @param integer $PageSize 分页的大小
+     * @param integer $PageSize 分页的大小。
+默认查询全部；PageNo和PageSize不合理的设置，都是查询全部
      * @param UserManagerFilter $UserManagerFilter 查询用户列表过滤器
      * @param boolean $NeedKeytabInfo 是否需要keytab文件的信息，仅对开启kerberos的集群有效，默认为false
      */

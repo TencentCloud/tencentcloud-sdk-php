@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlagshipCount() 获取当前旗舰版主机数量
  * @method void setFlagshipCount(integer $FlagshipCount) 设置当前旗舰版主机数量
+ * @method array getInstanceIds() 获取影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceIds(array $InstanceIds) 设置影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoInclude() 获取新增旗舰版主机自动加入;1是，0否 
+ * @method void setAutoInclude(integer $AutoInclude) 设置新增旗舰版主机自动加入;1是，0否 
+ * @method array getExcludeInstanceIds() 获取排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExcludeInstanceIds(array $ExcludeInstanceIds) 设置排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,6 +67,23 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
     public $FlagshipCount;
 
     /**
+     * @var array 影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceIds;
+
+    /**
+     * @var integer 新增旗舰版主机自动加入;1是，0否 
+     */
+    public $AutoInclude;
+
+    /**
+     * @var array 排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExcludeInstanceIds;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +94,11 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
      * @param array $Quuids 影响主机quuid列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlagshipCount 当前旗舰版主机数量
+     * @param array $InstanceIds 影响主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoInclude 新增旗舰版主机自动加入;1是，0否 
+     * @param array $ExcludeInstanceIds 排除的主机id列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -96,6 +128,18 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
 
         if (array_key_exists("FlagshipCount",$param) and $param["FlagshipCount"] !== null) {
             $this->FlagshipCount = $param["FlagshipCount"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("AutoInclude",$param) and $param["AutoInclude"] !== null) {
+            $this->AutoInclude = $param["AutoInclude"];
+        }
+
+        if (array_key_exists("ExcludeInstanceIds",$param) and $param["ExcludeInstanceIds"] !== null) {
+            $this->ExcludeInstanceIds = $param["ExcludeInstanceIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

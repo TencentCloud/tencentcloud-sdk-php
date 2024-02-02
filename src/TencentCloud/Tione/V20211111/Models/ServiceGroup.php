@@ -106,6 +106,14 @@ UPDATING 更新中
      UPDATED 更新成功
      UPDATE_FAILED 更新失败
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReplicasCount() 获取服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplicasCount(integer $ReplicasCount) 设置服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAvailableReplicasCount() 获取服务组下期望的pod数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailableReplicasCount(integer $AvailableReplicasCount) 设置服务组下期望的pod数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceGroup extends AbstractModel
 {
@@ -217,6 +225,18 @@ UPDATING 更新中
     public $WeightUpdateStatus;
 
     /**
+     * @var integer 服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplicasCount;
+
+    /**
+     * @var integer 服务组下期望的pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvailableReplicasCount;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceGroupName 服务组名
      * @param string $CreatedBy 创建者
@@ -259,6 +279,10 @@ CREATING 创建中
 UPDATING 更新中
      UPDATED 更新成功
      UPDATE_FAILED 更新失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReplicasCount 服务组下运行的pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AvailableReplicasCount 服务组下期望的pod数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -346,6 +370,14 @@ UPDATING 更新中
 
         if (array_key_exists("WeightUpdateStatus",$param) and $param["WeightUpdateStatus"] !== null) {
             $this->WeightUpdateStatus = $param["WeightUpdateStatus"];
+        }
+
+        if (array_key_exists("ReplicasCount",$param) and $param["ReplicasCount"] !== null) {
+            $this->ReplicasCount = $param["ReplicasCount"];
+        }
+
+        if (array_key_exists("AvailableReplicasCount",$param) and $param["AvailableReplicasCount"] !== null) {
+            $this->AvailableReplicasCount = $param["AvailableReplicasCount"];
         }
     }
 }

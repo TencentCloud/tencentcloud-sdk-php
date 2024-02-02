@@ -57,19 +57,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminMobile(string $AdminMobile) 设置组织机构超管姓名。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
  * @method array getAuthorizationTypes() 获取可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
+
 
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证`
  * @method void setAuthorizationTypes(array $AuthorizationTypes) 设置可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
+
 
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证`
  * @method string getAdminIdCardType() 获取经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
@@ -82,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getAdminIdCardNumber() 获取经办人的证件号
  * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置经办人的证件号
+ * @method string getBusinessLicense() 获取营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+ * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  */
 class RegistrationOrganizationInfo extends AbstractModel
 {
@@ -137,12 +145,15 @@ class RegistrationOrganizationInfo extends AbstractModel
 
     /**
      * @var array 可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
+
 
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证`
      */
     public $AuthorizationTypes;
 
@@ -159,6 +170,11 @@ class RegistrationOrganizationInfo extends AbstractModel
      * @var string 经办人的证件号
      */
     public $AdminIdCardNumber;
+
+    /**
+     * @var string 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     */
+    public $BusinessLicense;
 
     /**
      * @param string $OrganizationName 组织机构名称。
@@ -180,18 +196,22 @@ class RegistrationOrganizationInfo extends AbstractModel
      * @param string $AdminMobile 组织机构超管姓名。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
      * @param array $AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
-1：上传授权书+对公打款
-2：法人授权/认证  会根据当前操作人的身份判定,如果当前操作人是法人,则是法人认证, 如果当前操作人不是法人,则走法人授权
+1：上传授权书
+2：法人授权超管
+5：授权书+对公打款
+
 
 注:
 `1. 当前仅支持一种认证方式`
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
+`3. 如果当前操作人是法人,则是法人认证`
      * @param string $AdminIdCardType 经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
      * @param string $AdminIdCardNumber 经办人的证件号
+     * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
      */
     function __construct()
     {
@@ -248,6 +268,10 @@ class RegistrationOrganizationInfo extends AbstractModel
 
         if (array_key_exists("AdminIdCardNumber",$param) and $param["AdminIdCardNumber"] !== null) {
             $this->AdminIdCardNumber = $param["AdminIdCardNumber"];
+        }
+
+        if (array_key_exists("BusinessLicense",$param) and $param["BusinessLicense"] !== null) {
+            $this->BusinessLicense = $param["BusinessLicense"];
         }
     }
 }

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppSecret(string $AppSecret) 设置调用secret
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAuthorizationEnable() 获取鉴权是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置鉴权是否开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceCallInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class ServiceCallInfo extends AbstractModel
     public $AppSecret;
 
     /**
+     * @var boolean 鉴权是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AuthorizationEnable;
+
+    /**
      * @param string $ServiceGroupId 服务组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InnerHttpAddr 内网http调用地址
@@ -107,6 +117,8 @@ class ServiceCallInfo extends AbstractModel
      * @param string $AppKey 调用key
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppSecret 调用secret
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AuthorizationEnable 鉴权是否开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class ServiceCallInfo extends AbstractModel
 
         if (array_key_exists("AppSecret",$param) and $param["AppSecret"] !== null) {
             $this->AppSecret = $param["AppSecret"];
+        }
+
+        if (array_key_exists("AuthorizationEnable",$param) and $param["AuthorizationEnable"] !== null) {
+            $this->AuthorizationEnable = $param["AuthorizationEnable"];
         }
     }
 }

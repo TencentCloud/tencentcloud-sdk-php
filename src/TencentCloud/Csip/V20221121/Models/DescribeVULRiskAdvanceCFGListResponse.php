@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckFromLists(array $CheckFromLists) 设置识别来源过滤列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVulTagList() 获取漏洞标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVulTagList(array $VulTagList) 设置漏洞标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,6 +77,12 @@ class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel
     public $CheckFromLists;
 
     /**
+     * @var array 漏洞标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VulTagList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -86,6 +96,8 @@ class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel
      * @param array $VULTypeLists 漏洞类型过滤列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CheckFromLists 识别来源过滤列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VulTagList 漏洞标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -139,6 +151,15 @@ class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel
                 $obj = new FilterDataObject();
                 $obj->deserialize($value);
                 array_push($this->CheckFromLists, $obj);
+            }
+        }
+
+        if (array_key_exists("VulTagList",$param) and $param["VulTagList"] !== null) {
+            $this->VulTagList = [];
+            foreach ($param["VulTagList"] as $key => $value){
+                $obj = new FilterDataObject();
+                $obj->deserialize($value);
+                array_push($this->VulTagList, $obj);
             }
         }
 

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
  * @method void setName(string $Name) 设置设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
- * @method integer getAccessProtocol() 获取设备接入协议（1:RTMP,2:GB,3:GW）
- * @method void setAccessProtocol(integer $AccessProtocol) 设置设备接入协议（1:RTMP,2:GB,3:GW）
- * @method integer getType() 获取设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
- * @method void setType(integer $Type) 设置设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
+ * @method integer getAccessProtocol() 获取设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+ * @method void setAccessProtocol(integer $AccessProtocol) 设置设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+ * @method integer getType() 获取设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
+ * @method void setType(integer $Type) 设置设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
  * @method string getOrganizationId() 获取设备所属组织ID，从查询组织接口DescribeOrganization中获取
  * @method void setOrganizationId(string $OrganizationId) 设置设备所属组织ID，从查询组织接口DescribeOrganization中获取
  * @method string getClusterId() 获取设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置设备端口（仅网关接入需要）
  * @method string getUsername() 获取设备用户名（仅网关接入需要）
  * @method void setUsername(string $Username) 设置设备用户名（仅网关接入需要）
+ * @method string getSNCode() 获取设备 SN，仅IVCP 协议设备需要
+ * @method void setSNCode(string $SNCode) 设置设备 SN，仅IVCP 协议设备需要
  */
 class AddUserDeviceRequest extends AbstractModel
 {
@@ -55,12 +57,12 @@ class AddUserDeviceRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 设备接入协议（1:RTMP,2:GB,3:GW）
+     * @var integer 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
      */
     public $AccessProtocol;
 
     /**
-     * @var integer 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
+     * @var integer 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
      */
     public $Type;
 
@@ -115,9 +117,14 @@ class AddUserDeviceRequest extends AbstractModel
     public $Username;
 
     /**
+     * @var string 设备 SN，仅IVCP 协议设备需要
+     */
+    public $SNCode;
+
+    /**
      * @param string $Name 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
-     * @param integer $AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW）
-     * @param integer $Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP，则设备类型只能选择IPC）
+     * @param integer $AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+     * @param integer $Type 设备类型，1:IPC,2:NVR；（若设备接入协议选择RTMP,IVCP，则设备类型只能选择IPC）
      * @param string $OrganizationId 设备所属组织ID，从查询组织接口DescribeOrganization中获取
      * @param string $ClusterId 设备接入服务节点ID（从查询设备可用服务节点接口DescribeDeviceRegion中获取的Value字段）
      * @param integer $TransportProtocol 设备流传输协议，1:UDP,2:TCP；(国标设备有效，不填写则默认UDP协议)
@@ -128,6 +135,7 @@ class AddUserDeviceRequest extends AbstractModel
      * @param string $Ip 设备接入IP（仅网关接入需要）
      * @param integer $Port 设备端口（仅网关接入需要）
      * @param string $Username 设备用户名（仅网关接入需要）
+     * @param string $SNCode 设备 SN，仅IVCP 协议设备需要
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class AddUserDeviceRequest extends AbstractModel
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {
             $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("SNCode",$param) and $param["SNCode"] !== null) {
+            $this->SNCode = $param["SNCode"];
         }
     }
 }

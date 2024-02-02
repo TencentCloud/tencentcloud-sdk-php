@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInnerHttpsAddr(array $InnerHttpsAddr) 设置内网https调用地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getState() 获取私有连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setState(string $State) 设置私有连接状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IngressPrivateLinkInfo extends AbstractModel
 {
@@ -64,6 +68,12 @@ class IngressPrivateLinkInfo extends AbstractModel
     public $InnerHttpsAddr;
 
     /**
+     * @var string 私有连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $State;
+
+    /**
      * @param string $VpcId 用户VpcId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 用户子网ID
@@ -71,6 +81,8 @@ class IngressPrivateLinkInfo extends AbstractModel
      * @param array $InnerHttpAddr 内网http调用地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InnerHttpsAddr 内网https调用地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $State 私有连接状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class IngressPrivateLinkInfo extends AbstractModel
 
         if (array_key_exists("InnerHttpsAddr",$param) and $param["InnerHttpsAddr"] !== null) {
             $this->InnerHttpsAddr = $param["InnerHttpsAddr"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
         }
     }
 }

@@ -82,10 +82,6 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置权重
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPodList() 获取实例列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodList(array $PodList) 设置实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ResourceInfo getResourceTotal() 获取资源总量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTotal(ResourceInfo $ResourceTotal) 设置资源总量
@@ -123,6 +119,10 @@ HYBRID_PAID:
  * @method string getScheduledAction() 获取定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduledAction(string $ScheduledAction) 设置定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPodList() 获取实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodList(array $PodList) 设置实例列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method Pod getPods() 获取Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,12 +239,6 @@ HYBRID_PAID:
     public $Weight;
 
     /**
-     * @var array 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PodList;
-
-    /**
      * @var ResourceInfo 资源总量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -300,8 +294,16 @@ HYBRID_PAID:
     public $ScheduledAction;
 
     /**
+     * @var array 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    public $PodList;
+
+    /**
      * @var Pod Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Pods;
 
@@ -379,8 +381,6 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PodList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceInfo $ResourceTotal 资源总量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OldReplicas 历史实例数
@@ -399,6 +399,8 @@ HYBRID_PAID:
      * @param string $ScaleStrategy 定时伸缩策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduledAction 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PodList 实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Pod $Pods Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -489,10 +491,6 @@ HYBRID_PAID:
             $this->Weight = $param["Weight"];
         }
 
-        if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
-            $this->PodList = $param["PodList"];
-        }
-
         if (array_key_exists("ResourceTotal",$param) and $param["ResourceTotal"] !== null) {
             $this->ResourceTotal = new ResourceInfo();
             $this->ResourceTotal->deserialize($param["ResourceTotal"]);
@@ -533,6 +531,10 @@ HYBRID_PAID:
 
         if (array_key_exists("ScheduledAction",$param) and $param["ScheduledAction"] !== null) {
             $this->ScheduledAction = $param["ScheduledAction"];
+        }
+
+        if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
+            $this->PodList = $param["PodList"];
         }
 
         if (array_key_exists("Pods",$param) and $param["Pods"] !== null) {

@@ -224,6 +224,54 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewAsset(integer $IsNewAsset) 设置1新资产；0 非新资产
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCVMAgentStatus() 获取0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCVMAgentStatus(integer $CVMAgentStatus) 设置0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCVMStatus() 获取1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCVMStatus(integer $CVMStatus) 设置1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefenseModel() 获取1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefenseModel(integer $DefenseModel) 设置1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTatStatus() 获取1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTatStatus(integer $TatStatus) 设置1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCpuTrend() 获取cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpuTrend(array $CpuTrend) 设置cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMemoryTrend() 获取内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemoryTrend(array $MemoryTrend) 设置内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAgentStatus() 获取1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentStatus(integer $AgentStatus) 设置1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCloseDefenseCount() 获取本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloseDefenseCount(integer $CloseDefenseCount) 设置本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceState() 获取运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceState(string $InstanceState) 设置运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityGroupIds() 获取安全组数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAgentMemRss() 获取物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentMemRss(integer $AgentMemRss) 设置物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getAgentCpuPer() 获取CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentCpuPer(float $AgentCpuPer) 设置CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CVMAssetVO extends AbstractModel
 {
@@ -534,6 +582,78 @@ class CVMAssetVO extends AbstractModel
     public $IsNewAsset;
 
     /**
+     * @var integer 0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CVMAgentStatus;
+
+    /**
+     * @var integer 1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CVMStatus;
+
+    /**
+     * @var integer 1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefenseModel;
+
+    /**
+     * @var integer 1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TatStatus;
+
+    /**
+     * @var array cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CpuTrend;
+
+    /**
+     * @var array 内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemoryTrend;
+
+    /**
+     * @var integer 1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentStatus;
+
+    /**
+     * @var integer 本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloseDefenseCount;
+
+    /**
+     * @var string 运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceState;
+
+    /**
+     * @var array 安全组数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var integer 物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentMemRss;
+
+    /**
+     * @var float CPU使用率百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentCpuPer;
+
+    /**
      * @param string $AssetId 资产id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产名
@@ -635,6 +755,30 @@ class CVMAssetVO extends AbstractModel
      * @param integer $BASAgentStatus 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNewAsset 1新资产；0 非新资产
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CVMAgentStatus 0 未安装  1安装 2:安装中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CVMStatus 1:开启 0:未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefenseModel 1:客户端已安装 0：未安装 2: Agentless
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TatStatus 1:已安装 0:未安装
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CpuTrend cpu趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MemoryTrend 内存趋势图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AgentStatus 1:agent在线 0:agent离线 2:主机离线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CloseDefenseCount 本月防护关闭次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceState 运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityGroupIds 安全组数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AgentMemRss 物理内存占用KB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $AgentCpuPer CPU使用率百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -857,6 +1001,64 @@ class CVMAssetVO extends AbstractModel
 
         if (array_key_exists("IsNewAsset",$param) and $param["IsNewAsset"] !== null) {
             $this->IsNewAsset = $param["IsNewAsset"];
+        }
+
+        if (array_key_exists("CVMAgentStatus",$param) and $param["CVMAgentStatus"] !== null) {
+            $this->CVMAgentStatus = $param["CVMAgentStatus"];
+        }
+
+        if (array_key_exists("CVMStatus",$param) and $param["CVMStatus"] !== null) {
+            $this->CVMStatus = $param["CVMStatus"];
+        }
+
+        if (array_key_exists("DefenseModel",$param) and $param["DefenseModel"] !== null) {
+            $this->DefenseModel = $param["DefenseModel"];
+        }
+
+        if (array_key_exists("TatStatus",$param) and $param["TatStatus"] !== null) {
+            $this->TatStatus = $param["TatStatus"];
+        }
+
+        if (array_key_exists("CpuTrend",$param) and $param["CpuTrend"] !== null) {
+            $this->CpuTrend = [];
+            foreach ($param["CpuTrend"] as $key => $value){
+                $obj = new Element();
+                $obj->deserialize($value);
+                array_push($this->CpuTrend, $obj);
+            }
+        }
+
+        if (array_key_exists("MemoryTrend",$param) and $param["MemoryTrend"] !== null) {
+            $this->MemoryTrend = [];
+            foreach ($param["MemoryTrend"] as $key => $value){
+                $obj = new Element();
+                $obj->deserialize($value);
+                array_push($this->MemoryTrend, $obj);
+            }
+        }
+
+        if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
+            $this->AgentStatus = $param["AgentStatus"];
+        }
+
+        if (array_key_exists("CloseDefenseCount",$param) and $param["CloseDefenseCount"] !== null) {
+            $this->CloseDefenseCount = $param["CloseDefenseCount"];
+        }
+
+        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
+            $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("AgentMemRss",$param) and $param["AgentMemRss"] !== null) {
+            $this->AgentMemRss = $param["AgentMemRss"];
+        }
+
+        if (array_key_exists("AgentCpuPer",$param) and $param["AgentCpuPer"] !== null) {
+            $this->AgentCpuPer = $param["AgentCpuPer"];
         }
     }
 }

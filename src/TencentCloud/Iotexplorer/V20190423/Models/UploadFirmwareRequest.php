@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirmwareDescription(string $FirmwareDescription) 设置固件描述
  * @method string getFwType() 获取固件升级模块；可选值 mcu|moudule
  * @method void setFwType(string $FwType) 设置固件升级模块；可选值 mcu|moudule
+ * @method string getFirmwareUserDefined() 获取固件用户自定义配置信息
+ * @method void setFirmwareUserDefined(string $FirmwareUserDefined) 设置固件用户自定义配置信息
  */
 class UploadFirmwareRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UploadFirmwareRequest extends AbstractModel
     public $FwType;
 
     /**
+     * @var string 固件用户自定义配置信息
+     */
+    public $FirmwareUserDefined;
+
+    /**
      * @param string $ProductID 产品ID
      * @param string $FirmwareVersion 固件版本号
      * @param string $Md5sum 固件的MD5值
@@ -80,6 +87,7 @@ class UploadFirmwareRequest extends AbstractModel
      * @param string $FirmwareName 固件名称
      * @param string $FirmwareDescription 固件描述
      * @param string $FwType 固件升级模块；可选值 mcu|moudule
+     * @param string $FirmwareUserDefined 固件用户自定义配置信息
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class UploadFirmwareRequest extends AbstractModel
 
         if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
             $this->FwType = $param["FwType"];
+        }
+
+        if (array_key_exists("FirmwareUserDefined",$param) and $param["FirmwareUserDefined"] !== null) {
+            $this->FirmwareUserDefined = $param["FirmwareUserDefined"];
         }
     }
 }

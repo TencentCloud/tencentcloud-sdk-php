@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置防御开关，0 关闭 1 开启
  * @method integer getScope() 获取1 全部旗舰版主机，0 Quuids列表主机
  * @method void setScope(integer $Scope) 设置1 全部旗舰版主机，0 Quuids列表主机
- * @method array getQuuids() 获取作用弄范围内旗舰版主机列表
- * @method void setQuuids(array $Quuids) 设置作用弄范围内旗舰版主机列表
+ * @method array getQuuids() 获取作用范围内旗舰版主机列表
+ * @method void setQuuids(array $Quuids) 设置作用范围内旗舰版主机列表
+ * @method array getExcludeInstanceIds() 获取排除作用范围内旗舰版主机列表
+ * @method void setExcludeInstanceIds(array $ExcludeInstanceIds) 设置排除作用范围内旗舰版主机列表
+ * @method integer getAutoInclude() 获取新增资产自动包含 0 不包含 1包含
+ * @method void setAutoInclude(integer $AutoInclude) 设置新增资产自动包含 0 不包含 1包含
+ * @method array getInstanceIds() 获取作用范围内旗舰版主机列表
+ * @method void setInstanceIds(array $InstanceIds) 设置作用范围内旗舰版主机列表
  */
 class ModifyVulDefenceSettingRequest extends AbstractModel
 {
@@ -40,14 +46,32 @@ class ModifyVulDefenceSettingRequest extends AbstractModel
     public $Scope;
 
     /**
-     * @var array 作用弄范围内旗舰版主机列表
+     * @var array 作用范围内旗舰版主机列表
      */
     public $Quuids;
 
     /**
+     * @var array 排除作用范围内旗舰版主机列表
+     */
+    public $ExcludeInstanceIds;
+
+    /**
+     * @var integer 新增资产自动包含 0 不包含 1包含
+     */
+    public $AutoInclude;
+
+    /**
+     * @var array 作用范围内旗舰版主机列表
+     */
+    public $InstanceIds;
+
+    /**
      * @param integer $Enable 防御开关，0 关闭 1 开启
      * @param integer $Scope 1 全部旗舰版主机，0 Quuids列表主机
-     * @param array $Quuids 作用弄范围内旗舰版主机列表
+     * @param array $Quuids 作用范围内旗舰版主机列表
+     * @param array $ExcludeInstanceIds 排除作用范围内旗舰版主机列表
+     * @param integer $AutoInclude 新增资产自动包含 0 不包含 1包含
+     * @param array $InstanceIds 作用范围内旗舰版主机列表
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class ModifyVulDefenceSettingRequest extends AbstractModel
 
         if (array_key_exists("Quuids",$param) and $param["Quuids"] !== null) {
             $this->Quuids = $param["Quuids"];
+        }
+
+        if (array_key_exists("ExcludeInstanceIds",$param) and $param["ExcludeInstanceIds"] !== null) {
+            $this->ExcludeInstanceIds = $param["ExcludeInstanceIds"];
+        }
+
+        if (array_key_exists("AutoInclude",$param) and $param["AutoInclude"] !== null) {
+            $this->AutoInclude = $param["AutoInclude"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

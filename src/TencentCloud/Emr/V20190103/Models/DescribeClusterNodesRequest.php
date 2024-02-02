@@ -49,7 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取页编号，默认值为0，表示第一页。
  * @method void setOffset(integer $Offset) 设置页编号，默认值为0，表示第一页。
  * @method integer getLimit() 获取每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据
  * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据
  * @method string getHardwareResourceType() 获取资源类型:支持all/host/pod，默认为all
  * @method void setHardwareResourceType(string $HardwareResourceType) 设置资源类型:支持all/host/pod，默认为all
  * @method array getSearchFields() 获取支持搜索的字段
@@ -93,6 +95,7 @@ class DescribeClusterNodesRequest extends AbstractModel
 
     /**
      * @var integer 每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据
      */
     public $Limit;
 
@@ -132,6 +135,7 @@ class DescribeClusterNodesRequest extends AbstractModel
      * @param boolean $ExportDb 导出全部节点信息csv时是否携带cdb信息
      * @param integer $Offset 页编号，默认值为0，表示第一页。
      * @param integer $Limit 每页返回数量，默认值为100，最大值为100。
+如果offset和limit都不填，或者都填0，则返回全部数据
      * @param string $HardwareResourceType 资源类型:支持all/host/pod，默认为all
      * @param array $SearchFields 支持搜索的字段
      * @param string $OrderField 无

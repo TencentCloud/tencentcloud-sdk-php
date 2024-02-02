@@ -75,9 +75,9 @@ min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可�
 hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
 day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
  * @method boolean getDetail() 获取Domains 传入多个时，默认（false)返回多个域名的汇总数据
-可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+可按需指定为 true，返回每一个 Domain 的明细数据（statusCode、2xx、3xx、4xx、5xx 指标暂不支持）
  * @method void setDetail(boolean $Detail) 设置Domains 传入多个时，默认（false)返回多个域名的汇总数据
-可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+可按需指定为 true，返回每一个 Domain 的明细数据（statusCode、2xx、3xx、4xx、5xx 指标暂不支持）
  * @method string getArea() 获取指定服务地域查询，不填充表示查询中国境内 CDN 数据
 mainland：指定查询中国境内 CDN 数据
 overseas：指定查询中国境外 CDN 数据
@@ -142,7 +142,7 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 
     /**
      * @var boolean Domains 传入多个时，默认（false)返回多个域名的汇总数据
-可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+可按需指定为 true，返回每一个 Domain 的明细数据（statusCode、2xx、3xx、4xx、5xx 指标暂不支持）
      */
     public $Detail;
 
@@ -187,7 +187,7 @@ min：1 分钟粒度，指定查询区间 24 小时内（含 24 小时），可�
 hour：1 小时粒度，指定查询区间 31 天内（含 31 天），可返回 1 小时粒度明细数据
 day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数据
      * @param boolean $Detail Domains 传入多个时，默认（false)返回多个域名的汇总数据
-可按需指定为 true，返回每一个 Domain 的明细数据（statusCode 指标暂不支持）
+可按需指定为 true，返回每一个 Domain 的明细数据（statusCode、2xx、3xx、4xx、5xx 指标暂不支持）
      * @param string $Area 指定服务地域查询，不填充表示查询中国境内 CDN 数据
 mainland：指定查询中国境内 CDN 数据
 overseas：指定查询中国境外 CDN 数据

@@ -23,16 +23,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getInstanceType() 获取实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
- * @method void setInstanceType(integer $InstanceType) 设置实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
+ * @method integer getInstanceType() 获取实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
  * @method string getRegion() 获取地域字母缩写
  * @method void setRegion(string $Region) 设置地域字母缩写
  * @method string getZoneId() 获取区域全拼
  * @method void setZoneId(string $ZoneId) 设置区域全拼
  * @method integer getTotalDeviceNum() 获取支持设备总数
  * @method void setTotalDeviceNum(integer $TotalDeviceNum) 设置支持设备总数
- * @method integer getUsedDeviceNum() 获取以注册设备数
- * @method void setUsedDeviceNum(integer $UsedDeviceNum) 设置以注册设备数
+ * @method integer getUsedDeviceNum() 获取已注册设备数
+ * @method void setUsedDeviceNum(integer $UsedDeviceNum) 设置已注册设备数
  * @method integer getProjectNum() 获取项目数
  * @method void setProjectNum(integer $ProjectNum) 设置项目数
  * @method integer getProductNum() 获取产品数
@@ -51,6 +51,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivateDevice(integer $ActivateDevice) 设置激活设备数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置实例状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
@@ -60,7 +68,7 @@ class InstanceDetail extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
+     * @var integer 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
      */
     public $InstanceType;
 
@@ -80,7 +88,7 @@ class InstanceDetail extends AbstractModel
     public $TotalDeviceNum;
 
     /**
-     * @var integer 以注册设备数
+     * @var integer 已注册设备数
      */
     public $UsedDeviceNum;
 
@@ -122,12 +130,24 @@ class InstanceDetail extends AbstractModel
     public $ActivateDevice;
 
     /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
+     * @var integer 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $InstanceId 实例ID
-     * @param integer $InstanceType 实例类型（0 公共实例 1 标准企业实例 2专享企业实例）
+     * @param integer $InstanceType 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
      * @param string $Region 地域字母缩写
      * @param string $ZoneId 区域全拼
      * @param integer $TotalDeviceNum 支持设备总数
-     * @param integer $UsedDeviceNum 以注册设备数
+     * @param integer $UsedDeviceNum 已注册设备数
      * @param integer $ProjectNum 项目数
      * @param integer $ProductNum 产品数
      * @param string $CreateTime 创建时间
@@ -136,6 +156,10 @@ class InstanceDetail extends AbstractModel
      * @param integer $TotalDevice 总设备数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivateDevice 激活设备数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 实例状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +225,14 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("ActivateDevice",$param) and $param["ActivateDevice"] !== null) {
             $this->ActivateDevice = $param["ActivateDevice"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

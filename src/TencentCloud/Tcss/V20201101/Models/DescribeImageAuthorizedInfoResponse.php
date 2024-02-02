@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotScannedImageCnt(integer $NotScannedImageCnt) 设置未开启扫描镜像数
  * @method integer getNotScannedLocalImageCnt() 获取本地未开启扫描镜像数
  * @method void setNotScannedLocalImageCnt(integer $NotScannedLocalImageCnt) 设置本地未开启扫描镜像数
+ * @method integer getTrialAuthorizedCnt() 获取试用镜像授权数
+ * @method void setTrialAuthorizedCnt(integer $TrialAuthorizedCnt) 设置试用镜像授权数
+ * @method integer getUsedTrialAuthorizedCnt() 获取已使用试用镜像授权数
+ * @method void setUsedTrialAuthorizedCnt(integer $UsedTrialAuthorizedCnt) 设置已使用试用镜像授权数
+ * @method integer getPurchasedAuthorizedCnt() 获取已购镜像授权数
+ * @method void setPurchasedAuthorizedCnt(integer $PurchasedAuthorizedCnt) 设置已购镜像授权数
+ * @method integer getUsedPurchasedAuthorizedCnt() 获取已使用已购镜像授权数
+ * @method void setUsedPurchasedAuthorizedCnt(integer $UsedPurchasedAuthorizedCnt) 设置已使用已购镜像授权数
+ * @method boolean getCanApplyFreeImageAuthorize() 获取是否可免费领取镜像授权数
+ * @method void setCanApplyFreeImageAuthorize(boolean $CanApplyFreeImageAuthorize) 设置是否可免费领取镜像授权数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +71,31 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
     public $NotScannedLocalImageCnt;
 
     /**
+     * @var integer 试用镜像授权数
+     */
+    public $TrialAuthorizedCnt;
+
+    /**
+     * @var integer 已使用试用镜像授权数
+     */
+    public $UsedTrialAuthorizedCnt;
+
+    /**
+     * @var integer 已购镜像授权数
+     */
+    public $PurchasedAuthorizedCnt;
+
+    /**
+     * @var integer 已使用已购镜像授权数
+     */
+    public $UsedPurchasedAuthorizedCnt;
+
+    /**
+     * @var boolean 是否可免费领取镜像授权数
+     */
+    public $CanApplyFreeImageAuthorize;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +106,11 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
      * @param integer $ScannedImageCnt 已开启扫描镜像数
      * @param integer $NotScannedImageCnt 未开启扫描镜像数
      * @param integer $NotScannedLocalImageCnt 本地未开启扫描镜像数
+     * @param integer $TrialAuthorizedCnt 试用镜像授权数
+     * @param integer $UsedTrialAuthorizedCnt 已使用试用镜像授权数
+     * @param integer $PurchasedAuthorizedCnt 已购镜像授权数
+     * @param integer $UsedPurchasedAuthorizedCnt 已使用已购镜像授权数
+     * @param boolean $CanApplyFreeImageAuthorize 是否可免费领取镜像授权数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +144,26 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
 
         if (array_key_exists("NotScannedLocalImageCnt",$param) and $param["NotScannedLocalImageCnt"] !== null) {
             $this->NotScannedLocalImageCnt = $param["NotScannedLocalImageCnt"];
+        }
+
+        if (array_key_exists("TrialAuthorizedCnt",$param) and $param["TrialAuthorizedCnt"] !== null) {
+            $this->TrialAuthorizedCnt = $param["TrialAuthorizedCnt"];
+        }
+
+        if (array_key_exists("UsedTrialAuthorizedCnt",$param) and $param["UsedTrialAuthorizedCnt"] !== null) {
+            $this->UsedTrialAuthorizedCnt = $param["UsedTrialAuthorizedCnt"];
+        }
+
+        if (array_key_exists("PurchasedAuthorizedCnt",$param) and $param["PurchasedAuthorizedCnt"] !== null) {
+            $this->PurchasedAuthorizedCnt = $param["PurchasedAuthorizedCnt"];
+        }
+
+        if (array_key_exists("UsedPurchasedAuthorizedCnt",$param) and $param["UsedPurchasedAuthorizedCnt"] !== null) {
+            $this->UsedPurchasedAuthorizedCnt = $param["UsedPurchasedAuthorizedCnt"];
+        }
+
+        if (array_key_exists("CanApplyFreeImageAuthorize",$param) and $param["CanApplyFreeImageAuthorize"] !== null) {
+            $this->CanApplyFreeImageAuthorize = $param["CanApplyFreeImageAuthorize"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

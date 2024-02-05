@@ -20,19 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 账号信息。
  *
- * @method integer getAccountType() 获取账号类型
- * @method void setAccountType(integer $AccountType) 设置账号类型
+ * @method integer getAccountType() 获取用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+ * @method void setAccountType(integer $AccountType) 设置用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
  * @method QQAccountInfo getQQAccount() 获取QQ账号信息，AccountType是1时，该字段必填。
  * @method void setQQAccount(QQAccountInfo $QQAccount) 设置QQ账号信息，AccountType是1时，该字段必填。
  * @method WeChatAccountInfo getWeChatAccount() 获取微信账号信息，AccountType是2时，该字段必填。
  * @method void setWeChatAccount(WeChatAccountInfo $WeChatAccount) 设置微信账号信息，AccountType是2时，该字段必填。
- * @method OtherAccountInfo getOtherAccount() 获取其它账号信息，AccountType是0、4、8或10004时，该字段必填。
- * @method void setOtherAccount(OtherAccountInfo $OtherAccount) 设置其它账号信息，AccountType是0、4、8或10004时，该字段必填。
+ * @method OtherAccountInfo getOtherAccount() 获取其它账号信息，AccountType是8或10004时，该字段必填。
+ * @method void setOtherAccount(OtherAccountInfo $OtherAccount) 设置其它账号信息，AccountType是8或10004时，该字段必填。
  */
 class AccountInfo extends AbstractModel
 {
     /**
-     * @var integer 账号类型
+     * @var integer 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
      */
     public $AccountType;
 
@@ -47,15 +59,19 @@ class AccountInfo extends AbstractModel
     public $WeChatAccount;
 
     /**
-     * @var OtherAccountInfo 其它账号信息，AccountType是0、4、8或10004时，该字段必填。
+     * @var OtherAccountInfo 其它账号信息，AccountType是8或10004时，该字段必填。
      */
     public $OtherAccount;
 
     /**
-     * @param integer $AccountType 账号类型
+     * @param integer $AccountType 用户账号类型（默认开通QQopenid、手机号MD5；如需使用微信开放账号，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号）
+1：QQ开放账号
+2：微信开放账号
+8：设备号（imei/imeiMD5/idfa/idfaMd5）
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
      * @param QQAccountInfo $QQAccount QQ账号信息，AccountType是1时，该字段必填。
      * @param WeChatAccountInfo $WeChatAccount 微信账号信息，AccountType是2时，该字段必填。
-     * @param OtherAccountInfo $OtherAccount 其它账号信息，AccountType是0、4、8或10004时，该字段必填。
+     * @param OtherAccountInfo $OtherAccount 其它账号信息，AccountType是8或10004时，该字段必填。
      */
     function __construct()
     {

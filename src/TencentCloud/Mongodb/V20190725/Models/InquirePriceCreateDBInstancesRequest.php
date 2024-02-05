@@ -78,12 +78,10 @@ use TencentCloud\Common\AbstractModel;
 - 创建副本集实例时，该参数固定设置为1。
 - 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
 - 若为单节点实例，该参数固定设置为0。
- * @method integer getPeriod() 获取选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。
-- 单位：月。
-- 可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
- * @method void setPeriod(integer $Period) 设置选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。
-- 单位：月。
-- 可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+ * @method integer getPeriod() 获取- 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+-选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
+ * @method void setPeriod(integer $Period) 设置- 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+-选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
  * @method string getInstanceChargeType() 获取实例付费方式。
 - PREPAID：包年包月计费。
 - POSTPAID_BY_HOUR：按量计费。
@@ -171,9 +169,8 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $ReplicateSetNum;
 
     /**
-     * @var integer 选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。
-- 单位：月。
-- 可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @var integer - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+-选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
      */
     public $Period;
 
@@ -244,9 +241,8 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
 - 创建副本集实例时，该参数固定设置为1。
 - 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
 - 若为单节点实例，该参数固定设置为0。
-     * @param integer $Period 选择包年包月计费模式时，您需要设定购买实例的时长。即<b>InstanceChargeType</b>设定为<b>PREPAID</b>时，该参数必须配置。
-- 单位：月。
-- 可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * @param integer $Period - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+-选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
      * @param string $InstanceChargeType 实例付费方式。
 - PREPAID：包年包月计费。
 - POSTPAID_BY_HOUR：按量计费。

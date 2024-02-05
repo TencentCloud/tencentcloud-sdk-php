@@ -23,40 +23,36 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserId() 获取账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPostTime() 获取操作时间戳，单位秒（对应输入参数）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostTime(integer $PostTime) 设置操作时间戳，单位秒（对应输入参数）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAssociateAccount() 获取对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+ * @method string getAssociateAccount() 获取业务参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAssociateAccount(string $AssociateAccount) 设置对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+ * @method void setAssociateAccount(string $AssociateAccount) 设置业务参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserIp() 获取操作来源的外网IP（对应输入参数）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserIp(string $UserIp) 设置操作来源的外网IP（对应输入参数）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRiskLevel() 获取风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+ * @method string getRiskLevel() 获取风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskLevel(string $RiskLevel) 设置风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+ * @method void setRiskLevel(string $RiskLevel) 设置风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRiskType() 获取风险类型，请参考官网风险类型
 账号风险 
@@ -112,13 +108,13 @@ reject：拒绝，高风险恶意
 2062 疑似 虚拟设备 请求设备为模拟器、脚本、云设备等虚拟设备
 2063 疑似 群控设备 请求设备为猫池、手机墙等群控设备
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConstId() 获取唯一ID
+ * @method string getConstId() 获取设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConstId(string $ConstId) 设置唯一ID
+ * @method void setConstId(string $ConstId) 设置设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRiskInformation() 获取扩展信息
+ * @method string getRiskInformation() 获取风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskInformation(string $RiskInformation) 设置扩展信息
+ * @method void setRiskInformation(string $RiskInformation) 设置风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputManageMarketingRiskValue extends AbstractModel
@@ -127,9 +123,7 @@ class OutputManageMarketingRiskValue extends AbstractModel
      * @var string 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,7 +136,7 @@ AccountType是10004时，对应手机号的MD5。
     public $PostTime;
 
     /**
-     * @var string 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+     * @var string 业务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociateAccount;
@@ -154,10 +148,10 @@ AccountType是10004时，对应手机号的MD5。
     public $UserIp;
 
     /**
-     * @var string 风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+     * @var string 风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
@@ -194,13 +188,13 @@ reject：拒绝，高风险恶意
     public $RiskType;
 
     /**
-     * @var string 唯一ID
+     * @var string 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConstId;
 
     /**
-     * @var string 扩展信息
+     * @var string 风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskInformation;
@@ -209,21 +203,19 @@ reject：拒绝，高风险恶意
      * @param string $UserId 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
-AccountType是4时，对应手机号。
 AccountType是8时，对应imei、idfa、imeiMD5或者idfaMD5。
-AccountType是0时，对应账号信息。
 AccountType是10004时，对应手机号的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PostTime 操作时间戳，单位秒（对应输入参数）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AssociateAccount 对应输入参数，AccountType 是 QQ 或微信开放账号时，用于标识 QQ 或微信用户登录后关联业务自身的账号ID。
+     * @param string $AssociateAccount 业务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserIp 操作来源的外网IP（对应输入参数）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RiskLevel 风险值
-pass : 无恶意
-review：需要人工审核
-reject：拒绝，高风险恶意
+     * @param string $RiskLevel 风险等级
+pass：无恶意
+review：低风险，需要人工审核
+reject：高风险，建议拦截
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RiskType 风险类型，请参考官网风险类型
 账号风险 
@@ -252,9 +244,9 @@ reject：拒绝，高风险恶意
 2062 疑似 虚拟设备 请求设备为模拟器、脚本、云设备等虚拟设备
 2063 疑似 群控设备 请求设备为猫池、手机墙等群控设备
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConstId 唯一ID
+     * @param string $ConstId 设备指纹ID，如果集成了设备指纹，并传入了正确的DeviceToken和Platform，该字段正常输出；如果DeviceToken异常（校验不通过），则会在RiskType中返回"-1"标签，ConstId字段为空；如果没有集成设备指纹ConstId字段默认为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RiskInformation 扩展信息
+     * @param string $RiskInformation 风险扩展数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

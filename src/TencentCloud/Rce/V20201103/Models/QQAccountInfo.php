@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppIdUser(string $AppIdUser) 设置QQ分配给网站或应用的AppId，用来唯一标识网站或应用。
  * @method string getAssociateAccount() 获取用于标识QQ用户登录后所关联业务自身的账号ID。
  * @method void setAssociateAccount(string $AssociateAccount) 设置用于标识QQ用户登录后所关联业务自身的账号ID。
- * @method string getMobilePhone() 获取账号绑定的手机号。
- * @method void setMobilePhone(string $MobilePhone) 设置账号绑定的手机号。
- * @method string getDeviceId() 获取用户设备号。
- * @method void setDeviceId(string $DeviceId) 设置用户设备号。
+ * @method string getMobilePhone() 获取账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
+ * @method void setMobilePhone(string $MobilePhone) 设置账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
+ * @method string getDeviceId() 获取用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+ * @method void setDeviceId(string $DeviceId) 设置用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
  */
 class QQAccountInfo extends AbstractModel
 {
@@ -49,12 +53,14 @@ class QQAccountInfo extends AbstractModel
     public $AssociateAccount;
 
     /**
-     * @var string 账号绑定的手机号。
+     * @var string 账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
      */
     public $MobilePhone;
 
     /**
-     * @var string 用户设备号。
+     * @var string 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
      */
     public $DeviceId;
 
@@ -62,8 +68,10 @@ class QQAccountInfo extends AbstractModel
      * @param string $QQOpenId QQ的OpenID。
      * @param string $AppIdUser QQ分配给网站或应用的AppId，用来唯一标识网站或应用。
      * @param string $AssociateAccount 用于标识QQ用户登录后所关联业务自身的账号ID。
-     * @param string $MobilePhone 账号绑定的手机号。
-     * @param string $DeviceId 用户设备号。
+     * @param string $MobilePhone 账号绑定的MD5手机号，
+注释：只支中国大陆11位手机号MD5加密后位的32位小写字符串。
+     * @param string $DeviceId 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
+注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
      */
     function __construct()
     {

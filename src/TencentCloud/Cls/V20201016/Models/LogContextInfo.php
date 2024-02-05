@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexStatus(string $IndexStatus) 设置日志创建索引异常原因(仅在日志创建索引异常时有值)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHighLights() 获取日志内容的高亮描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHighLights(array $HighLights) 设置日志内容的高亮描述信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogContextInfo extends AbstractModel
 {
@@ -96,6 +100,12 @@ class LogContextInfo extends AbstractModel
     public $IndexStatus;
 
     /**
+     * @var array 日志内容的高亮描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HighLights;
+
+    /**
      * @param string $Source 日志来源设备
      * @param string $Filename 采集路径
      * @param string $Content 日志内容
@@ -107,6 +117,8 @@ class LogContextInfo extends AbstractModel
      * @param string $RawLog 原始日志(仅在日志创建索引异常时有值)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HighLights 日志内容的高亮描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,15 @@ class LogContextInfo extends AbstractModel
 
         if (array_key_exists("IndexStatus",$param) and $param["IndexStatus"] !== null) {
             $this->IndexStatus = $param["IndexStatus"];
+        }
+
+        if (array_key_exists("HighLights",$param) and $param["HighLights"] !== null) {
+            $this->HighLights = [];
+            foreach ($param["HighLights"] as $key => $value){
+                $obj = new HighLightItem();
+                $obj->deserialize($value);
+                array_push($this->HighLights, $obj);
+            }
         }
     }
 }

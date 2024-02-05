@@ -20,42 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全栈式风控引擎入参
  *
- * @method AccountInfo getAccount() 获取用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
-
- * @method void setAccount(AccountInfo $Account) 设置用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
-
- * @method string getSceneCode() 获取场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
- * @method void setSceneCode(string $SceneCode) 设置场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
- * @method string getUserIp() 获取登录来源的外网IP
- * @method void setUserIp(string $UserIp) 设置登录来源的外网IP
- * @method integer getPostTime() 获取时间戳
- * @method void setPostTime(integer $PostTime) 设置时间戳
- * @method string getUserId() 获取用户唯一标识。
- * @method void setUserId(string $UserId) 设置用户唯一标识。
- * @method string getDeviceToken() 获取设备指纹token。
- * @method void setDeviceToken(string $DeviceToken) 设置设备指纹token。
- * @method integer getDeviceBusinessId() 获取设备指纹BusinessId
- * @method void setDeviceBusinessId(integer $DeviceBusinessId) 设置设备指纹BusinessId
+ * @method AccountInfo getAccount() 获取用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。
+ * @method void setAccount(AccountInfo $Account) 设置用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。
+ * @method string getSceneCode() 获取场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection
+ * @method void setSceneCode(string $SceneCode) 设置场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection
+ * @method string getUserIp() 获取用户外网ip（传入用户非外网ip会影响判断结果）。
+ * @method void setUserIp(string $UserIp) 设置用户外网ip（传入用户非外网ip会影响判断结果）。
+ * @method integer getPostTime() 获取用户操作时间戳，精确到秒。
+ * @method void setPostTime(integer $PostTime) 设置用户操作时间戳，精确到秒。
+ * @method string getUserId() 获取业务平台用户唯一标识。
+ * @method void setUserId(string $UserId) 设置业务平台用户唯一标识。
+ * @method string getDeviceToken() 获取设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。
+ * @method void setDeviceToken(string $DeviceToken) 设置设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。
+ * @method integer getDeviceBusinessId() 获取设备指纹 BusinessId。
+ * @method void setDeviceBusinessId(integer $DeviceBusinessId) 设置设备指纹 BusinessId。
  * @method integer getBusinessId() 获取业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
  * @method void setBusinessId(integer $BusinessId) 设置业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
  * @method string getNickname() 获取昵称，UTF-8 编码。
@@ -80,79 +76,75 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMacAddress(string $MacAddress) 设置MAC地址或设备唯一标识。
  * @method string getVendorId() 获取手机制造商ID，如果手机注册，请带上此信息。
  * @method void setVendorId(string $VendorId) 设置手机制造商ID，如果手机注册，请带上此信息。
- * @method integer getDeviceType() 获取设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5;
- * @method void setDeviceType(integer $DeviceType) 设置设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5;
- * @method array getDetails() 获取详细信息
- * @method void setDetails(array $Details) 设置详细信息
- * @method SponsorInfo getSponsor() 获取可选填写。详情请跳转至SponsorInfo查看。
- * @method void setSponsor(SponsorInfo $Sponsor) 设置可选填写。详情请跳转至SponsorInfo查看。
- * @method OnlineScamInfo getOnlineScam() 获取可选填写。详情请跳转至OnlineScamInfo查看。
- * @method void setOnlineScam(OnlineScamInfo $OnlineScam) 设置可选填写。详情请跳转至OnlineScamInfo查看。
- * @method string getPlatform() 获取1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+ * @method integer getDeviceType() 获取设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+ * @method void setDeviceType(integer $DeviceType) 设置设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+ * @method array getDetails() 获取扩展字段。
+ * @method void setDetails(array $Details) 设置扩展字段。
+ * @method SponsorInfo getSponsor() 获取邀请助力场景相关信息。
+ * @method void setSponsor(SponsorInfo $Sponsor) 设置邀请助力场景相关信息。
+ * @method OnlineScamInfo getOnlineScam() 获取详情请跳转至OnlineScamInfo查看。
+ * @method void setOnlineScam(OnlineScamInfo $OnlineScam) 设置详情请跳转至OnlineScamInfo查看。
+ * @method string getPlatform() 获取1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
 
- * @method void setPlatform(string $Platform) 设置1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+ * @method void setPlatform(string $Platform) 设置1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
  */
 class InputManageMarketingRisk extends AbstractModel
 {
     /**
-     * @var AccountInfo 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
-
+     * @var AccountInfo 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。
      */
     public $Account;
 
     /**
-     * @var string 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
+     * @var string 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection
      */
     public $SceneCode;
 
     /**
-     * @var string 登录来源的外网IP
+     * @var string 用户外网ip（传入用户非外网ip会影响判断结果）。
      */
     public $UserIp;
 
     /**
-     * @var integer 时间戳
+     * @var integer 用户操作时间戳，精确到秒。
      */
     public $PostTime;
 
     /**
-     * @var string 用户唯一标识。
+     * @var string 业务平台用户唯一标识。
      */
     public $UserId;
 
     /**
-     * @var string 设备指纹token。
+     * @var string 设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。
      */
     public $DeviceToken;
 
     /**
-     * @var integer 设备指纹BusinessId
+     * @var integer 设备指纹 BusinessId。
      */
     public $DeviceBusinessId;
 
@@ -209,58 +201,55 @@ class InputManageMarketingRisk extends AbstractModel
     public $VendorId;
 
     /**
-     * @var integer 设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5;
+     * @var integer 设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
      */
     public $DeviceType;
 
     /**
-     * @var array 详细信息
+     * @var array 扩展字段。
      */
     public $Details;
 
     /**
-     * @var SponsorInfo 可选填写。详情请跳转至SponsorInfo查看。
+     * @var SponsorInfo 邀请助力场景相关信息。
      */
     public $Sponsor;
 
     /**
-     * @var OnlineScamInfo 可选填写。详情请跳转至OnlineScamInfo查看。
+     * @var OnlineScamInfo 详情请跳转至OnlineScamInfo查看。
      */
     public $OnlineScam;
 
     /**
-     * @var string 1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+     * @var string 1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
 
      */
     public $Platform;
 
     /**
-     * @param AccountInfo $Account 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微
-信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信
-开放账号）： 
-1：QQ 开放账号。 
-2：微信开放账号。 
-4：手机号（暂仅支持国内手机号）。 
-8：设备号（imei/imeiMD5/idfa/idfaMd5）。 
-0： 其他。 
-10004：手机号 MD5。
-
-     * @param string $SceneCode 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
-例如：e_register_protection_1521184361
-控制台链接：https://console.cloud.tencent.com/rce/risk/sceneroot；
-     * @param string $UserIp 登录来源的外网IP
-     * @param integer $PostTime 时间戳
-     * @param string $UserId 用户唯一标识。
-     * @param string $DeviceToken 设备指纹token。
-     * @param integer $DeviceBusinessId 设备指纹BusinessId
+     * @param AccountInfo $Account 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
+1：QQ 开放账号；
+2：微信开放账号；
+8：设备号（imei/imeiMD5/idfa/idfaMd5）；
+10004：手机号 MD5。
+     * @param string $SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
+控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
+活动防刷默认场景码：e_activity_antirush 
+登陆保护默认场景码：e_login_protection
+注册保护默认场景码：e_register_protection
+     * @param string $UserIp 用户外网ip（传入用户非外网ip会影响判断结果）。
+     * @param integer $PostTime 用户操作时间戳，精确到秒。
+     * @param string $UserId 业务平台用户唯一标识。
+     * @param string $DeviceToken 设备指纹Devicetoken值，集成设备指纹后获取，
+如果集成了相应的设备指纹，该字段必填。
+     * @param integer $DeviceBusinessId 设备指纹 BusinessId。
      * @param integer $BusinessId 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
      * @param string $Nickname 昵称，UTF-8 编码。
      * @param string $EmailAddress 用户邮箱地址（非系统自动生成）。
@@ -273,19 +262,18 @@ class InputManageMarketingRisk extends AbstractModel
      * @param string $XForwardedFor 用户HTTP请求的X-Forwarded-For值。
      * @param string $MacAddress MAC地址或设备唯一标识。
      * @param string $VendorId 手机制造商ID，如果手机注册，请带上此信息。
-     * @param integer $DeviceType 设备类型，账号类型为8时必填： 
-0:未知 
-1:Imei;国际移动设备识别号（15-17位数字） 
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后32位的小写字符串 
-3:Idfa; 
-4:IdfaMD5;
-     * @param array $Details 详细信息
-     * @param SponsorInfo $Sponsor 可选填写。详情请跳转至SponsorInfo查看。
-     * @param OnlineScamInfo $OnlineScam 可选填写。详情请跳转至OnlineScamInfo查看。
-     * @param string $Platform 1：安卓
-2：iOS 
-3：H5 
-4：小程序 
+     * @param integer $DeviceType 设备类型，账号类型（AccountType）为8时填写。
+1:Imei；国际移动设备识别号（15-17位数字）；
+2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:Idfa；
+4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+     * @param array $Details 扩展字段。
+     * @param SponsorInfo $Sponsor 邀请助力场景相关信息。
+     * @param OnlineScamInfo $OnlineScam 详情请跳转至OnlineScamInfo查看。
+     * @param string $Platform 1：安卓；
+2：iOS ；
+3：H5 ；
+4：小程序 。
      */
     function __construct()
     {

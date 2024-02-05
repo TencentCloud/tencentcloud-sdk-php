@@ -18,29 +18,29 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 日志主题信息
+ * 主题基本信息
  *
  * @method string getLogsetId() 获取日志集ID
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getTopicName() 获取日志主题名称
- * @method void setTopicName(string $TopicName) 设置日志主题名称
+ * @method string getTopicId() 获取主题ID
+ * @method void setTopicId(string $TopicId) 设置主题ID
+ * @method string getTopicName() 获取主题名称
+ * @method void setTopicName(string $TopicName) 设置主题名称
  * @method integer getPartitionCount() 获取主题分区个数
  * @method void setPartitionCount(integer $PartitionCount) 设置主题分区个数
- * @method boolean getIndex() 获取是否开启索引
- * @method void setIndex(boolean $Index) 设置是否开启索引
- * @method string getAssumerName() 获取云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+ * @method boolean getIndex() 获取主题是否开启索引（主题类型需为日志主题）
+ * @method void setIndex(boolean $Index) 设置主题是否开启索引（主题类型需为日志主题）
+ * @method string getAssumerName() 获取云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAssumerName(string $AssumerName) 设置云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+ * @method void setAssumerName(string $AssumerName) 设置云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method boolean getStatus() 获取日主主题是否开启采集
- * @method void setStatus(boolean $Status) 设置日主主题是否开启采集
- * @method array getTags() 获取日志主题绑定的标签信息
+ * @method boolean getStatus() 获取主题是否开启采集
+ * @method void setStatus(boolean $Status) 设置主题是否开启采集
+ * @method array getTags() 获取主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置日志主题绑定的标签信息
+ * @method void setTags(array $Tags) 设置主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoSplit() 获取该主题是否开启自动分裂
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,9 +50,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置若开启自动分裂的话，该主题能够允许的最大分区数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStorageType() 获取日主题的存储类型
+ * @method string getStorageType() 获取主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStorageType(string $StorageType) 设置日主题的存储类型
+ * @method void setStorageType(string $StorageType) 设置主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPeriod() 获取生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,15 +62,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAssumerName(string $SubAssumerName) 设置云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescribes() 获取日志主题描述
+ * @method string getDescribes() 获取主题描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescribes(string $Describes) 设置日志主题描述
+ * @method void setDescribes(string $Describes) 设置主题描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHotPeriod() 获取开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+ * @method integer getHotPeriod() 获取开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHotPeriod(integer $HotPeriod) 设置开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+ * @method void setHotPeriod(integer $HotPeriod) 设置开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBizType() 获取主题类型。
 - 0: 日志主题 
@@ -97,12 +97,12 @@ class TopicInfo extends AbstractModel
     public $LogsetId;
 
     /**
-     * @var string 日志主题ID
+     * @var string 主题ID
      */
     public $TopicId;
 
     /**
-     * @var string 日志主题名称
+     * @var string 主题名称
      */
     public $TopicName;
 
@@ -112,12 +112,12 @@ class TopicInfo extends AbstractModel
     public $PartitionCount;
 
     /**
-     * @var boolean 是否开启索引
+     * @var boolean 主题是否开启索引（主题类型需为日志主题）
      */
     public $Index;
 
     /**
-     * @var string 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * @var string 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssumerName;
@@ -128,12 +128,12 @@ class TopicInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var boolean 日主主题是否开启采集
+     * @var boolean 主题是否开启采集
      */
     public $Status;
 
     /**
-     * @var array 日志主题绑定的标签信息
+     * @var array 主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
@@ -151,7 +151,7 @@ class TopicInfo extends AbstractModel
     public $MaxSplitPartitions;
 
     /**
-     * @var string 日主题的存储类型
+     * @var string 主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
@@ -169,14 +169,14 @@ class TopicInfo extends AbstractModel
     public $SubAssumerName;
 
     /**
-     * @var string 日志主题描述
+     * @var string 主题描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describes;
 
     /**
-     * @var integer 开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+     * @var integer 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HotPeriod;
@@ -199,30 +199,30 @@ class TopicInfo extends AbstractModel
 
     /**
      * @param string $LogsetId 日志集ID
-     * @param string $TopicId 日志主题ID
-     * @param string $TopicName 日志主题名称
+     * @param string $TopicId 主题ID
+     * @param string $TopicName 主题名称
      * @param integer $PartitionCount 主题分区个数
-     * @param boolean $Index 是否开启索引
-     * @param string $AssumerName 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+     * @param boolean $Index 主题是否开启索引（主题类型需为日志主题）
+     * @param string $AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-     * @param boolean $Status 日主主题是否开启采集
-     * @param array $Tags 日志主题绑定的标签信息
+     * @param boolean $Status 主题是否开启采集
+     * @param array $Tags 主题绑定的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoSplit 该主题是否开启自动分裂
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StorageType 日主题的存储类型
+     * @param string $StorageType 主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Describes 日志主题描述
+     * @param string $Describes 主题描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HotPeriod 开启日志沉降，热存储的生命周期， hotPeriod < Period。
-热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+     * @param integer $HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
+标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BizType 主题类型。
 - 0: 日志主题 

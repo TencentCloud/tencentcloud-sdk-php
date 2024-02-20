@@ -128,6 +128,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\ModifyRepositoryInfoPersonalResponse ModifyRepositoryInfoPersonal(Models\ModifyRepositoryInfoPersonalRequest $req) 用于在个人版镜像仓库中更新容器镜像描述
  * @method Models\ModifySecurityPolicyResponse ModifySecurityPolicy(Models\ModifySecurityPolicyRequest $req) 更新实例公网访问白名单
  * @method Models\ModifyServiceAccountResponse ModifyServiceAccount(Models\ModifyServiceAccountRequest $req) 更新服务级账号
+ * @method Models\ModifyServiceAccountPasswordResponse ModifyServiceAccountPassword(Models\ModifyServiceAccountPasswordRequest $req) 更新服务级账号密码
  * @method Models\ModifyTagRetentionRuleResponse ModifyTagRetentionRule(Models\ModifyTagRetentionRuleRequest $req) 更新版本保留规则
  * @method Models\ModifyUserPasswordPersonalResponse ModifyUserPasswordPersonal(Models\ModifyUserPasswordPersonalRequest $req) 修改个人用户登录密码
  * @method Models\ModifyWebhookTriggerResponse ModifyWebhookTrigger(Models\ModifyWebhookTriggerRequest $req) 更新触发器

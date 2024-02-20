@@ -54,7 +54,8 @@ use TencentCloud\Common\AbstractModel;
 
 **注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
 
-详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
+详细使用场景可以参考接口描述说明中的 **主要使用场景EndPoint分类**
+
  * @method void setEndpoint(string $Endpoint) 设置签署链接类型,可以设置的参数如下
 <ul><li> **WEIXINAPP** :(默认)跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型 ，此时返回短链</li>
 <li> **CHANNEL** :带有H5引导页的跳转电子签小程序的链接</li>
@@ -63,7 +64,8 @@ use TencentCloud\Common\AbstractModel;
 
 **注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
 
-详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
+详细使用场景可以参考接口描述说明中的 **主要使用场景EndPoint分类**
+
  * @method string getGenerateType() 获取签署链接生成类型，可以选择的类型如下
 
 <ul><li>**ALL**：(默认)全部签署方签署链接，此时不会给自动签署(静默签署)的签署方创建签署链接</li>
@@ -189,7 +191,8 @@ class CreateSignUrlsRequest extends AbstractModel
 
 **注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
 
-详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
+详细使用场景可以参考接口描述说明中的 **主要使用场景EndPoint分类**
+
      */
     public $Endpoint;
 
@@ -312,7 +315,8 @@ class CreateSignUrlsRequest extends AbstractModel
 
 **注：**动态签署人场景，如果签署链接类型设置为`APP`，则仅支持跳转到封面页。
 
-详细使用场景可以参数接口说明中的 **主要使用场景可以更加EndPoint分类如下**
+详细使用场景可以参考接口描述说明中的 **主要使用场景EndPoint分类**
+
      * @param string $GenerateType 签署链接生成类型，可以选择的类型如下
 
 <ul><li>**ALL**：(默认)全部签署方签署链接，此时不会给自动签署(静默签署)的签署方创建签署链接</li>

@@ -33,12 +33,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSceneCode() 获取场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection
  * @method void setSceneCode(string $SceneCode) 设置场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection
  * @method string getUserIp() 获取用户外网ip（传入用户非外网ip会影响判断结果）。
  * @method void setUserIp(string $UserIp) 设置用户外网ip（传入用户非外网ip会影响判断结果）。
@@ -117,7 +117,7 @@ class InputManageMarketingRisk extends AbstractModel
      * @var string 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection
      */
     public $SceneCode;
@@ -242,7 +242,7 @@ class InputManageMarketingRisk extends AbstractModel
      * @param string $SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
-登陆保护默认场景码：e_login_protection
+登录保护默认场景码：e_login_protection
 注册保护默认场景码：e_register_protection
      * @param string $UserIp 用户外网ip（传入用户非外网ip会影响判断结果）。
      * @param integer $PostTime 用户操作时间戳，精确到秒。

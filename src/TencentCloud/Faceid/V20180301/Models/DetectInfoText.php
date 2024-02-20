@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 核身文本信息
  *
- * @method integer getErrCode() 获取本次流程最终验证结果。0为成功
+ * @method integer getErrCode() 获取本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrCode(integer $ErrCode) 设置本次流程最终验证结果。0为成功
+ * @method void setErrCode(integer $ErrCode) 设置本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrMsg() 获取本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -166,7 +166,7 @@ use TencentCloud\Common\AbstractModel;
 class DetectInfoText extends AbstractModel
 {
     /**
-     * @var integer 本次流程最终验证结果。0为成功
+     * @var integer 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
@@ -353,7 +353,7 @@ class DetectInfoText extends AbstractModel
     public $VisaNum;
 
     /**
-     * @param integer $ErrCode 本次流程最终验证结果。0为成功
+     * @param integer $ErrCode 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
 注意：此字段可能返回 null，表示取不到有效值。

@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayFormat(string $DisplayFormat) 设置控制台展示格式。table：表格展示 text：文本展示
  * @method integer getTotalTime() 获取任务耗时，单位： ms
  * @method void setTotalTime(integer $TotalTime) 设置任务耗时，单位： ms
+ * @method float getQueryResultTime() 获取获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueryResultTime(float $QueryResultTime) 设置获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResultInfo extends AbstractModel
 {
@@ -169,6 +173,12 @@ class TaskResultInfo extends AbstractModel
     public $TotalTime;
 
     /**
+     * @var float 获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueryResultTime;
+
+    /**
      * @param string $TaskId 任务唯一ID
      * @param string $DatasourceConnectionName 数据源名称，当前任务执行时候选中的默认数据源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -192,6 +202,8 @@ class TaskResultInfo extends AbstractModel
      * @param string $ProgressDetail 任务进度明细
      * @param string $DisplayFormat 控制台展示格式。table：表格展示 text：文本展示
      * @param integer $TotalTime 任务耗时，单位： ms
+     * @param float $QueryResultTime 获取结果消耗的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -285,6 +297,10 @@ class TaskResultInfo extends AbstractModel
 
         if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
             $this->TotalTime = $param["TotalTime"];
+        }
+
+        if (array_key_exists("QueryResultTime",$param) and $param["QueryResultTime"] !== null) {
+            $this->QueryResultTime = $param["QueryResultTime"];
         }
     }
 }

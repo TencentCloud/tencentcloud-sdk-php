@@ -41,11 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNeedRelievedFlowId() 获取待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
  * @method void setNeedRelievedFlowId(string $NeedRelievedFlowId) 设置待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
  * @method RelieveInfo getReliveInfo() 获取解除协议内容, 包括解除理由等信息。
  * @method void setReliveInfo(RelieveInfo $ReliveInfo) 设置解除协议内容, 包括解除理由等信息。
  * @method array getReleasedApprovers() 获取指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
@@ -104,7 +104,7 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
      * @var string 待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      */
     public $NeedRelievedFlowId;
 
@@ -171,7 +171,7 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
      * @param string $NeedRelievedFlowId 待解除的签署流程编号(即原签署流程的编号)。
 
 
-[点击产看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看流程编号在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
      * @param RelieveInfo $ReliveInfo 解除协议内容, 包括解除理由等信息。
      * @param array $ReleasedApprovers 指定解除协议的签署人，如不指定，则默认使用原流程的签署人。 <br/>
 如需更换原合同中的企业端签署人，可通过指定该签署人在原合同列表中的ApproverNumber编号来更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo/">DescribeFlowDetailInfo</a>查询签署人的ApproverNumber编号，默认从0开始，顺序递增)<br/>

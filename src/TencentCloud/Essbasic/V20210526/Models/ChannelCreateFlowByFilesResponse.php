@@ -23,12 +23,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFlowId() 获取合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApprovers() 获取签署方信息，如角色ID、角色名称等
 注意：此字段可能返回 null，表示取不到有效值。
@@ -43,7 +43,7 @@ class ChannelCreateFlowByFilesResponse extends AbstractModel
      * @var string 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
@@ -63,7 +63,7 @@ class ChannelCreateFlowByFilesResponse extends AbstractModel
      * @param string $FlowId 合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
-[点击产看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Approvers 签署方信息，如角色ID、角色名称等
 注意：此字段可能返回 null，表示取不到有效值。

@@ -292,16 +292,16 @@ SELECTOR ： 选项值
 DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击查看](https://qian.tencent.com/developers/company/dynamic_table)
  * @method string getComponentId() 获取控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
  * @method void setComponentId(string $ComponentId) 设置控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
  * @method string getComponentName() 获取控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
  * @method void setComponentName(string $ComponentName) 设置控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
  */
 class FormField extends AbstractModel
 {
@@ -319,14 +319,14 @@ DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击�
     /**
      * @var string 控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
      */
     public $ComponentId;
 
     /**
      * @var string 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
      */
     public $ComponentName;
 
@@ -340,10 +340,10 @@ SELECTOR ： 选项值
 DYNAMIC_TABLE ：传入json格式的表格内容，具体见数据结构[点击查看](https://qian.tencent.com/developers/company/dynamic_table)
      * @param string $ComponentId 控件id，和ComponentName选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件ID的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件ID的方式</a>
      * @param string $ComponentName 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
 
-<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模版中找到控件名字的方式</a>
+<a href="https://dyn.ess.tencent.cn/guide/apivideo/component_name.mp4" target="_blank">点击查看在模板中找到控件名字的方式</a>
      */
     function __construct()
     {

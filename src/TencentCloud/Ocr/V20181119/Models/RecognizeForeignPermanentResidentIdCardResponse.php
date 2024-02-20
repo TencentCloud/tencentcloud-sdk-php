@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodOfValidity(string $PeriodOfValidity) 设置有效期限。
  * @method string getNo() 获取证件号码。
  * @method void setNo(string $No) 设置证件号码。
+ * @method string getPreviousNumber() 获取曾持证件号码。
+ * @method void setPreviousNumber(string $PreviousNumber) 设置曾持证件号码。
+ * @method string getIssuedAuthority() 获取签发机关。
+ * @method void setIssuedAuthority(string $IssuedAuthority) 设置签发机关。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +79,16 @@ class RecognizeForeignPermanentResidentIdCardResponse extends AbstractModel
     public $No;
 
     /**
+     * @var string 曾持证件号码。
+     */
+    public $PreviousNumber;
+
+    /**
+     * @var string 签发机关。
+     */
+    public $IssuedAuthority;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +101,8 @@ class RecognizeForeignPermanentResidentIdCardResponse extends AbstractModel
      * @param string $Nationality 国籍。
      * @param string $PeriodOfValidity 有效期限。
      * @param string $No 证件号码。
+     * @param string $PreviousNumber 曾持证件号码。
+     * @param string $IssuedAuthority 签发机关。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +144,14 @@ class RecognizeForeignPermanentResidentIdCardResponse extends AbstractModel
 
         if (array_key_exists("No",$param) and $param["No"] !== null) {
             $this->No = $param["No"];
+        }
+
+        if (array_key_exists("PreviousNumber",$param) and $param["PreviousNumber"] !== null) {
+            $this->PreviousNumber = $param["PreviousNumber"];
+        }
+
+        if (array_key_exists("IssuedAuthority",$param) and $param["IssuedAuthority"] !== null) {
+            $this->IssuedAuthority = $param["IssuedAuthority"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

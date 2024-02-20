@@ -74,7 +74,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeSnapshotRollbackResultResponse DescribeSnapshotRollbackResult(Models\DescribeSnapshotRollbackResultRequest $req) 查询快照回滚结果
  * @method Models\DescribeSnapshotRollbackTaskResponse DescribeSnapshotRollbackTask(Models\DescribeSnapshotRollbackTaskRequest $req) 查询最近一次回滚
  * @method Models\DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalytics(Models\DescribeSubdomainAnalyticsRequest $req) 统计子域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况。仅付费套餐域名可用。
- * @method Models\DescribeUserDetailResponse DescribeUserDetail(Models\DescribeUserDetailRequest $req) 获取帐户信息
+ * @method Models\DescribeUserDetailResponse DescribeUserDetail(Models\DescribeUserDetailRequest $req) 获取账户信息
  * @method Models\DescribeVASStatisticResponse DescribeVASStatistic(Models\DescribeVASStatisticRequest $req) 获取域名增值服务用量
  * @method Models\DownloadSnapshotResponse DownloadSnapshot(Models\DownloadSnapshotRequest $req) 下载快照
  * @method Models\ModifyDomainCustomLineResponse ModifyDomainCustomLine(Models\ModifyDomainCustomLineRequest $req) 修改域名的自定义线路

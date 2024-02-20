@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
  * @method string getSubnetId() 获取子网，默认是集群创建时的子网
  * @method void setSubnetId(string $SubnetId) 设置子网，默认是集群创建时的子网
+ * @method array getScaleOutServiceConfGroupsInfo() 获取扩容指定配置组
+ * @method void setScaleOutServiceConfGroupsInfo(array $ScaleOutServiceConfGroupsInfo) 设置扩容指定配置组
  */
 class ScaleOutClusterRequest extends AbstractModel
 {
@@ -175,6 +177,11 @@ class ScaleOutClusterRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var array 扩容指定配置组
+     */
+    public $ScaleOutServiceConfGroupsInfo;
+
+    /**
      * @param string $InstanceChargeType 节点计费模式。取值范围：
 <li>PREPAID：预付费，即包年包月。</li>
 <li>POSTPAID_BY_HOUR：按小时后付费。</li>
@@ -200,6 +207,7 @@ class ScaleOutClusterRequest extends AbstractModel
      * @param NodeResourceSpec $ResourceSpec 规格设置
      * @param string $Zone 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
      * @param string $SubnetId 子网，默认是集群创建时的子网
+     * @param array $ScaleOutServiceConfGroupsInfo 扩容指定配置组
      */
     function __construct()
     {
@@ -302,6 +310,15 @@ class ScaleOutClusterRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ScaleOutServiceConfGroupsInfo",$param) and $param["ScaleOutServiceConfGroupsInfo"] !== null) {
+            $this->ScaleOutServiceConfGroupsInfo = [];
+            foreach ($param["ScaleOutServiceConfGroupsInfo"] as $key => $value){
+                $obj = new ScaleOutServiceConfGroupsInfo();
+                $obj->deserialize($value);
+                array_push($this->ScaleOutServiceConfGroupsInfo, $obj);
+            }
         }
     }
 }

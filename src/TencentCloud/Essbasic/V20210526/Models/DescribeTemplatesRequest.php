@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
 
-[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
  * @method void setTemplateId(string $TemplateId) 设置合同模板ID，为32位字符串。
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
 
-[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
  * @method integer getContentType() 获取查询模板的内容
 
 <ul><li>**0**：（默认）模板列表及详情</li>
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 4. `若传递此参数，分页参数(Limit,Offset)无效`
 
 
-[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
  * @method void setTemplateIds(array $TemplateIds) 设置合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
 
@@ -74,7 +74,7 @@ use TencentCloud\Common\AbstractModel;
 4. `若传递此参数，分页参数(Limit,Offset)无效`
 
 
-[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
  * @method integer getLimit() 获取指定每页返回的数据条数，和Offset参数配合使用。
 
@@ -155,7 +155,7 @@ class DescribeTemplatesRequest extends AbstractModel
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
 
-[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
      */
     public $TemplateId;
 
@@ -176,7 +176,7 @@ class DescribeTemplatesRequest extends AbstractModel
 4. `若传递此参数，分页参数(Limit,Offset)无效`
 
 
-[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
      */
     public $TemplateIds;
@@ -257,7 +257,7 @@ class DescribeTemplatesRequest extends AbstractModel
 
 可以通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateConsoleLoginUrl" target="_blank">生成子客登录链接</a>登录企业控制台, 在企业模板中得到合同模板ID。
 
-[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
      * @param integer $ContentType 查询模板的内容
 
 <ul><li>**0**：（默认）模板列表及详情</li>
@@ -270,7 +270,7 @@ class DescribeTemplatesRequest extends AbstractModel
 4. `若传递此参数，分页参数(Limit,Offset)无效`
 
 
-[点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
+[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
      * @param integer $Limit 指定每页返回的数据条数，和Offset参数配合使用。
 

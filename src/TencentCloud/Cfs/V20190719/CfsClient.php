@@ -70,7 +70,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\UpdateCfsPGroupResponse UpdateCfsPGroup(Models\UpdateCfsPGroupRequest $req) 本接口（UpdateCfsPGroup）更新权限组信息。
  * @method Models\UpdateCfsRuleResponse UpdateCfsRule(Models\UpdateCfsRuleRequest $req) 本接口（UpdateCfsRule）用于更新权限规则。
  * @method Models\UpdateCfsSnapshotAttributeResponse UpdateCfsSnapshotAttribute(Models\UpdateCfsSnapshotAttributeRequest $req) 更新文件系统快照名称及保留时长
- * @method Models\UpdateFileSystemBandwidthLimitResponse UpdateFileSystemBandwidthLimit(Models\UpdateFileSystemBandwidthLimitRequest $req) 更新文件系统带宽
+ * @method Models\UpdateFileSystemBandwidthLimitResponse UpdateFileSystemBandwidthLimit(Models\UpdateFileSystemBandwidthLimitRequest $req) 更新文件系统吞吐
 仅吞吐型支持此接口
  */
 

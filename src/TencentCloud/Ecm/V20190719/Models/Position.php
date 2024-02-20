@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCity(City $City) 设置实例所在的城市的信息。
  * @method RegionInfo getRegionInfo() 获取实例所在的Region的信息。
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置实例所在的Region的信息。
+ * @method boolean getIpv6Supported() 获取实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6Supported(boolean $Ipv6Supported) 设置实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Position extends AbstractModel
 {
@@ -66,12 +70,20 @@ class Position extends AbstractModel
     public $RegionInfo;
 
     /**
+     * @var boolean 实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6Supported;
+
+    /**
      * @param ZoneInfo $ZoneInfo 实例所在的Zone的信息。
      * @param Country $Country 实例所在的国家的信息。
      * @param Area $Area 实例所在的Area的信息。
      * @param Province $Province 实例所在的省份的信息。
      * @param City $City 实例所在的城市的信息。
      * @param RegionInfo $RegionInfo 实例所在的Region的信息。
+     * @param boolean $Ipv6Supported 实例是否支持ipv6
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -114,6 +126,10 @@ class Position extends AbstractModel
         if (array_key_exists("RegionInfo",$param) and $param["RegionInfo"] !== null) {
             $this->RegionInfo = new RegionInfo();
             $this->RegionInfo->deserialize($param["RegionInfo"]);
+        }
+
+        if (array_key_exists("Ipv6Supported",$param) and $param["Ipv6Supported"] !== null) {
+            $this->Ipv6Supported = $param["Ipv6Supported"];
         }
     }
 }

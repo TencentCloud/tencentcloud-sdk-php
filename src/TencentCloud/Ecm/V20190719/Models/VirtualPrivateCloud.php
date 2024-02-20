@@ -38,6 +38,10 @@ FALSE：表示不用作公网网关
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置私有网络子网 IP 数组，在创建实例、修改实例vpc属性操作中可使用此参数。
  * @method integer getIpv6AddressCount() 获取为弹性网卡指定随机生成的 IPv6 地址数量。
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置为弹性网卡指定随机生成的 IPv6 地址数量。
+ * @method array getIpv6SubnetIds() 获取runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6SubnetIds(array $Ipv6SubnetIds) 设置runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VirtualPrivateCloud extends AbstractModel
 {
@@ -71,6 +75,12 @@ FALSE：表示不用作公网网关
     public $Ipv6AddressCount;
 
     /**
+     * @var array runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6SubnetIds;
+
+    /**
      * @param string $VpcId 私有网络ID，形如vpc-xxx。
      * @param string $SubnetId 私有网络子网ID，形如subnet-xxx。
      * @param boolean $AsVpcGateway 是否用作公网网关。公网网关只有在实例拥有公网IP以及处于私有网络下时才能正常使用。取值范围：
@@ -80,6 +90,8 @@ FALSE：表示不用作公网网关
 默认取值：FALSE。
      * @param array $PrivateIpAddresses 私有网络子网 IP 数组，在创建实例、修改实例vpc属性操作中可使用此参数。
      * @param integer $Ipv6AddressCount 为弹性网卡指定随机生成的 IPv6 地址数量。
+     * @param array $Ipv6SubnetIds runInstances接口创建三网ipv6地址使用
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -112,6 +124,10 @@ FALSE：表示不用作公网网关
 
         if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
             $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
+        }
+
+        if (array_key_exists("Ipv6SubnetIds",$param) and $param["Ipv6SubnetIds"] !== null) {
+            $this->Ipv6SubnetIds = $param["Ipv6SubnetIds"];
         }
     }
 }

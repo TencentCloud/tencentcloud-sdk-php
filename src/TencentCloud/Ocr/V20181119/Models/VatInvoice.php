@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 102：通用机打电子发票
 61：电子发票（航空运输电子客票行程单）
 83：电子发票（铁路电子发票）
+0915：全电纸质（二手车统一销售发票）
+0903：全电纸质（机动车统一发票）
  * @method void setType(string $Type) 设置票种类型
 01：增值税专用发票，
 02：货运运输业增值税专用发票，
@@ -82,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
 102：通用机打电子发票
 61：电子发票（航空运输电子客票行程单）
 83：电子发票（铁路电子发票）
+0915：全电纸质（二手车统一销售发票）
+0903：全电纸质（机动车统一发票）
  * @method string getElectronicType() 获取具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
  * @method void setElectronicType(string $ElectronicType) 设置具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
  * @method string getCheckCode() 获取检验码
@@ -211,6 +215,8 @@ class VatInvoice extends AbstractModel
 102：通用机打电子发票
 61：电子发票（航空运输电子客票行程单）
 83：电子发票（铁路电子发票）
+0915：全电纸质（二手车统一销售发票）
+0903：全电纸质（机动车统一发票）
      */
     public $Type;
 
@@ -331,6 +337,8 @@ Y: 有清单 N：无清单
 102：通用机打电子发票
 61：电子发票（航空运输电子客票行程单）
 83：电子发票（铁路电子发票）
+0915：全电纸质（二手车统一销售发票）
+0903：全电纸质（机动车统一发票）
      * @param string $ElectronicType 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
      * @param string $CheckCode 检验码
      * @param string $IsAbandoned 是否作废（红冲）是否作废（红冲）

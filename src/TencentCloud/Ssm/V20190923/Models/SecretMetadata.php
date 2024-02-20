@@ -48,11 +48,13 @@ use TencentCloud\Common\AbstractModel;
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
+4 -- Redis类型凭据；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretType(integer $SecretType) 设置0 -- 用户自定义凭据；
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
+4 -- Redis类型凭据；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,6 +148,7 @@ class SecretMetadata extends AbstractModel
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
+4 -- Redis类型凭据；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretType;
@@ -215,6 +218,7 @@ class SecretMetadata extends AbstractModel
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
+4 -- Redis类型凭据；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
 注意：此字段可能返回 null，表示取不到有效值。

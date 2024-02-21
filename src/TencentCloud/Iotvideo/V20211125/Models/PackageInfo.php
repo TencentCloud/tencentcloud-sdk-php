@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelId() 获取通道id
  * @method void setChannelId(integer $ChannelId) 设置通道id
+ * @method string getCSUserId() 获取用户id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCSUserId(string $CSUserId) 设置用户id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PackageInfo extends AbstractModel
 {
@@ -102,6 +106,12 @@ class PackageInfo extends AbstractModel
     public $ChannelId;
 
     /**
+     * @var string 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CSUserId;
+
+    /**
      * @param integer $Status 云存开启状态，0为未开启，2为正在生效，1为已过期
 注：这里只返回状态为0的数据
      * @param integer $CSType 云存类型，1为全时云存，2为事件云存
@@ -116,6 +126,8 @@ class PackageInfo extends AbstractModel
      * @param string $OrderId 订单id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelId 通道id
+     * @param string $CSUserId 用户id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -164,6 +176,10 @@ class PackageInfo extends AbstractModel
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
             $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("CSUserId",$param) and $param["CSUserId"] !== null) {
+            $this->CSUserId = $param["CSUserId"];
         }
     }
 }

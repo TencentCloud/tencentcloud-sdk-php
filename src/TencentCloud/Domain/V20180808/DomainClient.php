@@ -33,6 +33,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\CreateTemplateResponse CreateTemplate(Models\CreateTemplateRequest $req) 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
  * @method Models\DeleteCustomDnsHostResponse DeleteCustomDnsHost(Models\DeleteCustomDnsHostRequest $req) 删除自定义DNS Host
  * @method Models\DeletePhoneEmailResponse DeletePhoneEmail(Models\DeletePhoneEmailRequest $req) 此接口用于删除已验证的手机邮箱
+ * @method Models\DeleteReservedPreDomainInfoResponse DeleteReservedPreDomainInfo(Models\DeleteReservedPreDomainInfoRequest $req) 用于清除多余的预定域名信息
  * @method Models\DeleteTemplateResponse DeleteTemplate(Models\DeleteTemplateRequest $req) 本接口 ( DeleteTemplate ) 用于删除信息模板。
  * @method Models\DescribeBatchOperationLogDetailsResponse DescribeBatchOperationLogDetails(Models\DescribeBatchOperationLogDetailsRequest $req) 本接口 ( DescribeBatchOperationLogDetails ) 用于获取批量操作日志详情。
  * @method Models\DescribeBatchOperationLogsResponse DescribeBatchOperationLogs(Models\DescribeBatchOperationLogsRequest $req) 本接口 ( DescribeBatchOperationLogs ) 用于获取批量操作日志 。
@@ -42,6 +43,8 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\DescribeDomainPriceListResponse DescribeDomainPriceList(Models\DescribeDomainPriceListRequest $req) 按照域名后缀获取对应的价格列表
  * @method Models\DescribeDomainSimpleInfoResponse DescribeDomainSimpleInfo(Models\DescribeDomainSimpleInfoRequest $req) 获取域名实名信息详情
  * @method Models\DescribePhoneEmailListResponse DescribePhoneEmailList(Models\DescribePhoneEmailListRequest $req) 本接口用于获取已验证的手机邮箱列表
+ * @method Models\DescribePreDomainListResponse DescribePreDomainList(Models\DescribePreDomainListRequest $req) 用户服务商提前获取预释放域名数据，查询数据根据结束时间进行倒序。
+ * @method Models\DescribeReservedPreDomainInfoResponse DescribeReservedPreDomainInfo(Models\DescribeReservedPreDomainInfoRequest $req) 合作商用于查询预约预释放状态信息内容
  * @method Models\DescribeTemplateResponse DescribeTemplate(Models\DescribeTemplateRequest $req) 本接口 (DescribeTemplate) 用于获取模板信息。
  * @method Models\DescribeTemplateListResponse DescribeTemplateList(Models\DescribeTemplateListRequest $req) 本接口 (DescribeTemplateList) 用于获取信息模板列表。
  * @method Models\ModifyCustomDnsHostResponse ModifyCustomDnsHost(Models\ModifyCustomDnsHostRequest $req) 修改自定义DNS Host
@@ -50,6 +53,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\ModifyIntlCustomDnsHostResponse ModifyIntlCustomDnsHost(Models\ModifyIntlCustomDnsHostRequest $req) 国际站-修改DNS Host
  * @method Models\RenewDomainBatchResponse RenewDomainBatch(Models\RenewDomainBatchRequest $req) 本接口 ( RenewDomainBatch ) 用于批量续费域名 。
 
+ * @method Models\ReservedPreDomainsResponse ReservedPreDomains(Models\ReservedPreDomainsRequest $req) 用于合作商对预释放域名进行预留。
  * @method Models\SendPhoneEmailCodeResponse SendPhoneEmailCode(Models\SendPhoneEmailCodeRequest $req) 此接口用于发送手机邮箱验证码。
  * @method Models\SetDomainAutoRenewResponse SetDomainAutoRenew(Models\SetDomainAutoRenewRequest $req) 本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
  * @method Models\SyncCustomDnsHostResponse SyncCustomDnsHost(Models\SyncCustomDnsHostRequest $req) 同步自定义DNS Host

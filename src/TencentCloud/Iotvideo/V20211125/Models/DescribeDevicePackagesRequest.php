@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页拉取数量
  * @method integer getOffset() 获取分页拉取偏移
  * @method void setOffset(integer $Offset) 设置分页拉取偏移
+ * @method string getCSUserId() 获取用户id
+ * @method void setCSUserId(string $CSUserId) 设置用户id
  * @method integer getChannelId() 获取通道id
  * @method void setChannelId(integer $ChannelId) 设置通道id
  */
@@ -54,6 +56,11 @@ class DescribeDevicePackagesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 用户id
+     */
+    public $CSUserId;
+
+    /**
      * @var integer 通道id
      */
     public $ChannelId;
@@ -63,6 +70,7 @@ class DescribeDevicePackagesRequest extends AbstractModel
      * @param string $DeviceName 设备名称
      * @param integer $Limit 分页拉取数量
      * @param integer $Offset 分页拉取偏移
+     * @param string $CSUserId 用户id
      * @param integer $ChannelId 通道id
      */
     function __construct()
@@ -92,6 +100,10 @@ class DescribeDevicePackagesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("CSUserId",$param) and $param["CSUserId"] !== null) {
+            $this->CSUserId = $param["CSUserId"];
         }
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {

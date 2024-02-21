@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取慢查询总数。
  * @method void setTotalCount(integer $TotalCount) 设置慢查询总数。
- * @method array getInstanceSlowlogDetail() 获取慢查询详情。
- * @method void setInstanceSlowlogDetail(array $InstanceSlowlogDetail) 设置慢查询详情。
+ * @method array getInstanceSlowlogDetail() 获取该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
+ * @method void setInstanceSlowlogDetail(array $InstanceSlowlogDetail) 设置该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
+ * @method array getInstanceSlowLogDetail() 获取慢查询详情。
+ * @method void setInstanceSlowLogDetail(array $InstanceSlowLogDetail) 设置慢查询详情。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,9 +37,14 @@ class DescribeSlowLogResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 慢查询详情。
+     * @var array 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
      */
     public $InstanceSlowlogDetail;
+
+    /**
+     * @var array 慢查询详情。
+     */
+    public $InstanceSlowLogDetail;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,7 +53,8 @@ class DescribeSlowLogResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 慢查询总数。
-     * @param array $InstanceSlowlogDetail 慢查询详情。
+     * @param array $InstanceSlowlogDetail 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
+     * @param array $InstanceSlowLogDetail 慢查询详情。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +80,15 @@ class DescribeSlowLogResponse extends AbstractModel
                 $obj = new InstanceSlowlogDetail();
                 $obj->deserialize($value);
                 array_push($this->InstanceSlowlogDetail, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceSlowLogDetail",$param) and $param["InstanceSlowLogDetail"] !== null) {
+            $this->InstanceSlowLogDetail = [];
+            foreach ($param["InstanceSlowLogDetail"] as $key => $value){
+                $obj = new InstanceSlowlogDetail();
+                $obj->deserialize($value);
+                array_push($this->InstanceSlowLogDetail, $obj);
             }
         }
 

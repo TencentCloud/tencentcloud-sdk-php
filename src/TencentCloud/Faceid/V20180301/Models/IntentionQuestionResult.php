@@ -40,6 +40,7 @@ use TencentCloud\Common\AbstractModel;
 -803: "用户主动关闭链接/异常断开链接"   
 -998: "系统数据异常"   
 -999: "系统未知错误，请联系人工核实"   
+若在人脸核身过程失败、未进入意愿确认过程，则该参数返回为空，请参考人脸核身错误码结果（DetectInfoText.ErrCode)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinalResultDetailCode(integer $FinalResultDetailCode) 设置意愿核身错误码：
 0: "成功"       
@@ -61,6 +62,7 @@ use TencentCloud\Common\AbstractModel;
 -803: "用户主动关闭链接/异常断开链接"   
 -998: "系统数据异常"   
 -999: "系统未知错误，请联系人工核实"   
+若在人脸核身过程失败、未进入意愿确认过程，则该参数返回为空，请参考人脸核身错误码结果（DetectInfoText.ErrCode)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFinalResultMessage() 获取意愿核身错误信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,6 +120,7 @@ class IntentionQuestionResult extends AbstractModel
 -803: "用户主动关闭链接/异常断开链接"   
 -998: "系统数据异常"   
 -999: "系统未知错误，请联系人工核实"   
+若在人脸核身过程失败、未进入意愿确认过程，则该参数返回为空，请参考人脸核身错误码结果（DetectInfoText.ErrCode)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinalResultDetailCode;
@@ -187,6 +190,7 @@ class IntentionQuestionResult extends AbstractModel
 -803: "用户主动关闭链接/异常断开链接"   
 -998: "系统数据异常"   
 -999: "系统未知错误，请联系人工核实"   
+若在人脸核身过程失败、未进入意愿确认过程，则该参数返回为空，请参考人脸核身错误码结果（DetectInfoText.ErrCode)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FinalResultMessage 意愿核身错误信息
 注意：此字段可能返回 null，表示取不到有效值。

@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkipped(SkippedDetail $Skipped) 设置跳过校验的表详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DifferenceAdvancedObjectsDetail getDifferenceAdvancedObjects() 获取数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDifferenceAdvancedObjects(DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects) 设置数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DifferenceDataDetail getDifferenceData() 获取数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDifferenceData(DifferenceDataDetail $DifferenceData) 设置数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DifferenceRowDetail getDifferenceRow() 获取数据行不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDifferenceRow(DifferenceRowDetail $DifferenceRow) 设置数据行不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareDetailInfo extends AbstractModel
 {
@@ -44,9 +56,33 @@ class CompareDetailInfo extends AbstractModel
     public $Skipped;
 
     /**
+     * @var DifferenceAdvancedObjectsDetail 数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DifferenceAdvancedObjects;
+
+    /**
+     * @var DifferenceDataDetail 数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DifferenceData;
+
+    /**
+     * @var DifferenceRowDetail 数据行不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DifferenceRow;
+
+    /**
      * @param DifferenceDetail $Difference 数据不一致的表详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SkippedDetail $Skipped 跳过校验的表详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DifferenceDataDetail $DifferenceData 数据不一致的详情，mongodb业务用到
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DifferenceRowDetail $DifferenceRow 数据行不一致的详情，mongodb业务用到
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +106,21 @@ class CompareDetailInfo extends AbstractModel
         if (array_key_exists("Skipped",$param) and $param["Skipped"] !== null) {
             $this->Skipped = new SkippedDetail();
             $this->Skipped->deserialize($param["Skipped"]);
+        }
+
+        if (array_key_exists("DifferenceAdvancedObjects",$param) and $param["DifferenceAdvancedObjects"] !== null) {
+            $this->DifferenceAdvancedObjects = new DifferenceAdvancedObjectsDetail();
+            $this->DifferenceAdvancedObjects->deserialize($param["DifferenceAdvancedObjects"]);
+        }
+
+        if (array_key_exists("DifferenceData",$param) and $param["DifferenceData"] !== null) {
+            $this->DifferenceData = new DifferenceDataDetail();
+            $this->DifferenceData->deserialize($param["DifferenceData"]);
+        }
+
+        if (array_key_exists("DifferenceRow",$param) and $param["DifferenceRow"] !== null) {
+            $this->DifferenceRow = new DifferenceRowDetail();
+            $this->DifferenceRow->deserialize($param["DifferenceRow"]);
         }
     }
 }

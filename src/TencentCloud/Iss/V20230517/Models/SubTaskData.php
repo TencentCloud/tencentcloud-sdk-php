@@ -44,6 +44,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新任务时间
  * @method integer getRuntime() 获取任务运行时间，单位ms
  * @method void setRuntime(integer $Runtime) 设置任务运行时间，单位ms
+ * @method string getDeviceId() 获取设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceId(string $DeviceId) 设置设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceName() 获取设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceName(string $DeviceName) 设置设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannelId() 获取通道ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelId(string $ChannelId) 设置通道ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannelName() 获取通道名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelName(string $ChannelName) 设置通道名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubTaskData extends AbstractModel
 {
@@ -104,6 +120,30 @@ class SubTaskData extends AbstractModel
     public $Runtime;
 
     /**
+     * @var string 设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceId;
+
+    /**
+     * @var string 设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceName;
+
+    /**
+     * @var string 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelId;
+
+    /**
+     * @var string 通道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelName;
+
+    /**
      * @param string $SubTaskId 子任务ID
      * @param integer $Status 任务状态1:NEW,2:RUNNING,3:COMPLETED ,4:FAILED
      * @param string $FailReason 任务失败原因
@@ -116,6 +156,14 @@ class SubTaskData extends AbstractModel
      * @param string $CreatedAt 创建任务时间
      * @param string $UpdatedAt 更新任务时间
      * @param integer $Runtime 任务运行时间，单位ms
+     * @param string $DeviceId 设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceName 设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChannelId 通道ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChannelName 通道名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +220,22 @@ class SubTaskData extends AbstractModel
 
         if (array_key_exists("Runtime",$param) and $param["Runtime"] !== null) {
             $this->Runtime = $param["Runtime"];
+        }
+
+        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
+            $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
+            $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("ChannelName",$param) and $param["ChannelName"] !== null) {
+            $this->ChannelName = $param["ChannelName"];
         }
     }
 }

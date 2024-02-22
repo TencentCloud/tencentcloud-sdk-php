@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextToken(string $NextToken) 设置上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
  * @method integer getMaxResults() 获取返回结果的最大行数，范围0~1000，默认为1000.
  * @method void setMaxResults(integer $MaxResults) 设置返回结果的最大行数，范围0~1000，默认为1000.
+ * @method boolean getIsTransformDataType() 获取是否转化数据类型
+ * @method void setIsTransformDataType(boolean $IsTransformDataType) 设置是否转化数据类型
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeTaskResultRequest extends AbstractModel
     public $MaxResults;
 
     /**
+     * @var boolean 是否转化数据类型
+     */
+    public $IsTransformDataType;
+
+    /**
      * @param string $TaskId 任务唯一ID
      * @param string $NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
      * @param integer $MaxResults 返回结果的最大行数，范围0~1000，默认为1000.
+     * @param boolean $IsTransformDataType 是否转化数据类型
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeTaskResultRequest extends AbstractModel
 
         if (array_key_exists("MaxResults",$param) and $param["MaxResults"] !== null) {
             $this->MaxResults = $param["MaxResults"];
+        }
+
+        if (array_key_exists("IsTransformDataType",$param) and $param["IsTransformDataType"] !== null) {
+            $this->IsTransformDataType = $param["IsTransformDataType"];
         }
     }
 }

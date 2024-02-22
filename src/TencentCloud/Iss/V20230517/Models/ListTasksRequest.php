@@ -22,12 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPageNumber() 获取页码，默认为1
  * @method void setPageNumber(integer $PageNumber) 设置页码，默认为1
- * @method integer getPageSize() 获取每页数量，默认为10
- * @method void setPageSize(integer $PageSize) 设置每页数量，默认为10
- * @method string getOperation() 获取默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice
- * @method void setOperation(string $Operation) 设置默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice
- * @method integer getStatus() 获取默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
- * @method void setStatus(integer $Status) 设置默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+ * @method integer getPageSize() 获取每页数量，默认为20
+ * @method void setPageSize(integer $PageSize) 设置每页数量，默认为20
+ * @method string getOperation() 获取默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice
+ * @method void setOperation(string $Operation) 设置默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice
+ * @method integer getStatus() 获取默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
+ * @method void setStatus(integer $Status) 设置默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
+ * @method integer getBeginTime() 获取开始时间
+ * @method void setBeginTime(integer $BeginTime) 设置开始时间
+ * @method integer getEndTime() 获取结束时间
+ * @method void setEndTime(integer $EndTime) 设置结束时间
  */
 class ListTasksRequest extends AbstractModel
 {
@@ -37,25 +47,43 @@ class ListTasksRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var integer 每页数量，默认为10
+     * @var integer 每页数量，默认为20
      */
     public $PageSize;
 
     /**
-     * @var string 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice
+     * @var string 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice
      */
     public $Operation;
 
     /**
-     * @var integer 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+     * @var integer 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
      */
     public $Status;
 
     /**
+     * @var integer 开始时间
+     */
+    public $BeginTime;
+
+    /**
+     * @var integer 结束时间
+     */
+    public $EndTime;
+
+    /**
      * @param integer $PageNumber 页码，默认为1
-     * @param integer $PageSize 每页数量，默认为10
-     * @param string $Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，对应任务的Action字段，批量任务操作类型以Batch开头。目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，DeleteUserDevice，DisableDevice，EnableDevice
-     * @param integer $Status 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-NEW，2-RUNNING，3-COMPLETED，4-FAILED
+     * @param integer $PageSize 每页数量，默认为20
+     * @param string $Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
+BatchUpgradeDevice，
+BatchResetDevice,
+BatchRebootDevice
+     * @param integer $Status 默认不根据该字段进行筛选，否则根据任务状态进行筛选。状态码：1-未执行，2-执行中，3-完成，4-取消
+     * @param integer $BeginTime 开始时间
+     * @param integer $EndTime 结束时间
      */
     function __construct()
     {
@@ -84,6 +112,14 @@ class ListTasksRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
+            $this->BeginTime = $param["BeginTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

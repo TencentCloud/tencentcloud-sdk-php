@@ -58,7 +58,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 查询任务列表
  * @method Models\DescribeUinInWhitelistResponse DescribeUinInWhitelist(Models\DescribeUinInWhitelistRequest $req) 查询本用户是否在白名单中，控制是否能创建TDR类型的APP或表
  * @method Models\DisableRestProxyResponse DisableRestProxy(Models\DisableRestProxyRequest $req) 当restful api为关闭状态时，可以通过此接口关闭restful api
- * @method Models\EnableRestProxyResponse EnableRestProxy(Models\EnableRestProxyRequest $req) 当restful api为关闭状态时，可以通过此接口开启restful apu
+ * @method Models\EnableRestProxyResponse EnableRestProxy(Models\EnableRestProxyRequest $req) 当restful api为关闭状态时，可以通过此接口开启restful api。
  * @method Models\ImportSnapshotsResponse ImportSnapshots(Models\ImportSnapshotsRequest $req) 将快照数据导入到新表或当前表
  * @method Models\MergeTablesDataResponse MergeTablesData(Models\MergeTablesDataRequest $req) 合并指定表格
  * @method Models\ModifyCensorshipResponse ModifyCensorship(Models\ModifyCensorshipRequest $req) 修改集群审批状态

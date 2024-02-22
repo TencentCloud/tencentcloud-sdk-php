@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodeFileName(string $CodeFileName) 设置实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getExtensionInfo() 获取扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtensionInfo(array $ExtensionInfo) 设置扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLogInfo extends AbstractModel
 {
@@ -154,6 +158,12 @@ class InstanceLogInfo extends AbstractModel
     public $CodeFileName;
 
     /**
+     * @var array 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtensionInfo;
+
+    /**
      * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurRunDate 数据时间
@@ -179,6 +189,8 @@ class InstanceLogInfo extends AbstractModel
      * @param string $InstanceStatus 实例状态 COMPLETED 完成 FAILED失败重试 EXPIRED失败 RUNNING运行中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CodeFileName 实例代码文件，为空表示对应代码文件不存在，可能是因为执行机未升级/对应类型任务无代码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ExtensionInfo 扩展属性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,15 @@ class InstanceLogInfo extends AbstractModel
 
         if (array_key_exists("CodeFileName",$param) and $param["CodeFileName"] !== null) {
             $this->CodeFileName = $param["CodeFileName"];
+        }
+
+        if (array_key_exists("ExtensionInfo",$param) and $param["ExtensionInfo"] !== null) {
+            $this->ExtensionInfo = [];
+            foreach ($param["ExtensionInfo"] as $key => $value){
+                $obj = new AttributeItemDTO();
+                $obj->deserialize($value);
+                array_push($this->ExtensionInfo, $obj);
+            }
         }
     }
 }

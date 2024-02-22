@@ -236,6 +236,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorGroupName(string $ExecutorGroupName) 设置资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRelatedInstanceList() 获取关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRelatedInstanceList(array $RelatedInstanceList) 设置关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRelatedInstanceSize() 获取关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRelatedInstanceSize(integer $RelatedInstanceSize) 设置关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerId() 获取ownerId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerId(string $OwnerId) 设置ownerId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserId() 获取用户id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserId(string $UserId) 设置用户id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceLifeCycleOpsDto getInstanceLifeCycleOpsDto() 获取实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceLifeCycleOpsDto(InstanceLifeCycleOpsDto $InstanceLifeCycleOpsDto) 设置实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetryAttempts() 获取自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryAttempts(integer $RetryAttempts) 设置自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -564,6 +588,42 @@ class InstanceOpsDto extends AbstractModel
     public $ExecutorGroupName;
 
     /**
+     * @var array 关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RelatedInstanceList;
+
+    /**
+     * @var integer 关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RelatedInstanceSize;
+
+    /**
+     * @var string ownerId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerId;
+
+    /**
+     * @var string 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserId;
+
+    /**
+     * @var InstanceLifeCycleOpsDto 实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceLifeCycleOpsDto;
+
+    /**
+     * @var integer 自动重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryAttempts;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -671,6 +731,18 @@ class InstanceOpsDto extends AbstractModel
      * @param string $ExecutorGroupId 资源组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RelatedInstanceList 关联实例信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RelatedInstanceSize 关联实例信息数量，不和RelatedInstanceList强关联。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerId ownerId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserId 用户id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceLifeCycleOpsDto $InstanceLifeCycleOpsDto 实例生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetryAttempts 自动重试次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -901,6 +973,36 @@ class InstanceOpsDto extends AbstractModel
 
         if (array_key_exists("ExecutorGroupName",$param) and $param["ExecutorGroupName"] !== null) {
             $this->ExecutorGroupName = $param["ExecutorGroupName"];
+        }
+
+        if (array_key_exists("RelatedInstanceList",$param) and $param["RelatedInstanceList"] !== null) {
+            $this->RelatedInstanceList = [];
+            foreach ($param["RelatedInstanceList"] as $key => $value){
+                $obj = new InstanceOpsDto();
+                $obj->deserialize($value);
+                array_push($this->RelatedInstanceList, $obj);
+            }
+        }
+
+        if (array_key_exists("RelatedInstanceSize",$param) and $param["RelatedInstanceSize"] !== null) {
+            $this->RelatedInstanceSize = $param["RelatedInstanceSize"];
+        }
+
+        if (array_key_exists("OwnerId",$param) and $param["OwnerId"] !== null) {
+            $this->OwnerId = $param["OwnerId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("InstanceLifeCycleOpsDto",$param) and $param["InstanceLifeCycleOpsDto"] !== null) {
+            $this->InstanceLifeCycleOpsDto = new InstanceLifeCycleOpsDto();
+            $this->InstanceLifeCycleOpsDto->deserialize($param["InstanceLifeCycleOpsDto"]);
+        }
+
+        if (array_key_exists("RetryAttempts",$param) and $param["RetryAttempts"] !== null) {
+            $this->RetryAttempts = $param["RetryAttempts"];
         }
     }
 }

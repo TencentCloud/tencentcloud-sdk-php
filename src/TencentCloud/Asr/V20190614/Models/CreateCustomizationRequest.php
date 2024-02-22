@@ -48,6 +48,7 @@ class CreateCustomizationRequest extends AbstractModel
 
     /**
      * @var array 标签信息
+     * @deprecated
      */
     public $TagInfos;
 

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDeviceIds() 获取设备 ID 数组（从获取设备列表接口ListDevices中获取）
  * @method void setDeviceIds(array $DeviceIds) 设置设备 ID 数组（从获取设备列表接口ListDevices中获取）
- * @method string getCmd() 获取操作命令（enable：启用；disable：禁用；delete：删除）
- * @method void setCmd(string $Cmd) 设置操作命令（enable：启用；disable：禁用；delete：删除）
+ * @method string getCmd() 获取操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
+ * @method void setCmd(string $Cmd) 设置操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
  */
 class BatchOperateDeviceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class BatchOperateDeviceRequest extends AbstractModel
     public $DeviceIds;
 
     /**
-     * @var string 操作命令（enable：启用；disable：禁用；delete：删除）
+     * @var string 操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
      */
     public $Cmd;
 
     /**
      * @param array $DeviceIds 设备 ID 数组（从获取设备列表接口ListDevices中获取）
-     * @param string $Cmd 操作命令（enable：启用；disable：禁用；delete：删除）
+     * @param string $Cmd 操作命令（enable：启用；disable：禁用；delete：删除；upgrade：固件升级；reset：恢复出厂设置；reboot：重启）
      */
     function __construct()
     {

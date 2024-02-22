@@ -53,11 +53,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSessionId() 获取语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
  * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
  * @method string getRefText() 获取被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
+句子模式下不超过 30个 单词或者中文文字，段落模式不超过 120 个单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
  * @method void setRefText(string $RefText) 设置被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
+句子模式下不超过 30个 单词或者中文文字，段落模式不超过 120 个单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
  * @method integer getWorkMode() 获取语音输入模式
@@ -185,7 +185,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 
     /**
      * @var string 被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
+句子模式下不超过 30个 单词或者中文文字，段落模式不超过 120 个单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
@@ -298,7 +298,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 如何进行流式分片参考：[流式测试](https://cloud.tencent.com/document/product/884/78824#.E6.B5.81.E5.BC.8F.E8.AF.84.E6.B5.8B)
      * @param string $SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
      * @param string $RefText 被评估语音对应的文本，仅支持中文和英文。
-句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
+句子模式下不超过 30个 单词或者中文文字，段落模式不超过 120 个单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
 关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      * @param integer $WorkMode 语音输入模式

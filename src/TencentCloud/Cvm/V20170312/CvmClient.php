@@ -60,6 +60,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 当[镜像状态](https://cloud.tencent.com/document/product/213/15753#Image)为`创建中`和`使用中`时, 不允许删除。镜像状态可以通过[DescribeImages](https://cloud.tencent.com/document/api/213/9418)获取。
 * 每个地域最多只支持创建500个自定义镜像，删除镜像可以释放账户的配额。
 * 当镜像正在被其它账户分享时，不允许删除。
+ * @method Models\DeleteInstancesActionTimerResponse DeleteInstancesActionTimer(Models\DeleteInstancesActionTimerRequest $req) 本接口 (DeleteInstancesActionTimer) 用于删除定时任务。
  * @method Models\DeleteKeyPairsResponse DeleteKeyPairs(Models\DeleteKeyPairsRequest $req) 本接口 (DeleteKeyPairs) 用于删除已在腾讯云托管的密钥对。
 
 * 可以同时删除多个密钥对。
@@ -113,6 +114,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 可以根据实例`ID`、实例名称或者实例计费模式等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
 * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
 * 支持查询实例的最新操作（LatestOperation）以及最新操作状态(LatestOperationState)。
+ * @method Models\DescribeInstancesActionTimerResponse DescribeInstancesActionTimer(Models\DescribeInstancesActionTimerRequest $req) 本接口 (DescribeInstancesActionTimer) 用于查询定时任务信息。
  * @method Models\DescribeInstancesModificationResponse DescribeInstancesModification(Models\DescribeInstancesModificationRequest $req) 本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
  * @method Models\DescribeInstancesOperationLimitResponse DescribeInstancesOperationLimit(Models\DescribeInstancesOperationLimitRequest $req) 本接口（DescribeInstancesOperationLimit）用于查询实例操作限制。
 
@@ -147,6 +149,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
  * @method Models\ExportImagesResponse ExportImages(Models\ExportImagesRequest $req) 提供导出自定义镜像到指定COS存储桶的能力
  * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
+ * @method Models\ImportInstancesActionTimerResponse ImportInstancesActionTimer(Models\ImportInstancesActionTimerRequest $req) 导入定时任务
  * @method Models\ImportKeyPairResponse ImportKeyPair(Models\ImportKeyPairRequest $req) 本接口 (ImportKeyPair) 用于导入密钥对。
 
 * 本接口的功能是将密钥对导入到用户账户，并不会自动绑定到实例。如需绑定可以使用[AssociasteInstancesKeyPair](https://cloud.tencent.com/document/api/213/9404)接口。
@@ -299,11 +302,12 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 目前只支持[系统盘类型](/document/api/213/9452#block_device)是CLOUD_BASIC、CLOUD_PREMIUM、CLOUD_SSD、CLOUD_BSSD类型的实例使用该接口进行机型调整。
 * 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口调整机型。对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[DescribeAccountBalance](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
 * 本接口为异步接口，调整实例配置请求发送成功后会返回一个RequestId，此时操作并未立即完成。实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表调整实例配置操作成功。
- * @method Models\ResizeInstanceDisksResponse ResizeInstanceDisks(Models\ResizeInstanceDisksRequest $req) 本接口 (ResizeInstanceDisks) 用于扩容实例的数据盘。
+ * @method Models\ResizeInstanceDisksResponse ResizeInstanceDisks(Models\ResizeInstanceDisksRequest $req) 本接口 (ResizeInstanceDisks) 用于扩容实例的磁盘。
 
-* 目前只支持扩容非弹性盘（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）。
-* 对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
+* 目前只支持扩容非弹性盘（[ DescribeDisks ](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）。
+* 对于包年包月实例，使用该接口会涉及扣费，请确保账户余额充足。可通过[ DescribeAccountBalance ](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
 * 目前只支持扩容一块数据盘。
+* 默认扩容方式为关机后扩容。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
 * 如果是系统盘，目前只支持扩容，不支持缩容。
  * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) 本接口 (RunInstances) 用于创建一个或多个指定配置的实例。

@@ -56,6 +56,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeDeviceBindGatewayResponse DescribeDeviceBindGateway(Models\DescribeDeviceBindGatewayRequest $req) 查询设备绑定的网关设备
  * @method Models\DescribeDeviceDataResponse DescribeDeviceData(Models\DescribeDeviceDataRequest $req) 根据设备产品ID、设备名称，获取设备上报的属性数据。
  * @method Models\DescribeDeviceDataHistoryResponse DescribeDeviceDataHistory(Models\DescribeDeviceDataHistoryRequest $req) 获取设备在指定时间范围内上报的历史数据。
+ * @method Models\DescribeDeviceFirmWareResponse DescribeDeviceFirmWare(Models\DescribeDeviceFirmWareRequest $req) 获取设备固件信息
  * @method Models\DescribeDeviceLocationSolveResponse DescribeDeviceLocationSolve(Models\DescribeDeviceLocationSolveRequest $req) 获取实时位置解析
  * @method Models\DescribeDevicePositionListResponse DescribeDevicePositionList(Models\DescribeDevicePositionListRequest $req) 获取设备位置列表
  * @method Models\DescribeFenceBindListResponse DescribeFenceBindList(Models\DescribeFenceBindListRequest $req) 获取围栏绑定信息列表

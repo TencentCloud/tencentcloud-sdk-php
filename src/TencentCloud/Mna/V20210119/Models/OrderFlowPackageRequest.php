@@ -52,6 +52,14 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
  * @method void setAutoRenewFlag(boolean $AutoRenewFlag) 设置是否自动续费
  * @method integer getPackageRegion() 获取区域标识，0：国内，1：国外
  * @method void setPackageRegion(integer $PackageRegion) 设置区域标识，0：国内，1：国外
+ * @method boolean getAutoVoucher() 获取是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+ * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+ * @method array getVoucherIds() 获取指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
+ * @method void setVoucherIds(array $VoucherIds) 设置指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
  */
 class OrderFlowPackageRequest extends AbstractModel
 {
@@ -88,6 +96,18 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     public $PackageRegion;
 
     /**
+     * @var boolean 是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+     */
+    public $AutoVoucher;
+
+    /**
+     * @var array 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
+     */
+    public $VoucherIds;
+
+    /**
      * @param string $PackageType 流量包规格类型。可取值如下：
 DEVICE_1_FLOW_20G、DEVICE_2_FLOW_50G、
 DEVICE_3_FLOW_100G、
@@ -104,6 +124,10 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 500G：最多绑定5个设备
      * @param boolean $AutoRenewFlag 是否自动续费
      * @param integer $PackageRegion 区域标识，0：国内，1：国外
+     * @param boolean $AutoVoucher 是否自动选择代金券，默认false。
+有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
+     * @param array $VoucherIds 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。
+注：若指定的代金券不符合订单抵扣条件，则正常支付，不扣券
      */
     function __construct()
     {
@@ -132,6 +156,14 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 
         if (array_key_exists("PackageRegion",$param) and $param["PackageRegion"] !== null) {
             $this->PackageRegion = $param["PackageRegion"];
+        }
+
+        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
+            $this->AutoVoucher = $param["AutoVoucher"];
+        }
+
+        if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
+            $this->VoucherIds = $param["VoucherIds"];
         }
     }
 }

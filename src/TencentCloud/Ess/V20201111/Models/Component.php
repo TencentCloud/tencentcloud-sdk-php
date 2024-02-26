@@ -262,9 +262,7 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
 场景说明：如果使用关键字进行定位，但是指定的PDF文件中又没有设置的关键字时，发起合同会进行关键字是否存在的校验，如果关键字不存在，会进行报错返回。如果不希望进行报错，可以设置"IgnoreKeywordError"来忽略错误。请注意，如果关键字签署控件对应的签署方在整个PDF文件中一个签署控件都没有，还是会触发报错逻辑。
 <b>参数样例</b>：` "{"IgnoreKeywordError":1}"`
  * @method boolean getIsFormType() 获取**在通过接口拉取控件信息场景下**，为出参参数，此控件是否通过表单域定位方式生成，默认false-不是，**发起合同时候不要填写此字段留空即可**
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFormType(boolean $IsFormType) 设置**在通过接口拉取控件信息场景下**，为出参参数，此控件是否通过表单域定位方式生成，默认false-不是，**发起合同时候不要填写此字段留空即可**
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
 <ul><li> <b>TEXT</b> : 文本内容</li>
 <li> <b>MULTI_LINE_TEXT</b> : 文本内容</li>
@@ -539,7 +537,6 @@ class Component extends AbstractModel
 
     /**
      * @var boolean **在通过接口拉取控件信息场景下**，为出参参数，此控件是否通过表单域定位方式生成，默认false-不是，**发起合同时候不要填写此字段留空即可**
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFormType;
 
@@ -760,7 +757,6 @@ class Component extends AbstractModel
 场景说明：如果使用关键字进行定位，但是指定的PDF文件中又没有设置的关键字时，发起合同会进行关键字是否存在的校验，如果关键字不存在，会进行报错返回。如果不希望进行报错，可以设置"IgnoreKeywordError"来忽略错误。请注意，如果关键字签署控件对应的签署方在整个PDF文件中一个签署控件都没有，还是会触发报错逻辑。
 <b>参数样例</b>：` "{"IgnoreKeywordError":1}"`
      * @param boolean $IsFormType **在通过接口拉取控件信息场景下**，为出参参数，此控件是否通过表单域定位方式生成，默认false-不是，**发起合同时候不要填写此字段留空即可**
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
 <ul><li> <b>TEXT</b> : 文本内容</li>
 <li> <b>MULTI_LINE_TEXT</b> : 文本内容</li>

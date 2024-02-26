@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowInfos(array $FlowInfos) 设置要创建的合同信息列表，最多支持一次创建20个合同
  * @method boolean getNeedPreview() 获取是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
-<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。 <font color="red">注意： 以预览模式创建的合同仅供查看，因此参与方无法进行签署操作</font></li></ul>
 
 注:
 
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
-<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。 <font color="red">注意： 以预览模式创建的合同仅供查看，因此参与方无法进行签署操作</font></li></ul>
 
 注:
 
@@ -89,7 +89,7 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
     /**
      * @var boolean 是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
-<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。 <font color="red">注意： 以预览模式创建的合同仅供查看，因此参与方无法进行签署操作</font></li></ul>
 
 注:
 
@@ -125,7 +125,7 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
      * @param array $FlowInfos 要创建的合同信息列表，最多支持一次创建20个合同
      * @param boolean $NeedPreview 是否为预览模式，取值如下：
 <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li>
-<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+<li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。 <font color="red">注意： 以预览模式创建的合同仅供查看，因此参与方无法进行签署操作</font></li></ul>
 
 注:
 

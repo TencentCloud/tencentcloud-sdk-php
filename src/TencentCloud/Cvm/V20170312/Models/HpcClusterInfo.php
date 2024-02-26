@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIds(array $InstanceIds) 设置集群内实例ID列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHpcClusterType() 获取高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHpcClusterType(string $HpcClusterType) 设置高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHpcClusterBusinessId() 获取高性能计算集群对应的业务场景标识，当前只支持CDC。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHpcClusterBusinessId(string $HpcClusterBusinessId) 设置高性能计算集群对应的业务场景标识，当前只支持CDC。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HpcClusterInfo extends AbstractModel
 {
@@ -92,6 +100,18 @@ class HpcClusterInfo extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var string 高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HpcClusterType;
+
+    /**
+     * @var string 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HpcClusterBusinessId;
+
+    /**
      * @param string $HpcClusterId 高性能计算集群ID
      * @param string $Name 高性能计算集群名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +123,10 @@ class HpcClusterInfo extends AbstractModel
      * @param string $CreateTime 集群创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceIds 集群内实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HpcClusterType 高性能计算集群类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +172,14 @@ class HpcClusterInfo extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("HpcClusterType",$param) and $param["HpcClusterType"] !== null) {
+            $this->HpcClusterType = $param["HpcClusterType"];
+        }
+
+        if (array_key_exists("HpcClusterBusinessId",$param) and $param["HpcClusterBusinessId"] !== null) {
+            $this->HpcClusterBusinessId = $param["HpcClusterBusinessId"];
         }
     }
 }

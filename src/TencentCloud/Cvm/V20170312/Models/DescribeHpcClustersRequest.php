@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量, 默认值0。
  * @method integer getLimit() 获取本次请求量, 默认值20。
  * @method void setLimit(integer $Limit) 设置本次请求量, 默认值20。
+ * @method string getHpcClusterType() 获取高性能计算集群类型。
+ * @method void setHpcClusterType(string $HpcClusterType) 设置高性能计算集群类型。
+ * @method string getHpcClusterBusinessId() 获取高性能计算集群对应的业务场景标识，当前只支持CDC。	
+ * @method void setHpcClusterBusinessId(string $HpcClusterBusinessId) 设置高性能计算集群对应的业务场景标识，当前只支持CDC。	
  */
 class DescribeHpcClustersRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeHpcClustersRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 高性能计算集群类型。
+     */
+    public $HpcClusterType;
+
+    /**
+     * @var string 高性能计算集群对应的业务场景标识，当前只支持CDC。	
+     */
+    public $HpcClusterBusinessId;
+
+    /**
      * @param array $HpcClusterIds 高性能计算集群ID数组。
      * @param string $Name 高性能计算集群名称。
      * @param string $Zone 可用区。
      * @param integer $Offset 偏移量, 默认值0。
      * @param integer $Limit 本次请求量, 默认值20。
+     * @param string $HpcClusterType 高性能计算集群类型。
+     * @param string $HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DescribeHpcClustersRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("HpcClusterType",$param) and $param["HpcClusterType"] !== null) {
+            $this->HpcClusterType = $param["HpcClusterType"];
+        }
+
+        if (array_key_exists("HpcClusterBusinessId",$param) and $param["HpcClusterBusinessId"] !== null) {
+            $this->HpcClusterBusinessId = $param["HpcClusterBusinessId"];
         }
     }
 }

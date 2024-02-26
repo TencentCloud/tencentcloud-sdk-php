@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置高性能计算集群名称。
  * @method string getRemark() 获取高性能计算集群备注。
  * @method void setRemark(string $Remark) 设置高性能计算集群备注。
+ * @method string getHpcClusterType() 获取高性能计算集群类型。
+ * @method void setHpcClusterType(string $HpcClusterType) 设置高性能计算集群类型。
+ * @method string getHpcClusterBusinessId() 获取高性能计算集群对应的业务场景标识，当前只支持CDC。
+ * @method void setHpcClusterBusinessId(string $HpcClusterBusinessId) 设置高性能计算集群对应的业务场景标识，当前只支持CDC。
  */
 class CreateHpcClusterRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class CreateHpcClusterRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 高性能计算集群类型。
+     */
+    public $HpcClusterType;
+
+    /**
+     * @var string 高性能计算集群对应的业务场景标识，当前只支持CDC。
+     */
+    public $HpcClusterBusinessId;
+
+    /**
      * @param string $Zone 可用区。
      * @param string $Name 高性能计算集群名称。
      * @param string $Remark 高性能计算集群备注。
+     * @param string $HpcClusterType 高性能计算集群类型。
+     * @param string $HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class CreateHpcClusterRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("HpcClusterType",$param) and $param["HpcClusterType"] !== null) {
+            $this->HpcClusterType = $param["HpcClusterType"];
+        }
+
+        if (array_key_exists("HpcClusterBusinessId",$param) and $param["HpcClusterBusinessId"] !== null) {
+            $this->HpcClusterBusinessId = $param["HpcClusterBusinessId"];
         }
     }
 }

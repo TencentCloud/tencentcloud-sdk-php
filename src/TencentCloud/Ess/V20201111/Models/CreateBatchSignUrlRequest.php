@@ -78,12 +78,10 @@ use TencentCloud\Common\AbstractModel;
 <li>**NONE** : 不通知（默认）</li>
 <li>**SMS** : 短信通知（发送短信通知到Mobile参数所传的手机号）</li>
 </ul>
- * @method array getFlowIds() 获取本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
-
- * @method void setFlowIds(array $FlowIds) 设置本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
-
+ * @method array getFlowIds() 获取批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
+ * @method void setFlowIds(array $FlowIds) 设置批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
  * @method string getOrganizationName() 获取目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
 
 注：
@@ -171,9 +169,8 @@ class CreateBatchSignUrlRequest extends AbstractModel
     public $NotifyType;
 
     /**
-     * @var array 本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
-
+     * @var array 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
      */
     public $FlowIds;
 
@@ -228,9 +225,8 @@ class CreateBatchSignUrlRequest extends AbstractModel
 <li>**NONE** : 不通知（默认）</li>
 <li>**SMS** : 短信通知（发送短信通知到Mobile参数所传的手机号）</li>
 </ul>
-     * @param array $FlowIds 本次需要批量签署的合同流程ID列表。
-可以不传,  如不传则是发给对方的所有待签署合同流程。
-
+     * @param array $FlowIds 批量签署的合同流程ID数组。
+注: `在调用此接口时，请确保合同流程均为本企业发起，且合同数量不超过100个。`
      * @param string $OrganizationName 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
 
 注：

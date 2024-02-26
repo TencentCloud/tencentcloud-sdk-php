@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEbEventFlag(integer $EbEventFlag) 设置是否同步eb
  * @method string getEbSubject() 获取事件配置的告警
  * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
+ * @method string getTagOperation() 获取标识标签取交/并集关系
+ * @method void setTagOperation(string $TagOperation) 设置标识标签取交/并集关系
  */
 class BindingPolicyTagRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class BindingPolicyTagRequest extends AbstractModel
     public $EbSubject;
 
     /**
+     * @var string 标识标签取交/并集关系
+     */
+    public $TagOperation;
+
+    /**
      * @param string $Module 固定取值 monitor
      * @param string $PolicyId 策略ID
      * @param string $GroupId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
@@ -96,6 +103,7 @@ class BindingPolicyTagRequest extends AbstractModel
      * @param array $BatchTag 批量绑定标签
      * @param integer $EbEventFlag 是否同步eb
      * @param string $EbSubject 事件配置的告警
+     * @param string $TagOperation 标识标签取交/并集关系
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class BindingPolicyTagRequest extends AbstractModel
 
         if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
             $this->EbSubject = $param["EbSubject"];
+        }
+
+        if (array_key_exists("TagOperation",$param) and $param["TagOperation"] !== null) {
+            $this->TagOperation = $param["TagOperation"];
         }
     }
 }

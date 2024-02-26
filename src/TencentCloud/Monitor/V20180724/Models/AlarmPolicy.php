@@ -178,6 +178,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportAlarmTag(integer $IsSupportAlarmTag) 设置是否支持告警标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTagOperation() 获取多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagOperation(string $TagOperation) 设置多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -413,6 +417,12 @@ class AlarmPolicy extends AbstractModel
     public $IsSupportAlarmTag;
 
     /**
+     * @var string 多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagOperation;
+
+    /**
      * @param string $PolicyId 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 告警策略名称
@@ -491,6 +501,8 @@ class AlarmPolicy extends AbstractModel
      * @param array $Tags 策略标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSupportAlarmTag 是否支持告警标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TagOperation 多标签交/并集关系
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -685,6 +697,10 @@ class AlarmPolicy extends AbstractModel
 
         if (array_key_exists("IsSupportAlarmTag",$param) and $param["IsSupportAlarmTag"] !== null) {
             $this->IsSupportAlarmTag = $param["IsSupportAlarmTag"];
+        }
+
+        if (array_key_exists("TagOperation",$param) and $param["TagOperation"] !== null) {
+            $this->TagOperation = $param["TagOperation"];
         }
     }
 }

@@ -66,6 +66,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeClusterDatabasesResponse DescribeClusterDatabases(Models\DescribeClusterDatabasesRequest $req) 获取集群数据库列表
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 该接口（DescribeClusterDetail）显示集群详情
  * @method Models\DescribeClusterDetailDatabasesResponse DescribeClusterDetailDatabases(Models\DescribeClusterDetailDatabasesRequest $req) 查询数据库列表
+ * @method Models\DescribeClusterInstanceGroupsResponse DescribeClusterInstanceGroups(Models\DescribeClusterInstanceGroupsRequest $req) 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。
  * @method Models\DescribeClusterInstanceGrpsResponse DescribeClusterInstanceGrps(Models\DescribeClusterInstanceGrpsRequest $req) 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。 该接口已废弃，推荐使用DescribeClusterInstanceGroups
  * @method Models\DescribeClusterParamLogsResponse DescribeClusterParamLogs(Models\DescribeClusterParamLogsRequest $req) 本接口（DescribeClusterParamLogs）查询参数修改记录
  * @method Models\DescribeClusterParamsResponse DescribeClusterParams(Models\DescribeClusterParamsRequest $req) 本接口（DescribeClusterParams）用于查询集群参数

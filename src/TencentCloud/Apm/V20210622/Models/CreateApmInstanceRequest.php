@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置实例名
  * @method string getDescription() 获取实例描述信息
  * @method void setDescription(string $Description) 设置实例描述信息
- * @method integer getTraceDuration() 获取Trace数据保存时长
- * @method void setTraceDuration(integer $TraceDuration) 设置Trace数据保存时长
+ * @method integer getTraceDuration() 获取Trace数据保存时长，单位为天默认存储为3天
+ * @method void setTraceDuration(integer $TraceDuration) 设置Trace数据保存时长，单位为天默认存储为3天
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
- * @method integer getSpanDailyCounters() 获取实例上报额度值
- * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置实例上报额度值
+ * @method integer getSpanDailyCounters() 获取实例上报额度值，默认赋值为0表示不限制上报额度
+ * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置实例上报额度值，默认赋值为0表示不限制上报额度
  * @method integer getPayMode() 获取实例的计费模式
  * @method void setPayMode(integer $PayMode) 设置实例的计费模式
  */
@@ -46,7 +46,7 @@ class CreateApmInstanceRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Trace数据保存时长
+     * @var integer Trace数据保存时长，单位为天默认存储为3天
      */
     public $TraceDuration;
 
@@ -56,7 +56,7 @@ class CreateApmInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 实例上报额度值
+     * @var integer 实例上报额度值，默认赋值为0表示不限制上报额度
      */
     public $SpanDailyCounters;
 
@@ -68,9 +68,9 @@ class CreateApmInstanceRequest extends AbstractModel
     /**
      * @param string $Name 实例名
      * @param string $Description 实例描述信息
-     * @param integer $TraceDuration Trace数据保存时长
+     * @param integer $TraceDuration Trace数据保存时长，单位为天默认存储为3天
      * @param array $Tags 标签列表
-     * @param integer $SpanDailyCounters 实例上报额度值
+     * @param integer $SpanDailyCounters 实例上报额度值，默认赋值为0表示不限制上报额度
      * @param integer $PayMode 实例的计费模式
      */
     function __construct()

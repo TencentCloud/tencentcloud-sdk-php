@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setName(string $Name) 设置用户名称。
 
- * @method string getOriginId() 获取用户在客户系统的Id，需要在同一应用下唯一。
-
- * @method void setOriginId(string $OriginId) 设置用户在客户系统的Id，需要在同一应用下唯一。
-
+ * @method string getOriginId() 获取用户在客户系统的Id，需要在同一应用下唯一。入参为空时默认赋值为UserId
+。
+ * @method void setOriginId(string $OriginId) 设置用户在客户系统的Id，需要在同一应用下唯一。入参为空时默认赋值为UserId
+。
  * @method string getAvatar() 获取用户头像。
 
  * @method void setAvatar(string $Avatar) 设置用户头像。
@@ -51,8 +51,8 @@ class BatchUserRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 用户在客户系统的Id，需要在同一应用下唯一。
-
+     * @var string 用户在客户系统的Id，需要在同一应用下唯一。入参为空时默认赋值为UserId
+。
      */
     public $OriginId;
 
@@ -67,8 +67,8 @@ class BatchUserRequest extends AbstractModel
 
      * @param string $Name 用户名称。
 
-     * @param string $OriginId 用户在客户系统的Id，需要在同一应用下唯一。
-
+     * @param string $OriginId 用户在客户系统的Id，需要在同一应用下唯一。入参为空时默认赋值为UserId
+。
      * @param string $Avatar 用户头像。
      */
     function __construct()

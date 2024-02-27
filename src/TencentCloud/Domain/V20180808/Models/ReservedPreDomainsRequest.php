@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDomainList() 获取预约预释放域名列表
  * @method void setDomainList(array $DomainList) 设置预约预释放域名列表
- * @method string getTemplateId() 获取模版ID
- * @method void setTemplateId(string $TemplateId) 设置模版ID
+ * @method string getTemplateId() 获取模板ID
+ * @method void setTemplateId(string $TemplateId) 设置模板ID
  */
 class ReservedPreDomainsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ReservedPreDomainsRequest extends AbstractModel
     public $DomainList;
 
     /**
-     * @var string 模版ID
+     * @var string 模板ID
      */
     public $TemplateId;
 
     /**
      * @param array $DomainList 预约预释放域名列表
-     * @param string $TemplateId 模版ID
+     * @param string $TemplateId 模板ID
      */
     function __construct()
     {

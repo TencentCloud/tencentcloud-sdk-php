@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 支持PNG、JPG、JPEG、BMP 等图片格式，不支持 GIF 图片。
  * @method integer getFilterDegree() 获取滤镜效果，取值[0,100]，0表示无效果，100表示满滤镜效果。默认值为80。
  * @method void setFilterDegree(integer $FilterDegree) 设置滤镜效果，取值[0,100]，0表示无效果，100表示满滤镜效果。默认值为80。
- * @method string getRspImgType() 获取返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
- * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+ * @method string getRspImgType() 获取返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。
  */
 class StyleImageProRequest extends AbstractModel
 {
@@ -72,7 +72,7 @@ class StyleImageProRequest extends AbstractModel
     public $FilterDegree;
 
     /**
-     * @var string 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     * @var string 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。
      */
     public $RspImgType;
 
@@ -87,7 +87,7 @@ class StyleImageProRequest extends AbstractModel
 非腾讯云存储的Url速度和稳定性可能受一定影响。  
 支持PNG、JPG、JPEG、BMP 等图片格式，不支持 GIF 图片。
      * @param integer $FilterDegree 滤镜效果，取值[0,100]，0表示无效果，100表示满滤镜效果。默认值为80。
-     * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
+     * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。默认为base64。
      */
     function __construct()
     {

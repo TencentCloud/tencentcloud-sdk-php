@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 10：产品已失效
 11：代付拒绝
 12：支付中
- * @method string getOrderId() 获取订单号
- * @method void setOrderId(string $OrderId) 设置订单号
+ * @method string getOrderId() 获取子订单号
+ * @method void setOrderId(string $OrderId) 设置子订单号
  * @method string getBigDealId() 获取大订单号
  * @method void setBigDealId(string $BigDealId) 设置大订单号
  * @method string getResourceId() 获取资源id
@@ -101,7 +101,7 @@ class DescribeDealsByCondRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 订单号
+     * @var string 子订单号
      */
     public $OrderId;
 
@@ -133,7 +133,7 @@ class DescribeDealsByCondRequest extends AbstractModel
 10：产品已失效
 11：代付拒绝
 12：支付中
-     * @param string $OrderId 订单号
+     * @param string $OrderId 子订单号
      * @param string $BigDealId 大订单号
      * @param string $ResourceId 资源id
      */

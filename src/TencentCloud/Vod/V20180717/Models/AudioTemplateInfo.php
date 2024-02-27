@@ -74,16 +74,18 @@ use TencentCloud\Common\AbstractModel;
 <li>44100</li>
 <li>48000</li>
 单位：Hz。
- * @method integer getAudioChannel() 获取音频通道方式，可选值：
+ * @method integer getAudioChannel() 获取音频通道，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
+<li>0：音频声道数和原始音频保持一致</li>
 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
 默认值：2。
- * @method void setAudioChannel(integer $AudioChannel) 设置音频通道方式，可选值：
+ * @method void setAudioChannel(integer $AudioChannel) 设置音频通道，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
+<li>0：音频声道数和原始音频保持一致</li>
 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
 默认值：2。
  */
@@ -129,10 +131,11 @@ class AudioTemplateInfo extends AbstractModel
     public $SampleRate;
 
     /**
-     * @var integer 音频通道方式，可选值：
+     * @var integer 音频通道，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
+<li>0：音频声道数和原始音频保持一致</li>
 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
 默认值：2。
      */
@@ -166,10 +169,11 @@ class AudioTemplateInfo extends AbstractModel
 <li>44100</li>
 <li>48000</li>
 单位：Hz。
-     * @param integer $AudioChannel 音频通道方式，可选值：
+     * @param integer $AudioChannel 音频通道，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
+<li>0：音频声道数和原始音频保持一致</li>
 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
 默认值：2。
      */

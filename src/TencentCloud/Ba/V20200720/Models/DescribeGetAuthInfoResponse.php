@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAuthenticated(string $IsAuthenticated) 设置实名认证类型：0个人，1企业
  * @method string getType() 获取认证类型，个人0，企业1
  * @method void setType(string $Type) 设置认证类型，个人0，企业1
+ * @method string getLevel() 获取大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户
+ * @method void setLevel(string $Level) 设置大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +55,14 @@ class DescribeGetAuthInfoResponse extends AbstractModel
     public $Type;
 
     /**
+     * @var string 大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户
+     */
+    public $Level;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +71,10 @@ class DescribeGetAuthInfoResponse extends AbstractModel
      * @param string $IsTenPayMasked 实名认证状态：0未实名，1已实名
      * @param string $IsAuthenticated 实名认证类型：0个人，1企业
      * @param string $Type 认证类型，个人0，企业1
+     * @param string $Level 大客户标识：
+1004、1003、1002、1001
+
+其余为普通的用户
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +100,10 @@ class DescribeGetAuthInfoResponse extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

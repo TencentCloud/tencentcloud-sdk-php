@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScale() 获取精度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScale(integer $Scale) 设置精度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ColumnBasicInfo extends AbstractModel
 {
@@ -214,6 +218,12 @@ class ColumnBasicInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer 精度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Scale;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源全局唯一ID
@@ -251,6 +261,8 @@ class ColumnBasicInfo extends AbstractModel
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Scale 精度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -340,6 +352,10 @@ class ColumnBasicInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Scale",$param) and $param["Scale"] !== null) {
+            $this->Scale = $param["Scale"];
         }
     }
 }

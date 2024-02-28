@@ -24,9 +24,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompareType(integer $CompareType) 设置比较类型 1.固定值  2.波动值  3.数值范围比较  4.枚举范围比较  5.不用比较
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOperator() 获取比较操作类型 <  <=  ==  =>  >
+ * @method string getOperator() 获取比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperator(string $Operator) 设置比较操作类型 <  <=  ==  =>  >
+ * @method void setOperator(string $Operator) 设置比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValueComputeType() 获取质量统计值类型 1.绝对值  2.上升 3. 下降  4._C包含   5. N_C不包含
 注意：此字段可能返回 null，表示取不到有效值。
@@ -46,7 +64,16 @@ class CompareRuleItem extends AbstractModel
     public $CompareType;
 
     /**
-     * @var string 比较操作类型 <  <=  ==  =>  >
+     * @var string 比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
@@ -66,7 +93,16 @@ class CompareRuleItem extends AbstractModel
     /**
      * @param integer $CompareType 比较类型 1.固定值  2.波动值  3.数值范围比较  4.枚举范围比较  5.不用比较
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Operator 比较操作类型 <  <=  ==  =>  >
+     * @param string $Operator 比较操作类型
+<  <=  ==  =>  > !=
+IRLCRO:在区间内(左闭右开)
+IRLORC:在区间内(左开右闭)
+IRLCRC:在区间内(左闭右闭)
+IRLORO:在区间内(左开右开)
+NRLCRO:不在区间内(左闭右开)
+NRLORC:不在区间内(左开右闭)
+NRLCRC:不在在区间内(左闭右闭)
+NRLORO:不在在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValueComputeType 质量统计值类型 1.绝对值  2.上升 3. 下降  4._C包含   5. N_C不包含
 注意：此字段可能返回 null，表示取不到有效值。

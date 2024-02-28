@@ -206,6 +206,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadline(integer $Deadline) 设置签署人的签署截止时间，格式为Unix标准时间戳（秒）
 
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+ * @method array getComponents() 获取签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https%3A%2F%2Fqian.tencent.cn%2Fdevelopers%2Fcompany%2FcreateFlowByFiles%2F%23%E6%8C%87%E5%AE%9A%E7%AD%BE%E7%BD%B2%E6%96%B9%E5%A1%AB%E5%86%99%E6%8E%A7%E4%BB%B6)
+
+注1：`此参数仅在通过文件发起合同或者合同组时生效`
+ * @method void setComponents(array $Components) 设置签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https%3A%2F%2Fqian.tencent.cn%2Fdevelopers%2Fcompany%2FcreateFlowByFiles%2F%23%E6%8C%87%E5%AE%9A%E7%AD%BE%E7%BD%B2%E6%96%B9%E5%A1%AB%E5%86%99%E6%8E%A7%E4%BB%B6)
+
+注1：`此参数仅在通过文件发起合同或者合同组时生效`
  */
 class ApproverInfo extends AbstractModel
 {
@@ -391,6 +413,21 @@ class ApproverInfo extends AbstractModel
     public $Deadline;
 
     /**
+     * @var array 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https%3A%2F%2Fqian.tencent.cn%2Fdevelopers%2Fcompany%2FcreateFlowByFiles%2F%23%E6%8C%87%E5%AE%9A%E7%AD%BE%E7%BD%B2%E6%96%B9%E5%A1%AB%E5%86%99%E6%8E%A7%E4%BB%B6)
+
+注1：`此参数仅在通过文件发起合同或者合同组时生效`
+     */
+    public $Components;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -484,6 +521,17 @@ class ApproverInfo extends AbstractModel
      * @param integer $Deadline 签署人的签署截止时间，格式为Unix标准时间戳（秒）
 
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     * @param array $Components 签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<ul><li>单行文本控件</li>
+<li>多行文本控件</li>
+<li>勾选框控件</li>
+<li>数字控件</li>
+<li>图片控件</li>
+<li>数据表格等填写控件</li></ul>
+
+具体使用说明可参考[为签署方指定填写控件](https%3A%2F%2Fqian.tencent.cn%2Fdevelopers%2Fcompany%2FcreateFlowByFiles%2F%23%E6%8C%87%E5%AE%9A%E7%AD%BE%E7%BD%B2%E6%96%B9%E5%A1%AB%E5%86%99%E6%8E%A7%E4%BB%B6)
+
+注1：`此参数仅在通过文件发起合同或者合同组时生效`
      */
     function __construct()
     {
@@ -595,6 +643,15 @@ class ApproverInfo extends AbstractModel
 
         if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
             $this->Deadline = $param["Deadline"];
+        }
+
+        if (array_key_exists("Components",$param) and $param["Components"] !== null) {
+            $this->Components = [];
+            foreach ($param["Components"] as $key => $value){
+                $obj = new Component();
+                $obj->deserialize($value);
+                array_push($this->Components, $obj);
+            }
         }
     }
 }

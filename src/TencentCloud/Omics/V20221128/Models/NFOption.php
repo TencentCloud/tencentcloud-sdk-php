@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResume(boolean $Resume) 设置Resume。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNFVersion() 获取Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNFVersion(string $NFVersion) 设置Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NFOption extends AbstractModel
 {
@@ -64,6 +74,15 @@ class NFOption extends AbstractModel
     public $Resume;
 
     /**
+     * @var string Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NFVersion;
+
+    /**
      * @param string $Config Config。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Profile Profile。
@@ -71,6 +90,11 @@ class NFOption extends AbstractModel
      * @param boolean $Report Report。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Resume Resume。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NFVersion Nextflow引擎版本，取值范围：
+- 22.10.4
+- 22.10.8 
+- 23.10.1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +124,10 @@ class NFOption extends AbstractModel
 
         if (array_key_exists("Resume",$param) and $param["Resume"] !== null) {
             $this->Resume = $param["Resume"];
+        }
+
+        if (array_key_exists("NFVersion",$param) and $param["NFVersion"] !== null) {
+            $this->NFVersion = $param["NFVersion"];
         }
     }
 }

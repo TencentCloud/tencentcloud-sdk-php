@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolType(string $ProtocolType) 设置协议端口模板，协议类型，4:4层协议，7:7层协议
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIPNum() 获取模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPNum(integer $IPNum) 设置模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateListInfo extends AbstractModel
 {
@@ -124,6 +128,12 @@ class TemplateListInfo extends AbstractModel
     public $ProtocolType;
 
     /**
+     * @var integer 模板包含地址数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPNum;
+
+    /**
      * @param string $Uuid 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 模板名称
@@ -143,6 +153,8 @@ class TemplateListInfo extends AbstractModel
      * @param string $TemplateId 模板Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IPNum 模板包含地址数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +208,10 @@ class TemplateListInfo extends AbstractModel
 
         if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
             $this->ProtocolType = $param["ProtocolType"];
+        }
+
+        if (array_key_exists("IPNum",$param) and $param["IPNum"] !== null) {
+            $this->IPNum = $param["IPNum"];
         }
     }
 }

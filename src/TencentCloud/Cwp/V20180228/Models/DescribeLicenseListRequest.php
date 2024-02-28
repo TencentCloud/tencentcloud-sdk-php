@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLicenseList请求参数结构体
  *
- * @method array getFilters() 获取多个条件筛选时 LicenseStatus,DeadlineStatus,ResourceId,Keywords 取交集
+ * @method array getFilters() 获取多个条件筛选时取交集
 <li> LicenseStatus 授权状态信息,0 未使用,1 部分使用, 2 已用完, 3 不可用  4 可使用</li>
 <li> BuyTime 购买时间</li>
 <li> LicenseType  授权类型, 0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月</li>
@@ -29,7 +29,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Keywords IP筛选</li>
 <li>PayMode 付费模式 0 按量计费 , 1 包年包月</li>
 <li>OrderStatus 订单状态 1 正常 2 隔离 3 销毁</li>
- * @method void setFilters(array $Filters) 设置多个条件筛选时 LicenseStatus,DeadlineStatus,ResourceId,Keywords 取交集
+<li>DealNames 子订单号,最大长度10个,超出会失败</li>
+ * @method void setFilters(array $Filters) 设置多个条件筛选时取交集
 <li> LicenseStatus 授权状态信息,0 未使用,1 部分使用, 2 已用完, 3 不可用  4 可使用</li>
 <li> BuyTime 购买时间</li>
 <li> LicenseType  授权类型, 0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月</li>
@@ -38,6 +39,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Keywords IP筛选</li>
 <li>PayMode 付费模式 0 按量计费 , 1 包年包月</li>
 <li>OrderStatus 订单状态 1 正常 2 隔离 3 销毁</li>
+<li>DealNames 子订单号,最大长度10个,超出会失败</li>
  * @method integer getLimit() 获取限制条数,默认10.
  * @method void setLimit(integer $Limit) 设置限制条数,默认10.
  * @method integer getOffset() 获取偏移量,默认0.
@@ -48,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLicenseListRequest extends AbstractModel
 {
     /**
-     * @var array 多个条件筛选时 LicenseStatus,DeadlineStatus,ResourceId,Keywords 取交集
+     * @var array 多个条件筛选时取交集
 <li> LicenseStatus 授权状态信息,0 未使用,1 部分使用, 2 已用完, 3 不可用  4 可使用</li>
 <li> BuyTime 购买时间</li>
 <li> LicenseType  授权类型, 0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月</li>
@@ -57,6 +59,7 @@ class DescribeLicenseListRequest extends AbstractModel
 <li>Keywords IP筛选</li>
 <li>PayMode 付费模式 0 按量计费 , 1 包年包月</li>
 <li>OrderStatus 订单状态 1 正常 2 隔离 3 销毁</li>
+<li>DealNames 子订单号,最大长度10个,超出会失败</li>
      */
     public $Filters;
 
@@ -76,7 +79,7 @@ class DescribeLicenseListRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param array $Filters 多个条件筛选时 LicenseStatus,DeadlineStatus,ResourceId,Keywords 取交集
+     * @param array $Filters 多个条件筛选时取交集
 <li> LicenseStatus 授权状态信息,0 未使用,1 部分使用, 2 已用完, 3 不可用  4 可使用</li>
 <li> BuyTime 购买时间</li>
 <li> LicenseType  授权类型, 0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月</li>
@@ -85,6 +88,7 @@ class DescribeLicenseListRequest extends AbstractModel
 <li>Keywords IP筛选</li>
 <li>PayMode 付费模式 0 按量计费 , 1 包年包月</li>
 <li>OrderStatus 订单状态 1 正常 2 隔离 3 销毁</li>
+<li>DealNames 子订单号,最大长度10个,超出会失败</li>
      * @param integer $Limit 限制条数,默认10.
      * @param integer $Offset 偏移量,默认0.
      * @param array $Tags 标签筛选,平台标签能力,这里传入 标签键,标签值作为一个对象

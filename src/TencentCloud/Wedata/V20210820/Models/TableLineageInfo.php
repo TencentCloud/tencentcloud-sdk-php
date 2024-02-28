@@ -100,6 +100,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelType(string $ChannelType) 设置模块/应用类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDisplayType() 获取展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisplayType(string $DisplayType) 设置展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineType() 获取表类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineType(string $EngineType) 设置表类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTableType() 获取表类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableType(string $TableType) 设置表类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableLineageInfo extends AbstractModel
 {
@@ -224,6 +236,24 @@ class TableLineageInfo extends AbstractModel
     public $ChannelType;
 
     /**
+     * @var string 展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisplayType;
+
+    /**
+     * @var string 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineType;
+
+    /**
+     * @var string 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableType;
+
+    /**
      * @param string $MetastoreType 元数据类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 空间id
@@ -263,6 +293,12 @@ class TableLineageInfo extends AbstractModel
      * @param array $Tasks 修改血缘的任务id列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelType 模块/应用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DisplayType 展示类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineType 表类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TableType 表类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -366,6 +402,18 @@ class TableLineageInfo extends AbstractModel
 
         if (array_key_exists("ChannelType",$param) and $param["ChannelType"] !== null) {
             $this->ChannelType = $param["ChannelType"];
+        }
+
+        if (array_key_exists("DisplayType",$param) and $param["DisplayType"] !== null) {
+            $this->DisplayType = $param["DisplayType"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("TableType",$param) and $param["TableType"] !== null) {
+            $this->TableType = $param["TableType"];
         }
     }
 }

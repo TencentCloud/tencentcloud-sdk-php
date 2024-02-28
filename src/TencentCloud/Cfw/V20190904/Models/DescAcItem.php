@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(string $SourceType) 设置访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetType() 获取访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+ * @method string getTargetType() 获取访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetType(string $TargetType) 设置访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+ * @method void setTargetType(string $TargetType) 设置访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUuid() 获取规则对应的唯一id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -196,7 +196,7 @@ class DescAcItem extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+     * @var string 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
@@ -344,7 +344,7 @@ class DescAcItem extends AbstractModel
      * @param integer $OrderIndex 执行顺序
      * @param string $SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location
+     * @param string $TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Uuid 规则对应的唯一id
 注意：此字段可能返回 null，表示取不到有效值。

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群id
  * @method void setClusterId(string $ClusterId) 设置集群id
- * @method string getInterface() 获取网卡名
- * @method void setInterface(string $Interface) 设置网卡名
+ * @method string getInterface() 获取网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
+ * @method void setInterface(string $Interface) 设置网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
  * @method string getNodeName() 获取节点名字
  * @method void setNodeName(string $NodeName) 设置节点名字
  * @method string getConfig() 获取json格式的节点配置
@@ -39,7 +39,7 @@ class DescribeTKEEdgeScriptRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 网卡名
+     * @var string 网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
      */
     public $Interface;
 
@@ -60,7 +60,7 @@ class DescribeTKEEdgeScriptRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群id
-     * @param string $Interface 网卡名
+     * @param string $Interface 网卡名,指定边缘节点上kubelet向apiserver注册使用的网卡
      * @param string $NodeName 节点名字
      * @param string $Config json格式的节点配置
      * @param string $ScriptVersion 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看

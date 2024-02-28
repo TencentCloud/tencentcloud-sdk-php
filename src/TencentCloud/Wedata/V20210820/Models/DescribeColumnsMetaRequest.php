@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderFieldSet(array $OrderFieldSet) 设置排序字段
  * @method boolean getIsPartitionQuery() 获取是否查询分区字段，默认false
  * @method void setIsPartitionQuery(boolean $IsPartitionQuery) 设置是否查询分区字段，默认false
+ * @method integer getComplianceId() 获取合规组ID
+ * @method void setComplianceId(integer $ComplianceId) 设置合规组ID
  */
 class DescribeColumnsMetaRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeColumnsMetaRequest extends AbstractModel
     public $IsPartitionQuery;
 
     /**
+     * @var integer 合规组ID
+     */
+    public $ComplianceId;
+
+    /**
      * @param string $TableId 表ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页大小
      * @param array $FilterSet 过滤器
      * @param array $OrderFieldSet 排序字段
      * @param boolean $IsPartitionQuery 是否查询分区字段，默认false
+     * @param integer $ComplianceId 合规组ID
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class DescribeColumnsMetaRequest extends AbstractModel
 
         if (array_key_exists("IsPartitionQuery",$param) and $param["IsPartitionQuery"] !== null) {
             $this->IsPartitionQuery = $param["IsPartitionQuery"];
+        }
+
+        if (array_key_exists("ComplianceId",$param) and $param["ComplianceId"] !== null) {
+            $this->ComplianceId = $param["ComplianceId"];
         }
     }
 }

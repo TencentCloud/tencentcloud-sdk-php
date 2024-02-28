@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 - KUBERNETES
  * @method void setType(string $Type) 设置计算集群类型，取值范围：
 - KUBERNETES
+ * @method string getServiceCidr() 获取计算集群Service CIDR，不能与VPC网段重合。
+ * @method void setServiceCidr(string $ServiceCidr) 设置计算集群Service CIDR，不能与VPC网段重合。
  * @method ResourceQuota getResourceQuota() 获取资源配额。
  * @method void setResourceQuota(ResourceQuota $ResourceQuota) 设置资源配额。
  * @method LimitRange getLimitRange() 获取限制范围。
@@ -45,6 +47,11 @@ class ClusterOption extends AbstractModel
     public $Type;
 
     /**
+     * @var string 计算集群Service CIDR，不能与VPC网段重合。
+     */
+    public $ServiceCidr;
+
+    /**
      * @var ResourceQuota 资源配额。
      */
     public $ResourceQuota;
@@ -58,6 +65,7 @@ class ClusterOption extends AbstractModel
      * @param string $Zone 计算集群可用区。
      * @param string $Type 计算集群类型，取值范围：
 - KUBERNETES
+     * @param string $ServiceCidr 计算集群Service CIDR，不能与VPC网段重合。
      * @param ResourceQuota $ResourceQuota 资源配额。
      * @param LimitRange $LimitRange 限制范围。
      */
@@ -80,6 +88,10 @@ class ClusterOption extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ServiceCidr",$param) and $param["ServiceCidr"] !== null) {
+            $this->ServiceCidr = $param["ServiceCidr"];
         }
 
         if (array_key_exists("ResourceQuota",$param) and $param["ResourceQuota"] !== null) {

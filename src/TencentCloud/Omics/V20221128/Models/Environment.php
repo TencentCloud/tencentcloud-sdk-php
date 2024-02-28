@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 - DELETE_ERROR：删除失败
  * @method boolean getAvailable() 获取环境是否可用。环境需要可用才能投递计算任务。
  * @method void setAvailable(boolean $Available) 设置环境是否可用。环境需要可用才能投递计算任务。
+ * @method boolean getIsDefault() 获取环境是否为默认环境。
+ * @method void setIsDefault(boolean $IsDefault) 设置环境是否为默认环境。
+ * @method boolean getIsManaged() 获取环境是否为托管环境。
+ * @method void setIsManaged(boolean $IsManaged) 设置环境是否为托管环境。
  * @method string getMessage() 获取环境信息。
  * @method void setMessage(string $Message) 设置环境信息。
  * @method ResourceIds getResourceIds() 获取云资源ID。
@@ -109,6 +113,16 @@ class Environment extends AbstractModel
     public $Available;
 
     /**
+     * @var boolean 环境是否为默认环境。
+     */
+    public $IsDefault;
+
+    /**
+     * @var boolean 环境是否为托管环境。
+     */
+    public $IsManaged;
+
+    /**
      * @var string 环境信息。
      */
     public $Message;
@@ -146,6 +160,8 @@ class Environment extends AbstractModel
 - DELETING：正在删除
 - DELETE_ERROR：删除失败
      * @param boolean $Available 环境是否可用。环境需要可用才能投递计算任务。
+     * @param boolean $IsDefault 环境是否为默认环境。
+     * @param boolean $IsManaged 环境是否为托管环境。
      * @param string $Message 环境信息。
      * @param ResourceIds $ResourceIds 云资源ID。
      * @param string $LastWorkflowUuid 上个工作流UUID。
@@ -192,6 +208,14 @@ class Environment extends AbstractModel
 
         if (array_key_exists("Available",$param) and $param["Available"] !== null) {
             $this->Available = $param["Available"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
+        }
+
+        if (array_key_exists("IsManaged",$param) and $param["IsManaged"] !== null) {
+            $this->IsManaged = $param["IsManaged"];
         }
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {

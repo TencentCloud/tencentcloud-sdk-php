@@ -96,6 +96,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getStrategyConfig() 获取是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStrategyConfig(boolean $StrategyConfig) 设置是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSubscribeConfig() 获取是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubscribeConfig(boolean $SubscribeConfig) 设置是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroup extends AbstractModel
 {
@@ -214,6 +222,18 @@ class RuleGroup extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var boolean 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StrategyConfig;
+
+    /**
+     * @var boolean 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubscribeConfig;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -251,6 +271,10 @@ class RuleGroup extends AbstractModel
      * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $StrategyConfig 是否已配置执行策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SubscribeConfig 是否已配置执行策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -342,6 +366,14 @@ class RuleGroup extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("StrategyConfig",$param) and $param["StrategyConfig"] !== null) {
+            $this->StrategyConfig = $param["StrategyConfig"];
+        }
+
+        if (array_key_exists("SubscribeConfig",$param) and $param["SubscribeConfig"] !== null) {
+            $this->SubscribeConfig = $param["SubscribeConfig"];
         }
     }
 }

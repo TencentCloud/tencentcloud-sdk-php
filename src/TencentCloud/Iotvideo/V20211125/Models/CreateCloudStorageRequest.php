@@ -74,6 +74,8 @@ lye1y30d：低功耗事件30天年套餐。
  * @method void setOrderId(string $OrderId) 设置订单id
  * @method integer getChannelId() 获取通道ID
  * @method void setChannelId(integer $ChannelId) 设置通道ID
+ * @method string getStorageRegion() 获取云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
+ * @method void setStorageRegion(string $StorageRegion) 设置云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
  */
 class CreateCloudStorageRequest extends AbstractModel
 {
@@ -133,6 +135,11 @@ lye1y30d：低功耗事件30天年套餐。
     public $ChannelId;
 
     /**
+     * @var string 云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
+     */
+    public $StorageRegion;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $PackageId 云存套餐ID：
@@ -160,6 +167,7 @@ lye1y30d：低功耗事件30天年套餐。
      * @param string $PackageQueue 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
      * @param string $OrderId 订单id
      * @param integer $ChannelId 通道ID
+     * @param string $StorageRegion 云存存储区域，国内默认为ap-guangzhou。海外默认为东南亚ap-singapore，可选美东na-ashburn、欧洲eu-frankfurt。
      */
     function __construct()
     {
@@ -200,6 +208,10 @@ lye1y30d：低功耗事件30天年套餐。
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
             $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("StorageRegion",$param) and $param["StorageRegion"] !== null) {
+            $this->StorageRegion = $param["StorageRegion"];
         }
     }
 }

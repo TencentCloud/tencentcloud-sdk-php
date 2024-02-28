@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLocation() 获取存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocation(string $Location) 设置存储位置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableBasicInfo extends AbstractModel
 {
@@ -304,6 +308,12 @@ class TableBasicInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 存储位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Location;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源全局唯一ID
@@ -359,6 +369,8 @@ class TableBasicInfo extends AbstractModel
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Location 存储位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -484,6 +496,10 @@ class TableBasicInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
         }
     }
 }

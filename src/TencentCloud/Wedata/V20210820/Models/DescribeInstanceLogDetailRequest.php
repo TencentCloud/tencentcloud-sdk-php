@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrokerIp(string $BrokerIp) 设置服务器Ip
  * @method string getOriginFileName() 获取文件Name
  * @method void setOriginFileName(string $OriginFileName) 设置文件Name
+ * @method integer getStartCount() 获取起始行
+ * @method void setStartCount(integer $StartCount) 设置起始行
+ * @method integer getLineCount() 获取每次查询行数
+ * @method void setLineCount(integer $LineCount) 设置每次查询行数
  */
 class DescribeInstanceLogDetailRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
     public $OriginFileName;
 
     /**
+     * @var integer 起始行
+     */
+    public $StartCount;
+
+    /**
+     * @var integer 每次查询行数
+     */
+    public $LineCount;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskId 任务id
      * @param string $CurRunDate 数据时间
      * @param string $BrokerIp 服务器Ip
      * @param string $OriginFileName 文件Name
+     * @param integer $StartCount 起始行
+     * @param integer $LineCount 每次查询行数
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DescribeInstanceLogDetailRequest extends AbstractModel
 
         if (array_key_exists("OriginFileName",$param) and $param["OriginFileName"] !== null) {
             $this->OriginFileName = $param["OriginFileName"];
+        }
+
+        if (array_key_exists("StartCount",$param) and $param["StartCount"] !== null) {
+            $this->StartCount = $param["StartCount"];
+        }
+
+        if (array_key_exists("LineCount",$param) and $param["LineCount"] !== null) {
+            $this->LineCount = $param["LineCount"];
         }
     }
 }

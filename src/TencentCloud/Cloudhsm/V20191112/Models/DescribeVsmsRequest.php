@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移
  * @method integer getLimit() 获取最大数量
  * @method void setLimit(integer $Limit) 设置最大数量
- * @method string getSearchWord() 获取查询关键字
- * @method void setSearchWord(string $SearchWord) 设置查询关键字
+ * @method string getSearchWord() 获取资源ID或者资源名字模糊查询的关键字
+ * @method void setSearchWord(string $SearchWord) 设置资源ID或者资源名字模糊查询的关键字
  * @method array getTagFilters() 获取标签过滤条件
  * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
  * @method string getManufacturer() 获取设备所属的厂商名称，根据厂商来进行筛选
@@ -46,7 +46,7 @@ class DescribeVsmsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 查询关键字
+     * @var string 资源ID或者资源名字模糊查询的关键字
      */
     public $SearchWord;
 
@@ -68,7 +68,7 @@ class DescribeVsmsRequest extends AbstractModel
     /**
      * @param integer $Offset 偏移
      * @param integer $Limit 最大数量
-     * @param string $SearchWord 查询关键字
+     * @param string $SearchWord 资源ID或者资源名字模糊查询的关键字
      * @param array $TagFilters 标签过滤条件
      * @param string $Manufacturer 设备所属的厂商名称，根据厂商来进行筛选
      * @param string $HsmType Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all

@@ -114,6 +114,8 @@ use TencentCloud\Common\AbstractModel;
 <li>stopping：停用中；</li>
 <li>fail：部署失败/停用失败。</li>
 注意：L4ProxyRule 在 CreateL4ProxyRules、ModifyL4ProxyRules 作为入参使用时，该参数请勿填写。
+ * @method string getBuId() 获取BuID。
+ * @method void setBuId(string $BuId) 设置BuID。
  */
 class L4ProxyRule extends AbstractModel
 {
@@ -209,6 +211,11 @@ class L4ProxyRule extends AbstractModel
     public $Status;
 
     /**
+     * @var string BuID。
+     */
+    public $BuId;
+
+    /**
      * @param string $RuleId 转发规则 ID。
 注意：L4ProxyRule 在 CreateL4ProxyRules 作为入参使用时，该参数请勿填写；在 ModifyL4ProxyRules 作为入参使用时，该参数必填。
      * @param string $Protocol 转发协议。取值有：
@@ -256,6 +263,7 @@ class L4ProxyRule extends AbstractModel
 <li>stopping：停用中；</li>
 <li>fail：部署失败/停用失败。</li>
 注意：L4ProxyRule 在 CreateL4ProxyRules、ModifyL4ProxyRules 作为入参使用时，该参数请勿填写。
+     * @param string $BuId BuID。
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ class L4ProxyRule extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BuId",$param) and $param["BuId"] !== null) {
+            $this->BuId = $param["BuId"];
         }
     }
 }

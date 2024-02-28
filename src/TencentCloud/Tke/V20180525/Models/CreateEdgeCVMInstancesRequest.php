@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEdgeCVMInstances请求参数结构体
  *
- * @method string getClusterID() 获取集群id
- * @method void setClusterID(string $ClusterID) 设置集群id
+ * @method string getClusterID() 获取集群id，边缘集群需要先开启公网访问才能添加cvm节点
+ * @method void setClusterID(string $ClusterID) 设置集群id，边缘集群需要先开启公网访问才能添加cvm节点
  * @method string getRunInstancePara() 获取CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
  * @method void setRunInstancePara(string $RunInstancePara) 设置CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
  * @method string getCvmRegion() 获取CVM所属Region
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateEdgeCVMInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string 集群id，边缘集群需要先开启公网访问才能添加cvm节点
      */
     public $ClusterID;
 
@@ -73,7 +73,7 @@ class CreateEdgeCVMInstancesRequest extends AbstractModel
     public $EnableEni;
 
     /**
-     * @param string $ClusterID 集群id
+     * @param string $ClusterID 集群id，边缘集群需要先开启公网访问才能添加cvm节点
      * @param string $RunInstancePara CVM创建透传参数，json化字符串格式，如需要保证扩展集群节点请求幂等性需要在此参数添加ClientToken字段，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
      * @param string $CvmRegion CVM所属Region
      * @param integer $CvmCount CVM数量

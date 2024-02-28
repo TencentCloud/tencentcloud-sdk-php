@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEdgeClusterUpgradeInfo返回参数结构体
  *
- * @method string getComponentVersion() 获取可升级的集群组件和
+ * @method string getComponentVersion() 获取可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComponentVersion(string $ComponentVersion) 设置可升级的集群组件和
+ * @method void setComponentVersion(string $ComponentVersion) 设置可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEdgeVersionCurrent() 获取边缘集群当前版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeEdgeClusterUpgradeInfoResponse extends AbstractModel
 {
     /**
-     * @var string 可升级的集群组件和
+     * @var string 可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentVersion;
@@ -81,7 +81,7 @@ class DescribeEdgeClusterUpgradeInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ComponentVersion 可升级的集群组件和
+     * @param string $ComponentVersion 可升级的集群组件及其版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EdgeVersionCurrent 边缘集群当前版本
 注意：此字段可能返回 null，表示取不到有效值。

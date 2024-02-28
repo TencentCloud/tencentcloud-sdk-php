@@ -28,10 +28,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceId(string $DatasourceId) 设置数据源ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTableId() 获取表ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableId(string $TableId) 设置表ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getColumnName() 获取字段名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnName(string $ColumnName) 设置字段名称
@@ -112,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtParams(array $ExtParams) 设置额外参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTableId() 获取表ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableId(string $TableId) 设置表ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ColumnLineageInfo extends AbstractModel
 {
@@ -126,12 +126,6 @@ class ColumnLineageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceId;
-
-    /**
-     * @var string 表ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TableId;
 
     /**
      * @var string 字段名称
@@ -254,11 +248,15 @@ class ColumnLineageInfo extends AbstractModel
     public $ExtParams;
 
     /**
+     * @var string 表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableId;
+
+    /**
      * @param string $Id 血缘id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TableId 表ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ColumnName 字段名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -300,6 +298,8 @@ class ColumnLineageInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExtParams 额外参数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TableId 表ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -320,10 +320,6 @@ class ColumnLineageInfo extends AbstractModel
 
         if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
             $this->DatasourceId = $param["DatasourceId"];
-        }
-
-        if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
-            $this->TableId = $param["TableId"];
         }
 
         if (array_key_exists("ColumnName",$param) and $param["ColumnName"] !== null) {
@@ -409,6 +405,10 @@ class ColumnLineageInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExtParams, $obj);
             }
+        }
+
+        if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
+            $this->TableId = $param["TableId"];
         }
     }
 }

@@ -32,8 +32,8 @@ domain：域名规则，例如*.qq.com
  * @method void setDestContent(string $DestContent) 设置访问目的示例：
 net：IP/CIDR(192.168.0.2)
 domain：域名规则，例如*.qq.com
- * @method string getDestType() 获取访问目的类型，类型可以为：net，domain
- * @method void setDestType(string $DestType) 设置访问目的类型，类型可以为：net，domain
+ * @method string getDestType() 获取访问目的类型，类型可以为：net，domain，dnsparse
+ * @method void setDestType(string $DestType) 设置访问目的类型，类型可以为：net，domain，dnsparse
  * @method string getProtocol() 获取协议，可选的值：
 TCP
 UDP
@@ -148,7 +148,7 @@ domain：域名规则，例如*.qq.com
     public $DestContent;
 
     /**
-     * @var string 访问目的类型，类型可以为：net，domain
+     * @var string 访问目的类型，类型可以为：net，domain，dnsparse
      */
     public $DestType;
 
@@ -281,7 +281,7 @@ net：IP/CIDR(192.168.0.2)
      * @param string $DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
 domain：域名规则，例如*.qq.com
-     * @param string $DestType 访问目的类型，类型可以为：net，domain
+     * @param string $DestType 访问目的类型，类型可以为：net，domain，dnsparse
      * @param string $Protocol 协议，可选的值：
 TCP
 UDP

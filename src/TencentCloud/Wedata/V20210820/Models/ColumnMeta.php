@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDictionaryName(string $DictionaryName) 设置对应码表字典名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLevelName() 获取安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLevelName(string $LevelName) 设置安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLevelRank() 获取安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLevelRank(integer $LevelRank) 设置安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ColumnMeta extends AbstractModel
 {
@@ -124,6 +132,18 @@ class ColumnMeta extends AbstractModel
     public $DictionaryName;
 
     /**
+     * @var string 安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LevelName;
+
+    /**
+     * @var integer 安全等级：值范围1-10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LevelRank;
+
+    /**
      * @param string $NameEn 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameCn 字段中文名称
@@ -143,6 +163,10 @@ class ColumnMeta extends AbstractModel
      * @param string $DictionaryId 对应码表字典ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DictionaryName 对应码表字典名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LevelName 安全等级：名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LevelRank 安全等级：值范围1-10
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +225,14 @@ class ColumnMeta extends AbstractModel
 
         if (array_key_exists("DictionaryName",$param) and $param["DictionaryName"] !== null) {
             $this->DictionaryName = $param["DictionaryName"];
+        }
+
+        if (array_key_exists("LevelName",$param) and $param["LevelName"] !== null) {
+            $this->LevelName = $param["LevelName"];
+        }
+
+        if (array_key_exists("LevelRank",$param) and $param["LevelRank"] !== null) {
+            $this->LevelRank = $param["LevelRank"];
         }
     }
 }

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThirdTaskLogUrlDesc(string $ThirdTaskLogUrlDesc) 设置第三方任务日志链接描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLineCount() 获取日志行数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLineCount(integer $LineCount) 设置日志行数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLogInfoOpsDto extends AbstractModel
 {
@@ -74,6 +78,12 @@ class InstanceLogInfoOpsDto extends AbstractModel
     public $ThirdTaskLogUrlDesc;
 
     /**
+     * @var integer 日志行数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LineCount;
+
+    /**
      * @param string $LogInfo 实例运行日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $YarnLogInfo 实例运行提交的yarn日志地址
@@ -83,6 +93,8 @@ class InstanceLogInfoOpsDto extends AbstractModel
      * @param string $ThirdTaskRunLogInfo 第三方任务运行日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ThirdTaskLogUrlDesc 第三方任务日志链接描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LineCount 日志行数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class InstanceLogInfoOpsDto extends AbstractModel
 
         if (array_key_exists("ThirdTaskLogUrlDesc",$param) and $param["ThirdTaskLogUrlDesc"] !== null) {
             $this->ThirdTaskLogUrlDesc = $param["ThirdTaskLogUrlDesc"];
+        }
+
+        if (array_key_exists("LineCount",$param) and $param["LineCount"] !== null) {
+            $this->LineCount = $param["LineCount"];
         }
     }
 }

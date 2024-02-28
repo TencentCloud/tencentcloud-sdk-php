@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateECMInstances请求参数结构体
  *
- * @method string getClusterID() 获取集群id
- * @method void setClusterID(string $ClusterID) 设置集群id
- * @method string getModuleId() 获取模块id
- * @method void setModuleId(string $ModuleId) 设置模块id
+ * @method string getClusterID() 获取集群id，边缘集群需要先开启公网访问才能添加ecm节点
+ * @method void setClusterID(string $ClusterID) 设置集群id，边缘集群需要先开启公网访问才能添加ecm节点
+ * @method string getModuleId() 获取边缘模块id
+ * @method void setModuleId(string $ModuleId) 设置边缘模块id
  * @method array getZoneInstanceCountISPSet() 获取需要创建实例的可用区及创建数目及运营商的列表
  * @method void setZoneInstanceCountISPSet(array $ZoneInstanceCountISPSet) 设置需要创建实例的可用区及创建数目及运营商的列表
  * @method string getPassword() 获取密码
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateECMInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string 集群id，边缘集群需要先开启公网访问才能添加ecm节点
      */
     public $ClusterID;
 
     /**
-     * @var string 模块id
+     * @var string 边缘模块id
      */
     public $ModuleId;
 
@@ -108,8 +108,8 @@ class CreateECMInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterID 集群id
-     * @param string $ModuleId 模块id
+     * @param string $ClusterID 集群id，边缘集群需要先开启公网访问才能添加ecm节点
+     * @param string $ModuleId 边缘模块id
      * @param array $ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表
      * @param string $Password 密码
      * @param integer $InternetMaxBandwidthOut 公网带宽

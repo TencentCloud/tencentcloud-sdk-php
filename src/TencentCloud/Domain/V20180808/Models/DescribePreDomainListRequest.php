@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置页码
  * @method integer getSize() 获取条数
  * @method void setSize(integer $Size) 设置条数
+ * @method string getEndTime() 获取用于结束时间筛选
+ * @method void setEndTime(string $EndTime) 设置用于结束时间筛选
  */
 class DescribePreDomainListRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribePreDomainListRequest extends AbstractModel
     public $Size;
 
     /**
+     * @var string 用于结束时间筛选
+     */
+    public $EndTime;
+
+    /**
      * @param integer $Page 页码
      * @param integer $Size 条数
+     * @param string $EndTime 用于结束时间筛选
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribePreDomainListRequest extends AbstractModel
 
         if (array_key_exists("Size",$param) and $param["Size"] !== null) {
             $this->Size = $param["Size"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

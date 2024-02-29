@@ -168,6 +168,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
     1. HLS 文件：访问M3U8 文件时统计播放次数；访问TS 文件不统计播放次数。
     2. 其它文件（如 MP4 文件）：播放请求带有 range 参数且 range 的 start 参数不等于0时不统计播放次数，其它情况统计播放次数。
 * 播放设备的统计：播放请求带了 UserAgent 参数，并且 UserAgent 包含 Android 或者 iPhone 等标识，会统计为移动端播放次数，否则统计为 PC 端播放次数。
+ * @method Models\DescribeDefaultDistributionConfigResponse DescribeDefaultDistributionConfig(Models\DescribeDefaultDistributionConfigRequest $req) 该接口用于查询默认分发配置。
+* 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
+* 播放密钥，用于计算播放器签名。
  * @method Models\DescribeDrmDataKeyResponse DescribeDrmDataKey(Models\DescribeDrmDataKeyRequest $req) 本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中 [DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643) 的升级版本。
 
 如果您是新接入点播加密的用户，不要使用该 API，请参考 [视频加密综述](https://cloud.tencent.com/document/product/266/45552) 使用推荐的加密方式。
@@ -311,6 +314,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\ModifyClassResponse ModifyClass(Models\ModifyClassRequest $req) 修改媒体分类属性。
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [修改审核模板](https://cloud.tencent.com/document/api/266/84388)。
 修改用户自定义音视频内容审核模板。
+ * @method Models\ModifyDefaultDistributionConfigResponse ModifyDefaultDistributionConfig(Models\ModifyDefaultDistributionConfigRequest $req) 该接口用于修改默认分发配置。
+* 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
+* 播放密钥，用于计算播放器签名。
  * @method Models\ModifyDefaultStorageRegionResponse ModifyDefaultStorageRegion(Models\ModifyDefaultStorageRegionRequest $req) 该接口用于设置默认的存储地域。上传文件时如果没有指定地域，将上传到默认地域。
  * @method Models\ModifyEnhanceMediaTemplateResponse ModifyEnhanceMediaTemplate(Models\ModifyEnhanceMediaTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
 修改音画质重生模板。

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置实例备份保留时长，取值范围为7-1830，单位是天
  * @method array getBackupPeriod() 获取实例备份周期，按照星期维度，格式为小写星期英文单词
  * @method void setBackupPeriod(array $BackupPeriod) 设置实例备份周期，按照星期维度，格式为小写星期英文单词
+ * @method integer getLogBackupRetentionPeriod() 获取实例日志备份保留时长，取值范围为7-1830，单位是天
+ * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置实例日志备份保留时长，取值范围为7-1830，单位是天
  */
 class ModifyBackupPlanRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $BackupPeriod;
 
     /**
+     * @var integer 实例日志备份保留时长，取值范围为7-1830，单位是天
+     */
+    public $LogBackupRetentionPeriod;
+
+    /**
      * @param string $DBInstanceId 实例ID
      * @param string $MinBackupStartTime 实例最早开始备份时间
      * @param string $MaxBackupStartTime 实例最晚开始备份时间
      * @param integer $BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
      * @param array $BackupPeriod 实例备份周期，按照星期维度，格式为小写星期英文单词
+     * @param integer $LogBackupRetentionPeriod 实例日志备份保留时长，取值范围为7-1830，单位是天
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyBackupPlanRequest extends AbstractModel
 
         if (array_key_exists("BackupPeriod",$param) and $param["BackupPeriod"] !== null) {
             $this->BackupPeriod = $param["BackupPeriod"];
+        }
+
+        if (array_key_exists("LogBackupRetentionPeriod",$param) and $param["LogBackupRetentionPeriod"] !== null) {
+            $this->LogBackupRetentionPeriod = $param["LogBackupRetentionPeriod"];
         }
     }
 }

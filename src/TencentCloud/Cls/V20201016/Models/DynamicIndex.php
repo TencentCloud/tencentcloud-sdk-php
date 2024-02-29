@@ -18,23 +18,23 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 动态索引配置，启用后将自动把日志内的字段添加到键值索引字段列表中，包括日志中新增的字段。
+ * 键值索引自动配置，启用后自动将日志内的字段添加到键值索引中，包括日志中后续新增的字段。
  *
- * @method boolean getStatus() 获取动态索引配置开关
+ * @method boolean getStatus() 获取键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(boolean $Status) 设置动态索引配置开关
+ * @method void setStatus(boolean $Status) 设置键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DynamicIndex extends AbstractModel
 {
     /**
-     * @var boolean 动态索引配置开关
+     * @var boolean 键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @param boolean $Status 动态索引配置开关
+     * @param boolean $Status 键值索引自动配置开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

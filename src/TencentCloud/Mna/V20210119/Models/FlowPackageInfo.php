@@ -44,6 +44,10 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 500G：最多绑定5个设备
  * @method integer getStatus() 获取流量包状态，0：未生效，1：有效期内，2：已过期
  * @method void setStatus(integer $Status) 设置流量包状态，0：未生效，1：有效期内，2：已过期
+ * @method integer getCreateTime() 获取购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActiveTime() 获取生效时间，Unix时间戳格式，单位：秒
  * @method void setActiveTime(integer $ActiveTime) 设置生效时间，Unix时间戳格式，单位：秒
  * @method integer getExpireTime() 获取过期时间，Unix时间戳格式，单位：秒
@@ -56,6 +60,8 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
  * @method void setCapacityRemain(integer $CapacityRemain) 设置流量包余量，单位：MB
  * @method boolean getRenewFlag() 获取自动续费标识。true代表自动续费，false代表不自动续费
  * @method void setRenewFlag(boolean $RenewFlag) 设置自动续费标识。true代表自动续费，false代表不自动续费
+ * @method integer getModifyStatus() 获取资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+ * @method void setModifyStatus(integer $ModifyStatus) 设置资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
  */
 class FlowPackageInfo extends AbstractModel
 {
@@ -88,6 +94,12 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     public $Status;
 
     /**
+     * @var integer 购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @var integer 生效时间，Unix时间戳格式，单位：秒
      */
     public $ActiveTime;
@@ -118,6 +130,11 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
     public $RenewFlag;
 
     /**
+     * @var integer 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
+     */
+    public $ModifyStatus;
+
+    /**
      * @param string $ResourceId 流量包的唯一资源ID
      * @param integer $AppId 流量包所属的用户AppId
      * @param string $PackageType 流量包规格类型。可取值如下：
@@ -130,12 +147,15 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 100G：最多绑定3个设备
 500G：最多绑定5个设备
      * @param integer $Status 流量包状态，0：未生效，1：有效期内，2：已过期
+     * @param integer $CreateTime 购买时间，Unix时间戳格式，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActiveTime 生效时间，Unix时间戳格式，单位：秒
      * @param integer $ExpireTime 过期时间，Unix时间戳格式，单位：秒
      * @param array $DeviceList 流量包绑定的设备ID列表
      * @param integer $CapacitySize 流量包总容量，单位：MB
      * @param integer $CapacityRemain 流量包余量，单位：MB
      * @param boolean $RenewFlag 自动续费标识。true代表自动续费，false代表不自动续费
+     * @param integer $ModifyStatus 资源包变更状态，0：未发生变配；1：变配中；2：已变配或已续费
      */
     function __construct()
     {
@@ -166,6 +186,10 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
         if (array_key_exists("ActiveTime",$param) and $param["ActiveTime"] !== null) {
             $this->ActiveTime = $param["ActiveTime"];
         }
@@ -188,6 +212,10 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("ModifyStatus",$param) and $param["ModifyStatus"] !== null) {
+            $this->ModifyStatus = $param["ModifyStatus"];
         }
     }
 }

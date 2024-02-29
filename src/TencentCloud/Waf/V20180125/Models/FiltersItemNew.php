@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 过滤数组
  *
- * @method string getName() 获取字段名
- * @method void setName(string $Name) 设置字段名
+ * @method string getName() 获取字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号
+ * @method void setName(string $Name) 设置字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号
  * @method array getValues() 获取过滤值
  * @method void setValues(array $Values) 设置过滤值
  * @method boolean getExactMatch() 获取是否精确查找
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class FiltersItemNew extends AbstractModel
 {
     /**
-     * @var string 字段名
+     * @var string 字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号
      */
     public $Name;
 
@@ -45,7 +48,8 @@ class FiltersItemNew extends AbstractModel
     public $ExactMatch;
 
     /**
-     * @param string $Name 字段名
+     * @param string $Name 字段名； 过滤
+子订单号过滤通过name 为：DealName； value为子订单号
      * @param array $Values 过滤值
      * @param boolean $ExactMatch 是否精确查找
      */

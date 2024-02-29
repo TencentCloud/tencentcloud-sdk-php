@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDomainVerifyRecord请求参数结构体
  *
-
+ * @method string getDomain() 获取需要接入点播的加速域名。
+ * @method void setDomain(string $Domain) 设置需要接入点播的加速域名。
  */
 class CreateDomainVerifyRecordRequest extends AbstractModel
 {
-
+    /**
+     * @var string 需要接入点播的加速域名。
+     */
+    public $Domain;
 
     /**
-
+     * @param string $Domain 需要接入点播的加速域名。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class CreateDomainVerifyRecordRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
     }
 }

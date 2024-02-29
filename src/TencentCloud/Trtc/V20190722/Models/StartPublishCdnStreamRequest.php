@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishCdnParams(array $PublishCdnParams) 设置转推的CDN参数。和回推房间参数必须要有一个。
  * @method McuSeiParams getSeiParams() 获取混流SEI参数
  * @method void setSeiParams(McuSeiParams $SeiParams) 设置混流SEI参数
- * @method array getFeedBackRoomParams() 获取回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
- * @method void setFeedBackRoomParams(array $FeedBackRoomParams) 设置回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+ * @method array getFeedBackRoomParams() 获取回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+ * @method void setFeedBackRoomParams(array $FeedBackRoomParams) 设置回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
  */
 class StartPublishCdnStreamRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class StartPublishCdnStreamRequest extends AbstractModel
     public $SeiParams;
 
     /**
-     * @var array 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+     * @var array 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     public $FeedBackRoomParams;
 
@@ -111,7 +111,7 @@ class StartPublishCdnStreamRequest extends AbstractModel
      * @param SingleSubscribeParams $SingleSubscribeParams 需要单流旁路转推的用户上行参数，单流旁路转推时，WithTranscoding需要设置为0。
      * @param array $PublishCdnParams 转推的CDN参数。和回推房间参数必须要有一个。
      * @param McuSeiParams $SeiParams 混流SEI参数
-     * @param array $FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+     * @param array $FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     function __construct()
     {

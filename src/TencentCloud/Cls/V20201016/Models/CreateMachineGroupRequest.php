@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateEndTime(string $UpdateEndTime) 设置升级结束时间，建议业务低峰期升级LogListener
  * @method boolean getServiceLogging() 获取是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
  * @method void setServiceLogging(boolean $ServiceLogging) 设置是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
+ * @method integer getDelayCleanupTime() 获取机器组中机器离线清理时间
+ * @method void setDelayCleanupTime(integer $DelayCleanupTime) 设置机器组中机器离线清理时间
  * @method array getMetaTags() 获取机器组元数据信息列表
  * @method void setMetaTags(array $MetaTags) 设置机器组元数据信息列表
  * @method integer getOSType() 获取系统类型，默认0，0：Linux，1: Windows
@@ -77,6 +79,11 @@ class CreateMachineGroupRequest extends AbstractModel
     public $ServiceLogging;
 
     /**
+     * @var integer 机器组中机器离线清理时间
+     */
+    public $DelayCleanupTime;
+
+    /**
      * @var array 机器组元数据信息列表
      */
     public $MetaTags;
@@ -94,6 +101,7 @@ class CreateMachineGroupRequest extends AbstractModel
      * @param string $UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
      * @param string $UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
      * @param boolean $ServiceLogging 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
+     * @param integer $DelayCleanupTime 机器组中机器离线清理时间
      * @param array $MetaTags 机器组元数据信息列表
      * @param integer $OSType 系统类型，默认0，0：Linux，1: Windows
      */
@@ -142,6 +150,10 @@ class CreateMachineGroupRequest extends AbstractModel
 
         if (array_key_exists("ServiceLogging",$param) and $param["ServiceLogging"] !== null) {
             $this->ServiceLogging = $param["ServiceLogging"];
+        }
+
+        if (array_key_exists("DelayCleanupTime",$param) and $param["DelayCleanupTime"] !== null) {
+            $this->DelayCleanupTime = $param["DelayCleanupTime"];
         }
 
         if (array_key_exists("MetaTags",$param) and $param["MetaTags"] !== null) {

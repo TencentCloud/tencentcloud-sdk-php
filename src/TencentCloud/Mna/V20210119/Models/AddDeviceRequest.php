@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataKey(string $DataKey) 设置新建设备的base64密钥字符串，非必选，如果不填写则由系统自动生成
  * @method boolean getEncrypted() 获取是否设置预置密钥
  * @method void setEncrypted(boolean $Encrypted) 设置是否设置预置密钥
+ * @method integer getAccessScope() 获取接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。
+具体含义：
+公有云网关：即该设备只能接入公有云网关（就近接入）
+自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入）
+公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+ * @method void setAccessScope(integer $AccessScope) 设置接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。
+具体含义：
+公有云网关：即该设备只能接入公有云网关（就近接入）
+自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入）
+公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
  */
 class AddDeviceRequest extends AbstractModel
 {
@@ -52,10 +62,24 @@ class AddDeviceRequest extends AbstractModel
     public $Encrypted;
 
     /**
+     * @var integer 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。
+具体含义：
+公有云网关：即该设备只能接入公有云网关（就近接入）
+自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入）
+公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     */
+    public $AccessScope;
+
+    /**
      * @param string $DeviceName 新建设备的名称
      * @param string $Remark 新建设备的备注
      * @param string $DataKey 新建设备的base64密钥字符串，非必选，如果不填写则由系统自动生成
      * @param boolean $Encrypted 是否设置预置密钥
+     * @param integer $AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。
+具体含义：
+公有云网关：即该设备只能接入公有云网关（就近接入）
+自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入）
+公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
      */
     function __construct()
     {
@@ -84,6 +108,10 @@ class AddDeviceRequest extends AbstractModel
 
         if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
             $this->Encrypted = $param["Encrypted"];
+        }
+
+        if (array_key_exists("AccessScope",$param) and $param["AccessScope"] !== null) {
+            $this->AccessScope = $param["AccessScope"];
         }
     }
 }

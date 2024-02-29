@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-hez4fh0v
  * @method string getInstanceChargeType() 获取【废弃参数，不再生效】，实例计费类型。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置【废弃参数，不再生效】，实例计费类型。
+ * @method integer getCpu() 获取实例的Cpu大小，单位Core
+ * @method void setCpu(integer $Cpu) 设置实例的Cpu大小，单位Core
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $InstanceChargeType;
 
     /**
+     * @var integer 实例的Cpu大小，单位Core
+     */
+    public $Cpu;
+
+    /**
      * @param integer $Storage 实例的磁盘大小，单位GB
      * @param integer $Memory 实例的内存大小，单位GB
      * @param string $DBInstanceId 实例ID，形如postgres-hez4fh0v
      * @param string $InstanceChargeType 【废弃参数，不再生效】，实例计费类型。
+     * @param integer $Cpu 实例的Cpu大小，单位Core
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

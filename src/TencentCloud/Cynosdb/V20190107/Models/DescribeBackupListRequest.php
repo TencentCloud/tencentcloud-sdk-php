@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getLimit() 获取备份文件列表大小，取值范围(0,100]
- * @method void setLimit(integer $Limit) 设置备份文件列表大小，取值范围(0,100]
- * @method integer getOffset() 获取备份文件列表偏移，取值范围[0,INF)
- * @method void setOffset(integer $Offset) 设置备份文件列表偏移，取值范围[0,INF)
+ * @method integer getLimit() 获取返回数量，取值范围(0,100]
+ * @method void setLimit(integer $Limit) 设置返回数量，取值范围(0,100]
+ * @method integer getOffset() 获取记录偏移量，取值范围[0,INF)
+ * @method void setOffset(integer $Offset) 设置记录偏移量，取值范围[0,INF)
  * @method string getDbType() 获取数据库类型，取值范围: 
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupIds(array $BackupIds) 设置备份ID
  * @method string getBackupType() 获取备份类型，可选值：snapshot，快照备份； logic，逻辑备份
  * @method void setBackupType(string $BackupType) 设置备份类型，可选值：snapshot，快照备份； logic，逻辑备份
- * @method string getBackupMethod() 获取备份方式，可选值：auto，自动备份；manual，手动备
- * @method void setBackupMethod(string $BackupMethod) 设置备份方式，可选值：auto，自动备份；manual，手动备
+ * @method string getBackupMethod() 获取备份方式，可选值：auto，自动备份；manual，手动备份
+ * @method void setBackupMethod(string $BackupMethod) 设置备份方式，可选值：auto，自动备份；manual，手动备份
  * @method string getSnapShotType() 获取快照类型，可选值：full，全量；increment，增量
  * @method void setSnapShotType(string $SnapShotType) 设置快照类型，可选值：full，全量；increment，增量
  * @method string getStartTime() 获取备份开始时间
@@ -61,12 +61,12 @@ class DescribeBackupListRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer 备份文件列表大小，取值范围(0,100]
+     * @var integer 返回数量，取值范围(0,100]
      */
     public $Limit;
 
     /**
-     * @var integer 备份文件列表偏移，取值范围[0,INF)
+     * @var integer 记录偏移量，取值范围[0,INF)
      */
     public $Offset;
 
@@ -87,7 +87,7 @@ class DescribeBackupListRequest extends AbstractModel
     public $BackupType;
 
     /**
-     * @var string 备份方式，可选值：auto，自动备份；manual，手动备
+     * @var string 备份方式，可选值：auto，自动备份；manual，手动备份
      */
     public $BackupMethod;
 
@@ -133,13 +133,13 @@ class DescribeBackupListRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param integer $Limit 备份文件列表大小，取值范围(0,100]
-     * @param integer $Offset 备份文件列表偏移，取值范围[0,INF)
+     * @param integer $Limit 返回数量，取值范围(0,100]
+     * @param integer $Offset 记录偏移量，取值范围[0,INF)
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>
      * @param array $BackupIds 备份ID
      * @param string $BackupType 备份类型，可选值：snapshot，快照备份； logic，逻辑备份
-     * @param string $BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备
+     * @param string $BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备份
      * @param string $SnapShotType 快照类型，可选值：full，全量；increment，增量
      * @param string $StartTime 备份开始时间
      * @param string $EndTime 备份结束时间

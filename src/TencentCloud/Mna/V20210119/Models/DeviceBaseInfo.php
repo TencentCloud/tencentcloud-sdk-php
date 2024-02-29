@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastTime(string $LastTime) 设置设备最后在线时间，单位：ms
  * @method string getRemark() 获取设备的备注
  * @method void setRemark(string $Remark) 设置设备的备注
+ * @method integer getAccessScope() 获取接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+ * @method void setAccessScope(integer $AccessScope) 设置接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
  */
 class DeviceBaseInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DeviceBaseInfo extends AbstractModel
     public $Remark;
 
     /**
+     * @var integer 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     */
+    public $AccessScope;
+
+    /**
      * @param string $DeviceId 设备唯一ID
      * @param string $DeviceName 设备名称
      * @param string $CreateTime 设备创建的时间，单位：ms
      * @param string $LastTime 设备最后在线时间，单位：ms
      * @param string $Remark 设备的备注
+     * @param integer $AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DeviceBaseInfo extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("AccessScope",$param) and $param["AccessScope"] !== null) {
+            $this->AccessScope = $param["AccessScope"];
         }
     }
 }

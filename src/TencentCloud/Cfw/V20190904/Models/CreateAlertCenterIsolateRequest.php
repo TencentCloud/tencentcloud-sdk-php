@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 1 互联网入站
 2 互联网出站
 4 内网访问
- * @method integer getOmMode() 获取运维模式 1 IP白名单 2 身份认证
- * @method void setOmMode(integer $OmMode) 设置运维模式 1 IP白名单 2 身份认证
+ * @method integer getOmMode() 获取运维模式 1 IP白名单 2 身份认证  0 非运维模式
+ * @method void setOmMode(integer $OmMode) 设置运维模式 1 IP白名单 2 身份认证  0 非运维模式
  */
 class CreateAlertCenterIsolateRequest extends AbstractModel
 {
@@ -72,7 +72,7 @@ class CreateAlertCenterIsolateRequest extends AbstractModel
     public $IsolateType;
 
     /**
-     * @var integer 运维模式 1 IP白名单 2 身份认证
+     * @var integer 运维模式 1 IP白名单 2 身份认证  0 非运维模式
      */
     public $OmMode;
 
@@ -87,7 +87,7 @@ class CreateAlertCenterIsolateRequest extends AbstractModel
 1 互联网入站
 2 互联网出站
 4 内网访问
-     * @param integer $OmMode 运维模式 1 IP白名单 2 身份认证
+     * @param integer $OmMode 运维模式 1 IP白名单 2 身份认证  0 非运维模式
      */
     function __construct()
     {

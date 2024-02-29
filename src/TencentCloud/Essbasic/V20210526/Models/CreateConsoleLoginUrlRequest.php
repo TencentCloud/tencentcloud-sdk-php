@@ -143,9 +143,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyOperatorIdCardNumber(string $ProxyOperatorIdCardNumber) 设置子客经办人身份证
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
  * @method string getAutoJumpUrl() 获取认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC， 如果使用的是 H5，域名需要联系我们开白`。
+注意：`目前仅支持 H5 和 PC`。
  * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC， 如果使用的是 H5，域名需要联系我们开白`。
+注意：`目前仅支持 H5 和 PC`。
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
@@ -261,7 +261,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
     /**
      * @var string 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC， 如果使用的是 H5，域名需要联系我们开白`。
+注意：`目前仅支持 H5 和 PC`。
      */
     public $AutoJumpUrl;
 
@@ -328,7 +328,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $ProxyOperatorIdCardNumber 子客经办人身份证
 注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
      * @param string $AutoJumpUrl 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC， 如果使用的是 H5，域名需要联系我们开白`。
+注意：`目前仅支持 H5 和 PC`。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetStatisticData请求参数结构体
  *
- * @method string getDeviceId() 获取设备ID
- * @method void setDeviceId(string $DeviceId) 设置设备ID
+ * @method string getDeviceId() 获取设备ID。若不指定设备，可传"-1"
+ * @method void setDeviceId(string $DeviceId) 设置设备ID。若不指定设备，可传"-1"
  * @method integer getBeginTime() 获取统计开始时间，单位：s
  * @method void setBeginTime(integer $BeginTime) 设置统计开始时间，单位：s
  * @method integer getEndTime() 获取统计结束时间，单位：s
@@ -32,11 +32,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeGranularity(integer $TimeGranularity) 设置聚合粒度：
 1:按小时统计
 2:按天统计
+ * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+ * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+ * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
+ * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
  */
 class GetStatisticDataRequest extends AbstractModel
 {
     /**
-     * @var string 设备ID
+     * @var string 设备ID。若不指定设备，可传"-1"
      */
     public $DeviceId;
 
@@ -58,12 +62,24 @@ class GetStatisticDataRequest extends AbstractModel
     public $TimeGranularity;
 
     /**
-     * @param string $DeviceId 设备ID
+     * @var string 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+     */
+    public $AccessRegion;
+
+    /**
+     * @var integer 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     */
+    public $GatewayType;
+
+    /**
+     * @param string $DeviceId 设备ID。若不指定设备，可传"-1"
      * @param integer $BeginTime 统计开始时间，单位：s
      * @param integer $EndTime 统计结束时间，单位：s
      * @param integer $TimeGranularity 聚合粒度：
 1:按小时统计
 2:按天统计
+     * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+     * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
      */
     function __construct()
     {
@@ -92,6 +108,14 @@ class GetStatisticDataRequest extends AbstractModel
 
         if (array_key_exists("TimeGranularity",$param) and $param["TimeGranularity"] !== null) {
             $this->TimeGranularity = $param["TimeGranularity"];
+        }
+
+        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
+            $this->AccessRegion = $param["AccessRegion"];
+        }
+
+        if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
+            $this->GatewayType = $param["GatewayType"];
         }
     }
 }

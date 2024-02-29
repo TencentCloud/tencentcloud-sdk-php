@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置统计流量类型（1：上行流量，2：下行流量）
  * @method integer getTimeGranularity() 获取统计时间粒度（1：按小时统计，2：按天统计）
  * @method void setTimeGranularity(integer $TimeGranularity) 设置统计时间粒度（1：按小时统计，2：按天统计）
+ * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+ * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+ * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
+ * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
  */
 class GetMultiFlowStatisticRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class GetMultiFlowStatisticRequest extends AbstractModel
     public $TimeGranularity;
 
     /**
+     * @var string 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+     */
+    public $AccessRegion;
+
+    /**
+     * @var integer 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     */
+    public $GatewayType;
+
+    /**
      * @param array $DeviceIds 设备id列表，单次最多请求10个设备
      * @param integer $BeginTime 1659514436
      * @param integer $EndTime 1659515000
      * @param integer $Type 统计流量类型（1：上行流量，2：下行流量）
      * @param integer $TimeGranularity 统计时间粒度（1：按小时统计，2：按天统计）
+     * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+     * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class GetMultiFlowStatisticRequest extends AbstractModel
 
         if (array_key_exists("TimeGranularity",$param) and $param["TimeGranularity"] !== null) {
             $this->TimeGranularity = $param["TimeGranularity"];
+        }
+
+        if (array_key_exists("AccessRegion",$param) and $param["AccessRegion"] !== null) {
+            $this->AccessRegion = $param["AccessRegion"];
+        }
+
+        if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
+            $this->GatewayType = $param["GatewayType"];
         }
     }
 }

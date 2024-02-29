@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method string getMetrics() 获取统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
  * @method void setMetrics(string $Metrics) 设置统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
+ * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
+ * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
  */
 class GetNetMonitorRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class GetNetMonitorRequest extends AbstractModel
     public $Metrics;
 
     /**
+     * @var integer 网关类型。0：公有云网关；1：自有网关。不传默认为0。
+     */
+    public $GatewayType;
+
+    /**
      * @param string $DeviceId 设备id
      * @param integer $BeginTime 开始时间
      * @param integer $EndTime 结束时间
      * @param string $Metrics 统计指标（上行速率："TxRate":bit/s，下行速率："RxRate":bit/s，丢包："Loss":%，时延："RTT":ms）
+     * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class GetNetMonitorRequest extends AbstractModel
 
         if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
             $this->Metrics = $param["Metrics"];
+        }
+
+        if (array_key_exists("GatewayType",$param) and $param["GatewayType"] !== null) {
+            $this->GatewayType = $param["GatewayType"];
         }
     }
 }

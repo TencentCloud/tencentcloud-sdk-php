@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataKey() 获取设备密钥
  * @method void setDataKey(string $DataKey) 设置设备密钥
+ * @method integer getAccessScope() 获取接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+ * @method void setAccessScope(integer $AccessScope) 设置接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
  */
 class ActivateHardware extends AbstractModel
 {
@@ -68,6 +70,11 @@ class ActivateHardware extends AbstractModel
     public $DataKey;
 
     /**
+     * @var integer 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
+     */
+    public $AccessScope;
+
+    /**
      * @param string $Vendor 厂商名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SN 设备SN序列号
@@ -76,6 +83,7 @@ class ActivateHardware extends AbstractModel
      * @param string $Description 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataKey 设备密钥
+     * @param integer $AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。不填默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ActivateHardware extends AbstractModel
 
         if (array_key_exists("DataKey",$param) and $param["DataKey"] !== null) {
             $this->DataKey = $param["DataKey"];
+        }
+
+        if (array_key_exists("AccessScope",$param) and $param["AccessScope"] !== null) {
+            $this->AccessScope = $param["AccessScope"];
         }
     }
 }

@@ -20,20 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchStartIntegrationTasks请求参数结构体
  *
- * @method array getTaskIds() 获取任务id
- * @method void setTaskIds(array $TaskIds) 设置任务id
  * @method integer getTaskType() 获取任务类型
  * @method void setTaskType(integer $TaskType) 设置任务类型
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method array getTaskIds() 获取任务id
+ * @method void setTaskIds(array $TaskIds) 设置任务id
+ * @method array getStartTaskInfoSet() 获取批量运行集成任务，目前仅实时集成用到了这个参数
+ * @method void setStartTaskInfoSet(array $StartTaskInfoSet) 设置批量运行集成任务，目前仅实时集成用到了这个参数
  */
 class BatchStartIntegrationTasksRequest extends AbstractModel
 {
-    /**
-     * @var array 任务id
-     */
-    public $TaskIds;
-
     /**
      * @var integer 任务类型
      */
@@ -45,9 +42,20 @@ class BatchStartIntegrationTasksRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param array $TaskIds 任务id
+     * @var array 任务id
+     */
+    public $TaskIds;
+
+    /**
+     * @var array 批量运行集成任务，目前仅实时集成用到了这个参数
+     */
+    public $StartTaskInfoSet;
+
+    /**
      * @param integer $TaskType 任务类型
      * @param string $ProjectId 项目id
+     * @param array $TaskIds 任务id
+     * @param array $StartTaskInfoSet 批量运行集成任务，目前仅实时集成用到了这个参数
      */
     function __construct()
     {
@@ -62,16 +70,25 @@ class BatchStartIntegrationTasksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
-            $this->TaskIds = $param["TaskIds"];
-        }
-
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
         }
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
+            $this->TaskIds = $param["TaskIds"];
+        }
+
+        if (array_key_exists("StartTaskInfoSet",$param) and $param["StartTaskInfoSet"] !== null) {
+            $this->StartTaskInfoSet = [];
+            foreach ($param["StartTaskInfoSet"] as $key => $value){
+                $obj = new StartTaskInfo();
+                $obj->deserialize($value);
+                array_push($this->StartTaskInfoSet, $obj);
+            }
         }
     }
 }

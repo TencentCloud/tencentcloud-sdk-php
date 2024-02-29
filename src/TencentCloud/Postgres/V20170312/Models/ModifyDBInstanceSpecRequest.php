@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method string getSwitchEndTime() 获取切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
  * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
+ * @method integer getCpu() 获取修改后的实例CPU大小，单位Core。
+ * @method void setCpu(integer $Cpu) 设置修改后的实例CPU大小，单位Core。
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $SwitchEndTime;
 
     /**
+     * @var integer 修改后的实例CPU大小，单位Core。
+     */
+    public $Cpu;
+
+    /**
      * @param string $DBInstanceId 实例ID，形如：postgres-6bwgamo3。
      * @param integer $Memory 修改后的实例内存大小，单位GiB。
      * @param integer $Storage 修改后的实例磁盘大小，单位GiB。
@@ -124,6 +131,7 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 默认值：0 
      * @param string $SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      * @param string $SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
+     * @param integer $Cpu 修改后的实例CPU大小，单位Core。
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("SwitchEndTime",$param) and $param["SwitchEndTime"] !== null) {
             $this->SwitchEndTime = $param["SwitchEndTime"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
         }
     }
 }

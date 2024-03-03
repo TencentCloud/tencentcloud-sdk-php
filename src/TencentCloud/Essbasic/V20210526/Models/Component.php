@@ -21,7 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 此结构体 (Component) 用于描述控件属性。
 
 在通过文件发起合同时，对应的component有三种定位方式
-1. 绝对定位方式
+1. 绝对定位方式 （可以通过 [PDF坐标计算助手](https://qian.tencent.com/developers/tools/template-editor)计算控件的坐标）
 2. 表单域(FIELD)定位方式
 3. 关键字(KEYWORD)定位方式，使用关键字定位时，请确保PDF原始文件内是关键字以文字形式保存在PDF文件中，不支持对图片内文字进行关键字查找
 可以参考官网说明

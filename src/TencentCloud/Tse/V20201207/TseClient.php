@@ -35,6 +35,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\CreateCloudNativeAPIGatewayServiceResponse CreateCloudNativeAPIGatewayService(Models\CreateCloudNativeAPIGatewayServiceRequest $req) 创建云原生网关服务
  * @method Models\CreateCloudNativeAPIGatewayServiceRateLimitResponse CreateCloudNativeAPIGatewayServiceRateLimit(Models\CreateCloudNativeAPIGatewayServiceRateLimitRequest $req) 创建云原生网关限流插件(服务)
  * @method Models\CreateEngineResponse CreateEngine(Models\CreateEngineRequest $req) 创建引擎实例
+ * @method Models\CreateGovernanceInstancesResponse CreateGovernanceInstances(Models\CreateGovernanceInstancesRequest $req) 创建治理中心服务实例
  * @method Models\CreateNativeGatewayServerGroupResponse CreateNativeGatewayServerGroup(Models\CreateNativeGatewayServerGroupRequest $req) 创建云原生网关引擎分组
  * @method Models\CreateWafDomainsResponse CreateWafDomains(Models\CreateWafDomainsRequest $req) 新建 WAF 防护域名
  * @method Models\DeleteAutoScalerResourceStrategyResponse DeleteAutoScalerResourceStrategy(Models\DeleteAutoScalerResourceStrategyRequest $req) 删除弹性伸缩策略
@@ -47,6 +48,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DeleteCloudNativeAPIGatewayServiceResponse DeleteCloudNativeAPIGatewayService(Models\DeleteCloudNativeAPIGatewayServiceRequest $req) 删除云原生网关服务
  * @method Models\DeleteCloudNativeAPIGatewayServiceRateLimitResponse DeleteCloudNativeAPIGatewayServiceRateLimit(Models\DeleteCloudNativeAPIGatewayServiceRateLimitRequest $req) 删除云原生网关的限流插件(服务)
  * @method Models\DeleteEngineResponse DeleteEngine(Models\DeleteEngineRequest $req) 删除引擎实例
+ * @method Models\DeleteGovernanceInstancesResponse DeleteGovernanceInstances(Models\DeleteGovernanceInstancesRequest $req) 删除治理中心服务实例
  * @method Models\DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroup(Models\DeleteNativeGatewayServerGroupRequest $req) 删除网关实例分组
  * @method Models\DeleteWafDomainsResponse DeleteWafDomains(Models\DeleteWafDomainsRequest $req) 删除 WAF 防护域名
  * @method Models\DescribeAutoScalerResourceStrategiesResponse DescribeAutoScalerResourceStrategies(Models\DescribeAutoScalerResourceStrategiesRequest $req) 查看弹性伸缩策略列表
@@ -64,6 +66,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeCloudNativeAPIGatewayServicesResponse DescribeCloudNativeAPIGatewayServices(Models\DescribeCloudNativeAPIGatewayServicesRequest $req) 查询云原生网关服务列表
  * @method Models\DescribeCloudNativeAPIGatewayUpstreamResponse DescribeCloudNativeAPIGatewayUpstream(Models\DescribeCloudNativeAPIGatewayUpstreamRequest $req) 获取云原生网关服务详情下的Upstream列表
  * @method Models\DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGateways(Models\DescribeCloudNativeAPIGatewaysRequest $req) 获取云原生API网关实例列表
+ * @method Models\DescribeGovernanceInstancesResponse DescribeGovernanceInstances(Models\DescribeGovernanceInstancesRequest $req) 查询治理中心服务实例
  * @method Models\DescribeNacosReplicasResponse DescribeNacosReplicas(Models\DescribeNacosReplicasRequest $req) 查询Nacos类型引擎实例副本信息
  * @method Models\DescribeNacosServerInterfacesResponse DescribeNacosServerInterfaces(Models\DescribeNacosServerInterfacesRequest $req) 查询nacos服务接口列表
  * @method Models\DescribeNativeGatewayServerGroupsResponse DescribeNativeGatewayServerGroups(Models\DescribeNativeGatewayServerGroupsRequest $req) 查询云原生网关分组信息
@@ -85,6 +88,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyCloudNativeAPIGatewayServiceResponse ModifyCloudNativeAPIGatewayService(Models\ModifyCloudNativeAPIGatewayServiceRequest $req) 修改云原生网关服务
  * @method Models\ModifyCloudNativeAPIGatewayServiceRateLimitResponse ModifyCloudNativeAPIGatewayServiceRateLimit(Models\ModifyCloudNativeAPIGatewayServiceRateLimitRequest $req) 修改云原生网关限流插件(服务)
  * @method Models\ModifyConsoleNetworkResponse ModifyConsoleNetwork(Models\ModifyConsoleNetworkRequest $req) 修改网关实例Konga网络配置
+ * @method Models\ModifyGovernanceInstancesResponse ModifyGovernanceInstances(Models\ModifyGovernanceInstancesRequest $req) 修改治理中心服务实例
  * @method Models\ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(Models\ModifyNativeGatewayServerGroupRequest $req) 修改云原生API网关实例分组基础信息
  * @method Models\ModifyNetworkAccessStrategyResponse ModifyNetworkAccessStrategy(Models\ModifyNetworkAccessStrategyRequest $req) 修改云原生API网关实例Kong访问策略，支持白名单或者黑名单。
  * @method Models\ModifyNetworkBasicInfoResponse ModifyNetworkBasicInfo(Models\ModifyNetworkBasicInfoRequest $req) 修改云原生API网关实例网络基本信息，例如带宽以及描述，只支持修改客户端公网/内网的信息。

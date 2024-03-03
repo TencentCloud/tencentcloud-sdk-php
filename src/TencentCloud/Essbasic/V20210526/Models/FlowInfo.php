@@ -42,8 +42,22 @@ use TencentCloud\Common\AbstractModel;
 
 [点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
- * @method array getFlowApprovers() 获取多个签署人信息，最大支持50个签署方
- * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息，最大支持50个签署方
+ * @method array getFlowApprovers() 获取合同流程的参与方列表，最多可支持50个参与方
+
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+
+[点击查看模板参与人顺序定义位置](https://qcloudimg.tencent-cloud.cn/raw/c50e0a204fc5c66aaa2ca70e451ef2d6.png)
+
+ * @method void setFlowApprovers(array $FlowApprovers) 设置合同流程的参与方列表，最多可支持50个参与方
+
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+
+[点击查看模板参与人顺序定义位置](https://qcloudimg.tencent-cloud.cn/raw/c50e0a204fc5c66aaa2ca70e451ef2d6.png)
+
  * @method array getFormFields() 获取发起方角色的填写控件的填充内容。
 
 注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。(<font color="red">白名单功能需要联系对接经理开通，否则模板编辑时无法将填写控件分配给发起方</font>)。
@@ -157,7 +171,14 @@ class FlowInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var array 多个签署人信息，最大支持50个签署方
+     * @var array 合同流程的参与方列表，最多可支持50个参与方
+
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+
+[点击查看模板参与人顺序定义位置](https://qcloudimg.tencent-cloud.cn/raw/c50e0a204fc5c66aaa2ca70e451ef2d6.png)
+
      */
     public $FlowApprovers;
 
@@ -256,7 +277,14 @@ class FlowInfo extends AbstractModel
 
 [点击产看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
-     * @param array $FlowApprovers 多个签署人信息，最大支持50个签署方
+     * @param array $FlowApprovers 合同流程的参与方列表，最多可支持50个参与方
+
+注:  
+<font color="red" > <b> 在发起流程时，需要保证 FlowApprovers中的顺序与模板定义顺序一致，否则会发起失败。
+例如，如果模板中定义的第一个参与人是个人用户，第二个参与人是企业员工，则在 approver 中传参时，第一个也必须是个人用户，第二个参与人必须是企业员工。</b></font>
+
+[点击查看模板参与人顺序定义位置](https://qcloudimg.tencent-cloud.cn/raw/c50e0a204fc5c66aaa2ca70e451ef2d6.png)
+
      * @param array $FormFields 发起方角色的填写控件的填充内容。
 
 注：只有在控制台编辑模板时，<font color="red">归属给发起方</font>的填写控件（如下图）才能在创建文档的时候进行内容填充。(<font color="red">白名单功能需要联系对接经理开通，否则模板编辑时无法将填写控件分配给发起方</font>)。

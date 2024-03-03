@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquireCkafkaPrice请求参数结构体
  *
- * @method string getInstanceType() 获取国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
- * @method void setInstanceType(string $InstanceType) 设置国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
+ * @method string getInstanceType() 获取国内站标准版填写standards2, 国际站标准版填写standard,专业版填写profession,高级版填写premium
+ * @method void setInstanceType(string $InstanceType) 设置国内站标准版填写standards2, 国际站标准版填写standard,专业版填写profession,高级版填写premium
  * @method InstanceChargeParam getInstanceChargeParam() 获取购买/续费付费类型(购买时不填的话, 默认获取购买包年包月一个月的费用)
  * @method void setInstanceChargeParam(InstanceChargeParam $InstanceChargeParam) 设置购买/续费付费类型(购买时不填的话, 默认获取购买包年包月一个月的费用)
  * @method integer getInstanceNum() 获取购买/续费时购买的实例数量(不填时, 默认为1个)
  * @method void setInstanceNum(integer $InstanceNum) 设置购买/续费时购买的实例数量(不填时, 默认为1个)
- * @method integer getBandwidth() 获取实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
- * @method void setBandwidth(integer $Bandwidth) 设置实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
- * @method InquiryDiskParam getInquiryDiskParam() 获取实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
- * @method void setInquiryDiskParam(InquiryDiskParam $InquiryDiskParam) 设置实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
+ * @method integer getBandwidth() 获取实例内网带宽大小, 单位MB/s (购买时必填，专业版/高级版询价时带宽信息必填)
+ * @method void setBandwidth(integer $Bandwidth) 设置实例内网带宽大小, 单位MB/s (购买时必填，专业版/高级版询价时带宽信息必填)
+ * @method InquiryDiskParam getInquiryDiskParam() 获取实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+ * @method void setInquiryDiskParam(InquiryDiskParam $InquiryDiskParam) 设置实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
  * @method integer getMessageRetention() 获取实例消息保留时间大小, 单位小时 (购买时必填)
  * @method void setMessageRetention(integer $MessageRetention) 设置实例消息保留时间大小, 单位小时 (购买时必填)
  * @method integer getTopic() 获取购买实例topic数, 单位个 (购买时必填)
  * @method void setTopic(integer $Topic) 设置购买实例topic数, 单位个 (购买时必填)
- * @method integer getPartition() 获取购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
- * @method void setPartition(integer $Partition) 设置购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
+ * @method integer getPartition() 获取购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+ * @method void setPartition(integer $Partition) 设置购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
  * @method array getZoneIds() 获取购买地域, 可通过查看DescribeCkafkaZone这个接口获取ZoneId
  * @method void setZoneIds(array $ZoneIds) 设置购买地域, 可通过查看DescribeCkafkaZone这个接口获取ZoneId
  * @method string getCategoryAction() 获取标记操作, 新购填写purchase, 续费填写renew, (不填时, 默认为purchase)
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class InquireCkafkaPriceRequest extends AbstractModel
 {
     /**
-     * @var string 国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
+     * @var string 国内站标准版填写standards2, 国际站标准版填写standard,专业版填写profession,高级版填写premium
      */
     public $InstanceType;
 
@@ -65,12 +65,12 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $InstanceNum;
 
     /**
-     * @var integer 实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
+     * @var integer 实例内网带宽大小, 单位MB/s (购买时必填，专业版/高级版询价时带宽信息必填)
      */
     public $Bandwidth;
 
     /**
-     * @var InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
+     * @var InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
      */
     public $InquiryDiskParam;
 
@@ -85,7 +85,7 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var integer 购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
+     * @var integer 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
      */
     public $Partition;
 
@@ -115,14 +115,14 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $InstanceType 国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
+     * @param string $InstanceType 国内站标准版填写standards2, 国际站标准版填写standard,专业版填写profession,高级版填写premium
      * @param InstanceChargeParam $InstanceChargeParam 购买/续费付费类型(购买时不填的话, 默认获取购买包年包月一个月的费用)
      * @param integer $InstanceNum 购买/续费时购买的实例数量(不填时, 默认为1个)
-     * @param integer $Bandwidth 实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
-     * @param InquiryDiskParam $InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
+     * @param integer $Bandwidth 实例内网带宽大小, 单位MB/s (购买时必填，专业版/高级版询价时带宽信息必填)
+     * @param InquiryDiskParam $InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
      * @param integer $MessageRetention 实例消息保留时间大小, 单位小时 (购买时必填)
      * @param integer $Topic 购买实例topic数, 单位个 (购买时必填)
-     * @param integer $Partition 购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
+     * @param integer $Partition 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
      * @param array $ZoneIds 购买地域, 可通过查看DescribeCkafkaZone这个接口获取ZoneId
      * @param string $CategoryAction 标记操作, 新购填写purchase, 续费填写renew, (不填时, 默认为purchase)
      * @param string $BillType 国内站购买的版本, sv_ckafka_instance_s2_1(入门型), sv_ckafka_instance_s2_2(标准版), sv_ckafka_instance_s2_3(进阶型), 如果instanceType为standards2, 但该参数为空, 则默认值为sv_ckafka_instance_s2_1

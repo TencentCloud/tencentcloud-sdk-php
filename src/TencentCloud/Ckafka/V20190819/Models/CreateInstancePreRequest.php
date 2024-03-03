@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenewFlag(integer $RenewFlag) 设置预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
  * @method string getKafkaVersion() 获取CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1、3.2.3], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
  * @method void setKafkaVersion(string $KafkaVersion) 设置CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1、3.2.3], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
- * @method string getSpecificationsType() 获取实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
- * @method void setSpecificationsType(string $SpecificationsType) 设置实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+ * @method string getSpecificationsType() 获取实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
+ * @method void setSpecificationsType(string $SpecificationsType) 设置实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
  * @method integer getDiskSize() 获取磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
  * @method void setDiskSize(integer $DiskSize) 设置磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
  * @method integer getBandWidth() 获取带宽，如果跟控制台规格配比不相符，则无法创建成功
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartition(integer $Partition) 设置分区大小，如果跟控制台规格配比不相符，则无法创建成功
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
- * @method string getDiskType() 获取专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
- * @method void setDiskType(string $DiskType) 设置专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+ * @method string getDiskType() 获取专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+ * @method void setDiskType(string $DiskType) 设置专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
  * @method boolean getMultiZoneFlag() 获取是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
  * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
  * @method array getZoneIds() 获取可用区列表，购买多可用区实例时为必填项
@@ -116,7 +116,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $KafkaVersion;
 
     /**
-     * @var string 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+     * @var string 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
      */
     public $SpecificationsType;
 
@@ -141,7 +141,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+     * @var string 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
      */
     public $DiskType;
 
@@ -181,12 +181,12 @@ class CreateInstancePreRequest extends AbstractModel
      * @param integer $ClusterId 创建实例时可以选择集群Id, 该入参表示集群Id
      * @param integer $RenewFlag 预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
      * @param string $KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1、3.2.3], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
-     * @param string $SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+     * @param string $SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
      * @param integer $DiskSize 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
      * @param integer $BandWidth 带宽，如果跟控制台规格配比不相符，则无法创建成功
      * @param integer $Partition 分区大小，如果跟控制台规格配比不相符，则无法创建成功
      * @param array $Tags 标签
-     * @param string $DiskType 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+     * @param string $DiskType 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
      * @param boolean $MultiZoneFlag 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
      * @param array $ZoneIds 可用区列表，购买多可用区实例时为必填项
      * @param integer $PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍

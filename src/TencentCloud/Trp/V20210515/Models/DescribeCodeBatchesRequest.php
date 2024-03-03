@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchType(string $BatchType) 设置批次类型 0:溯源 1:营销
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
+ * @method integer getStatus() 获取批次状态
+ * @method void setStatus(integer $Status) 设置批次状态
  */
 class DescribeCodeBatchesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeCodeBatchesRequest extends AbstractModel
     public $CorpId;
 
     /**
+     * @var integer 批次状态
+     */
+    public $Status;
+
+    /**
      * @param string $MerchantId 查询商户ID
      * @param string $ProductId 查询商品ID
      * @param string $Keyword 查询关键字
@@ -80,6 +87,7 @@ class DescribeCodeBatchesRequest extends AbstractModel
      * @param integer $PageNumber 页数
      * @param string $BatchType 批次类型 0:溯源 1:营销
      * @param integer $CorpId 企业ID
+     * @param integer $Status 批次状态
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeCodeBatchesRequest extends AbstractModel
 
         if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
             $this->CorpId = $param["CorpId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

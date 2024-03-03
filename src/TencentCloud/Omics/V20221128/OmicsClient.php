@@ -24,16 +24,21 @@ use TencentCloud\Omics\V20221128\Models as Models;
 
 /**
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建组学平台计算环境。
+ * @method Models\CreateVolumeResponse CreateVolume(Models\CreateVolumeRequest $req) 创建缓存卷。
  * @method Models\DeleteEnvironmentResponse DeleteEnvironment(Models\DeleteEnvironmentRequest $req) 删除环境。
+ * @method Models\DeleteVolumeResponse DeleteVolume(Models\DeleteVolumeRequest $req) 删除缓存卷。
+ * @method Models\DeleteVolumeDataResponse DeleteVolumeData(Models\DeleteVolumeDataRequest $req) 删除缓存卷数据。
  * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 查询环境列表。
  * @method Models\DescribeRunGroupsResponse DescribeRunGroups(Models\DescribeRunGroupsRequest $req) 查询任务批次列表。
  * @method Models\DescribeRunsResponse DescribeRuns(Models\DescribeRunsRequest $req) 查询任务列表。
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 查询表格。
  * @method Models\DescribeTablesRowsResponse DescribeTablesRows(Models\DescribeTablesRowsRequest $req) 查询表格行数据。
+ * @method Models\DescribeVolumesResponse DescribeVolumes(Models\DescribeVolumesRequest $req) 查询缓存卷列表。
  * @method Models\GetRunCallsResponse GetRunCalls(Models\GetRunCallsRequest $req) 查询作业详情。
  * @method Models\GetRunMetadataFileResponse GetRunMetadataFile(Models\GetRunMetadataFileRequest $req) 获取任务详情文件。
  * @method Models\GetRunStatusResponse GetRunStatus(Models\GetRunStatusRequest $req) 查询任务详情。
  * @method Models\ImportTableFileResponse ImportTableFile(Models\ImportTableFileRequest $req) 导入表格文件。
+ * @method Models\ModifyVolumeResponse ModifyVolume(Models\ModifyVolumeRequest $req) 修改缓存卷。
  * @method Models\RetryRunsResponse RetryRuns(Models\RetryRunsRequest $req) 重试任务。
  * @method Models\RunApplicationResponse RunApplication(Models\RunApplicationRequest $req) 运行应用。
  * @method Models\RunWorkflowResponse RunWorkflow(Models\RunWorkflowRequest $req) 运行工作流。

@@ -58,6 +58,14 @@ abnormal = 异常
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableExternal(boolean $EnableExternal) 设置是否已开启公网访问，true 开启，false 未开启
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDesiredAgentNum() 获取采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDesiredAgentNum(integer $DesiredAgentNum) 设置采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReadyAgentNum() 获取采集agent已正常启动pod数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReadyAgentNum(integer $ReadyAgentNum) 设置采集agent已正常启动pod数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusAgentOverview extends AbstractModel
 {
@@ -121,6 +129,18 @@ abnormal = 异常
     public $EnableExternal;
 
     /**
+     * @var integer 采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DesiredAgentNum;
+
+    /**
+     * @var integer 采集agent已正常启动pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReadyAgentNum;
+
+    /**
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群id
      * @param string $Status agent状态
@@ -139,6 +159,10 @@ abnormal = 异常
      * @param string $Name agent名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableExternal 是否已开启公网访问，true 开启，false 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DesiredAgentNum 采集agent期望pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReadyAgentNum 采集agent已正常启动pod数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -197,6 +221,14 @@ abnormal = 异常
 
         if (array_key_exists("EnableExternal",$param) and $param["EnableExternal"] !== null) {
             $this->EnableExternal = $param["EnableExternal"];
+        }
+
+        if (array_key_exists("DesiredAgentNum",$param) and $param["DesiredAgentNum"] !== null) {
+            $this->DesiredAgentNum = $param["DesiredAgentNum"];
+        }
+
+        if (array_key_exists("ReadyAgentNum",$param) and $param["ReadyAgentNum"] !== null) {
+            $this->ReadyAgentNum = $param["ReadyAgentNum"];
         }
     }
 }

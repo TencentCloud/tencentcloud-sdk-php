@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscountPrice(float $DiscountPrice) 设置订单折扣价格。
  * @method string getAction() 获取订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
  * @method void setAction(string $Action) 设置订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
+ * @method string getInstanceId() 获取当前订单的资源Id。
+ * @method void setInstanceId(string $InstanceId) 设置当前订单的资源Id。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeDBInstanceDealResponse extends AbstractModel
     public $Action;
 
     /**
+     * @var string 当前订单的资源Id。
+     */
+    public $InstanceId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeDBInstanceDealResponse extends AbstractModel
      * @param float $OriginalPrice 订单原价。
      * @param float $DiscountPrice 订单折扣价格。
      * @param string $Action 订单行为，purchase：新购，renew：续费，upgrade：升配，downgrade：降配，refund：退货退款。
+     * @param string $InstanceId 当前订单的资源Id。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,10 @@ class DescribeDBInstanceDealResponse extends AbstractModel
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {
             $this->Action = $param["Action"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

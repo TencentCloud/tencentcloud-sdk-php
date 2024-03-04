@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMX(integer $MX) 设置MX 优先级，当记录类型是 MX 时有效，范围1-20，MX 记录时必选。
  * @method integer getTTL() 获取TTL，范围1-604800，不同等级域名最小值不同。
  * @method void setTTL(integer $TTL) 设置TTL，范围1-604800，不同等级域名最小值不同。
- * @method integer getWeight() 获取权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
- * @method void setWeight(integer $Weight) 设置权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
+ * @method integer getWeight() 获取权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
+ * @method void setWeight(integer $Weight) 设置权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
  * @method string getStatus() 获取记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
  * @method void setStatus(string $Status) 设置记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
  * @method string getRemark() 获取记录的备注信息。传空删除备注。
@@ -100,7 +100,7 @@ class ModifyRecordRequest extends AbstractModel
     public $TTL;
 
     /**
-     * @var integer 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
+     * @var integer 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
      */
     public $Weight;
 
@@ -125,7 +125,7 @@ class ModifyRecordRequest extends AbstractModel
      * @param string $RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      * @param integer $MX MX 优先级，当记录类型是 MX 时有效，范围1-20，MX 记录时必选。
      * @param integer $TTL TTL，范围1-604800，不同等级域名最小值不同。
-     * @param integer $Weight 权重信息，0到100的整数。仅企业 VIP 域名可用，0 表示关闭，不传该参数，表示不设置权重信息。
+     * @param integer $Weight 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
      * @param string $Status 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
      * @param string $Remark 记录的备注信息。传空删除备注。
      */

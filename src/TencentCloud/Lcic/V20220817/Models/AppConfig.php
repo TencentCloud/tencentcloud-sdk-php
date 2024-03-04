@@ -20,14 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用配置信息
  *
-
+ * @method string getApplicationId() 获取应用ID
+ * @method void setApplicationId(string $ApplicationId) 设置应用ID
+ * @method string getAppName() 获取应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppName(string $AppName) 设置应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getState() 获取应用状态 1正常 2停用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setState(integer $State) 设置应用状态 1正常 2停用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAppVersion() 获取1试用 2轻量版 3标准版 4旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppVersion(integer $AppVersion) 设置1试用 2轻量版 3标准版 4旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedAt() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCallback() 获取回调
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallback(string $Callback) 设置回调
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCallbackKey() 获取回调Key
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallbackKey(string $CallbackKey) 设置回调Key
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppConfig extends AbstractModel
 {
-
+    /**
+     * @var string 应用ID
+     */
+    public $ApplicationId;
 
     /**
+     * @var string 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppName;
 
+    /**
+     * @var integer 应用状态 1正常 2停用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $State;
+
+    /**
+     * @var integer 1试用 2轻量版 3标准版 4旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppVersion;
+
+    /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedAt;
+
+    /**
+     * @var string 回调
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Callback;
+
+    /**
+     * @var string 回调Key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallbackKey;
+
+    /**
+     * @param string $ApplicationId 应用ID
+     * @param string $AppName 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $State 应用状态 1正常 2停用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AppVersion 1试用 2轻量版 3标准版 4旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedAt 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Callback 回调
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CallbackKey 回调Key
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +118,32 @@ class AppConfig extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
 
+        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
+            $this->AppName = $param["AppName"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("AppVersion",$param) and $param["AppVersion"] !== null) {
+            $this->AppVersion = $param["AppVersion"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
+        }
+
+        if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
+            $this->Callback = $param["Callback"];
+        }
+
+        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
+            $this->CallbackKey = $param["CallbackKey"];
+        }
     }
 }

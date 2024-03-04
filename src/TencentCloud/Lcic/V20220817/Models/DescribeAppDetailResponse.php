@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppConfig(AppConfig $AppConfig) 设置应用配置
  * @method array getSceneConfig() 获取场景配置
  * @method void setSceneConfig(array $SceneConfig) 设置场景配置
+ * @method TransferItem getTransferConfig() 获取转存配置
+ * @method void setTransferConfig(TransferItem $TransferConfig) 设置转存配置
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class DescribeAppDetailResponse extends AbstractModel
     public $SceneConfig;
 
     /**
+     * @var TransferItem 转存配置
+     */
+    public $TransferConfig;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeAppDetailResponse extends AbstractModel
      * @param string $SdkAppId SDK 对应的AppId 
      * @param AppConfig $AppConfig 应用配置
      * @param array $SceneConfig 场景配置
+     * @param TransferItem $TransferConfig 转存配置
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -86,6 +94,11 @@ class DescribeAppDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SceneConfig, $obj);
             }
+        }
+
+        if (array_key_exists("TransferConfig",$param) and $param["TransferConfig"] !== null) {
+            $this->TransferConfig = new TransferItem();
+            $this->TransferConfig->deserialize($param["TransferConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

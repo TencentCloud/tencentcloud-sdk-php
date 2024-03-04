@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLoadBalancerIds() 获取一个或多个待操作的负载均衡实例ID。
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置一个或多个待操作的负载均衡实例ID。
- * @method integer getProjectId() 获取项目ID。
- * @method void setProjectId(integer $ProjectId) 设置项目ID。
+ * @method integer getProjectId() 获取项目ID。可以通过 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID。可以通过 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取。
  */
 class ModifyLoadBalancersProjectRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyLoadBalancersProjectRequest extends AbstractModel
     public $LoadBalancerIds;
 
     /**
-     * @var integer 项目ID。
+     * @var integer 项目ID。可以通过 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取。
      */
     public $ProjectId;
 
     /**
      * @param array $LoadBalancerIds 一个或多个待操作的负载均衡实例ID。
-     * @param integer $ProjectId 项目ID。
+     * @param integer $ProjectId 项目ID。可以通过 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取。
      */
     function __construct()
     {

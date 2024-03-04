@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallback(string $Callback) 设置回调地址。
  * @method string getCallbackKey() 获取回调key。
  * @method void setCallbackKey(string $CallbackKey) 设置回调key。
+ * @method string getTransferId() 获取转存id
+ * @method void setTransferId(string $TransferId) 设置转存id
+ * @method string getTransferUrl() 获取转存地址
+ * @method void setTransferUrl(string $TransferUrl) 设置转存地址
  */
 class ModifyAppRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ModifyAppRequest extends AbstractModel
     public $CallbackKey;
 
     /**
+     * @var string 转存id
+     */
+    public $TransferId;
+
+    /**
+     * @var string 转存地址
+     */
+    public $TransferUrl;
+
+    /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param string $Callback 回调地址。
      * @param string $CallbackKey 回调key。
+     * @param string $TransferId 转存id
+     * @param string $TransferUrl 转存地址
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyAppRequest extends AbstractModel
 
         if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
             $this->CallbackKey = $param["CallbackKey"];
+        }
+
+        if (array_key_exists("TransferId",$param) and $param["TransferId"] !== null) {
+            $this->TransferId = $param["TransferId"];
+        }
+
+        if (array_key_exists("TransferUrl",$param) and $param["TransferUrl"] !== null) {
+            $this->TransferUrl = $param["TransferUrl"];
         }
     }
 }

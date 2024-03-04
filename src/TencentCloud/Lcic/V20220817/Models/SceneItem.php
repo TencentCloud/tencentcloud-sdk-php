@@ -20,14 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 场景配置
  *
-
+ * @method string getScene() 获取场景名称
+ * @method void setScene(string $Scene) 设置场景名称
+ * @method string getLogoUrl() 获取logo地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogoUrl(string $LogoUrl) 设置logo地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHomeUrl() 获取主页地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHomeUrl(string $HomeUrl) 设置主页地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJSUrl() 获取自定义的js
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJSUrl(string $JSUrl) 设置自定义的js
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCSSUrl() 获取自定义的css
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCSSUrl(string $CSSUrl) 设置自定义的css
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SceneItem extends AbstractModel
 {
-
+    /**
+     * @var string 场景名称
+     */
+    public $Scene;
 
     /**
+     * @var string logo地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogoUrl;
 
+    /**
+     * @var string 主页地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HomeUrl;
+
+    /**
+     * @var string 自定义的js
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JSUrl;
+
+    /**
+     * @var string 自定义的css
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CSSUrl;
+
+    /**
+     * @param string $Scene 场景名称
+     * @param string $LogoUrl logo地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HomeUrl 主页地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JSUrl 自定义的js
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CSSUrl 自定义的css
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +94,24 @@ class SceneItem extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
+        }
 
+        if (array_key_exists("LogoUrl",$param) and $param["LogoUrl"] !== null) {
+            $this->LogoUrl = $param["LogoUrl"];
+        }
+
+        if (array_key_exists("HomeUrl",$param) and $param["HomeUrl"] !== null) {
+            $this->HomeUrl = $param["HomeUrl"];
+        }
+
+        if (array_key_exists("JSUrl",$param) and $param["JSUrl"] !== null) {
+            $this->JSUrl = $param["JSUrl"];
+        }
+
+        if (array_key_exists("CSSUrl",$param) and $param["CSSUrl"] !== null) {
+            $this->CSSUrl = $param["CSSUrl"];
+        }
     }
 }

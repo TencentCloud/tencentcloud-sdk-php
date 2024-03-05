@@ -20,150 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDirectConnectTunnelExtra请求参数结构体
  *
- * @method string getDirectConnectTunnelId() 获取专用通道ID
- * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID
- * @method integer getVlan() 获取专用通道的Vlan
- * @method void setVlan(integer $Vlan) 设置专用通道的Vlan
- * @method BgpPeer getBgpPeer() 获取用户侧BGP，Asn，AuthKey
- * @method void setBgpPeer(BgpPeer $BgpPeer) 设置用户侧BGP，Asn，AuthKey
- * @method RouteFilterPrefix getRouteFilterPrefixes() 获取用户侧过滤网段地址
- * @method void setRouteFilterPrefixes(RouteFilterPrefix $RouteFilterPrefixes) 设置用户侧过滤网段地址
- * @method string getTencentAddress() 获取腾讯侧互联IP
- * @method void setTencentAddress(string $TencentAddress) 设置腾讯侧互联IP
- * @method string getTencentBackupAddress() 获取腾讯侧备用互联IP
- * @method void setTencentBackupAddress(string $TencentBackupAddress) 设置腾讯侧备用互联IP
- * @method string getCustomerAddress() 获取用户侧互联IP
- * @method void setCustomerAddress(string $CustomerAddress) 设置用户侧互联IP
- * @method integer getBandwidth() 获取专用通道带宽值
- * @method void setBandwidth(integer $Bandwidth) 设置专用通道带宽值
- * @method boolean getEnableBGPCommunity() 获取BGP community开关
- * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) 设置BGP community开关
- * @method integer getBfdEnable() 获取是否开启BFD
- * @method void setBfdEnable(integer $BfdEnable) 设置是否开启BFD
- * @method integer getNqaEnable() 获取是否开启NQA
- * @method void setNqaEnable(integer $NqaEnable) 设置是否开启NQA
- * @method BFDInfo getBfdInfo() 获取BFD配置信息
- * @method void setBfdInfo(BFDInfo $BfdInfo) 设置BFD配置信息
- * @method NQAInfo getNqaInfo() 获取NQA配置信息
- * @method void setNqaInfo(NQAInfo $NqaInfo) 设置NQA配置信息
- * @method integer getIPv6Enable() 获取0：停用IPv6
-1: 启用IPv6
- * @method void setIPv6Enable(integer $IPv6Enable) 设置0：停用IPv6
-1: 启用IPv6
- * @method array getCustomerIDCRoutes() 获取去往用户侧的路由信息
- * @method void setCustomerIDCRoutes(array $CustomerIDCRoutes) 设置去往用户侧的路由信息
- * @method integer getJumboEnable() 获取是否开启巨帧
-1：开启
-0：不开启
- * @method void setJumboEnable(integer $JumboEnable) 设置是否开启巨帧
-1：开启
-0：不开启
+ * @method string getDirectConnectTunnelId() 获取专用通道ID。
+ * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID。
+ * @method integer getVlan() 获取专用通道的Vlan。
+ * @method void setVlan(integer $Vlan) 设置专用通道的Vlan。
+ * @method BgpPeer getBgpPeer() 获取Bgp参数，包括Asn，AuthKey
+ * @method void setBgpPeer(BgpPeer $BgpPeer) 设置Bgp参数，包括Asn，AuthKey
+ * @method RouteFilterPrefix getRouteFilterPrefixes() 获取用户侧过滤网段地址。
+ * @method void setRouteFilterPrefixes(RouteFilterPrefix $RouteFilterPrefixes) 设置用户侧过滤网段地址。
+ * @method string getTencentAddress() 获取腾讯侧互联IP。
+ * @method void setTencentAddress(string $TencentAddress) 设置腾讯侧互联IP。
+ * @method string getTencentBackupAddress() 获取腾讯侧备用互联IP。
+ * @method void setTencentBackupAddress(string $TencentBackupAddress) 设置腾讯侧备用互联IP。
+ * @method string getCustomerAddress() 获取用户侧互联IP。
+ * @method void setCustomerAddress(string $CustomerAddress) 设置用户侧互联IP。
+ * @method integer getBandwidth() 获取专用通道带宽值。
+ * @method void setBandwidth(integer $Bandwidth) 设置专用通道带宽值。
+ * @method boolean getEnableBGPCommunity() 获取BGP community开关。
+ * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) 设置BGP community开关。
+ * @method integer getBfdEnable() 获取是否开启BFD。
+ * @method void setBfdEnable(integer $BfdEnable) 设置是否开启BFD。
+ * @method integer getNqaEnable() 获取是否开启NQA。
+ * @method void setNqaEnable(integer $NqaEnable) 设置是否开启NQA。
+ * @method BFDInfo getBfdInfo() 获取BFD配置信息。
+ * @method void setBfdInfo(BFDInfo $BfdInfo) 设置BFD配置信息。
+ * @method NQAInfo getNqaInfo() 获取NQA配置信息。
+ * @method void setNqaInfo(NQAInfo $NqaInfo) 设置NQA配置信息。
+ * @method integer getIPv6Enable() 获取IPV6使能。0：停用IPv6；1: 启用IPv6。
+ * @method void setIPv6Enable(integer $IPv6Enable) 设置IPV6使能。0：停用IPv6；1: 启用IPv6。
+ * @method array getCustomerIDCRoutes() 获取去往用户侧的路由信息。
+ * @method void setCustomerIDCRoutes(array $CustomerIDCRoutes) 设置去往用户侧的路由信息。
+ * @method integer getJumboEnable() 获取是否开启巨帧。1：开启；0：不开启。
+ * @method void setJumboEnable(integer $JumboEnable) 设置是否开启巨帧。1：开启；0：不开启。
+ * @method string getTencentIPv6Address() 获取腾讯侧互联IPv6。
+ * @method void setTencentIPv6Address(string $TencentIPv6Address) 设置腾讯侧互联IPv6。
+ * @method string getTencentBackupIPv6Address() 获取腾讯侧备用互联IPv6。
+ * @method void setTencentBackupIPv6Address(string $TencentBackupIPv6Address) 设置腾讯侧备用互联IPv6。
+ * @method string getCustomerIPv6Address() 获取用户侧互联IPv6。
+ * @method void setCustomerIPv6Address(string $CustomerIPv6Address) 设置用户侧互联IPv6。
  */
 class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
 {
     /**
-     * @var string 专用通道ID
+     * @var string 专用通道ID。
      */
     public $DirectConnectTunnelId;
 
     /**
-     * @var integer 专用通道的Vlan
+     * @var integer 专用通道的Vlan。
      */
     public $Vlan;
 
     /**
-     * @var BgpPeer 用户侧BGP，Asn，AuthKey
+     * @var BgpPeer Bgp参数，包括Asn，AuthKey
      */
     public $BgpPeer;
 
     /**
-     * @var RouteFilterPrefix 用户侧过滤网段地址
+     * @var RouteFilterPrefix 用户侧过滤网段地址。
      */
     public $RouteFilterPrefixes;
 
     /**
-     * @var string 腾讯侧互联IP
+     * @var string 腾讯侧互联IP。
      */
     public $TencentAddress;
 
     /**
-     * @var string 腾讯侧备用互联IP
+     * @var string 腾讯侧备用互联IP。
      */
     public $TencentBackupAddress;
 
     /**
-     * @var string 用户侧互联IP
+     * @var string 用户侧互联IP。
      */
     public $CustomerAddress;
 
     /**
-     * @var integer 专用通道带宽值
+     * @var integer 专用通道带宽值。
      */
     public $Bandwidth;
 
     /**
-     * @var boolean BGP community开关
+     * @var boolean BGP community开关。
      */
     public $EnableBGPCommunity;
 
     /**
-     * @var integer 是否开启BFD
+     * @var integer 是否开启BFD。
      */
     public $BfdEnable;
 
     /**
-     * @var integer 是否开启NQA
+     * @var integer 是否开启NQA。
      */
     public $NqaEnable;
 
     /**
-     * @var BFDInfo BFD配置信息
+     * @var BFDInfo BFD配置信息。
      */
     public $BfdInfo;
 
     /**
-     * @var NQAInfo NQA配置信息
+     * @var NQAInfo NQA配置信息。
      */
     public $NqaInfo;
 
     /**
-     * @var integer 0：停用IPv6
-1: 启用IPv6
+     * @var integer IPV6使能。0：停用IPv6；1: 启用IPv6。
      */
     public $IPv6Enable;
 
     /**
-     * @var array 去往用户侧的路由信息
+     * @var array 去往用户侧的路由信息。
      */
     public $CustomerIDCRoutes;
 
     /**
-     * @var integer 是否开启巨帧
-1：开启
-0：不开启
+     * @var integer 是否开启巨帧。1：开启；0：不开启。
      */
     public $JumboEnable;
 
     /**
-     * @param string $DirectConnectTunnelId 专用通道ID
-     * @param integer $Vlan 专用通道的Vlan
-     * @param BgpPeer $BgpPeer 用户侧BGP，Asn，AuthKey
-     * @param RouteFilterPrefix $RouteFilterPrefixes 用户侧过滤网段地址
-     * @param string $TencentAddress 腾讯侧互联IP
-     * @param string $TencentBackupAddress 腾讯侧备用互联IP
-     * @param string $CustomerAddress 用户侧互联IP
-     * @param integer $Bandwidth 专用通道带宽值
-     * @param boolean $EnableBGPCommunity BGP community开关
-     * @param integer $BfdEnable 是否开启BFD
-     * @param integer $NqaEnable 是否开启NQA
-     * @param BFDInfo $BfdInfo BFD配置信息
-     * @param NQAInfo $NqaInfo NQA配置信息
-     * @param integer $IPv6Enable 0：停用IPv6
-1: 启用IPv6
-     * @param array $CustomerIDCRoutes 去往用户侧的路由信息
-     * @param integer $JumboEnable 是否开启巨帧
-1：开启
-0：不开启
+     * @var string 腾讯侧互联IPv6。
+     */
+    public $TencentIPv6Address;
+
+    /**
+     * @var string 腾讯侧备用互联IPv6。
+     */
+    public $TencentBackupIPv6Address;
+
+    /**
+     * @var string 用户侧互联IPv6。
+     */
+    public $CustomerIPv6Address;
+
+    /**
+     * @param string $DirectConnectTunnelId 专用通道ID。
+     * @param integer $Vlan 专用通道的Vlan。
+     * @param BgpPeer $BgpPeer Bgp参数，包括Asn，AuthKey
+     * @param RouteFilterPrefix $RouteFilterPrefixes 用户侧过滤网段地址。
+     * @param string $TencentAddress 腾讯侧互联IP。
+     * @param string $TencentBackupAddress 腾讯侧备用互联IP。
+     * @param string $CustomerAddress 用户侧互联IP。
+     * @param integer $Bandwidth 专用通道带宽值。
+     * @param boolean $EnableBGPCommunity BGP community开关。
+     * @param integer $BfdEnable 是否开启BFD。
+     * @param integer $NqaEnable 是否开启NQA。
+     * @param BFDInfo $BfdInfo BFD配置信息。
+     * @param NQAInfo $NqaInfo NQA配置信息。
+     * @param integer $IPv6Enable IPV6使能。0：停用IPv6；1: 启用IPv6。
+     * @param array $CustomerIDCRoutes 去往用户侧的路由信息。
+     * @param integer $JumboEnable 是否开启巨帧。1：开启；0：不开启。
+     * @param string $TencentIPv6Address 腾讯侧互联IPv6。
+     * @param string $TencentBackupIPv6Address 腾讯侧备用互联IPv6。
+     * @param string $CustomerIPv6Address 用户侧互联IPv6。
      */
     function __construct()
     {
@@ -249,6 +261,18 @@ class ModifyDirectConnectTunnelExtraRequest extends AbstractModel
 
         if (array_key_exists("JumboEnable",$param) and $param["JumboEnable"] !== null) {
             $this->JumboEnable = $param["JumboEnable"];
+        }
+
+        if (array_key_exists("TencentIPv6Address",$param) and $param["TencentIPv6Address"] !== null) {
+            $this->TencentIPv6Address = $param["TencentIPv6Address"];
+        }
+
+        if (array_key_exists("TencentBackupIPv6Address",$param) and $param["TencentBackupIPv6Address"] !== null) {
+            $this->TencentBackupIPv6Address = $param["TencentBackupIPv6Address"];
+        }
+
+        if (array_key_exists("CustomerIPv6Address",$param) and $param["CustomerIPv6Address"] !== null) {
+            $this->CustomerIPv6Address = $param["CustomerIPv6Address"];
         }
     }
 }

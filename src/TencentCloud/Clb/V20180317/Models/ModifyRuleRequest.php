@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
  * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
- * @method integer getSessionExpireTime() 获取会话保持时间。
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间。
- * @method string getForwardType() 获取负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
- * @method void setForwardType(string $ForwardType) 设置负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
+ * @method integer getSessionExpireTime() 获取会话保持时间。取值范围0或30-86400（单位：秒）。
+ * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间。取值范围0或30-86400（单位：秒）。
+ * @method string getForwardType() 获取负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
+ * @method void setForwardType(string $ForwardType) 设置负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
  * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
  * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
  * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
@@ -77,12 +77,12 @@ class ModifyRuleRequest extends AbstractModel
     public $Scheduler;
 
     /**
-     * @var integer 会话保持时间。
+     * @var integer 会话保持时间。取值范围0或30-86400（单位：秒）。
      */
     public $SessionExpireTime;
 
     /**
-     * @var string 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
+     * @var string 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
      */
     public $ForwardType;
 
@@ -104,8 +104,8 @@ class ModifyRuleRequest extends AbstractModel
      * @param HealthCheck $HealthCheck 健康检查信息。
      * @param string $Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
-     * @param integer $SessionExpireTime 会话保持时间。
-     * @param string $ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
+     * @param integer $SessionExpireTime 会话保持时间。取值范围0或30-86400（单位：秒）。
+     * @param string $ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、GRPC。仅HTTPS监听器该参数有效。
      * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
      */

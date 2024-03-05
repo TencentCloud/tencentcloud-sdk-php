@@ -46,7 +46,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
  * @method Models\EnableInternetAddressResponse EnableInternetAddress(Models\EnableInternetAddressRequest $req) 启用已停用的互联网公网地址
  * @method Models\ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(Models\ModifyDirectConnectAttributeRequest $req) 修改物理专线的属性。
  * @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) 修改专用通道属性
- * @method Models\ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtra(Models\ModifyDirectConnectTunnelExtraRequest $req) 本接口（ModifyDirectConnectTunnelExtra）用于修改专用通道扩展信息
+ * @method Models\ModifyDirectConnectTunnelExtraResponse ModifyDirectConnectTunnelExtra(Models\ModifyDirectConnectTunnelExtraRequest $req) 修改专用通道扩展信息。
  * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) 拒绝专用通道申请
  * @method Models\ReleaseInternetAddressResponse ReleaseInternetAddress(Models\ReleaseInternetAddressRequest $req) 释放已申请的互联网地址
  */

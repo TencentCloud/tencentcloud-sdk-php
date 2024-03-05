@@ -30,9 +30,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 OPEN：公网属性， INTERNAL：内网属性。
  * @method integer getForward() 获取负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
  * @method void setForward(integer $Forward) 设置负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
- * @method string getDomain() 获取负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+ * @method string getDomain() 获取负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomain(string $Domain) 设置负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+ * @method void setDomain(string $Domain) 设置负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLoadBalancerVips() 获取负载均衡实例的 VIP 列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,9 +102,9 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVipIsp() 获取负载均衡IP地址所属的ISP
+ * @method string getVipIsp() 获取负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVipIsp(string $VipIsp) 设置负载均衡IP地址所属的ISP
+ * @method void setVipIsp(string $VipIsp) 设置负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ZoneInfo getMasterZone() 获取主可用区
 注意：此字段可能返回 null，表示取不到有效值。
@@ -259,7 +259,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $Forward;
 
     /**
-     * @var string 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+     * @var string 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
@@ -321,6 +321,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     /**
      * @var string 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Log;
 
@@ -367,7 +368,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $NumericalVpcId;
 
     /**
-     * @var string 负载均衡IP地址所属的ISP
+     * @var string 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VipIsp;
@@ -570,7 +571,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
-     * @param string $Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
+     * @param string $Domain 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -606,7 +607,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NumericalVpcId 数值形式的私有网络 ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VipIsp 负载均衡IP地址所属的ISP
+     * @param string $VipIsp 负载均衡IP地址所属的运营商。取值范围（BGP、CMCC、CTCC、CUCC）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneInfo $MasterZone 主可用区
 注意：此字段可能返回 null，表示取不到有效值。

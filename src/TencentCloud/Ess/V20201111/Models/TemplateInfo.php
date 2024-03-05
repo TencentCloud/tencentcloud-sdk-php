@@ -31,79 +31,123 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateId() 获取模板ID，模板的唯一标识
  * @method void setTemplateId(string $TemplateId) 设置模板ID，模板的唯一标识
- * @method string getTemplateName() 获取模板名
- * @method void setTemplateName(string $TemplateName) 设置模板名
+ * @method string getTemplateName() 获取模板的名字
+ * @method void setTemplateName(string $TemplateName) 设置模板的名字
+ * @method array getRecipients() 获取此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
+ * @method void setRecipients(array $Recipients) 设置此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
+ * @method array getComponents() 获取模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
+ * @method void setComponents(array $Components) 设置模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
+ * @method array getSignComponents() 获取此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+ * @method void setSignComponents(array $SignComponents) 设置此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
  * @method string getDescription() 获取模板描述信息
  * @method void setDescription(string $Description) 设置模板描述信息
- * @method array getDocumentResourceIds() 获取模板关联的资源ID列表
- * @method void setDocumentResourceIds(array $DocumentResourceIds) 设置模板关联的资源ID列表
+ * @method array getDocumentResourceIds() 获取此模板的资源ID
+ * @method void setDocumentResourceIds(array $DocumentResourceIds) 设置此模板的资源ID
  * @method array getFileInfos() 获取生成模板的文件基础信息
  * @method void setFileInfos(array $FileInfos) 设置生成模板的文件基础信息
- * @method array getAttachmentResourceIds() 获取附件关联的资源ID
- * @method void setAttachmentResourceIds(array $AttachmentResourceIds) 设置附件关联的资源ID
- * @method array getSignOrder() 获取签署顺序
-无序 -1
-有序为序列数字 0,1,2
- * @method void setSignOrder(array $SignOrder) 设置签署顺序
-无序 -1
-有序为序列数字 0,1,2
- * @method array getRecipients() 获取模板中的签署参与方列表
- * @method void setRecipients(array $Recipients) 设置模板中的签署参与方列表
- * @method array getComponents() 获取模板的填充控件列表
- * @method void setComponents(array $Components) 设置模板的填充控件列表
- * @method array getSignComponents() 获取模板中的签署控件列表
- * @method void setSignComponents(array $SignComponents) 设置模板中的签署控件列表
- * @method integer getStatus() 获取模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用
- * @method void setStatus(integer $Status) 设置模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用
- * @method string getCreator() 获取模板的创建者信息，电子签系统用户ID
- * @method void setCreator(string $Creator) 设置模板的创建者信息，电子签系统用户ID
+ * @method array getAttachmentResourceIds() 获取此模板里边附件的资源ID
+ * @method void setAttachmentResourceIds(array $AttachmentResourceIds) 设置此模板里边附件的资源ID
+ * @method array getSignOrder() 获取签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝
+ * @method void setSignOrder(array $SignOrder) 设置签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝
+ * @method integer getStatus() 获取此模板的状态可以分为以下几种：
+
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。
+ * @method void setStatus(integer $Status) 设置此模板的状态可以分为以下几种：
+
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。
+ * @method string getCreator() 获取模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID`
+ * @method void setCreator(string $Creator) 设置模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID`
  * @method integer getCreatedOn() 获取模板创建的时间戳，格式为Unix标准时间戳（秒）
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳，格式为Unix标准时间戳（秒）
- * @method Recipient getPromoter() 获取发起方参与信息Promoter
- * @method void setPromoter(Recipient $Promoter) 设置发起方参与信息Promoter
- * @method integer getTemplateType() 获取模板类型：
-1  静默签,
-3  普通模板
- * @method void setTemplateType(integer $TemplateType) 设置模板类型：
-1  静默签,
-3  普通模板
- * @method integer getAvailable() 获取模板可用状态：
-1 启用（默认）
-2 停用
- * @method void setAvailable(integer $Available) 设置模板可用状态：
-1 启用（默认）
-2 停用
+ * @method Recipient getPromoter() 获取此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+ * @method void setPromoter(Recipient $Promoter) 设置此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+ * @method integer getTemplateType() 获取模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
+ * @method void setTemplateType(integer $TemplateType) 设置模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
+ * @method integer getAvailable() 获取模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板
+ * @method void setAvailable(integer $Available) 设置模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板
  * @method string getOrganizationId() 获取创建模板的企业ID，电子签的机构ID
  * @method void setOrganizationId(string $OrganizationId) 设置创建模板的企业ID，电子签的机构ID
- * @method string getPreviewUrl() 获取模板预览链接，有效时间5分钟
+ * @method string getCreatorId() 获取模板创建人用户ID
+ * @method void setCreatorId(string $CreatorId) 设置模板创建人用户ID
+ * @method string getPreviewUrl() 获取模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewUrl(string $PreviewUrl) 设置模板预览链接，有效时间5分钟
+ * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplateVersion() 获取模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+ * @method string getTemplateVersion() 获取模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+ * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getPublished() 获取模板是否已发布：
-true-已发布
-false-未发布
+ * @method boolean getPublished() 获取模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPublished(boolean $Published) 设置模板是否已发布：
-true-已发布
-false-未发布
+ * @method void setPublished(boolean $Published) 设置模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getShareTemplateId() 获取分享来源的模板ID。用在集团账号子企业模板里
+ * @method string getShareTemplateId() 获取<b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShareTemplateId(string $ShareTemplateId) 设置分享来源的模板ID。用在集团账号子企业模板里
+ * @method void setShareTemplateId(string $ShareTemplateId) 设置<b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTemplateSeals() 获取模板内部指定的印章列表
+ * @method array getTemplateSeals() 获取此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplateSeals(array $TemplateSeals) 设置模板内部指定的印章列表
+ * @method void setTemplateSeals(array $TemplateSeals) 设置此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSeals() 获取模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,9 +162,32 @@ class TemplateInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 模板名
+     * @var string 模板的名字
      */
     public $TemplateName;
+
+    /**
+     * @var array 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
+     */
+    public $Recipients;
+
+    /**
+     * @var array 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
+     */
+    public $Components;
+
+    /**
+     * @var array 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+     */
+    public $SignComponents;
 
     /**
      * @var string 模板描述信息
@@ -128,7 +195,7 @@ class TemplateInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var array 模板关联的资源ID列表
+     * @var array 此模板的资源ID
      */
     public $DocumentResourceIds;
 
@@ -138,42 +205,31 @@ class TemplateInfo extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var array 附件关联的资源ID
+     * @var array 此模板里边附件的资源ID
      */
     public $AttachmentResourceIds;
 
     /**
-     * @var array 签署顺序
-无序 -1
-有序为序列数字 0,1,2
+     * @var array 签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝
      */
     public $SignOrder;
 
     /**
-     * @var array 模板中的签署参与方列表
-     */
-    public $Recipients;
+     * @var integer 此模板的状态可以分为以下几种：
 
-    /**
-     * @var array 模板的填充控件列表
-     */
-    public $Components;
-
-    /**
-     * @var array 模板中的签署控件列表
-     */
-    public $SignComponents;
-
-    /**
-     * @var integer 模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。
      */
     public $Status;
 
     /**
-     * @var string 模板的创建者信息，电子签系统用户ID
+     * @var string 模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID`
      */
     public $Creator;
 
@@ -183,21 +239,28 @@ class TemplateInfo extends AbstractModel
     public $CreatedOn;
 
     /**
-     * @var Recipient 发起方参与信息Promoter
+     * @var Recipient 此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
      */
     public $Promoter;
 
     /**
-     * @var integer 模板类型：
-1  静默签,
-3  普通模板
+     * @var integer 模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
      */
     public $TemplateType;
 
     /**
-     * @var integer 模板可用状态：
-1 启用（默认）
-2 停用
+     * @var integer 模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板
      */
     public $Available;
 
@@ -207,33 +270,40 @@ class TemplateInfo extends AbstractModel
     public $OrganizationId;
 
     /**
-     * @var string 模板预览链接，有效时间5分钟
+     * @var string 模板创建人用户ID
+     */
+    public $CreatorId;
+
+    /**
+     * @var string 模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
 
     /**
-     * @var string 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+     * @var string 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateVersion;
 
     /**
-     * @var boolean 模板是否已发布：
-true-已发布
-false-未发布
+     * @var boolean 模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Published;
 
     /**
-     * @var string 分享来源的模板ID。用在集团账号子企业模板里
+     * @var string <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareTemplateId;
 
     /**
-     * @var array 模板内部指定的印章列表
+     * @var array 此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateSeals;
@@ -247,42 +317,64 @@ false-未发布
 
     /**
      * @param string $TemplateId 模板ID，模板的唯一标识
-     * @param string $TemplateName 模板名
-     * @param string $Description 模板描述信息
-     * @param array $DocumentResourceIds 模板关联的资源ID列表
-     * @param array $FileInfos 生成模板的文件基础信息
-     * @param array $AttachmentResourceIds 附件关联的资源ID
-     * @param array $SignOrder 签署顺序
-无序 -1
-有序为序列数字 0,1,2
-     * @param array $Recipients 模板中的签署参与方列表
+     * @param string $TemplateName 模板的名字
+     * @param array $Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
      * @param array $Components 模板的填充控件列表
-     * @param array $SignComponents 模板中的签署控件列表
-     * @param integer $Status 模板状态
--1:不可用
-0:草稿态
-1:正式态，可以正常使用
-     * @param string $Creator 模板的创建者信息，电子签系统用户ID
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
+     * @param array $SignComponents 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
+     * @param string $Description 模板描述信息
+     * @param array $DocumentResourceIds 此模板的资源ID
+     * @param array $FileInfos 生成模板的文件基础信息
+     * @param array $AttachmentResourceIds 此模板里边附件的资源ID
+     * @param array $SignOrder 签署人参与签署的顺序，可以分为以下两种方式：
+
+<b>无序</b>：不限定签署人的签署顺序，签署人可以在任何时间签署。此种方式值为 ：｛-1｝
+<b>有序</b>：通过序列数字标识签署顺序，从0开始编码，数字越大签署顺序越靠后，签署人按照指定的顺序依次签署。此种方式值为： ｛0，1，2，3………｝
+     * @param integer $Status 此模板的状态可以分为以下几种：
+
+<b>-1</b>：不可用状态。
+<b>0</b>：草稿态，即模板正在编辑或未发布状态。
+<b>1</b>：正式态，只有正式态的模板才可以发起合同。
+     * @param string $Creator 模板的创建者信息，用户的名字
+
+注： `是创建者的名字，而非创建者的用户ID`
      * @param integer $CreatedOn 模板创建的时间戳，格式为Unix标准时间戳（秒）
-     * @param Recipient $Promoter 发起方参与信息Promoter
-     * @param integer $TemplateType 模板类型：
-1  静默签,
-3  普通模板
-     * @param integer $Available 模板可用状态：
-1 启用（默认）
-2 停用
+     * @param Recipient $Promoter 此模板创建方角色信息。
+
+[点击查看在模板中配置的创建方角色的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+     * @param integer $TemplateType 模板类型可以分为以下两种：
+
+<b>1</b>：带有本企业自动签署的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
+     * @param integer $Available 模板可用状态可以分为以下两种：
+
+<b>1</b>：（默认）启用状态，即模板可以正常使用。
+<b>2</b>：停用状态，即模板暂时无法使用。
+
+可到控制台启停模板
      * @param string $OrganizationId 创建模板的企业ID，电子签的机构ID
-     * @param string $PreviewUrl 模板预览链接，有效时间5分钟
+     * @param string $CreatorId 模板创建人用户ID
+     * @param string $PreviewUrl 模板的H5预览链接,有效期5分钟。
+可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TemplateVersion 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+     * @param string $TemplateVersion 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Published 模板是否已发布：
-true-已发布
-false-未发布
+     * @param boolean $Published 模板是否已发布可以分为以下两种状态：
+
+<b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
+<b>false</b>：未发布状态，表示该模板还未发布，无法使用。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ShareTemplateId 分享来源的模板ID。用在集团账号子企业模板里
+     * @param string $ShareTemplateId <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TemplateSeals 模板内部指定的印章列表
+     * @param array $TemplateSeals 此模板配置的预填印章列表（包括自动签署指定的印章）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Seals 模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -306,31 +398,6 @@ false-未发布
 
         if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
             $this->TemplateName = $param["TemplateName"];
-        }
-
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
-        }
-
-        if (array_key_exists("DocumentResourceIds",$param) and $param["DocumentResourceIds"] !== null) {
-            $this->DocumentResourceIds = $param["DocumentResourceIds"];
-        }
-
-        if (array_key_exists("FileInfos",$param) and $param["FileInfos"] !== null) {
-            $this->FileInfos = [];
-            foreach ($param["FileInfos"] as $key => $value){
-                $obj = new FileInfo();
-                $obj->deserialize($value);
-                array_push($this->FileInfos, $obj);
-            }
-        }
-
-        if (array_key_exists("AttachmentResourceIds",$param) and $param["AttachmentResourceIds"] !== null) {
-            $this->AttachmentResourceIds = $param["AttachmentResourceIds"];
-        }
-
-        if (array_key_exists("SignOrder",$param) and $param["SignOrder"] !== null) {
-            $this->SignOrder = $param["SignOrder"];
         }
 
         if (array_key_exists("Recipients",$param) and $param["Recipients"] !== null) {
@@ -360,6 +427,31 @@ false-未发布
             }
         }
 
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("DocumentResourceIds",$param) and $param["DocumentResourceIds"] !== null) {
+            $this->DocumentResourceIds = $param["DocumentResourceIds"];
+        }
+
+        if (array_key_exists("FileInfos",$param) and $param["FileInfos"] !== null) {
+            $this->FileInfos = [];
+            foreach ($param["FileInfos"] as $key => $value){
+                $obj = new FileInfo();
+                $obj->deserialize($value);
+                array_push($this->FileInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("AttachmentResourceIds",$param) and $param["AttachmentResourceIds"] !== null) {
+            $this->AttachmentResourceIds = $param["AttachmentResourceIds"];
+        }
+
+        if (array_key_exists("SignOrder",$param) and $param["SignOrder"] !== null) {
+            $this->SignOrder = $param["SignOrder"];
+        }
+
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
         }
@@ -387,6 +479,10 @@ false-未发布
 
         if (array_key_exists("OrganizationId",$param) and $param["OrganizationId"] !== null) {
             $this->OrganizationId = $param["OrganizationId"];
+        }
+
+        if (array_key_exists("CreatorId",$param) and $param["CreatorId"] !== null) {
+            $this->CreatorId = $param["CreatorId"];
         }
 
         if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {

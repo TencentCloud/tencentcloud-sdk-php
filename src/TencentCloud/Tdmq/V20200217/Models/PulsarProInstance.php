@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置集群创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillingLabelVersion() 获取代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarProInstance extends AbstractModel
 {
@@ -168,6 +172,12 @@ class PulsarProInstance extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingLabelVersion;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -191,6 +201,8 @@ class PulsarProInstance extends AbstractModel
      * @param array $Tags 集群的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +293,10 @@ class PulsarProInstance extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("BillingLabelVersion",$param) and $param["BillingLabelVersion"] !== null) {
+            $this->BillingLabelVersion = $param["BillingLabelVersion"];
         }
     }
 }

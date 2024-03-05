@@ -40,8 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificate(CertificateOutput $Certificate) 设置证书信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduler() 获取规则的请求转发方式
- * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式
+ * @method string getScheduler() 获取规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
+ * @method void setScheduler(string $Scheduler) 设置规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
  * @method string getListenerId() 获取转发规则所属的监听器 ID
  * @method void setListenerId(string $ListenerId) 设置转发规则所属的监听器 ID
  * @method RewriteTarget getRewriteTarget() 获取转发规则的重定向目标信息
@@ -60,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForwardType(string $ForwardType) 设置负载均衡与后端服务之间的转发协议
  * @method string getCreateTime() 获取转发规则的创建时间
  * @method void setCreateTime(string $CreateTime) 设置转发规则的创建时间
- * @method string getTargetType() 获取后端服务器类型
- * @method void setTargetType(string $TargetType) 设置后端服务器类型
+ * @method string getTargetType() 获取后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+ * @method void setTargetType(string $TargetType) 设置后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
  * @method BasicTargetGroupInfo getTargetGroup() 获取绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) 设置绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
@@ -78,9 +80,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getQuicStatus() 获取QUIC状态
+ * @method string getQuicStatus() 获取QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuicStatus(string $QuicStatus) 设置QUIC状态
+ * @method void setQuicStatus(string $QuicStatus) 设置QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDomains() 获取转发规则的域名列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,7 +130,8 @@ class RuleOutput extends AbstractModel
     public $Certificate;
 
     /**
-     * @var string 规则的请求转发方式
+     * @var string 规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
      */
     public $Scheduler;
 
@@ -174,7 +177,7 @@ class RuleOutput extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string 后端服务器类型
+     * @var string 后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
      */
     public $TargetType;
 
@@ -203,7 +206,7 @@ class RuleOutput extends AbstractModel
     public $TrpcFunc;
 
     /**
-     * @var string QUIC状态
+     * @var string QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuicStatus;
@@ -231,7 +234,8 @@ class RuleOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateOutput $Certificate 证书信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Scheduler 规则的请求转发方式
+     * @param string $Scheduler 规则的请求转发方式。
+WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
      * @param string $ListenerId 转发规则所属的监听器 ID
      * @param RewriteTarget $RewriteTarget 转发规则的重定向目标信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -241,7 +245,7 @@ class RuleOutput extends AbstractModel
      * @param boolean $Http2 是否开启Http2
      * @param string $ForwardType 负载均衡与后端服务之间的转发协议
      * @param string $CreateTime 转发规则的创建时间
-     * @param string $TargetType 后端服务器类型
+     * @param string $TargetType 后端服务器类型。NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
      * @param BasicTargetGroupInfo $TargetGroup 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WafDomainId WAF实例ID
@@ -250,7 +254,7 @@ class RuleOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $QuicStatus QUIC状态
+     * @param string $QuicStatus QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Domains 转发规则的域名列表。
 注意：此字段可能返回 null，表示取不到有效值。

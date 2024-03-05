@@ -25,13 +25,11 @@ EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例类型，
 EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getInstanceName() 获取实例名称
@@ -80,6 +78,26 @@ PLATINUM 铂金版
  * @method void setSkuCode(string $SkuCode) 设置实例规格
  * @method string getPayMode() 获取计费模式
  * @method void setPayMode(string $PayMode) 设置计费模式
+ * @method boolean getScaledTpsEnabled() 获取是否开启弹性TPS
+ * @method void setScaledTpsEnabled(boolean $ScaledTpsEnabled) 设置是否开启弹性TPS
+ * @method integer getRenewFlag() 获取是否自动续费
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
+ * @method integer getExpiryTime() 获取到期时间
+ * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间
+ * @method integer getRoleNumLimit() 获取角色数量限制
+ * @method void setRoleNumLimit(integer $RoleNumLimit) 设置角色数量限制
+ * @method boolean getAclEnabled() 获取是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAclEnabled(boolean $AclEnabled) 设置是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTopicNumLowerLimit() 获取topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicNumLowerLimit(integer $TopicNumLowerLimit) 设置topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTopicNumUpperLimit() 获取最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicNumUpperLimit(integer $TopicNumUpperLimit) 设置最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,7 +109,6 @@ EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
@@ -208,6 +225,44 @@ PLATINUM 铂金版
     public $PayMode;
 
     /**
+     * @var boolean 是否开启弹性TPS
+     */
+    public $ScaledTpsEnabled;
+
+    /**
+     * @var integer 是否自动续费
+     */
+    public $RenewFlag;
+
+    /**
+     * @var integer 到期时间
+     */
+    public $ExpiryTime;
+
+    /**
+     * @var integer 角色数量限制
+     */
+    public $RoleNumLimit;
+
+    /**
+     * @var boolean 是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AclEnabled;
+
+    /**
+     * @var integer topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicNumLowerLimit;
+
+    /**
+     * @var integer 最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicNumUpperLimit;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -218,7 +273,6 @@ EXPERIMENT 体验版
 BASIC 基础版
 PRO  专业版
 PLATINUM 铂金版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param integer $TopicNum 主题数量
@@ -243,6 +297,16 @@ PLATINUM 铂金版
      * @param string $InstanceStatus 实例状态
      * @param string $SkuCode 实例规格
      * @param string $PayMode 计费模式
+     * @param boolean $ScaledTpsEnabled 是否开启弹性TPS
+     * @param integer $RenewFlag 是否自动续费
+     * @param integer $ExpiryTime 到期时间
+     * @param integer $RoleNumLimit 角色数量限制
+     * @param boolean $AclEnabled 是否开启 ACL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TopicNumLowerLimit topic个数免费额度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TopicNumUpperLimit 最大可设置的topic个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -358,6 +422,34 @@ PLATINUM 铂金版
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ScaledTpsEnabled",$param) and $param["ScaledTpsEnabled"] !== null) {
+            $this->ScaledTpsEnabled = $param["ScaledTpsEnabled"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("ExpiryTime",$param) and $param["ExpiryTime"] !== null) {
+            $this->ExpiryTime = $param["ExpiryTime"];
+        }
+
+        if (array_key_exists("RoleNumLimit",$param) and $param["RoleNumLimit"] !== null) {
+            $this->RoleNumLimit = $param["RoleNumLimit"];
+        }
+
+        if (array_key_exists("AclEnabled",$param) and $param["AclEnabled"] !== null) {
+            $this->AclEnabled = $param["AclEnabled"];
+        }
+
+        if (array_key_exists("TopicNumLowerLimit",$param) and $param["TopicNumLowerLimit"] !== null) {
+            $this->TopicNumLowerLimit = $param["TopicNumLowerLimit"];
+        }
+
+        if (array_key_exists("TopicNumUpperLimit",$param) and $param["TopicNumUpperLimit"] !== null) {
+            $this->TopicNumUpperLimit = $param["TopicNumUpperLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

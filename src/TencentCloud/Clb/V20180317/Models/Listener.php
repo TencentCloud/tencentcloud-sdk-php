@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置监听器的健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduler() 获取请求的调度方式
+ * @method string getScheduler() 获取请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduler(string $Scheduler) 设置请求的调度方式
+ * @method void setScheduler(string $Scheduler) 设置请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSessionExpireTime() 获取会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，仅支持TCP监听器。默认值:900；共享型实例和独占型实例取值范围：300～900，性能容量型实例取值范围:300～1980。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRescheduleInterval() 获取调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRescheduleInterval(integer $RescheduleInterval) 设置调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Listener extends AbstractModel
 {
@@ -137,7 +141,7 @@ class Listener extends AbstractModel
     public $HealthCheck;
 
     /**
-     * @var string 请求的调度方式
+     * @var string 请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scheduler;
@@ -245,6 +249,12 @@ class Listener extends AbstractModel
     public $IdleConnectTimeout;
 
     /**
+     * @var integer 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RescheduleInterval;
+
+    /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
      * @param integer $Port 监听器端口
@@ -252,7 +262,7 @@ class Listener extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck $HealthCheck 监听器的健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Scheduler 请求的调度方式
+     * @param string $Scheduler 请求的调度方式。 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SessionExpireTime 会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -287,6 +297,8 @@ class Listener extends AbstractModel
      * @param integer $MaxCps 监听器最大新增连接数，-1表示监听器维度不限速。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，仅支持TCP监听器。默认值:900；共享型实例和独占型实例取值范围：300～900，性能容量型实例取值范围:300～1980。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RescheduleInterval 调度时间。触发强制重新调度后，长连接将会在设置的调度时间内断开并完成重新分配
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -405,6 +417,10 @@ class Listener extends AbstractModel
 
         if (array_key_exists("IdleConnectTimeout",$param) and $param["IdleConnectTimeout"] !== null) {
             $this->IdleConnectTimeout = $param["IdleConnectTimeout"];
+        }
+
+        if (array_key_exists("RescheduleInterval",$param) and $param["RescheduleInterval"] !== null) {
+            $this->RescheduleInterval = $param["RescheduleInterval"];
         }
     }
 }

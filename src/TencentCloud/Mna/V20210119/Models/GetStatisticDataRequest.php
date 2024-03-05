@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeGranularity(integer $TimeGranularity) 设置聚合粒度：
 1:按小时统计
 2:按天统计
- * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
- * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+ * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
+ * @method void setAccessRegion(string $AccessRegion) 设置接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
  * @method integer getGatewayType() 获取网关类型。0：公有云网关；1：自有网关。不传默认为0。
  * @method void setGatewayType(integer $GatewayType) 设置网关类型。0：公有云网关；1：自有网关。不传默认为0。
  */
@@ -62,7 +62,7 @@ class GetStatisticDataRequest extends AbstractModel
     public $TimeGranularity;
 
     /**
-     * @var string 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+     * @var string 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
      */
     public $AccessRegion;
 
@@ -78,7 +78,7 @@ class GetStatisticDataRequest extends AbstractModel
      * @param integer $TimeGranularity 聚合粒度：
 1:按小时统计
 2:按天统计
-     * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填默认中国大陆
+     * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM'] MC=中国大陆 AP=亚太 EU=欧洲 AM=美洲。不填代表全量区域。
      * @param integer $GatewayType 网关类型。0：公有云网关；1：自有网关。不传默认为0。
      */
     function __construct()

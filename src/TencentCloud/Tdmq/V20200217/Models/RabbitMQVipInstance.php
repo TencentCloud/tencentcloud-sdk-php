@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 为了和计费区分开，额外开启一个状态位，用于显示。
  * @method void setClusterStatus(integer $ClusterStatus) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
 为了和计费区分开，额外开启一个状态位，用于显示。
+ * @method string getPublicAccessEndpoint() 获取公网接入点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) 设置公网接入点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVpcs() 获取VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcs(array $Vpcs) 设置VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -148,6 +156,18 @@ class RabbitMQVipInstance extends AbstractModel
     public $ClusterStatus;
 
     /**
+     * @var string 公网接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicAccessEndpoint;
+
+    /**
+     * @var array VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vpcs;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -168,6 +188,10 @@ class RabbitMQVipInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
 为了和计费区分开，额外开启一个状态位，用于显示。
+     * @param string $PublicAccessEndpoint 公网接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Vpcs VPC 接入点列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -244,6 +268,19 @@ class RabbitMQVipInstance extends AbstractModel
 
         if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
             $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("PublicAccessEndpoint",$param) and $param["PublicAccessEndpoint"] !== null) {
+            $this->PublicAccessEndpoint = $param["PublicAccessEndpoint"];
+        }
+
+        if (array_key_exists("Vpcs",$param) and $param["Vpcs"] !== null) {
+            $this->Vpcs = [];
+            foreach ($param["Vpcs"] as $key => $value){
+                $obj = new VpcEndpointInfo();
+                $obj->deserialize($value);
+                array_push($this->Vpcs, $obj);
+            }
         }
     }
 }

@@ -33,11 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQueueType() 获取队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
  * @method void setQueueType(string $QueueType) 设置队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
  * @method string getSortElement() 获取排序依据的字段：
+ConsumerNumber - 在线消费者数量；
 MessageHeapCount - 消息堆积数；
 MessageRateInOut - 生产消费速率之和；
 MessageRateIn - 生产速率；
 MessageRateOut - 消费速率；
  * @method void setSortElement(string $SortElement) 设置排序依据的字段：
+ConsumerNumber - 在线消费者数量；
 MessageHeapCount - 消息堆积数；
 MessageRateInOut - 生产消费速率之和；
 MessageRateIn - 生产速率；
@@ -79,6 +81,7 @@ class DescribeRabbitMQQueuesRequest extends AbstractModel
 
     /**
      * @var string 排序依据的字段：
+ConsumerNumber - 在线消费者数量；
 MessageHeapCount - 消息堆积数；
 MessageRateInOut - 生产消费速率之和；
 MessageRateIn - 生产速率；
@@ -99,6 +102,7 @@ MessageRateOut - 消费速率；
      * @param string $SearchWord 搜索关键词
      * @param string $QueueType 队列类型筛选，不填或 "all"：classic 和 quorum 队列；"classic"：筛选 classic 队列；"quorum"：筛选 quorum 队列
      * @param string $SortElement 排序依据的字段：
+ConsumerNumber - 在线消费者数量；
 MessageHeapCount - 消息堆积数；
 MessageRateInOut - 生产消费速率之和；
 MessageRateIn - 生产速率；

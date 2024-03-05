@@ -26,45 +26,45 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getClusterType() 获取集群类型，如TGW，STGW，VPCGW
  * @method void setClusterType(string $ClusterType) 设置集群类型，如TGW，STGW，VPCGW
- * @method string getClusterTag() 获取集群标签，只有STGW集群有标签
+ * @method string getClusterTag() 获取集群标签，只有TGW/STGW集群有标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterTag(string $ClusterTag) 设置集群标签，只有STGW集群有标签
+ * @method void setClusterTag(string $ClusterTag) 设置集群标签，只有TGW/STGW集群有标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取集群所在可用区，如ap-guangzhou-1
  * @method void setZone(string $Zone) 设置集群所在可用区，如ap-guangzhou-1
  * @method string getNetwork() 获取集群网络类型，如Public，Private
  * @method void setNetwork(string $Network) 设置集群网络类型，如Public，Private
- * @method integer getMaxConn() 获取最大连接数
+ * @method integer getMaxConn() 获取最大连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxConn(integer $MaxConn) 设置最大连接数
+ * @method void setMaxConn(integer $MaxConn) 设置最大连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxInFlow() 获取最大入带宽
+ * @method integer getMaxInFlow() 获取最大入带宽Mbps
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxInFlow(integer $MaxInFlow) 设置最大入带宽
+ * @method void setMaxInFlow(integer $MaxInFlow) 设置最大入带宽Mbps
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxInPkg() 获取最大入包量
+ * @method integer getMaxInPkg() 获取最大入包量（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxInPkg(integer $MaxInPkg) 设置最大入包量
+ * @method void setMaxInPkg(integer $MaxInPkg) 设置最大入包量（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxOutFlow() 获取最大出带宽
+ * @method integer getMaxOutFlow() 获取最大出带宽Mbps
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxOutFlow(integer $MaxOutFlow) 设置最大出带宽
+ * @method void setMaxOutFlow(integer $MaxOutFlow) 设置最大出带宽Mbps
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxOutPkg() 获取最大出包量
+ * @method integer getMaxOutPkg() 获取最大出包量（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxOutPkg(integer $MaxOutPkg) 设置最大出包量
+ * @method void setMaxOutPkg(integer $MaxOutPkg) 设置最大出包量（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxNewConn() 获取最大新建连接数
+ * @method integer getMaxNewConn() 获取最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxNewConn(integer $MaxNewConn) 设置最大新建连接数
+ * @method void setMaxNewConn(integer $MaxNewConn) 设置最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHTTPMaxNewConn() 获取http最大新建连接数
+ * @method integer getHTTPMaxNewConn() 获取http最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHTTPMaxNewConn(integer $HTTPMaxNewConn) 设置http最大新建连接数
+ * @method void setHTTPMaxNewConn(integer $HTTPMaxNewConn) 设置http最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHTTPSMaxNewConn() 获取https最大新建连接数
+ * @method integer getHTTPSMaxNewConn() 获取https最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHTTPSMaxNewConn(integer $HTTPSMaxNewConn) 设置https最大新建连接数
+ * @method void setHTTPSMaxNewConn(integer $HTTPSMaxNewConn) 设置https最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHTTPQps() 获取http QPS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgress(string $Egress) 设置网络出口
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIPVersion() 获取IP版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPVersion(string $IPVersion) 设置IP版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -123,7 +127,7 @@ class Cluster extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var string 集群标签，只有STGW集群有标签
+     * @var string 集群标签，只有TGW/STGW集群有标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterTag;
@@ -139,49 +143,49 @@ class Cluster extends AbstractModel
     public $Network;
 
     /**
-     * @var integer 最大连接数
+     * @var integer 最大连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxConn;
 
     /**
-     * @var integer 最大入带宽
+     * @var integer 最大入带宽Mbps
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxInFlow;
 
     /**
-     * @var integer 最大入包量
+     * @var integer 最大入包量（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxInPkg;
 
     /**
-     * @var integer 最大出带宽
+     * @var integer 最大出带宽Mbps
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxOutFlow;
 
     /**
-     * @var integer 最大出包量
+     * @var integer 最大出包量（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxOutPkg;
 
     /**
-     * @var integer 最大新建连接数
+     * @var integer 最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxNewConn;
 
     /**
-     * @var integer http最大新建连接数
+     * @var integer http最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HTTPMaxNewConn;
 
     /**
-     * @var integer https最大新建连接数
+     * @var integer https最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HTTPSMaxNewConn;
@@ -246,28 +250,34 @@ class Cluster extends AbstractModel
     public $Egress;
 
     /**
+     * @var string IP版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPVersion;
+
+    /**
      * @param string $ClusterId 集群唯一ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型，如TGW，STGW，VPCGW
-     * @param string $ClusterTag 集群标签，只有STGW集群有标签
+     * @param string $ClusterTag 集群标签，只有TGW/STGW集群有标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 集群所在可用区，如ap-guangzhou-1
      * @param string $Network 集群网络类型，如Public，Private
-     * @param integer $MaxConn 最大连接数
+     * @param integer $MaxConn 最大连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxInFlow 最大入带宽
+     * @param integer $MaxInFlow 最大入带宽Mbps
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxInPkg 最大入包量
+     * @param integer $MaxInPkg 最大入包量（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxOutFlow 最大出带宽
+     * @param integer $MaxOutFlow 最大出带宽Mbps
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxOutPkg 最大出包量
+     * @param integer $MaxOutPkg 最大出包量（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxNewConn 最大新建连接数
+     * @param integer $MaxNewConn 最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HTTPMaxNewConn http最大新建连接数
+     * @param integer $HTTPMaxNewConn http最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HTTPSMaxNewConn https最大新建连接数
+     * @param integer $HTTPSMaxNewConn https最大新建连接数（个/秒）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HTTPQps http QPS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -287,6 +297,8 @@ class Cluster extends AbstractModel
      * @param string $DisasterRecoveryType 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Egress 网络出口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IPVersion IP版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -397,6 +409,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
             $this->Egress = $param["Egress"];
+        }
+
+        if (array_key_exists("IPVersion",$param) and $param["IPVersion"] !== null) {
+            $this->IPVersion = $param["IPVersion"];
         }
     }
 }

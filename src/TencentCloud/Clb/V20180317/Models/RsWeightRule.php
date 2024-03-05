@@ -52,11 +52,13 @@ class RsWeightRule extends AbstractModel
 
     /**
      * @var string 目标规则的域名，提供LocationId参数时本参数不生效。
+     * @deprecated
      */
     public $Domain;
 
     /**
      * @var string 目标规则的URL，提供LocationId参数时本参数不生效。
+     * @deprecated
      */
     public $Url;
 

@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRateOut(float $MessageRateOut) 设置消息消费速率，每秒
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifyTime() 获取修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RabbitMQQueueListInfo extends AbstractModel
 {
@@ -91,6 +99,18 @@ class RabbitMQQueueListInfo extends AbstractModel
     public $MessageRateOut;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifyTime;
+
+    /**
      * @param string $QueueName 队列名
      * @param string $Remark 备注说明
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +123,10 @@ class RabbitMQQueueListInfo extends AbstractModel
      * @param float $MessageRateIn 消息生产速率，每秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MessageRateOut 消息消费速率，每秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModifyTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -145,6 +169,14 @@ class RabbitMQQueueListInfo extends AbstractModel
 
         if (array_key_exists("MessageRateOut",$param) and $param["MessageRateOut"] !== null) {
             $this->MessageRateOut = $param["MessageRateOut"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

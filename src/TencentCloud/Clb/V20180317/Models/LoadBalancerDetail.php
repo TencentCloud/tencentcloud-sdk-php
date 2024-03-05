@@ -56,9 +56,9 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置负载均衡实例所在可用区。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAddressIsp() 获取负载均衡实例IP地址所属的ISP。
+ * @method string getAddressIsp() 获取负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAddressIsp(string $AddressIsp) 设置负载均衡实例IP地址所属的ISP。
+ * @method void setAddressIsp(string $AddressIsp) 设置负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取负载均衡实例所属私有网络的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,9 +72,9 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置负载均衡实例的创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeType() 获取负载均衡实例的计费类型。
+ * @method string getChargeType() 获取负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeType(string $ChargeType) 设置负载均衡实例的计费类型。
+ * @method void setChargeType(string $ChargeType) 设置负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method InternetAccessible getNetworkAttributes() 获取负载均衡实例的网络属性。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,9 +144,9 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroup(array $SecurityGroup) 设置负载均衡绑定的安全组列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLoadBalancerPassToTarget() 获取负载均衡安全组上移特性是否开启标识。
+ * @method integer getLoadBalancerPassToTarget() 获取负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoadBalancerPassToTarget(integer $LoadBalancerPassToTarget) 设置负载均衡安全组上移特性是否开启标识。
+ * @method void setLoadBalancerPassToTarget(integer $LoadBalancerPassToTarget) 设置负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetHealth() 获取后端目标健康状态。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -234,7 +234,7 @@ Public：公网属性， Private：内网属性。
     public $Zone;
 
     /**
-     * @var string 负载均衡实例IP地址所属的ISP。
+     * @var string 负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressIsp;
@@ -258,7 +258,7 @@ Public：公网属性， Private：内网属性。
     public $CreateTime;
 
     /**
-     * @var string 负载均衡实例的计费类型。
+     * @var string 负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
@@ -366,7 +366,7 @@ Public：公网属性， Private：内网属性。
     public $SecurityGroup;
 
     /**
-     * @var integer 负载均衡安全组上移特性是否开启标识。
+     * @var integer 负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerPassToTarget;
@@ -432,7 +432,7 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 负载均衡实例所在可用区。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AddressIsp 负载均衡实例IP地址所属的ISP。
+     * @param string $AddressIsp 负载均衡实例IP地址所属的ISP。取值范围：BGP（多线）、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、INTERNAL（内网）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 负载均衡实例所属私有网络的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -440,7 +440,7 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 负载均衡实例的创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeType 负载均衡实例的计费类型。
+     * @param string $ChargeType 负载均衡实例的计费类型。取值范围：PREPAID预付费、POSTPAID_BY_HOUR按量付费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetAccessible $NetworkAttributes 负载均衡实例的网络属性。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -476,7 +476,7 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroup 负载均衡绑定的安全组列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。
+     * @param integer $LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。取值范围：1表示开启、0表示未开启。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetHealth 后端目标健康状态。
 注意：此字段可能返回 null，表示取不到有效值。

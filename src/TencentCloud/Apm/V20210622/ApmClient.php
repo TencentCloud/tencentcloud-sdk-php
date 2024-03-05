@@ -24,7 +24,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
 
 /**
  * @method Models\CreateApmInstanceResponse CreateApmInstance(Models\CreateApmInstanceRequest $req) 业务购买APM实例，调用该接口创建
- * @method Models\DescribeApmAgentResponse DescribeApmAgent(Models\DescribeApmAgentRequest $req) 获取Apm Agent信息
+ * @method Models\DescribeApmAgentResponse DescribeApmAgent(Models\DescribeApmAgentRequest $req) 获取APM Agent信息
  * @method Models\DescribeApmInstancesResponse DescribeApmInstances(Models\DescribeApmInstancesRequest $req) APM实例列表拉取
  * @method Models\DescribeGeneralMetricDataResponse DescribeGeneralMetricData(Models\DescribeGeneralMetricDataRequest $req) 获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。

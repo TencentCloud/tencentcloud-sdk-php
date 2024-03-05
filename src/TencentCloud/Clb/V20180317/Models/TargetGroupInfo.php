@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置目标组的创建时间
  * @method string getUpdatedTime() 获取目标组的修改时间
  * @method void setUpdatedTime(string $UpdatedTime) 设置目标组的修改时间
- * @method array getAssociatedRule() 获取关联到的规则数组
+ * @method array getAssociatedRule() 获取关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAssociatedRule(array $AssociatedRule) 设置关联到的规则数组
+ * @method void setAssociatedRule(array $AssociatedRule) 设置关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TargetGroupInfo extends AbstractModel
@@ -73,7 +73,7 @@ class TargetGroupInfo extends AbstractModel
     public $UpdatedTime;
 
     /**
-     * @var array 关联到的规则数组
+     * @var array 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociatedRule;
@@ -86,7 +86,7 @@ class TargetGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 目标组的创建时间
      * @param string $UpdatedTime 目标组的修改时间
-     * @param array $AssociatedRule 关联到的规则数组
+     * @param array $AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

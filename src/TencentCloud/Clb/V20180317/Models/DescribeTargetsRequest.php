@@ -31,9 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
 <li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li>
  * @method void setFilters(array $Filters) 设置查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
 <li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li>
  */
 class DescribeTargetsRequest extends AbstractModel
 {
@@ -61,6 +63,7 @@ class DescribeTargetsRequest extends AbstractModel
      * @var array 查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
 <li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li>
      */
     public $Filters;
 
@@ -72,6 +75,7 @@ class DescribeTargetsRequest extends AbstractModel
      * @param array $Filters 查询负载均衡绑定的后端服务列表，过滤条件如下：
 <li> location-id - String - 是否必填：否 - （过滤条件）按照 规则ID 过滤，如："loc-12345678"。</li>
 <li> private-ip-address - String - 是否必填：否 - （过滤条件）按照 后端服务内网IP 过滤，如："172.16.1.1"。</li>
+<li> tag - String - 是否必填：否 - （过滤条件）按照 标签 过滤，如："tag-test"。</li>
      */
     function __construct()
     {

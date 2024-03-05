@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称，限定50个字符
  * @method string getVpcId() 获取目标组的vpcid属性，不填则使用默认vpc
  * @method void setVpcId(string $VpcId) 设置目标组的vpcid属性，不填则使用默认vpc
- * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口
- * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口
+ * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+
+ * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+
  * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器
  */
@@ -42,7 +44,8 @@ class CreateTargetGroupRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer 目标组的默认端口， 后续添加服务器时可使用该默认端口
+     * @var integer 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+
      */
     public $Port;
 
@@ -54,7 +57,8 @@ class CreateTargetGroupRequest extends AbstractModel
     /**
      * @param string $TargetGroupName 目标组名称，限定50个字符
      * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
-     * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口
+     * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+
      * @param array $TargetGroupInstances 目标组绑定的后端服务器
      */
     function __construct()

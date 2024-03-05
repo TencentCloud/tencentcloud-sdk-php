@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanEditRoute(boolean $CanEditRoute) 设置是否可以修改路由
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillingLabelVersion() 获取代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -93,6 +97,12 @@ class PulsarProClusterInfo extends AbstractModel
     public $CanEditRoute;
 
     /**
+     * @var string 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingLabelVersion;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -103,6 +113,8 @@ class PulsarProClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxStorage 最大储存容量，单位：MB
      * @param boolean $CanEditRoute 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -157,6 +169,10 @@ class PulsarProClusterInfo extends AbstractModel
 
         if (array_key_exists("CanEditRoute",$param) and $param["CanEditRoute"] !== null) {
             $this->CanEditRoute = $param["CanEditRoute"];
+        }
+
+        if (array_key_exists("BillingLabelVersion",$param) and $param["BillingLabelVersion"] !== null) {
+            $this->BillingLabelVersion = $param["BillingLabelVersion"];
         }
     }
 }

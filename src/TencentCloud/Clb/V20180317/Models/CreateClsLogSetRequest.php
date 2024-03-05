@@ -36,6 +36,7 @@ class CreateClsLogSetRequest extends AbstractModel
 
     /**
      * @var integer 日志集的保存周期，单位：天。
+     * @deprecated
      */
     public $Period;
 

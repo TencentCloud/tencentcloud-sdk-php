@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 接入点信息
  *
- * @method string getType() 获取接入点类型，
-VPC，
-PUBLIC 公网
- * @method void setType(string $Type) 设置接入点类型，
-VPC，
-PUBLIC 公网
+ * @method string getType() 获取接入点类型，枚举值如下
+VPC: VPC;
+PUBLIC: 公网;
+INTERNAL: 支撑网;
+ * @method void setType(string $Type) 设置接入点类型，枚举值如下
+VPC: VPC;
+PUBLIC: 公网;
+INTERNAL: 支撑网;
  * @method string getStatus() 获取状态，
 OPEN 开启，
 CLOSE 关闭，
@@ -66,9 +68,10 @@ POSTPAID 按量付费
 class Endpoint extends AbstractModel
 {
     /**
-     * @var string 接入点类型，
-VPC，
-PUBLIC 公网
+     * @var string 接入点类型，枚举值如下
+VPC: VPC;
+PUBLIC: 公网;
+INTERNAL: 支撑网;
      */
     public $Type;
 
@@ -119,9 +122,10 @@ POSTPAID 按量付费
     public $IpRules;
 
     /**
-     * @param string $Type 接入点类型，
-VPC，
-PUBLIC 公网
+     * @param string $Type 接入点类型，枚举值如下
+VPC: VPC;
+PUBLIC: 公网;
+INTERNAL: 支撑网;
      * @param string $Status 状态，
 OPEN 开启，
 CLOSE 关闭，

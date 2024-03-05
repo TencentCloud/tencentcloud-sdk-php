@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailListenerIdSet(array $FailListenerIdSet) 设置绑定失败的监听器ID，如为空表示全部绑定成功。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessage() 获取绑定失败错误原因信息。
+ * @method void setMessage(string $Message) 设置绑定失败错误原因信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,6 +38,11 @@ class BatchRegisterTargetsResponse extends AbstractModel
     public $FailListenerIdSet;
 
     /**
+     * @var string 绑定失败错误原因信息。
+     */
+    public $Message;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -43,6 +50,7 @@ class BatchRegisterTargetsResponse extends AbstractModel
     /**
      * @param array $FailListenerIdSet 绑定失败的监听器ID，如为空表示全部绑定成功。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Message 绑定失败错误原因信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,10 @@ class BatchRegisterTargetsResponse extends AbstractModel
         }
         if (array_key_exists("FailListenerIdSet",$param) and $param["FailListenerIdSet"] !== null) {
             $this->FailListenerIdSet = $param["FailListenerIdSet"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

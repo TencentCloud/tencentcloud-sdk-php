@@ -32,6 +32,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterIdV4() 获取4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterIdV4(string $ClusterIdV4) 设置4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceV4() 获取4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceV4(string $NamespaceV4) 设置4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicV4() 获取4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicV4(string $TopicV4) 设置4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFullNamespaceV4() 获取4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMsgTTL() 获取消息保留时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicItem extends AbstractModel
 {
@@ -62,11 +82,51 @@ class TopicItem extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterIdV4;
+
+    /**
+     * @var string 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceV4;
+
+    /**
+     * @var string 4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicV4;
+
+    /**
+     * @var string 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FullNamespaceV4;
+
+    /**
+     * @var integer 消息保留时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MsgTTL;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Topic 主题名称
      * @param string $TopicType 主题类型
      * @param integer $QueueNum 队列数量
      * @param string $Remark 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterIdV4 4.x的集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceV4 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicV4 4.x的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FullNamespaceV4 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MsgTTL 消息保留时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +160,26 @@ class TopicItem extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("ClusterIdV4",$param) and $param["ClusterIdV4"] !== null) {
+            $this->ClusterIdV4 = $param["ClusterIdV4"];
+        }
+
+        if (array_key_exists("NamespaceV4",$param) and $param["NamespaceV4"] !== null) {
+            $this->NamespaceV4 = $param["NamespaceV4"];
+        }
+
+        if (array_key_exists("TopicV4",$param) and $param["TopicV4"] !== null) {
+            $this->TopicV4 = $param["TopicV4"];
+        }
+
+        if (array_key_exists("FullNamespaceV4",$param) and $param["FullNamespaceV4"] !== null) {
+            $this->FullNamespaceV4 = $param["FullNamespaceV4"];
+        }
+
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
         }
     }
 }

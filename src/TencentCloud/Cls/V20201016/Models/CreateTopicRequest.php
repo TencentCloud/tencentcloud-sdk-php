@@ -34,16 +34,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
  * @method string getStorageType() 获取日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
  * @method void setStorageType(string $StorageType) 设置日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
- * @method integer getPeriod() 获取生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
- * @method void setPeriod(integer $Period) 设置生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
+ * @method integer getPeriod() 获取生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
+ * @method void setPeriod(integer $Period) 设置生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
  * @method string getDescribes() 获取日志主题描述
  * @method void setDescribes(string $Describes) 设置日志主题描述
  * @method integer getHotPeriod() 获取0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。
  * @method void setHotPeriod(integer $HotPeriod) 设置0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
- * @method boolean getIsWebTracking() 获取免鉴权开关； false: 关闭 true： 开启
- * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关； false: 关闭 true： 开启
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。
+ * @method boolean getIsWebTracking() 获取免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+ * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -83,7 +89,8 @@ class CreateTopicRequest extends AbstractModel
     public $StorageType;
 
     /**
-     * @var integer 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
+     * @var integer 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
      */
     public $Period;
 
@@ -94,12 +101,14 @@ class CreateTopicRequest extends AbstractModel
 
     /**
      * @var integer 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。
      */
     public $HotPeriod;
 
     /**
-     * @var boolean 免鉴权开关； false: 关闭 true： 开启
+     * @var boolean 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     public $IsWebTracking;
 
@@ -111,11 +120,14 @@ class CreateTopicRequest extends AbstractModel
      * @param boolean $AutoSplit 是否开启自动分裂，默认值为true
      * @param integer $MaxSplitPartitions 开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
      * @param string $StorageType 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
-     * @param integer $Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存
+     * @param integer $Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600天。取值为3640时代表永久保存。
+不传此值，默认获取该日志主题对应日志集的Period值（当获取失败时默认为30天）。
      * @param string $Describes 日志主题描述
      * @param integer $HotPeriod 0：关闭日志沉降。
-非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
-     * @param boolean $IsWebTracking 免鉴权开关； false: 关闭 true： 开启
+非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
+仅在StorageType为 hot 时生效。
+     * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     function __construct()
     {

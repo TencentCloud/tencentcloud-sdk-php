@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComplianceId(integer $ComplianceId) 设置合规组ID
  * @method string getDataSourceType() 获取数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
  * @method void setDataSourceType(string $DataSourceType) 设置数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
+ * @method string getBuildType() 获取自建还是云上
+ * @method void setBuildType(string $BuildType) 设置自建还是云上
  */
 class DescribeDSPARDBDataAssetByComplianceIdRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeDSPARDBDataAssetByComplianceIdRequest extends AbstractModel
     public $DataSourceType;
 
     /**
+     * @var string 自建还是云上
+     */
+    public $BuildType;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $ComplianceId 合规组ID
      * @param string $DataSourceType 数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
+     * @param string $BuildType 自建还是云上
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDSPARDBDataAssetByComplianceIdRequest extends AbstractModel
 
         if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
             $this->DataSourceType = $param["DataSourceType"];
+        }
+
+        if (array_key_exists("BuildType",$param) and $param["BuildType"] !== null) {
+            $this->BuildType = $param["BuildType"];
         }
     }
 }

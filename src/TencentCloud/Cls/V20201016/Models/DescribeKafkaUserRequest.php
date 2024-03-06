@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKafkaUser请求参数结构体
  *
- * @method string getUserName() 获取kafka消费用户名
- * @method void setUserName(string $UserName) 设置kafka消费用户名
+ * @method string getUserName() 获取kafka用户名。
+ * @method void setUserName(string $UserName) 设置kafka用户名。
  */
 class DescribeKafkaUserRequest extends AbstractModel
 {
     /**
-     * @var string kafka消费用户名
+     * @var string kafka用户名。
      */
     public $UserName;
 
     /**
-     * @param string $UserName kafka消费用户名
+     * @param string $UserName kafka用户名。
      */
     function __construct()
     {

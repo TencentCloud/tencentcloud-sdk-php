@@ -46,6 +46,8 @@ TRANSACTION:事务消息
  * @method void setSubscriptionCount(integer $SubscriptionCount) 设置订阅数量
  * @method array getSubscriptionData() 获取订阅关系列表
  * @method void setSubscriptionData(array $SubscriptionData) 设置订阅关系列表
+ * @method integer getMsgTTL() 获取消息保留时长
+ * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -97,6 +99,11 @@ TRANSACTION:事务消息
     public $SubscriptionData;
 
     /**
+     * @var integer 消息保留时长
+     */
+    public $MsgTTL;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -115,6 +122,7 @@ TRANSACTION:事务消息
      * @param integer $LastUpdateTime 最后写入时间，秒为单位
      * @param integer $SubscriptionCount 订阅数量
      * @param array $SubscriptionData 订阅关系列表
+     * @param integer $MsgTTL 消息保留时长
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -165,6 +173,10 @@ TRANSACTION:事务消息
                 $obj->deserialize($value);
                 array_push($this->SubscriptionData, $obj);
             }
+        }
+
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

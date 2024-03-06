@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置要查询的日志主题ID
  * @method string getBTime() 获取日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
  * @method void setBTime(string $BTime) 设置日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
- * @method string getPkgId() 获取日志包序号
- * @method void setPkgId(string $PkgId) 设置日志包序号
- * @method integer getPkgLogId() 获取日志包内一条日志的序号
- * @method void setPkgLogId(integer $PkgLogId) 设置日志包内一条日志的序号
- * @method integer getPrevLogs() 获取上文日志条数,  默认值10
- * @method void setPrevLogs(integer $PrevLogs) 设置上文日志条数,  默认值10
- * @method integer getNextLogs() 获取下文日志条数,  默认值10
- * @method void setNextLogs(integer $NextLogs) 设置下文日志条数,  默认值10
+ * @method string getPkgId() 获取日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
+ * @method void setPkgId(string $PkgId) 设置日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
+ * @method integer getPkgLogId() 获取日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。
+ * @method void setPkgLogId(integer $PkgLogId) 设置日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。
+ * @method integer getPrevLogs() 获取前${PrevLogs}条日志，默认值10。
+ * @method void setPrevLogs(integer $PrevLogs) 设置前${PrevLogs}条日志，默认值10。
+ * @method integer getNextLogs() 获取后${NextLogs}条日志，默认值10。
+ * @method void setNextLogs(integer $NextLogs) 设置后${NextLogs}条日志，默认值10。
  */
 class DescribeLogContextRequest extends AbstractModel
 {
@@ -46,32 +48,34 @@ class DescribeLogContextRequest extends AbstractModel
     public $BTime;
 
     /**
-     * @var string 日志包序号
+     * @var string 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
      */
     public $PkgId;
 
     /**
-     * @var integer 日志包内一条日志的序号
+     * @var integer 日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。
      */
     public $PkgLogId;
 
     /**
-     * @var integer 上文日志条数,  默认值10
+     * @var integer 前${PrevLogs}条日志，默认值10。
      */
     public $PrevLogs;
 
     /**
-     * @var integer 下文日志条数,  默认值10
+     * @var integer 后${NextLogs}条日志，默认值10。
      */
     public $NextLogs;
 
     /**
      * @param string $TopicId 要查询的日志主题ID
      * @param string $BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
-     * @param string $PkgId 日志包序号
-     * @param integer $PkgLogId 日志包内一条日志的序号
-     * @param integer $PrevLogs 上文日志条数,  默认值10
-     * @param integer $NextLogs 下文日志条数,  默认值10
+     * @param string $PkgId 日志包序号。SearchLog接口返回信息中Results结构体中的PkgId。
+     * @param integer $PkgLogId 日志包内一条日志的序号。
+SearchLog接口返回信息中Results结构中的PkgLogId。
+     * @param integer $PrevLogs 前${PrevLogs}条日志，默认值10。
+     * @param integer $NextLogs 后${NextLogs}条日志，默认值10。
      */
     function __construct()
     {

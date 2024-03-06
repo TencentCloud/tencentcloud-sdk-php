@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置DSPA实例ID
  * @method string getDataSourceId() 获取数据源ID
  * @method void setDataSourceId(string $DataSourceId) 设置数据源ID
+ * @method string getDataSourceType() 获取数据源类型
+ * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
  */
 class DescribeDSPADataSourceDbInfoRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDSPADataSourceDbInfoRequest extends AbstractModel
     public $DataSourceId;
 
     /**
+     * @var string 数据源类型
+     */
+    public $DataSourceType;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param string $DataSourceId 数据源ID
+     * @param string $DataSourceType 数据源类型
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDSPADataSourceDbInfoRequest extends AbstractModel
 
         if (array_key_exists("DataSourceId",$param) and $param["DataSourceId"] !== null) {
             $this->DataSourceId = $param["DataSourceId"];
+        }
+
+        if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
+            $this->DataSourceType = $param["DataSourceType"];
         }
     }
 }

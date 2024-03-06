@@ -68,6 +68,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryFullPath(string $CategoryFullPath) 设置分类路径
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIdentifyType() 获取0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIdentifyType(integer $IdentifyType) 设置0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCheckStatus() 获取0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckStatus(integer $CheckStatus) 设置0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaCOSDataAssetDetail extends AbstractModel
 {
@@ -168,6 +180,20 @@ class DspaCOSDataAssetDetail extends AbstractModel
     public $CategoryFullPath;
 
     /**
+     * @var integer 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IdentifyType;
+
+    /**
+     * @var integer 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckStatus;
+
+    /**
      * @param string $BucketName 对象桶
      * @param string $FileName 对象名称
      * @param string $RuleName 规则名称
@@ -191,6 +217,12 @@ class DspaCOSDataAssetDetail extends AbstractModel
      * @param string $DataSourceName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryFullPath 分类路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IdentifyType 0-系统识别
+1-人工识别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CheckStatus 0-系统识别
+1-人工识别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +308,14 @@ class DspaCOSDataAssetDetail extends AbstractModel
 
         if (array_key_exists("CategoryFullPath",$param) and $param["CategoryFullPath"] !== null) {
             $this->CategoryFullPath = $param["CategoryFullPath"];
+        }
+
+        if (array_key_exists("IdentifyType",$param) and $param["IdentifyType"] !== null) {
+            $this->IdentifyType = $param["IdentifyType"];
+        }
+
+        if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
+            $this->CheckStatus = $param["CheckStatus"];
         }
     }
 }

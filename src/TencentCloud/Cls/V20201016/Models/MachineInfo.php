@@ -34,12 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoUpdate(integer $AutoUpdate) 设置机器是否开启自动升级。0:关闭，1:开启
  * @method string getVersion() 获取机器当前版本号。
  * @method void setVersion(string $Version) 设置机器当前版本号。
- * @method integer getUpdateStatus() 获取机器升级功能状态。
- * @method void setUpdateStatus(integer $UpdateStatus) 设置机器升级功能状态。
+ * @method integer getUpdateStatus() 获取机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
+ * @method void setUpdateStatus(integer $UpdateStatus) 设置机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
  * @method integer getErrCode() 获取机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。
  * @method void setErrCode(integer $ErrCode) 设置机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。
  * @method string getErrMsg() 获取机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。
  * @method void setErrMsg(string $ErrMsg) 设置机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。
  */
 class MachineInfo extends AbstractModel
 {
@@ -75,17 +79,19 @@ class MachineInfo extends AbstractModel
     public $Version;
 
     /**
-     * @var integer 机器升级功能状态。
+     * @var integer 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
      */
     public $UpdateStatus;
 
     /**
      * @var integer 机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。
      */
     public $ErrCode;
 
     /**
      * @var string 机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。
      */
     public $ErrMsg;
 
@@ -97,9 +103,11 @@ class MachineInfo extends AbstractModel
      * @param string $OfflineTime 机器离线时间，空为正常，异常返回具体时间
      * @param integer $AutoUpdate 机器是否开启自动升级。0:关闭，1:开启
      * @param string $Version 机器当前版本号。
-     * @param integer $UpdateStatus 机器升级功能状态。
+     * @param integer $UpdateStatus 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。
      * @param integer $ErrCode 机器升级结果标识。
+0：成功；1200：升级成功；其他值表示异常。
      * @param string $ErrMsg 机器升级结果信息。
+“ok”：成功；“update success”：升级成功；其他值为失败原因。
      */
     function __construct()
     {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时长，小时为单位
  * @method boolean getScaledTpsEnabled() 获取是否开启弹性TPS
  * @method void setScaledTpsEnabled(boolean $ScaledTpsEnabled) 设置是否开启弹性TPS
+ * @method integer getMaxTopicNum() 获取最大可创建主题数
+ * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大可创建主题数
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyInstanceRequest extends AbstractModel
     public $ScaledTpsEnabled;
 
     /**
+     * @var integer 最大可创建主题数
+     */
+    public $MaxTopicNum;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param string $Remark 备注信息
@@ -80,6 +87,7 @@ class ModifyInstanceRequest extends AbstractModel
      * @param string $SkuCode 调整实例规格的商品代号
      * @param integer $MessageRetention 消息保留时长，小时为单位
      * @param boolean $ScaledTpsEnabled 是否开启弹性TPS
+     * @param integer $MaxTopicNum 最大可创建主题数
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyInstanceRequest extends AbstractModel
 
         if (array_key_exists("ScaledTpsEnabled",$param) and $param["ScaledTpsEnabled"] !== null) {
             $this->ScaledTpsEnabled = $param["ScaledTpsEnabled"];
+        }
+
+        if (array_key_exists("MaxTopicNum",$param) and $param["MaxTopicNum"] !== null) {
+            $this->MaxTopicNum = $param["MaxTopicNum"];
         }
     }
 }

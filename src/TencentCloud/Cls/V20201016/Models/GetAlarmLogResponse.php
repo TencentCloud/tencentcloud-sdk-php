@@ -42,15 +42,15 @@ use TencentCloud\Common\AbstractModel;
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisResults() 获取执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+ * @method array getAnalysisResults() 获取执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisResults(array $AnalysisResults) 设置执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+ * @method void setAnalysisResults(array $AnalysisResults) 设置执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisRecords() 获取执行详情统计分析结果; UseNewAnalysis为true有效
+ * @method array getAnalysisRecords() 获取执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisRecords(array $AnalysisRecords) 设置执行详情统计分析结果; UseNewAnalysis为true有效
+ * @method void setAnalysisRecords(array $AnalysisRecords) 设置执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getColumns() 获取分析结果的列名， UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,14 +93,14 @@ class GetAlarmLogResponse extends AbstractModel
     public $Results;
 
     /**
-     * @var array 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+     * @var array 执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisResults;
 
     /**
-     * @var array 执行详情统计分析结果; UseNewAnalysis为true有效
+     * @var array 执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisRecords;
@@ -128,10 +128,10 @@ class GetAlarmLogResponse extends AbstractModel
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回sql统计结果，否则可能返回null。
+     * @param array $AnalysisResults 执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisRecords 执行详情统计分析结果; UseNewAnalysis为true有效
+     * @param array $AnalysisRecords 执行详情统计分析结果；UseNewAnalysis为true有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Columns 分析结果的列名， UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。

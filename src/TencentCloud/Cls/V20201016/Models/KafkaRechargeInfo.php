@@ -58,9 +58,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态   status 1: 运行中, 2: 暂停 ...
+ * @method integer getStatus() 获取状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态   status 1: 运行中, 2: 暂停 ...
+ * @method void setStatus(integer $Status) 设置状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffset() 获取导入数据位置，-2:最早（默认），-1：最晚
 注意：此字段可能返回 null，表示取不到有效值。
@@ -141,7 +141,7 @@ class KafkaRechargeInfo extends AbstractModel
     public $ConsumerGroupName;
 
     /**
-     * @var integer 状态   status 1: 运行中, 2: 暂停 ...
+     * @var integer 状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -190,7 +190,7 @@ class KafkaRechargeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerGroupName 用户Kafka消费组名称	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态   status 1: 运行中, 2: 暂停 ...
+     * @param integer $Status 状态 ，1：运行中；2：暂停。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offset 导入数据位置，-2:最早（默认），-1：最晚
 注意：此字段可能返回 null，表示取不到有效值。

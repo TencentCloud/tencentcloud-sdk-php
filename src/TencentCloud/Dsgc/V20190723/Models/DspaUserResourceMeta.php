@@ -58,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceAuthType(string $ResourceAuthType) 设置授权方式
  * @method string getResourceAuthAccount() 获取授权账号名
  * @method void setResourceAuthAccount(string $ResourceAuthAccount) 设置授权账号名
+ * @method string getInstanceType() 获取x
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置x
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceValue() 获取x
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceValue(string $InstanceValue) 设置x
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaUserResourceMeta extends AbstractModel
 {
@@ -157,6 +165,18 @@ class DspaUserResourceMeta extends AbstractModel
     public $ResourceAuthAccount;
 
     /**
+     * @var string x
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
+     * @var string x
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceValue;
+
+    /**
      * @param string $ResourceId 用户资源ID。
      * @param string $ResourceName 资源名称。
      * @param string $ResourceVip 资源VIP。
@@ -176,6 +196,10 @@ class DspaUserResourceMeta extends AbstractModel
      * @param string $ResourceVersion 资源版本号。
      * @param string $ResourceAuthType 授权方式
      * @param string $ResourceAuthAccount 授权账号名
+     * @param string $InstanceType x
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceValue x
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -264,6 +288,14 @@ class DspaUserResourceMeta extends AbstractModel
 
         if (array_key_exists("ResourceAuthAccount",$param) and $param["ResourceAuthAccount"] !== null) {
             $this->ResourceAuthAccount = $param["ResourceAuthAccount"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("InstanceValue",$param) and $param["InstanceValue"] !== null) {
+            $this->InstanceValue = $param["InstanceValue"];
         }
     }
 }

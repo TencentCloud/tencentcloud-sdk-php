@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStaffNumber(string $StaffNumber) 设置坐席工号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRoleId() 获取用户角色id
+ * @method void setRoleId(integer $RoleId) 设置用户角色id
  * @method array getSkillGroupList() 获取所属技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupList(array $SkillGroupList) 设置所属技能组列表
@@ -79,6 +81,11 @@ class StaffInfo extends AbstractModel
     public $StaffNumber;
 
     /**
+     * @var integer 用户角色id
+     */
+    public $RoleId;
+
+    /**
      * @var array 所属技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -100,6 +107,7 @@ class StaffInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StaffNumber 坐席工号
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RoleId 用户角色id
      * @param array $SkillGroupList 所属技能组列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastModifyTimestamp 最后修改时间
@@ -136,6 +144,10 @@ class StaffInfo extends AbstractModel
 
         if (array_key_exists("StaffNumber",$param) and $param["StaffNumber"] !== null) {
             $this->StaffNumber = $param["StaffNumber"];
+        }
+
+        if (array_key_exists("RoleId",$param) and $param["RoleId"] !== null) {
+            $this->RoleId = $param["RoleId"];
         }
 
         if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {

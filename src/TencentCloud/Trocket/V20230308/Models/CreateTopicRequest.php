@@ -40,6 +40,8 @@ TRANSACTION:事务消息
  * @method void setQueueNum(integer $QueueNum) 设置队列数量
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method integer getMsgTTL() 获取消息保留时长
+ * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -74,6 +76,11 @@ TRANSACTION:事务消息
     public $Remark;
 
     /**
+     * @var integer 消息保留时长
+     */
+    public $MsgTTL;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Topic 主题
      * @param string $TopicType 主题类型
@@ -84,6 +91,7 @@ DELAY:延时消息,
 TRANSACTION:事务消息
      * @param integer $QueueNum 队列数量
      * @param string $Remark 备注
+     * @param integer $MsgTTL 消息保留时长
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ TRANSACTION:事务消息
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
+            $this->MsgTTL = $param["MsgTTL"];
         }
     }
 }

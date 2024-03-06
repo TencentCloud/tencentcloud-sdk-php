@@ -26,12 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
  * @method string getName() 获取投递任务名称
  * @method void setName(string $Name) 设置投递任务名称
- * @method string getBucket() 获取COS存储桶。
-存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
- * @method void setBucket(string $Bucket) 设置COS存储桶。
-存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
- * @method string getBucketRegion() 获取COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224
- * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224
+ * @method string getBucket() 获取COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+ * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+ * @method string getBucketRegion() 获取COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
+ * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
  * @method string getPrefix() 获取COS文件所在文件夹的前缀
  * @method void setPrefix(string $Prefix) 设置COS文件所在文件夹的前缀
  * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
@@ -61,13 +59,12 @@ class CreateCosRechargeRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string COS存储桶。
-存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
+     * @var string COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
      */
     public $Bucket;
 
     /**
-     * @var string COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224
+     * @var string COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
      */
     public $BucketRegion;
 
@@ -96,9 +93,8 @@ class CreateCosRechargeRequest extends AbstractModel
      * @param string $TopicId 日志主题 ID
      * @param string $LogsetId 日志集ID
      * @param string $Name 投递任务名称
-     * @param string $Bucket COS存储桶。
-存储桶命名规范：https://cloud.tencent.com/document/product/436/13312
-     * @param string $BucketRegion COS存储桶所在地域。地域和访问域名：https://cloud.tencent.com/document/product/436/6224
+     * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+     * @param string $BucketRegion COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
      * @param string $Prefix COS文件所在文件夹的前缀
      * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log

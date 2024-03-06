@@ -65,6 +65,7 @@ use TencentCloud\Dasb\V20191018\Models as Models;
  * @method Models\ModifyCmdTemplateResponse ModifyCmdTemplate(Models\ModifyCmdTemplateRequest $req) 修改高危命令模板
  * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 修改资产信息
  * @method Models\ModifyDeviceGroupResponse ModifyDeviceGroup(Models\ModifyDeviceGroupRequest $req) 修改资产组
+ * @method Models\ModifyOAuthSettingResponse ModifyOAuthSetting(Models\ModifyOAuthSettingRequest $req) 设置OAuth认证参数
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 资源变配
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 修改用户组

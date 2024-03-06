@@ -76,6 +76,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置是否顺序消费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessageModel() 获取消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessageModel(string $MessageModel) 设置消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscriptionData extends AbstractModel
 {
@@ -164,6 +172,14 @@ class SubscriptionData extends AbstractModel
     public $ConsumeMessageOrderly;
 
     /**
+     * @var string 消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MessageModel;
+
+    /**
      * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Topic 主题名称
@@ -191,6 +207,10 @@ class SubscriptionData extends AbstractModel
      * @param integer $MaxRetryTimes 最大重试次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ConsumeMessageOrderly 是否顺序消费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MessageModel 消费模式: 
+BROADCASTING 广播模式;
+CLUSTERING 集群模式;
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +280,10 @@ class SubscriptionData extends AbstractModel
 
         if (array_key_exists("ConsumeMessageOrderly",$param) and $param["ConsumeMessageOrderly"] !== null) {
             $this->ConsumeMessageOrderly = $param["ConsumeMessageOrderly"];
+        }
+
+        if (array_key_exists("MessageModel",$param) and $param["MessageModel"] !== null) {
+            $this->MessageModel = $param["MessageModel"];
         }
     }
 }

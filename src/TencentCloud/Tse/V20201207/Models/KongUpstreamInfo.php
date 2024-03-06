@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthStatus(string $HealthStatus) 设置upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getScfCamAuthEnable() 获取云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScfCamAuthEnable(boolean $ScfCamAuthEnable) 设置云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongUpstreamInfo extends AbstractModel
 {
@@ -224,6 +228,12 @@ class KongUpstreamInfo extends AbstractModel
     public $HealthStatus;
 
     /**
+     * @var boolean 云函数是否开启CAM鉴权，不填时默认为开启(true)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScfCamAuthEnable;
+
+    /**
      * @param string $Host IP或域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
@@ -263,6 +273,8 @@ class KongUpstreamInfo extends AbstractModel
      * @param string $RealSourceType 精确的服务来源类型，新建服务来源时候传入的类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthStatus upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ScfCamAuthEnable 云函数是否开启CAM鉴权，不填时默认为开启(true)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -361,6 +373,10 @@ class KongUpstreamInfo extends AbstractModel
 
         if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
             $this->HealthStatus = $param["HealthStatus"];
+        }
+
+        if (array_key_exists("ScfCamAuthEnable",$param) and $param["ScfCamAuthEnable"] !== null) {
+            $this->ScfCamAuthEnable = $param["ScfCamAuthEnable"];
         }
     }
 }

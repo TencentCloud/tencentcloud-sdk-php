@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置dspa实例id
  * @method integer getComplianceId() 获取合规组id
  * @method void setComplianceId(integer $ComplianceId) 设置合规组id
+ * @method string getBuildType() 获取云上还是自建
+
+ * @method void setBuildType(string $BuildType) 设置云上还是自建
+
+ * @method string getDataSourceType() 获取数据源类型
+ * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
  */
 class DescribeDSPAESDataAssetByComplianceIdRequest extends AbstractModel
 {
@@ -38,8 +44,22 @@ class DescribeDSPAESDataAssetByComplianceIdRequest extends AbstractModel
     public $ComplianceId;
 
     /**
+     * @var string 云上还是自建
+
+     */
+    public $BuildType;
+
+    /**
+     * @var string 数据源类型
+     */
+    public $DataSourceType;
+
+    /**
      * @param string $DspaId dspa实例id
      * @param integer $ComplianceId 合规组id
+     * @param string $BuildType 云上还是自建
+
+     * @param string $DataSourceType 数据源类型
      */
     function __construct()
     {
@@ -60,6 +80,14 @@ class DescribeDSPAESDataAssetByComplianceIdRequest extends AbstractModel
 
         if (array_key_exists("ComplianceId",$param) and $param["ComplianceId"] !== null) {
             $this->ComplianceId = $param["ComplianceId"];
+        }
+
+        if (array_key_exists("BuildType",$param) and $param["BuildType"] !== null) {
+            $this->BuildType = $param["BuildType"];
+        }
+
+        if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
+            $this->DataSourceType = $param["DataSourceType"];
         }
     }
 }

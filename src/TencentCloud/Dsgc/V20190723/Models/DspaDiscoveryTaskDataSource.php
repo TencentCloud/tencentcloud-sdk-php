@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataSourceType() 获取无
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataSourceType(string $DataSourceType) 设置无
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryTaskDataSource extends AbstractModel
 {
@@ -68,6 +72,12 @@ class DspaDiscoveryTaskDataSource extends AbstractModel
     public $ResourceRegion;
 
     /**
+     * @var string 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataSourceType;
+
+    /**
      * @param string $DataSourceId 数据源ID
      * @param string $Condition 用于传入的数据源的条件，可以选择多个数据库，数据库之间通过逗号分隔，如果为空，默认是全部数据库
      * @param array $ProxyAddress 代理地址
@@ -75,6 +85,8 @@ class DspaDiscoveryTaskDataSource extends AbstractModel
      * @param string $DataSourceName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataSourceType 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -108,6 +120,10 @@ class DspaDiscoveryTaskDataSource extends AbstractModel
 
         if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
             $this->ResourceRegion = $param["ResourceRegion"];
+        }
+
+        if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
+            $this->DataSourceType = $param["DataSourceType"];
         }
     }
 }

@@ -548,6 +548,13 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\DescribeOrganizationSealsResponse DescribeOrganizationSeals(Models\DescribeOrganizationSealsRequest $req) 查询企业印章的列表，需要操作者具有查询印章权限
 客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
  * @method Models\DescribePersonCertificateResponse DescribePersonCertificate(Models\DescribePersonCertificateRequest $req) 此接口（DescribePersonCertificate）用于查询个人数字证书信息。<br />注：`1.目前仅用于查询开通了医疗自动签署功能的个人数字证书。`<br />`2.调用此接口需要开通白名单，使用前请联系相关人员开通白名单。`
+ * @method Models\DescribeSignFaceVideoResponse DescribeSignFaceVideo(Models\DescribeSignFaceVideoRequest $req) 该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
+
+1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸图片。
+2. 该接口**不支持小程序端**的签署人脸图片获取。
+3. 请在**签署完成后的三天内**获取人脸图片，**过期后将无法获取**。
+
+**注意：该接口需要开通白名单，请联系客户经理开通后使用。**
  * @method Models\DescribeThirdPartyAuthCodeResponse DescribeThirdPartyAuthCode(Models\DescribeThirdPartyAuthCodeRequest $req) 通过AuthCode查询个人用户是否实名
 
 

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKafkaUser返回参数结构体
  *
- * @method string getUserName() 获取kafka消费用户名
- * @method void setUserName(string $UserName) 设置kafka消费用户名
+ * @method string getUserName() 获取如果返回不为空，代表用户名UserName已经创建成功。
+ * @method void setUserName(string $UserName) 设置如果返回不为空，代表用户名UserName已经创建成功。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeKafkaUserResponse extends AbstractModel
 {
     /**
-     * @var string kafka消费用户名
+     * @var string 如果返回不为空，代表用户名UserName已经创建成功。
      */
     public $UserName;
 
@@ -38,7 +38,7 @@ class DescribeKafkaUserResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $UserName kafka消费用户名
+     * @param string $UserName 如果返回不为空，代表用户名UserName已经创建成功。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

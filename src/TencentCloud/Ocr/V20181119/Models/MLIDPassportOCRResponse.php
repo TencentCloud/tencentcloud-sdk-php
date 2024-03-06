@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
- * @method string getImage() 获取证件图片
- * @method void setImage(string $Image) 设置证件图片
+ * @method string getImage() 获取证件中的人像图片base64
+ * @method void setImage(string $Image) 设置证件中的人像图片base64
  * @method string getAdvancedInfo() 获取扩展字段:
 {
     ID:{
@@ -127,7 +127,7 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $Warn;
 
     /**
-     * @var string 证件图片
+     * @var string 证件中的人像图片base64
      */
     public $Image;
 
@@ -193,7 +193,7 @@ class MLIDPassportOCRResponse extends AbstractModel
 -9103	证照翻拍告警
 -9102	证照复印件告警（包括黑白复印件、彩色复印件）
 -9106       证件遮挡告警
-     * @param string $Image 证件图片
+     * @param string $Image 证件中的人像图片base64
      * @param string $AdvancedInfo 扩展字段:
 {
     ID:{

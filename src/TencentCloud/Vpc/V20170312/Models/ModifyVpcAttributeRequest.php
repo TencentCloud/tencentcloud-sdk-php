@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpcAttribute请求参数结构体
  *
- * @method string getVpcId() 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+ * @method string getVpcId() 获取VPC实例ID。形如：vpc-f49l6u0z。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。形如：vpc-f49l6u0z。
  * @method string getVpcName() 获取私有网络名称，可任意命名，但不得超过60个字符。
  * @method void setVpcName(string $VpcName) 设置私有网络名称，可任意命名，但不得超过60个字符。
  * @method string getEnableMulticast() 获取是否开启组播。true: 开启, false: 关闭。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyVpcAttributeRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * @var string VPC实例ID。形如：vpc-f49l6u0z。
      */
     public $VpcId;
 
@@ -66,7 +66,7 @@ class ModifyVpcAttributeRequest extends AbstractModel
     public $EnableCdcPublish;
 
     /**
-     * @param string $VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * @param string $VpcId VPC实例ID。形如：vpc-f49l6u0z。
      * @param string $VpcName 私有网络名称，可任意命名，但不得超过60个字符。
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 关闭。
      * @param array $DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备。

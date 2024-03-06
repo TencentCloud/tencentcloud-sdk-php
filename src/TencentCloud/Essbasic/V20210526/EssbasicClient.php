@@ -483,6 +483,13 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 | **业务员**|销售员、采购员 等| 发起合同、签署合同（含填写、拒签）、撤销合同、持有印章等权限能力，可查看自己相关所有合同数据。 |
 
 附件：<a href="https://dyn.ess.tencent.cn/guide/apivideo/roles.xlsx" target="_blank">点击下载角色对应的权限点的excel文档</a>
+ * @method Models\ChannelDescribeSignFaceVideoResponse ChannelDescribeSignFaceVideo(Models\ChannelDescribeSignFaceVideoRequest $req) 该接口用于在使用视频认证方式签署合同后，获取用户的签署人脸认证视频。
+
+1. 该接口**仅适用于在H5端签署**的合同，**在通过视频认证后**获取人脸图片。
+2. 该接口**不支持小程序端**的签署人脸图片获取。
+3. 请在**签署完成后的三天内**获取人脸图片，**过期后将无法获取**。
+
+**注意：该接口需要开通白名单，请联系客户经理开通后使用。**
  * @method Models\ChannelDescribeUserAutoSignStatusResponse ChannelDescribeUserAutoSignStatus(Models\ChannelDescribeUserAutoSignStatusRequest $req) 通过此接口获取个人用户自动签的开通状态。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`

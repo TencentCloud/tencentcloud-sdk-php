@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method array getFilters() 获取查询条件列表
+ * @method void setFilters(array $Filters) 设置查询条件列表
  * @method integer getOffset() 获取查询起始位置
  * @method void setOffset(integer $Offset) 设置查询起始位置
  * @method integer getLimit() 获取查询结果限制数量
  * @method void setLimit(integer $Limit) 设置查询结果限制数量
- * @method array getFilters() 获取查询条件列表
- * @method void setFilters(array $Filters) 设置查询条件列表
  */
 class DescribeTopicListRequest extends AbstractModel
 {
@@ -35,6 +35,11 @@ class DescribeTopicListRequest extends AbstractModel
      * @var string 实例ID
      */
     public $InstanceId;
+
+    /**
+     * @var array 查询条件列表
+     */
+    public $Filters;
 
     /**
      * @var integer 查询起始位置
@@ -47,15 +52,10 @@ class DescribeTopicListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 查询条件列表
-     */
-    public $Filters;
-
-    /**
      * @param string $InstanceId 实例ID
+     * @param array $Filters 查询条件列表
      * @param integer $Offset 查询起始位置
      * @param integer $Limit 查询结果限制数量
-     * @param array $Filters 查询条件列表
      */
     function __construct()
     {
@@ -74,14 +74,6 @@ class DescribeTopicListRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -89,6 +81,14 @@ class DescribeTopicListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

@@ -47,7 +47,10 @@ bigvBlock：视频卡顿时长；单位：ms
 aLoss：上/下行音频丢包率；
 bigvLoss：上/下行视频丢包率；
 bigvWidth：上/下行分辨率宽；
-bigvHeight：上/下行分辨率高
+bigvHeight：上/下行分辨率高；
+aCapEnergy：音频采集能量；
+aPlayEnergy：音频播放能量；
+rtt：SDK到云端的往返延时；单位: ms
  * @method void setDataType(array $DataType) 设置需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
@@ -61,7 +64,10 @@ bigvBlock：视频卡顿时长；单位：ms
 aLoss：上/下行音频丢包率；
 bigvLoss：上/下行视频丢包率；
 bigvWidth：上/下行分辨率宽；
-bigvHeight：上/下行分辨率高
+bigvHeight：上/下行分辨率高；
+aCapEnergy：音频采集能量；
+aPlayEnergy：音频播放能量；
+rtt：SDK到云端的往返延时；单位: ms
  * @method integer getPageNumber() 获取当前页数，默认为0，
 注意：PageNumber和PageSize 其中一个不填均默认返回6条数据。
  * @method void setPageNumber(integer $PageNumber) 设置当前页数，默认为0，
@@ -118,7 +124,10 @@ bigvBlock：视频卡顿时长；单位：ms
 aLoss：上/下行音频丢包率；
 bigvLoss：上/下行视频丢包率；
 bigvWidth：上/下行分辨率宽；
-bigvHeight：上/下行分辨率高
+bigvHeight：上/下行分辨率高；
+aCapEnergy：音频采集能量；
+aPlayEnergy：音频播放能量；
+rtt：SDK到云端的往返延时；单位: ms
      */
     public $DataType;
 
@@ -157,7 +166,10 @@ bigvBlock：视频卡顿时长；单位：ms
 aLoss：上/下行音频丢包率；
 bigvLoss：上/下行视频丢包率；
 bigvWidth：上/下行分辨率宽；
-bigvHeight：上/下行分辨率高
+bigvHeight：上/下行分辨率高；
+aCapEnergy：音频采集能量；
+aPlayEnergy：音频播放能量；
+rtt：SDK到云端的往返延时；单位: ms
      * @param integer $PageNumber 当前页数，默认为0，
 注意：PageNumber和PageSize 其中一个不填均默认返回6条数据。
      * @param integer $PageSize 每页个数，默认为6，

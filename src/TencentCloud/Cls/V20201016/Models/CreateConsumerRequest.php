@@ -22,14 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取投递任务绑定的日志主题 ID
  * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题 ID
- * @method boolean getNeedContent() 获取是否投递日志的元数据信息，默认为 true
- * @method void setNeedContent(boolean $NeedContent) 设置是否投递日志的元数据信息，默认为 true
+ * @method boolean getNeedContent() 获取是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。
+ * @method void setNeedContent(boolean $NeedContent) 设置是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。
  * @method ConsumerContent getContent() 获取如果需要投递元数据信息，元数据信息的描述
  * @method void setContent(ConsumerContent $Content) 设置如果需要投递元数据信息，元数据信息的描述
  * @method Ckafka getCkafka() 获取CKafka的描述
  * @method void setCkafka(Ckafka $Ckafka) 设置CKafka的描述
- * @method integer getCompression() 获取投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
- * @method void setCompression(integer $Compression) 设置投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+ * @method integer getCompression() 获取投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
+ * @method void setCompression(integer $Compression) 设置投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
  */
 class CreateConsumerRequest extends AbstractModel
 {
@@ -39,7 +43,9 @@ class CreateConsumerRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var boolean 是否投递日志的元数据信息，默认为 true
+     * @var boolean 是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。
      */
     public $NeedContent;
 
@@ -54,16 +60,18 @@ class CreateConsumerRequest extends AbstractModel
     public $Ckafka;
 
     /**
-     * @var integer 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+     * @var integer 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
      */
     public $Compression;
 
     /**
      * @param string $TopicId 投递任务绑定的日志主题 ID
-     * @param boolean $NeedContent 是否投递日志的元数据信息，默认为 true
+     * @param boolean $NeedContent 是否投递日志的元数据信息，默认为 true。
+当NeedContent为true时：字段Content有效。
+当NeedContent为false时：字段Content无效。
      * @param ConsumerContent $Content 如果需要投递元数据信息，元数据信息的描述
      * @param Ckafka $Ckafka CKafka的描述
-     * @param integer $Compression 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+     * @param integer $Compression 投递时压缩方式，取值0，2，3。[0：NONE；2：SNAPPY；3：LZ4]
      */
     function __construct()
     {

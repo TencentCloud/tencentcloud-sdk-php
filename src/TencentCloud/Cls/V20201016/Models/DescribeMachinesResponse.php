@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMachines() 获取机器状态信息组
  * @method void setMachines(array $Machines) 设置机器状态信息组
- * @method integer getAutoUpdate() 获取机器组是否开启自动升级功能
- * @method void setAutoUpdate(integer $AutoUpdate) 设置机器组是否开启自动升级功能
+ * @method integer getAutoUpdate() 获取机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
+ * @method void setAutoUpdate(integer $AutoUpdate) 设置机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
  * @method string getUpdateStartTime() 获取机器组自动升级功能预设开始时间
  * @method void setUpdateStartTime(string $UpdateStartTime) 设置机器组自动升级功能预设开始时间
  * @method string getUpdateEndTime() 获取机器组自动升级功能预设结束时间
@@ -43,7 +43,7 @@ class DescribeMachinesResponse extends AbstractModel
     public $Machines;
 
     /**
-     * @var integer 机器组是否开启自动升级功能
+     * @var integer 机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
      */
     public $AutoUpdate;
 
@@ -74,7 +74,7 @@ class DescribeMachinesResponse extends AbstractModel
 
     /**
      * @param array $Machines 机器状态信息组
-     * @param integer $AutoUpdate 机器组是否开启自动升级功能
+     * @param integer $AutoUpdate 机器组是否开启自动升级功能。 0：未开启自动升级；1：开启了自动升级。
      * @param string $UpdateStartTime 机器组自动升级功能预设开始时间
      * @param string $UpdateEndTime 机器组自动升级功能预设结束时间
      * @param string $LatestAgentVersion 当前用户可用最新的Loglistener版本

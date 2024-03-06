@@ -264,6 +264,16 @@ use TencentCloud\Common\AbstractModel;
 签署人的签署截止时间，格式为Unix标准时间戳（秒）
 
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+ * @method Intention getIntention() 获取视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+ * @method void setIntention(Intention $Intention) 设置视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -499,6 +509,15 @@ class FlowCreateApprover extends AbstractModel
     public $Deadline;
 
     /**
+     * @var Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+     */
+    public $Intention;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 0：企业
 1：个人
@@ -621,6 +640,11 @@ class FlowCreateApprover extends AbstractModel
 签署人的签署截止时间，格式为Unix标准时间戳（秒）
 
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
+     * @param Intention $Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
      */
     function __construct()
     {
@@ -753,6 +777,11 @@ class FlowCreateApprover extends AbstractModel
 
         if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
             $this->Deadline = $param["Deadline"];
+        }
+
+        if (array_key_exists("Intention",$param) and $param["Intention"] !== null) {
+            $this->Intention = new Intention();
+            $this->Intention->deserialize($param["Intention"]);
         }
     }
 }

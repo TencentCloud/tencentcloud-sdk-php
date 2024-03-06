@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnhealthyHttpStatuses(array $UnhealthyHttpStatuses) 设置异常HTTP状态码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIgnoreZeroWeightNodes() 获取健康检查屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIgnoreZeroWeightNodes(boolean $IgnoreZeroWeightNodes) 设置健康检查屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpstreamHealthCheckConfig extends AbstractModel
 {
@@ -114,6 +118,12 @@ class UpstreamHealthCheckConfig extends AbstractModel
     public $UnhealthyHttpStatuses;
 
     /**
+     * @var boolean 健康检查屏蔽权重为0的节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IgnoreZeroWeightNodes;
+
+    /**
      * @param boolean $EnableActiveHealthCheck 开启主动健康检查
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KongActiveHealthCheck $ActiveHealthCheck 主动健康检查配置
@@ -131,6 +141,8 @@ class UpstreamHealthCheckConfig extends AbstractModel
      * @param array $HealthyHttpStatuses 健康HTTP状态码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UnhealthyHttpStatuses 异常HTTP状态码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IgnoreZeroWeightNodes 健康检查屏蔽权重为0的节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -182,6 +194,10 @@ class UpstreamHealthCheckConfig extends AbstractModel
 
         if (array_key_exists("UnhealthyHttpStatuses",$param) and $param["UnhealthyHttpStatuses"] !== null) {
             $this->UnhealthyHttpStatuses = $param["UnhealthyHttpStatuses"];
+        }
+
+        if (array_key_exists("IgnoreZeroWeightNodes",$param) and $param["IgnoreZeroWeightNodes"] !== null) {
+            $this->IgnoreZeroWeightNodes = $param["IgnoreZeroWeightNodes"];
         }
     }
 }

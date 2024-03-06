@@ -36,9 +36,9 @@ KafkaType为0时KafkaInstance必填
 KafkaType为1时ServerAddr必填
  * @method void setServerAddr(string $ServerAddr) 设置服务地址。
 KafkaType为1时ServerAddr必填
- * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接。。
+ * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接。
 KafkaType为1时有效。
- * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接。。
+ * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接。
 KafkaType为1时有效。
  * @method KafkaProtocolInfo getProtocol() 获取加密访问协议。
 KafkaType为1并且IsEncryptionAddr为true时Protocol必填
@@ -84,7 +84,7 @@ KafkaType为1时ServerAddr必填
     public $ServerAddr;
 
     /**
-     * @var boolean ServerAddr是否为加密连接。。
+     * @var boolean ServerAddr是否为加密连接。
 KafkaType为1时有效。
      */
     public $IsEncryptionAddr;
@@ -114,7 +114,7 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
 KafkaType为0时KafkaInstance必填
      * @param string $ServerAddr 服务地址。
 KafkaType为1时ServerAddr必填
-     * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接。。
+     * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接。
 KafkaType为1时有效。
      * @param KafkaProtocolInfo $Protocol 加密访问协议。
 KafkaType为1并且IsEncryptionAddr为true时Protocol必填

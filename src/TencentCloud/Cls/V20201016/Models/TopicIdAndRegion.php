@@ -22,10 +22,54 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取日志主题id
  * @method void setTopicId(string $TopicId) 设置日志主题id
- * @method integer getRegionId() 获取日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域）
- * @method void setRegionId(integer $RegionId) 设置日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域）
+ * @method integer getRegionId() 获取日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo
+ * @method void setRegionId(integer $RegionId) 设置日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo
  */
 class TopicIdAndRegion extends AbstractModel
 {
@@ -35,15 +79,59 @@ class TopicIdAndRegion extends AbstractModel
     public $TopicId;
 
     /**
-     * @var integer 日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域）
+     * @var integer 日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo
      */
     public $RegionId;
 
     /**
      * @param string $TopicId 日志主题id
-     * @param integer $RegionId 日志主题id 所在的地域id
-地域ID - 访问链接查看详情：https://iwiki.woa.com/pages/viewpage.action?pageId=780556968#id-地域码表-一.region大区（标准地域）
+     * @param integer $RegionId 日志主题id所在的地域id。
+
+id,地域,简称信息如下：
+- 1,   广州,ap-guangzhou
+- 4,   上海,ap-shanghai
+- 5,   中国香港,ap-hongkong
+- 6,   多伦多,na-toronto
+- 7,   上海金融,ap-shanghai-fsi
+- 8,   北京,ap-beijing
+- 9,   新加坡,ap-singapore
+- 11,  深圳金融,ap-shenzhen-fsi
+- 15,  硅谷,na-siliconvalley
+- 16,  成都,ap-chengdu
+- 17,  法兰克福,eu-frankfurt
+- 18,  首尔,ap-seoul
+- 19,  重庆,ap-chongqing
+- 21,  孟买,ap-mumbai
+- 22,  弗吉尼亚,na-ashburn
+- 23,  曼谷,ap-bangkok
+- 25,  东京,ap-tokyo
+- 33,  南京,ap-nanjing
+- 46,  北京金融,ap-beijing-fsi
+- 72,  雅加达,ap-jakarta
+- 74,  圣保罗,sa-saopaulo
      */
     function __construct()
     {

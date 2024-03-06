@@ -54,6 +54,16 @@ clb - 通过LB的方式进行访问。
  * @method void setPassword(string $Password) 设置账户密码。
  * @method string getResourceName() 获取资源名称，1-60个字符。
  * @method void setResourceName(string $ResourceName) 设置资源名称，1-60个字符。
+ * @method string getInstanceType() 获取实例类型
+databse
+sid
+serviceName
+ * @method void setInstanceType(string $InstanceType) 设置实例类型
+databse
+sid
+serviceName
+ * @method string getInstanceValue() 获取实例值
+ * @method void setInstanceValue(string $InstanceValue) 设置实例值
  */
 class CreateDSPASelfBuildMetaResourceRequest extends AbstractModel
 {
@@ -123,6 +133,19 @@ clb - 通过LB的方式进行访问。
     public $ResourceName;
 
     /**
+     * @var string 实例类型
+databse
+sid
+serviceName
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 实例值
+     */
+    public $InstanceValue;
+
+    /**
      * @param string $DspaId Dspa实例ID。
      * @param string $MetaType 自建数据库类型。目前支持的自建数据库类型按照协议进行区分，支持两种开源数据库协议：
 mysql_like_proto -- Mysql协议类关系型数据库，
@@ -140,6 +163,11 @@ clb - 通过LB的方式进行访问。
      * @param string $UserName 账户名。
      * @param string $Password 账户密码。
      * @param string $ResourceName 资源名称，1-60个字符。
+     * @param string $InstanceType 实例类型
+databse
+sid
+serviceName
+     * @param string $InstanceValue 实例值
      */
     function __construct()
     {
@@ -200,6 +228,14 @@ clb - 通过LB的方式进行访问。
 
         if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
             $this->ResourceName = $param["ResourceName"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("InstanceValue",$param) and $param["InstanceValue"] !== null) {
+            $this->InstanceValue = $param["InstanceValue"];
         }
     }
 }

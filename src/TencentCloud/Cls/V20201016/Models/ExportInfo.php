@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(integer $From) 设置日志导出起始时间
  * @method integer getTo() 获取日志导出结束时间
  * @method void setTo(integer $To) 设置日志导出结束时间
- * @method string getCosPath() 获取日志导出路径
- * @method void setCosPath(string $CosPath) 设置日志导出路径
+ * @method string getCosPath() 获取日志导出路径,有效期一个小时，请尽快使用该路径下载。
+ * @method void setCosPath(string $CosPath) 设置日志导出路径,有效期一个小时，请尽快使用该路径下载。
  * @method string getCreateTime() 获取日志导出创建时间
  * @method void setCreateTime(string $CreateTime) 设置日志导出创建时间
  * @method integer getSyntaxRule() 获取语法规则。 默认值为0。
@@ -109,7 +109,7 @@ class ExportInfo extends AbstractModel
     public $To;
 
     /**
-     * @var string 日志导出路径
+     * @var string 日志导出路径,有效期一个小时，请尽快使用该路径下载。
      */
     public $CosPath;
 
@@ -136,7 +136,7 @@ class ExportInfo extends AbstractModel
      * @param string $Status 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
      * @param integer $From 日志导出起始时间
      * @param integer $To 日志导出结束时间
-     * @param string $CosPath 日志导出路径
+     * @param string $CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
      * @param string $CreateTime 日志导出创建时间
      * @param integer $SyntaxRule 语法规则。 默认值为0。
 0：Lucene语法，1：CQL语法。

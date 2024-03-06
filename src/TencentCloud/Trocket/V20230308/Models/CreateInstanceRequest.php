@@ -37,13 +37,47 @@ experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w
  * @method void setSkuCode(string $SkuCode) 设置商品规格，可用规格如下：
 experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  * @method array getTagList() 获取标签列表
@@ -52,12 +86,20 @@ basic_6k
  * @method void setVpcList(array $VpcList) 设置实例绑定的VPC信息
  * @method boolean getEnablePublic() 获取是否开启公网
  * @method void setEnablePublic(boolean $EnablePublic) 设置是否开启公网
- * @method integer getBandwidth() 获取公网带宽
- * @method void setBandwidth(integer $Bandwidth) 设置公网带宽
+ * @method integer getBandwidth() 获取公网带宽（单位：兆）
+ * @method void setBandwidth(integer $Bandwidth) 设置公网带宽（单位：兆）
  * @method array getIpRules() 获取公网访问白名单
  * @method void setIpRules(array $IpRules) 设置公网访问白名单
- * @method integer getMessageRetention() 获取消息保留时长，小时为单位
- * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时长，小时为单位
+ * @method integer getMessageRetention() 获取消息保留时长（单位：小时）
+ * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时长（单位：小时）
+ * @method integer getPayMode() 获取付费模式（0: 后付费；1: 预付费）
+ * @method void setPayMode(integer $PayMode) 设置付费模式（0: 后付费；1: 预付费）
+ * @method integer getRenewFlag() 获取是否自动续费（0: 不自动续费；1: 自动续费）
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费（0: 不自动续费；1: 自动续费）
+ * @method integer getTimeSpan() 获取购买时长（单位：月）
+ * @method void setTimeSpan(integer $TimeSpan) 设置购买时长（单位：月）
+ * @method integer getMaxTopicNum() 获取最大可创建主题数
+ * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大可创建主题数
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -81,7 +123,24 @@ experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w
      */
     public $SkuCode;
 
@@ -106,7 +165,7 @@ basic_6k
     public $EnablePublic;
 
     /**
-     * @var integer 公网带宽
+     * @var integer 公网带宽（单位：兆）
      */
     public $Bandwidth;
 
@@ -116,9 +175,29 @@ basic_6k
     public $IpRules;
 
     /**
-     * @var integer 消息保留时长，小时为单位
+     * @var integer 消息保留时长（单位：小时）
      */
     public $MessageRetention;
+
+    /**
+     * @var integer 付费模式（0: 后付费；1: 预付费）
+     */
+    public $PayMode;
+
+    /**
+     * @var integer 是否自动续费（0: 不自动续费；1: 自动续费）
+     */
+    public $RenewFlag;
+
+    /**
+     * @var integer 购买时长（单位：月）
+     */
+    public $TimeSpan;
+
+    /**
+     * @var integer 最大可创建主题数
+     */
+    public $MaxTopicNum;
 
     /**
      * @param string $InstanceType 实例类型，
@@ -132,14 +211,35 @@ experiment_500,
 basic_1k,
 basic_2k,
 basic_4k,
-basic_6k
+basic_6k,
+pro_4k,
+pro_6k,
+pro_1w,
+pro_2w,
+pro_3w,
+pro_4w,
+pro_5w,
+platinum_6k,
+platinum_1w,
+platinum_2w,
+platinum_4w,
+platinum_10w,
+platinum_15w,
+platinum_20w,
+platinum_40w,
+platinum_60w,
+platinum_100w
      * @param string $Remark 备注信息
      * @param array $TagList 标签列表
      * @param array $VpcList 实例绑定的VPC信息
      * @param boolean $EnablePublic 是否开启公网
-     * @param integer $Bandwidth 公网带宽
+     * @param integer $Bandwidth 公网带宽（单位：兆）
      * @param array $IpRules 公网访问白名单
-     * @param integer $MessageRetention 消息保留时长，小时为单位
+     * @param integer $MessageRetention 消息保留时长（单位：小时）
+     * @param integer $PayMode 付费模式（0: 后付费；1: 预付费）
+     * @param integer $RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费）
+     * @param integer $TimeSpan 购买时长（单位：月）
+     * @param integer $MaxTopicNum 最大可创建主题数
      */
     function __construct()
     {
@@ -207,6 +307,22 @@ basic_6k
 
         if (array_key_exists("MessageRetention",$param) and $param["MessageRetention"] !== null) {
             $this->MessageRetention = $param["MessageRetention"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("MaxTopicNum",$param) and $param["MaxTopicNum"] !== null) {
+            $this->MaxTopicNum = $param["MaxTopicNum"];
         }
     }
 }

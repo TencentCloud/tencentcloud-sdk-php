@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileResultId(integer $FileResultId) 设置文件扫描结果ID
  * @method boolean getIsSetNonSensitiveFile() 获取是否设置为非敏感文件
  * @method void setIsSetNonSensitiveFile(boolean $IsSetNonSensitiveFile) 设置是否设置为非敏感文件
+ * @method string getFileName() 获取文件名
+ * @method void setFileName(string $FileName) 设置文件名
+ * @method string getBucketName() 获取桶名
+ * @method void setBucketName(string $BucketName) 设置桶名
+ * @method string getDataSourceId() 获取数据源id
+ * @method void setDataSourceId(string $DataSourceId) 设置数据源id
  */
 class ModifyDSPACOSTaskResultRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ModifyDSPACOSTaskResultRequest extends AbstractModel
     public $IsSetNonSensitiveFile;
 
     /**
+     * @var string 文件名
+     */
+    public $FileName;
+
+    /**
+     * @var string 桶名
+     */
+    public $BucketName;
+
+    /**
+     * @var string 数据源id
+     */
+    public $DataSourceId;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $ComplianceId 合规组ID
      * @param integer $FileResultId 文件扫描结果ID
      * @param boolean $IsSetNonSensitiveFile 是否设置为非敏感文件
+     * @param string $FileName 文件名
+     * @param string $BucketName 桶名
+     * @param string $DataSourceId 数据源id
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ModifyDSPACOSTaskResultRequest extends AbstractModel
 
         if (array_key_exists("IsSetNonSensitiveFile",$param) and $param["IsSetNonSensitiveFile"] !== null) {
             $this->IsSetNonSensitiveFile = $param["IsSetNonSensitiveFile"];
+        }
+
+        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
+            $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("BucketName",$param) and $param["BucketName"] !== null) {
+            $this->BucketName = $param["BucketName"];
+        }
+
+        if (array_key_exists("DataSourceId",$param) and $param["DataSourceId"] !== null) {
+            $this->DataSourceId = $param["DataSourceId"];
         }
     }
 }

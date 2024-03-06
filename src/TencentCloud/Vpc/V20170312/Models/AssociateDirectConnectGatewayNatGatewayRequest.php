@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateDirectConnectGatewayNatGateway请求参数结构体
  *
- * @method string getVpcId() 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
- * @method string getNatGatewayId() 获取NAT网关ID。
- * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关ID。
- * @method string getDirectConnectGatewayId() 获取专线网关ID。
- * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID。
+ * @method string getVpcId() 获取VPC实例ID。形如：vpc-xxx。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。形如：vpc-xxx。
+ * @method string getNatGatewayId() 获取NAT网关ID。形如：nat-xxx
+ * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关ID。形如：nat-xxx
+ * @method string getDirectConnectGatewayId() 获取专线网关ID。形如：dcg-xxx
+ * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关ID。形如：dcg-xxx
  */
 class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @var string VPC实例ID。形如：vpc-xxx。
      */
     public $VpcId;
 
     /**
-     * @var string NAT网关ID。
+     * @var string NAT网关ID。形如：nat-xxx
      */
     public $NatGatewayId;
 
     /**
-     * @var string 专线网关ID。
+     * @var string 专线网关ID。形如：dcg-xxx
      */
     public $DirectConnectGatewayId;
 
     /**
-     * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param string $NatGatewayId NAT网关ID。
-     * @param string $DirectConnectGatewayId 专线网关ID。
+     * @param string $VpcId VPC实例ID。形如：vpc-xxx。
+     * @param string $NatGatewayId NAT网关ID。形如：nat-xxx
+     * @param string $DirectConnectGatewayId 专线网关ID。形如：dcg-xxx
      */
     function __construct()
     {

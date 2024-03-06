@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) 设置日志主题名称
  * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
  * @method void setTags(array $Tags) 设置标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
- * @method boolean getStatus() 获取该日志主题是否开始采集
- * @method void setStatus(boolean $Status) 设置该日志主题是否开始采集
+ * @method boolean getStatus() 获取主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。
+ * @method void setStatus(boolean $Status) 设置主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。
  * @method boolean getAutoSplit() 获取是否开启自动分裂
  * @method void setAutoSplit(boolean $AutoSplit) 设置是否开启自动分裂
  * @method integer getMaxSplitPartitions() 获取若开启最大分裂，该主题能够能够允许的最大分区数
@@ -40,8 +42,10 @@ use TencentCloud\Common\AbstractModel;
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
  * @method void setHotPeriod(integer $HotPeriod) 设置0：关闭日志沉降。
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
- * @method boolean getIsWebTracking() 获取免鉴权开关； false: 关闭 true: 开启
- * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关； false: 关闭 true: 开启
+ * @method boolean getIsWebTracking() 获取免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
+ * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -61,7 +65,8 @@ class ModifyTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var boolean 该日志主题是否开始采集
+     * @var boolean 主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。
      */
     public $Status;
 
@@ -92,7 +97,8 @@ class ModifyTopicRequest extends AbstractModel
     public $HotPeriod;
 
     /**
-     * @var boolean 免鉴权开关； false: 关闭 true: 开启
+     * @var boolean 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     public $IsWebTracking;
 
@@ -100,14 +106,16 @@ class ModifyTopicRequest extends AbstractModel
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
-     * @param boolean $Status 该日志主题是否开始采集
+     * @param boolean $Status 主题是否开启采集，true：开启采集；false：关闭采集。
+控制台目前不支持修改此参数。
      * @param boolean $AutoSplit 是否开启自动分裂
      * @param integer $MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数
      * @param integer $Period 生命周期，单位天，标准存储取值范围1\~3600，低频存储取值范围7\~3600。取值为3640时代表永久保存
      * @param string $Describes 日志主题描述
      * @param integer $HotPeriod 0：关闭日志沉降。
 非0：开启日志沉降后标准存储的天数。HotPeriod需要大于等于7，且小于Period。仅在StorageType为 hot 时生效
-     * @param boolean $IsWebTracking 免鉴权开关； false: 关闭 true: 开启
+     * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。
+开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      */
     function __construct()
     {

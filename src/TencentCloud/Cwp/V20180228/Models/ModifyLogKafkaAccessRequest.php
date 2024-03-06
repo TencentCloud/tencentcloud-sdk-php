@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLogKafkaAccess请求参数结构体
  *
- * @method string getKafkaEnvName() 获取实例名称 如 云镜测试环境
- * @method void setKafkaEnvName(string $KafkaEnvName) 设置实例名称 如 云镜测试环境
+ * @method string getKafkaEnvName() 获取实例名称 如 主机安全测试环境
+ * @method void setKafkaEnvName(string $KafkaEnvName) 设置实例名称 如 主机安全测试环境
  * @method string getKafkaId() 获取实例ID
  * @method void setKafkaId(string $KafkaId) 设置实例ID
  * @method integer getAccessType() 获取接入方式，1公网域名接入，2支撑环境接入
@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyLogKafkaAccessRequest extends AbstractModel
 {
     /**
-     * @var string 实例名称 如 云镜测试环境
+     * @var string 实例名称 如 主机安全测试环境
      */
     public $KafkaEnvName;
 
@@ -136,7 +136,7 @@ class ModifyLogKafkaAccessRequest extends AbstractModel
     public $Pwd;
 
     /**
-     * @param string $KafkaEnvName 实例名称 如 云镜测试环境
+     * @param string $KafkaEnvName 实例名称 如 主机安全测试环境
      * @param string $KafkaId 实例ID
      * @param integer $AccessType 接入方式，1公网域名接入，2支撑环境接入
      * @param string $AccessAddr 接入地址

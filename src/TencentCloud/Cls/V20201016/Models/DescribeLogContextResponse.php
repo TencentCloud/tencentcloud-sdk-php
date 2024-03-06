@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLogContextInfos() 获取日志上下文信息集合
  * @method void setLogContextInfos(array $LogContextInfos) 设置日志上下文信息集合
- * @method boolean getPrevOver() 获取上文日志是否已经返回
- * @method void setPrevOver(boolean $PrevOver) 设置上文日志是否已经返回
- * @method boolean getNextOver() 获取下文日志是否已经返回
- * @method void setNextOver(boolean $NextOver) 设置下文日志是否已经返回
+ * @method boolean getPrevOver() 获取上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
+ * @method void setPrevOver(boolean $PrevOver) 设置上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
+ * @method boolean getNextOver() 获取下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
+ * @method void setNextOver(boolean $NextOver) 设置下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -37,12 +37,12 @@ class DescribeLogContextResponse extends AbstractModel
     public $LogContextInfos;
 
     /**
-     * @var boolean 上文日志是否已经返回
+     * @var boolean 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
      */
     public $PrevOver;
 
     /**
-     * @var boolean 下文日志是否已经返回
+     * @var boolean 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
      */
     public $NextOver;
 
@@ -53,8 +53,8 @@ class DescribeLogContextResponse extends AbstractModel
 
     /**
      * @param array $LogContextInfos 日志上下文信息集合
-     * @param boolean $PrevOver 上文日志是否已经返回
-     * @param boolean $NextOver 下文日志是否已经返回
+     * @param boolean $PrevOver 上文日志是否已经返回完成（当PrevOver为false，表示有上文日志还未全部返回）。
+     * @param boolean $NextOver 下文日志是否已经返回完成（当NextOver为false，表示有下文日志还未全部返回）。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

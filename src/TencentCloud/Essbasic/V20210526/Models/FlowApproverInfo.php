@@ -319,6 +319,16 @@ RecipientId参数获取：
 
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+ * @method Intention getIntention() 获取视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+ * @method void setIntention(Intention $Intention) 设置视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -549,6 +559,15 @@ class FlowApproverInfo extends AbstractModel
     public $Components;
 
     /**
+     * @var Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+     */
+    public $Intention;
+
+    /**
      * @param string $Name 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
      * @param string $IdCardType 签署方经办人的证件类型，支持以下类型
@@ -670,6 +689,11 @@ class FlowApproverInfo extends AbstractModel
 
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+     * @param Intention $Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+
+注:
+ `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
+`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
      */
     function __construct()
     {
@@ -802,6 +826,11 @@ class FlowApproverInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Components, $obj);
             }
+        }
+
+        if (array_key_exists("Intention",$param) and $param["Intention"] !== null) {
+            $this->Intention = new Intention();
+            $this->Intention->deserialize($param["Intention"]);
         }
     }
 }

@@ -40,8 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContext(string $Context) 设置加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
  * @method string getSort() 获取执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
  * @method void setSort(string $Sort) 设置执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
- * @method boolean getUseNewAnalysis() 获取如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
- * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
+ * @method boolean getUseNewAnalysis() 获取为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false
+ * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false
  */
 class GetAlarmLogRequest extends AbstractModel
 {
@@ -80,7 +86,10 @@ class GetAlarmLogRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var boolean 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
+     * @var boolean 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false
      */
     public $UseNewAnalysis;
 
@@ -95,7 +104,10 @@ class GetAlarmLogRequest extends AbstractModel
      * @param integer $Limit 单次查询返回的执行详情条数，最大值为1000
      * @param string $Context 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
      * @param string $Sort 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
-     * @param boolean $UseNewAnalysis 如果Query包含SQL语句，UseNewAnalysis为true时响应参数AnalysisRecords和Columns有效， UseNewAnalysis为false时响应参数AnalysisResults和ColNames有效
+     * @param boolean $UseNewAnalysis 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+两种返回方式在编码格式上有少量区别，建议使用true。
+示例值：false
      */
     function __construct()
     {

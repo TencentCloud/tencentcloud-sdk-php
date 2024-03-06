@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 日志提取规则
  *
- * @method string getTimeKey() 获取时间字段的key名字，time_key和time_format必须成对出现
+ * @method string getTimeKey() 获取时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeKey(string $TimeKey) 设置时间字段的key名字，time_key和time_format必须成对出现
+ * @method void setTimeKey(string $TimeKey) 设置时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeFormat() 获取时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeFormat(string $TimeFormat) 设置时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDelimiter() 获取分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+ * @method string getDelimiter() 获取分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDelimiter(string $Delimiter) 设置分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+ * @method void setDelimiter(string $Delimiter) 设置分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogRegex() 获取整条日志匹配规则，只有log_type为fullregex_log时有效
+ * @method string getLogRegex() 获取整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogRegex(string $LogRegex) 设置整条日志匹配规则，只有log_type为fullregex_log时有效
+ * @method void setLogRegex(string $LogRegex) 设置整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBeginRegex() 获取行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+ * @method string getBeginRegex() 获取行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBeginRegex(string $BeginRegex) 设置行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+ * @method void setBeginRegex(string $BeginRegex) 设置行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getKeys() 获取取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+ * @method array getKeys() 获取取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeys(array $Keys) 设置取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+ * @method void setKeys(array $Keys) 设置取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFilterKeyRegex() 获取需要过滤日志的key，及其对应的regex
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnMatchLogKey(string $UnMatchLogKey) 设置失败日志的key
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBacktracking() 获取增量采集模式下的回溯数据量，默认-1（全量采集）
+ * @method integer getBacktracking() 获取增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBacktracking(integer $Backtracking) 设置增量采集模式下的回溯数据量，默认-1（全量采集）
+ * @method void setBacktracking(integer $Backtracking) 设置增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsGBK() 获取是否为Gbk编码.   0: 否, 1: 是
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +104,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 class ExtractRuleInfo extends AbstractModel
 {
     /**
-     * @var string 时间字段的key名字，time_key和time_format必须成对出现
+     * @var string 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeKey;
@@ -116,25 +116,25 @@ class ExtractRuleInfo extends AbstractModel
     public $TimeFormat;
 
     /**
-     * @var string 分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+     * @var string 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Delimiter;
 
     /**
-     * @var string 整条日志匹配规则，只有log_type为fullregex_log时有效
+     * @var string 整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogRegex;
 
     /**
-     * @var string 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+     * @var string 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginRegex;
 
     /**
-     * @var array 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * @var array 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
@@ -158,7 +158,7 @@ class ExtractRuleInfo extends AbstractModel
     public $UnMatchLogKey;
 
     /**
-     * @var integer 增量采集模式下的回溯数据量，默认-1（全量采集）
+     * @var integer 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Backtracking;
@@ -220,17 +220,17 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     public $EventLogRules;
 
     /**
-     * @param string $TimeKey 时间字段的key名字，time_key和time_format必须成对出现
+     * @param string $TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Delimiter 分隔符类型日志的分隔符，只有log_type为delimiter_log时有效
+     * @param string $Delimiter 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogRegex 整条日志匹配规则，只有log_type为fullregex_log时有效
+     * @param string $LogRegex 整条日志匹配规则，只有LogType为fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BeginRegex 行首匹配规则，只有log_type为multiline_log或fullregex_log时有效
+     * @param string $BeginRegex 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有log_type为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * @param array $Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FilterKeyRegex 需要过滤日志的key，及其对应的regex
 注意：此字段可能返回 null，表示取不到有效值。
@@ -238,7 +238,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnMatchLogKey 失败日志的key
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）
+     * @param integer $Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsGBK 是否为Gbk编码.   0: 否, 1: 是
 注意：此字段可能返回 null，表示取不到有效值。

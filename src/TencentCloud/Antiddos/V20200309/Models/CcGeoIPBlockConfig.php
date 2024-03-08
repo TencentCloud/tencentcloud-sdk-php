@@ -21,12 +21,12 @@ use TencentCloud\Common\AbstractModel;
  * DDoS防护的区域封禁配置
  *
  * @method string getRegionType() 获取区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ]
  * @method void setRegionType(string $RegionType) 设置区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ]
@@ -47,7 +47,7 @@ class CcGeoIPBlockConfig extends AbstractModel
 {
     /**
      * @var string 区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ]
@@ -74,7 +74,7 @@ alg(人机校验)
 
     /**
      * @param string $RegionType 区域类型，取值[
-oversea(海外)
+oversea(境外)
 china(国内)
 customized(自定义地区)
 ]

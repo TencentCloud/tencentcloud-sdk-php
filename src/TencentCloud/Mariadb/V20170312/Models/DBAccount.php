@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置最后更新时间
  * @method integer getReadOnly() 获取只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
  * @method void setReadOnly(integer $ReadOnly) 设置只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
- * @method integer getDelayThresh() 获取该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+ * @method integer getDelayThresh() 获取该字段对只读账号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDelayThresh(integer $DelayThresh) 设置该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+ * @method void setDelayThresh(integer $DelayThresh) 设置该字段对只读账号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSlaveConst() 获取针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
  * @method void setSlaveConst(integer $SlaveConst) 设置针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
@@ -74,7 +74,7 @@ class DBAccount extends AbstractModel
     public $ReadOnly;
 
     /**
-     * @var integer 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+     * @var integer 该字段对只读账号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayThresh;
@@ -96,7 +96,7 @@ class DBAccount extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 最后更新时间
      * @param integer $ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
-     * @param integer $DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+     * @param integer $DelayThresh 该字段对只读账号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SlaveConst 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
      * @param integer $MaxUserConnections 用户最大连接数，0代表无限制

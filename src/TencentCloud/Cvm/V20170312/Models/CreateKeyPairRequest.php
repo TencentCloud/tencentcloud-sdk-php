@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyName(string $KeyName) 设置密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
  * @method integer getProjectId() 获取密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
  * @method void setProjectId(integer $ProjectId) 设置密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
  * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
  */
@@ -43,8 +43,8 @@ class CreateKeyPairRequest extends AbstractModel
     /**
      * @var integer 密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
      */
     public $ProjectId;
 
@@ -57,8 +57,8 @@ class CreateKeyPairRequest extends AbstractModel
      * @param string $KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
      * @param integer $ProjectId 密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
-<li>通过项目列表查询项目ID。
-<li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+<li>通过项目列表查询项目ID。</li>
+<li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
      */
     function __construct()

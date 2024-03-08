@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
 <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
 <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
 <li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
- * @method string getChargeType() 获取带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+ * @method string getChargeType() 获取带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
 <li>ENHANCED95_POSTPAID_BY_MONTH: 按月后付费增强型95计费</li>
 <li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 后付费日结按带宽计费</li>
 
- * @method void setChargeType(string $ChargeType) 设置带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+ * @method void setChargeType(string $ChargeType) 设置带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名称。
  * @method integer getBandwidthPackageCount() 获取带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
  * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) 设置带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
- * @method integer getInternetMaxBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
- * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
+ * @method integer getInternetMaxBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
+ * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
  * @method array getTags() 获取需要关联的标签列表。
  * @method void setTags(array $Tags) 设置需要关联的标签列表。
  * @method string getProtocol() 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
@@ -74,7 +74,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $NetworkType;
 
     /**
-     * @var string 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+     * @var string 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
@@ -95,7 +95,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $BandwidthPackageCount;
 
     /**
-     * @var integer 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
+     * @var integer 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
      */
     public $InternetMaxBandwidth;
 
@@ -126,7 +126,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
 <li>SINGLEISP_CMCC: 中国移动共享带宽包</li>
 <li>SINGLEISP_CTCC: 中国电信共享带宽包</li>
 <li>SINGLEISP_CUCC: 中国联通共享带宽包</li>
-     * @param string $ChargeType 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+     * @param string $ChargeType 带宽包计费类型, 默认为: ENHANCED95_POSTPAID_BY_MONTH, 可选值:
 <li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
 <li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
 <li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
@@ -135,7 +135,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
 
      * @param string $BandwidthPackageName 带宽包名称。
      * @param integer $BandwidthPackageCount 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
-     * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
+     * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。不同计费类型的带宽包对应不同的带宽上下限。
      * @param array $Tags 需要关联的标签列表。
      * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
      * @param integer $TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。

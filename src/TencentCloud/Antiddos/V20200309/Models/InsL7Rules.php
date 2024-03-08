@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例7层规则
  *
- * @method integer getStatus() 获取规则在中间状态态不可修改，只可在（0， 2， 8）状态可编辑。
+ * @method integer getStatus() 获取规则在中间状态不可修改，只可在（0， 2， 8）状态可编辑。
 规则状态，0: 正常运行中, 1: 配置规则中(配置生效中), 2: 配置规则失败（配置生效失败）, 3: 删除规则中(删除生效中), 5: 删除规则失败(删除失败), 6: 等待添加规则, 7: 等待删除规则, 8: 等待上传证书, 9: 规则对应的资源不存在，被隔离, 10:等待修改规则, 11:配置修改中
- * @method void setStatus(integer $Status) 设置规则在中间状态态不可修改，只可在（0， 2， 8）状态可编辑。
+ * @method void setStatus(integer $Status) 设置规则在中间状态不可修改，只可在（0， 2， 8）状态可编辑。
 规则状态，0: 正常运行中, 1: 配置规则中(配置生效中), 2: 配置规则失败（配置生效失败）, 3: 删除规则中(删除生效中), 5: 删除规则失败(删除失败), 6: 等待添加规则, 7: 等待删除规则, 8: 等待上传证书, 9: 规则对应的资源不存在，被隔离, 10:等待修改规则, 11:配置修改中
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class InsL7Rules extends AbstractModel
 {
     /**
-     * @var integer 规则在中间状态态不可修改，只可在（0， 2， 8）状态可编辑。
+     * @var integer 规则在中间状态不可修改，只可在（0， 2， 8）状态可编辑。
 规则状态，0: 正常运行中, 1: 配置规则中(配置生效中), 2: 配置规则失败（配置生效失败）, 3: 删除规则中(删除生效中), 5: 删除规则失败(删除失败), 6: 等待添加规则, 7: 等待删除规则, 8: 等待上传证书, 9: 规则对应的资源不存在，被隔离, 10:等待修改规则, 11:配置修改中
      */
     public $Status;
@@ -76,7 +76,7 @@ class InsL7Rules extends AbstractModel
     public $SSLId;
 
     /**
-     * @param integer $Status 规则在中间状态态不可修改，只可在（0， 2， 8）状态可编辑。
+     * @param integer $Status 规则在中间状态不可修改，只可在（0， 2， 8）状态可编辑。
 规则状态，0: 正常运行中, 1: 配置规则中(配置生效中), 2: 配置规则失败（配置生效失败）, 3: 删除规则中(删除生效中), 5: 删除规则失败(删除失败), 6: 等待添加规则, 7: 等待删除规则, 8: 等待上传证书, 9: 规则对应的资源不存在，被隔离, 10:等待修改规则, 11:配置修改中
      * @param string $Domain 域名
      * @param string $Protocol 协议

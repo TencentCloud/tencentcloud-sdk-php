@@ -18,7 +18,7 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据库基础备份信息
+ * 数据库数据备份信息
  *
  * @method string getDBInstanceId() 获取实例ID。
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。

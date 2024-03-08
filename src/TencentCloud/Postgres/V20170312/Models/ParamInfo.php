@@ -94,17 +94,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastModifyTime(string $LastModifyTime) 设置参数最后一次修改时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStandbyRelated() 获取参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+ * @method integer getStandbyRelated() 获取参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStandbyRelated(integer $StandbyRelated) 设置参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+ * @method void setStandbyRelated(integer $StandbyRelated) 设置参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVersionRelationSet() 获取参数版本关联信息，存储具体内核版本下的具体参数信息
+ * @method array getVersionRelationSet() 获取参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersionRelationSet(array $VersionRelationSet) 设置参数版本关联信息，存储具体内核版本下的具体参数信息
+ * @method void setVersionRelationSet(array $VersionRelationSet) 设置参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSpecRelationSet() 获取参数规格关联信息，存储具体规格下具体的参数信息
+ * @method array getSpecRelationSet() 获取参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpecRelationSet(array $SpecRelationSet) 设置参数规格关联信息，存储具体规格下具体的参数信息
+ * @method void setSpecRelationSet(array $SpecRelationSet) 设置参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamInfo extends AbstractModel
@@ -215,19 +215,19 @@ class ParamInfo extends AbstractModel
     public $LastModifyTime;
 
     /**
-     * @var integer 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+     * @var integer 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StandbyRelated;
 
     /**
-     * @var array 参数版本关联信息，存储具体内核版本下的具体参数信息
+     * @var array 参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionRelationSet;
 
     /**
-     * @var array 参数规格关联信息，存储具体规格下具体的参数信息
+     * @var array 参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecRelationSet;
@@ -270,11 +270,11 @@ class ParamInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastModifyTime 参数最后一次修改时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StandbyRelated 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+     * @param integer $StandbyRelated 参数主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $VersionRelationSet 参数版本关联信息，存储具体内核版本下的具体参数信息
+     * @param array $VersionRelationSet 参数版本关联信息，内容为相应内核版本下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SpecRelationSet 参数规格关联信息，存储具体规格下具体的参数信息
+     * @param array $SpecRelationSet 参数规格关联信息，内容为相应规格下的参数详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

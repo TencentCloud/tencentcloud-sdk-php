@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例资源ID
  * @method void setInstanceId(string $InstanceId) 设置实例资源ID
+ * @method string getRoGroupId() 获取RO只读组Id
+ * @method void setRoGroupId(string $RoGroupId) 设置RO只读组Id
  */
 class ModifyOpenWanIpRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ModifyOpenWanIpRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string RO只读组Id
+     */
+    public $RoGroupId;
+
+    /**
      * @param string $InstanceId 实例资源ID
+     * @param string $RoGroupId RO只读组Id
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ModifyOpenWanIpRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("RoGroupId",$param) and $param["RoGroupId"] !== null) {
+            $this->RoGroupId = $param["RoGroupId"];
         }
     }
 }

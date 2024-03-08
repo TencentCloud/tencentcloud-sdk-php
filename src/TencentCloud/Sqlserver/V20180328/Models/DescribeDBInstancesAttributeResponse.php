@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTDEConfig(TDEConfigAttribute $TDEConfig) 设置TDE透明数据加密配置
  * @method SSLConfig getSSLConfig() 获取SSL加密
  * @method void setSSLConfig(SSLConfig $SSLConfig) 设置SSL加密
+ * @method DrReadableInfo getDrReadableInfo() 获取备机只读信息
+ * @method void setDrReadableInfo(DrReadableInfo $DrReadableInfo) 设置备机只读信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -96,6 +98,11 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
     public $SSLConfig;
 
     /**
+     * @var DrReadableInfo 备机只读信息
+     */
+    public $DrReadableInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +118,7 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @param integer $EventSaveDays 慢SQL、阻塞、死锁扩展事件文件保留时长
      * @param TDEConfigAttribute $TDEConfig TDE透明数据加密配置
      * @param SSLConfig $SSLConfig SSL加密
+     * @param DrReadableInfo $DrReadableInfo 备机只读信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -166,6 +174,11 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
         if (array_key_exists("SSLConfig",$param) and $param["SSLConfig"] !== null) {
             $this->SSLConfig = new SSLConfig();
             $this->SSLConfig->deserialize($param["SSLConfig"]);
+        }
+
+        if (array_key_exists("DrReadableInfo",$param) and $param["DrReadableInfo"] !== null) {
+            $this->DrReadableInfo = new DrReadableInfo();
+            $this->DrReadableInfo->deserialize($param["DrReadableInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

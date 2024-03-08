@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method PdfInfo getPdfInfo() 获取体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
  * @method void setPdfInfo(PdfInfo $PdfInfo) 设置体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+ * @method boolean getTextBasedPdfFlag() 获取PDF文件中的文字是否为文本内容.
+如果该字段为true,那么就会自动判断是电子版还是图片，自动选择直接读取文字还是 OCR 方式.
+如果该字段为false, 那么始终采用 OCR 方式
+ * @method void setTextBasedPdfFlag(boolean $TextBasedPdfFlag) 设置PDF文件中的文字是否为文本内容.
+如果该字段为true,那么就会自动判断是电子版还是图片，自动选择直接读取文字还是 OCR 方式.
+如果该字段为false, 那么始终采用 OCR 方式
  */
 class TurnPDFToObjectRequest extends AbstractModel
 {
@@ -31,7 +37,17 @@ class TurnPDFToObjectRequest extends AbstractModel
     public $PdfInfo;
 
     /**
+     * @var boolean PDF文件中的文字是否为文本内容.
+如果该字段为true,那么就会自动判断是电子版还是图片，自动选择直接读取文字还是 OCR 方式.
+如果该字段为false, 那么始终采用 OCR 方式
+     */
+    public $TextBasedPdfFlag;
+
+    /**
      * @param PdfInfo $PdfInfo 体检报告PDF文件信息, 目前只支持传PDF文件的Base64编码字符(PDF文件不能超过10MB，如果超过建议先压缩PDF，再转成base64)
+     * @param boolean $TextBasedPdfFlag PDF文件中的文字是否为文本内容.
+如果该字段为true,那么就会自动判断是电子版还是图片，自动选择直接读取文字还是 OCR 方式.
+如果该字段为false, 那么始终采用 OCR 方式
      */
     function __construct()
     {
@@ -49,6 +65,10 @@ class TurnPDFToObjectRequest extends AbstractModel
         if (array_key_exists("PdfInfo",$param) and $param["PdfInfo"] !== null) {
             $this->PdfInfo = new PdfInfo();
             $this->PdfInfo->deserialize($param["PdfInfo"]);
+        }
+
+        if (array_key_exists("TextBasedPdfFlag",$param) and $param["TextBasedPdfFlag"] !== null) {
+            $this->TextBasedPdfFlag = $param["TextBasedPdfFlag"];
         }
     }
 }

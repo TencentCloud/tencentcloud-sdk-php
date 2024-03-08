@@ -26,7 +26,7 @@ use TencentCloud\Common\AbstractModel;
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL', 'CCN', 'SSL_CCN'。</li>
 <li>public-ip-address- String - （过滤条件）公网IP。</li>
 <li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
 <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL', 'CCN', 'SSL_CCN'。</li>
 <li>public-ip-address- String - （过滤条件）公网IP。</li>
 <li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
 <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取请求对象个数
- * @method void setLimit(integer $Limit) 设置请求对象个数
+ * @method integer getOffset() 获取偏移量，默认值为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
+ * @method integer getLimit() 获取请求对象个数，默认值为20。
+ * @method void setLimit(integer $Limit) 设置请求对象个数，默认值为20。
  */
 class DescribeVpnGatewaysRequest extends AbstractModel
 {
@@ -55,7 +55,7 @@ class DescribeVpnGatewaysRequest extends AbstractModel
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL', 'CCN', 'SSL_CCN'。</li>
 <li>public-ip-address- String - （过滤条件）公网IP。</li>
 <li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
 <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
@@ -63,12 +63,12 @@ class DescribeVpnGatewaysRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认值为0。
      */
     public $Offset;
 
     /**
-     * @var integer 请求对象个数
+     * @var integer 请求对象个数，默认值为20。
      */
     public $Limit;
 
@@ -78,12 +78,12 @@ class DescribeVpnGatewaysRequest extends AbstractModel
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
+<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL', 'CCN', 'SSL_CCN'。</li>
 <li>public-ip-address- String - （过滤条件）公网IP。</li>
 <li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
 <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 请求对象个数
+     * @param integer $Offset 偏移量，默认值为0。
+     * @param integer $Limit 请求对象个数，默认值为20。
      */
     function __construct()
     {

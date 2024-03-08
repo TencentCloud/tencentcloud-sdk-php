@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取本次调用接口共返回了多少条数据。
  * @method void setTotalCount(integer $TotalCount) 设置本次调用接口共返回了多少条数据。
- * @method array getDetails() 获取帐号列表详细信息。
- * @method void setDetails(array $Details) 设置帐号列表详细信息。
+ * @method array getDetails() 获取账号列表详细信息。
+ * @method void setDetails(array $Details) 设置账号列表详细信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeAccountsResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 帐号列表详细信息。
+     * @var array 账号列表详细信息。
      */
     public $Details;
 
@@ -46,7 +46,7 @@ class DescribeAccountsResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 本次调用接口共返回了多少条数据。
-     * @param array $Details 帐号列表详细信息。
+     * @param array $Details 账号列表详细信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间。不传默认为当前时间往前推30天
  * @method string getEndTime() 获取结束时间。不传默认为当前时间
  * @method void setEndTime(string $EndTime) 设置结束时间。不传默认为当前时间
- * @method integer getOffset() 获取分页参数
- * @method void setOffset(integer $Offset) 设置分页参数
- * @method integer getLimit() 获取分页参数
- * @method void setLimit(integer $Limit) 设置分页参数
+ * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
+ * @method integer getLimit() 获取返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
  */
 class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractModel
 {
@@ -70,12 +70,12 @@ class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 分页参数
+     * @var integer 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
      */
     public $Offset;
 
     /**
-     * @var integer 分页参数
+     * @var integer 返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
      */
     public $Limit;
 
@@ -86,8 +86,8 @@ class DescribeSpecificTrafficPackageUsedDetailsRequest extends AbstractModel
      * @param integer $OrderType 排序类型，仅支持0和1，0-降序，1-升序。不传默认为0
      * @param string $StartTime 开始时间。不传默认为当前时间往前推30天
      * @param string $EndTime 结束时间。不传默认为当前时间
-     * @param integer $Offset 分页参数
-     * @param integer $Limit 分页参数
+     * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 中的相关小节
+     * @param integer $Limit 返回数量，默认为20。关于Limit的更进一步介绍请参考 API 中的相关小节。
      */
     function __construct()
     {

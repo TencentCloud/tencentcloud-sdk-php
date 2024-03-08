@@ -18,7 +18,7 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述各规格下的参数信息
+ * 各规格下的参数信息
  *
  * @method string getName() 获取参数名称
 注意：此字段可能返回 null，表示取不到有效值。

@@ -18,7 +18,7 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 订阅的的数据库表信息，用于配置和查询订阅任务接口。
+ * 订阅的数据库表信息，用于配置和查询订阅任务接口。
  *
  * @method string getObjectType() 获取订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
 注意：此字段可能返回 null，表示取不到有效值。

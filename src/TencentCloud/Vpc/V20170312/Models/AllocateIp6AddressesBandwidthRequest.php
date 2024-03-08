@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp6Addresses(array $Ip6Addresses) 设置需要开通公网访问能力的IPV6地址
  * @method integer getInternetMaxBandwidthOut() 获取带宽，单位Mbps。默认是1Mbps
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置带宽，单位Mbps。默认是1Mbps
- * @method string getInternetChargeType() 获取网络计费模式。IPV6当前对标准账户类型支持"TRAFFIC_POSTPAID_BY_HOUR"，对传统账户类型支持"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
- * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费模式。IPV6当前对标准账户类型支持"TRAFFIC_POSTPAID_BY_HOUR"，对传统账户类型支持"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+ * @method string getInternetChargeType() 获取网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+ * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
  * @method string getBandwidthPackageId() 获取带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
  */
@@ -42,7 +42,7 @@ class AllocateIp6AddressesBandwidthRequest extends AbstractModel
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string 网络计费模式。IPV6当前对标准账户类型支持"TRAFFIC_POSTPAID_BY_HOUR"，对传统账户类型支持"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+     * @var string 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
      */
     public $InternetChargeType;
 
@@ -54,7 +54,7 @@ class AllocateIp6AddressesBandwidthRequest extends AbstractModel
     /**
      * @param array $Ip6Addresses 需要开通公网访问能力的IPV6地址
      * @param integer $InternetMaxBandwidthOut 带宽，单位Mbps。默认是1Mbps
-     * @param string $InternetChargeType 网络计费模式。IPV6当前对标准账户类型支持"TRAFFIC_POSTPAID_BY_HOUR"，对传统账户类型支持"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+     * @param string $InternetChargeType 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
      * @param string $BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的ipv6地址需要传入.
      */
     function __construct()

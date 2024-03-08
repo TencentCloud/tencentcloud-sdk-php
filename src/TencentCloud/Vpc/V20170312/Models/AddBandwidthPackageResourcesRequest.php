@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceIds(array $ResourceIds) 设置资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
  * @method string getBandwidthPackageId() 获取带宽包唯一标识ID，形如'bwp-xxxx'
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID，形如'bwp-xxxx'
- * @method string getNetworkType() 获取带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
- * @method void setNetworkType(string $NetworkType) 设置带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+ * @method string getNetworkType() 获取带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
+ * @method void setNetworkType(string $NetworkType) 设置带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
  * @method string getResourceType() 获取资源类型，包括'Address', 'LoadBalance'
  * @method void setResourceType(string $ResourceType) 设置资源类型，包括'Address', 'LoadBalance'
  * @method string getProtocol() 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
@@ -44,7 +44,7 @@ class AddBandwidthPackageResourcesRequest extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var string 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+     * @var string 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
      */
     public $NetworkType;
 
@@ -61,7 +61,7 @@ class AddBandwidthPackageResourcesRequest extends AbstractModel
     /**
      * @param array $ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
      * @param string $BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
-     * @param string $NetworkType 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+     * @param string $NetworkType 带宽包类型，当前支持'BGP'、'HIGH_QUALITY_BGP'、'ANYCAST'、'SINGLEISP_CUCC'、'SINGLEISP_CMCC'、'SINGLEISP_CTCC'等类型。
      * @param string $ResourceType 资源类型，包括'Address', 'LoadBalance'
      * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
      */

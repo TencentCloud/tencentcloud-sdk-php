@@ -30,14 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgId(string $MsgId) 设置消息id
  * @method string getProducerAddr() 获取生产者地址
  * @method void setProducerAddr(string $ProducerAddr) 设置生产者地址
- * @method array getMessageTracks() 获取消费组消费情况
+ * @method array getMessageTracks() 获取消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessageTracks(array $MessageTracks) 设置消费组消费情况
+ * @method void setMessageTracks(array $MessageTracks) 设置消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getShowTopicName() 获取详情页展示的topic名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShowTopicName(string $ShowTopicName) 设置详情页展示的topic名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMessageTracksCount() 获取消费组消费情况列表总数
+ * @method void setMessageTracksCount(integer $MessageTracksCount) 设置消费组消费情况列表总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -69,7 +71,7 @@ class DescribeRocketMQMsgResponse extends AbstractModel
     public $ProducerAddr;
 
     /**
-     * @var array 消费组消费情况
+     * @var array 消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageTracks;
@@ -79,6 +81,11 @@ class DescribeRocketMQMsgResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShowTopicName;
+
+    /**
+     * @var integer 消费组消费情况列表总数
+     */
+    public $MessageTracksCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -91,10 +98,11 @@ class DescribeRocketMQMsgResponse extends AbstractModel
      * @param string $ProduceTime 生产时间
      * @param string $MsgId 消息id
      * @param string $ProducerAddr 生产者地址
-     * @param array $MessageTracks 消费组消费情况
+     * @param array $MessageTracks 消费组消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ShowTopicName 详情页展示的topic名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MessageTracksCount 消费组消费情况列表总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -141,6 +149,10 @@ class DescribeRocketMQMsgResponse extends AbstractModel
 
         if (array_key_exists("ShowTopicName",$param) and $param["ShowTopicName"] !== null) {
             $this->ShowTopicName = $param["ShowTopicName"];
+        }
+
+        if (array_key_exists("MessageTracksCount",$param) and $param["MessageTracksCount"] !== null) {
+            $this->MessageTracksCount = $param["MessageTracksCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

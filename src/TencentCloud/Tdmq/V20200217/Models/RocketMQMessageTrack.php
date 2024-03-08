@@ -22,8 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroup() 获取消费者组
  * @method void setGroup(string $Group) 设置消费者组
- * @method string getConsumeStatus() 获取消费状态
- * @method void setConsumeStatus(string $ConsumeStatus) 设置消费状态
+ * @method string getConsumeStatus() 获取消费状态,
+CONSUMED: 已消费
+CONSUMED_BUT_FILTERED: 已过滤
+NOT_CONSUME: 未消费
+ENTER_RETRY: 进入重试队列
+ENTER_DLQ: 进入死信队列
+UNKNOWN: 查询不到消费状态
+ * @method void setConsumeStatus(string $ConsumeStatus) 设置消费状态,
+CONSUMED: 已消费
+CONSUMED_BUT_FILTERED: 已过滤
+NOT_CONSUME: 未消费
+ENTER_RETRY: 进入重试队列
+ENTER_DLQ: 进入死信队列
+UNKNOWN: 查询不到消费状态
  * @method string getTrackType() 获取消息track类型
  * @method void setTrackType(string $TrackType) 设置消息track类型
  * @method string getExceptionDesc() 获取异常信息
@@ -39,7 +51,13 @@ class RocketMQMessageTrack extends AbstractModel
     public $Group;
 
     /**
-     * @var string 消费状态
+     * @var string 消费状态,
+CONSUMED: 已消费
+CONSUMED_BUT_FILTERED: 已过滤
+NOT_CONSUME: 未消费
+ENTER_RETRY: 进入重试队列
+ENTER_DLQ: 进入死信队列
+UNKNOWN: 查询不到消费状态
      */
     public $ConsumeStatus;
 
@@ -56,7 +74,13 @@ class RocketMQMessageTrack extends AbstractModel
 
     /**
      * @param string $Group 消费者组
-     * @param string $ConsumeStatus 消费状态
+     * @param string $ConsumeStatus 消费状态,
+CONSUMED: 已消费
+CONSUMED_BUT_FILTERED: 已过滤
+NOT_CONSUME: 未消费
+ENTER_RETRY: 进入重试队列
+ENTER_DLQ: 进入死信队列
+UNKNOWN: 查询不到消费状态
      * @param string $TrackType 消息track类型
      * @param string $ExceptionDesc 异常信息
 注意：此字段可能返回 null，表示取不到有效值。

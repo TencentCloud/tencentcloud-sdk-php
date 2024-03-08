@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogBackupCount(integer $LogBackupCount) 设置实例日志备份数量。
  * @method integer getLogBackupSize() 获取实例日志备份大小。
  * @method void setLogBackupSize(integer $LogBackupSize) 设置实例日志备份大小。
- * @method integer getManualBaseBackupCount() 获取手动创建的实例基础备份数量。
- * @method void setManualBaseBackupCount(integer $ManualBaseBackupCount) 设置手动创建的实例基础备份数量。
- * @method integer getManualBaseBackupSize() 获取手动创建的实例基础备份大小。
- * @method void setManualBaseBackupSize(integer $ManualBaseBackupSize) 设置手动创建的实例基础备份大小。
- * @method integer getAutoBaseBackupCount() 获取自动创建的实例基础备份数量。
- * @method void setAutoBaseBackupCount(integer $AutoBaseBackupCount) 设置自动创建的实例基础备份数量。
- * @method integer getAutoBaseBackupSize() 获取自动创建的实例基础备份大小。
- * @method void setAutoBaseBackupSize(integer $AutoBaseBackupSize) 设置自动创建的实例基础备份大小。
+ * @method integer getManualBaseBackupCount() 获取手动创建的实例数据备份数量。
+ * @method void setManualBaseBackupCount(integer $ManualBaseBackupCount) 设置手动创建的实例数据备份数量。
+ * @method integer getManualBaseBackupSize() 获取手动创建的实例数据备份大小。
+ * @method void setManualBaseBackupSize(integer $ManualBaseBackupSize) 设置手动创建的实例数据备份大小。
+ * @method integer getAutoBaseBackupCount() 获取自动创建的实例数据备份数量。
+ * @method void setAutoBaseBackupCount(integer $AutoBaseBackupCount) 设置自动创建的实例数据备份数量。
+ * @method integer getAutoBaseBackupSize() 获取自动创建的实例数据备份大小。
+ * @method void setAutoBaseBackupSize(integer $AutoBaseBackupSize) 设置自动创建的实例数据备份大小。
  * @method integer getTotalBackupCount() 获取总备份数量
  * @method void setTotalBackupCount(integer $TotalBackupCount) 设置总备份数量
  * @method integer getTotalBackupSize() 获取总备份大小
@@ -57,22 +57,22 @@ class BackupSummary extends AbstractModel
     public $LogBackupSize;
 
     /**
-     * @var integer 手动创建的实例基础备份数量。
+     * @var integer 手动创建的实例数据备份数量。
      */
     public $ManualBaseBackupCount;
 
     /**
-     * @var integer 手动创建的实例基础备份大小。
+     * @var integer 手动创建的实例数据备份大小。
      */
     public $ManualBaseBackupSize;
 
     /**
-     * @var integer 自动创建的实例基础备份数量。
+     * @var integer 自动创建的实例数据备份数量。
      */
     public $AutoBaseBackupCount;
 
     /**
-     * @var integer 自动创建的实例基础备份大小。
+     * @var integer 自动创建的实例数据备份大小。
      */
     public $AutoBaseBackupSize;
 
@@ -90,10 +90,10 @@ class BackupSummary extends AbstractModel
      * @param string $DBInstanceId 实例ID。
      * @param integer $LogBackupCount 实例日志备份数量。
      * @param integer $LogBackupSize 实例日志备份大小。
-     * @param integer $ManualBaseBackupCount 手动创建的实例基础备份数量。
-     * @param integer $ManualBaseBackupSize 手动创建的实例基础备份大小。
-     * @param integer $AutoBaseBackupCount 自动创建的实例基础备份数量。
-     * @param integer $AutoBaseBackupSize 自动创建的实例基础备份大小。
+     * @param integer $ManualBaseBackupCount 手动创建的实例数据备份数量。
+     * @param integer $ManualBaseBackupSize 手动创建的实例数据备份大小。
+     * @param integer $AutoBaseBackupCount 自动创建的实例数据备份数量。
+     * @param integer $AutoBaseBackupSize 自动创建的实例数据备份大小。
      * @param integer $TotalBackupCount 总备份数量
      * @param integer $TotalBackupSize 总备份大小
      */

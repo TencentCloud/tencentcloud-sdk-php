@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPulsarMsgId(string $PulsarMsgId) 设置pulsar消息id
  * @method boolean getQueryDlqMsg() 获取查询死信时该值为true，只对Rocketmq有效
  * @method void setQueryDlqMsg(boolean $QueryDlqMsg) 设置查询死信时该值为true，只对Rocketmq有效
+ * @method boolean getQueryDeadLetterMessage() 获取查询死信时该值为true，只对Rocketmq有效
+ * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) 设置查询死信时该值为true，只对Rocketmq有效
+ * @method integer getOffset() 获取分页Offset
+ * @method void setOffset(integer $Offset) 设置分页Offset
+ * @method integer getLimit() 获取分页Limit
+ * @method void setLimit(integer $Limit) 设置分页Limit
+ * @method string getFilterTrackGroup() 获取根据消费组名称过滤消费详情
+ * @method void setFilterTrackGroup(string $FilterTrackGroup) 设置根据消费组名称过滤消费详情
  */
 class DescribeRocketMQMsgRequest extends AbstractModel
 {
@@ -62,8 +70,29 @@ class DescribeRocketMQMsgRequest extends AbstractModel
 
     /**
      * @var boolean 查询死信时该值为true，只对Rocketmq有效
+     * @deprecated
      */
     public $QueryDlqMsg;
+
+    /**
+     * @var boolean 查询死信时该值为true，只对Rocketmq有效
+     */
+    public $QueryDeadLetterMessage;
+
+    /**
+     * @var integer 分页Offset
+     */
+    public $Offset;
+
+    /**
+     * @var integer 分页Limit
+     */
+    public $Limit;
+
+    /**
+     * @var string 根据消费组名称过滤消费详情
+     */
+    public $FilterTrackGroup;
 
     /**
      * @param string $ClusterId 集群id
@@ -72,6 +101,10 @@ class DescribeRocketMQMsgRequest extends AbstractModel
      * @param string $MsgId 消息id
      * @param string $PulsarMsgId pulsar消息id
      * @param boolean $QueryDlqMsg 查询死信时该值为true，只对Rocketmq有效
+     * @param boolean $QueryDeadLetterMessage 查询死信时该值为true，只对Rocketmq有效
+     * @param integer $Offset 分页Offset
+     * @param integer $Limit 分页Limit
+     * @param string $FilterTrackGroup 根据消费组名称过滤消费详情
      */
     function __construct()
     {
@@ -108,6 +141,22 @@ class DescribeRocketMQMsgRequest extends AbstractModel
 
         if (array_key_exists("QueryDlqMsg",$param) and $param["QueryDlqMsg"] !== null) {
             $this->QueryDlqMsg = $param["QueryDlqMsg"];
+        }
+
+        if (array_key_exists("QueryDeadLetterMessage",$param) and $param["QueryDeadLetterMessage"] !== null) {
+            $this->QueryDeadLetterMessage = $param["QueryDeadLetterMessage"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("FilterTrackGroup",$param) and $param["FilterTrackGroup"] !== null) {
+            $this->FilterTrackGroup = $param["FilterTrackGroup"];
         }
     }
 }

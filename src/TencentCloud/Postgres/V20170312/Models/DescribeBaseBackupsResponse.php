@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBaseBackups返回参数结构体
  *
- * @method integer getTotalCount() 获取查询到的基础备份数量。
- * @method void setTotalCount(integer $TotalCount) 设置查询到的基础备份数量。
- * @method array getBaseBackupSet() 获取基础备份详细信息列表。
- * @method void setBaseBackupSet(array $BaseBackupSet) 设置基础备份详细信息列表。
+ * @method integer getTotalCount() 获取查询到的数据备份数量。
+ * @method void setTotalCount(integer $TotalCount) 设置查询到的数据备份数量。
+ * @method array getBaseBackupSet() 获取数据备份详细信息列表。
+ * @method void setBaseBackupSet(array $BaseBackupSet) 设置数据备份详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBaseBackupsResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的基础备份数量。
+     * @var integer 查询到的数据备份数量。
      */
     public $TotalCount;
 
     /**
-     * @var array 基础备份详细信息列表。
+     * @var array 数据备份详细信息列表。
      */
     public $BaseBackupSet;
 
@@ -45,8 +45,8 @@ class DescribeBaseBackupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询到的基础备份数量。
-     * @param array $BaseBackupSet 基础备份详细信息列表。
+     * @param integer $TotalCount 查询到的数据备份数量。
+     * @param array $BaseBackupSet 数据备份详细信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

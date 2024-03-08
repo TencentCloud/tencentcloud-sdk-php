@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTsMax(string $TsMax) 设置最后执行时间
  * @method string getTsMin() 获取首次执行时间
  * @method void setTsMin(string $TsMin) 设置首次执行时间
- * @method string getUser() 获取帐号
- * @method void setUser(string $User) 设置帐号
+ * @method string getUser() 获取账号
+ * @method void setUser(string $User) 设置账号
  * @method string getExampleSql() 获取样例Sql
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExampleSql(string $ExampleSql) 设置样例Sql
@@ -146,7 +146,7 @@ class SlowLogData extends AbstractModel
     public $TsMin;
 
     /**
-     * @var string 帐号
+     * @var string 账号
      */
     public $User;
 
@@ -179,7 +179,7 @@ class SlowLogData extends AbstractModel
      * @param string $RowsSentSum 发送行数
      * @param string $TsMax 最后执行时间
      * @param string $TsMin 首次执行时间
-     * @param string $User 帐号
+     * @param string $User 账号
      * @param string $ExampleSql 样例Sql
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Host 账户的域名

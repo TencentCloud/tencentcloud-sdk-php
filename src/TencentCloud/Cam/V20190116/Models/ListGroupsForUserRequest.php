@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListGroupsForUser请求参数结构体
  *
- * @method integer getUid() 获取子用户 UID
- * @method void setUid(integer $Uid) 设置子用户 UID
+ * @method integer getUid() 获取子用户 UID，入参Uid和SubUin二选一
+ * @method void setUid(integer $Uid) 设置子用户 UID，入参Uid和SubUin二选一
  * @method integer getRp() 获取每页数量。默认为20。
  * @method void setRp(integer $Rp) 设置每页数量。默认为20。
  * @method integer getPage() 获取页码。默认为1。
  * @method void setPage(integer $Page) 设置页码。默认为1。
- * @method integer getSubUin() 获取子账号UIN
- * @method void setSubUin(integer $SubUin) 设置子账号UIN
+ * @method integer getSubUin() 获取子账号UIN，入参Uid和SubUin二选一
+ * @method void setSubUin(integer $SubUin) 设置子账号UIN，入参Uid和SubUin二选一
  */
 class ListGroupsForUserRequest extends AbstractModel
 {
     /**
-     * @var integer 子用户 UID
+     * @var integer 子用户 UID，入参Uid和SubUin二选一
      */
     public $Uid;
 
@@ -47,15 +47,15 @@ class ListGroupsForUserRequest extends AbstractModel
     public $Page;
 
     /**
-     * @var integer 子账号UIN
+     * @var integer 子账号UIN，入参Uid和SubUin二选一
      */
     public $SubUin;
 
     /**
-     * @param integer $Uid 子用户 UID
+     * @param integer $Uid 子用户 UID，入参Uid和SubUin二选一
      * @param integer $Rp 每页数量。默认为20。
      * @param integer $Page 页码。默认为1。
-     * @param integer $SubUin 子账号UIN
+     * @param integer $SubUin 子账号UIN，入参Uid和SubUin二选一
      */
     function __construct()
     {

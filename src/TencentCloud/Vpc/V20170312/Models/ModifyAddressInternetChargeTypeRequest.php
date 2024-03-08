@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAddressId() 获取弹性公网IP的唯一ID，形如eip-xxx
  * @method void setAddressId(string $AddressId) 设置弹性公网IP的唯一ID，形如eip-xxx
- * @method string getInternetChargeType() 获取弹性公网IP调整目标计费模式，只支持"BANDWIDTH_PREPAID_BY_MONTH"和"TRAFFIC_POSTPAID_BY_HOUR"
- * @method void setInternetChargeType(string $InternetChargeType) 设置弹性公网IP调整目标计费模式，只支持"BANDWIDTH_PREPAID_BY_MONTH"和"TRAFFIC_POSTPAID_BY_HOUR"
+ * @method string getInternetChargeType() 获取弹性公网IP调整目标计费模式，支持 "BANDWIDTH_PREPAID_BY_MONTH"、"TRAFFIC_POSTPAID_BY_HOUR"、"BANDWIDTH_POSTPAID_BY_HOUR"
+ * @method void setInternetChargeType(string $InternetChargeType) 设置弹性公网IP调整目标计费模式，支持 "BANDWIDTH_PREPAID_BY_MONTH"、"TRAFFIC_POSTPAID_BY_HOUR"、"BANDWIDTH_POSTPAID_BY_HOUR"
  * @method integer getInternetMaxBandwidthOut() 获取弹性公网IP调整目标带宽值
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置弹性公网IP调整目标带宽值
  * @method AddressChargePrepaid getAddressChargePrepaid() 获取包月带宽网络计费模式参数。弹性公网IP的调整目标计费模式是"BANDWIDTH_PREPAID_BY_MONTH"时，必传该参数。
@@ -37,7 +37,7 @@ class ModifyAddressInternetChargeTypeRequest extends AbstractModel
     public $AddressId;
 
     /**
-     * @var string 弹性公网IP调整目标计费模式，只支持"BANDWIDTH_PREPAID_BY_MONTH"和"TRAFFIC_POSTPAID_BY_HOUR"
+     * @var string 弹性公网IP调整目标计费模式，支持 "BANDWIDTH_PREPAID_BY_MONTH"、"TRAFFIC_POSTPAID_BY_HOUR"、"BANDWIDTH_POSTPAID_BY_HOUR"
      */
     public $InternetChargeType;
 
@@ -53,7 +53,7 @@ class ModifyAddressInternetChargeTypeRequest extends AbstractModel
 
     /**
      * @param string $AddressId 弹性公网IP的唯一ID，形如eip-xxx
-     * @param string $InternetChargeType 弹性公网IP调整目标计费模式，只支持"BANDWIDTH_PREPAID_BY_MONTH"和"TRAFFIC_POSTPAID_BY_HOUR"
+     * @param string $InternetChargeType 弹性公网IP调整目标计费模式，支持 "BANDWIDTH_PREPAID_BY_MONTH"、"TRAFFIC_POSTPAID_BY_HOUR"、"BANDWIDTH_POSTPAID_BY_HOUR"
      * @param integer $InternetMaxBandwidthOut 弹性公网IP调整目标带宽值
      * @param AddressChargePrepaid $AddressChargePrepaid 包月带宽网络计费模式参数。弹性公网IP的调整目标计费模式是"BANDWIDTH_PREPAID_BY_MONTH"时，必传该参数。
      */

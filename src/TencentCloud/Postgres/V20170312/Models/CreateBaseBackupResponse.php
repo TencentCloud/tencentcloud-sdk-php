@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBaseBackup返回参数结构体
  *
- * @method string getBaseBackupId() 获取基础备份集ID
- * @method void setBaseBackupId(string $BaseBackupId) 设置基础备份集ID
+ * @method string getBaseBackupId() 获取数据备份集ID
+ * @method void setBaseBackupId(string $BaseBackupId) 设置数据备份集ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateBaseBackupResponse extends AbstractModel
 {
     /**
-     * @var string 基础备份集ID
+     * @var string 数据备份集ID
      */
     public $BaseBackupId;
 
@@ -38,7 +38,7 @@ class CreateBaseBackupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BaseBackupId 基础备份集ID
+     * @param string $BaseBackupId 数据备份集ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetFolderId(string $TargetFolderId) 设置拖拽文件需传入此参数
  * @method string getWorkSpaceId() 获取工作空间 SerialId
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+ * @method string getDescription() 获取作业描述
+ * @method void setDescription(string $Description) 设置作业描述
  */
 class ModifyJobRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyJobRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
+     * @var string 作业描述
+     */
+    public $Description;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $Name 作业名称，支持长度小于50的中文/英文/数字/”-”/”_”/”.”，不能重名
      * @param string $Remark 描述
      * @param string $TargetFolderId 拖拽文件需传入此参数
      * @param string $WorkSpaceId 工作空间 SerialId
+     * @param string $Description 作业描述
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyJobRequest extends AbstractModel
 
         if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
             $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBackupPeriod() 获取备份周期
  * @method void setBackupPeriod(string $BackupPeriod) 设置备份周期
- * @method integer getBaseBackupRetentionPeriod() 获取基础备份保留时长
- * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置基础备份保留时长
+ * @method integer getBaseBackupRetentionPeriod() 获取数据备份保留时长
+ * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置数据备份保留时长
  * @method string getMinBackupStartTime() 获取开始备份的最早时间
  * @method void setMinBackupStartTime(string $MinBackupStartTime) 设置开始备份的最早时间
  * @method string getMaxBackupStartTime() 获取开始备份的最晚时间
@@ -37,7 +37,7 @@ class BackupPlan extends AbstractModel
     public $BackupPeriod;
 
     /**
-     * @var integer 基础备份保留时长
+     * @var integer 数据备份保留时长
      */
     public $BaseBackupRetentionPeriod;
 
@@ -53,7 +53,7 @@ class BackupPlan extends AbstractModel
 
     /**
      * @param string $BackupPeriod 备份周期
-     * @param integer $BaseBackupRetentionPeriod 基础备份保留时长
+     * @param integer $BaseBackupRetentionPeriod 数据备份保留时长
      * @param string $MinBackupStartTime 开始备份的最早时间
      * @param string $MaxBackupStartTime 开始备份的最晚时间
      */

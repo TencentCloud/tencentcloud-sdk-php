@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterInstanceId(string $MasterInstanceId) 设置主实例ID，形如mssql-sgeshe3th
  * @method array getReadOnlyInstanceSet() 获取只读实例副本集合
  * @method void setReadOnlyInstanceSet(array $ReadOnlyInstanceSet) 设置只读实例副本集合
+ * @method string getDnsPodDomain() 获取RO组外网地址域名
+ * @method void setDnsPodDomain(string $DnsPodDomain) 设置RO组外网地址域名
+ * @method integer getTgwWanVPort() 获取RO组外网地址端口
+ * @method void setTgwWanVPort(integer $TgwWanVPort) 设置RO组外网地址端口
  */
 class ReadOnlyGroup extends AbstractModel
 {
@@ -122,6 +126,16 @@ class ReadOnlyGroup extends AbstractModel
     public $ReadOnlyInstanceSet;
 
     /**
+     * @var string RO组外网地址域名
+     */
+    public $DnsPodDomain;
+
+    /**
+     * @var integer RO组外网地址端口
+     */
+    public $TgwWanVPort;
+
+    /**
      * @param string $ReadOnlyGroupId 只读组ID
      * @param string $ReadOnlyGroupName 只读组名称
      * @param string $RegionId 只读组的地域ID，与主实例相同
@@ -136,6 +150,8 @@ class ReadOnlyGroup extends AbstractModel
      * @param integer $Status 只读组状态: 1-申请成功运行中，5-申请中
      * @param string $MasterInstanceId 主实例ID，形如mssql-sgeshe3th
      * @param array $ReadOnlyInstanceSet 只读实例副本集合
+     * @param string $DnsPodDomain RO组外网地址域名
+     * @param integer $TgwWanVPort RO组外网地址端口
      */
     function __construct()
     {
@@ -209,6 +225,14 @@ class ReadOnlyGroup extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ReadOnlyInstanceSet, $obj);
             }
+        }
+
+        if (array_key_exists("DnsPodDomain",$param) and $param["DnsPodDomain"] !== null) {
+            $this->DnsPodDomain = $param["DnsPodDomain"];
+        }
+
+        if (array_key_exists("TgwWanVPort",$param) and $param["TgwWanVPort"] !== null) {
+            $this->TgwWanVPort = $param["TgwWanVPort"];
         }
     }
 }

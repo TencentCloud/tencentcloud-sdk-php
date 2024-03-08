@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) 设置规则ID。
  * @method string getOriginType() 获取源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。
+<li>origins：源站组。</li>
  * @method void setOriginType(string $OriginType) 设置源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。
+<li>origins：源站组。</li>
  * @method array getPort() 获取端口，支持格式：
 <li>80：80端口；</li>
 <li>81-90：81至90端口。</li>
@@ -101,7 +101,7 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
     /**
      * @var string 源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。
+<li>origins：源站组。</li>
      */
     public $OriginType;
 
@@ -167,7 +167,7 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
      * @param string $RuleId 规则ID。
      * @param string $OriginType 源站类型，取值有：
 <li>custom：手动添加；</li>
-<li>origins：源站组。</li>不填保持原有值。
+<li>origins：源站组。</li>
      * @param array $Port 端口，支持格式：
 <li>80：80端口；</li>
 <li>81-90：81至90端口。</li>

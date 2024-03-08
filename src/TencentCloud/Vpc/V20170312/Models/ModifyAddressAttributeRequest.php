@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAddressId() 获取标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
  * @method void setAddressId(string $AddressId) 设置标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
- * @method string getAddressName() 获取修改后的 EIP 名称。长度上限为20个字符。
- * @method void setAddressName(string $AddressName) 设置修改后的 EIP 名称。长度上限为20个字符。
+ * @method string getAddressName() 获取修改后的 EIP 名称。长度上限为128个字符。
+ * @method void setAddressName(string $AddressName) 设置修改后的 EIP 名称。长度上限为128个字符。
  * @method string getEipDirectConnection() 获取设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
  * @method void setEipDirectConnection(string $EipDirectConnection) 设置设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
  */
@@ -35,7 +35,7 @@ class ModifyAddressAttributeRequest extends AbstractModel
     public $AddressId;
 
     /**
-     * @var string 修改后的 EIP 名称。长度上限为20个字符。
+     * @var string 修改后的 EIP 名称。长度上限为128个字符。
      */
     public $AddressName;
 
@@ -46,7 +46,7 @@ class ModifyAddressAttributeRequest extends AbstractModel
 
     /**
      * @param string $AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
-     * @param string $AddressName 修改后的 EIP 名称。长度上限为20个字符。
+     * @param string $AddressName 修改后的 EIP 名称。长度上限为128个字符。
      * @param string $EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
      */
     function __construct()

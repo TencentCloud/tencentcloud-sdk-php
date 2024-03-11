@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProfile(string $Profile) 设置RetProfile为True时返回头像字段， Base64编码
  * @method MainlandTravelPermitBackInfos getMainlandTravelPermitBackInfos() 获取背面字段信息
  * @method void setMainlandTravelPermitBackInfos(MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos) 设置背面字段信息
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class MainlandPermitOCRResponse extends AbstractModel
 {
@@ -110,7 +110,7 @@ class MainlandPermitOCRResponse extends AbstractModel
     public $MainlandTravelPermitBackInfos;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -127,7 +127,7 @@ class MainlandPermitOCRResponse extends AbstractModel
      * @param string $Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
      * @param string $Profile RetProfile为True时返回头像字段， Base64编码
      * @param MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos 背面字段信息
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

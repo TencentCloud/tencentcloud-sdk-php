@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlock(Block $Block) 设置报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
  * @method boolean getIsBlock() 获取是否使用Block字段
  * @method void setIsBlock(boolean $IsBlock) 设置是否使用Block字段
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class TurnPDFToObjectResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class TurnPDFToObjectResponse extends AbstractModel
     public $IsBlock;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class TurnPDFToObjectResponse extends AbstractModel
      * @param array $TextTypeList 多级分类结果
      * @param Block $Block 报告结构化结果(体检报告PDF结构化接口返回的 json 内容非常多，建议通过本地代码调用)
      * @param boolean $IsBlock 是否使用Block字段
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

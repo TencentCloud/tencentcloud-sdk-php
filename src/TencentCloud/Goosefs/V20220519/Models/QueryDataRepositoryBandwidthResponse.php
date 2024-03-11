@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthStatus(integer $BandwidthStatus) 设置带宽状态。1:待扩容;2:运行中;3:扩容中
  * @method integer getMinBandwidth() 获取能设置的最小带宽, 单位MB/s
  * @method void setMinBandwidth(integer $MinBandwidth) 设置能设置的最小带宽, 单位MB/s
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class QueryDataRepositoryBandwidthResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class QueryDataRepositoryBandwidthResponse extends AbstractModel
     public $MinBandwidth;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class QueryDataRepositoryBandwidthResponse extends AbstractModel
      * @param integer $Bandwidth 数据流动带宽, 单位MB/s
      * @param integer $BandwidthStatus 带宽状态。1:待扩容;2:运行中;3:扩容中
      * @param integer $MinBandwidth 能设置的最小带宽, 单位MB/s
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

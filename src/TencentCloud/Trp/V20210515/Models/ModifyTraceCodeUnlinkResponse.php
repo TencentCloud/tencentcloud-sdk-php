@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeCnt(integer $CodeCnt) 设置当前批次的码数量
  * @method string getBatchId() 获取批次ID
  * @method void setBatchId(string $BatchId) 设置批次ID
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyTraceCodeUnlinkResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyTraceCodeUnlinkResponse extends AbstractModel
     public $BatchId;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class ModifyTraceCodeUnlinkResponse extends AbstractModel
      * @param integer $UnlinkCnt 成功解绑溯源码的数量
      * @param integer $CodeCnt 当前批次的码数量
      * @param string $BatchId 批次ID
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

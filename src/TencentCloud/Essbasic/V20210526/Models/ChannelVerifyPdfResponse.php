@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVerifySerialNo(string $VerifySerialNo) 设置验签序列号, 为11为数组组成的字符串
  * @method string getPdfResourceMd5() 获取合同文件MD5哈希值
  * @method void setPdfResourceMd5(string $PdfResourceMd5) 设置合同文件MD5哈希值
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelVerifyPdfResponse extends AbstractModel
 {
@@ -72,7 +72,7 @@ class ChannelVerifyPdfResponse extends AbstractModel
     public $PdfResourceMd5;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -87,7 +87,7 @@ class ChannelVerifyPdfResponse extends AbstractModel
      * @param array $PdfVerifyResults 验签结果详情，所有签署区(包括签名区, 印章区, 日期签署区,骑缝章等)的签署验签结果
      * @param string $VerifySerialNo 验签序列号, 为11为数组组成的字符串
      * @param string $PdfResourceMd5 合同文件MD5哈希值
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

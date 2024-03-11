@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulNum(integer $VulNum) 设置漏洞数。
  * @method integer getBaseLineNum() 获取安全基线数。
  * @method void setBaseLineNum(integer $BaseLineNum) 设置安全基线数。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOverviewStatisticsResponse extends AbstractModel
 {
@@ -75,7 +75,7 @@ class DescribeOverviewStatisticsResponse extends AbstractModel
     public $BaseLineNum;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -87,7 +87,7 @@ class DescribeOverviewStatisticsResponse extends AbstractModel
      * @param integer $BruteAttackSuccessNum 暴力破解成功数。
      * @param integer $VulNum 漏洞数。
      * @param integer $BaseLineNum 安全基线数。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

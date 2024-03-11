@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShrinkIdleTime(integer $ShrinkIdleTime) 设置节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
  * @method array getQueueConfigs() 获取扩容队列配置概览列表。
  * @method void setQueueConfigs(array $QueueConfigs) 设置扩容队列配置概览列表。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAutoScalingConfigurationResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeAutoScalingConfigurationResponse extends AbstractModel
     public $QueueConfigs;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeAutoScalingConfigurationResponse extends AbstractModel
      * @param integer $ExpansionBusyTime 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
      * @param integer $ShrinkIdleTime 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
      * @param array $QueueConfigs 扩容队列配置概览列表。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

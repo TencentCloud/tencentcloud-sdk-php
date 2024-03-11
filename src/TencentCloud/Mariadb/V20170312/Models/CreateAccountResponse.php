@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置允许访问的 host，透传入参。
  * @method integer getReadOnly() 获取透传入参。
  * @method void setReadOnly(integer $ReadOnly) 设置透传入参。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAccountResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateAccountResponse extends AbstractModel
     public $ReadOnly;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class CreateAccountResponse extends AbstractModel
      * @param string $UserName 用户名，透传入参。
      * @param string $Host 允许访问的 host，透传入参。
      * @param integer $ReadOnly 透传入参。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

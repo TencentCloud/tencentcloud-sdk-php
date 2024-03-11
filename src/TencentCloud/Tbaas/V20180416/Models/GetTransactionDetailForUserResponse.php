@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContractName(string $ContractName) 设置交易所在合约名称
  * @method array getEndorserOrgList() 获取背书组织列表
  * @method void setEndorserOrgList(array $EndorserOrgList) 设置背书组织列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetTransactionDetailForUserResponse extends AbstractModel
 {
@@ -117,7 +117,7 @@ class GetTransactionDetailForUserResponse extends AbstractModel
     public $EndorserOrgList;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -135,7 +135,7 @@ class GetTransactionDetailForUserResponse extends AbstractModel
      * @param string $ChannelName 通道名称
      * @param string $ContractName 交易所在合约名称
      * @param array $EndorserOrgList 背书组织列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

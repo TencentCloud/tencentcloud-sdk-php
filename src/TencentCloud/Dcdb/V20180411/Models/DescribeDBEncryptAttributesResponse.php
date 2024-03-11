@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCipherText(string $CipherText) 设置DEK密钥
  * @method string getExpireDate() 获取DEK密钥过期日期。
  * @method void setExpireDate(string $ExpireDate) 设置DEK密钥过期日期。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBEncryptAttributesResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDBEncryptAttributesResponse extends AbstractModel
     public $ExpireDate;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeDBEncryptAttributesResponse extends AbstractModel
      * @param integer $EncryptStatus 是否启用加密，1-已开启；0-未开启。
      * @param string $CipherText DEK密钥
      * @param string $ExpireDate DEK密钥过期日期。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

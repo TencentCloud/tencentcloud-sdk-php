@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisconnectTime(integer $DisconnectTime) 设置上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
  * @method array getMQTTClientSubscriptions() 获取客户端的订阅列表
  * @method void setMQTTClientSubscriptions(array $MQTTClientSubscriptions) 设置客户端的订阅列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMQTTClientResponse extends AbstractModel
 {
@@ -89,7 +89,7 @@ class DescribeMQTTClientResponse extends AbstractModel
     public $MQTTClientSubscriptions;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -103,7 +103,7 @@ class DescribeMQTTClientResponse extends AbstractModel
      * @param integer $ConnectTime 上次建立连接时间
      * @param integer $DisconnectTime 上次断开连接时间，仅对持久会话（cleanSession=false）并且客户端当前未连接时有意义
      * @param array $MQTTClientSubscriptions 客户端的订阅列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

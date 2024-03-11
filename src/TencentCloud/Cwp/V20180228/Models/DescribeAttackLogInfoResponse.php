@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置攻击时间
  * @method string getHttpContent() 获取攻击内容
  * @method void setHttpContent(string $HttpContent) 设置攻击内容
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAttackLogInfoResponse extends AbstractModel
 {
@@ -138,7 +138,7 @@ class DescribeAttackLogInfoResponse extends AbstractModel
     public $HttpContent;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -159,7 +159,7 @@ class DescribeAttackLogInfoResponse extends AbstractModel
      * @param string $HttpParam 攻击参数
      * @param string $CreatedAt 攻击时间
      * @param string $HttpContent 攻击内容
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

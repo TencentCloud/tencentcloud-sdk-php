@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWarningSetStat(integer $WarningSetStat) 设置安全告警 0:未开通设置（全部关闭） 1:已开通（只要开启1个就算）
  * @method integer getEventBashStat() 获取高危命令，0：0台开通专业版/旗舰版， 1：存在未处理风险， 2：已有付费资产，无风险
  * @method void setEventBashStat(integer $EventBashStat) 设置高危命令，0：0台开通专业版/旗舰版， 1：存在未处理风险， 2：已有付费资产，无风险
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSecurityProtectionStatResponse extends AbstractModel
 {
@@ -138,7 +138,7 @@ class DescribeSecurityProtectionStatResponse extends AbstractModel
     public $EventBashStat;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -159,7 +159,7 @@ class DescribeSecurityProtectionStatResponse extends AbstractModel
      * @param integer $LogAnalysisStat 日志分析 0:未开通服务, 1:已开通
      * @param integer $WarningSetStat 安全告警 0:未开通设置（全部关闭） 1:已开通（只要开启1个就算）
      * @param integer $EventBashStat 高危命令，0：0台开通专业版/旗舰版， 1：存在未处理风险， 2：已有付费资产，无风险
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

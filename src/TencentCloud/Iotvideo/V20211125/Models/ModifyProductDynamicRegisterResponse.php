@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductSecret(string $ProductSecret) 设置动态注册产品密钥
  * @method integer getRegisterLimit() 获取动态注册设备上限
  * @method void setRegisterLimit(integer $RegisterLimit) 设置动态注册设备上限
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyProductDynamicRegisterResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyProductDynamicRegisterResponse extends AbstractModel
     public $RegisterLimit;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class ModifyProductDynamicRegisterResponse extends AbstractModel
      * @param integer $RegisterType 动态注册类型，0-关闭 1-预创建设备 2-自动创建设备
      * @param string $ProductSecret 动态注册产品密钥
      * @param integer $RegisterLimit 动态注册设备上限
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

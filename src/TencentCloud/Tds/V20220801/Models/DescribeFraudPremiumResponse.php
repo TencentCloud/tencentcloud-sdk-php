@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHistRiskInfos(array $HistRiskInfos) 设置离线风险信息
  * @method string getOpenid() 获取设备匿名标识
  * @method void setOpenid(string $Openid) 设置设备匿名标识
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFraudPremiumResponse extends AbstractModel
 {
@@ -110,7 +110,7 @@ class DescribeFraudPremiumResponse extends AbstractModel
     public $Openid;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -127,7 +127,7 @@ class DescribeFraudPremiumResponse extends AbstractModel
      * @param array $RiskInfos 实时风险信息
      * @param array $HistRiskInfos 离线风险信息
      * @param string $Openid 设备匿名标识
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

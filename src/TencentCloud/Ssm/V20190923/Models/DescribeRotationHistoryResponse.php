@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionIDs(array $VersionIDs) 设置版本号列表。
  * @method integer getTotalCount() 获取版本号个数，可以给用户展示的版本号个数上限为10个。
  * @method void setTotalCount(integer $TotalCount) 设置版本号个数，可以给用户展示的版本号个数上限为10个。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRotationHistoryResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeRotationHistoryResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $VersionIDs 版本号列表。
      * @param integer $TotalCount 版本号个数，可以给用户展示的版本号个数上限为10个。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateStatus(integer $TemplateStatus) 设置模板状态 0-审核通过 1-待审核 2-审核拒绝
  * @method string getTemplateName() 获取模板名称
  * @method void setTemplateName(string $TemplateName) 设置模板名称
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetEmailTemplateResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class GetEmailTemplateResponse extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class GetEmailTemplateResponse extends AbstractModel
      * @param TemplateContent $TemplateContent 模板内容数据
      * @param integer $TemplateStatus 模板状态 0-审核通过 1-待审核 2-审核拒绝
      * @param string $TemplateName 模板名称
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

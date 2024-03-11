@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalDomain(string $InternalDomain) 设置内部服务域名
  * @method string getDomainName() 获取弃用
  * @method void setDomainName(string $DomainName) 设置弃用
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudBaseRunServerDomainNameResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeCloudBaseRunServerDomainNameResponse extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeCloudBaseRunServerDomainNameResponse extends AbstractModel
      * @param string $PublicDomain 公网服务域名
      * @param string $InternalDomain 内部服务域名
      * @param string $DomainName 弃用
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

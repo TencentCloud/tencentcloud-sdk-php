@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedResources(array $FailedResources) 设置失败资源信息。
 创建并绑定标签成功时，返回的FailedResources为空。
 创建并绑定标签失败或部分失败时，返回的FailedResources会显示失败资源的详细信息。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class TagResourcesResponse extends AbstractModel
 {
@@ -39,7 +39,7 @@ class TagResourcesResponse extends AbstractModel
     public $FailedResources;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -47,7 +47,7 @@ class TagResourcesResponse extends AbstractModel
      * @param array $FailedResources 失败资源信息。
 创建并绑定标签成功时，返回的FailedResources为空。
 创建并绑定标签失败或部分失败时，返回的FailedResources会显示失败资源的详细信息。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

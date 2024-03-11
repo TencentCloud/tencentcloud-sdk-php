@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) 设置用户自定义文件系统名称
  * @method boolean getEncrypted() 获取文件系统是否加密
  * @method void setEncrypted(boolean $Encrypted) 设置文件系统是否加密
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCfsFileSystemResponse extends AbstractModel
 {
@@ -82,7 +82,7 @@ class CreateCfsFileSystemResponse extends AbstractModel
     public $Encrypted;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -95,7 +95,7 @@ class CreateCfsFileSystemResponse extends AbstractModel
      * @param integer $ZoneId 可用区 ID
      * @param string $FsName 用户自定义文件系统名称
      * @param boolean $Encrypted 文件系统是否加密
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

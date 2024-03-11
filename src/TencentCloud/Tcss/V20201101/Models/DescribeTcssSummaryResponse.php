@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanVulStatus(boolean $ScanVulStatus) 设置是否已扫描漏洞
  * @method integer getVulRiskImageCnt() 获取漏洞影响镜像数
  * @method void setVulRiskImageCnt(integer $VulRiskImageCnt) 设置漏洞影响镜像数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTcssSummaryResponse extends AbstractModel
 {
@@ -180,7 +180,7 @@ class DescribeTcssSummaryResponse extends AbstractModel
     public $VulRiskImageCnt;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -207,7 +207,7 @@ class DescribeTcssSummaryResponse extends AbstractModel
      * @param boolean $ScanBaseLineStatus 是否已扫描基线
      * @param boolean $ScanVulStatus 是否已扫描漏洞
      * @param integer $VulRiskImageCnt 漏洞影响镜像数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

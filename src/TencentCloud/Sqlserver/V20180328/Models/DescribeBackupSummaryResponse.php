@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrossLogBackupCount(integer $CrossLogBackupCount) 设置跨地域日志备份文件总个数
  * @method float getCrossEstimatedAmount() 获取跨地域备份预估收费金额，单位（元/小时）
  * @method void setCrossEstimatedAmount(float $CrossEstimatedAmount) 设置跨地域备份预估收费金额，单位（元/小时）
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBackupSummaryResponse extends AbstractModel
 {
@@ -187,7 +187,7 @@ class DescribeBackupSummaryResponse extends AbstractModel
     public $CrossEstimatedAmount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -215,7 +215,7 @@ class DescribeBackupSummaryResponse extends AbstractModel
      * @param integer $CrossLogBackupSpace 跨地域日志备份使用空间，单位（KB）
      * @param integer $CrossLogBackupCount 跨地域日志备份文件总个数
      * @param float $CrossEstimatedAmount 跨地域备份预估收费金额，单位（元/小时）
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

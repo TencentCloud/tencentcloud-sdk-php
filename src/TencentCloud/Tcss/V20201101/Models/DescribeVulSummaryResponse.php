@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeriousVulnerabilityRegistryImageCount(integer $SeriousVulnerabilityRegistryImageCount) 设置受影响仓库镜像数
  * @method integer getEmergencyVulnerabilityCount() 获取应急漏洞数量
  * @method void setEmergencyVulnerabilityCount(integer $EmergencyVulnerabilityCount) 设置应急漏洞数量
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVulSummaryResponse extends AbstractModel
 {
@@ -103,7 +103,7 @@ class DescribeVulSummaryResponse extends AbstractModel
     public $EmergencyVulnerabilityCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -119,7 +119,7 @@ class DescribeVulSummaryResponse extends AbstractModel
      * @param integer $SeriousVulnerabilityLocalImageCount 受影响本地镜像数
      * @param integer $SeriousVulnerabilityRegistryImageCount 受影响仓库镜像数
      * @param integer $EmergencyVulnerabilityCount 应急漏洞数量
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

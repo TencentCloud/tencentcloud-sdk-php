@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsg(string $Msg) 设置结果描述；如果可以添加返回空字符串
  * @method integer getVerifyCode() 获取检验状态：0表示可以添加，大于0为不能添加
  * @method void setVerifyCode(integer $VerifyCode) 设置检验状态：0表示可以添加，大于0为不能添加
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDomainVerifyResultResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeDomainVerifyResultResponse extends AbstractModel
     public $VerifyCode;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Msg 结果描述；如果可以添加返回空字符串
      * @param integer $VerifyCode 检验状态：0表示可以添加，大于0为不能添加
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

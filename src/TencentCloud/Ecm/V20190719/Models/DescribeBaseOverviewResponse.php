@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpiredNum(integer $ExpiredNum) 设置过期实例数量，单位：台
  * @method integer getWillExpireNum() 获取即将过期实例数量，单位：台
  * @method void setWillExpireNum(integer $WillExpireNum) 设置即将过期实例数量，单位：台
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBaseOverviewResponse extends AbstractModel
 {
@@ -103,7 +103,7 @@ class DescribeBaseOverviewResponse extends AbstractModel
     public $WillExpireNum;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -119,7 +119,7 @@ class DescribeBaseOverviewResponse extends AbstractModel
      * @param integer $IsolationNum 安全隔离数量，单位：台
      * @param integer $ExpiredNum 过期实例数量，单位：台
      * @param integer $WillExpireNum 即将过期实例数量，单位：台
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

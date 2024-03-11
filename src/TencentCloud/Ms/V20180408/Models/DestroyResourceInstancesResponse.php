@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformType(integer $PlatformType) 设置平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
  * @method integer getOrderType() 获取订单采购类型 1-免费试用 2-按年收费 3-按次收费  
  * @method void setOrderType(integer $OrderType) 设置订单采购类型 1-免费试用 2-按年收费 3-按次收费  
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DestroyResourceInstancesResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DestroyResourceInstancesResponse extends AbstractModel
     public $OrderType;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DestroyResourceInstancesResponse extends AbstractModel
      * @param string $Result 返回状态
      * @param integer $PlatformType 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      * @param integer $OrderType 订单采购类型 1-免费试用 2-按年收费 3-按次收费  
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

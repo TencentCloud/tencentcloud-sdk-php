@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogStandbyVolume(integer $BinlogStandbyVolume) 设置标准存储日志备份容量（单位为字节）。
  * @method integer getBinlogStandbyCount() 获取标准存储日志备份个数。
  * @method void setBinlogStandbyCount(integer $BinlogStandbyCount) 设置标准存储日志备份个数。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBinlogBackupOverviewResponse extends AbstractModel
 {
@@ -82,7 +82,7 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
     public $BinlogStandbyCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -95,7 +95,7 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
      * @param integer $BinlogArchiveCount 归档日志备份个数。
      * @param integer $BinlogStandbyVolume 标准存储日志备份容量（单位为字节）。
      * @param integer $BinlogStandbyCount 标准存储日志备份个数。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScaleUpThreshold(integer $ScaleUpThreshold) 设置扩容阈值,范围[10-90]
  * @method integer getTargetThreshold() 获取扩容后达到阈值,范围[10-90]
  * @method void setTargetThreshold(integer $TargetThreshold) 设置扩容后达到阈值,范围[10-90]
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel
     public $TargetThreshold;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel
      * @param integer $Status 规则状态0:关闭，1 开启
      * @param integer $ScaleUpThreshold 扩容阈值,范围[10-90]
      * @param integer $TargetThreshold 扩容后达到阈值,范围[10-90]
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

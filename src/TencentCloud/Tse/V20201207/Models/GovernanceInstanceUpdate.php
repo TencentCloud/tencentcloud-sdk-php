@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setService(string $Service) 设置实例所在服务名。
  * @method string getNamespace() 获取实例服务所在命名空间。
  * @method void setNamespace(string $Namespace) 设置实例服务所在命名空间。
- * @method string getId() 获取治理中心服务实例id。
- * @method void setId(string $Id) 设置治理中心服务实例id。
  * @method integer getWeight() 获取实例负载均衡权重信息。不填默认为100。
  * @method void setWeight(integer $Weight) 设置实例负载均衡权重信息。不填默认为100。
  * @method boolean getHealthy() 获取实例默认健康信息。不填默认为健康。
@@ -44,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否启用健康检查。不填默认不启用。
  * @method integer getTtl() 获取上报心跳时间间隔。若 EnableHealthCheck 为不启用，则此参数不生效；若 EnableHealthCheck 启用，此参数不填，则默认 ttl 为 5s。
  * @method void setTtl(integer $Ttl) 设置上报心跳时间间隔。若 EnableHealthCheck 为不启用，则此参数不生效；若 EnableHealthCheck 启用，此参数不填，则默认 ttl 为 5s。
+ * @method string getId() 获取治理中心服务实例id。
+ * @method void setId(string $Id) 设置治理中心服务实例id。
  * @method array getMetadatas() 获取元数据信息。
  * @method void setMetadatas(array $Metadatas) 设置元数据信息。
  */
@@ -58,11 +58,6 @@ class GovernanceInstanceUpdate extends AbstractModel
      * @var string 实例服务所在命名空间。
      */
     public $Namespace;
-
-    /**
-     * @var string 治理中心服务实例id。
-     */
-    public $Id;
 
     /**
      * @var integer 实例负载均衡权重信息。不填默认为100。
@@ -110,6 +105,11 @@ class GovernanceInstanceUpdate extends AbstractModel
     public $Ttl;
 
     /**
+     * @var string 治理中心服务实例id。
+     */
+    public $Id;
+
+    /**
      * @var array 元数据信息。
      */
     public $Metadatas;
@@ -117,7 +117,6 @@ class GovernanceInstanceUpdate extends AbstractModel
     /**
      * @param string $Service 实例所在服务名。
      * @param string $Namespace 实例服务所在命名空间。
-     * @param string $Id 治理中心服务实例id。
      * @param integer $Weight 实例负载均衡权重信息。不填默认为100。
      * @param boolean $Healthy 实例默认健康信息。不填默认为健康。
      * @param boolean $Isolate 实例隔离信息。不填默认为非隔离。
@@ -127,6 +126,7 @@ class GovernanceInstanceUpdate extends AbstractModel
      * @param string $InstanceVersion 实例版本。不填默认为空。
      * @param boolean $EnableHealthCheck 是否启用健康检查。不填默认不启用。
      * @param integer $Ttl 上报心跳时间间隔。若 EnableHealthCheck 为不启用，则此参数不生效；若 EnableHealthCheck 启用，此参数不填，则默认 ttl 为 5s。
+     * @param string $Id 治理中心服务实例id。
      * @param array $Metadatas 元数据信息。
      */
     function __construct()
@@ -148,10 +148,6 @@ class GovernanceInstanceUpdate extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
-        }
-
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
@@ -188,6 +184,10 @@ class GovernanceInstanceUpdate extends AbstractModel
 
         if (array_key_exists("Ttl",$param) and $param["Ttl"] !== null) {
             $this->Ttl = $param["Ttl"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Metadatas",$param) and $param["Metadatas"] !== null) {

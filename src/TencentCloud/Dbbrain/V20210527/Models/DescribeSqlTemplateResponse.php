@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlTemplate(string $SqlTemplate) 设置SQL模版内容。
  * @method integer getSqlId() 获取SQL模版ID。
  * @method void setSqlId(integer $SqlId) 设置SQL模版ID。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSqlTemplateResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeSqlTemplateResponse extends AbstractModel
     public $SqlId;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeSqlTemplateResponse extends AbstractModel
      * @param string $SqlType SQL类型。
      * @param string $SqlTemplate SQL模版内容。
      * @param integer $SqlId SQL模版ID。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnLastName(string $EnLastName) 设置英文姓名
  * @method string getPortraitImage() 获取证件人像照片抠取
  * @method void setPortraitImage(string $PortraitImage) 设置证件人像照片抠取
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RecognizeThaiIDCardOCRResponse extends AbstractModel
 {
@@ -89,7 +89,7 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $PortraitImage;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -103,7 +103,7 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
      * @param string $ExpirationDate 到期日期
      * @param string $EnLastName 英文姓名
      * @param string $PortraitImage 证件人像照片抠取
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

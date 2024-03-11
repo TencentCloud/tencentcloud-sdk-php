@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimitVpc(array $LimitVpc) 设置自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，显示该参数。
  * @method array getLimitIp() 获取自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。
  * @method void setLimitIp(array $LimitIp) 设置自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBackupDownloadRestrictionResponse extends AbstractModel
 {
@@ -82,7 +82,7 @@ class DescribeBackupDownloadRestrictionResponse extends AbstractModel
     public $LimitIp;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -99,7 +99,7 @@ class DescribeBackupDownloadRestrictionResponse extends AbstractModel
 - NotIn: 自定义的 IP 不可以下载。
      * @param array $LimitVpc 自定义的可下载备份文件的 VPC ID。当参数**LimitType**为**Customize **时，显示该参数。
      * @param array $LimitIp 自定义的可下载备份文件的 VPC IP 地址。当参数**LimitType**为**Customize **时，显示该参数。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

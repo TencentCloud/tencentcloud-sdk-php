@@ -52,8 +52,8 @@ PLATINUM 铂金版
  * @method void setSubscriptionNumLimit(integer $SubscriptionNumLimit) 设置订阅数上限
  * @method integer getClientNumLimit() 获取客户端数量上限
  * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端数量上限
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMQTTInstanceResponse extends AbstractModel
 {
@@ -122,7 +122,7 @@ PLATINUM 铂金版
     public $ClientNumLimit;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -143,7 +143,7 @@ PLATINUM 铂金版
      * @param string $SkuCode 实例规格
      * @param integer $SubscriptionNumLimit 订阅数上限
      * @param integer $ClientNumLimit 客户端数量上限
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

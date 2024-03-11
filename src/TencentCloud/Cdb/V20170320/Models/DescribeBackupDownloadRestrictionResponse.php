@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimitVpc(array $LimitVpc) 设置限制下载的vpc设置。
  * @method array getLimitIp() 获取限制下载的ip设置。
  * @method void setLimitIp(array $LimitIp) 设置限制下载的ip设置。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBackupDownloadRestrictionResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeBackupDownloadRestrictionResponse extends AbstractModel
     public $LimitIp;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeBackupDownloadRestrictionResponse extends AbstractModel
      * @param string $IpComparisonSymbol In: 指定的ip可以下载； NotIn: 指定的ip不可以下载。
      * @param array $LimitVpc 限制下载的vpc设置。
      * @param array $LimitIp 限制下载的ip设置。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

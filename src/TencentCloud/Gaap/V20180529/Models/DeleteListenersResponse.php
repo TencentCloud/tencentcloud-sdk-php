@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperationSucceedListenerSet(array $OperationSucceedListenerSet) 设置删除操作成功的监听器ID列表
  * @method array getInvalidStatusListenerSet() 获取无效的监听器ID列表，如：监听器不存在，监听器对应实例不匹配
  * @method void setInvalidStatusListenerSet(array $InvalidStatusListenerSet) 设置无效的监听器ID列表，如：监听器不存在，监听器对应实例不匹配
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteListenersResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DeleteListenersResponse extends AbstractModel
     public $InvalidStatusListenerSet;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DeleteListenersResponse extends AbstractModel
      * @param array $OperationFailedListenerSet 删除操作失败的监听器ID列表
      * @param array $OperationSucceedListenerSet 删除操作成功的监听器ID列表
      * @param array $InvalidStatusListenerSet 无效的监听器ID列表，如：监听器不存在，监听器对应实例不匹配
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

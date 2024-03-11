@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuggestionLevel(integer $SuggestionLevel) 设置建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
  * @method string getUnionid() 获取图灵盾统一ID
  * @method void setUnionid(string $Unionid) 设置图灵盾统一ID
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFraudUltimateResponse extends AbstractModel
 {
@@ -131,7 +131,7 @@ class DescribeFraudUltimateResponse extends AbstractModel
     public $Unionid;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -151,7 +151,7 @@ class DescribeFraudUltimateResponse extends AbstractModel
      * @param array $SceneRiskInfos 场景风险信息
      * @param integer $SuggestionLevel 建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
      * @param string $Unionid 图灵盾统一ID
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

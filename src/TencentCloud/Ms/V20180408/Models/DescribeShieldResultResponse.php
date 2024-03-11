@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
  * @method string getStatusRef() 获取状态指引
  * @method void setStatusRef(string $StatusRef) 设置状态指引
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeShieldResultResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeShieldResultResponse extends AbstractModel
     public $StatusRef;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeShieldResultResponse extends AbstractModel
      * @param ShieldInfo $ShieldInfo app加固后的详细信息
      * @param string $StatusDesc 状态描述
      * @param string $StatusRef 状态指引
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

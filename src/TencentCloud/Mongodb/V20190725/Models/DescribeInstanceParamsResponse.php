@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMultiParam(array $InstanceMultiParam) 设置参数值为混合类型的参数集合。
  * @method integer getTotalCount() 获取当前实例支持修改的参数个数统计 如0
  * @method void setTotalCount(integer $TotalCount) 设置当前实例支持修改的参数个数统计 如0
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceParamsResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeInstanceParamsResponse extends AbstractModel
      * @param array $InstanceTextParam 参数值为 Text 类型的参数集合。
      * @param array $InstanceMultiParam 参数值为混合类型的参数集合。
      * @param integer $TotalCount 当前实例支持修改的参数个数统计 如0
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

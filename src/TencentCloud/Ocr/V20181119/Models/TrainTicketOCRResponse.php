@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiptNumber(string $ReceiptNumber) 设置收据号码
  * @method string getIsReceipt() 获取仅供报销使用：1为是，0为否
  * @method void setIsReceipt(string $IsReceipt) 设置仅供报销使用：1为是，0为否
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class TrainTicketOCRResponse extends AbstractModel
 {
@@ -166,7 +166,7 @@ class TrainTicketOCRResponse extends AbstractModel
     public $IsReceipt;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -191,7 +191,7 @@ class TrainTicketOCRResponse extends AbstractModel
      * @param string $InvoiceStyle 发票类型：火车票、火车票补票、火车票退票凭证
      * @param string $ReceiptNumber 收据号码
      * @param string $IsReceipt 仅供报销使用：1为是，0为否
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

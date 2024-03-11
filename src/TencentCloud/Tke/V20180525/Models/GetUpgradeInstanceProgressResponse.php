@@ -42,8 +42,8 @@ aborted 已取消
  * @method void setInstances(array $Instances) 设置各节点升级进度详情
  * @method InstanceUpgradeClusterStatus getClusterStatus() 获取集群当前状态
  * @method void setClusterStatus(InstanceUpgradeClusterStatus $ClusterStatus) 设置集群当前状态
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetUpgradeInstanceProgressResponse extends AbstractModel
 {
@@ -79,7 +79,7 @@ aborted 已取消
     public $ClusterStatus;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -95,7 +95,7 @@ timeout 已超时
 aborted 已取消
      * @param array $Instances 各节点升级进度详情
      * @param InstanceUpgradeClusterStatus $ClusterStatus 集群当前状态
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

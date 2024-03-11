@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置新创建的定期快照策略ID。
  * @method string getNextTriggerTime() 获取首次开始备份的时间。
  * @method void setNextTriggerTime(string $NextTriggerTime) 设置首次开始备份的时间。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAutoSnapshotPolicyResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateAutoSnapshotPolicyResponse extends AbstractModel
     public $NextTriggerTime;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $AutoSnapshotPolicyId 新创建的定期快照策略ID。
      * @param string $NextTriggerTime 首次开始备份的时间。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

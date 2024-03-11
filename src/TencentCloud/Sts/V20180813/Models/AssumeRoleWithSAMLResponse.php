@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpiredTime(integer $ExpiredTime) 设置临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
  * @method string getExpiration() 获取临时访问凭证的过期时间，以 ISO8601 格式的 UTC 时间表示
  * @method void setExpiration(string $Expiration) 设置临时访问凭证的过期时间，以 ISO8601 格式的 UTC 时间表示
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AssumeRoleWithSAMLResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class AssumeRoleWithSAMLResponse extends AbstractModel
     public $Expiration;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class AssumeRoleWithSAMLResponse extends AbstractModel
      * @param Credentials $Credentials 对象里面包含 Token，TmpSecretId，TmpSecretKey 三元组
      * @param integer $ExpiredTime 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
      * @param string $Expiration 临时访问凭证的过期时间，以 ISO8601 格式的 UTC 时间表示
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

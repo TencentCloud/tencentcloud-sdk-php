@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLockId(integer $LockId) 设置锁id
  * @method string getLockState() 获取锁状态：ACQUIRED、WAITING、ABORT、NOT_ACQUIRED
  * @method void setLockState(string $LockState) 设置锁状态：ACQUIRED、WAITING、ABORT、NOT_ACQUIRED
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class LockMetaDataResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class LockMetaDataResponse extends AbstractModel
     public $LockState;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $LockId 锁id
      * @param string $LockState 锁状态：ACQUIRED、WAITING、ABORT、NOT_ACQUIRED
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

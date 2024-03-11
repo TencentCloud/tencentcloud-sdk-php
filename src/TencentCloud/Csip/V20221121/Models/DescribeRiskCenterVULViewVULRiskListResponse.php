@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFromLists(array $FromLists) 设置来源列表
  * @method array getVULTypeLists() 获取漏洞类型列表
  * @method void setVULTypeLists(array $VULTypeLists) 设置漏洞类型列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRiskCenterVULViewVULRiskListResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeRiskCenterVULViewVULRiskListResponse extends AbstractModel
     public $VULTypeLists;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeRiskCenterVULViewVULRiskListResponse extends AbstractModel
      * @param array $LevelLists 危险等级列表
      * @param array $FromLists 来源列表
      * @param array $VULTypeLists 漏洞类型列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientGrade(string $ClientGrade) 设置客户级别
  * @method integer getClientType() 获取客户类型：1，个人；2，企业；3，其他
  * @method void setClientType(integer $ClientType) 设置客户类型：1，个人；2，企业；3，其他
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAgentClientGradeResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeAgentClientGradeResponse extends AbstractModel
     public $ClientType;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeAgentClientGradeResponse extends AbstractModel
      * @param integer $AuthState 实名认证状态：0，未实名认证，1实名认证
      * @param string $ClientGrade 客户级别
      * @param integer $ClientType 客户类型：1，个人；2，企业；3，其他
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li>fail：验证失败。</li>
  * @method string getResult() 获取当验证结果为不通过时，该字段会返回原因，协助您排查问题。
  * @method void setResult(string $Result) 设置当验证结果为不通过时，该字段会返回原因，协助您排查问题。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class VerifyOwnershipResponse extends AbstractModel
 {
@@ -46,7 +46,7 @@ class VerifyOwnershipResponse extends AbstractModel
     public $Result;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class VerifyOwnershipResponse extends AbstractModel
 <li>success：验证成功；</li>
 <li>fail：验证失败。</li>
      * @param string $Result 当验证结果为不通过时，该字段会返回原因，协助您排查问题。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

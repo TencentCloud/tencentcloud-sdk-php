@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlowlogs(array $Slowlogs) 设置慢查询日志信息列表
  * @method array getSlowLogs() 获取慢查询日志信息列表
  * @method void setSlowLogs(array $SlowLogs) 设置慢查询日志信息列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSlowlogsResponse extends AbstractModel
 {
@@ -48,7 +48,7 @@ class DescribeSlowlogsResponse extends AbstractModel
     public $SlowLogs;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -56,7 +56,7 @@ class DescribeSlowlogsResponse extends AbstractModel
      * @param integer $TotalCount 查询总数
      * @param array $Slowlogs 慢查询日志信息列表
      * @param array $SlowLogs 慢查询日志信息列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

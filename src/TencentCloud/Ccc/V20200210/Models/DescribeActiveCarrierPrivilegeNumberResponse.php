@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActiveCarrierPrivilegeNumbers(array $ActiveCarrierPrivilegeNumbers) 设置生效列表
  * @method array getPendingApplicantIds() 获取待审核单号
  * @method void setPendingApplicantIds(array $PendingApplicantIds) 设置待审核单号
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeActiveCarrierPrivilegeNumberResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeActiveCarrierPrivilegeNumberResponse extends AbstractModel
     public $PendingApplicantIds;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeActiveCarrierPrivilegeNumberResponse extends AbstractModel
      * @param integer $TotalCount 总数量
      * @param array $ActiveCarrierPrivilegeNumbers 生效列表
      * @param array $PendingApplicantIds 待审核单号
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

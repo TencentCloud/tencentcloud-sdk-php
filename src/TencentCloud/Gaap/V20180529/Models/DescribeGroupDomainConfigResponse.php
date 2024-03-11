@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置通道组ID。
  * @method integer getAccessRegionCount() 获取接入地域的配置的总数。
  * @method void setAccessRegionCount(integer $AccessRegionCount) 设置接入地域的配置的总数。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGroupDomainConfigResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeGroupDomainConfigResponse extends AbstractModel
     public $AccessRegionCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeGroupDomainConfigResponse extends AbstractModel
      * @param string $DefaultDnsIp 默认访问Ip。
      * @param string $GroupId 通道组ID。
      * @param integer $AccessRegionCount 接入地域的配置的总数。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

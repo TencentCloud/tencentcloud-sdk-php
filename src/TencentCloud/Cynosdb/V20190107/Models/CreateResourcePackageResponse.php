@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBigDealIds(array $BigDealIds) 设置付费总订单号
  * @method array getDealNames() 获取每个物品对应一个dealName，业务需要根据dealName保证发货接口幂等
  * @method void setDealNames(array $DealNames) 设置每个物品对应一个dealName，业务需要根据dealName保证发货接口幂等
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateResourcePackageResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateResourcePackageResponse extends AbstractModel
     public $DealNames;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $BigDealIds 付费总订单号
      * @param array $DealNames 每个物品对应一个dealName，业务需要根据dealName保证发货接口幂等
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

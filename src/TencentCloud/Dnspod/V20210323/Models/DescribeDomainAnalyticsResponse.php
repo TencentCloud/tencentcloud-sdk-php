@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfo(DomainAnalyticsInfo $Info) 设置域名解析量统计查询信息
  * @method array getAliasData() 获取域名别名解析量统计信息
  * @method void setAliasData(array $AliasData) 设置域名别名解析量统计信息
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDomainAnalyticsResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDomainAnalyticsResponse extends AbstractModel
     public $AliasData;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeDomainAnalyticsResponse extends AbstractModel
      * @param array $Data 当前统计维度解析量小计
      * @param DomainAnalyticsInfo $Info 域名解析量统计查询信息
      * @param array $AliasData 域名别名解析量统计信息
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

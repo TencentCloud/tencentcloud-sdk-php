@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(TextDetectionResult $Address) 设置地址
  * @method TextDetectionResult getPrecinctNo() 获取地区
  * @method void setPrecinctNo(TextDetectionResult $PrecinctNo) 设置地区
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel
 {
@@ -89,7 +89,7 @@ class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel
     public $PrecinctNo;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -103,7 +103,7 @@ class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel
      * @param TextDetectionResult $Citizenship 国籍
      * @param TextDetectionResult $Address 地址
      * @param TextDetectionResult $PrecinctNo 地区
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

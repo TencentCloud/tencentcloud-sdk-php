@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceIds(array $ResourceIds) 设置此次操作支付成功的资源Id数组
  * @method array getBigDealIds() 获取此次操作支付成功的大订单号数组
  * @method void setBigDealIds(array $BigDealIds) 设置此次操作支付成功的大订单号数组
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class PayDealsResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class PayDealsResponse extends AbstractModel
     public $BigDealIds;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class PayDealsResponse extends AbstractModel
      * @param array $OrderIds 此次操作支付成功的子订单号数组
      * @param array $ResourceIds 此次操作支付成功的资源Id数组
      * @param array $BigDealIds 此次操作支付成功的大订单号数组
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

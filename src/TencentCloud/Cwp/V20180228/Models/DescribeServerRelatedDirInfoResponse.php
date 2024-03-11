@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtectTamperNum(integer $ProtectTamperNum) 设置防篡改数量
  * @method integer getProtectLinkNum() 获取防护软链数量
  * @method void setProtectLinkNum(integer $ProtectLinkNum) 设置防护软链数量
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeServerRelatedDirInfoResponse extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeServerRelatedDirInfoResponse extends AbstractModel
     public $ProtectLinkNum;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -79,7 +79,7 @@ class DescribeServerRelatedDirInfoResponse extends AbstractModel
      * @param integer $ProtectFileNum 防护文件数量
      * @param integer $ProtectTamperNum 防篡改数量
      * @param integer $ProtectLinkNum 防护软链数量
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置每天可维护的开始时间，例如：10:24标识可维护时间窗10点24分开始。
  * @method integer getSpan() 获取每天可维护的持续时间，单位是h，例如：1 表示从可维护的开始时间起持续1小时。
  * @method void setSpan(integer $Span) 设置每天可维护的持续时间，单位是h，例如：1 表示从可维护的开始时间起持续1小时。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeMaintenanceSpanResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeMaintenanceSpanResponse extends AbstractModel
     public $Span;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeMaintenanceSpanResponse extends AbstractModel
      * @param array $Weekly 以周为单位，表示周几允许维护，例如：[1,2,3,4,5,6,7]表示周一到周日均为可维护日。
      * @param string $StartTime 每天可维护的开始时间，例如：10:24标识可维护时间窗10点24分开始。
      * @param integer $Span 每天可维护的持续时间，单位是h，例如：1 表示从可维护的开始时间起持续1小时。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

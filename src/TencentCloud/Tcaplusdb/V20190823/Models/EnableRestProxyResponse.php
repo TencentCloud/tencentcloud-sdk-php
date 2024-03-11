@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestProxyStatus(integer $RestProxyStatus) 设置RestProxy的状态，0为关闭，1为开启中，2为开启，3为关闭中
  * @method string getTaskId() 获取TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
  * @method void setTaskId(string $TaskId) 设置TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class EnableRestProxyResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class EnableRestProxyResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $RestProxyStatus RestProxy的状态，0为关闭，1为开启中，2为开启，3为关闭中
      * @param string $TaskId TaskId由 AppInstanceId-taskId 组成，以区分不同集群的任务
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

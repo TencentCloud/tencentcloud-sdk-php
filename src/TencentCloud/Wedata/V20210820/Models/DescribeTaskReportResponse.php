@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalWriteBytes(integer $TotalWriteBytes) 设置总写入字节数，单位为Byte
  * @method integer getTotalErrorRecords() 获取总脏数据条数
  * @method void setTotalErrorRecords(integer $TotalErrorRecords) 设置总脏数据条数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTaskReportResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeTaskReportResponse extends AbstractModel
     public $TotalErrorRecords;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeTaskReportResponse extends AbstractModel
      * @param integer $TotalWriteRecords 总写入条数
      * @param integer $TotalWriteBytes 总写入字节数，单位为Byte
      * @param integer $TotalErrorRecords 总脏数据条数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

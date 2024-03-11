@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpire(integer $Expire) 设置过期授权
  * @method integer getMonthlyExpire() 获取当月用量超时授权个数
  * @method void setMonthlyExpire(integer $MonthlyExpire) 设置当月用量超时授权个数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetLicenseStatResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class GetLicenseStatResponse extends AbstractModel
     public $MonthlyExpire;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class GetLicenseStatResponse extends AbstractModel
      * @param integer $UnBound 未绑定授权
      * @param integer $Expire 过期授权
      * @param integer $MonthlyExpire 当月用量超时授权个数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

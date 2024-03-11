@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSystemVersion(string $SystemVersion) 设置系统版本
  * @method string getSdkBuildNo() 获取SDK版本号
  * @method void setSdkBuildNo(string $SdkBuildNo) 设置SDK版本号
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTrustedIDResponse extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeTrustedIDResponse extends AbstractModel
     public $SdkBuildNo;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -111,7 +111,7 @@ class DescribeTrustedIDResponse extends AbstractModel
      * @param string $Platform 平台（2-Android，3-iOS，4-H5，5-微信小程序）
      * @param string $SystemVersion 系统版本
      * @param string $SdkBuildNo SDK版本号
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

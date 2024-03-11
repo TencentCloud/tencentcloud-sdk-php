@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuccessInstanceIds(array $SuccessInstanceIds) 设置隔离成功实例ID列表。
  * @method array getFailedInstanceIds() 获取隔离失败实例ID列表。
  * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置隔离失败实例ID列表。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class IsolateDCDBInstanceResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class IsolateDCDBInstanceResponse extends AbstractModel
     public $FailedInstanceIds;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $SuccessInstanceIds 隔离成功实例ID列表。
      * @param array $FailedInstanceIds 隔离失败实例ID列表。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

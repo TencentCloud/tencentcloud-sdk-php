@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalDuration(integer $TotalDuration) 设置内容智能识别总时长。
  * @method array getData() 获取内容智能识别时长统计数据，每天一个数据。
  * @method void setData(array $Data) 设置内容智能识别时长统计数据，每天一个数据。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeReviewDetailsResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeReviewDetailsResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeReviewDetailsResponse extends AbstractModel
      * @param integer $TotalCount 发起内容智能识别次数。
      * @param integer $TotalDuration 内容智能识别总时长。
      * @param array $Data 内容智能识别时长统计数据，每天一个数据。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

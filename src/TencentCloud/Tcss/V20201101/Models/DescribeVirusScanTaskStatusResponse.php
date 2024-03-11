@@ -52,8 +52,8 @@ SCAN_CANCELED:已取消
  * @method void setEndTime(string $EndTime) 设置扫描结束时间
  * @method string getScanType() 获取扫描类型，"CYCLE"：周期扫描， "MANUAL"：手动扫描
  * @method void setScanType(string $ScanType) 设置扫描类型，"CYCLE"：周期扫描， "MANUAL"：手动扫描
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVirusScanTaskStatusResponse extends AbstractModel
 {
@@ -114,7 +114,7 @@ SCAN_CANCELED:已取消
     public $ScanType;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -135,7 +135,7 @@ SCAN_CANCELED:已取消
      * @param string $StartTime 扫描开始时间
      * @param string $EndTime 扫描结束时间
      * @param string $ScanType 扫描类型，"CYCLE"：周期扫描， "MANUAL"：手动扫描
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

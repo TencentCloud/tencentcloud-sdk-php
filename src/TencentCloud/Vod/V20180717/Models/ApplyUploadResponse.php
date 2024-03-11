@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCoverStoragePath(string $CoverStoragePath) 设置封面存储路径，用于上传接口存储封面的对象键（Key）。
  * @method TempCertificate getTempCertificate() 获取临时凭证，用于上传接口的权限验证。
  * @method void setTempCertificate(TempCertificate $TempCertificate) 设置临时凭证，用于上传接口的权限验证。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ApplyUploadResponse extends AbstractModel
 {
@@ -68,7 +68,7 @@ class ApplyUploadResponse extends AbstractModel
     public $TempCertificate;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -79,7 +79,7 @@ class ApplyUploadResponse extends AbstractModel
      * @param string $MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
      * @param string $CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
      * @param TempCertificate $TempCertificate 临时凭证，用于上传接口的权限验证。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

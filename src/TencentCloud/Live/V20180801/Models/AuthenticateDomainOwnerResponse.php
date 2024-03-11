@@ -36,8 +36,8 @@ VerifyType 传 fileCheck 时，为文件内容。
 同一主域名下的所有域名只需成功验证一次，后续均无需再验证。
  * @method void setMainDomain(string $MainDomain) 设置DomainName 对应的主域名。
 同一主域名下的所有域名只需成功验证一次，后续均无需再验证。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AuthenticateDomainOwnerResponse extends AbstractModel
 {
@@ -62,7 +62,7 @@ VerifyType 传 fileCheck 时，为文件内容。
     public $MainDomain;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -75,7 +75,7 @@ VerifyType 传 fileCheck 时，为文件内容。
 <0 未验证归属权。
      * @param string $MainDomain DomainName 对应的主域名。
 同一主域名下的所有域名只需成功验证一次，后续均无需再验证。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

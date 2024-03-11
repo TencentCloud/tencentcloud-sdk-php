@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocalImageCnt(integer $LocalImageCnt) 设置本地镜像未授权数量
  * @method integer getUnusedAuthorizedCnt() 获取未使用的镜像安全扫描授权数
  * @method void setUnusedAuthorizedCnt(integer $UnusedAuthorizedCnt) 设置未使用的镜像安全扫描授权数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeValueAddedSrvInfoResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeValueAddedSrvInfoResponse extends AbstractModel
     public $UnusedAuthorizedCnt;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeValueAddedSrvInfoResponse extends AbstractModel
      * @param integer $RegistryImageCnt 仓库镜像未授权数量
      * @param integer $LocalImageCnt 本地镜像未授权数量
      * @param integer $UnusedAuthorizedCnt 未使用的镜像安全扫描授权数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

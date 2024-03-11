@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlPlan(string $SqlPlan) 设置SQL执行计划，可解析为JSON，无需优化时输出为空。
  * @method string getCost() 获取SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
  * @method void setCost(string $Cost) 设置SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUserSqlAdviceResponse extends AbstractModel
 {
@@ -75,7 +75,7 @@ class DescribeUserSqlAdviceResponse extends AbstractModel
     public $Cost;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -87,7 +87,7 @@ class DescribeUserSqlAdviceResponse extends AbstractModel
      * @param string $Tables 相关表的DDL信息，可解析为JSON数组。
      * @param string $SqlPlan SQL执行计划，可解析为JSON，无需优化时输出为空。
      * @param string $Cost SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

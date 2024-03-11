@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置0，修改成功，其他失败；-1为存在资产未认证
  * @method array getUnAuthAsset() 获取未认证资产列表
  * @method void setUnAuthAsset(array $UnAuthAsset) 设置未认证资产列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyRiskCenterScanTaskResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyRiskCenterScanTaskResponse extends AbstractModel
     public $UnAuthAsset;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class ModifyRiskCenterScanTaskResponse extends AbstractModel
      * @param string $TaskId 任务id
      * @param integer $Status 0，修改成功，其他失败；-1为存在资产未认证
      * @param array $UnAuthAsset 未认证资产列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 请求参数填写OpenId时，返回授权成功的 Openid。
  * @method void setUserIds(array $UserIds) 设置最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
 请求参数填写OpenId时，返回授权成功的 Openid。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreateSealPolicyResponse extends AbstractModel
 {
@@ -36,14 +36,14 @@ class ChannelCreateSealPolicyResponse extends AbstractModel
     public $UserIds;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
 请求参数填写OpenId时，返回授权成功的 Openid。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

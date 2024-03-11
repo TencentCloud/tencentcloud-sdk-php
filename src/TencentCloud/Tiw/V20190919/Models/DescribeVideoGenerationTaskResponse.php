@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoInfos(VideoInfo $VideoInfos) 设置已废弃，请使用`VideoInfoList`参数
  * @method array getVideoInfoList() 获取录制视频生成视频列表
  * @method void setVideoInfoList(array $VideoInfoList) 设置录制视频生成视频列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVideoGenerationTaskResponse extends AbstractModel
 {
@@ -91,7 +91,7 @@ class DescribeVideoGenerationTaskResponse extends AbstractModel
     public $VideoInfoList;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -107,7 +107,7 @@ class DescribeVideoGenerationTaskResponse extends AbstractModel
      * @param integer $TotalTime 回放视频总时长,单位：毫秒
      * @param VideoInfo $VideoInfos 已废弃，请使用`VideoInfoList`参数
      * @param array $VideoInfoList 录制视频生成视频列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

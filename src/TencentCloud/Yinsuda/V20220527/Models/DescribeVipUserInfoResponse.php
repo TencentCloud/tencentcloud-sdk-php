@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置会员过期时间
  * @method integer getStatus() 获取会员状态。（-1:未开通过；1:已开通，未过期；2:已开通，已过期）
  * @method void setStatus(integer $Status) 设置会员状态。（-1:未开通过；1:已开通，未过期；2:已开通，已过期）
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVipUserInfoResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeVipUserInfoResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeVipUserInfoResponse extends AbstractModel
      * @param string $RoomId 房间id
      * @param string $EndTime 会员过期时间
      * @param integer $Status 会员状态。（-1:未开通过；1:已开通，未过期；2:已开通，已过期）
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置本次校验合法的表格数量
  * @method array getTableInfos() 获取读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
  * @method void setTableInfos(array $TableInfos) 设置读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CompareIdlFilesResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CompareIdlFilesResponse extends AbstractModel
     public $TableInfos;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class CompareIdlFilesResponse extends AbstractModel
      * @param array $IdlFiles 本次上传校验所有的IDL文件信息列表
      * @param integer $TotalCount 本次校验合法的表格数量
      * @param array $TableInfos 读取IDL描述文件后,根据用户指示的所选中表格解析校验结果
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

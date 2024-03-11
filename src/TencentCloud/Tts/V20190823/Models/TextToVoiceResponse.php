@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId
  * @method array getSubtitles() 获取时间戳信息，若未开启时间戳，则返回空数组。
  * @method void setSubtitles(array $Subtitles) 设置时间戳信息，若未开启时间戳，则返回空数组。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class TextToVoiceResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class TextToVoiceResponse extends AbstractModel
     public $Subtitles;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class TextToVoiceResponse extends AbstractModel
      * @param string $Audio base64编码的wav/mp3音频数据
      * @param string $SessionId 一次请求对应一个SessionId
      * @param array $Subtitles 时间戳信息，若未开启时间戳，则返回空数组。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

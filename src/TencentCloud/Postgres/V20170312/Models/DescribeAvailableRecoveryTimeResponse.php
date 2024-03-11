@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecoveryBeginTime(string $RecoveryBeginTime) 设置可恢复的最早时间，时区为东八区（UTC+8）。
  * @method string getRecoveryEndTime() 获取可恢复的最晚时间，时区为东八区（UTC+8）。
  * @method void setRecoveryEndTime(string $RecoveryEndTime) 设置可恢复的最晚时间，时区为东八区（UTC+8）。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAvailableRecoveryTimeResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeAvailableRecoveryTimeResponse extends AbstractModel
     public $RecoveryEndTime;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $RecoveryBeginTime 可恢复的最早时间，时区为东八区（UTC+8）。
      * @param string $RecoveryEndTime 可恢复的最晚时间，时区为东八区（UTC+8）。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

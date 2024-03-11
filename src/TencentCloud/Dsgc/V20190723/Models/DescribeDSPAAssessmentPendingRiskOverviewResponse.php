@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAffectedAssetCount(integer $AffectedAssetCount) 设置受影响的资产数
  * @method float getWeekRatio() 获取周同比
  * @method void setWeekRatio(float $WeekRatio) 设置周同比
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDSPAAssessmentPendingRiskOverviewResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDSPAAssessmentPendingRiskOverviewResponse extends AbstractModel
     public $WeekRatio;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeDSPAAssessmentPendingRiskOverviewResponse extends AbstractModel
      * @param integer $PendingRiskCount 待处理的风险数
      * @param integer $AffectedAssetCount 受影响的资产数
      * @param float $WeekRatio 周同比
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

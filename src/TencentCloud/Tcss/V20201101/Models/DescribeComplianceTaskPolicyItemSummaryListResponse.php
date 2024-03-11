@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置返回检测项的总数。
  * @method array getPolicyItemSummaryList() 获取返回各检测项对应的汇总信息的列表。
  * @method void setPolicyItemSummaryList(array $PolicyItemSummaryList) 设置返回各检测项对应的汇总信息的列表。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeComplianceTaskPolicyItemSummaryListResponse extends AbstractModel
 {
@@ -50,7 +50,7 @@ class DescribeComplianceTaskPolicyItemSummaryListResponse extends AbstractModel
     public $PolicyItemSummaryList;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -59,7 +59,7 @@ class DescribeComplianceTaskPolicyItemSummaryListResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 返回检测项的总数。
      * @param array $PolicyItemSummaryList 返回各检测项对应的汇总信息的列表。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

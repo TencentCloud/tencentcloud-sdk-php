@@ -28,6 +28,7 @@ use TencentCloud\Cdc\V20201214\Models as Models;
  * @method Models\CreateSiteResponse CreateSite(Models\CreateSiteRequest $req) 创建站点
  * @method Models\DeleteDedicatedClustersResponse DeleteDedicatedClusters(Models\DeleteDedicatedClustersRequest $req) 删除专用集群
  * @method Models\DeleteSitesResponse DeleteSites(Models\DeleteSitesRequest $req) 删除站点
+ * @method Models\DescribeDedicatedClusterCbsStatisticsResponse DescribeDedicatedClusterCbsStatistics(Models\DescribeDedicatedClusterCbsStatisticsRequest $req) 查询本地专用集群云硬盘仓库信息
  * @method Models\DescribeDedicatedClusterCosCapacityResponse DescribeDedicatedClusterCosCapacity(Models\DescribeDedicatedClusterCosCapacityRequest $req) 查询专用集群内cos的容量信息
  * @method Models\DescribeDedicatedClusterHostStatisticsResponse DescribeDedicatedClusterHostStatistics(Models\DescribeDedicatedClusterHostStatisticsRequest $req) 查询专用集群内宿主机的统计信息
  * @method Models\DescribeDedicatedClusterHostsResponse DescribeDedicatedClusterHosts(Models\DescribeDedicatedClusterHostsRequest $req) 查询专用集群宿主机信息

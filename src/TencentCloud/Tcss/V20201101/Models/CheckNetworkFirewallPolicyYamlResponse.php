@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(integer $TaskId) 设置返回创建的任务的ID，为0表示创建失败。
  * @method string getResult() 获取创建任务的结果，"Succ"为成功，"Failed"为失败
  * @method void setResult(string $Result) 设置创建任务的结果，"Succ"为成功，"Failed"为失败
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CheckNetworkFirewallPolicyYamlResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CheckNetworkFirewallPolicyYamlResponse extends AbstractModel
     public $Result;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $TaskId 返回创建的任务的ID，为0表示创建失败。
      * @param string $Result 创建任务的结果，"Succ"为成功，"Failed"为失败
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

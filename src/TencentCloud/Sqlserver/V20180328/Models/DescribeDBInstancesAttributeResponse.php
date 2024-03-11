@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSLConfig(SSLConfig $SSLConfig) 设置SSL加密
  * @method DrReadableInfo getDrReadableInfo() 获取备机只读信息
  * @method void setDrReadableInfo(DrReadableInfo $DrReadableInfo) 设置备机只读信息
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBInstancesAttributeResponse extends AbstractModel
 {
@@ -103,7 +103,7 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
     public $DrReadableInfo;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -119,7 +119,7 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @param TDEConfigAttribute $TDEConfig TDE透明数据加密配置
      * @param SSLConfig $SSLConfig SSL加密
      * @param DrReadableInfo $DrReadableInfo 备机只读信息
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

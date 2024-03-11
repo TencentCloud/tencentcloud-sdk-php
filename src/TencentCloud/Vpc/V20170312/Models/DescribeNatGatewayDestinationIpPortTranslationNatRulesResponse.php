@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGatewayDestinationIpPortTranslationNatRuleSet(array $NatGatewayDestinationIpPortTranslationNatRuleSet) 设置NAT网关端口转发规则对象数组。
  * @method integer getTotalCount() 获取符合条件的NAT网关端口转发规则对象数目。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的NAT网关端口转发规则对象数目。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
     public $TotalCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $NatGatewayDestinationIpPortTranslationNatRuleSet NAT网关端口转发规则对象数组。
      * @param integer $TotalCount 符合条件的NAT网关端口转发规则对象数目。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

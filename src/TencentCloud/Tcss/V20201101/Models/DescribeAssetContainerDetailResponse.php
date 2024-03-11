@@ -116,8 +116,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeUniqueID(string $NodeUniqueID) 设置超级节点唯一id
  * @method string getPublicIP() 获取外网ip
  * @method void setPublicIP(string $PublicIP) 设置外网ip
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAssetContainerDetailResponse extends AbstractModel
 {
@@ -330,7 +330,7 @@ class DescribeAssetContainerDetailResponse extends AbstractModel
     public $PublicIP;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -383,7 +383,7 @@ class DescribeAssetContainerDetailResponse extends AbstractModel
      * @param string $NodeType 节点类型:NORMAL: 普通节点(默认值) SUPER: 超级节点
      * @param string $NodeUniqueID 超级节点唯一id
      * @param string $PublicIP 外网ip
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

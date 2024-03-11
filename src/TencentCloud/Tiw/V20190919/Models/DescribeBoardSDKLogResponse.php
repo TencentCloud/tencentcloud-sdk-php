@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBuckets(array $Buckets) 设置按时间段聚合后每个时间段的日志条数
  * @method string getContext() 获取用于递归拉取的上下文Key，下一次请求的时候带上
  * @method void setContext(string $Context) 设置用于递归拉取的上下文Key，下一次请求的时候带上
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBoardSDKLogResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeBoardSDKLogResponse extends AbstractModel
     public $Context;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeBoardSDKLogResponse extends AbstractModel
      * @param array $Sources 日志详细内容
      * @param array $Buckets 按时间段聚合后每个时间段的日志条数
      * @param string $Context 用于递归拉取的上下文Key，下一次请求的时候带上
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

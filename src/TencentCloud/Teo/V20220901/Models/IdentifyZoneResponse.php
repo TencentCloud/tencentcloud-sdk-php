@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAscription(AscriptionInfo $Ascription) 设置站点归属校验：Dns校验信息。
  * @method FileAscriptionInfo getFileAscription() 获取站点归属权校验：文件校验信息。
  * @method void setFileAscription(FileAscriptionInfo $FileAscription) 设置站点归属权校验：文件校验信息。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class IdentifyZoneResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class IdentifyZoneResponse extends AbstractModel
     public $FileAscription;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param AscriptionInfo $Ascription 站点归属校验：Dns校验信息。
      * @param FileAscriptionInfo $FileAscription 站点归属权校验：文件校验信息。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

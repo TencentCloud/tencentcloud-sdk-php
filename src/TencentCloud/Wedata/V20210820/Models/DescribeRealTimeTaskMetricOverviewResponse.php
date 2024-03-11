@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginRunTime(string $BeginRunTime) 设置开始运行时间
  * @method string getEndRunTime() 获取目前运行到的时间
  * @method void setEndRunTime(string $EndRunTime) 设置目前运行到的时间
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRealTimeTaskMetricOverviewResponse extends AbstractModel
 {
@@ -89,7 +89,7 @@ class DescribeRealTimeTaskMetricOverviewResponse extends AbstractModel
     public $EndRunTime;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -103,7 +103,7 @@ class DescribeRealTimeTaskMetricOverviewResponse extends AbstractModel
      * @param integer $TotalDuration 运行时长 单位s
      * @param string $BeginRunTime 开始运行时间
      * @param string $EndRunTime 目前运行到的时间
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

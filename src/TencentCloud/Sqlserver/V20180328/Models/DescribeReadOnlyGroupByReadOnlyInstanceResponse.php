@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterInstanceId(string $MasterInstanceId) 设置主实例ID，形如mssql-sgeshe3th
  * @method string getMasterRegionId() 获取主实例的地域ID
  * @method void setMasterRegionId(string $MasterRegionId) 设置主实例的地域ID
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractModel
 {
@@ -117,7 +117,7 @@ class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractModel
     public $MasterRegionId;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -135,7 +135,7 @@ class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractModel
      * @param string $SubnetId 只读组在私有网络子网ID
      * @param string $MasterInstanceId 主实例ID，形如mssql-sgeshe3th
      * @param string $MasterRegionId 主实例的地域ID
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

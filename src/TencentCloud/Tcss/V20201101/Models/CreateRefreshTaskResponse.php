@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateResult(string $CreateResult) 设置创建检查任务的结果，"Succ"为成功，"Failed"为失败
  * @method string getNewTaskID() 获取返回创建的新集群检查任务ID
  * @method void setNewTaskID(string $NewTaskID) 设置返回创建的新集群检查任务ID
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateRefreshTaskResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateRefreshTaskResponse extends AbstractModel
     public $NewTaskID;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class CreateRefreshTaskResponse extends AbstractModel
      * @param integer $TaskId 返回创建的集群检查任务的ID，为0表示创建失败。
      * @param string $CreateResult 创建检查任务的结果，"Succ"为成功，"Failed"为失败
      * @param string $NewTaskID 返回创建的新集群检查任务ID
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

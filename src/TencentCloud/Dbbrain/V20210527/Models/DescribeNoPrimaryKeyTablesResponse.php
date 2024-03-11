@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoPrimaryKeyTables(array $NoPrimaryKeyTables) 设置无主键表列表。
  * @method integer getTimestamp() 获取采集时间戳（秒）。
  * @method void setTimestamp(integer $Timestamp) 设置采集时间戳（秒）。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNoPrimaryKeyTablesResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeNoPrimaryKeyTablesResponse extends AbstractModel
     public $Timestamp;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeNoPrimaryKeyTablesResponse extends AbstractModel
      * @param integer $NoPrimaryKeyTableRecordCount 记录的无主键表总数（不超过无主键表总数），可用于分页查询。
      * @param array $NoPrimaryKeyTables 无主键表列表。
      * @param integer $Timestamp 采集时间戳（秒）。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

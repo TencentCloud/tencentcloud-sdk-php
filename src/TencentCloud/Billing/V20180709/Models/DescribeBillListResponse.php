@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentOutAmount(float $AgentOutAmount) 设置资金转出总额，单位（分）
  * @method float getAdvancePayAmount() 获取还垫付总额，单位（分）
  * @method void setAdvancePayAmount(float $AdvancePayAmount) 设置还垫付总额，单位（分）
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBillListResponse extends AbstractModel
 {
@@ -110,7 +110,7 @@ class DescribeBillListResponse extends AbstractModel
     public $AdvancePayAmount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -127,7 +127,7 @@ class DescribeBillListResponse extends AbstractModel
      * @param float $WithdrawAmount 提现扣减总额，单位（分）
      * @param float $AgentOutAmount 资金转出总额，单位（分）
      * @param float $AdvancePayAmount 还垫付总额，单位（分）
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

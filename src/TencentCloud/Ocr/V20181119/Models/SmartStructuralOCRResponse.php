@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 为 0；顺时针为正，逆时针为负
  * @method array getStructuralItems() 获取识别信息
  * @method void setStructuralItems(array $StructuralItems) 设置识别信息
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SmartStructuralOCRResponse extends AbstractModel
 {
@@ -43,7 +43,7 @@ class SmartStructuralOCRResponse extends AbstractModel
     public $StructuralItems;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -51,7 +51,7 @@ class SmartStructuralOCRResponse extends AbstractModel
      * @param float $Angle 图片旋转角度(角度制)，文本的水平方向
 为 0；顺时针为正，逆时针为负
      * @param array $StructuralItems 识别信息
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

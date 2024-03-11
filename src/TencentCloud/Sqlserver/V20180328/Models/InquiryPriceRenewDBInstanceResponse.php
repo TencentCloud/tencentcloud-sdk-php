@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalPrice(integer $OriginalPrice) 设置未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
  * @method integer getPrice() 获取实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
  * @method void setPrice(integer $Price) 设置实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class InquiryPriceRenewDBInstanceResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class InquiryPriceRenewDBInstanceResponse extends AbstractModel
     public $Price;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $OriginalPrice 未打折的原价，其值除以100表示最终的价格。例如10094表示100.94元
      * @param integer $Price 实际需要支付价格，其值除以100表示最终的价格。例如10094表示100.94元
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) 设置用户名
  * @method array getDeliverTypeDetails() 获取xx
  * @method void setDeliverTypeDetails(array $DeliverTypeDetails) 设置xx
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLogKafkaDeliverInfoResponse extends AbstractModel
 {
@@ -124,7 +124,7 @@ class DescribeLogKafkaDeliverInfoResponse extends AbstractModel
     public $DeliverTypeDetails;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -143,7 +143,7 @@ class DescribeLogKafkaDeliverInfoResponse extends AbstractModel
      * @param integer $DiskSize 磁盘容量
      * @param string $Username 用户名
      * @param array $DeliverTypeDetails xx
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

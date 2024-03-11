@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyMode(string $PolicyMode) 设置项目权限模式，black为黑名单，white为白名单
  * @method string getModifyTime() 获取项目信息修改时间
  * @method void setModifyTime(string $ModifyTime) 设置项目信息修改时间
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProjectInfoResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeProjectInfoResponse extends AbstractModel
     public $ModifyTime;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeProjectInfoResponse extends AbstractModel
      * @param string $ProjectDescription 项目描述
      * @param string $PolicyMode 项目权限模式，black为黑名单，white为白名单
      * @param string $ModifyTime 项目信息修改时间
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

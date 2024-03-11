@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeResults(array $CodeResults) 设置二维码/条形码识别结果信息，具体内容请点击左侧链接。
  * @method QrcodeImgSize getImgSize() 获取图片大小，具体内容请点击左侧链接。
  * @method void setImgSize(QrcodeImgSize $ImgSize) 设置图片大小，具体内容请点击左侧链接。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class QrcodeOCRResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class QrcodeOCRResponse extends AbstractModel
     public $ImgSize;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $CodeResults 二维码/条形码识别结果信息，具体内容请点击左侧链接。
      * @param QrcodeImgSize $ImgSize 图片大小，具体内容请点击左侧链接。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

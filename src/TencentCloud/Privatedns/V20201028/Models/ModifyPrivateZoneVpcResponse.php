@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcSet(array $VpcSet) 设置解析域关联的VPC列表
  * @method array getAccountVpcSet() 获取私有域账号关联的全部VPC列表
  * @method void setAccountVpcSet(array $AccountVpcSet) 设置私有域账号关联的全部VPC列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyPrivateZoneVpcResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyPrivateZoneVpcResponse extends AbstractModel
     public $AccountVpcSet;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class ModifyPrivateZoneVpcResponse extends AbstractModel
      * @param string $ZoneId 私有域ID, zone-xxxxxx
      * @param array $VpcSet 解析域关联的VPC列表
      * @param array $AccountVpcSet 私有域账号关联的全部VPC列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTareKG(string $TareKG) 设置集装箱自身重量，单位：千克（KG）
  * @method string getTareLB() 获取集装箱自身重量，单位：磅（LB）
  * @method void setTareLB(string $TareLB) 设置集装箱自身重量，单位：磅（LB）
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RecognizeContainerOCRResponse extends AbstractModel
 {
@@ -109,7 +109,7 @@ class RecognizeContainerOCRResponse extends AbstractModel
     public $TareLB;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -127,7 +127,7 @@ class RecognizeContainerOCRResponse extends AbstractModel
 -9927	集装箱类型不完整或者不清晰
      * @param string $TareKG 集装箱自身重量，单位：千克（KG）
      * @param string $TareLB 集装箱自身重量，单位：磅（LB）
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

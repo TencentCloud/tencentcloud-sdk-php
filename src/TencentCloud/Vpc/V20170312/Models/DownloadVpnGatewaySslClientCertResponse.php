@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSslClientConfig(array $SslClientConfig) 设置SSL-VPN 客户端配置。
  * @method integer getAuthenticated() 获取是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
  * @method void setAuthenticated(integer $Authenticated) 设置是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
     public $Authenticated;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
      * @param string $SslClientConfigsSet SSL-VPN 客户端配置。
      * @param array $SslClientConfig SSL-VPN 客户端配置。
      * @param integer $Authenticated 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

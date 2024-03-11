@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsedPurchasedAuthorizedCnt(integer $UsedPurchasedAuthorizedCnt) 设置已使用已购镜像授权数
  * @method boolean getCanApplyFreeImageAuthorize() 获取是否可免费领取镜像授权数
  * @method void setCanApplyFreeImageAuthorize(boolean $CanApplyFreeImageAuthorize) 设置是否可免费领取镜像授权数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeImageAuthorizedInfoResponse extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
     public $CanApplyFreeImageAuthorize;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -111,7 +111,7 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
      * @param integer $PurchasedAuthorizedCnt 已购镜像授权数
      * @param integer $UsedPurchasedAuthorizedCnt 已使用已购镜像授权数
      * @param boolean $CanApplyFreeImageAuthorize 是否可免费领取镜像授权数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

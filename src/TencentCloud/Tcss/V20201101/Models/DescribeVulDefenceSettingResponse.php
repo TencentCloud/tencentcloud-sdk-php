@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuperNodeIds(array $SuperNodeIds) 设置超级节点Id列表
  * @method integer getNodeTotalCount() 获取开通容器安全的超级结点总数
  * @method void setNodeTotalCount(integer $NodeTotalCount) 设置开通容器安全的超级结点总数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVulDefenceSettingResponse extends AbstractModel
 {
@@ -119,7 +119,7 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
     public $NodeTotalCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -139,7 +139,7 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
      * @param integer $SuperNodeCount 超级节点个数
      * @param array $SuperNodeIds 超级节点Id列表
      * @param integer $NodeTotalCount 开通容器安全的超级结点总数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

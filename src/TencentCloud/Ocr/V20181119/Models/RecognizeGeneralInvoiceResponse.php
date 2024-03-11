@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMixedInvoiceItems(array $MixedInvoiceItems) 设置混贴票据识别结果，具体内容请点击左侧链接。
  * @method integer getTotalPDFCount() 获取PDF文件总页码
  * @method void setTotalPDFCount(integer $TotalPDFCount) 设置PDF文件总页码
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RecognizeGeneralInvoiceResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RecognizeGeneralInvoiceResponse extends AbstractModel
     public $TotalPDFCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $MixedInvoiceItems 混贴票据识别结果，具体内容请点击左侧链接。
      * @param integer $TotalPDFCount PDF文件总页码
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

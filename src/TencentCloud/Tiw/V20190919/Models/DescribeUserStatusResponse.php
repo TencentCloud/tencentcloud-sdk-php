@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsTiwOfflineRecordUser(integer $IsTiwOfflineRecordUser) 设置是否使用白板的课后录制
  * @method integer getIsAuthenticated() 获取用户是否实名认证
  * @method void setIsAuthenticated(integer $IsAuthenticated) 设置用户是否实名认证
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUserStatusResponse extends AbstractModel
 {
@@ -70,7 +70,7 @@ class DescribeUserStatusResponse extends AbstractModel
     public $IsAuthenticated;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -83,7 +83,7 @@ class DescribeUserStatusResponse extends AbstractModel
      * @param integer $IsSaaSUser 是否开通过互动课堂（试用或正式）
      * @param integer $IsTiwOfflineRecordUser 是否使用白板的课后录制
      * @param integer $IsAuthenticated 用户是否实名认证
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

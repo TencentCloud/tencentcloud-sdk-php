@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOptimized(integer $Optimized) 设置历史优化数。
  * @method integer getOptimizedCount() 获取累计优化条数。
  * @method void setOptimizedCount(integer $OptimizedCount) 设置累计优化条数。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeIndexRecommendInfoResponse extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeIndexRecommendInfoResponse extends AbstractModel
     public $OptimizedCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -79,7 +79,7 @@ class DescribeIndexRecommendInfoResponse extends AbstractModel
      * @param integer $Level 优化级别，1-4，优先级从高到低。
      * @param integer $Optimized 历史优化数。
      * @param integer $OptimizedCount 累计优化条数。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

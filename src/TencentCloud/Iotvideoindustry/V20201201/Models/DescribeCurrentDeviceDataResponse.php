@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOnlineDevices(integer $OnlineDevices) 设置在线设备数
  * @method integer getRecordingChannels() 获取正在录制通道数
  * @method void setRecordingChannels(integer $RecordingChannels) 设置正在录制通道数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCurrentDeviceDataResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeCurrentDeviceDataResponse extends AbstractModel
     public $RecordingChannels;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeCurrentDeviceDataResponse extends AbstractModel
      * @param integer $OnlineChannels 在线通道数
      * @param integer $OnlineDevices 在线设备数
      * @param integer $RecordingChannels 正在录制通道数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

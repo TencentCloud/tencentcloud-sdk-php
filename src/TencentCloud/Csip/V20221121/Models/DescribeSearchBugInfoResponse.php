@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnCode(integer $ReturnCode) 设置状态值，0：查询成功，非0：查询失败
  * @method string getReturnMsg() 获取状态信息，success：查询成功，fail：查询失败
  * @method void setReturnMsg(string $ReturnMsg) 设置状态信息，success：查询成功，fail：查询失败
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSearchBugInfoResponse extends AbstractModel
 {
@@ -50,7 +50,7 @@ class DescribeSearchBugInfoResponse extends AbstractModel
     public $ReturnMsg;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -59,7 +59,7 @@ class DescribeSearchBugInfoResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReturnCode 状态值，0：查询成功，非0：查询失败
      * @param string $ReturnMsg 状态信息，success：查询成功，fail：查询失败
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

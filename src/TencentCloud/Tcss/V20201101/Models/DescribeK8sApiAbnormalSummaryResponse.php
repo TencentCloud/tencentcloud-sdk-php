@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnhandleLowLevelEventCount(integer $UnhandleLowLevelEventCount) 设置待处理低危事件个数
  * @method integer getUnhandleNoticeLevelEventCount() 获取待处理提示级别事件个数
  * @method void setUnhandleNoticeLevelEventCount(integer $UnhandleNoticeLevelEventCount) 设置待处理提示级别事件个数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeK8sApiAbnormalSummaryResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeK8sApiAbnormalSummaryResponse extends AbstractModel
     public $UnhandleNoticeLevelEventCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeK8sApiAbnormalSummaryResponse extends AbstractModel
      * @param integer $UnhandleMediumLevelEventCount 待处理中危事件个数
      * @param integer $UnhandleLowLevelEventCount 待处理低危事件个数
      * @param integer $UnhandleNoticeLevelEventCount 待处理提示级别事件个数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

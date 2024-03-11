@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSumFlux(float $SumFlux) 设置总流量，单位是 MB。
  * @method array getDataInfoList() 获取明细数据信息。
  * @method void setDataInfoList(array $DataInfoList) 设置明细数据信息。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePushBandwidthAndFluxListResponse extends AbstractModel
 {
@@ -86,7 +86,7 @@ class DescribePushBandwidthAndFluxListResponse extends AbstractModel
     public $DataInfoList;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -103,7 +103,7 @@ class DescribePushBandwidthAndFluxListResponse extends AbstractModel
      * @param float $P95PeakBandwidth 95峰值带宽，单位是 Mbps。
      * @param float $SumFlux 总流量，单位是 MB。
      * @param array $DataInfoList 明细数据信息。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

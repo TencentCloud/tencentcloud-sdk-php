@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnabledCount(integer $EnabledCount) 设置有效流量包个数
  * @method integer getPaidCount() 获取付费流量包个数
  * @method void setPaidCount(integer $PaidCount) 设置付费流量包个数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTrafficPackagesResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeTrafficPackagesResponse extends AbstractModel
     public $PaidCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeTrafficPackagesResponse extends AbstractModel
      * @param integer $ExpiringCount 即将过期的流量包个数（7天内）
      * @param integer $EnabledCount 有效流量包个数
      * @param integer $PaidCount 付费流量包个数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

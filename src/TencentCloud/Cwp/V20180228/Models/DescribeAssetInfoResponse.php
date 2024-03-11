@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebLocationNewCount(integer $WebLocationNewCount) 设置Web站点今日新增
  * @method integer getMachineNewCount() 获取主机今日新增
  * @method void setMachineNewCount(integer $MachineNewCount) 设置主机今日新增
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAssetInfoResponse extends AbstractModel
 {
@@ -166,7 +166,7 @@ class DescribeAssetInfoResponse extends AbstractModel
     public $MachineNewCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -191,7 +191,7 @@ class DescribeAssetInfoResponse extends AbstractModel
      * @param integer $WebServiceNewCount Web服务今日新增
      * @param integer $WebLocationNewCount Web站点今日新增
      * @param integer $MachineNewCount 主机今日新增
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

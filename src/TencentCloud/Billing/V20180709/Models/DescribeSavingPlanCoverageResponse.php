@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRateSet(array $RateSet) 设置节省计划覆盖率聚合数据
  * @method integer getTotalCount() 获取查询命中的节省计划覆盖率明细数据总条数
  * @method void setTotalCount(integer $TotalCount) 设置查询命中的节省计划覆盖率明细数据总条数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSavingPlanCoverageResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeSavingPlanCoverageResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeSavingPlanCoverageResponse extends AbstractModel
      * @param array $DetailSet 节省计划覆盖率明细数据
      * @param array $RateSet 节省计划覆盖率聚合数据
      * @param integer $TotalCount 查询命中的节省计划覆盖率明细数据总条数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

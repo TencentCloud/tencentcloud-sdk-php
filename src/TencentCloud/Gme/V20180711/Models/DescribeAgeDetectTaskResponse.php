@@ -32,8 +32,8 @@ DataId： 请求中对应的 DataId。
 Url ：该请求中对应的 Url。
 Status ：子任务状态，0:已创建，1:运行中，2:已完成，3:任务异常，4:任务超时。
 Age ：子任务完成后的结果，0:成年人，1:未成年人，100:未知结果。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAgeDetectTaskResponse extends AbstractModel
 {
@@ -52,7 +52,7 @@ Age ：子任务完成后的结果，0:成年人，1:未成年人，100:未知�
     public $Results;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ DataId： 请求中对应的 DataId。
 Url ：该请求中对应的 Url。
 Status ：子任务状态，0:已创建，1:运行中，2:已完成，3:任务异常，4:任务超时。
 Age ：子任务完成后的结果，0:成年人，1:未成年人，100:未知结果。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

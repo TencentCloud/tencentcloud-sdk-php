@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载链接地址
  * @method string getTaskId() 获取导出检测报告的任务Id（不同于入参的漏洞扫描任务id）
  * @method void setTaskId(string $TaskId) 设置导出检测报告的任务Id（不同于入参的漏洞扫描任务id）
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ExportVulDetectionReportResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ExportVulDetectionReportResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $DownloadUrl 导出文件下载链接地址
      * @param string $TaskId 导出检测报告的任务Id（不同于入参的漏洞扫描任务id）
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

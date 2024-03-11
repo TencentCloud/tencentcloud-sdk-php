@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewAttackIp(string $NewAttackIp) 设置当前最近一条攻击中的IP
  * @method string getNewAttackType() 获取当前最近一条攻击中的攻击类型
  * @method void setNewAttackType(string $NewAttackType) 设置当前最近一条攻击中的攻击类型
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOverviewIndexResponse extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeOverviewIndexResponse extends AbstractModel
     public $NewAttackType;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -111,7 +111,7 @@ class DescribeOverviewIndexResponse extends AbstractModel
      * @param string $NewAttackTime 当前最近一条攻击中的起始时间
      * @param string $NewAttackIp 当前最近一条攻击中的IP
      * @param string $NewAttackType 当前最近一条攻击中的攻击类型
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

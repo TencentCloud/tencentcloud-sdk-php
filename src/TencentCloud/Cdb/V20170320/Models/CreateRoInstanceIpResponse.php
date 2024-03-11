@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoVip(string $RoVip) 设置只读实例的内网IP地址。
  * @method integer getRoVport() 获取只读实例的内网端口号。
  * @method void setRoVport(integer $RoVport) 设置只读实例的内网端口号。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateRoInstanceIpResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateRoInstanceIpResponse extends AbstractModel
     public $RoVport;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class CreateRoInstanceIpResponse extends AbstractModel
      * @param integer $RoSubnetId 只读实例的子网ID。
      * @param string $RoVip 只读实例的内网IP地址。
      * @param integer $RoVport 只读实例的内网端口号。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBusinessCode(integer $BusinessCode) 设置线索处理状态码： 0-表示创建成功， 1-表示线索合并，2-表示线索重复
  * @method string getBusinessMsg() 获取线索处理结果描述
  * @method void setBusinessMsg(string $BusinessMsg) 设置线索处理结果描述
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateLeadResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateLeadResponse extends AbstractModel
     public $BusinessMsg;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $BusinessCode 线索处理状态码： 0-表示创建成功， 1-表示线索合并，2-表示线索重复
      * @param string $BusinessMsg 线索处理结果描述
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

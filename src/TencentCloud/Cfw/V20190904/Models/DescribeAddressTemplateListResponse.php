@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainTemplateCount(integer $DomainTemplateCount) 设置域名地址模板数量
  * @method integer getPortTemplateCount() 获取协议端口模板数量
  * @method void setPortTemplateCount(integer $PortTemplateCount) 设置协议端口模板数量
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAddressTemplateListResponse extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeAddressTemplateListResponse extends AbstractModel
     public $PortTemplateCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -79,7 +79,7 @@ class DescribeAddressTemplateListResponse extends AbstractModel
      * @param integer $IpTemplateCount Ip地址模板数量
      * @param integer $DomainTemplateCount 域名地址模板数量
      * @param integer $PortTemplateCount 协议端口模板数量
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

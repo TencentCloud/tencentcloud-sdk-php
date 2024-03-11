@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTicketThroughputSum(integer $TicketThroughputSum) 设置票据验证通过量
  * @method integer getTicketInterceptSum() 获取票据验证拦截量
  * @method void setTicketInterceptSum(integer $TicketInterceptSum) 设置票据验证拦截量
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCaptchaDataSumResponse extends AbstractModel
 {
@@ -92,7 +92,7 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
     public $TicketInterceptSum;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -107,7 +107,7 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
      * @param integer $CheckTicketSum 票据校验总量
      * @param integer $TicketThroughputSum 票据验证通过量
      * @param integer $TicketInterceptSum 票据验证拦截量
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

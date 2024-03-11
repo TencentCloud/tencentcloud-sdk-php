@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAngle(integer $Angle) 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
  * @method array getFormulaInfos() 获取检测到的文本信息，具体内容请点击左侧链接。
  * @method void setFormulaInfos(array $FormulaInfos) 设置检测到的文本信息，具体内容请点击左侧链接。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class FormulaOCRResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class FormulaOCRResponse extends AbstractModel
     public $FormulaInfos;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负
      * @param array $FormulaInfos 检测到的文本信息，具体内容请点击左侧链接。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

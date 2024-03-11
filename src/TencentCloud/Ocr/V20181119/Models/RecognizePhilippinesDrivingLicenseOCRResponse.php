@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgencyCode(TextDetectionResult $AgencyCode) 设置机构代码
  * @method TextDetectionResult getBirthday() 获取出生日期
  * @method void setBirthday(TextDetectionResult $Birthday) 设置出生日期
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RecognizePhilippinesDrivingLicenseOCRResponse extends AbstractModel
 {
@@ -110,7 +110,7 @@ class RecognizePhilippinesDrivingLicenseOCRResponse extends AbstractModel
     public $Birthday;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -127,7 +127,7 @@ class RecognizePhilippinesDrivingLicenseOCRResponse extends AbstractModel
      * @param TextDetectionResult $ExpiresDate 有效期
      * @param TextDetectionResult $AgencyCode 机构代码
      * @param TextDetectionResult $Birthday 出生日期
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

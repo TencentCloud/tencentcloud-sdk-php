@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContext(string $Context) 设置检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
  * @method array getResults() 获取日志数据结果数组，返回对应时间点及取值。
  * @method void setResults(array $Results) 设置日志数据结果数组，返回对应时间点及取值。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDeviceCommLogResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDeviceCommLogResponse extends AbstractModel
     public $Results;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeDeviceCommLogResponse extends AbstractModel
      * @param boolean $Listover 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
      * @param string $Context 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
      * @param array $Results 日志数据结果数组，返回对应时间点及取值。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

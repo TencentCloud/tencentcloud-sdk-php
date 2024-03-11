@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallback(string $Callback) 设置实时录制事件回调地址，如果未设置回调地址，该字段为空字符串
  * @method string getCallbackKey() 获取实时录制回调鉴权密钥
  * @method void setCallbackKey(string $CallbackKey) 设置实时录制回调鉴权密钥
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOnlineRecordCallbackResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeOnlineRecordCallbackResponse extends AbstractModel
     public $CallbackKey;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Callback 实时录制事件回调地址，如果未设置回调地址，该字段为空字符串
      * @param string $CallbackKey 实时录制回调鉴权密钥
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

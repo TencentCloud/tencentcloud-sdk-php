@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称，目前只有Ckafka会用到
  * @method string getErrMsg() 获取错误消息
  * @method void setErrMsg(string $ErrMsg) 设置错误消息
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateForwardRuleResponse extends AbstractModel
 {
@@ -110,7 +110,7 @@ class CreateForwardRuleResponse extends AbstractModel
     public $ErrMsg;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -127,7 +127,7 @@ class CreateForwardRuleResponse extends AbstractModel
      * @param string $InstanceId 实例id， 目前只有Ckafka会用到
      * @param string $InstanceName 实例名称，目前只有Ckafka会用到
      * @param string $ErrMsg 错误消息
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

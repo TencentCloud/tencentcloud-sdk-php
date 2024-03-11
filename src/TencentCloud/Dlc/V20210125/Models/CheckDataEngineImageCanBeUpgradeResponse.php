@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChildImageVersionId(string $ChildImageVersionId) 设置当前大版本下，可升级的集群镜像小版本id
  * @method boolean getIsUpgrade() 获取是否能够升级
  * @method void setIsUpgrade(boolean $IsUpgrade) 设置是否能够升级
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CheckDataEngineImageCanBeUpgradeResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CheckDataEngineImageCanBeUpgradeResponse extends AbstractModel
     public $IsUpgrade;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $ChildImageVersionId 当前大版本下，可升级的集群镜像小版本id
      * @param boolean $IsUpgrade 是否能够升级
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

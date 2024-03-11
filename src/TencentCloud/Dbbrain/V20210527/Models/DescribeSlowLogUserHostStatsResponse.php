@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserNameItems(array $UserNameItems) 设置各来源用户名的慢日志占比详情列表。
  * @method integer getUserTotalCount() 获取来源用户数目。
  * @method void setUserTotalCount(integer $UserTotalCount) 设置来源用户数目。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSlowLogUserHostStatsResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeSlowLogUserHostStatsResponse extends AbstractModel
     public $UserTotalCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeSlowLogUserHostStatsResponse extends AbstractModel
      * @param array $Items 各来源地址的慢日志占比详情列表。
      * @param array $UserNameItems 各来源用户名的慢日志占比详情列表。
      * @param integer $UserTotalCount 来源用户数目。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskCount(integer $RiskCount) 设置风险个数
  * @method integer getLeftSeconds() 获取剩余扫描时间
  * @method void setLeftSeconds(integer $LeftSeconds) 设置剩余扫描时间
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAssetImageScanStatusResponse extends AbstractModel
 {
@@ -75,7 +75,7 @@ class DescribeAssetImageScanStatusResponse extends AbstractModel
     public $LeftSeconds;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -87,7 +87,7 @@ class DescribeAssetImageScanStatusResponse extends AbstractModel
      * @param integer $SuccessCount 安全个数
      * @param integer $RiskCount 风险个数
      * @param integer $LeftSeconds 剩余扫描时间
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

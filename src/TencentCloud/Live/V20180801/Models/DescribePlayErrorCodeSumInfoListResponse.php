@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCode2xx(integer $TotalCode2xx) 设置状态码为2开头的总次数。
  * @method integer getTotalCode3xx() 获取状态码为3开头的总次数。
  * @method void setTotalCode3xx(integer $TotalCode3xx) 设置状态码为3开头的总次数。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
 {
@@ -103,7 +103,7 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
     public $TotalCode3xx;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -119,7 +119,7 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
      * @param integer $TotalNum 总记录数。
      * @param integer $TotalCode2xx 状态码为2开头的总次数。
      * @param integer $TotalCode3xx 状态码为3开头的总次数。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

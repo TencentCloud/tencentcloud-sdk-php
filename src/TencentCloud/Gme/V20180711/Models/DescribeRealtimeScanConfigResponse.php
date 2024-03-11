@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIdString(string $UserIdString) 设置用户号字符串，逗号分隔，示例："0001,0002,0003"
  * @method string getRoomIdString() 获取房间号字符串，逗号分隔，示例："0001,0002,0003"
  * @method void setRoomIdString(string $RoomIdString) 设置房间号字符串，逗号分隔，示例："0001,0002,0003"
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRealtimeScanConfigResponse extends AbstractModel
 {
@@ -81,7 +81,7 @@ class DescribeRealtimeScanConfigResponse extends AbstractModel
     public $RoomIdString;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -95,7 +95,7 @@ class DescribeRealtimeScanConfigResponse extends AbstractModel
 符合此正则表达式规则的房间号将被送检。示例：^6.*（表示所有以6开头的房间号将被送检）
      * @param string $UserIdString 用户号字符串，逗号分隔，示例："0001,0002,0003"
      * @param string $RoomIdString 房间号字符串，逗号分隔，示例："0001,0002,0003"
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

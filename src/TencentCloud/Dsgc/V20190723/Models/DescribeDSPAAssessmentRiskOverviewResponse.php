@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighRiskWeekRatio(float $HighRiskWeekRatio) 设置周同比
  * @method float getHighRiskDayRatio() 获取高危风险数日环比
  * @method void setHighRiskDayRatio(float $HighRiskDayRatio) 设置高危风险数日环比
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDSPAAssessmentRiskOverviewResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeDSPAAssessmentRiskOverviewResponse extends AbstractModel
     public $HighRiskDayRatio;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeDSPAAssessmentRiskOverviewResponse extends AbstractModel
      * @param integer $HighRiskCount 高危风险数
      * @param float $HighRiskWeekRatio 周同比
      * @param float $HighRiskDayRatio 高危风险数日环比
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

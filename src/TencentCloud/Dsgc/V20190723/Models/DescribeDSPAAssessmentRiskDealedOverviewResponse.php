@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnDealedRiskWeekRatio(float $UnDealedRiskWeekRatio) 设置遗留待处理风险数周同比
  * @method float getUnDealedRiskDayRatio() 获取遗留待处理风险数日环比
  * @method void setUnDealedRiskDayRatio(float $UnDealedRiskDayRatio) 设置遗留待处理风险数日环比
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDSPAAssessmentRiskDealedOverviewResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeDSPAAssessmentRiskDealedOverviewResponse extends AbstractModel
     public $UnDealedRiskDayRatio;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeDSPAAssessmentRiskDealedOverviewResponse extends AbstractModel
      * @param integer $YesterdayDealedCount 昨日完成风险处置数
      * @param float $UnDealedRiskWeekRatio 遗留待处理风险数周同比
      * @param float $UnDealedRiskDayRatio 遗留待处理风险数日环比
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

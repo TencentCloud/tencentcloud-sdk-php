@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimePeriod(string $TimePeriod) 设置备份时间段。
  * @method array getWeekDays() 获取备份周期。Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
  * @method void setWeekDays(array $WeekDays) 设置备份周期。Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyAutoBackupConfigResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyAutoBackupConfigResponse extends AbstractModel
     public $WeekDays;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class ModifyAutoBackupConfigResponse extends AbstractModel
      * @param integer $BinlogStorageDays 全量备份文件保存天数。
      * @param string $TimePeriod 备份时间段。
      * @param array $WeekDays 备份周期。Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

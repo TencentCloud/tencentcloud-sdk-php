@@ -32,8 +32,8 @@ USER_INITIALIZING，表示用户正在初始化环境。
 USER_NORMAL: 正常状态。
  * @method array getAssetSummaryList() 获取返回各类资产的汇总信息的列表。
  * @method void setAssetSummaryList(array $AssetSummaryList) 设置返回各类资产的汇总信息的列表。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeComplianceTaskAssetSummaryResponse extends AbstractModel
 {
@@ -52,7 +52,7 @@ USER_NORMAL: 正常状态。
     public $AssetSummaryList;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ USER_UNINIT: 用户未初始化。
 USER_INITIALIZING，表示用户正在初始化环境。
 USER_NORMAL: 正常状态。
      * @param array $AssetSummaryList 返回各类资产的汇总信息的列表。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

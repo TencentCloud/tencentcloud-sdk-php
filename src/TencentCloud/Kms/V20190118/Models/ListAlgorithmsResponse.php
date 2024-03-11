@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsymmetricAlgorithms(array $AsymmetricAlgorithms) 设置本地区支持的非对称加密算法
  * @method array getAsymmetricSignVerifyAlgorithms() 获取本地区支持的非对称签名验签算法
  * @method void setAsymmetricSignVerifyAlgorithms(array $AsymmetricSignVerifyAlgorithms) 设置本地区支持的非对称签名验签算法
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListAlgorithmsResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ListAlgorithmsResponse extends AbstractModel
     public $AsymmetricSignVerifyAlgorithms;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class ListAlgorithmsResponse extends AbstractModel
      * @param array $SymmetricAlgorithms 本地区支持的对称加密算法
      * @param array $AsymmetricAlgorithms 本地区支持的非对称加密算法
      * @param array $AsymmetricSignVerifyAlgorithms 本地区支持的非对称签名验签算法
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicKey(string $PublicKey) 设置用于加密密钥材料的RSA公钥，base64编码。使用PublicKey base64解码后的公钥将导入密钥进行加密后作为 ImportKeyMaterial 的参数。
  * @method integer getParametersValidTo() 获取该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
  * @method void setParametersValidTo(integer $ParametersValidTo) 设置该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetParametersForImportResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class GetParametersForImportResponse extends AbstractModel
     public $ParametersValidTo;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class GetParametersForImportResponse extends AbstractModel
      * @param string $ImportToken 导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。
      * @param string $PublicKey 用于加密密钥材料的RSA公钥，base64编码。使用PublicKey base64解码后的公钥将导入密钥进行加密后作为 ImportKeyMaterial 的参数。
      * @param integer $ParametersValidTo 该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

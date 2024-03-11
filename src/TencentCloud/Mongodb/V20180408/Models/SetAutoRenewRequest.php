@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method integer getAutoRenewFlag() 获取续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
+ * @method integer getAutoRenewFlag() 获取配置自动续费标识。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置配置自动续费标识。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
  */
 class SetAutoRenewRequest extends AbstractModel
 {
@@ -33,13 +39,19 @@ class SetAutoRenewRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var integer 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
+     * @var integer 配置自动续费标识。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
      */
     public $AutoRenewFlag;
 
     /**
      * @param array $InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param integer $AutoRenewFlag 续费选项，取值范围：0-手动续费，1-自动续费，2-确认不续费
+     * @param integer $AutoRenewFlag 配置自动续费标识。
+- 0：手动续费。
+- 1：自动续费。
+- 2：确认不续费。
      */
     function __construct()
     {

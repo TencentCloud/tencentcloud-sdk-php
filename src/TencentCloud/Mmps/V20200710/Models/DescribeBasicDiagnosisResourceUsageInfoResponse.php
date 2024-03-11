@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(integer $Total) 设置资源总数
  * @method integer getUnusedCount() 获取资源未使用次数
  * @method void setUnusedCount(integer $UnusedCount) 设置资源未使用次数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBasicDiagnosisResourceUsageInfoResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeBasicDiagnosisResourceUsageInfoResponse extends AbstractModel
     public $UnusedCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DescribeBasicDiagnosisResourceUsageInfoResponse extends AbstractModel
      * @param string $ResourceName 资源类型
      * @param integer $Total 资源总数
      * @param integer $UnusedCount 资源未使用次数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

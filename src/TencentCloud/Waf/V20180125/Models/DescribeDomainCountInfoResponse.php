@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLeftDomainCount(integer $LeftDomainCount) 设置剩下配额
  * @method integer getOpenWafDomain() 获取开启防护域名数
  * @method void setOpenWafDomain(integer $OpenWafDomain) 设置开启防护域名数
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDomainCountInfoResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeDomainCountInfoResponse extends AbstractModel
     public $OpenWafDomain;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeDomainCountInfoResponse extends AbstractModel
      * @param integer $WafDomainCount 接入域名总数
      * @param integer $LeftDomainCount 剩下配额
      * @param integer $OpenWafDomain 开启防护域名数
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertEndTime(string $CertEndTime) 设置证书失效时间。
  * @method array getCertLoadBalancerSet() 获取该证书关联的黑石负载均衡对象列表。
  * @method void setCertLoadBalancerSet(array $CertLoadBalancerSet) 设置该证书关联的黑石负载均衡对象列表。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCertDetailResponse extends AbstractModel
 {
@@ -96,7 +96,7 @@ class DescribeCertDetailResponse extends AbstractModel
     public $CertLoadBalancerSet;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -111,7 +111,7 @@ class DescribeCertDetailResponse extends AbstractModel
      * @param string $CertBeginTime 证书生效时间。
      * @param string $CertEndTime 证书失效时间。
      * @param array $CertLoadBalancerSet 该证书关联的黑石负载均衡对象列表。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

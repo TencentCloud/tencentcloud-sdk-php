@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsModifying(integer $IsModifying) 设置是否有修改流程在执行中：1 是， 0 否。
  * @method integer getCurrentSyncMode() 获取当前复制方式，0 异步，1 同步
  * @method void setCurrentSyncMode(integer $CurrentSyncMode) 设置当前复制方式，0 异步，1 同步
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBSyncModeResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDBSyncModeResponse extends AbstractModel
     public $CurrentSyncMode;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeDBSyncModeResponse extends AbstractModel
      * @param integer $SyncMode 同步模式：0 异步，1 强同步， 2 强同步可退化
      * @param integer $IsModifying 是否有修改流程在执行中：1 是， 0 否。
      * @param integer $CurrentSyncMode 当前复制方式，0 异步，1 同步
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

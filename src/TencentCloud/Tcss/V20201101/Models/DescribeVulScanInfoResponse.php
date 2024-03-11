@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryTaskID(integer $RegistryTaskID) 设置仓库镜像最近一次的漏洞任务扫描ID
  * @method integer getRegistryFoundVulCount() 获取仓库发现漏洞数量
  * @method void setRegistryFoundVulCount(integer $RegistryFoundVulCount) 设置仓库发现漏洞数量
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVulScanInfoResponse extends AbstractModel
 {
@@ -117,7 +117,7 @@ class DescribeVulScanInfoResponse extends AbstractModel
     public $RegistryFoundVulCount;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -135,7 +135,7 @@ class DescribeVulScanInfoResponse extends AbstractModel
      * @param float $RemainingTime 剩余时间，秒
      * @param integer $RegistryTaskID 仓库镜像最近一次的漏洞任务扫描ID
      * @param integer $RegistryFoundVulCount 仓库发现漏洞数量
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

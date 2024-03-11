@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListOver(boolean $ListOver) 设置CLS接口返回内容
  * @method boolean getSqlFlag() 获取CLS接口返回内容，标志是否启动新版本索引
  * @method void setSqlFlag(boolean $SqlFlag) 设置CLS接口返回内容，标志是否启动新版本索引
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SearchAttackLogResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class SearchAttackLogResponse extends AbstractModel
     public $SqlFlag;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class SearchAttackLogResponse extends AbstractModel
      * @param array $Data 攻击日志数组条目内容
      * @param boolean $ListOver CLS接口返回内容
      * @param boolean $SqlFlag CLS接口返回内容，标志是否启动新版本索引
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

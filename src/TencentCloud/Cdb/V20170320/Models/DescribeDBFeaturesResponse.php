@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentSubVersion(string $CurrentSubVersion) 设置当前内核版本。
  * @method string getTargetSubVersion() 获取可供升级的内核版本。
  * @method void setTargetSubVersion(string $TargetSubVersion) 设置可供升级的内核版本。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDBFeaturesResponse extends AbstractModel
 {
@@ -89,7 +89,7 @@ class DescribeDBFeaturesResponse extends AbstractModel
     public $TargetSubVersion;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -103,7 +103,7 @@ class DescribeDBFeaturesResponse extends AbstractModel
      * @param boolean $IsSupportUpdateSubVersion 是否支持小版本升级。
      * @param string $CurrentSubVersion 当前内核版本。
      * @param string $TargetSubVersion 可供升级的内核版本。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

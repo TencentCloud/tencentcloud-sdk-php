@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 微信账号信息。
  *
- * @method string getWeChatOpenId() 获取微信的OpenID/UnionID 。
- * @method void setWeChatOpenId(string $WeChatOpenId) 设置微信的OpenID/UnionID 。
+ * @method string getWeChatOpenId() 获取微信的OpenId/UnionId。
+ * @method void setWeChatOpenId(string $WeChatOpenId) 设置微信的OpenId/UnionId。
  * @method integer getWeChatSubType() 获取微信开放账号类型：
 1：微信公众号/微信第三方登录。
 2：微信小程序。
@@ -40,15 +40,15 @@ use TencentCloud\Common\AbstractModel;
 注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
  * @method void setMobilePhone(string $MobilePhone) 设置账号绑定的MD5手机号，
 注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
- * @method string getDeviceId() 获取用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
- * @method void setDeviceId(string $DeviceId) 设置用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+ * @method string getDeviceId() 获取用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
+ * @method void setDeviceId(string $DeviceId) 设置用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
  */
 class WeChatAccountInfo extends AbstractModel
 {
     /**
-     * @var string 微信的OpenID/UnionID 。
+     * @var string 微信的OpenId/UnionId。
      */
     public $WeChatOpenId;
 
@@ -82,13 +82,13 @@ class WeChatAccountInfo extends AbstractModel
     public $MobilePhone;
 
     /**
-     * @var string 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+     * @var string 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
      */
     public $DeviceId;
 
     /**
-     * @param string $WeChatOpenId 微信的OpenID/UnionID 。
+     * @param string $WeChatOpenId 微信的OpenId/UnionId。
      * @param integer $WeChatSubType 微信开放账号类型：
 1：微信公众号/微信第三方登录。
 2：微信小程序。
@@ -98,8 +98,8 @@ class WeChatAccountInfo extends AbstractModel
      * @param string $AssociateAccount 用于标识微信用户登录后所关联业务自身的账号ID。
      * @param string $MobilePhone 账号绑定的MD5手机号，
 注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
-     * @param string $DeviceId 用户设备号，支持imei/imeiMD5/Idfa/IdfaMd5
-注释：imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+     * @param string $DeviceId 用户设备号，支持IMEI、IMEIMD5、IDFA、IDFAMD5
+注释：IMEIMD5、IDFAMD5加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
      */
     function __construct()
     {

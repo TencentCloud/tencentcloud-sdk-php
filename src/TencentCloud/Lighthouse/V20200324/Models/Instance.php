@@ -110,6 +110,8 @@ FAILED：表示操作失败
 <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
  * @method void setInstanceRestrictState(string $InstanceRestrictState) 设置实例封禁状态。取值范围：
 <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
+ * @method string getInitInvocationId() 获取创建实例后自动执行TAT命令的调用ID。
+ * @method void setInitInvocationId(string $InitInvocationId) 设置创建实例后自动执行TAT命令的调用ID。
  */
 class Instance extends AbstractModel
 {
@@ -267,6 +269,11 @@ FAILED：表示操作失败
     public $InstanceRestrictState;
 
     /**
+     * @var string 创建实例后自动执行TAT命令的调用ID。
+     */
+    public $InitInvocationId;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $BundleId 套餐 ID。
      * @param string $BlueprintId 镜像 ID。
@@ -312,6 +319,7 @@ FAILED：表示操作失败
      * @param array $Tags 实例绑定的标签列表。
      * @param string $InstanceRestrictState 实例封禁状态。取值范围：
 <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
+     * @param string $InitInvocationId 创建实例后自动执行TAT命令的调用ID。
      */
     function __construct()
     {
@@ -440,6 +448,10 @@ FAILED：表示操作失败
 
         if (array_key_exists("InstanceRestrictState",$param) and $param["InstanceRestrictState"] !== null) {
             $this->InstanceRestrictState = $param["InstanceRestrictState"];
+        }
+
+        if (array_key_exists("InitInvocationId",$param) and $param["InitInvocationId"] !== null) {
+            $this->InitInvocationId = $param["InitInvocationId"];
         }
     }
 }

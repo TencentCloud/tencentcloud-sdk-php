@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 网赚防刷相关参数
  *
- * @method string getSponsorOpenId() 获取助力场景建议填写：活动发起人微信 OpenID
- * @method void setSponsorOpenId(string $SponsorOpenId) 设置助力场景建议填写：活动发起人微信 OpenID
+ * @method string getSponsorOpenId() 获取助力场景建议填写：活动发起人微信OpenId。
+ * @method void setSponsorOpenId(string $SponsorOpenId) 设置助力场景建议填写：活动发起人微信OpenId。
  * @method string getSponsorDeviceNumber() 获取助力场景建议填写：发起人设备号
  * @method void setSponsorDeviceNumber(string $SponsorDeviceNumber) 设置助力场景建议填写：发起人设备号
  * @method string getSponsorPhone() 获取助力场景建议填写：发起人的MD5手机号
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class SponsorInfo extends AbstractModel
 {
     /**
-     * @var string 助力场景建议填写：活动发起人微信 OpenID
+     * @var string 助力场景建议填写：活动发起人微信OpenId。
      */
     public $SponsorOpenId;
 
@@ -59,7 +59,7 @@ class SponsorInfo extends AbstractModel
     public $CampaignUrl;
 
     /**
-     * @param string $SponsorOpenId 助力场景建议填写：活动发起人微信 OpenID
+     * @param string $SponsorOpenId 助力场景建议填写：活动发起人微信OpenId。
      * @param string $SponsorDeviceNumber 助力场景建议填写：发起人设备号
      * @param string $SponsorPhone 助力场景建议填写：发起人的MD5手机号
      * @param string $SponsorIp 助力场景建议填写：发起人IP

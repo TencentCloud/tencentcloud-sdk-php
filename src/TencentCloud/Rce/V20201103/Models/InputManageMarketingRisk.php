@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 全栈式风控引擎入参
  *
- * @method AccountInfo getAccount() 获取用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。
- * @method void setAccount(AccountInfo $Account) 设置用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。
+ * @method AccountInfo getAccount() 获取用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+ * @method void setAccount(AccountInfo $Account) 设置用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
  * @method string getSceneCode() 获取场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
@@ -44,20 +44,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIp(string $UserIp) 设置用户外网ip（传入用户非外网ip会影响判断结果）。
  * @method integer getPostTime() 获取用户操作时间戳，精确到秒。
  * @method void setPostTime(integer $PostTime) 设置用户操作时间戳，精确到秒。
- * @method string getUserId() 获取业务平台用户唯一标识。
- * @method void setUserId(string $UserId) 设置业务平台用户唯一标识。
- * @method string getDeviceToken() 获取设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。
- * @method void setDeviceToken(string $DeviceToken) 设置设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。
+ * @method string getUserId() 获取业务平台用户唯一标识，支持自定义。
+ * @method void setUserId(string $UserId) 设置业务平台用户唯一标识，支持自定义。
+ * @method string getDeviceToken() 获取设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
+ * @method void setDeviceToken(string $DeviceToken) 设置设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
  * @method integer getDeviceBusinessId() 获取设备指纹 BusinessId。
  * @method void setDeviceBusinessId(integer $DeviceBusinessId) 设置设备指纹 BusinessId。
  * @method integer getBusinessId() 获取业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
  * @method void setBusinessId(integer $BusinessId) 设置业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
  * @method string getNickname() 获取昵称，UTF-8 编码。
  * @method void setNickname(string $Nickname) 设置昵称，UTF-8 编码。
- * @method string getEmailAddress() 获取用户邮箱地址（非系统自动生成）。
- * @method void setEmailAddress(string $EmailAddress) 设置用户邮箱地址（非系统自动生成）。
+ * @method string getEmailAddress() 获取用户邮箱地址。
+ * @method void setEmailAddress(string $EmailAddress) 设置用户邮箱地址。
  * @method integer getCheckDevice() 获取是否识别设备异常：
 0：不识别。
 1：识别。
@@ -77,39 +75,39 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVendorId() 获取手机制造商ID，如果手机注册，请带上此信息。
  * @method void setVendorId(string $VendorId) 设置手机制造商ID，如果手机注册，请带上此信息。
  * @method integer getDeviceType() 获取设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
  * @method void setDeviceType(integer $DeviceType) 设置设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
  * @method array getDetails() 获取扩展字段。
  * @method void setDetails(array $Details) 设置扩展字段。
  * @method SponsorInfo getSponsor() 获取邀请助力场景相关信息。
  * @method void setSponsor(SponsorInfo $Sponsor) 设置邀请助力场景相关信息。
  * @method OnlineScamInfo getOnlineScam() 获取详情请跳转至OnlineScamInfo查看。
  * @method void setOnlineScam(OnlineScamInfo $OnlineScam) 设置详情请跳转至OnlineScamInfo查看。
- * @method string getPlatform() 获取1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+ * @method string getPlatform() 获取1：Android
+2：iOS
+3：H5
+4：小程序
 
- * @method void setPlatform(string $Platform) 设置1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+ * @method void setPlatform(string $Platform) 设置1：Android
+2：iOS
+3：H5
+4：小程序
  */
 class InputManageMarketingRisk extends AbstractModel
 {
     /**
-     * @var AccountInfo 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。
+     * @var AccountInfo 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      */
     public $Account;
 
@@ -133,13 +131,12 @@ class InputManageMarketingRisk extends AbstractModel
     public $PostTime;
 
     /**
-     * @var string 业务平台用户唯一标识。
+     * @var string 业务平台用户唯一标识，支持自定义。
      */
     public $UserId;
 
     /**
-     * @var string 设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。
+     * @var string 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
      */
     public $DeviceToken;
 
@@ -159,7 +156,7 @@ class InputManageMarketingRisk extends AbstractModel
     public $Nickname;
 
     /**
-     * @var string 用户邮箱地址（非系统自动生成）。
+     * @var string 用户邮箱地址。
      */
     public $EmailAddress;
 
@@ -202,10 +199,10 @@ class InputManageMarketingRisk extends AbstractModel
 
     /**
      * @var integer 设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
      */
     public $DeviceType;
 
@@ -225,20 +222,20 @@ class InputManageMarketingRisk extends AbstractModel
     public $OnlineScam;
 
     /**
-     * @var string 1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+     * @var string 1：Android
+2：iOS
+3：H5
+4：小程序
 
      */
     public $Platform;
 
     /**
-     * @param AccountInfo $Account 用户账号类型（默认开通 QQ 开放账号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）： 
-1：QQ 开放账号；
-2：微信开放账号；
-8：设备号（imei/imeiMD5/idfa/idfaMd5）；
-10004：手机号 MD5。
+     * @param AccountInfo $Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
+1：QQ开放账号
+2：微信开放账号
+8：设备号，仅支持IMEI、IMEIMD5、IDFA、IDFAMD5
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
      * @param string $SceneCode 场景码，用于识别和区分不同的业务场景，可在控制台上新建和管理
 控制台链接：https://console.cloud.tencent.com/rce/risk/strategy/scene-root
 活动防刷默认场景码：e_activity_antirush 
@@ -246,13 +243,12 @@ class InputManageMarketingRisk extends AbstractModel
 注册保护默认场景码：e_register_protection
      * @param string $UserIp 用户外网ip（传入用户非外网ip会影响判断结果）。
      * @param integer $PostTime 用户操作时间戳，精确到秒。
-     * @param string $UserId 业务平台用户唯一标识。
-     * @param string $DeviceToken 设备指纹Devicetoken值，集成设备指纹后获取，
-如果集成了相应的设备指纹，该字段必填。
+     * @param string $UserId 业务平台用户唯一标识，支持自定义。
+     * @param string $DeviceToken 设备指纹DeviceToken值，集成设备指纹后获取；如果集成了相应的设备指纹，该字段必填。
      * @param integer $DeviceBusinessId 设备指纹 BusinessId。
      * @param integer $BusinessId 业务ID。网站或应用在多个业务中使用此服务，通过此ID区分统计数据。
      * @param string $Nickname 昵称，UTF-8 编码。
-     * @param string $EmailAddress 用户邮箱地址（非系统自动生成）。
+     * @param string $EmailAddress 用户邮箱地址。
      * @param integer $CheckDevice 是否识别设备异常：
 0：不识别。
 1：识别。
@@ -263,17 +259,17 @@ class InputManageMarketingRisk extends AbstractModel
      * @param string $MacAddress MAC地址或设备唯一标识。
      * @param string $VendorId 手机制造商ID，如果手机注册，请带上此信息。
      * @param integer $DeviceType 设备类型，账号类型（AccountType）为8时填写。
-1:Imei；国际移动设备识别号（15-17位数字）；
-2:ImeiMd5；国际移动设备识别号，通过MD5加密后取32位小写值；
-3:Idfa；
-4:IdfaMD5； 国际移动设备识别号，通过MD5加密后取32位小写值。
+1:IMEI；国际移动设备识别号（15-17位数字）；
+2:IMEIMD5；国际移动设备识别号，通过MD5加密后取32位小写值；
+3:IDFA；
+4:IDFAMD5；国际移动设备识别号，通过MD5加密后取32位小写值。
      * @param array $Details 扩展字段。
      * @param SponsorInfo $Sponsor 邀请助力场景相关信息。
      * @param OnlineScamInfo $OnlineScam 详情请跳转至OnlineScamInfo查看。
-     * @param string $Platform 1：安卓；
-2：iOS ；
-3：H5 ；
-4：小程序 。
+     * @param string $Platform 1：Android
+2：iOS
+3：H5
+4：小程序
      */
     function __construct()
     {

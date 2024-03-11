@@ -115,7 +115,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 限制条件：
 1. 本企业（发起方企业）企业签署人仅支持通过企业名称+姓名+手机号进行补充。
-2. 个人签署人仅支持通过姓名+手机号进行补充。
+2. 个人签署人支持通过姓名+手机号进行补充，补充动态签署人时：若个人用户已完成实名，则可通过姓名+证件号码进行补充。
  * @method Models\ChannelCreateFlowByFilesResponse ChannelCreateFlowByFiles(Models\ChannelCreateFlowByFilesRequest $req) 接口（ChannelCreateFlowByFiles）用PDF文件创建签署流程。
 
 适用场景：适用非制式的合同文件签署，开发者有每个签署流程的PDF，可以通过该接口传入完整的PDF文件及流程信息生成待签署的合同流程。

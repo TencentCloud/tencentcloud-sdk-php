@@ -21,17 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 其它账号信息。
  *
  * @method string getAccountId() 获取其他账号信息；
-AccountType是8时，填入设备号（imei/imeimd5/idfa/idfamd5）
+AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
 MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
  * @method void setAccountId(string $AccountId) 设置其他账号信息；
-AccountType是8时，填入设备号（imei/imeimd5/idfa/idfamd5）
+AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
 MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
  * @method string getMobilePhone() 获取MD5手机号,AccountType是10004时，此处无需重复填写。
  * @method void setMobilePhone(string $MobilePhone) 设置MD5手机号,AccountType是10004时，此处无需重复填写。
  * @method string getDeviceId() 获取用户设备号，AccountType是8时，此处无需重复填写。
@@ -41,11 +41,11 @@ class OtherAccountInfo extends AbstractModel
 {
     /**
      * @var string 其他账号信息；
-AccountType是8时，填入设备号（imei/imeimd5/idfa/idfamd5）
+AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
 MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
      */
     public $AccountId;
 
@@ -61,11 +61,11 @@ imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后�
 
     /**
      * @param string $AccountId 其他账号信息；
-AccountType是8时，填入设备号（imei/imeimd5/idfa/idfamd5）
+AccountType是8时，填入设备号（IMEI、IMEIMD5、IDFA、IDFAMD5）
 AccountType是10004时，填入中国大陆标准11位手机号的MD5值
 注释：
 MD5手机号加密方式，中国大陆11位手机号进行MD5加密，加密后取32位小写值
-imeiMD5/IdfaMd5加密方式，对imei/IdfaMd5明文进行MD5加密，加密后取32位小写值。
+设备号加密方式，对IMEI、IDFA明文进行MD5加密，加密后取32位小写值。
      * @param string $MobilePhone MD5手机号,AccountType是10004时，此处无需重复填写。
      * @param string $DeviceId 用户设备号，AccountType是8时，此处无需重复填写。
      */

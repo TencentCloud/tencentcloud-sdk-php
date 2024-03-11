@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置消费组、订阅
  * @method boolean getQueryDLQMsg() 获取查询死信时该值为true
  * @method void setQueryDLQMsg(boolean $QueryDLQMsg) 设置查询死信时该值为true
+ * @method string getQueryDeadLetterMessage() 获取查询死信时该值为true
+ * @method void setQueryDeadLetterMessage(string $QueryDeadLetterMessage) 设置查询死信时该值为true
  */
 class DescribeRocketMQMsgTraceRequest extends AbstractModel
 {
@@ -62,8 +64,14 @@ class DescribeRocketMQMsgTraceRequest extends AbstractModel
 
     /**
      * @var boolean 查询死信时该值为true
+     * @deprecated
      */
     public $QueryDLQMsg;
+
+    /**
+     * @var string 查询死信时该值为true
+     */
+    public $QueryDeadLetterMessage;
 
     /**
      * @param string $ClusterId 集群id
@@ -72,6 +80,7 @@ class DescribeRocketMQMsgTraceRequest extends AbstractModel
      * @param string $MsgId 消息id
      * @param string $GroupName 消费组、订阅
      * @param boolean $QueryDLQMsg 查询死信时该值为true
+     * @param string $QueryDeadLetterMessage 查询死信时该值为true
      */
     function __construct()
     {
@@ -108,6 +117,10 @@ class DescribeRocketMQMsgTraceRequest extends AbstractModel
 
         if (array_key_exists("QueryDLQMsg",$param) and $param["QueryDLQMsg"] !== null) {
             $this->QueryDLQMsg = $param["QueryDLQMsg"];
+        }
+
+        if (array_key_exists("QueryDeadLetterMessage",$param) and $param["QueryDeadLetterMessage"] !== null) {
+            $this->QueryDeadLetterMessage = $param["QueryDeadLetterMessage"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextCursor(integer $NextCursor) 设置下一页的游标。用于分页。
  * @method array getWeChatBillDetails() 获取数据
  * @method void setWeChatBillDetails(array $WeChatBillDetails) 设置数据
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetWeChatBillDetailsResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class GetWeChatBillDetailsResponse extends AbstractModel
     public $WeChatBillDetails;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class GetWeChatBillDetailsResponse extends AbstractModel
      * @param boolean $HasNextPage 是否还有下一页。该字段为true时，需要将NextCursor的值作为入参Cursor继续调用本接口。
      * @param integer $NextCursor 下一页的游标。用于分页。
      * @param array $WeChatBillDetails 数据
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

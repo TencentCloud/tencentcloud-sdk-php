@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessId(string $AccessId) 设置客户的终端用户在IoT Video上的唯一标识ID
  * @method boolean getNewRegist() 获取用户是否为新创建
  * @method void setNewRegist(boolean $NewRegist) 设置用户是否为新创建
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAppUsrResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateAppUsrResponse extends AbstractModel
     public $NewRegist;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class CreateAppUsrResponse extends AbstractModel
      * @param string $CunionId 厂商云标识用户的唯一ID
      * @param string $AccessId 客户的终端用户在IoT Video上的唯一标识ID
      * @param boolean $NewRegist 用户是否为新创建
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

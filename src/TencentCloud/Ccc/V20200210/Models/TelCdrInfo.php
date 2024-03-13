@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordId(string $RecordId) 设置录音 ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SeatUserInfo getSeatUser() 获取坐席信息
- * @method void setSeatUser(SeatUserInfo $SeatUser) 设置坐席信息
+ * @method SeatUserInfo getSeatUser() 获取座席信息
+ * @method void setSeatUser(SeatUserInfo $SeatUser) 设置座席信息
  * @method integer getEndStatus() 获取EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -98,7 +98,7 @@ use TencentCloud\Common\AbstractModel;
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -154,9 +154,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIVRKeyPressed(array $IVRKeyPressed) 设置IVR 按键信息 ，e.g. ["1","2","3"]
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHungUpSide() 获取挂机方 seat 坐席 user 用户 system 系统
+ * @method string getHungUpSide() 获取挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHungUpSide(string $HungUpSide) 设置挂机方 seat 坐席 user 用户 system 系统
+ * @method void setHungUpSide(string $HungUpSide) 设置挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServeParticipants() 获取服务参与者列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -180,7 +180,7 @@ use TencentCloud\Common\AbstractModel;
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -227,7 +227,7 @@ use TencentCloud\Common\AbstractModel;
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -364,7 +364,7 @@ class TelCdrInfo extends AbstractModel
     public $RecordId;
 
     /**
-     * @var SeatUserInfo 坐席信息
+     * @var SeatUserInfo 座席信息
      */
     public $SeatUser;
 
@@ -383,7 +383,7 @@ class TelCdrInfo extends AbstractModel
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -459,7 +459,7 @@ class TelCdrInfo extends AbstractModel
     public $IVRKeyPressed;
 
     /**
-     * @var string 挂机方 seat 坐席 user 用户 system 系统
+     * @var string 挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HungUpSide;
@@ -491,7 +491,7 @@ class TelCdrInfo extends AbstractModel
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -633,7 +633,7 @@ class TelCdrInfo extends AbstractModel
      * @param string $RecordURL 录音信息
      * @param string $RecordId 录音 ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SeatUserInfo $SeatUser 坐席信息
+     * @param SeatUserInfo $SeatUser 座席信息
      * @param integer $EndStatus EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -648,7 +648,7 @@ class TelCdrInfo extends AbstractModel
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 
@@ -692,7 +692,7 @@ class TelCdrInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IVRKeyPressed IVR 按键信息 ，e.g. ["1","2","3"]
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HungUpSide 挂机方 seat 坐席 user 用户 system 系统
+     * @param string $HungUpSide 挂机方 seat 座席 user 用户 system 系统
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServeParticipants 服务参与者列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -712,7 +712,7 @@ class TelCdrInfo extends AbstractModel
 
 电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
 
-电话呼入	             105	        noSeatOnline	       无坐席在线
+电话呼入	             105	        noSeatOnline	       无座席在线
 
 电话呼入              106	       notWorkTime	       非工作时间   
 

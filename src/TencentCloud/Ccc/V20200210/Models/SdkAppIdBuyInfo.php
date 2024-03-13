@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
  * @method string getName() 获取应用名称
  * @method void setName(string $Name) 设置应用名称
- * @method integer getStaffBuyNum() 获取坐席购买数（还在有效期内）
- * @method void setStaffBuyNum(integer $StaffBuyNum) 设置坐席购买数（还在有效期内）
- * @method array getStaffBuyList() 获取坐席购买列表 （还在有效期内）
- * @method void setStaffBuyList(array $StaffBuyList) 设置坐席购买列表 （还在有效期内）
+ * @method integer getStaffBuyNum() 获取座席购买数（还在有效期内）
+ * @method void setStaffBuyNum(integer $StaffBuyNum) 设置座席购买数（还在有效期内）
+ * @method array getStaffBuyList() 获取座席购买列表 （还在有效期内）
+ * @method void setStaffBuyList(array $StaffBuyList) 设置座席购买列表 （还在有效期内）
  * @method array getPhoneNumBuyList() 获取号码购买列表
  * @method void setPhoneNumBuyList(array $PhoneNumBuyList) 设置号码购买列表
  * @method integer getSipBuyNum() 获取办公电话购买数（还在有效期内）
@@ -48,12 +48,12 @@ class SdkAppIdBuyInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 坐席购买数（还在有效期内）
+     * @var integer 座席购买数（还在有效期内）
      */
     public $StaffBuyNum;
 
     /**
-     * @var array 坐席购买列表 （还在有效期内）
+     * @var array 座席购买列表 （还在有效期内）
      */
     public $StaffBuyList;
 
@@ -71,8 +71,8 @@ class SdkAppIdBuyInfo extends AbstractModel
     /**
      * @param integer $SdkAppId 应用ID
      * @param string $Name 应用名称
-     * @param integer $StaffBuyNum 坐席购买数（还在有效期内）
-     * @param array $StaffBuyList 坐席购买列表 （还在有效期内）
+     * @param integer $StaffBuyNum 座席购买数（还在有效期内）
+     * @param array $StaffBuyList 座席购买列表 （还在有效期内）
      * @param array $PhoneNumBuyList 号码购买列表
      * @param integer $SipBuyNum 办公电话购买数（还在有效期内）
 注意：此字段可能返回 null，表示取不到有效值。

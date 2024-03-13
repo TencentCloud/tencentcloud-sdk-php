@@ -18,10 +18,10 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 坐席购买信息
+ * 座席购买信息
  *
- * @method integer getNum() 获取购买坐席数量
- * @method void setNum(integer $Num) 设置购买坐席数量
+ * @method integer getNum() 获取购买座席数量
+ * @method void setNum(integer $Num) 设置购买座席数量
  * @method integer getBuyTime() 获取购买时间戳
  * @method void setBuyTime(integer $BuyTime) 设置购买时间戳
  * @method integer getEndTime() 获取截止时间戳
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class StaffBuyInfo extends AbstractModel
 {
     /**
-     * @var integer 购买坐席数量
+     * @var integer 购买座席数量
      */
     public $Num;
 
@@ -55,7 +55,7 @@ class StaffBuyInfo extends AbstractModel
     public $SipNum;
 
     /**
-     * @param integer $Num 购买坐席数量
+     * @param integer $Num 购买座席数量
      * @param integer $BuyTime 购买时间戳
      * @param integer $EndTime 截止时间戳
      * @param integer $SipNum 购买办公电话数量

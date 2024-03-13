@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置话机状态(0 离线、100 空闲、200忙碌）
  * @method boolean getRegister() 获取是否注册
  * @method void setRegister(boolean $Register) 设置是否注册
- * @method string getRelation() 获取绑定坐席邮箱
- * @method void setRelation(string $Relation) 设置绑定坐席邮箱
- * @method string getRelationName() 获取绑定坐席名称
- * @method void setRelationName(string $RelationName) 设置绑定坐席名称
+ * @method string getRelation() 获取绑定座席邮箱
+ * @method void setRelation(string $Relation) 设置绑定座席邮箱
+ * @method string getRelationName() 获取绑定座席名称
+ * @method void setRelationName(string $RelationName) 设置绑定座席名称
  */
 class ExtensionInfo extends AbstractModel
 {
@@ -91,12 +91,12 @@ class ExtensionInfo extends AbstractModel
     public $Register;
 
     /**
-     * @var string 绑定坐席邮箱
+     * @var string 绑定座席邮箱
      */
     public $Relation;
 
     /**
-     * @var string 绑定坐席名称
+     * @var string 绑定座席名称
      */
     public $RelationName;
 
@@ -110,8 +110,8 @@ class ExtensionInfo extends AbstractModel
      * @param integer $ModifyTime 最后修改时间
      * @param integer $Status 话机状态(0 离线、100 空闲、200忙碌）
      * @param boolean $Register 是否注册
-     * @param string $Relation 绑定坐席邮箱
-     * @param string $RelationName 绑定坐席名称
+     * @param string $Relation 绑定座席邮箱
+     * @param string $RelationName 绑定座席名称
      */
     function __construct()
     {

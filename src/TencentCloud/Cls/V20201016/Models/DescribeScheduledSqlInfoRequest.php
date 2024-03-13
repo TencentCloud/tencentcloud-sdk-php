@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 <li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配。类型：String。必选：否</li>
 <li>srcTopicId按照【源日志主题ID】进行过滤。类型：String。必选：否</li>
 <li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String。必选：否</li>
-<li>bizType按照【主题类型】进行过滤，0日志主题 1指标主题。类型：String。必选：否</li>
+<li>bizType按照【主题类型】进行过滤，0：日志主题；1：指标主题。类型：String。必选：否</li>
 <li>status按照【任务状态】进行过滤，1：运行；2：停止。类型：String。必选：否</li>
 <li>taskName按照【任务名称】进行过滤，模糊匹配。类型：String。必选：否</li>
 <li>taskId按照【任务ID】进行过滤，模糊匹配。类型：String。必选：否</li>
@@ -41,7 +41,7 @@ use TencentCloud\Common\AbstractModel;
 <li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配。类型：String。必选：否</li>
 <li>srcTopicId按照【源日志主题ID】进行过滤。类型：String。必选：否</li>
 <li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String。必选：否</li>
-<li>bizType按照【主题类型】进行过滤，0日志主题 1指标主题。类型：String。必选：否</li>
+<li>bizType按照【主题类型】进行过滤，0：日志主题；1：指标主题。类型：String。必选：否</li>
 <li>status按照【任务状态】进行过滤，1：运行；2：停止。类型：String。必选：否</li>
 <li>taskName按照【任务名称】进行过滤，模糊匹配。类型：String。必选：否</li>
 <li>taskId按照【任务ID】进行过滤，模糊匹配。类型：String。必选：否</li>
@@ -73,7 +73,7 @@ class DescribeScheduledSqlInfoRequest extends AbstractModel
 <li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配。类型：String。必选：否</li>
 <li>srcTopicId按照【源日志主题ID】进行过滤。类型：String。必选：否</li>
 <li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String。必选：否</li>
-<li>bizType按照【主题类型】进行过滤，0日志主题 1指标主题。类型：String。必选：否</li>
+<li>bizType按照【主题类型】进行过滤，0：日志主题；1：指标主题。类型：String。必选：否</li>
 <li>status按照【任务状态】进行过滤，1：运行；2：停止。类型：String。必选：否</li>
 <li>taskName按照【任务名称】进行过滤，模糊匹配。类型：String。必选：否</li>
 <li>taskId按照【任务ID】进行过滤，模糊匹配。类型：String。必选：否</li>
@@ -90,7 +90,7 @@ class DescribeScheduledSqlInfoRequest extends AbstractModel
 <li>dstTopicName按照【目标日志主题名称】进行过滤，模糊匹配。类型：String。必选：否</li>
 <li>srcTopicId按照【源日志主题ID】进行过滤。类型：String。必选：否</li>
 <li>dstTopicId按照【目标日志主题ID】进行过滤。类型：String。必选：否</li>
-<li>bizType按照【主题类型】进行过滤，0日志主题 1指标主题。类型：String。必选：否</li>
+<li>bizType按照【主题类型】进行过滤，0：日志主题；1：指标主题。类型：String。必选：否</li>
 <li>status按照【任务状态】进行过滤，1：运行；2：停止。类型：String。必选：否</li>
 <li>taskName按照【任务名称】进行过滤，模糊匹配。类型：String。必选：否</li>
 <li>taskId按照【任务ID】进行过滤，模糊匹配。类型：String。必选：否</li>

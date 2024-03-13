@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
- * @method array getIds() 获取模版Id列表
- * @method void setIds(array $Ids) 设置模版Id列表
+ * @method array getIds() 获取模板Id列表
+ * @method void setIds(array $Ids) 设置模板Id列表
  */
 class DeleteRuleTemplateRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteRuleTemplateRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 模版Id列表
+     * @var array 模板Id列表
      */
     public $Ids;
 
     /**
      * @param string $ProjectId 项目Id
-     * @param array $Ids 模版Id列表
+     * @param array $Ids 模板Id列表
      */
     function __construct()
     {

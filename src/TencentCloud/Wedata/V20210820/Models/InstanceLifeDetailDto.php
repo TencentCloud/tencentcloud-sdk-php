@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置该状态开始时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDetailState() 获取实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetailState(string $DetailState) 设置实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndTime() 获取该状态结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndTime(string $EndTime) 设置该状态结束时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLifeDetailDto extends AbstractModel
 {
@@ -44,9 +52,25 @@ class InstanceLifeDetailDto extends AbstractModel
     public $StartTime;
 
     /**
+     * @var string 实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DetailState;
+
+    /**
+     * @var string 该状态结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndTime;
+
+    /**
      * @param string $State 实例状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 该状态开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DetailState 实例生命周期阶段状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EndTime 该状态结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +92,14 @@ class InstanceLifeDetailDto extends AbstractModel
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("DetailState",$param) and $param["DetailState"] !== null) {
+            $this->DetailState = $param["DetailState"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

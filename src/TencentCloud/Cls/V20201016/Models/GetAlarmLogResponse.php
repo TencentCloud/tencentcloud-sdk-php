@@ -33,12 +33,10 @@ use TencentCloud\Common\AbstractModel;
 否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResults() 获取执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResults(array $Results) 设置执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -85,7 +83,6 @@ class GetAlarmLogResponse extends AbstractModel
 
     /**
      * @var array 执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,7 +121,6 @@ class GetAlarmLogResponse extends AbstractModel
 否则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Results 执行详情查询结果。
-
 当Query字段无SQL语句时，返回查询结果。
 当Query字段有SQL语句时，可能返回null。
 注意：此字段可能返回 null，表示取不到有效值。

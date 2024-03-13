@@ -31,6 +31,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\CreateNotebookResponse CreateNotebook(Models\CreateNotebookRequest $req) 创建Notebook
  * @method Models\CreateNotebookImageResponse CreateNotebookImage(Models\CreateNotebookImageRequest $req) 保存镜像
  * @method Models\CreateOptimizedModelResponse CreateOptimizedModel(Models\CreateOptimizedModelRequest $req) 保存优化模型
+ * @method Models\CreatePresignedNotebookUrlResponse CreatePresignedNotebookUrl(Models\CreatePresignedNotebookUrlRequest $req) 生成Notebook访问链接
  * @method Models\CreateTrainingModelResponse CreateTrainingModel(Models\CreateTrainingModelRequest $req) 导入模型
  * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) 创建模型训练任务
  * @method Models\DeleteBatchTaskResponse DeleteBatchTask(Models\DeleteBatchTaskRequest $req) 删除批量预测任务

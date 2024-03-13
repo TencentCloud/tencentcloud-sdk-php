@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
  * @method array getNewDomains() 获取要修改的新域名列表。NewDomain和NewDomains只能传一个。
  * @method void setNewDomains(array $NewDomains) 设置要修改的新域名列表。NewDomain和NewDomains只能传一个。
- * @method MultiCertInfo getMultiCertInfo() 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
- * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+ * @method MultiCertInfo getMultiCertInfo() 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和Certificate 同时传入。
+ * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和Certificate 同时传入。
  */
 class ModifyDomainAttributesRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $NewDomains;
 
     /**
-     * @var MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+     * @var MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和Certificate 同时传入。
      */
     public $MultiCertInfo;
 
@@ -111,7 +111,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
      * @param boolean $Quic 是否开启Quic，注意，只有HTTPS域名才能开启Quic
      * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      * @param array $NewDomains 要修改的新域名列表。NewDomain和NewDomains只能传一个。
-     * @param MultiCertInfo $MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+     * @param MultiCertInfo $MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和Certificate 同时传入。
      */
     function __construct()
     {

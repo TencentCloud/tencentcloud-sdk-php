@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessToken(string $AccessToken) 设置IoT Video平台的AccessToken
  * @method integer getExpireTime() 获取Token的过期时间，单位秒(UTC时间)
  * @method void setExpireTime(integer $ExpireTime) 设置Token的过期时间，单位秒(UTC时间)
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAnonymousAccessTokenResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateAnonymousAccessTokenResponse extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class CreateAnonymousAccessTokenResponse extends AbstractModel
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      * @param string $AccessToken IoT Video平台的AccessToken
      * @param integer $ExpireTime Token的过期时间，单位秒(UTC时间)
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

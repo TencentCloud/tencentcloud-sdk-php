@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRuleTemplates请求参数结构体
  *
- * @method integer getType() 获取模版类型 1.系统模版 2.自定义模版
- * @method void setType(integer $Type) 设置模版类型 1.系统模版 2.自定义模版
+ * @method integer getType() 获取模板类型 1.系统模板 2.自定义模板
+ * @method void setType(integer $Type) 设置模板类型 1.系统模板 2.自定义模板
  * @method integer getSourceObjectType() 获取1.常量 2.离线表级 2.离线字段级
  * @method void setSourceObjectType(integer $SourceObjectType) 设置1.常量 2.离线表级 2.离线字段级
  * @method string getProjectId() 获取项目Id
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 模版类型 1.系统模版 2.自定义模版
+     * @var integer 模板类型 1.系统模板 2.自定义模板
      */
     public $Type;
 
@@ -52,7 +52,7 @@ class DescribeRuleTemplatesRequest extends AbstractModel
     public $SourceEngineTypes;
 
     /**
-     * @param integer $Type 模版类型 1.系统模版 2.自定义模版
+     * @param integer $Type 模板类型 1.系统模板 2.自定义模板
      * @param integer $SourceObjectType 1.常量 2.离线表级 2.离线字段级
      * @param string $ProjectId 项目Id
      * @param array $SourceEngineTypes 源端对应的引擎类型

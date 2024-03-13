@@ -34,18 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRingTimestamp(integer $RingTimestamp) 设置振铃时间，Unix 时间戳
  * @method integer getAcceptTimestamp() 获取接听时间，Unix 时间戳
  * @method void setAcceptTimestamp(integer $AcceptTimestamp) 设置接听时间，Unix 时间戳
- * @method string getStaffEmail() 获取坐席邮箱
- * @method void setStaffEmail(string $StaffEmail) 设置坐席邮箱
- * @method string getStaffNumber() 获取坐席工号
- * @method void setStaffNumber(string $StaffNumber) 设置坐席工号
+ * @method string getStaffEmail() 获取座席邮箱
+ * @method void setStaffEmail(string $StaffEmail) 设置座席邮箱
+ * @method string getStaffNumber() 获取座席工号
+ * @method void setStaffNumber(string $StaffNumber) 设置座席工号
  * @method string getSessionStatus() 获取会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成
  * @method void setSessionStatus(string $SessionStatus) 设置会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成
  * @method integer getDirection() 获取会话呼叫方向， 0 呼入 | 1 - 呼出
@@ -97,19 +97,19 @@ class PSTNSession extends AbstractModel
     public $AcceptTimestamp;
 
     /**
-     * @var string 坐席邮箱
+     * @var string 座席邮箱
      */
     public $StaffEmail;
 
     /**
-     * @var string 坐席工号
+     * @var string 座席工号
      */
     public $StaffNumber;
 
     /**
      * @var string 会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成
      */
@@ -148,11 +148,11 @@ finished 已完成
      * @param integer $StartTimestamp 开始时间，Unix 时间戳
      * @param integer $RingTimestamp 振铃时间，Unix 时间戳
      * @param integer $AcceptTimestamp 接听时间，Unix 时间戳
-     * @param string $StaffEmail 坐席邮箱
-     * @param string $StaffNumber 坐席工号
+     * @param string $StaffEmail 座席邮箱
+     * @param string $StaffNumber 座席工号
      * @param string $SessionStatus 会话状态
 ringing 振铃中
-seatJoining  等待坐席接听
+seatJoining  等待座席接听
 inProgress 进行中
 finished 已完成
      * @param integer $Direction 会话呼叫方向， 0 呼入 | 1 - 呼出

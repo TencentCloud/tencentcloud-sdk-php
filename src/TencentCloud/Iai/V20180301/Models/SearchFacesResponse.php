@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceNum(integer $FaceNum) 设置搜索的人员库中包含的人脸数。
  * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SearchFacesResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class SearchFacesResponse extends AbstractModel
     public $FaceModelVersion;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class SearchFacesResponse extends AbstractModel
      * @param array $Results 识别结果。
      * @param integer $FaceNum 搜索的人员库中包含的人脸数。
      * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

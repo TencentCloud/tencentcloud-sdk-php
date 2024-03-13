@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDenseFaceShapeSet(array $DenseFaceShapeSet) 设置稠密人脸关键点具体信息。
  * @method string getFaceModelVersion() 获取人脸识别服务所用的算法模型版本。本接口仅支持 “3.0“ 输入。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别服务所用的算法模型版本。本接口仅支持 “3.0“ 输入。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AnalyzeDenseLandmarksResponse extends AbstractModel
 {
@@ -54,7 +54,7 @@ class AnalyzeDenseLandmarksResponse extends AbstractModel
     public $FaceModelVersion;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class AnalyzeDenseLandmarksResponse extends AbstractModel
      * @param integer $ImageHeight 请求的图片高度。
      * @param array $DenseFaceShapeSet 稠密人脸关键点具体信息。
      * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本。本接口仅支持 “3.0“ 输入。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置比较操作类型
 <  <=  ==  =>  > !=
@@ -43,8 +43,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValueComputeType() 获取质量统计值类型 1.绝对值  2.上升 3. 下降  4._C包含   5. N_C不包含
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,8 +72,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
@@ -101,8 +101,8 @@ IRLCRC:在区间内(左闭右闭)
 IRLORO:在区间内(左开右开)
 NRLCRO:不在区间内(左闭右开)
 NRLORC:不在区间内(左开右闭)
-NRLCRC:不在在区间内(左闭右闭)
-NRLORO:不在在区间内(左开右开)
+NRLCRC:不在区间内(左闭右闭)
+NRLORO:不在区间内(左开右开)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValueComputeType 质量统计值类型 1.绝对值  2.上升 3. 下降  4._C包含   5. N_C不包含
 注意：此字段可能返回 null，表示取不到有效值。

@@ -18,14 +18,14 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 坐席状态相关信息
+ * 座席状态相关信息
  *
- * @method string getEmail() 获取坐席邮箱
- * @method void setEmail(string $Email) 设置坐席邮箱
- * @method string getStatus() 获取坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
- * @method void setStatus(string $Status) 设置坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
- * @method StaffStatusExtra getStatusExtra() 获取坐席状态补充信息
- * @method void setStatusExtra(StaffStatusExtra $StatusExtra) 设置坐席状态补充信息
+ * @method string getEmail() 获取座席邮箱
+ * @method void setEmail(string $Email) 设置座席邮箱
+ * @method string getStatus() 获取座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
+ * @method void setStatus(string $Status) 设置座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
+ * @method StaffStatusExtra getStatusExtra() 获取座席状态补充信息
+ * @method void setStatusExtra(StaffStatusExtra $StatusExtra) 设置座席状态补充信息
  * @method integer getOnlineDuration() 获取当天在线总时长
  * @method void setOnlineDuration(integer $OnlineDuration) 设置当天在线总时长
  * @method integer getFreeDuration() 获取当天示闲总时长
@@ -60,17 +60,17 @@ use TencentCloud\Common\AbstractModel;
 class StaffStatusMetrics extends AbstractModel
 {
     /**
-     * @var string 坐席邮箱
+     * @var string 座席邮箱
      */
     public $Email;
 
     /**
-     * @var string 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
+     * @var string 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
      */
     public $Status;
 
     /**
-     * @var StaffStatusExtra 坐席状态补充信息
+     * @var StaffStatusExtra 座席状态补充信息
      */
     public $StatusExtra;
 
@@ -142,9 +142,9 @@ class StaffStatusMetrics extends AbstractModel
     public $LastStatusTimestamp;
 
     /**
-     * @param string $Email 坐席邮箱
-     * @param string $Status 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
-     * @param StaffStatusExtra $StatusExtra 坐席状态补充信息
+     * @param string $Email 座席邮箱
+     * @param string $Status 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
+     * @param StaffStatusExtra $StatusExtra 座席状态补充信息
      * @param integer $OnlineDuration 当天在线总时长
      * @param integer $FreeDuration 当天示闲总时长
      * @param integer $BusyDuration 当天忙碌总时长

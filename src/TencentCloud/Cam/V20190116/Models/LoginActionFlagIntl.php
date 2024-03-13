@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustom(integer $Custom) 设置自定义
  * @method integer getMail() 获取邮件
  * @method void setMail(integer $Mail) 设置邮件
+ * @method integer getU2FToken() 获取u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setU2FToken(integer $U2FToken) 设置u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoginActionFlagIntl extends AbstractModel
 {
@@ -66,12 +70,20 @@ class LoginActionFlagIntl extends AbstractModel
     public $Mail;
 
     /**
+     * @var integer u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $U2FToken;
+
+    /**
      * @param integer $Phone 手机
      * @param integer $Token 硬token
      * @param integer $Stoken 软token
      * @param integer $Wechat 微信
      * @param integer $Custom 自定义
      * @param integer $Mail 邮件
+     * @param integer $U2FToken u2f硬件token
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class LoginActionFlagIntl extends AbstractModel
 
         if (array_key_exists("Mail",$param) and $param["Mail"] !== null) {
             $this->Mail = $param["Mail"];
+        }
+
+        if (array_key_exists("U2FToken",$param) and $param["U2FToken"] !== null) {
+            $this->U2FToken = $param["U2FToken"];
         }
     }
 }

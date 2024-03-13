@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvidenceStartTime(string $EvidenceStartTime) 设置存证证书生效日期
  * @method string getEvidenceEndTime() 获取存证证书截止日期
  * @method void setEvidenceEndTime(string $EvidenceEndTime) 设置存证证书截止日期
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCRWorkInfoResponse extends AbstractModel
 {
@@ -180,7 +180,7 @@ class DescribeCRWorkInfoResponse extends AbstractModel
     public $EvidenceEndTime;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -207,7 +207,7 @@ class DescribeCRWorkInfoResponse extends AbstractModel
      * @param string $EvidenceUrl 存证证书
      * @param string $EvidenceStartTime 存证证书生效日期
      * @param string $EvidenceEndTime 存证证书截止日期
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

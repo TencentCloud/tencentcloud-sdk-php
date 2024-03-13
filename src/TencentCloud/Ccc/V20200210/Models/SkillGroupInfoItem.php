@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoutePolicy(string $RoutePolicy) 设置会话分配策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUsingLastSeat() 获取会话分配是否优先上次服务坐席
+ * @method integer getUsingLastSeat() 获取会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsingLastSeat(integer $UsingLastSeat) 设置会话分配是否优先上次服务坐席
+ * @method void setUsingLastSeat(integer $UsingLastSeat) 设置会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxConcurrency() 获取单客服最大并发数（电话类型默认1）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -71,7 +71,7 @@ class SkillGroupInfoItem extends AbstractModel
     public $RoutePolicy;
 
     /**
-     * @var integer 会话分配是否优先上次服务坐席
+     * @var integer 会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsingLastSeat;
@@ -100,7 +100,7 @@ class SkillGroupInfoItem extends AbstractModel
      * @param string $Type （废弃）类型：IM、TEL、ALL（全媒体）
      * @param string $RoutePolicy 会话分配策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UsingLastSeat 会话分配是否优先上次服务坐席
+     * @param integer $UsingLastSeat 会话分配是否优先上次服务座席
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxConcurrency 单客服最大并发数（电话类型默认1）
 注意：此字段可能返回 null，表示取不到有效值。

@@ -72,9 +72,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHotPeriod() 获取开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
+HotPeriod=0为没有开启日志沉降。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHotPeriod(integer $HotPeriod) 设置开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
+HotPeriod=0为没有开启日志沉降。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBizType() 获取主题类型。
 - 0: 日志主题 
@@ -181,6 +183,7 @@ class TopicInfo extends AbstractModel
     /**
      * @var integer 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
+HotPeriod=0为没有开启日志沉降。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HotPeriod;
@@ -228,6 +231,7 @@ class TopicInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
+HotPeriod=0为没有开启日志沉降。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BizType 主题类型。
 - 0: 日志主题 

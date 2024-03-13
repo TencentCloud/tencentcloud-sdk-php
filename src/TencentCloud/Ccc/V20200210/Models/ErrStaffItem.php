@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 批量添加客服时，返回出错客服的信息
  *
- * @method string getStaffEmail() 获取坐席邮箱地址
- * @method void setStaffEmail(string $StaffEmail) 设置坐席邮箱地址
+ * @method string getStaffEmail() 获取座席邮箱地址
+ * @method void setStaffEmail(string $StaffEmail) 设置座席邮箱地址
  * @method string getCode() 获取错误码
  * @method void setCode(string $Code) 设置错误码
  * @method string getMessage() 获取错误描述
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ErrStaffItem extends AbstractModel
 {
     /**
-     * @var string 坐席邮箱地址
+     * @var string 座席邮箱地址
      */
     public $StaffEmail;
 
@@ -45,7 +45,7 @@ class ErrStaffItem extends AbstractModel
     public $Message;
 
     /**
-     * @param string $StaffEmail 坐席邮箱地址
+     * @param string $StaffEmail 座席邮箱地址
      * @param string $Code 错误码
      * @param string $Message 错误描述
      */

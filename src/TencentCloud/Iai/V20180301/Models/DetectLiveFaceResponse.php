@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 本字段只有FaceModelVersion为3.0时才具备参考意义。
  * @method void setIsLiveness(boolean $IsLiveness) 设置活体检测是否通过。
 本字段只有FaceModelVersion为3.0时才具备参考意义。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DetectLiveFaceResponse extends AbstractModel
 {
@@ -53,7 +53,7 @@ class DetectLiveFaceResponse extends AbstractModel
     public $IsLiveness;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -63,7 +63,7 @@ class DetectLiveFaceResponse extends AbstractModel
      * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
      * @param boolean $IsLiveness 活体检测是否通过。
 本字段只有FaceModelVersion为3.0时才具备参考意义。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

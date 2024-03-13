@@ -46,6 +46,15 @@ use TencentCloud\Common\AbstractModel;
 注：`被授权企业必须和当前企业在同一应用号下`
  * @method void setAuthorizedOrganizationName(string $AuthorizedOrganizationName) 设置被授权企业名，和AuthorizedOrganizationId二选一，不能同时为空
 注：`被授权企业必须和当前企业在同一应用号下`
+ * @method boolean getPlatformAppAuthorization() 获取是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+
+ * @method void setPlatformAppAuthorization(boolean $PlatformAppAuthorization) 设置是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
  */
 class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel
 {
@@ -75,6 +84,15 @@ class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel
     public $AuthorizedOrganizationName;
 
     /**
+     * @var boolean 是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+
+     */
+    public $PlatformAppAuthorization;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -88,6 +106,10 @@ class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel
 注：`被授权企业必须和当前企业在同一应用号下`
      * @param string $AuthorizedOrganizationName 被授权企业名，和AuthorizedOrganizationId二选一，不能同时为空
 注：`被授权企业必须和当前企业在同一应用号下`
+     * @param boolean $PlatformAppAuthorization 是否给平台应用授权:
+- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
+- false: 否（默认）
+ 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
      */
     function __construct()
     {
@@ -113,6 +135,10 @@ class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel
 
         if (array_key_exists("AuthorizedOrganizationName",$param) and $param["AuthorizedOrganizationName"] !== null) {
             $this->AuthorizedOrganizationName = $param["AuthorizedOrganizationName"];
+        }
+
+        if (array_key_exists("PlatformAppAuthorization",$param) and $param["PlatformAppAuthorization"] !== null) {
+            $this->PlatformAppAuthorization = $param["PlatformAppAuthorization"];
         }
     }
 }

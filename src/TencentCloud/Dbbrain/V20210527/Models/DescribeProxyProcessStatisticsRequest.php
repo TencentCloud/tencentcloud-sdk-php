@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "redis" - 云数据库 Redis。
  * @method integer getOffset() 获取偏移量，默认0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认0。
- * @method string getSortBy() 获取按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
- * @method void setSortBy(string $SortBy) 设置按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+ * @method string getSortBy() 获取按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+ * @method void setSortBy(string $SortBy) 设置按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
  * @method string getOrderDirection() 获取排序方向。支持值包括："DESC"，"ASC"。
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向。支持值包括："DESC"，"ASC"。
  */
@@ -63,7 +63,7 @@ class DescribeProxyProcessStatisticsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+     * @var string 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
      */
     public $SortBy;
 
@@ -78,7 +78,7 @@ class DescribeProxyProcessStatisticsRequest extends AbstractModel
      * @param integer $Limit 返回数量。
      * @param string $Product 服务产品类型，支持值包括： "redis" - 云数据库 Redis。
      * @param integer $Offset 偏移量，默认0。
-     * @param string $SortBy 按照某字断排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+     * @param string $SortBy 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
      * @param string $OrderDirection 排序方向。支持值包括："DESC"，"ASC"。
      */
     function __construct()

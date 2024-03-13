@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientIPField(string $ClientIPField) 设置获取用户真实IP的字段
  * @method array getBlockedIPList() 获取加入了12360黑名单的IP列表
  * @method void setBlockedIPList(array $BlockedIPList) 设置加入了12360黑名单的IP列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBlockIPListResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeBlockIPListResponse extends AbstractModel
     public $BlockedIPList;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeBlockIPListResponse extends AbstractModel
      * @param integer $BlockedIPCount 返回的IP的数量
      * @param string $ClientIPField 获取用户真实IP的字段
      * @param array $BlockedIPList 加入了12360黑名单的IP列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

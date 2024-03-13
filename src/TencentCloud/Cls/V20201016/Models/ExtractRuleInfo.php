@@ -44,9 +44,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeys(array $Keys) 设置取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFilterKeyRegex() 获取需要过滤日志的key，及其对应的regex
+ * @method array getFilterKeyRegex() 获取日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
+ 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilterKeyRegex(array $FilterKeyRegex) 设置需要过滤日志的key，及其对应的regex
+ * @method void setFilterKeyRegex(array $FilterKeyRegex) 设置日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
+ 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUnMatchUpLoadSwitch() 获取解析失败日志是否上传，true表示上传，false表示不上传
 注意：此字段可能返回 null，表示取不到有效值。
@@ -140,7 +144,9 @@ class ExtractRuleInfo extends AbstractModel
     public $Keys;
 
     /**
-     * @var array 需要过滤日志的key，及其对应的regex
+     * @var array 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
+ 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterKeyRegex;
@@ -232,7 +238,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FilterKeyRegex 需要过滤日志的key，及其对应的regex
+     * @param array $FilterKeyRegex 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
+ 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UnMatchUpLoadSwitch 解析失败日志是否上传，true表示上传，false表示不上传
 注意：此字段可能返回 null，表示取不到有效值。

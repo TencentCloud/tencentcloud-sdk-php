@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 参与者信息
  *
- * @method string getMail() 获取坐席邮箱
+ * @method string getMail() 获取座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMail(string $Mail) 设置坐席邮箱
+ * @method void setMail(string $Mail) 设置座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPhone() 获取坐席电话
+ * @method string getPhone() 获取座席电话
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhone(string $Phone) 设置坐席电话
+ * @method void setPhone(string $Phone) 设置座席电话
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRingTimestamp() 获取振铃时间戳，Unix 秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,25 +40,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndedTimestamp(integer $EndedTimestamp) 设置结束时间戳，Unix 秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRecordId() 获取录音 ID，能够索引到坐席侧的录音
+ * @method string getRecordId() 获取录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordId(string $RecordId) 设置录音 ID，能够索引到坐席侧的录音
+ * @method void setRecordId(string $RecordId) 设置录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取参与者类型，"staffSeat", "outboundSeat", "staffPhoneSeat"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置参与者类型，"staffSeat", "outboundSeat", "staffPhoneSeat"
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTransferFrom() 获取转接来源坐席信息
+ * @method string getTransferFrom() 获取转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTransferFrom(string $TransferFrom) 设置转接来源坐席信息
+ * @method void setTransferFrom(string $TransferFrom) 设置转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferFromType() 获取转接来源参与者类型，取值与 Type 一致
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferFromType(string $TransferFromType) 设置转接来源参与者类型，取值与 Type 一致
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTransferTo() 获取转接去向坐席信息
+ * @method string getTransferTo() 获取转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTransferTo(string $TransferTo) 设置转接去向坐席信息
+ * @method void setTransferTo(string $TransferTo) 设置转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferToType() 获取转接去向参与者类型，取值与 Type 一致
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,13 +96,13 @@ use TencentCloud\Common\AbstractModel;
 class ServeParticipant extends AbstractModel
 {
     /**
-     * @var string 坐席邮箱
+     * @var string 座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mail;
 
     /**
-     * @var string 坐席电话
+     * @var string 座席电话
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phone;
@@ -126,7 +126,7 @@ class ServeParticipant extends AbstractModel
     public $EndedTimestamp;
 
     /**
-     * @var string 录音 ID，能够索引到坐席侧的录音
+     * @var string 录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordId;
@@ -138,7 +138,7 @@ class ServeParticipant extends AbstractModel
     public $Type;
 
     /**
-     * @var string 转接来源坐席信息
+     * @var string 转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferFrom;
@@ -150,7 +150,7 @@ class ServeParticipant extends AbstractModel
     public $TransferFromType;
 
     /**
-     * @var string 转接去向坐席信息
+     * @var string 转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferTo;
@@ -204,9 +204,9 @@ class ServeParticipant extends AbstractModel
     public $CustomRecordURL;
 
     /**
-     * @param string $Mail 坐席邮箱
+     * @param string $Mail 座席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Phone 坐席电话
+     * @param string $Phone 座席电话
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RingTimestamp 振铃时间戳，Unix 秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
@@ -214,15 +214,15 @@ class ServeParticipant extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndedTimestamp 结束时间戳，Unix 秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RecordId 录音 ID，能够索引到坐席侧的录音
+     * @param string $RecordId 录音 ID，能够索引到座席侧的录音
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 参与者类型，"staffSeat", "outboundSeat", "staffPhoneSeat"
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TransferFrom 转接来源坐席信息
+     * @param string $TransferFrom 转接来源座席信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferFromType 转接来源参与者类型，取值与 Type 一致
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TransferTo 转接去向坐席信息
+     * @param string $TransferTo 转接去向座席信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferToType 转接去向参与者类型，取值与 Type 一致
 注意：此字段可能返回 null，表示取不到有效值。

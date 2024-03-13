@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceLogListOpsDto(InstanceLogInfo $InstanceLogListOpsDto) 设置实例日志简略信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceState() 获取实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceState(string $InstanceState) 设置实例状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLifeCycleOpsDto extends AbstractModel
 {
@@ -124,6 +128,12 @@ class InstanceLifeCycleOpsDto extends AbstractModel
     public $InstanceLogListOpsDto;
 
     /**
+     * @var string 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceState;
+
+    /**
      * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurRunDate 数据时间
@@ -143,6 +153,8 @@ class InstanceLifeCycleOpsDto extends AbstractModel
      * @param string $ErrorCodeLevel 错误告警级别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceLogInfo $InstanceLogListOpsDto 实例日志简略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceState 实例状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -202,6 +214,10 @@ class InstanceLifeCycleOpsDto extends AbstractModel
         if (array_key_exists("InstanceLogListOpsDto",$param) and $param["InstanceLogListOpsDto"] !== null) {
             $this->InstanceLogListOpsDto = new InstanceLogInfo();
             $this->InstanceLogListOpsDto->deserialize($param["InstanceLogListOpsDto"]);
+        }
+
+        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
+            $this->InstanceState = $param["InstanceState"];
         }
     }
 }

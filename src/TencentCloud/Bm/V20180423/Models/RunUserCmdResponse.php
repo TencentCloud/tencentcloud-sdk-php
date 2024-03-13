@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuccessTaskInfoSet(array $SuccessTaskInfoSet) 设置运行成功的任务信息列表
  * @method array getFailedTaskInfoSet() 获取运行失败的任务信息列表
  * @method void setFailedTaskInfoSet(array $FailedTaskInfoSet) 设置运行失败的任务信息列表
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RunUserCmdResponse extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RunUserCmdResponse extends AbstractModel
     public $FailedTaskInfoSet;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $SuccessTaskInfoSet 运行成功的任务信息列表
      * @param array $FailedTaskInfoSet 运行失败的任务信息列表
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

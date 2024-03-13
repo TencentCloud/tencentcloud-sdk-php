@@ -18,7 +18,7 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 坐席状态补充信息
+ * 座席状态补充信息
  *
  * @method string getType() 获取im - 文本 | tel - 电话 | all - 全媒体
  * @method void setType(string $Type) 设置im - 文本 | tel - 电话 | all - 全媒体

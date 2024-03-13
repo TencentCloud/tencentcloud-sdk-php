@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSellerTaxCode(string $SellerTaxCode) 设置销方税号，通用机打电子发票必填，区块链发票时必填
  * @method boolean getEnableCommonElectronic() 获取是否开启通用机打电子发票，默认为关闭。
  * @method void setEnableCommonElectronic(boolean $EnableCommonElectronic) 设置是否开启通用机打电子发票，默认为关闭。
+ * @method boolean getEnableTodayInvoice() 获取是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
+ * @method void setEnableTodayInvoice(boolean $EnableTodayInvoice) 设置是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
  */
 class VatInvoiceVerifyNewRequest extends AbstractModel
 {
@@ -93,6 +99,13 @@ class VatInvoiceVerifyNewRequest extends AbstractModel
     public $EnableCommonElectronic;
 
     /**
+     * @var boolean 是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
+     */
+    public $EnableTodayInvoice;
+
+    /**
      * @param string $InvoiceNo 发票号码，8位、20位（全电票）
      * @param string $InvoiceDate 开票日期（不支持当天发票查询，支持五年以内开具的发票），格式：“YYYY-MM-DD”，如：2019-12-20。
      * @param string $InvoiceCode 发票代码（10或12 位），全电发票为空。查验未成功超过5次后当日无法再查。
@@ -104,6 +117,9 @@ class VatInvoiceVerifyNewRequest extends AbstractModel
 广东:4400，浙江:3300
      * @param string $SellerTaxCode 销方税号，通用机打电子发票必填，区块链发票时必填
      * @param boolean $EnableCommonElectronic 是否开启通用机打电子发票，默认为关闭。
+     * @param boolean $EnableTodayInvoice 是否允许查验当日发票，默认值为false。
+
+请注意，发票从开具到录入税局需要一定的时间来更新和验证发票信息，打开后仅支持查验已成功录入到税局中的发票。
      */
     function __construct()
     {
@@ -152,6 +168,10 @@ class VatInvoiceVerifyNewRequest extends AbstractModel
 
         if (array_key_exists("EnableCommonElectronic",$param) and $param["EnableCommonElectronic"] !== null) {
             $this->EnableCommonElectronic = $param["EnableCommonElectronic"];
+        }
+
+        if (array_key_exists("EnableTodayInvoice",$param) and $param["EnableTodayInvoice"] !== null) {
+            $this->EnableTodayInvoice = $param["EnableTodayInvoice"];
         }
     }
 }

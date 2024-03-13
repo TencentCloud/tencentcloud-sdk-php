@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
  * @method string getFaceModelVersion() 获取人脸识别所用的算法模型版本。
  * @method void setFaceModelVersion(string $FaceModelVersion) 设置人脸识别所用的算法模型版本。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreatePersonResponse extends AbstractModel
 {
@@ -60,7 +60,7 @@ class CreatePersonResponse extends AbstractModel
     public $FaceModelVersion;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class CreatePersonResponse extends AbstractModel
      * @param string $SimilarPersonId 疑似同一人的PersonId。 
 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
      * @param string $FaceModelVersion 人脸识别所用的算法模型版本。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

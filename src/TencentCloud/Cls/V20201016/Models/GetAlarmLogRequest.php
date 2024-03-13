@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAlarmLog请求参数结构体
  *
- * @method integer getFrom() 获取要查询的执行详情的起始时间，Unix时间戳，单位ms
- * @method void setFrom(integer $From) 设置要查询的执行详情的起始时间，Unix时间戳，单位ms
- * @method integer getTo() 获取要查询的执行详情的结束时间，Unix时间戳，单位ms
- * @method void setTo(integer $To) 设置要查询的执行详情的结束时间，Unix时间戳，单位ms
+ * @method integer getFrom() 获取要查询的执行详情的起始时间，Unix时间戳，单位ms。
+ * @method void setFrom(integer $From) 设置要查询的执行详情的起始时间，Unix时间戳，单位ms。
+ * @method integer getTo() 获取要查询的执行详情的结束时间，Unix时间戳，单位ms。
+ * @method void setTo(integer $To) 设置要查询的执行详情的结束时间，Unix时间戳，单位ms。
  * @method string getQuery() 获取查询过滤条件，例如：
 - 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
 - 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b" `
@@ -36,28 +36,38 @@ use TencentCloud\Common\AbstractModel;
 - 按告警策略ID及监控对象ID查询支持SQL语句：`(alert_id:"alarm-5ce45495-09e8-4d58-xxxx-768134bf330c") AND (monitored_object:"3c514e84-6f1f-46ec-xxxx-05de6163f7fe") AND NOT condition_evaluate_result: "Skip" AND condition_evaluate_result:[* TO *] | SELECT count(*) as top50StatisticsTotalCount, count_if(condition_evaluate_result='ProcessError') as top50StatisticsFailureCount, count_if(notification_send_result!='NotSend') as top50NoticeTotalCount, count_if(notification_send_result='SendPartFail' or notification_send_result='SendFail') as top50NoticeFailureCount, alert_id, alert_name, monitored_object, topic_type, happen_threshold, alert_threshold, notify_template group by alert_id, alert_name, monitored_object,topic_type, happen_threshold, alert_threshold, notify_template order by top50StatisticsTotalCount desc limit 1`
  * @method integer getLimit() 获取单次查询返回的执行详情条数，最大值为1000
  * @method void setLimit(integer $Limit) 设置单次查询返回的执行详情条数，最大值为1000
- * @method string getContext() 获取加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
- * @method void setContext(string $Context) 设置加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
- * @method string getSort() 获取执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
- * @method void setSort(string $Sort) 设置执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
- * @method boolean getUseNewAnalysis() 获取为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+ * @method string getContext() 获取透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+ * @method void setContext(string $Context) 设置透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+ * @method string getSort() 获取原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
+ * @method void setSort(string $Sort) 设置原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
+ * @method boolean getUseNewAnalysis() 获取true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
 两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false
- * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+ * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
 两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false
  */
 class GetAlarmLogRequest extends AbstractModel
 {
     /**
-     * @var integer 要查询的执行详情的起始时间，Unix时间戳，单位ms
+     * @var integer 要查询的执行详情的起始时间，Unix时间戳，单位ms。
      */
     public $From;
 
     /**
-     * @var integer 要查询的执行详情的结束时间，Unix时间戳，单位ms
+     * @var integer 要查询的执行详情的结束时间，Unix时间戳，单位ms。
      */
     public $To;
 
@@ -76,38 +86,48 @@ class GetAlarmLogRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
+     * @var string 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
      */
     public $Context;
 
     /**
-     * @var string 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * @var string 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
      */
     public $Sort;
 
     /**
-     * @var boolean 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+     * @var boolean true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
 两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false
      */
     public $UseNewAnalysis;
 
     /**
-     * @param integer $From 要查询的执行详情的起始时间，Unix时间戳，单位ms
-     * @param integer $To 要查询的执行详情的结束时间，Unix时间戳，单位ms
+     * @param integer $From 要查询的执行详情的起始时间，Unix时间戳，单位ms。
+     * @param integer $To 要查询的执行详情的结束时间，Unix时间戳，单位ms。
      * @param string $Query 查询过滤条件，例如：
 - 按告警策略ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971"`
 - 按监控对象ID查询：`monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b" `
 - 按告警策略ID及监控对象ID查询：`alert_id:"alarm-0745ec00-e605-xxxx-b50b-54afe61fc971" AND monitored_object:"823d8bfa-76a7-xxxx-8399-8cda74d4009b"`
 - 按告警策略ID及监控对象ID查询支持SQL语句：`(alert_id:"alarm-5ce45495-09e8-4d58-xxxx-768134bf330c") AND (monitored_object:"3c514e84-6f1f-46ec-xxxx-05de6163f7fe") AND NOT condition_evaluate_result: "Skip" AND condition_evaluate_result:[* TO *] | SELECT count(*) as top50StatisticsTotalCount, count_if(condition_evaluate_result='ProcessError') as top50StatisticsFailureCount, count_if(notification_send_result!='NotSend') as top50NoticeTotalCount, count_if(notification_send_result='SendPartFail' or notification_send_result='SendFail') as top50NoticeFailureCount, alert_id, alert_name, monitored_object, topic_type, happen_threshold, alert_threshold, notify_template group by alert_id, alert_name, monitored_object,topic_type, happen_threshold, alert_threshold, notify_template order by top50StatisticsTotalCount desc limit 1`
      * @param integer $Limit 单次查询返回的执行详情条数，最大值为1000
-     * @param string $Context 加载更多详情时使用，透传上次返回的Context值，获取后续的执行详情
-     * @param string $Sort 执行详情是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
-     * @param boolean $UseNewAnalysis 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
-为false代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
+     * @param string $Context 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
+注意：
+* 透传该参数时，请勿修改除该参数外的其它参数
+* 仅当检索分析语句(Query)不包含SQL时有效，SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+     * @param string $Sort 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
+     * @param boolean $UseNewAnalysis true：代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效；
+false：代表使用老的检索结果返回方式，输出AnalysisResults和ColNames有效；
 两种返回方式在编码格式上有少量区别，建议使用true。
-示例值：false
      */
     function __construct()
     {

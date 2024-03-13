@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置SAML身份提供商上次修改时间
  * @method string getSAMLMetadata() 获取SAML身份提供商元数据文档
  * @method void setSAMLMetadata(string $SAMLMetadata) 设置SAML身份提供商元数据文档
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetSAMLProviderResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class GetSAMLProviderResponse extends AbstractModel
     public $SAMLMetadata;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class GetSAMLProviderResponse extends AbstractModel
      * @param string $CreateTime SAML身份提供商创建时间
      * @param string $ModifyTime SAML身份提供商上次修改时间
      * @param string $SAMLMetadata SAML身份提供商元数据文档
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

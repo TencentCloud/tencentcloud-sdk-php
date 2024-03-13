@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置绑定的机器组id
  * @method array getGroupIds() 获取绑定的机器组id列表
  * @method void setGroupIds(array $GroupIds) 设置绑定的机器组id列表
+ * @method array getCollectInfos() 获取采集相关配置信息。详情见CollectInfo复杂类型配置。
+ * @method void setCollectInfos(array $CollectInfos) 设置采集相关配置信息。详情见CollectInfo复杂类型配置。
  * @method string getAdvancedConfig() 获取高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -153,6 +155,11 @@ class CreateConfigExtraRequest extends AbstractModel
     public $GroupIds;
 
     /**
+     * @var array 采集相关配置信息。详情见CollectInfo复杂类型配置。
+     */
+    public $CollectInfos;
+
+    /**
      * @var string 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -179,6 +186,7 @@ class CreateConfigExtraRequest extends AbstractModel
      * @param string $UserDefineRule 用户自定义采集规则，Json格式序列化的字符串
      * @param string $GroupId 绑定的机器组id
      * @param array $GroupIds 绑定的机器组id列表
+     * @param array $CollectInfos 采集相关配置信息。详情见CollectInfo复杂类型配置。
      * @param string $AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -273,6 +281,15 @@ class CreateConfigExtraRequest extends AbstractModel
 
         if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
             $this->GroupIds = $param["GroupIds"];
+        }
+
+        if (array_key_exists("CollectInfos",$param) and $param["CollectInfos"] !== null) {
+            $this->CollectInfos = [];
+            foreach ($param["CollectInfos"] as $key => $value){
+                $obj = new CollectInfo();
+                $obj->deserialize($value);
+                array_push($this->CollectInfos, $obj);
+            }
         }
 
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {

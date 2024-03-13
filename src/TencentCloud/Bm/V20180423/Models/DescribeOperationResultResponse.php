@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 7：部分未完成，部分失败，部分成功
  * @method array getSubtaskStatusSet() 获取各实例对应任务的状态ID
  * @method void setSubtaskStatusSet(array $SubtaskStatusSet) 设置各实例对应任务的状态ID
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOperationResultResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeOperationResultResponse extends AbstractModel
     public $SubtaskStatusSet;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -75,7 +75,7 @@ class DescribeOperationResultResponse extends AbstractModel
 6：部分未完成，部分失败<br>
 7：部分未完成，部分失败，部分成功
      * @param array $SubtaskStatusSet 各实例对应任务的状态ID
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

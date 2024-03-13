@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbScanStatus(integer $DbScanStatus) 设置全实例巡检状态：0：开启全实例巡检；1：未开启全实例巡检。
  * @method array getItems() 获取实例相关信息。
  * @method void setItems(array $Items) 设置实例相关信息。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDiagDBInstancesResponse extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDiagDBInstancesResponse extends AbstractModel
     public $Items;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -55,7 +55,7 @@ class DescribeDiagDBInstancesResponse extends AbstractModel
      * @param integer $TotalCount 实例总数。
      * @param integer $DbScanStatus 全实例巡检状态：0：开启全实例巡检；1：未开启全实例巡检。
      * @param array $Items 实例相关信息。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

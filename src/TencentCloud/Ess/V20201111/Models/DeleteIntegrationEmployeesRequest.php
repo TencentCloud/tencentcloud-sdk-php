@@ -24,12 +24,16 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。使用此接口时，必须填写UserId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method array getEmployees() 获取待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
- * @method void setEmployees(array $Employees) 设置待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
+ * @method array getEmployees() 获取待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
+ * @method void setEmployees(array $Employees) 设置待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
  * @method Agent getAgent() 获取代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
@@ -44,9 +48,11 @@ class DeleteIntegrationEmployeesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var array 待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
+     * @var array 待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
      */
     public $Employees;
 
@@ -59,9 +65,11 @@ class DeleteIntegrationEmployeesRequest extends AbstractModel
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写UserId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param array $Employees 待移除员工的信息。应符合以下规则：
-<ul><li>UserId和OpenId不可同时为空。</li>
-<li>若需要进行离职交接，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空。否则视为不进行离职交接。</li></ul>
+     * @param array $Employees 待离职员工的信息最多不超过100个。应符合以下规则：
+
+1. UserId和OpenId不可同时为空，必须填写其中一个，优先使用UserId。
+
+2. **若需要进行离职交接**，交接人信息ReceiveUserId和ReceiveOpenId不可同时为空，必须填写其中一个，优先使用ReceiveUserId。
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      */

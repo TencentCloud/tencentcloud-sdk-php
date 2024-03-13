@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrlType(string $UrlType) 设置返回的链接类型
 <ul><li> 空: 默认小程序端链接</li>
 <li> **H5SIGN** : h5端链接</li></ul>
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateUserAutoSignEnableUrlResponse extends AbstractModel
 {
@@ -98,7 +98,7 @@ class CreateUserAutoSignEnableUrlResponse extends AbstractModel
     public $UrlType;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -119,7 +119,7 @@ class CreateUserAutoSignEnableUrlResponse extends AbstractModel
      * @param string $UrlType 返回的链接类型
 <ul><li> 空: 默认小程序端链接</li>
 <li> **H5SIGN** : h5端链接</li></ul>
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

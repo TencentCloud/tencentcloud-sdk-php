@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
  * @method void setFlowBriefs(array $FlowBriefs) 设置合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
 注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFlowBriefsResponse extends AbstractModel
 {
@@ -36,14 +36,14 @@ class DescribeFlowBriefsResponse extends AbstractModel
     public $FlowBriefs;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $FlowBriefs 合同流程基础信息列表，包含流程的名称、状态、创建日期等基本信息。 
 注：`与入参 FlowIds 的顺序可能存在不一致的情况。`
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

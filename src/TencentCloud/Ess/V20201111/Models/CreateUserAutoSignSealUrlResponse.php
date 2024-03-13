@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
  * @method string getQrCode() 获取base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
  * @method void setQrCode(string $QrCode) 设置base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateUserAutoSignSealUrlResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateUserAutoSignSealUrlResponse extends AbstractModel
     public $QrCode;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class CreateUserAutoSignSealUrlResponse extends AbstractModel
      * @param string $Url 个人用户自动签的开通链接, 短链形式。过期时间受 `ExpiredTime` 参数控制。
      * @param string $Path 腾讯电子签小程序的跳转路径，用于其他小程序/APP等应用跳转至腾讯电子签小程序使用。
      * @param string $QrCode base64格式的跳转二维码图片，可通过微信扫描后跳转到腾讯电子签小程序的开通界面。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

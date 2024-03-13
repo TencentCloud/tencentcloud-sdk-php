@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注： <font color="red">生成的链路后面不能再增加参数</font>
  * @method string getSchemeQrcodeUrl() 获取二维码，在生成动态签署人跳转封面页链接时返回
  * @method void setSchemeQrcodeUrl(string $SchemeQrcodeUrl) 设置二维码，在生成动态签署人跳转封面页链接时返回
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateSchemeUrlResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateSchemeUrlResponse extends AbstractModel
     public $SchemeQrcodeUrl;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -75,7 +75,7 @@ class CreateSchemeUrlResponse extends AbstractModel
 
 注： <font color="red">生成的链路后面不能再增加参数</font>
      * @param string $SchemeQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {

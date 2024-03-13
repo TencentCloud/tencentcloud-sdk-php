@@ -25,6 +25,12 @@ use \ReflectionClass;
  */
 abstract class AbstractModel
 {
+
+    public static function newInstance()
+    {
+        return new static();
+    }
+
     /**
      * 内部实现，用户禁止调用
      */
@@ -123,6 +129,7 @@ abstract class AbstractModel
             return $this->$attr;
         } else if ($act === "set") {
             $this->$attr = $param[0];
+	    return $this;
         }
     }
 }

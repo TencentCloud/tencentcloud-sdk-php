@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceParams(array $InstanceParams) 设置参数列表，ParamTemplateId 传入时InstanceParams才有效
  * @method array getSecurityGroupIds() 获取安全组ID，新建只读实例时可以指定安全组。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID，新建只读实例时可以指定安全组。
+ * @method UpgradeProxy getUpgradeProxy() 获取proxy同步升级
+ * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) 设置proxy同步升级
  */
 class AddInstancesRequest extends AbstractModel
 {
@@ -140,6 +142,11 @@ class AddInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var UpgradeProxy proxy同步升级
+     */
+    public $UpgradeProxy;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Cpu Cpu核数
      * @param integer $Memory 内存，单位为GB
@@ -157,6 +164,7 @@ class AddInstancesRequest extends AbstractModel
      * @param integer $ParamTemplateId 参数模板ID
      * @param array $InstanceParams 参数列表，ParamTemplateId 传入时InstanceParams才有效
      * @param array $SecurityGroupIds 安全组ID，新建只读实例时可以指定安全组。
+     * @param UpgradeProxy $UpgradeProxy proxy同步升级
      */
     function __construct()
     {
@@ -238,6 +246,11 @@ class AddInstancesRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("UpgradeProxy",$param) and $param["UpgradeProxy"] !== null) {
+            $this->UpgradeProxy = new UpgradeProxy();
+            $this->UpgradeProxy->deserialize($param["UpgradeProxy"]);
         }
     }
 }

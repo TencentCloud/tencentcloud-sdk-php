@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDealMode(integer $DealMode) 设置交易模式 0-下单并支付 1-下单
  * @method string getUpgradeMode() 获取NormalUpgrade：普通变配，FastUpgrade：极速变配，若变配过程判断会造成闪断，变配流程会终止。
  * @method void setUpgradeMode(string $UpgradeMode) 设置NormalUpgrade：普通变配，FastUpgrade：极速变配，若变配过程判断会造成闪断，变配流程会终止。
+ * @method UpgradeProxy getUpgradeProxy() 获取proxy同步升级
+ * @method void setUpgradeProxy(UpgradeProxy $UpgradeProxy) 设置proxy同步升级
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class UpgradeInstanceRequest extends AbstractModel
     public $UpgradeMode;
 
     /**
+     * @var UpgradeProxy proxy同步升级
+     */
+    public $UpgradeProxy;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $Cpu 数据库CPU
      * @param integer $Memory 数据库内存，单位GB
@@ -96,6 +103,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param string $DbType 该参数已废弃
      * @param integer $DealMode 交易模式 0-下单并支付 1-下单
      * @param string $UpgradeMode NormalUpgrade：普通变配，FastUpgrade：极速变配，若变配过程判断会造成闪断，变配流程会终止。
+     * @param UpgradeProxy $UpgradeProxy proxy同步升级
      */
     function __construct()
     {
@@ -144,6 +152,11 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("UpgradeMode",$param) and $param["UpgradeMode"] !== null) {
             $this->UpgradeMode = $param["UpgradeMode"];
+        }
+
+        if (array_key_exists("UpgradeProxy",$param) and $param["UpgradeProxy"] !== null) {
+            $this->UpgradeProxy = new UpgradeProxy();
+            $this->UpgradeProxy->deserialize($param["UpgradeProxy"]);
         }
     }
 }

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealOnFail(integer $DealOnFail) 设置操作失败处理策略，0:失败阻塞, 1:失败自动跳过
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getArgs() 获取指令需要指定的参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArgs(array $Args) 设置指令需要指定的参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StrategyConfig extends AbstractModel
 {
@@ -67,6 +71,12 @@ class StrategyConfig extends AbstractModel
     public $DealOnFail;
 
     /**
+     * @var array 指令需要指定的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Args;
+
+    /**
      * @param integer $RollingRestartSwitch 0:关闭滚动重启
 1:开启滚动启动
 注意：此字段可能返回 null，表示取不到有效值。
@@ -75,6 +85,8 @@ class StrategyConfig extends AbstractModel
      * @param integer $TimeWait 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DealOnFail 操作失败处理策略，0:失败阻塞, 1:失败自动跳过
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Args 指令需要指定的参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,15 @@ class StrategyConfig extends AbstractModel
 
         if (array_key_exists("DealOnFail",$param) and $param["DealOnFail"] !== null) {
             $this->DealOnFail = $param["DealOnFail"];
+        }
+
+        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
+            $this->Args = [];
+            foreach ($param["Args"] as $key => $value){
+                $obj = new Arg();
+                $obj->deserialize($value);
+                array_push($this->Args, $obj);
+            }
         }
     }
 }

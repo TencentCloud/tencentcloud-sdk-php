@@ -106,6 +106,10 @@ video 纯视频
  * @method void setRecordLiveUrl(string $RecordLiveUrl) 设置伪直播链接
  * @method integer getEnableAutoStart() 获取是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+ * @method string getRecordScene() 获取录制自定义场景，仅recordlayout=9的时候此参数有效
+ * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效
+ * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
+ * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
  */
 class ModifyRoomRequest extends AbstractModel
 {
@@ -249,6 +253,16 @@ video 纯视频
     public $EnableAutoStart;
 
     /**
+     * @var string 录制自定义场景，仅recordlayout=9的时候此参数有效
+     */
+    public $RecordScene;
+
+    /**
+     * @var string 录制自定义语言，仅recordlayout=9的时候此参数有效
+     */
+    public $RecordLang;
+
+    /**
      * @param integer $RoomId 房间ID。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
@@ -292,6 +306,8 @@ video 纯视频
      * @param integer $LiveType 直播方式：0 常规模式（默认）1 回放直播模式（伪直播）
      * @param string $RecordLiveUrl 伪直播链接
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      */
     function __construct()
     {
@@ -400,6 +416,14 @@ video 纯视频
 
         if (array_key_exists("EnableAutoStart",$param) and $param["EnableAutoStart"] !== null) {
             $this->EnableAutoStart = $param["EnableAutoStart"];
+        }
+
+        if (array_key_exists("RecordScene",$param) and $param["RecordScene"] !== null) {
+            $this->RecordScene = $param["RecordScene"];
+        }
+
+        if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
+            $this->RecordLang = $param["RecordLang"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnIp请求参数结构体
  *
- * @method array getIps() 获取需要查询的 IP 列表
- * @method void setIps(array $Ips) 设置需要查询的 IP 列表
+ * @method array getIps() 获取需要查询的 IP 列表，单次可支持1-20个IP查询。
+ * @method void setIps(array $Ips) 设置需要查询的 IP 列表，单次可支持1-20个IP查询。
  */
 class DescribeCdnIpRequest extends AbstractModel
 {
     /**
-     * @var array 需要查询的 IP 列表
+     * @var array 需要查询的 IP 列表，单次可支持1-20个IP查询。
      */
     public $Ips;
 
     /**
-     * @param array $Ips 需要查询的 IP 列表
+     * @param array $Ips 需要查询的 IP 列表，单次可支持1-20个IP查询。
      */
     function __construct()
     {

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserKafkaTopics(string $UserKafkaTopics) 设置用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
  * @method integer getOffset() 获取导入数据位置，-2:最早（默认），-1：最晚
  * @method void setOffset(integer $Offset) 设置导入数据位置，-2:最早（默认），-1：最晚
+ * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则。
+ * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则。
  * @method string getKafkaInstance() 获取腾讯云CKafka实例ID，KafkaType为0时必填
  * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID，KafkaType为0时必填
  * @method string getServerAddr() 获取服务地址，KafkaType为1时必填
@@ -42,10 +44,6 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
 KafkaType为1并且IsEncryptionAddr为true时Protocol必填
  * @method string getConsumerGroupName() 获取用户Kafka消费组名称
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称
- * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则。
-必填字段。
- * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则。
-必填字段。
  */
 class CreateKafkaRechargeRequest extends AbstractModel
 {
@@ -75,6 +73,11 @@ class CreateKafkaRechargeRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var LogRechargeRuleInfo 日志导入规则。
+     */
+    public $LogRechargeRule;
+
+    /**
      * @var string 腾讯云CKafka实例ID，KafkaType为0时必填
      */
     public $KafkaInstance;
@@ -101,25 +104,18 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
     public $ConsumerGroupName;
 
     /**
-     * @var LogRechargeRuleInfo 日志导入规则。
-必填字段。
-     */
-    public $LogRechargeRule;
-
-    /**
      * @param string $TopicId 导入CLS目标topic ID
      * @param string $Name Kafka导入配置名称
      * @param integer $KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
      * @param string $UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
      * @param integer $Offset 导入数据位置，-2:最早（默认），-1：最晚
+     * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则。
      * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
      * @param string $ServerAddr 服务地址，KafkaType为1时必填
      * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填
      * @param KafkaProtocolInfo $Protocol 加密访问协议。
 KafkaType为1并且IsEncryptionAddr为true时Protocol必填
      * @param string $ConsumerGroupName 用户Kafka消费组名称
-     * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则。
-必填字段。
      */
     function __construct()
     {
@@ -154,6 +150,11 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
             $this->Offset = $param["Offset"];
         }
 
+        if (array_key_exists("LogRechargeRule",$param) and $param["LogRechargeRule"] !== null) {
+            $this->LogRechargeRule = new LogRechargeRuleInfo();
+            $this->LogRechargeRule->deserialize($param["LogRechargeRule"]);
+        }
+
         if (array_key_exists("KafkaInstance",$param) and $param["KafkaInstance"] !== null) {
             $this->KafkaInstance = $param["KafkaInstance"];
         }
@@ -173,11 +174,6 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填
 
         if (array_key_exists("ConsumerGroupName",$param) and $param["ConsumerGroupName"] !== null) {
             $this->ConsumerGroupName = $param["ConsumerGroupName"];
-        }
-
-        if (array_key_exists("LogRechargeRule",$param) and $param["LogRechargeRule"] !== null) {
-            $this->LogRechargeRule = new LogRechargeRuleInfo();
-            $this->LogRechargeRule->deserialize($param["LogRechargeRule"]);
         }
     }
 }

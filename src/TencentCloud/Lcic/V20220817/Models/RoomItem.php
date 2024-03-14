@@ -112,6 +112,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecordScene() 获取录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomItem extends AbstractModel
 {
@@ -250,6 +258,18 @@ class RoomItem extends AbstractModel
     public $RecordBackground;
 
     /**
+     * @var string 录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordScene;
+
+    /**
+     * @var string 录制自定义语言，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordLang;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomId 房间ID
@@ -295,6 +315,10 @@ class RoomItem extends AbstractModel
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -396,6 +420,14 @@ class RoomItem extends AbstractModel
 
         if (array_key_exists("RecordBackground",$param) and $param["RecordBackground"] !== null) {
             $this->RecordBackground = $param["RecordBackground"];
+        }
+
+        if (array_key_exists("RecordScene",$param) and $param["RecordScene"] !== null) {
+            $this->RecordScene = $param["RecordScene"];
+        }
+
+        if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
+            $this->RecordLang = $param["RecordLang"];
         }
     }
 }

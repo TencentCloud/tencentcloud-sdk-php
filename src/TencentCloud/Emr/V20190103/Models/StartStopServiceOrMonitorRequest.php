@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpScope(OpScope $OpScope) 设置操作范围
  * @method StrategyConfig getStrategyConfig() 获取操作策略
  * @method void setStrategyConfig(StrategyConfig $StrategyConfig) 设置操作策略
+ * @method StopParams getStopParams() 获取暂停服务时用的参数
+ * @method void setStopParams(StopParams $StopParams) 设置暂停服务时用的参数
  */
 class StartStopServiceOrMonitorRequest extends AbstractModel
 {
@@ -67,6 +69,11 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
     public $StrategyConfig;
 
     /**
+     * @var StopParams 暂停服务时用的参数
+     */
+    public $StopParams;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param string $OpType 操作类型，当前支持
 <li>StartService：启动服务</li>
@@ -76,6 +83,7 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
 <li>RestartService：重启服务 如果操作类型选择重启服务 StrategyConfig操作策略则是必填项</li>
      * @param OpScope $OpScope 操作范围
      * @param StrategyConfig $StrategyConfig 操作策略
+     * @param StopParams $StopParams 暂停服务时用的参数
      */
     function __construct()
     {
@@ -106,6 +114,11 @@ class StartStopServiceOrMonitorRequest extends AbstractModel
         if (array_key_exists("StrategyConfig",$param) and $param["StrategyConfig"] !== null) {
             $this->StrategyConfig = new StrategyConfig();
             $this->StrategyConfig->deserialize($param["StrategyConfig"]);
+        }
+
+        if (array_key_exists("StopParams",$param) and $param["StopParams"] !== null) {
+            $this->StopParams = new StopParams();
+            $this->StopParams->deserialize($param["StopParams"]);
         }
     }
 }

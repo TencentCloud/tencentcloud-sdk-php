@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskQuota(integer $RiskQuota) 设置风控配额
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAigcTextQuota() 获取AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAigcTextQuota(integer $AigcTextQuota) 设置AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAigcImageQuota() 获取AI图片数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAigcImageQuota(integer $AigcImageQuota) 设置AI图片数量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTrackType() 获取溯源类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrackType(integer $TrackType) 设置溯源类型
@@ -146,6 +154,18 @@ class Quota extends AbstractModel
     public $RiskQuota;
 
     /**
+     * @var integer AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AigcTextQuota;
+
+    /**
+     * @var integer AI图片数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AigcImageQuota;
+
+    /**
      * @var integer 溯源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -185,6 +205,10 @@ class Quota extends AbstractModel
      * @param integer $ChainQuota 上链配额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskQuota 风控配额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AigcTextQuota AI文字数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AigcImageQuota AI图片数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrackType 溯源类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -248,6 +272,14 @@ class Quota extends AbstractModel
 
         if (array_key_exists("RiskQuota",$param) and $param["RiskQuota"] !== null) {
             $this->RiskQuota = $param["RiskQuota"];
+        }
+
+        if (array_key_exists("AigcTextQuota",$param) and $param["AigcTextQuota"] !== null) {
+            $this->AigcTextQuota = $param["AigcTextQuota"];
+        }
+
+        if (array_key_exists("AigcImageQuota",$param) and $param["AigcImageQuota"] !== null) {
+            $this->AigcImageQuota = $param["AigcImageQuota"];
         }
 
         if (array_key_exists("TrackType",$param) and $param["TrackType"] !== null) {

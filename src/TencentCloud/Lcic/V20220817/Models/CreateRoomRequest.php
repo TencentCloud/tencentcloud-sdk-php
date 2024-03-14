@@ -110,6 +110,10 @@ video 纯视频
  * @method void setEnableAutoStart(integer $EnableAutoStart) 设置是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
  * @method string getRecordBackground() 获取录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
  * @method void setRecordBackground(string $RecordBackground) 设置录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+ * @method string getRecordScene() 获取录制自定义场景，仅recordlayout=9的时候此参数有效
+ * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效
+ * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
+ * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -267,6 +271,16 @@ video 纯视频
     public $RecordBackground;
 
     /**
+     * @var string 录制自定义场景，仅recordlayout=9的时候此参数有效
+     */
+    public $RecordScene;
+
+    /**
+     * @var string 录制自定义语言，仅recordlayout=9的时候此参数有效
+     */
+    public $RecordLang;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳（秒）。
@@ -312,6 +326,8 @@ video 纯视频
      * @param string $RecordLiveUrl 伪直播链接
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
      * @param string $RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效
+     * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      */
     function __construct()
     {
@@ -432,6 +448,14 @@ video 纯视频
 
         if (array_key_exists("RecordBackground",$param) and $param["RecordBackground"] !== null) {
             $this->RecordBackground = $param["RecordBackground"];
+        }
+
+        if (array_key_exists("RecordScene",$param) and $param["RecordScene"] !== null) {
+            $this->RecordScene = $param["RecordScene"];
+        }
+
+        if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
+            $this->RecordLang = $param["RecordLang"];
         }
     }
 }

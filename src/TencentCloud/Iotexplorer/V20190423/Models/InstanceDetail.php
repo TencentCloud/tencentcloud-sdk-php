@@ -59,6 +59,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置实例状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpDownTPS() 获取消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpDownTPS(integer $UpDownTPS) 设置消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUpDownCurrentTPS() 获取当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpDownCurrentTPS(integer $UpDownCurrentTPS) 设置当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getForwardTPS() 获取消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForwardTPS(integer $ForwardTPS) 设置消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getForwardCurrentTPS() 获取消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForwardCurrentTPS(integer $ForwardCurrentTPS) 设置消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCellNum() 获取实例单元数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCellNum(integer $CellNum) 设置实例单元数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBillingTag() 获取实例Tag
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingTag(string $BillingTag) 设置实例Tag
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEverydayFreeMessageCount() 获取每日消息数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEverydayFreeMessageCount(integer $EverydayFreeMessageCount) 设置每日消息数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxDeviceOnlineCount() 获取最大在线设备数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxDeviceOnlineCount(integer $MaxDeviceOnlineCount) 设置最大在线设备数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
@@ -142,6 +174,54 @@ class InstanceDetail extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpDownTPS;
+
+    /**
+     * @var integer 当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpDownCurrentTPS;
+
+    /**
+     * @var integer 消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForwardTPS;
+
+    /**
+     * @var integer 消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForwardCurrentTPS;
+
+    /**
+     * @var integer 实例单元数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CellNum;
+
+    /**
+     * @var string 实例Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingTag;
+
+    /**
+     * @var integer 每日消息数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EverydayFreeMessageCount;
+
+    /**
+     * @var integer 最大在线设备数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxDeviceOnlineCount;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $InstanceType 实例类型（0 公共实例 1 标准企业实例 2新企业实例3新公共实例）
      * @param string $Region 地域字母缩写
@@ -160,6 +240,22 @@ class InstanceDetail extends AbstractModel
      * @param string $Description 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpDownTPS 消息上下行配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UpDownCurrentTPS 当前消息上下行TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ForwardTPS 消息转发配置TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ForwardCurrentTPS 消息转发当前TPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CellNum 实例单元数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BillingTag 实例Tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EverydayFreeMessageCount 每日消息数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxDeviceOnlineCount 最大在线设备数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +329,38 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("UpDownTPS",$param) and $param["UpDownTPS"] !== null) {
+            $this->UpDownTPS = $param["UpDownTPS"];
+        }
+
+        if (array_key_exists("UpDownCurrentTPS",$param) and $param["UpDownCurrentTPS"] !== null) {
+            $this->UpDownCurrentTPS = $param["UpDownCurrentTPS"];
+        }
+
+        if (array_key_exists("ForwardTPS",$param) and $param["ForwardTPS"] !== null) {
+            $this->ForwardTPS = $param["ForwardTPS"];
+        }
+
+        if (array_key_exists("ForwardCurrentTPS",$param) and $param["ForwardCurrentTPS"] !== null) {
+            $this->ForwardCurrentTPS = $param["ForwardCurrentTPS"];
+        }
+
+        if (array_key_exists("CellNum",$param) and $param["CellNum"] !== null) {
+            $this->CellNum = $param["CellNum"];
+        }
+
+        if (array_key_exists("BillingTag",$param) and $param["BillingTag"] !== null) {
+            $this->BillingTag = $param["BillingTag"];
+        }
+
+        if (array_key_exists("EverydayFreeMessageCount",$param) and $param["EverydayFreeMessageCount"] !== null) {
+            $this->EverydayFreeMessageCount = $param["EverydayFreeMessageCount"];
+        }
+
+        if (array_key_exists("MaxDeviceOnlineCount",$param) and $param["MaxDeviceOnlineCount"] !== null) {
+            $this->MaxDeviceOnlineCount = $param["MaxDeviceOnlineCount"];
         }
     }
 }

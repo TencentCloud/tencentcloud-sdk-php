@@ -64,6 +64,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeRecordExistExceptDefaultNSResponse DescribeRecordExistExceptDefaultNS(Models\DescribeRecordExistExceptDefaultNSRequest $req) 判断是否有除系统默认的@-NS记录之外的记录存在
  * @method Models\DescribeRecordFilterListResponse DescribeRecordFilterList(Models\DescribeRecordFilterListRequest $req) 获取某个域名下的解析记录列表
  * @method Models\DescribeRecordGroupListResponse DescribeRecordGroupList(Models\DescribeRecordGroupListRequest $req) 查询解析记录分组列表
+ * @method Models\DescribeRecordLineCategoryListResponse DescribeRecordLineCategoryList(Models\DescribeRecordLineCategoryListRequest $req) 按分类返回线路列表
  * @method Models\DescribeRecordLineListResponse DescribeRecordLineList(Models\DescribeRecordLineListRequest $req) 获取等级允许的线路
  * @method Models\DescribeRecordListResponse DescribeRecordList(Models\DescribeRecordListRequest $req) 获取某个域名下的解析记录列表
 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试

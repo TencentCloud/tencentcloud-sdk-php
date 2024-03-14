@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库信息
  *
- * @method string getRole() 获取表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+ * @method string getRole() 获取表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRole(string $Role) 设置表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+ * @method void setRole(string $Role) 设置表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbKernel() 获取内核版本，针对mariadb的不同内核版本等
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,11 +100,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTmpToken(string $TmpToken) 设置临时Token，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSetId() 获取tdsql分片id。tdsql set节点必填
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSetId(string $SetId) 设置tdsql分片id。tdsql set节点必填
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInfo extends AbstractModel
 {
     /**
-     * @var string 表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+     * @var string 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
@@ -224,7 +228,13 @@ class DBInfo extends AbstractModel
     public $TmpToken;
 
     /**
-     * @param string $Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点
+     * @var string tdsql分片id。tdsql set节点必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SetId;
+
+    /**
+     * @param string $Role 表示节点角色，针对分布式数据库，如mongodb中的mongos节点。如数据库是tdsql，枚举值为：proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbKernel 内核版本，针对mariadb的不同内核版本等
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,6 +273,8 @@ class DBInfo extends AbstractModel
      * @param string $TmpSecretKey 临时密钥Key，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpToken 临时Token，可通过 获取联合身份临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48195
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SetId tdsql分片id。tdsql set节点必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -356,6 +368,10 @@ class DBInfo extends AbstractModel
 
         if (array_key_exists("TmpToken",$param) and $param["TmpToken"] !== null) {
             $this->TmpToken = $param["TmpToken"];
+        }
+
+        if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
+            $this->SetId = $param["SetId"];
         }
     }
 }

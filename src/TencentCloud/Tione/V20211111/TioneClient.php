@@ -53,6 +53,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeBillingResourceInstanceRunningJobsResponse DescribeBillingResourceInstanceRunningJobs(Models\DescribeBillingResourceInstanceRunningJobsRequest $req) 查询资源组节点运行中的任务
  * @method Models\DescribeBillingSpecsResponse DescribeBillingSpecs(Models\DescribeBillingSpecsRequest $req) 本接口(DescribeBillingSpecs)用于查询计费项列表
  * @method Models\DescribeBillingSpecsPriceResponse DescribeBillingSpecsPrice(Models\DescribeBillingSpecsPriceRequest $req) 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
+ * @method Models\DescribeBuildInImagesResponse DescribeBuildInImages(Models\DescribeBuildInImagesRequest $req) 获取内置镜像列表
  * @method Models\DescribeDatasetDetailStructuredResponse DescribeDatasetDetailStructured(Models\DescribeDatasetDetailStructuredRequest $req) 查询结构化数据集详情
  * @method Models\DescribeDatasetDetailUnstructuredResponse DescribeDatasetDetailUnstructured(Models\DescribeDatasetDetailUnstructuredRequest $req) 查询非结构化数据集详情
  * @method Models\DescribeDatasetsResponse DescribeDatasets(Models\DescribeDatasetsRequest $req) 查询数据集列表

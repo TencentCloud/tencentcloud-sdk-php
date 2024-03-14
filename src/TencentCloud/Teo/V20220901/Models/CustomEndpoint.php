@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置POST 请求投递日志时，使用的应用层协议类型，取值有： 
 <li>http：HTTP 协议；</li>
 <li>https：HTTPS 协议。</li>如果不填默认根据填写的 URL 地址解析出协议类型。	
- * @method array getHeaders() 获取投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。
- * @method void setHeaders(array $Headers) 设置投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。
+ * @method array getHeaders() 获取投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。
+ * @method void setHeaders(array $Headers) 设置投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。
  */
 class CustomEndpoint extends AbstractModel
 {
@@ -67,7 +67,7 @@ class CustomEndpoint extends AbstractModel
     public $Protocol;
 
     /**
-     * @var array 投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。
+     * @var array 投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。
      */
     public $Headers;
 
@@ -79,7 +79,7 @@ class CustomEndpoint extends AbstractModel
      * @param string $Protocol POST 请求投递日志时，使用的应用层协议类型，取值有： 
 <li>http：HTTP 协议；</li>
 <li>https：HTTPS 协议。</li>如果不填默认根据填写的 URL 地址解析出协议类型。	
-     * @param array $Headers 投递日志时携带的自定义请求头，注意 Content-Type、Accept-Encoding 不支持添加修改。
+     * @param array $Headers 投递日志时携带的自定义请求头。若您填写的头部名称为 Content-Type 等 EdgeOne 日志推送默认携带的头部，那么您填写的头部值将覆盖默认值。头部值引用单个变量${batchSize}，以获取每次 POST 请求中包含的日志条数。
      */
     function __construct()
     {

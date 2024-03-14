@@ -77,14 +77,14 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAudioChannel() 获取音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioChannel(integer $AudioChannel) 设置音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStreamSelects() 获取指定输出要保留的音频轨道。默认是全部保留源的。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,8 +136,8 @@ class AudioTemplateInfoForUpdate extends AbstractModel
      * @var integer 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioChannel;
@@ -179,8 +179,8 @@ class AudioTemplateInfoForUpdate extends AbstractModel
      * @param integer $AudioChannel 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
-<li>6：立体声</li>
-当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+<li>6：5.1声道</li>
+当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为5.1声道。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StreamSelects 指定输出要保留的音频轨道。默认是全部保留源的。
 注意：此字段可能返回 null，表示取不到有效值。

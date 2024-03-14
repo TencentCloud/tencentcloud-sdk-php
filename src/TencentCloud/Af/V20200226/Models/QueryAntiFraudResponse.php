@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFound(integer $Found) 设置表示该条记录能否查到：1为能查到，-1为查不到
  * @method integer getIdFound() 获取表示该条Id能否查到：1为能查到，-1为查不到
  * @method void setIdFound(integer $IdFound) 设置表示该条Id能否查到：1为能查到，-1为查不到
- * @method integer getRiskScore() 获取0~100;值越高 欺诈可能性越大
- * @method void setRiskScore(integer $RiskScore) 设置0~100;值越高 欺诈可能性越大
+ * @method integer getRiskScore() 获取0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
+ * @method void setRiskScore(integer $RiskScore) 设置0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
  * @method array getRiskInfo() 获取扩展字段，对风险类型的说明
  * @method void setRiskInfo(array $RiskInfo) 设置扩展字段，对风险类型的说明
  * @method string getCodeDesc() 获取业务侧错误码。成功时返回Success，错误时返回具体业务错误原因。
@@ -48,7 +48,7 @@ class QueryAntiFraudResponse extends AbstractModel
     public $IdFound;
 
     /**
-     * @var integer 0~100;值越高 欺诈可能性越大
+     * @var integer 0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
      */
     public $RiskScore;
 
@@ -71,7 +71,7 @@ class QueryAntiFraudResponse extends AbstractModel
     /**
      * @param integer $Found 表示该条记录能否查到：1为能查到，-1为查不到
      * @param integer $IdFound 表示该条Id能否查到：1为能查到，-1为查不到
-     * @param integer $RiskScore 0~100;值越高 欺诈可能性越大
+     * @param integer $RiskScore 0~100;值越高 欺诈可能性越大（注：该字段真实类型为有符号整型）
      * @param array $RiskInfo 扩展字段，对风险类型的说明
      * @param string $CodeDesc 业务侧错误码。成功时返回Success，错误时返回具体业务错误原因。
 注意：此字段可能返回 null，表示取不到有效值。

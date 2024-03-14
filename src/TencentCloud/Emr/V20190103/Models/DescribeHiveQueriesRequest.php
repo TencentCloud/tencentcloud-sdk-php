@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页起始偏移，从0开始
  * @method integer getLimit() 获取分页大小，合法范围[1,100]
  * @method void setLimit(integer $Limit) 设置分页大小，合法范围[1,100]
+ * @method array getState() 获取执行状态,ERROR等
+ * @method void setState(array $State) 设置执行状态,ERROR等
+ * @method integer getEndTimeGte() 获取结束时间大于的时间点
+ * @method void setEndTimeGte(integer $EndTimeGte) 设置结束时间大于的时间点
+ * @method integer getEndTimeLte() 获取结束时间小于时间点
+ * @method void setEndTimeLte(integer $EndTimeLte) 设置结束时间小于时间点
  */
 class DescribeHiveQueriesRequest extends AbstractModel
 {
@@ -59,11 +65,29 @@ class DescribeHiveQueriesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 执行状态,ERROR等
+     */
+    public $State;
+
+    /**
+     * @var integer 结束时间大于的时间点
+     */
+    public $EndTimeGte;
+
+    /**
+     * @var integer 结束时间小于时间点
+     */
+    public $EndTimeLte;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param integer $StartTime 起始时间秒
      * @param integer $EndTime 结束时间秒，EndTime-StartTime不得超过1天秒数86400
      * @param integer $Offset 分页起始偏移，从0开始
      * @param integer $Limit 分页大小，合法范围[1,100]
+     * @param array $State 执行状态,ERROR等
+     * @param integer $EndTimeGte 结束时间大于的时间点
+     * @param integer $EndTimeLte 结束时间小于时间点
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class DescribeHiveQueriesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("EndTimeGte",$param) and $param["EndTimeGte"] !== null) {
+            $this->EndTimeGte = $param["EndTimeGte"];
+        }
+
+        if (array_key_exists("EndTimeLte",$param) and $param["EndTimeLte"] !== null) {
+            $this->EndTimeLte = $param["EndTimeLte"];
         }
     }
 }

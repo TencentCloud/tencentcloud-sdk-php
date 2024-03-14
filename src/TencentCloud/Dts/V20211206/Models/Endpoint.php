@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRole() 获取tdsql mysql版的节点类型，枚举值为proxy、set
+ * @method string getRole() 获取tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRole(string $Role) 设置tdsql mysql版的节点类型，枚举值为proxy、set
+ * @method void setRole(string $Role) 设置tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbKernel() 获取数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,7 +138,7 @@ class Endpoint extends AbstractModel
     public $Region;
 
     /**
-     * @var string tdsql mysql版的节点类型，枚举值为proxy、set
+     * @var string tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
@@ -296,7 +296,7 @@ class Endpoint extends AbstractModel
     /**
      * @param string $Region 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Role tdsql mysql版的节点类型，枚举值为proxy、set
+     * @param string $Role tdsql mysql版的节点类型，枚举值为proxy、set。tdsqlmysql必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
 注意：此字段可能返回 null，表示取不到有效值。

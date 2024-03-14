@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPhoneNumber() 获取电话号码(五选二)
  * @method void setPhoneNumber(string $PhoneNumber) 设置电话号码(五选二)
- * @method string getIdNumber() 获取Id(五选二)
- * @method void setIdNumber(string $IdNumber) 设置Id(五选二)
+ * @method string getIdNumber() 获取Id(五选二) 
+ * @method void setIdNumber(string $IdNumber) 设置Id(五选二) 
  * @method string getBankCardNumber() 获取银行卡号(五选二)
  * @method void setBankCardNumber(string $BankCardNumber) 设置银行卡号(五选二)
  * @method string getUserIp() 获取用户请求来源 IP(五选二)
  * @method void setUserIp(string $UserIp) 设置用户请求来源 IP(五选二)
- * @method string getImei() 获取国际移动设备识别码(五选二)
- * @method void setImei(string $Imei) 设置国际移动设备识别码(五选二)
- * @method string getIdfa() 获取ios 系统广告标示符(五选二)
- * @method void setIdfa(string $Idfa) 设置ios 系统广告标示符(五选二)
+ * @method string getImei() 获取国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
+ * @method void setImei(string $Imei) 设置国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
+ * @method string getIdfa() 获取ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
+ * @method void setIdfa(string $Idfa) 设置ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
  * @method string getScene() 获取业务场景 ID，需要找技术对接
  * @method void setScene(string $Scene) 设置业务场景 ID，需要找技术对接
  * @method string getName() 获取姓名
@@ -85,13 +85,9 @@ ID 区分统计数据
  * @method string getNameCryptoType() 获取姓名加密类型
 0：不加密（默认值）
 1：md5
-2：sha256
-3：SM3
  * @method void setNameCryptoType(string $NameCryptoType) 设置姓名加密类型
 0：不加密（默认值）
 1：md5
-2：sha256
-3：SM3
  */
 class QueryAntiFraudRequest extends AbstractModel
 {
@@ -101,7 +97,7 @@ class QueryAntiFraudRequest extends AbstractModel
     public $PhoneNumber;
 
     /**
-     * @var string Id(五选二)
+     * @var string Id(五选二) 
      */
     public $IdNumber;
 
@@ -116,12 +112,12 @@ class QueryAntiFraudRequest extends AbstractModel
     public $UserIp;
 
     /**
-     * @var string 国际移动设备识别码(五选二)
+     * @var string 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
      */
     public $Imei;
 
     /**
-     * @var string ios 系统广告标示符(五选二)
+     * @var string ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
      */
     public $Idfa;
 
@@ -214,18 +210,16 @@ ID 区分统计数据
      * @var string 姓名加密类型
 0：不加密（默认值）
 1：md5
-2：sha256
-3：SM3
      */
     public $NameCryptoType;
 
     /**
      * @param string $PhoneNumber 电话号码(五选二)
-     * @param string $IdNumber Id(五选二)
+     * @param string $IdNumber Id(五选二) 
      * @param string $BankCardNumber 银行卡号(五选二)
      * @param string $UserIp 用户请求来源 IP(五选二)
-     * @param string $Imei 国际移动设备识别码(五选二)
-     * @param string $Idfa ios 系统广告标示符(五选二)
+     * @param string $Imei 国际移动设备识别码，和Idfa同时传入时，只看作一个关键入参(五选二)
+     * @param string $Idfa ios 系统广告标示符，和Imei同时传入时，只看作一个关键入参(五选二)
      * @param string $Scene 业务场景 ID，需要找技术对接
      * @param string $Name 姓名
      * @param string $EmailAddress 用户邮箱地址
@@ -254,8 +248,6 @@ ID 区分统计数据
      * @param string $NameCryptoType 姓名加密类型
 0：不加密（默认值）
 1：md5
-2：sha256
-3：SM3
      */
     function __construct()
     {

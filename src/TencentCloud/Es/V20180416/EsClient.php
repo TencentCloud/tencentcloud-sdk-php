@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Es\V20180416\Models as Models;
 
 /**
+ * @method Models\CheckMigrateIndexMetaDataResponse CheckMigrateIndexMetaData(Models\CheckMigrateIndexMetaDataRequest $req) 检查cos迁移索引元数据
+ * @method Models\CreateCosMigrateToServerlessInstanceResponse CreateCosMigrateToServerlessInstance(Models\CreateCosMigrateToServerlessInstanceRequest $req) cos迁移流程
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 创建索引
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建指定规格的ES集群实例
  * @method Models\CreateLogstashInstanceResponse CreateLogstashInstance(Models\CreateLogstashInstanceRequest $req) 用于创建Logstash实例
@@ -47,6 +49,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeLogstashPipelinesResponse DescribeLogstashPipelines(Models\DescribeLogstashPipelinesRequest $req) 用于获取Logstash实例管道列表
  * @method Models\DescribeServerlessSpaceUserResponse DescribeServerlessSpaceUser(Models\DescribeServerlessSpaceUserRequest $req) 查看Serverless空间子用户
  * @method Models\DescribeServerlessSpacesResponse DescribeServerlessSpaces(Models\DescribeServerlessSpacesRequest $req) 获取Serverless索引空间列表
+ * @method Models\DescribeUserCosSnapshotListResponse DescribeUserCosSnapshotList(Models\DescribeUserCosSnapshotListRequest $req) 查询快照信息接口
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) 查询集群各视图数据，包括集群维度、节点维度、Kibana维度
  * @method Models\DiagnoseInstanceResponse DiagnoseInstance(Models\DiagnoseInstanceRequest $req) 智能运维诊断集群
  * @method Models\GetDiagnoseSettingsResponse GetDiagnoseSettings(Models\GetDiagnoseSettingsRequest $req) 查看智能运维配置

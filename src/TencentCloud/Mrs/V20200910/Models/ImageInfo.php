@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取图片id
  * @method void setId(integer $Id) 设置图片id
- * @method string getUrl() 获取图片url
- * @method void setUrl(string $Url) 设置图片url
+ * @method string getUrl() 获取图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
+ * @method void setUrl(string $Url) 设置图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
  * @method string getBase64() 获取图片base64编码
  * @method void setBase64(string $Base64) 设置图片base64编码
  */
@@ -35,7 +35,7 @@ class ImageInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var string 图片url
+     * @var string 图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
      */
     public $Url;
 
@@ -46,7 +46,7 @@ class ImageInfo extends AbstractModel
 
     /**
      * @param integer $Id 图片id
-     * @param string $Url 图片url
+     * @param string $Url 图片url(暂不支持传图片Url信息,请使用Base64字段传递图片的Base64编码)
      * @param string $Base64 图片base64编码
      */
     function __construct()

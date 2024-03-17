@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceNetworkAddress请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getOldIpExpiredTime() 获取原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
- * @method void setOldIpExpiredTime(integer $OldIpExpiredTime) 设置原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
- * @method string getNewUniqVpcId() 获取切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
- * @method void setNewUniqVpcId(string $NewUniqVpcId) 设置切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
- * @method string getNewUniqSubnetId() 获取切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
- * @method void setNewUniqSubnetId(string $NewUniqSubnetId) 设置切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
- * @method array getNetworkAddresses() 获取待修改IP信息
- * @method void setNetworkAddresses(array $NetworkAddresses) 设置待修改IP信息
+ * @method string getInstanceId() 获取指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
+ * @method void setInstanceId(string $InstanceId) 设置指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
+ * @method integer getOldIpExpiredTime() 获取原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+
+ * @method void setOldIpExpiredTime(integer $OldIpExpiredTime) 设置原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+
+ * @method string getNewUniqVpcId() 获取切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
+ * @method void setNewUniqVpcId(string $NewUniqVpcId) 设置切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
+ * @method string getNewUniqSubnetId() 获取切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+ * @method void setNewUniqSubnetId(string $NewUniqSubnetId) 设置切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+ * @method array getNetworkAddresses() 获取IP 地址信息，包含新 IP 地址与 原 IP 地址。
+ * @method void setNetworkAddresses(array $NetworkAddresses) 设置IP 地址信息，包含新 IP 地址与 原 IP 地址。
  */
 class ModifyDBInstanceNetworkAddressRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
      */
     public $InstanceId;
 
     /**
-     * @var integer 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
+     * @var integer 原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+
      */
     public $OldIpExpiredTime;
 
     /**
-     * @var string 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+     * @var string 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
      */
     public $NewUniqVpcId;
 
     /**
-     * @var string 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
+     * @var string 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
      */
     public $NewUniqSubnetId;
 
     /**
-     * @var array 待修改IP信息
+     * @var array IP 地址信息，包含新 IP 地址与 原 IP 地址。
      */
     public $NetworkAddresses;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param integer $OldIpExpiredTime 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
-     * @param string $NewUniqVpcId 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
-     * @param string $NewUniqSubnetId 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
-     * @param array $NetworkAddresses 待修改IP信息
+     * @param string $InstanceId 指定需修改网络的实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
+     * @param integer $OldIpExpiredTime 原 IP 地址保留时长。
+- 单位为分钟，0表示立即回收原 IP 地址。
+- 原 IP 将在约定时间后释放，在释放前原 IP和新 IP均可访问。
+
+     * @param string $NewUniqVpcId 切换后的私有网络 ID，若实例当前为基础网络，该字段无需配置。
+     * @param string $NewUniqSubnetId 切换私有网络的子网 ID。若实例当前为基础网络，该字段无需配置。
+     * @param array $NetworkAddresses IP 地址信息，包含新 IP 地址与 原 IP 地址。
      */
     function __construct()
     {

@@ -74,6 +74,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTtl(integer $Ttl) 设置上报心跳间隔。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceVersion() 获取版本信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceVersion(string $InstanceVersion) 设置版本信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHealthStatus() 获取状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthStatus(string $HealthStatus) 设置状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getComment() 获取描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComment(string $Comment) 设置描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceInstance extends AbstractModel
 {
@@ -165,6 +177,24 @@ class GovernanceInstance extends AbstractModel
     public $Ttl;
 
     /**
+     * @var string 版本信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceVersion;
+
+    /**
+     * @var string 状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthStatus;
+
+    /**
+     * @var string 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Comment;
+
+    /**
      * @param string $Id 实例id。
      * @param string $Service 实例所在服务名。
      * @param string $Namespace 实例所在命名空间名。
@@ -191,6 +221,12 @@ class GovernanceInstance extends AbstractModel
      * @param array $Metadatas 元数据数组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Ttl 上报心跳间隔。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceVersion 版本信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HealthStatus 状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Comment 描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -269,6 +305,18 @@ class GovernanceInstance extends AbstractModel
 
         if (array_key_exists("Ttl",$param) and $param["Ttl"] !== null) {
             $this->Ttl = $param["Ttl"];
+        }
+
+        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
+            $this->InstanceVersion = $param["InstanceVersion"];
+        }
+
+        if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
+            $this->HealthStatus = $param["HealthStatus"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
         }
     }
 }

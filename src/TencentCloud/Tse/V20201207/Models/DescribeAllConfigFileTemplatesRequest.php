@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeWafInfo请求参数结构体
+ * DescribeAllConfigFileTemplates请求参数结构体
  *
- * @method array getParams() 获取CLB回调WAF接口（获取、删除）的参数
- * @method void setParams(array $Params) 设置CLB回调WAF接口（获取、删除）的参数
+ * @method string getInstanceId() 获取TSE实例id
+ * @method void setInstanceId(string $InstanceId) 设置TSE实例id
  */
-class DescribeWafInfoRequest extends AbstractModel
+class DescribeAllConfigFileTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array CLB回调WAF接口（获取、删除）的参数
+     * @var string TSE实例id
      */
-    public $Params;
+    public $InstanceId;
 
     /**
-     * @param array $Params CLB回调WAF接口（获取、删除）的参数
+     * @param string $InstanceId TSE实例id
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class DescribeWafInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
-            $this->Params = [];
-            foreach ($param["Params"] as $key => $value){
-                $obj = new ClbHostsParams();
-                $obj->deserialize($value);
-                array_push($this->Params, $obj);
-            }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

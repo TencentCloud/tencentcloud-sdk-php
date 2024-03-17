@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeWafInfo返回参数结构体
+ * CreateConfigFile返回参数结构体
  *
- * @method integer getTotal() 获取返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
- * @method void setTotal(integer $Total) 设置返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
- * @method array getHostList() 获取对应的WAF信息的数组。
- * @method void setHostList(array $HostList) 设置对应的WAF信息的数组。
+ * @method boolean getResult() 获取是否创建成功
+ * @method void setResult(boolean $Result) 设置是否创建成功
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeWafInfoResponse extends AbstractModel
+class CreateConfigFileResponse extends AbstractModel
 {
     /**
-     * @var integer 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
+     * @var boolean 是否创建成功
      */
-    public $Total;
-
-    /**
-     * @var array 对应的WAF信息的数组。
-     */
-    public $HostList;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeWafInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 返回的WAF信息数组的长度，为0则表示没有查询到对应的信息
-     * @param array $HostList 对应的WAF信息的数组。
+     * @param boolean $Result 是否创建成功
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeWafInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("HostList",$param) and $param["HostList"] !== null) {
-            $this->HostList = [];
-            foreach ($param["HostList"] as $key => $value){
-                $obj = new ClbHostResult();
-                $obj->deserialize($value);
-                array_push($this->HostList, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

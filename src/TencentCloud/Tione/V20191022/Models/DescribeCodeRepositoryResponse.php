@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGitConfig(GitConfig $GitConfig) 设置Git存储配置
  * @method boolean getNoSecret() 获取是否有Git凭证
  * @method void setNoSecret(boolean $NoSecret) 设置是否有Git凭证
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCodeRepositoryResponse extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeCodeRepositoryResponse extends AbstractModel
     public $NoSecret;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
@@ -71,7 +71,7 @@ class DescribeCodeRepositoryResponse extends AbstractModel
      * @param string $CodeRepositoryName 存储库名称
      * @param GitConfig $GitConfig Git存储配置
      * @param boolean $NoSecret 是否有Git凭证
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
